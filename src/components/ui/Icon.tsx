@@ -9,10 +9,35 @@ const PATHS: Record<string, React.ReactNode> = {
     </>
   ),
   close: <path d="M6 6l12 12M18 6 6 18" />,
+  // Dropping a filter, rather than dismissing the panel it sits in - which is
+  // what a bare cross beside one reads as.
+  'filter-off': (
+    <>
+      <path d="M12.5 3.5H2l7.5 9V19l4 2v-8.5l.6-.7" />
+      <path d="m22.5 3.5-6.5 6.5M16 3.5l6.5 6.5" />
+    </>
+  ),
   plus: <path d="M12 5v14M5 12h14" />,
+  web: (
+    <>
+      <circle cx="5" cy="6" r="2" />
+      <circle cx="19" cy="7" r="2" />
+      <circle cx="12" cy="18" r="2" />
+      <path d="m7 6.3 10 .6M6.3 7.8l4.6 8.4M17.7 8.8l-4.6 7.4" />
+    </>
+  ),
   chevron: <path d="m6 9 6 6 6-6" />,
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+    </>
+  ),
+  expand: <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />,
+  hash: <path d="M5 9h15M4 15h15M10 3 8 21M16 3l-2 18" />,
   back: <path d="M19 12H5M11 6l-6 6 6 6" />,
   sliders: <path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 5v4M6 15v4" />,
+  warning: <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01" />,
   target: (
     <>
       <circle cx="12" cy="12" r="8" />
@@ -50,6 +75,23 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M3 4h2l2.5 11h10L20 7H6.2" />
       <circle cx="9" cy="19" r="1.3" />
       <circle cx="17" cy="19" r="1.3" />
+    </>
+  ),
+  // A company with no logo of its own.
+  building: <path d="M4 21V4h11v17M15 9h5v12M2 21h20M8 8h3M8 12h3M8 16h3" />,
+  // The Marketplace listing types: a vehicle, a home and a job.
+  car: (
+    <>
+      <path d="M5 17H3v-5l2-5h14l2 5v5h-2M5 12h14M9 17h6" />
+      <circle cx="7" cy="17" r="2" />
+      <circle cx="17" cy="17" r="2" />
+    </>
+  ),
+  home: <path d="M3 11 12 4l9 7M5 10v10h5v-6h4v6h5V10" />,
+  briefcase: (
+    <>
+      <rect x="3" y="7" width="18" height="13" rx="2" />
+      <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18" />
     </>
   ),
   tag: (
@@ -117,6 +159,13 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
     </>
   ),
+  moon: <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" />,
+  monitor: (
+    <>
+      <rect x="3" y="4" width="18" height="12" rx="2" />
+      <path d="M8 20h8M12 16v4" />
+    </>
+  ),
   cloud: <path d="M7 18h10a4 4 0 0 0 .6-8 6 6 0 0 0-11.4 1.6A3.2 3.2 0 0 0 7 18z" />,
   rain: (
     <>
@@ -136,6 +185,125 @@ const PATHS: Record<string, React.ReactNode> = {
     <>
       <path d="M3 12a9 9 0 0 1 18 0z" />
       <path d="M12 12v7a2 2 0 0 1-4 0" />
+    </>
+  ),
+  // Filled with `fill-current` where it needs to read as a button.
+  play: <path d="M8 5.2v13.6L19 12z" />,
+  star: <path d="m12 3 2.7 5.9 6.3.7-4.7 4.4 1.2 6.4L12 17.3 6.5 20.4l1.2-6.4-4.7-4.4 6.3-.7z" />,
+  // A clock face: how long ago or until.
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </>
+  ),
+  // A four-pointed glint: something just added.
+  sparkle: <path d="M12 3.5 13.9 9 19.5 11l-5.6 2L12 18.5 10.1 13 4.5 11l5.6-2z" />,
+  // A line climbing to the right: views on the rise.
+  'trending-up': (
+    <>
+      <path d="m3 17 6-6 4 4 8-8" />
+      <path d="M15 7h6v6" />
+    </>
+  ),
+  // The same line falling: a mood cooling off.
+  'trending-down': (
+    <>
+      <path d="m3 7 6 6 4-4 8 8" />
+      <path d="M15 17h6v-6" />
+    </>
+  ),
+  // Rising bars: how many have looked (the eye is taken by watching).
+  views: <path d="M5 20v-6M12 20V5M19 20v-10" />,
+  // What a thing on the page means, told when asked for.
+  info: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11.5v4.5M12 8h.01" />
+    </>
+  ),
+  // What opens a comment's reactions (Lucide's smile, ISC).
+  smile: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+      <line x1="9" x2="9.01" y1="9" y2="9" />
+      <line x1="15" x2="15.01" y1="9" y2="9" />
+    </>
+  ),
+  // A pin's menu (Lucide's shapes, ISC): not interested in it, blocking its
+  // author, blocking its company.
+  'eye-off': (
+    <>
+      <path d="M10.7 5.1A10.6 10.6 0 0 1 12 5c6.4 0 10 7 10 7a18 18 0 0 1-2.3 3.2" />
+      <path d="M6.6 6.6A17.5 17.5 0 0 0 2 12s3.6 7 10 7a9.7 9.7 0 0 0 5.4-1.6" />
+      <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+      <path d="m2 2 20 20" />
+    </>
+  ),
+  'user-x': (
+    <>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="m17 8 5 5M22 8l-5 5" />
+    </>
+  ),
+  ban: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="m4.9 4.9 14.2 14.2" />
+    </>
+  ),
+  // Sharing a pin or its address (Lucide's shapes, ISC): the menu item, a
+  // text message, copying words, an email.
+  share: (
+    <>
+      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+      <path d="m16 6-4-4-4 4M12 2v13" />
+    </>
+  ),
+  message: <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />,
+  send: <path d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12.6 2-12.6 2z" />,
+  image: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <circle cx="9" cy="9" r="2" />
+      <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
+    </>
+  ),
+  minus: <path d="M5 12h14" />,
+  copy: (
+    <>
+      <rect x="8" y="8" width="14" height="14" rx="2" />
+      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+    </>
+  ),
+  mail: (
+    <>
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </>
+  ),
+  // A comment's actions (Lucide's shapes, ISC): the menu they sit behind,
+  // and answering it.
+  'dots-vertical': (
+    <>
+      <circle cx="12" cy="5" r="1" />
+      <circle cx="12" cy="12" r="1" />
+      <circle cx="12" cy="19" r="1" />
+    </>
+  ),
+  reply: (
+    <>
+      <path d="m9 17-5-5 5-5" />
+      <path d="M20 18v-2a4 4 0 0 0-4-4H4" />
+    </>
+  ),
+  // Arrows pushing out to both ends: widening a range, not zooming a map.
+  'expand-x': (
+    <>
+      <path d="M6 12h12" />
+      <path d="m9 9-3 3 3 3M15 9l3 3-3 3" />
     </>
   ),
 };

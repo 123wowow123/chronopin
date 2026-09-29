@@ -8,7 +8,8 @@ export type ConfidenceRow = { category: string | null; userName: string | null; 
 export type VisibilityCount = { label: string; showing: number; hidden: number };
 
 export type ConfidenceStats = {
-  threshold: number;
+  // Null when the timeline's filter is off and nothing is hidden.
+  threshold: number | null;
   total: number;
   showing: number;
   hidden: number;
@@ -18,16 +19,24 @@ export type ConfidenceStats = {
   bands: (VisibilityCount & { from: number; to: number })[];
   byCategory: VisibilityCount[];
   byAuthor: VisibilityCount[];
+  // Distinct groups, counting the ones folded into the "Other" row.
+  categoryCount: number;
+  authorCount: number;
 };
 
 const BAND_COUNT = 10;
 
-export function isHidden(confidence: number | null | undefined, threshold = TIMELINE_MIN_CONFIDENCE) {
-  return confidence != null && confidence < threshold;
+export function isHidden(confidence: number | null | undefined, threshold: number | null = TIMELINE_MIN_CONFIDENCE) {
+  return threshold != null && confidence != null && confidence < threshold;
 }
 
 // Largest groups first; past `limit` the rest fold into one "Other" row.
-function group(rows: ConfidenceRow[], key: (row: ConfidenceRow) => string, threshold: number, limit: number): VisibilityCount[] {
+function group(
+  rows: ConfidenceRow[],
+  key: (row: ConfidenceRow) => string,
+  threshold: number | null,
+  limit: number,
+): { groups: VisibilityCount[]; count: number } {
   const counts = new Map<string, VisibilityCount>();
   for (const row of rows) {
     const label = key(row);
@@ -37,8 +46,9 @@ function group(rows: ConfidenceRow[], key: (row: ConfidenceRow) => string, thres
     counts.set(label, count);
   }
   const sorted = [...counts.values()].sort((a, b) => b.showing + b.hidden - (a.showing + a.hidden) || a.label.localeCompare(b.label));
+  const count = sorted.length;
   if (sorted.length <= limit) {
-    return sorted;
+    return { groups: sorted, count };
   }
   const rest = sorted.slice(limit - 1);
   const other = {
@@ -46,10 +56,10 @@ function group(rows: ConfidenceRow[], key: (row: ConfidenceRow) => string, thres
     showing: rest.reduce((sum, c) => sum + c.showing, 0),
     hidden: rest.reduce((sum, c) => sum + c.hidden, 0),
   };
-  return [...sorted.slice(0, limit - 1), other];
+  return { groups: [...sorted.slice(0, limit - 1), other], count };
 }
 
-export function confidenceStats(rows: ConfidenceRow[], threshold = TIMELINE_MIN_CONFIDENCE, limit = 12): ConfidenceStats {
+export function confidenceStats(rows: ConfidenceRow[], threshold: number | null = TIMELINE_MIN_CONFIDENCE, limit = 12): ConfidenceStats {
   const bands = Array.from({ length: BAND_COUNT }, (_, i) => ({
     from: i * 10,
     to: i === BAND_COUNT - 1 ? 100 : i * 10 + 9,
@@ -57,6 +67,8 @@ export function confidenceStats(rows: ConfidenceRow[], threshold = TIMELINE_MIN_
     showing: 0,
     hidden: 0,
   }));
+  const categories = group(rows, (r) => r.category || 'Uncategorized', threshold, limit);
+  const authors = group(rows, (r) => r.userName || 'Unknown', threshold, limit);
   let hidden = 0;
   let unscored = 0;
   for (const row of rows) {
@@ -79,8 +91,10 @@ export function confidenceStats(rows: ConfidenceRow[], threshold = TIMELINE_MIN_
     hidden,
     unscored,
     bands,
-    byCategory: group(rows, (r) => r.category || 'Uncategorized', threshold, limit),
-    byAuthor: group(rows, (r) => r.userName || 'Unknown', threshold, limit),
+    byCategory: categories.groups,
+    byAuthor: authors.groups,
+    categoryCount: categories.count,
+    authorCount: authors.count,
   };
 }
 

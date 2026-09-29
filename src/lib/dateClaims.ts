@@ -1,3 +1,4 @@
+import { compareDayKeys, dayKeyIn, dayKeyOf, dayKeyToMs } from './format';
 // When a pin starts and ends, grounded by its references. The source gives the
 // pin's dates, rated by its dateConfidence; a reference can give a start date
 // and an end date of its own (calendar dates, the end inclusive). The pin uses
@@ -8,7 +9,7 @@
 // not slip a day across UTC. The dates the source gave are kept on the pin
 // (sourceStartDateTime/sourceEndDateTime) whenever a reference overrides them.
 
-import { referenceTime, SOURCE_CONFIDENCE } from './referenceConfidence';
+import { LOW_CONFIDENCE, referenceTime, SOURCE_CONFIDENCE } from './referenceConfidence';
 import type { PinJson, PinReferenceJson } from './types';
 
 const YMD = /^\d{4}-\d{2}-\d{2}$/;
@@ -23,14 +24,52 @@ export function sourceDateConfidence(dateConfidence: string | undefined): number
   return SOURCE_CONFIDENCE[(dateConfidence || '').toLowerCase()];
 }
 
-// The most confident reference giving that date, when it outranks the source.
-// A tie goes to the source, then to the newer reference; an unrated source is
-// outranked by any scored reference.
-export function topReference<T extends Claimant>(references: T[] | undefined, key: DateKey, sourceConfidence: number | undefined): T | undefined {
+// A claim made after the pin was posted is an update: a reference published,
+// or (undated) added, more than this after the pin went up. References the pin
+// was posted with, and ones a scrape or cross-check adds in the minutes after,
+// are the evidence it was posted on.
+export const UPDATE_GRACE_MS = 60 * 60 * 1000;
+
+// Whether a reference came after the pin was posted (postedAt), by UPDATE_GRACE_MS.
+export function isLaterClaim(reference: Pick<Claimant, 'publishedDate' | 'utcCreatedDateTime'>, postedAt: string | Date | undefined | null): boolean {
+  const posted = postedAt ? new Date(postedAt).getTime() : NaN;
+  const time = referenceTime(reference);
+  return Number.isFinite(posted) && time !== undefined && time > posted + UPDATE_GRACE_MS;
+}
+
+const hasDate = (reference: Claimant, key: DateKey) =>
+  YMD.test(reference[key] || '') && reference.confidence != null && reference.confidence !== '' && Number.isFinite(Number(reference.confidence));
+
+// The reference whose date the pin uses, when one outranks the source.
+//
+// The newest credible update wins: a reference that came after the pin was
+// posted (isLaterClaim) and is rated at least LOW_DATE_CONFIDENCE replaces
+// what the pin was posted with, however confident that was, since the page
+// should say what is known now (Ian, 2026-09-25). A tie in time goes to the
+// more confident. Without one, the most confident reference that outranks the
+// source: a tie goes to the source, then to the newer reference; an unrated
+// source is outranked by any scored reference.
+export function topReference<T extends Claimant>(
+  references: T[] | undefined,
+  key: DateKey,
+  sourceConfidence: number | undefined,
+  postedAt?: string | Date | null,
+): T | undefined {
+  let update: T | undefined;
+  for (const reference of references || []) {
+    if (!hasDate(reference, key) || Number(reference.confidence) < LOW_DATE_CONFIDENCE || !isLaterClaim(reference, postedAt)) continue;
+    const time = referenceTime(reference) ?? 0;
+    const bestTime = update ? (referenceTime(update) ?? 0) : -Infinity;
+    if (time > bestTime || (time === bestTime && Number(reference.confidence) > Number(update!.confidence))) {
+      update = reference;
+    }
+  }
+  if (update) return update;
+
   let best: T | undefined;
   for (const reference of references || []) {
+    if (!hasDate(reference, key)) continue;
     const confidence = Number(reference.confidence);
-    if (!YMD.test(reference[key] || '') || reference.confidence == null || reference.confidence === '' || !Number.isFinite(confidence)) continue;
     if (!best || confidence > Number(best.confidence) || (confidence === Number(best.confidence) && (referenceTime(reference) ?? 0) > (referenceTime(best) ?? 0))) {
       best = reference;
     }
@@ -38,14 +77,17 @@ export function topReference<T extends Claimant>(references: T[] | undefined, ke
   return best && (sourceConfidence === undefined || Number(best.confidence) > sourceConfidence) ? best : undefined;
 }
 
-export function addDays(ymd: string, days: number): string {
-  const [y, m, d] = ymd.split('-').map(Number);
-  return new Date(Date.UTC(y, m - 1, d + days)).toISOString().slice(0, 10);
+// A day key moved by whole days (BC keys included, see dayKeyOf).
+export function addDays(key: string, days: number): string {
+  const date = new Date(dayKeyToMs(key));
+  date.setUTCDate(date.getUTCDate() + days);
+  return dayKeyOf(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
 }
 
 // Below this a date is shown as low confidence: under the source's
-// "estimated", where confidenceClass turns amber.
-export const LOW_DATE_CONFIDENCE = 50;
+// "estimated", where confidenceClass turns amber and a pin's own score falls
+// in the confidence:low band.
+export const LOW_DATE_CONFIDENCE = LOW_CONFIDENCE;
 
 export const isLowConfidence = (confidence: number | undefined) => confidence !== undefined && confidence < LOW_DATE_CONFIDENCE;
 
@@ -57,13 +99,15 @@ type DateFields = { allDay: boolean; startDate: string; startTime: string; endDa
 // the start. A source that gives no end does not compete for it, so the best
 // reference's end is used however low its confidence. An end before the start
 // is dropped.
-export function pickDates<T extends Claimant>(source: DateFields, references: T[], dateConfidence: string | undefined) {
+// postedAt: when the pin went up, which makes a later reference an update
+// (topReference); none for a pin being posted.
+export function pickDates<T extends Claimant>(source: DateFields, references: T[], dateConfidence: string | undefined, postedAt?: string | null) {
   const confidence = sourceDateConfidence(dateConfidence);
   if (!source.startDate) {
     return { ...source, startFrom: undefined, endFrom: undefined };
   }
-  const startFrom = topReference(references, 'startDate', confidence);
-  const endFrom = topReference(references, 'endDate', source.endDate ? confidence : undefined);
+  const startFrom = topReference(references, 'startDate', confidence, postedAt);
+  const endFrom = topReference(references, 'endDate', source.endDate ? confidence : undefined, postedAt);
   const startDate = startFrom?.startDate || source.startDate;
   let endDate = source.endDate;
   let endTime = source.endTime;
@@ -73,7 +117,7 @@ export function pickDates<T extends Claimant>(source: DateFields, references: T[
     // or at the time it starts.
     if (!source.allDay && !endTime) endTime = source.startTime;
   }
-  if (endDate && endDate < startDate) {
+  if (endDate && compareDayKeys(endDate, startDate) < 0) {
     endDate = '';
     endTime = '';
   }
@@ -83,21 +127,24 @@ export function pickDates<T extends Claimant>(source: DateFields, references: T[
 // --- Showing the range on a pin ---------------------------------------------
 
 export type DateClaim = {
-  day: string; // YYYY-MM-DD
+  day: string; // a day key: YYYY-MM-DD, or -YYYY-MM-DD before 1 BC
   confidence?: number;
   url?: string; // a reference's; none for the source
   isSource?: boolean;
   used: boolean;
+  // A reference that came after the pin was posted (isLaterClaim).
+  later?: boolean;
 };
 
 // The days the claims span, and the best claim: the one the pin uses, which
-// is the most confident (a tie goes to the source). When the pin uses none of
-// them - no claim is scored - the first.
+// is the newest credible update, else the most confident (a tie goes to the
+// source; see topReference). When the pin uses none of them - no claim is
+// scored - the first.
 export type DateRange = { claims: DateClaim[]; earliest: string; latest: string; used?: DateClaim; best: DateClaim };
 
 type RangePin = Pick<
   PinJson,
-  'utcStartDateTime' | 'utcEndDateTime' | 'allDay' | 'sourceStartDateTime' | 'sourceEndDateTime' | 'dateConfidence' | 'references'
+  'utcStartDateTime' | 'utcEndDateTime' | 'allDay' | 'sourceStartDateTime' | 'sourceEndDateTime' | 'dateConfidence' | 'references' | 'utcCreatedDateTime'
 >;
 
 // A confidence as a number, or undefined when unscored.
@@ -111,10 +158,11 @@ function scoreOf(confidence: number | string | null | undefined): number | undef
 function dayOf(value: string, allDay: boolean | undefined, timeZone: string, isEnd = false): string | undefined {
   const time = new Date(value).getTime();
   if (isNaN(time)) return undefined;
+  // Day keys, so a BC pin's day keeps its era (see dayKeyOf).
   if (allDay) {
-    return new Date(isEnd ? time - DAY_MS : time).toISOString().slice(0, 10);
+    return dayKeyIn(isEnd ? time - DAY_MS : time, 'UTC');
   }
-  return new Intl.DateTimeFormat('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone }).format(time);
+  return dayKeyIn(time, timeZone);
 }
 
 // Every claim on the pin's start and on its end, the source's first, and the
@@ -126,19 +174,19 @@ export function pinDateRanges(pin: RangePin, timeZone: string): { start?: DateRa
   const sourceEnd = overridden ? pin.sourceEndDateTime : pin.utcEndDateTime;
   const startDay = sourceStart ? dayOf(sourceStart, pin.allDay, timeZone) : undefined;
   let endDay = sourceEnd ? dayOf(sourceEnd, pin.allDay, timeZone, true) : undefined;
-  if (endDay && startDay && endDay <= startDay && pin.allDay) endDay = undefined;
+  if (endDay && startDay && compareDayKeys(endDay, startDay) <= 0 && pin.allDay) endDay = undefined;
 
   const range = (key: DateKey, sourceDay: string | undefined): DateRange | undefined => {
     // As in pickDates, a source without this date does not compete for it.
-    const top = topReference(pin.references, key, sourceDay ? confidence : undefined);
+    const top = topReference(pin.references, key, sourceDay ? confidence : undefined, pin.utcCreatedDateTime);
     const claims: DateClaim[] = [];
     if (sourceDay) claims.push({ day: sourceDay, confidence, isSource: true, used: !top });
     for (const reference of pin.references || []) {
       const day = reference[key];
-      if (day && YMD.test(day)) claims.push({ day, confidence: scoreOf(reference.confidence), url: reference.url, used: reference === top });
+      if (day && YMD.test(day)) claims.push({ day, confidence: scoreOf(reference.confidence), url: reference.url, used: reference === top, later: isLaterClaim(reference, pin.utcCreatedDateTime) });
     }
     if (!claims.length) return undefined;
-    const days = claims.map((c) => c.day).sort();
+    const days = claims.map((c) => c.day).sort(compareDayKeys);
     const used = claims.find((c) => c.used);
     return { claims, earliest: days[0], latest: days[days.length - 1], used, best: used ?? claims[0] };
   };

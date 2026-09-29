@@ -1,8 +1,11 @@
 import * as db from '../db';
 import type { Row } from '../db';
+import { inBackground } from '../background';
 import * as logo from '../companyLogo';
+import { findDescriptions } from '../companyDescription';
+import { wordStartPattern } from '../util/searchQuery';
 
-const COLUMNS = `"id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime"`;
+const COLUMNS = `"id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "description", "utcDescriptionCheckedDateTime"`;
 
 export type CompanyRow = {
   id: number;
@@ -11,6 +14,9 @@ export type CompanyRow = {
   websiteUrl: string | null;
   logoUrl: string | null;
   utcLogoCheckedDateTime: Date | null;
+  // A line about the company (0048), shown by a company: search.
+  description: string | null;
+  utcDescriptionCheckedDateTime: Date | null;
 };
 
 export default class Company {
@@ -36,8 +42,19 @@ export default class Company {
     );
     const company = rows[0];
     if (!company.utcLogoCheckedDateTime) {
-      Company.findLogos([company]).catch((err) =>
-        console.log(`Company '${company.name}' logo lookup err:`, err.message),
+      // Registered rather than merely started: a script that finishes first
+      // would otherwise close the pool out from under the write this makes.
+      inBackground(
+        Company.findLogos([company]).catch((err) =>
+          console.log(`Company '${company.name}' logo lookup err:`, err.message),
+        ),
+      );
+    }
+    if (!company.utcDescriptionCheckedDateTime) {
+      inBackground(
+        Company.findDescriptions([company]).catch((err) =>
+          console.log(`Company '${company.name}' description lookup err:`, err.message),
+        ),
       );
     }
     return company;
@@ -56,13 +73,31 @@ export default class Company {
   }
 
   static getAll() {
-    return db.query(`SELECT ${COLUMNS}, "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
+    return db.query(`SELECT ${COLUMNS}, "tickerSymbol", "tickerNote", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime",
+      "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
   }
 
   // Names and logos for the pin form's company suggestions.
   static list() {
     return db.query<{ id: number; name: string; logoUrl: string | null }>(
       `SELECT "id", "name", "logoUrl" FROM "Company" ORDER BY "name"`,
+    );
+  }
+
+  // Companies with a word of their name starting with the typed text, most
+  // pins first, for the search suggestions. A company whose pins are all
+  // deleted is left out: its company: search would find nothing.
+  static suggest(text: string, limit: number) {
+    return db.query<{ name: string; logoUrl: string | null; count: number }>(
+      `
+      SELECT "Company"."name"::text AS "name", "Company"."logoUrl", COUNT(*)::integer AS "count"
+      FROM "Company"
+        INNER JOIN "Pin" ON "Pin"."companyId" = "Company"."id" AND "Pin"."utcDeletedDateTime" IS NULL
+      WHERE "Company"."name"::text ~* $1
+      GROUP BY "Company"."id"
+      ORDER BY 3 DESC, 1
+      LIMIT $2`,
+      [wordStartPattern(text), limit],
     );
   }
 
@@ -83,15 +118,67 @@ export default class Company {
           `
         UPDATE "Company"
         SET "websiteUrl" = COALESCE("websiteUrl", $2),
+            "wikiUrl" = COALESCE("wikiUrl", $4),
             "logoUrl" = $3,
             "utcLogoCheckedDateTime" = now(),
             "utcUpdatedDateTime" = now()
         WHERE "id" = $1`,
-          [f.id, f.websiteUrl || null, f.logoUrl || null],
+          [f.id, f.websiteUrl || null, f.logoUrl || null, f.wikiUrl || null],
         ),
       ),
     );
     return found;
+  }
+
+  // Companies with no description looked for yet, or every company.
+  static needingDescription(all: boolean) {
+    return db.query<CompanyRow>(
+      `SELECT ${COLUMNS} FROM "Company" ${all ? '' : 'WHERE "utcDescriptionCheckedDateTime" IS NULL'} ORDER BY "id"`,
+    );
+  }
+
+  // Looks up a line about each of these companies and stores what was found.
+  // A wiki link found on the way fills a gap on the row, as the logo lookup
+  // does. A fresh description replaces the stored one; a lookup that finds
+  // none leaves what is there alone. A company Wikipedia turned away is not
+  // marked checked at all, so the next run asks about it again.
+  static async findDescriptions(companies: CompanyRow[]) {
+    const found = await findDescriptions(companies);
+    await Promise.all(
+      found.filter((f) => !f.failed).map((f) =>
+        db.query(
+          `
+        UPDATE "Company"
+        SET "wikiUrl" = COALESCE("wikiUrl", $3),
+            "description" = COALESCE($2, "description"),
+            "utcDescriptionCheckedDateTime" = now(),
+            "utcUpdatedDateTime" = now()
+        WHERE "id" = $1`,
+          [f.id, f.description, f.wikiUrl || null],
+        ),
+      ),
+    );
+    return found;
+  }
+
+  // One company by id, or null when there is no such row.
+  static async getById(id: number): Promise<CompanyRow | null> {
+    const rows = await db.query<CompanyRow>(`SELECT ${COLUMNS} FROM "Company" WHERE "id" = $1`, [id]);
+    return rows[0] || null;
+  }
+
+  // The company a company: search names, with what its panel shows. Matched
+  // as the search does, by name (citext, so case does not matter).
+  static async byName(name: string): Promise<CompanyRow | null> {
+    const rows = await db.query<CompanyRow>(`SELECT ${COLUMNS} FROM "Company" WHERE "name" = $1`, [name.trim()]);
+    return rows[0] || null;
+  }
+
+  // The company listed under this ticker, when only one is: several can
+  // share one (Sony's divisions all trade as SONY), and then none is it.
+  static async byTicker(symbol: string): Promise<CompanyRow | null> {
+    const rows = await db.query<CompanyRow>(`SELECT ${COLUMNS} FROM "Company" WHERE upper("tickerSymbol") = $1 LIMIT 2`, [symbol.trim().toUpperCase()]);
+    return rows.length === 1 ? rows[0] : null;
   }
 
   // Seeding: puts companies back with their ids, links and logos, so pins
@@ -100,10 +187,16 @@ export default class Company {
     for (const c of companies || []) {
       await db.query(
         `
-      INSERT INTO "Company" ("id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime")
-      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8)
+      INSERT INTO "Company" ("id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime",
+        "tickerSymbol", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime", "tickerNote",
+        "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "description", "utcDescriptionCheckedDateTime")
+      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
       ON CONFLICT DO NOTHING`,
-        [c.id, c.name, c.wikiUrl, c.websiteUrl, c.logoUrl, c.utcLogoCheckedDateTime, c.utcCreatedDateTime, c.utcUpdatedDateTime].map(
+        [
+          c.id, c.name, c.wikiUrl, c.websiteUrl, c.logoUrl, c.utcLogoCheckedDateTime, c.utcCreatedDateTime, c.utcUpdatedDateTime,
+          c.tickerSymbol, c.utcTickerCheckedDateTime, c.utcRelationsCheckedDateTime, c.tickerNote,
+          c.hqAddress, c.hqLatitude, c.hqLongitude, c.utcHqCheckedDateTime, c.description, c.utcDescriptionCheckedDateTime,
+        ].map(
           (v) => (v === undefined ? null : v),
         ),
       );

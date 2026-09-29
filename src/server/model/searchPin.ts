@@ -5,16 +5,21 @@ import config from '../config';
 import { fetchJson } from '../util/fetchJson';
 import BasePin, { BasePinProp } from './basePin';
 import BasePins from './basePins';
-import Pins, { type PinSearchFilters } from './pins';
+import Pins from './pins';
 import type User from './user';
-
-const pageSize = config.pagination.pageSize;
 
 function faissRequest<T = any>(method: string, path: string, body?: unknown) {
   return fetchJson<T>(`${config.faiss.serviceUrl}/faiss${path}`, { method, body });
 }
 
 type FaissSearchResult = { res: { index: number; match: number }[]; took?: number };
+
+// Which of the search service's indexes reads a query (Docker/faiss/app.py):
+// 'en' is an English model, the one duplicate detection's thresholds are set
+// against; 'both' reads it with that and a multilingual model and keeps each
+// pin's better score, so a search typed in any language finds its pins
+// whatever the page's language is.
+type SearchModel = 'en' | 'both';
 
 // A pin as the search service knows it: just enough to index.
 export class SearchPin extends BasePin {
@@ -117,32 +122,42 @@ export class SearchPins extends BasePins<SearchPin> {
     return hits.applySearchScores(pins);
   }
 
-  // A search made only of label terms (user:, company:, category:).
-  static searchFilters(query: PinSearchFilters, favoriteUserId?: number | null): Promise<Pins> {
-    return Pins.queryPinBySearchFilters(query, favoriteUserId);
+  // Every pin the search service counts as a match for the text, best first:
+  // its top config.faiss.maxHits, since semantic search ranks every pin. Read
+  // in every language the service has a model for.
+  static async hits(searchText: string): Promise<{ id: number; score: number }[]> {
+    const result = await semanticSearch(searchText, config.faiss.maxHits, 'both');
+    const seen = new Set<number>();
+    return result.res.filter((hit) => !seen.has(hit.index) && !!seen.add(hit.index)).map((hit) => ({ id: hit.index, score: hit.match }));
   }
 
-  static async searchFavorite(userId: number, searchText: string): Promise<Pins> {
-    if (!searchText) {
-      return Pins.queryInitialByDateFilterByHasFavorite(new Date(), userId, pageSize, pageSize);
-    }
-    const hits = new SearchPins().fromFaiss(await semanticSearch(searchText, SearchPins.numberOfResults));
-    const pins = await Pins.queryPinByIdsFilterByHasFavorite(hits, userId);
-    return hits.applySearchScores(pins);
+  // The k pins closest to the text, best first.
+  static async nearest(text: string, k: number): Promise<{ id: number; score: number }[]> {
+    const result = await semanticSearch(text, k);
+    return result.res.map((hit) => ({ id: hit.index, score: hit.match }));
   }
 
   // Autocomplete: pins whose title or description starts with the typed text,
-  // compared on their first 64 characters, case-insensitively. k caps the
-  // rows returned.
+  // compared on their first 64 characters, case-insensitively - or whose title
+  // in any of its translations does. k caps the pins returned.
+  //
+  // Read off "Pin", not the view. A suggestion is a title and a date in a
+  // dropdown, and this runs on every keystroke - going through the view built
+  // each candidate's references, ratings, view count and duplicate group, and
+  // the LIMIT sat above all of it. It also counted the view's rows rather than
+  // pins, so a pin with three pictures used up three of the ten suggestions.
   static async querySearchPin(title: string, description: string, k = 10): Promise<Pins> {
     const rows = await db.query(
       `
-        SELECT "Pin".*
-        FROM "PinBaseView" AS "Pin"
-        WHERE "Pin"."utcDeletedDateTime" IS NULL
-          AND (left("Pin"."title", 64) ILIKE rtrim(left($1, 64)) || '%'
-            OR left("Pin"."description", 64) ILIKE rtrim(left($2, 64)) || '%')
-        ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"
+        SELECT "id", "title", "utcStartDateTime", "allDay"
+        FROM "Pin"
+        WHERE "utcDeletedDateTime" IS NULL
+          AND (left("title", 64) ILIKE rtrim(left($1, 64)) || '%'
+            OR left("description", 64) ILIKE rtrim(left($2, 64)) || '%'
+            OR EXISTS (
+              SELECT 1 FROM "PinTranslation" AS "tr"
+              WHERE "tr"."pinId" = "Pin"."id" AND left("tr"."title", 64) ILIKE rtrim(left($1, 64)) || '%'))
+        ORDER BY "utcStartDateTime", "id"
         LIMIT $3`,
       [title, description, k],
     );
@@ -150,6 +165,7 @@ export class SearchPins extends BasePins<SearchPin> {
   }
 }
 
-function semanticSearch(searchText: string, numberOfResults: number) {
-  return faissRequest<FaissSearchResult>('GET', `/search?q=${encodeURIComponent(searchText)}&k=${numberOfResults}`);
+function semanticSearch(searchText: string, numberOfResults: number, model: SearchModel = 'en') {
+  const index = model === 'en' ? '' : `&model=${model}`;
+  return faissRequest<FaissSearchResult>('GET', `/search?q=${encodeURIComponent(searchText)}&k=${numberOfResults}${index}`);
 }

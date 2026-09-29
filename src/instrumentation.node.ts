@@ -9,3 +9,11 @@ export async function checkConfig() {
     process.exit(1);
   }
 }
+
+// Timed jobs that live in the server process. Each checks its own admin
+// setting, so one that is off costs a query now and then.
+export function startSchedules() {
+  void import('@/server/services/dailyJobSchedule').then(({ startDailyJobSchedule }) => startDailyJobSchedule());
+  void import('@/server/services/watchAlerts').then(({ startWatchAlerts }) => startWatchAlerts());
+  void import('@/server/services/listingPrices').then(({ startListingPriceRefresh }) => startListingPriceRefresh());
+}

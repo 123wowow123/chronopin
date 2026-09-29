@@ -1,0 +1,2019 @@
+[
+  {
+    "id": 1,
+    "pinId": 3381,
+    "kind": "duplicate",
+    "userId": 76,
+    "relatedPinId": 4055,
+    "changes": [
+      {
+        "after": "2027-01-06T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-12-08T00:00:00.000Z"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.youtube.com/watch?v=Pk_RcYmnuHA",
+        "title": "LAX's SkyLink People Mover Could Open to Passengers on January 6",
+        "startDate": "2027-01-06",
+        "confidence": 40
+      },
+      {
+        "url": "https://www.yahoo.com/news/us/articles/troubled-lax-people-mover-delayed-100000590.html",
+        "title": "Troubled LAX People Mover delayed again — and it might not be the last time (Los Angeles Times)",
+        "startDate": "2027-01-06",
+        "confidence": 90,
+        "publishedDate": "2026-09-24"
+      },
+      {
+        "url": "https://laist.com/news/transportation/lax-people-mover-linxs-train",
+        "title": "More delays: LAX train contractor buys more time for testing (LAist)",
+        "confidence": 90,
+        "publishedDate": "2026-09-24"
+      },
+      {
+        "url": "https://mynewsla.com/traffic/2026/09/24/lax-officials-say-automated-people-mover-to-open-in-january/",
+        "title": "LAX People Mover to Open in January (MyNewsLA.com)",
+        "confidence": 75,
+        "publishedDate": "2026-09-24"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-25T17:06:09.200Z"
+  },
+  {
+    "id": 2,
+    "pinId": 3381,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "LAX's SkyLink Now Aims to Carry Passengers From January 6, Past Its December 8 Deadline",
+        "field": "title",
+        "before": "LAX's SkyLink Reaches Its December 8 Deadline to Carry Passengers"
+      },
+      {
+        "after": "The 2.25-mile LAX people mover, 99% complete but years late, had to enter passenger service by its 8 December 2026 longstop date; contractor LINXS now says service could begin on 6 January 2027, with \"no assurances\" it will not slip again.",
+        "field": "description",
+        "before": "The 2.25-mile LAX people mover, 99% complete but years late, must enter passenger service by its project longstop date of 8 December 2026 or its developer LINXS risks a technical default on $1.2 billion of bonds."
+      },
+      {
+        "after": "<ul><li>In a 16 September disclosure filing, LINXS said it will need time beyond the 8 December completion deadline; if all goes well the train could be running by 6 January 2027, though \"there can be no assurances\" the date will not slip further<cite data-ref=\"https://www.yahoo.com/news/us/articles/troubled-lax-people-mover-delayed-100000590.html\"></cite></li><li>Before opening, the train must pass 30 consecutive days of testing, an independent review and an assessment by Los Angeles World Airports, and a utility agreement with the Los Angeles Department of Water and Power must be completed<cite data-ref=\"https://www.yahoo.com/news/us/articles/troubled-lax-people-mover-delayed-100000590.html\"></cite><cite data-ref=\"https://mynewsla.com/traffic/2026/09/24/lax-officials-say-automated-people-mover-to-open-in-january/\"></cite></li><li>Recent testing was paused twice to fix track components that \"accommodate movement resulting from temperature changes, seismic activity and normal structural behavior\"<cite data-ref=\"https://laist.com/news/transportation/lax-people-mover-linxs-train\"></cite></li><li>Bondholders agreed to push the lender longstop date on the SkyLink bonds back to December, lining it up with the construction longstop and averting a technical default that would have been triggered in October<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>Fitch's Seth Lehman said the best case is a 30-day commissioning test starting by the end of September, a utility agreement and public service beginning by December 8, \"but it's very tight\"; a delay beyond December would need LAWA's consent<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>The project is more than 99% complete, and a dispute over the interconnection agreement with the Los Angeles Department of Water and Power, which LAX has not signed, remains; the developer has money for debt service only into early to mid-2027<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>The California Municipal Finance Authority issued $1.2 billion of bonds for LINXS in 2018; Fitch cut them to BB in July 2026 after LINXS sued the city on July 9<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>Construction was first due in March 2023; systems demonstration testing began on April 21, 2026, and the project longstop date is December 8, 2026<cite data-ref=\"https://en.wikipedia.org/wiki/SkyLink_(Los_Angeles_International_Airport)\"></cite></li><li>An August 2026 report had the $3.34 billion system targeting passenger service in October 2026<cite data-ref=\"https://www.yahoo.com/news/us/articles/lax-people-mover-sets-opening-211545779.html\"></cite></li></ul><h3>Notable features</h3><ul><li>A 2.25-mile driverless train with six stations linking the terminals, the LAX/Metro Transit Center and the Rental Car Center<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/SkyLink_(Los_Angeles_International_Airport)\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Bondholders agreed to push the lender longstop date on the SkyLink bonds back to December, lining it up with the construction longstop and averting a technical default that would have been triggered in October<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>Fitch's Seth Lehman said the best case is a 30-day commissioning test starting by the end of September, a utility agreement and public service beginning by December 8, \"but it's very tight\"; a delay beyond December would need LAWA's consent<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>The project is more than 99% complete, and a dispute over the interconnection agreement with the Los Angeles Department of Water and Power, which LAX has not signed, remains; the developer has money for debt service only into early to mid-2027<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>The California Municipal Finance Authority issued $1.2 billion of bonds for LINXS in 2018; Fitch cut them to BB in July 2026 after LINXS sued the city on July 9<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>Construction was first due in March 2023; systems demonstration testing began on April 21, 2026, and the project longstop date is December 8, 2026<cite data-ref=\"https://en.wikipedia.org/wiki/SkyLink_(Los_Angeles_International_Airport)\"></cite></li><li>An August 2026 report had the $3.34 billion system targeting passenger service in October 2026<cite data-ref=\"https://www.yahoo.com/news/us/articles/lax-people-mover-sets-opening-211545779.html\"></cite></li></ul><h3>Notable features</h3><ul><li>A 2.25-mile driverless train with six stations linking the terminals, the LAX/Metro Transit Center and the Rental Car Center<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/SkyLink_(Los_Angeles_International_Airport)\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-25T17:06:37.746Z"
+  },
+  {
+    "id": 3,
+    "pinId": 62,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Far Cry 4 to be released on PC, PS4, Xbox One, PS3 and Xbox 360",
+        "field": "title",
+        "before": "Far Cry 4 to be released on PC, PS4, Xbox One, PS3 and Xbox 36"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:05:14.943Z"
+  },
+  {
+    "id": 4,
+    "pinId": 67,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Fifty-seven percent of California voters approved Proposition 64 Legalizing Marijuana",
+        "field": "title",
+        "before": "Fifty-six percent of California voters approved Proposition 64 Legalizing Marijuana"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:05:37.319Z"
+  },
+  {
+    "id": 5,
+    "pinId": 119,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Leaks out of China claim AMD &quot;could be prepping a 12nm Polaris 30 GPU to be launched before the end of 2018&quot;; the leak was posted on the Chinese site ChipHell and is attributed to a rumour monger named as WJM47196<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>The part &quot;would appear in a series of Radeon RX-600-branded graphics cards&quot; (only the browser title, meta description and URL of the page read &quot;Radeon RX-680 graphics cards&quot;; the on-page headline and the body use RX-600)<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>Mid-range Navi-based cards are said to follow in the first quarter of 2019, with top-of-the-range HBM2 parts after them; Navi is &quot;slated to succeed the Vega architecture&quot;, will use a 7nm process and be primarily aimed at next-generation consoles such as the PlayStation 5, &quot;which is expected to be launched before the end of 2020&quot;<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>The Polaris refresh plus mid-range-first Navi &quot;will therefore leave AMD with three graphics card architectures for low-, mid-range and high-end&quot;, at a time when Vega is typically only in cards from GBP 450 upwards and 8GB Polaris cards &quot;can be had for under GBP 300&quot;; Nvidia's Turing-based GPUs &quot;could make their debut next month&quot;<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>The article hedges throughout that this is a rumour: the real performance boost &quot;will likely come with HBM2 sporting Navi GPUs or a 7nm Vega 20 GPU with HBM2 aimed at gamers, if WJM47196 is correct&quot;; posted by the V3 Newsdesk on 04 July 2018<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>The Polaris 30 part launched on 15 November 2018 as the Radeon RX 590, at an MSRP of $279; AMD shipped no reference design, and custom cards from XFX, PowerColor, Sapphire and Asus were available on day one<cite data-ref=\"https://web.archive.org/web/20191211112628/https://www.anandtech.com/show/13570/the-amd-radeon-rx-590-review\"></cite></li></ul><h3>Notable features</h3><ul><li>Claimed specification: a 15 per cent performance boost over the current RX-500 series cards, &quot;which were a minor refresh on 2016's RX-400s&quot;, manufactured on the 12-nanometre FinFET process<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>As launched, the RX 590 is another Polaris 10 revision built on GlobalFoundries' 12nm process, with no architectural changes and the same die size and transistor count; it is pin-compatible with Polaris 10, so partners reuse RX 580 board designs<cite data-ref=\"https://web.archive.org/web/20191211112628/https://www.anandtech.com/show/13570/the-amd-radeon-rx-590-review\"></cite></li><li>Specifications: 2304 stream processors, 1469MHz base and 1545MHz boost clocks, 8GB of 8 Gbps GDDR5 and 225W typical board power, 75W over the original RX 480<cite data-ref=\"https://web.archive.org/web/20191211112628/https://www.anandtech.com/show/13570/the-amd-radeon-rx-590-review\"></cite></li><li>AMD aimed it at the performance gap between the RX Vega 56 and the RX 580 8GB and at 1080p gamers on older cards such as the GTX 970 and R9 380, with Nvidia's GeForce GTX 1060 6GB as its main competition<cite data-ref=\"https://web.archive.org/web/20191211112628/https://www.anandtech.com/show/13570/the-amd-radeon-rx-590-review\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Leaks out of China claim AMD &quot;could be prepping a 12nm Polaris 30 GPU to be launched before the end of 2018&quot;; the leak was posted on the Chinese site ChipHell and is attributed to a rumour monger named as WJM47196<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>The part &quot;would appear in a series of Radeon RX-600-branded graphics cards&quot; (the headline on the page instead reads &quot;Radeon RX-680 graphics cards&quot;, while the page title and body use RX-600)<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>Mid-range Navi-based cards are said to follow in the first quarter of 2019, with top-of-the-range HBM2 parts after them; Navi is &quot;slated to succeed the Vega architecture&quot;, will use a 7nm process and be primarily aimed at next-generation consoles such as the PlayStation 5, &quot;which is expected to be launched before the end of 2020&quot;<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>The Polaris refresh plus mid-range-first Navi &quot;will therefore leave AMD with three graphics card architectures for low-, mid-range and high-end&quot;, at a time when Vega is typically only in cards from GBP 450 upwards and 8GB Polaris cards &quot;can be had for under GBP 300&quot;; Nvidia's Turing-based GPUs &quot;could make their debut next month&quot;<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>The article hedges throughout that this is a rumour: the real performance boost &quot;will likely come with HBM2 sporting Navi GPUs or a 7nm Vega 20 GPU with HBM2 aimed at gamers, if WJM47196 is correct&quot;; posted by the V3 Newsdesk on 04 July 2018<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>The Polaris 30 part launched on 15 November 2018 as the Radeon RX 590, at an MSRP of $279; AMD shipped no reference design, and custom cards from XFX, PowerColor, Sapphire and Asus were available on day one<cite data-ref=\"https://web.archive.org/web/20191211112628/https://www.anandtech.com/show/13570/the-amd-radeon-rx-590-review\"></cite></li></ul><h3>Notable features</h3><ul><li>Claimed specification: a 15 per cent performance boost over the current RX-500 series cards, &quot;which were a minor refresh on 2016's RX-400s&quot;, manufactured on the 12-nanometre FinFET process<cite data-ref=\"https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end\"></cite></li><li>As launched, the RX 590 is another Polaris 10 revision built on GlobalFoundries' 12nm process, with no architectural changes and the same die size and transistor count; it is pin-compatible with Polaris 10, so partners reuse RX 580 board designs<cite data-ref=\"https://web.archive.org/web/20191211112628/https://www.anandtech.com/show/13570/the-amd-radeon-rx-590-review\"></cite></li><li>Specifications: 2304 stream processors, 1469MHz base and 1545MHz boost clocks, 8GB of 8 Gbps GDDR5 and 225W typical board power, 75W over the original RX 480<cite data-ref=\"https://web.archive.org/web/20191211112628/https://www.anandtech.com/show/13570/the-amd-radeon-rx-590-review\"></cite></li><li>AMD aimed it at the performance gap between the RX Vega 56 and the RX 580 8GB and at 1080p gamers on older cards such as the GTX 970 and R9 380, with Nvidia's GeForce GTX 1060 6GB as its main competition<cite data-ref=\"https://web.archive.org/web/20191211112628/https://www.anandtech.com/show/13570/the-amd-radeon-rx-590-review\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:05:58.756Z"
+  },
+  {
+    "id": 6,
+    "pinId": 136,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Suzhou Zhongnan Center Restarts as a 499-Meter Redesign",
+        "field": "title",
+        "before": "Suzhou Zhongnan Center - Thornton Tomasetti"
+      },
+      {
+        "after": "Located to the west of Jinji Lake, the Suzhou Zhongnan Center was first designed as a 729-meter, 137-story mixed-use tower, but that plan was scrapped in 2019 under China's ban on buildings over 500 meters. Construction of a 499.2-meter, 103-story redesign with hotel, office and residential space began in 2020, then halted in mid-2022, when it had reached ground level, over developer Zhongnan Group's financial difficulties.",
+        "field": "description",
+        "before": "Located to the west of Jinji Lake, the Suzhou Zhongnan Center is a 729-meter, 137-story mixed-use tower with office, residential and hotel space. The tower has five stories below grade and an eight-story, long-span podium that provides ballroom and conference facilities."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:06:20.142Z"
+  },
+  {
+    "id": 7,
+    "pinId": 148,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The pin's forecast comes from Peter Zeihan's video &quot;The 2nd Holodomor: A Pending Genocide&quot; (Zeihan on Geopolitics, 24 January 2023), which argues that Russia was gearing up for a second Holodomor by deliberately destroying Ukraine's agricultural production<cite data-ref=\"https://www.youtube.com/watch?v=CDVH_JJIRWI\"></cite></li><li>Russia let the Black Sea Grain Initiative lapse on 17 July 2023; by then the deal had moved nearly 33 million tonnes of grain and other food from Ukrainian ports to more than 40 countries, 57% of grain exports going to developing countries, with Egypt fifth by number of shipments in 2022<cite data-ref=\"https://en.wikipedia.org/wiki/Black_Sea_Grain_Initiative\"></cite>; UN Secretary-General Guterres said the deals had helped cut food prices by over 23 per cent since March 2022 and that the decision &quot;will strike a blow to people in need everywhere&quot;<cite data-ref=\"https://news.un.org/en/story/2023/07/1138752\"></cite></li><li>Russia then struck grain storage and loading facilities in Ukraine's Black Sea and Danube ports and warned that ships entering Ukrainian waters could be treated as legitimate targets; a 23 August 2023 drone attack on Izmail destroyed 13,000 tons of grain bound for Egypt and Romania, and Egypt's President el-Sisi joined other African leaders at the July 2023 Russia-Africa Summit in urging Putin to renew the deal<cite data-ref=\"https://en.wikipedia.org/wiki/Black_Sea_Grain_Initiative\"></cite></li><li>The Black Sea did not become a no-go zone: Ukraine opened its own corridor, the container ship Joseph Schulte left Odesa through it on 16 August 2023, and by 31 December 2023 Ukraine had moved 13 million tons by sea on 430 vessels<cite data-ref=\"https://en.wikipedia.org/wiki/Black_Sea_Grain_Initiative\"></cite></li><li>Egypt's annual urban inflation reached a record 38% in September 2023, driven by vegetable prices (up 19.2% on the month after one of the hottest summers on record) and a currency that had lost more than half its value since March 2022, while bread and cereal prices fell 1.3% from August<cite data-ref=\"https://www.thenationalnews.com/mena/egypt/2023/10/10/egypts-inflation-soars-to-record-38-in-september-amid-higher-fruit-and-vegetable-prices/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>September and October, Egypt will have food crisis as Russia kills off Ukraine's Agriculture industry and ability to export through it's ports. Black Sea likely becomes a no-go zone.</li><li>Dated (unconfirmed) to 2023-09-01.</li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Black_Sea_Grain_Initiative",
+        "title": "Black Sea Grain Initiative - Wikipedia",
+        "confidence": 85
+      },
+      {
+        "url": "https://news.un.org/en/story/2023/07/1138752",
+        "title": "UN chief regrets Russia's decision to withdraw from grain deal | UN News",
+        "confidence": 85
+      },
+      {
+        "url": "https://www.thenationalnews.com/mena/egypt/2023/10/10/egypts-inflation-soars-to-record-38-in-september-amid-higher-fruit-and-vegetable-prices/",
+        "title": "Egypt's inflation soars to record 38% in September amid higher fruit and vegetable prices | The National",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:06:42.399Z"
+  },
+  {
+    "id": 8,
+    "pinId": 196,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The Legend of Zelda: Breath of the Wild lands second place on IGN's 10 Best Legend of Zelda Games of All Time, behind Tears of the Kingdom",
+        "field": "title",
+        "before": "The Legend of Zelda: Breath of the Wild lands top spot on IGN's 10 Best Legend of Zelda Games of All Time"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:07:03.874Z"
+  },
+  {
+    "id": 9,
+    "pinId": 258,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2029-12-31T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2028-08-15T00:00:00.000Z"
+      },
+      {
+        "after": "2030-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2028-08-16T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>The Mumbai-Ahmedabad high-speed rail line is India's first bullet-train corridor: 508 km, 12 stations, built and operated by NHSRCL with Japanese Shinkansen technology (E10 Series / B28 \"Vande Bullet\") and technology transfer under Make in India<cite data-ref=\"https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor\"></cite></li><li>Specs: standard gauge, 25 kV AC, ETCS Level 2, operating speed 320 km/h (design 350 km/h), a 353 km viaduct; trains are expected to cover the route in two hours versus 5 h 40 min for the current Vande Bharat<cite data-ref=\"https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor\"></cite></li><li>Construction began February 2021 after COVID delays; the first section, Surat-Bilimora, is planned to open on 15 August 2027 (then Vapi-Surat), and Railways Minister Ashwini Vaishnaw told the Lok Sabha on 23 July 2025 that the Gujarat section is due by December 2027 and the full corridor by December 2029<cite data-ref=\"https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor\"></cite><cite data-ref=\"https://www.newsonair.gov.in/first-bullet-train-to-run-between-mumbai-ahmedabad-on-15-august-2027-says-ashwini-vaishnaw\"></cite><cite data-ref=\"https://www.deccanherald.com/india/indias-first-bullet-train-to-commence-operations-on-august-15-2027-3848836\"></cite><cite data-ref=\"https://www.constructionworld.in/transport-infrastructure/metro-rail-and-railways-infrastructure/mumbai-ahmedabad-bullet-train-targets-2029-completion/76978\"></cite></li><li>Railways Minister Ashwini Vaishnaw said on 1-2 January 2026 that the first bullet train would start on Independence Day, 15 August 2027<cite data-ref=\"https://www.newsonair.gov.in/first-bullet-train-to-run-between-mumbai-ahmedabad-on-15-august-2027-says-ashwini-vaishnaw\"></cite><cite data-ref=\"https://www.deccanherald.com/india/indias-first-bullet-train-to-commence-operations-on-august-15-2027-3848836\"></cite></li><li>Cost is about Rs 1.1 lakh crore, 81% funded by a JICA loan; Rs 67,486 crore had been spent and 47% of civil works completed by October 2024<cite data-ref=\"https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor\"></cite></li><li>By September 2026 the corridor had reached 62.16 per cent physical progress with over Rs 90,967 crore spent, and the full corridor was still expected to be completed by December 2029<cite data-ref=\"https://swarajyamag.com/infrastructure/mumbai-ahmedabad-bullet-train-indias-first-high-speed-rail-project-achieves-6216-per-cent-physical-progress-rs-90967-crore-spent-so-far\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Mumbai-Ahmedabad high-speed rail line is India's first bullet-train corridor: 508 km, 12 stations, built and operated by NHSRCL with Japanese Shinkansen technology (E10 Series / B28 \"Vande Bullet\") and technology transfer under Make in India<cite data-ref=\"https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor\"></cite></li><li>Specs: standard gauge, 25 kV AC, ETCS Level 2, operating speed 320 km/h (design 350 km/h), a 353 km viaduct; trains are expected to cover the route in two hours versus 5 h 40 min for the current Vande Bharat<cite data-ref=\"https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor\"></cite></li><li>Construction began February 2021 after COVID delays; the planned opening is 15 August 2027 for the Surat-Bilimora section (then Vapi-Surat) and 2029 for the full line, so the pin's 2028 date is earlier than the sources' opening dates<cite data-ref=\"https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor\"></cite><cite data-ref=\"https://www.newsonair.gov.in/first-bullet-train-to-run-between-mumbai-ahmedabad-on-15-august-2027-says-ashwini-vaishnaw\"></cite><cite data-ref=\"https://www.deccanherald.com/india/indias-first-bullet-train-to-commence-operations-on-august-15-2027-3848836\"></cite></li><li>Railways Minister Ashwini Vaishnaw said on 1-2 January 2026 that the first bullet train would start on Independence Day, 15 August 2027<cite data-ref=\"https://www.newsonair.gov.in/first-bullet-train-to-run-between-mumbai-ahmedabad-on-15-august-2027-says-ashwini-vaishnaw\"></cite><cite data-ref=\"https://www.deccanherald.com/india/indias-first-bullet-train-to-commence-operations-on-august-15-2027-3848836\"></cite></li><li>Cost is about Rs 1.1 lakh crore, 81% funded by a JICA loan; Rs 67,486 crore had been spent and 47% of civil works completed by October 2024<cite data-ref=\"https://en.wikipedia.org/wiki/Mumbai%E2%80%93Ahmedabad_high-speed_rail_corridor\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.constructionworld.in/transport-infrastructure/metro-rail-and-railways-infrastructure/mumbai-ahmedabad-bullet-train-targets-2029-completion/76978",
+        "title": "Mumbai-Ahmedabad Bullet Train Targets 2029 Completion",
+        "confidence": 85
+      },
+      {
+        "url": "https://swarajyamag.com/infrastructure/mumbai-ahmedabad-bullet-train-indias-first-high-speed-rail-project-achieves-6216-per-cent-physical-progress-rs-90967-crore-spent-so-far",
+        "title": "Mumbai-Ahmedabad Bullet Train: India's First High-Speed Rail Project Achieves 62.16 Per Cent Physical Progress, Rs 90,967 Crore Spent So Far",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:07:25.347Z"
+  },
+  {
+    "id": 10,
+    "pinId": 259,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2029-12-31T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2028-12-01T00:00:00.000Z"
+      },
+      {
+        "after": "2030-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2028-12-02T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>Brightline West is a privately run high-speed line under construction along the I-15 median, 218 miles (351 km) from the Las Vegas area to Rancho Cucamonga, with stops at Victor Valley and Hesperia and an average journey of about 2h 10m<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite></li><li>Revenue service is now planned for late 2029, missing the 2028 Los Angeles Olympics target; as of April 2025 officials anticipated September 2029, and in January 2026 Brightline West told FOX5 the line is scheduled for completion by late 2029<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.planetizen.com/news/2026/01/136766-californias-brightline-west-high-speed-rail-announces-2029-completion-date\"></cite><cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite><cite data-ref=\"https://www.fox5vegas.com/2026/01/14/brightline-west-high-speed-rail-project-now-track-late-2029/\"></cite></li><li>Costs are estimated at $21.5 billion (January 2026 disclosure) against $8 billion in 2020; the company requested a $6 billion loan on top of a $3 billion US DOT grant and $2.5 billion of private activity bonds<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.planetizen.com/news/2026/01/136766-californias-brightline-west-high-speed-rail-announces-2029-completion-date\"></cite> (Newsweek cites at least $12 billion<cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite>)</li><li>Groundbreaking was 22 April 2024 in Las Vegas; as of October 2025 major construction was expected in April 2026, and track-laying start is not announced<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite></li><li>In August 2026 financing was still unresolved: the company remained in due diligence for a $6 billion federal RRIF loan, a $400 million equity contribution originally due 31 March had been extended to 10 September, and a $4 billion bank contribution was still pending; the opening was still given as late 2029<cite data-ref=\"https://www.bondbuyer.com/news/brightline-west-investors-sit-tight-as-financing-remains-elusive\"></cite></li><li>Brightline (Fortress Investment Group) acquired XpressWest in 2018 and rebranded it Brightline West in 2020; about 50 million people travel between Los Angeles and Las Vegas annually, 85% by car<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Brightline West is a privately run high-speed line under construction along the I-15 median, 218 miles (351 km) from the Las Vegas area to Rancho Cucamonga, with stops at Victor Valley and Hesperia and an average journey of about 2h 10m<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite></li><li>Revenue service is now planned for late 2029, missing the 2028 Los Angeles Olympics target; officials anticipate September 2029, so the pin's December 2028 date is earlier than the sources' schedule<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.planetizen.com/news/2026/01/136766-californias-brightline-west-high-speed-rail-announces-2029-completion-date\"></cite><cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite></li><li>Costs are estimated at $21.5 billion (January 2026 disclosure) against $8 billion in 2020; the company requested a $6 billion loan on top of a $3 billion US DOT grant and $2.5 billion of private activity bonds<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.planetizen.com/news/2026/01/136766-californias-brightline-west-high-speed-rail-announces-2029-completion-date\"></cite> (Newsweek cites at least $12 billion<cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite>)</li><li>Groundbreaking was 22 April 2024 in Las Vegas; as of October 2025 major construction was expected in April 2026, and track-laying start is not announced<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite></li><li>Brightline (Fortress Investment Group) acquired XpressWest in 2018 and rebranded it Brightline West in 2020; about 50 million people travel between Los Angeles and Las Vegas annually, 85% by car<cite data-ref=\"https://en.wikipedia.org/wiki/Brightline_West\"></cite><cite data-ref=\"https://www.newsweek.com/california-high-speed-rail-new-completion-date-11363799\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.fox5vegas.com/2026/01/14/brightline-west-high-speed-rail-project-now-track-late-2029/",
+        "title": "Brightline West high-speed rail project now on track for late 2029",
+        "confidence": 85
+      },
+      {
+        "url": "https://www.bondbuyer.com/news/brightline-west-investors-sit-tight-as-financing-remains-elusive",
+        "title": "Brightline West investors sit tight as financing remains elusive",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:07:47.610Z"
+  },
+  {
+    "id": 11,
+    "pinId": 260,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2030-12-31T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2028-10-01T00:00:00.000Z"
+      },
+      {
+        "after": "2031-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2028-10-02T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>The Francis Scott Key Bridge (I-695, Baltimore) opened 23 March 1977; a steel continuous truss 8,636 ft long with a 1,200 ft main span<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite></li><li>On 26 March 2024 the container ship MV Dali lost power and struck a support pier, collapsing the main spans; six maintenance workers died and two were rescued, and a mayday call let police halt traffic<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite><cite data-ref=\"https://www.cbsnews.com/amp/baltimore/news/new-key-bridge-could-be-rebuilt-by-2028-heres-how-much-it-will-cost\"></cite></li><li>Replacement plans: in May 2024 officials projected $1.7-1.9 billion and completion in fall 2028<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite><cite data-ref=\"https://www.cbsnews.com/amp/baltimore/news/new-key-bridge-could-be-rebuilt-by-2028-heres-how-much-it-will-cost\"></cite>; Kiewit was named progressive design-builder in August 2024 with opening \"expected in Fall 2028\"<cite data-ref=\"https://www.southbmore.com/2024/09/04/key-bridge-replacement-contract-awarded-to-kiewit-expected-completion-in-fall-2028/\"></cite></li><li>The 2028 target has since been superseded: on 17 November 2025 the Maryland Transportation Authority raised the estimate to $4.3-5.2 billion with an anticipated open-to-traffic date in late 2030, citing much higher material costs, a larger pier protection system and a main span lengthened to 1,665 ft<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite><cite data-ref=\"https://mdta.maryland.gov/blog-category/mdta-news-releases/maryland-transportation-authority-releases-updated-estimates-cost\"></cite></li><li>On 28 April 2026 MDTA dropped Kiewit from Phase 2 construction because its proposal far exceeded the state's independent cost estimates; by August 2026 the state planned to award the main overwater contract in June 2027 and still had &quot;a goal of the end of 2030&quot;, now asking for completion &quot;as near to December 31, 2030 as practicable&quot; rather than the 2024 requirement of &quot;no later than October 15, 2028&quot;<cite data-ref=\"https://www.constructiondive.com/news/kiewit-out-baltimore-key-bridge-rebuild-design-build/818749/\"></cite><cite data-ref=\"https://www.thebanner.com/economy/growth-development/key-bridge-wooden-platforms-target-deadline-MU3ZP2GZBRCMPGK4UCN2MW23B4/\"></cite></li><li>Funding includes a $350 million Chubb insurance payout, a $101.98 million DOJ settlement with the Dali's owner and manager, and a 100 percent federal Emergency Relief share set by law in December 2024<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite><cite data-ref=\"https://www.cbsnews.com/amp/baltimore/news/new-key-bridge-could-be-rebuilt-by-2028-heres-how-much-it-will-cost\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Francis Scott Key Bridge (I-695, Baltimore) opened 23 March 1977; a steel continuous truss 8,636 ft long with a 1,200 ft main span<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite></li><li>On 26 March 2024 the container ship MV Dali lost power and struck a support pier, collapsing the main spans; six maintenance workers died and two were rescued, and a mayday call let police halt traffic<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite><cite data-ref=\"https://www.cbsnews.com/amp/baltimore/news/new-key-bridge-could-be-rebuilt-by-2028-heres-how-much-it-will-cost\"></cite></li><li>Replacement plans: in May 2024 officials projected $1.7-1.9 billion and completion in fall 2028<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite><cite data-ref=\"https://www.cbsnews.com/amp/baltimore/news/new-key-bridge-could-be-rebuilt-by-2028-heres-how-much-it-will-cost\"></cite>; Kiewit was named progressive design-builder in August 2024 with opening \"expected in Fall 2028\"<cite data-ref=\"https://www.southbmore.com/2024/09/04/key-bridge-replacement-contract-awarded-to-kiewit-expected-completion-in-fall-2028/\"></cite></li><li>The 2028 target has since been superseded: on 17 November 2025 Maryland announced the cost rose to $4.3-5.2 billion and completion slipped to late 2030 (December 2030), so the pin's October 2028 date is out of date<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite></li><li>Funding includes a $350 million Chubb insurance payout, a $101.98 million DOJ settlement with the Dali's owner and manager, and a 100 percent federal Emergency Relief share set by law in December 2024<cite data-ref=\"https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_(Baltimore)\"></cite><cite data-ref=\"https://www.cbsnews.com/amp/baltimore/news/new-key-bridge-could-be-rebuilt-by-2028-heres-how-much-it-will-cost\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://mdta.maryland.gov/blog-category/mdta-news-releases/maryland-transportation-authority-releases-updated-estimates-cost",
+        "title": "Maryland Transportation Authority Releases Updated Estimates for Cost Range and Schedule for Francis Scott Key Bridge Rebuild | MDTA",
+        "confidence": 85
+      },
+      {
+        "url": "https://www.constructiondive.com/news/kiewit-out-baltimore-key-bridge-rebuild-design-build/818749/",
+        "title": "Kiewit 'off-ramped' from Baltimore's Key Bridge rebuild | Construction Dive",
+        "confidence": 85
+      },
+      {
+        "url": "https://www.thebanner.com/economy/growth-development/key-bridge-wooden-platforms-target-deadline-MU3ZP2GZBRCMPGK4UCN2MW23B4/",
+        "title": "The Key Bridge rebuild gets a new workspace - and a squishier deadline | The Banner",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:08:09.071Z"
+  },
+  {
+    "id": 12,
+    "pinId": 267,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The first 2.4 km of a proposed 170 km linear city of mirrored walls, scaled back sharply from original announcements and on hold since September 2025, with further work pushed past 2030. Estimated date.",
+        "field": "description",
+        "before": "The first 2.4 km of a proposed 170 km linear city of mirrored walls, scaled back sharply from original announcements. Estimated date."
+      },
+      {
+        "after": "2034-12-31T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2030-12-01T00:00:00.000Z"
+      },
+      {
+        "after": "2035-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2030-12-02T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>The Line is a planned linear city in Neom, Tabuk Province, announced in 2021: originally 170 km long, 500 m high and 200 m wide, car-free and carbon-free, for 9 million people<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite><cite data-ref=\"https://www.theguardian.com/world/2022/jul/27/saudis-unveil-eye-popping-plan-for-mirrored-skyscraper-eco-city\"></cite></li><li>The first phase, lasting until 2030, was to cost SAR 1.2 trillion (about US$320 billion) per the crown prince in 2022<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite><cite data-ref=\"https://www.theguardian.com/world/2022/jul/27/saudis-unveil-eye-popping-plan-for-mirrored-skyscraper-eco-city\"></cite></li><li>By 2025 the project had been substantially scaled down or suspended: the Wall Street Journal reported the first phase would be only 2.4 km long (Saudi officials denied an internal audit's findings), with the aim of completing the first half-mile section in 2034<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite></li><li>A 2023 draft board presentation reportedly estimated full completion in 2080 at $8.8 trillion<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite></li><li>On 16 September 2025 the Public Investment Fund suspended work until further notice, and by the end of 2025 no construction was taking place<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite>; on 22 May 2026 Semafor reported that NEOM had delayed further work on The Line until at least after 2030 while significantly redesigning its twin mirrored skyscrapers, adding that it was unclear when the redesign would be finished or new funding allocated<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite><cite data-ref=\"https://www.semafor.com/article/05/22/2026/saudis-neom-halts-work-on-the-line-until-after-2030\"></cite></li><li>Earlier (October 2024) Neom's chief investment officer said a 5 km central section targeted 2030 with full 170 km completion in 2045<cite data-ref=\"https://www.agbi.com/giga-projects/2024/10/neom-uses-one-fifth-of-worlds-steel/\"></cite>; the Guardian in 2022 cited a first phase running until 2030<cite data-ref=\"https://www.theguardian.com/world/2022/jul/27/saudis-unveil-eye-popping-plan-for-mirrored-skyscraper-eco-city\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Line is a planned linear city in Neom, Tabuk Province, announced in 2021: originally 170 km long, 500 m high and 200 m wide, car-free and carbon-free, for 9 million people<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite><cite data-ref=\"https://www.theguardian.com/world/2022/jul/27/saudis-unveil-eye-popping-plan-for-mirrored-skyscraper-eco-city\"></cite></li><li>The first phase, lasting until 2030, was to cost SAR 1.2 trillion (about US$320 billion) per the crown prince in 2022<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite><cite data-ref=\"https://www.theguardian.com/world/2022/jul/27/saudis-unveil-eye-popping-plan-for-mirrored-skyscraper-eco-city\"></cite></li><li>By 2025 the project had been substantially scaled down or suspended: the Wall Street Journal reported the first phase would be only 2.4 km long (Saudi officials denied an internal audit's findings), with the aim of completing the first half-mile section in 2034<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite></li><li>A 2023 draft board presentation reportedly estimated full completion in 2080 at $8.8 trillion<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite></li><li>By the end of 2025 it appeared suspended with no construction work, and in May 2026 Semafor reported construction delayed until at least after 2030, so the pin's 2030 date is doubtful<cite data-ref=\"https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia\"></cite></li><li>Earlier (October 2024) Neom's chief investment officer said a 5 km central section targeted 2030 with full 170 km completion in 2045<cite data-ref=\"https://www.agbi.com/giga-projects/2024/10/neom-uses-one-fifth-of-worlds-steel/\"></cite>; the Guardian in 2022 cited a first phase running until 2030<cite data-ref=\"https://www.theguardian.com/world/2022/jul/27/saudis-unveil-eye-popping-plan-for-mirrored-skyscraper-eco-city\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.semafor.com/article/05/22/2026/saudis-neom-halts-work-on-the-line-until-after-2030",
+        "title": "Exclusive: Saudi's NEOM halts work on The Line until after 2030 | Semafor",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:08:30.523Z"
+  },
+  {
+    "id": 13,
+    "pinId": 552,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Singapore's Cross Island Line, a new MRT line of more than 50km squeezed through one of the world's most densely populated islands, is targeting its first 12-station, 29km phase for 2030.",
+        "field": "description",
+        "before": "Singapore's Cross Island Line, a new 58km MRT line squeezed through one of the world's most densely populated islands, is targeting its first 12-station phase for 2030."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:08:52.758Z"
+  },
+  {
+    "id": 14,
+    "pinId": 610,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Victoria's Suburban Rail Loop, announced in 2018 as a 90km orbital line built to connect Melbourne's suburbs without funnelling every trip through downtown, is aiming to open its first 26km stage in 2035. The state costs its first two stages at AUD $31-58BN; Victoria's Parliamentary Budget Office put the build at $125BN.",
+        "field": "description",
+        "before": "Victoria's Suburban Rail Loop, a 90km orbital line built to connect Melbourne's suburbs without funnelling every trip through downtown, is aiming to open its first 26km stage in 2035. The state costs its first two stages at AUD $31-58BN; Victoria's Parliamentary Budget Office put the build at $125BN."
+      },
+      {
+        "after": "<ul><li>SRL East runs 26 km from Cheltenham to Box Hill with 6 stations; work began in 2022 and the planned opening is 2035, as the pin says<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>As of September 2026 six SRL East stations are under construction and tunnel boring began in September 2026, first from Burwood towards Glen Waverley<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>SRL East and SRL North (Box Hill to Melbourne Airport, 34 km, 7 stations) together form a 60 km fully automated underground orbital line with 13 stations connecting eight existing rail lines and three university campuses; SRL West is undefined with no timeframe; the 90 km figure in the pin's description is the full orbital line as Daniel Andrews first announced it on 28 August 2018, connecting 10 existing rail lines at an estimated $50 billion<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>SRL North's date is given two ways on the same page: 2043 in the infobox, while the text says construction is not expected before the 2030s, completion by 2053, and the section may be split in two<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>The links disagree on cost:<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite> estimates $31-58 billion for the line, while<cite data-ref=\"https://www.youtube.com/watch?v=IirLC9q5e-I\"></cite>, The B1M's video \"Australia is Building a $125BN Mega-Railway\" (published 2023-10-18), carries $125BN only as a title figure for Melbourne's whole metro upgrade - its chapters cover both the Suburban Rail Loop and the Metro Tunnel - and gives no breakdown; the pin applies that $125BN to the loop alone<cite data-ref=\"https://www.youtube.com/watch?v=IirLC9q5e-I\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>Delivery: owner VicTrack, operator TransitLinX (John Holland and RATP Dev), 4-car driverless Alstom Metropolis trains, Alstom Urbalis Forward signalling and 25 kV AC; the first $3.6 billion tunnel contract was signed in December 2023 with Suburban Connect<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>The project is contested: announced by the Andrews Labor government before the 2018 state election and criticised over political motives, business-case transparency, prioritisation and cost; Coalition leaders Brad Battin (Jan 2025) and then Jess Wilson (from November 2025) pledged to halt it if elected in 2026, and the federal Coalition vowed to scrap $2.2 billion in federal funding before the 2025 election, which it lost<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>It answers Melbourne's radial rail network after earlier orbital attempts failed - the Outer Circle (1888-1891, closed by 1897) and the Inner Circle (opened 1888, closed to passengers 1941) - followed by the road-based M80 Ring Road and EastLink<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>SRL East runs 26 km from Cheltenham to Box Hill with 6 stations; work began in 2022 and the planned opening is 2035, as the pin says<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>As of September 2026 six SRL East stations are under construction and tunnel boring began in September 2026, first from Burwood towards Glen Waverley<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>SRL East and SRL North (Box Hill to Melbourne Airport, 34 km, 7 stations) together form a 60 km fully automated underground orbital line with 13 stations connecting eight existing rail lines and three university campuses; SRL West is undefined with no timeframe, so no wiki puts a figure on the 90 km the pin's description gives<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>SRL North's date is given two ways on the same page: 2043 in the infobox, while the text says construction is not expected before the 2030s, completion by 2053, and the section may be split in two<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>The links disagree on cost:<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite> estimates $31-58 billion for the line, while<cite data-ref=\"https://www.youtube.com/watch?v=IirLC9q5e-I\"></cite>, The B1M's video \"Australia is Building a $125BN Mega-Railway\" (published 2023-10-18), carries $125BN only as a title figure for Melbourne's whole metro upgrade - its chapters cover both the Suburban Rail Loop and the Metro Tunnel - and gives no breakdown; the pin applies that $125BN to the loop alone<cite data-ref=\"https://www.youtube.com/watch?v=IirLC9q5e-I\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>Delivery: owner VicTrack, operator TransitLinX (John Holland and RATP Dev), 4-car driverless Alstom Metropolis trains, Alstom Urbalis Forward signalling and 25 kV AC; the first $3.6 billion tunnel contract was signed in December 2023 with Suburban Connect<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>The project is contested: announced by the Andrews Labor government before the 2018 state election and criticised over political motives, business-case transparency, prioritisation and cost; Coalition leaders Brad Battin (Jan 2025) and then Jess Wilson (from November 2025) pledged to halt it if elected in 2026, and the federal Coalition vowed to scrap $2.2 billion in federal funding before the 2025 election, which it lost<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li><li>It answers Melbourne's radial rail network after earlier orbital attempts failed - the Outer Circle (1888-1891, closed by 1897) and the Inner Circle (opened 1888, closed to passengers 1941) - followed by the road-based M80 Ring Road and EastLink<cite data-ref=\"https://en.wikipedia.org/wiki/Suburban_Rail_Loop\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:09:14.288Z"
+  },
+  {
+    "id": 15,
+    "pinId": 798,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The Paris Métro's first line opened to the public on 19 July 1900, running between Porte Maillot and Porte de Vincennes.",
+        "field": "description",
+        "before": "The Paris Métro's first line opened to the public on 19 July 1900, running between Porte Maillot and Château de Vincennes."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:09:35.921Z"
+  },
+  {
+    "id": 16,
+    "pinId": 1146,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The Tatami Galaxy begins its TV run, a fast-talking college comedy in which an unnamed third-year student replays his stalled campus life over and over, chasing the 'rose-colored campus life' he never found.",
+        "field": "description",
+        "before": "The Tatami Galaxy begins its TV run, a fast-talking college comedy in which an unnamed sophomore replays his stalled campus life over and over, chasing the 'rose-colored campus life' he never found."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:09:58.364Z"
+  },
+  {
+    "id": 17,
+    "pinId": 1400,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Final Fantasy VII: Advent Children Complete Releases on Blu-ray in Japan",
+        "field": "title",
+        "before": "Final Fantasy VII: Advent Children Complete Releases in Japanese Theaters"
+      },
+      {
+        "after": "<ul><li>Final Fantasy VII: Advent Children Complete, a one-episode OVA by Square Enix Visual Works, released 16 April 2009 in Japan<cite data-ref=\"https://myanimelist.net/anime/2952/Final_Fantasy_VII__Advent_Children_Complete\"></cite></li><li>Director's cut of the 2005 film, first announced at the 2006 Tokyo Game Show; two Japanese editions were released, one with a demo of Final Fantasy XIII; US release 2 June 2009 and UK 27 July 2009<cite data-ref=\"https://myanimelist.net/anime/2952/Final_Fantasy_VII__Advent_Children_Complete\"></cite></li><li>Plot: two years after saving the world, Cloud and Tifa live with Marlene and Denzel until a plague and three silver-haired attackers resembling Sephiroth threaten them<cite data-ref=\"https://myanimelist.net/anime/2952/Final_Fantasy_VII__Advent_Children_Complete\"></cite></li><li>MAL score 7.89 from 86,087 users, ranked #950<cite data-ref=\"https://myanimelist.net/anime/2952/Final_Fantasy_VII__Advent_Children_Complete\"></cite></li><li>It had no theatrical run: the Japanese release was exclusive to Blu-ray, and Square Enix held four invitation-only screenings at the Ginza Sony Building in Tokyo on 11 and 12 April 2009, with 800 seats for members who had reserved the Blu-ray or PlayStation 3 bundle at its e-store; over 100,000 Blu-ray copies sold in Japan on the first day<cite data-ref=\"https://en.wikipedia.org/wiki/Final_Fantasy_VII:_Advent_Children\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Final Fantasy VII: Advent Children Complete, a one-episode OVA by Square Enix Visual Works, released 16 April 2009 in Japan<cite data-ref=\"https://myanimelist.net/anime/2952/Final_Fantasy_VII__Advent_Children_Complete\"></cite></li><li>Director's cut of the 2005 film, first announced at the 2006 Tokyo Game Show; two Japanese editions were released, one with a demo of Final Fantasy XIII; US release 2 June 2009 and UK 27 July 2009<cite data-ref=\"https://myanimelist.net/anime/2952/Final_Fantasy_VII__Advent_Children_Complete\"></cite></li><li>Plot: two years after saving the world, Cloud and Tifa live with Marlene and Denzel until a plague and three silver-haired attackers resembling Sephiroth threaten them<cite data-ref=\"https://myanimelist.net/anime/2952/Final_Fantasy_VII__Advent_Children_Complete\"></cite></li><li>MAL score 7.89 from 86,087 users, ranked #950<cite data-ref=\"https://myanimelist.net/anime/2952/Final_Fantasy_VII__Advent_Children_Complete\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Final_Fantasy_VII:_Advent_Children",
+        "title": "Final Fantasy VII: Advent Children - Wikipedia",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:10:19.794Z"
+  },
+  {
+    "id": 18,
+    "pinId": 1891,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Sonic the Hedgehog 2 is a 2022 action-adventure comedy film based on the Sonic video game series.<cite data-ref=\"https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_2_(film)\"></cite></li><li>The second film in the Sonic film series, it was directed by Jeff Fowler from a screenplay by Pat Casey, Josh Miller, and John Whittington.<cite data-ref=\"https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_2_(film)\"></cite></li><li>Ben Schwartz, Jim Carrey, James Marsden, Tika Sumpter, Natasha Rothwell, Colleen O&#x27;Shaughnessey and Adam Pally reprise their roles, with Shemar Moore and Idris Elba joining the cast.<cite data-ref=\"https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_2_(film)\"></cite></li><li>In the film, Sonic and his friend Tails (O&#x27;Shaughnessey) embark on a journey to find the Master Emerald before their nemesis, Dr. Robotnik, and his accomplice, Knuckles the Echidna (Elba).<cite data-ref=\"https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_2_(film)\"></cite></li><li>It was theatrically released in several markets on March 30, 2022, in the United States on April 8 and in Japan on August 19, and grossed $405.4 million worldwide.<cite data-ref=\"https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_2_(film)\"></cite></li><li>Part of the Sonic the Hedgehog film lineage on ChronoPin, threaded in release order.</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Sonic the Hedgehog 2 is a 2022 action-adventure comedy film based on the Sonic video game series. [S]</li><li>The second film in the Sonic film series, it was directed by Jeff Fowler from a screenplay by Pat Casey, Josh Miller, and John Whittington. [S]</li><li>Ben Schwartz, Jim Carrey, James Marsden, Tika Sumpter, Natasha Rothwell, Colleen O&#x27;Shaughnessey and Adam Pally reprise their roles, with Shemar Moore and Idris Elba joining the cast. [S]</li><li>In the film, Sonic and his friend Tails (O&#x27;Shaughnessey) embark on a journey to find the Master Emerald before their nemesis, Dr. [S]</li><li>Part of the Sonic the Hedgehog film lineage on ChronoPin, threaded in release order.</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:10:41.232Z"
+  },
+  {
+    "id": 19,
+    "pinId": 1905,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "How to Train Your Dragon is a 2010 American animated fantasy film directed by Chris Sanders and Dean DeBlois and written by Sanders, DeBlois, and Will Davies, based on the 2003 novel by British author Cressida Cowell. Produced by DreamWorks Animation, the film stars the voices of Jay Baruchel, America Ferrera, Gerard Butler, Craig Ferguson, Jonah Hill, Christopher Mintz-Plasse, Kristen Wiig, and T.J. Miller.",
+        "field": "description",
+        "before": "How to Train Your Dragon is a 2010 American animated fantasy film directed by Chris Sanders and Dean DeBlois and written by Sanders, DeBlois, and Will Davies, based on the 2003 novel by British author Cressida Cowell. Produced by DreamWorks Animation, the film stars the voices of Jay Baruchel, America Ferrera, Gerard Butler, Craig Ferguson, Jonah Hill, Christopher Mintz-Plasse, Kristen Wiig, and T.J."
+      },
+      {
+        "after": "<ul><li>How to Train Your Dragon is a 2010 American animated fantasy film directed by Chris Sanders and Dean DeBlois and written by Sanders, DeBlois, and Will Davies, based on the 2003 novel by British author Cressida Cowell.<cite data-ref=\"https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)\"></cite></li><li>Produced by DreamWorks Animation, the film stars the voices of Jay Baruchel, America Ferrera, Gerard Butler, Craig Ferguson, Jonah Hill, Christopher Mintz-Plasse, Kristen Wiig, and T.J. Miller.<cite data-ref=\"https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)\"></cite></li><li>The story takes place in Berk, a mythical Viking village.<cite data-ref=\"https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)\"></cite></li><li>Hiccup (Baruchel), an undersized teen outcast and son of the village chieftain, wishing to become a dragon slayer like the other Vikings, injures a rare Night Fury dragon but refuses to bring himself to kill it.<cite data-ref=\"https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)\"></cite></li><li>He instead helps and befriends the dragon, and quickly discovers that things are not exactly as they seem in the conflict between Vikings and dragons.<cite data-ref=\"https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)\"></cite></li><li>The film premiered at the Gibson Amphitheater on March 21, 2010, was released in the United States on March 26 by Paramount Pictures, and earned $495 million, the tenth-highest-grossing film of 2010.<cite data-ref=\"https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)\"></cite></li><li>Part of the How to Train Your Dragon film lineage on ChronoPin, threaded in release order.</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>How to Train Your Dragon is a 2010 American animated fantasy film directed by Chris Sanders and Dean DeBlois and written by Sanders, DeBlois, and Will Davies, based on the 2003 novel by British author Cressida Cowell. [S]</li><li>Produced by DreamWorks Animation, the film stars the voices of Jay Baruchel, America Ferrera, Gerard Butler, Craig Ferguson, Jonah Hill, Christopher Mintz-Plasse, Kristen Wiig, and T.J. [S]</li><li>The story takes place in Berk, a mythical Viking village. [S]</li><li>Hiccup (Baruchel), an undersized teen outcast and son of the village chieftain, wishing to become a dragon slayer like the other Vikings, injures a rare Night Fury dragon but refuses to bring himself to kill it. [S]</li><li>Part of the How to Train Your Dragon film lineage on ChronoPin, threaded in release order.</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:11:03.309Z"
+  },
+  {
+    "id": 20,
+    "pinId": 1976,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Emmanuel Macron's second term ends on May 13, 2027; the government has set the first round for Sunday, April 18 and the runoff for May 2. On 20 September 2026 Polymarket's 128-name market had Marine Le Pen at 37%, Edouard Philippe at 25% and Jean-Luc Melenchon at 13%.",
+        "field": "description",
+        "before": "Emmanuel Macron's second term ends on May 13, 2027, which puts the first round on Sunday, April 11 and the runoff on April 25. On 20 September 2026 Polymarket's 128-name market had Marine Le Pen at 37%, Edouard Philippe at 25% and Jean-Luc Melenchon at 13%."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:11:24.661Z"
+  },
+  {
+    "id": 21,
+    "pinId": 2075,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The 10th FIFA Women's World Cup runs 24 June to 25 July 2027 in Brazil, the first edition held in South America.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup\"></cite></li><li>Thirty-two teams contest it across eight stadiums in eight cities; the Maracanã is one of the eight.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup\"></cite><cite data-ref=\"https://www.fifa.com/en/tournaments/womens/womensworldcup/brazil2027\"></cite></li><li>Spain are the defending champions, having won their first title in 2023.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup\"></cite></li><li>It is the last World Cup at 32 teams: FIFA expands to 48 for 2031.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 10th FIFA Women's World Cup runs 24 June to 25 July 2027 in Brazil, the first edition held in South America. [S]</li><li>Thirty-two teams contest it across eight stadiums in eight cities; the Maracanã is one of the eight. [S][1]</li><li>Spain are the defending champions, having won their first title in 2023. [S]</li><li>It is the last World Cup at 32 teams: FIFA expands to 48 for 2031. [S]</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:11:46.081Z"
+  },
+  {
+    "id": 22,
+    "pinId": 2076,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The 46th Ryder Cup is played at Adare Manor, County Limerick, on 17-19 September 2027.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_Ryder_Cup\"></cite></li><li>It is the first Ryder Cup in Ireland since 2006.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_Ryder_Cup\"></cite></li><li>The Irish government is expected to spend €58 million on it, including a €22.5 million licence fee to the European Tour.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_Ryder_Cup\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 46th Ryder Cup is played at Adare Manor, County Limerick, on 17-19 September 2027. [S]</li><li>It is the first Ryder Cup in Ireland since 2006. [S]</li><li>The Irish government is expected to spend €58 million on it, including a €22.5 million licence fee to the European Tour. [S]</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:12:08.275Z"
+  },
+  {
+    "id": 23,
+    "pinId": 2077,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The 21st World Athletics Championships run 10-19 September 2027 at the Beijing National Stadium.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_World_Athletics_Championships\"></cite></li><li>It is the second time Beijing has hosted, after 2015.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_World_Athletics_Championships\"></cite></li><li>The venue is the Bird's Nest, built for the 2008 Summer Olympics.<cite data-ref=\"https://en.wikipedia.org/wiki/2027_World_Athletics_Championships\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 21st World Athletics Championships run 10-19 September 2027 at the Beijing National Stadium. [S]</li><li>It is the second time Beijing has hosted, after 2015. [S]</li><li>The venue is the Bird's Nest, built for the 2008 Summer Olympics. [S]</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:12:29.743Z"
+  },
+  {
+    "id": 24,
+    "pinId": 2079,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Super Bowl LXII, the championship game of the NFL's 2027 season, is set for 13 February 2028 at Mercedes-Benz Stadium, Atlanta.<cite data-ref=\"https://en.wikipedia.org/wiki/Super_Bowl_LXII\"></cite></li><li>It is Atlanta's fourth Super Bowl and the second at this stadium, after Super Bowl LIII in 2019.<cite data-ref=\"https://en.wikipedia.org/wiki/Super_Bowl_LXII\"></cite></li><li>CBS is planned to televise it nationally.<cite data-ref=\"https://en.wikipedia.org/wiki/Super_Bowl_LXII\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Super Bowl LXII, the championship game of the NFL's 2027 season, is set for 13 February 2028 at Mercedes-Benz Stadium, Atlanta. [S]</li><li>It is Atlanta's fourth Super Bowl and the second at this stadium, after Super Bowl LIII in 2019. [S]</li><li>CBS is planned to televise it nationally. [S]</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:12:51.169Z"
+  },
+  {
+    "id": 25,
+    "pinId": 2142,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The Moon's shadow touches down at 02:16:04 UT on 2042-04-20, and the total phase lasts up to 4 minutes 51 seconds along a path 210.4 km wide crossing Malaysia, Indonesia, the Philippines and the North Pacific. A partial eclipse is visible from eastern Asia, southeastern Asia, Australia and the Pacific.",
+        "field": "description",
+        "before": "The Moon's shadow touches down at 02:16:04 UT on 2042-04-20, and the total phase lasts up to 4 minutes 51 seconds along a path 210.4 km wide crossing Malaysia, Indondesia, the Philippines and the North Pacific. A partial eclipse is visible from eastern Asia, southeastern Asia, Australia and the Pacific."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:13:13.402Z"
+  },
+  {
+    "id": 26,
+    "pinId": 2144,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The Moon's shadow touches down at 18:56:22 UT on 2043-04-09, and the total phase, a non-central eclipse with no central line, falls over northeastern Russia. A partial eclipse is visible from northern North America and northeastern Asia.",
+        "field": "description",
+        "before": "The Moon's shadow touches down at 18:56:22 UT on 2043-04-09, and the total phase lasts up to  along a path across the Earth crossing northeastern Russia. A partial eclipse is visible from northern North America and northeastern Asia."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:13:34.785Z"
+  },
+  {
+    "id": 27,
+    "pinId": 2145,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The Moon's shadow touches down at 03:00:21 UT on 2043-10-03, and the annular phase, a non-central eclipse with no central line, falls over the South Indian Ocean. A partial eclipse is visible from Antarctica, southwestern Australia and the Indian Ocean.",
+        "field": "description",
+        "before": "The Moon's shadow touches down at 03:00:21 UT on 2043-10-03, and the annular phase lasts up to  along a path across the Earth crossing the South Indian Ocean. A partial eclipse is visible from Antarctica, southwestern Australia and the Indian Ocean."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:13:56.301Z"
+  },
+  {
+    "id": 28,
+    "pinId": 2152,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The Moon's shadow touches down at 12:57:21 UT on 2048-06-11, and the annular phase lasts up to 4 minutes 58 seconds along a path 271.5 km wide crossing the midwestern United States, Quebec, Ontario, Greenland, Iceland, Norway, Sweden, Russia and Afghanistan. A partial eclipse is visible from North America, the Caribbean, northern Africa, Europe and western Asia.",
+        "field": "description",
+        "before": "The Moon's shadow touches down at 12:57:21 UT on 2048-06-11, and the annular phase lasts up to 4 minutes 58 seconds along a path 271.5 km wide crossing the midwestern United States, Quebec, Ontario, Greenland, Iceland, Norway, Sweden, Russia and Afganistan. A partial eclipse is visible from North America, the Caribbean, northern Africa, Europe and western Asia."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:14:18.680Z"
+  },
+  {
+    "id": 29,
+    "pinId": 2156,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "The Moon's shadow touches down at 20:41:15 UT on 2050-05-20, and the hybrid phase lasts up to 0 minutes 21 seconds along a path 26.7 km wide crossing the South Pacific. A partial eclipse is visible from New Zealand, the South Pacific and southwestern South America.",
+        "field": "description",
+        "before": "The Moon's shadow touches down at 20:41:15 UT on 2050-05-20, and the hybrid phase lasts up to 0 minutes 21 seconds along a path 26.7 km wide crossing the South Pacific. A partial eclipse is visible from New Zealand., the South Pacific and southwestern South America."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:14:40.174Z"
+  },
+  {
+    "id": 30,
+    "pinId": 2322,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Samsung Thailand's newsroom roadmap sets 28 September 2026 as the start of the One UI 9 rollout for the Galaxy S25 series and the Galaxy Z Fold7 and Z Flip7<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite><cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite></li><li>The Galaxy S25 line covered includes the S25, S25+, S25 Ultra, S25 Edge and S25 FE<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite></li><li>This follows the stable One UI 9 debut in South Korea on 16 September 2026 with the Galaxy S26, S26+ and S26 Ultra, after the software first shipped on the Galaxy Z Fold8 Ultra, Fold8 and Flip8 and out of the box on the Galaxy S26 FE<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite><cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite></li><li>Samsung's global press release gave no rollout dates for older phones, only noting the models that would receive the Privacy Alerts feature, which makes the Thai posting the clearest official indication of plans beyond the S26 series<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite><cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite></li><li>Samsung Thailand originally listed 21 September for the Galaxy S26 series, then moved that date to 28 September so the S26 lines up with the S25 and Z7 foldables - a week's extra wait<cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Sammy Fans reported on 22 September 2026 that the Thai page later dropped a fixed date altogether in favour of \"Within September\", which the site framed as a change to the announcement timing rather than a confirmed delay of the update itself<cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Older devices remain unscheduled: the press release said One UI 9 would reach the Galaxy S23 FE \"by October\", later softened by Samsung to later this year, while the Galaxy S24 and S23 series go unmentioned<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Both SamMobile and Android Authority caution the dates may apply only to Thailand and could be tentative, with exact timing varying by country and carrier; Samsung's US announcement covered only the 16 September S26 start and Canada's cited 21 September<cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite></li><li>The Galaxy S22 series has already had its final major update (Android 16 / One UI 8) but continues to get quarterly security patches<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite></li><li>In the event's wake, Samsung began the global stable rollout for the Galaxy S26 series in the US on 23 September 2026, prioritising Beta 7 participants, and said it plans to upgrade all eligible devices by the end of the year<cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li></ul><h3>Notable features</h3><ul><li>One UI 9 is Samsung's Android 17-based interface release, tested through a beta programme running since May 2026 with seven major beta builds for the Galaxy S26 series, and positioned as the foundation for a later One UI 9.5 upgrade<cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>My FanCam automatically tracks a chosen person in a recorded video and keeps them centred, reframing the footage as the scene moves; it requires a Samsung Account and is not supported when there is no subject to track<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Now Brief gains Generative and Editable Cards so users can build their own daily-summary cards across health, weather and video<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite></li><li>Now Nudge surfaces context-aware suggestions in the flow of use, such as pulling up reservation details or saving a shared location from a conversation, working with Samsung Messages, Google Messages and Google Chat<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Creative Studio suggests image-generation prompts tied to upcoming events such as a friend's birthday<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Interpreter adds a Thread View for reviewing earlier exchanges, with faster Conversation Mode translation and quicker playback on compatible Galaxy Buds<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite></li><li>Document Scan handles curved book pages and folded corners with less manual correction, adds large-screen-optimised views and an improved Finger Eraser; Voice Recorder structures summaries with headings and tables<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Security and privacy additions: a Security Brief inside Now Brief flagging malware, unknown-source apps and unnecessary permissions; on-device AI Privacy Alerts; and Scam Detection expanding to Japan, Canada and India<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Privacy Alerts support spans the Galaxy S26/S25/S24/S23 families (including FE models), Z Fold8 Ultra/Fold8/Flip8 down to Fold5/Flip5, and Tab S11, S10 and S9 tablets<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite></li><li>Warranty and Care moves device support into Settings, covering warranty checks across linked devices, self-diagnostics, repair estimates and Samsung Care+ management or service booking, with availability varying by region<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Samsung Thailand's newsroom roadmap sets 28 September 2026 as the start of the One UI 9 rollout for the Galaxy S25 series and the Galaxy Z Fold7 and Z Flip7<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite><cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite></li><li>The Galaxy S25 line covered includes the S25, S25+, S25 Ultra, S25 Edge and S25 FE<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite></li><li>This follows the stable One UI 9 debut in South Korea on 16 September 2026 with the Galaxy S26, S26+ and S26 Ultra, after the software first shipped on the Galaxy Z Fold8 Ultra, Fold8 and Flip8 and out of the box on the Galaxy S26 FE<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite><cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite></li><li>Samsung's global press release gave no rollout dates for older phones, only noting the models that would receive the Privacy Alerts feature, which makes the Thai posting the clearest official indication of plans beyond the S26 series<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite><cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite></li><li>Samsung Thailand originally listed 21 September for the Galaxy S26 series, then moved that date to 28 September so the S26 lines up with the S25 and Z7 foldables \b\b\b\b\b- a week's extra wait<cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Sammy Fans reported on 22 September 2026 that the Thai page later dropped a fixed date altogether in favour of \"Within September\", which the site framed as a change to the announcement timing rather than a confirmed delay of the update itself<cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Older devices remain unscheduled: the press release said One UI 9 would reach the Galaxy S23 FE \"by October\", later softened by Samsung to later this year, while the Galaxy S24 and S23 series go unmentioned<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Both SamMobile and Android Authority caution the dates may apply only to Thailand and could be tentative, with exact timing varying by country and carrier; Samsung's US announcement covered only the 16 September S26 start and Canada's cited 21 September<cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite></li><li>The Galaxy S22 series has already had its final major update (Android 16 / One UI 8) but continues to get quarterly security patches<cite data-ref=\"https://www.gsmarena.com/here_is_when_the_galaxy_s25_and_galaxy_z7_series_will_receive_the_one_ui_9_update-news-74664.php\"></cite></li><li>In the event's wake, Samsung began the global stable rollout for the Galaxy S26 series in the US on 23 September 2026, prioritising Beta 7 participants, and said it plans to upgrade all eligible devices by the end of the year<cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li></ul><h3>Notable features</h3><ul><li>One UI 9 is Samsung's Android 17-based interface release, tested through a beta programme running since May 2026 with seven major beta builds for the Galaxy S26 series, and positioned as the foundation for a later One UI 9.5 upgrade<cite data-ref=\"https://www.sammobile.com/news/one-ui-9-global-release-dates-for-some-galaxy-devices-revealed/\"></cite><cite data-ref=\"https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>My FanCam automatically tracks a chosen person in a recorded video and keeps them centred, reframing the footage as the scene moves; it requires a Samsung Account and is not supported when there is no subject to track<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Now Brief gains Generative and Editable Cards so users can build their own daily-summary cards across health, weather and video<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite></li><li>Now Nudge surfaces context-aware suggestions in the flow of use, such as pulling up reservation details or saving a shared location from a conversation, working with Samsung Messages, Google Messages and Google Chat<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Creative Studio suggests image-generation prompts tied to upcoming events such as a friend's birthday<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Interpreter adds a Thread View for reviewing earlier exchanges, with faster Conversation Mode translation and quicker playback on compatible Galaxy Buds<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite></li><li>Document Scan handles curved book pages and folded corners with less manual correction, adds large-screen-optimised views and an improved Finger Eraser; Voice Recorder structures summaries with headings and tables<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Security and privacy additions: a Security Brief inside Now Brief flagging malware, unknown-source apps and unnecessary permissions; on-device AI Privacy Alerts; and Scam Detection expanding to Japan, Canada and India<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li><li>Privacy Alerts support spans the Galaxy S26/S25/S24/S23 families (including FE models), Z Fold8 Ultra/Fold8/Flip8 down to Fold5/Flip5, and Tab S11, S10 and S9 tablets<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite></li><li>Warranty and Care moves device support into Settings, covering warranty checks across linked devices, self-diagnostics, repair estimates and Samsung Care+ management or service booking, with availability varying by region<cite data-ref=\"https://news.samsung.com/global/samsung-begins-official-rollout-of-one-ui-9-bringing-the-latest-galaxy-experiences-to-more-devices\"></cite><cite data-ref=\"https://www.sammyfans.com/2026/09/22/samsung-changes-one-ui-9-0-official-release-date-for-millions-of-users/\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:15:01.932Z"
+  },
+  {
+    "id": 31,
+    "pinId": 3309,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "San Diego Comic-Con filled the San Diego Convention Center from its Wednesday 22 July Preview Night through 26 July 2026, expecting 135,000 attendees as the city secured the convention through 2030.",
+        "field": "description",
+        "before": "San Diego Comic-Con filled the San Diego Convention Center from its Wednesday 22 July opening through 26 July 2026, expecting 135,000 attendees as the city secured the convention through 2030."
+      },
+      {
+        "after": "<ul><li>Comic-Con 2026 ran July 23-26 at the San Diego Convention Center<cite data-ref=\"https://www.comic-con.org/toucan/toucan-tip-1-get-ready-for-comic-con-2026/\"></cite>, with Preview Night on Wednesday 22 July, when the Exhibit Hall opened from 6 to 9 p.m.<cite data-ref=\"https://www.comic-con.org/cc/things-to-do/exhibit-hall/\"></cite>, and schedules also published for that Wednesday<cite data-ref=\"https://www.comic-con.org/toucan/toucan-tip-9-thursday-schedule-events-2026/\"></cite></li><li>On opening day, Wednesday 22 July, Mayor Todd Gloria announced that Comic-Con had committed to stay in San Diego through 2030<cite data-ref=\"https://timesofsandiego.com/business/2026/07/22/comic-con-commits-remain-san-diego-through-2030/\"></cite></li><li>The show was expected to draw 135,000 attendees over its four days and generate $160 million in regional economic impact<cite data-ref=\"https://timesofsandiego.com/business/2026/07/22/comic-con-commits-remain-san-diego-through-2030/\"></cite></li><li>It fills 460,000 square feet of exhibit space with more than 1,000 exhibitors and over 2,000 hours of events<cite data-ref=\"https://timesofsandiego.com/business/2026/07/22/comic-con-commits-remain-san-diego-through-2030/\"></cite></li><li>A Saturday Hall H panel celebrated Star Trek's 60th anniversary and the fourth season of \"Strange New Worlds\"<cite data-ref=\"https://timesofsandiego.com/arts/2026/07/25/this-show-was-about-us-stars-align-to-celebrate-60-years-of-star-trek-at-sdcc/\"></cite></li><li>Doctor Doom cosplay was everywhere ahead of \"Avengers: Doomsday\" in December<cite data-ref=\"https://timesofsandiego.com/arts/2026/07/25/this-show-was-about-us-stars-align-to-celebrate-60-years-of-star-trek-at-sdcc/\"></cite></li><li>As the show ended on Sunday 26 July, organisers announced Con-style panel programming at the Comic-Con Museum in Balboa Park<cite data-ref=\"https://timesofsandiego.com/arts/2026/07/26/sdcc-announces-2027-dates-plans-to-increase-programming-at-comic-con-museum/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Comic-Con 2026 ran July 23-26 at the San Diego Convention Center<cite data-ref=\"https://www.comic-con.org/toucan/toucan-tip-1-get-ready-for-comic-con-2026/\"></cite>, with schedules also published for the opening Wednesday<cite data-ref=\"https://www.comic-con.org/toucan/toucan-tip-9-thursday-schedule-events-2026/\"></cite></li><li>On opening day, Wednesday 22 July, Mayor Todd Gloria announced that Comic-Con had committed to stay in San Diego through 2030<cite data-ref=\"https://timesofsandiego.com/business/2026/07/22/comic-con-commits-remain-san-diego-through-2030/\"></cite></li><li>The show was expected to draw 135,000 attendees over its four days and generate $160 million in regional economic impact<cite data-ref=\"https://timesofsandiego.com/business/2026/07/22/comic-con-commits-remain-san-diego-through-2030/\"></cite></li><li>It fills 460,000 square feet of exhibit space with more than 1,000 exhibitors and over 2,000 hours of events<cite data-ref=\"https://timesofsandiego.com/business/2026/07/22/comic-con-commits-remain-san-diego-through-2030/\"></cite></li><li>A Saturday Hall H panel celebrated Star Trek's 60th anniversary and the fourth season of \"Strange New Worlds\"<cite data-ref=\"https://timesofsandiego.com/arts/2026/07/25/this-show-was-about-us-stars-align-to-celebrate-60-years-of-star-trek-at-sdcc/\"></cite></li><li>Doctor Doom cosplay was everywhere ahead of \"Avengers: Doomsday\" in December<cite data-ref=\"https://timesofsandiego.com/arts/2026/07/25/this-show-was-about-us-stars-align-to-celebrate-60-years-of-star-trek-at-sdcc/\"></cite></li><li>As the show ended on Sunday 26 July, organisers announced Con-style panel programming at the Comic-Con Museum in Balboa Park<cite data-ref=\"https://timesofsandiego.com/arts/2026/07/26/sdcc-announces-2027-dates-plans-to-increase-programming-at-comic-con-museum/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.comic-con.org/cc/things-to-do/exhibit-hall/",
+        "title": "Exhibit Hall - Comic-Con",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-26T22:15:24.372Z"
+  },
+  {
+    "id": 32,
+    "pinId": 1774,
+    "kind": "edit",
+    "userId": 101,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Demon Slayer: Kimetsu no Yaiba Infinity Castle Part 2 Releases in Japanese Theaters",
+        "field": "title",
+        "before": "Demon Slayer: Kimetsu no Yaiba Infinity Castle Part 2 Announced"
+      },
+      {
+        "after": "The second film of ufotable's Infinity Castle trilogy is expected in Japanese theaters around July 2027, two years after Part 1; no date has been announced.",
+        "field": "description",
+        "before": "Ufotable's Infinity Castle theatrical trilogy, including the still-undated second film, is announced right after the Hashira Training season finale of Demon Slayer."
+      },
+      {
+        "after": "2027-07-16T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2024-06-30T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>Part 2 has no announced date; ufotable's February 2026 promotional reel did not slate it for 2026, so 2027 is the earliest expected year<cite data-ref=\"https://comicbook.com/anime/feature/demon-slayer-infinity-castle-part-2-shares-major-release-date-update-it-will-disappoint-fans/\"></cite></li><li>The Numbers lists an untitled Sony Pictures/Crunchyroll film for a US release on 17 September 2027 (international 15 September), which fans believe is Part 2; it could also be a placeholder for another Crunchyroll film<cite data-ref=\"https://collider.com/demon-slayer-infinity-castle-2-release-date-2027/\"></cite></li><li>The Infinity Castle film trilogy was announced in June 2024, immediately following the airing of the fourth season's finale<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>That fourth season, &quot;Demon Slayer: Kimetsu no Yaiba - Hashira Training Arc&quot;, ended with a one-hour special on June 30, 2024, in which the Demon Slayers are dropped into the Infinity Castle by the Biwa Demon Nakime<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_season_4\"></cite></li><li>The second film is listed on MyAnimeList as Kimetsu no Yaiba Movie 2: Mugenjou-hen, English title Demon Slayer: Kimetsu no Yaiba Infinity Castle II, a 1-episode Movie with status &quot;Not yet aired&quot; and aired dates &quot;Not available&quot; - still undated, with no studio, producer or licensor listed<cite data-ref=\"https://myanimelist.net/anime/62546/Kimetsu_no_Yaiba_Movie_2__Mugenjou-hen\"></cite></li><li>It sits between Kimetsu no Yaiba Movie 1: Mugenjou-hen - Akaza Sairai (prequel) and Kimetsu no Yaiba Movie 3: Mugenjou-hen (sequel), adapting Koyoharu Gotouge's manga; its synopsis is &quot;Second anime movie of the trilogy adaptation of the Infinity Castle Arc&quot;<cite data-ref=\"https://myanimelist.net/anime/62546/Kimetsu_no_Yaiba_Movie_2__Mugenjou-hen\"></cite></li><li>The trilogy adapts the &quot;Infinity Castle&quot; arc and is a direct sequel to the fourth anime season, following Mugen Train (2020), To the Swordsmith Village (2023) and To the Hashira Training (2024), covering the Demon Slayer Corps' climactic battle against Muzan Kibutsuji and the remaining Upper Ranks<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>Production of the trilogy's first installment took three and a half years, beginning in early 2022 while the Entertainment District Arc was still airing; it was directed by Haruo Sotozaki at Ufotable and released in Japan on July 18, 2025 by Aniplex and Toho<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>The unaired second film is ranked N/A with no score, popularity #2335, 107,240 members and 280 favorites<cite data-ref=\"https://myanimelist.net/anime/62546/Kimetsu_no_Yaiba_Movie_2__Mugenjou-hen\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Infinity Castle film trilogy was announced in June 2024, immediately following the airing of the fourth season's finale<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>That fourth season, &quot;Demon Slayer: Kimetsu no Yaiba - Hashira Training Arc&quot;, ended with a one-hour special on June 30, 2024, in which the Demon Slayers are dropped into the Infinity Castle by the Biwa Demon Nakime<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_season_4\"></cite></li><li>The second film is listed on MyAnimeList as Kimetsu no Yaiba Movie 2: Mugenjou-hen, English title Demon Slayer: Kimetsu no Yaiba Infinity Castle II, a 1-episode Movie with status &quot;Not yet aired&quot; and aired dates &quot;Not available&quot; - still undated, with no studio, producer or licensor listed<cite data-ref=\"https://myanimelist.net/anime/62546/Kimetsu_no_Yaiba_Movie_2__Mugenjou-hen\"></cite></li><li>It sits between Kimetsu no Yaiba Movie 1: Mugenjou-hen - Akaza Sairai (prequel) and Kimetsu no Yaiba Movie 3: Mugenjou-hen (sequel), adapting Koyoharu Gotouge's manga; its synopsis is &quot;Second anime movie of the trilogy adaptation of the Infinity Castle Arc&quot;<cite data-ref=\"https://myanimelist.net/anime/62546/Kimetsu_no_Yaiba_Movie_2__Mugenjou-hen\"></cite></li><li>The trilogy adapts the &quot;Infinity Castle&quot; arc and is a direct sequel to the fourth anime season, following Mugen Train (2020), To the Swordsmith Village (2023) and To the Hashira Training (2024), covering the Demon Slayer Corps' climactic battle against Muzan Kibutsuji and the remaining Upper Ranks<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>Production of the trilogy's first installment took three and a half years, beginning in early 2022 while the Entertainment District Arc was still airing; it was directed by Haruo Sotozaki at Ufotable and released in Japan on July 18, 2025 by Aniplex and Toho<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>The unaired second film is ranked N/A with no score, popularity #2335, 107,240 members and 280 favorites<cite data-ref=\"https://myanimelist.net/anime/62546/Kimetsu_no_Yaiba_Movie_2__Mugenjou-hen\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://collider.com/demon-slayer-infinity-castle-2-release-date-2027/",
+        "title": "'Demon Slayer: Infinity Castle 2' Release Date Officially Teased - Collider",
+        "confidence": 75,
+        "publishedDate": "2026-09-24"
+      },
+      {
+        "url": "https://comicbook.com/anime/feature/demon-slayer-infinity-castle-part-2-shares-major-release-date-update-it-will-disappoint-fans/",
+        "title": "Demon Slayer: Infinity Castle Part 2 Shares Major Release Date Update - ComicBook.com",
+        "confidence": 80,
+        "publishedDate": "2026-02-21"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-27T03:52:22.589Z"
+  },
+  {
+    "id": 33,
+    "pinId": 1766,
+    "kind": "edit",
+    "userId": 101,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Demon Slayer: Kimetsu no Yaiba Infinity Castle III Releases in Japanese Theaters",
+        "field": "title",
+        "before": "Demon Slayer: Kimetsu no Yaiba Infinity Castle III Announced"
+      },
+      {
+        "after": "The third and final film of ufotable's Infinity Castle trilogy, closing Demon Slayer, is expected in Japanese theaters around July 2029; no date has been announced.",
+        "field": "description",
+        "before": "Ufotable's closing chapter of Demon Slayer was locked in when the Hashira Training finale revealed the Infinity Castle arc would be told as a theatrical trilogy, of which this is the third and final film."
+      },
+      {
+        "after": "2029-07-20T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2024-06-30T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>The final film has no announced date; reports have ufotable aiming for Part 2 in 2027 and closing the trilogy in 2029, two years apart like Part 1 and Part 2<cite data-ref=\"https://www.gamesradar.com/entertainment/anime-movies/demon-slayer-infinity-castle-2-release-date-story-trailer-cast-news/\"></cite></li><li>Ufotable's February 2026 promotional reel did not slate Part 2 for 2026, which rules out an earlier finish<cite data-ref=\"https://comicbook.com/anime/feature/demon-slayer-infinity-castle-part-2-shares-major-release-date-update-it-will-disappoint-fans/\"></cite></li><li>Ufotable's Infinity Castle arc of Demon Slayer was announced as a film trilogy in June 2024, immediately after the fourth season's finale (Hashira Training) aired<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>MyAnimeList lists the third film as a manga adaptation with no air date, duration, studio or staff beyond creator Koyoharu Gotouge<cite data-ref=\"https://myanimelist.net/anime/62547/Kimetsu_no_Yaiba_Movie_3__Mugenjou-hen\"></cite></li><li>The first film, Infinity Castle (directed by Haruo Sotozaki), opened in Japan on July 18, 2025 and grossed about $793.5 million worldwide, making it the highest-grossing Japanese film<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>The trilogy follows the Demon Slayer Corps' climactic battle against Muzan Kibutsuji and the Upper Ranks<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Ufotable's Infinity Castle arc of Demon Slayer was announced as a film trilogy in June 2024, immediately after the fourth season's finale (Hashira Training) aired<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>MyAnimeList lists the third film as a manga adaptation with no air date, duration, studio or staff beyond creator Koyoharu Gotouge<cite data-ref=\"https://myanimelist.net/anime/62547/Kimetsu_no_Yaiba_Movie_3__Mugenjou-hen\"></cite></li><li>The first film, Infinity Castle (directed by Haruo Sotozaki), opened in Japan on July 18, 2025 and grossed about $793.5 million worldwide, making it the highest-grossing Japanese film<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li><li>The trilogy follows the Demon Slayer Corps' climactic battle against Muzan Kibutsuji and the Upper Ranks<cite data-ref=\"https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.gamesradar.com/entertainment/anime-movies/demon-slayer-infinity-castle-2-release-date-story-trailer-cast-news/",
+        "title": "Demon Slayer: Infinity Castle 2: release date speculation, story, and everything else we know - GamesRadar+",
+        "confidence": 70,
+        "publishedDate": "2025-09-12"
+      },
+      {
+        "url": "https://comicbook.com/anime/feature/demon-slayer-infinity-castle-part-2-shares-major-release-date-update-it-will-disappoint-fans/",
+        "title": "Demon Slayer: Infinity Castle Part 2 Shares Major Release Date Update - ComicBook.com",
+        "confidence": 80,
+        "publishedDate": "2026-02-21"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-27T03:52:23.366Z"
+  },
+  {
+    "id": 34,
+    "pinId": 3805,
+    "kind": "edit",
+    "userId": 303,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The Kobe 10 Protro '5AM Flight' (Blue Lagoon/Black, IQ5339-400) is listed on Nike SNKRS as \"Blue Lagoon\" for October 5, 2026 at $200<cite data-ref=\"https://www.nicekicks.com/nike-kobe-10-protro-5am-flight-iq5339-400/\"></cite><cite data-ref=\"https://sneakerbardetroit.com/nike-kobe-10-low-protro-5-am-flight-2026/\"></cite><cite data-ref=\"https://www.sneakerfiles.com/nike-kobe-10-low-protro-5-am-flight-2026/\"></cite><cite data-ref=\"https://www.nike.com/launch/t/kobe-10-protro-blue-lagoon\"></cite></li><li>The colourway is inspired by a video of Kobe jumping off a 40ft diving board at 5 a.m.<cite data-ref=\"https://www.nicekicks.com/nike-kobe-10-protro-5am-flight-iq5339-400/\"></cite></li><li>It was the first Kobe 10 colourway to release, in 2015<cite data-ref=\"https://sneakerbardetroit.com/nike-kobe-10-low-protro-5-am-flight-2026/\"></cite><cite data-ref=\"https://www.sneakerfiles.com/nike-kobe-10-low-protro-5-am-flight-2026/\"></cite></li><li>Nike debuted the Kobe 10 Protro in the Halo colourway on August 23, with more engineered-mesh colourways through 2026 and Flyknit/ZoomX editions in 2027<cite data-ref=\"https://about.nike.com/en/newsroom/releases/nike-basketball-debuts-the-kobe-10-protro-an-iconic-silhouette-reimagined-for-todays-game\"></cite></li></ul><h3>Notable features</h3><ul><li>Redesigned engineered mesh upper and widened forefoot<cite data-ref=\"https://about.nike.com/en/newsroom/releases/nike-basketball-debuts-the-kobe-10-protro-an-iconic-silhouette-reimagined-for-todays-game\"></cite></li><li>Cushlon 3.0 foam with a full-length Zoom Strobel, replacing the original Lunarlon and heel Air Zoom<cite data-ref=\"https://about.nike.com/en/newsroom/releases/nike-basketball-debuts-the-kobe-10-protro-an-iconic-silhouette-reimagined-for-todays-game\"></cite></li><li>Carbon fiber forefoot wing returns unchanged; hidden 'Endure and Conquer' messaging retained; $200<cite data-ref=\"https://about.nike.com/en/newsroom/releases/nike-basketball-debuts-the-kobe-10-protro-an-iconic-silhouette-reimagined-for-todays-game\"></cite><cite data-ref=\"https://www.nicekicks.com/nike-kobe-10-protro-5am-flight-iq5339-400/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Kobe 10 Protro '5AM Flight' (Blue Lagoon/Black, IQ5339-400) is reported for October 5, 2026 at $200 via Nike.com and select retailers<cite data-ref=\"https://www.nicekicks.com/nike-kobe-10-protro-5am-flight-iq5339-400/\"></cite><cite data-ref=\"https://sneakerbardetroit.com/nike-kobe-10-low-protro-5-am-flight-2026/\"></cite><cite data-ref=\"https://www.sneakerfiles.com/nike-kobe-10-low-protro-5-am-flight-2026/\"></cite></li><li>The colourway is inspired by a video of Kobe jumping off a 40ft diving board at 5 a.m.<cite data-ref=\"https://www.nicekicks.com/nike-kobe-10-protro-5am-flight-iq5339-400/\"></cite></li><li>It was the first Kobe 10 colourway to release, in 2015<cite data-ref=\"https://sneakerbardetroit.com/nike-kobe-10-low-protro-5-am-flight-2026/\"></cite><cite data-ref=\"https://www.sneakerfiles.com/nike-kobe-10-low-protro-5-am-flight-2026/\"></cite></li><li>Nike debuted the Kobe 10 Protro in the Halo colourway on August 23, with more engineered-mesh colourways through 2026 and Flyknit/ZoomX editions in 2027<cite data-ref=\"https://about.nike.com/en/newsroom/releases/nike-basketball-debuts-the-kobe-10-protro-an-iconic-silhouette-reimagined-for-todays-game\"></cite></li></ul><h3>Notable features</h3><ul><li>Redesigned engineered mesh upper and widened forefoot<cite data-ref=\"https://about.nike.com/en/newsroom/releases/nike-basketball-debuts-the-kobe-10-protro-an-iconic-silhouette-reimagined-for-todays-game\"></cite></li><li>Cushlon 3.0 foam with a full-length Zoom Strobel, replacing the original Lunarlon and heel Air Zoom<cite data-ref=\"https://about.nike.com/en/newsroom/releases/nike-basketball-debuts-the-kobe-10-protro-an-iconic-silhouette-reimagined-for-todays-game\"></cite></li><li>Carbon fiber forefoot wing returns unchanged; hidden 'Endure and Conquer' messaging retained; $200<cite data-ref=\"https://about.nike.com/en/newsroom/releases/nike-basketball-debuts-the-kobe-10-protro-an-iconic-silhouette-reimagined-for-todays-game\"></cite><cite data-ref=\"https://www.nicekicks.com/nike-kobe-10-protro-5am-flight-iq5339-400/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.nike.com/launch/t/kobe-10-protro-blue-lagoon",
+        "title": "Kobe 10 Protro \"Blue Lagoon\" (IQ5339-400) - Nike SNKRS",
+        "startDate": "2026-10-05",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-27T04:43:43.787Z"
+  },
+  {
+    "id": 35,
+    "pinId": 4260,
+    "kind": "edit",
+    "userId": 414,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "500, Eldorado Boulevard, Interlocken, Broomfield, Colorado, 80021, United States",
+        "field": "address",
+        "before": "7477, East Dry Creek Parkway, Boulder Tech Center, Niwot, Boulder County, Colorado, 80503, United States"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-27T04:55:38.021Z"
+  },
+  {
+    "id": 36,
+    "pinId": 4487,
+    "kind": "edit",
+    "userId": 51,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "谷雨 (Gu Yu, \"The Silent Storm\") is Li Lu's 40-episode crime drama about a 1990s tax-fraud and organised-crime investigation, starring Jing Boran (井柏然) as a tax inspector, Sun Yizhou (孙艺洲) as a former criminal policeman and Zhang Songwen (张颂文) as the head of a tax-fraud ring. It will stream exclusively on Youku and air in CCTV-1 prime time. No date has been announced, so the premiere shown here is an estimate.",
+        "field": "description",
+        "before": "谷雨 (Gu Yu, \"The Silent Storm\") is Li Lu's 40-episode crime drama about a 1990s tax-fraud and organised-crime investigation, starring Jing Boran (井柏然) as a tax inspector, Sun Yizhou (孙艺洲) and Zhang Songwen (张颂文) as the head of a tax-fraud ring. It will stream exclusively on Youku and air in CCTV-1 prime time. No date has been announced, so the premiere shown here is an estimate."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-27T17:12:03.072Z"
+  },
+  {
+    "id": 37,
+    "pinId": 2232,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.mot.gov.sg/news-resources/newsroom/update-on-development-plans-for-changi-airport-terminal-5/",
+        "title": "Update on Development Plans for Changi Airport Terminal 5 | Ministry of Transport",
+        "confidence": 70,
+        "publishedDate": "2025-10-14"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:56:57.505Z"
+  },
+  {
+    "id": 38,
+    "pinId": 2260,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2029-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.shanghai.gov.cn/nw4411/20241120/1753db0ec8594ceaa71919b89b8cbe35.html",
+        "title": "浦东机场T3航站楼今开工",
+        "confidence": 75,
+        "publishedDate": "2024-11-20"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:57:18.420Z"
+  },
+  {
+    "id": 39,
+    "pinId": 2290,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2033-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://modgov.hillingdon.gov.uk/mgAi.aspx?ID=48751",
+        "title": "London Borough of Hillingdon - Agenda item - Health Updates (Health and Social Care Select Committee, 3 December 2025)",
+        "endDate": "2032-12-31",
+        "confidence": 75,
+        "publishedDate": "2025-12-03"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:57:39.461Z"
+  },
+  {
+    "id": 40,
+    "pinId": 2685,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2027-03-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-04-28T00:00:00.000Z"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.fb101.com/stix-asia-uncommons-las-vegas-food-hall-first-restaurants-c7397b0f16",
+        "title": "Stix Asia Names First Tokyo Icons for Its 12-Concept Las Vegas Food Hall - Food & Beverage Magazine",
+        "confidence": 70,
+        "publishedDate": "2026-09-16"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:58:00.270Z"
+  },
+  {
+    "id": 41,
+    "pinId": 2903,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2031-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-09-22T00:00:00.000Z"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:58:21.229Z"
+  },
+  {
+    "id": 42,
+    "pinId": 3347,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2028-03-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+        "title": "Las Vegas Athletics Ballpark Construction | Mortenson",
+        "endDate": "2028-02-29",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:58:42.350Z"
+  },
+  {
+    "id": 43,
+    "pinId": 3348,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2032-12-21T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.mbta.com/projects/north-station-draw-one-bridge-replacement",
+        "title": "North Station Draw One Bridge Replacement | Projects | MBTA",
+        "confidence": 75
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:59:03.312Z"
+  },
+  {
+    "id": 44,
+    "pinId": 3444,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2028-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-06-02T00:00:00.000Z"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:59:24.258Z"
+  },
+  {
+    "id": 45,
+    "pinId": 3469,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2024-10-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.prnewswire.com/news-releases/ferrero-opens-new-214-million-kinder-bueno-production-facility-in-illinois-302262928.html",
+        "title": "Ferrero opens new $214 million Kinder Bueno production facility in Illinois",
+        "endDate": "2024-09-30",
+        "confidence": 95,
+        "publishedDate": "2024-09-30"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:59:45.102Z"
+  },
+  {
+    "id": 46,
+    "pinId": 430,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-04-13T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2033-12-31T00:00:00.000Z"
+      },
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://science.osti.gov/-/media/budget/pdf/sc-budget-request-to-congress/2027/FY-2027-Request-Narrative---NP.pdf",
+        "title": "Science/Nuclear Physics FY 2027 Congressional Justification (20-SC-52 Electron Ion Collider)",
+        "endDate": "2035-12-31",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:00:39.099Z"
+  },
+  {
+    "id": 47,
+    "pinId": 445,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2022-03-27T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2031-12-31T00:00:00.000Z"
+      },
+      {
+        "after": "2032-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:00:59.972Z"
+  },
+  {
+    "id": 48,
+    "pinId": 474,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:01:20.733Z"
+  },
+  {
+    "id": 49,
+    "pinId": 486,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2038-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.txdot.gov/nhhip/about/project-timelines.html",
+        "title": "NHHIP Project timelines - Construction timeline & phasing (TxDOT)",
+        "confidence": 70
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:01:41.749Z"
+  },
+  {
+    "id": 50,
+    "pinId": 487,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2032-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.canada.ca/en/public-services-procurement/services/infrastructure-buildings/parliamentary-precinct/projects-in-parliamentary-precinct/centre-block-project/quarterly-reports/progress-june-2026.html",
+        "title": "Centre Block project quarterly progress report: April 1 to June 30, 2026 (PSPC)",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:02:02.571Z"
+  },
+  {
+    "id": 51,
+    "pinId": 488,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2030-07-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1300514/000130051426000085/lvs-20260630.htm",
+        "title": "Las Vegas Sands Corp. Form 10-Q for the quarter ended June 30, 2026",
+        "endDate": "2030-06-30",
+        "confidence": 80,
+        "publishedDate": "2026-07-24"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:02:23.468Z"
+  },
+  {
+    "id": 52,
+    "pinId": 524,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.nsctotal.com.br/colunista/pedro-machado/com-metro-quadrado-a-r-110-mil-senna-tower-vende-60-apartamentos-e-movimenta-r-248-bi-em-um-ano",
+        "title": "Com metro quadrado a R$ 110 mil, Senna Tower vende 60 apartamentos e movimenta R$ 2,48 bi em um ano (NSC Total)",
+        "confidence": 75,
+        "publishedDate": "2026-07-04"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:02:44.316Z"
+  },
+  {
+    "id": 53,
+    "pinId": 596,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2030-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.equipmentworld.com/roadbuilding/article/15817483/latovegas-brightline-west-rail-completion-pushed-to-2029",
+        "title": "L.A.-to-Vegas Brightline West rail completion pushed to 2029 | Equipment World",
+        "confidence": 70,
+        "publishedDate": "2026-02-18"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:03:05.247Z"
+  },
+  {
+    "id": 54,
+    "pinId": 662,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:03:26.206Z"
+  },
+  {
+    "id": 55,
+    "pinId": 803,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-04-23T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.fraport.com/en/newsroom/press-kit/press-kits/press-kit--inauguration-first-day-of-operations.html",
+        "title": "Press kit: Inauguration and first day of operations at Terminal 3",
+        "endDate": "2026-04-22",
+        "confidence": 95,
+        "publishedDate": "2026-04-22"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:03:47.006Z"
+  },
+  {
+    "id": 56,
+    "pinId": 2166,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://plandesignbuild.ucsd.edu/projects/current.html",
+        "title": "Current Projects - UC San Diego Planning, Design & Construction",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:04:08.099Z"
+  },
+  {
+    "id": 57,
+    "pinId": 2168,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2031-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.transitchicago.com/rle/faq/",
+        "title": "Red Line Extension Project FAQ - CTA",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:04:28.893Z"
+  },
+  {
+    "id": 58,
+    "pinId": 2182,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.txdot.gov/content/dam/project-sites/mobility35/documents/capex-central/capex-c-technical-timeline-09022026.pdf",
+        "title": "CapEx Central Phasing (technical schedule, last update 09/02/26) - TxDOT",
+        "confidence": 85,
+        "publishedDate": "2026-09-02"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:04:49.765Z"
+  },
+  {
+    "id": 59,
+    "pinId": 2183,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.atptx.org/wp-content/uploads/2026/09/ATP-FY26-27-Approved-Budget.pdf",
+        "title": "Austin Transit Partnership FY 2026-27 Approved Budget",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:05:10.614Z"
+  },
+  {
+    "id": 60,
+    "pinId": 2191,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2035-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.portseattle.org/projects/s-concourse-evolution",
+        "title": "S Concourse Evolution | Port of Seattle",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:05:31.641Z"
+  },
+  {
+    "id": 61,
+    "pinId": 2194,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2029-06-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://plenary.com/americas/project/lacc-expansion",
+        "title": "L.A. Convention Center Expansion and Modernization Project | Plenary Americas",
+        "confidence": 75
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:05:52.585Z"
+  },
+  {
+    "id": 62,
+    "pinId": 2195,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2028-07-14T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://inglewoodtransitconnector.com/plan/",
+        "title": "Project Plan - Inglewood Transit Connector",
+        "confidence": 70
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:06:13.710Z"
+  },
+  {
+    "id": 63,
+    "pinId": 2200,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2030-06-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.commanders.com/news/clark-mortenson-smootdc-joint-venture-tapped-to-build-new-washington-commanders-stadium",
+        "title": "Clark | Mortenson | SmootDC Joint Venture Tapped to Build New Washington Commanders Stadium",
+        "confidence": 80,
+        "publishedDate": "2026-08-11"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:06:34.631Z"
+  },
+  {
+    "id": 64,
+    "pinId": 2202,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2031-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://vapassengerrailauthority.org/wp-content/uploads/2026/07/2026-0728-CAG-DC-Mtg-6-Presentation-FINAL.pdf",
+        "title": "Long Bridge Project - DC Community Advisory Group Meeting 6 presentation (VPRA)",
+        "confidence": 80,
+        "publishedDate": "2026-07-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:06:55.457Z"
+  },
+  {
+    "id": 65,
+    "pinId": 2207,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.skyharbor.com/about-phx/news-media/press-releases/phoenix-sky-harbor-announces-american-airlines-as-primary-carrier-for-west-terminal-unveils-destination-phx-2050/",
+        "title": "Phoenix Sky Harbor Announces American Airlines as Primary Carrier for West Terminal, Unveils Destination PHX 2050",
+        "confidence": 70,
+        "publishedDate": "2026-09-21"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:07:16.424Z"
+  },
+  {
+    "id": 66,
+    "pinId": 2216,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2032-12-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.governor.ny.gov/news/governor-hochul-announces-mta-advances-final-construction-contract-second-avenue-subway-phase",
+        "title": "Governor Hochul Announces MTA Advances Final Construction Contract of Second Avenue Subway Phase 2",
+        "confidence": 80,
+        "publishedDate": "2026-09-14"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:07:37.287Z"
+  },
+  {
+    "id": 67,
+    "pinId": 2219,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2026-press-releases/port-authority-marks-major-constrcution-milestone-for-midtown-bu.html",
+        "title": "Port Authority Marks Major Construction Milestone for Midtown Bus Terminal Redevelopment Project with Placement of First Steel Beams for Dyer Avenue Deck Overs",
+        "confidence": 85,
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:07:58.110Z"
+  },
+  {
+    "id": 68,
+    "pinId": 2226,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2028-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.miamitodaynews.com/?p=86491",
+        "title": "Major projects flowing toward PortMiami - Miami Today",
+        "endDate": "2027-12-31",
+        "confidence": 80,
+        "publishedDate": "2026-04-08"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:08:18.920Z"
+  },
+  {
+    "id": 69,
+    "pinId": 111,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2018-07-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.kamenz.de/e-mobility.html",
+        "title": "E-mobility - Lessingstadt Kamenz (Daimler press releases: 06.11.2018 Accumotive verdoppelt Beschäftigungszahl)",
+        "endDate": "2018-06-30",
+        "confidence": 75,
+        "publishedDate": "2018-11-06"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:08:44.308Z"
+  },
+  {
+    "id": 70,
+    "pinId": 4342,
+    "kind": "edit",
+    "userId": 317,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Taylor Swift Wins Video of the Year and Madonna Artist of the Year at the 2026 VMAs",
+        "field": "title",
+        "before": "The 2026 MTV Video Music Awards at the Peacock Theater"
+      },
+      {
+        "after": "Taylor Swift won Video of the Year for 'The Fate of Ophelia' and the first Artist Director Honors at the 2026 VMAs in Los Angeles, where Madonna took Artist of the Year, Best Collaboration with Sabrina Carpenter and Best Dance, Sienna Spiro Best New Artist and Nirvana the Video Vanguard Award.",
+        "field": "description",
+        "before": "Snoop Dogg hosts the 2026 VMAs live from the Peacock Theater in Los Angeles, opened by Madonna in her first VMA performance in 23 years; she leads the nominations, Nirvana receive the Video Vanguard Award and Taylor Swift the first Artist Director Honors."
+      },
+      {
+        "after": "2026-09-28T02:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": "2026-09-28T01:30:00.000Z"
+      },
+      {
+        "after": "<ul><li>The 43rd VMAs began on time at 4:30 p.m. PT in the Peacock Theater in Los Angeles on Sunday, 27 September 2026; the CBS broadcast, simulcast on MTV and Paramount+, joined about 21 minutes late behind the Ravens-Cowboys game<cite data-ref=\"https://www.hollywoodreporter.com/tv/tv-news/mtv-vmas-delayed-tv-football-starts-on-time-la-1236713141/\"></cite><cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite></li><li>Madonna opened with Sabrina Carpenter and Charli XCX in her first VMA performance in 23 years, and Snoop Dogg hosted<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite><cite data-ref=\"https://deadline.com/2026/09/madonna-2026-vmas-open-performance-1237105262/\"></cite></li><li>Taylor Swift won Video of the Year for 'The Fate of Ophelia', dedicating it to Dolly Parton, after accepting the first Artist Director Honors and premiering her 'Patient Zero' video with Dakota Johnson and Colin Farrell<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite><cite data-ref=\"https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/\"></cite></li><li>Madonna, who led the nominations with 13, won Artist of the Year - her first VMA in 27 years - plus Best Collaboration with Sabrina Carpenter for 'Bring Your Love' and Best Dance for 'Confessions II - The Film'<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/2026_MTV_Video_Music_Awards\"></cite></li><li>Sienna Spiro won Best New Artist, Lisa Best Pop, and Nirvana's Dave Grohl, Krist Novoselic and Pat Smear accepted the Video Vanguard Award<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite></li><li>Performances included Raye, Shaboozey, Lisa, Yung Lean, Bruno Mars remotely from Colorado, Kacey Musgraves' Dolly Parton tribute and a George Michael tribute by Sombr, Raye, Teddy Swims and Adam Lambert<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 43rd VMAs air live from Los Angeles on Sunday, 27 September 2026, 7:30-9:30 p.m. ET on CBS, simulcast on MTV and streamed on Paramount+, the first time the show has been in the city in nearly a decade<cite data-ref=\"https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/\"></cite><cite data-ref=\"https://www.the-independent.com/arts-entertainment/music/mtv-vmas-nominations-madonna-taylor-swift-b3034961.html\"></cite></li><li>Snoop Dogg hosts; Madonna opens the show in her first VMA performance in 23 years<cite data-ref=\"https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/\"></cite><cite data-ref=\"https://deadline.com/2026/09/madonna-2026-vmas-open-performance-1237105262/\"></cite></li><li>Madonna leads the nominations - 11 at the August announcement, 13 after later categories were added, tying Lady Gaga's 2010 record - with Taylor Swift second<cite data-ref=\"https://www.the-independent.com/arts-entertainment/music/mtv-vmas-nominations-madonna-taylor-swift-b3034961.html\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/2026_MTV_Video_Music_Awards\"></cite></li><li>Taylor Swift receives the inaugural MTV VMA Artist Director Honors, and her 'The Fate of Ophelia' is up for Video of the Year and she for Artist of the Year<cite data-ref=\"https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/\"></cite></li><li>Nirvana receive the Michael Jackson Video Vanguard Award<cite data-ref=\"https://en.wikipedia.org/wiki/2026_MTV_Video_Music_Awards\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/",
+        "title": "Taylor Swift to Receive Inaugural MTV VMA Artist Director Honors",
+        "confidence": 85,
+        "publishedDate": "2026-09-21"
+      },
+      {
+        "url": "https://www.hollywoodreporter.com/tv/tv-news/mtv-vmas-delayed-tv-football-starts-on-time-la-1236713141/",
+        "title": "MTV VMAs Begin on Time in L.A., But Football Delays the Start of the Show on TV",
+        "confidence": 85,
+        "publishedDate": "2026-09-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T03:18:55.290Z"
+  },
+  {
+    "id": 71,
+    "pinId": 4342,
+    "kind": "edit",
+    "userId": 317,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://polymarket.com/event/vma-voty-2026",
+        "title": "VMA Video of the Year 2026 - Polymarket",
+        "confidence": 80
+      },
+      {
+        "url": "https://kalshi.com/markets/kxvma/mtv-video-music-awards/kxvma-voty26",
+        "title": "MTV Video Music Awards: Video of the Year - Kalshi",
+        "confidence": 80
+      },
+      {
+        "url": "https://polymarket.com/event/vma-aoty-2026",
+        "title": "VMA Artist of the Year 2026 - Polymarket",
+        "confidence": 80
+      },
+      {
+        "url": "https://polymarket.com/event/vma-dance-2026",
+        "title": "VMA Best Dance 2026 - Polymarket",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T03:30:44.002Z"
+  },
+  {
+    "id": 72,
+    "pinId": 4361,
+    "kind": "edit",
+    "userId": 317,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2027-01-04T09:45:00.000Z",
+        "field": "start",
+        "allDay": false,
+        "before": "2027-01-04T00:00:00.000Z"
+      },
+      {
+        "after": null,
+        "field": "end",
+        "allDay": false,
+        "before": "2027-01-05T00:00:00.000Z"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.livenationhip.co.jp/all-events/bruno-mars-tickets-ae147754",
+        "title": "Bruno Mars - The Romantic Tour in Japan | Live Nation H.I.P.",
+        "startDate": "2027-01-04",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T05:39:47.560Z"
+  },
+  {
+    "id": 73,
+    "pinId": 1945,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Starship Reaches Orbit for the First Time on Flight 14",
+        "field": "title",
+        "before": "Starship launches Starlink Group 31-1 (Starship Flight 14)"
+      },
+      {
+        "after": "SpaceX's 14th Starship test flight lifted off from Starbase, Texas at 7:48 a.m. CT on 28 September 2026 and became the first Starship to reach orbit, after 13 earlier flights that were all suborbital.\n\nOne of the ship's six engines failed during ascent; about 22 minutes into the flight SpaceX judged it safe to continue, and Starship began releasing 26 Starlink V3 satellites, the first of the new generation and Starship's first operational payload. The Super Heavy booster made a soft splashdown in the Gulf off Starbase instead of a tower catch.\n\nThe ship was planned to fly about six orbits at roughly 275 km over nearly 10 hours before splashing down in the Pacific west of Chile.",
+        "field": "description",
+        "before": "14th test flight of the two-stage Starship launch vehicle. 3rd flight of Starship V3 and the first Starship flight to deploy satellites (a group of Starlink satellites known as Starlink Group 31-1) into stable Low Earth Orbit.\r\n\r\nThe ship is expected to fly at an altitude approximately 275 km above Earth and complete approximately 6 orbits around the planet for nearly 10 hours, with splashdown targeted in the Pacific Ocean west of Chile.\r\n\r\nThe booster’s primary test objective on Flight 14 will be executing a successful launch, ascent, stage separation, boostback burn, and landing burn at an offshore landing point in the Gulf.\r\n\r\nStarship will deliver 26 Starlink V3 satellites to orbit for the first time, which aim to greatly expand the network's capacity and user speeds. Each Starlink V3 satellite will add 1 Tbps of capacity to the constellation. Lifts off from Orbital Launch Pad 2, SpaceX Starbase, TX, USA to Low Earth Orbit. The booster is due to land at Gulf of Mexico."
+      },
+      {
+        "after": "2026-09-28T12:48:59.000Z",
+        "field": "start",
+        "allDay": false,
+        "before": "2026-09-28T12:15:00.000Z"
+      },
+      {
+        "after": null,
+        "field": "end",
+        "allDay": false,
+        "before": "2026-09-28T13:30:00.000Z"
+      },
+      {
+        "after": "<ul><li>Starship lifted off from Starbase at 7:48 a.m. CT on 28 September 2026, 33 minutes into a window that opened at 7:15, and reached orbit around 8:15 a.m. local time &mdash; the first time in 14 test flights, none of the 13 before it having been meant to<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The FAA told CNBC it issued the &ldquo;license authorization for the SpaceX Starship Super Heavy Flight 14 launch and reentry operations&rdquo; on 26 September, two days before launch<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite></li><li>One of the six engines on the ship failed during ascent, and about 22 minutes into the flight SpaceX decided it was safe to carry on to orbit<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>SpaceX began releasing the 26 Starlink V3 satellites around 8:25 a.m. local time; three of them carry cameras to record data on Starship's heat shield<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The Super Heavy booster made a &ldquo;soft splashdown&rdquo; off Starbase, simulating an offshore landing in the Gulf rather than a return to the launch tower<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The flight plan is about six orbits at roughly 170 miles over 10 hours, ending in a Pacific splashdown off Chile; SpaceX built in points where Starship could abort its orbital trajectory and return safely<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>One Starship can carry 60 Starlink V3 satellites, about 20 times a Falcon 9 launch, and Starship is the only vehicle able to launch the larger V3 satellites<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Starship is key to SpaceX's growth after its June IPO, the largest on record, which values it at about $2 trillion; it also underpins NASA's plan to land astronauts on the Moon, with an Orion docking test planned for Artemis III late next year<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Before launch, Kalshi priced liftoff before 29 September at 55% and Polymarket put a launch by 30 September at 73%<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite><cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>SpaceX is targeting Starship Flight 14 no earlier than 28 September 2026 from Starbase, with FAA launch licence approval for the first planned orbital profile named as the main near-term catalyst<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>The target date has moved: a Florida Today piece of 16 September said &ldquo;SpaceX's first attempt to launch its Starship rocket into orbit could come as early as Sept. 22 in South Texas&rdquo;, while the market summary updated on 20 September gives no earlier than 28 September<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite><cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>Kalshi's date ladder has the flight launching before 29 September at 55%, before 30 September at 70% and before 1 October at 72%, on $227,921 of volume in a market opened on 17 September 2026<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite></li><li>Kalshi contradicts itself on the first of those: the list shows &ldquo;Before Sep 29, 2026&rdquo; at 55% while the order ticket beside it reads &ldquo;Odds 57% chance&rdquo;<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite></li><li>Polymarket's equivalents put a launch by 26 September at 1%, by 30 September at 73% and by 31 October at 96%<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>On the flight itself, Polymarket prices a successful controlled splashdown of the upper stage at 83% and a Super Heavy booster explosion at 89% &mdash; though that market counts an explosion &ldquo;at any point during the test from the start of fueling operations to 60 minutes after it makes contact with Earth upon landing&rdquo;, including a planned termination event<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>A chopsticks catch is all but ruled out for this flight: the booster catch trades at 1% and the Starship catch at 3%, consistent with an offshore booster landing and an ocean splashdown; the Starship-catch market is nonetheless the page's largest by volume at $462,614<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>The planned profile: the Block 3 Super Heavy booster and Ship 41 attempt orbital insertion at roughly 275 km, then deploy 26 operational Starlink V3 satellites &mdash; &ldquo;the first revenue-generating payload&rdquo; &mdash; followed by a single-Raptor deorbit burn and a controlled Pacific splashdown<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>Hardware upgrades for this flight address Flight 13 issues, including improved engine filtering and relight reliability on the booster plus enhanced tile retention<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>The stakes are framed as orbital: Starship &ldquo;has not reached orbit in more than three years of flight tests. That could be about to change with flight 14&rdquo;<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite></li><li>Kalshi counts the launch date as &ldquo;the calendar date on which liftoff occurred, measured in the local timezone of the launch site, as publicly confirmed by SpaceX&rdquo;, and carries a notice that the series &ldquo;has transitioned to the LAUNCH contract&rdquo;<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite></li><li>Polymarket counts the attempt only if the rocket lifts off the pad, with any subsequent anomaly having no bearing on the launch-date outcome, and every market resolving &ldquo;No&rdquo; if the 14th launch has not happened by 30 June 2027<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>Polymarket's page disagrees with itself about when it opened, the details panel giving 1 September 2026 and the FAQ 31 July 2026, on total volume of $703,371<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html",
+        "title": "SpaceX launches its massive Starship rocket into orbit for the first time - CNBC",
+        "startDate": "2026-09-28",
+        "confidence": 92,
+        "publishedDate": "2026-09-28"
+      },
+      {
+        "url": "https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa",
+        "title": "SpaceX's Starship launches on first orbital mission from Texas - NPR",
+        "startDate": "2026-09-28",
+        "confidence": 90,
+        "publishedDate": "2026-09-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T13:56:39.527Z"
+  },
+  {
+    "id": 74,
+    "pinId": 2991,
+    "kind": "edit",
+    "userId": 408,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Sable Offshore expects the Hondo platform offshore California to come back online by the end of September 2026, the third Santa Ynez Unit platform restarted after Heritage and Harmony. On its August earnings call management said the 45-year-old platform needed about 50% more work than expected and that it was \"hoping\" to hit the September timing. Hondo is expected to produce lower-sulfur crude that should bring field-wide sulfur content back to normal levels.",
+        "field": "description",
+        "before": "Sable Offshore expects the Hondo platform offshore California to come back online in September 2026, the third Santa Ynez Unit platform restarted after Heritage and Harmony. Hondo is expected to produce lower-sulfur crude that should bring field-wide sulfur content back to normal levels."
+      },
+      {
+        "after": "<ul><li>Sable Offshore, a Texas-headquartered oil and gas company, expects to bring the Hondo platform — the third of its Santa Ynez Unit (SYU) platforms offshore California — back online in September 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>The restart follows the phased return of the unit: production resumed from the Heritage platform in early April 2026, with Harmony also producing<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>On the 11 August second-quarter call management put the Hondo restart &ldquo;by the end of September&rdquo;, but said the 45-year-old platform had needed &ldquo;about 50% more work than we expected&rdquo; &mdash; a &ldquo;tremendous amount of structural work&rdquo; and controls &ldquo;completely changed out&rdquo; &mdash; and that the team was &ldquo;hoping we can hit that timing in September&rdquo;<cite data-ref=\"https://www.investing.com/news/transcripts/earnings-call-transcript-sable-offshore-posts-q2-2026-miss-as-shares-fall-93CH-4852298\"></cite></li><li>The date has already slipped once: Sable's April corporate update put Hondo online in June 2026, before its 10 August release moved it to September<cite data-ref=\"https://www.offshore-energy.biz/third-oil-platform-offshore-california-coming-online-in-june/\"></cite><cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000105/a991_2q26xpr.htm\"></cite></li><li>An average of about 47 wells at Harmony and Heritage were online in July 2026, producing roughly 721 gross barrels of oil per day per well; all 77 production wells on those two platforms are expected online during Q3 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>A wireline campaign for perforation additions and producing-well optimization at Harmony began in August 2026; five completed perforation additions at Hondo, each forecast at an incremental 600 gross barrels per day, are to come online with the platform restart in September 2026, with four more planned for early Q4 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Hondo is expected to produce lower-sulfur crude, bringing field-wide sulfur content back to normal levels on restart; chemical sweetening solutions are to be tested in Q4 2026 with full implementation anticipated in 2027<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Hondo is the easternmost platform, where crude runs lowest in sulfur, so blending its oil into the field's output should cut the sulfur penalties Sable pays on SYU barrels<cite data-ref=\"https://www.investing.com/news/transcripts/earnings-call-transcript-sable-offshore-posts-q2-2026-miss-as-shares-fall-93CH-4852298\"></cite></li><li>Sable reported $18.5 million of non-recurring demurrage charges in Q2 2026 after California refiners, unable to plan for SYU first sales, displaced imported cargoes and limited Pacific OCS throughput; refiners are expected to adjust their crude slates from September 2026 to take more SYU barrels<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>On 19 August a federal court fined Sable $1.449 million for restarting the onshore Santa Ynez Pipeline System without the State Fire Marshal's authorization, but declined to order it shut, since PHMSA had since approved the restart plan; it also refused California's bid to block the Energy Department's Defense Production Act order keeping the line running, and California appealed on 20 August<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000108/socc-20260819.htm\"></cite></li><li>From 8 September Sable crews began excavating 12 stretches of the pipeline that carries SYU oil onshore, where federally mandated tests flagged possible corrosion; any spot with wall loss of 40% or more must be repaired<cite data-ref=\"https://www.independent.com/2026/09/17/sable-offshore-digging-up-12-spots-of-pipeline-for-corrosion/\"></cite></li><li>Chairman and CEO Jim Flores said the team made strong progress ramping up operations in the second quarter, citing higher-than-expected well productivity with minimal observable decline<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Sable Offshore, a Texas-headquartered oil and gas company, expects to bring the Hondo platform — the third of its Santa Ynez Unit (SYU) platforms offshore California — back online in September 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>The restart follows the phased return of the unit: production resumed from the Heritage platform in early April 2026, with Harmony also producing<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>An average of about 47 wells at Harmony and Heritage were online in July 2026, producing roughly 721 gross barrels of oil per day per well; all 77 production wells on those two platforms are expected online during Q3 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>A wireline campaign for perforation additions and producing-well optimization at Harmony began in August 2026; five completed perforation additions at Hondo, each forecast at an incremental 600 gross barrels per day, are to come online with the platform restart in September 2026, with four more planned for early Q4 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Hondo is expected to produce lower-sulfur crude, bringing field-wide sulfur content back to normal levels on restart; chemical sweetening solutions are to be tested in Q4 2026 with full implementation anticipated in 2027<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Sable reported $18.5 million of non-recurring demurrage charges in Q2 2026 after California refiners, unable to plan for SYU first sales, displaced imported cargoes and limited Pacific OCS throughput; refiners are expected to adjust their crude slates from September 2026 to take more SYU barrels<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Chairman and CEO Jim Flores said the team made strong progress ramping up operations in the second quarter, citing higher-than-expected well productivity with minimal observable decline<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-sable-offshore-posts-q2-2026-miss-as-shares-fall-93CH-4852298",
+        "title": "Earnings call transcript: Sable Offshore posts Q2 2026 miss as shares fall - Investing.com",
+        "startDate": "2026-09-30",
+        "confidence": 85,
+        "publishedDate": "2026-08-11"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1831481/000183148126000108/socc-20260819.htm",
+        "title": "Sable Offshore Corp. Form 8-K (Item 8.01): 19 August 2026 court order",
+        "confidence": 90,
+        "publishedDate": "2026-08-24"
+      },
+      {
+        "url": "https://www.independent.com/2026/09/17/sable-offshore-digging-up-12-spots-of-pipeline-for-corrosion/",
+        "title": "Sable Offshore Digging Up 12 Spots of Pipeline for Corrosion - The Santa Barbara Independent",
+        "confidence": 75,
+        "publishedDate": "2026-09-17"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T14:45:13.939Z"
+  },
+  {
+    "id": 75,
+    "pinId": 2832,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-12-31T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-10-06T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>The EU's Technical Committee on Motor Vehicles (TCMV) is expected to vote on 6 October 2026 on extending the Dutch RDW approval of Tesla's FSD (Supervised) to all 27 member states<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite><cite data-ref=\"https://cleantechnica.com/2026/08/12/tesla-fsd-hurdles-in-china-secrecy-in-europe/\"></cite>.</li><li>The date is reported, not officially set: Reuters says only that a vote could happen in October<cite data-ref=\"https://www.claimsjournal.com/news/national/2026/08/06/339341.htm\"></cite>.</li><li>It needs a qualified majority: at least 15 of the 27 member states, representing 65% of the EU's population<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite><cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite>.</li><li>RDW granted the first EU approval on 10 April 2026 after more than 18 months of testing, under an Article 39 exemption of Regulation (EU) 2018/858 and UN Regulation 171<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>On 21 September 2026 Czechia recognised the Dutch approval, becoming the seventh EU country after the Netherlands, Lithuania, Estonia, Denmark, Belgium and Slovenia<cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite><cite data-ref=\"https://www.engadget.com/2264292/tesla-will-soon-roll-out-fsd-supervised-in-the-czech-republic/\"></cite>.</li><li>Those six countries held roughly 8.9% of the EU's population before Czechia joined, far short of the 65% threshold<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite>.</li><li>Sweden told the committee in writing it will vote against unless Tesla removes the speed-offset feature; France declined national approval in July over speeding and driver attention, and began road-testing two FSD cars in September<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>Reuters found Tesla pressed RDW to keep its safety review confidential; RDW says it relied on its own testing, not Tesla's statistics<cite data-ref=\"https://www.claimsjournal.com/news/national/2026/08/06/339341.htm\"></cite>.</li><li>A rejection would make RDW's provisional approval lapse after six months, invalidating the national approvals built on it, according to Denmark's traffic authorities<cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>The 6 October TCMV meeting will only continue discussions on the Dutch request; the vote slipped to December at the earliest<cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-release-eu-gets-delayed/\"></cite>.</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The EU's Technical Committee on Motor Vehicles (TCMV) is expected to vote on 6 October 2026 on extending the Dutch RDW approval of Tesla's FSD (Supervised) to all 27 member states<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite><cite data-ref=\"https://cleantechnica.com/2026/08/12/tesla-fsd-hurdles-in-china-secrecy-in-europe/\"></cite>.</li><li>The date is reported, not officially set: Reuters says only that a vote could happen in October<cite data-ref=\"https://www.claimsjournal.com/news/national/2026/08/06/339341.htm\"></cite>.</li><li>It needs a qualified majority: at least 15 of the 27 member states, representing 65% of the EU's population<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite><cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite>.</li><li>RDW granted the first EU approval on 10 April 2026 after more than 18 months of testing, under an Article 39 exemption of Regulation (EU) 2018/858 and UN Regulation 171<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>On 21 September 2026 Czechia recognised the Dutch approval, becoming the seventh EU country after the Netherlands, Lithuania, Estonia, Denmark, Belgium and Slovenia<cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite><cite data-ref=\"https://www.engadget.com/2264292/tesla-will-soon-roll-out-fsd-supervised-in-the-czech-republic/\"></cite>.</li><li>Those six countries held roughly 8.9% of the EU's population before Czechia joined, far short of the 65% threshold<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite>.</li><li>Sweden told the committee in writing it will vote against unless Tesla removes the speed-offset feature; France declined national approval in July over speeding and driver attention, and began road-testing two FSD cars in September<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>Reuters found Tesla pressed RDW to keep its safety review confidential; RDW says it relied on its own testing, not Tesla's statistics<cite data-ref=\"https://www.claimsjournal.com/news/national/2026/08/06/339341.htm\"></cite>.</li><li>A rejection would make RDW's provisional approval lapse after six months, invalidating the national approvals built on it, according to Denmark's traffic authorities<cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.teslarati.com/tesla-full-self-driving-release-eu-gets-delayed/",
+        "title": "Tesla Full Self-Driving release in the EU gets delayed (Teslarati)",
+        "confidence": 85,
+        "publishedDate": "2026-09-25"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T17:41:00.821Z"
+  },
+  {
+    "id": 76,
+    "pinId": 3800,
+    "kind": "edit",
+    "userId": 303,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://sneakerbardetroit.com/air-jordan-1-low-og-howard-university-2026/",
+        "title": "Air Jordan 1 Low OG \"Howard\" Releases October 1st",
+        "confidence": 80,
+        "publishedDate": "2026-09-17"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:25:59.940Z"
+  },
+  {
+    "id": 77,
+    "pinId": 1947,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.nasa.gov/blogs/commercialcrew/2026/09/28/nasas-spacex-crew-13-rocket-arrives-at-launch-pad/",
+        "title": "NASA's SpaceX Crew-13 Rocket Arrives at Launch Pad",
+        "confidence": 95,
+        "publishedDate": "2026-09-28"
+      },
+      {
+        "url": "https://www.nasa.gov/blogs/spacestation/2026/08/29/nasa-spacex-adjust-crew-13-launch-date/",
+        "title": "NASA, SpaceX Adjust Crew-13 Launch Date",
+        "confidence": 95,
+        "publishedDate": "2026-08-29"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:26:28.973Z"
+  },
+  {
+    "id": 78,
+    "pinId": 1945,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "SpaceX's 14th Starship test flight lifted off from Starbase, Texas at 7:48 a.m. CT on 28 September 2026 and became the first Starship to reach orbit, after 13 earlier flights that were all suborbital.\n\nOne of the ship's six engines shut down during ascent; Starship still reached orbit and released 26 Starlink V3 satellites, the first of the new generation and its first operational payload. The flight was cut from a planned ten hours to about three: the ship deorbited and splashed down in the Pacific north of Hawaii, and the Super Heavy booster splashed down in the Gulf off Starbase instead of a tower catch.",
+        "field": "description",
+        "before": "SpaceX's 14th Starship test flight lifted off from Starbase, Texas at 7:48 a.m. CT on 28 September 2026 and became the first Starship to reach orbit, after 13 earlier flights that were all suborbital.\n\nOne of the ship's six engines failed during ascent; about 22 minutes into the flight SpaceX judged it safe to continue, and Starship began releasing 26 Starlink V3 satellites, the first of the new generation and Starship's first operational payload. The Super Heavy booster made a soft splashdown in the Gulf off Starbase instead of a tower catch.\n\nThe ship was planned to fly about six orbits at roughly 275 km over nearly 10 hours before splashing down in the Pacific west of Chile."
+      },
+      {
+        "after": "<ul><li>Starship lifted off from Starbase at 7:48 a.m. CT on 28 September 2026, 33 minutes into a window that opened at 7:15, and reached orbit around 8:15 a.m. local time &mdash; the first time in 14 test flights, none of the 13 before it having been meant to<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The FAA told CNBC it issued the &ldquo;license authorization for the SpaceX Starship Super Heavy Flight 14 launch and reentry operations&rdquo; on 26 September, two days before launch<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite></li><li>One of the ship's six engines failed during ascent, and about 22 minutes into the flight SpaceX decided it was safe to carry on to orbit<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Twenty-six Starlink V3 satellites were placed in orbit, the first time functional Starlink satellites of the new generation have been carried by Starship; three carry cameras to record data on the heat shield<cite data-ref=\"https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The plan was about six orbits over ten hours, but SpaceX ended the mission at its first scheduled checkpoint, about three hours after launch, and the ship splashed down in the Pacific north of Hawaii just before noon ET; SpaceX said it limited time on orbit &ldquo;out of an abundance of caution&rdquo; after the engine problem, and called the flight a success for reaching orbit and adding Starlink satellites<cite data-ref=\"https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227\"></cite></li><li>The Super Heavy booster separated, performed a boostback burn and made a &ldquo;soft splashdown&rdquo; in the Gulf off Starbase, rather than a return to the launch tower; ABC reports problems with two booster engines as well as the ship's<cite data-ref=\"https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>One Starship can carry 60 Starlink V3 satellites, about 20 times a Falcon 9 launch, and Starship is the only vehicle able to launch the larger V3 satellites; SpaceX did not comment on plans for the next flight<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227\"></cite></li><li>Starship is key to SpaceX's growth after its June IPO, the largest on record, which values it at about $2 trillion; it also underpins NASA's plan to land astronauts on the Moon, with an Orion docking test planned for Artemis III late next year<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Before launch, Kalshi priced liftoff before 29 September at 55% and Polymarket put a launch by 30 September at 73%<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite><cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Starship lifted off from Starbase at 7:48 a.m. CT on 28 September 2026, 33 minutes into a window that opened at 7:15, and reached orbit around 8:15 a.m. local time &mdash; the first time in 14 test flights, none of the 13 before it having been meant to<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The FAA told CNBC it issued the &ldquo;license authorization for the SpaceX Starship Super Heavy Flight 14 launch and reentry operations&rdquo; on 26 September, two days before launch<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite></li><li>One of the six engines on the ship failed during ascent, and about 22 minutes into the flight SpaceX decided it was safe to carry on to orbit<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>SpaceX began releasing the 26 Starlink V3 satellites around 8:25 a.m. local time; three of them carry cameras to record data on Starship's heat shield<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The Super Heavy booster made a &ldquo;soft splashdown&rdquo; off Starbase, simulating an offshore landing in the Gulf rather than a return to the launch tower<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The flight plan is about six orbits at roughly 170 miles over 10 hours, ending in a Pacific splashdown off Chile; SpaceX built in points where Starship could abort its orbital trajectory and return safely<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>One Starship can carry 60 Starlink V3 satellites, about 20 times a Falcon 9 launch, and Starship is the only vehicle able to launch the larger V3 satellites<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Starship is key to SpaceX's growth after its June IPO, the largest on record, which values it at about $2 trillion; it also underpins NASA's plan to land astronauts on the Moon, with an Orion docking test planned for Artemis III late next year<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Before launch, Kalshi priced liftoff before 29 September at 55% and Polymarket put a launch by 30 September at 73%<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite><cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227",
+        "title": "SpaceX Starship splashes down after successful 1st orbital flight test - ABC News",
+        "confidence": 88,
+        "publishedDate": "2026-09-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:26:30.461Z"
+  },
+  {
+    "id": 79,
+    "pinId": 2981,
+    "kind": "edit",
+    "userId": 374,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The Supreme Court hears Suncor Energy (U.S.A.) Inc. v. County Commissioners of Boulder County, No. 25-170, on Monday 5 October 2026 as the first case of its October Term 2026; the Court convenes at 10 a.m.<cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite><cite data-ref=\"https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOctober2026.pdf\"></cite><cite data-ref=\"https://www.scotusblog.com/2026/08/court-announces-cases-it-will-hear-in-october-which-include-significant-disputes-on-climate-chan/\"></cite></li><li>On 28 September Justice Samuel Alito told the parties in a clerk's letter that he &ldquo;will not continue to participate&rdquo; in the case, so it will be decided by eight justices and a 4-4 split becomes possible; the letter gave no reason<cite data-ref=\"https://www.scotusblog.com/2026/09/justice-alito-will-no-longer-participate-in-climate-change-dispute/\"></cite></li><li>The question is whether federal law precludes state-law claims seeking relief for injuries allegedly caused by the effects of interstate and international greenhouse-gas emissions on the global climate<cite data-ref=\"https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/\"></cite></li><li>Granting review on 23 February 2026, the Court also told the parties to argue whether it has statutory and Article III jurisdiction to hear the case<cite data-ref=\"https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>The City of Boulder, Boulder County and San Miguel County sued ExxonMobil and Suncor entities in April 2018, alleging they knowingly contributed to climate change while concealing the dangers of their products<cite data-ref=\"https://bouldercounty.gov/news/u-s-supreme-court-decides-to-hear-climate-case-against-exxonmobil-and-suncor-entities/\"></cite><cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite></li><li>The Colorado Supreme Court ruled on 12 May 2025 that federal law did not preempt the claims, letting them proceed under state law<cite data-ref=\"https://bouldercounty.gov/news/u-s-supreme-court-decides-to-hear-climate-case-against-exxonmobil-and-suncor-entities/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>The Justice Department filed an amicus brief backing the oil companies, and on 4 September 2026 the Court let the Solicitor General take part in the argument<cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>A ruling for the companies could end more than two dozen climate liability suits pending in state courts<cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite></li><li>Johnson v. United States Congress is the second case argued that morning<cite data-ref=\"https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOctober2026.pdf\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Supreme Court hears Suncor Energy (U.S.A.) Inc. v. County Commissioners of Boulder County, No. 25-170, on Monday 5 October 2026 as the first case of its October Term 2026; the Court convenes at 10 a.m.<cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite><cite data-ref=\"https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOctober2026.pdf\"></cite><cite data-ref=\"https://www.scotusblog.com/2026/08/court-announces-cases-it-will-hear-in-october-which-include-significant-disputes-on-climate-chan/\"></cite></li><li>The question is whether federal law precludes state-law claims seeking relief for injuries allegedly caused by the effects of interstate and international greenhouse-gas emissions on the global climate<cite data-ref=\"https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/\"></cite></li><li>Granting review on 23 February 2026, the Court also told the parties to argue whether it has statutory and Article III jurisdiction to hear the case<cite data-ref=\"https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>The City of Boulder, Boulder County and San Miguel County sued ExxonMobil and Suncor entities in April 2018, alleging they knowingly contributed to climate change while concealing the dangers of their products<cite data-ref=\"https://bouldercounty.gov/news/u-s-supreme-court-decides-to-hear-climate-case-against-exxonmobil-and-suncor-entities/\"></cite><cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite></li><li>The Colorado Supreme Court ruled on 12 May 2025 that federal law did not preempt the claims, letting them proceed under state law<cite data-ref=\"https://bouldercounty.gov/news/u-s-supreme-court-decides-to-hear-climate-case-against-exxonmobil-and-suncor-entities/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>The Justice Department filed an amicus brief backing the oil companies, and on 4 September 2026 the Court let the Solicitor General take part in the argument<cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>A ruling for the companies could end more than two dozen climate liability suits pending in state courts<cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite></li><li>Johnson v. United States Congress is the second case argued that morning<cite data-ref=\"https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOctober2026.pdf\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.scotusblog.com/2026/09/justice-alito-will-no-longer-participate-in-climate-change-dispute/",
+        "title": "Justice Alito will no longer participate in climate change dispute - SCOTUSblog",
+        "confidence": 92,
+        "publishedDate": "2026-09-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:26:31.774Z"
+  },
+  {
+    "id": 80,
+    "pinId": 4587,
+    "kind": "edit",
+    "userId": 419,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>From 12:01 a.m. eastern time on 29 September 2026, the Canadian alcoholic beverages listed in Proclamation 11061's annex are excluded from importation into the United States<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>The proclamation says Canada reneged on a commitment on 21 August, that the 50% duties took effect on 22 August, and that Saskatchewan then announced its own 50% levy on US alcohol from 8 September<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>Goods already imported but not yet entered before 29 September stay subject to the 50% duty, which also applies instead if the ban is invalidated<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>The ban covers Canadian spirits, wine and malt beer, all of which had carried the 50% tariff since the breakdown of talks in August<cite data-ref=\"https://www.thespiritsbusiness.com/2026/09/trump-bans-canadian-spirits-imports/\"></cite></li><li>A same-day proclamation re-scoped the products that remain under the 50% duty from 15 September<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18838/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset\"></cite></li><li>US alcohol trade groups have pressed for a deal, saying US spirits exports to Canada fell from US$232 million to US$72 million between March and December 2025<cite data-ref=\"https://www.thespiritsbusiness.com/2026/09/coalition-calls-for-us-canada-resolution/\"></cite></li><li>The ban is estimated to cover about $19.9 billion of Canadian imports (American Action Forum, via CNBC); Canada has announced no fresh retaliation since 9 September, and USTR Jamieson Greer said there is \"no urgency on our side\"<cite data-ref=\"https://www.cnbc.com/2026/09/29/canada-import-ban-trade-war.html\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>From 12:01 a.m. eastern time on 29 September 2026, the Canadian alcoholic beverages listed in Proclamation 11061's annex are excluded from importation into the United States<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>The proclamation says Canada reneged on a commitment on 21 August, that the 50% duties took effect on 22 August, and that Saskatchewan then announced its own 50% levy on US alcohol from 8 September<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>Goods already imported but not yet entered before 29 September stay subject to the 50% duty, which also applies instead if the ban is invalidated<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>The ban covers Canadian spirits, wine and malt beer, all of which had carried the 50% tariff since the breakdown of talks in August<cite data-ref=\"https://www.thespiritsbusiness.com/2026/09/trump-bans-canadian-spirits-imports/\"></cite></li><li>A same-day proclamation re-scoped the products that remain under the 50% duty from 15 September<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18838/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset\"></cite></li><li>US alcohol trade groups have pressed for a deal, saying US spirits exports to Canada fell from US$232 million to US$72 million between March and December 2025<cite data-ref=\"https://www.thespiritsbusiness.com/2026/09/coalition-calls-for-us-canada-resolution/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.cnbc.com/2026/09/29/canada-import-ban-trade-war.html",
+        "title": "US ban on Canadian alcohol takes effect - CNBC",
+        "confidence": 90,
+        "publishedDate": "2026-09-29"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:38:45.689Z"
+  }
+]

@@ -1,17 +1,19 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/ui/Link';
 import { useSession } from '@/lib/client/session';
+import { useT } from '@/lib/client/i18n';
 
 // For the pin's author and admins, who are the ones allowed to edit it.
 export function EditReferencesLink({ pinId, authorId, hasReferences }: { pinId: number; authorId?: number; hasReferences: boolean }) {
   const { user, isAdmin } = useSession();
+  const t = useT();
   if (!user || !(isAdmin || (authorId != null && Number(user.id) === Number(authorId)))) {
     return null;
   }
   return (
     <Link href={`/update/${pinId}`} className="ml-auto text-sm font-normal">
-      {hasReferences ? 'Edit references' : 'Add references'}
+      {hasReferences ? t('references.edit') : t('references.add')}
     </Link>
   );
 }

@@ -2,8 +2,34 @@
   {
     "id": 1,
     "text": "Finally, this bridge is coming",
+    "sentiment": 0.6,
     "utcCreatedDateTime": "2026-09-12T23:15:27.165Z",
     "userId": 1,
     "pinId": 277
+  },
+  {
+    "id": 66,
+    "text": "Can't wait",
+    "sentiment": 0.8,
+    "utcCreatedDateTime": "2026-09-19T04:13:33.148Z",
+    "userId": 1,
+    "pinId": 297
+  },
+  {
+    "id": 67,
+    "text": "Not another FF",
+    "sentiment": -0.5,
+    "utcCreatedDateTime": "2026-09-19T04:15:10.965Z",
+    "userId": 1,
+    "pinId": 297
+  },
+  {
+    "id": 68,
+    "text": "I know right",
+    "parentCommentId": 67,
+    "sentiment": -0.4,
+    "utcCreatedDateTime": "2026-09-19T04:15:39.466Z",
+    "userId": 1,
+    "pinId": 297
   }
 ]

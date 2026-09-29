@@ -1,6 +1,8 @@
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
 import Notification from './notification';
+
+export const FOLLOWING_PAGE_SIZE = 20;
 
 export type FollowStatus = {
   followerCount: number;
@@ -58,6 +60,14 @@ export default class Follow {
     });
   }
 
+  // Tells everyone following the author that they posted a pin, in one insert
+  // (Notification.createForFollowers). The author is the actor. Quiet for an
+  // author nobody follows. Only a new pin says this: an edit does not change
+  // who wrote it, so re-telling their followers would be about nothing.
+  static async notifyNewPin({ pinId, authorId }: { pinId: number; authorId: number }, query: QueryFn = db.query) {
+    await Notification.createForFollowers({ pinId, authorId }, query);
+  }
+
   // Counts for userId, plus how viewerId relates to them. Without a viewer
   // (signed out) both relationship flags are false. Soft-deleted users are
   // not counted on either side.
@@ -78,18 +88,42 @@ export default class Follow {
     return rows[0];
   }
 
-  // Who userId follows, newest first, for the "manage following" page.
-  static async listFollowing(userId: number) {
-    const following = await db.query<{ id: number; userName: string; utcCreatedDateTime: Date }>(
-      `
-      SELECT u."id", u."userName", f."utcCreatedDateTime"
-      FROM "Follow" f
-      JOIN "User" u ON u."id" = f."followeeId"
-      WHERE f."followerId" = $1 AND f."utcDeletedDateTime" IS NULL AND u."utcDeletedDateTime" IS NULL
-      ORDER BY f."utcCreatedDateTime" DESC`,
-      [userId],
-    );
-    return { following };
+  // Who userId follows, newest follow first, a page at a time for the profile
+  // page's Following section. `after` is the previous page's `next` (a Follow
+  // id: they rise in the order follows were first made, as utcCreatedDateTime
+  // does, and a revived follow keeps both), `q` keeps handles containing it,
+  // and `total` counts every match, not just this page.
+  static async listFollowing(userId: number, { limit = FOLLOWING_PAGE_SIZE, after, q }: { limit?: number; after?: number | null; q?: string | null } = {}) {
+    const text = q?.trim().replace(/^@+/, '');
+    const pattern = text ? `%${text.replace(/[\\%_]/g, (c) => `\\${c}`)}%` : null;
+    const where = `f."followerId" = $1 AND f."utcDeletedDateTime" IS NULL AND u."utcDeletedDateTime" IS NULL
+        AND ($2::text IS NULL OR u."userName" ILIKE $2)`;
+    const [rows, counts] = await Promise.all([
+      db.query<{ followId: number; id: number; userName: string; pictureUrl: string | null }>(
+        `
+        SELECT f."id" AS "followId", u."id", u."userName", u."pictureUrl"
+        FROM "Follow" f
+        JOIN "User" u ON u."id" = f."followeeId"
+        WHERE ${where} AND ($3::int IS NULL OR f."id" < $3)
+        ORDER BY f."id" DESC
+        LIMIT $4`,
+        [userId, pattern, after ?? null, limit + 1],
+      ),
+      db.query<{ total: number }>(
+        `
+        SELECT COUNT(*) AS "total"
+        FROM "Follow" f
+        JOIN "User" u ON u."id" = f."followeeId"
+        WHERE ${where}`,
+        [userId, pattern],
+      ),
+    ]);
+    const page = rows.slice(0, limit);
+    return {
+      following: page.map(({ followId: _followId, ...user }) => user),
+      total: counts[0].total,
+      next: rows.length > limit ? page[page.length - 1].followId : null,
+    };
   }
 
   // Every live follow, oldest first, for backup:data.

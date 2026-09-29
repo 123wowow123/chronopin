@@ -16,6 +16,7 @@ next-env.d.ts
 
 .tmp
 .scrape
+/scratchpad/
 .idea
 npm-debug.log
 coverage
@@ -32,3 +33,12 @@ kube/config-map-prod
 kube/pod-preset-prod.yaml
 
 scripts/backup/seedUsers.json
+scripts/backup/seedMessages.json
+scripts/backup/seedListings.json
+
+# npm run okf:export
+/okf-bundle/
+/okf-users/
+
+# Claude Code per-machine permissions
+.claude/settings.local.json

@@ -13,6 +13,11 @@ export class ApiError extends Error {
   }
 }
 
+// The 403 for posting before the account's email is confirmed (0071).
+export function isEmailUnverified(err: unknown): boolean {
+  return err instanceof ApiError && err.status === 403 && (err.body as { code?: string } | null)?.code === 'emailUnverified';
+}
+
 async function request<T>(method: string, url: string, body?: unknown): Promise<T> {
   const init: RequestInit = { method, credentials: 'same-origin', headers: {} };
   if (body instanceof FormData) {

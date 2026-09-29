@@ -1,63 +1,67 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
+import Link from '@/components/ui/Link';
+import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
-import { NotificationBell } from './NotificationBell';
+import { AuthLink, LogoutLink } from './AuthLink';
+import { NotificationBell, WeatherButton } from './NotificationBell';
+import { searchHref, WATCHED } from './SearchBox';
+import { WatchAlerts } from './WatchAlerts';
+import { MessengerButton } from '@/components/messages/Messenger';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 
-const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline';
+const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline active:bg-raised-2';
 const itemIconClass = 'size-4 text-subtle';
 
-type MenuItem = { href: string; label: string; icon: IconName };
+type MenuItem = { href: string; label: MessageKey; icon: IconName };
 
 // The account menu, in groups separated by a rule. Admin tools only for admins.
+// Profile and settings are not a row here: the block at the head of the menu
+// (SignedInAs) is that link, since it already names the account they belong to.
 function accountGroups(isAdmin: boolean): MenuItem[][] {
-  const groups: MenuItem[][] = [
-    [
-      { href: '/profile', label: 'Profile', icon: 'user' },
-      { href: '/search?f=watch', label: 'Watched pins', icon: 'eye' },
-      { href: '/following', label: 'Following', icon: 'users' },
-    ],
-    [
-      { href: '/preferences', label: 'Preferences', icon: 'sliders' },
-      { href: '/settings', label: 'Change password', icon: 'lock' },
-    ],
-  ];
-  if (isAdmin) {
-    groups.push([{ href: '/admin', label: 'Admin', icon: 'shield' }]);
-  }
-  return groups;
+  const own: MenuItem[] = [{ href: '/listings', label: 'nav.listings', icon: 'tag' }];
+  return isAdmin ? [own, [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }]] : [own];
 }
 
 // Timeline or Map, with the current one highlighted, so it reads as a choice
-// of view rather than two unrelated links. Switching keeps the search: a
-// search's results show on the map, and the map's search opens as results.
-function ViewSwitch({ pathname, className = '' }: { pathname: string; className?: string }) {
+// of view rather than two unrelated links. Switching keeps the search and its
+// time filters: a search's results show on the map, and the map's search opens
+// as results.
+export function ViewSwitch({ pathname, className = '' }: { pathname: string; className?: string }) {
   const params = useSearchParams();
-  const search = new URLSearchParams();
-  if (pathname === '/search' || pathname.startsWith('/map')) {
-    for (const key of ['q', 'f']) {
-      const value = params.get(key);
-      if (value) search.set(key, value);
+  const t = useT();
+  const carry = (keys: string[]) => {
+    const search = new URLSearchParams();
+    if (pathname === '/' || pathname === '/search' || pathname.startsWith('/map')) {
+      for (const key of keys) {
+        const value = params.get(key);
+        if (value) search.set(key, value);
+      }
     }
-  }
-  const carried = search.size ? `?${search.toString()}` : '';
+    return search;
+  };
+  const toMap = carry(['q', 'f', 'posted', 'past', 'future']);
+  const searching = !!(params.get('q') || params.get('f'));
+  const toTimeline = carry(searching ? ['q', 'f', 'sort', 'posted', 'past', 'future'] : ['posted']);
+  const query = (search: URLSearchParams) => (search.size ? `?${search.toString()}` : '');
   const views = [
-    { href: carried ? `/search${carried}` : '/', label: 'Timeline', icon: 'timeline', current: pathname === '/' || pathname === '/search' },
-    { href: `/map${carried}`, label: 'Map', icon: 'map', current: pathname.startsWith('/map') },
+    { href: `${searching ? '/search' : '/'}${query(toTimeline)}`, key: 'timeline', label: t('nav.timeline'), icon: 'timeline', current: pathname === '/' || pathname === '/search' },
+    { href: `/map${query(toMap)}`, key: 'map', label: t('nav.map'), icon: 'map', current: pathname.startsWith('/map') },
   ] as const;
   return (
     <div className={`flex rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>
       {views.map((view) => (
         <Link
-          key={view.label}
+          key={view.key}
           href={view.href}
           aria-current={view.current ? 'page' : undefined}
-          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium transition-colors hover:no-underline ${
-            view.current ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:text-ink'
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium whitespace-nowrap transition-colors hover:no-underline ${
+            view.current ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:bg-raised hover:text-ink active:bg-raised-2'
           }`}
         >
           <Icon name={view.icon} className="size-4" />
@@ -68,7 +72,59 @@ function ViewSwitch({ pathname, className = '' }: { pathname: string; className?
   );
 }
 
-function MenuLinks({ groups, logoutHref }: { groups: MenuItem[][]; logoutHref: string }) {
+// The watched-only filter, for the account menu and the drawer: it keeps the
+// search (and the map, when on it) and only turns the filter on or off.
+export function useWatchedToggle() {
+  const pathname = usePathname();
+  const params = useSearchParams();
+  const router = useRouter();
+  const onMap = pathname === '/map';
+  const searching = onMap || pathname === '/search';
+  const watchedOnly = searching && params.get('f') === WATCHED;
+  const toggle = () => {
+    const href = searchHref(onMap, searching ? params.get('q') || '' : '', watchedOnly ? '' : WATCHED);
+    // Turning Watched off widens the search, which stays on the same date;
+    // turning it on opens on the day nearest it.
+    router.push(watchedOnly ? hrefKeepingDate(href) : hrefNearDay(href));
+  };
+  return { watchedOnly, toggle };
+}
+
+// An on/off switch drawn at the end of a menu row.
+export function SwitchMark({ on, size = 'md' }: { on: boolean; size?: 'sm' | 'md' }) {
+  const [track, knob, shift] = size === 'sm' ? ['h-5 w-8', 'size-4', 'translate-x-3'] : ['h-6 w-10', 'size-5', 'translate-x-4'];
+  return (
+    <span aria-hidden className={`ml-auto flex ${track} shrink-0 items-center rounded-full p-0.5 transition-colors ${on ? 'bg-accent' : 'bg-raised-2'}`}>
+      <span className={`${knob} rounded-full bg-white shadow transition-transform ${on ? shift : ''}`} />
+    </span>
+  );
+}
+
+function WatchedRow({ onToggle }: { onToggle: () => void }) {
+  const t = useT();
+  const { watchedOnly, toggle } = useWatchedToggle();
+  return (
+    <div className="border-b border-line py-1.5">
+      <button
+        type="button"
+        role="switch"
+        aria-checked={watchedOnly}
+        onClick={() => {
+          onToggle();
+          toggle();
+        }}
+        className={`w-full ${itemClass}`}
+      >
+        <Icon name="eye" className={`${itemIconClass} ${watchedOnly ? 'text-link' : ''}`} />
+        {t('nav.watchedOnly')}
+        <SwitchMark on={watchedOnly} size="sm" />
+      </button>
+    </div>
+  );
+}
+
+function MenuLinks({ groups }: { groups: MenuItem[][] }) {
+  const t = useT();
   return (
     <>
       {groups.map((group, index) => (
@@ -76,60 +132,61 @@ function MenuLinks({ groups, logoutHref }: { groups: MenuItem[][]; logoutHref: s
           {group.map((item) => (
             <Link key={item.href} href={item.href} className={itemClass}>
               <Icon name={item.icon} className={itemIconClass} />
-              {item.label}
+              {t(item.label)}
             </Link>
           ))}
         </div>
       ))}
       <div className="py-1.5">
-        <a href={logoutHref} className={itemClass}>
+        <LogoutLink className={itemClass}>
           <Icon name="logout" className={itemIconClass} />
-          Log out
-        </a>
+          {t('nav.logOut')}
+        </LogoutLink>
       </div>
     </>
   );
 }
 
+// Who is signed in, at the head of the account menu - and the way to their
+// profile and settings, which is what the account named here opens on. The
+// handle leads, with where it goes under it, rather than a separate row
+// saying the same name again.
 function SignedInAs({ userName, pictureUrl }: { userName: string; pictureUrl?: string | null }) {
+  const t = useT();
   return (
-    <div className="flex items-center gap-2.5 border-b border-line px-3 py-2.5">
+    <Link href="/profile" className="flex items-center gap-2.5 border-b border-line px-3 py-2.5 hover:bg-raised hover:no-underline">
       <UserAvatar userName={userName} pictureUrl={pictureUrl} className="size-8 text-sm" />
-      <div className="min-w-0">
-        <div className="text-xs text-subtle">Signed in as</div>
-        <div className="truncate text-sm font-semibold text-ink">{userName}</div>
-      </div>
-    </div>
+      <span className="min-w-0">
+        <span className="block truncate text-sm font-semibold text-ink">{userName}</span>
+        <span className="block truncate text-xs text-subtle">{t('nav.profileSettings')}</span>
+      </span>
+      <Icon name="chevron" className="ml-auto size-3.5 shrink-0 -rotate-90 text-subtle" />
+    </Link>
   );
 }
 
 // The right side of the navbar: what a visitor can do depends on whether they
-// are signed in, so it renders on the client from the session.
+// are signed in, so it renders on the client from the session. Below lg it is
+// all in the drawer instead (MobileDrawer), the bell included.
 export function NavMenu() {
   const pathname = usePathname();
   const { status, user, isAdmin } = useSession();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const t = useT();
   const [accountOpen, setAccountOpen] = useState(false);
   const accountRef = useRef<HTMLDivElement>(null);
-  const mobileRef = useRef<HTMLDivElement>(null);
 
   const [lastPath, setLastPath] = useState(pathname);
   if (lastPath !== pathname) {
     setLastPath(pathname);
-    setMenuOpen(false);
     setAccountOpen(false);
   }
 
   useEffect(() => {
     const close = (event: MouseEvent) => {
       if (!accountRef.current?.contains(event.target as Node)) setAccountOpen(false);
-      if (!mobileRef.current?.contains(event.target as Node)) setMenuOpen(false);
     };
     const escape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setAccountOpen(false);
-        setMenuOpen(false);
-      }
+      if (event.key === 'Escape') setAccountOpen(false);
     };
     document.addEventListener('mousedown', close);
     document.addEventListener('keydown', escape);
@@ -139,37 +196,42 @@ export function NavMenu() {
     };
   }, []);
 
-  const redirect = encodeURIComponent(pathname);
-  const logoutHref = `/logout?referrer=${redirect}`;
   const groups = accountGroups(isAdmin);
 
+  // One button, not two: the login page already offers signing up to whoever
+  // has no account yet.
   const guestActions =
     !user && status === 'ready' ? (
-      <>
-        <Link href={`/login?redirect=${redirect}`} className="btn btn-ghost py-1.5">
-          Log in
-        </Link>
-        <Link href="/signup" className="btn btn-primary py-1.5">
-          Sign up
-        </Link>
-      </>
+      <AuthLink to="/login" className="btn btn-primary py-1.5">
+        {t('nav.logIn')}
+      </AuthLink>
     ) : null;
 
   return (
     <>
-      <nav aria-label="Main" className="hidden items-center gap-2 lg:flex">
+      <nav aria-label={t('nav.main')} className="hidden items-center gap-2 lg:flex">
         <ViewSwitch pathname={pathname} />
         {user ? (
-          <Link href="/create" className="btn btn-primary py-1.5">
-            <Icon name="plus" className="size-4" />
-            Create
+          <Link
+            href="/create"
+            className="btn btn-primary group gap-1.5 rounded-full py-1.5 pr-3.5 pl-2.5 font-medium shadow-sm ring-1 shadow-accent/30 ring-white/10 ring-inset"
+          >
+            <Icon name="plus" className="size-4 transition-transform duration-200 group-hover:rotate-90" />
+            {t('nav.create')}
           </Link>
         ) : (
-          guestActions
+          <>
+            {/* Left of the Log in button, where the bell sits left of the
+                account menu when there is someone signed in. */}
+            <WeatherButton />
+            {guestActions}
+          </>
         )}
       </nav>
 
-      {user ? <NotificationBell /> : null}
+      {user ? <MessengerButton className="hidden lg:block" /> : null}
+      {user ? <NotificationBell className="hidden lg:block" /> : null}
+      {user ? <WatchAlerts /> : null}
 
       {user ? (
         <div ref={accountRef} className="relative hidden lg:block">
@@ -189,47 +251,13 @@ export function NavMenu() {
             <div className="floating absolute right-0 z-50 mt-2 w-60 overflow-hidden">
               <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
               <div className="px-1.5">
-                <MenuLinks groups={groups} logoutHref={logoutHref} />
+                <WatchedRow onToggle={() => setAccountOpen(false)} />
+                <MenuLinks groups={groups} />
               </div>
             </div>
           ) : null}
         </div>
       ) : null}
-
-      <div ref={mobileRef} className="lg:hidden">
-        <button
-          type="button"
-          className="flex items-center rounded-lg p-1.5 text-muted hover:bg-raised hover:text-ink"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((o) => !o)}
-        >
-          {user && !menuOpen ? (
-            <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-7 text-xs" />
-          ) : (
-            <Icon name={menuOpen ? 'close' : 'menu'} className="size-6" />
-          )}
-        </button>
-        {menuOpen ? (
-          <nav aria-label="Main" className="absolute top-full right-0 left-0 z-40 border-b border-line bg-header px-3 pt-3 pb-1.5 shadow-2xl shadow-black/50">
-            <ViewSwitch pathname={pathname} className="mb-3" />
-            {user ? (
-              <>
-                <Link href="/create" className="btn btn-primary mb-3 flex py-2">
-                  <Icon name="plus" className="size-4" />
-                  Create a pin
-                </Link>
-                <div className="-mx-3 border-t border-line">
-                  <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
-                </div>
-                <MenuLinks groups={groups} logoutHref={logoutHref} />
-              </>
-            ) : (
-              <div className="mb-1.5 grid grid-cols-2 gap-2 [&>a]:justify-center">{guestActions}</div>
-            )}
-          </nav>
-        ) : null}
-      </div>
     </>
   );
 }

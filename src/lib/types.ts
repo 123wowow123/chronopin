@@ -1,6 +1,18 @@
 // The JSON shapes the API and server components hand to the UI. Dates are
 // ISO strings once serialised.
 
+import type { CommentMood } from './commentMood';
+import type { CommentReactionName } from './commentReactions';
+import type { CompanySentiment } from './companySentiment';
+import type { PinAwardJson } from './awards';
+import type { PinTagJson } from './tags';
+
+import type { ThemePreference } from './theme';
+import type { Locale } from './i18n/config';
+import type { PinPlaceHandlesJson } from './places';
+
+export type CardStock = { symbol: string; name: string | null; relation: 'company' | 'related' | 'supplier'; assetClass: 'stocks' | 'etf'; startPrice: number | null; startDay: string | null };
+
 export type MediumJson = {
   id?: number;
   thumbName?: string;
@@ -14,6 +26,8 @@ export type MediumJson = {
   authorName?: string;
   authorUrl?: string;
   html?: string;
+  // Below 1 once a checked suggestion demoted it (0090); absent at full weight.
+  weight?: number;
 };
 
 export type MerchantJson = {
@@ -36,7 +50,52 @@ export type PinReferenceJson = {
   // Why it got that confidence: what the page says about the event and date.
   reasoning?: string;
   utcCreatedDateTime?: string;
+  // Who added it, when that was not the pin's author (set by the server).
+  addedByUserId?: number;
+  addedByUserName?: string;
+  addedByUserPictureUrl?: string;
 };
+
+// A suggestion someone left on a pin (AiFeedback), as its author sees it: open
+// while the AI reviews it, then applied (it added references) or dismissed.
+// What a suggestion's review did to the pin's pictures (0090): the ones it
+// demoted (dropped, when a better one took the place or it showed something
+// else) and the ones it added.
+export type SuggestionMediaJson = {
+  demoted: { mediumId: number; originalUrl: string; problem: 'wrong' | 'poor'; reasoning: string; weight: number; dropped: boolean }[];
+  added: { originalUrl: string; reasoning: string }[];
+};
+
+export type SuggestionJson = {
+  id: number;
+  pinId: number;
+  feedback: string;
+  sourceUrl?: string | null;
+  status: 'open' | 'applied' | 'dismissed';
+  aiVerdict?: 'supported' | 'partly' | 'unsupported' | 'unclear' | null;
+  aiReasoning?: string | null;
+  aiReferences?: { url: string; title: string | null; confidence: number }[] | null;
+  aiMedia?: SuggestionMediaJson | null;
+  utcCreatedDateTime: string;
+  utcResolvedDateTime?: string | null;
+};
+
+export type PinRatingJson = {
+  id?: number;
+  source: string;
+  // In the source's own scale, e.g. 8.4 (IMDb, out of 10) or 92 (Rotten
+  // Tomatoes, out of 100).
+  score: number;
+  scoreMax: number;
+  url?: string;
+  utcCreatedDateTime?: string;
+};
+
+// What a pin's episodeCount counts (scripts/db/schema/0047_pin_episodes.sql):
+// the finished run, the episodes out so far, or the announced total of a run
+// still airing.
+export const EPISODE_STATUSES = ['complete', 'ongoing', 'planned'] as const;
+export type EpisodeStatus = (typeof EPISODE_STATUSES)[number];
 
 export type PinUserJson = {
   id: number;
@@ -44,10 +103,27 @@ export type PinUserJson = {
   pictureUrl?: string;
 };
 
+export type PinFlightPathJson = {
+  label?: string | null;
+  sourceUrl?: string | null;
+  // Computed by us (src/lib/groundTrack.ts), not taken from a simulation.
+  estimated: boolean;
+  // [latitude, longitude] in flight order, starting at the pin's place.
+  points: [number, number][];
+};
+
 export type PinJson = {
   id: number;
+  // In a language other than English, when the pin's words are its
+  // translation: its own title (the URL slug is made from it) and the language.
+  originalTitle?: string;
+  translatedTo?: string;
   parentId?: number;
   rootThread?: boolean;
+  // How well the rest of this pin's thread is sourced (0-100), on the pages
+  // the timeline samples: the mean confidence of the other pins in its chain.
+  // Absent for a pin in no thread, or one whose chain is unscored.
+  threadConfidence?: number;
   title: string;
   description?: string;
   sourceUrl?: string;
@@ -66,18 +142,51 @@ export type PinJson = {
   company?: string;
   companyWikiUrl?: string;
   companyLogoUrl?: string;
-  category?: string;
+  // Its category tags (src/lib/categories.ts), the main one first.
+  categories?: string[];
   utcStartDateTime: string;
   utcEndDateTime?: string;
   // The dates the source gave, set only while a more confident reference's
   // dates are used instead (src/lib/dateClaims.ts).
   sourceStartDateTime?: string;
   sourceEndDateTime?: string;
+  // The day first promised before the start slipped ("2027-12-31"), and how
+  // that and the new date were found (src/lib/delay.ts).
+  originalStartDate?: string;
+  delayReasoning?: string;
+  // How many episodes a work released in episodes has, and what that number
+  // counts: the finished run ("complete"), the episodes out so far with more
+  // coming ("ongoing"), or the total announced for a run still airing
+  // ("planned"). Both absent for a film or a one-off event.
+  episodeCount?: number;
+  episodeStatus?: EpisodeStatus;
+  // The product the pin is about, as a shop lists it ("PUMA MB.06 Puerto
+  // Rico"), which the pin page's buy buttons search for (lib/shopping.ts).
+  productName?: string;
+  // The dollars traded on the prediction markets its links cite, as last read
+  // (schema 0053). Absent when it cites none, or when no exchange reports
+  // volume for the ones it cites. Its live per-market counterpart arrives with
+  // the odds (lib/predictionMarkets.ts); this one weighs the pin on a crowded
+  // day (lib/bagSample.ts).
+  marketVolume?: number | null;
   allDay?: boolean;
+  // Whether the source said the event runs all day, rather than us simply
+  // never learning the time (schema 0057). Only an all-day pin can carry it,
+  // and only these print an "All day" label.
+  allDayStated?: boolean;
   utcCreatedDateTime?: string;
   utcUpdatedDateTime?: string;
   favoriteCount?: number;
   likeCount?: number;
+  // Page views, once per viewer per day.
+  viewCount?: number;
+  // Times its card was seen on the timeline, once per viewer per day. Only
+  // timeline pages and search results carry it (not a pin's own page, nor a
+  // live broadcast).
+  impressionCount?: number;
+  // The pin and every pin confirmed as a duplicate of it, lowest id first;
+  // absent when it has none (src/lib/duplicates.ts).
+  duplicateGroup?: number[];
   hasFavorite?: boolean;
   hasLike?: boolean;
   searchScore?: number;
@@ -87,11 +196,44 @@ export type PinJson = {
   media?: MediumJson[];
   merchants?: MerchantJson[];
   references?: PinReferenceJson[];
+  ratings?: PinRatingJson[];
+  // Its stock tickers, company first, with each one's close on the start date.
+  stocks?: CardStock[];
+  // What the work won or was nominated for (film, series, anime pins).
+  awards?: PinAwardJson[];
+  // Its tags: its own, the awards its text names, its awards' bodies and years.
+  tags?: PinTagJson[];
+  // Where it goes from its place (a rocket's ground track); the map draws it on the pin's page.
+  flightPath?: PinFlightPathJson;
+  // Where its place is on Google and Yelp, and how to book a table. Handles
+  // only: the scores themselves are fetched live from /api/pins/:id/place,
+  // because neither source allows its ratings to be stored (PinPlace, 0059).
+  place?: PinPlaceHandlesJson;
+  // Which public data series this pin's event moves, so the page can draw the
+  // publisher's live chart beside it. Handles only, like the place: the
+  // numbers come from /api/pins/:id/series on view (PinSeries, 0062).
+  series?: PinSeriesHandleJson[];
+};
+
+// One series a pin's event moves, as the pin's own JSON carries it.
+export type PinSeriesHandleJson = {
+  source: string;
+  seriesId: string;
+  label: string | null;
+  sourceUrl: string | null;
 };
 
 // A pin ready for a card: its description already sanitised (on the server
 // with sanitize-html, or in the browser for pages loaded later).
 export type CardPin = PinJson & { safeDescription?: string };
+
+// All a map marker reads: where the pin is, when it is, and what goes in its
+// popup. A subset of PinJson rather than a shape of its own, so the map can
+// plot one of these or a whole pin - the focused pin still arrives entire
+// from /api/pins/:id.
+export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories' | 'allDay' | 'utcStartDateTime' | 'utcCreatedDateTime' | 'latitude' | 'longitude'> & {
+  media?: Pick<MediumJson, 'type' | 'thumbName' | 'originalUrl'>[];
+};
 
 export type DateTimeJson = {
   id: number;
@@ -102,22 +244,91 @@ export type DateTimeJson = {
   alwaysShow?: boolean;
 };
 
+// A pin whose views are rising, for the timeline's trending panel: views over
+// the recent window and over the same length of time before it.
+export type TrendingPin = {
+  id: number;
+  title: string;
+  originalTitle?: string;
+  translatedTo?: string;
+  // Its main (first) category, shown on the row's details line.
+  category: string | null;
+  // The city it stands in, read off its address (src/lib/city.ts).
+  city?: string | null;
+  // When it starts, for the row's "Starts in" / "Started".
+  utcStartDateTime: string;
+  allDay?: boolean;
+  views: number;
+  previousViews: number;
+  thumbName?: string | null;
+  originalUrl?: string | null;
+};
+
+// A recently added pin, for the timeline's new pins panel.
+export type NewPin = {
+  id: number;
+  title: string;
+  originalTitle?: string;
+  translatedTo?: string;
+  // Its main (first) category, shown on the row's details line.
+  category: string | null;
+  // The city it stands in, read off its address (src/lib/city.ts).
+  city?: string | null;
+  // When it starts, for the row's "Starts in" / "Started".
+  utcStartDateTime: string;
+  allDay?: boolean;
+  utcCreatedDateTime: string;
+  thumbName?: string | null;
+  originalUrl?: string | null;
+  // Whether it links a Kalshi or Polymarket market, so has live odds.
+  hasMarket?: boolean;
+};
+
 export type TimelinePage = {
   pins: PinJson[];
   dateTimes: DateTimeJson[];
   queryCount?: number;
 };
 
+// The company a company: search names, for the panel it opens with (0048):
+// what the company is in a line, how its pins' comments read, and how many
+// people follow it. `mood` is null until a comment on one of its pins has
+// been scored; `commentCount` is how many comments it was read from.
+export type SearchedCompany = {
+  id: number;
+  name: string;
+  description: string | null;
+  logoUrl: string | null;
+  wikiUrl: string | null;
+  followerCount: number;
+  commentCount: number;
+  mood: CommentMood | null;
+  sentiment: CompanySentiment;
+};
+
 export type SearchPage = {
   pins: PinJson[];
   queryCount?: number;
   user?: { id: number; userName: string };
+  company?: SearchedCompany;
+  // Query strings for /api/pins/search: the pages before and after this one.
+  links?: { previous?: string; next?: string };
 };
 
 export type CommentJson = {
   id: number;
   text: string;
   parentCommentId?: number;
+  // Claude's read on its tone, -1..1; null until scored (and after an edit).
+  sentiment?: number | null;
+  // How many gave each reaction (0075; only the ones given), and the viewer's
+  // own or null. The page's cached copy has no viewer, so myReaction comes
+  // with the fresh read.
+  reactions?: Partial<Record<CommentReactionName, number>>;
+  myReaction?: CommentReactionName | null;
+  // Hidden from readers after too many reports (COMMENT_HIDE_REPORTS): its
+  // text comes empty and its tone null.
+  hidden?: boolean;
   utcCreatedDateTime: string;
   utcUpdatedDateTime?: string;
   userId: number;
@@ -131,11 +342,34 @@ export type SessionUser = {
   userName: string;
   firstName?: string;
   lastName?: string;
+  // A YYYY-MM-DD day, given at sign-up or on the profile, or absent: it is
+  // optional, and never shown to anyone but the user and an admin.
+  birthday?: string | null;
+  // Given at sign-up or on the profile, or absent; seen by the same two.
+  phone?: string | null;
   email?: string;
   role: string;
   provider?: string;
   pictureUrl?: string;
   defaultFilterSpanPreference?: string;
+  themePreference?: ThemePreference | null;
+  // The language pages open in; null follows the browser (cookie).
+  localePreference?: Locale | null;
+  // Off hides the company's stock price on pin cards.
+  showCardStockPrices?: boolean;
+  // On adds a browser alert 15 minutes before a watched pin starts.
+  remindBeforeStart?: boolean;
+  // The default location (0066): where distances are measured from, the
+  // weather is for and the map opens on when the browser gives no position.
+  // Null when not set; see src/lib/location.ts.
+  locationLatitude?: number | null;
+  locationLongitude?: number | null;
+  locationName?: string | null;
+  // Whether the device may keep it up to date.
+  locationFromDevice?: boolean;
+  // When the email was confirmed (0071); absent or null until then, and an
+  // unconfirmed account cannot post pins or comments.
+  emailVerifiedDateTime?: string | null;
 };
 
 // Converts a model object (with Dates and toJSON) into plain JSON data that

@@ -1,14 +1,65 @@
 // Splits a search box query into the structured terms a pin card's labels add
 // and whatever free text is left over:
 //
-//   user:ThePinGang company:"Electronic Arts" category:Software iphone
+//   user:ThePinGang company:"Electronic Arts" tag:Software iphone
+//
+// tag: takes one of a pin's tags, as the tag cloud and the pin page write it
+// (tag:"Tokyo Anime Award Festival 2024"): what it was tagged with, the
+// awards its text names, or an award body's year its work was up for. A
+// pin's categories are tags too (0043), so tag:Anime finds the anime; the old
+// category:Anime still works and means the same.
+//
+// confidence: takes a pin's date confidence level, as its badge shows it
+// (confidence:estimated); UNVERIFIED is the badge for the stored "unknown", so
+// either word works. It also takes how well the pin is evidenced overall, as
+// a band of its score: confidence:low (under 50%, what the pin page flags
+// "Low confidence"), confidence:medium or confidence:high. Every score badge
+// on a pin or a card links to its own band; a pin with no score at all is in
+// no band.
+//
+// date: takes a day as the timeline writes it (date:2026-09-08, or
+// date:-2560-01-01 for 2561 BC): the pins starting that day as the timeline
+// places them - an all-day pin on its own date, a timed one on its date in
+// the viewer's time zone. A day's "View all" popup and a card's start date
+// link to one. posted: takes a day the same way, for the pins posted that day
+// in the viewer's time zone; a card's posted date links to one.
+//
+// place: takes anywhere a pin's address names - a city, a state, a postal
+// code, a country (place:Chicago, place:60601, place:Texas, place:"New
+// York"). The address is one label written by whoever placed the pin
+// ("Brooklyn Bridge, New York, NY, USA"), so a value matches when it stands
+// as its own word or words anywhere in that line; US states match under
+// either their name or their two-letter code, whichever the address used.
+// A card's place label and the pin page's write one.
+//
+// rating: takes a bound on a pin's rating as a percentage - the headline
+// number its card shows: the average of its review scores, each rescaled to
+// a percentage of its own maximum (MyAnimeList's 8.2/10 is 82), or its one
+// source's where it has one (format.ts averageRating). rating:>80,
+// rating:>=80, rating:<60, rating:=90, a range rating:80-90 (both ends in),
+// and a bare rating:80 for "80 or more"; a % may follow any number. A
+// prediction market's forecast is not a review, so it counts for nothing,
+// and a pin without ratings matches no rating: term. Unlike the other fields
+// several rating: terms narrow each other, so rating:>=70 rating:<90 is a
+// band; anything that is not a bound is left out rather than matching nothing.
 //
 // user: takes a name with or without its "@" (user:@ThePinGang), and a bare
 // @ThePinGang still works on its own, as it did before user: existed.
 //
+// A bare $ and a stock symbol ($NKE, $brk.b) is a company ticker: the pins
+// whose company is listed under it, or which carry it as their company's
+// stock. Several companies can share one (Sony's divisions all trade as
+// SONY), so it widens to all of them, as a second company: term would.
+// Only a letter may follow the $, so "$5 million" stays free text.
+//
+// pin: takes pin ids, comma-separated (pin:1992,1991,1987): exactly those
+// pins and no others. Nothing in the site writes one by hand - it is how a
+// batch of notifications links to the pins it stands for, which no day or
+// author term can name exactly. The search box shows it as "3 pins".
+//
 // A value with spaces is quoted, as the labels write it. Several values for
 // one field widen the search (either company), while different fields narrow
-// it (this company and this category), so each click on a label is additive.
+// it (this company and this tag), so each click on a label is additive.
 //
 // Quoting is forgiving, since people type these too:
 //   company:"Electronic Arts"    the form the labels write
@@ -23,17 +74,43 @@
 // also an apostrophe (McDonald's), so it only closes a value when a space or
 // the end of the query follows it: company:'McDonald's' is one company.
 
+import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
+
+// One side of a rating: term, compared with the pin's rounded percentage.
+export type RatingBound = { op: '>' | '>=' | '<' | '<=' | '='; value: number };
+
 export type SearchQuery = {
   userNames: string[];
+  // Pin ids, matching exactly those pins.
+  ids: number[];
   companies: string[];
-  categories: string[];
+  // Stock symbols, uppercase, any of them.
+  tickers: string[];
+  confidences: string[];
+  // Bands of a pin's overall score ("low", "medium", "high"), which widen the
+  // same confidence: field the levels do.
+  confidenceBands: ConfidenceBand[];
+  // Day keys ("2026-09-08"), any of them: when pins start, and when they
+  // were posted.
+  dates: string[];
+  postedDays: string[];
+  tags: string[];
+  // Tags a pin must not carry (-tag:Anime), matched as tags: are.
+  excludeTags: string[];
+  // Places an address must name: cities, states, postal codes, countries.
+  places: string[];
+  // Bounds a pin's rating must meet, every one of them.
+  ratings: RatingBound[];
   text: string;
 };
 
 const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
-const FIELD = '(company|category|user)';
+// A leading "-" leaves out what the term would match (-tag:Anime); only tags
+// read it so far, and any other field written that way is left out.
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|tag|pin|place|rating))';
+const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -50,10 +127,13 @@ const FIELD_TERM = new RegExp(
   'gi',
 );
 
-const USER_TERM = /(^|\s)(@\S+)/g;
+// A bare @name, or a bare $ticker standing as a word of its own.
+const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
+
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place' | 'rating';
 
 export type QueryPart =
-  | { kind: 'term'; field: 'user' | 'company' | 'category'; value: string; raw: string }
+  | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
   | { kind: 'text'; raw: string };
 
 // The query in order: its label terms and the free text around them, each
@@ -65,14 +145,15 @@ export function splitSearchQuery(searchText: string | null | undefined): QueryPa
     .replace(SMART_SINGLE_QUOTES, "'");
   const parts: QueryPart[] = [];
 
-  // A bare @name is only a term in the text the field terms leave, as a
-  // user:@name value is theirs.
+  // A bare @name or $ticker is only a term in the text the field terms
+  // leave, as a user:@name value is theirs.
   const addText = (text: string) => {
     let from = 0;
-    for (const match of text.matchAll(USER_TERM)) {
+    for (const match of text.matchAll(BARE_TERM)) {
       const start = match.index + match[1].length;
       if (start > from) parts.push({ kind: 'text', raw: text.slice(from, start) });
-      parts.push({ kind: 'term', field: 'user', value: match[2], raw: match[2] });
+      const ticker = match[2].startsWith('$');
+      parts.push({ kind: 'term', field: ticker ? 'ticker' : 'user', value: ticker ? match[2].slice(1).toUpperCase() : match[2], raw: match[2] });
       from = start + match[2].length;
     }
     if (from < text.length) parts.push({ kind: 'text', raw: text.slice(from) });
@@ -85,8 +166,10 @@ export function splitSearchQuery(searchText: string | null | undefined): QueryPa
     // Each alternative captures a (field, value) pair; exactly one matched.
     const groups = match.slice(2);
     const at = groups.findIndex((group, index) => index % 2 === 0 && group !== undefined);
-    const field = groups[at]!.toLowerCase() as 'user' | 'company' | 'category';
-    parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length) });
+    const written = groups[at]!.toLowerCase();
+    const negated = written.startsWith('-');
+    const field = written.replace(/^-/, '') as TermField;
+    parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length), ...(negated ? { negated } : {}) });
     from = match.index + match[0].length;
   }
   addText(normalized.slice(from));
@@ -105,8 +188,17 @@ export function joinSearchQuery(parts: QueryPart[]): string {
 export function parseSearchQuery(searchText: string | null | undefined): SearchQuery {
   const query: SearchQuery = {
     userNames: [],
+    ids: [],
     companies: [],
-    categories: [],
+    tickers: [],
+    confidences: [],
+    confidenceBands: [],
+    dates: [],
+    postedDays: [],
+    tags: [],
+    excludeTags: [],
+    places: [],
+    ratings: [],
     text: '',
   };
 
@@ -114,10 +206,33 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
   for (const part of splitSearchQuery(searchText)) {
     if (part.kind === 'text') {
       text.push(part.raw);
+    } else if (part.negated) {
+      // category: is the old name for a category's tag.
+      if ((part.field === 'tag' || part.field === 'category') && part.value) addUnique(query.excludeTags, part.value);
     } else if (part.field === 'user') {
       addUserName(query, part.value);
+    } else if (part.field === 'ticker') {
+      addUnique(query.tickers, part.value);
+    } else if (part.field === 'confidence') {
+      addConfidence(query, part.value);
+    } else if (part.field === 'pin') {
+      // Anything that is not a pin id is left out rather than matching nothing.
+      for (const id of part.value.split(',')) {
+        const n = Number(id.trim());
+        if (Number.isInteger(n) && n > 0 && !query.ids.includes(n)) query.ids.push(n);
+      }
+    } else if (part.field === 'date' || part.field === 'posted') {
+      // Anything but a day is left out rather than matching nothing.
+      if (DAY_KEY.test(part.value)) addUnique(part.field === 'date' ? query.dates : query.postedDays, part.value);
+    } else if (part.field === 'place') {
+      addUnique(query.places, part.value);
+    } else if (part.field === 'rating') {
+      for (const bound of ratingBounds(part.value)) {
+        if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
+      }
     } else if (part.value) {
-      addUnique(part.field === 'company' ? query.companies : query.categories, part.value);
+      // category: is the old name for a category's tag.
+      addUnique(part.field === 'company' ? query.companies : query.tags, part.value);
     }
   }
 
@@ -126,30 +241,51 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
 }
 
 export function hasFilters(query: SearchQuery): boolean {
-  return !!(query.userNames.length || query.companies.length || query.categories.length);
-}
-
-// Applies a query's terms to pins that came back from free-text search, so
-// "iphone company:Apple" means Apple pins about the iPhone.
-export function matchesFilters(
-  query: SearchQuery,
-  pin: { user?: { userName?: string } | null; company?: string | null; category?: string | null },
-): boolean {
-  return (
-    matchesAny(query.userNames, pin.user?.userName) &&
-    matchesAny(query.companies, pin.company) &&
-    matchesAny(query.categories, pin.category)
+  return !!(
+    query.userNames.length ||
+    query.ids.length ||
+    query.companies.length ||
+    query.tickers.length ||
+    query.confidences.length ||
+    query.confidenceBands.length ||
+    query.dates.length ||
+    query.postedDays.length ||
+    query.tags.length ||
+    query.excludeTags.length ||
+    query.places.length ||
+    query.ratings.length
   );
 }
 
-// Case-insensitive, like the database's citext columns, so filtering
-// free-text results agrees with what the database returns for the same terms.
-function matchesAny(values: string[], actual: string | null | undefined): boolean {
-  if (!values.length) {
-    return true;
+// Whether the viewer's time zone changes what the query matches: its days are
+// the viewer's own. Everything else answers the same everywhere, so it can be
+// cached once for all zones.
+export function dependsOnZone(query: SearchQuery): boolean {
+  return !!(query.dates.length || query.postedDays.length);
+}
+
+const PERCENT = '(\\d+(?:\\.\\d+)?)\\s*%?';
+const RATING_BOUND = new RegExp(`^(>=|<=|=>|=<|>|<|=)?\\s*${PERCENT}$`);
+const RATING_RANGE = new RegExp(`^${PERCENT}\\s*-\\s*${PERCENT}$`);
+
+// The bounds a rating: value sets: one, two for a range, none for anything
+// else. A bare number is a floor, which is what someone asking for "80" wants.
+export function ratingBounds(value: string): RatingBound[] {
+  const text = value.trim();
+  const range = RATING_RANGE.exec(text);
+  if (range) {
+    const [low, high] = [Number(range[1]), Number(range[2])].sort((a, b) => a - b);
+    return [
+      { op: '>=', value: low },
+      { op: '<=', value: high },
+    ];
   }
-  const lower = String(actual || '').toLowerCase();
-  return values.some((value) => value.toLowerCase() === lower);
+  const bound = RATING_BOUND.exec(text);
+  if (!bound) {
+    return [];
+  }
+  const op = ({ '=>': '>=', '=<': '<=' } as Record<string, RatingBound['op']>)[bound[1] ?? ''] ?? ((bound[1] || '>=') as RatingBound['op']);
+  return [{ op, value: Number(bound[2]) }];
 }
 
 // User names are stored with their "@", so that is the form matched on.
@@ -160,9 +296,28 @@ function addUserName(query: SearchQuery, value: string) {
   }
 }
 
+// A score band, or else a level. Levels are stored lowercase; UNVERIFIED is
+// how the badge shows "unknown".
+function addConfidence(query: SearchQuery, value: string) {
+  const level = value.trim().toLowerCase();
+  if (!level) {
+    return;
+  }
+  if (isConfidenceBand(level)) {
+    if (!query.confidenceBands.includes(level)) query.confidenceBands.push(level);
+  } else {
+    addUnique(query.confidences, level === 'unverified' ? 'unknown' : level);
+  }
+}
+
 function addUnique(list: string[], value: string) {
   const lower = value.toLowerCase();
   if (!list.some((existing) => existing.toLowerCase() === lower)) {
     list.push(value);
   }
+}
+
+// A Postgres regex (~*) matching text at the start of any word, the text taken literally.
+export function wordStartPattern(text: string): string {
+  return `(^|[^[:alnum:]])${text.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`;
 }

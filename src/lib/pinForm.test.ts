@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { applyScrape, EMPTY_FORM, formDates, formToDates, formToPin, pinToForm } from './pinForm';
+import { addDays } from './dateClaims';
+import { applyScrape, dateInputValue, datesToForm, dayKeyFromInput, EMPTY_FORM, eraOf, formDates, formToDates, formToPin, pinToForm } from './pinForm';
 import type { PinJson } from './types';
 
 const stored: PinJson = {
@@ -11,7 +12,8 @@ const stored: PinJson = {
   utcStartDateTime: '2026-10-01T00:00:00.000Z',
   utcEndDateTime: '2026-10-04T00:00:00.000Z',
   allDay: true,
-  category: 'Consumer Electronics',
+  allDayStated: true,
+  categories: ['Electronics', 'Audio'],
   company: 'Sonos',
   companyWikiUrl: 'https://en.wikipedia.org/wiki/Sonos',
   address: 'Santa Barbara, California',
@@ -21,6 +23,11 @@ const stored: PinJson = {
   priceCurrency: 'USD',
   dateConfidence: 'scheduled',
   dateConfidenceReasoning: 'Given as scheduled',
+  originalStartDate: '2026-04-30',
+  delayReasoning: 'Stated: first promised for April.',
+  episodeCount: 12,
+  episodeStatus: 'planned',
+  productName: 'Sonos Arc Ultra',
   merchants: [
     { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x' },
     { id: 2, label: 'Best Buy', url: 'https://www.bestbuy.com/y', price: 1299 },
@@ -40,7 +47,8 @@ describe('pin form round trip', () => {
       utcStartDateTime: stored.utcStartDateTime,
       utcEndDateTime: stored.utcEndDateTime,
       allDay: true,
-      category: stored.category,
+      allDayStated: true,
+      categories: stored.categories,
       company: 'Sonos',
       companyWikiUrl: stored.companyWikiUrl,
       address: stored.address,
@@ -50,6 +58,11 @@ describe('pin form round trip', () => {
       priceCurrency: 'USD',
       dateConfidence: 'scheduled',
       dateConfidenceReasoning: 'Given as scheduled',
+      originalStartDate: '2026-04-30',
+      delayReasoning: 'Stated: first promised for April.',
+      episodeCount: 12,
+      episodeStatus: 'planned',
+      productName: 'Sonos Arc Ultra',
     });
     expect(body.merchants).toEqual([
       { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x', price: undefined },
@@ -57,6 +70,51 @@ describe('pin form round trip', () => {
     ]);
     expect(body.media).toEqual(stored.media);
     expect(body.references).toEqual(stored.references);
+  });
+
+  it('keeps every medium of an edited pin, not just the heading', () => {
+    const video = { id: 5, type: 3, html: '<iframe src="https://www.youtube.com/embed/abc"></iframe>', originalUrl: 'https://www.youtube.com/embed/abc' };
+    const withVideo = { ...stored, media: [...stored.media!, video] };
+    expect(formToPin(pinToForm(withVideo)).media).toEqual(withVideo.media);
+    // A different heading replaces the old one; the rest stay.
+    const picked = { ...pinToForm(withVideo), selectedMedia: video };
+    expect(formToPin(picked).media).toEqual([video]);
+    expect(formToPin({ ...pinToForm(withVideo), useMedia: false }).media).toEqual([video]);
+  });
+
+  it('keeps an episode count only as a number with one of the three statuses', () => {
+    const form = pinToForm(stored);
+    expect(formToPin({ ...form, episodeStatus: 'made up' })).toMatchObject({ episodeCount: 12, episodeStatus: undefined });
+    expect(formToPin({ ...form, episodeCount: '' })).toMatchObject({ episodeCount: undefined, episodeStatus: undefined });
+    expect(formToPin({ ...form, episodeCount: 'twelve' })).toMatchObject({ episodeCount: undefined, episodeStatus: undefined });
+  });
+
+  it('takes a scraped episode count only where the author has typed none', () => {
+    const scraped = { episodeCount: 24, episodeStatus: 'complete' as const };
+    expect(applyScrape(EMPTY_FORM, scraped)).toMatchObject({ episodeCount: '24', episodeStatus: 'complete' });
+    const typed = { ...EMPTY_FORM, episodeCount: '12', episodeStatus: 'planned' };
+    expect(applyScrape(typed, scraped)).toMatchObject({ episodeCount: '12', episodeStatus: 'planned' });
+  });
+
+  it('carries ratings through unchanged', () => {
+    const ratings = [{ id: 9, source: 'IMDb', score: 8.2, scoreMax: 10, url: 'https://www.imdb.com/title/tt1/' }];
+    expect(formToPin(pinToForm({ ...stored, ratings })).ratings).toEqual(ratings);
+  });
+
+  it('keeps a scraped trailer and ratings alongside the picked heading', () => {
+    const image = { type: 1, originalUrl: 'https://example.com/poster.jpg' };
+    const trailer = { type: 3, html: '<iframe></iframe>', originalUrl: 'https://www.youtube.com/embed/xyz' };
+    const ratings = [{ source: 'AniList', score: 91, scoreMax: 100 }];
+    const next = applyScrape(EMPTY_FORM, { media: [image, trailer], trailer, ratings });
+    expect(next.selectedMedia).toEqual(image);
+    expect(formToPin(next).media).toEqual([image, trailer]);
+    expect(formToPin(next).ratings).toEqual(ratings);
+    // Scraping again neither repeats the trailer nor replaces ratings.
+    const again = applyScrape(next, { media: [image, trailer], trailer, ratings: [{ source: 'AniList', score: 50, scoreMax: 100 }] });
+    expect(again.extraMedia).toEqual([trailer]);
+    expect(again.ratings).toEqual(ratings);
+    // The trailer picked as the heading is only sent once.
+    expect(formToPin({ ...next, selectedMedia: trailer }).media).toEqual([trailer]);
   });
 
   it('drops reference rows without a link or a confidence and clamps confidence', () => {
@@ -85,11 +143,11 @@ describe('pin form round trip', () => {
 
   it('fills only empty fields from a scrape', () => {
     const typed = { ...EMPTY_FORM, title: 'Mine' };
-    const next = applyScrape(typed, { title: 'Scraped', company: 'Sonos', companyWikiUrl: 'w', category: 'Energy', merchants: [{ label: 'Amazon', url: 'u' }] });
+    const next = applyScrape(typed, { title: 'Scraped', company: 'Sonos', companyWikiUrl: 'w', categories: ['Energy'], merchants: [{ label: 'Amazon', url: 'u' }] });
     expect(next.title).toBe('Mine');
     expect(next.company).toBe('Sonos');
     expect(next.companyWikiUrl).toBe('w');
-    expect(next.category).toBe('Energy');
+    expect(next.categories).toEqual(['Energy']);
     expect(next.merchants).toHaveLength(1);
   });
 
@@ -197,5 +255,106 @@ describe('dates from the most confident claim', () => {
     const picked = formDates({ ...timed, references: [reference('80', '2026-10-03', '2026-10-04')] });
     expect(picked.dates.utcStartDateTime).toBe(new Date(2026, 9, 3, 19, 30).toISOString());
     expect(picked.dates.utcEndDateTime).toBe(new Date(2026, 9, 4, 19, 30).toISOString());
+  });
+});
+
+describe('BC and early dates in the form', () => {
+  it('loads a BC all-day pin as a day key and saves the same instant back', () => {
+    const fields = datesToForm({ allDay: true, utcStartDateTime: '-002560-01-01T00:00:00.000Z', utcEndDateTime: '-002560-01-04T00:00:00.000Z' });
+    expect(fields).toEqual({ startDate: '-2560-01-01', startTime: '', endDate: '-2560-01-03', endTime: '' });
+    expect(formToDates({ allDay: true, ...fields })).toEqual({
+      utcStartDateTime: '-002560-01-01T00:00:00.000Z',
+      utcEndDateTime: '-002560-01-04T00:00:00.000Z',
+    });
+  });
+
+  it('keeps years 0-99 instead of reading them as the 1900s', () => {
+    expect(formToDates({ allDay: true, startDate: '0079-08-24', startTime: '', endDate: '', endTime: '' }).utcStartDateTime).toBe('0079-08-24T00:00:00.000Z');
+    const timed = formToDates({ allDay: false, startDate: '0079-08-24', startTime: '13:00', endDate: '', endTime: '' });
+    expect(new Date(timed.utcStartDateTime!).getFullYear()).toBe(79);
+    expect(datesToForm({ allDay: false, utcStartDateTime: timed.utcStartDateTime! }).startDate).toBe('0079-08-24');
+  });
+
+  it('shows a BC day as its written year with the era beside it', () => {
+    expect(dateInputValue('-2560-01-01')).toBe('2561-01-01');
+    expect(dateInputValue('2026-09-14')).toBe('2026-09-14');
+    expect(eraOf('-2560-01-01')).toBe('BC');
+    expect(eraOf('0000-06-15')).toBe('BC');
+    expect(eraOf('0001-06-15')).toBe('AD');
+    expect(eraOf('')).toBe('AD');
+    expect(dayKeyFromInput('2561-01-01', 'BC')).toBe('-2560-01-01');
+    expect(dayKeyFromInput('0001-06-15', 'BC')).toBe('0000-06-15');
+    expect(dayKeyFromInput('2026-09-14', 'AD')).toBe('2026-09-14');
+  });
+
+  it('moves day keys across months, years and eras', () => {
+    expect(addDays('2026-12-31', 1)).toBe('2027-01-01');
+    expect(addDays('0000-12-31', 1)).toBe('0001-01-01');
+    expect(addDays('-2560-01-01', -1)).toBe('-2561-12-31');
+  });
+});
+
+describe('stock tickers from a scrape', () => {
+  const stocks = [
+    { symbol: 'MSFT', name: 'Microsoft', relation: 'related' as const, note: 'Largest investor' },
+    { symbol: 'NVDA', name: 'NVIDIA', relation: 'supplier' as const, note: 'GPUs' },
+  ];
+
+  it('carries the scrape’s tickers to the POST body', () => {
+    const next = applyScrape(EMPTY_FORM, { stocks });
+    expect(next.stocks).toEqual(stocks);
+    expect(formToPin({ ...next, title: 't' }).stocks).toEqual(stocks);
+  });
+
+  it('keeps the tickers already there on a second scrape', () => {
+    const first = applyScrape(EMPTY_FORM, { stocks });
+    expect(applyScrape(first, { stocks: [{ symbol: 'AAPL', name: 'Apple', relation: 'company', note: null }] }).stocks).toEqual(stocks);
+  });
+
+  it('sends none from an edit, which leaves the pin’s tickers alone', () => {
+    const edit = pinToForm({ id: 1, title: 't', utcStartDateTime: '2026-09-10T00:00:00.000Z', allDay: true } as PinJson);
+    expect(edit.stocks).toEqual([]);
+    expect(formToPin(edit).stocks).toBeUndefined();
+  });
+});
+
+describe('the all-day claim', () => {
+  it('drops it when the pin is given a clock time', () => {
+    const timed = { ...pinToForm(stored), allDay: false, startTime: '19:30' };
+    expect(timed.allDayStated).toBe(true);
+    expect(formToPin(timed).allDayStated).toBe(false);
+  });
+
+  it('is never inherited by a pin whose source never claimed it', () => {
+    expect(pinToForm({ ...stored, allDayStated: false }).allDayStated).toBe(false);
+    expect(applyScrape(EMPTY_FORM, { utcStartDateTime: '2026-10-01T00:00:00.000Z', allDay: true }).allDayStated).toBe(false);
+    expect(applyScrape(EMPTY_FORM, { utcStartDateTime: '2026-10-01T00:00:00.000Z', allDay: true, allDayStated: true }).allDayStated).toBe(true);
+  });
+});
+
+describe('tags on the form', () => {
+  const tagged = {
+    ...stored,
+    tags: [
+      { name: 'Tokyo Anime Award Festival 2024', kind: 'award', source: 'award' },
+      { name: 'Annie Awards 2023', kind: 'award', source: 'auto' },
+      { name: 'Soundbars', kind: 'topic', source: 'user' },
+      { name: 'Dolby Atmos', kind: 'topic', source: 'user' },
+    ],
+  } as PinJson;
+
+  it('edits only the pin’s own tags and sends the whole list back', () => {
+    const form = pinToForm(tagged);
+    expect(form.tags).toBe('Soundbars, Dolby Atmos');
+    expect(formToPin(form).tags).toEqual(['Soundbars', 'Dolby Atmos']);
+  });
+
+  it('sends an empty list once every tag is taken off', () => {
+    expect(formToPin({ ...pinToForm(tagged), tags: ' , ' }).tags).toEqual([]);
+  });
+
+  it('fills an empty tags field from a scrape, never over typed ones', () => {
+    expect(applyScrape(EMPTY_FORM, { tags: ['Crunchyroll Anime Awards 2025', 'Frieren'] }).tags).toBe('Crunchyroll Anime Awards 2025, Frieren');
+    expect(applyScrape({ ...EMPTY_FORM, tags: 'Mine' }, { tags: ['Theirs'] }).tags).toBe('Mine');
   });
 });

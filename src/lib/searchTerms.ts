@@ -1,9 +1,19 @@
-// Building search queries from a pin card's labels (user, company, category).
+// Building search queries from a pin card's labels (user, company, category tag,
+// date confidence, start date, posted date, place) and the tag cloud.
 // A click adds its term to the search already showing rather than replacing
 // it, so each click narrows the results (or, for a second company, widens
 // them). The server parses these in src/server/util/searchQuery.ts.
 
-export type LabelField = 'user' | 'company' | 'category';
+// 'pin' is not a label anything on a card writes: it names pins by id, for a
+// batch of notifications linking to exactly the pins it stands for. '-tag'
+// is a tag left out (the tag cloud's second click): the field is written
+// with its minus, so every helper here handles it as a field of its own.
+// 'rating' is a bound (rating:>=81), which a rating pill writes. 'ticker' is
+// a company's stock symbol, written bare with a $ ($NKE) rather than as a field.
+export type LabelField = 'user' | 'ticker' | 'company' | 'confidence' | 'date' | 'posted' | 'tag' | '-tag' | 'pin' | 'place' | 'rating';
+// Fields a query may still hold but no label writes: category: is the old
+// name for a category's tag: term, which can only be taken out.
+type AnyField = LabelField | 'category' | '-category';
 
 // Straight and smart double quotes - never part of a name, so they are
 // stripped from label values and treated alike when reading a query.
@@ -13,20 +23,22 @@ const DOUBLE_QUOTES = /["“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
 // User names are stored with a leading "@", which user: leaves out.
-function termValue(field: LabelField, value: string) {
+function termValue(field: AnyField, value: string) {
   return field === 'user' ? value.replace(/^@+/, '') : value;
 }
 
 // A value with spaces is quoted: company:"Electronic Arts".
 export function term(field: LabelField, value: string): string {
   const name = termValue(field, String(value).replace(DOUBLE_QUOTES, '').trim());
+  if (field === 'ticker') return `$${name.replace(/^\$+/, '').toUpperCase()}`;
   return /\s/.test(name) ? `${field}:"${name}"` : `${field}:${name}`;
 }
 
 // Every spelling of a term the server accepts - bare, value quoted or whole
 // term quoted, either kind of quote - lowercased, for matching a normalized query.
-function termForms(field: LabelField, value: string): string[] {
+function termForms(field: AnyField, value: string): string[] {
   const lower = termValue(field, value).toLowerCase();
+  if (field === 'ticker') return [`$${lower.replace(/^\$+/, '')}`];
   const values = field === 'user' ? [lower, `@${lower}`] : [lower];
   return values.reduce<string[]>(
     (all, v) =>
@@ -48,13 +60,13 @@ function normalize(query: string) {
 
 // Whether the query already holds this term in any form the server accepts -
 // bare, value quoted or whole term quoted, either kind of quote, any case.
-export function hasTerm(query: string, field: LabelField, value: string): boolean {
+export function hasTerm(query: string, field: AnyField, value: string): boolean {
   const normalized = normalize(query);
   return termForms(field, value).some((form) => normalized.includes(` ${form} `));
 }
 
 // The query without this term, in whichever forms it was written.
-export function removeTerm(query: string, field: LabelField, value: string): string {
+export function removeTerm(query: string, field: AnyField, value: string): string {
   let rest = query;
   for (const form of termForms(field, value)) {
     let at: number;
@@ -71,10 +83,14 @@ export function toggleTerm(query: string, field: LabelField, value: string): str
   return hasTerm(query, field, value) ? removeTerm(query, field, value) : refineQuery(query, field, value);
 }
 
+// Every rating: term, in any quoting. Rating bounds narrow each other, so a
+// rating pill's click replaces them instead of piling another on.
+const RATING_TERMS = /(^|\s)["'“”‘’]?rating:\S*/gi;
+
 // The query after clicking a label while `current` is showing.
 export function refineQuery(current: string, field: LabelField, value: string): string {
   const cleaned = String(value || '').replace(DOUBLE_QUOTES, '').trim();
-  const base = current.trim();
+  const base = (field === 'rating' ? current.replace(RATING_TERMS, ' ').replace(/\s+/g, ' ') : current).trim();
   if (!cleaned || hasTerm(base, field, cleaned)) {
     return base;
   }

@@ -16,6 +16,10 @@ describe('confidenceStats', () => {
     expect(stats).toMatchObject({ total: 6, showing: 4, hidden: 2, unscored: 1 });
   });
 
+  it('hides nothing when the filter is off', () => {
+    expect(confidenceStats(rows, null)).toMatchObject({ threshold: null, showing: 6, hidden: 0, unscored: 1 });
+  });
+
   it('bands scores by tens, with 100 in the top band', () => {
     const { bands } = confidenceStats(rows, 70);
     expect(bands.map((b) => b.showing + b.hidden)).toEqual([0, 0, 1, 0, 0, 0, 1, 1, 0, 2]);
@@ -24,12 +28,14 @@ describe('confidenceStats', () => {
   });
 
   it('groups largest first and folds the rest into Other', () => {
-    const { byCategory, byAuthor } = confidenceStats(rows, 70, 2);
+    const { byCategory, byAuthor, categoryCount, authorCount } = confidenceStats(rows, 70, 2);
     expect(byCategory).toEqual([
       { label: 'Tech', showing: 2, hidden: 1 },
       { label: 'Other (2)', showing: 2, hidden: 1 },
     ]);
     expect(byAuthor[0]).toEqual({ label: 'b', showing: 2, hidden: 1 });
+    // Counts every distinct group, including the ones folded into Other.
+    expect({ categoryCount, authorCount }).toEqual({ categoryCount: 3, authorCount: 3 });
   });
 });
 

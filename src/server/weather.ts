@@ -15,6 +15,7 @@
 
 const FORECAST_URL = 'https://api.open-meteo.com/v1/forecast';
 const ARCHIVE_URL = 'https://archive-api.open-meteo.com/v1/archive';
+const GEOCODE_URL = 'https://geocoding-api.open-meteo.com/v1/search';
 const FORECAST_DAYS_AHEAD = 15;
 const FORECAST_DAYS_BACK = 91;
 const TYPICAL_YEARS = 5;
@@ -37,6 +38,10 @@ const TTL = {
   typical: 7 * 24 * 60 * 60 * 1000,
 };
 const CACHE_LIMIT = 2000;
+// Current conditions at a viewer's place; they move faster than the forecast.
+const LOCAL_TTL = 15 * 60 * 1000;
+// A time zone's city moves only when the tz database does.
+const ZONE_TTL = 30 * 24 * 60 * 60 * 1000;
 
 export type WeatherKind = keyof typeof TTL;
 
@@ -53,16 +58,24 @@ export type PinWeather = {
   windSpeedMax: number | null;
 };
 
+// Today's weather where the viewer is: current conditions plus the day's
+// forecast, in the place's own date.
+export type LocalWeather = PinWeather & {
+  current: { temperature: number | null; weatherCode: number | null; isDay: boolean };
+};
+
 type Place = { latitude: number; longitude: number };
+// A place with the name to show for it (the city a time zone is named after).
+export type NamedPlace = Place & { name: string };
 type DailyRow = Record<string, any>;
 
 // Kept on globalThis so dev reloads share one cache and one request queue.
 const state = ((globalThis as any).__chronopinWeather ??= {
-  cache: new Map<string, { promise: Promise<PinWeather | null>; expires: number }>(),
+  cache: new Map<string, { promise: Promise<unknown>; expires: number }>(),
   active: 0,
   queue: [] as (() => Promise<void>)[],
 }) as {
-  cache: Map<string, { promise: Promise<PinWeather | null>; expires: number }>;
+  cache: Map<string, { promise: Promise<unknown>; expires: number }>;
   active: number;
   queue: (() => Promise<void>)[];
 };
@@ -92,6 +105,89 @@ export function forPin(pin: Record<string, any> & {
     const url = kind === 'observed' && start.getTime() < today() - FORECAST_DAYS_BACK * DAY_MS ? ARCHIVE_URL : FORECAST_URL;
     const day = await dayAt(url, place, start, allDay, kind === 'forecast');
     return day && { kind, ...day };
+  });
+}
+
+// Resolves the weather now and today at a place (the viewer's, rounded to
+// about a kilometre by the caller). Rejects when Open-Meteo fails.
+export function forPlace(place: Place): Promise<LocalWeather | null> {
+  const key = ['local', place.latitude.toFixed(2), place.longitude.toFixed(2)].join('|');
+  return cached(key, LOCAL_TTL, async () => {
+    const data = await get(FORECAST_URL, {
+      current: 'temperature_2m,weather_code,is_day',
+      daily: DAILY.concat('precipitation_probability_max').join(','),
+      timezone: 'auto',
+      forecast_days: 1,
+      ...place,
+    });
+    const row = rows(data.daily)[0];
+    if (!row || !data.current) {
+      return null;
+    }
+    return {
+      kind: 'forecast',
+      date: row.time,
+      timezone: data.timezone as string,
+      weatherCode: row.weather_code,
+      temperatureMax: row.temperature_2m_max,
+      temperatureMin: row.temperature_2m_min,
+      precipitationSum: row.precipitation_sum,
+      precipitationProbability: row.precipitation_probability_max,
+      windSpeedMax: row.wind_speed_10m_max,
+      current: {
+        temperature: data.current.temperature_2m ?? null,
+        weatherCode: data.current.weather_code ?? null,
+        isDay: data.current.is_day !== 0,
+      },
+    };
+  });
+}
+
+// Roughly where a viewer is, from their IANA time zone: the city the zone is
+// named after, geocoded. It is only accurate to a city, which is all a
+// forecast needs, and it asks the browser for nothing - so the weather can
+// show without a location prompt. Null for a zone that names no place
+// (UTC, Etc/GMT+3) or that geocoding does not know.
+export function placeForTimeZone(timeZone: string): Promise<NamedPlace | null> {
+  const city = timeZone.split('/').pop()?.replace(/_/g, ' ').trim();
+  if (!city || !timeZone.includes('/') || /^(Etc|SystemV)\//.test(timeZone)) {
+    return Promise.resolve(null);
+  }
+  return cached(`zone|${timeZone}`, ZONE_TTL, async () => {
+    const data = await get(GEOCODE_URL, { name: city, count: 10, language: 'en', format: 'json' });
+    const results: any[] = data.results ?? [];
+    // Cities share names (Asia/Tripoli, Africa/Tripoli); the one whose own
+    // zone matches is the viewer's. Failing that, the best-ranked one.
+    const match = results.find((r) => r.timezone === timeZone) ?? results[0];
+    if (!match || match.latitude == null || match.longitude == null) {
+      return null;
+    }
+    return {
+      // Rounded like a viewer's own coordinates, so both share a lookup.
+      latitude: Math.round(match.latitude * 100) / 100,
+      longitude: Math.round(match.longitude * 100) / 100,
+      name: (match.name as string) || city,
+    };
+  });
+}
+
+// Places whose name starts with what someone typed, for picking a default
+// location on the profile: the same geocoder the time-zone lookup uses, and a
+// name built from what it returns ("Portland, Oregon, United States"), never
+// from the query. At most `count`, best-ranked first.
+export function searchPlaces(query: string, language = 'en', count = 6): Promise<NamedPlace[]> {
+  const name = query.trim().slice(0, 100);
+  if (name.length < 2) return Promise.resolve([]);
+  return cached(`search|${language}|${name.toLowerCase()}`, ZONE_TTL, async () => {
+    const data = await get(GEOCODE_URL, { name, count, language, format: 'json' });
+    const results: any[] = data.results ?? [];
+    return results
+      .filter((r) => r.latitude != null && r.longitude != null && r.name)
+      .map((r) => ({
+        latitude: Math.round(r.latitude * 100) / 100,
+        longitude: Math.round(r.longitude * 100) / 100,
+        name: [r.name, r.admin1 && r.admin1 !== r.name ? r.admin1 : null, r.country].filter(Boolean).join(', '),
+      }));
   });
 }
 
@@ -280,10 +376,10 @@ function drain() {
 
 // Shares one lookup between everyone viewing the same pin, including requests
 // that arrive while it is still in flight. Failures are not kept.
-function cached(key: string, ttl: number, load: () => Promise<PinWeather | null>): Promise<PinWeather | null> {
+function cached<T>(key: string, ttl: number, load: () => Promise<T>): Promise<T> {
   const hit = state.cache.get(key);
   if (hit && hit.expires > Date.now()) {
-    return hit.promise;
+    return hit.promise as Promise<T>;
   }
 
   const promise = load();
