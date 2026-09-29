@@ -17,7 +17,14 @@ export type Conversation = {
   unread: boolean;
   otherLastReadMessageId: number | null;
   online: boolean;
+  // Some message in it asks about a listing (the Marketplace tab).
+  marketplace: boolean;
 };
+
+// User: chats between people, none about a listing; Marketplace: those that
+// are; Unread: either kind still to read.
+const TABS = ['user', 'marketplace', 'unread'] as const;
+type Tab = (typeof TABS)[number];
 
 // The viewer's chats, loaded while `active` and kept current off the live
 // stream: a new message moves its chat to the top, a read clears or moves
@@ -59,6 +66,7 @@ function useConversations(active: boolean) {
             unread: message.senderId !== me?.id,
             otherLastReadMessageId: found?.otherLastReadMessageId ?? null,
             online: found?.online ?? false,
+            marketplace: !!found?.marketplace || message.listingId != null,
           };
           return [updated, ...list.filter((c) => c.other.id !== event.with.id)];
         });
@@ -108,8 +116,9 @@ function Face({ user, online, className }: { user: ChatUser; online?: boolean; c
 
 const handleOf = (user: ChatUser) => user.userName.replace(/^@+/, '').toLowerCase();
 
-// The chats with a search box and All / Unread tabs, as Messenger's panel
-// has them. Typing also finds people to start a new chat with.
+// The chats with a search box and User / Marketplace / Unread tabs, as
+// Messenger's panel has them (Marketplace: the chats about a listing).
+// Typing also finds people to start a new chat with.
 export function ChatList({
   active,
   onPick,
@@ -125,11 +134,12 @@ export function ChatList({
   const { user: me } = useSession();
   const items = useConversations(active);
   const [query, setQuery] = useState('');
-  const [tab, setTab] = useState<'all' | 'unread'>('all');
+  const [tab, setTab] = useState<Tab>('user');
   const people = usePeople(query);
 
   const q = query.trim().replace(/^@+/, '').toLowerCase();
-  const shown = (items ?? []).filter((c) => (tab === 'all' || c.unread) && (!q || handleOf(c.other).includes(q)));
+  const inTab = (c: Conversation) => (tab === 'unread' ? c.unread : tab === 'marketplace' ? c.marketplace : !c.marketplace);
+  const shown = (items ?? []).filter((c) => inTab(c) && (!q || handleOf(c.other).includes(q)));
   const talking = new Set((items ?? []).map((c) => c.other.id));
   const newPeople = people.filter((p) => !talking.has(p.id));
 
@@ -148,7 +158,7 @@ export function ChatList({
           />
         </label>
         <div role="tablist" className="mt-2 flex gap-1">
-          {(['all', 'unread'] as const).map((key) => (
+          {TABS.map((key) => (
             <button
               key={key}
               type="button"
@@ -157,7 +167,7 @@ export function ChatList({
               onClick={() => setTab(key)}
               className={`rounded-full px-3 py-1.5 text-sm font-semibold ${tab === key ? 'bg-accent/15 text-accent' : 'text-ink hover:bg-raised'}`}
             >
-              {key === 'all' ? t('common.all') : t('dm.unread')}
+              {key === 'user' ? t('dm.userChats') : key === 'unread' ? t('dm.unread') : t('dm.marketplace')}
             </button>
           ))}
         </div>
@@ -170,7 +180,7 @@ export function ChatList({
           <>
             {shown.length === 0 && !newPeople.length ? (
               <div className="px-4 py-6 text-center text-sm text-subtle">
-                {q ? t('dm.noOne') : tab === 'unread' ? t('dm.noUnread') : t('dm.empty')}
+                {q ? t('dm.noOne') : tab === 'unread' ? t('dm.noUnread') : tab === 'marketplace' ? t('dm.noMarketplace') : t('dm.empty')}
               </div>
             ) : null}
             <ul>
@@ -182,8 +192,8 @@ export function ChatList({
                     ? t('dm.youUnsent')
                     : t('dm.theyUnsent', { name: c.other.userName })
                   : mine
-                    ? t('dm.you', { text: c.lastMessage.body })
-                    : c.lastMessage.body;
+                    ? t('dm.you', { text: c.lastMessage.body || t('dm.photos', { count: c.lastMessage.images.length }) })
+                    : c.lastMessage.body || t('dm.photos', { count: c.lastMessage.images.length });
                 return (
                   <li key={c.other.id}>
                     <button

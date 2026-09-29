@@ -43,6 +43,20 @@ export const clampSentiment = (value: number) => Math.round(Math.min(1, Math.max
 export type PinScore = { sentiment: number; product: string | null };
 
 /**
+ * A score sent in a pin's POST/PUT body: `sentiment` from -1 to 1 by the
+ * rubric above, and `productLine`, the product the rubric names ("" for none;
+ * not the pin's own `productName`, which is the exact model). Left out, the
+ * line is read later by `companies:sentiment -- --products`. Undefined when
+ * the body has no sentiment; a string when it is not a number.
+ */
+export function authoredScore(body: { sentiment?: unknown; productLine?: unknown }): { sentiment: number; product?: string } | string | undefined {
+  if (body.sentiment === undefined || body.sentiment === null) return undefined;
+  const sentiment = typeof body.sentiment === 'string' && body.sentiment.trim() ? Number(body.sentiment) : body.sentiment;
+  if (typeof sentiment !== 'number' || !Number.isFinite(sentiment)) return 'sentiment must be a number from -1 to 1';
+  return { sentiment: clampSentiment(sentiment), product: typeof body.productLine === 'string' ? body.productLine : undefined };
+}
+
+/**
  * Resolves to the score and product, or null when there is no API key, or the
  * call failed or was declined: the pin sits out of the graph until the
  * backfill (npm run companies:sentiment) scores it. `products` are the names

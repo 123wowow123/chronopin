@@ -50,6 +50,25 @@ export function listingTitle(t: Translator, listing: { kind: ListingKind; title:
   return listing.title;
 }
 
+// A listing's picture on a card: its first photo, or for one sold on a
+// video alone that video's opening frame, or the tag when it has neither.
+export function ListingCover({ photo, video, className = '', iconClassName = 'size-8' }: { photo: string | null | undefined; video: string | null | undefined; className?: string; iconClassName?: string }) {
+  if (photo) {
+    // eslint-disable-next-line @next/next/no-img-element -- the seller's upload
+    return <img src={mediaUrl(photo)} alt="" loading="lazy" className={`size-full object-cover ${className}`} />;
+  }
+  if (video) {
+    return (
+      <>
+        {/* #t skips a black first frame; metadata only, so a list does not download every clip. */}
+        <video src={`${mediaUrl(video)}#t=0.1`} muted playsInline preload="metadata" className={`size-full object-cover ${className}`} />
+        <Icon name="play" className="pointer-events-none absolute inset-0 m-auto size-1/3 max-h-8 max-w-8 fill-current text-white/90 drop-shadow" />
+      </>
+    );
+  }
+  return <Icon name="tag" className={`absolute inset-0 m-auto text-subtle ${iconClassName}`} />;
+}
+
 // Filled, half and empty stars for a score out of five.
 export function Stars({ value, className = 'size-3.5' }: { value: number; className?: string }) {
   return (

@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { blobUrl } from '@/lib/appConfig';
 import { api } from '@/lib/client/api';
 
 export type ReportedMessage = {
   messageId: number;
   // As reported, so an unsend does not hide it from here.
   body: string;
+  images: string[];
   senderName: string | null;
   reporterNames: string[];
   utcCreatedDateTime: string;
@@ -57,7 +59,16 @@ export function MessageReportList({ initialReports }: { initialReports: Reported
             <span>· {when.format(new Date(report.utcCreatedDateTime))}</span>
             {report.unsent ? <span className="italic">· since unsent</span> : null}
           </div>
-          <p className="break-words whitespace-pre-wrap text-ink">{report.body}</p>
+          {report.images?.length ? (
+            <div className="flex flex-wrap gap-2">
+              {report.images.map((name) => (
+                <a key={name} href={blobUrl(name)} target="_blank" rel="noopener noreferrer">
+                  <img src={blobUrl(name)} alt="" className="size-24 rounded-lg object-cover" />
+                </a>
+              ))}
+            </div>
+          ) : null}
+          {report.body ? <p className="break-words whitespace-pre-wrap text-ink">{report.body}</p> : null}
           <div className="flex flex-wrap items-center gap-2 text-xs">
             <span className="font-semibold text-danger">
               {report.reports} {report.reports === 1 ? 'report' : 'reports'}

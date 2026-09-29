@@ -79,6 +79,21 @@ const PATHS: Record<string, React.ReactNode> = {
   ),
   // A company with no logo of its own.
   building: <path d="M4 21V4h11v17M15 9h5v12M2 21h20M8 8h3M8 12h3M8 16h3" />,
+  // The Marketplace listing types: a vehicle, a home and a job.
+  car: (
+    <>
+      <path d="M5 17H3v-5l2-5h14l2 5v5h-2M5 12h14M9 17h6" />
+      <circle cx="7" cy="17" r="2" />
+      <circle cx="17" cy="17" r="2" />
+    </>
+  ),
+  home: <path d="M3 11 12 4l9 7M5 10v10h5v-6h4v6h5V10" />,
+  briefcase: (
+    <>
+      <rect x="3" y="7" width="18" height="13" rx="2" />
+      <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18" />
+    </>
+  ),
   tag: (
     <>
       <path d="M3 12V4h8l10 10-8 8z" />
@@ -249,6 +264,13 @@ const PATHS: Record<string, React.ReactNode> = {
   ),
   message: <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />,
   send: <path d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12.6 2-12.6 2z" />,
+  image: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <circle cx="9" cy="9" r="2" />
+      <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
+    </>
+  ),
   minus: <path d="M5 12h14" />,
   copy: (
     <>

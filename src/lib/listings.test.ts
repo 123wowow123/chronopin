@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cleanDetails, countTurns, listingKindOf, listingProblem, ratingProblem, storedTitle, type ListingInput } from './listings';
+import { cleanDetails, countTurns, listingHref, listingKindOf, listingProblem, ratingProblem, storedTitle, type ListingInput } from './listings';
 
 const place = { latitude: 32.72, longitude: -117.16, name: 'San Diego' };
 const item = (patch: Partial<ListingInput> = {}): ListingInput => ({
@@ -38,6 +38,11 @@ describe('listingProblem', () => {
     expect(listingProblem('item', item({ details: { category: 'mensClothing' } }))).toEqual({ field: 'condition', code: 'required' });
     expect(listingProblem('item', item({ photos: [] }))).toEqual({ field: 'photos', code: 'required' });
     expect(listingProblem('item', item({ location: null }))).toEqual({ field: 'location', code: 'required' });
+  });
+
+  it('takes a video alone as the one piece of media an item needs', () => {
+    expect(listingProblem('item', item({ photos: [], video: 'listing/1-v.mp4' }))).toBeUndefined();
+    expect(listingProblem('job', item({ title: 'Barista', description: 'Mornings', photos: [], details: { jobCategory: 'food', jobType: 'partTime', payType: 'hourly', locationType: 'onSite' } }))).toBeUndefined();
   });
 
   it('refuses an option the field does not have, and too many photos', () => {
@@ -96,5 +101,12 @@ describe('ratingProblem', () => {
     expect(ratingProblem('seller', { stars: 4.5 })).toMatch(/stars/);
     expect(ratingProblem('buyer', { stars: 3, tags: ['fairPricing'] })).toMatch(/tags/);
     expect(ratingProblem('buyer', { stars: 3, body: 'x'.repeat(751) })).toMatch(/750/);
+  });
+});
+
+describe('listingHref', () => {
+  it('opens a listing on its pin, or on the Marketplace map when it has none', () => {
+    expect(listingHref({ id: 5, pinId: 12 })).toBe('/pin/12?listing=5');
+    expect(listingHref({ id: 5, pinId: null })).toBe('/map?show=market&listing=5');
   });
 });

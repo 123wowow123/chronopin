@@ -143,33 +143,10 @@ export function restoreDrawerScroll() {
   scroller.scrollTop = heldScroll;
 }
 
-// The big tag cloud is opened from the drawer on a phone, and put the drawer
-// away to be seen. Closing it comes back to the drawer as it was left - its
-// scroll noted on the way out, since picks in the cloud swap the page's
-// controls in the drawer and can leave it at the top.
-const openers = new Set<() => void>();
-let leftAt: number | null = null;
-
-export function onOpenDrawer(open: () => void) {
-  openers.add(open);
-  return () => {
-    openers.delete(open);
-  };
-}
-
+// The big tag cloud is opened from the drawer on a phone, and puts the drawer
+// away to be seen. Closing the cloud leaves it away: back on the page.
 export function leaveDrawerForCloud() {
-  leftAt = scroller?.scrollTop ?? null;
   closeDrawer();
-}
-
-export function returnToDrawer() {
-  for (const open of openers) open();
-  const top = leftAt;
-  leftAt = null;
-  // Once the drawer is open again and the controls are in it.
-  requestAnimationFrame(() => {
-    if (scroller && top !== null) scroller.scrollTop = top;
-  });
 }
 
 // The big tag cloud, opened by what stands for the tag list when an admin has

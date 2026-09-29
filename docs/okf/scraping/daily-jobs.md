@@ -393,9 +393,14 @@ can tick it there. When nothing is pending it is one call that returns empty
 lists.
 **Traps.** Saving a pin scores it at once when the app's key has credit, so
 this is the catch-up for everything that missed that: pins saved while the
-key had none, and text edited since. Pass `textHash` and `text` back exactly
-as given; a pin or comment edited in between is skipped and comes back next
-run. Judge the event for the company named, not for the world, and stay near
+key had none, and text edited since. It never rescores a pin whose title and
+summary are unchanged. Pins posted with their own `sentiment` and
+`productLine` ([fields](fields.md)) skip it entirely. That is how to keep the
+backlog from growing: 1,693 company pins posted by desk batches without a
+score had piled up by 2026-09-29. The payload lists each company's
+`knownProducts` once, not per pin, and hands out a 12-character `textHash`.
+Pass `textHash` and `text` back exactly as given; a pin or comment edited in
+between is skipped and comes back next run. Judge the event for the company named, not for the world, and stay near
 0 when the summary does not say how it went.
 
 # Learning

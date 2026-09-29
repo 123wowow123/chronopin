@@ -12,10 +12,11 @@ import {
   type RatingRole,
   type RatingSummary,
 } from '@/lib/listings';
+import { tagGroupPatterns } from '@/lib/tags';
 import { blockedBetween } from './blockSql';
 
-// Marketplace listings on product pins and the ratings their chats earn
-// (0095). Static queries, as Message is.
+// Marketplace listings on product pins, or on their own (0097), and the
+// ratings their chats earn (0095). Static queries, as Message is.
 
 // Uploaded photos and videos are the seller's own blobs.
 export const MEDIA_PREFIX = 'listing/';
@@ -35,8 +36,9 @@ const COLUMNS = `"l"."id", "l"."pinId", "l"."userId", "l"."kind", "l"."status", 
   "l"."utcCreatedDateTime", "l"."utcUpdatedDateTime",
   "u"."userName", "u"."pictureUrl"`;
 
-function toListing(row: db.Row, ratings: Map<number, RatingSummary>): ListingJson {
+function toListing(row: db.Row, ratings: Map<number, RatingSummary>, asked?: Set<number>): ListingJson {
   return {
+    ...(asked ? { asked: asked.has(row.id) } : {}),
     id: row.id,
     pinId: row.pinId,
     kind: row.kind,
@@ -84,9 +86,25 @@ export default class Listing {
     return new Map(rows.map((r) => [r.rateeId, { average: r.average, count: r.count }]));
   }
 
-  private static async withRatings(rows: db.Row[]) {
-    const ratings = await Listing.sellerRatings(rows.map((r) => r.userId));
-    return rows.map((row) => toListing(row, ratings));
+  // With a viewer, each also says whether they already have a chat about it.
+  private static async withRatings(rows: db.Row[], viewerId: number | null = null) {
+    const [ratings, asked] = await Promise.all([
+      Listing.sellerRatings(rows.map((r) => r.userId)),
+      viewerId ? Listing.askedAbout(viewerId, rows.map((r) => r.id)) : undefined,
+    ]);
+    return rows.map((row) => toListing(row, ratings, asked));
+  }
+
+  // Of these listings, the ones a chat the viewer is in has asked about.
+  static async askedAbout(viewerId: number, listingIds: number[]): Promise<Set<number>> {
+    if (!listingIds.length) return new Set();
+    const rows = await db.query<{ listingId: number }>(
+      `SELECT DISTINCT "m"."listingId" FROM "Message" AS "m"
+         JOIN "ConversationMember" AS "cm" ON "cm"."conversationId" = "m"."conversationId" AND "cm"."userId" = $1
+       WHERE "m"."listingId" = ANY($2::integer[])`,
+      [viewerId, listingIds],
+    );
+    return new Set(rows.map((r) => r.listingId));
   }
 
   // A pin's listings still on offer, newest first, leaving out any seller a
@@ -99,25 +117,57 @@ export default class Listing {
        ORDER BY "l"."id" DESC`,
       [pinId, viewerId],
     );
-    return Listing.withRatings(rows);
+    return Listing.withRatings(rows, viewerId);
   }
 
-  static async get(id: number) {
+  // Every listing still on offer that says where it is (one pin's, given
+  // pinId), for the map's Marketplace layer: newest first, capped, and without any seller a block
+  // stands between the viewer and. The map's filters narrow it as they do
+  // the pins: createdSince by when the listing was posted, and tags (any
+  // of) / excludeTags (none of) by its pin's tags, matched as a tag: term
+  // is - so a listing with no pin goes once a tag is picked.
+  static async onMap(
+    viewerId: number | null,
+    // The pins whose listings to keep to (a query's pin: terms); none, every pin's.
+    pinIds: number[] = [],
+    filter: { createdSince?: Date | null; tags?: string[]; excludeTags?: string[] } = {},
+    limit = 2000,
+  ) {
+    const tags = filter.tags ?? [];
+    const excludeTags = filter.excludeTags ?? [];
+    const tagged = (params: string, patterns: string) =>
+      `EXISTS (SELECT 1 FROM "PinTagView" AS "tg" WHERE "tg"."pinId" = "l"."pinId" AND ("tg"."name" = ANY(${params}::citext[]) OR "tg"."name"::text ~* ANY(${patterns}::text[])))`;
+    const rows = await db.query(
+      `SELECT ${COLUMNS} FROM "Listing" AS "l" JOIN "User" AS "u" ON "u"."id" = "l"."userId" AND "u"."utcDeletedDateTime" IS NULL
+       WHERE "l"."utcDeletedDateTime" IS NULL AND "l"."status" <> 'sold'
+         AND "l"."locationLatitude" IS NOT NULL AND "l"."locationLongitude" IS NOT NULL
+         AND ($1::integer IS NULL OR NOT ${blockedBetween('$1::integer', '"l"."userId"')})
+         AND (cardinality($2::integer[]) = 0 OR "l"."pinId" = ANY($2::integer[]))
+         AND ($4::timestamptz IS NULL OR "l"."utcCreatedDateTime" >= $4)
+         AND (cardinality($5::text[]) = 0 OR ${tagged('$5', '$6')})
+         AND (cardinality($7::text[]) = 0 OR "l"."pinId" IS NULL OR NOT ${tagged('$7', '$8')})
+       ORDER BY "l"."id" DESC LIMIT $3`,
+      [viewerId, pinIds, limit, filter.createdSince ?? null, tags, tagGroupPatterns(tags), excludeTags, tagGroupPatterns(excludeTags)],
+    );
+    return Listing.withRatings(rows, viewerId);
+  }
+
+  static async get(id: number, viewerId: number | null = null) {
     const rows = await db.query(
       `SELECT ${COLUMNS} FROM "Listing" AS "l" JOIN "User" AS "u" ON "u"."id" = "l"."userId"
        WHERE "l"."id" = $1 AND "l"."utcDeletedDateTime" IS NULL`,
       [id],
     );
-    return rows.length ? (await Listing.withRatings(rows))[0] : null;
+    return rows.length ? (await Listing.withRatings(rows, viewerId))[0] : null;
   }
 
-  // The seller's own listings, sold ones too, with the pin each is on and
-  // how many chats it started.
+  // The seller's own listings, sold ones too, with the pin each is on (none
+  // for one posted on its own) and how many chats it started.
   static async mine(userId: number) {
     const rows = await db.query(
       `SELECT ${COLUMNS}, "p"."title" AS "pinTitle",
               (SELECT COUNT(DISTINCT "m"."conversationId")::integer FROM "Message" AS "m" WHERE "m"."listingId" = "l"."id") AS "chats"
-       FROM "Listing" AS "l" JOIN "User" AS "u" ON "u"."id" = "l"."userId" JOIN "Pin" AS "p" ON "p"."id" = "l"."pinId"
+       FROM "Listing" AS "l" JOIN "User" AS "u" ON "u"."id" = "l"."userId" LEFT JOIN "Pin" AS "p" ON "p"."id" = "l"."pinId"
        WHERE "l"."userId" = $1 AND "l"."utcDeletedDateTime" IS NULL
        ORDER BY "l"."utcUpdatedDateTime" DESC`,
       [userId],
@@ -125,7 +175,8 @@ export default class Listing {
     return Listing.withRatings(rows);
   }
 
-  static async create(pinId: number, userId: number, kind: ListingKind, input: ListingInput) {
+  // On a pin, or on its own when pinId is null.
+  static async create(pinId: number | null, userId: number, kind: ListingKind, input: ListingInput) {
     const [row] = await db.query<{ id: number }>(
       `INSERT INTO "Listing" ("pinId", "userId", "kind", "title", "price", "description", "details", "photos", "video",
                               "locationLatitude", "locationLongitude", "locationName")
@@ -195,7 +246,7 @@ export default class Listing {
   // its turns so far and the viewer's rating over it.
   static async inChat(viewerId: number, otherId: number, conversationId: number): Promise<ChatListing[]> {
     const listings = await db.query(
-      `SELECT "l"."id", "l"."pinId", "l"."kind", "l"."title", "l"."price", "l"."currency", "l"."status", "l"."photos"[1] AS "photo",
+      `SELECT "l"."id", "l"."pinId", "l"."kind", "l"."title", "l"."price", "l"."currency", "l"."status", "l"."photos"[1] AS "photo", "l"."video",
               "l"."userId" AS "sellerId", "f"."firstId", "l"."utcDeletedDateTime" IS NOT NULL AS "deleted",
               (SELECT json_build_object('stars', "r"."stars", 'tags', "r"."tags", 'body', "r"."body", 'role', "r"."role")
                FROM "ListingRating" AS "r" WHERE "r"."listingId" = "l"."id" AND "r"."raterId" = $2) AS "myRating"
@@ -224,6 +275,7 @@ export default class Listing {
         // A deleted listing reads as gone; the chat can still rate over it.
         status: l.deleted ? 'sold' : l.status,
         photo: l.deleted ? null : l.photo,
+        video: l.deleted ? null : l.video,
         sellerId: l.sellerId,
         turns: countTurns(since.map((m) => m.senderId)),
         throughMessageId: last?.id ?? 0,

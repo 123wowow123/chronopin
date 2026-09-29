@@ -15,10 +15,12 @@ export type ChatMessage = {
   senderId: number;
   // Empty once unsent.
   body: string;
+  // Photos: blob names in the thumb container (blobUrl). Empty once unsent.
+  images: string[];
   utcCreatedDateTime: string;
   unsent: boolean;
-  // The earlier message this one answers, quoted above it.
-  replyTo: { id: number; senderId: number; body: string; unsent: boolean } | null;
+  // The earlier message this one answers, quoted above it (images: how many).
+  replyTo: { id: number; senderId: number; body: string; images: number; unsent: boolean } | null;
   // The listing a buyer's opening message asks about.
   listingId: number | null;
 };

@@ -1,7 +1,9 @@
+import * as azureBlob from '../azureBlob';
 import * as db from '../db';
 import type { QueryFn } from '../db';
 import { emitDirectMessage, emitMessagesChanged } from '../events';
 import { wordStartPattern } from '../util/searchQuery';
+import log from '../util/log';
 import { blockedBetween } from './blockSql';
 
 export type ChatUser = { id: number; userName: string; pictureUrl: string | null };
@@ -11,10 +13,12 @@ export type ChatMessage = {
   senderId: number;
   // Empty once unsent.
   body: string;
+  // Photos (0096): blob names in the thumb container. Empty once unsent.
+  images: string[];
   utcCreatedDateTime: Date;
   unsent: boolean;
   // The earlier message this one answers, quoted above it.
-  replyTo: { id: number; senderId: number; body: string; unsent: boolean } | null;
+  replyTo: { id: number; senderId: number; body: string; images: number; unsent: boolean } | null;
   // The listing a buyer's opening message asks about (0095).
   listingId: number | null;
 };
@@ -24,14 +28,19 @@ export type ConversationSummary = {
   lastMessage: ChatMessage;
   unread: boolean;
   otherLastReadMessageId: number | null;
+  // Whether any message in it asks about a listing: the chat list's
+  // Marketplace tab.
+  marketplace: boolean;
 };
 
 export const MAX_MESSAGE_LENGTH = 4000;
+export const MAX_MESSAGE_IMAGES = 10;
+export const MESSAGE_MEDIA_PREFIX = 'message/';
 export const MESSAGE_REPORT_REASONS = ['spam', 'harassment', 'misleading', 'other'] as const;
 export type MessageReportReason = (typeof MESSAGE_REPORT_REASONS)[number];
 const THREAD_PAGE = 30;
-const MESSAGE_COLUMNS = `"m"."id", "m"."conversationId", "m"."senderId", "m"."body", "m"."utcCreatedDateTime", "m"."utcUnsentDateTime", "m"."listingId",
-  (SELECT json_build_object('id', "r"."id", 'senderId', "r"."senderId", 'body', "r"."body", 'unsent', "r"."utcUnsentDateTime" IS NOT NULL)
+const MESSAGE_COLUMNS = `"m"."id", "m"."conversationId", "m"."senderId", "m"."body", "m"."images", "m"."utcCreatedDateTime", "m"."utcUnsentDateTime", "m"."listingId",
+  (SELECT json_build_object('id', "r"."id", 'senderId', "r"."senderId", 'body', "r"."body", 'images', cardinality("r"."images"), 'unsent', "r"."utcUnsentDateTime" IS NOT NULL)
    FROM "Message" AS "r" WHERE "r"."id" = "m"."replyToId") AS "replyTo"`;
 
 const pair = (a: number, b: number) => (a < b ? [a, b] : [b, a]);
@@ -45,6 +54,7 @@ function toMessage(row: db.Row): ChatMessage {
     conversationId: row.conversationId,
     senderId: row.senderId,
     body: row.body,
+    images: row.images ?? [],
     utcCreatedDateTime: row.utcCreatedDateTime,
     unsent: row.utcUnsentDateTime != null,
     replyTo: row.replyTo ?? null,
@@ -65,7 +75,8 @@ export default class Message {
     const rows = await db.query(
       `SELECT "c"."id", "o"."id" AS "otherId", "o"."userName", "o"."pictureUrl",
               "me"."lastReadMessageId", "them"."lastReadMessageId" AS "otherLastReadMessageId",
-              ${MESSAGE_COLUMNS}, "m"."id" AS "messageId"
+              ${MESSAGE_COLUMNS}, "m"."id" AS "messageId",
+              EXISTS (SELECT 1 FROM "Message" AS "lm" WHERE "lm"."conversationId" = "c"."id" AND "lm"."listingId" IS NOT NULL) AS "marketplace"
        FROM "ConversationMember" AS "me"
          JOIN "Conversation" AS "c" ON "c"."id" = "me"."conversationId"
          JOIN "User" AS "o" ON "o"."id" = ${OTHER_ID} AND "o"."utcDeletedDateTime" IS NULL
@@ -82,6 +93,7 @@ export default class Message {
       lastMessage: toMessage({ ...row, id: row.messageId }),
       unread: row.senderId !== userId && row.messageId > (row.lastReadMessageId ?? 0),
       otherLastReadMessageId: row.otherLastReadMessageId,
+      marketplace: row.marketplace,
     }));
   }
 
@@ -128,12 +140,13 @@ export default class Message {
     };
   }
 
-  // Sends body from senderId to recipientId, starting their conversation if
+  // Sends body (and images, which may stand in for it) from senderId to
+  // recipientId, starting their conversation if
   // this is the first message. The sender has seen their own message. Both
   // sides' open pages hear of it once it is committed. listingId marks a
   // buyer's question about one of the recipient's listings (checked by the
   // route).
-  static send(senderId: number, recipientId: number, body: string, replyToId: number | null = null, listingId: number | null = null) {
+  static send(senderId: number, recipientId: number, body: string, replyToId: number | null = null, listingId: number | null = null, images: string[] = []) {
     const [low, high] = pair(senderId, recipientId);
     return db.transaction(async (query) => {
       const [conversation] = await query<{ id: number }>(
@@ -148,10 +161,10 @@ export default class Message {
       );
       const [row] = await query(
         // A reply only to a message of this same chat; anything else is dropped.
-        `INSERT INTO "Message" AS "m" ("conversationId", "senderId", "body", "replyToId", "listingId")
-         VALUES ($1, $2, $3, (SELECT "id" FROM "Message" WHERE "id" = $4 AND "conversationId" = $1), $5)
+        `INSERT INTO "Message" AS "m" ("conversationId", "senderId", "body", "replyToId", "listingId", "images")
+         VALUES ($1, $2, $3, (SELECT "id" FROM "Message" WHERE "id" = $4 AND "conversationId" = $1), $5, $6)
          RETURNING ${MESSAGE_COLUMNS}`,
-        [conversation.id, senderId, body, replyToId, listingId],
+        [conversation.id, senderId, body, replyToId, listingId, images],
       );
       const message = toMessage(row);
       await query(`UPDATE "Conversation" SET "lastMessageId" = $2, "utcLastMessageDateTime" = $3 WHERE "id" = $1`, [
@@ -239,17 +252,49 @@ export default class Message {
     return message;
   }
 
-  // The sender takes a message back: its text is wiped, and
-  // both sides see that it was unsent.
-  static unsend(userId: number, otherId: number, messageId: number) {
-    return Message.change(
+  // The sender takes a message back: its text and photos are wiped, and
+  // both sides see that it was unsent. A photo no forward or report still
+  // holds is deleted from storage too.
+  static async unsend(userId: number, otherId: number, messageId: number) {
+    const [before] = await db.query<{ images: string[] }>(`SELECT "images" FROM "Message" WHERE "id" = $1 AND "senderId" = $2`, [messageId, userId]);
+    const message = await Message.change(
       userId,
       otherId,
       messageId,
-      `"body" = '', "utcUnsentDateTime" = now()`,
+      `"body" = '', "images" = '{}', "utcUnsentDateTime" = now()`,
       `"m"."senderId" = $4 AND "m"."utcUnsentDateTime" IS NULL`,
       [userId],
     );
+    if (message && before?.images.length) {
+      const held = await db.query<{ name: string }>(
+        `SELECT unnest("images") AS "name" FROM "Message" WHERE "images" && $1::text[]
+         UNION SELECT unnest("images") FROM "MessageReport" WHERE "images" && $1::text[]`,
+        [before.images],
+      );
+      const kept = new Set(held.map((r) => r.name));
+      for (const name of before.images) {
+        if (kept.has(name) || !name.startsWith(MESSAGE_MEDIA_PREFIX)) continue;
+        azureBlob.deleteThumb(name).catch((err) => log.warn('message photo delete failed:', name, (err as Error).message));
+      }
+    }
+    return message;
+  }
+
+  // Photos the viewer may send: their own uploads, or ones already in a chat
+  // they are part of (a forward).
+  static async sendableImages(userId: number, names: string[]) {
+    const own = (name: string) => name.startsWith(`${MESSAGE_MEDIA_PREFIX}${userId}-`) && !name.includes('..');
+    const others = names.filter((name) => !own(name));
+    if (!others.length) return true;
+    const rows = await db.query<{ name: string }>(
+      `SELECT DISTINCT "i" AS "name"
+       FROM "Message" AS "m" JOIN "ConversationMember" AS "me" ON "me"."conversationId" = "m"."conversationId" AND "me"."userId" = $1,
+         unnest("m"."images") AS "i"
+       WHERE "m"."images" && $2::text[]`,
+      [userId, others],
+    );
+    const seen = new Set(rows.map((r) => r.name));
+    return others.every((name) => seen.has(name));
   }
 
   // Reports the other side's message for an admin to look at, with its text
@@ -258,12 +303,12 @@ export default class Message {
   static async report(userId: number, otherId: number, messageId: number, reason: MessageReportReason) {
     const [low, high] = pair(userId, otherId);
     const rows = await db.query(
-      `INSERT INTO "MessageReport" ("messageId", "userId", "reason", "body")
-       SELECT "m"."id", $4, $5, "m"."body"
+      `INSERT INTO "MessageReport" ("messageId", "userId", "reason", "body", "images")
+       SELECT "m"."id", $4, $5, "m"."body", "m"."images"
        FROM "Message" AS "m" JOIN "Conversation" AS "c" ON "c"."id" = "m"."conversationId"
        WHERE "m"."id" = $1 AND "c"."userLowId" = $2 AND "c"."userHighId" = $3 AND "m"."senderId" <> $4 AND "m"."utcUnsentDateTime" IS NULL
        ON CONFLICT ("messageId", "userId") DO UPDATE
-         SET "reason" = EXCLUDED."reason", "body" = EXCLUDED."body", "utcCreatedDateTime" = now(), "utcDismissedDateTime" = NULL, "dismissedByUserId" = NULL
+         SET "reason" = EXCLUDED."reason", "body" = EXCLUDED."body", "images" = EXCLUDED."images", "utcCreatedDateTime" = now(), "utcDismissedDateTime" = NULL, "dismissedByUserId" = NULL
        RETURNING "messageId"`,
       [messageId, low, high, userId, reason],
     );
@@ -275,6 +320,7 @@ export default class Message {
     return db.query<{
       messageId: number;
       body: string;
+      images: string[];
       senderName: string | null;
       reporterNames: string[];
       utcCreatedDateTime: Date;
@@ -283,6 +329,7 @@ export default class Message {
       unsent: boolean;
     }>(`
     SELECT "m"."id" AS "messageId", (ARRAY_AGG("r"."body" ORDER BY "r"."utcCreatedDateTime" DESC))[1] AS "body",
+           (ARRAY_AGG(array_to_json("r"."images") ORDER BY "r"."utcCreatedDateTime" DESC))[1] AS "images",
            "s"."userName" AS "senderName", ARRAY_AGG("ru"."userName") AS "reporterNames",
            "m"."utcCreatedDateTime", COUNT(*)::integer AS "reports",
            (SELECT json_object_agg("reason", "n") FROM (
@@ -333,9 +380,9 @@ export default class Message {
       }
       for (const m of [...(data.messages ?? [])].sort((a, b) => a.id - b.id)) {
         await query(
-          `INSERT INTO "Message" ("id", "conversationId", "senderId", "body", "utcCreatedDateTime", "utcUnsentDateTime", "replyToId", "listingId")
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8) ON CONFLICT DO NOTHING`,
-          [m.id, m.conversationId, m.senderId, m.body, m.utcCreatedDateTime, m.utcUnsentDateTime, m.replyToId, m.listingId ?? null],
+          `INSERT INTO "Message" ("id", "conversationId", "senderId", "body", "utcCreatedDateTime", "utcUnsentDateTime", "replyToId", "listingId", "images")
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) ON CONFLICT DO NOTHING`,
+          [m.id, m.conversationId, m.senderId, m.body, m.utcCreatedDateTime, m.utcUnsentDateTime, m.replyToId, m.listingId ?? null, m.images ?? []],
         );
       }
       for (const c of data.conversations ?? []) {
@@ -350,9 +397,9 @@ export default class Message {
       }
       for (const r of data.reports ?? []) {
         await query(
-          `INSERT INTO "MessageReport" ("messageId", "userId", "reason", "body", "utcCreatedDateTime", "utcDismissedDateTime", "dismissedByUserId")
-           VALUES ($1, $2, $3, $4, $5, $6, $7) ON CONFLICT DO NOTHING`,
-          [r.messageId, r.userId, r.reason, r.body, r.utcCreatedDateTime, r.utcDismissedDateTime, r.dismissedByUserId],
+          `INSERT INTO "MessageReport" ("messageId", "userId", "reason", "body", "utcCreatedDateTime", "utcDismissedDateTime", "dismissedByUserId", "images")
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8) ON CONFLICT DO NOTHING`,
+          [r.messageId, r.userId, r.reason, r.body, r.utcCreatedDateTime, r.utcDismissedDateTime, r.dismissedByUserId, r.images ?? []],
         );
       }
       for (const table of ['Conversation', 'Message']) {

@@ -29,8 +29,8 @@ const NOTICES = { entries: 'quickPin.entries', unavailable: 'quickPin.aiUnavaila
 // post it - through POST /api/pins, duplicate check first. Whatever the AI
 // could not settle on its own opens the full form, filled in, to finish by
 // hand: no title or date, no AI at all (no credit), a page of dated entries to
-// pick from, or a save that failed.
-export function QuickPinForm({ respondTo }: { respondTo?: PinJson }) {
+// pick from, or a save that failed. `tabs`: Create's Pin | Marketplace switch.
+export function QuickPinForm({ respondTo, tabs }: { respondTo?: PinJson; tabs?: React.ReactNode }) {
   const t = useT();
   const router = useRouter();
   const [url, setUrl] = useState('');
@@ -136,7 +136,11 @@ export function QuickPinForm({ respondTo }: { respondTo?: PinJson }) {
   const busy = phase === 'reading' || phase === 'posting';
   return (
     <div className="mx-auto max-w-2xl px-4 py-8">
-      <h1 className="text-2xl font-semibold tracking-tight">{respondTo ? t('form.respondPin') : t('form.createPin')}</h1>
+      {/* The heading and Create's switch share a line, wrapping on a narrow phone. */}
+      <div className={`flex flex-wrap items-center justify-between gap-x-4 gap-y-3 ${tabs ? 'mb-4' : ''}`}>
+        <h1 className="text-2xl font-semibold tracking-tight">{respondTo ? t('form.respondPin') : t('form.createPin')}</h1>
+        {tabs}
+      </div>
       {respondTo ? (
         <p className="mt-2 text-sm text-muted">
           {t('form.respondingTo')} <Link href={pinPath(respondTo)}>{respondTo.title}</Link>

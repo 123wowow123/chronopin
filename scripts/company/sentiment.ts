@@ -25,7 +25,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
 import { clampSentiment, PIN_SENTIMENT_PROMPT, scorePinText } from '@/server/extract/pinSentiment';
-import PinSentiment, { sentimentHash } from '@/server/model/pinSentiment';
+import PinSentiment, { sameText, shortHash } from '@/server/model/pinSentiment';
 
 const { values: flags } = parseArgs({
   options: {
@@ -46,7 +46,7 @@ async function run() {
     for (const { id, sentiment, product, textHash } of scores) {
       const context = await PinSentiment.context(id);
       if (!context || typeof sentiment !== 'number' || !Number.isFinite(sentiment)) continue;
-      if (textHash && textHash !== sentimentHash(context)) {
+      if (textHash && !sameText(context, textHash)) {
         console.log(`pin ${id}: its text changed since the export, skipped`);
         continue;
       }
@@ -67,7 +67,7 @@ async function run() {
         {
           rubric: PIN_SENTIMENT_PROMPT,
           answer: 'A JSON array of { id, sentiment, product, textHash } for --apply, textHash copied from the pin, product "" for none.',
-          pins: await withKnownProducts(pins.map((p) => ({ id: p.id, companyId: p.companyId, company: p.company, title: p.title, summary: p.description ?? '', textHash: sentimentHash(p) }))),
+          pins: await withKnownProducts(pins.map((p) => ({ id: p.id, companyId: p.companyId, company: p.company, title: p.title, summary: p.description ?? '', textHash: shortHash(p) }))),
         },
         null,
         2,

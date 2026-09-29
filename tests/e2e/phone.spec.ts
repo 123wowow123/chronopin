@@ -57,6 +57,24 @@ test('the drawer lends the page its filters behind one row, the tag cloud folded
   await expect.poll(() => scrolls(page)).toBe(true);
 });
 
+// The tag cloud opened from the drawer puts the drawer away, and closing the
+// cloud leaves it away: back on the page, not the menu.
+test('closing the tag cloud opened from the drawer goes back to the page', async ({ page }) => {
+  await page.goto('/');
+  const drawer = page.getByRole('dialog', { name: 'Menu' });
+  await page.getByRole('button', { name: /open menu/i }).click();
+  await drawer.getByRole('button', { name: /^Filters:/ }).click();
+  await drawer.locator(tagsRow).click();
+  const cloud = page.getByRole('dialog', { name: 'Tag cloud' });
+  await expect(cloud).toBeVisible();
+  await expect(drawer).toBeHidden();
+  await cloud.getByRole('button', { name: 'Close tag cloud' }).click();
+  await expect(cloud).toBeHidden();
+  await page.waitForTimeout(400);
+  await expect(drawer).toBeHidden();
+  await expect.poll(() => scrolls(page)).toBe(true);
+});
+
 // A search started from the page leaves the timeline mounted and hidden for a
 // moment behind the results, rather than blanking the screen between them.
 test("tapping a card's category searches for it and gives the page back", async ({ page }) => {

@@ -23,6 +23,8 @@ import { toJson, type PinJson } from '@/lib/types';
 import { localizePins } from '@/server/services/translations';
 import log from '@/server/util/log';
 import { citePostedSummary } from '@/server/extract/references';
+import { authoredScore } from '@/server/extract/pinSentiment';
+import PinSentiment from '@/server/model/pinSentiment';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
@@ -64,10 +66,13 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   // Tags, when sent, are the pin's whole list (the form sends them all);
   // left out, the pin keeps the ones it has.
   const tags = parseTags(body.tags);
+  // A sentiment sent with the edit scores the pin's new text, as on create;
+  // left out, a changed title or summary is scored again by the listener.
+  const score = authoredScore(body);
   pin.categories = bodyCategories(body, tags);
   // Citations written [S] and [n] become links to the source and references.
   pin.longFormSummary = citePostedSummary(pin.longFormSummary, pin.sourceUrl, pin.references) ?? pin.longFormSummary;
-  const referenceProblem = PinReference.problem(pin.references) ?? delayProblem(pin);
+  const referenceProblem = (typeof score === 'string' ? score : undefined) ?? PinReference.problem(pin.references) ?? delayProblem(pin);
   if (referenceProblem) {
     throw new HttpError(400, referenceProblem);
   }
@@ -95,6 +100,7 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
     references: addedReferences(existing.references, updated.references),
     postedAt: existing.utcCreatedDateTime,
   });
+  if (score && typeof score !== 'string') await PinSentiment.setAuthored(updated.id, score);
   emitPinEvent('update', updated, { userId: user.id });
   // A pin that has just been given a company is news to that company's
   // followers, as a new pin for it would be. Editing it again tells nobody

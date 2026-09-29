@@ -10,8 +10,11 @@ import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { PinWebGraph } from '@/components/map/PinWebGraph';
 import { WebLegend } from '@/components/map/WebLegend';
+import { ListingView } from '@/components/listings/ListingView';
+import { listingTitle, mediaUrl, priceLine } from '@/components/listings/parts';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
+import { api } from '@/lib/client/api';
 import { canonicalCategory, isCategory } from '@/lib/categories';
 import { clearSpot, peekMapSpot, setMapViewSource } from '@/lib/client/returnSpot';
 import { useQueryState } from '@/lib/client/urlState';
@@ -24,8 +27,11 @@ import { pinPath } from '@/lib/seo';
 import { webColor, webIntensity, webModeFromParam, type WebEdge, type WebKind, type WebMode } from '@/lib/pinWeb';
 import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
+import { refineQuery } from '@/lib/searchTerms';
 import { useT } from '@/lib/client/i18n';
 import { categoryLabel } from '@/lib/i18n/labels';
+import type { Translator } from '@/lib/i18n/translate';
+import type { ListingJson } from '@/lib/listings';
 
 // The categories a query picks: its tag: terms (and old category: ones) that
 // name one. They are what the markers are shown and hidden by.
@@ -48,9 +54,12 @@ const FROM_COLOR = '#e11d48';
 const PIN_SVG =
   '<svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg" width="24" height="36"><path fill="currentColor" stroke="rgba(0,0,0,.35)" d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24s12-15 12-24C24 5.373 18.627 0 12 0z"/><circle cx="12" cy="12" r="5" fill="#fff"/></svg>';
 
+// scale-100: Leaflet makes a marker role=button, and the press shrink every
+// button gets (globals.css) would scale it about the pane's corner, sliding
+// it out from under the pointer between mousedown and mouseup, so no click.
 function pinIcon(isPast: boolean) {
   return L.divIcon({
-    className: isPast ? 'text-past' : 'text-future',
+    className: `scale-100 ${isPast ? 'text-past' : 'text-future'}`,
     html: PIN_SVG,
     iconSize: [24, 36],
     iconAnchor: [12, 36],
@@ -210,18 +219,55 @@ function webPopupContent(from: MapPinJson, to: MapPinJson, kind: WebKind, kindLa
   return content;
 }
 
+// A marketplace listing's marker: its price on a pill, over the spot rather
+// than a pin's teardrop, so the two layers never read as one. Leaflet places
+// a zero-sized icon at the spot and the pill hangs above it.
+function listingIcon(listing: ListingJson, t: Translator) {
+  const price = priceLine(t, listing) || listingTitle(t, listing);
+  return L.divIcon({
+    className: 'scale-100',
+    html: `<div class="absolute bottom-1 left-0 max-w-40 -translate-x-1/2 cursor-pointer truncate rounded-full bg-panel px-2 py-0.5 text-xs font-semibold text-ink shadow-md ring-1 ring-line hover:bg-accent hover:text-white ${
+      listing.status === 'pending' ? 'opacity-60' : ''
+    }">${escapeHtml(price)}</div>`,
+    iconSize: [0, 0],
+    iconAnchor: [0, 0],
+  });
+}
+
+// A listing's popup: its cover edge to edge over its price, title and place,
+// as a button that opens the listing itself.
+function listingPopupContent(listing: ListingJson, t: Translator, open: () => void) {
+  const content = document.createElement('button');
+  content.type = 'button';
+  content.className = 'block w-full cursor-pointer text-left';
+  content.onclick = open;
+  const text = document.createElement('div');
+  text.className = 'px-2.5 pt-1.5 pb-2';
+  const place = listing.location?.name;
+  text.innerHTML =
+    `<div class="font-semibold">${escapeHtml(priceLine(t, listing))}</div>` +
+    `<div class="line-clamp-2 text-link">${escapeHtml(listingTitle(t, listing))}</div>` +
+    `${place ? `<div class="truncate text-subtle">${escapeHtml(place)}</div>` : ''}`;
+  content.append(text);
+  const photo = listing.photos[0];
+  if (photo) content.prepend(pictureImg([mediaUrl(photo)], 'block aspect-video w-full object-cover', () => {}));
+  return content;
+}
+
 // A plotted pin. Leaflet repeats the world sideways but not its markers, so a
 // pin gets a marker (a copy) on each copy of the world in view: offset k sits
 // at its longitude + 360k. Copies are made as the view reaches them and taken
 // off as they leave it.
-type MapEntry = { pin: MapPinJson; categories: string[]; focus: boolean; copies: Map<number, L.Marker>; make: (offset: number) => L.Marker };
+// A listing's marker is kept the same way, with only its place for a pin.
+type Spot = Pick<MapPinJson, 'latitude' | 'longitude'>;
+type MapEntry<P extends Spot = MapPinJson> = { pin: P; categories: string[]; focus: boolean; copies: Map<number, L.Marker>; make: (offset: number) => L.Marker };
 
 // The world copy of a longitude nearest another: where a pin is closest to the view.
 const nearestOffset = (lng: number, toLng: number) => Math.round((toLng - lng) / 360);
 
 // Which copies of each shown pin the view (padded, so a pin at the edge does
 // not pop in late) holds; a pin with none in view keeps no marker at all.
-function syncCopies(map: L.Map, layer: L.LayerGroup, entries: MapEntry[], picks: string[]) {
+function syncCopies(map: L.Map, layer: L.LayerGroup, entries: MapEntry<Spot>[], picks: string[]) {
   const bounds = map.getBounds().pad(0.25);
   const [south, north] = [bounds.getSouth(), bounds.getNorth()];
   const [west, east] = [bounds.getWest(), bounds.getEast()];
@@ -325,6 +371,37 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
   }, []);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
+  // What the map plots: the pins, or the marketplace listings that say
+  // where they are (?show=market). Only one layer at a time. The tags and
+  // posted-within filters carry over from one to the other (a listing by its
+  // pin's tags and when it was posted); the time span is a pin's alone, as a
+  // listing has no date it happens on.
+  // Read from the URL on every render, not kept as state: the map stays
+  // mounted while hidden (React Activity), so a pin's "Marketplace map" link
+  // lands on the map already open, and only the URL says which layer it wants.
+  const market = params.get('show') === 'market';
+  // ?listings=<pinId>: the older spelling of a pin's "Marketplace map" link,
+  // which now puts pin:<id> in the query (below, and so in the search box).
+  const listingPin = Number(params.get('listings')) || undefined;
+  // ?listing=<id> (a listing with no pin, linked from its chat or the
+  // seller's Listings page): centred on it with its view open. From the URL
+  // as the layer is, for a link that lands on the map already mounted.
+  const openListing = Number(params.get('listing')) || undefined;
+  // The query's tag and pin terms: all of it that says anything about a
+  // listing. A pin: term (a pin's "Marketplace map") keeps to that pin's
+  // listings, with the map fitted to them.
+  const marketParts = splitSearchQuery(query).filter((part) => part.kind === 'term' && (part.field === 'tag' || part.field === 'category' || part.field === 'pin'));
+  const marketQuery = joinSearchQuery(marketParts);
+  const marketByPin = marketParts.some((part) => part.kind === 'term' && part.field === 'pin' && !part.negated);
+  const marketLayerRef = useRef<L.LayerGroup | null>(null);
+  const marketEntriesRef = useRef<MapEntry<Spot>[]>([]);
+  // What the last fetch of listings found, for which layer (marketKey): any
+  // other layer asked for since is still loading.
+  const marketKey = market ? `market|${marketQuery}|${postedWithin ?? ''}` : null;
+  const [marketResult, setMarketResult] = useState<{ key: string; count: number; error: boolean } | null>(null);
+  const marketStatus = marketResult?.key !== marketKey ? 'loading' : marketResult.error ? 'error' : 'ready';
+  const marketCount = marketResult?.count ?? 0;
+  const [viewingListing, setViewingListing] = useState<ListingJson | null>(null);
 
   useEffect(() => {
     const spot = peekMapSpot();
@@ -342,9 +419,16 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
     map.createPane('web').style.zIndex = '350';
     webLayerRef.current = L.layerGroup().addTo(map);
     fromLayerRef.current = L.layerGroup().addTo(map);
+    // On the map only while the Marketplace is shown (the effect below).
+    const marketLayer = L.layerGroup();
+    marketLayerRef.current = marketLayer;
+    marketEntriesRef.current = [];
     // Moving sideways reaches other copies of the world: their pins come in, and
     // the ones scrolled off go.
-    map.on('moveend', () => syncCopies(map, layer, markersRef.current, categoriesRef.current));
+    map.on('moveend', () => {
+      syncCopies(map, layer, markersRef.current, categoriesRef.current);
+      syncCopies(map, marketLayer, marketEntriesRef.current, []);
+    });
     // Cache Components keeps a left page mounted and reruns its effects when
     // it is shown again (back to the pin, "To map" again): the new map
     // has not centered on anything or opened a popup yet.
@@ -373,8 +457,115 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
       layerRef.current = null;
       webLayerRef.current = null;
       fromLayerRef.current = null;
+      marketLayerRef.current = null;
     };
   }, []);
+
+  // The Marketplace shown: the pins' layers come off the map and the
+  // listings' go on, fetched afresh each time it is picked.
+  useEffect(() => {
+    const map = mapRef.current;
+    const marketLayer = marketLayerRef.current;
+    if (!map || !marketLayer) return;
+    map.closePopup();
+    for (const pinLayer of [layerRef.current, webLayerRef.current]) {
+      if (!pinLayer) continue;
+      if (market) map.removeLayer(pinLayer);
+      else map.addLayer(pinLayer);
+    }
+    marketLayer.clearLayers();
+    marketEntriesRef.current = [];
+    if (!market) {
+      map.removeLayer(marketLayer);
+      return;
+    }
+    marketLayer.addTo(map);
+    let cancelled = false;
+    const key = `market|${marketQuery}|${postedWithin ?? ''}`;
+    const searchParams = new URLSearchParams();
+    if (marketQuery) searchParams.set('q', marketQuery);
+    if (postedWithin) searchParams.set('created_within', postedWithin);
+    fetch(withPageLang(`/api/listings/map${searchParams.size ? `?${searchParams.toString()}` : ''}`))
+      .then((res) => {
+        if (!res.ok) throw new Error(res.statusText);
+        return res.json() as Promise<{ listings: ListingJson[] }>;
+      })
+      .then(({ listings }) => {
+        if (cancelled) return;
+        for (const listing of listings) {
+          if (!listing.location) continue;
+          const { latitude, longitude } = listing.location;
+          const icon = listingIcon(listing, t);
+          const open = () => {
+            map.closePopup();
+            setViewingListing(listing);
+          };
+          const make = (offset: number) => {
+            const marker = L.marker([latitude, longitude + 360 * offset], { icon, title: listingTitle(t, listing) });
+            // Opens on hover and stays while the pointer moves onto it, as a pin's does.
+            const popup = L.popup({ autoPan: false, closeButton: false, offset: [0, -24], className: 'pin-popup', minWidth: POPUP_WIDTH, maxWidth: POPUP_WIDTH })
+              .setLatLng(marker.getLatLng())
+              .setContent(() => listingPopupContent(listing, t, open));
+            let closeTimer: ReturnType<typeof setTimeout> | undefined;
+            const closeSoon = () => {
+              clearTimeout(closeTimer);
+              closeTimer = setTimeout(() => {
+                if (!cancelled) map.closePopup(popup);
+              }, 200);
+            };
+            const show = () => {
+              clearTimeout(closeTimer);
+              map.openPopup(popup);
+              const el = popup.getElement()!;
+              el.onmouseenter = () => clearTimeout(closeTimer);
+              el.onmouseleave = closeSoon;
+            };
+            marker.on({ mouseover: show, mouseout: closeSoon, click: open });
+            return marker;
+          };
+          marketEntriesRef.current.push({ pin: { latitude, longitude }, categories: [], focus: false, copies: new Map(), make });
+        }
+        if (marketByPin && marketEntriesRef.current.length) {
+          const bounds = L.latLngBounds(marketEntriesRef.current.map((e) => [e.pin.latitude!, e.pin.longitude!]));
+          map.fitBounds(bounds, { padding: [80, 80], maxZoom: 11 });
+        }
+        syncCopies(map, marketLayer, marketEntriesRef.current, []);
+        setMarketResult({ key, count: marketEntriesRef.current.length, error: false });
+      })
+      .catch(() => {
+        if (!cancelled) setMarketResult({ key, count: 0, error: true });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [market, marketByPin, marketQuery, postedWithin, t]);
+
+  // An older ?listings=<pinId> link: its filter moved into the query as a
+  // pin: term, where the search box shows it.
+  useEffect(() => {
+    if (!listingPin) return;
+    const next = new URLSearchParams(window.location.search);
+    next.delete('listings');
+    next.set('q', refineQuery(next.get('q') ?? '', 'pin', String(listingPin)));
+    router.replace(`/map?${next.toString()}`);
+  }, [listingPin, router]);
+
+  // Fetched on its own, so one off the map (sold, say) still opens.
+  useEffect(() => {
+    if (!openListing) return;
+    let cancelled = false;
+    api
+      .get<{ listing: ListingJson }>(`/api/listings/${openListing}`)
+      .then(({ listing }) => {
+        if (cancelled) return;
+        if (listing.location) mapRef.current?.setView([listing.location.latitude, listing.location.longitude], 13);
+        setViewingListing(listing);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [openListing]);
 
   useEffect(() => {
     let cancelled = false;
@@ -634,6 +825,27 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
     else router.push(href);
   }
 
+  // The layer is the URL's (?show=market), so a pick replaces it there. The
+  // query goes with it, a pin: term too: it is in the search box to take off.
+  function setMarket(next: boolean) {
+    const query = new URLSearchParams(window.location.search);
+    if (next) query.set('show', 'market');
+    else query.delete('show');
+    router.replace(query.size ? `/map?${query.toString()}` : '/map');
+  }
+
+  // Shut, a listing opened by ?listing= takes the mark off the address, so
+  // the same link opens it again.
+  function closeListing() {
+    setViewingListing(null);
+    if (!openListing) return;
+    const query = new URLSearchParams(window.location.search);
+    query.delete('listing');
+    router.replace(query.size ? `/map?${query.toString()}` : '/map');
+  }
+
+  const layerToggle = <LayerToggle market={market} onChange={(next) => next !== market && setMarket(next)} />;
+
   const phrase = (span: string | null) => spanPhrase(span, t.locale);
   const hasPast = !!past && past !== '0d';
   const hasFuture = !!future && future !== '0d';
@@ -666,9 +878,20 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
       {/* As on the timeline: top right on wide screens, folded behind pills at
           the bottom narrower. Its fixed panels stack inside this z-[1000], over
           Leaflet's panes. */}
+      {/* Pins or Marketplace: at the top of the controls' column, over
+          Filters, on wide screens; narrower in the map's top right corner on
+          its own. */}
+      {!wide ? (
+        <div className="absolute top-2.5 right-2.5 z-[1000] flex flex-col items-stretch gap-2">
+          {layerToggle}
+        </div>
+      ) : null}
+      {/* The same controls on either layer, so a filter set on one is still
+          set on the other; the time span only for the pins. */}
       <div className="relative z-[1000]">
         <FloatingControls
           merge
+          sort={wide ? layerToggle : undefined}
           typing={sliderTyping}
           tagList={tagList}
           summaryCaption={t('controls.postedWithin')}
@@ -680,27 +903,31 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
             // results, and a category pick only shows and hides markers.
             control: <TagCloud query={query} onlyWatched={watched} postedWithin={postedWithin} onQuery={go} />,
           }}
-          span={{
-            summary: eventSpanSummary(past, future, t.locale),
-            control: (
-              <TimeRangeSlider
-                steps={EVENT_SPAN_OPTIONS}
-                past={past}
-                future={future}
-                collapsible
-                onChange={(value) => {
-                  setPast(value.past);
-                  setFuture(value.future);
-                }}
-              />
-            ),
-          }}
+          span={
+            market
+              ? undefined
+              : {
+                  summary: eventSpanSummary(past, future, t.locale),
+                  control: (
+                    <TimeRangeSlider
+                      steps={EVENT_SPAN_OPTIONS}
+                      past={past}
+                      future={future}
+                      collapsible
+                      onChange={(value) => {
+                        setPast(value.past);
+                        setFuture(value.future);
+                      }}
+                    />
+                  ),
+                }
+          }
         >
           <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly collapsible onChange={(value) => setPostedWithin(value.past)} />
         </FloatingControls>
       </div>
       {/* The web toggle, with the graph above it when it is on. */}
-      {wide ? (
+      {wide && !market ? (
         <div className="absolute bottom-8 left-2.5 z-[999] flex w-[min(26rem,calc(100%-1.25rem))] flex-col items-start gap-2">
           {web === 'graph' ? (
             <div className="floating h-72 w-full overflow-hidden">
@@ -726,7 +953,17 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
       ) : null}
       {/* Narrower, clear of the pills at the bottom, and a layer under the
           controls so an open fold covers it rather than the other way round. */}
-      {status === 'loading' ? (
+      {market ? (
+        marketStatus === 'loading' ? (
+          <p role="status" className="floating absolute bottom-24 left-1/2 z-[999] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink xl:bottom-8">{t('map.loadingListings')}</p>
+        ) : marketStatus === 'error' ? (
+          <p role="alert" className="floating absolute bottom-24 left-1/2 z-[999] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
+            {t('search.unavailable')}
+          </p>
+        ) : marketCount === 0 ? (
+          <p className="floating absolute bottom-24 left-1/2 z-[999] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">{t('map.noListings')}</p>
+        ) : null
+      ) : status === 'loading' ? (
         <p role="status" className="floating absolute bottom-24 left-1/2 z-[999] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink xl:bottom-8">{t('map.loadingPins')}</p>
       ) : status === 'error' ? (
         <p role="alert" className="floating absolute bottom-24 left-1/2 z-[999] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
@@ -749,6 +986,28 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
           {t('map.period')}
         </p>
       ) : null}
+      {viewingListing ? <ListingView listing={viewingListing} onClose={closeListing} /> : null}
+    </div>
+  );
+}
+
+// Which layer the map plots: the pins, or the marketplace listings.
+function LayerToggle({ market, onChange }: { market: boolean; onChange: (market: boolean) => void }) {
+  const t = useT();
+  return (
+    <div role="group" aria-label={t('map.layer')} className="floating flex items-center gap-1 rounded-full p-1 text-sm">
+      {([false, true] as const).map((forMarket) => (
+        <button
+          key={String(forMarket)}
+          type="button"
+          aria-pressed={market === forMarket}
+          onClick={() => onChange(forMarket)}
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 font-medium ${market === forMarket ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
+        >
+          <Icon name={forMarket ? 'cart' : 'pin'} className="size-4" />
+          {forMarket ? t('map.layerMarket') : t('map.layerPins')}
+        </button>
+      ))}
     </div>
   );
 }

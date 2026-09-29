@@ -1896,5 +1896,100 @@
     ],
     "note": null,
     "utcCreatedDateTime": "2026-09-28T17:41:00.821Z"
+  },
+  {
+    "id": 78,
+    "pinId": 3800,
+    "kind": "edit",
+    "userId": 303,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://sneakerbardetroit.com/air-jordan-1-low-og-howard-university-2026/",
+        "title": "Air Jordan 1 Low OG \"Howard\" Releases October 1st",
+        "confidence": 80,
+        "publishedDate": "2026-09-17"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:00:28.231Z"
+  },
+  {
+    "id": 79,
+    "pinId": 1947,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.nasa.gov/blogs/commercialcrew/2026/09/28/nasas-spacex-crew-13-rocket-arrives-at-launch-pad/",
+        "title": "NASA's SpaceX Crew-13 Rocket Arrives at Launch Pad",
+        "confidence": 95,
+        "publishedDate": "2026-09-28"
+      },
+      {
+        "url": "https://www.nasa.gov/blogs/spacestation/2026/08/29/nasa-spacex-adjust-crew-13-launch-date/",
+        "title": "NASA, SpaceX Adjust Crew-13 Launch Date",
+        "confidence": 95,
+        "publishedDate": "2026-08-29"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:00:49.628Z"
+  },
+  {
+    "id": 80,
+    "pinId": 1945,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "SpaceX's 14th Starship test flight lifted off from Starbase, Texas at 7:48 a.m. CT on 28 September 2026 and became the first Starship to reach orbit, after 13 earlier flights that were all suborbital.\n\nOne of the ship's six engines shut down during ascent; Starship still reached orbit and released 26 Starlink V3 satellites, the first of the new generation and its first operational payload. The flight was cut from a planned ten hours to about three: the ship deorbited and splashed down in the Pacific north of Hawaii, and the Super Heavy booster splashed down in the Gulf off Starbase instead of a tower catch.",
+        "field": "description",
+        "before": "SpaceX's 14th Starship test flight lifted off from Starbase, Texas at 7:48 a.m. CT on 28 September 2026 and became the first Starship to reach orbit, after 13 earlier flights that were all suborbital.\n\nOne of the ship's six engines failed during ascent; about 22 minutes into the flight SpaceX judged it safe to continue, and Starship began releasing 26 Starlink V3 satellites, the first of the new generation and Starship's first operational payload. The Super Heavy booster made a soft splashdown in the Gulf off Starbase instead of a tower catch.\n\nThe ship was planned to fly about six orbits at roughly 275 km over nearly 10 hours before splashing down in the Pacific west of Chile."
+      },
+      {
+        "after": "<ul><li>Starship lifted off from Starbase at 7:48 a.m. CT on 28 September 2026, 33 minutes into a window that opened at 7:15, and reached orbit around 8:15 a.m. local time &mdash; the first time in 14 test flights, none of the 13 before it having been meant to<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The FAA told CNBC it issued the &ldquo;license authorization for the SpaceX Starship Super Heavy Flight 14 launch and reentry operations&rdquo; on 26 September, two days before launch<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite></li><li>One of the ship's six engines failed during ascent, and about 22 minutes into the flight SpaceX decided it was safe to carry on to orbit<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Twenty-six Starlink V3 satellites were placed in orbit, the first time functional Starlink satellites of the new generation have been carried by Starship; three carry cameras to record data on the heat shield<cite data-ref=\"https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The plan was about six orbits over ten hours, but SpaceX ended the mission at its first scheduled checkpoint, about three hours after launch, and the ship splashed down in the Pacific north of Hawaii just before noon ET; SpaceX said it limited time on orbit &ldquo;out of an abundance of caution&rdquo; after the engine problem, and called the flight a success for reaching orbit and adding Starlink satellites<cite data-ref=\"https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227\"></cite></li><li>The Super Heavy booster separated, performed a boostback burn and made a &ldquo;soft splashdown&rdquo; in the Gulf off Starbase, rather than a return to the launch tower; ABC reports problems with two booster engines as well as the ship's<cite data-ref=\"https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>One Starship can carry 60 Starlink V3 satellites, about 20 times a Falcon 9 launch, and Starship is the only vehicle able to launch the larger V3 satellites; SpaceX did not comment on plans for the next flight<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227\"></cite></li><li>Starship is key to SpaceX's growth after its June IPO, the largest on record, which values it at about $2 trillion; it also underpins NASA's plan to land astronauts on the Moon, with an Orion docking test planned for Artemis III late next year<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Before launch, Kalshi priced liftoff before 29 September at 55% and Polymarket put a launch by 30 September at 73%<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite><cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Starship lifted off from Starbase at 7:48 a.m. CT on 28 September 2026, 33 minutes into a window that opened at 7:15, and reached orbit around 8:15 a.m. local time &mdash; the first time in 14 test flights, none of the 13 before it having been meant to<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The FAA told CNBC it issued the &ldquo;license authorization for the SpaceX Starship Super Heavy Flight 14 launch and reentry operations&rdquo; on 26 September, two days before launch<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite></li><li>One of the six engines on the ship failed during ascent, and about 22 minutes into the flight SpaceX decided it was safe to carry on to orbit<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>SpaceX began releasing the 26 Starlink V3 satellites around 8:25 a.m. local time; three of them carry cameras to record data on Starship's heat shield<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The Super Heavy booster made a &ldquo;soft splashdown&rdquo; off Starbase, simulating an offshore landing in the Gulf rather than a return to the launch tower<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The flight plan is about six orbits at roughly 170 miles over 10 hours, ending in a Pacific splashdown off Chile; SpaceX built in points where Starship could abort its orbital trajectory and return safely<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>One Starship can carry 60 Starlink V3 satellites, about 20 times a Falcon 9 launch, and Starship is the only vehicle able to launch the larger V3 satellites<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Starship is key to SpaceX's growth after its June IPO, the largest on record, which values it at about $2 trillion; it also underpins NASA's plan to land astronauts on the Moon, with an Orion docking test planned for Artemis III late next year<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Before launch, Kalshi priced liftoff before 29 September at 55% and Polymarket put a launch by 30 September at 73%<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite><cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://abcnews.com/US/spacex-attempt-starships-1st-orbital-flight-test/story?id=136805227",
+        "title": "SpaceX Starship splashes down after successful 1st orbital flight test - ABC News",
+        "confidence": 88,
+        "publishedDate": "2026-09-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:07:48.254Z"
+  },
+  {
+    "id": 81,
+    "pinId": 2981,
+    "kind": "edit",
+    "userId": 374,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The Supreme Court hears Suncor Energy (U.S.A.) Inc. v. County Commissioners of Boulder County, No. 25-170, on Monday 5 October 2026 as the first case of its October Term 2026; the Court convenes at 10 a.m.<cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite><cite data-ref=\"https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOctober2026.pdf\"></cite><cite data-ref=\"https://www.scotusblog.com/2026/08/court-announces-cases-it-will-hear-in-october-which-include-significant-disputes-on-climate-chan/\"></cite></li><li>On 28 September Justice Samuel Alito told the parties in a clerk's letter that he &ldquo;will not continue to participate&rdquo; in the case, so it will be decided by eight justices and a 4-4 split becomes possible; the letter gave no reason<cite data-ref=\"https://www.scotusblog.com/2026/09/justice-alito-will-no-longer-participate-in-climate-change-dispute/\"></cite></li><li>The question is whether federal law precludes state-law claims seeking relief for injuries allegedly caused by the effects of interstate and international greenhouse-gas emissions on the global climate<cite data-ref=\"https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/\"></cite></li><li>Granting review on 23 February 2026, the Court also told the parties to argue whether it has statutory and Article III jurisdiction to hear the case<cite data-ref=\"https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>The City of Boulder, Boulder County and San Miguel County sued ExxonMobil and Suncor entities in April 2018, alleging they knowingly contributed to climate change while concealing the dangers of their products<cite data-ref=\"https://bouldercounty.gov/news/u-s-supreme-court-decides-to-hear-climate-case-against-exxonmobil-and-suncor-entities/\"></cite><cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite></li><li>The Colorado Supreme Court ruled on 12 May 2025 that federal law did not preempt the claims, letting them proceed under state law<cite data-ref=\"https://bouldercounty.gov/news/u-s-supreme-court-decides-to-hear-climate-case-against-exxonmobil-and-suncor-entities/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>The Justice Department filed an amicus brief backing the oil companies, and on 4 September 2026 the Court let the Solicitor General take part in the argument<cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>A ruling for the companies could end more than two dozen climate liability suits pending in state courts<cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite></li><li>Johnson v. United States Congress is the second case argued that morning<cite data-ref=\"https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOctober2026.pdf\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Supreme Court hears Suncor Energy (U.S.A.) Inc. v. County Commissioners of Boulder County, No. 25-170, on Monday 5 October 2026 as the first case of its October Term 2026; the Court convenes at 10 a.m.<cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite><cite data-ref=\"https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOctober2026.pdf\"></cite><cite data-ref=\"https://www.scotusblog.com/2026/08/court-announces-cases-it-will-hear-in-october-which-include-significant-disputes-on-climate-chan/\"></cite></li><li>The question is whether federal law precludes state-law claims seeking relief for injuries allegedly caused by the effects of interstate and international greenhouse-gas emissions on the global climate<cite data-ref=\"https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/\"></cite></li><li>Granting review on 23 February 2026, the Court also told the parties to argue whether it has statutory and Article III jurisdiction to hear the case<cite data-ref=\"https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>The City of Boulder, Boulder County and San Miguel County sued ExxonMobil and Suncor entities in April 2018, alleging they knowingly contributed to climate change while concealing the dangers of their products<cite data-ref=\"https://bouldercounty.gov/news/u-s-supreme-court-decides-to-hear-climate-case-against-exxonmobil-and-suncor-entities/\"></cite><cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite></li><li>The Colorado Supreme Court ruled on 12 May 2025 that federal law did not preempt the claims, letting them proceed under state law<cite data-ref=\"https://bouldercounty.gov/news/u-s-supreme-court-decides-to-hear-climate-case-against-exxonmobil-and-suncor-entities/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>The Justice Department filed an amicus brief backing the oil companies, and on 4 September 2026 the Court let the Solicitor General take part in the argument<cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite><cite data-ref=\"https://www.supremecourt.gov/docket/docketfiles/html/public/25-170.html\"></cite></li><li>A ruling for the companies could end more than two dozen climate liability suits pending in state courts<cite data-ref=\"https://insideclimatenews.org/news/23082026/suncor-v-boulder-supreme-court-climate-case/\"></cite></li><li>Johnson v. United States Congress is the second case argued that morning<cite data-ref=\"https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOctober2026.pdf\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.scotusblog.com/2026/09/justice-alito-will-no-longer-participate-in-climate-change-dispute/",
+        "title": "Justice Alito will no longer participate in climate change dispute - SCOTUSblog",
+        "confidence": 92,
+        "publishedDate": "2026-09-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:08:30.174Z"
   }
 ]

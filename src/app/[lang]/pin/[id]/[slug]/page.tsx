@@ -367,10 +367,12 @@ function PinBody({
             <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-9 text-sm" />
             {pin.user.userName}
           </RefineLink>
-          <span className="flex flex-wrap items-center gap-2">
-            <MessageButton user={{ id: pin.user.id, userName: pin.user.userName, pictureUrl: pin.user.pictureUrl }} />
-            <FollowButton userId={pin.user.id} userName={pin.user.userName} showCount />
-          </span>
+          <FollowButton
+            userId={pin.user.id}
+            userName={pin.user.userName}
+            showCount
+            beside={<MessageButton user={{ id: pin.user.id, userName: pin.user.userName, pictureUrl: pin.user.pictureUrl }} />}
+          />
         </div>
       ) : null}
 

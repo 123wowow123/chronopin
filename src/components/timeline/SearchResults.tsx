@@ -577,10 +577,12 @@ export function SearchResults({
                     {blocks.ids.has(searchedUser.id) ? (
                       <p className="text-sm text-muted">{t('profile.blocked')}</p>
                     ) : (
-                      <span className="flex flex-wrap items-center gap-2">
-                        <MessageButton user={{ id: searchedUser.id, userName: searchedUser.userName, pictureUrl: null }} />
-                        <FollowButton userId={searchedUser.id} userName={searchedUser.userName} showCount />
-                      </span>
+                      <FollowButton
+                        userId={searchedUser.id}
+                        userName={searchedUser.userName}
+                        showCount
+                        beside={<MessageButton user={{ id: searchedUser.id, userName: searchedUser.userName, pictureUrl: null }} />}
+                      />
                     )}
                   </div>
                 ) : null}

@@ -1,12 +1,14 @@
 'use client';
 
 import { Fragment, useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Icon } from '@/components/ui/Icon';
 import { ReactionPicker } from '@/components/ui/ReactionPicker';
 import { MessageMenu } from './MessageMenu';
 import { ChatListingBar } from '@/components/listings/ChatListingBar';
 import type { ChatListing } from '@/lib/listings';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { blobUrl } from '@/lib/appConfig';
 import { api, ApiError, isEmailUnverified } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import { onLive, onLiveReconnect } from '@/lib/client/liveFeed';
@@ -28,13 +30,68 @@ type Thread = {
 
 // A message on its way: shown at once, swapped for the saved one when the
 // server answers, or marked to try again.
-type Pending = { key: string; body: string; failed: boolean; replyToId: number | null };
+type Pending = { key: string; body: string; images: string[]; failed: boolean; replyToId: number | null };
+
+// A photo in the composer: shown from the file at once, sendable once the
+// upload names it.
+type Draft = { key: string; preview: string; name: string | null };
 
 // Messages this close together from one sender run as one group; a gap this
 // long gets the time centred above it, as Messenger does.
 const GROUP_MS = 5 * 60_000;
 const STAMP_MS = 15 * 60_000;
 const MAX_LENGTH = 4000;
+const MAX_PHOTOS = 10;
+const PHOTO_MAX_BYTES = 15 * 1024 * 1024;
+
+const sameImages = (a: string[], b: string[]) => a.length === b.length && a.every((name, i) => name === b[i]);
+
+// A message's photos, above its text: one at a natural size, several as a
+// grid of squares. A press shows one full size.
+function Photos({ images, onOpen }: { images: string[]; onOpen: (src: string) => void }) {
+  const t = useT();
+  if (images.length === 1) {
+    const src = blobUrl(images[0])!;
+    return (
+      <button type="button" onClick={() => onOpen(src)} aria-label={t('dm.viewPhoto')} className="block overflow-hidden rounded-[18px] bg-raised">
+        <img src={src} alt="" className="max-h-72 max-w-full object-contain" />
+      </button>
+    );
+  }
+  return (
+    <div className={`grid gap-0.5 overflow-hidden rounded-[18px] ${images.length === 2 || images.length === 4 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+      {images.map((name) => {
+        const src = blobUrl(name)!;
+        return (
+          <button key={name} type="button" onClick={() => onOpen(src)} aria-label={t('dm.viewPhoto')} className="block size-24 bg-raised sm:size-28">
+            <img src={src} alt="" className="size-full object-cover" />
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+// One photo full size over the page; Escape or a press anywhere shuts it.
+function PhotoViewer({ src, onClose }: { src: string; onClose: () => void }) {
+  const t = useT();
+  useEffect(() => {
+    const key = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', key);
+    return () => document.removeEventListener('keydown', key);
+  }, [onClose]);
+  return createPortal(
+    <div role="dialog" aria-modal="true" aria-label={t('dm.viewPhoto')} onClick={onClose} className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4">
+      <button type="button" aria-label={t('common.close')} className="absolute top-3 right-3 flex size-10 items-center justify-center rounded-full text-white hover:bg-white/10">
+        <Icon name="close" className="size-6" />
+      </button>
+      <img src={src} alt="" className="max-h-full max-w-full object-contain" />
+    </div>,
+    document.body,
+  );
+}
 
 const URL_RE = /(https?:\/\/[^\s<]+[^\s<.,;:!?)\]'"])/g;
 
@@ -141,6 +198,10 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
   const [failed, setFailed] = useState(false);
   const [pending, setPending] = useState<Pending[]>([]);
   const [draft, setDraft] = useState('');
+  const [photos, setPhotos] = useState<Draft[]>([]);
+  const [viewing, setViewing] = useState<string | null>(null);
+  const [dragging, setDragging] = useState(false);
+  const fileInput = useRef<HTMLInputElement>(null);
   // The message the composer answers, if any ("Replying to").
   const [replyTo, setReplyTo] = useState<ChatMessage | null>(null);
   // An answered message just jumped to, lit for a moment.
@@ -200,7 +261,7 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
           // Sent from this tab: the saved message stands in for the one on its way.
           if (me && message.senderId === me.id) {
             setPending((list) => {
-              const i = list.findIndex((p) => !p.failed && p.body === message.body);
+              const i = list.findIndex((p) => !p.failed && p.body === message.body && sameImages(p.images, message.images));
               return i < 0 ? list : [...list.slice(0, i), ...list.slice(i + 1)];
             });
           }
@@ -213,7 +274,7 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
 
   // A message changed (unsent): it, and every quote of it in a reply below.
   function replaceMessage(message: ChatMessage) {
-    const quoted = { id: message.id, senderId: message.senderId, body: message.body, unsent: message.unsent };
+    const quoted = { id: message.id, senderId: message.senderId, body: message.body, images: message.images.length, unsent: message.unsent };
     setThread((current) =>
       current
         ? {
@@ -278,14 +339,14 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
     if (el.scrollTop < 60) void loadOlder();
   }
 
-  async function send(body: string, replyToId: number | null, retryKey?: string) {
+  async function send(body: string, replyToId: number | null, images: string[] = [], retryKey?: string) {
     const text = body.trim();
-    if (!text || thread?.blocked) return;
+    if ((!text && !images.length) || thread?.blocked) return;
     const key = retryKey ?? String(++nextKey.current);
-    setPending((list) => (retryKey ? list.map((p) => (p.key === key ? { ...p, failed: false } : p)) : [...list, { key, body: text, failed: false, replyToId }]));
+    setPending((list) => (retryKey ? list.map((p) => (p.key === key ? { ...p, failed: false } : p)) : [...list, { key, body: text, images, failed: false, replyToId }]));
     stickToBottom.current = true;
     try {
-      const { message } = await api.post<{ message: ChatMessage }>(`/api/messages/${userId}`, { body: text, replyToId });
+      const { message } = await api.post<{ message: ChatMessage }>(`/api/messages/${userId}`, { body: text, images, replyToId });
       setThread((current) =>
         current && !current.messages.some((m) => m.id === message.id) ? { ...current, messages: [...current.messages, message] } : current,
       );
@@ -298,12 +359,55 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
     }
   }
 
+  const uploading = photos.some((p) => !p.name);
+  const canSend = !uploading && (!!draft.trim() || photos.length > 0);
+
   function submit() {
-    if (!draft.trim()) return;
-    void send(draft, replyTo?.id ?? null);
+    if (!canSend) return;
+    void send(draft, replyTo?.id ?? null, photos.map((p) => p.name!));
+    for (const p of photos) URL.revokeObjectURL(p.preview);
     setDraft('');
+    setPhotos([]);
     setReplyTo(null);
+    if (input.current) input.current.style.height = 'auto';
     requestAnimationFrame(() => input.current?.focus());
+  }
+
+  // Photos pasted, dropped or picked: each is uploaded at once and shown
+  // while it goes; one that fails is taken off with a note.
+  function addPhotos(files: File[]) {
+    const images = files.filter((f) => f.type.startsWith('image/'));
+    if (!images.length || !thread || thread.blocked) return;
+    const room = MAX_PHOTOS - photos.length;
+    if (images.length > room) setNotice(t('dm.tooManyPhotos', { count: MAX_PHOTOS }));
+    for (const file of images.slice(0, Math.max(room, 0))) {
+      if (file.size > PHOTO_MAX_BYTES) {
+        setNotice(t('dm.photoTooLarge'));
+        continue;
+      }
+      const key = `photo-${++nextKey.current}`;
+      const preview = URL.createObjectURL(file);
+      setPhotos((list) => [...list, { key, preview, name: null }]);
+      const form = new FormData();
+      form.append('file', file);
+      api
+        .post<{ name: string }>('/api/messages/media', form)
+        .then(({ name }) => setPhotos((list) => list.map((p) => (p.key === key ? { ...p, name } : p))))
+        .catch((err) => {
+          setNotice(isEmailUnverified(err) ? t('dm.verifyFirst') : t('dm.photoFailed'));
+          URL.revokeObjectURL(preview);
+          setPhotos((list) => list.filter((p) => p.key !== key));
+        });
+    }
+    input.current?.focus();
+  }
+
+  function removePhoto(key: string) {
+    setPhotos((list) => {
+      const gone = list.find((p) => p.key === key);
+      if (gone) URL.revokeObjectURL(gone.preview);
+      return list.filter((p) => p.key !== key);
+    });
   }
 
   function startReply(message: ChatMessage) {
@@ -327,8 +431,12 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
     return to.senderId === m.senderId ? t('dm.theyRepliedSelf', { name }) : t('dm.theyRepliedYou', { name });
   };
   // An unsent original reads as the unsent message itself does.
-  const quoteOf = (to: { senderId: number; body: string; unsent: boolean }) =>
-    to.unsent ? (to.senderId === me?.id ? t('dm.youUnsent') : t('dm.theyUnsent', { name: thread?.with.userName ?? '' })) : to.body;
+  const quoteOf = (to: { senderId: number; body: string; images: number | string[]; unsent: boolean }) =>
+    to.unsent
+      ? to.senderId === me?.id
+        ? t('dm.youUnsent')
+        : t('dm.theyUnsent', { name: thread?.with.userName ?? '' })
+      : to.body || t('dm.photos', { count: typeof to.images === 'number' ? to.images : to.images.length });
 
   const locale = INTL_LOCALES[t.locale];
   const messages = thread?.messages ?? [];
@@ -339,7 +447,29 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
   const seenId = seenAt && me && seenAt.senderId === me.id ? seenAt.id : null;
 
   return (
-    <div className={`flex min-h-0 flex-col ${className}`}>
+    <div
+      className={`relative flex min-h-0 flex-col ${className}`}
+      onDragOver={(event) => {
+        if (!thread || thread.blocked || !event.dataTransfer.types.includes('Files')) return;
+        event.preventDefault();
+        setDragging(true);
+      }}
+      onDragLeave={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setDragging(false);
+      }}
+      onDrop={(event) => {
+        if (!event.dataTransfer.files.length) return;
+        event.preventDefault();
+        setDragging(false);
+        addPhotos([...event.dataTransfer.files]);
+      }}
+    >
+      {dragging ? (
+        <div className="pointer-events-none absolute inset-1 z-10 flex items-center justify-center rounded-xl border-2 border-dashed border-accent bg-surface/80 text-sm font-semibold text-accent">
+          {t('dm.dropPhotos')}
+        </div>
+      ) : null}
+      {viewing ? <PhotoViewer src={viewing} onClose={() => setViewing(null)} /> : null}
       {thread?.listings?.length && me && other ? (
         <ChatListingBar
           listings={thread.listings}
@@ -379,7 +509,7 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
               const joinsNext = next && next.senderId === m.senderId && Date.parse(next.utcCreatedDateTime) - at < GROUP_MS;
               const joinsPrev = prev && !stamp && prev.senderId === m.senderId && at - Date.parse(prev.utcCreatedDateTime) < GROUP_MS;
               const mine = m.senderId === me?.id;
-              const emoji = !m.unsent && isEmojiOnly(m.body);
+              const emoji = !m.unsent && !m.images.length && isEmojiOnly(m.body);
               const reply = (
                 <button
                   type="button"
@@ -432,9 +562,15 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
                           {quoteOf(m.replyTo)}
                         </button>
                       ) : null}
-                      <div
-                        title={stampOf(m.utcCreatedDateTime, locale)}
-                        className={`relative ${
+                      {!m.unsent && m.images.length ? (
+                        <div title={stampOf(m.utcCreatedDateTime, locale)} className={`max-w-full ${m.body ? 'mb-0.5' : ''}`}>
+                          <Photos images={m.images} onOpen={setViewing} />
+                        </div>
+                      ) : null}
+                      {m.unsent || m.body ? (
+                        <div
+                          title={stampOf(m.utcCreatedDateTime, locale)}
+                          className={`relative ${
                           m.unsent
                             ? 'rounded-[18px] px-3 py-1.5 text-[15px] leading-snug text-muted italic ring-1 ring-line ring-inset'
                             : emoji
@@ -444,8 +580,9 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
                                 }`
                         }`}
                       >
-                        {m.unsent ? (mine ? t('dm.youUnsent') : t('dm.theyUnsent', { name: other?.userName ?? '' })) : <Linked text={m.body} />}
-                      </div>
+                          {m.unsent ? (mine ? t('dm.youUnsent') : t('dm.theyUnsent', { name: other?.userName ?? '' })) : <Linked text={m.body} />}
+                        </div>
+                      ) : null}
                     </div>
                     {!mine ? menu : null}
                   </div>
@@ -459,11 +596,20 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
             })}
             {pending.map((p) => (
               <div key={p.key} className="mt-2 flex flex-col items-end">
-                <div className={`max-w-[75%] rounded-[18px] px-3 py-1.5 text-[15px] leading-snug break-words whitespace-pre-wrap ${isEmojiOnly(p.body) ? 'bg-transparent text-4xl' : 'bg-accent text-white'} ${p.failed ? 'opacity-50' : 'opacity-70'}`}>
-                  {p.body}
-                </div>
+                {p.images.length ? (
+                  <div className={`mb-0.5 max-w-[75%] ${p.failed ? 'opacity-50' : 'opacity-70'}`}>
+                    <Photos images={p.images} onOpen={setViewing} />
+                  </div>
+                ) : null}
+                {p.body ? (
+                  <div
+                    className={`max-w-[75%] rounded-[18px] px-3 py-1.5 text-[15px] leading-snug break-words whitespace-pre-wrap ${!p.images.length && isEmojiOnly(p.body) ? 'bg-transparent text-4xl' : 'bg-accent text-white'} ${p.failed ? 'opacity-50' : 'opacity-70'}`}
+                  >
+                    {p.body}
+                  </div>
+                ) : null}
                 {p.failed ? (
-                  <button type="button" className="mt-0.5 text-xs text-danger" onClick={() => void send(p.body, p.replyToId, p.key)}>
+                  <button type="button" className="mt-0.5 text-xs text-danger" onClick={() => void send(p.body, p.replyToId, p.images, p.key)}>
                     {t('dm.notSent')}
                   </button>
                 ) : null}
@@ -497,6 +643,29 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
               </button>
             </div>
           ) : null}
+          {photos.length ? (
+            <div className="flex gap-2 overflow-x-auto px-2 pt-1.5 pb-2">
+              {photos.map((p) => (
+                <div key={p.key} className="relative size-16 shrink-0">
+                  <img src={p.preview} alt="" className={`size-full rounded-xl object-cover ${p.name ? '' : 'opacity-50'}`} />
+                  {p.name ? null : (
+                    <span className="absolute inset-0 flex items-center justify-center">
+                      <span className="size-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                    </span>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => removePhoto(p.key)}
+                    aria-label={t('dm.removePhoto')}
+                    title={t('dm.removePhoto')}
+                    className="absolute -top-1.5 -right-1.5 flex size-5 items-center justify-center rounded-full bg-raised-2 text-ink shadow ring-1 ring-line"
+                  >
+                    <Icon name="close" className="size-3" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          ) : null}
           <form
             className="flex items-end gap-1.5"
             onSubmit={(event) => {
@@ -504,6 +673,27 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
               submit();
             }}
           >
+            <input
+              ref={fileInput}
+              type="file"
+              accept="image/*"
+              multiple
+              hidden
+              onChange={(event) => {
+                addPhotos([...(event.target.files ?? [])]);
+                event.target.value = '';
+              }}
+            />
+            <button
+              type="button"
+              aria-label={t('dm.addPhoto')}
+              title={t('dm.addPhoto')}
+              disabled={!thread || photos.length >= MAX_PHOTOS}
+              onClick={() => fileInput.current?.click()}
+              className="flex size-9 shrink-0 items-center justify-center rounded-full text-accent hover:bg-raised disabled:opacity-40"
+            >
+              <Icon name="image" className="size-5" />
+            </button>
             <textarea
               ref={input}
               rows={1}
@@ -512,6 +702,15 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
               placeholder={t('dm.compose')}
               aria-label={t('dm.compose')}
               disabled={!thread}
+              onPaste={(event) => {
+                // A copied picture (a screenshot, "Copy image") is attached.
+                // Text wins when there is some: Word and others put a picture
+                // of the copied text on the clipboard beside it.
+                const files = [...event.clipboardData.files].filter((f) => f.type.startsWith('image/'));
+                if (!files.length || event.clipboardData.getData('text/plain')) return;
+                event.preventDefault();
+                addPhotos(files);
+              }}
               onChange={(event) => {
                 setDraft(event.target.value);
                 const el = event.target;
@@ -532,8 +731,14 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
               }}
               className="max-h-[120px] min-h-9 flex-1 resize-none rounded-[18px] bg-field px-3.5 py-2 text-[15px] leading-5 text-ink placeholder:text-subtle focus:outline-none"
             />
-            {draft.trim() ? (
-              <button type="submit" aria-label={t('dm.send')} title={t('dm.send')} className="flex size-9 shrink-0 items-center justify-center rounded-full text-accent hover:bg-raised">
+            {draft.trim() || photos.length ? (
+              <button
+                type="submit"
+                disabled={!canSend}
+                aria-label={t('dm.send')}
+                title={t('dm.send')}
+                className="flex size-9 shrink-0 items-center justify-center rounded-full text-accent hover:bg-raised disabled:opacity-40"
+              >
                 <Icon name="send" className="size-5" />
               </button>
             ) : (

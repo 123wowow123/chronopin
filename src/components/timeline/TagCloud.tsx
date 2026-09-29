@@ -11,7 +11,7 @@ import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
 import { cloudSteps, cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, tagMembers, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
-import { holdDrawerForPick, leaveDrawerForCloud, onOpenTagCloud, returnToDrawer } from '@/lib/client/controlsDrawer';
+import { holdDrawerForPick, leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
 import { mergedSection, useInDrawerPanel, useMergedPanel, useTagFoldOpen, useTagList } from './FloatingControls';
 import { iconButton, PanelHeader } from './PanelHeader';
 import { WordCloud } from './WordCloud';
@@ -318,14 +318,12 @@ export function TagCloud({
   const clear = () => go((q) => reserved.reduce(withoutReserved, [...selected, ...excluded].reduce(withoutTag, q)), [], [], []);
 
   const openCloud = () => {
-    // From the drawer, the cloud would open under it; closing it goes back.
+    // From the drawer, the cloud would open under it; closing the cloud
+    // leaves the drawer shut, back on the page.
     if (inDrawer) leaveDrawerForCloud();
     setExpanded(true);
   };
-  const closeCloud = () => {
-    setExpanded(false);
-    if (inDrawer) returnToDrawer();
-  };
+  const closeCloud = () => setExpanded(false);
   // The tags pill between lg and xl, when there is no list for it to fold out.
   useEffect(() => (listed ? undefined : onOpenTagCloud(openCloud)));
 
@@ -460,7 +458,6 @@ export function TagCloud({
           onToggleReserved={toggleReserved}
           onClear={clear}
           onClose={closeCloud}
-          back={listed ? null : inDrawer ? t('nav.backToMenu') : t('tagCloud.close')}
         />
       ) : null}
     </div>
@@ -672,7 +669,6 @@ function TagCloudView({
   onToggleReserved,
   onClear,
   onClose,
-  back,
 }: {
   countsUrl: string;
   selected: string[];
@@ -685,10 +681,6 @@ function TagCloudView({
   onToggleReserved: (name: string) => void;
   onClear: () => void;
   onClose: () => void;
-  // With no tag list the cloud is the tags' own page rather than a view
-  // blown up from the panel, so below lg an arrow leading its header (named
-  // this) goes back where it was opened from, in place of the close button.
-  back: string | null;
 }) {
   const titleId = useId();
   const t = useT();
@@ -768,13 +760,6 @@ function TagCloudView({
       <div aria-hidden onClick={onClose} className="absolute inset-0 bg-black/55 backdrop-blur-[2px]" />
       <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="floating relative flex size-full flex-col overflow-hidden max-sm:rounded-none max-sm:border-0">
         <div className="flex items-center gap-3 border-b border-line px-5 py-3 max-sm:flex-wrap max-sm:px-3">
-          {back ? (
-            // Below lg only, where there is a drawer to go back to; wider, the
-            // close button at the other end stays.
-            <button type="button" onClick={onClose} className={`${iconButton} -ml-1.5 shrink-0 max-sm:-mr-1.5 lg:hidden`} aria-label={back} title={back}>
-              <Icon name="back" className="size-5" />
-            </button>
-          ) : null}
           <Icon name="tag" className="size-5 shrink-0 text-link" />
           <h2 id={titleId} className="shrink-0 text-base font-semibold text-ink">
             {t('tagCloud.title')}
@@ -788,7 +773,7 @@ function TagCloudView({
                 <Icon name="filter-off" className="size-5" />
               </button>
             ) : null}
-            <button type="button" onClick={onClose} className={`${iconButton} ${back ? 'max-lg:hidden' : ''}`} aria-label={t('tagCloud.close')}>
+            <button type="button" onClick={onClose} className={iconButton} aria-label={t('tagCloud.close')}>
               <Icon name="close" className="size-5" />
             </button>
           </span>

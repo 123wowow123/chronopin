@@ -51,6 +51,9 @@ export type OkfPin = {
   links: { sourceId: number; role: 'source' | 'reference' }[];
   // Its tags (PinTagView), which become frontmatter tags and tag concepts.
   tags?: PinTagJson[];
+  // Its tone as news for its company (PinSentiment, -1..1), the product line
+  // it is about, and the start of the hash of the text they were read from.
+  sentiment?: { score: number; product: string | null; textHash: string } | null;
 };
 
 /* YAML frontmatter */
@@ -257,6 +260,11 @@ export function okfBundle(pins: OkfPin[], sources: OkfSource[], { recheckDays = 
         event_start: at(pin.utcStartDateTime),
         event_end: at(pin.utcEndDateTime),
         all_day: pin.allDay,
+        // Scored from the title and summary: a hash that no longer matches
+        // them means the score is due again; a pin without one never was.
+        sentiment: pin.sentiment
+          ? { score: pin.sentiment.score, product: pin.sentiment.product ?? undefined, text_hash: pin.sentiment.textHash }
+          : undefined,
       })}\n\n${body}\n`,
     );
   }

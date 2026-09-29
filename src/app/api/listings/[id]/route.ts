@@ -1,5 +1,5 @@
 import type { NextRequest } from 'next/server';
-import { requireUser } from '@/server/auth';
+import { getUser, requireUser } from '@/server/auth';
 import { requireVerifiedEmail } from '@/server/emailVerification';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
 import Listing from '@/server/model/listing';
@@ -8,8 +8,10 @@ import { deleteListingMedia, readListingInput } from '@/server/services/listings
 
 type Ctx = RouteContext<'/api/listings/[id]'>;
 
-export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
-  const listing = await Listing.get(intParam((await ctx.params).id));
+// With the viewer's own `asked`: whether they already have a chat about it.
+export const GET = route(async (request: NextRequest, ctx: Ctx) => {
+  const [id, viewer] = await Promise.all([ctx.params.then((p) => intParam(p.id)), getUser(request)]);
+  const listing = await Listing.get(id, viewer?.id ?? null);
   if (!listing) throw new HttpError(404, 'Not Found');
   return json({ listing });
 });

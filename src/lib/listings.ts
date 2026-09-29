@@ -102,7 +102,8 @@ export const DETAIL_FIELDS: Record<ListingKind, ListingField[]> = {
 // Photos per kind, as Marketplace allows; a job has one cover photo.
 export const PHOTO_LIMIT: Record<ListingKind, number> = { item: 10, vehicle: 20, home: 50, job: 1 };
 export const hasVideo = (kind: ListingKind) => kind !== 'job';
-// A job may go without a picture; everything else is sold on one.
+// A job may go without a picture; everything else is sold on at least one
+// photo or its video.
 export const needsPhoto = (kind: ListingKind) => kind !== 'job';
 // A vehicle and a home are named by their details, not a typed title.
 export const hasTitleField = (kind: ListingKind) => kind === 'item' || kind === 'job';
@@ -131,7 +132,8 @@ export type ListingInput = {
 // A listing as the API sends it.
 export type ListingJson = ListingInput & {
   id: number;
-  pinId: number;
+  // Null for one posted from Create on its own (0097).
+  pinId: number | null;
   kind: ListingKind;
   status: ListingStatus;
   currency: string;
@@ -139,6 +141,9 @@ export type ListingJson = ListingInput & {
   utcUpdatedDateTime: string;
   seller: { id: number; userName: string; pictureUrl: string | null };
   sellerRating: RatingSummary;
+  // For a signed-in viewer: whether a chat they are in has already asked
+  // about it (the view then offers that chat instead of a first message).
+  asked?: boolean;
   // The pin's title, on the seller's own list.
   pinTitle?: string;
   // Chats about it, on the seller's own list.
@@ -146,6 +151,12 @@ export type ListingJson = ListingInput & {
 };
 
 export type RatingSummary = { average: number | null; count: number };
+
+// Where a listing opens: on its pin, or on the map's Marketplace layer for
+// one with no pin (PinsMap takes ?listing=).
+export function listingHref(listing: { id: number; pinId: number | null }): string {
+  return listing.pinId ? `/pin/${listing.pinId}?listing=${listing.id}` : `/map?show=market&listing=${listing.id}`;
+}
 
 // The name a vehicle goes by: "2019 Toyota Camry".
 export function vehicleTitle(details: ListingDetails): string {
@@ -195,7 +206,7 @@ export function listingProblem(kind: ListingKind, input: ListingInput): ListingP
     if (bad) return { field: field.name, code: 'invalid' };
   }
   if (kind === 'job' && typeof input.details.maxPay === 'number' && input.details.maxPay < input.price) return { field: 'maxPay', code: 'invalid' };
-  if (needsPhoto(kind) && !input.photos.length) return { field: 'photos', code: 'required' };
+  if (needsPhoto(kind) && !input.photos.length && !input.video) return { field: 'photos', code: 'required' };
   if (input.photos.length > PHOTO_LIMIT[kind]) return { field: 'photos', code: 'tooMany' };
   if (input.video && !hasVideo(kind)) return { field: 'video', code: 'invalid' };
   if (!input.location) return { field: 'location', code: 'required' };
@@ -257,13 +268,15 @@ export function ratingProblem(role: RatingRole, input: { stars?: unknown; tags?:
 // once the turns reach RATING_TURNS.
 export type ChatListing = {
   id: number;
-  pinId: number;
+  pinId: number | null;
   kind: ListingKind;
   title: string;
   price: number | null;
   currency: string;
   status: ListingStatus;
   photo: string | null;
+  // Its video, the picture for a listing sold on one alone.
+  video: string | null;
   sellerId: number;
   // Turns since the first message about it, up to `throughMessageId`, and
   // who spoke last - the chat adds any newer messages itself.

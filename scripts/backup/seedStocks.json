@@ -25811,6 +25811,66 @@
       "utcRemovedDateTime": null,
       "relation": "related",
       "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 2679,
+      "pinId": 1947,
+      "symbol": "SPCX",
+      "name": "SpaceX",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-29T14:00:49.675Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the rocket, satellite and AI company leading the full-scale Terafab with Tesla"
+    },
+    {
+      "id": 2680,
+      "pinId": 1945,
+      "symbol": "SPCX",
+      "name": "SpaceX",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-29T14:07:48.328Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the rocket, satellite and AI company leading the full-scale Terafab with Tesla"
+    },
+    {
+      "id": 2681,
+      "pinId": 4830,
+      "symbol": "F",
+      "name": "Ford Motor",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-29T14:10:10.456Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "which builds vehicles in Canada and fell 3.2% on the announcement"
+    },
+    {
+      "id": 2682,
+      "pinId": 4830,
+      "symbol": "GM",
+      "name": "General Motors",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-29T14:10:10.589Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "which builds vehicles in Canada"
+    },
+    {
+      "id": 2683,
+      "pinId": 4830,
+      "symbol": "STLA",
+      "name": "Stellantis",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-29T14:10:10.741Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "which fell 4.7% on the announcement"
     }
   ],
   "prices": [
@@ -73674,6 +73734,116 @@
       "utcPriceDateTime": "2026-06-30T20:00:00.000Z",
       "utcCheckedDateTime": "2026-09-28T21:06:56.860Z",
       "utcSetDateTime": "2026-09-28T21:06:56.609Z"
+    },
+    {
+      "id": 19091,
+      "pinTickerId": 2679,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 152.71,
+      "utcPriceDateTime": "2026-09-18T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:00:49.990Z",
+      "utcSetDateTime": "2026-09-29T14:00:49.723Z"
+    },
+    {
+      "id": 19092,
+      "pinTickerId": 2679,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-01T15:10:06.000Z",
+      "day": "2026-10-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-29T14:00:49.733Z"
+    },
+    {
+      "id": 19097,
+      "pinTickerId": 2680,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 152.71,
+      "utcPriceDateTime": "2026-09-18T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:07:48.392Z",
+      "utcSetDateTime": "2026-09-29T14:07:48.369Z"
+    },
+    {
+      "id": 19098,
+      "pinTickerId": 2680,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-28T12:48:59.000Z",
+      "day": "2026-09-28",
+      "price": 145.47,
+      "utcPriceDateTime": "2026-09-28T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:07:48.383Z",
+      "utcSetDateTime": "2026-09-29T14:07:48.378Z"
+    },
+    {
+      "id": 19119,
+      "pinTickerId": 2681,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 12.355,
+      "utcPriceDateTime": "2026-09-29T14:09:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:10:13.106Z",
+      "utcSetDateTime": "2026-09-29T14:10:10.761Z"
+    },
+    {
+      "id": 19120,
+      "pinTickerId": 2681,
+      "kind": "start",
+      "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+      "day": "2027-01-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-29T14:10:10.770Z"
+    },
+    {
+      "id": 19121,
+      "pinTickerId": 2682,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 80.48,
+      "utcPriceDateTime": "2026-09-29T14:09:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:10:12.294Z",
+      "utcSetDateTime": "2026-09-29T14:10:10.776Z"
+    },
+    {
+      "id": 19122,
+      "pinTickerId": 2682,
+      "kind": "start",
+      "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+      "day": "2027-01-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-29T14:10:10.785Z"
+    },
+    {
+      "id": 19123,
+      "pinTickerId": 2683,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 4.555,
+      "utcPriceDateTime": "2026-09-29T14:10:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:10:11.661Z",
+      "utcSetDateTime": "2026-09-29T14:10:10.790Z"
+    },
+    {
+      "id": 19124,
+      "pinTickerId": 2683,
+      "kind": "start",
+      "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+      "day": "2027-01-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-29T14:10:10.794Z"
     }
   ],
   "relations": [

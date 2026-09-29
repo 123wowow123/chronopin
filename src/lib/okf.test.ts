@@ -191,3 +191,17 @@ describe('okfBundle tags', () => {
     expect(lintBundle(files).filter((i) => i.severity === 'error' || /tags\//.test(i.path) || /tags\//.test(i.message))).toEqual([]);
   });
 });
+
+describe('okfBundle sentiment', () => {
+  const path = 'pins/930-consorzio-venezia-nuova-installs-the-last-of-mose-s-78-flood.md';
+
+  it('records a scored pin’s tone, product line and text hash in its frontmatter', () => {
+    const scored: OkfPin = { ...pin, sentiment: { score: 0.5, product: 'MOSE', textHash: '0123456789ab' } };
+    const concept = okfBundle([scored], sources).get(path)!;
+    expect(concept).toContain('sentiment: { score: 0.5, product: MOSE, text_hash: "0123456789ab" }');
+  });
+
+  it('leaves it out of a pin never scored', () => {
+    expect(okfBundle([pin], sources).get(path)).not.toContain('sentiment:');
+  });
+});

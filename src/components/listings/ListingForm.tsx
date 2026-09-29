@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react';
+import { Fragment, useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api, ApiError, isEmailUnverified } from '@/lib/client/api';
@@ -27,7 +27,8 @@ import {
   type ListingPlace,
   type ListingProblem,
 } from '@/lib/listings';
-import { userLocation } from '@/lib/location';
+import { roundCoordinate, userLocation } from '@/lib/location';
+import type { PlaceSuggestion } from '@/lib/placeSuggestion';
 import { Dialog, fieldLabel, listingTitle, mediaUrl, optionLabel, priceLine } from './parts';
 
 // Where each kind's form puts its fields, as Marketplace orders them. A
@@ -75,6 +76,7 @@ const toInput = (v: Values): ListingInput => ({
 });
 
 function problemText(t: Translator, kind: ListingKind, problem: ListingProblem) {
+  if (problem.field === 'photos' && problem.code === 'required') return t('listing.problem.mediaRequired');
   const field = problem.field === 'price' ? priceFieldLabel(t, kind) : fieldLabel(t, problem.field);
   return t.dynamic(`listing.problem.${problem.code}`, problem.code, { field, count: PHOTO_LIMIT[kind] });
 }
@@ -108,14 +110,18 @@ export function ListingForm({
   productName,
   categories,
   listing,
+  page = false,
   onClose,
   onSaved,
 }: {
-  pinId: number;
+  // Null: a listing on its own, from Create's Marketplace tab.
+  pinId: number | null;
   kind: ListingKind;
   productName?: string | null;
   categories?: string[];
   listing?: ListingJson;
+  // Laid out on a page of its own (Create's Marketplace tab), not as a popup.
+  page?: boolean;
   onClose: () => void;
   onSaved: (listing: ListingJson) => void;
 }) {
@@ -212,7 +218,7 @@ export function ListingForm({
       const body = { ...input, kind };
       const saved = listing
         ? await api.put<{ listing: ListingJson }>(`/api/listings/${listing.id}`, body)
-        : await api.post<{ listing: ListingJson }>(`/api/pins/${pinId}/listings`, body);
+        : await api.post<{ listing: ListingJson }>(pinId ? `/api/pins/${pinId}/listings` : '/api/listings', body);
       onSaved(saved.listing);
     } catch (err) {
       const body = err instanceof ApiError ? (err.body as { field?: string; code?: ListingProblem['code'] } | null) : null;
@@ -350,7 +356,7 @@ export function ListingForm({
       );
       hint = kind === 'home' ? t('listing.hints.homeDescription') : kind === 'job' ? null : t('listing.optional');
     } else if (name === 'location') {
-      control = <PlacePicker value={location} onChange={(place) => set({ location: place })} invalid={problem?.field === 'location'} label={kind === 'home' ? t('listing.fields.homeLocation') : fieldLabel(t, 'location')} />;
+      control = <PlacePicker value={location} near={home} onChange={(place) => set({ location: place })} invalid={problem?.field === 'location'} label={kind === 'home' ? t('listing.fields.homeLocation') : fieldLabel(t, 'location')} />;
     } else if (name === 'photos') {
       control = (
         <MediaPicker
@@ -375,75 +381,86 @@ export function ListingForm({
 
   const kindTitle = t(`listing.kinds.${kind}`);
   const preview = { ...toInput(values), location, kind, currency: 'USD', title: storedTitle(kind, toInput(values)) };
+  const Heading = page ? 'h1' : 'h2';
 
-  return (
-    <Dialog label={kindTitle} onClose={onClose} className="w-full max-w-6xl lg:h-[92dvh]" bare>
-      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)] lg:grid-cols-[400px_minmax(0,1fr)]">
-        <div className="flex min-h-0 flex-col border-line lg:border-r">
-          <div ref={scroller} className="min-h-0 flex-1 space-y-4 overflow-y-auto px-4 pt-4 pb-6">
-            <div>
-              <p className="text-xs text-subtle">{t('listing.marketplace')}</p>
-              <h2 className="text-2xl font-bold text-ink">{listing ? t('listing.editTitle', { kind: kindTitle }) : kindTitle}</h2>
-            </div>
-            {user ? (
-              <div className="flex items-center gap-3">
-                <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-10 text-sm" />
-                <div className="min-w-0">
-                  <div className="truncate text-sm font-semibold text-ink">{user.userName}</div>
-                  <div className="flex items-center gap-1 text-xs text-subtle">
-                    {t('listing.listingPublic')}
-                    <Icon name="globe" className="size-3" />
-                  </div>
+  const body = (
+    <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)] lg:grid-cols-[400px_minmax(0,1fr)]">
+      <div className="flex min-h-0 flex-col border-line lg:border-r">
+        <div ref={scroller} className="min-h-0 flex-1 space-y-4 overflow-y-auto px-4 pt-4 pb-6">
+          <div>
+            <p className="text-xs text-subtle">{t('listing.marketplace')}</p>
+            <Heading className="text-2xl font-bold text-ink">{listing ? t('listing.editTitle', { kind: kindTitle }) : kindTitle}</Heading>
+          </div>
+          {user ? (
+            <div className="flex items-center gap-3">
+              <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-10 text-sm" />
+              <div className="min-w-0">
+                <div className="truncate text-sm font-semibold text-ink">{user.userName}</div>
+                <div className="flex items-center gap-1 text-xs text-subtle">
+                  {t('listing.listingPublic')}
+                  <Icon name="globe" className="size-3" />
                 </div>
               </div>
-            ) : null}
-            {LAYOUT[kind].map((entry) => {
-              if (typeof entry === 'string') return field(entry);
-              const folded = entry.folded && !open[entry.section] && !entry.fields.some((f) => values.details[f] != null || problem?.field === f);
-              return (
-                <section key={entry.section} className="space-y-3 border-t border-line pt-4">
-                  {entry.folded ? (
-                    <button type="button" aria-expanded={!folded} onClick={() => setOpen((o) => ({ ...o, [entry.section]: !!folded }))} className="flex w-full items-center gap-2 text-left">
-                      <span className="flex-1">
-                        <span className="block font-semibold text-ink">{t.dynamic(`listing.sections.${entry.section}`, entry.section)}</span>
-                        <span className="block text-sm text-subtle">{t.dynamic(`listing.sectionHints.${entry.section}`, '')}</span>
-                      </span>
-                      <Icon name="chevron" className={`size-4 text-subtle transition-transform ${folded ? '' : 'rotate-180'}`} />
-                    </button>
-                  ) : (
-                    <div className="flex items-baseline justify-between gap-2">
-                      <span>
-                        <span className="block font-semibold text-ink">{t.dynamic(`listing.sections.${entry.section}`, entry.section)}</span>
-                        <span className="block text-sm text-subtle">{t.dynamic(`listing.sectionHints.${entry.section}`, '')}</span>
-                      </span>
-                      {entry.optional ? <span className="text-sm text-subtle">{t('listing.optional')}</span> : null}
-                    </div>
-                  )}
-                  {folded ? null : entry.fields.map((f) => field(f))}
-                </section>
-              );
-            })}
-            {kind === 'job' ? (
-              <div className="flex gap-3 rounded-xl bg-raised p-3 text-sm text-muted">
-                <Icon name="info" className="mt-0.5 size-4 shrink-0 text-link" />
-                <p>{t('listing.jobTerms')}</p>
-              </div>
-            ) : null}
-            <p className="text-xs text-subtle">{t(kind === 'job' ? 'listing.jobPolicy' : 'listing.policy')}</p>
-          </div>
-          <div className="border-t border-line p-4">
-            {error ? (
-              <p role="alert" className="mb-2 text-sm text-danger">
-                {error}
-              </p>
-            ) : null}
-            <button type="button" onClick={() => void submit()} disabled={saving || uploading > 0} className="btn btn-primary w-full py-2.5">
-              {saving ? t('listing.saving') : listing ? t('listing.save') : t('listing.publish')}
-            </button>
-          </div>
+            </div>
+          ) : null}
+          {LAYOUT[kind].map((entry) => {
+            if (typeof entry === 'string') return field(entry);
+            const folded = entry.folded && !open[entry.section] && !entry.fields.some((f) => values.details[f] != null || problem?.field === f);
+            return (
+              <section key={entry.section} className="space-y-3 border-t border-line pt-4">
+                {entry.folded ? (
+                  <button type="button" aria-expanded={!folded} onClick={() => setOpen((o) => ({ ...o, [entry.section]: !!folded }))} className="flex w-full items-center gap-2 text-left">
+                    <span className="flex-1">
+                      <span className="block font-semibold text-ink">{t.dynamic(`listing.sections.${entry.section}`, entry.section)}</span>
+                      <span className="block text-sm text-subtle">{t.dynamic(`listing.sectionHints.${entry.section}`, '')}</span>
+                    </span>
+                    <Icon name="chevron" className={`size-4 text-subtle transition-transform ${folded ? '' : 'rotate-180'}`} />
+                  </button>
+                ) : (
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span>
+                      <span className="block font-semibold text-ink">{t.dynamic(`listing.sections.${entry.section}`, entry.section)}</span>
+                      <span className="block text-sm text-subtle">{t.dynamic(`listing.sectionHints.${entry.section}`, '')}</span>
+                    </span>
+                    {entry.optional ? <span className="text-sm text-subtle">{t('listing.optional')}</span> : null}
+                  </div>
+                )}
+                {folded ? null : entry.fields.map((f) => field(f))}
+              </section>
+            );
+          })}
+          {kind === 'job' ? (
+            <div className="flex gap-3 rounded-xl bg-raised p-3 text-sm text-muted">
+              <Icon name="info" className="mt-0.5 size-4 shrink-0 text-link" />
+              <p>{t('listing.jobTerms')}</p>
+            </div>
+          ) : null}
+          <p className="text-xs text-subtle">{t(kind === 'job' ? 'listing.jobPolicy' : 'listing.policy')}</p>
         </div>
-        <ListingPreview t={t} listing={preview} seller={user ? { userName: user.userName, pictureUrl: user.pictureUrl ?? null } : null} />
+        <div className="border-t border-line p-4">
+          {error ? (
+            <p role="alert" className="mb-2 text-sm text-danger">
+              {error}
+            </p>
+          ) : null}
+          <button type="button" onClick={() => void submit()} disabled={saving || uploading > 0} className="btn btn-primary w-full py-2.5">
+            {saving ? t('listing.saving') : listing ? t('listing.save') : t('listing.publish')}
+          </button>
+        </div>
       </div>
+      <ListingPreview t={t} listing={preview} seller={user ? { userName: user.userName, pictureUrl: user.pictureUrl ?? null } : null} />
+    </div>
+  );
+
+  // On a page, a card as tall as the window leaves under the page's own
+  // header, so the form scrolls beside a preview that stays in view.
+  return page ? (
+    <section aria-label={kindTitle} className="surface flex flex-col overflow-hidden lg:h-[calc(100dvh-10rem)]">
+      {body}
+    </section>
+  ) : (
+    <Dialog label={kindTitle} onClose={onClose} className="w-full max-w-6xl lg:h-[92dvh]" bare>
+      {body}
     </Dialog>
   );
 }
@@ -457,6 +474,7 @@ function ListingPreview({ t, listing, seller }: { t: Translator; listing: Previe
   const price = priceLine(t, listing);
   const facts = DETAIL_FIELDS[listing.kind].filter((f) => listing.details[f.name] != null && f.name !== 'maxPay');
   const photo = listing.photos[0];
+  const video = photo ? null : listing.video;
   return (
     <div className="hidden min-h-0 flex-col bg-page p-5 lg:flex">
       <div className="surface flex min-h-0 flex-1 flex-col overflow-hidden shadow-sm">
@@ -466,6 +484,8 @@ function ListingPreview({ t, listing, seller }: { t: Translator; listing: Previe
             {photo ? (
               // eslint-disable-next-line @next/next/no-img-element -- the seller's upload, sized by the frame
               <img src={mediaUrl(photo)} alt="" className="max-h-full max-w-full object-contain" />
+            ) : video ? (
+              <video src={mediaUrl(video)} muted playsInline controls className="max-h-full max-w-full" />
             ) : (
               <div className="max-w-sm p-6 text-center">
                 <p className="text-2xl font-bold text-muted">{t(listing.kind === 'job' ? 'listing.previewJobHeading' : 'listing.previewHeading')}</p>
@@ -525,7 +545,8 @@ export function ListingFacts({ t, kind, details }: { t: Translator; kind: Listin
               : f.type === 'bool'
                 ? t('listing.yes')
                 : f.type === 'number'
-                  ? new Intl.NumberFormat(t.locale).format(value as number)
+                  ? // A year is a name, not a quantity: "2026", never "2,026".
+                    new Intl.NumberFormat(t.locale, { useGrouping: f.name !== 'year' }).format(value as number)
                   : String(value);
         return (
           <Fragment key={f.name}>
@@ -582,7 +603,7 @@ function MediaPicker({
           setOver(null);
           onAdd([...e.dataTransfer.files], type);
         }}
-        className={`flex aspect-square flex-col items-center justify-center gap-1 rounded-lg p-3 text-center ring-1 ring-inset transition-colors ${over === type ? 'bg-accent/10 ring-accent' : invalid && type === 'photo' ? 'ring-2 ring-danger' : 'ring-line hover:bg-raised'} ${kind === 'job' ? 'col-span-2 aspect-[2/1]' : ''}`}
+        className={`flex aspect-square flex-col items-center justify-center gap-1 rounded-lg p-3 text-center ring-1 ring-inset transition-colors ${over === type ? 'bg-accent/10 ring-accent' : invalid ? 'ring-2 ring-danger' : 'ring-line hover:bg-raised'} ${kind === 'job' ? 'col-span-2 aspect-[2/1]' : ''}`}
       >
         <span className="flex size-10 items-center justify-center rounded-full bg-raised-2 text-ink">
           <Icon name={type === 'video' ? 'play' : 'plus'} className="size-5" />
@@ -662,23 +683,82 @@ function MediaPicker({
   );
 }
 
-// A place from the geocoder, never typed (as the default location is).
-function PlacePicker({ value, onChange, invalid, label }: { value: ListingPlace | null; onChange: (place: ListingPlace | null) => void; invalid: boolean; label: string }) {
+// A place from the geocoder, never typed (as the default location is). The
+// box shows the place picked; typing in it autocompletes an address, a
+// neighbourhood, a town, a region or a postcode (kept no finer than the
+// neighbourhood), and leaving it without picking puts the picked place back.
+function PlacePicker({
+  value,
+  near,
+  onChange,
+  invalid,
+  label,
+}: {
+  value: ListingPlace | null;
+  // Where answers should lean towards when nothing is picked yet.
+  near: ListingPlace | null;
+  onChange: (place: ListingPlace | null) => void;
+  invalid: boolean;
+  label: string;
+}) {
   const t = useT();
   const locale = useLocale();
-  const [query, setQuery] = useState('');
-  const [found, setFound] = useState<{ q: string; places: ListingPlace[] } | null>(null);
-  const [editing, setEditing] = useState(false);
-  const q = query.trim();
+  // What is typed since the last pick; null while the box shows the place.
+  const [query, setQuery] = useState<string | null>(null);
+  const [found, setFound] = useState<{ q: string; places: PlaceSuggestion[] } | null>(null);
+  // The answer the arrow keys are on.
+  const [active, setActive] = useState(0);
+  const [locating, setLocating] = useState(false);
+  const [locateError, setLocateError] = useState('');
+  const shown = value ? (value.name ?? `${value.latitude.toFixed(2)}, ${value.longitude.toFixed(2)}`) : '';
+  const q = (query ?? '').trim();
   const results = q.length >= 2 && found?.q === q ? found.places : [];
+  const open = results.length > 0 && query != null;
+  const listId = useId();
+  const list = useRef<HTMLUListElement>(null);
+
+  // The field is the form's last, so the list would open under its bottom
+  // edge; the form scrolls to show it.
+  useEffect(() => {
+    if (open) list.current?.scrollIntoView({ block: 'nearest' });
+  }, [open, found]);
+  const bias = value ?? near;
+  const biasLat = bias?.latitude;
+  const biasLon = bias?.longitude;
+
+  // The device's position, rounded before it leaves the browser and named
+  // by the server's geocoder.
+  function locate() {
+    if (!navigator.geolocation) return setLocateError(t('profile.locationUnavailable'));
+    setLocating(true);
+    setLocateError('');
+    navigator.geolocation.getCurrentPosition(
+      async ({ coords }) => {
+        try {
+          pick(await api.get<ListingPlace>(`/api/place/reverse?lat=${roundCoordinate(coords.latitude)}&lon=${roundCoordinate(coords.longitude)}&lang=${locale}`));
+        } catch {
+          setLocateError(t('profile.locationUnavailable'));
+        } finally {
+          setLocating(false);
+        }
+      },
+      (err) => {
+        setLocating(false);
+        setLocateError(err.code === err.PERMISSION_DENIED ? t('profile.locationDenied') : t('profile.locationUnavailable'));
+      },
+      { maximumAge: 5 * 60 * 1000, timeout: 15000 },
+    );
+  }
 
   useEffect(() => {
     if (q.length < 2) return;
     const controller = new AbortController();
     const timer = setTimeout(async () => {
+      const near = biasLat != null && biasLon != null ? `&lat=${biasLat}&lon=${biasLon}` : '';
       try {
-        const res = await fetch(`/api/place/search?q=${encodeURIComponent(q)}&lang=${locale}`, { signal: controller.signal });
-        setFound({ q, places: res.ok ? ((await res.json()) as ListingPlace[]) : [] });
+        const res = await fetch(`/api/place/autocomplete?q=${encodeURIComponent(q)}&lang=${locale}${near}`, { signal: controller.signal });
+        setFound({ q, places: res.ok ? ((await res.json()) as PlaceSuggestion[]) : [] });
+        setActive(0);
       } catch {
         // Aborted by the next keystroke, or offline.
       }
@@ -687,60 +767,94 @@ function PlacePicker({ value, onChange, invalid, label }: { value: ListingPlace 
       clearTimeout(timer);
       controller.abort();
     };
-  }, [q, locale]);
+  }, [q, locale, biasLat, biasLon]);
 
-  const pick = (place: ListingPlace) => {
-    onChange(place);
-    setQuery('');
-    setEditing(false);
-  };
-
-  if (value && !editing) {
-    return (
-      <div className={`field flex items-center gap-3 py-2 ${invalid ? 'ring-2 ring-danger' : ''}`}>
-        <Icon name="pin" className="size-5 shrink-0 text-muted" />
-        <span className="min-w-0 flex-1">
-          <span className="block text-xs text-subtle">{label}</span>
-          <span className="block truncate text-ink">{value.name ?? `${value.latitude.toFixed(2)}, ${value.longitude.toFixed(2)}`}</span>
-        </span>
-        <button type="button" onClick={() => setEditing(true)} className="btn btn-ghost btn-sm">
-          {t('listing.change')}
-        </button>
-      </div>
-    );
+  function pick({ latitude, longitude, name }: ListingPlace) {
+    onChange({ latitude, longitude, name });
+    setQuery(null);
+    setLocateError('');
   }
+
   return (
-    <div className="relative">
-      <input
-        type="search"
-        autoComplete="off"
-        aria-label={label}
-        placeholder={label}
-        className={`field py-3 ${invalid ? 'ring-2 ring-danger' : ''}`}
-        value={query}
-        autoFocus={editing}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' && results[0]) {
-            e.preventDefault();
-            pick(results[0]);
-          } else if (e.key === 'Escape' && editing) {
-            e.stopPropagation();
-            setEditing(false);
-          }
-        }}
-      />
-      {results.length ? (
-        <ul className="floating absolute inset-x-0 top-full z-10 mt-1 max-h-60 overflow-y-auto py-1">
-          {results.map((place) => (
-            <li key={`${place.latitude},${place.longitude},${place.name}`}>
-              <button type="button" onClick={() => pick(place)} className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-ink hover:bg-raised">
-                <Icon name="pin" className="size-4 shrink-0 text-subtle" />
-                {place.name}
-              </button>
-            </li>
-          ))}
-        </ul>
+    <div>
+      <div className="relative">
+        <Icon name="pin" className="pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 text-muted" />
+        {/* Text, not search: a search box's own Escape and × would empty it
+            rather than put the place back. */}
+        <input
+          type="text"
+          role="combobox"
+          aria-expanded={open}
+          aria-controls={listId}
+          aria-autocomplete="list"
+          aria-activedescendant={open ? `${listId}-${active}` : undefined}
+          enterKeyHint="search"
+          autoComplete="off"
+          aria-label={label}
+          placeholder={label}
+          className={`field py-3 pr-12 pl-10 ${invalid ? 'ring-2 ring-danger' : ''}`}
+          value={query ?? shown}
+          onChange={(e) => setQuery(e.target.value)}
+          onBlur={() => setQuery(null)}
+          onKeyDown={(e) => {
+            if (open && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+              e.preventDefault();
+              setActive((i) => (i + (e.key === 'ArrowDown' ? 1 : results.length - 1)) % results.length);
+            } else if (e.key === 'Enter' && open) {
+              e.preventDefault();
+              pick(results[Math.min(active, results.length - 1)]);
+            } else if (e.key === 'Escape' && query != null) {
+              // Back to the place picked, and the form stays open.
+              e.preventDefault();
+              e.stopPropagation();
+              setQuery(null);
+            }
+          }}
+        />
+        <button
+          type="button"
+          onClick={locate}
+          disabled={locating}
+          aria-label={t('profile.locationUseDevice')}
+          title={t('profile.locationUseDevice')}
+          className="absolute top-1/2 right-1.5 flex size-9 -translate-y-1/2 items-center justify-center rounded-md text-muted transition-colors hover:bg-raised hover:text-ink focus-visible:ring-2 focus-visible:ring-link focus-visible:outline-none active:bg-raised-2 disabled:cursor-wait"
+        >
+          {locating ? (
+            <span className="size-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+          ) : (
+            <Icon name="target" className="size-5" />
+          )}
+        </button>
+        {open ? (
+          <ul ref={list} id={listId} role="listbox" aria-label={label} className="floating absolute inset-x-0 top-full z-10 mt-1 max-h-80 overflow-y-auto p-1">
+            {results.map((place, i) => (
+              // Taken on the press, before the box's blur puts the old place back.
+              <li
+                key={`${place.latitude},${place.longitude},${place.label},${place.detail}`}
+                id={`${listId}-${i}`}
+                role="option"
+                aria-selected={i === active}
+                onMouseDown={(e) => e.preventDefault()}
+                onMouseEnter={() => setActive(i)}
+                onClick={() => pick(place)}
+                className={`flex cursor-pointer items-start gap-2.5 rounded-lg px-3 py-2 ${i === active ? 'bg-raised' : ''}`}
+              >
+                <Icon name="pin" className="mt-0.5 size-4 shrink-0 text-subtle" />
+                <span className="min-w-0">
+                  <span className="block truncate text-sm font-medium text-ink">{place.label}</span>
+                  <span className="block text-xs text-muted">
+                    {[t(`listing.placeKind.${place.kind}`), place.detail].filter(Boolean).join(' · ')}
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+      {locateError ? (
+        <p role="alert" className="mt-1 text-xs text-danger">
+          {locateError}
+        </p>
       ) : null}
     </div>
   );

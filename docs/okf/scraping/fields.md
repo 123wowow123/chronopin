@@ -35,6 +35,8 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T20:00:00Z }
 | `tags` | string[] (max 8) | Awards first (body + year), then franchises, people, programmes, places; not the category or company |
 | `longFormSummary` | HTML `<ul><li>` or null | Key points as real list markup |
 
+**Sentiment rides on the post.** A company pin's `POST`/`PUT /api/pins` body may also carry `sentiment` (-1 to 1, by `PIN_SENTIMENT_PROMPT` in [pinSentiment.ts](../../../src/server/extract/pinSentiment.ts): how the event reads as news *for the company*, upcoming events mildly positive, near 0 when the text does not say how it went) and `productLine` (the product line that rubric names, such as `iPhone` for an iPhone 18 Pro or the franchise for a film; `""` for a company-wide event; not the same as `productName`, which is the exact model). The save stores the score against the title and summary it sent, so the scoring listener finds it current and makes no call, and the pin never joins the [sentiment](daily-jobs.md#sentiment) backlog. Whoever drafts the pin has just read the story, so **every drafted company pin should carry both**: that costs a few tokens, while catching it up later costs a batch call. An edit that changes the title or summary without a new `sentiment` is scored again. The score, product and the start of the text hash show in the pin's OKF concept as `sentiment: { score, product, text_hash }`.
+
 # Hard cases (from the prompt)
 
 - **Cost.** `"roughly CA$6.4 billion"` is `6400000000` / `CAD`. Do not confuse cost with trade volume, revenue, market size or annual budgets. A programme page takes the programme total; a pin about one terminal takes the terminal's cost.

@@ -7,7 +7,7 @@ import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
-import { drawerHeld, onCloseDrawer, onOpenDrawer, setCardsSlot, setControlsSlot, setDrawerScroller, useHasControls } from '@/lib/client/controlsDrawer';
+import { drawerHeld, onCloseDrawer, setCardsSlot, setControlsSlot, setDrawerScroller, useHasControls } from '@/lib/client/controlsDrawer';
 import { leaveDrawer, settleDrawerMark, takeDrawerReturn } from '@/lib/client/drawerReturn';
 import { useUnreadChats } from '@/lib/client/messages';
 import { useUnreadCount } from '@/lib/client/notifications';
@@ -113,8 +113,6 @@ export function MobileDrawer() {
   useScrollLock(open);
 
   useEffect(() => onCloseDrawer(() => setOpen(false)), []);
-  // Back from the big tag cloud, which was opened from in here.
-  useEffect(() => onOpenDrawer(() => setOpen(true)), []);
 
   // Back from the profile page's "Menu" button: the page it was opened from
   // is showing again, so the drawer is too (src/lib/client/drawerReturn.ts).

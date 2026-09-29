@@ -4,7 +4,7 @@ import { requireVerifiedEmail } from '@/server/emailVerification';
 import { HttpError, intParam, json, readJson, route } from '@/server/http';
 import { onlineUsers } from '@/server/liveFeed';
 import Listing from '@/server/model/listing';
-import Message, { MAX_MESSAGE_LENGTH } from '@/server/model/message';
+import Message, { MAX_MESSAGE_IMAGES, MAX_MESSAGE_LENGTH } from '@/server/model/message';
 import UserBlock from '@/server/model/userBlock';
 
 type Ctx = RouteContext<'/api/messages/[userId]'>;
@@ -34,16 +34,23 @@ export const GET = route(async (request: NextRequest, ctx: Ctx) => {
   return json({ with: withUser, online: onlineUsers([withUser.id]).has(withUser.id), blocked, ...thread, listings });
 });
 
-// Sends a message: { body, replyToId?, listingId? }. Like posting a comment,
+// Sends a message: { body, images?, replyToId?, listingId? }. images are blob
+// names from /api/messages/media (or a forwarded message's), and a message of
+// photos needs no text. Like posting a comment,
 // it needs a confirmed email, and a block either way refuses it. listingId
 // asks the recipient about one of their listings still on offer.
 export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   const viewer = await requireUser(request);
   requireVerifiedEmail(viewer);
   const withUser = await other(ctx, viewer.id);
-  const { body, replyToId, listingId } = await readJson<{ body?: unknown; replyToId?: unknown; listingId?: unknown }>(request);
+  const { body, images, replyToId, listingId } = await readJson<{ body?: unknown; images?: unknown; replyToId?: unknown; listingId?: unknown }>(request);
   const text = typeof body === 'string' ? body.trim() : '';
-  if (!text) throw new HttpError(422, '', { message: 'a message needs some text' });
+  const photos = Array.isArray(images) ? [...new Set(images.filter((i): i is string => typeof i === 'string' && i.length > 0))] : [];
+  if (!text && !photos.length) throw new HttpError(422, '', { message: 'a message needs some text or a photo' });
+  if (photos.length > MAX_MESSAGE_IMAGES) throw new HttpError(422, '', { message: `a message holds at most ${MAX_MESSAGE_IMAGES} photos` });
+  if (photos.length && !(await Message.sendableImages(viewer.id, photos))) {
+    throw new HttpError(422, '', { code: 'images', message: 'photos must be your own uploads' });
+  }
   if (text.length > MAX_MESSAGE_LENGTH) throw new HttpError(422, '', { message: `a message is at most ${MAX_MESSAGE_LENGTH} characters` });
   if (await UserBlock.between(viewer.id, withUser.id)) {
     throw new HttpError(403, '', { code: 'blocked', message: 'you cannot message this person' });
@@ -53,5 +60,5 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   if (listing && !(await Listing.askable(listing, viewer.id, withUser.id))) {
     throw new HttpError(422, '', { code: 'listing', message: 'that listing is not on offer from this person' });
   }
-  return json({ message: await Message.send(viewer.id, withUser.id, text, replyTo, listing) }, 201);
+  return json({ message: await Message.send(viewer.id, withUser.id, text, replyTo, listing, photos) }, 201);
 });

@@ -11,6 +11,14 @@ export type SentimentText = { title: string; description: string | null };
 export const sentimentHash = ({ title, description }: SentimentText) =>
   createHash('sha256').update(`${title}\n${description ?? ''}`).digest('hex');
 
+// The hash as handed to a scorer to copy back: its first 12 characters tell a
+// changed pin apart as well as all 64, at a fifth of the tokens.
+export const SHORT_HASH = 12;
+export const shortHash = (text: SentimentText) => sentimentHash(text).slice(0, SHORT_HASH);
+
+// Whether a hash a scorer copied back (short or whole) is the text's now.
+export const sameText = (text: SentimentText, given: string) => given.length >= SHORT_HASH && sentimentHash(text).startsWith(given);
+
 export type StoredPinSentiment = {
   pinId: number;
   sentiment: number;
@@ -123,8 +131,18 @@ export default class PinSentiment {
   // hash handed out with it), so an edit in between is scored again later.
   static async setIfUnchanged(pinId: number, textHash: string, sentiment: number, product?: string | null): Promise<boolean> {
     const context = await PinSentiment.context(pinId);
-    if (!context || sentimentHash(context) !== textHash) return false;
+    if (!context || !sameText(context, textHash)) return false;
     await PinSentiment.set(pinId, context, sentiment, product);
+    return true;
+  }
+
+  // A score its author sent with the pin (POST/PUT /api/pins), read from the
+  // text just saved, so the save listener finds it current and makes no call:
+  // whoever drafted the pin has already read the story. Company pins only.
+  static async setAuthored(pinId: number, score: { sentiment: number; product?: string | null }): Promise<boolean> {
+    const context = await PinSentiment.context(pinId);
+    if (!context) return false;
+    await PinSentiment.set(pinId, context, score.sentiment, score.product);
     return true;
   }
 

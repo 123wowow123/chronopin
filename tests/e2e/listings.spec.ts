@@ -35,7 +35,9 @@ test('a reader lists a pin’s product, chats with a buyer and rates them after 
   const seller = await member(page.request, 'seller');
 
   // The place search goes to the geocoder; answer it here.
-  await page.route('**/api/place/search**', (route) => route.fulfill({ json: [{ latitude: 32.72, longitude: -117.16, name: 'San Diego, California' }] }));
+  await page.route('**/api/place/autocomplete**', (route) =>
+    route.fulfill({ json: [{ latitude: 32.72, longitude: -117.16, name: 'San Diego, California', label: 'San Diego', detail: 'California', kind: 'city' }] }),
+  );
 
   await page.goto(`/pin/${pinId}`);
   await page.getByRole('button', { name: 'Sell this item here' }).click();
@@ -57,8 +59,8 @@ test('a reader lists a pin’s product, chats with a buyer and rates them after 
   await form.getByRole('spinbutton', { name: 'Price' }).fill('240');
   await form.getByRole('combobox', { name: 'Category' }).selectOption('mensClothing');
   await form.getByRole('combobox', { name: 'Condition' }).selectOption('likeNew');
-  await form.getByRole('searchbox', { name: 'Location' }).fill('San Diego');
-  await form.getByRole('button', { name: 'San Diego, California' }).click();
+  await form.getByRole('combobox', { name: 'Location', exact: true }).fill('San Diego');
+  await form.getByRole('option', { name: /San Diego/ }).click();
   await form.getByRole('button', { name: 'Publish' }).click();
 
   await expect(page.getByRole('status').filter({ hasText: 'Your listing is live.' })).toBeVisible();
@@ -76,8 +78,10 @@ test('a reader lists a pin’s product, chats with a buyer and rates them after 
   expect((await buyerApi.post(`/api/messages/${seller.id}`, { data: { body: 'Hi, is this still available?', listingId: listing.id } })).status()).toBe(201);
 
   await page.goto(`/messages?with=${buyer.id}`);
-  await expect(page.getByText('Rate after 1/7 turns')).toBeVisible();
-  // Rating opens only after seven turns: three more each way.
+  // Rating opens only after seven turns, and until then the bar says nothing
+  // about it: three more each way.
+  await expect(page.getByRole('link', { name: new RegExp(title) }).first()).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Rate buyer' })).toHaveCount(0);
   for (let i = 0; i < 3; i++) {
     await page.request.post(`/api/messages/${buyer.id}`, { data: { body: `Yes, still here ${i}` } });
     await buyerApi.post(`/api/messages/${seller.id}`, { data: { body: `Great ${i}` } });
@@ -127,4 +131,55 @@ test('a visitor who clicks Sell this item here logs in and lands back on the ope
   await page.reload();
   await expect(page.getByRole('button', { name: 'Sell this item here' })).toBeVisible();
   await expect(page.getByRole('dialog', { name: 'Item for sale' })).toHaveCount(0);
+});
+
+
+// Create's Marketplace tab lists something with no pin behind it: the seller
+// picks the kind, fills in its form on a page (not a popup), publishes, and
+// the listing opens on the Marketplace map;
+// their Listings page has it, on no pin.
+test('Create’s Marketplace tab posts a listing with no pin', async ({ page }) => {
+  await member(page.request, 'solo');
+  await page.route('**/api/place/autocomplete**', (route) =>
+    route.fulfill({ json: [{ latitude: 32.72, longitude: -117.16, name: 'San Diego, California', label: 'San Diego', detail: 'California', kind: 'city' }] }),
+  );
+  // Only a kind the Marketplace has.
+  expect((await page.request.post('/api/listings', { data: { kind: 'boat', title: 'x', price: 1 } })).status()).toBe(422);
+
+  await page.goto('/create');
+  await page.getByRole('button', { name: 'Marketplace listing' }).click();
+  await expect(page).toHaveURL(/[?&]type=listing/);
+  await expect(page.getByRole('heading', { name: 'Choose listing type' })).toBeVisible();
+  // The kind's form is a page of its own, and Back returns to the types.
+  await page.getByRole('button', { name: /Item for sale/ }).click();
+  await expect(page).toHaveURL(/[?&]kind=item/);
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Back', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'Choose listing type' })).toBeVisible();
+  await page.getByRole('button', { name: /Item for sale/ }).click();
+
+  const form = page.getByRole('region', { name: 'Item for sale' });
+  await expect(form.getByRole('heading', { level: 1, name: 'Item for sale' })).toBeVisible();
+  const title = `Standing desk ${stamp}`;
+  await form.getByRole('textbox', { name: 'Title', exact: true }).fill(title);
+  const photo = await sharp({ create: { width: 400, height: 300, channels: 3, background: '#3c3' } }).jpeg().toBuffer();
+  await form.locator('input[type=file][accept="image/*"]').setInputFiles({ name: 'desk.jpg', mimeType: 'image/jpeg', buffer: photo });
+  await expect(form.getByRole('img', { name: 'Photo 1' })).toBeVisible();
+  await form.getByRole('spinbutton', { name: 'Price' }).fill('150');
+  await form.getByRole('combobox', { name: 'Category' }).selectOption('furniture');
+  await form.getByRole('combobox', { name: 'Condition' }).selectOption('good');
+  await form.getByRole('combobox', { name: 'Location', exact: true }).fill('San Diego');
+  await form.getByRole('option', { name: /San Diego/ }).click();
+  await form.getByRole('button', { name: 'Publish' }).click();
+
+  await expect(page).toHaveURL(/\/map\?show=market&listing=\d+/);
+  const view = page.getByRole('dialog', { name: title });
+  await expect(view.getByText('This is your listing.')).toBeVisible();
+
+  const { listings } = await (await page.request.get('/api/listings')).json();
+  expect(listings.find((l: { title: string }) => l.title === title)?.pinId).toBeNull();
+  await page.goto('/listings');
+  const row = page.getByRole('region', { name: 'Your listings' }).getByRole('listitem').filter({ hasText: title });
+  await expect(row).toBeVisible();
+  await expect(row.getByText('Item for sale', { exact: true })).toBeVisible();
 });

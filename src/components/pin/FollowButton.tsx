@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from '@/lib/client/navigation';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
 import { savePendingAction, usePendingAction } from '@/lib/client/pendingAction';
@@ -12,8 +12,21 @@ type Status = { userId: number; followerCount: number; followingCount: number; f
 
 // Follow a pin's author, with their follower counts. A list that already knows
 // whether the viewer follows each person passes `following`, so a long list
-// does not ask the server once per row.
-export function FollowButton({ userId, userName, showCount, following }: { userId: number; userName: string; showCount?: boolean; following?: boolean }) {
+// does not ask the server once per row. `beside` (the Message pill) sits
+// between the counts and the button.
+export function FollowButton({
+  userId,
+  userName,
+  showCount,
+  following,
+  beside,
+}: {
+  userId: number;
+  userName: string;
+  showCount?: boolean;
+  following?: boolean;
+  beside?: ReactNode;
+}) {
   const router = useRouter();
   const { user, isLoggedIn, status: sessionStatus } = useSession();
   const [status, setStatus] = useState<Status | null>(
@@ -74,32 +87,35 @@ export function FollowButton({ userId, userName, showCount, following }: { userI
   }
 
   return (
-    <span className="flex items-center gap-3">
+    <span className="flex flex-wrap items-center gap-2">
       {showCount && status ? (
-        <span className="text-sm text-muted">
+        <span className="mr-1 text-sm text-muted">
           <span className="whitespace-nowrap">{t('follow.followers', { count: status.followerCount })}</span> ·{' '}
           <span className="whitespace-nowrap">{t('follow.followingCount', { count: status.followingCount })}</span>
         </span>
       ) : null}
-      <button
-        ref={buttonRef}
-        type="button"
-        onClick={toggle}
-        disabled={busy || (isLoggedIn && !status)}
-        title={status?.following ? t('follow.unfollowName', { name: userName }) : t('follow.followName', { name: userName })}
-        className={`group btn rounded-full px-4 py-1.5 ${status?.following ? 'btn-secondary hover:bg-red-500/15 hover:text-danger-soft hover:ring-red-500/30' : 'btn-primary'}`}
-      >
-        {status?.following ? (
-          <>
-            <span className="group-hover:hidden">{t('follow.following')}</span>
-            <span className="hidden group-hover:inline">{t('follow.unfollow')}</span>
-          </>
-        ) : status?.followsYou ? (
-          t('follow.followBack')
-        ) : (
-          t('follow.follow')
-        )}
-      </button>
+      <span className="flex items-center gap-2">
+        {beside}
+        <button
+          ref={buttonRef}
+          type="button"
+          onClick={toggle}
+          disabled={busy || (isLoggedIn && !status)}
+          title={status?.following ? t('follow.unfollowName', { name: userName }) : t('follow.followName', { name: userName })}
+          className={`group btn rounded-full px-4 py-1.5 ${status?.following ? 'btn-secondary hover:bg-red-500/15 hover:text-danger-soft hover:ring-red-500/30' : 'btn-primary'}`}
+        >
+          {status?.following ? (
+            <>
+              <span className="group-hover:hidden">{t('follow.following')}</span>
+              <span className="hidden group-hover:inline">{t('follow.unfollow')}</span>
+            </>
+          ) : status?.followsYou ? (
+            t('follow.followBack')
+          ) : (
+            t('follow.follow')
+          )}
+        </button>
+      </span>
     </span>
   );
 }

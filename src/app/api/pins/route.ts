@@ -24,6 +24,8 @@ import { getPins } from '@/server/services/timeline';
 import log from '@/server/util/log';
 import { linkParams, resolveCreatedSince } from '@/server/util/createdFilter';
 import { citePostedSummary } from '@/server/extract/references';
+import { authoredScore } from '@/server/extract/pinSentiment';
+import PinSentiment from '@/server/model/pinSentiment';
 
 // A page of the timeline.
 // GET /api/pins?from_date_time=[-]ISO&last_pin_id=N&hasFavorite=1&created_within=1d
@@ -61,6 +63,8 @@ export const GET = route(async (request: NextRequest) => {
 // label?, sourceUrl?, estimated? } is drawn from the pin's place on its page
 // (src/server/services/pinFlightPath.ts). Either way, later seasons or versions
 // that answered an earlier one move under this one when it now comes between.
+// A company pin's sentiment (-1..1) and productLine, when sent, are its score for
+// the company graph (authoredScore), so the save makes no scoring call.
 export const POST = route(async (request: NextRequest) => {
   const user = await requireUser(request);
   requireVerifiedEmail(user);
@@ -68,11 +72,13 @@ export const POST = route(async (request: NextRequest) => {
   const pin = new Pin(body);
   const stocks = parseScrapedStocks(body.stocks);
   const tags = parseTags(body.tags);
+  const score = authoredScore(body);
   pin.categories = bodyCategories(body, tags);
   // Citations written [S] and [n] become links to the source and references.
   pin.longFormSummary = citePostedSummary(pin.longFormSummary, pin.sourceUrl, pin.references) ?? pin.longFormSummary;
   pin.setUser(user);
   const problem =
+    (typeof score === 'string' ? score : undefined) ??
     PinReference.problem(pin.references) ??
     PinRating.problem(pin.ratings) ??
     delayProblem(pin) ??
@@ -88,6 +94,7 @@ export const POST = route(async (request: NextRequest) => {
   const { pin: saved } = await pin.save();
   if (tags?.length) await PinTag.setUserTags(saved.id, tags);
   if (body.flightPath) await saveFlightPath(saved.id, body.flightPath);
+  if (score && typeof score !== 'string') await PinSentiment.setAuthored(saved.id, score);
   emitPinEvent('save', saved, { userId: user.id });
   // Everyone following the pin's company hears about it, and so does everyone
   // following its author. Told after the response, like the stock lookup below.

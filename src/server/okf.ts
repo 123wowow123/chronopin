@@ -4,6 +4,7 @@ import { absoluteUrl, pinPath } from '@/lib/seo';
 import type { PinTagJson } from '@/lib/tags';
 import * as db from './db';
 import Source, { PinSource } from './model/source';
+import { SHORT_HASH } from './model/pinSentiment';
 
 // Loads pins and their links' wikis and renders them as an OKF bundle (see
 // src/lib/okf.ts). With pinIds, just those pins and the links they cite;
@@ -11,8 +12,11 @@ import Source, { PinSource } from './model/source';
 export async function loadOkfBundle(pinIds?: number[]): Promise<Map<string, string>> {
   const pins = await db.query<Omit<OkfPin, 'url' | 'links'>>(
     `SELECT "Pin"."id", "Pin"."title", "Pin"."description", "Pin"."utcStartDateTime", "Pin"."utcEndDateTime", "Pin"."allDay",
-            ${PIN_CATEGORIES} AS "categories", "Company"."name" AS "company", "Pin"."longFormSummary"
+            ${PIN_CATEGORIES} AS "categories", "Company"."name" AS "company", "Pin"."longFormSummary",
+            CASE WHEN "PinSentiment"."pinId" IS NOT NULL AND "Pin"."companyId" IS NOT NULL THEN json_build_object(
+              'score', "PinSentiment"."sentiment", 'product', "PinSentiment"."product", 'textHash', left("PinSentiment"."textHash", ${SHORT_HASH})) END AS "sentiment"
      FROM "Pin" LEFT JOIN "Company" ON "Company"."id" = "Pin"."companyId"
+       LEFT JOIN "PinSentiment" ON "PinSentiment"."pinId" = "Pin"."id"
      WHERE "Pin"."utcDeletedDateTime" IS NULL
        AND ($1::integer[] IS NULL OR "Pin"."id" = ANY($1::integer[]))
        AND EXISTS (SELECT 1 FROM "PinSource" WHERE "PinSource"."pinId" = "Pin"."id")

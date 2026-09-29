@@ -152,3 +152,71 @@ test('two readers message each other through the chats panel and a docked window
   await expect(page.getByText('You can’t message this person.')).toBeVisible();
   await other.dispose();
 });
+
+// Photos (0096): a picture pasted into the composer is uploaded at once and
+// sent with or without text; the other side gets it, a forward carries it,
+// someone else's upload is refused, and unsending wipes it.
+test('a pasted picture is sent as a photo message', async ({ page, playwright, baseURL }) => {
+  const other = await playwright.request.newContext({ baseURL });
+  const friend = await member(other, 'photofriend');
+  const me = await member(page.request, 'photoreader');
+  await other.post(`/api/messages/${me.id}`, { data: { body: `Send me a picture ${stamp}` } });
+
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Chats, 1 unread' }).click();
+  await page.getByRole('button', { name: new RegExp(friend.userName) }).first().click();
+  const chat = page.getByRole('region', { name: friend.userName });
+  const box = chat.getByRole('textbox', { name: 'Message' });
+  await expect(chat.getByText(`Send me a picture ${stamp}`)).toBeVisible();
+
+  // A screenshot on the clipboard, pasted: a picture only, no text.
+  await box.evaluate(async (el) => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 320;
+    canvas.height = 200;
+    const ctx = canvas.getContext('2d')!;
+    ctx.fillStyle = '#d33';
+    ctx.fillRect(0, 0, 320, 200);
+    const blob = await new Promise<Blob>((done) => canvas.toBlob((b) => done(b!), 'image/png'));
+    const data = new DataTransfer();
+    data.items.add(new File([blob], 'image.png', { type: 'image/png' }));
+    el.dispatchEvent(new ClipboardEvent('paste', { clipboardData: data, bubbles: true, cancelable: true }));
+  });
+  await expect(chat.getByRole('button', { name: 'Remove photo' })).toBeVisible();
+  const send = chat.getByRole('button', { name: 'Send' });
+  await expect(send).toBeEnabled();
+  await box.fill(`Here it is ${stamp}`);
+  await box.press('Enter');
+
+  const photo = chat.getByRole('button', { name: 'View photo' }).locator('img');
+  await expect(photo).toHaveCount(1);
+  await expect.poll(() => photo.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth)).toBe(320);
+  const sent = (await (await other.get(`/api/messages/${me.id}`)).json()).messages.at(-1);
+  expect(sent).toMatchObject({ body: `Here it is ${stamp}`, images: [expect.stringMatching(new RegExp(`^message/${me.id}-`))] });
+  const name = sent.images[0] as string;
+
+  // Full size on a press; Escape shuts it.
+  await chat.getByRole('button', { name: 'View photo' }).click();
+  await expect(page.getByRole('dialog', { name: 'View photo' })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog', { name: 'View photo' })).toHaveCount(0);
+
+  // The friend can forward the photo on (back to the reader, the one chat
+  // they share); a photo they never saw is refused.
+  expect((await other.post(`/api/messages/${me.id}`, { data: { body: '', images: [name] } })).status()).toBe(201);
+  expect((await other.post(`/api/messages/${me.id}`, { data: { body: '', images: [`message/${me.id}-not-theirs.jpg`] } })).status()).toBe(422);
+  await expect(chat.getByRole('button', { name: 'View photo' })).toHaveCount(2);
+  expect((await (await page.request.get('/api/messages')).json()).conversations[0].lastMessage).toMatchObject({ body: '', images: [name] });
+
+  // Unsending the original wipes it; the forward still holds the photo.
+  const mine = chat.locator('[class~="group/message"]', { hasText: `Here it is ${stamp}` });
+  await mine.hover();
+  await mine.getByRole('button', { name: 'More actions' }).click();
+  await page.getByRole('menuitem', { name: 'Unsend', exact: true }).click();
+  await page.getByRole('menuitem', { name: 'Unsend', exact: true }).click();
+  await expect(chat.getByText('You unsent a message')).toBeVisible();
+  await expect(chat.getByRole('button', { name: 'View photo' })).toHaveCount(1);
+  const unsent = (await (await other.get(`/api/messages/${me.id}`)).json()).messages.find((m: { unsent: boolean }) => m.unsent);
+  expect(unsent).toMatchObject({ body: '', images: [] });
+  await other.dispose();
+});

@@ -16,9 +16,13 @@ import type { ListingJson } from '@/lib/listings';
 import { ListingFacts } from './ListingForm';
 import { Dialog, listingTitle, mediaUrl, priceLine, RatingBadge } from './parts';
 
+// Listings asked about from this page since it loaded, as viewer:listing.
+const askedHere = new Set<string>();
+
 // One listing as a buyer sees it: its photos and video, what it is, where,
 // who sells it and how they are rated, and a first message to the seller
-// that opens the chat about it. The seller sees Edit instead.
+// that opens the chat about it - or, once asked, a way back to that chat.
+// The seller sees Edit instead.
 export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson; onClose: () => void; onEdit?: () => void }) {
   const t = useT();
   const router = useRouter();
@@ -33,6 +37,14 @@ export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson
   const title = listingTitle(t, listing);
   const current = media[shown];
   const now = useNow(60_000);
+  // A chat the viewer is in has asked about it: the server's word, or a
+  // question sent from a view since (the list the view came from is older).
+  const asked = !!listing.asked || askedHere.has(`${user?.id}:${listing.id}`);
+
+  function continueChat() {
+    onClose();
+    startChat(listing.seller);
+  }
 
   async function ask() {
     const body = draft.trim();
@@ -41,6 +53,7 @@ export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson
     setError('');
     try {
       await api.post(`/api/messages/${listing.seller.id}`, { body, listingId: listing.id });
+      askedHere.add(`${user?.id}:${listing.id}`);
       onClose();
       startChat(listing.seller);
     } catch (err) {
@@ -120,13 +133,15 @@ export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson
         <div className="min-h-0 space-y-4 p-4 pt-14 md:overflow-y-auto">
           <div>
             <h2 className="text-2xl font-bold text-ink">{title}</h2>
-            <p className="text-lg font-semibold text-ink">{priceLine(t, listing)}</p>
+            <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+              <span className="text-lg font-semibold text-ink">{priceLine(t, listing)}</span>
+              {listing.status === 'pending' ? <span className="rounded-full bg-warning/15 px-2.5 py-0.5 text-xs font-semibold text-warning">{t('listing.status.pending')}</span> : null}
+            </p>
             <p className="mt-1 text-xs text-subtle">
               {listing.location?.name
                 ? t('listing.listedAgoIn', { ago: timeAgo(listing.utcCreatedDateTime, now, t.locale), place: listing.location.name })
                 : t('listing.listedAgo', { ago: timeAgo(listing.utcCreatedDateTime, now, t.locale) })}
             </p>
-            {listing.status === 'pending' ? <span className="mt-2 inline-block rounded-full bg-warning/15 px-2.5 py-0.5 text-xs font-semibold text-warning">{t('listing.status.pending')}</span> : null}
           </div>
 
           <div>
@@ -174,6 +189,24 @@ export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson
                 </Link>
               </div>
             </div>
+          ) : isLoggedIn && asked ? (
+            // Already asked: the first-message box, greyed, and a press on it
+            // opens that chat to carry on.
+            <button
+              type="button"
+              onClick={continueChat}
+              className="surface group block w-full space-y-2 p-3 text-left transition-colors hover:bg-raised focus-visible:ring-2 focus-visible:ring-link focus-visible:outline-none focus-visible:ring-inset active:bg-raised-2"
+            >
+              <span className="flex items-center gap-2 font-semibold text-muted">
+                <Icon name="message" className="size-4 text-subtle" />
+                {t(listing.kind === 'job' ? 'listing.askPoster' : 'listing.askSeller')}
+              </span>
+              <span className="block text-sm text-subtle">{t('listing.alreadyAsked')}</span>
+              <span className="btn btn-primary w-full">
+                <Icon name="message" className="size-4" />
+                {t('listing.continueChat')}
+              </span>
+            </button>
           ) : (
             <div className="surface space-y-2 p-3">
               <p className="flex items-center gap-2 font-semibold text-ink">

@@ -8,10 +8,10 @@ import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import { useNow } from '@/lib/client/now';
 import { timeAgo } from '@/lib/format';
-import { LISTING_STATUSES, RATING_TURNS, type ListingJson, type ListingStatus, type RatingInput, type RatingRole } from '@/lib/listings';
+import { LISTING_STATUSES, listingHref, RATING_TURNS, type ListingJson, type ListingStatus, type RatingInput, type RatingRole } from '@/lib/listings';
 import { pinPath } from '@/lib/seo';
 import { ListingForm } from './ListingForm';
-import { listingTitle, mediaUrl, priceLine, RatingBadge, Stars } from './parts';
+import { ListingCover, listingTitle, priceLine, RatingBadge, Stars } from './parts';
 
 type Received = RatingInput & {
   id: number;
@@ -117,16 +117,11 @@ export function ListingsManager() {
         ) : (
           <ul className="space-y-3">
             {shown.map((listing) => {
-              const href = `${pinPath({ id: listing.pinId, title: listing.pinTitle ?? '' })}?listing=${listing.id}`;
+              const href = listing.pinId ? `${pinPath({ id: listing.pinId, title: listing.pinTitle ?? '' })}?listing=${listing.id}` : listingHref(listing);
               return (
                 <li key={listing.id} className="surface flex gap-3 p-3">
                   <Link href={href} className="relative size-20 shrink-0 overflow-hidden rounded-lg bg-raised">
-                    {listing.photos[0] ? (
-                      // eslint-disable-next-line @next/next/no-img-element -- the seller's upload
-                      <img src={mediaUrl(listing.photos[0])} alt="" className={`size-full object-cover ${listing.status === 'sold' ? 'opacity-50' : ''}`} />
-                    ) : (
-                      <Icon name="tag" className="absolute inset-0 m-auto size-8 text-subtle" />
-                    )}
+                    <ListingCover photo={listing.photos[0]} video={listing.video} className={listing.status === 'sold' ? 'opacity-50' : ''} />
                   </Link>
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -137,7 +132,8 @@ export function ListingsManager() {
                     </div>
                     <p className="text-sm text-ink">{priceLine(t, listing)}</p>
                     <p className="truncate text-xs text-subtle">
-                      {t(`listing.kinds.${listing.kind}`)} · {t('listing.onPin', { title: listing.pinTitle ?? '' })}
+                      {t(`listing.kinds.${listing.kind}`)}
+                      {listing.pinTitle ? ` · ${t('listing.onPin', { title: listing.pinTitle })}` : ''}
                     </p>
                     <p className="text-xs text-subtle">
                       {t('listing.listedAgo', { ago: timeAgo(listing.utcCreatedDateTime, now, t.locale) })} · {t('listing.chats', { count: listing.chats ?? 0 })}

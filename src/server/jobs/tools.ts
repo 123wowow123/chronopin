@@ -22,7 +22,7 @@ import { hashDistance, NEAR_DUPLICATE_DISTANCE } from '../imageHash';
 import JobRun from '../model/jobRun';
 import Medium, { imageHashOf } from '../model/medium';
 import PinRevisit from '../model/pinRevisit';
-import PinSentiment, { sentimentHash } from '../model/pinSentiment';
+import PinSentiment, { shortHash } from '../model/pinSentiment';
 import Comment from '../model/comment';
 import { clampSentiment, PIN_SENTIMENT_PROMPT } from '../extract/pinSentiment';
 import { COMMENT_SENTIMENT_PROMPT } from '../extract/sentiment';
@@ -207,7 +207,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'pending_sentiment',
     description:
-      "The company pins whose title or summary changed since their tone was scored, or that were never scored, and the comments with no tone yet - with the rubric for each. Score each from -1 to 1 by its rubric, name each pin's product (reusing one of its knownProducts when it fits, empty for none), and save them with record_sentiment, then ask again until nothing is left.",
+      "The company pins whose title or summary changed since their tone was scored, or that were never scored, and the comments with no tone yet - with the rubric for each. Score each from -1 to 1 by its rubric, name each pin's product (reusing one of its company's knownProducts when it fits, empty for none), and save them with record_sentiment, then ask again until nothing is left.",
     input_schema: obj({ limit: num('At most this many of each, default 50, at most 200') }),
     run: async (input) => {
       const limit = int(input.limit, 50, 1, 200);
@@ -215,19 +215,16 @@ export const TOOLS: JobTool[] = [
       const comments = (await Promise.all(commentIds.slice(0, limit).map(async (id) => ({ id, context: await Comment.sentimentContext(id) }))))
         .filter((c) => c.context)
         .map(({ id, context }) => ({ id, pin: context!.pinTitle, replyingTo: context!.parentText ?? undefined, text: context!.text }));
+      const batch = pins.slice(0, limit);
+      // Each company's product names once, not with every one of its pins,
+      // and a short hash: the call's tokens go on the pins' own text.
+      const knownProducts: { [company: string]: string[] } = {};
+      for (const p of batch) knownProducts[p.company] ??= await PinSentiment.productsOf(p.companyId, 20);
       return {
         pinRubric: PIN_SENTIMENT_PROMPT,
         commentRubric: COMMENT_SENTIMENT_PROMPT,
-        pins: await Promise.all(
-          pins.slice(0, limit).map(async (p) => ({
-            id: p.id,
-            company: p.company,
-            knownProducts: await PinSentiment.productsOf(p.companyId, 20),
-            title: p.title,
-            summary: p.description ?? '',
-            textHash: sentimentHash(p),
-          })),
-        ),
+        knownProducts,
+        pins: batch.map((p) => ({ id: p.id, company: p.company, title: p.title, summary: p.description ?? '', textHash: shortHash(p) })),
         comments,
         remaining: { pins: Math.max(0, pins.length - limit), comments: Math.max(0, commentIds.length - limit) },
       };

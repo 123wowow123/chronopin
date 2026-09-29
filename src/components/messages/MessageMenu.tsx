@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon } from '@/components/ui/Icon';
 import { MENU_ITEM, PopMenu } from '@/components/ui/PopMenu';
+import { blobUrl } from '@/lib/appConfig';
 import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import type { ChatMessage, ChatUser } from '@/lib/client/messages';
@@ -120,14 +121,14 @@ export function MessageMenu({
           );
         }}
       </PopMenu>
-      {forwarding ? <ForwardDialog body={message.body} onClose={() => setForwarding(false)} /> : null}
+      {forwarding ? <ForwardDialog body={message.body} images={message.images} onClose={() => setForwarding(false)} /> : null}
     </>
   );
 }
 
 // Forward: the message, then the chats and a search for anyone else; each
 // pick sends it on, and the dialog stays for more until closed.
-function ForwardDialog({ body, onClose }: { body: string; onClose: () => void }) {
+function ForwardDialog({ body, images, onClose }: { body: string; images: string[]; onClose: () => void }) {
   const t = useT();
   const [status, setStatus] = useState<{ ok: boolean; name: string } | null>(null);
 
@@ -141,7 +142,7 @@ function ForwardDialog({ body, onClose }: { body: string; onClose: () => void })
 
   async function forward(user: ChatUser) {
     try {
-      await api.post(`/api/messages/${user.id}`, { body });
+      await api.post(`/api/messages/${user.id}`, { body, images });
       setStatus({ ok: true, name: user.userName });
     } catch {
       setStatus({ ok: false, name: user.userName });
@@ -162,7 +163,17 @@ function ForwardDialog({ body, onClose }: { body: string; onClose: () => void })
             <Icon name="close" className="size-5" />
           </button>
         </div>
-        <p className="mx-4 mt-3 mb-2 line-clamp-3 rounded-xl bg-raised px-3 py-2 text-sm whitespace-pre-wrap text-muted">{body}</p>
+        <div className="mx-4 mt-3 mb-2 rounded-xl bg-raised px-3 py-2">
+          {images.length ? (
+            <div className={`flex gap-1.5 ${body ? 'mb-1.5' : ''}`}>
+              {images.slice(0, 5).map((name) => (
+                <img key={name} src={blobUrl(name)} alt="" className="size-12 rounded-lg object-cover" />
+              ))}
+              {images.length > 5 ? <span className="self-center text-sm text-muted">+{images.length - 5}</span> : null}
+            </div>
+          ) : null}
+          {body ? <p className="line-clamp-3 text-sm whitespace-pre-wrap text-muted">{body}</p> : null}
+        </div>
         {status ? (
           <p role="status" className={`px-4 pb-2 text-sm ${status.ok ? 'text-success' : 'text-danger'}`}>
             {status.ok ? t('dm.forwarded', { name: status.name }) : t('dm.actionFailed')}
