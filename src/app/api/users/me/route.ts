@@ -1,9 +1,12 @@
 import _ from 'lodash';
 import { cookies } from 'next/headers';
 import type { NextRequest } from 'next/server';
+import { birthdayMessage, birthdayProblem } from '@/lib/birthday';
+import { normalizePhone, phoneMessage, phoneProblem } from '@/lib/phone';
 import { getUser, requireUser, signToken, tokenCookie } from '@/server/auth';
+import { sendVerificationEmailInBackground } from '@/server/emailVerification';
 import { json, readJson, route } from '@/server/http';
-import User, { patchableUserProps, pickUserProps } from '@/server/model/user';
+import User, { patchableUserProps, pickUserProps, takenBody, takenField } from '@/server/model/user';
 import { loadUser } from '@/server/services/users';
 
 // The signed-in user's own account, or null when signed out. Every page load
@@ -14,18 +17,35 @@ export const GET = route(async (request: NextRequest) => {
   return json(user ? user.pick(pickUserProps) : null);
 });
 
-// Change handle, name or email. Only those: a patch that took every field
-// would let anyone make themselves an admin.
+// Change handle, name, birthday, phone or email. Only those: a patch that took every
+// field would let anyone make themselves an admin.
 export const PATCH = route(async (request: NextRequest) => {
   const signedIn = await requireUser(request);
-  const patch = new User(_.pick(await readJson(request), patchableUserProps));
-  const user = (await loadUser(signedIn.id)).patchSet(patch);
+  const body = _.pick(await readJson(request), patchableUserProps);
+
+  const badBirthday = birthdayProblem(body.birthday);
+  if (badBirthday) return json({ code: `birthday.${badBirthday}`, message: birthdayMessage(badBirthday) }, 422);
+  const badPhone = phoneProblem(body.phone);
+  if (badPhone) return json({ code: `phone.${badPhone}`, message: phoneMessage() }, 422);
+  if ('phone' in body) body.phone = normalizePhone(body.phone);
+
+  const user = (await loadUser(signedIn.id)).patchSet(new User(body));
+  // citext: a change of case is the same address, and stays confirmed.
+  const emailChanged = String(user.email ?? '').toLowerCase() !== String(signedIn.email ?? '').toLowerCase();
+  // patchSet copies only what is truthy, so taking an optional birthday or
+  // phone back off the account has to be said outright.
+  if ('birthday' in body && !body.birthday) user.birthday = null;
+  if ('phone' in body && !body.phone) user.phone = null;
 
   try {
     await user.patchWithoutPassword();
   } catch (err) {
+    const taken = takenField(err);
+    if (taken) return json(takenBody(taken), 409);
     return json(err instanceof Error ? { message: err.message } : err, 422);
   }
+  // The update cleared the confirmation (0071); the new address gets a link.
+  if (emailChanged) sendVerificationEmailInBackground(user, request);
 
   const token = await signToken(user.id, user.role);
   (await cookies()).set(tokenCookie(token));

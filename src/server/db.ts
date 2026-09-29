@@ -5,12 +5,14 @@
 //   db.queryResult(sql, params)  -> Promise of the full pg result (rowCount...)
 //   db.transaction(run)          -> run(query) inside BEGIN/COMMIT, rolled
 //                                   back if the promise it returns rejects
+//   db.afterCommit(query, fn)    -> fn once query's writes are committed
 //   db.closeConnection()         -> ends the pool, for scripts
 //
 // Parameters are positional ($1, $2...). Identifiers in SQL are double-quoted
 // camelCase, so rows come back with the property names the models use.
 
 import pg from 'pg';
+import { settleBackgroundWork } from './background';
 import config from './config';
 
 // numeric (e.g. price DECIMAL(18,2)) arrives as a string by default, to avoid
@@ -22,6 +24,17 @@ pg.types.setTypeParser(pg.types.builtins.NUMERIC, (value: string | null) =>
 pg.types.setTypeParser(pg.types.builtins.INT8, (value: string | null) =>
   value === null ? null : parseInt(value, 10),
 );
+
+// Going the other way, a Date parameter is written in the process's own time
+// zone with a +/-HH:MM offset - and that offset has no room for seconds. Zones
+// were local mean time until the 1880s (Los Angeles was -07:52:58), so a date
+// that old arrives seconds adrift of the instant it left as. This timeline
+// reaches back millennia, and seconds are enough to push an all-day pin off
+// midnight and break CK_Pin_allDayUtcMidnight: seeding the Great Pyramid
+// failed on a machine set to Los Angeles and succeeded on one set to UTC.
+// Sending every Date as UTC fixes it and makes what is written the same
+// wherever the server runs.
+pg.defaults.parseInputDatesAsUTC = true;
 
 export type Row = Record<string, any>;
 export type QueryFn = <T extends Row = Row>(text: string, params?: unknown[]) => Promise<T[]>;
@@ -56,13 +69,38 @@ export function queryResult<T extends Row = Row>(text: string, params?: unknown[
 export const query: QueryFn = <T extends Row = Row>(text: string, params?: unknown[]) =>
   queryResult<T>(text, params).then((res) => res.rows);
 
+// Work waiting on each open transaction's COMMIT, keyed by its query function.
+const commitHooks = new WeakMap<QueryFn, (() => void)[]>();
+
+// Runs fn once what query wrote can be seen by everyone else: straight away
+// for the plain pool query, after COMMIT for a transaction's (and never, if it
+// rolls back). For telling others about a write, such as a live push that
+// reads the new state back.
+export function afterCommit(query: QueryFn, fn: () => void) {
+  const hooks = commitHooks.get(query);
+  if (hooks) {
+    hooks.push(fn);
+  } else {
+    fn();
+  }
+}
+
 export async function transaction<T>(run: (query: QueryFn) => Promise<T>): Promise<T> {
   const client = await getPool().connect();
   const clientQuery: QueryFn = (text, params) => client.query(text, params).then((res) => res.rows);
+  const hooks: (() => void)[] = [];
+  commitHooks.set(clientQuery, hooks);
   try {
     await client.query('BEGIN');
     const result = await run(clientQuery);
     await client.query('COMMIT');
+    for (const hook of hooks) {
+      try {
+        hook();
+      } catch (err) {
+        console.error('afterCommit hook failed:', err);
+      }
+    }
     return result;
   } catch (err) {
     await client.query('ROLLBACK').catch(() => undefined);
@@ -72,12 +110,15 @@ export async function transaction<T>(run: (query: QueryFn) => Promise<T>): Promi
   }
 }
 
-export function closeConnection(): Promise<void> {
+// Scripts call this when they are done. Background work is drained first, so
+// a write that was still in flight does not land on a closed pool and build
+// itself a new one - which then held the process for its whole idle timeout.
+export async function closeConnection(): Promise<void> {
+  await settleBackgroundWork();
   const ending = globalForPool.__chronopinPool;
   if (ending) {
     globalForPool.__chronopinPool = null;
     console.log('DB connection closed');
-    return ending.end();
+    await ending.end();
   }
-  return Promise.resolve();
 }

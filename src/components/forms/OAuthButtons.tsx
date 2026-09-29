@@ -1,26 +1,68 @@
 'use client';
 
-// Sign in with Google or Facebook. On the sign-up page the chosen @handle is
-// left in a short-lived cookie for the callback to give a new account.
-export function OAuthButtons({ handle, validate }: { handle?: string; validate?: () => boolean }) {
-  function go(provider: 'google' | 'facebook') {
+import { useLocale, useT } from '@/lib/client/i18n';
+import { localizePath } from '@/lib/i18n/config';
+
+export type SignInProvider = 'google' | 'facebook' | 'apple';
+
+// Sign in with Google, Facebook or Apple - whichever the server has keys for
+// (signInProviders in src/server/oauth.ts), with the divider above them, or
+// nothing at all when none is set up. On the sign-up page the chosen @handle
+// is left in a short-lived cookie for the callback to give a new account; on
+// the login page, the page to go back to afterwards.
+export function OAuthButtons({
+  providers,
+  handle,
+  redirect,
+  validate,
+}: {
+  providers: SignInProvider[];
+  handle?: string;
+  redirect?: string;
+  validate?: () => boolean;
+}) {
+  const locale = useLocale();
+  if (!providers.length) return null;
+  function go(provider: SignInProvider) {
     if (validate && !validate()) return;
-    document.cookie = handle && handle.length > 1 ? `handle=${encodeURIComponent(handle)}; path=/; max-age=600; samesite=lax` : 'handle=; path=/; max-age=0';
-    // A full navigation: /auth/* is a route handler that redirects to the provider.
-    // eslint-disable-next-line @next/next/no-location-assign-relative-destination
-    window.location.href = `/auth/${provider}`;
+    // Apple posts its callback back cross-site, and only a SameSite=None
+    // cookie rides along with that. It is https-only, so Secure costs nothing.
+    const sameSite = provider === 'apple' ? 'samesite=none; secure' : 'samesite=lax';
+    document.cookie = handle && handle.length > 1 ? `handle=${encodeURIComponent(handle)}; path=/; max-age=600; ${sameSite}` : 'handle=; path=/; max-age=0';
+    // The callback is outside the languages, so the page to come back to goes in this one.
+    const target = localizePath(redirect || '/', locale);
+    document.cookie = target !== '/' ? `after_login=${encodeURIComponent(target)}; path=/; max-age=600; ${sameSite}` : 'after_login=; path=/; max-age=0';
+    // A full navigation: /auth/* is a route handler that redirects to the
+    // provider. Replacing, because these buttons only ever sit on the login and
+    // sign-up pages: the whole redirect chain, and the page it ends on, stand in
+    // this page's place in the history rather than after it.
+    window.location.replace(`/auth/${provider}`);
   }
+  const columns = ['', 'sm:grid-cols-1', 'sm:grid-cols-2', 'sm:grid-cols-3'][providers.length];
   return (
-    <div className="grid gap-2.5 sm:grid-cols-2">
-      <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 hover:bg-neutral-200">
-        <GoogleMark />
-        Google
-      </button>
-      <button type="button" onClick={() => go('facebook')} className="btn bg-[#1877f2] text-white hover:bg-[#2d86f5]">
-        <FacebookMark />
-        Facebook
-      </button>
-    </div>
+    <>
+      <OrDivider />
+      <div className={`grid gap-2.5 ${columns}`}>
+        {providers.includes('google') ? (
+          <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 ring-1 ring-line ring-inset hover:bg-neutral-200">
+            <GoogleMark />
+            Google
+          </button>
+        ) : null}
+        {providers.includes('facebook') ? (
+          <button type="button" onClick={() => go('facebook')} className="btn bg-[#1466d8] text-white hover:bg-[#1259bd]">
+            <FacebookMark />
+            Facebook
+          </button>
+        ) : null}
+        {providers.includes('apple') ? (
+          <button type="button" onClick={() => go('apple')} className="btn bg-black text-white hover:bg-neutral-800">
+            <AppleMark />
+            Apple
+          </button>
+        ) : null}
+      </div>
+    </>
   );
 }
 
@@ -43,11 +85,20 @@ function FacebookMark() {
   );
 }
 
-export function OrDivider({ children = 'or' }: { children?: React.ReactNode }) {
+function AppleMark() {
   return (
-    <div className="flex items-center gap-3 text-xs tracking-wider text-faint uppercase">
+    <svg viewBox="0 0 24 24" className="size-4" fill="currentColor" aria-hidden>
+      <path d="M17.6 12.7c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9s-1.9-.9-3.2-.8c-1.6 0-3.1.9-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8s1.9.8 3.2.7c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM15.2 5.6c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z" />
+    </svg>
+  );
+}
+
+export function OrDivider({ children }: { children?: React.ReactNode }) {
+  const t = useT();
+  return (
+    <div className="flex items-center gap-3 text-xs tracking-wider text-subtle uppercase">
       <span className="h-px flex-1 bg-line" />
-      {children}
+      {children ?? t('common.or')}
       <span className="h-px flex-1 bg-line" />
     </div>
   );

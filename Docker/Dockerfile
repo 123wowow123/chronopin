@@ -24,7 +24,15 @@ FROM node:24-alpine AS runtime
 WORKDIR /app
 
 # Chromium and fonts for puppeteer (page scraping); bind-tools for nslookup.
-RUN apk add --no-cache chromium nss freetype harfbuzz ca-certificates ttf-freefont bind-tools
+#
+# poppler-utils and tesseract-ocr are the PDF reader
+# (src/server/scrape/pdfText.ts): pdftotext and pdfinfo for a filing's text
+# layer, pdftoppm and tesseract to OCR one that is a scan. Without them a PDF
+# source fails the whole scrape, because the fetch is the one stage that may.
+# tesseract-ocr-data-eng is the English model; tesseract ships no language data
+# of its own. Measured: they add about 72MB to the image.
+RUN apk add --no-cache chromium nss freetype harfbuzz ca-certificates ttf-freefont bind-tools \
+    poppler-utils tesseract-ocr tesseract-ocr-data-eng
 
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
@@ -34,9 +42,15 @@ ENV NODE_ENV=production \
     HOSTNAME=0.0.0.0
 
 # The standalone output is the server plus only the node_modules it uses.
-COPY --from=build /code/.next/standalone ./
-COPY --from=build /code/.next/static ./.next/static
+# Owned by the user the server runs as: it rewrites its prerendered pages
+# under .next/server and fills .next/cache as they revalidate, and as root's
+# they failed with EACCES and were rebuilt on every request instead.
+COPY --from=build --chown=node:node /code/.next/standalone ./
+COPY --from=build --chown=node:node /code/.next/static ./.next/static
 COPY --from=build /code/public ./public
+# The OKF docs: the daily pin jobs read their strategy from them at run time
+# (src/server/jobs/prompt.ts).
+COPY --from=build /code/docs/okf ./docs/okf
 
 USER node
 EXPOSE 9000

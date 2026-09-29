@@ -1,30 +1,68 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/ui/Link';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import { PostedTime, StartTime } from '@/components/ui/LocalTime';
-import { UserAvatar } from '@/components/ui/UserAvatar';
+import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime';
 import { money } from '@/lib/format';
-import { useSession } from '@/lib/client/session';
+import { useVideoPoster } from '@/lib/client/timelineVideo';
 import { pinPath } from '@/lib/seo';
 import type { CardPin } from '@/lib/types';
+import { useLeftOut } from '@/lib/client/leftOut';
+import { undoNotInterested, useNotInterested } from '@/lib/client/notInterested';
 import { pinEvidence } from '@/lib/referenceConfidence';
+import type { PinTense } from '@/lib/timeline';
 import { CitedText } from './CitedText';
-import { DateConfidence } from './DateConfidence';
+import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
+import { DelayBadge } from './DelayBadge';
 import { PinConfidence } from './PinConfidence';
+import { PinMenu } from './PinMenu';
+import { PinDistance } from './PinDistance';
+import { CompanyTicker } from './CompanyTicker';
+import { PinCardOdds } from './PinOdds';
 import { PinMediaFrame } from './PinMedia';
+import { RatingSummary } from './PinRatings';
+import { EpisodeCount } from './EpisodeCount';
 import { RefineLink } from './RefineLink';
+import { PlaceLinks } from './PlaceLinks';
+import { ViewCount } from './ViewCount';
 import { WatchButton } from './WatchButton';
 import { WeatherIcon } from './WeatherIcon';
+import { useT } from '@/lib/client/i18n';
+import { categoryLabel } from '@/lib/i18n/labels';
 
 const CARD_SIZES = '(max-width: 640px) 100vw, 448px';
 
-// A pin on the timeline or in search results.
-export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serverTimeZone: string; priority?: boolean }) {
-  const { isAdmin } = useSession();
+// A faint wash and border in the map's past/future colours; ongoing (and untensed) pins stay plain.
+const TENSE_CLASS: Record<PinTense, string> = {
+  past: 'border-past/60 hover:border-past [--card-bg:color-mix(in_oklab,var(--color-past)_12%,var(--color-panel))]',
+  future: 'border-future/60 hover:border-future [--card-bg:color-mix(in_oklab,var(--color-future)_12%,var(--color-panel))]',
+  ongoing: 'hover:border-raised-2',
+};
+
+// A pin on the timeline or in search results. Away from the timeline (no day
+// tag beside it), todayKey adds how far its start is from today.
+export function PinCard({
+  pin,
+  serverTimeZone,
+  priority,
+  tense,
+  todayKey,
+}: {
+  pin: CardPin;
+  serverTimeZone: string;
+  priority?: boolean;
+  tense?: PinTense;
+  todayKey?: string;
+}) {
+  // On a phone a card shows a video's still instead of its player, unless an
+  // admin has turned the players back on.
+  const poster = useVideoPoster();
+  const t = useT();
+  const leftOut = useLeftOut()(pin);
+  const justHidden = useNotInterested().justHidden.has(pin.id);
   const href = pinPath(pin);
-  const medium = pin.media?.[0];
+  const media = pin.media ?? [];
   const hasPlace = pin.latitude != null && pin.longitude != null;
 
   // Cards are clipped at 600px; "show more" appears only when that cut text off.
@@ -50,94 +88,154 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
     </RefineLink>
   ) : null;
 
-  // Company and place as plain text, for a pin without a medium to label.
+  // Company and place for a pin without a medium to label: the company in the
+  // same pill the pin page uses for its chips, the place as its parts, each
+  // a search for the pins standing there. Over a picture the place stays
+  // plain text - the frame is itself a link to the pin, and a link cannot
+  // hold another.
   const placeRow =
     company || pin.address ? (
-      <div className="mb-1.5 flex flex-wrap items-center gap-x-3 text-xs text-muted">
-        {company}
-        {pin.address ? <span>{pin.address}</span> : null}
+      <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
+        {company ? (
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-raised px-2.5 py-0.5 font-medium ring-1 ring-tint/15 ring-inset">
+            {company}
+            <CompanyTicker pin={pin} />
+          </span>
+        ) : null}
+        {pin.address ? <PlaceLinks address={pin.address} /> : null}
       </div>
     ) : null;
 
+  // By someone the reader blocked (0076), or marked "Not interested" (0077)
+  // on an earlier page: shown nowhere - the timeline and search leave the
+  // slot out too, and "More like this" skips it here.
+  if (leftOut) return null;
+  // Marked on this page: folded to a line, with Undo.
+  if (justHidden) {
+    return (
+      <article className="surface flex items-center justify-between gap-3 px-3 py-3 text-sm text-subtle">
+        <span>{t('pin.hiddenNotice')}</span>
+        <button type="button" onClick={() => void undoNotInterested(pin.id).catch(() => {})} className="btn btn-sm btn-secondary shrink-0">
+          {t('pin.undo')}
+        </button>
+      </article>
+    );
+  }
+
   return (
-    <article className="surface relative overflow-hidden pt-2.5 pb-1.5 transition-[border-color,box-shadow] hover:border-raised-2 hover:shadow-xl hover:shadow-black/30">
-      <div ref={contentRef} className="relative max-h-[600px] overflow-hidden">
+    <article
+      data-tense={tense}
+      className={`surface relative overflow-hidden bg-[var(--card-bg,var(--color-panel))] pb-1.5 transition-[border-color,filter] hover:brightness-110 ${TENSE_CLASS[tense ?? 'ongoing']}`}
+    >
+      {/* pt-2.5 belongs inside the clip: the meta row's links hang their tap
+          area 8px above themselves, which overflow-hidden would cut off. */}
+      <div ref={contentRef} className="relative max-h-[600px] overflow-hidden pt-2.5">
         <div className="mx-3 flex items-center justify-between text-[11px] text-subtle [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
           {/* A dot before every item but the first, kept on the item's line when the row wraps. */}
           <div className="flex min-w-0 flex-wrap items-center [&>*]:whitespace-nowrap [&>*+*]:before:px-1.5 [&>*+*]:before:text-faint [&>*+*]:before:content-['·']">
-            {pin.category ? (
+            {/* Its main category: the pin page lists the rest. */}
+            {pin.categories?.[0] ? (
               <span>
-                <RefineLink field="category" value={pin.category} className="font-medium text-muted hover:text-ink hover:no-underline">
-                  {pin.category}
+                <RefineLink field="tag" value={pin.categories[0]} className="font-medium text-muted hover:text-ink hover:no-underline">
+                  {categoryLabel(t, pin.categories[0])}
                 </RefineLink>
               </span>
             ) : null}
             {pin.utcCreatedDateTime ? (
               <span>
-                <Link href={href} className="text-inherit hover:text-ink hover:no-underline">
-                  <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} />
-                </Link>
+                <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} dateOnly search />
               </span>
             ) : null}
             {pin.user?.userName ? (
-              <span className="inline-flex items-center">
-                <RefineLink field="user" value={pin.user.userName} className="inline-flex items-center gap-1 text-inherit hover:text-ink hover:no-underline">
-                  {pin.user.pictureUrl ? (
-                    <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-4 text-[8px]" />
-                  ) : null}
+              <span>
+                <RefineLink field="user" value={pin.user.userName} className="text-inherit hover:text-ink hover:no-underline">
                   {pin.user.userName}
                 </RefineLink>
               </span>
             ) : null}
+            {/* How far the pin stands from the reader, once their browser
+                knows where that is. It is the row's last item and the one
+                that gives, cut short rather than wrapping the row (see
+                PinDistance). Nothing stands in for it while it is unknown,
+                or the row would show the dot before an empty item. */}
+            {pin.latitude != null && pin.longitude != null ? <PinDistance pinId={pin.id} latitude={pin.latitude} longitude={pin.longitude} compact /> : null}
           </div>
-          {pin.parentId || pin.rootThread ? (
-            <Link href={href} title={pin.parentId ? 'Part of thread' : 'First pin in a thread'} className="text-subtle hover:text-ink">
-              <Icon name="thread" className="size-3.5" />
-            </Link>
-          ) : null}
+          <div className="flex shrink-0 items-center gap-1">
+            {pin.parentId || pin.rootThread ? (
+              <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="text-subtle hover:text-ink">
+                <Icon name="thread" className="size-3.5" />
+              </Link>
+            ) : null}
+            <span className="-my-1.5 -mr-1.5">
+              <PinMenu pin={pin} buttonClassName="size-7" iconClassName="size-4" />
+            </span>
+          </div>
         </div>
 
-        <h2 className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-balance">
+        <h2 className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-pretty">
           <Link href={href} className="text-ink transition-colors hover:text-link hover:no-underline">
             {pin.title}
           </Link>
         </h2>
 
-        {medium ? (
+        {media.length ? (
           <PinMediaFrame
-            key={medium.originalUrl ?? medium.thumbName}
-            className="relative mb-3 bg-black"
+            key={media.map((m) => m.originalUrl ?? m.thumbName).join(' ')}
+            // A tall picture (a poster) is cropped to its middle, leaving room under
+            // it for the start date and some description before the cut-off.
+            className="relative mb-3 bg-black [&_img]:max-h-[260px] [&_img]:object-cover"
             overlay={
               <>
                 {pin.address ? <span className="media-chip absolute top-2 right-2 z-10 max-w-[70%] truncate">{pin.address}</span> : null}
-                {company ? <span className="media-chip absolute bottom-2 left-2 z-10">{company}</span> : null}
+                {company ? (
+                  <span className="media-chip absolute bottom-2 left-2 z-10 inline-flex items-center gap-1.5">
+                    {company}
+                    <CompanyTicker pin={pin} onDark />
+                  </span>
+                ) : null}
               </>
             }
             fallback={<div className="mx-3">{placeRow}</div>}
-            medium={medium}
+            media={media}
             title={pin.title}
             href={href}
             priority={priority}
+            poster={poster}
             sizes={CARD_SIZES}
           />
         ) : null}
 
         <div className="mx-3">
-          {!medium ? placeRow : null}
-          {pin.utcStartDateTime ? (
+          {!media.length ? placeRow : null}
+          {pin.utcStartDateTime || pin.ratings?.length || pin.episodeCount ? (
             <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
-              <StartTime pin={pin} serverTimeZone={serverTimeZone} />
-              <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
-              {/* An unverified pin's reasoning only restates that nothing was found. */}
-              <DateConfidence
-                level={pin.dateConfidence}
-                reasoning={pin.dateConfidenceReasoning}
-                showReasoning={pin.dateConfidence !== 'unknown'}
-                reasoningContent={pin.dateConfidenceReasoning && pin.id ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} hrefBase={href} /> : undefined}
-              />
-              <PinConfidence evidence={pinEvidence(pin)} />
+              {pin.utcStartDateTime ? (
+                <>
+                  <StartTime pin={pin} serverTimeZone={serverTimeZone} search />
+                  <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
+                  <DateConfidence level={pin.dateConfidence} />
+                  <DelayBadge pin={pin} />
+                  <PinConfidence evidence={pinEvidence(pin)} />
+                </>
+              ) : null}
+              {/* The review-site average, for a film, series or anime pin, or
+                  the one source's own score where that is all the pin has -
+                  a card lists no sources beside it, same as a thread row. */}
+              <RatingSummary ratings={pin.ratings} search />
+              {/* How many episodes, for a series, anime or other episodic work. */}
+              <EpisodeCount pin={pin} compact />
+              {/* How far the start is from today, at the tail of the pills. */}
+              {pin.utcStartDateTime && todayKey ? <StartDistance pin={pin} todayKey={todayKey} serverTimeZone={serverTimeZone} /> : null}
+              {/* Last, on a line of its own. An unverified pin's reasoning only restates
+                  that nothing was found, so it stays hidden. */}
+              {pin.utcStartDateTime && pin.dateConfidence !== 'unknown' ? (
+                <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning}>
+                  {pin.dateConfidenceReasoning && pin.id ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} hrefBase={href} /> : undefined}
+                </DateConfidenceReasoning>
+              ) : null}
             </div>
           ) : null}
+          <PinCardOdds pin={pin} />
           {pin.safeDescription ? (
             <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: pin.safeDescription }} />
           ) : null}
@@ -146,20 +244,20 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
         {overflowing ? (
           <Link
             href={href}
-            className="absolute right-0 bottom-0 left-0 bg-panel px-3 pt-0.5 text-right text-sm font-medium before:absolute before:-top-8 before:left-0 before:h-8 before:w-full before:bg-gradient-to-b before:from-transparent before:to-panel before:content-['']"
+            className="absolute right-0 bottom-0 left-0 bg-[var(--card-bg,var(--color-panel))] px-3 pt-0.5 text-right text-sm font-medium before:absolute before:-top-8 before:left-0 before:h-8 before:w-full before:bg-gradient-to-b before:from-transparent before:to-[var(--card-bg,var(--color-panel))] before:content-['']"
           >
-            show more
+            {t('card.showMore')}
           </Link>
         ) : null}
       </div>
 
       <div className="mx-3 mt-2.5 grid grid-cols-[1fr_auto_1fr] items-center border-t border-line pt-1.5">
-        <div className={`text-sm font-medium tabular-nums ${pin.price != null && pin.price < 0 ? 'text-red-400' : 'text-emerald-400'}`}>
+        <div className={`text-sm font-medium tabular-nums ${pin.price != null && pin.price < 0 ? 'text-danger' : 'text-success'}`}>
           {pin.price ? money(pin.price, pin.priceCurrency) : null}
         </div>
         <div>
           {pin.searchScore != null ? (
-            <span className="inline-flex items-center gap-1.5 text-xs text-subtle" title="How closely this pin matches the search - cosine similarity, higher is closer">
+            <span className="inline-flex items-center gap-1.5 text-xs text-subtle" title={t('card.searchScoreTitle')}>
               <span>{pin.searchScore.toFixed(2)}</span>
               <span className="h-1 w-12 overflow-hidden rounded bg-raised" aria-hidden>
                 <span className="block h-full bg-link" style={{ width: `${Math.max(0, Math.min(1, pin.searchScore)) * 100}%` }} />
@@ -168,14 +266,7 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
           ) : null}
         </div>
         <div className="flex items-center justify-end gap-1">
-          {/* The session loads after the timeline has scrolled to today, so
-              this must not change the footer's height (inline-flex, 28px like
-              the watch button) or every card above today would push it down. */}
-          {isAdmin ? (
-            <Link href={`/update/${pin.id}`} className="inline-flex rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink" title="Edit pin">
-              <Icon name="pencil" className="size-4" />
-            </Link>
-          ) : null}
+          <ViewCount pinId={pin.id} initial={pin.viewCount} />
           <WatchButton pin={pin} />
         </div>
       </div>

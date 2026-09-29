@@ -5,15 +5,16 @@
 
 type Row = Record<string, any>;
 
-// tests/e2e/account.spec.ts signs up as e2e-<stamp>@example.com.
-const E2E_EMAIL = /^e2e-[a-z0-9]+@example\.com$/i;
+// The e2e specs sign up as e2e-<stamp>@example.com, some with a word of their
+// own in the middle (e2e-return-<stamp>@example.com).
+export const E2E_EMAIL = /^e2e-[a-z0-9-]+@example\.com$/i;
 
 export function e2eUserIds(users: Row[]): Set<number> {
   return new Set(users.filter((u) => typeof u.email === 'string' && E2E_EMAIL.test(u.email)).map((u) => u.id));
 }
 
 export function excludeE2e<P extends Row>(
-  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; follows: Row[] },
+  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[]; notInterested?: Row[]; companyBlocks?: Row[]; messages?: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] }; listings?: { listings: Row[]; ratings: Row[] } },
 ) {
   const userIds = e2eUserIds(data.users);
   const isE2eUser = (id: unknown) => userIds.has(id as number);
@@ -23,6 +24,10 @@ export function excludeE2e<P extends Row>(
   for (const pin of pins) {
     if (Array.isArray(pin.favorites)) (pin as Row).favorites = pin.favorites.filter((f: Row) => !isE2eUser(f.userId));
     if (Array.isArray(pin.likes)) (pin as Row).likes = pin.likes.filter((l: Row) => !isE2eUser(l.userId));
+    // A reference an e2e user added to a kept pin stays, uncredited: that user is not restored.
+    for (const r of Array.isArray(pin.references) ? pin.references : []) {
+      if (isE2eUser(r.addedByUserId)) Object.assign(r, { addedByUserId: null, addedByUserName: null, addedByUserPictureUrl: null });
+    }
   }
 
   // Only a company that e2e pins named and no kept pin uses; an unused company
@@ -36,7 +41,51 @@ export function excludeE2e<P extends Row>(
     pins,
     companies: data.companies.filter((c) => !droppedCompanyIds.has(c.id)),
     comments: data.comments.filter((c) => !isE2eUser(c.userId) && !droppedPinIds.has(c.pinId)),
+    // A reaction goes with whoever gave it, and with the comment it was on.
+    commentReactions: (data.commentReactions ?? []).filter((v) => {
+      const comment = data.comments.find((c) => c.id === v.commentId);
+      return !isE2eUser(v.userId) && !!comment && !isE2eUser(comment.userId) && !droppedPinIds.has(comment.pinId);
+    }),
     follows: data.follows.filter((f) => !isE2eUser(f.followerId) && !isE2eUser(f.followeeId)),
+    companyFollows: data.companyFollows.filter((f) => !isE2eUser(f.userId) && !droppedCompanyIds.has(f.companyId)),
+    userBlocks: (data.userBlocks ?? []).filter((b) => !isE2eUser(b.blockerId) && !isE2eUser(b.blockedId)),
+    notInterested: (data.notInterested ?? []).filter((m) => !isE2eUser(m.userId) && !droppedPinIds.has(m.pinId)),
+    companyBlocks: (data.companyBlocks ?? []).filter((b) => !isE2eUser(b.userId) && !droppedCompanyIds.has(b.companyId)),
+    ...excludeE2eListings(data.listings, data.messages, isE2eUser, droppedPinIds),
     dropped: { users: userIds.size, pins: droppedPins.length, companies: droppedCompanyIds.size },
+  };
+}
+
+// A chat goes whole when either side is an e2e user (the messages spec
+// leaves several), with its messages and their reports.
+function excludeE2eChats(chats: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] } | undefined, isE2eUser: (id: unknown) => boolean) {
+  if (!chats) return { conversations: [], members: [], messages: [], reports: [] };
+  const conversations = chats.conversations.filter((c) => !isE2eUser(c.userLowId) && !isE2eUser(c.userHighId));
+  const kept = new Set(conversations.map((c) => c.id));
+  const messages = chats.messages.filter((m) => kept.has(m.conversationId));
+  const keptMessages = new Set(messages.map((m) => m.id));
+  return {
+    conversations,
+    members: chats.members.filter((m) => kept.has(m.conversationId)),
+    messages,
+    reports: chats.reports.filter((r) => keptMessages.has(r.messageId) && !isE2eUser(r.userId)),
+  };
+}
+
+// A listing goes with an e2e seller or pin, and a rating with an e2e side;
+// a kept message that asked about a dropped listing keeps its text only.
+function excludeE2eListings(
+  market: { listings: Row[]; ratings: Row[] } | undefined,
+  chats: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] } | undefined,
+  isE2eUser: (id: unknown) => boolean,
+  droppedPinIds: Set<unknown>,
+) {
+  const listings = (market?.listings ?? []).filter((l) => !isE2eUser(l.userId) && !droppedPinIds.has(l.pinId));
+  const kept = new Set(listings.map((l) => l.id));
+  const messages = excludeE2eChats(chats, isE2eUser);
+  messages.messages = messages.messages.map((m) => (m.listingId != null && !kept.has(m.listingId) ? { ...m, listingId: null } : m));
+  return {
+    listings: { listings, ratings: (market?.ratings ?? []).filter((r) => kept.has(r.listingId) && !isE2eUser(r.raterId) && !isE2eUser(r.rateeId)) },
+    messages,
   };
 }

@@ -1,0 +1,338 @@
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { tagKind } from '@/lib/tags';
+import {
+  adaptationTag,
+  aniListEpisodes,
+  aniListStreamingUrls,
+  findScreenDetails,
+  malIdOf,
+  isScreenCategory,
+  malEpisodes,
+  normalizeTitle,
+  parseScore,
+  pickTrailer,
+  titleCandidates,
+  wikidataEpisodes,
+  wikidataRatings,
+  wikidataStreamingUrls,
+  withoutSeason,
+  yearFits,
+  youtubeStill,
+} from './screen';
+
+describe('normalizeTitle', () => {
+  it('ignores case, punctuation, a leading "the" and ordinal seasons', () => {
+    expect(normalizeTitle("Frieren: Beyond Journey’s End")).toBe(normalizeTitle("frieren - beyond journey's end"));
+    expect(normalizeTitle('Sousou no Frieren 2nd Season')).toBe('sousou no frieren season 2');
+    expect(normalizeTitle('The Apothecary Diaries')).toBe('apothecary diaries');
+    expect(normalizeTitle('Pokémon & Friends')).toBe('pokemon and friends');
+  });
+});
+
+describe('titleCandidates', () => {
+  it('prefers the given work title, then reads titles out of the pin title', () => {
+    expect(titleCandidates({ workTitle: 'Jujutsu Kaisen Season 2', pinTitle: 'Jujutsu Kaisen Season 2 Premieres' })).toEqual(['Jujutsu Kaisen Season 2']);
+    expect(titleCandidates({ pinTitle: 'Project Hail Mary Opens in Theaters' })).toEqual(['Project Hail Mary']);
+  });
+
+  it('takes a quoted title first and drops possessive credits and "Reboot"', () => {
+    expect(titleCandidates({ pinTitle: "Michael Jackson Biopic 'Michael' Opens in Theaters" })[0]).toBe('Michael');
+    expect(titleCandidates({ pinTitle: "Christopher Nolan's The Odyssey Opens in Theaters" })).toContain('The Odyssey');
+    expect(titleCandidates({ pinTitle: "Disney's Live-Action Moana Opens in Theaters" })).toContain('Moana');
+    expect(titleCandidates({ pinTitle: 'Street Fighter Reboot Set for October Release' })).toContain('Street Fighter');
+  });
+
+  it('does not cut an event word out of the name when that would drop the season', () => {
+    const titles = titleCandidates({ pinTitle: "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat Season 2 Premieres" });
+    expect(titles[0]).toBe("The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat Season 2");
+    expect(titles).not.toContain("The World's Finest Assassin");
+    expect(titleCandidates({ pinTitle: '‘Demon Slayer’ Season 3 Gets An Exact Release Date And New English Trailer' })[0]).toBe('Demon Slayer Season 3');
+  });
+
+  it('uses a pin titled by the work alone', () => {
+    expect(titleCandidates({ pinTitle: 'Evangelion: 3.0 + 1.0' })).toEqual(['Evangelion: 3.0 + 1.0']);
+  });
+
+  it('keeps a possessive that is part of the title as its first guess', () => {
+    expect(titleCandidates({ pinTitle: "Howl's Moving Castle Releases in Japanese Theaters" })[0]).toBe("Howl's Moving Castle");
+  });
+});
+
+describe('pickTrailer', () => {
+  const video = (title: string, verified = true, videoId = title) => ({ videoId, title, verified });
+
+  it('picks an official trailer from a verified channel over others', () => {
+    const picked = pickTrailer(
+      [video("Frieren: Beyond Journey's End Season 1 Trailer", false, 'a'), video("Frieren: Beyond Journey's End | Official Trailer", true, 'b')],
+      "Frieren: Beyond Journey's End",
+    );
+    expect(picked?.videoId).toBe('b');
+  });
+
+  it('skips channels YouTube has not verified', () => {
+    expect(pickTrailer([video('Moana | Official Trailer', false)], 'Moana')).toBeUndefined();
+  });
+
+  it('skips reactions, sequels, games and other seasons', () => {
+    expect(pickTrailer([video('Scream 6 Official Trailer'), video('Scream 7 Trailer Reaction')], 'Scream')).toBeUndefined();
+    expect(pickTrailer([video('Street Fighter 6 Official Trailer')], 'Street Fighter')).toBeUndefined();
+    expect(pickTrailer([video('Jujutsu Kaisen Season 3 Official Trailer')], 'Jujutsu Kaisen Season 2')).toBeUndefined();
+    expect(pickTrailer([video('Jujutsu Kaisen 2nd Season PV')], 'Jujutsu Kaisen Season 2')).toBeDefined();
+    expect(pickTrailer([video('Blue Box Season 2 Trailer')], 'Blue Box')).toBeUndefined();
+  });
+
+  it('tells a work from its film and from a title with "The" added', () => {
+    expect(pickTrailer([video('Violet Evergarden: the Movie | Official Trailer')], 'Violet Evergarden')).toBeUndefined();
+    expect(pickTrailer([video('Violet Evergarden I: Eternity and the Auto Memory Doll | Official Trailer')], 'Violet Evergarden')).toBeUndefined();
+    expect(pickTrailer([video('ONE PIECE | Official Trailer | Netflix')], 'The One Piece')).toBeUndefined();
+    expect(pickTrailer([video('THE ONE PIECE | Official Teaser')], 'The One Piece')).toBeDefined();
+    expect(pickTrailer([video('Masters of The Universe – Official Trailer')], 'Masters of the Universe')).toBeDefined();
+  });
+
+  it('does not hold words in the work title against its trailer', () => {
+    expect(pickTrailer([video('Coyote vs. Acme | Official Trailer')], 'Coyote vs. Acme')).toBeDefined();
+  });
+
+  it('puts the studio, licensor or work channel above search rank', () => {
+    const onChannel = (title: string, channel: string, videoId = channel) => ({ videoId, title, channel, verified: true });
+    const picked = pickTrailer(
+      [
+        onChannel('Kaiju No. 8 - Official Trailer', 'AnimeSelect', 'aggregator'),
+        onChannel('Kaiju No. 8 | Official Trailer', 'Crunchyroll Collection', 'licensor'),
+      ],
+      'Kaiju No. 8',
+      'Production I.G',
+    );
+    expect(picked?.videoId).toBe('licensor');
+    // The studio's own channel, named by the company rather than by the work.
+    expect(
+      pickTrailer(
+        [onChannel('Frieren Official Trailer', 'Anime World', 'aggregator'), onChannel('Frieren Trailer', 'MADHOUSE Inc.', 'studio')],
+        'Frieren',
+        'Madhouse',
+      )?.videoId,
+    ).toBe('studio');
+  });
+
+  it('demotes an aggregator without dropping it when nothing else is offered', () => {
+    const onChannel = (title: string, channel: string) => ({ videoId: channel, title, channel, verified: true });
+    expect(pickTrailer([onChannel('Blue Box | Official Trailer', 'Anime World')], 'Blue Box')?.videoId).toBe('Anime World');
+    // A filler word the work shares does not make the aggregator its own.
+    expect(
+      pickTrailer(
+        [onChannel('World Trigger Official Trailer', 'Anime World'), onChannel('World Trigger Trailer', 'TOHO animation')],
+        'World Trigger',
+      )?.videoId,
+    ).toBe('TOHO animation');
+  });
+});
+
+describe('adaptationTag', () => {
+  it('names what an anime was made out of', () => {
+    expect(adaptationTag('MANGA')).toBe('Manga Adaptation');
+    expect(adaptationTag('LIGHT_NOVEL')).toBe('Light Novel Adaptation');
+    expect(adaptationTag('VIDEO_GAME')).toBe('Game Adaptation');
+    expect(adaptationTag('ORIGINAL')).toBe('Original Work');
+  });
+
+  // A bare "Manga" is a category name, so tagKind would file the tag as a
+  // category and the save would drop it. No name in the family may be one.
+  it('never names a tag that a category already owns', () => {
+    for (const source of ['MANGA', 'LIGHT_NOVEL', 'VISUAL_NOVEL', 'NOVEL', 'WEB_NOVEL', 'VIDEO_GAME', 'GAME', 'DOUJINSHI', 'COMIC', 'LIVE_ACTION', 'PICTURE_BOOK', 'MULTIMEDIA_PROJECT', 'ORIGINAL']) {
+      expect(tagKind(adaptationTag(source)!)).toBe('topic');
+    }
+  });
+
+  it('tags nothing for a value that would say nothing', () => {
+    expect(adaptationTag('ANIME')).toBeUndefined();
+    expect(adaptationTag('OTHER')).toBeUndefined();
+    expect(adaptationTag(null)).toBeUndefined();
+    expect(adaptationTag('SOMETHING_ANILIST_ADDED_SINCE')).toBeUndefined();
+  });
+});
+
+describe('ratings', () => {
+  it('parses Wikidata score strings', () => {
+    expect(parseScore('93%')).toEqual({ score: 93, scoreMax: 100 });
+    expect(parseScore('8.2/10')).toEqual({ score: 8.2, scoreMax: 10 });
+    expect(parseScore('90 / 100')).toEqual({ score: 90, scoreMax: 100 });
+    expect(parseScore('12/10')).toBeUndefined();
+    expect(parseScore('A+')).toBeUndefined();
+  });
+
+  it('keeps the critics score, preferred then newest, with a link to the site', () => {
+    const rt = 'http://www.wikidata.org/entity/Q105584';
+    const imdb = 'http://www.wikidata.org/entity/Q37312';
+    const rows = [
+      { by: rt, score: '80%', methodLabel: 'Tomatometer score', date: '2024-01-01', rt: 'm/oppenheimer_2023' },
+      { by: rt, score: '93%', methodLabel: 'Tomatometer score', date: '2026-01-11', rt: 'm/oppenheimer_2023' },
+      { by: rt, score: '91%', methodLabel: 'Popcornmeter', date: '2026-02-01', rt: 'm/oppenheimer_2023' },
+      { by: imdb, score: '8.2/10', methodLabel: 'weighted average', imdb: 'tt15398776' },
+    ];
+    expect(wikidataRatings(rows)).toEqual([
+      { source: 'IMDb', score: 8.2, scoreMax: 10, url: 'https://www.imdb.com/title/tt15398776/' },
+      { source: 'Rotten Tomatoes', score: 93, scoreMax: 100, url: 'https://www.rottentomatoes.com/m/oppenheimer_2023' },
+    ]);
+  });
+
+  it('only matches a work from around the pin year, or a series started before it', () => {
+    expect(yearFits(2023, 2024)).toBe(true);
+    expect(yearFits(2009, 2026)).toBe(false);
+    expect(yearFits(2009, 2026, true)).toBe(true);
+    expect(yearFits(2027, 2024, true)).toBe(false);
+    expect(yearFits(undefined, 2024)).toBe(true);
+  });
+});
+
+describe('helpers', () => {
+  it('knows the screen categories in any case', () => {
+    expect(isScreenCategory('movie')).toBe(true);
+    expect(isScreenCategory('Gaming')).toBe(false);
+    expect(isScreenCategory(undefined)).toBe(false);
+  });
+
+  it('makes a still image from an embed url', () => {
+    expect(youtubeStill('https://www.youtube.com/embed/Iwr1aLEDpe4')).toEqual({ type: 1, originalUrl: 'https://i.ytimg.com/vi/Iwr1aLEDpe4/hqdefault.jpg' });
+  });
+});
+
+describe('episode counts', () => {
+  it('reads AniList: a finished run, a planned total, and what is out so far', () => {
+    expect(aniListEpisodes({ format: 'TV', status: 'FINISHED', episodes: 24 })).toEqual({ episodeCount: 24, episodeStatus: 'complete' });
+    expect(aniListEpisodes({ format: 'TV', status: 'NOT_YET_RELEASED', episodes: 12 })).toEqual({ episodeCount: 12, episodeStatus: 'planned' });
+    expect(aniListEpisodes({ format: 'TV', status: 'RELEASING', episodes: 12 })).toEqual({ episodeCount: 12, episodeStatus: 'planned' });
+    expect(aniListEpisodes({ format: 'TV', status: 'RELEASING', episodes: null, nextAiringEpisode: { episode: 1123 } })).toEqual({
+      episodeCount: 1122,
+      episodeStatus: 'ongoing',
+    });
+  });
+
+  it('leaves out a film and a work with nothing worth counting', () => {
+    expect(aniListEpisodes({ format: 'MOVIE', status: 'FINISHED', episodes: 1 })).toBeUndefined();
+    expect(aniListEpisodes({ format: 'TV', status: 'FINISHED', episodes: 1 })).toBeUndefined();
+    expect(aniListEpisodes({ format: 'TV', status: 'RELEASING', episodes: null, nextAiringEpisode: { episode: 1 } })).toBeUndefined();
+    expect(aniListEpisodes({ format: 'TV', status: 'RELEASING', episodes: null })).toBeUndefined();
+    expect(malEpisodes({ type: 'Movie', status: 'Finished Airing', episodes: 1 })).toBeUndefined();
+  });
+
+  it('reads MyAnimeList the same way', () => {
+    expect(malEpisodes({ type: 'TV', status: 'Finished Airing', episodes: 26 })).toEqual({ episodeCount: 26, episodeStatus: 'complete' });
+    expect(malEpisodes({ type: 'TV', status: 'Currently Airing', episodes: 12 })).toEqual({ episodeCount: 12, episodeStatus: 'planned' });
+  });
+
+  it('reads a MyAnimeList id out of a pin\'s links, the first one wins', () => {
+    expect(malIdOf([null, 'https://example.com/x', 'https://myanimelist.net/anime/55265/Tensei_Kizoku'])).toBe(55265);
+    expect(malIdOf(['https://myanimelist.net/anime/21/One_Piece', 'https://myanimelist.net/anime/1535/Death_Note'])).toBe(21);
+    expect(malIdOf(['https://myanimelist.net/manga/2/Berserk', undefined])).toBeUndefined();
+  });
+
+  it("takes Wikidata's largest count, complete only when the series has ended", () => {
+    expect(wikidataEpisodes([{ episodes: '13' }, { episodes: '86' }, { ended: '2013-09-29T00:00:00Z' }])).toEqual({ episodeCount: 86, episodeStatus: 'complete' });
+    expect(wikidataEpisodes([{ episodes: '1122' }])).toEqual({ episodeCount: 1122, episodeStatus: 'ongoing' });
+    expect(wikidataEpisodes([{ score: '93%' }])).toBeUndefined();
+    expect(wikidataEpisodes([{ episodes: '1' }])).toBeUndefined();
+  });
+});
+
+describe('findScreenDetails with a cited MyAnimeList id', () => {
+  // Routes each lookup the fake way: AniList knows nothing (a doujin work it
+  // does not list), Wikidata finds nothing, Jikan has the score.
+  function stubFetch(jikan: unknown) {
+    const calls: string[] = [];
+    vi.stubGlobal('fetch', async (url: string, init?: RequestInit) => {
+      calls.push(url);
+      const body = url.includes('api.jikan.moe')
+        ? JSON.stringify(jikan)
+        : url.includes('graphql.anilist.co')
+          ? JSON.stringify({ data: { Media: null, Page: { media: [] } } })
+          : JSON.stringify({ search: [], results: { bindings: [] } });
+      void init;
+      return new Response(body, { status: 200, headers: { 'content-type': 'application/json' } });
+    });
+    return calls;
+  }
+
+  afterEach(() => vi.unstubAllGlobals());
+
+  it('takes the MyAnimeList score when AniList has no entry to match', async () => {
+    const calls = stubFetch({ data: { url: 'https://myanimelist.net/anime/55315/Gensou_Mangekyou', score: 7.64, type: 'OVA', status: 'Currently Airing', episodes: null } });
+    const details = await findScreenDetails({ pinTitle: 'Gensou Mangekyou: The Memories of Phantasm Premieres', category: 'Anime', year: 2011, malId: 55315, skipTrailer: true });
+    expect(details.ratings).toEqual([{ source: 'MyAnimeList', score: 7.64, scoreMax: 10, url: 'https://myanimelist.net/anime/55315/Gensou_Mangekyou' }]);
+    expect(calls.some((url) => url.includes('api.jikan.moe/v4/anime/55315'))).toBe(true);
+  });
+
+  it('leaves the ratings empty when neither source knows the work', async () => {
+    stubFetch({ status: 504, message: 'Jikan failed to connect to MyAnimeList' });
+    const details = await findScreenDetails({ pinTitle: 'Gensou Mangekyou: The Memories of Phantasm Premieres', category: 'Anime', year: 2011, malId: 55315, skipTrailer: true });
+    expect(details.ratings).toEqual([]);
+  });
+
+  // The live shape of the gap: a title no catalogue search can place (a
+  // Chinese donghua), and Jikan down, which it is most of the time. AniList
+  // answers by MAL id without any title match, so the pin still gets a score.
+  it('scores a work by its MAL id when no title matches and Jikan is down', async () => {
+    const calls: string[] = [];
+    vi.stubGlobal('fetch', async (url: string, init?: RequestInit) => {
+      calls.push(url);
+      void init;
+      if (url.includes('api.jikan.moe')) {
+        return new Response(JSON.stringify({ status: 504, message: 'Jikan failed to connect to MyAnimeList' }), { status: 504 });
+      }
+      // The title search finds nothing; the id query answers.
+      const byId = typeof init?.body === 'string' && init.body.includes('idMal:');
+      const data = url.includes('graphql.anilist.co')
+        ? byId
+          ? { Media: { format: 'TV', status: 'FINISHED', episodes: 175, averageScore: 80, siteUrl: 'https://anilist.co/anime/163134', source: 'ORIGINAL' } }
+          : { Page: { media: [] } }
+        : undefined;
+      const body = data ? JSON.stringify({ data }) : JSON.stringify({ search: [], results: { bindings: [] } });
+      return new Response(body, { status: 200, headers: { 'content-type': 'application/json' } });
+    });
+    const details = await findScreenDetails({ pinTitle: 'Tunshi Xingkong 4th Season Premieres', category: 'Anime', year: 2023, malId: 56524, skipTrailer: true });
+    expect(details.ratings).toEqual([{ source: 'AniList', score: 80, scoreMax: 100, url: 'https://anilist.co/anime/163134' }]);
+    expect(details.workTitle).toBeUndefined();
+    expect(details.adaptedFrom).toBe('Original Work');
+    expect(details.episodes).toEqual({ episodeCount: 175, episodeStatus: 'complete' });
+  });
+});
+
+describe('aniListStreamingUrls', () => {
+  it('keeps the live STREAMING links only', () => {
+    expect(
+      aniListStreamingUrls([
+        { url: 'https://frieren-anime.jp/', type: 'INFO', isDisabled: false },
+        { url: 'https://www.crunchyroll.com/series/GG5H5XQX4', type: 'STREAMING', isDisabled: false },
+        { url: 'https://www.hidive.com/tv/old', type: 'STREAMING', isDisabled: true },
+      ]),
+    ).toEqual(['https://www.crunchyroll.com/series/GG5H5XQX4']);
+    expect(aniListStreamingUrls(null)).toEqual([]);
+  });
+});
+
+describe('wikidataStreamingUrls', () => {
+  const claim = (value: string, rank = 'normal') => ({ rank, mainsnak: { datavalue: { value } } });
+  it("builds each service's title page from its identifier property", () => {
+    expect(
+      wikidataStreamingUrls({
+        P8298: [claim('show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a')],
+        P1874: [claim('81726714'), claim('70000000', 'deprecated')],
+        P11330: [claim('GG5H5XQX4')],
+        P8055: [claim('1636211884')],
+        P31: [{ rank: 'normal', mainsnak: { datavalue: { value: { id: 'Q5398426' } } } }],
+      }),
+    ).toEqual([
+      'https://www.netflix.com/title/81726714',
+      'https://www.crunchyroll.com/series/GG5H5XQX4',
+      'https://www.hbomax.com/show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a',
+    ]);
+  });
+});
+
+describe('withoutSeason', () => {
+  it('names the show a season title belongs to', () => {
+    expect(withoutSeason('Yellowjackets Season 4')).toBe('Yellowjackets');
+    expect(withoutSeason('Percy Jackson and the Olympians Season 3')).toBe('Percy Jackson and the Olympians');
+    expect(withoutSeason('Frieren 2nd Season')).toBe('Frieren');
+    expect(withoutSeason('Neuromancer')).toBeUndefined();
+  });
+});

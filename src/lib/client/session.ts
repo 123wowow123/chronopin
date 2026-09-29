@@ -27,6 +27,13 @@ function load() {
   return request;
 }
 
+// The signed-in user once known, or null when signed out, for code outside
+// React (viewerPlace, the bell's weather).
+export async function sessionUser(): Promise<SessionUser | null> {
+  await load();
+  return state.user;
+}
+
 // Forget the cached user, e.g. after signing in, out, or editing the profile.
 export function refreshSession() {
   request = null;

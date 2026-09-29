@@ -21,7 +21,11 @@ export const MODEL = 'claude-opus-5';
 // Wikipedia articles run long and the tail is references and navigation.
 // The lede plus infobox plus body comfortably fits, and capping keeps a
 // pathological page from becoming a six-figure-token request.
-const MAX_PAGE_CHARS = 60000;
+export const MAX_PAGE_CHARS = 60000;
+
+// Shared by every prompt that writes a long-form summary: a product's pin
+// should say what the thing is, not only when it happens.
+export const PRODUCT_FEATURES_RULE = `When the event is about a product - an aircraft, vehicle, device, chip, game, AI model or software release - follow the event's list with a section of its own, "<h3>Notable features</h3><ul><li>...</li></ul>": what the product is and what is new or distinctive over what it replaces or competes with, and its headline specifications (size, capacity, range, performance, price) with their units, cited like every other point. The event's list above it keeps to the event itself (dates, schedule, who is involved). When the maker's page leads with a results table (an AI model's benchmark scores against its predecessor and rivals, a chip's or car's spec comparison), copy that main table after the features as "<h3>Benchmarks</h3><table><thead><tr><th></th><th>...</th></tr></thead><tbody><tr><th scope="row">...</th><td>...</td></tr></tbody></table>" - the same rows, columns and figures, with the table's own notes ("with tools", "partial") kept in the cells - cited once, in the heading ("<h3>Benchmarks [S]</h3>"). Skip minor tables (prices already listed, footnotes).`;
 
 const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unknown'] as const;
 
@@ -35,18 +39,38 @@ export type ExtractedFields = {
   longitude: number | null;
   dateConfidence: (typeof CONFIDENCE_LEVELS)[number];
   dateConfidenceReasoning: string | null;
+  originalStartDate: string | null;
+  delayReasoning: string | null;
   company: string | null;
   companyWikiUrl: string | null;
-  category: string;
+  categories: string[];
+  workTitle: string | null;
+  episodeCount: number | null;
+  episodeStatus: 'complete' | 'ongoing' | 'planned' | null;
   amazonUrl: string | null;
-  bestBuyUrl: string | null;
+  productName: string | null;
   startDateTime: string | null;
   endDateTime: string | null;
   allDay: boolean;
+  allDayStated: boolean;
   longFormSummary: string | null;
+  stocks: { symbol: string; name: string; relation: 'company' | 'related' | 'supplier'; note: string }[];
+  tags: string[];
 };
 
-const SCHEMA = {
+// Structured output allows at most 16 fields that can be null (the API
+// rejects the whole schema past that, which silently turned every extraction
+// into a session task), so these rarely-set ones are plain strings, empty when
+// the page has nothing for them. emptyAsNull turns that back into null.
+const EMPTY_AS_NULL = ['originalStartDate', 'delayReasoning', 'workTitle', 'episodeStatus', 'amazonUrl', 'productName'] as const;
+
+export function emptyAsNull<T extends Partial<ExtractedFields>>(fields: T): T {
+  const out = { ...fields } as Record<string, unknown>;
+  for (const key of EMPTY_AS_NULL) if (typeof out[key] === 'string' && !(out[key] as string).trim()) out[key] = null;
+  return out as T;
+}
+
+export const SCHEMA = {
   type: 'object',
   properties: {
     title: {
@@ -91,6 +115,16 @@ const SCHEMA = {
       description:
         'One sentence naming the wording that decided dateConfidence, quoting the page, e.g. \'Stated as firm, per en.wikipedia.org: "...was completed in June 2026..."\'. Null when dateConfidence is "unknown".',
     },
+    originalStartDate: {
+      type: 'string',
+      description:
+        'When the date has moved: the day the event was first promised for, before any delay, as "YYYY-MM-DD" in the same convention as startDateTime (a year alone is its last day, "2027-12-31"; a month its last day). Empty ("") when the date has not moved.',
+    },
+    delayReasoning: {
+      type: 'string',
+      description:
+        'One sentence on how long the delay is and how you know, quoting the page, e.g. \'Stated: first "slated for 2027", now "projected for 2032".\' or \'Estimated: the page says only that opening "will slip"; comparable metro extensions have slipped about two years.\'. Empty ("") when originalStartDate is null.',
+    },
     company: {
       type: ['string', 'null'],
       description:
@@ -101,20 +135,36 @@ const SCHEMA = {
       description:
         'Direct URL to that company\'s own English Wikipedia article, disambiguated from unrelated topics that share its name, e.g. "https://en.wikipedia.org/wiki/Apple_Inc." not "https://en.wikipedia.org/wiki/Apple" (the fruit), "https://en.wikipedia.org/wiki/Tesla,_Inc." not "https://en.wikipedia.org/wiki/Tesla" (the scientist). Null when company is null or has no Wikipedia article.',
     },
-    category: {
+    categories: {
+      type: 'array',
+      items: { type: 'string', enum: CATEGORIES },
+      description:
+        'The categories this event belongs to from the fixed list, the best fit first. Each name is one word, so take every word the event is squarely about: an anime film is "Anime" and "Movie", its soundtrack release is "Anime" and "Music", a new metro line is "Transport". Never force a pin into a word that only loosely covers it - two or three exact words beat one broad one.',
+    },
+    workTitle: {
       type: 'string',
-      enum: CATEGORIES,
-      description: 'Best-fit category for this event from the fixed list. Use "Other" only when nothing else reasonably fits.',
+      description:
+        'When a category is Anime, Movie or TV, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Empty ("") otherwise.',
+    },
+    episodeCount: {
+      type: ['number', 'null'],
+      description:
+        'For a work released as episodes (TV series, anime, a web or podcast series): how many episodes the run this pin is about has, as a whole number. A pin about one season counts that season, not the whole show. Null for a film, a one-off event, or when the page does not say.',
+    },
+    episodeStatus: {
+      type: 'string',
+      description:
+        'What episodeCount counts: "complete" when the run has finished airing, "planned" when that is the number announced for a run still to air or still airing, "ongoing" when it is the episodes out so far and no total has been announced. Empty ("") when episodeCount is null.',
     },
     amazonUrl: {
-      type: ['string', 'null'],
+      type: 'string',
       description:
-        "Direct URL to this exact product's own listing on amazon.com, from your own knowledge of real Amazon listings - never a guessed or constructed URL. Null when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
+        "Direct URL to this exact product's own listing on amazon.com, from your own knowledge of real Amazon listings - never a guessed or constructed URL. An empty string when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
     },
-    bestBuyUrl: {
-      type: ['string', 'null'],
+    productName: {
+      type: 'string',
       description:
-        "Direct URL to this exact product's own listing on bestbuy.com, from your own knowledge of real Best Buy listings - never a guessed or constructed URL. Null when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
+        'The one product the pin is about, as a shop lists it, which the pin page searches stores for: brand, model and edition or colorway, e.g. "PUMA MB.06 Puerto Rico", "Nintendo Switch 2", "Sony WH-1000XM6". Empty ("") when the pin is not about one purchasable product.',
     },
     startDateTime: {
       type: ['string', 'null'],
@@ -130,13 +180,42 @@ const SCHEMA = {
       type: 'boolean',
       description: 'True when the page gives a date but no clock time.',
     },
+    allDayStated: {
+      type: 'boolean',
+      description:
+        'True only when the page itself says the event takes a whole day or runs across days - a festival weekend, a sale window, a funding period, a conference. False when the page simply never gives a clock time for a moment-in-time event such as a signing, a release or a launch. This is a claim about the event, not about what the page left out, so when in doubt it is false.',
+    },
+    stocks: {
+      type: 'array',
+      description:
+        'US-listed stocks the story is about or would move: the company itself (relation "company"), companies it names as investors, owners, partners or rivals ("related"), and ones it names as suppliers of chips, cloud, parts or content ("supplier"). note is the clause that follows the company\'s name, e.g. "which designs the PlayStation 5 processor". Empty when the page names none.',
+      items: {
+        type: 'object',
+        properties: {
+          symbol: { type: 'string', description: 'US ticker symbol, e.g. "MSFT".' },
+          name: { type: 'string' },
+          relation: { type: 'string', enum: ['company', 'related', 'supplier'] },
+          note: { type: 'string' },
+        },
+        required: ['symbol', 'name', 'relation', 'note'],
+        additionalProperties: false,
+      },
+    },
+    tags: {
+      type: 'array',
+      description:
+        'Up to 8 short tags a reader would search by: every award, prize or festival the work or subject won or was nominated at, as the body and year ("Tokyo Anime Award Festival 2024", "Crunchyroll Anime Awards 2025", "97th Academy Awards"), then named franchises, series, people, programmes or places central to the story ("Artemis", "Studio Ghibli"). Not the category, company or a word from the title alone.',
+      items: { type: 'string' },
+    },
     longFormSummary: {
       type: ['string', 'null'],
       description:
-        'Key points as an HTML bulleted list, "<ul><li>...</li></ul>" - rendered as HTML on the pin page, so real list markup, not prose and not markdown. Null when the page has too little to summarize.',
+        `Key points as an HTML bulleted list, "<ul><li>...</li></ul>" - rendered as HTML on the pin page, so real list markup, not prose and not markdown. ${PRODUCT_FEATURES_RULE} Null when the page has too little to summarize.`,
     },
   },
   required: [
+    'stocks',
+    'tags',
     'title',
     'description',
     'price',
@@ -146,18 +225,45 @@ const SCHEMA = {
     'longitude',
     'dateConfidence',
     'dateConfidenceReasoning',
+    'originalStartDate',
+    'delayReasoning',
     'company',
     'companyWikiUrl',
-    'category',
+    'categories',
+    'workTitle',
+    'episodeCount',
+    'episodeStatus',
     'amazonUrl',
-    'bestBuyUrl',
+    'productName',
     'startDateTime',
     'endDateTime',
     'allDay',
+    'allDayStated',
     'longFormSummary',
   ],
   additionalProperties: false,
 };
+
+// The extraction as a task a Claude Code session can answer when the API is
+// unavailable: the same system prompt, schema and user message the call uses.
+export function extractTask(pageUrl: string, pageText: string, note?: string) {
+  return {
+    stage: 'extract' as const,
+    system: SYSTEM_PROMPT,
+    schema: SCHEMA,
+    input: withNote(`Source URL: ${pageUrl}\n\nPage text:\n\n${(pageText || '').trim().slice(0, MAX_PAGE_CHARS)}`, note),
+  };
+}
+
+// The longest note someone pinning a page may give the AI with it.
+export const NOTE_MAX = 2000;
+
+// A request's content with the note of the person pinning the page after it,
+// marked as theirs rather than the page's. Unchanged without one.
+export function withNote(content: string, note?: string | null): string {
+  const text = (note || '').trim().slice(0, NOTE_MAX).replace(/"""/g, '"');
+  return text ? `${content}\n\nThe note of the person pinning this (theirs, not the page's):\n"""\n${text}\n"""` : content;
+}
 
 let client: Anthropic | null = null;
 
@@ -186,7 +292,7 @@ export function describeError(err: unknown): string {
  * page had no usable text, or the call failed. Callers keep whatever the DOM
  * scrapers found in that case - a missing key must not break scraping.
  */
-export async function extractPinFields(pageUrl: string, pageText: string): Promise<ExtractedFields | null> {
+export async function extractPinFields(pageUrl: string, pageText: string, note?: string): Promise<ExtractedFields | null> {
   const anthropic = getClient();
   if (!anthropic) return null;
 
@@ -209,7 +315,7 @@ export async function extractPinFields(pageUrl: string, pageText: string): Promi
       messages: [
         {
           role: 'user',
-          content: `Source URL: ${pageUrl}\n\nPage text:\n\n${text.slice(0, MAX_PAGE_CHARS)}`,
+          content: withNote(`Source URL: ${pageUrl}\n\nPage text:\n\n${text.slice(0, MAX_PAGE_CHARS)}`, note),
         },
       ],
     });
@@ -219,7 +325,7 @@ export async function extractPinFields(pageUrl: string, pageText: string): Promi
       return null;
     }
     const block = response.content.find((b): b is Anthropic.Beta.BetaTextBlock => b.type === 'text');
-    return block ? (JSON.parse(block.text) as ExtractedFields) : null;
+    return block ? emptyAsNull(JSON.parse(block.text) as ExtractedFields) : null;
   } catch (err) {
     log.warn('extract failed', describeError(err));
     return null;
@@ -232,7 +338,7 @@ export async function extractPinFields(pageUrl: string, pageText: string): Promi
  * or out of range are dropped - the pin just gets no map - but the label is
  * still worth keeping on its own.
  */
-export function toLocation(fields: ExtractedFields | null) {
+export function toLocation(fields: Partial<ExtractedFields> | null) {
   if (!fields || !fields.placeLabel) return undefined;
   const { latitude: lat, longitude: lng } = fields;
   const plausible =

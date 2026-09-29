@@ -2,6 +2,7 @@ import _ from 'lodash';
 import * as db from '../db';
 import type { Row } from '../db';
 import Company from './company';
+import { EPISODE_STATUSES } from '@/lib/types';
 
 // An all-day pin covers whole UTC calendar days: utcStartDateTime is 00:00Z of
 // its first day and utcEndDateTime, when set, is 00:00Z of the day after its
@@ -38,7 +39,31 @@ function floorToUtcDay(value: unknown) {
   if (isNaN(date.getTime())) {
     return value;
   }
-  return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+  // setUTCFullYear rather than Date.UTC, which reads years 0-99 as 1900-1999.
+  return new Date(new Date(0).setUTCFullYear(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+}
+
+// The episode fields a body may set: a count of whole episodes above zero,
+// and what that count is (see 0047's schema comment). Anything else is no
+// count at all, so a stray value from a scrape or an API client is dropped
+// rather than refused by the CHECK constraint. Mutates and returns pin.
+export function normalizeEpisodes<T extends Row>(pin: T): T {
+  if (!pin) {
+    return pin;
+  }
+  const count = Number(pin.episodeCount);
+  const ok = Number.isInteger(count) && count > 0;
+  (pin as Row).episodeCount = ok ? count : null;
+  const status = typeof pin.episodeStatus === 'string' ? pin.episodeStatus.trim().toLowerCase() : null;
+  (pin as Row).episodeStatus = ok && status && (EPISODE_STATUSES as readonly string[]).includes(status) ? status : null;
+  return pin;
+}
+
+// The product a pin is about (0085), trimmed and at most the column's 200
+// characters; blank is none.
+export function productNameOf(pin: Row): string | null {
+  const name = typeof pin.productName === 'string' ? pin.productName.trim().replace(/\s+/g, ' ') : '';
+  return name ? name.slice(0, 200) : null;
 }
 
 // The view returns one row per pin x medium x merchant, with the joined
@@ -77,25 +102,34 @@ function nullIfUndefined(value: unknown) {
 // Inserts a pin and sets pin.id. A pin that already carries an id (seeding)
 // keeps it; otherwise the database assigns one. pin.company is a name; it is
 // stored as a reference to its Company row.
-export async function createPin<T extends Row>(pin: T, userId: number | null) {
+//
+// advanceSequence: false leaves the identity sequence where it is, for a
+// restore that inserts thousands of pins with their own ids and moves it once
+// at the end instead of after every row (FullPins.save).
+export async function createPin<T extends Row>(pin: T, userId: number | null, { advanceSequence = true } = {}) {
   normalizeAllDayDates(pin);
+  normalizeEpisodes(pin);
   await Company.applyToPin(pin);
 
   const hasId = pin.id != null;
   const columns = [
     'parentId', 'title', 'description', 'sourceUrl', 'longFormSummary',
     'dateConfidence', 'dateConfidenceReasoning', 'companyId',
-    'category', 'address', 'priceLowerBound', 'priceUpperBound', 'price',
-    'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay',
-    'sourceStartDateTime', 'sourceEndDateTime', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
+    'address', 'priceLowerBound', 'priceUpperBound', 'price',
+    'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay', 'allDayStated',
+    'sourceStartDateTime', 'sourceEndDateTime', 'originalStartDate', 'delayReasoning',
+    'episodeCount', 'episodeStatus', 'productName', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
   ];
   const values = [
     pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
     pin.dateConfidence, pin.dateConfidenceReasoning, pin.companyId,
-    pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
+    pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime,
     pin.allDay == null ? false : pin.allDay,
-    pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
+    // Only a claim about an all-day pin; a timed one can never carry it.
+    pin.allDay && pin.allDayStated ? true : false,
+    pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, pin.originalStartDate || null, pin.delayReasoning || null,
+    pin.episodeCount, pin.episodeStatus, productNameOf(pin), userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
   ].map(nullIfUndefined);
 
   if (hasId) {
@@ -116,7 +150,7 @@ export async function createPin<T extends Row>(pin: T, userId: number | null) {
     values,
   );
   (pin as Row).id = rows[0].id;
-  if (hasId) {
+  if (hasId && advanceSequence) {
     await advanceIdSequence('Pin');
   }
   return { pin };

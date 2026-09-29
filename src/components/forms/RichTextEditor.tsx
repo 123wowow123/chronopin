@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- Editor.js plugins are loosely typed */
 
 import { useEffect, useId, useRef } from 'react';
+import { useT } from '@/lib/client/i18n';
 
 type EditorInstance = {
   isReady: Promise<void>;
@@ -19,6 +20,8 @@ export function RichTextEditor({ value, onChange, placeholder }: { value: string
   const lastEmitted = useRef<string | null>(null);
   const onChangeRef = useRef(onChange);
   const initialValue = useRef(value);
+  // Read once, when the editor is built: it has no way to change its placeholder.
+  const defaultPlaceholder = useRef(useT()('form.editorPlaceholder'));
 
   useEffect(() => {
     onChangeRef.current = onChange;
@@ -43,7 +46,7 @@ export function RichTextEditor({ value, onChange, placeholder }: { value: string
       const parser = new Parser();
       const editor: EditorInstance = new EditorJS({
         holder: holderId,
-        placeholder: placeholder || 'Tell everyone what the content is about',
+        placeholder: placeholder || defaultPlaceholder.current,
         tools: {
           header: { class: Header, shortcut: 'CMD+SHIFT+H', inlineToolbar: true },
           list: { class: List, inlineToolbar: true, config: { defaultStyle: 'unordered' } },

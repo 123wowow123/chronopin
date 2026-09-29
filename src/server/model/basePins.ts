@@ -50,15 +50,27 @@ export default class BasePins<P extends BasePin = BasePin> {
     return this.pins.map((p) => p.id);
   }
 
-  // The earliest and latest pin by start time, or null when there are none.
+  // The earliest and latest pin, or null when there are none. Ordered by
+  // (start, id), the pair a page's cursors are made of: comparing starts alone
+  // left a page that begins and ends on the same instant - a day of all-day
+  // pins, which all start at midnight UTC - reporting its two ends the wrong
+  // way round, and the page after it then walked back over pins it had
+  // already shown.
   minMaxDateTimePin(): { min: P; max: P } | null {
     if (!this.pins.length) {
       return null;
     }
     const firstPin = this.pins[0];
     const lastPin = this.pins[this.pins.length - 1];
-    return firstPin.utcStartDateTime < lastPin.utcStartDateTime
-      ? { min: firstPin, max: lastPin }
-      : { min: lastPin, max: firstPin };
+    return isBefore(firstPin, lastPin) ? { min: firstPin, max: lastPin } : { min: lastPin, max: firstPin };
   }
+}
+
+// Whether a comes before b by (start, id). The starts are compared as
+// instants: on some paths they arrive as Date objects, and two Dates for the
+// same moment are never ===, which would lose the tie-break to the id.
+function isBefore(a: BasePin, b: BasePin): boolean {
+  const at = new Date(a.utcStartDateTime).getTime();
+  const bt = new Date(b.utcStartDateTime).getTime();
+  return at < bt || (at === bt && a.id < b.id);
 }

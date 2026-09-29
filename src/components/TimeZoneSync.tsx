@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/lib/client/navigation';
 import { useEffect } from 'react';
 import { browserTimeZone, TZ_COOKIE } from '@/lib/client/timeZone';
 

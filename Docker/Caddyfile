@@ -1,0 +1,19 @@
+# HTTPS for chronopin.com. Caddy gets and renews the certificates by itself
+# once the domain's A records point at this VM. The site's own URL is www
+# (NEXT_PUBLIC_SITE_URL), so the bare domain redirects there. Until the DNS
+# points here the certificate requests fail and back off; restart Caddy after
+# switching the records to retry at once.
+
+www.chronopin.com {
+	encode zstd gzip
+	reverse_proxy app:9000
+}
+
+chronopin.com {
+	redir https://www.chronopin.com{uri} permanent
+}
+
+# Before the DNS switch, and for anything asked for by IP: plain HTTP to the app.
+:80 {
+	reverse_proxy app:9000
+}

@@ -1,0 +1,81 @@
+# Production on one Azure VM (chronopin-web, Chronopin-US-West): the app,
+# PostgreSQL with PostGIS, the FAISS search service and Caddy, which serves
+# HTTPS with certificates it gets and renews by itself. See docs/deploy-azure.md.
+#
+#   docker compose -f Docker/docker-compose.prod.yml up -d --build
+#
+# Configuration and secrets come from Docker/env.prod.list on the VM, which
+# never enters git or an image (.gitignore, .dockerignore). Only Caddy's ports
+# are published; the rest talk over the compose network.
+services:
+  postgres:
+    build: ./postgis
+    image: chronopin-postgis:17
+    env_file: env.prod.list
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"']
+      interval: 10s
+      retries: 10
+
+  faiss:
+    build: ./faiss
+    image: chronopin-faiss:latest
+    volumes:
+      - faiss-data:/data
+    restart: unless-stopped
+
+  app:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+    image: chronopin:latest
+    env_file: env.prod.list
+    environment:
+      FAISS_URL: http://faiss:5050
+    depends_on:
+      postgres:
+        condition: service_healthy
+      faiss:
+        condition: service_started
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    ports:
+      - '80:80'
+      - '443:443'
+      - '443:443/udp'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - app
+    restart: unless-stopped
+
+  # The build stage, source and dev dependencies included, for the one-off
+  # scripts the standalone image leaves out:
+  #   docker compose -f Docker/docker-compose.prod.yml run --rm tools npm run db:refresh
+  tools:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+      target: build
+    image: chronopin-tools:latest
+    env_file: env.prod.list
+    environment:
+      FAISS_URL: http://faiss:5050
+    working_dir: /code
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles: [tools]
+
+volumes:
+  postgres-data:
+  faiss-data:
+  caddy-data:
+  caddy-config:

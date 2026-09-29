@@ -1,32 +1,119 @@
 import type { NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
-import { HttpError, noContent, readJson, route } from '@/server/http';
+import { HttpError, json, noContent, readJson, route } from '@/server/http';
+import { nameForPoint } from '@/server/geocode';
 import { loadUser } from '@/server/services/users';
 import { invalidateTimeline } from '@/server/services/cache';
 import { isValidSpan } from '@/server/util/createdFilter';
+import { isThemePreference } from '@/lib/theme';
+import { isLocale } from '@/lib/i18n/config';
+import { locationMessage, locationProblem, roundCoordinate, userLocation } from '@/lib/location';
 
-// Save the signed-in user's own preferences. Deliberately narrow: one named
-// field, written to the row the token identifies.
+// Save the signed-in user's own preferences. Deliberately narrow: named
+// fields, written to the row the token identifies. A field left out of the
+// body is left as it is, so each setting can be saved on its own.
 export const PUT = route(async (request: NextRequest) => {
   const signedIn = await requireUser(request);
-  const raw = (await readJson(request)).defaultFilterSpanPreference;
-
-  if (raw !== null && raw !== undefined && typeof raw !== 'string') {
-    throw new HttpError(400, '', { message: 'defaultFilterSpanPreference must be a span string or null' });
+  const body = await readJson(request);
+  if (!body || typeof body !== 'object' || Array.isArray(body)) {
+    throw new HttpError(400, '', { message: 'Expected an object of preferences' });
   }
-
-  // Stored normalised: the filter reads the value back with a stricter
-  // pattern than the one that validates it here.
-  const within = (raw || '').trim().toLowerCase().replace(/\s+/g, '') || null;
-
-  // Nothing chosen clears the preference.
-  if (within && !isValidSpan(within)) {
-    throw new HttpError(400, '', { message: `defaultFilterSpanPreference is not a span the filter accepts: '${within}'` });
-  }
-
   const user = await loadUser(signedIn.id);
-  user.defaultFilterSpanPreference = within;
+  const spanChanged = 'defaultFilterSpanPreference' in body;
+
+  if (spanChanged) {
+    const raw = body.defaultFilterSpanPreference;
+    if (raw !== null && raw !== undefined && typeof raw !== 'string') {
+      throw new HttpError(400, '', { message: 'defaultFilterSpanPreference must be a span string or null' });
+    }
+
+    // Stored normalised: the filter reads the value back with a stricter
+    // pattern than the one that validates it here.
+    const within = (raw || '').trim().toLowerCase().replace(/\s+/g, '') || null;
+
+    // Nothing chosen clears the preference.
+    if (within && !isValidSpan(within)) {
+      throw new HttpError(400, '', { message: `defaultFilterSpanPreference is not a span the filter accepts: '${within}'` });
+    }
+    user.defaultFilterSpanPreference = within;
+  }
+
+  if ('themePreference' in body) {
+    const theme = body.themePreference;
+    if (theme !== null && !isThemePreference(theme)) {
+      throw new HttpError(400, '', { message: "themePreference must be 'dark', 'light', 'system' or null" });
+    }
+    user.themePreference = theme;
+  }
+
+  if ('localePreference' in body) {
+    const locale = body.localePreference;
+    if (locale !== null && !isLocale(locale)) {
+      throw new HttpError(400, '', { message: 'localePreference must be a supported language code or null' });
+    }
+    user.localePreference = locale;
+  }
+
+  if ('showCardStockPrices' in body) {
+    if (typeof body.showCardStockPrices !== 'boolean') {
+      throw new HttpError(400, '', { message: 'showCardStockPrices must be true or false' });
+    }
+    user.showCardStockPrices = body.showCardStockPrices;
+  }
+
+  if ('remindBeforeStart' in body) {
+    if (typeof body.remindBeforeStart !== 'boolean') {
+      throw new HttpError(400, '', { message: 'remindBeforeStart must be true or false' });
+    }
+    user.remindBeforeStart = body.remindBeforeStart;
+  }
+
+  // The default location (0066). null clears it, and stops the device from
+  // setting it again straight away - clearing it is saying not to keep one.
+  // A point from the device is named here, by the geocoder; a point picked
+  // from the search arrives with the geocoder's name for it already.
+  const locationChanged = 'location' in body;
+  if (locationChanged) {
+    const location = body.location;
+    if (location === null) {
+      user.locationLatitude = null;
+      user.locationLongitude = null;
+      user.locationName = null;
+      user.locationFromDevice = false;
+    } else {
+      if (!location || typeof location !== 'object' || Array.isArray(location)) {
+        throw new HttpError(400, '', { message: 'location must be an object or null' });
+      }
+      const problem = locationProblem(location);
+      if (problem) throw new HttpError(400, '', { message: locationMessage(problem) });
+      if (location.fromDevice !== undefined && typeof location.fromDevice !== 'boolean') {
+        throw new HttpError(400, '', { message: 'location.fromDevice must be true or false' });
+      }
+      const latitude = roundCoordinate(location.latitude);
+      const longitude = roundCoordinate(location.longitude);
+      const fromDevice = location.fromDevice === true;
+      const given = typeof location.name === 'string' ? location.name.trim() : '';
+      user.locationLatitude = latitude;
+      user.locationLongitude = longitude;
+      user.locationName = (!fromDevice && given) || (await nameForPoint(latitude, longitude, user.localePreference || 'en'));
+      user.locationFromDevice = fromDevice;
+    }
+  }
+
+  if ('locationFromDevice' in body) {
+    if (typeof body.locationFromDevice !== 'boolean') {
+      throw new HttpError(400, '', { message: 'locationFromDevice must be true or false' });
+    }
+    user.locationFromDevice = body.locationFromDevice;
+  }
+
   await user.patchWithoutPassword();
-  invalidateTimeline();
+  if (spanChanged) {
+    invalidateTimeline();
+  }
+  // A changed location comes back as it was saved: rounded, and named.
+  if (locationChanged) {
+    return json({ location: userLocation(user), locationFromDevice: user.locationFromDevice !== false });
+  }
   return noContent();
 });

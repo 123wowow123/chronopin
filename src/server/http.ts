@@ -1,5 +1,6 @@
 // Helpers shared by the route handlers in src/app/api and src/app/auth.
 
+import { isIP } from 'node:net';
 import { unstable_rethrow } from 'next/navigation';
 import type { NextRequest } from 'next/server';
 import type BasePins from './model/basePins';
@@ -59,6 +60,15 @@ export async function readJson<T = Record<string, any>>(request: Request): Promi
   } catch {
     throw new HttpError(400, 'Request body is not valid JSON');
   }
+}
+
+// The address the request came from, as Caddy saw it (Docker/Caddyfile): it
+// sets X-Forwarded-For to the client's address, and were it ever to append
+// instead, the last entry is still the one it added. Null in development,
+// where nothing sits in front of the app.
+export function clientIp(request: NextRequest): string | null {
+  const ip = request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() || request.headers.get('x-real-ip')?.trim();
+  return ip && isIP(ip) ? ip : null;
 }
 
 // The URL this request came in on, as the client sees it. Behind the

@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
 import BasePin from './basePin';
 
 const prop = ['id', 'label', 'url', 'price'];
 
-// A place to buy what a pin is about (Amazon, Best Buy...).
+// A place to buy what a pin is about (Amazon, GameStop...).
 export default class Merchant {
   [key: string]: any;
   declare _pin?: BasePin;
@@ -63,8 +63,34 @@ export default class Merchant {
     return _.omitBy(this, (value, key) => key.startsWith('_') || _.isNull(value));
   }
 
-  static async deleteByPinId(pinId: number) {
-    await db.query(`DELETE FROM "Merchant" WHERE "pinId" = $1`, [pinId]);
+  // Every merchant of one pin in a single insert, in the order given. Both
+  // paths that save a set of merchants - creating a pin, and updating one,
+  // which deletes them first - are always inserting, so this does not need
+  // upsert's update branch; merchant.save() still has it for a single row.
+  static async saveAll(merchants: Merchant[], pinId: number | undefined, query: QueryFn = db.query): Promise<Merchant[]> {
+    if (!merchants.length) {
+      return merchants;
+    }
+    const column = <T,>(read: (m: Merchant) => T) => merchants.map(read);
+    const rows = await query<{ id: number }>(
+      `
+      INSERT INTO "Merchant" ("pinId", "label", "url", "price")
+      SELECT $1, "label", "url", "price"
+      FROM unnest($2::varchar[], $3::varchar[], $4::numeric[])
+        WITH ORDINALITY AS "m" ("label", "url", "price", "ord")
+      ORDER BY "ord"
+      RETURNING "id"`,
+      [pinId ?? null, column((m) => m.label ?? null), column((m) => m.url ?? null), column((m) => m.price ?? null)],
+    );
+    rows.sort((a, b) => a.id - b.id);
+    merchants.forEach((merchant, i) => {
+      merchant.id = rows[i].id;
+    });
+    return merchants;
+  }
+
+  static async deleteByPinId(pinId: number, query: QueryFn = db.query) {
+    await query(`DELETE FROM "Merchant" WHERE "pinId" = $1`, [pinId]);
     return { pinId };
   }
 

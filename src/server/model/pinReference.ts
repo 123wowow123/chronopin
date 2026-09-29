@@ -1,9 +1,13 @@
 import _ from 'lodash';
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
 import BasePin from './basePin';
 
-const prop = ['id', 'url', 'title', 'confidence', 'publishedDate', 'startDate', 'endDate', 'reasoning', 'utcCreatedDateTime'];
+// addedByUserName/addedByUserPictureUrl are read from the view, never written.
+const prop = [
+  'id', 'url', 'title', 'confidence', 'publishedDate', 'startDate', 'endDate', 'reasoning', 'utcCreatedDateTime',
+  'addedByUserId', 'addedByUserName', 'addedByUserPictureUrl',
+];
 
 export const REASONING_MAX = 2000;
 
@@ -13,6 +17,8 @@ export default class PinReference {
   declare _pin?: BasePin;
   declare id: number;
   declare pinId: number | undefined;
+  declare url: string;
+  declare addedByUserId: number | null | undefined;
 
   constructor(reference?: Row | null, pin?: BasePin | null) {
     if (reference) {
@@ -50,17 +56,57 @@ export default class PinReference {
       this.endDate || null,
       this.reasoning || null,
       this.utcCreatedDateTime || null,
+      this.addedByUserId || null,
     ].map((value) => (value === undefined ? null : value));
     const rows = await db.query(
       `
-      INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime")
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9::timestamptz, now()))
+      INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime", "addedByUserId")
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9::timestamptz, now()), $10)
       RETURNING "id", "utcCreatedDateTime"`,
       values,
     );
     this.id = rows[0].id;
     this.utcCreatedDateTime = rows[0].utcCreatedDateTime;
     return { reference: this };
+  }
+
+  // Every reference of one pin in a single insert, in the order given - a
+  // pin's references are saved together, and doing them one at a time was a
+  // round trip each. The rows go in ORDER BY the ordinal, so the identity ids
+  // ascend in that order and sorting what comes back by id lines it up with
+  // the input again (RETURNING itself promises no order).
+  static async saveAll(references: PinReference[], query: QueryFn = db.query): Promise<PinReference[]> {
+    if (!references.length) {
+      return references;
+    }
+    const column = <T,>(read: (r: PinReference) => T) => references.map(read);
+    const rows = await query<{ id: number; utcCreatedDateTime: Date }>(
+      `
+      INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime", "addedByUserId")
+      SELECT $1, "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", COALESCE("utcCreatedDateTime", now()), "addedByUserId"
+      FROM unnest($2::varchar[], $3::varchar[], $4::integer[], $5::date[], $6::date[], $7::date[], $8::varchar[], $9::timestamptz[], $10::integer[])
+        WITH ORDINALITY AS "r" ("url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime", "addedByUserId", "ord")
+      ORDER BY "ord"
+      RETURNING "id", "utcCreatedDateTime"`,
+      [
+        references[0].pinId,
+        column((r) => r.url ?? null),
+        column((r) => r.title ?? null),
+        column((r) => r.confidence ?? null),
+        column((r) => r.publishedDate || null),
+        column((r) => r.startDate || null),
+        column((r) => r.endDate || null),
+        column((r) => r.reasoning || null),
+        column((r) => r.utcCreatedDateTime || null),
+        column((r) => r.addedByUserId ?? null),
+      ],
+    );
+    rows.sort((a, b) => a.id - b.id);
+    references.forEach((reference, i) => {
+      reference.id = rows[i].id;
+      reference.utcCreatedDateTime = rows[i].utcCreatedDateTime;
+    });
+    return references;
   }
 
   setPin(pin: BasePin): this {
@@ -103,8 +149,8 @@ export default class PinReference {
     return undefined;
   }
 
-  static async deleteByPinId(pinId: number) {
-    await db.query(`DELETE FROM "PinReference" WHERE "pinId" = $1`, [pinId]);
+  static async deleteByPinId(pinId: number, query: QueryFn = db.query) {
+    await query(`DELETE FROM "PinReference" WHERE "pinId" = $1`, [pinId]);
     return { pinId };
   }
 }

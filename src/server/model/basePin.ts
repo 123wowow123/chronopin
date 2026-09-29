@@ -2,6 +2,7 @@ import _ from 'lodash';
 import type { Row } from '../db';
 import Medium from './medium';
 import Merchant from './merchant';
+import PinRating from './pinRating';
 import PinReference from './pinReference';
 import User from './user';
 
@@ -27,12 +28,19 @@ export const BasePinProp = [
   'company',
   'companyWikiUrl',
   'companyLogoUrl',
-  'category',
+  'categories',
   'utcStartDateTime',
   'utcEndDateTime',
   'sourceStartDateTime',
   'sourceEndDateTime',
+  'originalStartDate',
+  'delayReasoning',
+  'episodeCount',
+  'episodeStatus',
+  'productName',
+  'marketVolume',
   'allDay',
+  'allDayStated',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime',
@@ -55,6 +63,7 @@ export default class BasePin {
   declare media: Medium[];
   declare merchants: Merchant[];
   declare references: PinReference[];
+  declare ratings: PinRating[];
 
   constructor(pin?: Row | null, user?: User | null, prop?: string[]) {
     this._prop = prop || BasePinProp;
@@ -79,11 +88,37 @@ export default class BasePin {
       this.userId = pin.userId;
       this.user!.userName = BasePin.getPinUserName(pin)!;
       this.user!.pictureUrl = pin['User.pictureUrl'] || undefined;
+    } else if (Number.isInteger(pin.user?.id)) {
+      // A pin read back from its JSON (the seed backup): the author is only
+      // its public fields, and userId is not written out. POST and PUT set
+      // the author themselves after this, so a body cannot choose one.
+      this.user = new User(_.pick(pin.user, PUBLIC_USER_PROPS));
     }
 
     this.media = _.get(pin, 'media', []).map((m: Row) => new Medium(m, this));
     this.merchants = _.get(pin, 'merchants', []).map((m: Row) => new Merchant(m, this));
     this.references = (pin.references || []).map((r: Row) => new PinReference(r, this));
+    this.ratings = (pin.ratings || []).map((rt: Row) => new PinRating(rt, this));
+    // Read-only, from the view: tickers are saved through their own tables.
+    this.stocks = Array.isArray(pin.stocks) ? pin.stocks : [];
+    // Also read-only, from the view (PinAward, kept by services/pinAwards.ts).
+    this.awards = Array.isArray(pin.awards) ? pin.awards : [];
+    // Also read-only, from the view (PinTagView): saved by the routes and
+    // model/pinTag.ts, never by the pin row's own update.
+    this.tags = Array.isArray(pin.tags) ? pin.tags : [];
+    // Also read-only, from the view (PinFlightPath, src/server/services/pinFlightPath.ts).
+    this.flightPath = pin.flightPath && Array.isArray(pin.flightPath.points) ? pin.flightPath : null;
+    // Also read-only, from the view (PinPlace, 0059): where the pin's place is
+    // on Google and Yelp. Handles only - the scores are fetched on view, never
+    // stored - and, like the ratings, an edit cannot wipe them.
+    this.place =
+      pin.place && (pin.place.googlePlaceId || pin.place.yelpBusinessId || pin.place.reservationUrl) ? pin.place : null;
+    // Also read-only, from the view (PinSeries, 0062): which public data
+    // series this pin's event moves. Handles only, like the place - the
+    // numbers come from the publisher on view (src/server/eiaSeries.ts) - so
+    // the page knows whether to ask before it asks, and an edit cannot wipe
+    // them.
+    this.series = Array.isArray(pin.series) ? pin.series : [];
     return this;
   }
 
@@ -167,6 +202,15 @@ export default class BasePin {
       this.references = [];
     }
     this.references.push(reference);
+    return this;
+  }
+
+  addRating(rating: PinRating): this {
+    rating.setPin(this);
+    if (!this.ratings) {
+      this.ratings = [];
+    }
+    this.ratings.push(rating);
     return this;
   }
 

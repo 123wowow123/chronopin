@@ -1,6 +1,6 @@
 // Server configuration, read from the environment. Locally, Next.js and the
-// scripts (via tsx + scripts/env.ts) load .env.local; in Kubernetes the values
-// come from the env-file ConfigMap.
+// scripts (via tsx + scripts/env.ts) load .env.local; in production the values
+// come from Docker/env.prod.list on the VM (docs/deploy-azure.md).
 
 import * as shared from '@/lib/appConfig';
 
@@ -58,12 +58,27 @@ export const config = {
     callbackURL: domain + '/auth/google/callback',
   },
 
+  // Sign in with Apple. The client id is a Services ID rather than an app id,
+  // and there is no static secret: the server signs a short-lived one with the
+  // .p8 key downloaded from the developer account (see oauth.ts). APPLE_KEY
+  // holds that file's PEM text, with real or backslash-escaped newlines.
+  apple: {
+    clientID: env('APPLE_ID') || 'id',
+    teamID: env('APPLE_TEAM_ID') || '',
+    keyID: env('APPLE_KEY_ID') || '',
+    privateKey: (env('APPLE_KEY') || '').replace(/\\n/g, '\n'),
+    callbackURL: domain + '/auth/apple/callback',
+  },
+
   azureStorage: {
     connectionString: env('AZURE_STORAGE_CONNECTION_STRING') || '',
   },
 
   faiss: {
     serviceUrl: env('FAISS_URL'),
+    // How many of a free-text search's best matches count as its results.
+    // Semantic search scores every pin, so past this they are mostly noise.
+    maxHits: Number(env('FAISS_MAX_HITS')) || 100,
   },
 
   youtube: {
@@ -72,6 +87,78 @@ export const config = {
 
   anthropic: {
     apiKey: env('ANTHROPIC_API_KEY') || '',
+  },
+
+  // Resend, for the account emails (src/server/email.ts). The free tier is
+  // 3,000 a month and 100 a day, from a domain verified in Resend's dashboard
+  // (its DKIM and SPF records sit on chronopin.com at GoDaddy). Without a key
+  // nothing is sent: the message, link included, goes to the server log.
+  email: {
+    resendApiKey: env('RESEND_API_KEY') || '',
+    from: env('EMAIL_FROM') || 'Chronopin <noreply@chronopin.com>',
+  },
+
+  // Web Push (VAPID) keys, for browser notifications about watched pins that
+  // reach a browser with the site closed (src/server/push.ts). Made once with
+  // `npx web-push generate-vapid-keys`; changing them strands every stored
+  // subscription. Without them alerts reach only open tabs, over the live feed.
+  webPush: {
+    publicKey: env('VAPID_PUBLIC_KEY') || '',
+    privateKey: env('VAPID_PRIVATE_KEY') || '',
+    subject: env('VAPID_SUBJECT') || 'mailto:noreply@chronopin.com',
+  },
+
+  // Google Places API (New), for a place's own rating, review count, review
+  // excerpts and opening hours. Billed per request and per field, so the
+  // lookup is cached (src/server/places.ts) and only a pin with a resolved
+  // place id ever asks. Without a key the Google half of the panel is absent
+  // and the Yelp half still shows.
+  googlePlaces: {
+    apiKey: env('GOOGLE_PLACES_API_KEY') || '',
+  },
+
+  // Google Custom Search (Programmable Search Engine) image search, for a
+  // product line's picture when Wikipedia has none (src/server/productPicture.ts).
+  // Only the dev machine looks pictures up; without a key and engine id the
+  // Google step is skipped. Free for 100 queries a day, then billed.
+  googleSearch: {
+    apiKey: env('GOOGLE_SEARCH_API_KEY') || '',
+    engineId: env('GOOGLE_SEARCH_ENGINE_ID') || '',
+  },
+
+  // Yelp Fusion, for the Yelp rating, review count, review excerpts and
+  // whether the business takes reservations through Yelp. The free tier
+  // covers this; without a key the Yelp half is simply absent.
+  yelp: {
+    apiKey: env('YELP_API_KEY') || '',
+  },
+
+  // eBay's Browse API, for the cheapest exact listing of a product pin's
+  // product on its eBay button (src/server/ebay.ts). A free developer app's
+  // production keyset (developer.ebay.com). A campaign id from the eBay
+  // Partner Network makes the listing links earn. Without the keys the
+  // button stays a search.
+  ebay: {
+    clientID: env('EBAY_CLIENT_ID') || '',
+    clientSecret: env('EBAY_CLIENT_SECRET') || '',
+    campaignID: env('EBAY_CAMPAIGN_ID') || '',
+  },
+
+  // A Kalshi API key: the key id and the RSA private key's PEM text (newlines
+  // may be escaped). With both, Kalshi odds stream over its WebSocket and REST
+  // reads are signed; without, they fall back to the keyless public API.
+  kalshi: {
+    keyID: env('KALSHI_API_KEY_ID') || '',
+    privateKey: (env('KALSHI_PRIVATE_KEY') || '').replace(/\\n/g, '\n'),
+  },
+
+  // A Polymarket US API key: the key id and the base64 secret key. With both,
+  // polymarket.us odds stream over its WebSocket and REST reads are signed;
+  // without, they fall back to its keyless public gateway. (polymarket.com
+  // needs no key.)
+  polymarketUS: {
+    keyID: env('POLYMARKET_API_KEY_ID') || '',
+    secretKey: env('POLYMARKET_SECRET_KEY') || '',
   },
 
   aws: {
@@ -91,8 +178,18 @@ export const config = {
 
   chromiumPath: env('CHROMIUM_PATH') || env('PUPPETEER_EXECUTABLE_PATH'),
 
+  pdf: {
+    // Reading a PDF's text layer costs milliseconds; OCR of a scan costs about
+    // five seconds a page and pins a core while it runs. The text layer is
+    // always read - this switch only decides whether a scan is worth the CPU.
+    // Set SCRAPE_PDF_OCR=0 to turn it off and let a scan read as no text.
+    ocr: env('SCRAPE_PDF_OCR') !== '0',
+  },
+
   pagination: {
     pageSize: 25,
+    // Pins per page of search results.
+    searchPageSize: 24,
   },
 };
 

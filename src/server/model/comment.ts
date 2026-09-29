@@ -3,19 +3,33 @@ import * as db from '../db';
 import type { QueryFn, Row } from '../db';
 import Notification from './notification';
 import { advanceIdSequence } from './pinShared';
+import { blockedBetween } from './blockSql';
 import PinUserLink from './pinUserLink';
 import User from './user';
+import type { CommentReactionName } from '@/lib/commentReactions';
 
-const prop = ['id', 'text', 'parentCommentId', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'reactions', 'myReaction', 'hidden', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
 
-// How long after posting a comment its author may still edit it.
-export const EDIT_WINDOW_MINUTES = 5;
+export const COMMENT_REPORT_REASONS = ['spam', 'harassment', 'misleading', 'other'] as const;
+// Open reports that hide a comment from readers until an admin dismisses them
+// (it comes back) or removes it (Admin > Comments).
+export const COMMENT_HIDE_REPORTS = 10;
+export type CommentReportReason = (typeof COMMENT_REPORT_REASONS)[number];
 
-const COMMENT_COLUMNS = `"id", "text", "userId", "pinId", "parentCommentId", "utcCreatedDateTime", "utcUpdatedDateTime"`;
+const COMMENT_COLUMNS = `"id", "text", "userId", "pinId", "parentCommentId", "sentiment", "utcCreatedDateTime", "utcUpdatedDateTime"`;
 
 export default class Comment extends PinUserLink {
   declare text: string;
   declare parentCommentId: number | null;
+  // -1..1, null until Claude has scored it (src/server/extract/sentiment.ts).
+  declare sentiment: number | null;
+  // How many gave each reaction (0075), and the viewer's own or null. Read
+  // with the pin's comments only.
+  declare reactions: Partial<Record<CommentReactionName, number>> | undefined;
+  declare myReaction: CommentReactionName | null | undefined;
+  // Hidden after COMMENT_HIDE_REPORTS open reports: read with its words and
+  // tone blanked, so it holds its place in the thread without saying anything.
+  declare hidden: boolean | undefined;
 
   protected get props() {
     return prop;
@@ -36,12 +50,13 @@ export default class Comment extends PinUserLink {
   async save(query: QueryFn = db.query) {
     try {
       const hasId = this.id != null;
-      const columns = ['text', 'userId', 'pinId', 'parentCommentId', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+      const columns = ['text', 'userId', 'pinId', 'parentCommentId', 'sentiment', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
       const values = [
         this.text,
         this.userId,
         this.pinId,
         this.parentCommentId,
+        this.sentiment,
         this.utcCreatedDateTime || new Date(),
         this.utcUpdatedDateTime,
       ].map((value) => (value === undefined ? null : value));
@@ -98,27 +113,6 @@ export default class Comment extends PinUserLink {
     });
   }
 
-  // Only the author, only while the comment is live, and only within the edit
-  // window. updated is false when any of those fail.
-  async update() {
-    const rows = await db.query(
-      `
-      UPDATE "Comment"
-      SET "text" = $3, "utcUpdatedDateTime" = now()
-      WHERE "id" = $1
-        AND "userId" = $2
-        AND "utcDeletedDateTime" IS NULL
-        AND "utcCreatedDateTime" >= now() - make_interval(mins => $4)
-      RETURNING "utcUpdatedDateTime"`,
-      [this.id, this.userId, this.text, EDIT_WINDOW_MINUTES],
-    );
-    const updated = rows.length > 0;
-    if (updated) {
-      this.utcUpdatedDateTime = rows[0].utcUpdatedDateTime;
-    }
-    return { comment: this, updated };
-  }
-
   // A soft delete, by the author only. It also takes back the notifications
   // the comment sent.
   async delete() {
@@ -152,19 +146,215 @@ export default class Comment extends PinUserLink {
     return new Comment({ id }, new User({ id: userId })).delete();
   }
 
-  static async getByPinId(pinId: number): Promise<Comment[]> {
+  // A pin's live comments, oldest first, each with its reactions counted by
+  // kind and the viewer's own (null when viewerId is null: signed out, or the
+  // cached copy every reader shares). One hidden after reports comes with no
+  // words or tone. A viewer does not get the comments of anyone they blocked,
+  // or who blocked them.
+  static async getByPinId(pinId: number, viewerId: number | null = null): Promise<Comment[]> {
     const rows = await db.query(
       `
-    SELECT "Comment"."id", "Comment"."text", "Comment"."userId", "Comment"."pinId",
-           "Comment"."parentCommentId", "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
+    SELECT "Comment"."id", "Comment"."userId", "Comment"."pinId", "Comment"."parentCommentId",
+           "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
+           COALESCE("open"."n", 0) >= $3 AS "hidden",
+           CASE WHEN COALESCE("open"."n", 0) >= $3 THEN '' ELSE "Comment"."text" END AS "text",
+           CASE WHEN COALESCE("open"."n", 0) >= $3 THEN NULL ELSE "Comment"."sentiment" END AS "sentiment",
+           COALESCE("counts"."reactions", '{}'::json) AS "reactions",
+           "mine"."reaction" AS "myReaction",
            "User"."userName" AS "User.userName", "User"."pictureUrl" AS "User.pictureUrl"
     FROM "Comment"
       LEFT JOIN "User" ON "Comment"."userId" = "User"."id"
+      LEFT JOIN (
+        SELECT "commentId", json_object_agg("reaction", "n") AS "reactions"
+        FROM (SELECT "commentId", "reaction", COUNT(*)::integer AS "n" FROM "CommentReaction" GROUP BY "commentId", "reaction") AS "byKind"
+        GROUP BY "commentId"
+      ) AS "counts" ON "counts"."commentId" = "Comment"."id"
+      LEFT JOIN "CommentReaction" AS "mine" ON "mine"."commentId" = "Comment"."id" AND "mine"."userId" = $2
+      LEFT JOIN (
+        SELECT "commentId", COUNT(*)::integer AS "n" FROM "CommentReport" WHERE "utcDismissedDateTime" IS NULL GROUP BY "commentId"
+      ) AS "open" ON "open"."commentId" = "Comment"."id"
     WHERE "Comment"."pinId" = $1 AND "Comment"."utcDeletedDateTime" IS NULL
+      AND ($2::integer IS NULL OR NOT ${blockedBetween('$2::integer', '"Comment"."userId"')})
     ORDER BY "Comment"."utcCreatedDateTime" ASC, "Comment"."id" ASC`,
-      [pinId],
+      [pinId, viewerId, COMMENT_HIDE_REPORTS],
     );
     return rows.map((row) => new Comment(row));
+  }
+
+  // Sets the viewer's reaction to a live comment of this pin, replacing any
+  // they gave before, or takes it back (null). Anyone may react to their own,
+  // as on Facebook, but not to the comment of someone they blocked or who
+  // blocked them ('blocked'). Resolves the comment's counts after it, or null
+  // when there is no such comment.
+  static async react(pinId: number, commentId: number, userId: number, reaction: CommentReactionName | null) {
+    const [comment] = await db.query<{ blocked: boolean }>(
+      `SELECT ${blockedBetween('$3::integer', '"userId"')} AS "blocked" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
+      [commentId, pinId, userId],
+    );
+    if (!comment) return null;
+    if (comment.blocked && reaction !== null) return 'blocked' as const;
+    if (reaction === null) {
+      await db.query(`DELETE FROM "CommentReaction" WHERE "commentId" = $1 AND "userId" = $2`, [commentId, userId]);
+    } else {
+      await db.query(
+        `INSERT INTO "CommentReaction" ("commentId", "userId", "reaction") VALUES ($1, $2, $3)
+         ON CONFLICT ("commentId", "userId") DO UPDATE SET "reaction" = EXCLUDED."reaction", "utcUpdatedDateTime" = now()`,
+        [commentId, userId, reaction],
+      );
+    }
+    const [counts] = await db.query<{ reactions: Partial<Record<CommentReactionName, number>> }>(
+      `SELECT COALESCE(json_object_agg("reaction", "n"), '{}'::json) AS "reactions"
+       FROM (SELECT "reaction", COUNT(*)::integer AS "n" FROM "CommentReaction" WHERE "commentId" = $1 GROUP BY "reaction") AS "byKind"`,
+      [commentId],
+    );
+    return { commentId, reactions: counts.reactions, myReaction: reaction };
+  }
+
+  // Reports a live comment of this pin for an admin to look at (0074): one per
+  // person, a second changing the reason, and reopened if an admin had
+  // dismissed it. Anyone may report any comment, their own included. null
+  // when there is no such comment.
+  static async report(pinId: number, commentId: number, userId: number, reason: CommentReportReason) {
+    const [comment] = await db.query(
+      `SELECT "id" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
+      [commentId, pinId],
+    );
+    if (!comment) return null;
+    await db.query(
+      `INSERT INTO "CommentReport" ("commentId", "userId", "reason") VALUES ($1, $2, $3)
+       ON CONFLICT ("commentId", "userId") DO UPDATE
+         SET "reason" = EXCLUDED."reason", "utcCreatedDateTime" = now(), "utcDismissedDateTime" = NULL, "dismissedByUserId" = NULL`,
+      [commentId, userId, reason],
+    );
+    return 'reported' as const;
+  }
+
+  // How many open reports a comment has (Admin > Comments, and whether it is
+  // hidden).
+  static async openReportCount(commentId: number) {
+    const [row] = await db.query<{ n: number }>(
+      `SELECT COUNT(*)::integer AS "n" FROM "CommentReport" WHERE "commentId" = $1 AND "utcDismissedDateTime" IS NULL`,
+      [commentId],
+    );
+    return row.n;
+  }
+
+  // Live comments with open reports, most reported first, for Admin > Comments.
+  static openReports() {
+    return db.query<{
+      commentId: number;
+      pinId: number;
+      pinTitle: string;
+      text: string;
+      authorName: string;
+      utcCreatedDateTime: Date;
+      reports: number;
+      reasons: Record<string, number>;
+      lastReportedDateTime: Date;
+      hidden: boolean;
+    }>(`
+    SELECT "c"."id" AS "commentId", "c"."pinId", "p"."title" AS "pinTitle", "c"."text", "u"."userName" AS "authorName",
+           "c"."utcCreatedDateTime", COUNT(*)::integer AS "reports",
+           (SELECT json_object_agg("reason", "n") FROM (
+              SELECT "reason", COUNT(*)::integer AS "n" FROM "CommentReport"
+              WHERE "commentId" = "c"."id" AND "utcDismissedDateTime" IS NULL GROUP BY "reason") AS "byReason") AS "reasons",
+           MAX("r"."utcCreatedDateTime") AS "lastReportedDateTime",
+           COUNT(*) >= ${COMMENT_HIDE_REPORTS} AS "hidden"
+    FROM "CommentReport" AS "r"
+      JOIN "Comment" AS "c" ON "c"."id" = "r"."commentId" AND "c"."utcDeletedDateTime" IS NULL
+      JOIN "Pin" AS "p" ON "p"."id" = "c"."pinId"
+      LEFT JOIN "User" AS "u" ON "u"."id" = "c"."userId"
+    WHERE "r"."utcDismissedDateTime" IS NULL
+    GROUP BY "c"."id", "p"."title", "u"."userName"
+    ORDER BY "reports" DESC, "lastReportedDateTime" DESC`);
+  }
+
+  // An admin's "nothing wrong here": the comment's open reports are closed
+  // (so one hidden after reports shows again). Resolves how many were closed
+  // and the pin it is on, whose page then has to be read again.
+  static async dismissReports(commentId: number, adminId: number) {
+    const rows = await db.query<{ pinId: number }>(
+      `UPDATE "CommentReport" AS "r" SET "utcDismissedDateTime" = now(), "dismissedByUserId" = $2
+       FROM "Comment" AS "c"
+       WHERE "r"."commentId" = $1 AND "r"."utcDismissedDateTime" IS NULL AND "c"."id" = "r"."commentId"
+       RETURNING "c"."pinId"`,
+      [commentId, adminId],
+    );
+    return { dismissed: rows.length, pinId: rows[0]?.pinId ?? null };
+  }
+
+  // Every reaction to a live comment, for backups (scripts/data).
+  static getAllReactions() {
+    return db.query<{ commentId: number; userId: number; reaction: string; utcCreatedDateTime: Date; utcUpdatedDateTime: Date }>(`
+    SELECT "r"."commentId", "r"."userId", "r"."reaction", "r"."utcCreatedDateTime", "r"."utcUpdatedDateTime"
+    FROM "CommentReaction" AS "r"
+      JOIN "Comment" AS "c" ON "c"."id" = "r"."commentId" AND "c"."utcDeletedDateTime" IS NULL
+    ORDER BY "r"."commentId", "r"."userId"`);
+  }
+
+  static async restoreReactions(reactions: Row[]) {
+    for (const r of reactions) {
+      await db.query(
+        `INSERT INTO "CommentReaction" ("commentId", "userId", "reaction", "utcCreatedDateTime", "utcUpdatedDateTime") VALUES ($1, $2, $3, $4, $5)
+         ON CONFLICT DO NOTHING`,
+        [r.commentId, r.userId, r.reaction, r.utcCreatedDateTime, r.utcUpdatedDateTime],
+      );
+    }
+  }
+
+  // The tone scores on a company's pins, newest first and at most `limit` of
+  // them: what a company: search's mood is read from (src/lib/commentMood.ts).
+  // Comments waiting on a score come too, so the panel can say how many of the
+  // comments it speaks for.
+  static forCompany(companyId: number, limit: number) {
+    return db.query<{ pinId: number; sentiment: number | null; utcCreatedDateTime: Date }>(
+      `
+    SELECT "Comment"."pinId", "Comment"."sentiment", "Comment"."utcCreatedDateTime"
+    FROM "Comment"
+      JOIN "Pin" ON "Pin"."id" = "Comment"."pinId"
+    WHERE "Pin"."companyId" = $1 AND "Pin"."utcDeletedDateTime" IS NULL AND "Comment"."utcDeletedDateTime" IS NULL
+      -- One hidden after reports sits out, as it does on the pin page.
+      AND (SELECT COUNT(*) FROM "CommentReport" WHERE "commentId" = "Comment"."id" AND "utcDismissedDateTime" IS NULL) < $3
+    ORDER BY "Comment"."utcCreatedDateTime" DESC, "Comment"."id" DESC
+    LIMIT $2`,
+      [companyId, limit, COMMENT_HIDE_REPORTS],
+    );
+  }
+
+  // What scoring a comment's tone reads: its text, the pin it is on, and for a
+  // reply the comment it answers. Undefined when the comment is gone.
+  static async sentimentContext(id: number) {
+    const rows = await db.query<{ text: string; pinId: number; pinTitle: string; parentText: string | null }>(
+      `
+    SELECT "Comment"."text", "Comment"."pinId", "Pin"."title" AS "pinTitle", "Parent"."text" AS "parentText"
+    FROM "Comment"
+      JOIN "Pin" ON "Pin"."id" = "Comment"."pinId"
+      LEFT JOIN "Comment" AS "Parent" ON "Parent"."id" = "Comment"."parentCommentId" AND "Parent"."utcDeletedDateTime" IS NULL
+    WHERE "Comment"."id" = $1 AND "Comment"."utcDeletedDateTime" IS NULL`,
+      [id],
+    );
+    return rows[0];
+  }
+
+  // Stores a score for the text it was worked out from: when the comment was
+  // edited in the meantime, the score is for old words and is dropped
+  // (resolves false).
+  static async setSentiment(id: number, scoredText: string, sentiment: number) {
+    const rows = await db.query(`UPDATE "Comment" SET "sentiment" = $2 WHERE "id" = $1 AND "text" = $3 RETURNING "id"`, [
+      id,
+      sentiment,
+      scoredText,
+    ]);
+    return rows.length > 0;
+  }
+
+  // Live comments nobody has scored yet, oldest first (the backfill script).
+  static async unscoredIds(limit: number): Promise<number[]> {
+    const rows = await db.query<{ id: number }>(
+      `SELECT "id" FROM "Comment" WHERE "sentiment" IS NULL AND "utcDeletedDateTime" IS NULL ORDER BY "utcCreatedDateTime" ASC, "id" ASC LIMIT $1`,
+      [limit],
+    );
+    return rows.map((row) => row.id);
   }
 
   // Every live comment, oldest first, so a parent always comes before its

@@ -24,7 +24,7 @@ export async function GET(_request: Request, ctx: RouteContext<'/og/pin/[id]'>) 
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: '#111', color: '#ededed', padding: 64 }}>
         <div style={{ display: 'flex', gap: 16, fontSize: 30, color: '#999966' }}>
           <span>{date}</span>
-          {pin.category ? <span style={{ color: '#888' }}>· {pin.category}</span> : null}
+          {pin.categories?.length ? <span style={{ color: '#888' }}>· {pin.categories.join(' · ')}</span> : null}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
           <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.1 }}>{pin.title}</div>

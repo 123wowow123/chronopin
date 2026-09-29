@@ -1,41 +1,65 @@
+'use client';
+
 import type { ReactNode } from 'react';
+import { useT } from '@/lib/client/i18n';
+import { PillTip } from '@/components/ui/PillTip';
+import { RefineLink } from './RefineLink';
 
-// How firmly the source states a pin's date, as a coloured badge.
-// reasoningContent, when given, is shown in place of the plain reasoning (the
-// same text with citations).
+// How firmly the source states a pin's date, as a coloured badge. Clicking it
+// searches for pins at the same level (a confidence: term), like a card's
+// category label. Hovering it explains the level and the scale it sits on;
+// render DateConfidenceReasoning alongside to show why this pin got it.
 
-const LEVELS: Record<string, { label: string; title: string; className: string }> = {
-  delayed: { label: 'DELAYED', title: 'The date has moved', className: 'bg-red-500/15 text-red-300 ring-red-500/30' },
-  unknown: { label: 'UNVERIFIED', title: 'No wording about the date was found', className: 'bg-white/5 text-muted ring-white/10' },
-  estimated: { label: 'ESTIMATED', title: 'A target, not a fixed date', className: 'bg-amber-500/15 text-amber-300 ring-amber-500/30' },
-  scheduled: { label: 'SCHEDULED', title: 'Given as scheduled', className: 'bg-sky-500/15 text-sky-300 ring-sky-500/30' },
-  confirmed: { label: 'CONFIRMED', title: 'Stated as firm', className: 'bg-emerald-500/15 text-emerald-300 ring-emerald-500/30' },
+// term: the confidence: search term's value, which stays English in any language.
+const LEVELS: Record<string, { term: string; className: string }> = {
+  delayed: { term: 'delayed', className: 'bg-red-500/15 text-danger-soft ring-red-500/30' },
+  unknown: { term: 'unverified', className: 'bg-tint/5 text-muted ring-tint/10' },
+  estimated: { term: 'estimated', className: 'bg-amber-500/15 text-warning-soft ring-amber-500/30' },
+  scheduled: { term: 'scheduled', className: 'bg-sky-500/15 text-info-soft ring-sky-500/30' },
+  confirmed: { term: 'confirmed', className: 'bg-emerald-500/15 text-success-soft ring-emerald-500/30' },
 };
 
-export function DateConfidence({
-  level,
-  reasoning,
-  showReasoning,
-  reasoningContent,
-}: {
-  level?: string | null;
-  reasoning?: string | null;
-  showReasoning?: boolean;
-  reasoningContent?: ReactNode;
-}) {
-  const meta = LEVELS[(level || '').toLowerCase()];
+export function DateConfidence({ level }: { level?: string | null }) {
+  const t = useT();
+  const key = (level || '').toLowerCase();
+  const meta = LEVELS[key];
   if (!meta) {
     return null;
   }
+  const label = t.dynamic(`dateConfidence.${key}.label`, meta.term.toUpperCase());
+  const title = t.dynamic(`dateConfidence.${key}.title`, '');
   return (
-    <>
-      <span
-        className={`rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset ${meta.className}`}
-        title={`${meta.title}${reasoning ? ` — ${reasoning}` : ''}`}
-      >
-        {meta.label}
-      </span>
-      {showReasoning && reasoning ? <span className="basis-full text-xs leading-relaxed text-subtle italic">{reasoningContent ?? reasoning}</span> : null}
-    </>
+    <PillTip
+      tip={
+        <>
+          <span className="block font-semibold text-ink">
+            {t('dateConfidence.tipHeading')}: {label}
+          </span>
+          {title ? <span className="block">{title}</span> : null}
+          <span className="block">{t('dateConfidence.tipScale')}</span>
+          <span className="block text-subtle">{t('dateConfidence.showAll', { label })}</span>
+        </>
+      }
+    >
+      {(describedBy) => (
+        <RefineLink
+          field="confidence"
+          value={meta.term}
+          className={`relative rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-current ${meta.className}`}
+          describedBy={describedBy}
+        >
+          {label}
+        </RefineLink>
+      )}
+    </PillTip>
   );
+}
+
+// The reasoning on a line of its own under the badges. Split out so a row with
+// more badges after the level can keep them together and end with the reasoning.
+export function DateConfidenceReasoning({ reasoning, children }: { reasoning?: string | null; children?: ReactNode }) {
+  if (!reasoning) {
+    return null;
+  }
+  return <span className="basis-full text-xs leading-relaxed text-subtle italic">{children ?? reasoning}</span>;
 }
