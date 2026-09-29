@@ -1,7 +1,7 @@
 'use client';
 
 import Link from '@/components/ui/Link';
-import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
+import { usePathname } from '@/lib/client/navigation';
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
@@ -9,15 +9,15 @@ import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { drawerHeld, onCloseDrawer, onOpenDrawer, setCardsSlot, setControlsSlot, setDrawerScroller, useHasControls } from '@/lib/client/controlsDrawer';
 import { leaveDrawer, settleDrawerMark, takeDrawerReturn } from '@/lib/client/drawerReturn';
+import { useUnreadChats } from '@/lib/client/messages';
 import { useUnreadCount } from '@/lib/client/notifications';
-import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
+import { DrawerMessages } from '@/components/messages/Messenger';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
 import { DrawerHighlights } from './DrawerHighlights';
-import { ViewSwitch } from './NavMenu';
+import { SwitchMark, useWatchedToggle, ViewSwitch } from './NavMenu';
 import { DrawerNotifications } from './NotificationBell';
-import { searchHref, WATCHED } from './SearchBox';
 import { useT } from '@/lib/client/i18n';
 
 const itemClass =
@@ -84,11 +84,9 @@ function DrawerMark({ open }: { open: boolean }) {
 // a swipe to the left puts it away.
 export function MobileDrawer() {
   const pathname = usePathname();
-  const params = useSearchParams();
-  const router = useRouter();
   const { user, isAdmin } = useSession();
   const t = useT();
-  const unread = useUnreadCount(!!user);
+  const unread = useUnreadCount(!!user) + useUnreadChats(!!user);
   // Whether the page showing has filters to lend the drawer (the timeline and
   // search results do; a pin page does not).
   const hasControls = useHasControls();
@@ -202,18 +200,12 @@ export function MobileDrawer() {
     </Link>
   );
 
-  // The search box's Watched toggle, moved in here: it keeps the search (and
-  // the map, when on it) and only turns the watched-only filter on or off.
-  const onMap = pathname === '/map';
-  const searching = onMap || pathname === '/search';
-  const watchedOnly = searching && params.get('f') === WATCHED;
+  const watched = useWatchedToggle();
   const toggleWatched = () => {
     setOpen(false);
-    const href = searchHref(onMap, searching ? params.get('q') || '' : '', watchedOnly ? '' : WATCHED);
-    // Turning Watched off widens the search, which stays on the same date;
-    // turning it on opens on the day nearest it.
-    router.push(watchedOnly ? hrefKeepingDate(href) : hrefNearDay(href));
+    watched.toggle();
   };
+  const watchedOnly = watched.watchedOnly;
 
   const drawer = (
     <div
@@ -321,9 +313,7 @@ export function MobileDrawer() {
               <button type="button" role="switch" aria-checked={watchedOnly} onClick={toggleWatched} className={`w-full ${itemClass}`}>
                 <Icon name="eye" className={`size-6 ${watchedOnly ? 'text-link' : ''}`} />
                 {t('nav.watchedOnly')}
-                <span aria-hidden className={`ml-auto flex h-6 w-10 shrink-0 items-center rounded-full p-0.5 transition-colors ${watchedOnly ? 'bg-accent' : 'bg-raised-2'}`}>
-                  <span className={`size-5 rounded-full bg-white shadow transition-transform ${watchedOnly ? 'translate-x-4' : ''}`} />
-                </span>
+                <SwitchMark on={watchedOnly} />
               </button>
             ) : null}
           </DrawerSection>
@@ -354,6 +344,7 @@ export function MobileDrawer() {
             <>
               <DrawerSection title={t('nav.you')}>
                 <DrawerNotifications className={itemClass} current={pathname === '/notifications'} onClick={() => leaveDrawer('/notifications')} />
+                <DrawerMessages className={itemClass} current={pathname === '/messages'} onClick={() => leaveDrawer('/messages')} />
                 <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
               </DrawerSection>
               {isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}

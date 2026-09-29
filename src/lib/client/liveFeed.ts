@@ -14,7 +14,7 @@ type Handler = (data: unknown) => void;
 const CLOSE_DELAY_MS = 2000;
 // State rather than happenings: a part that subscribes late still wants the
 // latest one.
-const REPLAYED = new Set(['notifications']);
+const REPLAYED = new Set(['notifications', 'messages']);
 // A stream the browser gave up on - it closes for good when a reconnect is
 // answered with anything but the stream, such as the proxy's 502 while the
 // app restarts - is reopened after these pauses, the last repeating.

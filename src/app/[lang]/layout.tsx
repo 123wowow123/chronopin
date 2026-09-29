@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import { lang } from 'next/root-params';
 import { HideDevIssues } from '@/components/HideDevIssues';
 import { I18nProvider } from '@/components/I18nProvider';
+import { ChatDock } from '@/components/messages/Messenger';
 import { Navbar } from '@/components/nav/Navbar';
 import { ThemeSync } from '@/components/ThemeSync';
 import { LocaleSync } from '@/components/LocaleSync';
@@ -97,6 +98,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <I18nProvider locale={locale} messages={messages}>
           <Navbar />
           <div id="main">{children}</div>
+          <ChatDock />
           <TimeZoneSync />
           <ThemeSync />
           <LocaleSync />

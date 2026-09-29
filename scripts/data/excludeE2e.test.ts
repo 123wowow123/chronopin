@@ -60,4 +60,35 @@ describe('excludeE2e', () => {
   it('keeps a company a real pin still uses, and unused companies that predate the tests', () => {
     expect(excludeE2e(data()).companies.map((c) => c.id)).toEqual([7, 200]);
   });
+
+  it('drops a chat with an e2e user whole, and e2e reports on kept messages', () => {
+    const { messages } = excludeE2e({
+      ...data(),
+      messages: {
+        conversations: [
+          { id: 1, userLowId: 1, userHighId: 22 },
+          { id: 2, userLowId: 1, userHighId: 64 },
+        ],
+        members: [
+          { conversationId: 1, userId: 1 },
+          { conversationId: 1, userId: 22 },
+          { conversationId: 2, userId: 1 },
+          { conversationId: 2, userId: 64 },
+        ],
+        messages: [
+          { id: 10, conversationId: 1 },
+          { id: 11, conversationId: 2 },
+        ],
+        reports: [
+          { messageId: 10, userId: 22 },
+          { messageId: 10, userId: 71 },
+          { messageId: 11, userId: 1 },
+        ],
+      },
+    });
+    expect(messages.conversations.map((c) => c.id)).toEqual([1]);
+    expect(messages.members.map((m) => m.userId)).toEqual([1, 22]);
+    expect(messages.messages.map((m) => m.id)).toEqual([10]);
+    expect(messages.reports).toEqual([{ messageId: 10, userId: 22 }]);
+  });
 });

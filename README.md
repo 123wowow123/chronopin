@@ -282,3 +282,10 @@ sync prod db to local and backup json
 
 - setup second company for daily job
 
+- tag cloud close without going back to drawer menu
+
+- ingest housing code and use camera to film and advise on any issues 
+
+- create crypto payment for views and clicks
+
+- golden cross indicator?

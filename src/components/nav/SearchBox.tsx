@@ -8,7 +8,6 @@ import { canonicalCategory } from '@/lib/categories';
 import { api } from '@/lib/client/api';
 import { withPageLang } from '@/lib/client/navigation';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
-import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { formatStart } from '@/lib/format';
 import { hasTerm, term } from '@/lib/searchTerms';
@@ -160,8 +159,8 @@ const GROUP_LABEL = {
   pin: 'search.groupPins',
 } as const satisfies Record<Suggestion['kind'], MessageKey>;
 
-// The navbar search: suggestions (matching categories, tags and titles) as you type, Enter to search, and a
-// Watched-only toggle for signed-in users (lg and up; below, it is in the drawer). The query sits in the box as items:
+// The navbar search: suggestions (matching categories, tags and titles) as you type, and Enter to search (the
+// Watched-only toggle is in the account menu and the drawer). The query sits in the box as items:
 // label terms (user:, company:, tag:, @name) as pills and free text as
 // plain runs. The text field only ever holds the one item being edited -
 // clicking an item opens just that one, in its place, and leaving it (or
@@ -178,7 +177,6 @@ export function SearchBox() {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
-  const { isLoggedIn } = useSession();
   const timeZone = useTimeZone('UTC');
   const t = useT();
 
@@ -195,7 +193,6 @@ export function SearchBox() {
   // text reads the same open or closed, so it is left alone.
   const [editing, setEditing] = useState(false);
   const [choice, setChoice] = useState(urlChoice);
-  const watchedOnly = choice === WATCHED;
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
@@ -986,27 +983,6 @@ export function SearchBox() {
           </button>
         ) : null}
       </div>
-
-      {isLoggedIn ? (
-        <button
-          type="button"
-          // Put out of reach with the rest of the navbar while the big tag cloud is open.
-          data-cloud-dim
-          aria-pressed={watchedOnly}
-          title={watchedOnly ? t('search.watchedOnTitle') : t('search.watchedOffTitle')}
-          className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 text-sm font-medium ring-1 transition-colors ring-inset max-lg:hidden ${
-            watchedOnly ? 'bg-accent/15 text-link ring-accent/60' : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
-          }`}
-          onClick={() => {
-            const next = watchedOnly ? '' : WATCHED;
-            setChoice(next);
-            submit(query(), next, !next);
-          }}
-        >
-          <Icon name="eye" className="size-4" />
-          {t('search.watched')}
-        </button>
-      ) : null}
 
       {/* On phones the search box is too narrow for titles, so the list spans
           the screen under the header, like the notifications panel. */}

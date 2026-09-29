@@ -10,13 +10,17 @@
 //   alert           a watched pin starting now or soon, or updated (a WatchAlert), for the
 //                   signed-in viewer's own connections to show as a browser
 //                   notification
+//   messages        { unreadCount } of direct-message chats, own connections only
+//   dm              a message in one of the viewer's chats, or the other side
+//                   having seen theirs (model/message.ts), own connections only
 //
 // Like the events it relays this lives in-process, which holds while the app
 // runs as a single replica; several would need Postgres LISTEN/NOTIFY.
 
 import { randomUUID } from 'node:crypto';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
-import { PIN_EVENTS, onNotificationsChanged, onPinEvent, onWatchAlert } from './events';
+import { PIN_EVENTS, onDirectMessage, onMessagesChanged, onNotificationsChanged, onPinEvent, onWatchAlert } from './events';
+import Message from './model/message';
 import Notification from './model/notification';
 import PinTicker from './model/pinTicker';
 import { subscribeQuote } from './stocks';
@@ -51,6 +55,7 @@ type LiveConnection = {
   stocks: Map<string, () => void>;
   stocksWanted: number[];
   countQueued: boolean;
+  messagesQueued: boolean;
   closed: boolean;
 };
 
@@ -72,6 +77,30 @@ function queueUnreadCount(conn: LiveConnection) {
       log.warn('live unread count failed:', (err as Error).message);
     }
   }, COUNT_DELAY_MS);
+}
+
+function queueMessagesCount(conn: LiveConnection) {
+  if (conn.userId == null || conn.messagesQueued) return;
+  conn.messagesQueued = true;
+  setTimeout(async () => {
+    conn.messagesQueued = false;
+    if (conn.closed) return;
+    try {
+      conn.send('messages', { unreadCount: await Message.unreadCount(conn.userId!) });
+    } catch (err) {
+      log.warn('live unread messages failed:', (err as Error).message);
+    }
+  }, COUNT_DELAY_MS);
+}
+
+// Whether each of these users has a page open now: the chats' "Active now".
+export function onlineUsers(ids: number[]): Set<number> {
+  const wanted = new Set(ids);
+  const online = new Set<number>();
+  for (const conn of state.connections.values()) {
+    if (conn.userId != null && wanted.has(conn.userId)) online.add(conn.userId);
+  }
+  return online;
 }
 
 // Writes are announced (src/server/model/notification.ts), which is what
@@ -104,6 +133,7 @@ export function openLiveConnection({ userId, timeZone, send }: { userId: number 
     stocks: new Map(),
     stocksWanted: [],
     countQueued: false,
+    messagesQueued: false,
     closed: false,
   };
   state.connections.set(conn.id, conn);
@@ -119,6 +149,13 @@ export function openLiveConnection({ userId, timeZone, send }: { userId: number 
         if (to === userId) send('alert', alert);
       }),
     );
+    conn.stops.push(onMessagesChanged((changed) => changed === userId && queueMessagesCount(conn)));
+    conn.stops.push(
+      onDirectMessage(({ userId: to, data }) => {
+        if (to === userId) send('dm', data);
+      }),
+    );
+    queueMessagesCount(conn);
     // The count as of connecting, after any 'today' notifications due.
     void notifyToday(userId, timeZone).finally(() => queueUnreadCount(conn));
     startTodayChecks();

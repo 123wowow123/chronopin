@@ -27,6 +27,7 @@ import { excludeE2e } from './excludeE2e';
 import PinTranslation from '@/server/model/pinTranslation';
 import PinSentiment from '@/server/model/pinSentiment';
 import ProductPicture from '@/server/model/productPicture';
+import Message from '@/server/model/message';
 
 const { values: flags } = parseArgs({
   options: {
@@ -40,6 +41,8 @@ const { values: flags } = parseArgs({
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
     companyfollowfile: { type: 'string', default: './scripts/backup/seedCompanyFollows.json' },
     userblockfile: { type: 'string', default: './scripts/backup/seedUserBlocks.json' },
+    // Private chats: gitignored, as seedUsers.json is.
+    messagefile: { type: 'string', default: './scripts/backup/seedMessages.json' },
     notinterestedfile: { type: 'string', default: './scripts/backup/seedPinNotInterested.json' },
     companyblockfile: { type: 'string', default: './scripts/backup/seedCompanyBlocks.json' },
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
@@ -127,6 +130,7 @@ async function saveDB() {
     userBlocks: await UserBlock.getAll(),
     notInterested: await PinNotInterested.getAll(),
     companyBlocks: await CompanyBlock.getAll(),
+    messages: await Message.getAll(),
   });
   const { dropped } = data;
   if (dropped.users) {
@@ -160,6 +164,10 @@ async function saveDB() {
   // Who blocked whom (0076).
   console.log('Backup User Blocks');
   writeJson(flags.userblockfile, data.userBlocks);
+
+  // Direct messages (0092-0094): chats, read marks, messages, reports.
+  console.log('Backup Messages');
+  writeJson(flags.messagefile, data.messages);
 
   // Pins readers marked "Not interested" (0077).
   console.log('Backup Pins Not Interested');
@@ -406,6 +414,15 @@ async function seedDB() {
       await UserBlock.restore(readJson(flags.userblockfile));
     } catch (error) {
       log.error('User Blocks Save Error', JSON.stringify(error));
+    }
+  }
+
+  // After the users they name; a backup from before 0092 has none.
+  if (existsSync(flags.messagefile)) {
+    try {
+      await Message.restore(readJson(flags.messagefile));
+    } catch (error) {
+      log.error('Messages Save Error', JSON.stringify(error));
     }
   }
 

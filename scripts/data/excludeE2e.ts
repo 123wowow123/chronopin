@@ -14,7 +14,7 @@ export function e2eUserIds(users: Row[]): Set<number> {
 }
 
 export function excludeE2e<P extends Row>(
-  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[]; notInterested?: Row[]; companyBlocks?: Row[] },
+  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[]; notInterested?: Row[]; companyBlocks?: Row[]; messages?: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] } },
 ) {
   const userIds = e2eUserIds(data.users);
   const isE2eUser = (id: unknown) => userIds.has(id as number);
@@ -51,6 +51,23 @@ export function excludeE2e<P extends Row>(
     userBlocks: (data.userBlocks ?? []).filter((b) => !isE2eUser(b.blockerId) && !isE2eUser(b.blockedId)),
     notInterested: (data.notInterested ?? []).filter((m) => !isE2eUser(m.userId) && !droppedPinIds.has(m.pinId)),
     companyBlocks: (data.companyBlocks ?? []).filter((b) => !isE2eUser(b.userId) && !droppedCompanyIds.has(b.companyId)),
+    messages: excludeE2eChats(data.messages, isE2eUser),
     dropped: { users: userIds.size, pins: droppedPins.length, companies: droppedCompanyIds.size },
+  };
+}
+
+// A chat goes whole when either side is an e2e user (the messages spec
+// leaves several), with its messages and their reports.
+function excludeE2eChats(chats: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] } | undefined, isE2eUser: (id: unknown) => boolean) {
+  if (!chats) return { conversations: [], members: [], messages: [], reports: [] };
+  const conversations = chats.conversations.filter((c) => !isE2eUser(c.userLowId) && !isE2eUser(c.userHighId));
+  const kept = new Set(conversations.map((c) => c.id));
+  const messages = chats.messages.filter((m) => kept.has(m.conversationId));
+  const keptMessages = new Set(messages.map((m) => m.id));
+  return {
+    conversations,
+    members: chats.members.filter((m) => kept.has(m.conversationId)),
+    messages,
+    reports: chats.reports.filter((r) => keptMessages.has(r.messageId) && !isE2eUser(r.userId)),
   };
 }

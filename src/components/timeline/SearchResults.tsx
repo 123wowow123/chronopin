@@ -2,6 +2,7 @@
 
 import { startTransition, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
+import { MessageButton } from '@/components/messages/Messenger';
 import { UserMenu } from '@/components/pin/UserMenu';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { CardGrid } from '@/components/pin/CardGrid';
@@ -576,7 +577,10 @@ export function SearchResults({
                     {blocks.ids.has(searchedUser.id) ? (
                       <p className="text-sm text-muted">{t('profile.blocked')}</p>
                     ) : (
-                      <FollowButton userId={searchedUser.id} userName={searchedUser.userName} showCount />
+                      <span className="flex flex-wrap items-center gap-2">
+                        <MessageButton user={{ id: searchedUser.id, userName: searchedUser.userName, pictureUrl: null }} />
+                        <FollowButton userId={searchedUser.id} userName={searchedUser.userName} showCount />
+                      </span>
                     )}
                   </div>
                 ) : null}

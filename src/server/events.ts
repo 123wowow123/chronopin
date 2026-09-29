@@ -44,6 +44,33 @@ export function onNotificationsChanged(listener: (userId: number) => void) {
   return () => pinEvents.off(NOTIFICATIONS, listener);
 }
 
+// Direct messages (model/message.ts), each addressed to one user's own
+// connections: a message in one of their chats, or the other side having
+// seen theirs. 'messagesChanged' carries only the user id, like
+// 'notifications', and the feed reads their unread chat count back.
+export type DirectMessageEvent = { userId: number; data: Record<string, unknown> };
+
+const DIRECT_MESSAGE = 'dm';
+const MESSAGES_CHANGED = 'messagesChanged';
+
+export function emitDirectMessage(event: DirectMessageEvent) {
+  pinEvents.emit(DIRECT_MESSAGE, event);
+}
+
+export function onDirectMessage(listener: (event: DirectMessageEvent) => void) {
+  pinEvents.on(DIRECT_MESSAGE, listener);
+  return () => pinEvents.off(DIRECT_MESSAGE, listener);
+}
+
+export function emitMessagesChanged(userId: number) {
+  pinEvents.emit(MESSAGES_CHANGED, userId);
+}
+
+export function onMessagesChanged(listener: (userId: number) => void) {
+  pinEvents.on(MESSAGES_CHANGED, listener);
+  return () => pinEvents.off(MESSAGES_CHANGED, listener);
+}
+
 // A watched pin is starting, or about to (services/watchAlerts.ts): the live
 // feed hands it to that user's own open pages, which show it as a browser
 // notification.

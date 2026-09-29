@@ -23,7 +23,7 @@ const REOPEN = 'drawer:reopen';
 
 // The pages the drawer sends a reader to that have the arrow back to it. Off
 // all of them, no trip from the drawer is under way.
-const DRAWER_PAGES = ['/profile', '/notifications', '/admin'];
+const DRAWER_PAGES = ['/profile', '/notifications', '/admin', '/messages'];
 
 type Trip = { from: string; to: string };
 

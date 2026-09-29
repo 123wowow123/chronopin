@@ -248,6 +248,8 @@ const PATHS: Record<string, React.ReactNode> = {
     </>
   ),
   message: <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />,
+  send: <path d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12.6 2-12.6 2z" />,
+  minus: <path d="M5 12h14" />,
   copy: (
     <>
       <rect x="8" y="8" width="14" height="14" rx="2" />

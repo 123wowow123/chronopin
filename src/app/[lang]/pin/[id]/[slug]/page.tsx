@@ -12,6 +12,7 @@ import { DateConfidence, DateConfidenceReasoning } from '@/components/pin/DateCo
 import { DelayBadge, DelayReasoning } from '@/components/pin/DelayBadge';
 import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
+import { MessageButton } from '@/components/messages/Messenger';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { PinMenu } from '@/components/pin/PinMenu';
 import { AddressShare } from '@/components/pin/PinShare';
@@ -363,7 +364,10 @@ function PinBody({
             <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-9 text-sm" />
             {pin.user.userName}
           </RefineLink>
-          <FollowButton userId={pin.user.id} userName={pin.user.userName} showCount />
+          <span className="flex flex-wrap items-center gap-2">
+            <MessageButton user={{ id: pin.user.id, userName: pin.user.userName, pictureUrl: pin.user.pictureUrl }} />
+            <FollowButton userId={pin.user.id} userName={pin.user.userName} showCount />
+          </span>
         </div>
       ) : null}
 

@@ -1,14 +1,17 @@
 'use client';
 
 import Link from '@/components/ui/Link';
-import { usePathname, useSearchParams } from '@/lib/client/navigation';
+import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
 import { NotificationBell, WeatherButton } from './NotificationBell';
+import { searchHref, WATCHED } from './SearchBox';
 import { WatchAlerts } from './WatchAlerts';
+import { MessengerButton } from '@/components/messages/Messenger';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 
@@ -18,7 +21,6 @@ const itemIconClass = 'size-4 text-subtle';
 type MenuItem = { href: string; label: MessageKey; icon: IconName };
 
 // The account menu, in groups separated by a rule. Admin tools only for admins.
-// No Watched pins: the search box's Watched toggle sits beside it on wide screens.
 // Profile and settings are not a row here: the block at the head of the menu
 // (SignedInAs) is that link, since it already names the account they belong to.
 function accountGroups(isAdmin: boolean): MenuItem[][] {
@@ -65,6 +67,57 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
           {view.label}
         </Link>
       ))}
+    </div>
+  );
+}
+
+// The watched-only filter, for the account menu and the drawer: it keeps the
+// search (and the map, when on it) and only turns the filter on or off.
+export function useWatchedToggle() {
+  const pathname = usePathname();
+  const params = useSearchParams();
+  const router = useRouter();
+  const onMap = pathname === '/map';
+  const searching = onMap || pathname === '/search';
+  const watchedOnly = searching && params.get('f') === WATCHED;
+  const toggle = () => {
+    const href = searchHref(onMap, searching ? params.get('q') || '' : '', watchedOnly ? '' : WATCHED);
+    // Turning Watched off widens the search, which stays on the same date;
+    // turning it on opens on the day nearest it.
+    router.push(watchedOnly ? hrefKeepingDate(href) : hrefNearDay(href));
+  };
+  return { watchedOnly, toggle };
+}
+
+// An on/off switch drawn at the end of a menu row.
+export function SwitchMark({ on, size = 'md' }: { on: boolean; size?: 'sm' | 'md' }) {
+  const [track, knob, shift] = size === 'sm' ? ['h-5 w-8', 'size-4', 'translate-x-3'] : ['h-6 w-10', 'size-5', 'translate-x-4'];
+  return (
+    <span aria-hidden className={`ml-auto flex ${track} shrink-0 items-center rounded-full p-0.5 transition-colors ${on ? 'bg-accent' : 'bg-raised-2'}`}>
+      <span className={`${knob} rounded-full bg-white shadow transition-transform ${on ? shift : ''}`} />
+    </span>
+  );
+}
+
+function WatchedRow({ onToggle }: { onToggle: () => void }) {
+  const t = useT();
+  const { watchedOnly, toggle } = useWatchedToggle();
+  return (
+    <div className="border-b border-line py-1.5">
+      <button
+        type="button"
+        role="switch"
+        aria-checked={watchedOnly}
+        onClick={() => {
+          onToggle();
+          toggle();
+        }}
+        className={`w-full ${itemClass}`}
+      >
+        <Icon name="eye" className={`${itemIconClass} ${watchedOnly ? 'text-link' : ''}`} />
+        {t('nav.watchedOnly')}
+        <SwitchMark on={watchedOnly} size="sm" />
+      </button>
     </div>
   );
 }
@@ -175,6 +228,7 @@ export function NavMenu() {
         )}
       </nav>
 
+      {user ? <MessengerButton className="hidden lg:block" /> : null}
       {user ? <NotificationBell className="hidden lg:block" /> : null}
       {user ? <WatchAlerts /> : null}
 
@@ -196,6 +250,7 @@ export function NavMenu() {
             <div className="floating absolute right-0 z-50 mt-2 w-60 overflow-hidden">
               <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
               <div className="px-1.5">
+                <WatchedRow onToggle={() => setAccountOpen(false)} />
                 <MenuLinks groups={groups} />
               </div>
             </div>
