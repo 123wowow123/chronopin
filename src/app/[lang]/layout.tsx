@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Suspense } from 'react';
 import { IBM_Plex_Sans, Noto_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 import { lang } from 'next/root-params';
@@ -98,7 +99,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <I18nProvider locale={locale} messages={messages}>
           <Navbar />
           <div id="main">{children}</div>
-          <ChatDock />
+          {/* It reads the path, which a prerendered page may only do inside Suspense. */}
+          <Suspense fallback={null}>
+            <ChatDock />
+          </Suspense>
           <TimeZoneSync />
           <ThemeSync />
           <LocaleSync />
