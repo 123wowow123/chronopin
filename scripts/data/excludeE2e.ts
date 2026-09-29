@@ -14,7 +14,7 @@ export function e2eUserIds(users: Row[]): Set<number> {
 }
 
 export function excludeE2e<P extends Row>(
-  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[]; notInterested?: Row[]; companyBlocks?: Row[]; messages?: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] } },
+  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[]; notInterested?: Row[]; companyBlocks?: Row[]; messages?: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] }; listings?: { listings: Row[]; ratings: Row[] } },
 ) {
   const userIds = e2eUserIds(data.users);
   const isE2eUser = (id: unknown) => userIds.has(id as number);
@@ -51,7 +51,7 @@ export function excludeE2e<P extends Row>(
     userBlocks: (data.userBlocks ?? []).filter((b) => !isE2eUser(b.blockerId) && !isE2eUser(b.blockedId)),
     notInterested: (data.notInterested ?? []).filter((m) => !isE2eUser(m.userId) && !droppedPinIds.has(m.pinId)),
     companyBlocks: (data.companyBlocks ?? []).filter((b) => !isE2eUser(b.userId) && !droppedCompanyIds.has(b.companyId)),
-    messages: excludeE2eChats(data.messages, isE2eUser),
+    ...excludeE2eListings(data.listings, data.messages, isE2eUser, droppedPinIds),
     dropped: { users: userIds.size, pins: droppedPins.length, companies: droppedCompanyIds.size },
   };
 }
@@ -69,5 +69,23 @@ function excludeE2eChats(chats: { conversations: Row[]; members: Row[]; messages
     members: chats.members.filter((m) => kept.has(m.conversationId)),
     messages,
     reports: chats.reports.filter((r) => keptMessages.has(r.messageId) && !isE2eUser(r.userId)),
+  };
+}
+
+// A listing goes with an e2e seller or pin, and a rating with an e2e side;
+// a kept message that asked about a dropped listing keeps its text only.
+function excludeE2eListings(
+  market: { listings: Row[]; ratings: Row[] } | undefined,
+  chats: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] } | undefined,
+  isE2eUser: (id: unknown) => boolean,
+  droppedPinIds: Set<unknown>,
+) {
+  const listings = (market?.listings ?? []).filter((l) => !isE2eUser(l.userId) && !droppedPinIds.has(l.pinId));
+  const kept = new Set(listings.map((l) => l.id));
+  const messages = excludeE2eChats(chats, isE2eUser);
+  messages.messages = messages.messages.map((m) => (m.listingId != null && !kept.has(m.listingId) ? { ...m, listingId: null } : m));
+  return {
+    listings: { listings, ratings: (market?.ratings ?? []).filter((r) => kept.has(r.listingId) && !isE2eUser(r.raterId) && !isE2eUser(r.rateeId)) },
+    messages,
   };
 }

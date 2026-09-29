@@ -264,7 +264,6 @@ https://developer.ticketmaster.com/partners/distribution-partners/affiliate-sign
 
 
 - set up google/facebook/apple login flow
-- Activated Google Analytics / Facebook upgrade to non development mode
 
 sync prod db to local and backup json
 
@@ -283,8 +282,6 @@ sync prod db to local and backup json
 - setup second company for daily job
 
 - tag cloud close without going back to drawer menu
-
-- ingest housing code and use camera to film and advise on any issues 
 
 - create crypto payment for views and clicks
 

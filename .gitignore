@@ -34,6 +34,7 @@ kube/pod-preset-prod.yaml
 
 scripts/backup/seedUsers.json
 scripts/backup/seedMessages.json
+scripts/backup/seedListings.json
 
 # npm run okf:export
 /okf-bundle/

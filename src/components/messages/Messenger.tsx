@@ -40,7 +40,7 @@ function Badge({ count, className }: { count: number; className: string }) {
 }
 
 // Opens a chat: docked on a wide screen, the /messages page otherwise.
-function useStartChat() {
+export function useStartChat() {
   const router = useRouter();
   return (user: ChatUser) => {
     if (openChat(user)) return;

@@ -4,6 +4,8 @@ import { Fragment, useEffect, useId, useLayoutEffect, useRef, useState } from 'r
 import { Icon } from '@/components/ui/Icon';
 import { ReactionPicker } from '@/components/ui/ReactionPicker';
 import { MessageMenu } from './MessageMenu';
+import { ChatListingBar } from '@/components/listings/ChatListingBar';
+import type { ChatListing } from '@/lib/listings';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api, ApiError, isEmailUnverified } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
@@ -20,6 +22,8 @@ type Thread = {
   messages: ChatMessage[];
   hasMore: boolean;
   otherLastReadMessageId: number | null;
+  // The listings the chat is about (0095), for the bar over it.
+  listings?: ChatListing[];
 };
 
 // A message on its way: shown at once, swapped for the saved one when the
@@ -152,6 +156,10 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
   const metaRef = useRef(onMeta);
   const [version, setVersion] = useState(0);
   const reload = () => setVersion((v) => v + 1);
+  const listingIds = useRef(new Set<number>());
+  useEffect(() => {
+    listingIds.current = new Set((thread?.listings ?? []).map((l) => l.id));
+  }, [thread?.listings]);
 
   useLayoutEffect(() => {
     metaRef.current = onMeta;
@@ -184,6 +192,8 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
         } else if (event.kind === 'message') {
           if (event.with.id !== userId) return;
           const { message } = event;
+          // A question about a listing the bar does not show yet: load it.
+          if (message.listingId && !listingIds.current.has(message.listingId)) setVersion((v) => v + 1);
           setThread((current) =>
             current && !current.messages.some((m) => m.id === message.id) ? { ...current, messages: [...current.messages, message] } : current,
           );
@@ -330,6 +340,17 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
 
   return (
     <div className={`flex min-h-0 flex-col ${className}`}>
+      {thread?.listings?.length && me && other ? (
+        <ChatListingBar
+          listings={thread.listings}
+          messages={messages}
+          me={me.id}
+          other={other}
+          onRated={(listingId, rating) =>
+            setThread((current) => (current ? { ...current, listings: current.listings?.map((l) => (l.id === listingId ? { ...l, myRating: rating } : l)) } : current))
+          }
+        />
+      ) : null}
       <div ref={scroller} onScroll={onScroll} className="min-h-0 flex-1 overflow-y-auto px-3 py-2">
         {failed ? (
           <div className="py-8 text-center text-sm text-subtle">

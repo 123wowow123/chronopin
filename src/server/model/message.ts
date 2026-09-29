@@ -15,6 +15,8 @@ export type ChatMessage = {
   unsent: boolean;
   // The earlier message this one answers, quoted above it.
   replyTo: { id: number; senderId: number; body: string; unsent: boolean } | null;
+  // The listing a buyer's opening message asks about (0095).
+  listingId: number | null;
 };
 export type ConversationSummary = {
   id: number;
@@ -28,7 +30,7 @@ export const MAX_MESSAGE_LENGTH = 4000;
 export const MESSAGE_REPORT_REASONS = ['spam', 'harassment', 'misleading', 'other'] as const;
 export type MessageReportReason = (typeof MESSAGE_REPORT_REASONS)[number];
 const THREAD_PAGE = 30;
-const MESSAGE_COLUMNS = `"m"."id", "m"."conversationId", "m"."senderId", "m"."body", "m"."utcCreatedDateTime", "m"."utcUnsentDateTime",
+const MESSAGE_COLUMNS = `"m"."id", "m"."conversationId", "m"."senderId", "m"."body", "m"."utcCreatedDateTime", "m"."utcUnsentDateTime", "m"."listingId",
   (SELECT json_build_object('id', "r"."id", 'senderId', "r"."senderId", 'body', "r"."body", 'unsent', "r"."utcUnsentDateTime" IS NOT NULL)
    FROM "Message" AS "r" WHERE "r"."id" = "m"."replyToId") AS "replyTo"`;
 
@@ -46,6 +48,7 @@ function toMessage(row: db.Row): ChatMessage {
     utcCreatedDateTime: row.utcCreatedDateTime,
     unsent: row.utcUnsentDateTime != null,
     replyTo: row.replyTo ?? null,
+    listingId: row.listingId ?? null,
   };
 }
 
@@ -127,8 +130,10 @@ export default class Message {
 
   // Sends body from senderId to recipientId, starting their conversation if
   // this is the first message. The sender has seen their own message. Both
-  // sides' open pages hear of it once it is committed.
-  static send(senderId: number, recipientId: number, body: string, replyToId: number | null = null) {
+  // sides' open pages hear of it once it is committed. listingId marks a
+  // buyer's question about one of the recipient's listings (checked by the
+  // route).
+  static send(senderId: number, recipientId: number, body: string, replyToId: number | null = null, listingId: number | null = null) {
     const [low, high] = pair(senderId, recipientId);
     return db.transaction(async (query) => {
       const [conversation] = await query<{ id: number }>(
@@ -143,10 +148,10 @@ export default class Message {
       );
       const [row] = await query(
         // A reply only to a message of this same chat; anything else is dropped.
-        `INSERT INTO "Message" AS "m" ("conversationId", "senderId", "body", "replyToId")
-         VALUES ($1, $2, $3, (SELECT "id" FROM "Message" WHERE "id" = $4 AND "conversationId" = $1))
+        `INSERT INTO "Message" AS "m" ("conversationId", "senderId", "body", "replyToId", "listingId")
+         VALUES ($1, $2, $3, (SELECT "id" FROM "Message" WHERE "id" = $4 AND "conversationId" = $1), $5)
          RETURNING ${MESSAGE_COLUMNS}`,
-        [conversation.id, senderId, body, replyToId],
+        [conversation.id, senderId, body, replyToId, listingId],
       );
       const message = toMessage(row);
       await query(`UPDATE "Conversation" SET "lastMessageId" = $2, "utcLastMessageDateTime" = $3 WHERE "id" = $1`, [
@@ -328,9 +333,9 @@ export default class Message {
       }
       for (const m of [...(data.messages ?? [])].sort((a, b) => a.id - b.id)) {
         await query(
-          `INSERT INTO "Message" ("id", "conversationId", "senderId", "body", "utcCreatedDateTime", "utcUnsentDateTime", "replyToId")
-           VALUES ($1, $2, $3, $4, $5, $6, $7) ON CONFLICT DO NOTHING`,
-          [m.id, m.conversationId, m.senderId, m.body, m.utcCreatedDateTime, m.utcUnsentDateTime, m.replyToId],
+          `INSERT INTO "Message" ("id", "conversationId", "senderId", "body", "utcCreatedDateTime", "utcUnsentDateTime", "replyToId", "listingId")
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8) ON CONFLICT DO NOTHING`,
+          [m.id, m.conversationId, m.senderId, m.body, m.utcCreatedDateTime, m.utcUnsentDateTime, m.replyToId, m.listingId ?? null],
         );
       }
       for (const c of data.conversations ?? []) {

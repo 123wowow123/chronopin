@@ -49,9 +49,15 @@ export function setMapViewSource(source: typeof mapView) {
 }
 
 // The Log in or Sign up link for the page the reader is on right now, keeping
-// its query (a search, the filters) and saving the spot on it.
-export function authHrefHere(page: AuthPage = '/login'): string {
-  return authHref(page, saveSpotHere());
+// its query (a search, the filters) and saving the spot on it. `open` adds to
+// that query, for what the page should open again on the way back (?sell=1,
+// the listing form the visitor asked for).
+export function authHrefHere(page: AuthPage = '/login', open?: Record<string, string>): string {
+  const href = saveSpotHere();
+  if (!open) return authHref(page, href);
+  const url = new URL(href, 'http://app');
+  for (const [key, value] of Object.entries(open)) url.searchParams.set(key, value);
+  return authHref(page, url.pathname + url.search);
 }
 
 // The Log out link for the page the reader is on right now, the same way.

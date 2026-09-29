@@ -24,7 +24,8 @@ type MenuItem = { href: string; label: MessageKey; icon: IconName };
 // Profile and settings are not a row here: the block at the head of the menu
 // (SignedInAs) is that link, since it already names the account they belong to.
 function accountGroups(isAdmin: boolean): MenuItem[][] {
-  return isAdmin ? [[{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }]] : [];
+  const own: MenuItem[] = [{ href: '/listings', label: 'nav.listings', icon: 'tag' }];
+  return isAdmin ? [own, [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }]] : [own];
 }
 
 // Timeline or Map, with the current one highlighted, so it reads as a choice

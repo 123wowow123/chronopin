@@ -345,6 +345,7 @@ export function MobileDrawer() {
               <DrawerSection title={t('nav.you')}>
                 <DrawerNotifications className={itemClass} current={pathname === '/notifications'} onClick={() => leaveDrawer('/notifications')} />
                 <DrawerMessages className={itemClass} current={pathname === '/messages'} onClick={() => leaveDrawer('/messages')} />
+                {link('/listings', 'tag', t('nav.listings'))}
                 <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
               </DrawerSection>
               {isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}

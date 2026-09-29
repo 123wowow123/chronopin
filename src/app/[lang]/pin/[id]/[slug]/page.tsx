@@ -36,6 +36,8 @@ import { shopLinks } from '@/lib/shopping';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
 import { ShopButtons } from '@/components/pin/ShopButtons';
+import { PinListings } from '@/components/listings/PinListings';
+import { listingKindOf } from '@/lib/listings';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
@@ -213,6 +215,7 @@ function PinBody({
   ) : null;
   const dateRanges = pinDateRanges(pin, timeZone);
   const shop = shopLinks(pin);
+  const listingKind = listingKindOf(pin);
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;
 
@@ -375,7 +378,7 @@ function PinBody({
         <div className={pin.price != null && pin.price < 0 ? 'text-danger' : ''}>
           {pin.price ? (
             <>
-              <span className="text-subtle">{t('pin.cost')}</span> <span className="font-semibold text-success tabular-nums">{money(pin.price, pin.priceCurrency)}</span>
+              <span className="text-subtle">{pin.productName ? t('pin.msrp') : t('pin.cost')}</span> <span className="font-semibold text-success tabular-nums">{money(pin.price, pin.priceCurrency)}</span>
             </>
           ) : null}
         </div>
@@ -433,6 +436,8 @@ function PinBody({
       {shop.some((link) => link.amazon) || pin.merchants?.some((m) => streamingService(m.url) && isAmazonStoreUrl(m.url)) ? (
         <p className="mt-2 text-xs text-subtle">{t('pin.amazonDisclosure')}</p>
       ) : null}
+      {/* Readers' own listings of the product, and "Sell this item here". */}
+      {listingKind ? <PinListings pinId={pin.id} kind={listingKind} productName={pin.productName} categories={pin.categories} /> : null}
 
       <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={dateRanges} timeZone={timeZone} />
       {/* Right under what backs the pin: a missing link, date or fact goes to

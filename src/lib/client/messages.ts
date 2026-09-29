@@ -19,6 +19,8 @@ export type ChatMessage = {
   unsent: boolean;
   // The earlier message this one answers, quoted above it.
   replyTo: { id: number; senderId: number; body: string; unsent: boolean } | null;
+  // The listing a buyer's opening message asks about.
+  listingId: number | null;
 };
 export type DirectMessageEvent =
   | { kind: 'message'; message: ChatMessage; with: ChatUser }
