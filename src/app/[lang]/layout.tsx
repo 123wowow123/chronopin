@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Suspense } from 'react';
+import { cacheLife } from 'next/cache';
 import { IBM_Plex_Sans, Noto_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 import { lang } from 'next/root-params';
@@ -37,8 +38,16 @@ export async function generateStaticParams() {
   return LOCALES.map((locale) => ({ lang: locale }));
 }
 
+// The UTC day, which the site's share card URL carries (below). Cached by the
+// hour, so the new day's URL is out within an hour of midnight.
+async function shareCardDay(): Promise<string> {
+  'use cache';
+  cacheLife('hours');
+  return new Date().toISOString().slice(0, 10);
+}
+
 export async function generateMetadata(): Promise<Metadata> {
-  const [t, links] = await Promise.all([getT(), alternates('/')]);
+  const [t, links, day] = await Promise.all([getT(), alternates('/'), shareCardDay()]);
   const title = t('meta.siteTitle', { site: siteName });
   const description = t('meta.siteDescription');
   return {
@@ -59,8 +68,10 @@ export async function generateMetadata(): Promise<Metadata> {
       locale: INTL_LOCALES[t.locale].replace('-', '_'),
       // The site's card, for a page with no picture of its own (a pin page
       // sets its own): without one, a link to the home page or a search
-      // previews in Messages as a bare domain.
-      images: [{ url: '/og/site', width: 1200, height: 630, alt: siteName }],
+      // previews in Messages as a bare domain. Its collage of recent pins is
+      // rebuilt daily, and the day in the URL makes sites that keep a preview
+      // by its URL fetch the new one.
+      images: [{ url: `/og/site?d=${day}`, width: 1200, height: 630, alt: siteName }],
     },
     twitter: { card: 'summary_large_image' },
     robots: { index: true, follow: true },
