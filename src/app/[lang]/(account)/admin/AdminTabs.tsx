@@ -7,7 +7,7 @@ import { TabRow } from '@/components/nav/TabRow';
 import Link from '@/components/ui/Link';
 
 // In three groups, set apart by a rule: what the site is doing (its
-// traffic, its buy clicks, its people, its pins, its comments), keeping it
+// traffic, its buy clicks, its people, its pins, its comments, its private sellers' listings), keeping it
 // in order (the jobs that run on a timer, with the lint findings under them),
 // and the switches for what visitors see.
 const GROUPS = [
@@ -18,6 +18,7 @@ const GROUPS = [
     { href: '/admin/users', label: 'Users' },
     { href: '/admin/pins', label: 'Pins' },
     { href: '/admin/comments', label: 'Comments' },
+    { href: '/admin/listings', label: 'Listings' },
   ],
   [{ href: '/admin/jobs', label: 'Jobs' }],
   [{ href: '/admin/settings', label: 'Settings' }],
@@ -28,7 +29,7 @@ const GROUPS = [
 // section's head - the page names itself by the tab picked, with no title
 // under it (each page keeps its h1 for screen readers only) - so the tabs are
 // set at a heading's size, on a phone as well, and below lg the arrow back to
-// the nav drawer leads them. Six at that size are wider than the narrowest
+// the nav drawer leads them. Eight at that size are wider than the narrowest
 // phones, so the names scroll sideways under the arrow as ProfileTabs' do,
 // with the picked one brought into view.
 export function AdminTabs({ current }: { current: string }) {

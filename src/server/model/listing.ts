@@ -31,7 +31,29 @@ export type ReceivedRating = RatingInput & {
   utcCreatedDateTime: Date;
 };
 
-const COLUMNS = `"l"."id", "l"."pinId", "l"."userId", "l"."kind", "l"."status", "l"."title", "l"."price", "l"."currency",
+export type AdminListing = {
+  id: number;
+  pinId: number | null;
+  kind: ListingKind;
+  status: ListingStatus;
+  title: string;
+  price: number | null;
+  currency: string;
+  photo: string | null;
+  locationName: string | null;
+  utcCreatedDateTime: Date;
+  utcUpdatedDateTime: Date;
+  utcDeletedDateTime: Date | null;
+  sellerId: number;
+  sellerName: string;
+  pinTitle: string | null;
+  chats: number;
+  ratings: number;
+  // The average stars given over it, either side.
+  stars: number | null;
+};
+
+const COLUMNS =`"l"."id", "l"."pinId", "l"."userId", "l"."kind", "l"."status", "l"."title", "l"."price", "l"."currency",
   "l"."description", "l"."details", "l"."photos", "l"."video", "l"."locationLatitude", "l"."locationLongitude", "l"."locationName",
   "l"."utcCreatedDateTime", "l"."utcUpdatedDateTime",
   "u"."userName", "u"."pictureUrl"`;
@@ -320,6 +342,27 @@ export default class Listing {
        ORDER BY "r"."utcUpdatedDateTime" DESC
        LIMIT $2`,
       [userId, limit],
+    );
+  }
+
+  // Every listing, deleted ones too, for the admin's Listings tab: its seller,
+  // its pin, its first photo, the chats it started and the ratings given
+  // over it. Newest first.
+  static admin() {
+    return db.query<AdminListing>(
+      `SELECT "l"."id", "l"."pinId", "l"."kind", "l"."status", "l"."title", "l"."price", "l"."currency",
+              "l"."photos"[1] AS "photo", "l"."locationName",
+              "l"."utcCreatedDateTime", "l"."utcUpdatedDateTime", "l"."utcDeletedDateTime",
+              "l"."userId" AS "sellerId", "u"."userName" AS "sellerName", "p"."title" AS "pinTitle",
+              COALESCE("c"."chats", 0) AS "chats", COALESCE("r"."ratings", 0) AS "ratings", "r"."stars"
+       FROM "Listing" AS "l"
+         JOIN "User" AS "u" ON "u"."id" = "l"."userId"
+         LEFT JOIN "Pin" AS "p" ON "p"."id" = "l"."pinId"
+         LEFT JOIN (SELECT "listingId", COUNT(DISTINCT "conversationId")::integer AS "chats" FROM "Message"
+                    WHERE "listingId" IS NOT NULL GROUP BY "listingId") AS "c" ON "c"."listingId" = "l"."id"
+         LEFT JOIN (SELECT "listingId", COUNT(*)::integer AS "ratings", ROUND(AVG("stars")::numeric, 1) AS "stars" FROM "ListingRating"
+                    GROUP BY "listingId") AS "r" ON "r"."listingId" = "l"."id"
+       ORDER BY "l"."id" DESC`,
     );
   }
 
