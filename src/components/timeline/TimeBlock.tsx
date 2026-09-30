@@ -1,7 +1,7 @@
 'use client';
 
 import Link from '@/components/ui/Link';
-import { useRef } from 'react';
+import { useRef, useSyncExternalStore } from 'react';
 import { BAG_LIMIT, BAG_LIMIT_PHONE, sampleBag } from '@/lib/bagSample';
 import { useDayNews } from '@/lib/client/dayNews';
 import { leaveTimelineForDay } from '@/lib/client/dayReturn';
@@ -29,14 +29,15 @@ const tagRow = 'absolute top-0 end-0 start-0 flex gap-1.5 overflow-hidden lg:end
 // The columns a day grows past its second, in the order the window brings
 // them in: the class that puts the column on screen, how many tracks the day
 // then has, how wide its cards may spread (n x 448 plus their gaps), and the
-// class that takes "View all" away once that width leaves nothing out. A
+// class that takes "View all" away once that width leaves nothing out (and
+// the same width as a media query, for a whole day dealt in script). A
 // width arrives once each of its cards can be 384px (see globals.css), and
 // Tailwind only sees classes written out whole, so they are.
 const WIDE_COLUMNS = [
-  { column: '3xl:flex', tracks: '3xl:grid-cols-3', row: '3xl:max-w-[1364px]', hide: '3xl:hidden' },
-  { column: '4xl:flex', tracks: '4xl:grid-cols-4', row: '4xl:max-w-[1822px]', hide: '4xl:hidden' },
-  { column: '5xl:flex', tracks: '5xl:grid-cols-5', row: '5xl:max-w-[2280px]', hide: '5xl:hidden' },
-  { column: '6xl:flex', tracks: '6xl:grid-cols-6', row: '6xl:max-w-[2738px]', hide: '6xl:hidden' },
+  { column: '3xl:flex', tracks: '3xl:grid-cols-3', row: '3xl:max-w-[1364px]', hide: '3xl:hidden', query: '(width >= 104rem)' },
+  { column: '4xl:flex', tracks: '4xl:grid-cols-4', row: '4xl:max-w-[1822px]', hide: '4xl:hidden', query: '(width >= 129rem)' },
+  { column: '5xl:flex', tracks: '5xl:grid-cols-5', row: '5xl:max-w-[2280px]', hide: '5xl:hidden', query: '(width >= 154rem)' },
+  { column: '6xl:flex', tracks: '6xl:grid-cols-6', row: '6xl:max-w-[2738px]', hide: '6xl:hidden', query: '(width >= 178rem)' },
 ];
 // Two rows of the widest ladder: what a day is picked for, however wide the
 // window is now (src/lib/bagSample.ts).
@@ -210,7 +211,7 @@ export function TimeBlock({
 
       {bag.pins.length ? (
         <>
-          <PinColumns tagsHeight={tagsHeight} cards={cards} ranks={shown.map((s) => s.rank)} />
+          <PinColumns tagsHeight={tagsHeight} cards={cards} ranks={shown.map((s) => s.rank)} whole={!sample} />
           {sample && leftOut(1) > 0 && daySearchHref ? (
             <ShowMore href={daySearchHref(bag.day)} total={stacks.length + unloaded} fresh={fresh} hiddenFrom={hiddenFrom} />
           ) : null}
@@ -246,18 +247,25 @@ export function TimeBlock({
 // waits for a window wide enough (WIDE_COLUMNS), so a card keeps its column
 // as the window grows: widening only ever adds a column on the right. A day
 // short of cards for a column simply leaves that track empty.
-function PinColumns({ tagsHeight, cards, ranks }: { tagsHeight: number; cards: React.ReactElement[]; ranks: number[] }) {
+//
+// A `whole` day (a date: search, every pin of it) has no pick to rank by, so
+// its cards are dealt across every track the window has, in date order, the
+// same fill-across-then-down the timeline's first four get.
+function PinColumns({ tagsHeight, cards, ranks, whole }: { tagsHeight: number; cards: React.ReactElement[]; ranks: number[]; whole: boolean }) {
+  const tracks = useDayTracks(whole);
   const byRank = (from: number, to: number) => cards.filter((_, i) => ranks[i] >= from && ranks[i] < to);
-  const first = byRank(0, BAG_LIMIT);
+  const first = whole ? cards : byRank(0, BAG_LIMIT);
+  const perTrack = whole ? tracks : 2;
+  const wide = (i: number) => (whole ? (2 + i < tracks ? cards.filter((_, c) => c % tracks === 2 + i) : []) : byRank(BAG_LIMIT + 2 * i, BAG_LIMIT + 2 * i + 2));
   return (
     <div role="list" className={`${rowTracks} lg:ms-[170px] lg:min-h-(--tags-h) ${rowWidth}`} style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
       {[0, 1].map((parity) => (
         <div key={parity} className={firstColumn}>
-          {first.filter((_, i) => i % 2 === parity)}
+          {first.filter((_, i) => i % perTrack === parity)}
         </div>
       ))}
       {WIDE_COLUMNS.map(({ column }, i) => {
-        const held = byRank(BAG_LIMIT + 2 * i, BAG_LIMIT + 2 * i + 2);
+        const held = wide(i);
         return held.length ? (
           <div key={column} className={`hidden ${cardColumn} ${column}`}>
             {held}
@@ -266,6 +274,26 @@ function PinColumns({ tagsHeight, cards, ranks }: { tagsHeight: number; cards: R
       })}
     </div>
   );
+}
+
+function subscribeTracks(listener: () => void) {
+  const queries = WIDE_COLUMNS.map(({ query }) => window.matchMedia(query));
+  for (const query of queries) query.addEventListener('change', listener);
+  return () => {
+    for (const query of queries) query.removeEventListener('change', listener);
+  };
+}
+
+const noSubscribe = () => () => {};
+const twoTracks = () => 2;
+const readTracks = () => 2 + WIDE_COLUMNS.filter(({ query }) => window.matchMedia(query).matches).length;
+
+// How many tracks a day has at this window width (2 from sm up to 3xl; below
+// sm the two dissolve into one list anyway). The server cannot know the
+// window, so it deals a whole day into two and the rest follow on hydration;
+// a sampled day places its cards by rank and never asks.
+function useDayTracks(whole: boolean) {
+  return useSyncExternalStore(whole ? subscribeTracks : noSubscribe, whole ? readTracks : twoTracks, twoTracks);
 }
 
 // One card of a day, stacked over its duplicates if it has any. Only the
