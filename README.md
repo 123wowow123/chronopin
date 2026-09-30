@@ -291,10 +291,10 @@ sync prod db to local and backup json
 
 - add ads on mapped marketplace pin like logging, also auto show related item in area
 
+
+
+
 - update leftover sentiment
-
-
-
 
 
 - Translate to Arabic
@@ -302,3 +302,8 @@ sync prod db to local and backup json
 - Italian
 - Russian
 - Portuguese
+
+
+
+Thin categories: another round for Weather, Disaster, Travel, Religion, Robotics, Education and Climate, posted straight to prod with the same runner.
+Regional coverage: more pins for the thinnest visitor cities, such as Guangzhou, Seoul, Bangkok, Rome and São Paulo. Those last three match the Thai, Italian and Portuguese locales being added.
