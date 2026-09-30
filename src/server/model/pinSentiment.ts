@@ -42,9 +42,9 @@ export default class PinSentiment {
   // What scoring a pin reads, and whether its stored score still fits it.
   // Only pins with a company: the graph is a company's, and each score is a call.
   static async context(pinId: number) {
-    const rows = await db.query<SentimentText & { companyId: number; company: string; textHash: string | null }>(
+    const rows = await db.query<SentimentText & { companyId: number; company: string; userId: number; textHash: string | null }>(
       `
-    SELECT "Pin"."title", "Pin"."description", "Pin"."companyId", "Company"."name" AS "company", "PinSentiment"."textHash"
+    SELECT "Pin"."title", "Pin"."description", "Pin"."companyId", "Company"."name" AS "company", "Pin"."userId", "PinSentiment"."textHash"
     FROM "Pin"
       JOIN "Company" ON "Company"."id" = "Pin"."companyId"
       LEFT JOIN "PinSentiment" ON "PinSentiment"."pinId" = "Pin"."id"
