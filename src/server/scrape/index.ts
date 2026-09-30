@@ -2,7 +2,7 @@ import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import config from '../config';
 import { extractPinFields, extractTask, getClient, toLocation, type ExtractedFields } from '../extract';
-import { estimateFromReferences } from './estimateDate';
+import { estimateUndated } from './estimateDate';
 import { findReferences, referencesTask, type FoundReferences, type SourceKind } from '../extract/references';
 import { metadataFields } from './metadata';
 import Medium from '../model/medium';
@@ -121,8 +121,6 @@ async function readEntries(pageUrl: string, read: InPageHeadings | null): Promis
 // written - it is preferred to a summary of the source alone.
 function addReferences(pin: Pin, { references, longFormSummary }: FoundReferences): Pin {
   references.forEach((r) => pin.addReference(new PinReference(r)));
-  // A source that dates nothing is dated from what the references say.
-  estimateFromReferences(pin, references);
   if (longFormSummary) pin.longFormSummary = longFormSummary;
   return pin;
 }
@@ -136,7 +134,10 @@ async function twitterPost(pageUrl: string, note?: string, links?: Promise<NoteL
   await addLinkedImages(pin, text);
   await addNoteMedia(pin, (await links) ?? []);
   const llmTasks = referenceTasks(pageUrl, text, 'tweet', note);
-  return { pin: addReferences(pin, await findReferences(pageUrl, text, 'tweet', note)), llmTasks };
+  const found = await findReferences(pageUrl, text, 'tweet', note);
+  addReferences(pin, found);
+  await estimateUndated(pin, { pageUrl, pageText: text, references: found.references, note });
+  return { pin, llmTasks };
 }
 
 // The tweet as plain text, its links written out so they can be followed.
@@ -192,7 +193,10 @@ async function youtubePost(pageUrl: string, note?: string, links?: Promise<NoteL
     `Description:\n${pin.description || ''}`,
   ].join('\n');
   const llmTasks = referenceTasks(pageUrl, text, 'YouTube video', note);
-  return { pin: addReferences(pin, await findReferences(pageUrl, text, 'YouTube video', note)), llmTasks };
+  const found = await findReferences(pageUrl, text, 'YouTube video', note);
+  addReferences(pin, found);
+  await estimateUndated(pin, { pageUrl, pageText: text, references: found.references, note });
+  return { pin, llmTasks };
 }
 
 export async function youtubeMedium(pageUrl: string) {
@@ -363,6 +367,9 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   const trailer = applyScreenDetails(pin, screen, scoreMarket);
   // References first: the top-up takes pictures from the day's articles.
   addReferences(pin, found);
+  // A source that dates nothing is dated from the references, else from one
+  // model call over everything gathered (../extract/estimateDate.ts).
+  await estimateUndated(pin, { pageUrl, pageText, references: found.references, note });
   await topUpImages(pin, fields, headings?.title);
   await topUpVideo(pin, fields, headings?.title);
   // A film, series or anime's awards, by the work's own title and the pin's.

@@ -1,3 +1,4 @@
+import { estimateDate } from '../extract/estimateDate';
 import type { FoundReference } from '../extract/references';
 
 // A source that states no date leaves the pin undated, but its references
@@ -58,5 +59,22 @@ export function estimateFromReferences(pin: Dated, references: FoundReference[])
   if (agree.length) parts.push(`Agreeing: ${agree.map((r) => hostOf(r.url)).join(', ')}.`);
   if (differ.length) parts.push(`Differing: ${differ.map((r) => `${hostOf(r.url)} (${r.startDate})`).join(', ')}.`);
   pin.dateConfidenceReasoning = parts.join(' ');
+  return true;
+}
+
+// The whole ladder for a pin the source left undated: a reference that names
+// a day first (free), then one model call over the source and every reference
+// (../extract/estimateDate.ts). A pin no evidence can date stays undated.
+export async function estimateUndated(pin: Dated, input: { pageUrl: string; pageText: string; references: FoundReference[]; note?: string }): Promise<boolean> {
+  if (!isUndated(pin)) return false;
+  if (estimateFromReferences(pin, input.references)) return true;
+  const estimate = await estimateDate({ ...input, today: new Date().toISOString().slice(0, 10) });
+  if (!estimate) return false;
+  pin.utcStartDateTime = estimate.start;
+  pin.utcEndDateTime = estimate.end;
+  pin.allDay = estimate.allDay;
+  pin.allDayStated = false;
+  pin.dateConfidence = 'estimated';
+  pin.dateConfidenceReasoning = estimate.reasoning;
   return true;
 }
