@@ -71,7 +71,7 @@ function ListingTypes() {
                 pickedHere = true;
                 router.push(kindHref(k));
               }}
-              className="surface flex h-full w-full items-start gap-3 p-4 text-left transition-colors hover:bg-raised"
+              className="surface flex h-full w-full items-start gap-3 p-4 text-start transition-colors hover:bg-raised"
             >
               <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                 <Icon name={KIND_ICONS[k]} className="size-5" />
@@ -101,7 +101,7 @@ function ListingPage({ kind }: { kind: ListingKind }) {
   };
   return (
     <div className="mx-auto max-w-6xl px-4 py-6">
-      <button type="button" onClick={back} className="mb-4 inline-flex items-center gap-1.5 rounded-full px-2 py-1 -ml-2 text-sm font-medium text-muted hover:bg-raised hover:text-ink">
+      <button type="button" onClick={back} className="mb-4 inline-flex items-center gap-1.5 rounded-full px-2 py-1 -ms-2 text-sm font-medium text-muted hover:bg-raised hover:text-ink">
         <Icon name="back" className="size-4" />
         {t('common.back')}
       </button>

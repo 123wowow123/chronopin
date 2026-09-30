@@ -27,7 +27,7 @@ export function BackToMenu() {
       title={t('nav.backToMenu')}
       // An arrow alone, the round target the drawer's own buttons are: its
       // name is for screen readers and the pointer's tooltip.
-      className="-ml-1.5 flex shrink-0 rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink lg:hidden"
+      className="-ms-1.5 flex shrink-0 rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink lg:hidden"
     >
       <Icon name="back" className="size-5" />
     </button>

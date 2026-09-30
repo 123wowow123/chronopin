@@ -42,7 +42,7 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
 
   return (
     <div className="mt-2 flex flex-wrap items-center gap-2">
-      <span className="mr-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.buyOnHeading')}</span>
+      <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.buyOnHeading')}</span>
       {withMatches(links, matches).map((link) => (
         <a
           key={link.store + link.url}

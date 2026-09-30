@@ -140,6 +140,20 @@ export const FORMAT_WORDS: Record<Locale, Words> = {
     moonPhases: ['अमावस्या', 'बढ़ता अर्धचंद्र', 'प्रथम चतुर्थांश', 'बढ़ता चंद्रमा', 'पूर्णिमा', 'घटता चंद्रमा', 'अंतिम चतुर्थांश', 'घटता अर्धचंद्र'],
     lunarGloss: 'नोंग ली, चीनी चंद्र पंचांग',
   },
+  ar: {
+    starts: 'يبدأ في {date}',
+    range: '{start} - {end}',
+    allDay: 'طوال اليوم',
+    at: '{date} في {time}',
+    today: 'اليوم',
+    all: 'الكل',
+    bc: '{year} ق.م',
+    dateOrder: 'dmy',
+    dateSeparator: '/',
+    planets: ['الشمس', 'القمر', 'المريخ', 'عطارد', 'المشتري', 'الزهرة', 'زحل'],
+    moonPhases: ['محاق', 'هلال متزايد', 'تربيع أول', 'أحدب متزايد', 'بدر', 'أحدب متناقص', 'تربيع أخير', 'هلال متناقص'],
+    lunarGloss: 'التقويم القمري الصيني',
+  },
 };
 
 export function fillWords(template: string, values: Record<string, string>): string {

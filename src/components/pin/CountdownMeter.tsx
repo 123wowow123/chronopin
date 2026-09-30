@@ -118,14 +118,14 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
           parts.map((part) => (
             <div key={part.from} className={`relative overflow-hidden rounded-full ${part.late ? LATE_TONES[part.tone].track : 'bg-raised-2'}`} style={{ flexGrow: part.to - part.from, flexBasis: 0, minWidth: 3 }} title={stretchTitle(part, t)}>
               <div
-                className={`absolute inset-y-0 left-0 rounded-full ${part.late ? LATE_TONES[part.tone].fill : fillClass}`}
+                className={`absolute inset-y-0 start-0 rounded-full ${part.late ? LATE_TONES[part.tone].fill : fillClass}`}
                 style={{ width: `${Math.min(100, Math.max(0, ((now - part.from) / (part.to - part.from)) * 100))}%` }}
               />
             </div>
           ))
         ) : (
           <div className="relative flex-1 overflow-hidden rounded-full bg-raised-2">
-            <div className={`absolute inset-y-0 left-0 rounded-full ${fillClass}`} style={{ width: `${percent}%` }} />
+            <div className={`absolute inset-y-0 start-0 rounded-full ${fillClass}`} style={{ width: `${percent}%` }} />
           </div>
         )}
       </div>
@@ -133,8 +133,8 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
         <span className="text-subtle">{t('countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale) })}</span>
       ) : (
         <span className="font-mono text-sm text-future tabular-nums">
-          {years > 0 ? <b className="mr-1">{t('countdown.years', { count: years })}</b> : null}
-          {years > 0 || days > 0 ? <b className="mr-1">{t('countdown.days', { count: days })}</b> : null}
+          {years > 0 ? <b className="me-1">{t('countdown.years', { count: years })}</b> : null}
+          {years > 0 || days > 0 ? <b className="me-1">{t('countdown.days', { count: days })}</b> : null}
           {[Math.floor((remaining % DAY) / HOUR), Math.floor((remaining % HOUR) / MINUTE), Math.floor((remaining % MINUTE) / SECOND)].map(pad).join(':')}
         </span>
       )}

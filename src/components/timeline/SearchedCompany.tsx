@@ -85,7 +85,7 @@ export function CompanyFollowButton({ company, showCount, info }: { company: Com
         onClick={toggle}
         disabled={busy || (isLoggedIn && !status)}
         title={status?.following ? t('company.unfollowHint', { name: company.name }) : t('company.followHint', { name: company.name })}
-        className={`group btn ml-auto rounded-full px-4 py-1.5 ${status?.following ? 'btn-secondary hover:bg-red-500/15 hover:text-danger-soft hover:ring-red-500/30' : 'btn-primary'}`}
+        className={`group btn ms-auto rounded-full px-4 py-1.5 ${status?.following ? 'btn-secondary hover:bg-red-500/15 hover:text-danger-soft hover:ring-red-500/30' : 'btn-primary'}`}
       >
         {status?.following ? (
           <>
@@ -194,7 +194,7 @@ export function SearchedCompanyPanel({ company }: { company: Company }) {
               aria-controls={explainId}
               aria-label={t('company.followAbout')}
               title={t('company.followAbout')}
-              className={`-my-1 -ml-2 rounded-full p-1 hover:bg-raised hover:text-ink ${explaining ? 'text-link' : 'text-subtle'}`}
+              className={`-my-1 -ms-2 rounded-full p-1 hover:bg-raised hover:text-ink ${explaining ? 'text-link' : 'text-subtle'}`}
             >
               <Icon name="info" className="size-3.5" />
             </button>

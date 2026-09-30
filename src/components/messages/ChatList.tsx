@@ -109,7 +109,7 @@ function Face({ user, online, className }: { user: ChatUser; online?: boolean; c
   return (
     <span className="relative shrink-0">
       <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className={className} />
-      {online ? <span aria-hidden className="absolute right-0 bottom-0 size-3.5 rounded-full bg-emerald-500 ring-2 ring-panel" /> : null}
+      {online ? <span aria-hidden className="absolute end-0 bottom-0 size-3.5 rounded-full bg-emerald-500 ring-2 ring-panel" /> : null}
     </span>
   );
 }
@@ -200,7 +200,7 @@ export function ChatList({
                       type="button"
                       onClick={() => onPick(c.other)}
                       aria-current={selectedId === c.other.id ? 'true' : undefined}
-                      className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-raised aria-[current=true]:bg-raised-2"
+                      className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start hover:bg-raised aria-[current=true]:bg-raised-2"
                     >
                       <Face user={c.other} online={c.online} className="size-14 text-lg" />
                       <span className="min-w-0 flex-1">
@@ -230,7 +230,7 @@ export function ChatList({
                 <ul>
                   {newPeople.map((person) => (
                     <li key={person.id}>
-                      <button type="button" onClick={() => onPick(person)} className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-raised">
+                      <button type="button" onClick={() => onPick(person)} className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start hover:bg-raised">
                         <Face user={person} className="size-10 text-sm" />
                         <span className="truncate text-[15px] font-medium text-ink">{person.userName}</span>
                       </button>

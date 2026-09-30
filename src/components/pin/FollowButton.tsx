@@ -89,7 +89,7 @@ export function FollowButton({
   return (
     <span className="flex flex-wrap items-center gap-2">
       {showCount && status ? (
-        <span className="mr-1 text-sm text-muted">
+        <span className="me-1 text-sm text-muted">
           <span className="whitespace-nowrap">{t('follow.followers', { count: status.followerCount })}</span> ·{' '}
           <span className="whitespace-nowrap">{t('follow.followingCount', { count: status.followingCount })}</span>
         </span>

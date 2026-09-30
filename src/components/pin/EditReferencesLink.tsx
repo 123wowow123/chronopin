@@ -12,7 +12,7 @@ export function EditReferencesLink({ pinId, authorId, hasReferences }: { pinId: 
     return null;
   }
   return (
-    <Link href={`/update/${pinId}`} className="ml-auto text-sm font-normal">
+    <Link href={`/update/${pinId}`} className="ms-auto text-sm font-normal">
       {hasReferences ? t('references.edit') : t('references.add')}
     </Link>
   );

@@ -264,7 +264,7 @@ export function FloatingControls({
         {/* Its own corner rather than a place in the row on the right: the
             reader's thumb reaches the near side of a phone, and "Today"
             keeps the corner it has everywhere else. */}
-        {bottom ? <div className="fixed bottom-3 left-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5">{bottom}</div> : null}
+        {bottom ? <div className="fixed bottom-3 start-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5">{bottom}</div> : null}
         <TodayBar onToday={onToday} />
       </>
     );
@@ -277,7 +277,7 @@ export function FloatingControls({
           {/* Dims the cards behind an open fold, which would otherwise blend into them. */}
           {open ? <div aria-hidden onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
           <div
-            className={`fixed right-3 bottom-16 z-30 flex w-64 flex-col items-stretch gap-2 xl:top-[68px] xl:right-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)] ${
+            className={`fixed end-3 bottom-16 z-30 flex w-64 flex-col items-stretch gap-2 xl:top-[68px] xl:end-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)] ${
               // The full height, so the panels under the controls can share out what is left.
               aside ? 'xl:h-[calc(100dvh-8.5rem)]' : ''
             }`}
@@ -358,7 +358,7 @@ export function FloatingControls({
             ) : null}
           </div>
           {/* The same corner as on a phone. */}
-          {bottom ? <div className="fixed bottom-4 left-4 z-30 flex gap-2">{bottom}</div> : null}
+          {bottom ? <div className="fixed bottom-4 start-4 z-30 flex gap-2">{bottom}</div> : null}
           <TodayBar onToday={onToday}>
             {tags ? (
               <FoldPill
@@ -388,7 +388,7 @@ function TodayBar({ onToday, children }: { onToday?: () => void; children?: Reac
   const t = useT();
   if (!onToday && !children) return null;
   return (
-    <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
+    <div className="fixed end-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:end-4 lg:gap-2 lg:bottom-4">
       {children}
       {onToday ? (
         <button
@@ -442,7 +442,7 @@ function FoldPill({
       }`}
     >
       <Icon name={icon} className={`size-4 shrink-0 ${iconClass}`} />
-      <span className="flex min-w-0 flex-col text-left leading-tight sm:flex-row sm:gap-1 sm:leading-normal">
+      <span className="flex min-w-0 flex-col text-start leading-tight sm:flex-row sm:gap-1 sm:leading-normal">
         {caption ? <span className="truncate text-[11px] text-subtle sm:text-sm sm:text-current">{caption}</span> : null}
         <span className="truncate">{label}</span>
       </span>

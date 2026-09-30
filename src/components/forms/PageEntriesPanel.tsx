@@ -110,7 +110,7 @@ export function PageEntriesPanel({ pageTitle, entries, shared }: { pageTitle: st
           </div>
           <p className="text-subtle">{chain ? t('form.entriesChainOn') : t('form.entriesChainOff')}</p>
 
-          <ul className="max-h-96 space-y-1 overflow-y-auto pr-1">
+          <ul className="max-h-96 space-y-1 overflow-y-auto pe-1">
             {rows.map((row, index) => (
               <li key={row.entry.url} className="flex flex-wrap items-center gap-2 sm:flex-nowrap">
                 <input

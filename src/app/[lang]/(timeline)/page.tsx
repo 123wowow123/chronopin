@@ -12,6 +12,7 @@ import { specialtyDaysOn } from '@/server/specialtyDays';
 import { newPins, pinById, TRENDING_DAYS, sliderTyping, tagList, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
+import { isRtl } from '@/lib/i18n/config';
 import { alternates, getT, redirect } from '@/lib/i18n/server';
 import { connection } from 'next/server';
 import type { SpecialtyDay } from '@/lib/specialtyDays';
@@ -138,17 +139,17 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         preference={personal}
       />
       {/* Plain links through the timeline, for crawlers and anyone without JavaScript. */}
-      <nav aria-label={t('timeline.pagesLabel')} className="flex flex-wrap justify-between gap-x-4 gap-y-2 px-4 pb-20 text-sm lg:ml-[190px] lg:max-w-[906px]">
+      <nav aria-label={t('timeline.pagesLabel')} className="flex flex-wrap justify-between gap-x-4 gap-y-2 px-4 pb-20 text-sm lg:ms-[190px] lg:max-w-[906px]">
         {page.links.previous ? (
           <Link href={`/${page.links.previous}`} prefetch={false} rel="prev" className="whitespace-nowrap">
-            ← {t('timeline.pinsBefore', { date: firstDay ? formatDayKey(firstDay, t.locale) : '' })}
+            {isRtl(t.locale) ? '→' : '←'} {t('timeline.pinsBefore', { date: firstDay ? formatDayKey(firstDay, t.locale) : '' })}
           </Link>
         ) : (
           <span />
         )}
         {page.links.next ? (
-          <Link href={`/${page.links.next}`} prefetch={false} rel="next" className="ml-auto whitespace-nowrap">
-            {t('timeline.pinsAfter', { date: lastDay ? formatDayKey(lastDay, t.locale) : '' })} →
+          <Link href={`/${page.links.next}`} prefetch={false} rel="next" className="ms-auto whitespace-nowrap">
+            {t('timeline.pinsAfter', { date: lastDay ? formatDayKey(lastDay, t.locale) : '' })} {isRtl(t.locale) ? '←' : '→'}
           </Link>
         ) : null}
       </nav>

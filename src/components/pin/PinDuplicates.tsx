@@ -153,7 +153,7 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
                 <SuggestHeading id={others.length ? undefined : 'duplicates-heading'} className="text-base font-semibold">
                   {t('duplicates.possible')}
                 </SuggestHeading>
-                <span className="ml-auto rounded-full bg-raised px-2 py-px text-xs font-medium text-muted tabular-nums ring-1 ring-line ring-inset">
+                <span className="ms-auto rounded-full bg-raised px-2 py-px text-xs font-medium text-muted tabular-nums ring-1 ring-line ring-inset">
                   {suggested.length}
                   <span className="sr-only"> {t('duplicates.suggestions', { count: suggested.length })}</span>
                 </span>
@@ -195,7 +195,7 @@ const THUMB = 'h-10 w-16 sm:h-14 sm:w-24';
 
 // A long list of suggestions scrolls inside the panel rather than pushing the
 // rest of the page down. The padding keeps the rows' rings from being clipped.
-const SCROLL_LIST = 'max-h-[28rem] space-y-2 overflow-y-auto overscroll-contain p-px pr-1';
+const SCROLL_LIST = 'max-h-[28rem] space-y-2 overflow-y-auto overscroll-contain p-px pe-1';
 
 function PinAuthor({ user }: { user?: PinUserJson }) {
   if (!user?.userName) return null;

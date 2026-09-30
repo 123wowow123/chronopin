@@ -211,7 +211,7 @@ export function AddressShare({ pinId, address }: { pinId: number; address: strin
     return true;
   };
   return (
-    <PopMenu label={t('share.address')} icon="pin" dots accent align="start" wide instead={toSheet} buttonClassName="-my-1 -ml-1 h-7 pr-0.5 pl-1.5" iconClassName="size-4">
+    <PopMenu label={t('share.address')} icon="pin" dots accent align="start" wide instead={toSheet} buttonClassName="-my-1 -ms-1 h-7 pe-0.5 ps-1.5" iconClassName="size-4">
       {(close) => (
         <>
           <p className="px-3 pt-1.5 pb-1 text-sm font-semibold text-ink">{t('share.address')}</p>

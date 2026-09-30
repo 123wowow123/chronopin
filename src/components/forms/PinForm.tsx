@@ -276,7 +276,7 @@ export function PinForm({
             <span className={labelClass}>{t('form.respondingTo')}</span>
             <Link href={pinPath(respondTo)}>{respondTo.title}</Link>
             {respondToProp ? null : (
-              <button type="button" className="btn btn-ghost btn-sm ml-2" onClick={stopResponding}>
+              <button type="button" className="btn btn-ghost btn-sm ms-2" onClick={stopResponding}>
                 {t('form.postAsNew')}
               </button>
             )}
@@ -401,7 +401,7 @@ export function PinForm({
             {values.categories.length ? (
               <ul className="mb-2 flex flex-wrap gap-1.5" aria-label={t('form.categories')}>
                 {values.categories.map((c, index) => (
-                  <li key={c} className="inline-flex items-center gap-1 rounded-full bg-raised py-0.5 pr-1 pl-2.5 text-sm text-ink ring-1 ring-line ring-inset">
+                  <li key={c} className="inline-flex items-center gap-1 rounded-full bg-raised py-0.5 pe-1 ps-2.5 text-sm text-ink ring-1 ring-line ring-inset">
                     {categoryLabel(t, c)}
                     {index === 0 && values.categories.length > 1 ? <span className="text-xs text-subtle">{t('form.main')}</span> : null}
                     <button
@@ -520,7 +520,7 @@ export function PinForm({
               </button>
             </div>
           ))}
-          <button type="button" className="btn btn-sm btn-ghost -ml-2 text-link" onClick={() => set('merchants', [...values.merchants, { label: '', url: '' }])}>
+          <button type="button" className="btn btn-sm btn-ghost -ms-2 text-link" onClick={() => set('merchants', [...values.merchants, { label: '', url: '' }])}>
             {t('form.addMerchant')}
           </button>
         </div>
@@ -536,7 +536,7 @@ export function PinForm({
 
         <details open={showAdvanced} onToggle={(e) => setShowAdvanced((e.target as HTMLDetailsElement).open)} className="group surface p-4">
           <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-medium text-muted hover:text-ink [&::-webkit-details-marker]:hidden">
-            <Icon name="chevron" className="size-4 -rotate-90 text-subtle transition-transform group-open:rotate-0" />
+            <Icon name="chevron" className="size-4 -rotate-90 text-subtle transition-transform group-open:rotate-0 rtl:rotate-90 rtl:group-open:rotate-0" />
             {t('form.advanced')}
           </summary>
           <div className="mt-3 space-y-3">
@@ -672,7 +672,7 @@ export function PinForm({
                     type="button"
                     aria-label={t('form.leaveOut', { symbol: stock.symbol })}
                     onClick={() => setValues((v) => ({ ...v, stocks: v.stocks.filter((s) => s.symbol !== stock.symbol) }))}
-                    className="ml-0.5 text-subtle hover:text-ink"
+                    className="ms-0.5 text-subtle hover:text-ink"
                   >
                     <Icon name="close" className="size-3" />
                   </button>

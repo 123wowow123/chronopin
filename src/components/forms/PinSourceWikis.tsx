@@ -23,11 +23,11 @@ type SourceView = { summaryStale: boolean; lintFindings: { check?: string; messa
 
 function Page({ page, depth }: { page: WikiPage; depth: number }) {
   return (
-    <details className={depth ? 'ml-4 mt-2' : 'mt-2'}>
+    <details className={depth ? 'ms-4 mt-2' : 'mt-2'}>
       <summary className="cursor-pointer text-sm text-ink">
         {page.title} <span className="text-xs text-subtle">{page.type}</span>
       </summary>
-      <div className="mt-1 space-y-1 border-l border-line pl-3">
+      <div className="mt-1 space-y-1 border-s border-line ps-3">
         {page.summary && <p className="text-sm text-muted">{page.summary}</p>}
         {page.tags.length > 0 && <p className="text-xs text-subtle">{page.tags.join(', ')}</p>}
         <pre className="max-h-96 overflow-auto whitespace-pre-wrap text-xs text-muted">{page.body}</pre>
@@ -72,7 +72,7 @@ export function PinSourceWikis({ pinId }: { pinId: number }) {
               <div key={source.id} className="rounded-lg border border-line p-3">
                 <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-sm text-link">
                   <span className="break-all">{source.title || source.url}</span>
-                  <Icon name="external" className="ml-1 inline size-3 align-[-0.1em]" />
+                  <Icon name="external" className="ms-1 inline size-3 align-[-0.1em]" />
                 </a>
                 <p className="text-xs text-subtle">
                   {source.kind} · {source.role} · {source.status}
@@ -87,7 +87,7 @@ export function PinSourceWikis({ pinId }: { pinId: number }) {
             {view.lintFindings.length > 0 && (
               <div>
                 <p className="text-sm font-medium text-muted">Lint findings</p>
-                <ul className="list-disc pl-5 text-xs text-muted">
+                <ul className="list-disc ps-5 text-xs text-muted">
                   {view.lintFindings.map((finding, i) => (
                     <li key={i}>{[finding.check, finding.message].filter(Boolean).join(': ') || JSON.stringify(finding)}</li>
                   ))}

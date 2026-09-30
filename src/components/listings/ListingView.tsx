@@ -75,7 +75,7 @@ export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson
     <Dialog label={title} onClose={onClose} className="w-full max-w-5xl" bare>
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)] overflow-y-auto md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] md:overflow-hidden">
         <div className="flex min-h-0 flex-col bg-black">
-          <div className="relative flex min-h-64 flex-1 items-center justify-center">
+          <div dir="ltr" className="relative flex min-h-64 flex-1 items-center justify-center">
             {current ? (
               current.video ? (
                 <video key={current.name} src={mediaUrl(current.name)} controls playsInline className="max-h-[70dvh] max-w-full" />
@@ -92,7 +92,7 @@ export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson
                   type="button"
                   onClick={() => setShown((shown - 1 + media.length) % media.length)}
                   aria-label={t('listing.previousPhoto')}
-                  className="absolute left-3 flex size-10 items-center justify-center rounded-full bg-white/85 text-black shadow hover:bg-white"
+                  className="absolute start-3 flex size-10 items-center justify-center rounded-full bg-white/85 text-black shadow hover:bg-white"
                 >
                   <Icon name="chevron" className="size-5 rotate-90" />
                 </button>
@@ -100,7 +100,7 @@ export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson
                   type="button"
                   onClick={() => setShown((shown + 1) % media.length)}
                   aria-label={t('listing.nextPhoto')}
-                  className="absolute right-3 flex size-10 items-center justify-center rounded-full bg-white/85 text-black shadow hover:bg-white"
+                  className="absolute end-3 flex size-10 items-center justify-center rounded-full bg-white/85 text-black shadow hover:bg-white"
                 >
                   <Icon name="chevron" className="size-5 -rotate-90" />
                 </button>
@@ -195,7 +195,7 @@ export function ListingView({ listing, onClose, onEdit }: { listing: ListingJson
             <button
               type="button"
               onClick={continueChat}
-              className="surface group block w-full space-y-2 p-3 text-left transition-colors hover:bg-raised focus-visible:ring-2 focus-visible:ring-link focus-visible:outline-none focus-visible:ring-inset active:bg-raised-2"
+              className="surface group block w-full space-y-2 p-3 text-start transition-colors hover:bg-raised focus-visible:ring-2 focus-visible:ring-link focus-visible:outline-none focus-visible:ring-inset active:bg-raised-2"
             >
               <span className="flex items-center gap-2 font-semibold text-muted">
                 <Icon name="message" className="size-4 text-subtle" />

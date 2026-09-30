@@ -153,7 +153,7 @@ export function DefaultLocationSetting({ userId, initial }: { userId: number; in
           <ul className="surface absolute inset-x-0 top-full z-10 mt-1 max-h-64 overflow-auto p-1 shadow-lg">
             {results.map((place) => (
               <li key={`${place.latitude},${place.longitude},${place.name}`}>
-                <button type="button" onClick={() => pick(place)} className="w-full rounded-md px-3 py-2 text-left text-sm hover:bg-raised">
+                <button type="button" onClick={() => pick(place)} className="w-full rounded-md px-3 py-2 text-start text-sm hover:bg-raised">
                   {place.name}
                 </button>
               </li>

@@ -169,6 +169,9 @@ export function DistanceSlider({
       ) : null}
       <div
         id={bodyId}
+        // The thumbs sit at left: a percentage of the track, and the ticks run
+        // from the past (or near) at the left, so the strip stays left to right.
+        dir="ltr"
         className={folds ? `px-3.5 pb-3 in-[[data-drawer-controls]]:px-2 ${inDrawer ? (open || merged ? '' : 'hidden') : `max-xl:pt-2.5 ${open || merged ? '' : 'xl:hidden'}`}` : ''}
       >
         {/* Where the ring is measured from, which the heading carries when it

@@ -91,7 +91,7 @@ export function PinListings({ pinId, kind, productName, categories }: { pinId: n
             quietly showing every listing. */}
         <Link
           href={`/map?show=market&q=${encodeURIComponent(term('pin', String(pinId)))}`}
-          className="ml-auto inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1 text-sm font-medium text-ink hover:bg-raised hover:no-underline"
+          className="ms-auto inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1 text-sm font-medium text-ink hover:bg-raised hover:no-underline"
         >
           <Icon name="map" className="size-4 text-link" />
           {t('listing.marketMap')}
@@ -193,7 +193,7 @@ function ListingRow({
           </button>
         ) : null}
       </div>
-      <div className="relative">
+      <div dir="ltr" className="relative">
         <ul ref={row} className="flex snap-x snap-mandatory gap-3 overflow-x-auto [scrollbar-width:none]">
           {listings.map((listing) => (
             <li key={listing.id} className={`shrink-0 snap-start ${CARD_WIDTH}`}>
@@ -210,13 +210,13 @@ function ListingRow({
 
 function RowArrow({ side, label, onStep }: { side: 'before' | 'after'; label: string; onStep: () => void }) {
   return (
-    <div className={`pointer-events-none absolute top-0 flex aspect-square items-center ${CARD_WIDTH} ${side === 'before' ? 'left-0' : 'right-0 justify-end'}`}>
+    <div className={`pointer-events-none absolute top-0 flex aspect-square items-center ${CARD_WIDTH} ${side === 'before' ? 'start-0' : 'end-0 justify-end'}`}>
       <button
         type="button"
         aria-label={label}
         title={label}
         onClick={onStep}
-        className={`pointer-events-auto flex size-10 items-center justify-center rounded-full bg-raised text-ink shadow-md ring-1 ring-line hover:bg-raised-2 active:scale-95 ${side === 'before' ? 'ml-2' : 'mr-2'}`}
+        className={`pointer-events-auto flex size-10 items-center justify-center rounded-full bg-raised text-ink shadow-md ring-1 ring-line hover:bg-raised-2 active:scale-95 ${side === 'before' ? 'ms-2' : 'me-2'}`}
       >
         <Icon name="chevron" className={`size-5 ${side === 'before' ? 'rotate-90' : '-rotate-90'}`} />
       </button>
@@ -229,10 +229,10 @@ function ListingCard({ listing, onView }: { listing: ListingJson; onView: (listi
   return (
     // Focus rings the photo: the row scrolls sideways, which clips anything
     // drawn outside a card down to a stray line in the gap.
-    <button type="button" onClick={() => onView(listing)} className="group block w-full text-left focus-visible:outline-none">
+    <button type="button" onClick={() => onView(listing)} className="group block w-full text-start focus-visible:outline-none">
       <span className="relative block aspect-square overflow-hidden rounded-lg bg-raised ring-1 ring-line group-focus-visible:ring-2 group-focus-visible:ring-link">
         <ListingCover photo={listing.photos[0]} video={listing.video} className="transition-transform group-hover:scale-[1.03]" iconClassName="size-10" />
-        {listing.status === 'pending' ? <span className="media-chip absolute top-2 left-2">{t('listing.status.pending')}</span> : null}
+        {listing.status === 'pending' ? <span className="media-chip absolute top-2 start-2">{t('listing.status.pending')}</span> : null}
       </span>
       <span className="mt-1.5 block font-semibold text-ink">{priceLine(t, listing)}</span>
       <span className="block truncate text-sm text-ink">{listingTitle(t, listing)}</span>

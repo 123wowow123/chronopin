@@ -102,7 +102,7 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
         <span className="text-xs font-bold tracking-wider text-subtle uppercase">{series.label ?? series.seriesId}</span>
         <span className="text-sm text-ink tabular-nums">
           {show(latest.value)}
-          <span className="ml-2 text-xs text-subtle">{day.format(new Date(`${latest.day}T00:00:00Z`))}</span>
+          <span className="ms-2 text-xs text-subtle">{day.format(new Date(`${latest.day}T00:00:00Z`))}</span>
         </span>
       </figcaption>
 
@@ -179,10 +179,10 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
           </span>
         ) : marked ? (
           <span className="text-muted tabular-nums">
-            <span className="mr-1 inline-block size-2 rounded-full bg-past align-middle" aria-hidden />
+            <span className="me-1 inline-block size-2 rounded-full bg-past align-middle" aria-hidden />
             {t('series.marked', { date: day.format(new Date(`${marked.day}T00:00:00Z`)), value: show(marked.value) })}
             {change != null ? (
-              <span className={change < 0 ? 'ml-2 text-danger' : change > 0 ? 'ml-2 text-success' : 'ml-2 text-subtle'}>
+              <span className={change < 0 ? 'ms-2 text-danger' : change > 0 ? 'ms-2 text-success' : 'ms-2 text-subtle'}>
                 {change > 0 ? '+' : ''}
                 {(change * 100).toFixed(1)}% {t('series.since')}
               </span>
@@ -195,7 +195,7 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
         <a href={series.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-link hover:underline">
           {t('series.source', { id: series.seriesId })}
         </a>
-        {series.nextReleaseDate ? <span className="ml-2">{t('series.next', { date: series.nextReleaseDate })}</span> : null}
+        {series.nextReleaseDate ? <span className="ms-2">{t('series.next', { date: series.nextReleaseDate })}</span> : null}
       </p>
     </figure>
   );

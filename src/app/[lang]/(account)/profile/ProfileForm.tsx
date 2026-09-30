@@ -149,7 +149,7 @@ export function ProfileForm({ user }: { user: SessionUser }) {
               // Says what it removes - beside "Change picture" a bare "Remove"
               // could be read as taking off anything on the page - and is red,
               // as taking something away is across the site.
-              <button key="remove" type="button" onClick={removePicture} disabled={pictureBusy} className="btn btn-ghost ml-1 text-danger hover:bg-danger/10 hover:text-danger">
+              <button key="remove" type="button" onClick={removePicture} disabled={pictureBusy} className="btn btn-ghost ms-1 text-danger hover:bg-danger/10 hover:text-danger">
                 {t('profile.removePicture')}
               </button>
             ) : undoable ? (
@@ -158,7 +158,7 @@ export function ProfileForm({ user }: { user: SessionUser }) {
               // press to get the picture back, and not red, since putting it
               // back takes nothing away. Keyed apart from the red one, which
               // would otherwise be reused and fade its red out.
-              <button key="undo" type="button" onClick={undoRemoval} className="btn ml-1 bg-accent/15 text-link ring-1 ring-accent/30 ring-inset hover:bg-accent/25">
+              <button key="undo" type="button" onClick={undoRemoval} className="btn ms-1 bg-accent/15 text-link ring-1 ring-accent/30 ring-inset hover:bg-accent/25">
                 {t('common.undo')}
               </button>
             ) : null}
