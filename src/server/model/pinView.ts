@@ -48,10 +48,11 @@ export default class PinView {
          WHERE $1::date IS NULL OR "day" >= $1::date`,
         [since],
       ),
-      db.query<{ id: number; title: string; views: number; viewers: number }>(
+      db.query<{ id: number; title: string; views: number; viewers: number; users: number }>(
         `SELECT "p"."id", "p"."title",
            COUNT(*)::integer AS "views",
-           COUNT(DISTINCT "v"."viewer")::integer AS "viewers"
+           COUNT(DISTINCT "v"."viewer")::integer AS "viewers",
+           COUNT(DISTINCT "v"."userId")::integer AS "users"
          FROM "PinView" AS "v"
            JOIN "Pin" AS "p" ON "p"."id" = "v"."pinId" AND "p"."utcDeletedDateTime" IS NULL
          WHERE $1::date IS NULL OR "v"."day" >= $1::date
@@ -68,14 +69,15 @@ export default class PinView {
   }
 
   // Where each pin's views since a UTC day (null for all time) came from, as
-  // "city, region, country" with its views and distinct viewers, most first.
+  // "city, region, country" with its views, distinct viewers and distinct
+  // signed-in users, most first.
   // place is "" for a view that was looked up but not placed, and null for one
   // with no address (before 0089).
   static async pinPlaces(pinIds: number[], since: string | null) {
     const rows = pinIds.length
-      ? await db.query<{ pinId: number; place: string | null; views: number; viewers: number }>(
+      ? await db.query<{ pinId: number; place: string | null; views: number; viewers: number; users: number }>(
           `SELECT "pinId", CASE WHEN "ip" IS NOT NULL THEN concat_ws(', ', "city", "region", "country") END AS "place",
-             COUNT(*)::integer AS "views", COUNT(DISTINCT "viewer")::integer AS "viewers"
+             COUNT(*)::integer AS "views", COUNT(DISTINCT "viewer")::integer AS "viewers", COUNT(DISTINCT "userId")::integer AS "users"
            FROM "PinView"
            WHERE "pinId" = ANY($1::integer[]) AND ($2::date IS NULL OR "day" >= $2::date)
            GROUP BY 1, 2
@@ -83,7 +85,7 @@ export default class PinView {
           [pinIds, since],
         )
       : [];
-    const byPin = new Map<number, { place: string | null; views: number; viewers: number }[]>();
+    const byPin = new Map<number, { place: string | null; views: number; viewers: number; users: number }[]>();
     for (const { pinId, ...place } of rows) byPin.set(pinId, [...(byPin.get(pinId) ?? []), place]);
     return byPin;
   }
