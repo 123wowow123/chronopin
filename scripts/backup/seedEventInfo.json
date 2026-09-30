@@ -5292,6 +5292,97 @@
     "checkedAt": "2026-09-28T05:55:07.518Z"
   },
   {
+    "pinId": 4862,
+    "performers": [],
+    "ticketUrl": "https://annapolisboatshows.ticketspice.com/2026-annapolis-powerboat-show",
+    "lowPrice": 32,
+    "highPrice": 45,
+    "priceCurrency": "USD",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.annapolisboatshows.com/powerboat-show/",
+    "checkedAt": "2026-09-30T14:32:01.478Z"
+  },
+  {
+    "pinId": 4863,
+    "performers": [],
+    "ticketUrl": "https://mondial.paris/en/practical-info/ticketing",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.mondial.paris/en",
+    "checkedAt": "2026-09-30T14:32:01.500Z"
+  },
+  {
+    "pinId": 4864,
+    "performers": [],
+    "ticketUrl": "https://annapolisboatshows.ticketspice.com/2026-annapolis-sailboat-show",
+    "lowPrice": 32,
+    "highPrice": 55,
+    "priceCurrency": "USD",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.annapolisboatshows.com/sailboat-show/",
+    "checkedAt": "2026-09-30T14:32:01.503Z"
+  },
+  {
+    "pinId": 4865,
+    "performers": [],
+    "ticketUrl": "https://nbaabace.org/register",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://nbaabace.org/",
+    "checkedAt": "2026-09-30T14:32:01.506Z"
+  },
+  {
+    "pinId": 4866,
+    "performers": [],
+    "ticketUrl": "https://www.eventspass.com/event/flibs26?pr=WEB/#/buyTickets",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.flibs.com",
+    "checkedAt": "2026-09-30T14:32:57.346Z"
+  },
+  {
+    "pinId": 4867,
+    "performers": [],
+    "ticketUrl": "https://ticketseicma.it/en/",
+    "lowPrice": 20,
+    "highPrice": 20,
+    "priceCurrency": "EUR",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.eicma.it/en/eicma-2026-online-ticket-sales-open-kicking-off-the-road-to-the-83rd-edition/",
+    "checkedAt": "2026-09-30T14:32:57.365Z"
+  },
+  {
+    "pinId": 4868,
+    "performers": [],
+    "ticketUrl": "https://www.metstrade.com/registration",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.metstrade.com",
+    "checkedAt": "2026-09-30T14:32:57.369Z"
+  },
+  {
     "pinId": 4890,
     "performers": [],
     "ticketUrl": "https://www.twitchcon.com/san-diego-2026/passes/",
@@ -5472,5 +5563,18 @@
     "source": "hand",
     "sourceUrl": "https://animenyc.com/",
     "checkedAt": "2026-09-30T00:51:38.030Z"
+  },
+  {
+    "pinId": 4928,
+    "performers": [],
+    "ticketUrl": "https://cphia.africacdc.org/register",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://cphia.africacdc.org/",
+    "checkedAt": "2026-09-30T14:32:57.372Z"
   }
 ]
