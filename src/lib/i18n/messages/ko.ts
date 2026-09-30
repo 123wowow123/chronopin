@@ -832,6 +832,9 @@ const ko: Messages = {
     marked: '이 핀의 주: {date}, {value}',
     since: '이후',
     source: 'EIA 시리즈 {id}',
+    altMonthly: '{label}, {from}부터 {to}까지 월간, {low}~{high} 범위.',
+    markedMonth: '이 핀의 달: {date}, {value}',
+    sourceFred: 'FRED 시리즈 {id}',
     next: '다음 발표 {date}',
   },
   stocks: {

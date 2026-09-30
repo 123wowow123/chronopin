@@ -832,6 +832,9 @@ const ja: Messages = {
     marked: 'このピンの週: {date}、{value}',
     since: 'それ以降',
     source: 'EIA 系列 {id}',
+    altMonthly: '{label}、{from} から {to} までの月次、{low} から {high} の範囲。',
+    markedMonth: 'このピンの月: {date}、{value}',
+    sourceFred: 'FRED 系列 {id}',
     next: '次回公表 {date}',
   },
   stocks: {

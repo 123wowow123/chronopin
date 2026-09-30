@@ -839,6 +839,9 @@ const en = {
     marked: "This pin's week: {date}, {value}",
     since: 'since',
     source: 'EIA series {id}',
+    altMonthly: '{label}, monthly from {from} to {to}, between {low} and {high}.',
+    markedMonth: "This pin's month: {date}, {value}",
+    sourceFred: 'FRED series {id}',
     next: 'Next release {date}',
   },
   stocks: {

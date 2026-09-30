@@ -845,6 +845,9 @@ const hi: Messages = {
     marked: 'इस पिन का हफ़्ता: {date}, {value}',
     since: 'से अब तक',
     source: 'EIA सीरीज़ {id}',
+    altMonthly: '{label}, {from} से {to} तक मासिक, {low} और {high} के बीच।',
+    markedMonth: 'इस पिन का महीना: {date}, {value}',
+    sourceFred: 'FRED सीरीज़ {id}',
     next: 'अगला रिलीज़ {date}',
   },
   stocks: {

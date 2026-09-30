@@ -5,6 +5,7 @@
 //   npm run series:attach -- --id 2617 --series WCSSTUS1 --label "SPR crude stocks"
 //   npm run series:attach -- --tag SPR --series WCSSTUS1 --remove
 //   npm run series:attach -- --series WCSSTUS1 --dry-run
+//   npm run series:attach -- --id 4900 --source fred --series PCEPI:PC1 --label "PCE price index, change from a year ago"
 //
 // Only the handle is stored. The numbers are fetched from the publisher when
 // someone opens the pin, so nothing here goes stale - but the series id is
@@ -14,8 +15,8 @@
 import '../env';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
-import { getSeries, normaliseSeriesId } from '@/server/eiaSeries';
-import { removeSeries, saveSeries } from '@/server/services/pinSeries';
+import { normaliseSeriesId } from '@/server/eiaSeries';
+import { readSeries, removeSeries, saveSeries, seriesProblem } from '@/server/services/pinSeries';
 import log from '@/server/util/log';
 
 const { values: flags } = parseArgs({
@@ -48,6 +49,8 @@ async function pinIds(): Promise<{ id: number; title: string }[]> {
 async function run() {
   if (!flags.series) throw new Error('Name the series with --series (e.g. WCSSTUS1).');
   const seriesId = normaliseSeriesId(flags.series);
+  const problem = seriesProblem({ source: flags.source, seriesId });
+  if (problem) throw new Error(problem);
   const pins = await pinIds();
   if (!pins.length) {
     log.warn('No live pins matched.');
@@ -55,7 +58,7 @@ async function run() {
   }
 
   if (!flags.remove) {
-    const series = await getSeries(seriesId);
+    const series = await readSeries(flags.source, seriesId);
     if (!series) throw new Error(`${seriesId} did not answer; not attaching a series a reader cannot see.`);
     log.info(`${seriesId}: ${series.title ?? '(untitled)'} - ${series.points.length} points, ${series.units ?? 'unknown units'}, latest ${series.points.at(-1)?.day}`);
   }
