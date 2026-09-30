@@ -34,6 +34,7 @@ const loaders: Record<Locale, () => Promise<{ default: Messages }>> = {
   zh: () => import('@/lib/i18n/messages/zh'),
   ko: () => import('@/lib/i18n/messages/ko'),
   hi: () => import('@/lib/i18n/messages/hi'),
+  ar: () => import('@/lib/i18n/messages/ar'),
 };
 
 async function translatorFor(locale: Locale): Promise<Translator> {

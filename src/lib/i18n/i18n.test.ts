@@ -1,12 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import { daysAway, formatDayKey, formatPosted, formatStart, timespan } from '../format';
 import { spanLabel } from '../postedSpan';
-import { languageAlternates, localizePath, negotiateLocale, splitLocale, LOCALES } from './config';
+import { isRtl, languageAlternates, localizePath, negotiateLocale, splitLocale, LOCALES } from './config';
 import de from './messages/de';
 import en from './messages/en';
 import es from './messages/es';
 import fr from './messages/fr';
 import hi from './messages/hi';
+import ar from './messages/ar';
 import ja from './messages/ja';
 import ko from './messages/ko';
 import zh from './messages/zh';
@@ -22,6 +23,12 @@ describe('splitLocale', () => {
     // Two letters that are not a language, and a longer first segment.
     expect(splitLocale('/xx/map')).toEqual({ locale: null, path: '/xx/map' });
     expect(splitLocale('/english')).toEqual({ locale: null, path: '/english' });
+  });
+});
+
+describe('isRtl', () => {
+  it('marks Arabic as right to left, and no other site language', () => {
+    expect(LOCALES.filter(isRtl)).toEqual(['ar']);
   });
 });
 
@@ -92,6 +99,9 @@ describe('createTranslator', () => {
     expect(t('pin.views', { count: 0 })).toBe('0 views');
     // French counts 0 as singular.
     expect(createTranslator(fr, 'fr')('pin.views', { count: 0 })).toBe('0 vue');
+    // Arabic uses all six categories: 0, 1, 2, 3-10, 11-99, 100.
+    const arabic = createTranslator(ar, 'ar');
+    expect(new Set([0, 1, 2, 3, 11, 100].map((count) => arabic('pin.views', { count }))).size).toBe(6);
     // Japanese has one form, written as a plain string.
     expect(createTranslator(ja, 'ja')('pin.views', { count: 3 })).toBe('3 回表示');
   });
@@ -114,6 +124,7 @@ describe('formatting in other languages', () => {
     expect(formatDayKey('-2560-01-01', 'fr')).toBe('01/01/2561 av. J.-C.');
     expect(formatDayKey('2026-09-14', 'hi')).toBe('14/09/2026');
     expect(formatDayKey('-2560-01-01', 'hi')).toBe('01/01/2561 ई.पू.');
+    expect(formatDayKey('-2560-01-01', 'ar')).toBe('01/01/2561 ق.م');
   });
 
   it('words start dates and countdowns', () => {
@@ -123,6 +134,7 @@ describe('formatting in other languages', () => {
     expect(formatStart(pin, 'UTC', { allDaySuffix: true }, 'es')).toBe('Empieza el 14/09/2026');
     expect(formatStart(pin, 'UTC', {}, 'zh')).toBe('开始于 2026/09/14');
     expect(formatStart(pin, 'UTC', {}, 'hi')).toBe('14/09/2026 से शुरू');
+    expect(formatStart(pin, 'UTC', {}, 'ar')).toMatch(/^يبدأ في /);
     // A run of days is worded as a span, not as a start.
     const span = { ...pin, utcEndDateTime: '2026-09-17T00:00:00.000Z' };
     expect(formatStart(span, 'UTC', {}, 'fr')).toBe('Du 14/09/2026 au 16/09/2026');
@@ -139,7 +151,7 @@ describe('formatting in other languages', () => {
 // Every translation keeps the English message's {slots} and <tags>: a slot
 // lost or renamed prints as its braces, and a lost tag loses its link.
 describe('dictionaries', () => {
-  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi };
+  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi, ar };
 
   function leaves(node: unknown, prefix = ''): [string, string][] {
     if (typeof node === 'string') return [[prefix, node]];
