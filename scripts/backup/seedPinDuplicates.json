@@ -923,6 +923,19 @@
     "utcVerifiedDateTime": null
   },
   {
+    "pinId": 3112,
+    "otherPinId": 4945,
+    "reason": "similar",
+    "score": 0.8504454,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-30T03:29:26.093Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
     "pinId": 3134,
     "otherPinId": 3160,
     "reason": "similar",
@@ -1339,6 +1352,32 @@
     "utcVerifiedDateTime": null
   },
   {
+    "pinId": 4346,
+    "otherPinId": 4859,
+    "reason": "similar",
+    "score": 0.8133299,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-29T21:19:43.292Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 4346,
+    "otherPinId": 4861,
+    "reason": "similar",
+    "score": 0.80266476,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-29T21:20:24.267Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
     "pinId": 4404,
     "otherPinId": 4406,
     "reason": "similar",
@@ -1554,6 +1593,19 @@
     "status": "suggested",
     "decidedByUserId": null,
     "utcCreatedDateTime": "2026-09-28T17:36:53.512Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 4976,
+    "otherPinId": 4977,
+    "reason": "similar",
+    "score": 0.8503117,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-30T04:55:51.412Z",
     "utcDecidedDateTime": null,
     "verdict": null,
     "verdictReasoning": null,
