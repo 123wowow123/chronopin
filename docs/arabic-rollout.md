@@ -29,15 +29,10 @@ blocked bulk reads from prod).
 
 ## Left to do
 
-1. **Deploy, then apply migration `0098_arabic_locale.sql` on prod**
-   (`npm run create:db`). Prod already accepted `locale=ar` on
-   `GET /api/admin/translations` (the code is live), but I never tried to
-   save a row, so confirm the constraint is widened. Note master also has a
-   second `0098_pin_series_fred.sql`; the runner tracks files by name, so two
-   `0098_*` files should both apply, but check `schemaMigrations` afterwards.
-   `0100_thai_italian_russian_portuguese_locales.sql` rewrites the same two
-   CHECK constraints and keeps `ar` in them, so apply 0098 before it.
-2. **Translate the prod pins into Arabic.** Pick one:
+Prod already has the database changes (migration `0098_arabic_locale.sql`),
+so nothing to apply there.
+
+1. **Translate the prod pins into Arabic.** Pick one:
 
    - Straight from the machine with the prod `.env` (costs Anthropic credit,
      one Claude call per pin):
@@ -63,17 +58,17 @@ blocked bulk reads from prod).
      per request, `GET ?locale=ar&limit=1000&after=<pin id>` lists what is
      missing).
 
-3. **Offer Arabic on the site.** Languages are only shown when enabled in the
+2. **Offer Arabic on the site.** Languages are only shown when enabled in the
    admin multilingual setting (`/api/admin/multilingual`, default none).
    Until Arabic is switched on, `/ar/...` serves the English pages, the
    profile language picker leaves it out and hreflang does not list it. Turn
    it on after step 3 so readers do not see English pins under an Arabic page.
-4. **Back up** the new rows: `npm run backup:data` (translations are kept in
+3. **Back up** the new rows: `npm run backup:data` (translations are kept in
    `scripts/backup/seedTranslations.json.gz`).
-5. **Have a native speaker read** `src/lib/i18n/messages/ar.ts`, the
+4. **Have a native speaker read** `src/lib/i18n/messages/ar.ts`, the
    specialty-day names, and a sample of translated pins. All of it was written
    by a model and has not been reviewed by a person.
-6. **Look at it in a browser.** The mirrored layout and the RTL pages were
+5. **Look at it in a browser.** The mirrored layout and the RTL pages were
    never rendered (no database in the cloud session). Open `/ar`, a pin page,
    the map, the drawer, the profile page and a form, and fix anything that
    sits on the wrong side. Likely spots: `PinsMap.tsx` overlays, admin pages
