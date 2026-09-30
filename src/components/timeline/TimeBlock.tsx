@@ -172,46 +172,54 @@ export function TimeBlock({
   ));
 
   return (
-    <section ref={sectionRef} id={id ?? `day-${bag.day}`} data-day={bag.day} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
-      <div
-        className={`rail-marker absolute top-6 cursor-default start-[140px] z-10 -ms-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
-        title={`${planet.planet}\n${planet.weekday}\n${t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })}`}
-      >
-        {/* The circle is the day's moon: its lit part a soft tint behind the planet. */}
-        <svg viewBox="0 0 32 32" className="absolute inset-0 size-full" aria-hidden>
-          <path d={moon.path} fill="currentColor" opacity={0.22} />
-        </svg>
-        <span className="relative font-astro" aria-hidden>
-          {planet.glyph}
-        </span>
-        <span className="sr-only">{planet.weekday}</span>
-      </div>
+    <section ref={sectionRef} id={id ?? `day-${bag.day}`} data-day={bag.day} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 max-lg:mt-6" style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
+      {/* The day's rail rides under the navbar while the day scrolls by, and
+          the next day's pushes it off: sticky inside its own section. Beside
+          the rail (lg) it is the tag column, as tall as its tags, with the
+          cards pulled up beside it; on narrow screens a page-coloured strip
+          the cards pass under. Its -mt-2 collapses into the section's margin,
+          so the tags sit where the old 40px of padding put them. */}
+      <div className="sticky top-[52px] z-20 max-lg:-mt-2 max-lg:h-12 max-lg:bg-page lg:h-(--tags-h) lg:w-[170px]">
+        <div
+          className={`rail-marker absolute top-6 cursor-default start-[140px] z-10 -ms-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
+          title={`${planet.planet}\n${planet.weekday}\n${t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })}`}
+        >
+          {/* The circle is the day's moon: its lit part a soft tint behind the planet. */}
+          <svg viewBox="0 0 32 32" className="absolute inset-0 size-full" aria-hidden>
+            <path d={moon.path} fill="currentColor" opacity={0.22} />
+          </svg>
+          <span className="relative font-astro" aria-hidden>
+            {planet.glyph}
+          </span>
+          <span className="sr-only">{planet.weekday}</span>
+        </div>
 
-      <div className={`${tagRow} lg:top-[26px]`}>
-        <Tag variant={isToday ? 'today' : 'date'} className={`${leadTag} tag-link`}>
-          <time dateTime={bag.day}>{formatDayKey(bag.day, locale)}</time>
-        </Tag>
-        <Tag variant={isToday ? 'today' : 'countdown'} title={timespan(todayKey, bag.day, 'd', locale)} className={leadTag}>
-          {timespan(todayKey, bag.day, 'y', locale)}
-        </Tag>
-        {/* The Chinese lunar (Nong Li) date under the countdown; phones keep their one extra tag for date markers. */}
-        {lunar ? (
-          <Tag variant="countdown" title={lunar.title} href={triviaSearchUrl(lunar.query, locale)} className={`${extraTag} max-sm:hidden`}>
-            <span lang="zh-CN">{lunar.text}</span>
+        <div className={`${tagRow} max-lg:top-2 lg:top-[26px]`}>
+          <Tag variant={isToday ? 'today' : 'date'} className={`${leadTag} tag-link`}>
+            <time dateTime={bag.day}>{formatDayKey(bag.day, locale)}</time>
           </Tag>
-        ) : null}
-        {/* On phones only the first extra tag fits beside the date and countdown; the rest show from sm up. */}
-        {bag.dateTimes.map((dt, i) => (
-          <Tag key={dt.id} variant="trivia" wrap title={dt.description || markerLabel(t, dt.title)} href={triviaSearchUrl(markerLabel(t, dt.title), locale)} className={`${extraTag} ${i > 0 ? 'max-sm:hidden' : ''}`}>
-            {markerLabel(t, dt.title)}
+          <Tag variant={isToday ? 'today' : 'countdown'} title={timespan(todayKey, bag.day, 'd', locale)} className={leadTag}>
+            {timespan(todayKey, bag.day, 'y', locale)}
           </Tag>
-        ))}
-        {specialtyDays.length ? <SpecialtyTag days={specialtyDays} className={bag.dateTimes.length ? 'max-sm:hidden' : ''} /> : null}
+          {/* The Chinese lunar (Nong Li) date under the countdown; phones keep their one extra tag for date markers. */}
+          {lunar ? (
+            <Tag variant="countdown" title={lunar.title} href={triviaSearchUrl(lunar.query, locale)} className={`${extraTag} max-sm:hidden`}>
+              <span lang="zh-CN">{lunar.text}</span>
+            </Tag>
+          ) : null}
+          {/* On phones only the first extra tag fits beside the date and countdown; the rest show from sm up. */}
+          {bag.dateTimes.map((dt, i) => (
+            <Tag key={dt.id} variant="trivia" wrap title={dt.description || markerLabel(t, dt.title)} href={triviaSearchUrl(markerLabel(t, dt.title), locale)} className={`${extraTag} ${i > 0 ? 'max-sm:hidden' : ''}`}>
+              {markerLabel(t, dt.title)}
+            </Tag>
+          ))}
+          {specialtyDays.length ? <SpecialtyTag days={specialtyDays} className={bag.dateTimes.length ? 'max-sm:hidden' : ''} /> : null}
+        </div>
       </div>
 
       {bag.pins.length ? (
         <>
-          <PinColumns tagsHeight={tagsHeight} cards={cards} ranks={shown.map((s) => s.rank)} whole={!sample} />
+          <PinColumns cards={cards} ranks={shown.map((s) => s.rank)} whole={!sample} />
           {sample && leftOut(1) > 0 && daySearchHref ? (
             <ShowMore href={daySearchHref(bag.day)} total={stacks.length + unloaded} fresh={fresh} hiddenFrom={hiddenFrom} />
           ) : null}
@@ -221,10 +229,7 @@ export function TimeBlock({
         // (tags start 26px down; a 24px line centred on the 28px-tall tag).
         // The tag column's height is only reserved beside the rail; on narrow
         // screens the tags are one row above, so the day is just its titles.
-        <ul
-          className="lg:ms-[170px] lg:min-h-[max(120px,var(--tags-h))] lg:pt-7"
-          style={{ ['--tags-h' as string]: `${tagsHeight}px` }}
-        >
+        <ul className="lg:ms-[170px] lg:-mt-(--tags-h) lg:min-h-[max(120px,var(--tags-h))] lg:pt-7">
           {bag.dateTimes.map((dt) => (
             <li key={dt.id} className="pb-px">
               <a href={triviaSearchUrl(markerLabel(t, dt.title), locale)} target="_blank" rel="noopener nofollow" className="font-semibold text-muted hover:text-link">
@@ -251,14 +256,14 @@ export function TimeBlock({
 // A `whole` day (a date: search, every pin of it) has no pick to rank by, so
 // its cards are dealt across every track the window has, in date order, the
 // same fill-across-then-down the timeline's first four get.
-function PinColumns({ tagsHeight, cards, ranks, whole }: { tagsHeight: number; cards: React.ReactElement[]; ranks: number[]; whole: boolean }) {
+function PinColumns({ cards, ranks, whole }: { cards: React.ReactElement[]; ranks: number[]; whole: boolean }) {
   const tracks = useDayTracks(whole);
   const byRank = (from: number, to: number) => cards.filter((_, i) => ranks[i] >= from && ranks[i] < to);
   const first = whole ? cards : byRank(0, BAG_LIMIT);
   const perTrack = whole ? tracks : 2;
   const wide = (i: number) => (whole ? (2 + i < tracks ? cards.filter((_, c) => c % tracks === 2 + i) : []) : byRank(BAG_LIMIT + 2 * i, BAG_LIMIT + 2 * i + 2));
   return (
-    <div role="list" className={`${rowTracks} lg:ms-[170px] lg:min-h-(--tags-h) ${rowWidth}`} style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
+    <div role="list" className={`${rowTracks} lg:ms-[170px] lg:-mt-(--tags-h) lg:min-h-(--tags-h) ${rowWidth}`}>
       {[0, 1].map((parity) => (
         <div key={parity} className={firstColumn}>
           {first.filter((_, i) => i % perTrack === parity)}
