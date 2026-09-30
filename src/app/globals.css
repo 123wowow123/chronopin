@@ -31,8 +31,8 @@
   --breakpoint-5xl: 154rem;
   --breakpoint-6xl: 178rem;
 
-  --font-sans: var(--font-noto-sans), var(--font-noto-cyrillic), var(--font-noto-thai), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-plex-sans), var(--font-plex-cyrillic), var(--font-noto-thai), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-noto-sans), var(--font-noto-cyrillic), var(--font-noto-thai), var(--font-noto-arabic), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-plex-sans), var(--font-plex-cyrillic), var(--font-noto-thai), var(--font-plex-arabic), ui-sans-serif, system-ui, sans-serif;
   --font-astro: var(--font-astro-signs);
 
   --color-page: #0f1115;
