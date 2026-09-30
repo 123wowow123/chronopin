@@ -178,8 +178,11 @@ export function TimeBlock({
           the rail (lg) it is the tag column, as tall as its tags, with the
           cards pulled up beside it; on narrow screens a page-coloured strip
           the cards pass under. Its -mt-2 collapses into the section's margin,
-          so the tags sit where the old 40px of padding put them. */}
-      <div className="sticky top-[52px] z-20 max-lg:-mt-2 max-lg:h-12 max-lg:bg-page lg:h-(--tags-h) lg:w-[170px]">
+          so the tags sit where the old 40px of padding put them. A pill pinned
+          above it (the day search's "Back to timeline") sets --rail-drop: the
+          rail sticks that much lower, the phone strip's page colour reaching
+          back up behind the pill. */}
+      <div className="sticky top-[calc(52px+var(--rail-drop,0px))] z-20 max-lg:-mt-2 max-lg:h-12 max-lg:bg-page max-lg:before:absolute max-lg:before:inset-x-0 max-lg:before:bottom-full max-lg:before:h-[var(--rail-drop,0px)] max-lg:before:bg-page lg:h-(--tags-h) lg:w-[170px]">
         <div
           className={`rail-marker absolute top-6 cursor-default start-[140px] z-10 -ms-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
           title={`${planet.planet}\n${planet.weekday}\n${t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })}`}

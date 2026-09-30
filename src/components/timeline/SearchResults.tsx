@@ -522,7 +522,7 @@ export function SearchResults({
 
   return (
     <TimelineVideoProvider setting={video}>
-      <div className="px-3 pb-24 lg:px-4 xl:pe-[288px]">
+      <div className="px-3 pb-24 has-[[data-back-to-timeline]]:[--rail-drop:42px] lg:px-4 xl:pe-[288px] lg:has-[[data-back-to-timeline]]:[--rail-drop:24px]">
         <FloatingControls
           merge
           typing={sliderTyping}
@@ -596,8 +596,11 @@ export function SearchResults({
         </FloatingControls>
 
         {/* The way back to the timeline, where "View all" opened this day:
-            top left, riding under the header as the day scrolls. */}
-        <BackToTimeline className="sticky top-[60px] z-20 mb-2 w-fit" />
+            top left, riding under the header as the day scrolls. The day's
+            rail sticks there too, so while the pill (34px, from 60px down) is
+            shown the rail drops below it (TimeBlock): its tags start 26px
+            into it beside the rail, 8px into the phone strip. */}
+        <BackToTimeline className="sticky top-[60px] z-30 mb-2 w-fit" />
 
         {shown?.status === 'loading' || restoring ? (
           <p className="mt-16 text-center text-lg text-subtle" role="status">
