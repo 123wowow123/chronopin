@@ -44,16 +44,23 @@ export default class ThreadWatch {
     return ids;
   }
 
+  // Everyone watching the thread pinId is in, bar exceptId. Leaving pinId's
+  // own row out asks who watched the thread before pinId joined it.
+  static async watchersOf(pinId: number, { exceptId, withoutOwnRow = false }: { exceptId?: number | null; withoutOwnRow?: boolean } = {}): Promise<number[]> {
+    const ids = (await Pins.threadIds(pinId)).filter((id) => !withoutOwnRow || id !== pinId);
+    if (!ids.length) return [];
+    const rows = await db.query<{ userId: number }>(
+      `SELECT DISTINCT "userId" FROM "ThreadWatch" WHERE "pinId" = ANY($1::integer[]) AND "userId" IS DISTINCT FROM $2`,
+      [ids, exceptId ?? null],
+    );
+    return rows.map((row) => Number(row.userId));
+  }
+
   // A response has joined a thread (a new pin, or one moved under another):
   // everyone watching that thread, bar its author, now watches it too and is
   // told in the bell. Answers with who.
   static async welcome(pinId: number, authorId: number): Promise<number[]> {
-    const ids = await Pins.threadIds(pinId);
-    const rows = await db.query<{ userId: number }>(
-      `SELECT DISTINCT "userId" FROM "ThreadWatch" WHERE "pinId" = ANY($1::integer[]) AND "userId" <> $2`,
-      [ids.filter((id) => id !== pinId), authorId],
-    );
-    const userIds = rows.map((row) => Number(row.userId));
+    const userIds = await ThreadWatch.watchersOf(pinId, { exceptId: authorId, withoutOwnRow: true });
     if (!userIds.length) return [];
     return db.transaction(async (query) => {
       await watchPins(query, userIds, [pinId]);

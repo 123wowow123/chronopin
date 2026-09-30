@@ -93,7 +93,12 @@ export async function createPin(body: Record<string, any>, user: User) {
     reslotSeries({ id: saved.id, title: pin.title, company: pin.company }),
   ])
     .then((results) => results.flat())
-    .then((moved) => moved.flatMap((m) => [m.id, m.from, m.to]).forEach((id) => id && invalidatePin(id)))
+    .then((moved) => {
+      moved.flatMap((m) => [m.id, m.from, m.to]).forEach((id) => id && invalidatePin(id));
+      // Later seasons moved under a pin with no parent of its own: it now heads
+      // their thread, so that thread's watchers hear about it too.
+      if (moved.length && !saved.parentId) after(() => welcomeToThread(saved.id, user.id));
+    })
     .catch((err) => log.warn('re-slotting later seasons failed:', (err as Error).message));
   if (stocks.length) after(() => addPinStocksQuietly(saved.id, stocks));
 

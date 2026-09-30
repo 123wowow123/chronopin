@@ -111,7 +111,8 @@ export async function notifyWatchersOfUpdate(pinId: number, actorId?: number | n
     const pin = toJson<PinJson>(found);
     const actor = actorId ?? (pin.userId == null ? null : Number(pin.userId));
     if (actor == null) return;
-    const userIds = await Notification.createForWatchers({ pinId, actorId: actor });
+    const threadWatcherIds = await ThreadWatch.watchersOf(pinId, { exceptId: actor });
+    const userIds = await Notification.createForWatchers({ pinId, actorId: actor, threadWatcherIds });
     if (!userIds.length) return;
     const locales = await localesOf(userIds);
     const translators = new Map<Locale, Promise<Translator>>();
