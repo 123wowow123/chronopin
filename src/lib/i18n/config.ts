@@ -5,7 +5,7 @@
 // path to the /en tree the app routes under (src/app/[lang]), so each language
 // renders and caches as its own page and crawlers find every one of them.
 
-export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar'] as const;
+export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar', 'th', 'it', 'ru', 'pt'] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = 'en';
@@ -24,10 +24,17 @@ export const LOCALE_NAMES: Record<Locale, string> = {
   ko: '한국어',
   hi: 'हिन्दी',
   ar: 'العربية',
+  th: 'ไทย',
+  it: 'Italiano',
+  ru: 'Русский',
+  pt: 'Português',
 };
 
-// The tag Intl formats dates and numbers with, and <html lang> / hreflang say.
-// English keeps en-US, the month-first dates it has always shown.
+// The tag Intl formats dates and numbers with; languageTag() is the part
+// <html lang> / hreflang say. English keeps en-US, the month-first dates it
+// has always shown. Thai asks for the Gregorian calendar: plain 'th' writes
+// Buddhist-era years (2569 for 2026), which would disagree with the numeric
+// dates, the pins' own text and date: searches.
 export const INTL_LOCALES: Record<Locale, string> = {
   en: 'en-US',
   es: 'es',
@@ -38,7 +45,16 @@ export const INTL_LOCALES: Record<Locale, string> = {
   ko: 'ko',
   hi: 'hi',
   ar: 'ar',
+  th: 'th-u-ca-gregory',
+  it: 'it',
+  ru: 'ru',
+  pt: 'pt-BR',
 };
+
+// A language's BCP 47 tag without Intl's -u- options: "th-u-ca-gregory" -> "th".
+export function languageTag(locale: Locale): string {
+  return INTL_LOCALES[locale].replace(/-u-.*$/, '');
+}
 
 // The language Claude is asked to translate a pin into.
 export const LANGUAGE_NAMES: Record<Locale, string> = {
@@ -51,6 +67,10 @@ export const LANGUAGE_NAMES: Record<Locale, string> = {
   ko: 'Korean',
   hi: 'Hindi',
   ar: 'Modern Standard Arabic',
+  th: 'Thai',
+  it: 'Italian',
+  ru: 'Russian',
+  pt: 'Brazilian Portuguese',
 };
 
 // Languages written right to left: <html dir> says so, and the page mirrors.
@@ -122,7 +142,7 @@ export function languageAlternates(path: string, locale: Locale, offered: readon
   const others = offered.filter((l) => l !== DEFAULT_LOCALE);
   if (!others.length) return { canonical: localizePath(path, locale) };
   const languages: Record<string, string> = {};
-  for (const l of [DEFAULT_LOCALE, ...others]) languages[INTL_LOCALES[l]] = localizePath(path, l);
+  for (const l of [DEFAULT_LOCALE, ...others]) languages[languageTag(l)] = localizePath(path, l);
   languages['x-default'] = localizePath(path, DEFAULT_LOCALE);
   return { canonical: localizePath(path, locale), languages };
 }

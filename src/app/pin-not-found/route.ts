@@ -1,5 +1,5 @@
 import type { NextRequest } from 'next/server';
-import { DEFAULT_LOCALE, INTL_LOCALES, localeOr, localizePath } from '@/lib/i18n/config';
+import { DEFAULT_LOCALE, languageTag, localeOr, localizePath } from '@/lib/i18n/config';
 import { getMessages } from '@/lib/i18n/messages';
 import { createTranslator } from '@/lib/i18n/translate';
 
@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   const locale = localeOr(request.nextUrl.searchParams.get('lang'), DEFAULT_LOCALE);
   const t = createTranslator(await getMessages(locale), locale);
   const html = `<!doctype html>
-<html lang="${INTL_LOCALES[locale]}">
+<html lang="${languageTag(locale)}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

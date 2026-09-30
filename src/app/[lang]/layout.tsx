@@ -13,7 +13,7 @@ import { LocaleSync } from '@/components/LocaleSync';
 import { TimeZoneSync } from '@/components/TimeZoneSync';
 import { analyticsScript } from '@/lib/analytics';
 import { siteName, siteUrl } from '@/lib/appConfig';
-import { INTL_LOCALES, isRtl, localeOr, LOCALES } from '@/lib/i18n/config';
+import { isRtl, languageTag, localeOr, LOCALES } from '@/lib/i18n/config';
 import { getMessages } from '@/lib/i18n/messages';
 import { alternates, getT } from '@/lib/i18n/server';
 import { themeScript } from '@/lib/theme';
@@ -65,7 +65,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       url: links.canonical,
-      locale: INTL_LOCALES[t.locale].replace('-', '_'),
+      locale: languageTag(t.locale).replace('-', '_'),
       // The site's card, for a page with no picture of its own (a pin page
       // sets its own): without one, a link to the home page or a search
       // previews in Messages as a bare domain. Its collage of recent pins is
@@ -94,7 +94,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     // suppressHydrationWarning: the inline script sets data-theme before React
     // hydrates, so <html> never matches the server markup.
-    <html lang={INTL_LOCALES[locale]} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${astroSigns.variable}`} suppressHydrationWarning>
+    <html lang={languageTag(locale)} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${astroSigns.variable}`} suppressHydrationWarning>
       <body className="min-h-dvh">
         {/* Before first paint, from the stored preference (src/lib/theme.ts).
             First in <body>, not in <head>: AdSense inserts its own script at
