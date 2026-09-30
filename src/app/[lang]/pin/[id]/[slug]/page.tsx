@@ -66,6 +66,7 @@ import type { PinJson } from '@/lib/types';
 import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
 import { viewerTimeZone } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
+import { pinTextDir } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import { localesOffered } from '@/server/services/multilingual';
@@ -302,7 +303,7 @@ function PinBody({
           <DelayBadge pin={pin} />
           <PinConfidence evidence={pinEvidence(pin)} />
           {/* Last: the reasoning takes a line of its own below the badges. */}
-          <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning}>
+          <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning} dir={pinTextDir(pin)}>
             {pin.dateConfidenceReasoning ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} /> : undefined}
           </DateConfidenceReasoning>
           <DelayReasoning pin={pin} />
@@ -317,7 +318,7 @@ function PinBody({
           headline is about an opening decades ago. */}
       {hasPlace(pin.place) ? <PinPlace pinId={pin.id} ratings={pin.ratings} /> : null}
 
-      <h1 className="mt-3 mb-4 flex items-start gap-2 text-3xl leading-tight font-semibold tracking-tight text-pretty">
+      <h1 dir={pinTextDir(pin)} className="mt-3 mb-4 flex items-start gap-2 text-3xl leading-tight font-semibold tracking-tight text-pretty">
         {pin.sourceUrl ? (
           <>
             <a href={pin.sourceUrl} target="_blank" rel="noopener" className="text-ink transition-colors hover:text-link hover:no-underline">
@@ -358,8 +359,8 @@ function PinBody({
           series never makes the request. */}
       <PinSeriesChart pinId={pin.id} has={!!pin.series?.length} />
 
-      {pin.description ? <div className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
-      {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}
+      {pin.description ? <div dir={pinTextDir(pin)} className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
+      {pin.longFormSummary ? <div dir={pinTextDir(pin)} className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}
 
       {pin.user?.id && pin.user.userName ? (
         <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
@@ -473,7 +474,7 @@ async function Thread({ pin }: { pin: PinJson }) {
             >
               <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{index + 1}</span>
               <span className="min-w-0">
-                {p.title}
+                <span dir={pinTextDir(p)}>{p.title}</span>
                 <span className="mt-1.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
                   <CompanyTicker pin={p} bare />
                   {/* A season's own score and run length, the way a card shows them. */}

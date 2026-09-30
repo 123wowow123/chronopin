@@ -29,6 +29,7 @@ import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 import { refineQuery } from '@/lib/searchTerms';
 import { useT } from '@/lib/client/i18n';
+import { isRtl } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import type { ListingJson } from '@/lib/listings';
@@ -306,6 +307,7 @@ function loadedAsMap() {
 export default function PinsMap({ sliderTyping = false, tagList = false }: { sliderTyping?: boolean; tagList?: boolean }) {
   const router = useRouter();
   const t = useT();
+  const rtl = isRtl(t.locale);
   const params = useSearchParams();
   const query = params.get('q') || '';
   const focusId = Number(params.get('pin')) || undefined;
@@ -405,7 +407,10 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
 
   useEffect(() => {
     const spot = peekMapSpot();
-    const map = L.map(canvasRef.current!, spot ? { center: [spot.lat, spot.lng], zoom: spot.zoom } : { center: DEFAULT_CENTER, zoom: DEFAULT_ZOOM });
+    const map = L.map(canvasRef.current!, { ...(spot ? { center: [spot.lat, spot.lng], zoom: spot.zoom } : { center: DEFAULT_CENTER, zoom: DEFAULT_ZOOM }), zoomControl: false });
+    // The zoom buttons sit in the reading edge's top corner, clear of the
+    // controls in the other.
+    L.control.zoom({ position: rtl ? 'topright' : 'topleft' }).addTo(map);
     keepViewRef.current = !!spot;
     // Cleared once this map keeps it (see peekMapSpot).
     const cleared = spot ? setTimeout(clearSpot) : undefined;
@@ -459,7 +464,7 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
       fromLayerRef.current = null;
       marketLayerRef.current = null;
     };
-  }, []);
+  }, [rtl]);
 
   // The Marketplace shown: the pins' layers come off the map and the
   // listings' go on, fetched afresh each time it is picked.
@@ -790,16 +795,17 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
       // screen and would otherwise cover the pin and its popup; narrower they
       // fold into the pills along the bottom.
       const wide = map.getSize().x >= 1280;
+      const room = wide ? 300 : 56;
       map.fitBounds(line.getBounds(), {
-        paddingTopLeft: [56, 56],
-        paddingBottomRight: wide ? [300, 56] : [56, 120],
+        paddingTopLeft: [rtl ? room : 56, 56],
+        paddingBottomRight: [rtl ? 56 : room, wide ? 56 : 120],
         maxZoom: 11,
       });
     });
     return () => {
       cancelled = true;
     };
-  }, [fromMe, focusPin, t]);
+  }, [fromMe, focusPin, t, rtl]);
 
   // A graph node picked: the map goes to that pin.
   function showPin(id: number) {
@@ -856,7 +862,7 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
     <div className="relative isolate h-[calc(100dvh-52px)]">
       {/* With the back button above them, Leaflet's zoom buttons move down a
           row; pins-map (globals.css) lifts the attribution over the pills. */}
-      <div ref={canvasRef} className={`pins-map absolute inset-0 z-0 ${focusId ? '[&_.leaflet-top.leaflet-left]:pt-10' : ''}`} />
+      <div ref={canvasRef} className={`pins-map absolute inset-0 z-0 ${focusId ? '[&_.leaflet-top]:pt-10' : ''}`} />
       {focusId ? (
         // Above Leaflet's zoom buttons. Back through history when the map was
         // reached inside the app (the pin page's link), so the pin page is not
@@ -869,7 +875,7 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
             event.preventDefault();
             router.back();
           }}
-          className="floating absolute top-2.5 left-2.5 z-[1000] flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-raised hover:no-underline active:bg-raised-2"
+          className="floating absolute top-2.5 start-2.5 z-[1000] flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-raised hover:no-underline active:bg-raised-2"
         >
           <Icon name="back" className="size-4 text-link" />
           {t('map.backToPin')}
@@ -882,7 +888,7 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
           Filters, on wide screens; narrower in the map's top right corner on
           its own. */}
       {!wide ? (
-        <div className="absolute top-2.5 right-2.5 z-[1000] flex flex-col items-stretch gap-2">
+        <div className="absolute top-2.5 end-2.5 z-[1000] flex flex-col items-stretch gap-2">
           {layerToggle}
         </div>
       ) : null}
@@ -928,7 +934,7 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
       </div>
       {/* The web toggle, with the graph above it when it is on. */}
       {wide && !market ? (
-        <div className="absolute bottom-8 left-2.5 z-[999] flex w-[min(26rem,calc(100%-1.25rem))] flex-col items-start gap-2">
+        <div className="absolute bottom-8 start-2.5 z-[999] flex w-[min(26rem,calc(100%-1.25rem))] flex-col items-start gap-2">
           {web === 'graph' ? (
             <div className="floating h-72 w-full overflow-hidden">
               <PinWebGraph nodes={webNodes} edges={webEdges} selectedId={webPicked} onSelect={showPin} />

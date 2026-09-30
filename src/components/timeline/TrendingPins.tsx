@@ -10,6 +10,7 @@ import type { TrendingPin } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
 import { PlacePills } from './CityPill';
 import { StartsWhen } from './StartsWhen';
+import { pinTextDir } from '@/lib/i18n/config';
 
 // How much a pin's views grew on the stretch before, as a percentage; nothing
 // when nobody viewed it then.
@@ -54,7 +55,7 @@ export function TrendingRow({ pin }: { pin: TrendingPin }) {
     <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised">
       <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-9 w-14" />
       <span className="flex min-w-0 flex-col">
-        <span className="truncate leading-snug text-ink" title={pin.title}>
+        <span dir={pinTextDir(pin)} className="truncate leading-snug text-ink" title={pin.title}>
           {pin.title}
         </span>
         <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle tabular-nums">

@@ -80,6 +80,14 @@ export function isRtl(locale: Locale): boolean {
   return RTL_LOCALES.includes(locale);
 }
 
+// The dir attribute for a pin's words. A translated pin reads in the page's
+// direction; one still in English (not yet translated) takes its direction
+// from its own text, so on a right-to-left page its full stops and cut-off
+// ellipses stay at the end of the English rather than jumping to its start.
+export function pinTextDir(pin: { translatedTo?: string }): 'auto' | undefined {
+  return pin.translatedTo ? undefined : 'auto';
+}
+
 export function isLocale(value: unknown): value is Locale {
   return typeof value === 'string' && (LOCALES as readonly string[]).includes(value);
 }

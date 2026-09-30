@@ -29,6 +29,7 @@ import { ViewCount } from './ViewCount';
 import { WatchButton } from './WatchButton';
 import { WeatherIcon } from './WeatherIcon';
 import { useT } from '@/lib/client/i18n';
+import { pinTextDir } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 
 const CARD_SIZES = '(max-width: 640px) 100vw, 448px';
@@ -172,7 +173,7 @@ export function PinCard({
           </div>
         </div>
 
-        <h2 className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-pretty">
+        <h2 dir={pinTextDir(pin)} className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-pretty">
           <Link href={href} className="text-ink transition-colors hover:text-link hover:no-underline">
             {pin.title}
           </Link>
@@ -229,7 +230,7 @@ export function PinCard({
               {/* Last, on a line of its own. An unverified pin's reasoning only restates
                   that nothing was found, so it stays hidden. */}
               {pin.utcStartDateTime && pin.dateConfidence !== 'unknown' ? (
-                <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning}>
+                <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning} dir={pinTextDir(pin)}>
                   {pin.dateConfidenceReasoning && pin.id ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} hrefBase={href} /> : undefined}
                 </DateConfidenceReasoning>
               ) : null}
@@ -237,7 +238,7 @@ export function PinCard({
           ) : null}
           <PinCardOdds pin={pin} />
           {pin.safeDescription ? (
-            <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: pin.safeDescription }} />
+            <div dir={pinTextDir(pin)} className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: pin.safeDescription }} />
           ) : null}
         </div>
 
