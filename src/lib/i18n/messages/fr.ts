@@ -838,6 +838,9 @@ const fr: Messages = {
     marked: 'La semaine de cette épingle : {date}, {value}',
     since: 'depuis',
     source: 'Série {id} de l’EIA',
+    altMonthly: '{label}, mensuel du {from} au {to}, entre {low} et {high}.',
+    markedMonth: 'Le mois de cette épingle : {date}, {value}',
+    sourceFred: 'Série {id} de FRED',
     next: 'Prochaine publication {date}',
   },
   stocks: {

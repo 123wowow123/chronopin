@@ -42,6 +42,7 @@ export type EiaSeries = {
   seriesId: string;
   title: string | null;
   units: string | null;
+  frequency: 'weekly' | 'monthly';
   // What EIA says about its own publishing schedule, when the page states it.
   releaseDate: string | null;
   nextReleaseDate: string | null;
@@ -135,6 +136,7 @@ export function parseSeries(html: string, seriesId: string): EiaSeries {
     seriesId,
     title: titled ? `Weekly ${titled[1]}`.trim() : null,
     units: united ? united[1].trim() : null,
+    frequency: 'weekly',
     releaseDate: released ? isoDay(released[1]) : null,
     nextReleaseDate: next ? isoDay(next[1]) : null,
     sourceUrl: seriesUrl(seriesId),

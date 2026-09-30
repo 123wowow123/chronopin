@@ -1,8 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { intParam, json, noContent, route } from '@/server/http';
 import Pin from '@/server/model/pin';
-import { getSeries } from '@/server/eiaSeries';
-import { linkFor, seriesForPin } from '@/server/services/pinSeries';
+import { linkFor, readSeries, seriesForPin } from '@/server/services/pinSeries';
 import log from '@/server/util/log';
 
 // The public data series a pin's event moves, with the publisher's current
@@ -18,6 +17,15 @@ const YEARS_AFTER = 2;
 const DAY_MS = 86_400_000;
 
 const dayKey = (at: Date) => at.toISOString().slice(0, 10);
+
+// The first day after a monthly observation's month: a release reports a
+// month that has already ended, so the observation a pin marks is the last
+// one whose month was over on the pin's day. September's PCE is not out
+// until 29 October, and must not be the point the 30 September release marks.
+const monthEnd = (day: string) => {
+  const [y, m] = day.split('-').map(Number);
+  return dayKey(new Date(Date.UTC(y, m, 1)));
+};
 
 export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/pins/[id]/series'>) => {
   const id = intParam((await ctx.params).id);
@@ -39,19 +47,24 @@ export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/p
   try {
     const out = [];
     for (const row of rows) {
-      const series = await getSeries(row.seriesId);
+      const series = await readSeries(row.source, row.seriesId);
       if (!series) continue;
       const windowed = series.points.filter((p) => p.day >= from && p.day <= to);
       // An event older or newer than the series has no window; show the
       // nearest end rather than an empty chart.
       const points = windowed.length ? windowed : series.points.slice(-52);
-      // The week the pin's event falls in: the last week at or before its day.
-      const markedAt = [...series.points].reverse().find((p) => p.day <= dayKey(at))?.day ?? null;
+      // The week the pin's event falls in: the last week at or before its day;
+      // for a monthly series, the last month that was over by then.
+      const pinDay = dayKey(at);
+      const markedAt =
+        [...series.points].reverse().find((p) => (series.frequency === 'monthly' ? monthEnd(p.day) <= pinDay : p.day <= pinDay))
+          ?.day ?? null;
       out.push({
         source: row.source,
         seriesId: series.seriesId,
         label: row.label || series.title,
         units: series.units,
+        frequency: series.frequency,
         sourceUrl: linkFor(row),
         releaseDate: series.releaseDate,
         nextReleaseDate: series.nextReleaseDate,

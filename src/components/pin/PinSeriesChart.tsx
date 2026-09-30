@@ -54,13 +54,21 @@ export function PinSeriesChart({ pinId, has }: { pinId: number; has: boolean }) 
   );
 }
 
+const unitOf = (series: PinSeriesData) => (series.units ? sizeOf(series.units) : null);
+
 function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: string; t: ReturnType<typeof useT> }) {
   const [hover, setHover] = useState<Hover>(null);
   const svg = useRef<SVGSVGElement>(null);
 
-  const day = useMemo(
-    () => new Intl.DateTimeFormat(INTL_LOCALES[locale as keyof typeof INTL_LOCALES] ?? 'en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }),
-    [locale],
+  // A monthly release is a month, not a day: "Aug 2026" is what the release says.
+  const monthly = series.frequency === 'monthly';
+  const when = useMemo(
+    () =>
+      new Intl.DateTimeFormat(
+        INTL_LOCALES[locale as keyof typeof INTL_LOCALES] ?? 'en-US',
+        monthly ? { year: 'numeric', month: 'short', timeZone: 'UTC' } : { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' },
+      ),
+    [locale, monthly],
   );
   const num = useMemo(() => new Intl.NumberFormat(INTL_LOCALES[locale as keyof typeof INTL_LOCALES] ?? 'en-US'), [locale]);
 
@@ -79,7 +87,9 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
   const latest = points.at(-1)!;
   const marked = markedIndex >= 0 ? points[markedIndex] : null;
   // What the event did to the series, when both ends are known.
-  const change = marked && marked.value ? (latest.value - marked.value) / marked.value : null;
+  // A rate has no meaningful percent-of-a-percent, and a pin on the latest
+  // point has nothing to compare, so neither shows a change.
+  const change = marked && marked.value && marked.day !== latest.day && unitOf(series)?.tight !== true ? (latest.value - marked.value) / marked.value : null;
 
   const at = (event: React.PointerEvent<SVGSVGElement>) => {
     const box = svg.current?.getBoundingClientRect();
@@ -90,11 +100,11 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
     setHover({ point: points[index], x: x(index), y: y(points[index].value) });
   };
 
-  const unit = series.units ? sizeOf(series.units) : null;
+  const unit = unitOf(series);
   // The axis gets the bare number - the unit is named once, in the heading, so
   // the scale labels stay inside their gutter at phone width.
   const bare = (value: number) => num.format(unit ? Math.round((value / unit.divide) * 10) / 10 : value);
-  const show = (value: number) => (unit ? `${bare(value)} ${unit.label}` : bare(value));
+  const show = (value: number) => (unit ? `${bare(value)}${unit.tight ? '' : ' '}${unit.label}` : bare(value));
 
   return (
     <figure className="rounded-lg border border-line bg-panel px-3 py-3">
@@ -102,7 +112,7 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
         <span className="text-xs font-bold tracking-wider text-subtle uppercase">{series.label ?? series.seriesId}</span>
         <span className="text-sm text-ink tabular-nums">
           {show(latest.value)}
-          <span className="ms-2 text-xs text-subtle">{day.format(new Date(`${latest.day}T00:00:00Z`))}</span>
+          <span className="ms-2 text-xs text-subtle">{when.format(new Date(`${latest.day}T00:00:00Z`))}</span>
         </span>
       </figcaption>
 
@@ -111,7 +121,7 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
         viewBox={`0 0 ${VIEW.w} ${VIEW.h}`}
         className="h-auto w-full touch-none"
         role="img"
-        aria-label={t('series.alt', {
+        aria-label={t(monthly ? 'series.altMonthly' : 'series.alt', {
           label: series.label ?? series.seriesId,
           from: points[0].day,
           to: latest.day,
@@ -175,12 +185,12 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
       <div className="mt-1 flex min-h-5 flex-wrap items-baseline gap-x-3 gap-y-1 text-xs">
         {hover ? (
           <span className="text-ink tabular-nums">
-            {day.format(new Date(`${hover.point.day}T00:00:00Z`))} <span className="text-muted">{show(hover.point.value)}</span>
+            {when.format(new Date(`${hover.point.day}T00:00:00Z`))} <span className="text-muted">{show(hover.point.value)}</span>
           </span>
         ) : marked ? (
           <span className="text-muted tabular-nums">
             <span className="me-1 inline-block size-2 rounded-full bg-past align-middle" aria-hidden />
-            {t('series.marked', { date: day.format(new Date(`${marked.day}T00:00:00Z`)), value: show(marked.value) })}
+            {t(monthly ? 'series.markedMonth' : 'series.marked', { date: when.format(new Date(`${marked.day}T00:00:00Z`)), value: show(marked.value) })}
             {change != null ? (
               <span className={change < 0 ? 'ms-2 text-danger' : change > 0 ? 'ms-2 text-success' : 'ms-2 text-subtle'}>
                 {change > 0 ? '+' : ''}
@@ -193,7 +203,7 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
 
       <p className="mt-2 text-xs text-subtle">
         <a href={series.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-link hover:underline">
-          {t('series.source', { id: series.seriesId })}
+          {t(series.source === 'fred' ? 'series.sourceFred' : 'series.source', { id: series.seriesId })}
         </a>
         {series.nextReleaseDate ? <span className="ms-2">{t('series.next', { date: series.nextReleaseDate })}</span> : null}
       </p>

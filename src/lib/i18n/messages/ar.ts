@@ -1015,6 +1015,9 @@ const ar: Messages = {
     marked: 'أسبوع هذا الدبوس: {date}، {value}',
     since: 'منذ',
     source: 'سلسلة EIA {id}',
+    altMonthly: '{label}، شهريًا من {from} إلى {to}، بين {low} و{high}.',
+    markedMonth: 'شهر هذا الدبوس: {date}، {value}',
+    sourceFred: 'سلسلة FRED {id}',
     next: 'الإصدار التالي {date}',
   },
   stocks: {

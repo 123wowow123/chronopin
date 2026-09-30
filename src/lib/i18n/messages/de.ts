@@ -838,6 +838,9 @@ const de: Messages = {
     marked: 'Die Woche dieser Pinnadel: {date}, {value}',
     since: 'seitdem',
     source: 'EIA-Reihe {id}',
+    altMonthly: '{label}, monatlich von {from} bis {to}, zwischen {low} und {high}.',
+    markedMonth: 'Der Monat dieser Pinnadel: {date}, {value}',
+    sourceFred: 'FRED-Reihe {id}',
     next: 'Nächste Veröffentlichung {date}',
   },
   stocks: {

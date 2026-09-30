@@ -82,5 +82,19 @@
     "seriesId": "WCSSTUS1",
     "label": null,
     "sourceUrl": null
+  },
+  {
+    "pinId": 4980,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null
+  },
+  {
+    "pinId": 4980,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null
   }
 ]
