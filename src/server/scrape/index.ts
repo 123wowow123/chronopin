@@ -2,6 +2,7 @@ import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import config from '../config';
 import { extractPinFields, extractTask, getClient, toLocation, type ExtractedFields } from '../extract';
+import { estimateFromReferences } from './estimateDate';
 import { findReferences, referencesTask, type FoundReferences, type SourceKind } from '../extract/references';
 import { metadataFields } from './metadata';
 import Medium from '../model/medium';
@@ -120,6 +121,8 @@ async function readEntries(pageUrl: string, read: InPageHeadings | null): Promis
 // written - it is preferred to a summary of the source alone.
 function addReferences(pin: Pin, { references, longFormSummary }: FoundReferences): Pin {
   references.forEach((r) => pin.addReference(new PinReference(r)));
+  // A source that dates nothing is dated from what the references say.
+  estimateFromReferences(pin, references);
   if (longFormSummary) pin.longFormSummary = longFormSummary;
   return pin;
 }
