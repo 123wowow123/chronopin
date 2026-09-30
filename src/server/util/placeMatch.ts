@@ -34,16 +34,16 @@ export function wholeWordPattern(text: string): string {
   return `(^|[^[:alnum:]])${literal}([^[:alnum:]]|$)`;
 }
 
-// Whether typed text is written in Chinese, Japanese or Korean.
+// Whether typed text is written in Chinese, Japanese, Korean or Thai.
 export function isCjkText(text: string): boolean {
-  return /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(text);
+  return /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}\p{Script=Thai}]/u.test(text);
 }
 
 // Typed text as Postgres regexes (~*) a title must match all of: a whole word
-// or words, as wholeWordPattern, except in Chinese, Japanese and Korean - there
-// each space-separated word matches anywhere, in any order. Chinese and
-// Japanese leave no space between words, and Korean runs nouns together
-// (나이키 실적 finds "나이키 2025 회계연도 4분기 실적").
+// or words, as wholeWordPattern, except in Chinese, Japanese, Korean and Thai -
+// there each space-separated word matches anywhere, in any order. Chinese,
+// Japanese and Thai leave no space between words, and Korean runs nouns
+// together (나이키 실적 finds "나이키 2025 회계연도 4분기 실적").
 export function typedTextPatterns(text: string): string[] {
   if (isCjkText(text)) {
     return text.trim().split(/\s+/).map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));

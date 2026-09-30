@@ -1,15 +1,19 @@
 import { describe, expect, it } from 'vitest';
-import { daysAway, formatDayKey, formatPosted, formatStart, timespan } from '../format';
+import { dateFormat, daysAway, formatDayKey, formatPosted, formatStart, timespan } from '../format';
 import { spanLabel } from '../postedSpan';
-import { isRtl, languageAlternates, localizePath, negotiateLocale, splitLocale, LOCALES } from './config';
+import { INTL_LOCALES, isRtl, languageAlternates, languageTag, localizePath, negotiateLocale, splitLocale, LOCALES } from './config';
 import de from './messages/de';
 import en from './messages/en';
 import es from './messages/es';
 import fr from './messages/fr';
 import hi from './messages/hi';
 import ar from './messages/ar';
+import italian from './messages/it';
 import ja from './messages/ja';
 import ko from './messages/ko';
+import pt from './messages/pt';
+import ru from './messages/ru';
+import th from './messages/th';
 import zh from './messages/zh';
 import { CATEGORIES, slugify } from '../categories';
 import { createTranslator, type Messages } from './translate';
@@ -54,13 +58,15 @@ describe('localizePath', () => {
 describe('negotiateLocale', () => {
   it('picks the best supported language by quality', () => {
     expect(negotiateLocale('fr-CA,fr;q=0.9,en;q=0.8')).toBe('fr');
-    expect(negotiateLocale('pt-BR,es;q=0.5')).toBe('es');
+    expect(negotiateLocale('nl-NL,es;q=0.5')).toBe('es');
+    // Brazilian and European Portuguese both get the site's Portuguese.
+    expect(negotiateLocale('pt-PT,en;q=0.5')).toBe('pt');
     expect(negotiateLocale('en;q=0.4,ja;q=0.9')).toBe('ja');
     expect(negotiateLocale('zh-Hans-CN')).toBe('zh');
   });
 
   it('answers null for nothing supported, or no header', () => {
-    expect(negotiateLocale('pt-BR,it')).toBeNull();
+    expect(negotiateLocale('nl-NL,sv')).toBeNull();
     expect(negotiateLocale('de;q=0')).toBeNull();
     expect(negotiateLocale('ja,zh-CN;q=0.8,en;q=0.5', ['en', 'zh'])).toBe('zh');
     expect(negotiateLocale(null)).toBeNull();
@@ -74,6 +80,13 @@ describe('languageAlternates', () => {
     expect(links.languages?.['en-US']).toBe('/pin/1/x');
     expect(links.languages?.['zh-CN']).toBe('/zh/pin/1/x');
     expect(links.languages?.['x-default']).toBe('/pin/1/x');
+  });
+
+  it('names Thai without the calendar Intl formats it with', () => {
+    expect(INTL_LOCALES.th).toBe('th-u-ca-gregory');
+    expect(languageTag('th')).toBe('th');
+    expect(languageTag('pt')).toBe('pt-BR');
+    expect(languageAlternates('/map', 'th').languages?.th).toBe('/th/map');
   });
 
   it('lists only the languages offered', () => {
@@ -102,6 +115,11 @@ describe('createTranslator', () => {
     // Arabic uses all six categories: 0, 1, 2, 3-10, 11-99, 100.
     const arabic = createTranslator(ar, 'ar');
     expect(new Set([0, 1, 2, 3, 11, 100].map((count) => arabic('pin.views', { count }))).size).toBe(6);
+    // Russian: one (1, 21), few (2-4, 22), many (5-20, 0).
+    const russian = createTranslator(ru, 'ru');
+    expect([1, 2, 5, 21, 22, 0].map((count) => russian('pin.views', { count }))).toEqual([
+      '1 просмотр', '2 просмотра', '5 просмотров', '21 просмотр', '22 просмотра', '0 просмотров',
+    ]);
     // Japanese has one form, written as a plain string.
     expect(createTranslator(ja, 'ja')('pin.views', { count: 3 })).toBe('3 回表示');
   });
@@ -125,6 +143,13 @@ describe('formatting in other languages', () => {
     expect(formatDayKey('2026-09-14', 'hi')).toBe('14/09/2026');
     expect(formatDayKey('-2560-01-01', 'hi')).toBe('01/01/2561 ई.पू.');
     expect(formatDayKey('-2560-01-01', 'ar')).toBe('01/01/2561 ق.م');
+    expect(formatDayKey('2026-09-14', 'ru')).toBe('14.09.2026');
+    expect(formatDayKey('2026-09-14', 'th')).toBe('14/09/2026');
+  });
+
+  it('writes Thai years in the Gregorian calendar, not the Buddhist one', () => {
+    const day = dateFormat(INTL_LOCALES.th, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+    expect(day.format(new Date('2026-09-14T00:00:00Z'))).toContain('2026');
   });
 
   it('words start dates and countdowns', () => {
@@ -135,6 +160,8 @@ describe('formatting in other languages', () => {
     expect(formatStart(pin, 'UTC', {}, 'zh')).toBe('开始于 2026/09/14');
     expect(formatStart(pin, 'UTC', {}, 'hi')).toBe('14/09/2026 से शुरू');
     expect(formatStart(pin, 'UTC', {}, 'ar')).toMatch(/^يبدأ في /);
+    expect(formatStart(pin, 'UTC', {}, 'it')).toBe('Inizia il 14/09/2026');
+    expect(formatStart(pin, 'UTC', {}, 'pt')).toBe('Começa em 14/09/2026');
     // A run of days is worded as a span, not as a start.
     const span = { ...pin, utcEndDateTime: '2026-09-17T00:00:00.000Z' };
     expect(formatStart(span, 'UTC', {}, 'fr')).toBe('Du 14/09/2026 au 16/09/2026');
@@ -151,7 +178,7 @@ describe('formatting in other languages', () => {
 // Every translation keeps the English message's {slots} and <tags>: a slot
 // lost or renamed prints as its braces, and a lost tag loses its link.
 describe('dictionaries', () => {
-  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi, ar };
+  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi, ar, th, it: italian, ru, pt };
 
   function leaves(node: unknown, prefix = ''): [string, string][] {
     if (typeof node === 'string') return [[prefix, node]];

@@ -6,7 +6,7 @@ import { slugify } from './categories';
 import { pinDelay } from './delay';
 import type { PinEventInfoJson } from './eventInfo';
 import { plainText } from './format';
-import { DEFAULT_LOCALE, INTL_LOCALES, languageAlternates, localizePath, type Locale } from './i18n/config';
+import { DEFAULT_LOCALE, languageAlternates, languageTag, localizePath, type Locale } from './i18n/config';
 import type { PinJson } from './types';
 
 export function absoluteUrl(path: string): string {
@@ -55,7 +55,7 @@ export function pinMetadata(pin: PinJson, locale: Locale = DEFAULT_LOCALE, offer
     openGraph: {
       type: 'article',
       url: path,
-      locale: INTL_LOCALES[locale].replace('-', '_'),
+      locale: languageTag(locale).replace('-', '_'),
       title: pin.title,
       description,
       siteName,
@@ -199,7 +199,7 @@ export function pinJsonLd(
     '@type': 'Article',
     '@id': `${url}#article`,
     mainEntityOfPage: url,
-    inLanguage: INTL_LOCALES[locale],
+    inLanguage: languageTag(locale),
     headline: pin.title.slice(0, 110),
     description,
     image: [imageUrl],
