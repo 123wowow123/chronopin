@@ -15,6 +15,8 @@ export type PinSeriesInput = {
   seriesId: string;
   label?: string | null;
   sourceUrl?: string | null;
+  // The observation to mark, as a day key, when the pin's date would pick the wrong one.
+  markedDay?: string | null;
 };
 
 export type PinSeriesRow = {
@@ -22,6 +24,7 @@ export type PinSeriesRow = {
   seriesId: string;
   label: string | null;
   sourceUrl: string | null;
+  markedDay: string | null;
 };
 
 const SOURCES = new Set(['eia', 'fred']);
@@ -37,6 +40,9 @@ export function seriesProblem(input: PinSeriesInput): string | undefined {
   if (source === 'fred' && !parseFredId(input.seriesId)) {
     return 'A FRED series id is the id and an optional units code, like PCEPI or PCEPI:PC1.';
   }
+  if (input.markedDay && !/^\d{4}-\d{2}-\d{2}$/.test(input.markedDay)) {
+    return 'A marked day must be YYYY-MM-DD.';
+  }
   return undefined;
 }
 
@@ -47,11 +53,11 @@ export async function saveSeries(pinId: number, input: PinSeriesInput): Promise<
   const source = input.source ?? 'eia';
   const seriesId = normaliseSeriesId(input.seriesId);
   await db.query(
-    `INSERT INTO "PinSeries" ("pinId", "source", "seriesId", "label", "sourceUrl")
-     VALUES ($1, $2, $3, $4, $5)
+    `INSERT INTO "PinSeries" ("pinId", "source", "seriesId", "label", "sourceUrl", "markedDay")
+     VALUES ($1, $2, $3, $4, $5, $6)
      ON CONFLICT ("pinId", "source", "seriesId") DO UPDATE
-       SET "label" = EXCLUDED."label", "sourceUrl" = EXCLUDED."sourceUrl"`,
-    [pinId, source, seriesId, input.label ?? null, input.sourceUrl ?? null],
+       SET "label" = EXCLUDED."label", "sourceUrl" = EXCLUDED."sourceUrl", "markedDay" = EXCLUDED."markedDay"`,
+    [pinId, source, seriesId, input.label ?? null, input.sourceUrl ?? null, input.markedDay ?? null],
   );
 }
 
@@ -65,7 +71,7 @@ export async function removeSeries(pinId: number, seriesId: string, source = 'ei
 
 export async function seriesForPin(pinId: number): Promise<PinSeriesRow[]> {
   return db.query<PinSeriesRow>(
-    `SELECT "source", "seriesId", "label", "sourceUrl" FROM "PinSeries" WHERE "pinId" = $1 ORDER BY "id"`,
+    `SELECT "source", "seriesId", "label", "sourceUrl", to_char("markedDay", 'YYYY-MM-DD') AS "markedDay" FROM "PinSeries" WHERE "pinId" = $1 ORDER BY "id"`,
     [pinId],
   );
 }
@@ -86,7 +92,7 @@ export const linkFor = (row: PinSeriesRow): string =>
 // disappears from a pin after db:refresh.
 export async function allSeries(): Promise<(PinSeriesRow & { pinId: number })[]> {
   return db.query(
-    `SELECT "pinId", "source", "seriesId", "label", "sourceUrl" FROM "PinSeries" ORDER BY "pinId", "id"`,
+    `SELECT "pinId", "source", "seriesId", "label", "sourceUrl", to_char("markedDay", 'YYYY-MM-DD') AS "markedDay" FROM "PinSeries" ORDER BY "pinId", "id"`,
   );
 }
 

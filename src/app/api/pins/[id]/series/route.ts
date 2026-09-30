@@ -56,7 +56,9 @@ export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/p
       // The week the pin's event falls in: the last week at or before its day;
       // for a monthly series, the last month that was over by then.
       const pinDay = dayKey(at);
+      const named = row.markedDay && series.points.some((p) => p.day === row.markedDay) ? row.markedDay : null;
       const markedAt =
+        named ??
         [...series.points].reverse().find((p) => (series.frequency === 'monthly' ? monthEnd(p.day) <= pinDay : p.day <= pinDay))
           ?.day ?? null;
       out.push({
