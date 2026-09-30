@@ -9,7 +9,7 @@ export const SPAN_OPTIONS = ['12h', '1d', '3d', '5d', '1w', '1mo', '1y'];
 // Windows around now for when pins start (the map, relevance search). A place or
 // a search match stays relevant longer than a posting window, so wider spans.
 // '0d' is "nothing on that side".
-export const EVENT_SPAN_OPTIONS = ['0d', '1d', '1w', '1mo', '1y', '3y', '5y'];
+export const EVENT_SPAN_OPTIONS = ['0d', '1d', '1w', '1mo', '3mo', '6mo', '1y', '3y', '5y'];
 // Where every "posted within" filter starts without a saved preference: null
 // is unbounded ("All").
 export const DEFAULT_POSTED_WITHIN: string | null = null;
