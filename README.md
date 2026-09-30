@@ -273,6 +273,7 @@ sync prod db to local and backup json
 
 - add private sellers and add payment setup
 
+- Translate to Arabic (site language, layout and specialty days done; translating the prod pins is left: see docs/arabic-rollout.md)
 
 
 
