@@ -4,97 +4,239 @@
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2612,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2613,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2614,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2615,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2616,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2617,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2618,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2619,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2620,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2621,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 2622,
     "source": "eia",
     "seriesId": "WCSSTUS1",
     "label": null,
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 4980,
     "source": "fred",
     "seriesId": "PCEPI:PC1",
     "label": "PCE price index, change from a year ago",
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
   },
   {
     "pinId": 4980,
     "source": "fred",
     "seriesId": "PCEPILFE:PC1",
     "label": "Core PCE price index, change from a year ago",
-    "sourceUrl": null
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4992,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": "2026-01-01"
+  },
+  {
+    "pinId": 4992,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": "2026-01-01"
+  },
+  {
+    "pinId": 4993,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": "2026-02-01"
+  },
+  {
+    "pinId": 4993,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": "2026-02-01"
+  },
+  {
+    "pinId": 4994,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4994,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4995,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4995,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4996,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4996,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4997,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4997,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4998,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4998,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4999,
+    "source": "fred",
+    "seriesId": "PCEPI:PC1",
+    "label": "PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 4999,
+    "source": "fred",
+    "seriesId": "PCEPILFE:PC1",
+    "label": "Core PCE price index, change from a year ago",
+    "sourceUrl": null,
+    "markedDay": null
   }
 ]
