@@ -25,7 +25,7 @@ export function BackToTimeline({ className = '' }: { className?: string }) {
   );
   if (!shown) return null;
   return (
-    <div className={className}>
+    <div data-back-to-timeline className={className}>
       <button
         type="button"
         onClick={() => backToTimeline(router)}
