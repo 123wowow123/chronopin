@@ -32,32 +32,14 @@ blocked bulk reads from prod).
 Prod already has the database changes (migration `0098_arabic_locale.sql`),
 so nothing to apply there.
 
-1. **Translate the prod pins into Arabic.** Pick one:
-
-   - Straight from the machine with the prod `.env` (costs Anthropic credit,
-     one Claude call per pin):
-
-     ```
-     npm run translations:sync -- --locale ar --dry-run   # how many
-     npm run translations:sync -- --locale ar             # do them
-     ```
-
-     Start with `--limit 20` to read a few in Arabic before doing them all.
-
-   - By hand, without credit. Export, have the translations written, apply:
-
-     ```
-     npm run translations:sync -- --export ar-todo.json --locale ar --limit 500
-     # ...translate into ar-done.json, keeping each row's pinId and sourceHash...
-     npm run translations:sync -- --apply ar-done.json
-     ```
-
-     `--apply` skips any pin edited since the export (its `sourceHash` no
-     longer matches), so nothing is overwritten with stale text. On a server
-     the same is `POST /api/admin/translations` (admin login, at most 500 rows
-     per request, `GET ?locale=ar&limit=1000&after=<pin id>` lists what is
-     missing).
-
+1. **Translate the prod pins into Arabic.** Done (2026-09-30): all 4,686 live
+   pins, plus 19 added or edited during the run, were translated by Claude
+   subagents (no API credit) and saved through `POST /api/admin/translations`.
+   Each batch was checked first: same HTML tags and `<cite>` citations, same
+   `sourceHash`, Arabic script present. Prod's
+   `GET /api/admin/translations?locale=ar` now lists none missing. New or
+   edited pins are translated on save as usual, or catch up with
+   `npm run translations:sync -- --locale ar`.
 2. **Offer Arabic on the site.** Languages are only shown when enabled in the
    admin multilingual setting (`/api/admin/multilingual`, default none).
    Until Arabic is switched on, `/ar/...` serves the English pages, the
