@@ -31,6 +31,7 @@ type Sampled = Partial<Pick<PinJson, 'sourceUrl' | 'dateConfidence' | 'utcCreate
   favoriteCount?: number;
   impressionCount?: number;
   marketVolume?: number | null;
+  companyMarketCap?: number | null;
   threadConfidence?: number | null;
 };
 
@@ -55,6 +56,41 @@ const VOLUME_MAX = 2.5;
 export function volumeWeight(marketVolume: number | null | undefined): number {
   if (!marketVolume || marketVolume <= VOLUME_FLOOR) return 1;
   return Math.min(VOLUME_MAX, 1 + Math.log10(marketVolume / VOLUME_FLOOR) * VOLUME_PER_DECADE);
+}
+
+// A large-cap company's pins weigh more: what the company is worth says how
+// many people care what it does. Nothing under $10B, then every tenfold
+// counts for 0.3 more - $100B x1.6, $1T x1.9, and $10T and up x2.2 - so the
+// biggest names lead a crowded day without owning it.
+const CAP_FLOOR = 10_000_000_000;
+const CAP_PER_DECADE = 0.3;
+const CAP_MAX = 2.2;
+
+export function marketCapWeight(marketCap: number | null | undefined): number {
+  if (!marketCap || marketCap <= CAP_FLOOR) return 1;
+  return Math.min(CAP_MAX, 1 + (1 + Math.log10(marketCap / CAP_FLOOR)) * CAP_PER_DECADE);
+}
+
+// An official government source - the pin's own source, or a reference scored
+// well enough for the timeline to show - doubles the pin: a ministry's, a
+// regulator's or a legislature's own page is the event's primary record. Read
+// from the host, so it needs no stored flag.
+const OFFICIAL_WEIGHT = 2;
+const OFFICIAL_HOST = /(^|\.)(gov|mil|int|europa\.eu|un\.org|imf\.org|worldbank\.org|oecd\.org|nato\.int|(gov|go|gob|gouv|govt)\.[a-z]{2})$/;
+
+export function isOfficialUrl(url: string | null | undefined): boolean {
+  if (!url) return false;
+  try {
+    return OFFICIAL_HOST.test(new URL(url).hostname.toLowerCase());
+  } catch {
+    return false;
+  }
+}
+
+export function officialWeight(pin: Pick<Sampled, 'sourceUrl' | 'references'>): number {
+  if (isOfficialUrl(pin.sourceUrl)) return OFFICIAL_WEIGHT;
+  const backed = (pin.references || []).some((r) => r.confidence >= TIMELINE_MIN_CONFIDENCE && isOfficialUrl(r.url));
+  return backed ? OFFICIAL_WEIGHT : 1;
 }
 
 // How well the pin's own sources back it (referenceConfidence.ts). The home
@@ -91,11 +127,12 @@ export function threadWeight(threadConfidence: number | null | undefined): numbe
 }
 
 // Opens and watches per time seen, with the prior mixed in, times what the
-// markets it cites are trading, times how well it and its thread are sourced.
+// markets it cites are trading, what its company is worth, whether a
+// government stands behind it, times how well it and its thread are sourced.
 export function bagWeight(pin: Sampled): number {
   const earned = Math.max(0, pin.viewCount ?? 0) + WATCH_WEIGHT * Math.max(0, pin.favoriteCount ?? 0);
   const seen = (earned + PRIOR_OPENS) / (Math.max(0, pin.impressionCount ?? 0) + PRIOR_IMPRESSIONS);
-  return seen * volumeWeight(pin.marketVolume) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
+  return seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * officialWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
 }
 
 // FNV-1a, folded into (0, 1).

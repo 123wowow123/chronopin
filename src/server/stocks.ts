@@ -87,6 +87,14 @@ export async function fetchQuote(symbol: string, assetClass: AssetClass): Promis
 }
 
 // A symbol as a stock, else as an ETF: which class it is, and its quote.
+// The company's market value in dollars, from Nasdaq's summary, or null when
+// it reports none ("N/A", or a symbol it lists without one).
+export async function fetchMarketCap(symbol: string, assetClass: AssetClass): Promise<number | null> {
+  const summary = await get<{ summaryData?: { MarketCap?: { value?: string } } }>(`/quote/${q(symbol)}/summary?assetclass=${assetClass}`);
+  const cap = Number((summary?.summaryData?.MarketCap?.value ?? '').replace(/[$,]/g, ''));
+  return Number.isFinite(cap) && cap > 0 ? cap : null;
+}
+
 export async function identify(symbol: string): Promise<{ assetClass: AssetClass; quote: StockQuote & { name: string } } | null> {
   for (const assetClass of ['stocks', 'etf'] as const) {
     const quote = await fetchQuote(symbol, assetClass).catch(() => null);

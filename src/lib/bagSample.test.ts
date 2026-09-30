@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bagWeight, confidenceWeight, sampleBag, threadWeight, volumeWeight } from './bagSample';
+import { bagWeight, confidenceWeight, sampleBag, threadWeight, volumeWeight , isOfficialUrl, marketCapWeight, officialWeight } from './bagSample';
 
 const pins = (n: number, views: (id: number) => number = () => 0) => Array.from({ length: n }, (_, i) => ({ id: i + 1, viewCount: views(i + 1) }));
 
@@ -145,5 +145,24 @@ describe('sampleBag with market volume', () => {
     const all = pins(10).map((p) => ({ ...p, marketVolume: p.id === 4 ? 50_000_000 : 0 }));
     const hits = Array.from({ length: 200 }, (_, i) => sampleBag(all, 2, `seed${i}`)).filter((ids) => ids.includes(4)).length;
     expect(hits).toBeGreaterThan(80);
+  });
+});
+
+describe('market cap and official sources', () => {
+  it('weighs a large-cap company above a small one, to a ceiling', () => {
+    expect(marketCapWeight(null)).toBe(1);
+    expect(marketCapWeight(5e9)).toBe(1);
+    expect(marketCapWeight(1e11)).toBeCloseTo(1.6);
+    expect(marketCapWeight(1e12)).toBeCloseTo(1.9);
+    expect(marketCapWeight(1e15)).toBe(2.2);
+  });
+
+  it('doubles a pin whose source is a government site', () => {
+    expect(isOfficialUrl('https://www.whitehouse.gov/briefing')).toBe(true);
+    expect(isOfficialUrl('https://www.gov.uk/news')).toBe(true);
+    expect(isOfficialUrl('https://go.com/x')).toBe(false);
+    expect(officialWeight({ sourceUrl: 'https://www.sec.gov/a' })).toBe(2);
+    expect(officialWeight({ sourceUrl: 'https://news.com/a', references: [{ url: 'https://ec.europa.eu/a', confidence: 90 }] })).toBe(2);
+    expect(officialWeight({ sourceUrl: 'https://news.com/a', references: [{ url: 'https://ec.europa.eu/a', confidence: 30 }] })).toBe(1);
   });
 });

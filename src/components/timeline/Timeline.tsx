@@ -514,6 +514,7 @@ export function Timeline({
               favoriteCount: prev.favoriteCount,
               viewCount: prev.viewCount,
               impressionCount: prev.impressionCount,
+              companyMarketCap: prev.companyMarketCap,
             };
             return next;
           }
