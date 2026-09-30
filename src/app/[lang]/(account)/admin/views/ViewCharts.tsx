@@ -37,10 +37,12 @@ export type RangeSummary = {
     title: string;
     views: number;
     viewers: number;
+    // Distinct signed-in users among the viewers.
+    users: number;
     thumbName?: string | null;
     originalUrl?: string | null;
     // Where this pin's views came from ("" unplaced, null no address).
-    places: { place: string | null; views: number; viewers: number }[];
+    places: { place: string | null; views: number; viewers: number; users: number }[];
   }[];
   // Views with an address, and where those came from ("" is unplaced).
   located: number;
@@ -176,8 +178,15 @@ export function ViewCharts({
               <thead className="text-subtle">
                 <tr>
                   <th className="w-full py-1 font-medium">Pin</th>
-                  <th className="py-1 pl-6 text-right font-medium whitespace-nowrap">Views</th>
-                  <th className="py-1 pl-6 text-right font-medium whitespace-nowrap">Viewers</th>
+                  <th className="py-1 pl-6 text-right font-medium whitespace-nowrap" title="One per viewer per UTC day">
+                    Views
+                  </th>
+                  <th className="py-1 pl-6 text-right font-medium whitespace-nowrap" title="Distinct people, signed in or not">
+                    Viewers
+                  </th>
+                  <th className="py-1 pl-6 text-right font-medium whitespace-nowrap" title="Distinct signed-in users">
+                    Signed in
+                  </th>
                 </tr>
               </thead>
               {summary.top.map((p) => {
@@ -196,6 +205,7 @@ export function ViewCharts({
                       </td>
                       <td className="py-1.5 pl-6 text-right">{p.views}</td>
                       <td className="py-1.5 pl-6 text-right">{p.viewers}</td>
+                      <td className="py-1.5 pl-6 text-right">{p.users}</td>
                     </tr>
                     {open ? (
                       <PlaceRows
@@ -203,6 +213,7 @@ export function ViewCharts({
                           place: c.place === null ? 'No address' : c.place || 'Unplaced',
                           count: c.views,
                           people: c.viewers,
+                          signedIn: c.users,
                           faint: !c.place,
                         }))}
                       />

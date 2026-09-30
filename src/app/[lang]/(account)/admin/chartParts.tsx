@@ -103,15 +103,17 @@ export function OpenPlacesButton({ open, onClick }: { open: boolean; onClick: ()
   );
 }
 
-export type PlaceCount = { place: string; count: number; people: number; faint?: boolean };
+// signedIn fills a third count column, for tables that have one.
+export type PlaceCount = { place: string; count: number; people: number; signedIn?: number; faint?: boolean };
 
 // Places listed under an opened pin before the rest are summed up.
 const PLACES_SHOWN = 12;
 
-// An opened top-pins row's places, in the table's two count columns and
+// An opened top-pins row's places, in the table's count columns and
 // indented to line up with the pin title (past the chevron and thumbnail).
 export function PlaceRows({ places }: { places: PlaceCount[] }) {
   const hidden = places.slice(PLACES_SHOWN);
+  const signedIn = places.some((p) => p.signedIn != null);
   return (
     <>
       {places.slice(0, PLACES_SHOWN).map((p) => (
@@ -121,6 +123,7 @@ export function PlaceRows({ places }: { places: PlaceCount[] }) {
           </td>
           <td className="py-1 pl-6 text-right">{p.count}</td>
           <td className="py-1 pl-6 text-right">{p.people}</td>
+          {signedIn ? <td className="py-1 pl-6 text-right">{p.signedIn}</td> : null}
         </tr>
       ))}
       {hidden.length ? (
@@ -130,6 +133,7 @@ export function PlaceRows({ places }: { places: PlaceCount[] }) {
           </td>
           <td className="py-1 pl-6 text-right">{hidden.reduce((n, p) => n + p.count, 0)}</td>
           <td className="py-1 pl-6" />
+          {signedIn ? <td className="py-1 pl-6" /> : null}
         </tr>
       ) : null}
     </>
