@@ -13,8 +13,29 @@ export function pinPicture(media: Pick<MediumJson, 'type' | 'thumbName' | 'origi
   return { thumbName: medium?.thumbName, originalUrl: medium && String(medium.type) === '1' ? medium.originalUrl : undefined };
 }
 
-// A pin's small picture in a list: its thumb, then an image's original, then a blank tile.
-export function PinThumb({ thumbName, originalUrl, className = 'h-9 w-16' }: { thumbName?: string | null; originalUrl?: string | null; className?: string }) {
+// A hue for a pin with no picture, from its category when it has one (so a
+// category's pins share a colour down a list) or else its title.
+function hueOf(seed: string) {
+  let hash = 0;
+  for (const ch of seed) hash = (hash * 31 + ch.codePointAt(0)!) | 0;
+  return Math.abs(hash) % 360;
+}
+
+// A pin's small picture in a list: its thumb, then an image's original, then a
+// tile tinted by its category with its title's first letter or digit.
+export function PinThumb({
+  thumbName,
+  originalUrl,
+  title,
+  category,
+  className = 'h-9 w-16',
+}: {
+  thumbName?: string | null;
+  originalUrl?: string | null;
+  title?: string | null;
+  category?: string | null;
+  className?: string;
+}) {
   const sources = [blobUrl(thumbName), originalUrl].filter((src): src is string => !!src);
   const [failed, setFailed] = useState(0);
   const src = sources[failed];
@@ -27,6 +48,23 @@ export function PinThumb({ thumbName, originalUrl, className = 'h-9 w-16' }: { t
     // eslint-disable-next-line react-hooks/exhaustive-deps -- re-check each new source
     [src],
   );
+  const letter = !src && title ? title.match(/[\p{L}\p{N}]/u)?.[0]?.toLocaleUpperCase() : undefined;
+  if (letter) {
+    // Mixed into the theme's own tile and text colours, so it reads on both.
+    const tint = `oklch(0.62 0.13 ${hueOf(category || title!)})`;
+    return (
+      <span
+        aria-hidden
+        className={`flex shrink-0 items-center justify-center overflow-hidden rounded font-display text-base font-semibold select-none ${className}`}
+        style={{
+          background: `color-mix(in oklab, ${tint} 28%, var(--color-raised-2))`,
+          color: `color-mix(in oklab, ${tint} 65%, var(--color-ink))`,
+        }}
+      >
+        {letter}
+      </span>
+    );
+  }
   return (
     <span className={`block shrink-0 overflow-hidden rounded bg-raised-2 ${className}`}>
       {src ? (

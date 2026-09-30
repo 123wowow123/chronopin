@@ -189,7 +189,7 @@ export function ViewCharts({
                         <div className="flex items-center gap-2">
                           <OpenPlacesButton open={open} onClick={() => togglePin(String(p.id))} />
                           <Link href={pinPath(p)} title={p.title} className="flex min-w-0 items-center gap-3 text-link">
-                            <PinThumb thumbName={p.thumbName} originalUrl={p.originalUrl} />
+                            <PinThumb thumbName={p.thumbName} originalUrl={p.originalUrl} title={p.title} />
                             <span className="truncate">{p.title || `Pin ${p.id}`}</span>
                           </Link>
                         </div>
