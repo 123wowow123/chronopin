@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Suspense } from 'react';
 import { cacheLife } from 'next/cache';
-import { IBM_Plex_Sans, Noto_Sans, Noto_Sans_Thai } from 'next/font/google';
+import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic, Noto_Sans, Noto_Sans_Arabic, Noto_Sans_Thai } from 'next/font/google';
 import localFont from 'next/font/local';
 import { lang } from 'next/root-params';
 import { HideDevIssues } from '@/components/HideDevIssues';
@@ -26,12 +26,14 @@ const plexSans = IBM_Plex_Sans({
   variable: '--font-plex-sans',
   display: 'swap',
 });
-// Cyrillic and Thai, for Russian and Thai pages: not preloaded, and the
+// Cyrillic, Thai and Arabic, for Russian, Thai and Arabic pages: not preloaded, and the
 // browser fetches them only when a page holds such characters (unicode-range).
 // The stacks in globals.css list them after the Latin fonts.
 const notoCyrillic = Noto_Sans({ subsets: ['cyrillic'], variable: '--font-noto-cyrillic', display: 'swap', preload: false });
 const plexCyrillic = IBM_Plex_Sans({ subsets: ['cyrillic'], weight: ['400', '500', '600'], variable: '--font-plex-cyrillic', display: 'swap', preload: false });
 const notoThai = Noto_Sans_Thai({ subsets: ['thai'], variable: '--font-noto-thai', display: 'swap', preload: false });
+const notoArabic = Noto_Sans_Arabic({ subsets: ['arabic'], variable: '--font-noto-arabic', display: 'swap', preload: false });
+const plexArabic = IBM_Plex_Sans_Arabic({ subsets: ['arabic'], weight: ['400', '500', '600'], variable: '--font-plex-arabic', display: 'swap', preload: false });
 const astroSigns = localFont({
   src: '../fonts/AstronomicSigns.ttf',
   variable: '--font-astro-signs',
@@ -100,7 +102,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     // suppressHydrationWarning: the inline script sets data-theme before React
     // hydrates, so <html> never matches the server markup.
-    <html lang={languageTag(locale)} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${notoCyrillic.variable} ${plexCyrillic.variable} ${notoThai.variable} ${astroSigns.variable}`} suppressHydrationWarning>
+    <html lang={languageTag(locale)} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${notoCyrillic.variable} ${plexCyrillic.variable} ${notoThai.variable} ${notoArabic.variable} ${plexArabic.variable} ${astroSigns.variable}`} suppressHydrationWarning>
       <body className="min-h-dvh">
         {/* Before first paint, from the stored preference (src/lib/theme.ts).
             First in <body>, not in <head>: AdSense inserts its own script at
