@@ -49,6 +49,7 @@ describe('buildCatalog', () => {
     expect(pin.access).toBe('write');
     expect(pin.notes.join(' ')).toContain('userName');
     expect(pin.notes.join(' ')).toContain('DELETE /api/pins/:id');
+    expect(tables.get('User')!.notes.join(' ')).toContain('POST /api/admin/users');
   });
 
   it('keeps a composite key in order', () => {
