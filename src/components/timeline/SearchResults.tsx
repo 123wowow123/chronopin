@@ -39,7 +39,7 @@ import type { SpecialtyDay } from '@/lib/specialtyDays';
 
 type SortBy = 'date' | 'relevance';
 
-const rail = "relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']";
+const rail = "relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:start-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']";
 
 // How the results are sorted, as a segmented control. `compact` is the one in
 // the bottom left of a phone's screen, and it is built to the "Today" button
@@ -522,7 +522,7 @@ export function SearchResults({
 
   return (
     <TimelineVideoProvider setting={video}>
-      <div className="px-3 pb-24 lg:px-4 xl:pr-[288px]">
+      <div className="px-3 pb-24 lg:px-4 xl:pe-[288px]">
         <FloatingControls
           merge
           typing={sliderTyping}
@@ -563,7 +563,7 @@ export function SearchResults({
                       <span className="min-w-0 flex-1 truncate">{searchedUser.userName}</span>
                       {/* Block and Unblock, for a signed-in reader on someone else. */}
                       {user && user.id !== searchedUser.id ? (
-                        <span className="-my-1 -mr-2">
+                        <span className="-my-1 -me-2">
                           <UserMenu
                             user={{ id: searchedUser.id, userName: searchedUser.userName, pictureUrl: null }}
                             blocked={blocks.ids.has(searchedUser.id)}

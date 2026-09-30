@@ -805,7 +805,7 @@ export function SearchBox() {
       // pill.
       className={`shrink-0 text-sm text-ink placeholder:text-subtle focus:outline-none focus-visible:outline-none [&::-webkit-search-cancel-button]:hidden ${sel ? 'caret-transparent' : ''} ${
         trailing && !editing ? 'min-w-[5rem] grow' : ''
-      } ${editing ? 'h-7 rounded-md bg-raised px-1.5' : `h-9 bg-transparent ${trailing ? 'pr-2' : draft ? 'px-0.5 -mr-[2px]' : 'px-0.5 -mx-1.5'}`}`}
+      } ${editing ? 'h-7 rounded-md bg-raised px-1.5' : `h-9 bg-transparent ${trailing ? 'pe-2' : draft ? 'px-0.5 -me-[2px]' : 'px-0.5 -mx-1.5'}`}`}
       role="combobox"
       aria-expanded={open}
       aria-controls="search-suggestions"
@@ -827,6 +827,8 @@ export function SearchBox() {
         {t('search.placeholder')}
       </label>
       <div
+        // Its caret and selection are worked out in pixels from the left edge.
+        dir="ltr"
         className="relative flex min-w-0 flex-1 cursor-text items-center rounded-full bg-field text-muted ring-1 ring-line transition-shadow ring-inset focus-within:ring-2 focus-within:ring-link"
         // A press on the box itself, not an item or button, types something new
         // after the items.
@@ -871,12 +873,12 @@ export function SearchBox() {
           if (anchor) beginDrag(anchor, all, moving ? all.length : editAt + drafted);
         }}
       >
-        <Icon name="search" className="ml-3 size-4 shrink-0 text-subtle" />
+        <Icon name="search" className="ms-3 size-4 shrink-0 text-subtle" />
         <div
           ref={rowRef}
           // gap-1.5: room for the caret to stand between two items without
           // pushing them apart, as the field pulls itself into that gap.
-          className="flex h-9 min-w-0 flex-1 items-center gap-1.5 overflow-x-auto overscroll-x-contain pl-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex h-9 min-w-0 flex-1 items-center gap-1.5 overflow-x-auto overscroll-x-contain ps-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {items.map((item, index) => {
             // Pressing an item must not blur the field first: that would move
@@ -949,7 +951,7 @@ export function SearchBox() {
                       if (suppressClick.current) suppressClick.current = false;
                       else editItem(index);
                     }}
-                    className="flex items-center gap-1 py-0.5 pl-2"
+                    className="flex items-center gap-1 py-0.5 ps-2"
                   >
                     {field ? <span className={picked ? 'text-white/75' : 'text-subtle'}>{field}</span> : null}
                     <span className={item.negated ? 'line-through' : undefined}>{value}</span>
@@ -978,7 +980,7 @@ export function SearchBox() {
         {draft || items.length ? (
           <button
             type="button"
-            className="mr-1.5 rounded-full p-1.5 text-subtle hover:bg-raised hover:text-ink"
+            className="me-1.5 rounded-full p-1.5 text-subtle hover:bg-raised hover:text-ink"
             aria-label={t('search.clear')}
             onClick={() => {
               setItems([]);

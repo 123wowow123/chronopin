@@ -267,7 +267,7 @@ function PinBody({
         ) : null}
         {/* Opens the timeline on this pin, centred, rather than on today. */}
         {/* The same pill as the aside's "To map". */}
-        <Link href={`/?pin=${pin.id}`} className="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
+        <Link href={`/?pin=${pin.id}`} className="ms-auto inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
           <Icon name="timeline" className="size-3.5 text-link" />
           {t('pin.toTimeline')}
         </Link>
@@ -278,8 +278,8 @@ function PinBody({
           className="relative mb-4 overflow-hidden rounded-xl border border-line bg-black"
           overlay={
             <>
-              {locationText ? <span className="media-chip absolute top-3 right-3 z-10">{locationText}</span> : null}
-              {company ? <span className="media-chip absolute bottom-3 left-3 z-10">{company}</span> : null}
+              {locationText ? <span className="media-chip absolute top-3 end-3 z-10">{locationText}</span> : null}
+              {company ? <span className="media-chip absolute bottom-3 start-3 z-10">{company}</span> : null}
             </>
           }
           fallback={placeRow}
@@ -402,7 +402,7 @@ function PinBody({
           streaming service (src/lib/streaming.ts), in the service's colours. */}
       {pin.merchants?.some((m) => streamingService(m.url)) ? (
         <div className="mt-2 flex flex-wrap items-center gap-2">
-          <span className="mr-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.watchOnHeading')}</span>
+          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.watchOnHeading')}</span>
           {watchOrder(pin.merchants).map((merchant, index) => {
             const service = streamingService(merchant.url);
             return service ? (
@@ -471,7 +471,7 @@ async function Thread({ pin }: { pin: PinJson }) {
               aria-current={p.id === pin.id ? 'page' : undefined}
               className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
             >
-              <span className="w-4 shrink-0 text-right text-subtle tabular-nums">{index + 1}</span>
+              <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{index + 1}</span>
               <span className="min-w-0">
                 {p.title}
                 <span className="mt-1.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">

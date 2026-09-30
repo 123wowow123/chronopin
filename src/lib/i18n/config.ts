@@ -5,7 +5,7 @@
 // path to the /en tree the app routes under (src/app/[lang]), so each language
 // renders and caches as its own page and crawlers find every one of them.
 
-export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi'] as const;
+export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar'] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = 'en';
@@ -23,6 +23,7 @@ export const LOCALE_NAMES: Record<Locale, string> = {
   zh: '简体中文',
   ko: '한국어',
   hi: 'हिन्दी',
+  ar: 'العربية',
 };
 
 // The tag Intl formats dates and numbers with, and <html lang> / hreflang say.
@@ -36,6 +37,7 @@ export const INTL_LOCALES: Record<Locale, string> = {
   zh: 'zh-CN',
   ko: 'ko',
   hi: 'hi',
+  ar: 'ar',
 };
 
 // The language Claude is asked to translate a pin into.
@@ -48,7 +50,15 @@ export const LANGUAGE_NAMES: Record<Locale, string> = {
   zh: 'Simplified Chinese',
   ko: 'Korean',
   hi: 'Hindi',
+  ar: 'Modern Standard Arabic',
 };
+
+// Languages written right to left: <html dir> says so, and the page mirrors.
+export const RTL_LOCALES: readonly Locale[] = ['ar'];
+
+export function isRtl(locale: Locale): boolean {
+  return RTL_LOCALES.includes(locale);
+}
 
 export function isLocale(value: unknown): value is Locale {
   return typeof value === 'string' && (LOCALES as readonly string[]).includes(value);

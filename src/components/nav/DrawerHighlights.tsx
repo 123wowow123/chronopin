@@ -130,8 +130,8 @@ function Fold({
       <button type="button" aria-expanded={open} aria-controls={id} onClick={onToggle} className={`w-full ${itemClass}`}>
         <Icon name={icon} className={`size-6 ${iconClass}`} />
         {label}
-        {note ? <span className="ml-auto text-xs font-normal text-subtle">{note}</span> : null}
-        <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${note ? '' : 'ml-auto'} ${open ? 'rotate-180' : ''}`} />
+        {note ? <span className="ms-auto text-xs font-normal text-subtle">{note}</span> : null}
+        <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${note ? '' : 'ms-auto'} ${open ? 'rotate-180' : ''}`} />
       </button>
       <div id={id} hidden={!open} className="pb-1 text-sm">
         {!children ? <p className="px-4 py-2 text-subtle">{t('common.loading')}</p> : <ol className="flex flex-col">{children}</ol>}

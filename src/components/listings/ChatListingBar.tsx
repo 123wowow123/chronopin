@@ -94,7 +94,7 @@ export function ChatListingBar({
               {opening === listing.id ? (
                 <span className="size-4 shrink-0 animate-spin rounded-full border-2 border-current border-t-transparent text-subtle" />
               ) : (
-                <Icon name="chevron" className="size-4 shrink-0 -rotate-90 text-subtle transition-colors group-hover:text-ink" />
+                <Icon name="chevron" className="size-4 shrink-0 -rotate-90 text-subtle rtl:rotate-90 transition-colors group-hover:text-ink" />
               )}
             </Link>
             {listing.myRating ? (
@@ -103,7 +103,7 @@ export function ChatListingBar({
                 {t('listing.rated')}
               </button>
             ) : turns >= RATING_TURNS ? (
-              <button type="button" onClick={() => setRating(listing)} className="btn btn-primary btn-sm mr-1.5 shrink-0 rounded-full">
+              <button type="button" onClick={() => setRating(listing)} className="btn btn-primary btn-sm me-1.5 shrink-0 rounded-full">
                 <Icon name="star" className="size-3.5" />
                 {t(role === 'seller' ? 'listing.rateSeller' : 'listing.rateBuyer')}
               </button>

@@ -13,7 +13,7 @@ import { LocaleSync } from '@/components/LocaleSync';
 import { TimeZoneSync } from '@/components/TimeZoneSync';
 import { analyticsScript } from '@/lib/analytics';
 import { siteName, siteUrl } from '@/lib/appConfig';
-import { INTL_LOCALES, localeOr, LOCALES } from '@/lib/i18n/config';
+import { INTL_LOCALES, isRtl, localeOr, LOCALES } from '@/lib/i18n/config';
 import { getMessages } from '@/lib/i18n/messages';
 import { alternates, getT } from '@/lib/i18n/server';
 import { themeScript } from '@/lib/theme';
@@ -94,7 +94,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     // suppressHydrationWarning: the inline script sets data-theme before React
     // hydrates, so <html> never matches the server markup.
-    <html lang={INTL_LOCALES[locale]} className={`${notoSans.variable} ${plexSans.variable} ${astroSigns.variable}`} suppressHydrationWarning>
+    <html lang={INTL_LOCALES[locale]} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${astroSigns.variable}`} suppressHydrationWarning>
       <body className="min-h-dvh">
         {/* Before first paint, from the stored preference (src/lib/theme.ts).
             First in <body>, not in <head>: AdSense inserts its own script at
@@ -103,7 +103,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <script dangerouslySetInnerHTML={{ __html: analyticsScript }} />
         <a
           href="#main"
-          className="sr-only z-50 rounded-lg bg-accent px-3 py-2 text-white focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
+          className="sr-only z-50 rounded-lg bg-accent px-3 py-2 text-white focus:not-sr-only focus:fixed focus:top-2 focus:start-2"
         >
           {t('nav.skipToContent')}
         </a>

@@ -101,7 +101,7 @@ export function MarketTrend({ pinId, fallback }: { pinId: number; fallback: Reac
 
   return (
     <span role="img" aria-label={summary} title={`${trend.title}\n${summary}`} className="relative block h-9 w-14 shrink-0 overflow-hidden rounded bg-raised-2">
-      <span className="absolute top-0.5 left-1 text-[10px] leading-none font-semibold text-ink tabular-nums">{percent(current)}</span>
+      <span className="absolute top-0.5 start-1 text-[10px] leading-none font-semibold text-ink tabular-nums">{percent(current)}</span>
       <svg aria-hidden viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 size-full">
         <path d={area} className="fill-link/15" />
         <path d={line} fill="none" strokeWidth={1.5} strokeLinejoin="round" strokeLinecap="round" className="stroke-link" />

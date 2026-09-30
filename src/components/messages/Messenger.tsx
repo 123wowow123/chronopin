@@ -58,7 +58,7 @@ function ChatHeading({ meta, fallback }: { meta: ThreadMeta | null; fallback?: C
     <Link href={userHref(user)} className="flex min-w-0 flex-1 items-center gap-2 rounded-lg px-1 py-0.5 text-ink hover:bg-raised hover:no-underline">
       <span className="relative shrink-0">
         <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-9 text-sm" />
-        {meta?.online ? <span aria-hidden className="absolute right-0 bottom-0 size-3 rounded-full bg-emerald-500 ring-2 ring-panel" /> : null}
+        {meta?.online ? <span aria-hidden className="absolute end-0 bottom-0 size-3 rounded-full bg-emerald-500 ring-2 ring-panel" /> : null}
       </span>
       <span className="min-w-0">
         <span className="block truncate text-[15px] font-semibold">{user.userName}</span>
@@ -104,11 +104,11 @@ export function MessengerButton({ className = '' }: { className?: string }) {
       >
         <span className="relative flex">
           <Icon name="message" className="size-5" />
-          <Badge count={count} className="-top-1 -right-1.5" />
+          <Badge count={count} className="-top-1 -end-1.5" />
         </span>
       </button>
       {open ? (
-        <div className="floating absolute right-0 z-50 mt-2 flex max-h-[min(640px,calc(100dvh-5rem))] w-[360px] flex-col overflow-hidden">
+        <div className="floating absolute end-0 z-50 mt-2 flex max-h-[min(640px,calc(100dvh-5rem))] w-[360px] flex-col overflow-hidden">
           <div className="flex items-center gap-1 px-4 pt-3 pb-2">
             <h2 className="flex-1 text-2xl font-bold text-ink">{t('dm.title')}</h2>
             <Link
@@ -190,7 +190,7 @@ export function ChatDock() {
   const open = chats.filter((c) => !c.minimized);
   const folded = chats.filter((c) => c.minimized);
   return (
-    <div className="pointer-events-none fixed right-4 bottom-0 z-40 hidden items-end gap-3 lg:flex">
+    <div className="pointer-events-none fixed end-4 bottom-0 z-40 hidden items-end gap-3 lg:flex">
       <div className="flex flex-row-reverse items-end gap-3">
         {open.map((c) => (
           <ChatWindow key={c.user.id} user={c.user} onMinimize={() => setChatMinimized(c.user.id, true)} onClose={() => closeChat(c.user.id)} />
@@ -211,7 +211,7 @@ export function ChatDock() {
                 <UserAvatar userName={c.user.userName} pictureUrl={c.user.pictureUrl} className="size-12 text-base" />
               </button>
               {c.unread ? (
-                <span className="pointer-events-none absolute -top-1 -left-1 min-w-5 rounded-full bg-red-500 px-1 text-center text-[11px] leading-5 font-bold text-white ring-2 ring-page">
+                <span className="pointer-events-none absolute -top-1 -start-1 min-w-5 rounded-full bg-red-500 px-1 text-center text-[11px] leading-5 font-bold text-white ring-2 ring-page">
                   {c.unread > 9 ? '9+' : c.unread}
                 </span>
               ) : null}
@@ -219,7 +219,7 @@ export function ChatDock() {
                 type="button"
                 onClick={() => closeChat(c.user.id)}
                 aria-label={c.user.userName}
-                className="absolute -top-1 -right-1 hidden size-5 items-center justify-center rounded-full bg-panel text-muted shadow ring-1 ring-line group-hover:flex hover:text-ink"
+                className="absolute -top-1 -end-1 hidden size-5 items-center justify-center rounded-full bg-panel text-muted shadow ring-1 ring-line group-hover:flex hover:text-ink"
               >
                 <Icon name="close" className="size-3" />
               </button>
@@ -239,7 +239,7 @@ export function DrawerMessages({ className, current, onClick }: { className: str
     <Link href="/messages" aria-current={current ? 'page' : undefined} aria-label={unreadLabel(t, count)} onClick={onClick} className={className}>
       <span className="relative flex">
         <Icon name="message" className="size-6" />
-        <Badge count={count} className="-top-1.5 -right-2" />
+        <Badge count={count} className="-top-1.5 -end-2" />
       </span>
       {t('dm.page')}
     </Link>
@@ -300,7 +300,7 @@ function MessagesPane() {
 
   return (
     <div className="surface grid h-[calc(100dvh-52px)] overflow-hidden max-sm:rounded-none max-sm:border-x-0 grid-cols-[minmax(0,1fr)] sm:h-[calc(100dvh-52px-3rem)] lg:grid-cols-[360px_minmax(0,1fr)]">
-      <div className={`min-h-0 flex-col border-line pt-3 lg:flex lg:border-r ${withId ? 'hidden' : 'flex'}`}>
+      <div className={`min-h-0 flex-col border-line pt-3 lg:flex lg:border-e ${withId ? 'hidden' : 'flex'}`}>
         <div className="flex items-center gap-1 px-4 pb-2">
           {/* Below lg the drawer's way back; wider, back to the page the chats panel was opened over. */}
           <BackToMenu />
@@ -309,7 +309,7 @@ function MessagesPane() {
             onClick={() => (backFromMessages() ? router.back() : router.push('/'))}
             aria-label={t('common.back')}
             title={t('common.back')}
-            className="-ml-1.5 hidden shrink-0 rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink lg:flex"
+            className="-ms-1.5 hidden shrink-0 rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink lg:flex"
           >
             <Icon name="back" className="size-5" />
           </button>

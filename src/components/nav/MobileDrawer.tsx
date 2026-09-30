@@ -19,6 +19,7 @@ import { DrawerHighlights } from './DrawerHighlights';
 import { SwitchMark, useWatchedToggle, ViewSwitch } from './NavMenu';
 import { DrawerNotifications } from './NotificationBell';
 import { useT } from '@/lib/client/i18n';
+import { isRtl } from '@/lib/i18n/config';
 
 const itemClass =
   'flex items-center gap-4 rounded-full px-3 py-2 text-[17px] font-semibold text-ink hover:bg-raised hover:no-underline active:bg-raised-2 aria-[current=page]:text-accent';
@@ -86,6 +87,7 @@ export function MobileDrawer() {
   const pathname = usePathname();
   const { user, isAdmin } = useSession();
   const t = useT();
+  const rtl = isRtl(t.locale);
   const unread = useUnreadCount(!!user) + useUnreadChats(!!user);
   // Whether the page showing has filters to lend the drawer (the timeline and
   // search results do; a pin page does not).
@@ -174,7 +176,8 @@ export function MobileDrawer() {
       if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
       current.axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
     }
-    if (current.axis === 'x') setDrag(Math.max(-1, Math.min(0, dx / current.width)));
+    // Dragged toward the edge it came from, which is the right one in Arabic.
+    if (current.axis === 'x') setDrag(Math.max(-1, Math.min(0, (rtl ? -dx : dx) / current.width)));
   }
 
   function onTouchEnd(event: React.TouchEvent) {
@@ -238,10 +241,10 @@ export function MobileDrawer() {
         aria-modal="true"
         aria-label={t('nav.menu')}
         tabIndex={-1}
-        className={`fixed inset-y-0 left-0 z-50 flex w-[min(26rem,90vw)] touch-pan-y flex-col overflow-y-auto overscroll-contain bg-header pl-[env(safe-area-inset-left)] shadow-2xl shadow-shade/50 outline-none transition-[translate,visibility] duration-300 ease-out ${
-          open ? 'translate-x-0' : 'invisible -translate-x-full'
+        className={`fixed inset-y-0 start-0 z-50 flex w-[min(26rem,90vw)] touch-pan-y flex-col overflow-y-auto overscroll-contain bg-header ps-[env(safe-area-inset-left)] shadow-2xl shadow-shade/50 outline-none transition-[translate,visibility] duration-300 ease-out ${
+          open ? 'translate-x-0' : 'invisible -translate-x-full rtl:translate-x-full'
         }`}
-        style={dragging ? { translate: `${drag * 100}% 0`, transition: 'none' } : undefined}
+        style={dragging ? { translate: `${drag * (rtl ? -100 : 100)}% 0`, transition: 'none' } : undefined}
       >
         {/* The navbar's own row, signed in or out: 52px tall with the same
             side padding, so the mark in it lands on the menu button underneath
@@ -252,7 +255,7 @@ export function MobileDrawer() {
               pressing it puts the drawer away again. */}
           <button
             type="button"
-            className="-ml-1 shrink-0 rounded-full p-1 text-muted hover:bg-raised hover:text-ink"
+            className="-ms-1 shrink-0 rounded-full p-1 text-muted hover:bg-raised hover:text-ink"
             aria-label={t('nav.closeMenu')}
             onClick={() => setOpen(false)}
           >
@@ -280,7 +283,7 @@ export function MobileDrawer() {
                 <span className="block truncate text-sm text-subtle">{t('nav.profileSettings')}</span>
               </span>
               {/* 20px from the edge, as every other row's chevron and switch is. */}
-              <Icon name="chevron" className="mr-1 ml-auto size-4 shrink-0 -rotate-90 text-subtle" />
+              <Icon name="chevron" className="me-1 ms-auto size-4 shrink-0 -rotate-90 text-subtle rtl:rotate-90" />
             </Link>
           </div>
         ) : null}
@@ -368,7 +371,7 @@ export function MobileDrawer() {
       <button
         ref={triggerRef}
         type="button"
-        className="relative -ml-1 flex shrink-0 items-center rounded-full p-1 text-muted hover:bg-raised hover:text-ink lg:hidden"
+        className="relative -ms-1 flex shrink-0 items-center rounded-full p-1 text-muted hover:bg-raised hover:text-ink lg:hidden"
         aria-label={unread ? t('nav.openMenuUnread', { count: unread }) : t('nav.openMenu')}
         aria-haspopup="dialog"
         aria-expanded={open}
@@ -382,7 +385,7 @@ export function MobileDrawer() {
           </span>
         )}
         {/* Unread notifications, now that the bell is inside the drawer. */}
-        {unread ? <span className="absolute top-0.5 right-0.5 size-2.5 rounded-full bg-red-500 ring-2 ring-header" /> : null}
+        {unread ? <span className="absolute top-0.5 end-0.5 size-2.5 rounded-full bg-red-500 ring-2 ring-header" /> : null}
       </button>
       {mounted ? createPortal(drawer, document.body) : null}
     </>

@@ -201,7 +201,7 @@ function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () 
       {n.groupCount > 1 ? (
         <span
           aria-hidden
-          className="absolute -right-1.5 -bottom-1 min-w-4 rounded-full bg-accent px-1 text-center text-[10px] leading-4 font-bold tabular-nums text-white ring-2 ring-panel"
+          className="absolute -end-1.5 -bottom-1 min-w-4 rounded-full bg-accent px-1 text-center text-[10px] leading-4 font-bold tabular-nums text-white ring-2 ring-panel"
         >
           {n.groupCount > 99 ? '99+' : n.groupCount}
         </span>
@@ -350,7 +350,7 @@ function LocalWeatherRow({ className = '' }: { className?: string }) {
   const t = useT();
   if (local.status === 'ask') {
     return (
-      <button type="button" onClick={requestLocalWeather} title={t('weather.showLocalHint')} className={`flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm text-muted hover:bg-raised hover:text-ink ${className}`}>
+      <button type="button" onClick={requestLocalWeather} title={t('weather.showLocalHint')} className={`flex w-full items-center gap-3 px-4 py-2.5 text-start text-sm text-muted hover:bg-raised hover:text-ink ${className}`}>
         <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-warning/15 text-warning">
           <Icon name="sun" className="size-4" />
         </span>
@@ -371,7 +371,7 @@ function LocalWeatherRow({ className = '' }: { className?: string }) {
         <div className="flex items-baseline gap-2 text-ink">
           <span className="font-semibold">{weather.now}</span>
           <span className="truncate">{weather.label}</span>
-          <span className="ml-auto shrink-0 text-xs text-muted" title={t('weather.highLow', { unit: weather.unit })}>
+          <span className="ms-auto shrink-0 text-xs text-muted" title={t('weather.highLow', { unit: weather.unit })}>
             {weather.high} <span className="text-subtle">{weather.low}</span>
           </span>
         </div>
@@ -446,7 +446,7 @@ export function WeatherButton({ className = '' }: { className?: string }) {
         {weather?.now ? <span className="text-[10px] leading-none font-medium">{weather.now}</span> : null}
       </button>
       {open ? (
-        <div className="floating absolute right-0 z-50 mt-2 w-80 overflow-hidden">
+        <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
           <LocalWeatherRow />
         </div>
       ) : null}
@@ -476,11 +476,11 @@ export function NotificationBell({ className = '' }: { className?: string }) {
         <WeatherPeek />
         <span className="relative flex">
           <Icon name="bell" className="size-5" />
-          <UnreadBadge count={count} className="-top-1 -right-1.5" />
+          <UnreadBadge count={count} className="-top-1 -end-1.5" />
         </span>
       </button>
       {open ? (
-        <div className="floating absolute right-0 z-50 mt-2 w-80 overflow-hidden">
+        <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
           <LocalWeatherRow className="border-b border-line" />
           <div className="border-b border-line px-4 py-2.5 text-sm font-semibold text-ink">{t('notifications.title')}</div>
           <NotificationItems {...list} listClassName="max-h-96 overflow-auto" onNavigate={() => setOpen(false)} />
@@ -499,10 +499,10 @@ export function DrawerNotifications({ className, current, onClick }: { className
     <Link href="/notifications" aria-current={current ? 'page' : undefined} aria-label={unreadLabel(t, count)} onClick={onClick} className={className}>
       <span className="relative flex">
         <Icon name="bell" className="size-6" />
-        <UnreadBadge count={count} className="-top-1.5 -right-2" />
+        <UnreadBadge count={count} className="-top-1.5 -end-2" />
       </span>
       {t('notifications.title')}
-      <WeatherPeek className="ml-auto text-muted" />
+      <WeatherPeek className="ms-auto text-muted" />
     </Link>
   );
 }

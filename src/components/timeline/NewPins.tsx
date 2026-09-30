@@ -77,7 +77,7 @@ export function NewPins({ pins }: { pins: NewPin[] }) {
       <h2 id="new-pins-heading" className="flex shrink-0 items-center gap-2 px-3.5 pt-2.5 pb-1.5">
         <Icon name="sparkle" className="size-4 text-link" />
         <span className="font-medium text-ink">{t('newPins.heading')}</span>
-        <span className="ml-auto text-xs text-subtle">{t('newPins.latest')}</span>
+        <span className="ms-auto text-xs text-subtle">{t('newPins.latest')}</span>
       </h2>
       {/* Only whole rows, never a scrollbar: a row that does not fit wraps into
           a second column, which the clipping hides. */}

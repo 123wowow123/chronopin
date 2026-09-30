@@ -97,8 +97,8 @@ export function SignupForm({ providers }: { providers: SignInProvider[] }) {
           {t('signup.handle')}
         </label>
         <div className="field flex items-center p-0 focus-within:ring-2 focus-within:ring-link">
-          <span className="pl-3 text-subtle">@</span>
-          <input id="handle" maxLength={15} className="w-full bg-transparent py-2 pr-3 pl-0.5 text-ink focus:outline-none focus-visible:outline-none" value={form.handle} onChange={set('handle')} />
+          <span className="ps-3 text-subtle">@</span>
+          <input id="handle" maxLength={15} className="w-full bg-transparent py-2 pe-3 ps-0.5 text-ink focus:outline-none focus-visible:outline-none" value={form.handle} onChange={set('handle')} />
         </div>
         {handleValid && available === false ? <p className="mt-1.5 text-sm text-danger">{t('signup.handleTaken')}</p> : null}
         {handleValid && available ? <p className="mt-1.5 text-sm text-success">{t('signup.handleAvailable', { handle: `@${form.handle}` })}</p> : null}
@@ -161,7 +161,7 @@ export function SignupForm({ providers }: { providers: SignInProvider[] }) {
         </div>
       </div>
       {submitted && problems.length ? (
-        <ul role="alert" className="list-disc space-y-0.5 rounded-lg bg-red-500/10 py-2 pr-3 pl-7 text-sm text-danger-soft ring-1 ring-red-500/20 ring-inset">
+        <ul role="alert" className="list-disc space-y-0.5 rounded-lg bg-red-500/10 py-2 pe-3 ps-7 text-sm text-danger-soft ring-1 ring-red-500/20 ring-inset">
           {problems.map((p) => (
             <li key={p}>{p}</li>
           ))}

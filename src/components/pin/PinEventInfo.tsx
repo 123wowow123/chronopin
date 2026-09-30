@@ -48,7 +48,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
     <div className="mt-2 flex flex-col gap-2">
       {info.performers.length ? (
         <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-          <span className="mr-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.performersHeading')}</span>
+          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.performersHeading')}</span>
           {info.performers.map((performer, index) => (
             <span key={`${performer.name}-${index}`}>
               {performer.url ? (
@@ -65,7 +65,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
       ) : null}
       {hasTickets ? (
         <div className="flex flex-wrap items-center gap-2">
-          <span className="mr-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.ticketsHeading')}</span>
+          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.ticketsHeading')}</span>
           {price ? <span className="font-semibold tabular-nums">{price}</span> : null}
           {sale ? (
             <span className={info.availability === 'SoldOut' ? 'text-danger' : 'text-subtle'}>

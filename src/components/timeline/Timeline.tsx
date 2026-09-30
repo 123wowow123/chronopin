@@ -680,7 +680,7 @@ export function Timeline({
 
   return (
     <TimelineVideoProvider setting={video}>
-      <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
+      <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pe-[288px]">
         <FloatingControls
           merge
           typing={sliderTyping}
@@ -723,7 +723,7 @@ export function Timeline({
 
         <div ref={topRef} aria-hidden className="h-px" />
 
-        <div className="relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
+        <div className="relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:start-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
           {bags.map((bag, index) => (
             <div key={bag.day}>
               {marker.index === index ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}

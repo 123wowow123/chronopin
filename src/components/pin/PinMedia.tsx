@@ -359,7 +359,7 @@ export function PinMediaFrame({
   const labelled = shownSlides.every((slide) => String(slide.medium.type) === '1' || (!!poster && isVideo(slide.medium)));
 
   const frame = (
-    <div className={`group/media ${className}`}>
+    <div dir="ltr" className={`group/media ${className}`}>
       {/* touch-action keeps vertical scroll and pinch with the browser and
           hands sideways drags to the swipe - on each slide too, since a capped
           slide scrolls and so starts its own touch-action chain.

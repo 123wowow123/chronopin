@@ -21,7 +21,7 @@ export function CitedText({ text, evidence, hrefBase, omit }: { text: string; ev
           segment
         ) : (
           // A taller tap target than the 13px superscript, without moving the text.
-          <sup key={i} className="ml-px not-italic [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
+          <sup key={i} className="ms-px not-italic [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
             {segment.cite.map((n) =>
               hrefBase ? (
                 <Link key={n} href={`${hrefBase}#ref-${n}`} aria-label={t('references.referenceN', { n })} className="font-medium">

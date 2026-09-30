@@ -26,7 +26,7 @@ export function PinTags({ tags, categories, className = '' }: { tags?: PinTagJso
   // and they wrap under themselves when there are more than one line holds.
   return (
     <section aria-labelledby="tags-heading" className={`mb-4 flex flex-wrap items-baseline gap-1.5 text-sm ${className}`}>
-      <h2 id="tags-heading" className="mr-1 text-[11px] font-semibold tracking-wider text-subtle uppercase">
+      <h2 id="tags-heading" className="me-1 text-[11px] font-semibold tracking-wider text-subtle uppercase">
         {t('pin.tags')}
       </h2>
       <ul className="flex min-w-0 flex-1 flex-wrap gap-1.5">
@@ -40,7 +40,7 @@ export function PinTags({ tags, categories, className = '' }: { tags?: PinTagJso
                 tag.reserved ? 'border border-dashed border-line' : 'bg-field ring-1 ring-line ring-inset'
               }`}
             >
-              {tag.reserved ? <Icon name={tag.reserved.icon} className="mr-1 size-3.5" /> : null}
+              {tag.reserved ? <Icon name={tag.reserved.icon} className="me-1 size-3.5" /> : null}
               {tag.label}
             </RefineLink>
           </li>

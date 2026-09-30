@@ -84,7 +84,7 @@ function PhotoViewer({ src, onClose }: { src: string; onClose: () => void }) {
   }, [onClose]);
   return createPortal(
     <div role="dialog" aria-modal="true" aria-label={t('dm.viewPhoto')} onClick={onClose} className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4">
-      <button type="button" aria-label={t('common.close')} className="absolute top-3 right-3 flex size-10 items-center justify-center rounded-full text-white hover:bg-white/10">
+      <button type="button" aria-label={t('common.close')} className="absolute top-3 end-3 flex size-10 items-center justify-center rounded-full text-white hover:bg-white/10">
         <Icon name="close" className="size-6" />
       </button>
       <img src={src} alt="" className="max-h-full max-w-full object-contain" />
@@ -177,7 +177,7 @@ function EmojiButton({ disabled, onPick }: { disabled: boolean; onPick: (emoji: 
         <ReactionPicker
           id={pickerId}
           mine={null}
-          className="right-0"
+          className="end-0"
           onPick={(name) => {
             setOpen(false);
             onPick(COMMENT_REACTIONS.find((r) => r.name === name)!.emoji);
@@ -534,7 +534,7 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
                 <Fragment key={m.id}>
                   {stamp ? <div className="py-3 text-center text-xs text-subtle">{stampOf(m.utcCreatedDateTime, locale)}</div> : null}
                   {m.replyTo ? (
-                    <div className={`mt-2 flex items-center gap-1 text-xs text-subtle ${mine ? 'justify-end' : 'pl-9'}`}>
+                    <div className={`mt-2 flex items-center gap-1 text-xs text-subtle ${mine ? 'justify-end' : 'ps-9'}`}>
                       <Icon name="reply" className="size-3" />
                       {replyLine(m, m.replyTo)}
                     </div>
@@ -555,7 +555,7 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
                         <button
                           type="button"
                           onClick={() => jumpTo(m.replyTo!.id)}
-                          className={`-mb-2.5 line-clamp-2 max-w-full rounded-[18px] px-3 pt-1.5 pb-3.5 text-left text-[13px] leading-snug break-words whitespace-pre-wrap text-muted hover:text-ink ${
+                          className={`-mb-2.5 line-clamp-2 max-w-full rounded-[18px] px-3 pt-1.5 pb-3.5 text-start text-[13px] leading-snug break-words whitespace-pre-wrap text-muted hover:text-ink ${
                             m.replyTo.unsent ? 'italic ring-1 ring-line ring-inset' : 'bg-raised'
                           }`}
                         >
@@ -658,7 +658,7 @@ export function ChatThread({ userId, active, onMeta, className = '' }: { userId:
                     onClick={() => removePhoto(p.key)}
                     aria-label={t('dm.removePhoto')}
                     title={t('dm.removePhoto')}
-                    className="absolute -top-1.5 -right-1.5 flex size-5 items-center justify-center rounded-full bg-raised-2 text-ink shadow ring-1 ring-line"
+                    className="absolute -top-1.5 -end-1.5 flex size-5 items-center justify-center rounded-full bg-raised-2 text-ink shadow ring-1 ring-line"
                   >
                     <Icon name="close" className="size-3" />
                   </button>
