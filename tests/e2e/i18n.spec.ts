@@ -29,7 +29,7 @@ test.beforeAll(async ({ baseURL }) => {
   });
   expect(signup.ok()).toBe(true);
   await run(['scripts/data/e2eAdmin.ts', adminEmail]);
-  expect((await api.put('/api/admin/multilingual', { data: { locales: ['es', 'fr', 'de', 'ja', 'zh'] } })).ok()).toBe(true);
+  expect((await api.put('/api/admin/multilingual', { data: { locales: ['es', 'fr', 'de', 'ja', 'zh', 'ar'] } })).ok()).toBe(true);
   await api.dispose();
 });
 
@@ -106,5 +106,17 @@ test('a browser asking for French gets French on its first visit', async ({ brow
   await page.goto('/map');
   await expect(page).toHaveURL(/\/fr\/map$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
+  await context.close();
+});
+
+// Arabic reads right to left: the page says so, and the map's zoom buttons
+// move to its top right, clear of the controls now on the left.
+test('a browser asking for Arabic gets a right-to-left page', async ({ browser }) => {
+  const context = await browser.newContext({ locale: 'ar-EG' });
+  const page = await context.newPage();
+  await page.goto('/map');
+  await expect(page).toHaveURL(/\/ar\/map$/);
+  await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
+  await expect(page.locator('.leaflet-top.leaflet-right .leaflet-control-zoom')).toBeVisible();
   await context.close();
 });

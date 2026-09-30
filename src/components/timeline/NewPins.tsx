@@ -13,6 +13,7 @@ import { useT } from '@/lib/client/i18n';
 import { PlacePills } from './CityPill';
 import { cityOf } from '@/lib/city';
 import { StartsWhen } from './StartsWhen';
+import { pinTextDir } from '@/lib/i18n/config';
 
 // How many pins the new pins lists keep, matching the LIMIT newPins() in
 // src/server/services/pages.ts asks for.
@@ -105,7 +106,7 @@ export function NewPinRow({ pin }: { pin: NewPin }) {
         <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-9 w-14" />
       )}
       <span className="flex min-w-0 flex-col">
-        <span className="truncate leading-snug text-ink" title={pin.title}>
+        <span dir={pinTextDir(pin)} className="truncate leading-snug text-ink" title={pin.title}>
           {pin.title}
         </span>
         <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle">

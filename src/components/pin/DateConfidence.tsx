@@ -57,9 +57,13 @@ export function DateConfidence({ level }: { level?: string | null }) {
 
 // The reasoning on a line of its own under the badges. Split out so a row with
 // more badges after the level can keep them together and end with the reasoning.
-export function DateConfidenceReasoning({ reasoning, children }: { reasoning?: string | null; children?: ReactNode }) {
+export function DateConfidenceReasoning({ reasoning, dir, children }: { reasoning?: string | null; dir?: 'auto'; children?: ReactNode }) {
   if (!reasoning) {
     return null;
   }
-  return <span className="basis-full text-xs leading-relaxed text-subtle italic">{children ?? reasoning}</span>;
+  return (
+    <span dir={dir} className="basis-full text-xs leading-relaxed text-subtle italic">
+      {children ?? reasoning}
+    </span>
+  );
 }
