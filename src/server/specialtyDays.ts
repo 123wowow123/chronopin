@@ -7,6 +7,7 @@
 import type { Locale } from '@/lib/i18n/config';
 import type { SpecialtyDay } from '@/lib/specialtyDays';
 import english from './data/specialtyDays.json';
+import ar from './data/specialtyDays.ar.json';
 import de from './data/specialtyDays.de.json';
 import es from './data/specialtyDays.es.json';
 import fr from './data/specialtyDays.fr.json';
@@ -20,7 +21,7 @@ import th from './data/specialtyDays.th.json';
 import zh from './data/specialtyDays.zh.json';
 
 const NAMES = english as Record<string, string[]>;
-const LABELS: Partial<Record<Locale, Record<string, string>>> = { de, es, fr, hi, it, ja, ko, pt, ru, th, zh };
+const LABELS: Partial<Record<Locale, Record<string, string>>> = { ar, de, es, fr, hi, it, ja, ko, pt, ru, th, zh };
 
 // One date's ("09-24") specialty days.
 export function specialtyDaysOn(monthDay: string, locale: Locale): SpecialtyDay[] {
