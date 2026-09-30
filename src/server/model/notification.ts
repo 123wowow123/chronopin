@@ -195,15 +195,21 @@ export default class Notification {
   // unread one already has it brought up to date instead (the unique index),
   // so an edit made five times is one entry - and one browser notification.
   // Sent only where the bell would show it, as writeDueAlerts does.
-  static async createForWatchers({ pinId, actorId }: { pinId: number; actorId: number }, query: QueryFn = db.query): Promise<number[]> {
+  // threadWatcherIds: readers watching the thread the pin is in, told whether
+  // or not they still watch this pin itself.
+  static async createForWatchers(
+    { pinId, actorId, threadWatcherIds = [] }: { pinId: number; actorId: number; threadWatcherIds?: number[] },
+    query: QueryFn = db.query,
+  ): Promise<number[]> {
     const rows = await query(
       `
       WITH written AS (
         INSERT INTO "Notification" ("userId", "actorId", "type", "pinId")
-        SELECT f."userId", $2, 'update', $1
-        FROM "Favorite" f
-        JOIN "User" u ON u."id" = f."userId" AND u."utcDeletedDateTime" IS NULL
-        WHERE f."pinId" = $1 AND f."utcDeletedDateTime" IS NULL AND f."userId" <> $2
+        SELECT u."id", $2, 'update', $1
+        FROM "User" u
+        WHERE u."utcDeletedDateTime" IS NULL AND u."id" <> $2
+          AND (u."id" = ANY($3::integer[])
+            OR EXISTS (SELECT 1 FROM "Favorite" f WHERE f."userId" = u."id" AND f."pinId" = $1 AND f."utcDeletedDateTime" IS NULL))
         ON CONFLICT ("userId", "pinId") WHERE "type" = 'update' AND "utcReadDateTime" IS NULL AND "utcDeletedDateTime" IS NULL
         DO UPDATE SET "actorId" = EXCLUDED."actorId", "utcCreatedDateTime" = now()
         RETURNING "userId", (xmax = 0) AS "inserted"
@@ -213,7 +219,7 @@ export default class Notification {
       JOIN "Pin" p ON p."id" = $1
       WHERE NOT ${blockedBetween('w."userId"', '$2')}
         AND NOT EXISTS (SELECT 1 FROM "CompanyBlock" cb WHERE cb."userId" = w."userId" AND cb."companyId" = p."companyId")`,
-      [pinId, actorId],
+      [pinId, actorId, threadWatcherIds],
     );
     announce(query, rows);
     return rows.filter((row) => row.inserted).map((row) => Number(row.userId));
