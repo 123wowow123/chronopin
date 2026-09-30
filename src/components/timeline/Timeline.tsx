@@ -501,10 +501,20 @@ export function Timeline({
         setPins((list) => {
           const index = list.findIndex((p) => p.id === changed.id);
           if (index !== -1) {
-            // Broadcasts carry no viewer, so keep this viewer's own watch state,
-            // nor impressions, so keep the count the day's pick was drawn with.
+            // Broadcasts carry no viewer, so keep this viewer's own watch state.
+            // Watches, opens and impressions stay the counts the day's pick was
+            // drawn with: a watch (this viewer's or anyone's) moving the card
+            // under the reader waits for the next load. The card's own watch
+            // and view counts follow the live stream themselves.
+            const prev = list[index];
             const next = [...list];
-            next[index] = { ...withHtml, hasFavorite: list[index].hasFavorite, impressionCount: list[index].impressionCount };
+            next[index] = {
+              ...withHtml,
+              hasFavorite: prev.hasFavorite,
+              favoriteCount: prev.favoriteCount,
+              viewCount: prev.viewCount,
+              impressionCount: prev.impressionCount,
+            };
             return next;
           }
           if (type !== 'pin:save' || !list.length) return list;
