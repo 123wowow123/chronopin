@@ -35,6 +35,8 @@ kube/pod-preset-prod.yaml
 scripts/backup/seedUsers.json
 scripts/backup/seedMessages.json
 scripts/backup/seedListings.json
+# Every table as it stands (npm run backup:tables): hashes, chats, push keys.
+scripts/backup/tables/
 
 # npm run okf:export
 /okf-bundle/
