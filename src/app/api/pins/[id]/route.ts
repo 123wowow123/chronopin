@@ -8,6 +8,7 @@ import PinDuplicate from '@/server/model/pinDuplicate';
 import PinReference from '@/server/model/pinReference';
 import type User from '@/server/model/user';
 import { invalidatePin } from '@/server/services/cache';
+import { welcomeToThread } from '@/server/services/watchAlerts';
 import { recordPinUpdate } from '@/server/services/pinUpdates';
 import { addedReferences } from '@/lib/pinUpdates';
 import { addPinStocksQuietly } from '@/server/services/pinStocks';
@@ -115,6 +116,7 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   invalidatePin(updated.id);
   // A response moved between threads leaves one and joins the other.
   for (const parentId of new Set([existing.parentId, updated.parentId])) if (parentId) invalidatePin(parentId);
+  if (updated.parentId && updated.parentId !== existing.parentId) after(() => welcomeToThread(updated.id, updated.userId ?? user.id));
   if (stocks.length) after(() => addPinStocksQuietly(updated.id, stocks));
 
   const { pin: stored } = await Pin.queryById(updated.id, user.id);

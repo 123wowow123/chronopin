@@ -120,7 +120,9 @@ const fr: Messages = {
     start: '<pin></pin> commence maintenant',
     soon: '<pin></pin> commence dans {minutes} minutes',
     update: '<pin></pin> a été mis à jour',
+    thread: '<pin></pin> a été ajouté à un fil que vous suivez',
     whyWatch: 'Une épingle que vous suivez',
+    whyThread: 'Un fil que vous suivez',
     whyCompany: 'Vous suivez {company}',
     whyUser: 'Vous suivez {user}',
     whyYourPin: 'Votre épingle',
@@ -462,6 +464,7 @@ const fr: Messages = {
   alerts: {
     start: 'Commence maintenant · un pin que vous suivez',
     update: 'Mis à jour · un pin que vous suivez',
+    thread: 'Nouveau · un fil que vous suivez',
     soon: { one: 'Commence dans {count} minute · un pin que vous suivez', other: 'Commence dans {count} minutes · un pin que vous suivez' },
   },
   categories: {
@@ -896,6 +899,8 @@ const fr: Messages = {
     stop: 'Ne plus suivre',
     start: 'Suivre cette épingle',
     count: '{count} abonnés',
+    startThread: 'Suivre ce fil',
+    stopThread: 'Ne plus suivre ce fil',
   },
   odds: {
     trendUp: '{label} {percent} sur {source}, en hausse de {points} points cette semaine',

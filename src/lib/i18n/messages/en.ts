@@ -121,7 +121,9 @@ const en = {
     start: '<pin></pin> is starting now',
     soon: '<pin></pin> starts in {minutes} minutes',
     update: '<pin></pin> was updated',
+    thread: '<pin></pin> was added to a thread you watch',
     whyWatch: 'A pin you watch',
+    whyThread: 'A thread you watch',
     whyCompany: 'You follow {company}',
     whyUser: 'You follow {user}',
     whyYourPin: 'Your pin',
@@ -464,6 +466,7 @@ const en = {
   alerts: {
     start: 'Starting now · a pin you watch',
     update: 'Updated · a pin you watch',
+    thread: 'New in a thread you watch',
     soon: { one: 'Starts in {count} minute · a pin you watch', other: 'Starts in {count} minutes · a pin you watch' },
   },
   categories: {
@@ -897,6 +900,8 @@ const en = {
     stop: 'Stop watching',
     start: 'Watch this pin',
     count: '{count} watching',
+    startThread: 'Watch this thread',
+    stopThread: 'Stop watching this thread',
   },
   odds: {
     trendUp: '{label} {percent} on {source}, up {points} points this week',

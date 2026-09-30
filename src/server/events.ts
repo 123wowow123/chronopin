@@ -74,7 +74,7 @@ export function onMessagesChanged(listener: (userId: number) => void) {
 // A watched pin is starting, or about to (services/watchAlerts.ts): the live
 // feed hands it to that user's own open pages, which show it as a browser
 // notification.
-export type WatchAlert = { userId: number; pinId: number; type: 'start' | 'soon' | 'update'; title: string; body: string; url: string; image: string | null; tag: string };
+export type WatchAlert = { userId: number; pinId: number; type: 'start' | 'soon' | 'update' | 'thread'; title: string; body: string; url: string; image: string | null; tag: string };
 
 const WATCH_ALERT = 'watchAlert';
 

@@ -120,7 +120,9 @@ const es: Messages = {
     start: '<pin></pin> empieza ahora',
     soon: '<pin></pin> empieza en {minutes} minutos',
     update: '<pin></pin> se ha actualizado',
+    thread: '<pin></pin> se añadió a un hilo que sigues',
     whyWatch: 'Un pin que sigues',
+    whyThread: 'Un hilo que sigues',
     whyCompany: 'Sigues a {company}',
     whyUser: 'Sigues a {user}',
     whyYourPin: 'Tu pin',
@@ -462,6 +464,7 @@ const es: Messages = {
   alerts: {
     start: 'Empieza ahora · un pin que sigues',
     update: 'Actualizado · un pin que sigues',
+    thread: 'Nuevo · un hilo que sigues',
     soon: { one: 'Empieza en {count} minuto · un pin que sigues', other: 'Empieza en {count} minutos · un pin que sigues' },
   },
   categories: {
@@ -896,6 +899,8 @@ const es: Messages = {
     stop: 'Dejar de seguir',
     start: 'Seguir este pin',
     count: '{count} siguiendo',
+    startThread: 'Seguir este hilo',
+    stopThread: 'Dejar de seguir este hilo',
   },
   odds: {
     trendUp: '{label} {percent} en {source}, {points} puntos más esta semana',

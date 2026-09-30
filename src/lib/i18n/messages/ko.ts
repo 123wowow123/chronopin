@@ -120,7 +120,9 @@ const ko: Messages = {
     start: '<pin></pin>이(가) 지금 시작됩니다',
     soon: '<pin></pin>이(가) {minutes}분 후 시작됩니다',
     update: '<pin></pin>이(가) 업데이트되었습니다',
+    thread: '지켜보는 스레드에 <pin></pin>이(가) 추가되었습니다',
     whyWatch: '관심 핀',
+    whyThread: '지켜보는 스레드',
     whyCompany: '{company} 팔로우 중',
     whyUser: '{user}님 팔로우 중',
     whyYourPin: '내 핀',
@@ -462,6 +464,7 @@ const ko: Messages = {
   alerts: {
     start: '지금 시작 · 지켜보는 핀',
     update: '업데이트됨 · 지켜보는 핀',
+    thread: '새 핀 · 지켜보는 스레드',
     soon: '{count}분 후 시작 · 지켜보는 핀',
   },
   categories: {
@@ -890,6 +893,8 @@ const ko: Messages = {
     stop: '관심 해제',
     start: '관심 핀으로 추가',
     count: '{count}명이 관심 등록',
+    startThread: '이 스레드 지켜보기',
+    stopThread: '스레드 지켜보기 해제',
   },
   odds: {
     trendUp: '{source}의 {label} {percent}, 이번 주 {points}포인트 상승',

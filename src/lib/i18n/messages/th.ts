@@ -120,7 +120,9 @@ const th: Messages = {
     start: '<pin></pin> กำลังเริ่มตอนนี้',
     soon: '<pin></pin> จะเริ่มในอีก {minutes} นาที',
     update: '<pin></pin> ได้รับการอัปเดต',
+    thread: '<pin></pin> ถูกเพิ่มในเธรดที่คุณติดตาม',
     whyWatch: 'หมุดที่คุณติดตาม',
+    whyThread: 'เธรดที่คุณติดตาม',
     whyCompany: 'คุณติดตาม {company}',
     whyUser: 'คุณติดตาม {user}',
     whyYourPin: 'หมุดของคุณ',
@@ -460,6 +462,7 @@ const th: Messages = {
   alerts: {
     start: 'เริ่มแล้วตอนนี้ · หมุดที่คุณติดตาม',
     update: 'อัปเดตแล้ว · หมุดที่คุณติดตาม',
+    thread: 'ใหม่ · เธรดที่คุณติดตาม',
     soon: 'เริ่มในอีก {count} นาที · หมุดที่คุณติดตาม',
   },
   categories: {
@@ -886,6 +889,8 @@ const th: Messages = {
     stop: 'เลิกติดตาม',
     start: 'ติดตามหมุดนี้',
     count: 'ติดตาม {count} คน',
+    startThread: 'ติดตามเธรดนี้',
+    stopThread: 'เลิกติดตามเธรดนี้',
   },
   odds: {
     trendUp: '{label} {percent} บน {source} เพิ่มขึ้น {points} จุดในสัปดาห์นี้',

@@ -117,6 +117,8 @@ function reasonOf(n: Notification, t: Translator): { icon: IconName; label: stri
     case 'soon':
     case 'update':
       return { icon: 'eye', label: t('notifications.whyWatch') };
+    case 'thread':
+      return { icon: 'eye', label: t('notifications.whyThread') };
     case 'company':
       return n.companyName
         ? { icon: 'users', label: t('notifications.whyCompany', { company: n.companyName }), href: companyHref(n.companyName) }
@@ -175,7 +177,7 @@ function useNotificationList() {
 function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () => void }) {
   const handle = n.actor.userName.replace(/^@+/, '');
   const face =
-    n.type === 'today' || n.type === 'start' || n.type === 'soon' || n.type === 'update' ? (
+    n.type === 'today' || n.type === 'start' || n.type === 'soon' || n.type === 'update' || n.type === 'thread' ? (
       <span aria-hidden className="flex size-8 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
         <Icon name="target" className="size-4" />
       </span>
@@ -267,6 +269,10 @@ function NotificationItems({
                 ) : n.type === 'update' && n.pinId ? (
                   <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#updates`} className="block text-ink" onClick={onNavigate}>
                     {t.rich('notifications.update', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                  </Link>
+                ) : n.type === 'thread' && n.pinId ? (
+                  <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
+                    {t.rich('notifications.thread', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
                   </Link>
                 ) : n.type === 'pin' && n.pinId ? (
                   <PinRowLink n={n} onNavigate={onNavigate}>

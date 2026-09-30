@@ -142,7 +142,9 @@ const ar: Messages = {
     start: 'يبدأ <pin></pin> الآن',
     soon: 'يبدأ <pin></pin> خلال {minutes} دقيقة',
     update: 'تم تحديث <pin></pin>',
+    thread: 'أُضيف <pin></pin> إلى سلسلة تراقبها',
     whyWatch: 'دبوس تراقبه',
+    whyThread: 'سلسلة تراقبها',
     whyCompany: 'أنت تتابع {company}',
     whyUser: 'أنت تتابع {user}',
     whyYourPin: 'دبوسك',
@@ -505,6 +507,7 @@ const ar: Messages = {
   alerts: {
     start: 'يبدأ الآن · دبوس تراقبه',
     update: 'تم التحديث · دبوس تراقبه',
+    thread: 'جديد · سلسلة تراقبها',
     soon: {
       zero: 'يبدأ خلال أقل من دقيقة · دبوس تراقبه',
       one: 'يبدأ خلال دقيقة · دبوس تراقبه',
@@ -1101,6 +1104,8 @@ const ar: Messages = {
     stop: 'إيقاف المراقبة',
     start: 'مراقبة هذا الدبوس',
     count: 'يراقبه {count}',
+    startThread: 'مراقبة هذه السلسلة',
+    stopThread: 'إيقاف مراقبة هذه السلسلة',
   },
   odds: {
     trendUp: '{label} {percent} على {source}، بارتفاع {points} نقطة هذا الأسبوع',

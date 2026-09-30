@@ -120,7 +120,9 @@ const de: Messages = {
     start: '<pin></pin> beginnt jetzt',
     soon: '<pin></pin> beginnt in {minutes} Minuten',
     update: '<pin></pin> wurde aktualisiert',
+    thread: '<pin></pin> ist neu in einem Thread, den du beobachtest',
     whyWatch: 'Pin, den du beobachtest',
+    whyThread: 'Thread, den du beobachtest',
     whyCompany: 'Du folgst {company}',
     whyUser: 'Du folgst {user}',
     whyYourPin: 'Dein Pin',
@@ -462,6 +464,7 @@ const de: Messages = {
   alerts: {
     start: 'Beginnt jetzt · ein Pin, den du beobachtest',
     update: 'Aktualisiert · ein Pin, den du beobachtest',
+    thread: 'Neu · ein Thread, den du beobachtest',
     soon: { one: 'Beginnt in {count} Minute · ein Pin, den du beobachtest', other: 'Beginnt in {count} Minuten · ein Pin, den du beobachtest' },
   },
   categories: {
@@ -896,6 +899,8 @@ const de: Messages = {
     stop: 'Nicht mehr beobachten',
     start: 'Diesen Pin beobachten',
     count: '{count} beobachten',
+    startThread: 'Diesen Thread beobachten',
+    stopThread: 'Thread nicht mehr beobachten',
   },
   odds: {
     trendUp: '{label} {percent} auf {source}, diese Woche {points} Punkte gestiegen',
