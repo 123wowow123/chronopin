@@ -23,13 +23,13 @@ export function PinWeather({ pinId }: { pinId: number }) {
 
   if (!weather) return null;
   return (
-    <div className={`mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 rounded-lg border border-l-4 border-line bg-panel px-3 py-2 text-sm ${weather.kind === 'typical' ? 'border-l-subtle' : 'border-l-amber-400'}`}>
+    <div className={`mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 rounded-lg border border-s-4 border-line bg-panel px-3 py-2 text-sm ${weather.kind === 'typical' ? 'border-l-subtle' : 'border-l-amber-400'}`}>
       <Icon name={weather.icon} className="size-5 text-warning" />
       <div className="flex items-baseline gap-2">
         <span className="text-xs font-bold tracking-wider text-warning uppercase">{weather.heading}</span>
         {weather.label ? <span className="text-ink">{weather.label}</span> : null}
       </div>
-      <div className="ml-auto flex flex-wrap items-center gap-x-3 text-ink">
+      <div className="ms-auto flex flex-wrap items-center gap-x-3 text-ink">
         <span title={t('weather.highLow', { unit: weather.unit })}>
           <span className="font-semibold">{weather.high}</span> <span className="text-subtle">{weather.low}</span>
         </span>

@@ -261,8 +261,12 @@
     background-position: right 0.75rem center;
     background-size: 1rem;
   }
+  [dir='rtl'] select.field,
+  [dir='rtl'] input.field[list] {
+    background-position: left 0.75rem center;
+  }
   select.field {
-    @apply cursor-pointer appearance-none pr-10;
+    @apply cursor-pointer appearance-none pe-10;
   }
   select.field:hover {
     @apply ring-subtle/60;
@@ -359,7 +363,7 @@
       content: "";
       position: absolute;
       top: 50%;
-      left: 100%;
+      inset-inline-start: 100%;
       width: var(--tag-reach, 14px);
       height: 1px;
       background: var(--color-rail);
@@ -396,7 +400,7 @@
   }
   .rich-text th,
   .rich-text td {
-    @apply min-w-[5.5rem] border border-line px-2 py-1 text-left align-top;
+    @apply min-w-[5.5rem] border border-line px-2 py-1 text-start align-top;
   }
   .rich-text thead th {
     @apply bg-panel font-semibold text-ink;
@@ -405,7 +409,7 @@
     @apply min-w-[8rem] font-medium text-ink;
   }
   .rich-text caption {
-    @apply mb-1 text-left text-xs text-muted;
+    @apply mb-1 text-start text-xs text-muted;
   }
 
   /* YouTube embeds keep a 16:9 box. */

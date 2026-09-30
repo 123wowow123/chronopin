@@ -222,7 +222,7 @@ function MoodSummary({ mood, total }: { mood: CommentMood; total: number }) {
             {t(trend.label)}
           </span>
         ) : null}
-        <span className="ml-auto text-xs text-subtle">
+        <span className="ms-auto text-xs text-subtle">
           {/* Comments still waiting on a score are counted but sit out. */}
           {mood.scored < total ? t('comments.fromSome', { scored: mood.scored, count: total }) : t('comments.fromAll', { count: mood.scored })}
         </span>
@@ -296,7 +296,7 @@ function CommentItem({
       <div className="flex gap-2">
         <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="mt-5 size-9 shrink-0 text-xs" />
         <div className="min-w-0 flex-1">
-          <div className="mb-0.5 truncate pl-4 text-xs text-subtle">{node.userName}</div>
+          <div className="mb-0.5 truncate ps-4 text-xs text-subtle">{node.userName}</div>
           <div className={`group/comment relative flex items-center gap-1 ${reacted ? 'mb-3' : ''}`}>
             {node.hidden ? (
               // Reported too often: it keeps its place in the thread, empty,
@@ -359,7 +359,7 @@ function CommentItem({
               </div>
             </form>
           ) : null}
-          {node.replies.length ? <ul className="mt-3 space-y-3 border-l border-line pl-3">{node.replies.map(renderChild)}</ul> : null}
+          {node.replies.length ? <ul className="mt-3 space-y-3 border-s border-line ps-3">{node.replies.map(renderChild)}</ul> : null}
         </div>
       </div>
     </li>
@@ -376,7 +376,7 @@ function ReactionSummary({ node }: { node: CommentJson }) {
   if (!total) return null;
   return (
     <span
-      className="absolute right-2 -bottom-3.5 inline-flex items-center gap-0.5 rounded-full bg-panel px-1.5 py-0.5 text-xs whitespace-nowrap text-subtle tabular-nums shadow-sm ring-1 ring-line"
+      className="absolute end-2 -bottom-3.5 inline-flex items-center gap-0.5 rounded-full bg-panel px-1.5 py-0.5 text-xs whitespace-nowrap text-subtle tabular-nums shadow-sm ring-1 ring-line"
       aria-label={t('comments.reactions', { count: total })}
       title={given.map((r) => `${r.emoji} ${counts[r.name]}`).join('  ')}
     >
@@ -554,7 +554,7 @@ function CommentMenu({
     }
   }
 
-  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none active:bg-ink/[0.12]';
+  const item = 'block w-full rounded-lg px-3 py-2 text-start text-base font-medium hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none active:bg-ink/[0.12]';
   return (
     <span ref={rootRef} className="relative inline-flex">
       <button
@@ -576,9 +576,9 @@ function CommentMenu({
           ref={menuRef}
           id={menuId}
           role="menu"
-          className={`absolute right-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-ink/10 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
+          className={`absolute end-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-ink/10 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
         >
-          <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-ink/10 bg-popover" />
+          <span aria-hidden className="absolute -bottom-1.5 end-3 size-3 rotate-45 border-r border-b border-ink/10 bg-popover" />
           {view === 'actions' ? (
             <>
               {canDelete ? (

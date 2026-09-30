@@ -131,7 +131,7 @@ function CardMarket({ market, source = market?.source }: { market?: MarketOdds; 
         ) : (
           <span className="w-2/5 animate-pulse truncate rounded bg-raised motion-reduce:animate-none">{' '}</span>
         )}
-        <span className="ml-auto inline-flex shrink-0 items-center gap-1.5 font-semibold tracking-wider uppercase">
+        <span className="ms-auto inline-flex shrink-0 items-center gap-1.5 font-semibold tracking-wider uppercase">
           {market?.closed ? <span className="text-warning">{t('odds.closed')}</span> : market ? <LiveDot fetchedAt={market.fetchedAt} /> : null}
           {source}
         </span>
@@ -171,7 +171,7 @@ function Market({ market }: { market: MarketOdds }) {
           {market.title}
           <Icon name="external" className="size-3 shrink-0" />
         </a>
-        <span className="ml-auto shrink-0 text-xs font-semibold tracking-wider text-subtle uppercase">{market.source}</span>
+        <span className="ms-auto shrink-0 text-xs font-semibold tracking-wider text-subtle uppercase">{market.source}</span>
       </div>
       <ul ref={listRef} className="flex flex-col gap-1.5">
         {shown.map((outcome) => (
@@ -190,7 +190,7 @@ function Market({ market }: { market: MarketOdds }) {
         {market.outcomes.length > SHOWN_OUTCOMES ? <span>{t('odds.moreOutcomes', { count: market.outcomes.length - SHOWN_OUTCOMES })}</span> : null}
         {market.volume ? <span>{t('odds.traded', { amount: compactUsd(t.locale).format(market.volume) })}</span> : null}
         {market.closeTime && !market.closed ? <span>{t('odds.closes', { date: closeDate(t.locale).format(new Date(market.closeTime)) })}</span> : null}
-        <a href={market.url} target="_blank" rel="noopener nofollow" className="ml-auto inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline">
+        <a href={market.url} target="_blank" rel="noopener nofollow" className="ms-auto inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline">
           {t('odds.viewOn', { source: market.source })}
           <Icon name="external" className="size-3" />
         </a>
@@ -255,14 +255,14 @@ function Outcome({ outcome, compact }: { outcome: MarketOutcome; compact: boolea
         <span
           ref={barRef}
           aria-hidden
-          className={`absolute inset-y-0 left-0 transition-colors duration-700 motion-reduce:transition-none ${fill}`}
+          className={`absolute inset-y-0 start-0 transition-colors duration-700 motion-reduce:transition-none ${fill}`}
           style={{ width: barWidth(target) }}
         />
         <span className="relative block truncate text-ink" title={outcome.label}>
           {outcome.label}
         </span>
       </span>
-      <span className={`text-right font-semibold tabular-nums transition-colors duration-700 motion-reduce:transition-none ${compact ? 'w-9' : 'w-11'} ${text}`}>
+      <span className={`text-end font-semibold tabular-nums transition-colors duration-700 motion-reduce:transition-none ${compact ? 'w-9' : 'w-11'} ${text}`}>
         {percent(shown)}
       </span>
     </li>

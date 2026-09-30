@@ -8,7 +8,7 @@ import { useT } from '@/lib/client/i18n';
 export function TimelineSkeleton() {
   const t = useT();
   return (
-    <div className="px-3 pt-6 lg:pl-[190px]" aria-busy="true" aria-label={t('timeline.loading')}>
+    <div className="px-3 pt-6 lg:ps-[190px]" aria-busy="true" aria-label={t('timeline.loading')}>
       {[0, 1, 2].map((i) => (
         <div key={i} className="mb-3 h-72 max-w-[448px] animate-pulse rounded-xl border border-line bg-panel" />
       ))}

@@ -13,7 +13,7 @@ export function ReactionPicker({
   id,
   mine,
   onPick,
-  className = 'left-0',
+  className = 'start-0',
 }: {
   id: string;
   mine: CommentReactionName | null;

@@ -385,7 +385,7 @@ export function ListingForm({
 
   const body = (
     <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)] lg:grid-cols-[400px_minmax(0,1fr)]">
-      <div className="flex min-h-0 flex-col border-line lg:border-r">
+      <div className="flex min-h-0 flex-col border-line lg:border-e">
         <div ref={scroller} className="min-h-0 flex-1 space-y-4 overflow-y-auto px-4 pt-4 pb-6">
           <div>
             <p className="text-xs text-subtle">{t('listing.marketplace')}</p>
@@ -409,7 +409,7 @@ export function ListingForm({
             return (
               <section key={entry.section} className="space-y-3 border-t border-line pt-4">
                 {entry.folded ? (
-                  <button type="button" aria-expanded={!folded} onClick={() => setOpen((o) => ({ ...o, [entry.section]: !!folded }))} className="flex w-full items-center gap-2 text-left">
+                  <button type="button" aria-expanded={!folded} onClick={() => setOpen((o) => ({ ...o, [entry.section]: !!folded }))} className="flex w-full items-center gap-2 text-start">
                     <span className="flex-1">
                       <span className="block font-semibold text-ink">{t.dynamic(`listing.sections.${entry.section}`, entry.section)}</span>
                       <span className="block text-sm text-subtle">{t.dynamic(`listing.sectionHints.${entry.section}`, '')}</span>
@@ -630,12 +630,12 @@ function MediaPicker({
           <div key={name} className="group relative aspect-square overflow-hidden rounded-lg bg-raised">
             {/* eslint-disable-next-line @next/next/no-img-element -- the seller's own upload */}
             <img src={mediaUrl(name)} alt={t('listing.photoN', { n: i + 1 })} className="size-full object-cover" />
-            {i === 0 && kind !== 'job' ? <span className="media-chip absolute bottom-1.5 left-1.5">{t('listing.cover')}</span> : null}
+            {i === 0 && kind !== 'job' ? <span className="media-chip absolute bottom-1.5 start-1.5">{t('listing.cover')}</span> : null}
             <button
               type="button"
               onClick={() => onRemove(name)}
               aria-label={t('listing.removePhoto', { n: i + 1 })}
-              className="absolute top-1.5 right-1.5 flex size-7 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80"
+              className="absolute top-1.5 end-1.5 flex size-7 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80"
             >
               <Icon name="close" className="size-4" />
             </button>
@@ -645,7 +645,7 @@ function MediaPicker({
           <div className="relative aspect-square overflow-hidden rounded-lg bg-black">
             <video src={mediaUrl(video)} muted playsInline className="size-full object-cover" />
             <Icon name="play" className="pointer-events-none absolute inset-0 m-auto size-8 fill-current text-white/90" />
-            <button type="button" onClick={() => onRemove('video')} aria-label={t('listing.removeVideo')} className="absolute top-1.5 right-1.5 flex size-7 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80">
+            <button type="button" onClick={() => onRemove('video')} aria-label={t('listing.removeVideo')} className="absolute top-1.5 end-1.5 flex size-7 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80">
               <Icon name="close" className="size-4" />
             </button>
           </div>
@@ -778,7 +778,7 @@ function PlacePicker({
   return (
     <div>
       <div className="relative">
-        <Icon name="pin" className="pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 text-muted" />
+        <Icon name="pin" className="pointer-events-none absolute top-1/2 start-3 size-5 -translate-y-1/2 text-muted" />
         {/* Text, not search: a search box's own Escape and × would empty it
             rather than put the place back. */}
         <input
@@ -792,7 +792,7 @@ function PlacePicker({
           autoComplete="off"
           aria-label={label}
           placeholder={label}
-          className={`field py-3 pr-12 pl-10 ${invalid ? 'ring-2 ring-danger' : ''}`}
+          className={`field py-3 pe-12 ps-10 ${invalid ? 'ring-2 ring-danger' : ''}`}
           value={query ?? shown}
           onChange={(e) => setQuery(e.target.value)}
           onBlur={() => setQuery(null)}
@@ -817,7 +817,7 @@ function PlacePicker({
           disabled={locating}
           aria-label={t('profile.locationUseDevice')}
           title={t('profile.locationUseDevice')}
-          className="absolute top-1/2 right-1.5 flex size-9 -translate-y-1/2 items-center justify-center rounded-md text-muted transition-colors hover:bg-raised hover:text-ink focus-visible:ring-2 focus-visible:ring-link focus-visible:outline-none active:bg-raised-2 disabled:cursor-wait"
+          className="absolute top-1/2 end-1.5 flex size-9 -translate-y-1/2 items-center justify-center rounded-md text-muted transition-colors hover:bg-raised hover:text-ink focus-visible:ring-2 focus-visible:ring-link focus-visible:outline-none active:bg-raised-2 disabled:cursor-wait"
         >
           {locating ? (
             <span className="size-4 animate-spin rounded-full border-2 border-current border-t-transparent" />

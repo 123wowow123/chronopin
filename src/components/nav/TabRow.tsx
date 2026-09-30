@@ -41,7 +41,7 @@ export function TabRow({ current, children }: { current: string; children: React
   const step = (way: -1 | 1) => row.current?.scrollBy({ left: way * row.current.clientWidth * 0.7, behavior: 'smooth' });
 
   return (
-    <div className="relative -mb-px flex min-w-0">
+    <div dir="ltr" className="relative -mb-px flex min-w-0">
       <div ref={row} className="flex min-w-0 gap-1.5 overflow-x-auto [scrollbar-width:none] sm:gap-3">
         {children}
       </div>
@@ -56,7 +56,7 @@ function Arrow({ side, label, onStep }: { side: 'before' | 'after'; label: strin
   return (
     <div
       className={`pointer-events-none absolute inset-y-0 bottom-0.5 flex items-center ${
-        side === 'before' ? 'left-0 bg-linear-to-r pr-6' : 'right-0 justify-end bg-linear-to-l pl-6'
+        side === 'before' ? 'start-0 bg-linear-to-r pe-6' : 'end-0 justify-end bg-linear-to-l ps-6'
       } from-page from-60% to-transparent`}
     >
       <button

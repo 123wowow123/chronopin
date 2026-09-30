@@ -24,7 +24,7 @@ import { markerLabel } from '@/lib/i18n/labels';
 const tagBase = 'tag lg:w-full';
 const leadTag = 'shrink-0';
 const extraTag = 'min-w-0';
-const tagRow = 'absolute top-0 right-0 left-0 flex gap-1.5 overflow-hidden lg:right-auto lg:w-[110px] lg:flex-col lg:overflow-visible';
+const tagRow = 'absolute top-0 end-0 start-0 flex gap-1.5 overflow-hidden lg:end-auto lg:w-[110px] lg:flex-col lg:overflow-visible';
 
 // The columns a day grows past its second, in the order the window brings
 // them in: the class that puts the column on screen, how many tracks the day
@@ -173,7 +173,7 @@ export function TimeBlock({
   return (
     <section ref={sectionRef} id={id ?? `day-${bag.day}`} data-day={bag.day} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
       <div
-        className={`rail-marker absolute top-6 cursor-default left-[140px] z-10 -ml-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
+        className={`rail-marker absolute top-6 cursor-default start-[140px] z-10 -ms-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
         title={`${planet.planet}\n${planet.weekday}\n${t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })}`}
       >
         {/* The circle is the day's moon: its lit part a soft tint behind the planet. */}
@@ -221,7 +221,7 @@ export function TimeBlock({
         // The tag column's height is only reserved beside the rail; on narrow
         // screens the tags are one row above, so the day is just its titles.
         <ul
-          className="lg:ml-[170px] lg:min-h-[max(120px,var(--tags-h))] lg:pt-7"
+          className="lg:ms-[170px] lg:min-h-[max(120px,var(--tags-h))] lg:pt-7"
           style={{ ['--tags-h' as string]: `${tagsHeight}px` }}
         >
           {bag.dateTimes.map((dt) => (
@@ -250,7 +250,7 @@ function PinColumns({ tagsHeight, cards, ranks }: { tagsHeight: number; cards: R
   const byRank = (from: number, to: number) => cards.filter((_, i) => ranks[i] >= from && ranks[i] < to);
   const first = byRank(0, BAG_LIMIT);
   return (
-    <div role="list" className={`${rowTracks} lg:ml-[170px] lg:min-h-(--tags-h) ${rowWidth}`} style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
+    <div role="list" className={`${rowTracks} lg:ms-[170px] lg:min-h-(--tags-h) ${rowWidth}`} style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
       {[0, 1].map((parity) => (
         <div key={parity} className={firstColumn}>
           {first.filter((_, i) => i % 2 === parity)}
@@ -316,7 +316,7 @@ function DayCard({
 function ShowMore({ href, total, fresh, hiddenFrom }: { href: string; total: number; fresh: number; hiddenFrom: string }) {
   const t = useT();
   return (
-    <div className={`mb-2.5 flex justify-center lg:ml-[170px] ${rowWidth} ${hiddenFrom}`}>
+    <div className={`mb-2.5 flex justify-center lg:ms-[170px] ${rowWidth} ${hiddenFrom}`}>
       <Link
         href={href}
         // Marks the trip, so the day's search offers the way back to this spot.
@@ -373,7 +373,7 @@ export function TodayMarker({ day, specialtyDays }: { day: string; specialtyDays
   const t = useT();
   return (
     <div data-day={day} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:min-h-[36px] lg:pt-0">
-      <div className="today-dot absolute top-[7px] left-[140px] z-10 -ml-[7px] hidden size-3.5 rounded-full lg:block" />
+      <div className="today-dot absolute top-[7px] start-[140px] z-10 -ms-[7px] hidden size-3.5 rounded-full lg:block" />
       <div className={tagRow}>
         <div id="today-marker" className={`${tagBase} ${leadTag} tag-today tag-link uppercase tracking-wider lg:text-xs`} style={{ ['--tag-reach' as string]: '23px' }}>
           {t('controls.today')}

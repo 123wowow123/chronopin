@@ -400,7 +400,7 @@ export function TagCloud({
                         title={`${tagLabel(t, tag)}: ${t('tagCloud.pins', { count: tag.count })}${members ? `, ${t('tagCloud.tags', { count: members.length })}` : ''} · ${
                           pressed ? t('tagCloud.clickToExclude') : out ? t('tagCloud.clickToDrop') : t('tagCloud.clickToAdd')
                         }`}
-                        className={`${STEP_CLASS[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-left leading-snug transition-colors ${
+                        className={`${STEP_CLASS[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-start leading-snug transition-colors ${
                           pressed
                             ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset'
                             : out
@@ -412,7 +412,7 @@ export function TagCloud({
                       >
                         {tagLabel(t, tag)}
                         {out ? <span className="sr-only"> ({t('tagCloud.leftOut')})</span> : null}
-                        <span className="ml-1 text-sm font-normal text-subtle tabular-nums xl:text-xs">
+                        <span className="ms-1 text-sm font-normal text-subtle tabular-nums xl:text-xs">
                           {tag.count}
                           <span className="sr-only"> {t('tagCloud.pinsWord', { count: tag.count })}</span>
                         </span>
@@ -424,7 +424,7 @@ export function TagCloud({
                           aria-label={t(open ? 'tagCloud.hideMembers' : 'tagCloud.showMembers', { count: members.length, name: tagLabel(t, tag) })}
                           title={t('tagCloud.tagsInside', { count: members.length })}
                           onClick={() => unfold(tag.name)}
-                          className="ml-0.5 rounded px-0.5 text-[11px] text-subtle hover:text-ink"
+                          className="ms-0.5 rounded px-0.5 text-[11px] text-subtle hover:text-ink"
                         >
                           <Icon name="chevron" className={`size-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
                         </button>
@@ -500,7 +500,7 @@ function ReservedFilters({
   if (!shown.length) return null;
   return (
     <div role="group" aria-label={t('tagCloud.reserved')} className={`flex flex-wrap items-center ${large ? 'gap-2' : 'gap-1.5'} ${className}`}>
-      <span aria-hidden className={`mr-0.5 inline-flex items-center gap-1 font-semibold tracking-wide text-faint uppercase ${large ? 'text-xs' : 'text-[11px]'}`}>
+      <span aria-hidden className={`me-0.5 inline-flex items-center gap-1 font-semibold tracking-wide text-faint uppercase ${large ? 'text-xs' : 'text-[11px]'}`}>
         <Icon name="lock" className={large ? 'size-3.5' : 'size-3'} />
         {t('tagCloud.reserved')}
       </span>
@@ -546,7 +546,7 @@ function Members({
 }) {
   const t = useT();
   return (
-    <span className="flex basis-full flex-wrap items-baseline gap-x-2 gap-y-1 border-l border-line pl-2.5">
+    <span className="flex basis-full flex-wrap items-baseline gap-x-2 gap-y-1 border-s border-line ps-2.5">
       {members.map((m) => {
         const inner = m.members;
         const open =
@@ -559,13 +559,13 @@ function Members({
                 aria-pressed={isSelected(m.name)}
                 onClick={() => onToggle(m.name)}
                 title={`${m.name}: ${t('tagCloud.pins', { count: m.count })}${inner ? `, ${t('tagCloud.tags', { count: inner.length })}` : ''}`}
-                className={`rounded-md px-1 text-left text-base leading-snug transition-colors xl:text-sm ${
+                className={`rounded-md px-1 text-start text-base leading-snug transition-colors xl:text-sm ${
                   isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : isExcluded(m.name) ? EXCLUDED_CLASS : 'text-muted hover:text-ink'
                 }`}
               >
                 {m.name}
                 {isExcluded(m.name) ? <span className="sr-only"> ({t('tagCloud.leftOut')})</span> : null}
-                <span className="ml-1 text-sm text-subtle xl:text-xs">{m.count}</span>
+                <span className="ms-1 text-sm text-subtle xl:text-xs">{m.count}</span>
               </button>
               {inner ? (
                 <button
@@ -573,7 +573,7 @@ function Members({
                   aria-expanded={open}
                   aria-label={t(open ? 'tagCloud.hideMembers' : 'tagCloud.showMembers', { count: inner.length, name: m.name })}
                   onClick={() => onUnfold(m.name)}
-                  className="ml-0.5 rounded px-0.5 text-subtle hover:text-ink"
+                  className="ms-0.5 rounded px-0.5 text-subtle hover:text-ink"
                 >
                   <Icon name="chevron" className={`size-3 transition-transform ${open ? 'rotate-180' : ''}`} />
                 </button>
@@ -603,7 +603,7 @@ function FindTag({ value, onChange, className = '' }: { value: string; onChange:
         onChange={(e) => onChange(e.target.value)}
         placeholder={t('tagCloud.find')}
         aria-label={t('tagCloud.find')}
-        className="w-full rounded-full bg-field py-1.5 pr-9 pl-3.5 text-sm text-ink ring-1 ring-line ring-inset placeholder:text-subtle focus:ring-2 focus:ring-link focus:outline-none [&::-webkit-search-cancel-button]:hidden"
+        className="w-full rounded-full bg-field py-1.5 pe-9 ps-3.5 text-sm text-ink ring-1 ring-line ring-inset placeholder:text-subtle focus:ring-2 focus:ring-link focus:outline-none [&::-webkit-search-cancel-button]:hidden"
       />
       {value ? (
         <button
@@ -616,7 +616,7 @@ function FindTag({ value, onChange, className = '' }: { value: string; onChange:
           }}
           // Sized to sit inside the field's pill: a larger circle would spill
           // over its rounded edge on hover.
-          className="absolute right-1 flex size-7 items-center justify-center rounded-full text-subtle hover:bg-raised hover:text-ink"
+          className="absolute end-1 flex size-7 items-center justify-center rounded-full text-subtle hover:bg-raised hover:text-ink"
         >
           <Icon name="close" className="size-3.5" />
         </button>
@@ -766,7 +766,7 @@ function TagCloudView({
           </h2>
           {counts ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: written.length })}</span> : null}
           <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1 max-sm:order-last max-sm:basis-full" />
-          <span className="flex shrink-0 items-center gap-3 max-sm:ml-auto">
+          <span className="flex shrink-0 items-center gap-3 max-sm:ms-auto">
             <GroupedToggle wrapped={wrapped} onChange={onWrappedChange} />
             {selected.length || reserved.length ? (
               <button type="button" onClick={onClear} className={iconButton} aria-label={t('tagCloud.clear')} title={t('tagCloud.clear')}>

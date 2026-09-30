@@ -241,7 +241,7 @@ function Elapsed({ since }: { since: number }) {
   const t = useT();
   const now = useNow(1000);
   const seconds = now && since ? Math.max(0, Math.floor((now - since) / 1000)) : 0;
-  return <span className="ml-1 text-subtle tabular-nums">{t('quickPin.elapsed', { seconds })}</span>;
+  return <span className="ms-1 text-subtle tabular-nums">{t('quickPin.elapsed', { seconds })}</span>;
 }
 
 // The note as the rich-text editor's HTML: escaped, a paragraph per blank-line

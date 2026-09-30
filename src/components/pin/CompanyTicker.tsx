@@ -68,7 +68,7 @@ export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick
   // Nothing until the first quote: a "· …" placeholder read as the company's
   // name cut off. The empty span stays for the observer, taking back the
   // pill's gap-1.5 so the pill ends at the name.
-  if (!bare && !quote) return <span ref={ref} className="-ml-1.5" />;
+  if (!bare && !quote) return <span ref={ref} className="-ms-1.5" />;
   return (
     <span ref={ref} className="inline-flex items-center gap-1 tabular-nums" title={title}>
       {bare ? null : (

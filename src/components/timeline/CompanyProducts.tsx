@@ -82,7 +82,7 @@ export function CompanyProductsPanel({ name, sentiment }: { name: string; sentim
                 type="button"
                 onClick={() => setOpen(expanded ? null : key)}
                 aria-expanded={expanded}
-                className={`flex items-center gap-2.5 rounded-lg px-2 py-1.5 text-left hover:bg-raised ${expanded ? 'bg-raised/60' : ''}`}
+                className={`flex items-center gap-2.5 rounded-lg px-2 py-1.5 text-start hover:bg-raised ${expanded ? 'bg-raised/60' : ''}`}
               >
                 <PinThumb thumbName={product.picture?.thumbName} originalUrl={product.picture?.originalUrl} className="h-9 w-12" />
                 <span className="flex min-w-0 flex-1 flex-col gap-0.5">

@@ -29,7 +29,7 @@ export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number
       <h2 id="trending-heading" className="flex shrink-0 items-center gap-2 px-3.5 pt-2.5 pb-1.5">
         <Icon name="trending-up" className="size-4 text-success" />
         <span className="font-medium text-ink">{t('trending.heading')}</span>
-        <span className="ml-auto text-xs text-subtle">{t('trending.lastDays', { count: days })}</span>
+        <span className="ms-auto text-xs text-subtle">{t('trending.lastDays', { count: days })}</span>
       </h2>
       {/* Only whole rows, never a scrollbar: a row that does not fit wraps into
           a second column, which the clipping hides. */}

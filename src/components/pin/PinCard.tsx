@@ -166,7 +166,7 @@ export function PinCard({
                 <Icon name="thread" className="size-3.5" />
               </Link>
             ) : null}
-            <span className="-my-1.5 -mr-1.5">
+            <span className="-my-1.5 -me-1.5">
               <PinMenu pin={pin} buttonClassName="size-7" iconClassName="size-4" />
             </span>
           </div>
@@ -186,9 +186,9 @@ export function PinCard({
             className="relative mb-3 bg-black [&_img]:max-h-[260px] [&_img]:object-cover"
             overlay={
               <>
-                {pin.address ? <span className="media-chip absolute top-2 right-2 z-10 max-w-[70%] truncate">{pin.address}</span> : null}
+                {pin.address ? <span className="media-chip absolute top-2 end-2 z-10 max-w-[70%] truncate">{pin.address}</span> : null}
                 {company ? (
-                  <span className="media-chip absolute bottom-2 left-2 z-10 inline-flex items-center gap-1.5">
+                  <span className="media-chip absolute bottom-2 start-2 z-10 inline-flex items-center gap-1.5">
                     {company}
                     <CompanyTicker pin={pin} onDark />
                   </span>
@@ -244,7 +244,7 @@ export function PinCard({
         {overflowing ? (
           <Link
             href={href}
-            className="absolute right-0 bottom-0 left-0 bg-[var(--card-bg,var(--color-panel))] px-3 pt-0.5 text-right text-sm font-medium before:absolute before:-top-8 before:left-0 before:h-8 before:w-full before:bg-gradient-to-b before:from-transparent before:to-[var(--card-bg,var(--color-panel))] before:content-['']"
+            className="absolute end-0 bottom-0 start-0 bg-[var(--card-bg,var(--color-panel))] px-3 pt-0.5 text-end text-sm font-medium before:absolute before:-top-8 before:start-0 before:h-8 before:w-full before:bg-gradient-to-b before:from-transparent before:to-[var(--card-bg,var(--color-panel))] before:content-['']"
           >
             {t('card.showMore')}
           </Link>

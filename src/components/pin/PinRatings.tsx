@@ -79,7 +79,7 @@ export function RatingAverage({
       </RatingPill>
     );
   }
-  const pill = `flex items-center gap-2 rounded-full bg-amber-500/10 py-1.5 pr-4 pl-3 ring-1 ring-amber-500/30 ring-inset ${className}`;
+  const pill = `flex items-center gap-2 rounded-full bg-amber-500/10 py-1.5 pe-4 ps-3 ring-1 ring-amber-500/30 ring-inset ${className}`;
   const content = (
     <>
       <Icon name="star" className="size-5 text-amber-500" />

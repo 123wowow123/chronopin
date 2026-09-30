@@ -23,7 +23,7 @@ export default async function FollowingPage() {
       <h1 className="sr-only">{t('profile.following')}</h1>
       <p className="mb-6 text-sm text-subtle">
         {t('profile.followingIntro')}
-        {following.total ? <span className="ml-2 font-medium text-muted tabular-nums">{following.total}</span> : null}
+        {following.total ? <span className="ms-2 font-medium text-muted tabular-nums">{following.total}</span> : null}
       </p>
       <FollowingList userId={user.id} initial={following} pageSize={FOLLOWING_PAGE_SIZE} />
     </div>

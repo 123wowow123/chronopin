@@ -455,7 +455,7 @@ export function WordCloud({
         </p>
       ) : null}
       {unplaced > 0 ? (
-        <p className="pointer-events-none absolute right-3 bottom-2 text-xs text-subtle">
+        <p className="pointer-events-none absolute end-3 bottom-2 text-xs text-subtle">
           {unplaced} more {unplaced === 1 ? 'tag' : 'tags'} — find by name
         </p>
       ) : null}

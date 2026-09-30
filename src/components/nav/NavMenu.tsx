@@ -92,9 +92,9 @@ export function useWatchedToggle() {
 
 // An on/off switch drawn at the end of a menu row.
 export function SwitchMark({ on, size = 'md' }: { on: boolean; size?: 'sm' | 'md' }) {
-  const [track, knob, shift] = size === 'sm' ? ['h-5 w-8', 'size-4', 'translate-x-3'] : ['h-6 w-10', 'size-5', 'translate-x-4'];
+  const [track, knob, shift] = size === 'sm' ? ['h-5 w-8', 'size-4', 'translate-x-3 rtl:-translate-x-3'] : ['h-6 w-10', 'size-5', 'translate-x-4 rtl:-translate-x-4'];
   return (
-    <span aria-hidden className={`ml-auto flex ${track} shrink-0 items-center rounded-full p-0.5 transition-colors ${on ? 'bg-accent' : 'bg-raised-2'}`}>
+    <span aria-hidden className={`ms-auto flex ${track} shrink-0 items-center rounded-full p-0.5 transition-colors ${on ? 'bg-accent' : 'bg-raised-2'}`}>
       <span className={`${knob} rounded-full bg-white shadow transition-transform ${on ? shift : ''}`} />
     </span>
   );
@@ -160,7 +160,7 @@ function SignedInAs({ userName, pictureUrl }: { userName: string; pictureUrl?: s
         <span className="block truncate text-sm font-semibold text-ink">{userName}</span>
         <span className="block truncate text-xs text-subtle">{t('nav.profileSettings')}</span>
       </span>
-      <Icon name="chevron" className="ml-auto size-3.5 shrink-0 -rotate-90 text-subtle" />
+      <Icon name="chevron" className="ms-auto size-3.5 shrink-0 -rotate-90 text-subtle rtl:rotate-90" />
     </Link>
   );
 }
@@ -214,7 +214,7 @@ export function NavMenu() {
         {user ? (
           <Link
             href="/create"
-            className="btn btn-primary group gap-1.5 rounded-full py-1.5 pr-3.5 pl-2.5 font-medium shadow-sm ring-1 shadow-accent/30 ring-white/10 ring-inset"
+            className="btn btn-primary group gap-1.5 rounded-full py-1.5 pe-3.5 ps-2.5 font-medium shadow-sm ring-1 shadow-accent/30 ring-white/10 ring-inset"
           >
             <Icon name="plus" className="size-4 transition-transform duration-200 group-hover:rotate-90" />
             {t('nav.create')}
@@ -237,7 +237,7 @@ export function NavMenu() {
         <div ref={accountRef} className="relative hidden lg:block">
           <button
             type="button"
-            className="flex items-center gap-2 rounded-full py-1 pr-2.5 pl-1 text-sm font-medium text-muted ring-1 ring-line transition-colors ring-inset hover:bg-raised hover:text-ink"
+            className="flex items-center gap-2 rounded-full py-1 pe-2.5 ps-1 text-sm font-medium text-muted ring-1 ring-line transition-colors ring-inset hover:bg-raised hover:text-ink"
             aria-expanded={accountOpen}
             onClick={() => setAccountOpen((o) => !o)}
           >
@@ -248,7 +248,7 @@ export function NavMenu() {
             <Icon name="chevron" className={`size-3.5 text-subtle transition-transform ${accountOpen ? 'rotate-180' : ''}`} />
           </button>
           {accountOpen ? (
-            <div className="floating absolute right-0 z-50 mt-2 w-60 overflow-hidden">
+            <div className="floating absolute end-0 z-50 mt-2 w-60 overflow-hidden">
               <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
               <div className="px-1.5">
                 <WatchedRow onToggle={() => setAccountOpen(false)} />

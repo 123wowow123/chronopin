@@ -55,7 +55,7 @@ export function WebLegend() {
           <p>{t('map.webHelpCap', scores)}</p>
         </div>
       ) : null}
-      <p className="floating flex flex-wrap items-center gap-x-2.5 gap-y-0.5 rounded-full py-1 pr-1 pl-2.5 text-xs text-subtle">
+      <p className="floating flex flex-wrap items-center gap-x-2.5 gap-y-0.5 rounded-full py-1 pe-1 ps-2.5 text-xs text-subtle">
         {WEB_KINDS.map(({ kind, color }) => (
           <span key={kind} className="flex items-center gap-1">
             <span className="inline-block h-0.5 w-3" style={{ backgroundColor: color }} />

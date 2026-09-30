@@ -16,7 +16,7 @@ import { useT } from '@/lib/client/i18n';
 // menu's items are `children`, given a `close`; `onClose` lets the owner put
 // back any step it moved the menu to (a confirm, a status).
 export const MENU_ITEM =
-  'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none';
+  'block w-full rounded-lg px-3 py-2 text-start text-base font-medium hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none';
 
 // An item as Facebook's post menu has them: an icon in a soft disc, the
 // action in bold, and a line under it saying what it does.
@@ -38,7 +38,7 @@ export function PopMenuItem({
       type="button"
       role="menuitem"
       onClick={onClick}
-      className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none"
+      className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none"
     >
       <span className={`flex size-9 shrink-0 items-center justify-center rounded-full bg-ink/10 ${danger ? 'text-danger' : 'text-ink'}`}>
         <Icon name={icon} className="size-5" />
@@ -200,7 +200,7 @@ export function PopMenu({
         } ${buttonClassName}`}
       >
         <Icon name={icon} className={iconClassName} />
-        {dots && icon !== 'dots-vertical' ? <Icon name="dots-vertical" className="-ml-1 size-3.5" /> : null}
+        {dots && icon !== 'dots-vertical' ? <Icon name="dots-vertical" className="-ms-1 size-3.5" /> : null}
       </button>
       {open
         ? createPortal(
@@ -218,7 +218,7 @@ export function PopMenu({
             >
               <span
                 aria-hidden
-                className={`absolute ${open.left != null ? 'left-3' : 'right-3'} size-3 rotate-45 border-ink/10 bg-popover ${above ? '-bottom-1.5 border-r border-b' : '-top-1.5 border-t border-l'}`}
+                className={`absolute ${open.left != null ? 'start-3' : 'end-3'} size-3 rotate-45 border-ink/10 bg-popover ${above ? '-bottom-1.5 border-r border-b' : '-top-1.5 border-t border-l'}`}
               />
               {children(close)}
             </div>,

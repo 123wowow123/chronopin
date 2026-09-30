@@ -74,7 +74,7 @@ export function PinReferences({
         : null;
     return (
       <li key={ids[index]} id={ids[index]} className="-mx-2 flex scroll-mt-24 items-start gap-3 rounded-lg px-2 py-2.5 transition-colors duration-500 data-cited:bg-link/15">
-        <span className="mt-0.5 w-6 shrink-0 text-right text-xs text-subtle tabular-nums">[{index + 1}]</span>
+        <span className="mt-0.5 w-6 shrink-0 text-end text-xs text-subtle tabular-nums">[{index + 1}]</span>
         <span
           className={`mt-0.5 w-12 shrink-0 rounded-full py-px text-center text-[11px] font-semibold tabular-nums ring-1 ring-inset ${confidenceClass(reference.confidence)}`}
           title={

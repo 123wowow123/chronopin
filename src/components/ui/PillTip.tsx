@@ -79,7 +79,7 @@ export function PillTip({ tip, children }: { tip: ReactNode; children: (describe
         ? createPortal(
             <span
               aria-hidden
-              className="pointer-events-none fixed z-50 flex flex-col gap-1 rounded-lg border border-line bg-panel px-3 py-2 text-left text-xs leading-snug font-normal tracking-normal text-muted normal-case not-italic shadow-lg shadow-shade/40"
+              className="pointer-events-none fixed z-50 flex flex-col gap-1 rounded-lg border border-line bg-panel px-3 py-2 text-start text-xs leading-snug font-normal tracking-normal text-muted normal-case not-italic shadow-lg shadow-shade/40"
               style={place}
             >
               {tip}

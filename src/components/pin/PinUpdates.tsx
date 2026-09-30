@@ -41,7 +41,7 @@ export function PinUpdates({ updates, timeZone, className = '' }: { updates: Pin
         <span className="text-xs text-subtle">{t('updates.count', { count: updates.length })}</span>
       </div>
       <p className="mt-1 text-sm text-muted">{t('updates.intro')}</p>
-      <ol className="mt-4 space-y-5 border-l border-line pl-4">
+      <ol className="mt-4 space-y-5 border-s border-line ps-4">
         {shown.map((update) => (
           <UpdateRow key={update.id} update={update} timeZone={timeZone} />
         ))}
@@ -49,7 +49,7 @@ export function PinUpdates({ updates, timeZone, className = '' }: { updates: Pin
       {folded.length ? (
         <details className="mt-4">
           <summary className="cursor-pointer text-sm text-subtle hover:text-ink">{t('updates.showEarlier', { count: folded.length })}</summary>
-          <ol className="mt-4 space-y-5 border-l border-line pl-4">
+          <ol className="mt-4 space-y-5 border-s border-line ps-4">
             {folded.map((update) => (
               <UpdateRow key={update.id} update={update} timeZone={timeZone} />
             ))}
@@ -66,7 +66,7 @@ function UpdateRow({ update, timeZone }: { update: PinUpdateJson; timeZone: stri
   return (
     <li className="relative">
       {/* The dot on the line the updates hang from. */}
-      <span aria-hidden className="absolute top-1.5 -left-[21px] size-2.5 rounded-full bg-link ring-4 ring-panel" />
+      <span aria-hidden className="absolute top-1.5 -start-[21px] size-2.5 rounded-full bg-link ring-4 ring-panel" />
       <p className="flex flex-wrap items-baseline gap-x-2 text-xs text-subtle">
         <span className="font-semibold tracking-wider text-muted uppercase">{t(`updates.${update.kind}`)}</span>
         <PostedTime value={update.utcCreatedDateTime} serverTimeZone={timeZone} />
@@ -135,7 +135,7 @@ function ChangeRow({ change, timeZone: serverTimeZone }: { change: PinChange; ti
           {change.before ? (
             <details>
               <summary className="cursor-pointer hover:text-ink">{t('updates.rewritten')}</summary>
-              <div className="rich-text mt-1.5 border-l-2 border-line pl-3 text-[13px] text-subtle" lang="en">
+              <div className="rich-text mt-1.5 border-s-2 border-line ps-3 text-[13px] text-subtle" lang="en">
                 <p className="mb-1 text-[11px] font-semibold tracking-wider uppercase">{t('updates.before')}</p>
                 {/* Sanitized on the server (pinUpdates in services/pages.ts). */}
                 <div dangerouslySetInnerHTML={{ __html: change.before }} />
@@ -162,7 +162,7 @@ function ChangeRow({ change, timeZone: serverTimeZone }: { change: PinChange; ti
         <span className="text-subtle line-through decoration-subtle/60" lang={change.field === 'title' ? 'en' : undefined}>
           {show(change.before)}
         </span>
-        <span aria-hidden className="px-1.5 text-faint">
+        <span aria-hidden className="inline-block px-1.5 text-faint rtl:-scale-x-100">
           →
         </span>
         <span className="font-medium text-ink" lang={change.field === 'title' ? 'en' : undefined}>

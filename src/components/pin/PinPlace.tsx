@@ -72,7 +72,7 @@ export function PinPlace({ pinId, ratings }: { pinId: number; ratings?: PinRatin
             target="_blank"
             rel="noopener nofollow"
             // Flows with the row rather than being pushed right: once the
-            // ratings block holds three sources the row wraps, and ml-auto
+            // ratings block holds three sources the row wraps, and ms-auto
             // left the button stranded alone on the second line.
             className="btn btn-sm btn-primary"
           >

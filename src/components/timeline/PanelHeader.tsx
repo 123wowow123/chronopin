@@ -72,7 +72,7 @@ export function PanelHeader({
     // tags' own way in, not a heading over a slider. In the nav drawer the row
     // lines up with the drawer's own: its icon 20px from the left edge and its
     // chevron 20px from the right (the chevron's round target is 8px wider).
-    <div className={`relative flex items-center gap-2 px-3.5 in-[[data-drawer-controls]]:pr-0 in-[[data-drawer-controls]]:pl-2 ${opensDialog ? 'py-3.5 max-lg:py-4.5' : 'py-2.5 max-lg:py-3'} ${className}`}>
+    <div className={`relative flex items-center gap-2 px-3.5 in-[[data-drawer-controls]]:pe-0 in-[[data-drawer-controls]]:ps-2 ${opensDialog ? 'py-3.5 max-lg:py-4.5' : 'py-2.5 max-lg:py-3'} ${className}`}>
       {fixed ? null : (
         <button
           type="button"
@@ -92,14 +92,14 @@ export function PanelHeader({
       {/* On a row that opens the cloud, the clear button follows what it
           clears, well away from the chevron at the far end, which opens. */}
       {reset && opensDialog ? <ResetButton reset={reset} /> : null}
-      <span className="pointer-events-none relative ml-auto flex shrink-0 items-center gap-1.5">
+      <span className="pointer-events-none relative ms-auto flex shrink-0 items-center gap-1.5">
         {reset && !opensDialog ? <ResetButton reset={reset} /> : null}
         {children}
         {fixed ? null : opensDialog ? (
           // The whole row is the button; the chevron only says where it goes,
           // in the round box the other rows' chevrons have, so the row is as tall.
           <span className="-my-1 rounded-full p-1 text-subtle max-lg:p-2">
-            <Icon name="chevron" className="size-4 -rotate-90" />
+            <Icon name="chevron" className="size-4 -rotate-90 rtl:rotate-90" />
           </span>
         ) : (
           <button type="button" tabIndex={-1} aria-hidden onClick={onToggle} className={`${iconButton} pointer-events-auto`}>
