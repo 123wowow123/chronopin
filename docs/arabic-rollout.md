@@ -35,6 +35,8 @@ blocked bulk reads from prod).
    save a row, so confirm the constraint is widened. Note master also has a
    second `0098_pin_series_fred.sql`; the runner tracks files by name, so two
    `0098_*` files should both apply, but check `schemaMigrations` afterwards.
+   `0100_thai_italian_russian_portuguese_locales.sql` rewrites the same two
+   CHECK constraints and keeps `ar` in them, so apply 0098 before it.
 3. **Translate the prod pins into Arabic.** Pick one:
 
    - Straight from the machine with the prod `.env` (costs Anthropic credit,

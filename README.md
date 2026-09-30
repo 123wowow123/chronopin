@@ -275,10 +275,6 @@ sync prod db to local and backup json
 
 - Translate to Arabic (site language, layout and specialty days done; translating the prod pins is left: see docs/arabic-rollout.md)
 
-- Translate to Thai
-- Italian
-- Russian
-- Portuguese
 
 
 - sell something and pay to notify item to all watchers for the pin
@@ -296,3 +292,13 @@ sync prod db to local and backup json
 - add ads on mapped marketplace pin like logging, also auto show related item in area
 
 - update leftover sentiment
+
+
+
+
+
+- Translate to Arabic
+- Translate to Thai
+- Italian
+- Russian
+- Portuguese

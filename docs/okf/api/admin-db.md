@@ -83,6 +83,26 @@ POST /api/admin/db/PinSentiment?upsert=1
 [{ "pinId": 4980, "sentiment": 0.1, "textHash": "75f2…", "productHash": "75f2…" }]
 ```
 
+**Users, that can log in.** `POST /api/admin/db/User` and `POST /api/admin/users`
+make accounts - a new curator desk, a tester - through
+[adminUsers.ts](../../../src/server/services/adminUsers.ts), since a plain row
+could not carry a working password. Each body is `{ userName, firstName,
+lastName, email }` plus optional `password` (made up when left out and
+returned **once** in the result - store it then), `role` (`user`, the
+default, or `admin`), `emailVerified` (default `true`, so the desk can post at
+once, with no SQL), `birthday` and `phone`. Anything else (an id, a salt,
+social ids) is ignored. Up to 50 per request; one that fails (a taken email
+or handle) does not stop the rest: 201, or 207 with
+`{ results: [{ index, id, userName, email, role, emailVerified, password? } | { index, error, code? }] }`.
+Each is audited under the admin without its password. `POST /api/admin/users`
+takes `{ users: [...] }` or one user object.
+
+```
+POST /api/admin/users
+{ "users": [{ "userName": "@ArtDesk", "firstName": "Art", "lastName": "Desk",
+              "email": "artdesk.curator@chronopin.local" }] }
+```
+
 # PATCH and DELETE /api/admin/db/:table
 
 Many rows at once: the filters pick them (at least one filter, and at most
