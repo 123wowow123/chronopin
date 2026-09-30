@@ -25,6 +25,7 @@ const { values: flags } = parseArgs({
     id: { type: 'string' },
     series: { type: 'string' },
     label: { type: 'string' },
+    marked: { type: 'string' },
     source: { type: 'string', default: 'eia' },
     remove: { type: 'boolean', default: false },
     'dry-run': { type: 'boolean', default: false },
@@ -49,7 +50,7 @@ async function pinIds(): Promise<{ id: number; title: string }[]> {
 async function run() {
   if (!flags.series) throw new Error('Name the series with --series (e.g. WCSSTUS1).');
   const seriesId = normaliseSeriesId(flags.series);
-  const problem = seriesProblem({ source: flags.source, seriesId });
+  const problem = seriesProblem({ source: flags.source, seriesId, markedDay: flags.marked });
   if (problem) throw new Error(problem);
   const pins = await pinIds();
   if (!pins.length) {
@@ -69,7 +70,7 @@ async function run() {
     if (flags.remove) {
       await removeSeries(pin.id, seriesId, flags.source);
     } else {
-      await saveSeries(pin.id, { source: flags.source, seriesId, label: flags.label ?? null });
+      await saveSeries(pin.id, { source: flags.source, seriesId, label: flags.label ?? null, markedDay: flags.marked ?? null });
     }
   }
   log.success(`${flags['dry-run'] ? 'Would have changed' : 'Changed'} ${pins.length} pin(s).`);
