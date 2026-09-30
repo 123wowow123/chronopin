@@ -13,7 +13,7 @@ import * as db from '../db';
 import { findCompanyRelations, RelationsUnavailable } from '../extract/companyRelations';
 import CompanyRelation, { type CompanyRelationRow } from '../model/companyRelation';
 import PinTicker, { type PriceRow } from '../model/pinTicker';
-import { fetchCloses, fetchIntraday, fetchQuote, identify, lookupCompanyTicker } from '../stocks';
+import { fetchCloses, fetchIntraday, fetchMarketCap, fetchQuote, identify, lookupCompanyTicker } from '../stocks';
 import log from '../util/log';
 
 // A snapshot Nasdaq had no price for is asked about again after this.
@@ -58,6 +58,29 @@ async function companyTicker(pin: PinFacts): Promise<string | null> {
     [pin.companyId, found?.symbol ?? null],
   );
   return row?.tickerSymbol ?? null;
+}
+
+// A company's market value moves slowly and only weighs a pin on a crowded
+// day, so it is re-read weekly (src/lib/bagSample.ts). A failed read keeps the
+// old figure and is asked about again next time.
+const MARKET_CAP_RECHECK_MS = 7 * 24 * 3_600_000;
+
+export async function refreshMarketCap(companyId: number, symbol: string, { force = false }: { force?: boolean } = {}): Promise<number | null> {
+  const [row] = await db.query<{ marketCap: string | null; utcMarketCapCheckedDateTime: Date | null }>(
+    `SELECT "marketCap", "utcMarketCapCheckedDateTime" FROM "Company" WHERE "id" = $1`,
+    [companyId],
+  );
+  if (!row) return null;
+  const known = row.marketCap == null ? null : Number(row.marketCap);
+  if (!force && row.utcMarketCapCheckedDateTime && Date.now() - +new Date(row.utcMarketCapCheckedDateTime) < MARKET_CAP_RECHECK_MS) return known;
+  try {
+    const cap = await fetchMarketCap(symbol, 'stocks');
+    await db.query(`UPDATE "Company" SET "marketCap" = COALESCE($2, "marketCap"), "utcMarketCapCheckedDateTime" = now() WHERE "id" = $1`, [companyId, cap]);
+    return cap ?? known;
+  } catch (err) {
+    log.warn(`market cap for ${symbol} not read:`, err);
+    return known;
+  }
 }
 
 async function priceSnapshot(row: PriceRow, ticker: { symbol: string; assetClass: AssetClass }, pin: PinFacts, now: Date): Promise<StockPrice | null> {
@@ -116,6 +139,7 @@ export async function syncPinStocks(pinId: number, { lookup = true }: { lookup?:
   if (lookup) {
     try {
       const symbol = await companyTicker(pin);
+      if (symbol && pin.companyId) await refreshMarketCap(pin.companyId, symbol);
       const all = await PinTicker.forPin(pinId, { withRemoved: true });
       const has = (s: string) => all.some((t) => t.symbol === s);
       if (symbol && !has(symbol)) {

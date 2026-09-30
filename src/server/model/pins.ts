@@ -552,6 +552,8 @@ const PAGE_COLUMNS = `
   "Pin"."stocks",
   "Pin"."viewCount",
   (SELECT COUNT(*)::integer FROM "PinImpression" AS "i" WHERE "i"."pinId" = "Pin"."id") AS "impressionCount",
+  -- Its company's market value: the bag weight leans on it too.
+  (SELECT "c"."marketCap"::double precision FROM "Company" AS "c" WHERE "c"."id" = "Pin"."companyId") AS "companyMarketCap",
   "Pin"."duplicateGroup",
   EXISTS (SELECT 1 FROM "Favorite" AS "f"
           WHERE "f"."userId" = $1 AND "f"."pinId" = "Pin"."id" AND "f"."utcDeletedDateTime" IS NULL) AS "hasFavorite",

@@ -169,6 +169,9 @@ export type PinJson = {
   // the odds (lib/predictionMarkets.ts); this one weighs the pin on a crowded
   // day (lib/bagSample.ts).
   marketVolume?: number | null;
+  // Its company's market value in dollars (Company.marketCap, 0103), on the
+  // pages the timeline samples; weighs the pin on a crowded day.
+  companyMarketCap?: number | null;
   allDay?: boolean;
   // Whether the source said the event runs all day, rather than us simply
   // never learning the time (schema 0057). Only an all-day pin can carry it,
