@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-29
+* **Update**: **US convention-center events, posted straight to production** (pins 4890-4914, @ShowDesk): twenty-five pins tagged `Shows` - TwitchCon, SC26, RSNA, PAX Unplugged (Philadelphia, Houston), NRF, NAMM, IBS, GDC, Expo West, ECCC, SXSW, WonderCon, RSAC, HIMSS27, PAX East/West, C2E2, MEGACON, NRA Show, Snowflake Summit, Fancy Food, Gen Con, Otakon, Anime NYC - each with a "Get tickets" button (PinEventInfo) where the organiser's page sells 2027 tickets. [Learnings](/scraping/learnings), [Vertical recipes](/scraping/verticals).
 * **Update**: **Grammy news events, posted straight to production** (pins 4833-4861, @MusicDesk with @LawDesk and @OddsDesk): twenty-nine pins tagged `Grammys` - the road to the 2027 ceremony (Disney deal, date, new categories, BTS opting out, voting windows, MusiCares U2), the 68th ceremony's landmarks, Hall of Fame, the NO FAKES Act, Latin Grammys, the Rodrigo exhibit and four Kalshi Grammy markets; prod 4345, 4346, 1962 and 4397 re-threaded into the chain. [Learnings](/scraping/learnings.md) has the traps.
 
 ## 2026-09-28
