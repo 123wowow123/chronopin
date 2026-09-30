@@ -273,12 +273,7 @@ sync prod db to local and backup json
 
 - add private sellers and add payment setup
 
-- Translate to Arabic
 
-- Translate to Thai
-- Italian
-- Russian
-- Portuguese
 
 
 - sell something and pay to notify item to all watchers for the pin
@@ -296,3 +291,13 @@ sync prod db to local and backup json
 - add ads on mapped marketplace pin like logging, also auto show related item in area
 
 - update leftover sentiment
+
+
+
+
+
+- Translate to Arabic
+- Translate to Thai
+- Italian
+- Russian
+- Portuguese
