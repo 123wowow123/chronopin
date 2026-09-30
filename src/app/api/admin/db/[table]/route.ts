@@ -4,6 +4,7 @@ import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
 import { afterAdminWrite } from '@/server/services/adminDbEffects';
 import { createPinsAs } from '@/server/services/adminPins';
+import { createUsersAs } from '@/server/services/adminUsers';
 
 type Ctx = RouteContext<'/api/admin/db/[table]'>;
 
@@ -15,7 +16,10 @@ type Ctx = RouteContext<'/api/admin/db/[table]'>;
 //           a row whose key exists. 201 { rows }. For Pin, each is a POST
 //           /api/pins body posted as its userId or userName (default: the
 //           admin): 201, or 207 when some failed, { results: [{ index, id,
-//           userId } | { index, error }] }
+//           userId } | { index, error }] }. For User, each is an account made
+//           as POST /api/admin/users makes one (a hashed password, made up
+//           and returned once when left out; the email confirmed): 201 or
+//           207, { results: [{ index, id, ..., password? } | { index, error }] }
 //   PATCH   the filters pick the rows (at least one filter), the body is the
 //           columns to set. { rows }
 //   DELETE  the filters pick the rows (at least one filter). { rows }
@@ -33,6 +37,11 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   // A pin is saved as POST /api/pins saves one, under its userId or userName.
   if (table.name === 'Pin') {
     const results = await createPinsAs(admin, Array.isArray(body) ? body : [body]);
+    return json({ results }, results.every((r) => 'id' in r) ? 201 : 207);
+  }
+  // A user gets a password that logs in, which a plain row could not carry.
+  if (table.name === 'User') {
+    const results = await createUsersAs(admin, Array.isArray(body) ? body : [body]);
     return json({ results }, results.every((r) => 'id' in r) ? 201 : 207);
   }
   const upsert = ['1', 'true'].includes(request.nextUrl.searchParams.get('upsert') ?? '');

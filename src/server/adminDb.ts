@@ -55,12 +55,15 @@ const HIDDEN: Record<string, string[]> = {
 // Pin has its own insert (services/adminPins.ts), which the table route hands
 // pins to: posted for any author through the same save as POST /api/pins.
 export const PIN_INSERT_NOTE = 'A POSTed pin is saved as a POST /api/pins body, as its userId or userName (default: the admin).';
+// User has its own insert too (services/adminUsers.ts): an account that logs in.
+export const USER_INSERT_NOTE =
+  'A POSTed user is made as POST /api/admin/users makes one: { userName, firstName, lastName, email, password?, role?, emailVerified? }, the password hashed (made up and returned once when left out), the email confirmed by default.';
 const NO_INSERT: Record<string, string> = {};
 const NO_DELETE: Record<string, string> = {
   Pin: 'Delete pins with DELETE /api/pins/:id (a soft delete).',
 };
 const HIDDEN_NOTES: Record<string, string> = {
-  User: "Set a password with the user's password route, not here.",
+  User: "password and salt are never shown; PATCH cannot set a password (the user's password route does).",
 };
 
 export const DEFAULT_LIMIT = 50;
@@ -124,7 +127,7 @@ export function buildCatalog(
     if (NO_ACCESS.has(c.table_name)) continue;
     let table = tables.get(c.table_name);
     if (!table) {
-      const notes = [READ_ONLY[c.table_name], c.table_name === 'Pin' ? PIN_INSERT_NOTE : NO_INSERT[c.table_name], NO_DELETE[c.table_name], HIDDEN_NOTES[c.table_name]].filter(
+      const notes = [READ_ONLY[c.table_name], c.table_name === 'Pin' ? PIN_INSERT_NOTE : c.table_name === 'User' ? USER_INSERT_NOTE : NO_INSERT[c.table_name], NO_DELETE[c.table_name], HIDDEN_NOTES[c.table_name]].filter(
         (n): n is string => !!n,
       );
       table = { name: c.table_name, access: READ_ONLY[c.table_name] ? 'read' : 'write', columns: [], primaryKey: [], notes };
