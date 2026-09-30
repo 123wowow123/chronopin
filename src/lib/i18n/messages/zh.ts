@@ -832,6 +832,9 @@ const zh: Messages = {
     marked: '此标记所在周：{date}，{value}',
     since: '至今',
     source: 'EIA 数据系列 {id}',
+    altMonthly: '{label}，{from} 至 {to} 的月度数据，介于 {low} 与 {high} 之间。',
+    markedMonth: '此标记所在月：{date}，{value}',
+    sourceFred: 'FRED 数据系列 {id}',
     next: '下次发布 {date}',
   },
   stocks: {

@@ -838,6 +838,9 @@ const es: Messages = {
     marked: 'La semana de este marcador: {date}, {value}',
     since: 'desde entonces',
     source: 'Serie {id} de la EIA',
+    altMonthly: '{label}, mensual desde {from} hasta {to}, entre {low} y {high}.',
+    markedMonth: 'El mes de este marcador: {date}, {value}',
+    sourceFred: 'Serie {id} de FRED',
     next: 'Próxima publicación {date}',
   },
   stocks: {

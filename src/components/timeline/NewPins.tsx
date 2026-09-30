@@ -100,9 +100,9 @@ export function NewPinRow({ pin }: { pin: NewPin }) {
   return (
     <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised hover:no-underline">
       {pin.hasMarket ? (
-        <MarketTrend pinId={pin.id} fallback={<PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />} />
+        <MarketTrend pinId={pin.id} fallback={<PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-9 w-14" />} />
       ) : (
-        <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />
+        <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-9 w-14" />
       )}
       <span className="flex min-w-0 flex-col">
         <span className="truncate leading-snug text-ink" title={pin.title}>

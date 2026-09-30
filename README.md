@@ -274,6 +274,7 @@ sync prod db to local and backup json
 - add private sellers and add payment setup
 
 - Translate to Arabic
+
 - Translate to Thai
 - Italian
 - Russian

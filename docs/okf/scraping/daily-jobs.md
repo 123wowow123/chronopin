@@ -119,6 +119,11 @@ locally until the next pull. Pull before a run so ids and the already-pinned
 tests agree, and after it so the local copy catches up. Pins by a non-curator
 (the owner's own accounts) are still not the job's to edit, on prod or here.
 
+**A run that stayed local** (neither variable set) is replayed afterwards
+with `scripts/jobs/post-run-to-prod.sh <run id> [--dry]`, on the admin login
+alone: new pins, edits, event info and sentiment scores, each only where
+prod's pin is the one the run worked on ([admin table API](../api/admin-db.md#job-results-on-prod)).
+
 # Rules every run follows
 
 * **Write through the real API as a curator.** The server signs a token for

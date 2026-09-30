@@ -7,7 +7,8 @@
 // editing a pin cannot wipe it. It is attached by a scrape or a script.
 
 import * as db from '../db';
-import { normaliseSeriesId, seriesUrl } from '../eiaSeries';
+import { getSeries, normaliseSeriesId, seriesUrl, type EiaSeries } from '../eiaSeries';
+import { fredUrl, getFredSeries, parseFredId, type FredSeries } from '../fredSeries';
 
 export type PinSeriesInput = {
   source?: string;
@@ -23,7 +24,7 @@ export type PinSeriesRow = {
   sourceUrl: string | null;
 };
 
-const SOURCES = new Set(['eia']);
+const SOURCES = new Set(['eia', 'fred']);
 
 export function seriesProblem(input: PinSeriesInput): string | undefined {
   const source = input.source ?? 'eia';
@@ -32,6 +33,9 @@ export function seriesProblem(input: PinSeriesInput): string | undefined {
   }
   if (!input.seriesId?.trim() || input.seriesId.trim().length > 64) {
     return 'A series needs a publisher series id of up to 64 characters.';
+  }
+  if (source === 'fred' && !parseFredId(input.seriesId)) {
+    return 'A FRED series id is the id and an optional units code, like PCEPI or PCEPI:PC1.';
   }
   return undefined;
 }
@@ -66,9 +70,15 @@ export async function seriesForPin(pinId: number): Promise<PinSeriesRow[]> {
   );
 }
 
+// The publisher's current numbers for a stored handle, whoever publishes it.
+export function readSeries(source: string, seriesId: string): Promise<EiaSeries | FredSeries | null> {
+  return source === 'fred' ? getFredSeries(seriesId) : getSeries(seriesId);
+}
+
 // Where a reader clicks through to: what the curator stored, else the
 // publisher's own page for the series.
-export const linkFor = (row: PinSeriesRow): string => row.sourceUrl || seriesUrl(row.seriesId);
+export const linkFor = (row: PinSeriesRow): string =>
+  row.sourceUrl || (row.source === 'fred' ? fredUrl(row.seriesId) : seriesUrl(row.seriesId));
 
 // Every pin's series, for the seed backup, and the restore that puts them
 // back. A greenfield refresh rebuilds the database from the schema and the

@@ -10,6 +10,8 @@ export type PinSeriesData = {
   seriesId: string;
   label: string | null;
   units: string | null;
+  // How often it is published, which is how the chart words its dates.
+  frequency: 'weekly' | 'monthly';
   sourceUrl: string;
   releaseDate: string | null;
   nextReleaseDate: string | null;
@@ -50,14 +52,16 @@ export function seriesExtent(points: SeriesPoint[]): { points: SeriesPoint[]; mi
 // unit is left alone rather than guessed at.
 // Longest match first: "thousand barrels per day" must not be read as
 // "thousand barrels".
-const UNITS: { match: RegExp; divide: number; label: string }[] = [
+// A rate is a share, not a size: "3.4%" sits tight against its number.
+const UNITS: { match: RegExp; divide: number; label: string; tight?: boolean }[] = [
+  { match: /^percent/i, divide: 1, label: '%', tight: true },
   { match: /thousand barrels per day/i, divide: 1000, label: 'million bbl/d' },
   { match: /million barrels per day/i, divide: 1, label: 'million bbl/d' },
   { match: /thousand barrels/i, divide: 1000, label: 'million bbl' },
   { match: /million barrels/i, divide: 1, label: 'million bbl' },
 ];
 
-export function sizeOf(units: string): { divide: number; label: string } | null {
+export function sizeOf(units: string): { divide: number; label: string; tight?: boolean } | null {
   const hit = UNITS.find((u) => u.match.test(units));
-  return hit ? { divide: hit.divide, label: hit.label } : null;
+  return hit ? { divide: hit.divide, label: hit.label, tight: hit.tight } : null;
 }

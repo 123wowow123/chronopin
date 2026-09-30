@@ -19,6 +19,12 @@
 // --apply takes [{ id, product, textHash }] (product "" for none). An applied
 // score is only saved while the pin's text is still what was
 // exported, so a pin edited in between waits for the next run.
+//
+//   npm run companies:sentiment -- --prod --token-file <path> [--token-file <path> ...] [--dry-run]
+//       prod: asks www.chronopin.com which pins need a score and sends the
+//       scores this DB has for the same text (GET/PUT /api/pins/sentiments).
+//       A token is an admin's, or a curator's, which scores only its own
+//       pins: with several, each score goes with the first token prod takes.
 
 import '../env';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -35,10 +41,14 @@ const { values: flags } = parseArgs({
     apply: { type: 'string' },
     products: { type: 'boolean' },
     workers: { type: 'string', default: '6' },
+    prod: { type: 'boolean', default: false },
+    base: { type: 'string', default: 'https://www.chronopin.com' },
+    'token-file': { type: 'string', multiple: true },
   },
 });
 
 async function run() {
+  if (flags.prod) return prod();
   if (flags.products) return products();
   if (flags.apply) {
     const scores = JSON.parse(readFileSync(flags.apply, 'utf8')) as { id: number; sentiment: number; product?: string; textHash?: string }[];
@@ -151,6 +161,52 @@ async function products() {
   };
   await Promise.all(Array.from({ length: Math.max(1, Number(flags.workers) || 1) }, worker));
   console.log(`read the product of ${saved} of ${pins.length}${failed ? `, ${failed} failed` : ''}`);
+}
+
+// Scores for the pins prod lists as needing one, where this DB scored the
+// same text (its stored hash starts with prod's short one).
+async function prod() {
+  if (!flags['token-file']?.length) throw new Error('--prod needs --token-file');
+  const headers = flags['token-file'].map((file) => ({ Authorization: `Bearer ${readFileSync(file, 'utf8').trim()}`, 'Content-Type': 'application/json' }));
+  const res = await fetch(`${flags.base}/api/pins/sentiments`, { headers: headers[0] });
+  if (!res.ok) throw new Error(`GET: ${res.status} ${await res.text()}`);
+  const needed = (await res.json()) as { id: number; textHash: string }[];
+  const local = new Map((await PinSentiment.getAll()).map((row) => [row.pinId, row]));
+  type Score = { id: number; sentiment: number; product?: string; textHash: string };
+  const scores: Score[] = [];
+  let changed = 0;
+  for (const { id, textHash } of needed) {
+    const row = local.get(id);
+    if (!row) continue;
+    if (!row.textHash.startsWith(textHash)) {
+      changed++;
+      continue;
+    }
+    // A product read from this text goes too ("" for none); one never read stays unread.
+    const product = row.productHash === row.textHash ? (row.product ?? '') : undefined;
+    scores.push({ id, sentiment: row.sentiment, ...(product === undefined ? {} : { product }), textHash });
+  }
+  console.log(`${needed.length} pins on ${flags.base} need a score; ${scores.length} scored here from the same text, ${changed} scored here from other text, ${needed.length - scores.length - changed} not scored here`);
+  if (flags['dry-run'] || !scores.length) return;
+  let left = scores;
+  for (const [t, header] of headers.entries()) {
+    const refusedNow: Score[] = [];
+    for (let i = 0; i < left.length; i += 200) {
+      const batch = left.slice(i, i + 200);
+      const put = await fetch(`${flags.base}/api/pins/sentiments`, { method: 'PUT', headers: header, body: JSON.stringify(batch) });
+      if (!put.ok) throw new Error(`PUT: ${put.status} ${await put.text()}`);
+      const { saved, refused } = (await put.json()) as { saved: number; refused: { id: number; reason: string }[] };
+      if (saved) console.log(`Token ${t + 1}: saved ${saved}`);
+      for (const r of refused) {
+        const score = batch.find((b) => b.id === r.id);
+        if (score && r.reason === 'not your pin') refusedNow.push(score);
+        else console.log(`pin ${r.id}: ${r.reason}`);
+      }
+    }
+    left = refusedNow;
+    if (!left.length) break;
+  }
+  if (left.length) console.log(`No token could score ${left.length}: ${left.map((s) => s.id).join(', ')}`);
 }
 
 run()
