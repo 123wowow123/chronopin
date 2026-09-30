@@ -14,7 +14,7 @@ export function e2eUserIds(users: Row[]): Set<number> {
 }
 
 export function excludeE2e<P extends Row>(
-  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[]; notInterested?: Row[]; companyBlocks?: Row[]; messages?: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] }; listings?: { listings: Row[]; ratings: Row[] } },
+  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[]; threadWatches?: Row[]; notInterested?: Row[]; companyBlocks?: Row[]; messages?: { conversations: Row[]; members: Row[]; messages: Row[]; reports: Row[] }; listings?: { listings: Row[]; ratings: Row[] } },
 ) {
   const userIds = e2eUserIds(data.users);
   const isE2eUser = (id: unknown) => userIds.has(id as number);
@@ -49,6 +49,7 @@ export function excludeE2e<P extends Row>(
     follows: data.follows.filter((f) => !isE2eUser(f.followerId) && !isE2eUser(f.followeeId)),
     companyFollows: data.companyFollows.filter((f) => !isE2eUser(f.userId) && !droppedCompanyIds.has(f.companyId)),
     userBlocks: (data.userBlocks ?? []).filter((b) => !isE2eUser(b.blockerId) && !isE2eUser(b.blockedId)),
+    threadWatches: (data.threadWatches ?? []).filter((w) => !isE2eUser(w.userId) && !droppedPinIds.has(w.pinId)),
     notInterested: (data.notInterested ?? []).filter((m) => !isE2eUser(m.userId) && !droppedPinIds.has(m.pinId)),
     companyBlocks: (data.companyBlocks ?? []).filter((b) => !isE2eUser(b.userId) && !droppedCompanyIds.has(b.companyId)),
     ...excludeE2eListings(data.listings, data.messages, isE2eUser, droppedPinIds),

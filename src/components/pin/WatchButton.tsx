@@ -10,7 +10,7 @@ import { onLive } from '@/lib/client/liveFeed';
 import { useSession } from '@/lib/client/session';
 import { savePendingAction, usePendingAction } from '@/lib/client/pendingAction';
 import { authHrefHere } from '@/lib/client/returnSpot';
-import { setWatched, useWatched } from '@/lib/client/watched';
+import { onWatchedChange, setWatched, useWatched } from '@/lib/client/watched';
 import type { PinJson } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
 
@@ -59,6 +59,17 @@ export function WatchButton({
       cancelled = true;
     };
   }, [loadForViewer, isLoggedIn, pin.id]);
+
+  // This viewer's watch made elsewhere on the page (the thread's eye).
+  useEffect(
+    () =>
+      onWatchedChange((id, value) => {
+        if (id !== pin.id) return;
+        acted.current = true;
+        setChosen(value);
+      }),
+    [pin.id],
+  );
 
   // Only the count: a broadcast is someone else's watch, not this viewer's.
   useEffect(() => {

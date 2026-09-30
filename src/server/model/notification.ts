@@ -36,6 +36,9 @@ const types = {
   // A pin you watch was updated (a new entry in its Updates pane). Sent as a
   // browser notification too. The actor is whoever made the update.
   update: 'update',
+  // A new response joined a thread you watch (ThreadWatch). The actor is the
+  // response's author.
+  thread: 'thread',
 } as const;
 
 // How late an alert may still go out, for a server that was down or busy
@@ -216,6 +219,27 @@ export default class Notification {
     return rows.filter((row) => row.inserted).map((row) => Number(row.userId));
   }
 
+  // One 'thread' per reader in userIds, about a response that has joined a
+  // thread they watch, bar its author and anyone blocked either way. Answers
+  // with who was newly told.
+  static async createForThreadWatchers({ pinId, actorId, userIds }: { pinId: number; actorId: number; userIds: number[] }, query: QueryFn = db.query): Promise<number[]> {
+    if (!userIds.length) return [];
+    const rows = await query(
+      `
+      INSERT INTO "Notification" ("userId", "actorId", "type", "pinId")
+      SELECT u."id", $2, 'thread', $1
+      FROM "User" u
+      WHERE u."id" = ANY($3::integer[]) AND u."id" <> $2 AND u."utcDeletedDateTime" IS NULL
+        AND NOT ${blockedBetween('u."id"', '$2')}
+      ON CONFLICT ("userId", "pinId") WHERE "type" = 'thread'
+      DO NOTHING
+      RETURNING "userId"`,
+      [pinId, actorId, userIds],
+    );
+    announce(query, rows);
+    return rows.map((row) => Number(row.userId));
+  }
+
   // Soft-deletes everything a comment sent (its 'comment' and 'reply'
   // notifications), for when that comment is deleted.
   static retractForComment(commentId: number, query: QueryFn = db.query) {
@@ -301,14 +325,14 @@ export default class Notification {
     return rows as any;
   }
 
-  // Unwatching a pin takes back its 'today' notifications, and any alert
-  // that it was starting or had been updated.
+  // Unwatching a pin takes back its 'today' notifications, any alert that it
+  // was starting or had been updated, and word that it joined a watched thread.
   static retractWatched({ userId, pinId }: { userId: number; pinId: number }, query: QueryFn = db.query) {
     return query(
       `
       UPDATE "Notification"
       SET "utcDeletedDateTime" = now()
-      WHERE "userId" = $1 AND "pinId" = $2 AND "type" IN ('today', 'start', 'soon', 'update') AND "utcDeletedDateTime" IS NULL
+      WHERE "userId" = $1 AND "pinId" = $2 AND "type" IN ('today', 'start', 'soon', 'update', 'thread') AND "utcDeletedDateTime" IS NULL
       RETURNING "userId"`,
       [userId, pinId],
     ).then((rows) => announce(query, rows));

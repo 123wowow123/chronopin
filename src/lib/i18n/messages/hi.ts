@@ -121,7 +121,9 @@ const hi: Messages = {
     start: '<pin></pin> अभी शुरू हो रहा है',
     soon: '<pin></pin> {minutes} मिनट में शुरू होगा',
     update: '<pin></pin> अपडेट हुआ है',
+    thread: '<pin></pin> उस थ्रेड में जोड़ा गया जिसे आप देख रहे हैं',
     whyWatch: 'एक पिन जिसे आप देख रहे हैं',
+    whyThread: 'एक थ्रेड जिसे आप देख रहे हैं',
     whyCompany: 'आप {company} को फ़ॉलो करते हैं',
     whyUser: 'आप {user} को फ़ॉलो करते हैं',
     whyYourPin: 'आपका पिन',
@@ -463,6 +465,7 @@ const hi: Messages = {
   alerts: {
     start: 'अभी शुरू हो रहा है · एक पिन जिसे आप देख रहे हैं',
     update: 'अपडेट हुआ · एक पिन जिसे आप देख रहे हैं',
+    thread: 'नया · एक थ्रेड जिसे आप देख रहे हैं',
     soon: { one: '{count} मिनट में शुरू होगा · एक पिन जिसे आप देख रहे हैं', other: '{count} मिनट में शुरू होगा · एक पिन जिसे आप देख रहे हैं' },
   },
   categories: {
@@ -903,6 +906,8 @@ const hi: Messages = {
     stop: 'देखना बंद करें',
     start: 'इस पिन को देखें',
     count: '{count} लोग देख रहे हैं',
+    startThread: 'इस थ्रेड को देखें',
+    stopThread: 'इस थ्रेड को देखना बंद करें',
   },
   odds: {
     trendUp: '{source} पर {label} {percent}, इस हफ़्ते {points} पॉइंट ऊपर',

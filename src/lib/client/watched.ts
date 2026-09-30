@@ -51,10 +51,23 @@ function want(id: number) {
   }
 }
 
+const changeListeners = new Set<(pinId: number, value: boolean) => void>();
+
 // After the viewer watches or unwatches a pin, so its other cards agree.
 export function setWatched(pinId: number, value: boolean) {
   watched.set(pinId, value);
   announce();
+  changeListeners.forEach((listener) => listener(pinId, value));
+}
+
+// Each setWatched, for a button that keeps its own state (one that looked
+// itself up) but should still follow a watch made elsewhere on the page, such
+// as watching the whole thread.
+export function onWatchedChange(listener: (pinId: number, value: boolean) => void) {
+  changeListeners.add(listener);
+  return () => {
+    changeListeners.delete(listener);
+  };
 }
 
 // Whether this viewer watches the pin: undefined until it is known, and

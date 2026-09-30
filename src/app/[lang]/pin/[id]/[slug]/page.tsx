@@ -49,6 +49,7 @@ import { RefineLink } from '@/components/pin/RefineLink';
 import { ViewCount } from '@/components/pin/ViewCount';
 import { ThreadAge } from '@/components/pin/ThreadAge';
 import { ThreadSuggestion } from '@/components/pin/ThreadSuggestion';
+import { ThreadWatchButton } from '@/components/pin/ThreadWatchButton';
 import { WatchButton } from '@/components/pin/WatchButton';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { Icon } from '@/components/ui/Icon';
@@ -455,10 +456,13 @@ async function Thread({ pin }: { pin: PinJson }) {
   const pins = await threadPins(pin.id, t.locale);
   return (
     <section aria-labelledby="thread-heading" className="surface mt-6 p-5">
-      <div className="flex items-baseline justify-between">
-        <h2 id="thread-heading" className="text-base font-semibold">
-          {t('pin.thread')}
-        </h2>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <h2 id="thread-heading" className="text-base font-semibold">
+            {t('pin.thread')}
+          </h2>
+          <ThreadWatchButton pinId={pin.id} />
+        </div>
         <Link href={`/respond/${pin.id}`} className="text-sm" prefetch={false}>
           {t('pin.respond')}
         </Link>

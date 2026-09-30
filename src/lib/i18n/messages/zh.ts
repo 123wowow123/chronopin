@@ -121,7 +121,9 @@ const zh: Messages = {
     start: '<pin></pin>现在开始',
     soon: '<pin></pin>将在{minutes}分钟后开始',
     update: '<pin></pin>已更新',
+    thread: '<pin></pin> 加入了你关注的串',
     whyWatch: '你关注的图钉',
+    whyThread: '你关注的串',
     whyCompany: '你关注了 {company}',
     whyUser: '你关注了 {user}',
     whyYourPin: '你的图钉',
@@ -463,6 +465,7 @@ const zh: Messages = {
   alerts: {
     start: '现在开始 · 你关注的图钉',
     update: '已更新 · 你关注的图钉',
+    thread: '新内容 · 你关注的串',
     soon: '{count}分钟后开始 · 你关注的图钉',
   },
   categories: {
@@ -890,6 +893,8 @@ const zh: Messages = {
     stop: '取消关注',
     start: '关注此图钉',
     count: '{count} 人关注',
+    startThread: '关注此串',
+    stopThread: '取消关注此串',
   },
   odds: {
     trendUp: '{source} 上 {label} 为 {percent}，本周上涨 {points} 个百分点',

@@ -158,6 +158,11 @@ export default class Pins extends BasePins<Pin> {
   // building all of it - every pin's references, ratings, views and duplicate
   // group - before keeping the handful the thread names: 44ms to answer with
   // a single pin.
+  // The ids of every pin in the thread around pinId, pinId itself included.
+  static async threadIds(pinId: number): Promise<number[]> {
+    return (await queryThreadOrder(pinId)).map((o) => o.id);
+  }
+
   static async getThreadPins(pinId: number) {
     const order = await queryThreadOrder(pinId);
     if (!order.length) {

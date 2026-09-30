@@ -127,7 +127,9 @@ const ru: Messages = {
     start: '<pin></pin> начинается сейчас',
     soon: '<pin></pin> начнётся через {minutes} мин',
     update: '<pin></pin> обновлён',
+    thread: '<pin></pin> добавлен в отслеживаемую вами цепочку',
     whyWatch: 'Отслеживаемый вами пин',
+    whyThread: 'Отслеживаемая вами цепочка',
     whyCompany: 'Вы подписаны на {company}',
     whyUser: 'Вы подписаны на {user}',
     whyYourPin: 'Ваш пин',
@@ -467,6 +469,7 @@ const ru: Messages = {
   alerts: {
     start: 'Начинается сейчас · отслеживаемый пин',
     update: 'Обновлён · отслеживаемый пин',
+    thread: 'Новое · отслеживаемая цепочка',
     soon: {
       one: 'Начнётся через {count} минуту · отслеживаемый пин',
       few: 'Начнётся через {count} минуты · отслеживаемый пин',
@@ -933,6 +936,8 @@ const ru: Messages = {
     stop: 'Не отслеживать',
     start: 'Отслеживать этот пин',
     count: 'Отслеживают: {count}',
+    startThread: 'Отслеживать эту цепочку',
+    stopThread: 'Не отслеживать цепочку',
   },
   odds: {
     trendUp: '{label} {percent} на {source}, +{points} п. за неделю',

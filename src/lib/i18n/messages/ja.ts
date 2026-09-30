@@ -120,7 +120,9 @@ const ja: Messages = {
     start: '<pin></pin>がまもなく始まります',
     soon: '<pin></pin>は{minutes}分後に始まります',
     update: '<pin></pin>が更新されました',
+    thread: 'ウォッチ中のスレッドに<pin></pin>が追加されました',
     whyWatch: 'ウォッチ中のピン',
+    whyThread: 'ウォッチ中のスレッド',
     whyCompany: '{company}をフォロー中',
     whyUser: '{user}さんをフォロー中',
     whyYourPin: 'あなたのピン',
@@ -462,6 +464,7 @@ const ja: Messages = {
   alerts: {
     start: 'まもなく開始 · ウォッチ中のピン',
     update: '更新されました · ウォッチ中のピン',
+    thread: '新着 · ウォッチ中のスレッド',
     soon: '{count}分後に開始 · ウォッチ中のピン',
   },
   categories: {
@@ -890,6 +893,8 @@ const ja: Messages = {
     stop: 'ウォッチを解除',
     start: 'このピンをウォッチ',
     count: '{count} 人がウォッチ中',
+    startThread: 'このスレッドをウォッチ',
+    stopThread: 'スレッドのウォッチを解除',
   },
   odds: {
     trendUp: '{source}で{label} {percent}、今週 {points} ポイント上昇',

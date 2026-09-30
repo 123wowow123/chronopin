@@ -121,7 +121,9 @@ const pt: Messages = {
     start: '<pin></pin> está começando agora',
     soon: '<pin></pin> começa em {minutes} minutos',
     update: '<pin></pin> foi atualizado',
+    thread: '<pin></pin> entrou em uma thread que você acompanha',
     whyWatch: 'Um pin que você acompanha',
+    whyThread: 'Uma thread que você acompanha',
     whyCompany: 'Você segue {company}',
     whyUser: 'Você segue {user}',
     whyYourPin: 'Seu pin',
@@ -461,6 +463,7 @@ const pt: Messages = {
   alerts: {
     start: 'Começando agora · um pin que você acompanha',
     update: 'Atualizado · um pin que você acompanha',
+    thread: 'Novo · uma thread que você acompanha',
     soon: { one: 'Começa em {count} minuto · um pin que você acompanha', other: 'Começa em {count} minutos · um pin que você acompanha' },
   },
   categories: {
@@ -887,6 +890,8 @@ const pt: Messages = {
     stop: 'Parar de acompanhar',
     start: 'Acompanhar este pin',
     count: '{count} acompanhando',
+    startThread: 'Acompanhar esta thread',
+    stopThread: 'Parar de acompanhar esta thread',
   },
   odds: {
     trendUp: '{label} {percent} no {source}, alta de {points} pontos esta semana',

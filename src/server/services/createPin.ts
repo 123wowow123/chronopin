@@ -14,6 +14,7 @@ import { parseTags } from '@/lib/tags';
 import PinTag from '@/server/model/pinTag';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { invalidatePin } from '@/server/services/cache';
+import { welcomeToThread } from '@/server/services/watchAlerts';
 import { reslotSeries, seriesPinFor } from '@/server/scrape/modelSeries';
 import { prequelPinFor, reslotSequels } from '@/server/scrape/prequel';
 import { flightPathProblem, saveFlightPath } from '@/server/services/pinFlightPath';
@@ -82,8 +83,11 @@ export async function createPin(body: Record<string, any>, user: User) {
     ),
   );
   invalidatePin(saved.id);
-  // A response joins its parent's thread.
-  if (saved.parentId) invalidatePin(saved.parentId);
+  // A response joins its parent's thread, and whoever watches that thread.
+  if (saved.parentId) {
+    invalidatePin(saved.parentId);
+    after(() => welcomeToThread(saved.id, user.id));
+  }
   await Promise.all([
     reslotSequels({ id: saved.id, sourceUrl: pin.sourceUrl, categories: pin.categories, ratings: pin.ratings }),
     reslotSeries({ id: saved.id, title: pin.title, company: pin.company }),

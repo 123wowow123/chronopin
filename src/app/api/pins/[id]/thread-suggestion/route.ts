@@ -1,4 +1,4 @@
-import type { NextRequest } from 'next/server';
+import { after, type NextRequest } from 'next/server';
 import { isAdmin, requireUser } from '@/server/auth';
 import * as db from '@/server/db';
 import { emitPinEvent } from '@/server/events';
@@ -7,6 +7,7 @@ import Pin from '@/server/model/pin';
 import { suggestedSeriesParent } from '@/server/scrape/modelSeries';
 import { setParent, suggestedParent } from '@/server/scrape/prequel';
 import { invalidatePin } from '@/server/services/cache';
+import { welcomeToThread } from '@/server/services/watchAlerts';
 
 type Ctx = RouteContext<'/api/pins/[id]/thread-suggestion'>;
 
@@ -44,6 +45,9 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   await setParent(pinId, found.parent.id);
   for (const id of [pinId, found.pin.parentId, found.parent.id]) if (id) invalidatePin(id);
   const { pin } = await Pin.queryById(pinId);
-  if (pin) emitPinEvent('update', pin, { userId: user.id });
+  if (pin) {
+    emitPinEvent('update', pin, { userId: user.id });
+    after(() => welcomeToThread(pinId, pin.userId ?? user.id));
+  }
   return json({ parentId: found.parent.id });
 });

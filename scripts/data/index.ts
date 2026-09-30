@@ -10,7 +10,7 @@ import { parseArgs } from 'node:util';
 import Holidays from 'date-holidays';
 import _ from 'lodash';
 import * as db from '@/server/db';
-import { Comment, Company, CompanyBlock, CompanyFollow, DateTime, Follow, FullPins, MediumType, PinNotInterested, User, UserBlock, Users } from '@/server/model';
+import { Comment, Company, CompanyBlock, CompanyFollow, DateTime, Follow, FullPins, MediumType, PinNotInterested, ThreadWatch, User, UserBlock, Users } from '@/server/model';
 import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
 import PinUpdate from '@/server/model/pinUpdate';
@@ -42,6 +42,7 @@ const { values: flags } = parseArgs({
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
     companyfollowfile: { type: 'string', default: './scripts/backup/seedCompanyFollows.json' },
     userblockfile: { type: 'string', default: './scripts/backup/seedUserBlocks.json' },
+    threadwatchfile: { type: 'string', default: './scripts/backup/seedThreadWatches.json' },
     // Private chats: gitignored, as seedUsers.json is.
     messagefile: { type: 'string', default: './scripts/backup/seedMessages.json' },
     // Marketplace listings and their ratings (0095): gitignored too.
@@ -131,6 +132,7 @@ async function saveDB() {
     follows: (await Follow.getAll()).follows,
     companyFollows: await CompanyFollow.getAll(),
     userBlocks: await UserBlock.getAll(),
+    threadWatches: await ThreadWatch.getAll(),
     notInterested: await PinNotInterested.getAll(),
     companyBlocks: await CompanyBlock.getAll(),
     messages: await Message.getAll(),
@@ -168,6 +170,7 @@ async function saveDB() {
   // Who blocked whom (0076).
   console.log('Backup User Blocks');
   writeJson(flags.userblockfile, data.userBlocks);
+  writeJson(flags.threadwatchfile, data.threadWatches);
 
   // Marketplace listings and ratings (0095).
   console.log('Backup Listings');
@@ -422,6 +425,15 @@ async function seedDB() {
       await UserBlock.restore(readJson(flags.userblockfile));
     } catch (error) {
       log.error('User Blocks Save Error', JSON.stringify(error));
+    }
+  }
+
+  // After the users and pins they name; a backup from before 0102 has none.
+  if (existsSync(flags.threadwatchfile)) {
+    try {
+      await ThreadWatch.restore(readJson(flags.threadwatchfile));
+    } catch (error) {
+      log.error('Thread Watches Save Error', JSON.stringify(error));
     }
   }
 

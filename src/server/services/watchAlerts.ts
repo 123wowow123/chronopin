@@ -7,6 +7,7 @@ import * as db from '../db';
 import { emitWatchAlert, type WatchAlert } from '../events';
 import Notification from '../model/notification';
 import Pin from '../model/pin';
+import ThreadWatch from '../model/threadWatch';
 import { pushToUser } from '../push';
 import log from '../util/log';
 
@@ -135,6 +136,42 @@ export async function notifyWatchersOfUpdate(pinId: number, actorId?: number | n
     );
   } catch (err) {
     log.warn(`telling pin ${pinId}'s watchers of its update failed:`, (err as Error).message);
+  }
+}
+
+// A response has just joined a thread (posted under a pin, or moved there):
+// whoever watches that thread now watches it too, and hears about it in the
+// bell and the browser. Never throws - it runs after the response is sent.
+export async function welcomeToThread(pinId: number, authorId: number) {
+  try {
+    const userIds = await ThreadWatch.welcome(pinId, authorId);
+    if (!userIds.length) return;
+    const { pin: found } = await Pin.queryById(pinId);
+    if (!found) return;
+    const pin = toJson<PinJson>(found);
+    const locales = await localesOf(userIds);
+    const translators = new Map<Locale, Promise<Translator>>();
+    await Promise.all(
+      userIds.map(async (userId) => {
+        const locale = locales.get(userId) ?? 'en';
+        if (!translators.has(locale)) translators.set(locale, translatorFor(locale));
+        const t = await translators.get(locale)!;
+        const alert: WatchAlert = {
+          userId,
+          pinId,
+          type: 'thread',
+          title: pin.title,
+          body: t('alerts.thread'),
+          url: pinPath({ id: pinId, title: pin.title }),
+          image: pinImage(pin)?.url ?? null,
+          tag: `pin-${pinId}-thread`,
+        };
+        emitWatchAlert(alert);
+        await pushToUser(userId, alert);
+      }),
+    );
+  } catch (err) {
+    log.warn(`telling pin ${pinId}'s thread watchers failed:`, (err as Error).message);
   }
 }
 
