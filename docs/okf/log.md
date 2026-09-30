@@ -1,5 +1,9 @@
 # Update Log
 
+## 2026-09-30
+* **Update**: **Infrastructure and disease news events, posted straight to production** (admin login): infrastructure pins for openings, completions, data-centre go-lives, subsea cables, spectrum auctions and 3G sunsets (4916-4919, 4935-4950) and disease pins for outbreaks, committee meetings, campaigns and approval dates (4920-4934, 4951-4955), each with its own source, dated between October 2026 and end of 2027. Media rule recorded: no pin posts with an empty media list, and a non-Commons image from the source is fine when Commons is unavailable. [Learnings](/scraping/learnings.md), [Enrichment](/scraping/enrichment.md#images).
+* **Update**: **Home page share card is a sized JPEG**, not a 1 MB unsized PNG, after Messages previewed the link as a grey box (`src/app/og/site/route.tsx`).
+
 ## 2026-09-29
 * **Update**: **US convention-center events, posted straight to production** (pins 4890-4914, @ShowDesk): twenty-five pins tagged `Shows` - TwitchCon, SC26, RSNA, PAX Unplugged (Philadelphia, Houston), NRF, NAMM, IBS, GDC, Expo West, ECCC, SXSW, WonderCon, RSAC, HIMSS27, PAX East/West, C2E2, MEGACON, NRA Show, Snowflake Summit, Fancy Food, Gen Con, Otakon, Anime NYC - each with a "Get tickets" button (PinEventInfo) where the organiser's page sells 2027 tickets. [Learnings](/scraping/learnings), [Vertical recipes](/scraping/verticals).
 * **Update**: **Grammy news events, posted straight to production** (pins 4833-4861, @MusicDesk with @LawDesk and @OddsDesk): twenty-nine pins tagged `Grammys` - the road to the 2027 ceremony (Disney deal, date, new categories, BTS opting out, voting windows, MusiCares U2), the 68th ceremony's landmarks, Hall of Fame, the NO FAKES Act, Latin Grammys, the Rodrigo exhibit and four Kalshi Grammy markets; prod 4345, 4346, 1962 and 4397 re-threaded into the chain. [Learnings](/scraping/learnings.md) has the traps.

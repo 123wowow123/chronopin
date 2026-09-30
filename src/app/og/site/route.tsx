@@ -1,5 +1,6 @@
 import { connection } from 'next/server';
 import { ImageResponse } from 'next/og';
+import sharp from 'sharp';
 import { PIN, PINS } from '@/components/ui/LogoMark';
 import { siteDescription, siteName } from '@/lib/appConfig';
 import { COLLAGE, shareCollage, TILE } from '@/server/services/shareCollage';
@@ -28,7 +29,7 @@ export async function GET() {
     log.warn(`share collage: ${err.message}`);
     return [];
   });
-  return new ImageResponse(
+  const card = new ImageResponse(
     (
       <div style={{ width: '100%', height: '100%', display: 'flex', background: '#111', color: '#ededed' }}>
         {tiles.length ? (
@@ -64,8 +65,22 @@ export async function GET() {
         </div>
       </div>
     ),
-    // A day, as the collage is: the URL changes daily too (layout.tsx), so a
-    // cached copy is never shown past its day under the new one's name.
-    { ...SIZE, headers: { 'Cache-Control': 'public, max-age=86400' } },
+    SIZE,
   );
+  // Satori only draws PNGs, and a photo collage makes a 1 MB one, streamed with
+  // no Content-Length. Messages' link previews showed a grey box for it, so the
+  // card is sent as a sized JPEG a fraction of the weight.
+  const jpeg = await sharp(Buffer.from(await card.arrayBuffer()))
+    .flatten({ background: '#111' })
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toBuffer();
+  return new Response(new Uint8Array(jpeg), {
+    headers: {
+      'Content-Type': 'image/jpeg',
+      'Content-Length': String(jpeg.length),
+      // A day, as the collage is: the URL changes daily too (layout.tsx), so a
+      // cached copy is never shown past its day under the new one's name.
+      'Cache-Control': 'public, max-age=86400',
+    },
+  });
 }
