@@ -275,8 +275,6 @@ sync prod db to local and backup json
 
 - Translate to Arabic
 
-- pins grammy news event
-
 - sell something and pay to notify item to all watchers for the pin
 
 - use ip address and google analytics to help find where trafic is coming from and pin local events for those users
@@ -290,3 +288,5 @@ sync prod db to local and backup json
 - cross post with facebook marketplace?
 
 - add ads on mapped marketplace pin like logging, also auto show related item in area
+
+- update leftover sentiment
