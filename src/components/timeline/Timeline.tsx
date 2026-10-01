@@ -84,6 +84,19 @@ async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Li
   return { page, links: parseLinkHeader(res.headers.get('link')) };
 }
 
+type ViewAnchor = { el: HTMLElement; top: number };
+
+// The first day (or TODAY marker) still showing below the sticky navbar, and
+// how far down the window it is.
+function dayOnScreen(): ViewAnchor | null {
+  const line = document.querySelector('[data-navbar]')?.getBoundingClientRect().bottom ?? 0;
+  for (const el of document.querySelectorAll<HTMLElement>('[data-day]')) {
+    const box = el.getBoundingClientRect();
+    if (box.bottom > line) return { el, top: box.top };
+  }
+  return null;
+}
+
 // How many pins one day really has, loaded or not.
 async function fetchDayCount(day: string, timeZone: string, postedWithin: string | null, ring: Ring | null): Promise<number> {
   const params = new URLSearchParams({ day, tz: timeZone });
@@ -187,7 +200,8 @@ export function Timeline({
   // read once as the first page is on screen and kept while its page loads.
   const hashRead = useRef(false);
   const dayTarget = useRef<string | null>(null);
-  const prependAnchor = useRef<{ height: number; top: number } | null>(null);
+  // The day on screen as something above it changes, to keep it where it was.
+  const viewAnchor = useRef<ViewAnchor | null>(null);
 
   const todayKey = dayKeyIn(now, timeZone);
   // Whether the timeline is showing less than all of itself, which decides
@@ -350,8 +364,11 @@ export function Timeline({
 
   // Open on the day in the URL's hash, else the focused pin, else today, once
   // the first page is on screen.
+  // Not while hydration still draws the days in the server's zone: its today
+  // can be tomorrow (UTC after a US evening), and the jump there would be
+  // undone a moment later when the browser's zone redraws them.
   useLayoutEffect(() => {
-    if (scrolledToToday.current || !bags.length) return;
+    if (scrolledToToday.current || !bags.length || timeZone !== browserTimeZone()) return;
     if (!hashRead.current) {
       hashRead.current = true;
       dayTarget.current = readDayHash();
@@ -398,7 +415,7 @@ export function Timeline({
         { duration: 3000, delay: 300, easing: 'ease-out' },
       );
     }
-  }, [bags, focus, focusTarget, holdFocus, holdToday, holdDay, holdsDay, jumped, reload, postedWithin, ring, todayKey]);
+  }, [bags, focus, focusTarget, holdFocus, holdToday, holdDay, holdsDay, jumped, reload, postedWithin, ring, todayKey, timeZone]);
 
   // Today is not among the pages loaded (the timeline opened on a pin far from
   // it): open the timeline on today instead, keeping the posting window.
@@ -447,15 +464,6 @@ export function Timeline({
   useEffect(() => {
     settleDayTrip();
   }, []);
-
-  // Keep the view still when a page is added above it.
-  useLayoutEffect(() => {
-    const anchor = prependAnchor.current;
-    if (anchor) {
-      prependAnchor.current = null;
-      window.scrollTo({ top: anchor.top + (document.documentElement.scrollHeight - anchor.height) });
-    }
-  }, [pins, dateTimes]);
 
   const merge = useCallback((page: TimelinePage) => {
     setPins((current) => {
@@ -576,7 +584,7 @@ export function Timeline({
         if (direction === 'previous') {
           // Added above: drawn at once, so the view is held still from the
           // scroll position read here.
-          prependAnchor.current = { height: document.documentElement.scrollHeight, top: window.scrollY };
+          viewAnchor.current ??= dayOnScreen();
           add();
         } else {
           // Added below the reader, out of sight: drawn as a transition, which
@@ -650,12 +658,28 @@ export function Timeline({
       if (countsAsked.current.has(key)) continue;
       countsAsked.current.add(key);
       fetchDayCount(day, timeZone, postedWithin, ring).then(
-        (count) => setDayCounts((counts) => ({ ...counts, [key]: count })),
+        (count) => {
+          viewAnchor.current ??= dayOnScreen();
+          setDayCounts((counts) => ({ ...counts, [key]: count }));
+        },
         // Asked again when the day is next at an edge.
         () => countsAsked.current.delete(key),
       );
     }
   }, [edgeDays, timeZone, postedWithin, ring, ringKey, countsVersion]);
+
+  // Keep the view still when a page is added above it, or a day count turns
+  // up a "View all" there: the day on screen goes back to where it was. By
+  // that day rather than the page's height, since a page above can also add
+  // pins to the day being read (today's earlier hours), which grows it below
+  // the reader and must not scroll them.
+  useLayoutEffect(() => {
+    const anchor = viewAnchor.current;
+    if (anchor) {
+      viewAnchor.current = null;
+      if (anchor.el.isConnected) window.scrollBy({ top: anchor.el.getBoundingClientRect().top - anchor.top });
+    }
+  }, [pins, dateTimes, dayCounts]);
 
   function changePostedWithin(within: string | null) {
     if ((postedWithin || null) === (within || null)) return;
