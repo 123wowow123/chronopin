@@ -19,6 +19,8 @@ const loaders: Record<Locale, () => Promise<Messages>> = {
   it: () => import('./it').then((m) => m.default),
   ru: () => import('./ru').then((m) => m.default),
   pt: () => import('./pt').then((m) => m.default),
+  ms: () => import('./ms').then((m) => m.default),
+  vi: () => import('./vi').then((m) => m.default),
 };
 
 export function getMessages(locale: Locale): Promise<Messages> {

@@ -11,9 +11,11 @@ import ar from './messages/ar';
 import italian from './messages/it';
 import ja from './messages/ja';
 import ko from './messages/ko';
+import ms from './messages/ms';
 import pt from './messages/pt';
 import ru from './messages/ru';
 import th from './messages/th';
+import vi from './messages/vi';
 import zh from './messages/zh';
 import { CATEGORIES, slugify } from '../categories';
 import { createTranslator, type Messages } from './translate';
@@ -62,6 +64,8 @@ describe('negotiateLocale', () => {
     // Brazilian and European Portuguese both get the site's Portuguese.
     expect(negotiateLocale('pt-PT,en;q=0.5')).toBe('pt');
     expect(negotiateLocale('en;q=0.4,ja;q=0.9')).toBe('ja');
+    expect(negotiateLocale('ms-MY,en;q=0.5')).toBe('ms');
+    expect(negotiateLocale('vi-VN,en;q=0.5')).toBe('vi');
     expect(negotiateLocale('zh-Hans-CN')).toBe('zh');
   });
 
@@ -162,6 +166,8 @@ describe('formatting in other languages', () => {
     expect(formatStart(pin, 'UTC', {}, 'ar')).toMatch(/^يبدأ في /);
     expect(formatStart(pin, 'UTC', {}, 'it')).toBe('Inizia il 14/09/2026');
     expect(formatStart(pin, 'UTC', {}, 'pt')).toBe('Começa em 14/09/2026');
+    expect(formatStart(pin, 'UTC', {}, 'ms')).toBe('Bermula 14/09/2026');
+    expect(formatStart(pin, 'UTC', {}, 'vi')).toBe('Bắt đầu 14/09/2026');
     // A run of days is worded as a span, not as a start.
     const span = { ...pin, utcEndDateTime: '2026-09-17T00:00:00.000Z' };
     expect(formatStart(span, 'UTC', {}, 'fr')).toBe('Du 14/09/2026 au 16/09/2026');
@@ -178,7 +184,7 @@ describe('formatting in other languages', () => {
 // Every translation keeps the English message's {slots} and <tags>: a slot
 // lost or renamed prints as its braces, and a lost tag loses its link.
 describe('dictionaries', () => {
-  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi, ar, th, it: italian, ru, pt };
+  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi, ar, th, it: italian, ru, pt, ms, vi };
 
   function leaves(node: unknown, prefix = ''): [string, string][] {
     if (typeof node === 'string') return [[prefix, node]];
