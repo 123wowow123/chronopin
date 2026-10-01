@@ -35,6 +35,8 @@ export default function TagsPage() {
 }
 
 async function Tags() {
+  // Per request: the counts are upcoming pins, which read the clock and the database.
+  await connection();
   const [t, index] = await Promise.all([getT(), topicIndex()]);
   const shown = index.tags.filter((tag) => tag.pins >= MIN_INDEXED_PINS);
   const link = (tag: (typeof shown)[number]) => ({ href: tagPath(tag.name), label: tagLabel(t, tag), pins: tag.pins });
