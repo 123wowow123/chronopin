@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo). Find new events: [breakingNews](#breakingnews). Scores: [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 
 All are set on **/admin/jobs**: on or off, every day or once a month (on a
@@ -82,6 +82,7 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 | --- | --- | --- |
 | `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `google_trends` | Trending searches in ten markets, scored for dated events, with `coveredByPin` ([trends.ts](../../../src/server/jobs/trends.ts)) | Same reader as `trends:discover` |
+| `prediction_markets` | Kalshi and Polymarket events resolving in the next week and those newly listed since the last run, biggest book first, with odds, dollars traded and `coveredByPin` ([markets.ts](../../../src/server/jobs/markets.ts)) | About 45 pages of exchange listings filtered down to a page: per-game and recurring markets out, an election's props folded together |
 | `company_coverage`, `tagged_pins` | Where a beat left off: each company's pins and when one was last posted, stalest first; what a tag (`Layoffs`) already holds ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `find_pins`, `get_pin` | The already-pinned test; a pin's full JSON | The app's own data |
 | `pin_health_scan`, `check_pin_health` | Broken pictures, removed or unembeddable videos, deleted posts, dead sources ([health.ts](../../../src/server/jobs/health.ts)) | Dozens of link checks in one call; oEmbed status codes |
@@ -299,6 +300,40 @@ first: breaking news is often an update to an existing pin.
 **Traps.** Something that already happened today with nothing ahead is
 worth a pin only if it is major; a story with a dated next step (a vote, a
 hearing, a deadline) is usually the better pin.
+
+### predictionMarkets
+
+Added 2026-10-01 (owner: "6am job and 6pm job should include scrape with
+prediction betting sites to get new major events being predicted for, for
+the week").
+
+**Reads** `prediction_markets` once: `thisWeek` (markets resolving in the
+next seven days) and `newlyListed` (listed since the last run, resolving
+later). Then `find_pins` and `get_pin` for each one worth a look.
+**Does** treat the money as a pointer to an event. Where a market with real
+volume points at a dated event in the week ahead that has no pin - an
+election, a jobs report, a fight, a ruling, a premiere's opening weekend, a
+summit - pin **the event** under the desk that owns its vertical
+(@PoliticsDesk for the election, @EconDesk for the release, @SportDesk for
+the fight), with the market as a reference. A market question that is itself
+the subject (a "by when" ladder, "who will be the next ...") is an
+@OddsDesk pin with the market as `sourceUrl`, dated per the
+[prediction-market recipe](verticals.md) (a ladder's likeliest rung,
+`estimated`). A newly listed market with a big book is news in its own
+right: something just became likely enough to bet on, so look for the
+announcement behind it. Where `coveredByPin` or `find_pins` finds the event
+already pinned, add the market as a reference if the pin is a curator's
+(mark it for revisiting otherwise), and check the pin's date against when the
+market resolves.
+**Traps.** Quote the odds with the dollars traded and the day they were read
+([learnings](learnings.md)); a thin book (under about $10k) is not evidence of
+anything. A market's close time is when it settles, not when the event
+happens - an election market closes the night after the vote, a "by Oct 31"
+market says nothing about any one day. `related` lists the smaller markets
+folded into one story; they are one pin (or one thread), not twenty. Kalshi's
+`last_price_dollars` can be stale against the book; quote bid/ask where they
+disagree. Skip a single regular-season game, a weekly count or a price
+level - the tool drops most, not all.
 
 ### thinCategories
 
