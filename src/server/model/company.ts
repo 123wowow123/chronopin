@@ -3,9 +3,10 @@ import type { Row } from '../db';
 import { inBackground } from '../background';
 import * as logo from '../companyLogo';
 import { findDescriptions } from '../companyDescription';
+import { findLocalNames, nameIndex, type NameIndex } from '../companyNames';
 import { wordStartPattern } from '../util/searchQuery';
 
-const COLUMNS = `"id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "description", "utcDescriptionCheckedDateTime"`;
+const COLUMNS = `"id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "description", "utcDescriptionCheckedDateTime", "utcLocalNamesCheckedDateTime"`;
 
 export type CompanyRow = {
   id: number;
@@ -17,7 +18,12 @@ export type CompanyRow = {
   // A line about the company (0048), shown by a company: search.
   description: string | null;
   utcDescriptionCheckedDateTime: Date | null;
+  // When its names in other scripts were looked up (0105, companyNames.ts).
+  utcLocalNamesCheckedDateTime: Date | null;
 };
+
+const NAME_INDEX_TTL = 10 * 60 * 1000;
+const nameCache: { at: number; index: Promise<NameIndex> | null } = { at: 0, index: null };
 
 export default class Company {
   // The Company row for a typed or scraped name, created on first sight.
@@ -41,13 +47,22 @@ export default class Company {
       [trimmed, wikiUrl || null],
     );
     const company = rows[0];
-    if (!company.utcLogoCheckedDateTime) {
-      // Registered rather than merely started: a script that finishes first
-      // would otherwise close the pool out from under the write this makes.
+    // The logo lookup also finds the Wikipedia article of a company that came
+    // without one, which the local names are then read from.
+    const logoLookup = company.utcLogoCheckedDateTime
+      ? Promise.resolve()
+      : Company.findLogos([company]).then(
+          () => undefined,
+          (err) => console.log(`Company '${company.name}' logo lookup err:`, err.message),
+        );
+    // Registered rather than merely started: a script that finishes first
+    // would otherwise close the pool out from under the write this makes.
+    inBackground(logoLookup);
+    if (!company.utcLocalNamesCheckedDateTime) {
       inBackground(
-        Company.findLogos([company]).catch((err) =>
-          console.log(`Company '${company.name}' logo lookup err:`, err.message),
-        ),
+        logoLookup
+          .then(() => Company.findLocalNames([company.id]))
+          .catch((err) => console.log(`Company '${company.name}' local names lookup err:`, err.message)),
       );
     }
     if (!company.utcDescriptionCheckedDateTime) {
@@ -74,7 +89,7 @@ export default class Company {
 
   static getAll() {
     return db.query(`SELECT ${COLUMNS}, "tickerSymbol", "tickerNote", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime",
-      "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "marketCap", "utcMarketCapCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
+      "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "marketCap", "utcMarketCapCheckedDateTime", "localNames", "utcLocalNamesCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
   }
 
   // Names and logos for the pin form's company suggestions.
@@ -128,6 +143,52 @@ export default class Company {
       ),
     );
     return found;
+  }
+
+  // Companies whose names in other scripts have not been looked up, or every company.
+  static needingLocalNames(all: boolean) {
+    return db.query<{ id: number; name: string; wikiUrl: string | null }>(
+      `SELECT "id", "name"::text AS "name", "wikiUrl" FROM "Company" ${all ? '' : 'WHERE "utcLocalNamesCheckedDateTime" IS NULL'} ORDER BY "id"`,
+    );
+  }
+
+  // Looks up these companies' names in other scripts and stores them.
+  static async findLocalNames(ids: number[]) {
+    const companies = await db.query<{ id: number; wikiUrl: string | null }>(`SELECT "id", "wikiUrl" FROM "Company" WHERE "id" = ANY($1::integer[])`, [ids]);
+    const found = await findLocalNames(companies);
+    await Promise.all(
+      found.map((f) =>
+        db.query(`UPDATE "Company" SET "localNames" = $2, "utcLocalNamesCheckedDateTime" = now() WHERE "id" = $1`, [f.id, f.names]),
+      ),
+    );
+    Company.forgetNameIndex();
+    return found;
+  }
+
+  // Every company's names in other scripts, for search (withCompanyNames):
+  // read once and kept for a few minutes, as every search asks for it.
+  static nameIndex(): Promise<NameIndex> {
+    const now = Date.now();
+    if (!nameCache.index || now - nameCache.at > NAME_INDEX_TTL) {
+      nameCache.at = now;
+      nameCache.index = db
+        .query<{ name: string; localNames: string[] }>(
+          // Busiest first: a name several companies share (迪士尼 for Disney,
+          // Disney+ and FX, whose articles lead to one entity) goes to the
+          // one with the most pins.
+          `SELECT "name"::text AS "name", "localNames" FROM "Company" AS "c" WHERE cardinality("localNames") > 0
+           ORDER BY (SELECT count(*) FROM "Pin" WHERE "Pin"."companyId" = "c"."id" AND "Pin"."utcDeletedDateTime" IS NULL) DESC, "id"`,
+        )
+        .then(nameIndex, (err) => {
+          nameCache.index = null;
+          throw err;
+        });
+    }
+    return nameCache.index;
+  }
+
+  static forgetNameIndex() {
+    nameCache.index = null;
   }
 
   // Companies with no description looked for yet, or every company.
@@ -190,14 +251,14 @@ export default class Company {
       INSERT INTO "Company" ("id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime",
         "tickerSymbol", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime", "tickerNote",
         "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "description", "utcDescriptionCheckedDateTime",
-        "marketCap", "utcMarketCapCheckedDateTime")
-      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20)
+        "marketCap", "utcMarketCapCheckedDateTime", "localNames", "utcLocalNamesCheckedDateTime")
+      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)
       ON CONFLICT DO NOTHING`,
         [
           c.id, c.name, c.wikiUrl, c.websiteUrl, c.logoUrl, c.utcLogoCheckedDateTime, c.utcCreatedDateTime, c.utcUpdatedDateTime,
           c.tickerSymbol, c.utcTickerCheckedDateTime, c.utcRelationsCheckedDateTime, c.tickerNote,
           c.hqAddress, c.hqLatitude, c.hqLongitude, c.utcHqCheckedDateTime, c.description, c.utcDescriptionCheckedDateTime,
-          c.marketCap, c.utcMarketCapCheckedDateTime,
+          c.marketCap, c.utcMarketCapCheckedDateTime, c.localNames, c.utcLocalNamesCheckedDateTime,
         ].map(
           (v) => (v === undefined ? null : v),
         ),

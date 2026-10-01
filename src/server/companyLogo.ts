@@ -176,32 +176,7 @@ async function wikidata(companies: CompanyInput[]): Promise<WikiResult> {
   }
 
   try {
-    const pairs = await batched(titles, async (batch) => {
-      const json = await getJson(
-        'https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2' +
-          '&prop=pageprops&ppprop=wikibase_item&redirects=1&titles=' +
-          encodeURIComponent(batch.join('|')),
-      );
-      const query = json.query || {};
-      // A page's final title, back to every title that was asked for.
-      const asked: Record<string, string[]> = {};
-      (query.normalized || []).concat(query.redirects || []).forEach((step: { from: string; to: string }) => {
-        asked[step.to] = (asked[step.to] || []).concat(step.from, asked[step.from] || []);
-      });
-      const found: [string, string][] = [];
-      (query.pages || []).forEach((page: any) => {
-        const qid = page.pageprops && page.pageprops.wikibase_item;
-        if (qid) {
-          [page.title].concat(asked[page.title] || []).forEach((t: string) => found.push([t, qid]));
-        }
-      });
-      return found;
-    });
-
-    const qidByTitle: Record<string, string> = {};
-    pairs.forEach(([title, qid]) => {
-      qidByTitle[title] = qid;
-    });
+    const qidByTitle = await wikidataIds(titles);
     const qids = Array.from(new Set(Object.values(qidByTitle)));
     const entries = await batched(qids, async (batch) => {
       const json = await getJson(
@@ -239,6 +214,33 @@ async function wikidata(companies: CompanyInput[]): Promise<WikiResult> {
     console.log('Company logo Wikidata lookup err:', (err as Error).message);
     return result;
   }
+}
+
+// { [title]: Wikidata id } for these English Wikipedia titles, each title
+// as asked for (a redirect or a spelling Wikipedia normalises included).
+export async function wikidataIds(titles: string[]): Promise<Record<string, string>> {
+  const pairs = await batched(titles, async (batch) => {
+    const json = await getJson(
+      'https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2' +
+        '&prop=pageprops&ppprop=wikibase_item&redirects=1&titles=' +
+        encodeURIComponent(batch.join('|')),
+    );
+    const query = json.query || {};
+    // A page's final title, back to every title that was asked for.
+    const asked: Record<string, string[]> = {};
+    (query.normalized || []).concat(query.redirects || []).forEach((step: { from: string; to: string }) => {
+      asked[step.to] = (asked[step.to] || []).concat(step.from, asked[step.from] || []);
+    });
+    const found: [string, string][] = [];
+    (query.pages || []).forEach((page: any) => {
+      const qid = page.pageprops && page.pageprops.wikibase_item;
+      if (qid) {
+        [page.title].concat(asked[page.title] || []).forEach((t: string) => found.push([t, qid]));
+      }
+    });
+    return found;
+  });
+  return Object.fromEntries(pairs);
 }
 
 // { [fileName]: thumbnailUrl } for the squarish files among these.
@@ -319,7 +321,7 @@ export async function getJson(url: string): Promise<any> {
 }
 
 // Runs one request per batch, one after another, and flattens the results.
-async function batched<T, R>(items: T[], run: (batch: T[]) => Promise<R[]>): Promise<R[]> {
+export async function batched<T, R>(items: T[], run: (batch: T[]) => Promise<R[]>): Promise<R[]> {
   let all: R[] = [];
   for (let i = 0; i < items.length; i += BATCH) {
     all = all.concat(await run(items.slice(i, i + BATCH)));
