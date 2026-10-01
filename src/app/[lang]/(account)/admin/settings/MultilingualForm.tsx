@@ -48,7 +48,7 @@ export function MultilingualForm({ saved, coverage }: { saved: MultilingualSetti
       <p className="mt-1 text-sm text-subtle">
         The languages the site can be read in besides English, picked in a viewer&apos;s profile or from their browser&apos;s language. A
         language left off is English: links to it open the English page, the profile&apos;s picker leaves it out, and new or edited pins
-        are not translated into it. Its stored translations and saved language choices are kept for offering it again. The count beside each
+        are not translated into it even with automatic translation on. Its stored translations and saved language choices are kept for offering it again. The count beside each
         is how many pins are translated into it, out of all of them; the rest show in English. Outdated ones were edited after they were
         translated and need translating again. The readers figure is a rough estimate of how many people can read the language.
       </p>
