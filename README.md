@@ -291,8 +291,7 @@ sync prod db to local and backup json
 
 
 
-
-- update leftover sentiment
+- pin Marathons
 
 
 

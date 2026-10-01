@@ -33105,11 +33105,11 @@
   },
   {
     "pinId": 4810,
-    "sentiment": 0.5,
-    "textHash": "bc0749c4b0bdabf4e4be1662ccd13d2eb95857e9dd73e1c11d89ee5ac0153ee5",
-    "utcScoredDateTime": "2026-09-30T19:50:05.789Z",
+    "sentiment": 0.4,
+    "textHash": "0ba3d0ff4d8e9afdcfd08c4974cab15ee56db4c502101a7c2518a25c8c015884",
+    "utcScoredDateTime": "2026-10-01T00:50:48.706Z",
     "product": "Gemini",
-    "productHash": "bc0749c4b0bdabf4e4be1662ccd13d2eb95857e9dd73e1c11d89ee5ac0153ee5"
+    "productHash": "0ba3d0ff4d8e9afdcfd08c4974cab15ee56db4c502101a7c2518a25c8c015884"
   },
   {
     "pinId": 4811,
@@ -34622,5 +34622,205 @@
     "utcScoredDateTime": "2026-09-30T19:57:07.455Z",
     "product": "PCE Price Index",
     "productHash": "ed6daeabd001e33e73970e5cc19c021b9a719cc7b5837b2077b2bf06ff5850f4"
+  },
+  {
+    "pinId": 5000,
+    "sentiment": 0.7,
+    "textHash": "8d71513cd2350b857c3b61b250a4e7f070e70857ce9c387315fd7500fa64161a",
+    "utcScoredDateTime": "2026-10-01T00:50:48.716Z",
+    "product": "Gemini",
+    "productHash": "8d71513cd2350b857c3b61b250a4e7f070e70857ce9c387315fd7500fa64161a"
+  },
+  {
+    "pinId": 5001,
+    "sentiment": 0.7,
+    "textHash": "450d3ff8097e6ebc6bee4915b74ffd3fcfbb64610385e01ef4e1b5372d4d3b81",
+    "utcScoredDateTime": "2026-10-01T00:50:48.720Z",
+    "product": "Gemini",
+    "productHash": "450d3ff8097e6ebc6bee4915b74ffd3fcfbb64610385e01ef4e1b5372d4d3b81"
+  },
+  {
+    "pinId": 5002,
+    "sentiment": 0.5,
+    "textHash": "2f48357089c350d89eaea7db87852407632027a1389eef73d495fd54b7a75b51",
+    "utcScoredDateTime": "2026-10-01T00:50:48.725Z",
+    "product": "Gemini",
+    "productHash": "2f48357089c350d89eaea7db87852407632027a1389eef73d495fd54b7a75b51"
+  },
+  {
+    "pinId": 5003,
+    "sentiment": 0.6,
+    "textHash": "924ce1b65584a6557866fed39bb9c83c4af2f17980e23018efc328ddfcc1ae75",
+    "utcScoredDateTime": "2026-10-01T00:50:48.730Z",
+    "product": "Gemini",
+    "productHash": "924ce1b65584a6557866fed39bb9c83c4af2f17980e23018efc328ddfcc1ae75"
+  },
+  {
+    "pinId": 5004,
+    "sentiment": 0.7,
+    "textHash": "d004327887c3771536a5c0a19a4bafed89525bc462371627bd1ce8c49293e6fc",
+    "utcScoredDateTime": "2026-10-01T00:50:48.733Z",
+    "product": "Gemini",
+    "productHash": "d004327887c3771536a5c0a19a4bafed89525bc462371627bd1ce8c49293e6fc"
+  },
+  {
+    "pinId": 5005,
+    "sentiment": 0.5,
+    "textHash": "84e92dfc63d493034ae46e8b38deec45ec33f80edff0946bb8d2a397fc484169",
+    "utcScoredDateTime": "2026-10-01T00:50:48.741Z",
+    "product": "Gemini",
+    "productHash": "84e92dfc63d493034ae46e8b38deec45ec33f80edff0946bb8d2a397fc484169"
+  },
+  {
+    "pinId": 5006,
+    "sentiment": 0.3,
+    "textHash": "6aea3b381fbb08e2fcf2ed396c8d1e7b33e8ff47c958c494fe52c09ae08b7aef",
+    "utcScoredDateTime": "2026-10-01T00:50:48.745Z",
+    "product": "Galaxy Tab",
+    "productHash": "6aea3b381fbb08e2fcf2ed396c8d1e7b33e8ff47c958c494fe52c09ae08b7aef"
+  },
+  {
+    "pinId": 5007,
+    "sentiment": 0.2,
+    "textHash": "8efff6c214e8919622bd3a124d369a754c60cdaac0178e804b56ecb7799a1ecf",
+    "utcScoredDateTime": "2026-10-01T00:50:48.749Z",
+    "product": "SmartTag",
+    "productHash": "8efff6c214e8919622bd3a124d369a754c60cdaac0178e804b56ecb7799a1ecf"
+  },
+  {
+    "pinId": 5008,
+    "sentiment": 0.5,
+    "textHash": "d24308958f208509a56176d2e72d62a483905c1b35106917f644ac94150c9bc8",
+    "utcScoredDateTime": "2026-10-01T00:50:48.754Z",
+    "product": "Gemini",
+    "productHash": "d24308958f208509a56176d2e72d62a483905c1b35106917f644ac94150c9bc8"
+  },
+  {
+    "pinId": 5009,
+    "sentiment": 0,
+    "textHash": "acf353a6ba0a146270957c110065cfa2617a321387c9f8cb81d7bfdf44eebced",
+    "utcScoredDateTime": "2026-10-01T00:50:48.758Z",
+    "product": "Fire TV",
+    "productHash": "acf353a6ba0a146270957c110065cfa2617a321387c9f8cb81d7bfdf44eebced"
+  },
+  {
+    "pinId": 5010,
+    "sentiment": 0.8,
+    "textHash": "e4453c2d9d2faeba66d190ce859d61e5bf7a194a745118bda3b9071dd6b065e0",
+    "utcScoredDateTime": "2026-10-01T00:50:48.764Z",
+    "product": "Gemini",
+    "productHash": "e4453c2d9d2faeba66d190ce859d61e5bf7a194a745118bda3b9071dd6b065e0"
+  },
+  {
+    "pinId": 5011,
+    "sentiment": 0.5,
+    "textHash": "09048860a7638ac465f80d8bda4efab5a9fd03394b545b9460360ee1395325cc",
+    "utcScoredDateTime": "2026-10-01T00:50:48.769Z",
+    "product": "Dots",
+    "productHash": "09048860a7638ac465f80d8bda4efab5a9fd03394b545b9460360ee1395325cc"
+  },
+  {
+    "pinId": 5012,
+    "sentiment": 0.3,
+    "textHash": "aa67fee6323edff352321af70929d7d2a533aa17a5e49a168c5a4a78fd2e4d2d",
+    "utcScoredDateTime": "2026-10-01T00:50:48.779Z",
+    "product": "Fitbit",
+    "productHash": "aa67fee6323edff352321af70929d7d2a533aa17a5e49a168c5a4a78fd2e4d2d"
+  },
+  {
+    "pinId": 5013,
+    "sentiment": 0.6,
+    "textHash": "36ff59d9d25f515e132eed6a439893e8c41f5c46eeedc54ff60805b20c167aa3",
+    "utcScoredDateTime": "2026-10-01T00:50:48.785Z",
+    "product": "Gemini",
+    "productHash": "36ff59d9d25f515e132eed6a439893e8c41f5c46eeedc54ff60805b20c167aa3"
+  },
+  {
+    "pinId": 5014,
+    "sentiment": 0.4,
+    "textHash": "bce6e0ff5eae187d46ac6671760b5569bccb41d6e0dfc6af90a6db00c2188fc9",
+    "utcScoredDateTime": "2026-10-01T00:50:48.790Z",
+    "product": "Apple Music",
+    "productHash": "bce6e0ff5eae187d46ac6671760b5569bccb41d6e0dfc6af90a6db00c2188fc9"
+  },
+  {
+    "pinId": 5015,
+    "sentiment": 0.1,
+    "textHash": "c815b197585a3d38ed0cd0f79917e1cf804f6b1354fcc5b125a9175c2e109c91",
+    "utcScoredDateTime": "2026-10-01T00:50:48.797Z",
+    "product": "Android",
+    "productHash": "c815b197585a3d38ed0cd0f79917e1cf804f6b1354fcc5b125a9175c2e109c91"
+  },
+  {
+    "pinId": 5016,
+    "sentiment": 0.7,
+    "textHash": "85eb432098e09cc4c3d0a70a96d0cfb04e2305faff072f01e5775e025193d93d",
+    "utcScoredDateTime": "2026-10-01T00:50:48.802Z",
+    "product": "Gemini",
+    "productHash": "85eb432098e09cc4c3d0a70a96d0cfb04e2305faff072f01e5775e025193d93d"
+  },
+  {
+    "pinId": 5017,
+    "sentiment": 0.7,
+    "textHash": "f0e8931f78cfdaf76d1781eaca4a87a57bb7b3322b02f81a6155102884b07a4a",
+    "utcScoredDateTime": "2026-10-01T00:50:48.809Z",
+    "product": "Gemini",
+    "productHash": "f0e8931f78cfdaf76d1781eaca4a87a57bb7b3322b02f81a6155102884b07a4a"
+  },
+  {
+    "pinId": 5018,
+    "sentiment": 0.5,
+    "textHash": "10e54b985bee9714929a1b4ec40695f6171281823eeac8dd34828102822ed903",
+    "utcScoredDateTime": "2026-10-01T00:50:48.813Z",
+    "product": "Gemini",
+    "productHash": "10e54b985bee9714929a1b4ec40695f6171281823eeac8dd34828102822ed903"
+  },
+  {
+    "pinId": 5019,
+    "sentiment": 0.7,
+    "textHash": "d7e06902565323ff53a3924e555af2032e5a1958289d9933115418b704fd7394",
+    "utcScoredDateTime": "2026-10-01T00:50:48.818Z",
+    "product": "Gemini",
+    "productHash": "d7e06902565323ff53a3924e555af2032e5a1958289d9933115418b704fd7394"
+  },
+  {
+    "pinId": 5020,
+    "sentiment": 0.5,
+    "textHash": "d6a507d4b6486d65e7eef6561dec21e1ac5519908d992fccfe5570f5211bd4c3",
+    "utcScoredDateTime": "2026-10-01T00:50:48.844Z",
+    "product": "Gemini",
+    "productHash": "d6a507d4b6486d65e7eef6561dec21e1ac5519908d992fccfe5570f5211bd4c3"
+  },
+  {
+    "pinId": 5021,
+    "sentiment": 0.5,
+    "textHash": "d65da4b050b1925d35efe6f4967a9df445189b88e9a21d4995a244c0ff29225a",
+    "utcScoredDateTime": "2026-10-01T00:50:48.854Z",
+    "product": "Gemini",
+    "productHash": "d65da4b050b1925d35efe6f4967a9df445189b88e9a21d4995a244c0ff29225a"
+  },
+  {
+    "pinId": 5022,
+    "sentiment": 0.5,
+    "textHash": "64ac8cfeb0cc0b941dea89ca04a1d5ebd4cad6648a624f1c8dc8c184a2d4d62e",
+    "utcScoredDateTime": "2026-10-01T00:50:48.871Z",
+    "product": "Gemini",
+    "productHash": "64ac8cfeb0cc0b941dea89ca04a1d5ebd4cad6648a624f1c8dc8c184a2d4d62e"
+  },
+  {
+    "pinId": 5023,
+    "sentiment": 0.6,
+    "textHash": "7702fbb42969b23fce44ce6ad6c54d287b88c8bf8e64886600e82e52c94d2ee8",
+    "utcScoredDateTime": "2026-10-01T00:50:48.924Z",
+    "product": "Gemini",
+    "productHash": "7702fbb42969b23fce44ce6ad6c54d287b88c8bf8e64886600e82e52c94d2ee8"
+  },
+  {
+    "pinId": 5024,
+    "sentiment": 0.3,
+    "textHash": "abb93ac47843f9c8b35e07ab850df1858bc15dc3244337f6c154e87e69d3a610",
+    "utcScoredDateTime": "2026-10-01T00:54:05.894Z",
+    "product": null,
+    "productHash": "abb93ac47843f9c8b35e07ab850df1858bc15dc3244337f6c154e87e69d3a610"
   }
 ]
