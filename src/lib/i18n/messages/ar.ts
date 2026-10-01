@@ -1883,6 +1883,28 @@ const ar: Messages = {
     heading: 'المظهر',
     systemHint: 'يتبع “النظام” إعداد جهازك الفاتح أو الداكن.',
   },
+  topic: {
+    tagTitle: '{name}: المواعيد القادمة',
+    companyTitle: '{name}: المواعيد القادمة',
+    tagDescription: 'المواعيد القادمة لـ {name} على {site}: الإصدارات والفعاليات والمواعيد النهائية، كل منها مع مصادره ومدى ثبات التاريخ.',
+    companyDescription: 'المواعيد القادمة لـ {name} على {site}: الإطلاقات والإصدارات والنتائج المالية والفعاليات، كل منها مع مصادره ومدى ثبات التاريخ.',
+    counts: 'المواعيد القادمة: {upcoming} · كل الدبابيس: {total}',
+    next: 'التالي: <title></title>، <date></date>.',
+    latest: 'لا شيء قادم بعد. الأحدث: <title></title>، <date></date>.',
+    upcoming: 'القادمة',
+    past: 'الأخيرة',
+    moreInSearch: 'كل دبابيس {name} في البحث',
+    relatedTags: 'وسوم ذات صلة',
+    relatedCompanies: 'الشركات',
+    website: 'الموقع الإلكتروني',
+    tags: 'الوسوم',
+    companies: 'الشركات',
+    categories: 'الفئات',
+    tagsTitle: 'كل الوسوم',
+    companiesTitle: 'كل الشركات',
+    tagsDescription: 'كل المواضيع على {site} التي لها مواعيد إصدار وفعاليات ومواعيد نهائية قادمة، حسب عدد الدبابيس.',
+    companiesDescription: 'كل الشركات على {site} التي لها إطلاقات وإصدارات ونتائج مالية وفعاليات قادمة، حسب عدد الدبابيس.',
+  },
 };
 
 export default ar;

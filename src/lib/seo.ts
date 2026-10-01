@@ -243,6 +243,73 @@ export function temporalCoverage(pin: Pick<PinJson, 'utcStartDateTime' | 'utcEnd
   return end > start ? `${start}/${end}` : start;
 }
 
+// JSON-LD for a /tag or /company page: a CollectionPage about the subject
+// (the company as an Organization, linked to its website and Wikipedia
+// page), listing its upcoming pins in order, each with its dates.
+export function topicJsonLd({
+  name,
+  path,
+  description,
+  locale = DEFAULT_LOCALE,
+  hub,
+  company,
+  pins,
+}: {
+  name: string;
+  path: string;
+  description: string;
+  locale?: Locale;
+  // The listing it belongs to: all tags or all companies.
+  hub: { name: string; path: string };
+  company?: { logoUrl: string | null; wikiUrl: string | null; websiteUrl: string | null };
+  pins: PinJson[];
+}) {
+  const url = absoluteUrl(localizePath(path, locale));
+  const about = company
+    ? {
+        '@type': 'Organization',
+        name,
+        ...(company.websiteUrl ? { url: company.websiteUrl } : {}),
+        ...(company.wikiUrl ? { sameAs: company.wikiUrl } : {}),
+        ...(company.logoUrl ? { logo: company.logoUrl } : {}),
+      }
+    : { '@type': 'Thing', name };
+  const page = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${url}#page`,
+    url,
+    name,
+    description,
+    inLanguage: languageTag(locale),
+    isPartOf: { '@id': `${siteUrl}/#website` },
+    about,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      numberOfItems: pins.length,
+      itemListElement: pins.map((pin, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: absoluteUrl(localizePath(pinPath(pin), locale)),
+        name: pin.title,
+        // Its dates first, so the list itself says when each one is.
+        description: `${temporalCoverage(pin)}: ${pinDescription(pin)}`,
+      })),
+    },
+  };
+  const breadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: siteName, item: absoluteUrl(localizePath('/', locale)) },
+      { '@type': 'ListItem', position: 2, name: hub.name, item: absoluteUrl(localizePath(hub.path, locale)) },
+      { '@type': 'ListItem', position: 3, name, item: url },
+    ],
+  };
+  return [page, breadcrumbs];
+}
+
 // An all-day pin is a date, not an instant; its stored end is the day after
 // its last day, so the last day is one before it.
 function eventDate(iso: string, allDay?: boolean, isEnd = false): string {

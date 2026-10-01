@@ -1500,6 +1500,28 @@ const it: Messages = {
     heading: 'Tema',
     systemHint: 'Sistema segue l’impostazione chiara o scura del tuo dispositivo.',
   },
+  topic: {
+    tagTitle: '{name}: prossime date',
+    companyTitle: '{name}: prossime date',
+    tagDescription: 'Le prossime date di {name} su {site}: uscite, eventi e scadenze, ognuna con le sue fonti e quanto è certa la data.',
+    companyDescription: 'Le prossime date di {name} su {site}: lanci, uscite, risultati ed eventi, ognuna con le sue fonti e quanto è certa la data.',
+    counts: 'Prossime date: {upcoming} · Tutti i pin: {total}',
+    next: 'Prossima: <title></title>, <date></date>.',
+    latest: 'Ancora niente in arrivo. Ultima: <title></title>, <date></date>.',
+    upcoming: 'In arrivo',
+    past: 'Recenti',
+    moreInSearch: 'Tutti i pin di {name} nella ricerca',
+    relatedTags: 'Tag correlati',
+    relatedCompanies: 'Aziende',
+    website: 'Sito web',
+    tags: 'Tag',
+    companies: 'Aziende',
+    categories: 'Categorie',
+    tagsTitle: 'Tutti i tag',
+    companiesTitle: 'Tutte le aziende',
+    tagsDescription: 'Tutti gli argomenti su {site} con date di uscita, eventi e scadenze in arrivo, per numero di pin.',
+    companiesDescription: 'Tutte le aziende su {site} con lanci, uscite, risultati ed eventi in arrivo, per numero di pin.',
+  },
 };
 
 export default it;

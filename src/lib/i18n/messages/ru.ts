@@ -1601,6 +1601,28 @@ const ru: Messages = {
     heading: 'Тема',
     systemHint: 'Системная тема следует светлой или тёмной настройке устройства.',
   },
+  topic: {
+    tagTitle: '{name}: ближайшие даты',
+    companyTitle: '{name}: ближайшие даты',
+    tagDescription: 'Ближайшие даты по теме {name} на {site}: релизы, события и сроки — у каждой есть источники и степень уверенности в дате.',
+    companyDescription: 'Ближайшие даты {name} на {site}: запуски, релизы, отчёты и события — у каждой есть источники и степень уверенности в дате.',
+    counts: 'Ближайшие даты: {upcoming} · Всего пинов: {total}',
+    next: 'Далее: <title></title>, <date></date>.',
+    latest: 'Пока ничего не запланировано. Последнее: <title></title>, <date></date>.',
+    upcoming: 'Скоро',
+    past: 'Недавние',
+    moreInSearch: 'Все пины {name} в поиске',
+    relatedTags: 'Похожие теги',
+    relatedCompanies: 'Компании',
+    website: 'Сайт',
+    tags: 'Теги',
+    companies: 'Компании',
+    categories: 'Категории',
+    tagsTitle: 'Все теги',
+    companiesTitle: 'Все компании',
+    tagsDescription: 'Все темы на {site} с ближайшими датами релизов, событиями и сроками, по числу пинов.',
+    companiesDescription: 'Все компании на {site} с ближайшими запусками, релизами, отчётами и событиями, по числу пинов.',
+  },
 };
 
 export default ru;

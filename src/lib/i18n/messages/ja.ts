@@ -1496,6 +1496,28 @@ const ja: Messages = {
     heading: 'テーマ',
     systemHint: '「システム」はデバイスのライト／ダーク設定に従います。',
   },
+  topic: {
+    tagTitle: '{name}：今後の日程',
+    companyTitle: '{name}：今後の日程',
+    tagDescription: '{site}の{name}の今後の日程：発売、イベント、締め切りを、出典と日付の確度とともに掲載。',
+    companyDescription: '{site}の{name}の今後の日程：発表、発売、決算、イベントを、出典と日付の確度とともに掲載。',
+    counts: '今後の日程：{upcoming} ・ すべてのピン：{total}',
+    next: '次：<title></title>（<date></date>）',
+    latest: '今後の予定はまだありません。最新：<title></title>（<date></date>）',
+    upcoming: '今後',
+    past: '最近',
+    moreInSearch: '検索で{name}のピンをすべて見る',
+    relatedTags: '関連タグ',
+    relatedCompanies: '企業',
+    website: 'ウェブサイト',
+    tags: 'タグ',
+    companies: '企業',
+    categories: 'カテゴリ',
+    tagsTitle: 'すべてのタグ',
+    companiesTitle: 'すべての企業',
+    tagsDescription: '{site}で今後の発売日、イベント、締め切りがあるすべてのテーマ（ピンの数順）。',
+    companiesDescription: '{site}で今後の発表、発売、決算、イベントがあるすべての企業（ピンの数順）。',
+  },
 };
 
 export default ja;

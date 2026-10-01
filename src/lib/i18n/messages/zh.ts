@@ -1496,6 +1496,28 @@ const zh: Messages = {
     heading: '主题',
     systemHint: '“跟随系统”会使用设备的浅色或深色设置。',
   },
+  topic: {
+    tagTitle: '{name}：即将到来的日期',
+    companyTitle: '{name}：即将到来的日期',
+    tagDescription: '{site} 上 {name} 即将到来的日期：发布、活动和截止日期，每条都附有来源和日期的可信程度。',
+    companyDescription: '{site} 上 {name} 即将到来的日期：发布、上市、财报和活动，每条都附有来源和日期的可信程度。',
+    counts: '即将到来的日期：{upcoming} · 全部 Pin：{total}',
+    next: '下一个：<title></title>，<date></date>。',
+    latest: '暂无即将到来的日期。最近：<title></title>，<date></date>。',
+    upcoming: '即将到来',
+    past: '最近',
+    moreInSearch: '在搜索中查看 {name} 的全部 Pin',
+    relatedTags: '相关标签',
+    relatedCompanies: '公司',
+    website: '网站',
+    tags: '标签',
+    companies: '公司',
+    categories: '类别',
+    tagsTitle: '全部标签',
+    companiesTitle: '全部公司',
+    tagsDescription: '{site} 上有即将到来的发布日期、活动和截止日期的所有主题，按 Pin 数量排列。',
+    companiesDescription: '{site} 上有即将到来的发布、上市、财报和活动的所有公司，按 Pin 数量排列。',
+  },
 };
 
 export default zh;

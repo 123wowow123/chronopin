@@ -1515,6 +1515,28 @@ const en = {
     heading: 'Theme',
     systemHint: "System follows your device's light or dark setting.",
   },
+  topic: {
+    tagTitle: '{name}: upcoming dates',
+    companyTitle: '{name}: upcoming dates',
+    tagDescription: 'Upcoming {name} dates on {site}: releases, events and deadlines, each with its sources and how firm the date is.',
+    companyDescription: 'Upcoming {name} dates on {site}: launches, releases, earnings and events, each with its sources and how firm the date is.',
+    counts: 'Upcoming dates: {upcoming} · All pins: {total}',
+    next: 'Next: <title></title>, <date></date>.',
+    latest: 'Nothing upcoming yet. Latest: <title></title>, <date></date>.',
+    upcoming: 'Upcoming',
+    past: 'Recent',
+    moreInSearch: 'All {name} pins in search',
+    relatedTags: 'Related tags',
+    relatedCompanies: 'Companies',
+    website: 'Website',
+    tags: 'Tags',
+    companies: 'Companies',
+    categories: 'Categories',
+    tagsTitle: 'All tags',
+    companiesTitle: 'All companies',
+    tagsDescription: 'Every subject on {site} with upcoming release dates, events and deadlines, by how many pins it has.',
+    companiesDescription: 'Every company on {site} with upcoming launches, releases, earnings and events, by how many pins it has.',
+  },
 } as const;
 
 export default en;

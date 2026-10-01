@@ -1509,6 +1509,28 @@ const fr: Messages = {
     heading: 'Thème',
     systemHint: 'Système suit le réglage clair ou sombre de votre appareil.',
   },
+  topic: {
+    tagTitle: '{name} : dates à venir',
+    companyTitle: '{name} : dates à venir',
+    tagDescription: 'Les dates à venir de {name} sur {site} : sorties, événements et échéances, chacune avec ses sources et le degré de certitude de la date.',
+    companyDescription: 'Les dates à venir de {name} sur {site} : lancements, sorties, résultats et événements, chacune avec ses sources et le degré de certitude de la date.',
+    counts: 'Dates à venir : {upcoming} · Tous les pins : {total}',
+    next: 'Prochaine : <title></title>, <date></date>.',
+    latest: "Rien à venir pour l'instant. Dernière : <title></title>, <date></date>.",
+    upcoming: 'À venir',
+    past: 'Récents',
+    moreInSearch: 'Tous les pins {name} dans la recherche',
+    relatedTags: 'Tags associés',
+    relatedCompanies: 'Entreprises',
+    website: 'Site web',
+    tags: 'Tags',
+    companies: 'Entreprises',
+    categories: 'Catégories',
+    tagsTitle: 'Tous les tags',
+    companiesTitle: 'Toutes les entreprises',
+    tagsDescription: 'Tous les sujets de {site} avec des dates de sortie, événements et échéances à venir, par nombre de pins.',
+    companiesDescription: 'Toutes les entreprises de {site} avec des lancements, sorties, résultats et événements à venir, par nombre de pins.',
+  },
 };
 
 export default fr;
