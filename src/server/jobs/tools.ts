@@ -36,6 +36,7 @@ import { checkPinHealth, pinsToCheck } from './health';
 import log from '../util/log';
 import { createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
+import { marketCandidates } from './markets';
 import { trendCandidates } from './trends';
 
 export type JobContext = {
@@ -133,6 +134,14 @@ export const TOOLS: JobTool[] = [
       const { total, candidates } = await trendCandidates({ geos: Array.isArray(input.geos) && input.geos.length ? input.geos.slice(0, 15) : undefined, all: !!input.includeNoise });
       return { termsRead: total, candidates: candidates.slice(0, 40).map((c) => ({ ...c, news: c.news.slice(0, 3) })) };
     },
+  },
+  {
+    name: 'prediction_markets',
+    description:
+      "What Kalshi and Polymarket are betting on: thisWeek is the events resolving in the next `days` (default 7), newlyListed the events listed since the last run that resolve later, each biggest book first with its odds, dollars traded, close time and coveredByPin when a pin already cites the market. Per-game sport markets and props, price ladders, weather, tweet counts and other recurring markets are left out; an election's races and props fold into its biggest market as `related`. Reads about 50 pages, so call it once a run.",
+    input_schema: obj({ days: num('Window in days, 1-14'), limit: num('At most this many per list, default 30'), minVolume: num('Dollars traded, default 10000') }),
+    run: (input, ctx) =>
+      marketCandidates({ days: int(input.days, 7, 1, 14), limit: int(input.limit, 30, 1, 60), minVolume: int(input.minVolume, 10_000, 0, 10_000_000), since: ctx.since }),
   },
   {
     name: 'revisit_queue',

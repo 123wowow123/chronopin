@@ -94,7 +94,7 @@ const KALSHI_OPEN = new Set(['active', 'open', 'initialized', 'unopened']);
 // contracts times what they trade at - the same figure Polymarket reports
 // directly. Priced at the market's last price, so it is an estimate: the
 // contracts traded months ago changed hands at prices of their own.
-function kalshiVolume(market: Json): number | undefined {
+export function kalshiVolume(market: Json): number | undefined {
   const contracts = num(market.volume_fp) ?? num(market.volume);
   // Cents on the older shape, dollars on the current one.
   const price = num(market.last_price_dollars) ?? (num(market.last_price) !== undefined ? num(market.last_price)! / 100 : undefined);

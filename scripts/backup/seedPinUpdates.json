@@ -2079,5 +2079,83 @@
     ],
     "note": null,
     "utcCreatedDateTime": "2026-09-30T20:55:21.630Z"
+  },
+  {
+    "id": 83,
+    "pinId": 5012,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.theweek.in/news/sci-tech/2026/09/30/google-fitbit-air-india-launch.html",
+        "title": "‘Screenless’ Google Fitbit Air comes to India on Oct 2: Price, specs, and more details - The Week",
+        "confidence": 85,
+        "publishedDate": "2026-09-30"
+      },
+      {
+        "url": "https://www.gizbot.com/gadgets/news/fitbit-air-price-in-india-sale-date-and-offers-google-s-tracker-goes-on-sale-october-2-128881.html",
+        "title": "Fitbit Air Price in India, Sale Date and Offers: Google’s Tracker Goes on Sale October 2 - Gizbot",
+        "confidence": 80,
+        "publishedDate": "2026-09-30"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-01T13:25:30.289Z"
+  },
+  {
+    "id": 84,
+    "pinId": 5006,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.sammobile.com/news/galaxy-tab-s12-plus-ultra-release-date-price/",
+        "title": "Here’s the Galaxy Tab S12+ and Tab S12 Ultra release date and pricing - SamMobile",
+        "confidence": 85,
+        "publishedDate": "2026-09-30"
+      },
+      {
+        "url": "https://www.gsmarena.com/samsung_galaxy_tab_s12_ultra_and_galaxy_tab_s12_debut-news-74834.php",
+        "title": "Samsung Galaxy Tab S12 Ultra and Galaxy Tab S12+ debut - GSMArena",
+        "confidence": 80,
+        "publishedDate": "2026-09-30"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-01T13:25:31.360Z"
+  },
+  {
+    "id": 85,
+    "pinId": 5007,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Samsung's Galaxy SmartTag 3 tracker, 35% smaller with up to 550 days of battery and iPhone support through Samsung's app but no Android Find Hub, goes on sale in South Korea on 7 October, with the US to follow later.",
+        "field": "description",
+        "before": "Samsung's Galaxy SmartTag 3 tracker, 35% smaller with up to 550 days of battery and iPhone support through Samsung's app but no Android Find Hub, arrives on 7 October."
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.sammobile.com/news/galaxy-smarttag-3-release-date-price-mystery/",
+        "title": "Samsung confirms October 7 Galaxy SmartTag 3 release, price still a mystery - SamMobile",
+        "confidence": 90,
+        "publishedDate": "2026-09-30"
+      },
+      {
+        "url": "https://www.neowin.net/news/samsung-galaxy-smarttag3-takes-on-pixel-tag-with-iphone-support-and-3x-longer-finding-range/",
+        "title": "Samsung Galaxy SmartTag3 takes on Pixel Tag with iPhone support and 3x longer finding range - Neowin",
+        "confidence": 75,
+        "publishedDate": "2026-09-30"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-01T13:25:32.252Z"
   }
 ]

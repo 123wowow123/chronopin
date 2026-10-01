@@ -68,6 +68,11 @@ export const TASKS = {
     label: 'Major news',
     summary: 'Pin major news and newly announced events since the last run.',
   },
+  predictionMarkets: {
+    group: 'discover',
+    label: 'Prediction markets',
+    summary: "Read what Kalshi and Polymarket are betting on for the week ahead, and the markets newly listed, and pin the major events behind them that have no pin yet.",
+  },
   thinCategories: {
     group: 'discover',
     label: 'Thin categories',
@@ -168,8 +173,10 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       times: ['06:00', '18:00'],
       timeZone: 'America/Los_Angeles',
       dayOfMonth: null,
-      // eventInfo twice a day, so a sell-out shows by the next run.
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'breakingNews', 'sentiment'],
+      // eventInfo twice a day, so a sell-out shows by the next run; the
+      // prediction markets too, for the week's events the money is on (owner,
+      // 2026-10-01).
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'breakingNews', 'predictionMarkets', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
