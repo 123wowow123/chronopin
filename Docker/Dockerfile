@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 # Chronopin: Next.js standalone server on Node.js 24 LTS.
 #
 #   docker build -f Docker/Dockerfile -t chronopin .
@@ -13,11 +14,14 @@ WORKDIR /code
 ENV PUPPETEER_SKIP_DOWNLOAD=true \
     NEXT_TELEMETRY_DISABLED=1
 
+# The npm download cache and Turbopack's build cache (.next/cache) are cache
+# mounts: they outlive each build on the VM, so a deploy recompiles only what
+# changed instead of the whole app. Neither ends up in an image.
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN --mount=type=cache,target=/root/.npm npm ci
 
 COPY . .
-RUN npm run build
+RUN --mount=type=cache,target=/code/.next/cache npm run build
 
 # --- Runtime --------------------------------------------------------------------
 FROM node:24-alpine AS runtime

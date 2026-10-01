@@ -5,16 +5,15 @@ import Link from '@/components/ui/Link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
-import { safeEmbedHtml } from '@/lib/sanitize';
 import type { MediumJson } from '@/lib/types';
-import { mediumEmbedHtml } from '@/lib/videoEmbed';
+import { tweetHtml, youtubePlayerHtml } from '@/lib/embedHtml';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 
 // A video this component can play, as opposed to one it can only picture:
-// one with a stored player, or a YouTube URL to build one from.
+// one with a stored YouTube player, or a YouTube URL to build one from.
 export function isVideo(medium: MediumJson): boolean {
-  return String(medium.type) === '3' && !!mediumEmbedHtml(medium);
+  return String(medium.type) === '3' && !!youtubePlayerHtml(medium);
 }
 
 // Whether PinMedia has anything to draw for a medium, from its fields alone: a
@@ -50,19 +49,20 @@ export function PinMedia({
   onMissing?: () => void;
 }) {
   const type = String(medium.type);
-  const unrenderable = !((type === '2' && medium.html) || isVideo(medium)) && type !== '1';
+  const tweet = type === '2' ? tweetHtml(medium) : undefined;
+  const unrenderable = !(tweet || isVideo(medium)) && type !== '1';
   useEffect(() => {
     if (unrenderable) onMissing?.();
   }, [unrenderable, onMissing]);
 
-  if (type === '2' && medium.html) {
-    return <TweetEmbed html={medium.html} />;
+  if (tweet) {
+    return <TweetEmbed html={tweet} />;
   }
   if (isVideo(medium)) {
     if (poster) {
       return <VideoPoster medium={medium} title={title} href={href} external={external} priority={priority} sizes={sizes} onMissing={onMissing} />;
     }
-    return <YouTubeEmbed html={mediumEmbedHtml(medium)!} title={title} />;
+    return <YouTubeEmbed medium={medium} title={title} />;
   }
   if (unrenderable) {
     return null;
@@ -465,9 +465,10 @@ const YT_BUFFERING = 3;
 // "Watch on YouTube" control, which opens the video in a new tab (and steals
 // focus) without navigating this page away, so it would otherwise keep
 // playing here too. Resumes if the tab comes back foregrounded.
-function YouTubeEmbed({ html, title }: { html: string; title: string }) {
+function YouTubeEmbed({ medium, title }: { medium: MediumJson; title: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const t = useT();
+  const html = youtubePlayerHtml(medium, t('media.youtubeTitle', { title })) ?? '';
   useEffect(() => {
     const container = ref.current;
     const iframe = container?.querySelector('iframe');
@@ -537,10 +538,10 @@ function YouTubeEmbed({ html, title }: { html: string; title: string }) {
       document.removeEventListener('visibilitychange', onVisibilityChange);
     };
   }, [html]);
-  return <div ref={ref} className="embed-container" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(html, t('media.youtubeTitle', { title })) }} />;
+  return <div ref={ref} className="embed-container" dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-// Twitter's widgets script turns the stored blockquote into the full tweet.
+// Twitter's widgets script turns the blockquote (tweetHtml) into the full tweet.
 function TweetEmbed({ html }: { html: string }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -561,5 +562,5 @@ function TweetEmbed({ html }: { html: string }) {
     script.addEventListener('load', render);
     return () => script?.removeEventListener('load', render);
   }, [html]);
-  return <div ref={ref} className="flex justify-center px-2" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(html) }} />;
+  return <div ref={ref} className="flex justify-center px-2" dangerouslySetInnerHTML={{ __html: html }} />;
 }
