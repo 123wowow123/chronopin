@@ -18,6 +18,7 @@ import { HttpError } from '../util/httpError';
 import { resolveCreatedSince } from '../util/createdFilter';
 import { hasFilters, parseSearchQuery, type SearchQuery } from '../util/searchQuery';
 import { timeZoneOrUtc } from '../viewer';
+import { withCompanyNames } from '../companyNames';
 import { commentMood } from '@/lib/commentMood';
 import { isSpan, offsetDate } from '@/lib/postedSpan';
 import type { TagCount } from '@/lib/tags';
@@ -211,7 +212,7 @@ function asksForNothing(query: SearchQuery, options: SearchOptions) {
 async function searchFilter(query: SearchQuery, options: SearchOptions): Promise<SearchFilter> {
   return {
     ...query,
-    hits: query.text ? await SearchPins.hits(query.text) : null,
+    hits: query.text ? await SearchPins.hits(withCompanyNames(query.text, await Company.nameIndex())) : null,
     favoriteUserId: options.onlyWatched ? options.userId || 0 : null,
     timeZone: timeZoneOrUtc(options.timeZone),
   };

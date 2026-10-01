@@ -141,10 +141,10 @@ export default class PinTag {
   // for the cloud's grouped mode. The reserved tags are left out: they are the
   // site's own filters and countReserved has them, outside this `limit`, so
   // the cloud always offers the same few rather than whichever fit today.
-  static async count(from: string, where: string[], params: unknown[], limit: number): Promise<TagCount[]> {
+  static async count(from: string, where: string[], params: unknown[], limit: number, ctes: string[] = []): Promise<TagCount[]> {
     const rows = await db.query<TagCount>(
       `
-      WITH "hits" AS (
+      WITH ${ctes.map((cte) => `${cte},\n      `).join('')}"hits" AS (
         SELECT DISTINCT "tg"."name", "tg"."kind", "Pin"."id" AS "pinId"
         ${from}
           INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id" AND "tg"."kind" <> 'reserved'

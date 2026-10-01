@@ -188,7 +188,7 @@ export default class Pins extends BasePins<Pin> {
   // the way it walks), at most limit pins - every one when limit is null.
   // Only ids and sort keys: querySearchRanked loads the pins themselves.
   static rankSearch(filter: SearchFilter, order: SearchOrder, limit: number | null): Promise<SearchRank[]> {
-    const { from, where, params, score } = searchClauses(filter);
+    const { ctes, from, where, params, score } = searchClauses(filter);
     const add = (value: unknown) => {
       params.push(value);
       return `$${params.length}`;
@@ -212,6 +212,7 @@ export default class Pins extends BasePins<Pin> {
     // JavaScript's milliseconds would hand the same pin back page after page.
     return db.query<SearchRank>(
       `
+      ${withCtes(...ctes)}
       SELECT "Pin"."id", ${score} AS "score", to_json(${start}) #>> '{}' AS "start"
       ${from}
       WHERE ${where.join('\n        AND ')}
@@ -245,8 +246,8 @@ export default class Pins extends BasePins<Pin> {
 
   // Search results' tags with how many results carry each, busiest first.
   static countSearchTags(filter: SearchFilter, limit: number) {
-    const { from, where, params } = searchClauses(filter);
-    return countTags(from, where, params, limit);
+    const { ctes, from, where, params } = searchClauses(filter);
+    return countTags(from, where, params, limit, ctes);
   }
 
   // Tags across the whole timeline: the pins its pages walk (live, confident
@@ -399,8 +400,8 @@ const leanReferences = (as: string) => `
 // date confidence is a column and its score is read off its references, and
 // neither is in "PinTagView". They also sit outside the tag `limit`, so the
 // cloud's strip of site filters is the same few every time.
-async function countTags(from: string, where: string[], params: unknown[], limit: number): Promise<TagCount[]> {
-  const [reserved, tags] = await Promise.all([countReserved(from, where, params), PinTag.count(from, where, params, limit)]);
+async function countTags(from: string, where: string[], params: unknown[], limit: number, ctes: string[] = []): Promise<TagCount[]> {
+  const [reserved, tags] = await Promise.all([countReserved(from, where, params, ctes), PinTag.count(from, where, params, limit, ctes)]);
   return [...reserved, ...tags];
 }
 
@@ -408,17 +409,20 @@ async function countTags(from: string, where: string[], params: unknown[], limit
 // tags ("Thread"), each date confidence level, and each band of the pin's
 // own score - the same width_bucket the confidence: term filters by, so a
 // count and the search it starts agree. A pin with no score is in no band.
-async function countReserved(from: string, where: string[], params: unknown[]): Promise<TagCount[]> {
+async function countReserved(from: string, where: string[], params: unknown[], ctes: string[]): Promise<TagCount[]> {
   const bars = `$${params.length + 1}`;
   const rows = await db.query<{ field: 'tag' | 'confidence' | 'band'; value: string; count: number }>(
     `
-      WITH "hits" AS (
+      ${withCtes(
+        ...ctes,
+        `"hits" AS (
         SELECT DISTINCT "Pin"."id",
           "Pin"."dateConfidence"::text AS "level",
           width_bucket(${pinConfidenceOf('Pin')}, ${bars}::integer[]) AS "band"
         ${from}
         WHERE ${where.join('\n          AND ')}
-      )
+      )`,
+      )}
       SELECT 'tag' AS "field", "tg"."name"::text AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
       FROM "hits"
         INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND "tg"."kind" = 'reserved'
@@ -756,6 +760,8 @@ function searchClauses(filter: SearchFilter) {
     params.push(value);
     return `$${params.length}`;
   };
+  // Named subqueries the query goes on to join, for withCtes to write first.
+  const ctes: string[] = [];
   const joins: string[] = [];
   const where = ['"Pin"."utcDeletedDateTime" IS NULL'];
 
@@ -772,36 +778,53 @@ function searchClauses(filter: SearchFilter) {
   if (filter.hits) {
     const hit = `unnest(${add(filter.hits.map((h) => h.id))}::integer[], ${add(filter.hits.map((h) => h.score))}::float8[]) AS "hit" ("id", "score") ON "hit"."id" = "Pin"."id"`;
     if (typed) {
-      // Each of these is written for a pin alias, as the pool's trim below
-      // asks the same of every pin.
+      // Every pin that says the text, worked out once ("said") and joined, as
+      // the filter, the score and the pool's trim below all ask it: written
+      // as conditions on each pin, Postgres ran every scan three times, and
+      // each pass over the translated titles reads all of "PinTranslation".
+      // A pin's address naming it (a city, a state, a postal code).
       const place = add([wholeWordPattern(typed)]);
-      const textPlace = (pin: string) => `(${pin}."address" ~* ANY(${place}::text[]))`;
-      // Free text is also looked for in the pin's title in each of the
-      // languages it is translated into, whatever the page's language: a name
-      // typed as a card in that language writes it (台积电, 風の谷のナウシカ) is
-      // then found however the semantic ranking scored it.
-      const title = add(typedTextPatterns(typed));
-      const textTitle = (pin: string) => `EXISTS (SELECT 1 FROM "PinTranslation" AS "tr" WHERE "tr"."pinId" = ${pin}."id" AND "tr"."title" ~* ALL(${title}::text[]))`;
-      // And in the pin's own title and description, or one of its tags, every
-      // word typed, so a pin that says what was searched for is found however
-      // far down the semantic ranking it fell, or past the pool's end.
+      // Its title in any language it is translated into, whatever the page's
+      // language: a name typed as a card in that language writes it (台积电,
+      // 風の谷のナウシカ) is then found however the semantic ranking scored it.
+      // One condition a pattern, not ~* ALL(...): the trigram index (0104) can
+      // answer only the plain form.
+      const title = typedTextPatterns(typed)
+        .map((pattern) => `"tr"."title" ~* ${add(pattern)}::text`)
+        .join(' AND ');
+      // Every word typed in its own title and description, or one of its
+      // tags, so a pin that says what was searched for is found however far
+      // down the semantic ranking it fell, or past the pool's end.
       const wordPatterns = typedWordPatterns(typed);
       const words = wordPatterns.length ? add(wordPatterns) : null;
-      const textWords = (pin: string) =>
-        words
-          ? `((${pin}."title" || ' ' || COALESCE(${pin}."description", '')) ~* ALL(${words}::text[]) OR EXISTS (SELECT 1 FROM "PinTagView" AS "wt" WHERE "wt"."pinId" = ${pin}."id" AND "wt"."name"::text ~* ALL(${words}::text[])))`
-          : 'false';
-      const textMatches = (pin: string) => `${textPlace(pin)} OR ${textTitle(pin)} OR ${textWords(pin)}`;
-      joins.push(`LEFT JOIN ${hit}`);
+      const ownWords = words ? `("p"."title" || ' ' || COALESCE("p"."description", '')) ~* ALL(${words}::text[])` : 'false';
+      ctes.push(`"said" AS (
+        SELECT "m"."id", bool_or("m"."place") AS "place", bool_or("m"."title") AS "title", bool_or("m"."words") AS "words"
+        FROM (
+          SELECT "p"."id", "p"."address" ~* ANY(${place}::text[]) AS "place", false AS "title", ${ownWords} AS "words"
+          FROM "Pin" AS "p"
+          WHERE "p"."address" ~* ANY(${place}::text[]) OR ${ownWords}
+          UNION ALL
+          SELECT "tr"."pinId", false, true, false FROM "PinTranslation" AS "tr" WHERE ${title}${
+            words
+              ? `
+          UNION ALL
+          SELECT "wt"."pinId", false, false, true FROM "PinTagView" AS "wt" WHERE "wt"."name"::text ~* ALL(${words}::text[])`
+              : ''
+          }
+        ) AS "m"
+          INNER JOIN "Pin" AS "says" ON "says"."id" = "m"."id" AND "says"."utcDeletedDateTime" IS NULL
+        GROUP BY "m"."id")`);
+      joins.push(`LEFT JOIN ${hit}`, 'LEFT JOIN "said" ON "said"."id" = "Pin"."id"');
       // Once any pin says the text, the semantic pool keeps only its strong
       // matches (SEMANTIC_ALONE_SCORE): the rest of it is whatever the model
       // put nearest a word it had little to go on for.
       where.push(
-        `(${textMatches('"Pin"')} OR "hit"."score" >= ${SEMANTIC_ALONE_SCORE}::float8
-          OR ("hit"."id" IS NOT NULL AND NOT EXISTS (SELECT 1 FROM "Pin" AS "says" WHERE "says"."utcDeletedDateTime" IS NULL AND (${textMatches('"says"')}))))`,
+        `("said"."id" IS NOT NULL OR "hit"."score" >= ${SEMANTIC_ALONE_SCORE}::float8
+          OR ("hit"."id" IS NOT NULL AND NOT EXISTS (SELECT 1 FROM "said")))`,
       );
       const titleScore = isCjkText(typed) ? `${TITLE_TEXT_SCORE}::float8 + COALESCE("hit"."score", 0)` : `${PLACE_TEXT_SCORE}::float8`;
-      score = `GREATEST(COALESCE("hit"."score", 0), CASE WHEN ${textPlace('"Pin"')} THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END, CASE WHEN ${textTitle('"Pin"')} THEN ${titleScore} ELSE 0 END, CASE WHEN ${textWords('"Pin"')} THEN ${SEMANTIC_ALONE_SCORE}::float8 ELSE 0 END)`;
+      score = `GREATEST(COALESCE("hit"."score", 0), CASE WHEN "said"."place" THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END, CASE WHEN "said"."title" THEN ${titleScore} ELSE 0 END, CASE WHEN "said"."words" THEN ${SEMANTIC_ALONE_SCORE}::float8 ELSE 0 END)`;
     } else {
       joins.push(`INNER JOIN ${hit}`);
       score = '"hit"."score"';
@@ -906,9 +929,15 @@ function searchClauses(filter: SearchFilter) {
   }
 
   return {
+    ctes,
     from: ['FROM "Pin"', ...joins].join('\n      '),
     where,
     params,
     score,
   };
+}
+
+// A WITH clause naming searchClauses' subqueries and then the caller's own.
+export function withCtes(...ctes: string[]): string {
+  return ctes.length ? `WITH ${ctes.join(',\n      ')}` : '';
 }
