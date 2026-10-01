@@ -28,9 +28,11 @@ rsync -az --delete -e "ssh -i $KEY" \
 
 # Migrations first, from the tools image (the same build stage the app's image
 # is made from, so it costs little): new code may read a table a new schema
-# file creates, such as PinBaseCache.
+# file creates, such as PinBaseCache. Afterwards, the images each build leaves
+# untagged and build cache unused for three days are dropped: they had filled
+# 14GB of the VM's 30GB disk.
 services=${*:-app}
-ssh -i "$KEY" "$HOST" "cd chronopin && C='docker compose -f Docker/docker-compose.prod.yml' && \$C --profile tools build tools && \$C --profile tools run --rm tools npm run create:db && \$C up -d --build $services"
+ssh -i "$KEY" "$HOST" "cd chronopin && C='docker compose -f Docker/docker-compose.prod.yml' && \$C --profile tools build tools && \$C --profile tools run --rm tools npm run create:db && \$C up -d --build $services && docker image prune -f >/dev/null && docker builder prune -f --filter until=72h >/dev/null"
 echo "Deployed $rev."
 # Always ship the latest HEAD: a commit made during the build needs another run.
 [ "$(git rev-parse --short HEAD)" = "$rev" ] || echo "HEAD is now $(git rev-parse --short HEAD), not $rev - run npm run deploy again."

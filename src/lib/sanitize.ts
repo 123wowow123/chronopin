@@ -31,46 +31,9 @@ export function safeCitedHtml(html: string | null | undefined, evidence: Evidenc
   });
 }
 
-// Embeds (tweets, YouTube players) come from the providers' own APIs; only
-// their markup and the iframe/script they need survive. An iframe needs a
-// title to be named for screen readers; the YouTube API's embedHtml has none
-// (oEmbed's does), so frameTitle fills it in. YouTube players get
-// enablejsapi=1 so the page can pause them (see YouTubeEmbed).
-export function safeEmbedHtml(html: string | null | undefined, frameTitle?: string): string {
-  return sanitizeHtml(html || '', {
-    allowedTags: ['iframe', 'blockquote', 'p', 'a', 'br'],
-    allowedAttributes: {
-      iframe: ['src', 'width', 'height', 'title', 'frameborder', 'allow', 'allowfullscreen', 'referrerpolicy'],
-      blockquote: ['class', 'data-*'],
-      p: ['lang', 'dir'],
-      a: ['href'],
-    },
-    allowedIframeHostnames: ['www.youtube.com', 'www.youtube-nocookie.com'],
-    transformTags: {
-      iframe: (tagName, attribs) => ({
-        tagName,
-        attribs: {
-          ...attribs,
-          ...(attribs.src ? { src: withJsApi(attribs.src) } : {}),
-          ...(attribs.title?.trim() || !frameTitle ? {} : { title: frameTitle }),
-        },
-      }),
-    },
-  });
-}
-
-function withJsApi(src: string): string {
-  try {
-    const url = new URL(src, 'https://www.youtube.com');
-    if (!/(^|\.)youtube(-nocookie)?\.com$/.test(url.hostname)) return src;
-    url.searchParams.set('enablejsapi', '1');
-    return url.toString();
-  } catch {
-    return src;
-  }
-}
-
-// Pins for cards, with their description sanitised for rendering as HTML.
+// Pins for cards, with their description sanitised for rendering as HTML. The
+// raw description is left out: a card draws only the sanitised one, and the
+// two copies were a sixth of the data a timeline page hands the browser.
 export function toCardPins<T extends { description?: string }>(pins: T[]): (T & { safeDescription?: string })[] {
-  return pins.map((pin) => ({ ...pin, safeDescription: pin.description ? safeHtml(pin.description) : undefined }));
+  return pins.map(({ description, ...pin }) => ({ ...pin, safeDescription: description ? safeHtml(description) : undefined }) as T & { safeDescription?: string });
 }

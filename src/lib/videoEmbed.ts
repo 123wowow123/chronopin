@@ -18,10 +18,3 @@ export function youtubeEmbedHtml(url: string | null | undefined): string | undef
     ? `<iframe width="480" height="270" src="https://www.youtube.com/embed/${encodeURIComponent(id)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
     : undefined;
 }
-
-// The html a medium draws with: its stored embed, or for a YouTube video
-// without one, a player built from its URL.
-export function mediumEmbedHtml(medium: { type?: unknown; html?: string | null; originalUrl?: string | null }): string | undefined {
-  if (medium.html) return medium.html;
-  return String(medium.type) === '3' ? youtubeEmbedHtml(medium.originalUrl) : undefined;
-}
