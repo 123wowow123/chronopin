@@ -48,6 +48,7 @@ import { PinWeather } from '@/components/pin/PinWeather';
 import { RefineLink } from '@/components/pin/RefineLink';
 import { ViewCount } from '@/components/pin/ViewCount';
 import { ThreadAge } from '@/components/pin/ThreadAge';
+import { ThreadList } from '@/components/pin/ThreadList';
 import { ThreadSuggestion } from '@/components/pin/ThreadSuggestion';
 import { ThreadWatchButton } from '@/components/pin/ThreadWatchButton';
 import { WatchButton } from '@/components/pin/WatchButton';
@@ -468,29 +469,29 @@ async function Thread({ pin }: { pin: PinJson }) {
         </Link>
       </div>
       <ThreadSuggestion pinId={pin.id} />
-      <ol className="mt-3 space-y-1">
-        {pins.map((p, index) => (
-          <li key={p.id}>
-            <Link
-              href={pinPath(p)}
-              aria-current={p.id === pin.id ? 'page' : undefined}
-              className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
-            >
-              <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{index + 1}</span>
-              <span className="min-w-0">
-                <span dir={pinTextDir(p)}>{p.title}</span>
-                <span className="mt-1.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
-                  <CompanyTicker pin={p} bare />
-                  {/* A season's own score and run length, the way a card shows them. */}
-                  <RatingSummary ratings={p.ratings} />
-                  <EpisodeCount pin={p} chip />
-                  <ThreadAge start={p.utcStartDateTime} allDay={p.allDay} />
-                </span>
+      <ThreadList
+        current={Math.max(0, pins.findIndex((p) => p.id === pin.id))}
+        items={pins.map((p, index) => (
+          <Link
+            key={p.id}
+            href={pinPath(p)}
+            aria-current={p.id === pin.id ? 'page' : undefined}
+            className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
+          >
+            <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{index + 1}</span>
+            <span className="min-w-0">
+              <span dir={pinTextDir(p)}>{p.title}</span>
+              <span className="mt-1.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
+                <CompanyTicker pin={p} bare />
+                {/* A season's own score and run length, the way a card shows them. */}
+                <RatingSummary ratings={p.ratings} />
+                <EpisodeCount pin={p} chip />
+                <ThreadAge start={p.utcStartDateTime} allDay={p.allDay} />
               </span>
-            </Link>
-          </li>
+            </span>
+          </Link>
         ))}
-      </ol>
+      />
     </section>
   );
 }

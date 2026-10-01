@@ -8,7 +8,7 @@
 #                                         closed to your current IP)
 #   npm run db:pull-prod -- --file X      restore a dump already on disk
 #   add --yes to skip the confirmation, --no-search to leave the search index,
-#   --no-seeds to leave scripts/backup/*.json
+#   --no-seeds to leave scripts/backup/*.json, --no-thumbs to skip the thumbnail copy
 #   LOCAL_DB=chronopin_prod npm run db:pull-prod   into a side database instead
 #
 # Before anything is replaced the local database is dumped next to the prod
@@ -20,7 +20,8 @@
 # only when it succeeded, so a failed pull leaves the local database as it was.
 # Afterwards the local schema files newer than prod are applied, the search
 # index is rebuilt from the database's pins, and `npm run backup:data` writes
-# the seed files (scripts/backup/*.json) from it, so they are production's too.
+# the seed files (scripts/backup/*.json) from it, so they are production's too,
+# and `npm run thumbs:pull` copies the thumbnails the pulled pins use into Azurite.
 set -eu
 
 SUBSCRIPTION=9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5
@@ -40,6 +41,7 @@ file=
 yes=
 search=1
 seeds=1
+thumbs=1
 while [ $# -gt 0 ]; do
   case $1 in
     --nightly) source=nightly ;;
@@ -47,6 +49,7 @@ while [ $# -gt 0 ]; do
     --yes) yes=1 ;;
     --no-search) search= ;;
     --no-seeds) seeds= ;;
+    --no-thumbs) thumbs= ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
   shift
@@ -122,6 +125,7 @@ echo "Local \"$DB\" is now production as of $(basename "$dump")"
 npm run --silent create:db
 [ -z "$search" ] || npm run --silent search:refresh:db
 [ -z "$seeds" ] || npm run --silent backup:data
+[ -z "$thumbs" ] || npm run --silent thumbs:pull
 
 docker exec "$CONTAINER" psql -U "$PG_USER" -d "$DB" -tAc \
   "SELECT (SELECT count(*) FROM \"Pin\" WHERE \"utcDeletedDateTime\" IS NULL) || ' pins, ' || (SELECT count(*) FROM \"User\" WHERE \"utcDeletedDateTime\" IS NULL) || ' users'"
