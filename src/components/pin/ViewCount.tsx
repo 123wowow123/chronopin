@@ -5,17 +5,18 @@ import { Icon } from '@/components/ui/Icon';
 import { useCountBump } from '@/lib/client/countBump';
 import { onLive } from '@/lib/client/liveFeed';
 import { compactCount } from '@/lib/format';
-import { useT } from '@/lib/client/i18n';
+import { useLocale, useT } from '@/lib/client/i18n';
+import type { Locale } from '@/lib/i18n/config';
 
 // A visit being counted, per pin, shared while it is in flight: StrictMode
 // runs the effect twice, and a first-time visitor's two requests would each
 // be given a visitor cookie of their own, counting the visit twice.
 const recording = new Map<number, Promise<number | null>>();
 
-function recordView(pinId: number): Promise<number | null> {
+function recordView(pinId: number, locale: Locale): Promise<number | null> {
   let pending = recording.get(pinId);
   if (!pending) {
-    pending = fetch(`/api/pins/${pinId}/view`, { method: 'POST', credentials: 'same-origin', keepalive: true })
+    pending = fetch(`/api/pins/${pinId}/view?lang=${locale}`, { method: 'POST', credentials: 'same-origin', keepalive: true })
       .then((res) => (res.ok ? res.json() : null))
       .then((body: { viewCount?: number } | null) => (typeof body?.viewCount === 'number' ? body.viewCount : null))
       .catch(() => null)
@@ -36,17 +37,18 @@ export function ViewCount({ pinId, initial, track = false }: { pinId: number; in
   const [count, setCount] = useState(initial ?? 0);
   const countRef = useCountBump<HTMLSpanElement>(count);
   const t = useT();
+  const locale = useLocale();
 
   useEffect(() => {
     if (!track) return;
     let live = true;
-    recordView(pinId).then((viewCount) => {
+    recordView(pinId, locale).then((viewCount) => {
       if (live && viewCount !== null) setCount(viewCount);
     });
     return () => {
       live = false;
     };
-  }, [pinId, track]);
+  }, [pinId, track, locale]);
 
   useEffect(() => {
     return onLive<{ id?: number; viewCount?: number }>('pin:view', (changed) => {

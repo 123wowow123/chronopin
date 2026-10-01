@@ -8,15 +8,16 @@ export default class PinView {
   // viewer: "u:<userId>" or "v:<anonymous visitor id>"; ip is the address the
   // view came from (0089), kept from the day's first view. Nothing is recorded
   // for a pin that does not exist or was deleted. Answers with the pin's view
-  // count, and whether this view was new (not yet counted today).
-  static async record(pinId: number, viewer: string, ip: string | null): Promise<{ added: boolean; viewCount: number }> {
+  // count, and whether this view was new (not yet counted today). locale is
+  // the language the page was read in (0107), null when not known.
+  static async record(pinId: number, viewer: string, ip: string | null, locale: string | null = null): Promise<{ added: boolean; viewCount: number }> {
     const userId = /^u:\d+$/.test(viewer) ? Number(viewer.slice(2)) : null;
     const added = await db.query(
-      `INSERT INTO "PinView" ("pinId", "viewer", "userId", "ip")
-       SELECT "id", $2, $3::integer, $4::inet FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
+      `INSERT INTO "PinView" ("pinId", "viewer", "userId", "ip", "locale")
+       SELECT "id", $2, $3::integer, $4::inet, $5 FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
        ON CONFLICT DO NOTHING
        RETURNING "pinId"`,
-      [pinId, viewer, userId, ip],
+      [pinId, viewer, userId, ip, locale],
     );
     const [{ count }] = await db.query<{ count: number }>(`SELECT COUNT(*)::integer AS "count" FROM "PinView" WHERE "pinId" = $1`, [pinId]);
     return { added: added.length > 0, viewCount: count };
@@ -41,7 +42,7 @@ export default class PinView {
   // Distinct viewers since a UTC day ("YYYY-MM-DD", null for all time), the
   // most-viewed live pins over the same days, and where the views came from.
   static async summarize(since: string | null, limit = 10) {
-    const [[{ viewers }], top, places] = await Promise.all([
+    const [[{ viewers }], top, places, languages] = await Promise.all([
       db.query<{ viewers: number }>(
         `SELECT COUNT(DISTINCT "viewer")::integer AS "viewers"
          FROM "PinView"
@@ -62,10 +63,25 @@ export default class PinView {
         [since, limit],
       ),
       PinView.places(since),
+      PinView.languages(since),
     ]);
     const ids = top.map((p) => p.id);
     const [pictures, pinPlaces] = await Promise.all([PinView.pictures(ids), PinView.pinPlaces(ids, since)]);
-    return { viewers, top: top.map((p) => ({ ...p, ...pictures.get(p.id), places: pinPlaces.get(p.id) ?? [] })), ...places };
+    return { viewers, top: top.map((p) => ({ ...p, ...pictures.get(p.id), places: pinPlaces.get(p.id) ?? [] })), ...places, languages };
+  }
+
+  // Views since a UTC day (null for all time) by the language they were read
+  // in, with distinct viewers and signed-in users, most first. locale is "" for
+  // a view recorded before 0107.
+  static async languages(since: string | null) {
+    return db.query<{ locale: string; views: number; viewers: number; users: number }>(
+      `SELECT COALESCE("locale", '') AS "locale", COUNT(*)::integer AS "views",
+         COUNT(DISTINCT "viewer")::integer AS "viewers", COUNT(DISTINCT "userId")::integer AS "users"
+       FROM "PinView"
+       WHERE $1::date IS NULL OR "day" >= $1::date
+       GROUP BY 1 ORDER BY "views" DESC, "viewers" DESC, 1`,
+      [since],
+    );
   }
 
   // Where each pin's views since a UTC day (null for all time) came from, as
