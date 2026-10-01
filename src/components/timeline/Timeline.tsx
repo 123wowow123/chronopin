@@ -36,6 +36,7 @@ import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 import { TrendingPins } from './TrendingPins';
 import { useT } from '@/lib/client/i18n';
+import { useWholeRowPanels } from '@/lib/client/wholeRows';
 import { withPageLang } from '@/lib/client/navigation';
 import type { SpecialtyDay } from '@/lib/specialtyDays';
 
@@ -695,6 +696,10 @@ export function Timeline({
     void reload(postedWithin, km && place ? { km, place } : null);
   }
 
+  // Refitted when either side panel's rows change.
+  const highlightRows = useMemo(() => [trending.pins, newPins], [trending.pins, newPins]);
+  const highlightsRef = useWholeRowPanels<HTMLDivElement>(highlightRows);
+
   const empty = !bags.length;
   const phrase = spanPhrase(postedWithin, t.locale);
   const radiusText = radiusLabel(radiusKm, imperial, t.locale);
@@ -717,8 +722,8 @@ export function Timeline({
           tags={{ summary: tagPillSummary(undefined, t.locale), control: <TagCloud postedWithin={postedWithin} /> }}
           aside={
             // Needs room for trending's heading and one row (basis-28), or both
-            // panels go. Inside, new pins only shows under the whole of trending.
-            <div className="pointer-events-none flex min-h-0 grow basis-28 flex-col flex-wrap gap-2 overflow-clip [&>*]:pointer-events-auto [&>*]:w-full">
+            // panels go. Inside, the two split the room, each showing whole rows.
+            <div ref={highlightsRef} className="pointer-events-none flex min-h-0 grow basis-28 flex-col flex-wrap gap-2 overflow-clip [&>*]:pointer-events-auto [&>*]:w-full">
               <TrendingPins pins={trending.pins} days={trending.days} />
               <NewPins pins={newPins} />
             </div>

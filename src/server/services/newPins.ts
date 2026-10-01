@@ -12,9 +12,9 @@ import { localizePins } from './translations';
 // page catching up on what its live stream missed (GET /api/pins/highlights)
 // reads it here, since that tag is expired stale-while-revalidate and the
 // cached list can still be a save behind - missing the very pin the page went
-// looking for. Five rows.
+// looking for. Twelve rows, NEW_PINS_LIMIT in NewPins.tsx.
 export async function loadNewPins(locale: Locale = DEFAULT_LOCALE): Promise<NewPin[]> {
-  const pins = await Pins.newest(5, await timelineMinConfidence());
+  const pins = await Pins.newest(12, await timelineMinConfidence());
   const pictures = await PinView.pictures(pins.map((p) => p.id));
   return localizePins(pins.map(({ sourceUrl, referenceUrls, address, ...p }) => ({
     ...p,
