@@ -5,7 +5,7 @@
 // path to the /en tree the app routes under (src/app/[lang]), so each language
 // renders and caches as its own page and crawlers find every one of them.
 
-export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar', 'th', 'it', 'ru', 'pt', 'ms', 'vi'] as const;
+export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar', 'th', 'it', 'ru', 'pt', 'ms', 'vi', 'id'] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = 'en';
@@ -30,6 +30,7 @@ export const LOCALE_NAMES: Record<Locale, string> = {
   pt: 'Português',
   ms: 'Bahasa Melayu',
   vi: 'Tiếng Việt',
+  id: 'Bahasa Indonesia',
 };
 
 // The tag Intl formats dates and numbers with; languageTag() is the part
@@ -53,6 +54,7 @@ export const INTL_LOCALES: Record<Locale, string> = {
   pt: 'pt-BR',
   ms: 'ms',
   vi: 'vi',
+  id: 'id',
 };
 
 // A language's BCP 47 tag without Intl's -u- options: "th-u-ca-gregory" -> "th".
@@ -79,6 +81,7 @@ export const READERS_MILLIONS: Record<Locale, number> = {
   pt: 240,
   ms: 75,
   vi: 92,
+  id: 250,
 };
 
 // The language Claude is asked to translate a pin into.
@@ -98,6 +101,7 @@ export const LANGUAGE_NAMES: Record<Locale, string> = {
   pt: 'Brazilian Portuguese',
   ms: 'Malay',
   vi: 'Vietnamese',
+  id: 'Indonesian',
 };
 
 // Languages written right to left: <html dir> says so, and the page mirrors.
