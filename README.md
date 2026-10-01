@@ -291,14 +291,9 @@ sync prod db to local and backup json
 
 
 
-- pin Marathons
-
 
 
 Thin categories: another round for Weather, Disaster, Travel, Religion, Robotics, Education and Climate, posted straight to prod with the same runner.
 Regional coverage: more pins for the thinnest visitor cities, such as Guangzhou, Seoul, Bangkok, Rome and São Paulo. Those last three match the Thai, Italian and Portuguese locales being added.
 
-
-
-Run npm run companies:marketcap. It reads Nasdaq for every company with a ticker that was never read or was read over a week ago. Add -- --all to re-read every company with a ticker.
-Run it against prod too, or wait for the weekly refresh that happens as pins sync. Until then those companies weigh as 1, so nothing breaks. The large-cap boost just isn't active.
+6am job

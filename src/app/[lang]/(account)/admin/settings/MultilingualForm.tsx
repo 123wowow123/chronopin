@@ -3,8 +3,16 @@
 import { useState } from 'react';
 import Link from '@/components/ui/Link';
 import { api, ApiError } from '@/lib/client/api';
-import { LOCALE_NAMES } from '@/lib/i18n/config';
+import { LOCALE_NAMES, READERS_MILLIONS } from '@/lib/i18n/config';
 import { OTHER_LOCALES, type MultilingualSetting, type OtherLocale, type TranslationCoverage } from '@/lib/multilingual';
+
+// "1.1B", "560M".
+function readers(millions: number): string {
+  return millions >= 1000 ? `${(millions / 1000).toFixed(1)}B` : `${millions}M`;
+}
+
+// Most readers first.
+const BY_READERS = [...OTHER_LOCALES].sort((a, b) => READERS_MILLIONS[b] - READERS_MILLIONS[a]);
 
 // Which of the site's other languages are offered, each on its own
 // (src/lib/multilingual.ts). None by default. Beside each, how many pins it
@@ -42,10 +50,10 @@ export function MultilingualForm({ saved, coverage }: { saved: MultilingualSetti
         language left off is English: links to it open the English page, the profile&apos;s picker leaves it out, and new or edited pins
         are not translated into it. Its stored translations and saved language choices are kept for offering it again. The count beside each
         is how many pins are translated into it, out of all of them; the rest show in English. Outdated ones were edited after they were
-        translated and need translating again.
+        translated and need translating again. The readers figure is a rough estimate of how many people can read the language.
       </p>
       <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
-        {OTHER_LOCALES.map((locale) => (
+        {BY_READERS.map((locale) => (
           <label key={locale} className="flex items-center gap-2 text-sm">
             <input
               type="checkbox"
@@ -56,6 +64,9 @@ export function MultilingualForm({ saved, coverage }: { saved: MultilingualSetti
             />
             <span>
               <span lang={locale}>{LOCALE_NAMES[locale]}</span> <span className="text-subtle">({locale})</span>
+            </span>
+            <span className="text-subtle tabular-nums" title="A rough estimate of how many people can read it">
+              ~{readers(READERS_MILLIONS[locale])} readers
             </span>
             <span className={`tabular-nums ${coverage.current[locale] < coverage.total ? 'text-subtle' : 'text-success'}`}>
               {coverage.current[locale].toLocaleString('en-US')} / {coverage.total.toLocaleString('en-US')}

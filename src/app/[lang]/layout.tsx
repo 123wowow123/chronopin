@@ -34,6 +34,9 @@ const plexCyrillic = IBM_Plex_Sans({ subsets: ['cyrillic'], weight: ['400', '500
 const notoThai = Noto_Sans_Thai({ subsets: ['thai'], variable: '--font-noto-thai', display: 'swap', preload: false });
 const notoArabic = Noto_Sans_Arabic({ subsets: ['arabic'], variable: '--font-noto-arabic', display: 'swap', preload: false });
 const plexArabic = IBM_Plex_Sans_Arabic({ subsets: ['arabic'], weight: ['400', '500', '600'], variable: '--font-plex-arabic', display: 'swap', preload: false });
+// Vietnamese's stacked diacritics, which the Latin subsets lack.
+const notoVietnamese = Noto_Sans({ subsets: ['vietnamese'], variable: '--font-noto-vietnamese', display: 'swap', preload: false });
+const plexVietnamese = IBM_Plex_Sans({ subsets: ['vietnamese'], weight: ['400', '500', '600'], variable: '--font-plex-vietnamese', display: 'swap', preload: false });
 const astroSigns = localFont({
   src: '../fonts/AstronomicSigns.ttf',
   variable: '--font-astro-signs',
@@ -102,7 +105,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     // suppressHydrationWarning: the inline script sets data-theme before React
     // hydrates, so <html> never matches the server markup.
-    <html lang={languageTag(locale)} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${notoCyrillic.variable} ${plexCyrillic.variable} ${notoThai.variable} ${notoArabic.variable} ${plexArabic.variable} ${astroSigns.variable}`} suppressHydrationWarning>
+    <html lang={languageTag(locale)} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${notoCyrillic.variable} ${plexCyrillic.variable} ${notoVietnamese.variable} ${plexVietnamese.variable} ${notoThai.variable} ${notoArabic.variable} ${plexArabic.variable} ${astroSigns.variable}`} suppressHydrationWarning>
       <body className="min-h-dvh">
         {/* Before first paint, from the stored preference (src/lib/theme.ts).
             First in <body>, not in <head>: AdSense inserts its own script at

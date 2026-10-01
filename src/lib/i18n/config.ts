@@ -5,7 +5,7 @@
 // path to the /en tree the app routes under (src/app/[lang]), so each language
 // renders and caches as its own page and crawlers find every one of them.
 
-export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar', 'th', 'it', 'ru', 'pt'] as const;
+export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar', 'th', 'it', 'ru', 'pt', 'ms', 'vi'] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = 'en';
@@ -28,6 +28,8 @@ export const LOCALE_NAMES: Record<Locale, string> = {
   it: 'Italiano',
   ru: 'Русский',
   pt: 'Português',
+  ms: 'Bahasa Melayu',
+  vi: 'Tiếng Việt',
 };
 
 // The tag Intl formats dates and numbers with; languageTag() is the part
@@ -49,12 +51,35 @@ export const INTL_LOCALES: Record<Locale, string> = {
   it: 'it',
   ru: 'ru',
   pt: 'pt-BR',
+  ms: 'ms',
+  vi: 'vi',
 };
 
 // A language's BCP 47 tag without Intl's -u- options: "th-u-ca-gregory" -> "th".
 export function languageTag(locale: Locale): string {
   return INTL_LOCALES[locale].replace(/-u-.*$/, '');
 }
+
+// Roughly how many people can read each language, in millions: its speakers,
+// first and second language together (Ethnologue's totals), scaled down by
+// the literacy of the countries they live in. A rough estimate, not a census.
+export const READERS_MILLIONS: Record<Locale, number> = {
+  en: 1300,
+  es: 520,
+  fr: 270,
+  de: 130,
+  ja: 124,
+  zh: 1050,
+  ko: 80,
+  hi: 450,
+  ar: 270,
+  th: 58,
+  it: 65,
+  ru: 245,
+  pt: 240,
+  ms: 75,
+  vi: 92,
+};
 
 // The language Claude is asked to translate a pin into.
 export const LANGUAGE_NAMES: Record<Locale, string> = {
@@ -71,6 +96,8 @@ export const LANGUAGE_NAMES: Record<Locale, string> = {
   it: 'Italian',
   ru: 'Russian',
   pt: 'Brazilian Portuguese',
+  ms: 'Malay',
+  vi: 'Vietnamese',
 };
 
 // Languages written right to left: <html dir> says so, and the page mirrors.
