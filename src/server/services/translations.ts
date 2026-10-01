@@ -14,9 +14,9 @@ import { TARGET_LOCALES, translatePinText, type TargetLocale } from '../extract/
 import PinTranslation, {
   changedFields,
   hasWords,
+  shapesOf,
   sourceHash,
   TRANSLATED_FIELDS,
-  TRANSLATED_SHAPES,
   translatesAll,
   translationState,
   wholeTranslation,
@@ -24,6 +24,7 @@ import PinTranslation, {
   type PinText,
   type PinTranslationRow,
   type TranslatedField,
+  type TranslationShapes,
   type TranslationState,
 } from '../model/pinTranslation';
 
@@ -83,11 +84,11 @@ export async function translatePin(
     );
     if (!pin) return 0;
     const hash = sourceHash(pin);
-    const existing = await db.query<{ locale: string; sourceHash: string } & Record<TranslatedField, unknown>>(
-      `SELECT "locale", "sourceHash", ${TRANSLATED_SHAPES} FROM "PinTranslation" WHERE "pinId" = $1`,
+    const existing = await db.query<{ locale: string; sourceHash: string; shapes: TranslationShapes }>(
+      `SELECT "locale", "sourceHash", "shapes" FROM "PinTranslation" WHERE "pinId" = $1`,
       [pinId],
     );
-    const fresh = new Set(existing.filter((row) => row.sourceHash.trim() === hash && translatesAll(pin, row)).map((row) => row.locale));
+    const fresh = new Set(existing.filter((row) => row.sourceHash.trim() === hash && translatesAll(pin, row.shapes)).map((row) => row.locale));
     const wanted = locales.filter((l) => force || !fresh.has(l));
     if (!wanted.length) return 0;
 
@@ -119,10 +120,8 @@ async function expirePin(pinId: number) {
 const PIN_WORDS = `"id", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning"`;
 
 type PinWords = PinText & { id: number };
-type TranslationShape = { pinId: number; locale: string; sourceHash: string; fieldHashes: FieldHashes | null; utcUpdatedDateTime: Date } & Record<
-  TranslatedField,
-  unknown
->;
+// fieldHashes comes as its JSON text, parsed only for the outdated rows that need it.
+type TranslationShape = { pinId: number; locale: string; sourceHash: string; fieldHashes: string | null; utcUpdatedDateTime: Date; shapes: TranslationShapes };
 
 // Each live pin (after the id given, oldest first) with where its translation
 // into each of the languages stands (TranslationState), and for an outdated
@@ -136,7 +135,7 @@ async function translationStates(locales: readonly TargetLocale[], { after = 0 }
       [after],
     ),
     db.query<TranslationShape>(
-      `SELECT "pinId", "locale", "sourceHash", "fieldHashes", "utcUpdatedDateTime", ${TRANSLATED_SHAPES} FROM "PinTranslation" WHERE "locale" = ANY($1::text[]) AND "pinId" > $2`,
+      `SELECT "pinId", "locale", "sourceHash", "fieldHashes"::text AS "fieldHashes", "utcUpdatedDateTime", "shapes" FROM "PinTranslation" WHERE "locale" = ANY($1::text[]) AND "pinId" > $2`,
       [locales, after],
     ),
   ]);
@@ -147,13 +146,14 @@ async function translationStates(locales: readonly TargetLocale[], { after = 0 }
   }
   return pins.map((pin) => {
     const hash = sourceHash(pin);
+    const english = shapesOf(pin);
     const states = locales.map((locale) => {
       const row = byPin.get(pin.id)?.get(locale);
-      const state = translationState(pin, hash, row);
+      const state = translationState(english, hash, row && { ...row.shapes, sourceHash: row.sourceHash });
       return {
         locale,
         state,
-        changed: state === 'outdated' ? changedFields(pin, row!.fieldHashes) : null,
+        changed: state === 'outdated' ? changedFields(pin, row!.fieldHashes ? (JSON.parse(row!.fieldHashes) as FieldHashes) : null) : null,
         translatedAt: row ? row.utcUpdatedDateTime.toISOString() : null,
       };
     });

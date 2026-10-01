@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { changedFields, fieldHashes, hasWords, sourceHash, translatesAll, translationState, wholeTranslation } from './pinTranslation';
+import { changedFields, fieldHashes, hasWords, shapesOf, sourceHash, translatesAll, translationState, wholeTranslation } from './pinTranslation';
 
 describe('hasWords', () => {
   it('counts letters and digits in any script', () => {
@@ -49,8 +49,15 @@ describe('wholeTranslation', () => {
   });
 
   it('reads a shape the database worked out', () => {
-    expect(wholeTranslation('<ul><li>One</li></ul>', { head: '<ul><li>一</li></ul>', length: 15, li: 1, cite: 0, end: '>' })).toBe(true);
-    expect(wholeTranslation('<ul><li>One</li><li>Two</li></ul>', { head: '<ul><li>一</li></ul>', length: 15, li: 1, cite: 0, end: '>' })).toBe(false);
+    expect(wholeTranslation('<ul><li>One</li></ul>', { words: true, length: 15, li: 1, cite: 0, end: '>' })).toBe(true);
+    expect(wholeTranslation('<ul><li>One</li><li>Two</li></ul>', { words: true, length: 15, li: 1, cite: 0, end: '>' })).toBe(false);
+    expect(wholeTranslation('One', { words: false, length: 1, li: 0, cite: 0, end: ',' })).toBe(false);
+  });
+
+  it('reads the English as a shape too', () => {
+    const [en] = Object.values(shapesOf({ title: 'Launch day for the new rocket.' }));
+    expect(wholeTranslation(en, 'Jour')).toBe(false);
+    expect(wholeTranslation(en, 'Jour de lancement de la nouvelle fusée.')).toBe(true);
   });
 });
 

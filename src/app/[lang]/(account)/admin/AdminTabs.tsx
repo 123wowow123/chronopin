@@ -60,10 +60,11 @@ export function AdminTabs({ current }: { current: string }) {
   );
 }
 
-// The admin pages are dynamic and signed-in, so a tab's page is not
-// prefetched and a click can sit a second or two before anything moves. While
-// it does, a short accent bar sweeps along the clicked tab's underline -
-// after 100ms, so a quick switch does not flash it.
+// The admin pages are dynamic and signed-in, so only their loading screen
+// (./loading.tsx) is prefetched, and until that prefetch is in (or always, in
+// development) a click can sit a moment before anything moves. While it does,
+// a short accent bar sweeps along the clicked tab's underline - after 100ms,
+// so a quick switch does not flash it.
 function Pending() {
   const { pending } = useLinkStatus();
   return (

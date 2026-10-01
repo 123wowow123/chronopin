@@ -65,10 +65,11 @@ export function hasWords(value: unknown): value is string {
   return typeof value === 'string' && /[\p{L}\p{N}]/u.test(value);
 }
 
-// What wholeTranslation needs of a text: its start, length, bullets,
-// citations and last character. TRANSLATED_SHAPES has the database work it
-// out, so a query over every translation need not load all their words.
-export type TextShape = { head: string; length: number; li: number; cite: number; end: string };
+// What wholeTranslation needs of a text: whether its start says anything
+// (hasWords of the first 200 characters), its length, bullets, citations and
+// last character. The database stores it for each translation
+// (TranslationShapes), so a query over every one need not load all their words.
+export type TextShape = { words: boolean; length: number; li: number; cite: number; end: string };
 
 function count(text: string, tag: string): number {
   return text.split(tag).length - 1;
@@ -77,18 +78,26 @@ function count(text: string, tag: string): number {
 function shapeOf(value: unknown): TextShape | null {
   if (typeof value === 'string') {
     const trimmed = value.trimEnd();
-    return { head: value.slice(0, 200), length: value.length, li: count(value, '<li>'), cite: count(value, '<cite'), end: trimmed.slice(-1) };
+    return { words: hasWords(value.slice(0, 200)), length: value.length, li: count(value, '<li>'), cite: count(value, '<cite'), end: trimmed.slice(-1) };
   }
-  return value && typeof value === 'object' && 'head' in value ? (value as TextShape) : null;
+  return value && typeof value === 'object' && 'words' in value ? (value as TextShape) : null;
 }
 
-// Each translated field as its TextShape (null when empty), under its own name.
-export const TRANSLATED_SHAPES = TRANSLATED_FIELDS.map(
-  (field) =>
-    `CASE WHEN "${field}" IS NULL THEN NULL ELSE json_build_object('head', left("${field}", 200), 'length', length("${field}"),
-       'li', (length("${field}") - length(replace("${field}", '<li>', ''))) / 4, 'cite', (length("${field}") - length(replace("${field}", '<cite', ''))) / 5,
-       'end', right(regexp_replace("${field}", '\\s+$', ''), 1)) END AS "${field}"`,
-).join(', ');
+// Each translated field's TextShape (null when empty), by field: the column
+// "shapes", which the database works out as a translation is written (0108), so
+// reading it never touches the words themselves. Read whole - picking its fields
+// apart in SQL unpacks it once per field.
+export type TranslationShapes = Record<TranslatedField, TextShape | null>;
+
+// The same for a pin's English words, worked out once to check the pin
+// against many translations.
+export function shapesOf(pin: Partial<Record<TranslatedField, unknown>>): TranslationShapes {
+  return Object.fromEntries(TRANSLATED_FIELDS.map((field) => [field, shapeOf(pin[field])])) as TranslationShapes;
+}
+
+// Every column but "shapes", which only the translation counts read (and which
+// is generated, so a backup restored from these rows must not carry it).
+const COLUMNS = `"pinId", "locale", ${TRANSLATED_FIELDS.map((field) => `"${field}"`).join(', ')}, "sourceHash", "fieldHashes", "utcCreatedDateTime", "utcUpdatedDateTime"`;
 
 // Whether a translation of an English text came back whole. Hand and model
 // translations have come back cut short at a double quote in the English
@@ -97,9 +106,9 @@ export const TRANSLATED_SHAPES = TRANSLATED_FIELDS.map(
 // ending on a letter where the English ends a sentence.
 export function wholeTranslation(english: unknown, translated: unknown): boolean {
   const en = shapeOf(english);
-  if (!en || !hasWords(en.head)) return true;
+  if (!en || !en.words) return true;
   const tr = shapeOf(translated);
-  if (!tr || !hasWords(tr.head)) return false;
+  if (!tr || !tr.words) return false;
   if (tr.li !== en.li || tr.cite !== en.cite) return false;
   const cut = /[.!?。！？]/u.test(en.end) && /[\p{L}\p{N}]/u.test(tr.end) && tr.length < en.length * 0.25;
   return !cut;
@@ -115,7 +124,7 @@ export function translatesAll(pin: Partial<Record<TranslatedField, unknown>>, ro
 export default class PinTranslation {
   static async forPins(pinIds: number[], locale: string): Promise<Map<number, PinTranslationRow>> {
     if (!pinIds.length) return new Map();
-    const rows = await db.query<PinTranslationRow>(`SELECT * FROM "PinTranslation" WHERE "pinId" = ANY($1::int[]) AND "locale" = $2`, [pinIds, locale]);
+    const rows = await db.query<PinTranslationRow>(`SELECT ${COLUMNS} FROM "PinTranslation" WHERE "pinId" = ANY($1::int[]) AND "locale" = $2`, [pinIds, locale]);
     return new Map(rows.map((row) => [row.pinId, row]));
   }
 
@@ -140,7 +149,7 @@ export default class PinTranslation {
   }
 
   static getAll(): Promise<PinTranslationRow[]> {
-    return db.query<PinTranslationRow>(`SELECT * FROM "PinTranslation" ORDER BY "pinId", "locale"`);
+    return db.query<PinTranslationRow>(`SELECT ${COLUMNS} FROM "PinTranslation" ORDER BY "pinId", "locale"`);
   }
 
   static async restore(rows: PinTranslationRow[]): Promise<void> {
