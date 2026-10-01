@@ -5576,5 +5576,89 @@
     "source": "claude",
     "sourceUrl": "https://cphia.africacdc.org/",
     "checkedAt": "2026-09-30T14:32:57.372Z"
+  },
+  {
+    "pinId": 4982,
+    "performers": [
+      {
+        "name": "Shayne Coplan",
+        "type": "Person"
+      },
+      {
+        "name": "Balaji Srinivasan",
+        "type": "Person"
+      },
+      {
+        "name": "Jeff Yan",
+        "type": "Person"
+      },
+      {
+        "name": "Adena Friedman",
+        "type": "Person"
+      },
+      {
+        "name": "Eric Trump",
+        "type": "Person"
+      },
+      {
+        "name": "Arthur Hayes",
+        "type": "Person"
+      },
+      {
+        "name": "Tom Lee",
+        "type": "Person"
+      },
+      {
+        "name": "Vitalik Buterin",
+        "type": "Person"
+      },
+      {
+        "name": "Vlad Tenev",
+        "type": "Person"
+      },
+      {
+        "name": "Lando Norris",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://checkout.token2049.com/events/asia",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://token2049.com/singapore",
+    "checkedAt": "2026-10-01T13:27:24.979Z"
+  },
+  {
+    "pinId": 5027,
+    "performers": [
+      {
+        "name": "Jacob Kiplimo",
+        "type": "Person"
+      },
+      {
+        "name": "Hawi Feysa",
+        "type": "Person"
+      },
+      {
+        "name": "Brigid Kosgei",
+        "type": "Person"
+      },
+      {
+        "name": "Sharon Lokedi",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://marathonhandbook.com/2026-chicago-marathon-elite-field/",
+    "checkedAt": "2026-10-01T13:27:25.242Z"
   }
 ]
