@@ -238,6 +238,20 @@ export const FORMAT_WORDS: Record<Locale, Words> = {
     moonPhases: ['Trăng non', 'Trăng lưỡi liềm đầu tháng', 'Trăng bán nguyệt đầu tháng', 'Trăng khuyết đầu tháng', 'Trăng tròn', 'Trăng khuyết cuối tháng', 'Trăng bán nguyệt cuối tháng', 'Trăng lưỡi liềm cuối tháng'],
     lunarGloss: 'Nông lịch, âm lịch Trung Quốc',
   },
+  id: {
+    starts: 'Mulai {date}',
+    range: '{start} sampai {end}',
+    allDay: 'Sepanjang hari',
+    at: '{date}, {time}',
+    today: 'Hari ini',
+    all: 'Semua',
+    bc: '{year} SM',
+    dateOrder: 'dmy',
+    dateSeparator: '/',
+    planets: ['Matahari', 'Bulan', 'Mars', 'Merkurius', 'Jupiter', 'Venus', 'Saturnus'],
+    moonPhases: ['Bulan baru', 'Bulan sabit awal', 'Kuartal pertama', 'Bulan cembung awal', 'Bulan purnama', 'Bulan cembung akhir', 'Kuartal terakhir', 'Bulan sabit akhir'],
+    lunarGloss: 'Nong Li, kalender lunar Tionghoa',
+  },
 };
 
 export function fillWords(template: string, values: Record<string, string>): string {

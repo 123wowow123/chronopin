@@ -8,6 +8,7 @@ import es from './messages/es';
 import fr from './messages/fr';
 import hi from './messages/hi';
 import ar from './messages/ar';
+import indonesian from './messages/id';
 import italian from './messages/it';
 import ja from './messages/ja';
 import ko from './messages/ko';
@@ -66,6 +67,7 @@ describe('negotiateLocale', () => {
     expect(negotiateLocale('en;q=0.4,ja;q=0.9')).toBe('ja');
     expect(negotiateLocale('ms-MY,en;q=0.5')).toBe('ms');
     expect(negotiateLocale('vi-VN,en;q=0.5')).toBe('vi');
+    expect(negotiateLocale('id-ID,en;q=0.5')).toBe('id');
     expect(negotiateLocale('zh-Hans-CN')).toBe('zh');
   });
 
@@ -168,6 +170,7 @@ describe('formatting in other languages', () => {
     expect(formatStart(pin, 'UTC', {}, 'pt')).toBe('Começa em 14/09/2026');
     expect(formatStart(pin, 'UTC', {}, 'ms')).toBe('Bermula 14/09/2026');
     expect(formatStart(pin, 'UTC', {}, 'vi')).toBe('Bắt đầu 14/09/2026');
+    expect(formatStart(pin, 'UTC', {}, 'id')).toBe('Mulai 14/09/2026');
     // A run of days is worded as a span, not as a start.
     const span = { ...pin, utcEndDateTime: '2026-09-17T00:00:00.000Z' };
     expect(formatStart(span, 'UTC', {}, 'fr')).toBe('Du 14/09/2026 au 16/09/2026');
@@ -184,7 +187,7 @@ describe('formatting in other languages', () => {
 // Every translation keeps the English message's {slots} and <tags>: a slot
 // lost or renamed prints as its braces, and a lost tag loses its link.
 describe('dictionaries', () => {
-  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi, ar, th, it: italian, ru, pt, ms, vi };
+  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi, ar, th, it: italian, ru, pt, ms, vi, id: indonesian };
 
   function leaves(node: unknown, prefix = ''): [string, string][] {
     if (typeof node === 'string') return [[prefix, node]];
