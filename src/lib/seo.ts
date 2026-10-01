@@ -208,9 +208,15 @@ export function pinJsonLd(
     ...(pin.categories?.length ? { articleSection: pin.categories[0] } : {}),
     ...(pin.categories?.length || pin.tags?.length ? { keywords: [...(pin.categories ?? []), ...(pin.tags ?? []).map((t) => t.name)] } : {}),
     ...(pin.user?.userName ? { author: { '@type': 'Person', name: pin.user.userName } } : {}),
-    publisher: { '@type': 'Organization', name: siteName, url: siteUrl },
+    // The dates the pin is about, so an answer engine reads "when" off the
+    // markup for every pin, not only for one marked up as an Event.
+    temporalCoverage: temporalCoverage(pin),
+    publisher: publisherJsonLd(),
     ...(pin.sourceUrl ? { isBasedOn: pin.sourceUrl } : {}),
     ...(event ? { about: event } : {}),
+    // A pin that is no Event is still about its company: named, and linked to
+    // its Wikipedia page, so the entity is not left to guesswork.
+    ...(!event && organizer ? { mentions: organizer } : {}),
   };
 
   const breadcrumbs = {
@@ -223,6 +229,18 @@ export function pinJsonLd(
   };
 
   return [article, breadcrumbs];
+}
+
+// The pin's dates as an ISO 8601 interval: "2027-10-12" for one all-day
+// pin, "2027-10-12/2027-10-14" for a run of days (its last day, not the
+// stored exclusive end), and the instants for a timed one.
+export function temporalCoverage(pin: Pick<PinJson, 'utcStartDateTime' | 'utcEndDateTime' | 'allDay'>): string {
+  const start = eventDate(pin.utcStartDateTime, pin.allDay);
+  if (!pin.utcEndDateTime) {
+    return start;
+  }
+  const end = eventDate(pin.utcEndDateTime, pin.allDay, true);
+  return end > start ? `${start}/${end}` : start;
 }
 
 // An all-day pin is a date, not an instant; its stored end is the day after
@@ -238,19 +256,36 @@ function eventDate(iso: string, allDay?: boolean, isEnd = false): string {
   return d.toISOString().slice(0, 10);
 }
 
-export function websiteJsonLd() {
+// The site as an Organization with its logo: what Google shows beside an
+// Article's publisher, and the entity answer engines credit for its pins.
+function publisherJsonLd() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    '@type': 'Organization',
+    '@id': `${siteUrl}/#organization`,
     name: siteName,
     url: siteUrl,
-    description: siteDescription,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/search?q={search_term_string}` },
-      'query-input': 'required name=search_term_string',
-    },
+    logo: { '@type': 'ImageObject', url: absoluteUrl('/apple-touch-icon.png'), width: 180, height: 180 },
   };
+}
+
+export function websiteJsonLd() {
+  return [
+    { '@context': 'https://schema.org', ...publisherJsonLd(), description: siteDescription },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      name: siteName,
+      url: siteUrl,
+      description: siteDescription,
+      publisher: { '@id': `${siteUrl}/#organization` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/search?q={search_term_string}` },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ];
 }
 
 // JSON for a <script type="application/ld+json">, with "<" escaped so a title
