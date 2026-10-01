@@ -33,6 +33,8 @@ export default function CompaniesPage() {
 }
 
 async function Companies() {
+  // Per request: the counts are upcoming pins, which read the clock and the database.
+  await connection();
   const [t, index] = await Promise.all([getT(), topicIndex()]);
   const shown = index.companies.filter((c) => c.pins >= MIN_INDEXED_PINS);
   return (
