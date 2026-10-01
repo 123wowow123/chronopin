@@ -217,9 +217,12 @@ if (!g.__chronopinPinListeners) {
 
   // The pin's words in the languages offered (services/translations.ts,
   // src/lib/multilingual.ts), redone only for a language whose translation
-  // the edit made out of date. None while the site is English only.
+  // the edit made out of date. None while the site is English only, or while
+  // the admin setting leaves it off (src/lib/autoTranslate.ts, the default).
   const translate = (pin: Row) => {
     (async () => {
+      const { getAutoTranslate } = await import('./model/appSetting');
+      if (!(await getAutoTranslate()).enabled) return;
       const { offeredLocales } = await import('./services/cache');
       const locales = await offeredLocales();
       if (!locales.length) return;

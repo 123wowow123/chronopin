@@ -1,3 +1,4 @@
+import { DEFAULT_AUTO_TRANSLATE, parseAutoTranslate, type AutoTranslateSetting } from '@/lib/autoTranslate';
 import { DEFAULT_DAILY_JOBS, parseDailyJobs, withDefaultJobs, type DailyJobsSetting } from '@/lib/dailyJobs';
 import { DEFAULT_MULTILINGUAL, parseMultilingual, type MultilingualSetting } from '@/lib/multilingual';
 import { DEFAULT_SLIDER_TYPING, parseSliderTyping, type SliderTypingSetting } from '@/lib/sliderTyping';
@@ -14,6 +15,7 @@ const DAILY_JOBS = 'dailyJobs';
 const SLIDER_TYPING = 'sliderTyping';
 const TAG_LIST = 'tagList';
 const MULTILINGUAL = 'multilingual';
+const AUTO_TRANSLATE = 'autoTranslate';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -101,4 +103,14 @@ export async function getMultilingual(): Promise<MultilingualSetting> {
 
 export function setMultilingual(setting: MultilingualSetting, userId: number | null) {
   return write(MULTILINGUAL, setting, userId);
+}
+
+// Whether new and edited pins are translated automatically (src/server/events.ts).
+export async function getAutoTranslate(): Promise<AutoTranslateSetting> {
+  const parsed = parseAutoTranslate(await read(AUTO_TRANSLATE));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_AUTO_TRANSLATE;
+}
+
+export function setAutoTranslate(setting: AutoTranslateSetting, userId: number | null) {
+  return write(AUTO_TRANSLATE, setting, userId);
 }
