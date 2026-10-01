@@ -87,36 +87,71 @@ export default class BotVisit {
     ORDER BY "day"`);
   }
 
-  // Since a UTC day ("YYYY-MM-DD", null for all time): each bot's requests,
-  // distinct pages and last visit, busiest first, and the most crawled pages.
-  static async summarize(since: string | null, limit = 25) {
+  // For each of the UTC days given ("YYYY-MM-DD", null for all time), in
+  // order: each bot's requests, distinct pages and last visit since that day,
+  // busiest first, and the most crawled pages. Every range is counted in the
+  // same pass over the table (FILTER per range) - the table gains thousands of
+  // rows a day, and a pass per range made the admin page take seconds.
+  static async summarizeRanges(sinces: (string | null)[], limit = 25) {
+    const each = (f: (i: number) => string) => sinces.map((_, i) => f(i)).join(', ');
+    // Each bot and path's requests in each range, null where it had none: a
+    // count of the non-null ones is then a count of distinct pages (or bots)
+    // without COUNT(DISTINCT), which sorts every path and was most of the time.
+    const pairs = `
+      SELECT "bot", "path", min("kind") AS "kind", max("utcLastDateTime") AS "lastSeen",
+        ${each((i) => `SUM("hits") FILTER (WHERE $${i + 1}::date IS NULL OR "day" >= $${i + 1}::date) AS "h${i}"`)}
+      FROM "BotVisit"
+      GROUP BY "bot", "path"`;
     const [bots, paths] = await Promise.all([
-      db.query<{ bot: string; kind: BotKind; hits: number; pages: number; lastSeen: string; userAgent: string }>(
-        `SELECT DISTINCT ON ("t"."bot") "t"."bot", "t"."kind", "t"."hits", "t"."pages", "t"."lastSeen", "v"."userAgent"
+      // A bot's last visit is the same in every range it appears in (each runs
+      // to today), so its user agent is its latest row's, read off the
+      // ("bot", "day") index.
+      db.query<{ bot: string; kind: BotKind; lastSeen: string; userAgent: string } & Record<string, number | null>>(
+        `SELECT "t".*,
+           (SELECT "v"."userAgent" FROM "BotVisit" AS "v" WHERE "v"."bot" = "t"."bot"
+            ORDER BY "v"."day" DESC, "v"."utcLastDateTime" DESC LIMIT 1) AS "userAgent"
          FROM (
-           SELECT "bot", min("kind") AS "kind", SUM("hits")::integer AS "hits",
-             COUNT(DISTINCT "path")::integer AS "pages", max("utcLastDateTime") AS "lastSeen"
-           FROM "BotVisit"
-           WHERE $1::date IS NULL OR "day" >= $1::date
+           SELECT "bot", min("kind") AS "kind", max("lastSeen") AS "lastSeen",
+             ${each((i) => `SUM("h${i}")::integer AS "hits${i}", COUNT("h${i}")::integer AS "pages${i}"`)}
+           FROM (${pairs}) AS "bp"
            GROUP BY "bot"
-         ) AS "t"
-           JOIN "BotVisit" AS "v" ON "v"."bot" = "t"."bot" AND "v"."utcLastDateTime" = "t"."lastSeen"
-         ORDER BY "t"."bot"`,
-        [since],
+         ) AS "t"`,
+        sinces,
       ),
-      db.query<{ path: string; hits: number; bots: number }>(
-        `SELECT "path", SUM("hits")::integer AS "hits", COUNT(DISTINCT "bot")::integer AS "bots"
-         FROM "BotVisit"
-         WHERE $1::date IS NULL OR "day" >= $1::date
-         GROUP BY "path"
-         ORDER BY "hits" DESC, "bots" DESC, "path"
-         LIMIT $2`,
-        [since, 10],
+      db.query<{ range: number; path: string; hits: number; bots: number }>(
+        `WITH "p" AS MATERIALIZED (
+           SELECT "path", ${each((i) => `SUM("h${i}")::integer AS "hits${i}", COUNT("h${i}")::integer AS "bots${i}"`)}
+           FROM (${pairs}) AS "bp"
+           GROUP BY "path"
+         )
+         SELECT * FROM (${sinces
+           .map(
+             (_, i) =>
+               `(SELECT ${i} AS "range", "path", "hits${i}" AS "hits", "bots${i}" AS "bots" FROM "p" WHERE "hits${i}" IS NOT NULL
+                 ORDER BY "hits${i}" DESC, "bots${i}" DESC, "path" LIMIT 10)`,
+           )
+           .join(' UNION ALL ')}) AS "top"
+         ORDER BY "range", "hits" DESC, "bots" DESC, "path"`,
+        sinces,
       ),
     ]);
-    const busiest = bots
-      .map((b) => ({ ...b, lastSeen: new Date(b.lastSeen).toISOString() }))
-      .sort((a, b) => b.hits - a.hits || a.bot.localeCompare(b.bot));
-    return { botCount: busiest.length, bots: busiest.slice(0, limit), paths };
+    return sinces.map((_, i) => {
+      const busiest = bots
+        .filter((b) => b[`hits${i}`] != null)
+        .map((b) => ({
+          bot: b.bot,
+          kind: b.kind,
+          hits: b[`hits${i}`]!,
+          pages: b[`pages${i}`]!,
+          lastSeen: new Date(b.lastSeen).toISOString(),
+          userAgent: b.userAgent,
+        }))
+        .sort((a, b) => b.hits - a.hits || a.bot.localeCompare(b.bot));
+      return {
+        botCount: busiest.length,
+        bots: busiest.slice(0, limit),
+        paths: paths.filter((p) => p.range === i).map(({ path, hits, bots }) => ({ path, hits, bots })),
+      };
+    });
   }
 }

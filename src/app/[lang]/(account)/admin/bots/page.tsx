@@ -17,10 +17,7 @@ export default async function AdminBotsPage() {
   // page is current to the second.
   await BotVisit.flush();
   const now = new Date();
-  const [days, ...summaries] = await Promise.all([
-    BotVisit.listDaily(),
-    ...TIME_RANGES.map((r) => BotVisit.summarize(rangeStartDay(r.id, now))),
-  ]);
+  const [days, summaries] = await Promise.all([BotVisit.listDaily(), BotVisit.summarizeRanges(TIME_RANGES.map((r) => rangeStartDay(r.id, now)))]);
   return (
     <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/bots" />
