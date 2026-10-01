@@ -3,7 +3,6 @@
 import Link from '@/components/ui/Link';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon } from '@/components/ui/Icon';
-import { useWholeRows } from '@/lib/client/wholeRows';
 import { pinPath } from '@/lib/seo';
 import type { CardPin, NewPin } from '@/lib/types';
 import { pinPicture } from '@/components/pin/PinThumb';
@@ -17,7 +16,7 @@ import { pinTextDir } from '@/lib/i18n/config';
 
 // How many pins the new pins lists keep, matching the LIMIT newPins() in
 // src/server/services/pages.ts asks for.
-export const NEW_PINS_LIMIT = 5;
+export const NEW_PINS_LIMIT = 12;
 
 // A broadcast pin as the new pins lists show it.
 function toNewPin(pin: CardPin): NewPin {
@@ -66,15 +65,14 @@ export function withLivePin(list: NewPin[], type: string, changed: CardPin, belo
 // The pins added most recently, beside the timeline on wide screens, each with
 // when it starts and its category and city.
 //
-// Trending comes first: this panel starts at its heading and one row (basis-28)
-// and grows into what trending leaves, up to its full list. When not even that
-// much is left under the whole of trending, it wraps out of sight.
+// It shares the column with trending (TrendingPins.tsx): both start at their
+// heading and one row (basis-28) and split what is left, each up to its full
+// list. When there is no room for both, this one wraps out of sight.
 export function NewPins({ pins }: { pins: NewPin[] }) {
-  const ref = useWholeRows<HTMLElement>(pins);
   const t = useT();
   if (!pins.length) return null;
   return (
-    <section ref={ref} aria-labelledby="new-pins-heading" className="floating flex max-h-max min-h-0 grow basis-28 flex-col text-sm">
+    <section aria-labelledby="new-pins-heading" className="floating flex max-h-max min-h-0 grow basis-28 flex-col text-sm">
       <h2 id="new-pins-heading" className="flex shrink-0 items-center gap-2 px-3.5 pt-2.5 pb-1.5">
         <Icon name="sparkle" className="size-4 text-link" />
         <span className="font-medium text-ink">{t('newPins.heading')}</span>

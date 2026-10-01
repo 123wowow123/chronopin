@@ -78,7 +78,7 @@ export async function trendingPins(locale: Locale = DEFAULT_LOCALE): Promise<Tre
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  return localizePins(await PinView.trending(TRENDING_DAYS, 5, await timelineMinConfidence()), locale);
+  return localizePins(await PinView.trending(TRENDING_DAYS, 12, await timelineMinConfidence()), locale);
 }
 
 // The pins added most recently. A new pin expires the timeline tag, so this
