@@ -1509,6 +1509,28 @@ const es: Messages = {
     heading: 'Tema',
     systemHint: 'Sistema sigue el modo claro u oscuro de tu dispositivo.',
   },
+  topic: {
+    tagTitle: '{name}: próximas fechas',
+    companyTitle: '{name}: próximas fechas',
+    tagDescription: 'Próximas fechas de {name} en {site}: lanzamientos, eventos y plazos, cada una con sus fuentes y lo firme que es la fecha.',
+    companyDescription: 'Próximas fechas de {name} en {site}: lanzamientos, estrenos, resultados y eventos, cada una con sus fuentes y lo firme que es la fecha.',
+    counts: 'Próximas fechas: {upcoming} · Todos los pins: {total}',
+    next: 'Siguiente: <title></title>, <date></date>.',
+    latest: 'Aún no hay nada próximo. Último: <title></title>, <date></date>.',
+    upcoming: 'Próximamente',
+    past: 'Recientes',
+    moreInSearch: 'Todos los pins de {name} en la búsqueda',
+    relatedTags: 'Etiquetas relacionadas',
+    relatedCompanies: 'Empresas',
+    website: 'Sitio web',
+    tags: 'Etiquetas',
+    companies: 'Empresas',
+    categories: 'Categorías',
+    tagsTitle: 'Todas las etiquetas',
+    companiesTitle: 'Todas las empresas',
+    tagsDescription: 'Todos los temas de {site} con próximas fechas de lanzamiento, eventos y plazos, por número de pins.',
+    companiesDescription: 'Todas las empresas de {site} con próximos lanzamientos, estrenos, resultados y eventos, por número de pins.',
+  },
 };
 
 export default es;

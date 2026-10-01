@@ -1515,6 +1515,28 @@ const ms: Messages = {
     heading: 'Tema',
     systemHint: 'Sistem mengikut tetapan cerah atau gelap peranti anda.',
   },
+  topic: {
+    tagTitle: '{name}: tarikh akan datang',
+    companyTitle: '{name}: tarikh akan datang',
+    tagDescription: 'Tarikh akan datang untuk {name} di {site}: keluaran, acara dan tarikh akhir, setiap satu dengan sumbernya dan sejauh mana tarikh itu pasti.',
+    companyDescription: 'Tarikh akan datang untuk {name} di {site}: pelancaran, keluaran, keputusan kewangan dan acara, setiap satu dengan sumbernya dan sejauh mana tarikh itu pasti.',
+    counts: 'Tarikh akan datang: {upcoming} · Semua pin: {total}',
+    next: 'Seterusnya: <title></title>, <date></date>.',
+    latest: 'Belum ada yang akan datang. Terkini: <title></title>, <date></date>.',
+    upcoming: 'Akan datang',
+    past: 'Terkini',
+    moreInSearch: 'Semua pin {name} dalam carian',
+    relatedTags: 'Tag berkaitan',
+    relatedCompanies: 'Syarikat',
+    website: 'Laman web',
+    tags: 'Tag',
+    companies: 'Syarikat',
+    categories: 'Kategori',
+    tagsTitle: 'Semua tag',
+    companiesTitle: 'Semua syarikat',
+    tagsDescription: 'Setiap subjek di {site} dengan tarikh keluaran, acara dan tarikh akhir akan datang, mengikut bilangan pin.',
+    companiesDescription: 'Setiap syarikat di {site} dengan pelancaran, keluaran, keputusan kewangan dan acara akan datang, mengikut bilangan pin.',
+  },
 };
 
 export default ms;

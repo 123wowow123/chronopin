@@ -1514,6 +1514,28 @@ const vi: Messages = {
     heading: 'Giao diện',
     systemHint: 'Hệ thống theo cài đặt sáng hoặc tối của thiết bị của bạn.',
   },
+  topic: {
+    tagTitle: '{name}: các ngày sắp tới',
+    companyTitle: '{name}: các ngày sắp tới',
+    tagDescription: 'Các ngày sắp tới của {name} trên {site}: phát hành, sự kiện và hạn chót, mỗi mục kèm nguồn và mức độ chắc chắn của ngày.',
+    companyDescription: 'Các ngày sắp tới của {name} trên {site}: ra mắt, phát hành, báo cáo kết quả và sự kiện, mỗi mục kèm nguồn và mức độ chắc chắn của ngày.',
+    counts: 'Ngày sắp tới: {upcoming} · Tất cả ghim: {total}',
+    next: 'Tiếp theo: <title></title>, <date></date>.',
+    latest: 'Chưa có gì sắp tới. Gần nhất: <title></title>, <date></date>.',
+    upcoming: 'Sắp tới',
+    past: 'Gần đây',
+    moreInSearch: 'Tất cả ghim {name} trong tìm kiếm',
+    relatedTags: 'Thẻ liên quan',
+    relatedCompanies: 'Công ty',
+    website: 'Trang web',
+    tags: 'Thẻ',
+    companies: 'Công ty',
+    categories: 'Danh mục',
+    tagsTitle: 'Tất cả thẻ',
+    companiesTitle: 'Tất cả công ty',
+    tagsDescription: 'Mọi chủ đề trên {site} có ngày phát hành, sự kiện và hạn chót sắp tới, theo số ghim.',
+    companiesDescription: 'Mọi công ty trên {site} có sự kiện ra mắt, phát hành, báo cáo kết quả sắp tới, theo số ghim.',
+  },
 };
 
 export default vi;

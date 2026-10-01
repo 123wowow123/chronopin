@@ -1522,6 +1522,28 @@ const hi: Messages = {
     heading: 'थीम',
     systemHint: 'सिस्टम आपके डिवाइस की लाइट या डार्क सेटिंग को फॉलो करता है।',
   },
+  topic: {
+    tagTitle: '{name}: आने वाली तारीखें',
+    companyTitle: '{name}: आने वाली तारीखें',
+    tagDescription: '{site} पर {name} की आने वाली तारीखें: रिलीज़, इवेंट और समय-सीमाएँ, हर एक अपने स्रोतों और तारीख कितनी पक्की है इसके साथ।',
+    companyDescription: '{site} पर {name} की आने वाली तारीखें: लॉन्च, रिलीज़, नतीजे और इवेंट, हर एक अपने स्रोतों और तारीख कितनी पक्की है इसके साथ।',
+    counts: 'आने वाली तारीखें: {upcoming} · सभी पिन: {total}',
+    next: 'अगला: <title></title>, <date></date>।',
+    latest: 'अभी कुछ आने वाला नहीं। सबसे हाल का: <title></title>, <date></date>।',
+    upcoming: 'आने वाले',
+    past: 'हाल के',
+    moreInSearch: 'खोज में {name} के सभी पिन',
+    relatedTags: 'संबंधित टैग',
+    relatedCompanies: 'कंपनियाँ',
+    website: 'वेबसाइट',
+    tags: 'टैग',
+    companies: 'कंपनियाँ',
+    categories: 'श्रेणियाँ',
+    tagsTitle: 'सभी टैग',
+    companiesTitle: 'सभी कंपनियाँ',
+    tagsDescription: '{site} पर आने वाली रिलीज़ तारीखों, इवेंट और समय-सीमाओं वाले सभी विषय, पिन की संख्या के अनुसार।',
+    companiesDescription: '{site} पर आने वाले लॉन्च, रिलीज़, नतीजों और इवेंट वाली सभी कंपनियाँ, पिन की संख्या के अनुसार।',
+  },
 };
 
 export default hi;

@@ -1509,6 +1509,28 @@ const de: Messages = {
     heading: 'Design',
     systemHint: 'System folgt der hellen oder dunklen Einstellung deines Geräts.',
   },
+  topic: {
+    tagTitle: '{name}: anstehende Termine',
+    companyTitle: '{name}: anstehende Termine',
+    tagDescription: 'Anstehende Termine zu {name} auf {site}: Veröffentlichungen, Ereignisse und Fristen, jeweils mit Quellen und wie sicher das Datum ist.',
+    companyDescription: 'Anstehende Termine von {name} auf {site}: Starts, Veröffentlichungen, Quartalszahlen und Ereignisse, jeweils mit Quellen und wie sicher das Datum ist.',
+    counts: 'Anstehende Termine: {upcoming} · Alle Pins: {total}',
+    next: 'Als Nächstes: <title></title>, <date></date>.',
+    latest: 'Noch nichts angekündigt. Zuletzt: <title></title>, <date></date>.',
+    upcoming: 'Anstehend',
+    past: 'Kürzlich',
+    moreInSearch: 'Alle Pins zu {name} in der Suche',
+    relatedTags: 'Verwandte Tags',
+    relatedCompanies: 'Unternehmen',
+    website: 'Website',
+    tags: 'Tags',
+    companies: 'Unternehmen',
+    categories: 'Kategorien',
+    tagsTitle: 'Alle Tags',
+    companiesTitle: 'Alle Unternehmen',
+    tagsDescription: 'Alle Themen auf {site} mit anstehenden Veröffentlichungsterminen, Ereignissen und Fristen, nach Anzahl der Pins.',
+    companiesDescription: 'Alle Unternehmen auf {site} mit anstehenden Starts, Veröffentlichungen, Quartalszahlen und Ereignissen, nach Anzahl der Pins.',
+  },
 };
 
 export default de;

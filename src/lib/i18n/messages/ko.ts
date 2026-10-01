@@ -1497,6 +1497,28 @@ const ko: Messages = {
     heading: '테마',
     systemHint: '“시스템”은 기기의 라이트/다크 설정을 따릅니다.',
   },
+  topic: {
+    tagTitle: '{name}: 다가오는 일정',
+    companyTitle: '{name}: 다가오는 일정',
+    tagDescription: '{site}의 {name} 다가오는 일정: 출시, 이벤트, 마감일을 출처와 날짜 확실도와 함께 제공합니다.',
+    companyDescription: '{site}의 {name} 다가오는 일정: 공개, 출시, 실적 발표, 이벤트를 출처와 날짜 확실도와 함께 제공합니다.',
+    counts: '다가오는 일정: {upcoming} · 전체 핀: {total}',
+    next: '다음: <title></title>, <date></date>.',
+    latest: '아직 예정된 일정이 없습니다. 최근: <title></title>, <date></date>.',
+    upcoming: '다가오는 일정',
+    past: '최근',
+    moreInSearch: '검색에서 {name} 핀 모두 보기',
+    relatedTags: '관련 태그',
+    relatedCompanies: '기업',
+    website: '웹사이트',
+    tags: '태그',
+    companies: '기업',
+    categories: '카테고리',
+    tagsTitle: '모든 태그',
+    companiesTitle: '모든 기업',
+    tagsDescription: '{site}에서 다가오는 출시일, 이벤트, 마감일이 있는 모든 주제(핀 수 순).',
+    companiesDescription: '{site}에서 다가오는 공개, 출시, 실적 발표, 이벤트가 있는 모든 기업(핀 수 순).',
+  },
 };
 
 export default ko;

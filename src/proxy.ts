@@ -3,9 +3,12 @@ import { identifyBot } from '@/lib/bots';
 import { isOffered } from '@/lib/multilingual';
 import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE, localizePath, negotiateLocale, splitLocale, type Locale } from '@/lib/i18n/config';
 import { pinPath } from '@/lib/seo';
+import { topicSlug } from '@/lib/topics';
 import * as db from '@/server/db';
 import { botRetryAfter } from '@/server/botLimit';
 import BotVisit from '@/server/model/botVisit';
+import Topics from '@/server/model/topics';
+import { timelineMinConfidence } from '@/server/services/timeline';
 import { offeredLocales, pinPathCache } from '@/server/services/cache';
 
 // Pin URLs are settled here, before rendering starts. Pages stream their
@@ -89,6 +92,8 @@ export async function proxy(request: NextRequest) {
 
   const pin = await checkPinPath(request, path, locale);
   if (pin) return pin;
+  const topic = await checkTopicPath(request, path, locale);
+  if (topic) return topic;
 
   if (!prefix) {
     const url = request.nextUrl.clone();
@@ -142,3 +147,56 @@ export const config = {
     '/((?!api/|_next/|auth/|logout|og/|upload/|pin-not-found|sw\\.js|favicon\\.ico|apple-touch-icon\\.png|ads\\.txt|privacy\\.html|termsofservice\\.html).*)',
   ],
 };
+
+// The slugs that have a /tag or /company page, kept a minute on
+// globalThis like the pin paths: a new tag's page can wait that long, and
+// one that lost its last pin renders its own not-found meanwhile.
+type TopicSlugs = { tag: Set<string>; company: Set<string> };
+
+// The promise is kept, so requests arriving while it loads share one query
+// (the tag list reads PinTagView, about 100ms); a failed load is not kept.
+function topicSlugs(): Promise<TopicSlugs> {
+  const g = globalThis as unknown as { __chronopinTopicSlugs?: { slugs: Promise<TopicSlugs>; expires: number } };
+  if (g.__chronopinTopicSlugs && g.__chronopinTopicSlugs.expires > Date.now()) return g.__chronopinTopicSlugs.slugs;
+  const slugs = (async () => {
+    const minConfidence = await timelineMinConfidence();
+    const [tags, companies] = await Promise.all([Topics.tags(minConfidence), Topics.companies(minConfidence)]);
+    return { tag: new Set(tags.map((t) => topicSlug(t.name))), company: new Set(companies.map((c) => topicSlug(c.name))) };
+  })();
+  const entry = { slugs, expires: Date.now() + TTL_MS };
+  g.__chronopinTopicSlugs = entry;
+  slugs.catch(() => {
+    if (g.__chronopinTopicSlugs === entry) delete g.__chronopinTopicSlugs;
+  });
+  return slugs;
+}
+
+// Tag and company URLs, the way pin URLs are checked above: a 308 to the
+// slug's one spelling (/tag/Anime -> /tag/anime), or a real 404.
+async function checkTopicPath(request: NextRequest, path: string, locale: Locale): Promise<NextResponse | null> {
+  const match = /^\/(tag|company)\/([^/]+)\/?$/.exec(path);
+  if (!match) {
+    return null;
+  }
+  const kind = match[1] as 'tag' | 'company';
+  let raw = match[2];
+  try {
+    raw = decodeURIComponent(raw);
+  } catch {}
+  const slug = topicSlug(raw);
+  const known = await topicSlugs().then((slugs) => slugs[kind].has(slug), () => undefined);
+  if (known === undefined) {
+    // The database is unreachable; let the page handle it.
+    return null;
+  }
+  if (!known) {
+    return NextResponse.rewrite(new URL(`/pin-not-found?lang=${locale}&page`, request.url), { status: 404 });
+  }
+  const canonical = `/${kind}/${encodeURIComponent(slug)}`;
+  if (canonical !== path) {
+    const url = request.nextUrl.clone();
+    url.pathname = localizePath(canonical, locale);
+    return NextResponse.redirect(url, 308);
+  }
+  return null;
+}
