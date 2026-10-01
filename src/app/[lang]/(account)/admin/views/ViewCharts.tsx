@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Link from '@/components/ui/Link';
 import { useMemo, useState } from 'react';
 import { PinThumb } from '@/components/pin/PinThumb';
+import { isLocale, LOCALE_NAMES } from '@/lib/i18n/config';
 import { pinPath } from '@/lib/seo';
 import { TIME_RANGES, type TimeRange } from '@/lib/timeStats';
 import { type ViewBucket, type ViewDay, viewStats } from '@/lib/viewStats';
@@ -49,6 +50,8 @@ export type RangeSummary = {
   countries: { country: string; views: number; viewers: number }[];
   cities: { city: string; views: number; viewers: number }[];
   points: { label: string; latitude: number; longitude: number; views: number }[];
+  // Every view, by the language it was read in ("" is before languages were recorded).
+  languages: { locale: string; views: number; viewers: number; users: number }[];
 };
 
 export type LatestView = {
@@ -70,6 +73,7 @@ const countryName = (code: string) => {
     return code;
   }
 };
+const languageName = (locale: string) => (isLocale(locale) ? `${LOCALE_NAMES[locale]} (${locale})` : 'Unknown');
 // "2026-09-27 16:05 UTC", the same on the server and in the browser.
 const utcTime = (iso: string) => `${iso.slice(0, 10)} ${iso.slice(11, 16)} UTC`;
 
@@ -226,6 +230,41 @@ export function ViewCharts({
         ) : (
           <p className="text-sm text-subtle">No pin views {inRange}.</p>
         )}
+      </section>
+
+      <section className="surface p-4 sm:p-5">
+        <h2 className="mb-3 text-base font-semibold">Languages</h2>
+        {summary.languages.length ? (
+          <div className="overflow-x-auto text-sm">
+            <table className="w-full text-left tabular-nums">
+              <thead className="text-subtle">
+                <tr>
+                  <th className="w-full py-1 font-medium">Language</th>
+                  <th className="py-1 pl-4 text-right font-medium">Views</th>
+                  <th className="py-1 pl-4 text-right font-medium">Share</th>
+                  <th className="py-1 pl-4 text-right font-medium">Viewers</th>
+                  <th className="py-1 pl-4 text-right font-medium whitespace-nowrap">Signed in</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-line">
+                {summary.languages.map((l) => (
+                  <tr key={l.locale} className={l.locale ? undefined : 'text-subtle'}>
+                    <td className="py-1.5">{languageName(l.locale)}</td>
+                    <td className="py-1.5 pl-4 text-right">{l.views}</td>
+                    <td className="py-1.5 pl-4 text-right">{stats.views ? Math.round((l.views / stats.views) * 100) : 0}%</td>
+                    <td className="py-1.5 pl-4 text-right">{l.viewers}</td>
+                    <td className="py-1.5 pl-4 text-right">{l.users}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <p className="text-sm text-subtle">No pin views {inRange}.</p>
+        )}
+        <p className="mt-3 text-xs text-faint">
+          The language of the page the view was on. Views before 1 October 2026 did not record one.
+        </p>
       </section>
 
       <section className="surface space-y-4 p-4 sm:p-5">
