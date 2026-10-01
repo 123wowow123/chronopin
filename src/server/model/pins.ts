@@ -312,6 +312,24 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
+  // The live pins starting from `from` on, soonest first, with their one-line
+  // descriptions: the upcoming dates /llms.txt lists for answer engines. Pins
+  // the timeline hides for confidence (minConfidence, null for none) are left
+  // out here too.
+  static async upcoming(from: Date, limit: number, minConfidence: number | null) {
+    return db.query<{ id: number; title: string; description: string | null; category: string | null; utcStartDateTime: Date; allDay: boolean }>(
+      `
+      SELECT "p"."id", "p"."title", "p"."description", ${MAIN_CATEGORY} AS "category", "p"."utcStartDateTime", "p"."allDay"
+      FROM "Pin" AS "p"
+      WHERE "p"."utcDeletedDateTime" IS NULL
+        AND "p"."utcStartDateTime" >= $1::timestamptz
+        AND ($3::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $3) >= $3)
+      ORDER BY "p"."utcStartDateTime", "p"."id"
+      LIMIT $2`,
+      [from, limit, minConfidence],
+    );
+  }
+
   // Every located pin a map marker needs, in one answer rather than a walk
   // through the timeline's pages. The map used to page /api/main outward from
   // now until it passed each boundary - about fifteen round trips for the

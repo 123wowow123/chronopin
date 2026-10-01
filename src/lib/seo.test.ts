@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isAttendableEvent, pinJsonLd } from './seo';
+import { isAttendableEvent, pinJsonLd, temporalCoverage } from './seo';
 import type { PinJson } from './types';
 
 const place = { address: 'Moscone Center, San Francisco, CA', latitude: 37.784, longitude: -122.401 };
@@ -102,5 +102,23 @@ describe('pinJsonLd', () => {
     );
     expect(article).not.toHaveProperty('about');
     expect(article).not.toHaveProperty('review');
+  });
+
+  it('names the company a non-event pin is about, with its Wikipedia page', () => {
+    const [article] = pinJsonLd(pin({ categories: ['Gaming'], company: 'Nintendo', companyWikiUrl: 'https://en.wikipedia.org/wiki/Nintendo' }));
+    expect(article).toMatchObject({ mentions: { '@type': 'Organization', name: 'Nintendo', sameAs: 'https://en.wikipedia.org/wiki/Nintendo' } });
+    expect((article as Record<string, unknown>).publisher).toMatchObject({ name: 'Chronopin', logo: { width: 180 } });
+  });
+});
+
+describe('temporalCoverage', () => {
+  it('gives a day, a run of days to its last day, or the instants', () => {
+    expect(temporalCoverage(pin({}))).toBe('2027-10-12');
+    expect(temporalCoverage(pin({ utcEndDateTime: '2027-10-13T00:00:00.000Z' }))).toBe('2027-10-12');
+    expect(temporalCoverage(pin({ utcEndDateTime: '2027-10-15T00:00:00.000Z' }))).toBe('2027-10-12/2027-10-14');
+    expect(temporalCoverage(pin({ allDay: false, utcStartDateTime: '2026-11-18T23:40:00.000Z', utcEndDateTime: '2026-11-19T08:40:00.000Z' }))).toBe(
+      '2026-11-18T23:40:00.000Z/2026-11-19T08:40:00.000Z',
+    );
+    expect(temporalCoverage(pin({ allDay: false, utcStartDateTime: '2026-11-18T23:40:00.000Z' }))).toBe('2026-11-18T23:40:00.000Z');
   });
 });

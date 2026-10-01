@@ -53,17 +53,18 @@ export async function proxy(request: NextRequest) {
   BotVisit.record(bot, userAgent, pathname);
   // AI crawlers are slowed to a steady pace (src/server/botLimit.ts); search
   // engines are not, so indexing is never held back. robots.txt stays open to
-  // them - it is where they read the Crawl-delay.
-  const retryAfter = pathname === '/robots.txt' ? null : botRetryAfter(bot);
+  // them - it is where they read the Crawl-delay - and so does llms.txt, the
+  // one page written for them.
+  const retryAfter = pathname === '/robots.txt' || pathname === '/llms.txt' ? null : botRetryAfter(bot);
   if (retryAfter != null) {
     return new NextResponse('Too many requests - please crawl more slowly.', {
       status: 429,
       headers: { 'Retry-After': String(retryAfter), 'Content-Type': 'text/plain; charset=utf-8' },
     });
   }
-  // robots.txt and the sitemap are what a crawler reads first; they come
-  // through only to be counted.
-  if (pathname === '/robots.txt' || pathname === '/sitemap.xml') {
+  // robots.txt, the sitemap and llms.txt are what a crawler reads first; they
+  // come through only to be counted.
+  if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname === '/llms.txt') {
     return NextResponse.next();
   }
   const { locale: prefix, path } = splitLocale(pathname);

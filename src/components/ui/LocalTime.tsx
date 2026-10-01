@@ -58,7 +58,16 @@ export function StartTime({
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const t = useT();
-  const time = <time dateTime={pin.utcStartDateTime}>{formatStart(pin, timeZone, { allDaySuffix }, t.locale)}</time>;
+  // A clock time read in UTC - a crawler's, or a first visit's before the
+  // browser's zone takes over - says so: an answer engine quoting "11:40PM"
+  // bare would give an 08:40 KST exam the day before. All-day dates are days.
+  const zone = timeZone === 'UTC' && !pin.allDay ? ' UTC' : '';
+  const time = (
+    <time dateTime={pin.utcStartDateTime}>
+      {formatStart(pin, timeZone, { allDaySuffix }, t.locale)}
+      {zone}
+    </time>
+  );
   if (!search) return time;
   const day = pinDayKey(pin, timeZone);
   return (
