@@ -95,6 +95,7 @@ const ar: Messages = {
       category: 'الفئة',
       place: 'المكان',
       rating: 'التقييم',
+      delay: 'التأخير',
     },
     notField: 'ليس {field}',
     pinsMatching: 'الدبابيس المطابقة لـ {query}',
@@ -771,6 +772,7 @@ const ar: Messages = {
     titleEstimated: 'تأخير تقديري {span}: كان الموعد الأول {date}',
     badge: 'متأخر {span}',
     reasoning: 'كان الموعد الأول {date}؛ وقد تأخر الآن {span}.',
+    searchFrom: 'عرض الدبابيس المتأخرة {span} أو أكثر',
   },
   weather: {
     local: 'الطقس المحلي',

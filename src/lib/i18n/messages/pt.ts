@@ -88,6 +88,7 @@ const pt: Messages = {
       category: 'categoria',
       place: 'lugar',
       rating: 'avaliação',
+      delay: 'atraso',
     },
     notField: 'não {field}',
     pinsMatching: 'Pins que correspondem a {query}',
@@ -671,6 +672,7 @@ const pt: Messages = {
     titleEstimated: 'Um atraso estimado de {span}: prometido inicialmente para {date}',
     badge: '{span} de atraso',
     reasoning: 'Prometido inicialmente para {date}; agora {span} depois.',
+    searchFrom: 'Mostrar pins com {span} de atraso ou mais',
   },
   weather: {
     local: 'Tempo local',

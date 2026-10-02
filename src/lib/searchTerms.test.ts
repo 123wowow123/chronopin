@@ -17,6 +17,11 @@ describe('refineQuery', () => {
     expect(refineQuery('tag:Anime', 'rating', '>=81')).toBe('tag:Anime rating:>=81');
     expect(refineQuery('rating:>90 tag:Anime "rating:<95"', 'rating', '>=81')).toBe('tag:Anime rating:>=81');
   });
+
+  it('replaces the delay bounds already there with the one clicked, leaving the rating alone', () => {
+    expect(refineQuery('tag:Retail', 'delay', '>=2months')).toBe('tag:Retail delay:>=2months');
+    expect(refineQuery('delay:<1year rating:>80 "delay:>3weeks"', 'delay', '>=2months')).toBe('rating:>80 delay:>=2months');
+  });
 });
 
 describe('removeTerm', () => {

@@ -87,6 +87,7 @@ const fr: Messages = {
       category: 'catégorie',
       place: 'lieu',
       rating: 'note',
+      delay: 'retard',
     },
     notField: 'sans {field}',
     pinsMatching: 'Épingles correspondant à {query}',
@@ -680,6 +681,7 @@ const fr: Messages = {
     titleEstimated: 'Un retard estimé de {span} : initialement promis pour le {date}',
     badge: '{span} de retard',
     reasoning: 'Initialement promis pour le {date} ; désormais {span} plus tard.',
+    searchFrom: 'Afficher les épingles avec {span} de retard ou plus',
   },
   weather: {
     local: 'Météo locale',

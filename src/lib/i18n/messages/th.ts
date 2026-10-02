@@ -87,6 +87,7 @@ const th: Messages = {
       category: 'หมวดหมู่',
       place: 'สถานที่',
       rating: 'คะแนน',
+      delay: 'ความล่าช้า',
     },
     notField: 'ไม่ใช่ {field}',
     pinsMatching: 'หมุดที่ตรงกับ {query}',
@@ -670,6 +671,7 @@ const th: Messages = {
     titleEstimated: 'คาดว่าเลื่อนออกไป {span}: เดิมกำหนดไว้ {date}',
     badge: 'ช้า {span}',
     reasoning: 'เดิมกำหนดไว้ {date} ตอนนี้เลื่อนออกไป {span}',
+    searchFrom: 'แสดงหมุดที่ช้า {span} ขึ้นไป',
   },
   weather: {
     local: 'สภาพอากาศท้องถิ่น',

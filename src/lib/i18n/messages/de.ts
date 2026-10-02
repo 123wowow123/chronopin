@@ -87,6 +87,7 @@ const de: Messages = {
       category: 'Kategorie',
       place: 'Ort',
       rating: 'Bewertung',
+      delay: 'Verspätung',
     },
     notField: 'nicht {field}',
     pinsMatching: 'Pins zu {query}',
@@ -680,6 +681,7 @@ const de: Messages = {
     titleEstimated: 'Geschätzt {span} Verspätung: ursprünglich für den {date} versprochen',
     badge: '{span} verspätet',
     reasoning: 'Ursprünglich für den {date} versprochen; jetzt {span} später.',
+    searchFrom: 'Pins mit {span} Verspätung oder mehr anzeigen',
   },
   weather: {
     local: 'Wetter vor Ort',

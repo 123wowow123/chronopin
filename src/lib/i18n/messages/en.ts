@@ -88,6 +88,7 @@ const en = {
       category: 'category',
       place: 'place',
       rating: 'rating',
+      delay: 'delay',
     },
     notField: 'not {field}',
     pinsMatching: 'Pins matching {query}',
@@ -680,6 +681,7 @@ const en = {
     titleEstimated: 'An estimated {span} delay: first promised for {date}',
     badge: '{span} late',
     reasoning: 'First promised for {date}; now {span} later.',
+    searchFrom: 'Show pins at least {span} late',
   },
   weather: {
     local: 'Local weather',

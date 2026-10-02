@@ -320,7 +320,7 @@ function PinBody({
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
           <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix search />
           <DateConfidence level={pin.dateConfidence} />
-          <DelayBadge pin={pin} />
+          <DelayBadge pin={pin} search />
           <PinConfidence evidence={pinEvidence(pin)} />
           {/* Last: the reasoning takes a line of its own below the badges. */}
           <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning} dir={pinTextDir(pin)}>

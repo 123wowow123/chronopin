@@ -87,6 +87,7 @@ const vi: Messages = {
       category: 'danh mục',
       place: 'địa điểm',
       rating: 'đánh giá',
+      delay: 'trễ',
     },
     notField: 'không phải {field}',
     pinsMatching: 'Ghim khớp với {query}',
@@ -679,6 +680,7 @@ const vi: Messages = {
     titleEstimated: 'Ước tính trễ {span}: ban đầu được hứa vào {date}',
     badge: 'Trễ {span}',
     reasoning: 'Ban đầu được hứa vào {date}; hiện trễ hơn {span}.',
+    searchFrom: 'Hiện các ghim trễ từ {span} trở lên',
   },
   weather: {
     local: 'Thời tiết địa phương',

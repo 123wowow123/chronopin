@@ -8,9 +8,10 @@
 // batch of notifications linking to exactly the pins it stands for. '-tag'
 // is a tag left out (the tag cloud's second click): the field is written
 // with its minus, so every helper here handles it as a field of its own.
-// 'rating' is a bound (rating:>=81), which a rating pill writes. 'ticker' is
-// a company's stock symbol, written bare with a $ ($NKE) rather than as a field.
-export type LabelField = 'user' | 'ticker' | 'company' | 'confidence' | 'date' | 'posted' | 'tag' | '-tag' | 'pin' | 'place' | 'rating';
+// 'rating' and 'delay' are bounds (rating:>=81, delay:>=2months), which their
+// pills write. 'ticker' is a company's stock symbol, written bare with a $
+// ($NKE) rather than as a field.
+export type LabelField = 'user' | 'ticker' | 'company' | 'confidence' | 'date' | 'posted' | 'tag' | '-tag' | 'pin' | 'place' | 'rating' | 'delay';
 // Fields a query may still hold but no label writes: category: is the old
 // name for a category's tag: term, which can only be taken out.
 type AnyField = LabelField | 'category' | '-category';
@@ -83,14 +84,18 @@ export function toggleTerm(query: string, field: LabelField, value: string): str
   return hasTerm(query, field, value) ? removeTerm(query, field, value) : refineQuery(query, field, value);
 }
 
-// Every rating: term, in any quoting. Rating bounds narrow each other, so a
-// rating pill's click replaces them instead of piling another on.
-const RATING_TERMS = /(^|\s)["'“”‘’]?rating:\S*/gi;
+// Every rating: or delay: term, in any quoting. Bounds narrow each other, so a
+// pill's click replaces the ones of its field instead of piling another on.
+const BOUND_TERMS: Partial<Record<LabelField, RegExp>> = {
+  rating: /(^|\s)["'“”‘’]?rating:\S*/gi,
+  delay: /(^|\s)["'“”‘’]?delay:\S*/gi,
+};
 
 // The query after clicking a label while `current` is showing.
 export function refineQuery(current: string, field: LabelField, value: string): string {
   const cleaned = String(value || '').replace(DOUBLE_QUOTES, '').trim();
-  const base = (field === 'rating' ? current.replace(RATING_TERMS, ' ').replace(/\s+/g, ' ') : current).trim();
+  const bounds = BOUND_TERMS[field];
+  const base = (bounds ? current.replace(bounds, ' ').replace(/\s+/g, ' ') : current).trim();
   if (!cleaned || hasTerm(base, field, cleaned)) {
     return base;
   }

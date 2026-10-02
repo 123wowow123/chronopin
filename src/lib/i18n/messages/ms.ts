@@ -88,6 +88,7 @@ const ms: Messages = {
       category: 'kategori',
       place: 'tempat',
       rating: 'penilaian',
+      delay: 'kelewatan',
     },
     notField: 'bukan {field}',
     pinsMatching: 'Pin yang sepadan dengan {query}',
@@ -680,6 +681,7 @@ const ms: Messages = {
     titleEstimated: 'Anggaran kelewatan {span}: pada mulanya dijanjikan pada {date}',
     badge: 'Lewat {span}',
     reasoning: 'Pada mulanya dijanjikan pada {date}; kini {span} lebih lewat.',
+    searchFrom: 'Tunjuk pin yang lewat {span} atau lebih',
   },
   weather: {
     local: 'Cuaca setempat',

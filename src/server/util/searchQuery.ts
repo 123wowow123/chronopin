@@ -43,6 +43,18 @@
 // several rating: terms narrow each other, so rating:>=70 rating:<90 is a
 // band; anything that is not a bound is left out rather than matching nothing.
 //
+// delay: takes a bound on how far a pin's start has slipped from the day first
+// promised, the span its "2 MONTHS LATE" badge shows. It reads the same
+// operators as rating: - delay:>=2months, delay:>6weeks, delay:<1year,
+// delay:=3months, a range delay:2-6months (both ends in), and a bare
+// delay:2months for "that late or more" - over a number and a unit: days,
+// weeks, months or years (d, w, m/mo, y/yr, or spelled out; no unit is
+// days; years may be fractional, delay:>2.5years). Days and weeks count
+// days. Months and years count calendar months, as the badge does, so a
+// pin the badge calls 2 months late is 2 months late here whatever the
+// months' lengths. A pin that has not slipped (no original date, or a start
+// no later than it) matches no delay: term. Several narrow each other.
+//
 // user: takes a name with or without its "@" (user:@ThePinGang), and a bare
 // @ThePinGang still works on its own, as it did before user: existed.
 //
@@ -79,6 +91,10 @@ import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence
 // One side of a rating: term, compared with the pin's rounded percentage.
 export type RatingBound = { op: '>' | '>=' | '<' | '<=' | '='; value: number };
 
+// One side of a delay: term. Weeks are already days and years months, so a
+// bound counts either days or calendar months.
+export type DelayBound = { op: RatingBound['op']; unit: 'days' | 'months'; value: number };
+
 export type SearchQuery = {
   userNames: string[];
   // Pin ids, matching exactly those pins.
@@ -101,6 +117,8 @@ export type SearchQuery = {
   places: string[];
   // Bounds a pin's rating must meet, every one of them.
   ratings: RatingBound[];
+  // Bounds a pin's delay must meet, every one of them.
+  delays: DelayBound[];
   text: string;
 };
 
@@ -109,7 +127,7 @@ const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|tag|pin|place|rating))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|tag|pin|place|rating|delay))';
 const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
@@ -130,7 +148,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place' | 'rating';
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place' | 'rating' | 'delay';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -199,6 +217,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     excludeTags: [],
     places: [],
     ratings: [],
+    delays: [],
     text: '',
   };
 
@@ -230,6 +249,10 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       for (const bound of ratingBounds(part.value)) {
         if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
       }
+    } else if (part.field === 'delay') {
+      for (const bound of delayBounds(part.value)) {
+        if (!query.delays.some((b) => b.op === bound.op && b.unit === bound.unit && b.value === bound.value)) query.delays.push(bound);
+      }
     } else if (part.value) {
       // category: is the old name for a category's tag.
       addUnique(part.field === 'company' ? query.companies : query.tags, part.value);
@@ -253,7 +276,8 @@ export function hasFilters(query: SearchQuery): boolean {
     query.tags.length ||
     query.excludeTags.length ||
     query.places.length ||
-    query.ratings.length
+    query.ratings.length ||
+    query.delays.length
   );
 }
 
@@ -286,6 +310,52 @@ export function ratingBounds(value: string): RatingBound[] {
   }
   const op = ({ '=>': '>=', '=<': '<=' } as Record<string, RatingBound['op']>)[bound[1] ?? ''] ?? ((bound[1] || '>=') as RatingBound['op']);
   return [{ op, value: Number(bound[2]) }];
+}
+
+const SPAN = '(\\d+(?:\\.\\d+)?)\\s*([a-z]*)';
+const DELAY_BOUND = new RegExp(`^(>=|<=|=>|=<|>|<|=)?\\s*${SPAN}$`, 'i');
+const DELAY_RANGE = new RegExp(`^${SPAN}\\s*-\\s*${SPAN}$`, 'i');
+
+// Each unit's spelling and what it comes to: days (a week is seven) or
+// calendar months (a year is twelve).
+const DELAY_UNITS: { names: RegExp; unit: DelayBound['unit']; per: number }[] = [
+  { names: /^(d|days?)?$/, unit: 'days', per: 1 },
+  { names: /^(w|wks?|weeks?)$/, unit: 'days', per: 7 },
+  { names: /^(m|mos?|months?)$/, unit: 'months', per: 1 },
+  { names: /^(y|yrs?|years?)$/, unit: 'months', per: 12 },
+];
+
+function delaySpan(amount: string, name: string): Pick<DelayBound, 'unit' | 'value'> | null {
+  const unit = DELAY_UNITS.find((u) => u.names.test(name.toLowerCase()));
+  return unit ? { unit: unit.unit, value: Number(amount) * unit.per } : null;
+}
+
+// The bounds a delay: value sets: one, two for a range, none for anything
+// else - a span with no number or an unknown unit is left out, not matched.
+// A range's unit may be given once, at its end (2-6months), or on both ends
+// (2months-1year); one that mixes days and months is left out.
+export function delayBounds(value: string): DelayBound[] {
+  const text = value.trim();
+  const range = DELAY_RANGE.exec(text);
+  if (range) {
+    const first = delaySpan(range[1], range[2] || range[4]);
+    const last = delaySpan(range[3], range[4]);
+    if (!first || !last || first.unit !== last.unit) {
+      return [];
+    }
+    const [low, high] = [first.value, last.value].sort((a, b) => a - b);
+    return [
+      { op: '>=', unit: first.unit, value: low },
+      { op: '<=', unit: first.unit, value: high },
+    ];
+  }
+  const bound = DELAY_BOUND.exec(text);
+  const span = bound && delaySpan(bound[2], bound[3]);
+  if (!bound || !span) {
+    return [];
+  }
+  const op = ({ '=>': '>=', '=<': '<=' } as Record<string, DelayBound['op']>)[bound[1] ?? ''] ?? ((bound[1] || '>=') as DelayBound['op']);
+  return [{ op, ...span }];
 }
 
 // User names are stored with their "@", so that is the form matched on.
