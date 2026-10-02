@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 
 All are set on **/admin/jobs**: on or off, every day or once a month (on a
@@ -85,6 +85,7 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 | `prediction_markets` | Kalshi and Polymarket events resolving in the next week and those newly listed since the last run, biggest book first, with odds, dollars traded and `coveredByPin` ([markets.ts](../../../src/server/jobs/markets.ts)) | About 45 pages of exchange listings filtered down to a page: per-game and recurring markets out, an election's props folded together |
 | `company_coverage`, `tagged_pins` | Where a beat left off: each company's pins and when one was last posted, stalest first; what a tag (`Layoffs`) already holds ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `find_pins`, `get_pin` | The already-pinned test; a pin's full JSON | The app's own data |
+| `pin_ads_check`, `pin_ads`, `add_pin_ad`, `remove_pin_ad` | The Amazon ads chosen for pins (`PinAd`, [pinAd.ts](../../../src/server/model/pinAd.ts)): each listing re-read for stock, price, stars and reviews, and a listing's quality gate on every add | A plain fetch of the amazon.com product page (not blocked; a robot check leaves an ad as it was) |
 | `pin_health_scan`, `check_pin_health` | Broken pictures, removed or unembeddable videos, deleted posts, dead sources ([health.ts](../../../src/server/jobs/health.ts)) | Dozens of link checks in one call; oEmbed status codes |
 | `read_page` | A page as a browser renders it, a YouTube or podcast transcript, a scanned PDF's OCR | **Headless Chrome** and transcript fetchers from the scrape pipeline; web fetch cannot run a page's JavaScript or get past most bot walls |
 | `scrape_url` | The app's whole scrape into a draft pin (with `llmTasks` when the app's key has no credit) | Media top-up, screen extras, studio HQ and page metadata are the pipeline's, not the model's |
@@ -269,6 +270,36 @@ resale price, or a kids' ticket sold only with an adult one. A ticketUrl must
 be copied from the links given; the tool drops any other. A row someone set
 by hand is kept. First pass (2026-09-26): 75 of 151 upcoming event pins had
 anything to read - blank beats guessed.
+
+### pinAds
+
+**Reads** `pin_ads_check`: every pin ad's Amazon listing read again (price,
+stars, reviews, stock), the ones that just broke, and `needsAds` - upcoming
+pins with fewer than two working ads, those with a broken ad first.
+**Does** replaces each broken ad and fills the pins a product genuinely suits,
+with `add_pin_ad` (the pin page shows them first in its ad slots, the
+timeline mixes them in with the others). A pin's own page already has buy
+buttons for what it is about; these are *adjacent* products - a Tamiya Mini 4WD
+starter kit under the Mini 4WD Japan Cup, a Bandai Gunpla kit under a Gundam
+tabletop game.
+**The bar** (the tool enforces it, [adQuality.ts](../../../src/lib/adQuality.ts)):
+in stock with a buy-box price, a brand on the listing, at least 4.3 stars from
+at least 100 reviews. Beyond that, stick to trusted brands - the maker itself
+or an established one, never an unknown reseller or a lookalike. **The pin's
+brand comes first** (owner, 2026-10-02): when the pin has a company, search
+for that company's own product (`brandMatchesPin` in the answer says it
+matched) and only then another trusted brand that suits the pin; the picker
+also ranks a brand match first on that pin's page.
+**How to find them.** WebSearch `<brand> <product> site:amazon.com`, open the
+result, and pass a link that came back from search - never a URL typed from
+memory. If `add_pin_ad` refuses (reviews, stars, stock), say why in the report
+and try the next-best listing. Two or three per pin; a pin with nothing
+that suits it gets none rather than a filler. Never a product Amazon bans or
+that has nothing to do with the pin (vapes, tobacco, weapons, adult products).
+**Traps.** A robot check on the listing page is "unreadable", not "broken" -
+nothing changes, the next run reads it again. A page can redirect to another
+variant, so read the title the tool returns. Only amazon.com; other stores
+need their own Associates id.
 
 ## Find new events
 

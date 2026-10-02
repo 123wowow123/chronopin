@@ -17,6 +17,7 @@
 
 import type { UserPreference } from './userWiki';
 import { amazonAssociateTag } from './affiliate';
+import { asinOf, sameBrand } from './adQuality';
 
 export type AdKind = 'special' | 'bonus' | 'tradein' | 'product';
 
@@ -27,7 +28,7 @@ export const AD_SLOTS = ['timeline-row', 'timeline-side', 'pin-strip', 'pin-side
 export type AdSlot = (typeof AD_SLOTS)[number];
 // How many ads a slot asks for at most: what it shows at its widest. The
 // side panel stops at five however tall the window is.
-export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 4 };
+export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 5 };
 // Slots on a pin's page, whose ads are its related ones first.
 export const PIN_SLOTS: readonly AdSlot[] = ['pin-strip', 'pin-side'];
 
@@ -56,6 +57,9 @@ export type AdCandidate = {
   targetAgeTo: number | null;
   // A product ad's pin and what it shows.
   pinId: number | null;
+  // The pin a chosen ad (PinAd, 0112) was picked for: first in that pin's
+  // slots, and not hidden there like a pin's own listing is.
+  forPinId: number | null;
   title: string | null;
   price: number | null;
   thumbName: string | null;
@@ -131,6 +135,11 @@ const AFFINITY_BOOST = 2;
 const AGE_BOOST = 2;
 const RELATED_CATEGORY_BOOST = 3;
 const RELATED_COMPANY_BOOST = 4;
+// A product chosen for this very pin outranks any merely related one; one
+// whose brand is the pin's company (a Tamiya kit on a Tamiya pin) more so
+// (owner, 2026-10-02: "the pin brand should influence the product").
+const CHOSEN_FOR_PIN_BOOST = 12;
+const CHOSEN_BRAND_BOOST = 8;
 
 // A reward of this many dollars neither boosts nor discounts an ad; the
 // richest programs ($40 Prime) and the thinnest ($1 Fresh) land at the clamp
@@ -189,14 +198,15 @@ export function relatedness(ad: AdCandidate, pin: AdContext['pin']): number {
   if (!pin) return 0;
   const pinNames = new Set(lower([...pin.categories, ...pin.tags]));
   const shared = lower(ad.categories).filter((c) => pinNames.has(c)).length;
-  const sameCompany = !!ad.company && !!pin.company && ad.company.toLowerCase() === pin.company.toLowerCase();
-  return RELATED_CATEGORY_BOOST * Math.min(shared, 2) + (sameCompany ? RELATED_COMPANY_BOOST : 0);
+  const sameCompany = sameBrand(ad.company, pin.company);
+  const chosen = ad.forPinId === pin.id ? CHOSEN_FOR_PIN_BOOST + (sameCompany ? CHOSEN_BRAND_BOOST : 0) : 0;
+  return RELATED_CATEGORY_BOOST * Math.min(shared, 2) + (sameCompany ? RELATED_COMPANY_BOOST : 0) + chosen;
 }
 
 // Whether the viewer may see the ad at all: old enough, and not the product
-// whose own buy buttons are already on the page.
+// whose own buy buttons are already on the page (a chosen ad is the exception).
 export function adAllowed(ad: AdCandidate, ctx: AdContext): boolean {
-  if (ctx.pin && ad.pinId === ctx.pin.id) return false;
+  if (ctx.pin && ad.pinId === ctx.pin.id && ad.forPinId !== ctx.pin.id) return false;
   if (ctx.age == null) return true;
   return ctx.age >= Math.max(MIN_AD_AGE, ad.kind === 'product' ? PRODUCT_MIN_AGE : ad.minAge);
 }
@@ -220,8 +230,26 @@ export function personalWeight(ad: AdCandidate, ctx: AdContext): number {
   return weight;
 }
 
+// What an ad is, whichever key it has: an Amazon product by its ASIN (the same
+// product can be a pin's own listing, another pin's, and a chosen ad), a
+// program by its link. Two ads with one product key are the same ad to a viewer.
+export function productKey(ad: Pick<AdCandidate, 'url' | 'key'>): string {
+  const asin = asinOf(ad.url);
+  return asin ? `asin:${asin}` : ad.key;
+}
+
+// The keys to avoid, widened to every ad that is the same product as one
+// already on the page.
+export function expandAvoid(candidates: AdCandidate[], avoid: Set<string>): Set<string> {
+  if (!avoid.size) return avoid;
+  const products = new Set(candidates.filter((ad) => avoid.has(ad.key)).map(productKey));
+  const widened = new Set(avoid);
+  for (const ad of candidates) if (products.has(productKey(ad))) widened.add(ad.key);
+  return widened;
+}
+
 // Up to n ads, a weighted random pick without repeats. On a pin's page the
-// related ones come first. Keys in `avoid` (already shown elsewhere on the
+// ads chosen for the pin come first, then the related ones. Keys in `avoid` (already shown elsewhere on the
 // page) are only used once the rest run out.
 export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, avoid: Set<string> = new Set(), random = Math.random): AdCandidate[] {
   const allowed = candidates.filter((ad) => adAllowed(ad, ctx));
@@ -234,11 +262,22 @@ export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, av
       const performance = performanceWeight(ctx.performance?.byKey.get(ad.key), ctx.performance?.baselineCtr ?? 0);
       const weight = (KIND_SHARE[ad.kind] / total) * personalWeight(ad, ctx) * (1 + related) * performance * rewardWeight(ad);
       // Efraimidis-Spirakis: the n smallest -ln(u)/w are a weighted sample.
-      return { ad, related, fresh: !avoid.has(ad.key), score: weight > 0 ? -Math.log(1 - random()) / weight : Infinity };
+      return { ad, related, own: ctx.pin != null && ad.forPinId === ctx.pin.id, fresh: !avoid.has(ad.key), score: weight > 0 ? -Math.log(1 - random()) / weight : Infinity };
     })
     .filter((w) => w.score !== Infinity);
-  weighed.sort((a, b) => Number(b.fresh) - Number(a.fresh) || (ctx.pin ? Number(b.related > 0) - Number(a.related > 0) : 0) || a.score - b.score);
-  return weighed.slice(0, n).map((w) => w.ad);
+  weighed.sort((a, b) => Number(b.fresh) - Number(a.fresh) || Number(b.own) - Number(a.own) || (ctx.pin ? Number(b.related > 0) - Number(a.related > 0) : 0) || a.score - b.score);
+  // One ad per product: a listing that is both a pin's own and a chosen ad
+  // is shown once, by whichever ranked first.
+  const seen = new Set<string>();
+  const picked: AdCandidate[] = [];
+  for (const { ad } of weighed) {
+    const product = productKey(ad);
+    if (seen.has(product)) continue;
+    seen.add(product);
+    picked.push(ad);
+    if (picked.length === n) break;
+  }
+  return picked;
 }
 
 // Amazon's stores by the country they sell to. A country with no store of its

@@ -9,6 +9,7 @@ import {
   type AdPerformance,
   type AdSlot,
   ageOn,
+  expandAvoid,
   MIN_AD_AGE,
   parseAmazonTags,
   pickAds,
@@ -94,12 +95,8 @@ export default class Ad {
     if (age != null && age < MIN_AD_AGE) return { store: 'US', ads: [] };
     const store = servingStore(country, inventory.tags, inventory.storesWithAds);
     const ctx: AdContext = { preference: viewer?.preference ?? null, age, pin, performance };
-    const picked = pickAds(
-      inventory.ads.filter((ad) => ad.store === store),
-      ctx,
-      n,
-      avoid,
-    );
+    const candidates = inventory.ads.filter((ad) => ad.store === store);
+    const picked = pickAds(candidates, ctx, n, expandAvoid(candidates, avoid));
     if (picked.length) await recordImpressions(picked, slot, store);
     return {
       store,
@@ -180,10 +177,17 @@ export default class Ad {
     const byKey = new Map(ads.map((ad) => [ad.key, ad]));
     const out: Record<string, { kind: AdKind; program: string | null; title: string | null; pinId: number | null }> = {};
     const missing: number[] = [];
+    const chosenRows: number[] = [];
     for (const key of keys) {
       const ad = byKey.get(key);
       if (ad) out[key] = { kind: ad.kind, program: ad.program, title: ad.title, pinId: ad.pinId };
       else if (key.startsWith('m:')) missing.push(Number(key.slice(2)));
+      else if (key.startsWith('p:')) chosenRows.push(Number(key.slice(2)));
+    }
+    // A chosen ad marked broken since is not served, but is still named.
+    if (chosenRows.length) {
+      const rows = await db.query<{ id: number; pinId: number; title: string }>(`SELECT "id", "pinId", "title" FROM "PinAd" WHERE "id" = ANY($1::integer[])`, [chosenRows]);
+      for (const r of rows) out[`p:${r.id}`] = { kind: 'product', program: null, title: r.title, pinId: r.pinId };
     }
     // A listing removed since it was shown still has its pin's title.
     if (missing.length) {
@@ -228,7 +232,7 @@ async function loadPerformance(slot: AdSlot): Promise<Performance> {
 }
 
 async function loadInventory(): Promise<Inventory> {
-  const [programs, products, setting] = await Promise.all([
+  const [programs, products, setting, chosen] = await Promise.all([
     db.query<{
       id: number;
       program: string;
@@ -257,7 +261,15 @@ async function loadInventory(): Promise<Inventory> {
        WHERE "m"."url" ~* '^https?://(www\\.|smile\\.)?amazon\\.com/' AND "m"."url" !~* '/gp/video/'`,
     ),
     db.query<{ value: unknown }>(`SELECT "value" FROM "AppSetting" WHERE "key" = 'amazonTags'`),
+    // Ads chosen for a pin (0112), working ones on live pins.
+    db.query<{ id: number; pinId: number; url: string; price: number | null; title: string; brand: string | null; categories: string[] }>(
+      `SELECT "a"."id", "a"."pinId", "a"."url", "a"."price"::float8 AS "price", "a"."title", "a"."brand",
+         coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category'), '{}') AS "categories"
+       FROM "PinAd" AS "a" JOIN "Pin" AS "p" ON "p"."id" = "a"."pinId" AND "p"."utcDeletedDateTime" IS NULL
+       WHERE "a"."status" = 'ok'`,
+    ),
   ]);
+  const chosenPictures = await PinView.pictures([...new Set(chosen.map((c) => c.pinId))]);
   const pictures = await PinView.pictures([...new Set(products.map((p) => p.pinId))]);
   const ads: AdCandidate[] = [
     ...programs.map(
@@ -275,6 +287,7 @@ async function loadInventory(): Promise<Inventory> {
         targetAgeFrom: row.targetAgeFrom,
         targetAgeTo: row.targetAgeTo,
         pinId: null,
+        forPinId: null,
         title: null,
         price: null,
         thumbName: null,
@@ -296,10 +309,35 @@ async function loadInventory(): Promise<Inventory> {
         targetAgeFrom: null,
         targetAgeTo: null,
         pinId: row.pinId,
+        forPinId: null,
         title: row.title,
         price: row.price,
         thumbName: pictures.get(row.pinId)?.thumbName ?? null,
         originalUrl: pictures.get(row.pinId)?.originalUrl ?? null,
+      }),
+    ),
+    ...chosen.map(
+      (row): AdCandidate => ({
+        key: `p:${row.id}`,
+        kind: 'product',
+        program: null,
+        url: row.url,
+        store: 'US',
+        categories: row.categories,
+        // The listing's brand, so a pin of the same company counts it related.
+        company: row.brand,
+        // Chosen and vetted, so a little ahead of a listing that is only on a pin.
+        weight: 1.5,
+        rewardUsd: null,
+        minAge: 0,
+        targetAgeFrom: null,
+        targetAgeTo: null,
+        pinId: row.pinId,
+        forPinId: row.pinId,
+        title: row.title,
+        price: row.price,
+        thumbName: chosenPictures.get(row.pinId)?.thumbName ?? null,
+        originalUrl: chosenPictures.get(row.pinId)?.originalUrl ?? null,
       }),
     ),
   ];

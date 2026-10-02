@@ -21,8 +21,13 @@ import { SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
 // Desktop's taller spaces take several rows (the pin page's side column, the
 // timeline's side panel); on a phone every block is one row, one ad.
 
-// Ads already on the page, sent as ?not= so the other blocks pick others.
-const onPage = new Set<string>();
+// Ads already on the page, sent as ?not= so the other blocks pick others. Kept
+// per page - a pin's, or the timeline - since pages stay mounted behind each
+// other (React Activity) and an ad seen on the timeline is still fine on a
+// pin's own page. Blocks ask one after another, so each one's answer is on
+// the list before the next asks; asking together, they would all pick alike.
+const onPage = new Map<string, Set<string>>();
+let queue: Promise<unknown> = Promise.resolve();
 
 // A program's mark: its icon on its colour.
 const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: string }> = {
@@ -47,19 +52,25 @@ function useAds(slot: AdSlot, pinId: number | undefined) {
     const element = ref.current;
     if (!element) return;
     let cancelled = false;
+    const scope = pinId ? `pin:${pinId}` : 'timeline';
     const load = () => {
-      const params = new URLSearchParams({ slot, n: String(SLOT_COUNT[slot]) });
-      if (pinId) params.set('pin', String(pinId));
-      if (onPage.size) params.set('not', [...onPage].slice(-100).join(','));
-      fetch(`/api/ads?${params}`)
-        .then((res) => (res.ok ? (res.json() as Promise<{ ads: AdJson[] }>) : null))
-        .then((body) => {
-          if (cancelled) return;
-          const list = body?.ads ?? [];
-          for (const ad of list) onPage.add(ad.key);
-          setAds(list);
-        })
-        .catch(() => {});
+      queue = queue.then(() => {
+        if (cancelled) return;
+        const shown = onPage.get(scope) ?? new Set<string>();
+        onPage.set(scope, shown);
+        const params = new URLSearchParams({ slot, n: String(SLOT_COUNT[slot]) });
+        if (pinId) params.set('pin', String(pinId));
+        if (shown.size) params.set('not', [...shown].slice(-100).join(','));
+        return fetch(`/api/ads?${params}`)
+          .then((res) => (res.ok ? (res.json() as Promise<{ ads: AdJson[] }>) : null))
+          .then((body) => {
+            if (cancelled) return;
+            const list = body?.ads ?? [];
+            for (const ad of list) shown.add(ad.key);
+            setAds(list);
+          })
+          .catch(() => {});
+      });
     };
     const observer = new IntersectionObserver(
       (entries) => {

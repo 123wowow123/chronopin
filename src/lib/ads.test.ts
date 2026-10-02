@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   adAllowed,
+  expandAvoid,
   ageOn,
   type AdCandidate,
   type AdContext,
@@ -29,6 +30,7 @@ const ad = (over: Partial<AdCandidate>): AdCandidate => ({
   targetAgeFrom: null,
   targetAgeTo: null,
   pinId: null,
+  forPinId: null,
   title: null,
   price: null,
   thumbName: null,
@@ -180,5 +182,44 @@ describe('stores', () => {
     expect(regionFromAcceptLanguage('fr;q=0.9, de-AT')).toBe('AT');
     expect(regionFromAcceptLanguage('en')).toBeNull();
     expect(parseAmazonTags({ gb: 'cp-21', XX: 'nope', DE: 5 })).toEqual({ GB: 'cp-21' });
+  });
+});
+
+describe('ads chosen for a pin', () => {
+  const pin = { id: 5157, categories: ['Sports'], tags: ['Tamiya'], company: 'Tamiya' };
+  const chosen = (over: Partial<AdCandidate> = {}) =>
+    ad({ key: 'p:1', kind: 'product', program: null, pinId: 5157, forPinId: 5157, company: 'TAMIYA', minAge: 0, ...over });
+
+  it('shows on its own pin, where a pin\'s own listing is hidden', () => {
+    expect(adAllowed(chosen(), { ...none, pin })).toBe(true);
+    expect(adAllowed(chosen({ forPinId: null }), { ...none, pin })).toBe(false);
+  });
+
+  it('ranks a brand match for the pin\'s company above one that only suits the pin', () => {
+    const match = chosen({ key: 'p:1' });
+    const other = chosen({ key: 'p:2', company: 'Bandai' });
+    expect(relatedness(match, pin)).toBeGreaterThan(relatedness(other, pin));
+    expect(relatedness(other, pin)).toBeGreaterThan(0);
+  });
+
+  it('puts the pin\'s own ads first in its slots', () => {
+    const picked = pickAds([ad({ key: 'ad:1', categories: ['Sports'] }), chosen()], { ...none, pin }, 1, new Set(), seeded());
+    expect(picked.map((ad) => ad.key)).toEqual(['p:1']);
+  });
+});
+
+describe('no duplicate ads', () => {
+  const listing = (key: string, asin: string) => ad({ key, kind: 'product', program: null, minAge: 0, url: `https://www.amazon.com/dp/${asin}` });
+
+  it('shows a product once however many keys it has', () => {
+    const picked = pickAds([listing('m:1', 'B000000001'), listing('p:1', 'B000000001'), listing('m:2', 'B000000002')], none, 3, new Set(), seeded());
+    expect(picked).toHaveLength(2);
+    expect(new Set(picked.map((a) => a.url)).size).toBe(2);
+  });
+
+  it('avoids a product already on the page under another key', () => {
+    const all = [listing('m:1', 'B000000001'), listing('p:1', 'B000000001'), listing('m:2', 'B000000002')];
+    expect([...expandAvoid(all, new Set(['m:1']))].sort()).toEqual(['m:1', 'p:1']);
+    expect(pickAds(all, none, 1, expandAvoid(all, new Set(['m:1'])), seeded()).map((a) => a.key)).toEqual(['m:2']);
   });
 });

@@ -12,7 +12,7 @@ import Ad from '@/server/model/ad';
 export const POST = route(async (request: NextRequest) => {
   if (userAgent(request).isBot) return noContent();
   const body = await readJson(request);
-  const key = typeof body.key === 'string' && /^(ad|m):\d+$/.test(body.key) ? body.key : null;
+  const key = typeof body.key === 'string' && /^(ad|m|p):\d+$/.test(body.key) ? body.key : null;
   if (!key || !isAdSlot(body.slot)) throw new HttpError(400, 'key and slot are required.');
   const pinId = Number.isInteger(body.pinId) && body.pinId > 0 ? (body.pinId as number) : null;
   const page = typeof body.page === 'string' && body.page.startsWith('/') ? body.page.slice(0, 500) : null;
