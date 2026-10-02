@@ -713,8 +713,9 @@ export function Timeline({
   }
 
   // Refitted when either side panel's rows change.
-  // How many ads the side panel got, so the column is fitted again once they come.
-  const [sideAds, setSideAds] = useState(0);
+  // How many ads the side panel got (null until they come), so the column is
+  // fitted again once they do - or once the panel's placeholder is dropped.
+  const [sideAds, setSideAds] = useState<number | null>(null);
   const highlightRows = useMemo(() => [trending.pins, newPins, sideAds], [trending.pins, newPins, sideAds]);
   const highlightsRef = useWholeRowPanels<HTMLDivElement>(highlightRows);
 
