@@ -980,7 +980,7 @@ export function SearchBox() {
         {draft || items.length ? (
           <button
             type="button"
-            className="me-1.5 rounded-full p-1.5 text-subtle hover:bg-raised hover:text-ink"
+            className="me-1.5 flex self-center rounded-full p-1.5 text-subtle hover:bg-raised hover:text-ink"
             aria-label={t('search.clear')}
             onClick={() => {
               setItems([]);
