@@ -137,7 +137,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           {t('nav.skipToContent')}
         </a>
         <I18nProvider locale={locale} messages={messages}>
-          <Navbar />
+          {/* It reads the admin's ad placements from the database, which a prerendered page (the About page) cannot at build time: a per-request hole, holding the bar's height meanwhile. */}
+          <Suspense fallback={<header data-navbar className="sticky top-0 z-40 h-[52px] bg-header/85 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md" />}>
+            <Navbar />
+          </Suspense>
           <div id="main">{children}</div>
           {/* It reads the path, which a prerendered page may only do inside Suspense. */}
           <Suspense fallback={null}>
