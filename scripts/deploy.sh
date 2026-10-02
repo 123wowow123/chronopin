@@ -5,43 +5,21 @@
 # files, then rebuilds and restarts the app; pass service names to rebuild
 # others too (`npm run deploy -- app faiss`).
 #
-# The VM (Standard_B2s, 4GB) serves traffic and cannot also build: `next build`
-# alone holds 1.3GB and the box swaps for an hour. So the deploy resizes it to
-# Standard_B2ms (8GB) first if it is smaller, a restart of a minute or two of
-# downtime (the containers restart themselves). It is not resized back
-# afterwards (owner, 2026-10-02): the VM stays on B2ms, so only the first deploy
-# after a manual shrink pays that downtime. Mind the $50 cap on the subscription.
-# `DEPLOY_NO_RESIZE=1` skips the resize.
+# It never resizes the VM (owner, 2026-10-03): the size it has is the size it
+# keeps. `next build` alone holds 1.3GB, so on a 4GB VM (Standard_B2s) it swaps
+# beside the live site; resize by hand first if that matters (docs/deploy-azure.md).
 #
 #   npm run deploy
 set -eu
 
 HOST=azureuser@20.109.175.187
 KEY="$HOME/.ssh/chronopin_azure"
-SUB=9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5
-RG=Chronopin-US-West
-VM=chronopin-web
-BIG=Standard_B2ms
 cd "$(dirname "$0")/.."
-
-resize() {
-  az vm resize --subscription "$SUB" -g "$RG" -n "$VM" --size "$1" >/dev/null
-  until ssh -i "$KEY" -o ConnectTimeout=5 -o BatchMode=yes "$HOST" true 2>/dev/null; do sleep 5; done
-}
 
 # The commit is fixed here, as the archive is made: HEAD can move while the
 # build runs (another commit, another session), and that is not what went out.
 rev=$(git rev-parse --short HEAD)
 git diff --quiet HEAD || echo "Note: uncommitted changes are not deployed; deploying $rev."
-
-# Fail before touching anything when `az` is not logged in (`az login`).
-if [ -z "${DEPLOY_NO_RESIZE:-}" ]; then
-  size=$(az vm show --subscription "$SUB" -g "$RG" -n "$VM" --query hardwareProfile.vmSize -o tsv)
-  if [ "$size" != "$BIG" ]; then
-    echo "Resizing $VM from $size to $BIG for the build..."
-    resize "$BIG"
-  fi
-fi
 
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
