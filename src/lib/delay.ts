@@ -13,6 +13,10 @@ export type PinDelay = {
   days: number;
   // "3 weeks", "8 months", "2.5 years".
   label: string;
+  // The delay: bound its badge searches for, "at least this late"
+  // (">=8months"): the label's unit, rounded down so the pin itself stays in
+  // the results (the label rounds weeks and half years to the nearest).
+  search: string;
 };
 
 // A whole number of the unit, or years to the half: "1 year", "2.5 years";
@@ -39,6 +43,20 @@ export function delayLabel(fromKey: string, toKey: string, locale: Locale = 'en'
   return span(Math.round(months / 6) / 2, 'year', locale);
 }
 
+// The search bound for a delay, in the unit its label uses and the way the
+// delay: term reads it (searchQuery.ts delayBounds).
+export function delaySearch(fromKey: string, toKey: string): string {
+  const days = daysBetween(fromKey, toKey);
+  const [fy, fm] = dayKeyParts(fromKey);
+  const [ty, tm] = dayKeyParts(toKey);
+  const months = (ty - fy) * 12 + (tm - fm);
+  const bound = (count: number, unit: string) => `>=${count}${unit}${count === 1 ? '' : 's'}`;
+  if (days < 14) return bound(days, 'day');
+  if (months < 2) return bound(Math.floor(days / 7), 'week');
+  if (months < 18) return bound(months, 'month');
+  return bound(Math.floor(months / 6) / 2, 'year');
+}
+
 // Null when the pin has no original date, or its start is not after it (a
 // pin brought forward, or one whose delay was since made up).
 export function pinDelay(pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateTime'>, locale: Locale = 'en'): PinDelay | null {
@@ -49,7 +67,7 @@ export function pinDelay(pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateT
   if (compareDayKeys(pin.originalStartDate, now) >= 0) {
     return null;
   }
-  return { from: pin.originalStartDate, days: daysBetween(pin.originalStartDate, now), label: delayLabel(pin.originalStartDate, now, locale) };
+  return { from: pin.originalStartDate, days: daysBetween(pin.originalStartDate, now), label: delayLabel(pin.originalStartDate, now, locale), search: delaySearch(pin.originalStartDate, now) };
 }
 
 const DELAY_REASONING_MAX = 2000;

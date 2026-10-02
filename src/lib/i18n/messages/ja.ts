@@ -87,6 +87,7 @@ const ja: Messages = {
       category: 'カテゴリ',
       place: '場所',
       rating: '評価',
+      delay: '遅れ',
     },
     notField: '{field}を除外',
     pinsMatching: '「{query}」に一致するピン',
@@ -674,6 +675,7 @@ const ja: Messages = {
     titleEstimated: '推定{span}の遅れ：当初の予定は{date}',
     badge: '{span}遅れ',
     reasoning: '当初の予定は{date}。現在は{span}遅れています。',
+    searchFrom: '{span}以上遅れているピンを表示',
   },
   weather: {
     local: '現在地の天気',

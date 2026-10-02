@@ -88,6 +88,7 @@ const zh: Messages = {
       category: '分类',
       place: '地点',
       rating: '评分',
+      delay: '延期',
     },
     notField: '排除{field}',
     pinsMatching: '与“{query}”匹配的图钉',
@@ -674,6 +675,7 @@ const zh: Messages = {
     titleEstimated: '估计延期{span}：最初承诺于{date}',
     badge: '延期{span}',
     reasoning: '最初承诺于{date}；现已推迟{span}。',
+    searchFrom: '显示延期 {span} 及以上的图钉',
   },
   weather: {
     local: '本地天气',

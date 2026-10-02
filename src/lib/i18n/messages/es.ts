@@ -87,6 +87,7 @@ const es: Messages = {
       category: 'categoría',
       place: 'lugar',
       rating: 'valoración',
+      delay: 'retraso',
     },
     notField: 'sin {field}',
     pinsMatching: 'Pines que coinciden con {query}',
@@ -680,6 +681,7 @@ const es: Messages = {
     titleEstimated: 'Un retraso estimado de {span}: prometido primero para el {date}',
     badge: '{span} de retraso',
     reasoning: 'Prometido primero para el {date}; ahora {span} más tarde.',
+    searchFrom: 'Mostrar pines con {span} de retraso o más',
   },
   weather: {
     local: 'Tiempo local',

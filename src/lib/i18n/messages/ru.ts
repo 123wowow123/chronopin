@@ -94,6 +94,7 @@ const ru: Messages = {
       category: 'категория',
       place: 'место',
       rating: 'рейтинг',
+      delay: 'задержка',
     },
     notField: 'не {field}',
     pinsMatching: 'Пины по запросу {query}',
@@ -692,6 +693,7 @@ const ru: Messages = {
     titleEstimated: 'Примерная задержка на {span}: сначала обещали {date}',
     badge: 'Позже на {span}',
     reasoning: 'Сначала обещали {date}; теперь на {span} позже.',
+    searchFrom: 'Показать пины с задержкой от {span}',
   },
   weather: {
     local: 'Местная погода',

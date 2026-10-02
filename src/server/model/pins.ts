@@ -9,7 +9,7 @@ import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
-import type { RatingBound } from '../util/searchQuery';
+import type { DelayBound, RatingBound } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
@@ -29,6 +29,7 @@ export type PinSearchFilters = {
   excludeTags: string[];
   places: string[];
   ratings: RatingBound[];
+  delays: DelayBound[];
 };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
@@ -762,8 +763,17 @@ function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrder: nu
   );
 }
 
-// The SQL for each rating: comparison, so nothing typed reaches the query.
+// The SQL for each rating: and delay: comparison, so nothing typed reaches the query.
 const RATING_OPS: Record<RatingBound['op'], string> = { '>': '>', '>=': '>=', '<': '<', '<=': '<=', '=': '=' };
+
+// A pin's delay in days or in calendar months, as the badge counts them
+// (lib/delay.ts): from Pin.originalStartDate, a date, to the UTC day its
+// start falls on. NULL where it has not slipped, so it meets no delay: bound.
+const START_DAY = `("Pin"."utcStartDateTime" AT TIME ZONE 'UTC')::date`;
+const DELAY_AMOUNT: Record<DelayBound['unit'], string> = {
+  days: `(${START_DAY} - "Pin"."originalStartDate")`,
+  months: `((EXTRACT(YEAR FROM ${START_DAY}) * 12 + EXTRACT(MONTH FROM ${START_DAY})) - (EXTRACT(YEAR FROM "Pin"."originalStartDate") * 12 + EXTRACT(MONTH FROM "Pin"."originalStartDate")))`,
+};
 
 // The FROM and WHERE a search's filter makes, on the Pin table itself rather
 // than the view, so a page counts pins instead of pin x medium x merchant rows.
@@ -901,6 +911,13 @@ function searchClauses(filter: SearchFilter) {
             WHERE "r"."pinId" = "Pin"."id" AND "r"."scoreMax" > 0 AND "r"."source" !~* '\\yforecast$'
           ) AS "rated"
           WHERE ${bounds.join(' AND ')})`);
+  }
+  // Every delay: bound, on how far the start has slipped from the day first
+  // promised. A pin whose start is no later than that day has not slipped and
+  // meets none.
+  if (filter.delays.length) {
+    const bounds = filter.delays.map(({ op, unit, value }) => `${DELAY_AMOUNT[unit]} ${RATING_OPS[op]} ${add(value)}::numeric`);
+    where.push(`("Pin"."originalStartDate" IS NOT NULL AND "Pin"."utcStartDateTime" IS NOT NULL AND ${START_DAY} > "Pin"."originalStartDate" AND ${bounds.join(' AND ')})`);
   }
   // Any of these tags (PinTagView: the form's, its categories, the prose's
   // and the awards').

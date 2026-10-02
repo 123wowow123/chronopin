@@ -88,6 +88,7 @@ const id: Messages = {
       category: 'kategori',
       place: 'tempat',
       rating: 'peringkat',
+      delay: 'keterlambatan',
     },
     notField: 'bukan {field}',
     pinsMatching: 'Pin yang cocok dengan {query}',
@@ -680,6 +681,7 @@ const id: Messages = {
     titleEstimated: 'Perkiraan tertunda {span}: semula dijanjikan pada {date}',
     badge: 'Terlambat {span}',
     reasoning: 'Semula dijanjikan pada {date}; kini {span} lebih lambat.',
+    searchFrom: 'Tampilkan pin yang terlambat {span} atau lebih',
   },
   weather: {
     local: 'Cuaca setempat',

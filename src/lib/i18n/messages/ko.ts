@@ -87,6 +87,7 @@ const ko: Messages = {
       category: '카테고리',
       place: '장소',
       rating: '평점',
+      delay: '지연',
     },
     notField: '{field} 아님',
     pinsMatching: '“{query}”와(과) 일치하는 핀',
@@ -674,6 +675,7 @@ const ko: Messages = {
     titleEstimated: '추정 {span} 지연: 최초 예정일은 {date}',
     badge: '{span} 지연',
     reasoning: '최초 예정일은 {date}였으나, 현재 {span} 지연되었습니다.',
+    searchFrom: '{span} 이상 지연된 핀 보기',
   },
   weather: {
     local: '현지 날씨',

@@ -88,6 +88,7 @@ const hi: Messages = {
       category: 'कैटेगरी',
       place: 'जगह',
       rating: 'रेटिंग',
+      delay: 'देरी',
     },
     notField: '{field} नहीं',
     pinsMatching: '{query} से मेल खाते पिन',
@@ -685,6 +686,7 @@ const hi: Messages = {
     titleEstimated: 'अनुमानित {span} की देरी: पहले {date} के लिए तय था',
     badge: '{span} लेट',
     reasoning: 'पहले {date} के लिए तय था; अब {span} की देरी हो चुकी है।',
+    searchFrom: '{span} या उससे ज़्यादा लेट पिन दिखाएं',
   },
   weather: {
     local: 'स्थानीय मौसम',

@@ -70,6 +70,7 @@ describe('parseSearchQuery', () => {
       excludeTags: [],
       places: [],
       ratings: [],
+      delays: [],
       text: 'ios',
     });
   });
@@ -137,6 +138,41 @@ describe('rating: bounds', () => {
     expect(q.ratings).toEqual([]);
     expect(q.text).toBe('naruto');
     expect(splitSearchQuery('rating:>80')).toEqual([{ kind: 'term', field: 'rating', value: '>80', raw: 'rating:>80' }]);
+  });
+});
+
+describe('delay: bounds', () => {
+  it('reads comparisons over days, weeks, months and years, in days or calendar months', () => {
+    expect(parseSearchQuery('delay:>=2months').delays).toEqual([{ op: '>=', unit: 'months', value: 2 }]);
+    expect(parseSearchQuery('delay:>6weeks delay:<=1year').delays).toEqual([
+      { op: '>', unit: 'days', value: 42 },
+      { op: '<=', unit: 'months', value: 12 },
+    ]);
+    expect(parseSearchQuery('delay:=3mo delay:=>10 delay:<2.5yrs').delays).toEqual([
+      { op: '=', unit: 'months', value: 3 },
+      { op: '>=', unit: 'days', value: 10 },
+      { op: '<', unit: 'months', value: 30 },
+    ]);
+    expect(hasFilters(parseSearchQuery('delay:>1week'))).toBe(true);
+  });
+
+  it('reads a range, both ends in, and a bare span as a floor', () => {
+    expect(parseSearchQuery('delay:6-2months').delays).toEqual([
+      { op: '>=', unit: 'months', value: 2 },
+      { op: '<=', unit: 'months', value: 6 },
+    ]);
+    expect(parseSearchQuery('delay:1week-3weeks').delays).toEqual([
+      { op: '>=', unit: 'days', value: 7 },
+      { op: '<=', unit: 'days', value: 21 },
+    ]);
+    expect(parseSearchQuery('delay:2months').delays).toEqual([{ op: '>=', unit: 'months', value: 2 }]);
+  });
+
+  it('leaves out anything that is not a span, and never reads it as text', () => {
+    const q = parseSearchQuery('delay:late delay:>2fortnights delay:2weeks-3months delay:> naruto');
+    expect(q.delays).toEqual([]);
+    expect(q.text).toBe('naruto');
+    expect(splitSearchQuery('delay:>=2months')).toEqual([{ kind: 'term', field: 'delay', value: '>=2months', raw: 'delay:>=2months' }]);
   });
 });
 
