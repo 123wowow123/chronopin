@@ -1,5 +1,6 @@
 import { Icon } from '@/components/ui/Icon';
-import type { PinEventInfoJson } from '@/lib/eventInfo';
+import { isTicketWordmark, TicketLogo } from '@/components/pin/TicketLogo';
+import { ticketSeller, type PinEventInfoJson } from '@/lib/eventInfo';
 import { INTL_LOCALES } from '@/lib/i18n/config';
 import type { Translator } from '@/lib/i18n/translate';
 
@@ -40,6 +41,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
           ? t('pin.ticketsOnSale')
           : null;
   const hasTickets = !!(price || sale || (info.ticketUrl && !started));
+  const seller = ticketSeller(info.ticketUrl);
   if (!info.performers.length && !hasTickets) {
     return null;
   }
@@ -73,9 +75,17 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
             </span>
           ) : null}
           {info.ticketUrl && !started && info.availability !== 'SoldOut' ? (
-            <a href={info.ticketUrl} target="_blank" rel="noopener nofollow" className="btn btn-secondary">
-              <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
+            <a
+              href={info.ticketUrl}
+              target="_blank"
+              rel="noopener nofollow sponsored"
+              className={`btn gap-1.5 ${seller ? 'border border-white/15 hover:brightness-110' : 'btn-secondary'}`}
+              style={seller ? { backgroundColor: seller.background, color: seller.text } : undefined}
+            >
+              {seller ? <TicketLogo seller={seller.label} className={isTicketWordmark(seller.label) ? 'h-3 w-auto shrink-0' : 'size-4 shrink-0'} /> : <Icon name="external" className="size-3.5 shrink-0 opacity-70" />}
+              {seller && isTicketWordmark(seller.label) ? <span className="sr-only">{seller.label}</span> : null}
               {t('pin.getTickets')}
+              {seller ? <Icon name="external" className="size-3 shrink-0 opacity-60" /> : null}
             </a>
           ) : null}
         </div>

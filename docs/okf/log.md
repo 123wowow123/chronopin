@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-10-01
+* **Update**: **Watch button gap found and patched** (pin 861, HIDIVE Merchant row added by hand via `/api/admin/db`). [Strategy](/scraping/strategy.md#decision-rules) gets a new "Watch buttons" rule and [Enrichment](/scraping/enrichment.md#film-tv-anime-and-game-extras) notes the gate: screen details (and the watch links it adds) only runs at pin creation, only when the pin already has a screen category then, and nothing re-checks it on update or on a schedule the way `eventInfo` does for ticket buttons. Owner's instruction recorded: watch buttons should be (re-)added on insert *or* update - not yet built. [Learnings](/scraping/learnings.md).
+
 ## 2026-09-30
 * **Update**: Six marathon drafts (Berlin/London/Chicago results and dates, Tokyo/Sydney/London 2027) are queued for prod in `.scrape/prod-batches/marathons-2026-09-30/`; see [learnings](scraping/learnings.md).
 * **Update**: **Outbreak news events, posted straight to production** (pins 4958-4975, admin login): eighteen pins - Legionnaires' clusters in the Bronx and Upper East Side, a Salmonella sprout recall, screwworm cattle imports, PAHO's measles count, West Nile in Europe, France's surveillance season, the Bundibugyo Ebola outbreak's end in Uganda, dose releases and spread, Nigeria's cholera count, and H5N1, polio, chikungunya, dengue and measles in Asia and Oceania. [Learnings](/scraping/learnings.md).

@@ -35,6 +35,7 @@ import { affiliateUrl, isAmazonStoreUrl } from '@/lib/affiliate';
 import { shopLinks } from '@/lib/shopping';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
+import { AdColumn, AdRow } from '@/components/ads/AdBlock';
 import { ShopButtons } from '@/components/pin/ShopButtons';
 import { PinListings } from '@/components/listings/PinListings';
 import { listingKindOf } from '@/lib/listings';
@@ -164,6 +165,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           {/* Beside the pin on wide screens, under its map; after it on phones. */}
           <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
 
+          {/* Related ads, one row under what the pin is about. */}
+          <AdRow slot="pin-strip" pinId={pin.id} className="mt-6" />
+
           {/* Right under what the pin is about: what has changed on it since. */}
           <PinUpdates updates={updates} timeZone={timeZone} className="mt-6" />
 
@@ -178,6 +182,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           <Suspense fallback={<Comments pinId={pin.id} initialComments={[]} />}>
             <PinCommentsSection pinId={pin.id} />
           </Suspense>
+
+          {/* The tall space the side column leaves under the comments. */}
+          <AdColumn pinId={pin.id} className="mt-6" />
         </aside>
       </div>
 

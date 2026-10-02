@@ -1518,6 +1518,20 @@ const ja: Messages = {
     tagsDescription: '{site}で今後の発売日、イベント、締め切りがあるすべてのテーマ（ピンの数順）。',
     companiesDescription: '{site}で今後の発表、発売、決算、イベントがあるすべての企業（ピンの数順）。',
   },
+  ads: {
+    sponsored: 'スポンサー',
+    seeOnAmazon: 'Amazonで見る',
+    programs: {
+      prime: { title: 'Amazonプライムを無料で体験', body: 'お急ぎ便無料、Prime Videoなど特典がいっぱい。', cta: '無料体験を始める' },
+      audible: { title: 'Audibleを無料で体験', body: 'オーディオブック、ポッドキャスト、オリジナル作品。新規会員は無料で体験できます。', cta: '聴き始める' },
+      business: { title: 'Amazonビジネス', body: '法人価格、数量割引、請求書払い。登録は無料です。', cta: '無料アカウントを作成' },
+      primevideo: { title: 'Prime Videoで観る', body: '映画、ドラマ、アニメ、スポーツ中継を配信。', cta: '観始める' },
+      haul: { title: 'Amazon Haul', body: 'ファッションやホーム用品などが超低価格。', cta: 'Haulを見る' },
+      fresh: { title: 'Amazonフレッシュ', body: '日用品から生鮮食品まで、食料品をお届け。', cta: '食料品を買う' },
+      pets: { title: 'ペットフード・ペット用品', body: '犬や猫などのフード、おやつ、必需品をお届け。', cta: 'ペット用品を見る' },
+      tradein: { title: 'Amazon下取りプログラム', body: '対象のデバイスやゲームなどをAmazonギフトカードに交換。', cta: '下取りに出す' },
+    },
+  },
 };
 
 export default ja;

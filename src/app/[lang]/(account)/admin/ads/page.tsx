@@ -1,0 +1,37 @@
+import type { Metadata } from 'next';
+import { connection } from 'next/server';
+import { requireAdminViewer } from '@/server/guard';
+import Ad from '@/server/model/ad';
+import log from '@/server/util/log';
+import { AdminTabs } from '../AdminTabs';
+import { AdCharts } from './AdCharts';
+
+// Reads the session, so it blocks per request (see ../../layout.tsx).
+export const instant = false;
+
+export const metadata: Metadata = { title: 'Admin ads' };
+
+// As on the Clicks page: how long the page waits for new clicks to be placed.
+const LOCATE_WAIT_MS = 15000;
+
+export default async function AdminAdsPage() {
+  await requireAdminViewer('/admin/ads');
+  await connection();
+  const locating = Ad.locateUnlocated().catch((err) => log.error('locateAdClicks', (err as Error)?.message));
+  await Promise.race([locating, new Promise((resolve) => setTimeout(resolve, LOCATE_WAIT_MS))]);
+  const [clicks, impressions] = await Promise.all([Ad.clicks(), Ad.impressions()]);
+  const labels = await Ad.labels([...new Set([...clicks.map((c) => c.adKey), ...impressions.map((i) => i.adKey)])]);
+  return (
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
+      <AdminTabs current="/admin/ads" />
+      <h1 className="sr-only">Ads</h1>
+      <p className="mb-6 text-sm text-subtle">
+        The Amazon ad blocks on the timeline and pin pages. An ad counts as shown when its block came near the screen and fetched it; a click on the same ad
+        again within 30 seconds counts once. Program ads are Amazon&apos;s Special Program Commissions, Bonus Events and Trade-In; product ads are the Amazon
+        listings on pins. Store ids for other countries go in the AppSetting <code>amazonTags</code> (for example <code>{'{"GB": "…-21"}'}</code>), with
+        program rows for that store in the <code>Ad</code> table; until then every viewer gets the US store.
+      </p>
+      <AdCharts clicks={clicks} impressions={impressions} labels={labels} serverNow={new Date().toISOString()} />
+    </div>
+  );
+}

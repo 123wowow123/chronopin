@@ -1531,6 +1531,20 @@ const fr: Messages = {
     tagsDescription: 'Tous les sujets de {site} avec des dates de sortie, événements et échéances à venir, par nombre de pins.',
     companiesDescription: 'Toutes les entreprises de {site} avec des lancements, sorties, résultats et événements à venir, par nombre de pins.',
   },
+  ads: {
+    sponsored: 'Sponsorisé',
+    seeOnAmazon: 'Voir sur Amazon',
+    programs: {
+      prime: { title: 'Essayez Amazon Prime gratuitement', body: 'Livraison rapide et gratuite, Prime Video et plus encore.', cta: 'Commencer l’essai gratuit' },
+      audible: { title: 'Essayez Audible gratuitement', body: 'Livres audio, podcasts et créations originales, gratuits à l’essai pour les nouveaux membres.', cta: 'Commencer l’écoute' },
+      business: { title: 'Amazon Business', body: 'Prix professionnels, remises sur quantité et facturation. Inscription gratuite.', cta: 'Créer un compte gratuit' },
+      primevideo: { title: 'Regardez sur Prime Video', body: 'Films, séries, anime et sport en direct en streaming.', cta: 'Commencer à regarder' },
+      haul: { title: 'Amazon Haul', body: 'Des prix très bas sur la mode, la maison et plus encore.', cta: 'Voir Haul' },
+      fresh: { title: 'Amazon Fresh', body: 'Vos courses livrées, des essentiels aux produits frais.', cta: 'Faire ses courses' },
+      pets: { title: 'Nourriture et accessoires pour animaux', body: 'Nourriture, friandises et essentiels pour chiens, chats et plus, livrés.', cta: 'Voir les produits' },
+      tradein: { title: 'Amazon Reprise', body: 'Obtenez une carte cadeau Amazon pour vos appareils, jeux et plus.', cta: 'Faire reprendre' },
+    },
+  },
 };
 
 export default fr;

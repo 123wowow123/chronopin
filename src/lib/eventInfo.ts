@@ -44,6 +44,26 @@ export function hasEventInfo(info: EventInfoFields | null | undefined): boolean 
   return !!info && (info.performers.length > 0 || !!info.ticketUrl || info.lowPrice != null || !!info.availability);
 }
 
+// The seller behind a ticketUrl, so the pin page's buy button can wear its
+// colours and mark the way the "Watch on" row does for a streaming service
+// (src/lib/streaming.ts) and "Buy on" does for a store (src/lib/shopping.ts).
+export type TicketSeller = { label: string; background: string; text: string };
+
+const TICKET_SELLERS: (TicketSeller & { matches: (hostname: string) => boolean })[] = [
+  { label: 'Ticketmaster', background: '#026cdf', text: '#ffffff', matches: (h) => h === 'ticketmaster.com' || h.endsWith('.ticketmaster.com') },
+];
+
+export function ticketSeller(url: string | null | undefined): TicketSeller | undefined {
+  if (!url) return undefined;
+  let hostname: string;
+  try {
+    hostname = new URL(url).hostname.toLowerCase();
+  } catch {
+    return undefined;
+  }
+  return TICKET_SELLERS.find((seller) => seller.matches(hostname));
+}
+
 type Node = Record<string, unknown>;
 const text = (value: unknown): string | undefined => (typeof value === 'string' && value.trim() ? value.trim() : undefined);
 const nodeTypes = (node: Node): string[] => [node['@type']].flat().filter((t): t is string => typeof t === 'string');

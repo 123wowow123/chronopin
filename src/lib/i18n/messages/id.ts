@@ -612,7 +612,7 @@ const id: Messages = {
     ticketsNotYetOnSale: 'Belum dijual',
     ticketsOnSaleFrom: 'Dijual mulai {date}',
     ticketsCheckedAt: 'per {date}',
-    getTickets: 'Dapatkan tiket',
+    getTickets: 'Beli tiket',
     thread: 'Utas',
     respond: 'Tanggapi Pin ini',
     moreLikeThis: 'Lainnya yang serupa',
@@ -1536,6 +1536,20 @@ const id: Messages = {
     companiesTitle: 'Semua perusahaan',
     tagsDescription: 'Setiap subjek di {site} dengan tanggal rilis, acara, dan tenggat yang akan datang, menurut jumlah pinnya.',
     companiesDescription: 'Setiap perusahaan di {site} dengan peluncuran, rilis, laporan keuangan, dan acara yang akan datang, menurut jumlah pinnya.',
+  },
+  ads: {
+    sponsored: 'Bersponsor',
+    seeOnAmazon: 'Lihat di Amazon',
+    programs: {
+      prime: { title: 'Coba Amazon Prime gratis', body: 'Pengiriman cepat dan gratis, Prime Video, dan banyak lagi.', cta: 'Mulai uji coba gratis' },
+      audible: { title: 'Coba Audible gratis', body: 'Buku audio, podcast, dan karya orisinal, gratis dicoba untuk anggota baru.', cta: 'Mulai mendengarkan' },
+      business: { title: 'Amazon Business', body: 'Harga bisnis, diskon jumlah, dan faktur. Gratis bergabung.', cta: 'Buat akun gratis' },
+      primevideo: { title: 'Tonton di Prime Video', body: 'Film, serial, anime, dan olahraga langsung untuk ditonton.', cta: 'Mulai menonton' },
+      haul: { title: 'Amazon Haul', body: 'Harga super murah untuk fesyen, rumah, dan lainnya.', cta: 'Belanja di Haul' },
+      fresh: { title: 'Amazon Fresh', body: 'Belanjaan diantar, dari kebutuhan sehari-hari hingga produk segar.', cta: 'Belanja bahan makanan' },
+      pets: { title: 'Makanan dan perlengkapan hewan', body: 'Makanan, camilan, dan kebutuhan anjing, kucing, dan lainnya, diantar.', cta: 'Belanja perlengkapan hewan' },
+      tradein: { title: 'Amazon Trade-In', body: 'Dapatkan kartu hadiah Amazon untuk perangkat, game, dan lainnya yang memenuhi syarat.', cta: 'Tukar tambah' },
+    },
   },
 };
 

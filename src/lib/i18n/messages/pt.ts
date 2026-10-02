@@ -1522,6 +1522,20 @@ const pt: Messages = {
     tagsDescription: 'Todos os assuntos no {site} com próximas datas de lançamento, eventos e prazos, por número de pins.',
     companiesDescription: 'Todas as empresas no {site} com próximos lançamentos, estreias, resultados e eventos, por número de pins.',
   },
+  ads: {
+    sponsored: 'Patrocinado',
+    seeOnAmazon: 'Ver na Amazon',
+    programs: {
+      prime: { title: 'Experimente o Amazon Prime grátis', body: 'Entrega rápida e grátis, Prime Video e muito mais.', cta: 'Começar o teste grátis' },
+      audible: { title: 'Experimente o Audible grátis', body: 'Audiolivros, podcasts e originais, grátis para novos membros experimentarem.', cta: 'Começar a ouvir' },
+      business: { title: 'Amazon Business', body: 'Preços empresariais, descontos por quantidade e faturamento. Cadastro gratuito.', cta: 'Criar uma conta grátis' },
+      primevideo: { title: 'Assista no Prime Video', body: 'Filmes, séries, anime e esportes ao vivo em streaming.', cta: 'Começar a assistir' },
+      haul: { title: 'Amazon Haul', body: 'Preços baixíssimos em moda, casa e mais.', cta: 'Comprar no Haul' },
+      fresh: { title: 'Amazon Fresh', body: 'Mercado entregue em casa, do básico aos produtos frescos.', cta: 'Fazer compras' },
+      pets: { title: 'Ração e acessórios para pets', body: 'Ração, petiscos e itens essenciais para cães, gatos e mais, entregues.', cta: 'Comprar para pets' },
+      tradein: { title: 'Amazon Trade-In', body: 'Ganhe um cartão-presente da Amazon por dispositivos, jogos e mais elegíveis.', cta: 'Fazer troca' },
+    },
+  },
 };
 
 export default pt;

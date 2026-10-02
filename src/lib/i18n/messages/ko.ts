@@ -1519,6 +1519,20 @@ const ko: Messages = {
     tagsDescription: '{site}에서 다가오는 출시일, 이벤트, 마감일이 있는 모든 주제(핀 수 순).',
     companiesDescription: '{site}에서 다가오는 공개, 출시, 실적 발표, 이벤트가 있는 모든 기업(핀 수 순).',
   },
+  ads: {
+    sponsored: '스폰서',
+    seeOnAmazon: '아마존에서 보기',
+    programs: {
+      prime: { title: 'Amazon Prime 무료 체험', body: '빠른 무료 배송, Prime Video 등 다양한 혜택.', cta: '무료 체험 시작' },
+      audible: { title: 'Audible 무료 체험', body: '오디오북, 팟캐스트, 오리지널 콘텐츠. 신규 회원은 무료로 체험할 수 있습니다.', cta: '듣기 시작' },
+      business: { title: 'Amazon Business', body: '비즈니스 가격, 수량 할인, 청구서 결제. 가입은 무료입니다.', cta: '무료 계정 만들기' },
+      primevideo: { title: 'Prime Video에서 보기', body: '영화, 시리즈, 애니메이션, 스포츠 생중계 스트리밍.', cta: '보기 시작' },
+      haul: { title: 'Amazon Haul', body: '패션, 홈 등 초저가 상품.', cta: 'Haul 쇼핑' },
+      fresh: { title: 'Amazon Fresh', body: '생필품부터 신선식품까지 장보기 배송.', cta: '장보기' },
+      pets: { title: '반려동물 사료 및 용품', body: '강아지, 고양이 등을 위한 사료, 간식, 필수품 배송.', cta: '반려동물 용품 보기' },
+      tradein: { title: 'Amazon 보상 판매', body: '대상 기기, 게임 등을 아마존 기프트 카드로 교환하세요.', cta: '보상 판매하기' },
+    },
+  },
 };
 
 export default ko;
