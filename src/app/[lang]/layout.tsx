@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Suspense } from 'react';
-import { cacheLife } from 'next/cache';
+import { cacheLife, cacheTag } from 'next/cache';
 import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic, Noto_Sans, Noto_Sans_Arabic, Noto_Sans_Thai } from 'next/font/google';
 import localFont from 'next/font/local';
 import { lang } from 'next/root-params';
@@ -16,7 +16,10 @@ import { siteName, siteUrl } from '@/lib/appConfig';
 import { isRtl, languageTag, localeOr, LOCALES } from '@/lib/i18n/config';
 import { getMessages } from '@/lib/i18n/messages';
 import { alternates, getT } from '@/lib/i18n/server';
+import { DEFAULT_SITE_VERIFICATION, type SiteVerificationSetting } from '@/lib/siteVerification';
 import { themeScript } from '@/lib/theme';
+import { getSiteVerification } from '@/server/model/appSetting';
+import { TAGS } from '@/server/services/cache';
 import '../globals.css';
 
 const notoSans = Noto_Sans({ subsets: ['latin'], variable: '--font-noto-sans', display: 'swap' });
@@ -57,8 +60,20 @@ async function shareCardDay(): Promise<string> {
   return new Date().toISOString().slice(0, 10);
 }
 
+// The site-verification meta tag's name and code (src/lib/siteVerification.ts).
+// Cached and tag-revalidated rather than timed with Date.now() (as the admin
+// settings pages read are, services/pages.ts): a prerender reads no clock,
+// and offeredLocales (services/cache.ts) learned that lesson the hard way -
+// see services/multilingual.ts.
+async function siteVerificationMeta(): Promise<SiteVerificationSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.siteVerification);
+  return getSiteVerification().catch(() => DEFAULT_SITE_VERIFICATION);
+}
+
 export async function generateMetadata(): Promise<Metadata> {
-  const [t, links, day] = await Promise.all([getT(), alternates('/'), shareCardDay()]);
+  const [t, links, day, verification] = await Promise.all([getT(), alternates('/'), shareCardDay(), siteVerificationMeta()]);
   const title = t('meta.siteTitle', { site: siteName });
   const description = t('meta.siteDescription');
   return {
@@ -88,7 +103,9 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: { index: true, follow: true },
     other: {
       'google-adsense-account': 'ca-pub-4845333369058390',
-      'impact-site-verification': '8a378ae2-a2ee-42c0-be49-2f2e07f13052',
+      // Admin-configurable (src/lib/siteVerification.ts): only shown when
+      // both halves are set.
+      ...(verification.name && verification.value ? { [verification.name]: verification.value } : {}),
     },
   };
 }

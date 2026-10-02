@@ -8,6 +8,7 @@ import { getMultilingual } from '../model/appSetting';
 export const TAGS = {
   timeline: 'timeline',
   sitemap: 'sitemap',
+  siteVerification: 'site-verification',
   pin: (id: number | string) => `pin:${id}`,
 };
 
