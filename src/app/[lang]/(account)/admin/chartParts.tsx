@@ -1,6 +1,6 @@
 // Pieces shared by the admin charts.
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { TIME_RANGES, type TimeRange, type TimeUnit } from '@/lib/timeStats';
 
@@ -63,15 +63,48 @@ export function RangeTabs({ range, onChange }: { range: TimeRange; onChange: (ra
   );
 }
 
-export function StatTile({ label, value, note, swatch }: { label: string; value: number | string; note: string; swatch?: string }) {
+// `info` adds an (i) button beside the label that folds out what the number means.
+export function StatTile({
+  label,
+  value,
+  note,
+  swatch,
+  info,
+}: {
+  label: string;
+  value: number | string;
+  note: string;
+  swatch?: string;
+  info?: string;
+}) {
+  const [explaining, setExplaining] = useState(false);
+  const aboutId = useId();
   return (
     <div className="surface px-4 py-3">
       <div className="flex items-center gap-2 text-sm text-subtle">
         {swatch ? <span aria-hidden className="size-2.5 rounded-sm" style={{ background: swatch }} /> : null}
         {label}
+        {info ? (
+          <button
+            type="button"
+            onClick={() => setExplaining(!explaining)}
+            aria-expanded={explaining}
+            aria-controls={aboutId}
+            aria-label={`What ${label} means`}
+            title={`What ${label} means`}
+            className={`-my-1 -ml-1 rounded-full p-1 hover:bg-raised hover:text-ink ${explaining ? 'text-link' : 'text-subtle'}`}
+          >
+            <Icon name="info" className="size-3.5" />
+          </button>
+        ) : null}
       </div>
       <div className="mt-1 text-3xl font-semibold text-ink">{typeof value === 'number' ? value.toLocaleString() : value}</div>
       <div className="text-xs text-subtle">{note}</div>
+      {info && explaining ? (
+        <p id={aboutId} className="mt-2 rounded-lg border border-line bg-raised/40 px-3 py-2 text-xs leading-relaxed text-muted">
+          {info}
+        </p>
+      ) : null}
     </div>
   );
 }
