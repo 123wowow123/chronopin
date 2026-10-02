@@ -73,6 +73,17 @@ function rows(impressions: AdImpressionRow[], clicks: AdClickRow[], keyOfImpress
     .sort((a, b) => b.clicks - a.clicks || b.shown - a.shown);
 }
 
+// Where each placement is on screen: only in the phone layout, only in the
+// desktop one, or in both (a pin's ads and the timeline's rows just show fewer
+// on a phone). A placement added later and not listed falls under Both.
+const MOBILE_ONLY: readonly string[] = ['drawer'];
+const DESKTOP_ONLY: readonly string[] = ['timeline-side'];
+const PLACEMENT_GROUPS = [
+  { label: 'Mobile', note: 'Phone layout only', has: (key: string) => MOBILE_ONLY.includes(key) },
+  { label: 'Desktop', note: 'Wide screens only', has: (key: string) => DESKTOP_ONLY.includes(key) },
+  { label: 'Both', note: 'Phone and desktop', has: (key: string) => !MOBILE_ONLY.includes(key) && !DESKTOP_ONLY.includes(key) },
+];
+
 // A disabled placement shows no ads, so it may have no rows of its own; list
 // every placement anyway, so one that is off reads as off, not missing.
 function withEveryPlacement(slots: Row[]): Row[] {
@@ -106,7 +117,23 @@ function PlaceTable({ title, rows, name }: { title: string; rows: Row[]; name: (
   );
 }
 
-function StatTable({ title, rows, name, empty, split = true }: { title: string; rows: Row[]; name: (key: string) => React.ReactNode; empty: string; split?: boolean }) {
+// groups: rows under a heading each, in this order; a group with no rows is left out.
+function StatTable({
+  title,
+  rows,
+  name,
+  empty,
+  split = true,
+  groups,
+}: {
+  title: string;
+  rows: Row[];
+  name: (key: string) => React.ReactNode;
+  empty: string;
+  split?: boolean;
+  groups?: { label: string; note?: string; has: (key: string) => boolean }[];
+}) {
+  const sections = groups ? groups.map((g) => ({ label: g.label, note: g.note, rows: rows.filter((r) => g.has(r.key)) })).filter((g) => g.rows.length) : [{ label: '', note: undefined, rows }];
   return (
     <section className="surface p-4 sm:p-5">
       <h2 className="mb-3 text-base font-semibold">{title}</h2>
@@ -123,26 +150,45 @@ function StatTable({ title, rows, name, empty, split = true }: { title: string; 
               </tr>
             </thead>
             <tbody className="divide-y divide-line">
-              {rows.map((r) => (
-                <Fragment key={r.key}>
-                  <tr>
-                    <td className="max-w-0 py-1.5">{name(r.key)}</td>
-                    <td className="py-1.5 pl-6 text-right">{r.shown}</td>
-                    <td className="py-1.5 pl-6 text-right">{r.clicks}</td>
-                    <td className="py-1.5 pl-6 text-right">{rate(r.clicks, r.shown)}</td>
-                    <td className="py-1.5 pl-6 text-right">{r.people}</td>
-                  </tr>
-                  {split
-                    ? ([['Signed in', r.signedIn], ['Guests', r.guests]] as const).map(([label, c]) => (
-                        <tr key={label} className="text-xs text-subtle">
-                          <td className="py-0.5 pl-4">{label}</td>
-                          <td className="py-0.5 pl-6 text-right">{c.shown}</td>
-                          <td className="py-0.5 pl-6 text-right">{c.clicks}</td>
-                          <td className="py-0.5 pl-6 text-right">{rate(c.clicks, c.shown)}</td>
-                          <td className="py-0.5 pl-6 text-right">{c.people}</td>
+              {sections.map((section, index) => (
+                <Fragment key={section.label}>
+                  {section.label ? (
+                    <>
+                      {index ? (
+                        <tr aria-hidden>
+                          <td colSpan={5} className="h-5 p-0" />
                         </tr>
-                      ))
-                    : null}
+                      ) : null}
+                      <tr className="border-t-0">
+                        <th colSpan={5} className="rounded-lg bg-raised px-3 py-2 text-left font-semibold text-ink">
+                          {section.label}
+                          {section.note ? <span className="ml-2 text-xs font-normal text-subtle">{section.note}</span> : null}
+                        </th>
+                      </tr>
+                    </>
+                  ) : null}
+                  {section.rows.map((r) => (
+                    <Fragment key={r.key}>
+                    <tr>
+                      <td className="max-w-0 py-1.5">{name(r.key)}</td>
+                      <td className="py-1.5 pl-6 text-right">{r.shown}</td>
+                      <td className="py-1.5 pl-6 text-right">{r.clicks}</td>
+                      <td className="py-1.5 pl-6 text-right">{rate(r.clicks, r.shown)}</td>
+                      <td className="py-1.5 pl-6 text-right">{r.people}</td>
+                    </tr>
+                    {split
+                      ? ([['Signed in', r.signedIn], ['Guests', r.guests]] as const).map(([label, c]) => (
+                          <tr key={label} className="text-xs text-subtle">
+                            <td className="py-0.5 pl-4">{label}</td>
+                            <td className="py-0.5 pl-6 text-right">{c.shown}</td>
+                            <td className="py-0.5 pl-6 text-right">{c.clicks}</td>
+                            <td className="py-0.5 pl-6 text-right">{rate(c.clicks, c.shown)}</td>
+                            <td className="py-0.5 pl-6 text-right">{c.people}</td>
+                          </tr>
+                        ))
+                      : null}
+                    </Fragment>
+                  ))}
                 </Fragment>
               ))}
             </tbody>
@@ -360,6 +406,7 @@ export function AdCharts({
         <StatTable
           title="By placement"
           rows={withEveryPlacement(stats.slots)}
+          groups={PLACEMENT_GROUPS}
           name={(key) => (
             <>
               {SLOT_LABEL[key as keyof typeof SLOT_LABEL] ?? key}

@@ -52,7 +52,7 @@ function useAds(slot: AdSlot, pinId: number | undefined) {
     const element = ref.current;
     if (!element) return;
     let cancelled = false;
-    const scope = pinId ? `pin:${pinId}` : 'timeline';
+    const scope = pinId ? `pin:${pinId}` : slot === 'drawer' ? 'drawer' : 'timeline';
     const load = () => {
       queue = queue.then(() => {
         if (cancelled) return;
@@ -303,5 +303,46 @@ export function AdPanel({ onAds }: { onAds?: (count: number | null) => void }) {
             ))}
       </ol>
     </section>
+  );
+}
+
+// The mobile menu's ads, above Log out: at most two compact rows like the
+// side panel's, in the room the menu leaves. The block gives way before the
+// menu scrolls: it is the one thing that shrinks, and a row that does not fit
+// wraps into a clipped second column, as the side panel's do. The drawer is
+// always mounted, so the ads are fetched once, the first time it is opened
+// into view.
+export function AdDrawer({ className = '' }: { className?: string }) {
+  const slot = 'drawer';
+  const t = useT();
+  const { ref, ads } = useAds(slot, undefined);
+  const text = useAdText();
+  if (!ads) return <div ref={ref} aria-hidden className={`h-px ${className}`} />;
+  if (!ads.length) return null;
+  return (
+    <aside aria-label={t('ads.sponsored')} className={`flex min-h-0 shrink flex-col px-2 pt-1 pb-1 ${className}`}>
+      <div className="shrink-0 px-3 pb-0.5">
+        <SponsoredLabel />
+        <Disclosure className="mt-0.5" />
+      </div>
+      <ul className="flex min-h-0 flex-col flex-wrap overflow-clip">
+        {ads.map((ad) => {
+          const { title, body } = text(ad);
+          return (
+            <li key={ad.key} className="w-full">
+              <AdLink ad={ad} slot={slot} className="flex items-center gap-3 rounded-2xl px-3 py-1.5 hover:bg-raised hover:no-underline active:bg-raised-2">
+                <AdPicture ad={ad} className="h-9 w-14" />
+                <span className="flex min-w-0 flex-col">
+                  <span className="truncate text-sm font-medium text-ink" title={title}>
+                    {title}
+                  </span>
+                  {body ? <span className={`truncate text-xs ${ad.program ? 'text-subtle' : 'font-semibold text-success tabular-nums'}`}>{body}</span> : null}
+                </span>
+              </AdLink>
+            </li>
+          );
+        })}
+      </ul>
+    </aside>
   );
 }

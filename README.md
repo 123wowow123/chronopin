@@ -298,17 +298,11 @@ sync prod db to local and backup json
 run 6am job here in this session
 
 
-update this pin with thread of previous series and do same for all tv show season that has missing thread
-https://www.chronopin.com/pin/864/shangri-la-frontier-season-3-premieres
-
 
 jobs report should be in a thread for every release for past 2 years
 https://www.chronopin.com/pin/5175/the-september-jobs-report-lands-with-markets-betting-unemployment-holds-near-4-1
 
 
-pin
-https://www.youtube.com/watch?v=liU4Tncv9cA
 
 
-
-add popular chinese shows and movie pins
+pin popular chinese shows and movie pins
