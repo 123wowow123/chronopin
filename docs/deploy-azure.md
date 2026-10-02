@@ -59,14 +59,13 @@ ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187 \
 file. A new schema file needs `npm run create:db` through the tools container
 (below) before or right after the app restarts.
 
-`npm run deploy` (scripts/deploy.sh) does this, and first resizes the VM from
-Standard_B2s to Standard_B2ms if it is not there already: the build needs about 1.3GB beyond what the 4GB
-box has free beside the running site, and it swapped for an hour. It no longer
-resizes back (owner, 2026-10-02), so the VM stays on B2ms after the first deploy;
-the resize restarts the VM (a minute or two down) and needs `az login`.
-`DEPLOY_NO_RESIZE=1` skips it. To shrink by hand (mind the $50 cap on the
-subscription if it stays large):
-`az vm resize --subscription 9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5 -g Chronopin-US-West -n chronopin-web --size Standard_B2s`.
+`npm run deploy` (scripts/deploy.sh) does this and never resizes the VM
+(owner, 2026-10-03), so `az login` is not needed. The build needs about 1.3GB
+beyond what a 4GB box (Standard_B2s) has free beside the running site, and on
+that size it swaps for an hour; to give it room, resize by hand first (a restart,
+a minute or two down; mind the $50 cap on the subscription if it stays large):
+`az vm resize --subscription 9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5 -g Chronopin-US-West -n chronopin-web --size Standard_B2ms`,
+and the same with `Standard_B2s` to shrink it back.
 
 ## One-off scripts
 
