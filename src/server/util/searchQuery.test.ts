@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { hasFilters, joinSearchQuery, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
+import { dependsOnZone, hasFilters, joinSearchQuery, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
 
 describe('splitSearchQuery', () => {
   it('keeps terms and text in order, with what each was written as', () => {
@@ -66,6 +66,8 @@ describe('parseSearchQuery', () => {
       confidenceBands: [],
       dates: [],
       postedDays: [],
+      dateBounds: [],
+      postedBounds: [],
       tags: ['software'],
       excludeTags: [],
       places: [],
@@ -138,6 +140,46 @@ describe('rating: bounds', () => {
     expect(q.ratings).toEqual([]);
     expect(q.text).toBe('naruto');
     expect(splitSearchQuery('rating:>80')).toEqual([{ kind: 'term', field: 'rating', value: '>80', raw: 'rating:>80' }]);
+  });
+});
+
+describe('date: and posted: comparisons', () => {
+  it('reads a comparison as a day boundary, "after" and "through" as the day after', () => {
+    expect(parseSearchQuery('date:>=2026-09-01').dateBounds).toEqual([{ op: '>=', day: '2026-09-01' }]);
+    expect(parseSearchQuery('date:>2026-09-30 date:<=2026-12-31').dateBounds).toEqual([
+      { op: '>=', day: '2026-10-01' },
+      { op: '<', day: '2027-01-01' },
+    ]);
+    expect(parseSearchQuery('posted:<2026-10-01 posted:=>2026-09-01').postedBounds).toEqual([
+      { op: '<', day: '2026-10-01' },
+      { op: '>=', day: '2026-09-01' },
+    ]);
+    expect(parseSearchQuery('date:>=-2560-01-01').dateBounds).toEqual([{ op: '>=', day: '-2560-01-01' }]);
+  });
+
+  it('reads a range with both ends in, either way round', () => {
+    const range = [
+      { op: '>=', day: '2026-09-01' },
+      { op: '<', day: '2026-10-01' },
+    ];
+    expect(parseSearchQuery('date:2026-09-01..2026-09-30').dateBounds).toEqual(range);
+    expect(parseSearchQuery('posted:2026-09-30..2026-09-01').postedBounds).toEqual(range);
+  });
+
+  it('keeps a bare or = day exact, beside any comparison', () => {
+    expect(parseSearchQuery('date:=2026-09-08 date:2026-09-09 date:>=2026-09-01')).toMatchObject({
+      dates: ['2026-09-08', '2026-09-09'],
+      dateBounds: [{ op: '>=', day: '2026-09-01' }],
+    });
+    expect(hasFilters(parseSearchQuery('posted:<2026-10-01'))).toBe(true);
+    expect(dependsOnZone(parseSearchQuery('date:>=2026-09-01'))).toBe(true);
+  });
+
+  it('leaves out anything that is not a day, and never reads it as text', () => {
+    const q = parseSearchQuery('date:>=soon posted:2026-09-01..later date:>2026-9-1 naruto');
+    expect(q.dateBounds).toEqual([]);
+    expect(q.postedBounds).toEqual([]);
+    expect(q.text).toBe('naruto');
   });
 });
 

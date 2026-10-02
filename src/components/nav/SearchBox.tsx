@@ -961,7 +961,7 @@ export function SearchBox() {
                     aria-label={t('search.removeItem', { name })}
                     onMouseDown={keepFocus}
                     onClick={() => removeItem(index)}
-                    className={`mx-0.5 rounded-full p-0.5 hover:bg-raised hover:text-ink ${picked ? 'text-white/75' : 'text-subtle'}`}
+                    className={`mx-0.5 flex rounded-full p-0.5 hover:bg-raised hover:text-ink ${picked ? 'text-white/75' : 'text-subtle'}`}
                   >
                     <Icon name="close" className="size-3" />
                   </button>
