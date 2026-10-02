@@ -59,7 +59,7 @@ export async function createPinsAs(admin: User, bodies: unknown[], requestAuthor
       if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new HttpError(400, 'Expected a pin object');
       const { userId, userName, ...body } = raw as Record<string, any>;
       const author = await authorFor({ userId, userName }, fallback, known);
-      const saved = await createPin(body, author);
+      const saved = await createPin(body, author, { noBrowser: true });
       results.push({ index, id: saved.id, userId: author.id });
       await recordAudit(admin.id, 'Pin', [{ action: 'insert', key: { id: saved.id }, before: null, after: { id: saved.id, title: saved.title, userId: author.id } }]);
     } catch (err) {

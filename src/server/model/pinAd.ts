@@ -2,6 +2,7 @@ import { adProblem, asinOf, listingUrl, sameBrand } from '@/lib/adQuality';
 import * as db from '../db';
 import { readAmazonListing } from '../listingPrice';
 import log from '../util/log';
+import PinAdTranslation from './pinAdTranslation';
 
 // Product ads chosen for one pin (0112): Amazon listings that suit it, well
 // reviewed and from a trusted brand (src/lib/adQuality.ts), served first in
@@ -39,6 +40,19 @@ function touched() {
   if (held) held.inventory = null;
 }
 
+// Translates the ads' titles into the languages offered, in the background,
+// when the admin setting for automatic translation is on (the same switch as
+// a pin's words, src/lib/autoTranslate.ts); the hand route is `ads:pin titles`.
+function translateTitles(pinAdId?: number) {
+  (async () => {
+    const { getAutoTranslate } = await import('./appSetting');
+    if (!(await getAutoTranslate()).enabled) return;
+    const { offeredLocales } = await import('../services/cache');
+    const locales = await offeredLocales();
+    if (locales.length) await PinAdTranslation.translateMissing({ locales, pinAdId });
+  })().catch((err) => log.warn('ad title translation failed:', (err as Error).message));
+}
+
 export default class PinAd {
   static async forPin(pinId: number): Promise<PinAdRow[]> {
     return db.query<PinAdRow>(`SELECT ${COLUMNS} FROM "PinAd" WHERE "pinId" = $1 ORDER BY "status", "id"`, [pinId]);
@@ -72,6 +86,7 @@ export default class PinAd {
       [pinId, asin, url, listing.title.slice(0, 300), listing.brand?.slice(0, 120) ?? null, listing.price, listing.rating, listing.reviewCount],
     );
     touched();
+    translateTitles(rows[0].id);
     return { added: rows[0], brandMatchesPin: sameBrand(listing.brand, pin[0].company) };
   }
 
@@ -120,7 +135,10 @@ export default class PinAd {
         ok++;
       }
     }
-    if (due.length) touched();
+    if (due.length) {
+      touched();
+      translateTitles();
+    }
     log.info(`Pin ads checked: ${due.length} read, ${ok} ok, ${broken.length} newly broken, ${unread} unreadable`);
     return { checked: due.length, ok, unread, newlyBroken: broken };
   }

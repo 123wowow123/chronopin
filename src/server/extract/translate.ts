@@ -99,3 +99,56 @@ export async function translatePinText(pin: PinText, locales: readonly TargetLoc
     return null;
   }
 }
+
+const AD_TITLE_PROMPT = `You translate the title of one Amazon product listing, shown as an ad on Chronopin (a timeline of dated events), into several languages.
+
+- Write the way a shop in that language would title it: natural and short, not word for word.
+- Keep the brand and the model or product-line name as they are written on the product (Tamiya, Mini 4WD, PlayStation 5); translate only the descriptive words around them (kit, starter set, wireless controller).
+- Keep numbers, sizes, scales (1/32), capacities, model codes and units exactly as they are; never convert units or currencies.
+- If the title is already in the target language, return it unchanged.`;
+
+function adTitleSchema(locales: readonly TargetLocale[]) {
+  return {
+    type: 'object',
+    properties: Object.fromEntries(locales.map((l) => [l, { type: 'string' }])),
+    required: [...locales],
+    additionalProperties: false,
+  };
+}
+
+/**
+ * A chosen ad's listing title in each language, or null when there is no API
+ * key or the call failed: the ad then shows the English title, and the
+ * backfill (PinAdTranslation.translateMissing) tries again later.
+ */
+export async function translateAdTitle(title: string, locales: readonly TargetLocale[] = TARGET_LOCALES): Promise<Partial<Record<TargetLocale, string>> | null> {
+  const anthropic = getClient();
+  if (!anthropic || !locales.length || !title.trim()) return null;
+  const languages = locales.map((l) => `${l}: ${LANGUAGE_NAMES[l]}`).join('\n');
+  try {
+    const response = await anthropic.beta.messages
+      .stream({
+        model: MODEL,
+        max_tokens: 4000,
+        output_config: { effort: 'low', format: { type: 'json_schema', schema: adTitleSchema(locales) } },
+        betas: ['server-side-fallback-2026-07-01'],
+        fallbacks: 'default',
+        system: AD_TITLE_PROMPT,
+        messages: [{ role: 'user', content: `Languages, by the key to answer under:\n${languages}\n\nThe title:\n${title}` }],
+      })
+      .finalMessage();
+    if (response.stop_reason === 'refusal' || response.stop_reason === 'max_tokens') {
+      log.warn(`ad title translation stopped (${response.stop_reason})`);
+      return null;
+    }
+    const block = response.content.find((c): c is Anthropic.Beta.BetaTextBlock => c.type === 'text');
+    if (!block) return null;
+    const parsed = JSON.parse(block.text) as Record<string, string>;
+    const out: Partial<Record<TargetLocale, string>> = {};
+    for (const locale of locales) if (parsed[locale]?.trim()) out[locale] = parsed[locale].trim();
+    return out;
+  } catch (err) {
+    log.warn('ad title translation failed', describeError(err));
+    return null;
+  }
+}

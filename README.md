@@ -296,13 +296,3 @@ sync prod db to local and backup json
 - update all ticket master button link to use referal link
 
 run 6am job here in this session
-
-
-
-jobs report should be in a thread for every release for past 2 years
-https://www.chronopin.com/pin/5175/the-september-jobs-report-lands-with-markets-betting-unemployment-holds-near-4-1
-
-
-
-
-pin popular chinese shows and movie pins

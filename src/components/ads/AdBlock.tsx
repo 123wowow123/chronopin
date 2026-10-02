@@ -5,6 +5,7 @@ import { hasProgramLogo, ProgramLogo } from '@/components/ads/ProgramLogo';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
+import { withPageLang } from '@/lib/client/navigation';
 import { money } from '@/lib/format';
 import { SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
 
@@ -61,7 +62,7 @@ function useAds(slot: AdSlot, pinId: number | undefined) {
         const params = new URLSearchParams({ slot, n: String(SLOT_COUNT[slot]) });
         if (pinId) params.set('pin', String(pinId));
         if (shown.size) params.set('not', [...shown].slice(-100).join(','));
-        return fetch(`/api/ads?${params}`)
+        return fetch(withPageLang(`/api/ads?${params}`))
           .then((res) => (res.ok ? (res.json() as Promise<{ ads: AdJson[] }>) : null))
           .then((body) => {
             if (cancelled) return;
@@ -95,7 +96,7 @@ function useAds(slot: AdSlot, pinId: number | undefined) {
 function report(ad: AdJson, slot: AdSlot, pinId: number | undefined) {
   try {
     const page = `${location.pathname}${location.search}`.slice(0, 500);
-    navigator.sendBeacon('/api/ads/click', new Blob([JSON.stringify({ key: ad.key, slot, pinId, page })], { type: 'application/json' }));
+    navigator.sendBeacon('/api/ads/click', new Blob([JSON.stringify({ key: ad.key, slot, pinId, page, store: ad.store })], { type: 'application/json' }));
   } catch {}
 }
 

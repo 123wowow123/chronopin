@@ -1,5 +1,6 @@
 import { userAgent, type NextRequest } from 'next/server';
 import { isAdSlot, SLOT_COUNT } from '@/lib/ads';
+import { requestLocale } from '@/lib/i18n/request';
 import { getUser } from '@/server/auth';
 import { HttpError, json, route } from '@/server/http';
 import Ad from '@/server/model/ad';
@@ -7,7 +8,7 @@ import Ad from '@/server/model/ad';
 // The ads for one ad block (src/components/ads/AdBlock.tsx), fetched once the
 // block nears the screen so that a served ad is one that was seen: ?slot= (a
 // slot of src/lib/ads.ts), &n= at most the slot's count (SLOT_COUNT), &pin= the pin whose
-// page it is on, &not= keys already shown on the page. Weighed by the
+// page it is on, &not= keys already shown on the page, &lang= the page's language (titles come back translated). Weighed by the
 // signed-in viewer's preference wiki and age; the store follows where the
 // viewer is. Crawlers get none, and are not counted.
 export const GET = route(async (request: NextRequest) => {
@@ -26,6 +27,7 @@ export const GET = route(async (request: NextRequest) => {
     pinId: Number.isInteger(pin) && pin > 0 ? pin : null,
     avoid,
     userId: user ? Number(user.id) : null,
+    locale: requestLocale(request),
     request,
   });
   return json(served, 200, headers);
