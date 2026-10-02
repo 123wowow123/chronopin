@@ -1,7 +1,7 @@
 import { AD_SLOTS, type AdSlot } from './ads';
 
 // Which ad placements show their ads. An admin setting - this is only its
-// default: the timeline's between-days row off, the other three on.
+// default: the timeline's between-days row off, the others on.
 export type AdPlacementsSetting = Record<AdSlot, boolean>;
 
 export const DEFAULT_AD_PLACEMENTS: AdPlacementsSetting = {
@@ -9,6 +9,7 @@ export const DEFAULT_AD_PLACEMENTS: AdPlacementsSetting = {
   'timeline-side': true,
   'pin-strip': true,
   'pin-side': true,
+  drawer: true,
 };
 
 // A stored or submitted value as a setting, or the problem with it. A slot

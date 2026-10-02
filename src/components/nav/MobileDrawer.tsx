@@ -11,6 +11,7 @@ import { drawerHeld, onCloseDrawer, setCardsSlot, setControlsSlot, setDrawerScro
 import { leaveDrawer, settleDrawerMark, takeDrawerReturn } from '@/lib/client/drawerReturn';
 import { useUnreadChats } from '@/lib/client/messages';
 import { useUnreadCount } from '@/lib/client/notifications';
+import { AdDrawer } from '@/components/ads/AdBlock';
 import { DrawerMessages } from '@/components/messages/Messenger';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useSession } from '@/lib/client/session';
@@ -83,7 +84,7 @@ function DrawerMark({ open }: { open: boolean }) {
 // the button sits at the left of the navbar (the avatar once signed in), the
 // page dims behind the drawer, and a tap on the dimmed page, Escape, a link or
 // a swipe to the left puts it away.
-export function MobileDrawer() {
+export function MobileDrawer({ ads = false }: { ads?: boolean }) {
   const pathname = usePathname();
   const { user, isAdmin } = useSession();
   const t = useT();
@@ -353,6 +354,9 @@ export function MobileDrawer() {
             </>
           ) : null}
         </nav>
+
+        {/* Sponsored rows (an admin setting), last before the way out. */}
+        {ads ? <AdDrawer className="border-t border-line pt-2" /> : null}
 
         {user ? (
           <div className="border-t border-line px-2 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">

@@ -6,4 +6,5 @@ export const SLOT_LABEL: Record<AdSlot, string> = {
   'timeline-side': 'Timeline, side panel',
   'pin-strip': 'Pin page, under the tags',
   'pin-side': 'Pin page, under the comments',
+  drawer: 'Mobile menu, above Log out',
 };

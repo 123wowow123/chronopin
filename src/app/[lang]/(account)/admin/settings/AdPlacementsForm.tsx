@@ -11,6 +11,7 @@ const SLOTS: { slot: AdSlot; note: string }[] = [
   { slot: 'timeline-side', note: 'An ad panel under "New pins".' },
   { slot: 'pin-strip', note: 'A row of related ads under a pin\'s tags.' },
   { slot: 'pin-side', note: 'A column of ads under a pin\'s comments.' },
+  { slot: 'drawer', note: 'Up to two ads in the phone and tablet menu, above Log out, only as many as fit without making the menu scroll.' },
 ];
 
 // Which ad placements show their ads, each on its own.
