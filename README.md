@@ -302,5 +302,13 @@ update this pin with thread of previous series and do same for all tv show seaso
 https://www.chronopin.com/pin/864/shangri-la-frontier-season-3-premieres
 
 
+jobs report should be in a thread for every release for past 2 years
+https://www.chronopin.com/pin/5175/the-september-jobs-report-lands-with-markets-betting-unemployment-holds-near-4-1
+
+
+pin
+https://www.youtube.com/watch?v=liU4Tncv9cA
+
+
 
 add popular chinese shows and movie pins
