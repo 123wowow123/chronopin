@@ -116,11 +116,22 @@ export function ViewCharts({
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <StatTile
           label="Views"
+          info="Pin page visits in the selected range. A viewer is counted once per pin per UTC day, so reloading or reopening the same pin that day adds nothing. Crawlers, card impressions and outbound clicks are not counted. The percentage is the share of views made by signed-in users; the rest are guests."
           value={stats.views}
           note={`${inRange}, ${stats.views ? Math.round((stats.signedIn / stats.views) * 100) : 0}% signed in`}
         />
-        <StatTile label="Unique viewers" value={summary.viewers} note={inRange} />
-        <StatTile label="View rate" value={formatRate(stats.perUnit)} note={`per ${stats.unit}`} />
+        <StatTile
+          label="Unique viewers"
+          info="How many different people (signed-in users or guest browsers) viewed at least one pin in the selected range. Someone who views ten pins, or comes back on several days, counts once here but adds to Views each time."
+          value={summary.viewers}
+          note={inRange}
+        />
+        <StatTile
+          label="View rate"
+          info={`The average number of views per ${stats.unit} across the selected range: total views divided by the number of ${stats.unit}s charted below.`}
+          value={formatRate(stats.perUnit)}
+          note={`per ${stats.unit}`}
+        />
       </div>
 
       <section className="surface p-4 sm:p-5">
