@@ -407,7 +407,7 @@ export function PinForm({
                     <button
                       type="button"
                       onClick={() => set('categories', values.categories.filter((other) => other !== c))}
-                      className="rounded-full p-0.5 text-subtle hover:bg-raised-2 hover:text-ink"
+                      className="flex rounded-full p-0.5 text-subtle hover:bg-raised-2 hover:text-ink"
                       aria-label={t('search.removeItem', { name: categoryLabel(t, c) })}
                     >
                       <Icon name="close" className="size-3.5" />
