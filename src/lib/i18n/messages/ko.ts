@@ -910,6 +910,7 @@ const ko: Messages = {
     viewOn: '{source}에서 보기',
   },
   card: {
+    new: '새 글',
     partOfThread: '스레드의 일부',
     firstInThread: '스레드의 첫 핀',
     showMore: '더 보기',

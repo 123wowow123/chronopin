@@ -906,6 +906,7 @@ const th: Messages = {
     viewOn: 'ดูบน {source}',
   },
   card: {
+    new: 'ใหม่',
     partOfThread: 'ส่วนหนึ่งของเธรด',
     firstInThread: 'หมุดแรกในเธรด',
     showMore: 'แสดงเพิ่มเติม',

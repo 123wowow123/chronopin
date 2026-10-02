@@ -5,7 +5,7 @@
 // own words.
 
 import { cacheLife, cacheTag } from 'next/cache';
-import { getPersonalBag, getSliderTyping, getTagList, getTimelineAds, getTimelineVideo } from '../model/appSetting';
+import { getPersonalBag, getSliderTyping, getTagList, getAdPlacements, getTimelineVideo } from '../model/appSetting';
 import Company from '../model/company';
 import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
@@ -22,7 +22,7 @@ import { safeHtml } from '@/lib/sanitize';
 import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { SliderTypingSetting } from '@/lib/sliderTyping';
 import type { TagListSetting } from '@/lib/tagList';
-import type { TimelineAdsSetting } from '@/lib/timelineAds';
+import type { AdPlacementsSetting } from '@/lib/adPlacements';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
@@ -45,12 +45,12 @@ export async function timelineVideo(): Promise<TimelineVideoSetting> {
   return getTimelineVideo();
 }
 
-// Whether the main timeline shows ads, cached and expired the same way.
-export async function timelineAds(): Promise<TimelineAdsSetting> {
+// Which ad placements show their ads, cached and expired the same way.
+export async function adPlacements(): Promise<AdPlacementsSetting> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  return getTimelineAds();
+  return getAdPlacements();
 }
 
 // Whether the filter sliders offer a typed box, cached and expired the same way.

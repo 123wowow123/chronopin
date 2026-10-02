@@ -64,6 +64,8 @@ function adAfterDay(day: string): boolean {
   return ((epochDay % AD_EVERY_DAYS) + AD_EVERY_DAYS) % AD_EVERY_DAYS === 0;
 }
 // Under the day's cards, as wide as they spread at each width (TimeBlock's PinColumns).
+// Which ad blocks a timeline shows when it is not told.
+const NO_ADS = { row: false, side: false };
 const AD_ROW_PLACE = `mt-6 lg:ms-[170px] ${rowWidth}`;
 
 const NO_TODAY_MARKER: ReturnType<typeof resolveTodayMarker> = { index: -1, atEnd: false, todayBagIndex: -1 };
@@ -143,7 +145,7 @@ export function Timeline({
   video,
   sliderTyping = false,
   tagList = false,
-  ads = false,
+  ads = NO_ADS,
   trending,
   newPins: initialNewPins,
   preference,
@@ -172,7 +174,7 @@ export function Timeline({
   // The admin setting: whether the tag panel lists its tags, or opens the big cloud.
   tagList?: boolean;
   // The admin setting: whether the day-to-day ad row and the side ad panel show.
-  ads?: boolean;
+  ads?: { row: boolean; side: boolean };
   // The most viewed pins with rising views, beside the cards on wide screens.
   trending: { pins: TrendingPin[]; days: number };
   // The pins added most recently, under trending on wide screens. Kept live
@@ -748,7 +750,7 @@ export function Timeline({
             <div ref={highlightsRef} className="pointer-events-none flex min-h-0 grow basis-28 flex-col flex-wrap gap-2 overflow-clip [&>*]:pointer-events-auto [&>*]:w-full">
               <TrendingPins pins={trending.pins} days={trending.days} />
               <NewPins pins={newPins} />
-              {ads ? <AdPanel onAds={setSideAds} /> : null}
+              {ads.side ? <AdPanel onAds={setSideAds} /> : null}
             </div>
           }
         >
@@ -793,7 +795,7 @@ export function Timeline({
                 boost={boost}
                 daySearchHref={daySearchHref}
                 dayTotal={edgeDays.has(bag.day) ? dayCounts[countKey(bag.day)] : undefined}
-                adRow={ads && index < bags.length - 1 && adAfterDay(bag.day) ? <AdRow slot="timeline-row" className={AD_ROW_PLACE} /> : null}
+                adRow={ads.row && index < bags.length - 1 && adAfterDay(bag.day) ? <AdRow slot="timeline-row" className={AD_ROW_PLACE} /> : null}
               />
             </div>
           ))}

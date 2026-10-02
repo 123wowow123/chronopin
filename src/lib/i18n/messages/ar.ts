@@ -1128,6 +1128,7 @@ const ar: Messages = {
     viewOn: 'عرض على {source}',
   },
   card: {
+    new: 'جديد',
     partOfThread: 'جزء من سلسلة',
     firstInThread: 'أول دبوس في سلسلة',
     showMore: 'عرض المزيد',

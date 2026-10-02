@@ -917,6 +917,7 @@ const en = {
     viewOn: 'View on {source}',
   },
   card: {
+    new: 'New',
     partOfThread: 'Part of thread',
     firstInThread: 'First pin in a thread',
     showMore: 'show more',

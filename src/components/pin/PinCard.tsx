@@ -4,7 +4,8 @@ import Link from '@/components/ui/Link';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime';
-import { money } from '@/lib/format';
+import { dayKeyIn, money } from '@/lib/format';
+import { useTimeZone } from '@/lib/client/timeZone';
 import { useVideoPoster } from '@/lib/client/timelineVideo';
 import { pinPath } from '@/lib/seo';
 import type { CardPin } from '@/lib/types';
@@ -65,6 +66,9 @@ export function PinCard({
   const href = pinPath(pin);
   const media = pin.media ?? [];
   const hasPlace = pin.latitude != null && pin.longitude != null;
+  // Posted on the viewer's own current day (the same day posted: searches use).
+  const timeZone = useTimeZone(serverTimeZone);
+  const postedToday = !!pin.utcCreatedDateTime && dayKeyIn(pin.utcCreatedDateTime, timeZone) === dayKeyIn(Date.now(), timeZone);
 
   // Cards are clipped at 600px; "show more" appears only when that cut text off.
   const contentRef = useRef<HTMLDivElement>(null);
@@ -173,11 +177,14 @@ export function PinCard({
           </div>
         </div>
 
-        <h2 dir={pinTextDir(pin)} className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-pretty">
-          <Link href={href} className="text-ink transition-colors hover:text-link hover:no-underline">
-            {pin.title}
-          </Link>
-        </h2>
+        <div className="mx-3 mt-1.5 mb-2.5 flex items-start justify-between gap-2">
+          <h2 dir={pinTextDir(pin)} className="min-w-0 font-display text-[19px] leading-snug font-medium tracking-tight text-pretty">
+            <Link href={href} className="text-ink transition-colors hover:text-link hover:no-underline">
+              {pin.title}
+            </Link>
+          </h2>
+          {postedToday ? <span className="mt-1 shrink-0 rounded-full bg-link/15 px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-link uppercase">{t('card.new')}</span> : null}
+        </div>
 
         {media.length ? (
           <PinMediaFrame

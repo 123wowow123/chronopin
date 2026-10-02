@@ -916,6 +916,7 @@ const fr: Messages = {
     viewOn: 'Voir sur {source}',
   },
   card: {
+    new: 'Nouveau',
     partOfThread: 'Fait partie d’un fil',
     firstInThread: 'Première épingle d’un fil',
     showMore: 'voir plus',

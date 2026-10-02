@@ -916,6 +916,7 @@ const vi: Messages = {
     viewOn: 'Xem trên {source}',
   },
   card: {
+    new: 'Mới',
     partOfThread: 'Thuộc một chuỗi',
     firstInThread: 'Ghim đầu tiên trong một chuỗi',
     showMore: 'xem thêm',

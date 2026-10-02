@@ -917,6 +917,7 @@ const ms: Messages = {
     viewOn: 'Lihat di {source}',
   },
   card: {
+    new: 'Baharu',
     partOfThread: 'Sebahagian daripada utas',
     firstInThread: 'Pin pertama dalam utas',
     showMore: 'tunjuk lagi',

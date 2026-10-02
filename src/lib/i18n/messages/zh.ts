@@ -910,6 +910,7 @@ const zh: Messages = {
     viewOn: '在 {source} 查看',
   },
   card: {
+    new: '新',
     partOfThread: '属于某个串',
     firstInThread: '串中的第一个图钉',
     showMore: '显示更多',

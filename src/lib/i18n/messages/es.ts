@@ -916,6 +916,7 @@ const es: Messages = {
     viewOn: 'Ver en {source}',
   },
   card: {
+    new: 'Nuevo',
     partOfThread: 'Parte de un hilo',
     firstInThread: 'Primer pin de un hilo',
     showMore: 'ver más',

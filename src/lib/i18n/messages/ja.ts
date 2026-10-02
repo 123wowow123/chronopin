@@ -910,6 +910,7 @@ const ja: Messages = {
     viewOn: '{source}で見る',
   },
   card: {
+    new: '新着',
     partOfThread: 'スレッドの一部',
     firstInThread: 'スレッドの最初のピン',
     showMore: 'もっと見る',
