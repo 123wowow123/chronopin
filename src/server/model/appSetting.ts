@@ -1,6 +1,7 @@
 import { DEFAULT_AUTO_TRANSLATE, parseAutoTranslate, type AutoTranslateSetting } from '@/lib/autoTranslate';
 import { DEFAULT_DAILY_JOBS, parseDailyJobs, withDefaultJobs, type DailyJobsSetting } from '@/lib/dailyJobs';
 import { DEFAULT_MULTILINGUAL, parseMultilingual, type MultilingualSetting } from '@/lib/multilingual';
+import { DEFAULT_SITE_VERIFICATION, parseSiteVerification, type SiteVerificationSetting } from '@/lib/siteVerification';
 import { DEFAULT_SLIDER_TYPING, parseSliderTyping, type SliderTypingSetting } from '@/lib/sliderTyping';
 import { DEFAULT_TAG_LIST, parseTagList, type TagListSetting } from '@/lib/tagList';
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
@@ -16,6 +17,7 @@ const SLIDER_TYPING = 'sliderTyping';
 const TAG_LIST = 'tagList';
 const MULTILINGUAL = 'multilingual';
 const AUTO_TRANSLATE = 'autoTranslate';
+const SITE_VERIFICATION = 'siteVerification';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -113,4 +115,15 @@ export async function getAutoTranslate(): Promise<AutoTranslateSetting> {
 
 export function setAutoTranslate(setting: AutoTranslateSetting, userId: number | null) {
   return write(AUTO_TRANSLATE, setting, userId);
+}
+
+// The code in the "impact-site-verification" meta tag on every page
+// (src/app/[lang]/layout.tsx).
+export async function getSiteVerification(): Promise<SiteVerificationSetting> {
+  const parsed = parseSiteVerification(await read(SITE_VERIFICATION));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_SITE_VERIFICATION;
+}
+
+export function setSiteVerification(setting: SiteVerificationSetting, userId: number | null) {
+  return write(SITE_VERIFICATION, setting, userId);
 }
