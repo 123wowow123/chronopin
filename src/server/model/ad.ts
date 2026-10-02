@@ -97,7 +97,7 @@ export default class Ad {
     const ctx: AdContext = { preference: viewer?.preference ?? null, age, pin, performance };
     const candidates = inventory.ads.filter((ad) => ad.store === store);
     const picked = pickAds(candidates, ctx, n, expandAvoid(candidates, avoid));
-    if (picked.length) await recordImpressions(picked, slot, store);
+    if (picked.length) await recordImpressions(picked, slot, store, userId != null);
     return {
       store,
       ads: picked.map((ad) => ({
@@ -164,7 +164,7 @@ export default class Ad {
 
   static impressions(): Promise<AdImpressionRow[]> {
     return db.query<AdImpressionRow>(
-      `SELECT to_char("day", 'YYYY-MM-DD') AS "day", "adKey", "kind", "slot", "store", "count"
+      `SELECT to_char("day", 'YYYY-MM-DD') AS "day", "adKey", "kind", "slot", "store", "signedIn", "count"
        FROM "AdImpression" WHERE "day" >= (now() AT TIME ZONE 'UTC')::date - $1::integer
        ORDER BY "day"`,
       [IMPRESSION_DAYS],
@@ -378,12 +378,12 @@ async function pinFacts(pinId: number): Promise<AdContext['pin']> {
   return rows[0] ? { id: pinId, ...rows[0] } : null;
 }
 
-async function recordImpressions(ads: AdCandidate[], slot: AdSlot, store: string) {
+async function recordImpressions(ads: AdCandidate[], slot: AdSlot, store: string, signedIn: boolean) {
   await db.query(
-    `INSERT INTO "AdImpression" ("day", "adKey", "kind", "slot", "store", "count")
-     SELECT (now() AT TIME ZONE 'UTC')::date, "u"."key", "u"."kind", $3::varchar, $4::varchar, 1
+    `INSERT INTO "AdImpression" ("day", "adKey", "kind", "slot", "store", "signedIn", "count")
+     SELECT (now() AT TIME ZONE 'UTC')::date, "u"."key", "u"."kind", $3::varchar, $4::varchar, $5::boolean, 1
      FROM unnest($1::varchar[], $2::varchar[]) AS "u" ("key", "kind")
-     ON CONFLICT ("day", "adKey", "slot", "store") DO UPDATE SET "count" = "AdImpression"."count" + 1`,
-    [ads.map((ad) => ad.key), ads.map((ad) => ad.kind), slot, store],
+     ON CONFLICT ("day", "adKey", "slot", "store", "signedIn") DO UPDATE SET "count" = "AdImpression"."count" + 1`,
+    [ads.map((ad) => ad.key), ads.map((ad) => ad.kind), slot, store, signedIn],
   );
 }

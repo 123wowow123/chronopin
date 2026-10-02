@@ -108,7 +108,7 @@ export type AdClickRow = {
   originalUrl?: string | null;
 };
 
-export type AdImpressionRow = { day: string; adKey: string; kind: AdKind; slot: string; store: string; count: number };
+export type AdImpressionRow = { day: string; adKey: string; kind: AdKind; slot: string; store: string; signedIn: boolean; count: number };
 
 // A slot's own click-through history for one ad, over a trailing window
 // (src/server/model/ad.ts).
