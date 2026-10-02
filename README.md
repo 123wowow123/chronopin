@@ -305,18 +305,3 @@ https://www.chronopin.com/pin/864/shangri-la-frontier-season-3-premieres
 
 
 
-
-
-
-Generate ads block to fill in marked locations and randomize them and also use weight to tailor category based on user's wiki. Pin detail page should have related ads showing
-age should be considered when serving ads too
-Also depending on location of trafic the ads should be showing the counties version of the ads unless non is avaialable then defautl to US ads
-Ads click should be trackable and admin page should show statistics
-
-https://affiliate-program.amazon.com/p/stores/ratePlan?initialSessionID=130-5304643-5402241&ld=AZXXSOADirect
-Store Id: chronopin04-20
-
-For desktop app some taller spaces can have multi row ads
-for mobile adds should show less, no more than 1 row at a time
-
-Prefer Special Program Commissions and Bonus Events and Trade-In Program
