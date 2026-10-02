@@ -1574,6 +1574,13 @@ const en = {
       fresh: { title: 'Amazon Fresh', body: 'Groceries delivered, from everyday staples to fresh produce.', cta: 'Shop groceries' },
       pets: { title: 'Pet food and supplies', body: 'Food, treats and essentials for dogs, cats and more, delivered.', cta: 'Shop pet supplies' },
       tradein: { title: 'Amazon Trade-In', body: 'Get an Amazon gift card for eligible devices, games and more.', cta: 'Trade in' },
+      primeyoung: { title: 'Prime for Young Adults', body: 'Ages 18–24: fast, free delivery and Prime Video, free for the first 6 months.', cta: 'Start free' },
+      primeaccess: { title: 'Amazon Prime Access', body: 'Prime at half price, $6.99 a month, for people on government assistance.', cta: 'Check eligibility' },
+      babyregistry: { title: 'Amazon Baby Registry', body: 'Free welcome box and a completion discount when you build a registry.', cta: 'Create a registry' },
+      weddingregistry: { title: 'Amazon Wedding Registry', body: 'A completion discount and easy 180-day returns when you build a registry.', cta: 'Create a registry' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: 'Songs and playlists without ads, free to try for new members.', cta: 'Try it free' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: 'Read from millions of books and listen to audiobooks, free to try.', cta: 'Start reading' },
+      subscribesave: { title: 'Subscribe & Save', body: 'Save on everyday items delivered on your schedule.', cta: 'Start saving' },
     },
   },
 } as const;

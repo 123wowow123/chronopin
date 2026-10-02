@@ -40,6 +40,11 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   fresh: { icon: 'cart', background: '#3f8f1f', color: '#fff' },
   pets: { icon: 'smile', background: '#ff9900', color: '#1d1d1d' },
   tradein: { icon: 'reply', background: '#146eb4', color: '#fff' },
+  babyregistry: { icon: 'smile', background: '#f9a8c9', color: '#1d1d1d' },
+  weddingregistry: { icon: 'sparkle', background: '#be185d', color: '#fff' },
+  musicunlimited: { icon: 'play', background: '#25d1da', color: '#1d1d1d' },
+  kindleunlimited: { icon: 'eye', background: '#232f3e', color: '#fff' },
+  subscribesave: { icon: 'clock', background: '#e47911', color: '#fff' },
 };
 const DEFAULT_TILE = { icon: 'cart' as IconName, background: '#232f3e', color: '#fff' };
 
