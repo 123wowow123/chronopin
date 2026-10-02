@@ -24,6 +24,17 @@
 // link to one. posted: takes a day the same way, for the pins posted that day
 // in the viewer's time zone; a card's posted date links to one.
 //
+// Both also take the comparisons rating: and delay: do, on days: date:>=2026-09-01
+// (that day or later), date:>2026-09-01 (after it), date:<2026-10-01 (before),
+// date:<=2026-10-01 (that day or earlier) and a range with both ends in,
+// date:2026-09-01..2026-09-30 (".." since a day's own dashes, and a BC year's
+// leading one, leave "-" no room). posted:>=2026-09-01 reads the same. A day
+// with "=" (date:=2026-09-08) is a bare day. Exact days widen each other as
+// before; the comparisons narrow, so date:>=2026-09-01 date:<2026-10-01 is a
+// month, and a day or two alongside narrows to the ones inside it. A bound
+// reads days as an exact one does: all-day pins by UTC date, timed ones by the
+// viewer's.
+//
 // place: takes anywhere a pin's address names - a city, a state, a postal
 // code, a country (place:Chicago, place:60601, place:Texas, place:"New
 // York"). The address is one label written by whoever placed the pin
@@ -86,6 +97,7 @@
 // also an apostrophe (McDonald's), so it only closes a value when a space or
 // the end of the query follows it: company:'McDonald's' is one company.
 
+import { compareDayKeys, nextDayKey } from '@/lib/format';
 import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
 
 // One side of a rating: term, compared with the pin's rounded percentage.
@@ -94,6 +106,11 @@ export type RatingBound = { op: '>' | '>=' | '<' | '<=' | '='; value: number };
 // One side of a delay: term. Weeks are already days and years months, so a
 // bound counts either days or calendar months.
 export type DelayBound = { op: RatingBound['op']; unit: 'days' | 'months'; value: number };
+
+// One side of a date: or posted: comparison, as a day boundary: from the start
+// of that day on (">="), or before the start of it ("<"). "after D" and "on or
+// before D" are written as the day after.
+export type DayBound = { op: '>=' | '<'; day: string };
 
 export type SearchQuery = {
   userNames: string[];
@@ -110,8 +127,11 @@ export type SearchQuery = {
   // were posted.
   dates: string[];
   postedDays: string[];
+  // Comparisons on those days, every one of them (a pin's start, a pin's
+  // posting).
+  dateBounds: DayBound[];
+  postedBounds: DayBound[];
   tags: string[];
-  // Tags a pin must not carry (-tag:Anime), matched as tags: are.
   excludeTags: string[];
   // Places an address must name: cities, states, postal codes, countries.
   places: string[];
@@ -128,7 +148,6 @@ const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
 const FIELD = '(-?(?:company|category|user|confidence|date|posted|tag|pin|place|rating|delay))';
-const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -213,6 +232,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     confidenceBands: [],
     dates: [],
     postedDays: [],
+    dateBounds: [],
+    postedBounds: [],
     tags: [],
     excludeTags: [],
     places: [],
@@ -241,8 +262,14 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
         if (Number.isInteger(n) && n > 0 && !query.ids.includes(n)) query.ids.push(n);
       }
     } else if (part.field === 'date' || part.field === 'posted') {
-      // Anything but a day is left out rather than matching nothing.
-      if (DAY_KEY.test(part.value)) addUnique(part.field === 'date' ? query.dates : query.postedDays, part.value);
+      // Anything but a day or a comparison on one is left out rather than
+      // matching nothing.
+      const { days, bounds } = dayBounds(part.value);
+      const [exact, compared] = part.field === 'date' ? [query.dates, query.dateBounds] : [query.postedDays, query.postedBounds];
+      for (const day of days) addUnique(exact, day);
+      for (const bound of bounds) {
+        if (!compared.some((b) => b.op === bound.op && b.day === bound.day)) compared.push(bound);
+      }
     } else if (part.field === 'place') {
       addUnique(query.places, part.value);
     } else if (part.field === 'rating') {
@@ -273,6 +300,8 @@ export function hasFilters(query: SearchQuery): boolean {
     query.confidenceBands.length ||
     query.dates.length ||
     query.postedDays.length ||
+    query.dateBounds.length ||
+    query.postedBounds.length ||
     query.tags.length ||
     query.excludeTags.length ||
     query.places.length ||
@@ -285,7 +314,39 @@ export function hasFilters(query: SearchQuery): boolean {
 // the viewer's own. Everything else answers the same everywhere, so it can be
 // cached once for all zones.
 export function dependsOnZone(query: SearchQuery): boolean {
-  return !!(query.dates.length || query.postedDays.length);
+  return !!(query.dates.length || query.postedDays.length || query.dateBounds.length || query.postedBounds.length);
+}
+
+const DAY = '(-?\\d{4,6}-\\d{2}-\\d{2})';
+const DAY_COMPARISON = new RegExp(`^(>=|<=|=>|=<|>|<|=)?${DAY}$`);
+const DAY_RANGE = new RegExp(`^${DAY}\\.\\.${DAY}$`);
+
+// What a date: or posted: value sets: a bare day or "=" one is an exact day, a
+// comparison or range is boundaries, and anything else sets nothing.
+export function dayBounds(value: string): { days: string[]; bounds: DayBound[] } {
+  const text = value.trim();
+  const range = DAY_RANGE.exec(text);
+  if (range) {
+    const [low, high] = [range[1], range[2]].sort(compareDayKeys);
+    return {
+      days: [],
+      bounds: [
+        { op: '>=', day: low },
+        { op: '<', day: nextDayKey(high) },
+      ],
+    };
+  }
+  const bound = DAY_COMPARISON.exec(text);
+  if (!bound) {
+    return { days: [], bounds: [] };
+  }
+  const op = ({ '=>': '>=', '=<': '<=' } as Record<string, string>)[bound[1] ?? ''] ?? bound[1] ?? '=';
+  const day = bound[2];
+  if (op === '=') return { days: [day], bounds: [] };
+  if (op === '>=') return { days: [], bounds: [{ op: '>=', day }] };
+  if (op === '>') return { days: [], bounds: [{ op: '>=', day: nextDayKey(day) }] };
+  if (op === '<') return { days: [], bounds: [{ op: '<', day }] };
+  return { days: [], bounds: [{ op: '<', day: nextDayKey(day) }] };
 }
 
 const PERCENT = '(\\d+(?:\\.\\d+)?)\\s*%?';

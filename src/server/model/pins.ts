@@ -9,7 +9,7 @@ import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
-import type { DelayBound, RatingBound } from '../util/searchQuery';
+import type { DayBound, DelayBound, RatingBound } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
@@ -25,6 +25,8 @@ export type PinSearchFilters = {
   confidenceBands: ConfidenceBand[];
   dates: string[];
   postedDays: string[];
+  dateBounds: DayBound[];
+  postedBounds: DayBound[];
   tags: string[];
   excludeTags: string[];
   places: string[];
@@ -944,6 +946,17 @@ function searchClauses(filter: SearchFilter) {
   }
   if (filter.postedDays.length) {
     where.push(`(${filter.postedDays.map((day) => localDay('"Pin"."utcCreatedDateTime"', day)).join(' OR ')})`);
+  }
+  // Comparisons on those days (date:>=, posted:<, ranges), every one of them,
+  // each against the instant its day begins - UTC for an all-day pin's start,
+  // the zone otherwise.
+  for (const { op, day } of filter.dateBounds) {
+    const utc = `"Pin"."utcStartDateTime" ${op} ${add(new Date(dayKeyToMs(day)))}`;
+    const local = `"Pin"."utcStartDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`;
+    where.push(`(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${local}))`);
+  }
+  for (const { op, day } of filter.postedBounds) {
+    where.push(`"Pin"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`);
   }
   // The Watch search choice: only pins this user watches.
   if (filter.favoriteUserId != null) {
