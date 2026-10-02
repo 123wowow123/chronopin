@@ -55,7 +55,7 @@ const rowTracks = `grid grid-cols-1 sm:grid-cols-2 sm:gap-x-2.5 ${WIDE_COLUMNS.m
 // How far a day may spread at each width, which is what holds a track to at
 // most one card's 448px; the "View all" link under the cards takes it too, to stay
 // centred on them.
-const rowWidth = `sm:max-w-[906px] ${WIDE_COLUMNS.map((c) => c.row).join(' ')}`;
+export const rowWidth = `sm:max-w-[906px] ${WIDE_COLUMNS.map((c) => c.row).join(' ')}`;
 
 type TagVariant = 'date' | 'countdown' | 'today' | 'trivia';
 
@@ -101,6 +101,7 @@ export function TimeBlock({
   daySearchHref,
   dayTotal,
   boost,
+  adRow,
 }: {
   // Defaults to the day's id, which is only unique in date order.
   id?: string;
@@ -121,6 +122,11 @@ export function TimeBlock({
   dayTotal?: number;
   // How much more each pin weighs for this viewer (their preference wiki).
   boost?: ReturnType<typeof personalWeigher>;
+  // An ad row after this day, inside its section so the sticky tag column's
+  // reach (bound to the section's box) covers it too: the label rides until
+  // the next day's takes over instead of letting go early and leaving a gap
+  // over the ad's own margin.
+  adRow?: React.ReactNode;
 }) {
   const t = useT();
   const { locale } = t;
@@ -243,6 +249,7 @@ export function TimeBlock({
           ))}
         </ul>
       )}
+      {adRow}
     </section>
   );
 }

@@ -612,7 +612,7 @@ const ms: Messages = {
     ticketsNotYetOnSale: 'Belum dijual',
     ticketsOnSaleFrom: 'Dijual {date}',
     ticketsCheckedAt: 'setakat {date}',
-    getTickets: 'Dapatkan tiket',
+    getTickets: 'Beli tiket',
     thread: 'Utas',
     respond: 'Balas Pin ini',
     moreLikeThis: 'Lagi yang seumpama ini',
@@ -1536,6 +1536,20 @@ const ms: Messages = {
     companiesTitle: 'Semua syarikat',
     tagsDescription: 'Setiap subjek di {site} dengan tarikh keluaran, acara dan tarikh akhir akan datang, mengikut bilangan pin.',
     companiesDescription: 'Setiap syarikat di {site} dengan pelancaran, keluaran, keputusan kewangan dan acara akan datang, mengikut bilangan pin.',
+  },
+  ads: {
+    sponsored: 'Ditaja',
+    seeOnAmazon: 'Lihat di Amazon',
+    programs: {
+      prime: { title: 'Cuba Amazon Prime secara percuma', body: 'Penghantaran pantas dan percuma, Prime Video dan banyak lagi.', cta: 'Mulakan percubaan percuma' },
+      audible: { title: 'Cuba Audible secara percuma', body: 'Buku audio, podcast dan karya asli, percuma dicuba untuk ahli baharu.', cta: 'Mula mendengar' },
+      business: { title: 'Amazon Business', body: 'Harga perniagaan, diskaun kuantiti dan invois. Percuma untuk menyertai.', cta: 'Cipta akaun percuma' },
+      primevideo: { title: 'Tonton di Prime Video', body: 'Filem, siri, anime dan sukan secara langsung untuk distrim.', cta: 'Mula menonton' },
+      haul: { title: 'Amazon Haul', body: 'Harga sangat rendah untuk fesyen, rumah dan banyak lagi.', cta: 'Beli di Haul' },
+      fresh: { title: 'Amazon Fresh', body: 'Barangan runcit dihantar, daripada keperluan harian hingga hasil segar.', cta: 'Beli barangan runcit' },
+      pets: { title: 'Makanan dan bekalan haiwan peliharaan', body: 'Makanan, snek dan keperluan untuk anjing, kucing dan lain-lain, dihantar.', cta: 'Beli bekalan haiwan' },
+      tradein: { title: 'Amazon Trade-In', body: 'Dapatkan kad hadiah Amazon untuk peranti, permainan dan lain-lain yang layak.', cta: 'Tukar beli' },
+    },
   },
 };
 

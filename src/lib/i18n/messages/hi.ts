@@ -610,7 +610,7 @@ const hi: Messages = {
     ticketsNotYetOnSale: 'अभी बिक्री शुरू नहीं हुई',
     ticketsOnSaleFrom: '{date} से बिक्री शुरू',
     ticketsCheckedAt: '{date} तक की जानकारी',
-    getTickets: 'टिकट लें',
+    getTickets: 'टिकट खरीदें',
     thread: 'थ्रेड',
     respond: 'इस पिन का जवाब दें',
     moreLikeThis: 'इससे मिलते-जुलते पिन',
@@ -1543,6 +1543,20 @@ const hi: Messages = {
     companiesTitle: 'सभी कंपनियाँ',
     tagsDescription: '{site} पर आने वाली रिलीज़ तारीखों, इवेंट और समय-सीमाओं वाले सभी विषय, पिन की संख्या के अनुसार।',
     companiesDescription: '{site} पर आने वाले लॉन्च, रिलीज़, नतीजों और इवेंट वाली सभी कंपनियाँ, पिन की संख्या के अनुसार।',
+  },
+  ads: {
+    sponsored: 'प्रायोजित',
+    seeOnAmazon: 'Amazon पर देखें',
+    programs: {
+      prime: { title: 'Amazon Prime मुफ़्त आज़माएँ', body: 'तेज़ और मुफ़्त डिलीवरी, Prime Video और बहुत कुछ।', cta: 'मुफ़्त ट्रायल शुरू करें' },
+      audible: { title: 'Audible मुफ़्त आज़माएँ', body: 'ऑडियोबुक, पॉडकास्ट और ओरिजिनल, नए सदस्यों के लिए मुफ़्त ट्रायल।', cta: 'सुनना शुरू करें' },
+      business: { title: 'Amazon Business', body: 'व्यावसायिक कीमतें, थोक छूट और इनवॉइस। जुड़ना मुफ़्त है।', cta: 'मुफ़्त खाता बनाएँ' },
+      primevideo: { title: 'Prime Video पर देखें', body: 'फ़िल्में, सीरीज़, एनीमे और लाइव खेल स्ट्रीम करें।', cta: 'देखना शुरू करें' },
+      haul: { title: 'Amazon Haul', body: 'फ़ैशन, घर और बहुत कुछ पर बेहद कम कीमतें।', cta: 'Haul पर ख़रीदें' },
+      fresh: { title: 'Amazon Fresh', body: 'रोज़मर्रा की चीज़ों से ताज़ी उपज तक, किराना घर पर।', cta: 'किराना ख़रीदें' },
+      pets: { title: 'पालतू जानवरों का खाना और सामान', body: 'कुत्तों, बिल्लियों और अन्य के लिए खाना, ट्रीट और ज़रूरी सामान, घर पर।', cta: 'पालतू सामान ख़रीदें' },
+      tradein: { title: 'Amazon Trade-In', body: 'योग्य डिवाइस, गेम और अन्य चीज़ों के बदले Amazon गिफ़्ट कार्ड पाएँ।', cta: 'ट्रेड-इन करें' },
+    },
   },
 };
 

@@ -32,9 +32,10 @@ import { DistanceSlider } from './DistanceSlider';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
 import { NewPins, withLivePin } from './NewPins';
-import { TimeBlock, TodayMarker } from './TimeBlock';
+import { TimeBlock, TodayMarker, rowWidth } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 import { TrendingPins } from './TrendingPins';
+import { AdPanel, AdRow } from '@/components/ads/AdBlock';
 import { useT } from '@/lib/client/i18n';
 import { useWholeRowPanels } from '@/lib/client/wholeRows';
 import { withPageLang } from '@/lib/client/navigation';
@@ -49,6 +50,21 @@ const RECOUNT_DELAY_MS = 500;
 // The pin a timeline opened on (the pin page's "To timeline"): the timeline
 // starts there, centred, rather than on today.
 type Focus = { id: number; utcStartDateTime: string; allDay?: boolean };
+
+// An ad row follows every third calendar day that has pins, picked by the
+// day itself rather than its place in the list, so a row stays put as earlier
+// or later days load around it. Never after the last day.
+const AD_EVERY_DAYS = 3;
+function adAfterDay(day: string): boolean {
+  const match = /^(-?\d+)-(\d{2})-(\d{2})/.exec(day);
+  if (!match) return false;
+  const date = new Date(0);
+  date.setUTCFullYear(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  const epochDay = Math.floor(date.getTime() / 86400000);
+  return ((epochDay % AD_EVERY_DAYS) + AD_EVERY_DAYS) % AD_EVERY_DAYS === 0;
+}
+// Under the day's cards, as wide as they spread at each width (TimeBlock's PinColumns).
+const AD_ROW_PLACE = `mt-6 lg:ms-[170px] ${rowWidth}`;
 
 const NO_TODAY_MARKER: ReturnType<typeof resolveTodayMarker> = { index: -1, atEnd: false, todayBagIndex: -1 };
 
@@ -697,7 +713,9 @@ export function Timeline({
   }
 
   // Refitted when either side panel's rows change.
-  const highlightRows = useMemo(() => [trending.pins, newPins], [trending.pins, newPins]);
+  // How many ads the side panel got, so the column is fitted again once they come.
+  const [sideAds, setSideAds] = useState(0);
+  const highlightRows = useMemo(() => [trending.pins, newPins, sideAds], [trending.pins, newPins, sideAds]);
   const highlightsRef = useWholeRowPanels<HTMLDivElement>(highlightRows);
 
   const empty = !bags.length;
@@ -726,6 +744,7 @@ export function Timeline({
             <div ref={highlightsRef} className="pointer-events-none flex min-h-0 grow basis-28 flex-col flex-wrap gap-2 overflow-clip [&>*]:pointer-events-auto [&>*]:w-full">
               <TrendingPins pins={trending.pins} days={trending.days} />
               <NewPins pins={newPins} />
+              <AdPanel onAds={setSideAds} />
             </div>
           }
         >
@@ -770,6 +789,7 @@ export function Timeline({
                 boost={boost}
                 daySearchHref={daySearchHref}
                 dayTotal={edgeDays.has(bag.day) ? dayCounts[countKey(bag.day)] : undefined}
+                adRow={index < bags.length - 1 && adAfterDay(bag.day) ? <AdRow slot="timeline-row" className={AD_ROW_PLACE} /> : null}
               />
             </div>
           ))}

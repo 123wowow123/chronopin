@@ -88,6 +88,7 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: { index: true, follow: true },
     other: {
       'google-adsense-account': 'ca-pub-4845333369058390',
+      'impact-site-verification': '8a378ae2-a2ee-42c0-be49-2f2e07f13052',
     },
   };
 }

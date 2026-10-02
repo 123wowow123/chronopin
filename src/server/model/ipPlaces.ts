@@ -3,7 +3,7 @@ import { locate } from '../ipLocation';
 
 // Tables whose rows carry an "ip" and the place columns it is looked up into
 // ("country", "region", "city", "latitude", "longitude", "located").
-export type LocatedTable = 'ShopClick' | 'PinView';
+export type LocatedTable = 'ShopClick' | 'PinView' | 'AdClick';
 
 // Places every row of the table whose address has not been looked up yet. A
 // row the database cannot place is marked looked-up all the same, so it is

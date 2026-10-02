@@ -1518,6 +1518,20 @@ const zh: Messages = {
     tagsDescription: '{site} 上有即将到来的发布日期、活动和截止日期的所有主题，按 Pin 数量排列。',
     companiesDescription: '{site} 上有即将到来的发布、上市、财报和活动的所有公司，按 Pin 数量排列。',
   },
+  ads: {
+    sponsored: '赞助',
+    seeOnAmazon: '在亚马逊查看',
+    programs: {
+      prime: { title: '免费试用 Amazon Prime', body: '快速免费配送、Prime Video 等更多权益。', cta: '开始免费试用' },
+      audible: { title: '免费试用 Audible', body: '有声书、播客和原创节目，新会员可免费试用。', cta: '开始收听' },
+      business: { title: 'Amazon Business', body: '企业价格、批量折扣和发票服务。免费注册。', cta: '创建免费账户' },
+      primevideo: { title: '在 Prime Video 观看', body: '电影、剧集、动画和体育直播。', cta: '开始观看' },
+      haul: { title: 'Amazon Haul', body: '时尚、家居等商品，超低价格。', cta: '逛 Haul' },
+      fresh: { title: 'Amazon Fresh', body: '日常用品到新鲜农产品，杂货送货上门。', cta: '选购杂货' },
+      pets: { title: '宠物食品和用品', body: '狗、猫等宠物的食品、零食和必需品，送货上门。', cta: '选购宠物用品' },
+      tradein: { title: '亚马逊以旧换新', body: '用符合条件的设备、游戏等换取亚马逊礼品卡。', cta: '以旧换新' },
+    },
+  },
 };
 
 export default zh;

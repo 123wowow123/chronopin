@@ -1536,6 +1536,20 @@ const vi: Messages = {
     tagsDescription: 'Mọi chủ đề trên {site} có ngày phát hành, sự kiện và hạn chót sắp tới, theo số ghim.',
     companiesDescription: 'Mọi công ty trên {site} có sự kiện ra mắt, phát hành, báo cáo kết quả sắp tới, theo số ghim.',
   },
+  ads: {
+    sponsored: 'Được tài trợ',
+    seeOnAmazon: 'Xem trên Amazon',
+    programs: {
+      prime: { title: 'Dùng thử Amazon Prime miễn phí', body: 'Giao hàng nhanh miễn phí, Prime Video và nhiều hơn nữa.', cta: 'Bắt đầu dùng thử miễn phí' },
+      audible: { title: 'Dùng thử Audible miễn phí', body: 'Sách nói, podcast và nội dung gốc, thành viên mới được dùng thử miễn phí.', cta: 'Bắt đầu nghe' },
+      business: { title: 'Amazon Business', body: 'Giá doanh nghiệp, chiết khấu theo số lượng và hóa đơn. Tham gia miễn phí.', cta: 'Tạo tài khoản miễn phí' },
+      primevideo: { title: 'Xem trên Prime Video', body: 'Phim, phim bộ, anime và thể thao trực tiếp.', cta: 'Bắt đầu xem' },
+      haul: { title: 'Amazon Haul', body: 'Giá cực thấp cho thời trang, đồ gia dụng và hơn thế.', cta: 'Mua trên Haul' },
+      fresh: { title: 'Amazon Fresh', body: 'Giao thực phẩm tận nhà, từ đồ thiết yếu đến hàng tươi.', cta: 'Mua thực phẩm' },
+      pets: { title: 'Thức ăn và đồ dùng thú cưng', body: 'Thức ăn, đồ ăn vặt và đồ thiết yếu cho chó, mèo và hơn thế, giao tận nhà.', cta: 'Mua đồ thú cưng' },
+      tradein: { title: 'Amazon Trade-In', body: 'Nhận thẻ quà tặng Amazon cho thiết bị, trò chơi và hơn thế đủ điều kiện.', cta: 'Đổi cũ lấy thẻ' },
+    },
+  },
 };
 
 export default vi;

@@ -1,5 +1,8 @@
 {
   "permissions": {
-    "allow": ["Bash(docker exec chronopin-postgres psql:*)"]
+    "allow": [
+      "Bash(docker exec chronopin-postgres psql:*)",
+      "Bash(curl * https://www.chronopin.com/api/admin/db/*)"
+    ]
   }
 }

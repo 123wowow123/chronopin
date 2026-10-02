@@ -612,7 +612,7 @@ const en = {
     ticketsNotYetOnSale: 'Not on sale yet',
     ticketsOnSaleFrom: 'On sale {date}',
     ticketsCheckedAt: 'as of {date}',
-    getTickets: 'Get tickets',
+    getTickets: 'Buy tickets',
     thread: 'Thread',
     respond: 'Respond to this Pin',
     moreLikeThis: 'More like this',
@@ -1536,6 +1536,20 @@ const en = {
     companiesTitle: 'All companies',
     tagsDescription: 'Every subject on {site} with upcoming release dates, events and deadlines, by how many pins it has.',
     companiesDescription: 'Every company on {site} with upcoming launches, releases, earnings and events, by how many pins it has.',
+  },
+  ads: {
+    sponsored: 'Sponsored',
+    seeOnAmazon: 'See it on Amazon',
+    programs: {
+      prime: { title: 'Try Amazon Prime free', body: 'Fast, free delivery, Prime Video and more.', cta: 'Start a free trial' },
+      audible: { title: 'Try Audible free', body: 'Audiobooks, podcasts and originals, free to try for new members.', cta: 'Start listening' },
+      business: { title: 'Amazon Business', body: 'Business prices, quantity discounts and invoicing. Free to join.', cta: 'Create a free account' },
+      primevideo: { title: 'Watch on Prime Video', body: 'Movies, series, anime and live sports to stream.', cta: 'Start watching' },
+      haul: { title: 'Amazon Haul', body: 'Ultra-low prices on fashion, home and more.', cta: 'Shop Haul' },
+      fresh: { title: 'Amazon Fresh', body: 'Groceries delivered, from everyday staples to fresh produce.', cta: 'Shop groceries' },
+      pets: { title: 'Pet food and supplies', body: 'Food, treats and essentials for dogs, cats and more, delivered.', cta: 'Shop pet supplies' },
+      tradein: { title: 'Amazon Trade-In', body: 'Get an Amazon gift card for eligible devices, games and more.', cta: 'Trade in' },
+    },
   },
 } as const;
 
