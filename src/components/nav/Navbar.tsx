@@ -1,3 +1,4 @@
+import { connection } from 'next/server';
 import { Suspense } from 'react';
 import { EmailVerifyBanner } from '@/components/EmailVerifyBanner';
 import { LogoMark } from '@/components/ui/LogoMark';
@@ -7,6 +8,8 @@ import { SearchBox } from './SearchBox';
 import { adPlacements } from '@/server/services/pages';
 
 export async function Navbar() {
+  // Per request: the placements come from the database, which a build has none of.
+  await connection();
   const placements = await adPlacements();
   return (
     // The bottom rule is a shadow, not a border, so the bar stays exactly 52px.
