@@ -143,6 +143,7 @@ export function Timeline({
   video,
   sliderTyping = false,
   tagList = false,
+  ads = false,
   trending,
   newPins: initialNewPins,
   preference,
@@ -170,6 +171,8 @@ export function Timeline({
   sliderTyping?: boolean;
   // The admin setting: whether the tag panel lists its tags, or opens the big cloud.
   tagList?: boolean;
+  // The admin setting: whether the day-to-day ad row and the side ad panel show.
+  ads?: boolean;
   // The most viewed pins with rising views, beside the cards on wide screens.
   trending: { pins: TrendingPin[]; days: number };
   // The pins added most recently, under trending on wide screens. Kept live
@@ -745,7 +748,7 @@ export function Timeline({
             <div ref={highlightsRef} className="pointer-events-none flex min-h-0 grow basis-28 flex-col flex-wrap gap-2 overflow-clip [&>*]:pointer-events-auto [&>*]:w-full">
               <TrendingPins pins={trending.pins} days={trending.days} />
               <NewPins pins={newPins} />
-              <AdPanel onAds={setSideAds} />
+              {ads ? <AdPanel onAds={setSideAds} /> : null}
             </div>
           }
         >
@@ -790,7 +793,7 @@ export function Timeline({
                 boost={boost}
                 daySearchHref={daySearchHref}
                 dayTotal={edgeDays.has(bag.day) ? dayCounts[countKey(bag.day)] : undefined}
-                adRow={index < bags.length - 1 && adAfterDay(bag.day) ? <AdRow slot="timeline-row" className={AD_ROW_PLACE} /> : null}
+                adRow={ads && index < bags.length - 1 && adAfterDay(bag.day) ? <AdRow slot="timeline-row" className={AD_ROW_PLACE} /> : null}
               />
             </div>
           ))}

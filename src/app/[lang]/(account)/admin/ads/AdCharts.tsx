@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Link from '@/components/ui/Link';
-import { useMemo, useState } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { LOCALES } from '@/lib/i18n/config';
 import en from '@/lib/i18n/messages/en';
@@ -49,20 +49,31 @@ const programName = (program: string | null) =>
   program ? ((en.ads.programs as Record<string, { title: string }>)[program]?.title ?? program) : null;
 const rate = (clicks: number, shown: number) => (shown ? `${((clicks / shown) * 100).toFixed(1)}%` : '–');
 
-type Row = { key: string; shown: number; clicks: number; people: number };
+type Cell = { shown: number; clicks: number; people: number };
+type Row = Cell & { key: string; signedIn: Cell; guests: Cell };
 
-// Shown and clicked per key, most clicked first, then most shown.
+// Shown and clicked per key, most clicked first, then most shown, with each
+// row's totals also split between signed-in users and guests.
 function rows(impressions: AdImpressionRow[], clicks: AdClickRow[], keyOfImpression: (i: AdImpressionRow) => string, keyOfClick: (c: AdClickRow) => string): Row[] {
-  const out = new Map<string, { shown: number; clicks: number; people: Set<string> }>();
-  const at = (key: string) => out.get(key) ?? out.set(key, { shown: 0, clicks: 0, people: new Set() }).get(key)!;
-  for (const i of impressions) at(keyOfImpression(i)).shown += i.count;
+  type Acc = { shown: number; clicks: number; people: Set<string> };
+  const blank = (): Acc => ({ shown: 0, clicks: 0, people: new Set() });
+  const out = new Map<string, { all: Acc; signedIn: Acc; guests: Acc }>();
+  const at = (key: string) => out.get(key) ?? out.set(key, { all: blank(), signedIn: blank(), guests: blank() }).get(key)!;
+  for (const i of impressions) {
+    const row = at(keyOfImpression(i));
+    row.all.shown += i.count;
+    (i.signedIn ? row.signedIn : row.guests).shown += i.count;
+  }
   for (const c of clicks) {
     const row = at(keyOfClick(c));
-    row.clicks += 1;
-    row.people.add(who(c));
+    for (const part of [row.all, c.userId != null ? row.signedIn : row.guests]) {
+      part.clicks += 1;
+      part.people.add(who(c));
+    }
   }
+  const cell = (a: Acc): Cell => ({ shown: a.shown, clicks: a.clicks, people: a.people.size });
   return [...out]
-    .map(([key, r]) => ({ key, shown: r.shown, clicks: r.clicks, people: r.people.size }))
+    .map(([key, r]) => ({ key, ...cell(r.all), signedIn: cell(r.signedIn), guests: cell(r.guests) }))
     .sort((a, b) => b.clicks - a.clicks || b.shown - a.shown);
 }
 
@@ -90,7 +101,7 @@ function PlaceTable({ title, rows, name }: { title: string; rows: Row[]; name: (
   );
 }
 
-function StatTable({ title, rows, name, empty }: { title: string; rows: Row[]; name: (key: string) => React.ReactNode; empty: string }) {
+function StatTable({ title, rows, name, empty, split = true }: { title: string; rows: Row[]; name: (key: string) => React.ReactNode; empty: string; split?: boolean }) {
   return (
     <section className="surface p-4 sm:p-5">
       <h2 className="mb-3 text-base font-semibold">{title}</h2>
@@ -108,13 +119,26 @@ function StatTable({ title, rows, name, empty }: { title: string; rows: Row[]; n
             </thead>
             <tbody className="divide-y divide-line">
               {rows.map((r) => (
-                <tr key={r.key}>
-                  <td className="max-w-0 py-1.5">{name(r.key)}</td>
-                  <td className="py-1.5 pl-6 text-right">{r.shown}</td>
-                  <td className="py-1.5 pl-6 text-right">{r.clicks}</td>
-                  <td className="py-1.5 pl-6 text-right">{rate(r.clicks, r.shown)}</td>
-                  <td className="py-1.5 pl-6 text-right">{r.people}</td>
-                </tr>
+                <Fragment key={r.key}>
+                  <tr>
+                    <td className="max-w-0 py-1.5">{name(r.key)}</td>
+                    <td className="py-1.5 pl-6 text-right">{r.shown}</td>
+                    <td className="py-1.5 pl-6 text-right">{r.clicks}</td>
+                    <td className="py-1.5 pl-6 text-right">{rate(r.clicks, r.shown)}</td>
+                    <td className="py-1.5 pl-6 text-right">{r.people}</td>
+                  </tr>
+                  {split
+                    ? ([['Signed in', r.signedIn], ['Guests', r.guests]] as const).map(([label, c]) => (
+                        <tr key={label} className="text-xs text-subtle">
+                          <td className="py-0.5 pl-4">{label}</td>
+                          <td className="py-0.5 pl-6 text-right">{c.shown}</td>
+                          <td className="py-0.5 pl-6 text-right">{c.clicks}</td>
+                          <td className="py-0.5 pl-6 text-right">{rate(c.clicks, c.shown)}</td>
+                          <td className="py-0.5 pl-6 text-right">{c.people}</td>
+                        </tr>
+                      ))
+                    : null}
+                </Fragment>
               ))}
             </tbody>
           </table>
@@ -225,6 +249,7 @@ export function AdCharts({
       people: new Set(shownClicks.map(who)).size,
       kinds: rows(shownImpressions, shownClicks, (i) => i.kind, (c) => c.kind),
       slots: rows(shownImpressions, shownClicks, (i) => i.slot, (c) => c.slot),
+      viewers: rows(shownImpressions, shownClicks, (i) => (i.signedIn ? 'in' : 'guest'), (c) => (c.userId != null ? 'in' : 'guest')),
       stores: rows(shownImpressions, shownClicks, (i) => i.store, (c) => c.store),
       ads: rows(shownImpressions, shownClicks, (i) => i.adKey, (c) => c.adKey).slice(0, 25),
       countries: rows([], shownClicks, () => '', (c) => c.country ?? ''),
@@ -327,6 +352,15 @@ export function AdCharts({
         <StatTable title="By kind" rows={stats.kinds} name={(key) => KIND_LABEL[key as AdKind] ?? key} empty={empty} />
         <StatTable title="By placement" rows={stats.slots} name={(key) => SLOT_LABEL[key] ?? key} empty={empty} />
       </div>
+
+      <StatTable
+        title="Signed-in users and guests"
+        rows={stats.viewers}
+        name={(key) => (key === 'in' ? 'Signed-in users' : 'Guests')}
+        empty={empty}
+        split={false}
+      />
+      <p className="-mt-2 text-xs text-faint">Ads shown before signed-in views were counted separately (0113) are counted as guests.</p>
 
       <div className="grid gap-4 lg:grid-cols-2">
         <section className="surface p-4 sm:p-5">

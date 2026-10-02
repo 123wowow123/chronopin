@@ -5,12 +5,14 @@ import { DEFAULT_SITE_VERIFICATION, parseSiteVerification, type SiteVerification
 import { DEFAULT_SLIDER_TYPING, parseSliderTyping, type SliderTypingSetting } from '@/lib/sliderTyping';
 import { DEFAULT_TAG_LIST, parseTagList, type TagListSetting } from '@/lib/tagList';
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
+import { DEFAULT_TIMELINE_ADS, parseTimelineAds, type TimelineAdsSetting } from '@/lib/timelineAds';
 import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
 import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from '@/lib/userWiki';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
 const TIMELINE_VIDEO = 'timelineVideo';
+const TIMELINE_ADS = 'timelineAds';
 const PERSONAL_BAG = 'personalBag';
 const DAILY_JOBS = 'dailyJobs';
 const SLIDER_TYPING = 'sliderTyping';
@@ -52,6 +54,16 @@ export async function getTimelineVideo(): Promise<TimelineVideoSetting> {
 
 export function setTimelineVideo(setting: TimelineVideoSetting, userId: number | null) {
   return write(TIMELINE_VIDEO, setting, userId);
+}
+
+// Whether the main timeline shows ad blocks.
+export async function getTimelineAds(): Promise<TimelineAdsSetting> {
+  const parsed = parseTimelineAds(await read(TIMELINE_ADS));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_TIMELINE_ADS;
+}
+
+export function setTimelineAds(setting: TimelineAdsSetting, userId: number | null) {
+  return write(TIMELINE_ADS, setting, userId);
 }
 
 // Whether the timeline weighs a crowded day's cards by the viewer's preference wiki.
