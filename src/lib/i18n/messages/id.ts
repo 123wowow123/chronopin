@@ -1574,6 +1574,13 @@ const id: Messages = {
       fresh: { title: 'Amazon Fresh', body: 'Belanjaan diantar, dari kebutuhan sehari-hari hingga produk segar.', cta: 'Belanja bahan makanan' },
       pets: { title: 'Makanan dan perlengkapan hewan', body: 'Makanan, camilan, dan kebutuhan anjing, kucing, dan lainnya, diantar.', cta: 'Belanja perlengkapan hewan' },
       tradein: { title: 'Amazon Trade-In', body: 'Dapatkan kartu hadiah Amazon untuk perangkat, game, dan lainnya yang memenuhi syarat.', cta: 'Tukar tambah' },
+      primeyoung: { title: 'Prime untuk Dewasa Muda', body: 'Usia 18–24 tahun: pengiriman cepat gratis dan Prime Video, gratis 6 bulan pertama.', cta: 'Mulai gratis' },
+      primeaccess: { title: 'Amazon Prime Access', body: 'Prime setengah harga, $6,99 per bulan, bagi penerima bantuan pemerintah.', cta: 'Cek kelayakan' },
+      babyregistry: { title: 'Registri Bayi Amazon', body: 'Kotak sambutan gratis dan diskon saat registri selesai dibuat.', cta: 'Buat registri' },
+      weddingregistry: { title: 'Registri Pernikahan Amazon', body: 'Diskon saat registri selesai dibuat dan pengembalian mudah dalam 180 hari.', cta: 'Buat registri' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: 'Lagu dan playlist tanpa iklan, gratis dicoba untuk anggota baru.', cta: 'Coba gratis' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: 'Baca jutaan buku dan dengarkan buku audio, gratis dicoba.', cta: 'Mulai membaca' },
+      subscribesave: { title: 'Berlangganan & Hemat', body: 'Hemat untuk kebutuhan sehari-hari yang dikirim sesuai jadwalmu.', cta: 'Mulai hemat' },
     },
   },
 };

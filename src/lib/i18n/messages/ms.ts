@@ -1574,6 +1574,13 @@ const ms: Messages = {
       fresh: { title: 'Amazon Fresh', body: 'Barangan runcit dihantar, daripada keperluan harian hingga hasil segar.', cta: 'Beli barangan runcit' },
       pets: { title: 'Makanan dan bekalan haiwan peliharaan', body: 'Makanan, snek dan keperluan untuk anjing, kucing dan lain-lain, dihantar.', cta: 'Beli bekalan haiwan' },
       tradein: { title: 'Amazon Trade-In', body: 'Dapatkan kad hadiah Amazon untuk peranti, permainan dan lain-lain yang layak.', cta: 'Tukar beli' },
+      primeyoung: { title: 'Prime untuk Dewasa Muda', body: 'Umur 18–24 tahun: penghantaran pantas percuma dan Prime Video, percuma 6 bulan pertama.', cta: 'Mula percuma' },
+      primeaccess: { title: 'Amazon Prime Access', body: 'Prime separuh harga, $6.99 sebulan, untuk penerima bantuan kerajaan.', cta: 'Semak kelayakan' },
+      babyregistry: { title: 'Daftar Bayi Amazon', body: 'Kotak sambutan percuma dan diskaun apabila daftar dilengkapkan.', cta: 'Cipta daftar' },
+      weddingregistry: { title: 'Daftar Perkahwinan Amazon', body: 'Diskaun apabila daftar dilengkapkan dan pemulangan mudah dalam 180 hari.', cta: 'Cipta daftar' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: 'Lagu dan senarai main tanpa iklan, percuma dicuba untuk ahli baharu.', cta: 'Cuba percuma' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: 'Baca berjuta-juta buku dan dengar buku audio, percuma dicuba.', cta: 'Mula membaca' },
+      subscribesave: { title: 'Langgan & Jimat', body: 'Jimat untuk barang harian yang dihantar mengikut jadual anda.', cta: 'Mula jimat' },
     },
   },
 };

@@ -1568,6 +1568,13 @@ const de: Messages = {
       fresh: { title: 'Amazon Fresh', body: 'Lebensmittel geliefert, vom Alltagsbedarf bis zu frischen Produkten.', cta: 'Lebensmittel einkaufen' },
       pets: { title: 'Tierfutter und Tierbedarf', body: 'Futter, Leckerlis und Zubehör für Hunde, Katzen und mehr, geliefert.', cta: 'Tierbedarf ansehen' },
       tradein: { title: 'Amazon Trade-In', body: 'Erhalte einen Amazon-Gutschein für Geräte, Spiele und mehr.', cta: 'Eintauschen' },
+      primeyoung: { title: 'Prime für junge Erwachsene', body: '18–24 Jahre: schnelle, kostenlose Lieferung und Prime Video, die ersten 6 Monate gratis.', cta: 'Gratis starten' },
+      primeaccess: { title: 'Amazon Prime Access', body: 'Prime zum halben Preis, 6,99 $ im Monat, für Empfänger staatlicher Leistungen.', cta: 'Berechtigung prüfen' },
+      babyregistry: { title: 'Amazon Babyregister', body: 'Kostenlose Willkommensbox und ein Rabatt zum Abschluss, wenn du ein Register anlegst.', cta: 'Register anlegen' },
+      weddingregistry: { title: 'Amazon Hochzeitsliste', body: 'Ein Abschlussrabatt und einfache Rückgabe binnen 180 Tagen, wenn du eine Liste anlegst.', cta: 'Liste anlegen' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: 'Songs und Playlists ohne Werbung, für Neukunden gratis zum Testen.', cta: 'Gratis testen' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: 'Millionen Bücher lesen und Hörbücher hören, gratis zum Testen.', cta: 'Jetzt lesen' },
+      subscribesave: { title: 'Spar-Abo', body: 'Spare bei Alltagsartikeln, geliefert nach deinem Zeitplan.', cta: 'Jetzt sparen' },
     },
   },
 };

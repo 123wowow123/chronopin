@@ -31,6 +31,8 @@ const MARKS: Record<string, Mark> = {
 // Which mark a program's tile shows.
 const PROGRAM_MARK: Record<string, string> = {
   prime: 'prime',
+  primeyoung: 'prime',
+  primeaccess: 'prime',
   audible: 'audible',
   primevideo: 'primevideo',
   fresh: 'fresh',

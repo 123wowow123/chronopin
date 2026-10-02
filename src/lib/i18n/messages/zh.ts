@@ -1555,6 +1555,13 @@ const zh: Messages = {
       fresh: { title: 'Amazon Fresh', body: '日常用品到新鲜农产品，杂货送货上门。', cta: '选购杂货' },
       pets: { title: '宠物食品和用品', body: '狗、猫等宠物的食品、零食和必需品，送货上门。', cta: '选购宠物用品' },
       tradein: { title: '亚马逊以旧换新', body: '用符合条件的设备、游戏等换取亚马逊礼品卡。', cta: '以旧换新' },
+      primeyoung: { title: '青年版 Prime', body: '18–24 岁：快速免费配送和 Prime Video，前 6 个月免费。', cta: '免费开始' },
+      primeaccess: { title: '亚马逊 Prime Access', body: '领取政府援助的用户可半价享受 Prime，每月 6.99 美元。', cta: '查看是否符合条件' },
+      babyregistry: { title: '亚马逊宝宝礼物清单', body: '创建清单即可获得免费欢迎礼盒和完成折扣。', cta: '创建清单' },
+      weddingregistry: { title: '亚马逊婚礼礼物清单', body: '创建清单即可获得完成折扣和 180 天轻松退货。', cta: '创建清单' },
+      musicunlimited: { title: '亚马逊 Music Unlimited', body: '无广告的歌曲和歌单，新会员可免费试用。', cta: '免费试用' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: '畅读数百万本图书并收听有声书，可免费试用。', cta: '开始阅读' },
+      subscribesave: { title: '订阅省钱', body: '按你的节奏配送日常用品，还能省钱。', cta: '开始省钱' },
     },
   },
 };

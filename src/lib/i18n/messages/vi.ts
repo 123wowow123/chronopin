@@ -1573,6 +1573,13 @@ const vi: Messages = {
       fresh: { title: 'Amazon Fresh', body: 'Giao thực phẩm tận nhà, từ đồ thiết yếu đến hàng tươi.', cta: 'Mua thực phẩm' },
       pets: { title: 'Thức ăn và đồ dùng thú cưng', body: 'Thức ăn, đồ ăn vặt và đồ thiết yếu cho chó, mèo và hơn thế, giao tận nhà.', cta: 'Mua đồ thú cưng' },
       tradein: { title: 'Amazon Trade-In', body: 'Nhận thẻ quà tặng Amazon cho thiết bị, trò chơi và hơn thế đủ điều kiện.', cta: 'Đổi cũ lấy thẻ' },
+      primeyoung: { title: 'Prime cho thanh niên', body: 'Từ 18–24 tuổi: giao hàng nhanh miễn phí và Prime Video, miễn phí 6 tháng đầu.', cta: 'Dùng thử miễn phí' },
+      primeaccess: { title: 'Amazon Prime Access', body: 'Prime nửa giá, 6,99 đô la mỗi tháng, cho người nhận trợ cấp của chính phủ.', cta: 'Kiểm tra điều kiện' },
+      babyregistry: { title: 'Danh sách quà em bé Amazon', body: 'Hộp quà chào mừng miễn phí và ưu đãi khi hoàn thành danh sách.', cta: 'Tạo danh sách' },
+      weddingregistry: { title: 'Danh sách quà cưới Amazon', body: 'Ưu đãi khi hoàn thành danh sách và đổi trả dễ dàng trong 180 ngày.', cta: 'Tạo danh sách' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: 'Bài hát và danh sách phát không quảng cáo, thành viên mới dùng thử miễn phí.', cta: 'Dùng thử miễn phí' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: 'Đọc hàng triệu cuốn sách và nghe sách nói, dùng thử miễn phí.', cta: 'Bắt đầu đọc' },
+      subscribesave: { title: 'Đăng ký và Tiết kiệm', body: 'Tiết kiệm cho đồ dùng hằng ngày, giao theo lịch của bạn.', cta: 'Bắt đầu tiết kiệm' },
     },
   },
 };

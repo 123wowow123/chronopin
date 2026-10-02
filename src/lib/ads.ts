@@ -355,6 +355,19 @@ export function servingStore(country: string | null, tags: Record<string, string
 // id of their own; an id set for one (AppSetting "amazonTags") still wins.
 export const GLOBAL_EARNING_STORES: ReadonlySet<string> = new Set(['CA', 'GB', 'DE', 'FR', 'IT', 'ES', 'NL', 'PL', 'SE']);
 
+// Clicks that went to amazon.com although the clicker's own store is a separate
+// Associates program (not under Global Earning): each such click earned
+// nothing, or earned at the US rate, where an id and ads for that store
+// would have counted. By store code; the click's own `store` is where it went.
+export function missedStoreClicks(clicks: { country: string | null; store: string }[]): Record<string, number> {
+  const missed: Record<string, number> = {};
+  for (const c of clicks) {
+    const store = storeForCountry(c.country);
+    if (store && store !== 'US' && !GLOBAL_EARNING_STORES.has(store) && c.store !== store) missed[store] = (missed[store] ?? 0) + 1;
+  }
+  return missed;
+}
+
 // The Associates tracking id a store's links carry, or null when it has none.
 export function tagForStore(store: string, tags: Record<string, string>): string | null {
   if (store === 'US') return amazonAssociateTag;

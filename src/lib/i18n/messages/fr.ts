@@ -1568,6 +1568,13 @@ const fr: Messages = {
       fresh: { title: 'Amazon Fresh', body: 'Vos courses livrées, des essentiels aux produits frais.', cta: 'Faire ses courses' },
       pets: { title: 'Nourriture et accessoires pour animaux', body: 'Nourriture, friandises et essentiels pour chiens, chats et plus, livrés.', cta: 'Voir les produits' },
       tradein: { title: 'Amazon Reprise', body: 'Obtenez une carte cadeau Amazon pour vos appareils, jeux et plus.', cta: 'Faire reprendre' },
+      primeyoung: { title: 'Prime pour les jeunes adultes', body: 'De 18 à 24 ans : livraison rapide et gratuite et Prime Video, gratuits les 6 premiers mois.', cta: 'Commencer gratuitement' },
+      primeaccess: { title: 'Amazon Prime Access', body: 'Prime à moitié prix, 6,99 $ par mois, pour les bénéficiaires d\'aides publiques.', cta: 'Vérifier l\'éligibilité' },
+      babyregistry: { title: 'Liste de naissance Amazon', body: 'Une boîte de bienvenue gratuite et une remise à la finalisation de votre liste.', cta: 'Créer une liste' },
+      weddingregistry: { title: 'Liste de mariage Amazon', body: 'Une remise à la finalisation de votre liste et des retours faciles sous 180 jours.', cta: 'Créer une liste' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: 'Des titres et des playlists sans publicité, à essayer gratuitement pour les nouveaux membres.', cta: 'Essayer gratuitement' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: 'Lisez parmi des millions de livres et écoutez des livres audio, à essayer gratuitement.', cta: 'Commencer à lire' },
+      subscribesave: { title: 'Abonnez-vous et économisez', body: 'Économisez sur vos produits du quotidien, livrés à votre rythme.', cta: 'Commencer à économiser' },
     },
   },
 };

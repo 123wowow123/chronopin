@@ -1556,6 +1556,13 @@ const ko: Messages = {
       fresh: { title: 'Amazon Fresh', body: '생필품부터 신선식품까지 장보기 배송.', cta: '장보기' },
       pets: { title: '반려동물 사료 및 용품', body: '강아지, 고양이 등을 위한 사료, 간식, 필수품 배송.', cta: '반려동물 용품 보기' },
       tradein: { title: 'Amazon 보상 판매', body: '대상 기기, 게임 등을 아마존 기프트 카드로 교환하세요.', cta: '보상 판매하기' },
+      primeyoung: { title: '청년을 위한 프라임', body: '18~24세: 빠른 무료 배송과 프라임 비디오, 첫 6개월 무료.', cta: '무료로 시작' },
+      primeaccess: { title: '아마존 프라임 액세스', body: '정부 지원을 받는 분께 프라임을 반값인 월 6.99달러에.', cta: '자격 확인' },
+      babyregistry: { title: '아마존 베이비 레지스트리', body: '레지스트리를 만들면 무료 웰컴 박스와 완성 할인 혜택.', cta: '레지스트리 만들기' },
+      weddingregistry: { title: '아마존 웨딩 레지스트리', body: '레지스트리를 만들면 완성 할인과 180일 간편 반품.', cta: '레지스트리 만들기' },
+      musicunlimited: { title: '아마존 뮤직 언리미티드', body: '광고 없이 즐기는 음악과 플레이리스트, 신규 회원은 무료 체험.', cta: '무료 체험' },
+      kindleunlimited: { title: '킨들 언리미티드', body: '수백만 권의 책과 오디오북을 무료로 체험해 보세요.', cta: '읽기 시작' },
+      subscribesave: { title: '정기 배송 할인', body: '일상용품을 원하는 주기로 받고 절약하세요.', cta: '절약 시작' },
     },
   },
 };

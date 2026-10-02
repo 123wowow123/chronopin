@@ -1559,6 +1559,13 @@ const pt: Messages = {
       fresh: { title: 'Amazon Fresh', body: 'Mercado entregue em casa, do básico aos produtos frescos.', cta: 'Fazer compras' },
       pets: { title: 'Ração e acessórios para pets', body: 'Ração, petiscos e itens essenciais para cães, gatos e mais, entregues.', cta: 'Comprar para pets' },
       tradein: { title: 'Amazon Trade-In', body: 'Ganhe um cartão-presente da Amazon por dispositivos, jogos e mais elegíveis.', cta: 'Fazer troca' },
+      primeyoung: { title: 'Prime para jovens adultos', body: 'De 18 a 24 anos: entrega rápida e grátis e Prime Video, grátis nos primeiros 6 meses.', cta: 'Começar grátis' },
+      primeaccess: { title: 'Amazon Prime Access', body: 'Prime pela metade do preço, US$ 6,99 por mês, para quem recebe auxílio do governo.', cta: 'Verificar elegibilidade' },
+      babyregistry: { title: 'Lista de bebê da Amazon', body: 'Caixa de boas-vindas grátis e um desconto ao concluir a lista.', cta: 'Criar uma lista' },
+      weddingregistry: { title: 'Lista de casamento da Amazon', body: 'Um desconto ao concluir a lista e devoluções fáceis em até 180 dias.', cta: 'Criar uma lista' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: 'Músicas e playlists sem anúncios, grátis para testar para novos membros.', cta: 'Testar grátis' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: 'Leia entre milhões de livros e ouça audiolivros, grátis para testar.', cta: 'Começar a ler' },
+      subscribesave: { title: 'Assine e Economize', body: 'Economize em itens do dia a dia entregues no ritmo que você escolher.', cta: 'Começar a economizar' },
     },
   },
 };

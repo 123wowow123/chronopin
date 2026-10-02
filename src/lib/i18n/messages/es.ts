@@ -1568,6 +1568,13 @@ const es: Messages = {
       fresh: { title: 'Amazon Fresh', body: 'Compra del supermercado a domicilio, de lo básico a productos frescos.', cta: 'Comprar alimentos' },
       pets: { title: 'Comida y accesorios para mascotas', body: 'Comida, premios y básicos para perros, gatos y más, a domicilio.', cta: 'Comprar para mascotas' },
       tradein: { title: 'Amazon Trade-In', body: 'Consigue una tarjeta regalo de Amazon por dispositivos, juegos y más.', cta: 'Entregar un producto' },
+      primeyoung: { title: 'Prime para jóvenes', body: 'De 18 a 24 años: envío rápido y gratis y Prime Video, gratis los primeros 6 meses.', cta: 'Empezar gratis' },
+      primeaccess: { title: 'Amazon Prime Access', body: 'Prime a mitad de precio, 6,99 $ al mes, para quienes reciben ayudas del gobierno.', cta: 'Comprobar requisitos' },
+      babyregistry: { title: 'Lista de bebé de Amazon', body: 'Caja de bienvenida gratis y un descuento al completar la lista.', cta: 'Crear una lista' },
+      weddingregistry: { title: 'Lista de bodas de Amazon', body: 'Un descuento al completar la lista y devoluciones fáciles durante 180 días.', cta: 'Crear una lista' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: 'Canciones y listas sin anuncios, gratis para probar si eres nuevo.', cta: 'Probar gratis' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: 'Lee entre millones de libros y escucha audiolibros, gratis para probar.', cta: 'Empezar a leer' },
+      subscribesave: { title: 'Suscríbete y ahorra', body: 'Ahorra en productos del día a día entregados cuando tú quieras.', cta: 'Empezar a ahorrar' },
     },
   },
 };

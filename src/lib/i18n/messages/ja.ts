@@ -1555,6 +1555,13 @@ const ja: Messages = {
       fresh: { title: 'Amazonフレッシュ', body: '日用品から生鮮食品まで、食料品をお届け。', cta: '食料品を買う' },
       pets: { title: 'ペットフード・ペット用品', body: '犬や猫などのフード、おやつ、必需品をお届け。', cta: 'ペット用品を見る' },
       tradein: { title: 'Amazon下取りプログラム', body: '対象のデバイスやゲームなどをAmazonギフトカードに交換。', cta: '下取りに出す' },
+      primeyoung: { title: 'ヤングアダルト向けPrime', body: '18〜24歳向け。お急ぎ便無料とPrime Videoが最初の6か月は無料。', cta: '無料で始める' },
+      primeaccess: { title: 'Amazon Prime Access', body: '公的支援を受けている方は、Primeが半額の月額6.99ドル。', cta: '対象か確認する' },
+      babyregistry: { title: 'Amazonベビーレジストリ', body: 'レジストリを作ると、無料のウェルカムボックスと達成割引。', cta: 'レジストリを作成' },
+      weddingregistry: { title: 'Amazonウェディングレジストリ', body: 'レジストリを作ると、達成割引と180日間の簡単返品。', cta: 'レジストリを作成' },
+      musicunlimited: { title: 'Amazon Music Unlimited', body: '広告なしで曲やプレイリストを。新規会員は無料で体験できます。', cta: '無料で試す' },
+      kindleunlimited: { title: 'Kindle Unlimited', body: '数百万冊の本とオーディオブックが読み放題・聴き放題。無料体験あり。', cta: '読み始める' },
+      subscribesave: { title: '定期おトク便', body: '日用品を好きなペースで届けてお得に。', cta: '節約を始める' },
     },
   },
 };
