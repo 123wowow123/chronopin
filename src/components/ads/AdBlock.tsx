@@ -244,19 +244,25 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
 // A panel beside the timeline on wide screens, under trending and new pins,
 // with rows like theirs. It splits the column's room with them and, like
 // them, shows only whole rows (src/lib/client/wholeRows.ts); `onAds` says how
-// many arrived so the column is fitted again.
-export function AdPanel({ onAds }: { onAds?: (count: number) => void }) {
+// many arrived (null while they are still coming) so the column is fitted
+// again.
+//
+// The panel's room is claimed before the ads come: the frame and the
+// disclosure draw at once over blank rows the height of real ones, so the
+// ads fill them in place and trending and new pins are not resized and
+// redrawn when they arrive. Only a block that comes back with no ads gives
+// the room back.
+export function AdPanel({ onAds }: { onAds?: (count: number | null) => void }) {
   const slot = 'timeline-side';
   const { ref, ads } = useAds(slot, undefined);
   const text = useAdText();
-  const count = ads?.length;
+  const count = ads?.length ?? null;
   useEffect(() => {
-    if (count != null) onAds?.(count);
+    onAds?.(count);
   }, [count, onAds]);
-  if (!ads) return <div ref={ref} aria-hidden className="h-px" />;
-  if (!ads.length) return null;
+  if (ads && !ads.length) return null;
   return (
-    <section aria-labelledby="ad-panel-heading" className="floating flex max-h-max min-h-0 grow basis-28 flex-col text-sm">
+    <section ref={ref} aria-labelledby="ad-panel-heading" aria-busy={!ads} className="floating flex max-h-max min-h-0 grow basis-28 flex-col text-sm">
       {/* The disclosure sits under the heading: under the list it would be
           cut off with the rows that do not fit. */}
       <div className="shrink-0 px-3.5 pt-2.5 pb-1">
@@ -267,22 +273,34 @@ export function AdPanel({ onAds }: { onAds?: (count: number) => void }) {
         <Disclosure className="mt-0.5" />
       </div>
       <ol className="flex min-h-0 flex-col flex-wrap overflow-clip pb-1.5">
-        {ads.map((ad) => {
-          const { title, body } = text(ad);
-          return (
-            <li key={ad.key} className="w-full px-1.5">
-              <AdLink ad={ad} slot={slot} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised hover:no-underline">
-                <AdPicture ad={ad} className="h-9 w-14" />
-                <span className="flex min-w-0 flex-col">
-                  <span className="truncate leading-snug text-ink" title={title}>
-                    {title}
+        {ads
+          ? ads.map((ad) => {
+              const { title, body } = text(ad);
+              return (
+                <li key={ad.key} className="w-full px-1.5">
+                  <AdLink ad={ad} slot={slot} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised hover:no-underline">
+                    <AdPicture ad={ad} className="h-9 w-14" />
+                    <span className="flex min-w-0 flex-col">
+                      <span className="truncate leading-snug text-ink" title={title}>
+                        {title}
+                      </span>
+                      <span className={`truncate text-xs ${ad.program ? 'text-subtle' : 'font-semibold text-success tabular-nums'}`}>{body}</span>
+                    </span>
+                  </AdLink>
+                </li>
+              );
+            })
+          : Array.from({ length: SLOT_COUNT[slot] }, (_, i) => (
+              <li key={i} aria-hidden className="w-full px-1.5">
+                <div className="flex items-center gap-2.5 px-2 py-1.5">
+                  <span className="h-9 w-14 shrink-0 rounded bg-raised" />
+                  <span className="flex min-w-0 flex-1 flex-col gap-1.5">
+                    <span className="h-3 w-4/5 rounded bg-raised" />
+                    <span className="h-2.5 w-3/5 rounded bg-raised" />
                   </span>
-                  <span className={`truncate text-xs ${ad.program ? 'text-subtle' : 'font-semibold text-success tabular-nums'}`}>{body}</span>
-                </span>
-              </AdLink>
-            </li>
-          );
-        })}
+                </div>
+              </li>
+            ))}
       </ol>
     </section>
   );
