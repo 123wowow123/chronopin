@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { requireAdminViewer } from '@/server/guard';
 import Ad from '@/server/model/ad';
+import { getAdPlacements } from '@/server/model/appSetting';
 import log from '@/server/util/log';
 import { AdminTabs } from '../AdminTabs';
 import { AdCharts } from './AdCharts';
@@ -19,7 +20,7 @@ export default async function AdminAdsPage() {
   await connection();
   const locating = Ad.locateUnlocated().catch((err) => log.error('locateAdClicks', (err as Error)?.message));
   await Promise.race([locating, new Promise((resolve) => setTimeout(resolve, LOCATE_WAIT_MS))]);
-  const [clicks, impressions] = await Promise.all([Ad.clicks(), Ad.impressions()]);
+  const [clicks, impressions, placements] = await Promise.all([Ad.clicks(), Ad.impressions(), getAdPlacements()]);
   const labels = await Ad.labels([...new Set([...clicks.map((c) => c.adKey), ...impressions.map((i) => i.adKey)])]);
   return (
     <div className="px-4 py-6 sm:py-10 lg:px-8">
@@ -31,7 +32,7 @@ export default async function AdminAdsPage() {
         listings on pins. Store ids for other countries go in the AppSetting <code>amazonTags</code> (for example <code>{'{"GB": "…-21"}'}</code>), with
         program rows for that store in the <code>Ad</code> table; until then every viewer gets the US store.
       </p>
-      <AdCharts clicks={clicks} impressions={impressions} labels={labels} serverNow={new Date().toISOString()} />
+      <AdCharts clicks={clicks} impressions={impressions} labels={labels} serverNow={new Date().toISOString()} placements={placements} />
     </div>
   );
 }

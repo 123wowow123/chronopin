@@ -917,6 +917,7 @@ const id: Messages = {
     viewOn: 'Lihat di {source}',
   },
   card: {
+    new: 'Baru',
     partOfThread: 'Bagian dari utas',
     firstInThread: 'Pin pertama dalam utas',
     showMore: 'tampilkan selengkapnya',

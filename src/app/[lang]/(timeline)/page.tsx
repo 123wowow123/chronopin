@@ -9,7 +9,7 @@ import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
 import { specialtyDaysOn } from '@/server/specialtyDays';
-import { newPins, pinById, TRENDING_DAYS, sliderTyping, tagList, timelineAds, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
+import { newPins, pinById, TRENDING_DAYS, sliderTyping, tagList, adPlacements, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { isRtl } from '@/lib/i18n/config';
@@ -100,7 +100,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
     viewerPreference(user?.id),
     sliderTyping(),
     tagList(),
-    timelineAds(),
+    adPlacements(),
   ]);
 
   // Only the specialty days this page shows; the rest load when scrolled to.
@@ -135,7 +135,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         video={video}
         sliderTyping={typing.enabled}
         tagList={listing.enabled}
-        ads={ads.enabled}
+        ads={{ row: ads['timeline-row'], side: ads['timeline-side'] }}
         trending={{ pins: trending, days: TRENDING_DAYS }}
         newPins={added}
         preference={personal}

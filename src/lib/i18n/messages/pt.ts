@@ -907,6 +907,7 @@ const pt: Messages = {
     viewOn: 'Ver no {source}',
   },
   card: {
+    new: 'Novo',
     partOfThread: 'Parte de uma thread',
     firstInThread: 'Primeiro pin de uma thread',
     showMore: 'mostrar mais',

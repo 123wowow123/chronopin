@@ -295,7 +295,7 @@ sync prod db to local and backup json
 
 - update all ticket master button link to use referal link
 
-run 6am job here in this session directly and post to prod
+run 6am job here in this session
 
 
 update this pin with thread of previous series and do same for all tv show season that has missing thread
@@ -303,3 +303,4 @@ https://www.chronopin.com/pin/864/shangri-la-frontier-season-3-premieres
 
 
 
+add popular chinese shows and movie pins

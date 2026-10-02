@@ -8,7 +8,9 @@ import { LOCALES } from '@/lib/i18n/config';
 import en from '@/lib/i18n/messages/en';
 import { pinPath } from '@/lib/seo';
 import { TIME_RANGES, timeBuckets, type TimeRange } from '@/lib/timeStats';
-import type { AdClickRow, AdImpressionRow, AdKind } from '@/lib/ads';
+import type { AdPlacementsSetting } from '@/lib/adPlacements';
+import { AD_SLOTS, type AdClickRow, type AdImpressionRow, type AdKind } from '@/lib/ads';
+import { SLOT_LABEL } from './slots';
 import { type ChartView, type ColumnTip, periodLabel, RangeTabs, SERIES_BLUE, SERIES_ORANGE, StatTile, TimeColumns, ViewTabs } from '../chartParts';
 import type { MapPlace } from '../PlaceMap';
 
@@ -26,12 +28,6 @@ const SERIES = [
 ];
 
 const KIND_LABEL: Record<AdKind, string> = { special: 'Special program', bonus: 'Bonus event', tradein: 'Trade-In', product: 'Product' };
-const SLOT_LABEL: Record<string, string> = {
-  'timeline-row': 'Timeline, between days',
-  'timeline-side': 'Timeline, side panel',
-  'pin-strip': 'Pin page, under the tags',
-  'pin-side': 'Pin page, under the comments',
-};
 const RECENT = 50;
 const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
 const countryName = (code: string | null) => {
@@ -75,6 +71,15 @@ function rows(impressions: AdImpressionRow[], clicks: AdClickRow[], keyOfImpress
   return [...out]
     .map(([key, r]) => ({ key, ...cell(r.all), signedIn: cell(r.signedIn), guests: cell(r.guests) }))
     .sort((a, b) => b.clicks - a.clicks || b.shown - a.shown);
+}
+
+// A disabled placement shows no ads, so it may have no rows of its own; list
+// every placement anyway, so one that is off reads as off, not missing.
+function withEveryPlacement(slots: Row[]): Row[] {
+  const none: Cell = { shown: 0, clicks: 0, people: 0 };
+  const have = new Set(slots.map((r) => r.key));
+  const missing = AD_SLOTS.filter((key) => !have.has(key)).map((key) => ({ key, ...none, signedIn: none, guests: none }));
+  return [...slots, ...missing];
 }
 
 // Clicks and people by one key, for places and pages (they have no "shown").
@@ -198,11 +203,13 @@ export function AdCharts({
   impressions,
   labels,
   serverNow,
+  placements,
 }: {
   clicks: AdClickRow[];
   impressions: AdImpressionRow[];
   labels: Record<string, Label>;
   serverNow: string;
+  placements: AdPlacementsSetting;
 }) {
   const [range, setRange] = useState<TimeRange>('30d');
   const [tip, setTip] = useState<ColumnTip<Bucket> | null>(null);
@@ -350,7 +357,19 @@ export function AdCharts({
 
       <div className="grid gap-4 lg:grid-cols-2">
         <StatTable title="By kind" rows={stats.kinds} name={(key) => KIND_LABEL[key as AdKind] ?? key} empty={empty} />
-        <StatTable title="By placement" rows={stats.slots} name={(key) => SLOT_LABEL[key] ?? key} empty={empty} />
+        <StatTable
+          title="By placement"
+          rows={withEveryPlacement(stats.slots)}
+          name={(key) => (
+            <>
+              {SLOT_LABEL[key as keyof typeof SLOT_LABEL] ?? key}
+              {key in placements && !placements[key as keyof AdPlacementsSetting] ? (
+                <span className="ml-2 rounded bg-raised px-1.5 py-0.5 text-xs text-subtle">Disabled</span>
+              ) : null}
+            </>
+          )}
+          empty={empty}
+        />
       </div>
 
       <StatTable
@@ -473,7 +492,7 @@ export function AdCharts({
                       {name}
                     </span>
                     <span className="shrink-0 text-xs whitespace-nowrap text-subtle">
-                      {KIND_LABEL[c.kind]} · {SLOT_LABEL[c.slot] ?? c.slot} · {c.store}
+                      {KIND_LABEL[c.kind]} · {SLOT_LABEL[c.slot as keyof typeof SLOT_LABEL] ?? c.slot} · {c.store}
                     </span>
                   </div>
                   <div className="mt-0.5 flex flex-wrap gap-x-3 text-xs text-subtle tabular-nums">

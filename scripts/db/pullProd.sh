@@ -113,7 +113,15 @@ fi
 incoming="${DB}_incoming"
 psql_local -c "DROP DATABASE IF EXISTS \"$incoming\"" -c "CREATE DATABASE \"$incoming\""
 echo "Restoring into $incoming"
-docker exec -i "$CONTAINER" pg_restore -U "$PG_USER" -d "$incoming" --no-owner --no-privileges --exit-on-error < "$dump"
+# The two shape functions (0108) are created from 0114 first and left out of the restore: a dump
+# taken before 0114 reached production has translationShapes calling "textShape" unqualified, and
+# pg_restore's empty search_path makes that fail while PinTranslation.shapes is created.
+shape_fix=scripts/db/schema/0114_qualify_translation_shape_functions.sql
+docker exec -i "$CONTAINER" psql -v ON_ERROR_STOP=1 -q -U "$PG_USER" -d "$incoming" < "$shape_fix"
+docker exec -i "$CONTAINER" pg_restore --list < "$dump" |
+  grep -v -E ' FUNCTION public (textShape|translationShapes)\(' |
+  docker exec -i "$CONTAINER" sh -c 'cat > /tmp/pull-prod.list'
+docker exec -i "$CONTAINER" pg_restore -U "$PG_USER" -d "$incoming" --no-owner --no-privileges --exit-on-error -L /tmp/pull-prod.list < "$dump"
 
 # FORCE cuts the dev server's connections; its pool reconnects on its own.
 psql_local \

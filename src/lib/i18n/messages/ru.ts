@@ -953,6 +953,7 @@ const ru: Messages = {
     viewOn: 'Смотреть на {source}',
   },
   card: {
+    new: 'Новое',
     partOfThread: 'Часть цепочки',
     firstInThread: 'Первый пин цепочки',
     showMore: 'показать больше',

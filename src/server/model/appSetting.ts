@@ -5,14 +5,16 @@ import { DEFAULT_SITE_VERIFICATION, parseSiteVerification, type SiteVerification
 import { DEFAULT_SLIDER_TYPING, parseSliderTyping, type SliderTypingSetting } from '@/lib/sliderTyping';
 import { DEFAULT_TAG_LIST, parseTagList, type TagListSetting } from '@/lib/tagList';
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
-import { DEFAULT_TIMELINE_ADS, parseTimelineAds, type TimelineAdsSetting } from '@/lib/timelineAds';
+import { DEFAULT_AD_PLACEMENTS, parseAdPlacements, type AdPlacementsSetting } from '@/lib/adPlacements';
 import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
 import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from '@/lib/userWiki';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
 const TIMELINE_VIDEO = 'timelineVideo';
-const TIMELINE_ADS = 'timelineAds';
+const AD_PLACEMENTS = 'adPlacements';
+// Before each placement had its own switch: one { enabled } for both timeline ones.
+const LEGACY_TIMELINE_ADS = 'timelineAds';
 const PERSONAL_BAG = 'personalBag';
 const DAILY_JOBS = 'dailyJobs';
 const SLIDER_TYPING = 'sliderTyping';
@@ -56,14 +58,19 @@ export function setTimelineVideo(setting: TimelineVideoSetting, userId: number |
   return write(TIMELINE_VIDEO, setting, userId);
 }
 
-// Whether the main timeline shows ad blocks.
-export async function getTimelineAds(): Promise<TimelineAdsSetting> {
-  const parsed = parseTimelineAds(await read(TIMELINE_ADS));
-  return 'setting' in parsed ? parsed.setting : DEFAULT_TIMELINE_ADS;
+// Which ad placements show their ads.
+export async function getAdPlacements(): Promise<AdPlacementsSetting> {
+  const parsed = parseAdPlacements(await read(AD_PLACEMENTS));
+  if ('setting' in parsed) return parsed.setting;
+  const legacy = (await read(LEGACY_TIMELINE_ADS)) as { enabled?: unknown } | undefined;
+  if (typeof legacy?.enabled === 'boolean') {
+    return { ...DEFAULT_AD_PLACEMENTS, 'timeline-row': legacy.enabled, 'timeline-side': legacy.enabled };
+  }
+  return DEFAULT_AD_PLACEMENTS;
 }
 
-export function setTimelineAds(setting: TimelineAdsSetting, userId: number | null) {
-  return write(TIMELINE_ADS, setting, userId);
+export function setAdPlacements(setting: AdPlacementsSetting, userId: number | null) {
+  return write(AD_PLACEMENTS, setting, userId);
 }
 
 // Whether the timeline weighs a crowded day's cards by the viewer's preference wiki.

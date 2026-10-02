@@ -923,6 +923,7 @@ const hi: Messages = {
     viewOn: '{source} पर देखें',
   },
   card: {
+    new: 'नया',
     partOfThread: 'थ्रेड का हिस्सा',
     firstInThread: 'थ्रेड का पहला पिन',
     showMore: 'और दिखाएं',

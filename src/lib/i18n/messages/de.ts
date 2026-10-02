@@ -916,6 +916,7 @@ const de: Messages = {
     viewOn: 'Auf {source} ansehen',
   },
   card: {
+    new: 'Neu',
     partOfThread: 'Teil eines Threads',
     firstInThread: 'Erster Pin eines Threads',
     showMore: 'mehr anzeigen',

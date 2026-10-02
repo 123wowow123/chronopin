@@ -66,7 +66,7 @@ import { isAttendableEvent, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements } from '@/server/services/pages';
 import { viewerTimeZone } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { pinTextDir } from '@/lib/i18n/config';
@@ -109,11 +109,12 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   // how it got there. An event people can attend also carries its host's
   // website, performers and tickets, for the page and its Event markup.
   const event = isAttendableEvent(pin);
-  const [updates, timeZone, organizerUrl, eventInfo] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, ads] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     event && pin.companyId ? companyWebsite(pin.companyId) : null,
     event ? pinEventInfo(pin.id) : null,
+    adPlacements(),
   ]);
 
   return (
@@ -166,7 +167,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
 
           {/* Related ads, one row under what the pin is about. */}
-          <AdRow slot="pin-strip" pinId={pin.id} className="mt-6" />
+          {ads['pin-strip'] ? <AdRow slot="pin-strip" pinId={pin.id} className="mt-6" /> : null}
 
           {/* Right under what the pin is about: what has changed on it since. */}
           <PinUpdates updates={updates} timeZone={timeZone} className="mt-6" />
@@ -184,7 +185,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           </Suspense>
 
           {/* The tall space the side column leaves under the comments. */}
-          <AdColumn pinId={pin.id} className="mt-6" />
+          {ads['pin-side'] ? <AdColumn pinId={pin.id} className="mt-6" /> : null}
         </aside>
       </div>
 
