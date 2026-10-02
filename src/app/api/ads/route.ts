@@ -18,7 +18,7 @@ export const GET = route(async (request: NextRequest) => {
   if (userAgent(request).isBot) return json({ store: 'US', ads: [] }, 200, headers);
   const n = Math.min(SLOT_COUNT[slot], Math.max(1, Number(params.get('n')) || SLOT_COUNT[slot]));
   const pin = Number(params.get('pin'));
-  const avoid = new Set((params.get('not') ?? '').split(',').filter((key) => /^(ad|m):\d+$/.test(key)).slice(0, 100));
+  const avoid = new Set((params.get('not') ?? '').split(',').filter((key) => /^(ad|m|p):\d+$/.test(key)).slice(0, 100));
   const user = await getUser(request);
   const served = await Ad.serve({
     slot,

@@ -166,3 +166,62 @@ export async function readListingPrice(link: string): Promise<PriceRead> {
     return { kind: 'unknown', reason: (err as Error).message };
   }
 }
+
+// What an Amazon product page says beyond its price, for the pin ads
+// (src/server/model/pinAd.ts): brand, stars and how many reviews.
+export type AmazonListing = {
+  title: string;
+  brand: string | null;
+  price: number | null;
+  rating: number | null;
+  reviewCount: number | null;
+  available: boolean;
+};
+
+export function readAmazonFacts(html: string): AmazonListing | { unknown: string } {
+  const read = readAmazonPage(html);
+  if (read.kind === 'unknown') return { unknown: read.reason };
+  const title = read.title ?? '';
+  const brand = decode(html.match(/<a[^>]*id="bylineInfo"[^>]*>\s*([^<]*?)\s*</)?.[1] ?? '')
+    .replace(/^(Visit the |Brand:\s*)/i, '')
+    .replace(/\s+Store$/i, '')
+    .trim();
+  const rating = Number(html.match(/id="acrPopover"[^>]*title="([\d.]+) out of 5 stars"/)?.[1]);
+  const reviews = Number(html.match(/id="acrCustomerReviewText"[^>]*aria-label="([\d,]+) Reviews?"/i)?.[1]?.replace(/,/g, ''));
+  return {
+    title,
+    brand: brand || null,
+    price: read.kind === 'price' ? read.price : null,
+    rating: rating > 0 ? rating : null,
+    reviewCount: reviews >= 0 && Number.isFinite(reviews) && html.includes('acrCustomerReviewText') ? reviews : null,
+    available: read.kind === 'price',
+  };
+}
+
+// An amazon.com product's facts now: unknown when the page cannot be read
+// (robot check, timeout), gone when Amazon says the listing does not exist.
+// Amazon serves some requests a variant of the page with its price block
+// left out, so an unreadable page is asked for again, a few seconds on.
+const AMAZON_ATTEMPTS = 4;
+const AMAZON_RETRY_MS = 3000;
+
+export async function readAmazonListing(link: string): Promise<AmazonListing | { unknown: string } | { gone: true }> {
+  let last: { unknown: string } = { unknown: 'not read' };
+  for (let attempt = 0; attempt < AMAZON_ATTEMPTS; attempt++) {
+    if (attempt) await new Promise((resolve) => setTimeout(resolve, AMAZON_RETRY_MS));
+    try {
+      const res = await get(link);
+      if (res.status === 404 || res.status === 410) return { gone: true };
+      if (!res.ok) {
+        last = { unknown: `HTTP ${res.status}` };
+        continue;
+      }
+      const facts = readAmazonFacts(await res.text());
+      if (!('unknown' in facts)) return facts;
+      last = facts;
+    } catch (err) {
+      last = { unknown: (err as Error).message };
+    }
+  }
+  return last;
+}

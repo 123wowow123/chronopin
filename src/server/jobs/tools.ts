@@ -21,7 +21,9 @@ import { inspectImage } from '../image';
 import { hashDistance, NEAR_DUPLICATE_DISTANCE } from '../imageHash';
 import JobRun from '../model/jobRun';
 import Medium, { imageHashOf } from '../model/medium';
+import PinAd from '../model/pinAd';
 import PinRevisit from '../model/pinRevisit';
+import { MIN_AD_RATING, MIN_AD_REVIEWS } from '@/lib/adQuality';
 import PinSentiment, { shortHash } from '../model/pinSentiment';
 import Comment from '../model/comment';
 import { clampSentiment, PIN_SENTIMENT_PROMPT } from '../extract/pinSentiment';
@@ -371,6 +373,45 @@ export const TOOLS: JobTool[] = [
         }
       }
       return { results };
+    },
+  },
+  {
+    name: 'pin_ads_check',
+    description:
+      `Reads every pin ad's Amazon listing again (the ones not read in the last 11 hours): refreshes its price and reviews and marks it broken when it is gone, out of stock, unbranded, or below ${MIN_AD_RATING} stars from ${MIN_AD_REVIEWS} reviews. Returns newlyBroken (each with its pin and why) and needsAds: upcoming pins with fewer than two working ads, the pins with a broken ad first, with the pin's company and categories. Call it once at the start of the pinAds task; then replace the broken ones and fill the pins a product genuinely suits with add_pin_ad.`,
+    input_schema: obj({ limit: num('Listings to read, default 40, at most 80'), pins: num('Pins to list in needsAds, default 20, at most 40') }),
+    run: async (input) => {
+      const checked = await PinAd.check({ limit: int(input.limit, 40, 1, 80) });
+      return { ...checked, needsAds: await PinAd.needingAds({ limit: int(input.pins, 20, 1, 40) }) };
+    },
+  },
+  {
+    name: 'pin_ads',
+    description: "A pin's ads, working and broken, with brand, price, stars and review count.",
+    input_schema: obj({ pinId: num('Pin id') }, ['pinId']),
+    run: (input) => PinAd.forPin(int(input.pinId, 0, 1, 2 ** 31 - 1)),
+  },
+  {
+    name: 'add_pin_ad',
+    description:
+      `Advertises an Amazon product on a pin. \`url\` must be an amazon.com product link that came back from a search or fetch in this run (any form with /dp/<ASIN>; tracking is dropped, the Associates tag is added when served). The tool reads the listing and refuses it unless it is in stock with a brand, at least ${MIN_AD_RATING} stars and ${MIN_AD_REVIEWS} reviews - say what it refused and try another. brandMatchesPin says whether the listing's brand is the pin's company; prefer a match (a Tamiya kit on a Tamiya pin), then the best-reviewed trusted brand that suits what the pin is about. Never a product that has nothing to do with the pin, never a restricted product (vapes, tobacco, weapons).`,
+    input_schema: obj({ pinId: num('Pin id'), url: str('amazon.com product link'), reason: str('Why this suits the pin') }, ['pinId', 'url', 'reason']),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const result = await PinAd.add(pinId, String(input.url));
+      if ('added' in result) await act(ctx, { tool: 'add_pin_ad', pinId, title: result.added.title, detail: `${input.reason} (${result.added.brand}, ${result.added.rating} stars / ${result.added.reviewCount} reviews${result.brandMatchesPin ? ', brand matches the pin' : ''})` });
+      return result;
+    },
+  },
+  {
+    name: 'remove_pin_ad',
+    description: "Drops a pin's ad that no longer suits it (use for a broken one you have replaced, or one that was a poor fit).",
+    input_schema: obj({ pinId: num('Pin id'), asin: str('The ad\'s ASIN') }, ['pinId', 'asin']),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const removed = await PinAd.remove(pinId, String(input.asin));
+      if (removed) await act(ctx, { tool: 'remove_pin_ad', pinId, detail: String(input.asin) });
+      return { removed };
     },
   },
   {
