@@ -24,7 +24,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     ...index.tags.filter((t) => t.pins >= MIN_INDEXED_PINS).map((t) => tagPath(t.name)),
     ...index.companies.filter((c) => c.pins >= MIN_INDEXED_PINS).map((c) => companyPath(c.name)),
   ];
-  const pins = await Pins.listForSitemap(0, MAX_URLS - 4 - topics.length);
+  const pins = await Pins.listForSitemap(0, MAX_URLS - 5 - topics.length);
   const inEveryLanguage = (path: string) => {
     if (!offered.length) return undefined;
     const { languages = {} } = languageAlternates(path, DEFAULT_LOCALE, offered);
@@ -32,6 +32,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
   };
   return [
     { url: absoluteUrl('/'), changeFrequency: 'hourly', priority: 1, alternates: inEveryLanguage('/') },
+    { url: absoluteUrl('/about'), changeFrequency: 'monthly', priority: 0.4, alternates: inEveryLanguage('/about') },
     { url: absoluteUrl('/map'), changeFrequency: 'daily', priority: 0.5, alternates: inEveryLanguage('/map') },
     { url: absoluteUrl('/tags'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/tags') },
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },

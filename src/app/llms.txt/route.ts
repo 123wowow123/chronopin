@@ -43,6 +43,7 @@ async function llmsText(): Promise<string> {
     `- [Map](${absoluteUrl('/map')}): pins with a place, on a world map`,
     `- [Tags](${absoluteUrl('/tags')}): a page per subject (/tag/anime), with its upcoming dates and the next one first`,
     `- [Companies](${absoluteUrl('/companies')}): a page per company (/company/nintendo), with its upcoming dates and the next one first`,
+    `- [About](${absoluteUrl('/about')}): what ${siteName} is, what it covers and where its dates come from`,
     `- [Sitemap](${absoluteUrl('/sitemap.xml')}): every pin, tag and company page, with its other languages`,
     '',
     '## Upcoming dates',

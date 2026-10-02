@@ -10,18 +10,24 @@ import {
   type AdSlot,
   ageOn,
   expandAvoid,
+  GLOBAL_EARNING_STORES,
   MIN_AD_AGE,
   parseAmazonTags,
   pickAds,
   regionFromAcceptLanguage,
   servingStore,
+  storeForLocale,
+  tagForStore,
   taggedAdUrl,
 } from '@/lib/ads';
 import * as db from '../db';
 import { clientIp } from '../http';
 import { countryOf } from '../ipLocation';
 import { viewerPreference } from '../services/pages';
+import { localizePins } from '../services/translations';
+import type { Locale } from '@/lib/i18n/config';
 import { locateUnlocated } from './ipPlaces';
+import PinAdTranslation from './pinAdTranslation';
 import PinView from './pinView';
 
 // How long the ads (program rows, product listings, store ids) are reused
@@ -47,7 +53,7 @@ const heldPerformance = ((globalThis as any).__chronopinAdPerformance ??= new Ma
   { at: number; data: Promise<Performance> }
 >;
 
-export type AdServeInput = { slot: AdSlot; n: number; pinId: number | null; avoid: Set<string>; userId: number | null; request: NextRequest };
+export type AdServeInput = { slot: AdSlot; n: number; pinId: number | null; avoid: Set<string>; userId: number | null; locale?: Locale; request: NextRequest };
 
 // Program ads (0110) and product ads (the Amazon listings on pins).
 export default class Ad {
@@ -83,7 +89,7 @@ export default class Ad {
 
   // Ads for one slot, with the store they were picked from. Nothing for a
   // signed-in viewer under MIN_AD_AGE.
-  static async serve({ slot, n, pinId, avoid, userId, request }: AdServeInput): Promise<{ store: string; ads: AdJson[] }> {
+  static async serve({ slot, n, pinId, avoid, userId, locale = 'en', request }: AdServeInput): Promise<{ store: string; ads: AdJson[] }> {
     const [inventory, country, viewer, pin, performance] = await Promise.all([
       Ad.inventory(),
       viewerCountry(request),
@@ -93,25 +99,31 @@ export default class Ad {
     ]);
     const age = ageOn(viewer?.birthday);
     if (age != null && age < MIN_AD_AGE) return { store: 'US', ads: [] };
-    const store = servingStore(country, inventory.tags, inventory.storesWithAds);
+    const store = servingStore(country ?? storeForLocale(locale), inventory.tags, inventory.storesWithAds);
     const ctx: AdContext = { preference: viewer?.preference ?? null, age, pin, performance };
-    const candidates = inventory.ads.filter((ad) => ad.store === store);
+    // Under Global Earning an amazon.com product link is sent by Amazon to the
+    // shopper's local store, so the US product ads serve there too (without
+    // their dollar price); program ads are the store's own.
+    const abroad = store !== 'US' && GLOBAL_EARNING_STORES.has(store);
+    const candidates = inventory.ads.filter((ad) => ad.store === store || (abroad && ad.kind === 'product' && ad.store === 'US'));
     const picked = pickAds(candidates, ctx, n, expandAvoid(candidates, avoid));
-    if (picked.length) await recordImpressions(picked, slot, store, userId != null);
+    if (picked.length) await recordImpressions(picked, slot, store, (ad) => tagForStore(ad.store, inventory.tags) ?? '', userId != null);
+    const titles = await localizedTitles(picked, locale);
     return {
       store,
       ads: picked.map((ad) => ({
         key: ad.key,
         kind: ad.kind,
         program: ad.program,
-        url: taggedAdUrl(ad.url, store, inventory.tags),
-        title: ad.title,
-        price: ad.price,
-        currency: ad.price != null ? 'USD' : null,
+        url: taggedAdUrl(ad.url, ad.store, inventory.tags),
+        title: titles.get(ad.key) ?? ad.title,
+        price: ad.store === store ? ad.price : null,
+        currency: ad.price != null && ad.store === store ? 'USD' : null,
         pinId: ad.pinId,
         category: ad.categories[0] ?? null,
         thumbName: ad.thumbName,
         originalUrl: ad.originalUrl,
+        store,
       })),
     };
   }
@@ -119,13 +131,14 @@ export default class Ad {
   // One click, unless it repeats the same person's click on the same ad
   // within REPEAT_SECONDS or names an ad that does not exist. Answers whether
   // it was recorded.
-  static async recordClick(click: { adKey: string; slot: AdSlot; pinId: number | null; userId: number | null; ip: string | null; page: string | null }): Promise<boolean> {
+  // `store` is the one the ad was served from, when the page says (else the ad's own).
+  static async recordClick(click: { adKey: string; slot: AdSlot; pinId: number | null; userId: number | null; ip: string | null; page: string | null; store?: string | null }): Promise<boolean> {
     const { ads, tags } = await Ad.inventory();
     const ad = ads.find((a) => a.key === click.adKey);
     if (!ad) return false;
     const rows = await db.query(
-      `INSERT INTO "AdClick" ("adKey", "kind", "program", "adPinId", "slot", "pinId", "store", "url", "userId", "ip", "page")
-       SELECT $1::varchar, $2::varchar, $3::varchar, $4::integer, $5::varchar, $6::integer, $7::varchar, $8::text, $9::integer, $10::inet, $12::text
+      `INSERT INTO "AdClick" ("adKey", "kind", "program", "adPinId", "slot", "pinId", "store", "url", "userId", "ip", "page", "tag")
+       SELECT $1::varchar, $2::varchar, $3::varchar, $4::integer, $5::varchar, $6::integer, $7::varchar, $8::text, $9::integer, $10::inet, $12::text, $13::varchar
        WHERE NOT EXISTS (
          SELECT 1 FROM "AdClick" AS "c"
          WHERE "c"."adKey" = $1::varchar
@@ -133,9 +146,21 @@ export default class Ad {
            AND "c"."utcCreatedDateTime" > now() - make_interval(secs => $11::integer)
        )
        RETURNING "id"`,
-      [ad.key, ad.kind, ad.program, ad.pinId, click.slot, click.pinId, ad.store, taggedAdUrl(ad.url, ad.store, tags), click.userId, click.ip, REPEAT_SECONDS, click.page],
+      [ad.key, ad.kind, ad.program, ad.pinId, click.slot, click.pinId, click.store ?? ad.store, taggedAdUrl(ad.url, ad.store, tags), click.userId, click.ip, REPEAT_SECONDS, click.page, tagForStore(ad.store, tags)],
     );
     return rows.length > 0;
+  }
+
+  // The ads and store ids are read again on the next request (after an admin
+  // changes them).
+  static expireInventory() {
+    held.inventory = null;
+  }
+
+  // How many working program ads each store has.
+  static async storeAdCounts(): Promise<Record<string, number>> {
+    const rows = await db.query<{ store: string; count: number }>(`SELECT "store", count(*)::int AS "count" FROM "Ad" WHERE "active" AND "weight" > 0 GROUP BY "store"`);
+    return Object.fromEntries(rows.map((r) => [r.store, r.count]));
   }
 
   static locateUnlocated(): Promise<number> {
@@ -148,7 +173,7 @@ export default class Ad {
     const rows = await db.query<AdClickRow>(
       `SELECT "c"."id", to_char("c"."utcCreatedDateTime" AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"') AS "at",
          "c"."adKey", "c"."kind", "c"."program", "c"."adPinId", "ap"."title" AS "adTitle", "c"."slot",
-         "c"."pinId", "p"."title" AS "pinTitle", "c"."page", "c"."store", "c"."userId", "u"."userName", host("c"."ip") AS "ip",
+         "c"."pinId", "p"."title" AS "pinTitle", "c"."page", "c"."store", "c"."tag", "c"."userId", "u"."userName", host("c"."ip") AS "ip",
          "c"."country", "c"."region", "c"."city", "c"."latitude", "c"."longitude"
        FROM "AdClick" AS "c"
          LEFT JOIN "Pin" AS "ap" ON "ap"."id" = "c"."adPinId"
@@ -164,7 +189,7 @@ export default class Ad {
 
   static impressions(): Promise<AdImpressionRow[]> {
     return db.query<AdImpressionRow>(
-      `SELECT to_char("day", 'YYYY-MM-DD') AS "day", "adKey", "kind", "slot", "store", "signedIn", "count"
+      `SELECT to_char("day", 'YYYY-MM-DD') AS "day", "adKey", "kind", "slot", "store", "tag", "signedIn", "count"
        FROM "AdImpression" WHERE "day" >= (now() AT TIME ZONE 'UTC')::date - $1::integer
        ORDER BY "day"`,
       [IMPRESSION_DAYS],
@@ -200,6 +225,26 @@ export default class Ad {
     }
     return out;
   }
+}
+
+// The picked ads' titles in the viewer's language: a chosen ad's through its
+// PinAdTranslation (0115), a listing named after its pin through the pin's own
+// translation. An ad with none keeps its English title.
+async function localizedTitles(ads: AdCandidate[], locale: Locale): Promise<Map<string, string>> {
+  const out = new Map<string, string>();
+  if (locale === 'en') return out;
+  try {
+    const chosen = new Map<number, string>();
+    for (const ad of ads) if (ad.key.startsWith('p:') && ad.title) chosen.set(Number(ad.key.slice(2)), ad.title);
+    const translated = await PinAdTranslation.forAds(chosen, locale);
+    for (const [id, title] of translated) out.set(`p:${id}`, title);
+    const named = ads.filter((ad) => ad.titleFromPin && ad.pinId != null && ad.title);
+    const pins = await localizePins(named.map((ad) => ({ id: ad.pinId as number, title: ad.title as string })), locale);
+    named.forEach((ad, i) => pins[i].title !== ad.title && out.set(ad.key, pins[i].title));
+  } catch {
+    // Untranslated is still a working ad.
+  }
+  return out;
 }
 
 // A slot's click-through rate per ad over the trailing window, and the
@@ -251,9 +296,9 @@ async function loadInventory(): Promise<Inventory> {
     ),
     // Amazon US listings on live pins; the same pin's other listings are
     // separate ads.
-    db.query<{ id: number; pinId: number; url: string; price: number | null; title: string; company: string | null; categories: string[] }>(
+    db.query<{ id: number; pinId: number; url: string; price: number | null; title: string; titleFromPin: boolean; company: string | null; categories: string[] }>(
       `SELECT "m"."id", "m"."pinId", "m"."url", "m"."price"::float8 AS "price",
-         coalesce(nullif("p"."productName", ''), "p"."title") AS "title", "c"."name"::text AS "company",
+         coalesce(nullif("p"."productName", ''), "p"."title") AS "title", nullif("p"."productName", '') IS NULL AS "titleFromPin", "c"."name"::text AS "company",
          coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category'), '{}') AS "categories"
        FROM "Merchant" AS "m"
          JOIN "Pin" AS "p" ON "p"."id" = "m"."pinId" AND "p"."utcDeletedDateTime" IS NULL
@@ -311,6 +356,7 @@ async function loadInventory(): Promise<Inventory> {
         pinId: row.pinId,
         forPinId: null,
         title: row.title,
+        titleFromPin: row.titleFromPin,
         price: row.price,
         thumbName: pictures.get(row.pinId)?.thumbName ?? null,
         originalUrl: pictures.get(row.pinId)?.originalUrl ?? null,
@@ -378,12 +424,13 @@ async function pinFacts(pinId: number): Promise<AdContext['pin']> {
   return rows[0] ? { id: pinId, ...rows[0] } : null;
 }
 
-async function recordImpressions(ads: AdCandidate[], slot: AdSlot, store: string, signedIn: boolean) {
+// `store` is the viewer's; each ad's `tag` is the id on its own link.
+async function recordImpressions(ads: AdCandidate[], slot: AdSlot, store: string, tagOf: (ad: AdCandidate) => string, signedIn: boolean) {
   await db.query(
-    `INSERT INTO "AdImpression" ("day", "adKey", "kind", "slot", "store", "signedIn", "count")
-     SELECT (now() AT TIME ZONE 'UTC')::date, "u"."key", "u"."kind", $3::varchar, $4::varchar, $5::boolean, 1
-     FROM unnest($1::varchar[], $2::varchar[]) AS "u" ("key", "kind")
-     ON CONFLICT ("day", "adKey", "slot", "store", "signedIn") DO UPDATE SET "count" = "AdImpression"."count" + 1`,
-    [ads.map((ad) => ad.key), ads.map((ad) => ad.kind), slot, store, signedIn],
+    `INSERT INTO "AdImpression" ("day", "adKey", "kind", "slot", "store", "tag", "signedIn", "count")
+     SELECT (now() AT TIME ZONE 'UTC')::date, "u"."key", "u"."kind", $3::varchar, $4::varchar, "u"."tag", $5::boolean, 1
+     FROM unnest($1::varchar[], $2::varchar[], $6::varchar[]) AS "u" ("key", "kind", "tag")
+     ON CONFLICT ("day", "adKey", "slot", "store", "signedIn", "tag") DO UPDATE SET "count" = "AdImpression"."count" + 1`,
+    [ads.map((ad) => ad.key), ads.map((ad) => ad.kind), slot, store, signedIn, ads.map(tagOf)],
   );
 }

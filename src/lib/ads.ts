@@ -61,6 +61,9 @@ export type AdCandidate = {
   // slots, and not hidden there like a pin's own listing is.
   forPinId: number | null;
   title: string | null;
+  // The title is the pin's own (a listing whose pin names no product), so it
+  // reads in the viewer's language through the pin's translation.
+  titleFromPin?: boolean;
   price: number | null;
   thumbName: string | null;
   originalUrl: string | null;
@@ -79,6 +82,9 @@ export type AdJson = {
   category: string | null;
   thumbName: string | null;
   originalUrl: string | null;
+  // The store the viewer was served from: it can differ from where the link
+  // goes (a US product ad shown in the UK), and the admin stats count by it.
+  store: string;
 };
 
 // Rows of the admin Ads page (src/server/model/ad.ts).
@@ -96,6 +102,8 @@ export type AdClickRow = {
   // The page's path and query (0111); null for older clicks.
   page: string | null;
   store: string;
+  // The tracking id the clicked link carried.
+  tag: string | null;
   userId: number | null;
   userName: string | null;
   ip: string | null;
@@ -108,7 +116,7 @@ export type AdClickRow = {
   originalUrl?: string | null;
 };
 
-export type AdImpressionRow = { day: string; adKey: string; kind: AdKind; slot: string; store: string; signedIn: boolean; count: number };
+export type AdImpressionRow = { day: string; adKey: string; kind: AdKind; slot: string; store: string; tag: string; signedIn: boolean; count: number };
 
 // A slot's own click-through history for one ad, over a trailing window
 // (src/server/model/ad.ts).
@@ -255,12 +263,21 @@ export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, av
   const allowed = candidates.filter((ad) => adAllowed(ad, ctx));
   const poolTotals = new Map<AdKind, number>();
   for (const ad of allowed) poolTotals.set(ad.kind, (poolTotals.get(ad.kind) ?? 0) + ad.weight);
+  // A store whose program ads have no known reward (Japan, until its rate card
+  // can be read) has nothing to prefer one by: each kind's share is then its
+  // number of ads, so every program ad comes up as often as any other instead
+  // of a lone Fresh or Trade-In ad taking a whole pool's share.
+  const programs = allowed.filter((ad) => ad.kind !== 'product');
+  const flat = programs.length > 0 && programs.every((ad) => ad.rewardUsd == null && ad.weight === programs[0].weight);
+  const poolSize = new Map<AdKind, number>();
+  for (const ad of programs) poolSize.set(ad.kind, (poolSize.get(ad.kind) ?? 0) + 1);
+  const shareOf = (kind: AdKind) => (flat && kind !== 'product' ? (poolSize.get(kind) ?? 0) : KIND_SHARE[kind]);
   const weighed = allowed
     .map((ad) => {
       const total = poolTotals.get(ad.kind) || 1;
       const related = relatedness(ad, ctx.pin);
       const performance = performanceWeight(ctx.performance?.byKey.get(ad.key), ctx.performance?.baselineCtr ?? 0);
-      const weight = (KIND_SHARE[ad.kind] / total) * personalWeight(ad, ctx) * (1 + related) * performance * rewardWeight(ad);
+      const weight = (shareOf(ad.kind) / total) * personalWeight(ad, ctx) * (1 + related) * performance * rewardWeight(ad);
       // Efraimidis-Spirakis: the n smallest -ln(u)/w are a weighted sample.
       return { ad, related, own: ctx.pin != null && ad.forPinId === ctx.pin.id, fresh: !avoid.has(ad.key), score: weight > 0 ? -Math.log(1 - random()) / weight : Infinity };
     })
@@ -308,22 +325,44 @@ export const AMAZON_STORES: Record<string, string> = {
 };
 const STORE_FOR: Record<string, string> = { AT: 'DE', CH: 'DE', LU: 'DE', LI: 'DE', NZ: 'AU', PR: 'US' };
 
+// The store a page language points to, for a viewer whose country is unknown
+// (no address match, no region in Accept-Language). Only a language one
+// Amazon store serves best: Spanish, Arabic, English and the like say nothing.
+const STORE_FOR_LOCALE: Record<string, string> = { ja: 'JP', de: 'DE', fr: 'FR', it: 'IT', es: 'ES', pt: 'BR', hi: 'IN' };
+
+export function storeForLocale(locale: string | null | undefined): string | null {
+  return (locale && STORE_FOR_LOCALE[locale]) || null;
+}
+
 export function storeForCountry(country: string | null | undefined): string | null {
   if (!country) return null;
   const code = country.toUpperCase();
   return AMAZON_STORES[code] ? code : (STORE_FOR[code] ?? null);
 }
 
-// The store a viewer's ads come from: their country's, when it has its own
-// Associates id and ads to show, else the US.
+// The store a viewer's ads come from: their country's, when it has a tracking
+// id (its own, or the US one under Global Earning) and ads to show, else the US.
 export function servingStore(country: string | null, tags: Record<string, string>, storesWithAds: Set<string>): string {
   const store = storeForCountry(country);
-  return store && store !== 'US' && tags[store] && storesWithAds.has(store) ? store : 'US';
+  return store && store !== 'US' && tagForStore(store, tags) && storesWithAds.has(store) ? store : 'US';
 }
 
 // The ad's link with the store's Associates id on it.
+// The stores Amazon's Global Earning covers (the US account's rate plan lists
+// each of them with the one tracking id): a link with the US id, to amazon.com
+// or to the store itself, earns for a shopper there, and an amazon.com
+// product link is sent to the shopper's local store by Amazon. They need no
+// id of their own; an id set for one (AppSetting "amazonTags") still wins.
+export const GLOBAL_EARNING_STORES: ReadonlySet<string> = new Set(['CA', 'GB', 'DE', 'FR', 'IT', 'ES', 'NL', 'PL', 'SE']);
+
+// The Associates tracking id a store's links carry, or null when it has none.
+export function tagForStore(store: string, tags: Record<string, string>): string | null {
+  if (store === 'US') return amazonAssociateTag;
+  return tags[store] || (GLOBAL_EARNING_STORES.has(store) ? amazonAssociateTag : null);
+}
+
 export function taggedAdUrl(url: string, store: string, tags: Record<string, string>): string {
-  const tag = store === 'US' ? amazonAssociateTag : tags[store];
+  const tag = tagForStore(store, tags);
   if (!tag) return url;
   try {
     const parsed = new URL(url);
@@ -353,4 +392,23 @@ export function parseAmazonTags(value: unknown): Record<string, string> {
     if (AMAZON_STORES[store.toUpperCase()] && typeof tag === 'string' && /^[\w-]{3,40}$/.test(tag)) tags[store.toUpperCase()] = tag;
   }
   return tags;
+}
+
+// A submitted set of store ids (the admin page): each store but the US (its id
+// is fixed in src/lib/affiliate.ts) to its id, or "" to take the store off.
+// Answers the ids to keep, or the first problem.
+export function validateAmazonTags(value: unknown): { tags: Record<string, string> } | { problem: string } {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return { problem: 'Expected { "GB": "id-21", ... }' };
+  const tags: Record<string, string> = {};
+  for (const [store, raw] of Object.entries(value as Record<string, unknown>)) {
+    const code = store.toUpperCase();
+    if (code === 'US') return { problem: 'The US id is fixed in the code and cannot be set here.' };
+    if (!AMAZON_STORES[code]) return { problem: `${store} is not an Amazon store we link to.` };
+    if (typeof raw !== 'string') return { problem: `The ${code} id must be text.` };
+    const tag = raw.trim();
+    if (!tag) continue;
+    if (!/^[\w-]{3,40}$/.test(tag)) return { problem: `The ${code} id "${tag}" can only have letters, digits, - and _ (3-40 characters).` };
+    tags[code] = tag;
+  }
+  return { tags };
 }

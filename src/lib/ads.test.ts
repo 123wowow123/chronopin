@@ -13,7 +13,10 @@ import {
   relatedness,
   rewardWeight,
   servingStore,
+  storeForLocale,
+  tagForStore,
   taggedAdUrl,
+  validateAmazonTags,
 } from './ads';
 
 const ad = (over: Partial<AdCandidate>): AdCandidate => ({
@@ -162,13 +165,73 @@ describe('pickAds', () => {
   });
 });
 
+describe('equal weights without rewards', () => {
+  it('shows every program ad as often as another when none has a reward', () => {
+    const jp = [
+      ad({ key: 'ad:1', kind: 'special', program: 'prime', rewardUsd: null }),
+      ad({ key: 'ad:2', kind: 'special', program: 'audible', rewardUsd: null }),
+      ad({ key: 'ad:3', kind: 'bonus', program: 'fresh', rewardUsd: null }),
+      ad({ key: 'ad:4', kind: 'tradein', program: 'tradein', rewardUsd: null }),
+    ];
+    const seen = new Map<string, number>();
+    let seed = 1;
+    const random = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    for (let i = 0; i < 4000; i++) {
+      const [picked] = pickAds(jp, { preference: null, age: null, pin: null }, 1, new Set(), random);
+      seen.set(picked.key, (seen.get(picked.key) ?? 0) + 1);
+    }
+    for (const count of seen.values()) expect(count / 4000).toBeGreaterThan(0.2);
+    for (const count of seen.values()) expect(count / 4000).toBeLessThan(0.3);
+  });
+
+  it('keeps the kind shares once any program has a reward', () => {
+    const us = [
+      ad({ key: 'ad:1', kind: 'special', program: 'prime', rewardUsd: 40 }),
+      ad({ key: 'ad:2', kind: 'bonus', program: 'fresh', rewardUsd: 1 }),
+    ];
+    let seed = 7;
+    const random = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    let special = 0;
+    for (let i = 0; i < 3000; i++) if (pickAds(us, { preference: null, age: null, pin: null }, 1, new Set(), random)[0].key === 'ad:1') special++;
+    expect(special / 3000).toBeGreaterThan(0.6);
+  });
+});
+
 describe('stores', () => {
   it("serves a country's own store only with an id and ads for it", () => {
-    expect(servingStore('GB', {}, new Set(['US', 'GB']))).toBe('US');
-    expect(servingStore('GB', { GB: 'x-21' }, new Set(['US']))).toBe('US');
-    expect(servingStore('GB', { GB: 'x-21' }, new Set(['US', 'GB']))).toBe('GB');
-    expect(servingStore('AT', { DE: 'x-21' }, new Set(['US', 'DE']))).toBe('DE');
+    // Global Earning stores use the US id; others (Japan) need their own.
+    expect(servingStore('GB', {}, new Set(['US', 'GB']))).toBe('GB');
+    expect(servingStore('GB', {}, new Set(['US']))).toBe('US');
+    expect(servingStore('AT', {}, new Set(['US', 'DE']))).toBe('DE');
+    expect(servingStore('JP', {}, new Set(['US', 'JP']))).toBe('US');
+    expect(servingStore('JP', { JP: 'x-22' }, new Set(['US']))).toBe('US');
+    expect(servingStore('JP', { JP: 'x-22' }, new Set(['US', 'JP']))).toBe('JP');
     expect(servingStore(null, {}, new Set(['US']))).toBe('US');
+  });
+
+  it('gives each store its own id, the US one under Global Earning', () => {
+    expect(tagForStore('US', {})).toBe('chronopin04-20');
+    expect(tagForStore('DE', {})).toBe('chronopin04-20');
+    expect(tagForStore('DE', { DE: 'own-21' })).toBe('own-21');
+    expect(tagForStore('JP', {})).toBeNull();
+    expect(tagForStore('JP', { JP: 'x-22' })).toBe('x-22');
+    expect(taggedAdUrl('https://www.amazon.de/prime', 'DE', {})).toBe('https://www.amazon.de/prime?tag=chronopin04-20');
+  });
+
+  it('guesses a store from the page language only where one store fits', () => {
+    expect(storeForLocale('ja')).toBe('JP');
+    expect(storeForLocale('pt')).toBe('BR');
+    expect(storeForLocale('ar')).toBeNull();
+    expect(storeForLocale('en')).toBeNull();
+    expect(servingStore(storeForLocale('ja'), { JP: 'x-22' }, new Set(['US', 'JP']))).toBe('JP');
+    expect(servingStore(storeForLocale('de'), {}, new Set(['US', 'DE']))).toBe('DE');
+  });
+
+  it('validates submitted store ids', () => {
+    expect(validateAmazonTags({ gb: ' cp-21 ', DE: '', JP: 'chronopinawza-22' })).toEqual({ tags: { GB: 'cp-21', JP: 'chronopinawza-22' } });
+    for (const bad of [null, [], { US: 'x-20' }, { XX: 'abc-21' }, { GB: 5 }, { GB: 'no spaces' }, { GB: 'ab' }]) {
+      expect(validateAmazonTags(bad)).toHaveProperty('problem');
+    }
   });
 
   it('tags Amazon links for their store and leaves others alone', () => {

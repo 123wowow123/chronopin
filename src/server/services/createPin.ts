@@ -42,7 +42,7 @@ import type User from '@/server/model/user';
 // that answered an earlier one move under this one when it now comes between.
 // A company pin's sentiment (-1..1) and productLine, when sent, are its score for
 // the company graph (authoredScore), so the save makes no scoring call.
-export async function createPin(body: Record<string, any>, user: User) {
+export async function createPin(body: Record<string, any>, user: User, { noBrowser = false } = {}) {
   const pin = new Pin(body);
   const stocks = parseScrapedStocks(body.stocks);
   const tags = parseTags(body.tags);
@@ -69,7 +69,7 @@ export async function createPin(body: Record<string, any>, user: User) {
   if (tags?.length) await PinTag.setUserTags(saved.id, tags);
   if (body.flightPath) await saveFlightPath(saved.id, body.flightPath);
   if (score && typeof score !== 'string') await PinSentiment.setAuthored(saved.id, score);
-  emitPinEvent('save', saved, { userId: user.id });
+  emitPinEvent('save', saved, { userId: user.id, noBrowser });
   // Everyone following the pin's company hears about it, and so does everyone
   // following its author. Told after the response, like the stock lookup below.
   after(() =>

@@ -3,12 +3,12 @@ import { DEFAULT_AD_PLACEMENTS, parseAdPlacements } from './adPlacements';
 
 describe('adPlacements', () => {
   it('has only the between-days timeline row off by default', () => {
-    expect(DEFAULT_AD_PLACEMENTS).toEqual({ 'timeline-row': false, 'timeline-side': true, 'pin-strip': true, 'pin-side': true });
+    expect(DEFAULT_AD_PLACEMENTS).toEqual({ 'timeline-row': false, 'timeline-side': true, 'pin-strip': true, 'pin-side': true, drawer: true });
   });
 
   it('parses each placement on its own', () => {
     expect(parseAdPlacements({ ...DEFAULT_AD_PLACEMENTS, 'timeline-row': true, 'pin-side': false })).toEqual({
-      setting: { 'timeline-row': true, 'timeline-side': true, 'pin-strip': true, 'pin-side': false },
+      setting: { 'timeline-row': true, 'timeline-side': true, 'pin-strip': true, 'pin-side': false, drawer: true },
     });
   });
 

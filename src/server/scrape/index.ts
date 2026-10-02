@@ -1,3 +1,4 @@
+import { AsyncLocalStorage } from 'node:async_hooks';
 import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import config from '../config';
@@ -215,7 +216,13 @@ export async function youtubeMedium(pageUrl: string) {
 
 /* Any other web page */
 
+// Set around work that must never start Chromium (a pin an admin API call just
+// posted: the batch runs on the small production VM, which one browser per
+// reference brings to its knees). Anything that would launch one fails instead.
+export const noBrowser = new AsyncLocalStorage<boolean>();
+
 export async function launchBrowser() {
+  if (noBrowser.getStore()) throw new Error('A browser is not launched for this request');
   // Loaded lazily: puppeteer is heavy and only page loads need it.
   const puppeteer = (await import('puppeteer')).default;
   return puppeteer.launch({

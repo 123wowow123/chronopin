@@ -8,6 +8,7 @@ import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConf
 import { DEFAULT_AD_PLACEMENTS, parseAdPlacements, type AdPlacementsSetting } from '@/lib/adPlacements';
 import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
 import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from '@/lib/userWiki';
+import { parseAmazonTags } from '@/lib/ads';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
@@ -22,6 +23,7 @@ const TAG_LIST = 'tagList';
 const MULTILINGUAL = 'multilingual';
 const AUTO_TRANSLATE = 'autoTranslate';
 const SITE_VERIFICATION = 'siteVerification';
+const AMAZON_TAGS = 'amazonTags';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -71,6 +73,16 @@ export async function getAdPlacements(): Promise<AdPlacementsSetting> {
 
 export function setAdPlacements(setting: AdPlacementsSetting, userId: number | null) {
   return write(AD_PLACEMENTS, setting, userId);
+}
+
+// The Amazon Associates tracking id of each store but the US (src/lib/ads.ts):
+// a store's ads are served only once it has one.
+export async function getAmazonTags(): Promise<Record<string, string>> {
+  return parseAmazonTags(await read(AMAZON_TAGS));
+}
+
+export function setAmazonTags(tags: Record<string, string>, userId: number | null) {
+  return write(AMAZON_TAGS, tags, userId);
 }
 
 // Whether the timeline weighs a crowded day's cards by the viewer's preference wiki.

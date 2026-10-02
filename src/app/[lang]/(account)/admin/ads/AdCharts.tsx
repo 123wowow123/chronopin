@@ -125,18 +125,21 @@ function StatTable({
   empty,
   split = true,
   groups,
+  bare = false,
 }: {
   title: string;
   rows: Row[];
   name: (key: string) => React.ReactNode;
   empty: string;
   split?: boolean;
+  // Inside another card: no card of its own, a smaller heading.
+  bare?: boolean;
   groups?: { label: string; note?: string; has: (key: string) => boolean }[];
 }) {
   const sections = groups ? groups.map((g) => ({ label: g.label, note: g.note, rows: rows.filter((r) => g.has(r.key)) })).filter((g) => g.rows.length) : [{ label: '', note: undefined, rows }];
   return (
-    <section className="surface p-4 sm:p-5">
-      <h2 className="mb-3 text-base font-semibold">{title}</h2>
+    <section className={bare ? '' : 'surface p-4 sm:p-5'}>
+      {bare ? title ? <h3 className="mb-1 text-sm font-semibold text-muted">{title}</h3> : null : <h2 className="mb-3 text-base font-semibold">{title}</h2>}
       {rows.length ? (
         <div className="overflow-x-auto text-sm">
           <table className="w-full text-left tabular-nums">
@@ -304,6 +307,22 @@ export function AdCharts({
       slots: rows(shownImpressions, shownClicks, (i) => i.slot, (c) => c.slot),
       viewers: rows(shownImpressions, shownClicks, (i) => (i.signedIn ? 'in' : 'guest'), (c) => (c.userId != null ? 'in' : 'guest')),
       stores: rows(shownImpressions, shownClicks, (i) => i.store, (c) => c.store),
+      abroad: rows(
+        shownImpressions.filter((i) => i.store !== 'US'),
+        shownClicks.filter((c) => c.store !== 'US'),
+        (i) => i.kind,
+        (c) => c.kind,
+      ),
+      tags: rows(shownImpressions, shownClicks, (i) => `${i.store}|${i.tag}`, (c) => `${c.store}|${c.tag ?? ''}`).map((total) => {
+        const ims = shownImpressions.filter((i) => `${i.store}|${i.tag}` === total.key);
+        const cs = shownClicks.filter((c) => `${c.store}|${c.tag ?? ''}` === total.key);
+        return {
+          total,
+          slots: rows(ims, cs, (i) => i.slot, (c) => c.slot),
+          kinds: rows(ims, cs, (i) => i.kind, (c) => c.kind),
+          ads: rows(ims, cs, (i) => i.adKey, (c) => c.adKey).slice(0, 8),
+        };
+      }),
       ads: rows(shownImpressions, shownClicks, (i) => i.adKey, (c) => c.adKey).slice(0, 25),
       countries: rows([], shownClicks, () => '', (c) => c.country ?? ''),
       clickers: clickers(shownClicks),
@@ -506,6 +525,45 @@ export function AdCharts({
 
       <StatTable title="By Amazon store" rows={stats.stores} name={(key) => `${countryName(key)} (${key})`} empty={empty} />
 
+      <StatTable title="Outside the US, by kind" rows={stats.abroad} name={(key) => KIND_LABEL[key as AdKind] ?? key} empty={`No ads shown outside the US ${inRange}.`} />
+
+      <section className="surface space-y-5 p-4 sm:p-5">
+        <div>
+          <h2 className="text-base font-semibold">By tracking id</h2>
+          <p className="text-xs text-subtle">The Associates id on the link of each ad shown and clicked, with what it was shown as and where.</p>
+        </div>
+        {stats.tags.length ? (
+          stats.tags.map(({ total, slots, kinds, ads }) => {
+            const [store, tag] = total.key.split('|');
+            return (
+              <div key={total.key} className="space-y-3 rounded-xl border border-line p-3 sm:p-4">
+                <StatTable
+                  title=""
+                  rows={[total]}
+                  name={() => (
+                    <>
+                      <span className="font-mono text-sm font-semibold">{tag || 'no id'}</span>{' '}
+                      <span className="text-subtle">
+                        {countryName(store)} ({store})
+                      </span>
+                    </>
+                  )}
+                  empty={empty}
+                  bare
+                />
+                <div className="grid gap-4 lg:grid-cols-3">
+                  <StatTable title="Placement" rows={slots} name={(key) => SLOT_LABEL[key as keyof typeof SLOT_LABEL] ?? key} empty={empty} split={false} bare />
+                  <StatTable title="Kind" rows={kinds} name={(key) => KIND_LABEL[key as keyof typeof KIND_LABEL] ?? key} empty={empty} split={false} bare />
+                  <StatTable title="Top ads" rows={ads} name={adName} empty={empty} split={false} bare />
+                </div>
+              </div>
+            );
+          })
+        ) : (
+          <p className="text-sm text-subtle">{empty}</p>
+        )}
+      </section>
+
       <section className="surface space-y-4 p-4 sm:p-5">
         <h2 className="text-base font-semibold">Where clicks came from</h2>
         {stats.places.length ? <PlaceMap places={stats.places} noun="click" /> : null}
@@ -540,6 +598,7 @@ export function AdCharts({
                     </span>
                     <span className="shrink-0 text-xs whitespace-nowrap text-subtle">
                       {KIND_LABEL[c.kind]} · {SLOT_LABEL[c.slot as keyof typeof SLOT_LABEL] ?? c.slot} · {c.store}
+                      {c.tag ? ` · ${c.tag}` : ''}
                     </span>
                   </div>
                   <div className="mt-0.5 flex flex-wrap gap-x-3 text-xs text-subtle tabular-nums">
