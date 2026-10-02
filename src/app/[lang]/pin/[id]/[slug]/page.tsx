@@ -36,6 +36,9 @@ import { shopLinks } from '@/lib/shopping';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
 import { AdColumn, AdRow } from '@/components/ads/AdBlock';
+import { AdsenseBanner, AdsenseColumn } from '@/components/ads/AdsensePanel';
+import { adsenseAllowed } from '@/lib/adsense';
+import { ageOn } from '@/lib/ads';
 import { ShopButtons } from '@/components/pin/ShopButtons';
 import { PinListings } from '@/components/listings/PinListings';
 import { listingKindOf } from '@/lib/listings';
@@ -66,8 +69,8 @@ import { isAttendableEvent, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements } from '@/server/services/pages';
-import { viewerTimeZone } from '@/server/viewer';
+import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots } from '@/server/services/pages';
+import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { pinTextDir } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
@@ -109,13 +112,17 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   // how it got there. An event people can attend also carries its host's
   // website, performers and tickets, for the page and its Event markup.
   const event = isAttendableEvent(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, ads] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, ads, adsense, viewer] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     event && pin.companyId ? companyWebsite(pin.companyId) : null,
     event ? pinEventInfo(pin.id) : null,
     adPlacements(),
+    adsenseSlots(),
+    viewerUser(),
   ]);
+  // Google ads only for a viewer old enough, like the Amazon ones.
+  const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
 
   return (
     <>
@@ -185,9 +192,12 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           </Suspense>
 
           {/* The tall space the side column leaves under the comments. */}
-          {ads['pin-side'] ? <AdColumn pinId={pin.id} className="mt-6" /> : null}
+          {ads['pin-side'] ? google['pin-side'] ? <AdsenseColumn unit={google['pin-side']} className="mt-6" /> : <AdColumn pinId={pin.id} className="mt-6" /> : null}
         </aside>
       </div>
+
+      {/* Across the foot of the page: a Google banner, when the admin has given it a unit. */}
+      {google['pin-bottom'] ? <AdsenseBanner unit={google['pin-bottom']} className="mt-8" /> : null}
 
       <Suspense fallback={null}>
         <Related pin={pin} />

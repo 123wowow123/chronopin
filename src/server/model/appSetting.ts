@@ -9,6 +9,7 @@ import { DEFAULT_AD_PLACEMENTS, parseAdPlacements, type AdPlacementsSetting } fr
 import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
 import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from '@/lib/userWiki';
 import { parseAmazonTags } from '@/lib/ads';
+import { DEFAULT_ADSENSE_SLOTS, parseAdsenseSlots, type AdsenseSlotsSetting } from '@/lib/adsense';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
@@ -24,6 +25,7 @@ const MULTILINGUAL = 'multilingual';
 const AUTO_TRANSLATE = 'autoTranslate';
 const SITE_VERIFICATION = 'siteVerification';
 const AMAZON_TAGS = 'amazonTags';
+const ADSENSE_SLOTS = 'adsenseSlots';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -73,6 +75,16 @@ export async function getAdPlacements(): Promise<AdPlacementsSetting> {
 
 export function setAdPlacements(setting: AdPlacementsSetting, userId: number | null) {
   return write(AD_PLACEMENTS, setting, userId);
+}
+
+// The AdSense ad unit of each placement that shows Google ads (src/lib/adsense.ts).
+export async function getAdsenseSlots(): Promise<AdsenseSlotsSetting> {
+  const parsed = parseAdsenseSlots(await read(ADSENSE_SLOTS));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_ADSENSE_SLOTS;
+}
+
+export function setAdsenseSlots(setting: AdsenseSlotsSetting, userId: number | null) {
+  return write(ADSENSE_SLOTS, setting, userId);
 }
 
 // The Amazon Associates tracking id of each store but the US (src/lib/ads.ts):

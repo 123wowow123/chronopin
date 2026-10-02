@@ -36,6 +36,7 @@ import { TimeBlock, TodayMarker, rowWidth } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 import { TrendingPins } from './TrendingPins';
 import { AdPanel, AdRow } from '@/components/ads/AdBlock';
+import { AdsensePanel } from '@/components/ads/AdsensePanel';
 import { useT } from '@/lib/client/i18n';
 import { useWholeRowPanels } from '@/lib/client/wholeRows';
 import { withPageLang } from '@/lib/client/navigation';
@@ -174,7 +175,7 @@ export function Timeline({
   // The admin setting: whether the tag panel lists its tags, or opens the big cloud.
   tagList?: boolean;
   // The admin setting: whether the day-to-day ad row and the side ad panel show.
-  ads?: { row: boolean; side: boolean };
+  ads?: { row: boolean; side: boolean; sideAdsense?: string | null };
   // The most viewed pins with rising views, beside the cards on wide screens.
   trending: { pins: TrendingPin[]; days: number };
   // The pins added most recently, under trending on wide screens. Kept live
@@ -750,7 +751,7 @@ export function Timeline({
             <div ref={highlightsRef} className="pointer-events-none flex min-h-0 grow basis-28 flex-col flex-wrap gap-2 overflow-clip [&>*]:pointer-events-auto [&>*]:w-full">
               <TrendingPins pins={trending.pins} days={trending.days} />
               <NewPins pins={newPins} />
-              {ads.side ? <AdPanel onAds={setSideAds} /> : null}
+              {ads.side ? ads.sideAdsense ? <AdsensePanel unit={ads.sideAdsense} onAds={setSideAds} /> : <AdPanel onAds={setSideAds} /> : null}
             </div>
           }
         >

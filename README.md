@@ -297,5 +297,3 @@ sync prod db to local and backup json
 
 run 6am job here in this session
 
-
-deploy and ensure larger instance does not get downgraded after deployment
