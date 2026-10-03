@@ -1,6 +1,6 @@
 import * as db from '../db';
 import OkfLint from '../model/okfLint';
-import { composeSummary, ServiceError, writeWiki, type ComposeLink, type Composed, type ComposePin } from '../extract/wiki';
+import { composeSummary, ServiceError, wikiAvailable, writeWiki, type ComposeLink, type Composed, type ComposePin } from '../extract/wiki';
 import { emitPinEvent } from '../events';
 import Pin from '../model/pin';
 import Source, { hashText, PinSource, type PinSourceRole } from '../model/source';
@@ -73,6 +73,9 @@ export function ingestSource(
     const source = await Source.getById(sourceId);
     if (!source) return 'skipped';
     if (source.status === 'ready' && !refetch) return 'unchanged';
+    // No key, or the API just turned a call away: reading the link (a browser
+    // for most pages) would be for nothing, as nothing can be written from it.
+    if (!wikiAvailable()) return 'skipped';
     let textChanged = false;
     try {
       let { text, title } = source;

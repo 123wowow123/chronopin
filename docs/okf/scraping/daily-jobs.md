@@ -115,6 +115,14 @@ when prod's text is not what was scored). A push that fails is logged and
 the local copy stays. Prod-only writes leave the local database as it was, so
 the run does not seed from it.
 
+**Every save re-reads the pin's links.** A `PUT` of a pin (a sentiment push
+included) rebuilds the source wikis of its links, which opens headless Chrome
+on the prod VM. 2026-10-03: pushing about 190 anime and BLS scores that way
+sent prod's load to 24, and every wiki failed anyway with no API credit. The
+wiki step now reads nothing while the API has no key or turned a call away
+for credit, rate limit or outage (10 minutes, [wiki.ts](../../../src/server/extract/wiki.ts)),
+but push in small batches and watch prod's homepage time all the same.
+
 **Pull before and after.** Local ids match prod's only after `npm run
 db:pull-prod`; a pin created on prod has a new id there and does not exist
 locally until the next pull. Pull before a run so ids and the already-pinned
