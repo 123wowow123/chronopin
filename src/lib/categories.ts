@@ -15,6 +15,7 @@ export const CATEGORIES = [
   'Gaming',
   'Anime',
   'Manga',
+  'Comics',
   'Movie',
   'TV',
   'Music',

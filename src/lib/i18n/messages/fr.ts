@@ -479,6 +479,7 @@ const fr: Messages = {
     gaming: 'Jeux vidéo',
     anime: 'Anime',
     manga: 'Manga',
+    comics: 'Bandes dessinées',
     movie: 'Cinéma',
     tv: 'Télévision',
     music: 'Musique',

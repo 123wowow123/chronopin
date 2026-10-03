@@ -16,7 +16,7 @@ import Source from '../model/source';
 import { fetchJson } from '../util/fetchJson';
 import log from '../util/log';
 import { parseScrapedStocks, type ScrapedStock } from '@/lib/stocks';
-import { parseCategories } from '@/lib/categories';
+import { categoryList, hasCategory, parseCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import { isStudioCategory, studioLocationByName } from '../studioLocation';
 import { awardsFor } from '../services/pinAwards';
@@ -32,6 +32,7 @@ import { prequelPinFor } from './prequel';
 import { picturesNeeded, videosNeeded } from '@/lib/mediaTarget';
 import { noteLinks, type NoteLink } from './noteLinks';
 import { findBrandListing } from '../brandListing';
+import { findSteamListing } from '../steamListing';
 import Company from '../model/company';
 
 const { scrapeType, mediumID } = config;
@@ -371,6 +372,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   applyExtracted(pin, fields ?? metadataFields(pageMeta));
   await placeAtStudioHq(pin);
   const brandListing = addBrandListing(pin, [pageUrl, ...pageLinks]);
+  const steamListing = addSteamListing(pin, fields?.workTitle, pageLinks);
   const trailer = applyScreenDetails(pin, screen, scoreMarket);
   // References first: the top-up takes pictures from the day's articles.
   addReferences(pin, found);
@@ -397,7 +399,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
     log.warn('reading entries failed:', (err as Error).message);
     return undefined;
   });
-  await brandListing;
+  await Promise.all([brandListing, steamListing]);
   const llmTasks: LlmTask[] | undefined =
     llmDown && pageText.trim().length >= 200 ? [extractTask(pageUrl, pageText, note), referencesTask(pageUrl, pageText, 'web page', note)] : undefined;
   return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags: tags.length ? tags : metadataFields(pageMeta).tags, respondTo, entries, llmTasks };
@@ -414,6 +416,19 @@ async function addBrandListing(pin: Pin, links: string[]): Promise<void> {
   } catch (err) {
     log.warn('brand listing lookup failed:', (err as Error).message);
   }
+}
+
+// A game's Steam store page, the page's own link to it or the game found by
+// name (../steamListing.ts): the "Steam" buy button.
+async function addSteamListing(pin: Pin, workTitle: string | null | undefined, links: string[]): Promise<void> {
+  if (!hasCategory(categoryList(pin.categories), GAME_CATEGORIES)) return;
+  const listing = await findSteamListing({
+    workTitle,
+    pinTitle: pin.title,
+    year: pin.utcStartDateTime ? new Date(pin.utcStartDateTime).getUTCFullYear() : undefined,
+    links,
+  });
+  if (listing && !(pin.merchants ?? []).some((m: Merchant) => m.url === listing.url)) pin.addMerchant(new Merchant(listing));
 }
 
 const imageCount = (pin: Pin) => pin.media.filter((m) => Number(m.type) === mediumID.image).length;

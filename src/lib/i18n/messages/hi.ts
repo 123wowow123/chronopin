@@ -480,6 +480,7 @@ const hi: Messages = {
     gaming: 'गेमिंग',
     anime: 'एनीमे',
     manga: 'मंगा',
+    comics: 'कॉमिक्स',
     movie: 'फ़िल्म',
     tv: 'टीवी',
     music: 'संगीत',

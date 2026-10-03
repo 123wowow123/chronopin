@@ -478,6 +478,7 @@ const it: Messages = {
     gaming: 'Videogiochi',
     anime: 'Anime',
     manga: 'Manga',
+    comics: 'Fumetti',
     movie: 'Cinema',
     tv: 'TV',
     music: 'Musica',

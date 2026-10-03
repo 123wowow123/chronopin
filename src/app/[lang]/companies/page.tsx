@@ -6,6 +6,7 @@ import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
 import { companyPath, MIN_INDEXED_PINS } from '@/lib/topics';
 import { topicIndex } from '@/server/services/topics';
+import { siteCardImages } from '@/server/services/shareCard';
 
 // Every company with a page worth indexing, busiest first.
 export async function generateMetadata(): Promise<Metadata> {
@@ -13,12 +14,14 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
   const title = t('topic.companiesTitle');
   const description = t('topic.companiesDescription', { site: siteName });
+  const images = await siteCardImages();
   const links = await alternates('/companies');
   return {
     title,
     description,
     alternates: links,
-    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description },
+    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description, images },
+    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description, images: images.map((i) => i.url) },
   };
 }
 

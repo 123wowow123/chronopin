@@ -28,6 +28,17 @@ type Store = {
 const q = encodeURIComponent;
 
 const STORES = {
+  // No search here: a game's Steam page comes from a stored listing
+  // (src/server/steamListing.ts), and a search of Steam would be no better
+  // than the pin's own page.
+  steam: {
+    name: 'Steam',
+    host: /(^|\.)steampowered\.com$/i,
+    search: (s: string) => `https://store.steampowered.com/search/?term=${q(s)}`,
+    background: '#1b2838',
+    text: '#ffffff',
+    border: '#66c0f4',
+  },
   amazon: {
     name: 'Amazon',
     host: /(^|\.)amazon\.com$/i,

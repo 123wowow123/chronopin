@@ -10,6 +10,7 @@ import { tagPath, topicSlug } from '@/lib/topics';
 import { timelineVideo } from '@/server/services/pages';
 import { tagPage } from '@/server/services/topics';
 import { viewerTimeZone } from '@/server/viewer';
+import { siteCardImages } from '@/server/services/shareCard';
 
 type Props = PageProps<'/[lang]/tag/[slug]'>;
 
@@ -30,14 +31,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const label = tagLabel(t, { name: page.name, kind: page.kind });
   const title = t('topic.tagTitle', { name: label });
   const description = t('topic.tagDescription', { name: label, site: siteName });
+  const images = await siteCardImages();
   const links = await alternates(tagPath(page.name));
   return {
     title,
     description,
     alternates: links,
     ...(page.indexable ? {} : { robots: { index: false, follow: true } }),
-    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description },
-    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description },
+    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description, images },
+    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description, images: images.map((i) => i.url) },
   };
 }
 

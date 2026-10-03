@@ -529,6 +529,7 @@ const ar: Messages = {
     gaming: 'الألعاب',
     anime: 'أنمي',
     manga: 'مانغا',
+    comics: 'القصص المصورة',
     movie: 'أفلام',
     tv: 'تلفزيون',
     music: 'موسيقى',

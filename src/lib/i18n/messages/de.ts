@@ -479,6 +479,7 @@ const de: Messages = {
     gaming: 'Games',
     anime: 'Anime',
     manga: 'Manga',
+    comics: 'Comics',
     movie: 'Film',
     tv: 'Serien',
     music: 'Musik',

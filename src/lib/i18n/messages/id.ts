@@ -481,6 +481,7 @@ const id: Messages = {
     gaming: 'Gim',
     anime: 'Anime',
     manga: 'Manga',
+    comics: 'Komik',
     movie: 'Film',
     tv: 'TV',
     music: 'Musik',
