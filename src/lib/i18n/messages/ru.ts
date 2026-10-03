@@ -489,6 +489,7 @@ const ru: Messages = {
     gaming: 'Игры',
     anime: 'Аниме',
     manga: 'Манга',
+    comics: 'Комиксы',
     movie: 'Кино',
     tv: 'ТВ',
     music: 'Музыка',

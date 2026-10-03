@@ -4,6 +4,7 @@ import Link from '@/components/ui/Link';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
 import type { MessageKey } from '@/lib/i18n/translate';
+import { siteCardImages } from '@/server/services/shareCard';
 
 // Per request: the hreflang list follows the admin's language setting.
 export async function generateMetadata(): Promise<Metadata> {
@@ -11,12 +12,14 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
   const title = t('about.title');
   const description = t('about.description', { site: siteName });
+  const images = await siteCardImages();
   const links = await alternates('/about');
   return {
     title,
     description,
     alternates: links,
-    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description },
+    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description, images },
+    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description, images: images.map((i) => i.url) },
   };
 }
 

@@ -9,6 +9,7 @@ import { companyPath, topicSlug } from '@/lib/topics';
 import { timelineVideo } from '@/server/services/pages';
 import { companyPage } from '@/server/services/topics';
 import { viewerTimeZone } from '@/server/viewer';
+import { siteCardImages } from '@/server/services/shareCard';
 
 type Props = PageProps<'/[lang]/company/[slug]'>;
 
@@ -29,14 +30,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const label = page.name;
   const title = t('topic.companyTitle', { name: label });
   const description = t('topic.companyDescription', { name: label, site: siteName });
+  const images = await siteCardImages();
   const links = await alternates(companyPath(page.name));
   return {
     title,
     description,
     alternates: links,
     ...(page.indexable ? {} : { robots: { index: false, follow: true } }),
-    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description },
-    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description },
+    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description, images },
+    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description, images: images.map((i) => i.url) },
   };
 }
 

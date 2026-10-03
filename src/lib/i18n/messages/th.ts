@@ -477,6 +477,7 @@ const th: Messages = {
     gaming: 'เกม',
     anime: 'อนิเมะ',
     manga: 'มังงะ',
+    comics: 'คอมิก',
     movie: 'ภาพยนตร์',
     tv: 'ทีวี',
     music: 'ดนตรี',

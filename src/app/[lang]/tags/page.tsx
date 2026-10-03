@@ -7,6 +7,7 @@ import { tagLabel } from '@/lib/i18n/labels';
 import { alternates, getT } from '@/lib/i18n/server';
 import { MIN_INDEXED_PINS, tagPath } from '@/lib/topics';
 import { topicIndex } from '@/server/services/topics';
+import { siteCardImages } from '@/server/services/shareCard';
 
 // Every tag with a page worth indexing, so each one is a link away from a
 // page a crawler finds: the categories first, then the rest, busiest first.
@@ -15,12 +16,14 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
   const title = t('topic.tagsTitle');
   const description = t('topic.tagsDescription', { site: siteName });
+  const images = await siteCardImages();
   const links = await alternates('/tags');
   return {
     title,
     description,
     alternates: links,
-    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description },
+    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description, images },
+    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description, images: images.map((i) => i.url) },
   };
 }
 

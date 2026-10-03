@@ -20,6 +20,7 @@ import { DEFAULT_SITE_VERIFICATION, type SiteVerificationSetting } from '@/lib/s
 import { themeScript } from '@/lib/theme';
 import { getSiteVerification } from '@/server/model/appSetting';
 import { TAGS } from '@/server/services/cache';
+import { siteCardImages } from '@/server/services/shareCard';
 import '../globals.css';
 
 const notoSans = Noto_Sans({ subsets: ['latin'], variable: '--font-noto-sans', display: 'swap' });
@@ -52,14 +53,6 @@ export async function generateStaticParams() {
   return LOCALES.map((locale) => ({ lang: locale }));
 }
 
-// The UTC day, which the site's share card URL carries (below). Cached by the
-// hour, so the new day's URL is out within an hour of midnight.
-async function shareCardDay(): Promise<string> {
-  'use cache';
-  cacheLife('hours');
-  return new Date().toISOString().slice(0, 10);
-}
-
 // The site-verification meta tag's name and code (src/lib/siteVerification.ts).
 // Cached and tag-revalidated rather than timed with Date.now() (as the admin
 // settings pages read are, services/pages.ts): a prerender reads no clock,
@@ -73,7 +66,7 @@ async function siteVerificationMeta(): Promise<SiteVerificationSetting> {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const [t, links, day, verification] = await Promise.all([getT(), alternates('/'), shareCardDay(), siteVerificationMeta()]);
+  const [t, links, images, verification] = await Promise.all([getT(), alternates('/'), siteCardImages(), siteVerificationMeta()]);
   const title = t('meta.siteTitle', { site: siteName });
   const description = t('meta.siteDescription');
   return {
@@ -93,13 +86,10 @@ export async function generateMetadata(): Promise<Metadata> {
       url: links.canonical,
       locale: languageTag(t.locale).replace('-', '_'),
       // The site's card, for a page with no picture of its own (a pin page
-      // sets its own): without one, a link to the home page or a search
-      // previews in Messages as a bare domain. Its collage of recent pins is
-      // rebuilt daily, and the day in the URL makes sites that keep a preview
-      // by its URL fetch the new one.
-      images: [{ url: `/og/site?d=${day}`, width: 1200, height: 630, alt: siteName }],
+      // sets its own): without one, a link previews in Messages as a bare domain.
+      images,
     },
-    twitter: { card: 'summary_large_image' },
+    twitter: { card: 'summary_large_image', images: images.map((i) => i.url) },
     robots: { index: true, follow: true },
     other: {
       'google-adsense-account': 'ca-pub-4845333369058390',

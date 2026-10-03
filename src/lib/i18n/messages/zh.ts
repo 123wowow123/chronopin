@@ -480,6 +480,7 @@ const zh: Messages = {
     gaming: '游戏',
     anime: '动画',
     manga: '漫画',
+    comics: '美漫',
     movie: '电影',
     tv: '电视',
     music: '音乐',

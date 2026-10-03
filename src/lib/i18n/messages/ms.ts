@@ -481,6 +481,7 @@ const ms: Messages = {
     gaming: 'Permainan',
     anime: 'Anime',
     manga: 'Manga',
+    comics: 'Komik',
     movie: 'Filem',
     tv: 'TV',
     music: 'Muzik',

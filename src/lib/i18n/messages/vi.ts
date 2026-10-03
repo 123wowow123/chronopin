@@ -480,6 +480,7 @@ const vi: Messages = {
     gaming: 'Trò chơi',
     anime: 'Anime',
     manga: 'Manga',
+    comics: 'Truyện tranh',
     movie: 'Phim',
     tv: 'Truyền hình',
     music: 'Âm nhạc',

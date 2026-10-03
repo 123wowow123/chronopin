@@ -479,6 +479,7 @@ const ko: Messages = {
     gaming: '게임',
     anime: '애니메이션',
     manga: '만화',
+    comics: '코믹스',
     movie: '영화',
     tv: 'TV',
     music: '음악',

@@ -481,6 +481,7 @@ const en = {
     gaming: 'Gaming',
     anime: 'Anime',
     manga: 'Manga',
+    comics: 'Comics',
     movie: 'Movie',
     tv: 'TV',
     music: 'Music',

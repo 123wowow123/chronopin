@@ -452,10 +452,9 @@ function MediaSlide({
 const YT_PLAYING = 1;
 const YT_BUFFERING = 3;
 
-// Stored from the YouTube API's own embedHtml. A playing player pauses once it
-// scrolls fully out of view and resumes when it scrolls back; one the viewer
-// paused stays paused. Uses the iframe API that enablejsapi=1 turns on: after
-// a 'listening' handshake the player posts its state to this window.
+// Stored from the YouTube API's own embedHtml. Uses the iframe API that
+// enablejsapi=1 turns on: after a 'listening' handshake the player posts its
+// state to this window.
 // Leaving the page pauses it too: the router keeps up to three pages in the
 // document, hidden, so that going back restores them (React's <Activity>).
 // A hidden page's iframe is still there and still playing - its effects are
@@ -476,7 +475,6 @@ function YouTubeEmbed({ medium, title }: { medium: MediumJson; title: string }) 
     const origin = new URL(iframe.src).origin;
     const send = (message: object) => iframe.contentWindow?.postMessage(JSON.stringify(message), origin);
     let state: number | undefined;
-    let pausedOffscreen = false;
     let pausedHidden = false;
     const playing = () => state === YT_PLAYING || state === YT_BUFFERING;
 
@@ -507,17 +505,6 @@ function YouTubeEmbed({ medium, title }: { medium: MediumJson; title: string }) 
     startHandshake();
     iframe.addEventListener('load', startHandshake);
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting && playing()) {
-        send({ event: 'command', func: 'pauseVideo', args: [] });
-        pausedOffscreen = true;
-      } else if (entry.isIntersecting && pausedOffscreen) {
-        send({ event: 'command', func: 'playVideo', args: [] });
-        pausedOffscreen = false;
-      }
-    });
-    observer.observe(container);
-
     const onVisibilityChange = () => {
       if (document.hidden && playing()) {
         send({ event: 'command', func: 'pauseVideo', args: [] });
@@ -531,7 +518,6 @@ function YouTubeEmbed({ medium, title }: { medium: MediumJson; title: string }) 
 
     return () => {
       if (playing()) send({ event: 'command', func: 'pauseVideo', args: [] });
-      observer.disconnect();
       window.clearInterval(handshake);
       iframe.removeEventListener('load', startHandshake);
       window.removeEventListener('message', onMessage);

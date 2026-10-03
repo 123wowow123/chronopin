@@ -114,3 +114,12 @@ describe('withMatches', () => {
     expect(links.filter((l) => l.search).map((l) => l.store)).toEqual(['StockX', 'GOAT', 'Amazon', 'Mercari', 'Facebook']);
   });
 });
+
+describe('shopLinks for a game', () => {
+  it("shows a stored Steam page in Steam's colours, with no product name needed", () => {
+    const links = shopLinks({ categories: ['Gaming'], merchants: [{ label: 'Steam', url: 'https://store.steampowered.com/app/3669200/' }] });
+    expect(links).toEqual([
+      { store: 'Steam', url: 'https://store.steampowered.com/app/3669200/', price: undefined, search: false, amazon: false, background: '#1b2838', text: '#ffffff', border: '#66c0f4' },
+    ]);
+  });
+});
