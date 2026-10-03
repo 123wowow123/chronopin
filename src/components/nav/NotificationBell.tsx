@@ -1,7 +1,7 @@
 'use client';
 
 import Link from '@/components/ui/Link';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
@@ -212,6 +212,41 @@ function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () 
   );
 }
 
+// The sections the list is sorted into, by why the notification reached the
+// viewer: people and companies they follow, pins and threads they watch, and
+// what happened to their own pins and comments. Each section keeps the
+// server's newest-first order, and the sections themselves run by whichever
+// holds the newest notification, so the top of the list is still the latest.
+type Section = 'following' | 'watching' | 'yours';
+
+function sectionOf(type: string): Section {
+  switch (type) {
+    case 'today':
+    case 'start':
+    case 'soon':
+    case 'update':
+    case 'thread':
+      return 'watching';
+    case 'comment':
+    case 'reply':
+    case 'reference':
+      return 'yours';
+    default:
+      return 'following';
+  }
+}
+
+function sectionsOf(items: Notification[]): { section: Section; items: Notification[] }[] {
+  const sections: { section: Section; items: Notification[] }[] = [];
+  for (const n of items) {
+    const section = sectionOf(n.type);
+    const found = sections.find((s) => s.section === section);
+    if (found) found.items.push(n);
+    else sections.push({ section, items: [n] });
+  }
+  return sections;
+}
+
 function NotificationItems({
   items,
   pending,
@@ -220,124 +255,143 @@ function NotificationItems({
   listClassName = '',
 }: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string }) {
   const t = useT();
+  const headingId = useId();
   if (items === null) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
   if (items.length === 0) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('notifications.empty')}</div>;
+  const labels: Record<Section, string> = {
+    following: t('notifications.following'),
+    watching: t('notifications.groupWatching'),
+    yours: t('notifications.groupYours'),
+  };
   return (
-    <ul className={listClassName}>
-        {items.map((n) => {
-          const handle = n.actor.userName.replace(/^@+/, '');
-          const reason = reasonOf(n, t);
-          return (
-            <li key={n.id} className={`flex items-center gap-3 px-4 py-2.5 text-sm ${n.read ? '' : 'bg-accent/10'}`}>
-              <NotificationFace n={n} onNavigate={onNavigate} />
-              <div className="min-w-0 flex-1">
-                {n.type === 'follow' ? (
-                  <span>
-                    {t.rich('notifications.follow', {
-                      actor: () => (
-                        <Link href={userHref(handle)} className="font-semibold text-ink" onClick={onNavigate}>
-                          {n.actor.userName}
-                        </Link>
-                      ),
-                    })}
-                  </span>
-                ) : n.type === 'comment' || n.type === 'reply' ? (
-                  <Link href={commentHref(n)} className="block text-ink" onClick={onNavigate}>
-                    {t.rich(n.type === 'reply' ? 'notifications.reply' : 'notifications.comment', {
-                      actor: () => <span className="font-semibold">{n.actor.userName}</span>,
-                      pin: () => <span className="font-semibold">{n.pinTitle}</span>,
-                    })}
-                    {n.commentText ? <span className="mt-0.5 line-clamp-2 block text-muted">“{n.commentText}”</span> : null}
-                  </Link>
-                ) : n.type === 'reference' && n.pinId ? (
-                  <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#references-heading`} className="block text-ink" onClick={onNavigate}>
-                    {t.rich('notifications.reference', {
-                      actor: () => <span className="font-semibold">{n.actor.userName}</span>,
-                      pin: () => <span className="font-semibold">{n.pinTitle}</span>,
-                    })}
-                  </Link>
-                ) : n.type === 'today' && n.pinId ? (
-                  <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
-                    {t.rich('notifications.today', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
-                  </Link>
-                ) : (n.type === 'start' || n.type === 'soon') && n.pinId ? (
-                  <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
-                    {n.type === 'start'
-                      ? t.rich('notifications.start', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })
-                      : t.rich('notifications.soon', { minutes: ALERT_SOON_MINUTES, pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
-                  </Link>
-                ) : n.type === 'update' && n.pinId ? (
-                  <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#updates`} className="block text-ink" onClick={onNavigate}>
-                    {t.rich('notifications.update', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
-                  </Link>
-                ) : n.type === 'thread' && n.pinId ? (
-                  <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
-                    {t.rich('notifications.thread', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
-                  </Link>
-                ) : n.type === 'pin' && n.pinId ? (
-                  <PinRowLink n={n} onNavigate={onNavigate}>
-                    {t.rich(n.groupCount > 1 ? 'notifications.pinMany' : 'notifications.pin', {
-                      count: n.groupCount,
-                      actor: () => <span className="font-semibold">{n.actor.userName}</span>,
-                      pin: () => <span className="font-semibold">{n.pinTitle}</span>,
-                      n: (chunks) => (
-                        <span className="mx-0.5 inline-block rounded-full bg-accent px-1.5 py-px text-xs leading-tight font-bold tabular-nums text-white">
-                          {chunks}
-                        </span>
-                      ),
-                    })}
-                  </PinRowLink>
-                ) : n.type === 'company' && n.pinId ? (
-                  <PinRowLink n={n} onNavigate={onNavigate}>
-                    {t.rich(n.groupCount > 1 ? 'notifications.companyMany' : 'notifications.company', {
-                      count: n.groupCount,
-                      company: () => <span className="font-semibold">{n.companyName}</span>,
-                      pin: () => <span className="font-semibold">{n.pinTitle}</span>,
-                      n: (chunks) => (
-                        <span className="mx-0.5 inline-block rounded-full bg-accent px-1.5 py-px text-xs leading-tight font-bold tabular-nums text-white">
-                          {chunks}
-                        </span>
-                      ),
-                    })}
-                  </PinRowLink>
-                ) : null}
-                <div className="mt-0.5 flex items-center gap-1 text-xs text-subtle">
-                  {reason ? (
-                    <>
-                      <Icon name={reason.icon} className="size-3 shrink-0" />
-                      {reason.href ? (
-                        <Link href={reason.href} className="truncate text-subtle hover:text-ink" onClick={onNavigate}>
-                          {reason.label}
-                        </Link>
-                      ) : (
-                        <span className="truncate">{reason.label}</span>
-                      )}
-                      <span aria-hidden>·</span>
-                    </>
+    <div className={listClassName}>
+      {sectionsOf(items).map(({ section, items: rows }) => (
+        <section key={section} aria-labelledby={`${headingId}-${section}`}>
+          <h3
+            id={`${headingId}-${section}`}
+            className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-panel px-4 py-1.5 text-xs font-semibold tracking-wide text-subtle uppercase"
+          >
+            {labels[section]}
+            <span className="tabular-nums">{rows.length}</span>
+          </h3>
+          <ul className="divide-y divide-line">
+            {rows.map((n) => {
+              const handle = n.actor.userName.replace(/^@+/, '');
+              const reason = reasonOf(n, t);
+              return (
+                <li key={n.id} className={`flex items-center gap-3 px-4 py-2.5 text-sm ${n.read ? '' : 'bg-accent/10'}`}>
+                  <NotificationFace n={n} onNavigate={onNavigate} />
+                  <div className="min-w-0 flex-1">
+                    {n.type === 'follow' ? (
+                      <span>
+                        {t.rich('notifications.follow', {
+                          actor: () => (
+                            <Link href={userHref(handle)} className="font-semibold text-ink" onClick={onNavigate}>
+                              {n.actor.userName}
+                            </Link>
+                          ),
+                        })}
+                      </span>
+                    ) : n.type === 'comment' || n.type === 'reply' ? (
+                      <Link href={commentHref(n)} className="block text-ink" onClick={onNavigate}>
+                        {t.rich(n.type === 'reply' ? 'notifications.reply' : 'notifications.comment', {
+                          actor: () => <span className="font-semibold">{n.actor.userName}</span>,
+                          pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                        })}
+                        {n.commentText ? <span className="mt-0.5 line-clamp-2 block text-muted">“{n.commentText}”</span> : null}
+                      </Link>
+                    ) : n.type === 'reference' && n.pinId ? (
+                      <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#references-heading`} className="block text-ink" onClick={onNavigate}>
+                        {t.rich('notifications.reference', {
+                          actor: () => <span className="font-semibold">{n.actor.userName}</span>,
+                          pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                        })}
+                      </Link>
+                    ) : n.type === 'today' && n.pinId ? (
+                      <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
+                        {t.rich('notifications.today', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                      </Link>
+                    ) : (n.type === 'start' || n.type === 'soon') && n.pinId ? (
+                      <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
+                        {n.type === 'start'
+                          ? t.rich('notifications.start', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })
+                          : t.rich('notifications.soon', { minutes: ALERT_SOON_MINUTES, pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                      </Link>
+                    ) : n.type === 'update' && n.pinId ? (
+                      <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#updates`} className="block text-ink" onClick={onNavigate}>
+                        {t.rich('notifications.update', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                      </Link>
+                    ) : n.type === 'thread' && n.pinId ? (
+                      <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
+                        {t.rich('notifications.thread', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                      </Link>
+                    ) : n.type === 'pin' && n.pinId ? (
+                      <PinRowLink n={n} onNavigate={onNavigate}>
+                        {t.rich(n.groupCount > 1 ? 'notifications.pinMany' : 'notifications.pin', {
+                          count: n.groupCount,
+                          actor: () => <span className="font-semibold">{n.actor.userName}</span>,
+                          pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                          n: (chunks) => (
+                            <span className="mx-0.5 inline-block rounded-full bg-accent px-1.5 py-px text-xs leading-tight font-bold tabular-nums text-white">
+                              {chunks}
+                            </span>
+                          ),
+                        })}
+                      </PinRowLink>
+                    ) : n.type === 'company' && n.pinId ? (
+                      <PinRowLink n={n} onNavigate={onNavigate}>
+                        {t.rich(n.groupCount > 1 ? 'notifications.companyMany' : 'notifications.company', {
+                          count: n.groupCount,
+                          company: () => <span className="font-semibold">{n.companyName}</span>,
+                          pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                          n: (chunks) => (
+                            <span className="mx-0.5 inline-block rounded-full bg-accent px-1.5 py-px text-xs leading-tight font-bold tabular-nums text-white">
+                              {chunks}
+                            </span>
+                          ),
+                        })}
+                      </PinRowLink>
+                    ) : null}
+                    <div className="mt-0.5 flex items-center gap-1 text-xs text-subtle">
+                      {reason ? (
+                        <>
+                          <Icon name={reason.icon} className="size-3 shrink-0" />
+                          {reason.href ? (
+                            <Link href={reason.href} className="truncate text-subtle hover:text-ink" onClick={onNavigate}>
+                              {reason.label}
+                            </Link>
+                          ) : (
+                            <span className="truncate">{reason.label}</span>
+                          )}
+                          <span aria-hidden>·</span>
+                        </>
+                      ) : null}
+                      <time className="shrink-0" dateTime={n.utcCreatedDateTime}>
+                        {timeAgo(n.utcCreatedDateTime, undefined, t.locale)}
+                      </time>
+                    </div>
+                  </div>
+                  {n.type === 'follow' ? (
+                    n.followingBack ? (
+                      <span className="text-xs text-subtle">{t('notifications.following')}</span>
+                    ) : (
+                      <button
+                        type="button"
+                        disabled={pending[n.actor.id]}
+                        onClick={() => followBack(n)}
+                        className="btn btn-sm btn-primary rounded-full"
+                      >
+                        {t('notifications.followBack')}
+                      </button>
+                    )
                   ) : null}
-                  <time className="shrink-0" dateTime={n.utcCreatedDateTime}>
-                    {timeAgo(n.utcCreatedDateTime, undefined, t.locale)}
-                  </time>
-                </div>
-              </div>
-              {n.type === 'follow' ? (
-                n.followingBack ? (
-                  <span className="text-xs text-subtle">{t('notifications.following')}</span>
-                ) : (
-                  <button
-                    type="button"
-                    disabled={pending[n.actor.id]}
-                    onClick={() => followBack(n)}
-                    className="btn btn-sm btn-primary rounded-full"
-                  >
-                    {t('notifications.followBack')}
-                  </button>
-                )
-              ) : null}
-            </li>
-          );
-        })}
-    </ul>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))}
+    </div>
   );
 }
 
@@ -523,7 +577,7 @@ export function NotificationsFeed() {
   return (
     <div className="surface overflow-hidden">
       <LocalWeatherRow className="border-b border-line" />
-      <NotificationItems {...list} listClassName="divide-y divide-line" />
+      <NotificationItems {...list} />
     </div>
   );
 }

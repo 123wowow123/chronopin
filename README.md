@@ -298,14 +298,24 @@ sync prod db to local and backup json
 run 6am job here in this session
 
 
-
+pin most popular steam games
 
 best of 2027 desert per brand per category
 
-grammy
+new and historical grammy news and events and make into thread where possible
 
+racing
 
 https://www.fooddive.com/
 
 programatic seo
 
+oil news and events and attacks
+
+powerplant build news and event
+
+
+https://www.eventbrite.com/e/sneaker-con-los-angeles-october-17-18-2026-tickets-2000208801369?aff=erelpanelorg
+
+
+add an ad to the sponsored blocks

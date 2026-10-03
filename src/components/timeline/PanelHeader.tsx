@@ -51,7 +51,8 @@ export function PanelHeader({
   onToggle: () => void;
   // What the row says to a screen reader; "Posted within: 1 day" by default.
   label?: string;
-  controls: string;
+  // The fold the row opens; none for a row that opens a dialog.
+  controls?: string;
   // Widens the filter back out, shown only while it narrows anything.
   reset?: { label: string; onClick: () => void };
   className?: string;

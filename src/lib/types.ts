@@ -179,6 +179,9 @@ export type PinJson = {
   allDayStated?: boolean;
   utcCreatedDateTime?: string;
   utcUpdatedDateTime?: string;
+  // When its newest update (PinUpdate, 0081) came, on timeline pages and
+  // search results: a card under a day old says UPDATED.
+  utcLastUpdateDateTime?: string | null;
   favoriteCount?: number;
   likeCount?: number;
   // Page views, once per viewer per day.

@@ -70,9 +70,8 @@ test('search results page in as they are scrolled, by date and by relevance', as
 
 // The timeline and the results share one loading boundary, so a pick keeps the
 // pins it was made over on screen until the search is in.
-// Categories are the tag cloud's top group, and a pick is a tag: term. With
-// the tag list off (the default, src/lib/tagList.ts) the Tags row in the
-// Filters panel opens the big cloud, and the pick is made there.
+// Categories are the tag cloud's top group, and a pick is a tag: term. The
+// Tags row in the Filters panel opens the big cloud, and the pick is made there.
 test('picking a category searches without blanking the page', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('article').first()).toBeVisible();

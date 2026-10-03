@@ -145,7 +145,6 @@ export function Timeline({
   minConfidence,
   video,
   sliderTyping = false,
-  tagList = false,
   ads = NO_ADS,
   trending,
   newPins: initialNewPins,
@@ -172,8 +171,6 @@ export function Timeline({
   video: TimelineVideoSetting;
   // Whether the filter sliders offer a typed box (the admin setting).
   sliderTyping?: boolean;
-  // The admin setting: whether the tag panel lists its tags, or opens the big cloud.
-  tagList?: boolean;
   // The admin setting: whether the day-to-day ad row and the side ad panel show.
   ads?: { row: boolean; side: boolean; sideAdsense?: string | null };
   // The most viewed pins with rising views, beside the cards on wide screens.
@@ -739,7 +736,6 @@ export function Timeline({
         <FloatingControls
           merge
           typing={sliderTyping}
-          tagList={tagList}
           summaryCaption={t('controls.filter')}
           summary={summary}
           summaryIsPostedWithin={false}

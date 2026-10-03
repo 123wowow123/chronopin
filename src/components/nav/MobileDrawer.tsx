@@ -7,7 +7,7 @@ import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
-import { drawerHeld, onCloseDrawer, setCardsSlot, setControlsSlot, setDrawerScroller, useHasControls } from '@/lib/client/controlsDrawer';
+import { onCloseDrawer, setCardsSlot, setControlsSlot, useHasControls } from '@/lib/client/controlsDrawer';
 import { leaveDrawer, settleDrawerMark, takeDrawerReturn } from '@/lib/client/drawerReturn';
 import { useUnreadChats } from '@/lib/client/messages';
 import { useUnreadCount } from '@/lib/client/notifications';
@@ -108,9 +108,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
   const [lastPath, setLastPath] = useState(pathname);
   if (lastPath !== pathname) {
     setLastPath(pathname);
-    // Not for a tag picked in the drawer's own filters, whose search is the
-    // change of page (src/lib/client/controlsDrawer.ts).
-    if (!drawerHeld()) setOpen(false);
+    setOpen(false);
   }
 
   useScrollLock(open);
@@ -233,11 +231,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
         onClick={() => setOpen(false)}
       />
       <div
-        ref={(element) => {
-          panelRef.current = element;
-          setDrawerScroller(element);
-          return () => setDrawerScroller(null);
-        }}
+        ref={panelRef}
         role="dialog"
         aria-modal="true"
         aria-label={t('nav.menu')}

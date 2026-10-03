@@ -109,6 +109,16 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
   const percent = started ? 100 : !isNaN(from) && span > 0 ? Math.min(100, Math.max(0, ((now - from) / span) * 100)) : 0;
   const parts = delayed && span > 0 ? stretches(from, startMs, [originalMs, sinceMs]) : [];
   const fillClass = started ? 'bg-past' : 'bg-future';
+  // A day or more on, the exact years and days ("1y 9d") rather than a
+  // rounded "last year"; under a day, the nearest hour or minute.
+  const gone = splitYears(startMs, now);
+  const goneDays = Math.floor(gone.rest / DAY);
+  const agoLabel =
+    started && (gone.years > 0 || goneDays > 0)
+      ? t('countdown.startedSpan', {
+          span: [gone.years > 0 ? t('countdown.years', { count: gone.years }) : '', t('countdown.days', { count: goneDays })].filter(Boolean).join(' '),
+        })
+      : t('countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale) });
 
   return (
     <div className={`my-3 flex items-center gap-3 rounded-lg border px-3 py-1.5 text-xs ${started ? 'border-past/30 bg-past/10' : 'border-future/30 bg-future/10'}`}>
@@ -130,7 +140,7 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
         )}
       </div>
       {started ? (
-        <span className="text-subtle">{t('countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale) })}</span>
+        <span className="text-subtle">{agoLabel}</span>
       ) : (
         <span className="font-mono text-sm text-future tabular-nums">
           {years > 0 ? <b className="me-1">{t('countdown.years', { count: years })}</b> : null}
