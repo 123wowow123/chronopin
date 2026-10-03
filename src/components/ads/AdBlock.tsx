@@ -205,7 +205,6 @@ export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 
           );
         })}
       </ul>
-      <Disclosure className="mt-1.5" />
     </aside>
   );
 }
@@ -249,7 +248,8 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
 
 // A panel beside the timeline on wide screens, under trending and new pins,
 // with rows like theirs. It splits the column's room with them and, like
-// them, shows only whole rows (src/lib/client/wholeRows.ts); `onAds` says how
+// them, shows only whole rows (src/lib/client/wholeRows.ts), one at
+// least, then only what trending and new pins leave; `onAds` says how
 // many arrived (null while they are still coming) so the column is fitted
 // again.
 //
@@ -268,15 +268,12 @@ export function AdPanel({ onAds }: { onAds?: (count: number | null) => void }) {
   }, [count, onAds]);
   if (ads && !ads.length) return null;
   return (
-    <section ref={ref} aria-labelledby="ad-panel-heading" aria-busy={!ads} className="floating flex max-h-max min-h-0 grow basis-28 flex-col text-sm">
-      {/* The disclosure sits under the heading: under the list it would be
-          cut off with the rows that do not fit. */}
+    <section ref={ref} data-rows-last aria-labelledby="ad-panel-heading" aria-busy={!ads} className="floating flex max-h-max min-h-0 grow basis-28 flex-col text-sm">
       <div className="shrink-0 px-3.5 pt-2.5 pb-1">
         <h2 id="ad-panel-heading" className="flex items-center gap-2">
           <Icon name="cart" className="size-4 text-link" />
           <SponsoredLabel />
         </h2>
-        <Disclosure className="mt-0.5" />
       </div>
       <ol className="flex min-h-0 flex-col flex-wrap overflow-clip pb-1.5">
         {ads

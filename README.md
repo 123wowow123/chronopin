@@ -318,4 +318,17 @@ powerplant build news and event
 https://www.eventbrite.com/e/sneaker-con-los-angeles-october-17-18-2026-tickets-2000208801369?aff=erelpanelorg
 
 
-add an ad to the sponsored blocks
+ability to buy an ad to the sponsored blocks
+
+
+organize admin pages to more intuitive layout and groupings
+
+
+On Holding AG (ONON)
+large sport contract deal with sportswear or teams
+
+
+Agility Robotics (ticker: CCXI)
+
+Is there any improvement we can do to make search better? Should we check the search model and strategy?
+
