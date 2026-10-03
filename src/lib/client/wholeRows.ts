@@ -15,8 +15,10 @@ const panelRows = (panel: HTMLElement) => [...panel.querySelector('ol')!.childre
 // split it as their flex growth says) and the next one is left the rest,
 // without the panels resizing each other back and forth.
 //
-// Then the panels in view are evened out to the same number of rows, the
-// ones higher up taking any extra.
+// Then the room is shared out evenly from the top down, a row at a time to
+// the panel showing the fewest. A panel marked data-rows-last (sponsored)
+// keeps one row and is given only what the others leave, never more rows than
+// the least of them.
 export function useWholeRowPanels<T extends HTMLElement>(rowsKey: unknown) {
   const ref = useRef<T>(null);
   useLayoutEffect(() => {
@@ -40,28 +42,10 @@ export function useWholeRowPanels<T extends HTMLElement>(rowsKey: unknown) {
         panel.style.maxHeight = `${Math.ceil(bottom - panel.getBoundingClientRect().top)}px`;
         return shown;
       });
-      // The panels in view show the same number of rows when the lists allow
-      // it; when the rows do not divide evenly, the panels higher up take the
-      // extra. Rows moved only from one panel to another, so the room holds
-      // unless the rows differ in height: then the fullest panel gives one up.
       const first = all[0];
       const inView = all.map((panel, i) => i).filter((i) => counts[i] > 0 && all[i].offsetLeft === first.offsetLeft);
       if (inView.length < 2) return;
       const totals = inView.map((i) => panelRows(all[i]).length);
-      const spare = inView.reduce((sum, i) => sum + counts[i], 0);
-      const target = inView.map(() => 0);
-      // One row at a time, to the top panel with the fewest that still has more.
-      for (let given = 0; given < spare; ) {
-        let moved = false;
-        for (let k = 0; k < inView.length && given < spare; k++) {
-          if (target[k] < totals[k] && target[k] === Math.min(...target.filter((n, j) => n < totals[j]))) {
-            target[k]++;
-            given++;
-            moved = true;
-          }
-        }
-        if (!moved) break;
-      }
       const room = column.clientHeight;
       const gap = parseFloat(getComputedStyle(column).rowGap) || 0;
       const heightFor = (i: number, n: number) => {
@@ -75,14 +59,33 @@ export function useWholeRowPanels<T extends HTMLElement>(rowsKey: unknown) {
         return Math.ceil(head + parseFloat(listStyle.paddingTop) + rowsHeight + parseFloat(listStyle.paddingBottom) + parseFloat(panelStyle.borderBottomWidth));
       };
       const heights = () => inView.map((i, k) => heightFor(i, target[k]));
-      let h = heights();
-      while (h.reduce((a, b) => a + b, 0) + gap * (inView.length - 1) > room + 1) {
-        let fullest = -1;
-        for (let k = 0; k < inView.length; k++) if (target[k] > 1 && (fullest < 0 || target[k] >= target[fullest])) fullest = k;
-        if (fullest < 0) break;
-        target[fullest]--;
-        h = heights();
-      }
+      // Every panel in view keeps its first row; the rest of the room goes out
+      // a row at a time, each only if the column still holds it, to whichever
+      // panel shows the fewest, the ones higher up taking ties - so the panels
+      // fill evenly from the top down. A panel marked data-rows-last
+      // (sponsored) stays at one row until the others show FIRST_FILL each,
+      // and never shows more rows than the least of them.
+      const FIRST_FILL = 4;
+      const target = inView.map(() => 1);
+      const fits = () => heights().reduce((a, b) => a + b, 0) + gap * (inView.length - 1) <= room + 1;
+      const last = inView.map((i) => 'rowsLast' in all[i].dataset);
+      const main = inView.map((_, k) => k).filter((k) => !last[k]);
+      const lowest = () => Math.min(...main.map((k) => target[k]));
+      const room_for = (k: number, cap: number) => target[k] < Math.min(totals[k], cap) && (!last[k] || (lowest() >= FIRST_FILL && target[k] < lowest()));
+      const fill = (cap: number) => {
+        for (;;) {
+          let next = -1;
+          for (let k = 0; k < inView.length; k++) if (room_for(k, cap) && (next < 0 || target[k] < target[next])) next = k;
+          if (next < 0) return true;
+          target[next]++;
+          if (!fits()) {
+            target[next]--;
+            return false;
+          }
+        }
+      };
+      if (fill(FIRST_FILL)) fill(Infinity);
+      const h = heights();
       inView.forEach((i, k) => {
         all[i].style.maxHeight = `${h[k]}px`;
       });
@@ -92,6 +95,10 @@ export function useWholeRowPanels<T extends HTMLElement>(rowsKey: unknown) {
     // capping them never resizes what is observed.
     const observer = new ResizeObserver(fit);
     observer.observe(column);
+    // A row that changes height once measured (a late picture, a font) leaves
+    // its panel capped for the old height: fit again. Capping a panel never
+    // resizes a row.
+    for (const panel of panels()) for (const row of panelRows(panel)) observer.observe(row);
     return () => {
       observer.disconnect();
       for (const panel of panels()) panel.style.maxHeight = '';

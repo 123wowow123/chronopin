@@ -12,6 +12,9 @@ import { useT } from '@/lib/client/i18n';
 
 type Highlights = { trending: { pins: TrendingPin[]; days: number }; newPins: NewPin[]; minConfidence?: number | null };
 
+// How many rows each folded list shows, so a list stays short on a phone.
+const DRAWER_LIST_LIMIT = 8;
+
 // The last lists seen, shown at once when the drawer opens again while they
 // are fetched anew.
 let cached: Highlights | null = null;
@@ -76,7 +79,7 @@ export function DrawerHighlights({ drawerOpen, itemClass }: { drawerOpen: boolea
           onToggle={() => toggle('trending')}
           itemClass={itemClass}
         >
-          {data?.trending.pins.map((pin) => (
+          {data?.trending.pins.slice(0, DRAWER_LIST_LIMIT).map((pin) => (
             <li key={pin.id}>
               <TrendingRow pin={pin} />
             </li>
@@ -93,7 +96,7 @@ export function DrawerHighlights({ drawerOpen, itemClass }: { drawerOpen: boolea
           onToggle={() => toggle('new')}
           itemClass={itemClass}
         >
-          {data?.newPins.map((pin) => (
+          {data?.newPins.slice(0, DRAWER_LIST_LIMIT).map((pin) => (
             <li key={pin.id}>
               <NewPinRow pin={pin} />
             </li>
