@@ -1,6 +1,7 @@
-import { describe, expect, it } from 'vitest';
+import Anthropic from '@anthropic-ai/sdk';
+import { beforeEach, describe, expect, it } from 'vitest';
 import type { WikiPage } from '../model/source';
-import { composeInput, renderWiki, splitText } from './wiki';
+import { composeInput, renderWiki, resetWikiBackoff, ServiceError, splitText, structured, wikiBackedOff } from './wiki';
 
 const page = (id: number, title: string, children: WikiPage[] = []): WikiPage => ({
   id,
@@ -64,5 +65,23 @@ describe('composeInput', () => {
   it('writes a timed pin as a UTC instant', () => {
     const input = composeInput({ title: 'Launch', utcStartDateTime: new Date('2026-09-18T16:30:00Z') }, []);
     expect(input).toContain('Starts: 2026-09-18T16:30Z');
+  });
+});
+
+describe('the API backoff', () => {
+  beforeEach(resetWikiBackoff);
+  const failing = (err: Error) => ({ beta: { messages: { create: async () => Promise.reject(err) } } }) as unknown as Anthropic;
+
+  it('holds off the wiki after a call is turned away for credit', async () => {
+    expect(wikiBackedOff()).toBe(false);
+    const err = new Anthropic.BadRequestError(400, { error: { message: 'Your credit balance is too low' } }, 'Your credit balance is too low', new Headers());
+    await expect(structured(failing(err), 'system', {}, 'content')).rejects.toBeInstanceOf(ServiceError);
+    expect(wikiBackedOff()).toBe(true);
+  });
+
+  it('does not hold off for a fault of the link', async () => {
+    const err = new Anthropic.BadRequestError(400, { error: { message: 'bad schema' } }, 'bad schema', new Headers());
+    await expect(structured(failing(err), 'system', {}, 'content')).rejects.not.toBeInstanceOf(ServiceError);
+    expect(wikiBackedOff()).toBe(false);
   });
 });

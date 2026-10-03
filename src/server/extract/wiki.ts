@@ -102,6 +102,21 @@ export type Composed = { longFormSummary: string | undefined; title?: string; de
 // outage): nothing to do with the link, so it should not use up its tries.
 export class ServiceError extends Error {}
 
+// After the API turns a call away (no credit, a bad key, an outage), nothing is
+// fetched or written for a while: a save of every pin would otherwise open a
+// browser on each of its links, only for the write that follows to fail.
+const BACKOFF_MS = 10 * 60_000;
+let unavailableUntil = 0;
+
+// Whether a wiki or summary can be written now. Asked before a link is read.
+export const wikiBackedOff = () => Date.now() < unavailableUntil;
+export const wikiAvailable = () => !!getClient() && !wikiBackedOff();
+
+// For tests.
+export const resetWikiBackoff = () => {
+  unavailableUntil = 0;
+};
+
 export const isServiceFault = (err: unknown) =>
   err instanceof Anthropic.AuthenticationError ||
   err instanceof Anthropic.PermissionDeniedError ||
@@ -130,7 +145,11 @@ export async function structured<T>(anthropic: Anthropic, system: string, schema
       messages: [{ role: 'user', content }],
     });
   } catch (err) {
-    throw isServiceFault(err) ? new ServiceError(describeError(err)) : new Error(describeError(err));
+    if (isServiceFault(err)) {
+      unavailableUntil = Date.now() + BACKOFF_MS;
+      throw new ServiceError(describeError(err));
+    }
+    throw new Error(describeError(err));
   }
   if (response.stop_reason === 'refusal') {
     throw new Error('declined by the model');
@@ -208,7 +227,7 @@ export const rootContent = (header: string, parts: WikiDraft[]) =>
 
 export async function writeWiki({ url, kind, title, text }: { url: string; kind: SourceKind; title?: string | null; text: string }): Promise<WrittenWiki | null> {
   const anthropic = getClient();
-  if (!anthropic) return null;
+  if (!anthropic || !wikiAvailable()) return null;
 
   const header = wikiHeader(url, kind, title);
   const parts = splitText(text);
@@ -262,7 +281,7 @@ export function composeInput(pin: ComposePin, links: ComposeLink[], currentSumma
 // description and note when newer links changed them; null with no API key.
 export async function composeSummary(pin: ComposePin, links: ComposeLink[], currentSummary?: string | null): Promise<Composed | null> {
   const anthropic = getClient();
-  if (!anthropic) return null;
+  if (!anthropic || !wikiAvailable()) return null;
   const { data } = await structured<ComposeAnswer>(anthropic, COMPOSE_PROMPT, COMPOSE_SCHEMA, composeInput(pin, links, currentSummary));
   return composedFrom(data, links);
 }
