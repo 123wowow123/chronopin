@@ -34,13 +34,40 @@ export function BackToMenu() {
   );
 }
 
-// A page's title with the arrow leading its line (below lg; wider, the title
-// alone). `className` spaces the line from what follows, as the h1's own
-// margin did.
-export function TitleWithBack({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+// From lg up there is no drawer to go back to, so this arrow steps back to the
+// page the reader came from, or home when they landed here directly.
+function BackWide() {
+  const t = useT();
+  const router = useRouter();
+  return (
+    <button
+      type="button"
+      onClick={() => (window.history.length > 1 ? router.back() : router.push('/'))}
+      aria-label={t('common.back')}
+      title={t('common.back')}
+      className="-ms-1.5 hidden shrink-0 rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink lg:flex"
+    >
+      <Icon name="back" className="size-5" />
+    </button>
+  );
+}
+
+// A page's title with the arrow leading its line (below lg, the way back to the
+// drawer; wider, the title alone unless `wideBack` adds a plain back arrow).
+// `className` spaces the line from what follows, as the h1's own margin did.
+export function TitleWithBack({
+  children,
+  className = '',
+  wideBack = false,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  wideBack?: boolean;
+}) {
   return (
     <div className={`flex items-center gap-1 ${className}`}>
       <BackToMenu />
+      {wideBack ? <BackWide /> : null}
       <h1 className="text-2xl font-semibold tracking-tight">{children}</h1>
     </div>
   );

@@ -19,7 +19,7 @@ export default async function NotificationsPage() {
   const t = await getT();
   return (
     <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
-      <TitleWithBack className="mb-4 sm:mb-6">{t('notifications.title')}</TitleWithBack>
+      <TitleWithBack wideBack className="mb-4 sm:mb-6">{t('notifications.title')}</TitleWithBack>
       <NotificationsFeed />
     </div>
   );

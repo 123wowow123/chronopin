@@ -25,8 +25,10 @@ export type PinSearchFilters = {
   confidenceBands: ConfidenceBand[];
   dates: string[];
   postedDays: string[];
+  updatedDays: string[];
   dateBounds: DayBound[];
   postedBounds: DayBound[];
+  updatedBounds: DayBound[];
   tags: string[];
   excludeTags: string[];
   places: string[];
@@ -569,6 +571,10 @@ const PAGE_COLUMNS = `
   "Pin"."userId",
   "Pin"."utcCreatedDateTime",
   "Pin"."utcUpdatedDateTime",
+  -- Its newest update (PinUpdate, 0081), for the card's UPDATED pill.
+  -- utcUpdatedDateTime is no use there: translations, episode counts and
+  -- summary rebuilds all touch it.
+  (SELECT max("u"."utcCreatedDateTime") FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "Pin"."id") AS "utcLastUpdateDateTime",
   "Pin"."favoriteCount",
   "Pin"."likeCount",
   "Pin"."rootThread",
@@ -957,6 +963,16 @@ function searchClauses(filter: SearchFilter) {
   }
   for (const { op, day } of filter.postedBounds) {
     where.push(`"Pin"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`);
+  }
+  // updated: matches a pin with any update (PinUpdate) on one of the days and
+  // within every bound - one update has to meet them all, as the card's
+  // UPDATED pill reads its newest one.
+  if (filter.updatedDays.length || filter.updatedBounds.length) {
+    const on = [
+      ...(filter.updatedDays.length ? [`(${filter.updatedDays.map((day) => localDay('"u"."utcCreatedDateTime"', day)).join(' OR ')})`] : []),
+      ...filter.updatedBounds.map(({ op, day }) => `"u"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`),
+    ];
+    where.push(`EXISTS (SELECT 1 FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "Pin"."id" AND ${on.join(' AND ')})`);
   }
   // The Watch search choice: only pins this user watches.
   if (filter.favoriteUserId != null) {

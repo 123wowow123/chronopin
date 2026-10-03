@@ -6,7 +6,7 @@ import { toCardPins } from '@/lib/sanitize';
 import { pinDayKey } from '@/lib/timeline';
 import { specialtyDaysOn } from '@/server/specialtyDays';
 import type { SpecialtyDay } from '@/lib/specialtyDays';
-import { searchPage, sliderTyping, tagList, timelineVideo } from '@/server/services/pages';
+import { searchPage, sliderTyping, timelineVideo } from '@/server/services/pages';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getT } from '@/lib/i18n/server';
@@ -61,11 +61,10 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
     future: spanFromParam(first(params.future), null),
     timeZone,
   };
-  const [page, video, typing, listing] = await Promise.all([
+  const [page, video, typing] = await Promise.all([
     searchPage(q, user?.id ?? null, onlyWatched && !!user, view, t.locale),
     timelineVideo(),
     sliderTyping(),
-    tagList(),
   ]);
 
   const days: Record<string, SpecialtyDay[]> = {};
@@ -97,7 +96,6 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         defaultSort={defaultSort}
         video={video}
         sliderTyping={typing.enabled}
-        tagList={listing.enabled}
       />
     </>
   );

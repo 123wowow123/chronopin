@@ -9,10 +9,10 @@ import { api } from '@/lib/client/api';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
-import { cloudSteps, cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, tagMembers, type TagCount, type TagGroup } from '@/lib/tags';
+import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
-import { holdDrawerForPick, leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
-import { mergedSection, useInDrawerPanel, useMergedPanel, useTagFoldOpen, useTagList } from './FloatingControls';
+import { leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
+import { mergedSection, useInDrawerPanel, useMergedPanel } from './FloatingControls';
 import { iconButton, PanelHeader } from './PanelHeader';
 import { WordCloud } from './WordCloud';
 import { useT } from '@/lib/client/i18n';
@@ -20,26 +20,19 @@ import { FORMAT_WORDS } from '@/lib/i18n/formatWords';
 import { tagLabel } from '@/lib/i18n/labels';
 import type { MessageKey } from '@/lib/i18n/translate';
 
-// Whether the panel was last left open. Search results remount with each
-// query, so without this every pick would fold the panel away. The last
-// counts fetched show while a remounted panel fetches its own, so the cloud
-// does not blink out and back after each pick.
-let rememberedOpen = false;
-// Likewise the big cloud, so picks made in it do not close it.
+// Whether the big cloud was last left open. Search results remount with each
+// query, so without this every pick would close it.
 let rememberedExpanded = false;
-let rememberedCounts: TagCount[] | null = null;
-// And the big cloud's, which reads more tags than the panel: a pick in it is
-// a new page with a new cloud, which would otherwise start at "Loading" and
-// flash before redrawing.
+// The big cloud's last counts: a pick in it is a new page with a new cloud,
+// which would otherwise start at "Loading" and flash before redrawing.
 let rememberedViewCounts: TagCount[] | null = null;
-// Grouped (tags wrapped up into their larger category) or every tag on its
-// own, shared by the panel and the big cloud.
+// Grouped (tags wrapped up into their larger category) or every tag on its own.
 let rememberedWrapped = true;
 
 // Counts read ahead, by URL. A cold count is ~1.3s away on production (the
 // server scores every pin's confidence when its cache has gone), so the page
-// asks for the panel's and the big cloud's counts once it is idle, and
-// opening either then shows its tags at once. Held a minute, then asked
+// asks for the big cloud's counts once it is idle, and opening it then shows
+// its tags at once. Held a minute, then asked
 // again; a failed one is forgotten.
 const AHEAD_MS = 60_000;
 const ahead = new Map<string, { at: number; counts: Promise<TagCount[]> }>();
@@ -64,23 +57,6 @@ function readAhead(urls: string[]) {
   return () => clearTimeout(id);
 }
 
-// How many tags the cloud shows before its filter box is needed.
-const SHOWN = 60;
-// A step up from what the cards use: the cloud is read at a glance, and its
-// smallest tags were too small to pick out. Another step up between lg and
-// xl, where the cloud has the screen to itself behind its pill rather than a
-// 16rem column, and is read at arm's length.
-// A tag left out of the search (-tag:): struck through in the danger colour.
-const EXCLUDED_CLASS = 'bg-red-500/10 text-danger line-through ring-1 ring-red-500/40 ring-inset';
-
-const STEP_CLASS = [
-  '',
-  'text-base xl:text-sm',
-  'text-[17px] xl:text-[15px]',
-  'text-lg xl:text-base',
-  'text-xl xl:text-lg',
-  'text-2xl xl:text-xl font-semibold',
-];
 // What is picked, in brief ("Artemis", "Artemis +2"), or 'All' for nothing.
 function tagSummary(selected: string[], locale: Locale = 'en') {
   return !selected.length ? FORMAT_WORDS[locale].all : selected.length === 1 ? selected[0] : `${selected[0]} +${selected.length - 1}`;
@@ -93,19 +69,16 @@ export function tagPillSummary(query?: string, locale: Locale = 'en') {
   return tagSummary([...reservedPicked(picked), ...picked.tags.filter((name) => !isReserved(name))], locale);
 }
 
-// The tag filter in the floating controls, the first of them, with the
-// pins' categories at the top of its grouped mode: a row saying what is picked that unfolds, in place, into a
-// cloud of the tags of the pins showing - the timeline's, or the search's
-// results with its tag: terms left out - sized by how many pins carry each.
-// Unfolded, it takes height from the panels under it (trending, new pins),
-// which drop out when there is no room. A tag toggles its tag: term in the
-// search query, so it shows and is edited in the navbar's search box; off the
-// search page a pick starts a search - unless the page takes the query
-// itself (the map does, staying where it is).
+// The tag filter in the floating controls, the first of them: a row saying
+// what is picked that opens the big tag cloud (TagCloudView) over the page,
+// of the tags of the pins showing - the timeline's, or the search's results
+// with its tag: terms left out - sized by how many pins carry each. A tag
+// toggles its tag: term in the search query, so it shows and is edited in the
+// navbar's search box; off the search page a pick starts a search - unless
+// the page takes the query itself (the map does, staying where it is).
 //
-// Only where there is room to read it: the xl column, or its own pill
-// between lg and xl. Below lg the other filters ride in the nav drawer and
-// this one does not (FloatingControls).
+// Between lg and xl its row is hidden and the tags pill opens the cloud
+// (FloatingControls); below lg the row rides in the nav drawer's "Filters".
 export function TagCloud({
   query,
   onlyWatched = false,
@@ -126,30 +99,11 @@ export function TagCloud({
 }) {
   const router = useRouter();
   const t = useT();
-  // In the floating controls' tags fold (between lg and xl, behind its own
-  // pill): the pill is the header, and the cloud shows while the fold is open.
-  const folded = useTagFoldOpen();
-  const inFold = folded !== null;
   // A section of the xl column's one "Filters" panel: open whenever it is.
   const mergedOpen = useMergedPanel();
   const merged = mergedOpen !== null;
   const inDrawer = useInDrawerPanel();
-  // Whether the panel lists its tags (an admin setting, src/lib/tagList.ts).
-  // Off, its row is the big cloud's button and nothing folds out.
-  const listed = useTagList();
-  // Unique, since Next keeps the previous page's panel mounted (hidden).
-  const optionsId = useId();
-  const rootRef = useRef<HTMLDivElement>(null);
-  const [open, setOpenState] = useState(() => rememberedOpen);
-  const setOpen = (next: boolean) => {
-    rememberedOpen = next;
-    setOpenState(next);
-  };
-  const [counts, setCounts] = useState<TagCount[] | null>(() => rememberedCounts);
-  const [filter, setFilter] = useState('');
-  // Groups unfolded to show the tags they wrap.
-  const [unfolded, setUnfolded] = useState<Set<string>>(() => new Set());
-  // The big cloud over the page (TagCloudView), which reads more tags.
+  // The big cloud over the page (TagCloudView).
   const [expanded, setExpandedState] = useState(() => rememberedExpanded);
   const setExpanded = (next: boolean) => {
     rememberedExpanded = next;
@@ -180,67 +134,12 @@ export function TagCloud({
   else if (postedWithin) params.set('created_within', postedWithin);
   const countsUrl = `/api/pins/tag-counts?${params.toString()}`;
 
-  const showing = listed && (open || !!folded || !!mergedOpen);
-  // Read ahead: the big cloud's counts always (its button is here, and the
-  // drawer opens it too), the panel's while it is folded away.
-  useEffect(() => readAhead(showing ? [viewUrl(countsUrl)] : listed ? [countsUrl, viewUrl(countsUrl)] : [viewUrl(countsUrl)]), [showing, listed, countsUrl]);
-  useEffect(() => {
-    if (!showing) return;
-    let cancelled = false;
-    countsFor(countsUrl).then(
-      (next) => {
-        if (cancelled) return;
-        rememberedCounts = next;
-        setCounts(next);
-      },
-      () => !cancelled && setCounts(null),
-    );
-    return () => {
-      cancelled = true;
-    };
-  }, [showing, countsUrl]);
+  // Read ahead: the big cloud's counts (its button is here, and the drawer
+  // and the tags pill open it too).
+  useEffect(() => readAhead([viewUrl(countsUrl)]), [countsUrl]);
 
-  // Clicking (or Escape) anywhere but the panel folds it away, as the
-  // other panels do. On the click rather than the press, and not for a
-  // target its own handler already took off the page (the pill's own toggle).
-  // Not while the big cloud is up: it has its own Escape and its own outside.
-  useEffect(() => {
-    if (!open || expanded) return;
-    const shut = () => {
-      rememberedOpen = false;
-      setOpenState(false);
-    };
-    const close = (event: MouseEvent) => {
-      const target = event.target as Node | null;
-      if (target && document.contains(target) && !rootRef.current?.contains(target)) shut();
-    };
-    const escape = (event: KeyboardEvent) => event.key === 'Escape' && shut();
-    document.addEventListener('click', close);
-    document.addEventListener('keydown', escape);
-    return () => {
-      document.removeEventListener('click', close);
-      document.removeEventListener('keydown', escape);
-    };
-  }, [open, expanded]);
-
-  const needle = filter.trim().toLowerCase();
-  // The site's own filters lead the cloud in a strip of their own; the rest
-  // of the counts are the tags people wrote.
-  const written = useMemo(() => (counts ?? []).filter((t) => t.kind !== 'reserved'), [counts]);
-  // Tags wrap up into their larger category (an award body's years, the
-  // market exchanges); finding a tag looks through the wrapped ones too.
-  const groups = useMemo(() => (wrapped ? groupTags(written) : []), [written, wrapped]);
   const isSelected = (name: string) => selected.some((s) => s.toLowerCase() === name.toLowerCase());
   const isExcluded = (name: string) => excluded.some((s) => s.toLowerCase() === name.toLowerCase());
-  // Picked or left out, a tag stays in the list, so it can be changed back.
-  const marked = useMemo(() => [...selected, ...excluded], [selected, excluded]);
-  const tags = useMemo<TagGroup[]>(() => {
-    if (needle) return cloudTags(written.filter((t) => t.name.toLowerCase().includes(needle)), [], SHOWN);
-    if (!wrapped) return cloudTags(written, marked, SHOWN);
-    // Picked tags outside any shown group stay listed on their own.
-    return cloudTags(groups, groupSelection(groups, marked), SHOWN);
-  }, [written, groups, marked, needle, wrapped]);
-  const steps = useMemo(() => cloudSteps(tags), [tags]);
   const summary = tagSummary([...reserved, ...selected, ...excluded.map((name) => `−${name}`)], t.locale);
 
   function go(edit: (q: string) => string, next: string[], nextReserved: string[] = reserved, nextExcluded: string[] = excluded) {
@@ -262,9 +161,6 @@ export function TagCloud({
     // Fewer tags picked is a wider search, which stays on the same date; more
     // opens on the day nearest it.
     const widened = next.length + nextReserved.length + nextExcluded.length < selected.length + reserved.length + excluded.length;
-    // A pick in the drawer's list keeps the drawer open and where it was
-    // scrolled, through the change of page it makes.
-    if (inDrawer) holdDrawerForPick();
     startSearch(() => {
       setSelected(next);
       setReserved(nextReserved);
@@ -272,13 +168,6 @@ export function TagCloud({
       router.push(widened ? hrefKeepingDate(href) : hrefNearDay(href));
     });
   }
-
-  const unfold = (name: string) =>
-    setUnfolded((prev) => {
-      const next = new Set(prev);
-      if (!next.delete(name)) next.add(name);
-      return next;
-    });
 
   // A tag's term, taken out or put in. category: is the old name for a
   // category's tag (0043) and a query may still hold one, so both spellings
@@ -324,127 +213,22 @@ export function TagCloud({
     setExpanded(true);
   };
   const closeCloud = () => setExpanded(false);
-  // The tags pill between lg and xl, when there is no list for it to fold out.
-  useEffect(() => (listed ? undefined : onOpenTagCloud(openCloud)));
+  // The tags pill between lg and xl, and the drawer's.
+  useEffect(() => onOpenTagCloud(openCloud));
 
   return (
-    <div ref={rootRef} className={`floating flex min-h-0 flex-col text-sm ${inFold ? 'max-xl:h-full' : ''} ${merged ? mergedSection : ''} ${className}`}>
-      {/* The same row the sliders under it fold behind, with the big cloud's
-          button on it as well. */}
+    <div className={`floating flex min-h-0 flex-col text-sm ${merged ? mergedSection : ''} ${className}`}>
+      {/* The same row the sliders under it fold behind; this one opens the big cloud. */}
       <PanelHeader
         caption={t('controls.tags')}
         captionClass="font-semibold text-tags"
         value={summary}
-        open={listed && open}
-        onToggle={listed ? () => setOpen(!open) : openCloud}
-        opensDialog={!listed}
+        open={false}
+        onToggle={openCloud}
+        opensDialog
         label={t('tagCloud.tagsSummary', { summary })}
-        controls={optionsId}
         reset={selected.length || reserved.length || excluded.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
-        className={inFold ? 'max-xl:hidden' : ''}
-        fixed={merged && listed}
-      >
-        {/* With no list, the row itself opens the cloud, and its chevron says so. */}
-        {listed ? (
-          <button
-            type="button"
-            onClick={openCloud}
-            className={`${iconButton} pointer-events-auto`}
-            aria-label={t('tagCloud.expand')}
-            title={t('tagCloud.expand')}
-            aria-haspopup="dialog"
-          >
-            <Icon name="expand" className="size-4" />
-          </button>
-        ) : null}
-      </PanelHeader>
-      {showing ? (
-        // In the fold the cloud is the fold's; elsewhere the header row opens it.
-        <div id={optionsId} className={`flex min-h-0 flex-col ${inFold ? 'max-xl:flex-1 max-xl:pt-3' : ''} ${inFold && !open && !merged ? 'xl:hidden' : ''}`}>
-          <div className="flex items-center gap-2 px-3 pb-2">
-            <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1" />
-            <GroupedToggle wrapped={wrapped} onChange={setWrapped} />
-          </div>
-          {/* The site's filters lead the cloud inside its scroll rather than
-              standing over it: in a column this narrow, a strip that stayed
-              put would take the height the tags are read in. In the merged
-              "Filters" panel there is no scroll of its own: the panel's one
-              scroll carries the cloud with the sliders under it. */}
-          <div
-            className={`px-3.5 pb-3 ${
-              merged && inDrawer
-                ? ''
-                : `max-h-[min(22rem,50dvh)] overflow-y-auto overscroll-contain ${merged ? 'xl:max-h-none xl:overflow-y-visible' : ''}`
-            } ${inFold ? 'max-xl:max-h-none max-xl:flex-1' : ''}`}
-          >
-            <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={toggleReserved} className="pb-2.5" />
-            <div
-              role="group"
-              aria-label={t('tagCloud.filterBy')}
-              aria-busy={searching || undefined}
-              className="flex flex-wrap content-start items-baseline gap-x-2.5 gap-y-1.5"
-            >
-              {tags.map((tag) => {
-                const members = tag.members;
-                const pressed = isSelected(tag.name);
-                const out = isExcluded(tag.name);
-                const partly = !pressed && !out && tagMembers(tag).some((m) => isSelected(m.name) || isExcluded(m.name));
-                const open = !!members && (unfolded.has(tag.name) || partly);
-                return (
-                  <Fragment key={tag.name}>
-                    <span className="inline-flex items-baseline">
-                      <button
-                        type="button"
-                        aria-pressed={pressed}
-                        onClick={() => toggle(tag.name)}
-                        title={`${tagLabel(t, tag)}: ${t('tagCloud.pins', { count: tag.count })}${members ? `, ${t('tagCloud.tags', { count: members.length })}` : ''} · ${
-                          pressed ? t('tagCloud.clickToExclude') : out ? t('tagCloud.clickToDrop') : t('tagCloud.clickToAdd')
-                        }`}
-                        className={`${STEP_CLASS[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-start leading-snug transition-colors ${
-                          pressed
-                            ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset'
-                            : out
-                              ? EXCLUDED_CLASS
-                              : tag.kind === 'award' || tag.kind === 'nomination' || tag.kind === 'category'
-                              ? 'text-ink hover:text-link'
-                              : 'text-muted hover:text-ink'
-                        } ${tag.count === 0 && !pressed && !out ? 'opacity-50' : ''}`}
-                      >
-                        {tagLabel(t, tag)}
-                        {out ? <span className="sr-only"> ({t('tagCloud.leftOut')})</span> : null}
-                        <span className="ms-1 text-sm font-normal text-subtle tabular-nums xl:text-xs">
-                          {tag.count}
-                          <span className="sr-only"> {t('tagCloud.pinsWord', { count: tag.count })}</span>
-                        </span>
-                      </button>
-                      {members ? (
-                        <button
-                          type="button"
-                          aria-expanded={open}
-                          aria-label={t(open ? 'tagCloud.hideMembers' : 'tagCloud.showMembers', { count: members.length, name: tagLabel(t, tag) })}
-                          title={t('tagCloud.tagsInside', { count: members.length })}
-                          onClick={() => unfold(tag.name)}
-                          className="ms-0.5 rounded px-0.5 text-[11px] text-subtle hover:text-ink"
-                        >
-                          <Icon name="chevron" className={`size-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
-                        </button>
-                      ) : null}
-                    </span>
-                    {open ? <Members members={members!} isSelected={isSelected} isExcluded={isExcluded} onToggle={toggle} unfolded={unfolded} onUnfold={unfold} /> : null}
-                  </Fragment>
-                );
-              })}
-              {!counts ? (
-                <p role="status" className="py-1 text-xs text-subtle">
-                  {t('tagCloud.loading')}
-                </p>
-              ) : !tags.length ? (
-                <p className="py-1 text-xs text-subtle">{needle ? t('tagCloud.noMatch') : t('tagCloud.none')}</p>
-              ) : null}
-            </div>
-          </div>
-        </div>
-      ) : null}
+      />
       {expanded ? (
         <TagCloudView
           countsUrl={countsUrl}
@@ -527,66 +311,6 @@ function ReservedFilters({
   );
 }
 
-// What a group wraps, under it: a category's tags, some of them groups of
-// their own (an award body's years) that unfold in turn.
-function Members({
-  members,
-  isSelected,
-  isExcluded,
-  onToggle,
-  unfolded,
-  onUnfold,
-}: {
-  members: TagGroup[];
-  isSelected: (name: string) => boolean;
-  isExcluded: (name: string) => boolean;
-  onToggle: (name: string) => void;
-  unfolded: Set<string>;
-  onUnfold: (name: string) => void;
-}) {
-  const t = useT();
-  return (
-    <span className="flex basis-full flex-wrap items-baseline gap-x-2 gap-y-1 border-s border-line ps-2.5">
-      {members.map((m) => {
-        const inner = m.members;
-        const open =
-          !!inner && (unfolded.has(m.name) || (!isSelected(m.name) && !isExcluded(m.name) && tagMembers(m).some((t) => isSelected(t.name) || isExcluded(t.name))));
-        return (
-          <Fragment key={m.name}>
-            <span className="inline-flex items-baseline">
-              <button
-                type="button"
-                aria-pressed={isSelected(m.name)}
-                onClick={() => onToggle(m.name)}
-                title={`${m.name}: ${t('tagCloud.pins', { count: m.count })}${inner ? `, ${t('tagCloud.tags', { count: inner.length })}` : ''}`}
-                className={`rounded-md px-1 text-start text-base leading-snug transition-colors xl:text-sm ${
-                  isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : isExcluded(m.name) ? EXCLUDED_CLASS : 'text-muted hover:text-ink'
-                }`}
-              >
-                {m.name}
-                {isExcluded(m.name) ? <span className="sr-only"> ({t('tagCloud.leftOut')})</span> : null}
-                <span className="ms-1 text-sm text-subtle xl:text-xs">{m.count}</span>
-              </button>
-              {inner ? (
-                <button
-                  type="button"
-                  aria-expanded={open}
-                  aria-label={t(open ? 'tagCloud.hideMembers' : 'tagCloud.showMembers', { count: inner.length, name: m.name })}
-                  onClick={() => onUnfold(m.name)}
-                  className="ms-0.5 rounded px-0.5 text-subtle hover:text-ink"
-                >
-                  <Icon name="chevron" className={`size-3 transition-transform ${open ? 'rotate-180' : ''}`} />
-                </button>
-              ) : null}
-            </span>
-            {open ? <Members members={inner!} isSelected={isSelected} isExcluded={isExcluded} onToggle={onToggle} unfolded={unfolded} onUnfold={onUnfold} /> : null}
-          </Fragment>
-        );
-      })}
-    </span>
-  );
-}
-
 // The field that narrows the cloud. Its own clear button, not the browser's:
 // the native one is a few px of cross jammed against the field's edge, which
 // is a hard thing to hit. This one is a proper target and keeps the focus in
@@ -656,7 +380,7 @@ const KIND_LABEL: Record<TagCount['kind'], MessageKey> = {
 
 // The tag cloud blown up over the page, WordArt style (WordCloud): up to 200
 // tags packed into a cloud, the busiest largest, flowing around the pointer.
-// Picks work as in the panel and leave it open, so several can be made.
+// Picks leave it open, so several can be made.
 function TagCloudView({
   countsUrl,
   selected,
@@ -739,8 +463,8 @@ function TagCloudView({
   }, [onClose]);
 
   const needle = filter.trim().toLowerCase();
-  // As in the panel: the site's own filters keep their strip, and the words
-  // in the cloud are the tags people wrote.
+  // The site's own filters keep their strip, and the words in the cloud are
+  // the tags people wrote.
   const written = useMemo(() => (counts ?? []).filter((t) => t.kind !== 'reserved'), [counts]);
   const tags = useMemo<TagGroup[]>(() => {
     const flat = needle || !wrapped;

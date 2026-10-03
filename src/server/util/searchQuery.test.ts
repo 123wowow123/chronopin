@@ -66,8 +66,10 @@ describe('parseSearchQuery', () => {
       confidenceBands: [],
       dates: [],
       postedDays: [],
+      updatedDays: [],
       dateBounds: [],
       postedBounds: [],
+      updatedBounds: [],
       tags: ['software'],
       excludeTags: [],
       places: [],
@@ -88,6 +90,7 @@ describe('parseSearchQuery', () => {
   it('reads days, BC ones too, and leaves out anything else', () => {
     expect(parseSearchQuery('date:2026-09-08 date:-2560-01-01 date:2026-09-08 date:tomorrow').dates).toEqual(['2026-09-08', '-2560-01-01']);
     expect(parseSearchQuery('posted:2026-09-13 date:2026-09-08')).toMatchObject({ dates: ['2026-09-08'], postedDays: ['2026-09-13'] });
+    expect(parseSearchQuery('updated:2026-10-02 posted:2026-09-13')).toMatchObject({ updatedDays: ['2026-10-02'], postedDays: ['2026-09-13'] });
   });
 
   it('reads pin ids, comma-separated, once each and never anything else', () => {
@@ -143,7 +146,7 @@ describe('rating: bounds', () => {
   });
 });
 
-describe('date: and posted: comparisons', () => {
+describe('date:, posted: and updated: comparisons', () => {
   it('reads a comparison as a day boundary, "after" and "through" as the day after', () => {
     expect(parseSearchQuery('date:>=2026-09-01').dateBounds).toEqual([{ op: '>=', day: '2026-09-01' }]);
     expect(parseSearchQuery('date:>2026-09-30 date:<=2026-12-31').dateBounds).toEqual([
@@ -155,6 +158,8 @@ describe('date: and posted: comparisons', () => {
       { op: '>=', day: '2026-09-01' },
     ]);
     expect(parseSearchQuery('date:>=-2560-01-01').dateBounds).toEqual([{ op: '>=', day: '-2560-01-01' }]);
+    // What a card's UPDATED pill writes.
+    expect(parseSearchQuery('updated:>=2026-10-02').updatedBounds).toEqual([{ op: '>=', day: '2026-10-02' }]);
   });
 
   it('reads a range with both ends in, either way round', () => {
@@ -173,6 +178,8 @@ describe('date: and posted: comparisons', () => {
     });
     expect(hasFilters(parseSearchQuery('posted:<2026-10-01'))).toBe(true);
     expect(dependsOnZone(parseSearchQuery('date:>=2026-09-01'))).toBe(true);
+    expect(hasFilters(parseSearchQuery('updated:>=2026-10-02'))).toBe(true);
+    expect(dependsOnZone(parseSearchQuery('updated:2026-10-02'))).toBe(true);
   });
 
   it('leaves out anything that is not a day, and never reads it as text', () => {

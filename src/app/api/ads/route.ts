@@ -1,7 +1,7 @@
 import { userAgent, type NextRequest } from 'next/server';
 import { isAdSlot, SLOT_COUNT } from '@/lib/ads';
 import { requestLocale } from '@/lib/i18n/request';
-import { getUser } from '@/server/auth';
+import { getUser, isAdmin } from '@/server/auth';
 import { HttpError, json, route } from '@/server/http';
 import Ad from '@/server/model/ad';
 
@@ -10,7 +10,7 @@ import Ad from '@/server/model/ad';
 // slot of src/lib/ads.ts), &n= at most the slot's count (SLOT_COUNT), &pin= the pin whose
 // page it is on, &not= keys already shown on the page, &lang= the page's language (titles come back translated). Weighed by the
 // signed-in viewer's preference wiki and age; the store follows where the
-// viewer is. Crawlers get none, and are not counted.
+// viewer is. Crawlers get none, and are not counted; admins get ads but are not counted either.
 export const GET = route(async (request: NextRequest) => {
   const params = request.nextUrl.searchParams;
   const slot = params.get('slot');
@@ -27,6 +27,7 @@ export const GET = route(async (request: NextRequest) => {
     pinId: Number.isInteger(pin) && pin > 0 ? pin : null,
     avoid,
     userId: user ? Number(user.id) : null,
+    admin: isAdmin(user),
     locale: requestLocale(request),
     request,
   });

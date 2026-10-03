@@ -91,6 +91,7 @@ const ar: Messages = {
       confidence: 'الثقة',
       date: 'التاريخ',
       posted: 'النشر',
+      updated: 'التحديث',
       tag: 'الوسم',
       category: 'الفئة',
       place: 'المكان',
@@ -152,6 +153,8 @@ const ar: Messages = {
     whyYourComment: 'تعليقك',
     following: 'متابَع',
     followBack: 'رد المتابعة',
+    groupWatching: 'تراقبها',
+    groupYours: 'على منشوراتك',
   },
   dm: {
     title: 'الدردشات',
@@ -884,6 +887,7 @@ const ar: Messages = {
     started: 'بدأ',
     elapsed: 'الوقت المنقضي منذ النشر',
     startedAgo: 'بدأ {ago}',
+    startedSpan: 'بدأ منذ {span}',
     startedIn: 'بدأ {when}',
     startsWhen: 'يبدأ {when}',
     years: '{count} سنة',
@@ -1132,6 +1136,9 @@ const ar: Messages = {
   },
   card: {
     new: 'جديد',
+    newTitle: 'نُشر اليوم - عرض كل الدبابيس المنشورة اليوم',
+    updated: 'محدَّث',
+    updatedTitle: 'حُدِّث خلال آخر 24 ساعة - عرض كل الدبابيس المحدَّثة منذ الأمس',
     partOfThread: 'جزء من سلسلة',
     firstInThread: 'أول دبوس في سلسلة',
     showMore: 'عرض المزيد',
@@ -1345,7 +1352,6 @@ const ar: Messages = {
   tagCloud: {
     tagsSummary: 'الوسوم: {summary}',
     clear: 'مسح تصفية الوسوم',
-    expand: 'توسيع سحابة الوسوم',
     filterBy: 'التصفية بالوسم',
     pins: {
       zero: 'لا دبابيس',
@@ -1372,9 +1378,6 @@ const ar: Messages = {
       many: '{count} وسمًا',
       other: '{count} وسم',
     },
-    hideMembers: 'إخفاء الوسوم الـ{count} في {name}',
-    showMembers: 'عرض الوسوم الـ{count} في {name}',
-    tagsInside: 'الوسوم بداخله: {count}',
     loading: 'جارٍ تحميل الوسوم…',
     noMatch: 'لا يوجد وسم مطابق.',
     none: 'لا وسوم على هذه الدبابيس بعد.',

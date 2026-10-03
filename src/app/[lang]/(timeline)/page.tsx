@@ -11,7 +11,7 @@ import { adsenseAllowed } from '@/lib/adsense';
 import { ageOn } from '@/lib/ads';
 import { pinDayKey } from '@/lib/timeline';
 import { specialtyDaysOn } from '@/server/specialtyDays';
-import { newPins, pinById, TRENDING_DAYS, sliderTyping, tagList, adPlacements, adsenseSlots, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
+import { newPins, pinById, TRENDING_DAYS, sliderTyping, adPlacements, adsenseSlots, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { isRtl } from '@/lib/i18n/config';
@@ -86,7 +86,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   }
   const fromDateTime = focusPin ? null : first(params.from_date_time) || null;
 
-  const [page, video, trending, added, personal, typing, listing, ads, adsense] = await Promise.all([
+  const [page, video, trending, added, personal, typing, ads, adsense] = await Promise.all([
     timelinePage(
       {
         fromDateTime,
@@ -101,7 +101,6 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
     newPins(t.locale),
     viewerPreference(user?.id),
     sliderTyping(),
-    tagList(),
     adPlacements(),
     adsenseSlots(),
   ]);
@@ -137,7 +136,6 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         minConfidence={page.minConfidence}
         video={video}
         sliderTyping={typing.enabled}
-        tagList={listing.enabled}
         ads={{ row: ads['timeline-row'], side: ads['timeline-side'], sideAdsense: adsenseAllowed(ageOn(user?.birthday)) ? (adsense['timeline-side'] ?? null) : null }}
         trending={{ pins: trending, days: TRENDING_DAYS }}
         newPins={added}

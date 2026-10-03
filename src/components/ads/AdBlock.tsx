@@ -326,12 +326,12 @@ export function AdDrawer({ className = '' }: { className?: string }) {
   if (!ads) return <div ref={ref} aria-hidden className={`h-px ${className}`} />;
   if (!ads.length) return null;
   return (
-    <aside aria-label={t('ads.sponsored')} className={`flex min-h-0 shrink flex-col px-2 pt-1 pb-1 ${className}`}>
+    <aside aria-label={t('ads.sponsored')} className={`flex shrink-0 flex-col px-2 pt-1 pb-1 ${className}`}>
       <div className="shrink-0 px-3 pb-0.5">
         <SponsoredLabel />
         <Disclosure className="mt-0.5" />
       </div>
-      <ul className="flex min-h-0 flex-col flex-wrap overflow-clip">
+      <ul className="flex flex-col">
         {ads.map((ad) => {
           const { title, body } = text(ad);
           return (

@@ -3,7 +3,6 @@ import { DEFAULT_DAILY_JOBS, parseDailyJobs, withDefaultJobs, type DailyJobsSett
 import { DEFAULT_MULTILINGUAL, parseMultilingual, type MultilingualSetting } from '@/lib/multilingual';
 import { DEFAULT_SITE_VERIFICATION, parseSiteVerification, type SiteVerificationSetting } from '@/lib/siteVerification';
 import { DEFAULT_SLIDER_TYPING, parseSliderTyping, type SliderTypingSetting } from '@/lib/sliderTyping';
-import { DEFAULT_TAG_LIST, parseTagList, type TagListSetting } from '@/lib/tagList';
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
 import { DEFAULT_AD_PLACEMENTS, parseAdPlacements, type AdPlacementsSetting } from '@/lib/adPlacements';
 import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
@@ -20,7 +19,6 @@ const LEGACY_TIMELINE_ADS = 'timelineAds';
 const PERSONAL_BAG = 'personalBag';
 const DAILY_JOBS = 'dailyJobs';
 const SLIDER_TYPING = 'sliderTyping';
-const TAG_LIST = 'tagList';
 const MULTILINGUAL = 'multilingual';
 const AUTO_TRANSLATE = 'autoTranslate';
 const SITE_VERIFICATION = 'siteVerification';
@@ -126,16 +124,6 @@ export async function getSliderTyping(): Promise<SliderTypingSetting> {
 
 export function setSliderTyping(setting: SliderTypingSetting, userId: number | null) {
   return write(SLIDER_TYPING, setting, userId);
-}
-
-// Whether the tag panel lists its tags or is only the big cloud's button.
-export async function getTagList(): Promise<TagListSetting> {
-  const parsed = parseTagList(await read(TAG_LIST));
-  return 'setting' in parsed ? parsed.setting : DEFAULT_TAG_LIST;
-}
-
-export function setTagList(setting: TagListSetting, userId: number | null) {
-  return write(TAG_LIST, setting, userId);
 }
 
 // Which of the site's other languages are offered. src/proxy.ts reads it

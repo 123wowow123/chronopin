@@ -6,6 +6,7 @@ import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime';
 import { dayKeyIn, money } from '@/lib/format';
 import { useTimeZone } from '@/lib/client/timeZone';
+import { useNow } from '@/lib/client/now';
 import { useVideoPoster } from '@/lib/client/timelineVideo';
 import { pinPath } from '@/lib/seo';
 import type { CardPin } from '@/lib/types';
@@ -34,6 +35,14 @@ import { pinTextDir } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 
 const CARD_SIZES = '(max-width: 640px) 100vw, 448px';
+
+// How recent a pin's newest update must be for its card to say UPDATED.
+const UPDATED_WITHIN_MS = 24 * 60 * 60 * 1000;
+
+// The NEW and UPDATED pills beside the title; each tap target grows past the
+// small pill (DelayBadge does the same).
+const STATUS_PILL =
+  "relative mt-1 shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold tracking-wide uppercase after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline";
 
 // A faint wash and border in the map's past/future colours; ongoing (and untensed) pins stay plain.
 const TENSE_CLASS: Record<PinTense, string> = {
@@ -68,7 +77,12 @@ export function PinCard({
   const hasPlace = pin.latitude != null && pin.longitude != null;
   // Posted on the viewer's own current day (the same day posted: searches use).
   const timeZone = useTimeZone(serverTimeZone);
-  const postedToday = !!pin.utcCreatedDateTime && dayKeyIn(pin.utcCreatedDateTime, timeZone) === dayKeyIn(Date.now(), timeZone);
+  // 0 on the server and during hydration, so the pills come with the client's clock.
+  const now = useNow(60_000);
+  const today = dayKeyIn(now, timeZone);
+  const postedToday = now > 0 && !!pin.utcCreatedDateTime && dayKeyIn(pin.utcCreatedDateTime, timeZone) === today;
+  // Updated (PinUpdate) in the last 24 hours. A pin new today says only NEW.
+  const updatedRecently = now > 0 && !postedToday && !!pin.utcLastUpdateDateTime && now - new Date(pin.utcLastUpdateDateTime).getTime() < UPDATED_WITHIN_MS;
 
   // Cards are clipped at 600px; "show more" appears only when that cut text off.
   const contentRef = useRef<HTMLDivElement>(null);
@@ -183,7 +197,22 @@ export function PinCard({
               {pin.title}
             </Link>
           </h2>
-          {postedToday ? <span className="mt-1 shrink-0 rounded-full bg-link/15 px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-link uppercase">{t('card.new')}</span> : null}
+          {/* NEW searches for every pin posted today, UPDATED for every pin
+              updated since the day 24 hours back - both days the viewer's. */}
+          {postedToday ? (
+            <RefineLink field="posted" value={today} className={`${STATUS_PILL} bg-link/15 text-link hover:bg-link/25`} title={t('card.newTitle')}>
+              {t('card.new')}
+            </RefineLink>
+          ) : updatedRecently ? (
+            <RefineLink
+              field="updated"
+              value={`>=${dayKeyIn(now - UPDATED_WITHIN_MS, timeZone)}`}
+              className={`${STATUS_PILL} bg-success/15 text-success hover:bg-success/25`}
+              title={t('card.updatedTitle')}
+            >
+              {t('card.updated')}
+            </RefineLink>
+          ) : null}
         </div>
 
         {media.length ? (

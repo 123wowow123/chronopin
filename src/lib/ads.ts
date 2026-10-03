@@ -27,8 +27,9 @@ export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradei
 export const AD_SLOTS = ['timeline-row', 'timeline-side', 'pin-strip', 'pin-side', 'drawer'] as const;
 export type AdSlot = (typeof AD_SLOTS)[number];
 // How many ads a slot asks for at most: what it shows at its widest. The
-// side panel stops at five however tall the window is.
-export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 5, drawer: 2 };
+// timeline's side panel stops at five however tall the window is; a pin's
+// side column runs taller, so it stops at seven.
+export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 7, drawer: 2 };
 // Slots on a pin's page, whose ads are its related ones first.
 export const PIN_SLOTS: readonly AdSlot[] = ['pin-strip', 'pin-side'];
 

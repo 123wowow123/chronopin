@@ -53,7 +53,7 @@ const heldPerformance = ((globalThis as any).__chronopinAdPerformance ??= new Ma
   { at: number; data: Promise<Performance> }
 >;
 
-export type AdServeInput = { slot: AdSlot; n: number; pinId: number | null; avoid: Set<string>; userId: number | null; locale?: Locale; request: NextRequest };
+export type AdServeInput = { slot: AdSlot; n: number; pinId: number | null; avoid: Set<string>; userId: number | null; admin?: boolean; locale?: Locale; request: NextRequest };
 
 // Program ads (0110) and product ads (the Amazon listings on pins).
 export default class Ad {
@@ -88,8 +88,8 @@ export default class Ad {
   }
 
   // Ads for one slot, with the store they were picked from. Nothing for a
-  // signed-in viewer under MIN_AD_AGE.
-  static async serve({ slot, n, pinId, avoid, userId, locale = 'en', request }: AdServeInput): Promise<{ store: string; ads: AdJson[] }> {
+  // signed-in viewer under MIN_AD_AGE. An admin's views are not counted.
+  static async serve({ slot, n, pinId, avoid, userId, admin = false, locale = 'en', request }: AdServeInput): Promise<{ store: string; ads: AdJson[] }> {
     const [inventory, country, viewer, pin, performance] = await Promise.all([
       Ad.inventory(),
       viewerCountry(request),
@@ -107,7 +107,7 @@ export default class Ad {
     const abroad = store !== 'US' && GLOBAL_EARNING_STORES.has(store);
     const candidates = inventory.ads.filter((ad) => ad.store === store || (abroad && ad.kind === 'product' && ad.store === 'US'));
     const picked = pickAds(candidates, ctx, n, expandAvoid(candidates, avoid));
-    if (picked.length) await recordImpressions(picked, slot, store, (ad) => tagForStore(ad.store, inventory.tags) ?? '', userId != null);
+    if (picked.length && !admin) await recordImpressions(picked, slot, store, (ad) => tagForStore(ad.store, inventory.tags) ?? '', userId != null);
     const titles = await localizedTitles(picked, locale);
     return {
       store,
@@ -179,6 +179,7 @@ export default class Ad {
          LEFT JOIN "Pin" AS "ap" ON "ap"."id" = "c"."adPinId"
          LEFT JOIN "Pin" AS "p" ON "p"."id" = "c"."pinId"
          LEFT JOIN "User" AS "u" ON "u"."id" = "c"."userId"
+       WHERE "u"."role" IS DISTINCT FROM 'admin'
        ORDER BY "c"."utcCreatedDateTime" DESC, "c"."id" DESC
        LIMIT $1`,
       [CLICK_LIMIT],
@@ -260,6 +261,7 @@ async function loadPerformance(slot: AdSlot): Promise<Performance> {
     db.query<{ adKey: string; clicks: number }>(
       `SELECT "adKey", count(*)::int AS "clicks" FROM "AdClick"
        WHERE "slot" = $1 AND "utcCreatedDateTime" >= now() - make_interval(days => $2::integer)
+         AND ("userId" IS NULL OR "userId" NOT IN (SELECT "id" FROM "User" WHERE "role" = 'admin'))
        GROUP BY "adKey"`,
       [slot, PERFORMANCE_WINDOW_DAYS],
     ),

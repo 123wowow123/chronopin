@@ -18,7 +18,7 @@ export default async function ListingsPage() {
   const t = await getT();
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
-      <TitleWithBack className="mb-4 sm:mb-6">{t('listing.yourListings')}</TitleWithBack>
+      <TitleWithBack wideBack className="mb-4 sm:mb-6">{t('listing.yourListings')}</TitleWithBack>
       <ListingsManager />
     </div>
   );

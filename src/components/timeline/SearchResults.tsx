@@ -132,7 +132,6 @@ export function SearchResults({
   defaultSort = 'date',
   video,
   sliderTyping = false,
-  tagList = false,
 }: {
   // The first page, for the sort the URL asked for.
   initialPage: { sort: SortBy; pins: CardPin[]; links: Links };
@@ -157,8 +156,6 @@ export function SearchResults({
   video: TimelineVideoSetting;
   // Whether the filter sliders offer a typed box (the admin setting).
   sliderTyping?: boolean;
-  // The admin setting: whether the tag panel lists its tags, or opens the big cloud.
-  tagList?: boolean;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const t = useT();
@@ -526,7 +523,6 @@ export function SearchResults({
         <FloatingControls
           merge
           typing={sliderTyping}
-          tagList={tagList}
           filterSummary={spanLabel(postedWithin, t.locale)}
           summaryCaption={searchedUser || searchedCompany ? undefined : t('controls.postedWithin')}
           summary={searchedUser ? searchedUser.userName : searchedCompany ? searchedCompany.name : spanLabel(postedWithin, t.locale)}
