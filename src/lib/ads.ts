@@ -18,6 +18,7 @@
 import type { UserPreference } from './userWiki';
 import { amazonAssociateTag } from './affiliate';
 import { asinOf, sameBrand } from './adQuality';
+import { AD_TIERS, type AdTier } from './culturalDays';
 
 export type AdKind = 'special' | 'bonus' | 'tradein' | 'product';
 
@@ -29,7 +30,13 @@ export type AdSlot = (typeof AD_SLOTS)[number];
 // How many ads a slot asks for at most: what it shows at its widest. The
 // timeline's side panel stops at five however tall the window is; a pin's
 // side column runs taller, so it stops at seven.
-export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 7, drawer: 2 };
+export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 7, drawer: 5 };
+// How many of a slot's ads are a holiday's while one's window is open
+// (src/lib/culturalDays.ts): a tile for each price tier where the slot is
+// wide enough to show them, both of the pin page's strip, which holds two.
+// On a pin's page only for a pin that falls on the holiday, in or out of its
+// window, so such a pin always carries at least two of its holiday's goods.
+export const HOLIDAY_COUNT: Record<AdSlot, number> = { 'timeline-row': 3, 'timeline-side': 3, 'pin-strip': 2, 'pin-side': 3, drawer: 2 };
 // Slots on a pin's page, whose ads are its related ones first.
 export const PIN_SLOTS: readonly AdSlot[] = ['pin-strip', 'pin-side'];
 
@@ -46,6 +53,12 @@ export type AdCandidate = {
   // The listing, untagged; the tag is added for the store when served.
   url: string;
   store: string;
+  // A holiday ad (HolidayAd, 0121): the catalog holiday it is for and its
+  // price tier. These are picked by pickHolidayAds, never by pickAds.
+  holiday?: string | null;
+  tier?: AdTier | null;
+  // The product's own picture on Amazon's image host.
+  imageUrl?: string | null;
   categories: string[];
   company: string | null;
   weight: number;
@@ -66,6 +79,12 @@ export type AdCandidate = {
   // reads in the viewer's language through the pin's translation.
   titleFromPin?: boolean;
   price: number | null;
+  // A chosen ad's stars out of 5, as last read, for the one line about the product.
+  rating?: number | null;
+  // How many reviews those stars come from.
+  reviewCount?: number | null;
+  // What its page last said to hurry a buyer ("left:12", "low:90"), if anything.
+  urgency?: string | null;
   thumbName: string | null;
   originalUrl: string | null;
 };
@@ -79,10 +98,20 @@ export type AdJson = {
   title: string | null;
   price: number | null;
   currency: string | null;
+  // The product's brand (a pin's company, or a chosen ad's) and stars out of 5,
+  // shown beside the price as one line about it.
+  brand?: string | null;
+  rating?: number | null;
+  // "left:12" or "low:90": the page's own reason to hurry, shown in place of
+  // the brand and stars line (parseUrgency).
+  urgency?: string | null;
   pinId: number | null;
   category: string | null;
   thumbName: string | null;
   originalUrl: string | null;
+  // A holiday ad's picture, and the holiday's name in the viewer's language.
+  imageUrl?: string | null;
+  holiday?: string | null;
   // The store the viewer was served from: it can differ from where the link
   // goes (a US product ad shown in the UK), and the admin stats count by it.
   store: string;
@@ -128,7 +157,7 @@ export type AdContext = {
   // The viewer's age in whole years, when signed in with a birthday.
   age: number | null;
   // The pin whose page the slot is on.
-  pin: { id: number; categories: string[]; tags: string[]; company: string | null } | null;
+  pin: { id: number; categories: string[]; tags: string[]; company: string | null; day?: string | null } | null;
   // This slot's own recent performance, so an ad that actually gets clicked
   // more *here* shows more here, even where it does worse in other slots.
   // Undefined (not yet computed, or too little traffic to bother) leaves
@@ -159,6 +188,26 @@ const CHOSEN_BRAND_BOOST = 8;
 const REWARD_BASELINE_USD = 10;
 const REWARD_WEIGHT_MIN = 0.75;
 const REWARD_WEIGHT_MAX = 1.5;
+
+// A product ad's standing with buyers: its stars and how many reviews they
+// come from, so a well-reviewed product is picked more often than a thinly
+// reviewed one. 4.3 stars and 1,000 reviews are neutral; every 0.5 star
+// doubles or halves the stars' part (a quarter of a star is a factor of 1.4)
+// and every tenfold in reviews moves the reviews' part by a third of a
+// neutral. Each part is clamped so neither alone decides the pick. 1 where
+// the stars are not known (a pin's own listing, a program).
+const STAR_BASELINE = 4.3;
+const STAR_WEIGHT_MIN = 0.5;
+const STAR_WEIGHT_MAX = 2;
+const REVIEWS_WEIGHT_MIN = 0.5;
+const REVIEWS_WEIGHT_MAX = 1.6;
+
+export function qualityWeight(ad: Pick<AdCandidate, 'rating' | 'reviewCount'>): number {
+  if (!ad.rating) return 1;
+  const stars = Math.min(STAR_WEIGHT_MAX, Math.max(STAR_WEIGHT_MIN, 2 ** ((ad.rating - STAR_BASELINE) * 2)));
+  const reviews = Math.min(REVIEWS_WEIGHT_MAX, Math.max(REVIEWS_WEIGHT_MIN, Math.log10((ad.reviewCount ?? 0) + 10) / 3));
+  return stars * reviews;
+}
 
 // How much more (or less) often an ad shows for how it has actually
 // converted *in this slot*, relative to the slot's own average click
@@ -261,7 +310,7 @@ export function expandAvoid(candidates: AdCandidate[], avoid: Set<string>): Set<
 // ads chosen for the pin come first, then the related ones. Keys in `avoid` (already shown elsewhere on the
 // page) are only used once the rest run out.
 export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, avoid: Set<string> = new Set(), random = Math.random): AdCandidate[] {
-  const allowed = candidates.filter((ad) => adAllowed(ad, ctx));
+  const allowed = candidates.filter((ad) => !ad.holiday && adAllowed(ad, ctx));
   const poolTotals = new Map<AdKind, number>();
   for (const ad of allowed) poolTotals.set(ad.kind, (poolTotals.get(ad.kind) ?? 0) + ad.weight);
   // A store whose program ads have no known reward (Japan, until its rate card
@@ -278,7 +327,7 @@ export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, av
       const total = poolTotals.get(ad.kind) || 1;
       const related = relatedness(ad, ctx.pin);
       const performance = performanceWeight(ctx.performance?.byKey.get(ad.key), ctx.performance?.baselineCtr ?? 0);
-      const weight = (shareOf(ad.kind) / total) * personalWeight(ad, ctx) * (1 + related) * performance * rewardWeight(ad);
+      const weight = (shareOf(ad.kind) / total) * personalWeight(ad, ctx) * (1 + related) * performance * rewardWeight(ad) * qualityWeight(ad);
       // Efraimidis-Spirakis: the n smallest -ln(u)/w are a weighted sample.
       return { ad, related, own: ctx.pin != null && ad.forPinId === ctx.pin.id, fresh: !avoid.has(ad.key), score: weight > 0 ? -Math.log(1 - random()) / weight : Infinity };
     })
@@ -295,6 +344,88 @@ export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, av
     picked.push(ad);
     if (picked.length === n) break;
   }
+  return picked;
+}
+
+// An ad's urgency code as what it says: so many left, or a lowest price in so
+// many days. Anything else (a stale or hand-edited value) says nothing.
+export type Urgency = { kind: 'left'; count: number } | { kind: 'low'; days: number };
+
+export function parseUrgency(code: string | null | undefined): Urgency | null {
+  const match = code?.match(/^(left|low):(\d{1,3})$/);
+  if (!match || !Number(match[2])) return null;
+  return match[1] === 'left' ? { kind: 'left', count: Number(match[2]) } : { kind: 'low', days: Number(match[2]) };
+}
+
+// A holiday in its ad window: its catalog id and how many days it is from the
+// holiday's first day (negative before it).
+export type ActiveHoliday = { id: string; offset: number };
+
+// How much more often a holiday's ads come up near the day itself than at the
+// edges of its window: a week either side of it counts double, three days
+// quadruple.
+export function holidayWeight(offset: number): number {
+  const days = Math.abs(offset);
+  return days <= 3 ? 4 : days <= 10 ? 2 : 1;
+}
+
+// A holiday's ads for one slot: one holiday (weighted by how close it is,
+// and only one the pin falls on, when `related` is given), and from it `count`
+// ads in different price tiers - the inexpensive, middle and expensive choices
+// together - cheapest first. A holiday short of tiers repeats one it has;
+// ads already on the page are used only when the rest run out.
+export function pickHolidayAds(
+  candidates: AdCandidate[],
+  ctx: AdContext,
+  active: ActiveHoliday[],
+  count: number,
+  related: ReadonlySet<string> | null = null,
+  avoid: Set<string> = new Set(),
+  random = Math.random,
+): AdCandidate[] {
+  if (count <= 0) return [];
+  const offsets = new Map(active.map((h) => [h.id, h.offset]));
+  const byHoliday = new Map<string, AdCandidate[]>();
+  for (const ad of candidates) {
+    if (!ad.holiday || !offsets.has(ad.holiday) || !adAllowed(ad, ctx)) continue;
+    if (related && !related.has(ad.holiday)) continue;
+    byHoliday.set(ad.holiday, [...(byHoliday.get(ad.holiday) ?? []), ad]);
+  }
+  let holidays = [...byHoliday.keys()];
+  // A holiday whose ads are all on the page already comes last.
+  const fresh = holidays.filter((id) => byHoliday.get(id)!.some((ad) => !avoid.has(ad.key)));
+  if (fresh.length) holidays = fresh;
+  if (!holidays.length) return [];
+  const weights = holidays.map((id) => holidayWeight(offsets.get(id) ?? 0));
+  let roll = random() * weights.reduce((sum, w) => sum + w, 0);
+  let chosen = holidays[holidays.length - 1];
+  for (const [i, id] of holidays.entries()) {
+    roll -= weights[i];
+    if (roll < 0) {
+      chosen = id;
+      break;
+    }
+  }
+  const ads = byHoliday.get(chosen)!;
+  // Within a tier, the better reviewed a listing the likelier it is.
+  const pickOne = (pool: AdCandidate[]) => {
+    const unseen = pool.filter((ad) => !avoid.has(ad.key));
+    const from = unseen.length ? unseen : pool;
+    let left = random() * from.reduce((sum, ad) => sum + qualityWeight(ad), 0);
+    for (const ad of from) {
+      left -= qualityWeight(ad);
+      if (left < 0) return ad;
+    }
+    return from[from.length - 1];
+  };
+  const tiersHere = AD_TIERS.filter((tier) => ads.some((ad) => ad.tier === tier));
+  // Which tiers to show when the slot holds fewer than there are: random ones.
+  const shown = [...tiersHere].sort(() => random() - 0.5).slice(0, count);
+  shown.sort((a, b) => AD_TIERS.indexOf(a) - AD_TIERS.indexOf(b));
+  const picked: AdCandidate[] = shown.map((tier) => pickOne(ads.filter((ad) => ad.tier === tier)));
+  // A tier with two ads fills a slot a missing tier leaves.
+  const rest = ads.filter((ad) => !picked.some((p) => productKey(p) === productKey(ad)));
+  while (picked.length < count && rest.length) picked.push(rest.splice(Math.floor(random() * rest.length), 1)[0]);
   return picked;
 }
 

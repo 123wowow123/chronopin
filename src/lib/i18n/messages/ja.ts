@@ -1552,6 +1552,8 @@ const ja: Messages = {
   ads: {
     sponsored: 'スポンサー',
     seeOnAmazon: 'Amazonで見る',
+    urgencyLeft: '残り{count}点',
+    urgencyLow: '{days}日間の最安値',
     programs: {
       prime: { title: 'Amazonプライムを無料で体験', body: 'お急ぎ便無料、Prime Videoなど特典がいっぱい。', cta: '無料体験を始める' },
       audible: { title: 'Audibleを無料で体験', body: 'オーディオブック、ポッドキャスト、オリジナル作品。新規会員は無料で体験できます。', cta: '聴き始める' },

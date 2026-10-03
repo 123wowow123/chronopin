@@ -26915,6 +26915,30 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "the Bethesda-based maker of the F-35 fighter and the THAAD and PAC-3 missile interceptors"
+    },
+    {
+      "id": 2781,
+      "pinId": 5208,
+      "symbol": "IQ",
+      "name": "iQIYI",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-02T19:21:22.879Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the streamer that carried the series"
+    },
+    {
+      "id": 2783,
+      "pinId": 5214,
+      "symbol": "BABA",
+      "name": "Alibaba Group",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-02T19:23:13.299Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "Youku's owner"
     }
   ],
   "prices": [
@@ -27179,7 +27203,7 @@
       "day": "2014-05-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-19T05:19:16.321Z",
+      "utcCheckedDateTime": "2026-10-03T09:36:04.573Z",
       "utcSetDateTime": "2026-09-19T05:12:03.888Z"
     },
     {
@@ -27333,7 +27357,7 @@
       "day": "2014-07-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-22T23:58:10.215Z",
+      "utcCheckedDateTime": "2026-10-03T13:19:34.123Z",
       "utcSetDateTime": "2026-09-19T05:12:15.931Z"
     },
     {
@@ -27685,7 +27709,7 @@
       "day": "2014-10-31",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-22T23:58:11.409Z",
+      "utcCheckedDateTime": "2026-10-02T17:31:46.468Z",
       "utcSetDateTime": "2026-09-19T05:12:38.244Z"
     },
     {
@@ -28598,7 +28622,7 @@
       "day": null,
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-19T05:20:30.522Z",
+      "utcCheckedDateTime": "2026-10-03T11:27:08.196Z",
       "utcSetDateTime": "2026-09-19T05:20:28.354Z"
     },
     {
@@ -29731,7 +29755,7 @@
       "day": "1961-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-22T23:43:13.897Z",
+      "utcCheckedDateTime": "2026-10-03T05:35:50.166Z",
       "utcSetDateTime": "2026-09-19T05:28:52.072Z"
     },
     {
@@ -29753,7 +29777,7 @@
       "day": "1967-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-19T05:28:55.838Z",
+      "utcCheckedDateTime": "2026-10-02T21:53:45.215Z",
       "utcSetDateTime": "2026-09-19T05:28:55.835Z"
     },
     {
@@ -37299,7 +37323,7 @@
       "day": "2024-10-03",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-28T20:11:37.289Z",
+      "utcCheckedDateTime": "2026-10-02T18:50:31.087Z",
       "utcSetDateTime": "2026-09-19T19:19:06.699Z"
     },
     {
@@ -38419,9 +38443,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-01T00:00:00.000Z",
       "day": "2026-10-01",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 35.15,
+      "utcPriceDateTime": "2026-10-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-02T16:40:49.283Z",
       "utcSetDateTime": "2026-09-20T03:10:14.616Z"
     },
     {
@@ -39563,9 +39587,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-23T01:00:00.000Z",
       "day": "2026-09-22",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 57.32,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T15:25:47.465Z",
       "utcSetDateTime": "2026-09-20T16:28:39.556Z"
     },
     {
@@ -42379,9 +42403,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-30T00:00:00.000Z",
       "day": "2026-09-30",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 23.53,
+      "utcPriceDateTime": "2026-09-30T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T02:37:19.806Z",
       "utcSetDateTime": "2026-09-20T22:15:29.286Z"
     },
     {
@@ -42390,9 +42414,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-30T00:00:00.000Z",
       "day": "2026-09-30",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 333.02,
+      "utcPriceDateTime": "2026-09-30T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T02:37:19.457Z",
       "utcSetDateTime": "2026-09-20T22:15:29.289Z"
     },
     {
@@ -42401,9 +42425,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-30T00:00:00.000Z",
       "day": "2026-09-30",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 611.76,
+      "utcPriceDateTime": "2026-09-30T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T02:37:19.091Z",
       "utcSetDateTime": "2026-09-20T22:15:29.294Z"
     },
     {
@@ -42412,9 +42436,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-30T00:00:00.000Z",
       "day": "2026-09-30",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 456.19,
+      "utcPriceDateTime": "2026-09-30T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T02:37:18.661Z",
       "utcSetDateTime": "2026-09-20T22:15:29.296Z"
     },
     {
@@ -42898,7 +42922,7 @@
       "day": "1969-02-09",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-22T23:46:13.114Z",
+      "utcCheckedDateTime": "2026-10-03T00:53:54.824Z",
       "utcSetDateTime": "2026-09-21T04:55:55.006Z"
     },
     {
@@ -43679,7 +43703,7 @@
       "day": "2014-05-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-22T23:58:09.180Z",
+      "utcCheckedDateTime": "2026-10-03T13:31:41.970Z",
       "utcSetDateTime": "2026-09-22T23:58:09.178Z"
     },
     {
@@ -43701,7 +43725,7 @@
       "day": "2014-08-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-22T23:58:10.369Z",
+      "utcCheckedDateTime": "2026-10-02T20:48:59.299Z",
       "utcSetDateTime": "2026-09-22T23:58:10.317Z"
     },
     {
@@ -43842,9 +43866,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-02T00:00:00.000Z",
       "day": "2026-10-02",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 354.11,
+      "utcPriceDateTime": "2026-10-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T00:25:13.129Z",
       "utcSetDateTime": "2026-09-23T04:49:03.419Z"
     },
     {
@@ -52125,9 +52149,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-01T00:00:00.000Z",
       "day": "2026-10-01",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 343.64,
+      "utcPriceDateTime": "2026-10-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-02T22:42:22.926Z",
       "utcSetDateTime": "2026-09-24T04:58:59.852Z"
     },
     {
@@ -62828,9 +62852,9 @@
       "kind": "posted",
       "utcStartDateTime": null,
       "day": null,
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 58.18,
+      "utcPriceDateTime": "2026-09-23T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T11:54:14.669Z",
       "utcSetDateTime": "2026-09-24T19:52:07.517Z"
     },
     {
@@ -62839,9 +62863,9 @@
       "kind": "start",
       "utcStartDateTime": "2023-10-30T13:05:10.000Z",
       "day": "2023-10-30",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 40.21,
+      "utcPriceDateTime": "2023-10-30T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T11:54:12.572Z",
       "utcSetDateTime": "2026-09-24T19:52:23.715Z"
     },
     {
@@ -68988,9 +69012,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-02T00:00:00.000Z",
       "day": "2026-10-02",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 33.87,
+      "utcPriceDateTime": "2026-10-02T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T14:25:17.241Z",
       "utcSetDateTime": "2026-09-27T05:02:19.208Z"
     },
     {
@@ -70066,9 +70090,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-02T00:00:00.000Z",
       "day": "2026-10-02",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 89.54,
+      "utcPriceDateTime": "2026-10-02T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-03T04:05:45.150Z",
       "utcSetDateTime": "2026-09-27T16:06:50.039Z"
     },
     {
@@ -70308,9 +70332,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-01T00:00:00.000Z",
       "day": "2026-10-01",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 512.8,
+      "utcPriceDateTime": "2026-10-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-02T16:15:03.440Z",
       "utcSetDateTime": "2026-09-27T16:41:27.074Z"
     },
     {
@@ -76813,6 +76837,50 @@
       "utcPriceDateTime": "2026-09-17T20:00:00.000Z",
       "utcCheckedDateTime": "2026-10-01T19:20:22.200Z",
       "utcSetDateTime": "2026-10-01T19:20:21.912Z"
+    },
+    {
+      "id": 23649,
+      "pinTickerId": 2781,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 0.9921,
+      "utcPriceDateTime": "2026-10-02T19:21:00.000Z",
+      "utcCheckedDateTime": "2026-10-02T19:21:30.644Z",
+      "utcSetDateTime": "2026-10-02T19:21:24.225Z"
+    },
+    {
+      "id": 23651,
+      "pinTickerId": 2781,
+      "kind": "start",
+      "utcStartDateTime": "2025-12-09T00:00:00.000Z",
+      "day": "2025-12-09",
+      "price": 2.03,
+      "utcPriceDateTime": "2025-12-09T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-02T19:21:25.439Z",
+      "utcSetDateTime": "2026-10-02T19:21:24.328Z"
+    },
+    {
+      "id": 23653,
+      "pinTickerId": 2783,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 106.41,
+      "utcPriceDateTime": "2026-10-02T19:23:00.000Z",
+      "utcCheckedDateTime": "2026-10-02T19:23:19.439Z",
+      "utcSetDateTime": "2026-10-02T19:23:13.710Z"
+    },
+    {
+      "id": 23654,
+      "pinTickerId": 2783,
+      "kind": "start",
+      "utcStartDateTime": "2026-03-07T00:00:00.000Z",
+      "day": "2026-03-07",
+      "price": 130.79,
+      "utcPriceDateTime": "2026-03-06T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-02T19:23:16.104Z",
+      "utcSetDateTime": "2026-10-02T19:23:14.161Z"
     }
   ],
   "relations": [

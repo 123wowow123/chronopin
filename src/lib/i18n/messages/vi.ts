@@ -1570,6 +1570,8 @@ const vi: Messages = {
   ads: {
     sponsored: 'Được tài trợ',
     seeOnAmazon: 'Xem trên Amazon',
+    urgencyLeft: 'Chỉ còn {count}',
+    urgencyLow: 'Giá thấp nhất trong {days} ngày',
     programs: {
       prime: { title: 'Dùng thử Amazon Prime miễn phí', body: 'Giao hàng nhanh miễn phí, Prime Video và nhiều hơn nữa.', cta: 'Bắt đầu dùng thử miễn phí' },
       audible: { title: 'Dùng thử Audible miễn phí', body: 'Sách nói, podcast và nội dung gốc, thành viên mới được dùng thử miễn phí.', cta: 'Bắt đầu nghe' },

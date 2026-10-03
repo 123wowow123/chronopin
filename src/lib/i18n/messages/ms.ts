@@ -1571,6 +1571,8 @@ const ms: Messages = {
   ads: {
     sponsored: 'Ditaja',
     seeOnAmazon: 'Lihat di Amazon',
+    urgencyLeft: 'Tinggal {count}',
+    urgencyLow: 'Harga terendah {days} hari',
     programs: {
       prime: { title: 'Cuba Amazon Prime secara percuma', body: 'Penghantaran pantas dan percuma, Prime Video dan banyak lagi.', cta: 'Mulakan percubaan percuma' },
       audible: { title: 'Cuba Audible secara percuma', body: 'Buku audio, podcast dan karya asli, percuma dicuba untuk ahli baharu.', cta: 'Mula mendengar' },

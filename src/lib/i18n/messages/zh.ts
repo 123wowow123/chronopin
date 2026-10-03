@@ -1552,6 +1552,8 @@ const zh: Messages = {
   ads: {
     sponsored: '赞助',
     seeOnAmazon: '在亚马逊查看',
+    urgencyLeft: '仅剩 {count} 件',
+    urgencyLow: '{days} 天最低价',
     programs: {
       prime: { title: '免费试用 Amazon Prime', body: '快速免费配送、Prime Video 等更多权益。', cta: '开始免费试用' },
       audible: { title: '免费试用 Audible', body: '有声书、播客和原创节目，新会员可免费试用。', cta: '开始收听' },

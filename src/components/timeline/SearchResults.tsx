@@ -18,6 +18,7 @@ import { type CardSpot, type DaySpot, takeSearchSpot } from '@/lib/client/return
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTodayHold } from '@/lib/client/todayHold';
+import { useCulturalDays } from '@/lib/client/culturalDays';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
@@ -36,6 +37,7 @@ import { TimeRangeSlider } from './TimeRangeSlider';
 import { useT } from '@/lib/client/i18n';
 import { withPageLang } from '@/lib/client/navigation';
 import type { SpecialtyDay } from '@/lib/specialtyDays';
+import type { CulturalDay } from '@/lib/culturalDays';
 
 type SortBy = 'date' | 'relevance';
 
@@ -124,6 +126,7 @@ export function SearchResults({
   searchedUser,
   searchedCompany,
   specialtyDays: initialSpecialtyDays,
+  culturalDays: initialCulturalDays,
   searchedDays = [],
   error,
   query = '',
@@ -141,6 +144,7 @@ export function SearchResults({
   // The one company a company: search names, for the panel about it.
   searchedCompany?: SearchedCompany;
   specialtyDays: Record<string, SpecialtyDay[]>;
+  culturalDays: Record<string, CulturalDay[]>;
   // The days a date: search keeps to; today is on the timeline only when it is one of them.
   searchedDays?: string[];
   error?: string;
@@ -299,6 +303,10 @@ export function SearchResults({
 
   const todayKey = dayKeyIn(serverNow, timeZone);
   const bags = useMemo(() => buildBags(datePins ?? [], [], timeZone), [datePins, timeZone]);
+  const culturalDays = useCulturalDays(
+    initialCulturalDays,
+    useMemo(() => [...bags.map((bag) => bag.day), todayKey], [bags, todayKey]),
+  );
   // Today only where the results cross it: some on or before it and some on
   // or after it, loaded or on a page still to come. Results all on one side
   // (a past award's winners) have no today in them.
@@ -636,11 +644,11 @@ export function SearchResults({
         <div hidden={sortBy !== 'date'} className={`${rail} ${restoring ? 'invisible' : ''}`}>
           {bags.map((bag, index) => (
             <div key={bag.day}>
-              {marker.index === index ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
-              <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[monthDayOf(bag.day)] || []} serverTimeZone={serverTimeZone} />
+              {marker.index === index ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} culturalDays={culturalDays[todayKey]} /> : null}
+              <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[monthDayOf(bag.day)] || []} culturalDays={culturalDays[bag.day]} serverTimeZone={serverTimeZone} />
             </div>
           ))}
-          {marker.atEnd ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
+          {marker.atEnd ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} culturalDays={culturalDays[todayKey]} /> : null}
         </div>
         <div ref={bottomRef} hidden={sortBy !== 'date'} aria-hidden className="h-px" />
       </div>

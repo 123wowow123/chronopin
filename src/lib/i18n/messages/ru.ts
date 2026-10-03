@@ -1657,6 +1657,8 @@ const ru: Messages = {
   ads: {
     sponsored: 'Реклама',
     seeOnAmazon: 'Смотреть на Amazon',
+    urgencyLeft: 'Осталось всего {count}',
+    urgencyLow: 'Минимальная цена за {days} дн.',
     programs: {
       prime: { title: 'Попробуйте Amazon Prime бесплатно', body: 'Быстрая бесплатная доставка, Prime Video и многое другое.', cta: 'Начать бесплатный период' },
       audible: { title: 'Попробуйте Audible бесплатно', body: 'Аудиокниги, подкасты и оригинальные проекты, бесплатно для новых участников.', cta: 'Начать слушать' },

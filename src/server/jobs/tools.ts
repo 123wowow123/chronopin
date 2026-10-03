@@ -21,9 +21,10 @@ import { inspectImage } from '../image';
 import { hashDistance, NEAR_DUPLICATE_DISTANCE } from '../imageHash';
 import JobRun from '../model/jobRun';
 import Medium, { imageHashOf } from '../model/medium';
+import HolidayAd from '../model/holidayAd';
 import PinAd from '../model/pinAd';
 import PinRevisit from '../model/pinRevisit';
-import { MIN_AD_RATING, MIN_AD_REVIEWS } from '@/lib/adQuality';
+import { MIN_AD_RATING, MIN_AD_REVIEWS, MIN_HOLIDAY_AD_RATING, MIN_HOLIDAY_AD_REVIEWS } from '@/lib/adQuality';
 import PinSentiment, { shortHash } from '../model/pinSentiment';
 import Comment from '../model/comment';
 import { clampSentiment, PIN_SENTIMENT_PROMPT } from '../extract/pinSentiment';
@@ -199,6 +200,13 @@ export const TOOLS: JobTool[] = [
       "Where the active users are (signed-in people who opened or commented on pins in the last `days`), grouped by their saved default location, with how many pins already sit within `radiusKm` over the next 60 days. Users with no saved location are only counted - never guess their place.",
     input_schema: obj({ days: num('Activity window, default 30'), radiusKm: num('Radius for nearby pins, default 50') }),
     run: (input) => signals.activeUserPlaces(int(input.days, 30, 1, 180), int(input.radiusKm, 50, 5, 500)),
+  },
+  {
+    name: 'traffic_places',
+    description:
+      "Where readers are by the network address their pin views came from, placed to a city: the cities with the most distinct viewers (guests included) over the last `days` (default 14), with how many pins already sit within `radiusKm` over the next 60 days. Complements active_user_places, which only sees signed-in people with a saved location. Cities with fewer than `minViewers` (default 3) are left out and no address is ever returned: a place is a market to cover, never a person to describe.",
+    input_schema: obj({ days: num('Window in days, default 14'), radiusKm: num('Radius for nearby pins, default 50'), minViewers: num('Fewest distinct viewers a city needs, default 3, at least 3') }),
+    run: (input) => signals.trafficPlaces(int(input.days, 14, 1, 90), int(input.radiusKm, 50, 5, 500), int(input.minViewers, 3, 3, 1000)),
   },
   // --- Beats (fortune100, layoffs) -----------------------------------------
   {
@@ -378,7 +386,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'pin_ads_check',
     description:
-      `Reads every pin ad's Amazon listing again (the ones not read in the last 11 hours): refreshes its price and reviews and marks it broken when it is gone, out of stock, unbranded, or below ${MIN_AD_RATING} stars from ${MIN_AD_REVIEWS} reviews. Returns newlyBroken (each with its pin and why) and needsAds: upcoming pins with fewer than two working ads, the pins with a broken ad first, with the pin's company and categories. Call it once at the start of the pinAds task; then replace the broken ones and fill the pins a product genuinely suits with add_pin_ad.`,
+      `Reads every pin ad's Amazon listing again (the ones not read in the last 11 hours): refreshes its price, reviews and urgency line ("Only 12 left", "90-day low price", shown on its ad tile) and marks it broken when it is gone, out of stock, unbranded, or below ${MIN_AD_RATING} stars from ${MIN_AD_REVIEWS} reviews. Returns newlyBroken (each with its pin and why) and needsAds: upcoming pins with fewer than two working ads, the pins with a broken ad first, with the pin's company and categories. Call it once at the start of the pinAds task; then replace the broken ones and fill the pins a product genuinely suits with add_pin_ad.`,
     input_schema: obj({ limit: num('Listings to read, default 40, at most 80'), pins: num('Pins to list in needsAds, default 20, at most 40') }),
     run: async (input) => {
       const checked = await PinAd.check({ limit: int(input.limit, 40, 1, 80) });
@@ -411,6 +419,45 @@ export const TOOLS: JobTool[] = [
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
       const removed = await PinAd.remove(pinId, String(input.asin));
       if (removed) await act(ctx, { tool: 'remove_pin_ad', pinId, detail: String(input.asin) });
+      return { removed };
+    },
+  },
+  {
+    name: 'holiday_ads_check',
+    description:
+      `The holidayAds task's first call. Reads every holiday ad's Amazon listing again (the ones not read in the last 11 hours): refreshes price, reviews, picture and price tier, and marks one broken when it is gone, out of stock, unbranded, or below ${MIN_HOLIDAY_AD_RATING} stars from ${MIN_HOLIDAY_AD_REVIEWS} reviews. Then stocks the holidays coming up (ads run from a month before a holiday to three weeks after, and are stocked two weeks ahead of that) and, three a run, any other holiday a pin falls on (that pin's page shows its goods whatever the day): for each price tier - inexpensive, middle, expensive - short of two working ads it searches Amazon with the holiday's own searches and adds the best-reviewed listings that name the holiday or its traditional goods. Returns newlyBroken, added (each with its tier, price, stars and reviews), lacking (tiers still short, and why) and problems (a search Amazon refused). The searches are mechanical: review every item in added and drop, with remove_holiday_ad, anything that is not truly traditional for that holiday (a supplement that shares an ingredient, a generic party decoration, a product for another holiday).`,
+    input_schema: obj({ limit: num('Listings to read, default 40, at most 80') }),
+    run: async (input, ctx) => {
+      const checked = await HolidayAd.check({ limit: int(input.limit, 40, 1, 80) });
+      const stocked = await HolidayAd.fill();
+      for (const a of stocked.added) await act(ctx, { tool: 'holiday_ads_check', detail: `${a.holiday} ${a.tier}: ${a.title.slice(0, 90)} ($${a.price}, ${a.rating} stars / ${a.reviews} reviews)` });
+      return { ...checked, ...stocked, coverage: await HolidayAd.coverage() };
+    },
+  },
+  {
+    name: 'holiday_ads',
+    description: "A holiday's ads (an id from the catalog: mid-autumn, diwali, hanukkah, halloween...), working and broken, with tier, brand, price, stars and review count.",
+    input_schema: obj({ holiday: str('Holiday id, e.g. mid-autumn') }, ['holiday']),
+    run: (input) => HolidayAd.forHoliday(String(input.holiday)),
+  },
+  {
+    name: 'add_holiday_ad',
+    description:
+      `Advertises an Amazon product for a holiday, for the shortfalls holiday_ads_check reports in lacking (a tier with fewer than two ads - the prices that split inexpensive from middle from expensive are the holiday's budget in the catalog; the tool sets the tier from the price). \`url\` must be an amazon.com product link that came back from a search or fetch in this run (any form with /dp/<ASIN>). The tool reads the listing and refuses it unless it is in stock with a brand, at least ${MIN_HOLIDAY_AD_RATING} stars and ${MIN_HOLIDAY_AD_REVIEWS} reviews - say what it refused and try another. Only goods traditionally tied to the holiday (what people eat, give, wear, light or decorate with that day: mooncakes and mooncake molds for the Mid-Autumn Festival, a menorah for Hanukkah), never a restricted product (alcohol, vapes, tobacco, weapons, adult products) and never a supplement.`,
+    input_schema: obj({ holiday: str('Holiday id, e.g. mid-autumn'), url: str('amazon.com product link'), reason: str('Why it is traditional for the holiday') }, ['holiday', 'url', 'reason']),
+    run: async (input, ctx) => {
+      const result = await HolidayAd.add(String(input.holiday), String(input.url));
+      if ('added' in result) await act(ctx, { tool: 'add_holiday_ad', title: result.added.title, detail: `${input.holiday} ${result.added.tier}: ${input.reason} ($${result.added.price}, ${result.added.rating} stars / ${result.added.reviewCount} reviews)` });
+      return result;
+    },
+  },
+  {
+    name: 'remove_holiday_ad',
+    description: "Drops a holiday's ad that is not truly traditional for it, or that a better listing replaces.",
+    input_schema: obj({ holiday: str('Holiday id'), asin: str("The ad's ASIN") }, ['holiday', 'asin']),
+    run: async (input, ctx) => {
+      const removed = await HolidayAd.remove(String(input.holiday), String(input.asin));
+      if (removed) await act(ctx, { tool: 'remove_holiday_ad', detail: `${input.holiday} ${input.asin}` });
       return { removed };
     },
   },

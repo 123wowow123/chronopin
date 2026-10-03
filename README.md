@@ -267,6 +267,8 @@ https://developer.ticketmaster.com/partners/distribution-partners/affiliate-sign
 
 sync prod db to local and backup json
 
+run full run job session
+
 
 
 - product should link ebay and macari and facebook marketplace and have job to check for updatedness
@@ -277,7 +279,6 @@ sync prod db to local and backup json
 
 - sell something and pay to notify item to all watchers for the pin
 
-- use ip address and google analytics to help find where trafic is coming from and pin local events for those users
 
 - setup second company for daily job
 
@@ -290,45 +291,35 @@ sync prod db to local and backup json
 - add ads on mapped marketplace pin like logging, also auto show related item in area
 
 - pay to turn off ads
-- are you able to setup github action to build and deploy for me and how much would it cost?
 
+- ability to buy an ad to the sponsored blocks
+
+- add Amazon Product Advertising API (PA API) key
 
 - update all ticket master button link to use referal link
 
 run 6am job here in this session
 
 
-pin most popular steam games
-
 best of 2027 desert per brand per category
 
-new and historical grammy news and events and make into thread where possible
 
-racing
 
-https://www.fooddive.com/
 
 programatic seo
 
-oil news and events and attacks
-
-powerplant build news and event
-
+https://www.fooddive.com/
 
 https://www.eventbrite.com/e/sneaker-con-los-angeles-october-17-18-2026-tickets-2000208801369?aff=erelpanelorg
 
 
-ability to buy an ad to the sponsored blocks
+grammy's should have who was up for consideration and show their work and view link
+
+
+backfill brand + stars on product ads (sponsored rows show price · brand · ★ rating): Merchant-based ads only have the pin's company, and some PinAd rows have no brand/rating yet. Re-read the listings (pinAds task) or fill them in, locally and on prod
 
 
 organize admin pages to more intuitive layout and groupings
 
 
-On Holding AG (ONON)
-large sport contract deal with sportswear or teams
-
-
-Agility Robotics (ticker: CCXI)
-
 Is there any improvement we can do to make search better? Should we check the search model and strategy?
-

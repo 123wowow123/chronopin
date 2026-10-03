@@ -14,13 +14,18 @@ import {
   MIN_AD_AGE,
   parseAmazonTags,
   pickAds,
+  pickHolidayAds,
+  PIN_SLOTS,
+  HOLIDAY_COUNT,
   regionFromAcceptLanguage,
   servingStore,
   storeForLocale,
   tagForStore,
   taggedAdUrl,
 } from '@/lib/ads';
+import { WINDOW_AFTER_DAYS, WINDOW_BEFORE_DAYS, type AdTier } from '@/lib/culturalDays';
 import * as db from '../db';
+import { holidayLabel, holidaysInWindow, occurrencesOn } from '../culturalDays';
 import { clientIp } from '../http';
 import { countryOf } from '../ipLocation';
 import { viewerPreference } from '../services/pages';
@@ -106,7 +111,15 @@ export default class Ad {
     // their dollar price); program ads are the store's own.
     const abroad = store !== 'US' && GLOBAL_EARNING_STORES.has(store);
     const candidates = inventory.ads.filter((ad) => ad.store === store || (abroad && ad.kind === 'product' && ad.store === 'US'));
-    const picked = pickAds(candidates, ctx, n, expandAvoid(candidates, avoid));
+    // The goods of a holiday in its window (a month before to three weeks
+    // after), a tile for each price tier, first in the slot. A pin's page
+    // carries those of the holiday the pin falls on whatever today is.
+    const onPinPage = PIN_SLOTS.includes(slot);
+    const related = onPinPage ? new Set(pin?.day ? occurrencesOn(pin.day).map((o) => o.def.id) : []) : null;
+    const active = related ? [...related].map((id) => ({ id, offset: 0 })) : holidaysInWindow(new Date().toISOString().slice(0, 10), WINDOW_BEFORE_DAYS, WINDOW_AFTER_DAYS);
+    const holidayAds = related && !related.size ? [] : pickHolidayAds(candidates, ctx, active, Math.min(HOLIDAY_COUNT[slot], n), related, expandAvoid(candidates, avoid));
+    const rest = pickAds(candidates, ctx, n - holidayAds.length, expandAvoid(candidates, new Set([...avoid, ...holidayAds.map((ad) => ad.key)])));
+    const picked = [...holidayAds, ...rest];
     if (picked.length && !admin) await recordImpressions(picked, slot, store, (ad) => tagForStore(ad.store, inventory.tags) ?? '', userId != null);
     const titles = await localizedTitles(picked, locale);
     return {
@@ -119,10 +132,16 @@ export default class Ad {
         title: titles.get(ad.key) ?? ad.title,
         price: ad.store === store ? ad.price : null,
         currency: ad.price != null && ad.store === store ? 'USD' : null,
+        brand: ad.kind === 'product' ? ad.company : null,
+        rating: ad.rating ?? null,
+        // A price in another store's currency is no price here, nor is its stock.
+        urgency: ad.store === store ? (ad.urgency ?? null) : null,
         pinId: ad.pinId,
         category: ad.categories[0] ?? null,
         thumbName: ad.thumbName,
         originalUrl: ad.originalUrl,
+        imageUrl: ad.imageUrl ?? null,
+        holiday: ad.holiday ? holidayLabel(ad.holiday, locale) : null,
         store,
       })),
     };
@@ -204,11 +223,18 @@ export default class Ad {
     const out: Record<string, { kind: AdKind; program: string | null; title: string | null; pinId: number | null }> = {};
     const missing: number[] = [];
     const chosenRows: number[] = [];
+    const holidayRows: number[] = [];
     for (const key of keys) {
       const ad = byKey.get(key);
       if (ad) out[key] = { kind: ad.kind, program: ad.program, title: ad.title, pinId: ad.pinId };
       else if (key.startsWith('m:')) missing.push(Number(key.slice(2)));
       else if (key.startsWith('p:')) chosenRows.push(Number(key.slice(2)));
+      else if (key.startsWith('h:')) holidayRows.push(Number(key.slice(2)));
+    }
+    // A holiday ad marked broken since is not served, but is still named.
+    if (holidayRows.length) {
+      const rows = await db.query<{ id: number; title: string }>(`SELECT "id", "title" FROM "HolidayAd" WHERE "id" = ANY($1::integer[])`, [holidayRows]);
+      for (const r of rows) out[`h:${r.id}`] = { kind: 'product', program: null, title: r.title, pinId: null };
     }
     // A chosen ad marked broken since is not served, but is still named.
     if (chosenRows.length) {
@@ -309,13 +335,17 @@ async function loadInventory(): Promise<Inventory> {
     ),
     db.query<{ value: unknown }>(`SELECT "value" FROM "AppSetting" WHERE "key" = 'amazonTags'`),
     // Ads chosen for a pin (0112), working ones on live pins.
-    db.query<{ id: number; pinId: number; url: string; price: number | null; title: string; brand: string | null; categories: string[] }>(
-      `SELECT "a"."id", "a"."pinId", "a"."url", "a"."price"::float8 AS "price", "a"."title", "a"."brand",
+    db.query<{ id: number; pinId: number; url: string; price: number | null; rating: number | null; reviewCount: number | null; urgency: string | null; title: string; brand: string | null; categories: string[] }>(
+      `SELECT "a"."id", "a"."pinId", "a"."url", "a"."price"::float8 AS "price", "a"."rating"::float8 AS "rating", "a"."reviewCount", "a"."urgency", "a"."title", "a"."brand",
          coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category'), '{}') AS "categories"
        FROM "PinAd" AS "a" JOIN "Pin" AS "p" ON "p"."id" = "a"."pinId" AND "p"."utcDeletedDateTime" IS NULL
        WHERE "a"."status" = 'ok'`,
     ),
   ]);
+  // The goods of the cultural holidays (0121); served only in a holiday's window.
+  const holidayRows = await db.query<{ id: number; holiday: string; tier: AdTier; url: string; title: string; brand: string | null; price: number | null; rating: number | null; image: string | null }>(
+    `SELECT "id", "holiday", "tier", "url", "title", "brand", "price"::float8 AS "price", "rating"::float8 AS "rating", "image" FROM "HolidayAd" WHERE "status" = 'ok'`,
+  );
   const chosenPictures = await PinView.pictures([...new Set(chosen.map((c) => c.pinId))]);
   const pictures = await PinView.pictures([...new Set(products.map((p) => p.pinId))]);
   const ads: AdCandidate[] = [
@@ -384,11 +414,42 @@ async function loadInventory(): Promise<Inventory> {
         forPinId: row.pinId,
         title: row.title,
         price: row.price,
+        rating: row.rating,
+        reviewCount: row.reviewCount,
+        urgency: row.urgency,
         thumbName: chosenPictures.get(row.pinId)?.thumbName ?? null,
         originalUrl: chosenPictures.get(row.pinId)?.originalUrl ?? null,
       }),
     ),
   ];
+  ads.push(
+    ...holidayRows.map(
+      (row): AdCandidate => ({
+        key: `h:${row.id}`,
+        kind: 'product',
+        program: null,
+        url: row.url,
+        store: 'US',
+        categories: [],
+        company: row.brand,
+        weight: 1,
+        rewardUsd: null,
+        minAge: 0,
+        targetAgeFrom: null,
+        targetAgeTo: null,
+        pinId: null,
+        forPinId: null,
+        title: row.title,
+        price: row.price,
+        rating: row.rating,
+        thumbName: null,
+        originalUrl: null,
+        holiday: row.holiday,
+        tier: row.tier,
+        imageUrl: row.image,
+      }),
+    ),
+  );
   return { ads, tags: parseAmazonTags(setting[0]?.value), storesWithAds: new Set(ads.map((ad) => ad.store)), at: Date.now() };
 }
 
@@ -415,8 +476,8 @@ async function viewerFacts(userId: number) {
 }
 
 async function pinFacts(pinId: number): Promise<AdContext['pin']> {
-  const rows = await db.query<{ categories: string[]; tags: string[]; company: string | null }>(
-    `SELECT "c"."name"::text AS "company",
+  const rows = await db.query<{ categories: string[]; tags: string[]; company: string | null; day: string | null }>(
+    `SELECT "c"."name"::text AS "company", to_char("p"."utcStartDateTime" AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS "day",
        coalesce((SELECT array_agg("t"."name"::text) FILTER (WHERE "t"."kind" = 'category') FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "categories",
        coalesce((SELECT array_agg("t"."name"::text) FILTER (WHERE "t"."kind" <> 'category') FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "tags"
      FROM "Pin" AS "p" LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"

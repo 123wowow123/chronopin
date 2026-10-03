@@ -7,6 +7,8 @@ import { CATEGORIES } from '@/lib/categories';
 import { minConfidence } from '@/lib/timelineConfidence';
 import { TIMELINE_MIN_CONFIDENCE } from '@/lib/referenceConfidence';
 import * as db from '../db';
+import log from '../util/log';
+import PinView from '../model/pinView';
 import { getTimelineConfidence } from '../model/appSetting';
 import { pinConfidenceOf } from '../model/pins';
 import { CURATORS } from './curators';
@@ -131,6 +133,47 @@ export async function activeUserPlaces(days = 30, radiusKm = 50) {
     [days],
   );
   return { places, activeUsersWithoutLocation: unlocated };
+}
+
+// Where readers are by the network address their pin views came from
+// (PinView.ip, placed city-level by DB-IP): the cities with the most distinct
+// viewers over the last `days`, signed in or not, with how many pins already
+// sit within `radiusKm` over the next 60 days. It reaches the people
+// activeUserPlaces cannot - guests, and members with no saved place. Addresses
+// are never returned, only the place and counts; a city with fewer than
+// `minViewers` distinct viewers is left out, so no row can point at one person,
+// and an address that placed no further than its country is not a city.
+export async function trafficPlaces(days = 14, radiusKm = 50, minViewers = 3) {
+  // Views are placed lazily (the admin pages do it on open), so place the ones
+  // since then now. A lookup that fails leaves earlier views usable.
+  await PinView.locateUnlocated().catch((err) => log.warn('trafficPlaces: locating views failed:', (err as Error).message));
+  const places = await db.query<{ place: string; country: string; latitude: number; longitude: number; viewers: number; users: number; views: number; upcomingNearby: number }>(
+    `
+    WITH "t" AS (
+      SELECT concat_ws(', ', "city", "region", "country") AS "place", min("country") AS "country",
+        avg("latitude") AS "latitude", avg("longitude") AS "longitude",
+        count(DISTINCT "viewer")::int AS "viewers", count(DISTINCT "userId")::int AS "users", count(*)::int AS "views"
+      FROM "PinView"
+      WHERE "ip" IS NOT NULL AND "city" IS NOT NULL AND "latitude" IS NOT NULL AND "longitude" IS NOT NULL
+        AND "day" > current_date - $1::int
+      GROUP BY 1
+      HAVING count(DISTINCT "viewer") >= $3
+    )
+    SELECT "t".*,
+      (SELECT count(*)::int FROM "Pin" AS "p"
+        WHERE "p"."utcDeletedDateTime" IS NULL AND "p"."location" IS NOT NULL
+          AND "p"."utcStartDateTime" BETWEEN now() AND now() + interval '60 days'
+          AND ST_DWithin("p"."location", ST_SetSRID(ST_MakePoint("t"."longitude", "t"."latitude"), 4326)::geography, $2 * 1000)) AS "upcomingNearby"
+    FROM "t"
+    ORDER BY "t"."viewers" DESC, "t"."views" DESC
+    LIMIT 25`,
+    [days, radiusKm, minViewers],
+  );
+  const [{ unplaced }] = await db.query<{ unplaced: number }>(
+    `SELECT count(DISTINCT "viewer")::int AS "unplaced" FROM "PinView" WHERE "day" > current_date - $1::int AND ("ip" IS NULL OR "city" IS NULL)`,
+    [days],
+  );
+  return { places, viewersWithoutCity: unplaced };
 }
 
 // Pins that start (or are running) between yesterday and a week out, with

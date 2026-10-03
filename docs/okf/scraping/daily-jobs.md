@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 
 All are set on **/admin/jobs**: on or off, every day or once a month (on a
@@ -72,6 +72,22 @@ recorded - is the same for both.
   and close it with `--finish <id> --report <file>`. The writes count against
   the same run and show on the admin page.
 
+* **A full run: every job in one go.** `npm run jobs:run -- --all --prepare`
+  writes one prompt for all the jobs (the shared instructions once, then each
+  job's, in saved order: midnight, news, monthly) and one MCP config; add the
+  server it prints and work the prompt in a VS Code session. The server has two
+  extra tools: `begin_job` opens that job's run (only then, so a long session
+  has no run sitting open past the 3-hour abandoned-run cut-off) and refuses
+  while another job or run is open, and `finish_job` closes it with the job's
+  report and does what a finished run does (learnings to the OKF log, the seed
+  backup after pin writes). Every other tool refuses between jobs. Each job
+  keeps its own limits, actions and report on the admin page; schedule and
+  enabled flags are ignored, as for "Run now". `--jobs midnight,news` picks
+  some. Without `--prepare`, `--all` runs the jobs back to back on their
+  drivers (`--driver session` for Claude Code's login), and the admin page's
+  "Run all jobs now" does the same inside the server; a job that fails is
+  recorded and the rest still run, and the schedule waits until the chain ends.
+
 # Tools
 
 Only what Claude cannot do natively is a tool
@@ -80,7 +96,7 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 
 | Tool | What it gives | Why it is a tool |
 | --- | --- | --- |
-| `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
+| `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `traffic_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `google_trends` | Trending searches in ten markets, scored for dated events, with `coveredByPin` ([trends.ts](../../../src/server/jobs/trends.ts)) | Same reader as `trends:discover` |
 | `prediction_markets` | Kalshi and Polymarket events resolving in the next week and those newly listed since the last run, biggest book first, with odds, dollars traded and `coveredByPin` ([markets.ts](../../../src/server/jobs/markets.ts)) | About 45 pages of exchange listings filtered down to a page: per-game and recurring markets out, an election's props folded together |
 | `company_coverage`, `tagged_pins` | Where a beat left off: each company's pins and when one was last posted, stalest first; what a tag (`Layoffs`) already holds ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
@@ -309,6 +325,50 @@ nothing changes, the next run reads it again. A page can redirect to another
 variant, so read the title the tool returns. Only amazon.com; other stores
 need their own Associates id.
 
+### holidayAds
+
+**Reads** `holiday_ads_check`: every holiday ad's Amazon listing read again
+(price, stars, reviews, picture, stock), the ones that just broke, and then it
+**stocks** the holidays coming up on its own: `added` (each new ad with its
+price tier, price, stars and reviews), `lacking` (tiers still short, and why),
+`problems` (a search Amazon refused) and `coverage`.
+**Does** reviews `added`, then fills `lacking`.
+**What these are.** The traditional goods of the cultural holidays in the
+catalog ([culturalDays.ts](../../../src/lib/culturalDays.ts): Mid-Autumn
+Festival, Lunar New Year, Diwali, Hanukkah, Halloween, Christmas...), which
+the timeline also tags with the holiday and its foods and customs. They run
+from **a month before the holiday to three weeks after** (owner, 2026-10-03),
+are stocked two weeks ahead of that, and are served first in the timeline's ad
+slots and on the pin pages of pins that fall on the holiday, three tiles at a
+time: an inexpensive, a middle and an expensive choice (the holiday's own
+dollar budget splits them, in the catalog). Each tier is stocked to two working
+ads.
+**Review what `holiday_ads_check` added.** Its searches are mechanical - a
+title that names the holiday or one of its goods, best-reviewed first - and a
+supplement that shares an ingredient, a generic party decoration or a product
+for another holiday can slip through. Drop each such ad with
+`remove_holiday_ad`; what stays must be something people really eat, give,
+wear, light or decorate with *that day* (mooncakes, a mooncake mold, paper
+lanterns and oolong tea for the Mid-Autumn Festival; a menorah and gelt for
+Hanukkah).
+**Filling a short tier.** WebSearch `<holiday good> site:amazon.com` (a
+mooncake brand, "mooncake gift box"), open the result and pass a link that came
+back from search - never a URL typed from memory - to `add_holiday_ad`. The
+tool reads the listing and refuses it unless it is in stock with a brand and at
+least 4 stars from 5 reviews ([adQuality.ts](../../../src/lib/adQuality.ts):
+well under the pin ads' 4.3 / 100, since a single holiday's goods sell in
+small numbers and mooncakes on Amazon rarely have more; owner, 2026-10-03: "5
+reviews is enough", "4 stars is good enough too"); the price decides the tier. A tier with nothing that clears the bar
+gets nothing rather than a filler, and the picker repeats a tier the holiday
+has two of.
+**Never** alcohol, vapes, tobacco, weapons, adult products or supplements.
+**Traps.** Amazon search answers a script with a stub page now and then
+("no results on page") - a problem to report, not a reason to give up:
+try the other searches. A robot check on a listing is "unreadable", not
+"broken": nothing changes. By hand: `npm run ads:holiday -- coverage | fill
+[--curl] | add | check | list | remove` (`--curl` runs the searches through curl,
+which Amazon refuses less than Node's fetch).
+
 ## Find new events
 
 Look for what the timeline is missing, from what people search, read and say.
@@ -411,13 +471,19 @@ quote or name a commenter in a pin.
 
 ### localEvents
 
-**Reads** `active_user_places`.
-**Does** for the places with the most active users and the fewest upcoming
-pins nearby, find major local events newly announced - festivals, stadium
+**Reads** `active_user_places` (signed-in users' saved places) and `traffic_places`
+(where all readers, guests included, are by the city their pin views came from).
+**Does** for the places with the most readers and the fewest upcoming
+pins nearby - a city in both lists counts once, by its larger number - find major local events newly announced - festivals, stadium
 concerts, openings, marathons, city elections, major closures - and pin them
 at the venue (reverse-geocode the point; [never type an address](strategy.md)).
 **Traps.** Users with no saved location are only a count; never guess their
-place from anything else. "Major" means worth a stranger's attention, not a
+place from anything else - a view's city is a place to cover, not a fact about a
+person, so a pin or its summary never mentions where readers come from, and
+an address never appears in a report or learning. A city-sized ISP hub or a
+VPN exit can look like a crowd: check a `traffic_places` city against what its
+readers open (`most_viewed_pins`) before pinning for it, and skip a city whose
+viewers all opened the same one pin. "Major" means worth a stranger's attention, not a
 weekly market.
 
 ## Beats

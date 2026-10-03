@@ -63,6 +63,11 @@ export const TASKS = {
     label: 'Pin ads',
     summary: "Check every pin's Amazon ad still works and is well reviewed, replace the broken ones, and add trusted-brand products that suit the pins, matching the pin's own brand when there is one.",
   },
+  holidayAds: {
+    group: 'upkeep',
+    label: 'Holiday ads',
+    summary: "Stock the traditional goods of the cultural holidays coming up, and of any holiday a pin falls on (mooncakes and lanterns for the Mid-Autumn Festival) as inexpensive, middle and expensive Amazon ads, keep them working, and drop any that are not truly traditional.",
+  },
   trends: {
     group: 'discover',
     label: 'Google Trends',
@@ -96,7 +101,7 @@ export const TASKS = {
   localEvents: {
     group: 'discover',
     label: 'Local events',
-    summary: 'Pin newly announced major events near where active users are.',
+    summary: "Pin newly announced major events near where readers are: members' saved places and the cities their pin views come from.",
   },
   fortune100: {
     group: 'beats',
@@ -181,7 +186,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // eventInfo twice a day, so a sell-out shows by the next run; the
       // prediction markets too, for the week's events the money is on (owner,
       // 2026-10-01).
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'breakingNews', 'predictionMarkets', 'sentiment'],
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'breakingNews', 'predictionMarkets', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,

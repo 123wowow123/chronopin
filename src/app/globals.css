@@ -59,6 +59,7 @@
 
   --color-tag-today: var(--color-amber-400);
   --color-tag-trivia: var(--color-emerald-400);
+  --color-tag-holiday: var(--color-violet-300);
   --color-rail: #373c45;
 
   --color-past: #dca75c;
@@ -80,6 +81,8 @@
   --color-warning-soft: var(--color-amber-300);
   --color-info-soft: var(--color-sky-300);
   --color-trivia-soft: var(--color-emerald-200);
+  --color-holiday-ink: var(--color-violet-950);
+  --color-tradition-soft: var(--color-violet-300);
   /* What only a pin's authors or admins see (duplicate suggestions). */
   --color-privileged: var(--color-violet-400);
 
@@ -132,6 +135,7 @@
 
   --color-tag-today: var(--color-amber-500);
   --color-tag-trivia: var(--color-emerald-500);
+  --color-tag-holiday: oklch(50% 0.13 295);
   --color-rail: #cdd2d9;
 
   --color-past: #8f5f12;
@@ -148,6 +152,8 @@
   --color-warning-soft: var(--color-amber-800);
   --color-info-soft: var(--color-sky-800);
   --color-trivia-soft: var(--color-emerald-800);
+  --color-holiday-ink: #ffffff;
+  --color-tradition-soft: oklch(47% 0.13 295);
   --color-privileged: var(--color-violet-700);
 
   --color-tint: #000;
@@ -336,6 +342,73 @@
   /* A marker chip that searches the web for the day's trivia. */
   a.tag-trivia {
     @apply transition-colors hover:bg-tag-trivia/20 hover:no-underline hover:ring-tag-trivia/50;
+  }
+  /* A national or cultural holiday and the foods and customs of its day: the
+     last of the stack, and the one solid, inverted chip among the tinted ones
+     (a light chip with dark type in the dark theme, a dark one in the light). */
+  .tag-holiday {
+    @apply bg-tag-holiday text-holiday-ink ring-tag-holiday;
+  }
+  a.tag-holiday {
+    @apply transition-[filter] hover:no-underline hover:brightness-110;
+  }
+  /* The foods and customs under a holiday: the holiday's violet in a lighter shade. */
+  .tag-tradition {
+    @apply bg-tag-holiday/[0.04] text-tradition-soft ring-tag-holiday/15;
+  }
+  a.tag-tradition {
+    @apply transition-colors hover:bg-tag-holiday/10 hover:no-underline hover:ring-tag-holiday/35;
+  }
+  /* Holidays that fall on the same day each take a hue of their own (the first
+     keeps violet); the holiday's tag and its traditions share it. No reds or
+     pinks: they read harsh beside the cool tags (owner, 2026-10-03). */
+  .holiday-hue-1 {
+    --color-tag-holiday: var(--color-cyan-300);
+    --color-tradition-soft: var(--color-cyan-300);
+  }
+  :root[data-theme="light"] .holiday-hue-1 {
+    --color-tag-holiday: var(--color-cyan-700);
+    --color-tradition-soft: var(--color-cyan-600);
+  }
+  .holiday-hue-2 {
+    --color-tag-holiday: oklch(87% 0.07 85);
+    --color-tradition-soft: oklch(87% 0.07 85);
+  }
+  :root[data-theme="light"] .holiday-hue-2 {
+    --color-tag-holiday: oklch(52% 0.09 75);
+    --color-tradition-soft: oklch(48% 0.09 75);
+  }
+  .holiday-hue-3 {
+    --color-tag-holiday: oklch(86% 0.08 130);
+    --color-tradition-soft: oklch(86% 0.08 130);
+  }
+  :root[data-theme="light"] .holiday-hue-3 {
+    --color-tag-holiday: oklch(50% 0.09 135);
+    --color-tradition-soft: oklch(46% 0.09 135);
+  }
+  .holiday-hue-4 {
+    --color-tag-holiday: var(--color-teal-300);
+    --color-tradition-soft: var(--color-teal-300);
+  }
+  :root[data-theme="light"] .holiday-hue-4 {
+    --color-tag-holiday: var(--color-teal-700);
+    --color-tradition-soft: var(--color-teal-600);
+  }
+  .holiday-hue-5 {
+    --color-tag-holiday: var(--color-indigo-300);
+    --color-tradition-soft: var(--color-indigo-300);
+  }
+  :root[data-theme="light"] .holiday-hue-5 {
+    --color-tag-holiday: var(--color-indigo-700);
+    --color-tradition-soft: var(--color-indigo-600);
+  }
+  .holiday-hue-6 {
+    --color-tag-holiday: oklch(85% 0.06 235);
+    --color-tradition-soft: oklch(85% 0.06 235);
+  }
+  :root[data-theme="light"] .holiday-hue-6 {
+    --color-tag-holiday: oklch(52% 0.09 235);
+    --color-tradition-soft: oklch(48% 0.09 235);
   }
   /* A day's weekday-planet marker on the rail: a flat disc, cut out of the
      rail by a gap of page colour. Today's is amber, like its tags. */

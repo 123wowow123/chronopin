@@ -1555,6 +1555,8 @@ const th: Messages = {
   ads: {
     sponsored: 'ผู้สนับสนุน',
     seeOnAmazon: 'ดูบน Amazon',
+    urgencyLeft: 'เหลือเพียง {count} ชิ้น',
+    urgencyLow: 'ราคาต่ำสุดใน {days} วัน',
     programs: {
       prime: { title: 'ทดลองใช้ Amazon Prime ฟรี', body: 'จัดส่งเร็วฟรี Prime Video และอีกมากมาย', cta: 'เริ่มทดลองใช้ฟรี' },
       audible: { title: 'ทดลองใช้ Audible ฟรี', body: 'หนังสือเสียง พอดแคสต์ และออริจินัล สมาชิกใหม่ทดลองใช้ฟรี', cta: 'เริ่มฟัง' },

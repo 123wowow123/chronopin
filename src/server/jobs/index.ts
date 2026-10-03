@@ -89,7 +89,7 @@ export async function runJob(jobId: string, options: RunOptions): Promise<number
 // What a finished run leaves behind outside its row: its learnings in the OKF
 // log, and - on a development machine, after a run that wrote pins - the seed
 // backup, because seeds are what production is rebuilt from.
-async function afterRun(runId: number) {
+export async function afterRun(runId: number) {
   const run = await JobRun.get(runId);
   if (!run || process.env.NODE_ENV === 'production') return;
   if (run.learnings.length) {

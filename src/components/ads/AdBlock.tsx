@@ -7,7 +7,7 @@ import { Icon, type IconName } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { withPageLang } from '@/lib/client/navigation';
 import { money } from '@/lib/format';
-import { SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
+import { parseUrgency, SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
 
 // The ad slots marked on the timeline and the pin page, filled with Amazon
 // Associates ads (/api/ads, src/lib/ads.ts): program ads (Special Program
@@ -110,17 +110,44 @@ function useAdText() {
   return (ad: AdJson) => {
     if (ad.program) {
       const base = `ads.programs.${ad.program}`;
-      return {
-        title: t.dynamic(`${base}.title`, ad.program),
-        body: t.dynamic(`${base}.body`, ''),
-        cta: t.dynamic(`${base}.cta`, t('ads.seeOnAmazon')),
-      };
+      const body = t.dynamic(`${base}.body`, '');
+      return { title: t.dynamic(`${base}.title`, ad.program), body, price: '', info: body, urgency: '', cta: t.dynamic(`${base}.cta`, t('ads.seeOnAmazon')) };
     }
-    return { title: ad.title ?? '', body: ad.price != null ? money(ad.price, ad.currency) : '', cta: t('ads.seeOnAmazon') };
+    const price = ad.price != null ? money(ad.price, ad.currency) : '';
+    // "Only 12 left" or "90-day low price", when the listing's page said so.
+    const found = parseUrgency(ad.urgency);
+    const urgency = found ? (found.kind === 'left' ? t('ads.urgencyLeft', { count: found.count }) : t('ads.urgencyLow', { days: found.days })) : '';
+    // The one line about a product in the compact rows, after the price: the
+    // urgency where there is one, else brand and stars.
+    // A holiday's ad says which holiday it is for in place of the brand.
+    const info = urgency || [ad.holiday ?? ad.brand, ad.rating ? `★ ${ad.rating.toFixed(1)}` : null].filter(Boolean).join(' · ');
+    return { title: ad.title ?? '', body: [price, ad.holiday].filter(Boolean).join(' · '), price, info, urgency, cta: t('ads.seeOnAmazon') };
   };
 }
 
+// The compact rows' second line: a product's price, brand and stars, or a
+// program's own words, on one line that gives way with an ellipsis where the
+// row is too narrow, as a new pin's text does.
+function AdInfoLine({ price, info, urgent }: { price: string; info: string; urgent?: boolean }) {
+  return (
+    <span className={`truncate text-xs ${urgent ? 'font-medium text-warning' : 'text-subtle'}`}>
+      {price ? <span className="font-semibold text-success tabular-nums">{price}</span> : null}
+      {price && info ? ' · ' : null}
+      {info}
+    </span>
+  );
+}
+
 function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
+  // A holiday's product, pictured as Amazon shows it: on white, whole.
+  if (ad.imageUrl) {
+    return (
+      <span aria-hidden className={`flex shrink-0 items-center justify-center overflow-hidden rounded border border-line bg-white ${className}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element -- Amazon's own image host */}
+        <img src={ad.imageUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-full object-contain" />
+      </span>
+    );
+  }
   if (!ad.program) return <PinThumb thumbName={ad.thumbName} originalUrl={ad.originalUrl} title={ad.title} category={ad.category} className={className} />;
   if (hasProgramLogo(ad.program)) {
     return (
@@ -185,7 +212,7 @@ export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 
       </div>
       <ul className={list}>
         {ads.map((ad) => {
-          const { title, body, cta } = text(ad);
+          const { title, body, urgency, cta } = text(ad);
           return (
             <li key={ad.key} className="min-w-0">
               <AdLink ad={ad} slot={slot} pinId={pinId} className="surface flex h-full items-center gap-3 p-2.5 hover:no-underline hover:ring-1 hover:ring-line">
@@ -195,6 +222,7 @@ export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 
                     {title}
                   </span>
                   {body ? <span className={`text-xs text-muted ${ad.program ? 'line-clamp-1' : 'font-semibold text-success tabular-nums'}`}>{body}</span> : null}
+                  {urgency ? <span className="truncate text-xs font-medium text-warning">{urgency}</span> : null}
                   <span className="mt-0.5 inline-flex items-center gap-1 text-xs font-medium text-link">
                     {cta}
                     <Icon name="external" className="size-3 opacity-60" />
@@ -223,7 +251,7 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
       <SponsoredLabel />
       <ul className="mt-2 space-y-2 max-lg:[&>li:nth-child(n+2)]:hidden">
         {ads.map((ad) => {
-          const { title, body, cta } = text(ad);
+          const { title, body, urgency, cta } = text(ad);
           return (
             <li key={ad.key}>
               <AdLink ad={ad} slot={slot} pinId={pinId} className="-mx-2 flex items-center gap-3.5 rounded-lg p-2 hover:bg-raised hover:no-underline">
@@ -231,6 +259,7 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
                 <span className="flex min-w-0 flex-col gap-0.5">
                   <span className="line-clamp-2 font-medium text-ink">{title}</span>
                   {body ? <span className={`text-sm ${ad.program ? 'line-clamp-2 text-muted' : 'font-semibold text-success tabular-nums'}`}>{body}</span> : null}
+                  {urgency ? <span className="text-sm font-medium text-warning">{urgency}</span> : null}
                   <span className="inline-flex items-center gap-1 text-sm font-medium text-link">
                     {cta}
                     <Icon name="external" className="size-3 opacity-60" />
@@ -278,16 +307,16 @@ export function AdPanel({ onAds }: { onAds?: (count: number | null) => void }) {
       <ol className="flex min-h-0 flex-col flex-wrap overflow-clip pb-1.5">
         {ads
           ? ads.map((ad) => {
-              const { title, body } = text(ad);
+              const { title, price, info, urgency } = text(ad);
               return (
                 <li key={ad.key} className="w-full px-1.5">
                   <AdLink ad={ad} slot={slot} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised hover:no-underline">
-                    <AdPicture ad={ad} className="h-9 w-14" />
+                    <AdPicture ad={ad} className="h-12 w-[4.5rem]" />
                     <span className="flex min-w-0 flex-col">
                       <span className="truncate leading-snug text-ink" title={title}>
                         {title}
                       </span>
-                      <span className={`truncate text-xs ${ad.program ? 'text-subtle' : 'font-semibold text-success tabular-nums'}`}>{body}</span>
+                      <AdInfoLine price={price} info={info} urgent={!!urgency} />
                     </span>
                   </AdLink>
                 </li>
@@ -296,7 +325,7 @@ export function AdPanel({ onAds }: { onAds?: (count: number | null) => void }) {
           : Array.from({ length: SLOT_COUNT[slot] }, (_, i) => (
               <li key={i} aria-hidden className="w-full px-1.5">
                 <div className="flex items-center gap-2.5 px-2 py-1.5">
-                  <span className="h-9 w-14 shrink-0 rounded bg-raised" />
+                  <span className="h-12 w-[4.5rem] shrink-0 rounded bg-raised" />
                   <span className="flex min-w-0 flex-1 flex-col gap-1.5">
                     <span className="h-3 w-4/5 rounded bg-raised" />
                     <span className="h-2.5 w-3/5 rounded bg-raised" />
@@ -309,10 +338,11 @@ export function AdPanel({ onAds }: { onAds?: (count: number | null) => void }) {
   );
 }
 
-// The mobile menu's ads, above Log out: at most two compact rows like the
-// side panel's, in the room the menu leaves. The block gives way before the
-// menu scrolls: it is the one thing that shrinks, and a row that does not fit
-// wraps into a clipped second column, as the side panel's do. The drawer is
+// The mobile menu's ads, above Log out: up to five compact rows like the
+// side panel's, in the room the menu leaves, two at least. The block gives way
+// before the menu scrolls: it is the one thing that shrinks, down to two rows,
+// and a row that does not fit wraps into a clipped second column, as the side
+// panel's do. The drawer is
 // always mounted, so the ads are fetched once, the first time it is opened
 // into view.
 export function AdDrawer({ className = '' }: { className?: string }) {
@@ -323,23 +353,23 @@ export function AdDrawer({ className = '' }: { className?: string }) {
   if (!ads) return <div ref={ref} aria-hidden className={`h-px ${className}`} />;
   if (!ads.length) return null;
   return (
-    <aside aria-label={t('ads.sponsored')} className={`flex shrink-0 flex-col px-2 pt-1 pb-1 ${className}`}>
+    <aside aria-label={t('ads.sponsored')} className={`flex min-h-40 flex-col px-2 pt-1 pb-1 ${className}`}>
       <div className="shrink-0 px-3 pb-0.5">
         <SponsoredLabel />
         <Disclosure className="mt-0.5" />
       </div>
-      <ul className="flex flex-col">
+      <ul className="flex min-h-24 flex-col flex-wrap overflow-clip">
         {ads.map((ad) => {
-          const { title, body } = text(ad);
+          const { title, price, info, urgency } = text(ad);
           return (
             <li key={ad.key} className="w-full">
               <AdLink ad={ad} slot={slot} className="flex items-center gap-3 rounded-2xl px-3 py-1.5 hover:bg-raised hover:no-underline active:bg-raised-2">
-                <AdPicture ad={ad} className="h-9 w-14" />
+                <AdPicture ad={ad} className="h-12 w-[4.5rem]" />
                 <span className="flex min-w-0 flex-col">
                   <span className="truncate text-sm font-medium text-ink" title={title}>
                     {title}
                   </span>
-                  {body ? <span className={`truncate text-xs ${ad.program ? 'text-subtle' : 'font-semibold text-success tabular-nums'}`}>{body}</span> : null}
+                  <AdInfoLine price={price} info={info} urgent={!!urgency} />
                 </span>
               </AdLink>
             </li>

@@ -17,6 +17,7 @@
     "db:refresh": "npm run create:db && npm run create:data",
     "db:check-pin-cache": "tsx scripts/db/checkPinCache.ts",
     "ads:pin": "tsx scripts/ads/pinAds.ts",
+    "ads:holiday": "tsx scripts/ads/holidayAds.ts",
     "db:pull-prod": "sh scripts/db/pullProd.sh",
     "thumbs:push": "sh scripts/db/pushThumbs.sh",
     "thumbs:pull": "tsx scripts/db/pullThumbs.ts",

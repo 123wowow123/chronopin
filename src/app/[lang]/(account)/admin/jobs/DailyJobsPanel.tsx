@@ -91,6 +91,13 @@ export function DailyJobsPanel({ initial }: { initial: DailyJobsView }) {
       setView(await api.get<DailyJobsView>('/api/admin/daily-jobs'));
     });
 
+  const runAll = () =>
+    attempt(async () => {
+      await api.post('/api/admin/daily-jobs/run', { all: true });
+      setMessage(`Started all ${view.setting.jobs.length} jobs, one after another. Refresh to follow them.`);
+      setView(await api.get<DailyJobsView>('/api/admin/daily-jobs'));
+    });
+
   const running = view.runs.some((r) => r.status === 'running');
 
   return (
@@ -125,6 +132,9 @@ export function DailyJobsPanel({ initial }: { initial: DailyJobsView }) {
       ))}
 
       <div className="mb-8 flex flex-wrap items-center gap-3">
+        <button type="button" className="btn btn-secondary" disabled={busy || running || dirty} onClick={() => void runAll()} title="Runs every job one after another, whatever its schedule">
+          Run all jobs now
+        </button>
         <button type="button" className="btn btn-primary" disabled={busy || !dirty} onClick={() => void save()}>
           Save
         </button>

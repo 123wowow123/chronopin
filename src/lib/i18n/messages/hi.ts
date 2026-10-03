@@ -1578,6 +1578,8 @@ const hi: Messages = {
   ads: {
     sponsored: 'प्रायोजित',
     seeOnAmazon: 'Amazon पर देखें',
+    urgencyLeft: 'सिर्फ़ {count} बचे हैं',
+    urgencyLow: '{days} दिनों में सबसे कम कीमत',
     programs: {
       prime: { title: 'Amazon Prime मुफ़्त आज़माएँ', body: 'तेज़ और मुफ़्त डिलीवरी, Prime Video और बहुत कुछ।', cta: 'मुफ़्त ट्रायल शुरू करें' },
       audible: { title: 'Audible मुफ़्त आज़माएँ', body: 'ऑडियोबुक, पॉडकास्ट और ओरिजिनल, नए सदस्यों के लिए मुफ़्त ट्रायल।', cta: 'सुनना शुरू करें' },

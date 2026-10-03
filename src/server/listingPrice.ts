@@ -176,7 +176,34 @@ export type AmazonListing = {
   rating: number | null;
   reviewCount: number | null;
   available: boolean;
+  // The product's main picture on Amazon's image host, 300px, for an ad tile.
+  image?: string | null;
+  // What the page says to hurry a buyer ("left:12", "low:90"; see urgencyOf).
+  urgency?: string | null;
 };
+
+// The one urgency line the page gives, as a code the ad tile words in the
+// viewer's language (src/lib/ads.ts, parseUrgency): the stock left when
+// Amazon says it is low ("Only 12 left in stock - order soon."), else the
+// span its price is the lowest in ("Lowest price in 90 days"). Stock counts
+// first: it is the stronger reason to click.
+export function urgencyOf(html: string): string | null {
+  const availability = html.match(/id="availability"[^>]*>([\s\S]{0,600}?)<\/div>/)?.[1]?.replace(/<style[\s\S]*?<\/style>|<[^>]+>/g, ' ') ?? '';
+  const left = availability.match(/only\s+(\d{1,3})\s+left\s+in\s+stock/i)?.[1];
+  if (left && Number(left) > 0) return `left:${Number(left)}`;
+  const days = html.match(/lowest\s+price\s+in\s+(?:the\s+)?(?:last\s+|past\s+)?(\d{1,3})\s+days/i)?.[1] ?? html.match(/(\d{1,3})-day\s+low\s+price/i)?.[1];
+  if (days && Number(days) > 0) return `low:${Number(days)}`;
+  return null;
+}
+
+// The listing's own picture ("https://m.media-amazon.com/images/I/<id>._AC_SL300_.jpg"),
+// from the page's hi-res gallery, else its landing image.
+export function amazonImageOf(html: string): string | null {
+  const id =
+    html.match(/"hiRes":"https:\/\/m\.media-amazon\.com\/images\/I\/([\w%+-]+)\./)?.[1] ??
+    html.match(/id="landingImage"[^>]*?(?:src|data-old-hires)="https:\/\/m\.media-amazon\.com\/images\/I\/([\w%+-]+)\./)?.[1];
+  return id ? `https://m.media-amazon.com/images/I/${id}._AC_SL300_.jpg` : null;
+}
 
 export function readAmazonFacts(html: string): AmazonListing | { unknown: string } {
   const read = readAmazonPage(html);
@@ -195,6 +222,8 @@ export function readAmazonFacts(html: string): AmazonListing | { unknown: string
     rating: rating > 0 ? rating : null,
     reviewCount: reviews >= 0 && Number.isFinite(reviews) && html.includes('acrCustomerReviewText') ? reviews : null,
     available: read.kind === 'price',
+    image: amazonImageOf(html),
+    urgency: read.kind === 'price' ? urgencyOf(html) : null,
   };
 }
 

@@ -5,9 +5,9 @@ import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
 import type { MarketTrend as Trend } from '@/lib/predictionMarkets';
 import { useT } from '@/lib/client/i18n';
 
-// The tile's drawing box, in the pixels it is shown at (h-9 w-14).
-const W = 56;
-const H = 36;
+// The tile's drawing box, in the pixels it is shown at (h-12 w-[4.5rem]).
+const W = 72;
+const H = 48;
 // The line keeps clear of the percentage above it and the tile's edges.
 const TOP = 15;
 const BOTTOM = H - 4;
@@ -75,7 +75,7 @@ export function MarketTrend({ pinId, fallback }: { pinId: number; fallback: Reac
   useEffect(() => watchMarketOdds(pinId), [pinId]);
 
   if (trend === null) return fallback;
-  if (!trend) return <span aria-hidden className="block h-9 w-14 shrink-0 animate-pulse rounded bg-raised-2 motion-reduce:animate-none" />;
+  if (!trend) return <span aria-hidden className="block h-12 w-[4.5rem] shrink-0 animate-pulse rounded bg-raised-2 motion-reduce:animate-none" />;
 
   // The same outcome as it is right now, when the stream has it.
   const market = markets?.find((m) => m.source === trend.source);
@@ -100,7 +100,7 @@ export function MarketTrend({ pinId, fallback }: { pinId: number; fallback: Reac
   const summary = t(change >= 0 ? 'odds.trendUp' : 'odds.trendDown', { label: trend.label, percent: percent(current), source: trend.source, points: Math.abs(Math.round(change * 100)) });
 
   return (
-    <span role="img" aria-label={summary} title={`${trend.title}\n${summary}`} className="relative block h-9 w-14 shrink-0 overflow-hidden rounded bg-raised-2">
+    <span role="img" aria-label={summary} title={`${trend.title}\n${summary}`} className="relative block h-12 w-[4.5rem] shrink-0 overflow-hidden rounded bg-raised-2">
       <span className="absolute top-0.5 start-1 text-[10px] leading-none font-semibold text-ink tabular-nums">{percent(current)}</span>
       <svg aria-hidden viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 size-full">
         <path d={area} className="fill-link/15" />

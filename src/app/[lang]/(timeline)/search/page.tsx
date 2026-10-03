@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { SearchResults } from '@/components/timeline/SearchResults';
-import { monthDayOf } from '@/lib/format';
+import { dayKeyIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { pinDayKey } from '@/lib/timeline';
 import { specialtyDaysOn } from '@/server/specialtyDays';
+import { culturalDaysFor } from '@/server/culturalDays';
 import type { SpecialtyDay } from '@/lib/specialtyDays';
 import { searchPage, sliderTyping, timelineVideo } from '@/server/services/pages';
 import { parseSearchQuery } from '@/server/util/searchQuery';
@@ -76,6 +77,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
   const today = new Intl.DateTimeFormat('en-CA', { timeZone, month: '2-digit', day: '2-digit' }).format(now).replace('/', '-');
   days[today] = specialtyDaysOn(today, t.locale);
   const searchedDays = parseSearchQuery(q).dates;
+  const culturalDays = culturalDaysFor([...page.pins.map((pin) => pinDayKey(pin, timeZone)), dayKeyIn(now, timeZone)], t.locale);
 
   return (
     <>
@@ -88,6 +90,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         searchedUser={page.user}
         searchedCompany={page.company}
         specialtyDays={days}
+        culturalDays={culturalDays}
         searchedDays={searchedDays}
         error={page.error}
         query={q}

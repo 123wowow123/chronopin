@@ -6,6 +6,8 @@ import {
   type AdCandidate,
   type AdContext,
   parseAmazonTags,
+  parseUrgency,
+  qualityWeight,
   performanceWeight,
   personalWeight,
   pickAds,
@@ -284,5 +286,42 @@ describe('no duplicate ads', () => {
     const all = [listing('m:1', 'B000000001'), listing('p:1', 'B000000001'), listing('m:2', 'B000000002')];
     expect([...expandAvoid(all, new Set(['m:1']))].sort()).toEqual(['m:1', 'p:1']);
     expect(pickAds(all, none, 1, expandAvoid(all, new Set(['m:1'])), seeded()).map((a) => a.key)).toEqual(['m:2']);
+  });
+});
+
+describe('parseUrgency', () => {
+  it('reads stock left and lowest-price spans, and nothing else', () => {
+    expect(parseUrgency('left:12')).toEqual({ kind: 'left', count: 12 });
+    expect(parseUrgency('low:90')).toEqual({ kind: 'low', days: 90 });
+    expect(parseUrgency('left:0')).toBeNull();
+    expect(parseUrgency('sale:5')).toBeNull();
+    expect(parseUrgency(null)).toBeNull();
+  });
+});
+
+describe('qualityWeight', () => {
+  it('is neutral without stars and at 4.3 stars from 1,000 reviews', () => {
+    expect(qualityWeight({})).toBe(1);
+    expect(qualityWeight({ rating: 4.3, reviewCount: 990 })).toBeCloseTo(1, 5);
+  });
+  it('favours high stars and many reviews, within bounds', () => {
+    const good = qualityWeight({ rating: 4.8, reviewCount: 20000 });
+    const middling = qualityWeight({ rating: 4.3, reviewCount: 1000 });
+    const thin = qualityWeight({ rating: 4.0, reviewCount: 40 });
+    expect(good).toBeGreaterThan(middling);
+    expect(middling).toBeGreaterThan(thin);
+    expect(qualityWeight({ rating: 5, reviewCount: 1e9 })).toBeLessThanOrEqual(2 * 1.6);
+    expect(qualityWeight({ rating: 1, reviewCount: 0 })).toBeGreaterThanOrEqual(0.25);
+  });
+  it('weighs a better reviewed product up in pickAds', () => {
+    const base: Omit<AdCandidate, 'key'> = { kind: 'product', program: null, url: '', store: 'US', categories: [], company: null, weight: 1, rewardUsd: null, minAge: 0, targetAgeFrom: null, targetAgeTo: null, pinId: null, forPinId: null, title: 't', price: 1, thumbName: null, originalUrl: null };
+    const ads: AdCandidate[] = [
+      { ...base, key: 'p:good', url: 'https://www.amazon.com/dp/B000000001', rating: 4.8, reviewCount: 20000 },
+      { ...base, key: 'p:thin', url: 'https://www.amazon.com/dp/B000000002', rating: 4.0, reviewCount: 40 },
+    ];
+    const ctx: AdContext = { preference: null, age: null, pin: null };
+    let good = 0;
+    for (let i = 0; i < 400; i++) if (pickAds(ads, ctx, 1)[0].key === 'p:good') good++;
+    expect(good).toBeGreaterThan(280);
   });
 });

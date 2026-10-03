@@ -1565,6 +1565,8 @@ const fr: Messages = {
   ads: {
     sponsored: 'Sponsorisé',
     seeOnAmazon: 'Voir sur Amazon',
+    urgencyLeft: 'Plus que {count} en stock',
+    urgencyLow: 'Prix le plus bas depuis {days} jours',
     programs: {
       prime: { title: 'Essayez Amazon Prime gratuitement', body: 'Livraison rapide et gratuite, Prime Video et plus encore.', cta: 'Commencer l’essai gratuit' },
       audible: { title: 'Essayez Audible gratuitement', body: 'Livres audio, podcasts et créations originales, gratuits à l’essai pour les nouveaux membres.', cta: 'Commencer l’écoute' },

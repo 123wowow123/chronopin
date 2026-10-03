@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readAmazonPage, readOfferMarkup, readSwappaPage, storeUrlOf } from './listingPrice';
+import { readAmazonPage, readOfferMarkup, readSwappaPage, storeUrlOf, urgencyOf } from './listingPrice';
 
 // Every Amazon product page carries this template, in stock or not.
 const TEMPLATE = '<script type="text/template">Currently unavailable.</script>';
@@ -65,5 +65,23 @@ describe('storeUrlOf', () => {
   it("reads through a Rakuten deep link to the store's own page", () => {
     const link = 'https://click.linksynergy.com/deeplink?id=Y1h&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fproducts%2F352654.html';
     expect(storeUrlOf(link)?.toString()).toBe('https://www.gamestop.com/products/352654.html');
+  });
+});
+
+const page = (availability: string, rest = '') => `<div id="availability" class="a-section"><span class="a-size-medium">${availability}</span></div>${rest}`;
+
+describe('urgencyOf', () => {
+  it('reads the stock Amazon says is left', () => {
+    expect(urgencyOf(page('Only 12 left in stock - order soon.'))).toBe('left:12');
+  });
+  it('reads a lowest-price badge', () => {
+    expect(urgencyOf(page('In Stock', '<span>Lowest price in 90 days</span>'))).toBe('low:90');
+    expect(urgencyOf(page('In Stock', '<span>90-day low price</span>'))).toBe('low:90');
+  });
+  it('prefers the stock left to the price badge', () => {
+    expect(urgencyOf(page('Only 3 left in stock.', '<span>Lowest price in 30 days</span>'))).toBe('left:3');
+  });
+  it('says nothing for an ordinary page', () => {
+    expect(urgencyOf(page('In Stock'))).toBeNull();
   });
 });

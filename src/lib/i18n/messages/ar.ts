@@ -1939,6 +1939,8 @@ const ar: Messages = {
   ads: {
     sponsored: 'إعلان',
     seeOnAmazon: 'شاهده على أمازون',
+    urgencyLeft: 'متبقي {count} فقط',
+    urgencyLow: 'أقل سعر خلال {days} يومًا',
     programs: {
       prime: { title: 'جرّب Amazon Prime مجانًا', body: 'توصيل سريع ومجاني وPrime Video والمزيد.', cta: 'ابدأ التجربة المجانية' },
       audible: { title: 'جرّب Audible مجانًا', body: 'كتب صوتية وبودكاست وأعمال أصلية، مجانًا للأعضاء الجدد للتجربة.', cta: 'ابدأ الاستماع' },

@@ -25,6 +25,24 @@ export function adProblem(listing: ListingFacts): string | null {
   return null;
 }
 
+// Holiday ads (src/server/model/holidayAd.ts) clear a lower bar on reviews:
+// the traditional goods of a single holiday (mooncakes, a seder plate) sell in
+// small numbers, so 100 reviews at 4.3 stars would leave most holidays with
+// nothing to advertise (owner, 2026-10-03: "5 reviews is enough", "4 stars is
+// good enough too"). A brand and stock are still required.
+export const MIN_HOLIDAY_AD_RATING = 4.0;
+export const MIN_HOLIDAY_AD_REVIEWS = 5;
+
+// Why a listing may not be advertised for a holiday, or null when it clears the bar.
+export function holidayAdProblem(listing: ListingFacts): string | null {
+  if (!listing.available || listing.price == null) return 'out of stock or no buy-box price';
+  if (!listing.brand) return 'no brand on the listing';
+  if (listing.rating == null || listing.reviewCount == null) return 'no reviews yet';
+  if (listing.reviewCount < MIN_HOLIDAY_AD_REVIEWS) return `only ${listing.reviewCount} reviews (need ${MIN_HOLIDAY_AD_REVIEWS})`;
+  if (listing.rating < MIN_HOLIDAY_AD_RATING) return `rated ${listing.rating} (need ${MIN_HOLIDAY_AD_RATING})`;
+  return null;
+}
+
 // The ASIN of an amazon.com product link (/dp/, /gp/product/, /gp/aw/d/), or null.
 export function asinOf(link: string): string | null {
   try {

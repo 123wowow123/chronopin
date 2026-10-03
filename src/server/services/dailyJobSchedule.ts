@@ -38,6 +38,18 @@ export async function checkDailyJobs(now = new Date()): Promise<void> {
   }
 }
 
+// Holds the clock off while `work` runs, so a job that comes due in the gap
+// between two jobs of a full run (src/server/jobs/fullRun.ts) waits.
+export async function holdSchedule<T>(work: () => Promise<T>): Promise<T> {
+  const was = g.__chronopinDailyJobBusy;
+  g.__chronopinDailyJobBusy = true;
+  try {
+    return await work();
+  } finally {
+    g.__chronopinDailyJobBusy = was;
+  }
+}
+
 export function startDailyJobSchedule() {
   if (g.__chronopinDailyJobTimer) return;
   const tick = () => void checkDailyJobs().catch((err) => log.warn('daily job check failed:', (err as Error).message));

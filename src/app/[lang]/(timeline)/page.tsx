@@ -11,6 +11,7 @@ import { adsenseAllowed } from '@/lib/adsense';
 import { ageOn } from '@/lib/ads';
 import { pinDayKey } from '@/lib/timeline';
 import { specialtyDaysOn } from '@/server/specialtyDays';
+import { culturalDaysFor } from '@/server/culturalDays';
 import { newPins, pinById, TRENDING_DAYS, sliderTyping, adPlacements, adsenseSlots, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
@@ -115,6 +116,11 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
     days[key] = specialtyDaysOn(key, t.locale);
   }
 
+  const culturalDays = culturalDaysFor(
+    [...page.pins.map((p) => pinDayKey(p, timeZone)), ...page.dateTimes.map((d) => dayKeyIn(d.utcStartDateTime, 'UTC')), dayKeyIn(new Date(), timeZone)],
+    t.locale,
+  );
+
   const firstDay = page.pins[0] && pinDayKey(page.pins[0], timeZone);
   const lastDay = page.pins.at(-1) && pinDayKey(page.pins.at(-1)!, timeZone);
 
@@ -132,6 +138,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         initialWithin={first(params.within) ?? null}
         defaultPostedWithin={defaultPostedWithin}
         initialSpecialtyDays={days}
+        initialCulturalDays={culturalDays}
         serverNow={new Date().toISOString()}
         minConfidence={page.minConfidence}
         video={video}

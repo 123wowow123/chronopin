@@ -8,6 +8,7 @@ import { onLive, onLiveReconnect } from '@/lib/client/liveFeed';
 import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
+import { useCulturalDays } from '@/lib/client/culturalDays';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { takeTimelineSpot } from '@/lib/client/returnSpot';
 import { trackEvent } from '@/lib/client/analytics';
@@ -41,6 +42,7 @@ import { useT } from '@/lib/client/i18n';
 import { useWholeRowPanels } from '@/lib/client/wholeRows';
 import { withPageLang } from '@/lib/client/navigation';
 import type { SpecialtyDay } from '@/lib/specialtyDays';
+import type { CulturalDay } from '@/lib/culturalDays';
 
 type Links = { previous?: string; next?: string };
 
@@ -141,6 +143,7 @@ export function Timeline({
   initialWithin,
   defaultPostedWithin,
   initialSpecialtyDays,
+  initialCulturalDays,
   serverNow,
   minConfidence,
   video,
@@ -163,6 +166,8 @@ export function Timeline({
   // The viewer's saved preference (or the site default): left out of the URL.
   defaultPostedWithin: string | null;
   initialSpecialtyDays: Record<string, SpecialtyDay[]>;
+  // The cultural holidays of the first page's days, keyed by day; the rest load by year.
+  initialCulturalDays: Record<string, CulturalDay[]>;
   // When the server rendered, so "today" matches during hydration.
   serverNow: string;
   // The score a pin needs to show (the admin setting), or null to show every pin.
@@ -252,6 +257,11 @@ export function Timeline({
       (daysBetween(todayKey, bags[bags.length - 1].day) >= 0 || !links.next));
   const marker = reachesToday ? resolveTodayMarker(bags, todayKey) : NO_TODAY_MARKER;
   const router = useRouter();
+
+  const culturalDays = useCulturalDays(
+    initialCulturalDays,
+    useMemo(() => [...bags.map((bag) => bag.day), todayKey], [bags, todayKey]),
+  );
 
   useEffect(() => {
     if (bags.some((bag) => !(monthDayOf(bag.day) in specialtyDays))) {
@@ -778,11 +788,12 @@ export function Timeline({
         <div className="relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:start-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
           {bags.map((bag, index) => (
             <div key={bag.day}>
-              {marker.index === index ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
+              {marker.index === index ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} culturalDays={culturalDays[todayKey]} /> : null}
               <TimeBlock
                 bag={bag}
                 todayKey={todayKey}
                 specialtyDays={specialtyDays[monthDayOf(bag.day)] || []}
+                culturalDays={culturalDays[bag.day]}
                 serverTimeZone={serverTimeZone}
                 // The first bag is what paints before hydration scrolls to
                 // today, so both hold a likely LCP image.
@@ -796,7 +807,7 @@ export function Timeline({
               />
             </div>
           ))}
-          {marker.atEnd ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
+          {marker.atEnd ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} culturalDays={culturalDays[todayKey]} /> : null}
         </div>
 
         <div ref={bottomRef} aria-hidden className="h-px" />

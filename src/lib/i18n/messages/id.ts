@@ -1571,6 +1571,8 @@ const id: Messages = {
   ads: {
     sponsored: 'Bersponsor',
     seeOnAmazon: 'Lihat di Amazon',
+    urgencyLeft: 'Tersisa {count}',
+    urgencyLow: 'Harga terendah {days} hari',
     programs: {
       prime: { title: 'Coba Amazon Prime gratis', body: 'Pengiriman cepat dan gratis, Prime Video, dan banyak lagi.', cta: 'Mulai uji coba gratis' },
       audible: { title: 'Coba Audible gratis', body: 'Buku audio, podcast, dan karya orisinal, gratis dicoba untuk anggota baru.', cta: 'Mulai mendengarkan' },

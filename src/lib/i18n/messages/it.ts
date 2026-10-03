@@ -1556,6 +1556,8 @@ const it: Messages = {
   ads: {
     sponsored: 'Sponsorizzato',
     seeOnAmazon: 'Vedi su Amazon',
+    urgencyLeft: 'Ne restano solo {count}',
+    urgencyLow: 'Prezzo più basso degli ultimi {days} giorni',
     programs: {
       prime: { title: 'Prova Amazon Prime gratis', body: 'Spedizioni veloci e gratuite, Prime Video e molto altro.', cta: 'Inizia la prova gratuita' },
       audible: { title: 'Prova Audible gratis', body: 'Audiolibri, podcast e produzioni originali, gratis da provare per i nuovi iscritti.', cta: 'Inizia ad ascoltare' },

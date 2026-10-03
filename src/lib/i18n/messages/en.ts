@@ -1571,6 +1571,8 @@ const en = {
   ads: {
     sponsored: 'Sponsored',
     seeOnAmazon: 'See it on Amazon',
+    urgencyLeft: 'Only {count} left',
+    urgencyLow: '{days}-day low price',
     programs: {
       prime: { title: 'Try Amazon Prime free', body: 'Fast, free delivery, Prime Video and more.', cta: 'Start a free trial' },
       audible: { title: 'Try Audible free', body: 'Audiobooks, podcasts and originals, free to try for new members.', cta: 'Start listening' },

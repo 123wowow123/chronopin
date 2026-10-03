@@ -1553,6 +1553,8 @@ const ko: Messages = {
   ads: {
     sponsored: '스폰서',
     seeOnAmazon: '아마존에서 보기',
+    urgencyLeft: '{count}개 남음',
+    urgencyLow: '{days}일 최저가',
     programs: {
       prime: { title: 'Amazon Prime 무료 체험', body: '빠른 무료 배송, Prime Video 등 다양한 혜택.', cta: '무료 체험 시작' },
       audible: { title: 'Audible 무료 체험', body: '오디오북, 팟캐스트, 오리지널 콘텐츠. 신규 회원은 무료로 체험할 수 있습니다.', cta: '듣기 시작' },

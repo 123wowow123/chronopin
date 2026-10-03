@@ -1565,6 +1565,8 @@ const de: Messages = {
   ads: {
     sponsored: 'Anzeige',
     seeOnAmazon: 'Bei Amazon ansehen',
+    urgencyLeft: 'Nur noch {count} übrig',
+    urgencyLow: '{days}-Tage-Tiefstpreis',
     programs: {
       prime: { title: 'Amazon Prime gratis testen', body: 'Schneller, kostenloser Versand, Prime Video und mehr.', cta: 'Gratis testen' },
       audible: { title: 'Audible gratis testen', body: 'Hörbücher, Podcasts und Originals, für Neukunden gratis zum Testen.', cta: 'Jetzt hören' },
