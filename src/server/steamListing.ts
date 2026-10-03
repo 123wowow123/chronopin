@@ -92,8 +92,12 @@ export function isTheGame(app: Pick<AppDetails, 'name' | 'type' | 'releaseYear'>
   return titles.some((t) => normalizeTitle(t) === name && hasNonLatin(t) === hasNonLatin(app.name)) && yearFits(app.releaseYear, year);
 }
 
+// A date word read out of a title ("October release date announced for ...")
+// is no game's name, though "October" is a Steam game.
+const CALENDAR_WORD = /^(january|february|march|april|may|june|july|august|september|october|november|december|monday|tuesday|wednesday|thursday|friday|saturday|sunday)$/i;
+
 export async function findSteamListing(query: SteamQuery): Promise<SteamListing | undefined> {
-  const titles = [...titleCandidates(query), ...(query.moreTitles ?? [])];
+  const titles = [...titleCandidates(query), ...(query.moreTitles ?? [])].filter((t) => !CALENDAR_WORD.test(t.trim()));
   if (!titles.length) return undefined;
   try {
     const ids = new Set<number>();

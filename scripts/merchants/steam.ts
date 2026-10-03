@@ -40,7 +40,8 @@ const prefixes = (title: string) => {
   const raw = title.split(/\s+/).filter(Boolean);
   return [4, 3, 2, 1]
     .filter((n) => n <= raw.length && !/[:\u2013\u2014-]$/.test(raw[n - 1]) && !/^[\u2013\u2014-]$/.test(raw[n] ?? ''))
-    .map((n) => raw.slice(0, n).join(' ').replace(/[“”"‘’:,!?]/g, ' ').replace(/\s+/g, ' ').trim());
+    .map((n) => raw.slice(0, n).join(' ').replace(/[“”"‘’:,!?]/g, ' ').replace(/\s+/g, ' ').trim())
+    .filter((name) => name.includes(' ') || name.length >= 6);
 };
 
 async function run() {
