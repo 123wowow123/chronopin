@@ -592,9 +592,9 @@ export function SearchResults({
                     )}
                   </div>
                 ) : null}
+                {searchedCompany?.parents?.length ? <CompanyParentsPanel parents={searchedCompany.parents} /> : null}
                 {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
                 {searchedCompany?.sentiment ? <CompanyProductsPanel name={searchedCompany.name} sentiment={searchedCompany.sentiment} /> : null}
-                {searchedCompany?.parents?.length ? <CompanyParentsPanel parents={searchedCompany.parents} /> : null}
                 {searchedCompany?.executives?.length ? <CompanyExecutivesPanel name={searchedCompany.name} executives={searchedCompany.executives} /> : null}
               </>
             ) : undefined

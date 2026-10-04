@@ -1848,6 +1848,66 @@
     "origin": "sec"
   },
   {
+    "companyId": 2201,
+    "name": "Leonard S. Schleifer",
+    "title": "Board Co-Chair, President and Chief Executive Officer",
+    "rank": 1,
+    "salary": 1979922,
+    "totalCompensation": 7280549,
+    "currency": "USD",
+    "fiscalYear": 2025,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/872589/000130817926000340/regn-20260424.htm",
+    "origin": "hand"
+  },
+  {
+    "companyId": 2201,
+    "name": "George D. Yancopoulos",
+    "title": "Board Co-Chair, President and Chief Scientific Officer",
+    "rank": 2,
+    "salary": 1979922,
+    "totalCompensation": 6949469,
+    "currency": "USD",
+    "fiscalYear": 2025,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/872589/000130817926000340/regn-20260424.htm",
+    "origin": "hand"
+  },
+  {
+    "companyId": 2201,
+    "name": "Christopher Fenimore",
+    "title": "Executive Vice President, Finance and Chief Financial Officer",
+    "rank": 3,
+    "salary": 725000,
+    "totalCompensation": 6985364,
+    "currency": "USD",
+    "fiscalYear": 2025,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/872589/000130817926000340/regn-20260424.htm",
+    "origin": "hand"
+  },
+  {
+    "companyId": 2201,
+    "name": "Andrew J. Murphy",
+    "title": "Executive Vice President, Co-Chief Scientific Officer",
+    "rank": 6,
+    "salary": 819672,
+    "totalCompensation": 8477119,
+    "currency": "USD",
+    "fiscalYear": 2025,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/872589/000130817926000340/regn-20260424.htm",
+    "origin": "hand"
+  },
+  {
+    "companyId": 2201,
+    "name": "Joseph J. LaRosa",
+    "title": "Executive Vice President, General Counsel and Secretary",
+    "rank": 6,
+    "salary": 916062,
+    "totalCompensation": 7458970,
+    "currency": "USD",
+    "fiscalYear": 2025,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/872589/000130817926000340/regn-20260424.htm",
+    "origin": "hand"
+  },
+  {
     "companyId": 2260,
     "name": "Haviv Ilan",
     "title": "Director, President & Chief Executive Officer",
@@ -5517,6 +5577,54 @@
     "currency": "USD",
     "fiscalYear": 2025,
     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1402829/000140282926000029/orn-20260519xdef14a.htm",
+    "origin": "sec"
+  },
+  {
+    "companyId": 10429,
+    "name": "Strauss Zelnick",
+    "title": "Executive Chairman and Chief Executive Officer",
+    "rank": 1,
+    "salary": 1,
+    "totalCompensation": 403019,
+    "currency": "USD",
+    "fiscalYear": 2026,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/946581/000162828026049813/ttwo-20260727.htm",
+    "origin": "sec"
+  },
+  {
+    "companyId": 10429,
+    "name": "Karl Slatoff",
+    "title": "President",
+    "rank": 2,
+    "salary": 1,
+    "totalCompensation": 1,
+    "currency": "USD",
+    "fiscalYear": 2026,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/946581/000162828026049813/ttwo-20260727.htm",
+    "origin": "sec"
+  },
+  {
+    "companyId": 10429,
+    "name": "Lainie Goldstein",
+    "title": "Chief Financial Officer",
+    "rank": 3,
+    "salary": 1000000,
+    "totalCompensation": 11299530,
+    "currency": "USD",
+    "fiscalYear": 2026,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/946581/000162828026049813/ttwo-20260727.htm",
+    "origin": "sec"
+  },
+  {
+    "companyId": 10429,
+    "name": "Daniel Emerson",
+    "title": "Executive Vice President and Chief Legal Officer",
+    "rank": 6,
+    "salary": 850000,
+    "totalCompensation": 7988874,
+    "currency": "USD",
+    "fiscalYear": 2026,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/946581/000162828026049813/ttwo-20260727.htm",
     "origin": "sec"
   }
 ]
