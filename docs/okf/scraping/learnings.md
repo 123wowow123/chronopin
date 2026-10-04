@@ -6558,3 +6558,7 @@ Ian: "translate all". Prod's `GET /api/admin/translations?after=0` listed 52 pin
 ## 2026-10-04 - Daily job midnight, run 4 (session)
 
 * **Learned** (midnight run: search noise and thin beats) WebSearch for "SEC crypto ETF deadlines October 2026" returned 2025-era articles with deadlines mislabelled as 2026; do not pin from them without a 2026 SEC/Federal Register source. Layoff searches returned only small WARN notices (81 and 168 staff) and trackers; nothing met the "hundreds or a known company" bar. Google trends on a Sunday were all sport and the Brazil election (already pinned as 1968/5174). Microsoft's own Learn lifecycle pages read fine through WebSearch even though techrepublic.com answers WebFetch with 403.
+
+## 2026-10-04 - Daily job news, run 5 (session)
+
+* **Learned** (news run: ads, holiday ads, thin breaking-news search) pin_ads_check read 0 listings (none exist yet) and needsAds lists 20 upcoming pins with 0 ads, mostly TV premieres and layoffs that have no adjacent product; no ads added. holiday_ads_check mechanical adds included a Kwanzaa "Juneteenth" tablecloth (removed); a Songkran water-gun tier is generic toy guns, left in. Generic "summit October 2026" web search returned only small conferences - use specific beats instead. pending_event_info page text can be a news article for non-ticketed pins: save empty fields rather than guessing.
