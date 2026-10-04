@@ -190,7 +190,7 @@ function videosFirst(media: MediumJson[]): MediumJson[] {
 const SWIPE_PX = 50;
 
 // A pin's media with labels (place, company) over them. With `selectable`
-// (the pin's own page) dots, or a swipe (finger, mouse drag or trackpad), switch between them when
+// (the pin's own page, or `card`) dots, or a swipe (finger, mouse drag or trackpad), switch between them when
 // there is more than one;
 // without it (a card in the timeline) only the first medium shows. A video
 // shows first. Only images take the labels: a video or tweet draws its own
@@ -206,7 +206,8 @@ export function PinMediaFrame({
   fallback,
   media,
   priority,
-  selectable,
+  selectable: selectableProp,
+  card,
   poster,
   ...shared
 }: Omit<Parameters<typeof PinMedia>[0], 'onMissing' | 'medium'> & {
@@ -215,6 +216,10 @@ export function PinMediaFrame({
   overlay: React.ReactNode;
   fallback: React.ReactNode;
   selectable?: boolean;
+  // A card in the timeline: `selectable`, but swipe and dots only (no
+  // arrows), the card's own crop in place of the page's cap on a tall
+  // picture, and a hidden tweet left unmounted so a card does not load one.
+  card?: boolean;
 }) {
   const [missing, setMissing] = useState<ReadonlySet<string>>(() => new Set());
   const markMissing = useCallback((key: string) => setMissing((prev) => (prev.has(key) ? prev : new Set(prev).add(key))), []);
@@ -239,6 +244,7 @@ export function PinMediaFrame({
   const slides = videosFirst(media)
     .map((medium, i) => ({ medium, key: String(medium.id ?? medium.originalUrl ?? medium.thumbName ?? i) }))
     .filter((slide) => drawable(slide.medium, poster) && !missing.has(slide.key));
+  const selectable = selectableProp || card;
   const active = (selectable ? slides.find((slide) => slide.key === activeKey) : undefined) ?? slides[0];
   // Only what can be reached is drawn: every slide when the dots are there, the
   // first one otherwise.
@@ -358,40 +364,9 @@ export function PinMediaFrame({
   const playing = (medium: MediumJson) => isVideo(medium) && !poster;
   const labelled = shownSlides.every((slide) => String(slide.medium.type) === '1' || (!!poster && isVideo(slide.medium)));
 
-  const frame = (
-    <div dir="ltr" className={`group/media ${className}`}>
-      {/* touch-action keeps vertical scroll and pinch with the browser and
-          hands sideways drags to the swipe - on each slide too, since a capped
-          slide scrolls and so starts its own touch-action chain.
-          overflow-x-clip keeps a dragged slide from widening the page. */}
-      <div ref={dots ? frameRef : undefined} className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
-        {labelled ? overlay : null}
-        {shownSlides.map(({ medium, key }, i) => {
-          const shown = key === active.key;
-          // A hidden player is unmounted so it stops; other hidden media stay mounted.
-          if (!shown && playing(medium)) {
-            return null;
-          }
-          // With dots to reach, a tall image (letterboxed) or tweet (scrolled) is capped
-          // so the dots stay above a card's cut-off.
-          const capped = dots && !playing(medium);
-          return (
-            <div
-              key={key}
-              hidden={!shown}
-              className={[capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : '', dots ? 'touch-pan-y touch-pinch-zoom' : '', dots && !dragX ? 'transition-transform duration-200' : '']
-                .filter(Boolean)
-                .join(' ') || undefined}
-              style={shown && dragX ? { transform: `translateX(${dragX}px)` } : undefined}
-            >
-              <MediaSlide medium={medium} mediumKey={key} priority={priority && i === 0} poster={poster} onMissing={markMissing} {...shared} />
-            </div>
-          );
-        })}
-      </div>
-      {dots ? (
-        <div role="group" aria-label={t('media.label')} className="flex items-center justify-center gap-0.5 py-1">
-          <MediaArrow side="previous" label={t('media.previous')} onStep={() => step(-1)} />
+  const dotRow = dots ? (
+        <div role="group" aria-label={t('media.label')} className={card ? 'absolute inset-x-0 bottom-5 z-10 flex items-center justify-center gap-0.5' : 'flex items-center justify-center gap-0.5 py-1'}>
+          {card ? null : <MediaArrow side="previous" label={t('media.previous')} onStep={() => step(-1)} />}
           {slides.map(({ medium, key }, i) => {
             const shown = key === active.key;
             return (
@@ -407,9 +382,43 @@ export function PinMediaFrame({
               </button>
             );
           })}
-          <MediaArrow side="next" label={t('media.next')} onStep={() => step(1)} />
+          {card ? null : <MediaArrow side="next" label={t('media.next')} onStep={() => step(1)} />}
         </div>
-      ) : null}
+  ) : null;
+
+  const frame = (
+    <div dir="ltr" className={`group/media ${className}`}>
+      {/* touch-action keeps vertical scroll and pinch with the browser and
+          hands sideways drags to the swipe - on each slide too, since a capped
+          slide scrolls and so starts its own touch-action chain.
+          overflow-x-clip keeps a dragged slide from widening the page. */}
+      <div ref={dots ? frameRef : undefined} className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
+        {labelled ? overlay : null}
+        {shownSlides.map(({ medium, key }, i) => {
+          const shown = key === active.key;
+          // A hidden player is unmounted so it stops; other hidden media stay mounted.
+          if (!shown && (playing(medium) || (card && String(medium.type) === '2'))) {
+            return null;
+          }
+          // With dots to reach, a tall image (letterboxed) or tweet (scrolled) is capped
+          // so the dots stay above a card's cut-off.
+          const capped = dots && !card && !playing(medium);
+          return (
+            <div
+              key={key}
+              hidden={!shown}
+              className={[capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : '', dots ? 'touch-pan-y touch-pinch-zoom' : '', dots && !dragX ? 'transition-transform duration-200' : '']
+                .filter(Boolean)
+                .join(' ') || undefined}
+              style={shown && dragX ? { transform: `translateX(${dragX}px)` } : undefined}
+            >
+              <MediaSlide medium={medium} mediumKey={key} priority={priority && i === 0} poster={poster} onMissing={markMissing} {...shared} />
+            </div>
+          );
+        })}
+        {card ? dotRow : null}
+      </div>
+      {card ? null : dotRow}
     </div>
   );
   return labelled ? (

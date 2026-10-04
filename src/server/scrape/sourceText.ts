@@ -70,6 +70,23 @@ async function tweetSourceText(url: string): Promise<SourceText> {
   return { title: res.author_name ? `Post by ${res.author_name}` : undefined, text: tweetText(res.html) };
 }
 
+// The page's text in its own charset. Response.text() always reads UTF-8, which
+// turned a Shift_JIS page (tamiya.com/japan) into replacement characters that
+// no wiki could be written from. The header names the charset; failing that, a
+// <meta> tag in the first bytes does; failing that, UTF-8.
+export function decodeBody(body: Buffer, contentType: string): string {
+  const named =
+    contentType.match(/charset\s*=\s*["']?([\w:.-]+)/i)?.[1] ??
+    body.subarray(0, 4096).toString('latin1').match(/<meta[^>]+charset\s*=\s*["']?([\w:.-]+)/i)?.[1] ??
+    'utf-8';
+  try {
+    return new TextDecoder(named).decode(body);
+  } catch {
+    // A label the runtime does not know.
+    return new TextDecoder('utf-8').decode(body);
+  }
+}
+
 // A plain fetch first, which serves most articles; the browser only for pages
 // that build themselves with script.
 async function pageText(url: string): Promise<SourceText> {
@@ -100,7 +117,7 @@ async function pageText(url: string): Promise<SourceText> {
         if (looksLikePdf(body)) return fetchPdfText(url, body);
         throw new Error(`Unsupported content type ${type || 'unknown'} at ${url}`);
       }
-      const body = await res.text();
+      const body = decodeBody(Buffer.from(await res.arrayBuffer()), type);
       if (/html/i.test(type)) {
         const text = htmlToText(body);
         // Only when the rendered markup gave almost nothing: on a normal page

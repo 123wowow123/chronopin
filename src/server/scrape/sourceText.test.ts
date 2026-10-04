@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { decodeEntities, htmlTitle, htmlToText, jsonIslandText, looksBlocked } from './sourceText';
+import { decodeBody, decodeEntities, htmlTitle, htmlToText, jsonIslandText, looksBlocked } from './sourceText';
 
 describe('htmlToText', () => {
   it('keeps the words, drops scripts and page chrome, breaks at blocks', () => {
@@ -69,5 +69,24 @@ describe('jsonIslandText', () => {
 
   it('is empty when there is no island', () => {
     expect(jsonIslandText('<html><body><p>Ordinary page.</p></body></html>')).toBe('');
+  });
+});
+
+describe('decodeBody', () => {
+  // tamiya.com/japan serves Shift_JIS; read as UTF-8 its pages were all U+FFFD.
+  const tamiya = Buffer.from([0x83, 0x5e, 0x83, 0x7e, 0x83, 0x84]);
+
+  it('reads the charset the header names', () => {
+    expect(decodeBody(tamiya, 'text/html; charset=shift_jis')).toBe('タミヤ');
+  });
+
+  it('falls back to the charset a meta tag names', () => {
+    const page = Buffer.concat([Buffer.from('<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">'), tamiya]);
+    expect(decodeBody(page, 'text/html')).toContain('タミヤ');
+  });
+
+  it('defaults to UTF-8, and survives a charset it does not know', () => {
+    expect(decodeBody(Buffer.from('café'), 'text/html')).toBe('café');
+    expect(decodeBody(Buffer.from('café'), 'text/html; charset=nonsense-9')).toBe('café');
   });
 });

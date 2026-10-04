@@ -234,6 +234,7 @@ export function PinCard({
             }
             fallback={<div className="mx-3">{placeRow}</div>}
             media={media}
+            card
             title={pin.title}
             href={href}
             priority={priority}
