@@ -79,7 +79,10 @@ export type AdCandidate = {
   // reads in the viewer's language through the pin's translation.
   titleFromPin?: boolean;
   price: number | null;
-  // A chosen ad's stars out of 5, as last read, for the one line about the product.
+  // The listing's own brand as last read, shown in place of the company
+  // (which stays what pins are matched on).
+  brand?: string | null;
+  // A listing's stars out of 5, as last read, for the one line about the product.
   rating?: number | null;
   // How many reviews those stars come from.
   reviewCount?: number | null;

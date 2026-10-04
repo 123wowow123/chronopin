@@ -132,7 +132,7 @@ export default class Ad {
         title: titles.get(ad.key) ?? ad.title,
         price: ad.store === store ? ad.price : null,
         currency: ad.price != null && ad.store === store ? 'USD' : null,
-        brand: ad.kind === 'product' ? ad.company : null,
+        brand: ad.kind === 'product' ? (ad.brand ?? ad.company) : null,
         rating: ad.rating ?? null,
         // A price in another store's currency is no price here, nor is its stock.
         urgency: ad.store === store ? (ad.urgency ?? null) : null,
@@ -324,8 +324,8 @@ async function loadInventory(): Promise<Inventory> {
     ),
     // Amazon US listings on live pins; the same pin's other listings are
     // separate ads.
-    db.query<{ id: number; pinId: number; url: string; price: number | null; title: string; titleFromPin: boolean; company: string | null; categories: string[] }>(
-      `SELECT "m"."id", "m"."pinId", "m"."url", "m"."price"::float8 AS "price",
+    db.query<{ id: number; pinId: number; url: string; price: number | null; rating: number | null; reviewCount: number | null; brand: string | null; title: string; titleFromPin: boolean; company: string | null; categories: string[] }>(
+      `SELECT "m"."id", "m"."pinId", "m"."url", "m"."price"::float8 AS "price", "m"."rating"::float8 AS "rating", "m"."reviewCount", "m"."brand",
          coalesce(nullif("p"."productName", ''), "p"."title") AS "title", nullif("p"."productName", '') IS NULL AS "titleFromPin", "c"."name"::text AS "company",
          coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category'), '{}') AS "categories"
        FROM "Merchant" AS "m"
@@ -390,6 +390,9 @@ async function loadInventory(): Promise<Inventory> {
         title: row.title,
         titleFromPin: row.titleFromPin,
         price: row.price,
+        rating: row.rating,
+        reviewCount: row.reviewCount,
+        brand: row.brand,
         thumbName: pictures.get(row.pinId)?.thumbName ?? null,
         originalUrl: pictures.get(row.pinId)?.originalUrl ?? null,
       }),

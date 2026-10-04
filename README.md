@@ -316,9 +316,6 @@ https://www.eventbrite.com/e/sneaker-con-los-angeles-october-17-18-2026-tickets-
 grammy's should have who was up for consideration and show their work and view link
 
 
-backfill brand + stars on product ads (sponsored rows show price · brand · ★ rating): Merchant-based ads only have the pin's company, and some PinAd rows have no brand/rating yet. Re-read the listings (pinAds task) or fill them in, locally and on prod
-
-
 organize admin pages to more intuitive layout and groupings
 
 

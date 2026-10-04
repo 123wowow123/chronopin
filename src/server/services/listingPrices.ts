@@ -1,7 +1,7 @@
 import { isPurchaseLinkShown } from '@/lib/affiliate';
 import { streamingService } from '@/lib/streaming';
 import * as db from '../db';
-import { readListingPrice, storeUrlOf, type PriceRead } from '../listingPrice';
+import { readListingPrice, storeUrlOf, type AmazonStars, type PriceRead } from '../listingPrice';
 import log from '../util/log';
 import { expirePinPage } from './cache';
 
@@ -11,7 +11,8 @@ import { expirePinPage } from './cache';
 // link stays); a store that does not answer leaves it alone. A price the store
 // has not confirmed for a week is dropped, so a button never shows one long
 // out of date, while a price given by hand for a store the refresh cannot
-// read at all stays.
+// read at all stays. An Amazon page's stars, reviews and brand are saved with
+// its price, for the ad tile (0123).
 //
 // Runs in the server on the hour (startListingPriceRefresh, production only
 // unless LISTING_PRICE_REFRESH=1), and by hand: `npm run merchants:prices`.
@@ -77,6 +78,7 @@ export async function refreshListingPrices(options: RefreshOptions): Promise<Ref
     const label = `${row.id} pin ${row.pinId} ${host}`;
     let next = old;
     let seen = false;
+    let stars: AmazonStars | null = null;
     let outcome: 'unknown' | 'review' | 'same' | 'changed' | 'cleared';
     if (read.kind === 'unknown') {
       outcome = 'unknown';
@@ -91,6 +93,8 @@ export async function refreshListingPrices(options: RefreshOptions): Promise<Ref
     } else {
       next = read.price;
       seen = true;
+      // Only an Amazon page gives these; the key says whether it was read.
+      if ('rating' in read) stars = { rating: read.rating ?? null, reviewCount: read.reviewCount ?? null, brand: read.brand ?? null };
       outcome = next === old ? 'same' : 'changed';
     }
     totals[outcome]++;
@@ -98,9 +102,12 @@ export async function refreshListingPrices(options: RefreshOptions): Promise<Ref
     if (options.apply) {
       await db.query(
         `UPDATE "Merchant" SET "price" = $2, "priceCheckedDateTime" = now(),
-           "priceSeenDateTime" = CASE WHEN $3::boolean THEN now() ELSE "priceSeenDateTime" END
+           "priceSeenDateTime" = CASE WHEN $3::boolean THEN now() ELSE "priceSeenDateTime" END,
+           "rating" = CASE WHEN $4::boolean THEN $5::numeric ELSE "rating" END,
+           "reviewCount" = CASE WHEN $4::boolean THEN $6::integer ELSE "reviewCount" END,
+           "brand" = CASE WHEN $4::boolean THEN left($7::text, 120) ELSE "brand" END
          WHERE "id" = $1`,
-        [row.id, next, seen],
+        [row.id, next, seen, !!stars, stars?.rating ?? null, stars?.reviewCount ?? null, stars?.brand ?? null],
       );
       if (next !== old) touched.add(row.pinId);
     }

@@ -19,7 +19,9 @@ const HEADERS = {
 };
 const TIMEOUT_MS = 20_000;
 
-export type PriceRead = { kind: 'price'; price: number; title?: string } | { kind: 'unavailable'; title?: string } | { kind: 'unknown'; reason: string };
+// An Amazon page also says its stars, reviews and brand (null when it gives none).
+export type AmazonStars = { rating: number | null; reviewCount: number | null; brand: string | null };
+export type PriceRead = ({ kind: 'price'; price: number; title?: string } & Partial<AmazonStars>) | { kind: 'unavailable'; title?: string } | { kind: 'unknown'; reason: string };
 
 const decode = (text: string) =>
   text
@@ -159,7 +161,10 @@ export async function readListingPrice(link: string): Promise<PriceRead> {
     if (res.status === 404 || res.status === 410) return { kind: 'unavailable', title: `(${res.status})` };
     if (!res.ok) return { kind: 'unknown', reason: `HTTP ${res.status}` };
     const html = await res.text();
-    if (/(^|\.)amazon\.com$/i.test(url.hostname)) return readAmazonPage(html);
+    if (/(^|\.)amazon\.com$/i.test(url.hostname)) {
+      const read = readAmazonPage(html);
+      return read.kind === 'price' ? { ...read, ...amazonStarsOf(html) } : read;
+    }
     if (/(^|\.)swappa\.com$/i.test(url.hostname)) return readSwappaPage(html);
     return readOfferMarkup(html);
   } catch (err) {
@@ -205,10 +210,8 @@ export function amazonImageOf(html: string): string | null {
   return id ? `https://m.media-amazon.com/images/I/${id}._AC_SL300_.jpg` : null;
 }
 
-export function readAmazonFacts(html: string): AmazonListing | { unknown: string } {
-  const read = readAmazonPage(html);
-  if (read.kind === 'unknown') return { unknown: read.reason };
-  const title = read.title ?? '';
+// The page's brand (its byline), stars out of 5 and review count.
+export function amazonStarsOf(html: string): AmazonStars {
   const brand = decode(html.match(/<a[^>]*id="bylineInfo"[^>]*>\s*([^<]*?)\s*</)?.[1] ?? '')
     .replace(/^(Visit the |Brand:\s*)/i, '')
     .replace(/\s+Store$/i, '')
@@ -216,11 +219,23 @@ export function readAmazonFacts(html: string): AmazonListing | { unknown: string
   const rating = Number(html.match(/id="acrPopover"[^>]*title="([\d.]+) out of 5 stars"/)?.[1]);
   const reviews = Number(html.match(/id="acrCustomerReviewText"[^>]*aria-label="([\d,]+) Reviews?"/i)?.[1]?.replace(/,/g, ''));
   return {
-    title,
     brand: brand || null,
-    price: read.kind === 'price' ? read.price : null,
     rating: rating > 0 ? rating : null,
     reviewCount: reviews >= 0 && Number.isFinite(reviews) && html.includes('acrCustomerReviewText') ? reviews : null,
+  };
+}
+
+export function readAmazonFacts(html: string): AmazonListing | { unknown: string } {
+  const read = readAmazonPage(html);
+  if (read.kind === 'unknown') return { unknown: read.reason };
+  const title = read.title ?? '';
+  const { rating, reviewCount, brand } = amazonStarsOf(html);
+  return {
+    title,
+    brand,
+    price: read.kind === 'price' ? read.price : null,
+    rating,
+    reviewCount,
     available: read.kind === 'price',
     image: amazonImageOf(html),
     urgency: read.kind === 'price' ? urgencyOf(html) : null,
