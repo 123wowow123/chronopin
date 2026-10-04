@@ -70,7 +70,7 @@ async function details(appId: number): Promise<AppDetails | undefined> {
   if (!data || typeof data.name !== 'string') return undefined;
   const year = Number(String(data.release_date?.date ?? '').match(/\b(19|20)\d{2}\b/)?.[0]);
   const final = data.price_overview?.currency === 'USD' ? Number(data.price_overview.final) / 100 : undefined;
-  return { id: appId, name: data.name, type: String(data.type), releaseYear: year || undefined, price: final && final > 0 ? final : undefined };
+  return { id: appId, name: data.name, type: String(data.type), releaseYear: year || undefined, price: final && final > 0 ? final : data.is_free === true ? 0 : undefined };
 }
 
 async function searchIds(title: string): Promise<{ id: number; name: string }[]> {
@@ -123,7 +123,7 @@ export async function findSteamListing(query: SteamQuery): Promise<SteamListing 
         if (normalizeTitle(hit.name) === normalizeTitle(title) && hasNonLatin(hit.name) === hasNonLatin(title) && (found = await check(hit.id))) break;
       }
     }
-    return found ? { label: 'Steam', url: steamUrl(found.id), ...(found.price ? { price: found.price } : {}) } : undefined;
+    return found ? { label: 'Steam', url: steamUrl(found.id), ...(found.price !== undefined ? { price: found.price } : {}) } : undefined;
   } catch (err) {
     log.warn('Steam listing lookup failed:', (err as Error).message);
     return undefined;

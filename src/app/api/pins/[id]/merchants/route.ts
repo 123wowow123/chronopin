@@ -30,7 +30,7 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
     if (!label || label.length > 100 || !/^https:\/\//i.test(url) || url.length > 2000) {
       throw new HttpError(400, 'Each listing needs a label and an https url.');
     }
-    if (price != null && !(Number.isFinite(price) && price > 0 && price < 1e10)) throw new HttpError(400, 'price must be a positive number.');
+    if (price != null && !(Number.isFinite(price) && price >= 0 && price < 1e10)) throw new HttpError(400, 'price must be a non-negative number.');
     return { label, url, price };
   });
 

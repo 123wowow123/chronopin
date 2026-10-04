@@ -63,7 +63,11 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
             <Icon name={link.search ? 'search' : 'cart'} className="size-4" />
           )}
           {isStoreWordmark(link.store) ? <span className="sr-only">{link.store}</span> : link.store}
-          {link.price ? <span className="rounded-md bg-black/15 px-1.5 py-0.5 text-xs">{money(link.price, link.currency)}</span> : null}
+          {link.price ? (
+            <span className="rounded-md bg-black/15 px-1.5 py-0.5 text-xs">{money(link.price, link.currency)}</span>
+          ) : link.price === 0 && link.store === 'Steam' ? (
+            <span className="rounded-md bg-black/15 px-1.5 py-0.5 text-xs">{t('listing.free')}</span>
+          ) : null}
           <Icon name="external" className="size-3 shrink-0 opacity-60" />
         </a>
       ))}
