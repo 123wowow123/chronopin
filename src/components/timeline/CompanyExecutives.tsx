@@ -66,6 +66,7 @@ export function CompanyExecutivesPanel({ name, executives }: { name: string; exe
                 <div>
                   <dt className="text-subtle">{t('company.executiveTotal')}</dt>
                   <dd className="font-medium text-ink tabular-nums">{e.totalCompensation != null ? formatPay(locale, e.totalCompensation, e.currency) : '–'}</dd>
+                  {e.estimated ? <EstimateTag note={e.estimateNote} /> : null}
                 </div>
               </dl>
             ) : (
@@ -87,6 +88,39 @@ export function CompanyExecutivesPanel({ name, executives }: { name: string; exe
         ))}
       </ul>
     </section>
+  );
+}
+
+// "Estimate" beside a total that is the company's own estimate, not an amount
+// paid, with an info toggle that says why (the note comes with the data).
+function EstimateTag({ note }: { note: string | null | undefined }) {
+  const t = useT();
+  const [open, setOpen] = useState(false);
+  const id = useId();
+  return (
+    <div className="col-span-2 mt-0.5">
+      <span className="inline-flex items-center gap-1 rounded-full bg-raised px-2 py-0.5 text-[11px] font-medium text-ink ring-1 ring-inset ring-line">
+        {t('company.executiveEstimate')}
+        {note ? (
+          <button
+            type="button"
+            onClick={() => setOpen(!open)}
+            aria-expanded={open}
+            aria-controls={id}
+            aria-label={t('company.executiveEstimateWhy')}
+            title={note}
+            className={`-me-1 rounded-full p-0.5 hover:text-ink ${open ? 'text-link' : 'text-subtle'}`}
+          >
+            <Icon name="info" className="size-3" />
+          </button>
+        ) : null}
+      </span>
+      {open && note ? (
+        <p id={id} className="mt-1 rounded-lg border border-line bg-raised/40 px-2.5 py-2 text-[11px] leading-relaxed text-muted">
+          {note}
+        </p>
+      ) : null}
+    </div>
   );
 }
 

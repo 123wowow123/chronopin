@@ -54,6 +54,8 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
       currency: typeof row.currency === 'string' && /^[A-Za-z]{3}$/.test(row.currency) ? row.currency : 'USD',
       fiscalYear: Number.isInteger(year) && year > 1990 && year < 2100 ? year : null,
       sourceUrl: httpsUrl(row.sourceUrl),
+      estimated: row.estimated === true,
+      estimateNote: row.estimated === true && typeof row.estimateNote === 'string' ? row.estimateNote.trim().slice(0, 1000) : null,
       origin: row.origin === 'sec' ? 'sec' : 'hand',
     });
   }

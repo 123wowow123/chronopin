@@ -859,6 +859,8 @@ const hi: Messages = {
     executiveUndisclosed: 'वेतन उपलब्ध नहीं',
     executiveFiscalYear: 'वित्त वर्ष {year}',
     executiveSource: 'स्रोत',
+    executiveEstimate: 'अनुमान',
+    executiveEstimateWhy: 'यह अनुमान क्यों है',
     executiveBreakdown: 'यह कैसे बनता है',
     executiveBonus: 'बोनस',
     executiveStock: 'स्टॉक अवॉर्ड',

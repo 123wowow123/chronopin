@@ -1029,6 +1029,8 @@ const ar: Messages = {
     executiveUndisclosed: 'الأجر غير معلن',
     executiveFiscalYear: 'السنة المالية {year}',
     executiveSource: 'المصدر',
+    executiveEstimate: 'تقدير',
+    executiveEstimateWhy: 'لماذا هذا تقدير',
     executiveBreakdown: 'كيف يتكوّن',
     executiveBonus: 'المكافأة',
     executiveStock: 'جوائز الأسهم',

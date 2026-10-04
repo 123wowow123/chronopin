@@ -846,6 +846,8 @@ const ko: Messages = {
     executiveUndisclosed: '보수 비공개',
     executiveFiscalYear: '{year}회계연도',
     executiveSource: '출처',
+    executiveEstimate: '추정치',
+    executiveEstimateWhy: '추정치인 이유',
     executiveBreakdown: '구성 내역',
     executiveBonus: '보너스',
     executiveStock: '주식 보상',

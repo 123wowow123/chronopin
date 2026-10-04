@@ -853,6 +853,8 @@ const ms: Messages = {
     executiveUndisclosed: 'Bayaran tidak didedahkan',
     executiveFiscalYear: 'TF {year}',
     executiveSource: 'Sumber',
+    executiveEstimate: 'Anggaran',
+    executiveEstimateWhy: 'Mengapa ini anggaran',
     executiveBreakdown: 'Bagaimana ia terbentuk',
     executiveBonus: 'Bonus',
     executiveStock: 'Anugerah saham',

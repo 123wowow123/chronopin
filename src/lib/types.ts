@@ -315,6 +315,9 @@ export type CompanyExecutive = {
   currency: string;
   fiscalYear: number | null;
   sourceUrl: string | null;
+  // The total is the company's own estimate, not a paid amount, and why.
+  estimated?: boolean;
+  estimateNote?: string | null;
 };
 
 export type SearchedCompany = {

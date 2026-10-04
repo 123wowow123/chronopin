@@ -853,6 +853,8 @@ const id: Messages = {
     executiveUndisclosed: 'Gaji tidak diungkapkan',
     executiveFiscalYear: 'TF {year}',
     executiveSource: 'Sumber',
+    executiveEstimate: 'Perkiraan',
+    executiveEstimateWhy: 'Mengapa ini perkiraan',
     executiveBreakdown: 'Rinciannya',
     executiveBonus: 'Bonus',
     executiveStock: 'Penghargaan saham',

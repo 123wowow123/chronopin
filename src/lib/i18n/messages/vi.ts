@@ -852,6 +852,8 @@ const vi: Messages = {
     executiveUndisclosed: 'Chưa công bố thù lao',
     executiveFiscalYear: 'NTC {year}',
     executiveSource: 'Nguồn',
+    executiveEstimate: 'Ước tính',
+    executiveEstimateWhy: 'Vì sao đây là ước tính',
     executiveBreakdown: 'Cách cấu thành',
     executiveBonus: 'Thưởng',
     executiveStock: 'Cổ phiếu thưởng',

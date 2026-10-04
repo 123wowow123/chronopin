@@ -889,6 +889,8 @@ const ru: Messages = {
     executiveUndisclosed: 'Оплата не раскрыта',
     executiveFiscalYear: 'ФГ {year}',
     executiveSource: 'Источник',
+    executiveEstimate: 'Оценка',
+    executiveEstimateWhy: 'Почему это оценка',
     executiveBreakdown: 'Из чего складывается',
     executiveBonus: 'Премия',
     executiveStock: 'Акции',

@@ -852,6 +852,8 @@ const de: Messages = {
     executiveUndisclosed: 'Vergütung nicht veröffentlicht',
     executiveFiscalYear: 'GJ {year}',
     executiveSource: 'Quelle',
+    executiveEstimate: 'Schätzung',
+    executiveEstimateWhy: 'Warum das eine Schätzung ist',
     executiveBreakdown: 'So setzt sie sich zusammen',
     executiveBonus: 'Bonus',
     executiveStock: 'Aktienzuteilungen',

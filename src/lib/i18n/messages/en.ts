@@ -853,6 +853,8 @@ const en = {
     executiveUndisclosed: 'Pay not disclosed',
     executiveFiscalYear: 'FY {year}',
     executiveSource: 'Source',
+    executiveEstimate: 'Estimate',
+    executiveEstimateWhy: 'Why this is an estimate',
     executiveBreakdown: 'How it adds up',
     executiveBonus: 'Bonus',
     executiveStock: 'Stock awards',

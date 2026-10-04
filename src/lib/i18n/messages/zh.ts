@@ -846,6 +846,8 @@ const zh: Messages = {
     executiveUndisclosed: '薪酬未披露',
     executiveFiscalYear: '{year}财年',
     executiveSource: '来源',
+    executiveEstimate: '估算',
+    executiveEstimateWhy: '为何是估算',
     executiveBreakdown: '构成',
     executiveBonus: '奖金',
     executiveStock: '股票奖励',

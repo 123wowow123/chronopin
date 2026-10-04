@@ -852,6 +852,8 @@ const fr: Messages = {
     executiveUndisclosed: 'Rémunération non publiée',
     executiveFiscalYear: 'Ex. {year}',
     executiveSource: 'Source',
+    executiveEstimate: 'Estimation',
+    executiveEstimateWhy: 'Pourquoi c\'est une estimation',
     executiveBreakdown: 'Comment elle se compose',
     executiveBonus: 'Prime',
     executiveStock: 'Actions attribuées',

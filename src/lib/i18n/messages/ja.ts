@@ -846,6 +846,8 @@ const ja: Messages = {
     executiveUndisclosed: '報酬は非公開',
     executiveFiscalYear: '{year}年度',
     executiveSource: '出典',
+    executiveEstimate: '推定値',
+    executiveEstimateWhy: '推定値である理由',
     executiveBreakdown: '内訳',
     executiveBonus: '賞与',
     executiveStock: '株式報酬',

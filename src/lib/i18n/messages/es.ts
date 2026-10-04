@@ -852,6 +852,8 @@ const es: Messages = {
     executiveUndisclosed: 'Pago no divulgado',
     executiveFiscalYear: 'AF {year}',
     executiveSource: 'Fuente',
+    executiveEstimate: 'Estimación',
+    executiveEstimateWhy: 'Por qué es una estimación',
     executiveBreakdown: 'Cómo se compone',
     executiveBonus: 'Bonificación',
     executiveStock: 'Acciones concedidas',

@@ -843,6 +843,8 @@ const pt: Messages = {
     executiveUndisclosed: 'Remuneração não divulgada',
     executiveFiscalYear: 'AF {year}',
     executiveSource: 'Fonte',
+    executiveEstimate: 'Estimativa',
+    executiveEstimateWhy: 'Por que é uma estimativa',
     executiveBreakdown: 'Como se compõe',
     executiveBonus: 'Bônus',
     executiveStock: 'Ações concedidas',

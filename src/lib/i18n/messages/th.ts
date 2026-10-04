@@ -842,6 +842,8 @@ const th: Messages = {
     executiveUndisclosed: 'ไม่เปิดเผยค่าตอบแทน',
     executiveFiscalYear: 'ปีงบ {year}',
     executiveSource: 'แหล่งที่มา',
+    executiveEstimate: 'ประมาณการ',
+    executiveEstimateWhy: 'ทำไมจึงเป็นประมาณการ',
     executiveBreakdown: 'ประกอบด้วยอะไรบ้าง',
     executiveBonus: 'โบนัส',
     executiveStock: 'หุ้นที่ได้รับ',

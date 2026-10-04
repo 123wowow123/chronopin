@@ -843,6 +843,8 @@ const it: Messages = {
     executiveUndisclosed: 'Compenso non reso noto',
     executiveFiscalYear: 'Anno fisc. {year}',
     executiveSource: 'Fonte',
+    executiveEstimate: 'Stima',
+    executiveEstimateWhy: 'Perché è una stima',
     executiveBreakdown: 'Come si compone',
     executiveBonus: 'Bonus',
     executiveStock: 'Azioni assegnate',
