@@ -1,10 +1,14 @@
-// A film, series or anime pin's awards, matched from the award catalogue
-// (src/server/awards.ts) by the work's name, after every save and by
-// `npm run media:awards`. Derived data: a sync replaces the pin's rows.
+// A pin's awards, after every save and by `npm run media:awards`. A film,
+// series or anime is matched from the award catalogue (src/server/awards.ts)
+// by the work's name; a game or a product from its Wikidata item
+// (src/server/workAwards.ts). Derived data: a sync replaces the pin's rows.
 
 import { matchAwards, type AwardEntry } from '@/lib/awards';
 import { PIN_CATEGORIES } from '../model/pinTag';
-import { isScreenCategory } from '../scrape/screen';
+import { hasCategory } from '@/lib/categories';
+import { isScreenCategory, titleCandidates } from '../scrape/screen';
+import { GAME_CATEGORIES } from '../scrape/scoreMarkets';
+import { findWorkAwards } from '../workAwards';
 import { awardCatalogue } from '../awards';
 import * as db from '../db';
 
@@ -15,13 +19,26 @@ export async function awardsFor(titles: (string | null | undefined)[]): Promise<
   return matchAwards(await awardCatalogue(), named);
 }
 
-// True when the pin's awards changed.
-export async function syncPinAwards(pinId: number): Promise<boolean> {
-  const [pin] = await db.query<{ title: string; categories: string[] }>(
-    `SELECT "title", ${PIN_CATEGORIES} AS "categories" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
+export type AwardedPin = { title: string; categories: string[]; productName?: string | null; year?: number; workTitle?: string | null };
+
+// Every award a pin's work has: the catalogue's for a screen work, Wikidata's
+// for a game or a product (a pin that names its product).
+export async function awardsOfPin(pin: AwardedPin): Promise<AwardEntry[]> {
+  if (isScreenCategory(pin.categories)) return awardsFor([pin.workTitle, pin.title]);
+  const game = hasCategory(pin.categories, GAME_CATEGORIES);
+  if (!game && !pin.productName?.trim()) return [];
+  const titles = [pin.productName, pin.workTitle, ...titleCandidates({ pinTitle: pin.title })].filter((t): t is string => !!t?.trim());
+  return findWorkAwards({ titles: [...new Set(titles)], year: pin.year, game });
+}
+
+// True when the pin's awards changed. `awards` when the caller has just looked
+// them up. Throws when the lookup could not be made, leaving the stored rows.
+export async function syncPinAwards(pinId: number, awards?: AwardEntry[]): Promise<boolean> {
+  const [pin] = await db.query<{ title: string; categories: string[]; productName: string | null; start: Date }>(
+    `SELECT "title", "productName", "utcStartDateTime" AS "start", ${PIN_CATEGORIES} AS "categories" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
     [pinId],
   );
-  const found = pin && isScreenCategory(pin.categories) ? await awardsFor([pin.title]) : [];
+  const found = awards ?? (pin ? await awardsOfPin({ ...pin, year: new Date(pin.start).getUTCFullYear() }) : []);
   const key = (a: { body: string; award: string; year: number; work: string; result: string }) => `${a.body}|${a.award}|${a.year}|${a.work}|${a.result}`;
   const stored = await db.query<{ body: string; award: string; year: number; work: string; result: string }>(
     `SELECT "body", "award", "year", "work", "result" FROM "PinAward" WHERE "pinId" = $1`,

@@ -6,14 +6,15 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import type { MediumJson } from '@/lib/types';
-import { tweetHtml, youtubePlayerHtml } from '@/lib/embedHtml';
+import { tweetHtml, videoPlayerHtml } from '@/lib/embedHtml';
+import { videoSource } from '@/lib/videoEmbed';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 
 // A video this component can play, as opposed to one it can only picture:
-// one with a stored YouTube player, or a YouTube URL to build one from.
+// one with a stored player (YouTube, Vimeo or Dailymotion), or a URL to build one from.
 export function isVideo(medium: MediumJson): boolean {
-  return String(medium.type) === '3' && !!youtubePlayerHtml(medium);
+  return String(medium.type) === '3' && !!videoPlayerHtml(medium);
 }
 
 // Whether PinMedia has anything to draw for a medium, from its fields alone: a
@@ -476,11 +477,14 @@ const YT_BUFFERING = 3;
 function YouTubeEmbed({ medium, title }: { medium: MediumJson; title: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const t = useT();
-  const html = youtubePlayerHtml(medium, t('media.youtubeTitle', { title })) ?? '';
+  const provider = videoSource(medium.originalUrl)?.provider ?? 'youtube';
+  const html = videoPlayerHtml(medium, provider === 'youtube' ? t('media.youtubeTitle', { title }) : `${t('media.video')}: ${title}`) ?? '';
   useEffect(() => {
     const container = ref.current;
     const iframe = container?.querySelector('iframe');
-    if (!container || !iframe?.src) return;
+    // Only YouTube's player speaks the iframe API this drives; another
+    // source's plays on, and its own controls pause it.
+    if (!container || !iframe?.src || !/(^|\.)youtube(-nocookie)?\.com$/.test(new URL(iframe.src).hostname)) return;
     const origin = new URL(iframe.src).origin;
     const send = (message: object) => iframe.contentWindow?.postMessage(JSON.stringify(message), origin);
     let state: number | undefined;

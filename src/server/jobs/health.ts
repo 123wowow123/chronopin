@@ -7,9 +7,11 @@
 // a server's fetch but serve a reader's browser, and replacing a working
 // picture on that evidence would be worse than leaving it.
 
-import getVideoId from 'get-video-id';
 import { mediumID } from '@/lib/appConfig';
+import { videoSource, type VideoProvider } from '@/lib/videoEmbed';
+import { getClip, twitchConfigured } from '../scrape/twitch';
 import * as db from '../db';
+import { isAgeRestricted } from '../scrape/youtubeAge';
 
 const TIMEOUT_MS = 15000;
 const BROWSER_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36';
@@ -54,6 +56,26 @@ async function youtubeState(videoId: string) {
   const result = await probe(`https://www.youtube.com/oembed?url=${encodeURIComponent(watch)}&format=json`);
   if (result.status === 401 || result.status === 403) return { state: 'broken' as const, detail: 'embedding is disabled or the video is private' };
   if (result.status === 404) return { state: 'broken' as const, detail: 'the video is gone' };
+  // oEmbed still answers 200 for an age-restricted video, which never plays in an embed.
+  if (result.state === 'ok' && (await isAgeRestricted(videoId))) return { state: 'broken' as const, detail: 'the video is age-restricted and will not play in an embed' };
+  return { state: result.state, detail: result.detail };
+}
+
+const watchUrl = (provider: VideoProvider, id: string) =>
+  provider === 'youtube' ? `https://www.youtube.com/watch?v=${id}` : provider === 'vimeo' ? `https://vimeo.com/${id}` : provider === 'twitch' ? `https://clips.twitch.tv/embed?clip=${id}` : `https://www.dailymotion.com/video/${id}`;
+
+// Vimeo's and Dailymotion's oEmbed answer 404 for a removed video and 403 for
+// one whose owner turned embedding off (or made it private).
+async function otherVideoState(watch: string) {
+  if (/twitch\.tv/.test(watch)) {
+    // Helix is the only check, so a pin is not flagged while Twitch is not set up.
+    if (!twitchConfigured()) return { state: 'ok' as const, detail: 'not checked' };
+    return (await getClip(watch.match(/clip=([\w-]+)/)?.[1] ?? '')) ? { state: 'ok' as const, detail: 'ok' } : { state: 'broken' as const, detail: 'the clip is gone' };
+  }
+  const oembed = /vimeo\.com/.test(watch) ? 'https://vimeo.com/api/oembed.json' : 'https://www.dailymotion.com/services/oembed';
+  const result = await probe(`${oembed}?url=${encodeURIComponent(watch)}&format=json`);
+  if (result.status === 401 || result.status === 403) return { state: 'broken' as const, detail: 'embedding is disabled or the video is private' };
+  if (result.status === 404) return { state: 'broken' as const, detail: 'the video is gone' };
   return { state: result.state, detail: result.detail };
 }
 
@@ -92,11 +114,12 @@ export async function checkPinHealth(pinId: number, { references = false } = {})
       });
     } else if (type === mediumID.youtube) {
       counts.videos++;
-      const id = getVideoId(m.originalUrl ?? '').id ?? getVideoId(m.html ?? '').id;
-      if (id) {
+      const source = videoSource(m.originalUrl) ?? videoSource(m.html?.match(/src="([^"]+)"/)?.[1]);
+      if (source) {
+        const url = watchUrl(source.provider, source.id);
         checks.push(async () => {
-          const r = await youtubeState(id);
-          return r.state === 'ok' ? null : { what: 'video', mediumId: m.id, url: `https://www.youtube.com/watch?v=${id}`, state: r.state, detail: r.detail };
+          const r = source.provider === 'youtube' ? await youtubeState(source.id) : await otherVideoState(url);
+          return r.state === 'ok' ? null : { what: 'video', mediumId: m.id, url, state: r.state, detail: r.detail };
         });
       }
     } else if (type === mediumID.twitter && m.originalUrl) {

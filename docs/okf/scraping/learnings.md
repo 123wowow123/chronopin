@@ -6570,3 +6570,11 @@ Ian: "translate all". Prod's `GET /api/admin/translations?after=0` listed 52 pin
 ## 2026-10-04 - Daily job news, run 8 (session)
 
 * **Learned** (news by hand: signals that were already covered) Run 8 (by hand, after run 5 stopped early): the week was already well covered - every Nobel announcement (1948, 1994-1998), Paris Motor Show (4863), IMF/World Bank (5182) and the Bosnia, Quebec, Lima and Brazil votes had pins, and every uncovered prediction market was a per-game, ad-spend or price-level market (skip) or stale (the Xi state-visit market was for 23-25 Sept). The one real gap was a rumoured, unconfirmed date: Bloomberg/Gurman put Apple's smart-home launch on 13 Oct, pinned as estimated. Pin 4189 (Levi's) is @FashionDesk, so a missing-references fix is a mark_revisit, not an update.
+
+## 2026-10-04 - Aggregate scores and product awards (session)
+
+* **Feedback** (owner, after the game-facts work): "all pins of all types that can have aggregate score should get it", then "add award list for product if available as well", with a screenshot of GTA V's Wikipedia accolades table (date, award, category, result).
+* **Learned** Local pins had ratings on 846 of 972 anime but 112 of 235 movies, 0 of 156 TV and 3 of 150 games. Causes: a pin title ending "(2018)" never matched Wikidata's label; Wikidata carries review scores for few works; games with no Steam page were never looked at. Rotten Tomatoes' search page and season pages answer a browser User-Agent with the score in the markup; metacritic.com is a 403 and OpenCritic's API needs a key, but its game page carries `topCriticScore` in its transfer state.
+* **Learned** Wikidata is a good award source for games and products (GTA V: Titanium, Golden Joystick, BAFTA, The Game Awards, Steam Awards), but the query service rate-limits a backfill: the first apply returned 218 pins with awards against 264 on the rerun, and because a sync replaces a pin's rows, a failed lookup had been read as "no awards". Lookups now throw and the pin keeps its rows.
+* **Changed** `findScreenDetails` adds Rotten Tomatoes; `findGameScores`, `findMangaScores` and `findWorkAwards` are new; `PUT /api/pins/:id/game-info` accepts a ratings-only body; `media:awards` covers game and product pins; `npm run media:manga-scores`.
+

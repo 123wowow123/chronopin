@@ -8,6 +8,11 @@ import {
   malIdOf,
   isScreenCategory,
   malEpisodes,
+  mangaTitleCandidates,
+  openCriticScore,
+  parseRottenTomatoesSearch,
+  pickRottenTomatoes,
+  seasonTomatometer,
   normalizeTitle,
   parseScore,
   pickTrailer,
@@ -334,5 +339,66 @@ describe('withoutSeason', () => {
     expect(withoutSeason('Percy Jackson and the Olympians Season 3')).toBe('Percy Jackson and the Olympians');
     expect(withoutSeason('Frieren 2nd Season')).toBe('Frieren');
     expect(withoutSeason('Neuromancer')).toBeUndefined();
+  });
+});
+
+describe('a year after the title', () => {
+  it('is not part of the work title', () => {
+    expect(titleCandidates({ pinTitle: 'Avengers: Infinity War (2018) Opens in Theaters' })).toEqual(['Avengers: Infinity War']);
+  });
+});
+
+describe('Rotten Tomatoes', () => {
+  const html = `
+    <search-page-result type="movie"><ul slot="list">
+      <search-page-media-row release-year="2018" start-year="" tomatometer-score="85">
+        <a href="https://www.rottentomatoes.com/m/avengers_infinity_war" data-qa="info-name" slot="title">
+          Avengers: Infinity War
+        </a>
+      </search-page-media-row>
+      <search-page-media-row releaseyear="2019" startyear="" tomatometerscore="">
+        <a href="https://www.rottentomatoes.com/m/avengers_endgame" data-qa="info-name" slot="title">Avengers: Endgame</a>
+      </search-page-media-row></ul></search-page-result>
+    <search-page-result type="tvSeries"><ul slot="list">
+      <search-page-media-row releaseyear="" startyear="2021" tomatometerscore="92">
+        <a href="https://www.rottentomatoes.com/tv/yellowjackets" data-qa="info-name" slot="title">Yellowjackets</a>
+      </search-page-media-row></ul></search-page-result>`;
+
+  it('reads the rows of both kinds of result', () => {
+    expect(parseRottenTomatoesSearch(html)).toEqual([
+      { name: 'Avengers: Infinity War', url: 'https://www.rottentomatoes.com/m/avengers_infinity_war', kind: 'movie', year: 2018, score: 85 },
+      { name: 'Avengers: Endgame', url: 'https://www.rottentomatoes.com/m/avengers_endgame', kind: 'movie', year: 2019, score: undefined },
+      { name: 'Yellowjackets', url: 'https://www.rottentomatoes.com/tv/yellowjackets', kind: 'tvSeries', year: 2021, score: 92 },
+    ]);
+  });
+
+  it('picks by exact title, kind and year', () => {
+    const rows = parseRottenTomatoesSearch(html);
+    expect(pickRottenTomatoes(rows, 'Avengers: Infinity War', 2018, 'movie')?.score).toBe(85);
+    expect(pickRottenTomatoes(rows, 'Avengers', 2018, 'movie')).toBeUndefined();
+    expect(pickRottenTomatoes(rows, 'Avengers: Infinity War', 2018, 'tv')).toBeUndefined();
+    expect(pickRottenTomatoes(rows, 'Avengers: Infinity War', 2024, 'movie')).toBeUndefined();
+    expect(pickRottenTomatoes(rows, 'Yellowjackets', 2026, 'tv')?.score).toBe(92);
+  });
+
+  it("reads a season's critic score only once it has reviews", () => {
+    expect(seasonTomatometer('"criticsScore":{"averageRating":"8.20","reviewCount":77,"score":"100","title":"Tomatometer"}')).toBe(100);
+    expect(seasonTomatometer('"criticsScore":{"likedCount":0,"reviewCount":0,"title":"Tomatometer"}')).toBeUndefined();
+  });
+});
+
+describe('OpenCritic', () => {
+  it("reads the game's own top critic score, not a related game's", () => {
+    const page = '&q;name&q;:&q;Elden Ring&q;,&q;medianScore&q;:96.5,&q;topCriticScore&q;:95.09,&q;percentile&q;:100,&q;tier&q;:&q;Mighty&q;,&q;x&q;:{&q;topCriticScore&q;:87,&q;Platforms&q;:[]}';
+    expect(openCriticScore(page)).toBe(95);
+    expect(openCriticScore('&q;topCriticScore&q;:87,&q;Platforms&q;:[]')).toBeUndefined();
+  });
+});
+
+describe('mangaTitleCandidates', () => {
+  it('cuts a manga pin title at "Manga" and at the event word', () => {
+    expect(mangaTitleCandidates({ pinTitle: 'Space Brothers Manga Ends With Its 46th Volume on 23 July' })).toContain('Space Brothers');
+    expect(mangaTitleCandidates({ pinTitle: 'Hunter x Hunter Resumes in Weekly Shonen Jump on 29 June' })).toContain('Hunter x Hunter');
+    expect(mangaTitleCandidates({ pinTitle: 'Free Comic Book Day 2027 on 1 May Brings a Batman Special' })).not.toContain('Free');
   });
 });

@@ -2,7 +2,9 @@ import { randomUUID } from 'node:crypto';
 import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import { mediumID } from '@/lib/appConfig';
-import { youtubeEmbedHtml } from '@/lib/videoEmbed';
+import { videoPlayerHtml } from '@/lib/embedHtml';
+import { videoSource, youtubeEmbedHtml } from '@/lib/videoEmbed';
+import { getClip } from '../scrape/twitch';
 import * as azureBlob from '../azureBlob';
 import * as db from '../db';
 import type { QueryFn, Row } from '../db';
@@ -122,7 +124,8 @@ export default class Medium {
   // would have handed the scraper, so it plays wherever the stored html is read.
   fillEmbed(): this {
     if (Number(this.type) === mediumID.youtube && !this.html) {
-      this.html = youtubeEmbedHtml(this.originalUrl) ?? this.html;
+      const other = videoSource(this.originalUrl)?.provider !== 'youtube';
+      this.html = (other ? videoPlayerHtml({ originalUrl: this.originalUrl }) : youtubeEmbedHtml(this.originalUrl)) ?? this.html;
     }
     return this;
   }
@@ -130,6 +133,25 @@ export default class Medium {
   // Stores the video's largest still on the CDN as this medium's thumb. The
   // medium keeps its embed originalUrl, which is how pin updates match media.
   async addVideoThumb(): Promise<this> {
+    const source = videoSource(this.originalUrl);
+    if (source && source.provider !== 'youtube') {
+      // Dailymotion's API names its largest still (its fixed address is a small one); Vimeo's is in its oEmbed.
+      if (source.provider === 'twitch') {
+        const clip = await getClip(source.id);
+        if (!clip) throw new Error(`Twitch clip ${source.id} not found`);
+        // Helix's thumbnail is a 480x272 preview.
+        const { thumbName, thumbWidth, thumbHeight } = await mapAndSaveThumb(await image.createThumbFromUrl(clip.thumbnail_url));
+        return Object.assign(this, { thumbName, thumbWidth, thumbHeight });
+      }
+      const get = async (url: string) => (await fetch(url, { signal: AbortSignal.timeout(10000) })).json();
+      const still: string =
+        source.provider === 'dailymotion'
+          ? ((await get(`https://api.dailymotion.com/video/${encodeURIComponent(source.id)}?fields=thumbnail_720_url`).catch(() => undefined))?.thumbnail_720_url ??
+            `https://www.dailymotion.com/thumbnail/video/${encodeURIComponent(source.id)}`)
+          : (await get(`https://vimeo.com/api/oembed.json?url=${encodeURIComponent(`https://vimeo.com/${source.id}`)}&width=1280`)).thumbnail_url;
+      const { thumbName, thumbWidth, thumbHeight } = await mapAndSaveThumb(await image.createThumbFromUrl(still));
+      return Object.assign(this, { thumbName, thumbWidth, thumbHeight });
+    }
     const { id } = getVideoId(this.originalUrl?.replace(/^\/\//, 'https://') || '');
     if (!id) {
       throw new Error(`No YouTube video id in ${this.originalUrl}`);

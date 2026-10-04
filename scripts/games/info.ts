@@ -1,7 +1,7 @@
 // Reads game pins' maturity rating, platforms and Steam/Metacritic scores
 // (src/server/gameFacts.ts), as a new game pin's save does.
 //
-//   npm run games:info                      what would be stored, every game pin with a Steam page
+//   npm run games:info                      what would be stored, every game pin (scores need no Steam page)
 //   npm run games:info -- --ids 5455,5456   these pins
 //   npm run games:info -- --apply           store them in this database
 //   npm run games:info -- --out info.json   write [{pinId, body}] to PUT to another database's
@@ -15,7 +15,7 @@ import { findGameFacts } from '@/server/gameFacts';
 import { inCategories } from '@/server/model/pinTag';
 import { saveGameInfo } from '@/server/model/pinGameInfo';
 import Pin from '@/server/model/pin';
-import { steamAppOfPin } from '@/server/services/gameInfo';
+import { gameScoresOfPin, steamAppOfPin } from '@/server/services/gameInfo';
 import { GAME_CATEGORIES } from '@/server/scrape/scoreMarkets';
 
 const { values: flags } = parseArgs({
@@ -36,18 +36,21 @@ async function run() {
   const posts: { pinId: number; body: Record<string, unknown> }[] = [];
   for (const { id, title } of rows) {
     const appId = await steamAppOfPin(id);
-    if (!appId) continue;
-    const facts = await findGameFacts(appId);
+    const facts = appId ? await findGameFacts(appId) : undefined;
+    // A game with no Steam page still has scores, found by its title.
+    const ratings = await gameScoresOfPin(id, facts);
     await sleep(Number(flags.pause));
-    if (!facts) {
-      console.log(`${id} ${title}: Steam app ${appId} unreadable`);
+    if (!facts && !ratings.length) {
+      console.log(`${id} ${title}: ${appId ? `Steam app ${appId} unreadable` : 'no Steam page, no scores'}`);
       continue;
     }
-    const { info, ratings } = facts;
-    console.log(`${id} ${title}\n   app ${appId}: ${info.maturityBoard ?? '-'} ${info.maturityRating ?? '-'} [${info.descriptors.join(', ')}] | ${info.platforms.join(', ') || '-'} | ${ratings.map((r) => `${r.source} ${r.score}`).join(', ') || 'no scores'}`);
-    posts.push({ pinId: id, body: { ...info, source: facts.source, sourceUrl: facts.sourceUrl, ratings } });
+    const info = facts?.info;
+    console.log(
+      `${id} ${title}\n   ${appId ? `app ${appId}: ` : 'no Steam page: '}${info ? `${info.maturityBoard ?? '-'} ${info.maturityRating ?? '-'} [${info.descriptors.join(', ')}] | ${info.platforms.join(', ') || '-'} | ` : ''}${ratings.map((r) => `${r.source} ${r.score}`).join(', ') || 'no scores'}`,
+    );
+    posts.push({ pinId: id, body: { ...(info ?? {}), ...(facts ? { source: facts.source, sourceUrl: facts.sourceUrl } : {}), ratings } });
     if (flags.apply) {
-      await saveGameInfo(id, info, { source: facts.source, sourceUrl: facts.sourceUrl });
+      if (facts && info) await saveGameInfo(id, info, { source: facts.source, sourceUrl: facts.sourceUrl });
       if (ratings.length) await Pin.setRatings(id, ratings);
     }
   }

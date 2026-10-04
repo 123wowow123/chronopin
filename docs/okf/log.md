@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-10-04
+* **Update**: **Aggregate scores for every kind of work, and awards for games and products.** Rotten Tomatoes, OpenCritic and manga scores added to the lookups; a game's or product's awards come from its Wikidata item. See [Enrichment](/scraping/enrichment.md#awards-and-tags) and [learnings](scraping/learnings.md).
+
 ## 2026-10-01
 * **Update**: **Watch button gap found and patched** (pin 861, HIDIVE Merchant row added by hand via `/api/admin/db`). [Strategy](/scraping/strategy.md#decision-rules) gets a new "Watch buttons" rule and [Enrichment](/scraping/enrichment.md#film-tv-anime-and-game-extras) notes the gate: screen details (and the watch links it adds) only runs at pin creation, only when the pin already has a screen category then, and nothing re-checks it on update or on a schedule the way `eventInfo` does for ticket buttons. Owner's instruction recorded: watch buttons should be (re-)added on insert *or* update - not yet built. [Learnings](/scraping/learnings.md).
 

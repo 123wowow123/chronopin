@@ -27,6 +27,7 @@ import { categoryList, firstCategoryOf, hasCategory } from '@/lib/categories';
 import { streamingMerchants } from '@/lib/streaming';
 import type { EpisodeStatus, MediumJson, MerchantJson, PinRatingJson } from '@/lib/types';
 import log from '../util/log';
+import { isAgeRestricted } from './youtubeAge';
 
 export const SCREEN_CATEGORIES = ['Anime', 'Movie', 'TV'];
 
@@ -195,6 +196,14 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
     if (isEpisodic && !/\b(?:film|movie)\b/i.test(wikidata.description ?? '')) details.episodes ??= wikidata.episodes;
   }
 
+  // Wikidata states review scores for few works, so Rotten Tomatoes' own
+  // search page fills the gap for films and series (anime has AniList and MAL).
+  const rtKind = category === 'movie' || category === 'tv' ? category : undefined;
+  if (rtKind || (isAnime && isFilmItem)) {
+    const rt = await findRottenTomatoesFor(details.workTitle ? [details.workTitle] : titles.slice(0, 3), query.year, rtKind ?? 'movie', signal);
+    if (rt && !details.ratings.some((r) => r.source === rt.source)) details.ratings.push(rt);
+  }
+
   if (!query.skipTrailer) {
     // The matched title first, else each guess in turn. AniList's listed
     // trailer is only a fallback: for older shows it is often a disc ad.
@@ -236,7 +245,8 @@ const EVENT_PHRASE =
 export function titleCandidates({ workTitle, pinTitle }: Pick<ScreenQuery, 'workTitle' | 'pinTitle'>): string[] {
   const out: string[] = [];
   const add = (value: string | undefined | null) => {
-    const title = value?.replace(/\s+/g, ' ').trim();
+    // "Avengers: Infinity War (2018)" names the film by its year as well.
+    const title = value?.replace(/\s*\((?:19|20)\d{2}\)\s*$/, '').replace(/\s+/g, ' ').trim();
     if (title && title.length > 1 && !out.some((t) => normalizeTitle(t) === normalizeTitle(title))) out.push(title);
   };
   add(workTitle);
@@ -498,8 +508,9 @@ async function searchYouTube(query: string, signal: AbortSignal): Promise<VideoC
 }
 
 // A YouTube medium from oEmbed, or undefined when the video is gone or its
-// owner does not allow embedding.
+// owner does not allow embedding or has age-restricted it.
 async function youtubeEmbed(videoId: string, signal: AbortSignal, videoTitle?: string) {
+  if (await isAgeRestricted(videoId, signal)) return undefined;
   const watchUrl = `https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
   const res = await getJson<{ html?: string; title?: string; author_name?: string; author_url?: string }>(
     `https://www.youtube.com/oembed?url=${encodeURIComponent(watchUrl)}&format=json&maxwidth=800&maxheight=450`,
@@ -545,9 +556,9 @@ export function aniListStreamingUrls(links: unknown): string[] {
 }
 
 
-const ANILIST_QUERY = `query ($search: String) {
+const anilistQuery = (type: 'ANIME' | 'MANGA') => `query ($search: String) {
   Page(perPage: 10) {
-    media(search: $search, type: ANIME) {
+    media(search: $search, type: ${type}) {
       title { romaji english }
       synonyms
       format
@@ -565,13 +576,14 @@ const ANILIST_QUERY = `query ($search: String) {
   }
 }`;
 
-async function findAniList(title: string, year: number | undefined, signal: AbortSignal): Promise<AniListMatch | undefined> {
-  const res = await getJson<any>('https://graphql.anilist.co', signal, {}, { query: ANILIST_QUERY, variables: { search: title } });
+async function findAniList(title: string, year: number | undefined, signal: AbortSignal, type: 'ANIME' | 'MANGA' = 'ANIME'): Promise<AniListMatch | undefined> {
+  const res = await getJson<any>('https://graphql.anilist.co', signal, {}, { query: anilistQuery(type), variables: { search: title } });
   const work = normalizeTitle(title);
   const media: any[] = res?.data?.Page?.media ?? [];
   const match = media.find((m) => {
     const names = [m.title?.english, m.title?.romaji, ...(m.synonyms ?? [])].filter(Boolean).map((name: string) => normalizeTitle(name));
-    return names.includes(work) && yearFits(m.startDate?.year, year);
+    // A manga runs for years past its start, as a series does.
+    return names.includes(work) && yearFits(m.startDate?.year, year, type === 'MANGA');
   });
   if (!match) return undefined;
   return {
@@ -681,12 +693,12 @@ async function aniListByMalId(idMal: number, signal: AbortSignal): Promise<AniLi
   };
 }
 
-async function findMyAnimeList(idMal: number, signal: AbortSignal): Promise<{ rating?: PinRatingJson; episodes?: ScreenEpisodes } | undefined> {
-  const res = await getJson<any>(`https://api.jikan.moe/v4/anime/${idMal}`, signal);
+async function findMyAnimeList(idMal: number, signal: AbortSignal, kind: 'anime' | 'manga' = 'anime'): Promise<{ rating?: PinRatingJson; episodes?: ScreenEpisodes } | undefined> {
+  const res = await getJson<any>(`https://api.jikan.moe/v4/${kind}/${idMal}`, signal);
   if (!res?.data) return undefined;
   const score = res.data.score;
   return {
-    rating: typeof score === 'number' ? { source: 'MyAnimeList', score, scoreMax: 10, url: res.data.url || `https://myanimelist.net/anime/${idMal}` } : undefined,
+    rating: typeof score === 'number' ? { source: 'MyAnimeList', score, scoreMax: 10, url: res.data.url || `https://myanimelist.net/${kind}/${idMal}` } : undefined,
     episodes: malEpisodes(res.data),
   };
 }
@@ -702,7 +714,7 @@ export function malEpisodes(data: { type?: string | null; status?: string | null
 
 /* Wikidata */
 
-type WikidataMatch = { description?: string; ratings: PinRatingJson[]; episodes?: ScreenEpisodes; streamingUrls: string[] };
+type WikidataMatch = { description?: string; ratings: PinRatingJson[]; episodes?: ScreenEpisodes; streamingUrls: string[]; openCritic?: string };
 
 // Streaming services' identifier properties and the title page each id opens
 // (the property's own formatter URL, P1630). Paramount+ has only a per-video
@@ -757,31 +769,39 @@ const REVIEW_SITES: Record<string, { source: string; idColumn: string; url: (id:
   Q37312: { source: 'IMDb', idColumn: 'imdb', url: (id) => `https://www.imdb.com/title/${id}/` },
   Q105584: { source: 'Rotten Tomatoes', idColumn: 'rt', url: (id) => `https://www.rottentomatoes.com/${id}`, method: /tomatometer/i },
   Q150248: { source: 'Metacritic', idColumn: 'mc', url: (id) => `https://www.metacritic.com/${id}/`, method: /metascore/i },
+  Q21039459: { source: 'OpenCritic', idColumn: 'oc', url: (id) => `https://opencritic.com/game/${id}` },
 };
 
 const SCREEN_DESCRIPTION = /\b(?:film|movie|television|tv|series|anime|animated|miniseries|ova|season)\b/i;
 const SERIES_DESCRIPTION = /\b(?:television|tv|web|anime|streaming) series\b/i;
+const GAME_DESCRIPTION = /\bvideo game\b/i;
 
 // series: only an item described as a series, for the show a season belongs to.
-async function findWikidata(title: string, year: number | undefined, signal: AbortSignal, { series = false } = {}): Promise<WikidataMatch | undefined> {
+// game: only a video game, which a pin may be about long after its release.
+async function findWikidata(
+  title: string,
+  year: number | undefined,
+  signal: AbortSignal,
+  { series = false, game = false } = {},
+): Promise<WikidataMatch | undefined> {
   const search = await getJson<any>(
     `https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&limit=10&search=${encodeURIComponent(title)}`,
     signal,
   );
   const work = normalizeTitle(title);
   const ids: string[] = (search?.search ?? [])
-    .filter((s: any) => (series ? SERIES_DESCRIPTION : SCREEN_DESCRIPTION).test(s.description ?? '') && [s.label, s.match?.text].some((t) => t && normalizeTitle(t) === work))
+    .filter((s: any) => (game ? GAME_DESCRIPTION : series ? SERIES_DESCRIPTION : SCREEN_DESCRIPTION).test(s.description ?? '') && [s.label, s.match?.text].some((t) => t && normalizeTitle(t) === work))
     .map((s: any) => s.id)
     .filter((id: string) => /^Q\d+$/.test(id));
   if (!ids.length) return undefined;
 
-  const sparql = `SELECT ?item ?description ?year ?score ?by ?methodLabel ?date ?rank ?imdb ?rt ?mc ?episodes ?ended WHERE {
+  const sparql = `SELECT ?item ?description ?year ?score ?by ?methodLabel ?date ?rank ?imdb ?rt ?mc ?oc ?episodes ?ended WHERE {
     VALUES ?item { ${ids.map((id) => `wd:${id}`).join(' ')} }
     OPTIONAL { ?item schema:description ?description FILTER(LANG(?description) = "en") }
     OPTIONAL { ?item wdt:P577 ?published BIND(YEAR(?published) AS ?year) }
     OPTIONAL { ?item wdt:P1113 ?episodes }
     OPTIONAL { ?item wdt:P582 ?ended }
-    OPTIONAL { ?item wdt:P345 ?imdb } OPTIONAL { ?item wdt:P1258 ?rt } OPTIONAL { ?item wdt:P1712 ?mc }
+    OPTIONAL { ?item wdt:P345 ?imdb } OPTIONAL { ?item wdt:P1258 ?rt } OPTIONAL { ?item wdt:P1712 ?mc } OPTIONAL { ?item wdt:P2864 ?oc }
     OPTIONAL {
       ?item p:P444 ?st . ?st ps:P444 ?score ; pq:P447 ?by ; wikibase:rank ?rank .
       FILTER(?rank != wikibase:DeprecatedRank)
@@ -800,11 +820,11 @@ async function findWikidata(title: string, year: number | undefined, signal: Abo
     if (!itemRows.length) continue;
     const years = itemRows.map((r) => Number(r.year)).filter(Number.isFinite);
     const description = itemRows[0].description as string | undefined;
-    if (!yearFits(years.length ? Math.min(...years) : undefined, year, /\b(?:series|anime|television)\b/i.test(description ?? ''))) continue;
+    if (!yearFits(years.length ? Math.min(...years) : undefined, year, game || /\b(?:series|anime|television)\b/i.test(description ?? ''))) continue;
     // A second request rather than a dozen more OPTIONALs above, each of
     // which would multiply the review-score rows.
     const streamingUrls = await findWikidataStreaming(id, signal);
-    return { description, ratings: wikidataRatings(itemRows), episodes: wikidataEpisodes(itemRows), streamingUrls };
+    return { description, ratings: wikidataRatings(itemRows), episodes: wikidataEpisodes(itemRows), streamingUrls, openCritic: itemRows.find((r) => r.oc)?.oc };
   }
   return undefined;
 }
@@ -855,6 +875,151 @@ export function parseScore(value: string): { score: number; scoreMax: number } |
 export function yearFits(workYear: number | undefined, pinYear: number | undefined, isSeries = false): boolean {
   if (!workYear || !pinYear) return true;
   return isSeries ? workYear <= pinYear + 1 : Math.abs(workYear - pinYear) <= 1;
+}
+
+/* Rotten Tomatoes */
+
+// rottentomatoes.com answers an ordinary browser's request: its search page
+// lists each film and series with its Tomatometer already in the markup.
+const BROWSER_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
+
+export type RottenTomatoesRow = { name: string; url: string; kind: 'movie' | 'tvSeries'; year?: number; score?: number };
+
+const decodeEntities = (text: string) =>
+  text.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
+
+// The movie and TV rows of a search results page. The attributes are written
+// both ways ("release-year", "releaseyear") depending on the page's build.
+export function parseRottenTomatoesSearch(html: string): RottenTomatoesRow[] {
+  const rows: RottenTomatoesRow[] = [];
+  for (const section of html.split(/<search-page-result\b/).slice(1)) {
+    const kind = section.match(/\btype="(movie|tvSeries)"/)?.[1] as RottenTomatoesRow['kind'] | undefined;
+    if (!kind) continue;
+    for (const row of section.split(/<search-page-media-row\b/).slice(1)) {
+      const attr = (name: string) => row.match(new RegExp(`\\b${name}="(\\d*)"`))?.[1];
+      const link = row.match(/<a href="(https:\/\/www\.rottentomatoes\.com\/(?:m|tv)\/[^"]+)"[^>]*data-qa="info-name"[^>]*>\s*([^<]+?)\s*<\/a>/);
+      if (!link) continue;
+      const year = Number(kind === 'movie' ? attr('release-?year') : attr('start-?year')) || undefined;
+      const score = attr('tomatometer-?score');
+      rows.push({ name: decodeEntities(link[2]), url: link[1], kind, year, score: score ? Number(score) : undefined });
+    }
+  }
+  return rows;
+}
+
+// The row naming the work exactly, of the right kind and a fitting year.
+export function pickRottenTomatoes(rows: RottenTomatoesRow[], title: string, year: number | undefined, kind: 'movie' | 'tv'): RottenTomatoesRow | undefined {
+  const work = normalizeTitle(title);
+  const wanted = kind === 'movie' ? 'movie' : 'tvSeries';
+  return rows.find((r) => r.kind === wanted && normalizeTitle(r.name) === work && yearFits(r.year, year, kind === 'tv'));
+}
+
+// The critics' score the season's own page states, once it has reviews.
+export function seasonTomatometer(html: string): number | undefined {
+  for (const m of html.matchAll(/"criticsScore":\{([^}]*)\}/g)) {
+    const score = m[1].match(/"score":"(\d+)"/)?.[1];
+    if (score && Number(m[1].match(/"reviewCount":(\d+)/)?.[1] ?? 1) > 0) return Number(score);
+  }
+  return undefined;
+}
+
+async function findRottenTomatoes(title: string, year: number | undefined, kind: 'movie' | 'tv', signal: AbortSignal): Promise<PinRatingJson | undefined> {
+  const season = kind === 'tv' ? Number(seasonOf(normalizeTitle(title))) || undefined : undefined;
+  const search = kind === 'tv' ? (withoutSeason(title) ?? title) : title;
+  const html = await getText(`https://www.rottentomatoes.com/search?search=${encodeURIComponent(search)}`, signal, { 'User-Agent': BROWSER_UA, 'Accept-Language': 'en-US,en;q=0.9' });
+  if (!html) return undefined;
+  const row = pickRottenTomatoes(parseRottenTomatoesSearch(html), search, year, kind);
+  if (!row) return undefined;
+  if (kind === 'movie') return row.score != null ? { source: 'Rotten Tomatoes', score: row.score, scoreMax: 100, url: row.url } : undefined;
+
+  // A series is scored per season, and its search row is the show's average.
+  // A pin about a season takes that season's; a premiere with no season named
+  // is the first season when the show started that year, else the show's.
+  const seasonNumber = season ?? (year && row.year && row.year >= year - 1 ? 1 : undefined);
+  if (!seasonNumber) return row.score != null ? { source: 'Rotten Tomatoes', score: row.score, scoreMax: 100, url: row.url } : undefined;
+  const url = `${row.url}/s${String(seasonNumber).padStart(2, '0')}`;
+  const page = await getText(url, signal, { 'User-Agent': BROWSER_UA, 'Accept-Language': 'en-US,en;q=0.9' });
+  const score = page ? seasonTomatometer(page) : undefined;
+  return score != null ? { source: 'Rotten Tomatoes', score, scoreMax: 100, url } : undefined;
+}
+
+async function findRottenTomatoesFor(titles: string[], year: number | undefined, kind: 'movie' | 'tv', signal: AbortSignal): Promise<PinRatingJson | undefined> {
+  for (const title of titles) {
+    const found = await findRottenTomatoes(title, year, kind, signal).catch(() => undefined);
+    if (found) return found;
+  }
+  return undefined;
+}
+
+/* Games and manga */
+
+// What OpenCritic's game page states as the top critics' average. The page
+// ships its data as escaped JSON; the game's own entry is the one followed by
+// a percentile, where the related games listed below it are not.
+export function openCriticScore(html: string): number | undefined {
+  const text = html.replace(/&q;/g, '"');
+  const score = Number(text.match(/"topCriticScore":(\d+(?:\.\d+)?),"percentile"/)?.[1]);
+  return Number.isFinite(score) && score > 0 ? Math.round(score) : undefined;
+}
+
+export type WorkScoreQuery = Pick<ScreenQuery, 'workTitle' | 'pinTitle' | 'year'>;
+
+// A video game's critic scores: Metacritic and OpenCritic from its Wikidata
+// item, and OpenCritic's own page for the current number. Only a game the item
+// calls a video game and whose title matches exactly.
+export async function findGameScores(query: WorkScoreQuery & { extraTitles?: string[] }, budgetMs = DEFAULT_BUDGET_MS): Promise<PinRatingJson[]> {
+  const signal = AbortSignal.timeout(budgetMs);
+  const titles = [...(query.extraTitles ?? []), ...titleCandidates(query)];
+  for (const title of titles.slice(0, 4)) {
+    const match = await findWikidata(title, query.year, signal, { game: true }).catch(() => undefined);
+    if (!match) continue;
+    const ratings = match.ratings.filter((r) => r.source === 'Metacritic' || r.source === 'OpenCritic');
+    if (match.openCritic) {
+      const url = `https://opencritic.com/game/${match.openCritic}`;
+      const page = await getText(url, signal, { 'User-Agent': BROWSER_UA });
+      const score = page ? openCriticScore(page) : undefined;
+      if (score != null) {
+        const rest = ratings.filter((r) => r.source !== 'OpenCritic');
+        return [...rest, { source: 'OpenCritic', score, scoreMax: 100, url }];
+      }
+    }
+    return ratings;
+  }
+  return [];
+}
+
+// Title guesses for a manga pin: its candidates, and each without the word
+// "Manga" and what follows an event word ("Space Brothers Manga Ends With Its
+// 46th Volume" -> "Space Brothers").
+export function mangaTitleCandidates(query: Pick<WorkScoreQuery, 'workTitle' | 'pinTitle'>): string[] {
+  const out: string[] = [];
+  for (const title of titleCandidates(query)) {
+    for (const guess of [
+      title,
+      title.replace(/\s+manga\b.*$/i, ''),
+      title.replace(/\s+(?:ends?|resumes?|concludes?|returns?|goes on hiatus|launches|debuts|begins|enters|reaches|hits|sends)\b.*$/i, ''),
+    ]) {
+      const t = guess.trim();
+      // A cut that leaves one short word names no series ("Free" out of "Free Comic Book Day").
+      if (normalizeTitle(t).length >= 5 && !out.some((o) => normalizeTitle(o) === normalizeTitle(t))) out.push(t);
+    }
+  }
+  return out;
+}
+
+// A manga's AniList and MyAnimeList scores, found by exact title.
+export async function findMangaScores(query: WorkScoreQuery, budgetMs = DEFAULT_BUDGET_MS): Promise<PinRatingJson[]> {
+  const signal = AbortSignal.timeout(budgetMs);
+  for (const title of mangaTitleCandidates(query).slice(0, 5)) {
+    const match = await findAniList(title, query.year, signal, 'MANGA').catch(() => undefined);
+    if (!match) continue;
+    const ratings: PinRatingJson[] = [];
+    if (match.averageScore != null) ratings.push({ source: 'AniList', score: match.averageScore, scoreMax: 100, url: match.siteUrl });
+    const mal = match.idMal ? await findMyAnimeList(match.idMal, signal, 'manga').catch(() => undefined) : undefined;
+    if (mal?.rating) ratings.push(mal.rating);
+    return ratings;
+  }
+  return [];
 }
 
 /* HTTP */

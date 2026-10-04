@@ -88,6 +88,21 @@ export const config = {
     apiKey: env('YOUTUBE_API_KEY'),
   },
 
+  // A Twitch developer app (dev.twitch.tv/console): its client credentials give
+  // the app token the Helix API needs to find a game's top clip
+  // (src/server/scrape/twitch.ts). Without them no pin looks for one.
+  twitch: {
+    clientId: env('TWITCH_CLIENT_ID'),
+    clientSecret: env('TWITCH_CLIENT_SECRET'),
+  },
+
+  // Vimeo's search needs an access token (a "public" scope one from
+  // developer.vimeo.com); without it only Dailymotion is searched for a pin's
+  // second video (src/server/scrape/altVideo.ts).
+  vimeo: {
+    accessToken: env('VIMEO_ACCESS_TOKEN'),
+  },
+
   anthropic: {
     apiKey: env('ANTHROPIC_API_KEY') || '',
   },

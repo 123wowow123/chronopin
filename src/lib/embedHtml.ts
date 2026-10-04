@@ -5,7 +5,8 @@
 // (with the postcss it pulls in) had been most of a 285KB chunk that every
 // timeline, search and pin page loaded for it.
 
-import { youtubeVideoId } from './videoEmbed';
+import { siteUrl } from './appConfig';
+import { embedUrl, videoSource, youtubeVideoId } from './videoEmbed';
 
 const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', mdash: '—', ndash: '–', hellip: '…' };
 
@@ -69,6 +70,33 @@ export function youtubePlayerHtml(
     `<iframe width="${size('width', 480)}" height="${size('height', 270)}" src="${escapeHtml(src)}"` +
     (title ? ` title="${escapeHtml(title)}"` : '') +
     ' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"' +
+    ' referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+  );
+}
+
+// Twitch's player refuses to load unless the page embedding it is named in a
+// parent parameter: the site's own host (with and without www) and localhost.
+function twitchParents(): string {
+  const host = new URL(siteUrl).hostname;
+  return [...new Set([host, host.replace(/^www\./, ''), `www.${host.replace(/^www\./, '')}`, 'localhost'])].map((h) => `&parent=${encodeURIComponent(h)}`).join('');
+}
+
+// A video medium's player, whichever source it is from: YouTube's (above), or
+// Vimeo's or Dailymotion's rebuilt from the video's id, found in the medium's
+// URL or the stored iframe's address. Undefined when it names none.
+export function videoPlayerHtml(
+  medium: { html?: string | null; originalUrl?: string | null },
+  frameTitle?: string,
+): string | undefined {
+  const source = videoSource(medium.originalUrl) ?? videoSource(medium.html ? attribute(medium.html, 'src') : undefined);
+  if (!source || source.provider === 'youtube') return youtubePlayerHtml(medium, frameTitle);
+  const html = medium.html ?? '';
+  const size = (name: string, fallback: number) => (/^\d{1,4}$/.test(attribute(html, name) ?? '') ? attribute(html, name)! : String(fallback));
+  const title = attribute(html, 'title')?.trim() || frameTitle;
+  return (
+    `<iframe width="${size('width', 480)}" height="${size('height', 270)}" src="${escapeHtml(embedUrl(source.provider, source.id) + (source.provider === 'twitch' ? `&autoplay=false${twitchParents()}` : ''))}"` +
+    (title ? ` title="${escapeHtml(title)}"` : '') +
+    ' frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"' +
     ' referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
   );
 }

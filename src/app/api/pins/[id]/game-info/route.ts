@@ -25,11 +25,21 @@ export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
 
 // Stores a reading: body { maturityBoard, maturityRating, descriptors,
 // platforms, source, sourceUrl, ratings? }. ratings ([{ source, score,
-// scoreMax, url }]) refresh the pin's aggregated scores alongside.
+// scoreMax, url }]) refresh the pin's aggregated scores alongside. A body of
+// only ratings (a game with no Steam page has no maturity or platforms to
+// send) stores just those.
 export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
   await authorOrAdmin(request, pinId);
   const body = await readJson(request);
+  if (Array.isArray(body.ratings) && body.ratings.length && !body.source) {
+    const bad = PinRating.problem(body.ratings);
+    if (bad) throw new HttpError(400, bad);
+    await Pin.setRatings(pinId, body.ratings);
+    expirePinPage(pinId);
+    const info = await gameInfoForPin(pinId);
+    return info ? json(info) : noContent();
+  }
   const checked = gameInfoProblem(body);
   if (typeof checked === 'string') throw new HttpError(400, checked);
   if (Array.isArray(body.ratings) && body.ratings.length) {

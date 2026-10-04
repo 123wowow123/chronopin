@@ -17,7 +17,7 @@ const TIMEOUT_MS = 10000;
 const USER_AGENT = `ChronopinBot/1.0 (+${siteUrl})`;
 
 export type GameRating = { source: string; score: number; scoreMax: number; url?: string };
-export type GameFacts = { info: GameInfoFields; ratings: GameRating[]; source: 'steam' | 'wikidata'; sourceUrl: string };
+export type GameFacts = { info: GameInfoFields; ratings: GameRating[]; source: 'steam' | 'wikidata'; sourceUrl: string; name?: string };
 
 async function getJson(url: string, headers: Record<string, string> = {}): Promise<any> {
   try {
@@ -99,7 +99,7 @@ export async function findGameFacts(appId: number): Promise<GameFacts | undefine
     // A handful of reviews is an anecdote, not a score.
     if (total >= 50) ratings.push({ source: 'Steam', score: Math.round((positive / total) * 100), scoreMax: 100, url: steamUrl(appId) });
 
-    return { info: { ...maturity, platforms: [...platforms] }, ratings, source: 'steam', sourceUrl: steamUrl(appId) };
+    return { info: { ...maturity, platforms: [...platforms] }, ratings, source: 'steam', sourceUrl: steamUrl(appId), name: typeof data.name === 'string' ? data.name : undefined };
   } catch (err) {
     log.warn('game facts failed:', (err as Error).message);
     return undefined;

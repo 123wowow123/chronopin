@@ -19,12 +19,16 @@ import { parseScrapedStocks, type ScrapedStock } from '@/lib/stocks';
 import { categoryList, hasCategory, parseCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import { isStudioCategory, studioLocationByName } from '../studioLocation';
-import { awardsFor } from '../services/pinAwards';
+import { awardsOfPin } from '../services/pinAwards';
 import type { AwardEntry } from '@/lib/awards';
 import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_HEADINGS, IN_PAGE_META, IN_PAGE_SCRAPE, type InPageHeadings, type InPageResult, type PageMetadata } from './inPage';
 import { pageEntries, type PageEntry } from '@/lib/pageEntries';
 import { findPinImages, pageImage } from './findImages';
+import { findAlternateVideo } from './altVideo';
+import { findGameClip, isTwitchClipUrl } from './twitch';
+import { isAgeRestricted } from './youtubeAge';
+import { videoSource } from '@/lib/videoEmbed';
 import { findProductVideo, findScreenDetails, isScreenCategory, malIdOf, workCategory, youtubeStill, type ScreenDetails } from './screen';
 import { findGameMarkets, type GameMarketReference } from './gameMarkets';
 import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
@@ -216,6 +220,9 @@ export async function youtubeMedium(pageUrl: string) {
   if (!id) {
     throw new Error(`No YouTube video id in ${pageUrl}`);
   }
+  if (await isAgeRestricted(id)) {
+    throw new Error(`YouTube video ${id} is age-restricted and cannot be embedded`);
+  }
   const res = await fetchJson(
     `https://www.googleapis.com/youtube/v3/videos?part=player,snippet&id=${encodeURIComponent(id)}&maxResults=1&key=${config.youtube.apiKey}`,
   );
@@ -394,13 +401,19 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   await estimateUndated(pin, { pageUrl, pageText, references: found.references, note });
   await topUpImages(pin, fields, headings?.title);
   await topUpVideo(pin, fields, headings?.title);
+  await topUpAlternateVideo(pin, fields, headings?.title);
+  await topUpTwitchClip(pin, fields, headings?.title);
   // A film, series or anime's awards, by the work's own title and the pin's.
-  const awards = isScreenCategory(pin.categories)
-    ? await awardsFor([fields?.workTitle, pin.title]).catch((err) => {
-        log.warn('award lookup failed:', (err as Error).message);
-        return [];
-      })
-    : [];
+  const awards = await awardsOfPin({
+    title: pin.title,
+    categories: pin.categories,
+    productName: pin.productName,
+    workTitle: fields?.workTitle,
+    year: new Date(pin.utcStartDateTime).getUTCFullYear(),
+  }).catch((err) => {
+    log.warn('award lookup failed:', (err as Error).message);
+    return [];
+  });
   // tags: the extracted ones, for the form's tags field; the awards the
   // pin's text names are tagged again on save (model/pinTag.ts). What an
   // anime was adapted from is a fact about the work rather than the page, so
@@ -472,6 +485,38 @@ async function topUpImages(pin: Pin, fields: ExtractedFields | null, pageTitle?:
     pin.addMedium(new Medium({ type: mediumID.image, originalWidth: img.width || undefined, originalHeight: img.height || undefined, originalUrl: img.originalUrl })),
   );
   references.forEach((r) => pin.addReference(new PinReference(r)));
+}
+
+// A second copy of the video from another source (Dailymotion, Vimeo), for the
+// viewer YouTube will not play it to: age-restricted, or blocked where they
+// are. One per pin, and best effort like the top-up above.
+async function topUpAlternateVideo(pin: Pin, fields: ExtractedFields | null, pageTitle?: string) {
+  if (pin.media.some((m) => Number(m.type) === mediumID.youtube && videoSource(m.originalUrl)?.provider !== 'youtube')) return;
+  const title = pin.title || fields?.title || pageTitle?.trim();
+  if (!title) return;
+  const video = await findAlternateVideo({
+    title,
+    workTitle: isScreenCategory(pin.categories) ? fields?.workTitle : undefined,
+    company: pin.company ?? fields?.company,
+    year: pin.utcStartDateTime?.getUTCFullYear(),
+  });
+  if (video) pin.addMedium(new Medium(video));
+}
+
+// A game's most-watched Twitch clip of the past year, as a gameplay video and
+// a reference: for any pin whose words contain the name of a Twitch category
+// (a game, mostly), once per pin. Best effort, and off without Twitch
+// credentials (src/server/scrape/twitch.ts).
+async function topUpTwitchClip(pin: Pin, fields: ExtractedFields | null, pageTitle?: string) {
+  if (pin.media.some((m) => isTwitchClipUrl(m.originalUrl))) return;
+  const title = pin.title || fields?.title || pageTitle?.trim();
+  if (!title) return;
+  const found = await findGameClip({ title, workTitle: fields?.workTitle, productName: pin.productName });
+  if (!found) return;
+  pin.addMedium(new Medium(found.medium));
+  if (found.reference.url !== pin.sourceUrl && !(pin.references ?? []).some((r: PinReference) => r.url === found.reference.url)) {
+    pin.addReference(new PinReference(found.reference));
+  }
 }
 
 // A pin with no video (its page embedded none, no trailer was found) gets an

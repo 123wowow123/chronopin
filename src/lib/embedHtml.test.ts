@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { tweetHtml, youtubePlayerHtml } from './embedHtml';
+import { tweetHtml, videoPlayerHtml, youtubePlayerHtml } from './embedHtml';
 
 const ALLOW = 'frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
 
@@ -38,5 +38,24 @@ describe('tweetHtml', () => {
 
   it('needs a link to the tweet', () => {
     expect(tweetHtml({ html: '<blockquote><p>hi</p></blockquote>', originalUrl: 'javascript:alert(1)' })).toBeUndefined();
+  });
+});
+
+describe('videoPlayerHtml', () => {
+  it('builds a Dailymotion or Vimeo player from the id alone, never from stored markup', () => {
+    const dm = videoPlayerHtml({ originalUrl: 'https://www.dailymotion.com/embed/video/x8q8o78', html: '<iframe src="https://evil.example/x"></iframe>' }, 'Video: GTA');
+    expect(dm).toContain('src="https://www.dailymotion.com/embed/video/x8q8o78"');
+    expect(dm).toContain('title="Video: GTA"');
+    expect(dm).not.toContain('evil.example');
+    expect(videoPlayerHtml({ originalUrl: 'https://player.vimeo.com/video/22439234' })).toContain('src="https://player.vimeo.com/video/22439234"');
+  });
+  it('builds a Twitch clip player that names the site as its parent, with autoplay off', () => {
+    const html = videoPlayerHtml({ originalUrl: 'https://clips.twitch.tv/embed?clip=Slug-1' }, 'Video: GTA');
+    expect(html).toContain('src="https://clips.twitch.tv/embed?clip=Slug-1&amp;autoplay=false&amp;parent=');
+    expect(html).toContain('parent=localhost');
+  });
+  it('leaves YouTube to its own player and rejects other hosts', () => {
+    expect(videoPlayerHtml({ originalUrl: 'https://www.youtube.com/embed/rzi-S1aQ7ds' })).toContain('enablejsapi=1');
+    expect(videoPlayerHtml({ originalUrl: 'https://example.com/embed/video/x8q8o78' })).toBeUndefined();
   });
 });
