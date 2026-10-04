@@ -191,7 +191,7 @@ function SponsoredLabel() {
 
 // One row of ads across the content: between the timeline's days (three on
 // a desktop, two on a tablet, one on a phone) or under a pin's tags (two
-// beside the pin, one on a phone). `className` places it.
+// beside the pin, stacked on a phone). `className` places it.
 export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 'pin-strip'; pinId?: number; className?: string }) {
   const t = useT();
   const { ref, ads } = useAds(slot, pinId);
@@ -204,7 +204,7 @@ export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 
   const list =
     slot === 'timeline-row'
       ? 'flex justify-center gap-2.5 [&>li]:max-w-[448px] [&>li]:flex-1 [&>li]:basis-0 max-sm:[&>li:nth-child(n+2)]:hidden max-lg:[&>li:nth-child(n+3)]:hidden max-3xl:[&>li:nth-child(n+4)]:hidden max-4xl:[&>li:nth-child(n+5)]:hidden max-5xl:[&>li:nth-child(n+6)]:hidden max-6xl:[&>li:nth-child(n+7)]:hidden'
-      : 'grid grid-cols-1 gap-2.5 sm:grid-cols-2 max-sm:[&>li:nth-child(n+2)]:hidden';
+      : 'grid grid-cols-1 gap-2.5 sm:grid-cols-2';
   return (
     <aside aria-label={t('ads.sponsored')} className={className}>
       <div className="mb-1.5 flex items-baseline gap-2">
