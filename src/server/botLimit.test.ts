@@ -19,6 +19,16 @@ describe('botRetryAfter', () => {
     expect(botRetryAfter(bot, t0 + 1000 / PER_SECOND)).not.toBeNull();
   });
 
+  it('holds SEO scrapers to the pace but not curl or monitors', () => {
+    const t0 = 3_000_000;
+    for (let i = 0; i < BURST; i++) {
+      botRetryAfter({ name: 'SemrushBot', kind: 'other' }, t0);
+      expect(botRetryAfter({ name: 'curl', kind: 'other' }, t0)).toBeNull();
+    }
+    expect(botRetryAfter({ name: 'SemrushBot', kind: 'other' }, t0)).not.toBeNull();
+    expect(botRetryAfter({ name: 'curl', kind: 'other' }, t0)).toBeNull();
+  });
+
   it('gives each AI crawler its own budget', () => {
     const t0 = 2_000_000;
     for (let i = 0; i < BURST; i++) botRetryAfter({ name: 'TestAiBot-a', kind: 'ai' }, t0);

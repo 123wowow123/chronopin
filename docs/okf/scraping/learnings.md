@@ -6554,3 +6554,7 @@ Ian: "translate all". Prod's `GET /api/admin/translations?after=0` listed 52 pin
 * **Learned** (HTML in, HTML out) agents translate the summary HTML directly; `validate.py` requires the tag, attribute and `<cite>` sequence to equal the English exactly, which caught nothing on the final run but makes tag drift impossible to post.
 * **Learned** (chunking) 52 pins x 15 languages was 6 chunks (~32k characters each) x 15 = 90 agents; one chunk per language of ~100k characters was too big for non-Latin output. The harness runs at most 20 agents at once, so launch as slots free.
 * Result: 780 rows saved, 0 skipped, 0 pins still due; read back pin 294 in ja and ar.
+
+## 2026-10-04 - Daily job midnight, run 4 (session)
+
+* **Learned** (midnight run: search noise and thin beats) WebSearch for "SEC crypto ETF deadlines October 2026" returned 2025-era articles with deadlines mislabelled as 2026; do not pin from them without a 2026 SEC/Federal Register source. Layoff searches returned only small WARN notices (81 and 168 staff) and trackers; nothing met the "hundreds or a known company" bar. Google trends on a Sunday were all sport and the Brazil election (already pinned as 1968/5174). Microsoft's own Learn lifecycle pages read fine through WebSearch even though techrepublic.com answers WebFetch with 403.

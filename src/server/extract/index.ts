@@ -267,13 +267,46 @@ export function withNote(content: string, note?: string | null): string {
 
 let client: Anthropic | null = null;
 
+// When Anthropic answers "credit balance is too low", every credit-spending
+// step stops for a while: getClient() returns null, which each caller already
+// treats as "no key" - nothing is asked, nothing is retried on the next page
+// view, and the scraper hands its LLM steps to the Claude Code session
+// (extract tasks), the job runner falls to the session driver, and the
+// wiki/sentiment/relation backlogs stay due for `wiki:export` and friends. The
+// first call after the pause is the probe: still no credit trips it again.
+const NO_CREDIT_PAUSE_MS = 30 * 60_000;
+let noCreditUntil = 0;
+
+export const llmPaused = () => Date.now() < noCreditUntil;
+
+// For tests.
+export const resetLlmPause = () => {
+  noCreditUntil = 0;
+};
+
+// Sees every response of the shared client, so no caller needs its own check.
+const watchCredit: typeof fetch = async (input, init) => {
+  const res = await fetch(input, init);
+  if (res.status === 400 && !llmPaused()) {
+    const body = await res.clone().text().catch(() => '');
+    if (/credit balance is too low/i.test(body)) {
+      noCreditUntil = Date.now() + NO_CREDIT_PAUSE_MS;
+      log.warn('anthropic credit is empty: LLM work paused for 30 minutes (left for the Claude Code session)');
+    }
+  }
+  return res;
+};
+
 export function getClient(): Anthropic | null {
   const apiKey = config.anthropic.apiKey;
   if (!apiKey || apiKey === 'REPLACE_WITH_ANTHROPIC_API_KEY') {
     return null;
   }
+  if (llmPaused()) {
+    return null;
+  }
   if (!client) {
-    client = new Anthropic({ apiKey });
+    client = new Anthropic({ apiKey, fetch: watchCredit });
   }
   return client;
 }

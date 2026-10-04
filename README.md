@@ -267,7 +267,7 @@ https://developer.ticketmaster.com/partners/distribution-partners/affiliate-sign
 
 sync prod db to local and backup json
 
-run full run job session
+run full run job in this session
 
 run 6am job here in this session
 

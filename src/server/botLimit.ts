@@ -1,7 +1,8 @@
 import type { Bot } from '@/lib/bots';
 
-// AI crawlers (src/lib/bots.ts, kind 'ai') are held to a steady pace; search
-// engines, link previews and people are never limited. Each AI bot has its own
+// AI crawlers (src/lib/bots.ts, kind 'ai') and the SEO scrapers named below are
+// held to a steady pace; search engines, link previews, monitors, scripts and
+// people are never limited. Each AI bot has its own
 // budget, keyed by name rather than address: a crawler spreads over many
 // addresses, and it is the bot's total that loads the server.
 //
@@ -10,6 +11,11 @@ import type { Bot } from '@/lib/bots';
 // only hands every bot a fresh burst.
 export const BURST = 30;
 export const PER_SECOND = 0.5;
+
+// SEO scrapers: kind 'other' like curl and the uptime monitors, but they crawl
+// the whole site for someone else's index (2026-10-04: Semrush + MJ12 ~4k hits
+// in 30 minutes on the 2-vCPU VM).
+const SEO_SCRAPERS = new Set(['AhrefsBot', 'SemrushBot', 'MJ12bot', 'DotBot', 'DataForSeoBot', 'Screaming Frog']);
 
 type Bucket = { tokens: number; at: number };
 
@@ -21,7 +27,7 @@ function buckets(): Map<string, Bucket> {
 // Null when the request may go ahead, else the seconds until it could (for
 // Retry-After).
 export function botRetryAfter(bot: Bot | null, now = Date.now()): number | null {
-  if (bot?.kind !== 'ai') return null;
+  if (!bot || (bot.kind !== 'ai' && !SEO_SCRAPERS.has(bot.name))) return null;
   const all = buckets();
   const bucket = all.get(bot.name) ?? { tokens: BURST, at: now };
   bucket.tokens = Math.min(BURST, bucket.tokens + ((now - bucket.at) / 1000) * PER_SECOND);
