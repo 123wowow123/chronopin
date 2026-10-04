@@ -6536,3 +6536,21 @@ Ian: "pin all world cup games and make into thread". 100 new pins plus the 4 alr
 - **Thread build:** post with explicit `parentId: null` for the root; re-parent the pins already on prod afterwards with `PATCH /api/admin/db/Pin/<id> {"parentId": ...}`. One 502 saved nothing (re-run was clean). Whole-pin PUT round trip (minus tags/stocks) works for English corrections but can take >2 min per pin.
 - Pictures: about a third of the pins carry one picture plus the video (no second clean match photo); ESPN's recap photo (`a.espncdn.com/photo/...`) from the summary's `article` is a reliable fallback.
 - Not done: Polymarket per-match markets were not checked.
+
+## 2026-10-03 - Gurman's touchscreen MacBook Pro predictions, one thread (@TechDesk, prod 5738-5741)
+
+Ian: "pin <MacRumors 1 Oct 2026 article>", then "add Bloomberg's Mark Gurman in a thread ... for his predictions"; he chose a prediction chain on prod. Four pins, oldest report first, each dated to the launch that report predicted (`estimated`): Jan 2023 "first touchscreen Mac in 2025" (31 Dec 2025), Nov 2025 "perhaps as soon as late 2026" (31 Dec 2026), 24 Feb 2026 K114/K116 "toward the end of 2026" (31 Dec 2026), 1 Oct 2026 Power On "as early as October" (31 Oct 2026). Batch folder `.scrape/prod-batches/gurman-2026-10-03/` (`build.py`, `run_prod.py`, `run_tr.py`, `tr/<loc>.py`). 15 languages, 60 rows.
+
+* **Learned** (thread of predictions) The chain follows report order, not date order, so the last pin's date is earlier than its parents'. Say so when handing over.
+* **Learned** (paywalled primary) Bloomberg answers 403, so the source is the best fetched write-up (MacTrast, MacRumors, GSMArena) and Bloomberg is not cited as a reference.
+* **Learned** (translations) The old `run_tr.py` rebuilt the summary as one `<ul>` and dropped a "Notable features" `<h3>` + second list. This one substitutes each `<li>` in place and takes the heading from `H` in each `tr/<loc>.py`; copy it for product pins.
+* **Learned** (videos) A verified-channel video for each report date came from YouTube search (Bloomberg's own Power On episode for the October pin).
+
+## 2026-10-03 - Retranslating the 52 outdated pins (prod, 780 rows)
+
+Ian: "translate all". Prod's `GET /api/admin/translations?after=0` listed 52 pins whose translations were `outdated` in all 15 locales (the English `longFormSummary` changed after translating; 2 pins also changed `description`). Batch folder `.scrape/prod-batches/retranslate-2026-10-03/` (`src_A..F.json`, `tr/<loc>_<chunk>.py`, `validate.py`, `run_tr.py`).
+
+* **Learned** (only send the changed fields) `POST /api/admin/translations` keeps the stored title and reasoning when a field is left out and its English is unchanged, so the rows carry only `longFormSummary` (+ `description` where flagged) and the `sourceHash` from the due list. No per-pin title/reason retranslation was needed.
+* **Learned** (HTML in, HTML out) agents translate the summary HTML directly; `validate.py` requires the tag, attribute and `<cite>` sequence to equal the English exactly, which caught nothing on the final run but makes tag drift impossible to post.
+* **Learned** (chunking) 52 pins x 15 languages was 6 chunks (~32k characters each) x 15 = 90 agents; one chunk per language of ~100k characters was too big for non-Latin output. The harness runs at most 20 agents at once, so launch as slots free.
+* Result: 780 rows saved, 0 skipped, 0 pins still due; read back pin 294 in ja and ar.

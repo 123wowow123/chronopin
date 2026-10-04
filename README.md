@@ -269,6 +269,8 @@ sync prod db to local and backup json
 
 run full run job session
 
+run 6am job here in this session
+
 
 
 - product should link ebay and macari and facebook marketplace and have job to check for updatedness
@@ -298,8 +300,6 @@ run full run job session
 
 - update all ticket master button link to use referal link
 
-run 6am job here in this session
-
 
 best of 2027 desert per brand per category
 
@@ -320,3 +320,14 @@ organize admin pages to more intuitive layout and groupings
 
 
 Is there any improvement we can do to make search better? Should we check the search model and strategy?
+
+
+# Pending
+
+As of 2026-10-04, after the by-hand wikis for pins starting in the next 90 days went to prod:
+
+- ~6,950 link wikis still pending, for pins further out. Prod's Anthropic key has no credit, so either top it up or do them by hand (`wiki:export` / `wiki:apply`, see docs/okf/playbooks/without-api-credit.md). Next window: pins 90-180 days out.
+- Prod keeps reading non-UTF-8 pages as UTF-8 until the encoding fix (commit e7f822e2, `decodeBody` in sourceText.ts) is live and tried on a Shift_JIS page. Then look for other garbled sources (text full of U+FFFD) and refetch them.
+- Every failed retry stamps a new request id and time into `lastError`/`utcAttemptedDateTime`, so `seedSources.json` churns by tens of thousands of lines. Store the credit error without the request id and leave the attempt time alone on a repeat.
+- About 40 wikis are thin because the page was a bot check, a paywall or only navigation; redo them with the browser or another source.
+- Pin dates to check, where the links disagree: 576 (opening Dec 2026 vs 1 Jan 2027), 4095 (LVMH Q3 revenue 20-21 Oct vs 11/12 Oct), 4929, 1855 (Nike Caitlin 1 24 Nov vs 1 Dec), 4948 (Paris Line 18 opens 13 Oct vs the pin's 30 Nov), 1864 (Amazon Leo preview 8 Apr vs Nov 2025).
