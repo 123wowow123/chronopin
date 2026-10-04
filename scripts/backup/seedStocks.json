@@ -6298,7 +6298,7 @@
       "utcCreatedDateTime": "2026-09-20T03:10:16.440Z",
       "utcRemovedDateTime": null,
       "relation": "company",
-      "note": null
+      "note": "the Beaverton, Oregon maker of athletic footwear, apparel and equipment"
     },
     {
       "id": 545,
@@ -27659,6 +27659,138 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "the Swiss running-shoe and apparel maker behind the Cloud line"
+    },
+    {
+      "id": 2873,
+      "pinId": 5609,
+      "symbol": "MDLZ",
+      "name": "Mondelez International",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-04T03:53:17.184Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 2874,
+      "pinId": 5611,
+      "symbol": "MDLZ",
+      "name": "Mondelez International",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-04T03:53:55.149Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 2875,
+      "pinId": 5612,
+      "symbol": "MDLZ",
+      "name": "Mondelez International",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-04T03:54:13.796Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 2876,
+      "pinId": 5627,
+      "symbol": "MDLZ",
+      "name": "Mondelez International",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-04T03:57:08.660Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 2877,
+      "pinId": 5637,
+      "symbol": "HSY",
+      "name": "The Hershey Company",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-04T03:59:02.282Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 2878,
+      "pinId": 5722,
+      "symbol": "MDLZ",
+      "name": "Mondelez International",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-04T04:26:14.882Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 2879,
+      "pinId": 5727,
+      "symbol": "ORN",
+      "name": "Orion",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-04T04:26:58.677Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 2880,
+      "pinId": 5738,
+      "symbol": "AAPL",
+      "name": "Apple",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-04T05:04:48.261Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the iPhone, Mac and services maker based in Cupertino, California"
+    },
+    {
+      "id": 2882,
+      "pinId": 5739,
+      "symbol": "AAPL",
+      "name": "Apple",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-04T05:05:07.037Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the iPhone, Mac and services maker based in Cupertino, California"
+    },
+    {
+      "id": 2884,
+      "pinId": 5740,
+      "symbol": "AAPL",
+      "name": "Apple",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-04T05:05:25.626Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the iPhone, Mac and services maker based in Cupertino, California"
+    },
+    {
+      "id": 2885,
+      "pinId": 5741,
+      "symbol": "AAPL",
+      "name": "Apple",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-04T05:05:45.828Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the iPhone, Mac and services maker based in Cupertino, California"
     }
   ],
   "prices": [
@@ -64531,7 +64663,7 @@
       "day": "2026-10-03",
       "price": 33.87,
       "utcPriceDateTime": "2026-10-02T20:00:00.000Z",
-      "utcCheckedDateTime": "2026-10-04T03:49:50.419Z",
+      "utcCheckedDateTime": "2026-10-04T03:45:01.585Z",
       "utcSetDateTime": "2026-09-24T20:53:49.268Z"
     },
     {
@@ -73672,7 +73804,7 @@
       "day": "2026-03-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-01T11:49:24.325Z",
+      "utcCheckedDateTime": "2026-10-04T09:10:19.570Z",
       "utcSetDateTime": "2026-09-28T17:41:42.732Z"
     },
     {
@@ -78921,6 +79053,248 @@
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
       "utcSetDateTime": "2026-10-03T22:27:41.956Z"
+    },
+    {
+      "id": 24843,
+      "pinTickerId": 2873,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 58.4,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:53:20.479Z",
+      "utcSetDateTime": "2026-10-04T03:53:17.689Z"
+    },
+    {
+      "id": 24844,
+      "pinTickerId": 2873,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-22T00:00:00.000Z",
+      "day": "2026-09-22",
+      "price": 61.08,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:53:18.056Z",
+      "utcSetDateTime": "2026-10-04T03:53:17.738Z"
+    },
+    {
+      "id": 24845,
+      "pinTickerId": 2874,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 58.4,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:53:57.132Z",
+      "utcSetDateTime": "2026-10-04T03:53:55.314Z"
+    },
+    {
+      "id": 24846,
+      "pinTickerId": 2874,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-30T00:00:00.000Z",
+      "day": "2026-09-30",
+      "price": 57.82,
+      "utcPriceDateTime": "2026-09-30T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:53:55.362Z",
+      "utcSetDateTime": "2026-10-04T03:53:55.337Z"
+    },
+    {
+      "id": 24847,
+      "pinTickerId": 2875,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 58.4,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:54:16.100Z",
+      "utcSetDateTime": "2026-10-04T03:54:14.055Z"
+    },
+    {
+      "id": 24848,
+      "pinTickerId": 2875,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-30T00:00:00.000Z",
+      "day": "2026-09-30",
+      "price": 57.82,
+      "utcPriceDateTime": "2026-09-30T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:54:14.301Z",
+      "utcSetDateTime": "2026-10-04T03:54:14.126Z"
+    },
+    {
+      "id": 24849,
+      "pinTickerId": 2876,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 58.4,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:57:10.050Z",
+      "utcSetDateTime": "2026-10-04T03:57:08.729Z"
+    },
+    {
+      "id": 24850,
+      "pinTickerId": 2876,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-12T00:00:00.000Z",
+      "day": "2026-09-12",
+      "price": 62.44,
+      "utcPriceDateTime": "2026-09-11T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:57:08.824Z",
+      "utcSetDateTime": "2026-10-04T03:57:08.784Z"
+    },
+    {
+      "id": 24851,
+      "pinTickerId": 2877,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 160.19,
+      "utcPriceDateTime": "2026-10-02T23:30:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:59:04.789Z",
+      "utcSetDateTime": "2026-10-04T03:59:02.323Z"
+    },
+    {
+      "id": 24852,
+      "pinTickerId": 2877,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+      "day": "2026-09-01",
+      "price": 176,
+      "utcPriceDateTime": "2026-09-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T03:59:02.630Z",
+      "utcSetDateTime": "2026-10-04T03:59:02.340Z"
+    },
+    {
+      "id": 24853,
+      "pinTickerId": 2878,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 58.4,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T04:26:16.892Z",
+      "utcSetDateTime": "2026-10-04T04:26:15.075Z"
+    },
+    {
+      "id": 24854,
+      "pinTickerId": 2878,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-04T00:00:00.000Z",
+      "day": "2026-09-04",
+      "price": 61.28,
+      "utcPriceDateTime": "2026-09-04T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T04:26:15.317Z",
+      "utcSetDateTime": "2026-10-04T04:26:15.121Z"
+    },
+    {
+      "id": 24855,
+      "pinTickerId": 2879,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 9.3,
+      "utcPriceDateTime": "2026-10-02T23:30:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T04:27:01.347Z",
+      "utcSetDateTime": "2026-10-04T04:26:58.695Z"
+    },
+    {
+      "id": 24856,
+      "pinTickerId": 2879,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-03T00:00:00.000Z",
+      "day": "2026-09-03",
+      "price": 9.15,
+      "utcPriceDateTime": "2026-09-03T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T04:26:59.214Z",
+      "utcSetDateTime": "2026-10-04T04:26:58.706Z"
+    },
+    {
+      "id": 25031,
+      "pinTickerId": 2880,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 333.53,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T05:04:53.324Z",
+      "utcSetDateTime": "2026-10-04T05:04:48.658Z"
+    },
+    {
+      "id": 25033,
+      "pinTickerId": 2880,
+      "kind": "start",
+      "utcStartDateTime": "2025-12-31T00:00:00.000Z",
+      "day": "2025-12-31",
+      "price": 271.86,
+      "utcPriceDateTime": "2025-12-31T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T05:04:49.649Z",
+      "utcSetDateTime": "2026-10-04T05:04:49.045Z"
+    },
+    {
+      "id": 25035,
+      "pinTickerId": 2882,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 333.53,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T05:05:09.774Z",
+      "utcSetDateTime": "2026-10-04T05:05:07.160Z"
+    },
+    {
+      "id": 25036,
+      "pinTickerId": 2882,
+      "kind": "start",
+      "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+      "day": "2026-12-31",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-04T05:05:07.185Z"
+    },
+    {
+      "id": 25039,
+      "pinTickerId": 2884,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 333.53,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T05:05:28.339Z",
+      "utcSetDateTime": "2026-10-04T05:05:25.679Z"
+    },
+    {
+      "id": 25040,
+      "pinTickerId": 2884,
+      "kind": "start",
+      "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+      "day": "2026-12-31",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-04T05:05:25.735Z"
+    },
+    {
+      "id": 25043,
+      "pinTickerId": 2885,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 333.53,
+      "utcPriceDateTime": "2026-10-02T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-04T05:05:47.318Z",
+      "utcSetDateTime": "2026-10-04T05:05:45.926Z"
+    },
+    {
+      "id": 25044,
+      "pinTickerId": 2885,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-31T00:00:00.000Z",
+      "day": "2026-10-31",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-04T05:05:45.990Z"
     }
   ],
   "relations": [

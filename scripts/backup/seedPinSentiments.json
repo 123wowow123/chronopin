@@ -38838,5 +38838,1069 @@
     "utcScoredDateTime": "2026-10-03T22:41:36.857Z",
     "product": null,
     "productHash": "384b8b53f936483eb4a8303bc9495562f1f1fb3b23c41adba92fdcc592a4dcef"
+  },
+  {
+    "pinId": 5609,
+    "sentiment": 0.4,
+    "textHash": "5e4a8d2a9b88ac41bb754937a1092041ef8cb8cdcbb0415c2ce9d847cdae6200",
+    "utcScoredDateTime": "2026-10-04T03:53:16.177Z",
+    "product": "Toblerone",
+    "productHash": "5e4a8d2a9b88ac41bb754937a1092041ef8cb8cdcbb0415c2ce9d847cdae6200"
+  },
+  {
+    "pinId": 5610,
+    "sentiment": 0.4,
+    "textHash": "23f82fc504fcf7f146d941ff0d385a6dedda9217b272e1a4be89f800a726660c",
+    "utcScoredDateTime": "2026-10-04T03:53:36.572Z",
+    "product": "KitKat",
+    "productHash": "23f82fc504fcf7f146d941ff0d385a6dedda9217b272e1a4be89f800a726660c"
+  },
+  {
+    "pinId": 5611,
+    "sentiment": 0.4,
+    "textHash": "ed595317895debfffa95427ad39efc20f20b5966ecf654a72d1573407f392289",
+    "utcScoredDateTime": "2026-10-04T03:53:55.118Z",
+    "product": "Cadbury Dairy Milk",
+    "productHash": "ed595317895debfffa95427ad39efc20f20b5966ecf654a72d1573407f392289"
+  },
+  {
+    "pinId": 5612,
+    "sentiment": 0.4,
+    "textHash": "9bce7a2ead258d920bbafaf8edb78920b3894e9e232d35f4d2815bcfaf6ff5ee",
+    "utcScoredDateTime": "2026-10-04T03:54:13.767Z",
+    "product": "Cadbury Dairy Milk",
+    "productHash": "9bce7a2ead258d920bbafaf8edb78920b3894e9e232d35f4d2815bcfaf6ff5ee"
+  },
+  {
+    "pinId": 5613,
+    "sentiment": 0.4,
+    "textHash": "478b766be3c7346a04a1fe4acb56c9d4004681f620fbafe8a6bfa11aceeac44b",
+    "utcScoredDateTime": "2026-10-04T03:54:32.402Z",
+    "product": "Haribo",
+    "productHash": "478b766be3c7346a04a1fe4acb56c9d4004681f620fbafe8a6bfa11aceeac44b"
+  },
+  {
+    "pinId": 5614,
+    "sentiment": 0.3,
+    "textHash": "851e886178c085f7e440b2ebda80f1cbb9f4f55edc78cac0ca0afcefd224af98",
+    "utcScoredDateTime": "2026-10-04T03:54:51.682Z",
+    "product": "Koala's March",
+    "productHash": "851e886178c085f7e440b2ebda80f1cbb9f4f55edc78cac0ca0afcefd224af98"
+  },
+  {
+    "pinId": 5615,
+    "sentiment": 0.3,
+    "textHash": "5815007a6e1c419eb61ca3a854ee5d8638ba46a6a39ed14ae1eb4c44ed3764db",
+    "utcScoredDateTime": "2026-10-04T03:55:08.576Z",
+    "product": "Rummy",
+    "productHash": "5815007a6e1c419eb61ca3a854ee5d8638ba46a6a39ed14ae1eb4c44ed3764db"
+  },
+  {
+    "pinId": 5616,
+    "sentiment": 0.4,
+    "textHash": "e3cfb65900985a8a94c224c1d897a0e4c6f9fad5080046f4553ed031e035357f",
+    "utcScoredDateTime": "2026-10-04T03:55:15.412Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "e3cfb65900985a8a94c224c1d897a0e4c6f9fad5080046f4553ed031e035357f"
+  },
+  {
+    "pinId": 5617,
+    "sentiment": 0.3,
+    "textHash": "e01a2d920b19e228cc692790885626fba00d1ad4138b867c237f94abe9d46584",
+    "utcScoredDateTime": "2026-10-04T03:55:26.747Z",
+    "product": "Hi-Chew",
+    "productHash": "e01a2d920b19e228cc692790885626fba00d1ad4138b867c237f94abe9d46584"
+  },
+  {
+    "pinId": 5618,
+    "sentiment": 0.5,
+    "textHash": "5c08d4b7c1827c55ffc83b928052eed7f77df5f75cb28a0283e42cf3a8b44805",
+    "utcScoredDateTime": "2026-10-04T03:55:34.034Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "5c08d4b7c1827c55ffc83b928052eed7f77df5f75cb28a0283e42cf3a8b44805"
+  },
+  {
+    "pinId": 5619,
+    "sentiment": 0.3,
+    "textHash": "2145eebe5ab8d05135a886af3dc0e37d7f8a542823ae227ca5d7160c987f9386",
+    "utcScoredDateTime": "2026-10-04T03:55:45.458Z",
+    "product": "Galette Sand",
+    "productHash": "2145eebe5ab8d05135a886af3dc0e37d7f8a542823ae227ca5d7160c987f9386"
+  },
+  {
+    "pinId": 5620,
+    "sentiment": 0.3,
+    "textHash": "6c6d4c6fcfb0fd588100feced3374ca44f79adf8fc02597352ed8ddb273e4f54",
+    "utcScoredDateTime": "2026-10-04T03:55:54.366Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "6c6d4c6fcfb0fd588100feced3374ca44f79adf8fc02597352ed8ddb273e4f54"
+  },
+  {
+    "pinId": 5621,
+    "sentiment": 0.3,
+    "textHash": "432264bcdfcc0f5569b44bfb37ea000213a317c348431bb5a25a71b0582fc1e4",
+    "utcScoredDateTime": "2026-10-04T03:56:07.155Z",
+    "product": "Jagarico",
+    "productHash": "432264bcdfcc0f5569b44bfb37ea000213a317c348431bb5a25a71b0582fc1e4"
+  },
+  {
+    "pinId": 5622,
+    "sentiment": 0.2,
+    "textHash": "9a254532974d806a2f02fe02f02cc4e57bfecc722850d479435a6453140a70de",
+    "utcScoredDateTime": "2026-10-04T03:56:16.480Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9a254532974d806a2f02fe02f02cc4e57bfecc722850d479435a6453140a70de"
+  },
+  {
+    "pinId": 5623,
+    "sentiment": 0.3,
+    "textHash": "170156c1ec105a9912d80e656ecec6253aa06a38a8c3d19924e546d85753cc16",
+    "utcScoredDateTime": "2026-10-04T03:56:28.441Z",
+    "product": "Pure Potato",
+    "productHash": "170156c1ec105a9912d80e656ecec6253aa06a38a8c3d19924e546d85753cc16"
+  },
+  {
+    "pinId": 5624,
+    "sentiment": 0.4,
+    "textHash": "2f8c21a20f508dd23ebfcb1a1df34abcaaf733b43f70370197c75066ad16b20e",
+    "utcScoredDateTime": "2026-10-04T03:56:37.644Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "2f8c21a20f508dd23ebfcb1a1df34abcaaf733b43f70370197c75066ad16b20e"
+  },
+  {
+    "pinId": 5625,
+    "sentiment": 0.4,
+    "textHash": "71728e6da529ae0307944bb55c3e9cda3ddc5e8f5ccba0060a055fc8932621d3",
+    "utcScoredDateTime": "2026-10-04T03:56:50.514Z",
+    "product": "Yangpa Ring",
+    "productHash": "71728e6da529ae0307944bb55c3e9cda3ddc5e8f5ccba0060a055fc8932621d3"
+  },
+  {
+    "pinId": 5626,
+    "sentiment": 0.5,
+    "textHash": "28b98a3998d297f6ffb2fb5b9c143b6ecf88133a83bdb91f62644740d2a39247",
+    "utcScoredDateTime": "2026-10-04T03:56:56.058Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "28b98a3998d297f6ffb2fb5b9c143b6ecf88133a83bdb91f62644740d2a39247"
+  },
+  {
+    "pinId": 5627,
+    "sentiment": 0.4,
+    "textHash": "17aee1f46ab4dc50f3ef6163f4373df486ad650f3305cd2cfb9aa31cbc21bf72",
+    "utcScoredDateTime": "2026-10-04T03:57:08.641Z",
+    "product": "Oreo",
+    "productHash": "17aee1f46ab4dc50f3ef6163f4373df486ad650f3305cd2cfb9aa31cbc21bf72"
+  },
+  {
+    "pinId": 5628,
+    "sentiment": 0.5,
+    "textHash": "88ccf68542c8e5d456d667935c800ef04910a5a8ab24ed18afa0f760d9570504",
+    "utcScoredDateTime": "2026-10-04T03:57:14.584Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "88ccf68542c8e5d456d667935c800ef04910a5a8ab24ed18afa0f760d9570504"
+  },
+  {
+    "pinId": 5629,
+    "sentiment": 0.3,
+    "textHash": "4d741ab8b514100c026c61408df23c58be0df2160cc6f557a1b84522d85f3b7f",
+    "utcScoredDateTime": "2026-10-04T03:57:28.142Z",
+    "product": "Avvatar",
+    "productHash": "4d741ab8b514100c026c61408df23c58be0df2160cc6f557a1b84522d85f3b7f"
+  },
+  {
+    "pinId": 5630,
+    "sentiment": 0.5,
+    "textHash": "37ad31c40ef6c46e9cdf470ebfd147655540bd074634357a7bf28e21fcd02d68",
+    "utcScoredDateTime": "2026-10-04T03:57:33.399Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "37ad31c40ef6c46e9cdf470ebfd147655540bd074634357a7bf28e21fcd02d68"
+  },
+  {
+    "pinId": 5631,
+    "sentiment": 0.3,
+    "textHash": "1316dc2ed534c83c32d6275d8ad34aec0b3e4aaeb930dc565c10a369156a08c1",
+    "utcScoredDateTime": "2026-10-04T03:57:56.282Z",
+    "product": "Funday",
+    "productHash": "1316dc2ed534c83c32d6275d8ad34aec0b3e4aaeb930dc565c10a369156a08c1"
+  },
+  {
+    "pinId": 5632,
+    "sentiment": 0.6,
+    "textHash": "562ddbbfb8a5bf2400c002b2a5b935bbf56319d447386804c2e43b1a0f9d9255",
+    "utcScoredDateTime": "2026-10-04T03:57:56.926Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "562ddbbfb8a5bf2400c002b2a5b935bbf56319d447386804c2e43b1a0f9d9255"
+  },
+  {
+    "pinId": 5633,
+    "sentiment": 0.4,
+    "textHash": "fc7dca3a0498ce16b3bf506cc56d26369222486e5eee745d2e6dd0c836c17776",
+    "utcScoredDateTime": "2026-10-04T03:58:26.175Z",
+    "product": "Funday",
+    "productHash": "fc7dca3a0498ce16b3bf506cc56d26369222486e5eee745d2e6dd0c836c17776"
+  },
+  {
+    "pinId": 5634,
+    "sentiment": 0.4,
+    "textHash": "92c2632b6e1bf33f5c0014d411bba981c6d10c5a650ed6e54373533bcd84d25b",
+    "utcScoredDateTime": "2026-10-04T03:58:30.706Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "92c2632b6e1bf33f5c0014d411bba981c6d10c5a650ed6e54373533bcd84d25b"
+  },
+  {
+    "pinId": 5635,
+    "sentiment": 0.4,
+    "textHash": "008cc3db0e2ce7968d3de2316417f04743be3f0b099cb3b8853023981c25274b",
+    "utcScoredDateTime": "2026-10-04T03:58:44.482Z",
+    "product": "Skittles",
+    "productHash": "008cc3db0e2ce7968d3de2316417f04743be3f0b099cb3b8853023981c25274b"
+  },
+  {
+    "pinId": 5636,
+    "sentiment": 0.5,
+    "textHash": "2d471bda6d31386caf909fe65f1f10f7ec76285268f0c97c367296af5976041f",
+    "utcScoredDateTime": "2026-10-04T03:58:48.514Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "2d471bda6d31386caf909fe65f1f10f7ec76285268f0c97c367296af5976041f"
+  },
+  {
+    "pinId": 5637,
+    "sentiment": 0.4,
+    "textHash": "76b4976842eb419297111d825ad07ce8f4ec0e7da83249439d90c18741311ab7",
+    "utcScoredDateTime": "2026-10-04T03:59:01.653Z",
+    "product": "Hershey's",
+    "productHash": "76b4976842eb419297111d825ad07ce8f4ec0e7da83249439d90c18741311ab7"
+  },
+  {
+    "pinId": 5638,
+    "sentiment": 0.4,
+    "textHash": "dac7087e87eb659f9883d42bf9a59e3dbe88417be3ac8fb3722955fabfad3d02",
+    "utcScoredDateTime": "2026-10-04T03:59:07.676Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "dac7087e87eb659f9883d42bf9a59e3dbe88417be3ac8fb3722955fabfad3d02"
+  },
+  {
+    "pinId": 5639,
+    "sentiment": 0.4,
+    "textHash": "6b9b0fc57b972a726fc7d8771a926982b5a575be3f61d5151b2561d6369da016",
+    "utcScoredDateTime": "2026-10-04T03:59:20.247Z",
+    "product": "Girl Scout Cookies",
+    "productHash": "6b9b0fc57b972a726fc7d8771a926982b5a575be3f61d5151b2561d6369da016"
+  },
+  {
+    "pinId": 5640,
+    "sentiment": 0.2,
+    "textHash": "a8a209be8af2879dffafb362e64a711dadaef8ebbb0a2ee84255e9269dc051e4",
+    "utcScoredDateTime": "2026-10-04T03:59:28.664Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "a8a209be8af2879dffafb362e64a711dadaef8ebbb0a2ee84255e9269dc051e4"
+  },
+  {
+    "pinId": 5641,
+    "sentiment": 0.2,
+    "textHash": "9dfcc7eaefdc2c3b6c1985a15af9a577051a96470cec1cd1b2524e07b5012b2f",
+    "utcScoredDateTime": "2026-10-04T03:59:47.609Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9dfcc7eaefdc2c3b6c1985a15af9a577051a96470cec1cd1b2524e07b5012b2f"
+  },
+  {
+    "pinId": 5642,
+    "sentiment": 0.4,
+    "textHash": "8146678eeba647239b3a31b33c46cfb0f53fb88e62ebc15280ef13d5b52473cd",
+    "utcScoredDateTime": "2026-10-04T04:00:04.756Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "8146678eeba647239b3a31b33c46cfb0f53fb88e62ebc15280ef13d5b52473cd"
+  },
+  {
+    "pinId": 5643,
+    "sentiment": 0.5,
+    "textHash": "4efc84acd1dc8149425e5d11b0069b3f51eae3e294d1330bc482904aed2ee7eb",
+    "utcScoredDateTime": "2026-10-04T04:00:31.398Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "4efc84acd1dc8149425e5d11b0069b3f51eae3e294d1330bc482904aed2ee7eb"
+  },
+  {
+    "pinId": 5644,
+    "sentiment": 0.4,
+    "textHash": "40efae4111df17dbc2f50e5c90a74896fda9035ccecedc21d07a11d0d558fb02",
+    "utcScoredDateTime": "2026-10-04T04:00:49.702Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "40efae4111df17dbc2f50e5c90a74896fda9035ccecedc21d07a11d0d558fb02"
+  },
+  {
+    "pinId": 5645,
+    "sentiment": 0.6,
+    "textHash": "19c86a50c946f30098b6755a88667a96c2efa8c68e2678973c0883723b456f70",
+    "utcScoredDateTime": "2026-10-04T04:01:07.675Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "19c86a50c946f30098b6755a88667a96c2efa8c68e2678973c0883723b456f70"
+  },
+  {
+    "pinId": 5646,
+    "sentiment": 0.4,
+    "textHash": "af7c4ca760f21f2034dde5ea2da8f62fde6c197b4e09c0bf724e32043af4b2d2",
+    "utcScoredDateTime": "2026-10-04T04:01:26.865Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "af7c4ca760f21f2034dde5ea2da8f62fde6c197b4e09c0bf724e32043af4b2d2"
+  },
+  {
+    "pinId": 5647,
+    "sentiment": 0.3,
+    "textHash": "b8310bf9e0fa878868ab82ca1194349e38dbe4850cb4743976a1464ba3180cdb",
+    "utcScoredDateTime": "2026-10-04T04:01:44.720Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "b8310bf9e0fa878868ab82ca1194349e38dbe4850cb4743976a1464ba3180cdb"
+  },
+  {
+    "pinId": 5648,
+    "sentiment": 0.7,
+    "textHash": "33becfafa9f5d08d56124089b2de9cb7a53309935a69c8f372eeea61ca0e79e0",
+    "utcScoredDateTime": "2026-10-04T04:02:02.875Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "33becfafa9f5d08d56124089b2de9cb7a53309935a69c8f372eeea61ca0e79e0"
+  },
+  {
+    "pinId": 5649,
+    "sentiment": 0.4,
+    "textHash": "e5a08b2a03a67cb3294877cf89a70fb90eec949f06f8dbbceeb976c1778adb73",
+    "utcScoredDateTime": "2026-10-04T04:02:23.711Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "e5a08b2a03a67cb3294877cf89a70fb90eec949f06f8dbbceeb976c1778adb73"
+  },
+  {
+    "pinId": 5650,
+    "sentiment": 0.5,
+    "textHash": "1b2f9bf2e4577a69bc3248df10f8e30124b3eeddb6b76b84aed368ce8540446c",
+    "utcScoredDateTime": "2026-10-04T04:02:50.305Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "1b2f9bf2e4577a69bc3248df10f8e30124b3eeddb6b76b84aed368ce8540446c"
+  },
+  {
+    "pinId": 5651,
+    "sentiment": 0.2,
+    "textHash": "40724b3ea0dbe0763eb3e4dd575eea4c4bb1aff3829e34a816fea8c095d74c7c",
+    "utcScoredDateTime": "2026-10-04T04:03:11.356Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "40724b3ea0dbe0763eb3e4dd575eea4c4bb1aff3829e34a816fea8c095d74c7c"
+  },
+  {
+    "pinId": 5652,
+    "sentiment": 0.5,
+    "textHash": "9ef2481731d9292c0d20df01acc336d9533dcb1cf06ff3934cabe18001c0491b",
+    "utcScoredDateTime": "2026-10-04T04:03:31.324Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9ef2481731d9292c0d20df01acc336d9533dcb1cf06ff3934cabe18001c0491b"
+  },
+  {
+    "pinId": 5653,
+    "sentiment": 0.6,
+    "textHash": "c877f50ffd0568b9d632db76b5d2b6033aff4b644b36b39874d3ecc6983a21d2",
+    "utcScoredDateTime": "2026-10-04T04:03:49.932Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "c877f50ffd0568b9d632db76b5d2b6033aff4b644b36b39874d3ecc6983a21d2"
+  },
+  {
+    "pinId": 5654,
+    "sentiment": 0.4,
+    "textHash": "558b35b215bf6ca26179a4f8f3fbcca25dfcaa77771792b575b8689546be99d3",
+    "utcScoredDateTime": "2026-10-04T04:04:08.762Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "558b35b215bf6ca26179a4f8f3fbcca25dfcaa77771792b575b8689546be99d3"
+  },
+  {
+    "pinId": 5655,
+    "sentiment": 0.5,
+    "textHash": "38bc308d38be7298dd4f3de763c825a0a359a13ec5d320dfa105f1f4c8069e7e",
+    "utcScoredDateTime": "2026-10-04T04:04:26.832Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "38bc308d38be7298dd4f3de763c825a0a359a13ec5d320dfa105f1f4c8069e7e"
+  },
+  {
+    "pinId": 5656,
+    "sentiment": 0.3,
+    "textHash": "9f268045e3130fb895b2bbb2bc556a3b5b035ce9f003982d3ca46d6cd8cad83e",
+    "utcScoredDateTime": "2026-10-04T04:04:45.131Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9f268045e3130fb895b2bbb2bc556a3b5b035ce9f003982d3ca46d6cd8cad83e"
+  },
+  {
+    "pinId": 5657,
+    "sentiment": 0.5,
+    "textHash": "d0c6af0d28f92a7719b7237d382c6a6b51b44374dfcb3b7f248fe2c3b41cb9d6",
+    "utcScoredDateTime": "2026-10-04T04:05:05.350Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "d0c6af0d28f92a7719b7237d382c6a6b51b44374dfcb3b7f248fe2c3b41cb9d6"
+  },
+  {
+    "pinId": 5658,
+    "sentiment": 0.2,
+    "textHash": "1d3579552386323110f12fa1f2bd6118b4960adc21c7e6c1d58598706eb8337c",
+    "utcScoredDateTime": "2026-10-04T04:05:22.769Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "1d3579552386323110f12fa1f2bd6118b4960adc21c7e6c1d58598706eb8337c"
+  },
+  {
+    "pinId": 5659,
+    "sentiment": 0.6,
+    "textHash": "f75ff2e01926656d16025fae8f6a55a2f5312db367beacd2883a51543c651a19",
+    "utcScoredDateTime": "2026-10-04T04:05:43.070Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "f75ff2e01926656d16025fae8f6a55a2f5312db367beacd2883a51543c651a19"
+  },
+  {
+    "pinId": 5660,
+    "sentiment": 0.6,
+    "textHash": "448e4cde0c394c4856665c4ec97585829ff761e3aacd9d093b5a607313b0e315",
+    "utcScoredDateTime": "2026-10-04T04:06:02.797Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "448e4cde0c394c4856665c4ec97585829ff761e3aacd9d093b5a607313b0e315"
+  },
+  {
+    "pinId": 5661,
+    "sentiment": 0.3,
+    "textHash": "e2cb79f9922bef3d13275c74e4ca2d06aab8a4080bd6e95feca7c806bd5cbb65",
+    "utcScoredDateTime": "2026-10-04T04:06:21.801Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "e2cb79f9922bef3d13275c74e4ca2d06aab8a4080bd6e95feca7c806bd5cbb65"
+  },
+  {
+    "pinId": 5662,
+    "sentiment": 0.5,
+    "textHash": "11b02c4ebce6205508adea2d3702facaefe15da80e180950f1196218fa3ba241",
+    "utcScoredDateTime": "2026-10-04T04:06:42.468Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "11b02c4ebce6205508adea2d3702facaefe15da80e180950f1196218fa3ba241"
+  },
+  {
+    "pinId": 5663,
+    "sentiment": 0.6,
+    "textHash": "d5c71b528f4a9862bd74826dd7301c1f6571bc9fb3460535c577a9c36f43187c",
+    "utcScoredDateTime": "2026-10-04T04:07:06.667Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "d5c71b528f4a9862bd74826dd7301c1f6571bc9fb3460535c577a9c36f43187c"
+  },
+  {
+    "pinId": 5664,
+    "sentiment": 0,
+    "textHash": "2ed78799719a53303588714a0179f8d291e83887dc0b84682d9fd36852a388a5",
+    "utcScoredDateTime": "2026-10-04T04:07:30.512Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "2ed78799719a53303588714a0179f8d291e83887dc0b84682d9fd36852a388a5"
+  },
+  {
+    "pinId": 5665,
+    "sentiment": 0.5,
+    "textHash": "1f5d02402507186a2118cc4910d531106b468e8bcb347e13d3bd561541286e7b",
+    "utcScoredDateTime": "2026-10-04T04:07:49.014Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "1f5d02402507186a2118cc4910d531106b468e8bcb347e13d3bd561541286e7b"
+  },
+  {
+    "pinId": 5666,
+    "sentiment": 0.6,
+    "textHash": "9d964fa6b189dec10a43180f23a3f6135a8c492469721fd11f0039decd994243",
+    "utcScoredDateTime": "2026-10-04T04:08:07.193Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9d964fa6b189dec10a43180f23a3f6135a8c492469721fd11f0039decd994243"
+  },
+  {
+    "pinId": 5667,
+    "sentiment": 0.7,
+    "textHash": "e8d6eff299d3dcf38717f666a25c802553f34a9aa63c1859d3fe3b138525ae2f",
+    "utcScoredDateTime": "2026-10-04T04:08:24.905Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "e8d6eff299d3dcf38717f666a25c802553f34a9aa63c1859d3fe3b138525ae2f"
+  },
+  {
+    "pinId": 5668,
+    "sentiment": 0.5,
+    "textHash": "16ce8547cf638ac3435d91d5f9f2dd14d5576424fcc966086690291395297aee",
+    "utcScoredDateTime": "2026-10-04T04:08:43.930Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "16ce8547cf638ac3435d91d5f9f2dd14d5576424fcc966086690291395297aee"
+  },
+  {
+    "pinId": 5669,
+    "sentiment": 0.6,
+    "textHash": "9d20ae14be6ee6d5285c05fceca28dfded5025222bb7e2a606d0ff536d89b670",
+    "utcScoredDateTime": "2026-10-04T04:09:03.810Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9d20ae14be6ee6d5285c05fceca28dfded5025222bb7e2a606d0ff536d89b670"
+  },
+  {
+    "pinId": 5670,
+    "sentiment": 0.4,
+    "textHash": "1dd134f30dbf824e5e52b1c997f170fca4faef2876261b0a1ab77df5e3476011",
+    "utcScoredDateTime": "2026-10-04T04:09:21.699Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "1dd134f30dbf824e5e52b1c997f170fca4faef2876261b0a1ab77df5e3476011"
+  },
+  {
+    "pinId": 5671,
+    "sentiment": 0.6,
+    "textHash": "e27e13f511e84a084a050ad6577aee7dfd9b8e0e8e84b0c8b96b9124b61f71de",
+    "utcScoredDateTime": "2026-10-04T04:09:39.554Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "e27e13f511e84a084a050ad6577aee7dfd9b8e0e8e84b0c8b96b9124b61f71de"
+  },
+  {
+    "pinId": 5672,
+    "sentiment": 0.1,
+    "textHash": "0b93bf48c1e174a326512271daa83e95638390cfa05eb4e91125c3d26f94af62",
+    "utcScoredDateTime": "2026-10-04T04:09:57.299Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "0b93bf48c1e174a326512271daa83e95638390cfa05eb4e91125c3d26f94af62"
+  },
+  {
+    "pinId": 5673,
+    "sentiment": 0.2,
+    "textHash": "f6832c07cfaa0e8331284aa2cba797539e170ff7dde42e185c2166649f8daaed",
+    "utcScoredDateTime": "2026-10-04T04:10:15.086Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "f6832c07cfaa0e8331284aa2cba797539e170ff7dde42e185c2166649f8daaed"
+  },
+  {
+    "pinId": 5674,
+    "sentiment": 0.4,
+    "textHash": "0ea03212e32f85939a540ee951ff56ce7eecc07cc2fcde2012648b5be8a05b86",
+    "utcScoredDateTime": "2026-10-04T04:10:33.445Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "0ea03212e32f85939a540ee951ff56ce7eecc07cc2fcde2012648b5be8a05b86"
+  },
+  {
+    "pinId": 5675,
+    "sentiment": 0.3,
+    "textHash": "a048196c6b7417e0408a14535649541ed91a633940a6d1ccf0484b52033b00ca",
+    "utcScoredDateTime": "2026-10-04T04:10:52.199Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "a048196c6b7417e0408a14535649541ed91a633940a6d1ccf0484b52033b00ca"
+  },
+  {
+    "pinId": 5676,
+    "sentiment": 0.5,
+    "textHash": "f0cb0a4cb1e4a705c3d49b327d293c17f0fd819041cc64775214d8f0c72fd279",
+    "utcScoredDateTime": "2026-10-04T04:11:09.800Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "f0cb0a4cb1e4a705c3d49b327d293c17f0fd819041cc64775214d8f0c72fd279"
+  },
+  {
+    "pinId": 5677,
+    "sentiment": 0.3,
+    "textHash": "fbc11ce1f22249b78e0fbe96008b3b323da47dfec6bc364607f394885cd2eb94",
+    "utcScoredDateTime": "2026-10-04T04:11:27.911Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "fbc11ce1f22249b78e0fbe96008b3b323da47dfec6bc364607f394885cd2eb94"
+  },
+  {
+    "pinId": 5678,
+    "sentiment": 0.6,
+    "textHash": "865a2df1332b5427a781995ba6a5d13e8be6fdc99ab5d81971c883896db81faf",
+    "utcScoredDateTime": "2026-10-04T04:11:48.716Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "865a2df1332b5427a781995ba6a5d13e8be6fdc99ab5d81971c883896db81faf"
+  },
+  {
+    "pinId": 5679,
+    "sentiment": 0.5,
+    "textHash": "9d9d1f110e008bcc38891bebaf82d8503a44fd536997ed9e9d775a33664ff87b",
+    "utcScoredDateTime": "2026-10-04T04:12:11.221Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9d9d1f110e008bcc38891bebaf82d8503a44fd536997ed9e9d775a33664ff87b"
+  },
+  {
+    "pinId": 5680,
+    "sentiment": 0.7,
+    "textHash": "0c390143afb3c39b3fa04bd0c7f5299ea2f9ee667a8c9b0f5d939bccf3f47987",
+    "utcScoredDateTime": "2026-10-04T04:12:31.299Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "0c390143afb3c39b3fa04bd0c7f5299ea2f9ee667a8c9b0f5d939bccf3f47987"
+  },
+  {
+    "pinId": 5681,
+    "sentiment": 0.5,
+    "textHash": "d5dc43a93a8ca21a686f2de3afcf3503b134c1663385c3d15d1691ea519c2dc2",
+    "utcScoredDateTime": "2026-10-04T04:12:48.511Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "d5dc43a93a8ca21a686f2de3afcf3503b134c1663385c3d15d1691ea519c2dc2"
+  },
+  {
+    "pinId": 5682,
+    "sentiment": 0.6,
+    "textHash": "99a3b72d19fa96496ba41172b7c1b96699d496ed1343d82e136f53a986ff1b18",
+    "utcScoredDateTime": "2026-10-04T04:13:10.717Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "99a3b72d19fa96496ba41172b7c1b96699d496ed1343d82e136f53a986ff1b18"
+  },
+  {
+    "pinId": 5683,
+    "sentiment": 0.3,
+    "textHash": "5aba303232043f9278967134013caff02c40dd47f70b6262df3011400d02f1ca",
+    "utcScoredDateTime": "2026-10-04T04:13:28.849Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "5aba303232043f9278967134013caff02c40dd47f70b6262df3011400d02f1ca"
+  },
+  {
+    "pinId": 5684,
+    "sentiment": 0.4,
+    "textHash": "96f1a01829f76be69076e6152c2a11743311bdb692b1c62f6ceb5943d09d865d",
+    "utcScoredDateTime": "2026-10-04T04:13:49.477Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "96f1a01829f76be69076e6152c2a11743311bdb692b1c62f6ceb5943d09d865d"
+  },
+  {
+    "pinId": 5685,
+    "sentiment": 0.5,
+    "textHash": "50d081bebe1ef0106ed5c68800f885b0681cbdd69b0b75a11c70ea8bca78e4a0",
+    "utcScoredDateTime": "2026-10-04T04:14:08.336Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "50d081bebe1ef0106ed5c68800f885b0681cbdd69b0b75a11c70ea8bca78e4a0"
+  },
+  {
+    "pinId": 5686,
+    "sentiment": 0.1,
+    "textHash": "87f2daf4ff8a9d54681e778e43de0227d5e24802be5d9b206972f89d75d83c6a",
+    "utcScoredDateTime": "2026-10-04T04:14:27.950Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "87f2daf4ff8a9d54681e778e43de0227d5e24802be5d9b206972f89d75d83c6a"
+  },
+  {
+    "pinId": 5687,
+    "sentiment": 0.6,
+    "textHash": "73cf171f1eb5629e7dc35228209b5a9e8662dc76199b8036a1c124a5bae58547",
+    "utcScoredDateTime": "2026-10-04T04:14:45.932Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "73cf171f1eb5629e7dc35228209b5a9e8662dc76199b8036a1c124a5bae58547"
+  },
+  {
+    "pinId": 5688,
+    "sentiment": 0.4,
+    "textHash": "78f2c334f09ae68c1f891bf03050f8474ff46d0970f02173cf50fdccb096c8dc",
+    "utcScoredDateTime": "2026-10-04T04:15:10.072Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "78f2c334f09ae68c1f891bf03050f8474ff46d0970f02173cf50fdccb096c8dc"
+  },
+  {
+    "pinId": 5689,
+    "sentiment": 0.5,
+    "textHash": "2d7cf37f516845a37f9ab808d0fe42db9d26b6b9779e2d26754962f3973f2497",
+    "utcScoredDateTime": "2026-10-04T04:15:28.140Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "2d7cf37f516845a37f9ab808d0fe42db9d26b6b9779e2d26754962f3973f2497"
+  },
+  {
+    "pinId": 5690,
+    "sentiment": 0.3,
+    "textHash": "dc5363d39e1b2be60d9e18c9dc9bfd1d4f7b21a4fc06e210db158ad35bad565b",
+    "utcScoredDateTime": "2026-10-04T04:15:47.408Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "dc5363d39e1b2be60d9e18c9dc9bfd1d4f7b21a4fc06e210db158ad35bad565b"
+  },
+  {
+    "pinId": 5691,
+    "sentiment": 0.2,
+    "textHash": "7a022fbb3d5d0a38c9674e100ff87d7e7b7806314f254c5746d1bb2904f86ac0",
+    "utcScoredDateTime": "2026-10-04T04:16:18.001Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "7a022fbb3d5d0a38c9674e100ff87d7e7b7806314f254c5746d1bb2904f86ac0"
+  },
+  {
+    "pinId": 5692,
+    "sentiment": 0.6,
+    "textHash": "40966db374ff3845e19f20d5d733b4cbe0c1265ba890b6a5486546360a15c6d4",
+    "utcScoredDateTime": "2026-10-04T04:16:37.385Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "40966db374ff3845e19f20d5d733b4cbe0c1265ba890b6a5486546360a15c6d4"
+  },
+  {
+    "pinId": 5693,
+    "sentiment": 0.5,
+    "textHash": "1180d9dd00fde8ef684f18a99f4dbff2c2262d5e01bc7fcc1fc47a2bac046e7d",
+    "utcScoredDateTime": "2026-10-04T04:16:56.322Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "1180d9dd00fde8ef684f18a99f4dbff2c2262d5e01bc7fcc1fc47a2bac046e7d"
+  },
+  {
+    "pinId": 5694,
+    "sentiment": 0.4,
+    "textHash": "10ad9505d2bb56e84aa0c2f6fc050e2c27306ae9f035be8a6b1c7013fa5e04ba",
+    "utcScoredDateTime": "2026-10-04T04:17:15.196Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "10ad9505d2bb56e84aa0c2f6fc050e2c27306ae9f035be8a6b1c7013fa5e04ba"
+  },
+  {
+    "pinId": 5695,
+    "sentiment": 0.1,
+    "textHash": "04a235752ebaecdd933cb41bd4456a91e09d5b493c12f6c0afa33c89171a373e",
+    "utcScoredDateTime": "2026-10-04T04:17:35.039Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "04a235752ebaecdd933cb41bd4456a91e09d5b493c12f6c0afa33c89171a373e"
+  },
+  {
+    "pinId": 5696,
+    "sentiment": 0.6,
+    "textHash": "3ea65c86aa52a438ff3c013b725977dc80aca783f76770c7548eb21e3f8062ce",
+    "utcScoredDateTime": "2026-10-04T04:17:53.389Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "3ea65c86aa52a438ff3c013b725977dc80aca783f76770c7548eb21e3f8062ce"
+  },
+  {
+    "pinId": 5697,
+    "sentiment": 0.7,
+    "textHash": "0bd448b1ac4ed4da4af1b85ea78062e3e8c75270f6b65093d0e4515b4c7b4137",
+    "utcScoredDateTime": "2026-10-04T04:18:13.637Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "0bd448b1ac4ed4da4af1b85ea78062e3e8c75270f6b65093d0e4515b4c7b4137"
+  },
+  {
+    "pinId": 5698,
+    "sentiment": 0.5,
+    "textHash": "8030802d10a0dec01a4aa4b937a7ec97fcb934058394cc27b312cb97e94c1b51",
+    "utcScoredDateTime": "2026-10-04T04:18:31.958Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "8030802d10a0dec01a4aa4b937a7ec97fcb934058394cc27b312cb97e94c1b51"
+  },
+  {
+    "pinId": 5699,
+    "sentiment": 0.5,
+    "textHash": "d39a2b1153077e0cdc7e8d3e1182279d418b169082c068f9e326caa599c4db3e",
+    "utcScoredDateTime": "2026-10-04T04:18:52.188Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "d39a2b1153077e0cdc7e8d3e1182279d418b169082c068f9e326caa599c4db3e"
+  },
+  {
+    "pinId": 5700,
+    "sentiment": 0.5,
+    "textHash": "dbd62c4c423c96f58f4366ca178a441a27c58746509604734d2d2d6a11e80061",
+    "utcScoredDateTime": "2026-10-04T04:19:10.132Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "dbd62c4c423c96f58f4366ca178a441a27c58746509604734d2d2d6a11e80061"
+  },
+  {
+    "pinId": 5701,
+    "sentiment": 0.4,
+    "textHash": "da3057fdbe9ada1489e4a0ddd783666916d03f241e3e0a27b2157bd314efa64f",
+    "utcScoredDateTime": "2026-10-04T04:19:29.707Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "da3057fdbe9ada1489e4a0ddd783666916d03f241e3e0a27b2157bd314efa64f"
+  },
+  {
+    "pinId": 5702,
+    "sentiment": 0.5,
+    "textHash": "b472eb777108be47cefb07b190bdf3ff93f525f6f4512c2dfb7474de50051e56",
+    "utcScoredDateTime": "2026-10-04T04:19:49.514Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "b472eb777108be47cefb07b190bdf3ff93f525f6f4512c2dfb7474de50051e56"
+  },
+  {
+    "pinId": 5703,
+    "sentiment": 0.4,
+    "textHash": "746ea8b0196a8b4a818f2c81e34a336cc780f0afa7b5a3ac54e4919f44521e69",
+    "utcScoredDateTime": "2026-10-04T04:20:07.558Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "746ea8b0196a8b4a818f2c81e34a336cc780f0afa7b5a3ac54e4919f44521e69"
+  },
+  {
+    "pinId": 5704,
+    "sentiment": 0.4,
+    "textHash": "b745f9267665776fc17ddbfc838d1dead52a2d5b8872ff58433ebab5fd3fcef9",
+    "utcScoredDateTime": "2026-10-04T04:20:26.630Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "b745f9267665776fc17ddbfc838d1dead52a2d5b8872ff58433ebab5fd3fcef9"
+  },
+  {
+    "pinId": 5705,
+    "sentiment": 0.4,
+    "textHash": "b2c0c9c5bd3122fdfa0a3af806d8e464360d52df06cfabead642ce7a9abb1bf2",
+    "utcScoredDateTime": "2026-10-04T04:20:44.956Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "b2c0c9c5bd3122fdfa0a3af806d8e464360d52df06cfabead642ce7a9abb1bf2"
+  },
+  {
+    "pinId": 5706,
+    "sentiment": 0.5,
+    "textHash": "a554d6e5e637a3f6efb6187b8e13a5bea19769db0642e6cf080b93c651906d5d",
+    "utcScoredDateTime": "2026-10-04T04:21:03.533Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "a554d6e5e637a3f6efb6187b8e13a5bea19769db0642e6cf080b93c651906d5d"
+  },
+  {
+    "pinId": 5707,
+    "sentiment": 0.6,
+    "textHash": "e78fcea7c2c8e70b027c39c7940dca010262f1cf7aa528bd3f356a84cc4314c4",
+    "utcScoredDateTime": "2026-10-04T04:21:23.638Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "e78fcea7c2c8e70b027c39c7940dca010262f1cf7aa528bd3f356a84cc4314c4"
+  },
+  {
+    "pinId": 5708,
+    "sentiment": 0.5,
+    "textHash": "e57785196045ea629134b6d6141df59a92ef0f2b85c204aabb05bfc3c2d64ca8",
+    "utcScoredDateTime": "2026-10-04T04:21:41.722Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "e57785196045ea629134b6d6141df59a92ef0f2b85c204aabb05bfc3c2d64ca8"
+  },
+  {
+    "pinId": 5709,
+    "sentiment": 0.4,
+    "textHash": "9a1d7ea88914a6b6964b4f9b93b801e9efa1d322962f2fa423c3fba3e01dba06",
+    "utcScoredDateTime": "2026-10-04T04:22:10.397Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9a1d7ea88914a6b6964b4f9b93b801e9efa1d322962f2fa423c3fba3e01dba06"
+  },
+  {
+    "pinId": 5710,
+    "sentiment": 0.5,
+    "textHash": "7197e5401568d3ebd38a429233fb6775db243588308480a256551d2c73a09a13",
+    "utcScoredDateTime": "2026-10-04T04:22:28.647Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "7197e5401568d3ebd38a429233fb6775db243588308480a256551d2c73a09a13"
+  },
+  {
+    "pinId": 5711,
+    "sentiment": 0.4,
+    "textHash": "ab2e163bc676d62a986d4c1446244edcfb61633ed5750c9656e897254da37042",
+    "utcScoredDateTime": "2026-10-04T04:22:46.617Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "ab2e163bc676d62a986d4c1446244edcfb61633ed5750c9656e897254da37042"
+  },
+  {
+    "pinId": 5712,
+    "sentiment": 0.4,
+    "textHash": "4b8610f409892028390b2941ed49dee8c0bde7115a52dfe423ba01355d37a5e5",
+    "utcScoredDateTime": "2026-10-04T04:23:04.506Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "4b8610f409892028390b2941ed49dee8c0bde7115a52dfe423ba01355d37a5e5"
+  },
+  {
+    "pinId": 5713,
+    "sentiment": 0.6,
+    "textHash": "268232c790812ac473bd7e74b0635498e5b1f4687e4cb94c469252f31b84ac0c",
+    "utcScoredDateTime": "2026-10-04T04:23:22.470Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "268232c790812ac473bd7e74b0635498e5b1f4687e4cb94c469252f31b84ac0c"
+  },
+  {
+    "pinId": 5714,
+    "sentiment": 0.3,
+    "textHash": "9fb5ebea3b71f452d0ece9389b89696775c5aef38a7d7e13b9aca4bc52973c16",
+    "utcScoredDateTime": "2026-10-04T04:23:41.574Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9fb5ebea3b71f452d0ece9389b89696775c5aef38a7d7e13b9aca4bc52973c16"
+  },
+  {
+    "pinId": 5715,
+    "sentiment": 0.3,
+    "textHash": "096170390ab9b3a3a9de483b94bfbbf1277bfbe3161093fce14bf04855565c6f",
+    "utcScoredDateTime": "2026-10-04T04:24:05.237Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "096170390ab9b3a3a9de483b94bfbbf1277bfbe3161093fce14bf04855565c6f"
+  },
+  {
+    "pinId": 5716,
+    "sentiment": 0.2,
+    "textHash": "9195cecf69456520c7659570d6929c690d3b6ff2209999df368def65bba94f7c",
+    "utcScoredDateTime": "2026-10-04T04:24:23.421Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9195cecf69456520c7659570d6929c690d3b6ff2209999df368def65bba94f7c"
+  },
+  {
+    "pinId": 5717,
+    "sentiment": 0.5,
+    "textHash": "9cd7fc730299364a4049ac2496ff667868b1a2dc7080f9d00245fa497412a72a",
+    "utcScoredDateTime": "2026-10-04T04:24:41.553Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "9cd7fc730299364a4049ac2496ff667868b1a2dc7080f9d00245fa497412a72a"
+  },
+  {
+    "pinId": 5718,
+    "sentiment": 0.5,
+    "textHash": "969afef8f2b9dea61519b094262f3d890f7866f90be21f3920d61d4002c614eb",
+    "utcScoredDateTime": "2026-10-04T04:24:59.332Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "969afef8f2b9dea61519b094262f3d890f7866f90be21f3920d61d4002c614eb"
+  },
+  {
+    "pinId": 5719,
+    "sentiment": 0.3,
+    "textHash": "a7919f1afc76ad6d2695ac3e8148c7adc816036d7edeae41fafdaa221d7c44ff",
+    "utcScoredDateTime": "2026-10-04T04:25:18.720Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "a7919f1afc76ad6d2695ac3e8148c7adc816036d7edeae41fafdaa221d7c44ff"
+  },
+  {
+    "pinId": 5720,
+    "sentiment": 0,
+    "textHash": "54c3c1071ab2a32ffffce1ed5e5f2eaa23bd3d2a7cdecd68bdcd11a3c269a466",
+    "utcScoredDateTime": "2026-10-04T04:25:37.279Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "54c3c1071ab2a32ffffce1ed5e5f2eaa23bd3d2a7cdecd68bdcd11a3c269a466"
+  },
+  {
+    "pinId": 5721,
+    "sentiment": 0.7,
+    "textHash": "903536fa1e1cbc295a61750a9c8974cc1c9df4b859ade51bbcf62ee2bab2c250",
+    "utcScoredDateTime": "2026-10-04T04:25:56.068Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "903536fa1e1cbc295a61750a9c8974cc1c9df4b859ade51bbcf62ee2bab2c250"
+  },
+  {
+    "pinId": 5722,
+    "sentiment": 0.3,
+    "textHash": "85a2e175fca8ba583a94ac5b8b0e069446e85e3b9c88c1d64f46a210495d8d58",
+    "utcScoredDateTime": "2026-10-04T04:26:14.818Z",
+    "product": "Oreo",
+    "productHash": "85a2e175fca8ba583a94ac5b8b0e069446e85e3b9c88c1d64f46a210495d8d58"
+  },
+  {
+    "pinId": 5723,
+    "sentiment": 0.3,
+    "textHash": "2957869a3d9e1b7789d0ee02614993c256825aaed0c37b645afb038d9216e4dc",
+    "utcScoredDateTime": "2026-10-04T04:26:15.395Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "2957869a3d9e1b7789d0ee02614993c256825aaed0c37b645afb038d9216e4dc"
+  },
+  {
+    "pinId": 5724,
+    "sentiment": 0.3,
+    "textHash": "daf65af0bcb32cd3618a4f236fbaaf342dd03371669d94b0964957be42e57e9f",
+    "utcScoredDateTime": "2026-10-04T04:26:36.470Z",
+    "product": "Fall in café Edition",
+    "productHash": "daf65af0bcb32cd3618a4f236fbaaf342dd03371669d94b0964957be42e57e9f"
+  },
+  {
+    "pinId": 5725,
+    "sentiment": 0.6,
+    "textHash": "a43b1db9b919495b3712be4973386a95e8db8a6e42d945c05f6a22034e0ba4a2",
+    "utcScoredDateTime": "2026-10-04T04:26:36.680Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "a43b1db9b919495b3712be4973386a95e8db8a6e42d945c05f6a22034e0ba4a2"
+  },
+  {
+    "pinId": 5726,
+    "sentiment": 0.1,
+    "textHash": "b1289e605336909c40959401308ba9ed00d3940e20caf71573177456fce0d41e",
+    "utcScoredDateTime": "2026-10-04T04:26:56.157Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "b1289e605336909c40959401308ba9ed00d3940e20caf71573177456fce0d41e"
+  },
+  {
+    "pinId": 5727,
+    "sentiment": 0.3,
+    "textHash": "88834c9104f9a6f5def68f00941bb020040676e3355a52c458601ee8e582f6b2",
+    "utcScoredDateTime": "2026-10-04T04:26:57.678Z",
+    "product": "Poca Chip",
+    "productHash": "88834c9104f9a6f5def68f00941bb020040676e3355a52c458601ee8e582f6b2"
+  },
+  {
+    "pinId": 5728,
+    "sentiment": 0.4,
+    "textHash": "cb3b50e02bef263cbcd598cdb97758ca880cfcdc6ae0c3b4716773e78bc3937c",
+    "utcScoredDateTime": "2026-10-04T04:27:16.784Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "cb3b50e02bef263cbcd598cdb97758ca880cfcdc6ae0c3b4716773e78bc3937c"
+  },
+  {
+    "pinId": 5729,
+    "sentiment": 0.3,
+    "textHash": "38e0ffe8047490ed85e0d0433fbb0f7be6a342463f2bcf9fb85cceb0bf1fb9dc",
+    "utcScoredDateTime": "2026-10-04T04:27:19.292Z",
+    "product": "Butter Ring",
+    "productHash": "38e0ffe8047490ed85e0d0433fbb0f7be6a342463f2bcf9fb85cceb0bf1fb9dc"
+  },
+  {
+    "pinId": 5730,
+    "sentiment": 0.5,
+    "textHash": "396fcd62ca461c64c97562f52b0c1efcb6d9a9bd8e12e78a022731f78e7deb33",
+    "utcScoredDateTime": "2026-10-04T04:27:34.886Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "396fcd62ca461c64c97562f52b0c1efcb6d9a9bd8e12e78a022731f78e7deb33"
+  },
+  {
+    "pinId": 5731,
+    "sentiment": 0.3,
+    "textHash": "d818700a00821d92c48dde7f3bd0f77187709a20ef7fbd2cf83f2ed7fcd5dada",
+    "utcScoredDateTime": "2026-10-04T04:27:39.781Z",
+    "product": "French Pie",
+    "productHash": "d818700a00821d92c48dde7f3bd0f77187709a20ef7fbd2cf83f2ed7fcd5dada"
+  },
+  {
+    "pinId": 5732,
+    "sentiment": 0.6,
+    "textHash": "15e8e92360416d090cddc584b3a0d9aad382cfcaa3addacaafec938e4fd1d081",
+    "utcScoredDateTime": "2026-10-04T04:27:53.148Z",
+    "product": "FIFA World Cup 2026",
+    "productHash": "15e8e92360416d090cddc584b3a0d9aad382cfcaa3addacaafec938e4fd1d081"
+  },
+  {
+    "pinId": 5733,
+    "sentiment": 0.3,
+    "textHash": "b399f6e388682fb51937c3e807d29291718f1dae796d9e78e9904073ce5a46f0",
+    "utcScoredDateTime": "2026-10-04T04:27:58.553Z",
+    "product": "Delicious Korea Co-prosperity Road",
+    "productHash": "b399f6e388682fb51937c3e807d29291718f1dae796d9e78e9904073ce5a46f0"
+  },
+  {
+    "pinId": 5734,
+    "sentiment": 0.3,
+    "textHash": "4db370101594305317643d866104cfb7e83aa6d991d4648e95799f9c29add420",
+    "utcScoredDateTime": "2026-10-04T04:28:16.947Z",
+    "product": "K-Inbound",
+    "productHash": "4db370101594305317643d866104cfb7e83aa6d991d4648e95799f9c29add420"
+  },
+  {
+    "pinId": 5735,
+    "sentiment": 0.4,
+    "textHash": "5d40e0cd8d240a8c5ab7b2e1dd8ce66cf25fb96a0fa0dc93f43896ff7daa2751",
+    "utcScoredDateTime": "2026-10-04T04:28:35.140Z",
+    "product": "Chocottone",
+    "productHash": "5d40e0cd8d240a8c5ab7b2e1dd8ce66cf25fb96a0fa0dc93f43896ff7daa2751"
+  },
+  {
+    "pinId": 5736,
+    "sentiment": 0.3,
+    "textHash": "56b2352a3d0f9ad25e419c4e2b23323337eb1b37254bbf0abcea1f89716175f2",
+    "utcScoredDateTime": "2026-10-04T04:28:53.579Z",
+    "product": "Allen's",
+    "productHash": "56b2352a3d0f9ad25e419c4e2b23323337eb1b37254bbf0abcea1f89716175f2"
+  },
+  {
+    "pinId": 5737,
+    "sentiment": 0.3,
+    "textHash": "b652f881747c0d782e7fcb912fd5e16651480fd895b7c5371e21524dab38b3fa",
+    "utcScoredDateTime": "2026-10-04T04:29:12.016Z",
+    "product": "Patang Diwali Edit",
+    "productHash": "b652f881747c0d782e7fcb912fd5e16651480fd895b7c5371e21524dab38b3fa"
+  },
+  {
+    "pinId": 5738,
+    "sentiment": 0.3,
+    "textHash": "aba1ea4989d156472abe9586bd8f67333ec96672f9d19f7fb9a31cabcbf47e51",
+    "utcScoredDateTime": "2026-10-04T05:04:48.065Z",
+    "product": "MacBook Pro",
+    "productHash": "aba1ea4989d156472abe9586bd8f67333ec96672f9d19f7fb9a31cabcbf47e51"
+  },
+  {
+    "pinId": 5739,
+    "sentiment": 0.3,
+    "textHash": "0e585d1f75033d274c8df66ba89ae8952ca87ec64adba26970b7ec6866cc1a07",
+    "utcScoredDateTime": "2026-10-04T05:05:06.981Z",
+    "product": "MacBook Pro",
+    "productHash": "0e585d1f75033d274c8df66ba89ae8952ca87ec64adba26970b7ec6866cc1a07"
+  },
+  {
+    "pinId": 5740,
+    "sentiment": 0.4,
+    "textHash": "a7569ad2d4432eba180a25123ca23b33229611966bda950a27ade6ecb943bf6e",
+    "utcScoredDateTime": "2026-10-04T05:05:25.594Z",
+    "product": "MacBook Pro",
+    "productHash": "a7569ad2d4432eba180a25123ca23b33229611966bda950a27ade6ecb943bf6e"
+  },
+  {
+    "pinId": 5741,
+    "sentiment": 0.5,
+    "textHash": "947089bd6b368e769007b220d8ba61e440f33b872459e313d6f690377bddfdc3",
+    "utcScoredDateTime": "2026-10-04T05:05:45.787Z",
+    "product": "MacBook Pro",
+    "productHash": "947089bd6b368e769007b220d8ba61e440f33b872459e313d6f690377bddfdc3"
   }
 ]
