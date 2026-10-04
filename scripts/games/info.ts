@@ -11,11 +11,10 @@ import '../env';
 import { writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
-import { findGameFacts } from '@/server/gameFacts';
 import { inCategories } from '@/server/model/pinTag';
 import { saveGameInfo } from '@/server/model/pinGameInfo';
 import Pin from '@/server/model/pin';
-import { gameScoresOfPin, steamAppOfPin } from '@/server/services/gameInfo';
+import { gameFactsOfPin, gameScoresOfPin, steamAppOfPin } from '@/server/services/gameInfo';
 import { GAME_CATEGORIES } from '@/server/scrape/scoreMarkets';
 
 const { values: flags } = parseArgs({
@@ -36,7 +35,8 @@ async function run() {
   const posts: { pinId: number; body: Record<string, unknown> }[] = [];
   for (const { id, title } of rows) {
     const appId = await steamAppOfPin(id);
-    const facts = appId ? await findGameFacts(appId) : undefined;
+    // The Steam page's reading, else (a console game) the Wikidata item's.
+    const facts = await gameFactsOfPin(id);
     // A game with no Steam page still has scores, found by its title.
     const ratings = await gameScoresOfPin(id, facts);
     await sleep(Number(flags.pause));
@@ -46,7 +46,7 @@ async function run() {
     }
     const info = facts?.info;
     console.log(
-      `${id} ${title}\n   ${appId ? `app ${appId}: ` : 'no Steam page: '}${info ? `${info.maturityBoard ?? '-'} ${info.maturityRating ?? '-'} [${info.descriptors.join(', ')}] | ${info.platforms.join(', ') || '-'} | ` : ''}${ratings.map((r) => `${r.source} ${r.score}`).join(', ') || 'no scores'}`,
+      `${id} ${title}\n   ${appId ? `app ${appId}: ` : `no Steam page (${facts?.source ?? 'nothing'}): `}${info ? `${info.maturityBoard ?? '-'} ${info.maturityRating ?? '-'} [${info.descriptors.join(', ')}] | ${info.platforms.join(', ') || '-'} | ` : ''}${ratings.map((r) => `${r.source} ${r.score}`).join(', ') || 'no scores'}`,
     );
     posts.push({ pinId: id, body: { ...(info ?? {}), ...(facts ? { source: facts.source, sourceUrl: facts.sourceUrl } : {}), ratings } });
     if (flags.apply) {

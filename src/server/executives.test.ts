@@ -41,6 +41,16 @@ ${row('Joe Doe<br>Chief Financial Officer', '2025', '500,000', '100,000', '1,000
     expect(cfo).toMatchObject({ salary: 500_000, totalCompensation: 9_999_999 });
   });
 
+  it('reads a header spread over several rows from its words', () => {
+    const table = `<table>
+${row('', '', '', 'Stock', 'Non-Equity', 'All Other', '')}
+${row('Name and', '', 'Salary', 'Awards', 'Incentive Plan', 'Compensation', 'Total')}
+${row('Principal Position', 'Year', '($)', '($)', '($)', '($)', '($)')}
+${row('Jane Roe<br>Chief Executive Officer', '2025', '1,000,000', '5,000,000', '2,000,000', '100,000', '8,100,000')}
+</table>`;
+    expect(parseExecutives(table, 'x')[0]).toMatchObject({ salary: 1_000_000, stockAwards: 5_000_000, incentivePay: 2_000_000, otherCompensation: 100_000, bonus: null, totalCompensation: 8_100_000 });
+  });
+
   it('finds nothing without a compensation table', () => {
     expect(parseExecutives('<table><tr><td>Revenue</td></tr></table>', 'x')).toEqual([]);
   });

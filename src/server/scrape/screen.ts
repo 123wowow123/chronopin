@@ -714,7 +714,7 @@ export function malEpisodes(data: { type?: string | null; status?: string | null
 
 /* Wikidata */
 
-type WikidataMatch = { description?: string; ratings: PinRatingJson[]; episodes?: ScreenEpisodes; streamingUrls: string[]; openCritic?: string };
+type WikidataMatch = { id?: string; description?: string; ratings: PinRatingJson[]; episodes?: ScreenEpisodes; streamingUrls: string[]; openCritic?: string };
 
 // Streaming services' identifier properties and the title page each id opens
 // (the property's own formatter URL, P1630). Paramount+ has only a per-video
@@ -824,7 +824,7 @@ async function findWikidata(
     // A second request rather than a dozen more OPTIONALs above, each of
     // which would multiply the review-score rows.
     const streamingUrls = await findWikidataStreaming(id, signal);
-    return { description, ratings: wikidataRatings(itemRows), episodes: wikidataEpisodes(itemRows), streamingUrls, openCritic: itemRows.find((r) => r.oc)?.oc };
+    return { id, description, ratings: wikidataRatings(itemRows), episodes: wikidataEpisodes(itemRows), streamingUrls, openCritic: itemRows.find((r) => r.oc)?.oc };
   }
   return undefined;
 }
@@ -986,6 +986,17 @@ export async function findGameScores(query: WorkScoreQuery & { extraTitles?: str
     return ratings;
   }
   return [];
+}
+
+// A video game's Wikidata item (its Q id) by exact title and release year, for
+// the platforms and maturity rating the item states (../gameFacts.ts).
+export async function findGameItem(query: WorkScoreQuery & { extraTitles?: string[] }, budgetMs = DEFAULT_BUDGET_MS): Promise<string | undefined> {
+  const signal = AbortSignal.timeout(budgetMs);
+  for (const title of [...(query.extraTitles ?? []), ...titleCandidates(query)].slice(0, 4)) {
+    const match = await findWikidata(title, query.year, signal, { game: true }).catch(() => undefined);
+    if (match?.id) return match.id;
+  }
+  return undefined;
 }
 
 // Title guesses for a manga pin: its candidates, and each without the word

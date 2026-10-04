@@ -215,9 +215,23 @@ function payKind(header: string): PayKind {
 // The figures of a row by column, when every cell of the header has its figure
 // (a header spread over several rows, or an empty cell, leaves the count
 // short and the columns unknown). Pay a filing shows as a dash is 0.
-function payColumns(header: string[], figures: number[]): (Partial<Record<Exclude<PayKind, null>, number>> & { adds: boolean }) | null {
-  const kinds = header.filter((h) => !/^(fiscal\s+)?year$/i.test(h) && !/\b(name|position)\b/i.test(h)).map(payKind);
-  if (kinds.length !== figures.length || !kinds.includes('total')) return null;
+function payColumns(header: string[], figures: number[], headerText = ''): (Partial<Record<Exclude<PayKind, null>, number>> & { adds: boolean }) | null {
+  let kinds = header.filter((h) => !/^(fiscal\s+)?year$/i.test(h) && !/\b(name|position)\b/i.test(h)).map(payKind);
+  if (kinds.length !== figures.length || !kinds.includes('total')) {
+    // A header spread over several rows cannot be read cell by cell, but its
+    // words say which columns the table has, and they come in the SEC's fixed
+    // order: salary, bonus, stock, option, incentive, pension, other, total.
+    const present: PayKind[] = ['salary'];
+    if (/\bbonus/i.test(headerText)) present.push('bonus');
+    if (/stock\s+awards|\bstock\b/i.test(headerText) && /awards/i.test(headerText)) present.push('stockAwards');
+    if (/option\s+awards|\boption\b/i.test(headerText)) present.push('optionAwards');
+    if (/non-?(equity|stock)/i.test(headerText)) present.push('incentivePay');
+    if (/pension|nonqualified|non-qualified/i.test(headerText)) present.push('pensionChange');
+    present.push('otherCompensation', 'total');
+    if (present.length !== figures.length) return null;
+    kinds = present;
+  }
+  if (!kinds.includes('total')) return null;
   const out: Partial<Record<Exclude<PayKind, null>, number>> = {};
   kinds.forEach((kind, i) => {
     if (kind && out[kind] === undefined) out[kind] = figures[i];
@@ -238,6 +252,8 @@ export function parseExecutives(html: string, sourceUrl: string): CompanyExecuti
   // The header is the row up to the Year one that names most pay columns (some
   // filings put the names on the row above Year, Lockheed Martin).
   const header = all.slice(0, headerAt + 1).reduce<string[]>((best, r) => (r.filter((c) => payKind(c)).length > best.filter((c) => payKind(c)).length ? r : best), all[headerAt] ?? []);
+  // Every word above the first person, for a header that spans rows.
+  const headerText = all.slice(0, headerAt + 1).flat().join(' ');
   const found = new Map<string, CompanyExecutiveInput>();
   let current: string | null = null;
   // Whether the row before was one a person's name or title began on, so the
@@ -293,7 +309,7 @@ export function parseExecutives(html: string, sourceUrl: string): CompanyExecuti
     // Rows come newest year first; only a newer one replaces.
     if (figures.length >= 2 && (exec.fiscalYear == null || year > exec.fiscalYear)) {
       exec.fiscalYear = year;
-      const columns = payColumns(header, figures);
+      const columns = payColumns(header, figures, headerText);
       exec.salary = columns?.salary ?? figures[0];
       // The last figure is the total when the columns could not be matched.
       exec.totalCompensation = columns?.total ?? figures[figures.length - 1];

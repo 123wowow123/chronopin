@@ -53,9 +53,14 @@ async function steamFacts(appId: number): Promise<{ data: any; reviews: any } | 
   return data ? { data, reviews: reviews?.query_summary } : undefined;
 }
 
-// Wikidata: platforms plus the board labels Steam did not print.
-async function wikidataFacts(appId: number): Promise<{ platforms: PlatformKey[]; esrb?: string; pegi?: string; entity?: string }> {
-  const sparql = `SELECT ?g ?plLabel ?esrbLabel ?pegiLabel WHERE { ?g wdt:P1733 "${appId}". OPTIONAL { ?g wdt:P400 ?pl } OPTIONAL { ?g wdt:P852 ?esrb } OPTIONAL { ?g wdt:P908 ?pegi } SERVICE wikibase:label { bd:serviceParam wikibase:language "en,mul". } }`;
+type WikidataGame = { platforms: PlatformKey[]; esrb?: string; pegi?: string; entity?: string };
+
+// Wikidata: platforms plus the board labels Steam did not print. `match` picks
+// the item: its Steam app id (P1733) or its Q id.
+async function wikidataFacts(match: { appId: number } | { item: string }): Promise<WikidataGame> {
+  const pick = 'appId' in match ? `?g wdt:P1733 "${match.appId}".` : /^Q\d+$/.test(match.item) ? `VALUES ?g { wd:${match.item} }` : '';
+  if (!pick) return { platforms: [] };
+  const sparql = `SELECT ?g ?plLabel ?esrbLabel ?pegiLabel WHERE { ${pick} OPTIONAL { ?g wdt:P400 ?pl } OPTIONAL { ?g wdt:P852 ?esrb } OPTIONAL { ?g wdt:P908 ?pegi } SERVICE wikibase:label { bd:serviceParam wikibase:language "en,mul". } }`;
   const body = await getJson(`https://query.wikidata.org/sparql?format=json&query=${encodeURIComponent(sparql)}`, { Accept: 'application/sparql-results+json' });
   const rows: any[] = body?.results?.bindings ?? [];
   const platforms = new Set<PlatformKey>();
@@ -64,6 +69,26 @@ async function wikidataFacts(appId: number): Promise<{ platforms: PlatformKey[];
     if (key) platforms.add(key);
   }
   return { platforms: [...platforms], esrb: rows.find((r) => r.esrbLabel)?.esrbLabel.value, pegi: rows.find((r) => r.pegiLabel)?.pegiLabel.value, entity: rows[0]?.g?.value };
+}
+
+// The maturity label Wikidata states ("ESRB Mature 17+", "PEGI 18"), without
+// descriptors: only a store page prints those.
+function wikidataMaturity(wiki: WikidataGame): Pick<GameInfoFields, 'maturityBoard' | 'maturityRating' | 'descriptors'> {
+  const label = wiki.esrb ? esrbLabel(wiki.esrb) : undefined;
+  const age = wiki.pegi?.match(/\d+/)?.[0];
+  if (label) return { maturityBoard: 'ESRB', maturityRating: label, descriptors: [] };
+  if (age) return { maturityBoard: 'PEGI', maturityRating: age, descriptors: [] };
+  return { maturityBoard: null, maturityRating: null, descriptors: [] };
+}
+
+// A game Steam does not sell (a console exclusive), from its Wikidata item
+// alone: platforms and the maturity label the item states. No scores - those
+// come from the title search (scrape/screen.ts findGameScores).
+export async function findGameFactsByItem(item: string): Promise<GameFacts | undefined> {
+  const wiki = await wikidataFacts({ item });
+  const info = { ...wikidataMaturity(wiki), platforms: wiki.platforms };
+  if (!info.maturityRating && !info.platforms.length) return undefined;
+  return { info, ratings: [], source: 'wikidata', sourceUrl: `https://www.wikidata.org/wiki/${item}` };
 }
 
 export async function findGameFacts(appId: number): Promise<GameFacts | undefined> {
@@ -75,7 +100,7 @@ export async function findGameFacts(appId: number): Promise<GameFacts | undefine
     if (data.platforms?.windows) platforms.add('windows');
     if (data.platforms?.mac) platforms.add('macos');
     if (data.platforms?.linux) platforms.add('linux');
-    const wiki = await wikidataFacts(appId);
+    const wiki = await wikidataFacts({ appId });
     wiki.platforms.forEach((p) => platforms.add(p));
 
     let maturity = maturityOf(data.ratings);

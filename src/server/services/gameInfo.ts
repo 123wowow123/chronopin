@@ -7,13 +7,13 @@
 // Wikidata and OpenCritic by its title instead (scrape/screen.ts findGameScores).
 
 import { hasCategory } from '@/lib/categories';
-import { findGameFacts, type GameFacts, type GameRating } from '../gameFacts';
+import { findGameFacts, findGameFactsByItem, type GameFacts, type GameRating } from '../gameFacts';
 import { saveGameInfo } from '../model/pinGameInfo';
 import { PIN_CATEGORIES } from '../model/pinTag';
 import Pin from '../model/pin';
 import * as db from '../db';
 import { GAME_CATEGORIES } from '../scrape/scoreMarkets';
-import { findGameScores } from '../scrape/screen';
+import { findGameItem, findGameScores } from '../scrape/screen';
 import { steamAppId } from '../steamListing';
 import { expirePinPage } from './cache';
 import { hasGameInfo } from '@/lib/gameInfo';
@@ -57,10 +57,21 @@ export async function gameScoresOfPin(pinId: number, facts?: GameFacts): Promise
   return ratings;
 }
 
+// A pin's platforms and maturity rating: its Steam page's, else (a console
+// game Steam does not sell) its Wikidata item's, found by the pin's title.
+export async function gameFactsOfPin(pinId: number): Promise<GameFacts | undefined> {
+  const appId = await steamAppOfPin(pinId);
+  const steam = appId ? await findGameFacts(appId) : undefined;
+  if (steam) return steam;
+  const [pin] = await db.query<{ title: string; start: Date }>(`SELECT "title", "utcStartDateTime" AS "start" FROM "Pin" WHERE "id" = $1`, [pinId]);
+  if (!pin) return undefined;
+  const item = await findGameItem({ pinTitle: pin.title, year: new Date(pin.start).getUTCFullYear() });
+  return item ? findGameFactsByItem(item) : undefined;
+}
+
 // Whether anything was stored. A pin with no Steam page still gets scores.
 export async function refreshGameInfo(pinId: number): Promise<boolean> {
-  const appId = await steamAppOfPin(pinId);
-  const facts = appId ? await findGameFacts(appId) : undefined;
+  const facts = await gameFactsOfPin(pinId);
   const ratings = await gameScoresOfPin(pinId, facts);
   let stored = false;
   if (facts && hasGameInfo(facts.info)) stored = await saveGameInfo(pinId, facts.info, { source: facts.source, sourceUrl: facts.sourceUrl });
