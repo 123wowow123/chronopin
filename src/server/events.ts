@@ -16,7 +16,9 @@ export type PinEvent = 'save' | 'update' | 'remove' | 'favorite' | 'unfavorite' 
 export const PIN_EVENTS: PinEvent[] = ['save', 'update', 'remove', 'favorite', 'unfavorite', 'like', 'unlike', 'view'];
 
 // noBrowser: the work that follows the save may not launch Chromium (admin API posts).
-export type PinEventOptions = { userId?: number; noBrowser?: boolean };
+// prebuiltWikis: the post carried its links' wikis (services/prebuiltWikis.ts), so
+// the save fetches no page and calls no API to write them.
+export type PinEventOptions = { userId?: number; noBrowser?: boolean; prebuiltWikis?: boolean };
 type Listener = (pin: Row, options?: PinEventOptions) => void;
 
 const g = globalThis as unknown as { __chronopinPinEvents?: EventEmitter; __chronopinPinListeners?: boolean };
@@ -107,6 +109,7 @@ if (!g.__chronopinPinListeners) {
   // been answered: each link gets a wiki, and the summary is rebuilt from
   // those when a link comes or goes (services/sourceWiki.ts).
   const refreshWiki = (pin: Row, options?: PinEventOptions) => {
+    if (options?.prebuiltWikis) return;
     Promise.all([import('./services/sourceWiki'), import('./scrape')])
       .then(([{ refreshPin }, { noBrowser }]) => noBrowser.run(!!options?.noBrowser, () => refreshPin(Number(pin.id))))
       .catch((err) => log.warn(`wiki refresh failed for pin ${pin.id}:`, (err as Error).message));

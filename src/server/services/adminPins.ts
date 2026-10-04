@@ -7,11 +7,12 @@ import { recordAudit } from '../adminDb';
 import User from '../model/user';
 import { HttpError } from '../util/httpError';
 import { createPin } from './createPin';
+import { parsePrebuiltWikis, type PrebuiltResult } from './prebuiltWikis';
 
 export const MAX_ADMIN_PINS = 50;
 
 export type AuthorRef = { userId?: unknown; userName?: unknown };
-export type AdminPinResult = { index: number; id: number; userId: number } | { index: number; error: string };
+export type AdminPinResult = { index: number; id: number; userId: number; wikis?: PrebuiltResult[] } | { index: number; error: string };
 
 // Who a pin is posted as: userId, or userName ("@GameDesk" or "GameDesk"),
 // else the fallback (the admin, or a request-wide author).
@@ -47,7 +48,9 @@ export async function authorFor(ref: AuthorRef, fallback: User, known = new Map<
 // Saves each pin in order as its author - its own userId/userName, else the
 // request's, else the admin - and reports each one; a pin that fails (a
 // duplicate source, an unknown author, a bad field) does not stop the rest.
-// Each saved pin is also written to AdminAudit under the admin.
+// Each saved pin is also written to AdminAudit under the admin. A pin may carry
+// sourceWikis, wikis written elsewhere for its links (services/prebuiltWikis.ts):
+// they are saved with it, and the save does not run the wiki pipeline.
 export async function createPinsAs(admin: User, bodies: unknown[], requestAuthor: AuthorRef = {}): Promise<AdminPinResult[]> {
   if (!bodies.length) throw new HttpError(400, '', { message: 'Expected at least one pin' });
   if (bodies.length > MAX_ADMIN_PINS) throw new HttpError(400, '', { message: `At most ${MAX_ADMIN_PINS} pins per request` });
@@ -57,10 +60,12 @@ export async function createPinsAs(admin: User, bodies: unknown[], requestAuthor
   for (const [index, raw] of bodies.entries()) {
     try {
       if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new HttpError(400, 'Expected a pin object');
-      const { userId, userName, ...body } = raw as Record<string, any>;
+      const { userId, userName, sourceWikis, ...body } = raw as Record<string, any>;
       const author = await authorFor({ userId, userName }, fallback, known);
-      const saved = await createPin(body, author, { noBrowser: true });
-      results.push({ index, id: saved.id, userId: author.id });
+      const prebuilt = parsePrebuiltWikis(sourceWikis, 'sourceWikis');
+      const report: { wikis?: PrebuiltResult[] } = {};
+      const saved = await createPin(body, author, { noBrowser: true, prebuilt, report });
+      results.push({ index, id: saved.id, userId: author.id, ...(report.wikis ? { wikis: report.wikis } : {}) });
       await recordAudit(admin.id, 'Pin', [{ action: 'insert', key: { id: saved.id }, before: null, after: { id: saved.id, title: saved.title, userId: author.id } }]);
     } catch (err) {
       const message =

@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-10-04
+* **Update**: **Wikis written on the dev machine can be sent to the server.** `POST /api/admin/pins` accepts `sourceWikis` per pin (saved with the pin, which then skips the wiki pipeline), and `GET`/`POST /api/admin/source-wikis` list pending links and take finished wikis for them; `npm run wiki:prod` exports the jobs, attaches answers to drafts and pushes them. Prod's Anthropic key had no credit, so its pins' links sat pending. See [Source wikis](api/source-wikis.md).
 * **Update**: **Aggregate scores for every kind of work, and awards for games and products.** Rotten Tomatoes, OpenCritic and manga scores added to the lookups; a game's or product's awards come from its Wikidata item. See [Enrichment](/scraping/enrichment.md#awards-and-tags) and [learnings](scraping/learnings.md).
 
 ## 2026-10-01

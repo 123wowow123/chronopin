@@ -12,6 +12,7 @@ import PinSentiment from '../model/pinSentiment';
 import Pins, { type SearchFilter, type SearchRank } from '../model/pins';
 import PinView from '../model/pinView';
 import ProductPicture from '../model/productPicture';
+import CompanyExecutive from '../model/companyExecutive';
 import { SearchPins } from '../model/searchPin';
 import User from '../model/user';
 import { HttpError } from '../util/httpError';
@@ -249,11 +250,13 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
         : null;
   const company = await one;
   if (!company) return;
-  const [comments, follow, pinTones, productPictures] = await Promise.all([
+  const [comments, follow, pinTones, productPictures, executives, parents] = await Promise.all([
     Comment.forCompany(company.id, COMPANY_MOOD_COMMENTS),
     CompanyFollow.status(company.id, null),
     PinSentiment.forCompany(company.id),
     ProductPicture.forCompany(company.id),
+    CompanyExecutive.forCompany(company.id),
+    Company.parentChain(company.id),
   ]);
   // Pictures only for the pins with a product: each product's row shows one,
   // else the one looked up for it (0079).
@@ -266,6 +269,10 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
     wikiUrl: company.wikiUrl,
     followerCount: follow.followerCount,
     commentCount: comments.length,
+    // Its C-suite and their pay (0125); empty until looked up.
+    executives,
+    // Its parent, and the parent's parent: tiles that search for them (0126).
+    parents,
     mood: commentMood(comments.map((c) => ({ ...c, utcCreatedDateTime: c.utcCreatedDateTime.toISOString() }))),
     // The graph: how its pins read as news, by when each happens, and how
     // its comments read, by when each was written (src/lib/companySentiment.ts).

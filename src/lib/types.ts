@@ -300,6 +300,17 @@ export type TimelinePage = {
 // what the company is in a line, how its pins' comments read, and how many
 // people follow it. `mood` is null until a comment on one of its pins has
 // been scored; `commentCount` is how many comments it was read from.
+// One chief officer; pay is null where the company does not publish it.
+export type CompanyExecutive = {
+  name: string;
+  title: string;
+  salary: number | null;
+  totalCompensation: number | null;
+  currency: string;
+  fiscalYear: number | null;
+  sourceUrl: string | null;
+};
+
 export type SearchedCompany = {
   id: number;
   name: string;
@@ -310,6 +321,12 @@ export type SearchedCompany = {
   commentCount: number;
   mood: CommentMood | null;
   sentiment: CompanySentiment;
+  // The C-suite and what each was paid (0125); a search cached before it
+  // existed has none.
+  executives?: CompanyExecutive[];
+  // Its parent company, then that one's parent, up (0126); a search cached
+  // before it existed has none.
+  parents?: { id: number; name: string; logoUrl: string | null; wikiUrl: string | null }[];
 };
 
 export type SearchPage = {

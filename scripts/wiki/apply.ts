@@ -19,6 +19,7 @@ import { cleanContradictions } from '@/server/extract/contradictions';
 import { composedFrom, wikiFromOutputs, type WikiOutput } from '@/server/extract/wiki';
 import Source from '@/server/model/source';
 import { contradictionSignature, saveContradictions } from '@/server/services/okfLint';
+import { isWikiPage } from '@/server/services/prebuiltWikis';
 import { pinLinks, saveSummary } from '@/server/services/sourceWiki';
 
 const { values: flags } = parseArgs({
@@ -34,11 +35,6 @@ const results = (dir: string, kind: string) => {
     : [];
 };
 
-const isPage = (p: unknown): p is WikiOutput => {
-  const page = p as WikiOutput;
-  return !!page && typeof page.title === 'string' && typeof page.summary === 'string' && typeof page.body === 'string' && Array.isArray(page.tags);
-};
-
 async function run() {
   if (!flags.dir) throw new Error('--dir DIR is required');
   const dir = path.resolve(flags.dir);
@@ -52,7 +48,7 @@ async function run() {
       continue;
     }
     const parts: unknown[] = data.parts ?? [data];
-    if (!parts.every(isPage) || (data.root !== undefined && !isPage(data.root)) || (parts.length > 1 && !data.root)) {
+    if (!parts.every(isWikiPage) || (data.root !== undefined && !isWikiPage(data.root)) || (parts.length > 1 && !data.root)) {
       console.log(`wiki ${file}: not in the wiki page schema - skipped`);
       continue;
     }

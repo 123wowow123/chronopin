@@ -89,7 +89,7 @@ export default class Company {
 
   static getAll() {
     return db.query(`SELECT ${COLUMNS}, "tickerSymbol", "tickerNote", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime",
-      "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "marketCap", "utcMarketCapCheckedDateTime", "localNames", "utcLocalNamesCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
+      "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "marketCap", "utcMarketCapCheckedDateTime", "localNames", "utcLocalNamesCheckedDateTime", "parentCompanyId", "utcParentCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
   }
 
   // Names and logos for the pin form's company suggestions.
@@ -251,21 +251,54 @@ export default class Company {
       INSERT INTO "Company" ("id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime",
         "tickerSymbol", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime", "tickerNote",
         "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "description", "utcDescriptionCheckedDateTime",
-        "marketCap", "utcMarketCapCheckedDateTime", "localNames", "utcLocalNamesCheckedDateTime")
-      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)
+        "marketCap", "utcMarketCapCheckedDateTime", "localNames", "utcLocalNamesCheckedDateTime", "utcParentCheckedDateTime")
+      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23)
       ON CONFLICT DO NOTHING`,
         [
           c.id, c.name, c.wikiUrl, c.websiteUrl, c.logoUrl, c.utcLogoCheckedDateTime, c.utcCreatedDateTime, c.utcUpdatedDateTime,
           c.tickerSymbol, c.utcTickerCheckedDateTime, c.utcRelationsCheckedDateTime, c.tickerNote,
           c.hqAddress, c.hqLatitude, c.hqLongitude, c.utcHqCheckedDateTime, c.description, c.utcDescriptionCheckedDateTime,
-          c.marketCap, c.utcMarketCapCheckedDateTime, c.localNames, c.utcLocalNamesCheckedDateTime,
+          c.marketCap, c.utcMarketCapCheckedDateTime, c.localNames, c.utcLocalNamesCheckedDateTime, c.utcParentCheckedDateTime,
         ].map(
           (v) => (v === undefined ? null : v),
         ),
       );
     }
+    // Parents last: a company may come before its parent in the file.
+    for (const c of companies || []) {
+      if (c.parentCompanyId) {
+        await db.query(`UPDATE "Company" SET "parentCompanyId" = $2 WHERE "id" = $1 AND "parentCompanyId" IS NULL AND EXISTS (SELECT 1 FROM "Company" WHERE "id" = $2)`, [c.id, c.parentCompanyId]);
+      }
+    }
     await db.query(
       `SELECT setval(pg_get_serial_sequence('"Company"', 'id'), GREATEST((SELECT MAX("id") FROM "Company"), 1))`,
+    );
+  }
+
+  // Makes `parentName` this company's parent (a Company row, made when new),
+  // or clears it with null. A parent that would make a loop (the parent's own
+  // chain reaches this company) is refused. Resolves the parent, or null.
+  static async setParent(companyId: number, parentName: string | null, wikiUrl?: string | null): Promise<CompanyRow | null> {
+    const parent = parentName ? await Company.resolve(parentName, wikiUrl) : null;
+    if (parent && (parent.id === companyId || (await Company.parentChain(parent.id)).some((c) => c.id === companyId))) {
+      await db.query(`UPDATE "Company" SET "utcParentCheckedDateTime" = now() WHERE "id" = $1`, [companyId]);
+      return null;
+    }
+    await db.query(`UPDATE "Company" SET "parentCompanyId" = $2, "utcParentCheckedDateTime" = now() WHERE "id" = $1`, [companyId, parent?.id ?? null]);
+    return parent;
+  }
+
+  // The company's parent, its parent's parent, and so on up (at most 5).
+  static async parentChain(companyId: number): Promise<{ id: number; name: string; logoUrl: string | null; wikiUrl: string | null }[]> {
+    return db.query(
+      `WITH RECURSIVE "up" AS (
+         SELECT p."id", p."name", p."logoUrl", p."wikiUrl", p."parentCompanyId", 1 AS "depth"
+         FROM "Company" c JOIN "Company" p ON p."id" = c."parentCompanyId" WHERE c."id" = $1
+         UNION ALL
+         SELECT p."id", p."name", p."logoUrl", p."wikiUrl", p."parentCompanyId", "up"."depth" + 1
+         FROM "up" JOIN "Company" p ON p."id" = "up"."parentCompanyId" WHERE "up"."depth" < 5
+       ) SELECT "id", "name", "logoUrl", "wikiUrl" FROM "up" ORDER BY "depth"`,
+      [companyId],
     );
   }
 }

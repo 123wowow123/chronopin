@@ -28,6 +28,8 @@ import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, SearchedCompany, SearchPage } from '@/lib/types';
+import { CompanyExecutivesPanel } from './CompanyExecutives';
+import { CompanyParentsPanel } from './CompanyParents';
 import { CompanyProductsPanel } from './CompanyProducts';
 import { SearchedCompanyPanel } from './SearchedCompany';
 import { TagCloud, tagPillSummary } from './TagCloud';
@@ -592,6 +594,8 @@ export function SearchResults({
                 ) : null}
                 {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
                 {searchedCompany?.sentiment ? <CompanyProductsPanel name={searchedCompany.name} sentiment={searchedCompany.sentiment} /> : null}
+                {searchedCompany?.parents?.length ? <CompanyParentsPanel parents={searchedCompany.parents} /> : null}
+                {searchedCompany?.executives?.length ? <CompanyExecutivesPanel name={searchedCompany.name} executives={searchedCompany.executives} /> : null}
               </>
             ) : undefined
           }

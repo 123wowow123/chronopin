@@ -37,6 +37,8 @@
     "companies:local-names": "tsx scripts/company/localNames.ts",
     "companies:sentiment": "tsx scripts/company/sentiment.ts",
     "products:pictures": "tsx scripts/company/productPictures.ts",
+    "companies:executives": "tsx scripts/company/executives.ts",
+    "companies:parents": "tsx scripts/company/parents.ts",
     "media:video-thumbs": "tsx scripts/media/videoThumbs.ts",
     "media:screen": "tsx scripts/media/screenDetails.ts",
     "media:manga-scores": "tsx scripts/media/mangaScores.ts",
@@ -90,6 +92,7 @@
     "stocks:sync": "tsx scripts/stocks/sync.ts",
     "wiki:export": "tsx scripts/wiki/export.ts",
     "wiki:apply": "tsx scripts/wiki/apply.ts",
+    "wiki:prod": "tsx scripts/wiki/prod.ts",
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
     "specialty-days:translate": "tsx scripts/specialtyDays/translate.ts",
     "favicon:build": "tsx scripts/favicon/build.ts"

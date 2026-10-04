@@ -27,6 +27,7 @@ import { excludeE2e } from './excludeE2e';
 import PinTranslation from '@/server/model/pinTranslation';
 import PinSentiment from '@/server/model/pinSentiment';
 import ProductPicture from '@/server/model/productPicture';
+import CompanyExecutive from '@/server/model/companyExecutive';
 import Listing from '@/server/model/listing';
 import Message from '@/server/model/message';
 
@@ -63,6 +64,7 @@ const { values: flags } = parseArgs({
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json.gz' },
     sentimentfile: { type: 'string', default: './scripts/backup/seedPinSentiments.json' },
     productpicturefile: { type: 'string', default: './scripts/backup/seedProductPictures.json' },
+    executivefile: { type: 'string', default: './scripts/backup/seedCompanyExecutives.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -290,6 +292,9 @@ async function saveDB() {
   // Wikipedia or paid Google lookup to make again.
   console.log('Backup Product Pictures');
   writeJson(flags.productpicturefile, (await ProductPicture.getAll()).filter((p) => keptCompanyIds.has(p.companyId)));
+
+  console.log('Backup Company Executives');
+  writeJson(flags.executivefile, (await CompanyExecutive.getAll()).filter((e) => keptCompanyIds.has(e.companyId)));
 
   console.log('Data Backup Complete');
 }
@@ -577,6 +582,14 @@ async function seedDB() {
       await ProductPicture.restore(readJson(flags.productpicturefile));
     } catch (error) {
       log.error('Product Pictures Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.executivefile)) {
+    try {
+      await CompanyExecutive.restore(readJson(flags.executivefile));
+    } catch (error) {
+      log.error('Company Executives Save Error', JSON.stringify(error));
     }
   }
 

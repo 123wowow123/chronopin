@@ -50,3 +50,7 @@ Pin 930 (MOSE's last flood gate) was done this way on 2026-09-19:
 - Round 1: four wikis.
 - Round 2: a contradiction check, which found five minor disagreements, such as the video description's "40 tonnes" gates against 210–450 t elsewhere.
 - Round 3: the summary, rebuilt from the wikis.
+
+# Sending the wikis to another server
+
+When the server with no credit is production, the loop above runs against its database, which a session cannot reach. `npm run wiki:prod` does the same exchange over the admin API: `export` writes the wiki jobs for the links the server has pending (or for pin drafts about to be posted), the session answers them the same way, and `push` (or `attach`, which puts them on the drafts as `sourceWikis`) sends the wikis. The server stores them and fetches nothing. See [Source wikis](../api/source-wikis.md).

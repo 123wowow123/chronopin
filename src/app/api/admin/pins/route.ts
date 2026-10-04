@@ -13,7 +13,11 @@ import { createPinsAs } from '@/server/services/adminPins';
 //        else the admin, and saved in order, one at a time. A pin that fails
 //        (a duplicate source, an unknown author, a bad field) is reported and
 //        the rest still post: { results: [{ index, id, userId } | { index, error }] }
-//        with 201 when every pin saved, else 207.
+//        with 201 when every pin saved, else 207. A pin may also carry
+//        sourceWikis: [{ url, wiki, ... }], the wikis of its links written
+//        elsewhere (services/prebuiltWikis.ts); they are saved with the pin,
+//        which then runs no wiki pipeline, and each result lists how each
+//        went in wikis.
 export const POST = route(async (request: NextRequest) => {
   const admin = await requireRole('admin', request);
   const { userId, userName, pins } = await readJson<{ userId?: number; userName?: string; pins?: unknown[] }>(request);

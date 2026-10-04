@@ -18,6 +18,7 @@ import { invalidatePin } from '@/server/services/cache';
 import { welcomeToThread } from '@/server/services/watchAlerts';
 import { reslotSeries, seriesPinFor } from '@/server/scrape/modelSeries';
 import { prequelPinFor, reslotSequels } from '@/server/scrape/prequel';
+import { applyPrebuiltWikis, type PrebuiltResult, type PrebuiltWiki } from '@/server/services/prebuiltWikis';
 import { flightPathProblem, saveFlightPath } from '@/server/services/pinFlightPath';
 import { addPinStocksQuietly } from '@/server/services/pinStocks';
 import log from '@/server/util/log';
@@ -43,7 +44,17 @@ import type User from '@/server/model/user';
 // that answered an earlier one move under this one when it now comes between.
 // A company pin's sentiment (-1..1) and productLine, when sent, are its score for
 // the company graph (authoredScore), so the save makes no scoring call.
-export async function createPin(body: Record<string, any>, user: User, { noBrowser = false } = {}) {
+//
+// prebuilt is for an admin's post (services/adminPins.ts) of a pin whose link
+// wikis were written elsewhere: each is saved on its link before the save's
+// listeners run, which then skip the wiki pipeline (no page fetch, no API
+// call). Links it leaves out stay pending. The caller has already checked their
+// shape (parsePrebuiltWikis), so a malformed one fails the post with nothing
+// created; a wiki that fails to save afterwards is reported in report.wikis
+// and does not fail the pin.
+export type CreatePinOptions = { noBrowser?: boolean; prebuilt?: PrebuiltWiki[]; report?: { wikis?: PrebuiltResult[] } };
+
+export async function createPin(body: Record<string, any>, user: User, { noBrowser = false, prebuilt, report }: CreatePinOptions = {}) {
   const pin = new Pin(body);
   const stocks = parseScrapedStocks(body.stocks);
   const tags = parseTags(body.tags);
@@ -70,7 +81,14 @@ export async function createPin(body: Record<string, any>, user: User, { noBrows
   if (tags?.length) await PinTag.setUserTags(saved.id, tags);
   if (body.flightPath) await saveFlightPath(saved.id, body.flightPath);
   if (score && typeof score !== 'string') await PinSentiment.setAuthored(saved.id, score);
-  emitPinEvent('save', saved, { userId: user.id, noBrowser });
+  if (prebuilt?.length) {
+    const wikis = await applyPrebuiltWikis(prebuilt, { pinId: saved.id }).catch((err): PrebuiltResult[] => {
+      log.warn(`prebuilt wikis for pin ${saved.id} failed:`, (err as Error).message);
+      return prebuilt.map((w) => ({ url: w.url, status: 'error', message: (err as Error).message || 'Failed' }));
+    });
+    if (report) report.wikis = wikis;
+  }
+  emitPinEvent('save', saved, { userId: user.id, noBrowser, prebuiltWikis: !!prebuilt?.length });
   // Everyone following the pin's company hears about it, and so does everyone
   // following its author. Told after the response, like the stock lookup below.
   after(() =>

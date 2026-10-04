@@ -111,6 +111,41 @@ export default class Source {
     );
   }
 
+  // The source already kept for a link, if any - never creates one.
+  static async findByUrl(url: string): Promise<(SourceRow & { text: string | null }) | undefined> {
+    const key = sourceKey(url);
+    if (!key) return undefined;
+    const [row] = await db.query<SourceRow>(`SELECT ${META}, "text" FROM "Source" WHERE "urlKey" = $1`, [key]);
+    return row;
+  }
+
+  // Links waiting on a wiki that some live pin cites (the same set as
+  // needingWiki), with what a session needs to pick them up: the pins that
+  // cite each, and whether its page text is kept. force adds failed links
+  // that are out of tries.
+  static async pendingList({ pinId, limit = 100, offset = 0, force = false }: { pinId?: number; limit?: number; offset?: number; force?: boolean } = {}) {
+    const where = `("Source"."status" = 'pending' OR ("Source"."status" = 'failed' AND ($1::boolean OR "Source"."attempts" < $2)))
+         AND ($3::integer IS NULL OR "PinSource"."pinId" = $3)`;
+    const from = `FROM "Source"
+         JOIN "PinSource" ON "PinSource"."sourceId" = "Source"."id" AND "PinSource"."utcRemovedDateTime" IS NULL
+         JOIN "Pin" ON "Pin"."id" = "PinSource"."pinId" AND "Pin"."utcDeletedDateTime" IS NULL`;
+    const [{ total }] = await db.query<{ total: number }>(
+      `SELECT COUNT(DISTINCT "Source"."id")::integer AS "total" ${from} WHERE ${where}`,
+      [force, MAX_ATTEMPTS, pinId ?? null],
+    );
+    const rows = await db.query<{
+      id: number; url: string; kind: SourceKind; title: string | null; status: SourceStatus; wikiVersion: number; attempts: number; lastError: string | null; hasText: boolean; pinIds: number[];
+    }>(
+      `SELECT "Source"."id", "Source"."url", "Source"."kind", "Source"."title", "Source"."status", "Source"."wikiVersion", "Source"."attempts", "Source"."lastError",
+              ("Source"."text" IS NOT NULL) AS "hasText", array_agg(DISTINCT "PinSource"."pinId" ORDER BY "PinSource"."pinId") AS "pinIds"
+       ${from} WHERE ${where}
+       GROUP BY "Source"."id"
+       ORDER BY "Source"."id" LIMIT $4 OFFSET $5`,
+      [force, MAX_ATTEMPTS, pinId ?? null, limit, offset],
+    );
+    return { total, sources: rows };
+  }
+
   static async getById(id: number): Promise<(SourceRow & { text: string | null }) | undefined> {
     const [row] = await db.query<SourceRow>(`SELECT ${META}, "text" FROM "Source" WHERE "id" = $1`, [id]);
     return row;

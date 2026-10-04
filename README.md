@@ -331,3 +331,20 @@ As of 2026-10-04, after the by-hand wikis for pins starting in the next 90 days 
 - Every failed retry stamps a new request id and time into `lastError`/`utcAttemptedDateTime`, so `seedSources.json` churns by tens of thousands of lines. Store the credit error without the request id and leave the attempt time alone on a repeat.
 - About 40 wikis are thin because the page was a bot check, a paywall or only navigation; redo them with the browser or another source.
 - Pin dates to check, where the links disagree: 576 (opening Dec 2026 vs 1 Jan 2027), 4095 (LVMH Q3 revenue 20-21 Oct vs 11/12 Oct), 4929, 1855 (Nike Caitlin 1 24 Nov vs 1 Dec), 4948 (Paris Line 18 opens 13 Oct vs the pin's 30 Nov), 1864 (Amazon Leo preview 8 Apr vs Nov 2025).
+
+
+
+- senators and congressmen and executive branch members, governers and other major political figures should have page like companies. It should show their yearly earning as tiles under the main pane. It should show their laws they passed and other major contributions they have don in thier career
+
+list these information on people if available
+• Age
+• Weight
+• Politics
+• Religion
+• Health
+• Recent leisure trips
+• Majore property or houses owned
+
+
+- famous people should have page like congressmen too
+
