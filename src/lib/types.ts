@@ -306,6 +306,12 @@ export type CompanyExecutive = {
   title: string;
   salary: number | null;
   totalCompensation: number | null;
+  bonus?: number | null;
+  stockAwards?: number | null;
+  optionAwards?: number | null;
+  incentivePay?: number | null;
+  pensionChange?: number | null;
+  otherCompensation?: number | null;
   currency: string;
   fiscalYear: number | null;
   sourceUrl: string | null;

@@ -28,6 +28,19 @@ ${row('CHAIR OF THE BOARD AND CEO', '2024', '1,500,000', '46,349,135', '2,000', 
     expect(parseExecutives(table, 'x')).toMatchObject([{ name: 'Shantanu Narayen', title: 'Chair of the Board and CEO', salary: 1_500_000, totalCompensation: 51_173_935, fiscalYear: 2025 }]);
   });
 
+  it('splits the total into its columns when they add up to it', () => {
+    const table = `<table>
+${row('Name and Principal Position', 'Year', 'Salary', 'Bonus', 'Stock Awards', 'Non-Equity Incentive Plan Compensation', 'All Other Compensation', 'Total')}
+${row('Jane Roe<br>Chief Executive Officer', '2025', '1,000,000', '—', '5,000,000', '2,000,000', '100,000', '8,100,000')}
+${row('Joe Doe<br>Chief Financial Officer', '2025', '500,000', '100,000', '1,000,000', '300,000', '50,000', '9,999,999')}
+</table>`;
+    const [ceo, cfo] = parseExecutives(table, 'x');
+    expect(ceo).toMatchObject({ salary: 1_000_000, bonus: 0, stockAwards: 5_000_000, incentivePay: 2_000_000, otherCompensation: 100_000, totalCompensation: 8_100_000 });
+    // Parts that do not add up to the total: no split, but salary and total stay.
+    expect(cfo.bonus).toBeNull();
+    expect(cfo).toMatchObject({ salary: 500_000, totalCompensation: 9_999_999 });
+  });
+
   it('finds nothing without a compensation table', () => {
     expect(parseExecutives('<table><tr><td>Revenue</td></tr></table>', 'x')).toEqual([]);
   });

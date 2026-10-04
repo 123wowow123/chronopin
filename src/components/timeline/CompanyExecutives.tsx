@@ -71,6 +71,7 @@ export function CompanyExecutivesPanel({ name, executives }: { name: string; exe
             ) : (
               <span className="mt-1 text-xs text-subtle">{t('company.executiveUndisclosed')}</span>
             )}
+            <Breakdown e={e} locale={locale} />
             {e.fiscalYear || e.sourceUrl ? (
               <span className="text-[11px] text-subtle">
                 {e.fiscalYear ? t('company.executiveFiscalYear', { year: String(e.fiscalYear) }) : null}
@@ -86,5 +87,42 @@ export function CompanyExecutivesPanel({ name, executives }: { name: string; exe
         ))}
       </ul>
     </section>
+  );
+}
+
+const FORMS = [
+  ['bonus', 'company.executiveBonus'],
+  ['stockAwards', 'company.executiveStock'],
+  ['optionAwards', 'company.executiveOptions'],
+  ['incentivePay', 'company.executiveIncentive'],
+  ['pensionChange', 'company.executivePension'],
+  ['otherCompensation', 'company.executiveOther'],
+] as const;
+
+// What the total is made of: the salary and each other form of pay the filing
+// shows (a dash is left out), as a fold-out under the figures. Nothing when
+// the filing's columns could not be read to add up to the total.
+function Breakdown({ e, locale }: { e: CompanyExecutive; locale: string }) {
+  const t = useT();
+  const parts = FORMS.filter(([key]) => (e[key] ?? 0) > 0);
+  if (!parts.length) return null;
+  return (
+    <details className="group mt-0.5 text-xs">
+      <summary className="cursor-pointer list-none text-link hover:underline [&::-webkit-details-marker]:hidden">{t('company.executiveBreakdown')}</summary>
+      <dl className="mt-1 grid grid-cols-[1fr_auto] gap-x-3 gap-y-0.5">
+        {e.salary ? (
+          <>
+            <dt className="text-subtle">{t('company.executiveSalary')}</dt>
+            <dd className="text-end text-ink tabular-nums">{formatPay(locale, e.salary, e.currency)}</dd>
+          </>
+        ) : null}
+        {parts.map(([key, label]) => (
+          <div key={key} className="contents">
+            <dt className="text-subtle">{t(label)}</dt>
+            <dd className="text-end text-ink tabular-nums">{formatPay(locale, e[key]!, e.currency)}</dd>
+          </div>
+        ))}
+      </dl>
+    </details>
   );
 }

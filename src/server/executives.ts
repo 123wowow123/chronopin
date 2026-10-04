@@ -196,13 +196,37 @@ export function cleanName(name: string): string {
 
 const cleanTitle = (title: string) => tidyCase(title.replace(FOOTNOTES, '').replace(/(?<=[a-z)])\d{1,2}$/i, '').replace(/\s+/g, ' ').replace(/[,\s]+$/, '').trim());
 
-// Which of a row's figures is the total: the header's own "Total" column when
-// every cell is there ("SEC Total" before "Total Without Change in Pension"),
-// else the last figure.
-function totalIndex(header: string[], figures: number[]): number {
-  const columns = header.slice(2);
-  const at = columns.findIndex((h) => /^(sec\s+)?total\b/i.test(h.replace(/\s+/g, ' ')));
-  return at >= 0 && columns.length === figures.length ? at : figures.length - 1;
+// Which pay column each header cell is, after the name and year columns.
+type PayKind = 'salary' | 'bonus' | 'stockAwards' | 'optionAwards' | 'incentivePay' | 'pensionChange' | 'otherCompensation' | 'total' | null;
+
+function payKind(header: string): PayKind {
+  const h = header.replace(/\s+/g, ' ').trim();
+  if (/^salary\b/i.test(h)) return 'salary';
+  if (/^bonus\b/i.test(h)) return 'bonus';
+  if (/^stock\b/i.test(h)) return 'stockAwards';
+  if (/^option\b/i.test(h)) return 'optionAwards';
+  if (/^non-?(equity|stock)\b/i.test(h)) return 'incentivePay';
+  if (/^change in\b/i.test(h)) return 'pensionChange';
+  if (/^all other\b/i.test(h)) return 'otherCompensation';
+  if (/^(sec\s+)?total\b/i.test(h) && !/without|excluding/i.test(h)) return 'total';
+  return null;
+}
+
+// The figures of a row by column, when every cell of the header has its figure
+// (a header spread over several rows, or an empty cell, leaves the count
+// short and the columns unknown). Pay a filing shows as a dash is 0.
+function payColumns(header: string[], figures: number[]): (Partial<Record<Exclude<PayKind, null>, number>> & { adds: boolean }) | null {
+  const kinds = header.filter((h) => !/^(fiscal\s+)?year$/i.test(h) && !/\b(name|position)\b/i.test(h)).map(payKind);
+  if (kinds.length !== figures.length || !kinds.includes('total')) return null;
+  const out: Partial<Record<Exclude<PayKind, null>, number>> = {};
+  kinds.forEach((kind, i) => {
+    if (kind && out[kind] === undefined) out[kind] = figures[i];
+  });
+  // The parts must add up to the total, else a column was misread and none of
+  // the split is shown (the salary and total still are).
+  const { total, ...parts } = out;
+  const sum = Object.values(parts).reduce((a, b) => a + b, 0);
+  return { ...out, adds: total !== undefined && Math.abs(sum - total) <= 2 };
 }
 
 const isYear = (cell: string | undefined) => /^20\d\d$/.test(cell ?? '');
@@ -211,7 +235,9 @@ const isYear = (cell: string | undefined) => /^20\d\d$/.test(cell ?? '');
 export function parseExecutives(html: string, sourceUrl: string): CompanyExecutiveInput[] {
   const all = compensationRows(html);
   const headerAt = Math.max(0, all.findIndex((r) => r.some((c) => /^(fiscal\s+)?year$/i.test(c))));
-  const header = all[headerAt] ?? [];
+  // The header is the row up to the Year one that names most pay columns (some
+  // filings put the names on the row above Year, Lockheed Martin).
+  const header = all.slice(0, headerAt + 1).reduce<string[]>((best, r) => (r.filter((c) => payKind(c)).length > best.filter((c) => payKind(c)).length ? r : best), all[headerAt] ?? []);
   const found = new Map<string, CompanyExecutiveInput>();
   let current: string | null = null;
   // Whether the row before was one a person's name or title began on, so the
@@ -267,8 +293,17 @@ export function parseExecutives(html: string, sourceUrl: string): CompanyExecuti
     // Rows come newest year first; only a newer one replaces.
     if (figures.length >= 2 && (exec.fiscalYear == null || year > exec.fiscalYear)) {
       exec.fiscalYear = year;
-      exec.salary = figures[0];
-      exec.totalCompensation = figures[totalIndex(header, figures)];
+      const columns = payColumns(header, figures);
+      exec.salary = columns?.salary ?? figures[0];
+      // The last figure is the total when the columns could not be matched.
+      exec.totalCompensation = columns?.total ?? figures[figures.length - 1];
+      const split = columns?.adds ? columns : null;
+      exec.bonus = split?.bonus ?? null;
+      exec.stockAwards = split?.stockAwards ?? null;
+      exec.optionAwards = split?.optionAwards ?? null;
+      exec.incentivePay = split?.incentivePay ?? null;
+      exec.pensionChange = split?.pensionChange ?? null;
+      exec.otherCompensation = split?.otherCompensation ?? null;
     }
   }
   return [...found.values()].filter(
