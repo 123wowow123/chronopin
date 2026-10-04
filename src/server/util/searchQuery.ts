@@ -47,6 +47,10 @@
 // either their name or their two-letter code, whichever the address used.
 // A card's place label and the pin page's write one.
 //
+// platform: and rated: narrow game pins (PinGameInfo): platform:"PlayStation 5"
+// or platform:xbox-series for a game on any of the platforms given, and
+// rated:"ESRB Mature 17+" for a game with any of the maturity ratings given.
+// The game info's platform pills and rating block write them.
 // rating: takes a bound on a pin's rating as a percentage - the headline
 // number its card shows: the average of its review scores, each rescaled to
 // a percentage of its own maximum (MyAnimeList's 8.2/10 is 82), or its one
@@ -102,6 +106,7 @@
 // the end of the query follows it: company:'McDonald's' is one company.
 
 import { compareDayKeys, nextDayKey } from '@/lib/format';
+import { isPlatformKey, platformFromName } from '@/lib/gameInfo';
 import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
 
 // One side of a rating: term, compared with the pin's rounded percentage.
@@ -141,6 +146,11 @@ export type SearchQuery = {
   excludeTags: string[];
   // Places an address must name: cities, states, postal codes, countries.
   places: string[];
+  // A game's platforms (platform:ps5, platform:"Xbox Series X|S"), as the
+  // keys of src/lib/gameInfo.ts; a pin on any of them matches.
+  platforms: string[];
+  // A game's maturity rating, board first (rated:"ESRB Mature 17+"); any.
+  rated: string[];
   // Bounds a pin's rating must meet, every one of them.
   ratings: RatingBound[];
   // Bounds a pin's delay must meet, every one of them.
@@ -153,7 +163,7 @@ const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -173,7 +183,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay';
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -245,6 +255,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     tags: [],
     excludeTags: [],
     places: [],
+    platforms: [],
+    rated: [],
     ratings: [],
     delays: [],
     text: '',
@@ -281,6 +293,12 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       }
     } else if (part.field === 'place') {
       addUnique(query.places, part.value);
+    } else if (part.field === 'platform') {
+      // A name nobody ships on is left out rather than matching nothing.
+      const key = platformFromName(part.value) ?? (isPlatformKey(part.value.toLowerCase()) ? part.value.toLowerCase() : undefined);
+      if (key) addUnique(query.platforms, key);
+    } else if (part.field === 'rated') {
+      if (part.value) addUnique(query.rated, part.value);
     } else if (part.field === 'rating') {
       for (const bound of ratingBounds(part.value)) {
         if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
@@ -316,6 +334,8 @@ export function hasFilters(query: SearchQuery): boolean {
     query.tags.length ||
     query.excludeTags.length ||
     query.places.length ||
+    query.platforms.length ||
+    query.rated.length ||
     query.ratings.length ||
     query.delays.length
   );

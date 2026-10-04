@@ -26,6 +26,7 @@ import { IN_PAGE_HEADINGS, IN_PAGE_META, IN_PAGE_SCRAPE, type InPageHeadings, ty
 import { pageEntries, type PageEntry } from '@/lib/pageEntries';
 import { findPinImages, pageImage } from './findImages';
 import { findProductVideo, findScreenDetails, isScreenCategory, malIdOf, workCategory, youtubeStill, type ScreenDetails } from './screen';
+import { findGameMarkets, type GameMarketReference } from './gameMarkets';
 import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
 import { seriesPinFor } from './modelSeries';
 import { prequelPinFor } from './prequel';
@@ -125,6 +126,15 @@ function addReferences(pin: Pin, { references, longFormSummary }: FoundReference
   references.forEach((r) => pin.addReference(new PinReference(r)));
   if (longFormSummary) pin.longFormSummary = longFormSummary;
   return pin;
+}
+
+// Prediction markets on a game, after the references found for the page
+// (never the source itself, never a link the pin already has).
+function addMarketReferences(pin: Pin, markets: GameMarketReference[] | undefined) {
+  for (const m of markets ?? []) {
+    if (m.url === pin.sourceUrl || (pin.references ?? []).some((r: PinReference) => r.url === m.url)) continue;
+    pin.addReference(new PinReference(m));
+  }
 }
 
 /* Twitter */
@@ -345,7 +355,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   // keeps that one rather than gaining a searched-for trailer. So is a
   // film's, show's or game's review score on Kalshi (./scoreMarkets.ts).
   const hasVideo = pin.media.some((m) => Number(m.type) === mediumID.youtube);
-  const [{ fields, screen, scoreMarket }, found] = await Promise.all([
+  const [{ fields, screen, scoreMarket, gameMarkets }, found] = await Promise.all([
     extractPinFields(pageUrl, pageText, note).then(async (fields) => {
       // The category that says what kind of work it is, of the ones it has.
       const work = {
@@ -358,11 +368,13 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
         // The studio or licensor, so its own channel wins the trailer search.
         company: fields?.company,
       };
-      const [screen, scoreMarket] = await Promise.all([
+      const [screen, scoreMarket, gameMarkets] = await Promise.all([
         isScreenCategory(fields?.categories) ? findScreenDetails({ ...work, skipTrailer: hasVideo }) : undefined,
         scoreSiteFor(fields?.categories) ? findScoreMarket(work) : undefined,
+        // A game's release-date and other markets are references (./gameMarkets.ts).
+        hasCategory(categoryList(fields?.categories), GAME_CATEGORIES) ? findGameMarkets(work) : undefined,
       ]);
-      return { fields, screen, scoreMarket };
+      return { fields, screen, scoreMarket, gameMarkets };
     }),
     findReferences(pageUrl, pageText, 'web page', note),
   ]);
@@ -376,6 +388,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   const trailer = applyScreenDetails(pin, screen, scoreMarket);
   // References first: the top-up takes pictures from the day's articles.
   addReferences(pin, found);
+  addMarketReferences(pin, gameMarkets);
   // A source that dates nothing is dated from the references, else from one
   // model call over everything gathered (../extract/estimateDate.ts).
   await estimateUndated(pin, { pageUrl, pageText, references: found.references, note });

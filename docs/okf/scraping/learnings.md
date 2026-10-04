@@ -6562,3 +6562,11 @@ Ian: "translate all". Prod's `GET /api/admin/translations?after=0` listed 52 pin
 ## 2026-10-04 - Daily job news, run 5 (session)
 
 * **Learned** (news run: ads, holiday ads, thin breaking-news search) pin_ads_check read 0 listings (none exist yet) and needsAds lists 20 upcoming pins with 0 ads, mostly TV premieres and layoffs that have no adjacent product; no ads added. holiday_ads_check mechanical adds included a Kwanzaa "Juneteenth" tablecloth (removed); a Songkran water-gun tier is generic toy guns, left in. Generic "summit October 2026" web search returned only small conferences - use specific beats instead. pending_event_info page text can be a news article for non-ticketed pins: save empty fields rather than guessing.
+
+## 2026-10-04 - Daily job midnight, run 7 (session)
+
+* **Learned** (midnight by hand: Fortune 100 earnings pins) Never-pinned Fortune 100 companies (Delta, UnitedHealth, Bank of America) each have an official IR/newsroom release naming the next earnings date, found by one WebSearch each; scrape_url on those pages returns junk media (Delta page gave Tesla Commons pictures, BAC a subprime-mortgage photo, UNH only icons), so pull pictures from Commons Special:FilePath URLs returned by search and view them. YouTube: only the CEO CNBC interview for BAC came back from search; Delta and UNH had none, saved with 2 pictures. Commons has no UnitedHealth HQ photo that is not the Dec 2024 shooting scene; the company page card + Optum La Crosse building were used. A POST can 502 while prod is loaded: find_pins on the sourceUrl, then retry.
+
+## 2026-10-04 - Daily job news, run 8 (session)
+
+* **Learned** (news by hand: signals that were already covered) Run 8 (by hand, after run 5 stopped early): the week was already well covered - every Nobel announcement (1948, 1994-1998), Paris Motor Show (4863), IMF/World Bank (5182) and the Bosnia, Quebec, Lima and Brazil votes had pins, and every uncovered prediction market was a per-game, ad-spend or price-level market (skip) or stale (the Xi state-visit market was for 23-25 Sept). The one real gap was a rumoured, unconfirmed date: Bloomberg/Gurman put Apple's smart-home launch on 13 Oct, pinned as estimated. Pin 4189 (Levi's) is @FashionDesk, so a missing-references fix is a mark_revisit, not an update.

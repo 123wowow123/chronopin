@@ -1,5 +1,6 @@
 import { after } from 'next/server';
 import { emitPinEvent } from '@/server/events';
+import { refreshGameInfo } from './gameInfo';
 import { HttpError } from '@/server/http';
 import CompanyFollow from '@/server/model/companyFollow';
 import Follow from '@/server/model/follow';
@@ -101,6 +102,8 @@ export async function createPin(body: Record<string, any>, user: User, { noBrows
     })
     .catch((err) => log.warn('re-slotting later seasons failed:', (err as Error).message));
   if (stocks.length) after(() => addPinStocksQuietly(saved.id, stocks));
+  // A game's maturity rating, platforms and scores, from its Steam page.
+  after(() => refreshGameInfo(saved.id).catch((err) => log.warn('game info lookup failed:', (err as Error).message)));
 
   // Answered from the database, so the response is exactly what a reload shows.
   const { pin: stored } = await Pin.queryById(saved.id, user.id);

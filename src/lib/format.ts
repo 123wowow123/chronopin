@@ -476,7 +476,7 @@ export function startsWhen(utcStartDateTime: string, allDay: boolean | undefined
 // A rating the way its source shows it: Rotten Tomatoes and AniList as a
 // percentage ("92%"), everyone else as a score out of its maximum ("8.67/10",
 // Metacritic's "82/100").
-const PERCENT_SOURCES = new Set(['rotten tomatoes', 'anilist', 'kalshi rt forecast']);
+const PERCENT_SOURCES = new Set(['rotten tomatoes', 'anilist', 'steam', 'kalshi rt forecast']);
 
 // A prediction market's forecast of a site's score (server/scrape/
 // scoreMarkets.ts): shown beside the reviews, but not a review itself.

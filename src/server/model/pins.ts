@@ -32,6 +32,8 @@ export type PinSearchFilters = {
   tags: string[];
   excludeTags: string[];
   places: string[];
+  platforms: string[];
+  rated: string[];
   ratings: RatingBound[];
   delays: DelayBound[];
 };
@@ -905,6 +907,14 @@ function searchClauses(filter: SearchFilter) {
   // Any of these places: a US state under either its name or its code.
   if (filter.places.length) {
     where.push(addressMatches(placePatterns(filter.places)));
+  }
+  // A game on any of these platforms (platform:), or rated any of these
+  // (rated:, the board then its label), from PinGameInfo.
+  if (filter.platforms.length) {
+    where.push(`EXISTS (SELECT 1 FROM "PinGameInfo" AS "g" WHERE "g"."pinId" = "Pin"."id" AND "g"."platforms" ?| ${add(filter.platforms)}::text[])`);
+  }
+  if (filter.rated.length) {
+    where.push(`EXISTS (SELECT 1 FROM "PinGameInfo" AS "g" WHERE "g"."pinId" = "Pin"."id" AND lower("g"."maturityBoard" || ' ' || "g"."maturityRating") = ANY(${add(filter.rated.map((r) => r.toLowerCase()))}::text[]))`);
   }
   // Every rating: bound, on the pin's headline rating as its card shows it
   // (format.ts averageRating): its review scores as percentages of their own

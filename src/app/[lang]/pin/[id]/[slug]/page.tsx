@@ -22,6 +22,7 @@ import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinEventInfo } from '@/components/pin/PinEventInfo';
+import { PinGameInfo } from '@/components/pin/PinGameInfo';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
 import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
@@ -68,8 +69,9 @@ import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
 import { isAttendableEvent, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
+import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinGameInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { pinTextDir } from '@/lib/i18n/config';
@@ -112,11 +114,12 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   // how it got there. An event people can attend also carries its host's
   // website, performers and tickets, for the page and its Event markup.
   const event = isAttendableEvent(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, ads, adsense, viewer] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, ads, adsense, viewer] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     event && pin.companyId ? companyWebsite(pin.companyId) : null,
     event ? pinEventInfo(pin.id) : null,
+    pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
     adPlacements(),
     adsenseSlots(),
     viewerUser(),
@@ -172,6 +175,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
 
           {/* Beside the pin on wide screens, under its map; after it on phones. */}
           <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
+          {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
 
           {/* Related ads, one row under what the pin is about. */}
           {ads['pin-strip'] ? <AdRow slot="pin-strip" pinId={pin.id} className="mt-6" /> : null}

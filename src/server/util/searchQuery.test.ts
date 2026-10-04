@@ -73,6 +73,8 @@ describe('parseSearchQuery', () => {
       tags: ['software'],
       excludeTags: [],
       places: [],
+      platforms: [],
+      rated: [],
       ratings: [],
       delays: [],
       text: 'ios',
@@ -257,5 +259,14 @@ describe('excluded tags (-tag:)', () => {
   it('keeps a hyphenated word as text, and marks the term in the split', () => {
     expect(parseSearchQuery('t-tag:x').text).toBe('t-tag:x');
     expect(splitSearchQuery('-tag:Anime')).toEqual([{ kind: 'term', field: 'tag', value: 'Anime', raw: '-tag:Anime', negated: true }]);
+  });
+});
+
+describe('game info terms', () => {
+  it('reads platform: by name or key and rated: as written', () => {
+    const q = parseSearchQuery('platform:"PlayStation 5" platform:xbox-series platform:Atari rated:"ESRB Mature 17+" zombies');
+    expect(q.platforms).toEqual(['ps5', 'xbox-series']);
+    expect(q.rated).toEqual(['ESRB Mature 17+']);
+    expect(q.text).toBe('zombies');
   });
 });

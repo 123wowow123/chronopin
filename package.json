@@ -52,6 +52,7 @@
     "markets:volume": "tsx scripts/markets/volume.ts",
     "merchants:prices": "tsx scripts/merchants/prices.ts",
     "merchants:steam": "tsx scripts/merchants/steam.ts",
+    "games:info": "tsx scripts/games/info.ts",
     "places:resolve": "tsx scripts/places/resolve.ts",
     "places:refresh": "tsx scripts/places/refresh.ts",
     "events:refresh": "tsx scripts/events/refresh.ts",
@@ -120,6 +121,7 @@
     "sanitize-html": "^2.17.7",
     "server-only": "^0.0.1",
     "sharp": "^0.35.4",
+    "simple-icons": "^16.34.0",
     "web-push": "^3.6.7"
   },
   "devDependencies": {

@@ -9,6 +9,8 @@ import { getPersonalBag, getSliderTyping, getAdPlacements, getAdsenseSlots, getT
 import Company from '../model/company';
 import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
+import { gameInfoForPin } from '../model/pinGameInfo';
+import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
@@ -181,6 +183,14 @@ export async function pinEventInfo(id: number): Promise<PinEventInfoJson | null>
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return eventInfoForPin(id);
+}
+
+// A game's maturity rating and platforms, or null when none were read.
+export async function pinGameInfo(id: number): Promise<PinGameInfoJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return gameInfoForPin(id);
 }
 
 // Tagged with every pin in the thread, so a change to any of them - a
