@@ -52,6 +52,7 @@
     "media:dedupe": "tsx scripts/media/dedupe.ts",
     "media:videos": "tsx scripts/media/productVideos.ts",
     "media:twitch": "tsx scripts/media/twitchClips.ts",
+    "media:alt-videos": "tsx scripts/media/altVideos.ts",
     "media:score-markets": "tsx scripts/media/scoreMarkets.ts",
     "markets:volume": "tsx scripts/markets/volume.ts",
     "merchants:prices": "tsx scripts/merchants/prices.ts",
