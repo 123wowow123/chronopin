@@ -216,7 +216,7 @@ export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 
           return (
             <li key={ad.key} className="min-w-0">
               <AdLink ad={ad} slot={slot} pinId={pinId} className="surface flex h-full items-center gap-3 p-2.5 hover:no-underline hover:ring-1 hover:ring-line">
-                <AdPicture ad={ad} className={slot === 'timeline-row' ? 'h-14 w-20' : 'size-11'} />
+                <AdPicture ad={ad} className={slot === 'timeline-row' ? 'h-14 w-20' : 'h-12 w-[4.5rem]'} />
                 <span className="flex min-w-0 flex-col">
                   <span className="truncate text-sm font-medium text-ink" title={title}>
                     {title}
