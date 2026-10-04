@@ -5082,10 +5082,10 @@
   {
     "pinId": 861,
     "sentiment": 0.5,
-    "textHash": "36e426c90036b263f36e3bb2893a32904f1f49304ea03fbf5465525e7c485407",
-    "utcScoredDateTime": "2026-09-23T04:28:35.572Z",
+    "textHash": "88753d58ea46b60ef941227b892dd7bff387d672eb4f38ab3527468ada5570a1",
+    "utcScoredDateTime": "2026-10-03T15:51:18.594Z",
     "product": "Reincarnated as a Sword",
-    "productHash": "36e426c90036b263f36e3bb2893a32904f1f49304ea03fbf5465525e7c485407"
+    "productHash": "88753d58ea46b60ef941227b892dd7bff387d672eb4f38ab3527468ada5570a1"
   },
   {
     "pinId": 862,
@@ -17681,11 +17681,11 @@
   },
   {
     "pinId": 2826,
-    "sentiment": -0.1,
-    "textHash": "52ee3ee1bd5884563efc6c0aa70529ce032cc1a247b02862484a0298a57aec62",
-    "utcScoredDateTime": "2026-09-23T04:54:00.806Z",
+    "sentiment": 0.1,
+    "textHash": "0902b65458519914c91b5316b1ef2dfe6b7df4e3aa3155e11e5ff81420353135",
+    "utcScoredDateTime": "2026-10-03T15:51:19.006Z",
     "product": null,
-    "productHash": "52ee3ee1bd5884563efc6c0aa70529ce032cc1a247b02862484a0298a57aec62"
+    "productHash": null
   },
   {
     "pinId": 2827,
@@ -18865,11 +18865,11 @@
   },
   {
     "pinId": 2979,
-    "sentiment": -0.1,
-    "textHash": "1fd0bc5fad2eb3ade45985fd7c07811727098334c74a025ccea46338166fdc74",
-    "utcScoredDateTime": "2026-09-24T04:29:38.535Z",
+    "sentiment": 0.1,
+    "textHash": "59e5c36eec7787a31e22f5ca4417e0f792a32bcd368c6de08e2074763b86efd4",
+    "utcScoredDateTime": "2026-10-03T15:51:20.064Z",
     "product": null,
-    "productHash": "1fd0bc5fad2eb3ade45985fd7c07811727098334c74a025ccea46338166fdc74"
+    "productHash": null
   },
   {
     "pinId": 2981,
@@ -19145,11 +19145,11 @@
   },
   {
     "pinId": 3016,
-    "sentiment": 0,
-    "textHash": "2214ef808dfe5d09ab7a566f805ad032a76a007e947216ddcbccef9283249d39",
-    "utcScoredDateTime": "2026-09-24T04:29:38.673Z",
+    "sentiment": 0.3,
+    "textHash": "509d8cf72f0a6def28f4c86ba043dc995ed172c58cb4a80538726ec3667453bf",
+    "utcScoredDateTime": "2026-10-03T15:51:20.650Z",
     "product": null,
-    "productHash": "2214ef808dfe5d09ab7a566f805ad032a76a007e947216ddcbccef9283249d39"
+    "productHash": null
   },
   {
     "pinId": 3017,
@@ -27153,11 +27153,11 @@
   },
   {
     "pinId": 4056,
-    "sentiment": 0.1,
-    "textHash": "819066ec0280ba7737540d5e3488d01f605e5537c64e87563b2ae35a73aa8e4b",
-    "utcScoredDateTime": "2026-09-30T19:50:00.043Z",
+    "sentiment": -0.3,
+    "textHash": "f28648747cf68401478a79984753b96973aa18409fb1c955c57b09d055294980",
+    "utcScoredDateTime": "2026-10-03T15:51:21.158Z",
     "product": null,
-    "productHash": "819066ec0280ba7737540d5e3488d01f605e5537c64e87563b2ae35a73aa8e4b"
+    "productHash": null
   },
   {
     "pinId": 4057,
@@ -35848,6 +35848,54 @@
     "productHash": null
   },
   {
+    "pinId": 5179,
+    "sentiment": 0.3,
+    "textHash": "9daa81010a58a3bde58a536c00567a6d6dc751cce0b43c1335768b38ce3dc60a",
+    "utcScoredDateTime": "2026-10-03T15:51:24.287Z",
+    "product": "UFC",
+    "productHash": "9daa81010a58a3bde58a536c00567a6d6dc751cce0b43c1335768b38ce3dc60a"
+  },
+  {
+    "pinId": 5180,
+    "sentiment": 0.2,
+    "textHash": "82289972e99fe4204b62a2eed5e9cd90f234191eb2ddd6803fb42d973749e3f4",
+    "utcScoredDateTime": "2026-10-03T15:51:25.126Z",
+    "product": "Bahrain Grand Prix",
+    "productHash": "82289972e99fe4204b62a2eed5e9cd90f234191eb2ddd6803fb42d973749e3f4"
+  },
+  {
+    "pinId": 5181,
+    "sentiment": 0.1,
+    "textHash": "d3aa061649426d36a29074f0246a88786686ebd7f80c93c9736845f5a347c457",
+    "utcScoredDateTime": "2026-10-03T15:51:26.444Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5182,
+    "sentiment": 0.1,
+    "textHash": "04227bb5af7809e842bebdcec7f2907af12cbef72afd5406a3b1fdb63c82ddd9",
+    "utcScoredDateTime": "2026-10-03T15:51:27.453Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5183,
+    "sentiment": 0.1,
+    "textHash": "f62220e4b149d08f2fd51fd89253c3a9d4686ddf4174c8b7818427dc01047503",
+    "utcScoredDateTime": "2026-10-03T15:51:28.218Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5184,
+    "sentiment": 0.2,
+    "textHash": "6b185b3a169b7f345b92d1a1109d14f8ad77c619801a75baa32a330077b38a24",
+    "utcScoredDateTime": "2026-10-03T15:51:28.959Z",
+    "product": null,
+    "productHash": null
+  },
+  {
     "pinId": 5185,
     "sentiment": 0.4,
     "textHash": "93fa69bb1e74bd677bb4084ca14c082b1beda67126b228bf52eb2788369abd2f",
@@ -36008,6 +36056,30 @@
     "productHash": "2f4a4d86a9bc56551a7e9227cb5483b4942c7c0ebcde89ca398a2f591e2e6f72"
   },
   {
+    "pinId": 5205,
+    "sentiment": 0.5,
+    "textHash": "5a904f5378951dbbe1d890927d694b0eef00aec771741fc833e27423fe489b42",
+    "utcScoredDateTime": "2026-10-03T15:51:32.395Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5206,
+    "sentiment": 0.3,
+    "textHash": "665f0b4c836784bbbbc9bc74f573870eb1ad9f4801f170639878ac64aefcf4ab",
+    "utcScoredDateTime": "2026-10-03T15:51:35.848Z",
+    "product": "Shangri-La Frontier",
+    "productHash": "665f0b4c836784bbbbc9bc74f573870eb1ad9f4801f170639878ac64aefcf4ab"
+  },
+  {
+    "pinId": 5207,
+    "sentiment": 0.4,
+    "textHash": "fd01b01d2dccc846d5d4177ccf4020b8a0102c0551d33c0b350ac0bcd319a75f",
+    "utcScoredDateTime": "2026-10-03T15:51:38.814Z",
+    "product": "Shangri-La Frontier",
+    "productHash": "fd01b01d2dccc846d5d4177ccf4020b8a0102c0551d33c0b350ac0bcd319a75f"
+  },
+  {
     "pinId": 5208,
     "sentiment": 0.5,
     "textHash": "f6117f1644cdb37a5b554528f2064837cd5e310d10fbc2a144a02418c8ab6c4f",
@@ -36032,6 +36104,14 @@
     "productHash": "6d631b5257aa56f8880ff34c241fdc1a10b22a822269429f5658b8a10a6baea4"
   },
   {
+    "pinId": 5213,
+    "sentiment": 0.2,
+    "textHash": "8498e40423fef5ec6185ad3cb5081a4c13e501716311dca842c3145592aa4e4f",
+    "utcScoredDateTime": "2026-10-03T15:51:39.719Z",
+    "product": "Tomorrow's Joe",
+    "productHash": "8498e40423fef5ec6185ad3cb5081a4c13e501716311dca842c3145592aa4e4f"
+  },
+  {
     "pinId": 5214,
     "sentiment": 0.5,
     "textHash": "fdf713bc4185d51f737cc63b40b51e4342fb67febb8a14d41e4b9ef172f46cc2",
@@ -36048,12 +36128,52 @@
     "productHash": "f4bc48171d9d8e80cbaf1a155d92c04b66469bdb06de7caba1d459f75be36fc5"
   },
   {
+    "pinId": 5218,
+    "sentiment": 0.4,
+    "textHash": "7987579248d65aa635d25e3e59093febbdf0a22513c251c4d1f4a33caaea4320",
+    "utcScoredDateTime": "2026-10-03T15:51:42.725Z",
+    "product": "Gundam",
+    "productHash": "7987579248d65aa635d25e3e59093febbdf0a22513c251c4d1f4a33caaea4320"
+  },
+  {
+    "pinId": 5220,
+    "sentiment": 0.4,
+    "textHash": "7ccf240e62d2458f1fc871d340d26ad34564ab4c5a280d375eecb3f1cdd200c3",
+    "utcScoredDateTime": "2026-10-03T15:51:44.619Z",
+    "product": "Gundam",
+    "productHash": "7ccf240e62d2458f1fc871d340d26ad34564ab4c5a280d375eecb3f1cdd200c3"
+  },
+  {
     "pinId": 5221,
     "sentiment": 0.5,
     "textHash": "2510b761a4434e0f9ef950cb5ab867cc0c3b84b632079c84b91d5dd69b26ec7a",
     "utcScoredDateTime": "2026-10-02T19:24:41.375Z",
     "product": "八仙！",
     "productHash": "2510b761a4434e0f9ef950cb5ab867cc0c3b84b632079c84b91d5dd69b26ec7a"
+  },
+  {
+    "pinId": 5222,
+    "sentiment": 0.4,
+    "textHash": "2a8f85df9d20b1134f204ad40022076ba56eba9af3d16656aaf53be0aa0ee7ad",
+    "utcScoredDateTime": "2026-10-03T15:51:49.943Z",
+    "product": "Dragon Ball",
+    "productHash": "2a8f85df9d20b1134f204ad40022076ba56eba9af3d16656aaf53be0aa0ee7ad"
+  },
+  {
+    "pinId": 5224,
+    "sentiment": 0.4,
+    "textHash": "4e85870554062d52f251e387c5fe99a7cc4c3c8ffe159e82bf72c94621517821",
+    "utcScoredDateTime": "2026-10-03T15:51:53.027Z",
+    "product": "Gundam",
+    "productHash": "4e85870554062d52f251e387c5fe99a7cc4c3c8ffe159e82bf72c94621517821"
+  },
+  {
+    "pinId": 5226,
+    "sentiment": 0.4,
+    "textHash": "f52fc589aa8d83d515d54116872f6a57c9a1d0743c0649497e19794c20c84f47",
+    "utcScoredDateTime": "2026-10-03T15:51:54.717Z",
+    "product": "Saint Seiya",
+    "productHash": "f52fc589aa8d83d515d54116872f6a57c9a1d0743c0649497e19794c20c84f47"
   },
   {
     "pinId": 5227,
@@ -36064,12 +36184,28 @@
     "productHash": "0ba5a10f8c6c1464d4b2949b7f02cab6ea2168b3833d1977cd05727605829e9b"
   },
   {
+    "pinId": 5228,
+    "sentiment": 0.3,
+    "textHash": "3141dfa67474474849b78cd965f3ec5ead48e177b0516d5218cb789dcdf8961a",
+    "utcScoredDateTime": "2026-10-03T15:51:56.079Z",
+    "product": "Chibi Maruko-chan",
+    "productHash": "3141dfa67474474849b78cd965f3ec5ead48e177b0516d5218cb789dcdf8961a"
+  },
+  {
     "pinId": 5229,
     "sentiment": 0.5,
     "textHash": "5ed23606d82d9c7c75a0d1b6454f93e43bfd897c5ea5fd0e5a0a61c3048b82f0",
     "utcScoredDateTime": "2026-10-02T19:26:05.666Z",
     "product": "交锋",
     "productHash": "5ed23606d82d9c7c75a0d1b6454f93e43bfd897c5ea5fd0e5a0a61c3048b82f0"
+  },
+  {
+    "pinId": 5230,
+    "sentiment": 0.3,
+    "textHash": "1d0332175aec11020a99b49c42f48effbb988e45a264c6a61b894e64e1695f10",
+    "utcScoredDateTime": "2026-10-03T15:51:57.939Z",
+    "product": "GaoGaiGar",
+    "productHash": "1d0332175aec11020a99b49c42f48effbb988e45a264c6a61b894e64e1695f10"
   },
   {
     "pinId": 5231,
@@ -36080,12 +36216,1588 @@
     "productHash": "f82b5e63c7de477e0c6364593226682de05e8428745672d27f9d1d8aff68da25"
   },
   {
+    "pinId": 5232,
+    "sentiment": 0.4,
+    "textHash": "0a64f1fe6709fb0cc954333c11306e3d6c6e2735ac1c40b4e44115e59d7a6bf1",
+    "utcScoredDateTime": "2026-10-03T15:52:03.647Z",
+    "product": "Cardcaptor Sakura",
+    "productHash": "0a64f1fe6709fb0cc954333c11306e3d6c6e2735ac1c40b4e44115e59d7a6bf1"
+  },
+  {
+    "pinId": 5234,
+    "sentiment": 0.3,
+    "textHash": "737b712431ebf096f1918ff01cf80ad8e51401ca8d45a64d57e44105aa671677",
+    "utcScoredDateTime": "2026-10-03T15:52:06.664Z",
+    "product": "Master Keaton",
+    "productHash": "737b712431ebf096f1918ff01cf80ad8e51401ca8d45a64d57e44105aa671677"
+  },
+  {
     "pinId": 5235,
     "sentiment": 0.5,
     "textHash": "a2d8e5e2d2f9a2136a87b29852bad75ac98d4e7e3447ff403207d93156ca36ae",
     "utcScoredDateTime": "2026-10-02T19:27:11.681Z",
     "product": "Guildrun",
     "productHash": "a2d8e5e2d2f9a2136a87b29852bad75ac98d4e7e3447ff403207d93156ca36ae"
+  },
+  {
+    "pinId": 5236,
+    "sentiment": 0.3,
+    "textHash": "4b1999894e8f9ef4ccd0f91cb75fa9c40bab1d5416a15162b0014dda4e79acb3",
+    "utcScoredDateTime": "2026-10-03T15:52:28.608Z",
+    "product": "Hunter x Hunter",
+    "productHash": "4b1999894e8f9ef4ccd0f91cb75fa9c40bab1d5416a15162b0014dda4e79acb3"
+  },
+  {
+    "pinId": 5237,
+    "sentiment": 0.3,
+    "textHash": "26b2865d5c4866d4511982747f936d8a06df67eb25c4929ec614f7aedb6a4975",
+    "utcScoredDateTime": "2026-10-03T15:52:29.844Z",
+    "product": "InuYasha",
+    "productHash": "26b2865d5c4866d4511982747f936d8a06df67eb25c4929ec614f7aedb6a4975"
+  },
+  {
+    "pinId": 5238,
+    "sentiment": 0.3,
+    "textHash": "2f01be4a7570f323ac0b7585c58157fd404910b1d25083e43db4be3a4e6ad55b",
+    "utcScoredDateTime": "2026-10-03T15:52:30.035Z",
+    "product": "Baki the Grappler",
+    "productHash": "2f01be4a7570f323ac0b7585c58157fd404910b1d25083e43db4be3a4e6ad55b"
+  },
+  {
+    "pinId": 5239,
+    "sentiment": 0.3,
+    "textHash": "1043143c3b41ac62af93752bb1fb0327f5c3d219849d2cc0082ea82f1131db88",
+    "utcScoredDateTime": "2026-10-03T15:52:30.240Z",
+    "product": "Haré+Guu",
+    "productHash": "1043143c3b41ac62af93752bb1fb0327f5c3d219849d2cc0082ea82f1131db88"
+  },
+  {
+    "pinId": 5241,
+    "sentiment": 0.3,
+    "textHash": "c8c34cf135a1d1765350d6c3cab771c7cb44b80ff038da0d3eba77704f22165b",
+    "utcScoredDateTime": "2026-10-03T15:52:30.990Z",
+    "product": "Hikaru no Go",
+    "productHash": "c8c34cf135a1d1765350d6c3cab771c7cb44b80ff038da0d3eba77704f22165b"
+  },
+  {
+    "pinId": 5242,
+    "sentiment": 0,
+    "textHash": "3d6d41db04cfd77096390dd1112b19cb8b575e517d92e3973eca7c11a743aa0d",
+    "utcScoredDateTime": "2026-10-03T15:52:31.530Z",
+    "product": "Employment Situation",
+    "productHash": "3d6d41db04cfd77096390dd1112b19cb8b575e517d92e3973eca7c11a743aa0d"
+  },
+  {
+    "pinId": 5243,
+    "sentiment": 0.3,
+    "textHash": "83d1221a297beb6f111f54ccb737b39558aa1e43a7dfa07478feb1f6f6e97795",
+    "utcScoredDateTime": "2026-10-03T15:52:34.884Z",
+    "product": "The Prince of Tennis",
+    "productHash": "83d1221a297beb6f111f54ccb737b39558aa1e43a7dfa07478feb1f6f6e97795"
+  },
+  {
+    "pinId": 5244,
+    "sentiment": -0.4,
+    "textHash": "2f95234eb2648b21d006f3ae787ce766dd888d6a6649836a9a368db16ea08c94",
+    "utcScoredDateTime": "2026-10-03T15:52:35.911Z",
+    "product": "Employment Situation",
+    "productHash": "2f95234eb2648b21d006f3ae787ce766dd888d6a6649836a9a368db16ea08c94"
+  },
+  {
+    "pinId": 5245,
+    "sentiment": 0.3,
+    "textHash": "c613ba4e2f49a02dce2330bf200a259818420f7d24c77567532d7c30fd22b207",
+    "utcScoredDateTime": "2026-10-03T15:52:37.528Z",
+    "product": "Ghost in the Shell",
+    "productHash": "c613ba4e2f49a02dce2330bf200a259818420f7d24c77567532d7c30fd22b207"
+  },
+  {
+    "pinId": 5246,
+    "sentiment": 0,
+    "textHash": "4de91c0c288b895d64d0fdcf856117a70e80359fd97362319780fd6b1a69f4fe",
+    "utcScoredDateTime": "2026-10-03T15:52:38.768Z",
+    "product": "Employment Situation",
+    "productHash": "4de91c0c288b895d64d0fdcf856117a70e80359fd97362319780fd6b1a69f4fe"
+  },
+  {
+    "pinId": 5247,
+    "sentiment": 0.3,
+    "textHash": "825cecf402d58cbca76eceee3a4f6665941e97a775c954c4ad849fefd5b5131c",
+    "utcScoredDateTime": "2026-10-03T15:52:40.593Z",
+    "product": "Wolf's Rain",
+    "productHash": "825cecf402d58cbca76eceee3a4f6665941e97a775c954c4ad849fefd5b5131c"
+  },
+  {
+    "pinId": 5248,
+    "sentiment": 0,
+    "textHash": "c99d4baeae171f32dbf643ccd7d4e22390ff116ec5af44d5631a9c8773636d68",
+    "utcScoredDateTime": "2026-10-03T15:52:43.444Z",
+    "product": "Employment Situation",
+    "productHash": "c99d4baeae171f32dbf643ccd7d4e22390ff116ec5af44d5631a9c8773636d68"
+  },
+  {
+    "pinId": 5249,
+    "sentiment": 0.3,
+    "textHash": "af878f8b86ce7ca7e466075627cd0f7b6a63e06fa19c8a8a1d6ee8e8624f8c70",
+    "utcScoredDateTime": "2026-10-03T15:52:54.000Z",
+    "product": "Kaleido Star",
+    "productHash": "af878f8b86ce7ca7e466075627cd0f7b6a63e06fa19c8a8a1d6ee8e8624f8c70"
+  },
+  {
+    "pinId": 5250,
+    "sentiment": 0,
+    "textHash": "101141493336a702b50f56d3f84774000f64cb10d23baa620d1aea95d33aae64",
+    "utcScoredDateTime": "2026-10-03T15:52:58.291Z",
+    "product": "Employment Situation",
+    "productHash": "101141493336a702b50f56d3f84774000f64cb10d23baa620d1aea95d33aae64"
+  },
+  {
+    "pinId": 5251,
+    "sentiment": 0.3,
+    "textHash": "335832fbea725db448bf50bc0fcd46e71f61bd9569055e72a0151e63a6e0cf3e",
+    "utcScoredDateTime": "2026-10-03T15:52:59.473Z",
+    "product": "Ghost in the Shell",
+    "productHash": "335832fbea725db448bf50bc0fcd46e71f61bd9569055e72a0151e63a6e0cf3e"
+  },
+  {
+    "pinId": 5252,
+    "sentiment": 0,
+    "textHash": "8fb15e0e26eea68a59a254893b0209337c81a08f3e12b2d89321e6476b4166d9",
+    "utcScoredDateTime": "2026-10-03T15:53:00.670Z",
+    "product": "Employment Situation",
+    "productHash": "8fb15e0e26eea68a59a254893b0209337c81a08f3e12b2d89321e6476b4166d9"
+  },
+  {
+    "pinId": 5253,
+    "sentiment": 0,
+    "textHash": "15279a7c2d5500cf63085169bb3f6442fb149fb593b23167f497be44011d1402",
+    "utcScoredDateTime": "2026-10-03T15:53:05.505Z",
+    "product": "Employment Situation",
+    "productHash": "15279a7c2d5500cf63085169bb3f6442fb149fb593b23167f497be44011d1402"
+  },
+  {
+    "pinId": 5254,
+    "sentiment": 0.3,
+    "textHash": "05a5e21b7f65ec277459e669f63a672c2987047d32ecf6d65c977fca6b179558",
+    "utcScoredDateTime": "2026-10-03T15:53:08.690Z",
+    "product": "Maria Watches Over Us",
+    "productHash": "05a5e21b7f65ec277459e669f63a672c2987047d32ecf6d65c977fca6b179558"
+  },
+  {
+    "pinId": 5255,
+    "sentiment": 0,
+    "textHash": "44d7211992d034c2c7d5e3d6c6f5b037c344455572cd6dbf3e8bbcb5ea47ff94",
+    "utcScoredDateTime": "2026-10-03T15:53:11.395Z",
+    "product": "Employment Situation",
+    "productHash": "44d7211992d034c2c7d5e3d6c6f5b037c344455572cd6dbf3e8bbcb5ea47ff94"
+  },
+  {
+    "pinId": 5256,
+    "sentiment": 0.3,
+    "textHash": "5033c1e73519df76b0f4899d3d76dc87f7f8d5c20934e9235b2130c70622f5cb",
+    "utcScoredDateTime": "2026-10-03T15:53:16.661Z",
+    "product": "Maria Watches Over Us",
+    "productHash": "5033c1e73519df76b0f4899d3d76dc87f7f8d5c20934e9235b2130c70622f5cb"
+  },
+  {
+    "pinId": 5257,
+    "sentiment": 0,
+    "textHash": "5c3f0c2cf7bf181ba17df8e9f3a5fd285c29ff5fa45c8e2504210fb9c492db60",
+    "utcScoredDateTime": "2026-10-03T15:53:26.585Z",
+    "product": "Employment Situation",
+    "productHash": "5c3f0c2cf7bf181ba17df8e9f3a5fd285c29ff5fa45c8e2504210fb9c492db60"
+  },
+  {
+    "pinId": 5258,
+    "sentiment": 0.3,
+    "textHash": "2643cda2928d70900db3893289490338b547cecf2776a2afe2ed106f5581d21d",
+    "utcScoredDateTime": "2026-10-03T15:53:33.414Z",
+    "product": "Major",
+    "productHash": "2643cda2928d70900db3893289490338b547cecf2776a2afe2ed106f5581d21d"
+  },
+  {
+    "pinId": 5259,
+    "sentiment": 0,
+    "textHash": "5b6ffd7a701bd57966e8d77da7ceee1e55fb859a16529a5bfdda07a94ef8a4e3",
+    "utcScoredDateTime": "2026-10-03T15:53:34.934Z",
+    "product": "Employment Situation",
+    "productHash": "5b6ffd7a701bd57966e8d77da7ceee1e55fb859a16529a5bfdda07a94ef8a4e3"
+  },
+  {
+    "pinId": 5260,
+    "sentiment": 0.3,
+    "textHash": "380b8dae49b9ef90638b03157212de25a636a91b99bcd38cdb835b42dd33e4d5",
+    "utcScoredDateTime": "2026-10-03T15:53:38.361Z",
+    "product": "Tsubasa RESERVoir CHRoNiCLE",
+    "productHash": "380b8dae49b9ef90638b03157212de25a636a91b99bcd38cdb835b42dd33e4d5"
+  },
+  {
+    "pinId": 5261,
+    "sentiment": 0,
+    "textHash": "bbdb86b5dfdefc661f03b66eba5b31de328a90462c8d9d47b3a3b45ffa48fd78",
+    "utcScoredDateTime": "2026-10-03T15:53:42.629Z",
+    "product": "Employment Situation",
+    "productHash": "bbdb86b5dfdefc661f03b66eba5b31de328a90462c8d9d47b3a3b45ffa48fd78"
+  },
+  {
+    "pinId": 5262,
+    "sentiment": 0.3,
+    "textHash": "e2ebba27ac15b9cddf9d88ecb336b889cc02e0c46999222145675b08641ae814",
+    "utcScoredDateTime": "2026-10-03T15:53:47.965Z",
+    "product": "ARIA",
+    "productHash": "e2ebba27ac15b9cddf9d88ecb336b889cc02e0c46999222145675b08641ae814"
+  },
+  {
+    "pinId": 5263,
+    "sentiment": 0,
+    "textHash": "b2b4a04b36627d4390d56b242a9b2630a9f2cb724eac9f442adbe135cc5430bb",
+    "utcScoredDateTime": "2026-10-03T15:54:00.777Z",
+    "product": "Employment Situation",
+    "productHash": "b2b4a04b36627d4390d56b242a9b2630a9f2cb724eac9f442adbe135cc5430bb"
+  },
+  {
+    "pinId": 5264,
+    "sentiment": 0.3,
+    "textHash": "fcd3e7964ea06ba6b5b93369b9bb0bc27515b9716dbc75ad487575ac7250b9bd",
+    "utcScoredDateTime": "2026-10-03T15:54:05.100Z",
+    "product": "Major",
+    "productHash": "fcd3e7964ea06ba6b5b93369b9bb0bc27515b9716dbc75ad487575ac7250b9bd"
+  },
+  {
+    "pinId": 5265,
+    "sentiment": -0.4,
+    "textHash": "d932b4d7f9f47bfe8008d2414f31a9f6c342e717ddef9ceb9815987688b49fd1",
+    "utcScoredDateTime": "2026-10-03T15:54:06.347Z",
+    "product": "Employment Situation",
+    "productHash": "d932b4d7f9f47bfe8008d2414f31a9f6c342e717ddef9ceb9815987688b49fd1"
+  },
+  {
+    "pinId": 5266,
+    "sentiment": -0.4,
+    "textHash": "f7cd2ffa7b906e2665e60098c5a4716435c89d3bef625bca9a0769158480f6f0",
+    "utcScoredDateTime": "2026-10-03T15:54:08.574Z",
+    "product": "Employment Situation",
+    "productHash": "f7cd2ffa7b906e2665e60098c5a4716435c89d3bef625bca9a0769158480f6f0"
+  },
+  {
+    "pinId": 5267,
+    "sentiment": 0.3,
+    "textHash": "8003b0e15adfcc709752f4dbf78a2bfaf59d014770af3aedd9b8066520114bd5",
+    "utcScoredDateTime": "2026-10-03T15:54:10.851Z",
+    "product": "Haruhi Suzumiya",
+    "productHash": "8003b0e15adfcc709752f4dbf78a2bfaf59d014770af3aedd9b8066520114bd5"
+  },
+  {
+    "pinId": 5268,
+    "sentiment": 0,
+    "textHash": "4fe0ac8f3b2607e9668ec865bf4ae8db0631e2be7122ab02dc6a094c25411e6a",
+    "utcScoredDateTime": "2026-10-03T15:54:12.839Z",
+    "product": "Employment Situation",
+    "productHash": "4fe0ac8f3b2607e9668ec865bf4ae8db0631e2be7122ab02dc6a094c25411e6a"
+  },
+  {
+    "pinId": 5269,
+    "sentiment": 0.3,
+    "textHash": "ad32b3b812bacfb039a76f6c54c97868c0198e9e3a2f75bdb5ff94b3134cd1cb",
+    "utcScoredDateTime": "2026-10-03T15:54:15.849Z",
+    "product": "ARIA",
+    "productHash": "ad32b3b812bacfb039a76f6c54c97868c0198e9e3a2f75bdb5ff94b3134cd1cb"
+  },
+  {
+    "pinId": 5270,
+    "sentiment": -0.4,
+    "textHash": "9bca8e8ab9fd7f39fb73e81d93f963b9805f898735e38c231399b8ecdc6f1591",
+    "utcScoredDateTime": "2026-10-03T15:54:23.353Z",
+    "product": "Employment Situation",
+    "productHash": "9bca8e8ab9fd7f39fb73e81d93f963b9805f898735e38c231399b8ecdc6f1591"
+  },
+  {
+    "pinId": 5271,
+    "sentiment": 0.3,
+    "textHash": "06c0f93ac1ec78b27fd7cc411230bd0620574b47e5a2c83b7f1a7ad6ef6392be",
+    "utcScoredDateTime": "2026-10-03T15:54:33.769Z",
+    "product": "xxxHOLiC",
+    "productHash": "06c0f93ac1ec78b27fd7cc411230bd0620574b47e5a2c83b7f1a7ad6ef6392be"
+  },
+  {
+    "pinId": 5272,
+    "sentiment": -0.4,
+    "textHash": "08b1d1da932377b78ea5dde64010a08cd8e32a57b76d7df9abbc8aefd5593694",
+    "utcScoredDateTime": "2026-10-03T15:54:42.778Z",
+    "product": "Employment Situation",
+    "productHash": "08b1d1da932377b78ea5dde64010a08cd8e32a57b76d7df9abbc8aefd5593694"
+  },
+  {
+    "pinId": 5273,
+    "sentiment": 0.3,
+    "textHash": "2651dfe4c39199659c085e02e12b55e95e64be427dfefb92a7c8638cf1f13101",
+    "utcScoredDateTime": "2026-10-03T15:54:53.341Z",
+    "product": "Black Lagoon",
+    "productHash": "2651dfe4c39199659c085e02e12b55e95e64be427dfefb92a7c8638cf1f13101"
+  },
+  {
+    "pinId": 5274,
+    "sentiment": 0,
+    "textHash": "c5d2b7a26767333f38783c250d86758c57be33cf77000e5d23b2ec30d4fd8ff7",
+    "utcScoredDateTime": "2026-10-03T15:55:03.349Z",
+    "product": "Employment Situation",
+    "productHash": "c5d2b7a26767333f38783c250d86758c57be33cf77000e5d23b2ec30d4fd8ff7"
+  },
+  {
+    "pinId": 5276,
+    "sentiment": 0,
+    "textHash": "e960c3150d947098b9adb7e494e69ad03cbf170175b9072ddaef7c9454031257",
+    "utcScoredDateTime": "2026-10-03T15:55:11.574Z",
+    "product": "Employment Situation",
+    "productHash": "e960c3150d947098b9adb7e494e69ad03cbf170175b9072ddaef7c9454031257"
+  },
+  {
+    "pinId": 5277,
+    "sentiment": 0.3,
+    "textHash": "3c59be769369d48f41b3746825777fdad96bcbab74e7191573b855c80240a741",
+    "utcScoredDateTime": "2026-10-03T15:55:19.732Z",
+    "product": "Black Lagoon",
+    "productHash": "3c59be769369d48f41b3746825777fdad96bcbab74e7191573b855c80240a741"
+  },
+  {
+    "pinId": 5278,
+    "sentiment": 0,
+    "textHash": "2c16f76ff706ee5aafbd624aa0dab4aa10b26ee6cbbf8f48b159648eba2632ba",
+    "utcScoredDateTime": "2026-10-03T15:55:23.891Z",
+    "product": "Employment Situation",
+    "productHash": "2c16f76ff706ee5aafbd624aa0dab4aa10b26ee6cbbf8f48b159648eba2632ba"
+  },
+  {
+    "pinId": 5279,
+    "sentiment": 0.3,
+    "textHash": "a911cc67d60b09d45957d2215769cac7be222fdcc50e6ca28899b6f7cc334733",
+    "utcScoredDateTime": "2026-10-03T15:55:34.654Z",
+    "product": "Kenichi: The Mightiest Disciple",
+    "productHash": "a911cc67d60b09d45957d2215769cac7be222fdcc50e6ca28899b6f7cc334733"
+  },
+  {
+    "pinId": 5280,
+    "sentiment": -0.1,
+    "textHash": "cac76ec935e898eb972736c3ca097b500b1416659f4e8b0acac416ab364d523e",
+    "utcScoredDateTime": "2026-10-03T15:55:36.365Z",
+    "product": "Employment Situation",
+    "productHash": "cac76ec935e898eb972736c3ca097b500b1416659f4e8b0acac416ab364d523e"
+  },
+  {
+    "pinId": 5281,
+    "sentiment": 0.3,
+    "textHash": "e7b3a9774224bb9f393ae5c3988c4891fd62dcd1d1b22cbf938ab2ecfa791c90",
+    "utcScoredDateTime": "2026-10-03T15:55:40.382Z",
+    "product": "Major",
+    "productHash": "e7b3a9774224bb9f393ae5c3988c4891fd62dcd1d1b22cbf938ab2ecfa791c90"
+  },
+  {
+    "pinId": 5282,
+    "sentiment": -0.1,
+    "textHash": "6685db0632852bee992cd81a1c98f121bcac0dd679b9598afff0b99e1f355154",
+    "utcScoredDateTime": "2026-10-03T15:55:41.615Z",
+    "product": "Employment Situation",
+    "productHash": "6685db0632852bee992cd81a1c98f121bcac0dd679b9598afff0b99e1f355154"
+  },
+  {
+    "pinId": 5283,
+    "sentiment": 0.3,
+    "textHash": "7d4c58385039ca212c8ec650b1756298e645884d7bdba3e79bcfaf46794aa50d",
+    "utcScoredDateTime": "2026-10-03T15:55:46.368Z",
+    "product": "Hidamari Sketch",
+    "productHash": "7d4c58385039ca212c8ec650b1756298e645884d7bdba3e79bcfaf46794aa50d"
+  },
+  {
+    "pinId": 5284,
+    "sentiment": 0,
+    "textHash": "1a3b416fd507ac14f689f8229f74ed826ccd17772f11588d1c89e941eb7db47f",
+    "utcScoredDateTime": "2026-10-03T15:55:48.865Z",
+    "product": "Employment Situation",
+    "productHash": "1a3b416fd507ac14f689f8229f74ed826ccd17772f11588d1c89e941eb7db47f"
+  },
+  {
+    "pinId": 5285,
+    "sentiment": 0.3,
+    "textHash": "d1b519d8e14c3b38941815478157dd59d130afa09fd7ed9e0f08d9ffcecdab8d",
+    "utcScoredDateTime": "2026-10-03T15:55:52.707Z",
+    "product": "Nodame Cantabile",
+    "productHash": "d1b519d8e14c3b38941815478157dd59d130afa09fd7ed9e0f08d9ffcecdab8d"
+  },
+  {
+    "pinId": 5286,
+    "sentiment": 0.3,
+    "textHash": "9416eddbcfe5dfcadab4b3305e87541d6ad7a3ca2fb3247cd0a030e07469e4b6",
+    "utcScoredDateTime": "2026-10-03T15:55:56.370Z",
+    "product": "My Bride is a Mermaid",
+    "productHash": "9416eddbcfe5dfcadab4b3305e87541d6ad7a3ca2fb3247cd0a030e07469e4b6"
+  },
+  {
+    "pinId": 5287,
+    "sentiment": 0.3,
+    "textHash": "7e626bdcdfb39a73fb25a1bf680dffaf9a53ae43e27b2c964862d06ec8d04b4a",
+    "utcScoredDateTime": "2026-10-03T15:56:00.834Z",
+    "product": "Darker than Black",
+    "productHash": "7e626bdcdfb39a73fb25a1bf680dffaf9a53ae43e27b2c964862d06ec8d04b4a"
+  },
+  {
+    "pinId": 5288,
+    "sentiment": 0.3,
+    "textHash": "239ebdd42877fc5bb035d2141b61f03980fe79631185ced4624f2f32d35c428a",
+    "utcScoredDateTime": "2026-10-03T15:56:38.450Z",
+    "product": "Sayonara, Zetsubou-Sensei",
+    "productHash": "239ebdd42877fc5bb035d2141b61f03980fe79631185ced4624f2f32d35c428a"
+  },
+  {
+    "pinId": 5289,
+    "sentiment": 0.3,
+    "textHash": "8359403c15c7d5452a58f3f1571ec98c84908ad782440cd4dae58e199ce3a407",
+    "utcScoredDateTime": "2026-10-03T15:56:38.846Z",
+    "product": "Baccano!",
+    "productHash": "8359403c15c7d5452a58f3f1571ec98c84908ad782440cd4dae58e199ce3a407"
+  },
+  {
+    "pinId": 5290,
+    "sentiment": 0.3,
+    "textHash": "3721feb2d0c968005e6262bfb645f0457c476e924f85b7beadf53326efa8d12f",
+    "utcScoredDateTime": "2026-10-03T15:56:39.100Z",
+    "product": "Major",
+    "productHash": "3721feb2d0c968005e6262bfb645f0457c476e924f85b7beadf53326efa8d12f"
+  },
+  {
+    "pinId": 5291,
+    "sentiment": 0.3,
+    "textHash": "da5e270982bdf59ddd67f8722713ca79bbe47fb5e7c2c63d463a5556b3c31f6a",
+    "utcScoredDateTime": "2026-10-03T15:56:39.455Z",
+    "product": "Zoku Sayonara, Zetsubou-Sensei",
+    "productHash": "da5e270982bdf59ddd67f8722713ca79bbe47fb5e7c2c63d463a5556b3c31f6a"
+  },
+  {
+    "pinId": 5292,
+    "sentiment": 0.3,
+    "textHash": "928786cdbd6051c43b807091afcabe36820dec93911974797ac5b15c0c8838dc",
+    "utcScoredDateTime": "2026-10-03T15:56:39.768Z",
+    "product": "Spice and Wolf",
+    "productHash": "928786cdbd6051c43b807091afcabe36820dec93911974797ac5b15c0c8838dc"
+  },
+  {
+    "pinId": 5293,
+    "sentiment": 0.3,
+    "textHash": "34fa21df589fdb43a82ea3c987f38d0135f6741752c1c36dd266b6d272890afd",
+    "utcScoredDateTime": "2026-10-03T15:56:40.538Z",
+    "product": "xxxHOLiC",
+    "productHash": "34fa21df589fdb43a82ea3c987f38d0135f6741752c1c36dd266b6d272890afd"
+  },
+  {
+    "pinId": 5294,
+    "sentiment": 0.3,
+    "textHash": "b87fb7124bbfae2f65150fc98bccb7e6be5f71067fef43da0e5a71af97b52c32",
+    "utcScoredDateTime": "2026-10-03T15:56:40.813Z",
+    "product": "Hidamari Sketch",
+    "productHash": "b87fb7124bbfae2f65150fc98bccb7e6be5f71067fef43da0e5a71af97b52c32"
+  },
+  {
+    "pinId": 5295,
+    "sentiment": 0.3,
+    "textHash": "93c3233f97ae86425f3eed0af52f9324ea3ac1f7f6c9f4ff85aab3fcaa54d534",
+    "utcScoredDateTime": "2026-10-03T15:56:41.187Z",
+    "product": "Natsume's Book of Friends",
+    "productHash": "93c3233f97ae86425f3eed0af52f9324ea3ac1f7f6c9f4ff85aab3fcaa54d534"
+  },
+  {
+    "pinId": 5296,
+    "sentiment": 0.3,
+    "textHash": "1fdf9f264a5c523faa7a271c8f8d123bce2dc8e665588dbed551314f8f79ffae",
+    "utcScoredDateTime": "2026-10-03T15:56:41.593Z",
+    "product": "Black Butler",
+    "productHash": "1fdf9f264a5c523faa7a271c8f8d123bce2dc8e665588dbed551314f8f79ffae"
+  },
+  {
+    "pinId": 5297,
+    "sentiment": 0.3,
+    "textHash": "f8cf888f54549266148beceb20ff2e7fc0a78e4c381abbd11e5a70d82bae4d9c",
+    "utcScoredDateTime": "2026-10-03T15:56:42.107Z",
+    "product": "Nodame Cantabile",
+    "productHash": "f8cf888f54549266148beceb20ff2e7fc0a78e4c381abbd11e5a70d82bae4d9c"
+  },
+  {
+    "pinId": 5298,
+    "sentiment": 0.3,
+    "textHash": "8eafd4f10520370b34bc40ed53585c33640482df515246f688127aad1e270951",
+    "utcScoredDateTime": "2026-10-03T15:56:42.587Z",
+    "product": "Major",
+    "productHash": "8eafd4f10520370b34bc40ed53585c33640482df515246f688127aad1e270951"
+  },
+  {
+    "pinId": 5299,
+    "sentiment": 0.3,
+    "textHash": "a87fb412aa21b48a4b87a5e48137bc4390a7a09f0194d5d4e911b738b073020e",
+    "utcScoredDateTime": "2026-10-03T15:56:42.860Z",
+    "product": "Haruhi Suzumiya",
+    "productHash": "a87fb412aa21b48a4b87a5e48137bc4390a7a09f0194d5d4e911b738b073020e"
+  },
+  {
+    "pinId": 5300,
+    "sentiment": 0.3,
+    "textHash": "9d8072716f9bf1ada78a46fee3206e6ea05b0f76a1690e654ff3e0dbb4bea6eb",
+    "utcScoredDateTime": "2026-10-03T15:56:43.331Z",
+    "product": "A Certain Scientific Railgun",
+    "productHash": "9d8072716f9bf1ada78a46fee3206e6ea05b0f76a1690e654ff3e0dbb4bea6eb"
+  },
+  {
+    "pinId": 5301,
+    "sentiment": 0.3,
+    "textHash": "33abe8c93cf12614f99fb61b0c03795c3b62290742b51bdc6e136f226a91bb22",
+    "utcScoredDateTime": "2026-10-03T15:56:43.628Z",
+    "product": "Kimi ni Todoke",
+    "productHash": "33abe8c93cf12614f99fb61b0c03795c3b62290742b51bdc6e136f226a91bb22"
+  },
+  {
+    "pinId": 5302,
+    "sentiment": 0.3,
+    "textHash": "084930cd9c866bc14e63b80eb0fb9ad8b9c21a17185fafb0d9d374d424345307",
+    "utcScoredDateTime": "2026-10-03T15:56:44.319Z",
+    "product": "Major",
+    "productHash": "084930cd9c866bc14e63b80eb0fb9ad8b9c21a17185fafb0d9d374d424345307"
+  },
+  {
+    "pinId": 5303,
+    "sentiment": 0.3,
+    "textHash": "e430446178fc010902b377700e6f50b84479f728cd06d6f6f002ec6438e73bb0",
+    "utcScoredDateTime": "2026-10-03T15:56:44.552Z",
+    "product": "Wagnaria!!",
+    "productHash": "e430446178fc010902b377700e6f50b84479f728cd06d6f6f002ec6438e73bb0"
+  },
+  {
+    "pinId": 5304,
+    "sentiment": 0.3,
+    "textHash": "c058ede01f6e697303a48c1ac239d32036c1230fd90473992e7fe261d0494233",
+    "utcScoredDateTime": "2026-10-03T15:56:44.796Z",
+    "product": "Seitokai Yakuindomo",
+    "productHash": "c058ede01f6e697303a48c1ac239d32036c1230fd90473992e7fe261d0494233"
+  },
+  {
+    "pinId": 5305,
+    "sentiment": 0.3,
+    "textHash": "2a6a272ec68d815fcfc68d50cf53ecc164c60d0218dabfdd1d2340134c854745",
+    "utcScoredDateTime": "2026-10-03T15:56:45.451Z",
+    "product": "Kimi ni Todoke",
+    "productHash": "2a6a272ec68d815fcfc68d50cf53ecc164c60d0218dabfdd1d2340134c854745"
+  },
+  {
+    "pinId": 5306,
+    "sentiment": 0.3,
+    "textHash": "8f03effd8340b784ad3714b249e43e823ab39a78dc7f35656a62e2a45e4bd1ef",
+    "utcScoredDateTime": "2026-10-03T15:56:46.343Z",
+    "product": "YuruYuri",
+    "productHash": "8f03effd8340b784ad3714b249e43e823ab39a78dc7f35656a62e2a45e4bd1ef"
+  },
+  {
+    "pinId": 5307,
+    "sentiment": 0.3,
+    "textHash": "bb909251e50103ec16269b1414ccc8f8e27fc0916f1bbafbd16bdbe27fd58f53",
+    "utcScoredDateTime": "2026-10-03T15:56:46.585Z",
+    "product": "Wagnaria!!",
+    "productHash": "bb909251e50103ec16269b1414ccc8f8e27fc0916f1bbafbd16bdbe27fd58f53"
+  },
+  {
+    "pinId": 5308,
+    "sentiment": 0.3,
+    "textHash": "ae0c2a73d690e88f3fa835fbf0abd471edbad5127cde3c7f329827747b7ae8c6",
+    "utcScoredDateTime": "2026-10-03T15:56:46.904Z",
+    "product": "Kingdom",
+    "productHash": "ae0c2a73d690e88f3fa835fbf0abd471edbad5127cde3c7f329827747b7ae8c6"
+  },
+  {
+    "pinId": 5309,
+    "sentiment": 0.3,
+    "textHash": "634683c8839bab267f3a2eb79709c04e91681d3e3ea793b878e436f6ac626b8f",
+    "utcScoredDateTime": "2026-10-03T15:56:47.143Z",
+    "product": "YuruYuri",
+    "productHash": "634683c8839bab267f3a2eb79709c04e91681d3e3ea793b878e436f6ac626b8f"
+  },
+  {
+    "pinId": 5310,
+    "sentiment": 0.3,
+    "textHash": "80d30ba654bb025ea311da2b0c7ab943770f3e38c29fbf852b032f393da70c97",
+    "utcScoredDateTime": "2026-10-03T15:56:47.676Z",
+    "product": "Kokoro Connect",
+    "productHash": "80d30ba654bb025ea311da2b0c7ab943770f3e38c29fbf852b032f393da70c97"
+  },
+  {
+    "pinId": 5311,
+    "sentiment": 0.3,
+    "textHash": "95b40fd920a3eb02eb4647fff047ddccca62cc0f74c2bf47fb0da6ae6f10aa84",
+    "utcScoredDateTime": "2026-10-03T15:56:48.295Z",
+    "product": "Hi Score Girl",
+    "productHash": "95b40fd920a3eb02eb4647fff047ddccca62cc0f74c2bf47fb0da6ae6f10aa84"
+  },
+  {
+    "pinId": 5312,
+    "sentiment": 0.3,
+    "textHash": "1a7e0d400e021f6b01042769f7b9ff5c6fe467ecd95f677b29381f3e6c0ce318",
+    "utcScoredDateTime": "2026-10-03T15:56:48.523Z",
+    "product": "Little Busters!",
+    "productHash": "1a7e0d400e021f6b01042769f7b9ff5c6fe467ecd95f677b29381f3e6c0ce318"
+  },
+  {
+    "pinId": 5313,
+    "sentiment": 0.3,
+    "textHash": "78c846985e773ed08af13d267d708bafcee472c471a22b484711437ba4d3c4c6",
+    "utcScoredDateTime": "2026-10-03T15:56:48.824Z",
+    "product": "Grand Blue Dreaming",
+    "productHash": "78c846985e773ed08af13d267d708bafcee472c471a22b484711437ba4d3c4c6"
+  },
+  {
+    "pinId": 5314,
+    "sentiment": 0.3,
+    "textHash": "02e49793af4d6626addf5254e8f50fa0dfb480163ba072013a0cfdd99c70958a",
+    "utcScoredDateTime": "2026-10-03T15:56:49.242Z",
+    "product": "Girls und Panzer",
+    "productHash": "02e49793af4d6626addf5254e8f50fa0dfb480163ba072013a0cfdd99c70958a"
+  },
+  {
+    "pinId": 5315,
+    "sentiment": 0.3,
+    "textHash": "7eef835682ecb5b9aa1e7b5cbfa9ea0c3983ac1aa28ffb3c4dde17c623f0854b",
+    "utcScoredDateTime": "2026-10-03T15:56:49.828Z",
+    "product": "Zombie Land Saga",
+    "productHash": "7eef835682ecb5b9aa1e7b5cbfa9ea0c3983ac1aa28ffb3c4dde17c623f0854b"
+  },
+  {
+    "pinId": 5316,
+    "sentiment": 0.3,
+    "textHash": "f3b68bc656ebf2e796ad55bf2767b53f1412dd564539e0dd3c9a01d805e78911",
+    "utcScoredDateTime": "2026-10-03T15:56:50.668Z",
+    "product": "The Quintessential Quintuplets",
+    "productHash": "f3b68bc656ebf2e796ad55bf2767b53f1412dd564539e0dd3c9a01d805e78911"
+  },
+  {
+    "pinId": 5317,
+    "sentiment": 0.3,
+    "textHash": "13ea4c8b25d2a65f218fdc8d54c9dc1b43d3dc0ec29e602978ac37cce415e513",
+    "utcScoredDateTime": "2026-10-03T15:56:50.887Z",
+    "product": "Date A Live",
+    "productHash": "13ea4c8b25d2a65f218fdc8d54c9dc1b43d3dc0ec29e602978ac37cce415e513"
+  },
+  {
+    "pinId": 5318,
+    "sentiment": 0.3,
+    "textHash": "8bb6c70e320ba2b971fad6ff2ef9a6a4a841253a8523bb80bf96cb71f2257fec",
+    "utcScoredDateTime": "2026-10-03T15:56:51.190Z",
+    "product": "A Certain Scientific Railgun",
+    "productHash": "8bb6c70e320ba2b971fad6ff2ef9a6a4a841253a8523bb80bf96cb71f2257fec"
+  },
+  {
+    "pinId": 5319,
+    "sentiment": 0.3,
+    "textHash": "4bc85a46a3c290b71626a4ccef76ee29cfc2113688494110ba3cc0d8e5e55677",
+    "utcScoredDateTime": "2026-10-03T15:56:51.640Z",
+    "product": "Kingdom",
+    "productHash": "4bc85a46a3c290b71626a4ccef76ee29cfc2113688494110ba3cc0d8e5e55677"
+  },
+  {
+    "pinId": 5320,
+    "sentiment": 0.3,
+    "textHash": "8c670b6179ac2277a22a67407e2c8da478929903db856054b1b9683da6e96c7f",
+    "utcScoredDateTime": "2026-10-03T15:56:52.374Z",
+    "product": "Little Busters!",
+    "productHash": "8c670b6179ac2277a22a67407e2c8da478929903db856054b1b9683da6e96c7f"
+  },
+  {
+    "pinId": 5321,
+    "sentiment": 0.3,
+    "textHash": "e21755e9635b6ad49df35604ef8590be07008c014f1cfc718200379d0d037191",
+    "utcScoredDateTime": "2026-10-03T15:56:52.765Z",
+    "product": "Fruits Basket",
+    "productHash": "e21755e9635b6ad49df35604ef8590be07008c014f1cfc718200379d0d037191"
+  },
+  {
+    "pinId": 5322,
+    "sentiment": 0.3,
+    "textHash": "617b2942da5d955fdc6db00c6486e2747e6d1570309e11a6942587d22814db82",
+    "utcScoredDateTime": "2026-10-03T15:56:53.033Z",
+    "product": "Non Non Biyori",
+    "productHash": "617b2942da5d955fdc6db00c6486e2747e6d1570309e11a6942587d22814db82"
+  },
+  {
+    "pinId": 5324,
+    "sentiment": 0.3,
+    "textHash": "53c46a6b88efba1550fe20f8847c9aba2bcd1888aa24698b9abca720a5ddcc52",
+    "utcScoredDateTime": "2026-10-03T15:56:53.231Z",
+    "product": "Seitokai Yakuindomo",
+    "productHash": "53c46a6b88efba1550fe20f8847c9aba2bcd1888aa24698b9abca720a5ddcc52"
+  },
+  {
+    "pinId": 5325,
+    "sentiment": 0.3,
+    "textHash": "53bbad1e869e2ff04e18be01954cff8a7b4e59800805d74d838ab52edefe77e2",
+    "utcScoredDateTime": "2026-10-03T15:56:53.645Z",
+    "product": "Teasing Master Takagi-san",
+    "productHash": "53bbad1e869e2ff04e18be01954cff8a7b4e59800805d74d838ab52edefe77e2"
+  },
+  {
+    "pinId": 5326,
+    "sentiment": 0.3,
+    "textHash": "9ab62dd414b1bc936a8f3ae548a67016216ff08343ba02db6e3daf80cc5ef95f",
+    "utcScoredDateTime": "2026-10-03T15:56:55.560Z",
+    "product": "Given",
+    "productHash": "9ab62dd414b1bc936a8f3ae548a67016216ff08343ba02db6e3daf80cc5ef95f"
+  },
+  {
+    "pinId": 5327,
+    "sentiment": 0.3,
+    "textHash": "53b75cd88b6030276dbea466398ba9d2d9a0f41b8ebbc06454caa5d2afa09cb3",
+    "utcScoredDateTime": "2026-10-03T15:56:59.962Z",
+    "product": "Date A Live",
+    "productHash": "53b75cd88b6030276dbea466398ba9d2d9a0f41b8ebbc06454caa5d2afa09cb3"
+  },
+  {
+    "pinId": 5328,
+    "sentiment": 0.3,
+    "textHash": "6bdd8e9523380f98f8e6b5a0ddfc7f359f1e8acc92c63903187817dc2a576fd1",
+    "utcScoredDateTime": "2026-10-03T15:57:01.783Z",
+    "product": "Black Butler",
+    "productHash": "6bdd8e9523380f98f8e6b5a0ddfc7f359f1e8acc92c63903187817dc2a576fd1"
+  },
+  {
+    "pinId": 5329,
+    "sentiment": 0.3,
+    "textHash": "0a1ccf190ec7aec78a8da499e69f01e633548c49318d5b84df1d8a1a614cfe73",
+    "utcScoredDateTime": "2026-10-03T15:57:05.255Z",
+    "product": "Grisaia",
+    "productHash": "0a1ccf190ec7aec78a8da499e69f01e633548c49318d5b84df1d8a1a614cfe73"
+  },
+  {
+    "pinId": 5330,
+    "sentiment": 0.3,
+    "textHash": "fe9f09d7bc48fc7658c660f53dacf514d364229771741c6121b3f092b36e0841",
+    "utcScoredDateTime": "2026-10-03T15:57:09.404Z",
+    "product": "Ascendance of a Bookworm",
+    "productHash": "fe9f09d7bc48fc7658c660f53dacf514d364229771741c6121b3f092b36e0841"
+  },
+  {
+    "pinId": 5331,
+    "sentiment": 0.3,
+    "textHash": "7be7fc6a855a969d5566f080bb3abe5a54343cbd3f05d7291af5db290e353466",
+    "utcScoredDateTime": "2026-10-03T15:57:12.740Z",
+    "product": "Yona of the Dawn",
+    "productHash": "7be7fc6a855a969d5566f080bb3abe5a54343cbd3f05d7291af5db290e353466"
+  },
+  {
+    "pinId": 5332,
+    "sentiment": 0.3,
+    "textHash": "ac14b252599757865193e731ae84e5cb0db00dff18ed8541855af21056e450e2",
+    "utcScoredDateTime": "2026-10-03T15:57:19.137Z",
+    "product": "Welcome to Demon School! Iruma-kun",
+    "productHash": "ac14b252599757865193e731ae84e5cb0db00dff18ed8541855af21056e450e2"
+  },
+  {
+    "pinId": 5333,
+    "sentiment": 0.3,
+    "textHash": "fc8ab353638024c130df594d21cbedc8fbd97596a24655ca4388335e9ba9bdd4",
+    "utcScoredDateTime": "2026-10-03T15:57:30.938Z",
+    "product": "Saekano: How to Raise a Boring Girlfriend",
+    "productHash": "fc8ab353638024c130df594d21cbedc8fbd97596a24655ca4388335e9ba9bdd4"
+  },
+  {
+    "pinId": 5334,
+    "sentiment": 0.3,
+    "textHash": "02fdc79f7f1787bb9c68e725f89f663bcb3213949fa0ab60445393c955f4705c",
+    "utcScoredDateTime": "2026-10-03T15:57:32.891Z",
+    "product": "A Certain Scientific Railgun",
+    "productHash": "02fdc79f7f1787bb9c68e725f89f663bcb3213949fa0ab60445393c955f4705c"
+  },
+  {
+    "pinId": 5335,
+    "sentiment": 0.3,
+    "textHash": "f386ecb3516c265be31a2438121e7fef8e3ba36dae45a9a1ae276ffd7e7cda89",
+    "utcScoredDateTime": "2026-10-03T15:57:35.803Z",
+    "product": "Sound! Euphonium",
+    "productHash": "f386ecb3516c265be31a2438121e7fef8e3ba36dae45a9a1ae276ffd7e7cda89"
+  },
+  {
+    "pinId": 5336,
+    "sentiment": 0.3,
+    "textHash": "485fca3e613659e3a48bdc248a352518ca592ced37d51f76c27f6700a4f10b58",
+    "utcScoredDateTime": "2026-10-03T15:57:38.156Z",
+    "product": "Gate",
+    "productHash": "485fca3e613659e3a48bdc248a352518ca592ced37d51f76c27f6700a4f10b58"
+  },
+  {
+    "pinId": 5337,
+    "sentiment": 0.3,
+    "textHash": "765e64a0aaf45c29d6bfe4656262a0c76dbbc9877b59057181f1721f9cedbda0",
+    "utcScoredDateTime": "2026-10-03T15:57:41.188Z",
+    "product": "Dorohedoro",
+    "productHash": "765e64a0aaf45c29d6bfe4656262a0c76dbbc9877b59057181f1721f9cedbda0"
+  },
+  {
+    "pinId": 5338,
+    "sentiment": 0.3,
+    "textHash": "577a54fcb5b048308b45d77412c01abe675891d027d6e03fe2d74027df318ecb",
+    "utcScoredDateTime": "2026-10-03T15:57:44.964Z",
+    "product": "Wagnaria!!",
+    "productHash": "577a54fcb5b048308b45d77412c01abe675891d027d6e03fe2d74027df318ecb"
+  },
+  {
+    "pinId": 5339,
+    "sentiment": 0.3,
+    "textHash": "74dabb39153523dff112e6dec7dce198026a4e75f4494dc1e518112629997e7d",
+    "utcScoredDateTime": "2026-10-03T15:58:00.421Z",
+    "product": "Ascendance of a Bookworm",
+    "productHash": "74dabb39153523dff112e6dec7dce198026a4e75f4494dc1e518112629997e7d"
+  },
+  {
+    "pinId": 5340,
+    "sentiment": 0.3,
+    "textHash": "78ca5ef833a580d1782c111721ee39ce597f788ce41d717c3140f4c58e82842c",
+    "utcScoredDateTime": "2026-10-03T15:58:03.980Z",
+    "product": "Non Non Biyori",
+    "productHash": "78ca5ef833a580d1782c111721ee39ce597f788ce41d717c3140f4c58e82842c"
+  },
+  {
+    "pinId": 5341,
+    "sentiment": 0.3,
+    "textHash": "0801194689862b2a9b3af277fad1f3c69aece8027618db3e24ec918918645687",
+    "utcScoredDateTime": "2026-10-03T15:58:09.794Z",
+    "product": "Wandering Witch: The Journey of Elaina",
+    "productHash": "0801194689862b2a9b3af277fad1f3c69aece8027618db3e24ec918918645687"
+  },
+  {
+    "pinId": 5342,
+    "sentiment": 0.3,
+    "textHash": "89d615c767d07b9f3402699074d4f0e83ce22a7d24c4b76e88b77655d8ab9a7a",
+    "utcScoredDateTime": "2026-10-03T15:58:19.066Z",
+    "product": "TONIKAWA: Over The Moon For You",
+    "productHash": "89d615c767d07b9f3402699074d4f0e83ce22a7d24c4b76e88b77655d8ab9a7a"
+  },
+  {
+    "pinId": 5343,
+    "sentiment": 0.3,
+    "textHash": "5572104678c86778bf086d4bee5fb22d15562fb4dd141524b1aedef36e147b69",
+    "utcScoredDateTime": "2026-10-03T15:58:28.686Z",
+    "product": "Black Jack",
+    "productHash": "5572104678c86778bf086d4bee5fb22d15562fb4dd141524b1aedef36e147b69"
+  },
+  {
+    "pinId": 5344,
+    "sentiment": 0.3,
+    "textHash": "5dd2299bce4064a9a5aeeb5db3306d6332455319230f3cb2d3811242ab4d289b",
+    "utcScoredDateTime": "2026-10-03T15:58:30.667Z",
+    "product": "Gate",
+    "productHash": "5dd2299bce4064a9a5aeeb5db3306d6332455319230f3cb2d3811242ab4d289b"
+  },
+  {
+    "pinId": 5345,
+    "sentiment": 0.3,
+    "textHash": "3747eaab01de1f496bb02c6f837dabc973c3e3d6b658ce8c02c7759e571ff5bf",
+    "utcScoredDateTime": "2026-10-03T15:58:32.252Z",
+    "product": "Laid-Back Camp",
+    "productHash": "3747eaab01de1f496bb02c6f837dabc973c3e3d6b658ce8c02c7759e571ff5bf"
+  },
+  {
+    "pinId": 5346,
+    "sentiment": 0.3,
+    "textHash": "3815db0fba01e068349a12f8980b3786834a31f5a30784677f04f1a80185f0e7",
+    "utcScoredDateTime": "2026-10-03T15:58:35.494Z",
+    "product": "Sound! Euphonium",
+    "productHash": "3815db0fba01e068349a12f8980b3786834a31f5a30784677f04f1a80185f0e7"
+  },
+  {
+    "pinId": 5347,
+    "sentiment": 0.3,
+    "textHash": "2c33bbc07c82c51ecaef81ee33f51587858ff2c4f867548649d601a5508251a7",
+    "utcScoredDateTime": "2026-10-03T15:58:36.368Z",
+    "product": "The Quintessential Quintuplets",
+    "productHash": "2c33bbc07c82c51ecaef81ee33f51587858ff2c4f867548649d601a5508251a7"
+  },
+  {
+    "pinId": 5348,
+    "sentiment": 0.3,
+    "textHash": "4ef8a480e580e80d58b5af08a142a78036d70e62c0368919451d1c466d1105f3",
+    "utcScoredDateTime": "2026-10-03T15:58:37.266Z",
+    "product": "SK8 the Infinity",
+    "productHash": "4ef8a480e580e80d58b5af08a142a78036d70e62c0368919451d1c466d1105f3"
+  },
+  {
+    "pinId": 5349,
+    "sentiment": 0.3,
+    "textHash": "1a65f69f761ef1cda08e830bf99bf0da4dfef08c61e46952389853c0e02522b8",
+    "utcScoredDateTime": "2026-10-03T15:58:38.083Z",
+    "product": "March Comes in Like a Lion",
+    "productHash": "1a65f69f761ef1cda08e830bf99bf0da4dfef08c61e46952389853c0e02522b8"
+  },
+  {
+    "pinId": 5350,
+    "sentiment": 0.3,
+    "textHash": "66c627899c71705e5f16b3a698f2d5b94573dfbe51598c84971f002b8c9678fd",
+    "utcScoredDateTime": "2026-10-03T15:58:38.388Z",
+    "product": "Non Non Biyori",
+    "productHash": "66c627899c71705e5f16b3a698f2d5b94573dfbe51598c84971f002b8c9678fd"
+  },
+  {
+    "pinId": 5351,
+    "sentiment": 0.3,
+    "textHash": "84006c6243fa8f916a7ea2e8d22e554c218f8a4b140691f7abf38b6791645af8",
+    "utcScoredDateTime": "2026-10-03T15:58:39.905Z",
+    "product": "Saga of Tanya the Evil",
+    "productHash": "84006c6243fa8f916a7ea2e8d22e554c218f8a4b140691f7abf38b6791645af8"
+  },
+  {
+    "pinId": 5352,
+    "sentiment": 0.3,
+    "textHash": "bb02b983b130c74337597c603cf9f466a45910a2bf15822e356d0e40af976027",
+    "utcScoredDateTime": "2026-10-03T15:58:41.147Z",
+    "product": "Miss Kobayashi's Dragon Maid",
+    "productHash": "bb02b983b130c74337597c603cf9f466a45910a2bf15822e356d0e40af976027"
+  },
+  {
+    "pinId": 5353,
+    "sentiment": 0.3,
+    "textHash": "85c0eacde47c0372e928a73e2975cb68ab93c1998f8e22d3427354f7563eb11d",
+    "utcScoredDateTime": "2026-10-03T15:58:42.333Z",
+    "product": "Zombie Land Saga",
+    "productHash": "85c0eacde47c0372e928a73e2975cb68ab93c1998f8e22d3427354f7563eb11d"
+  },
+  {
+    "pinId": 5354,
+    "sentiment": 0.3,
+    "textHash": "e2e8e678a8aed57cc519f35064824db601dd966b539004f852ad4b1d4fd0cd1c",
+    "utcScoredDateTime": "2026-10-03T15:58:43.861Z",
+    "product": "How NOT to Summon a Demon Lord",
+    "productHash": "e2e8e678a8aed57cc519f35064824db601dd966b539004f852ad4b1d4fd0cd1c"
+  },
+  {
+    "pinId": 5355,
+    "sentiment": 0.3,
+    "textHash": "83140d149fb7c832a4c4ec0a70d99998119d4a3b99de8eb2e5b4097406f32657",
+    "utcScoredDateTime": "2026-10-03T15:58:45.590Z",
+    "product": "Saekano: How to Raise a Boring Girlfriend",
+    "productHash": "83140d149fb7c832a4c4ec0a70d99998119d4a3b99de8eb2e5b4097406f32657"
+  },
+  {
+    "pinId": 5356,
+    "sentiment": 0.3,
+    "textHash": "e7a987c35cf6b8321ff581017c9e991c262d297dd768082dff1820670407b63f",
+    "utcScoredDateTime": "2026-10-03T15:58:51.264Z",
+    "product": "Tokyo Revengers",
+    "productHash": "e7a987c35cf6b8321ff581017c9e991c262d297dd768082dff1820670407b63f"
+  },
+  {
+    "pinId": 5357,
+    "sentiment": 0.3,
+    "textHash": "cdf30d7292ae92941992ea84657f62362787ce66b8a32ab4995a83d21ba43d98",
+    "utcScoredDateTime": "2026-10-03T15:58:55.119Z",
+    "product": "Classroom of the Elite",
+    "productHash": "cdf30d7292ae92941992ea84657f62362787ce66b8a32ab4995a83d21ba43d98"
+  },
+  {
+    "pinId": 5358,
+    "sentiment": 0.3,
+    "textHash": "f007463d40678b7dc851d0651c6238db32a46369991007f16233500c6bd71b2a",
+    "utcScoredDateTime": "2026-10-03T15:58:58.480Z",
+    "product": "Laid-Back Camp",
+    "productHash": "f007463d40678b7dc851d0651c6238db32a46369991007f16233500c6bd71b2a"
+  },
+  {
+    "pinId": 5359,
+    "sentiment": 0.3,
+    "textHash": "70e715788c923d44b491b7632701f73ce7c24d3ac0fac52897059e266cd74b94",
+    "utcScoredDateTime": "2026-10-03T16:27:18.657Z",
+    "product": "Welcome to Demon School! Iruma-kun",
+    "productHash": "70e715788c923d44b491b7632701f73ce7c24d3ac0fac52897059e266cd74b94"
+  },
+  {
+    "pinId": 5360,
+    "sentiment": 0.3,
+    "textHash": "8f0e5ea87cdc4bf7bdb63d4765e5f97cc930cc756b8967dba2b2b55ba6e1334b",
+    "utcScoredDateTime": "2026-10-03T16:27:19.037Z",
+    "product": "Teasing Master Takagi-san",
+    "productHash": "8f0e5ea87cdc4bf7bdb63d4765e5f97cc930cc756b8967dba2b2b55ba6e1334b"
+  },
+  {
+    "pinId": 5361,
+    "sentiment": 0.3,
+    "textHash": "0cbb482477f71736521f7d576f4a32c88bf467ffe5fa1f04b95e46673c1ed61e",
+    "utcScoredDateTime": "2026-10-03T16:27:19.394Z",
+    "product": "The Detective Is Already Dead",
+    "productHash": "0cbb482477f71736521f7d576f4a32c88bf467ffe5fa1f04b95e46673c1ed61e"
+  },
+  {
+    "pinId": 5362,
+    "sentiment": 0.3,
+    "textHash": "444e0966c9746706ae779051c767f350ffe361421fad3aeee29ed7deca05bff4",
+    "utcScoredDateTime": "2026-10-03T16:27:19.692Z",
+    "product": "Legend of the Galactic Heroes: Die Neue These",
+    "productHash": "444e0966c9746706ae779051c767f350ffe361421fad3aeee29ed7deca05bff4"
+  },
+  {
+    "pinId": 5363,
+    "sentiment": 0.3,
+    "textHash": "f6faf4b61b893136277d88f3cea2cbb5061cc301ffbae8c1052c9afa202ab819",
+    "utcScoredDateTime": "2026-10-03T16:27:19.950Z",
+    "product": "TSUKIMICHI -Moonlit Fantasy-",
+    "productHash": "f6faf4b61b893136277d88f3cea2cbb5061cc301ffbae8c1052c9afa202ab819"
+  },
+  {
+    "pinId": 5364,
+    "sentiment": 0.3,
+    "textHash": "e39f9a919a01ccfde7d26bd9d4447344d3cac0dbd4bf5b4ede0d3d8fed5a02d5",
+    "utcScoredDateTime": "2026-10-03T16:27:20.474Z",
+    "product": "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+    "productHash": "e39f9a919a01ccfde7d26bd9d4447344d3cac0dbd4bf5b4ede0d3d8fed5a02d5"
+  },
+  {
+    "pinId": 5365,
+    "sentiment": 0.3,
+    "textHash": "84aae1463ff9978a472f646e65355f15a79549c48db645e3533b3d571a11476a",
+    "utcScoredDateTime": "2026-10-03T16:27:20.973Z",
+    "product": "How NOT to Summon a Demon Lord",
+    "productHash": "84aae1463ff9978a472f646e65355f15a79549c48db645e3533b3d571a11476a"
+  },
+  {
+    "pinId": 5366,
+    "sentiment": 0.3,
+    "textHash": "a7c15718be9e0dbd2c3a0c205ba57ce8236cbbdec8ec8b0469022f922a55dfb0",
+    "utcScoredDateTime": "2026-10-03T16:27:21.756Z",
+    "product": "Teasing Master Takagi-san",
+    "productHash": "a7c15718be9e0dbd2c3a0c205ba57ce8236cbbdec8ec8b0469022f922a55dfb0"
+  },
+  {
+    "pinId": 5367,
+    "sentiment": 0.3,
+    "textHash": "a3a1be71d64022a9129a72ec0ae9f190eacad476c4254a7d5af64f0d575b2edf",
+    "utcScoredDateTime": "2026-10-03T16:27:22.198Z",
+    "product": "Revue Starlight",
+    "productHash": "a3a1be71d64022a9129a72ec0ae9f190eacad476c4254a7d5af64f0d575b2edf"
+  },
+  {
+    "pinId": 5368,
+    "sentiment": 0.3,
+    "textHash": "a6055f99f3792526f8aa3f907ed4f088082ee44a381480cec1c4402a6c7661eb",
+    "utcScoredDateTime": "2026-10-03T16:27:22.940Z",
+    "product": "Sasaki and Miyano",
+    "productHash": "a6055f99f3792526f8aa3f907ed4f088082ee44a381480cec1c4402a6c7661eb"
+  },
+  {
+    "pinId": 5369,
+    "sentiment": 0.3,
+    "textHash": "b2525a4b4e3d384e6743e63a1af117777b53de226439572272f698933ee1d704",
+    "utcScoredDateTime": "2026-10-03T16:27:23.178Z",
+    "product": "Sabikui Bisco",
+    "productHash": "b2525a4b4e3d384e6743e63a1af117777b53de226439572272f698933ee1d704"
+  },
+  {
+    "pinId": 5370,
+    "sentiment": 0.3,
+    "textHash": "0a4bc4f5ad31de933c19a714065fb8ef06b6c946ce4dc262179c4f7a0d669585",
+    "utcScoredDateTime": "2026-10-03T16:27:23.608Z",
+    "product": "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs",
+    "productHash": "0a4bc4f5ad31de933c19a714065fb8ef06b6c946ce4dc262179c4f7a0d669585"
+  },
+  {
+    "pinId": 5371,
+    "sentiment": 0.3,
+    "textHash": "d84e562c4af5335f13dbcee1f3c67e995cdef6a1835583f0b11f199b1370ae31",
+    "utcScoredDateTime": "2026-10-03T16:27:24.078Z",
+    "product": "Aoashi",
+    "productHash": "d84e562c4af5335f13dbcee1f3c67e995cdef6a1835583f0b11f199b1370ae31"
+  },
+  {
+    "pinId": 5372,
+    "sentiment": 0.3,
+    "textHash": "b0a16cb501cbc1d0453892ada273def4bfff874b495185c15dd132985565c67d",
+    "utcScoredDateTime": "2026-10-03T16:27:24.527Z",
+    "product": "2.5 Dimensional Seduction",
+    "productHash": "b0a16cb501cbc1d0453892ada273def4bfff874b495185c15dd132985565c67d"
+  },
+  {
+    "pinId": 5373,
+    "sentiment": 0.3,
+    "textHash": "f6e9e9e7de31ba1ee139443196fa141cb3b3b0dd8fa7b29038a2d4d674dd393f",
+    "utcScoredDateTime": "2026-10-03T16:27:25.101Z",
+    "product": "Ascendance of a Bookworm",
+    "productHash": "f6e9e9e7de31ba1ee139443196fa141cb3b3b0dd8fa7b29038a2d4d674dd393f"
+  },
+  {
+    "pinId": 5374,
+    "sentiment": 0.3,
+    "textHash": "8ea9930ee1d30c2dc68d5502ebee500bc6aaef67aa1624d9b7dd1e2d5e721b6e",
+    "utcScoredDateTime": "2026-10-03T16:27:25.470Z",
+    "product": "I Parry Everything",
+    "productHash": "8ea9930ee1d30c2dc68d5502ebee500bc6aaef67aa1624d9b7dd1e2d5e721b6e"
+  },
+  {
+    "pinId": 5375,
+    "sentiment": 0.3,
+    "textHash": "624256187a24162f2c35ac261d6635116c9bf25f6b0d9db765f2bd7b323d5576",
+    "utcScoredDateTime": "2026-10-03T16:27:25.769Z",
+    "product": "The Elusive Samurai",
+    "productHash": "624256187a24162f2c35ac261d6635116c9bf25f6b0d9db765f2bd7b323d5576"
+  },
+  {
+    "pinId": 5376,
+    "sentiment": 0.3,
+    "textHash": "197e1e65d9c1a398122c3ba95212f637357011b04e995953545737c32e8c63ad",
+    "utcScoredDateTime": "2026-10-03T16:27:26.080Z",
+    "product": "Classroom of the Elite",
+    "productHash": "197e1e65d9c1a398122c3ba95212f637357011b04e995953545737c32e8c63ad"
+  },
+  {
+    "pinId": 5377,
+    "sentiment": 0.3,
+    "textHash": "92dc7a0186ee9288d9678c39d2443f5bb9efc03e8190c812730cdfcb289d5b3b",
+    "utcScoredDateTime": "2026-10-03T16:27:26.343Z",
+    "product": "The Eminence in Shadow",
+    "productHash": "92dc7a0186ee9288d9678c39d2443f5bb9efc03e8190c812730cdfcb289d5b3b"
+  },
+  {
+    "pinId": 5378,
+    "sentiment": 0.3,
+    "textHash": "253ea044f90751f441f0cee6213a88c732a8400801300f89ee1ec91ccfc79c03",
+    "utcScoredDateTime": "2026-10-03T16:27:26.588Z",
+    "product": "Wistoria: Wand and Sword",
+    "productHash": "253ea044f90751f441f0cee6213a88c732a8400801300f89ee1ec91ccfc79c03"
+  },
+  {
+    "pinId": 5379,
+    "sentiment": 0.3,
+    "textHash": "876851c3cfb7e55bbd677a24bf0888802b4755ed093bbe5e6974d81c9d9a5adb",
+    "utcScoredDateTime": "2026-10-03T16:27:27.055Z",
+    "product": "Makeine: Too Many Losing Heroines!",
+    "productHash": "876851c3cfb7e55bbd677a24bf0888802b4755ed093bbe5e6974d81c9d9a5adb"
+  },
+  {
+    "pinId": 5380,
+    "sentiment": 0.3,
+    "textHash": "8aa5cd8508174eb719a2e378222047286cf311b89dae75cfa2228f0faad5c479",
+    "utcScoredDateTime": "2026-10-03T16:27:27.496Z",
+    "product": "Welcome to Demon School! Iruma-kun",
+    "productHash": "8aa5cd8508174eb719a2e378222047286cf311b89dae75cfa2228f0faad5c479"
+  },
+  {
+    "pinId": 5381,
+    "sentiment": 0.3,
+    "textHash": "77f3c2061777bca86244348bde53ab35deeaa77629722d2a32477ebcbd0b143c",
+    "utcScoredDateTime": "2026-10-03T16:27:27.743Z",
+    "product": "Blue Lock",
+    "productHash": "77f3c2061777bca86244348bde53ab35deeaa77629722d2a32477ebcbd0b143c"
+  },
+  {
+    "pinId": 5382,
+    "sentiment": 0.3,
+    "textHash": "ac46774e3957893bf91809fe0771ab21a7aa417f0075465c5c997d467cd58809",
+    "utcScoredDateTime": "2026-10-03T16:27:28.897Z",
+    "product": "Dan Da Dan",
+    "productHash": "ac46774e3957893bf91809fe0771ab21a7aa417f0075465c5c997d467cd58809"
+  },
+  {
+    "pinId": 5383,
+    "sentiment": 0.3,
+    "textHash": "4501c23012d971c4c75d45b17bdc14b10ad960f01437051377cba5711f2e2bda",
+    "utcScoredDateTime": "2026-10-03T16:27:29.165Z",
+    "product": "The Iceblade Sorcerer Shall Rule the World",
+    "productHash": "4501c23012d971c4c75d45b17bdc14b10ad960f01437051377cba5711f2e2bda"
+  },
+  {
+    "pinId": 5384,
+    "sentiment": 0.3,
+    "textHash": "b22857e33e9766013c25852311cfc5709a628f4ca703bd8d5836035e7e8c0d2b",
+    "utcScoredDateTime": "2026-10-03T16:27:29.520Z",
+    "product": "Magilumiere Magical Girls Inc.",
+    "productHash": "b22857e33e9766013c25852311cfc5709a628f4ca703bd8d5836035e7e8c0d2b"
+  },
+  {
+    "pinId": 5385,
+    "sentiment": 0.3,
+    "textHash": "350594d28e6fe72ebfda2b329d814c400df16d13a9c07ca17235ec5186f1a237",
+    "utcScoredDateTime": "2026-10-03T16:27:29.955Z",
+    "product": "Tokyo Revengers",
+    "productHash": "350594d28e6fe72ebfda2b329d814c400df16d13a9c07ca17235ec5186f1a237"
+  },
+  {
+    "pinId": 5386,
+    "sentiment": 0.3,
+    "textHash": "281c1467b54c6e20ff5767951222afafc428865d3242857359fb426113496b9c",
+    "utcScoredDateTime": "2026-10-03T16:27:30.303Z",
+    "product": "Blue Lock",
+    "productHash": "281c1467b54c6e20ff5767951222afafc428865d3242857359fb426113496b9c"
+  },
+  {
+    "pinId": 5387,
+    "sentiment": 0.3,
+    "textHash": "cb1ea67e257a840624c662117f72a7829e6991782be7afff96d91a4ce6fca1e4",
+    "utcScoredDateTime": "2026-10-03T16:27:30.640Z",
+    "product": "Ranma1/2 (2024)",
+    "productHash": "cb1ea67e257a840624c662117f72a7829e6991782be7afff96d91a4ce6fca1e4"
+  },
+  {
+    "pinId": 5388,
+    "sentiment": 0.3,
+    "textHash": "600b08672714aabe7716d678e2a1cfb4f9074b651cc3dd704fc56236544842c4",
+    "utcScoredDateTime": "2026-10-03T16:27:30.963Z",
+    "product": "The Dangers in My Heart",
+    "productHash": "600b08672714aabe7716d678e2a1cfb4f9074b651cc3dd704fc56236544842c4"
+  },
+  {
+    "pinId": 5389,
+    "sentiment": 0.3,
+    "textHash": "737c758a7d023c249d8894c3d1b1e767a789a10fa20963fbfedb11f73e0f4d70",
+    "utcScoredDateTime": "2026-10-03T16:27:31.648Z",
+    "product": "Skip and Loafer",
+    "productHash": "737c758a7d023c249d8894c3d1b1e767a789a10fa20963fbfedb11f73e0f4d70"
+  },
+  {
+    "pinId": 5390,
+    "sentiment": 0.3,
+    "textHash": "01afde7eae70be6a98671d4ec42993f2b48d1110f759361454044505c3a6ef26",
+    "utcScoredDateTime": "2026-10-03T16:27:32.076Z",
+    "product": "Solo Leveling",
+    "productHash": "01afde7eae70be6a98671d4ec42993f2b48d1110f759361454044505c3a6ef26"
+  },
+  {
+    "pinId": 5391,
+    "sentiment": 0.3,
+    "textHash": "564bc511653bdaf2d095870be94d90c7bd89aee8c65a8a11a183c5435376c62d",
+    "utcScoredDateTime": "2026-10-03T16:27:32.427Z",
+    "product": "I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too",
+    "productHash": "564bc511653bdaf2d095870be94d90c7bd89aee8c65a8a11a183c5435376c62d"
+  },
+  {
+    "pinId": 5392,
+    "sentiment": 0.3,
+    "textHash": "530d999e411defb970ab8c71a4a66a3bf5ee87f69af8c623fa04ffae259bc35a",
+    "utcScoredDateTime": "2026-10-03T16:27:32.893Z",
+    "product": "My Happy Marriage",
+    "productHash": "530d999e411defb970ab8c71a4a66a3bf5ee87f69af8c623fa04ffae259bc35a"
+  },
+  {
+    "pinId": 5393,
+    "sentiment": 0.3,
+    "textHash": "d5a65ed6aa8c7c3016996258cf12f3789039be7aac42a15d08cb2b9fa6f2438f",
+    "utcScoredDateTime": "2026-10-03T16:27:33.196Z",
+    "product": "Medaka Kuroiwa Is Impervious to My Charms",
+    "productHash": "d5a65ed6aa8c7c3016996258cf12f3789039be7aac42a15d08cb2b9fa6f2438f"
+  },
+  {
+    "pinId": 5394,
+    "sentiment": 0.3,
+    "textHash": "725677ed95c78f3c7fa23f274521bd5a61388db88748a3f2e19d9d67ffc351b5",
+    "utcScoredDateTime": "2026-10-03T16:27:33.808Z",
+    "product": "Mashle",
+    "productHash": "725677ed95c78f3c7fa23f274521bd5a61388db88748a3f2e19d9d67ffc351b5"
+  },
+  {
+    "pinId": 5395,
+    "sentiment": 0.3,
+    "textHash": "43ca941cc550f8b50fd0f67fb305db2f72faad8ea79593ebac0afec4c6b13ede",
+    "utcScoredDateTime": "2026-10-03T16:27:34.248Z",
+    "product": "My Happy Marriage",
+    "productHash": "43ca941cc550f8b50fd0f67fb305db2f72faad8ea79593ebac0afec4c6b13ede"
+  },
+  {
+    "pinId": 5396,
+    "sentiment": 0.3,
+    "textHash": "88695f0d64e41ea0dfe79815139a8fe91d4f3ec36a76ab368c5872330f72250e",
+    "utcScoredDateTime": "2026-10-03T16:27:34.643Z",
+    "product": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
+    "productHash": "88695f0d64e41ea0dfe79815139a8fe91d4f3ec36a76ab368c5872330f72250e"
+  },
+  {
+    "pinId": 5397,
+    "sentiment": 0.3,
+    "textHash": "f987ee00663c6886b84d4e2415b9fa0129ed98efa6472458b4ea27ba8aa226da",
+    "utcScoredDateTime": "2026-10-03T16:27:34.864Z",
+    "product": "Berserk of Gluttony",
+    "productHash": "f987ee00663c6886b84d4e2415b9fa0129ed98efa6472458b4ea27ba8aa226da"
+  },
+  {
+    "pinId": 5398,
+    "sentiment": 0.3,
+    "textHash": "de87418ed037d87e65572db6b4ad6c59ad1ba6b5ac596610e5f487a9ed7cb589",
+    "utcScoredDateTime": "2026-10-03T16:27:35.280Z",
+    "product": "The Brilliant Healer's New Life in the Shadows",
+    "productHash": "de87418ed037d87e65572db6b4ad6c59ad1ba6b5ac596610e5f487a9ed7cb589"
+  },
+  {
+    "pinId": 5399,
+    "sentiment": 0.3,
+    "textHash": "f092c9c89b7a8cb0067c102de075e1efcf20b25753a6f053719593dcb065021f",
+    "utcScoredDateTime": "2026-10-03T16:27:36.447Z",
+    "product": "The Eminence in Shadow",
+    "productHash": "f092c9c89b7a8cb0067c102de075e1efcf20b25753a6f053719593dcb065021f"
+  },
+  {
+    "pinId": 5400,
+    "sentiment": 0.3,
+    "textHash": "a366619de0028fb9a4556057cda2a4acaaa7b77e6db9748a28794ad9a65cb57d",
+    "utcScoredDateTime": "2026-10-03T16:27:36.751Z",
+    "product": "From Old Country Bumpkin to Master Swordsman",
+    "productHash": "a366619de0028fb9a4556057cda2a4acaaa7b77e6db9748a28794ad9a65cb57d"
+  },
+  {
+    "pinId": 5401,
+    "sentiment": 0.3,
+    "textHash": "b24286a645735ba3e0a214e5cdcb9eb4cda5114e79a6818262c4903235373abb",
+    "utcScoredDateTime": "2026-10-03T16:27:37.017Z",
+    "product": "Witch Watch",
+    "productHash": "b24286a645735ba3e0a214e5cdcb9eb4cda5114e79a6818262c4903235373abb"
+  },
+  {
+    "pinId": 5402,
+    "sentiment": 0.3,
+    "textHash": "c91d2bd6533890e78b2459c86c669816d1af8c19575292cffe0ca30cd4e900f0",
+    "utcScoredDateTime": "2026-10-03T16:27:37.491Z",
+    "product": "Tokyo Revengers",
+    "productHash": "c91d2bd6533890e78b2459c86c669816d1af8c19575292cffe0ca30cd4e900f0"
+  },
+  {
+    "pinId": 5403,
+    "sentiment": 0.3,
+    "textHash": "31af26697a2fdac6eac813b42333cda757fc230ef1bb67aaea8961fd901c4522",
+    "utcScoredDateTime": "2026-10-03T16:27:37.864Z",
+    "product": "Clevatess",
+    "productHash": "31af26697a2fdac6eac813b42333cda757fc230ef1bb67aaea8961fd901c4522"
+  },
+  {
+    "pinId": 5404,
+    "sentiment": 0.3,
+    "textHash": "68aff03b266ad7b1d984981dcf41d280086c8a24b09091c910965b3d52b38a7c",
+    "utcScoredDateTime": "2026-10-03T16:27:38.096Z",
+    "product": "Undead Unluck",
+    "productHash": "68aff03b266ad7b1d984981dcf41d280086c8a24b09091c910965b3d52b38a7c"
+  },
+  {
+    "pinId": 5405,
+    "sentiment": 0.3,
+    "textHash": "a62c3e9d8c88552a3088f9dc015441d088ddd93e689229a0817931cfd186f781",
+    "utcScoredDateTime": "2026-10-03T16:27:38.410Z",
+    "product": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
+    "productHash": "a62c3e9d8c88552a3088f9dc015441d088ddd93e689229a0817931cfd186f781"
+  },
+  {
+    "pinId": 5406,
+    "sentiment": 0.3,
+    "textHash": "bf80a766376b73f2e218af76d122cbac447c823182a221307073a7c0704d4efa",
+    "utcScoredDateTime": "2026-10-03T16:27:38.718Z",
+    "product": "Dan Da Dan",
+    "productHash": "bf80a766376b73f2e218af76d122cbac447c823182a221307073a7c0704d4efa"
+  },
+  {
+    "pinId": 5407,
+    "sentiment": 0.3,
+    "textHash": "423f84771e8cd96c97b839c69f85999011c3d4c44a9e197b819d85f6a03df4a8",
+    "utcScoredDateTime": "2026-10-03T16:27:39.334Z",
+    "product": "The Summer Hikaru Died",
+    "productHash": "423f84771e8cd96c97b839c69f85999011c3d4c44a9e197b819d85f6a03df4a8"
+  },
+  {
+    "pinId": 5408,
+    "sentiment": 0.3,
+    "textHash": "012d98afb788c47fa4e9aba75628e6ffdb0fa6277f117bf7f6e905ea17ed336e",
+    "utcScoredDateTime": "2026-10-03T16:27:39.906Z",
+    "product": "A Returner's Magic Should Be Special",
+    "productHash": "012d98afb788c47fa4e9aba75628e6ffdb0fa6277f117bf7f6e905ea17ed336e"
+  },
+  {
+    "pinId": 5409,
+    "sentiment": 0.3,
+    "textHash": "71084742af9ba3020083a407227d75cf4221f2487ae1ba55942a8ab553af4914",
+    "utcScoredDateTime": "2026-10-03T16:27:40.298Z",
+    "product": "Gachiakuta",
+    "productHash": "71084742af9ba3020083a407227d75cf4221f2487ae1ba55942a8ab553af4914"
+  },
+  {
+    "pinId": 5410,
+    "sentiment": 0.3,
+    "textHash": "55cfaf0be2417be3778b76f2f838d59fe1107b8f80a8f01b9ea805f085d1f079",
+    "utcScoredDateTime": "2026-10-03T16:27:40.841Z",
+    "product": "Classroom of the Elite",
+    "productHash": "55cfaf0be2417be3778b76f2f838d59fe1107b8f80a8f01b9ea805f085d1f079"
+  },
+  {
+    "pinId": 5411,
+    "sentiment": 0.3,
+    "textHash": "61fe74546f9bebaf9385bbc1b8504b7865097fa320d8c2fee9e9a4bffc4c1643",
+    "utcScoredDateTime": "2026-10-03T16:27:41.426Z",
+    "product": "Gushing Over Magical Girls",
+    "productHash": "61fe74546f9bebaf9385bbc1b8504b7865097fa320d8c2fee9e9a4bffc4c1643"
+  },
+  {
+    "pinId": 5412,
+    "sentiment": 0.3,
+    "textHash": "ae1109123d6cc850686bb3c147b56769a46892faa2c9611ce7f474a0f179fb52",
+    "utcScoredDateTime": "2026-10-03T16:27:41.718Z",
+    "product": "Grand Blue Dreaming",
+    "productHash": "ae1109123d6cc850686bb3c147b56769a46892faa2c9611ce7f474a0f179fb52"
+  },
+  {
+    "pinId": 5413,
+    "sentiment": 0.3,
+    "textHash": "fc19e72854c223e49d0ac9a7d26e31b7267b83e08b7254b2071654f7ea55a1e7",
+    "utcScoredDateTime": "2026-10-03T16:27:42.000Z",
+    "product": "Sasaki and Peeps",
+    "productHash": "fc19e72854c223e49d0ac9a7d26e31b7267b83e08b7254b2071654f7ea55a1e7"
+  },
+  {
+    "pinId": 5414,
+    "sentiment": 0.3,
+    "textHash": "f01bab93aafebeb19adbcd88fe00f867e1228c5703fbebae6c127877ecd459a7",
+    "utcScoredDateTime": "2026-10-03T16:27:42.358Z",
+    "product": "There's No Freaking Way I'll Be Your Lover! Unless…",
+    "productHash": "f01bab93aafebeb19adbcd88fe00f867e1228c5703fbebae6c127877ecd459a7"
+  },
+  {
+    "pinId": 5415,
+    "sentiment": 0.3,
+    "textHash": "cd2193f1f1990487198927488e7f7fe24ac27ff7e08d45adb4dc608b5169b0a6",
+    "utcScoredDateTime": "2026-10-03T16:27:43.145Z",
+    "product": "The Wrong Way to Use Healing Magic",
+    "productHash": "cd2193f1f1990487198927488e7f7fe24ac27ff7e08d45adb4dc608b5169b0a6"
+  },
+  {
+    "pinId": 5416,
+    "sentiment": 0.3,
+    "textHash": "cd728ec04bbfa1401b9da54fe7160c5bf6654597448fd280c770b6e38369fb46",
+    "utcScoredDateTime": "2026-10-03T16:27:43.854Z",
+    "product": "Tougen Anki",
+    "productHash": "cd728ec04bbfa1401b9da54fe7160c5bf6654597448fd280c770b6e38369fb46"
+  },
+  {
+    "pinId": 5417,
+    "sentiment": 0.3,
+    "textHash": "8efb47423b8d47bd4a90926888fb8dd32eafafc0cfb46197331c41aa981f2e9a",
+    "utcScoredDateTime": "2026-10-03T16:27:44.622Z",
+    "product": "Mashle",
+    "productHash": "8efb47423b8d47bd4a90926888fb8dd32eafafc0cfb46197331c41aa981f2e9a"
+  },
+  {
+    "pinId": 5418,
+    "sentiment": 0.3,
+    "textHash": "98b4d32b70e15c0e2efa3e8da9ff3d5844b1c0e175f30e8475333475b68e0247",
+    "utcScoredDateTime": "2026-10-03T16:27:44.956Z",
+    "product": "Ranma1/2 (2024)",
+    "productHash": "98b4d32b70e15c0e2efa3e8da9ff3d5844b1c0e175f30e8475333475b68e0247"
+  },
+  {
+    "pinId": 5419,
+    "sentiment": 0.3,
+    "textHash": "467c81d775cf7b39a54e33b44e319b102953cb96c16b9594cc9ee2ff9c0398b9",
+    "utcScoredDateTime": "2026-10-03T16:27:45.243Z",
+    "product": "Chitose Is in the Ramune Bottle",
+    "productHash": "467c81d775cf7b39a54e33b44e319b102953cb96c16b9594cc9ee2ff9c0398b9"
+  },
+  {
+    "pinId": 5420,
+    "sentiment": 0.3,
+    "textHash": "1518cba0348a480a66e733c644b53b4c87c7c852d751a502d77a0aea6c692e15",
+    "utcScoredDateTime": "2026-10-03T16:27:45.803Z",
+    "product": "Sentenced to Be a Hero",
+    "productHash": "1518cba0348a480a66e733c644b53b4c87c7c852d751a502d77a0aea6c692e15"
+  },
+  {
+    "pinId": 5421,
+    "sentiment": 0.3,
+    "textHash": "ca03d8580b7589f06c06a83349741108abff75844677294ce729fc6e73841c13",
+    "utcScoredDateTime": "2026-10-03T16:27:46.054Z",
+    "product": "HELL MODE",
+    "productHash": "ca03d8580b7589f06c06a83349741108abff75844677294ce729fc6e73841c13"
+  },
+  {
+    "pinId": 5422,
+    "sentiment": 0.3,
+    "textHash": "7fe0a9e49c1afdafb5ff789b09f4259d71e76384424be206c574c7f74ff86995",
+    "utcScoredDateTime": "2026-10-03T16:27:46.515Z",
+    "product": "Solo Leveling",
+    "productHash": "7fe0a9e49c1afdafb5ff789b09f4259d71e76384424be206c574c7f74ff86995"
+  },
+  {
+    "pinId": 5423,
+    "sentiment": 0.3,
+    "textHash": "5a58b4a7954f3191bed01f05937a3b217db53c5fbbc98c93a372782cb492ee7b",
+    "utcScoredDateTime": "2026-10-03T16:27:46.736Z",
+    "product": "You and I Are Polar Opposites",
+    "productHash": "5a58b4a7954f3191bed01f05937a3b217db53c5fbbc98c93a372782cb492ee7b"
+  },
+  {
+    "pinId": 5424,
+    "sentiment": 0.3,
+    "textHash": "540d79e1c599e4e12b8fc817c2387d1e536fa98e4377232b475acc6e96d5063e",
+    "utcScoredDateTime": "2026-10-03T16:27:47.106Z",
+    "product": "TSUKIMICHI -Moonlit Fantasy-",
+    "productHash": "540d79e1c599e4e12b8fc817c2387d1e536fa98e4377232b475acc6e96d5063e"
+  },
+  {
+    "pinId": 5425,
+    "sentiment": 0.3,
+    "textHash": "bfd206fc6adb19e9bf5e6e45ff46764c7e078aea65a2b966acc0c57c7a6762e7",
+    "utcScoredDateTime": "2026-10-03T16:27:47.543Z",
+    "product": "Classroom of the Elite",
+    "productHash": "bfd206fc6adb19e9bf5e6e45ff46764c7e078aea65a2b966acc0c57c7a6762e7"
+  },
+  {
+    "pinId": 5426,
+    "sentiment": 0.3,
+    "textHash": "6b61d4adbb12bf8d63672e6a9aeff4fd76c9735297f715a9dd803d80bbe3a4c5",
+    "utcScoredDateTime": "2026-10-03T16:27:47.961Z",
+    "product": "Spice and Wolf",
+    "productHash": "6b61d4adbb12bf8d63672e6a9aeff4fd76c9735297f715a9dd803d80bbe3a4c5"
+  },
+  {
+    "pinId": 5427,
+    "sentiment": 0.3,
+    "textHash": "40efb2eb7b01ce79c86729aa7d47d2ec442339b814d0f0ee592951578a78affa",
+    "utcScoredDateTime": "2026-10-03T16:27:48.354Z",
+    "product": "The Ramparts of Ice",
+    "productHash": "40efb2eb7b01ce79c86729aa7d47d2ec442339b814d0f0ee592951578a78affa"
+  },
+  {
+    "pinId": 5428,
+    "sentiment": 0.3,
+    "textHash": "fde6f8e5382022be6b8929090b261b21aecdded47e99afadbee2384e63681b36",
+    "utcScoredDateTime": "2026-10-03T16:27:48.757Z",
+    "product": "Re:Monster",
+    "productHash": "fde6f8e5382022be6b8929090b261b21aecdded47e99afadbee2384e63681b36"
+  },
+  {
+    "pinId": 5429,
+    "sentiment": 0.3,
+    "textHash": "858817fc3be727fb2be7e19d4dc91377692f2341dadce719db716f667bd655f3",
+    "utcScoredDateTime": "2026-10-03T16:27:56.724Z",
+    "product": "Marriagetoxin",
+    "productHash": "858817fc3be727fb2be7e19d4dc91377692f2341dadce719db716f667bd655f3"
+  },
+  {
+    "pinId": 5430,
+    "sentiment": 0.3,
+    "textHash": "5b24bb981b6c13bf0b32ae36312e56a1ec09d93a3b8a7c1a4cdcceaed42cc944",
+    "utcScoredDateTime": "2026-10-03T16:27:57.269Z",
+    "product": "Laid-Back Camp",
+    "productHash": "5b24bb981b6c13bf0b32ae36312e56a1ec09d93a3b8a7c1a4cdcceaed42cc944"
+  },
+  {
+    "pinId": 5431,
+    "sentiment": 0.3,
+    "textHash": "870c95206c8ca14be5875ff04ba720e7a7dcab3f5cba03da610883d895bd3347",
+    "utcScoredDateTime": "2026-10-03T16:27:57.908Z",
+    "product": "Wistoria: Wand and Sword",
+    "productHash": "870c95206c8ca14be5875ff04ba720e7a7dcab3f5cba03da610883d895bd3347"
+  },
+  {
+    "pinId": 5432,
+    "sentiment": 0.3,
+    "textHash": "08f78b47f87c18e3f2b91f8d992fdd7f5f0c4d5061115c2b0e4a1abf58627cd9",
+    "utcScoredDateTime": "2026-10-03T16:27:58.242Z",
+    "product": "Chillin' in Another World with Level 2 Super Cheat Powers",
+    "productHash": "08f78b47f87c18e3f2b91f8d992fdd7f5f0c4d5061115c2b0e4a1abf58627cd9"
+  },
+  {
+    "pinId": 5433,
+    "sentiment": 0.3,
+    "textHash": "f1d9e3bd2695129655995d1217f625cfc9bc5900e03de9c8450c079251ca622d",
+    "utcScoredDateTime": "2026-10-03T16:27:58.618Z",
+    "product": "Alya Sometimes Hides Her Feelings in Russian",
+    "productHash": "f1d9e3bd2695129655995d1217f625cfc9bc5900e03de9c8450c079251ca622d"
   },
   {
     "pinId": 5434,
@@ -36198,5 +37910,933 @@
     "utcScoredDateTime": "2026-10-03T03:45:55.563Z",
     "product": "Harvey Awards",
     "productHash": "67f13a19b03ed63e4ca73208142e90d61d66a55fb338bd46804ddb27ca84dd2b"
+  },
+  {
+    "pinId": 5448,
+    "sentiment": 0.5,
+    "textHash": "c1da845b1c131ce70ecd50363353db0bf809bf2e2cf1ff3b51a51b3747a5a908",
+    "utcScoredDateTime": "2026-10-03T15:52:06.676Z",
+    "product": "Counter-Strike",
+    "productHash": "c1da845b1c131ce70ecd50363353db0bf809bf2e2cf1ff3b51a51b3747a5a908"
+  },
+  {
+    "pinId": 5449,
+    "sentiment": 0.5,
+    "textHash": "4c4158b5975371d507105ce12c69ad2b3ce129997bb2cfae20e379b914b97431",
+    "utcScoredDateTime": "2026-10-03T15:52:28.997Z",
+    "product": "Dota",
+    "productHash": "4c4158b5975371d507105ce12c69ad2b3ce129997bb2cfae20e379b914b97431"
+  },
+  {
+    "pinId": 5450,
+    "sentiment": 0.5,
+    "textHash": "52a07ce9684574f89e14709d86249f12c869a42ef30d5cc2a14c242b289b3fc6",
+    "utcScoredDateTime": "2026-10-03T15:52:58.208Z",
+    "product": "PUBG",
+    "productHash": "52a07ce9684574f89e14709d86249f12c869a42ef30d5cc2a14c242b289b3fc6"
+  },
+  {
+    "pinId": 5451,
+    "sentiment": 0.5,
+    "textHash": "234d18e80de198d0aa73dd41282eadea65ccc7dfc635904583071397b6be3a5f",
+    "utcScoredDateTime": "2026-10-03T15:53:28.811Z",
+    "product": "Apex Legends",
+    "productHash": "234d18e80de198d0aa73dd41282eadea65ccc7dfc635904583071397b6be3a5f"
+  },
+  {
+    "pinId": 5452,
+    "sentiment": 0.4,
+    "textHash": "d184d7faff1af7332cbf5c8596aec9cbf8a861efb357807acbed51a0a3abfcd9",
+    "utcScoredDateTime": "2026-10-03T15:54:04.093Z",
+    "product": "Wardogs",
+    "productHash": "d184d7faff1af7332cbf5c8596aec9cbf8a861efb357807acbed51a0a3abfcd9"
+  },
+  {
+    "pinId": 5453,
+    "sentiment": 0.6,
+    "textHash": "01427d6750ca59f14ea43a37379ed7950100aaf1a5b6fa2a6b69bba0d73c1790",
+    "utcScoredDateTime": "2026-10-03T15:54:35.198Z",
+    "product": "The Witcher",
+    "productHash": "01427d6750ca59f14ea43a37379ed7950100aaf1a5b6fa2a6b69bba0d73c1790"
+  },
+  {
+    "pinId": 5454,
+    "sentiment": 0.6,
+    "textHash": "90096d25645cb758d9b7c48fa458c875c5431d4eb2f8327b998a0898783053ee",
+    "utcScoredDateTime": "2026-10-03T15:55:08.755Z",
+    "product": "Valheim",
+    "productHash": "90096d25645cb758d9b7c48fa458c875c5431d4eb2f8327b998a0898783053ee"
+  },
+  {
+    "pinId": 5455,
+    "sentiment": 0.5,
+    "textHash": "cac385644e96dfb9bbdfbb8eb793596251d390c6f8666cf88a0e840e30d59a58",
+    "utcScoredDateTime": "2026-10-03T15:55:36.225Z",
+    "product": "Grand Theft Auto",
+    "productHash": "cac385644e96dfb9bbdfbb8eb793596251d390c6f8666cf88a0e840e30d59a58"
+  },
+  {
+    "pinId": 5456,
+    "sentiment": 0.8,
+    "textHash": "fcce5e2c30ecc46710cf0c5aafdf7577eae06856d9eb9a02d6796eaac511e046",
+    "utcScoredDateTime": "2026-10-03T15:57:00.404Z",
+    "product": "Slay the Spire",
+    "productHash": "fcce5e2c30ecc46710cf0c5aafdf7577eae06856d9eb9a02d6796eaac511e046"
+  },
+  {
+    "pinId": 5457,
+    "sentiment": 0.5,
+    "textHash": "eab29a7e31f1457dbf165bbb3423eccd81cfed81a14cf20925932724042ac6a8",
+    "utcScoredDateTime": "2026-10-03T15:57:31.126Z",
+    "product": "War Thunder",
+    "productHash": "eab29a7e31f1457dbf165bbb3423eccd81cfed81a14cf20925932724042ac6a8"
+  },
+  {
+    "pinId": 5458,
+    "sentiment": 0,
+    "textHash": "f9c412e0c0a1a20eac2ac29611d17c3008dc2af3d2815dce050a0aa204d15727",
+    "utcScoredDateTime": "2026-10-03T15:58:01.382Z",
+    "product": "Overwatch",
+    "productHash": "f9c412e0c0a1a20eac2ac29611d17c3008dc2af3d2815dce050a0aa204d15727"
+  },
+  {
+    "pinId": 5459,
+    "sentiment": 0.5,
+    "textHash": "7ac1cd95cf7490bc2402c8f6fbf716c6db242c10a11f549540c3e91c16b527e1",
+    "utcScoredDateTime": "2026-10-03T15:58:29.547Z",
+    "product": "Rainbow Six",
+    "productHash": "7ac1cd95cf7490bc2402c8f6fbf716c6db242c10a11f549540c3e91c16b527e1"
+  },
+  {
+    "pinId": 5460,
+    "sentiment": 0.7,
+    "textHash": "365d31c085806ab48b1ee53b149129bd1ed5d79677e07ceb14be91e02facde14",
+    "utcScoredDateTime": "2026-10-03T15:58:51.945Z",
+    "product": "The Binding of Isaac",
+    "productHash": "365d31c085806ab48b1ee53b149129bd1ed5d79677e07ceb14be91e02facde14"
+  },
+  {
+    "pinId": 5461,
+    "sentiment": 0.5,
+    "textHash": "6765002729df3df6ac650838247d787015c00ed2a0c6ce2ad409da8097ace622",
+    "utcScoredDateTime": "2026-10-03T15:59:20.332Z",
+    "product": "Marvel Rivals",
+    "productHash": "6765002729df3df6ac650838247d787015c00ed2a0c6ce2ad409da8097ace622"
+  },
+  {
+    "pinId": 5462,
+    "sentiment": 0.6,
+    "textHash": "045db2304e7d93de4b9740e371d92f41969ffb81612a0ad0125072da5a8938a1",
+    "utcScoredDateTime": "2026-10-03T15:59:42.313Z",
+    "product": "Limbus Company",
+    "productHash": "045db2304e7d93de4b9740e371d92f41969ffb81612a0ad0125072da5a8938a1"
+  },
+  {
+    "pinId": 5463,
+    "sentiment": 0.4,
+    "textHash": "eb79ab178626b08972f1f7df18d9472148c81f1ef79b9fded4e10c13970b0c32",
+    "utcScoredDateTime": "2026-10-03T16:00:08.012Z",
+    "product": "Aniimo",
+    "productHash": "eb79ab178626b08972f1f7df18d9472148c81f1ef79b9fded4e10c13970b0c32"
+  },
+  {
+    "pinId": 5464,
+    "sentiment": 0.6,
+    "textHash": "cfca46ac1ccf48c08152f86376dad8898797914aba4242a12e80455697202632",
+    "utcScoredDateTime": "2026-10-03T16:21:44.357Z",
+    "product": null,
+    "productHash": "cfca46ac1ccf48c08152f86376dad8898797914aba4242a12e80455697202632"
+  },
+  {
+    "pinId": 5465,
+    "sentiment": 0.3,
+    "textHash": "d32dadaab99871ab1a65ae07de1eba178b61c52287872d8082a16f9d25b82275",
+    "utcScoredDateTime": "2026-10-03T16:22:07.321Z",
+    "product": null,
+    "productHash": "d32dadaab99871ab1a65ae07de1eba178b61c52287872d8082a16f9d25b82275"
+  },
+  {
+    "pinId": 5466,
+    "sentiment": 0.3,
+    "textHash": "84d85801e72de823ff1de45d645307e766b89f0cd8a1bc5f8c66a0bb349a61d1",
+    "utcScoredDateTime": "2026-10-03T16:22:27.130Z",
+    "product": null,
+    "productHash": "84d85801e72de823ff1de45d645307e766b89f0cd8a1bc5f8c66a0bb349a61d1"
+  },
+  {
+    "pinId": 5467,
+    "sentiment": 0.4,
+    "textHash": "4a675423cec3fbc2c535bf39b72d1e867bd3efb1bbde460833b2265a59ebf5fe",
+    "utcScoredDateTime": "2026-10-03T16:22:48.075Z",
+    "product": null,
+    "productHash": "4a675423cec3fbc2c535bf39b72d1e867bd3efb1bbde460833b2265a59ebf5fe"
+  },
+  {
+    "pinId": 5468,
+    "sentiment": 0.7,
+    "textHash": "2a4c128c920faf9a6c9ace5bae2020e20210430c1daa9a53d7238bbaeb9d5a49",
+    "utcScoredDateTime": "2026-10-03T16:23:07.406Z",
+    "product": "Digit",
+    "productHash": "2a4c128c920faf9a6c9ace5bae2020e20210430c1daa9a53d7238bbaeb9d5a49"
+  },
+  {
+    "pinId": 5469,
+    "sentiment": 0.4,
+    "textHash": "9514d61498a021b2438dae6b6d864cf8ce48f4fc9e7e5993915d5323ee71a7d2",
+    "utcScoredDateTime": "2026-10-03T16:23:28.729Z",
+    "product": "Digit",
+    "productHash": "9514d61498a021b2438dae6b6d864cf8ce48f4fc9e7e5993915d5323ee71a7d2"
+  },
+  {
+    "pinId": 5475,
+    "sentiment": 0,
+    "textHash": "1451434ca17ad1d7ba50ecc0419225e0436c99c5e2f3c36c15158878b887b437",
+    "utcScoredDateTime": "2026-10-03T22:12:39.600Z",
+    "product": "OPEC+ output policy",
+    "productHash": "1451434ca17ad1d7ba50ecc0419225e0436c99c5e2f3c36c15158878b887b437"
+  },
+  {
+    "pinId": 5476,
+    "sentiment": 0.8,
+    "textHash": "8b751f43d0105a28f4104c8ebbe3daa59c1b3e50fa93d9ec29d1cb6a65ee8b72",
+    "utcScoredDateTime": "2026-10-03T22:12:42.753Z",
+    "product": "Indianapolis 500",
+    "productHash": "8b751f43d0105a28f4104c8ebbe3daa59c1b3e50fa93d9ec29d1cb6a65ee8b72"
+  },
+  {
+    "pinId": 5477,
+    "sentiment": -0.2,
+    "textHash": "ec9be9f8ac60cb505984e83b66f5edbd49085e236772ff2cea0b263388c42f13",
+    "utcScoredDateTime": "2026-10-03T22:12:58.716Z",
+    "product": "OPEC+ output policy",
+    "productHash": "ec9be9f8ac60cb505984e83b66f5edbd49085e236772ff2cea0b263388c42f13"
+  },
+  {
+    "pinId": 5478,
+    "sentiment": 0.6,
+    "textHash": "a11f34341e8dbd1104fb55981d53ee18ddc3471fdde27049595ec1de4b07f421",
+    "utcScoredDateTime": "2026-10-03T22:13:01.264Z",
+    "product": "Indianapolis 500",
+    "productHash": "a11f34341e8dbd1104fb55981d53ee18ddc3471fdde27049595ec1de4b07f421"
+  },
+  {
+    "pinId": 5479,
+    "sentiment": 0,
+    "textHash": "2ff3f7adaed7786813cb49101d6602dbb1fdad58f382e28e443fe518a9e69fe3",
+    "utcScoredDateTime": "2026-10-03T22:13:22.485Z",
+    "product": "OPEC+ output policy",
+    "productHash": "2ff3f7adaed7786813cb49101d6602dbb1fdad58f382e28e443fe518a9e69fe3"
+  },
+  {
+    "pinId": 5480,
+    "sentiment": 0.7,
+    "textHash": "9d46c95c5fd5901aa6632e28a817bd9002a579a7a65dfa31d598a6976640fcc5",
+    "utcScoredDateTime": "2026-10-03T22:13:23.523Z",
+    "product": "24 Hours of Le Mans",
+    "productHash": "9d46c95c5fd5901aa6632e28a817bd9002a579a7a65dfa31d598a6976640fcc5"
+  },
+  {
+    "pinId": 5481,
+    "sentiment": 0.6,
+    "textHash": "5a46b9ad2fa92e1c0785438f42e763e3e8bd9e6bf804e93d5c0dfdca5b6c9cc6",
+    "utcScoredDateTime": "2026-10-03T22:13:42.666Z",
+    "product": "24 Hours of Le Mans",
+    "productHash": "5a46b9ad2fa92e1c0785438f42e763e3e8bd9e6bf804e93d5c0dfdca5b6c9cc6"
+  },
+  {
+    "pinId": 5482,
+    "sentiment": -0.3,
+    "textHash": "701388b4da62cdfb70fdef3fbe1041a1686d4038234ed65aa9475f28398cabf7",
+    "utcScoredDateTime": "2026-10-03T22:13:52.666Z",
+    "product": "Golf",
+    "productHash": "701388b4da62cdfb70fdef3fbe1041a1686d4038234ed65aa9475f28398cabf7"
+  },
+  {
+    "pinId": 5483,
+    "sentiment": 0.3,
+    "textHash": "420bf6866bae32dd223c8debba33e8dc34028b56c61a070335f9cbac5674f949",
+    "utcScoredDateTime": "2026-10-03T22:14:01.477Z",
+    "product": "Empire Wind",
+    "productHash": "420bf6866bae32dd223c8debba33e8dc34028b56c61a070335f9cbac5674f949"
+  },
+  {
+    "pinId": 5484,
+    "sentiment": 0.7,
+    "textHash": "5269e8d67f62c5a3f8c3970a576c13da59d88bcb5c6ea5eaab6d106c16c8485b",
+    "utcScoredDateTime": "2026-10-03T22:14:02.597Z",
+    "product": "Formula 1",
+    "productHash": "5269e8d67f62c5a3f8c3970a576c13da59d88bcb5c6ea5eaab6d106c16c8485b"
+  },
+  {
+    "pinId": 5485,
+    "sentiment": 0.6,
+    "textHash": "8ace2caec5b57278512faa1a3a6dc4c3d52b2060c5d165ab4263e394c3ad2327",
+    "utcScoredDateTime": "2026-10-03T22:14:13.590Z",
+    "product": "Football",
+    "productHash": "8ace2caec5b57278512faa1a3a6dc4c3d52b2060c5d165ab4263e394c3ad2327"
+  },
+  {
+    "pinId": 5486,
+    "sentiment": 0.3,
+    "textHash": "83add2e344aee785179fee627a22c423ea9a0e1854c2723081df434e131cc297",
+    "utcScoredDateTime": "2026-10-03T22:14:20.133Z",
+    "product": "Sunrise Wind",
+    "productHash": "83add2e344aee785179fee627a22c423ea9a0e1854c2723081df434e131cc297"
+  },
+  {
+    "pinId": 5487,
+    "sentiment": 0.5,
+    "textHash": "38ee1111f5de94c4244356fca134f029a96d7f4cdf25ce57898eb6f9d7785ce2",
+    "utcScoredDateTime": "2026-10-03T22:14:32.870Z",
+    "product": "Basketball",
+    "productHash": "38ee1111f5de94c4244356fca134f029a96d7f4cdf25ce57898eb6f9d7785ce2"
+  },
+  {
+    "pinId": 5488,
+    "sentiment": 0.5,
+    "textHash": "0e53cffa06d8acc53c22a476cb45506ab358e452d1ff58cc102285917777536d",
+    "utcScoredDateTime": "2026-10-03T22:14:39.112Z",
+    "product": "BWRX-300",
+    "productHash": "0e53cffa06d8acc53c22a476cb45506ab358e452d1ff58cc102285917777536d"
+  },
+  {
+    "pinId": 5489,
+    "sentiment": 0.5,
+    "textHash": "38f1ce52068fc19820ac347ef5033230371f3fa84a106937b54cdec124c8c0d2",
+    "utcScoredDateTime": "2026-10-03T22:14:51.936Z",
+    "product": "Basketball",
+    "productHash": "38f1ce52068fc19820ac347ef5033230371f3fa84a106937b54cdec124c8c0d2"
+  },
+  {
+    "pinId": 5490,
+    "sentiment": 0.6,
+    "textHash": "44f29baf199cc6ae95b9b57a52d3fe60aab6a8077850cb363414cb2e6637509e",
+    "utcScoredDateTime": "2026-10-03T22:14:59.747Z",
+    "product": "Round-the-Clock Solar",
+    "productHash": "44f29baf199cc6ae95b9b57a52d3fe60aab6a8077850cb363414cb2e6637509e"
+  },
+  {
+    "pinId": 5491,
+    "sentiment": 0.5,
+    "textHash": "d13c2ca0dc63d37bb8b9d1cfda3de18f353b72e2c10eff42ea5e0b9604d85eb5",
+    "utcScoredDateTime": "2026-10-03T22:15:08.666Z",
+    "product": "Formula 1",
+    "productHash": "d13c2ca0dc63d37bb8b9d1cfda3de18f353b72e2c10eff42ea5e0b9604d85eb5"
+  },
+  {
+    "pinId": 5492,
+    "sentiment": 0.7,
+    "textHash": "c68a62e6ba96e46e820f5c76bd0894b1168277bc437b710064fad04b1f25e29a",
+    "utcScoredDateTime": "2026-10-03T22:15:18.340Z",
+    "product": "Natrium",
+    "productHash": "c68a62e6ba96e46e820f5c76bd0894b1168277bc437b710064fad04b1f25e29a"
+  },
+  {
+    "pinId": 5493,
+    "sentiment": 0.4,
+    "textHash": "e44a001ad49285cf6081fa26a49d2c4b84c3f093d267751cf86184ede0c6565e",
+    "utcScoredDateTime": "2026-10-03T22:15:28.610Z",
+    "product": "Formula 1",
+    "productHash": "e44a001ad49285cf6081fa26a49d2c4b84c3f093d267751cf86184ede0c6565e"
+  },
+  {
+    "pinId": 5494,
+    "sentiment": 0.7,
+    "textHash": "de7ee10cc501cbcba0e6bae3509410db72e1ed11b393800b58787ae569549d97",
+    "utcScoredDateTime": "2026-10-03T22:15:37.662Z",
+    "product": "Clinch River SMR",
+    "productHash": "de7ee10cc501cbcba0e6bae3509410db72e1ed11b393800b58787ae569549d97"
+  },
+  {
+    "pinId": 5495,
+    "sentiment": 0.6,
+    "textHash": "0c659879375ae558d02e5c11bd64572a0fa5440e44c3cd9c9df34d1264f7ad00",
+    "utcScoredDateTime": "2026-10-03T22:15:42.699Z",
+    "product": "Basketball",
+    "productHash": "0c659879375ae558d02e5c11bd64572a0fa5440e44c3cd9c9df34d1264f7ad00"
+  },
+  {
+    "pinId": 5496,
+    "sentiment": 0.5,
+    "textHash": "4d890a1a83e865b64b2ad9fc6c92375985803f6ec0df571b4499fa79cbae99ea",
+    "utcScoredDateTime": "2026-10-03T22:15:54.477Z",
+    "product": "MotoGP",
+    "productHash": "4d890a1a83e865b64b2ad9fc6c92375985803f6ec0df571b4499fa79cbae99ea"
+  },
+  {
+    "pinId": 5497,
+    "sentiment": -0.4,
+    "textHash": "3ea45879301c73cd6e8a2f50bddc38cdfb327c59435e8a48edf38e3a6bf4c072",
+    "utcScoredDateTime": "2026-10-03T22:15:56.653Z",
+    "product": "J.H. Campbell",
+    "productHash": "3ea45879301c73cd6e8a2f50bddc38cdfb327c59435e8a48edf38e3a6bf4c072"
+  },
+  {
+    "pinId": 5498,
+    "sentiment": 0.5,
+    "textHash": "a83f42e44815cdc2a8ac00923d5be461f36a0df86f469743cf9f561a0e4dcab5",
+    "utcScoredDateTime": "2026-10-03T22:16:12.881Z",
+    "product": "Basketball",
+    "productHash": "a83f42e44815cdc2a8ac00923d5be461f36a0df86f469743cf9f561a0e4dcab5"
+  },
+  {
+    "pinId": 5499,
+    "sentiment": 0.5,
+    "textHash": "c18086464d6e914f2f19b7d8ee469bfe796e77db622f805786b34678c351afb5",
+    "utcScoredDateTime": "2026-10-03T22:16:18.325Z",
+    "product": "MotoGP",
+    "productHash": "c18086464d6e914f2f19b7d8ee469bfe796e77db622f805786b34678c351afb5"
+  },
+  {
+    "pinId": 5500,
+    "sentiment": 0.5,
+    "textHash": "f55647e177fa0197a110225337fa232775134bab1a7a1bf2f808fe5662d9e8ec",
+    "utcScoredDateTime": "2026-10-03T22:16:18.398Z",
+    "product": "Revolution Wind",
+    "productHash": "f55647e177fa0197a110225337fa232775134bab1a7a1bf2f808fe5662d9e8ec"
+  },
+  {
+    "pinId": 5501,
+    "sentiment": 0.6,
+    "textHash": "db5131748a77c4cf09c5b7328145d705025760bdad255ff58cfe764b64fdc236",
+    "utcScoredDateTime": "2026-10-03T22:16:33.167Z",
+    "product": "Basketball",
+    "productHash": "db5131748a77c4cf09c5b7328145d705025760bdad255ff58cfe764b64fdc236"
+  },
+  {
+    "pinId": 5502,
+    "sentiment": 0.5,
+    "textHash": "7103bd5ee22c839746f80b2d7deebac204706a50263e51ca331d581b8c3ca494",
+    "utcScoredDateTime": "2026-10-03T22:16:38.280Z",
+    "product": "Baltic Power",
+    "productHash": "7103bd5ee22c839746f80b2d7deebac204706a50263e51ca331d581b8c3ca494"
+  },
+  {
+    "pinId": 5503,
+    "sentiment": 0.5,
+    "textHash": "4eae4f34561591fe8fd204fe19b46febc45bae16cb52d0b7b5fbc33e15182460",
+    "utcScoredDateTime": "2026-10-03T22:16:38.283Z",
+    "product": "World Rally Championship",
+    "productHash": "4eae4f34561591fe8fd204fe19b46febc45bae16cb52d0b7b5fbc33e15182460"
+  },
+  {
+    "pinId": 5504,
+    "sentiment": 0.6,
+    "textHash": "236169c8afcee08e2d42d10afd7b333b9cbab58ad6a547ae06c042e38cd0eb08",
+    "utcScoredDateTime": "2026-10-03T22:16:54.140Z",
+    "product": "Basketball",
+    "productHash": "236169c8afcee08e2d42d10afd7b333b9cbab58ad6a547ae06c042e38cd0eb08"
+  },
+  {
+    "pinId": 5505,
+    "sentiment": 0.5,
+    "textHash": "728bf32f7941b481ab1973908a6f918c76164274e814f63e7ef8d5a50f289da6",
+    "utcScoredDateTime": "2026-10-03T22:17:01.329Z",
+    "product": "NASCAR Cup Series",
+    "productHash": "728bf32f7941b481ab1973908a6f918c76164274e814f63e7ef8d5a50f289da6"
+  },
+  {
+    "pinId": 5506,
+    "sentiment": -0.5,
+    "textHash": "cf384285baeae383f2f1d4b1b91cf3082bc7b59fd2ad67d7f0b7aac2e14d45e3",
+    "utcScoredDateTime": "2026-10-03T22:17:04.269Z",
+    "product": "Palisades",
+    "productHash": "cf384285baeae383f2f1d4b1b91cf3082bc7b59fd2ad67d7f0b7aac2e14d45e3"
+  },
+  {
+    "pinId": 5507,
+    "sentiment": 0.6,
+    "textHash": "dac1654ed5d2370016b577638b1fa0d555376d42c85150d7ffa621e0eeff6133",
+    "utcScoredDateTime": "2026-10-03T22:17:18.737Z",
+    "product": "Basketball",
+    "productHash": "dac1654ed5d2370016b577638b1fa0d555376d42c85150d7ffa621e0eeff6133"
+  },
+  {
+    "pinId": 5508,
+    "sentiment": -0.3,
+    "textHash": "ea5ed2327577630ac64541df453ac731027fec3b0c3d8542457047ff50963ded",
+    "utcScoredDateTime": "2026-10-03T22:17:24.848Z",
+    "product": "Kidston Pumped Hydro",
+    "productHash": "ea5ed2327577630ac64541df453ac731027fec3b0c3d8542457047ff50963ded"
+  },
+  {
+    "pinId": 5509,
+    "sentiment": 0.4,
+    "textHash": "87c692f5b8faaf6318647b4dd9964797eca9b04e9ab7dcd1e4223275ad24a6b3",
+    "utcScoredDateTime": "2026-10-03T22:17:24.847Z",
+    "product": "Formula E",
+    "productHash": "87c692f5b8faaf6318647b4dd9964797eca9b04e9ab7dcd1e4223275ad24a6b3"
+  },
+  {
+    "pinId": 5510,
+    "sentiment": 0.6,
+    "textHash": "82b5444f05976d724aaecfe37a23417e75125da83230ea98387cb01f623c7d59",
+    "utcScoredDateTime": "2026-10-03T22:17:39.325Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5511,
+    "sentiment": -0.2,
+    "textHash": "1ab84443f4a7ae5fd14118849af4d4224ff07b701e49bf4c46ebe767a1abc64e",
+    "utcScoredDateTime": "2026-10-03T22:17:46.379Z",
+    "product": "CVOW",
+    "productHash": "1ab84443f4a7ae5fd14118849af4d4224ff07b701e49bf4c46ebe767a1abc64e"
+  },
+  {
+    "pinId": 5512,
+    "sentiment": 0.6,
+    "textHash": "cddf7d37f39ac5b2ca1ca4ec90bc740c4838c746d9bd71463755789473376024",
+    "utcScoredDateTime": "2026-10-03T22:17:46.815Z",
+    "product": "Dakar Rally",
+    "productHash": "cddf7d37f39ac5b2ca1ca4ec90bc740c4838c746d9bd71463755789473376024"
+  },
+  {
+    "pinId": 5513,
+    "sentiment": 0.6,
+    "textHash": "3ca3044feee76a95c0521f449321423d6a144a318fec6f3d5997dd77fb9b14de",
+    "utcScoredDateTime": "2026-10-03T22:17:59.219Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5514,
+    "sentiment": 0.4,
+    "textHash": "7f0c4878a3152ffef00af2c4b3a2fa25a805219b3b284ca27f1f5813f448b4c1",
+    "utcScoredDateTime": "2026-10-03T22:18:10.324Z",
+    "product": "Homer City Energy Campus",
+    "productHash": "7f0c4878a3152ffef00af2c4b3a2fa25a805219b3b284ca27f1f5813f448b4c1"
+  },
+  {
+    "pinId": 5515,
+    "sentiment": 0.5,
+    "textHash": "bbc32114aa2854f0e2fc30bd36ca3810c55816ebc9fd2bcc6496afaf7a0d95c5",
+    "utcScoredDateTime": "2026-10-03T22:18:11.429Z",
+    "product": "Isle of Man TT",
+    "productHash": "bbc32114aa2854f0e2fc30bd36ca3810c55816ebc9fd2bcc6496afaf7a0d95c5"
+  },
+  {
+    "pinId": 5516,
+    "sentiment": 0.5,
+    "textHash": "19444e60dc7f56b87a65aab3ac1bc8cdd22db9303ad934fe8ad77ea341f302b9",
+    "utcScoredDateTime": "2026-10-03T22:18:22.247Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5517,
+    "sentiment": 0.6,
+    "textHash": "5b0d56c1d362769509fed804d8b263c0760bce169c4f85bd1d74299b06e46ce8",
+    "utcScoredDateTime": "2026-10-03T22:18:29.090Z",
+    "product": "Duane Arnold",
+    "productHash": "5b0d56c1d362769509fed804d8b263c0760bce169c4f85bd1d74299b06e46ce8"
+  },
+  {
+    "pinId": 5518,
+    "sentiment": 0.6,
+    "textHash": "94379d149b52ca74c70bbf16de18a1580c09fdcdad79843e4f5a046b1bac0bca",
+    "utcScoredDateTime": "2026-10-03T22:18:36.587Z",
+    "product": "Melbourne Cup",
+    "productHash": "94379d149b52ca74c70bbf16de18a1580c09fdcdad79843e4f5a046b1bac0bca"
+  },
+  {
+    "pinId": 5519,
+    "sentiment": 0.5,
+    "textHash": "653feac1190b7c8255507f6d0baf6ca4c718871cec79e8e208c1a68a162d3928",
+    "utcScoredDateTime": "2026-10-03T22:18:47.569Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5520,
+    "sentiment": 0,
+    "textHash": "35379412a809b2bd4d2ce4c3798fdbc71133cc315f18f6c7ac01a19116319ec0",
+    "utcScoredDateTime": "2026-10-03T22:19:09.432Z",
+    "product": "OPEC+ output policy",
+    "productHash": "35379412a809b2bd4d2ce4c3798fdbc71133cc315f18f6c7ac01a19116319ec0"
+  },
+  {
+    "pinId": 5521,
+    "sentiment": 0.6,
+    "textHash": "f4c1ee3c1798e288129d96f4a7c8818d34f131405c6b76c96aff4bfde0035453",
+    "utcScoredDateTime": "2026-10-03T22:19:10.982Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5522,
+    "sentiment": 0,
+    "textHash": "f902b084bb1cdb13719608889e2362075d3e1ad576c3a33b616c0d42dfd7843d",
+    "utcScoredDateTime": "2026-10-03T22:19:29.549Z",
+    "product": "OPEC+ output policy",
+    "productHash": "f902b084bb1cdb13719608889e2362075d3e1ad576c3a33b616c0d42dfd7843d"
+  },
+  {
+    "pinId": 5523,
+    "sentiment": 0.6,
+    "textHash": "c22e13661bc2b86de2735ae45bdb3de0efa4b300cf81e62e73d69b644de4e902",
+    "utcScoredDateTime": "2026-10-03T22:19:33.563Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5524,
+    "sentiment": -0.2,
+    "textHash": "3c373ce41a7af9d14a96a71390f555e284619f28658bf234c67742ebc6112e7a",
+    "utcScoredDateTime": "2026-10-03T22:19:48.773Z",
+    "product": "Russia oil sanctions",
+    "productHash": "3c373ce41a7af9d14a96a71390f555e284619f28658bf234c67742ebc6112e7a"
+  },
+  {
+    "pinId": 5525,
+    "sentiment": 0.6,
+    "textHash": "2887061ebd45b2d0276dd7fc43dec7cec1c9b27332a062d3cf8c599242ee7c0f",
+    "utcScoredDateTime": "2026-10-03T22:19:56.878Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5526,
+    "sentiment": 0,
+    "textHash": "caca422831251ddf68a534d650e0f3c2f47a44c346663912a2bc3fb2dd2cb28e",
+    "utcScoredDateTime": "2026-10-03T22:20:07.762Z",
+    "product": "Russia oil sanctions",
+    "productHash": "caca422831251ddf68a534d650e0f3c2f47a44c346663912a2bc3fb2dd2cb28e"
+  },
+  {
+    "pinId": 5527,
+    "sentiment": 0.5,
+    "textHash": "d94888ba08a4802ddb1ed0a82dde9958a040467ad1673e5a298a70744cd18a7f",
+    "utcScoredDateTime": "2026-10-03T22:20:18.056Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5528,
+    "sentiment": 0,
+    "textHash": "ba329ffa2c9ba79bbf4b9697ac9dff4302ecd73aa0212e76f8790bc2483a4556",
+    "utcScoredDateTime": "2026-10-03T22:20:26.764Z",
+    "product": "Russia oil sanctions",
+    "productHash": "ba329ffa2c9ba79bbf4b9697ac9dff4302ecd73aa0212e76f8790bc2483a4556"
+  },
+  {
+    "pinId": 5529,
+    "sentiment": 0.6,
+    "textHash": "c5226828017028916bb96f023cb50f584e0709d88aa89018b7546c6697c20453",
+    "utcScoredDateTime": "2026-10-03T22:20:38.032Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5530,
+    "sentiment": -0.5,
+    "textHash": "987dd25c1741f2f6c259741345209bf92c101e489c740db4aae53ce1cbe07b8e",
+    "utcScoredDateTime": "2026-10-03T22:20:44.979Z",
+    "product": "Ukraine's strikes on Russian oil",
+    "productHash": "987dd25c1741f2f6c259741345209bf92c101e489c740db4aae53ce1cbe07b8e"
+  },
+  {
+    "pinId": 5531,
+    "sentiment": 0.5,
+    "textHash": "9bce7485ffa975120c0287e5be6fd7e5e227e97e376282d1b8dbb16f14f1bd54",
+    "utcScoredDateTime": "2026-10-03T22:20:57.677Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5532,
+    "sentiment": -0.5,
+    "textHash": "0712481ad3e8c0de03372e2518d85262c9d9c127d042bab88dd5e9d3f07b3722",
+    "utcScoredDateTime": "2026-10-03T22:21:05.932Z",
+    "product": "Ukraine's strikes on Russian oil",
+    "productHash": "0712481ad3e8c0de03372e2518d85262c9d9c127d042bab88dd5e9d3f07b3722"
+  },
+  {
+    "pinId": 5533,
+    "sentiment": 0.5,
+    "textHash": "47f4afb26403a8e0fc80af3c274f991f300589917af9f2bef9fb3886957879db",
+    "utcScoredDateTime": "2026-10-03T22:21:17.175Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 5534,
+    "sentiment": -0.5,
+    "textHash": "6569f54e902ac4c6e4573c0d8cc5352fd68327dd25a01b623730ad6368bac480",
+    "utcScoredDateTime": "2026-10-03T22:21:25.087Z",
+    "product": "Ukraine's strikes on Russian oil",
+    "productHash": "6569f54e902ac4c6e4573c0d8cc5352fd68327dd25a01b623730ad6368bac480"
+  },
+  {
+    "pinId": 5535,
+    "sentiment": 0.7,
+    "textHash": "2f7fc367d9c9225e800777ab71fb40ea002df93c56ad91b4f3f6b1f25dd8d896",
+    "utcScoredDateTime": "2026-10-03T22:21:36.101Z",
+    "product": null,
+    "productHash": "2f7fc367d9c9225e800777ab71fb40ea002df93c56ad91b4f3f6b1f25dd8d896"
+  },
+  {
+    "pinId": 5536,
+    "sentiment": -0.6,
+    "textHash": "fc53d952556349703c43b63384df1edc65fc0ca18527e9a36d60c40384c3b15c",
+    "utcScoredDateTime": "2026-10-03T22:21:44.472Z",
+    "product": "Iran war",
+    "productHash": "fc53d952556349703c43b63384df1edc65fc0ca18527e9a36d60c40384c3b15c"
+  },
+  {
+    "pinId": 5537,
+    "sentiment": 0.6,
+    "textHash": "428941e998c988b7d4530ce48c21d73b085c8dedfa817f8a8a989e6ef485b251",
+    "utcScoredDateTime": "2026-10-03T22:21:55.291Z",
+    "product": null,
+    "productHash": "428941e998c988b7d4530ce48c21d73b085c8dedfa817f8a8a989e6ef485b251"
+  },
+  {
+    "pinId": 5538,
+    "sentiment": -0.6,
+    "textHash": "c7dfbdace87c341c0439a5b97891d0f21d445a3d416f1bd30315306d8fae8cc6",
+    "utcScoredDateTime": "2026-10-03T22:22:03.260Z",
+    "product": "Iran war",
+    "productHash": "c7dfbdace87c341c0439a5b97891d0f21d445a3d416f1bd30315306d8fae8cc6"
+  },
+  {
+    "pinId": 5539,
+    "sentiment": 0.5,
+    "textHash": "2a6f485273664e1466e5952cf4457fc726d5eb72dc1037cb17fc128e60abd7aa",
+    "utcScoredDateTime": "2026-10-03T22:22:16.219Z",
+    "product": null,
+    "productHash": "2a6f485273664e1466e5952cf4457fc726d5eb72dc1037cb17fc128e60abd7aa"
+  },
+  {
+    "pinId": 5540,
+    "sentiment": -0.5,
+    "textHash": "5f5b581ce355f0e5f6c1352b80032f9eb92be1db0335fce5e655b3de12a6db2c",
+    "utcScoredDateTime": "2026-10-03T22:22:23.504Z",
+    "product": "Oil prices",
+    "productHash": "5f5b581ce355f0e5f6c1352b80032f9eb92be1db0335fce5e655b3de12a6db2c"
+  },
+  {
+    "pinId": 5541,
+    "sentiment": 0.8,
+    "textHash": "e16a162279352f29c3ed26ddbdc0f9c9410424005387de7a36fe7f1682db75c8",
+    "utcScoredDateTime": "2026-10-03T22:22:37.959Z",
+    "product": null,
+    "productHash": "e16a162279352f29c3ed26ddbdc0f9c9410424005387de7a36fe7f1682db75c8"
+  },
+  {
+    "pinId": 5542,
+    "sentiment": 0.1,
+    "textHash": "2513e2083525f7e5cf4c31a0b459053c22c90e1a06f73644c94de40e4e664798",
+    "utcScoredDateTime": "2026-10-03T22:22:57.745Z",
+    "product": null,
+    "productHash": "2513e2083525f7e5cf4c31a0b459053c22c90e1a06f73644c94de40e4e664798"
+  },
+  {
+    "pinId": 5543,
+    "sentiment": 0.3,
+    "textHash": "e3a9ba3c918ecd4b7bf1f9d5c3022411f0a18dc73e9dba5c2793f0f5f01cbe46",
+    "utcScoredDateTime": "2026-10-03T22:23:17.184Z",
+    "product": null,
+    "productHash": "e3a9ba3c918ecd4b7bf1f9d5c3022411f0a18dc73e9dba5c2793f0f5f01cbe46"
+  },
+  {
+    "pinId": 5544,
+    "sentiment": 0.2,
+    "textHash": "8e61783f9f6c2dc8d937f21b0d5d62454f5f5657dc06b69a4d3e31294dd1e3f6",
+    "utcScoredDateTime": "2026-10-03T22:23:34.347Z",
+    "product": null,
+    "productHash": "8e61783f9f6c2dc8d937f21b0d5d62454f5f5657dc06b69a4d3e31294dd1e3f6"
+  },
+  {
+    "pinId": 5545,
+    "sentiment": -0.3,
+    "textHash": "fa398165d28bc8af53b24d17928e0acb80860ee1dec77e6d84679b06e9d58934",
+    "utcScoredDateTime": "2026-10-03T22:23:54.687Z",
+    "product": null,
+    "productHash": "fa398165d28bc8af53b24d17928e0acb80860ee1dec77e6d84679b06e9d58934"
+  },
+  {
+    "pinId": 5546,
+    "sentiment": 0.4,
+    "textHash": "5e7bee04c5a935113ba679c8cf75877460e13756b201ad7bd513acf1fca529dc",
+    "utcScoredDateTime": "2026-10-03T22:24:16.582Z",
+    "product": null,
+    "productHash": "5e7bee04c5a935113ba679c8cf75877460e13756b201ad7bd513acf1fca529dc"
+  },
+  {
+    "pinId": 5547,
+    "sentiment": 0.4,
+    "textHash": "268bb7541d624128223210e0eeb6a225fa905c90e89df1a13dbf15292252a4df",
+    "utcScoredDateTime": "2026-10-03T22:24:37.184Z",
+    "product": null,
+    "productHash": "268bb7541d624128223210e0eeb6a225fa905c90e89df1a13dbf15292252a4df"
+  },
+  {
+    "pinId": 5548,
+    "sentiment": 0.3,
+    "textHash": "f0217a08a2611fbbb38e8f123f47f537cd172d5c296b5ba4fa62374cc5217aed",
+    "utcScoredDateTime": "2026-10-03T22:24:56.029Z",
+    "product": null,
+    "productHash": "f0217a08a2611fbbb38e8f123f47f537cd172d5c296b5ba4fa62374cc5217aed"
+  },
+  {
+    "pinId": 5549,
+    "sentiment": 0.4,
+    "textHash": "5686fc2d3d3e7df2e7502f72cc297a099a9e0dcd063e16f26eff9960f6f6f76d",
+    "utcScoredDateTime": "2026-10-03T22:25:23.766Z",
+    "product": null,
+    "productHash": "5686fc2d3d3e7df2e7502f72cc297a099a9e0dcd063e16f26eff9960f6f6f76d"
+  },
+  {
+    "pinId": 5550,
+    "sentiment": 0.6,
+    "textHash": "52c1fdaf4e380ef2e301efe192e71f39ccdb2e0bb31ec058ce912fdf28143cb4",
+    "utcScoredDateTime": "2026-10-03T22:25:44.117Z",
+    "product": null,
+    "productHash": "52c1fdaf4e380ef2e301efe192e71f39ccdb2e0bb31ec058ce912fdf28143cb4"
+  },
+  {
+    "pinId": 5551,
+    "sentiment": 0.5,
+    "textHash": "3638ec020a20b14b04e482ee9b1c660647ece62ca00df6e04e6efe9723a76fab",
+    "utcScoredDateTime": "2026-10-03T22:26:02.773Z",
+    "product": "Zendaya x On",
+    "productHash": "3638ec020a20b14b04e482ee9b1c660647ece62ca00df6e04e6efe9723a76fab"
+  },
+  {
+    "pinId": 5552,
+    "sentiment": 0.4,
+    "textHash": "4fa78f2371c6a9dc0dd40fb89f3e0191b7645bde873bb6c8f884cf14b36cb30e",
+    "utcScoredDateTime": "2026-10-03T22:26:21.843Z",
+    "product": null,
+    "productHash": "4fa78f2371c6a9dc0dd40fb89f3e0191b7645bde873bb6c8f884cf14b36cb30e"
+  },
+  {
+    "pinId": 5553,
+    "sentiment": 0.5,
+    "textHash": "841bec7c539c588c4f946c3c3e59e752d045a741bfdf6dadf550861a4d2d381b",
+    "utcScoredDateTime": "2026-10-03T22:26:41.865Z",
+    "product": "THE ROGER",
+    "productHash": "841bec7c539c588c4f946c3c3e59e752d045a741bfdf6dadf550861a4d2d381b"
+  },
+  {
+    "pinId": 5554,
+    "sentiment": 0.6,
+    "textHash": "65599edfb6ffa11753793fa1233dade7775c67868ce3aaca61eb1d1565fce737",
+    "utcScoredDateTime": "2026-10-03T22:27:01.343Z",
+    "product": "LightSpray",
+    "productHash": "65599edfb6ffa11753793fa1233dade7775c67868ce3aaca61eb1d1565fce737"
+  },
+  {
+    "pinId": 5555,
+    "sentiment": 0.6,
+    "textHash": "a085b16ceffd75c903fb058e0594f953a3f8ab28ddfc9c28a61446dd91cb5560",
+    "utcScoredDateTime": "2026-10-03T22:27:22.190Z",
+    "product": "LightSpray",
+    "productHash": "a085b16ceffd75c903fb058e0594f953a3f8ab28ddfc9c28a61446dd91cb5560"
+  },
+  {
+    "pinId": 5556,
+    "sentiment": 0.3,
+    "textHash": "db075ca668b157810b61cba7f2e30f7ad1c9b311721a5fee48c463068697cd43",
+    "utcScoredDateTime": "2026-10-03T22:27:41.478Z",
+    "product": null,
+    "productHash": "db075ca668b157810b61cba7f2e30f7ad1c9b311721a5fee48c463068697cd43"
+  },
+  {
+    "pinId": 5557,
+    "sentiment": 0.7,
+    "textHash": "8f16c759631df154728f3cd05814e9421519300caaabb70a00fb30b42ef72e5a",
+    "utcScoredDateTime": "2026-10-03T22:28:01.940Z",
+    "product": null,
+    "productHash": "8f16c759631df154728f3cd05814e9421519300caaabb70a00fb30b42ef72e5a"
+  },
+  {
+    "pinId": 5558,
+    "sentiment": 0.7,
+    "textHash": "e09f741eac3535540b3f550c72243e16b612e440ca83f475c2f649cc2bdce92f",
+    "utcScoredDateTime": "2026-10-03T22:28:21.696Z",
+    "product": null,
+    "productHash": "e09f741eac3535540b3f550c72243e16b612e440ca83f475c2f649cc2bdce92f"
+  },
+  {
+    "pinId": 5559,
+    "sentiment": 0.8,
+    "textHash": "17d74c3adb9bf778b872ac80b2c95e9f29ca5db3d8d07ab2554e7f4ebbf457e0",
+    "utcScoredDateTime": "2026-10-03T22:28:41.345Z",
+    "product": null,
+    "productHash": "17d74c3adb9bf778b872ac80b2c95e9f29ca5db3d8d07ab2554e7f4ebbf457e0"
+  },
+  {
+    "pinId": 5560,
+    "sentiment": 0.8,
+    "textHash": "e13646020e6bf3bf4f3cb033515268c1ae1a737d625a3c64c51b8069da8c6a31",
+    "utcScoredDateTime": "2026-10-03T22:29:01.292Z",
+    "product": null,
+    "productHash": "e13646020e6bf3bf4f3cb033515268c1ae1a737d625a3c64c51b8069da8c6a31"
+  },
+  {
+    "pinId": 5561,
+    "sentiment": 0.8,
+    "textHash": "e240afbb96e8df52a5845a70dfcc798f99d764d7b936c63d5651e3bb1caa8771",
+    "utcScoredDateTime": "2026-10-03T22:29:20.680Z",
+    "product": null,
+    "productHash": "e240afbb96e8df52a5845a70dfcc798f99d764d7b936c63d5651e3bb1caa8771"
+  },
+  {
+    "pinId": 5562,
+    "sentiment": 0.6,
+    "textHash": "709c78bec074ad89cb94f5ab55fc3383bf4fdf6d8eaf0320b16a0be97ab8928c",
+    "utcScoredDateTime": "2026-10-03T22:29:41.067Z",
+    "product": null,
+    "productHash": "709c78bec074ad89cb94f5ab55fc3383bf4fdf6d8eaf0320b16a0be97ab8928c"
+  },
+  {
+    "pinId": 5563,
+    "sentiment": 0.8,
+    "textHash": "06c3d8dc5949c88b3e5ce80a45ac69e73940b9e51280b57b74aba879f11cc0d4",
+    "utcScoredDateTime": "2026-10-03T22:30:01.332Z",
+    "product": null,
+    "productHash": "06c3d8dc5949c88b3e5ce80a45ac69e73940b9e51280b57b74aba879f11cc0d4"
+  },
+  {
+    "pinId": 5564,
+    "sentiment": 0.7,
+    "textHash": "0e17a187a73934e4c803547080b9a03e4e1f446d178e823258210128ee54697e",
+    "utcScoredDateTime": "2026-10-03T22:30:19.984Z",
+    "product": null,
+    "productHash": "0e17a187a73934e4c803547080b9a03e4e1f446d178e823258210128ee54697e"
+  },
+  {
+    "pinId": 5565,
+    "sentiment": 0.7,
+    "textHash": "8a006f8cede80158481b066b09d11cc751200c3dfa5e33038c52ea8c02f3a51d",
+    "utcScoredDateTime": "2026-10-03T22:30:39.819Z",
+    "product": null,
+    "productHash": "8a006f8cede80158481b066b09d11cc751200c3dfa5e33038c52ea8c02f3a51d"
+  },
+  {
+    "pinId": 5566,
+    "sentiment": 0.8,
+    "textHash": "cd8fa8bed287f8b3147460ca088dbd774403772a5d81463f40009f51153ab30f",
+    "utcScoredDateTime": "2026-10-03T22:30:59.780Z",
+    "product": null,
+    "productHash": "cd8fa8bed287f8b3147460ca088dbd774403772a5d81463f40009f51153ab30f"
+  },
+  {
+    "pinId": 5567,
+    "sentiment": 0.6,
+    "textHash": "f5a9a54c97a33cd5e7711b1983165e12cdcabb6fb969a2851f166bb342dff9f1",
+    "utcScoredDateTime": "2026-10-03T22:34:32.914Z",
+    "product": null,
+    "productHash": "f5a9a54c97a33cd5e7711b1983165e12cdcabb6fb969a2851f166bb342dff9f1"
+  },
+  {
+    "pinId": 5568,
+    "sentiment": -0.1,
+    "textHash": "384b8b53f936483eb4a8303bc9495562f1f1fb3b23c41adba92fdcc592a4dcef",
+    "utcScoredDateTime": "2026-10-03T22:41:36.857Z",
+    "product": null,
+    "productHash": "384b8b53f936483eb4a8303bc9495562f1f1fb3b23c41adba92fdcc592a4dcef"
   }
 ]

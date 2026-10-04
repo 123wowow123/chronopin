@@ -5805,6 +5805,62 @@
     "checkedAt": "2026-10-02T14:10:55.642Z"
   },
   {
+    "pinId": 5179,
+    "performers": [
+      {
+        "name": "Natália Silva",
+        "type": "Person"
+      },
+      {
+        "name": "Wang Cong",
+        "type": "Person"
+      },
+      {
+        "name": "Deiveson Figueiredo",
+        "type": "Person"
+      },
+      {
+        "name": "Payton Talbott",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://seatgeek.com/ufc-tickets/mma/2026-10-03-4-pm/18478643",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.ufc.com/event/ufc-332",
+    "checkedAt": "2026-10-03T15:50:29.668Z"
+  },
+  {
+    "pinId": 5180,
+    "performers": [],
+    "ticketUrl": "https://tickets.formula1.com/en/f1-83069-bahrain-in-malaysia",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.formula1.com/en/racing/2026/bahrain",
+    "checkedAt": "2026-10-03T15:50:29.876Z"
+  },
+  {
+    "pinId": 5182,
+    "performers": [],
+    "ticketUrl": "https://www.imfconnect.org/content/imf/en/meetings/AM26/Registration.html",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.imf.org/en/meetings/2026/annual",
+    "checkedAt": "2026-10-03T15:50:58.726Z"
+  },
+  {
     "pinId": 5185,
     "performers": [],
     "ticketUrl": "https://hobbyshow.co.jp/ticket/",
@@ -5894,5 +5950,70 @@
     "source": "hand",
     "sourceUrl": "https://www.jumpfesta.com/",
     "checkedAt": "2026-10-03T01:17:13.972Z"
+  },
+  {
+    "pinId": 5491,
+    "performers": [],
+    "ticketUrl": "https://www.singaporegp.sg/en/tickets",
+    "lowPrice": 198,
+    "highPrice": 7508,
+    "priceCurrency": "SGD",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.singaporegp.sg/en/tickets",
+    "checkedAt": "2026-10-03T22:15:09.190Z"
+  },
+  {
+    "pinId": 5493,
+    "performers": [],
+    "ticketUrl": "https://tickets.formula1.com/en/f1-56257-qatar",
+    "lowPrice": 600,
+    "highPrice": 2000,
+    "priceCurrency": "QAR",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.qatar-tribune.com/article/249936/latest-news/formula-1-qatar-airways-qatar-grand-prix-2026-100-days-to-go-as-key-visual-unveiled",
+    "checkedAt": "2026-10-03T22:15:28.939Z"
+  },
+  {
+    "pinId": 5496,
+    "performers": [],
+    "ticketUrl": "https://www.motogp.com.au/tickets",
+    "lowPrice": 50,
+    "highPrice": 99,
+    "priceCurrency": "AUD",
+    "availability": "InStock",
+    "onSaleDate": "2026-05-26T02:00:00.000Z",
+    "source": "hand",
+    "sourceUrl": "https://www.justbikes.com.au/news-and-reviews/ticket-guide-motogp-grand-prix-of-australia-2026/1097695",
+    "checkedAt": "2026-10-03T22:15:54.750Z"
+  },
+  {
+    "pinId": 5499,
+    "performers": [],
+    "ticketUrl": "https://tickets.motogp.com/en/21151-valencia/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://tickets.motogp.com/en/21151-valencia/",
+    "checkedAt": "2026-10-03T22:16:18.580Z"
+  },
+  {
+    "pinId": 5518,
+    "performers": [],
+    "ticketUrl": "https://www.vrc.com.au/products/2026-2027/general-admission/general-admission/?eventId=92743",
+    "lowPrice": 120,
+    "highPrice": 2195,
+    "priceCurrency": "AUD",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.vrc.com.au/race-days-and-events/2026-2027/lexus-melbourne-cup-day/",
+    "checkedAt": "2026-10-03T22:18:37.655Z"
   }
 ]
