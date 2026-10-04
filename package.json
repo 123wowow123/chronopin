@@ -57,6 +57,7 @@
     "merchants:prices": "tsx scripts/merchants/prices.ts",
     "merchants:steam": "tsx scripts/merchants/steam.ts",
     "games:info": "tsx scripts/games/info.ts",
+    "games:markets": "tsx scripts/games/markets.ts",
     "places:resolve": "tsx scripts/places/resolve.ts",
     "places:refresh": "tsx scripts/places/refresh.ts",
     "events:refresh": "tsx scripts/events/refresh.ts",

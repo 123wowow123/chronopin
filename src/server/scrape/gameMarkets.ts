@@ -33,13 +33,25 @@ export type GameMarketReference = Pick<PinReferenceJson, 'url' | 'title' | 'conf
 
 async function getJson(url: string): Promise<any> {
   try {
-    const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' }, signal: AbortSignal.timeout(TIMEOUT_MS) });
-    return res.ok ? await res.json() : undefined;
+    // Kalshi's keyless limit answers 429 under a run of lookups: one more try.
+    for (let attempt = 0; ; attempt++) {
+      const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' }, signal: AbortSignal.timeout(TIMEOUT_MS) });
+      if (res.status === 429 && attempt < 2) {
+        await new Promise((resolve) => setTimeout(resolve, 1500 * (attempt + 1)));
+        continue;
+      }
+      return res.ok ? await res.json() : undefined;
+    }
   } catch (err) {
     log.warn('game market lookup failed:', (err as Error).message);
     return undefined;
   }
 }
+
+// A date word cut out of a title ("October release date announced for ...") is
+// no game's name.
+const CALENDAR_WORD = /^(january|february|march|april|may|june|july|august|september|october|november|december)$/;
+const GAME_TAGS = /^(games?|video-?games?|gaming)$/i;
 
 const ROMAN: Record<string, string> = { ii: '2', iii: '3', iv: '4', v: '5', vi: '6', vii: '7', viii: '8', ix: '9', x: '10' };
 
@@ -50,7 +62,7 @@ export function gameAliases(titles: string[]): string[] {
   const out = new Set<string>();
   for (const title of titles) {
     const base = normalizeTitle(title, { keepThe: true });
-    if (base.length < 3) continue;
+    if (base.length < 3 || CALENDAR_WORD.test(base)) continue;
     const words = base.split(' ');
     const last = words.at(-1)!;
     const variants = [base];
@@ -62,6 +74,10 @@ export function gameAliases(titles: string[]): string[] {
   }
   return [...out];
 }
+
+// One word is too loose a name on its own ("Fable" is also an AI model's):
+// the market then has to be filed under games.
+const loose = (aliases: string[]) => !aliases.some((a) => a.includes(' '));
 
 const mentions = (text: string, aliases: string[]) => {
   const padded = ` ${normalizeTitle(text, { keepThe: true })} `;
@@ -81,7 +97,7 @@ const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(
 const dollars = (n: number) => `$${Math.round(n).toLocaleString('en-US')}`;
 
 async function kalshiReferences(aliases: string[]): Promise<(GameMarketReference & { volume: number })[]> {
-  const series = (await allSeries()).filter((s) => !SCORE_SERIES.test(String(s.title ?? '')) && mentions(String(s.title ?? ''), aliases));
+  const series = (await allSeries()).filter((s) => !SCORE_SERIES.test(String(s.title ?? '')) && mentions(String(s.title ?? ''), aliases) && (!loose(aliases) || (s.tags ?? []).some((t: string) => GAME_TAGS.test(t))));
   const found: (GameMarketReference & { volume: number })[] = [];
   for (const s of series.slice(0, 6)) {
     const body = await getJson(`${KALSHI_API}/events?series_ticker=${encodeURIComponent(s.ticker)}&with_nested_markets=true&limit=10`);
@@ -107,7 +123,7 @@ async function polymarketReferences(query: string, aliases: string[]): Promise<(
   const body = await getJson(`${POLYMARKET_API}/public-search?q=${encodeURIComponent(query)}&limit_per_type=10&events_status=all`);
   const events: Json[] = Array.isArray(body?.events) ? body.events : [];
   return events
-    .filter((e) => typeof e.slug === 'string' && mentions(String(e.title ?? ''), aliases) && (Number(e.volume) || 0) >= MIN_VOLUME)
+    .filter((e) => typeof e.slug === 'string' && mentions(String(e.title ?? ''), aliases) && (Number(e.volume) || 0) >= MIN_VOLUME && (!loose(aliases) || (e.tags ?? []).some((t: Json) => GAME_TAGS.test(String(t.slug ?? '')))))
     .map((e) => ({
       url: `https://polymarket.com/event/${e.slug}`,
       title: `${e.title} - Polymarket`,
