@@ -788,7 +788,6 @@ const vi: Messages = {
     newest: 'Nguồn mới nhất trong {count} nguồn nêu ngày này, xuất hiện sau khi ghim được đăng',
     onlySource: 'Nguồn duy nhất nêu ngày này',
     lowConfidence: 'Độ tin cậy thấp',
-    lowConfidenceTitle: "Mức tốt nhất mà bất kỳ nguồn nào đưa ra cho ngày này thấp hơn mức đánh giá nguồn 'ước tính'",
     from: 'từ {who}',
     possible: '{range} có thể',
     start: 'Bắt đầu',

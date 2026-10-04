@@ -789,7 +789,6 @@ const fr: Messages = {
     newest: 'La plus récente des {count} sources qui donnent cette date, arrivée après la publication du pin',
     onlySource: 'La seule source qui donne cette date',
     lowConfidence: 'Confiance faible',
-    lowConfidenceTitle: 'La meilleure confiance donnée par une source pour cette date est inférieure à la note « estimé »',
     from: 'selon {who}',
     possible: 'possible : {range}',
     start: 'Début',

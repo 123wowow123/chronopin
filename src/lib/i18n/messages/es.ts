@@ -789,7 +789,6 @@ const es: Messages = {
     newest: 'La más reciente de las {count} fuentes que dan esta fecha, llegada después de fijar el pin',
     onlySource: 'La única fuente que da esta fecha',
     lowConfidence: 'Confianza baja',
-    lowConfidenceTitle: 'Lo mejor que da cualquier fuente para esta fecha está por debajo de la valoración «estimado»',
     from: 'según {who}',
     possible: 'posible {range}',
     start: 'Inicio',

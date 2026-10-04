@@ -789,7 +789,6 @@ const id: Messages = {
     newest: 'Yang terbaru dari {count} sumber yang menyebut tanggal ini, yang muncul setelah pin diposting',
     onlySource: 'Satu-satunya sumber yang menyebut tanggal ini',
     lowConfidence: 'Keyakinan rendah',
-    lowConfidenceTitle: "Yang terbaik dari sumber mana pun untuk tanggal ini berada di bawah peringkat sumber 'perkiraan'",
     from: 'dari {who}',
     possible: 'kemungkinan {range}',
     start: 'Mulai',

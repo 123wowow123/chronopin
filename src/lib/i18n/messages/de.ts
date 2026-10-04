@@ -789,7 +789,6 @@ const de: Messages = {
     newest: 'Die neueste der {count} Quellen mit diesem Datum, nach dem Pinnen hinzugekommen',
     onlySource: 'Die einzige Quelle mit diesem Datum',
     lowConfidence: 'Geringe Sicherheit',
-    lowConfidenceTitle: 'Das Beste, was eine Quelle für dieses Datum angibt, liegt unter der Einstufung „geschätzt“',
     from: 'laut {who}',
     possible: 'möglich: {range}',
     start: 'Beginn',

@@ -780,7 +780,6 @@ const it: Messages = {
     newest: 'La più recente delle {count} fonti che danno questa data, arrivata dopo la pubblicazione del pin',
     onlySource: 'L’unica fonte che dà questa data',
     lowConfidence: 'Affidabilità bassa',
-    lowConfidenceTitle: 'Il massimo che una fonte dà per questa data è sotto la valutazione «stimato»',
     from: 'da {who}',
     possible: 'possibile {range}',
     start: 'Inizio',

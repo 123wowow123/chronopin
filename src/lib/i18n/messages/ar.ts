@@ -915,7 +915,6 @@ const ar: Messages = {
     newest: 'الأحدث بين {count} مصادر تذكر هذا التاريخ، وقد ظهر بعد نشر الدبوس',
     onlySource: 'المصدر الوحيد الذي يذكر هذا التاريخ',
     lowConfidence: 'ثقة منخفضة',
-    lowConfidenceTitle: 'أفضل ما يقدمه أي مصدر لهذا التاريخ أدنى من تقييم المصدر “تقديري”',
     from: 'من {who}',
     possible: 'محتمل {range}',
     start: 'البدء',

@@ -783,7 +783,6 @@ const ja: Messages = {
     newest: 'この日付を示す {count} 件の資料のうち、ピン留め後に届いた最新のもの',
     onlySource: 'この日付を示す唯一の資料',
     lowConfidence: '確度低',
-    lowConfidenceTitle: 'この日付について資料が示す最高の確度が「推定」の評価を下回っています',
     from: '出典：{who}',
     possible: '候補 {range}',
     start: '開始',

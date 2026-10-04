@@ -789,7 +789,6 @@ const ms: Messages = {
     newest: 'Yang terbaharu daripada {count} sumber yang memberikan tarikh ini, yang datang selepas pin disiarkan',
     onlySource: 'Satu-satunya sumber yang memberikan tarikh ini',
     lowConfidence: 'Keyakinan rendah',
-    lowConfidenceTitle: "Yang terbaik daripada mana-mana sumber untuk tarikh ini berada di bawah penilaian sumber 'dianggarkan'",
     from: 'daripada {who}',
     possible: '{range} yang mungkin',
     start: 'Mula',

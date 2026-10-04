@@ -333,7 +333,7 @@ function PinBody({
           <DelayReasoning pin={pin} />
         </div>
       ) : null}
-      {pin.utcStartDateTime ? <DateRanges {...dateRanges} /> : null}
+      {pin.utcStartDateTime ? <DateRanges {...dateRanges} evidence={pinEvidence(pin)} /> : null}
 
       {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} originalStart={pin.originalStartDate} /> : null}
 

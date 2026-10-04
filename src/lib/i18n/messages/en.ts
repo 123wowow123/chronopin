@@ -789,7 +789,6 @@ const en = {
     newest: 'The newest of the {count} sources giving this date, which came after the pin was posted',
     onlySource: 'The only source giving this date',
     lowConfidence: 'Low confidence',
-    lowConfidenceTitle: "The best any source gives for this date is below the source rating 'estimated'",
     from: 'from {who}',
     possible: 'possible {range}',
     start: 'Start',

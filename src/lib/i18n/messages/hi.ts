@@ -794,7 +794,6 @@ const hi: Messages = {
     newest: 'यह तारीख देने वाले {count} सोर्स में से सबसे नया, जो पिन पोस्ट होने के बाद आया',
     onlySource: 'यह तारीख देने वाला इकलौता सोर्स',
     lowConfidence: 'कम कॉन्फ़िडेंस',
-    lowConfidenceTitle: 'इस तारीख के लिए किसी भी सोर्स की रेटिंग "अनुमानित" से नीचे है',
     from: '{who} से',
     possible: 'संभावित {range}',
     start: 'शुरुआत',

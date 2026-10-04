@@ -783,7 +783,6 @@ const zh: Messages = {
     newest: '给出此日期的 {count} 个来源中最新的一个，在标记之后才出现',
     onlySource: '唯一给出此日期的来源',
     lowConfidence: '可信度低',
-    lowConfidenceTitle: '来源对此日期给出的最高可信度低于“预估”等级',
     from: '来自{who}',
     possible: '可能为 {range}',
     start: '开始',

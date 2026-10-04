@@ -783,7 +783,6 @@ const ko: Messages = {
     newest: '이 날짜를 제시하는 자료 {count}건 중 핀 게시 이후에 나온 가장 최신 자료',
     onlySource: '이 날짜를 제시하는 유일한 자료',
     lowConfidence: '낮은 신뢰도',
-    lowConfidenceTitle: '이 날짜에 대해 어떤 자료도 출처 등급 “추정” 이상을 주지 못했습니다',
     from: '{who} 제공',
     possible: '가능 범위 {range}',
     start: '시작',
