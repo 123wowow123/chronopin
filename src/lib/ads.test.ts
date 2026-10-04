@@ -123,6 +123,10 @@ describe('pickAds', () => {
     expect(new Set(picked.map((a) => a.key)).size).toBe(4);
   });
 
+  it('returns none when none are asked for', () => {
+    expect(pickAds([...programs, ...products], none, 0, new Set(), seeded())).toEqual([]);
+  });
+
   it('gives a pool its share however many ads it holds', () => {
     const random = seeded(7);
     let programPicks = 0;

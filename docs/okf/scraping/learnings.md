@@ -86,6 +86,15 @@ Ian: "pin infrastructure news events", then "pin diseases news event"; both to p
 * **To extend:** the pins that never got a picture (Bitdeer Johor and Malaysia, Bell 3G, SpaceX Starlink, WRC-27, the FDA flu-strain meeting), and 4916 and 4918 still without one.
 * **Changed:** this entry, the standing feedback above, [Enrichment](enrichment.md#images) and the log.
 
+## 2026-10-03 - Grammy history thread, 40 pins on prod 5569-5608 (@MusicDesk)
+
+Ian: "pin new and historical grammy news and events and make into thread where possible". Prod already held the 2026-27 cycle (entry above), so four drafting agents did 1959-89, 1990-2009, 2010-25 and fresh news. 40 pins posted (36 ceremonies/moments, 4 news), all 15 languages (600 rows). Folder `.scrape/prod-batches/grammy-2026-10-03/`.
+* **Threads:** one linear ceremonies chain 5569 (1st Grammys, 1959) -> 5603 (66th, 2024) -> prod 4833 (Disney deal) -> 5608 (67th, 2025) -> prod 4345 -> the 2027 road. 4833, 4345 and 4852 were re-threaded by whole-pin PUT. The first Latin Grammys 5586 now heads the Latin chain 4852 -> 4854 -> 4855 -> 4397. Rodrigo exhibit part two 5605 answers 4853.
+* **Learned - duplicates:** the 67th-ceremony draft used grammy.com's winners page, already the source of prod 4345, so POST refused it; swapped the AP story in as source and kept the Grammy page as a reference.
+* **Learned - dates:** ceremony pins are all-day on the local date (no telecast start times fetched). Sources disagree on several figures (Grammy.com says CBS 1973 for the first telecast, others ABC 1971; award counts for Norah Jones, Ray Charles, Dixie Chicks) - the pin states the figure most sources share.
+* **Dropped:** four "new" drafts (Music Educator quarterfinalists, Grammy Camp Seattle, GRAMMY House Giza October 2026 estimate, Latin Grammy Foundation symposium) - thin, unreferenced or unconfirmed.
+* **To extend:** ceremonies not drafted (1966-67 Sinatra, 1985, 2002 Alicia Keys, 2004 Outkast, 2006 U2, 2013 Gotye, 2017 Chance the Rapper), the 1957-58 founding, the 2027 host/performers once announced; the Giza House once a date is published.
+
 ## 2026-09-29 - Grammy news events, 29 pins straight to production (@MusicDesk, @LawDesk, @OddsDesk)
 
 Ian's README to-do "pins grammy news event"; he chose prod and ~40. 29 pins posted (4833-4861), none failed; then "translate to all language after this" (zh/es/ja/de/fr/ko/hi by hand, admin translations API). Threads: the road to the 2027 Grammys (Disney deal -> prod 4345 -> date, categories, entry window, members, BTS opting out, first-round voting -> prod 4346 -> final-round voting, MusiCares U2 -> prod 1962), the 68th ceremony (nominations to ratings), Hall of Fame, Grammys On The Hill -> NO FAKES Act vote (@LawDesk), Latin Grammys (announcement, nominations, Person of the Year gala -> prod 4397), the Rodrigo Grammy Museum exhibit and four Kalshi Grammy markets (@OddsDesk). Existing pins 4345, 4346, 1962 and 4397 were re-threaded by whole-pin PUT (rethread.py).

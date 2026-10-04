@@ -310,6 +310,8 @@ export function expandAvoid(candidates: AdCandidate[], avoid: Set<string>): Set<
 // ads chosen for the pin come first, then the related ones. Keys in `avoid` (already shown elsewhere on the
 // page) are only used once the rest run out.
 export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, avoid: Set<string> = new Set(), random = Math.random): AdCandidate[] {
+  // A slot the holiday ads already fill asks for none more.
+  if (n <= 0) return [];
   const allowed = candidates.filter((ad) => !ad.holiday && adAllowed(ad, ctx));
   const poolTotals = new Map<AdKind, number>();
   for (const ad of allowed) poolTotals.set(ad.kind, (poolTotals.get(ad.kind) ?? 0) + ad.weight);
