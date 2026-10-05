@@ -340,7 +340,7 @@ list these information on people if available
 
 - famous people should have page like congressmen too
 
-- generate most corrupt people page
+- generate most corrupt people page collage
 
 
 - Grammy needs nomination and related music
@@ -348,8 +348,9 @@ https://www.chronopin.com/es/pin/4861/the-2027-grammy-nominations-set-the-song-o
 
 performance optimization
 
-- pin watches news and events
-- referral for rolex?
+
+
+generic ads that applies to everyone like junk removal can be added to ad rotation too and storage and moving services
 
 
 # Left over: link wikis for prod

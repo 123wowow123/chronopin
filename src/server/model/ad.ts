@@ -20,8 +20,9 @@ import {
   regionFromAcceptLanguage,
   servingStore,
   storeForLocale,
-  tagForStore,
+  adTag,
   taggedAdUrl,
+  watchBrand,
 } from '@/lib/ads';
 import { WINDOW_AFTER_DAYS, WINDOW_BEFORE_DAYS, type AdTier } from '@/lib/culturalDays';
 import * as db from '../db';
@@ -121,7 +122,7 @@ export default class Ad {
     const holidayAds = related && !related.size ? [] : pickHolidayAds(candidates, ctx, active, Math.min(HOLIDAY_COUNT[slot], n), related, expandAvoid(candidates, avoid));
     const rest = pickAds(candidates, ctx, n - holidayAds.length, expandAvoid(candidates, new Set([...avoid, ...holidayAds.map((ad) => ad.key)])));
     const picked = [...holidayAds, ...rest];
-    if (picked.length && !admin) await recordImpressions(picked, slot, store, (ad) => tagForStore(ad.store, inventory.tags) ?? '', userId != null);
+    if (picked.length && !admin) await recordImpressions(picked, slot, store, (ad) => adTag(ad, inventory.tags) ?? '', userId != null);
     const titles = await localizedTitles(picked, locale);
     return {
       store,
@@ -166,7 +167,7 @@ export default class Ad {
            AND "c"."utcCreatedDateTime" > now() - make_interval(secs => $11::integer)
        )
        RETURNING "id"`,
-      [ad.key, ad.kind, ad.program, ad.pinId, click.slot, click.pinId, click.store ?? ad.store, taggedAdUrl(ad.url, ad.store, tags), click.userId, click.ip, REPEAT_SECONDS, click.page, tagForStore(ad.store, tags)],
+      [ad.key, ad.kind, ad.program, ad.pinId, click.slot, click.pinId, click.store ?? ad.store, taggedAdUrl(ad.url, ad.store, tags), click.userId, click.ip, REPEAT_SECONDS, click.page, adTag(ad, tags)],
     );
     return rows.length > 0;
   }
@@ -371,7 +372,7 @@ async function loadInventory(): Promise<Inventory> {
         targetAgeTo: row.targetAgeTo,
         pinId: null,
         forPinId: null,
-        title: null,
+        title: watchBrand(row.program),
         price: null,
         thumbName: null,
         originalUrl: null,

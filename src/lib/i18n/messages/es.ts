@@ -862,6 +862,8 @@ const es: Messages = {
     executiveIncentive: 'Pago por incentivos',
     executivePension: 'Pensión y pago diferido',
     executiveOther: 'Otros pagos',
+    executiveMultiYear: 'Total, ejercicios {from}–{to}',
+    executiveLastGrant: 'Este año no se concedieron acciones. La última concesión fue en el ejercicio {year}: {amount}.',
     parent: { one: 'Empresa matriz', other: 'Empresas matrices' },
     parentHint: 'Ver todo sobre {name}',
   },
@@ -1606,6 +1608,8 @@ const es: Messages = {
   ads: {
     sponsored: 'Patrocinado',
     seeOnAmazon: 'Ver en Amazon',
+    seeOnEbay: 'Verlo en eBay',
+    watchBody: 'Relojes {brand} de segunda mano en eBay, con Garantía de autenticidad en los anuncios aptos.',
     urgencyLeft: 'Solo quedan {count}',
     urgencyLow: 'Precio más bajo en {days} días',
     programs: {

@@ -4,6 +4,10 @@
 
 import * as db from '../db';
 
+// One earlier year of the pay table: its total and the stock awarded in it
+// (null where the columns could not be read).
+export type PayYear = { year: number; total: number; stockAwards: number | null };
+
 export type CompanyExecutiveJson = {
   name: string;
   title: string;
@@ -23,6 +27,8 @@ export type CompanyExecutiveJson = {
   // The total is the company's own estimate, and why (0128).
   estimated: boolean;
   estimateNote: string | null;
+  // The years before `fiscalYear`, newest first (0131).
+  payHistory: PayYear[] | null;
 };
 
 export type CompanyExecutiveInput = {
@@ -41,10 +47,11 @@ export type CompanyExecutiveInput = {
   sourceUrl?: string | null;
   estimated?: boolean;
   estimateNote?: string | null;
+  payHistory?: PayYear[] | null;
   origin?: 'sec' | 'claude' | 'hand';
 };
 
-type Stored = { name: string; title: string; salary: string | null; totalCompensation: string | null; bonus: string | null; stockAwards: string | null; optionAwards: string | null; incentivePay: string | null; pensionChange: string | null; otherCompensation: string | null; currency: string; fiscalYear: number | null; sourceUrl: string | null; estimated: boolean; estimateNote: string | null };
+type Stored = { name: string; title: string; salary: string | null; totalCompensation: string | null; bonus: string | null; stockAwards: string | null; optionAwards: string | null; incentivePay: string | null; pensionChange: string | null; otherCompensation: string | null; currency: string; fiscalYear: number | null; sourceUrl: string | null; estimated: boolean; estimateNote: string | null; payHistory: PayYear[] | null };
 
 // The order the panel lists them in: the chief executive, then the president,
 // finance, operations, technology, any other chief officer. A title naming
@@ -64,7 +71,7 @@ const whole = (value: string | null) => (value == null ? null : Number(value));
 export default class CompanyExecutive {
   static async forCompany(companyId: number): Promise<CompanyExecutiveJson[]> {
     const rows = await db.query<Stored>(
-      `SELECT "name", "title", "salary", "totalCompensation", "bonus", "stockAwards", "optionAwards", "incentivePay", "pensionChange", "otherCompensation", "currency", "fiscalYear", "sourceUrl", "estimated", "estimateNote"
+      `SELECT "name", "title", "salary", "totalCompensation", "bonus", "stockAwards", "optionAwards", "incentivePay", "pensionChange", "otherCompensation", "currency", "fiscalYear", "sourceUrl", "estimated", "estimateNote", "payHistory"
        FROM "CompanyExecutive" WHERE "companyId" = $1 ORDER BY "rank", "id"`,
       [companyId],
     );
@@ -85,8 +92,8 @@ export default class CompanyExecutive {
   // run that only knows the name does not blank pay found before.
   static async set(companyId: number, e: CompanyExecutiveInput): Promise<void> {
     await db.query(
-      `INSERT INTO "CompanyExecutive" ("companyId", "name", "title", "rank", "salary", "totalCompensation", "currency", "fiscalYear", "sourceUrl", "origin", "bonus", "stockAwards", "optionAwards", "incentivePay", "pensionChange", "otherCompensation", "estimated", "estimateNote")
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
+      `INSERT INTO "CompanyExecutive" ("companyId", "name", "title", "rank", "salary", "totalCompensation", "currency", "fiscalYear", "sourceUrl", "origin", "bonus", "stockAwards", "optionAwards", "incentivePay", "pensionChange", "otherCompensation", "estimated", "estimateNote", "payHistory")
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19::jsonb)
        ON CONFLICT ("companyId", "name") DO UPDATE SET
          "title" = EXCLUDED."title", "rank" = EXCLUDED."rank",
          "salary" = COALESCE(EXCLUDED."salary", "CompanyExecutive"."salary"),
@@ -98,6 +105,7 @@ export default class CompanyExecutive {
          "pensionChange" = COALESCE(EXCLUDED."pensionChange", "CompanyExecutive"."pensionChange"),
          "otherCompensation" = COALESCE(EXCLUDED."otherCompensation", "CompanyExecutive"."otherCompensation"),
          "estimated" = EXCLUDED."estimated", "estimateNote" = EXCLUDED."estimateNote",
+         "payHistory" = COALESCE(EXCLUDED."payHistory", "CompanyExecutive"."payHistory"),
          "currency" = EXCLUDED."currency",
          "fiscalYear" = COALESCE(EXCLUDED."fiscalYear", "CompanyExecutive"."fiscalYear"),
          "sourceUrl" = COALESCE(EXCLUDED."sourceUrl", "CompanyExecutive"."sourceUrl"),
@@ -121,6 +129,7 @@ export default class CompanyExecutive {
         e.otherCompensation ?? null,
         e.estimated ?? false,
         e.estimateNote ?? null,
+        e.payHistory?.length ? JSON.stringify(e.payHistory) : null,
       ],
     );
   }
@@ -134,7 +143,7 @@ export default class CompanyExecutive {
 
   static getAll(): Promise<db.Row[]> {
     return db.query(
-      `SELECT "companyId", "name", "title", "rank", "salary"::float8 AS "salary", "totalCompensation"::float8 AS "totalCompensation", "bonus"::float8 AS "bonus", "stockAwards"::float8 AS "stockAwards", "optionAwards"::float8 AS "optionAwards", "incentivePay"::float8 AS "incentivePay", "pensionChange"::float8 AS "pensionChange", "otherCompensation"::float8 AS "otherCompensation", "estimated", "estimateNote", "currency", "fiscalYear", "sourceUrl", "origin"
+      `SELECT "companyId", "name", "title", "rank", "salary"::float8 AS "salary", "totalCompensation"::float8 AS "totalCompensation", "bonus"::float8 AS "bonus", "stockAwards"::float8 AS "stockAwards", "optionAwards"::float8 AS "optionAwards", "incentivePay"::float8 AS "incentivePay", "pensionChange"::float8 AS "pensionChange", "otherCompensation"::float8 AS "otherCompensation", "estimated", "estimateNote", "payHistory", "currency", "fiscalYear", "sourceUrl", "origin"
        FROM "CompanyExecutive" ORDER BY "companyId", "rank", "id"`,
     );
   }
@@ -143,10 +152,10 @@ export default class CompanyExecutive {
   static async restore(rows: db.Row[] = []): Promise<void> {
     for (const r of rows) {
       await db.query(
-        `INSERT INTO "CompanyExecutive" ("companyId", "name", "title", "rank", "salary", "totalCompensation", "currency", "fiscalYear", "sourceUrl", "origin", "bonus", "stockAwards", "optionAwards", "incentivePay", "pensionChange", "otherCompensation", "estimated", "estimateNote")
-         SELECT $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18 WHERE EXISTS (SELECT 1 FROM "Company" WHERE "id" = $1)
+        `INSERT INTO "CompanyExecutive" ("companyId", "name", "title", "rank", "salary", "totalCompensation", "currency", "fiscalYear", "sourceUrl", "origin", "bonus", "stockAwards", "optionAwards", "incentivePay", "pensionChange", "otherCompensation", "estimated", "estimateNote", "payHistory")
+         SELECT $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19::jsonb WHERE EXISTS (SELECT 1 FROM "Company" WHERE "id" = $1)
          ON CONFLICT ("companyId", "name") DO NOTHING`,
-        [r.companyId, r.name, r.title, r.rank, r.salary, r.totalCompensation, r.currency, r.fiscalYear, r.sourceUrl, r.origin, r.bonus ?? null, r.stockAwards ?? null, r.optionAwards ?? null, r.incentivePay ?? null, r.pensionChange ?? null, r.otherCompensation ?? null, r.estimated ?? false, r.estimateNote ?? null],
+        [r.companyId, r.name, r.title, r.rank, r.salary, r.totalCompensation, r.currency, r.fiscalYear, r.sourceUrl, r.origin, r.bonus ?? null, r.stockAwards ?? null, r.optionAwards ?? null, r.incentivePay ?? null, r.pensionChange ?? null, r.otherCompensation ?? null, r.estimated ?? false, r.estimateNote ?? null, r.payHistory ? JSON.stringify(r.payHistory) : null],
       );
     }
   }

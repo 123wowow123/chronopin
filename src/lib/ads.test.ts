@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   adAllowed,
+  adTag,
   expandAvoid,
   ageOn,
   type AdCandidate,
@@ -19,6 +20,7 @@ import {
   tagForStore,
   taggedAdUrl,
   validateAmazonTags,
+  watchBrand,
 } from './ads';
 
 const ad = (over: Partial<AdCandidate>): AdCandidate => ({
@@ -327,5 +329,38 @@ describe('qualityWeight', () => {
     let good = 0;
     for (let i = 0; i < 400; i++) if (pickAds(ads, ctx, 1)[0].key === 'p:good') good++;
     expect(good).toBeGreaterThan(280);
+  });
+});
+
+describe('watch ads', () => {
+  const rolex = ad({ key: 'ad:90', kind: 'watch', program: 'watch_rolex', url: 'https://www.ebay.com/sch/31387/i.html?_nkw=rolex&LH_BIN=1', categories: ['Watches', 'Luxury'], title: 'Rolex' });
+
+  it('carry the eBay campaign, not the Amazon tag', () => {
+    const url = new URL(taggedAdUrl(rolex.url, 'US', {}));
+    expect(url.hostname).toBe('www.ebay.com');
+    expect(url.searchParams.get('campid')).toBe('5338380156');
+    expect(url.searchParams.get('_nkw')).toBe('rolex');
+    expect(url.searchParams.has('tag')).toBe(false);
+    expect(adTag(rolex, {})).toBe('5338380156');
+    expect(adTag(ad({}), {})).toBe('chronopin04-20');
+  });
+
+  it('name their brand', () => {
+    expect(watchBrand('watch_ap')).toBe('Audemars Piguet');
+    expect(watchBrand('prime')).toBeNull();
+  });
+
+  it('lead a Watches pin and stay a minority elsewhere', () => {
+    const others = Array.from({ length: 6 }, (_, i) => ad({ key: `ad:${i}`, program: `p${i}` }));
+    const pin = { id: 1, categories: ['Fashion'], tags: ['Watches', 'Rolex'], company: 'Rolex' };
+    expect(pickAds([...others, rolex], { ...none, pin }, 1)[0].key).toBe('ad:90');
+    let shown = 0;
+    for (let i = 0; i < 600; i++) if (pickAds([...others, rolex], none, 1).some((a) => a.key === 'ad:90')) shown++;
+    expect(shown).toBeLessThan(200);
+  });
+
+  it('are for adults', () => {
+    expect(adAllowed({ ...rolex, minAge: 18 }, { ...none, age: 16 })).toBe(false);
+    expect(adAllowed({ ...rolex, minAge: 18 }, { ...none, age: 30 })).toBe(true);
   });
 });

@@ -862,6 +862,8 @@ const vi: Messages = {
     executiveIncentive: 'Thù lao khuyến khích',
     executivePension: 'Lương hưu và thù lao hoãn',
     executiveOther: 'Khoản khác',
+    executiveMultiYear: 'Tổng, năm tài chính {from}–{to}',
+    executiveLastGrant: 'Năm nay không cấp cổ phiếu. Lần cấp gần nhất là năm tài chính {year}: {amount}.',
     parent: { other: 'Công ty mẹ' },
     parentHint: 'Xem mọi thứ về {name}',
   },
@@ -1611,6 +1613,8 @@ const vi: Messages = {
   ads: {
     sponsored: 'Được tài trợ',
     seeOnAmazon: 'Xem trên Amazon',
+    seeOnEbay: 'Xem trên eBay',
+    watchBody: 'Đồng hồ {brand} đã qua sử dụng trên eBay, có Bảo đảm tính xác thực cho các tin đăng đủ điều kiện.',
     urgencyLeft: 'Chỉ còn {count}',
     urgencyLow: 'Giá thấp nhất trong {days} ngày',
     programs: {

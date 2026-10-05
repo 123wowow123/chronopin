@@ -856,6 +856,8 @@ const ja: Messages = {
     executiveIncentive: 'インセンティブ報酬',
     executivePension: '年金・繰延報酬',
     executiveOther: 'その他の報酬',
+    executiveMultiYear: '合計(FY{from}〜{to})',
+    executiveLastGrant: '今年は株式報酬の付与なし。最後の付与はFY{year}:{amount}。',
     parent: { other: '親会社' },
     parentHint: '{name} のすべてを表示',
   },
@@ -1593,6 +1595,8 @@ const ja: Messages = {
   ads: {
     sponsored: 'スポンサー',
     seeOnAmazon: 'Amazonで見る',
+    seeOnEbay: 'eBayで見る',
+    watchBody: 'eBayの中古{brand}腕時計。対象の出品には真贋保証が付きます。',
     urgencyLeft: '残り{count}点',
     urgencyLow: '{days}日間の最安値',
     programs: {

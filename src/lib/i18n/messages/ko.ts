@@ -856,6 +856,8 @@ const ko: Messages = {
     executiveIncentive: '성과급',
     executivePension: '연금 및 이연 보수',
     executiveOther: '기타 보수',
+    executiveMultiYear: '합계(FY {from}~{to})',
+    executiveLastGrant: '올해는 주식 부여가 없었습니다. 마지막 부여는 FY {year}: {amount}.',
     parent: { other: '모회사' },
     parentHint: '{name} 관련 모두 보기',
   },
@@ -1594,6 +1596,8 @@ const ko: Messages = {
   ads: {
     sponsored: '스폰서',
     seeOnAmazon: '아마존에서 보기',
+    seeOnEbay: 'eBay에서 보기',
+    watchBody: 'eBay의 중고 {brand} 시계. 해당 상품에는 정품 보증이 적용됩니다.',
     urgencyLeft: '{count}개 남음',
     urgencyLow: '{days}일 최저가',
     programs: {

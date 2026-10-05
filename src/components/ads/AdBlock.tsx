@@ -6,6 +6,7 @@ import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { withPageLang } from '@/lib/client/navigation';
+import { isEbayUrl } from '@/lib/affiliate';
 import { money } from '@/lib/format';
 import { parseUrgency, SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
 
@@ -45,6 +46,17 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   musicunlimited: { icon: 'play', background: '#25d1da', color: '#1d1d1d' },
   kindleunlimited: { icon: 'eye', background: '#232f3e', color: '#fff' },
   subscribesave: { icon: 'clock', background: '#e47911', color: '#fff' },
+  // Watch brands (0130): the house's own colour behind a clock.
+  watch_rolex: { icon: 'clock', background: '#0b5d3b', color: '#e9d8a6' },
+  watch_omega: { icon: 'clock', background: '#c8102e', color: '#fff' },
+  watch_patek: { icon: 'clock', background: '#1f3a5f', color: '#e9d8a6' },
+  watch_ap: { icon: 'clock', background: '#1b1b1b', color: '#d8c9a3' },
+  watch_cartier: { icon: 'clock', background: '#a6192e', color: '#fff' },
+  watch_tudor: { icon: 'clock', background: '#b3141a', color: '#fff' },
+  watch_breitling: { icon: 'clock', background: '#f2c200', color: '#1d1d1d' },
+  watch_tag: { icon: 'clock', background: '#00843d', color: '#fff' },
+  watch_iwc: { icon: 'clock', background: '#2b2b2b', color: '#fff' },
+  watch_gs: { icon: 'clock', background: '#3b4a5a', color: '#fff' },
 };
 const DEFAULT_TILE = { icon: 'cart' as IconName, background: '#232f3e', color: '#fff' };
 
@@ -108,6 +120,11 @@ function report(ad: AdJson, slot: AdSlot, pinId: number | undefined) {
 function useAdText() {
   const t = useT();
   return (ad: AdJson) => {
+    // A watch brand's ad: the brand's name, then the same line for every brand.
+    if (ad.kind === 'watch') {
+      const body = t('ads.watchBody', { brand: ad.title ?? '' });
+      return { title: ad.title ?? '', body, price: '', info: body, urgency: '', cta: t('ads.seeOnEbay') };
+    }
     if (ad.program) {
       const base = `ads.programs.${ad.program}`;
       const body = t.dynamic(`${base}.body`, '');
@@ -179,9 +196,10 @@ function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; slot: Ad
   );
 }
 
-function Disclosure({ className = '' }: { className?: string }) {
+function Disclosure({ ads, className = '' }: { ads?: AdJson[]; className?: string }) {
   const t = useT();
-  return <p className={`text-[11px] leading-snug text-subtle ${className}`}>{t('pin.amazonDisclosure')}</p>;
+  const ebay = ads?.some((ad) => isEbayUrl(ad.url));
+  return <p className={`text-[11px] leading-snug text-subtle ${className}`}>{ebay ? `${t('pin.amazonDisclosure')} ${t('pin.ebayDisclosure')}` : t('pin.amazonDisclosure')}</p>;
 }
 
 function SponsoredLabel() {
@@ -270,7 +288,7 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
           );
         })}
       </ul>
-      <Disclosure className="mt-2" />
+      <Disclosure ads={ads} className="mt-2" />
     </aside>
   );
 }
@@ -356,7 +374,7 @@ export function AdDrawer({ className = '' }: { className?: string }) {
     <aside aria-label={t('ads.sponsored')} className={`flex min-h-40 flex-col px-2 pt-1 pb-1 ${className}`}>
       <div className="shrink-0 px-3 pb-0.5">
         <SponsoredLabel />
-        <Disclosure className="mt-0.5" />
+        <Disclosure ads={ads} className="mt-0.5" />
       </div>
       <ul className="flex min-h-24 flex-col flex-wrap overflow-clip">
         {ads.map((ad) => {

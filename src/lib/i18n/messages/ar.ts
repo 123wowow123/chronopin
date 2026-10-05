@@ -1039,6 +1039,8 @@ const ar: Messages = {
     executiveIncentive: 'أجر الحوافز',
     executivePension: 'المعاش والأجر المؤجل',
     executiveOther: 'أجور أخرى',
+    executiveMultiYear: 'الإجمالي، السنوات المالية {from}–{to}',
+    executiveLastGrant: 'لم تُمنح أسهم هذا العام. آخر منحة كانت في السنة المالية {year}: {amount}.',
     parent: { one: 'الشركة الأم', two: 'الشركتان الأم', few: 'الشركات الأم', many: 'الشركات الأم', other: 'الشركات الأم' },
     parentHint: 'عرض كل ما يخص {name}',
   },
@@ -1980,6 +1982,8 @@ const ar: Messages = {
   ads: {
     sponsored: 'إعلان',
     seeOnAmazon: 'شاهده على أمازون',
+    seeOnEbay: 'شاهدها على eBay',
+    watchBody: 'ساعات {brand} مستعملة على eBay، مع ضمان الأصالة على الإعلانات المؤهلة.',
     urgencyLeft: 'متبقي {count} فقط',
     urgencyLow: 'أقل سعر خلال {days} يومًا',
     programs: {

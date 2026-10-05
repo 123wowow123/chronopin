@@ -166,3 +166,15 @@ describe('market cap and official sources', () => {
     expect(officialWeight({ sourceUrl: 'https://news.com/a', references: [{ url: 'https://ec.europa.eu/a', confidence: 30 }] })).toBe(1);
   });
 });
+
+describe('sampleBag leads with large caps', () => {
+  it('ranks the biggest company first, the pick unchanged, the kept pin still ahead', () => {
+    const all = pins(12).map((p) => ({ ...p, companyMarketCap: p.id === 5 ? 2.5e12 : p.id === 8 ? 3e11 : null }));
+    for (const seed of ['a', 'b', 'c', 'd']) {
+      const ids = sampleBag(all, 12, seed);
+      expect(ids.slice(0, 2)).toEqual([5, 8]);
+      expect(sampleBag(all, 12, seed, 3).slice(0, 3)).toEqual([3, 5, 8]);
+      expect([...ids].sort((a, b) => a - b)).toEqual(pins(12).map((p) => p.id));
+    }
+  });
+});

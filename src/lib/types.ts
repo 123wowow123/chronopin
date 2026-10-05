@@ -318,6 +318,8 @@ export type CompanyExecutive = {
   // The total is the company's own estimate, not a paid amount, and why.
   estimated?: boolean;
   estimateNote?: string | null;
+  // The years before `fiscalYear`, newest first: each total and its stock awards.
+  payHistory?: { year: number; total: number; stockAwards: number | null }[] | null;
 };
 
 export type SearchedCompany = {

@@ -19,6 +19,21 @@ describe('parseExecutives', () => {
     expect(list[1]).toMatchObject({ title: 'Senior Vice President, Chief Financial Officer', salary: 891_519, totalCompensation: 22_467_309 });
   });
 
+  it('keeps the earlier years with their stock awards, newest first', () => {
+    const table = `<table>
+${row('Name and Principal Position', 'Year', 'Salary', 'Stock Awards', 'All Other Compensation', 'Total')}
+${row('Jane Roe<br>Chief Executive Officer', '2025', '365,000', '—', '7,000', '372,000')}
+${row('', '2024', '365,000', '25,345,706', '6,900', '25,717,606')}
+${row('', '2023', '365,000', '—', '6,600', '371,600')}
+</table>`;
+    const [ceo] = parseExecutives(table, 'x');
+    expect(ceo).toMatchObject({ fiscalYear: 2025, totalCompensation: 372_000, stockAwards: 0 });
+    expect(ceo.payHistory).toEqual([
+      { year: 2024, total: 25_717_606, stockAwards: 25_345_706 },
+      { year: 2023, total: 371_600, stockAwards: 0 },
+    ]);
+  });
+
   it('reads the title from the row below a name, and the SEC total beside a second total', () => {
     const table = `<table>
 ${row('Name and Principal Position', 'Year', 'Salary', 'Stock Awards', 'Change in Pension', 'All Other Compensation', 'SEC Total', 'Total Without Change in Pension')}

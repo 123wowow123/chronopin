@@ -8,7 +8,7 @@
 // EDGAR is keyless but wants a contact in the User-Agent (a project one, never
 // the owner's address) and at most 10 requests a second.
 
-import { executiveRank, type CompanyExecutiveInput } from './model/companyExecutive';
+import { executiveRank, type CompanyExecutiveInput, type PayYear } from './model/companyExecutive';
 
 const HEADERS = { 'User-Agent': 'chronopin-dev/1.0 (contact@chronopin.local)' };
 const FETCH_MS = 30_000;
@@ -255,6 +255,8 @@ export function parseExecutives(html: string, sourceUrl: string): CompanyExecuti
   // Every word above the first person, for a header that spans rows.
   const headerText = all.slice(0, headerAt + 1).flat().join(' ');
   const found = new Map<string, CompanyExecutiveInput>();
+  // Every year the table shows for each person, for the pay history.
+  const years = new Map<string, Map<number, PayYear>>();
   let current: string | null = null;
   // Whether the row before was one a person's name or title began on, so the
   // cell under it may be the rest of their title.
@@ -306,10 +308,17 @@ export function parseExecutives(html: string, sourceUrl: string): CompanyExecuti
     const year = Number(first);
     const figures = rest.map(money).filter((n): n is number => n != null);
     const exec = found.get(current)!;
+    const columns = figures.length >= 2 ? payColumns(header, figures, headerText) : null;
+    if (figures.length >= 2) {
+      const total = columns?.total ?? figures[figures.length - 1];
+      if (total > 0) {
+        if (!years.has(current)) years.set(current, new Map());
+        years.get(current)!.set(year, { year, total, stockAwards: columns?.adds ? (columns.stockAwards ?? null) : null });
+      }
+    }
     // Rows come newest year first; only a newer one replaces.
     if (figures.length >= 2 && (exec.fiscalYear == null || year > exec.fiscalYear)) {
       exec.fiscalYear = year;
-      const columns = payColumns(header, figures, headerText);
       exec.salary = columns?.salary ?? figures[0];
       // The last figure is the total when the columns could not be matched.
       exec.totalCompensation = columns?.total ?? figures[figures.length - 1];
@@ -321,6 +330,11 @@ export function parseExecutives(html: string, sourceUrl: string): CompanyExecuti
       exec.pensionChange = split?.pensionChange ?? null;
       exec.otherCompensation = split?.otherCompensation ?? null;
     }
+  }
+  // The years before the newest, when the table has any.
+  for (const [who, exec] of found) {
+    const earlier = [...(years.get(who)?.values() ?? [])].filter((y) => exec.fiscalYear != null && y.year < exec.fiscalYear && y.year >= exec.fiscalYear - 4).sort((a, b) => b.year - a.year);
+    exec.payHistory = earlier.length ? earlier : null;
   }
   return [...found.values()].filter(
     (e) =>

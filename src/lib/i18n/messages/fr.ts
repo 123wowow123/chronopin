@@ -862,6 +862,8 @@ const fr: Messages = {
     executiveIncentive: 'Rémunération incitative',
     executivePension: 'Retraite et rémunération différée',
     executiveOther: 'Autres rémunérations',
+    executiveMultiYear: 'Total, exercices {from}–{to}',
+    executiveLastGrant: 'Aucune action attribuée cette année. La dernière attribution date de l\'exercice {year} : {amount}.',
     parent: { one: 'Société mère', other: 'Sociétés mères', many: 'Sociétés mères' },
     parentHint: 'Tout voir sur {name}',
   },
@@ -1606,6 +1608,8 @@ const fr: Messages = {
   ads: {
     sponsored: 'Sponsorisé',
     seeOnAmazon: 'Voir sur Amazon',
+    seeOnEbay: 'Voir sur eBay',
+    watchBody: 'Montres {brand} d\'occasion sur eBay, avec Garantie d\'authenticité sur les annonces éligibles.',
     urgencyLeft: 'Plus que {count} en stock',
     urgencyLow: 'Prix le plus bas depuis {days} jours',
     programs: {

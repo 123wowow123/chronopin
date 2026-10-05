@@ -2,7 +2,7 @@
 
 import Link from '@/components/ui/Link';
 import { Fragment, useLayoutEffect, useRef, useSyncExternalStore } from 'react';
-import { BAG_LIMIT, BAG_LIMIT_PHONE, sampleBag } from '@/lib/bagSample';
+import { BAG_LIMIT, BAG_LIMIT_PHONE, marketCapWeight, sampleBag } from '@/lib/bagSample';
 import { useDayNews } from '@/lib/client/dayNews';
 import { leaveTimelineForDay } from '@/lib/client/dayReturn';
 import { useImpression } from '@/lib/client/impressions';
@@ -298,7 +298,7 @@ export function TimeBlock({
 
       {bag.pins.length ? (
         <>
-          <PinColumns cards={cards} ranks={shown.map((s) => s.rank)} whole={!sample} />
+          <PinColumns cards={cards} ranks={shown.map((s) => s.rank)} lift={shown.map((s) => marketCapWeight(s.stack.pin.companyMarketCap))} whole={!sample} />
           {sample && leftOut(1) > 0 && daySearchHref ? (
             <ShowMore href={daySearchHref(bag.day)} total={stacks.length + unloaded} fresh={fresh} hiddenFrom={hiddenFrom} />
           ) : null}
@@ -336,10 +336,14 @@ export function TimeBlock({
 // A `whole` day (a date: search, every pin of it) has no pick to rank by, so
 // its cards are dealt across every track the window has, in date order, the
 // same fill-across-then-down the timeline's first four get.
-function PinColumns({ cards, ranks, whole }: { cards: React.ReactElement[]; ranks: number[]; whole: boolean }) {
+//
+// Within those first four, a large-cap company's card (`lift`, its market-cap
+// weight) goes ahead of the date order, biggest first: top-left is the biggest
+// name. Phones keep date order through each card's `order`.
+function PinColumns({ cards, ranks, lift, whole }: { cards: React.ReactElement[]; ranks: number[]; lift: number[]; whole: boolean }) {
   const tracks = useDayTracks(whole);
   const byRank = (from: number, to: number) => cards.filter((_, i) => ranks[i] >= from && ranks[i] < to);
-  const first = whole ? cards : byRank(0, BAG_LIMIT);
+  const first = whole ? cards : cards.map((c, i) => ({ c, i })).filter(({ i }) => ranks[i] >= 0 && ranks[i] < BAG_LIMIT).sort((a, b) => lift[b.i] - lift[a.i]).map(({ c }) => c);
   const perTrack = whole ? tracks : 2;
   const wide = (i: number) => (whole ? (2 + i < tracks ? cards.filter((_, c) => c % tracks === 2 + i) : []) : byRank(BAG_LIMIT + 2 * i, BAG_LIMIT + 2 * i + 2));
   return (

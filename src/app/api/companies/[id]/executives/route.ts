@@ -2,7 +2,7 @@ import type { NextRequest } from 'next/server';
 import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
 import Company from '@/server/model/company';
-import CompanyExecutive, { type CompanyExecutiveInput } from '@/server/model/companyExecutive';
+import CompanyExecutive, { type CompanyExecutiveInput, type PayYear } from '@/server/model/companyExecutive';
 
 type Ctx = RouteContext<'/api/companies/[id]/executives'>;
 
@@ -22,6 +22,16 @@ const httpsUrl = (value: unknown) => {
   } catch {
     return null;
   }
+};
+// The earlier years of the pay table, at most four, each with a year and a total.
+const payHistory = (value: unknown): PayYear[] | null => {
+  if (!Array.isArray(value)) return null;
+  const years = value.slice(0, 4).flatMap((y): PayYear[] => {
+    const year = Number(y?.year);
+    const total = amount(y?.total);
+    return Number.isInteger(year) && year > 1990 && year < 2100 && total ? [{ year, total, stockAwards: amount(y?.stockAwards) }] : [];
+  });
+  return years.length ? years : null;
 };
 const amount = (value: unknown) => (typeof value === 'number' && Number.isFinite(value) && value >= 0 && value < 1e12 ? Math.round(value) : null);
 
@@ -56,6 +66,7 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
       sourceUrl: httpsUrl(row.sourceUrl),
       estimated: row.estimated === true,
       estimateNote: row.estimated === true && typeof row.estimateNote === 'string' ? row.estimateNote.trim().slice(0, 1000) : null,
+      payHistory: payHistory(row.payHistory),
       origin: row.origin === 'sec' ? 'sec' : 'hand',
     });
   }

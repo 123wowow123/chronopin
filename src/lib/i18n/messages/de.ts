@@ -862,6 +862,8 @@ const de: Messages = {
     executiveIncentive: 'Anreizvergütung',
     executivePension: 'Pension und aufgeschobene Vergütung',
     executiveOther: 'Sonstige Vergütung',
+    executiveMultiYear: 'Gesamt, GJ {from}–{to}',
+    executiveLastGrant: 'In diesem Jahr keine Aktien gewährt. Die letzte Gewährung war GJ {year}: {amount}.',
     parent: { one: 'Muttergesellschaft', other: 'Muttergesellschaften' },
     parentHint: 'Alles zu {name} zeigen',
   },
@@ -1606,6 +1608,8 @@ const de: Messages = {
   ads: {
     sponsored: 'Anzeige',
     seeOnAmazon: 'Bei Amazon ansehen',
+    seeOnEbay: 'Auf eBay ansehen',
+    watchBody: 'Gebrauchte {brand}-Uhren auf eBay, mit Echtheitsgarantie bei berechtigten Angeboten.',
     urgencyLeft: 'Nur noch {count} übrig',
     urgencyLow: '{days}-Tage-Tiefstpreis',
     programs: {

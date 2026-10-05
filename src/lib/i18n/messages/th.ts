@@ -852,6 +852,8 @@ const th: Messages = {
     executiveIncentive: 'ค่าตอบแทนจูงใจ',
     executivePension: 'เงินบำนาญและค่าตอบแทนที่เลื่อนจ่าย',
     executiveOther: 'ค่าตอบแทนอื่น',
+    executiveMultiYear: 'รวม ปีงบประมาณ {from}–{to}',
+    executiveLastGrant: 'ปีนี้ไม่มีการมอบหุ้น การมอบครั้งล่าสุดคือปีงบประมาณ {year}: {amount}',
     parent: { other: 'บริษัทแม่' },
     parentHint: 'แสดงทั้งหมดเกี่ยวกับ {name}',
   },
@@ -1596,6 +1598,8 @@ const th: Messages = {
   ads: {
     sponsored: 'ผู้สนับสนุน',
     seeOnAmazon: 'ดูบน Amazon',
+    seeOnEbay: 'ดูบน eBay',
+    watchBody: 'นาฬิกา {brand} มือสองบน eBay พร้อมการรับประกันความแท้สำหรับรายการที่เข้าเงื่อนไข',
     urgencyLeft: 'เหลือเพียง {count} ชิ้น',
     urgencyLow: 'ราคาต่ำสุดใน {days} วัน',
     programs: {

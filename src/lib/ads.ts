@@ -16,14 +16,35 @@
 // a pin page, so this is tracked and weighed per slot, not globally).
 
 import type { UserPreference } from './userWiki';
-import { amazonAssociateTag } from './affiliate';
+import { affiliateUrl, amazonAssociateTag, ebayCampaignId, isEbayUrl } from './affiliate';
 import { asinOf, sameBrand, sameProductFamily } from './adQuality';
 import { AD_TIERS, type AdTier } from './culturalDays';
 
-export type AdKind = 'special' | 'bonus' | 'tradein' | 'product';
+// 'watch' ads (0130) are not Amazon's: the pre-owned luxury watches of one
+// brand on eBay, which earns through the EPN campaign (affiliate.ts).
+export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch';
 
 // Each kind's share of the picks, before relatedness and preference.
-export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2 };
+// A watch pool is small, so on the timeline it only comes up now and then;
+// on a Watches pin's page its ads are related (shared tag) and come first.
+export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1 };
+
+// The watch brands advertised (Ad.program is `watch_<key>`), by the name the
+// ad shows. Owner, 2026-10-05: "add ads for rolex and other desirable watches".
+export const WATCH_BRANDS: Record<string, string> = {
+  watch_rolex: 'Rolex',
+  watch_omega: 'Omega',
+  watch_patek: 'Patek Philippe',
+  watch_ap: 'Audemars Piguet',
+  watch_cartier: 'Cartier',
+  watch_tudor: 'Tudor',
+  watch_breitling: 'Breitling',
+  watch_tag: 'TAG Heuer',
+  watch_iwc: 'IWC',
+  watch_gs: 'Grand Seiko',
+};
+
+export const watchBrand = (program: string | null | undefined): string | null => (program && WATCH_BRANDS[program]) || null;
 
 export const AD_SLOTS = ['timeline-row', 'timeline-side', 'pin-strip', 'pin-side', 'drawer'] as const;
 export type AdSlot = (typeof AD_SLOTS)[number];
@@ -535,7 +556,14 @@ export function tagForStore(store: string, tags: Record<string, string>): string
   return tags[store] || (GLOBAL_EARNING_STORES.has(store) ? amazonAssociateTag : null);
 }
 
+// The tracking id an ad's link carries: the EPN campaign for an eBay link,
+// else the store's Associates id (null when it has none).
+export function adTag(ad: Pick<AdCandidate, 'url' | 'store'>, tags: Record<string, string>): string | null {
+  return isEbayUrl(ad.url) ? ebayCampaignId : tagForStore(ad.store, tags);
+}
+
 export function taggedAdUrl(url: string, store: string, tags: Record<string, string>): string {
+  if (isEbayUrl(url)) return affiliateUrl(url);
   const tag = tagForStore(store, tags);
   if (!tag) return url;
   try {

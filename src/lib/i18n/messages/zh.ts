@@ -856,6 +856,8 @@ const zh: Messages = {
     executiveIncentive: '激励薪酬',
     executivePension: '养老金与递延薪酬',
     executiveOther: '其他薪酬',
+    executiveMultiYear: '合计(FY {from}–{to})',
+    executiveLastGrant: '今年未授予股票。上次授予在FY {year}:{amount}。',
     parent: { other: '母公司' },
     parentHint: '查看 {name} 的全部内容',
   },
@@ -1593,6 +1595,8 @@ const zh: Messages = {
   ads: {
     sponsored: '赞助',
     seeOnAmazon: '在亚马逊查看',
+    seeOnEbay: '在 eBay 上查看',
+    watchBody: 'eBay 上的二手 {brand} 腕表，符合条件的商品享有真品保证。',
     urgencyLeft: '仅剩 {count} 件',
     urgencyLow: '{days} 天最低价',
     programs: {

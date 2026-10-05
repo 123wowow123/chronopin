@@ -863,6 +863,8 @@ const ms: Messages = {
     executiveIncentive: 'Bayaran insentif',
     executivePension: 'Pencen dan bayaran tertunda',
     executiveOther: 'Bayaran lain',
+    executiveMultiYear: 'Jumlah, TK {from}–{to}',
+    executiveLastGrant: 'Tiada saham diberikan tahun ini. Pemberian terakhir pada TK {year}: {amount}.',
     parent: { other: 'Syarikat induk' },
     parentHint: 'Tunjukkan semua tentang {name}',
   },
@@ -1612,6 +1614,8 @@ const ms: Messages = {
   ads: {
     sponsored: 'Ditaja',
     seeOnAmazon: 'Lihat di Amazon',
+    seeOnEbay: 'Lihat di eBay',
+    watchBody: 'Jam tangan {brand} terpakai di eBay, dengan Jaminan Ketulenan pada penyenaraian yang layak.',
     urgencyLeft: 'Tinggal {count}',
     urgencyLow: 'Harga terendah {days} hari',
     programs: {

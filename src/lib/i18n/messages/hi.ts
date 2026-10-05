@@ -869,6 +869,8 @@ const hi: Messages = {
     executiveIncentive: 'प्रोत्साहन भुगतान',
     executivePension: 'पेंशन और स्थगित भुगतान',
     executiveOther: 'अन्य भुगतान',
+    executiveMultiYear: 'कुल, वित्त वर्ष {from}–{to}',
+    executiveLastGrant: 'इस वर्ष कोई स्टॉक नहीं दिया गया। पिछला अनुदान वित्त वर्ष {year} में था: {amount}।',
     parent: { one: 'मूल कंपनी', other: 'मूल कंपनियाँ' },
     parentHint: '{name} का सब कुछ देखें',
   },
@@ -1619,6 +1621,8 @@ const hi: Messages = {
   ads: {
     sponsored: 'प्रायोजित',
     seeOnAmazon: 'Amazon पर देखें',
+    seeOnEbay: 'eBay पर देखें',
+    watchBody: 'eBay पर पुरानी {brand} घड़ियाँ, पात्र लिस्टिंग पर प्रामाणिकता की गारंटी के साथ।',
     urgencyLeft: 'सिर्फ़ {count} बचे हैं',
     urgencyLow: '{days} दिनों में सबसे कम कीमत',
     programs: {

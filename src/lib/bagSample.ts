@@ -151,9 +151,14 @@ function unitHash(text: string): number {
 // hydrating client pick the same cards, and a pin arriving later displaces at
 // most one of them instead of reshuffling the day. `keepId`, when here, is
 // always picked first (the pin the timeline opened on). `boost`, when here,
-// multiplies each pin's weight (the viewer's preference).
+// multiplies each pin's weight (the viewer's preference). A large-cap
+// company's pins lead the pick (after the kept one), biggest first, so the
+// timeline deals them into the top-left columns; the picked set is unchanged.
 export function sampleBag<T extends Sampled>(pins: T[], limit: number, seed: string, keepId?: number | null, boost?: (pin: T) => number): number[] {
   const keyed = pins.map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / (bagWeight(p) * (boost?.(p) ?? 1)) }));
   keyed.sort((a, b) => (a.id === keepId ? -1 : b.id === keepId ? 1 : b.key - a.key || a.id - b.id));
-  return keyed.slice(0, limit).map((k) => k.id);
+  const caps = new Map(pins.map((p) => [p.id, marketCapWeight(p.companyMarketCap)]));
+  const picked = keyed.slice(0, limit).map((k) => k.id);
+  const [lead, rest] = picked[0] === keepId ? [picked.slice(0, 1), picked.slice(1)] : [[], picked];
+  return [...lead, ...rest.sort((a, b) => (caps.get(b) ?? 1) - (caps.get(a) ?? 1))];
 }

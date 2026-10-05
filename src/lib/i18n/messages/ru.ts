@@ -899,6 +899,8 @@ const ru: Messages = {
     executiveIncentive: 'Поощрительные выплаты',
     executivePension: 'Пенсия и отложенные выплаты',
     executiveOther: 'Прочие выплаты',
+    executiveMultiYear: 'Итого, фингоды {from}–{to}',
+    executiveLastGrant: 'В этом году акции не выдавались. Последняя выдача — фингод {year}: {amount}.',
     parent: { one: 'Материнская компания', few: 'Материнские компании', many: 'Материнские компании', other: 'Материнские компании' },
     parentHint: 'Показать всё о {name}',
   },
@@ -1698,6 +1700,8 @@ const ru: Messages = {
   ads: {
     sponsored: 'Реклама',
     seeOnAmazon: 'Смотреть на Amazon',
+    seeOnEbay: 'Смотреть на eBay',
+    watchBody: 'Часы {brand} с пробегом на eBay, с гарантией подлинности на подходящих лотах.',
     urgencyLeft: 'Осталось всего {count}',
     urgencyLow: 'Минимальная цена за {days} дн.',
     programs: {

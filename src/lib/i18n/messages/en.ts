@@ -863,6 +863,8 @@ const en = {
     executiveIncentive: 'Incentive pay',
     executivePension: 'Pension and deferred pay',
     executiveOther: 'Other pay',
+    executiveMultiYear: 'Total, FY {from}–{to}',
+    executiveLastGrant: 'No stock granted this year. The last grant was FY {year}: {amount}.',
     parent: { one: 'Parent company', other: 'Parent companies' },
     parentHint: 'Show everything on {name}',
   },
@@ -1612,6 +1614,8 @@ const en = {
   ads: {
     sponsored: 'Sponsored',
     seeOnAmazon: 'See it on Amazon',
+    seeOnEbay: 'See it on eBay',
+    watchBody: 'Pre-owned {brand} watches on eBay, with Authenticity Guarantee on eligible listings.',
     urgencyLeft: 'Only {count} left',
     urgencyLow: '{days}-day low price',
     programs: {
