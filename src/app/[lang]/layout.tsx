@@ -8,6 +8,7 @@ import { HideDevIssues } from '@/components/HideDevIssues';
 import { I18nProvider } from '@/components/I18nProvider';
 import { ChatDock } from '@/components/messages/Messenger';
 import { Navbar } from '@/components/nav/Navbar';
+import { SiteFooter } from '@/components/nav/SiteFooter';
 import { ThemeSync } from '@/components/ThemeSync';
 import { LocaleSync } from '@/components/LocaleSync';
 import { TimeZoneSync } from '@/components/TimeZoneSync';
@@ -132,6 +133,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             <Navbar />
           </Suspense>
           <div id="main">{children}</div>
+          <SiteFooter />
           {/* It reads the path, which a prerendered page may only do inside Suspense. */}
           <Suspense fallback={null}>
             <ChatDock />

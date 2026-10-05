@@ -16,6 +16,7 @@ const GROUPS = [
     { href: '/admin/clicks', label: 'Clicks' },
     { href: '/admin/ads', label: 'Ads' },
     { href: '/admin/bots', label: 'Bots' },
+    { href: '/admin/search', label: 'Search' },
     { href: '/admin/users', label: 'Users' },
     { href: '/admin/pins', label: 'Pins' },
     { href: '/admin/comments', label: 'Comments' },

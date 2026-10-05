@@ -9,6 +9,7 @@ import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting }
 import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from '@/lib/userWiki';
 import { parseAmazonTags } from '@/lib/ads';
 import { DEFAULT_ADSENSE_SLOTS, parseAdsenseSlots, type AdsenseSlotsSetting } from '@/lib/adsense';
+import { DEFAULT_HIDE_THIN_PINS, parseHideThinPins, type HideThinPinsSetting } from '@/lib/searchQuality';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
@@ -24,6 +25,7 @@ const AUTO_TRANSLATE = 'autoTranslate';
 const SITE_VERIFICATION = 'siteVerification';
 const AMAZON_TAGS = 'amazonTags';
 const ADSENSE_SLOTS = 'adsenseSlots';
+const HIDE_THIN_PINS = 'hideThinPins';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -157,4 +159,14 @@ export async function getSiteVerification(): Promise<SiteVerificationSetting> {
 
 export function setSiteVerification(setting: SiteVerificationSetting, userId: number | null) {
   return write(SITE_VERIFICATION, setting, userId);
+}
+
+// Whether thin pins ask search engines not to index them (src/lib/searchQuality.ts).
+export async function getHideThinPins(): Promise<HideThinPinsSetting> {
+  const parsed = parseHideThinPins(await read(HIDE_THIN_PINS));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_HIDE_THIN_PINS;
+}
+
+export function setHideThinPins(setting: HideThinPinsSetting, userId: number | null) {
+  return write(HIDE_THIN_PINS, setting, userId);
 }

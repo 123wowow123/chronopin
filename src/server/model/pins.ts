@@ -4,6 +4,7 @@ import type { Row } from '../db';
 import BasePins from './basePins';
 import Pin from './pin';
 import PinTag from './pinTag';
+import { THIN_PIN_SQL } from './searchIssues';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
@@ -272,13 +273,14 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
-  // Every live pin's id and last change, oldest first, for the sitemap.
-  static async listForSitemap(offset: number, limit: number) {
+  // Every live pin's id and last change, oldest first, for the sitemap; with
+  // skipThin, not the thin pins that ask not to be indexed (src/lib/searchQuality.ts).
+  static async listForSitemap(offset: number, limit: number, skipThin = false) {
     return db.query<{ id: number; title: string; lastModified: Date }>(
       `
       SELECT "id", "title", COALESCE("utcUpdatedDateTime", "utcCreatedDateTime") AS "lastModified"
       FROM "Pin"
-      WHERE "utcDeletedDateTime" IS NULL
+      WHERE "utcDeletedDateTime" IS NULL${skipThin ? ` AND NOT ${THIN_PIN_SQL('"Pin"')}` : ''}
       ORDER BY "id"
       OFFSET $1 LIMIT $2`,
       [offset, limit],

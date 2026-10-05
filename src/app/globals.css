@@ -571,3 +571,9 @@ html .leaflet-container .leaflet-control-attribution a {
 html .leaflet-container.pins-map .leaflet-bottom.leaflet-right {
   @apply max-xl:bottom-16;
 }
+
+/* A page that fills the window (the map) has no room for the site footer
+   (src/components/nav/SiteFooter.tsx): it would add a page scroll under it. */
+body:has(main[data-fullscreen]) [data-site-footer] {
+  display: none;
+}

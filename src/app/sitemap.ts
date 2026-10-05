@@ -4,6 +4,7 @@ import { connection } from 'next/server';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import Pins from '@/server/model/pins';
 import { offeredLocales, TAGS } from '@/server/services/cache';
+import { hideThinPins } from '@/server/services/pages';
 import { topicIndex } from '@/server/services/topics';
 import { companyPath, MIN_INDEXED_PINS, tagPath } from '@/lib/topics';
 import { DEFAULT_LOCALE, languageAlternates, type Locale } from '@/lib/i18n/config';
@@ -24,7 +25,8 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     ...index.tags.filter((t) => t.pins >= MIN_INDEXED_PINS).map((t) => tagPath(t.name)),
     ...index.companies.filter((c) => c.pins >= MIN_INDEXED_PINS).map((c) => companyPath(c.name)),
   ];
-  const pins = await Pins.listForSitemap(0, MAX_URLS - 5 - topics.length);
+  // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
+  const pins = await Pins.listForSitemap(0, MAX_URLS - 8 - topics.length, (await hideThinPins()).enabled);
   const inEveryLanguage = (path: string) => {
     if (!offered.length) return undefined;
     const { languages = {} } = languageAlternates(path, DEFAULT_LOCALE, offered);
@@ -33,6 +35,10 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
   return [
     { url: absoluteUrl('/'), changeFrequency: 'hourly', priority: 1, alternates: inEveryLanguage('/') },
     { url: absoluteUrl('/about'), changeFrequency: 'monthly', priority: 0.4, alternates: inEveryLanguage('/about') },
+    { url: absoluteUrl('/contact'), changeFrequency: 'yearly', priority: 0.3, alternates: inEveryLanguage('/contact') },
+    // English only: the other languages' copies show the English text (src/components/legal/LegalPage.tsx).
+    { url: absoluteUrl('/privacy'), changeFrequency: 'yearly', priority: 0.2 },
+    { url: absoluteUrl('/terms'), changeFrequency: 'yearly', priority: 0.2 },
     { url: absoluteUrl('/map'), changeFrequency: 'daily', priority: 0.5, alternates: inEveryLanguage('/map') },
     { url: absoluteUrl('/tags'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/tags') },
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },

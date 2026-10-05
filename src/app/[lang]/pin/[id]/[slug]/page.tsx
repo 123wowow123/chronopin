@@ -67,14 +67,15 @@ import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
 import { isAttendableEvent, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
+import { thinReasons } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinGameInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinGameInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
-import { pinTextDir } from '@/lib/i18n/config';
+import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import { localesOffered } from '@/server/services/multilingual';
@@ -90,8 +91,13 @@ async function loadPin(params: Props['params']) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const [pin, t, offered] = await Promise.all([loadPin(params), getT(), localesOffered()]);
-  return pin ? pinMetadata(pin, t.locale, offered) : { title: t('meta.pinNotFound'), robots: { index: false } };
+  const [pin, t, offered, hideThin] = await Promise.all([loadPin(params), getT(), localesOffered(), hideThinPins()]);
+  if (!pin) return { title: t('meta.pinNotFound'), robots: { index: false } };
+  const metadata = pinMetadata(pin, t.locale, offered);
+  if (!hideThin.enabled) return metadata;
+  // Judged on the English pin, so every language's copy agrees (src/lib/searchQuality.ts).
+  const english = t.locale === DEFAULT_LOCALE ? pin : await pinById(pin.id, DEFAULT_LOCALE);
+  return english && thinReasons(english).length ? { ...metadata, robots: { index: false, follow: true } } : metadata;
 }
 
 export default function PinPage({ params }: Props) {

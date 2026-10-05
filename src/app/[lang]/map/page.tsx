@@ -48,7 +48,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 export default async function MapPage() {
   const t = await getT();
   return (
-    <main>
+    // data-fullscreen hides the site footer (globals.css): the map fills the window.
+    <main data-fullscreen>
       <h1 className="sr-only">{t('meta.mapHeading')}</h1>
       <Suspense fallback={<div className="h-[calc(100dvh-52px)] animate-pulse bg-raised" />}>
         <MapWithSettings />

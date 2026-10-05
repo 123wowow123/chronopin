@@ -19,7 +19,7 @@ into its instructions, so changing this page changes the next run.
 
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
-| `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
+| `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
 | `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 
@@ -96,7 +96,7 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 
 | Tool | What it gives | Why it is a tool |
 | --- | --- | --- |
-| `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `traffic_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
+| `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `traffic_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `thin_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `google_trends` | Trending searches in ten markets, scored for dated events, with `coveredByPin` ([trends.ts](../../../src/server/jobs/trends.ts)) | Same reader as `trends:discover` |
 | `prediction_markets` | Kalshi and Polymarket events resolving in the next week and those newly listed since the last run, biggest book first, with odds, dollars traded and `coveredByPin` ([markets.ts](../../../src/server/jobs/markets.ts)) | About 45 pages of exchange listings filtered down to a page: per-game and recurring markets out, an election's props folded together |
 | `company_coverage`, `tagged_pins` | Where a beat left off: each company's pins and when one was last posted, stalest first; what a tag (`Layoffs`) already holds ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
@@ -262,6 +262,48 @@ is genuinely uncertain (a rumour, a "by 2030" plan) stays low, and the run
 leaves it alone and says so in the report. A reference that only repeats the
 source (the same wire story on another site) is not independent. A pin whose
 event turned out not to happen is marked for revisiting, not deleted.
+
+### thinPins
+
+The midnight job's task (owner, 2026-10-04, after AdSense turned the site
+down as "low value content"). A thin pin (under 600 characters of summary
+text, or citing nothing but its own source:
+[searchQuality.ts](../../../src/lib/searchQuality.ts)) tells search engines
+"noindex" and stays out of the sitemap while the switch on /admin/search is
+on, and every thin page counts against the whole
+site. Filling one out puts it back in the index on its own, with no other
+step.
+**Reads** `thin_pins`: curators' pins first, then pins both short and
+single-sourced, then upcoming before past, then the shortest text. Pins
+changed in the last 14 days or already marked for revisiting are not
+listed. Work a batch of about 20 a run; ask again passing the ids you looked
+at and left alone as `exclude`.
+**Does** for each pin: read its `sourceUrl` (`scrape_url`, or `read_page`
+when blocked), then search for two or three independent pages on the same
+event - the organiser's or maker's own page, the filing, the trade press, a
+reference work (Wikipedia, MyAnimeList, IMDb's mirrors) - and through
+`update_pin`:
+- `addReferences` for each one at confidence 70 or more (never the source
+  again, never more than five in all), with its published date, the dates it
+  states and its reasoning;
+- a `longFormSummary` that meets the [quality bar](strategy.md#quality-bar):
+  an HTML bulleted list, original synthesis across the sources, every point
+  citing what backs it, with the context a reader comes for (what it is, who
+  is behind it, what came before, what to expect, the numbers), well past 600
+  characters of text - aim for 1,000 to 1,800;
+- a `description` of one or two plain sentences when the old one is missing
+  or vague.
+Keep the pin's date, place and title unless the new sources show they are
+wrong (then fix them as [lowConfidence](#lowconfidence) says). Mark people's
+pins for revisiting with the summary and references to add.
+**Traps.** Length is not the goal: padding, repeating the title, or
+restating one source in more words is exactly what Google calls thin
+content, so a pin with nothing more to say stays as it is and the report says
+why. A reference that only repeats the source (the same wire story elsewhere,
+or the source's own URL) does not count as a second source. An anime season
+pin is not filled from the series' general page alone: find what this
+season adds (its studio, staff, episode count, where it streams, what it
+adapts). No sentence lifted from a source except a short, attributed quote.
 
 ### eventInfo
 

@@ -53,6 +53,11 @@ export const TASKS = {
     label: 'Low-confidence pins',
     summary: "Re-scrape the pins scored below the timeline's confidence bar and update them with firmer dates and stronger references.",
   },
+  thinPins: {
+    group: 'upkeep',
+    label: 'Thin pins',
+    summary: "Fill out the thinnest pins, which search engines are told not to index: a fuller, cited summary from more than one source, and independent references beyond the pin's own source.",
+  },
   eventInfo: {
     group: 'upkeep',
     label: 'Performers and tickets',
@@ -171,7 +176,8 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       timeZone: 'America/Los_Angeles',
       dayOfMonth: null,
       // No sentiment: the news job scores new pins twice a day (owner, 2026-09-23).
-      tasks: ['revisits', 'pinHealth', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
+      // thinPins fills out a batch of the pins hidden from search as thin (owner, 2026-10-04).
+      tasks: ['revisits', 'pinHealth', 'thinPins', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,

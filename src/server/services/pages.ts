@@ -5,7 +5,7 @@
 // own words.
 
 import { cacheLife, cacheTag } from 'next/cache';
-import { getPersonalBag, getSliderTyping, getAdPlacements, getAdsenseSlots, getTimelineVideo } from '../model/appSetting';
+import { getPersonalBag, getSliderTyping, getAdPlacements, getAdsenseSlots, getHideThinPins, getTimelineVideo } from '../model/appSetting';
 import Company from '../model/company';
 import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
@@ -26,6 +26,7 @@ import type { SliderTypingSetting } from '@/lib/sliderTyping';
 import type { AdPlacementsSetting } from '@/lib/adPlacements';
 import type { AdsenseSlotsSetting } from '@/lib/adsense';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
+import type { HideThinPinsSetting } from '@/lib/searchQuality';
 import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
 import { readSearchRequest, searchPinsPage, searchTagCounts, type SearchSort } from './search';
@@ -61,6 +62,15 @@ export async function adsenseSlots(): Promise<AdsenseSlotsSetting> {
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   return getAdsenseSlots();
+}
+
+// Whether thin pins say noindex (src/lib/searchQuality.ts), read by every pin
+// page's metadata and the sitemap; expired by expireSearchIndex.
+export async function hideThinPins(): Promise<HideThinPinsSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.searchIndex);
+  return getHideThinPins();
 }
 
 // Whether the filter sliders offer a typed box, cached and expired the same way.

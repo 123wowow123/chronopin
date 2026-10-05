@@ -177,6 +177,22 @@ export const TOOLS: JobTool[] = [
       }),
   },
   {
+    name: 'thin_pins',
+    description:
+      "Thin pins, which ask search engines not to index them: under `needs.textChars` characters of summary text (`short`) or citing nothing but their own source (`oneSource`). Curators' pins (editable) first, then pins that are both, then upcoming ones, then the shortest text, with the text length, cited-page count, source and author. Pins changed in the last `skipDays` (default 14) or already marked for revisiting are left out, so a pin you update or mark drops off; pass the ids you checked and left alone as `exclude` when you ask for the next batch. `waiting` is how many are left in all.",
+    input_schema: obj({
+      limit: num('At most this many, default 20, at most 100'),
+      skipDays: num('Leave out pins changed this recently, default 14'),
+      exclude: { type: 'array', items: { type: 'integer' }, description: 'Pin ids already checked this run' },
+    }),
+    run: (input) =>
+      signals.thinPins({
+        limit: int(input.limit, 20, 1, 100),
+        skipDays: int(input.skipDays, 14, 0, 365),
+        exclude: Array.isArray(input.exclude) ? input.exclude.map((id: unknown) => int(id, 0, 0, 2 ** 31 - 1)).filter(Boolean) : [],
+      }),
+  },
+  {
     name: 'pins_this_week',
     description: 'Pins happening from yesterday to a week out, least vetted first: date confidence, reference and media counts, whether it has a place, when it last changed, and its author.',
     input_schema: obj(),

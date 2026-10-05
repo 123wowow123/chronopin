@@ -4,6 +4,7 @@ import Link from '@/components/ui/Link';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
 import type { MessageKey } from '@/lib/i18n/translate';
+import { CONTACT_EMAIL } from '@/lib/legal';
 import { siteCardImages } from '@/server/services/shareCard';
 
 // Per request: the hreflang list follows the admin's language setting.
@@ -36,7 +37,17 @@ export default async function AboutPage() {
       <Section heading={t('about.moreHeading')} items={MORE.map((key) => t(key))} />
       <section className="mb-10">
         <h2 className="mb-3 text-xl font-semibold tracking-tight">{t('about.trustHeading')}</h2>
-        <p className="text-base text-muted">{t('about.trustBody')}</p>
+        <p className="mb-3 text-base text-muted">{t('about.trustBody')}</p>
+        <p className="text-base text-muted">{t('about.aiBody')}</p>
+      </section>
+      <section className="mb-10">
+        <h2 className="mb-3 text-xl font-semibold tracking-tight">{t('about.operatorHeading', { site: siteName })}</h2>
+        <p className="mb-3 text-base text-muted">{t('about.operatorBody', { site: siteName, email: CONTACT_EMAIL })}</p>
+        <p className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          <Link href="/contact">{t('legal.contactTitle')}</Link>
+          <Link href="/privacy">{t('legal.privacyTitle')}</Link>
+          <Link href="/terms">{t('legal.termsTitle')}</Link>
+        </p>
       </section>
       <section>
         <h2 className="mb-3 text-xl font-semibold tracking-tight">{t('about.startHeading')}</h2>

@@ -9,6 +9,8 @@ export const TAGS = {
   timeline: 'timeline',
   sitemap: 'sitemap',
   siteVerification: 'site-verification',
+  // The hide-thin-pins setting (src/lib/searchQuality.ts), read by every pin page's metadata.
+  searchIndex: 'search-index',
   pin: (id: number | string) => `pin:${id}`,
 };
 
@@ -74,4 +76,11 @@ export function invalidateTimeline() {
 // so the admin sees the effect on their next load rather than after a stale one.
 export function expireTimeline() {
   revalidateTag(TAGS.timeline, { expire: 0 });
+}
+
+// The hide-thin-pins setting changed: every pin page's robots tag and the
+// sitemap follow it at once.
+export function expireSearchIndex() {
+  revalidateTag(TAGS.searchIndex, { expire: 0 });
+  revalidateTag(TAGS.sitemap, { expire: 0 });
 }
