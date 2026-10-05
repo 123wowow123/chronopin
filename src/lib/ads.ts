@@ -17,7 +17,7 @@
 
 import type { UserPreference } from './userWiki';
 import { amazonAssociateTag } from './affiliate';
-import { asinOf, sameBrand } from './adQuality';
+import { asinOf, sameBrand, sameProductFamily } from './adQuality';
 import { AD_TIERS, type AdTier } from './culturalDays';
 
 export type AdKind = 'special' | 'bonus' | 'tradein' | 'product';
@@ -299,6 +299,14 @@ export function productKey(ad: Pick<AdCandidate, 'url' | 'key'>): string {
   return asin ? `asin:${asin}` : ad.key;
 }
 
+// Whether two product ads are variants of one product (sameProductFamily):
+// a page shows one of them, not the single and the 8-pack side by side.
+export function sameProduct(a: AdCandidate, b: AdCandidate): boolean {
+  if (productKey(a) === productKey(b)) return true;
+  if (a.kind !== 'product' || b.kind !== 'product') return false;
+  return sameProductFamily({ ...a, brand: a.brand ?? a.company }, { ...b, brand: b.brand ?? b.company });
+}
+
 // The keys to avoid, widened to every ad that is the same product as one
 // already on the page.
 export function expandAvoid(candidates: AdCandidate[], avoid: Set<string>): Set<string> {
@@ -339,15 +347,19 @@ export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, av
     .filter((w) => w.score !== Infinity);
   weighed.sort((a, b) => Number(b.fresh) - Number(a.fresh) || Number(b.own) - Number(a.own) || (ctx.pin ? Number(b.related > 0) - Number(a.related > 0) : 0) || a.score - b.score);
   // One ad per product: a listing that is both a pin's own and a chosen ad
-  // is shown once, by whichever ranked first.
-  const seen = new Set<string>();
+  // is shown once, by whichever ranked first, and so is one of a listing's
+  // variants. Variants fill in only when nothing else is left.
   const picked: AdCandidate[] = [];
+  const variants: AdCandidate[] = [];
   for (const { ad } of weighed) {
-    const product = productKey(ad);
-    if (seen.has(product)) continue;
-    seen.add(product);
-    picked.push(ad);
     if (picked.length === n) break;
+    if (picked.some((p) => productKey(p) === productKey(ad))) continue;
+    if (picked.some((p) => sameProduct(p, ad))) variants.push(ad);
+    else picked.push(ad);
+  }
+  for (const ad of variants) {
+    if (picked.length === n) break;
+    if (!picked.some((p) => productKey(p) === productKey(ad))) picked.push(ad);
   }
   return picked;
 }
@@ -377,8 +389,9 @@ export function holidayWeight(offset: number): number {
 // A holiday's ads for one slot: one holiday (weighted by how close it is,
 // and only one the pin falls on, when `related` is given), and from it `count`
 // ads in different price tiers - the inexpensive, middle and expensive choices
-// together - cheapest first. A holiday short of tiers repeats one it has;
-// ads already on the page are used only when the rest run out.
+// together - cheapest first, and never two variants of one product. A holiday
+// short of tiers repeats one it has; ads already on the page are used only
+// when the rest run out.
 export function pickHolidayAds(
   candidates: AdCandidate[],
   ctx: AdContext,
@@ -424,13 +437,24 @@ export function pickHolidayAds(
     return from[from.length - 1];
   };
   const tiersHere = AD_TIERS.filter((tier) => ads.some((ad) => ad.tier === tier));
-  // Which tiers to show when the slot holds fewer than there are: random ones.
-  const shown = [...tiersHere].sort(() => random() - 0.5).slice(0, count);
-  shown.sort((a, b) => AD_TIERS.indexOf(a) - AD_TIERS.indexOf(b));
-  const picked: AdCandidate[] = shown.map((tier) => pickOne(ads.filter((ad) => ad.tier === tier)));
-  // A tier with two ads fills a slot a missing tier leaves.
-  const rest = ads.filter((ad) => !picked.some((p) => productKey(p) === productKey(ad)));
-  while (picked.length < count && rest.length) picked.push(rest.splice(Math.floor(random() * rest.length), 1)[0]);
+  // Which tiers to show when the slot holds fewer than there are: random ones,
+  // each a different product: a tier whose every ad is a variant of one
+  // already picked (the 8-pack of the single in the tier below) is skipped.
+  const order = [...tiersHere].sort(() => random() - 0.5);
+  const picked: AdCandidate[] = [];
+  for (const tier of order) {
+    if (picked.length === count) break;
+    const pool = ads.filter((ad) => ad.tier === tier && !picked.some((p) => sameProduct(p, ad)));
+    if (pool.length) picked.push(pickOne(pool));
+  }
+  picked.sort((a, b) => AD_TIERS.indexOf(a.tier!) - AD_TIERS.indexOf(b.tier!));
+  // A tier with two ads fills a slot a missing tier leaves; never with a
+  // variant of a product already shown - the slot's other ads take it instead.
+  const rest = ads.filter((ad) => !picked.some((p) => sameProduct(p, ad)));
+  while (picked.length < count && rest.length) {
+    const ad = rest.splice(Math.floor(random() * rest.length), 1)[0];
+    if (!picked.some((p) => sameProduct(p, ad))) picked.push(ad);
+  }
   return picked;
 }
 

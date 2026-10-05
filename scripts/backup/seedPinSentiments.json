@@ -2107,7 +2107,7 @@
     "pinId": 336,
     "sentiment": 0.2,
     "textHash": "d76da420ceacbe3d6d94cd81d3855bb20df0e7edda9374a6208d2d18001856dc",
-    "utcScoredDateTime": "2026-10-04T14:59:41.936Z",
+    "utcScoredDateTime": "2026-10-04T14:59:43.666Z",
     "product": "Yamaha WXA",
     "productHash": "d76da420ceacbe3d6d94cd81d3855bb20df0e7edda9374a6208d2d18001856dc"
   },
@@ -17691,9 +17691,9 @@
     "pinId": 2827,
     "sentiment": 0,
     "textHash": "ab03181fab6e7e926a2f21aab9061c3b859b537f0f652508c8bffb6bbd92acc5",
-    "utcScoredDateTime": "2026-10-04T14:59:43.815Z",
+    "utcScoredDateTime": "2026-10-04T14:59:44.979Z",
     "product": null,
-    "productHash": "ab03181fab6e7e926a2f21aab9061c3b859b537f0f652508c8bffb6bbd92acc5"
+    "productHash": null
   },
   {
     "pinId": 2828,
@@ -35504,38 +35504,6 @@
     "productHash": "71f72033584518ffa29dc53c3c7cb8e74228d290ac7b1ff00796256cc63c10c4"
   },
   {
-    "pinId": 5110,
-    "sentiment": 0.5,
-    "textHash": "570c5ca50608f8db2bb2aa7852e347632d1d0d60e0b5535ea250b7dd4f31127d",
-    "utcScoredDateTime": "2026-10-04T14:59:45.001Z",
-    "product": null,
-    "productHash": "570c5ca50608f8db2bb2aa7852e347632d1d0d60e0b5535ea250b7dd4f31127d"
-  },
-  {
-    "pinId": 5111,
-    "sentiment": 0.8,
-    "textHash": "53647fecb8fe43a240ebb87e39a876e5dd1ba9da5cb16ed62795815b827bea1b",
-    "utcScoredDateTime": "2026-10-04T14:59:45.081Z",
-    "product": null,
-    "productHash": "53647fecb8fe43a240ebb87e39a876e5dd1ba9da5cb16ed62795815b827bea1b"
-  },
-  {
-    "pinId": 5112,
-    "sentiment": 0.6,
-    "textHash": "b3bb8ff130d80777580041e5866dd726d24e5391488c48e31d09a6afa76bafc6",
-    "utcScoredDateTime": "2026-10-04T14:59:45.194Z",
-    "product": "CVN 79",
-    "productHash": "b3bb8ff130d80777580041e5866dd726d24e5391488c48e31d09a6afa76bafc6"
-  },
-  {
-    "pinId": 5113,
-    "sentiment": 0.6,
-    "textHash": "563466f798dfa33b94cf126ed3a4f381268dc19d3bdced0705b3b9b0a32e8c02",
-    "utcScoredDateTime": "2026-10-04T14:59:45.281Z",
-    "product": null,
-    "productHash": "563466f798dfa33b94cf126ed3a4f381268dc19d3bdced0705b3b9b0a32e8c02"
-  },
-  {
     "pinId": 5114,
     "sentiment": 0.4,
     "textHash": "93f00c8a32f24f8886bcbf6d1aed40537cd992248a300e11abdac147e4133aac",
@@ -35566,30 +35534,6 @@
     "utcScoredDateTime": "2026-10-02T14:35:13.651Z",
     "product": null,
     "productHash": null
-  },
-  {
-    "pinId": 5118,
-    "sentiment": 0.3,
-    "textHash": "8e21dc00301ae6627f9541d1a39131481fcbdfdb16d6a264a5ec1540d90d08a6",
-    "utcScoredDateTime": "2026-10-04T14:59:45.502Z",
-    "product": null,
-    "productHash": "8e21dc00301ae6627f9541d1a39131481fcbdfdb16d6a264a5ec1540d90d08a6"
-  },
-  {
-    "pinId": 5119,
-    "sentiment": 0.4,
-    "textHash": "3ca564f151c0bc102e12536d3b501ddaff76c2d0b37c9e562f6e342bd738b63e",
-    "utcScoredDateTime": "2026-10-04T14:59:48.775Z",
-    "product": null,
-    "productHash": "3ca564f151c0bc102e12536d3b501ddaff76c2d0b37c9e562f6e342bd738b63e"
-  },
-  {
-    "pinId": 5120,
-    "sentiment": 0.5,
-    "textHash": "d3ec1e213405f3c6a46ffb3f7373031644b3fa81dae0c5dd23d741dc1d71e13a",
-    "utcScoredDateTime": "2026-10-04T14:59:48.982Z",
-    "product": null,
-    "productHash": "d3ec1e213405f3c6a46ffb3f7373031644b3fa81dae0c5dd23d741dc1d71e13a"
   },
   {
     "pinId": 5121,
@@ -35688,54 +35632,6 @@
     "productHash": "73e31f66afec07e267cbc20297ac8df1a472b7554d857d11033c8f4c0ba35e18"
   },
   {
-    "pinId": 5133,
-    "sentiment": 0.2,
-    "textHash": "49b9248790c3dc0954317d638bccf3e7536aaecb22d2b4892eb7d8da19d02811",
-    "utcScoredDateTime": "2026-10-04T14:59:49.286Z",
-    "product": null,
-    "productHash": "49b9248790c3dc0954317d638bccf3e7536aaecb22d2b4892eb7d8da19d02811"
-  },
-  {
-    "pinId": 5134,
-    "sentiment": 0.5,
-    "textHash": "4261432d05b226e307900226bb1f54c13cc82eb8497237f2ab6ba3667ab22e86",
-    "utcScoredDateTime": "2026-10-04T14:59:49.741Z",
-    "product": null,
-    "productHash": "4261432d05b226e307900226bb1f54c13cc82eb8497237f2ab6ba3667ab22e86"
-  },
-  {
-    "pinId": 5135,
-    "sentiment": 0.3,
-    "textHash": "d0d34a347d95680afd4e1c52ab66dfb088597e63a446eff7691f3e937b4b13ba",
-    "utcScoredDateTime": "2026-10-04T14:59:49.971Z",
-    "product": null,
-    "productHash": "d0d34a347d95680afd4e1c52ab66dfb088597e63a446eff7691f3e937b4b13ba"
-  },
-  {
-    "pinId": 5136,
-    "sentiment": 0.3,
-    "textHash": "13223d82c2900d366f1df5fb384df26f9d0f4b1e8a583e00697d537b1ca27952",
-    "utcScoredDateTime": "2026-10-04T14:59:50.151Z",
-    "product": null,
-    "productHash": "13223d82c2900d366f1df5fb384df26f9d0f4b1e8a583e00697d537b1ca27952"
-  },
-  {
-    "pinId": 5137,
-    "sentiment": -0.7,
-    "textHash": "ed23706972d3c6d7cfde1e92ed8af3de80eb56859ae7137824e5d2478e564396",
-    "utcScoredDateTime": "2026-10-04T14:59:50.229Z",
-    "product": null,
-    "productHash": "ed23706972d3c6d7cfde1e92ed8af3de80eb56859ae7137824e5d2478e564396"
-  },
-  {
-    "pinId": 5138,
-    "sentiment": 0.5,
-    "textHash": "fbb63d3121c0cf001dfb28633dc40fe878765a09b239af0b0a8559a812a7341d",
-    "utcScoredDateTime": "2026-10-04T14:59:50.319Z",
-    "product": null,
-    "productHash": "fbb63d3121c0cf001dfb28633dc40fe878765a09b239af0b0a8559a812a7341d"
-  },
-  {
     "pinId": 5139,
     "sentiment": 0.8,
     "textHash": "3f8b899a0ba1e2726b8ae30ac4f2daf890d528110dd05c2e5d5f2f55ca7f62c4",
@@ -35814,110 +35710,6 @@
     "utcScoredDateTime": "2026-10-02T14:48:24.818Z",
     "product": null,
     "productHash": null
-  },
-  {
-    "pinId": 5149,
-    "sentiment": 0.3,
-    "textHash": "b72800309e89a13c80a914b166da2aa9fe9ee9c84ffd3179a1ca19e257ee449f",
-    "utcScoredDateTime": "2026-10-04T14:59:50.437Z",
-    "product": "Beyblade",
-    "productHash": "b72800309e89a13c80a914b166da2aa9fe9ee9c84ffd3179a1ca19e257ee449f"
-  },
-  {
-    "pinId": 5150,
-    "sentiment": 0.7,
-    "textHash": "e9c75e17fe6a6bbaba5b3018a0cf817ce33d88551cc60afdf1deef5435da00d3",
-    "utcScoredDateTime": "2026-10-04T14:59:50.526Z",
-    "product": "Pokémon",
-    "productHash": "e9c75e17fe6a6bbaba5b3018a0cf817ce33d88551cc60afdf1deef5435da00d3"
-  },
-  {
-    "pinId": 5151,
-    "sentiment": 0.4,
-    "textHash": "a4fdc21bd8d491d47d5f340c21d727eda63afb3e9d817f0648d10b46c783aca1",
-    "utcScoredDateTime": "2026-10-04T14:59:50.629Z",
-    "product": "Beyblade",
-    "productHash": "a4fdc21bd8d491d47d5f340c21d727eda63afb3e9d817f0648d10b46c783aca1"
-  },
-  {
-    "pinId": 5152,
-    "sentiment": 0.7,
-    "textHash": "ddd6c2e0f075f7b1bcb31d064bd05f80315fb5bf92d1233c49e99d187dd2036a",
-    "utcScoredDateTime": "2026-10-04T14:59:50.957Z",
-    "product": null,
-    "productHash": "ddd6c2e0f075f7b1bcb31d064bd05f80315fb5bf92d1233c49e99d187dd2036a"
-  },
-  {
-    "pinId": 5153,
-    "sentiment": 0.4,
-    "textHash": "867d16ff773d512044a45c93f95ecc90bc9edea8d1fe9325d7a5f498b73b64ed",
-    "utcScoredDateTime": "2026-10-04T14:59:51.080Z",
-    "product": "Gundam",
-    "productHash": "867d16ff773d512044a45c93f95ecc90bc9edea8d1fe9325d7a5f498b73b64ed"
-  },
-  {
-    "pinId": 5154,
-    "sentiment": 0.6,
-    "textHash": "5aee4f2c6346d11c0aac1ea4f3d4a557720c7a9d8bfa21055c708f145499cb28",
-    "utcScoredDateTime": "2026-10-04T14:59:51.189Z",
-    "product": null,
-    "productHash": "5aee4f2c6346d11c0aac1ea4f3d4a557720c7a9d8bfa21055c708f145499cb28"
-  },
-  {
-    "pinId": 5155,
-    "sentiment": 0.2,
-    "textHash": "3f6d2ee8df8d012770db9e616097247563efc5fc498f60ad6848b664b572cad0",
-    "utcScoredDateTime": "2026-10-04T14:59:51.282Z",
-    "product": "Gundam",
-    "productHash": "3f6d2ee8df8d012770db9e616097247563efc5fc498f60ad6848b664b572cad0"
-  },
-  {
-    "pinId": 5156,
-    "sentiment": 0.7,
-    "textHash": "378d28d6effa6171a75168f3b0427a67d5cecfc2b1eac2a1186b695eeae29088",
-    "utcScoredDateTime": "2026-10-04T14:59:51.481Z",
-    "product": null,
-    "productHash": "378d28d6effa6171a75168f3b0427a67d5cecfc2b1eac2a1186b695eeae29088"
-  },
-  {
-    "pinId": 5157,
-    "sentiment": 0.3,
-    "textHash": "dc1fb525f0aa6f8c50900c116771928d9ce9dc439ecc69a33836556089f9428f",
-    "utcScoredDateTime": "2026-10-04T14:59:51.580Z",
-    "product": "Mini 4WD",
-    "productHash": "dc1fb525f0aa6f8c50900c116771928d9ce9dc439ecc69a33836556089f9428f"
-  },
-  {
-    "pinId": 5158,
-    "sentiment": 0.4,
-    "textHash": "64b0d48a2573578155e579ec5453c78521d0066201ce08449f90b32f4737dc15",
-    "utcScoredDateTime": "2026-10-04T14:59:51.683Z",
-    "product": null,
-    "productHash": "64b0d48a2573578155e579ec5453c78521d0066201ce08449f90b32f4737dc15"
-  },
-  {
-    "pinId": 5159,
-    "sentiment": 0.4,
-    "textHash": "70bad0933775bed26272aaa04f50c71ba8d9f0b9046f1ae495477d63daf175ff",
-    "utcScoredDateTime": "2026-10-04T14:59:51.793Z",
-    "product": null,
-    "productHash": "70bad0933775bed26272aaa04f50c71ba8d9f0b9046f1ae495477d63daf175ff"
-  },
-  {
-    "pinId": 5160,
-    "sentiment": 0.5,
-    "textHash": "df89209eeb4243aeb13007358c67a6e8e2c6ed4f6bbde05804528b0815cdc6d3",
-    "utcScoredDateTime": "2026-10-04T14:59:51.859Z",
-    "product": null,
-    "productHash": "df89209eeb4243aeb13007358c67a6e8e2c6ed4f6bbde05804528b0815cdc6d3"
-  },
-  {
-    "pinId": 5161,
-    "sentiment": 0.6,
-    "textHash": "59ec90b9f4de58193413c4fe399c8ddb2c4c6b5f58146a68bd38f181bee9c3e9",
-    "utcScoredDateTime": "2026-10-04T14:59:52.007Z",
-    "product": null,
-    "productHash": "59ec90b9f4de58193413c4fe399c8ddb2c4c6b5f58146a68bd38f181bee9c3e9"
   },
   {
     "pinId": 5162,
@@ -38299,33 +38091,33 @@
     "pinId": 5471,
     "sentiment": 0.1,
     "textHash": "9def764f1a8286ad56cab24e447be75d729fc8981566aa408b8e3fa87a110ffc",
-    "utcScoredDateTime": "2026-10-04T14:59:52.077Z",
+    "utcScoredDateTime": "2026-10-04T14:59:52.318Z",
     "product": null,
-    "productHash": "9def764f1a8286ad56cab24e447be75d729fc8981566aa408b8e3fa87a110ffc"
+    "productHash": null
   },
   {
     "pinId": 5472,
     "sentiment": 0,
     "textHash": "61760e3862a0e59d3ea7ab1751f264bcac8aea752fd60ecd79c1a1b3b92c9898",
-    "utcScoredDateTime": "2026-10-04T14:59:52.335Z",
+    "utcScoredDateTime": "2026-10-04T14:59:53.458Z",
     "product": null,
-    "productHash": "61760e3862a0e59d3ea7ab1751f264bcac8aea752fd60ecd79c1a1b3b92c9898"
+    "productHash": null
   },
   {
     "pinId": 5473,
     "sentiment": 0,
     "textHash": "90cf372d3e95b6cd8be50e62e4ba8dc18647c1fe8fa6889dbdb4c123ce191316",
-    "utcScoredDateTime": "2026-10-04T14:59:53.590Z",
+    "utcScoredDateTime": "2026-10-04T14:59:54.674Z",
     "product": null,
-    "productHash": "90cf372d3e95b6cd8be50e62e4ba8dc18647c1fe8fa6889dbdb4c123ce191316"
+    "productHash": null
   },
   {
     "pinId": 5474,
     "sentiment": 0,
     "textHash": "62a20d7e1db75a9d46b0561aedc38ed05ee03fe7154f3d61cba46d08807a325c",
-    "utcScoredDateTime": "2026-10-04T14:59:54.787Z",
+    "utcScoredDateTime": "2026-10-04T14:59:55.403Z",
     "product": null,
-    "productHash": "62a20d7e1db75a9d46b0561aedc38ed05ee03fe7154f3d61cba46d08807a325c"
+    "productHash": null
   },
   {
     "pinId": 5475,
@@ -39083,145 +38875,145 @@
     "pinId": 5569,
     "sentiment": 0.4,
     "textHash": "f19209d77c806d835e48bbf72a026c5bcf1a70ed2e1f36b468fe8f57f216837e",
-    "utcScoredDateTime": "2026-10-04T14:59:55.522Z",
+    "utcScoredDateTime": "2026-10-04T14:59:56.262Z",
     "product": null,
-    "productHash": "f19209d77c806d835e48bbf72a026c5bcf1a70ed2e1f36b468fe8f57f216837e"
+    "productHash": null
   },
   {
     "pinId": 5570,
     "sentiment": 0.6,
     "textHash": "389c7bd79b1f40dc7e178a44dc757ae047ccdd94e7e1b711ca4a5e16dc300598",
-    "utcScoredDateTime": "2026-10-04T14:59:56.295Z",
+    "utcScoredDateTime": "2026-10-04T14:59:57.061Z",
     "product": null,
-    "productHash": "389c7bd79b1f40dc7e178a44dc757ae047ccdd94e7e1b711ca4a5e16dc300598"
+    "productHash": null
   },
   {
     "pinId": 5571,
     "sentiment": 0.6,
     "textHash": "0b9977a85484ecc9b54ae9c2d49d89b2d5af974da59623d39ebf2b8f4574fd85",
-    "utcScoredDateTime": "2026-10-04T14:59:57.088Z",
+    "utcScoredDateTime": "2026-10-04T14:59:57.557Z",
     "product": null,
-    "productHash": "0b9977a85484ecc9b54ae9c2d49d89b2d5af974da59623d39ebf2b8f4574fd85"
+    "productHash": null
   },
   {
     "pinId": 5572,
     "sentiment": 0.5,
     "textHash": "5dc82b3e8b2013c9f5d6a43fc579720f89bf7423f1c11b3f54766738e99e584b",
-    "utcScoredDateTime": "2026-10-04T14:59:57.584Z",
+    "utcScoredDateTime": "2026-10-04T14:59:57.902Z",
     "product": null,
-    "productHash": "5dc82b3e8b2013c9f5d6a43fc579720f89bf7423f1c11b3f54766738e99e584b"
+    "productHash": null
   },
   {
     "pinId": 5573,
     "sentiment": 0.6,
     "textHash": "90055940a1ccfc5dca784ff6afbc3066a36320e94c43cd7125fb4e747565d08e",
-    "utcScoredDateTime": "2026-10-04T14:59:57.931Z",
+    "utcScoredDateTime": "2026-10-04T14:59:58.321Z",
     "product": null,
-    "productHash": "90055940a1ccfc5dca784ff6afbc3066a36320e94c43cd7125fb4e747565d08e"
+    "productHash": null
   },
   {
     "pinId": 5574,
     "sentiment": 0.4,
     "textHash": "6f438b5b877d7dcf5dea96301860e68ff2ad1228ea240428ed71046ad2ab25c6",
-    "utcScoredDateTime": "2026-10-04T14:59:58.338Z",
+    "utcScoredDateTime": "2026-10-04T14:59:59.507Z",
     "product": null,
-    "productHash": "6f438b5b877d7dcf5dea96301860e68ff2ad1228ea240428ed71046ad2ab25c6"
+    "productHash": null
   },
   {
     "pinId": 5575,
     "sentiment": 0.6,
     "textHash": "ee8a85d81532f44578fbcdae2d84d06b50f2f03c57ba239819aa18b1cad63dd7",
-    "utcScoredDateTime": "2026-10-04T14:59:59.607Z",
+    "utcScoredDateTime": "2026-10-04T15:00:09.876Z",
     "product": null,
-    "productHash": "ee8a85d81532f44578fbcdae2d84d06b50f2f03c57ba239819aa18b1cad63dd7"
+    "productHash": null
   },
   {
     "pinId": 5576,
     "sentiment": 0.6,
     "textHash": "777b761f0508840048dfb07deb6ebad398a0a2ec170b6c7a6b6788ef1580682d",
-    "utcScoredDateTime": "2026-10-04T15:00:11.679Z",
+    "utcScoredDateTime": "2026-10-04T15:00:21.565Z",
     "product": null,
-    "productHash": "777b761f0508840048dfb07deb6ebad398a0a2ec170b6c7a6b6788ef1580682d"
+    "productHash": null
   },
   {
     "pinId": 5577,
     "sentiment": 0.7,
     "textHash": "4b1e3ac0459b1269c29465bc86f6d640b760461a04ea478cd1c9869bb2a30105",
-    "utcScoredDateTime": "2026-10-04T15:00:21.907Z",
+    "utcScoredDateTime": "2026-10-04T15:00:32.610Z",
     "product": null,
-    "productHash": "4b1e3ac0459b1269c29465bc86f6d640b760461a04ea478cd1c9869bb2a30105"
+    "productHash": null
   },
   {
     "pinId": 5578,
     "sentiment": 0.8,
     "textHash": "95ec803b04aed6abc7123b2941e1a23ca8044218a810de438c3ebf1c29c97ed1",
-    "utcScoredDateTime": "2026-10-04T15:00:34.502Z",
+    "utcScoredDateTime": "2026-10-04T15:00:56.975Z",
     "product": null,
-    "productHash": "95ec803b04aed6abc7123b2941e1a23ca8044218a810de438c3ebf1c29c97ed1"
+    "productHash": null
   },
   {
     "pinId": 5579,
     "sentiment": 0.6,
     "textHash": "fcc606141407401c31c6e9c6231e2653926c52201b8e4bd65367763da838eeaf",
-    "utcScoredDateTime": "2026-10-04T15:00:57.153Z",
+    "utcScoredDateTime": "2026-10-04T15:01:00.957Z",
     "product": null,
-    "productHash": "fcc606141407401c31c6e9c6231e2653926c52201b8e4bd65367763da838eeaf"
+    "productHash": null
   },
   {
     "pinId": 5580,
     "sentiment": -0.4,
     "textHash": "09ad63645affaa6c2f313661541fc17ff5c1ff0dfce5b1ca78b1f3b6389fe79b",
-    "utcScoredDateTime": "2026-10-04T15:01:01.040Z",
+    "utcScoredDateTime": "2026-10-04T15:01:05.848Z",
     "product": null,
-    "productHash": "09ad63645affaa6c2f313661541fc17ff5c1ff0dfce5b1ca78b1f3b6389fe79b"
+    "productHash": null
   },
   {
     "pinId": 5581,
     "sentiment": -0.8,
     "textHash": "18b53836dc994a6beee3dae0aab221c4614eb625ca2460705ce81be29ecd1e48",
-    "utcScoredDateTime": "2026-10-04T15:01:06.110Z",
+    "utcScoredDateTime": "2026-10-04T15:01:08.494Z",
     "product": null,
-    "productHash": "18b53836dc994a6beee3dae0aab221c4614eb625ca2460705ce81be29ecd1e48"
+    "productHash": null
   },
   {
     "pinId": 5582,
     "sentiment": 0.7,
     "textHash": "80ce28daf97ec667baf4c12d142a44cccdc10d39f586da012ef181e0289db1c8",
-    "utcScoredDateTime": "2026-10-04T15:01:08.558Z",
+    "utcScoredDateTime": "2026-10-04T15:01:09.328Z",
     "product": null,
-    "productHash": "80ce28daf97ec667baf4c12d142a44cccdc10d39f586da012ef181e0289db1c8"
+    "productHash": null
   },
   {
     "pinId": 5583,
     "sentiment": 0.7,
     "textHash": "8cade9089894791b631a14e4d918bda81c3281b97f502a94486c69a66b1ec310",
-    "utcScoredDateTime": "2026-10-04T15:01:09.346Z",
+    "utcScoredDateTime": "2026-10-04T15:01:09.701Z",
     "product": null,
-    "productHash": "8cade9089894791b631a14e4d918bda81c3281b97f502a94486c69a66b1ec310"
+    "productHash": null
   },
   {
     "pinId": 5584,
     "sentiment": 0.7,
     "textHash": "84bc2d51839113df2d5c70be3eca63a697e363178484d6f84c88ed51131395aa",
-    "utcScoredDateTime": "2026-10-04T15:01:09.732Z",
+    "utcScoredDateTime": "2026-10-04T15:01:10.180Z",
     "product": null,
-    "productHash": "84bc2d51839113df2d5c70be3eca63a697e363178484d6f84c88ed51131395aa"
+    "productHash": null
   },
   {
     "pinId": 5585,
     "sentiment": 0.7,
     "textHash": "75d151d9ea48c8eabfb40877d76702f83a6ab2ddc5d4efb139c3683db93deeea",
-    "utcScoredDateTime": "2026-10-04T15:01:10.209Z",
+    "utcScoredDateTime": "2026-10-04T15:01:10.748Z",
     "product": null,
-    "productHash": "75d151d9ea48c8eabfb40877d76702f83a6ab2ddc5d4efb139c3683db93deeea"
+    "productHash": null
   },
   {
     "pinId": 5586,
     "sentiment": 0.6,
     "textHash": "a1c8063a95ed9bfeaf781b64314dde6e95668d54fa4db8cca3934ab4fbbb7a24",
-    "utcScoredDateTime": "2026-10-04T15:01:10.778Z",
+    "utcScoredDateTime": "2026-10-04T15:01:11.389Z",
     "product": null,
-    "productHash": "a1c8063a95ed9bfeaf781b64314dde6e95668d54fa4db8cca3934ab4fbbb7a24"
+    "productHash": null
   },
   {
     "pinId": 5609,
@@ -40286,5 +40078,2469 @@
     "utcScoredDateTime": "2026-10-04T05:05:45.787Z",
     "product": "MacBook Pro",
     "productHash": "947089bd6b368e769007b220d8ba61e440f33b872459e313d6f690377bddfdc3"
+  },
+  {
+    "pinId": 5765,
+    "sentiment": 0.7,
+    "textHash": "8f52274b2a498815501ed53721b70363d3c24d767b8ea3b944debba912fbc30a",
+    "utcScoredDateTime": "2026-10-04T16:01:50.550Z",
+    "product": "Grand Theft Auto",
+    "productHash": "8f52274b2a498815501ed53721b70363d3c24d767b8ea3b944debba912fbc30a"
+  },
+  {
+    "pinId": 5766,
+    "sentiment": 0.7,
+    "textHash": "990eaf1f0c7fa3f29050977f461d9235a77df9db6b4b0db888b593168d06f3c8",
+    "utcScoredDateTime": "2026-10-04T16:02:11.081Z",
+    "product": "Grand Theft Auto",
+    "productHash": "990eaf1f0c7fa3f29050977f461d9235a77df9db6b4b0db888b593168d06f3c8"
+  },
+  {
+    "pinId": 5767,
+    "sentiment": 0.7,
+    "textHash": "f9c5ab1771fd9ca624d879cfc2eaf3b7138e7197b2cd55217a1e7900d04e5120",
+    "utcScoredDateTime": "2026-10-04T16:02:30.467Z",
+    "product": "Grand Theft Auto",
+    "productHash": "f9c5ab1771fd9ca624d879cfc2eaf3b7138e7197b2cd55217a1e7900d04e5120"
+  },
+  {
+    "pinId": 5768,
+    "sentiment": 0.7,
+    "textHash": "3f133ac4bb986f78fe1f578b3ac9d62640c483a11d1be550a8e6a668f538d3c6",
+    "utcScoredDateTime": "2026-10-04T16:02:49.888Z",
+    "product": "Grand Theft Auto",
+    "productHash": "3f133ac4bb986f78fe1f578b3ac9d62640c483a11d1be550a8e6a668f538d3c6"
+  },
+  {
+    "pinId": 5769,
+    "sentiment": 0.2,
+    "textHash": "af04d27d54a662c7adaf0282d5c475541695533780ea48d83f11b99375e72f6f",
+    "utcScoredDateTime": "2026-10-04T16:03:23.406Z",
+    "product": "Grand Theft Auto",
+    "productHash": "af04d27d54a662c7adaf0282d5c475541695533780ea48d83f11b99375e72f6f"
+  },
+  {
+    "pinId": 5770,
+    "sentiment": -0.6,
+    "textHash": "4bd7cd8e910032a8d9d08e669ffa702975062d396314cbb155b5b63f1cc3a6af",
+    "utcScoredDateTime": "2026-10-04T16:03:59.499Z",
+    "product": "Grand Theft Auto",
+    "productHash": "4bd7cd8e910032a8d9d08e669ffa702975062d396314cbb155b5b63f1cc3a6af"
+  },
+  {
+    "pinId": 5771,
+    "sentiment": 0.8,
+    "textHash": "19df50b98c573b6fac8148cc589fcac5b07b1cc8049541494e76016be56b71e0",
+    "utcScoredDateTime": "2026-10-04T16:05:13.421Z",
+    "product": "Grand Theft Auto",
+    "productHash": "19df50b98c573b6fac8148cc589fcac5b07b1cc8049541494e76016be56b71e0"
+  },
+  {
+    "pinId": 5772,
+    "sentiment": -0.5,
+    "textHash": "1bb506a4679d9a13ff97f1db78595602b1949f4ca453a43c19ddd7ea8a76e7a5",
+    "utcScoredDateTime": "2026-10-04T16:05:34.935Z",
+    "product": "Grand Theft Auto",
+    "productHash": "1bb506a4679d9a13ff97f1db78595602b1949f4ca453a43c19ddd7ea8a76e7a5"
+  },
+  {
+    "pinId": 5773,
+    "sentiment": 0.8,
+    "textHash": "dca65c0addda2ece014c61853f075b98a0be6db0171d936b6b676620093dbe5e",
+    "utcScoredDateTime": "2026-10-04T16:05:55.308Z",
+    "product": "Grand Theft Auto",
+    "productHash": "dca65c0addda2ece014c61853f075b98a0be6db0171d936b6b676620093dbe5e"
+  },
+  {
+    "pinId": 5774,
+    "sentiment": -0.5,
+    "textHash": "522101eeb58192e5f76e550c1fcbd115a92a28c74ebc95ac54fa77cca3493b86",
+    "utcScoredDateTime": "2026-10-04T16:06:17.787Z",
+    "product": "Grand Theft Auto",
+    "productHash": "522101eeb58192e5f76e550c1fcbd115a92a28c74ebc95ac54fa77cca3493b86"
+  },
+  {
+    "pinId": 5775,
+    "sentiment": 0.2,
+    "textHash": "30652cfe381dfe058da230669eeb41b846c2ef67e98e7f424a83770383e31d52",
+    "utcScoredDateTime": "2026-10-04T16:06:38.505Z",
+    "product": "Grand Theft Auto",
+    "productHash": "30652cfe381dfe058da230669eeb41b846c2ef67e98e7f424a83770383e31d52"
+  },
+  {
+    "pinId": 5776,
+    "sentiment": 0.8,
+    "textHash": "801545256648fd75e6cf21f45672bbd4c00c2b29401991777c54364995fd55b1",
+    "utcScoredDateTime": "2026-10-04T16:06:53.966Z",
+    "product": "Grand Theft Auto",
+    "productHash": "801545256648fd75e6cf21f45672bbd4c00c2b29401991777c54364995fd55b1"
+  },
+  {
+    "pinId": 5777,
+    "sentiment": 0.4,
+    "textHash": "d2fcba6a867d97b59b6eb67799af670450880db0fa45009599ddb27625e47f24",
+    "utcScoredDateTime": "2026-10-04T16:07:11.834Z",
+    "product": "Grand Theft Auto",
+    "productHash": "d2fcba6a867d97b59b6eb67799af670450880db0fa45009599ddb27625e47f24"
+  },
+  {
+    "pinId": 5778,
+    "sentiment": 0.4,
+    "textHash": "280e4142cef22258aa0da62bbcc7647f80f3191be7353a9896daeb096fd4df48",
+    "utcScoredDateTime": "2026-10-04T16:52:54.953Z",
+    "product": "Alphabet",
+    "productHash": "280e4142cef22258aa0da62bbcc7647f80f3191be7353a9896daeb096fd4df48"
+  },
+  {
+    "pinId": 5779,
+    "sentiment": 0.8,
+    "textHash": "7f2617ac16627be1ec683260364971765e19648e8ef3934cc6ccb8050b9bbcc5",
+    "utcScoredDateTime": "2026-10-04T16:53:28.919Z",
+    "product": "Google Search",
+    "productHash": "7f2617ac16627be1ec683260364971765e19648e8ef3934cc6ccb8050b9bbcc5"
+  },
+  {
+    "pinId": 5780,
+    "sentiment": 0.3,
+    "textHash": "45a22083a28f5b6d03d0333283357e0b53eff0057d5661175a9bba4672d35781",
+    "utcScoredDateTime": "2026-10-04T16:53:47.154Z",
+    "product": "Google Search",
+    "productHash": "45a22083a28f5b6d03d0333283357e0b53eff0057d5661175a9bba4672d35781"
+  },
+  {
+    "pinId": 5781,
+    "sentiment": 0.7,
+    "textHash": "a56715f48d4d7e81099b1b692d9021710ca6327311dbfc740bc0c78ec22743ca",
+    "utcScoredDateTime": "2026-10-04T16:54:06.178Z",
+    "product": "Google Cloud",
+    "productHash": "a56715f48d4d7e81099b1b692d9021710ca6327311dbfc740bc0c78ec22743ca"
+  },
+  {
+    "pinId": 5782,
+    "sentiment": 0.6,
+    "textHash": "83bf1a7d626c26a778ed9cfc5be185f8cb57aeae941eafff2bd071b9364a29f4",
+    "utcScoredDateTime": "2026-10-04T16:54:25.742Z",
+    "product": "Google Cloud",
+    "productHash": "83bf1a7d626c26a778ed9cfc5be185f8cb57aeae941eafff2bd071b9364a29f4"
+  },
+  {
+    "pinId": 5783,
+    "sentiment": 0.7,
+    "textHash": "07068c8d8afc68d39ddeef4544552d5748c98463e7da2894a785e32690ae4af7",
+    "utcScoredDateTime": "2026-10-04T16:54:44.591Z",
+    "product": "Instinct MI450",
+    "productHash": "07068c8d8afc68d39ddeef4544552d5748c98463e7da2894a785e32690ae4af7"
+  },
+  {
+    "pinId": 5784,
+    "sentiment": 0.7,
+    "textHash": "85c371772cec3265a6b68145138fd63506a1bc25d38339da78b1986d27ffbc86",
+    "utcScoredDateTime": "2026-10-04T16:55:03.804Z",
+    "product": "Instinct MI450",
+    "productHash": "85c371772cec3265a6b68145138fd63506a1bc25d38339da78b1986d27ffbc86"
+  },
+  {
+    "pinId": 5785,
+    "sentiment": 0.8,
+    "textHash": "cad5801ce7dd4d7f1f3fefa335c011457816de48333e040bb77c724d4af855b3",
+    "utcScoredDateTime": "2026-10-04T16:55:22.903Z",
+    "product": "Ryzen",
+    "productHash": "cad5801ce7dd4d7f1f3fefa335c011457816de48333e040bb77c724d4af855b3"
+  },
+  {
+    "pinId": 5786,
+    "sentiment": 0.4,
+    "textHash": "7260ed308fe97bab78824e6ac7ae0cafd8dc15d91b00451b1890e6dba5ddde40",
+    "utcScoredDateTime": "2026-10-04T16:55:42.101Z",
+    "product": "World Labs",
+    "productHash": "7260ed308fe97bab78824e6ac7ae0cafd8dc15d91b00451b1890e6dba5ddde40"
+  },
+  {
+    "pinId": 5787,
+    "sentiment": 0.6,
+    "textHash": "9c97b0ba03e9c5e7ca13775a9b7f8a88e235433637a828487f227589401f1512",
+    "utcScoredDateTime": "2026-10-04T16:56:01.480Z",
+    "product": "Xilinx",
+    "productHash": "9c97b0ba03e9c5e7ca13775a9b7f8a88e235433637a828487f227589401f1512"
+  },
+  {
+    "pinId": 5788,
+    "sentiment": 0.5,
+    "textHash": "790067872ad8e0e825173b6be2526467625da3921dcfc65265ab5e5cd2f341ac",
+    "utcScoredDateTime": "2026-10-04T16:56:21.677Z",
+    "product": "ZT Systems",
+    "productHash": "790067872ad8e0e825173b6be2526467625da3921dcfc65265ab5e5cd2f341ac"
+  },
+  {
+    "pinId": 5789,
+    "sentiment": 0.3,
+    "textHash": "bf100f346eb72252d9ab43d500fce74e143a9955da8f5f5f70dc9f84678c7469",
+    "utcScoredDateTime": "2026-10-04T17:00:18.241Z",
+    "product": "Leadership",
+    "productHash": "bf100f346eb72252d9ab43d500fce74e143a9955da8f5f5f70dc9f84678c7469"
+  },
+  {
+    "pinId": 5790,
+    "sentiment": 0.8,
+    "textHash": "3b6520acb8b8f9e90551922af3e9386a0cbe917f0afc11a1bca6b04811db1db3",
+    "utcScoredDateTime": "2026-10-04T17:00:43.719Z",
+    "product": "Quarterly results",
+    "productHash": "3b6520acb8b8f9e90551922af3e9386a0cbe917f0afc11a1bca6b04811db1db3"
+  },
+  {
+    "pinId": 5791,
+    "sentiment": 0.6,
+    "textHash": "d8783f317952ceab0a57698e8782965bffb758ebbd9a11b31485f4041ab91338",
+    "utcScoredDateTime": "2026-10-04T17:01:04.910Z",
+    "product": "Annual results",
+    "productHash": "d8783f317952ceab0a57698e8782965bffb758ebbd9a11b31485f4041ab91338"
+  },
+  {
+    "pinId": 5792,
+    "sentiment": 0.4,
+    "textHash": "29506c2b81b3836aa67e64aa55f52b4d79a7f8380db1b19dad58aa30d9d84fe4",
+    "utcScoredDateTime": "2026-10-04T17:01:27.206Z",
+    "product": "Mining technology",
+    "productHash": "29506c2b81b3836aa67e64aa55f52b4d79a7f8380db1b19dad58aa30d9d84fe4"
+  },
+  {
+    "pinId": 5793,
+    "sentiment": 0.7,
+    "textHash": "b8bded1648e6e6edcb01cbe7c54a17309b8bec97824bbc448e2c05463817b1de",
+    "utcScoredDateTime": "2026-10-04T17:01:53.143Z",
+    "product": "Routers",
+    "productHash": "b8bded1648e6e6edcb01cbe7c54a17309b8bec97824bbc448e2c05463817b1de"
+  },
+  {
+    "pinId": 5794,
+    "sentiment": -0.6,
+    "textHash": "e48be0d8a65da644e929117fb8e7e4729a04eba3e4c89ea84bab4fecd98bd18f",
+    "utcScoredDateTime": "2026-10-04T17:02:15.110Z",
+    "product": "Restructuring",
+    "productHash": "e48be0d8a65da644e929117fb8e7e4729a04eba3e4c89ea84bab4fecd98bd18f"
+  },
+  {
+    "pinId": 5795,
+    "sentiment": 0.8,
+    "textHash": "b0dc67a1d806561b9e5c317245de339f0aa8413949664e2d6d26dc7e2ea79604",
+    "utcScoredDateTime": "2026-10-04T17:02:33.814Z",
+    "product": "AI infrastructure",
+    "productHash": "b0dc67a1d806561b9e5c317245de339f0aa8413949664e2d6d26dc7e2ea79604"
+  },
+  {
+    "pinId": 5796,
+    "sentiment": 0.6,
+    "textHash": "5dff8fe3418749d9e1c32439a0f29395478379de71dffa2a17005838793620bb",
+    "utcScoredDateTime": "2026-10-04T17:02:52.060Z",
+    "product": "Splunk",
+    "productHash": "5dff8fe3418749d9e1c32439a0f29395478379de71dffa2a17005838793620bb"
+  },
+  {
+    "pinId": 5797,
+    "sentiment": 0.4,
+    "textHash": "98caed7005dbaa2bb987d07368f0fa49d645845ae8744684149e3f23f7a713e1",
+    "utcScoredDateTime": "2026-10-04T17:03:15.468Z",
+    "product": "Splunk",
+    "productHash": "98caed7005dbaa2bb987d07368f0fa49d645845ae8744684149e3f23f7a713e1"
+  },
+  {
+    "pinId": 5798,
+    "sentiment": 0.3,
+    "textHash": "377c6d3bcfef0d8f7c29f8e5d323a04bb61e65d21b198937b0417b642bc6caba",
+    "utcScoredDateTime": "2026-10-04T17:03:34.160Z",
+    "product": "Dell EMC",
+    "productHash": "377c6d3bcfef0d8f7c29f8e5d323a04bb61e65d21b198937b0417b642bc6caba"
+  },
+  {
+    "pinId": 5799,
+    "sentiment": 0,
+    "textHash": "96cafd2f4c16e7000f4316651cbbd5e51d1882242b497b007b233efa25a54174",
+    "utcScoredDateTime": "2026-10-04T17:03:53.318Z",
+    "product": "Go-private buyout",
+    "productHash": "96cafd2f4c16e7000f4316651cbbd5e51d1882242b497b007b233efa25a54174"
+  },
+  {
+    "pinId": 5800,
+    "sentiment": 0.4,
+    "textHash": "81276add9073fd12d68e21886ef941500b713752a626dc15811c91ff037b4209",
+    "utcScoredDateTime": "2026-10-04T17:04:12.915Z",
+    "product": "Enterprise software",
+    "productHash": "81276add9073fd12d68e21886ef941500b713752a626dc15811c91ff037b4209"
+  },
+  {
+    "pinId": 5801,
+    "sentiment": 0.8,
+    "textHash": "9e5bd2c52d71a9aaafd90ab9999b19be75bc9a3fb7cd8b50849e94ce9d3114c7",
+    "utcScoredDateTime": "2026-10-04T17:04:31.399Z",
+    "product": "AI servers",
+    "productHash": "9e5bd2c52d71a9aaafd90ab9999b19be75bc9a3fb7cd8b50849e94ce9d3114c7"
+  },
+  {
+    "pinId": 5802,
+    "sentiment": 0.7,
+    "textHash": "601c53201e9e502731c11942bb43cc0d18ef623e8a4f5bd3a635e834958f9b46",
+    "utcScoredDateTime": "2026-10-04T17:04:51.355Z",
+    "product": "AI servers",
+    "productHash": "601c53201e9e502731c11942bb43cc0d18ef623e8a4f5bd3a635e834958f9b46"
+  },
+  {
+    "pinId": 5803,
+    "sentiment": 0.4,
+    "textHash": "99391bca11f04a5f0887e962c3b40ae3278fa6b550613365bf181972e8282b38",
+    "utcScoredDateTime": "2026-10-04T17:05:11.785Z",
+    "product": "Leadership",
+    "productHash": "99391bca11f04a5f0887e962c3b40ae3278fa6b550613365bf181972e8282b38"
+  },
+  {
+    "pinId": 5804,
+    "sentiment": 0.6,
+    "textHash": "cec122e46792df94d2bbf478d5e812c653c81bd5b03048186b1d3406b5ba0a3e",
+    "utcScoredDateTime": "2026-10-04T17:05:31.639Z",
+    "product": "21st Century Fox",
+    "productHash": "cec122e46792df94d2bbf478d5e812c653c81bd5b03048186b1d3406b5ba0a3e"
+  },
+  {
+    "pinId": 5805,
+    "sentiment": 0.6,
+    "textHash": "277dac68646fede87bc1638992cc477dc6cbe3ab9fc908709be01d5f0db8754a",
+    "utcScoredDateTime": "2026-10-04T17:05:50.391Z",
+    "product": "Lucasfilm",
+    "productHash": "277dac68646fede87bc1638992cc477dc6cbe3ab9fc908709be01d5f0db8754a"
+  },
+  {
+    "pinId": 5806,
+    "sentiment": 0.6,
+    "textHash": "5319f7d0a4d3fb098feb0e256ea4142044fa8574403ba85f6e1d2c2c7bca350a",
+    "utcScoredDateTime": "2026-10-04T17:06:09.443Z",
+    "product": "Marvel",
+    "productHash": "5319f7d0a4d3fb098feb0e256ea4142044fa8574403ba85f6e1d2c2c7bca350a"
+  },
+  {
+    "pinId": 5807,
+    "sentiment": 0.2,
+    "textHash": "1829e6210e8e8450a92a80b57097fdc2f2dd654e15735ca6bb85a2a2b2846d34",
+    "utcScoredDateTime": "2026-10-04T17:06:29.830Z",
+    "product": "Generative AI",
+    "productHash": "1829e6210e8e8450a92a80b57097fdc2f2dd654e15735ca6bb85a2a2b2846d34"
+  },
+  {
+    "pinId": 5808,
+    "sentiment": 0.8,
+    "textHash": "3846b8199a8ac1c542a1deb344452025fe7ab28bd05719a5cc5fbec4ad6835e7",
+    "utcScoredDateTime": "2026-10-04T17:06:49.260Z",
+    "product": "Disney+",
+    "productHash": "3846b8199a8ac1c542a1deb344452025fe7ab28bd05719a5cc5fbec4ad6835e7"
+  },
+  {
+    "pinId": 5809,
+    "sentiment": -0.4,
+    "textHash": "4c2367ae27bec585fcca432519a0c84463378f5b839d5766fa6827f3425766ee",
+    "utcScoredDateTime": "2026-10-04T17:07:07.554Z",
+    "product": "Stabroek Block",
+    "productHash": "4c2367ae27bec585fcca432519a0c84463378f5b839d5766fa6827f3425766ee"
+  },
+  {
+    "pinId": 5810,
+    "sentiment": 0.8,
+    "textHash": "e70d9db696445580b30a839f087bc534ecde082954dc3fa573a57a91191e70c7",
+    "utcScoredDateTime": "2026-10-04T17:07:25.098Z",
+    "product": "Stabroek Block",
+    "productHash": "e70d9db696445580b30a839f087bc534ecde082954dc3fa573a57a91191e70c7"
+  },
+  {
+    "pinId": 5811,
+    "sentiment": 0.2,
+    "textHash": "08b25c24e91d1f3b9bb8cabe5350634c504b27fd264658ff216b3bdd3c81c81f",
+    "utcScoredDateTime": "2026-10-04T17:07:43.187Z",
+    "product": "Corporate",
+    "productHash": "08b25c24e91d1f3b9bb8cabe5350634c504b27fd264658ff216b3bdd3c81c81f"
+  },
+  {
+    "pinId": 5812,
+    "sentiment": 0.5,
+    "textHash": "fa364da24c5f58c58d7b1e5f831ddef83bc5fd7efab2815e5e60c6ece33c8bfb",
+    "utcScoredDateTime": "2026-10-04T17:08:02.372Z",
+    "product": "Permian Basin",
+    "productHash": "fa364da24c5f58c58d7b1e5f831ddef83bc5fd7efab2815e5e60c6ece33c8bfb"
+  },
+  {
+    "pinId": 5813,
+    "sentiment": 0.6,
+    "textHash": "6931bb4b14bff16cda80d3d0c8550f98f4762f79d11f12b944a49a403ad0c157",
+    "utcScoredDateTime": "2026-10-04T17:08:21.068Z",
+    "product": "Earnings",
+    "productHash": "6931bb4b14bff16cda80d3d0c8550f98f4762f79d11f12b944a49a403ad0c157"
+  },
+  {
+    "pinId": 5814,
+    "sentiment": -0.9,
+    "textHash": "6cf6838b818a99357f7cc627b35a08f308dd9c726d7b1bf3bd91f67d9eadda14",
+    "utcScoredDateTime": "2026-10-04T17:08:40.074Z",
+    "product": "Exxon Valdez",
+    "productHash": "6cf6838b818a99357f7cc627b35a08f308dd9c726d7b1bf3bd91f67d9eadda14"
+  },
+  {
+    "pinId": 5815,
+    "sentiment": 0.4,
+    "textHash": "7acd27de4ec4bb53fff19615a9a2bedbc1b0e1abc0dab4a1cc0782bcb8a2c258",
+    "utcScoredDateTime": "2026-10-04T17:08:59.314Z",
+    "product": "Asset management",
+    "productHash": "7acd27de4ec4bb53fff19615a9a2bedbc1b0e1abc0dab4a1cc0782bcb8a2c258"
+  },
+  {
+    "pinId": 5816,
+    "sentiment": 0.3,
+    "textHash": "2aed49ec0216b2d2e1899dbc996fb46511b31f29bb4b8147b4fd58f767d4e97d",
+    "utcScoredDateTime": "2026-10-04T17:09:18.725Z",
+    "product": "Initial public offering",
+    "productHash": "2aed49ec0216b2d2e1899dbc996fb46511b31f29bb4b8147b4fd58f767d4e97d"
+  },
+  {
+    "pinId": 5817,
+    "sentiment": 0.3,
+    "textHash": "627445b0fee4957a5de2ffdf62aa9a50b5316d9cd04cffc9463fda31b753a1e9",
+    "utcScoredDateTime": "2026-10-04T17:09:36.998Z",
+    "product": "Asset management",
+    "productHash": "627445b0fee4957a5de2ffdf62aa9a50b5316d9cd04cffc9463fda31b753a1e9"
+  },
+  {
+    "pinId": 5818,
+    "sentiment": 0.4,
+    "textHash": "cd2dd374469faf622a91996325c9cccf2c6854aad1ce485ba5c9e5931c1795fa",
+    "utcScoredDateTime": "2026-10-04T17:09:55.466Z",
+    "product": "Asset management",
+    "productHash": "cd2dd374469faf622a91996325c9cccf2c6854aad1ce485ba5c9e5931c1795fa"
+  },
+  {
+    "pinId": 5819,
+    "sentiment": 0.3,
+    "textHash": "3c2d01fc0e63b9dda47f2c86db5849e5bc7c9ccd471999a5f068a68ba1ba95f0",
+    "utcScoredDateTime": "2026-10-04T17:10:13.855Z",
+    "product": "Quarterly results",
+    "productHash": "3c2d01fc0e63b9dda47f2c86db5849e5bc7c9ccd471999a5f068a68ba1ba95f0"
+  },
+  {
+    "pinId": 5820,
+    "sentiment": 0.6,
+    "textHash": "36af1025264ecd3515f928bb9ae232866bcf06e1726337d486b8f8b465b29d41",
+    "utcScoredDateTime": "2026-10-04T17:10:31.796Z",
+    "product": "Quarterly results",
+    "productHash": "36af1025264ecd3515f928bb9ae232866bcf06e1726337d486b8f8b465b29d41"
+  },
+  {
+    "pinId": 5821,
+    "sentiment": -0.5,
+    "textHash": "63713090dc4e949d4871445709254f71c3414fd19137b4f4ac80f25afd64e4f1",
+    "utcScoredDateTime": "2026-10-04T17:10:49.631Z",
+    "product": "Debit",
+    "productHash": "63713090dc4e949d4871445709254f71c3414fd19137b4f4ac80f25afd64e4f1"
+  },
+  {
+    "pinId": 5822,
+    "sentiment": 0.7,
+    "textHash": "3bc61e99253bbe1472689d2bddba49f5c1f8c4cefe10f8a03d730a1d976c13e2",
+    "utcScoredDateTime": "2026-10-04T17:11:09.869Z",
+    "product": "Visa Intelligent Commerce",
+    "productHash": "3bc61e99253bbe1472689d2bddba49f5c1f8c4cefe10f8a03d730a1d976c13e2"
+  },
+  {
+    "pinId": 5823,
+    "sentiment": 0.7,
+    "textHash": "8c1991f47c940219acc7606bd5c657b52009e0da6d292dc3137f8dba07fb6c8f",
+    "utcScoredDateTime": "2026-10-04T17:11:29.502Z",
+    "product": "Corporate",
+    "productHash": "8c1991f47c940219acc7606bd5c657b52009e0da6d292dc3137f8dba07fb6c8f"
+  },
+  {
+    "pinId": 5824,
+    "sentiment": 0.1,
+    "textHash": "b343565e7863162f4374a7f703e338d0586dff883b60e8965024e64a9ebb3875",
+    "utcScoredDateTime": "2026-10-04T17:11:49.623Z",
+    "product": "Interchange",
+    "productHash": "b343565e7863162f4374a7f703e338d0586dff883b60e8965024e64a9ebb3875"
+  },
+  {
+    "pinId": 5825,
+    "sentiment": 0.7,
+    "textHash": "07b05edd2cd679cf632e7a6732e35c49d69d0ad7ccad3bb3ee96a0623797e79a",
+    "utcScoredDateTime": "2026-10-04T17:12:07.556Z",
+    "product": "Visa Intelligent Commerce",
+    "productHash": "07b05edd2cd679cf632e7a6732e35c49d69d0ad7ccad3bb3ee96a0623797e79a"
+  },
+  {
+    "pinId": 5826,
+    "sentiment": -0.3,
+    "textHash": "4acaa528d9aeccc20a5065e59e174a6d42443b75a754403e206fc796116570fe",
+    "utcScoredDateTime": "2026-10-04T17:12:24.705Z",
+    "product": "Plaid",
+    "productHash": "4acaa528d9aeccc20a5065e59e174a6d42443b75a754403e206fc796116570fe"
+  },
+  {
+    "pinId": 5827,
+    "sentiment": 0.7,
+    "textHash": "904b5b408b4d737841337fcc5f4c48f610703622509032a6a050fe5fc855dddb",
+    "utcScoredDateTime": "2026-10-04T17:12:43.553Z",
+    "product": "Walmart stock",
+    "productHash": "904b5b408b4d737841337fcc5f4c48f610703622509032a6a050fe5fc855dddb"
+  },
+  {
+    "pinId": 5828,
+    "sentiment": 0.3,
+    "textHash": "c183638708b537354de14c88fa191b40bfb1fdd6c4e2741a8e4f167a00f5ac95",
+    "utcScoredDateTime": "2026-10-04T17:13:02.732Z",
+    "product": "Walmart U.S.",
+    "productHash": "c183638708b537354de14c88fa191b40bfb1fdd6c4e2741a8e4f167a00f5ac95"
+  },
+  {
+    "pinId": 5829,
+    "sentiment": 0.4,
+    "textHash": "e15cf5ba50141cd1b075066b0cd6b1aea4d0ba9d7174a32703e2ece659267ce6",
+    "utcScoredDateTime": "2026-10-04T17:13:22.656Z",
+    "product": "Walmart stock",
+    "productHash": "e15cf5ba50141cd1b075066b0cd6b1aea4d0ba9d7174a32703e2ece659267ce6"
+  },
+  {
+    "pinId": 5830,
+    "sentiment": 0.5,
+    "textHash": "14713b13073f125c023be4872641fa64b65eff6717f8b4fa7339d2ab30b1fa51",
+    "utcScoredDateTime": "2026-10-04T17:13:43.817Z",
+    "product": "Sparky",
+    "productHash": "14713b13073f125c023be4872641fa64b65eff6717f8b4fa7339d2ab30b1fa51"
+  },
+  {
+    "pinId": 5831,
+    "sentiment": 0.4,
+    "textHash": "ffa86b75073bffd01263669d97e5502ba9747b65e83c6e76a6be00e388ec27fe",
+    "utcScoredDateTime": "2026-10-04T17:14:02.320Z",
+    "product": "Walmart earnings",
+    "productHash": "ffa86b75073bffd01263669d97e5502ba9747b65e83c6e76a6be00e388ec27fe"
+  },
+  {
+    "pinId": 5832,
+    "sentiment": -0.2,
+    "textHash": "9e7b8f6a4219afcaa0fcc29e95524063725d5fe2c631a482ca371071fa67c422",
+    "utcScoredDateTime": "2026-10-04T17:14:21.115Z",
+    "product": "Walmart earnings",
+    "productHash": "9e7b8f6a4219afcaa0fcc29e95524063725d5fe2c631a482ca371071fa67c422"
+  },
+  {
+    "pinId": 5833,
+    "sentiment": 0.4,
+    "textHash": "8f3b19960d3895b7f0b73c11b69dbb1eeeea383b90830428e33361932ec6534c",
+    "utcScoredDateTime": "2026-10-04T17:30:57.333Z",
+    "product": "Allergan",
+    "productHash": "8f3b19960d3895b7f0b73c11b69dbb1eeeea383b90830428e33361932ec6534c"
+  },
+  {
+    "pinId": 5834,
+    "sentiment": 0.4,
+    "textHash": "832a9e59f7a2603f7d3451857284a282b158cf0d7b83740166df5c3ee29462aa",
+    "utcScoredDateTime": "2026-10-04T17:31:18.982Z",
+    "product": "Apogee",
+    "productHash": "832a9e59f7a2603f7d3451857284a282b158cf0d7b83740166df5c3ee29462aa"
+  },
+  {
+    "pinId": 5835,
+    "sentiment": 0.5,
+    "textHash": "6ac2170773d54c73c1ec1ae4da09356d26d48be64d44847589428197f917489d",
+    "utcScoredDateTime": "2026-10-04T17:31:38.576Z",
+    "product": "Apogee",
+    "productHash": "6ac2170773d54c73c1ec1ae4da09356d26d48be64d44847589428197f917489d"
+  },
+  {
+    "pinId": 5836,
+    "sentiment": 0.7,
+    "textHash": "c46dc99d1375cfb59ec123ea67d5031a0fb84079b5ab3355fc5f8ddfa74950c9",
+    "utcScoredDateTime": "2026-10-04T17:32:06.318Z",
+    "product": "Juvmo",
+    "productHash": "c46dc99d1375cfb59ec123ea67d5031a0fb84079b5ab3355fc5f8ddfa74950c9"
+  },
+  {
+    "pinId": 5837,
+    "sentiment": 0.5,
+    "textHash": "7dee3b28f586bc0247ab1af47f312cd8aae2e0598cc61243b6e72e35ef130eeb",
+    "utcScoredDateTime": "2026-10-04T17:32:29.025Z",
+    "product": "Skyrizi",
+    "productHash": "7dee3b28f586bc0247ab1af47f312cd8aae2e0598cc61243b6e72e35ef130eeb"
+  },
+  {
+    "pinId": 5838,
+    "sentiment": 0.7,
+    "textHash": "dde0bc43ea378ccb61f0f5457507e2b2c42be00c5540538e146356dd2af04bc3",
+    "utcScoredDateTime": "2026-10-04T17:32:47.592Z",
+    "product": "Arm AGI CPU",
+    "productHash": "dde0bc43ea378ccb61f0f5457507e2b2c42be00c5540538e146356dd2af04bc3"
+  },
+  {
+    "pinId": 5839,
+    "sentiment": 0.7,
+    "textHash": "03c21363830124fb8232246b3a846b5b0607f72c49244cc5247ed9a7e056429d",
+    "utcScoredDateTime": "2026-10-04T17:33:14.452Z",
+    "product": "IPO",
+    "productHash": "03c21363830124fb8232246b3a846b5b0607f72c49244cc5247ed9a7e056429d"
+  },
+  {
+    "pinId": 5840,
+    "sentiment": -0.2,
+    "textHash": "7a04fa8b0ad6512e45433e5b56d447342fc37a16214d8a174293149bd307e2aa",
+    "utcScoredDateTime": "2026-10-04T17:33:33.259Z",
+    "product": "Acquisition",
+    "productHash": "7a04fa8b0ad6512e45433e5b56d447342fc37a16214d8a174293149bd307e2aa"
+  },
+  {
+    "pinId": 5841,
+    "sentiment": 0.6,
+    "textHash": "f94d433444857d7b9aa47efd3cedf3da9dbcd6e41d3ce3c603a5845a022b3366",
+    "utcScoredDateTime": "2026-10-04T17:33:53.306Z",
+    "product": "Earnings",
+    "productHash": "f94d433444857d7b9aa47efd3cedf3da9dbcd6e41d3ce3c603a5845a022b3366"
+  },
+  {
+    "pinId": 5842,
+    "sentiment": 0.7,
+    "textHash": "1b2d14d24926920fc18e7b4c49f0927fc9884d5075ec566e9f545765422bb9b9",
+    "utcScoredDateTime": "2026-10-04T17:34:11.213Z",
+    "product": "Earnings",
+    "productHash": "1b2d14d24926920fc18e7b4c49f0927fc9884d5075ec566e9f545765422bb9b9"
+  },
+  {
+    "pinId": 5843,
+    "sentiment": -0.4,
+    "textHash": "0ca9b6679c68e4357fe76bb77f47a9092a4ff1fac5eaccb9c62847e2d6245d80",
+    "utcScoredDateTime": "2026-10-04T17:34:33.192Z",
+    "product": "Licensing",
+    "productHash": "0ca9b6679c68e4357fe76bb77f47a9092a4ff1fac5eaccb9c62847e2d6245d80"
+  },
+  {
+    "pinId": 5844,
+    "sentiment": 0.3,
+    "textHash": "4a0d1c5f140e8dcb30a2c311dcc8e3518052a992c4db3b84a3c7dc27c3f45f43",
+    "utcScoredDateTime": "2026-10-04T17:34:52.627Z",
+    "product": "Banamex divestiture",
+    "productHash": "4a0d1c5f140e8dcb30a2c311dcc8e3518052a992c4db3b84a3c7dc27c3f45f43"
+  },
+  {
+    "pinId": 5845,
+    "sentiment": 0.3,
+    "textHash": "ac6e8473abd4f798aa282eae58a8884f134ca92601e5fbfd556284b54edac890",
+    "utcScoredDateTime": "2026-10-04T17:35:10.126Z",
+    "product": "Banamex divestiture",
+    "productHash": "ac6e8473abd4f798aa282eae58a8884f134ca92601e5fbfd556284b54edac890"
+  },
+  {
+    "pinId": 5846,
+    "sentiment": 0.7,
+    "textHash": "cb933bcaeb639f31cecc0b546d61d3c126d220dd3df923ad85f73412cf0d8175",
+    "utcScoredDateTime": "2026-10-04T17:35:36.657Z",
+    "product": "Quarterly results",
+    "productHash": "cb933bcaeb639f31cecc0b546d61d3c126d220dd3df923ad85f73412cf0d8175"
+  },
+  {
+    "pinId": 5847,
+    "sentiment": 0.1,
+    "textHash": "fccc127787e2f424121cda48d2a37c0f95c1a096edd4c55e771fe7cc0e9694ad",
+    "utcScoredDateTime": "2026-10-04T17:36:00.539Z",
+    "product": "Quarterly results",
+    "productHash": "fccc127787e2f424121cda48d2a37c0f95c1a096edd4c55e771fe7cc0e9694ad"
+  },
+  {
+    "pinId": 5848,
+    "sentiment": 0.4,
+    "textHash": "b6a9a04778cc5bdaad816892bd4e1cb82ca73c322782277f13ecb8db0a0630ec",
+    "utcScoredDateTime": "2026-10-04T17:36:23.939Z",
+    "product": "Citicorp-Travelers merger",
+    "productHash": "b6a9a04778cc5bdaad816892bd4e1cb82ca73c322782277f13ecb8db0a0630ec"
+  },
+  {
+    "pinId": 5849,
+    "sentiment": 0.6,
+    "textHash": "c3154dfe3c6a89dade82845f037f6970d940a26e6f92acf2711fe4a7624d0103",
+    "utcScoredDateTime": "2026-10-04T17:36:42.854Z",
+    "product": "Franchising",
+    "productHash": "c3154dfe3c6a89dade82845f037f6970d940a26e6f92acf2711fe4a7624d0103"
+  },
+  {
+    "pinId": 5850,
+    "sentiment": -0.1,
+    "textHash": "3eee0516d4d4f191042f46e13cca37b342fc466b7cceec504188213bfe9a63d7",
+    "utcScoredDateTime": "2026-10-04T17:37:00.928Z",
+    "product": "Leadership",
+    "productHash": "3eee0516d4d4f191042f46e13cca37b342fc466b7cceec504188213bfe9a63d7"
+  },
+  {
+    "pinId": 5851,
+    "sentiment": 0.5,
+    "textHash": "ba673f390a8efc4a9b881162fa359232a11674a788aab3d2de98d108a5e95d69",
+    "utcScoredDateTime": "2026-10-04T17:37:18.073Z",
+    "product": "Naming rights",
+    "productHash": "ba673f390a8efc4a9b881162fa359232a11674a788aab3d2de98d108a5e95d69"
+  },
+  {
+    "pinId": 5852,
+    "sentiment": 0.5,
+    "textHash": "28dd2ffd3a83656a0a367f9a0e211e35efe5b42ebb940f4e41d870f1e3047641",
+    "utcScoredDateTime": "2026-10-04T17:37:38.170Z",
+    "product": "Dividend",
+    "productHash": "28dd2ffd3a83656a0a367f9a0e211e35efe5b42ebb940f4e41d870f1e3047641"
+  },
+  {
+    "pinId": 5853,
+    "sentiment": -0.2,
+    "textHash": "6a6d169dd5fd20d8fce2da80622c5b22e0b7850be4315bbc9bd07d8f5de744fa",
+    "utcScoredDateTime": "2026-10-04T17:37:56.910Z",
+    "product": "McDonald's > NEXT",
+    "productHash": "6a6d169dd5fd20d8fce2da80622c5b22e0b7850be4315bbc9bd07d8f5de744fa"
+  },
+  {
+    "pinId": 5854,
+    "sentiment": 0.3,
+    "textHash": "2946a9faaebcf0e7c86e27f593d43cb7923fef245ca00aaa17c91efdd45a6610",
+    "utcScoredDateTime": "2026-10-04T17:38:17.051Z",
+    "product": "Quarterly results",
+    "productHash": "2946a9faaebcf0e7c86e27f593d43cb7923fef245ca00aaa17c91efdd45a6610"
+  },
+  {
+    "pinId": 5855,
+    "sentiment": 0.4,
+    "textHash": "e8650a426c693ab419fe6de48cc9c7515febac39796abbd64d98066484e41bab",
+    "utcScoredDateTime": "2026-10-04T17:38:35.489Z",
+    "product": "CD388",
+    "productHash": "e8650a426c693ab419fe6de48cc9c7515febac39796abbd64d98066484e41bab"
+  },
+  {
+    "pinId": 5856,
+    "sentiment": 0.8,
+    "textHash": "b9a4a91952d0426100219e22d66421395356716af753324c4af77a0cae825ce0",
+    "utcScoredDateTime": "2026-10-04T17:39:01.142Z",
+    "product": "Keytruda",
+    "productHash": "b9a4a91952d0426100219e22d66421395356716af753324c4af77a0cae825ce0"
+  },
+  {
+    "pinId": 5857,
+    "sentiment": 0.7,
+    "textHash": "101e2ced2297dad947415486905e98c789c5ddee7ef4f7faee0a73b6e1f3d963",
+    "utcScoredDateTime": "2026-10-04T17:39:19.882Z",
+    "product": "Lipfendra",
+    "productHash": "101e2ced2297dad947415486905e98c789c5ddee7ef4f7faee0a73b6e1f3d963"
+  },
+  {
+    "pinId": 5858,
+    "sentiment": -0.1,
+    "textHash": "f1b72146769858dfb8f0dc23cb169af7d8b5482b21256d80a5dc1e8619889dc3",
+    "utcScoredDateTime": "2026-10-04T17:39:43.461Z",
+    "product": "Keytruda",
+    "productHash": "f1b72146769858dfb8f0dc23cb169af7d8b5482b21256d80a5dc1e8619889dc3"
+  },
+  {
+    "pinId": 5859,
+    "sentiment": 0.3,
+    "textHash": "904d03327a9b6df84b3628e436e20581cf19b875b131eabbd660d89604410c01",
+    "utcScoredDateTime": "2026-10-04T17:40:02.240Z",
+    "product": "TERN-701",
+    "productHash": "904d03327a9b6df84b3628e436e20581cf19b875b131eabbd660d89604410c01"
+  },
+  {
+    "pinId": 5860,
+    "sentiment": 0,
+    "textHash": "ed798adea0d66908098ffa7a3ea00617c707089827f1ba7b52c419a7c96ebeed",
+    "utcScoredDateTime": "2026-10-04T17:40:24.545Z",
+    "product": "Leadership",
+    "productHash": "ed798adea0d66908098ffa7a3ea00617c707089827f1ba7b52c419a7c96ebeed"
+  },
+  {
+    "pinId": 5861,
+    "sentiment": -0.6,
+    "textHash": "2d45defc29fb7d8800176cb984d4e8914b864fa79a05fcef4e53a29afe0f8d3c",
+    "utcScoredDateTime": "2026-10-04T17:40:54.450Z",
+    "product": "Annual results",
+    "productHash": "2d45defc29fb7d8800176cb984d4e8914b864fa79a05fcef4e53a29afe0f8d3c"
+  },
+  {
+    "pinId": 5862,
+    "sentiment": 0.3,
+    "textHash": "77f4c409c6e6b2c849785e96f3fb3485206a554ca6c0b697d409f5ff147899cb",
+    "utcScoredDateTime": "2026-10-04T17:41:24.020Z",
+    "product": "Quarterly results",
+    "productHash": "77f4c409c6e6b2c849785e96f3fb3485206a554ca6c0b697d409f5ff147899cb"
+  },
+  {
+    "pinId": 5863,
+    "sentiment": -0.7,
+    "textHash": "21a52264ed74a4d96f4fd576224114b19b62d5e9e45e86e5b208806efbf66e1c",
+    "utcScoredDateTime": "2026-10-04T17:41:43.248Z",
+    "product": "Restructuring",
+    "productHash": "21a52264ed74a4d96f4fd576224114b19b62d5e9e45e86e5b208806efbf66e1c"
+  },
+  {
+    "pinId": 5864,
+    "sentiment": 0.7,
+    "textHash": "fd723f957af5d001038990ffd30594e4974e24a8df660e6556fb772d3a2872c9",
+    "utcScoredDateTime": "2026-10-04T17:42:02.452Z",
+    "product": "Wegovy",
+    "productHash": "fd723f957af5d001038990ffd30594e4974e24a8df660e6556fb772d3a2872c9"
+  },
+  {
+    "pinId": 5865,
+    "sentiment": 0.8,
+    "textHash": "c562ea6193cf4542da6cccd73940bf2193a6a737c64a02bb23d935ec63a2284d",
+    "utcScoredDateTime": "2026-10-04T17:42:21.326Z",
+    "product": "Wegovy",
+    "productHash": "c562ea6193cf4542da6cccd73940bf2193a6a737c64a02bb23d935ec63a2284d"
+  },
+  {
+    "pinId": 5866,
+    "sentiment": 0.5,
+    "textHash": "a12705397a5c9c10b65e14ad575b4db081b6bd31f620dfe782c7d68b2e2494ad",
+    "utcScoredDateTime": "2026-10-04T17:42:40.916Z",
+    "product": "Pepsi-Cola",
+    "productHash": "a12705397a5c9c10b65e14ad575b4db081b6bd31f620dfe782c7d68b2e2494ad"
+  },
+  {
+    "pinId": 5867,
+    "sentiment": 0.1,
+    "textHash": "133dc7892fb2f4c7645e76e876a9e0cd08de043e49fb463b54f1663848fb17e0",
+    "utcScoredDateTime": "2026-10-04T17:42:58.395Z",
+    "product": "Leadership",
+    "productHash": "133dc7892fb2f4c7645e76e876a9e0cd08de043e49fb463b54f1663848fb17e0"
+  },
+  {
+    "pinId": 5868,
+    "sentiment": 0.4,
+    "textHash": "365230c755cf9b2ab45c3c2a42507a8899a0f9890a2c16edbff8bc8e365b150d",
+    "utcScoredDateTime": "2026-10-04T17:43:17.266Z",
+    "product": "Digital twins",
+    "productHash": "365230c755cf9b2ab45c3c2a42507a8899a0f9890a2c16edbff8bc8e365b150d"
+  },
+  {
+    "pinId": 5869,
+    "sentiment": 0.2,
+    "textHash": "2e85c99d9ab3b924f3891a7286a8f093b29e60236363a284b91cd2321a75cb37",
+    "utcScoredDateTime": "2026-10-04T17:43:36.845Z",
+    "product": "Board",
+    "productHash": "2e85c99d9ab3b924f3891a7286a8f093b29e60236363a284b91cd2321a75cb37"
+  },
+  {
+    "pinId": 5870,
+    "sentiment": 0.1,
+    "textHash": "38da5ecfec0be637947190401fedec616336590e793197cbdce86b6054719b1d",
+    "utcScoredDateTime": "2026-10-04T17:43:55.398Z",
+    "product": "Shareholder value plan",
+    "productHash": "38da5ecfec0be637947190401fedec616336590e793197cbdce86b6054719b1d"
+  },
+  {
+    "pinId": 5871,
+    "sentiment": 0,
+    "textHash": "840f60ade84c7f2b615722f1c37e51874a1508938372fba07849284170d63397",
+    "utcScoredDateTime": "2026-10-04T17:44:14.875Z",
+    "product": "Quarterly results",
+    "productHash": "840f60ade84c7f2b615722f1c37e51874a1508938372fba07849284170d63397"
+  },
+  {
+    "pinId": 5872,
+    "sentiment": 0.6,
+    "textHash": "b31df59fb9c33a16f2aea76abb332ae3eaa43c297e57befc529f6d66820d2b6d",
+    "utcScoredDateTime": "2026-10-04T17:44:36.332Z",
+    "product": "Earnings",
+    "productHash": "b31df59fb9c33a16f2aea76abb332ae3eaa43c297e57befc529f6d66820d2b6d"
+  },
+  {
+    "pinId": 5873,
+    "sentiment": 0.6,
+    "textHash": "c7a644b0717b98187c41df14a21f45c0cb5b0adbf50f7eef472dc1174eeacc53",
+    "utcScoredDateTime": "2026-10-04T17:44:57.241Z",
+    "product": "AMRAAM",
+    "productHash": "c7a644b0717b98187c41df14a21f45c0cb5b0adbf50f7eef472dc1174eeacc53"
+  },
+  {
+    "pinId": 5874,
+    "sentiment": 0.5,
+    "textHash": "e693df6be0fc4e9111ba1d387c3ca67421d97bdc9c8d91ee8e393a57a39d82be",
+    "utcScoredDateTime": "2026-10-04T17:45:17.005Z",
+    "product": "Munitions production",
+    "productHash": "e693df6be0fc4e9111ba1d387c3ca67421d97bdc9c8d91ee8e393a57a39d82be"
+  },
+  {
+    "pinId": 5875,
+    "sentiment": 0.6,
+    "textHash": "0c0c20baa34d093f1e8ca3c88b242a0359a929300c40f08a1b93e4d754e365bd",
+    "utcScoredDateTime": "2026-10-04T17:45:35.744Z",
+    "product": "Corporate formation",
+    "productHash": "0c0c20baa34d093f1e8ca3c88b242a0359a929300c40f08a1b93e4d754e365bd"
+  },
+  {
+    "pinId": 5876,
+    "sentiment": 0.6,
+    "textHash": "95d212e8e973d6f8b97476fa1ec1003a099d7b05cc6e1baba82f488cb3be6b5d",
+    "utcScoredDateTime": "2026-10-04T17:45:54.611Z",
+    "product": "SM-6",
+    "productHash": "95d212e8e973d6f8b97476fa1ec1003a099d7b05cc6e1baba82f488cb3be6b5d"
+  },
+  {
+    "pinId": 5877,
+    "sentiment": 0.6,
+    "textHash": "4edebab426b60b15010b838ae642f0c1139b8ff63bdf42b42c937d4f37c5a793",
+    "utcScoredDateTime": "2026-10-04T17:46:18.935Z",
+    "product": "Tomahawk",
+    "productHash": "4edebab426b60b15010b838ae642f0c1139b8ff63bdf42b42c937d4f37c5a793"
+  },
+  {
+    "pinId": 5878,
+    "sentiment": 0.7,
+    "textHash": "1cb2991199f20d888fe13b1d10064d4029e691aae5304984f98a1f4ab1f04262",
+    "utcScoredDateTime": "2026-10-04T17:46:51.799Z",
+    "product": "HBM",
+    "productHash": "1cb2991199f20d888fe13b1d10064d4029e691aae5304984f98a1f4ab1f04262"
+  },
+  {
+    "pinId": 5879,
+    "sentiment": 0.6,
+    "textHash": "669877777a7dd2548da39c27d494b0f8162c7ac9df75374dced050c1710190c5",
+    "utcScoredDateTime": "2026-10-04T17:47:18.595Z",
+    "product": "ADR listing",
+    "productHash": "669877777a7dd2548da39c27d494b0f8162c7ac9df75374dced050c1710190c5"
+  },
+  {
+    "pinId": 5880,
+    "sentiment": 0.8,
+    "textHash": "28e9b337c881632cf6b3c62ad21123a3be4f755c90ccfb6a93070cf9c3cafaf2",
+    "utcScoredDateTime": "2026-10-04T17:47:41.138Z",
+    "product": "Earnings",
+    "productHash": "28e9b337c881632cf6b3c62ad21123a3be4f755c90ccfb6a93070cf9c3cafaf2"
+  },
+  {
+    "pinId": 5881,
+    "sentiment": 0.5,
+    "textHash": "a8810bfccc2f6c9fdc7bcfc7a06c86379cbede6dd3df76aa5c8d2d86075fda6b",
+    "utcScoredDateTime": "2026-10-04T17:48:09.529Z",
+    "product": "Earnings",
+    "productHash": "a8810bfccc2f6c9fdc7bcfc7a06c86379cbede6dd3df76aa5c8d2d86075fda6b"
+  },
+  {
+    "pinId": 5882,
+    "sentiment": 0.8,
+    "textHash": "590d6fe8200bdd5f4f11d5cb31cf759bb3c16312378de6f727e0cb15b49b9bed",
+    "utcScoredDateTime": "2026-10-04T17:48:29.685Z",
+    "product": "Earnings",
+    "productHash": "590d6fe8200bdd5f4f11d5cb31cf759bb3c16312378de6f727e0cb15b49b9bed"
+  },
+  {
+    "pinId": 5883,
+    "sentiment": 0.5,
+    "textHash": "3666bce4a96d9509134b855439a66ab9c4b1020ac187aa2b970a923039fba26a",
+    "utcScoredDateTime": "2026-10-04T17:48:52.862Z",
+    "product": "Solidigm",
+    "productHash": "3666bce4a96d9509134b855439a66ab9c4b1020ac187aa2b970a923039fba26a"
+  },
+  {
+    "pinId": 5884,
+    "sentiment": 0.1,
+    "textHash": "0b310f2b5953b45ec32661355820843bb0b85712c88a59c11cfd702f58eb67c6",
+    "utcScoredDateTime": "2026-10-04T17:49:11.914Z",
+    "product": "Leadership",
+    "productHash": "0b310f2b5953b45ec32661355820843bb0b85712c88a59c11cfd702f58eb67c6"
+  },
+  {
+    "pinId": 5885,
+    "sentiment": 0.6,
+    "textHash": "db58ceb5558130291d9e65afaaee8d5cef3aa521f66076618e173c04c51707e1",
+    "utcScoredDateTime": "2026-10-04T17:49:30.171Z",
+    "product": "Dividend",
+    "productHash": "db58ceb5558130291d9e65afaaee8d5cef3aa521f66076618e173c04c51707e1"
+  },
+  {
+    "pinId": 5886,
+    "sentiment": 0.6,
+    "textHash": "eb9cac2710348c731cda99aa6fc3291bf241d284137c46b6c904460501ad6a14",
+    "utcScoredDateTime": "2026-10-04T17:49:48.881Z",
+    "product": "US manufacturing",
+    "productHash": "eb9cac2710348c731cda99aa6fc3291bf241d284137c46b6c904460501ad6a14"
+  },
+  {
+    "pinId": 5887,
+    "sentiment": 0.9,
+    "textHash": "a7e74613e87efb4c91c683f226fa316714d9bd10c9667c2936353684920debbc",
+    "utcScoredDateTime": "2026-10-04T17:50:07.889Z",
+    "product": "Integrated circuit",
+    "productHash": "a7e74613e87efb4c91c683f226fa316714d9bd10c9667c2936353684920debbc"
+  },
+  {
+    "pinId": 5888,
+    "sentiment": 0.7,
+    "textHash": "c4cd8f1d81a3d5a5fd45e6053d32e59814a99529d09b5fdeec07bba5ef6ba873",
+    "utcScoredDateTime": "2026-10-04T17:50:26.888Z",
+    "product": "Earnings",
+    "productHash": "c4cd8f1d81a3d5a5fd45e6053d32e59814a99529d09b5fdeec07bba5ef6ba873"
+  },
+  {
+    "pinId": 5889,
+    "sentiment": 0.5,
+    "textHash": "96c3130bd29827d23f6cf4a01f156b003efa4f6a84a10db99346bde6a71e473a",
+    "utcScoredDateTime": "2026-10-04T17:50:45.423Z",
+    "product": "Silicon Labs acquisition",
+    "productHash": "96c3130bd29827d23f6cf4a01f156b003efa4f6a84a10db99346bde6a71e473a"
+  },
+  {
+    "pinId": 5890,
+    "sentiment": 0.2,
+    "textHash": "5eaaa8d7a7868284e857794f9ecb2d4c201b27a12f683332ff3d4a64ac696b45",
+    "utcScoredDateTime": "2026-10-04T17:51:09.183Z",
+    "product": "Metal container plants",
+    "productHash": "5eaaa8d7a7868284e857794f9ecb2d4c201b27a12f683332ff3d4a64ac696b45"
+  },
+  {
+    "pinId": 5891,
+    "sentiment": -0.5,
+    "textHash": "84a48247127a2842313b111110b8e36b4c98806d1787c2da8ddabea983c67be8",
+    "utcScoredDateTime": "2026-10-04T17:51:28.785Z",
+    "product": "Anheuser-Busch brewing",
+    "productHash": "84a48247127a2842313b111110b8e36b4c98806d1787c2da8ddabea983c67be8"
+  },
+  {
+    "pinId": 5892,
+    "sentiment": 0.4,
+    "textHash": "e871761058d845a03ccef3746668491cfe9cd791134f0a385c5764566d736671",
+    "utcScoredDateTime": "2026-10-04T17:51:48.687Z",
+    "product": "Annual results",
+    "productHash": "e871761058d845a03ccef3746668491cfe9cd791134f0a385c5764566d736671"
+  },
+  {
+    "pinId": 5893,
+    "sentiment": 0.5,
+    "textHash": "485421d3bdd1d3c5760145303ba9a0e0252d5bb8084493b2315186ca33516d05",
+    "utcScoredDateTime": "2026-10-04T17:52:09.044Z",
+    "product": "Quarterly results",
+    "productHash": "485421d3bdd1d3c5760145303ba9a0e0252d5bb8084493b2315186ca33516d05"
+  },
+  {
+    "pinId": 5894,
+    "sentiment": 0.2,
+    "textHash": "f02205ba5a2286b77c312dbb764d846aa60b12b6d150e56196f521281d239ee0",
+    "utcScoredDateTime": "2026-10-04T22:25:52.495Z",
+    "product": "SABMiller",
+    "productHash": "f02205ba5a2286b77c312dbb764d846aa60b12b6d150e56196f521281d239ee0"
+  },
+  {
+    "pinId": 5895,
+    "sentiment": 0.7,
+    "textHash": "dbe2644d55a27e1ae113ca94ac560b67375199e10b483a857cd21d41522d6d12",
+    "utcScoredDateTime": "2026-10-04T22:26:12.344Z",
+    "product": "Epogen",
+    "productHash": "dbe2644d55a27e1ae113ca94ac560b67375199e10b483a857cd21d41522d6d12"
+  },
+  {
+    "pinId": 5896,
+    "sentiment": 0.4,
+    "textHash": "a198925537b18d8a54c664a3ef01213a78c3b9ae3d5614457dfc0ed42172fa45",
+    "utcScoredDateTime": "2026-10-04T22:26:31.206Z",
+    "product": "Rare disease acquisition",
+    "productHash": "a198925537b18d8a54c664a3ef01213a78c3b9ae3d5614457dfc0ed42172fa45"
+  },
+  {
+    "pinId": 5897,
+    "sentiment": 0.3,
+    "textHash": "306703bbc0807871dc20302b3dbfeec059091848dad0ddd66ae9acd97835ddf7",
+    "utcScoredDateTime": "2026-10-04T22:26:49.675Z",
+    "product": "MariTide",
+    "productHash": "306703bbc0807871dc20302b3dbfeec059091848dad0ddd66ae9acd97835ddf7"
+  },
+  {
+    "pinId": 5898,
+    "sentiment": 0.5,
+    "textHash": "0f89007165bd45322b16b46a82ef87ff971c7499a9b3cb83e8769a6e5e6d4d54",
+    "utcScoredDateTime": "2026-10-04T22:27:09.267Z",
+    "product": "Quarterly results",
+    "productHash": "0f89007165bd45322b16b46a82ef87ff971c7499a9b3cb83e8769a6e5e6d4d54"
+  },
+  {
+    "pinId": 5899,
+    "sentiment": -0.7,
+    "textHash": "3e7df435634bb211ecaf051da5916d7971ccf9433bfa7c237cec3325612b238f",
+    "utcScoredDateTime": "2026-10-04T22:27:27.536Z",
+    "product": "Tavneos",
+    "productHash": "3e7df435634bb211ecaf051da5916d7971ccf9433bfa7c237cec3325612b238f"
+  },
+  {
+    "pinId": 5900,
+    "sentiment": 0.7,
+    "textHash": "a2458f0293f0b6afa3167426aadb523a784e01c67df5c81bd3fdc3a7b9a90455",
+    "utcScoredDateTime": "2026-10-04T22:27:46.497Z",
+    "product": "Blenrep",
+    "productHash": "a2458f0293f0b6afa3167426aadb523a784e01c67df5c81bd3fdc3a7b9a90455"
+  },
+  {
+    "pinId": 5901,
+    "sentiment": 0.7,
+    "textHash": "11474c69a7b3eff7fa69a07e81d3d9d7837565c275d9e539ad95b97c3d5cdb5d",
+    "utcScoredDateTime": "2026-10-04T22:28:05.079Z",
+    "product": "Exdensur",
+    "productHash": "11474c69a7b3eff7fa69a07e81d3d9d7837565c275d9e539ad95b97c3d5cdb5d"
+  },
+  {
+    "pinId": 5902,
+    "sentiment": 0.3,
+    "textHash": "aa0be00236ba94a07ff885bc9cf60ce670e7a4cdfb1fe369eba801e9b4c72239",
+    "utcScoredDateTime": "2026-10-04T22:28:25.264Z",
+    "product": "Haleon",
+    "productHash": "aa0be00236ba94a07ff885bc9cf60ce670e7a4cdfb1fe369eba801e9b4c72239"
+  },
+  {
+    "pinId": 5903,
+    "sentiment": 0.2,
+    "textHash": "4ca97ebc3c62828e357620d0b2a416c76c0d435a00611d9e14f67321e562a968",
+    "utcScoredDateTime": "2026-10-04T22:28:43.317Z",
+    "product": "Leadership",
+    "productHash": "4ca97ebc3c62828e357620d0b2a416c76c0d435a00611d9e14f67321e562a968"
+  },
+  {
+    "pinId": 5904,
+    "sentiment": 0.4,
+    "textHash": "c81f71dc23cf6b6dc3491d1fc67445f8e9666406febf9488778ce459410c085c",
+    "utcScoredDateTime": "2026-10-04T22:29:02.351Z",
+    "product": "Oncology",
+    "productHash": "c81f71dc23cf6b6dc3491d1fc67445f8e9666406febf9488778ce459410c085c"
+  },
+  {
+    "pinId": 5905,
+    "sentiment": 0.3,
+    "textHash": "867de9cfcf41acebed7796a3f1f08792ce505b6ffa0cfbb4293d05a78f280dc8",
+    "utcScoredDateTime": "2026-10-04T22:29:21.425Z",
+    "product": "Dominion merger",
+    "productHash": "867de9cfcf41acebed7796a3f1f08792ce505b6ffa0cfbb4293d05a78f280dc8"
+  },
+  {
+    "pinId": 5906,
+    "sentiment": -0.1,
+    "textHash": "d881e8bf413bb7c2da6b03803e7ede43795282538b5aa47ee8f9e309537b9404",
+    "utcScoredDateTime": "2026-10-04T22:29:40.762Z",
+    "product": "Florida Power & Light",
+    "productHash": "d881e8bf413bb7c2da6b03803e7ede43795282538b5aa47ee8f9e309537b9404"
+  },
+  {
+    "pinId": 5907,
+    "sentiment": 0.6,
+    "textHash": "c0024f59678c904efae520d1a30c3771f507c2b09a25d0f51ec4d24693c94b35",
+    "utcScoredDateTime": "2026-10-04T22:30:02.515Z",
+    "product": "Google partnership",
+    "productHash": "c0024f59678c904efae520d1a30c3771f507c2b09a25d0f51ec4d24693c94b35"
+  },
+  {
+    "pinId": 5908,
+    "sentiment": 0.4,
+    "textHash": "cc1c90d83ca1cfcad5edbe20408f3403dec5f355bd77d3a69b552b6b5d85d369",
+    "utcScoredDateTime": "2026-10-04T22:30:28.835Z",
+    "product": "Energy hubs",
+    "productHash": "cc1c90d83ca1cfcad5edbe20408f3403dec5f355bd77d3a69b552b6b5d85d369"
+  },
+  {
+    "pinId": 5909,
+    "sentiment": 0.5,
+    "textHash": "664884474e29b3b2646e30f001826599c4eb1bb47bfea745252a4b92dba623c7",
+    "utcScoredDateTime": "2026-10-04T22:30:48.820Z",
+    "product": "Quarterly results",
+    "productHash": "664884474e29b3b2646e30f001826599c4eb1bb47bfea745252a4b92dba623c7"
+  },
+  {
+    "pinId": 5910,
+    "sentiment": 0.8,
+    "textHash": "ebdebaf3d1bc2afcf1ed187b390fd2beaad34b3c7aa1896212cfc11b69cdf873",
+    "utcScoredDateTime": "2026-10-04T22:31:09.131Z",
+    "product": "Comirnaty",
+    "productHash": "ebdebaf3d1bc2afcf1ed187b390fd2beaad34b3c7aa1896212cfc11b69cdf873"
+  },
+  {
+    "pinId": 5911,
+    "sentiment": 0.5,
+    "textHash": "ba34b64efda4dc7763737bd8e0ea766ceacc73ff0961a4d6d0c44b7365c98055",
+    "utcScoredDateTime": "2026-10-04T22:31:28.394Z",
+    "product": "Obesity",
+    "productHash": "ba34b64efda4dc7763737bd8e0ea766ceacc73ff0961a4d6d0c44b7365c98055"
+  },
+  {
+    "pinId": 5912,
+    "sentiment": 0.2,
+    "textHash": "ba607c3412b53121c133eeb1a11cfc5ae174dedd14f0281fd2ebedb29e32d27b",
+    "utcScoredDateTime": "2026-10-04T22:40:35.733Z",
+    "product": "Quarterly results",
+    "productHash": "ba607c3412b53121c133eeb1a11cfc5ae174dedd14f0281fd2ebedb29e32d27b"
+  },
+  {
+    "pinId": 5913,
+    "sentiment": 0.5,
+    "textHash": "899713e0d4be3283e433e4c7415ca1c09c9e7cffb86289b3c69d45ed360d6bb3",
+    "utcScoredDateTime": "2026-10-04T22:41:01.849Z",
+    "product": "Oncology",
+    "productHash": "899713e0d4be3283e433e4c7415ca1c09c9e7cffb86289b3c69d45ed360d6bb3"
+  },
+  {
+    "pinId": 5914,
+    "sentiment": 0.3,
+    "textHash": "422d6e3bb1192ac8f1bb7d98b3605c86631c9369d16543fb4fda56666d28ca58",
+    "utcScoredDateTime": "2026-10-04T22:41:24.661Z",
+    "product": "TrumpRx",
+    "productHash": "422d6e3bb1192ac8f1bb7d98b3605c86631c9369d16543fb4fda56666d28ca58"
+  },
+  {
+    "pinId": 5915,
+    "sentiment": 0.4,
+    "textHash": "26dc6e08d86698a7b9ba642e9e87a6bf999cf8436393b62962985a25ffd05382",
+    "utcScoredDateTime": "2026-10-04T22:51:27.330Z",
+    "product": "Rio Tinto Lithium",
+    "productHash": "26dc6e08d86698a7b9ba642e9e87a6bf999cf8436393b62962985a25ffd05382"
+  },
+  {
+    "pinId": 5916,
+    "sentiment": 0.4,
+    "textHash": "327c0dc73cba65be94db9ca646804db9da721c6e66f0200b0d2f74d15ae2c27e",
+    "utcScoredDateTime": "2026-10-04T22:51:49.075Z",
+    "product": "Rio Tinto Results",
+    "productHash": "327c0dc73cba65be94db9ca646804db9da721c6e66f0200b0d2f74d15ae2c27e"
+  },
+  {
+    "pinId": 5917,
+    "sentiment": -0.3,
+    "textHash": "288018bce4eaa35819124155e3541eaf08568e13f4e1b4a724f97d68a1f5fbd9",
+    "utcScoredDateTime": "2026-10-04T22:52:08.005Z",
+    "product": "Rio Tinto Glencore",
+    "productHash": "288018bce4eaa35819124155e3541eaf08568e13f4e1b4a724f97d68a1f5fbd9"
+  },
+  {
+    "pinId": 5918,
+    "sentiment": 0.6,
+    "textHash": "24ec636109c4736495f18c3c5d0ff897c709c2d494b886d46628f3b0a1d8f41e",
+    "utcScoredDateTime": "2026-10-04T22:52:27.126Z",
+    "product": "Rio Tinto Results",
+    "productHash": "24ec636109c4736495f18c3c5d0ff897c709c2d494b886d46628f3b0a1d8f41e"
+  },
+  {
+    "pinId": 5919,
+    "sentiment": 0.7,
+    "textHash": "75c2a512c5e3b2037260b5007f40d7de6b52272abc765f3263b61d0008d4373e",
+    "utcScoredDateTime": "2026-10-04T22:52:46.885Z",
+    "product": "Simandou",
+    "productHash": "75c2a512c5e3b2037260b5007f40d7de6b52272abc765f3263b61d0008d4373e"
+  },
+  {
+    "pinId": 5920,
+    "sentiment": 0.2,
+    "textHash": "e96fa85364688004da952482b5e3a37d920df9657b8327c554ae73ea7fc37b56",
+    "utcScoredDateTime": "2026-10-04T22:53:06.225Z",
+    "product": "Starbucks China",
+    "productHash": "e96fa85364688004da952482b5e3a37d920df9657b8327c554ae73ea7fc37b56"
+  },
+  {
+    "pinId": 5921,
+    "sentiment": 0.6,
+    "textHash": "e068f33ba868efd22da96ef1464cc8c5f1028d17d2f302a59c4e47d5b229b219",
+    "utcScoredDateTime": "2026-10-04T22:53:25.308Z",
+    "product": "Back to Starbucks",
+    "productHash": "e068f33ba868efd22da96ef1464cc8c5f1028d17d2f302a59c4e47d5b229b219"
+  },
+  {
+    "pinId": 5922,
+    "sentiment": 0.5,
+    "textHash": "dc1481071b279f6a669720b74341f474405922908810a9bbd5c6335b990e54e1",
+    "utcScoredDateTime": "2026-10-04T22:54:44.768Z",
+    "product": "Starbucks leadership",
+    "productHash": "dc1481071b279f6a669720b74341f474405922908810a9bbd5c6335b990e54e1"
+  },
+  {
+    "pinId": 5923,
+    "sentiment": -0.5,
+    "textHash": "dcf617d4a21b9342588a926ca89bb9948ea45baf543b8ce73aa1d15608ec461c",
+    "utcScoredDateTime": "2026-10-04T22:55:04.535Z",
+    "product": "Back to Starbucks",
+    "productHash": "dcf617d4a21b9342588a926ca89bb9948ea45baf543b8ce73aa1d15608ec461c"
+  },
+  {
+    "pinId": 5924,
+    "sentiment": -0.5,
+    "textHash": "d9e53ac2b2fd7dac1419573dfc6babd928afdeb27b6f29584875e5dcef6dc888",
+    "utcScoredDateTime": "2026-10-04T22:55:25.196Z",
+    "product": "Red Cup Day",
+    "productHash": "d9e53ac2b2fd7dac1419573dfc6babd928afdeb27b6f29584875e5dcef6dc888"
+  },
+  {
+    "pinId": 5925,
+    "sentiment": 0.6,
+    "textHash": "d62fee77853c2a0117875f4b1d0302a27ef14db7e7bd9ff04e7951c98ae74182",
+    "utcScoredDateTime": "2026-10-04T22:55:46.841Z",
+    "product": "Snowflake Intelligence",
+    "productHash": "d62fee77853c2a0117875f4b1d0302a27ef14db7e7bd9ff04e7951c98ae74182"
+  },
+  {
+    "pinId": 5926,
+    "sentiment": 0.8,
+    "textHash": "27594a21081e70c4f13c83b251c1360f9778ef1b79ac987f458a9b91a8c422ea",
+    "utcScoredDateTime": "2026-10-04T22:56:07.604Z",
+    "product": "Snowflake IPO",
+    "productHash": "27594a21081e70c4f13c83b251c1360f9778ef1b79ac987f458a9b91a8c422ea"
+  },
+  {
+    "pinId": 5927,
+    "sentiment": 0.4,
+    "textHash": "813477541c3ca7a08a8a920679ca5dc83f744ab71f8d0684856b82125b4c404e",
+    "utcScoredDateTime": "2026-10-04T22:56:26.997Z",
+    "product": "Observe",
+    "productHash": "813477541c3ca7a08a8a920679ca5dc83f744ab71f8d0684856b82125b4c404e"
+  },
+  {
+    "pinId": 5928,
+    "sentiment": 0.6,
+    "textHash": "53c8845ea850a11061e331d3359e5f948b5356ef35cf4c414dd291b51a31c812",
+    "utcScoredDateTime": "2026-10-04T22:56:45.250Z",
+    "product": "Snowflake Cortex AI",
+    "productHash": "53c8845ea850a11061e331d3359e5f948b5356ef35cf4c414dd291b51a31c812"
+  },
+  {
+    "pinId": 5929,
+    "sentiment": 0.8,
+    "textHash": "fefa106194791b2ad58ded38ac5db0187bad6e8c565459909806e8fccc7610ba",
+    "utcScoredDateTime": "2026-10-04T22:57:07.515Z",
+    "product": "Snowflake Q1 FY27",
+    "productHash": "fefa106194791b2ad58ded38ac5db0187bad6e8c565459909806e8fccc7610ba"
+  },
+  {
+    "pinId": 5930,
+    "sentiment": 0,
+    "textHash": "7b8fc6b43b41d731c2338244377a86a0e03b308836cac8690c10d50cc0bc97d0",
+    "utcScoredDateTime": "2026-10-04T22:57:26.799Z",
+    "product": "Leadership",
+    "productHash": "7b8fc6b43b41d731c2338244377a86a0e03b308836cac8690c10d50cc0bc97d0"
+  },
+  {
+    "pinId": 5931,
+    "sentiment": 0.6,
+    "textHash": "0df8d5a0bbb2f911d1768dc316553f2269f8b937983978b394589ab293bc0c3a",
+    "utcScoredDateTime": "2026-10-04T22:57:44.798Z",
+    "product": "Premium",
+    "productHash": "0df8d5a0bbb2f911d1768dc316553f2269f8b937983978b394589ab293bc0c3a"
+  },
+  {
+    "pinId": 5932,
+    "sentiment": 0.5,
+    "textHash": "fb479f75a49208a9f3a10388659ad02486f780cc317af0908a960c2ba5ba1cc3",
+    "utcScoredDateTime": "2026-10-04T22:58:05.343Z",
+    "product": "Listing",
+    "productHash": "fb479f75a49208a9f3a10388659ad02486f780cc317af0908a960c2ba5ba1cc3"
+  },
+  {
+    "pinId": 5933,
+    "sentiment": -0.3,
+    "textHash": "03d38ce50721e0ceab5e70538cc995e3586b76efff09e5c2c8b4580506d326d7",
+    "utcScoredDateTime": "2026-10-04T22:58:25.081Z",
+    "product": "Premium",
+    "productHash": "03d38ce50721e0ceab5e70538cc995e3586b76efff09e5c2c8b4580506d326d7"
+  },
+  {
+    "pinId": 5934,
+    "sentiment": 0.6,
+    "textHash": "ea3a1510af1f1f71c9b0356164a53e39553b794f3dd31f42a9112c42798f7f4c",
+    "utcScoredDateTime": "2026-10-04T22:58:44.624Z",
+    "product": "Earnings",
+    "productHash": "ea3a1510af1f1f71c9b0356164a53e39553b794f3dd31f42a9112c42798f7f4c"
+  },
+  {
+    "pinId": 5935,
+    "sentiment": 0.4,
+    "textHash": "aa74a1a5d99d4ffa82fadf7a7ad5c776c1f3bec3e04524b4c4bc342fc3f55595",
+    "utcScoredDateTime": "2026-10-04T22:59:02.395Z",
+    "product": "SongDNA",
+    "productHash": "aa74a1a5d99d4ffa82fadf7a7ad5c776c1f3bec3e04524b4c4bc342fc3f55595"
+  },
+  {
+    "pinId": 5936,
+    "sentiment": 0.3,
+    "textHash": "4c3fd915cdf4561b46abd342626ebd21e3e505dfd3510bca54494f4bf62dbf72",
+    "utcScoredDateTime": "2026-10-04T22:59:21.510Z",
+    "product": "Uber Elite",
+    "productHash": "4c3fd915cdf4561b46abd342626ebd21e3e505dfd3510bca54494f4bf62dbf72"
+  },
+  {
+    "pinId": 5937,
+    "sentiment": 0.3,
+    "textHash": "854046ae9a52eaffab30eee7ee3ee6c574baf44e62730229b885a06167c281cd",
+    "utcScoredDateTime": "2026-10-04T22:59:40.541Z",
+    "product": "Uber Eats",
+    "productHash": "854046ae9a52eaffab30eee7ee3ee6c574baf44e62730229b885a06167c281cd"
+  },
+  {
+    "pinId": 5938,
+    "sentiment": -0.1,
+    "textHash": "8385a4a6e910099e0b330cf1a38505b38720b9ab4dc21d9de64329aa93164b32",
+    "utcScoredDateTime": "2026-10-04T23:00:00.143Z",
+    "product": "IPO",
+    "productHash": "8385a4a6e910099e0b330cf1a38505b38720b9ab4dc21d9de64329aa93164b32"
+  },
+  {
+    "pinId": 5939,
+    "sentiment": 0.2,
+    "textHash": "7a89b69e19e55f646827c80f6d141066e470376ba97f5ec54368598db3f1b6f1",
+    "utcScoredDateTime": "2026-10-04T23:00:21.969Z",
+    "product": "Uber Eats",
+    "productHash": "7a89b69e19e55f646827c80f6d141066e470376ba97f5ec54368598db3f1b6f1"
+  },
+  {
+    "pinId": 5940,
+    "sentiment": 0.6,
+    "textHash": "213d8c50b07728b4b15c38d8eca43928ab30c8e3b245382f0233e48eaa645c06",
+    "utcScoredDateTime": "2026-10-04T23:00:41.965Z",
+    "product": "Uber Earnings",
+    "productHash": "213d8c50b07728b4b15c38d8eca43928ab30c8e3b245382f0233e48eaa645c06"
+  },
+  {
+    "pinId": 5941,
+    "sentiment": 0.1,
+    "textHash": "e1966de6e01c21364b428234816c11adade44c259c613c036694ae89797359ee",
+    "utcScoredDateTime": "2026-10-04T23:01:01.749Z",
+    "product": "Leadership",
+    "productHash": "e1966de6e01c21364b428234816c11adade44c259c613c036694ae89797359ee"
+  },
+  {
+    "pinId": 5942,
+    "sentiment": -0.4,
+    "textHash": "c25adadd79435dcd0444e9af2e5bd38774dc9e467213343889318cab200c9de8",
+    "utcScoredDateTime": "2026-10-04T23:01:20.999Z",
+    "product": "Figma",
+    "productHash": "c25adadd79435dcd0444e9af2e5bd38774dc9e467213343889318cab200c9de8"
+  },
+  {
+    "pinId": 5943,
+    "sentiment": 0.5,
+    "textHash": "153a53d746e4bb109642912b599139266cf292ec92d639877f684a11c2b40c34",
+    "utcScoredDateTime": "2026-10-04T23:01:42.127Z",
+    "product": "Adobe Firefly",
+    "productHash": "153a53d746e4bb109642912b599139266cf292ec92d639877f684a11c2b40c34"
+  },
+  {
+    "pinId": 5944,
+    "sentiment": 0.5,
+    "textHash": "bf54f372a985afa326b7eda984e246bec8f95436c7a9e239f2e7e9df2d41fb40",
+    "utcScoredDateTime": "2026-10-04T23:02:01.070Z",
+    "product": "Earnings",
+    "productHash": "bf54f372a985afa326b7eda984e246bec8f95436c7a9e239f2e7e9df2d41fb40"
+  },
+  {
+    "pinId": 5945,
+    "sentiment": 0.3,
+    "textHash": "6e88aaceffec631db908f364422f6532d90aa14bc6795c87d43465e47cdc6cf7",
+    "utcScoredDateTime": "2026-10-04T23:02:20.409Z",
+    "product": "Brand Visibility",
+    "productHash": "6e88aaceffec631db908f364422f6532d90aa14bc6795c87d43465e47cdc6cf7"
+  },
+  {
+    "pinId": 5946,
+    "sentiment": 0.3,
+    "textHash": "94f0db061d45383f4fab25e199f888f84a609afadf7b33b8d3863d8d8c5eceb5",
+    "utcScoredDateTime": "2026-10-04T23:02:40.607Z",
+    "product": "Brand Visibility",
+    "productHash": "94f0db061d45383f4fab25e199f888f84a609afadf7b33b8d3863d8d8c5eceb5"
+  },
+  {
+    "pinId": 5947,
+    "sentiment": 0.8,
+    "textHash": "a1daa139031be400b006c9ab71fa68425a29aea856df00ade56127fe828cdc8c",
+    "utcScoredDateTime": "2026-10-04T23:03:00.349Z",
+    "product": "IPO",
+    "productHash": "a1daa139031be400b006c9ab71fa68425a29aea856df00ade56127fe828cdc8c"
+  },
+  {
+    "pinId": 5948,
+    "sentiment": 0.2,
+    "textHash": "28b2d47e15159b53dbe671aa1623cf78002c0fc4787a1145bd22b4c75b2738ab",
+    "utcScoredDateTime": "2026-10-04T23:03:19.534Z",
+    "product": "Alibaba Cloud",
+    "productHash": "28b2d47e15159b53dbe671aa1623cf78002c0fc4787a1145bd22b4c75b2738ab"
+  },
+  {
+    "pinId": 5949,
+    "sentiment": -0.2,
+    "textHash": "e0ff52cb9dae866df370a4a6a0a08fb51fc6252a1b2eb5418a9195001b7cd4c3",
+    "utcScoredDateTime": "2026-10-04T23:03:37.574Z",
+    "product": "Share Placement",
+    "productHash": "e0ff52cb9dae866df370a4a6a0a08fb51fc6252a1b2eb5418a9195001b7cd4c3"
+  },
+  {
+    "pinId": 5950,
+    "sentiment": 0.5,
+    "textHash": "485a4758aec44dc5aeca05e9d5417ae8061b2a3b7bf80ab913667a94bfb811e7",
+    "utcScoredDateTime": "2026-10-04T23:03:54.816Z",
+    "product": "QwenWork",
+    "productHash": "485a4758aec44dc5aeca05e9d5417ae8061b2a3b7bf80ab913667a94bfb811e7"
+  },
+  {
+    "pinId": 5951,
+    "sentiment": 0.7,
+    "textHash": "1391269b997834ad9de192172837150e746cc842a7e44284ed52afaed57c0b90",
+    "utcScoredDateTime": "2026-10-04T23:04:14.069Z",
+    "product": "777",
+    "productHash": "1391269b997834ad9de192172837150e746cc842a7e44284ed52afaed57c0b90"
+  },
+  {
+    "pinId": 5952,
+    "sentiment": 0.6,
+    "textHash": "74fba60cea3cbb93014ac2e08c830dbb93d3da53f1d868c01704f2b54239dc13",
+    "utcScoredDateTime": "2026-10-04T23:04:34.906Z",
+    "product": "737 MAX 10 and 787",
+    "productHash": "74fba60cea3cbb93014ac2e08c830dbb93d3da53f1d868c01704f2b54239dc13"
+  },
+  {
+    "pinId": 5953,
+    "sentiment": 0.6,
+    "textHash": "c42c128fddbbada2eb55b3382b659f7af2832bd363a408a1dc30804c3a5c4759",
+    "utcScoredDateTime": "2026-10-04T23:04:53.492Z",
+    "product": "777X, 787 and 737 MAX",
+    "productHash": "c42c128fddbbada2eb55b3382b659f7af2832bd363a408a1dc30804c3a5c4759"
+  },
+  {
+    "pinId": 5954,
+    "sentiment": 0,
+    "textHash": "4f0353ed55d7ed9b4ab3461e02ccb405bd44fd4c7af443897c16a1bf8662851e",
+    "utcScoredDateTime": "2026-10-04T23:05:12.324Z",
+    "product": "Quarterly results",
+    "productHash": "4f0353ed55d7ed9b4ab3461e02ccb405bd44fd4c7af443897c16a1bf8662851e"
+  },
+  {
+    "pinId": 5955,
+    "sentiment": 0.4,
+    "textHash": "cd554b78ba7274a84b4fd53a7133b71a9202be808e9dfd5e8e91596265852be3",
+    "utcScoredDateTime": "2026-10-04T23:05:31.643Z",
+    "product": "737 fuselages",
+    "productHash": "cd554b78ba7274a84b4fd53a7133b71a9202be808e9dfd5e8e91596265852be3"
+  },
+  {
+    "pinId": 5956,
+    "sentiment": 0.6,
+    "textHash": "2c51ab946473d3b95c724ddc50ff1c13050179585bb831978c89fc7112de1182",
+    "utcScoredDateTime": "2026-10-04T23:05:53.892Z",
+    "product": "737 MAX 8",
+    "productHash": "2c51ab946473d3b95c724ddc50ff1c13050179585bb831978c89fc7112de1182"
+  },
+  {
+    "pinId": 5957,
+    "sentiment": 0.5,
+    "textHash": "81d2c1b777283b12f56254fec9a406bafd9337731ad6beb3cb7d7686b47a3b57",
+    "utcScoredDateTime": "2026-10-04T23:06:11.761Z",
+    "product": "Calpine acquisition",
+    "productHash": "81d2c1b777283b12f56254fec9a406bafd9337731ad6beb3cb7d7686b47a3b57"
+  },
+  {
+    "pinId": 5958,
+    "sentiment": 0.6,
+    "textHash": "1d8e66000572da8803cb73c874544703163626562da8c96933db277df1cb25d5",
+    "utcScoredDateTime": "2026-10-04T23:06:30.930Z",
+    "product": "Crane Clean Energy Center",
+    "productHash": "1d8e66000572da8803cb73c874544703163626562da8c96933db277df1cb25d5"
+  },
+  {
+    "pinId": 5959,
+    "sentiment": 0.7,
+    "textHash": "0b53b3b1230b9afc8459474521aac2dc127a339e98b3ac5fd88f7ce661aa5c4c",
+    "utcScoredDateTime": "2026-10-04T23:06:49.872Z",
+    "product": "Clinton Clean Energy Center",
+    "productHash": "0b53b3b1230b9afc8459474521aac2dc127a339e98b3ac5fd88f7ce661aa5c4c"
+  },
+  {
+    "pinId": 5960,
+    "sentiment": 0.7,
+    "textHash": "765432f5aa58da2a537f5b6e934a6374469a7ef37dd6ebcaab790fb52936727a",
+    "utcScoredDateTime": "2026-10-04T23:08:09.968Z",
+    "product": "Crane Clean Energy Center",
+    "productHash": "765432f5aa58da2a537f5b6e934a6374469a7ef37dd6ebcaab790fb52936727a"
+  },
+  {
+    "pinId": 5961,
+    "sentiment": 0.6,
+    "textHash": "6a364e95258f5d15e3533e5cdbde8661707b4e2dd4e26f0e4374819855bc0d11",
+    "utcScoredDateTime": "2026-10-04T23:08:28.503Z",
+    "product": "Q2 2026 earnings",
+    "productHash": "6a364e95258f5d15e3533e5cdbde8661707b4e2dd4e26f0e4374819855bc0d11"
+  },
+  {
+    "pinId": 5962,
+    "sentiment": 0.8,
+    "textHash": "67ff5a7adae44e87a44fced5e7d96470ed37359f0c4eb930c1db32c304603a14",
+    "utcScoredDateTime": "2026-10-04T23:08:48.031Z",
+    "product": "125 S",
+    "productHash": "67ff5a7adae44e87a44fced5e7d96470ed37359f0c4eb930c1db32c304603a14"
+  },
+  {
+    "pinId": 5963,
+    "sentiment": 0.7,
+    "textHash": "453493e312c3cb11d63d2dbf8cb1d6060bb13ee50dca2570f1c207b1d9aed6bc",
+    "utcScoredDateTime": "2026-10-04T23:09:06.869Z",
+    "product": "2025 results",
+    "productHash": "453493e312c3cb11d63d2dbf8cb1d6060bb13ee50dca2570f1c207b1d9aed6bc"
+  },
+  {
+    "pinId": 5964,
+    "sentiment": 0.9,
+    "textHash": "22c8c4e0c7efa63d286ba7c551466aaef2bae1c5e52af9c91e0bc7fee456b586",
+    "utcScoredDateTime": "2026-10-04T23:09:40.263Z",
+    "product": "Scuderia Ferrari",
+    "productHash": "22c8c4e0c7efa63d286ba7c551466aaef2bae1c5e52af9c91e0bc7fee456b586"
+  },
+  {
+    "pinId": 5965,
+    "sentiment": 0.6,
+    "textHash": "ee62527a1d2e9674edd68276d7a0cdbd385b1f66851e41c67bbf2b7b80a15101",
+    "utcScoredDateTime": "2026-10-04T23:10:01.085Z",
+    "product": "Scuderia Ferrari",
+    "productHash": "ee62527a1d2e9674edd68276d7a0cdbd385b1f66851e41c67bbf2b7b80a15101"
+  },
+  {
+    "pinId": 5966,
+    "sentiment": 0.7,
+    "textHash": "78b37f4b24685d0c10083e3eeb9e4a324602fd34632236fde82c46e65923e427",
+    "utcScoredDateTime": "2026-10-04T23:10:21.057Z",
+    "product": "Ferrari IPO",
+    "productHash": "78b37f4b24685d0c10083e3eeb9e4a324602fd34632236fde82c46e65923e427"
+  },
+  {
+    "pinId": 5967,
+    "sentiment": 0.5,
+    "textHash": "5db7c1e4d1ea1e7a00fc3f9a670cdbad25567b5ca4da080c2e67bc479d1d1167",
+    "utcScoredDateTime": "2026-10-04T23:10:41.506Z",
+    "product": "SF-26",
+    "productHash": "5db7c1e4d1ea1e7a00fc3f9a670cdbad25567b5ca4da080c2e67bc479d1d1167"
+  },
+  {
+    "pinId": 5968,
+    "sentiment": -0.4,
+    "textHash": "0a750313a9617e86c1a9d988c3edc3c302cb394c91f61b0b040db215e706f6da",
+    "utcScoredDateTime": "2026-10-04T23:11:01.963Z",
+    "product": "Cruise",
+    "productHash": "0a750313a9617e86c1a9d988c3edc3c302cb394c91f61b0b040db215e706f6da"
+  },
+  {
+    "pinId": 5969,
+    "sentiment": -0.5,
+    "textHash": "8f337ce3a12b7b29505ac302a46b6cd5f46496ccf1e0cc776ec1a78f1b087cc4",
+    "utcScoredDateTime": "2026-10-04T23:11:26.655Z",
+    "product": "Electric Vehicles",
+    "productHash": "8f337ce3a12b7b29505ac302a46b6cd5f46496ccf1e0cc776ec1a78f1b087cc4"
+  },
+  {
+    "pinId": 5970,
+    "sentiment": 0.6,
+    "textHash": "db70bf4dfbc77d1cc46588bdb86f0bfb4217e98bfb224dc1248549ad89659492",
+    "utcScoredDateTime": "2026-10-04T23:11:34.763Z",
+    "product": "Op-ed",
+    "productHash": "db70bf4dfbc77d1cc46588bdb86f0bfb4217e98bfb224dc1248549ad89659492"
+  },
+  {
+    "pinId": 5971,
+    "sentiment": 0.6,
+    "textHash": "ba7d7c1d1dbf105e7472926ed119b4aaa7561a5dd6ff8a357bcb4010e90cfe7c",
+    "utcScoredDateTime": "2026-10-04T23:11:50.689Z",
+    "product": "IPO",
+    "productHash": "ba7d7c1d1dbf105e7472926ed119b4aaa7561a5dd6ff8a357bcb4010e90cfe7c"
+  },
+  {
+    "pinId": 5972,
+    "sentiment": -0.6,
+    "textHash": "4c8ca5d43a5b3b06bfb1df5624798185ba3f59f69439bce86b0b7af124eb292b",
+    "utcScoredDateTime": "2026-10-04T23:11:56.721Z",
+    "product": "Leadership",
+    "productHash": "4c8ca5d43a5b3b06bfb1df5624798185ba3f59f69439bce86b0b7af124eb292b"
+  },
+  {
+    "pinId": 5973,
+    "sentiment": 0.4,
+    "textHash": "6b6fcedc73c7957f558b4b238e1edb2b3be103cdda4061f28c13ed3cc5715537",
+    "utcScoredDateTime": "2026-10-04T23:12:21.558Z",
+    "product": "Quarterly results",
+    "productHash": "6b6fcedc73c7957f558b4b238e1edb2b3be103cdda4061f28c13ed3cc5715537"
+  },
+  {
+    "pinId": 5974,
+    "sentiment": 0.2,
+    "textHash": "6bdc03a19cc795b1e7f6ecd7a8b35e7b10448a064c324c999712908a286f70cd",
+    "utcScoredDateTime": "2026-10-04T23:12:42.498Z",
+    "product": "Shareholder letters",
+    "productHash": "6bdc03a19cc795b1e7f6ecd7a8b35e7b10448a064c324c999712908a286f70cd"
+  },
+  {
+    "pinId": 5975,
+    "sentiment": 0,
+    "textHash": "3e83798dffb1c71b47e16c7ae3de896d742fe84c030ead39760e3732980923ae",
+    "utcScoredDateTime": "2026-10-04T23:13:07.234Z",
+    "product": "Leadership",
+    "productHash": "3e83798dffb1c71b47e16c7ae3de896d742fe84c030ead39760e3732980923ae"
+  },
+  {
+    "pinId": 5976,
+    "sentiment": -0.6,
+    "textHash": "be308f6acc3083acf41ee91b46ec863635ac7d8d7227ea136e42ee0cb45c0524",
+    "utcScoredDateTime": "2026-10-04T23:13:18.432Z",
+    "product": "Workforce",
+    "productHash": "be308f6acc3083acf41ee91b46ec863635ac7d8d7227ea136e42ee0cb45c0524"
+  },
+  {
+    "pinId": 5977,
+    "sentiment": 0.2,
+    "textHash": "4bc84b33048fc01fad7ca7257327274e56166006f1b1150b6f75c15b671f8ee2",
+    "utcScoredDateTime": "2026-10-04T23:13:28.154Z",
+    "product": "Leadership",
+    "productHash": "4bc84b33048fc01fad7ca7257327274e56166006f1b1150b6f75c15b671f8ee2"
+  },
+  {
+    "pinId": 5978,
+    "sentiment": 0.5,
+    "textHash": "c55e4afa27fd06992d03c1fa1544fd5905a192385e4ab41833a69f80a08ab4e3",
+    "utcScoredDateTime": "2026-10-04T23:13:39.728Z",
+    "product": "Manufacturing",
+    "productHash": "c55e4afa27fd06992d03c1fa1544fd5905a192385e4ab41833a69f80a08ab4e3"
+  },
+  {
+    "pinId": 5979,
+    "sentiment": 0.3,
+    "textHash": "e73d559438e2a699e382389a8d42011710212e92073bd968fad73219ae1f7f03",
+    "utcScoredDateTime": "2026-10-04T23:13:55.318Z",
+    "product": "Acquisitions",
+    "productHash": "e73d559438e2a699e382389a8d42011710212e92073bd968fad73219ae1f7f03"
+  },
+  {
+    "pinId": 5980,
+    "sentiment": 0.5,
+    "textHash": "bcb5c3c57399a95607568a3b0ba7cb9036858389af8b69389725e0705382ed23",
+    "utcScoredDateTime": "2026-10-04T23:14:05.786Z",
+    "product": "Earnings",
+    "productHash": "bcb5c3c57399a95607568a3b0ba7cb9036858389af8b69389725e0705382ed23"
+  },
+  {
+    "pinId": 5981,
+    "sentiment": 0.2,
+    "textHash": "2959941a1cb4685a8f660222ab7f9c568909138465bddae09f5ad69f41ffd6a4",
+    "utcScoredDateTime": "2026-10-04T23:14:20.019Z",
+    "product": "Annual shareholder letter",
+    "productHash": "2959941a1cb4685a8f660222ab7f9c568909138465bddae09f5ad69f41ffd6a4"
+  },
+  {
+    "pinId": 5982,
+    "sentiment": 0.5,
+    "textHash": "7e7825d02705e9e5452a0cf74290af64b7a49ac3e2236a7f3ed539c96b68cc30",
+    "utcScoredDateTime": "2026-10-04T23:14:44.061Z",
+    "product": "Share repurchases",
+    "productHash": "7e7825d02705e9e5452a0cf74290af64b7a49ac3e2236a7f3ed539c96b68cc30"
+  },
+  {
+    "pinId": 5983,
+    "sentiment": 0.5,
+    "textHash": "a17fb47d4147e822f5010947166fa510a4d076b466a64b7ccb2f61f14d3f663b",
+    "utcScoredDateTime": "2026-10-04T23:14:44.363Z",
+    "product": "Acquisitions",
+    "productHash": "a17fb47d4147e822f5010947166fa510a4d076b466a64b7ccb2f61f14d3f663b"
+  },
+  {
+    "pinId": 5984,
+    "sentiment": 0.4,
+    "textHash": "edb96c03f7a46ba09e812ab4b5c433b33e5d546a69d9120e3f088ce87eaac163",
+    "utcScoredDateTime": "2026-10-04T23:15:14.152Z",
+    "product": "Share buyback",
+    "productHash": "edb96c03f7a46ba09e812ab4b5c433b33e5d546a69d9120e3f088ce87eaac163"
+  },
+  {
+    "pinId": 5985,
+    "sentiment": 0.2,
+    "textHash": "b243d7f575014898a838f883e5d8ba76751c2968e133f37d46db8f25736f0a54",
+    "utcScoredDateTime": "2026-10-04T23:15:14.159Z",
+    "product": "Chairman interview",
+    "productHash": "b243d7f575014898a838f883e5d8ba76751c2968e133f37d46db8f25736f0a54"
+  },
+  {
+    "pinId": 5986,
+    "sentiment": 0.3,
+    "textHash": "16dd026a136b86849ebb21d4a8b7628dcf0475ef7a9f763642000703233f87c2",
+    "utcScoredDateTime": "2026-10-04T23:15:47.970Z",
+    "product": "CEO interview",
+    "productHash": "16dd026a136b86849ebb21d4a8b7628dcf0475ef7a9f763642000703233f87c2"
+  },
+  {
+    "pinId": 5987,
+    "sentiment": 0.3,
+    "textHash": "19a7326e738d79c6951e8efbee78a1dbd1f30a216f473501949dbc8f6ef32a70",
+    "utcScoredDateTime": "2026-10-04T23:16:06.787Z",
+    "product": "Convertible notes",
+    "productHash": "19a7326e738d79c6951e8efbee78a1dbd1f30a216f473501949dbc8f6ef32a70"
+  },
+  {
+    "pinId": 5988,
+    "sentiment": 0.2,
+    "textHash": "ef7ebd12f6acb891e4d9c527a959f470053e9a4602458044c0c4a19ea4c129d1",
+    "utcScoredDateTime": "2026-10-04T23:16:45.189Z",
+    "product": "IPO",
+    "productHash": "ef7ebd12f6acb891e4d9c527a959f470053e9a4602458044c0c4a19ea4c129d1"
+  },
+  {
+    "pinId": 5989,
+    "sentiment": 0.3,
+    "textHash": "e4e005474e4054dc7e2805ff6c85f2222301728f0bcb19b0cea5077c84665df2",
+    "utcScoredDateTime": "2026-10-04T23:17:03.227Z",
+    "product": "Annual meeting",
+    "productHash": "e4e005474e4054dc7e2805ff6c85f2222301728f0bcb19b0cea5077c84665df2"
+  },
+  {
+    "pinId": 5990,
+    "sentiment": 0.6,
+    "textHash": "5b056726a7183a151470bc8e59fbad06c4cda9dc569c30281063cdc34ffb9efb",
+    "utcScoredDateTime": "2026-10-04T23:17:14.021Z",
+    "product": "Earnings",
+    "productHash": "5b056726a7183a151470bc8e59fbad06c4cda9dc569c30281063cdc34ffb9efb"
+  },
+  {
+    "pinId": 5991,
+    "sentiment": 0.3,
+    "textHash": "fd0a88ea0bb7e0ddf13dde631574886975570ee43cd3842e22dacb47d1faa52d",
+    "utcScoredDateTime": "2026-10-04T23:17:26.613Z",
+    "product": "Annual meeting",
+    "productHash": "fd0a88ea0bb7e0ddf13dde631574886975570ee43cd3842e22dacb47d1faa52d"
+  },
+  {
+    "pinId": 5992,
+    "sentiment": 0.8,
+    "textHash": "08e825b0ea73a3c0cb285586cd70bde0a1be754f97f50c2251dfe8bc441f8738",
+    "utcScoredDateTime": "2026-10-04T23:17:38.438Z",
+    "product": "Index inclusion",
+    "productHash": "08e825b0ea73a3c0cb285586cd70bde0a1be754f97f50c2251dfe8bc441f8738"
+  },
+  {
+    "pinId": 5993,
+    "sentiment": 0.4,
+    "textHash": "c3a415589d785756b05972b52dbcec51e7e2506626ab6fec3e5d0b06ab5ffdc0",
+    "utcScoredDateTime": "2026-10-04T23:17:49.239Z",
+    "product": "Acquisitions",
+    "productHash": "c3a415589d785756b05972b52dbcec51e7e2506626ab6fec3e5d0b06ab5ffdc0"
+  },
+  {
+    "pinId": 5994,
+    "sentiment": 0.6,
+    "textHash": "6433065eb0727d0a6a170b49858efef9410db88707ef33a26380181605d207f8",
+    "utcScoredDateTime": "2026-10-04T23:18:02.054Z",
+    "product": "F-35 Lightning II",
+    "productHash": "6433065eb0727d0a6a170b49858efef9410db88707ef33a26380181605d207f8"
+  },
+  {
+    "pinId": 5995,
+    "sentiment": 0.4,
+    "textHash": "2e353f322e69c779827f74cf971c56ce38ac6a7f4c36daea943bfe07b301f376",
+    "utcScoredDateTime": "2026-10-04T23:18:23.977Z",
+    "product": "Investments",
+    "productHash": "2e353f322e69c779827f74cf971c56ce38ac6a7f4c36daea943bfe07b301f376"
+  },
+  {
+    "pinId": 5996,
+    "sentiment": 0.6,
+    "textHash": "9ee01ed09d229dbdd6f3b31a556a00494a82f23a8027c1a2a4c18738c39bd3fc",
+    "utcScoredDateTime": "2026-10-04T23:18:32.858Z",
+    "product": "F-35A Lightning II",
+    "productHash": "9ee01ed09d229dbdd6f3b31a556a00494a82f23a8027c1a2a4c18738c39bd3fc"
+  },
+  {
+    "pinId": 5997,
+    "sentiment": 0,
+    "textHash": "253bf1d7655b31b9579673c12a03aca2e9953a5563601f958803e1c8576af561",
+    "utcScoredDateTime": "2026-10-04T23:18:50.996Z",
+    "product": "Chairman interview",
+    "productHash": "253bf1d7655b31b9579673c12a03aca2e9953a5563601f958803e1c8576af561"
+  },
+  {
+    "pinId": 5998,
+    "sentiment": 0.5,
+    "textHash": "07bc0c6669f7715121f1a73ce7fb95dc3fa8eae4dcdca123e7338fbb0cb7172a",
+    "utcScoredDateTime": "2026-10-04T23:19:02.751Z",
+    "product": "PAC-3 MSE",
+    "productHash": "07bc0c6669f7715121f1a73ce7fb95dc3fa8eae4dcdca123e7338fbb0cb7172a"
+  },
+  {
+    "pinId": 5999,
+    "sentiment": 0.4,
+    "textHash": "ed7400f8d429b25efea09447c241eaea59d9800ae1cd7580b8eb3df3987cfddc",
+    "utcScoredDateTime": "2026-10-04T23:19:10.837Z",
+    "product": "Acquisitions",
+    "productHash": "ed7400f8d429b25efea09447c241eaea59d9800ae1cd7580b8eb3df3987cfddc"
+  },
+  {
+    "pinId": 6000,
+    "sentiment": 0.5,
+    "textHash": "2d0dd633ecf79bbce3f0ca5a8e84eb2493c66f9b623e0d0c75f833523090ba49",
+    "utcScoredDateTime": "2026-10-04T23:19:29.395Z",
+    "product": "F-16 Block 70",
+    "productHash": "2d0dd633ecf79bbce3f0ca5a8e84eb2493c66f9b623e0d0c75f833523090ba49"
+  },
+  {
+    "pinId": 6001,
+    "sentiment": 0.4,
+    "textHash": "dd0a80c4ce0a32fd6551d390e27f80fe64ef38bfc1c99db5e71955d90442e156",
+    "utcScoredDateTime": "2026-10-04T23:19:38.669Z",
+    "product": "Quarterly results",
+    "productHash": "dd0a80c4ce0a32fd6551d390e27f80fe64ef38bfc1c99db5e71955d90442e156"
+  },
+  {
+    "pinId": 6002,
+    "sentiment": 0.1,
+    "textHash": "747a403eeb7a778af46f5747a87db6959c2e2b1c7b9fac5a33fc4011bc1d64f2",
+    "utcScoredDateTime": "2026-10-04T23:19:49.583Z",
+    "product": "Aeronautics leadership",
+    "productHash": "747a403eeb7a778af46f5747a87db6959c2e2b1c7b9fac5a33fc4011bc1d64f2"
+  },
+  {
+    "pinId": 6003,
+    "sentiment": 0.3,
+    "textHash": "98b42c0b2ad2e65ed83d8a0b3711aa1e92606e29510aa0cb14dd4a93073dedaf",
+    "utcScoredDateTime": "2026-10-04T23:21:17.415Z",
+    "product": "Undersea warfare",
+    "productHash": "98b42c0b2ad2e65ed83d8a0b3711aa1e92606e29510aa0cb14dd4a93073dedaf"
+  },
+  {
+    "pinId": 6004,
+    "sentiment": 0.4,
+    "textHash": "e939b0b77692f613f10bed59337f28a78e7280f2b95953ac58e728699ccd3b7b",
+    "utcScoredDateTime": "2026-10-04T23:22:46.887Z",
+    "product": "Antitrust",
+    "productHash": "e939b0b77692f613f10bed59337f28a78e7280f2b95953ac58e728699ccd3b7b"
+  },
+  {
+    "pinId": 6005,
+    "sentiment": -0.7,
+    "textHash": "359c3785afd3f31451345d0646325eb07cf4925ee8dcd6f716081275e674f89a",
+    "utcScoredDateTime": "2026-10-04T23:23:11.468Z",
+    "product": "Layoffs",
+    "productHash": "359c3785afd3f31451345d0646325eb07cf4925ee8dcd6f716081275e674f89a"
+  },
+  {
+    "pinId": 6006,
+    "sentiment": 0.5,
+    "textHash": "876a141f0d163276d81c5910d9398ee7608197a2d113c15cdbff9f5fcbb1cb05",
+    "utcScoredDateTime": "2026-10-04T23:23:33.606Z",
+    "product": "Nuclear Energy",
+    "productHash": "876a141f0d163276d81c5910d9398ee7608197a2d113c15cdbff9f5fcbb1cb05"
+  },
+  {
+    "pinId": 6007,
+    "sentiment": 0.1,
+    "textHash": "d9735452a62324e5cf4f2ba9ccbae8b16419bcf18bdc3e9a63e2077a3e83a06c",
+    "utcScoredDateTime": "2026-10-04T23:23:57.285Z",
+    "product": "Earnings",
+    "productHash": "d9735452a62324e5cf4f2ba9ccbae8b16419bcf18bdc3e9a63e2077a3e83a06c"
+  },
+  {
+    "pinId": 6008,
+    "sentiment": 0,
+    "textHash": "bb36c1209eddee42383a0673b4e8a95917d386ad7d2d7d15c1a72c41e35e713e",
+    "utcScoredDateTime": "2026-10-04T23:24:18.115Z",
+    "product": "Corporate Brand",
+    "productHash": "bb36c1209eddee42383a0673b4e8a95917d386ad7d2d7d15c1a72c41e35e713e"
+  },
+  {
+    "pinId": 6009,
+    "sentiment": -0.5,
+    "textHash": "1004c6e8214356c2128b5bc107107fe7e25cbe5041c8f29203bb023862f40533",
+    "utcScoredDateTime": "2026-10-04T23:24:53.248Z",
+    "product": "Amlitelimab",
+    "productHash": "1004c6e8214356c2128b5bc107107fe7e25cbe5041c8f29203bb023862f40533"
+  },
+  {
+    "pinId": 6010,
+    "sentiment": 0.6,
+    "textHash": "74e1457db315d311f90cb0fdb07ce814f2a6f8a0d1927b51e8299c048fb4bbb5",
+    "utcScoredDateTime": "2026-10-04T23:25:18.354Z",
+    "product": "Cenrifki",
+    "productHash": "74e1457db315d311f90cb0fdb07ce814f2a6f8a0d1927b51e8299c048fb4bbb5"
+  },
+  {
+    "pinId": 6011,
+    "sentiment": 0.4,
+    "textHash": "7c7c24fa7a19ba7f3a1bdd8e70c959d87ab7b5d50fb1d9e0fddff6f43ca4f10f",
+    "utcScoredDateTime": "2026-10-04T23:25:43.874Z",
+    "product": "Vaccines",
+    "productHash": "7c7c24fa7a19ba7f3a1bdd8e70c959d87ab7b5d50fb1d9e0fddff6f43ca4f10f"
+  },
+  {
+    "pinId": 6012,
+    "sentiment": -0.1,
+    "textHash": "323139352aa3e915e176732a6cc04594fe33bc91c8b5277e9f1d5847ebf4e017",
+    "utcScoredDateTime": "2026-10-04T23:26:08.784Z",
+    "product": "Leadership",
+    "productHash": "323139352aa3e915e176732a6cc04594fe33bc91c8b5277e9f1d5847ebf4e017"
+  },
+  {
+    "pinId": 6013,
+    "sentiment": 0.6,
+    "textHash": "ee08546fc6a4e21c7d52250dc4d4b281624f1dad0d7f54ac653ae83afca1baac",
+    "utcScoredDateTime": "2026-10-04T23:26:30.901Z",
+    "product": "Earnings",
+    "productHash": "ee08546fc6a4e21c7d52250dc4d4b281624f1dad0d7f54ac653ae83afca1baac"
+  },
+  {
+    "pinId": 6014,
+    "sentiment": 0.5,
+    "textHash": "b0b19d91d85f97e1554d304ab521f1ff2bdd6e2b2d6964722b6596af864361e8",
+    "utcScoredDateTime": "2026-10-04T23:26:51.828Z",
+    "product": "Dupixent",
+    "productHash": "b0b19d91d85f97e1554d304ab521f1ff2bdd6e2b2d6964722b6596af864361e8"
+  },
+  {
+    "pinId": 6015,
+    "sentiment": 0.4,
+    "textHash": "e3be411dd7dac14c232d291fce90fb77066073c68963cc336cba17a56d276915",
+    "utcScoredDateTime": "2026-10-04T23:54:01.361Z",
+    "product": "Dia",
+    "productHash": "e3be411dd7dac14c232d291fce90fb77066073c68963cc336cba17a56d276915"
+  },
+  {
+    "pinId": 6016,
+    "sentiment": 0.4,
+    "textHash": "2c897f32151323b72f1b4bf3586223369059d6bb608501a8b09620fe8ecfb75d",
+    "utcScoredDateTime": "2026-10-04T23:54:21.699Z",
+    "product": "DX",
+    "productHash": "2c897f32151323b72f1b4bf3586223369059d6bb608501a8b09620fe8ecfb75d"
+  },
+  {
+    "pinId": 6017,
+    "sentiment": 0.8,
+    "textHash": "b1fe630fe8ef959e6af06ecfab07b386d71263bfcb1cb17d6cfecc9bd4bfa61e",
+    "utcScoredDateTime": "2026-10-04T23:54:43.261Z",
+    "product": "Atlassian IPO",
+    "productHash": "b1fe630fe8ef959e6af06ecfab07b386d71263bfcb1cb17d6cfecc9bd4bfa61e"
+  },
+  {
+    "pinId": 6018,
+    "sentiment": -0.6,
+    "textHash": "48b70e82cb29ee3dfeaeaef9fa9b87ca6da5896383b590c4971ce3cb7535d625",
+    "utcScoredDateTime": "2026-10-04T23:55:04.920Z",
+    "product": "Atlassian Restructuring",
+    "productHash": "48b70e82cb29ee3dfeaeaef9fa9b87ca6da5896383b590c4971ce3cb7535d625"
+  },
+  {
+    "pinId": 6019,
+    "sentiment": 0.7,
+    "textHash": "7dfe50af242cc72b89b6f130964283bdadd3dea22bcdd2ef5398853dc7d2a39e",
+    "utcScoredDateTime": "2026-10-04T23:55:31.575Z",
+    "product": "Rovo and Teamwork Graph",
+    "productHash": "7dfe50af242cc72b89b6f130964283bdadd3dea22bcdd2ef5398853dc7d2a39e"
+  },
+  {
+    "pinId": 6020,
+    "sentiment": 0.3,
+    "textHash": "c463fea304852072b5b5df5195371d842a18a5535bd472b24aaea46b2474786c",
+    "utcScoredDateTime": "2026-10-04T23:55:52.767Z",
+    "product": "NBCUniversal",
+    "productHash": "c463fea304852072b5b5df5195371d842a18a5535bd472b24aaea46b2474786c"
+  },
+  {
+    "pinId": 6021,
+    "sentiment": 0.1,
+    "textHash": "f6f3e2f8fc5d20efc1f74869908d8eff88bc268e5982de6c60b7bd78e4fee169",
+    "utcScoredDateTime": "2026-10-04T23:56:17.156Z",
+    "product": "Comcast corporate structure",
+    "productHash": "f6f3e2f8fc5d20efc1f74869908d8eff88bc268e5982de6c60b7bd78e4fee169"
+  },
+  {
+    "pinId": 6022,
+    "sentiment": 0.4,
+    "textHash": "f87330895adcb56b48a9509e64fa8c70853cfd10c243b3ba0cc2455695b1618a",
+    "utcScoredDateTime": "2026-10-04T23:56:46.978Z",
+    "product": "Peacock",
+    "productHash": "f87330895adcb56b48a9509e64fa8c70853cfd10c243b3ba0cc2455695b1618a"
+  },
+  {
+    "pinId": 6023,
+    "sentiment": 0.3,
+    "textHash": "81b7dfe774ad0cd0b213376bf8c50caaeb23144293678f6f3fb141d9eebdb859",
+    "utcScoredDateTime": "2026-10-04T23:58:29.511Z",
+    "product": "Sky",
+    "productHash": "81b7dfe774ad0cd0b213376bf8c50caaeb23144293678f6f3fb141d9eebdb859"
+  },
+  {
+    "pinId": 6024,
+    "sentiment": 0,
+    "textHash": "cb3dd4caa1decce5fb9effbd257fd6e928e3eb6ece90359eaf93d5910ed6b4cf",
+    "utcScoredDateTime": "2026-10-04T23:58:54.975Z",
+    "product": "Sky",
+    "productHash": "cb3dd4caa1decce5fb9effbd257fd6e928e3eb6ece90359eaf93d5910ed6b4cf"
+  },
+  {
+    "pinId": 6025,
+    "sentiment": 0,
+    "textHash": "b1e1f5b53b8578507e5ec58d976afe54a47415a4e3384c7c0a9eb7da9b74b7c5",
+    "utcScoredDateTime": "2026-10-04T23:59:16.603Z",
+    "product": "Versant",
+    "productHash": "b1e1f5b53b8578507e5ec58d976afe54a47415a4e3384c7c0a9eb7da9b74b7c5"
+  },
+  {
+    "pinId": 6026,
+    "sentiment": -0.5,
+    "textHash": "69f8111a27c5dec2dcb131ddd57d9d5f397c4b09ab9a90f95ccf17d1024e6f5c",
+    "utcScoredDateTime": "2026-10-04T23:59:40.921Z",
+    "product": "F-150 Lightning",
+    "productHash": "69f8111a27c5dec2dcb131ddd57d9d5f397c4b09ab9a90f95ccf17d1024e6f5c"
+  },
+  {
+    "pinId": 6027,
+    "sentiment": 0.7,
+    "textHash": "8b81fe2ffe8ad29f903896163d8b71e9ed010d19484340112207b0ea1e07bc7d",
+    "utcScoredDateTime": "2026-10-05T00:00:02.518Z",
+    "product": "Founding",
+    "productHash": "8b81fe2ffe8ad29f903896163d8b71e9ed010d19484340112207b0ea1e07bc7d"
+  },
+  {
+    "pinId": 6028,
+    "sentiment": 0.6,
+    "textHash": "ef075aea131844b93e5a13ed0f8103242dac5ca19b111fecf98940e6b8221e50",
+    "utcScoredDateTime": "2026-10-05T00:05:04.385Z",
+    "product": "IPO",
+    "productHash": "ef075aea131844b93e5a13ed0f8103242dac5ca19b111fecf98940e6b8221e50"
+  },
+  {
+    "pinId": 6029,
+    "sentiment": 0.4,
+    "textHash": "832b7c7104239b79725256e03fd9a05c1a83ffc74b41e4833ad8ade60121dd36",
+    "utcScoredDateTime": "2026-10-05T00:05:26.390Z",
+    "product": "Earnings",
+    "productHash": "832b7c7104239b79725256e03fd9a05c1a83ffc74b41e4833ad8ade60121dd36"
+  },
+  {
+    "pinId": 6030,
+    "sentiment": -0.5,
+    "textHash": "eece15da261fb433a8f374925fec03cc3d2d6110af4c7799433c9215bc445763",
+    "utcScoredDateTime": "2026-10-05T00:05:46.907Z",
+    "product": "F-150",
+    "productHash": "eece15da261fb433a8f374925fec03cc3d2d6110af4c7799433c9215bc445763"
+  },
+  {
+    "pinId": 6031,
+    "sentiment": -0.5,
+    "textHash": "fb655c7f8226e1e3ef4f4c78e737a906806aeba021badf91bec76473453f9845",
+    "utcScoredDateTime": "2026-10-05T00:06:06.949Z",
+    "product": "F-150",
+    "productHash": "fb655c7f8226e1e3ef4f4c78e737a906806aeba021badf91bec76473453f9845"
+  },
+  {
+    "pinId": 6032,
+    "sentiment": 0.5,
+    "textHash": "47a7512090012da3946d789c325095d46ad2efce5ee174af1c7c08676e9004cb",
+    "utcScoredDateTime": "2026-10-05T00:06:26.481Z",
+    "product": "Columbia-class submarine",
+    "productHash": "47a7512090012da3946d789c325095d46ad2efce5ee174af1c7c08676e9004cb"
+  },
+  {
+    "pinId": 6033,
+    "sentiment": 0.5,
+    "textHash": "c71a690045bda85b65d14e5f5132292c66c19416358344302401248015d83b42",
+    "utcScoredDateTime": "2026-10-05T00:06:45.432Z",
+    "product": "GDIT C5ISR",
+    "productHash": "c71a690045bda85b65d14e5f5132292c66c19416358344302401248015d83b42"
+  },
+  {
+    "pinId": 6034,
+    "sentiment": 0.7,
+    "textHash": "b37353758a3f71f22c8d3ac0637c5e078b0118b93fef579ba09155683adba98c",
+    "utcScoredDateTime": "2026-10-05T00:07:06.058Z",
+    "product": "Nuclear submarines",
+    "productHash": "b37353758a3f71f22c8d3ac0637c5e078b0118b93fef579ba09155683adba98c"
+  },
+  {
+    "pinId": 6035,
+    "sentiment": 0.6,
+    "textHash": "a4a1b57c71107b0c94a776f98c9d29cadc4f11d450fc26becbe7f7836804c037",
+    "utcScoredDateTime": "2026-10-05T00:07:33.081Z",
+    "product": "Quarterly results",
+    "productHash": "a4a1b57c71107b0c94a776f98c9d29cadc4f11d450fc26becbe7f7836804c037"
+  },
+  {
+    "pinId": 6036,
+    "sentiment": 0.6,
+    "textHash": "c874e789fa0002dd905082a88a020a424602065b28cb4b13cdffdb862f97dc9a",
+    "utcScoredDateTime": "2026-10-05T00:07:54.463Z",
+    "product": "Quarterly results",
+    "productHash": "c874e789fa0002dd905082a88a020a424602065b28cb4b13cdffdb862f97dc9a"
+  },
+  {
+    "pinId": 6037,
+    "sentiment": 0.6,
+    "textHash": "596a45a4fd111b7054903d74360c459680663e54d4988ed6efdb9b85dec23c63",
+    "utcScoredDateTime": "2026-10-05T00:08:22.011Z",
+    "product": "Columbia and Virginia-class submarines",
+    "productHash": "596a45a4fd111b7054903d74360c459680663e54d4988ed6efdb9b85dec23c63"
+  },
+  {
+    "pinId": 6038,
+    "sentiment": 0.2,
+    "textHash": "433b5ca4b084170f03ad42012601da32db3e7c476a54f1635b4ac94936a2a1cd",
+    "utcScoredDateTime": "2026-10-05T00:08:42.656Z",
+    "product": "ICE Mortgage Technology",
+    "productHash": "433b5ca4b084170f03ad42012601da32db3e7c476a54f1635b4ac94936a2a1cd"
+  },
+  {
+    "pinId": 6039,
+    "sentiment": 0.3,
+    "textHash": "8d99dcd6156c4e726701e7531c0164c73d36113def3eac0edc3bf1a2dbfc2270",
+    "utcScoredDateTime": "2026-10-05T00:09:05.306Z",
+    "product": "MarketAxess",
+    "productHash": "8d99dcd6156c4e726701e7531c0164c73d36113def3eac0edc3bf1a2dbfc2270"
+  },
+  {
+    "pinId": 6040,
+    "sentiment": 0.3,
+    "textHash": "1d4dc2ccecb668b4effffd4424decb7a8cd14a2f663648a76ad68ef6e7e48630",
+    "utcScoredDateTime": "2026-10-05T00:09:30.756Z",
+    "product": "NYSE",
+    "productHash": "1d4dc2ccecb668b4effffd4424decb7a8cd14a2f663648a76ad68ef6e7e48630"
+  },
+  {
+    "pinId": 6041,
+    "sentiment": 0.4,
+    "textHash": "62dad3d657cc3812d268f5642c6241a7777dc31d8b8a83d3f8c7862d5c04f9a6",
+    "utcScoredDateTime": "2026-10-05T00:14:20.964Z",
+    "product": "OKX",
+    "productHash": "62dad3d657cc3812d268f5642c6241a7777dc31d8b8a83d3f8c7862d5c04f9a6"
+  },
+  {
+    "pinId": 6042,
+    "sentiment": 0.4,
+    "textHash": "bb5dc8d7c31d6629f7e67d6d55b798619deae5e43d3302f90af19be2c67cc7a6",
+    "utcScoredDateTime": "2026-10-05T00:14:43.188Z",
+    "product": "Polymarket",
+    "productHash": "bb5dc8d7c31d6629f7e67d6d55b798619deae5e43d3302f90af19be2c67cc7a6"
+  },
+  {
+    "pinId": 6043,
+    "sentiment": 0.4,
+    "textHash": "7c08883a8aec7b93c3856ee5aea0ffb9b8f093eb28f7d20d086d2dffa7983c5b",
+    "utcScoredDateTime": "2026-10-05T00:15:03.091Z",
+    "product": "Earnings",
+    "productHash": "7c08883a8aec7b93c3856ee5aea0ffb9b8f093eb28f7d20d086d2dffa7983c5b"
+  },
+  {
+    "pinId": 6044,
+    "sentiment": 0.3,
+    "textHash": "fd99ddced5e18ab9a7286de18d21e4251055ec3158f38e384cf62b3dc99fdf62",
+    "utcScoredDateTime": "2026-10-05T00:15:24.086Z",
+    "product": "Adenza",
+    "productHash": "fd99ddced5e18ab9a7286de18d21e4251055ec3158f38e384cf62b3dc99fdf62"
+  },
+  {
+    "pinId": 6045,
+    "sentiment": 0.5,
+    "textHash": "08530caaad47671d5370f9d01f2bbf4536c65b0147d87b3676be28ae27bd9b69",
+    "utcScoredDateTime": "2026-10-05T00:15:44.706Z",
+    "product": "Nasdaq Stock Market",
+    "productHash": "08530caaad47671d5370f9d01f2bbf4536c65b0147d87b3676be28ae27bd9b69"
+  },
+  {
+    "pinId": 6046,
+    "sentiment": 0.5,
+    "textHash": "cc5f1a919baa2cccc6dc11c7080293130390dd6cc94bf6c5b98db1a5efb9d414",
+    "utcScoredDateTime": "2026-10-05T00:16:04.156Z",
+    "product": "Investor Day",
+    "productHash": "cc5f1a919baa2cccc6dc11c7080293130390dd6cc94bf6c5b98db1a5efb9d414"
+  },
+  {
+    "pinId": 6047,
+    "sentiment": 0.5,
+    "textHash": "7491e8ee0cabe6f17956c310127be13576d57a6c23bb7e481401544c0d880aab",
+    "utcScoredDateTime": "2026-10-05T00:16:25.575Z",
+    "product": "Earnings",
+    "productHash": "7491e8ee0cabe6f17956c310127be13576d57a6c23bb7e481401544c0d880aab"
+  },
+  {
+    "pinId": 6048,
+    "sentiment": 0.7,
+    "textHash": "785bb588c519c12df584e8c01c5406c26577d7c5979643f723a4035ed495d8a4",
+    "utcScoredDateTime": "2026-10-05T00:16:45.072Z",
+    "product": "IPO",
+    "productHash": "785bb588c519c12df584e8c01c5406c26577d7c5979643f723a4035ed495d8a4"
+  },
+  {
+    "pinId": 6049,
+    "sentiment": 0.5,
+    "textHash": "e8f7fa3a926563126df50385015752d32bf7fa7940d281a3373e48c28ee26017",
+    "utcScoredDateTime": "2026-10-05T02:59:21.998Z",
+    "product": "Tokenized Securities",
+    "productHash": "e8f7fa3a926563126df50385015752d32bf7fa7940d281a3373e48c28ee26017"
+  },
+  {
+    "pinId": 6050,
+    "sentiment": 0.7,
+    "textHash": "52c7633a6ad498c83d23cf739bd54efe5f2696bd959c8070b7d8a97955def2a0",
+    "utcScoredDateTime": "2026-10-05T02:59:41.140Z",
+    "product": "Dupixent",
+    "productHash": "52c7633a6ad498c83d23cf739bd54efe5f2696bd959c8070b7d8a97955def2a0"
+  },
+  {
+    "pinId": 6051,
+    "sentiment": 0.8,
+    "textHash": "3f89a21c3269cb6a2bae26e1ded182b34b7f355809617f20197467b576314c76",
+    "utcScoredDateTime": "2026-10-05T03:00:01.876Z",
+    "product": "EYLEA",
+    "productHash": "3f89a21c3269cb6a2bae26e1ded182b34b7f355809617f20197467b576314c76"
+  },
+  {
+    "pinId": 6052,
+    "sentiment": 0.7,
+    "textHash": "f53588fa3be408044f63dc764893d593e0c007f48dafac0b1b6b944de6c96e4e",
+    "utcScoredDateTime": "2026-10-05T03:00:24.099Z",
+    "product": "EYLEA HD",
+    "productHash": "f53588fa3be408044f63dc764893d593e0c007f48dafac0b1b6b944de6c96e4e"
+  },
+  {
+    "pinId": 6053,
+    "sentiment": 0.9,
+    "textHash": "b42fcb3f6f8c5be02e61c37ac7a75e7d58e4271eedfe039d52e3f1db2dc5e381",
+    "utcScoredDateTime": "2026-10-05T03:00:44.821Z",
+    "product": "Otarmeni",
+    "productHash": "b42fcb3f6f8c5be02e61c37ac7a75e7d58e4271eedfe039d52e3f1db2dc5e381"
+  },
+  {
+    "pinId": 6054,
+    "sentiment": 0.6,
+    "textHash": "230ef616232f57b457f528879259436b6ac89065a3778cac4cdc7f4f2184af8e",
+    "utcScoredDateTime": "2026-10-05T03:01:15.507Z",
+    "product": "Quarterly results",
+    "productHash": "230ef616232f57b457f528879259436b6ac89065a3778cac4cdc7f4f2184af8e"
+  },
+  {
+    "pinId": 6055,
+    "sentiment": 0,
+    "textHash": "b67c03fc9e3516b1d82431fee0edaba7e275d9a3af4b23d81d45e026300406f7",
+    "utcScoredDateTime": "2026-10-05T03:01:36.578Z",
+    "product": "Quarterly results",
+    "productHash": "b67c03fc9e3516b1d82431fee0edaba7e275d9a3af4b23d81d45e026300406f7"
+  },
+  {
+    "pinId": 6056,
+    "sentiment": 0.7,
+    "textHash": "d19cac1c55c62dbcc22df7c035c57a0b5f938251a81ca798347e9a5109932333",
+    "utcScoredDateTime": "2026-10-05T03:01:57.115Z",
+    "product": "Flatellite",
+    "productHash": "d19cac1c55c62dbcc22df7c035c57a0b5f938251a81ca798347e9a5109932333"
+  },
+  {
+    "pinId": 6057,
+    "sentiment": 0.9,
+    "textHash": "50505b0a5107c58d74ba5de1a7074a94b3b9ce2653bf7b11c599f75d017b1465",
+    "utcScoredDateTime": "2026-10-05T03:02:21.616Z",
+    "product": "Electron",
+    "productHash": "50505b0a5107c58d74ba5de1a7074a94b3b9ce2653bf7b11c599f75d017b1465"
+  },
+  {
+    "pinId": 6058,
+    "sentiment": 0.4,
+    "textHash": "42fb62a1eeb00e9b3a3a4f0d37ab30e786e0a1e7a97c844576e1d9d6234faeec",
+    "utcScoredDateTime": "2026-10-05T03:02:42.859Z",
+    "product": "Neutron and Iridium",
+    "productHash": "42fb62a1eeb00e9b3a3a4f0d37ab30e786e0a1e7a97c844576e1d9d6234faeec"
+  },
+  {
+    "pinId": 6059,
+    "sentiment": -0.3,
+    "textHash": "a54bd873719b36b48ee1b89edad9402f4028c3251ee91f4be64083bdc9359648",
+    "utcScoredDateTime": "2026-10-05T03:03:07.208Z",
+    "product": "Neutron",
+    "productHash": "a54bd873719b36b48ee1b89edad9402f4028c3251ee91f4be64083bdc9359648"
+  },
+  {
+    "pinId": 6060,
+    "sentiment": 0.7,
+    "textHash": "5c66438e6760fcd049796b42a4d391663451ec1aab45fe20fe4d9ed1e22927e9",
+    "utcScoredDateTime": "2026-10-05T03:03:34.458Z",
+    "product": "SDA Tracking Layer",
+    "productHash": "5c66438e6760fcd049796b42a4d391663451ec1aab45fe20fe4d9ed1e22927e9"
+  },
+  {
+    "pinId": 6061,
+    "sentiment": 0.1,
+    "textHash": "9bd3681ee6307810f606c25877311d02fe4ed275decf2ff678ac258fb9fdcb9c",
+    "utcScoredDateTime": "2026-10-05T03:03:57.716Z",
+    "product": "Target leadership",
+    "productHash": "9bd3681ee6307810f606c25877311d02fe4ed275decf2ff678ac258fb9fdcb9c"
+  },
+  {
+    "pinId": 6062,
+    "sentiment": 0.7,
+    "textHash": "8b6766d553c95f305df97d74ff333c7383d74e680ee8d57d80b9fc41c2c4755e",
+    "utcScoredDateTime": "2026-10-05T03:05:15.455Z",
+    "product": "Target history",
+    "productHash": "8b6766d553c95f305df97d74ff333c7383d74e680ee8d57d80b9fc41c2c4755e"
+  },
+  {
+    "pinId": 6063,
+    "sentiment": -0.6,
+    "textHash": "a60a990c56653c32c7e84a61ecba28c55020471b7feae3e695b4ecd712b5ac51",
+    "utcScoredDateTime": "2026-10-05T03:05:35.213Z",
+    "product": "Target corporate workforce",
+    "productHash": "a60a990c56653c32c7e84a61ecba28c55020471b7feae3e695b4ecd712b5ac51"
+  },
+  {
+    "pinId": 6064,
+    "sentiment": 0.4,
+    "textHash": "65d19d3e69f34c8f1ec9c4788d8dbb652d484f8943a1fa9018a6cf333963895a",
+    "utcScoredDateTime": "2026-10-05T03:05:55.683Z",
+    "product": "Target pricing",
+    "productHash": "65d19d3e69f34c8f1ec9c4788d8dbb652d484f8943a1fa9018a6cf333963895a"
+  },
+  {
+    "pinId": 6065,
+    "sentiment": 0.6,
+    "textHash": "0e0b9e2e1847ce8e8f8476e5f00d7ca52266d5979dc0cd529649ec19002cb8bb",
+    "utcScoredDateTime": "2026-10-05T03:06:22.993Z",
+    "product": "Target earnings",
+    "productHash": "0e0b9e2e1847ce8e8f8476e5f00d7ca52266d5979dc0cd529649ec19002cb8bb"
+  },
+  {
+    "pinId": 6066,
+    "sentiment": 0.7,
+    "textHash": "4147351e49ea211a1af5ee00a666169a4985a3f37146685bdd4c4b606e71448b",
+    "utcScoredDateTime": "2026-10-05T03:06:43.056Z",
+    "product": "Founding",
+    "productHash": "4147351e49ea211a1af5ee00a666169a4985a3f37146685bdd4c4b606e71448b"
+  },
+  {
+    "pinId": 6067,
+    "sentiment": 0.7,
+    "textHash": "dbf410f11f9ad6a0e580cf8a3b6aba2bcf430cef6c334571b46ea7fed16cc299",
+    "utcScoredDateTime": "2026-10-05T03:07:02.897Z",
+    "product": "IPO",
+    "productHash": "dbf410f11f9ad6a0e580cf8a3b6aba2bcf430cef6c334571b46ea7fed16cc299"
+  },
+  {
+    "pinId": 6068,
+    "sentiment": -0.4,
+    "textHash": "62f09ac949457a30ecdce4beab55e32ee575a856bc30db162ab180a24c15763a",
+    "utcScoredDateTime": "2026-10-05T03:07:23.216Z",
+    "product": "Amazon glide-down",
+    "productHash": "62f09ac949457a30ecdce4beab55e32ee575a856bc30db162ab180a24c15763a"
+  },
+  {
+    "pinId": 6069,
+    "sentiment": 0.1,
+    "textHash": "9e85bbbe3dfb6521bf60a3e84617a3c0633f8b667d9575ce971361a01d6239b3",
+    "utcScoredDateTime": "2026-10-05T03:07:43.513Z",
+    "product": "Leadership",
+    "productHash": "9e85bbbe3dfb6521bf60a3e84617a3c0633f8b667d9575ce971361a01d6239b3"
+  },
+  {
+    "pinId": 6070,
+    "sentiment": -0.9,
+    "textHash": "d36740af227a108f804d717dccb4e931dbebb53dad6b2b0d4b7107aa76f9f84f",
+    "utcScoredDateTime": "2026-10-05T03:08:04.016Z",
+    "product": "MD-11",
+    "productHash": "d36740af227a108f804d717dccb4e931dbebb53dad6b2b0d4b7107aa76f9f84f"
+  },
+  {
+    "pinId": 6071,
+    "sentiment": 0.3,
+    "textHash": "728588ff13e43c6902b1f1b68655c1bac782653dbb5dc1c85028bd7bfb2fed09",
+    "utcScoredDateTime": "2026-10-05T03:08:22.815Z",
+    "product": "Earnings",
+    "productHash": "728588ff13e43c6902b1f1b68655c1bac782653dbb5dc1c85028bd7bfb2fed09"
+  },
+  {
+    "pinId": 6072,
+    "sentiment": -0.6,
+    "textHash": "885c02483c617d9080e5cea687f136cf7b2873442024b2c890b6d3ad20c25710",
+    "utcScoredDateTime": "2026-10-05T04:53:50.775Z",
+    "product": "Disease Outbreak",
+    "productHash": "885c02483c617d9080e5cea687f136cf7b2873442024b2c890b6d3ad20c25710"
   }
 ]

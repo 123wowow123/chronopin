@@ -89,3 +89,22 @@ export function sameBrand(a: string | null | undefined, b: string | null | undef
   const [short, long] = x.length <= y.length ? [x, y] : [y, x];
   return short.every((word, i) => long[i] === word);
 }
+
+// Whether two listings are variants of one product (a single, a 2-pack and an
+// 8-pack; two colours): the same brand, and either the reviews Amazon pools
+// across a listing's variants (the same count at the same stars) or titles
+// that are nearly word for word the same. Owner, 2026-10-04: "don't show
+// variants of the same product. prefer showing different products".
+export type ListingIdentity = { brand?: string | null; title?: string | null; rating?: number | null; reviewCount?: number | null };
+
+const titleWords = (title: string) => new Set(rawBrandWords(title).filter((word) => !/^\d+$/.test(word)));
+
+export function sameProductFamily(a: ListingIdentity, b: ListingIdentity): boolean {
+  if (!sameBrand(a.brand, b.brand)) return false;
+  if (a.reviewCount != null && a.reviewCount > 0 && a.reviewCount === b.reviewCount && a.rating === b.rating) return true;
+  if (!a.title || !b.title) return false;
+  const [x, y] = [titleWords(a.title), titleWords(b.title)];
+  if (Math.min(x.size, y.size) < 3) return false;
+  const shared = [...x].filter((word) => y.has(word)).length;
+  return shared / Math.min(x.size, y.size) >= 0.8;
+}

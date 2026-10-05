@@ -64,6 +64,24 @@ describe('pickHolidayAds', () => {
     expect(new Set(picked.map((a) => a.key)).size).toBe(3);
   });
 
+  it('never shows two variants of one product, even across tiers', () => {
+    // Sukkot, 2026-10-04: the single, the 2-pack and the 8-pack of one plush
+    // lulav (one brand, one pool of 119 reviews) took the mid and premium tiles.
+    const lulav = { brand: 'The Dreidel Company', rating: 4.7, reviewCount: 119 };
+    const sukkot = [
+      ad(1, 'sukkot', 'value', { brand: 'Jiudungs', title: 'Sukkot Table Runner', rating: 4.6, reviewCount: 781 }),
+      ad(2, 'sukkot', 'value', { brand: 'M AMFEOV', title: 'Sukkot Decorations, 36 Pcs Hanging Swirls', rating: 4.5, reviewCount: 65 }),
+      ad(3, 'sukkot', 'mid', { ...lulav, title: 'Plush Lulav and Etrog, Children\'s Toy Set for Sukkot (Single)' }),
+      ad(4, 'sukkot', 'mid', { ...lulav, title: 'The Dreidel Company 2-Count Plush Lulav and Etrog (2-Pack)' }),
+      ad(5, 'sukkot', 'premium', { ...lulav, title: 'Plush Lulav and Etrog, Children\'s Toy Set for Sukkot (8-Pack)' }),
+    ];
+    for (let seed = 1; seed <= 30; seed++) {
+      const picked = pickHolidayAds(sukkot, none, [{ id: 'sukkot', offset: 0 }], 3, null, new Set(), seeded(seed));
+      expect(picked).toHaveLength(3);
+      expect(picked.filter((a) => a.brand === lulav.brand)).toHaveLength(1);
+    }
+  });
+
   it('keeps to the holidays a pin falls on', () => {
     const both = [...mooncakes, ad(11, 'halloween', 'value'), ad(12, 'halloween', 'mid'), ad(13, 'halloween', 'premium')];
     const open = [...active, { id: 'halloween', offset: -28 }];

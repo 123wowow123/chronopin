@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { adProblem, asinOf, sameBrand } from './adQuality';
+import { adProblem, asinOf, sameBrand, sameProductFamily } from './adQuality';
 
 const good = { title: 'Tamiya 18710 JR Starter Pack', brand: 'TAMIYA', price: 24.69, rating: 4.6, reviewCount: 304, available: true };
 
@@ -38,5 +38,19 @@ describe('sameBrand', () => {
     expect(sameBrand('Bandai', 'Tamiya')).toBe(false);
     expect(sameBrand('Sonic', 'Sony')).toBe(false);
     expect(sameBrand(null, 'Tamiya')).toBe(false);
+  });
+});
+
+describe('sameProductFamily', () => {
+  it('matches the variants of one listing: pooled reviews or near-identical titles', () => {
+    const single = { brand: 'The Dreidel Company', title: "Plush Lulav and Etrog, Children's Toy Set for Sukkot (Single)", rating: 4.7, reviewCount: 119 };
+    expect(sameProductFamily(single, { ...single, title: 'The Dreidel Company 2-Count Plush Lulav and Etrog (2-Pack)' })).toBe(true);
+    expect(sameProductFamily(single, { ...single, reviewCount: 40, title: "Plush Lulav and Etrog, Children's Toy Set for Sukkot (8-Pack)" })).toBe(true);
+  });
+
+  it('keeps a brand\'s different products apart, and other brands', () => {
+    const xwing = { brand: 'LEGO', title: 'LEGO Star Wars X-Wing Starfighter', rating: 4.8, reviewCount: 2100 };
+    expect(sameProductFamily(xwing, { ...xwing, title: 'LEGO Star Wars TIE Fighter', reviewCount: 950 })).toBe(false);
+    expect(sameProductFamily(xwing, { ...xwing, brand: 'Mega Bloks' })).toBe(false);
   });
 });

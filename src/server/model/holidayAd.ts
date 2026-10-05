@@ -1,4 +1,4 @@
-import { asinOf, holidayAdProblem, listingUrl } from '@/lib/adQuality';
+import { asinOf, holidayAdProblem, listingUrl, sameProductFamily } from '@/lib/adQuality';
 import { AD_TIERS, holidayById, tierOf, WINDOW_AFTER_DAYS, WINDOW_BEFORE_DAYS, type AdTier, type HolidayDef } from '@/lib/culturalDays';
 import * as db from '../db';
 import { searchAmazon, type SearchHit } from '../amazonSearch';
@@ -113,6 +113,9 @@ export default class HolidayAd {
     if ('unknown' in listing) return { rejected: `The listing page could not be read (${listing.unknown}); try again later.` };
     const problem = holidayAdProblem(listing);
     if (problem) return { rejected: `${listing.brand ?? 'Unbranded'} "${listing.title.slice(0, 80)}": ${problem}.` };
+    // One of a product's variants per holiday (the single, not also its 2- and 8-pack).
+    const variantOf = (await HolidayAd.forHoliday(holiday)).find((ad) => ad.asin !== asin && sameProductFamily(ad, listing));
+    if (variantOf) return { rejected: `"${listing.title.slice(0, 80)}" is a variant of ${variantOf.asin} "${variantOf.title.slice(0, 80)}", already an ad for ${holiday}; pick a different product.` };
     const rows = await db.query<HolidayAdRow>(
       `INSERT INTO "HolidayAd" ("holiday", "asin", "url", "title", "brand", "price", "rating", "reviewCount", "image", "tier", "urgency")
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
