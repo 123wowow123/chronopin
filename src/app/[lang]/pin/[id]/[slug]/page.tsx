@@ -91,10 +91,12 @@ async function loadPin(params: Props['params']) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const [pin, t, offered, hideThin] = await Promise.all([loadPin(params), getT(), localesOffered(), hideThinPins()]);
+  const [pin, t, offered] = await Promise.all([loadPin(params), getT(), localesOffered()]);
   if (!pin) return { title: t('meta.pinNotFound'), robots: { index: false } };
   const metadata = pinMetadata(pin, t.locale, offered);
-  if (!hideThin.enabled) return metadata;
+  // Read after the pin (which waits on the URL), never while prerendering at
+  // build time, when there is no database.
+  if (!(await hideThinPins()).enabled) return metadata;
   // Judged on the English pin, so every language's copy agrees (src/lib/searchQuality.ts).
   const english = t.locale === DEFAULT_LOCALE ? pin : await pinById(pin.id, DEFAULT_LOCALE);
   return english && thinReasons(english).length ? { ...metadata, robots: { index: false, follow: true } } : metadata;

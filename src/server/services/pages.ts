@@ -26,7 +26,7 @@ import type { SliderTypingSetting } from '@/lib/sliderTyping';
 import type { AdPlacementsSetting } from '@/lib/adPlacements';
 import type { AdsenseSlotsSetting } from '@/lib/adsense';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
-import type { HideThinPinsSetting } from '@/lib/searchQuality';
+import { DEFAULT_HIDE_THIN_PINS, type HideThinPinsSetting } from '@/lib/searchQuality';
 import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
 import { readSearchRequest, searchPinsPage, searchTagCounts, type SearchSort } from './search';
@@ -70,7 +70,7 @@ export async function hideThinPins(): Promise<HideThinPinsSetting> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.searchIndex);
-  return getHideThinPins();
+  return getHideThinPins().catch(() => DEFAULT_HIDE_THIN_PINS);
 }
 
 // Whether the filter sliders offer a typed box, cached and expired the same way.
