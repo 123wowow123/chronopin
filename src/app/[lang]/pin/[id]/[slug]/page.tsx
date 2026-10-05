@@ -558,7 +558,7 @@ async function Related({ pin }: { pin: PinJson }) {
       {/* These cards are a suggestion nobody asked to play, same as a page of
           them: the admin setting decides whether they load their players. */}
       <TimelineVideoProvider setting={video}>
-        <CardGrid>
+        <CardGrid className="grid-cols-[repeat(auto-fill,minmax(22rem,1fr))]! max-sm:grid-cols-1!">
           {toCardPins(pins).map((p) => (
             <li key={p.id}>
               <PinCard pin={p} serverTimeZone={timeZone} tense={pinTense(p, now, todayKey)} todayKey={todayKey} />
