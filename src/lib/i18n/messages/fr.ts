@@ -604,6 +604,7 @@ const fr: Messages = {
     watchOn: 'Regarder sur {service}',
     watchOnHeading: 'Regarder sur',
     amazonDisclosure: 'En tant que Partenaire Amazon, Chronopin réalise un bénéfice sur les achats remplissant les conditions requises.',
+    ebayDisclosure: 'Chronopin peut percevoir une commission lorsque vous achetez via les liens eBay.',
     performersHeading: 'Sur scène',
     ticketsHeading: 'Billets',
     ticketsFree: 'Gratuit',

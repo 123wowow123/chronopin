@@ -609,6 +609,7 @@ const ms: Messages = {
     watchOn: 'Tonton di {service}',
     watchOnHeading: 'Tonton di',
     amazonDisclosure: 'Sebagai Rakan Kongsi Amazon, Chronopin memperoleh pendapatan daripada pembelian yang layak.',
+    ebayDisclosure: 'Chronopin mungkin memperoleh komisen apabila anda membeli melalui pautan eBay.',
     performersHeading: 'Persembahan',
     ticketsHeading: 'Tiket',
     ticketsFree: 'Percuma',

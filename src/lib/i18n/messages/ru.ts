@@ -613,6 +613,7 @@ const ru: Messages = {
     watchOn: 'Смотреть на {service}',
     watchOnHeading: 'Смотреть на',
     amazonDisclosure: 'Как партнёр Amazon, Chronopin получает доход с соответствующих покупок.',
+    ebayDisclosure: 'Chronopin может получать комиссию, когда вы покупаете по ссылкам eBay.',
     performersHeading: 'Выступают',
     ticketsHeading: 'Билеты',
     ticketsFree: 'Бесплатно',

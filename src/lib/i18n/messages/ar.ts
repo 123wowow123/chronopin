@@ -678,6 +678,7 @@ const ar: Messages = {
     watchOn: 'شاهد على {service}',
     watchOnHeading: 'شاهد على',
     amazonDisclosure: 'بصفتها شريكًا في برنامج Amazon Associates، تحصل Chronopin على عمولة من المشتريات المؤهلة.',
+    ebayDisclosure: 'قد تحصل Chronopin على عمولة عند الشراء عبر روابط eBay.',
     performersHeading: 'المؤدّون',
     ticketsHeading: 'التذاكر',
     ticketsFree: 'مجاني',

@@ -604,6 +604,7 @@ const ja: Messages = {
     watchOn: '{service}で視聴',
     watchOnHeading: '視聴',
     amazonDisclosure: 'Amazonのアソシエイトとして、Chronopinは適格販売により収入を得ています。',
+    ebayDisclosure: 'eBayのリンクから購入されると、Chronopinが報酬を受け取る場合があります。',
     performersHeading: '出演',
     ticketsHeading: 'チケット',
     ticketsFree: '無料',

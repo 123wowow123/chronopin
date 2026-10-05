@@ -608,6 +608,7 @@ const vi: Messages = {
     watchOn: 'Xem trên {service}',
     watchOnHeading: 'Xem trên',
     amazonDisclosure: 'Là thành viên Amazon Associate, Chronopin nhận thu nhập từ các giao dịch mua đủ điều kiện.',
+    ebayDisclosure: 'Chronopin có thể nhận hoa hồng khi bạn mua hàng qua liên kết eBay.',
     performersHeading: 'Biểu diễn',
     ticketsHeading: 'Vé',
     ticketsFree: 'Miễn phí',

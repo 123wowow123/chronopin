@@ -604,6 +604,7 @@ const de: Messages = {
     watchOn: 'Auf {service} ansehen',
     watchOnHeading: 'Ansehen auf',
     amazonDisclosure: 'Als Amazon-Partner verdient Chronopin an qualifizierten Verkäufen.',
+    ebayDisclosure: 'Chronopin kann eine Provision erhalten, wenn du über eBay-Links kaufst.',
     performersHeading: 'Auftritt',
     ticketsHeading: 'Tickets',
     ticketsFree: 'Kostenlos',

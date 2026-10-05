@@ -609,6 +609,7 @@ const en = {
     watchOn: 'Watch on {service}',
     watchOnHeading: 'Watch on',
     amazonDisclosure: 'As an Amazon Associate, Chronopin earns from qualifying purchases.',
+    ebayDisclosure: 'Chronopin may earn a commission when you buy through eBay links.',
     performersHeading: 'Performing',
     ticketsHeading: 'Tickets',
     ticketsFree: 'Free',

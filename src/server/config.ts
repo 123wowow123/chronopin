@@ -2,6 +2,7 @@
 // scripts (via tsx + scripts/env.ts) load .env.local; in production the values
 // come from Docker/env.prod.list on the VM (docs/deploy-azure.md).
 
+import { ebayCampaignId } from '@/lib/affiliate';
 import * as shared from '@/lib/appConfig';
 
 function env(name: string): string | undefined {
@@ -159,7 +160,7 @@ export const config = {
   ebay: {
     clientID: env('EBAY_CLIENT_ID') || '',
     clientSecret: env('EBAY_CLIENT_SECRET') || '',
-    campaignID: env('EBAY_CAMPAIGN_ID') || '',
+    campaignID: env('EBAY_CAMPAIGN_ID') || ebayCampaignId,
   },
 
   // A Kalshi API key: the key id and the RSA private key's PEM text (newlines

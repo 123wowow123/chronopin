@@ -602,6 +602,7 @@ const pt: Messages = {
     watchOn: 'Assistir em {service}',
     watchOnHeading: 'Assistir em',
     amazonDisclosure: 'Como Associado da Amazon, o Chronopin ganha com compras qualificadas.',
+    ebayDisclosure: 'O Chronopin pode ganhar uma comissão quando você compra pelos links do eBay.',
     performersHeading: 'Atrações',
     ticketsHeading: 'Ingressos',
     ticketsFree: 'Grátis',

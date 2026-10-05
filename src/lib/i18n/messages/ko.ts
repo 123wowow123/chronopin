@@ -604,6 +604,7 @@ const ko: Messages = {
     watchOn: '{service}에서 시청',
     watchOnHeading: '시청',
     amazonDisclosure: 'Chronopin은 Amazon Associates로서 적격 구매에 대한 수익을 얻습니다.',
+    ebayDisclosure: 'eBay 링크를 통해 구매하시면 Chronopin이 수수료를 받을 수 있습니다.',
     performersHeading: '출연',
     ticketsHeading: '티켓',
     ticketsFree: '무료',

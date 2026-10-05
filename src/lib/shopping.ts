@@ -12,7 +12,7 @@
 // on it, as the streaming buttons do (src/lib/streaming.ts). A black one
 // also gets a brighter border, or it vanishes into the dark theme's page.
 
-import { affiliateUrl, isAmazonStoreUrl, isPurchaseLinkShown } from './affiliate';
+import { affiliateUrl, isAmazonStoreUrl, isEbayUrl, isPurchaseLinkShown } from './affiliate';
 import { streamingService } from './streaming';
 import type { MerchantJson, PinJson } from './types';
 
@@ -134,6 +134,9 @@ export type ShopLink = {
   search: boolean;
   // Carries our Amazon tag, so the page owes the Associates disclosure.
   amazon: boolean;
+  // Carries our eBay Partner Network campaign, so the page says it earns from
+  // eBay purchases. Only present on an eBay link.
+  ebay?: boolean;
   // The store's brand colours; a listing on a store not listed here has none.
   background?: string;
   text?: string;
@@ -237,7 +240,7 @@ export function cheapestExact<T extends { title: string; price: number }>(produc
 export function withMatches(links: ShopLink[], matches: ShopMatch[]): ShopLink[] {
   return links.map((link) => {
     const match = link.search && matches.find((m) => m.store === link.store);
-    return match ? { ...link, url: match.url, price: match.price, currency: match.currency, search: false } : link;
+    return match ? { ...link, url: affiliateUrl(match.url), price: match.price, currency: match.currency, search: false } : link;
   });
 }
 
@@ -282,6 +285,7 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
       price: m.price ?? undefined,
       search: false,
       amazon: isAmazonStoreUrl(url),
+      ...(isEbayUrl(url) && { ebay: true }),
     };
   });
   const product = pin.productName?.trim();
@@ -295,6 +299,7 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
         url: affiliateUrl(url),
         search: true,
         amazon: isAmazonStoreUrl(url),
+        ...(isEbayUrl(url) && { ebay: true }),
         background: store.background,
         text: store.text,
         border: store.border,

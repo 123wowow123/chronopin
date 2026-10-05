@@ -601,6 +601,7 @@ const th: Messages = {
     watchOn: 'ดูทาง {service}',
     watchOnHeading: 'ดูทาง',
     amazonDisclosure: 'ในฐานะพันธมิตรของ Amazon, Chronopin ได้รับรายได้จากการซื้อที่เข้าเกณฑ์',
+    ebayDisclosure: 'Chronopin อาจได้รับค่าคอมมิชชันเมื่อคุณซื้อผ่านลิงก์ eBay',
     performersHeading: 'ผู้แสดง',
     ticketsHeading: 'บัตร',
     ticketsFree: 'ฟรี',

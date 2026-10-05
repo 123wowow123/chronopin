@@ -110,7 +110,10 @@ describe('withMatches', () => {
       { store: 'eBay', url: 'https://www.ebay.com/itm/123', price: 112.5, currency: 'USD', title: 'PUMA MB.06 Puerto Rico' },
     ]);
     const ebay = links.find((l) => l.store === 'eBay')!;
-    expect(ebay).toMatchObject({ url: 'https://www.ebay.com/itm/123', price: 112.5, currency: 'USD', search: false });
+    // The live listing earns too: our EPN campaign is on its link.
+    expect(ebay).toMatchObject({ price: 112.5, currency: 'USD', search: false, ebay: true });
+    expect(new URL(ebay.url).pathname).toBe('/itm/123');
+    expect(new URL(ebay.url).searchParams.get('campid')).toBe('5338380156');
     expect(links.filter((l) => l.search).map((l) => l.store)).toEqual(['StockX', 'GOAT', 'Amazon', 'Mercari', 'Facebook']);
   });
 });

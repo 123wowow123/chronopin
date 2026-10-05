@@ -602,6 +602,7 @@ const it: Messages = {
     watchOn: 'Guarda su {service}',
     watchOnHeading: 'Guarda su',
     amazonDisclosure: 'In qualità di Affiliato Amazon, Chronopin riceve un guadagno dagli acquisti idonei.',
+    ebayDisclosure: 'Chronopin può guadagnare una commissione quando acquisti tramite i link eBay.',
     performersHeading: 'Si esibiscono',
     ticketsHeading: 'Biglietti',
     ticketsFree: 'Gratis',

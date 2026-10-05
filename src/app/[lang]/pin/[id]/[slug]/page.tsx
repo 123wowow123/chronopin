@@ -471,6 +471,8 @@ function PinBody({
       {shop.some((link) => link.amazon) || pin.merchants?.some((m) => streamingService(m.url) && isAmazonStoreUrl(m.url)) ? (
         <p className="mt-2 text-xs text-subtle">{t('pin.amazonDisclosure')}</p>
       ) : null}
+      {/* eBay Partner Network links (src/lib/affiliate.ts) earn too. */}
+      {shop.some((link) => link.ebay) ? <p className="mt-2 text-xs text-subtle">{t('pin.ebayDisclosure')}</p> : null}
       {/* Readers' own listings of the product, and "Sell this item here". */}
       {listingKind ? <PinListings pinId={pin.id} kind={listingKind} productName={pin.productName} categories={pin.categories} /> : null}
 

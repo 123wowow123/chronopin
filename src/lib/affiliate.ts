@@ -35,18 +35,59 @@ function amazonStorePage(url: string | undefined | null): URL | undefined {
   return AMAZON_STORE_HOSTS.has(parsed.hostname.toLowerCase()) ? parsed : primeVideoOnAmazon(parsed);
 }
 
+// eBay Partner Network campaign (partner.ebay.com, "Default Campaign"). Added
+// at render time like the Amazon tag, so stored listings, searches and live
+// matches all earn without rewriting data. EBAY_CAMPAIGN_ID in the server
+// config makes the Browse API return its own tagged links for the same id.
+export const ebayCampaignId = '5338380156';
+
+// The US site only: other eBay sites need their own rotation id.
+const EBAY_HOSTS = new Set(['ebay.com', 'www.ebay.com']);
+
+// EPN's own link format for ebay.com: mkcid 1 (the EPN channel), the US
+// rotation id, siteid 0 (US), our campaign, tool 10001 (a plain link) and
+// mkevt 1 (a click).
+const EBAY_PARAMS: Record<string, string> = {
+  mkcid: '1',
+  mkrid: '711-53200-19255-0',
+  siteid: '0',
+  campid: ebayCampaignId,
+  toolid: '10001',
+  mkevt: '1',
+};
+
+function ebayPage(url: string | undefined | null): URL | undefined {
+  if (!url) return undefined;
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return undefined;
+  }
+  return EBAY_HOSTS.has(parsed.hostname.toLowerCase()) ? parsed : undefined;
+}
+
 // The purchase link as it should be clicked: an amazon.com listing (or Prime
-// Video title, moved to amazon.com) carries our tag, replacing anyone else's;
-// anything else comes back untouched.
+// Video title, moved to amazon.com) carries our tag and an ebay.com page our
+// EPN campaign, replacing anyone else's; anything else comes back untouched.
 export function affiliateUrl(url: string): string {
   const page = amazonStorePage(url);
-  if (!page) return url;
-  page.searchParams.set('tag', amazonAssociateTag);
-  return page.toString();
+  if (page) {
+    page.searchParams.set('tag', amazonAssociateTag);
+    return page.toString();
+  }
+  const ebay = ebayPage(url);
+  if (!ebay) return url;
+  for (const [key, value] of Object.entries(EBAY_PARAMS)) ebay.searchParams.set(key, value);
+  return ebay.toString();
 }
 
 // Whether the link is shown tagged, so the page owes the Associates disclosure.
 export const isAmazonStoreUrl = (url: string | undefined | null): boolean => !!amazonStorePage(url);
+
+// Whether the link is shown with our EPN campaign, so the page owes a
+// disclosure that it earns from eBay purchases.
+export const isEbayUrl = (url: string | undefined | null): boolean => !!ebayPage(url);
 
 // Stores we no longer link to. Their rows are gone from the seed data, but a
 // database restored from before (production's, until it is cleaned) still has

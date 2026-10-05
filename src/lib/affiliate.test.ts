@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { affiliateUrl, amazonAssociateTag, isAmazonStoreUrl, isPurchaseLinkShown } from './affiliate';
+import { affiliateUrl, amazonAssociateTag, ebayCampaignId, isAmazonStoreUrl, isEbayUrl, isPurchaseLinkShown } from './affiliate';
 
 describe('affiliateUrl', () => {
   it('tags an amazon.com listing', () => {
@@ -56,5 +56,37 @@ describe('isPurchaseLinkShown', () => {
     expect(isPurchaseLinkShown('https://www.amazon.com/dp/B0727ZQ21F')).toBe(true);
     expect(isPurchaseLinkShown('https://click.linksynergy.com/deeplink?id=x&murl=https%3A%2F%2Fwww.gamestop.com%2F')).toBe(true);
     expect(isPurchaseLinkShown('')).toBe(false);
+  });
+});
+
+describe('eBay Partner Network links', () => {
+  it('adds our campaign to an ebay.com search or listing', () => {
+    for (const url of ['https://www.ebay.com/sch/i.html?_nkw=tamiya+mini+4wd', 'https://www.ebay.com/itm/1234567890', 'https://ebay.com/itm/1234567890']) {
+      const tagged = new URL(affiliateUrl(url));
+      expect(tagged.searchParams.get('campid')).toBe(ebayCampaignId);
+      expect(tagged.searchParams.get('mkcid')).toBe('1');
+      expect(tagged.searchParams.get('mkrid')).toBe('711-53200-19255-0');
+      expect(tagged.searchParams.get('siteid')).toBe('0');
+      expect(tagged.searchParams.get('toolid')).toBe('10001');
+      expect(tagged.searchParams.get('mkevt')).toBe('1');
+    }
+  });
+
+  it('keeps the query and replaces someone else\'s campaign', () => {
+    const url = new URL(affiliateUrl('https://www.ebay.com/itm/1234567890?var=99&campid=1111111111&customid=x'));
+    expect(url.searchParams.get('var')).toBe('99');
+    expect(url.searchParams.getAll('campid')).toEqual([ebayCampaignId]);
+  });
+
+  it('leaves other eBay sites, other stores and junk alone', () => {
+    for (const url of ['https://www.ebay.co.uk/itm/1', 'https://signin.ebay.com/', 'https://www.mercari.com/search/?keyword=x', 'not a url']) {
+      expect(affiliateUrl(url)).toBe(url);
+    }
+  });
+
+  it('knows an eBay link from the rest', () => {
+    expect(isEbayUrl('https://www.ebay.com/sch/i.html?_nkw=x')).toBe(true);
+    expect(isEbayUrl('https://www.amazon.com/dp/B0727ZQ21F')).toBe(false);
+    expect(isEbayUrl(undefined)).toBe(false);
   });
 });

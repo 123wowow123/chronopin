@@ -605,6 +605,7 @@ const zh: Messages = {
     watchOn: '在 {service} 观看',
     watchOnHeading: '观看',
     amazonDisclosure: '作为亚马逊联盟成员，Chronopin 从符合条件的购买中获得收入。',
+    ebayDisclosure: '通过 eBay 链接购买时，Chronopin 可能会获得佣金。',
     performersHeading: '演出',
     ticketsHeading: '门票',
     ticketsFree: '免费',

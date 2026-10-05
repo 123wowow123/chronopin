@@ -607,6 +607,7 @@ const hi: Messages = {
     watchOn: '{service} पर देखें',
     watchOnHeading: 'यहां देखें',
     amazonDisclosure: 'Amazon Associate के तौर पर, Chronopin को योग्य खरीद पर कमाई होती है।',
+    ebayDisclosure: 'eBay लिंक से खरीदारी करने पर Chronopin को कमीशन मिल सकता है।',
     performersHeading: 'परफ़ॉर्मर',
     ticketsHeading: 'टिकट',
     ticketsFree: 'मुफ़्त',
