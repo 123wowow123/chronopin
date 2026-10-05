@@ -48,6 +48,49 @@ describe('cultural holiday dates', () => {
     expect(culturalDaysOn('2026-10-08', 'en').map((d) => d.id)).not.toContain('national-day-golden-week');
   });
 
+  it('works out the holidays that follow a weekday or another holiday', () => {
+    expect(start(2026, 'us-mothers-day')).toBe('2026-05-10');
+    expect(start(2026, 'us-fathers-day')).toBe('2026-06-21');
+    expect(start(2026, 'us-black-friday')).toBe('2026-11-27');
+    expect(start(2026, 'germany-oktoberfest')).toBe('2026-09-19');
+    expect(start(2026, 'orthodox-easter')).toBe('2026-04-12');
+    expect(start(2026, 'russia-maslenitsa')).toBe('2026-02-16');
+    expect(start(2026, 'chaharshanbe-suri')).toBe('2026-03-17');
+    expect(start(2027, 'chaharshanbe-suri')).toBe('2027-03-16');
+    expect(start(2026, 'brazil-carnival')).toBe('2026-02-14');
+    expect(start(2026, 'yalda')).toBe('2026-12-21');
+    expect(start(2028, 'yalda')).toBe('2028-12-20');
+  });
+
+  it('keeps each country its own lunar new year', () => {
+    expect(start(2027, 'lunar-new-year')).toBe('2027-02-06');
+    expect(start(2027, 'korea-seollal')).toBe('2027-02-07');
+    expect(start(2026, 'vietnam-tet')).toBe('2026-02-17');
+  });
+
+  it('reads the Hindu festivals from the year table', () => {
+    expect(start(2026, 'india-holi')).toBe('2026-03-04');
+    expect(start(2026, 'india-navratri')).toBe('2026-10-11');
+    expect(start(2026, 'india-dussehra')).toBe('2026-10-20');
+    expect(start(2026, 'india-ganesh-chaturthi')).toBe('2026-09-14');
+    expect(start(2026, 'india-raksha-bandhan')).toBe('2026-08-28');
+    expect(start(2026, 'kerala-onam')).toBe('2026-08-26');
+    expect(start(2026, 'thailand-loy-krathong')).toBe('2026-11-24');
+    // The table ends in 2035.
+    expect(start(2040, 'india-holi')).toBeUndefined();
+  });
+
+  it('tags Ramadan on each of its thirty days and Japan\'s Golden Week on 29 April to 5 May', () => {
+    expect(culturalDaysOn('2026-03-19', 'en').find((d) => d.id === 'ramadan')?.day).toBe(30);
+    expect(culturalDaysOn('2026-03-20', 'en').map((d) => d.id)).not.toContain('ramadan');
+    expect(culturalDaysOn('2026-05-05', 'en').find((d) => d.id === 'japan-golden-week')?.day).toBe(7);
+  });
+
+  it('says which country or region a holiday belongs to', () => {
+    expect(HOLIDAYS.find((h) => h.id === 'japan-golden-week')?.name).toBe("Japan's Golden Week");
+    expect(HOLIDAYS.find((h) => h.id === 'nordic-midsummer')?.name).toBe('Nordic Midsummer');
+  });
+
   it('leaves out years the calendars cannot answer for', () => {
     expect(culturalDaysOn('1900-01-01', 'en')).toEqual([]);
   });
@@ -89,6 +132,8 @@ describe('date markers', () => {
     expect(holidayForMarker('Sukkot')).toBe('sukkot');
     expect(holidayForMarker('Thanksgiving Day')).toBe('thanksgiving');
     expect(holidayForMarker('Memorial Day')).toBeUndefined();
+    expect(holidayForMarker('Independence Day')).toBe('us-independence-day');
+    expect(holidayForMarker('Boxing Day')).toBe('uk-boxing-day');
   });
 });
 

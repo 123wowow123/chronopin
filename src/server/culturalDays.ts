@@ -8,6 +8,7 @@
 import Holidays from 'date-holidays';
 import type { Locale } from '@/lib/i18n/config';
 import { addDays, HOLIDAYS, holidayById, type CulturalDay, type HolidayDef } from '@/lib/culturalDays';
+import festivalDates from './data/festivalDates.json';
 import ar from './data/culturalDays.ar.json';
 import de from './data/culturalDays.de.json';
 import es from './data/culturalDays.es.json';
@@ -47,16 +48,39 @@ function packageDate(country: string, name: string, year: number): string | null
   return found ? found.date.slice(0, 10) : null;
 }
 
+const FESTIVAL_TABLES = festivalDates as Record<string, Record<string, string>>;
+
+const isLeap = (year: number) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+const weekdayOf = (dayKey: string) => new Date(`${dayKey}T00:00:00Z`).getUTCDay();
+
 function startOf(def: HolidayDef, year: number, easter: () => string | null): string | null {
   const rule = def.rule;
   if ('country' in rule) return packageDate(rule.country, rule.name, year);
-  if ('fixed' in rule) return `${year}-${rule.fixed}`;
+  if ('fixed' in rule) return `${year}-${rule.leapFixed && isLeap(year) ? rule.leapFixed : rule.fixed}`;
   if ('easter' in rule) {
     const date = easter();
     return date ? addDays(date, rule.easter) : null;
   }
+  if ('table' in rule) {
+    const day = FESTIVAL_TABLES[rule.table]?.[year];
+    return day ? `${year}-${day}` : null;
+  }
+  if ('weekday' in rule) {
+    let date = `${year}-${rule.weekday.from}`;
+    while (weekdayOf(date) !== rule.weekday.day) date = addDays(date, 1);
+    return date;
+  }
+  if ('weekdayBefore' in rule) {
+    const other = holidayById(rule.weekdayBefore.id);
+    const base = other ? startOf(other, year, easter) : null;
+    if (!base) return null;
+    let date = addDays(base, -1);
+    while (weekdayOf(date) !== rule.weekdayBefore.day) date = addDays(date, -1);
+    return addDays(date, rule.weekdayBefore.offset ?? 0);
+  }
   const other = holidayById(rule.sameAs);
-  return other ? startOf(other, year, easter) : null;
+  const base = other ? startOf(other, year, easter) : null;
+  return base ? addDays(base, rule.offset ?? 0) : null;
 }
 
 const yearCache = new Map<number, Occurrence[]>();
