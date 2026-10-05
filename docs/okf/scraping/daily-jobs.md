@@ -171,6 +171,14 @@ prod's pin is the one the run worked on ([admin table API](../api/admin-db.md#jo
 * **Persist.** On a development machine a run that wrote pins runs `npm run
   backup:data` itself afterwards, since the seeds are what production is
   rebuilt from.
+* **Ad titles are translated on prod.** The `pinAds` and `holidayAds` tasks
+  add listings whose titles are English; the API's own translation needs
+  credit. After a run from a Claude session, compare prod's working
+  `PinAd`/`HolidayAd` rows with `PinAdTranslation`/`HolidayAdTranslation`
+  (0115, 0129; a row counts only while its `sourceHash` is the sha1 of the
+  current title) and translate what is missing into all 15 languages by hand,
+  then upsert through `/api/admin/db/<Table>?upsert=1` in chunks of 150 rows
+  or fewer. Locally: `npm run ads:pin|ads:holiday -- titles --export|--apply`.
 
 # Tasks
 
