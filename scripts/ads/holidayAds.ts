@@ -6,6 +6,8 @@
 //   npm run ads:holiday -- check [--all]                   read the listings again, mark the broken ones
 //   npm run ads:holiday -- list <holiday>                  a holiday's ads
 //   npm run ads:holiday -- remove <holiday> <asin>
+//   npm run ads:holiday -- titles [--export <file> [--locale zh,ko] | --apply <file>]  translate titles (API key), or by hand:
+//                                                          [{ "holidayAdId", "locale", "sourceHash", "title" }]
 //
 // Amazon answers a search from Node with a stub page more often than it does
 // one from curl (the TLS fingerprint), so `--curl` runs the searches through
@@ -13,7 +15,10 @@
 
 import '../env';
 import { execFileSync } from 'node:child_process';
+import { readFileSync, writeFileSync } from 'node:fs';
 import * as db from '@/server/db';
+import { TARGET_LOCALES, type TargetLocale } from '@/server/extract/translate';
+import HolidayAdTranslation, { type HolidayTitleInput } from '@/server/model/holidayAdTranslation';
 import { readSearchPage } from '@/server/amazonSearch';
 import HolidayAd, { type SearchFn } from '@/server/model/holidayAd';
 
@@ -55,9 +60,31 @@ async function run() {
     console.table(await HolidayAd.forHoliday(args[0]));
   } else if (command === 'remove' && args[0] && args[1]) {
     console.log(await HolidayAd.remove(args[0], args[1]));
+  } else if (command === 'titles') {
+    await titles();
   } else {
-    throw new Error('Usage: ads:holiday coverage | fill [--holiday id] [--curl] | add <holiday> <url> | check [--all] | list <holiday> | remove <holiday> <asin>');
+    throw new Error('Usage: ads:holiday coverage | fill [--holiday id] [--curl] | add <holiday> <url> | check [--all] | list <holiday> | remove <holiday> <asin> | titles [--export f [--locale zh,ko] | --apply f]');
   }
+}
+
+async function titles() {
+  const apply = flag('--apply');
+  if (apply) {
+    const { saved, skipped } = await HolidayAdTranslation.apply(JSON.parse(readFileSync(apply, 'utf8')) as HolidayTitleInput[]);
+    for (const s of skipped) console.log(`skipped ad ${s.holidayAdId} ${s.locale}: ${s.reason}`);
+    console.log(`saved ${saved} title(s)`);
+    return;
+  }
+  const asked = flag('--locale')?.split(',').map((l) => l.trim());
+  const locales = asked ? TARGET_LOCALES.filter((l): l is TargetLocale => asked.includes(l)) : TARGET_LOCALES;
+  const out = flag('--export');
+  if (out) {
+    const todo = await HolidayAdTranslation.pending(locales);
+    writeFileSync(out, JSON.stringify(todo, null, 2));
+    console.log(`wrote ${todo.length} ad(s) to ${out}`);
+    return;
+  }
+  console.log(`saved ${await HolidayAdTranslation.translateMissing({ locales, limit: 100000 })} title(s)`);
 }
 
 run()

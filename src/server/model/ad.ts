@@ -32,6 +32,7 @@ import { viewerPreference } from '../services/pages';
 import { localizePins } from '../services/translations';
 import type { Locale } from '@/lib/i18n/config';
 import { locateUnlocated } from './ipPlaces';
+import HolidayAdTranslation from './holidayAdTranslation';
 import PinAdTranslation from './pinAdTranslation';
 import PinView from './pinView';
 
@@ -255,7 +256,7 @@ export default class Ad {
 }
 
 // The picked ads' titles in the viewer's language: a chosen ad's through its
-// PinAdTranslation (0115), a listing named after its pin through the pin's own
+// PinAdTranslation (0115), a holiday ad's through HolidayAdTranslation (0129), a listing named after its pin through the pin's own
 // translation. An ad with none keeps its English title.
 async function localizedTitles(ads: AdCandidate[], locale: Locale): Promise<Map<string, string>> {
   const out = new Map<string, string>();
@@ -265,6 +266,9 @@ async function localizedTitles(ads: AdCandidate[], locale: Locale): Promise<Map<
     for (const ad of ads) if (ad.key.startsWith('p:') && ad.title) chosen.set(Number(ad.key.slice(2)), ad.title);
     const translated = await PinAdTranslation.forAds(chosen, locale);
     for (const [id, title] of translated) out.set(`p:${id}`, title);
+    const holiday = new Map<number, string>();
+    for (const ad of ads) if (ad.key.startsWith('h:') && ad.title) holiday.set(Number(ad.key.slice(2)), ad.title);
+    for (const [id, title] of await HolidayAdTranslation.forAds(holiday, locale)) out.set(`h:${id}`, title);
     const named = ads.filter((ad) => ad.titleFromPin && ad.pinId != null && ad.title);
     const pins = await localizePins(named.map((ad) => ({ id: ad.pinId as number, title: ad.title as string })), locale);
     named.forEach((ad, i) => pins[i].title !== ad.title && out.set(ad.key, pins[i].title));

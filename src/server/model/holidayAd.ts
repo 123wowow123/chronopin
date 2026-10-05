@@ -5,6 +5,7 @@ import { searchAmazon, type SearchHit } from '../amazonSearch';
 import { holidaysInWindow, occurrencesIn } from '../culturalDays';
 import { readAmazonListing } from '../listingPrice';
 import log from '../util/log';
+import HolidayAdTranslation from './holidayAdTranslation';
 
 // Product ads for the cultural holidays (0121): the goods people traditionally
 // buy for one, as Amazon listings that clear a bar for reviews and brand
@@ -62,6 +63,19 @@ export type SearchFn = (query: string) => Promise<SearchHit[] | { unknown: strin
 function touched() {
   const held = (globalThis as any).__chronopinAds;
   if (held) held.inventory = null;
+}
+
+// Translates an ad's title into the languages offered, in the background, when
+// the admin setting for automatic translation is on (as PinAd does); the hand
+// route is `ads:holiday titles`.
+function translateTitles(holidayAdId?: number) {
+  (async () => {
+    const { getAutoTranslate } = await import('./appSetting');
+    if (!(await getAutoTranslate()).enabled) return;
+    const { offeredLocales } = await import('../services/cache');
+    const locales = await offeredLocales();
+    if (locales.length) await HolidayAdTranslation.translateMissing({ locales, holidayAdId });
+  })().catch((err) => log.warn('holiday ad title translation failed:', (err as Error).message));
 }
 
 const todayUtc = () => new Date().toISOString().slice(0, 10);
@@ -126,6 +140,7 @@ export default class HolidayAd {
       [holiday, asin, url, listing.title.slice(0, 300), listing.brand?.slice(0, 120) ?? null, listing.price, listing.rating, listing.reviewCount, listing.image ?? null, tierOf(listing.price as number, def.shop.budget), listing.urgency ?? null],
     );
     touched();
+    translateTitles(rows[0].id);
     return { added: rows[0] };
   }
 
@@ -174,7 +189,10 @@ export default class HolidayAd {
         ok++;
       }
     }
-    if (due.length) touched();
+    if (due.length) {
+      touched();
+      translateTitles();
+    }
     log.info(`Holiday ads checked: ${due.length} read, ${ok} ok, ${broken.length} newly broken, ${unread} unreadable`);
     return { checked: due.length, ok, unread, newlyBroken: broken };
   }
