@@ -15,8 +15,20 @@ import * as db from '@/server/db';
 const PROD = 'https://chronopin.blob.core.windows.net/thumb/';
 const CONCURRENCY = 16;
 
+// A reset connection on one of 14k requests must not end the run: retry with a growing pause.
+async function retry<T>(job: () => Promise<T>): Promise<T> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await job();
+    } catch (err) {
+      if (attempt === 5) throw err;
+      await new Promise((resolve) => setTimeout(resolve, 500 * 2 ** attempt));
+    }
+  }
+}
+
 async function exists(url: string) {
-  const res = await fetch(url, { method: 'HEAD' });
+  const res = await retry(() => fetch(url, { method: 'HEAD' }));
   return res.ok;
 }
 
@@ -33,25 +45,36 @@ async function main() {
   let copied = 0;
   let present = 0;
   const absent: string[] = [];
+  const failed: string[] = [];
   let next = 0;
   async function worker() {
     while (next < names.length) {
       const name = names[next++];
-      if (await exists(thumbUrlPrefix + name)) {
-        present++;
-        continue;
+      try {
+        if (await exists(thumbUrlPrefix + name)) {
+          present++;
+          continue;
+        }
+        const got = await retry(async () => {
+          const res = await fetch(PROD + name);
+          return { type: res.headers.get('content-type'), body: res.ok ? Buffer.from(await res.arrayBuffer()) : null };
+        });
+        const { body } = got;
+        if (!body) {
+          absent.push(name);
+          continue;
+        }
+        await retry(() => uploadThumb(name, body, got.type ?? 'application/octet-stream'));
+        copied++;
+      } catch (err) {
+        failed.push(name);
+        console.error(`  failed: ${name}: ${err instanceof Error ? err.message : err}`);
       }
-      const res = await fetch(PROD + name);
-      if (!res.ok) {
-        absent.push(name);
-        continue;
-      }
-      await uploadThumb(name, Buffer.from(await res.arrayBuffer()), res.headers.get('content-type') ?? 'application/octet-stream');
-      copied++;
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
-  console.log(`${names.length} in use: ${present} already local, ${copied} copied, ${absent.length} not on production either.`);
+  console.log(`${names.length} in use: ${present} already local, ${copied} copied, ${absent.length} not on production either, ${failed.length} failed.`);
+  if (failed.length) process.exitCode = 1;
   for (const name of absent.slice(0, 20)) console.log(`  missing: ${name}`);
 }
 
