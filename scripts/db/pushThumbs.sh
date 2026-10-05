@@ -4,7 +4,8 @@
 # reach production without their blobs, and a card whose thumb is missing
 # falls back to the source's original image, which many sites refuse to serve
 # to other domains - so the card shows an empty box. Uploads only the names
-# production lacks and never overwrites one. Needs `az login`.
+# production lacks and never overwrites one. Includes each Medium thumb's small
+# copy (`s/<name>`, made by saveThumb or `npm run thumbs:small`). Needs `az login`.
 #
 #   npm run thumbs:push
 set -eu
@@ -20,6 +21,7 @@ trap 'rm -rf "$tmp"' EXIT
 
 docker exec "$CONTAINER" psql -U "$PG_USER" -d "$DB" -tAc \
   "SELECT \"thumbName\" FROM \"Medium\" WHERE \"thumbName\" IS NOT NULL
+   UNION SELECT 's/' || \"thumbName\" FROM \"Medium\" WHERE \"thumbName\" IS NOT NULL
    UNION SELECT \"pictureUrl\" FROM \"User\" WHERE \"pictureUrl\" LIKE 'avatar/%'" |
   sort -u > "$tmp/used"
 

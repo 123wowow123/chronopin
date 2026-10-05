@@ -1,4 +1,4 @@
-// Copies the thumbnails and avatars the local database uses from production's
+// Copies the thumbnails (and their small `s/` copies) and avatars the local database uses from production's
 // public `thumb` container into Azurite - the reverse of `npm run thumbs:push`.
 // `npm run db:pull-prod` brings production's pins without their blobs, so
 // every thumb made on production 404s locally and cards show a broken image.
@@ -38,6 +38,7 @@ async function main() {
   const names = (
     await db.query<{ name: string }>(
       `SELECT "thumbName" AS name FROM "Medium" WHERE "thumbName" IS NOT NULL
+       UNION SELECT 's/' || "thumbName" FROM "Medium" WHERE "thumbName" IS NOT NULL
        UNION SELECT "pictureUrl" FROM "User" WHERE "pictureUrl" LIKE 'avatar/%'`,
     )
   ).map((row) => row.name);
