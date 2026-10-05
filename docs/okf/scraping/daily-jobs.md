@@ -359,6 +359,7 @@ timeline mixes them in with the others). A pin's own page already has buy
 buttons for what it is about; these are *adjacent* products - a Tamiya Mini 4WD
 starter kit under the Mini 4WD Japan Cup, a Bandai Gunpla kit under a Gundam
 tabletop game.
+**Film pins are stocked by the tool itself** (`movieMerchandise` in the answer, up to 6 pins a run, [movieMerchandise.ts](../../../src/server/movieMerchandise.ts)): plush, toys, Funko Pops, LEGO and figures named for the film. Don't redo them by hand; `npm run ads:pin -- movies` does the same locally.
 **The bar** (the tool enforces it, [adQuality.ts](../../../src/lib/adQuality.ts)):
 in stock with a buy-box price, a brand on the listing, at least 4.3 stars from
 at least 100 reviews. Beyond that, stick to trusted brands - the maker itself

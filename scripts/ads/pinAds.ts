@@ -12,7 +12,7 @@ import '../env';
 import * as db from '@/server/db';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { TARGET_LOCALES, type TargetLocale } from '@/server/extract/translate';
-import { addMovieMerchandise } from '@/server/movieMerchandise';
+import { stockMovieMerchandise } from '@/server/movieMerchandise';
 import PinAd from '@/server/model/pinAd';
 import PinAdTranslation, { type AdTitleInput } from '@/server/model/pinAdTranslation';
 
@@ -42,18 +42,8 @@ function flag(name: string): string | undefined {
 // Film pins' merchandise (src/server/movieMerchandise.ts), the nearest to today first.
 async function movies() {
   const ids = flag('--ids')?.split(',').map(Number).filter(Number.isInteger);
-  const rows = await db.query<{ id: number; title: string; productName: string | null }>(
-    `SELECT "p"."id", "p"."title", "p"."productName" FROM "Pin" AS "p"
-     WHERE "p"."utcDeletedDateTime" IS NULL
-       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category' AND "t"."name" = 'Movie')
-       AND (SELECT count(*) FROM "PinAd" AS "a" WHERE "a"."pinId" = "p"."id" AND "a"."status" = 'ok') < 2
-       ${ids?.length ? 'AND "p"."id" = ANY($1::int[])' : `AND "p"."utcStartDateTime" >= now() - interval '120 days' AND "p"."utcStartDateTime" < now() + interval '45 days'`}
-     ORDER BY abs(extract(epoch FROM "p"."utcStartDateTime" - now())) LIMIT 100`,
-    ids?.length ? [ids] : [],
-  );
-  for (const row of rows) {
-    const added = await addMovieMerchandise({ pinId: row.id, workTitle: row.productName, pinTitle: row.title, max: Number(flag('--max') ?? 3) });
-    console.log(`${row.id} ${row.title}: ${added.length ? added.map((a) => `\n    ${a.asin} ${a.title.slice(0, 80)}`).join('') : 'nothing found'}`);
+  for (const row of await stockMovieMerchandise({ ids, max: Number(flag('--max') ?? 3) })) {
+    console.log(`${row.pinId} ${row.title}: ${row.added.length ? row.added.map((a) => `\n    ${a.asin} ${a.title.slice(0, 80)}`).join('') : 'nothing found'}`);
   }
 }
 

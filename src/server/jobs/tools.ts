@@ -23,6 +23,7 @@ import JobRun from '../model/jobRun';
 import Medium, { imageHashOf } from '../model/medium';
 import HolidayAd from '../model/holidayAd';
 import PinAd from '../model/pinAd';
+import { stockMovieMerchandise } from '../movieMerchandise';
 import PinRevisit from '../model/pinRevisit';
 import { MIN_AD_RATING, MIN_AD_REVIEWS, MIN_HOLIDAY_AD_RATING, MIN_HOLIDAY_AD_REVIEWS } from '@/lib/adQuality';
 import PinSentiment, { shortHash } from '../model/pinSentiment';
@@ -402,11 +403,15 @@ export const TOOLS: JobTool[] = [
   {
     name: 'pin_ads_check',
     description:
-      `Reads every pin ad's Amazon listing again (the ones not read in the last 11 hours): refreshes its price, reviews and urgency line ("Only 12 left", "90-day low price", shown on its ad tile) and marks it broken when it is gone, out of stock, unbranded, or below ${MIN_AD_RATING} stars from ${MIN_AD_REVIEWS} reviews. Returns newlyBroken (each with its pin and why) and needsAds: upcoming pins with fewer than two working ads, the pins with a broken ad first, with the pin's company and categories. Call it once at the start of the pinAds task; then replace the broken ones and fill the pins a product genuinely suits with add_pin_ad.`,
+      `Reads every pin ad's Amazon listing again (the ones not read in the last 11 hours): refreshes its price, reviews and urgency line ("Only 12 left", "90-day low price", shown on its ad tile) and marks it broken when it is gone, out of stock, unbranded, or below ${MIN_AD_RATING} stars from ${MIN_AD_REVIEWS} reviews. Also stocks film pins on its own (plush, toys, figures named for the film; movieMerchandise lists what it added, at most 6 pins a run), so those need no add_pin_ad. Returns newlyBroken (each with its pin and why) and needsAds: upcoming pins with fewer than two working ads, the pins with a broken ad first, with the pin's company and categories. Call it once at the start of the pinAds task; then replace the broken ones and fill the pins a product genuinely suits with add_pin_ad.`,
     input_schema: obj({ limit: num('Listings to read, default 40, at most 80'), pins: num('Pins to list in needsAds, default 20, at most 40') }),
     run: async (input) => {
       const checked = await PinAd.check({ limit: int(input.limit, 40, 1, 80) });
-      return { ...checked, needsAds: await PinAd.needingAds({ limit: int(input.pins, 20, 1, 40) }) };
+      const movieMerchandise = await stockMovieMerchandise({ limit: 6 }).catch((err) => {
+        log.warn('movie merchandise failed:', (err as Error).message);
+        return [];
+      });
+      return { ...checked, movieMerchandise, needsAds: await PinAd.needingAds({ limit: int(input.pins, 20, 1, 40) }) };
     },
   },
   {

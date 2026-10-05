@@ -9,6 +9,7 @@ import { MIN_AD_RATING, MIN_AD_REVIEWS } from '@/lib/adQuality';
 import { isExactListing } from '@/lib/shopping';
 import { searchAmazon } from './amazonSearch';
 import { titleCandidates } from './scrape/screen';
+import * as db from './db';
 import PinAd from './model/pinAd';
 
 const KINDS = ['plush', 'toy', 'Funko Pop', 'LEGO', 'action figure', 'costume'];
@@ -40,4 +41,21 @@ export async function addMovieMerchandise(query: MerchandiseQuery): Promise<{ as
     if ('added' in result) added.push({ asin: hit.asin, title: result.added.title });
   }
   return added;
+}
+
+// Film pins from the last 120 days to the next 45 with fewer than two working
+// ads, the nearest to today first (or just `ids`), each given merchandise.
+export async function stockMovieMerchandise({ ids, limit = 100, max = 3 }: { ids?: number[]; limit?: number; max?: number } = {}) {
+  const rows = await db.query<{ id: number; title: string; productName: string | null }>(
+    `SELECT "p"."id", "p"."title", "p"."productName" FROM "Pin" AS "p"
+     WHERE "p"."utcDeletedDateTime" IS NULL
+       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category' AND "t"."name" = 'Movie')
+       AND (SELECT count(*) FROM "PinAd" AS "a" WHERE "a"."pinId" = "p"."id" AND "a"."status" = 'ok') < 2
+       ${ids?.length ? 'AND "p"."id" = ANY($2::int[])' : `AND "p"."utcStartDateTime" >= now() - interval '120 days' AND "p"."utcStartDateTime" < now() + interval '45 days'`}
+     ORDER BY abs(extract(epoch FROM "p"."utcStartDateTime" - now())) LIMIT $1`,
+    ids?.length ? [limit, ids] : [limit],
+  );
+  const stocked: { pinId: number; title: string; added: { asin: string; title: string }[] }[] = [];
+  for (const row of rows) stocked.push({ pinId: row.id, title: row.title, added: await addMovieMerchandise({ pinId: row.id, workTitle: row.productName, pinTitle: row.title, max }) });
+  return stocked;
 }
