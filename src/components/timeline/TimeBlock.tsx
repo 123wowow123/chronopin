@@ -67,11 +67,12 @@ function triviaSearchUrl(name: string, locale: string): string {
 }
 
 // Beside the rail, a `wrap` tag wraps evenly to two lines (the 54px a date
-// marker is allowed) instead of cutting off, in the same type as the rest.
+// marker is allowed) instead of cutting off, in the same type as the rest; a
+// `lines={3}` one (a long holiday name) may take a third.
 // With an `href` the chip is that search link, opened in a new tab.
-function Tag({ variant, children, title, className = '', wrap = false, href, holiday }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean; href?: string; holiday?: number }) {
+function Tag({ variant, children, title, className = '', wrap = false, lines = 2, href, holiday }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean; lines?: 2 | 3; href?: string; holiday?: number }) {
   const chip = `${tagBase} tag-${variant} ${className}`;
-  const label = <span className={`block truncate ${wrap ? 'lg:line-clamp-2 lg:whitespace-normal lg:text-balance' : ''}`}>{children}</span>;
+  const label = <span className={`block truncate ${wrap ? `${lines === 3 ? 'lg:line-clamp-3' : 'lg:line-clamp-2'} lg:whitespace-normal lg:text-balance` : ''}`}>{children}</span>;
   return href ? (
     <a href={href} target="_blank" rel="noopener nofollow" className={chip} title={title} data-tradition={holiday}>
       {label}
@@ -101,9 +102,15 @@ function splitMarkers<T extends { title: string }>(dateTimes: T[], culturalDays:
   return { astronomy: left.filter((dt) => isAstronomyMarker(dt.title)), national: left.filter((dt) => !isAstronomyMarker(dt.title)) };
 }
 
+// A holiday's name this long needs a third line in the 110px column (68px with
+// its gap, as the specialty day's three lines are); shorter ones take two.
+const LONG_HOLIDAY_NAME = 24;
+const holidayLines = (label: string): 2 | 3 => (label.length > LONG_HOLIDAY_NAME ? 3 : 2);
+
 // How tall the holiday tags are stacked beside the rail (lg): each is up to
-// two lines, 54px with its gap.
-const holidayStackHeight = (national: number, culturalDays: CulturalDay[]) => 54 * (national + culturalDays.reduce((sum, d) => sum + 1 + d.traditions.length, 0));
+// two lines, 54px with its gap, a long holiday name three.
+const holidayStackHeight = (national: number, culturalDays: CulturalDay[]) =>
+  54 * national + culturalDays.reduce((sum, d) => sum + (holidayLines(d.label) === 3 ? 68 : 54) + 54 * d.traditions.length, 0);
 
 // One calendar day on the timeline: its tags (date, countdown, date markers,
 // specialty day, holidays) beside or above its cards.
@@ -490,7 +497,7 @@ export function HolidayTags({ days, phoneTag }: { days: CulturalDay[]; phoneTag?
         const hue = holidayHue(i);
         return (
           <Fragment key={day.id}>
-            <Tag variant="holiday" wrap title={day.label} href={triviaSearchUrl(day.name, locale)} className={`${extraTag} ${hue} ${i ? 'max-sm:shrink-0' : ''} ${phoneTag == null || phoneTag.startsWith('c:') ? '' : 'max-sm:hidden'}`}>
+            <Tag variant="holiday" wrap lines={holidayLines(day.label)} title={day.label} href={triviaSearchUrl(day.name, locale)} className={`${extraTag} ${hue} ${i ? 'max-sm:shrink-0' : ''} ${phoneTag == null || phoneTag.startsWith('c:') ? '' : 'max-sm:hidden'}`}>
               {day.label}
             </Tag>
             {day.traditions.map((tradition) => (

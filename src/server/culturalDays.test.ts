@@ -42,6 +42,12 @@ describe('cultural holiday dates', () => {
     expect(Object.keys(culturalDaysInYear(2026, 'en'))).toContain('2026-09-25');
   });
 
+  it('tags China\'s National Day Golden Week on 1-7 October', () => {
+    expect(culturalDaysOn('2026-10-01', 'en').map((d) => d.id)).toContain('national-day-golden-week');
+    expect(culturalDaysOn('2026-10-05', 'en').find((d) => d.id === 'national-day-golden-week')?.day).toBe(5);
+    expect(culturalDaysOn('2026-10-08', 'en').map((d) => d.id)).not.toContain('national-day-golden-week');
+  });
+
   it('leaves out years the calendars cannot answer for', () => {
     expect(culturalDaysOn('1900-01-01', 'en')).toEqual([]);
   });

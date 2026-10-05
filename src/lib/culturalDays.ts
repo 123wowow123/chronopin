@@ -102,6 +102,18 @@ export const HOLIDAYS: HolidayDef[] = [
     shop: { queries: ['mooncake', 'mooncake gift box', 'mooncake mold', 'mid-autumn festival lantern', 'oolong tea gift set'], budget: [20, 45], keywords: ['mooncake', 'moon cake', 'mid-autumn', 'mid autumn', 'lantern', 'oolong'] },
   },
   {
+    // China's seven-day National Day holiday: 1 October and the days around it
+    // (the State Council moves working days to join them, so the real run
+    // varies a little by year; the first week of October is the constant).
+    id: 'national-day-golden-week',
+    name: "China's National Day Golden Week",
+    culture: 'Chinese',
+    rule: { fixed: '10-01' },
+    span: 7,
+    aliases: ["China's National Day"],
+    traditions: ['Flag raising', 'Family trips', 'Fireworks'],
+  },
+  {
     id: 'double-ninth',
     name: 'Double Ninth Festival',
     culture: 'Chinese',
