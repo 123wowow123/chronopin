@@ -19,7 +19,7 @@
 import type Anthropic from '@anthropic-ai/sdk';
 import { citeTag, urlKey } from '@/lib/citations';
 import log from '../util/log';
-import { describeError, getClient, MODEL, PRODUCT_FEATURES_RULE, withNote } from '.';
+import { describeError, getClient, MODEL, PRODUCT_FEATURES_RULE, UNIQUE_VALUE_RULE, withNote } from '.';
 
 export const MIN_CONFIDENCE = 70;
 const MAX_REFERENCES = 5;
@@ -59,7 +59,7 @@ Then weigh the site itself: the lower its standing, the lower the confidence, wh
 
 Only record references rated ${MIN_CONFIDENCE} or higher, at most ${MAX_REFERENCES}, strongest first. Copy each URL exactly as it appeared in a search or fetch result - never write one from memory or adjust it. publishedDate is the page's own publication date as YYYY-MM-DD, from the result's page age or the page itself, or null when unknown. startDate and endDate are when that page says the event starts and ends, as YYYY-MM-DD (endDate is the last day, inclusive), each null when the page does not give a specific day - never carry a date over from the source or from another page. reasoning is one or two sentences on why that confidence, grounded in what the page itself says about the event and its date - quote its key phrase where you can, and name the site ("LTA's project page says Phase 1 opens in 2030"). When nothing qualifies, record an empty list.
 
-Also write longFormSummary: the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown - drawn from the source and from the references you record. Where a reference adds to or updates the source (a newer date, a cost, who is involved), include that. ${PRODUCT_FEATURES_RULE} Ground every point: end it with a citation of each page that backs it, [S] for the source and [1], [2]... for references by their position in the list you record, e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a page actually says, and never a page you are not recording. longFormSummary is null when there is too little to summarize.
+Also write longFormSummary: the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown - drawn from the source and from the references you record. Where a reference adds to or updates the source (a newer date, a cost, who is involved), include that. ${PRODUCT_FEATURES_RULE} ${UNIQUE_VALUE_RULE} Ground every point: end it with a citation of each page that backs it, [S] for the source and [1], [2]... for references by their position in the list you record, e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a page actually says, and never a page you are not recording. longFormSummary is null when there is too little to summarize.
 
 Finish by calling record_references exactly once.`;
 

@@ -21,6 +21,7 @@ Turn one source (a web page, YouTube video, X post, market page, or a topic to r
 6. **Every stage fails soft.** A failed image, reference, rating or lookup adds nothing and never aborts the scrape. Only the fetch of the source and the final save may fail the whole job.
 7. **Use the real API to save.** A direct-SQL insert skips the live feed, search sync, duplicate checks, threading and tag sync. Save through `POST /api/pins`.
 8. **Curators are per vertical.** Each content vertical posts as its own curator account (@GameDesk, @FilmDesk, @AnimeDesk, @TechDesk, @OddsDesk), so a batch is attributable.
+9. **Every pin must add value of its own (AdSense "low value content").** On 2026-10-04 Google AdSense refused to show ads on chronopin.com for *low value content*: a site has to give "substantial unique value", show "ongoing curation and structural maintenance" and hold "genuine user interest". Google's spam policies count scraped, thin and mass-produced pages against a site. So a generated pin is not done because its fields are filled. It has to say something the source page alone does not: a summary written in our own words from several sources (never a paraphrase or copy of one article), the context a reader needs (what came before, what it changes, what comes next, how it compares), its place in a thread, and its dates, place, references, media and tags. A pin that is only a title, a line and one link must not be posted. In a batch, if one pin's summary could pass for its sibling's with only the name swapped, the batch is template filler; write fewer, richer pins instead. Keep posted pins current (dates, delays, results, updates) rather than leaving them stale.
 
 # Stages
 
@@ -97,6 +98,7 @@ A draft is ready to save when:
 - A game pin carries its aggregated ratings, its maturity rating with content descriptors and its supported platforms, each read from a fetched page (see [Game facts](#decision-rules)).
 - A prediction-market pin says what its markets have traded, in dollars, next to the odds it quotes.
 - The `longFormSummary` is an HTML bulleted list whose every point cites what backs it.
+- The pin passes the [value test](#principles) (principle 9). Its summary is original synthesis from more than one source and gives context beyond the source page; no sentence is lifted from the source except a short, attributed quote; and it is not interchangeable with a sibling pin in the same batch.
 - A model or product pin carries the maker's main results table (`<h3>Benchmarks</h3>` + `<table>`) when one is published.
 - An attendable event pin (concert, festival, sports fixture, conference) carries a `PinEventInfo` ticket reading when the organiser's or ticketer's own page is readable - a `ticketUrl` to that show's purchase page once it is on sale, never guessed.
 

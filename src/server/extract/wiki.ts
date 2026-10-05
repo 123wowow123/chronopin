@@ -20,7 +20,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import type { WikiDraft, WikiPage } from '../model/source';
 import type { SourceKind } from '@/lib/sourceKind';
 import { citeLabels } from './references';
-import { describeError, getClient, MODEL, PRODUCT_FEATURES_RULE } from '.';
+import { describeError, getClient, MODEL, PRODUCT_FEATURES_RULE, UNIQUE_VALUE_RULE } from '.';
 
 // Text per wiki call; a longer source is split into parts of about this size.
 export const PART_CHARS = 60000;
@@ -51,7 +51,7 @@ Give the overview of the whole source and the facts that matter most, drawn only
 
 export const COMPOSE_PROMPT = `You write the long-form summary of an event pin on a timeline, from wikis already written about each link the pin cites. The pin's own title, description and dates say which event it is; a wiki may cover more than this event (a roundup, a long video), so use only what is about this pin's event.
 
-Write the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown. Where one link adds to or updates another (a newer date, a cost, who is involved), say so, favouring the newer and more authoritative. ${PRODUCT_FEATURES_RULE} Ground every point: end it with a citation of each link that backs it, by the label the link is given ([S] for the pin's source, [1], [2]... for the others), e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a link's wiki actually says. longFormSummary is null when the wikis hold too little about this event to summarize.
+Write the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown. Where one link adds to or updates another (a newer date, a cost, who is involved), say so, favouring the newer and more authoritative. ${PRODUCT_FEATURES_RULE} ${UNIQUE_VALUE_RULE} Ground every point: end it with a citation of each link that backs it, by the label the link is given ([S] for the pin's source, [1], [2]... for the others), e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a link's wiki actually says. longFormSummary is null when the wikis hold too little about this event to summarize.
 
 The pin's page must say what is known now. Links marked (new) came in since the summary was last written, which is given as the current summary. When a newer, credible link changes a fact the pin's title or description states - a date, a status, a figure, who is involved - also return that field rewritten to state the newer fact, keeping its style, length and voice; otherwise return null for it. Never rewrite either for wording alone, and never state as settled what the newer link only expects. update is one plain sentence, without citations, saying what the new links changed or added, e.g. "Opening moved from 8 December 2026 to 6 January 2027 as the utility agreement slipped."; null when they change nothing a reader would notice.`;
 

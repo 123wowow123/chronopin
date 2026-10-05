@@ -25,6 +25,10 @@ export const MAX_PAGE_CHARS = 60000;
 
 // Shared by every prompt that writes a long-form summary: a product's pin
 // should say what the thing is, not only when it happens.
+
+// Google AdSense refused the site for "low value content" (2026-10-04): a summary has to add something the source page alone does not.
+export const UNIQUE_VALUE_RULE = `The summary must give a reader more than the source page does, in your own words and never copied or closely paraphrased from one article: add the context around the event (what came before, why it matters, what it changes, what happens next, how it compares with its predecessor or rivals) drawn from the source and every reference, and keep each point specific to this event - a summary that would read the same with another event's name swapped in is too thin. Quote at most a short phrase, attributed. When the source and the references found so far are not enough to do that, look for more independent sources (the maker's or organiser's own page, a news report, a reference work) and cite them too.`;
+
 export const PRODUCT_FEATURES_RULE = `When the event is about a product - an aircraft, vehicle, device, chip, game, AI model or software release - follow the event's list with a section of its own, "<h3>Notable features</h3><ul><li>...</li></ul>": what the product is and what is new or distinctive over what it replaces or competes with, and its headline specifications (size, capacity, range, performance, price) with their units, cited like every other point. The event's list above it keeps to the event itself (dates, schedule, who is involved). When the maker's page leads with a results table (an AI model's benchmark scores against its predecessor and rivals, a chip's or car's spec comparison), copy that main table after the features as "<h3>Benchmarks</h3><table><thead><tr><th></th><th>...</th></tr></thead><tbody><tr><th scope="row">...</th><td>...</td></tr></tbody></table>" - the same rows, columns and figures, with the table's own notes ("with tools", "partial") kept in the cells - cited once, in the heading ("<h3>Benchmarks [S]</h3>"). Skip minor tables (prices already listed, footnotes).`;
 
 const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unknown'] as const;
@@ -210,7 +214,7 @@ export const SCHEMA = {
     longFormSummary: {
       type: ['string', 'null'],
       description:
-        `Key points as an HTML bulleted list, "<ul><li>...</li></ul>" - rendered as HTML on the pin page, so real list markup, not prose and not markdown. ${PRODUCT_FEATURES_RULE} Null when the page has too little to summarize.`,
+        `Key points as an HTML bulleted list, "<ul><li>...</li></ul>" - rendered as HTML on the pin page, so real list markup, not prose and not markdown. ${PRODUCT_FEATURES_RULE} ${UNIQUE_VALUE_RULE} Null when the page has too little to summarize.`,
     },
   },
   required: [
