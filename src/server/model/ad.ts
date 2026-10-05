@@ -323,11 +323,13 @@ async function loadInventory(): Promise<Inventory> {
        FROM "Ad" WHERE "active" AND "weight" > 0`,
     ),
     // Amazon US listings on live pins; the same pin's other listings are
-    // separate ads.
+    // separate ads. `categories` holds all the pin's tags (topics too: a
+    // Watches pin's ad suits another Watches pin), compared with the viewed
+    // pin's in relatedness().
     db.query<{ id: number; pinId: number; url: string; price: number | null; rating: number | null; reviewCount: number | null; brand: string | null; title: string; titleFromPin: boolean; company: string | null; categories: string[] }>(
       `SELECT "m"."id", "m"."pinId", "m"."url", "m"."price"::float8 AS "price", "m"."rating"::float8 AS "rating", "m"."reviewCount", "m"."brand",
          coalesce(nullif("p"."productName", ''), "p"."title") AS "title", nullif("p"."productName", '') IS NULL AS "titleFromPin", "c"."name"::text AS "company",
-         coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category'), '{}') AS "categories"
+         coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "categories"
        FROM "Merchant" AS "m"
          JOIN "Pin" AS "p" ON "p"."id" = "m"."pinId" AND "p"."utcDeletedDateTime" IS NULL
          LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"
@@ -337,7 +339,7 @@ async function loadInventory(): Promise<Inventory> {
     // Ads chosen for a pin (0112), working ones on live pins.
     db.query<{ id: number; pinId: number; url: string; price: number | null; rating: number | null; reviewCount: number | null; urgency: string | null; title: string; brand: string | null; categories: string[] }>(
       `SELECT "a"."id", "a"."pinId", "a"."url", "a"."price"::float8 AS "price", "a"."rating"::float8 AS "rating", "a"."reviewCount", "a"."urgency", "a"."title", "a"."brand",
-         coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category'), '{}') AS "categories"
+         coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "categories"
        FROM "PinAd" AS "a" JOIN "Pin" AS "p" ON "p"."id" = "a"."pinId" AND "p"."utcDeletedDateTime" IS NULL
        WHERE "a"."status" = 'ok'`,
     ),

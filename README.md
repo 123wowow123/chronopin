@@ -296,6 +296,8 @@ run 6am job here in this session
 
 - ability to buy an ad to the sponsored blocks
 
+- ability to pay subscription and not display ads on their own pins
+
 - add Amazon Product Advertising API (PA API) key
 
 - update all ticket master button link to use referal link
@@ -338,11 +340,7 @@ list these information on people if available
 
 - famous people should have page like congressmen too
 
-
-- pin  cannel news and events
-
-- pin all miyayaki movies
-- pin all disney movies
+- generate most corrupt people page
 
 
 - Grammy needs nomination and related music
@@ -350,6 +348,8 @@ https://www.chronopin.com/es/pin/4861/the-2027-grammy-nominations-set-the-song-o
 
 performance optimization
 
+- pin watches news and events
+- referral for rolex?
 
 
 # Left over: link wikis for prod

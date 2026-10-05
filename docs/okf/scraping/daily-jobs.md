@@ -341,8 +341,11 @@ anything to read - blank beats guessed.
 
 **Reads** `pin_ads_check`: every pin ad's Amazon listing read again (price,
 stars, reviews, stock), the ones that just broke, and `needsAds` - upcoming
-pins with fewer than two working ads, those with a broken ad first.
-**Does** replaces each broken ad and fills the pins a product genuinely suits,
+pins (from the last 120 days to the next 45) with fewer than two working ads,
+those with a broken ad first, each with its categories and topics. **Let the
+tags inspire the product**: a Watches/Fashion pin (a MoonSwatch drop) wants a
+watch (a Garmin or Casio), a Gaming pin a controller, and so on. An ad also
+serves on every other pin that shares its pin's tags. **Does** replaces each broken ad and fills the pins a product genuinely suits,
 with `add_pin_ad` (the pin page shows them first in its ad slots, the
 timeline mixes them in with the others). A pin's own page already has buy
 buttons for what it is about; these are *adjacent* products - a Tamiya Mini 4WD

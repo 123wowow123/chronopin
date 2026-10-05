@@ -145,19 +145,22 @@ export default class PinAd {
     return { checked: due.length, ok, unread, newlyBroken: broken };
   }
 
-  // Pins worth an ad that have fewer than `want` working ones: the soonest
-  // upcoming pins first, then the most opened. The job reads each and decides
+  // Pins worth an ad that have fewer than `want` working ones, from the last
+  // 120 days to the next 45 (a pin stays open after its day): broken ads
+  // first, then the nearest to today. Categories and topics are returned so the job
+  // can pick a product from them (a Watches pin wants a watch). The job reads each and decides
   // whether a product genuinely suits it.
   static async needingAds({ want = 2, limit = 25 }: { want?: number; limit?: number } = {}) {
-    return db.query<{ pinId: number; title: string; company: string | null; categories: string[]; working: number; start: string | null }>(
+    return db.query<{ pinId: number; title: string; company: string | null; categories: string[]; topics: string[]; working: number; start: string | null }>(
       `SELECT "p"."id" AS "pinId", "p"."title", "c"."name"::text AS "company",
          coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category'), '{}') AS "categories",
+         coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" <> 'category'), '{}') AS "topics",
          (SELECT count(*)::int FROM "PinAd" AS "a" WHERE "a"."pinId" = "p"."id" AND "a"."status" = 'ok') AS "working",
          to_char("p"."utcStartDateTime" AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS "start"
        FROM "Pin" AS "p" LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"
-       WHERE "p"."utcDeletedDateTime" IS NULL AND "p"."utcStartDateTime" >= now() AND "p"."utcStartDateTime" < now() + interval '45 days'
+       WHERE "p"."utcDeletedDateTime" IS NULL AND "p"."utcStartDateTime" >= now() - interval '120 days' AND "p"."utcStartDateTime" < now() + interval '45 days'
          AND (SELECT count(*) FROM "PinAd" AS "a" WHERE "a"."pinId" = "p"."id" AND "a"."status" = 'ok') < $1
-       ORDER BY (SELECT count(*) FROM "PinAd" AS "a" WHERE "a"."pinId" = "p"."id" AND "a"."status" = 'broken') DESC, "p"."utcStartDateTime" LIMIT $2`,
+       ORDER BY (SELECT count(*) FROM "PinAd" AS "a" WHERE "a"."pinId" = "p"."id" AND "a"."status" = 'broken') DESC, abs(extract(epoch FROM "p"."utcStartDateTime" - now())) LIMIT $2`,
       [want, limit],
     );
   }

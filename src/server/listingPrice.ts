@@ -212,7 +212,10 @@ export function amazonImageOf(html: string): string | null {
 
 // The page's brand (its byline), stars out of 5 and review count.
 export function amazonStarsOf(html: string): AmazonStars {
-  const brand = decode(html.match(/<a[^>]*id="bylineInfo"[^>]*>\s*([^<]*?)\s*</)?.[1] ?? '')
+  // Some variants of the page leave the byline link out; the store link's
+  // text ("Visit the Garmin Store") still names the brand.
+  const bylined = html.match(/<a[^>]*id="bylineInfo"[^>]*>\s*([^<]*?)\s*</)?.[1] ?? html.match(/Visit the ([^<>"]{1,60}?) Store/)?.[1] ?? '';
+  const brand = decode(bylined)
     .replace(/^(Visit the |Brand:\s*)/i, '')
     .replace(/\s+Store$/i, '')
     .trim();
