@@ -592,7 +592,7 @@ export function AdCharts({
               return (
                 <li key={c.id} className="py-2">
                   <div className="flex items-center gap-3">
-                    {c.adPinId ? <PinThumb thumbName={c.thumbName} originalUrl={c.originalUrl} title={c.adTitle} /> : null}
+                    {c.adPinId ? <PinThumb thumbName={c.thumbName} title={c.adTitle} /> : null}
                     <span className="min-w-0 flex-1 truncate" title={name}>
                       {name}
                     </span>

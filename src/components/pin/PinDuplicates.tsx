@@ -219,7 +219,7 @@ function SuggestionRow({ pair, timeZone, busy, children }: { pair: Pair; timeZon
   return (
     <li className="rounded-lg bg-raised/60 px-3 py-2.5 ring-1 ring-line ring-inset" aria-busy={busy}>
       <div className="flex items-center gap-3">
-        <PinThumb thumbName={pair.pin.thumbName} originalUrl={pair.pin.originalUrl} title={pair.pin.title} className={THUMB} />
+        <PinThumb thumbName={pair.pin.thumbName} title={pair.pin.title} className={THUMB} />
         <div className="min-w-0 flex-1">
           <Link href={pinPath(pair.pin)} className="text-sm font-medium text-ink hover:text-link hover:no-underline">
             {pair.pin.title}

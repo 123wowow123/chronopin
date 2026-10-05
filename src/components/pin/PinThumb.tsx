@@ -1,16 +1,16 @@
 'use client';
 
+import Image from 'next/image';
 import { useCallback, useState } from 'react';
 import { blobUrl } from '@/lib/appConfig';
 import type { MediumJson } from '@/lib/types';
 
 // The medium a pin shows in a list: a video's still first, as the pin's media
-// frame shows it first, else the earliest-attached one. originalUrl is only a
-// fallback for images (a video's is the page, not a picture). Mirrors
+// frame shows it first, else the earliest-attached one. Mirrors
 // PinView.pictures' SQL for the pins whose media arrive whole.
-export function pinPicture(media: Pick<MediumJson, 'type' | 'thumbName' | 'originalUrl'>[] | undefined) {
+export function pinPicture(media: Pick<MediumJson, 'type' | 'thumbName'>[] | undefined) {
   const medium = media?.find((m) => String(m.type) === '3') ?? media?.[0];
-  return { thumbName: medium?.thumbName, originalUrl: medium && String(medium.type) === '1' ? medium.originalUrl : undefined };
+  return { thumbName: medium?.thumbName };
 }
 
 // A hue for a pin with no picture, from its category when it has one (so a
@@ -21,33 +21,27 @@ function hueOf(seed: string) {
   return Math.abs(hash) % 360;
 }
 
-// A pin's small picture in a list: its thumb, then an image's original, then a
-// tile tinted by its category with its title's first letter or digit.
+// A pin's small picture in a list: its thumb, resized by the image optimizer to
+// the few dozen pixels it is shown at (and cached), else a tile tinted by its
+// category with its title's first letter or digit.
 export function PinThumb({
   thumbName,
-  originalUrl,
   title,
   category,
   className = 'h-9 w-16',
 }: {
   thumbName?: string | null;
-  originalUrl?: string | null;
   title?: string | null;
   category?: string | null;
   className?: string;
 }) {
-  const sources = [blobUrl(thumbName), originalUrl].filter((src): src is string => !!src);
-  const [failed, setFailed] = useState(0);
-  const src = sources[failed];
+  const [failed, setFailed] = useState(false);
+  const src = failed ? undefined : blobUrl(thumbName);
   // A server-rendered image can fail before hydration attaches onError; a
   // finished image with no pixels failed.
-  const imgRef = useCallback(
-    (img: HTMLImageElement | null) => {
-      if (img?.complete && img.naturalWidth === 0) setFailed((n) => n + 1);
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- re-check each new source
-    [src],
-  );
+  const imgRef = useCallback((img: HTMLImageElement | null) => {
+    if (img?.complete && img.naturalWidth === 0) setFailed(true);
+  }, []);
   const letter = !src && title ? title.match(/[\p{L}\p{N}]/u)?.[0]?.toLocaleUpperCase() : undefined;
   if (letter) {
     // Mixed into the theme's own tile and text colours, so it reads on both.
@@ -66,17 +60,17 @@ export function PinThumb({
     );
   }
   return (
-    <span className={`block shrink-0 overflow-hidden rounded bg-raised-2 ${className}`}>
+    <span className={`relative block shrink-0 overflow-hidden rounded bg-raised-2${className}`}>
       {src ? (
-        // eslint-disable-next-line @next/next/no-img-element -- thumbs from blob storage or arbitrary hosts
-        <img
+        // Shown at most ~72px wide; 160px covers a 2x screen.
+        <Image
           src={src}
           alt=""
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          className="size-full object-cover"
+          fill
+          sizes="160px"
+          className="object-cover"
           ref={imgRef}
-          onError={() => setFailed((n) => n + 1)}
+          onError={() => setFailed(true)}
         />
       ) : null}
     </span>

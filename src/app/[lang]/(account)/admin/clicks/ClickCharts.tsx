@@ -281,7 +281,7 @@ export function ClickCharts({ clicks, serverNow }: { clicks: ShopClickRow[]; ser
                         <div className="flex items-center gap-2">
                           <OpenPlacesButton open={open} onClick={() => togglePin(key)} />
                           <Link href={pinPath({ id: pin.pinId, title: pin.title ?? '' })} title={pin.title ?? ''} className="flex min-w-0 items-center gap-3 text-link">
-                            <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} />
+                            <PinThumb thumbName={pin.thumbName} title={pin.title} />
                             <span className="truncate">{pin.title || `Pin ${pin.pinId}`}</span>
                           </Link>
                         </div>

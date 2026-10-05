@@ -84,7 +84,7 @@ export function CompanyProductsPanel({ name, sentiment }: { name: string; sentim
                 aria-expanded={expanded}
                 className={`flex items-center gap-2.5 rounded-lg px-2 py-1.5 text-start hover:bg-raised ${expanded ? 'bg-raised/60' : ''}`}
               >
-                <PinThumb thumbName={product.picture?.thumbName} originalUrl={product.picture?.originalUrl} title={product.name} className="h-9 w-12" />
+                <PinThumb thumbName={product.picture?.thumbName} title={product.name} className="h-9 w-12" />
                 <span className="flex min-w-0 flex-1 flex-col gap-0.5">
                   {/* The name and its average on one line, then the pin count
                       and the sparkline under them. */}
