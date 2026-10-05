@@ -40,6 +40,12 @@ export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.chronop
 export const siteDescription =
   'Discover and track upcoming release dates, events, and other important dates.';
 
+// The small copy of a Medium thumb, made for list rows that show it a few dozen
+// pixels wide (src/server/image.ts smallThumb; npm run thumbs:small backfills).
+export function smallThumbName(thumbName: string): string {
+  return `s/${thumbName}`;
+}
+
 // A stored picture is either a full URL (a social login's photo) or a blob
 // name under the thumb container (an uploaded picture, or a Medium thumb).
 export function blobUrl(nameOrUrl: string | null | undefined): string | undefined {

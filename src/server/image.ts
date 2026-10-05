@@ -2,6 +2,7 @@
 
 import { Jimp } from 'jimp';
 import sharp from 'sharp';
+import { smallThumbName } from '@/lib/appConfig';
 import * as azureBlob from './azureBlob';
 import config from './config';
 import { imageHash } from './imageHash';
@@ -258,9 +259,23 @@ export async function hashImageAtUrl(imageUrl: string): Promise<string | undefin
   }
 }
 
+// The picture a list row shows: 160x108 (a 72x48 slot at 2x), a few KB, under
+// the thumb's name prefixed `s/`. Names never change, so browsers keep it.
+export async function uploadSmallThumb(thumbName: string, buffer: Buffer) {
+  const small = await sharp(buffer, { failOn: 'none' })
+    .rotate()
+    .resize({ width: 160, height: 108, fit: 'cover' })
+    .flatten({ background: '#ffffff' })
+    .jpeg({ quality: 72, mozjpeg: true })
+    .toBuffer();
+  await azureBlob.uploadThumb(smallThumbName(thumbName), small, 'image/jpeg', 'public, max-age=31536000, immutable');
+}
+
 export async function saveThumb<T extends { thumbName: string; buffer: Buffer; mimeType: string }>(thumb: T): Promise<T> {
   try {
     await azureBlob.uploadThumb(thumb.thumbName, thumb.buffer, thumb.mimeType);
+    // A list row can live without it (it shows a tile), so a failure here must not lose the pin's picture.
+    await uploadSmallThumb(thumb.thumbName, thumb.buffer).catch((err) => log.warn('small-thumb error:', thumb.thumbName, (err as Error).message));
     return thumb;
   } catch (err) {
     log.error('save-thumb error:', err);

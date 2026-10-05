@@ -30,10 +30,10 @@ export function getBlobUrl(fileName: string) {
   return getThumbContainer().getBlockBlobClient(fileName).url;
 }
 
-export function uploadThumb(fileName: string, buffer: Buffer, contentType: string) {
+export function uploadThumb(fileName: string, buffer: Buffer, contentType: string, cacheControl?: string) {
   return getThumbContainer()
     .getBlockBlobClient(fileName)
-    .uploadData(buffer, { blobHTTPHeaders: { blobContentType: contentType } });
+    .uploadData(buffer, { blobHTTPHeaders: { blobContentType: contentType, blobCacheControl: cacheControl } });
 }
 
 export function deleteThumb(fileName: string) {

@@ -1,8 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { useCallback, useState } from 'react';
-import { blobUrl } from '@/lib/appConfig';
+import { blobUrl, smallThumbName } from '@/lib/appConfig';
 import type { MediumJson } from '@/lib/types';
 
 // The medium a pin shows in a list: a video's still first, as the pin's media
@@ -21,9 +20,9 @@ function hueOf(seed: string) {
   return Math.abs(hash) % 360;
 }
 
-// A pin's small picture in a list: its thumb, resized by the image optimizer to
-// the few dozen pixels it is shown at (and cached), else a tile tinted by its
-// category with its title's first letter or digit.
+// A pin's small picture in a list: its small thumb (160x108, a few KB, made
+// when the thumb is saved), else a tile tinted by its category with its
+// title's first letter or digit.
 export function PinThumb({
   thumbName,
   title,
@@ -36,7 +35,7 @@ export function PinThumb({
   className?: string;
 }) {
   const [failed, setFailed] = useState(false);
-  const src = failed ? undefined : blobUrl(thumbName);
+  const src = failed || !thumbName ? undefined : blobUrl(smallThumbName(thumbName));
   // A server-rendered image can fail before hydration attaches onError; a
   // finished image with no pixels failed.
   const imgRef = useCallback((img: HTMLImageElement | null) => {
@@ -60,15 +59,16 @@ export function PinThumb({
     );
   }
   return (
-    <span className={`relative block shrink-0 overflow-hidden rounded bg-raised-2${className}`}>
+    <span className={`relative block shrink-0 overflow-hidden rounded bg-raised-2 ${className}`}>
       {src ? (
-        // Shown at most ~72px wide; 160px covers a 2x screen.
-        <Image
+        // eslint-disable-next-line @next/next/no-img-element -- already sized and cached in blob storage
+        <img
           src={src}
           alt=""
-          fill
-          sizes="160px"
-          className="object-cover"
+          width={160}
+          height={108}
+          loading="lazy"
+          className="size-full object-cover"
           ref={imgRef}
           onError={() => setFailed(true)}
         />
