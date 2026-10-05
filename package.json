@@ -58,6 +58,7 @@
     "markets:volume": "tsx scripts/markets/volume.ts",
     "merchants:prices": "tsx scripts/merchants/prices.ts",
     "merchants:steam": "tsx scripts/merchants/steam.ts",
+    "merchants:movies": "tsx scripts/merchants/movies.ts",
     "games:info": "tsx scripts/games/info.ts",
     "games:markets": "tsx scripts/games/markets.ts",
     "places:resolve": "tsx scripts/places/resolve.ts",

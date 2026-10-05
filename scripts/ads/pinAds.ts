@@ -1,6 +1,7 @@
 // Pin ads (0112) by hand, as the 6am/6pm pinAds job task does them.
 //
 //   npm run ads:pin -- add <pinId> <amazon.com product link>   read it, add it if it clears the bar
+//   npm run ads:pin -- movies [--ids 1,2] [--max 3]            merchandise ads for Movie pins with fewer than 2 working ones
 //   npm run ads:pin -- check [--all]                           read the listings again, mark the broken ones
 //   npm run ads:pin -- list <pinId>                            a pin's ads
 //   npm run ads:pin -- titles                                  translate ad titles missing a language (API key)
@@ -11,6 +12,7 @@ import '../env';
 import * as db from '@/server/db';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { TARGET_LOCALES, type TargetLocale } from '@/server/extract/translate';
+import { addMovieMerchandise } from '@/server/movieMerchandise';
 import PinAd from '@/server/model/pinAd';
 import PinAdTranslation, { type AdTitleInput } from '@/server/model/pinAdTranslation';
 
@@ -19,6 +21,8 @@ const [command, ...args] = process.argv.slice(2);
 async function run() {
   if (command === 'add' && args[0] && args[1]) {
     console.log(JSON.stringify(await PinAd.add(Number(args[0]), args[1]), null, 2));
+  } else if (command === 'movies') {
+    await movies();
   } else if (command === 'check') {
     console.log(JSON.stringify(await PinAd.check({ all: args.includes('--all') }), null, 2));
   } else if (command === 'list' && args[0]) {
@@ -33,6 +37,24 @@ async function run() {
 function flag(name: string): string | undefined {
   const at = args.indexOf(name);
   return at >= 0 ? args[at + 1] : undefined;
+}
+
+// Film pins' merchandise (src/server/movieMerchandise.ts), the nearest to today first.
+async function movies() {
+  const ids = flag('--ids')?.split(',').map(Number).filter(Number.isInteger);
+  const rows = await db.query<{ id: number; title: string; productName: string | null }>(
+    `SELECT "p"."id", "p"."title", "p"."productName" FROM "Pin" AS "p"
+     WHERE "p"."utcDeletedDateTime" IS NULL
+       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category' AND "t"."name" = 'Movie')
+       AND (SELECT count(*) FROM "PinAd" AS "a" WHERE "a"."pinId" = "p"."id" AND "a"."status" = 'ok') < 2
+       ${ids?.length ? 'AND "p"."id" = ANY($1::int[])' : `AND "p"."utcStartDateTime" >= now() - interval '120 days' AND "p"."utcStartDateTime" < now() + interval '45 days'`}
+     ORDER BY abs(extract(epoch FROM "p"."utcStartDateTime" - now())) LIMIT 100`,
+    ids?.length ? [ids] : [],
+  );
+  for (const row of rows) {
+    const added = await addMovieMerchandise({ pinId: row.id, workTitle: row.productName, pinTitle: row.title, max: Number(flag('--max') ?? 3) });
+    console.log(`${row.id} ${row.title}: ${added.length ? added.map((a) => `\n    ${a.asin} ${a.title.slice(0, 80)}`).join('') : 'nothing found'}`);
+  }
 }
 
 async function titles() {

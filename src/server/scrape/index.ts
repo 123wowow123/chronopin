@@ -38,6 +38,7 @@ import { picturesNeeded, videosNeeded } from '@/lib/mediaTarget';
 import { noteLinks, type NoteLink } from './noteLinks';
 import { findBrandListing } from '../brandListing';
 import { findSteamListing } from '../steamListing';
+import { findMovieListings } from '../movieListing';
 import Company from '../model/company';
 
 const { scrapeType, mediumID } = config;
@@ -392,6 +393,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   await placeAtStudioHq(pin);
   const brandListing = addBrandListing(pin, [pageUrl, ...pageLinks]);
   const steamListing = addSteamListing(pin, fields?.workTitle, pageLinks);
+  const movieListings = addMovieListings(pin, fields?.workTitle);
   const trailer = applyScreenDetails(pin, screen, scoreMarket);
   // References first: the top-up takes pictures from the day's articles.
   addReferences(pin, found);
@@ -425,7 +427,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
     log.warn('reading entries failed:', (err as Error).message);
     return undefined;
   });
-  await Promise.all([brandListing, steamListing]);
+  await Promise.all([brandListing, steamListing, movieListings]);
   const llmTasks: LlmTask[] | undefined =
     llmDown && pageText.trim().length >= 200 ? [extractTask(pageUrl, pageText, note), referencesTask(pageUrl, pageText, 'web page', note)] : undefined;
   return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags: tags.length ? tags : metadataFields(pageMeta).tags, respondTo, entries, llmTasks };
@@ -455,6 +457,14 @@ async function addSteamListing(pin: Pin, workTitle: string | null | undefined, l
     links,
   });
   if (listing && !(pin.merchants ?? []).some((m: Merchant) => m.url === listing.url)) pin.addMerchant(new Merchant(listing));
+}
+
+// A film's tickets (Fandango, while it is in theaters or coming) and disc
+// (Amazon) pages, exact ones (../movieListing.ts).
+async function addMovieListings(pin: Pin, workTitle: string | null | undefined): Promise<void> {
+  if (!hasCategory(categoryList(pin.categories), ['Movie']) || !pin.utcStartDateTime) return;
+  const listings = await findMovieListings({ workTitle, pinTitle: pin.title, releaseDate: new Date(pin.utcStartDateTime) });
+  for (const listing of listings) if (!(pin.merchants ?? []).some((m: Merchant) => m.url === listing.url)) pin.addMerchant(new Merchant(listing));
 }
 
 const imageCount = (pin: Pin) => pin.media.filter((m) => Number(m.type) === mediumID.image).length;

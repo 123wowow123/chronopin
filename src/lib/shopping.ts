@@ -39,6 +39,15 @@ const STORES = {
     text: '#ffffff',
     border: '#66c0f4',
   },
+  // No search here either: a film's tickets page comes from a stored listing
+  // (src/server/movieListing.ts).
+  fandango: {
+    name: 'Fandango',
+    host: /(^|\.)fandango\.com$/i,
+    search: (s: string) => `https://www.fandango.com/search?q=${q(s)}&mode=general`,
+    background: '#ff7300',
+    text: '#000000',
+  },
   amazon: {
     name: 'Amazon',
     host: /(^|\.)amazon\.com$/i,
