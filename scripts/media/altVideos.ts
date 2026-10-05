@@ -8,6 +8,7 @@
 //   npm run media:alt-videos -- --category Gaming
 //   npm run media:alt-videos -- --apply --limit 50 --offset 100
 //   npm run media:alt-videos -- --apply --pin 123 --pin 456
+//   npm run media:alt-videos -- --from-id 4829 --limit 500   resume after a pin id
 //   npm run media:alt-videos -- --apply --delay 1     seconds between pins (default 0.4)
 //
 // Pins that already carry a Dailymotion or Vimeo video are skipped, and a pin
@@ -28,6 +29,7 @@ const { values: flags } = parseArgs({
     category: { type: 'string' },
     limit: { type: 'string' },
     offset: { type: 'string' },
+    'from-id': { type: 'string' },
     delay: { type: 'string' },
     pin: { type: 'string', multiple: true },
   },
@@ -41,6 +43,7 @@ async function run() {
        FROM "Pin" p
       WHERE p."utcDeletedDateTime" IS NULL
         AND ($1::integer[] IS NULL OR p."id" = ANY($1::integer[]))
+        AND p."id" >= ${Number(flags['from-id'] ?? 0)}
         AND ($2::text IS NULL OR EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."kind" = 'category' AND t."name" = $2))
         AND EXISTS (
               SELECT 1 FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId"
