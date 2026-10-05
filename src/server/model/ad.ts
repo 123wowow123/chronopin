@@ -36,12 +36,16 @@ import { locateUnlocated } from './ipPlaces';
 import HolidayAdTranslation from './holidayAdTranslation';
 import PinAdTranslation from './pinAdTranslation';
 import PinView from './pinView';
+import { featuredWatch, type FeaturedWatch } from '../ebayWatches';
 
 // How long the ads (program rows, product listings, store ids) are reused
 // before they are read again.
 const INVENTORY_MS = 10 * 60 * 1000;
 // How long a slot waits for the address's country; past it, the language.
 const COUNTRY_WAIT_MS = 1500;
+// How long a slot waits for a watch brand's live eBay listing before it shows
+// the plain tile (the answer is still being fetched and cached for the next one).
+const FEATURE_WAIT_MS = 1200;
 const REPEAT_SECONDS = 30;
 const CLICK_LIMIT = 20000;
 const IMPRESSION_DAYS = 400;
@@ -124,6 +128,10 @@ export default class Ad {
     const picked = [...holidayAds, ...rest];
     if (picked.length && !admin) await recordImpressions(picked, slot, store, (ad) => adTag(ad, inventory.tags) ?? '', userId != null);
     const titles = await localizedTitles(picked, locale);
+    // A watch brand's tile shows one of its live eBay listings when eBay answers.
+    const featured = new Map<string, FeaturedWatch | null>(
+      await Promise.all(picked.filter((ad) => ad.kind === 'watch').map(async (ad) => [ad.key, await Promise.race([featuredWatch(ad.title ?? ''), new Promise<null>((resolve) => setTimeout(resolve, FEATURE_WAIT_MS, null))])] as const)),
+    );
     return {
       store,
       ads: picked.map((ad) => ({
@@ -132,8 +140,8 @@ export default class Ad {
         program: ad.program,
         url: taggedAdUrl(ad.url, ad.store, inventory.tags),
         title: titles.get(ad.key) ?? ad.title,
-        price: ad.store === store ? ad.price : null,
-        currency: ad.price != null && ad.store === store ? 'USD' : null,
+        price: featured.get(ad.key)?.price ?? (ad.store === store ? ad.price : null),
+        currency: featured.get(ad.key) || (ad.price != null && ad.store === store) ? 'USD' : null,
         brand: ad.kind === 'product' ? (ad.brand ?? ad.company) : null,
         rating: ad.rating ?? null,
         // A price in another store's currency is no price here, nor is its stock.
@@ -142,7 +150,7 @@ export default class Ad {
         category: ad.categories[0] ?? null,
         thumbName: ad.thumbName,
         originalUrl: ad.originalUrl,
-        imageUrl: ad.imageUrl ?? null,
+        imageUrl: featured.get(ad.key)?.imageUrl ?? ad.imageUrl ?? null,
         holiday: ad.holiday ? holidayLabel(ad.holiday, locale) : null,
         store,
       })),

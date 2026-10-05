@@ -75,7 +75,7 @@ async function search(product: string): Promise<ShopMatch | null> {
     filter: `buyingOptions:{FIXED_PRICE},conditionIds:{${NEW_CONDITIONS}},priceCurrency:USD,deliveryCountry:US`,
   });
   const headers: Record<string, string> = {
-    Authorization: `Bearer ${await token()}`,
+    Authorization: `Bearer ${await appToken()}`,
     'X-EBAY-C-MARKETPLACE-ID': 'EBAY_US',
   };
   // With a Partner Network campaign, each listing comes with a link that
@@ -98,10 +98,10 @@ async function search(product: string): Promise<ShopMatch | null> {
 
 // An application token, fetched once and reused until a minute before it
 // runs out (eBay's last two hours).
-function token(): Promise<string> {
+export function appToken(): Promise<string> {
   const current = state.token;
   if (current) {
-    return current.then((t) => (t.expires > Date.now() ? t.value : ((state.token = null), token())));
+    return current.then((t) => (t.expires > Date.now() ? t.value : ((state.token = null), appToken())));
   }
   const basic = Buffer.from(`${config.ebay.clientID}:${config.ebay.clientSecret}`).toString('base64');
   const next = fetch(TOKEN_URL, {

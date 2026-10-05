@@ -122,8 +122,10 @@ function useAdText() {
   return (ad: AdJson) => {
     // A watch brand's ad: the brand's name, then the same line for every brand.
     if (ad.kind === 'watch') {
-      const body = t('ads.watchBody', { brand: ad.title ?? '' });
-      return { title: ad.title ?? '', body, price: '', info: body, urgency: '', cta: t('ads.seeOnEbay') };
+      const line = t('ads.watchBody', { brand: ad.title ?? '' });
+      // With a live listing the price leads: "$9,800 · Pre-owned Rolex watches ...".
+      const price = ad.price != null ? money(ad.price, ad.currency) : '';
+      return { title: ad.title ?? '', body: [price, line].filter(Boolean).join(' · '), price, info: line, urgency: '', cta: t('ads.seeOnEbay') };
     }
     if (ad.program) {
       const base = `ads.programs.${ad.program}`;
