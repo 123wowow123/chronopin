@@ -303,7 +303,8 @@ function loadedAsMap() {
 // /map?pin=<id> (a pin page's "To map") centers on that pin, shows it
 // whatever the filters, and keeps its popup open until the map is clicked.
 // sliderTyping: whether the filter sliders offer a typed box (the admin setting).
-export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boolean }) {
+// webOverlay: whether the web of related-pin lines and graph is offered at all (the admin setting).
+export default function PinsMap({ sliderTyping = false, webOverlay = false }: { sliderTyping?: boolean; webOverlay?: boolean }) {
   const router = useRouter();
   const t = useT();
   const rtl = isRtl(t.locale);
@@ -351,9 +352,10 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
   // web is not offered at all - and a ?web= link opened on a phone lands on a
   // plain map rather than on lines nothing can turn off. This component only
   // ever renders in the browser (MapLoader loads it with ssr: false), so the
-  // width is known from the first render.
+  // width is known from the first render. Off entirely, same as narrow, while
+  // the admin setting is off.
   const [wide, setWide] = useState(() => window.matchMedia(WIDE).matches);
-  const [web, setWeb] = useState<WebMode>(() => (window.matchMedia(WIDE).matches ? webModeFromParam(params.get('web')) : 'off'));
+  const [web, setWeb] = useState<WebMode>(() => (webOverlay && window.matchMedia(WIDE).matches ? webModeFromParam(params.get('web')) : 'off'));
   const [webEdges, setWebEdges] = useState<WebEdge[]>([]);
   const [webNodes, setWebNodes] = useState<{ id: number; title: string }[]>([]);
   const [webPicked, setWebPicked] = useState<number | undefined>();
@@ -931,7 +933,7 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
         </FloatingControls>
       </div>
       {/* The web toggle, with the graph above it when it is on. */}
-      {wide && !market ? (
+      {webOverlay && wide && !market ? (
         <div className="absolute bottom-8 start-2.5 z-[999] flex w-[min(26rem,calc(100%-1.25rem))] flex-col items-start gap-2">
           {web === 'graph' ? (
             <div className="floating h-72 w-full overflow-hidden">

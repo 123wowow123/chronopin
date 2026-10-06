@@ -135,12 +135,17 @@ function splitMarkers<T extends { title: string }>(dateTimes: T[], culturalDays:
 const holidayLines = (label: string): TagLines => tagLines(label, 2);
 // The specialty day's name takes three at least, to five.
 const specialtyLines = (days: SpecialtyDay[]): TagLines => tagLines(days[0].label, 3);
-const specialtyHeight = (days: SpecialtyDay[]) => (days.length ? tagHeight(specialtyLines(days)) + 54 * (days[0].traditions?.length ?? 0) : 0);
+const specialtyHeight = (days: SpecialtyDay[]) =>
+  days.length ? tagHeight(specialtyLines(days)) + (days[0].traditions ?? []).reduce((sum, tradition) => sum + tagHeight(tagLines(tradition.label, 2)), 0) : 0;
 
 // How tall the holiday tags are stacked beside the rail (lg): each is up to
-// two lines, 54px with its gap, a long holiday name more.
+// two lines, 54px with its gap, a long holiday or tradition name more.
 const holidayStackHeight = (national: number, culturalDays: CulturalDay[]) =>
-  54 * national + culturalDays.reduce((sum, d) => sum + tagHeight(holidayLines(d.label)) + 54 * d.traditions.length, 0);
+  54 * national +
+  culturalDays.reduce(
+    (sum, d) => sum + tagHeight(holidayLines(d.label)) + d.traditions.reduce((tSum, tradition) => tSum + tagHeight(tagLines(tradition.label, 2)), 0),
+    0,
+  );
 
 // One calendar day on the timeline: its tags (date, countdown, date markers,
 // specialty day, holidays) beside or above its cards.
@@ -540,7 +545,7 @@ export function HolidayTags({ days, phoneTag }: { days: CulturalDay[]; phoneTag?
               {day.label}
             </Tag>
             {day.traditions.map((tradition) => (
-              <Tag key={tradition.name} variant="tradition" wrap holiday={i} title={`${day.label}: ${tradition.label}`} href={triviaSearchUrl(`${day.name} ${tradition.name}`, locale)} className={`${extraTag} ${hue} max-sm:hidden max-lg:data-[off]:hidden`}>
+              <Tag key={tradition.name} variant="tradition" wrap lines={tagLines(tradition.label, 2)} holiday={i} title={`${day.label}: ${tradition.label}`} href={triviaSearchUrl(`${day.name} ${tradition.name}`, locale)} className={`${extraTag} ${hue} max-sm:hidden max-lg:data-[off]:hidden`}>
                 {tradition.label}
               </Tag>
             ))}
@@ -579,7 +584,7 @@ export function SpecialtyTraditions({ days }: { days: SpecialtyDay[] }) {
   return (
     <>
       {day.traditions.map((tradition) => (
-        <Tag key={tradition.name} variant="tradition" wrap holiday="s" title={`${day.label}: ${tradition.label}`} href={triviaSearchUrl(`${day.name} ${tradition.name}`, locale)} className={`${extraTag} tag-specialty-tradition max-sm:hidden max-lg:data-[off]:hidden`}>
+        <Tag key={tradition.name} variant="tradition" wrap lines={tagLines(tradition.label, 2)} holiday="s" title={`${day.label}: ${tradition.label}`} href={triviaSearchUrl(`${day.name} ${tradition.name}`, locale)} className={`${extraTag} tag-specialty-tradition max-sm:hidden max-lg:data-[off]:hidden`}>
           {tradition.label}
         </Tag>
       ))}

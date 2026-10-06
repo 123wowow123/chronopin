@@ -5,7 +5,7 @@ import { blobUrl, siteName } from '@/lib/appConfig';
 import { plainText } from '@/lib/format';
 import { alternates, getT } from '@/lib/i18n/server';
 import Listing from '@/server/model/listing';
-import { sliderTyping } from '@/server/services/pages';
+import { sliderTyping, webOverlay } from '@/server/services/pages';
 import { siteCardImages } from '@/server/services/shareCard';
 import { MapLoader } from './MapLoader';
 
@@ -63,6 +63,6 @@ export default async function MapPage() {
 // build has no database for.
 async function MapWithSettings() {
   await connection();
-  const typing = await sliderTyping();
-  return <MapLoader sliderTyping={typing.enabled} />;
+  const [typing, web] = await Promise.all([sliderTyping(), webOverlay()]);
+  return <MapLoader sliderTyping={typing.enabled} webOverlay={web.enabled} />;
 }

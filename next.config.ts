@@ -8,7 +8,13 @@ const nextConfig: NextConfig = {
   devIndicators: false,
   // Every page is under src/app/[lang], so a URL no page matches gets
   // src/app/global-not-found.tsx rather than a layout's not-found.
-  experimental: { globalNotFound: true },
+  experimental: {
+    globalNotFound: true,
+    // Turbopack's persistent dev cache (.next/dev/cache/turbopack) has no
+    // size cap and grew to 8GB+ over a few weeks of `next dev`; disabled so
+    // it never fills the disk again (costs a slightly slower cold start).
+    turbopackFileSystemCacheForDev: false,
+  },
   // Let phones on the home Wi-Fi load dev assets and HMR (http://192.168.x.x:3000).
   allowedDevOrigins: ['192.168.*.*'],
 

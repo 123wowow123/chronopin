@@ -101,6 +101,7 @@
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
     "specialty-days:translate": "tsx scripts/specialtyDays/translate.ts",
     "specialty-days:traditions": "tsx scripts/specialtyDays/traditions.ts",
+    "specialty-days:traditions-generate": "tsx scripts/specialtyDays/traditions-generate.ts",
     "favicon:build": "tsx scripts/favicon/build.ts"
   },
   "dependencies": {

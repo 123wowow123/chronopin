@@ -357,14 +357,17 @@ https://www.temu.com/affiliate_recruit.html?_x_ads_csite=affiliate_seo&aff_sub_c
 generic ads that applies to everyone like junk removal can be added to ad rotation too and storage and moving services
 
 
-- pin spacex starbase new and event
-
-deployment is slow. is there a way to spead it up? 
-Does postgres and faiss need to be recreated everytime?
-
-
 Should show top competition and and benchmarks
 https://www.chronopin.com/pin/4802/gpt-6-astra-released
+
+
+Trade deficit pin series
+https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html
+
+
+pin upcoming and new restaurants on all major US cities and creat landing page for the region
+
+can anyone commit to chronopin git? should automerge PR from this computer and others will need to submit PR and wait for admin to approve
 
 
 holiday, special event days should be searchable and auto search complete should have suggesion section for them as you type if relevant

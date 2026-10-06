@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { requireAdminViewer } from '@/server/guard';
-import { getAutoTranslate, getMultilingual, getPersonalBag, getSiteVerification, getSliderTyping, getAdPlacements, getAdsenseSlots, getTimelineVideo } from '@/server/model/appSetting';
+import { getAutoTranslate, getMultilingual, getPersonalBag, getSiteVerification, getSliderTyping, getAdPlacements, getAdsenseSlots, getTimelineVideo, getWebOverlay } from '@/server/model/appSetting';
 import UserWiki from '@/server/model/userWiki';
 import { translationCoverage } from '@/server/services/translations';
 import { AdminTabs } from '../AdminTabs';
@@ -12,6 +12,7 @@ import { PersonalBagForm } from './PersonalBagForm';
 import { SiteVerificationForm } from './SiteVerificationForm';
 import { SliderTypingForm } from './SliderTypingForm';
 import { TimelineVideoForm } from './TimelineVideoForm';
+import { WebOverlayForm } from './WebOverlayForm';
 
 // Reads the session, so it blocks per request (see ../../layout.tsx).
 export const instant = false;
@@ -22,9 +23,10 @@ export const metadata: Metadata = { title: 'Admin settings' };
 // how a crowded day picks its pins. Each saves on its own, straight away.
 export default async function AdminSettingsPage() {
   await requireAdminViewer('/admin/settings');
-  const [video, typing, personal, wikis, multilingual, coverage, autoTranslate, siteVerification, adPlacements, adsense] = await Promise.all([
+  const [video, typing, webOverlay, personal, wikis, multilingual, coverage, autoTranslate, siteVerification, adPlacements, adsense] = await Promise.all([
     getTimelineVideo(),
     getSliderTyping(),
+    getWebOverlay(),
     getPersonalBag(),
     UserWiki.count(),
     getMultilingual(),
@@ -40,6 +42,7 @@ export default async function AdminSettingsPage() {
       <h1 className="sr-only">Settings</h1>
       <TimelineVideoForm saved={video} />
       <SliderTypingForm saved={typing} />
+      <WebOverlayForm saved={webOverlay} />
       <PersonalBagForm saved={personal} wikis={wikis} />
       <MultilingualForm saved={multilingual} coverage={coverage} />
       <AutoTranslateForm saved={autoTranslate} />
