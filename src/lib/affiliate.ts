@@ -42,7 +42,7 @@ function amazonStorePage(url: string | undefined | null): URL | undefined {
 export const ebayCampaignId = '5338380156';
 
 // The US site only: other eBay sites need their own rotation id.
-const EBAY_HOSTS = new Set(['ebay.com', 'www.ebay.com']);
+const EBAY_HOSTS = new Set(['ebay.com', 'www.ebay.com', 'm.ebay.com']);
 
 // EPN's own link format for ebay.com: mkcid 1 (the EPN channel), the US
 // rotation id, siteid 0 (US), our campaign, tool 10001 (a plain link) and

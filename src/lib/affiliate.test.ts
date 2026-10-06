@@ -61,7 +61,7 @@ describe('isPurchaseLinkShown', () => {
 
 describe('eBay Partner Network links', () => {
   it('adds our campaign to an ebay.com search or listing', () => {
-    for (const url of ['https://www.ebay.com/sch/i.html?_nkw=tamiya+mini+4wd', 'https://www.ebay.com/itm/1234567890', 'https://ebay.com/itm/1234567890']) {
+    for (const url of ['https://www.ebay.com/sch/i.html?_nkw=tamiya+mini+4wd', 'https://www.ebay.com/itm/1234567890', 'https://ebay.com/itm/1234567890', 'https://m.ebay.com/itm/1234567890']) {
       const tagged = new URL(affiliateUrl(url));
       expect(tagged.searchParams.get('campid')).toBe(ebayCampaignId);
       expect(tagged.searchParams.get('mkcid')).toBe('1');
