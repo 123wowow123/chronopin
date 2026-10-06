@@ -86,6 +86,7 @@ const KNOWN: [RegExp, string, BotKind][] = [
   [/DotBot/i, 'DotBot', 'other'],
   [/DataForSeoBot/i, 'DataForSeoBot', 'other'],
   [/Screaming Frog/i, 'Screaming Frog', 'other'],
+  [/ShapBot/i, 'ShapBot', 'other'],
   [/UptimeRobot/i, 'UptimeRobot', 'other'],
   [/Pingdom/i, 'Pingdom', 'other'],
   [/HeadlessChrome/i, 'HeadlessChrome', 'other'],

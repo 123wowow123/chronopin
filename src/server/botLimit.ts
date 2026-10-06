@@ -12,10 +12,11 @@ import type { Bot } from '@/lib/bots';
 export const BURST = 30;
 export const PER_SECOND = 0.5;
 
-// SEO scrapers: kind 'other' like curl and the uptime monitors, but they crawl
+// Scrapers: kind 'other' like curl and the uptime monitors, but they crawl
 // the whole site for someone else's index (2026-10-04: Semrush + MJ12 ~4k hits
 // in 30 minutes on the 2-vCPU VM).
-const SEO_SCRAPERS = new Set(['AhrefsBot', 'SemrushBot', 'MJ12bot', 'DotBot', 'DataForSeoBot', 'Screaming Frog']);
+// ShapBot made ~95k requests in a day and exhausted the VM's CPU credits.
+const SCRAPERS = new Set(['AhrefsBot', 'SemrushBot', 'MJ12bot', 'DotBot', 'DataForSeoBot', 'Screaming Frog', 'ShapBot']);
 
 type Bucket = { tokens: number; at: number };
 
@@ -27,7 +28,7 @@ function buckets(): Map<string, Bucket> {
 // Null when the request may go ahead, else the seconds until it could (for
 // Retry-After).
 export function botRetryAfter(bot: Bot | null, now = Date.now()): number | null {
-  if (!bot || (bot.kind !== 'ai' && !SEO_SCRAPERS.has(bot.name))) return null;
+  if (!bot || (bot.kind !== 'ai' && !SCRAPERS.has(bot.name))) return null;
   const all = buckets();
   const bucket = all.get(bot.name) ?? { tokens: BURST, at: now };
   bucket.tokens = Math.min(BURST, bucket.tokens + ((now - bucket.at) / 1000) * PER_SECOND);
