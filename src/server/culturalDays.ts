@@ -117,16 +117,20 @@ function named(def: HolidayDef, day: number, locale: Locale): CulturalDay {
   return { id: def.id, name: def.name, label: label(def.name), day, traditions: def.traditions.map((name) => ({ name, label: label(name) })) };
 }
 
+// The American holidays (Columbus Day, Labor Day, ...) stack above the others on a day.
+const isAmerican = (def: HolidayDef) => def.id.startsWith('us-') || def.culture.split(', ').includes('American');
+const americanFirst = <T extends { def: HolidayDef }>(a: T, b: T) => Number(isAmerican(b.def)) - Number(isAmerican(a.def));
+
 // One date's holidays, each with its traditions.
 export function culturalDaysOn(dayKey: string, locale: Locale): CulturalDay[] {
-  return occurrencesOn(dayKey).map((o) => named(o.def, o.day, locale));
+  return occurrencesOn(dayKey).sort(americanFirst).map((o) => named(o.def, o.day, locale));
 }
 
 // Every date of a year that has one ({ "2026-09-25": [...] }), for a timeline
 // that tags each of its days: a year at a time, ~15KB.
 export function culturalDaysInYear(year: number, locale: Locale): Record<string, CulturalDay[]> {
   const days: Record<string, CulturalDay[]> = {};
-  for (const o of [...occurrencesIn(year - 1), ...occurrencesIn(year)]) {
+  for (const o of [...occurrencesIn(year - 1), ...occurrencesIn(year)].sort(americanFirst)) {
     for (let i = 0; i < (o.def.span ?? 1); i++) {
       const key = addDays(o.start, i);
       if (key.startsWith(`${year}-`)) (days[key] ??= []).push(named(o.def, i + 1, locale));
