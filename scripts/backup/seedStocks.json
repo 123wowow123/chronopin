@@ -28126,7 +28126,7 @@
       "utcCreatedDateTime": "2026-10-04T15:00:59.634Z",
       "utcRemovedDateTime": null,
       "relation": "company",
-      "note": null
+      "note": "passed a US$1 trillion market capitalisation for the first time"
     },
     {
       "id": 2916,
@@ -32783,6 +32783,114 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "the Swiss-domiciled maker of GPS fitness, outdoor and marine devices"
+    },
+    {
+      "id": 3532,
+      "pinId": 6424,
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:06.910Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "OpenAI's largest investor and its Azure cloud partner"
+    },
+    {
+      "id": 3533,
+      "pinId": 6424,
+      "symbol": "ORCL",
+      "name": "Oracle",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:09.505Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "OpenAI's partner in building Stargate data centers"
+    },
+    {
+      "id": 3534,
+      "pinId": 6424,
+      "symbol": "NVDA",
+      "name": "Nvidia",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:11.632Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "which is supplying OpenAI at least 10 GW of systems from late 2026"
+    },
+    {
+      "id": 3535,
+      "pinId": 6424,
+      "symbol": "AMD",
+      "name": "AMD",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:14.746Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "which agreed to supply OpenAI 6 GW of GPUs"
+    },
+    {
+      "id": 3536,
+      "pinId": 6424,
+      "symbol": "AVGO",
+      "name": "Broadcom",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:18.172Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "which is building 10 GW of custom AI accelerators with OpenAI"
+    },
+    {
+      "id": 3537,
+      "pinId": 6424,
+      "symbol": "CRWV",
+      "name": "CoreWeave",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:22.379Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "which rents OpenAI cloud computing capacity"
+    },
+    {
+      "id": 3538,
+      "pinId": 6424,
+      "symbol": "DTE",
+      "name": "DTE Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:26.110Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "which supplies 1.4 GW of power for OpenAI's Michigan Stargate campus"
+    },
+    {
+      "id": 3539,
+      "pinId": 6424,
+      "symbol": "BE",
+      "name": "Bloom Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:32.060Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "which supplies up to 2.45 GW of fuel cells for OpenAI's Project Jupiter in New Mexico"
+    },
+    {
+      "id": 3540,
+      "pinId": 6424,
+      "symbol": "GEV",
+      "name": "GE Vernova",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-06T15:58:36.898Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "whose gas turbines power OpenAI's Abilene Stargate campus"
     }
   ],
   "prices": [
@@ -68630,9 +68738,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-05T00:00:00.000Z",
       "day": "2026-10-05",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 33.96,
+      "utcPriceDateTime": "2026-10-05T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T03:03:42.734Z",
       "utcSetDateTime": "2026-09-24T19:47:54.638Z"
     },
     {
@@ -68663,9 +68771,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-05T00:00:00.000Z",
       "day": "2026-10-05",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 137.13,
+      "utcPriceDateTime": "2026-10-05T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T03:03:42.343Z",
       "utcSetDateTime": "2026-09-24T19:48:04.055Z"
     },
     {
@@ -85033,7 +85141,7 @@
       "day": "2015-08-10",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-04T16:52:56.008Z",
+      "utcCheckedDateTime": "2026-10-06T08:26:58.954Z",
       "utcSetDateTime": "2026-10-04T16:52:55.703Z"
     },
     {
@@ -85055,7 +85163,7 @@
       "day": "2004-08-19",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-04T16:53:29.295Z",
+      "utcCheckedDateTime": "2026-10-06T09:27:57.246Z",
       "utcSetDateTime": "2026-10-04T16:53:29.260Z"
     },
     {
@@ -93439,6 +93547,204 @@
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
       "utcSetDateTime": "2026-10-05T20:34:23.773Z"
+    },
+    {
+      "id": 27781,
+      "pinTickerId": 3532,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 532.2449,
+      "utcPriceDateTime": "2026-10-06T15:57:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T16:10:54.313Z",
+      "utcSetDateTime": "2026-10-06T15:58:45.748Z"
+    },
+    {
+      "id": 27782,
+      "pinTickerId": 3532,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:58:49.425Z"
+    },
+    {
+      "id": 27783,
+      "pinTickerId": 3533,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:58:53.363Z"
+    },
+    {
+      "id": 27784,
+      "pinTickerId": 3533,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:58:55.745Z"
+    },
+    {
+      "id": 27785,
+      "pinTickerId": 3534,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:58:57.458Z"
+    },
+    {
+      "id": 27786,
+      "pinTickerId": 3534,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:58:59.747Z"
+    },
+    {
+      "id": 27787,
+      "pinTickerId": 3535,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:59:01.067Z"
+    },
+    {
+      "id": 27788,
+      "pinTickerId": 3535,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:59:02.156Z"
+    },
+    {
+      "id": 27789,
+      "pinTickerId": 3536,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:59:03.399Z"
+    },
+    {
+      "id": 27790,
+      "pinTickerId": 3536,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:59:05.309Z"
+    },
+    {
+      "id": 27791,
+      "pinTickerId": 3537,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 91.09,
+      "utcPriceDateTime": "2026-10-06T15:57:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T16:00:13.696Z",
+      "utcSetDateTime": "2026-10-06T15:59:06.868Z"
+    },
+    {
+      "id": 27792,
+      "pinTickerId": 3537,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": 85.93,
+      "utcPriceDateTime": "2026-09-29T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T16:00:07.640Z",
+      "utcSetDateTime": "2026-10-06T15:59:09.134Z"
+    },
+    {
+      "id": 27793,
+      "pinTickerId": 3538,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 126.615,
+      "utcPriceDateTime": "2026-10-06T15:57:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T16:09:36.317Z",
+      "utcSetDateTime": "2026-10-06T15:59:10.116Z"
+    },
+    {
+      "id": 27794,
+      "pinTickerId": 3538,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-06T15:59:11.259Z"
+    },
+    {
+      "id": 27795,
+      "pinTickerId": 3539,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 298.555,
+      "utcPriceDateTime": "2026-10-06T15:57:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T15:59:40.368Z",
+      "utcSetDateTime": "2026-10-06T15:59:12.079Z"
+    },
+    {
+      "id": 27796,
+      "pinTickerId": 3539,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": 291.25,
+      "utcPriceDateTime": "2026-09-29T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T16:01:37.400Z",
+      "utcSetDateTime": "2026-10-06T15:59:12.892Z"
+    },
+    {
+      "id": 27798,
+      "pinTickerId": 3540,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 1038.94,
+      "utcPriceDateTime": "2026-10-06T15:57:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T15:59:29.095Z",
+      "utcSetDateTime": "2026-10-06T15:59:13.879Z"
+    },
+    {
+      "id": 27801,
+      "pinTickerId": 3540,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-29T00:00:00.000Z",
+      "day": "2026-09-29",
+      "price": 962.49,
+      "utcPriceDateTime": "2026-09-29T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-06T16:01:32.990Z",
+      "utcSetDateTime": "2026-10-06T15:59:14.787Z"
     }
   ],
   "relations": [

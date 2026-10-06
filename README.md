@@ -357,6 +357,15 @@ https://www.temu.com/affiliate_recruit.html?_x_ads_csite=affiliate_seo&aff_sub_c
 generic ads that applies to everyone like junk removal can be added to ad rotation too and storage and moving services
 
 
+- pin spacex starbase new and event
+
+
+Should show top competition and and benchmarks
+https://www.chronopin.com/pin/4802/gpt-6-astra-released
+
+
+holiday, special event days should be searchable and auto search complete should have suggesion section for them as you type if relevant
+
 # Left over: link wikis for prod
 
 As of 2026-10-04. Prod's Anthropic key has no credit, so its link wikis are written here and sent over the API (docs/okf/api/source-wikis.md, memory note prebuilt-wikis).

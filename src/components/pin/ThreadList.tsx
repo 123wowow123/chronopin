@@ -13,6 +13,7 @@ export function ThreadList({ items, current }: { items: ReactNode[]; current: nu
   const [shown, setShown] = useState(() => Math.min(items.length, Math.max(PAGE, Math.ceil((current + 4) / PAGE) * PAGE)));
   const box = useRef<HTMLDivElement>(null);
   const end = useRef<HTMLLIElement>(null);
+  const positioned = useRef(false);
   const [height, setHeight] = useState<number>();
 
   // The box is as tall as its first eight rows, measured again when the width
@@ -32,14 +33,16 @@ export function ThreadList({ items, current }: { items: ReactNode[]; current: nu
   }, [items.length]);
 
   // Open on the pin being read.
-  useEffect(() => {
+  useLayoutEffect(() => {
     const node = box.current;
     const row = node?.querySelector<HTMLElement>('[aria-current="page"]');
-    if (!node || !row || items.length <= PAGE) return;
-    node.scrollTop = row.offsetTop - node.offsetTop - (node.clientHeight - row.offsetHeight) / 2;
+    // Measuring the rows updates height in a separate render. Wait until that
+    // height is applied so the box can actually scroll.
+    if (!node || !row || items.length <= PAGE || height === undefined || positioned.current) return;
+    node.scrollTop += row.getBoundingClientRect().top - node.getBoundingClientRect().top - (node.clientHeight - row.offsetHeight) / 2;
+    positioned.current = true;
     // Only on arrival: scrolling away must not be undone by a later render.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [height, items.length]);
 
   useEffect(() => {
     const node = end.current;

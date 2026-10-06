@@ -3,6 +3,7 @@ import { isAdmin, requireRole } from '@/server/auth';
 import { clampSentiment } from '@/server/extract/pinSentiment';
 import { HttpError, json, readJson, route } from '@/server/http';
 import PinSentiment, { sameText, shortHash } from '@/server/model/pinSentiment';
+import { expirePinPage, invalidateTimeline } from '@/server/services/cache';
 
 // Company pins' news tone (0068) scored somewhere else and sent here. Prod's
 // key may have no credit, so `npm run companies:sentiment -- --prod` on the
@@ -51,7 +52,9 @@ export const PUT = route(async (request: NextRequest) => {
       continue;
     }
     await PinSentiment.set(id, context, clampSentiment(sentiment), typeof row.product === 'string' ? row.product : undefined);
+    expirePinPage(id);
     saved++;
   }
+  if (saved) invalidateTimeline();
   return json({ saved, refused });
 });

@@ -9896,5 +9896,138 @@
     "references": [],
     "note": null,
     "utcCreatedDateTime": "2026-10-05T22:06:08.159Z"
+  },
+  {
+    "id": 448,
+    "pinId": 1995,
+    "kind": "edit",
+    "userId": 304,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Francis Halzen Wins the 2026 Nobel Prize in Physics for IceCube",
+        "field": "title",
+        "before": "The Royal Swedish Academy Names the 2026 Physics Laureates"
+      },
+      {
+        "after": "Francis Halzen receives the 2026 physics Nobel for IceCube and the detection of high-energy cosmic neutrinos. The award recognizes a new way to study energetic objects beyond the light they emit.",
+        "field": "description",
+        "before": "The Royal Swedish Academy of Sciences announces the 2026 Nobel Prize in Physics from its Session Hall at Frescati in Stockholm. The prize may be split between up to three laureates."
+      },
+      {
+        "after": "2026-10-06T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-10-06T09:45:00.000Z"
+      },
+      {
+        "after": "2026-10-07T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      },
+      {
+        "after": "<ul><li>The Royal Swedish Academy of Sciences awarded the 2026 physics Nobel to Francis Halzen on 6 October for his role in IceCube and the discovery of high-energy neutrinos from astrophysical sources.<cite data-ref=\"https://www.lindau-nobel.org/news-nobel-prize-in-physics-2026/\"></cite></li><li>Halzen is IceCube's principal investigator at UW–Madison. Its sensors occupy a cubic kilometer of Antarctic ice, using rare particle interactions to investigate energetic cosmic objects.<cite data-ref=\"https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/\"></cite></li><li>The observatory first reported high-energy neutrinos from outside the solar system in 2013. Later detections connected neutrinos to a distant galaxy and revealed emission from an active galaxy and the Milky Way, giving astronomers evidence that light alone cannot provide.<cite data-ref=\"https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/\"></cite></li><li>The award is to Halzen, while the detector's construction and operation depend on an international collaboration. Speaking from Italy, he credited that collective effort and said he hoped the recognition would support a new proposal.<cite data-ref=\"https://apnews.com/article/47d0ab2b92f3512eb09ed44ceb6006d8\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 2026 Nobel Prize in Physics is announced on Tuesday, 6 October, \"11:45 CEST at the earliest\", by the Royal Swedish Academy of Sciences (Kungl. Vetenskapsakademien)<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The venue is the Academy's Session Hall, Lilla Frescativagen 4A, Stockholm<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>It is the second of six 2026 announcements, which \"will take place on 5-12 October\", following medicine on Monday 5 October and ahead of chemistry on Wednesday 7 October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>Like every announcement except the peace prize, the time carries the hedge \"at the earliest\"<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>All prize announcements \"will be broadcast live on the official digital channels of the Nobel Prize\", with a YouTube live stream listed for each<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The Nobel Prize YouTube channel's live stream page for this announcement, \"Announcement of the 2026 Nobel Prize in Physics\", was published 2026-09-14T09:20:53Z and says only \"The Nobel Prize in Physics will be announced at the Royal Swedish Academy of Sciences in Stockholm, Sweden\"; it names no laureates and gives no announcement date<cite data-ref=\"https://www.youtube.com/live/HTi0PU_yPvU\"></cite></li><li>A press invitation is listed for the physics announcement, and \"Media wishing to attend the announcements should apply to the respective prize-awarding institution in the early fall\"<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The announcement follows a year-long process: nominations open in September, close at \"midnight on 31 January\", are considered February to September by a Nobel committee of 5 to 10 members, and the prize-awarding institutions \"take a final vote to select their newest laureates\" in October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>The laureates receive their medals, prize money and diplomas on Nobel Day, 10 December, in Stockholm and Oslo<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>The schedule was set out in a Nobel Foundation press release dated 2 February 2026; the nobelprize.org announcement-dates page carries no publication or last-updated date<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>None of the three links says how many laureates the physics prize may be shared between<cite data-ref=\"https://www.youtube.com/live/HTi0PU_yPvU\"></cite><cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/",
+        "title": "UW–Madison Professor Francis Halzen Named 2026 Nobel Laureate in Physics",
+        "confidence": 95,
+        "publishedDate": "2026-10-06"
+      },
+      {
+        "url": "https://www.lindau-nobel.org/news-nobel-prize-in-physics-2026/",
+        "title": "Nobel Prize in Physics 2026 — Lindau Nobel Laureate Meetings",
+        "confidence": 90,
+        "publishedDate": "2026-10-06"
+      },
+      {
+        "url": "https://apnews.com/article/47d0ab2b92f3512eb09ed44ceb6006d8",
+        "title": "Scientist who hunts ghost particles in Antarctic ice wins physics Nobel",
+        "confidence": 90,
+        "publishedDate": "2026-10-06"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-06T15:53:33.774Z"
+  },
+  {
+    "id": 449,
+    "pinId": 1994,
+    "kind": "edit",
+    "userId": 304,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Deisseroth, Hegemann and Nagel Win the 2026 Medicine Nobel for Optogenetics",
+        "field": "title",
+        "before": "The Nobel Assembly Names the 2026 Medicine Laureates"
+      },
+      {
+        "after": "Karl Deisseroth, Peter Hegemann and Georg Nagel share the 2026 medicine Nobel for discoveries that allow researchers to control nerve-cell activity with light. Their work links light-sensitive proteins to tools for investigating brain circuits.",
+        "field": "description",
+        "before": "The Nobel Assembly at Karolinska Institutet announces the 2026 Nobel Prize in Physiology or Medicine from Wallenbergsalen in the Nobel Forum, opening Nobel week. The announcement is broadcast live and the laureates are usually telephoned only minutes beforehand."
+      },
+      {
+        "after": "2026-10-05T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-10-05T09:30:00.000Z"
+      },
+      {
+        "after": "2026-10-06T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      },
+      {
+        "after": "<ul><li>The 2026 physiology or medicine Nobel was awarded on 5 October to Karl Deisseroth of Stanford, Peter Hegemann of Humboldt University of Berlin and Georg Nagel of the University of Würzburg.<cite data-ref=\"https://med.stanford.edu/news/all-news/2026/10/deisseroth-nobel-prize.html\"></cite></li><li>Optogenetics introduces light-sensitive microbial proteins into selected nerve cells, allowing researchers to change those cells' activity with light. This helps test what particular circuits do, rather than simply observe when they are active.<cite data-ref=\"https://med.stanford.edu/news/all-news/2026/10/deisseroth-nobel-prize.html\"></cite></li><li>The joint award connects investigations of light-gated ion channels with their use in neuroscience. It recognizes a research method and its enabling discoveries, rather than announcing a newly approved treatment.<cite data-ref=\"https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/eu-funded-researcher-peter-hegemann-wins-2026-nobel-prize-physiology-or-medicine-2026-10-05_en\"></cite></li><li>Hegemann's EU-supported research includes work on rhodopsin activation and an ongoing project developing light-controlled molecular switches. A separate collaboration explored an implant combining optogenetics with other approaches for potential Parkinson's applications; that aim remains research, not a clinical outcome.<cite data-ref=\"https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/eu-funded-researcher-peter-hegemann-wins-2026-nobel-prize-physiology-or-medicine-2026-10-05_en\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 2026 Nobel Prize in Physiology or Medicine is announced on Monday 5 October 2026 by the Nobel Assembly at Karolinska Institutet, the first of the six 2026 Nobel announcements, which run 5&ndash;12 October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>Both nobelprize.org pages time it as &ldquo;11:30 CEST at the earliest&rdquo;, keeping the hedge; only the peace prize announcement is given a time without it<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The Nobel Foundation press release gives the venue in full as the Nobel Assembly at Karolinska Institutet, Wallenbergsalen, Nobel Forum, Nobels vag 1, Solna, and names www.nobelprizemedicine.org as the prize's site<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The YouTube description is less precise on place, saying only that the prize &ldquo;will be announced at the Nobel Assembly at Karolinska Institutet in Stockholm, Sweden&rdquo;<cite data-ref=\"https://www.youtube.com/live/qGPpW0hAaaY\"></cite></li><li>The announcement is broadcast live: &ldquo;All of the prize announcements will be broadcast live on the official digital channels of the Nobel Prize&rdquo;, with a YouTube live stream listed for each<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The pin's source is that live stream page, titled &ldquo;Announcement of the 2026 Nobel Prize in Physiology or Medicine&rdquo; on the Nobel Prize channel, published 2026-09-14 and tagged #NobelPrize<cite data-ref=\"https://www.youtube.com/live/qGPpW0hAaaY\"></cite></li><li>No laureates are named: the live stream page gives no laureate names and no announcement date beyond its own publication timestamp<cite data-ref=\"https://www.youtube.com/live/qGPpW0hAaaY\"></cite></li><li>The press release setting the 2026 dates and venues is dated 2 February 2026, and says media wishing to attend &ldquo;should apply to the respective prize-awarding institution in the early fall&rdquo;<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The announcement follows a selection year that opens with nominations in September, closes them at midnight on 31 January, runs evaluation from February to September and ends with the institutions' final vote in October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>The laureates receive their medals, prize money and diplomas on Nobel Day, 10 December, in Stockholm and Oslo<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://med.stanford.edu/news/all-news/2026/10/deisseroth-nobel-prize.html",
+        "title": "Stanford's Karl Deisseroth Wins 2026 Nobel Prize in Physiology or Medicine",
+        "confidence": 95,
+        "publishedDate": "2026-10-05"
+      },
+      {
+        "url": "https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/eu-funded-researcher-peter-hegemann-wins-2026-nobel-prize-physiology-or-medicine-2026-10-05_en",
+        "title": "EU-funded researcher Peter Hegemann wins 2026 Nobel Prize in Physiology or Medicine",
+        "confidence": 95,
+        "publishedDate": "2026-10-05"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-06T15:54:18.197Z"
+  },
+  {
+    "id": 450,
+    "pinId": 5027,
+    "kind": "edit",
+    "userId": 306,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The Bank of America Chicago Marathon is on Sunday 11 October 2026, starting and finishing in Grant Park. Professional runners start at 7:30 am CT; Wave 1 follows at 7:35 am CT<cite data-ref=\"https://www.chicagomarathon.com/\"></cite></li><li>More than 55,000 runners are registered, which would make it the largest field in the race's 48-year history<cite data-ref=\"https://marathonhandbook.com/2026-chicago-marathon-elite-field/\"></cite></li><li>Defending champions Jacob Kiplimo (2:02:23 in 2025) and Hawi Feysa (2:14:57) return; Kiplimo arrives after a 2:00:28 third place at London in April<cite data-ref=\"https://marathonhandbook.com/2026-chicago-marathon-elite-field/\"></cite></li><li>Six men who have run under 2:04 are entered, with Americans Charles Hicks, Galen Rupp and Clayton Young<cite data-ref=\"https://marathonhandbook.com/2026-chicago-marathon-elite-field/\"></cite></li><li>Former world-record holder Brigid Kosgei returns for her first Chicago since 2019, and two-time Boston champion Sharon Lokedi makes her Chicago debut<cite data-ref=\"https://marathonhandbook.com/2026-chicago-marathon-elite-field/\"></cite></li><li>The organizer lists wheelchair starts at 7:20 and 7:21 am CT, followed by handcycles at 7:23 am. Later running waves start at 8:00 and 8:35 am, so 7:30 is the elite running start rather than every participant's start.<cite data-ref=\"https://www.chicagomarathon.com/event-info/participant-information/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Bank of America Chicago Marathon is on Sunday 11 October 2026, starting and finishing in Grant Park with a wave start around 7:30 am CT<cite data-ref=\"https://www.chicagomarathon.com/\"></cite></li><li>More than 55,000 runners are registered, which would make it the largest field in the race's 48-year history<cite data-ref=\"https://marathonhandbook.com/2026-chicago-marathon-elite-field/\"></cite></li><li>Defending champions Jacob Kiplimo (2:02:23 in 2025) and Hawi Feysa (2:14:57) return; Kiplimo arrives after a 2:00:28 third place at London in April<cite data-ref=\"https://marathonhandbook.com/2026-chicago-marathon-elite-field/\"></cite></li><li>Six men who have run under 2:04 are entered, with Americans Charles Hicks, Galen Rupp and Clayton Young<cite data-ref=\"https://marathonhandbook.com/2026-chicago-marathon-elite-field/\"></cite></li><li>Former world-record holder Brigid Kosgei returns for her first Chicago since 2019, and two-time Boston champion Sharon Lokedi makes her Chicago debut<cite data-ref=\"https://marathonhandbook.com/2026-chicago-marathon-elite-field/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.chicagomarathon.com/event-info/participant-information/",
+        "title": "2026 Chicago Marathon — Official Participant Information and Start Schedule",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-06T15:55:04.360Z"
   }
 ]

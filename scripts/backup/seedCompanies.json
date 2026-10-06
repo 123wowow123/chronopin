@@ -59658,8 +59658,8 @@
     "hqLatitude": null,
     "hqLongitude": null,
     "utcHqCheckedDateTime": null,
-    "marketCap": null,
-    "utcMarketCapCheckedDateTime": null,
+    "marketCap": 378692287707,
+    "utcMarketCapCheckedDateTime": "2026-10-06T16:19:30.075Z",
     "localNames": [
       "美國銀行",
       "美洲银行",
@@ -67244,5 +67244,31 @@
     "utcParentCheckedDateTime": null,
     "utcCreatedDateTime": "2026-10-05T20:34:44.026Z",
     "utcUpdatedDateTime": "2026-10-05T20:34:46.747Z"
+  },
+  {
+    "id": 12123,
+    "name": "GE HealthCare",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-10-06T16:07:38.602Z",
+    "description": null,
+    "utcDescriptionCheckedDateTime": "2026-10-06T16:07:38.871Z",
+    "utcLocalNamesCheckedDateTime": "2026-10-06T16:08:06.450Z",
+    "tickerSymbol": null,
+    "tickerNote": null,
+    "utcTickerCheckedDateTime": null,
+    "utcRelationsCheckedDateTime": null,
+    "hqAddress": null,
+    "hqLatitude": null,
+    "hqLongitude": null,
+    "utcHqCheckedDateTime": null,
+    "marketCap": null,
+    "utcMarketCapCheckedDateTime": null,
+    "localNames": [],
+    "parentCompanyId": null,
+    "utcParentCheckedDateTime": null,
+    "utcCreatedDateTime": "2026-10-06T16:07:23.376Z",
+    "utcUpdatedDateTime": "2026-10-06T16:07:38.871Z"
   }
 ]

@@ -502,6 +502,7 @@ async function Thread({ pin }: { pin: PinJson }) {
       </div>
       <ThreadSuggestion pinId={pin.id} />
       <ThreadList
+        key={pin.id}
         current={Math.max(0, pins.findIndex((p) => p.id === pin.id))}
         items={pins.map((p, index) => (
           <Link

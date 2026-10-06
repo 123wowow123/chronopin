@@ -2,6 +2,7 @@ import { SignJWT } from 'jose';
 import { signToken } from '../auth';
 import { sentimentHash, type SentimentText } from '../model/pinSentiment';
 import { curatorId, isCurator } from './curators';
+import { productionWrite } from './productionWrites';
 
 // The daily jobs save through the app's own HTTP API, as a curator, because a
 // save anywhere else skips the live feed, the search index, the duplicate
@@ -19,7 +20,8 @@ export function apiBase(): string {
 // (https://www.chronopin.com) and JOBS_PROD_SESSION_SECRET its SESSION_SECRET,
 // so curator tokens are signed as they are locally and no password is handled.
 // Both are set in .env.local, never committed. Local ids match production's
-// only after `npm run db:pull-prod`, so pull first, and again after a run.
+// only after `npm run db:pull-prod`, so pull before a run. The owner requests
+// no automatic production-to-local sync after a job (2026-10-06).
 export function prodBase(): string | null {
   const base = process.env.JOBS_PROD_BASE?.trim().replace(/\/$/, '');
   if (!base) return null;
@@ -44,15 +46,19 @@ async function call<T>(
   path: string,
   { token, body, timeoutMs = 180000, base = writeBase() }: { token?: string; body?: unknown; timeoutMs?: number; base?: string } = {},
 ): Promise<T> {
-  const response = await fetch(`${base}${path}`, {
-    method,
-    headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
-    body: body === undefined ? undefined : JSON.stringify(body),
-    signal: AbortSignal.timeout(timeoutMs),
-  });
-  const text = await response.text();
-  if (!response.ok) throw new ApiCallError(response.status, `${method} ${path} answered ${response.status}: ${text.slice(0, 500)}`);
-  return (text ? JSON.parse(text) : null) as T;
+  const request = async (): Promise<T> => {
+    const response = await fetch(`${base}${path}`, {
+      method,
+      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      body: body === undefined ? undefined : JSON.stringify(body),
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    const text = await response.text();
+    if (!response.ok) throw new ApiCallError(response.status, `${method} ${path} answered ${response.status}: ${text.slice(0, 500)}`);
+    return (text ? JSON.parse(text) : null) as T;
+  };
+  const production = process.env.JOBS_PROD_BASE?.trim().replace(/\/$/, '');
+  return method !== 'GET' && base === production ? productionWrite(request) : request();
 }
 
 async function tokenFor(handle: string): Promise<string> {
@@ -132,8 +138,8 @@ export async function updatePin(id: number, patch: PinPatch): Promise<PinJson> {
   return call<PinJson>('PUT', `/api/pins/${id}`, { token: await tokenFor(author!), body: mergePatch(pin, patch) });
 }
 
-// What a run saved locally that production has no endpoint for besides the
-// pin's own: the two below replay it there as the pin's author. They do
+// The two below replay local readings through their dedicated endpoints as
+// the pin's author, without rewriting the rest of the pin. They do
 // nothing unless the run writes to production, and a failure is logged by the
 // caller, not fatal: the local copy stays and the next push can repeat it.
 
@@ -146,14 +152,17 @@ export async function pushEventInfo(pinId: number, reading: { fields: Record<str
   return true;
 }
 
-// A pin's tone score. Production has no endpoint for it, so it rides a PUT of
-// the pin's own current copy with `sentiment` added; skipped when the pin's
-// text there is not the text that was scored, since the score would not fit.
+// A pin's tone score uses the lightweight score endpoint, never a full pin
+// PUT (which also starts search, media, source-wiki and other save work).
+// The server checks ownership and the hash again at the time of the write.
 export async function pushSentiment(pinId: number, sentiment: number, product: string | undefined, scored: SentimentText): Promise<boolean> {
   if (!prodBase()) return false;
   const pin = await getPin(pinId);
   if (!isCurator(pin.user?.userName)) return false;
   if (sentimentHash({ title: pin.title, description: pin.description ?? null }) !== sentimentHash(scored)) return false;
-  await call('PUT', `/api/pins/${pinId}`, { token: await tokenFor(pin.user!.userName), body: mergePatch(pin, { sentiment, ...(product ? { productLine: product } : {}) }) });
-  return true;
+  const result = await call<{ saved: number; refused: { id: number; reason: string }[] }>('PUT', '/api/pins/sentiments', {
+    token: await tokenFor(pin.user!.userName),
+    body: [{ id: pinId, sentiment, textHash: sentimentHash(scored), ...(product !== undefined ? { product } : {}) }],
+  });
+  return result.saved === 1;
 }

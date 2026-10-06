@@ -66,7 +66,10 @@ recorded - is the same for both.
 * **`auto`** (the default) tries the key first and falls back to a session
   when the key is missing, rejected or out of credit. A run with neither is
   recorded as `skipped` with the reason.
-* **By hand in a VS Code session.** `npm run jobs:run -- --job midnight
+* **By hand in the active LLM session.** Owner, 2026-10-06: run requested
+  jobs with whichever LLM is active in the current session, not necessarily
+  Claude Code, and do not ask again for permission to run them. The prepared
+  prompt and MCP tools are model-independent. `npm run jobs:run -- --job midnight
   --prepare` opens a run and writes its prompt and MCP config; add the server
   it prints (`claude mcp add chronopin -- ... --run <id>`), work the prompt,
   and close it with `--finish <id> --report <file>`. The writes count against
@@ -126,24 +129,36 @@ What goes where. **Reads, scrapes and every signal stay on this machine**
 (headless Chrome and the pipeline never run on the small VM). `create_pin`,
 `update_pin` and `get_pin` go to prod. Event-info readings and sentiment
 scores are saved locally and then replayed on prod as the pin's author
-(`PUT /api/pins/:id/event-info`; a `PUT` of the pin with `sentiment`, skipped
+(`PUT /api/pins/:id/event-info`; `PUT /api/pins/sentiments`, skipped
 when prod's text is not what was scored). A push that fails is logged and
 the local copy stays. Prod-only writes leave the local database as it was, so
 the run does not seed from it.
 
-**Every save re-reads the pin's links.** A `PUT` of a pin (a sentiment push
-included) rebuilds the source wikis of its links, which opens headless Chrome
-on the prod VM. 2026-10-03: pushing about 190 anime and BLS scores that way
-sent prod's load to 24, and every wiki failed anyway with no API credit. The
-wiki step now reads nothing while the API has no key or turned a call away
-for credit, rate limit or outage (10 minutes, [wiki.ts](../../../src/server/extract/wiki.ts)),
-but push in small batches and watch prod's homepage time all the same.
+**Keep posting light on production.** Owner, 2026-10-06: post without slowing
+prod so much. Never replay a score as a full pin `PUT`: that starts search,
+duplicate, media and source-wiki work for a change that needs only a score
+row. Use `PUT /api/pins/sentiments`; it checks ownership and the text hash
+again on the server. Event readings use their own endpoint too. Do all
+research, scraping and product checks locally. The job's production writes
+share one queue per process, with a two-second gap after each request and
+a 30-second pause after failures. The local-run replay script also paces its
+writes and sends scores in batches of at most ten. In a manual session,
+publish ads and translations sequentially in small batches with the same
+gap; do not launch several publishers together. If page latency rises or a
+request times out, pause posting and reread saved rows before retrying.
+The source-wiki step also reads nothing while the API has no key or turned
+a call away for credit, rate limit or outage (10 minutes,
+[wiki.ts](../../../src/server/extract/wiki.ts)).
 
-**Pull before and after.** Local ids match prod's only after `npm run
-db:pull-prod`; a pin created on prod has a new id there and does not exist
-locally until the next pull. Pull before a run so ids and the already-pinned
-tests agree, and after it so the local copy catches up. Pins by a non-curator
-(the owner's own accounts) are still not the job's to edit, on prod or here.
+**Pull before a run; skip the post-run sync.** Local ids match prod's only
+after `npm run db:pull-prod`; pull before a run so ids and the already-pinned
+tests agree. Owner, 2026-10-06: do not sync the production database back to
+local after a job. Finish by verifying the production writes and saving the
+report and learnings. Do not run a database pull, local search rebuild,
+thumbnail sync or production seed refresh just to close a production job.
+A pin created on prod may remain absent locally until the next needed pull;
+production remains the source of truth. Pins by a non-curator (the owner's
+own accounts) are still not the job's to edit, on prod or here.
 
 **A run that stayed local** (neither variable set) is replayed afterwards
 with `scripts/jobs/post-run-to-prod.sh <run id> [--dry]`, on the admin login

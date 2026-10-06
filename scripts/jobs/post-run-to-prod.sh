@@ -14,7 +14,7 @@
 #   edits        prod's copy with only the run's patched fields (and new
 #                references) laid over it, PUT /api/pins/:id
 #   event info   PUT /api/pins/:id/event-info, unless prod's is a hand reading
-#   sentiment    POST /api/admin/db/PinSentiment?upsert=1, only for a live
+#   sentiment    PUT /api/pins/sentiments, only for a live
 #                company pin whose prod text hashes to what was scored
 # A pin whose title or author differs on prod is skipped and reported.
 set -euo pipefail
@@ -25,12 +25,16 @@ export RUN DRY
 EXPORT="$(mktemp)"; trap 'rm -f "$EXPORT"' EXIT; export EXPORT
 npm run --silent jobs:export -- "$RUN" > "$EXPORT"
 python3 - <<'PY'
-import getpass, hashlib, json, os, re, urllib.request, urllib.error
+import getpass, hashlib, json, os, re, time, urllib.request, urllib.error
 LOCAL, BASE = "http://127.0.0.1:3000", "https://www.chronopin.com"
 dry = os.environ.get("DRY") == "--dry"
 run = json.loads(open(os.environ["EXPORT"]).readline())
+last_write = 0.0
 
 def call(method, url, token=None, body=None, ok404=False):
+    global last_write
+    writing = method not in ("GET", "HEAD")
+    if writing: time.sleep(max(0.0, last_write + 2.0 - time.monotonic()))
     req = urllib.request.Request(url, method=method, data=None if body is None else json.dumps(body).encode(),
         headers={"Content-Type": "application/json", **({"Authorization": "Bearer " + token} if token else {})})
     try:
@@ -39,6 +43,8 @@ def call(method, url, token=None, body=None, ok404=False):
     except urllib.error.HTTPError as e:
         if ok404 and e.code in (204, 404): return None
         raise SystemExit(f"{method} {url} -> {e.code} {e.read()[:400]}")
+    finally:
+        if writing: last_write = time.monotonic()
 
 email = os.environ.get("ADMIN_EMAIL") or "flynni2008@gmail.com"
 password = os.environ.get("ADMIN_PW") or getpass.getpass(f"Admin password for {email}: ")
@@ -102,8 +108,13 @@ for s in sentiments:
     if hashlib.sha256(f"{p['title']}\n{p.get('description') or ''}".encode()).hexdigest() != s["textHash"]:
         print(f"  sentiment {pid} SKIP prod text is not what was scored"); continue
     rows.append(s)
-if rows and dry: print(f"  sentiment would upsert {len(rows)}: {[r['pinId'] for r in rows]}")
+if rows and dry: print(f"  sentiment would save {len(rows)}: {[r['pinId'] for r in rows]}")
 elif rows:
-    saved = call("POST", f"{BASE}/api/admin/db/PinSentiment?upsert=1", token, rows)["rows"]
-    print(f"  sentiment upserted {len(saved)}: {[r['pinId'] for r in saved]}")
+    # Dedicated score writes recheck the text hash and avoid every pin-save hook.
+    for start in range(0, len(rows), 10):
+        batch = [{"id": s["pinId"], "sentiment": s["sentiment"], "textHash": s["textHash"],
+                  "product": s.get("product") or ""} for s in rows[start:start + 10]]
+        result = call("PUT", f"{BASE}/api/pins/sentiments", token, batch)
+        print(f"  sentiment saved {result['saved']}: {[r['id'] for r in batch]}")
+        if result["refused"]: print(f"  sentiment refused: {result['refused']}")
 PY

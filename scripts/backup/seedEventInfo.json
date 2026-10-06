@@ -4845,6 +4845,42 @@
     "checkedAt": "2026-09-29T14:06:03.205Z"
   },
   {
+    "pinId": 4367,
+    "performers": [
+      {
+        "name": "Harry Styles",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://variety.com/2026/music/news/harry-styles-tour-stadium-global-2027-openers-kylie-1236856931/",
+    "checkedAt": "2026-10-06T16:29:09.673Z"
+  },
+  {
+    "pinId": 4369,
+    "performers": [
+      {
+        "name": "Metallica",
+        "type": "PerformingGroup"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Life_Burns_Faster",
+    "checkedAt": "2026-10-06T16:22:12.017Z"
+  },
+  {
     "pinId": 4391,
     "performers": [
       {
@@ -5632,6 +5668,24 @@
     "checkedAt": "2026-10-01T13:27:25.207Z"
   },
   {
+    "pinId": 4983,
+    "performers": [
+      {
+        "name": "Amrish Rau",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://www.fintechfestival.sg/registration",
+    "lowPrice": 380,
+    "highPrice": 5000,
+    "priceCurrency": "SGD",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.fintechfestival.sg/",
+    "checkedAt": "2026-10-06T15:59:29.744Z"
+  },
+  {
     "pinId": 4984,
     "performers": [],
     "ticketUrl": null,
@@ -5656,6 +5710,63 @@
     "source": "claude",
     "sourceUrl": "https://falling-walls.com/science-summit",
     "checkedAt": "2026-10-04T15:01:12.243Z"
+  },
+  {
+    "pinId": 4986,
+    "performers": [
+      {
+        "name": "Riley Green",
+        "type": "Person"
+      },
+      {
+        "name": "Sarah McLachlan",
+        "type": "Person"
+      },
+      {
+        "name": "James Barker Band",
+        "type": "PerformingGroup"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://ca.billboard.com/music/music-news/riley-green-grey-cup-halftime",
+    "checkedAt": "2026-10-06T15:53:55.539Z"
+  },
+  {
+    "pinId": 4989,
+    "performers": [],
+    "ticketUrl": "https://hkmarathon.fringebackerevents.com/events/standard-chartered-hong-kong-marathon-2027/register/select-type/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.hkmarathon.com/important-dates",
+    "checkedAt": "2026-10-06T16:08:52.026Z"
+  },
+  {
+    "pinId": 4990,
+    "performers": [
+      {
+        "name": "Ryan Cayabyab",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.runrocknroll.com/events/manila",
+    "checkedAt": "2026-10-06T16:02:24.595Z"
   },
   {
     "pinId": 4991,
@@ -5701,6 +5812,32 @@
     "checkedAt": "2026-10-01T13:27:25.336Z"
   },
   {
+    "pinId": 5029,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://tokyo42195.org/en/calendar/ec_260622_02.html",
+    "checkedAt": "2026-10-06T16:19:34.213Z"
+  },
+  {
+    "pinId": 5031,
+    "performers": [],
+    "ticketUrl": "https://www.valenciaciudaddelrunning.com/en/marathon/info-registration-2026/",
+    "lowPrice": 200,
+    "highPrice": 200,
+    "priceCurrency": "EUR",
+    "availability": "SoldOut",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.visitvalencia.com/en/events-valencia/enjoy-trinidad-alfonso-zurich-marathon",
+    "checkedAt": "2026-10-06T16:06:13.821Z"
+  },
+  {
     "pinId": 5032,
     "performers": [],
     "ticketUrl": "https://atleta.cc/e/nhIVWn50Rcez",
@@ -5712,6 +5849,19 @@
     "source": "claude",
     "sourceUrl": "https://www.tcsamsterdammarathon.eu/",
     "checkedAt": "2026-10-02T14:12:09.013Z"
+  },
+  {
+    "pinId": 5034,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.sabcsport.com/main-domain/news/two-oceans-marathon-confirms-2027-dates",
+    "checkedAt": "2026-10-06T16:23:25.937Z"
   },
   {
     "pinId": 5092,
@@ -5779,6 +5929,19 @@
     "checkedAt": "2026-10-02T14:12:08.890Z"
   },
   {
+    "pinId": 5106,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.thailandhighlights.com/thailand/loy-krathong-festival",
+    "checkedAt": "2026-10-06T16:02:23.770Z"
+  },
+  {
     "pinId": 5107,
     "performers": [],
     "ticketUrl": "https://shop.midaticket.it/makerfaire/Event/1149/Dates",
@@ -5790,6 +5953,32 @@
     "source": "claude",
     "sourceUrl": "https://www.turismoroma.it/en/events/maker-faire-rome-2026",
     "checkedAt": "2026-10-02T14:12:09.125Z"
+  },
+  {
+    "pinId": 5108,
+    "performers": [],
+    "ticketUrl": "https://ers-my.informa-info.com/2026sne",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.smartnationexpo.org/visit-us/",
+    "checkedAt": "2026-10-06T15:59:16.519Z"
+  },
+  {
+    "pinId": 5109,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": 180,
+    "highPrice": 180,
+    "priceCurrency": "CNY",
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "http://www.eguangzhou.gov.cn/gzwhatson/content/post_44820.html",
+    "checkedAt": "2026-10-06T16:06:17.012Z"
   },
   {
     "pinId": 5124,
@@ -5816,6 +6005,19 @@
     "source": "claude",
     "sourceUrl": "https://www.yacht.de/en/regatta/races/golden-globe-race-2026-sail-like-it-s-1968-experience-it-like-it-s-2026/",
     "checkedAt": "2026-10-02T14:10:55.516Z"
+  },
+  {
+    "pinId": 5128,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://cyca.com.au/event/2026-rolex-sydney-hobart-yacht-race/",
+    "checkedAt": "2026-10-06T16:06:19.328Z"
   },
   {
     "pinId": 5129,
