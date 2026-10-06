@@ -359,6 +359,13 @@
   a.tag-tradition {
     @apply transition-colors hover:bg-tag-holiday/10 hover:no-underline hover:ring-tag-holiday/35;
   }
+  /* The customs under a specialty day: the trivia blue in a lighter shade. */
+  .tag-tradition.tag-specialty-tradition {
+    @apply bg-tag-trivia/[0.04] text-trivia-soft/80 ring-tag-trivia/15;
+  }
+  a.tag-tradition.tag-specialty-tradition {
+    @apply hover:bg-tag-trivia/10 hover:ring-tag-trivia/35;
+  }
   /* Holidays that fall on the same day each take a hue of their own (the first
      keeps violet); the holiday's tag and its traditions share it. No reds or
      pinks: they read harsh beside the cool tags (owner, 2026-10-03). */

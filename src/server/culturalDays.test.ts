@@ -21,6 +21,11 @@ describe('cultural holiday dates', () => {
     expect(start(2026, 'mardi-gras')).toBe('2026-02-17');
     expect(start(2026, 'thanksgiving')).toBe('2026-11-26');
     expect(start(2026, 'halloween')).toBe('2026-10-31');
+    expect(start(2026, 'us-columbus-day')).toBe('2026-10-12');
+    expect(start(2026, 'us-memorial-day')).toBe('2026-05-25');
+    expect(start(2026, 'us-labor-day')).toBe('2026-09-07');
+    expect(start(2026, 'us-presidents-day')).toBe('2026-02-16');
+    expect(start(2026, 'us-mlk-day')).toBe('2026-01-19');
   });
 
   it('finds a date for every holiday in a recent year', () => {
@@ -131,7 +136,8 @@ describe('date markers', () => {
     expect(isAstronomyMarker('Sukkot')).toBe(false);
     expect(holidayForMarker('Sukkot')).toBe('sukkot');
     expect(holidayForMarker('Thanksgiving Day')).toBe('thanksgiving');
-    expect(holidayForMarker('Memorial Day')).toBeUndefined();
+    expect(holidayForMarker('Memorial Day')).toBe('us-memorial-day');
+    expect(holidayForMarker('Columbus Day')).toBe('us-columbus-day');
     expect(holidayForMarker('Independence Day')).toBe('us-independence-day');
     expect(holidayForMarker('Boxing Day')).toBe('uk-boxing-day');
   });

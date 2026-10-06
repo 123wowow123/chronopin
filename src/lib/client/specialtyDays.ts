@@ -8,7 +8,8 @@ import type { SpecialtyDay } from '../specialtyDays';
 let specialtyRequest: Promise<Record<string, SpecialtyDay[]>> | null = null;
 
 export function loadSpecialtyDays() {
-  specialtyRequest ??= fetch(withPageLang('/api/specialty-days'))
+  // `v` busts the browser's hour-long cache of the response when its shape changes (3: customs).
+  specialtyRequest ??= fetch(withPageLang('/api/specialty-days?v=3'))
     .then((res) => res.json())
     .catch(() => {
       specialtyRequest = null;

@@ -99,7 +99,7 @@ const tagHeight = (lines: number) => 26 + 14 * lines;
 // marker is allowed) instead of cutting off, in the same type as the rest; a
 // long name (`lines`, from tagLines) may take up to five.
 // With an `href` the chip is that search link, opened in a new tab.
-function Tag({ variant, children, title, className = '', wrap = false, lines = 2, href, holiday }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean; lines?: TagLines; href?: string; holiday?: number }) {
+function Tag({ variant, children, title, className = '', wrap = false, lines = 2, href, holiday }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean; lines?: TagLines; href?: string; holiday?: number | 's' }) {
   const chip = `${tagBase} tag-${variant} ${className}`;
   const label = <span className={`block truncate ${wrap ? `${LINE_CLAMP[lines]} lg:whitespace-normal lg:text-balance` : ''}`}>{children}</span>;
   return href ? (
@@ -135,7 +135,7 @@ function splitMarkers<T extends { title: string }>(dateTimes: T[], culturalDays:
 const holidayLines = (label: string): TagLines => tagLines(label, 2);
 // The specialty day's name takes three at least, to five.
 const specialtyLines = (days: SpecialtyDay[]): TagLines => tagLines(days[0].label, 3);
-const specialtyHeight = (days: SpecialtyDay[]) => (days.length ? tagHeight(specialtyLines(days)) : 0);
+const specialtyHeight = (days: SpecialtyDay[]) => (days.length ? tagHeight(specialtyLines(days)) + 54 * (days[0].traditions?.length ?? 0) : 0);
 
 // How tall the holiday tags are stacked beside the rail (lg): each is up to
 // two lines, 54px with its gap, a long holiday name more.
@@ -164,7 +164,7 @@ export function TimeBlock({
   bag: Bag;
   todayKey: string;
   specialtyDays: SpecialtyDay[];
-  // The day's national and cultural holidays with their traditions, last in the stack in a colour of their own.
+  // The day's national and cultural holidays with their traditions, in a colour of their own, above the specialty day.
   culturalDays?: CulturalDay[];
   serverTimeZone: string;
   firstPinPriority?: boolean;
@@ -280,19 +280,20 @@ export function TimeBlock({
               <span lang="zh-CN">{lunar.text}</span>
             </Tag>
           ) : null}
-          {/* Astronomy markers and the specialty day, then the holidays (a different colour) at the bottom of the stack. On phones only one extra tag fits beside the date and countdown; the rest show from sm up. */}
+          {/* Astronomy markers, then the holidays (a different colour), and the specialty day with its customs at the bottom of the stack. On phones only one extra tag fits beside the date and countdown; the rest show from sm up. */}
           {astronomy.map((dt) => (
             <Tag key={dt.id} variant="trivia" wrap title={dt.description || markerLabel(t, dt.title)} href={triviaSearchUrl(markerLabel(t, dt.title), locale)} className={`${extraTag} ${hideOnPhone(`m:${dt.id}`)}`}>
               {markerLabel(t, dt.title)}
             </Tag>
           ))}
-          {specialtyDays.length ? <SpecialtyTag days={specialtyDays} className={hideOnPhone('specialty')} /> : null}
           {national.map((dt) => (
             <Tag key={dt.id} variant="holiday" wrap title={dt.description || markerLabel(t, dt.title)} href={triviaSearchUrl(markerLabel(t, dt.title), locale)} className={`${extraTag} ${hideOnPhone(`m:${dt.id}`)}`}>
               {markerLabel(t, dt.title)}
             </Tag>
           ))}
           <HolidayTags days={culturalDays} phoneTag={phoneTag} />
+          {specialtyDays.length ? <SpecialtyTag days={specialtyDays} className={hideOnPhone('specialty')} /> : null}
+          <SpecialtyTraditions days={specialtyDays} />
         </div>
       </div>
 
@@ -473,7 +474,7 @@ const holidayHue = (i: number) => HOLIDAY_HUES[i % HOLIDAY_HUES.length];
 
 // Between sm and lg the day's tags share one row at their full width, and the
 // traditions take what room the others leave, an even share for each holiday
-// from the first one on: each holiday's first tradition, then each one's
+// from the first one on (the specialty day's customs only after all of them): each holiday's first tradition, then each one's
 // second, and so on, a tradition that doesn't fit whole left out (data-off, which
 // hides it below lg) along with its holiday's later ones.
 function useFitTraditions(deps: unknown[]) {
@@ -490,17 +491,21 @@ function useFitTraditions(deps: unknown[]) {
       let used = base.reduce((sum, el) => sum + (el as HTMLElement).offsetWidth, 0) + gap * Math.max(base.length - 1, 0);
       const byDay = new Map<string, HTMLElement[]>();
       for (const el of all) byDay.set(el.dataset.tradition!, [...(byDay.get(el.dataset.tradition!) ?? []), el]);
-      const queues = Array.from(byDay.entries()).sort((x, y) => Number(x[0]) - Number(y[0])).map(([, els]) => els);
+      // The specialty day's customs ('s') take only what the holidays' leave.
+      const queueOf = (entries: [string, HTMLElement[]][]) => entries.sort((x, y) => Number(x[0]) - Number(y[0])).map(([, els]) => els);
+      const holidayQueues = queueOf(Array.from(byDay.entries()).filter(([key]) => key !== 's'));
       const kept = new Set<HTMLElement>();
-      for (let round = 0, grew = true; grew; round++) {
-        grew = false;
-        for (const els of queues) {
-          const el = els[round];
-          if (!el || (round && !kept.has(els[round - 1]))) continue;
-          grew = true;
-          if (used + gap + el.offsetWidth <= row.clientWidth) {
-            used += gap + el.offsetWidth;
-            kept.add(el);
+      for (const queues of [holidayQueues, byDay.has('s') ? [byDay.get('s')!] : []]) {
+        for (let round = 0, grew = true; grew; round++) {
+          grew = false;
+          for (const els of queues) {
+            const el = els[round];
+            if (!el || (round && !kept.has(els[round - 1]))) continue;
+            grew = true;
+            if (used + gap + el.offsetWidth <= row.clientWidth) {
+              used += gap + el.offsetWidth;
+              kept.add(el);
+            }
           }
         }
       }
@@ -565,6 +570,23 @@ export function SpecialtyTag({ days, className = '' }: { days: SpecialtyDay[]; c
   );
 }
 
+// The customs of the day's first specialty day ("Baking pies"), under its tag in
+// the same blue, lighter; each searches the web for the day with the custom.
+export function SpecialtyTraditions({ days }: { days: SpecialtyDay[] }) {
+  const locale = useLocale();
+  const day = days[0];
+  if (!day?.traditions?.length) return null;
+  return (
+    <>
+      {day.traditions.map((tradition) => (
+        <Tag key={tradition.name} variant="tradition" wrap holiday="s" title={`${day.label}: ${tradition.label}`} href={triviaSearchUrl(`${day.name} ${tradition.name}`, locale)} className={`${extraTag} tag-specialty-tradition max-sm:hidden max-lg:data-[off]:hidden`}>
+          {tradition.label}
+        </Tag>
+      ))}
+    </>
+  );
+}
+
 // `day` is today's key: the day the URL's hash names while it is at the top.
 export function TodayMarker({ day, specialtyDays, culturalDays = [] }: { day: string; specialtyDays: SpecialtyDay[]; culturalDays?: CulturalDay[] }) {
   const t = useT();
@@ -576,8 +598,9 @@ export function TodayMarker({ day, specialtyDays, culturalDays = [] }: { day: st
         <div id="today-marker" className={`${tagBase} ${leadTag} tag-today tag-link uppercase tracking-wider lg:text-xs`} style={{ ['--tag-reach' as string]: '23px' }}>
           {t('controls.today')}
         </div>
-        {specialtyDays.length ? <SpecialtyTag days={specialtyDays} /> : null}
         <HolidayTags days={culturalDays} />
+        {specialtyDays.length ? <SpecialtyTag days={specialtyDays} /> : null}
+        <SpecialtyTraditions days={specialtyDays} />
       </div>
       {specialtyDays.length || culturalDays.length ? <div className="hidden lg:block" style={{ height: (specialtyDays.length ? specialtyHeight(specialtyDays) + 4 : 0) + holidayStackHeight(0, culturalDays) }} /> : null}
     </div>

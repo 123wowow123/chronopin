@@ -7,6 +7,8 @@
 import type { Locale } from '@/lib/i18n/config';
 import type { SpecialtyDay } from '@/lib/specialtyDays';
 import english from './data/specialtyDays.json';
+import traditions from './data/specialtyTraditions.json';
+import traditionLabels from './data/specialtyTraditions.labels.json';
 import ar from './data/specialtyDays.ar.json';
 import de from './data/specialtyDays.de.json';
 import es from './data/specialtyDays.es.json';
@@ -26,10 +28,19 @@ import zh from './data/specialtyDays.zh.json';
 const NAMES = english as Record<string, string[]>;
 const LABELS: Partial<Record<Locale, Record<string, string>>> = { ar, de, es, fr, hi, id: indonesian, it, ja, ko, ms, pt, ru, th, vi, zh };
 
-// One date's ("09-24") specialty days.
+const TRADITIONS = traditions as Record<string, string[]>;
+const TRADITION_LABELS = traditionLabels as Record<string, Partial<Record<Locale, string>>>;
+
+// One date's ("09-24") specialty days. A day with customs of its own comes
+// first (the tag shows the first, and its customs under it).
 export function specialtyDaysOn(monthDay: string, locale: Locale): SpecialtyDay[] {
   const labels = LABELS[locale];
-  return (NAMES[monthDay] ?? []).map((name) => ({ name, label: labels?.[name] || name }));
+  const days = (NAMES[monthDay] ?? []).map((name): SpecialtyDay => {
+    const day: SpecialtyDay = { name, label: labels?.[name] || name };
+    if (TRADITIONS[name]) day.traditions = TRADITIONS[name].map((t) => ({ name: t, label: TRADITION_LABELS[t]?.[locale] || t }));
+    return day;
+  });
+  return [...days.filter((d) => d.traditions), ...days.filter((d) => !d.traditions)];
 }
 
 // Every date's, keyed like specialtyDays.json.

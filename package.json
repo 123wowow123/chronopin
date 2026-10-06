@@ -99,6 +99,7 @@
     "wiki:prod": "tsx scripts/wiki/prod.ts",
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
     "specialty-days:translate": "tsx scripts/specialtyDays/translate.ts",
+    "specialty-days:traditions": "tsx scripts/specialtyDays/traditions.ts",
     "favicon:build": "tsx scripts/favicon/build.ts"
   },
   "dependencies": {
