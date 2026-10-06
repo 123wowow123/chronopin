@@ -340,6 +340,11 @@ list these information on people if available
 • Majore property or houses owned
 
 
+Build KG with people, companies, properties, vacations, products / shows
+
+
+
+
 - famous people should have page like congressmen too
 
 - generate most corrupt people page collage
@@ -365,7 +370,10 @@ Trade deficit pin series
 https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html
 
 
-pin upcoming and new restaurants on all major US cities and creat landing page for the region
+- pin new and upcoming beer and alchololic drinks
+need landing pages
+
+- pin upcoming and new restaurants on all major US cities and creat landing page for the region
 
 can anyone commit to chronopin git? should automerge PR from this computer and others will need to submit PR and wait for admin to approve
 
