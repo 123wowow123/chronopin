@@ -22,6 +22,15 @@ describe('identifyBot', () => {
     );
   });
 
+  it('identifies AI search crawlers without confusing Exalead with Exa', () => {
+    expect(identifyBot('Mozilla/5.0 (compatible; ExaSearchBot/1.0; +https://crawler.exa.ai/)')).toEqual({ name: 'ExaSearchBot', kind: 'ai' });
+    expect(identifyBot('Mozilla/5.0 (compatible; ExaBot/1.0; +https://exa.ai/bot)')).toEqual({ name: 'ExaBot', kind: 'ai' });
+    expect(identifyBot('Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)')?.kind).toBe('other');
+    expect(identifyBot('Mozilla/5.0 (compatible; Keenable-User/1.0; +https://keenable.ai/bot)')).toEqual({ name: 'Keenable-User', kind: 'ai' });
+    expect(identifyBot('keenablebot/1.0')).toEqual({ name: 'KeenableBot', kind: 'ai' });
+    expect(identifyBot('AIONBOT/1.0')).toEqual({ name: 'AionBot', kind: 'other' });
+  });
+
   it('counts scripts, headless browsers and a missing user agent as other', () => {
     expect(identifyBot('curl/8.7.1')).toEqual({ name: 'curl', kind: 'other' });
     expect(identifyBot('python-requests/2.32.3')).toEqual({ name: 'Python', kind: 'other' });

@@ -54,8 +54,8 @@ export async function proxy(request: NextRequest) {
   const userAgent = request.headers.get('user-agent');
   const bot = identifyBot(userAgent);
   BotVisit.record(bot, userAgent, pathname);
-  // AI crawlers are slowed to a steady pace (src/server/botLimit.ts); search
-  // engines are not, so indexing is never held back. robots.txt stays open to
+  // AI crawlers, scrapers and Applebot have per-bot and shared rate limits
+  // (src/server/botLimit.ts). Other search engines pass through. robots.txt stays open to
   // them - it is where they read the Crawl-delay - and so does llms.txt, the
   // one page written for them.
   const retryAfter = pathname === '/robots.txt' || pathname === '/llms.txt' ? null : botRetryAfter(bot);

@@ -41,6 +41,10 @@ const KNOWN: [RegExp, string, BotKind][] = [
   [/MistralAI-User/i, 'MistralAI-User', 'ai'],
   [/DuckAssistBot/i, 'DuckAssistBot', 'ai'],
   [/Timpibot/i, 'Timpibot', 'ai'],
+  [/ExaSearchBot/i, 'ExaSearchBot', 'ai'],
+  [/ExaBot\/.*https?:\/\/exa\.ai\b/i, 'ExaBot', 'ai'],
+  [/KeenableBot/i, 'KeenableBot', 'ai'],
+  [/Keenable-User/i, 'Keenable-User', 'ai'],
 
   [/Googlebot-Image/i, 'Googlebot-Image', 'search'],
   [/Googlebot/i, 'Googlebot', 'search'],
@@ -87,6 +91,7 @@ const KNOWN: [RegExp, string, BotKind][] = [
   [/DataForSeoBot/i, 'DataForSeoBot', 'other'],
   [/Screaming Frog/i, 'Screaming Frog', 'other'],
   [/ShapBot/i, 'ShapBot', 'other'],
+  [/AionBot/i, 'AionBot', 'other'],
   [/UptimeRobot/i, 'UptimeRobot', 'other'],
   [/Pingdom/i, 'Pingdom', 'other'],
   [/HeadlessChrome/i, 'HeadlessChrome', 'other'],
