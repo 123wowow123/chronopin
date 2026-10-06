@@ -35,6 +35,7 @@ import type { Locale } from '@/lib/i18n/config';
 import { locateUnlocated } from './ipPlaces';
 import HolidayAdTranslation from './holidayAdTranslation';
 import PinAdTranslation from './pinAdTranslation';
+import ProductAd from './productAd';
 import PinView from './pinView';
 import { featuredWatch, type FeaturedWatch } from '../ebayWatches';
 
@@ -234,12 +235,18 @@ export default class Ad {
     const missing: number[] = [];
     const chosenRows: number[] = [];
     const holidayRows: number[] = [];
+    const productRows: number[] = [];
     for (const key of keys) {
       const ad = byKey.get(key);
       if (ad) out[key] = { kind: ad.kind, program: ad.program, title: ad.title, pinId: ad.pinId };
       else if (key.startsWith('m:')) missing.push(Number(key.slice(2)));
       else if (key.startsWith('p:')) chosenRows.push(Number(key.slice(2)));
       else if (key.startsWith('h:')) holidayRows.push(Number(key.slice(2)));
+      else if (key.startsWith('s:')) productRows.push(Number(key.slice(2)));
+    }
+    if (productRows.length) {
+      const rows = await db.query<{ id: number; title: string }>('SELECT "id", "title" FROM "ProductAd" WHERE "id" = ANY($1::integer[])', [productRows]);
+      for (const r of rows) out[`s:${r.id}`] = { kind: 'product', program: null, title: r.title, pinId: null };
     }
     // A holiday ad marked broken since is not served, but is still named.
     if (holidayRows.length) {
@@ -441,6 +448,16 @@ async function loadInventory(): Promise<Inventory> {
     ),
   ];
   ads.push(
+    ...(await ProductAd.list()).filter((row) => row.status === 'ok').map(
+      (row): AdCandidate => ({
+        key: `s:${row.id}`, kind: 'product', program: null, url: row.url,
+        store: 'US', categories: row.categories, company: row.brand, brand: row.brand,
+        weight: 1.5, rewardUsd: null, minAge: 0, targetAgeFrom: null, targetAgeTo: null,
+        pinId: null, forPinId: null, title: row.title, price: row.price,
+        rating: row.rating, reviewCount: row.reviewCount, urgency: row.urgency,
+        thumbName: null, originalUrl: null, imageUrl: row.image,
+      }),
+    ),
     ...holidayRows.map(
       (row): AdCandidate => ({
         key: `h:${row.id}`,

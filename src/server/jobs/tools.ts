@@ -23,6 +23,7 @@ import JobRun from '../model/jobRun';
 import Medium, { imageHashOf } from '../model/medium';
 import HolidayAd from '../model/holidayAd';
 import PinAd from '../model/pinAd';
+import ProductAd from '../model/productAd';
 import { stockMovieMerchandise } from '../movieMerchandise';
 import PinRevisit from '../model/pinRevisit';
 import { MIN_AD_RATING, MIN_AD_REVIEWS, MIN_HOLIDAY_AD_RATING, MIN_HOLIDAY_AD_REVIEWS } from '@/lib/adQuality';
@@ -407,11 +408,12 @@ export const TOOLS: JobTool[] = [
     input_schema: obj({ limit: num('Listings to read, default 40, at most 80'), pins: num('Pins to list in needsAds, default 20, at most 40') }),
     run: async (input) => {
       const checked = await PinAd.check({ limit: int(input.limit, 40, 1, 80) });
+      const productAds = await ProductAd.check({ limit: int(input.limit, 40, 1, 80) });
       const movieMerchandise = await stockMovieMerchandise({ limit: 6 }).catch((err) => {
         log.warn('movie merchandise failed:', (err as Error).message);
         return [];
       });
-      return { ...checked, movieMerchandise, needsAds: await PinAd.needingAds({ limit: int(input.pins, 20, 1, 40) }) };
+      return { ...checked, productAds, movieMerchandise, needsAds: await PinAd.needingAds({ limit: int(input.pins, 20, 1, 40) }) };
     },
   },
   {

@@ -161,6 +161,10 @@ export const config = {
     clientID: env('EBAY_CLIENT_ID') || '',
     clientSecret: env('EBAY_CLIENT_SECRET') || '',
     campaignID: env('EBAY_CAMPAIGN_ID') || ebayCampaignId,
+    // The Marketplace Account Deletion endpoint's verification token (32-80
+    // characters), the same text as on the developer.ebay.com keyset's
+    // Alerts & Notifications page (src/app/api/ebay/account-deletion).
+    verificationToken: env('EBAY_VERIFICATION_TOKEN') || '',
   },
 
   // A Kalshi API key: the key id and the RSA private key's PEM text (newlines
