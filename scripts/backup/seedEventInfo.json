@@ -5737,7 +5737,7 @@
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://racingnews365.com/f1/races/brazilian-gp",
-    "checkedAt": "2026-10-05T13:59:35.335Z"
+    "checkedAt": "2026-10-05T13:59:35.624Z"
   },
   {
     "pinId": 5094,
@@ -5790,19 +5790,6 @@
     "source": "claude",
     "sourceUrl": "https://www.turismoroma.it/en/events/maker-faire-rome-2026",
     "checkedAt": "2026-10-02T14:12:09.125Z"
-  },
-  {
-    "pinId": 5118,
-    "performers": [],
-    "ticketUrl": "https://www.euronaval.com/?utm_source=defenseadvancement.com&utm_medium=referral",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
-    "onSaleDate": null,
-    "source": "markup",
-    "sourceUrl": "https://www.dnv.com/events/euronaval-2026/",
-    "checkedAt": "2026-10-05T13:59:35.220Z"
   },
   {
     "pinId": 5124,
@@ -6061,19 +6048,6 @@
     "checkedAt": "2026-10-03T22:16:18.580Z"
   },
   {
-    "pinId": 5505,
-    "performers": [],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
-    "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://en.wikipedia.org/wiki/2026_Straight_Talk_Wireless_400",
-    "checkedAt": "2026-10-05T13:59:35.279Z"
-  },
-  {
     "pinId": 5518,
     "performers": [],
     "ticketUrl": "https://www.vrc.com.au/products/2026-2027/general-admission/general-admission/?eventId=92743",
@@ -6097,6 +6071,6 @@
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://bigtex.com/",
-    "checkedAt": "2026-10-05T13:59:34.836Z"
+    "checkedAt": "2026-10-05T13:59:35.307Z"
   }
 ]

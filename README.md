@@ -180,6 +180,8 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 - Amazon/Ebay product price check and show deals
 
+- Movie pins with no ticket or disc link (about 254 on prod as of 2026-10-05): hand-pick the real Fandango/Amazon page for the recent and upcoming films (about 60 days either side of today), then post with `POST /api/pins/:id/merchants`
+
 
 ### Map
 
@@ -348,7 +350,7 @@ https://www.chronopin.com/es/pin/4861/the-2027-grammy-nominations-set-the-song-o
 
 performance optimization
 
-
+https://help.opentable.com/s/article/OpenTable-Affiliate-Program-1505261059868?language=en_US
 
 generic ads that applies to everyone like junk removal can be added to ad rotation too and storage and moving services
 

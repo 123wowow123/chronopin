@@ -5195,7 +5195,7 @@
     "pinId": 875,
     "sentiment": 0.3,
     "textHash": "283f0166fec3bb2312d352242fa0548dfbd50c3454ae51f0ea9c8d94ac0d19b7",
-    "utcScoredDateTime": "2026-10-05T13:59:45.743Z",
+    "utcScoredDateTime": "2026-10-05T13:59:46.383Z",
     "product": "The One Piece",
     "productHash": "283f0166fec3bb2312d352242fa0548dfbd50c3454ae51f0ea9c8d94ac0d19b7"
   },
@@ -8091,7 +8091,7 @@
     "pinId": 1272,
     "sentiment": 0.3,
     "textHash": "b9d4448738e12e6332fc978bcf43875a72f7f9b11b1972be2db2f69394473d73",
-    "utcScoredDateTime": "2026-10-05T13:59:46.388Z",
+    "utcScoredDateTime": "2026-10-05T13:59:46.883Z",
     "product": "Violet Evergarden",
     "productHash": "b9d4448738e12e6332fc978bcf43875a72f7f9b11b1972be2db2f69394473d73"
   },
@@ -8875,7 +8875,7 @@
     "pinId": 1372,
     "sentiment": 0.4,
     "textHash": "ed411481ef30dc8acddfe8b7e90d1e3acbf04cc5452da3301c8e177081fd6a41",
-    "utcScoredDateTime": "2026-10-05T13:59:46.815Z",
+    "utcScoredDateTime": "2026-10-05T13:59:47.336Z",
     "product": "KONOSUBA -God's blessing on this wonderful world!",
     "productHash": "ed411481ef30dc8acddfe8b7e90d1e3acbf04cc5452da3301c8e177081fd6a41"
   },
@@ -9387,7 +9387,7 @@
     "pinId": 1437,
     "sentiment": 0.3,
     "textHash": "20e9d785524a7ae6b8fe76a1b012939686ef3a806d3c93acc8f452d5bd2909e9",
-    "utcScoredDateTime": "2026-10-05T13:59:47.276Z",
+    "utcScoredDateTime": "2026-10-05T13:59:48.039Z",
     "product": "Mignon",
     "productHash": "20e9d785524a7ae6b8fe76a1b012939686ef3a806d3c93acc8f452d5bd2909e9"
   },
@@ -10803,7 +10803,7 @@
     "pinId": 1639,
     "sentiment": 0.1,
     "textHash": "f416a086f8b3358dbfdc35f6a4d4c05055befd5e643cef8377ad3b866697a144",
-    "utcScoredDateTime": "2026-10-05T13:59:48.405Z",
+    "utcScoredDateTime": "2026-10-05T13:59:49.536Z",
     "product": "Rurouni Kenshin",
     "productHash": "f416a086f8b3358dbfdc35f6a4d4c05055befd5e643cef8377ad3b866697a144"
   },
@@ -15163,9 +15163,9 @@
     "pinId": 2353,
     "sentiment": 0,
     "textHash": "d335062487adaa1c2c863a24353141ee90b6d7e835b2b46742e7365a7757fb53",
-    "utcScoredDateTime": "2026-10-05T13:59:49.629Z",
+    "utcScoredDateTime": "2026-10-05T13:59:49.940Z",
     "product": null,
-    "productHash": "d335062487adaa1c2c863a24353141ee90b6d7e835b2b46742e7365a7757fb53"
+    "productHash": null
   },
   {
     "pinId": 2354,
@@ -16403,9 +16403,9 @@
     "pinId": 2565,
     "sentiment": -0.7,
     "textHash": "f40522d89cace8f26ba04e28076afd7427e56c79d4561897d2ec64f9b079eb6b",
-    "utcScoredDateTime": "2026-10-05T13:59:49.864Z",
+    "utcScoredDateTime": "2026-10-05T13:59:50.841Z",
     "product": null,
-    "productHash": "f40522d89cace8f26ba04e28076afd7427e56c79d4561897d2ec64f9b079eb6b"
+    "productHash": null
   },
   {
     "pinId": 2566,
@@ -27481,11 +27481,11 @@
   },
   {
     "pinId": 4097,
-    "sentiment": 0.4,
-    "textHash": "f249e158d30d1e88debe1c08c64bfb893ff2ae012d14aae113e8483e6f9a0475",
-    "utcScoredDateTime": "2026-10-05T13:59:50.810Z",
+    "sentiment": 0.3,
+    "textHash": "f6459d06e751d3cc5be3e5bd7d273eda19be8233f94f3b743e823f91fa4579e5",
+    "utcScoredDateTime": "2026-09-30T19:49:55.384Z",
     "product": null,
-    "productHash": "f249e158d30d1e88debe1c08c64bfb893ff2ae012d14aae113e8483e6f9a0475"
+    "productHash": "f6459d06e751d3cc5be3e5bd7d273eda19be8233f94f3b743e823f91fa4579e5"
   },
   {
     "pinId": 4098,
@@ -28465,11 +28465,11 @@
   },
   {
     "pinId": 4226,
-    "sentiment": 0.3,
-    "textHash": "06936048556fe2311274465f32aa813251a42225f5f094c8422da110a02fa338",
-    "utcScoredDateTime": "2026-10-05T13:59:50.988Z",
+    "sentiment": 0.2,
+    "textHash": "e714ca281c4901b488a83e8f35be638ba38021f67a29dc5e8fc5f6c6da234fa9",
+    "utcScoredDateTime": "2026-09-30T19:49:43.683Z",
     "product": null,
-    "productHash": "06936048556fe2311274465f32aa813251a42225f5f094c8422da110a02fa338"
+    "productHash": "e714ca281c4901b488a83e8f35be638ba38021f67a29dc5e8fc5f6c6da234fa9"
   },
   {
     "pinId": 4227,
@@ -28834,10 +28834,10 @@
   {
     "pinId": 4272,
     "sentiment": 0.3,
-    "textHash": "934b666381d6e7a9c467316885c54cc17c0667dd707be0a105fe29257fe8b865",
-    "utcScoredDateTime": "2026-10-05T13:59:51.053Z",
+    "textHash": "2c54f373b0b3ab7f58387b2177bb2325d2b9c62c7eb5b873257fe56e1b144027",
+    "utcScoredDateTime": "2026-09-30T19:49:43.882Z",
     "product": null,
-    "productHash": "934b666381d6e7a9c467316885c54cc17c0667dd707be0a105fe29257fe8b865"
+    "productHash": "2c54f373b0b3ab7f58387b2177bb2325d2b9c62c7eb5b873257fe56e1b144027"
   },
   {
     "pinId": 4273,
@@ -33922,10 +33922,10 @@
   {
     "pinId": 4912,
     "sentiment": 0.3,
-    "textHash": "2eda24bd71fcaeedc4f939329c8099e523ab2b3439048c4d56379e6d52856d6d",
-    "utcScoredDateTime": "2026-10-05T13:59:51.206Z",
+    "textHash": "36ef39fbc06bc1e4cdf384f8328ec9cf53cdae6f6156094eacc60d9eb052fb52",
+    "utcScoredDateTime": "2026-09-30T00:51:06.133Z",
     "product": null,
-    "productHash": "2eda24bd71fcaeedc4f939329c8099e523ab2b3439048c4d56379e6d52856d6d"
+    "productHash": "36ef39fbc06bc1e4cdf384f8328ec9cf53cdae6f6156094eacc60d9eb052fb52"
   },
   {
     "pinId": 4913,
@@ -34169,11 +34169,11 @@
   },
   {
     "pinId": 4943,
-    "sentiment": 0.3,
-    "textHash": "3117766e6bab5d05acd1ad5653ae0587cbc78374631694c48afc6e7c417480c3",
-    "utcScoredDateTime": "2026-10-05T13:59:51.290Z",
+    "sentiment": 0.4,
+    "textHash": "809dea81b8b3987054920f83dfd6a7bb3806190608d3c9d7cf1a86e60917bd79",
+    "utcScoredDateTime": "2026-09-30T19:53:35.811Z",
     "product": null,
-    "productHash": "3117766e6bab5d05acd1ad5653ae0587cbc78374631694c48afc6e7c417480c3"
+    "productHash": "809dea81b8b3987054920f83dfd6a7bb3806190608d3c9d7cf1a86e60917bd79"
   },
   {
     "pinId": 4944,
@@ -34290,10 +34290,10 @@
   {
     "pinId": 4958,
     "sentiment": -0.4,
-    "textHash": "ae0cf24bda476f4b4edfceb038fef7b435f2d196b4ddb33643eb92767784a901",
-    "utcScoredDateTime": "2026-10-05T13:59:51.379Z",
+    "textHash": "3a5e91ec705e2bc48bc7e33b5d4943c31157b35bbbc72b13b2877902dedf6459",
+    "utcScoredDateTime": "2026-09-30T19:53:35.931Z",
     "product": null,
-    "productHash": "ae0cf24bda476f4b4edfceb038fef7b435f2d196b4ddb33643eb92767784a901"
+    "productHash": "3a5e91ec705e2bc48bc7e33b5d4943c31157b35bbbc72b13b2877902dedf6459"
   },
   {
     "pinId": 4959,
@@ -34425,11 +34425,11 @@
   },
   {
     "pinId": 4975,
-    "sentiment": -0.4,
-    "textHash": "2610ae662a7f003885063bb3c401b7ab660811ab0be16c5c4087feec7a1b18d6",
-    "utcScoredDateTime": "2026-10-05T13:59:51.575Z",
+    "sentiment": -0.3,
+    "textHash": "2565887f35b9891fc3c8ba0e72837cb00853d7083bc703089f8dc079757292b6",
+    "utcScoredDateTime": "2026-09-30T19:53:36.022Z",
     "product": null,
-    "productHash": "2610ae662a7f003885063bb3c401b7ab660811ab0be16c5c4087feec7a1b18d6"
+    "productHash": "2565887f35b9891fc3c8ba0e72837cb00853d7083bc703089f8dc079757292b6"
   },
   {
     "pinId": 4976,
@@ -35504,38 +35504,6 @@
     "productHash": "71f72033584518ffa29dc53c3c7cb8e74228d290ac7b1ff00796256cc63c10c4"
   },
   {
-    "pinId": 5110,
-    "sentiment": 0.6,
-    "textHash": "570c5ca50608f8db2bb2aa7852e347632d1d0d60e0b5535ea250b7dd4f31127d",
-    "utcScoredDateTime": "2026-10-05T13:59:51.730Z",
-    "product": null,
-    "productHash": "570c5ca50608f8db2bb2aa7852e347632d1d0d60e0b5535ea250b7dd4f31127d"
-  },
-  {
-    "pinId": 5111,
-    "sentiment": 0.8,
-    "textHash": "53647fecb8fe43a240ebb87e39a876e5dd1ba9da5cb16ed62795815b827bea1b",
-    "utcScoredDateTime": "2026-10-05T13:59:51.790Z",
-    "product": null,
-    "productHash": "53647fecb8fe43a240ebb87e39a876e5dd1ba9da5cb16ed62795815b827bea1b"
-  },
-  {
-    "pinId": 5112,
-    "sentiment": 0.6,
-    "textHash": "b3bb8ff130d80777580041e5866dd726d24e5391488c48e31d09a6afa76bafc6",
-    "utcScoredDateTime": "2026-10-05T13:59:51.848Z",
-    "product": "CVN 79",
-    "productHash": "b3bb8ff130d80777580041e5866dd726d24e5391488c48e31d09a6afa76bafc6"
-  },
-  {
-    "pinId": 5113,
-    "sentiment": 0.6,
-    "textHash": "563466f798dfa33b94cf126ed3a4f381268dc19d3bdced0705b3b9b0a32e8c02",
-    "utcScoredDateTime": "2026-10-05T13:59:51.908Z",
-    "product": null,
-    "productHash": "563466f798dfa33b94cf126ed3a4f381268dc19d3bdced0705b3b9b0a32e8c02"
-  },
-  {
     "pinId": 5114,
     "sentiment": 0.4,
     "textHash": "93f00c8a32f24f8886bcbf6d1aed40537cd992248a300e11abdac147e4133aac",
@@ -35566,30 +35534,6 @@
     "utcScoredDateTime": "2026-10-02T14:35:13.651Z",
     "product": null,
     "productHash": null
-  },
-  {
-    "pinId": 5118,
-    "sentiment": 0.3,
-    "textHash": "8e21dc00301ae6627f9541d1a39131481fcbdfdb16d6a264a5ec1540d90d08a6",
-    "utcScoredDateTime": "2026-10-05T13:59:51.977Z",
-    "product": null,
-    "productHash": "8e21dc00301ae6627f9541d1a39131481fcbdfdb16d6a264a5ec1540d90d08a6"
-  },
-  {
-    "pinId": 5119,
-    "sentiment": 0.3,
-    "textHash": "3ca564f151c0bc102e12536d3b501ddaff76c2d0b37c9e562f6e342bd738b63e",
-    "utcScoredDateTime": "2026-10-05T13:59:52.079Z",
-    "product": null,
-    "productHash": "3ca564f151c0bc102e12536d3b501ddaff76c2d0b37c9e562f6e342bd738b63e"
-  },
-  {
-    "pinId": 5120,
-    "sentiment": 0.5,
-    "textHash": "d3ec1e213405f3c6a46ffb3f7373031644b3fa81dae0c5dd23d741dc1d71e13a",
-    "utcScoredDateTime": "2026-10-05T13:59:52.253Z",
-    "product": null,
-    "productHash": "d3ec1e213405f3c6a46ffb3f7373031644b3fa81dae0c5dd23d741dc1d71e13a"
   },
   {
     "pinId": 5121,
@@ -35688,54 +35632,6 @@
     "productHash": "73e31f66afec07e267cbc20297ac8df1a472b7554d857d11033c8f4c0ba35e18"
   },
   {
-    "pinId": 5133,
-    "sentiment": 0.1,
-    "textHash": "49b9248790c3dc0954317d638bccf3e7536aaecb22d2b4892eb7d8da19d02811",
-    "utcScoredDateTime": "2026-10-05T13:59:52.353Z",
-    "product": null,
-    "productHash": "49b9248790c3dc0954317d638bccf3e7536aaecb22d2b4892eb7d8da19d02811"
-  },
-  {
-    "pinId": 5134,
-    "sentiment": 0.6,
-    "textHash": "4261432d05b226e307900226bb1f54c13cc82eb8497237f2ab6ba3667ab22e86",
-    "utcScoredDateTime": "2026-10-05T13:59:52.407Z",
-    "product": null,
-    "productHash": "4261432d05b226e307900226bb1f54c13cc82eb8497237f2ab6ba3667ab22e86"
-  },
-  {
-    "pinId": 5135,
-    "sentiment": 0.2,
-    "textHash": "d0d34a347d95680afd4e1c52ab66dfb088597e63a446eff7691f3e937b4b13ba",
-    "utcScoredDateTime": "2026-10-05T13:59:52.463Z",
-    "product": null,
-    "productHash": "d0d34a347d95680afd4e1c52ab66dfb088597e63a446eff7691f3e937b4b13ba"
-  },
-  {
-    "pinId": 5136,
-    "sentiment": 0.4,
-    "textHash": "13223d82c2900d366f1df5fb384df26f9d0f4b1e8a583e00697d537b1ca27952",
-    "utcScoredDateTime": "2026-10-05T13:59:52.521Z",
-    "product": null,
-    "productHash": "13223d82c2900d366f1df5fb384df26f9d0f4b1e8a583e00697d537b1ca27952"
-  },
-  {
-    "pinId": 5137,
-    "sentiment": -0.7,
-    "textHash": "ed23706972d3c6d7cfde1e92ed8af3de80eb56859ae7137824e5d2478e564396",
-    "utcScoredDateTime": "2026-10-05T13:59:52.582Z",
-    "product": null,
-    "productHash": "ed23706972d3c6d7cfde1e92ed8af3de80eb56859ae7137824e5d2478e564396"
-  },
-  {
-    "pinId": 5138,
-    "sentiment": 0.4,
-    "textHash": "fbb63d3121c0cf001dfb28633dc40fe878765a09b239af0b0a8559a812a7341d",
-    "utcScoredDateTime": "2026-10-05T13:59:52.650Z",
-    "product": null,
-    "productHash": "fbb63d3121c0cf001dfb28633dc40fe878765a09b239af0b0a8559a812a7341d"
-  },
-  {
     "pinId": 5139,
     "sentiment": 0.8,
     "textHash": "3f8b899a0ba1e2726b8ae30ac4f2daf890d528110dd05c2e5d5f2f55ca7f62c4",
@@ -35814,110 +35710,6 @@
     "utcScoredDateTime": "2026-10-02T14:48:24.818Z",
     "product": null,
     "productHash": null
-  },
-  {
-    "pinId": 5149,
-    "sentiment": 0.3,
-    "textHash": "b72800309e89a13c80a914b166da2aa9fe9ee9c84ffd3179a1ca19e257ee449f",
-    "utcScoredDateTime": "2026-10-05T13:59:52.777Z",
-    "product": "Beyblade",
-    "productHash": "b72800309e89a13c80a914b166da2aa9fe9ee9c84ffd3179a1ca19e257ee449f"
-  },
-  {
-    "pinId": 5150,
-    "sentiment": 0.6,
-    "textHash": "e9c75e17fe6a6bbaba5b3018a0cf817ce33d88551cc60afdf1deef5435da00d3",
-    "utcScoredDateTime": "2026-10-05T13:59:52.838Z",
-    "product": null,
-    "productHash": "e9c75e17fe6a6bbaba5b3018a0cf817ce33d88551cc60afdf1deef5435da00d3"
-  },
-  {
-    "pinId": 5151,
-    "sentiment": 0.3,
-    "textHash": "a4fdc21bd8d491d47d5f340c21d727eda63afb3e9d817f0648d10b46c783aca1",
-    "utcScoredDateTime": "2026-10-05T13:59:52.897Z",
-    "product": "Beyblade",
-    "productHash": "a4fdc21bd8d491d47d5f340c21d727eda63afb3e9d817f0648d10b46c783aca1"
-  },
-  {
-    "pinId": 5152,
-    "sentiment": 0.6,
-    "textHash": "ddd6c2e0f075f7b1bcb31d064bd05f80315fb5bf92d1233c49e99d187dd2036a",
-    "utcScoredDateTime": "2026-10-05T13:59:52.958Z",
-    "product": null,
-    "productHash": "ddd6c2e0f075f7b1bcb31d064bd05f80315fb5bf92d1233c49e99d187dd2036a"
-  },
-  {
-    "pinId": 5153,
-    "sentiment": 0.4,
-    "textHash": "867d16ff773d512044a45c93f95ecc90bc9edea8d1fe9325d7a5f498b73b64ed",
-    "utcScoredDateTime": "2026-10-05T13:59:53.092Z",
-    "product": "Gundam",
-    "productHash": "867d16ff773d512044a45c93f95ecc90bc9edea8d1fe9325d7a5f498b73b64ed"
-  },
-  {
-    "pinId": 5154,
-    "sentiment": 0.6,
-    "textHash": "5aee4f2c6346d11c0aac1ea4f3d4a557720c7a9d8bfa21055c708f145499cb28",
-    "utcScoredDateTime": "2026-10-05T13:59:53.157Z",
-    "product": null,
-    "productHash": "5aee4f2c6346d11c0aac1ea4f3d4a557720c7a9d8bfa21055c708f145499cb28"
-  },
-  {
-    "pinId": 5155,
-    "sentiment": 0.3,
-    "textHash": "3f6d2ee8df8d012770db9e616097247563efc5fc498f60ad6848b664b572cad0",
-    "utcScoredDateTime": "2026-10-05T13:59:53.301Z",
-    "product": "Gunpla",
-    "productHash": "3f6d2ee8df8d012770db9e616097247563efc5fc498f60ad6848b664b572cad0"
-  },
-  {
-    "pinId": 5156,
-    "sentiment": 0.6,
-    "textHash": "378d28d6effa6171a75168f3b0427a67d5cecfc2b1eac2a1186b695eeae29088",
-    "utcScoredDateTime": "2026-10-05T13:59:53.361Z",
-    "product": null,
-    "productHash": "378d28d6effa6171a75168f3b0427a67d5cecfc2b1eac2a1186b695eeae29088"
-  },
-  {
-    "pinId": 5157,
-    "sentiment": 0.3,
-    "textHash": "dc1fb525f0aa6f8c50900c116771928d9ce9dc439ecc69a33836556089f9428f",
-    "utcScoredDateTime": "2026-10-05T13:59:53.417Z",
-    "product": "Mini 4WD",
-    "productHash": "dc1fb525f0aa6f8c50900c116771928d9ce9dc439ecc69a33836556089f9428f"
-  },
-  {
-    "pinId": 5158,
-    "sentiment": 0.4,
-    "textHash": "64b0d48a2573578155e579ec5453c78521d0066201ce08449f90b32f4737dc15",
-    "utcScoredDateTime": "2026-10-05T13:59:53.479Z",
-    "product": null,
-    "productHash": "64b0d48a2573578155e579ec5453c78521d0066201ce08449f90b32f4737dc15"
-  },
-  {
-    "pinId": 5159,
-    "sentiment": 0.3,
-    "textHash": "70bad0933775bed26272aaa04f50c71ba8d9f0b9046f1ae495477d63daf175ff",
-    "utcScoredDateTime": "2026-10-05T13:59:53.556Z",
-    "product": null,
-    "productHash": "70bad0933775bed26272aaa04f50c71ba8d9f0b9046f1ae495477d63daf175ff"
-  },
-  {
-    "pinId": 5160,
-    "sentiment": 0.4,
-    "textHash": "df89209eeb4243aeb13007358c67a6e8e2c6ed4f6bbde05804528b0815cdc6d3",
-    "utcScoredDateTime": "2026-10-05T13:59:53.611Z",
-    "product": null,
-    "productHash": "df89209eeb4243aeb13007358c67a6e8e2c6ed4f6bbde05804528b0815cdc6d3"
-  },
-  {
-    "pinId": 5161,
-    "sentiment": 0.5,
-    "textHash": "59ec90b9f4de58193413c4fe399c8ddb2c4c6b5f58146a68bd38f181bee9c3e9",
-    "utcScoredDateTime": "2026-10-05T13:59:53.666Z",
-    "product": null,
-    "productHash": "59ec90b9f4de58193413c4fe399c8ddb2c4c6b5f58146a68bd38f181bee9c3e9"
   },
   {
     "pinId": 5162,
@@ -39227,81 +39019,81 @@
     "pinId": 5587,
     "sentiment": 0.5,
     "textHash": "319b5a2e61fc87d1fa6601a3c56ced3fcdf6e06b7c7ccddc78a5328c71faf33d",
-    "utcScoredDateTime": "2026-10-05T13:59:53.721Z",
+    "utcScoredDateTime": "2026-10-05T13:59:54.098Z",
     "product": null,
-    "productHash": "319b5a2e61fc87d1fa6601a3c56ced3fcdf6e06b7c7ccddc78a5328c71faf33d"
+    "productHash": null
   },
   {
     "pinId": 5588,
     "sentiment": 0.5,
     "textHash": "d7a07df3c9ee4ff5b5779b1eb8f818ff7a3fc0aa4394a992fba34167ea7d34a1",
-    "utcScoredDateTime": "2026-10-05T13:59:54.032Z",
+    "utcScoredDateTime": "2026-10-05T13:59:54.548Z",
     "product": null,
-    "productHash": "d7a07df3c9ee4ff5b5779b1eb8f818ff7a3fc0aa4394a992fba34167ea7d34a1"
+    "productHash": null
   },
   {
     "pinId": 5589,
     "sentiment": 0.5,
     "textHash": "6d3aeb2545d3369f3b5d2088ae59022c3706cb194213e249e1badb68919a5cb4",
-    "utcScoredDateTime": "2026-10-05T13:59:54.473Z",
+    "utcScoredDateTime": "2026-10-05T13:59:54.801Z",
     "product": null,
-    "productHash": "6d3aeb2545d3369f3b5d2088ae59022c3706cb194213e249e1badb68919a5cb4"
+    "productHash": null
   },
   {
     "pinId": 5590,
     "sentiment": 0.5,
     "textHash": "8706b87aa6d584ab1077e64b4140cb52bea0c7883b8bcccb5bdeb2913bd1df80",
-    "utcScoredDateTime": "2026-10-05T13:59:54.734Z",
+    "utcScoredDateTime": "2026-10-05T13:59:55.149Z",
     "product": null,
-    "productHash": "8706b87aa6d584ab1077e64b4140cb52bea0c7883b8bcccb5bdeb2913bd1df80"
+    "productHash": null
   },
   {
     "pinId": 5591,
     "sentiment": 0.5,
     "textHash": "58f255c2b5e1c4a11405032309ff039ffa27e8b519ba3b5666a4eb7fbe40cd88",
-    "utcScoredDateTime": "2026-10-05T13:59:55.078Z",
+    "utcScoredDateTime": "2026-10-05T13:59:55.449Z",
     "product": null,
-    "productHash": "58f255c2b5e1c4a11405032309ff039ffa27e8b519ba3b5666a4eb7fbe40cd88"
+    "productHash": null
   },
   {
     "pinId": 5592,
     "sentiment": 0.5,
     "textHash": "8f348523381e4fcdfbb3a593145e9773ef5b18f058a388e52ca6b4e6e6bb9e17",
-    "utcScoredDateTime": "2026-10-05T13:59:55.408Z",
+    "utcScoredDateTime": "2026-10-05T13:59:55.958Z",
     "product": null,
-    "productHash": "8f348523381e4fcdfbb3a593145e9773ef5b18f058a388e52ca6b4e6e6bb9e17"
+    "productHash": null
   },
   {
     "pinId": 5593,
     "sentiment": 0.5,
     "textHash": "e9040609010af6552ba91ea83d68025705459b18d3a51ae95d6e79c0238e6b6c",
-    "utcScoredDateTime": "2026-10-05T13:59:55.936Z",
+    "utcScoredDateTime": "2026-10-05T13:59:57.105Z",
     "product": null,
-    "productHash": "e9040609010af6552ba91ea83d68025705459b18d3a51ae95d6e79c0238e6b6c"
+    "productHash": null
   },
   {
     "pinId": 5594,
     "sentiment": 0.4,
     "textHash": "451e21cf8ea763b72449e36c2b6be5490e0bf687ea186b4f129a160cd13fe917",
-    "utcScoredDateTime": "2026-10-05T13:59:57.066Z",
+    "utcScoredDateTime": "2026-10-05T13:59:57.427Z",
     "product": null,
-    "productHash": "451e21cf8ea763b72449e36c2b6be5490e0bf687ea186b4f129a160cd13fe917"
+    "productHash": null
   },
   {
     "pinId": 5595,
     "sentiment": 0.5,
     "textHash": "a40e1322f75575c1acbb1a75c9bf16e83ad79694aca0b0d0207210d31f7bee5c",
-    "utcScoredDateTime": "2026-10-05T13:59:57.358Z",
+    "utcScoredDateTime": "2026-10-05T13:59:58.254Z",
     "product": null,
-    "productHash": "a40e1322f75575c1acbb1a75c9bf16e83ad79694aca0b0d0207210d31f7bee5c"
+    "productHash": null
   },
   {
     "pinId": 5596,
     "sentiment": 0.5,
     "textHash": "79308fad7def6f6f41f9ce50e8ec18266b64e731624c9eeb8c80195e77818b45",
-    "utcScoredDateTime": "2026-10-05T13:59:58.194Z",
+    "utcScoredDateTime": "2026-10-05T13:59:59.018Z",
     "product": null,
-    "productHash": "79308fad7def6f6f41f9ce50e8ec18266b64e731624c9eeb8c80195e77818b45"
+    "productHash": null
   },
   {
     "pinId": 5609,
@@ -42830,5 +42622,2317 @@
     "utcScoredDateTime": "2026-10-05T04:53:50.775Z",
     "product": "Disease Outbreak",
     "productHash": "885c02483c617d9080e5cea687f136cf7b2873442024b2c890b6d3ad20c25710"
+  },
+  {
+    "pinId": 6074,
+    "sentiment": 0.7,
+    "textHash": "4e81606f52a3fc4114588805e2a0fed34bd2e495b7b65279be1e3dd0dd43d88d",
+    "utcScoredDateTime": "2026-10-05T15:22:39.418Z",
+    "product": "Lupin III",
+    "productHash": "4e81606f52a3fc4114588805e2a0fed34bd2e495b7b65279be1e3dd0dd43d88d"
+  },
+  {
+    "pinId": 6075,
+    "sentiment": 0.8,
+    "textHash": "562b42c1143843b32a1f70f9c75136f7ef5cc38e4c08259c3dbb4225916ee8cc",
+    "utcScoredDateTime": "2026-10-05T15:23:00.109Z",
+    "product": "Studio Ghibli",
+    "productHash": "562b42c1143843b32a1f70f9c75136f7ef5cc38e4c08259c3dbb4225916ee8cc"
+  },
+  {
+    "pinId": 6076,
+    "sentiment": 0.7,
+    "textHash": "5a3e30be827834d32e57624349c63b8eef41bcab2d7a0560b14f8462612ae195",
+    "utcScoredDateTime": "2026-10-05T15:23:19.029Z",
+    "product": "Porco Rosso",
+    "productHash": "5a3e30be827834d32e57624349c63b8eef41bcab2d7a0560b14f8462612ae195"
+  },
+  {
+    "pinId": 6077,
+    "sentiment": 0.9,
+    "textHash": "2e6574077d9f4a27275283f5d6e7003a24ff9710a8a9379c2acb874585469e4c",
+    "utcScoredDateTime": "2026-10-05T15:23:41.175Z",
+    "product": "Studio Ghibli",
+    "productHash": "2e6574077d9f4a27275283f5d6e7003a24ff9710a8a9379c2acb874585469e4c"
+  },
+  {
+    "pinId": 6078,
+    "sentiment": 0.8,
+    "textHash": "26e5f63fc41237259f08d30aed9c6e32e0d6c7fb9dcb0e04a3e05cc6e35c8393",
+    "utcScoredDateTime": "2026-10-05T15:24:00.224Z",
+    "product": "Ponyo",
+    "productHash": "26e5f63fc41237259f08d30aed9c6e32e0d6c7fb9dcb0e04a3e05cc6e35c8393"
+  },
+  {
+    "pinId": 6079,
+    "sentiment": 0.6,
+    "textHash": "c20d81771429376e383996f54f7663c059e0e1d5ab7ad6dd8105ed22a4747769",
+    "utcScoredDateTime": "2026-10-05T15:24:18.650Z",
+    "product": "The Wind Rises",
+    "productHash": "c20d81771429376e383996f54f7663c059e0e1d5ab7ad6dd8105ed22a4747769"
+  },
+  {
+    "pinId": 6080,
+    "sentiment": 0.8,
+    "textHash": "bf3311a9909d9f784a0cc4a724c288c91facae291f25896fa118ddbd867c6d43",
+    "utcScoredDateTime": "2026-10-05T15:24:37.272Z",
+    "product": "Ghibli",
+    "productHash": "bf3311a9909d9f784a0cc4a724c288c91facae291f25896fa118ddbd867c6d43"
+  },
+  {
+    "pinId": 6081,
+    "sentiment": 0.9,
+    "textHash": "08f0676f8d5d5dc51dc150825e2007b847c8f7afa0014f4f2166cf9881b7c3e6",
+    "utcScoredDateTime": "2026-10-05T15:24:56.438Z",
+    "product": "Ghibli",
+    "productHash": "08f0676f8d5d5dc51dc150825e2007b847c8f7afa0014f4f2166cf9881b7c3e6"
+  },
+  {
+    "pinId": 6082,
+    "sentiment": 0.3,
+    "textHash": "9345f8b4761c8300bff111654d47c7217afbe2e38a2f59364c0a4849dfe02974",
+    "utcScoredDateTime": "2026-10-05T15:25:15.918Z",
+    "product": "Suez Canal",
+    "productHash": "9345f8b4761c8300bff111654d47c7217afbe2e38a2f59364c0a4849dfe02974"
+  },
+  {
+    "pinId": 6083,
+    "sentiment": 0.7,
+    "textHash": "75f029060ba2f14dbfc516ce9c6816f01213a49e2c226df8809bb12ebad44e9f",
+    "utcScoredDateTime": "2026-10-05T15:26:22.919Z",
+    "product": "Suez Canal",
+    "productHash": "75f029060ba2f14dbfc516ce9c6816f01213a49e2c226df8809bb12ebad44e9f"
+  },
+  {
+    "pinId": 6084,
+    "sentiment": 0,
+    "textHash": "969744695b9bfe39167c8e054ca2e94293bb53107a44e2cabcc49c83401b8c40",
+    "utcScoredDateTime": "2026-10-05T15:26:43.371Z",
+    "product": "Suez Canal",
+    "productHash": "969744695b9bfe39167c8e054ca2e94293bb53107a44e2cabcc49c83401b8c40"
+  },
+  {
+    "pinId": 6085,
+    "sentiment": -0.6,
+    "textHash": "1529f004b8e812abcc332f3f2cc931997a9dbe44b41465992d942d6cd84df7a9",
+    "utcScoredDateTime": "2026-10-05T15:27:02.337Z",
+    "product": "Suez Canal",
+    "productHash": "1529f004b8e812abcc332f3f2cc931997a9dbe44b41465992d942d6cd84df7a9"
+  },
+  {
+    "pinId": 6086,
+    "sentiment": -0.6,
+    "textHash": "663d6f9ebca173ffbed037083d3e93002aac02e49be0e48fd56ba0f8988853e9",
+    "utcScoredDateTime": "2026-10-05T15:27:21.852Z",
+    "product": "Suez Canal",
+    "productHash": "663d6f9ebca173ffbed037083d3e93002aac02e49be0e48fd56ba0f8988853e9"
+  },
+  {
+    "pinId": 6087,
+    "sentiment": 0.7,
+    "textHash": "be6bdebdd0ef1e4463248047891a28504969ddb8b605d379e93a27203a02668f",
+    "utcScoredDateTime": "2026-10-05T15:28:07.160Z",
+    "product": "Suez Canal",
+    "productHash": "be6bdebdd0ef1e4463248047891a28504969ddb8b605d379e93a27203a02668f"
+  },
+  {
+    "pinId": 6088,
+    "sentiment": 0.4,
+    "textHash": "3511bd82b286c617dd60c4ad78133bb51f2eb2eb530a60aec7a897b233c368b0",
+    "utcScoredDateTime": "2026-10-05T15:28:25.966Z",
+    "product": "Suez Canal",
+    "productHash": "3511bd82b286c617dd60c4ad78133bb51f2eb2eb530a60aec7a897b233c368b0"
+  },
+  {
+    "pinId": 6089,
+    "sentiment": -0.4,
+    "textHash": "6bfe817fd9c4a5c51a0d98a9b1b929217e299054c9974c92d7aeadee940eae9b",
+    "utcScoredDateTime": "2026-10-05T15:28:46.334Z",
+    "product": "Suez Canal",
+    "productHash": "6bfe817fd9c4a5c51a0d98a9b1b929217e299054c9974c92d7aeadee940eae9b"
+  },
+  {
+    "pinId": 6090,
+    "sentiment": -0.6,
+    "textHash": "a27984a5a8b555dd23db735cff48e368aeb6e2d6e8d08dd85c89d105831f09e3",
+    "utcScoredDateTime": "2026-10-05T15:29:09.646Z",
+    "product": "Suez Canal",
+    "productHash": "a27984a5a8b555dd23db735cff48e368aeb6e2d6e8d08dd85c89d105831f09e3"
+  },
+  {
+    "pinId": 6091,
+    "sentiment": 0.2,
+    "textHash": "545c2580904ab56f8e39bf67fdf0c79f8475021936a80a14fc058a3669014def",
+    "utcScoredDateTime": "2026-10-05T15:29:28.674Z",
+    "product": "Suez Canal",
+    "productHash": "545c2580904ab56f8e39bf67fdf0c79f8475021936a80a14fc058a3669014def"
+  },
+  {
+    "pinId": 6092,
+    "sentiment": 0.7,
+    "textHash": "c1f7d6f771594b8edf80f228862f9e659c88cc0aee52d61f42a6bea4b95ce91f",
+    "utcScoredDateTime": "2026-10-05T15:29:48.540Z",
+    "product": "Panama Canal",
+    "productHash": "c1f7d6f771594b8edf80f228862f9e659c88cc0aee52d61f42a6bea4b95ce91f"
+  },
+  {
+    "pinId": 6093,
+    "sentiment": 0.4,
+    "textHash": "3d7d5886aed11ed0f2c323229d37612e8cf40dd76d37b351b77df147805c3b06",
+    "utcScoredDateTime": "2026-10-05T15:30:08.065Z",
+    "product": "Panama Canal",
+    "productHash": "3d7d5886aed11ed0f2c323229d37612e8cf40dd76d37b351b77df147805c3b06"
+  },
+  {
+    "pinId": 6094,
+    "sentiment": 0.8,
+    "textHash": "aa77207030b67f69495028f5212d5cc898d6746b0070dcfa635ea79071a6b690",
+    "utcScoredDateTime": "2026-10-05T15:30:26.379Z",
+    "product": "Panama Canal",
+    "productHash": "aa77207030b67f69495028f5212d5cc898d6746b0070dcfa635ea79071a6b690"
+  },
+  {
+    "pinId": 6095,
+    "sentiment": -0.5,
+    "textHash": "a02d8dc718dd6ac5408cacf8cf15b0e096b920aa77d547ebe7bf1696c13dd902",
+    "utcScoredDateTime": "2026-10-05T15:30:44.773Z",
+    "product": "Panama Canal",
+    "productHash": "a02d8dc718dd6ac5408cacf8cf15b0e096b920aa77d547ebe7bf1696c13dd902"
+  },
+  {
+    "pinId": 6096,
+    "sentiment": -0.3,
+    "textHash": "4edc715e8e94dbdc08b7a6ac01102152abb00eb305b398722b8437889ee6880c",
+    "utcScoredDateTime": "2026-10-05T15:31:05.803Z",
+    "product": "Panama Canal",
+    "productHash": "4edc715e8e94dbdc08b7a6ac01102152abb00eb305b398722b8437889ee6880c"
+  },
+  {
+    "pinId": 6097,
+    "sentiment": 0,
+    "textHash": "84c2593d40f16a4727178768678fb8fc29d9c593bea3505d22882d32765d0bec",
+    "utcScoredDateTime": "2026-10-05T15:31:24.267Z",
+    "product": "Panama Canal",
+    "productHash": "84c2593d40f16a4727178768678fb8fc29d9c593bea3505d22882d32765d0bec"
+  },
+  {
+    "pinId": 6098,
+    "sentiment": 0,
+    "textHash": "be72debe7cc103f0769be1f26ffd4d3fa37899e310cf68dc34b4b619fc850856",
+    "utcScoredDateTime": "2026-10-05T15:31:52.941Z",
+    "product": "Panama Canal",
+    "productHash": "be72debe7cc103f0769be1f26ffd4d3fa37899e310cf68dc34b4b619fc850856"
+  },
+  {
+    "pinId": 6099,
+    "sentiment": -0.1,
+    "textHash": "6b0da4e10b7a156574c1bb5cf7d11b2c2e85c8747220ea14e91d61401687755a",
+    "utcScoredDateTime": "2026-10-05T15:32:12.528Z",
+    "product": "Panama Canal",
+    "productHash": "6b0da4e10b7a156574c1bb5cf7d11b2c2e85c8747220ea14e91d61401687755a"
+  },
+  {
+    "pinId": 6100,
+    "sentiment": 0.4,
+    "textHash": "24378dea1f1f5d5a2a16886b2c2c8ff04c77f57f4f97350bf34854e0f0c36dd4",
+    "utcScoredDateTime": "2026-10-05T15:32:51.792Z",
+    "product": "Panama Canal",
+    "productHash": "24378dea1f1f5d5a2a16886b2c2c8ff04c77f57f4f97350bf34854e0f0c36dd4"
+  },
+  {
+    "pinId": 6101,
+    "sentiment": -0.9,
+    "textHash": "915a9beac38671e2a0278c00eea0585511e48d0876f1370c5f75889d1547d03a",
+    "utcScoredDateTime": "2026-10-05T15:33:17.944Z",
+    "product": "St. Francis Dam",
+    "productHash": "915a9beac38671e2a0278c00eea0585511e48d0876f1370c5f75889d1547d03a"
+  },
+  {
+    "pinId": 6102,
+    "sentiment": -0.9,
+    "textHash": "dff980388b78ba5a25a17a8859af8dc847841db1946de303261709b3842411e7",
+    "utcScoredDateTime": "2026-10-05T15:33:38.392Z",
+    "product": "Malpasset Dam",
+    "productHash": "dff980388b78ba5a25a17a8859af8dc847841db1946de303261709b3842411e7"
+  },
+  {
+    "pinId": 6103,
+    "sentiment": -0.9,
+    "textHash": "48e3fc3a5f817dfde548b8462f49ebc6418e05d95982bc241211e04484bb07a6",
+    "utcScoredDateTime": "2026-10-05T15:33:56.558Z",
+    "product": "Vajont Dam",
+    "productHash": "48e3fc3a5f817dfde548b8462f49ebc6418e05d95982bc241211e04484bb07a6"
+  },
+  {
+    "pinId": 6104,
+    "sentiment": -0.95,
+    "textHash": "95c8ba689e1a144ee1ecadf339eb7dd8e32ae55cad9bcbca600c27f1889d325e",
+    "utcScoredDateTime": "2026-10-05T15:34:14.629Z",
+    "product": "Banqiao Dam",
+    "productHash": "95c8ba689e1a144ee1ecadf339eb7dd8e32ae55cad9bcbca600c27f1889d325e"
+  },
+  {
+    "pinId": 6105,
+    "sentiment": -0.85,
+    "textHash": "2906ba4eca5888b9494315edc4e024d308535e29638b53bc6ce404f93a3f38d8",
+    "utcScoredDateTime": "2026-10-05T15:34:34.221Z",
+    "product": "Teton Dam",
+    "productHash": "2906ba4eca5888b9494315edc4e024d308535e29638b53bc6ce404f93a3f38d8"
+  },
+  {
+    "pinId": 6106,
+    "sentiment": -0.6,
+    "textHash": "fb282c2878181e2cd517b33dd76bdca9e94ff9a10a6cbbc11f01fa0f39ec189a",
+    "utcScoredDateTime": "2026-10-05T15:35:14.042Z",
+    "product": "Oroville Dam",
+    "productHash": "fb282c2878181e2cd517b33dd76bdca9e94ff9a10a6cbbc11f01fa0f39ec189a"
+  },
+  {
+    "pinId": 6107,
+    "sentiment": -0.9,
+    "textHash": "0277e72effc07dddd2280fd0b5bbebc439fdc51fbdca4d74802bcdc040aebff8",
+    "utcScoredDateTime": "2026-10-05T15:35:33.512Z",
+    "product": "Kakhovka Dam",
+    "productHash": "0277e72effc07dddd2280fd0b5bbebc439fdc51fbdca4d74802bcdc040aebff8"
+  },
+  {
+    "pinId": 6108,
+    "sentiment": -0.5,
+    "textHash": "0510d310e2fe759b416fbbe1ee1a55419d5918cadf8d10d21d8471bc47af0472",
+    "utcScoredDateTime": "2026-10-05T15:35:52.816Z",
+    "product": "McLeod Dam",
+    "productHash": "0510d310e2fe759b416fbbe1ee1a55419d5918cadf8d10d21d8471bc47af0472"
+  },
+  {
+    "pinId": 6109,
+    "sentiment": 0.2,
+    "textHash": "5932ca454441879edf8a3649aa33642cbb3d05cc7a7eee36de73a9733321c0f7",
+    "utcScoredDateTime": "2026-10-05T15:36:13.494Z",
+    "product": "Glen Canyon Dam",
+    "productHash": "5932ca454441879edf8a3649aa33642cbb3d05cc7a7eee36de73a9733321c0f7"
+  },
+  {
+    "pinId": 6110,
+    "sentiment": 0.3,
+    "textHash": "9e3b2d3cb5eafbb4f86b189b3b88b5a7bb37a7e42540c7fc6b80c3fb9e2a0b39",
+    "utcScoredDateTime": "2026-10-05T15:36:32.542Z",
+    "product": "Aswan High Dam",
+    "productHash": "9e3b2d3cb5eafbb4f86b189b3b88b5a7bb37a7e42540c7fc6b80c3fb9e2a0b39"
+  },
+  {
+    "pinId": 6111,
+    "sentiment": 0.7,
+    "textHash": "d32dc05cd823506156dbc879cb4d757a2bbb45a3853b133344f35e34fc2150c9",
+    "utcScoredDateTime": "2026-10-05T15:36:55.210Z",
+    "product": "Itaipu Dam",
+    "productHash": "d32dc05cd823506156dbc879cb4d757a2bbb45a3853b133344f35e34fc2150c9"
+  },
+  {
+    "pinId": 6112,
+    "sentiment": 0.5,
+    "textHash": "789b41f0a0e0be3b8600929642e44947ff154edd31e29fabb8f9b55a2baa1cfc",
+    "utcScoredDateTime": "2026-10-05T15:37:16.423Z",
+    "product": "Three Gorges Dam",
+    "productHash": "789b41f0a0e0be3b8600929642e44947ff154edd31e29fabb8f9b55a2baa1cfc"
+  },
+  {
+    "pinId": 6113,
+    "sentiment": 0.8,
+    "textHash": "7136fa3977f09d3859fbc8acd7fb01fa3527a5728703fb065450acb1b36dbb07",
+    "utcScoredDateTime": "2026-10-05T15:37:35.930Z",
+    "product": "Edwards Dam",
+    "productHash": "7136fa3977f09d3859fbc8acd7fb01fa3527a5728703fb065450acb1b36dbb07"
+  },
+  {
+    "pinId": 6114,
+    "sentiment": 0.5,
+    "textHash": "500ad9a34206b95090219a8fd98031dd0362a8c165c66d02f5910bd0b0a2bd70",
+    "utcScoredDateTime": "2026-10-05T15:37:54.069Z",
+    "product": "Three Gorges Dam",
+    "productHash": "500ad9a34206b95090219a8fd98031dd0362a8c165c66d02f5910bd0b0a2bd70"
+  },
+  {
+    "pinId": 6115,
+    "sentiment": 0.4,
+    "textHash": "6762aefe290a015733821fa23a135788549a8f16c0caef3cef512db4819adbf0",
+    "utcScoredDateTime": "2026-10-05T15:38:30.257Z",
+    "product": "Three Gorges Dam",
+    "productHash": "6762aefe290a015733821fa23a135788549a8f16c0caef3cef512db4819adbf0"
+  },
+  {
+    "pinId": 6116,
+    "sentiment": 0.5,
+    "textHash": "435d9d552d86aa02e0ac0286eac633088699d2ce758632821516e2b17bd2ba37",
+    "utcScoredDateTime": "2026-10-05T15:38:49.033Z",
+    "product": "Grand Ethiopian Renaissance Dam",
+    "productHash": "435d9d552d86aa02e0ac0286eac633088699d2ce758632821516e2b17bd2ba37"
+  },
+  {
+    "pinId": 6117,
+    "sentiment": -0.1,
+    "textHash": "bbbba6cd1ad1766026ae35c30beaf0807638ab19a8094c4b0e20b89471848407",
+    "utcScoredDateTime": "2026-10-05T15:39:10.284Z",
+    "product": "Mosul Dam",
+    "productHash": "bbbba6cd1ad1766026ae35c30beaf0807638ab19a8094c4b0e20b89471848407"
+  },
+  {
+    "pinId": 6118,
+    "sentiment": 0,
+    "textHash": "71135cda8be8c6c619411bba4e83a8946c6ed4d5d7a912ea4a67ed7b712fffa7",
+    "utcScoredDateTime": "2026-10-05T15:39:28.731Z",
+    "product": "Grand Ethiopian Renaissance Dam",
+    "productHash": "71135cda8be8c6c619411bba4e83a8946c6ed4d5d7a912ea4a67ed7b712fffa7"
+  },
+  {
+    "pinId": 6119,
+    "sentiment": 0.3,
+    "textHash": "e80cca6cdbc003201e11e2624784bc9a864546becc3d0fb3510b6386098c965e",
+    "utcScoredDateTime": "2026-10-05T15:39:52.862Z",
+    "product": "Medog Hydropower Station",
+    "productHash": "e80cca6cdbc003201e11e2624784bc9a864546becc3d0fb3510b6386098c965e"
+  },
+  {
+    "pinId": 6120,
+    "sentiment": -0.6,
+    "textHash": "de3d12fc6d3cbd3460f1c0584d617006f2a2c81c17e2d47377171d4a1d75ed27",
+    "utcScoredDateTime": "2026-10-05T15:40:13.975Z",
+    "product": "Lake Powell",
+    "productHash": "de3d12fc6d3cbd3460f1c0584d617006f2a2c81c17e2d47377171d4a1d75ed27"
+  },
+  {
+    "pinId": 6121,
+    "sentiment": 0.3,
+    "textHash": "79eaf1cd46fcfd0a1338894026793960005994a94605a39b291d9e95c3243caa",
+    "utcScoredDateTime": "2026-10-05T15:40:32.628Z",
+    "product": "Kishau Dam",
+    "productHash": "79eaf1cd46fcfd0a1338894026793960005994a94605a39b291d9e95c3243caa"
+  },
+  {
+    "pinId": 6122,
+    "sentiment": 0.7,
+    "textHash": "8edd6a28a136e4699ee9ed5a135871c532e997b4a780e01757a818904dcef1ec",
+    "utcScoredDateTime": "2026-10-05T15:40:56.520Z",
+    "product": "Avengers",
+    "productHash": "8edd6a28a136e4699ee9ed5a135871c532e997b4a780e01757a818904dcef1ec"
+  },
+  {
+    "pinId": 6123,
+    "sentiment": 0.5,
+    "textHash": "32a220d7c29a065064289694061c59d5d5fd7fe02b2a2c322848a8c445ba8c5f",
+    "utcScoredDateTime": "2026-10-05T15:41:17.044Z",
+    "product": "Iron Man",
+    "productHash": "32a220d7c29a065064289694061c59d5d5fd7fe02b2a2c322848a8c445ba8c5f"
+  },
+  {
+    "pinId": 6124,
+    "sentiment": 0.2,
+    "textHash": "5ec5d52c67690806d1561a631cf524f9d7d9ad1c96b60980f85fb58b8a433f97",
+    "utcScoredDateTime": "2026-10-05T15:41:38.475Z",
+    "product": "Thor",
+    "productHash": "5ec5d52c67690806d1561a631cf524f9d7d9ad1c96b60980f85fb58b8a433f97"
+  },
+  {
+    "pinId": 6125,
+    "sentiment": 0.7,
+    "textHash": "bc2c3269ea5bf2f7b6b5bf9230dbf7aa71e0515c98f6fa3a5d088d2c56194d1d",
+    "utcScoredDateTime": "2026-10-05T15:42:01.577Z",
+    "product": "Captain America",
+    "productHash": "bc2c3269ea5bf2f7b6b5bf9230dbf7aa71e0515c98f6fa3a5d088d2c56194d1d"
+  },
+  {
+    "pinId": 6126,
+    "sentiment": 0.7,
+    "textHash": "a376d4feb4b130acfa516f906e4c9e1deb498c0ddf999851b103c1f00fc43b9a",
+    "utcScoredDateTime": "2026-10-05T15:42:23.901Z",
+    "product": "Guardians of the Galaxy",
+    "productHash": "a376d4feb4b130acfa516f906e4c9e1deb498c0ddf999851b103c1f00fc43b9a"
+  },
+  {
+    "pinId": 6127,
+    "sentiment": 0.4,
+    "textHash": "112fc88259ce5528d6196da908c29e5ba43b9b5b5b0923042ef3323201b635a8",
+    "utcScoredDateTime": "2026-10-05T15:42:47.251Z",
+    "product": "Avengers",
+    "productHash": "112fc88259ce5528d6196da908c29e5ba43b9b5b5b0923042ef3323201b635a8"
+  },
+  {
+    "pinId": 6128,
+    "sentiment": 0.6,
+    "textHash": "23e9d2cd82dd2894d9a8fa187374799de20851edd2c440e4425a00bb04f755ef",
+    "utcScoredDateTime": "2026-10-05T15:43:08.112Z",
+    "product": "Ant-Man",
+    "productHash": "23e9d2cd82dd2894d9a8fa187374799de20851edd2c440e4425a00bb04f755ef"
+  },
+  {
+    "pinId": 6129,
+    "sentiment": 0.7,
+    "textHash": "ec455dca65d53c4791a42e6bfa360dbbd5ba791244518aa0ee0b153fbed59374",
+    "utcScoredDateTime": "2026-10-05T15:43:32.888Z",
+    "product": "Captain America",
+    "productHash": "ec455dca65d53c4791a42e6bfa360dbbd5ba791244518aa0ee0b153fbed59374"
+  },
+  {
+    "pinId": 6130,
+    "sentiment": 0.7,
+    "textHash": "9c2c2d94ed35d10ab4252a1ae136fa14328f0bfb167b3526825c4666d84ba9fd",
+    "utcScoredDateTime": "2026-10-05T15:43:53.883Z",
+    "product": "Doctor Strange",
+    "productHash": "9c2c2d94ed35d10ab4252a1ae136fa14328f0bfb167b3526825c4666d84ba9fd"
+  },
+  {
+    "pinId": 6131,
+    "sentiment": 0.6,
+    "textHash": "0814827a68d247c2aedb68d7c61d33f963d1412aade96ba68d42a5174e1e1122",
+    "utcScoredDateTime": "2026-10-05T15:44:16.911Z",
+    "product": "Guardians of the Galaxy",
+    "productHash": "0814827a68d247c2aedb68d7c61d33f963d1412aade96ba68d42a5174e1e1122"
+  },
+  {
+    "pinId": 6132,
+    "sentiment": 0.8,
+    "textHash": "1a64b1489e1f2a46e8283b2a2968b2673f1fe6046fe39d34ad9d3e8865393684",
+    "utcScoredDateTime": "2026-10-05T15:44:37.547Z",
+    "product": "Thor",
+    "productHash": "1a64b1489e1f2a46e8283b2a2968b2673f1fe6046fe39d34ad9d3e8865393684"
+  },
+  {
+    "pinId": 6133,
+    "sentiment": 0.8,
+    "textHash": "2bd16228df2c26841a83bf39f108b66884e3bb5ac70b9568902ded57e07b5873",
+    "utcScoredDateTime": "2026-10-05T15:45:01.795Z",
+    "product": "Black Panther",
+    "productHash": "2bd16228df2c26841a83bf39f108b66884e3bb5ac70b9568902ded57e07b5873"
+  },
+  {
+    "pinId": 6134,
+    "sentiment": 0.6,
+    "textHash": "de8c019ce15eaf42da399dfca76322d7f7c458ee0a8bd4ca2dcc548a3fb27950",
+    "utcScoredDateTime": "2026-10-05T15:45:23.639Z",
+    "product": "Ant-Man",
+    "productHash": "de8c019ce15eaf42da399dfca76322d7f7c458ee0a8bd4ca2dcc548a3fb27950"
+  },
+  {
+    "pinId": 6135,
+    "sentiment": 0.5,
+    "textHash": "e9f9db4b9a6a1d323a2772bfbc4fd151fe040eaf13576bee8dc3db32bfb00b9e",
+    "utcScoredDateTime": "2026-10-05T15:45:47.514Z",
+    "product": "Captain Marvel",
+    "productHash": "e9f9db4b9a6a1d323a2772bfbc4fd151fe040eaf13576bee8dc3db32bfb00b9e"
+  },
+  {
+    "pinId": 6136,
+    "sentiment": 0.5,
+    "textHash": "7aacd1076bf4a5bd5ab525c9e569d5d93713ad02043a3bcedaad43591dc007c4",
+    "utcScoredDateTime": "2026-10-05T15:46:09.689Z",
+    "product": "Black Widow",
+    "productHash": "7aacd1076bf4a5bd5ab525c9e569d5d93713ad02043a3bcedaad43591dc007c4"
+  },
+  {
+    "pinId": 6137,
+    "sentiment": 0.7,
+    "textHash": "e53aafd7617fa3d986911c42526d7214a0b538dcab0cff6ac778ece1d5f94a71",
+    "utcScoredDateTime": "2026-10-05T15:46:32.888Z",
+    "product": "Shang-Chi",
+    "productHash": "e53aafd7617fa3d986911c42526d7214a0b538dcab0cff6ac778ece1d5f94a71"
+  },
+  {
+    "pinId": 6138,
+    "sentiment": -0.1,
+    "textHash": "9ab0140edfb53e277678f9d4b79621a71e60086e74470e0068d286a379ce3d8f",
+    "utcScoredDateTime": "2026-10-05T15:46:56.284Z",
+    "product": "Eternals",
+    "productHash": "9ab0140edfb53e277678f9d4b79621a71e60086e74470e0068d286a379ce3d8f"
+  },
+  {
+    "pinId": 6139,
+    "sentiment": 0.4,
+    "textHash": "50e8838f7f72528fbdc129d30413363f85384ab50389a78f0363db5e10e70246",
+    "utcScoredDateTime": "2026-10-05T15:47:20.004Z",
+    "product": "Doctor Strange",
+    "productHash": "50e8838f7f72528fbdc129d30413363f85384ab50389a78f0363db5e10e70246"
+  },
+  {
+    "pinId": 6140,
+    "sentiment": 0.2,
+    "textHash": "72f39a50dabd29680a88d1397e953f284f72e278fe9af8dabe5adb09aac3992a",
+    "utcScoredDateTime": "2026-10-05T15:47:43.749Z",
+    "product": "Thor",
+    "productHash": "72f39a50dabd29680a88d1397e953f284f72e278fe9af8dabe5adb09aac3992a"
+  },
+  {
+    "pinId": 6141,
+    "sentiment": 0.6,
+    "textHash": "cb40b13e13635e161c4d54c90e76503739828bf6a1040a8ae81aae6ee714ca40",
+    "utcScoredDateTime": "2026-10-05T15:48:07.028Z",
+    "product": "Black Panther",
+    "productHash": "cb40b13e13635e161c4d54c90e76503739828bf6a1040a8ae81aae6ee714ca40"
+  },
+  {
+    "pinId": 6142,
+    "sentiment": -0.2,
+    "textHash": "e3d7ce6eae4861156a7269e55234e2153130abbdad2198706ef16a3e866feb81",
+    "utcScoredDateTime": "2026-10-05T15:48:30.401Z",
+    "product": "Ant-Man",
+    "productHash": "e3d7ce6eae4861156a7269e55234e2153130abbdad2198706ef16a3e866feb81"
+  },
+  {
+    "pinId": 6143,
+    "sentiment": 0.5,
+    "textHash": "6ecc4bfc0be2de1624e8afdaf774630fb8a058094a74e51500f1b01909405cbe",
+    "utcScoredDateTime": "2026-10-05T15:48:54.404Z",
+    "product": "Guardians of the Galaxy",
+    "productHash": "6ecc4bfc0be2de1624e8afdaf774630fb8a058094a74e51500f1b01909405cbe"
+  },
+  {
+    "pinId": 6144,
+    "sentiment": 0.2,
+    "textHash": "03b5c249a6a638b7bf06a8c8321fa105ec6f2b97262e46ca101c600363d8ed3f",
+    "utcScoredDateTime": "2026-10-05T15:49:18.742Z",
+    "product": "Captain Marvel",
+    "productHash": "03b5c249a6a638b7bf06a8c8321fa105ec6f2b97262e46ca101c600363d8ed3f"
+  },
+  {
+    "pinId": 6145,
+    "sentiment": 0.4,
+    "textHash": "ceaad8ee4af5b876d7f5fe69d14797d1ffef4d563dee551261b4b053359582b4",
+    "utcScoredDateTime": "2026-10-05T15:49:44.722Z",
+    "product": "Deadpool",
+    "productHash": "ceaad8ee4af5b876d7f5fe69d14797d1ffef4d563dee551261b4b053359582b4"
+  },
+  {
+    "pinId": 6146,
+    "sentiment": -0.2,
+    "textHash": "083165937cf4615dccf1bb7fe0b8dd64a5e662db3f65f51697479691c22bd73d",
+    "utcScoredDateTime": "2026-10-05T15:50:08.609Z",
+    "product": "Captain America",
+    "productHash": "083165937cf4615dccf1bb7fe0b8dd64a5e662db3f65f51697479691c22bd73d"
+  },
+  {
+    "pinId": 6147,
+    "sentiment": 0.7,
+    "textHash": "813184eef8b64bd90929fc1bd9e390f668e10309d9e0b1ed629ae794fdefcd5f",
+    "utcScoredDateTime": "2026-10-05T15:50:34.065Z",
+    "product": "Thunderbolts",
+    "productHash": "813184eef8b64bd90929fc1bd9e390f668e10309d9e0b1ed629ae794fdefcd5f"
+  },
+  {
+    "pinId": 6148,
+    "sentiment": 0.6,
+    "textHash": "f3dbd6020b7a7eff7ac9c4289d56a7d55da4bea01ac365aaf7e29d0a0ee6c245",
+    "utcScoredDateTime": "2026-10-05T15:50:57.261Z",
+    "product": "Fantastic Four",
+    "productHash": "f3dbd6020b7a7eff7ac9c4289d56a7d55da4bea01ac365aaf7e29d0a0ee6c245"
+  },
+  {
+    "pinId": 6149,
+    "sentiment": 0.6,
+    "textHash": "9f4d38d15abf50b8bcd502e3a793a476fb13f1410fa76d74130d5fd150045a22",
+    "utcScoredDateTime": "2026-10-05T15:51:22.064Z",
+    "product": "Star Wars",
+    "productHash": "9f4d38d15abf50b8bcd502e3a793a476fb13f1410fa76d74130d5fd150045a22"
+  },
+  {
+    "pinId": 6150,
+    "sentiment": 0.3,
+    "textHash": "2f201d3d2050798249219a26e78a2fd4c0e16c56a565912c784da3fa058f85b2",
+    "utcScoredDateTime": "2026-10-05T15:51:46.761Z",
+    "product": "Star Wars",
+    "productHash": "2f201d3d2050798249219a26e78a2fd4c0e16c56a565912c784da3fa058f85b2"
+  },
+  {
+    "pinId": 6151,
+    "sentiment": 0.1,
+    "textHash": "0e2393542341bd92d0ee821cfb9714e0257414c38873ce89cd18819008bf1dd1",
+    "utcScoredDateTime": "2026-10-05T15:52:12.596Z",
+    "product": "Star Wars",
+    "productHash": "0e2393542341bd92d0ee821cfb9714e0257414c38873ce89cd18819008bf1dd1"
+  },
+  {
+    "pinId": 6152,
+    "sentiment": 0.9,
+    "textHash": "a4059a9aa3741e1ac79c6218ebd1b5cc84edb4dfdffa2a2c58311a4bab7cf2d6",
+    "utcScoredDateTime": "2026-10-05T15:52:35.731Z",
+    "product": "Toy Story",
+    "productHash": "a4059a9aa3741e1ac79c6218ebd1b5cc84edb4dfdffa2a2c58311a4bab7cf2d6"
+  },
+  {
+    "pinId": 6153,
+    "sentiment": 0.6,
+    "textHash": "1fcfce89a9ad43ad15d2d1f9ac6fc526cfd48414d68aaedea547e372b7a6b17b",
+    "utcScoredDateTime": "2026-10-05T15:53:51.567Z",
+    "product": "A Bug's Life",
+    "productHash": "1fcfce89a9ad43ad15d2d1f9ac6fc526cfd48414d68aaedea547e372b7a6b17b"
+  },
+  {
+    "pinId": 6154,
+    "sentiment": 0.9,
+    "textHash": "2ad7e5b44cc27e3d3f1a3a5228b96fe65593e7cbb7485beea49a7b261e6187bf",
+    "utcScoredDateTime": "2026-10-05T15:54:15.109Z",
+    "product": "Toy Story",
+    "productHash": "2ad7e5b44cc27e3d3f1a3a5228b96fe65593e7cbb7485beea49a7b261e6187bf"
+  },
+  {
+    "pinId": 6155,
+    "sentiment": 0.8,
+    "textHash": "88987ccc3305aa456b2166e20d68ba85e2f78064ff90c5dc52edd725a4e31cfa",
+    "utcScoredDateTime": "2026-10-05T15:54:43.389Z",
+    "product": "Monsters, Inc.",
+    "productHash": "88987ccc3305aa456b2166e20d68ba85e2f78064ff90c5dc52edd725a4e31cfa"
+  },
+  {
+    "pinId": 6156,
+    "sentiment": 0.9,
+    "textHash": "76dc81ce7dc90e2e888c5030876bd96b9c22a92d20cb044d10d56bedbd5affaf",
+    "utcScoredDateTime": "2026-10-05T15:55:05.849Z",
+    "product": "Finding Nemo",
+    "productHash": "76dc81ce7dc90e2e888c5030876bd96b9c22a92d20cb044d10d56bedbd5affaf"
+  },
+  {
+    "pinId": 6157,
+    "sentiment": 0.9,
+    "textHash": "fbdbb09435f786b43979fde3f7dd3a116e2e72afe64c86cfdf563e09d6f7b744",
+    "utcScoredDateTime": "2026-10-05T15:55:31.707Z",
+    "product": "The Incredibles",
+    "productHash": "fbdbb09435f786b43979fde3f7dd3a116e2e72afe64c86cfdf563e09d6f7b744"
+  },
+  {
+    "pinId": 6158,
+    "sentiment": 0.5,
+    "textHash": "7a270e0ddbf5853b24910607ae0e65d10d0659eb7f5f4055851258892948c533",
+    "utcScoredDateTime": "2026-10-05T15:55:51.800Z",
+    "product": "Pixar",
+    "productHash": "7a270e0ddbf5853b24910607ae0e65d10d0659eb7f5f4055851258892948c533"
+  },
+  {
+    "pinId": 6159,
+    "sentiment": 0.5,
+    "textHash": "15d9c6a6e54720dcc7fe758ef50cbac42a0cc35b54843e7d98da48dcf9b22e88",
+    "utcScoredDateTime": "2026-10-05T15:56:26.721Z",
+    "product": "Cars",
+    "productHash": "15d9c6a6e54720dcc7fe758ef50cbac42a0cc35b54843e7d98da48dcf9b22e88"
+  },
+  {
+    "pinId": 6160,
+    "sentiment": 0.9,
+    "textHash": "5dcbc2765d98d175136bf1e613caf0238bd48beab2f77e04de333ceb7e09f332",
+    "utcScoredDateTime": "2026-10-05T15:56:56.890Z",
+    "product": "Ratatouille",
+    "productHash": "5dcbc2765d98d175136bf1e613caf0238bd48beab2f77e04de333ceb7e09f332"
+  },
+  {
+    "pinId": 6161,
+    "sentiment": 0.9,
+    "textHash": "26efc82042da1442d2649806921002165d913e2be10728d8538e257136633b56",
+    "utcScoredDateTime": "2026-10-05T15:57:23.800Z",
+    "product": "WALL-E",
+    "productHash": "26efc82042da1442d2649806921002165d913e2be10728d8538e257136633b56"
+  },
+  {
+    "pinId": 6162,
+    "sentiment": 0.9,
+    "textHash": "063ca538984f7f4e52a2471c6190d656b9da49cbf2691fce9d19266716ffdca5",
+    "utcScoredDateTime": "2026-10-05T15:57:49.928Z",
+    "product": "Up",
+    "productHash": "063ca538984f7f4e52a2471c6190d656b9da49cbf2691fce9d19266716ffdca5"
+  },
+  {
+    "pinId": 6163,
+    "sentiment": 0.9,
+    "textHash": "6b0d270541bc5bac77b2b8597cc420de8fae2d41ab17f63e98c70f6cd5c867ee",
+    "utcScoredDateTime": "2026-10-05T15:58:18.873Z",
+    "product": "Toy Story",
+    "productHash": "6b0d270541bc5bac77b2b8597cc420de8fae2d41ab17f63e98c70f6cd5c867ee"
+  },
+  {
+    "pinId": 6164,
+    "sentiment": -0.1,
+    "textHash": "a22102cc6ef66cd8f1dd4eb291752100365f54a8b3cdfad61a2960738c8a9d04",
+    "utcScoredDateTime": "2026-10-05T15:58:47.313Z",
+    "product": "Cars",
+    "productHash": "a22102cc6ef66cd8f1dd4eb291752100365f54a8b3cdfad61a2960738c8a9d04"
+  },
+  {
+    "pinId": 6165,
+    "sentiment": 0.5,
+    "textHash": "325e5ba6f0281221e9000c53287f554a6a40f0807e52fc1168ac1067ea188423",
+    "utcScoredDateTime": "2026-10-05T15:59:26.925Z",
+    "product": "Brave",
+    "productHash": "325e5ba6f0281221e9000c53287f554a6a40f0807e52fc1168ac1067ea188423"
+  },
+  {
+    "pinId": 6166,
+    "sentiment": 0.4,
+    "textHash": "772ac5d215a430cb116f3ce7a4a07c7a163fb9edc6cf0e3aa56b65da8833b649",
+    "utcScoredDateTime": "2026-10-05T15:59:54.317Z",
+    "product": "Monsters, Inc.",
+    "productHash": "772ac5d215a430cb116f3ce7a4a07c7a163fb9edc6cf0e3aa56b65da8833b649"
+  },
+  {
+    "pinId": 6167,
+    "sentiment": 0.9,
+    "textHash": "a825648adc1b1e1006bc00e8cc1240b552c4b19338b145a5d42ca9e4a72e7053",
+    "utcScoredDateTime": "2026-10-05T16:00:22.139Z",
+    "product": "Inside Out",
+    "productHash": "a825648adc1b1e1006bc00e8cc1240b552c4b19338b145a5d42ca9e4a72e7053"
+  },
+  {
+    "pinId": 6168,
+    "sentiment": 0.2,
+    "textHash": "fd2990f99e1b6dfad91f2787e109eebc6d416dc9e2f248e6fc3cc5312a6e7545",
+    "utcScoredDateTime": "2026-10-05T16:01:15.363Z",
+    "product": "The Good Dinosaur",
+    "productHash": "fd2990f99e1b6dfad91f2787e109eebc6d416dc9e2f248e6fc3cc5312a6e7545"
+  },
+  {
+    "pinId": 6169,
+    "sentiment": 0.7,
+    "textHash": "431502080876f552680c79634d33bc2cd0d1478d5d84ed970ed403fb16a75e25",
+    "utcScoredDateTime": "2026-10-05T16:01:37.777Z",
+    "product": "Finding Nemo",
+    "productHash": "431502080876f552680c79634d33bc2cd0d1478d5d84ed970ed403fb16a75e25"
+  },
+  {
+    "pinId": 6170,
+    "sentiment": 0.3,
+    "textHash": "6748ecbfe6d34939ec294307c6a1ef1643a1adcb297289c533875fd5dfc68c7a",
+    "utcScoredDateTime": "2026-10-05T16:02:00.510Z",
+    "product": "Cars",
+    "productHash": "6748ecbfe6d34939ec294307c6a1ef1643a1adcb297289c533875fd5dfc68c7a"
+  },
+  {
+    "pinId": 6171,
+    "sentiment": 0.9,
+    "textHash": "8519b23d62fad9d0791302dca323df1b5fbec04606139e4f7b58fac5389dda0b",
+    "utcScoredDateTime": "2026-10-05T16:02:22.607Z",
+    "product": "Coco",
+    "productHash": "8519b23d62fad9d0791302dca323df1b5fbec04606139e4f7b58fac5389dda0b"
+  },
+  {
+    "pinId": 6172,
+    "sentiment": 0.5,
+    "textHash": "e094e97925c4262c629513394cf9d0217b9a589f4a2dba4354fac51761371cbb",
+    "utcScoredDateTime": "2026-10-05T16:02:32.806Z",
+    "product": "Most expensive fossil at auction",
+    "productHash": "e094e97925c4262c629513394cf9d0217b9a589f4a2dba4354fac51761371cbb"
+  },
+  {
+    "pinId": 6173,
+    "sentiment": 0.7,
+    "textHash": "71586dbacc5269a74e35b0527bb8f5501c483db91273f9c5b6965f4bcca93eb4",
+    "utcScoredDateTime": "2026-10-05T16:02:46.970Z",
+    "product": "The Incredibles",
+    "productHash": "71586dbacc5269a74e35b0527bb8f5501c483db91273f9c5b6965f4bcca93eb4"
+  },
+  {
+    "pinId": 6174,
+    "sentiment": 0.6,
+    "textHash": "1a2f4830ca47edc2e0be806df41b3b8cfffd096b56a07e1705e1505e4e71234f",
+    "utcScoredDateTime": "2026-10-05T16:03:09.545Z",
+    "product": "IPO",
+    "productHash": "1a2f4830ca47edc2e0be806df41b3b8cfffd096b56a07e1705e1505e4e71234f"
+  },
+  {
+    "pinId": 6175,
+    "sentiment": 0.7,
+    "textHash": "d79c2af96807442eb7cc4e017f391d4436e9dd36dabca88d3ae9c09ff65438ad",
+    "utcScoredDateTime": "2026-10-05T16:03:31.740Z",
+    "product": "Bitcoin price",
+    "productHash": "d79c2af96807442eb7cc4e017f391d4436e9dd36dabca88d3ae9c09ff65438ad"
+  },
+  {
+    "pinId": 6176,
+    "sentiment": 0.9,
+    "textHash": "26d283b49dba729e1d4b2cf3a38761d4e7e009344c3724a769a50a56205083b9",
+    "utcScoredDateTime": "2026-10-05T16:03:49.314Z",
+    "product": "100m World Record",
+    "productHash": "26d283b49dba729e1d4b2cf3a38761d4e7e009344c3724a769a50a56205083b9"
+  },
+  {
+    "pinId": 6177,
+    "sentiment": 0.7,
+    "textHash": "8ae7e2c66a8a15b9fa0f6430cc00bd7b7263d24349b4398c4b00263c8ef34d2d",
+    "utcScoredDateTime": "2026-10-05T16:04:09.920Z",
+    "product": "Top speed",
+    "productHash": "8ae7e2c66a8a15b9fa0f6430cc00bd7b7263d24349b4398c4b00263c8ef34d2d"
+  },
+  {
+    "pinId": 6178,
+    "sentiment": 0.7,
+    "textHash": "d794e3610884c92fb19d7c52312884f4dcce7bd24cafc44b13294d23842947db",
+    "utcScoredDateTime": "2026-10-05T16:04:19.012Z",
+    "product": "Toy Story",
+    "productHash": "d794e3610884c92fb19d7c52312884f4dcce7bd24cafc44b13294d23842947db"
+  },
+  {
+    "pinId": 6179,
+    "sentiment": 0.6,
+    "textHash": "19322ffeb3e1a569d9040b80b91ff416caa37e37461d84d8d559ab6c87575548",
+    "utcScoredDateTime": "2026-10-05T16:04:29.923Z",
+    "product": "Fastest app to 100 million users",
+    "productHash": "19322ffeb3e1a569d9040b80b91ff416caa37e37461d84d8d559ab6c87575548"
+  },
+  {
+    "pinId": 6180,
+    "sentiment": 0.4,
+    "textHash": "4d4426fcc18e1c1c3b30c573c813be1df5f6a87d74f3f230803342369d36b43a",
+    "utcScoredDateTime": "2026-10-05T16:04:45.386Z",
+    "product": "Onward",
+    "productHash": "4d4426fcc18e1c1c3b30c573c813be1df5f6a87d74f3f230803342369d36b43a"
+  },
+  {
+    "pinId": 6181,
+    "sentiment": 0.6,
+    "textHash": "7bc357857abd0efbbb2e02f3ad4b0b234c66921889cc2b653586176487a0ef8a",
+    "utcScoredDateTime": "2026-10-05T16:04:55.494Z",
+    "product": "Stock index",
+    "productHash": "7bc357857abd0efbbb2e02f3ad4b0b234c66921889cc2b653586176487a0ef8a"
+  },
+  {
+    "pinId": 6182,
+    "sentiment": 0.8,
+    "textHash": "cf0099a97af10bccd8cc0ce696c1e0471780458a17416e8bf82bf45a4cc0d279",
+    "utcScoredDateTime": "2026-10-05T16:05:11.062Z",
+    "product": "Soul",
+    "productHash": "cf0099a97af10bccd8cc0ce696c1e0471780458a17416e8bf82bf45a4cc0d279"
+  },
+  {
+    "pinId": 6183,
+    "sentiment": 0.9,
+    "textHash": "55e329995edd20561f40a668d3d6fc1ea613c8531f9f5931f0b846d45c4d787a",
+    "utcScoredDateTime": "2026-10-05T16:05:21.355Z",
+    "product": "Pole Vault World Record",
+    "productHash": "55e329995edd20561f40a668d3d6fc1ea613c8531f9f5931f0b846d45c4d787a"
+  },
+  {
+    "pinId": 6184,
+    "sentiment": 0.7,
+    "textHash": "efb80a497d5c06c67ac8c35f2e9b8f1582280739d87d4fe3b29eae4cd08c5650",
+    "utcScoredDateTime": "2026-10-05T16:05:36.478Z",
+    "product": "Luca",
+    "productHash": "efb80a497d5c06c67ac8c35f2e9b8f1582280739d87d4fe3b29eae4cd08c5650"
+  },
+  {
+    "pinId": 6185,
+    "sentiment": 0.9,
+    "textHash": "44294523387738b56bade7f07dfaced6a32160d8d900ed7916da8dc473e30b1f",
+    "utcScoredDateTime": "2026-10-05T16:05:42.446Z",
+    "product": "400m Hurdles World Record",
+    "productHash": "44294523387738b56bade7f07dfaced6a32160d8d900ed7916da8dc473e30b1f"
+  },
+  {
+    "pinId": 6186,
+    "sentiment": 0.7,
+    "textHash": "19fc803db6e0f90bb60fd23cf067a72e0121386c44ee9ac61e3bcbd722f23f0e",
+    "utcScoredDateTime": "2026-10-05T16:06:01.393Z",
+    "product": "Turning Red",
+    "productHash": "19fc803db6e0f90bb60fd23cf067a72e0121386c44ee9ac61e3bcbd722f23f0e"
+  },
+  {
+    "pinId": 6187,
+    "sentiment": 0.9,
+    "textHash": "d3e08a6202b59d23deab6070c4a69b2ea61630139f8543a10bd14542ab20a9b3",
+    "utcScoredDateTime": "2026-10-05T16:06:15.616Z",
+    "product": "Mile World Record",
+    "productHash": "d3e08a6202b59d23deab6070c4a69b2ea61630139f8543a10bd14542ab20a9b3"
+  },
+  {
+    "pinId": 6188,
+    "sentiment": 0.2,
+    "textHash": "890de08d17182681e9efe1d2960a8b6bab4e2224bfff09562fffe77c55cf8e05",
+    "utcScoredDateTime": "2026-10-05T16:06:27.790Z",
+    "product": "Toy Story",
+    "productHash": "890de08d17182681e9efe1d2960a8b6bab4e2224bfff09562fffe77c55cf8e05"
+  },
+  {
+    "pinId": 6189,
+    "sentiment": 0.7,
+    "textHash": "379c8c873950da83b578d4e2bdc3cdca9ec323fdb6118dcc148b88bf935bfab8",
+    "utcScoredDateTime": "2026-10-05T16:06:37.141Z",
+    "product": "Opening Weekend Record",
+    "productHash": "379c8c873950da83b578d4e2bdc3cdca9ec323fdb6118dcc148b88bf935bfab8"
+  },
+  {
+    "pinId": 6190,
+    "sentiment": 0.5,
+    "textHash": "e77bdf14170643aa4b1bbb5be4e6dfaadbc2b6e0b4406cb94df9f347d2fd0d0f",
+    "utcScoredDateTime": "2026-10-05T16:06:52.541Z",
+    "product": "Elemental",
+    "productHash": "e77bdf14170643aa4b1bbb5be4e6dfaadbc2b6e0b4406cb94df9f347d2fd0d0f"
+  },
+  {
+    "pinId": 6191,
+    "sentiment": 0.85,
+    "textHash": "ce90e986be0edefd96ca8dbff41e48f805c1f479d48fa5d8d28cc7bc689e5229",
+    "utcScoredDateTime": "2026-10-05T16:06:57.178Z",
+    "product": "Opening Weekend Record",
+    "productHash": "ce90e986be0edefd96ca8dbff41e48f805c1f479d48fa5d8d28cc7bc689e5229"
+  },
+  {
+    "pinId": 6192,
+    "sentiment": 0.8,
+    "textHash": "0f7df0b12fa890752d9791fafa0b1c65ebb21cbe5920169beea6d339095aa8b1",
+    "utcScoredDateTime": "2026-10-05T16:07:17.980Z",
+    "product": "Inside Out",
+    "productHash": "0f7df0b12fa890752d9791fafa0b1c65ebb21cbe5920169beea6d339095aa8b1"
+  },
+  {
+    "pinId": 6193,
+    "sentiment": 0.9,
+    "textHash": "62d728cb03e9798915c57595d34739d84493991c9208217e06852004560a3b7f",
+    "utcScoredDateTime": "2026-10-05T16:07:22.459Z",
+    "product": "1000m World Record",
+    "productHash": "62d728cb03e9798915c57595d34739d84493991c9208217e06852004560a3b7f"
+  },
+  {
+    "pinId": 6194,
+    "sentiment": 0.4,
+    "textHash": "146d8debfe1c58ffbadc49311c360573e328e6dfc187577feefc56d5c32532fb",
+    "utcScoredDateTime": "2026-10-05T16:07:42.509Z",
+    "product": "Elio",
+    "productHash": "146d8debfe1c58ffbadc49311c360573e328e6dfc187577feefc56d5c32532fb"
+  },
+  {
+    "pinId": 6195,
+    "sentiment": 0.8,
+    "textHash": "b827ffbf5b84356567b746dcece04fc50a96c85bd0572c734a1bebe384608976",
+    "utcScoredDateTime": "2026-10-05T16:07:47.875Z",
+    "product": "Supercomputer",
+    "productHash": "b827ffbf5b84356567b746dcece04fc50a96c85bd0572c734a1bebe384608976"
+  },
+  {
+    "pinId": 6196,
+    "sentiment": 0.7,
+    "textHash": "f3054a9b8e6104faba36086525d9e8abb4e6b1b5b0171e597611d19d2d888854",
+    "utcScoredDateTime": "2026-10-05T16:08:08.776Z",
+    "product": "Hoppers",
+    "productHash": "f3054a9b8e6104faba36086525d9e8abb4e6b1b5b0171e597611d19d2d888854"
+  },
+  {
+    "pinId": 6197,
+    "sentiment": 0.8,
+    "textHash": "5dcfab590c322ab1d44bdc441ba971290393dfa21f7ce68a2cf6cf704b50b514",
+    "utcScoredDateTime": "2026-10-05T16:08:17.251Z",
+    "product": "Concert tour gross",
+    "productHash": "5dcfab590c322ab1d44bdc441ba971290393dfa21f7ce68a2cf6cf704b50b514"
+  },
+  {
+    "pinId": 6198,
+    "sentiment": 0.5,
+    "textHash": "97dd2e15f5e4f4dbd66a76288cd4a6a418f594aad0bfff32112b26a0255b8813",
+    "utcScoredDateTime": "2026-10-05T16:08:34.113Z",
+    "product": "Gatto",
+    "productHash": "97dd2e15f5e4f4dbd66a76288cd4a6a418f594aad0bfff32112b26a0255b8813"
+  },
+  {
+    "pinId": 6199,
+    "sentiment": 0.9,
+    "textHash": "6e5c37c9a3ddf965e02ecd9eb23619209744ae81971d5f518cc412c93322b93f",
+    "utcScoredDateTime": "2026-10-05T16:08:51.817Z",
+    "product": "Farthest crewed distance from Earth",
+    "productHash": "6e5c37c9a3ddf965e02ecd9eb23619209744ae81971d5f518cc412c93322b93f"
+  },
+  {
+    "pinId": 6200,
+    "sentiment": 0.9,
+    "textHash": "3bdd297c61613f16c11a70ccb8e1981e978d64e103d3584ec68cd391e708d6fc",
+    "utcScoredDateTime": "2026-10-05T16:09:01.387Z",
+    "product": "Snow White",
+    "productHash": "3bdd297c61613f16c11a70ccb8e1981e978d64e103d3584ec68cd391e708d6fc"
+  },
+  {
+    "pinId": 6201,
+    "sentiment": -0.6,
+    "textHash": "4661261abf3f73a851e4a5507dc1003fa376702d0d8a59dd8b7e6e9a9f91bbc9",
+    "utcScoredDateTime": "2026-10-05T16:09:13.078Z",
+    "product": "Hottest month on record",
+    "productHash": "4661261abf3f73a851e4a5507dc1003fa376702d0d8a59dd8b7e6e9a9f91bbc9"
+  },
+  {
+    "pinId": 6202,
+    "sentiment": 0.85,
+    "textHash": "560a8945884b62b9d17fe2008975b7c69920014ce0916c3243486a815b939c7e",
+    "utcScoredDateTime": "2026-10-05T16:09:21.542Z",
+    "product": "Pinocchio",
+    "productHash": "560a8945884b62b9d17fe2008975b7c69920014ce0916c3243486a815b939c7e"
+  },
+  {
+    "pinId": 6203,
+    "sentiment": 0.7,
+    "textHash": "c61419f2a92163f3c506e11f082ee9d1fbf084f1eea479ef8e371acda5451e96",
+    "utcScoredDateTime": "2026-10-05T16:09:32.996Z",
+    "product": "Solar cell efficiency",
+    "productHash": "c61419f2a92163f3c506e11f082ee9d1fbf084f1eea479ef8e371acda5451e96"
+  },
+  {
+    "pinId": 6204,
+    "sentiment": 0.8,
+    "textHash": "78b464b319a40ac1452d859adad80b5505b3f3124d47c8e7152489889ec22bb8",
+    "utcScoredDateTime": "2026-10-05T16:09:41.224Z",
+    "product": "Fantasia",
+    "productHash": "78b464b319a40ac1452d859adad80b5505b3f3124d47c8e7152489889ec22bb8"
+  },
+  {
+    "pinId": 6205,
+    "sentiment": 0.4,
+    "textHash": "f3d487ff8617e95b36e1424f36d9a6ac9108cb49b994a6e6c8bafb5099b26d42",
+    "utcScoredDateTime": "2026-10-05T16:09:51.606Z",
+    "product": "Largest private funding round",
+    "productHash": "f3d487ff8617e95b36e1424f36d9a6ac9108cb49b994a6e6c8bafb5099b26d42"
+  },
+  {
+    "pinId": 6206,
+    "sentiment": 0.85,
+    "textHash": "1c321e7caf5287a4eb707397733b74e7378cf9bbe525fceee6adebc56e7f5a7e",
+    "utcScoredDateTime": "2026-10-05T16:10:12.789Z",
+    "product": "Dumbo",
+    "productHash": "1c321e7caf5287a4eb707397733b74e7378cf9bbe525fceee6adebc56e7f5a7e"
+  },
+  {
+    "pinId": 6207,
+    "sentiment": 0.7,
+    "textHash": "735608ae5a23b9cfe20224453307376d868ce361567be1806d9425395d20f9f0",
+    "utcScoredDateTime": "2026-10-05T16:10:23.232Z",
+    "product": "Stock index closing milestones",
+    "productHash": "735608ae5a23b9cfe20224453307376d868ce361567be1806d9425395d20f9f0"
+  },
+  {
+    "pinId": 6208,
+    "sentiment": 0.85,
+    "textHash": "48d672ccc6f9aa8c1a20871ea284aa3e754e77bf36175db58f9a2f42c40d329e",
+    "utcScoredDateTime": "2026-10-05T16:10:46.175Z",
+    "product": "Bambi",
+    "productHash": "48d672ccc6f9aa8c1a20871ea284aa3e754e77bf36175db58f9a2f42c40d329e"
+  },
+  {
+    "pinId": 6209,
+    "sentiment": 0.4,
+    "textHash": "044838d1ea3504fb5aefcf2b88476d704a8787e1d7ed3664ab8a862dde8c967a",
+    "utcScoredDateTime": "2026-10-05T16:10:48.305Z",
+    "product": "Gold price",
+    "productHash": "044838d1ea3504fb5aefcf2b88476d704a8787e1d7ed3664ab8a862dde8c967a"
+  },
+  {
+    "pinId": 6210,
+    "sentiment": 0.6,
+    "textHash": "5025d383d64365cd8fc83a2f934818b9aa624b36136abaa2bb62d6fcaaf13572",
+    "utcScoredDateTime": "2026-10-05T16:11:07.675Z",
+    "product": "Saludos Amigos",
+    "productHash": "5025d383d64365cd8fc83a2f934818b9aa624b36136abaa2bb62d6fcaaf13572"
+  },
+  {
+    "pinId": 6211,
+    "sentiment": 0.8,
+    "textHash": "e58f10e11b710e5e5c83520319478a2d0fdf2a8e476209a59ac70362932bd2b8",
+    "utcScoredDateTime": "2026-10-05T16:11:20.212Z",
+    "product": "Longest railway tunnel",
+    "productHash": "e58f10e11b710e5e5c83520319478a2d0fdf2a8e476209a59ac70362932bd2b8"
+  },
+  {
+    "pinId": 6212,
+    "sentiment": 0.6,
+    "textHash": "7bf209b3192304a7cc573bb10c4a6dceba4a3a79ee3727415f1ee5669fa580fb",
+    "utcScoredDateTime": "2026-10-05T16:11:28.985Z",
+    "product": "The Three Caballeros",
+    "productHash": "7bf209b3192304a7cc573bb10c4a6dceba4a3a79ee3727415f1ee5669fa580fb"
+  },
+  {
+    "pinId": 6213,
+    "sentiment": -0.7,
+    "textHash": "0958bd6d8bdac09bd18f2aca489b129bbdadf29cf2f57d572f72ecbdb3b3149e",
+    "utcScoredDateTime": "2026-10-05T16:11:42.837Z",
+    "product": "Hottest year on record",
+    "productHash": "0958bd6d8bdac09bd18f2aca489b129bbdadf29cf2f57d572f72ecbdb3b3149e"
+  },
+  {
+    "pinId": 6214,
+    "sentiment": 0.5,
+    "textHash": "84f7b1c9d57148daa57a1843f0490325f105c21bd979b2631cf10c0c7d7d62ce",
+    "utcScoredDateTime": "2026-10-05T16:11:49.036Z",
+    "product": "Make Mine Music",
+    "productHash": "84f7b1c9d57148daa57a1843f0490325f105c21bd979b2631cf10c0c7d7d62ce"
+  },
+  {
+    "pinId": 6215,
+    "sentiment": 0.6,
+    "textHash": "936a6b7e2e732c912f641be043baa062b32765df123573509660baf304c633ce",
+    "utcScoredDateTime": "2026-10-05T16:12:01.829Z",
+    "product": "Longest Tennis Match",
+    "productHash": "936a6b7e2e732c912f641be043baa062b32765df123573509660baf304c633ce"
+  },
+  {
+    "pinId": 6216,
+    "sentiment": 0.5,
+    "textHash": "a00d3a0913797820f434ad17c3e0d0df9f20b3e6667f14b80e3fbd9ced8fec1f",
+    "utcScoredDateTime": "2026-10-05T16:12:08.061Z",
+    "product": "Fun and Fancy Free",
+    "productHash": "a00d3a0913797820f434ad17c3e0d0df9f20b3e6667f14b80e3fbd9ced8fec1f"
+  },
+  {
+    "pinId": 6217,
+    "sentiment": 0.8,
+    "textHash": "6380ccb6d124295370b2457a27cd1a8ac9150caa6017bbbbb963b580ab6aa1e1",
+    "utcScoredDateTime": "2026-10-05T16:12:22.468Z",
+    "product": "Marathon World Record",
+    "productHash": "6380ccb6d124295370b2457a27cd1a8ac9150caa6017bbbbb963b580ab6aa1e1"
+  },
+  {
+    "pinId": 6218,
+    "sentiment": 0.5,
+    "textHash": "7711d75c9f547a56164e636fc2a68ae5c2f51d6adacea40b16388f96b715f108",
+    "utcScoredDateTime": "2026-10-05T16:12:27.228Z",
+    "product": "Melody Time",
+    "productHash": "7711d75c9f547a56164e636fc2a68ae5c2f51d6adacea40b16388f96b715f108"
+  },
+  {
+    "pinId": 6219,
+    "sentiment": 0.8,
+    "textHash": "358f612f3ed652a46a6864c13ca7136027d3fa5a6d5ef5442ac093423bbc79a5",
+    "utcScoredDateTime": "2026-10-05T16:12:43.863Z",
+    "product": "Animated film box office",
+    "productHash": "358f612f3ed652a46a6864c13ca7136027d3fa5a6d5ef5442ac093423bbc79a5"
+  },
+  {
+    "pinId": 6220,
+    "sentiment": 0.55,
+    "textHash": "7dbee5ff18eb35f31e3bad21014b2e8e39a96a563850f22dc2b33875ad0fadc1",
+    "utcScoredDateTime": "2026-10-05T16:12:46.926Z",
+    "product": "The Adventures of Ichabod and Mr. Toad",
+    "productHash": "7dbee5ff18eb35f31e3bad21014b2e8e39a96a563850f22dc2b33875ad0fadc1"
+  },
+  {
+    "pinId": 6221,
+    "sentiment": 0.7,
+    "textHash": "6755dd52b27d660e6f743b0135a504a715ecd4073e1c8f9b359acd6b39226d71",
+    "utcScoredDateTime": "2026-10-05T16:13:08.483Z",
+    "product": "Market value",
+    "productHash": "6755dd52b27d660e6f743b0135a504a715ecd4073e1c8f9b359acd6b39226d71"
+  },
+  {
+    "pinId": 6222,
+    "sentiment": 0.85,
+    "textHash": "dd27c5db7c742dfdb7024c7f424ca3e5384bbe8f89eb50d7f8a2ecf2d0e33c39",
+    "utcScoredDateTime": "2026-10-05T16:13:11.238Z",
+    "product": "Cinderella",
+    "productHash": "dd27c5db7c742dfdb7024c7f424ca3e5384bbe8f89eb50d7f8a2ecf2d0e33c39"
+  },
+  {
+    "pinId": 6223,
+    "sentiment": 0.9,
+    "textHash": "b63e20b213cd820f8301f80be310121cb87fbe98232acf1790ff82bf9669396d",
+    "utcScoredDateTime": "2026-10-05T16:13:26.191Z",
+    "product": "50-50 Season",
+    "productHash": "b63e20b213cd820f8301f80be310121cb87fbe98232acf1790ff82bf9669396d"
+  },
+  {
+    "pinId": 6224,
+    "sentiment": 0.7,
+    "textHash": "46828817e7eb69374224f9a4ce1353b750b34ecb5f94baa8564d012613ba5372",
+    "utcScoredDateTime": "2026-10-05T16:13:35.823Z",
+    "product": "Alice in Wonderland",
+    "productHash": "46828817e7eb69374224f9a4ce1353b750b34ecb5f94baa8564d012613ba5372"
+  },
+  {
+    "pinId": 6225,
+    "sentiment": 0.5,
+    "textHash": "13fc2ce6f831922c2d61994df209ea0e33356a3ce5545d40df56a236d2afe969",
+    "utcScoredDateTime": "2026-10-05T16:13:45.375Z",
+    "product": "Most expensive trading card at auction",
+    "productHash": "13fc2ce6f831922c2d61994df209ea0e33356a3ce5545d40df56a236d2afe969"
+  },
+  {
+    "pinId": 6226,
+    "sentiment": 0.8,
+    "textHash": "65311a5e4d5fcb86746ff8b5f8fff683e24a90eab0fbd8fcf65c98c7f63c6d51",
+    "utcScoredDateTime": "2026-10-05T16:13:58.917Z",
+    "product": "Peter Pan",
+    "productHash": "65311a5e4d5fcb86746ff8b5f8fff683e24a90eab0fbd8fcf65c98c7f63c6d51"
+  },
+  {
+    "pinId": 6227,
+    "sentiment": 0.4,
+    "textHash": "911cbf9ebfdeefa4dd24fef010f0aa2409ae4f08e237d6d54c205ea49f7a91b1",
+    "utcScoredDateTime": "2026-10-05T16:14:06.813Z",
+    "product": "Most expensive artwork at auction",
+    "productHash": "911cbf9ebfdeefa4dd24fef010f0aa2409ae4f08e237d6d54c205ea49f7a91b1"
+  },
+  {
+    "pinId": 6228,
+    "sentiment": 0.85,
+    "textHash": "3b0940c2691f31615aa5c4aecd60ab4b13ca20da782054edb6f43fab8ad1c0e8",
+    "utcScoredDateTime": "2026-10-05T16:14:19.257Z",
+    "product": "Lady and the Tramp",
+    "productHash": "3b0940c2691f31615aa5c4aecd60ab4b13ca20da782054edb6f43fab8ad1c0e8"
+  },
+  {
+    "pinId": 6229,
+    "sentiment": 0.9,
+    "textHash": "46b579e639c619a682f4e421ac760b012ab28b806b7ed6ba563d281156367144",
+    "utcScoredDateTime": "2026-10-05T16:14:30.067Z",
+    "product": "Booster recovery",
+    "productHash": "46b579e639c619a682f4e421ac760b012ab28b806b7ed6ba563d281156367144"
+  },
+  {
+    "pinId": 6230,
+    "sentiment": 0.8,
+    "textHash": "b3b66fac410df7de87617c6fef030765bfefaf3a574460dec860cb0aba412b39",
+    "utcScoredDateTime": "2026-10-05T16:14:42.749Z",
+    "product": "Sleeping Beauty",
+    "productHash": "b3b66fac410df7de87617c6fef030765bfefaf3a574460dec860cb0aba412b39"
+  },
+  {
+    "pinId": 6231,
+    "sentiment": 0.9,
+    "textHash": "29697fe931483fa6607db9911df4ff4449b05672ce2e69af6dea5f97ca8001ee",
+    "utcScoredDateTime": "2026-10-05T16:14:55.143Z",
+    "product": "First spacecraft in interstellar space",
+    "productHash": "29697fe931483fa6607db9911df4ff4449b05672ce2e69af6dea5f97ca8001ee"
+  },
+  {
+    "pinId": 6232,
+    "sentiment": 0.85,
+    "textHash": "8d399470f1ec576f8d9207b498a59dc5250f38a8270a564814c1c0884b3cde96",
+    "utcScoredDateTime": "2026-10-05T16:15:02.191Z",
+    "product": "One Hundred and One Dalmatians",
+    "productHash": "8d399470f1ec576f8d9207b498a59dc5250f38a8270a564814c1c0884b3cde96"
+  },
+  {
+    "pinId": 6233,
+    "sentiment": 0.6,
+    "textHash": "c4aa862597d9f79b1d40e823696a240d88ac8c3d9d183e2ce862239836782e9f",
+    "utcScoredDateTime": "2026-10-05T16:15:21.621Z",
+    "product": "The Sword in the Stone",
+    "productHash": "c4aa862597d9f79b1d40e823696a240d88ac8c3d9d183e2ce862239836782e9f"
+  },
+  {
+    "pinId": 6234,
+    "sentiment": 0.85,
+    "textHash": "aed725996c37191f347b95999fbd6789d8fc023d28ed9a0f8701339646d328c8",
+    "utcScoredDateTime": "2026-10-05T16:15:40.806Z",
+    "product": "The Jungle Book",
+    "productHash": "aed725996c37191f347b95999fbd6789d8fc023d28ed9a0f8701339646d328c8"
+  },
+  {
+    "pinId": 6235,
+    "sentiment": 0.75,
+    "textHash": "2769605893e34e06856fc07ffd8bee2bb1e120561955abfe2aa8de1ce73d5540",
+    "utcScoredDateTime": "2026-10-05T16:16:02.040Z",
+    "product": "The Aristocats",
+    "productHash": "2769605893e34e06856fc07ffd8bee2bb1e120561955abfe2aa8de1ce73d5540"
+  },
+  {
+    "pinId": 6236,
+    "sentiment": 0.7,
+    "textHash": "053ea0ba0ac8d2ed42f7057a0b62f78b4f7257463b7eaadbbdf8977f0e3635f3",
+    "utcScoredDateTime": "2026-10-05T16:16:21.676Z",
+    "product": "Robin Hood",
+    "productHash": "053ea0ba0ac8d2ed42f7057a0b62f78b4f7257463b7eaadbbdf8977f0e3635f3"
+  },
+  {
+    "pinId": 6237,
+    "sentiment": 0.75,
+    "textHash": "f8a8356da6cc528688e199fab87643cef62ba3f84072bf5e18b6e7e8f5cb7cd0",
+    "utcScoredDateTime": "2026-10-05T16:16:42.110Z",
+    "product": "Winnie the Pooh",
+    "productHash": "f8a8356da6cc528688e199fab87643cef62ba3f84072bf5e18b6e7e8f5cb7cd0"
+  },
+  {
+    "pinId": 6238,
+    "sentiment": 0.7,
+    "textHash": "98bacbc60bd6d9919b26bce1b86143b05cb1948dc9e2176945f14640ca855e93",
+    "utcScoredDateTime": "2026-10-05T16:17:01.689Z",
+    "product": "The Rescuers",
+    "productHash": "98bacbc60bd6d9919b26bce1b86143b05cb1948dc9e2176945f14640ca855e93"
+  },
+  {
+    "pinId": 6239,
+    "sentiment": 0.7,
+    "textHash": "bde6aeb3411e6feedef1cf8e63a59a467558557acae8bb76bbb10d98a0d4c3bf",
+    "utcScoredDateTime": "2026-10-05T16:17:21.795Z",
+    "product": "The Fox and the Hound",
+    "productHash": "bde6aeb3411e6feedef1cf8e63a59a467558557acae8bb76bbb10d98a0d4c3bf"
+  },
+  {
+    "pinId": 6240,
+    "sentiment": 0.1,
+    "textHash": "5de9936b9c6ee91d44a80a52219210b5db70726db2c8f65045d358e20f6bbfd9",
+    "utcScoredDateTime": "2026-10-05T16:17:40.238Z",
+    "product": "The Black Cauldron",
+    "productHash": "5de9936b9c6ee91d44a80a52219210b5db70726db2c8f65045d358e20f6bbfd9"
+  },
+  {
+    "pinId": 6241,
+    "sentiment": 0.6,
+    "textHash": "96039100abae363f649d43bd1e3e19e955c5f153e69b853c6efaa0f95f766b98",
+    "utcScoredDateTime": "2026-10-05T16:18:00.269Z",
+    "product": "The Great Mouse Detective",
+    "productHash": "96039100abae363f649d43bd1e3e19e955c5f153e69b853c6efaa0f95f766b98"
+  },
+  {
+    "pinId": 6242,
+    "sentiment": 0.6,
+    "textHash": "9589b600e39832eb8d8ca14beae05887e102c70e0b4f052e94f94b163ce7dc99",
+    "utcScoredDateTime": "2026-10-05T16:18:19.970Z",
+    "product": "Oliver & Company",
+    "productHash": "9589b600e39832eb8d8ca14beae05887e102c70e0b4f052e94f94b163ce7dc99"
+  },
+  {
+    "pinId": 6243,
+    "sentiment": 0.9,
+    "textHash": "9a2bb74122a20aa6b5be1b5cf42bb95b505c67769337d429517381bdae7dbeb5",
+    "utcScoredDateTime": "2026-10-05T16:18:39.561Z",
+    "product": "The Little Mermaid",
+    "productHash": "9a2bb74122a20aa6b5be1b5cf42bb95b505c67769337d429517381bdae7dbeb5"
+  },
+  {
+    "pinId": 6244,
+    "sentiment": 0.5,
+    "textHash": "dfd1fee44a7494655a533b692adade13143f648208676219c295a380ac873c01",
+    "utcScoredDateTime": "2026-10-05T16:18:58.242Z",
+    "product": "The Rescuers",
+    "productHash": "dfd1fee44a7494655a533b692adade13143f648208676219c295a380ac873c01"
+  },
+  {
+    "pinId": 6245,
+    "sentiment": 0.9,
+    "textHash": "6019e97204f9d95a6ddf13d3c5d13f12cfd32b482dd064b727d23e16e7891a47",
+    "utcScoredDateTime": "2026-10-05T16:19:18.630Z",
+    "product": "Beauty and the Beast",
+    "productHash": "6019e97204f9d95a6ddf13d3c5d13f12cfd32b482dd064b727d23e16e7891a47"
+  },
+  {
+    "pinId": 6246,
+    "sentiment": 0.85,
+    "textHash": "2c6632eb461df3d5e5ec712470a8f5a16920d0224af1e1d22b3a8a03facdec03",
+    "utcScoredDateTime": "2026-10-05T16:19:37.416Z",
+    "product": "Aladdin",
+    "productHash": "2c6632eb461df3d5e5ec712470a8f5a16920d0224af1e1d22b3a8a03facdec03"
+  },
+  {
+    "pinId": 6247,
+    "sentiment": 0.95,
+    "textHash": "32c319afbb0a97f97352f426f6947dfd0986e815c5303a8b165a1358318fb06a",
+    "utcScoredDateTime": "2026-10-05T16:19:56.832Z",
+    "product": "The Lion King",
+    "productHash": "32c319afbb0a97f97352f426f6947dfd0986e815c5303a8b165a1358318fb06a"
+  },
+  {
+    "pinId": 6248,
+    "sentiment": 0.6,
+    "textHash": "771a4f58cf086fe026bdcf070a9d9dbd65ccf10a8b549d17345373b24df92013",
+    "utcScoredDateTime": "2026-10-05T16:20:15.983Z",
+    "product": "Pocahontas",
+    "productHash": "771a4f58cf086fe026bdcf070a9d9dbd65ccf10a8b549d17345373b24df92013"
+  },
+  {
+    "pinId": 6249,
+    "sentiment": 0.65,
+    "textHash": "aa98d4aa6622cde070f06fa84ebd906938e6522d9f641df3a6f3f13b9b37ccc5",
+    "utcScoredDateTime": "2026-10-05T16:20:35.251Z",
+    "product": "The Hunchback of Notre Dame",
+    "productHash": "aa98d4aa6622cde070f06fa84ebd906938e6522d9f641df3a6f3f13b9b37ccc5"
+  },
+  {
+    "pinId": 6250,
+    "sentiment": 0.65,
+    "textHash": "bfc527336501e3f619865a00cec4c5346c066ee9eb05196c2306c2d5ad713999",
+    "utcScoredDateTime": "2026-10-05T16:20:54.175Z",
+    "product": "Hercules",
+    "productHash": "bfc527336501e3f619865a00cec4c5346c066ee9eb05196c2306c2d5ad713999"
+  },
+  {
+    "pinId": 6251,
+    "sentiment": 0.85,
+    "textHash": "05f774c5064688d81a91072d33523b061bc71789842fd60bb9479005c7ddbdc9",
+    "utcScoredDateTime": "2026-10-05T16:21:12.631Z",
+    "product": "Mulan",
+    "productHash": "05f774c5064688d81a91072d33523b061bc71789842fd60bb9479005c7ddbdc9"
+  },
+  {
+    "pinId": 6252,
+    "sentiment": 0.8,
+    "textHash": "f6947504eb320303e02d8a89384f26a005076f615e2892889d28a6b7bd0dd810",
+    "utcScoredDateTime": "2026-10-05T16:21:31.517Z",
+    "product": "Tarzan",
+    "productHash": "f6947504eb320303e02d8a89384f26a005076f615e2892889d28a6b7bd0dd810"
+  },
+  {
+    "pinId": 6253,
+    "sentiment": 0.4,
+    "textHash": "8579067f1de4c2f6e535c9fd10a4ba1f4adeb89e5a21cb745c4d84976a8c4253",
+    "utcScoredDateTime": "2026-10-05T16:21:50.447Z",
+    "product": "Dinosaur",
+    "productHash": "8579067f1de4c2f6e535c9fd10a4ba1f4adeb89e5a21cb745c4d84976a8c4253"
+  },
+  {
+    "pinId": 6254,
+    "sentiment": 0.4,
+    "textHash": "270b95a02d93a71dfd313e835c562617fff86fb1bb9a45c01c2df375c0eb908c",
+    "utcScoredDateTime": "2026-10-05T16:22:09.803Z",
+    "product": "Fantasia",
+    "productHash": "270b95a02d93a71dfd313e835c562617fff86fb1bb9a45c01c2df375c0eb908c"
+  },
+  {
+    "pinId": 6255,
+    "sentiment": 0.7,
+    "textHash": "aacfb1d8a8fc258913c84937c188971332470f0d19669d3e287c793ea9df9ce5",
+    "utcScoredDateTime": "2026-10-05T16:22:28.638Z",
+    "product": "The Emperor's New Groove",
+    "productHash": "aacfb1d8a8fc258913c84937c188971332470f0d19669d3e287c793ea9df9ce5"
+  },
+  {
+    "pinId": 6256,
+    "sentiment": 0.4,
+    "textHash": "3d24bdfe7a6837962d3c719860517887765bc23a97fd8446405c8ab67d701f9c",
+    "utcScoredDateTime": "2026-10-05T16:22:46.984Z",
+    "product": "Atlantis: The Lost Empire",
+    "productHash": "3d24bdfe7a6837962d3c719860517887765bc23a97fd8446405c8ab67d701f9c"
+  },
+  {
+    "pinId": 6257,
+    "sentiment": 0.85,
+    "textHash": "ca802bf5c439372cae3b5b5de0f81ecd11cd44023f46e211693c9df81b1078c1",
+    "utcScoredDateTime": "2026-10-05T16:23:06.411Z",
+    "product": "Lilo & Stitch",
+    "productHash": "ca802bf5c439372cae3b5b5de0f81ecd11cd44023f46e211693c9df81b1078c1"
+  },
+  {
+    "pinId": 6258,
+    "sentiment": 0.2,
+    "textHash": "65c813b140b2cdd18cbd6de8677a8d7471d7deddf2acdd897ff8edacb6e2a213",
+    "utcScoredDateTime": "2026-10-05T16:23:25.489Z",
+    "product": "Treasure Planet",
+    "productHash": "65c813b140b2cdd18cbd6de8677a8d7471d7deddf2acdd897ff8edacb6e2a213"
+  },
+  {
+    "pinId": 6259,
+    "sentiment": 0.5,
+    "textHash": "1e64fd03fbaa28aba45de55f0cd73969c21f1fb82e0a893eaab14455e90b84cc",
+    "utcScoredDateTime": "2026-10-05T16:23:44.678Z",
+    "product": "Brother Bear",
+    "productHash": "1e64fd03fbaa28aba45de55f0cd73969c21f1fb82e0a893eaab14455e90b84cc"
+  },
+  {
+    "pinId": 6260,
+    "sentiment": 0.2,
+    "textHash": "044e8e1907ee916c1423fcc28213a3a5f863e6d50ef753864225adbe256de784",
+    "utcScoredDateTime": "2026-10-05T16:24:03.335Z",
+    "product": "Home on the Range",
+    "productHash": "044e8e1907ee916c1423fcc28213a3a5f863e6d50ef753864225adbe256de784"
+  },
+  {
+    "pinId": 6261,
+    "sentiment": 0.3,
+    "textHash": "7840483f315bc449d87648606902084198e6e6cb360a4cb8cd21a6755b47855a",
+    "utcScoredDateTime": "2026-10-05T16:24:22.059Z",
+    "product": "Chicken Little",
+    "productHash": "7840483f315bc449d87648606902084198e6e6cb360a4cb8cd21a6755b47855a"
+  },
+  {
+    "pinId": 6262,
+    "sentiment": 0.5,
+    "textHash": "9152c49baf203010fc811b23ff6c9f260142e9eb18383ae9f9446cb1e59537f5",
+    "utcScoredDateTime": "2026-10-05T16:24:41.079Z",
+    "product": "Meet the Robinsons",
+    "productHash": "9152c49baf203010fc811b23ff6c9f260142e9eb18383ae9f9446cb1e59537f5"
+  },
+  {
+    "pinId": 6263,
+    "sentiment": 0.6,
+    "textHash": "a9c96b28ddd8f74fb0bc24aa725b817633e174556c76b9ddab3c8b987d0cdb9f",
+    "utcScoredDateTime": "2026-10-05T16:25:03.489Z",
+    "product": "Bolt",
+    "productHash": "a9c96b28ddd8f74fb0bc24aa725b817633e174556c76b9ddab3c8b987d0cdb9f"
+  },
+  {
+    "pinId": 6264,
+    "sentiment": 0.75,
+    "textHash": "2ca9590f3f1ac2ece859e1b165f0133b864d222c919465af1840ec582c676e80",
+    "utcScoredDateTime": "2026-10-05T16:25:22.865Z",
+    "product": "The Princess and the Frog",
+    "productHash": "2ca9590f3f1ac2ece859e1b165f0133b864d222c919465af1840ec582c676e80"
+  },
+  {
+    "pinId": 6265,
+    "sentiment": 0.85,
+    "textHash": "92418808217b6a8e7ed4544ee90c41c7fe0ad5c767119d4d9ff21d873dbc88e7",
+    "utcScoredDateTime": "2026-10-05T16:25:42.466Z",
+    "product": "Tangled",
+    "productHash": "92418808217b6a8e7ed4544ee90c41c7fe0ad5c767119d4d9ff21d873dbc88e7"
+  },
+  {
+    "pinId": 6266,
+    "sentiment": 0.6,
+    "textHash": "596587e46e53ebc29b1ddfed422c40b830f1a01f13bf42b909fa076bb4da2d92",
+    "utcScoredDateTime": "2026-10-05T16:26:01.250Z",
+    "product": "Winnie the Pooh",
+    "productHash": "596587e46e53ebc29b1ddfed422c40b830f1a01f13bf42b909fa076bb4da2d92"
+  },
+  {
+    "pinId": 6267,
+    "sentiment": 0.85,
+    "textHash": "e1e1659a1c347d758e4cb986c09adee230f6d494a576362bdf8ee5e43b61fade",
+    "utcScoredDateTime": "2026-10-05T16:26:20.280Z",
+    "product": "Wreck-It Ralph",
+    "productHash": "e1e1659a1c347d758e4cb986c09adee230f6d494a576362bdf8ee5e43b61fade"
+  },
+  {
+    "pinId": 6268,
+    "sentiment": 0.9,
+    "textHash": "1ac5e8c9c9f47de7da51346a87fcbdbfd3af5f2b0ed1edd5d40ca5996241f8e3",
+    "utcScoredDateTime": "2026-10-05T16:26:40.681Z",
+    "product": "Big Hero 6",
+    "productHash": "1ac5e8c9c9f47de7da51346a87fcbdbfd3af5f2b0ed1edd5d40ca5996241f8e3"
+  },
+  {
+    "pinId": 6269,
+    "sentiment": 0.9,
+    "textHash": "eb8c0992900d667bdd5e6c2e824327bd4a0bdb7fadfde639183991bffeb3aac7",
+    "utcScoredDateTime": "2026-10-05T16:27:00.075Z",
+    "product": "Zootopia",
+    "productHash": "eb8c0992900d667bdd5e6c2e824327bd4a0bdb7fadfde639183991bffeb3aac7"
+  },
+  {
+    "pinId": 6270,
+    "sentiment": 0.9,
+    "textHash": "9ebe292c1dc5bf174b790f9bfee22ded31a59a5bfbe455a5bf62b1d9d1173c76",
+    "utcScoredDateTime": "2026-10-05T16:27:19.665Z",
+    "product": "Moana",
+    "productHash": "9ebe292c1dc5bf174b790f9bfee22ded31a59a5bfbe455a5bf62b1d9d1173c76"
+  },
+  {
+    "pinId": 6271,
+    "sentiment": 0.7,
+    "textHash": "8e26ed40c4d028ce59f8bd69195eb009ea4f3269df4aace862af4b8825efe854",
+    "utcScoredDateTime": "2026-10-05T16:27:38.514Z",
+    "product": "Wreck-It Ralph",
+    "productHash": "8e26ed40c4d028ce59f8bd69195eb009ea4f3269df4aace862af4b8825efe854"
+  },
+  {
+    "pinId": 6272,
+    "sentiment": 0.7,
+    "textHash": "81b98275635709ddc1aa9b7af4fdb71f1103920b5c208f2bdc7a7cec7c853b04",
+    "utcScoredDateTime": "2026-10-05T16:27:57.651Z",
+    "product": "Raya and the Last Dragon",
+    "productHash": "81b98275635709ddc1aa9b7af4fdb71f1103920b5c208f2bdc7a7cec7c853b04"
+  },
+  {
+    "pinId": 6273,
+    "sentiment": 0.9,
+    "textHash": "d38881a8581ccf3e4f4fc551ac1a64ef548f784ae9dfdf3d7e389b3393636a29",
+    "utcScoredDateTime": "2026-10-05T16:28:17.564Z",
+    "product": "Encanto",
+    "productHash": "d38881a8581ccf3e4f4fc551ac1a64ef548f784ae9dfdf3d7e389b3393636a29"
+  },
+  {
+    "pinId": 6274,
+    "sentiment": 0.3,
+    "textHash": "521befd9fdb478a6e60ffc30a3e78c14421b9feae5e0cb25eea41124324e38fd",
+    "utcScoredDateTime": "2026-10-05T16:28:36.862Z",
+    "product": "Strange World",
+    "productHash": "521befd9fdb478a6e60ffc30a3e78c14421b9feae5e0cb25eea41124324e38fd"
+  },
+  {
+    "pinId": 6275,
+    "sentiment": 0.3,
+    "textHash": "7f9bb9147f9cee5443da658970baa2399cdf120c76624d05bd05dd421941f9e0",
+    "utcScoredDateTime": "2026-10-05T16:28:58.890Z",
+    "product": "Wish",
+    "productHash": "7f9bb9147f9cee5443da658970baa2399cdf120c76624d05bd05dd421941f9e0"
+  },
+  {
+    "pinId": 6276,
+    "sentiment": 0.7,
+    "textHash": "db1306f4f8a3cab08890c0b15ae8679f6caafc585c492870caac99f71f9e2883",
+    "utcScoredDateTime": "2026-10-05T16:29:23.840Z",
+    "product": "Moana",
+    "productHash": "db1306f4f8a3cab08890c0b15ae8679f6caafc585c492870caac99f71f9e2883"
+  },
+  {
+    "pinId": 6277,
+    "sentiment": 0.8,
+    "textHash": "51d8d4eefd1592188f86cb78a4cb8c46f2158d18a58ae07fd62afe8cadd4bd90",
+    "utcScoredDateTime": "2026-10-05T16:29:45.402Z",
+    "product": "Zootopia",
+    "productHash": "51d8d4eefd1592188f86cb78a4cb8c46f2158d18a58ae07fd62afe8cadd4bd90"
+  },
+  {
+    "pinId": 6278,
+    "sentiment": 0.4,
+    "textHash": "e5a6963083cab487d79f8f40d11d85c706ddd9b744b9ea55eab3f353bfee00d6",
+    "utcScoredDateTime": "2026-10-05T16:30:04.976Z",
+    "product": "Hexed",
+    "productHash": "e5a6963083cab487d79f8f40d11d85c706ddd9b744b9ea55eab3f353bfee00d6"
+  },
+  {
+    "pinId": 6279,
+    "sentiment": 0.7,
+    "textHash": "871b23702d21d5d1f02454cfd9d97c5f159ded98415038ca27ca54e5c78816c8",
+    "utcScoredDateTime": "2026-10-05T16:30:28.506Z",
+    "product": "Pirates of the Caribbean",
+    "productHash": "871b23702d21d5d1f02454cfd9d97c5f159ded98415038ca27ca54e5c78816c8"
+  },
+  {
+    "pinId": 6280,
+    "sentiment": 0.5,
+    "textHash": "76bbe3837c09d6f1af29f95c732fbc35f05bb479d8b0a9886ae70f2e8b0babcd",
+    "utcScoredDateTime": "2026-10-05T16:30:49.746Z",
+    "product": "Pirates of the Caribbean",
+    "productHash": "76bbe3837c09d6f1af29f95c732fbc35f05bb479d8b0a9886ae70f2e8b0babcd"
+  },
+  {
+    "pinId": 6281,
+    "sentiment": 0.3,
+    "textHash": "98b831bfb5a50b6f936bf39328af1ef0bbff12817841cfcda7c66ae29f1c10a5",
+    "utcScoredDateTime": "2026-10-05T16:31:12.160Z",
+    "product": "Pirates of the Caribbean",
+    "productHash": "98b831bfb5a50b6f936bf39328af1ef0bbff12817841cfcda7c66ae29f1c10a5"
+  },
+  {
+    "pinId": 6282,
+    "sentiment": 0.2,
+    "textHash": "f58bd41a2be8ab597bbaf2307d0a7711c25dd30a3161481a693dae6dec69aec5",
+    "utcScoredDateTime": "2026-10-05T16:31:33.485Z",
+    "product": "Pirates of the Caribbean",
+    "productHash": "f58bd41a2be8ab597bbaf2307d0a7711c25dd30a3161481a693dae6dec69aec5"
+  },
+  {
+    "pinId": 6283,
+    "sentiment": 0.1,
+    "textHash": "df3d502d36d98db338f3c1ab179dda24ee796fa5ee4860277e0ac918e4923700",
+    "utcScoredDateTime": "2026-10-05T16:31:55.188Z",
+    "product": "Pirates of the Caribbean",
+    "productHash": "df3d502d36d98db338f3c1ab179dda24ee796fa5ee4860277e0ac918e4923700"
+  },
+  {
+    "pinId": 6284,
+    "sentiment": 0.7,
+    "textHash": "71a83bc77a896175f53ba428da0fb9f5d3a4b05ed5599afc09e05302e5baa549",
+    "utcScoredDateTime": "2026-10-05T16:32:16.532Z",
+    "product": "Planet of the Apes",
+    "productHash": "71a83bc77a896175f53ba428da0fb9f5d3a4b05ed5599afc09e05302e5baa549"
+  },
+  {
+    "pinId": 6285,
+    "sentiment": 0.7,
+    "textHash": "6f375c4a27f579182c29a17e2cf75306017f63d2a1b0a30e9a179d2551c21f96",
+    "utcScoredDateTime": "2026-10-05T16:32:37.427Z",
+    "product": "Planet of the Apes",
+    "productHash": "6f375c4a27f579182c29a17e2cf75306017f63d2a1b0a30e9a179d2551c21f96"
+  },
+  {
+    "pinId": 6286,
+    "sentiment": 0.7,
+    "textHash": "a166a4b55e8796abc29266ff58a0e279cec0b5f1c3b1e36e5847d0f97e54a54f",
+    "utcScoredDateTime": "2026-10-05T16:33:00.682Z",
+    "product": "Planet of the Apes",
+    "productHash": "a166a4b55e8796abc29266ff58a0e279cec0b5f1c3b1e36e5847d0f97e54a54f"
+  },
+  {
+    "pinId": 6287,
+    "sentiment": 0.5,
+    "textHash": "f6f1534db344a8741f2ccea03c3d055cf50c933eec564e7a3d97a554be990c9d",
+    "utcScoredDateTime": "2026-10-05T16:33:22.054Z",
+    "product": "Planet of the Apes",
+    "productHash": "f6f1534db344a8741f2ccea03c3d055cf50c933eec564e7a3d97a554be990c9d"
+  },
+  {
+    "pinId": 6288,
+    "sentiment": 0.5,
+    "textHash": "b9705d767f7e968027916fb8782fc5fb2801fa11331e4bd6394cf3c65b8d7f75",
+    "utcScoredDateTime": "2026-10-05T16:33:46.385Z",
+    "product": "Tron",
+    "productHash": "b9705d767f7e968027916fb8782fc5fb2801fa11331e4bd6394cf3c65b8d7f75"
+  },
+  {
+    "pinId": 6289,
+    "sentiment": 0,
+    "textHash": "7f6eaee84e05b488ffa89791966058a48f6079468bdb55581647b846ffebac85",
+    "utcScoredDateTime": "2026-10-05T16:34:07.895Z",
+    "product": "Tron",
+    "productHash": "7f6eaee84e05b488ffa89791966058a48f6079468bdb55581647b846ffebac85"
+  },
+  {
+    "pinId": 6290,
+    "sentiment": 0.3,
+    "textHash": "75c1d160ad56f9d3ed0aba19905bad6906511c11803b5bd016feeecbcaa64289",
+    "utcScoredDateTime": "2026-10-05T16:34:44.276Z",
+    "product": "Maleficent",
+    "productHash": "75c1d160ad56f9d3ed0aba19905bad6906511c11803b5bd016feeecbcaa64289"
+  },
+  {
+    "pinId": 6291,
+    "sentiment": 0.1,
+    "textHash": "15020360fc985246b771cd32aa04e611bbac0bf676ab960f78215e574b7d2c87",
+    "utcScoredDateTime": "2026-10-05T16:35:09.300Z",
+    "product": "Maleficent",
+    "productHash": "15020360fc985246b771cd32aa04e611bbac0bf676ab960f78215e574b7d2c87"
+  },
+  {
+    "pinId": 6292,
+    "sentiment": 0.5,
+    "textHash": "35b09cad0ab662fb58db3f563f043f704e75feab47fb76d73dcf516f70b2a9f3",
+    "utcScoredDateTime": "2026-10-05T16:35:32.041Z",
+    "product": "The Lion King",
+    "productHash": "35b09cad0ab662fb58db3f563f043f704e75feab47fb76d73dcf516f70b2a9f3"
+  },
+  {
+    "pinId": 6293,
+    "sentiment": 0.3,
+    "textHash": "59c719916a4da7c22c9050292f8a564a64ceee622cd211b36d963c28bc387938",
+    "utcScoredDateTime": "2026-10-05T16:35:55.197Z",
+    "product": "The Lion King",
+    "productHash": "59c719916a4da7c22c9050292f8a564a64ceee622cd211b36d963c28bc387938"
+  },
+  {
+    "pinId": 6294,
+    "sentiment": 0.7,
+    "textHash": "39b623980502f7b741c2180ace75c0b2b2ebdcdea3c0a92cdb414fa0a6ab2dff",
+    "utcScoredDateTime": "2026-10-05T16:36:19.924Z",
+    "product": "Avatar",
+    "productHash": "39b623980502f7b741c2180ace75c0b2b2ebdcdea3c0a92cdb414fa0a6ab2dff"
+  },
+  {
+    "pinId": 6295,
+    "sentiment": 0.5,
+    "textHash": "fa508bf44a2414009553c84db315ca317ab7fcfc54bfeb1db02500d776968a68",
+    "utcScoredDateTime": "2026-10-05T16:36:50.355Z",
+    "product": "Avatar",
+    "productHash": "fa508bf44a2414009553c84db315ca317ab7fcfc54bfeb1db02500d776968a68"
+  },
+  {
+    "pinId": 6296,
+    "sentiment": 0.8,
+    "textHash": "0552f876fd97e74d1a793d0859e7ac41bab38c1881be119262cbadf72bafae7f",
+    "utcScoredDateTime": "2026-10-05T16:38:16.428Z",
+    "product": "Predator",
+    "productHash": "0552f876fd97e74d1a793d0859e7ac41bab38c1881be119262cbadf72bafae7f"
+  },
+  {
+    "pinId": 6297,
+    "sentiment": 0.6,
+    "textHash": "553ddab3dc73cd6fd926a1f9e0ec35c4b1fb18fe573b66d478c5f33549fbd2ae",
+    "utcScoredDateTime": "2026-10-05T16:38:41.215Z",
+    "product": "Predator",
+    "productHash": "553ddab3dc73cd6fd926a1f9e0ec35c4b1fb18fe573b66d478c5f33549fbd2ae"
+  },
+  {
+    "pinId": 6298,
+    "sentiment": 0.4,
+    "textHash": "e80d3619f25b250e4e3ec365c9a849e5b8b012f723a8072a877a1e50fc917797",
+    "utcScoredDateTime": "2026-10-05T16:39:05.805Z",
+    "product": "Alice in Wonderland",
+    "productHash": "e80d3619f25b250e4e3ec365c9a849e5b8b012f723a8072a877a1e50fc917797"
+  },
+  {
+    "pinId": 6299,
+    "sentiment": 0.6,
+    "textHash": "3406ecade4adbcfa21922c1eb340ec05efb263e506f7f04417f49c3322bdfcdc",
+    "utcScoredDateTime": "2026-10-05T16:39:28.875Z",
+    "product": "Cinderella",
+    "productHash": "3406ecade4adbcfa21922c1eb340ec05efb263e506f7f04417f49c3322bdfcdc"
+  },
+  {
+    "pinId": 6300,
+    "sentiment": 0,
+    "textHash": "2c6940a68b92c35c548634c4a1a47bcebf28591314045b677a924b4a296f8793",
+    "utcScoredDateTime": "2026-10-05T16:39:53.248Z",
+    "product": "Tomorrowland",
+    "productHash": "2c6940a68b92c35c548634c4a1a47bcebf28591314045b677a924b4a296f8793"
+  },
+  {
+    "pinId": 6301,
+    "sentiment": 0.7,
+    "textHash": "16c69dc226a858b7ea4f422b9a9d0333712b8edebd8fc9744c19f07ae9570b25",
+    "utcScoredDateTime": "2026-10-05T16:40:18.720Z",
+    "product": "The Jungle Book",
+    "productHash": "16c69dc226a858b7ea4f422b9a9d0333712b8edebd8fc9744c19f07ae9570b25"
+  },
+  {
+    "pinId": 6302,
+    "sentiment": 0.5,
+    "textHash": "0280bb59784f8eb1c15303a687d8e6485352b512caca5f8faceeb8450964174c",
+    "utcScoredDateTime": "2026-10-05T16:40:43.176Z",
+    "product": "Pete's Dragon",
+    "productHash": "0280bb59784f8eb1c15303a687d8e6485352b512caca5f8faceeb8450964174c"
+  },
+  {
+    "pinId": 6303,
+    "sentiment": 0.6,
+    "textHash": "c88185e0c1a7a971be4593b3df2a4e6d18598dc2c6e2047858d5ecff48372cd1",
+    "utcScoredDateTime": "2026-10-05T16:41:07.835Z",
+    "product": "Beauty and the Beast",
+    "productHash": "c88185e0c1a7a971be4593b3df2a4e6d18598dc2c6e2047858d5ecff48372cd1"
+  },
+  {
+    "pinId": 6304,
+    "sentiment": 0.6,
+    "textHash": "692ff6f0a35371f318ddc5645ebaa703433f6959441eebe0775b58870a58d9a1",
+    "utcScoredDateTime": "2026-10-05T16:41:31.265Z",
+    "product": "Mary Poppins",
+    "productHash": "692ff6f0a35371f318ddc5645ebaa703433f6959441eebe0775b58870a58d9a1"
+  },
+  {
+    "pinId": 6305,
+    "sentiment": 0,
+    "textHash": "afb48af08107133d9876dc2cb8e0a6b40ce6f83718b214538d2550537f6d2dd0",
+    "utcScoredDateTime": "2026-10-05T16:41:56.844Z",
+    "product": "Dumbo",
+    "productHash": "afb48af08107133d9876dc2cb8e0a6b40ce6f83718b214538d2550537f6d2dd0"
+  },
+  {
+    "pinId": 6306,
+    "sentiment": 0.5,
+    "textHash": "5ba0af451c9eacdafbe3c5382542ef621406c7be62e46b4c4b72365955f4a5b2",
+    "utcScoredDateTime": "2026-10-05T16:42:21.502Z",
+    "product": "Aladdin",
+    "productHash": "5ba0af451c9eacdafbe3c5382542ef621406c7be62e46b4c4b72365955f4a5b2"
+  },
+  {
+    "pinId": 6307,
+    "sentiment": 0.6,
+    "textHash": "8781d8c4c3f7ef2b83a10b41e02fc69ceead399363c3347c40ad0c7469e94fea",
+    "utcScoredDateTime": "2026-10-05T16:42:46.384Z",
+    "product": "Jojo Rabbit",
+    "productHash": "8781d8c4c3f7ef2b83a10b41e02fc69ceead399363c3347c40ad0c7469e94fea"
+  },
+  {
+    "pinId": 6308,
+    "sentiment": 0.8,
+    "textHash": "ca0bbd491abc377ec317ced861c181dfc4aceb42d49532011cdecc9d086bf37a",
+    "utcScoredDateTime": "2026-10-05T16:43:15.179Z",
+    "product": "Ford v Ferrari",
+    "productHash": "ca0bbd491abc377ec317ced861c181dfc4aceb42d49532011cdecc9d086bf37a"
+  },
+  {
+    "pinId": 6309,
+    "sentiment": 0.1,
+    "textHash": "f80fa26f76ae73d06131f009fb8cf873196de9ad3e4593180dbc50f20dcf6db6",
+    "utcScoredDateTime": "2026-10-05T16:43:39.393Z",
+    "product": "Mulan",
+    "productHash": "f80fa26f76ae73d06131f009fb8cf873196de9ad3e4593180dbc50f20dcf6db6"
+  },
+  {
+    "pinId": 6310,
+    "sentiment": 0.5,
+    "textHash": "8ab0b920cebb63eebe1336d6ff721b440207b4c23521091fde799caa200bad71",
+    "utcScoredDateTime": "2026-10-05T16:44:07.781Z",
+    "product": "101 Dalmatians",
+    "productHash": "8ab0b920cebb63eebe1336d6ff721b440207b4c23521091fde799caa200bad71"
+  },
+  {
+    "pinId": 6311,
+    "sentiment": 0.2,
+    "textHash": "24b943866b1e141067863a41b2512501f8ab3090b81ef3232ea23df1b3ec1967",
+    "utcScoredDateTime": "2026-10-05T16:44:37.545Z",
+    "product": "Jungle Cruise",
+    "productHash": "24b943866b1e141067863a41b2512501f8ab3090b81ef3232ea23df1b3ec1967"
+  },
+  {
+    "pinId": 6312,
+    "sentiment": 0.6,
+    "textHash": "0b1fd4cd8e2aa98ab336fecf7d6403fd9805804165a40aa5168e1ee413f5077d",
+    "utcScoredDateTime": "2026-10-05T16:45:03.410Z",
+    "product": "Free Guy",
+    "productHash": "0b1fd4cd8e2aa98ab336fecf7d6403fd9805804165a40aa5168e1ee413f5077d"
+  },
+  {
+    "pinId": 6313,
+    "sentiment": -0.2,
+    "textHash": "c3564ce4b85e42abfa4c0711e11a026c54b7a3e1ce9d91d1dc1f6cad0bd63828",
+    "utcScoredDateTime": "2026-10-05T16:45:48.694Z",
+    "product": "Pinocchio",
+    "productHash": "c3564ce4b85e42abfa4c0711e11a026c54b7a3e1ce9d91d1dc1f6cad0bd63828"
+  },
+  {
+    "pinId": 6314,
+    "sentiment": 0.7,
+    "textHash": "0e7f934d9673c086c1c75136e06805e3d2a543810927cee5641ce5c657b715e7",
+    "utcScoredDateTime": "2026-10-05T16:46:16.455Z",
+    "product": "The Banshees of Inisherin",
+    "productHash": "0e7f934d9673c086c1c75136e06805e3d2a543810927cee5641ce5c657b715e7"
+  },
+  {
+    "pinId": 6315,
+    "sentiment": 0.5,
+    "textHash": "f9424a97460d68c74634fb0977210b74d99027eab09157873392dfc507d43ad5",
+    "utcScoredDateTime": "2026-10-05T16:46:45.849Z",
+    "product": "The Menu",
+    "productHash": "f9424a97460d68c74634fb0977210b74d99027eab09157873392dfc507d43ad5"
+  },
+  {
+    "pinId": 6316,
+    "sentiment": 0,
+    "textHash": "2a1911f0167b16ed7b00d5711470df5ffe87c04df514a93f93e07891f313f9a6",
+    "utcScoredDateTime": "2026-10-05T16:47:20.331Z",
+    "product": "Peter Pan",
+    "productHash": "2a1911f0167b16ed7b00d5711470df5ffe87c04df514a93f93e07891f313f9a6"
+  },
+  {
+    "pinId": 6317,
+    "sentiment": 0.3,
+    "textHash": "d126052f4d4c5daa13265b00467d5c2f59018653407ec698a4709b685a3020a0",
+    "utcScoredDateTime": "2026-10-05T16:47:49.604Z",
+    "product": "The Little Mermaid",
+    "productHash": "d126052f4d4c5daa13265b00467d5c2f59018653407ec698a4709b685a3020a0"
+  },
+  {
+    "pinId": 6318,
+    "sentiment": 0.7,
+    "textHash": "aa7065f297498c2e00418074195d2006ad38d39dad95e6d484039c5a4539d633",
+    "utcScoredDateTime": "2026-10-05T16:48:17.069Z",
+    "product": "Poor Things",
+    "productHash": "aa7065f297498c2e00418074195d2006ad38d39dad95e6d484039c5a4539d633"
+  },
+  {
+    "pinId": 6319,
+    "sentiment": 0.6,
+    "textHash": "dd3582c85669987d8a7561c68dad5642308efdd3d25677c9b73908c78458654f",
+    "utcScoredDateTime": "2026-10-05T16:48:44.377Z",
+    "product": "Alien",
+    "productHash": "dd3582c85669987d8a7561c68dad5642308efdd3d25677c9b73908c78458654f"
+  },
+  {
+    "pinId": 6320,
+    "sentiment": -0.2,
+    "textHash": "cc7f1e254653a3c35450f6931af14c31b697918f5106027dc693557cc3909a9b",
+    "utcScoredDateTime": "2026-10-05T16:49:09.741Z",
+    "product": "Snow White",
+    "productHash": "cc7f1e254653a3c35450f6931af14c31b697918f5106027dc693557cc3909a9b"
+  },
+  {
+    "pinId": 6321,
+    "sentiment": 0.7,
+    "textHash": "dcdc427a86af7e11a1085c452c20ddc771c5efb609bd89165ceb29879477818d",
+    "utcScoredDateTime": "2026-10-05T16:49:37.993Z",
+    "product": "Lilo & Stitch",
+    "productHash": "dcdc427a86af7e11a1085c452c20ddc771c5efb609bd89165ceb29879477818d"
+  },
+  {
+    "pinId": 6322,
+    "sentiment": 0.6,
+    "textHash": "665aa2d92f26ea7969d83c8738232c6d0ec8f7c261018c602a5fa919266f9598",
+    "utcScoredDateTime": "2026-10-05T20:20:17.843Z",
+    "product": "Seamaster",
+    "productHash": "665aa2d92f26ea7969d83c8738232c6d0ec8f7c261018c602a5fa919266f9598"
+  },
+  {
+    "pinId": 6323,
+    "sentiment": 0.6,
+    "textHash": "799439f8029e9c9450f7d46f12b9c32ec43a97e2fdbf2df85079aa967296326a",
+    "utcScoredDateTime": "2026-10-05T20:20:36.723Z",
+    "product": "Seamaster Diver 300M",
+    "productHash": "799439f8029e9c9450f7d46f12b9c32ec43a97e2fdbf2df85079aa967296326a"
+  },
+  {
+    "pinId": 6324,
+    "sentiment": 0.6,
+    "textHash": "9429cdb5483d61901feb9090e6d54bcf08bdb8c9af8ab2e2c2c3dcbf19afbef5",
+    "utcScoredDateTime": "2026-10-05T20:20:58.948Z",
+    "product": "Watch Art Grand Exhibition",
+    "productHash": "9429cdb5483d61901feb9090e6d54bcf08bdb8c9af8ab2e2c2c3dcbf19afbef5"
+  },
+  {
+    "pinId": 6325,
+    "sentiment": 0.5,
+    "textHash": "5e101dc1be1687451b9d525a8f55b5461206bf7a5713500cf85469e16090e353",
+    "utcScoredDateTime": "2026-10-05T20:21:18.138Z",
+    "product": "Prospex",
+    "productHash": "5e101dc1be1687451b9d525a8f55b5461206bf7a5713500cf85469e16090e353"
+  },
+  {
+    "pinId": 6326,
+    "sentiment": 0.5,
+    "textHash": "7a8a7e4d72948c1d9f30cd8fdbdda37d6dfd3549412293c15c6515676524ea8e",
+    "utcScoredDateTime": "2026-10-05T20:22:09.956Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6327,
+    "sentiment": 0.7,
+    "textHash": "0f366d0099f3c26cafb7330d72b2060bac72e95cc1379a41b56200a4b1896875",
+    "utcScoredDateTime": "2026-10-05T20:22:30.583Z",
+    "product": "Speedmaster",
+    "productHash": "0f366d0099f3c26cafb7330d72b2060bac72e95cc1379a41b56200a4b1896875"
+  },
+  {
+    "pinId": 6328,
+    "sentiment": 0.6,
+    "textHash": "de6528933d0e68175e75b201af0396a1124b3860d61a74e9d2aa14ad3ad83beb",
+    "utcScoredDateTime": "2026-10-05T20:22:50.641Z",
+    "product": "El Primero",
+    "productHash": "de6528933d0e68175e75b201af0396a1124b3860d61a74e9d2aa14ad3ad83beb"
+  },
+  {
+    "pinId": 6329,
+    "sentiment": 0.6,
+    "textHash": "54c83286554404413d200c3432d41dc8f411972a67042b62886647dc6a457c6a",
+    "utcScoredDateTime": "2026-10-05T20:23:13.157Z",
+    "product": "Monaco",
+    "productHash": "54c83286554404413d200c3432d41dc8f411972a67042b62886647dc6a457c6a"
+  },
+  {
+    "pinId": 6330,
+    "sentiment": 0.8,
+    "textHash": "8e748ae2ba8790d2568e2d2fd60b26ed24efdd4e1ed7a641045805fa64992214",
+    "utcScoredDateTime": "2026-10-05T20:24:09.138Z",
+    "product": "Speedmaster",
+    "productHash": "8e748ae2ba8790d2568e2d2fd60b26ed24efdd4e1ed7a641045805fa64992214"
+  },
+  {
+    "pinId": 6331,
+    "sentiment": 0.7,
+    "textHash": "e6c4be740a07e8757dd43aa5f36be2eb30c8cff66794d80f2738cac82d9b5445",
+    "utcScoredDateTime": "2026-10-05T20:24:27.759Z",
+    "product": "Astron",
+    "productHash": "e6c4be740a07e8757dd43aa5f36be2eb30c8cff66794d80f2738cac82d9b5445"
+  },
+  {
+    "pinId": 6332,
+    "sentiment": 0.6,
+    "textHash": "2be6956ee60eb1b37628cacf836ba5c7aaa70c32bc6392f9289b19aac2a326a2",
+    "utcScoredDateTime": "2026-10-05T20:24:47.184Z",
+    "product": "Pulsar",
+    "productHash": "2be6956ee60eb1b37628cacf836ba5c7aaa70c32bc6392f9289b19aac2a326a2"
+  },
+  {
+    "pinId": 6333,
+    "sentiment": 0.7,
+    "textHash": "edf0fa1e4efa1514e5de32f7432446e879e76fa8e0330be88615e1722320ffba",
+    "utcScoredDateTime": "2026-10-05T20:25:08.803Z",
+    "product": "Royal Oak",
+    "productHash": "edf0fa1e4efa1514e5de32f7432446e879e76fa8e0330be88615e1722320ffba"
+  },
+  {
+    "pinId": 6334,
+    "sentiment": 0.7,
+    "textHash": "ec6869988eb7c25742a432c8b18df9c185bd946dee2af699fc387262f4fe3098",
+    "utcScoredDateTime": "2026-10-05T20:25:32.238Z",
+    "product": "Swatch Originals",
+    "productHash": "ec6869988eb7c25742a432c8b18df9c185bd946dee2af699fc387262f4fe3098"
+  },
+  {
+    "pinId": 6335,
+    "sentiment": 0.7,
+    "textHash": "9f9a8c4676135bc22d6a9160c748d410f3809e3cec3e55f4efb696f286461294",
+    "utcScoredDateTime": "2026-10-05T20:25:52.314Z",
+    "product": "G-Shock",
+    "productHash": "9f9a8c4676135bc22d6a9160c748d410f3809e3cec3e55f4efb696f286461294"
+  },
+  {
+    "pinId": 6336,
+    "sentiment": 0.7,
+    "textHash": "6ea0fdbc09592cb9a4e180baae87bf07fb7d142b2820b37b03bf8d2019c27aeb",
+    "utcScoredDateTime": "2026-10-05T20:26:12.765Z",
+    "product": "Lange 1",
+    "productHash": "6ea0fdbc09592cb9a4e180baae87bf07fb7d142b2820b37b03bf8d2019c27aeb"
+  },
+  {
+    "pinId": 6337,
+    "sentiment": 0.6,
+    "textHash": "c5375936b0a89e96809000dacf19388687fe239e07e511ab87f308c071f1ae5e",
+    "utcScoredDateTime": "2026-10-05T20:26:36.803Z",
+    "product": "Apple Watch",
+    "productHash": "c5375936b0a89e96809000dacf19388687fe239e07e511ab87f308c071f1ae5e"
+  },
+  {
+    "pinId": 6338,
+    "sentiment": 0.6,
+    "textHash": "7a49c38a8e2e771a3b669372b4d96328eac2ec95e2a702b32db347d73b4a8049",
+    "utcScoredDateTime": "2026-10-05T20:26:55.583Z",
+    "product": "Grand Complication",
+    "productHash": "7a49c38a8e2e771a3b669372b4d96328eac2ec95e2a702b32db347d73b4a8049"
+  },
+  {
+    "pinId": 6339,
+    "sentiment": 0.4,
+    "textHash": "2c950ba073d908a59e9c803d63f57b8280b5030ff24c4a6c868c25de5a469a42",
+    "utcScoredDateTime": "2026-10-05T20:27:17.297Z",
+    "product": "Apple Watch",
+    "productHash": "2c950ba073d908a59e9c803d63f57b8280b5030ff24c4a6c868c25de5a469a42"
+  },
+  {
+    "pinId": 6340,
+    "sentiment": 0.6,
+    "textHash": "df6b641c52ce3257139d59245983a2db2f2920ee90f090c876ff8a2a2ec48702",
+    "utcScoredDateTime": "2026-10-05T20:27:36.689Z",
+    "product": "Ref. 1518",
+    "productHash": "df6b641c52ce3257139d59245983a2db2f2920ee90f090c876ff8a2a2ec48702"
+  },
+  {
+    "pinId": 6341,
+    "sentiment": 0.6,
+    "textHash": "3197177646a74dc2938bd745bcce4ee49eed82ffd5e7cd5344025a8ef30e52e2",
+    "utcScoredDateTime": "2026-10-05T20:27:55.283Z",
+    "product": "Daytona",
+    "productHash": "3197177646a74dc2938bd745bcce4ee49eed82ffd5e7cd5344025a8ef30e52e2"
+  },
+  {
+    "pinId": 6342,
+    "sentiment": 0.7,
+    "textHash": "3a0b624476c4888753425a7d7992864f81d307ffc47c307cc264738da458d6e3",
+    "utcScoredDateTime": "2026-10-05T20:28:18.708Z",
+    "product": "Grandmaster Chime",
+    "productHash": "3a0b624476c4888753425a7d7992864f81d307ffc47c307cc264738da458d6e3"
+  },
+  {
+    "pinId": 6343,
+    "sentiment": 0.7,
+    "textHash": "ba696ad064c7508773ca6ba57b7f2d2e11e238330bbb77dd3cd437dff2319e71",
+    "utcScoredDateTime": "2026-10-05T20:28:40.119Z",
+    "product": "Nautilus",
+    "productHash": "ba696ad064c7508773ca6ba57b7f2d2e11e238330bbb77dd3cd437dff2319e71"
+  },
+  {
+    "pinId": 6344,
+    "sentiment": 0.5,
+    "textHash": "b0bde851fdfbf643c84a6dfb6f363102ec9895bdd706209463351f2618c0424e",
+    "utcScoredDateTime": "2026-10-05T20:29:01.168Z",
+    "product": "MoonSwatch",
+    "productHash": "b0bde851fdfbf643c84a6dfb6f363102ec9895bdd706209463351f2618c0424e"
+  },
+  {
+    "pinId": 6345,
+    "sentiment": 0.6,
+    "textHash": "28d4c14511fcdb3e434bdc51ceb03c5235fc3b1be8993c079255e02f9e0c8df7",
+    "utcScoredDateTime": "2026-10-05T20:29:21.144Z",
+    "product": "Ref. 1518",
+    "productHash": "28d4c14511fcdb3e434bdc51ceb03c5235fc3b1be8993c079255e02f9e0c8df7"
+  },
+  {
+    "pinId": 6346,
+    "sentiment": -0.3,
+    "textHash": "e999b99623373f4fe5f491ffc9bff569e39e1c5e168777b69cac4aee958b9c00",
+    "utcScoredDateTime": "2026-10-05T20:29:41.919Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6347,
+    "sentiment": 0,
+    "textHash": "988e06000488427c767a67f558295a5632ef30ebd2ae3789ee683c5835d7db67",
+    "utcScoredDateTime": "2026-10-05T20:30:01.632Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6348,
+    "sentiment": 0.5,
+    "textHash": "038491a7f00f05c3f52c8b5384ad64a4cbceec085411a2d0cf8e9446a7b41665",
+    "utcScoredDateTime": "2026-10-05T20:30:20.697Z",
+    "product": "Oyster Perpetual",
+    "productHash": "038491a7f00f05c3f52c8b5384ad64a4cbceec085411a2d0cf8e9446a7b41665"
+  },
+  {
+    "pinId": 6349,
+    "sentiment": 0.5,
+    "textHash": "bc96f604bcd0bcfe0349ba6e5c96905d7f7a7f56a981f01cd4426f0e8001cd6d",
+    "utcScoredDateTime": "2026-10-05T20:30:41.403Z",
+    "product": "Monarch",
+    "productHash": "bc96f604bcd0bcfe0349ba6e5c96905d7f7a7f56a981f01cd4426f0e8001cd6d"
+  },
+  {
+    "pinId": 6350,
+    "sentiment": 0.3,
+    "textHash": "1cab76703878ebf2d74dff0bfa8ced9c6242eaff8968f912bdd2a3a1f993212f",
+    "utcScoredDateTime": "2026-10-05T20:31:01.347Z",
+    "product": "Apple Watch",
+    "productHash": "1cab76703878ebf2d74dff0bfa8ced9c6242eaff8968f912bdd2a3a1f993212f"
+  },
+  {
+    "pinId": 6351,
+    "sentiment": 0.4,
+    "textHash": "6f9d78f5ec461d9cb2ba1bb1a0d3a09afebd68ae68aceb1bb2ed9b8b8748ea27",
+    "utcScoredDateTime": "2026-10-05T20:31:21.178Z",
+    "product": "Galaxy Watch",
+    "productHash": "6f9d78f5ec461d9cb2ba1bb1a0d3a09afebd68ae68aceb1bb2ed9b8b8748ea27"
+  },
+  {
+    "pinId": 6352,
+    "sentiment": 0.6,
+    "textHash": "e096bdffbc98f3878cc472a8bafd4d2fe36f25f3f8dc0c0b4ef9916928379fb9",
+    "utcScoredDateTime": "2026-10-05T20:31:42.101Z",
+    "product": "Fenix",
+    "productHash": "e096bdffbc98f3878cc472a8bafd4d2fe36f25f3f8dc0c0b4ef9916928379fb9"
+  },
+  {
+    "pinId": 6353,
+    "sentiment": 0.2,
+    "textHash": "03c4001bd68f99f22b06b48e61e224ce7304e6cdbdb794738fc6f0a46ab2150f",
+    "utcScoredDateTime": "2026-10-05T20:32:02.424Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6354,
+    "sentiment": 0.5,
+    "textHash": "39384f0484c79ad903062210f9b4c4d67fe7dbb8c28034bb058aba37689172b2",
+    "utcScoredDateTime": "2026-10-05T20:32:22.035Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6355,
+    "sentiment": -0.6,
+    "textHash": "ec9ba64f1e624ed6e554550a5305baccae670da7e22fcd84f5507f74d90eacbe",
+    "utcScoredDateTime": "2026-10-05T20:32:42.552Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6356,
+    "sentiment": 0.5,
+    "textHash": "de0221b2fd2b07e9d7c3797a6a307980a8f502640d4e26fd32bb39fd622cf166",
+    "utcScoredDateTime": "2026-10-05T20:33:02.260Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6357,
+    "sentiment": 0.4,
+    "textHash": "01dcdde929f7be0cb77b1c2c4eb13c19f0fb08fdc1fb7ac91ee86eccb5cc682b",
+    "utcScoredDateTime": "2026-10-05T20:33:23.456Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6358,
+    "sentiment": 0.5,
+    "textHash": "70dbac6388338914e34552a0ca618c06bc86fdba887739813f4abab459845cb4",
+    "utcScoredDateTime": "2026-10-05T20:33:42.855Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6359,
+    "sentiment": 0.2,
+    "textHash": "d16f7fd0f01dd576f1d8688b2cba8a5ae1ee09ef613c678b0e8a32999bd94b62",
+    "utcScoredDateTime": "2026-10-05T20:34:02.053Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6360,
+    "sentiment": 0.3,
+    "textHash": "12b0ce5c0c8b994ac84f121357ead04ce5e7d253e5910fc094d06e6349356508",
+    "utcScoredDateTime": "2026-10-05T20:34:23.243Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6361,
+    "sentiment": 0.4,
+    "textHash": "54eb61652fe7fef22920cacbf88685502c34a6c926aa2f8a6bc30bc309c8e5ce",
+    "utcScoredDateTime": "2026-10-05T20:34:44.531Z",
+    "product": null,
+    "productHash": null
+  },
+  {
+    "pinId": 6362,
+    "sentiment": 0.4,
+    "textHash": "7c7b01f841b7132902d898bd26d6d1e65e88a0485b2d6f3ce0dabb702747c657",
+    "utcScoredDateTime": "2026-10-05T20:35:05.137Z",
+    "product": null,
+    "productHash": null
   }
 ]
