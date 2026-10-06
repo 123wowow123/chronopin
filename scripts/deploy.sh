@@ -27,7 +27,8 @@ git archive "$rev" | tar -x -C "$tmp"
 
 # The VM's env files and the gitignored seed of user accounts live only there.
 rsync -az --delete -e "ssh -i $KEY" \
-  --exclude 'Docker/env.*.list' --exclude scripts/backup/seedUsers.json \
+  --exclude 'Docker/env.*.list' --exclude Docker/.env --exclude .deployed-sha \
+  --exclude scripts/backup/seedUsers.json \
   "$tmp/" "$HOST:chronopin/"
 
 # Migrations first, from the tools image (the same build stage the app's image

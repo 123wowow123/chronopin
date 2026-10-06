@@ -1,0 +1,66 @@
+# Builds the production images on GitHub's runners instead of on the VM
+# (docs/deploy-azure.md): `next build` needs 1.3GB the 4GB VM does not have to
+# spare beside the live site. The VM then only pulls (scripts/deploy-image.sh).
+#
+#   ghcr.io/<owner>/chronopin:<commit>        the standalone server
+#   ghcr.io/<owner>/chronopin-tools:<commit>  the build stage, for migrations
+name: Build image
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# A newer push makes an older build pointless.
+concurrency:
+  group: build-image
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Registry names must be lowercase.
+      REGISTRY: ghcr.io/123wowow123
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # The build stage first: the runtime build below reuses its layers, so
+      # `next build` runs once.
+      - name: Build stage (tools)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Docker/Dockerfile
+          target: build
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/chronopin-tools:${{ github.sha }}
+            ${{ env.REGISTRY }}/chronopin-tools:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Runtime image (app)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Docker/Dockerfile
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/chronopin:${{ github.sha }}
+            ${{ env.REGISTRY }}/chronopin:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

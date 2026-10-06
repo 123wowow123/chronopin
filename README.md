@@ -359,6 +359,9 @@ generic ads that applies to everyone like junk removal can be added to ad rotati
 
 - pin spacex starbase new and event
 
+deployment is slow. is there a way to spead it up? 
+Does postgres and faiss need to be recreated everytime?
+
 
 Should show top competition and and benchmarks
 https://www.chronopin.com/pin/4802/gpt-6-astra-released

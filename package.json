@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "deploy": "sh scripts/deploy.sh",
+    "deploy:image": "sh scripts/deploy-image.sh",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

@@ -31,7 +31,8 @@ services:
     build:
       context: ..
       dockerfile: Docker/Dockerfile
-    image: chronopin:latest
+    # APP_IMAGE comes from Docker/.env, written by scripts/deploy-image.sh.
+    image: ${APP_IMAGE:-chronopin:latest}
     env_file: env.prod.list
     environment:
       FAISS_URL: http://faiss:5050
@@ -64,7 +65,7 @@ services:
       context: ..
       dockerfile: Docker/Dockerfile
       target: build
-    image: chronopin-tools:latest
+    image: ${TOOLS_IMAGE:-chronopin-tools:latest}
     env_file: env.prod.list
     environment:
       FAISS_URL: http://faiss:5050

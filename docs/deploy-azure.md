@@ -67,6 +67,23 @@ a minute or two down; mind the $50 cap on the subscription if it stays large):
 `az vm resize --subscription 9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5 -g Chronopin-US-West -n chronopin-web --size Standard_B2ms`,
 and the same with `Standard_B2s` to shrink it back.
 
+### Faster: build on GitHub, pull on the VM
+
+`.github/workflows/build-image.yml` builds the app and tools images on every
+push to master and pushes them to `ghcr.io/123wowow123/chronopin` and
+`chronopin-tools`, tagged with the commit. `npm run deploy:image` (scripts/
+deploy-image.sh) waits for that build, syncs `Docker/`, pulls the images and
+restarts only the app; Postgres, FAISS and Caddy keep running (their data is in
+named volumes either way). Schema files are applied only when `scripts/db`
+changed since `~/chronopin/.deployed-sha`. Roll back with
+`npm run deploy:image -- <sha>`. The script writes `Docker/.env` on the VM
+(`APP_IMAGE`, `TOOLS_IMAGE`) so a later `docker compose up` by hand uses the
+same image.
+
+One-time setup: push, let the first run finish, then in GitHub's package
+settings set both packages to **public** so the VM pulls without a login.
+`npm run deploy` (build on the VM) still works as a fallback.
+
 ## One-off scripts
 
 The runtime image is only the standalone server. Scripts run in the `tools`
