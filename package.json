@@ -132,7 +132,7 @@
     "react-leaflet": "^5.0.0",
     "sanitize-html": "^2.17.7",
     "server-only": "^0.0.1",
-    "sharp": "^0.35.4",
+    "sharp": "^0.35.5",
     "simple-icons": "^16.34.0",
     "web-push": "^3.6.7"
   },
@@ -161,6 +161,9 @@
   },
   "engines": {
     "node": ">=24.12.0"
+  },
+  "overrides": {
+    "source-map-js": "^1.2.2"
   },
   "allowScripts": {
     "puppeteer@25.10.0": true,
