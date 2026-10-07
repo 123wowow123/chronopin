@@ -4,11 +4,17 @@
 .guide a { color:inherit; text-decoration:none; }
 .guide h1,.guide h2,.guide h3 { color:inherit; }
 .guide a:focus-visible,.guide button:focus-visible,.guide input:focus-visible,.guide select:focus-visible { outline:3px solid var(--green); outline-offset:5px; }
-.guideNav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:25px 0; border-bottom:1px solid var(--rule); }
+.guideNav { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:20px; padding:14px 0; border-bottom:1px solid var(--rule); }
 .wordmark { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:650; letter-spacing:-.3px; }
 .wordmark>span { font-size:30px; color:var(--green); line-height:1; }
-.region { color:var(--soft); font-size:12px; display:flex; gap:8px; }
-.cityNav { display:flex; flex-wrap:wrap; gap:8px; padding-top:18px; font-size:12px; }
+.countryNav { position:relative; min-width:0; display:flex; gap:2px; overflow-x:auto; scrollbar-width:thin; font-size:11px; }
+.countryNav button { flex:none; white-space:nowrap; padding:12px 8px; border-bottom:3px solid transparent; color:var(--soft); cursor:pointer; }
+.countryNav button:first-child { margin-left:auto; }
+.countryNav button[aria-pressed='true'] { border-bottom-color:var(--green); color:var(--text); font-weight:700; }
+.countryNav button:hover { color:var(--text); background:var(--paper-raised); }
+.countryNav button:focus-visible { outline-offset:-4px; }
+@media(max-width:760px) { .guideNav { grid-template-columns:minmax(0,1fr); row-gap:8px; } .countryNav { grid-column:1/-1; grid-row:2; font-size:12px; } }
+.cityNav { display:flex; flex-wrap:wrap; gap:8px; padding-top:14px; font-size:12px; }
 .cityNav a { padding:8px 12px; border:1px solid var(--rule); border-radius:4px; }
 .cityNav a[aria-current='page'] { background:var(--text); color:var(--paper); }
 .cityNav a:hover { text-decoration:underline; text-underline-offset:3px; }
@@ -31,7 +37,7 @@
 .noFeature { min-height:405px; display:grid; place-content:center; text-align:center; background:var(--paper-raised); border:1px solid var(--rule); }
 .noFeature>span { font-size:65px; color:var(--green); }
 .noFeature>p { font-family:Georgia,serif; font-size:38px; line-height:1.2; }
-.digest { display:grid; grid-template-columns:1.15fr 1fr 1fr 1.1fr; border-block:1px solid var(--rule); padding:25px 0; align-items:center; gap:20px; }
+.digest { display:grid; grid-auto-flow:column; grid-auto-columns:1fr; border-block:1px solid var(--rule); padding:25px 0; align-items:center; gap:20px; }
 .digest>p { font-size:12px; line-height:1.8; color:var(--soft); }
 .digest>p>strong { color:var(--text); font-weight:500; }
 .digest>a { border-left:1px solid var(--rule); padding-left:26px; display:flex; flex-direction:column; gap:7px; }
@@ -100,6 +106,6 @@
 .previewNote { margin-top:12px; }
 @media(min-width:1500px) { .heroCopy h1 { font-size:76px; } }
 @media(max-width:1000px) { .hero { gap:28px; } .filters { align-items:start; flex-direction:column; } .filterFields { width:100%; justify-content:space-between; } .cardGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } .digest { gap:14px; } .digest>a { padding-left:17px; } }
-@media(max-width:760px) { .hero { grid-template-columns:1fr; padding-top:30px; gap:30px; } .heroCopy h1 { font-size:58px; } .featured { min-height:340px; } .heroCopy .eyebrow { margin-bottom:18px; } .digest { grid-template-columns:1fr 1fr; gap:24px 15px; } .digest>p { grid-column:1/-1; } .digest>a { border-left:0; padding-left:0; } .digest .mapLink { grid-column:1/-1; border-top:1px solid var(--rule); padding-top:18px; } .browseHeading { align-items:start; } .browseHeading>span { display:none; } .browseHeading h2 { font-size:29px; } .editorialNote { flex-wrap:wrap; gap:15px; } .editorialNote>div { flex:1; } .editorialNote>a { margin-left:47px; } }
-@media(max-width:600px) { .guide { padding:0 18px 40px; } .guideNav { gap:12px; } .wordmark { font-size:12px; } .wordmark>span { font-size:25px; } .region { font-size:10px; max-width:150px; } .heroCopy h1 { font-size:53px; letter-spacing:-2px; } .lead { font-size:14px; } .cardGrid { grid-template-columns:1fr; gap:20px; } .filterFields { flex-wrap:wrap; gap:8px; } .filterFields>label:last-child { width:100%; } .filterFields select { width:100%; max-width:none; } .statusFilters { width:100%; } .statusFilters a { flex:1; padding:10px 7px; } .photoLink { aspect-ratio:1.75; } .cardMeta { font-size:11px; } .cardDescription { font-size:12px; } .cardFoot strong { font-size:12px; } .editorialNote>div { flex:1 1 calc(100% - 47px); } }
+@media(max-width:760px) { .hero { grid-template-columns:1fr; padding-top:30px; gap:30px; } .heroCopy h1 { font-size:58px; } .featured { min-height:340px; } .heroCopy .eyebrow { margin-bottom:18px; } .digest { grid-auto-flow:row; grid-template-columns:1fr 1fr; gap:24px 15px; } .digest>p { grid-column:1/-1; } .digest>a { border-left:0; padding-left:0; } .digest .mapLink { grid-column:1/-1; border-top:1px solid var(--rule); padding-top:18px; } .browseHeading { align-items:start; } .browseHeading>span { display:none; } .browseHeading h2 { font-size:29px; } .editorialNote { flex-wrap:wrap; gap:15px; } .editorialNote>div { flex:1; } .editorialNote>a { margin-left:47px; } }
+@media(max-width:600px) { .guide { padding:0 18px 40px; } .guideNav { gap:12px; } .wordmark { font-size:12px; } .wordmark>span { font-size:25px; } .heroCopy h1 { font-size:53px; letter-spacing:-2px; } .lead { font-size:14px; } .cardGrid { grid-template-columns:1fr; gap:20px; } .filterFields { flex-wrap:wrap; gap:8px; } .filterFields>label:last-child { width:100%; } .filterFields select { width:100%; max-width:none; } .statusFilters { width:100%; } .statusFilters a { flex:1; padding:10px 7px; } .photoLink { aspect-ratio:1.75; } .cardMeta { font-size:11px; } .cardDescription { font-size:12px; } .cardFoot strong { font-size:12px; } .editorialNote>div { flex:1 1 calc(100% - 47px); } }
 @media(prefers-reduced-motion:reduce) { .featuredImage,.cardImage { transition:none; } .featured:hover .featuredImage,.photoLink:hover .cardImage { transform:none; } }

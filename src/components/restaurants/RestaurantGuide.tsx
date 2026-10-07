@@ -1,18 +1,19 @@
 'use client';
 
 import Anchor from '@/components/ui/Anchor';
-import { useEffect, useState, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
-import { RESTAURANT_REGIONS, openingGroup, type Restaurant, type OpeningGroup, type TopRestaurant } from '@/lib/restaurants';
+import { RESTAURANT_COUNTRIES, RESTAURANT_REGIONS, openingGroup, type Restaurant, type OpeningGroup, type TopRestaurant } from '@/lib/restaurants';
 import { pinPath } from '@/lib/seo';
 import styles from './RestaurantGuide.module.css';
 
 type Props = {
   restaurants: Restaurant[];
   topRestaurants: TopRestaurant[];
-  region: { name: string; state: string; slug: string };
+  availableRegionSlugs: string[];
+  region: { name: string; state: string; slug: string; country: string };
   today: string;
   previewSnapshot: boolean;
 };
@@ -35,13 +36,22 @@ function subscribeToHash(listener: () => void) {
 const currentHash = () => window.location.hash;
 const serverHash = () => '';
 
-export function RestaurantGuide({ restaurants, topRestaurants, region, today, previewSnapshot }: Props) {
+export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSlugs, region, today, previewSnapshot }: Props) {
   const hash = useSyncExternalStore(subscribeToHash, currentHash, serverHash);
-  const status = VIEWS.find((view) => view.hash === hash)?.key ?? 'all';
   const [selectedNeighborhood, setNeighborhood] = useState('all');
+  const [countrySelection, setCountrySelection] = useState({ regionSlug: region.slug, country: region.country });
+  const availableRegions = RESTAURANT_REGIONS.filter((city) => availableRegionSlugs.includes(city.slug));
+  const countries = RESTAURANT_COUNTRIES.filter((country) => availableRegions.some((city) => city.country === country));
+  const preferredCountry = countrySelection.regionSlug === region.slug ? countrySelection.country : region.country;
+  const selectedCountry = countries.find((country) => country === preferredCountry) ?? countries[0];
+  const countryNav = useRef<HTMLElement>(null);
+  const cities = availableRegions.filter((city) => city.country === selectedCountry);
   const active = restaurants.filter((restaurant) => openingGroup(restaurant, today));
   const upcoming = active.filter((restaurant) => openingGroup(restaurant, today) === 'upcoming').sort((a, b) => a.day.localeCompare(b.day));
   const recent = active.filter((restaurant) => openingGroup(restaurant, today) === 'new').sort((a, b) => b.day.localeCompare(a.day));
+  const views = VIEWS.filter((view) => ({ all: active.length, upcoming: upcoming.length, new: recent.length, top: topRestaurants.length })[view.key] > 0);
+  // Old bookmarks and links from another city can point to an empty view.
+  const status = views.find((view) => view.hash === hash)?.key ?? views[0]?.key ?? 'all';
   const top = status === 'top';
   const neighborhoods = [...new Set((top ? topRestaurants : status === 'all' ? [...active, ...topRestaurants] : active).map((restaurant) => restaurant.neighborhood))].sort();
   const neighborhood = neighborhoods.includes(selectedNeighborhood) ? selectedNeighborhood : 'all';
@@ -57,6 +67,12 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
   const reset = () => { setNeighborhood('all'); window.location.hash = 'openings'; };
 
   useEffect(() => {
+    const nav = countryNav.current;
+    const selected = nav?.querySelector<HTMLElement>('[aria-pressed="true"]');
+    if (nav && selected) nav.scrollLeft = selected.offsetLeft - (nav.clientWidth - selected.clientWidth) / 2;
+  }, [selectedCountry]);
+
+  useEffect(() => {
     if (!VIEWS.some((view) => view.hash === hash)) return;
     // A filtered section may only mount after the hash selects its view.
     const frame = requestAnimationFrame(() => document.getElementById(hash.slice(1))?.scrollIntoView({ block: 'start' }));
@@ -66,13 +82,17 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
   return (
     <main className={styles.guide} lang="en">
       <div className={styles.container}>
-        <nav className={styles.guideNav} aria-label="Restaurant guide">
+        <div className={styles.guideNav}>
           <Link href="/restaurants" className={styles.wordmark}><span aria-hidden="true">✳</span> The opening guide</Link>
-          <span className={styles.region}><span aria-hidden="true">↗</span> {region.name}, {region.state}</span>
-        </nav>
+          <nav ref={countryNav} className={styles.countryNav} aria-label="Restaurant guide country">
+            {countries.map((country) => (
+              <button key={country} type="button" aria-pressed={country === selectedCountry} onClick={() => setCountrySelection({ regionSlug: region.slug, country })}>{country}</button>
+            ))}
+          </nav>
+        </div>
 
-        <nav className={styles.cityNav} aria-label="Restaurant guide city">
-          {RESTAURANT_REGIONS.map((city) => <Link key={city.slug} href={`/restaurants/${city.slug}`} aria-current={city.slug === region.slug ? 'page' : undefined}>{city.name}</Link>)}
+        <nav className={styles.cityNav} aria-label={`${selectedCountry} restaurant guide cities`}>
+          {cities.map((city) => <Link key={city.slug} href={`/restaurants/${city.slug}`} aria-current={city.slug === region.slug ? 'page' : undefined}>{city.name}</Link>)}
         </nav>
 
         <header className={styles.hero}>
@@ -94,8 +114,8 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
 
         <div className={styles.digest}>
           <p>A little discovery.<br /><strong>A lot to look forward to.</strong></p>
-          <Anchor href="#upcoming" onClick={() => setNeighborhood('all')}><strong>{upcoming.length.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>
-          <Anchor href="#new" onClick={() => setNeighborhood('all')}><strong>{recent.length.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>
+          {upcoming.length > 0 && <Anchor href="#upcoming" onClick={() => setNeighborhood('all')}><strong>{upcoming.length.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
+          {recent.length > 0 && <Anchor href="#new" onClick={() => setNeighborhood('all')}><strong>{recent.length.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
           <Anchor href={mapHref} className={styles.mapLink}><span aria-hidden="true">⌖</span><span>Find your next stop<br /><strong>Explore the map ↗</strong></span></Anchor>
         </div>
 
@@ -103,7 +123,7 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
           <div className={styles.browseHeading}><div><p className={styles.eyebrow}>THE LOCAL LINEUP</p><h2>{top ? 'Great tables, already here.' : 'Something new on the menu.'}</h2></div><span>{region.name} edition</span></div>
           <div className={styles.filters}>
             <nav className={styles.statusFilters} aria-label="Restaurant view">
-              {VIEWS.map((item) => <Anchor key={item.key} href={item.hash} aria-current={status === item.key ? 'location' : undefined} onClick={() => { if ((item.key === 'top') !== top) setNeighborhood('all'); }}>{item.label}</Anchor>)}
+              {views.map((item) => <Anchor key={item.key} href={item.hash} aria-current={status === item.key ? 'location' : undefined} onClick={() => { if ((item.key === 'top') !== top) setNeighborhood('all'); }}>{item.label}</Anchor>)}
             </nav>
             <div className={styles.filterFields}>
               <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>
@@ -112,8 +132,8 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
           <p className={styles.results} aria-live="polite">{shown} {top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>
           {!shown ? <div className={styles.empty}><h3>{top ? 'No top restaurants match those filters.' : active.length ? 'No openings match those filters.' : 'The next opening is still on its way.'}</h3><p>{top || active.length ? 'Try another neighborhood.' : 'Check back for newly announced restaurants in this region.'}</p>{(top || active.length > 0) && <button type="button" onClick={top ? () => { setNeighborhood('all'); } : reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection restaurants={shownTop} /> : (
             <>
-              {status !== 'new' && <OpeningSection id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." restaurants={shownUpcoming} group="upcoming" today={today} href={href} />}
-              {status !== 'upcoming' && <OpeningSection id="new" title="Freshly opened" subtitle="New tables, new flavors. Opened within the last 90 days." restaurants={shownRecent} group="new" today={today} href={href} />}
+              {shownUpcoming.length > 0 && <OpeningSection id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." restaurants={shownUpcoming} group="upcoming" today={today} href={href} />}
+              {shownRecent.length > 0 && <OpeningSection id="new" title="Freshly opened" subtitle="New tables, new flavors. Opened within the last 90 days." restaurants={shownRecent} group="new" today={today} href={href} />}
             </>
           )}
           {status === 'all' && shownTop.length > 0 && <TopRestaurantSection restaurants={shownTop} />}

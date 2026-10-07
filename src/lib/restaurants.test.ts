@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { nearestRestaurantRegion, openingDateLabel, openingGroup } from './restaurants';
+import { RESTAURANT_REGIONS, nearestRestaurantRegion, openingDateLabel, openingGroup } from './restaurants';
 import { blobUrl, smallThumbName } from './appConfig';
 
 describe('regional restaurant opening status', () => {
@@ -34,6 +34,18 @@ describe('regional restaurant opening status', () => {
 });
 
 describe('nearest restaurant guide', () => {
+  it('routes European visitors to their local guide with a valid local time zone', () => {
+    for (const slug of ['london', 'paris', 'amsterdam', 'berlin', 'madrid', 'barcelona', 'lisbon', 'rome', 'copenhagen', 'vienna']) {
+      const region = RESTAURANT_REGIONS.find((item) => item.slug === slug)!;
+      expect(nearestRestaurantRegion(region).slug).toBe(slug);
+      expect(() => new Intl.DateTimeFormat('en', { timeZone: region.timeZone })).not.toThrow();
+    }
+    expect(nearestRestaurantRegion({ latitude: 48.15, longitude: 17.11 }).slug).toBe('vienna');
+    expect(nearestRestaurantRegion({ latitude: 51.45, longitude: -2.59 }).slug).toBe('london');
+  });
+  it('keeps city navigation ordered from west to east', () => {
+    expect(RESTAURANT_REGIONS.map((region) => region.longitude)).toEqual(RESTAURANT_REGIONS.map((region) => region.longitude).toSorted((a, b) => a - b));
+  });
   it('chooses the closest supported city, including neighboring cities', () => {
     expect(nearestRestaurantRegion({ latitude: 32.8, longitude: -117.2 }).slug).toBe('san-diego');
     expect(nearestRestaurantRegion({ latitude: 37.35, longitude: -121.95 }).slug).toBe('san-jose');

@@ -60,6 +60,12 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   watch_tag: { icon: 'clock', background: '#00843d', color: '#fff' },
   watch_iwc: { icon: 'clock', background: '#2b2b2b', color: '#fff' },
   watch_gs: { icon: 'clock', background: '#3b4a5a', color: '#fff' },
+  sneaker_af1: { icon: 'tag', background: '#262626', color: '#fff' },
+  sneaker_dunk: { icon: 'tag', background: '#c2410c', color: '#fff' },
+  sneaker_jordan: { icon: 'tag', background: '#b91c1c', color: '#fff' },
+  sneaker_samba: { icon: 'tag', background: '#171717', color: '#fff' },
+  sneaker_nb: { icon: 'tag', background: '#475569', color: '#fff' },
+  sneaker_asics: { icon: 'tag', background: '#1e3a8a', color: '#fff' },
 };
 // Programs whose own picture sits on their tile (a file in public/ads).
 const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png' };
@@ -130,6 +136,11 @@ function report(ad: AdJson, slot: AdSlot, pinId: number | undefined) {
 function useAdText() {
   const t = useT();
   return (ad: AdJson) => {
+    if (ad.kind === 'sneaker') {
+      const price = ad.price != null ? money(ad.price, ad.currency) : '';
+      const info = ad.brand ?? '';
+      return { title: ad.title ?? '', body: [price, info].filter(Boolean).join(' · '), price, info, urgency: '', cta: t('ads.seeOnEbay') };
+    }
     // A watch brand's ad: the brand's name, then the same line for every brand.
     if (ad.kind === 'watch') {
       const line = t('ads.watchBody', { brand: ad.title ?? '' });

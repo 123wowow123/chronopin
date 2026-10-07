@@ -23,6 +23,7 @@ import {
   adTag,
   taggedAdUrl,
   watchBrand,
+  sneakerAd,
 } from '@/lib/ads';
 import { WINDOW_AFTER_DAYS, WINDOW_BEFORE_DAYS, type AdTier } from '@/lib/culturalDays';
 import * as db from '../db';
@@ -38,12 +39,14 @@ import PinAdTranslation from './pinAdTranslation';
 import ProductAd from './productAd';
 import PinView from './pinView';
 import { featuredWatch, type FeaturedWatch } from '../ebayWatches';
+import { featuredSneaker } from '../ebaySneakers';
+import { isEbayUrl } from '@/lib/affiliate';
 
 // How long the ads (program rows, product listings, store ids) are reused
 // before they are read again.
 const INVENTORY_MS = 10 * 60 * 1000;
-// Discard inventory retained across dev reloads with the old pin-image mapping.
-const INVENTORY_VERSION = 3;
+// Discard inventory retained across dev reloads with the old brand mapping.
+const INVENTORY_VERSION = 6;
 // How long a slot waits for the address's country; past it, the language.
 const COUNTRY_WAIT_MS = 1500;
 // How long a slot waits for a watch brand's live eBay listing before it shows
@@ -117,23 +120,30 @@ export default class Ad {
     const ctx: AdContext = { preference: viewer?.preference ?? null, age, pin, performance };
     // Under Global Earning an amazon.com product link is sent by Amazon to the
     // shopper's local store, so the US product ads serve there too (without
-    // their dollar price); program ads are the store's own.
+    // their dollar price); Amazon programs are the store's own. eBay's search
+    // ads are available independently of that Amazon store.
     const abroad = store !== 'US' && GLOBAL_EARNING_STORES.has(store);
-    const candidates = inventory.ads.filter((ad) => ad.store === store || (abroad && ad.kind === 'product' && ad.store === 'US'));
-    // The goods of a holiday in its window (a month before to three weeks
-    // after), a tile for each price tier, first in the slot. A pin's page
-    // carries those of the holiday the pin falls on whatever today is.
+    const candidates = inventory.ads.filter((ad) => ad.store === store || (ad.store === 'US' && (isEbayUrl(ad.url) || (abroad && ad.kind === 'product'))));
+    // One seasonal tile first, leaving room for a variety of other categories.
+    // The holiday window runs a month before to three weeks after. A pin's page
+    // carries ads for holidays on its date regardless of the pin's topic.
     const onPinPage = PIN_SLOTS.includes(slot);
     const related = onPinPage ? new Set(pin?.day ? occurrencesOn(pin.day).map((o) => o.def.id) : []) : null;
     const active = related ? [...related].map((id) => ({ id, offset: 0 })) : holidaysInWindow(new Date().toISOString().slice(0, 10), WINDOW_BEFORE_DAYS, WINDOW_AFTER_DAYS);
     const holidayAds = related && !related.size ? [] : pickHolidayAds(candidates, ctx, active, Math.min(HOLIDAY_COUNT[slot], n), related, expandAvoid(candidates, avoid));
-    const rest = pickAds(candidates, ctx, n - holidayAds.length, expandAvoid(candidates, new Set([...avoid, ...holidayAds.map((ad) => ad.key)])));
+    const rest = pickAds(candidates, ctx, n - holidayAds.length, expandAvoid(candidates, new Set([...avoid, ...holidayAds.map((ad) => ad.key)])), Math.random, holidayAds);
     const picked = [...holidayAds, ...rest];
+    // Seasonal inventory can fill any shortage after varied regular ads have
+    // been tried. The single seasonal tile is a preference, not a count limit.
+    if (picked.length < n && holidayAds.length) {
+      const shown = expandAvoid(candidates, new Set(picked.map((ad) => ad.key)));
+      picked.push(...pickHolidayAds(candidates.filter((ad) => !shown.has(ad.key)), ctx, active, n - picked.length, related, avoid));
+    }
     if (picked.length && !admin) await recordImpressions(picked, slot, store, (ad) => adTag(ad, inventory.tags) ?? '', userId != null);
     const titles = await localizedTitles(picked, locale);
     // A watch brand's tile shows one of its live eBay listings when eBay answers.
     const featured = new Map<string, FeaturedWatch | null>(
-      await Promise.all(picked.filter((ad) => ad.kind === 'watch').map(async (ad) => [ad.key, await Promise.race([featuredWatch(ad.title ?? ''), new Promise<null>((resolve) => setTimeout(resolve, FEATURE_WAIT_MS, null))])] as const)),
+      await Promise.all(picked.filter((ad) => ad.kind === 'watch' || ad.kind === 'sneaker').map(async (ad) => [ad.key, await Promise.race([ad.kind === 'sneaker' ? featuredSneaker(ad.title ?? '') : featuredWatch(ad.title ?? ''), new Promise<null>((resolve) => setTimeout(resolve, FEATURE_WAIT_MS, null))])] as const)),
     );
     return {
       store,
@@ -145,7 +155,7 @@ export default class Ad {
         title: titles.get(ad.key) ?? ad.title,
         price: featured.get(ad.key)?.price ?? (ad.store === store ? ad.price : null),
         currency: featured.get(ad.key) || (ad.price != null && ad.store === store) ? 'USD' : null,
-        brand: ad.kind === 'product' ? (ad.brand ?? ad.company) : null,
+        brand: ad.kind === 'product' || ad.kind === 'sneaker' ? (ad.brand ?? ad.company) : null,
         rating: ad.rating ?? null,
         // A price in another store's currency is no price here, nor is its stock.
         urgency: ad.store === store ? (ad.urgency ?? null) : null,
@@ -380,7 +390,7 @@ async function loadInventory(): Promise<Inventory> {
         url: row.url,
         store: row.store,
         categories: row.categories,
-        company: null,
+        company: sneakerAd(row.program)?.brand ?? watchBrand(row.program),
         weight: row.weight,
         rewardUsd: row.rewardUsd,
         minAge: row.minAge,
@@ -388,7 +398,7 @@ async function loadInventory(): Promise<Inventory> {
         targetAgeTo: row.targetAgeTo,
         pinId: null,
         forPinId: null,
-        title: watchBrand(row.program),
+        title: sneakerAd(row.program)?.title ?? watchBrand(row.program),
         price: null,
         thumbName: null,
         originalUrl: null,
@@ -513,8 +523,8 @@ async function viewerFacts(userId: number) {
 }
 
 async function pinFacts(pinId: number): Promise<AdContext['pin']> {
-  const rows = await db.query<{ categories: string[]; tags: string[]; company: string | null; day: string | null }>(
-    `SELECT "c"."name"::text AS "company", to_char("p"."utcStartDateTime" AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS "day",
+  const rows = await db.query<{ title: string; categories: string[]; tags: string[]; company: string | null; day: string | null }>(
+    `SELECT "p"."title", "c"."name"::text AS "company", to_char("p"."utcStartDateTime" AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS "day",
        coalesce((SELECT array_agg("t"."name"::text) FILTER (WHERE "t"."kind" = 'category') FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "categories",
        coalesce((SELECT array_agg("t"."name"::text) FILTER (WHERE "t"."kind" <> 'category') FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "tags"
      FROM "Pin" AS "p" LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"

@@ -2,26 +2,39 @@ import { distanceKm, type Place } from './distance';
 
 // City navigation runs west to east by city-center longitude.
 export const RESTAURANT_REGIONS = [
-  { slug: 'san-francisco', name: 'San Francisco', state: 'California', timeZone: 'America/Los_Angeles', latitude: 37.7749, longitude: -122.4194 },
-  { slug: 'seattle', name: 'Seattle', state: 'Washington', timeZone: 'America/Los_Angeles', latitude: 47.6062, longitude: -122.3321 },
-  { slug: 'san-jose', name: 'San Jose', state: 'California', timeZone: 'America/Los_Angeles', latitude: 37.3382, longitude: -121.8863 },
-  { slug: 'los-angeles', name: 'Los Angeles', state: 'California', timeZone: 'America/Los_Angeles', latitude: 34.0522, longitude: -118.2437 },
-  { slug: 'san-diego', name: 'San Diego', state: 'California', timeZone: 'America/Los_Angeles', latitude: 32.7157, longitude: -117.1611 },
-  { slug: 'phoenix', name: 'Phoenix', state: 'Arizona', timeZone: 'America/Phoenix', latitude: 33.4484, longitude: -112.074 },
-  { slug: 'san-antonio', name: 'San Antonio', state: 'Texas', timeZone: 'America/Chicago', latitude: 29.4241, longitude: -98.4936 },
-  { slug: 'austin', name: 'Austin', state: 'Texas', timeZone: 'America/Chicago', latitude: 30.2672, longitude: -97.7431 },
-  { slug: 'fort-worth', name: 'Fort Worth', state: 'Texas', timeZone: 'America/Chicago', latitude: 32.7555, longitude: -97.3308 },
-  { slug: 'dallas', name: 'Dallas', state: 'Texas', timeZone: 'America/Chicago', latitude: 32.7767, longitude: -96.797 },
-  { slug: 'houston', name: 'Houston', state: 'Texas', timeZone: 'America/Chicago', latitude: 29.7604, longitude: -95.3698 },
-  { slug: 'chicago', name: 'Chicago', state: 'Illinois', timeZone: 'America/Chicago', latitude: 41.8781, longitude: -87.6298 },
-  { slug: 'columbus', name: 'Columbus', state: 'Ohio', timeZone: 'America/New_York', latitude: 39.9612, longitude: -82.9988 },
-  { slug: 'jacksonville', name: 'Jacksonville', state: 'Florida', timeZone: 'America/New_York', latitude: 30.3322, longitude: -81.6557 },
-  { slug: 'charlotte', name: 'Charlotte', state: 'North Carolina', timeZone: 'America/New_York', latitude: 35.2271, longitude: -80.8431 },
-  { slug: 'miami', name: 'Miami', state: 'Florida', timeZone: 'America/New_York', latitude: 25.7617, longitude: -80.1918 },
-  { slug: 'philadelphia', name: 'Philadelphia', state: 'Pennsylvania', timeZone: 'America/New_York', latitude: 39.9526, longitude: -75.1652 },
-  { slug: 'new-york', name: 'New York', state: 'New York', timeZone: 'America/New_York', latitude: 40.7128, longitude: -74.006 },
-  { slug: 'boston', name: 'Boston', state: 'Massachusetts', timeZone: 'America/New_York', latitude: 42.3601, longitude: -71.0589 },
+  { slug: 'san-francisco', name: 'San Francisco', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 37.7749, longitude: -122.4194 },
+  { slug: 'seattle', name: 'Seattle', country: 'United States', state: 'Washington', timeZone: 'America/Los_Angeles', latitude: 47.6062, longitude: -122.3321 },
+  { slug: 'san-jose', name: 'San Jose', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 37.3382, longitude: -121.8863 },
+  { slug: 'los-angeles', name: 'Los Angeles', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 34.0522, longitude: -118.2437 },
+  { slug: 'san-diego', name: 'San Diego', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 32.7157, longitude: -117.1611 },
+  { slug: 'phoenix', name: 'Phoenix', country: 'United States', state: 'Arizona', timeZone: 'America/Phoenix', latitude: 33.4484, longitude: -112.074 },
+  { slug: 'san-antonio', name: 'San Antonio', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 29.4241, longitude: -98.4936 },
+  { slug: 'austin', name: 'Austin', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 30.2672, longitude: -97.7431 },
+  { slug: 'fort-worth', name: 'Fort Worth', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 32.7555, longitude: -97.3308 },
+  { slug: 'dallas', name: 'Dallas', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 32.7767, longitude: -96.797 },
+  { slug: 'houston', name: 'Houston', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 29.7604, longitude: -95.3698 },
+  { slug: 'chicago', name: 'Chicago', country: 'United States', state: 'Illinois', timeZone: 'America/Chicago', latitude: 41.8781, longitude: -87.6298 },
+  { slug: 'columbus', name: 'Columbus', country: 'United States', state: 'Ohio', timeZone: 'America/New_York', latitude: 39.9612, longitude: -82.9988 },
+  { slug: 'jacksonville', name: 'Jacksonville', country: 'United States', state: 'Florida', timeZone: 'America/New_York', latitude: 30.3322, longitude: -81.6557 },
+  { slug: 'charlotte', name: 'Charlotte', country: 'United States', state: 'North Carolina', timeZone: 'America/New_York', latitude: 35.2271, longitude: -80.8431 },
+  { slug: 'miami', name: 'Miami', country: 'United States', state: 'Florida', timeZone: 'America/New_York', latitude: 25.7617, longitude: -80.1918 },
+  { slug: 'philadelphia', name: 'Philadelphia', country: 'United States', state: 'Pennsylvania', timeZone: 'America/New_York', latitude: 39.9526, longitude: -75.1652 },
+  { slug: 'new-york', name: 'New York', country: 'United States', state: 'New York', timeZone: 'America/New_York', latitude: 40.7128, longitude: -74.006 },
+  { slug: 'boston', name: 'Boston', country: 'United States', state: 'Massachusetts', timeZone: 'America/New_York', latitude: 42.3601, longitude: -71.0589 },
+  { slug: 'lisbon', name: 'Lisbon', country: 'Portugal', state: 'Portugal', timeZone: 'Europe/Lisbon', latitude: 38.7223, longitude: -9.1393 },
+  { slug: 'madrid', name: 'Madrid', country: 'Spain', state: 'Spain', timeZone: 'Europe/Madrid', latitude: 40.4168, longitude: -3.7038 },
+  { slug: 'london', name: 'London', country: 'United Kingdom', state: 'United Kingdom', timeZone: 'Europe/London', latitude: 51.5074, longitude: -0.1278 },
+  { slug: 'barcelona', name: 'Barcelona', country: 'Spain', state: 'Spain', timeZone: 'Europe/Madrid', latitude: 41.3874, longitude: 2.1686 },
+  { slug: 'paris', name: 'Paris', country: 'France', state: 'France', timeZone: 'Europe/Paris', latitude: 48.8566, longitude: 2.3522 },
+  { slug: 'amsterdam', name: 'Amsterdam', country: 'Netherlands', state: 'Netherlands', timeZone: 'Europe/Amsterdam', latitude: 52.3676, longitude: 4.9041 },
+  { slug: 'rome', name: 'Rome', country: 'Italy', state: 'Italy', timeZone: 'Europe/Rome', latitude: 41.9028, longitude: 12.4964 },
+  { slug: 'copenhagen', name: 'Copenhagen', country: 'Denmark', state: 'Denmark', timeZone: 'Europe/Copenhagen', latitude: 55.6761, longitude: 12.5683 },
+  { slug: 'berlin', name: 'Berlin', country: 'Germany', state: 'Germany', timeZone: 'Europe/Berlin', latitude: 52.52, longitude: 13.405 },
+  { slug: 'vienna', name: 'Vienna', country: 'Austria', state: 'Austria', timeZone: 'Europe/Vienna', latitude: 48.2082, longitude: 16.3738 },
 ] as const;
+
+export const RESTAURANT_COUNTRIES = [...new Set(RESTAURANT_REGIONS.map((region) => region.country))]
+  .sort((a, b) => a === b ? 0 : a === 'United States' ? -1 : b === 'United States' ? 1 : a.localeCompare(b));
 
 // Only supported city guides are candidates. With no usable location, use San Diego.
 export function nearestRestaurantRegion(place: Place | null | undefined) {

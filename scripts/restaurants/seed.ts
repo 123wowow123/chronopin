@@ -8,7 +8,10 @@ import catalog from '@/server/data/regionalRestaurants.json';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import * as db from '@/server/db';
 
-const { values } = parseArgs({ options: { 'user-id': { type: 'string' } } });
+const { values } = parseArgs({ options: { 'user-id': { type: 'string' }, regions: { type: 'string' } } });
+const selectedRegions = values.regions?.split(',').map((slug) => slug.trim());
+if (selectedRegions?.some((slug) => !RESTAURANT_REGIONS.some((region) => region.slug === slug))) throw new Error('Unknown restaurant region in --regions.');
+const restaurants = selectedRegions ? catalog.filter((restaurant) => selectedRegions.includes(restaurant.regionSlug)) : catalog;
 const escapeHtml = (value: string) => value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]!);
 
 try {
@@ -16,7 +19,7 @@ try {
     ? await db.query<{ id: number }>('SELECT "id" FROM "User" WHERE "id" = $1', [Number(values['user-id'])])
     : await db.query<{ id: number }>('SELECT "id" FROM "User" WHERE "userName" = $1', ['FoodDesk']);
   if (!user) throw new Error('A restaurant curator is required. Pass --user-id for an existing user, or create FoodDesk.');
-  const images = await Promise.all(catalog.map((restaurant) => restaurant.image ? sharp(`public${restaurant.image}`).metadata() : null));
+  const images = await Promise.all(restaurants.map((restaurant) => restaurant.image ? sharp(`public${restaurant.image}`).metadata() : null));
   const inserted = await db.transaction(async (query) => {
     await query('SELECT pg_advisory_xact_lock(731906)');
     // San Diego's local preview pins already use 6427–6444, although they
@@ -25,7 +28,7 @@ try {
       await query(`SELECT setval(pg_get_serial_sequence('"Pin"', 'id'), GREATEST((SELECT MAX("id") FROM "Pin"), 6444, (SELECT "last_value" FROM "Pin_id_seq")))`);
     }
     let count = 0;
-    for (const [index, restaurant] of catalog.entries()) {
+    for (const [index, restaurant] of restaurants.entries()) {
       const existing = await query('SELECT "id" FROM "Pin" WHERE "sourceUrl" = $1', [restaurant.sourceUrl]);
       if (existing.length) continue;
       const region = RESTAURANT_REGIONS.find((item) => item.slug === restaurant.regionSlug)!;

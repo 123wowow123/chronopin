@@ -6,14 +6,17 @@
 // container is public, so no `az login` is needed.
 //
 //   npm run thumbs:pull
+//   npm run thumbs:pull -- --restaurants
 
 import '../env';
+import { parseArgs } from 'node:util';
 import { thumbUrlPrefix } from '@/lib/appConfig';
 import { createThumbContainer, uploadThumb } from '@/server/azureBlob';
 import * as db from '@/server/db';
 
 const PROD = 'https://chronopin.blob.core.windows.net/thumb/';
 const CONCURRENCY = 16;
+const { values } = parseArgs({ options: { restaurants: { type: 'boolean', default: false } } });
 
 // A reset connection on one of 14k requests must not end the run: retry with a growing pause.
 async function retry<T>(job: () => Promise<T>): Promise<T> {
@@ -35,13 +38,25 @@ async function exists(url: string) {
 async function main() {
   if (thumbUrlPrefix.startsWith(PROD)) throw new Error('thumbUrlPrefix points at production; run this against Azurite');
   await createThumbContainer();
-  const names = (
-    await db.query<{ name: string }>(
+  const rows = values.restaurants
+    ? await db.query<{ name: string }>(
+      `SELECT DISTINCT "m"."thumbName" AS name FROM "Medium" AS "m"
+       JOIN "PinMedium" AS "pm" ON "pm"."mediumId" = "m"."id"
+       JOIN "Pin" AS "p" ON "p"."id" = "pm"."pinId"
+       WHERE "m"."thumbName" IS NOT NULL AND "p"."utcDeletedDateTime" IS NULL
+         AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"
+           AND "t"."name" IN ('Restaurant', 'Restaurant Opening', 'Top Restaurants'))`,
+    )
+    : await db.query<{ name: string }>(
       `SELECT "thumbName" AS name FROM "Medium" WHERE "thumbName" IS NOT NULL
        UNION SELECT 's/' || "thumbName" FROM "Medium" WHERE "thumbName" IS NOT NULL
        UNION SELECT "pictureUrl" FROM "User" WHERE "pictureUrl" LIKE 'avatar/%'`,
-    )
-  ).map((row) => row.name);
+    );
+  // Public assets and full URLs are served directly, not from the blob store.
+  const names = [...new Set(rows.flatMap(({ name }) => {
+    if (name.startsWith('/') || /^https?:\/\//i.test(name)) return [];
+    return values.restaurants ? [name, `s/${name}`] : [name];
+  }))];
 
   let copied = 0;
   let present = 0;

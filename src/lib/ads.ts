@@ -19,15 +19,16 @@ import type { UserPreference } from './userWiki';
 import { affiliateUrl, amazonAssociateTag, ebayCampaignId, isEbayUrl } from './affiliate';
 import { asinOf, sameBrand, sameProductFamily } from './adQuality';
 import { AD_TIERS, type AdTier } from './culturalDays';
+import { isCategory } from './categories';
 
 // 'watch' ads (0130) are not Amazon's: the pre-owned luxury watches of one
 // brand on eBay, which earns through the EPN campaign (affiliate.ts).
-export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch';
+export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker';
 
 // Each kind's share of the picks, before relatedness and preference.
 // A watch pool is small, so on the timeline it only comes up now and then;
 // on a Watches pin's page its ads are related (shared tag) and come first.
-export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1 };
+export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1 };
 
 // The watch brands advertised (Ad.program is `watch_<key>`), by the name the
 // ad shows. Owner, 2026-10-05: "add ads for rolex and other desirable watches".
@@ -46,18 +47,29 @@ export const WATCH_BRANDS: Record<string, string> = {
 
 export const watchBrand = (program: string | null | undefined): string | null => (program && WATCH_BRANDS[program]) || null;
 
+// eBay sneaker searches, with model names rather than invented listing facts.
+export const SNEAKER_ADS: Record<string, { title: string; brand: string }> = {
+  sneaker_af1: { title: 'Nike Air Force 1', brand: 'Nike' },
+  sneaker_dunk: { title: 'Nike Dunk', brand: 'Nike' },
+  sneaker_jordan: { title: 'Air Jordan', brand: 'Nike' },
+  sneaker_samba: { title: 'adidas Samba', brand: 'adidas' },
+  sneaker_nb: { title: 'New Balance 990', brand: 'New Balance' },
+  sneaker_asics: { title: 'ASICS GEL-Kayano', brand: 'ASICS' },
+};
+
+export const sneakerAd = (program: string | null | undefined) => (program && SNEAKER_ADS[program]) || null;
+
+const FOOTWEAR_TAGS = new Set(['sneakers', 'sneaker', 'shoes', 'shoe', 'footwear']);
+const hasFootwear = (names: string[]) => names.some((name) => FOOTWEAR_TAGS.has(name.trim().toLowerCase()));
+
 export const AD_SLOTS = ['timeline-row', 'timeline-side', 'pin-strip', 'pin-side', 'drawer'] as const;
 export type AdSlot = (typeof AD_SLOTS)[number];
 // How many ads a slot asks for at most: what it shows at its widest. The
 // timeline's side panel stops at five however tall the window is; a pin's
 // side column runs taller, so it stops at seven.
 export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 7, drawer: 5 };
-// How many of a slot's ads are a holiday's while one's window is open
-// (src/lib/culturalDays.ts): a tile for each price tier where the slot is
-// wide enough to show them, both of the pin page's strip, which holds two.
-// On a pin's page only for a pin that falls on the holiday, in or out of its
-// window, so such a pin always carries at least two of its holiday's goods.
-export const HOLIDAY_COUNT: Record<AdSlot, number> = { 'timeline-row': 3, 'timeline-side': 3, 'pin-strip': 2, 'pin-side': 3, drawer: 2 };
+// Reserve one seasonal tile, leaving room for other categories in every block.
+export const HOLIDAY_COUNT: Record<AdSlot, number> = { 'timeline-row': 1, 'timeline-side': 1, 'pin-strip': 1, 'pin-side': 1, drawer: 1 };
 // Slots on a pin's page, whose ads are its related ones first.
 export const PIN_SLOTS: readonly AdSlot[] = ['pin-strip', 'pin-side'];
 
@@ -181,7 +193,7 @@ export type AdContext = {
   // The viewer's age in whole years, when signed in with a birthday.
   age: number | null;
   // The pin whose page the slot is on.
-  pin: { id: number; categories: string[]; tags: string[]; company: string | null; day?: string | null } | null;
+  pin: { id: number; categories: string[]; tags: string[]; company: string | null; title?: string; day?: string | null } | null;
   // This slot's own recent performance, so an ad that actually gets clicked
   // more *here* shows more here, even where it does worse in other slots.
   // Undefined (not yet computed, or too little traffic to bother) leaves
@@ -272,17 +284,36 @@ export function ageOn(birthday: string | null | undefined, now = new Date()): nu
   return age >= 0 && age < 150 ? age : null;
 }
 
-const lower = (names: string[]) => names.map((n) => n.toLowerCase());
+const lower = (names: string[]) => names.map((n) => n.trim().toLowerCase());
+
+// Equivalent catalog labels, shared by every pin topic and ad source.
+const TOPIC_ALIASES: Record<string, string> = {
+  sneaker: 'shoes', sneakers: 'shoes', shoe: 'shoes', footwear: 'shoes',
+  watch: 'watches', smartwatch: 'watches', smartwatches: 'watches',
+  book: 'literature', books: 'literature',
+  game: 'gaming', games: 'gaming', 'video games': 'gaming',
+  movies: 'movie', film: 'movie', films: 'movie', television: 'tv',
+};
+const topicName = (name: string) => TOPIC_ALIASES[name.trim().toLowerCase()] ?? name.trim().toLowerCase();
+const EVENT_TAGS = new Set(['release', 'launch', 'announcement', 'debut', 'premiere', 'opening', 'update', 'delay']);
+
+function sharedTopics(ad: AdCandidate, pin: NonNullable<AdContext['pin']>): number {
+  const tags = new Set(pin.tags.filter((name) => !EVENT_TAGS.has(topicName(name))).map(topicName));
+  // Catalog kinds identify what is actually sold even when the ad only
+  // carries a broad Fashion or Electronics tag.
+  const topics = new Set([...ad.categories.map(topicName), topicName(adCategory(ad))]);
+  return [...topics].filter((name) => tags.has(name)).length;
+}
 
 // How related an ad is to the pin: shared categories or tags, and the same
 // company. 0 when nothing is shared.
 export function relatedness(ad: AdCandidate, pin: AdContext['pin']): number {
   if (!pin) return 0;
-  const pinNames = new Set(lower([...pin.categories, ...pin.tags]));
-  const shared = lower(ad.categories).filter((c) => pinNames.has(c)).length;
+  const pinNames = new Set([...pin.categories, ...pin.tags].map(topicName).filter((name) => !EVENT_TAGS.has(name)));
+  const shared = [...new Set([...ad.categories.map(topicName), topicName(adCategory(ad))])].filter((c) => pinNames.has(c)).length;
   const sameCompany = sameBrand(ad.company, pin.company);
   const chosen = ad.forPinId === pin.id ? CHOSEN_FOR_PIN_BOOST + (sameCompany ? CHOSEN_BRAND_BOOST : 0) : 0;
-  return RELATED_CATEGORY_BOOST * Math.min(shared, 2) + (sameCompany ? RELATED_COMPANY_BOOST : 0) + chosen;
+  return RELATED_CATEGORY_BOOST * Math.min(shared, 2) + RELATED_CATEGORY_BOOST * Math.min(sharedTopics(ad, pin), 2) + (sameCompany ? RELATED_COMPANY_BOOST : 0) + chosen;
 }
 
 // Whether the viewer may see the ad at all: old enough, and not the product
@@ -338,10 +369,24 @@ export function expandAvoid(candidates: AdCandidate[], avoid: Set<string>): Set<
   return widened;
 }
 
+// Group by what the ad sells, rather than its brand or its ad kind. Product
+// listings often inherit broad Fashion tags, so recognize watches and shoes
+// before falling back to the first catalog category.
+export function adCategory(ad: AdCandidate): string {
+  const categories = ad.categories.map((name) => name.trim().toLowerCase());
+  if (ad.kind === 'watch' || categories.some((name) => /^(?:watches|watch|smartwatches)$/.test(name)) || /\b(?:watches|watch|smartwatch)\b/i.test(ad.title ?? '')) return 'watches';
+  if (ad.kind === 'sneaker' || hasFootwear(ad.categories) || /\b(?:sneakers?|shoes?|footwear)\b/i.test(ad.title ?? '')) return 'shoes';
+  if (ad.holiday) return 'seasonal';
+  return topicName(categories.find(isCategory) ?? categories.find(Boolean) ?? ad.program ?? 'products');
+}
+
 // Up to n ads, a weighted random pick without repeats. On a pin's page the
-// ads chosen for the pin come first, then the related ones. Keys in `avoid` (already shown elsewhere on the
-// page) are only used once the rest run out.
-export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, avoid: Set<string> = new Set(), random = Math.random): AdCandidate[] {
+// ads favor the pin at every pick, balancing categories within related ads
+// before using unrelated ads to fill the remaining space.
+// Prefer at most two per category (one in a two-ad block), relaxing that limit
+// when necessary to fill the requested count. Keys in `avoid` follow fresh ads.
+// `initial` includes seasonal tiles already selected for this block.
+export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, avoid: Set<string> = new Set(), random = Math.random, initial: AdCandidate[] = []): AdCandidate[] {
   // A slot the holiday ads already fill asks for none more.
   if (n <= 0) return [];
   const allowed = candidates.filter((ad) => !ad.holiday && adAllowed(ad, ctx));
@@ -363,24 +408,40 @@ export function pickAds(candidates: AdCandidate[], ctx: AdContext, n: number, av
       const performance = performanceWeight(ctx.performance?.byKey.get(ad.key), ctx.performance?.baselineCtr ?? 0);
       const weight = (shareOf(ad.kind) / total) * personalWeight(ad, ctx) * (1 + related) * performance * rewardWeight(ad) * qualityWeight(ad);
       // Efraimidis-Spirakis: the n smallest -ln(u)/w are a weighted sample.
-      return { ad, related, own: ctx.pin != null && ad.forPinId === ctx.pin.id, fresh: !avoid.has(ad.key), score: weight > 0 ? -Math.log(1 - random()) / weight : Infinity };
+      return { ad, category: adCategory(ad), product: productKey(ad), related, topic: ctx.pin ? sharedTopics(ad, ctx.pin) : 0, brand: !!ctx.pin && sameBrand(ad.company, ctx.pin.company), own: ctx.pin != null && ad.forPinId === ctx.pin.id, fresh: !avoid.has(ad.key), score: weight > 0 ? -Math.log(1 - random()) / weight : Infinity };
     })
     .filter((w) => w.score !== Infinity);
-  weighed.sort((a, b) => Number(b.fresh) - Number(a.fresh) || Number(b.own) - Number(a.own) || (ctx.pin ? Number(b.related > 0) - Number(a.related > 0) : 0) || a.score - b.score);
-  // One ad per product: a listing that is both a pin's own and a chosen ad
-  // is shown once, by whichever ranked first, and so is one of a listing's
-  // variants. Variants fill in only when nothing else is left.
+  weighed.sort((a, b) => Number(b.fresh) - Number(a.fresh) || Number(b.own) - Number(a.own) || b.topic - a.topic || Number(b.brand) - Number(a.brand) || Number(b.related > 0) - Number(a.related > 0) || a.score - b.score);
+  // Start with the ranked relevant ad, then balance category counts before
+  // consulting that ranking again. Never fill a block with more of one topic
+  // just because its inventory has more brands or better click statistics.
   const picked: AdCandidate[] = [];
-  const variants: AdCandidate[] = [];
-  for (const { ad } of weighed) {
-    if (picked.length === n) break;
-    if (picked.some((p) => productKey(p) === productKey(ad))) continue;
-    if (picked.some((p) => sameProduct(p, ad))) variants.push(ad);
-    else picked.push(ad);
-  }
-  for (const ad of variants) {
-    if (picked.length === n) break;
-    if (!picked.some((p) => productKey(p) === productKey(ad))) picked.push(ad);
+  const counts = new Map<string, number>();
+  for (const ad of initial) counts.set(adCategory(ad), (counts.get(adCategory(ad)) ?? 0) + 1);
+  const categories = new Set([...initial.map(adCategory), ...weighed.map(({ category }) => category)]);
+  const products = new Set(initial.map(productKey));
+  const cap = categories.size <= 1 || n + initial.length <= 2 ? 1 : 2;
+  while (picked.length < n) {
+    const shown = [...initial, ...picked];
+    const remaining = weighed.filter(({ product }) => !products.has(product));
+    let eligible = remaining.filter(({ category }) => (counts.get(category) ?? 0) < cap);
+    // Counts take precedence when the available inventory cannot meet the
+    // variety target. Keep balancing categories while filling every slot.
+    if (!eligible.length) eligible = remaining;
+    if (!eligible.length) break;
+    // Keep fresh and relevant choices ahead of fillers, then prefer distinct
+    // product families within that pool. Exact duplicates were filtered above.
+    const fresh = eligible.filter(({ fresh }) => fresh);
+    if (fresh.length) eligible = fresh;
+    const relevant = eligible.filter(({ related }) => related > 0);
+    if (relevant.length) eligible = relevant;
+    const distinct = eligible.filter(({ ad }) => !shown.some((p) => p.kind === 'product' && ad.kind === 'product' && sameProductFamily({ ...p, brand: p.brand ?? p.company }, { ...ad, brand: ad.brand ?? ad.company })));
+    if (distinct.length) eligible = distinct;
+    const least = Math.min(...eligible.map(({ category }) => counts.get(category) ?? 0));
+    const { ad, category, product } = eligible.find(({ category }) => (counts.get(category) ?? 0) === least)!;
+    picked.push(ad);
+    counts.set(category, least + 1);
+    products.add(product);
   }
   return picked;
 }

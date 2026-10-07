@@ -6,7 +6,7 @@ import { RestaurantGuide } from '@/components/restaurants/RestaurantGuide';
 import { dayKeyIn } from '@/lib/format';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { absoluteUrl } from '@/lib/seo';
-import { regionalRestaurants, regionalTopRestaurants } from '@/server/services/restaurants';
+import { regionalRestaurants, regionalTopRestaurants, restaurantGuideRegionSlugs } from '@/server/services/restaurants';
 
 type Props = { params: Promise<{ region: string }> };
 
@@ -28,6 +28,6 @@ async function GuideContent({ params }: Props) {
   const { region: slug } = await params;
   const region = RESTAURANT_REGIONS.find((item) => item.slug === slug);
   if (!region) notFound();
-  const [data, topRestaurants] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug)]);
-  return <RestaurantGuide {...data} topRestaurants={topRestaurants} region={region} today={dayKeyIn(new Date(), region.timeZone)} />;
+  const [data, topRestaurants, availableRegionSlugs] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug), restaurantGuideRegionSlugs()]);
+  return <RestaurantGuide {...data} topRestaurants={topRestaurants} availableRegionSlugs={availableRegionSlugs} region={region} today={dayKeyIn(new Date(), region.timeZone)} />;
 }

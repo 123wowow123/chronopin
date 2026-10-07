@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   adAllowed,
+  adCategory,
   adTag,
   expandAvoid,
   ageOn,
@@ -21,7 +22,9 @@ import {
   taggedAdUrl,
   validateAmazonTags,
   watchBrand,
+  sneakerAd,
 } from './ads';
+import { CATEGORIES } from './categories';
 
 const ad = (over: Partial<AdCandidate>): AdCandidate => ({
   key: 'ad:1',
@@ -142,6 +145,34 @@ describe('pickAds', () => {
     const pin = { id: 999, categories: ['Gaming'], tags: [], company: null };
     const picked = pickAds([...programs, ...products], { ...none, pin }, 2, new Set(), seeded(3));
     expect(picked[0].key).toBe('m:5');
+  });
+
+  it('puts footwear ahead of broad matches on a sneaker pin, including other brands', () => {
+    const pin = { id: 4436, categories: ['Fashion'], tags: ['Sneakers', 'Air Force 1', 'Nike'], company: 'Nike' };
+    const shoes = [
+      ad({ key: 'ad:90', kind: 'sneaker', program: 'sneaker_af1', title: 'Nike Air Force 1', company: 'Nike', categories: ['Sneakers', 'Air Force 1', 'Nike'] }),
+      ad({ key: 's:91', kind: 'product', categories: ['Footwear'], company: 'adidas' }),
+    ];
+    const clothing = ad({ key: 's:92', kind: 'product', company: 'Nike', categories: ['Fashion', 'Nike'] });
+    for (let seed = 1; seed <= 20; seed++) {
+      const picked = pickAds([...programs, clothing, ...shoes], { ...none, pin }, 2, new Set(), seeded(seed));
+      expect(['ad:90', 's:91']).toContain(picked[0].key);
+      expect(adCategory(picked[1])).not.toBe('shoes');
+    }
+    // Other slots keep their usual weights rather than privileging footwear.
+    expect(pickAds([clothing, ...shoes], none, 1, new Set(), () => 0)[0]).toBe(clothing);
+  });
+
+  it('keeps chosen ads, page deduplication and age checks when prioritizing shoes', () => {
+    const pin = { id: 4436, categories: ['Fashion'], tags: ['shoes'], company: 'Nike' };
+    const shoe = ad({ key: 'ad:90', kind: 'sneaker', program: 'sneaker_af1', minAge: 13, categories: ['Sneakers'] });
+    const chosen = ad({ key: 'p:91', kind: 'product', forPinId: 4436, pinId: 4436 });
+    expect(pickAds([shoe, chosen], { ...none, pin }, 1, new Set(), seeded())[0]).toBe(chosen);
+    expect(pickAds([shoe, ...programs], { ...none, pin }, 1, new Set([shoe.key]), seeded())[0].key).not.toBe(shoe.key);
+    expect(adAllowed(shoe, { ...none, age: 13 })).toBe(true);
+    expect(adAllowed(shoe, { ...none, age: 12 })).toBe(false);
+    expect(sneakerAd('sneaker_af1')).toEqual({ title: 'Nike Air Force 1', brand: 'Nike' });
+    expect(sneakerAd('prime')).toBeNull();
   });
 
   it('uses ads already on the page only when the rest run out', () => {
@@ -283,7 +314,7 @@ describe('no duplicate ads', () => {
   const listing = (key: string, asin: string) => ad({ key, kind: 'product', program: null, minAge: 0, url: `https://www.amazon.com/dp/${asin}` });
 
   it('shows a product once however many keys it has', () => {
-    const picked = pickAds([listing('m:1', 'B000000001'), listing('p:1', 'B000000001'), listing('m:2', 'B000000002')], none, 3, new Set(), seeded());
+    const picked = pickAds([listing('m:1', 'B000000001'), listing('p:1', 'B000000001'), { ...listing('m:2', 'B000000002'), categories: ['Home'] }], none, 3, new Set(), seeded());
     expect(picked).toHaveLength(2);
     expect(new Set(picked.map((a) => a.url)).size).toBe(2);
   });
@@ -293,6 +324,110 @@ describe('no duplicate ads', () => {
     expect([...expandAvoid(all, new Set(['m:1']))].sort()).toEqual(['m:1', 'p:1']);
     expect(pickAds(all, none, 1, expandAvoid(all, new Set(['m:1'])), seeded()).map((a) => a.key)).toEqual(['m:2']);
   });
+});
+
+describe('ad category variety', () => {
+  const watches = Array.from({ length: 12 }, (_, i) => ad({
+    key: `p:${i}`, kind: 'product', program: null, title: `${i} Men's Watch`,
+    categories: ['Fashion', 'Watches'], company: `Brand ${i}`, url: `https://example.com/watch/${i}`,
+  }));
+  const other = [
+    ad({ key: 'ad:haul', program: 'haul', categories: ['Fashion', 'Home'] }),
+    ad({ key: 'ad:audible', program: 'audible', categories: ['Books'] }),
+    ad({ key: 'ad:video', program: 'primevideo', categories: ['Movie'] }),
+    ad({ key: 's:audio', kind: 'product', program: null, title: 'Headphones', categories: ['Audio'] }),
+    ad({ key: 's:home', kind: 'product', program: null, title: 'Lamp', categories: ['Home'] }),
+    ad({ key: 'ad:shoes', kind: 'sneaker', program: 'sneaker_af1', title: 'Nike Air Force 1', categories: ['Sneakers'] }),
+  ];
+
+  it('mixes categories in all multi-ad blocks even with a large related watch inventory', () => {
+    const pin = { id: 999, categories: ['Fashion'], tags: ['Watches'], company: null };
+    for (const n of [2, 5, 7]) for (let seed = 1; seed <= 20; seed++) {
+      for (const ctx of [none, { ...none, pin }]) {
+        const picked = pickAds([...watches, ...other], ctx, n, new Set(), seeded(seed));
+        const categories = picked.map(adCategory);
+        expect(picked).toHaveLength(n);
+        expect(new Set(categories).size).toBeGreaterThanOrEqual(Math.ceil(n / 2));
+        expect(categories.filter((category) => category === 'watches').length).toBeLessThanOrEqual(n === 2 ? 1 : 2);
+      }
+    }
+  });
+
+  it('groups watches and shoes across brands, listing types and broad tags', () => {
+    expect(adCategory(watches[0])).toBe('watches');
+    expect(adCategory(ad({ kind: 'watch', program: 'watch_rolex' }))).toBe('watches');
+    expect(adCategory(ad({ kind: 'product', categories: ['Electronics'], title: 'Garmin Smartwatch' }))).toBe('watches');
+    expect(adCategory(ad({ kind: 'product', categories: ['Fashion'], title: 'adidas Running Shoes' }))).toBe('shoes');
+    expect(adCategory(other[5])).toBe('shoes');
+    expect(adCategory(ad({ kind: 'product', categories: ['Red Dot Design Award 2017', 'Electronics'], title: 'Wireless speaker' }))).toBe('electronics');
+  });
+
+  it('fills the requested count even when eligible inventory offers only one category', () => {
+    expect(pickAds(watches, none, 7, new Set(), seeded())).toHaveLength(7);
+    const adult = ad({ key: 'ad:adult', categories: ['Books'], minAge: 18 });
+    expect(pickAds([...watches, adult], { ...none, age: 14 }, 7, new Set(), seeded())).toHaveLength(7);
+  });
+
+  it('fills sparse category pools without reducing variety or repeating products', () => {
+    const picked = pickAds([...watches, other[1]], none, 7, new Set(), seeded());
+    expect(picked).toHaveLength(7);
+    expect(picked.filter((ad) => adCategory(ad) === 'literature')).toHaveLength(1);
+    expect(new Set(picked.map((ad) => ad.key)).size).toBe(7);
+    const initial = watches[0];
+    const rest = pickAds(watches, none, 6, new Set(), seeded(), [initial]);
+    expect(rest).toHaveLength(6);
+    expect(rest.map((ad) => ad.key)).not.toContain(initial.key);
+  });
+
+  it('counts seasonal tiles toward variety in the complete block', () => {
+    const seasonal = ad({ key: 'h:1', kind: 'product', holiday: 'halloween', title: 'Costume' });
+    const picked = pickAds([...watches, ...other], none, 1, new Set(), seeded(), [seasonal]);
+    expect(picked).toHaveLength(1);
+    expect(adCategory(picked[0])).not.toBe(adCategory(seasonal));
+  });
+
+  it('keeps variation when most alternatives have already appeared elsewhere on the page', () => {
+    const avoid = new Set(other.map((ad) => ad.key));
+    const picked = pickAds([...watches, ...other], none, 7, avoid, seeded());
+    expect(picked).toHaveLength(7);
+    expect(picked.filter((ad) => adCategory(ad) === 'watches')).toHaveLength(2);
+    expect(new Set(picked.map(adCategory)).size).toBeGreaterThan(1);
+  });
+});
+
+describe('relevance across pin topics', () => {
+  it.each(CATEGORIES)('prefers diverse related ads for %s pins before unrelated fillers', (category) => {
+    const pin = { id: 999, categories: [category], tags: ['Specific Topic'], company: 'Relevant Brand' };
+    const related = [
+      ad({ key: 'p:topic1', kind: 'product', program: null, categories: [category, 'Specific Topic'], title: 'Related one' }),
+      ad({ key: 'p:topic2', kind: 'product', program: null, categories: [category, 'Specific Topic'], title: 'Related two' }),
+      ad({ key: 'p:brand', kind: 'product', program: null, categories: ['Brand gear'], company: 'Relevant Brand' }),
+    ];
+    const fillers = [1, 2, 3, 4].map((i) => ad({ key: `ad:other${i}`, program: `other${i}`, categories: [`Other ${i}`], weight: 1000 }));
+    for (let seed = 1; seed <= 5; seed++) {
+      const picked = pickAds([...fillers, ...related], { ...none, pin }, 5, new Set(), seeded(seed));
+      expect(new Set(picked.slice(0, 3).map((ad) => ad.key))).toEqual(new Set(related.map((ad) => ad.key)));
+      expect(new Set(picked.map(adCategory)).size).toBeGreaterThan(1);
+    }
+  });
+
+  it('ranks specific topics ahead of broad categories for every type of pin', () => {
+    for (const topic of ['Watches', 'Robotics kits', 'Telescopes', 'Sneakers', 'LEGO', 'Audio']) {
+      const pin = { id: 999, categories: ['Electronics'], tags: [topic], company: null };
+      const specific = ad({ key: 'p:topic', kind: 'product', program: null, categories: [topic], weight: 0.01 });
+      const broad = ad({ key: 'ad:generic', categories: ['Electronics'], weight: 1000 });
+      expect(pickAds([broad, specific], { ...none, pin }, 1, new Set(), seeded())[0]).toBe(specific);
+    }
+  });
+
+  it('matches synonymous topic names but ignores generic release tags', () => {
+    const pin = { id: 999, categories: ['Literature'], tags: ['Release'], company: null };
+    expect(relatedness(ad({ categories: ['Books'] }), pin)).toBeGreaterThan(0);
+    expect(relatedness(ad({ categories: ['Release', 'Gaming'] }), pin)).toBe(0);
+    const shoePin = { ...pin, categories: ['Fashion'], tags: ['Footwear'] };
+    expect(relatedness(ad({ kind: 'sneaker', categories: [] }), shoePin)).toBeGreaterThan(0);
+  });
+
 });
 
 describe('parseUrgency', () => {

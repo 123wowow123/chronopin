@@ -1,6 +1,7 @@
 import { cacheLife, cacheTag } from 'next/cache';
 import { blobUrl } from '@/lib/appConfig';
-import { RESTAURANT_REGIONS, openingDateLabel, type Restaurant, type TopRestaurant } from '@/lib/restaurants';
+import { RESTAURANT_REGIONS, openingDateLabel, openingGroup, type Restaurant, type TopRestaurant } from '@/lib/restaurants';
+import { dayKeyIn } from '@/lib/format';
 import topRestaurants from '@/server/data/topRestaurants.json';
 import regionalCatalog from '@/server/data/regionalRestaurants.json';
 import { toJson, type PinJson } from '@/lib/types';
@@ -11,6 +12,42 @@ import { TAGS } from './cache';
 import { restaurantPriceRange } from '../restaurantPrice';
 
 const CUISINES = new Set(['Mexican', 'Mediterranean', 'Cafe', 'Sandwiches', 'Japanese', 'Chinese', 'Italian', 'Greek', 'Spanish', 'Hawaiian', 'American', 'European', 'Brazilian', 'French', 'Californian', 'Afro-Asian', 'Asian', 'Vegetarian', 'Seafood', 'Oaxacan']);
+
+export async function restaurantGuideRegionSlugs(): Promise<string[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  // Match the guide's live opening query without hydrating every city's pins and media.
+  const catalog = regionalCatalog.filter((restaurant) => restaurant.kind === 'top');
+  const [openings, pins] = await Promise.all([
+    db.query<{ city: string; day: string; dateConfidence: string | null; sourceUrl: string | null }>(
+      `SELECT "city"."name" AS "city", to_char("p"."utcStartDateTime", 'YYYY-MM-DD') AS "day",
+              "p"."dateConfidence", "p"."sourceUrl"
+       FROM "Pin" AS "p" JOIN "PinTag" AS "city" ON "city"."pinId" = "p"."id"
+       WHERE "p"."utcDeletedDateTime" IS NULL AND "p"."utcStartDateTime" IS NOT NULL
+         AND "city"."name" = ANY($1::citext[])
+         AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Restaurant Opening')
+         AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')`,
+      [RESTAURANT_REGIONS.map((region) => region.name)],
+    ),
+    Pin.findBySourceUrls(catalog.map((restaurant) => restaurant.sourceUrl)),
+  ]);
+  const populated = new Set(topRestaurants.map((restaurant) => restaurant.regionSlug));
+  for (const restaurant of catalog) {
+    if (pins.has(restaurant.sourceUrl)) populated.add(restaurant.regionSlug);
+  }
+  const now = new Date();
+  for (const region of RESTAURANT_REGIONS) {
+    const today = dayKeyIn(now, region.timeZone);
+    if (openings.some((opening) => {
+      if (opening.city.toLowerCase() !== region.name.toLowerCase()) return false;
+      const catalogOpening = regionalCatalog.find((restaurant) => restaurant.kind === 'opening' && restaurant.sourceUrl === opening.sourceUrl);
+      const confirmed = opening.dateConfidence === 'confirmed' || (catalogOpening?.openingConfirmed === true && catalogOpening.day === opening.day);
+      return !!openingGroup({ day: opening.day, confirmed }, today);
+    })) populated.add(region.slug);
+  }
+  return RESTAURANT_REGIONS.filter((region) => populated.has(region.slug)).map((region) => region.slug);
+}
 
 export async function regionalTopRestaurants(regionSlug: string): Promise<TopRestaurant[]> {
   'use cache';
