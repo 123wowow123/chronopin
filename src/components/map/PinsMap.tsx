@@ -6,7 +6,7 @@ import L from 'leaflet';
 import { localizeHere, useRouter, useSearchParams, withPageLang } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { MAP_ATTRIBUTION_PREFIX, TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
-import { FloatingControls } from '@/components/timeline/FloatingControls';
+import { FloatingControls, useInDrawerPanel } from '@/components/timeline/FloatingControls';
 import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { PinWebGraph } from '@/components/map/PinWebGraph';
@@ -20,6 +20,7 @@ import { canonicalCategory, isCategory } from '@/lib/categories';
 import { clearSpot, peekMapSpot, setMapViewSource } from '@/lib/client/returnSpot';
 import { useQueryState } from '@/lib/client/urlState';
 import { viewerPlace } from '@/lib/client/viewerPlace';
+import { closeDrawer } from '@/lib/client/controlsDrawer';
 import { distanceKm, formatDistance, greatCirclePoints } from '@/lib/distance';
 import { usesImperial } from '@/lib/weather';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, offsetDate, spanFromParam, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
@@ -46,6 +47,22 @@ const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
 const DEFAULT_ZOOM = 4;
 // Opening on the viewer's own place: their region, with the pins around it.
 const HOME_ZOOM = 6;
+
+function locationMarker(map: L.Map, point: L.LatLngTuple, label: string) {
+  const at: L.LatLngTuple = [point[0], point[1] + 360 * nearestOffset(point[1], map.getCenter().lng)];
+  return L.marker(at, {
+    pane: 'currentLocation',
+    title: label,
+    alt: label,
+    icon: L.divIcon({
+      className: 'scale-100',
+      html: '<span class="block size-4 rounded-full border-[3px] border-white bg-blue-500 shadow-[0_0_0_6px_rgba(59,130,246,0.2)]"></span>',
+      iconSize: [16, 16],
+      iconAnchor: [8, 8],
+    }),
+  }).bindTooltip(label, { direction: 'top' }).addTo(map);
+}
+
 type ResultView = { bounds: L.LatLngBounds | null; fitting: boolean };
 
 function fitResultView(map: L.Map, view: ResultView) {
@@ -333,8 +350,10 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
   const params = useSearchParams();
   const query = params.get('q') || '';
   const restaurantLayer = params.get('show') === 'restaurants';
-  const fitResults = restaurantLayer || params.get('fit') === 'results'
-    || splitSearchQuery(query).some((part) => part.kind === 'term' && part.field === 'pin' && !part.negated);
+  // Layer switches keep the viewport; links to a guide can still fit results.
+  const preserveView = params.get('fit') === 'view';
+  const fitResults = !preserveView && (restaurantLayer || params.get('fit') === 'results'
+    || splitSearchQuery(query).some((part) => part.kind === 'term' && part.field === 'pin' && !part.negated));
   const focusId = Number(params.get('pin')) || undefined;
   // From a pin's distance, clicked: draw what it measured. The viewer's place
   // is the browser's to work out, so the URL only asks for it.
@@ -348,6 +367,10 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
   const fetchQuery = joinSearchQuery(splitSearchQuery(query).filter((part) => !isCategoryTerm(part)));
   const canvasRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
+  const locationPointRef = useRef<L.LatLngTuple | null>(null);
+  const locationMarkerRef = useRef<L.Marker | null>(null);
+  const [locating, setLocating] = useState(false);
+  const [locationError, setLocationError] = useState<string | null>(null);
   const layerRef = useRef<L.LayerGroup | null>(null);
   // Every marker in the time window with its pin's category; the category
   // filter only shows and hides these, so a pick needs no refetch.
@@ -447,6 +470,8 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     const stopViewSource = setMapViewSource(() => ({ lat: map.getCenter().lat, lng: map.getCenter().lng, zoom: map.getZoom() }));
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
     mapRef.current = map;
+    map.createPane('currentLocation').style.zIndex = '625';
+    if (locationPointRef.current) locationMarkerRef.current = locationMarker(map, locationPointRef.current, t('map.yourPlace'));
     const layer = L.layerGroup().addTo(map);
     layerRef.current = layer;
     // Under the markers, so a line never hides a pin.
@@ -462,6 +487,8 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     map.on('moveend', () => {
       syncCopies(map, layer, markersRef.current, categoriesRef.current);
       syncCopies(map, marketLayer, marketEntriesRef.current, []);
+      const point = locationPointRef.current;
+      if (point) locationMarkerRef.current?.setLatLng([point[0], point[1] + 360 * nearestOffset(point[1], map.getCenter().lng)]);
     });
     // Cache Components keeps a left page mounted and reruns its effects when
     // it is shown again (back to the pin, "To map" again): the new map
@@ -488,14 +515,19 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     // only while the map is still on the default view - no saved spot, no
     // pin being shown, not yet moved by the reader.
     let unmounted = false;
-    if (!spot) {
-      void viewerPlace().then((place) => {
-        if (unmounted || !place || place.source === 'timeZone' || mapRef.current !== map || focusedRef.current !== undefined) return;
-        const center = map.getCenter();
-        if (map.getZoom() !== DEFAULT_ZOOM || center.lat !== DEFAULT_CENTER[0] || center.lng !== DEFAULT_CENTER[1]) return;
-        map.setView([place.latitude, place.longitude], HOME_ZOOM);
-      });
-    }
+    void viewerPlace().then((place) => {
+      if (unmounted || !place || mapRef.current !== map) return;
+      // Only a device reading marks the viewer's current location. Saved
+      // account places and time-zone cities are not current positions.
+      if (place.source === 'device' && !locationPointRef.current) {
+        locationPointRef.current = [place.latitude, place.longitude];
+        locationMarkerRef.current = locationMarker(map, locationPointRef.current, t('map.yourPlace'));
+      }
+      if (keepViewRef.current || place.source === 'timeZone' || focusedRef.current !== undefined) return;
+      const center = map.getCenter();
+      if (map.getZoom() !== DEFAULT_ZOOM || center.lat !== DEFAULT_CENTER[0] || center.lng !== DEFAULT_CENTER[1]) return;
+      map.setView([place.latitude, place.longitude], HOME_ZOOM);
+    });
     return () => {
       unmounted = true;
       clearTimeout(cleared);
@@ -503,12 +535,13 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       sizeObserver.disconnect();
       map.remove();
       mapRef.current = null;
+      locationMarkerRef.current = null;
       layerRef.current = null;
       webLayerRef.current = null;
       fromLayerRef.current = null;
       marketLayerRef.current = null;
     };
-  }, [rtl]);
+  }, [rtl, t]);
 
   // The Marketplace shown: the pins' layers come off the map and the
   // listings' go on, fetched afresh each time it is picked.
@@ -574,7 +607,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
           };
           marketEntriesRef.current.push({ pin: { latitude, longitude }, categories: [], focus: false, copies: new Map(), make });
         }
-        if (marketByPin && marketEntriesRef.current.length) {
+        if (!preserveView && marketByPin && marketEntriesRef.current.length) {
           const bounds = L.latLngBounds(marketEntriesRef.current.map((e) => [e.pin.latitude!, e.pin.longitude!]));
           map.fitBounds(bounds, { padding: [80, 80], maxZoom: 11 });
         }
@@ -587,7 +620,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     return () => {
       cancelled = true;
     };
-  }, [market, marketByPin, marketQuery, postedWithin, t]);
+  }, [market, marketByPin, marketQuery, postedWithin, preserveView, t]);
 
   // An older ?listings=<pinId> link: its filter moved into the query as a
   // pin: term, where the search box shows it.
@@ -607,14 +640,14 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       .get<{ listing: ListingJson }>(`/api/listings/${openListing}`)
       .then(({ listing }) => {
         if (cancelled) return;
-        if (listing.location) mapRef.current?.setView([listing.location.latitude, listing.location.longitude], 13);
+        if (listing.location && !preserveView) mapRef.current?.setView([listing.location.latitude, listing.location.longitude], 13);
         setViewingListing(listing);
       })
       .catch(() => {});
     return () => {
       cancelled = true;
     };
-  }, [openListing]);
+  }, [openListing, preserveView]);
 
   useEffect(() => {
     let cancelled = false;
@@ -678,7 +711,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
           setFocusPin(pin);
           // The pin's copy nearest the current view, so the map does not swing a world away.
           const at = L.latLng(pin.latitude, pin.longitude + 360 * nearestOffset(pin.longitude, map.getCenter().lng));
-          if (!keepViewRef.current) map.setView(at, Math.max(map.getZoom(), 11));
+          if (!keepViewRef.current && !preserveView) map.setView(at, Math.max(map.getZoom(), 11));
           stick(pin, at);
         }
       }
@@ -741,7 +774,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     return () => {
       cancelled = true;
     };
-  }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer]);
+  }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer, preserveView]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -855,7 +888,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       // fold into the pills along the bottom.
       const wide = map.getSize().x >= 1280;
       const room = wide ? 300 : 56;
-      map.fitBounds(line.getBounds(), {
+      if (!preserveView) map.fitBounds(line.getBounds(), {
         paddingTopLeft: [rtl ? room : 56, 56],
         paddingBottomRight: [rtl ? 56 : room, wide ? 56 : 120],
         maxZoom: 11,
@@ -864,7 +897,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     return () => {
       cancelled = true;
     };
-  }, [fromMe, focusPin, t, rtl]);
+  }, [fromMe, focusPin, t, rtl, preserveView]);
 
   // A graph node picked: the map goes to that pin.
   function showPin(id: number) {
@@ -893,15 +926,18 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
   // The layer is the URL's (?show=market), so a pick replaces it there. The
   // query goes with it, a pin: term too: it is in the search box to take off.
   function setLayer(next: 'pins' | 'market' | 'restaurants') {
+    keepViewRef.current = true;
+    resultViewRef.current.bounds = null;
+    mapRef.current?.stop();
     const query = new URLSearchParams(window.location.search);
     if (next !== 'pins') query.set('show', next);
     else query.delete('show');
     if (next === 'restaurants') {
       query.set('past', 'all');
       query.set('future', 'all');
-      query.set('fit', 'results');
     }
-    router.replace(query.size ? `/map?${query.toString()}` : '/map');
+    query.set('fit', 'view');
+    router.replace(`/map?${query.toString()}`, { scroll: false });
   }
 
   // Shut, a listing opened by ?listing= takes the mark off the address, so
@@ -921,6 +957,40 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
   const hasPast = !!past && past !== '0d';
   const hasFuture = !!future && future !== '0d';
 
+  function zoomToLocation() {
+    const map = mapRef.current;
+    if (!map || locating) return;
+    setLocationError(null);
+    if (!navigator.geolocation) {
+      setLocationError(t.dynamic('map.locationUnavailable', 'Your device could not provide a location. Please try again.'));
+      return;
+    }
+    setLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        setLocating(false);
+        if (mapRef.current !== map) return;
+        // Keep the same kilometre-level precision as viewerPlace: moving the
+        // map can cause requests for nearby pins and listings.
+        const latitude = Math.round(coords.latitude * 100) / 100;
+        const longitude = Math.round(coords.longitude * 100) / 100;
+        locationPointRef.current = [latitude, longitude];
+        locationMarkerRef.current?.remove();
+        locationMarkerRef.current = locationMarker(map, locationPointRef.current, t('map.yourPlace'));
+        resultViewRef.current.bounds = null;
+        map.setView([latitude, longitude], Math.max(map.getZoom(), 13));
+      },
+      (error) => {
+        setLocating(false);
+        if (mapRef.current !== map) return;
+        setLocationError(error.code === error.PERMISSION_DENIED
+          ? t.dynamic('map.locationDenied', 'Location access is blocked. Allow it in your browser’s settings and try again.')
+          : t.dynamic('map.locationUnavailable', 'Your device could not provide a location. Please try again.'));
+      },
+      { enableHighAccuracy: true, maximumAge: 0, timeout: 10000 },
+    );
+  }
+
   return (
     // isolate: the controls need z-[1000] to sit over Leaflet's panes, but that
     // must stay inside the map, under the navbar's menus and panels.
@@ -928,6 +998,22 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       {/* Leave room for the pin's back button;
           pins-map (globals.css) lifts attribution over the bottom pills. */}
       <div ref={canvasRef} className={`pins-map absolute inset-0 z-0 ${focusId ? '[&_.leaflet-top]:pt-10' : ''}`} />
+      <div className="fixed end-3 bottom-3 z-[1000] flex max-w-[calc(100%-1.5rem)] flex-col items-end gap-2 lg:end-4 lg:bottom-4">
+        {locationError ? (
+          <p role="alert" className="floating max-w-72 px-3 py-2 text-sm text-ink">{locationError}</p>
+        ) : null}
+        <button
+          type="button"
+          onClick={zoomToLocation}
+          disabled={locating}
+          aria-label={locating ? t('common.loading') : t('profile.locationUseDevice')}
+          aria-busy={locating}
+          title={t('profile.locationUseDevice')}
+          className="floating flex size-11 items-center justify-center text-ink transition-colors hover:bg-raised disabled:cursor-wait disabled:text-muted"
+        >
+          <Icon name="target" className={`size-5 ${locating ? 'motion-safe:animate-pulse' : ''}`} />
+        </button>
+      </div>
       {focusId ? (
         // Above Leaflet's zoom buttons. Back through history when the map was
         // reached inside the app (the pin page's link), so the pin page is not
@@ -949,8 +1035,8 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       {/* As on the timeline: top right on wide screens, folded behind pills at
           the bottom narrower. Its fixed panels stack inside this z-[1000], over
           Leaflet's panes. */}
-      {/* Above the mobile filter pills, at the bottom left on every screen. */}
-      <div className="absolute bottom-16 start-2.5 z-[1000] max-w-[calc(100%-1.25rem)] xl:bottom-2.5">
+      {/* Below lg these destinations are already in the navigation drawer. */}
+      <div className="absolute bottom-16 start-2.5 z-[1000] hidden max-w-[calc(100%-1.25rem)] lg:block xl:bottom-2.5">
         {layerToggle}
       </div>
       {/* The same controls on either layer, so a filter set on one is still
@@ -958,6 +1044,10 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       <div className="relative z-[1000]">
         <FloatingControls
           merge
+          drawerTop={<LayerToggle layer={layer} onChange={(next) => {
+            if (next !== layer) setLayer(next);
+            closeDrawer();
+          }} />}
           typing={sliderTyping}
           summaryCaption={t('controls.postedWithin')}
           summary={spanLabel(postedWithin, t.locale)}
@@ -1059,15 +1149,16 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
 // Which layer the map plots: the pins, or the marketplace listings.
 function LayerToggle({ layer, onChange }: { layer: 'pins' | 'market' | 'restaurants'; onChange: (layer: 'pins' | 'market' | 'restaurants') => void }) {
   const t = useT();
+  const inDrawer = useInDrawerPanel();
   return (
-    <div role="group" aria-label={t('map.layer')} className="floating flex items-center gap-1 rounded-full p-1 text-sm">
+    <div role="group" aria-label={t('map.layer')} className={inDrawer ? 'flex flex-col gap-1 py-2 text-sm' : 'floating flex items-center gap-1 rounded-full p-1 text-sm'}>
       {(['pins', 'market', 'restaurants'] as const).map((option) => (
         <button
           key={option}
           type="button"
           aria-pressed={layer === option}
           onClick={() => onChange(option)}
-          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 font-medium ${layer === option ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
+          className={`flex flex-1 items-center gap-1.5 px-3 font-medium ${inDrawer ? 'rounded-lg py-2.5' : 'justify-center rounded-full py-1'} ${layer === option ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
         >
           <Icon name={option === 'market' ? 'cart' : 'pin'} className="size-4" />
           {option === 'market' ? t('map.layerMarket') : option === 'restaurants' ? t.dynamic('map.layerRestaurants', 'Restaurants') : t('map.layerPins')}

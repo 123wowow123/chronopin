@@ -11,6 +11,7 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 
 | Vertical | Curator | Category | Source pool | Notes |
 | --- | --- | --- | --- | --- |
+| U.S. monthly trade balance | @EconDesk | `Economy`, `Finance` | BEA news-release archive and Census FT-900; same-day First Trust analysis, Reuters or established economic reporting | Owner, 2026-10-07: the August 2026 release belongs in a monthly thread going five years back. Existing chain covers August 2021–August 2026 (root 6447, latest 6445); append future releases to its latest month, never post standalone. Tag `USTradeBalance`. Date each pin to the release's explicit 8:30 a.m. Eastern embargo, including shutdown delays, and name the statistical month and year. Preserve the original release's figures and label revised comparison months. Use the release's own chart; leave irrelevant media out. |
 | AAA games | @GameDesk | `Gaming` | gameranx `/updates/`, IGN `/news` | Studio HQ location; trailer embed by grepping raw HTML; article `published_time` anchors a rumour pin |
 | Movies | @FilmDesk | `Movie` | IMDb titles found by search, Wikipedia | IMDb is blocked, see [Sources](sources.md); studio HQ geocoded; budget and gross go in the summary, not `price` |
 | Anime | @AnimeDesk | `Anime` (a film is `Anime` and `Movie`) | MyAnimeList top lists (10 tabs x top 100) | Unaired titles are "<Title> Announced" pins on the announcement day; year-only is Jan 1 `estimated`; threaded by prequels; trailer, ratings and the adaptation tag by `media:screen` |

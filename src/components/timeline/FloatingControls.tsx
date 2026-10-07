@@ -92,6 +92,7 @@ export function FloatingControls({
   filterSummary,
   cards,
   typing = false,
+  drawerTop,
 }: {
   children: React.ReactNode;
   // Sits above the folds, at the top of the column: sorting leads the rest.
@@ -124,6 +125,8 @@ export function FloatingControls({
   cards?: React.ReactNode;
   // The admin setting: whether the sliders offer a typed box.
   typing?: boolean;
+  // Page controls shown above the filters in the mobile drawer only.
+  drawerTop?: React.ReactNode;
 }) {
   const [open, setOpen] = useState<Fold>(null);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -178,6 +181,7 @@ export function FloatingControls({
               <DrawerPanelContext value={true}>
                 <SliderTypingContext value={typing}>
                   <div className="flex flex-col gap-2">
+                    {drawerTop}
                     {merge ? (
                       // One panel, as in the xl column: the "Filters" row,
                       // then each slider under it, wholly open, stripped of
