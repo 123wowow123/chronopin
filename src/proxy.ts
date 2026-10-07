@@ -10,6 +10,7 @@ import BotVisit from '@/server/model/botVisit';
 import Topics from '@/server/model/topics';
 import { timelineMinConfidence } from '@/server/services/timeline';
 import { offeredLocales, pinPathCache } from '@/server/services/cache';
+import { restaurantPreviewPin } from '@/server/services/restaurantPreview';
 
 // Pin URLs are settled here, before rendering starts. Pages stream their
 // shell as soon as a request arrives, after which neither a redirect nor a
@@ -26,13 +27,16 @@ async function canonicalPath(id: number): Promise<string | null> {
   const cache = pinPathCache();
   const hit = cache.get(id);
   if (hit && hit.expires > Date.now()) {
-    return hit.path;
+    // A cached local 404 can predate the preview snapshot being added.
+    const preview = hit.path === null ? await restaurantPreviewPin(id) : null;
+    return preview ? pinPath(preview) : hit.path;
   }
   const rows = await db.query<{ id: number; title: string }>(
     `SELECT "id", "title" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
     [id],
   );
-  const path = rows.length ? pinPath(rows[0]) : null;
+  const preview = rows.length ? null : await restaurantPreviewPin(id);
+  const path = rows.length ? pinPath(rows[0]) : preview ? pinPath(preview) : null;
   cache.delete(id);
   cache.set(id, { path, expires: Date.now() + TTL_MS });
   if (cache.size > MAX_ENTRIES) {
@@ -144,7 +148,7 @@ export const config = {
   // Everything but route handlers, build assets and the files in public/.
   // robots.txt and sitemap.xml are let in for the bot count and nothing else.
   matcher: [
-    '/((?!api/|_next/|auth/|logout|og/|upload/|pin-not-found|sw\\.js|favicon\\.ico|apple-touch-icon\\.png|ads\\.txt|platforms/|privacy\\.html|termsofservice\\.html).*)',
+    '/((?!api/|_next/|auth/|logout|og/|upload/|pin-not-found|sw\\.js|favicon\\.ico|apple-touch-icon\\.png|ads\\.txt|platforms/|restaurant-images/|privacy\\.html|termsofservice\\.html).*)',
   ],
 };
 

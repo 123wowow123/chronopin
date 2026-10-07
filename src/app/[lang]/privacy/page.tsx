@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { H2, LegalPage, legalMetadata, Out, P, UL } from '@/components/legal/LegalPage';
@@ -14,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // the opt-out links) is under "Advertising"; what the Amazon Associates
 // agreement requires is under "Shopping links".
 export default function PrivacyPage() {
-  const mail = <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>;
+  const mail = <Anchor href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</Anchor>;
   return (
     <LegalPage titleKey="legal.privacyTitle">
       <P>

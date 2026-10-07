@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { usePathname } from '@/lib/client/navigation';
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from 'react';
@@ -257,10 +258,9 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
             <DrawerMark open={open} />
           </button>
           {/* A plain link, not next/link: going home reloads the page, fresh from today. */}
-          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-          <a href="/" className="-mx-2 min-w-0 truncate rounded-lg px-2 py-1 font-display text-lg font-semibold tracking-tight text-ink transition-colors hover:bg-raised hover:no-underline active:bg-raised-2">
+          <Anchor href="/" className="-mx-2 min-w-0 truncate rounded-lg px-2 py-1 font-display text-lg font-semibold tracking-tight text-ink transition-colors hover:bg-raised hover:no-underline active:bg-raised-2">
             Chronopin
-          </a>
+          </Anchor>
           {/* No close button at the far end: the menu mark above, a tap on
               the dimmed page, Escape or a swipe all put the drawer away. */}
         </div>
@@ -305,6 +305,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
             <div className="px-1 pb-3">
               <ViewSwitch pathname={pathname} />
             </div>
+            {link('/restaurants', 'map', 'Restaurants')}
             {user ? (
               <button type="button" role="switch" aria-checked={watchedOnly} onClick={toggleWatched} className={`w-full ${itemClass}`}>
                 <Icon name="eye" className={`size-6 ${watchedOnly ? 'text-link' : ''}`} />

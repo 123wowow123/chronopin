@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
@@ -124,10 +125,10 @@ function CardMarket({ market, source = market?.source }: { market?: MarketOdds; 
       <div className="mb-1 flex items-center gap-1.5 text-[11px] text-subtle">
         <Icon name="trending-up" className="size-3 shrink-0 text-link" />
         {market ? (
-          <a href={market.url} target="_blank" rel="noopener nofollow" title={market.title} className="inline-flex min-w-0 items-center gap-1 text-muted hover:text-link hover:no-underline">
+          <Anchor href={market.url} target="_blank" rel="noopener nofollow" title={market.title} className="inline-flex min-w-0 items-center gap-1 text-muted hover:text-link hover:no-underline">
             <span className="truncate">{market.title}</span>
             <Icon name="external" className="size-3 shrink-0" />
-          </a>
+          </Anchor>
         ) : (
           <span className="w-2/5 animate-pulse truncate rounded bg-raised motion-reduce:animate-none">{' '}</span>
         )}
@@ -167,10 +168,10 @@ function Market({ market }: { market: MarketOdds }) {
     <div className="surface px-4 py-3 text-sm">
       <div className="mb-2 flex items-start gap-2">
         <Icon name="trending-up" className="mt-0.5 size-4 shrink-0 text-link" />
-        <a href={market.url} target="_blank" rel="noopener nofollow" className="inline-flex min-w-0 items-center gap-1 font-medium text-ink hover:text-link hover:no-underline">
+        <Anchor href={market.url} target="_blank" rel="noopener nofollow" className="inline-flex min-w-0 items-center gap-1 font-medium text-ink hover:text-link hover:no-underline">
           {market.title}
           <Icon name="external" className="size-3 shrink-0" />
-        </a>
+        </Anchor>
         <span className="ms-auto shrink-0 text-xs font-semibold tracking-wider text-subtle uppercase">{market.source}</span>
       </div>
       <ul ref={listRef} className="flex flex-col gap-1.5">
@@ -190,10 +191,10 @@ function Market({ market }: { market: MarketOdds }) {
         {market.outcomes.length > SHOWN_OUTCOMES ? <span>{t('odds.moreOutcomes', { count: market.outcomes.length - SHOWN_OUTCOMES })}</span> : null}
         {market.volume ? <span>{t('odds.traded', { amount: compactUsd(t.locale).format(market.volume) })}</span> : null}
         {market.closeTime && !market.closed ? <span>{t('odds.closes', { date: closeDate(t.locale).format(new Date(market.closeTime)) })}</span> : null}
-        <a href={market.url} target="_blank" rel="noopener nofollow" className="ms-auto inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline">
+        <Anchor href={market.url} target="_blank" rel="noopener nofollow" className="ms-auto inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline">
           {t('odds.viewOn', { source: market.source })}
           <Icon name="external" className="size-3" />
-        </a>
+        </Anchor>
       </div>
     </div>
   );

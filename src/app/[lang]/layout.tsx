@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import type { Metadata, Viewport } from 'next';
 import { Suspense } from 'react';
 import { cacheLife, cacheTag } from 'next/cache';
@@ -121,12 +122,12 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             the top of <head>, which throws hydration off. */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script dangerouslySetInnerHTML={{ __html: analyticsScript }} />
-        <a
+        <Anchor
           href="#main"
           className="sr-only z-50 rounded-lg bg-accent px-3 py-2 text-white focus:not-sr-only focus:fixed focus:top-2 focus:start-2"
         >
           {t('nav.skipToContent')}
-        </a>
+        </Anchor>
         <I18nProvider locale={locale} messages={messages}>
           {/* It reads the admin's ad placements from the database, which a prerendered page (the About page) cannot at build time: a per-request hole, holding the bar's height meanwhile. */}
           <Suspense fallback={<header data-navbar className="sticky top-0 z-40 h-[52px] bg-header/85 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md" />}>

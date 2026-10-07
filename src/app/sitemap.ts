@@ -8,6 +8,7 @@ import { hideThinPins } from '@/server/services/pages';
 import { topicIndex } from '@/server/services/topics';
 import { companyPath, MIN_INDEXED_PINS, tagPath } from '@/lib/topics';
 import { DEFAULT_LOCALE, languageAlternates, type Locale } from '@/lib/i18n/config';
+import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 
 // Google reads at most 50,000 URLs from one sitemap. Chronopin is far below
 // that; past it, split this file with generateSitemaps. Each entry is the
@@ -26,7 +27,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     ...index.companies.filter((c) => c.pins >= MIN_INDEXED_PINS).map((c) => companyPath(c.name)),
   ];
   // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
-  const pins = await Pins.listForSitemap(0, MAX_URLS - 8 - topics.length, (await hideThinPins()).enabled);
+  const pins = await Pins.listForSitemap(0, MAX_URLS - 8 - topics.length - RESTAURANT_REGIONS.length, (await hideThinPins()).enabled);
   const inEveryLanguage = (path: string) => {
     if (!offered.length) return undefined;
     const { languages = {} } = languageAlternates(path, DEFAULT_LOCALE, offered);
@@ -34,6 +35,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
   };
   return [
     { url: absoluteUrl('/'), changeFrequency: 'hourly', priority: 1, alternates: inEveryLanguage('/') },
+    ...RESTAURANT_REGIONS.map((region) => ({ url: absoluteUrl(`/restaurants/${region.slug}`), changeFrequency: 'daily' as const, priority: 0.7 })),
     { url: absoluteUrl('/about'), changeFrequency: 'monthly', priority: 0.4, alternates: inEveryLanguage('/about') },
     { url: absoluteUrl('/contact'), changeFrequency: 'yearly', priority: 0.3, alternates: inEveryLanguage('/contact') },
     // English only: the other languages' copies show the English text (src/components/legal/LegalPage.tsx).

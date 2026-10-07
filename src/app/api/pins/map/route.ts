@@ -26,6 +26,7 @@ export const GET = route(async (request: NextRequest) => {
     onlyWatched: onlyWatched && !!user,
     userId: user?.id ?? null,
     timeZone: requestTimeZone(request),
+    restaurantsOnly: params.get('show') === 'restaurants',
   });
   return json({ pins: await localizePins(pins, requestLocale(request)) });
 });

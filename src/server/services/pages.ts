@@ -30,6 +30,7 @@ import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import { DEFAULT_HIDE_THIN_PINS, type HideThinPinsSetting } from '@/lib/searchQuality';
 import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
+import { restaurantPreviewPin } from './restaurantPreview';
 import { readSearchRequest, searchPinsPage, searchTagCounts, type SearchSort } from './search';
 import type { TagCount } from '@/lib/tags';
 import { getTimeline, timelineMinConfidence } from './timeline';
@@ -182,7 +183,7 @@ export async function pinById(id: number, locale: Locale = DEFAULT_LOCALE): Prom
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   const { pin } = await Pin.queryById(id);
-  if (!pin) return null;
+  if (!pin) return restaurantPreviewPin(id);
   const [json] = await localizePins([toJson<PinJson>(pin)], locale);
   return json;
 }

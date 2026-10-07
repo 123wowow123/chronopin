@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { Fragment, useLayoutEffect, useRef, useSyncExternalStore } from 'react';
 import { BAG_LIMIT, BAG_LIMIT_PHONE, marketCapWeight, sampleBag } from '@/lib/bagSample';
@@ -103,9 +104,9 @@ function Tag({ variant, children, title, className = '', wrap = false, lines = 2
   const chip = `${tagBase} tag-${variant} ${className}`;
   const label = <span className={`block truncate ${wrap ? `${LINE_CLAMP[lines]} lg:whitespace-normal lg:text-balance` : ''}`}>{children}</span>;
   return href ? (
-    <a href={href} target="_blank" rel="noopener nofollow" className={chip} title={title} data-tradition={holiday}>
+    <Anchor href={href} target="_blank" rel="noopener nofollow" className={chip} title={title} data-tradition={holiday}>
       {label}
-    </a>
+    </Anchor>
   ) : (
     <div className={chip} title={title} data-tradition={holiday}>
       {label}
@@ -317,9 +318,9 @@ export function TimeBlock({
         <ul className="lg:ms-[170px] lg:-mt-(--tags-h) lg:min-h-[max(120px,var(--tags-h))] lg:pt-7">
           {bag.dateTimes.map((dt) => (
             <li key={dt.id} className="pb-px">
-              <a href={triviaSearchUrl(markerLabel(t, dt.title), locale)} target="_blank" rel="noopener nofollow" className="font-semibold text-muted hover:text-link">
+              <Anchor href={triviaSearchUrl(markerLabel(t, dt.title), locale)} target="_blank" rel="noopener nofollow" className="font-semibold text-muted hover:text-link">
                 {markerLabel(t, dt.title)}
-              </a>
+              </Anchor>
               {dt.description ? <div className="mb-2 text-subtle">{dt.description}</div> : null}
             </li>
           ))}
@@ -563,7 +564,7 @@ export function HolidayTags({ days, phoneTag }: { days: CulturalDay[]; phoneTag?
 export function SpecialtyTag({ days, className = '' }: { days: SpecialtyDay[]; className?: string }) {
   const locale = useLocale();
   return (
-    <a
+    <Anchor
       href={triviaSearchUrl(days[0].name, locale)}
       target="_blank"
       rel="noopener nofollow"
@@ -571,7 +572,7 @@ export function SpecialtyTag({ days, className = '' }: { days: SpecialtyDay[]; c
       title={days.map((day) => day.label).join('\n')}
     >
       <span className={`block truncate ${LINE_CLAMP[specialtyLines(days)]} lg:whitespace-normal lg:text-balance`}>{days[0].label}</span>
-    </a>
+    </Anchor>
   );
 }
 

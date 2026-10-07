@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
@@ -157,7 +158,7 @@ export function SearchedCompanyPanel({ company }: { company: Company }) {
           ) : null}
           {/* The name itself leads to the article the blurb was taken from. */}
           {company.wikiUrl ? (
-            <a
+            <Anchor
               href={company.wikiUrl}
               target="_blank"
               rel="noreferrer"
@@ -166,7 +167,7 @@ export function SearchedCompanyPanel({ company }: { company: Company }) {
             >
               <span className="truncate">{company.name}</span>
               <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
-            </a>
+            </Anchor>
           ) : (
             <span className="min-w-0 truncate">{company.name}</span>
           )}

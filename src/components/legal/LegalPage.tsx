@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { siteName } from '@/lib/appConfig';
@@ -55,8 +56,8 @@ export function UL({ children }: { children: ReactNode }) {
 // An outside page, opened in a new tab.
 export function Out({ href, children }: { href: string; children?: ReactNode }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <Anchor href={href} target="_blank" rel="noopener noreferrer">
       {children ?? href.replace(/^https?:\/\//, '')}
-    </a>
+    </Anchor>
   );
 }

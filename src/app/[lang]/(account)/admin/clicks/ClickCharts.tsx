@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import dynamic from 'next/dynamic';
 import Link from '@/components/ui/Link';
 import { useMemo, useState } from 'react';
@@ -253,9 +254,9 @@ export function ClickCharts({ clicks, serverNow }: { clicks: ShopClickRow[]; ser
           <p className="text-sm text-subtle">No buy clicks {inRange}.</p>
         )}
         <p className="text-xs text-faint">
-          <a href="https://db-ip.com" className="text-inherit">
+          <Anchor href="https://db-ip.com" className="text-inherit">
             IP Geolocation by DB-IP
-          </a>
+          </Anchor>
         </p>
       </section>
 

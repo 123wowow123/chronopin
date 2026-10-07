@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -22,10 +23,9 @@ export default function GlobalNotFound() {
           <h1 className="mt-2 text-2xl font-semibold tracking-tight">Page not found</h1>
           <p className="mt-2 text-subtle">That pin or page doesn&apos;t exist, or it was removed.</p>
           <p className="mt-8">
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- no router outside the root layout */}
-            <a href="/" className="btn btn-primary">
+            <Anchor href="/" className="btn btn-primary">
               Back to the timeline
-            </a>
+            </Anchor>
           </p>
         </main>
       </body>

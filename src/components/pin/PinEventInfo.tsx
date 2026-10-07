@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import { Icon } from '@/components/ui/Icon';
 import { isTicketWordmark, TicketLogo } from '@/components/pin/TicketLogo';
 import { ticketSeller, type PinEventInfoJson } from '@/lib/eventInfo';
@@ -54,9 +55,9 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
           {info.performers.map((performer, index) => (
             <span key={`${performer.name}-${index}`}>
               {performer.url ? (
-                <a href={performer.url} target="_blank" rel="noopener nofollow">
+                <Anchor href={performer.url} target="_blank" rel="noopener nofollow">
                   {performer.name}
-                </a>
+                </Anchor>
               ) : (
                 performer.name
               )}
@@ -75,7 +76,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
             </span>
           ) : null}
           {info.ticketUrl && !started && info.availability !== 'SoldOut' ? (
-            <a
+            <Anchor
               href={info.ticketUrl}
               target="_blank"
               rel="noopener nofollow sponsored"
@@ -86,7 +87,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
               {seller && isTicketWordmark(seller.label) ? <span className="sr-only">{seller.label}</span> : null}
               {t('pin.getTickets')}
               {seller ? <Icon name="external" className="size-3 shrink-0 opacity-60" /> : null}
-            </a>
+            </Anchor>
           ) : null}
         </div>
       ) : null}

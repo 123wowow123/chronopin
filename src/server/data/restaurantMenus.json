@@ -1,0 +1,3611 @@
+[
+  {
+    "pinSourceUrl": "https://elpuntosd.com/",
+    "name": "el-punto",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.icarialajolla.com/",
+    "name": "icaria",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.serafinofinemarket.com/",
+    "name": "serafino",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.pearplum.com/",
+    "name": "pear-plum",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://whatnow.com/san-diego/restaurants/pablo-becker-planning-two-new-barrio-logan-eateries/",
+    "name": "santo-poco",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/san-diego/reviews/concrete-cowboy",
+    "name": "concrete-cowboy",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://theresandiego.com/venue/get-ready-for-moniker-generals-third-san-diego-location-this-time-downtown/",
+    "name": "moniker",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.zumarestaurant.com/en/san-diego",
+    "name": "zuma",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food menu (sample)",
+        "url": "https://www.zumarestaurant.com/en/san-diego/menu?menu=main-menu",
+        "items": [
+          {
+            "name": "black cod marinated in saikyo miso wrapped in hoba leaf",
+            "category": "signature dishes",
+            "price": 52.0
+          },
+          {
+            "name": "barley miso marinated baby chicken, oven roasted on cedar wood",
+            "category": "signature dishes",
+            "price": 39.0
+          },
+          {
+            "name": "rice hot pot with wild mushrooms, Japanese vegetables and fresh truffle",
+            "category": "signature dishes",
+            "price": 72.0
+          },
+          {
+            "name": "spicy beef tenderloin with sesame, red chili and sweet soy",
+            "category": "signature dishes",
+            "price": 58.0
+          },
+          {
+            "name": "rib eye steak with wafu sauce and garlic crisps",
+            "category": "signature dishes",
+            "price": 59.0
+          },
+          {
+            "name": "grilled Chilean seabass with green chili and ginger dressing",
+            "category": "signature dishes",
+            "price": 50.0
+          },
+          {
+            "name": "Japanese sea urchin",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 37.0
+          },
+          {
+            "name": "tuna",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 17.0
+          },
+          {
+            "name": "semi fatty tuna",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 27.0
+          },
+          {
+            "name": "fatty tuna",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 37.0
+          },
+          {
+            "name": "yellowtail",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 17.0
+          },
+          {
+            "name": "hokkaido scallop",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 18.0
+          },
+          {
+            "name": "salmon roe",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 18.0
+          },
+          {
+            "name": "salmon",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 16.0
+          },
+          {
+            "name": "seabass",
+            "category": "nigiri sushi / sashimi",
+            "note": "2 pieces / 3 pieces",
+            "price": 17.0
+          },
+          {
+            "name": "salmon nigiri torched",
+            "category": "Zuma special sushi",
+            "note": "2 pieces",
+            "price": 22.0
+          },
+          {
+            "name": "seared hokkaido scallop, uni and fresh truffle",
+            "category": "Zuma special sushi",
+            "note": "2 pieces",
+            "price": 39.0
+          },
+          {
+            "name": "wagyu beef, daikon and black truffle",
+            "category": "Zuma special sushi",
+            "note": "2 pieces",
+            "price": 33.0
+          },
+          {
+            "name": "chef’s selection nigiri 5 pieces",
+            "category": "tokusen sushi",
+            "note": "chef selection of nigiri",
+            "price": 48.0
+          },
+          {
+            "name": "chef’s selection nigiri 9 pieces",
+            "category": "tokusen sushi",
+            "note": "chef selection of nigiri",
+            "price": 82.0
+          },
+          {
+            "name": "15 slices sashimi 5 variation",
+            "category": "sashimi moriawase",
+            "note": "chef selection of sashimi",
+            "price": 82.0
+          },
+          {
+            "name": "21 slices sashimi 7 variation",
+            "category": "sashimi moriawase",
+            "note": "chef selection of sashimi",
+            "price": 136.0
+          },
+          {
+            "name": "salmon, tuna, seabass and yellowtail with avocado, yuzu kosho mayo",
+            "category": "maki rolls",
+            "price": 24.0
+          },
+          {
+            "name": "dynamite spider roll with softshell crab, chili and wasabi tobiko mayo",
+            "category": "maki rolls",
+            "price": 25.0
+          },
+          {
+            "name": "vegetable roll",
+            "category": "maki rolls",
+            "price": 14.0
+          },
+          {
+            "name": "salmon avocado roll with tenkasu and kizami wasabi",
+            "category": "maki rolls",
+            "price": 20.0
+          },
+          {
+            "name": "ginger, cucumber and avocado roll",
+            "category": "maki rolls",
+            "price": 14.0
+          },
+          {
+            "name": "prawn tempura roll with pickled yamagobo, avocado and mentaiko mayo",
+            "category": "maki rolls",
+            "price": 23.0
+          },
+          {
+            "name": "Alaskan snow crab, avocado and tobiko",
+            "category": "maki rolls",
+            "price": 23.0
+          },
+          {
+            "name": "spicy tuna roll with green chili, spicy mayo and tobiko",
+            "category": "maki rolls",
+            "price": 24.0
+          },
+          {
+            "name": "spicy yellowtail roll with serrano pepper, avocado and wasabi mayo",
+            "category": "maki rolls",
+            "price": 23.0
+          },
+          {
+            "name": "fatty tuna roll and finely diced scallion",
+            "category": "maki rolls",
+            "price": 27.0
+          },
+          {
+            "name": "add on oscietra caviar 5g",
+            "category": "maki rolls",
+            "price": 24.0
+          },
+          {
+            "name": "sliced seabass with yuzu, truffle and salmon roe",
+            "category": "cold dishes",
+            "price": 25.0
+          },
+          {
+            "name": "seared tuna with chili daikon and ponzu sauce",
+            "category": "cold dishes",
+            "price": 25.0
+          },
+          {
+            "name": "sliced yellowtail with green chili relish, ponzu and pickled garlic",
+            "category": "cold dishes",
+            "price": 26.0
+          },
+          {
+            "name": "salmon and tuna tartare with imperial oscietra caviar",
+            "category": "cold dishes",
+            "price": 52.0
+          },
+          {
+            "name": "seared japanese wagyu striploin with truffle ponzu",
+            "category": "cold dishes",
+            "price": 89.0
+          },
+          {
+            "name": "chu toro tartare with oscietra caviar, black truffle and miso bun",
+            "category": "cold dishes",
+            "price": 72.0
+          },
+          {
+            "name": "steamed soybeans with sea salt",
+            "category": "snacks and soups",
+            "price": 11.0
+          },
+          {
+            "name": "white miso soup with tofu, wakame and scallion",
+            "category": "snacks and soups",
+            "price": 10.0
+          },
+          {
+            "name": "stir-fried lemon and chili edamame",
+            "category": "snacks and soups",
+            "price": 12.0
+          },
+          {
+            "name": "shishito peppers with yuzu sesame dip",
+            "category": "snacks and soups",
+            "price": 15.0
+          },
+          {
+            "name": "fried softshell crab with wasabi mayo",
+            "category": "snacks and soups",
+            "price": 25.0
+          },
+          {
+            "name": "crispy fried calamari with serrano pepper and lime",
+            "category": "snacks and soups",
+            "price": 21.0
+          },
+          {
+            "name": "spicy fried tofu, avocado and Japanese herbs",
+            "category": "salads",
+            "price": 24.0
+          },
+          {
+            "name": "steamed baby spinach with sesame dressing",
+            "category": "salads",
+            "price": 11.0
+          },
+          {
+            "name": "avocado and asparagus salad with honey lemon dressing",
+            "category": "salads",
+            "price": 20.0
+          },
+          {
+            "name": "crab salad with avocado, mizuna and sesame dressing",
+            "category": "salads",
+            "price": 42.0
+          },
+          {
+            "name": "caviar — 1oz",
+            "category": "caviar",
+            "note": "served with Japanese condiments and seaweed rice cracker",
+            "price": 128.0
+          },
+          {
+            "name": "caviar — 4.5oz",
+            "category": "caviar",
+            "note": "served with Japanese condiments and seaweed rice cracker",
+            "price": 498.0
+          },
+          {
+            "name": "sake marinated chicken wings with sea salt and lime",
+            "category": "skewers",
+            "price": 16.0
+          },
+          {
+            "name": "chicken with spring onion",
+            "category": "skewers",
+            "price": 14.0
+          },
+          {
+            "name": "grilled scallops with mentaiko, shiso and pickled plum butter",
+            "category": "skewers",
+            "price": 25.0
+          },
+          {
+            "name": "kurobuta pork belly with yuzu mustard miso",
+            "category": "skewers",
+            "price": 26.0
+          },
+          {
+            "name": "beef with shishito pepper and smoked chili soy",
+            "category": "skewers",
+            "price": 26.0
+          },
+          {
+            "name": "salmon with teriyaki sauce and pickled cucumber",
+            "category": "seafood",
+            "price": 38.0
+          },
+          {
+            "name": "salt grilled branzino with burnt tomato",
+            "category": "seafood",
+            "price": 38.0
+          },
+          {
+            "name": "jumbo tiger prawn with yuzu pepper",
+            "category": "seafood",
+            "price": 48.0
+          },
+          {
+            "name": "roasted lobster with shiso ponzu butter",
+            "category": "seafood",
+            "priceLabel": "$ half  85 / whole  92"
+          },
+          {
+            "name": "10 oz wagyu skirt steak with shiso sauce",
+            "category": "meat",
+            "price": 86.0
+          },
+          {
+            "name": "12 oz rib eye with spicy ponzu and truffle butter sauce",
+            "category": "meat",
+            "price": 75.0
+          },
+          {
+            "name": "24 oz dry aged bone-in rib eye with spicy ponzu and truffle butter sauce",
+            "category": "meat",
+            "price": 178.0
+          },
+          {
+            "name": "40 oz wagyu tomahawk with wasabi and black truffle",
+            "category": "meat",
+            "price": 318.0
+          },
+          {
+            "name": "premium Japanese wagyu striploin with chili ponzu and yuzu tahoon",
+            "category": "meat",
+            "note": "minimum order 4 oz",
+            "priceLabel": "$ 45/oz"
+          },
+          {
+            "name": "shiitake mushrooms with garlic and soy butter",
+            "category": "vegetables",
+            "price": 16.0
+          },
+          {
+            "name": "roasted potato with shiso ponzu butter",
+            "category": "vegetables",
+            "price": 19.0
+          },
+          {
+            "name": "sweet corn with shiso butter and shichimi pepper",
+            "category": "vegetables",
+            "price": 16.0
+          },
+          {
+            "name": "asparagus with wafu sauce and sesame",
+            "category": "vegetables",
+            "price": 16.0
+          },
+          {
+            "name": "omakase — signature",
+            "category": "omakase",
+            "note": "price per person, only available as a choice for the entire table minimum of 2 guests",
+            "price": 158.0
+          },
+          {
+            "name": "omakase — premium",
+            "category": "omakase",
+            "note": "price per person, only available as a choice for the entire table minimum of 2 guests",
+            "price": 228.0
+          },
+          {
+            "name": "Japanese wagyu upgrade",
+            "category": "omakase",
+            "note": "price per person, only available as a choice for the entire table minimum of 2 guests",
+            "price": 45.0
+          },
+          {
+            "name": "strawberry blossom",
+            "category": "seasonal dessert",
+            "price": 18.0
+          },
+          {
+            "name": "Zuma deluxe dessert platter",
+            "category": "desserts",
+            "note": "served with seasonal and exotic fruits ice creams and sorbets, minimum of two guests, price per person",
+            "price": 25.0
+          },
+          {
+            "name": "iced milk chocolate passion fruit",
+            "category": "desserts",
+            "price": 18.0
+          },
+          {
+            "name": "exotic chawan mushi",
+            "category": "desserts",
+            "price": 15.0
+          },
+          {
+            "name": "pecan pie sundae",
+            "category": "desserts",
+            "price": 18.0
+          },
+          {
+            "name": "exotic and seasonal fruit platter",
+            "category": "desserts",
+            "price": 21.0
+          },
+          {
+            "name": "Sorbet & ice cream — individual scoop",
+            "category": "desserts",
+            "price": 6.0
+          },
+          {
+            "name": "Sorbet & ice cream — three scoops",
+            "category": "desserts",
+            "price": 18.0
+          },
+          {
+            "name": "baked cheesecake",
+            "category": "desserts",
+            "note": "recommended for two guests",
+            "price": 30.0
+          }
+        ],
+        "coverage": "sample",
+        "note": "All published items are shown. The restaurant labels this a sample menu; contact reservations for its current full menu."
+      },
+      {
+        "label": "Drinks (sample)",
+        "url": "https://www.zumarestaurant.com/en/san-diego/menu?menu=drinks",
+        "items": [
+          {
+            "name": "ozaka spritz",
+            "category": "nomikai",
+            "note": "aperitif with style",
+            "price": 18.0
+          },
+          {
+            "name": "rikka tonic",
+            "category": "nomikai",
+            "note": "aperitif with style",
+            "price": 20.0
+          },
+          {
+            "name": "Zuma negroni",
+            "category": "nomikai",
+            "note": "aperitif with style",
+            "price": 20.0
+          },
+          {
+            "name": "geishi smash",
+            "category": "nomikai",
+            "note": "aperitif with style",
+            "price": 24.0
+          },
+          {
+            "name": "yuzu peach mule",
+            "category": "kurashikku",
+            "note": "japanese twist on classics",
+            "price": 18.0
+          },
+          {
+            "name": "japanese margarita",
+            "category": "kurashikku",
+            "note": "japanese twist on classics",
+            "price": 22.0
+          },
+          {
+            "name": "japanese old fashioned",
+            "category": "kurashikku",
+            "note": "japanese twist on classics",
+            "price": 22.0
+          },
+          {
+            "name": "raspberry and passion fruit martini",
+            "category": "heritage",
+            "note": "since the beginning",
+            "price": 20.0
+          },
+          {
+            "name": "lychee rose petal martini",
+            "category": "heritage",
+            "note": "since the beginning",
+            "price": 20.0
+          },
+          {
+            "name": "chili and passion fruit margarita",
+            "category": "heritage",
+            "note": "since the beginning",
+            "price": 22.0
+          },
+          {
+            "name": "Zuma mai tai",
+            "category": "heritage",
+            "note": "since the beginning",
+            "price": 22.0
+          },
+          {
+            "name": "sapporo",
+            "category": "beer",
+            "price": 9.0
+          },
+          {
+            "name": "sapporo light",
+            "category": "beer",
+            "price": 9.0
+          },
+          {
+            "name": "hitachino yuzu ginger (non alcoholic)",
+            "category": "beer",
+            "price": 10.0
+          },
+          {
+            "name": "hitachino yuzu lager",
+            "category": "beer",
+            "price": 12.0
+          },
+          {
+            "name": "norisan",
+            "category": "shinzui",
+            "note": "crafted to zero",
+            "price": 12.0
+          },
+          {
+            "name": "bishonen",
+            "category": "shinzui",
+            "note": "crafted to zero",
+            "price": 12.0
+          },
+          {
+            "name": "yoshi nura",
+            "category": "shinzui",
+            "note": "crafted to zero",
+            "price": 12.0
+          }
+        ],
+        "coverage": "sample",
+        "note": "Published sample drink menu; availability may change."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://lapost.us/?p=83530",
+    "name": "chef-fei",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Online ordering menu",
+        "url": "https://toast.app/r/chef-fei-nro-em-4301-la-jolla-village-dr-suite-2040-san-diego-ca-92122/order",
+        "items": [
+          {
+            "name": "Cucumber salad",
+            "category": "Appetizers",
+            "price": 9.0
+          },
+          {
+            "name": "Organic tomato salad",
+            "category": "Appetizers",
+            "price": 9.0
+          },
+          {
+            "name": "Chicken vegetable soup",
+            "category": "Appetizers",
+            "price": 9.0
+          },
+          {
+            "name": "Smashed chili eggplant with century egg",
+            "category": "Appetizers",
+            "price": 15.0
+          },
+          {
+            "name": "Stir-fried beef with peppers",
+            "category": "Signature",
+            "price": 37.9
+          },
+          {
+            "name": "Crispy pineapple orange chicken",
+            "category": "Chicken & eggs",
+            "price": 22.0
+          },
+          {
+            "name": "Spicy braised chicken wings",
+            "category": "Chicken & eggs",
+            "price": 25.0
+          },
+          {
+            "name": "Steamed organic egg custard",
+            "category": "Chicken & eggs",
+            "price": 17.0
+          },
+          {
+            "name": "Golden pan-fried eggs",
+            "category": "Chicken & eggs",
+            "price": 19.0
+          },
+          {
+            "name": "Stir-fried pork with peppers",
+            "category": "Pork",
+            "price": 28.79
+          },
+          {
+            "name": "Steamed pork ribs with taro",
+            "category": "Pork",
+            "price": 25.0
+          },
+          {
+            "name": "Hunan spicy braised assortment",
+            "category": "Pork",
+            "price": 25.0
+          },
+          {
+            "name": "Cantonese BBQ pork — coming soon",
+            "category": "Pork",
+            "price": 26.79
+          },
+          {
+            "name": "Crispy walnut shrimp",
+            "category": "Seafood",
+            "price": 35.0
+          },
+          {
+            "name": "Glass noodle clay pot with seafood sauce",
+            "category": "Seafood",
+            "price": 22.0
+          },
+          {
+            "name": "Sauerkraut fillet",
+            "category": "Seafood",
+            "price": 35.0
+          },
+          {
+            "name": "Clay pot tofu",
+            "category": "Tofu & vegetables",
+            "price": 19.0
+          },
+          {
+            "name": "Bamboo shoots with pickled greens",
+            "category": "Tofu & vegetables",
+            "price": 16.0
+          },
+          {
+            "name": "Hot & sour shredded potatoes",
+            "category": "Tofu & vegetables",
+            "price": 17.0
+          },
+          {
+            "name": "Stir-fried cauliflower with organic carrots",
+            "category": "Tofu & vegetables",
+            "price": 17.0
+          },
+          {
+            "name": "House special beef fried rice",
+            "category": "Rice & noodles",
+            "price": 23.79
+          },
+          {
+            "name": "Egg fried rice",
+            "category": "Rice & noodles",
+            "price": 12.79
+          },
+          {
+            "name": "House special beef fried noodles",
+            "category": "Rice & noodles",
+            "price": 23.79
+          },
+          {
+            "name": "Vegetable fried noodles",
+            "category": "Rice & noodles",
+            "price": 12.79
+          },
+          {
+            "name": "White rice",
+            "category": "Rice & noodles",
+            "price": 2.0
+          },
+          {
+            "name": "Brown rice",
+            "category": "Rice & noodles",
+            "price": 2.0
+          },
+          {
+            "name": "Longevity noodles",
+            "category": "Rice & noodles",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Kale with garlic",
+            "category": "Greens",
+            "price": 16.0
+          },
+          {
+            "name": "Dry-fried green beans",
+            "category": "Greens",
+            "price": 17.0
+          },
+          {
+            "name": "Cabbage dry pot",
+            "category": "Greens",
+            "price": 15.0
+          },
+          {
+            "name": "Crispy rice cake",
+            "category": "Desserts",
+            "price": 6.79
+          },
+          {
+            "name": "Golden pumpkin bun",
+            "category": "Desserts",
+            "price": 6.79
+          },
+          {
+            "name": "Iced lemon tea",
+            "category": "Beverages",
+            "price": 4.79
+          }
+        ],
+        "coverage": "published",
+        "note": "All published items are shown; online ordering prices may differ from dine-in prices. Coming-soon items are labeled; unlisted prices are left unspecified."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.maranellosd.com/",
+    "name": "maranello",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food menu",
+        "url": "https://www.maranellosd.com/menu",
+        "items": [
+          {
+            "name": "Romagna Charcoal Bread",
+            "category": "Appetizers",
+            "price": 12.0
+          },
+          {
+            "name": "Grilled Lamb Lollipops",
+            "category": "Appetizers",
+            "price": 24.0
+          },
+          {
+            "name": "Gnocco Fritto",
+            "category": "Appetizers",
+            "price": 16.0
+          },
+          {
+            "name": "Maranello Bruschetta",
+            "category": "Appetizers",
+            "price": 16.0
+          },
+          {
+            "name": "Crab Cake",
+            "category": "Appetizers",
+            "price": 22.0
+          },
+          {
+            "name": "Wagyu Meatballs",
+            "category": "Appetizers",
+            "price": 21.0
+          },
+          {
+            "name": "Taglieri di Salumi e Formaggi",
+            "category": "Appetizers",
+            "price": 26.0
+          },
+          {
+            "name": "Tartar di Manzo",
+            "category": "Appetizers",
+            "price": 22.0
+          },
+          {
+            "name": "Octopus Carpaccio",
+            "category": "Appetizers",
+            "price": 22.0
+          },
+          {
+            "name": "Carciofi Zafferano",
+            "category": "Appetizers",
+            "price": 19.0
+          },
+          {
+            "name": "Heirloom Tomato Burrata",
+            "category": "Appetizers",
+            "price": 20.0
+          },
+          {
+            "name": "Silverstone",
+            "category": "Salads",
+            "price": 14.0
+          },
+          {
+            "name": "Monza",
+            "category": "Salads",
+            "price": 14.0
+          },
+          {
+            "name": "Maranello Caesar Salad",
+            "category": "Salads",
+            "price": 14.0
+          },
+          {
+            "name": "Imola",
+            "category": "Salads",
+            "price": 15.0
+          },
+          {
+            "name": "Tortellini in Brodo",
+            "category": "Soups",
+            "price": 18.0
+          },
+          {
+            "name": "Pici Testarossa",
+            "category": "Hand Crafted Pasta",
+            "price": 38.0
+          },
+          {
+            "name": "Paccheri All’Anatra",
+            "category": "Hand Crafted Pasta",
+            "price": 28.0
+          },
+          {
+            "name": "Gnocchi di Zucca",
+            "category": "Hand Crafted Pasta",
+            "price": 26.0
+          },
+          {
+            "name": "Lasagna Emiliana",
+            "category": "Hand Crafted Pasta",
+            "price": 26.0
+          },
+          {
+            "name": "Radiatori Salsiccia",
+            "category": "Hand Crafted Pasta",
+            "price": 28.0
+          },
+          {
+            "name": "Carbonara Maranello",
+            "category": "Hand Crafted Pasta",
+            "price": 27.0
+          },
+          {
+            "name": "Pappardelle Alla Guancia",
+            "category": "Hand Crafted Pasta",
+            "price": 32.0
+          },
+          {
+            "name": "Porcini Mushroom Ravioli",
+            "category": "Hand Crafted Pasta",
+            "price": 29.0
+          },
+          {
+            "name": "Ruotine di Mare",
+            "category": "Hand Crafted Pasta",
+            "price": 34.0
+          },
+          {
+            "name": "Risotto of the Day",
+            "category": "Chef's Selections",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Fish of the Day",
+            "category": "Chef's Selections",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Steak of the Day",
+            "category": "Chef's Selections",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Filetto Alla Enzo",
+            "category": "Entrees",
+            "price": 49.0
+          },
+          {
+            "name": "Brasato",
+            "category": "Entrees",
+            "price": 34.0
+          },
+          {
+            "name": "Pollo Ripieno",
+            "category": "Entrees",
+            "price": 32.0
+          },
+          {
+            "name": "Salmon",
+            "category": "Entrees",
+            "price": 32.0
+          },
+          {
+            "name": "Grilled Asparagus",
+            "category": "Sides",
+            "price": 14.0
+          },
+          {
+            "name": "Rosemary Roasted Potato",
+            "category": "Sides",
+            "price": 14.0
+          },
+          {
+            "name": "Roasted Brussels Sprout",
+            "category": "Sides",
+            "price": 12.0
+          },
+          {
+            "name": "Wild Mushroom Trifolati",
+            "category": "Sides",
+            "price": 14.0
+          },
+          {
+            "name": "French Fries",
+            "category": "Sides",
+            "price": 12.0
+          },
+          {
+            "name": "Truffle Fries",
+            "category": "Sides",
+            "price": 14.0
+          },
+          {
+            "name": "Chef’s cheese-wheel pasta",
+            "category": "Hand Crafted Pasta",
+            "priceLabel": "Market price"
+          }
+        ],
+        "coverage": "published",
+        "note": "A 3.95% surcharge applies to all checks; parties of six or more have an automatic 20% gratuity."
+      },
+      {
+        "label": "Drinks & wine",
+        "url": "https://www.maranellosd.com/menu",
+        "items": [
+          {
+            "name": "250 GTO — Negroni Sbagliato",
+            "category": "Craft Cocktails",
+            "price": 16.0
+          },
+          {
+            "name": "Maranello — Manhattan",
+            "category": "Craft Cocktails",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Dino Ferrari — Margarita",
+            "category": "Craft Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "F40 — Italian Stallion",
+            "category": "Craft Cocktails",
+            "price": 17.0
+          },
+          {
+            "name": "Purosangue — Sarti Spritz",
+            "category": "Craft Cocktails",
+            "price": 17.0
+          },
+          {
+            "name": "Enzo — Tiramisu Espresso Martini",
+            "category": "Craft Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "F80 — Gold Rush",
+            "category": "Craft Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "F50 — Testarossa",
+            "category": "Craft Cocktails",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "458 Italia — Eastside",
+            "category": "Craft Cocktails",
+            "price": 16.0
+          },
+          {
+            "name": "La Ferrari — Hugo Spritz",
+            "category": "Craft Cocktails",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Cavallino Mocktail",
+            "category": "Craft Cocktails",
+            "price": 15.0
+          },
+          {
+            "name": "Portofino Mocktail",
+            "category": "Craft Cocktails",
+            "price": 15.0
+          },
+          {
+            "name": "Prosecco Corte Alla Flora",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$15 glass · $55 bottle"
+          },
+          {
+            "name": "Prosecco Rosé Pitars, Friuli",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$15 glass · $55 bottle"
+          },
+          {
+            "name": "Ferrari Brut 375ml Veneto",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$39 bottle"
+          },
+          {
+            "name": "Ferrari Brut 750ml Veneto",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$70 bottle"
+          },
+          {
+            "name": "Champagne Brut Rosé 187ml Moët, France",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$31 bottle"
+          },
+          {
+            "name": "Champagne Brut 750ml Moët, France",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$145 bottle"
+          },
+          {
+            "name": "Veuve Clicquot Yellow Label Brut",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$185 bottle"
+          },
+          {
+            "name": "Dom Pérignon Brut Vintage",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$459 bottle"
+          },
+          {
+            "name": "Armand de Brignac \"Ace of Spades\" Gold",
+            "category": "Bubbles & Sparkling",
+            "priceLabel": "$1,000 bottle"
+          },
+          {
+            "name": "Peroni",
+            "category": "Beer Bottles",
+            "price": 8.0
+          },
+          {
+            "name": "Modelo Especial",
+            "category": "Beer Bottles",
+            "price": 8.0
+          },
+          {
+            "name": "Stone Delicious IPA",
+            "category": "Beer Bottles",
+            "price": 9.0
+          },
+          {
+            "name": "Blue Moon",
+            "category": "Beer Bottles",
+            "price": 8.0
+          },
+          {
+            "name": "Guinness",
+            "category": "Beer Bottles",
+            "price": 8.0
+          },
+          {
+            "name": "Heineken 0",
+            "category": "Beer Bottles",
+            "price": 9.0
+          },
+          {
+            "name": "Maranello White Selection Varies",
+            "category": "Lista dei Vini",
+            "priceLabel": "$12 gl · $45 btl"
+          },
+          {
+            "name": "Chardonnay, Ferrari Carano Sonoma",
+            "category": "Lista dei Vini",
+            "priceLabel": "$15 gl · $58 btl"
+          },
+          {
+            "name": "Pinot Grigio, Sagrestana Venezie, Italy",
+            "category": "Lista dei Vini",
+            "priceLabel": "$14 gl · $48 btl"
+          },
+          {
+            "name": "Sauvignon Blanc, Pitars Friuli, Italy",
+            "category": "Lista dei Vini",
+            "priceLabel": "$15 gl · $55 btl"
+          },
+          {
+            "name": "Sauvignon Blanc, Vavasour New Zealand",
+            "category": "Lista dei Vini",
+            "priceLabel": "$16 gl · $58 btl"
+          },
+          {
+            "name": "Gavi di Gavi, Villa Sparina Piemonte",
+            "category": "Lista dei Vini",
+            "priceLabel": "$15 gl · $55 btl"
+          },
+          {
+            "name": "Grillo, Donnafugata “Anthilia” Sicily",
+            "category": "Lista dei Vini",
+            "priceLabel": "$60 btl"
+          },
+          {
+            "name": "Vermentino, Mazzei Belguardo Toscana",
+            "category": "Lista dei Vini",
+            "priceLabel": "$70 btl"
+          },
+          {
+            "name": "Pinot Grigio, Corte Alla Flora Friuli",
+            "category": "Lista dei Vini",
+            "priceLabel": "$55 btl"
+          },
+          {
+            "name": "Rosato del Salento Puglia",
+            "category": "Lista dei Vini",
+            "priceLabel": "$15 gl · $55 btl"
+          },
+          {
+            "name": "Maranello Red Selection Varies",
+            "category": "Lista dei Vini",
+            "priceLabel": "$12 gl · $45 btl"
+          },
+          {
+            "name": "Chianti, Valdarno Toscana",
+            "category": "Lista dei Vini",
+            "priceLabel": "$14 gl · $50 btl"
+          },
+          {
+            "name": "Chianti Riserva, Nipozzano Toscana",
+            "category": "Lista dei Vini",
+            "priceLabel": "$16 gl · $60 btl"
+          },
+          {
+            "name": "Lambrusco, Umberto Cavicchioli Emilia",
+            "category": "Lista dei Vini",
+            "priceLabel": "$15 gl · $55 btl"
+          },
+          {
+            "name": "Malbec, Big Head Mendoza, Argentina",
+            "category": "Lista dei Vini",
+            "priceLabel": "$15 gl · $55 btl"
+          },
+          {
+            "name": "Sangiovese, Frescobaldi Remole Toscana",
+            "category": "Lista dei Vini",
+            "priceLabel": "$18 gl · $65 btl"
+          },
+          {
+            "name": "Pinot Noir, Seasun by Caymus California",
+            "category": "Lista dei Vini",
+            "priceLabel": "$15 gl · $55 btl"
+          },
+          {
+            "name": "Valpolicella Classico, Begali Veneto",
+            "category": "Lista dei Vini",
+            "priceLabel": "$16 gl · $58 btl"
+          },
+          {
+            "name": "Allegrini, Palazzo della Torre Veneto",
+            "category": "Lista dei Vini",
+            "priceLabel": "$16 gl · $60 btl"
+          },
+          {
+            "name": "Nero d’Avola, Regaleali Lamuri Sicilia",
+            "category": "Lista dei Vini",
+            "priceLabel": "$16 gl · $65 btl"
+          },
+          {
+            "name": "Brunello di Montalcino, Cordella Toscana",
+            "category": "Lista dei Vini",
+            "priceLabel": "$105 btl"
+          },
+          {
+            "name": "Barolo Riserva, Salvano “Bricco San Pietro”, Piemonte",
+            "category": "Lista dei Vini",
+            "priceLabel": "$120 btl"
+          },
+          {
+            "name": "Barolo Riserva, Salvano “Vinorium”, Piemonte",
+            "category": "Lista dei Vini",
+            "priceLabel": "$140 btl"
+          },
+          {
+            "name": "Barolo Riserva, Salvano “Millenium”, Piemonte",
+            "category": "Lista dei Vini",
+            "priceLabel": "$150 btl"
+          },
+          {
+            "name": "Nebbiolo, Paola Sordo Piemonte",
+            "category": "Lista dei Vini",
+            "priceLabel": "$68 btl"
+          },
+          {
+            "name": "Cabernet Sauv., Austin Hope Paso Robles",
+            "category": "Lista dei Vini",
+            "priceLabel": "$110 btl"
+          },
+          {
+            "name": "Cabernet Sauv., Duckhorn Napa, California",
+            "category": "Lista dei Vini",
+            "priceLabel": "$130 btl"
+          },
+          {
+            "name": "Cabernet Sauv., Caymus Napa, California",
+            "category": "Lista dei Vini",
+            "priceLabel": "$190 btl"
+          },
+          {
+            "name": "Cabernet Sauv., Daou Paso Robles, California",
+            "category": "Lista dei Vini",
+            "priceLabel": "$18 gl · $70 btl"
+          },
+          {
+            "name": "Zinfandel, Decoy Napa Valley",
+            "category": "Lista dei Vini",
+            "priceLabel": "$60 btl"
+          }
+        ],
+        "coverage": "published",
+        "note": "A 3.95% surcharge applies to all checks; parties of six or more have an automatic 20% gratuity."
+      },
+      {
+        "label": "Happy-hour menu",
+        "url": "https://www.maranellosd.com/menu",
+        "items": [
+          {
+            "name": "Gnocco Fritto",
+            "category": "Food",
+            "price": 12.0
+          },
+          {
+            "name": "Caesar Salad",
+            "category": "Food",
+            "price": 10.0
+          },
+          {
+            "name": "Silverstone Salad",
+            "category": "Food",
+            "price": 10.0
+          },
+          {
+            "name": "Maranello Bruschetta",
+            "category": "Food",
+            "price": 10.0
+          },
+          {
+            "name": "Wagyu Meatballs",
+            "category": "Food",
+            "price": 14.0
+          },
+          {
+            "name": "Truffle Fries",
+            "category": "Food",
+            "price": 8.0
+          },
+          {
+            "name": "Radiatori Salsiccia",
+            "category": "Food",
+            "price": 18.0
+          },
+          {
+            "name": "Peroni Beer",
+            "category": "Drinks",
+            "price": 5.0
+          },
+          {
+            "name": "All Specialty Menu & Well Cocktails",
+            "category": "Drinks",
+            "price": 10.0
+          },
+          {
+            "name": "Maranello Selection Red & White Wine",
+            "category": "Drinks",
+            "priceLabel": "$6 Glass · $24 Bottle"
+          },
+          {
+            "name": "Maranello Selection Prosecco",
+            "category": "Drinks",
+            "priceLabel": "$10 Glass · $40 Bottle"
+          },
+          {
+            "name": "Chef’s cheese-wheel pasta",
+            "category": "Food",
+            "priceLabel": "50% off"
+          },
+          {
+            "name": "Charcuterie board & Aperol Spritz carafe",
+            "category": "Special Offer",
+            "price": 32.0
+          }
+        ],
+        "coverage": "published",
+        "note": "A 3.95% surcharge applies to all checks; parties of six or more have an automatic 20% gratuity."
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy Hour Pit Stop",
+        "description": "Truffle fries $8; Wagyu meatballs $14; Peroni $5; cocktails $10. Chef’s cheese-wheel pasta is 50% off.",
+        "schedule": "Monday–Thursday, 4–6 pm · Friday, 4–5:30 pm",
+        "conditions": [
+          "3.95% surcharge on all checks; automatic 20% gratuity for parties of six or more."
+        ],
+        "sourceUrl": "https://www.maranellosd.com/menu"
+      },
+      {
+        "kind": "other",
+        "title": "Charcuterie & Aperol Spritz — $32",
+        "description": "A charcuterie board with a carafe of Aperol Spritz.",
+        "conditions": [
+          "Offer hours are not published; confirm availability with the restaurant.",
+          "3.95% surcharge on all checks; automatic 20% gratuity for parties of six or more."
+        ],
+        "sourceUrl": "https://www.maranellosd.com/menu"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://serpentandstonesd.com/",
+    "name": "serpent",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://serpentandstonesd.com/menu/dinner",
+        "items": [
+          {
+            "name": "Hummus",
+            "category": "Appetizers",
+            "price": 15.0
+          },
+          {
+            "name": "Falafel",
+            "category": "Appetizers",
+            "price": 20.0
+          },
+          {
+            "name": "Feta Fries",
+            "category": "Appetizers",
+            "price": 20.0
+          },
+          {
+            "name": "Chicken Souvlaki",
+            "category": "Entrées",
+            "price": 28.0
+          },
+          {
+            "name": "Greek Meatballs",
+            "category": "Entrées",
+            "price": 32.0
+          },
+          {
+            "name": "Aegean Octopus",
+            "category": "Entrées",
+            "price": 34.0
+          },
+          {
+            "name": "Greek Salad",
+            "category": "Salads",
+            "price": 18.0
+          },
+          {
+            "name": "Hamachi Mykonos",
+            "category": "Salads",
+            "price": 26.0
+          },
+          {
+            "name": "Baba Ganoush",
+            "category": "Salads",
+            "price": 21.0
+          },
+          {
+            "name": "Roasted Vegetable",
+            "category": "Skewers",
+            "price": 23.0
+          },
+          {
+            "name": "Chicken",
+            "category": "Skewers",
+            "price": 26.0
+          },
+          {
+            "name": "Salmon",
+            "category": "Skewers",
+            "price": 32.0
+          },
+          {
+            "name": "Shrimp",
+            "category": "Skewers",
+            "price": 30.0
+          },
+          {
+            "name": "Gorgon platter",
+            "category": "Platters",
+            "price": 88.0
+          },
+          {
+            "name": "Seasonal dessert selection",
+            "category": "Desserts",
+            "priceLabel": "Ask your server"
+          }
+        ],
+        "coverage": "published"
+      },
+      {
+        "label": "Cocktails",
+        "url": "https://serpentandstonesd.com/menu/cocktails",
+        "items": [
+          {
+            "name": "Aphrodite",
+            "category": "Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "Hephaestus",
+            "category": "Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "Hermes",
+            "category": "Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "Hades",
+            "category": "Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "Zeus",
+            "category": "Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "Hera",
+            "category": "Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "Poseidon",
+            "category": "Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "Dionysus",
+            "category": "Cocktails",
+            "price": 18.0
+          }
+        ],
+        "coverage": "published"
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+    "name": "teleferic",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food menu",
+        "url": "https://www.telefericbarcelona.com/menu-restaurant/menu-la-jolla",
+        "items": [
+          {
+            "name": "Patatas Bravas",
+            "category": "Tapas",
+            "note": "Crispy jamón +$3",
+            "price": 10.0
+          },
+          {
+            "name": "Crab Croquetas",
+            "category": "Tapas",
+            "note": "Caviar +$24",
+            "price": 12.0
+          },
+          {
+            "name": "Pan con Tomate",
+            "category": "Tapas",
+            "price": 9.0
+          },
+          {
+            "name": "Jamón Ibérico de Bellota",
+            "category": "Tapas",
+            "note": "Elevate your experience with 100% pure Iberian Jamón 5J black label +$12",
+            "price": 26.0
+          },
+          {
+            "name": "Iberian Oyster",
+            "category": "Tapas",
+            "note": "Caviar +$24",
+            "price": 5.0
+          },
+          {
+            "name": "Ham Croquetas",
+            "category": "Tapas",
+            "price": 12.0
+          },
+          {
+            "name": "Fresh Hummus",
+            "category": "Tapas",
+            "price": 16.0
+          },
+          {
+            "name": "Wagyu Empanadas",
+            "category": "Tapas",
+            "price": 18.0
+          },
+          {
+            "name": "Spanish Albóndigas",
+            "category": "Tapas",
+            "price": 16.0
+          },
+          {
+            "name": "El Ceviche",
+            "category": "Tapas",
+            "price": 28.0
+          },
+          {
+            "name": "Pulpo Telefèric",
+            "category": "Tapas",
+            "price": 22.0
+          },
+          {
+            "name": "Tuna Tacos",
+            "category": "Tapas",
+            "note": "Caviar +$24",
+            "price": 18.0
+          },
+          {
+            "name": "Salmon Tartare",
+            "category": "Tapas",
+            "price": 16.0
+          },
+          {
+            "name": "Gambas al Ajillo",
+            "category": "Tapas",
+            "price": 19.0
+          },
+          {
+            "name": "Burrata Bowl",
+            "category": "Greens",
+            "note": "Add seared tuna filet +$8 · Add smoked salmon +$7 · Add avocado +$4",
+            "price": 18.0
+          },
+          {
+            "name": "Mediterranean Fresh Tuna Salad",
+            "category": "Greens",
+            "note": "Add seared tuna filet +$8 · Add smoked salmon +$7",
+            "price": 24.0
+          },
+          {
+            "name": "Telefèric Market Salad",
+            "category": "Greens",
+            "price": 19.0
+          },
+          {
+            "name": "Cali-Flower",
+            "category": "Greens",
+            "price": 12.0
+          },
+          {
+            "name": "Bruselas",
+            "category": "Greens",
+            "price": 12.0
+          },
+          {
+            "name": "Ribeye Chuletón",
+            "category": "Platos",
+            "price": 112.0
+          },
+          {
+            "name": "Prime Wellington",
+            "category": "Platos",
+            "price": 38.0
+          },
+          {
+            "name": "Chicken Kebab",
+            "category": "Platos",
+            "price": 17.0
+          },
+          {
+            "name": "Grilled Salmon",
+            "category": "Platos",
+            "price": 32.0
+          },
+          {
+            "name": "Churros",
+            "category": "Desserts",
+            "price": 12.0
+          },
+          {
+            "name": "Torrija",
+            "category": "Desserts",
+            "price": 12.0
+          },
+          {
+            "name": "Orange Mochi",
+            "category": "Desserts",
+            "price": 12.0
+          },
+          {
+            "name": "Trio Selection",
+            "category": "Desserts",
+            "price": 18.0
+          },
+          {
+            "name": "Lobster Paella",
+            "category": "Paellas",
+            "price": 62.0
+          },
+          {
+            "name": "Paella Negra",
+            "category": "Paellas",
+            "price": 48.0
+          },
+          {
+            "name": "Paella Mixta",
+            "category": "Paellas",
+            "price": 46.0
+          },
+          {
+            "name": "Ibérico Paella",
+            "category": "Paellas",
+            "price": 56.0
+          },
+          {
+            "name": "Veggie Paella",
+            "category": "Paellas",
+            "price": 39.0
+          },
+          {
+            "name": "Our Famous Fiesta Paella",
+            "category": "Paellas",
+            "price": 180.0
+          }
+        ],
+        "coverage": "published",
+        "note": "A 20% service charge applies to parties of six or more; it is not a gratuity."
+      },
+      {
+        "label": "Drinks & cocktails",
+        "url": "https://www.telefericbarcelona.com/menu-restaurant/menu-la-jolla",
+        "items": [
+          {
+            "name": "Pine-Apple Inception",
+            "category": "Seasonal Cocktails",
+            "note": "Grey Goose or Belvedere +$5",
+            "price": 17.0
+          },
+          {
+            "name": "Fancy a Carrot?",
+            "category": "Seasonal Cocktails",
+            "price": 18.0
+          },
+          {
+            "name": "Red Velvet milk punch",
+            "category": "Seasonal Cocktails",
+            "price": 16.0
+          },
+          {
+            "name": "Al-Andalus Sour",
+            "category": "Seasonal Cocktails",
+            "price": 16.0
+          },
+          {
+            "name": "La Paloma",
+            "category": "Seasonal Cocktails",
+            "price": 17.0
+          },
+          {
+            "name": "The Tourist",
+            "category": "Telefèric Classics",
+            "note": "Patrón Reposado +$6 · Clase Azul Repo +$24",
+            "price": 17.0
+          },
+          {
+            "name": "Carajillo",
+            "category": "Telefèric Classics",
+            "note": "Grey Goose or Belvedere +$5",
+            "price": 17.0
+          },
+          {
+            "name": "Gothic Mojito",
+            "category": "Telefèric Classics",
+            "note": "St Teresa 1796 +$6 · Ron Zacapa XO +$19",
+            "price": 16.0
+          },
+          {
+            "name": "Bryan's Legacy",
+            "category": "Telefèric Classics",
+            "price": 17.0
+          },
+          {
+            "name": "La Flaca",
+            "category": "Telefèric Classics",
+            "note": "Casamigos Mezcal +$7 · Clase Azul Mezcal +$35",
+            "price": 18.0
+          },
+          {
+            "name": "Ibiza G&T",
+            "category": "Gin & Tonics",
+            "price": 17.0
+          },
+          {
+            "name": "Catalan G&T",
+            "category": "Gin & Tonics",
+            "note": "Monkey 47 +$5",
+            "price": 17.0
+          },
+          {
+            "name": "Galician G&T",
+            "category": "Gin & Tonics",
+            "price": 18.0
+          },
+          {
+            "name": "Telefèric Sangria",
+            "category": "Sangrías & Spritz",
+            "price": 14.0
+          },
+          {
+            "name": "Barceloneta Sangria",
+            "category": "Sangrías & Spritz",
+            "price": 14.0
+          },
+          {
+            "name": "Spicy Sangria",
+            "category": "Sangrías & Spritz",
+            "price": 14.0
+          },
+          {
+            "name": "Rebujito Spritz",
+            "category": "Sangrías & Spritz",
+            "price": 14.0
+          },
+          {
+            "name": "Sangria Flight",
+            "category": "Sangrías & Spritz",
+            "price": 29.0
+          },
+          {
+            "name": "Lychee's & Cream",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Sierra Sunset",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Mule Picón",
+            "category": "Mocktails",
+            "price": 13.0
+          }
+        ],
+        "coverage": "published"
+      },
+      {
+        "label": "Wine list",
+        "url": "https://21afb592-bf79-4be9-89ff-15d61ffb549b.usrfiles.com/ugd/21afb5_a2721d196fdb4f6a9fa2d70e21a6075b.pdf",
+        "items": [],
+        "coverage": "published",
+        "documentUrl": "https://21afb592-bf79-4be9-89ff-15d61ffb549b.usrfiles.com/ugd/21afb5_a2721d196fdb4f6a9fa2d70e21a6075b.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-1.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-2.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-3.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-4.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-5.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-6.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-7.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-8.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-9.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/teleferic/3-10.webp",
+            "width": 1391,
+            "height": 1800
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "The Social Hour",
+        "description": "Patatas bravas and ham croquetas $8 each; paella mixta $26. Signature cocktails $4 off; wines by the glass $3 off.",
+        "schedule": "Monday–Thursday, 3–6 pm",
+        "conditions": [
+          "Bar and patio only. Excludes holidays.",
+          "An 18% service charge applies to this offer."
+        ],
+        "sourceUrl": "https://www.telefericbarcelona.com/the-social-hour"
+      }
+    ],
+    "lunchNote": {
+      "text": "The Barcelona Lunch set is not offered at the La Jolla location.",
+      "sourceUrl": "https://www.telefericbarcelona.com/menu-restaurant"
+    }
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/addison",
+    "name": "Addison",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Tasting menu",
+        "url": "https://www.addisondelmar.com/the-experience/",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Ten-course tasting menu",
+            "category": "Dining room",
+            "price": 398,
+            "note": "Per person; seasonal courses."
+          },
+          {
+            "name": "Tartelette menu",
+            "category": "Champagne Lounge",
+            "price": 198,
+            "note": "Per guest; walk-in seating subject to availability."
+          },
+          {
+            "name": "Champagne pairing",
+            "category": "Champagne Lounge",
+            "price": 175,
+            "note": "Optional pairing added to the Tartelette menu."
+          }
+        ],
+        "note": "The restaurant publishes these dining options and prices. Individual seasonal courses and dining-room wine-pairing prices are not published."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/la-jolla/restaurant/lucien",
+    "name": "Lucien",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Tasting menu",
+        "url": "https://luciensd.com/about/",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Seasonal tasting menu — 10+ courses",
+            "category": "Tasting menu",
+            "priceLabel": "Price not published"
+          }
+        ],
+        "note": "The restaurant publishes the tasting-menu format, but does not list its current courses or price on this page."
+      },
+      {
+        "label": "Wine list",
+        "url": "https://luciensd.com/wp-content/uploads/Wine%20Menu/LUCIEN_WINELIST.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Full wine list in the restaurant’s published document.",
+        "documentUrl": "https://luciensd.com/wp-content/uploads/Wine%20Menu/LUCIEN_WINELIST.pdf"
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/soichi",
+    "name": "Soichi",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food menu",
+        "url": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Full Omakase (Dine in version)",
+            "category": "Omakase",
+            "price": 189.0
+          },
+          {
+            "name": "Nigiri Omakase (Dine in Version)",
+            "category": "Omakase",
+            "price": 140.0
+          },
+          {
+            "name": "Petite Omakase (Dine in only)",
+            "category": "Omakase",
+            "price": 65.0
+          },
+          {
+            "name": "CHIRASHI BOWL",
+            "category": "Specials",
+            "price": 72.0
+          },
+          {
+            "name": "NIGIRI BOX A (Takeout Only)",
+            "category": "Specials",
+            "price": 80.0
+          },
+          {
+            "name": "NIGIRI BOX B (Takeout Only)",
+            "category": "Specials",
+            "price": 72.0
+          },
+          {
+            "name": "Nigiri Box C (Takeout Only)",
+            "category": "Specials",
+            "price": 64.0
+          },
+          {
+            "name": "SPECIAL FUTOMAKI ROLL",
+            "category": "Specials",
+            "price": 33.0
+          },
+          {
+            "name": "VEGETABLE ROLL",
+            "category": "Specials",
+            "price": 16.0
+          },
+          {
+            "name": "VEGETABLE TEMPURA",
+            "category": "Specials",
+            "price": 14.0
+          },
+          {
+            "name": "MIXED TEMPURA",
+            "category": "Specials",
+            "price": 25.0
+          },
+          {
+            "name": "Negitoro Temaki",
+            "category": "Specials",
+            "price": 18.0
+          },
+          {
+            "name": "CHILEAN SEA BASS",
+            "category": "Specials",
+            "price": 22.0
+          },
+          {
+            "name": "CHAWAN MUSHI",
+            "category": "Specials",
+            "price": 15.0
+          },
+          {
+            "name": "Ankimo- Handcrafted Monkfish Liver with Signature Ponzu",
+            "category": "Specials",
+            "price": 15.0
+          },
+          {
+            "name": "Assorted Japanese Pickles",
+            "category": "Specials",
+            "price": 14.0
+          },
+          {
+            "name": "Blue Fin Tuna",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 9.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Toro",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 13.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Scallop",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 8.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Zuke",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 9.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Seki Aji",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 8.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Hirame",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 7.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Salmon",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 7.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Kohada",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 7.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Ikura",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 10.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Kinmedai",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 13.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Kanpachi",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 8.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Kawahagi",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 12.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Sweet Shrimp (Seasonal)",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 20.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Kamasu",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 7.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Tamago",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 5.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Shrimp Nigiri",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 7.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Saba",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 9.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Hokkaido Uni",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 21.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Anago",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 9.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Engawa",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 9.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Nodoguro",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 17.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Katsuo",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 8.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Iwashi",
+            "category": "À La Carte - Nigiri or Sashimi",
+            "price": 8.0,
+            "note": "Price per piece."
+          },
+          {
+            "name": "Tuna Roll",
+            "category": "Traditional Small Cut Rolls",
+            "price": 14.0,
+            "note": "Six pieces."
+          },
+          {
+            "name": "Chopped Fatty Tuna Roll",
+            "category": "Traditional Small Cut Rolls",
+            "price": 18.0,
+            "note": "Six pieces."
+          },
+          {
+            "name": "Chopped Amberjack Roll",
+            "category": "Traditional Small Cut Rolls",
+            "price": 13.0,
+            "note": "Six pieces."
+          },
+          {
+            "name": "Cucumber Roll",
+            "category": "Traditional Small Cut Rolls",
+            "price": 9.0,
+            "note": "Six pieces."
+          },
+          {
+            "name": "Salmon Roll",
+            "category": "Traditional Small Cut Rolls",
+            "price": 14.0,
+            "note": "Six pieces."
+          },
+          {
+            "name": "Japanese Tapas (Dine in only)",
+            "category": "Appetizers and Sides",
+            "price": 22.0
+          },
+          {
+            "name": "Mixed Tempura",
+            "category": "Appetizers and Sides",
+            "price": 25.0
+          },
+          {
+            "name": "VEGETABLE TEMPURA",
+            "category": "Appetizers and Sides",
+            "price": 14.0
+          },
+          {
+            "name": "Chilean Sea Bass",
+            "category": "Appetizers and Sides",
+            "price": 22.0
+          },
+          {
+            "name": "Soichi's Miso Soup",
+            "category": "Appetizers and Sides",
+            "price": 5.0
+          },
+          {
+            "name": "Shirumono",
+            "category": "Appetizers and Sides",
+            "price": 5.0
+          },
+          {
+            "name": "Oyster 1/2 shell (Dine in Only)",
+            "category": "Appetizers and Sides",
+            "price": 14.0
+          },
+          {
+            "name": "Ankimo- Handcrafted Monkfish Liver with Signature Ponzu",
+            "category": "Appetizers and Sides",
+            "price": 15.0
+          },
+          {
+            "name": "CHAWAN MUSHI",
+            "category": "Appetizers and Sides",
+            "price": 15.0
+          },
+          {
+            "name": "Negitoro Temaki",
+            "category": "Appetizers and Sides",
+            "price": 18.0
+          },
+          {
+            "name": "Assorted Japanese Pickles",
+            "category": "Appetizers and Sides",
+            "price": 14.0
+          },
+          {
+            "name": "Yubadofu—Imperial Silken Tofu with Signature Ponzu",
+            "category": "Appetizers and Sides",
+            "price": 14.0
+          },
+          {
+            "name": "Bowl of Sushi Rice",
+            "category": "Appetizers and Sides",
+            "price": 5.0
+          },
+          {
+            "name": "Daniel's Homemade Ice Cream",
+            "category": "Dessert",
+            "price": 7.0
+          },
+          {
+            "name": "Asahi — Draft",
+            "category": "Beer",
+            "price": 10.0
+          },
+          {
+            "name": "Asahi — Bottle",
+            "category": "Beer",
+            "price": 12.0
+          },
+          {
+            "name": "Sapporo — Draft",
+            "category": "Beer",
+            "price": 10.0
+          },
+          {
+            "name": "Sapporo — Bottle",
+            "category": "Beer",
+            "price": 12.0
+          },
+          {
+            "name": "Orion Draft",
+            "category": "Beer",
+            "price": 14.0
+          },
+          {
+            "name": "Hitotsubu-No Mugi — Glass",
+            "category": "Shochu",
+            "price": 13.0
+          },
+          {
+            "name": "Hitotsubu-No Mugi — Bottle",
+            "category": "Shochu",
+            "price": 65.0
+          },
+          {
+            "name": "Kawabe — Glass",
+            "category": "Shochu",
+            "price": 12.0
+          },
+          {
+            "name": "Kawabe — Bottle",
+            "category": "Shochu",
+            "price": 65.0
+          },
+          {
+            "name": "Akaruinouson — Glass",
+            "category": "Shochu",
+            "price": 12.0
+          },
+          {
+            "name": "Akaruinouson — Bottle",
+            "category": "Shochu",
+            "price": 100.0
+          },
+          {
+            "name": "Ume Shu — Glass",
+            "category": "Shochu",
+            "price": 10.0
+          },
+          {
+            "name": "Ume Shu — Bottle",
+            "category": "Shochu",
+            "price": 65.0
+          },
+          {
+            "name": "Ramune",
+            "category": "Japanese Soft Drinks",
+            "price": 5.0
+          },
+          {
+            "name": "Oolong Tea",
+            "category": "Japanese Soft Drinks",
+            "price": 5.0
+          },
+          {
+            "name": "Barley Tea",
+            "category": "Japanese Soft Drinks",
+            "price": 5.0
+          },
+          {
+            "name": "Hot Green Tea",
+            "category": "Japanese Soft Drinks",
+            "price": 5.0
+          },
+          {
+            "name": "Melon Cream Soda",
+            "category": "Japanese Soft Drinks",
+            "price": 5.0
+          },
+          {
+            "name": "Perrier",
+            "category": "Soft Drinks",
+            "price": 4.5
+          },
+          {
+            "name": "Coke",
+            "category": "Soft Drinks",
+            "price": 4.5
+          },
+          {
+            "name": "Diet Coke",
+            "category": "Soft Drinks",
+            "price": 4.5
+          },
+          {
+            "name": "Sprite",
+            "category": "Soft Drinks",
+            "price": 4.5
+          },
+          {
+            "name": "Apple Juice",
+            "category": "Soft Drinks",
+            "price": 4.5
+          }
+        ],
+        "note": "Published Adams Avenue menu. Omakase courses vary with seasonal availability. Dine-in and takeout restrictions are shown in item names."
+      },
+      {
+        "label": "Sake",
+        "url": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — 6oz",
+            "category": "Samurai",
+            "price": 23.0
+          },
+          {
+            "name": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — 12oz",
+            "category": "Samurai",
+            "price": 41.0
+          },
+          {
+            "name": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — 720ml",
+            "category": "Samurai",
+            "price": 76.0
+          },
+          {
+            "name": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — 6oz",
+            "category": "Samurai",
+            "price": 21.0
+          },
+          {
+            "name": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — 12oz",
+            "category": "Samurai",
+            "price": 39.0
+          },
+          {
+            "name": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — 720ml",
+            "category": "Samurai",
+            "price": 71.0
+          },
+          {
+            "name": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — 6oz",
+            "category": "Samurai",
+            "price": 24.0
+          },
+          {
+            "name": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — 12oz",
+            "category": "Samurai",
+            "price": 43.0
+          },
+          {
+            "name": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — 720ml",
+            "category": "Samurai",
+            "price": 80.0
+          },
+          {
+            "name": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — 6oz",
+            "category": "Samurai",
+            "price": 29.0
+          },
+          {
+            "name": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — 12oz",
+            "category": "Samurai",
+            "price": 52.0
+          },
+          {
+            "name": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — 720ml",
+            "category": "Samurai",
+            "price": 94.0
+          },
+          {
+            "name": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — 6oz",
+            "category": "Samurai",
+            "price": 21.0
+          },
+          {
+            "name": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — 12oz",
+            "category": "Samurai",
+            "price": 39.0
+          },
+          {
+            "name": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — 720ml",
+            "category": "Samurai",
+            "price": 71.0
+          },
+          {
+            "name": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — 6oz",
+            "category": "Geisha",
+            "price": 31.0
+          },
+          {
+            "name": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — 12oz",
+            "category": "Geisha",
+            "price": 56.0
+          },
+          {
+            "name": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — 500ml",
+            "category": "Geisha",
+            "price": 72.0
+          },
+          {
+            "name": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — 6oz",
+            "category": "Geisha",
+            "price": 26.0
+          },
+          {
+            "name": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — 12oz",
+            "category": "Geisha",
+            "price": 47.0
+          },
+          {
+            "name": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — 720ml",
+            "category": "Geisha",
+            "price": 86.0
+          },
+          {
+            "name": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — 6oz",
+            "category": "Geisha",
+            "price": 25.0
+          },
+          {
+            "name": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — 12oz",
+            "category": "Geisha",
+            "price": 45.0
+          },
+          {
+            "name": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — 720ml",
+            "category": "Geisha",
+            "price": 83.0
+          },
+          {
+            "name": "Miyasaka Shiro, “Sake Matinee”  -720ml — 6oz",
+            "category": "Geisha",
+            "price": 23.0
+          },
+          {
+            "name": "Miyasaka Shiro, “Sake Matinee”  -720ml — 12oz",
+            "category": "Geisha",
+            "price": 41.0
+          },
+          {
+            "name": "Miyasaka Shiro, “Sake Matinee”  -720ml — 720ml",
+            "category": "Geisha",
+            "price": 76.0
+          },
+          {
+            "name": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — 6oz",
+            "category": "Ninja",
+            "price": 22.0
+          },
+          {
+            "name": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — 12oz",
+            "category": "Ninja",
+            "price": 40.0
+          },
+          {
+            "name": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — 720ml",
+            "category": "Ninja",
+            "price": 74.0
+          },
+          {
+            "name": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — 6oz",
+            "category": "Ninja",
+            "price": 24.0
+          },
+          {
+            "name": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — 12oz",
+            "category": "Ninja",
+            "price": 44.0
+          },
+          {
+            "name": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — 750ml",
+            "category": "Ninja",
+            "price": 80.0
+          },
+          {
+            "name": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — 6oz",
+            "category": "Ninja",
+            "price": 22.0
+          },
+          {
+            "name": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — 12oz",
+            "category": "Ninja",
+            "price": 40.0
+          },
+          {
+            "name": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — 720ml",
+            "category": "Ninja",
+            "price": 73.0
+          },
+          {
+            "name": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — 6oz",
+            "category": "Ninja",
+            "price": 30.0
+          },
+          {
+            "name": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — 12oz",
+            "category": "Ninja",
+            "price": 55.0
+          },
+          {
+            "name": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — 500ml",
+            "category": "Ninja",
+            "price": 70.0
+          },
+          {
+            "name": "“Summer Breeze”  Hoyo Sawayaka Junmai — 6oz",
+            "category": "Ninja",
+            "price": 21.0
+          },
+          {
+            "name": "“Summer Breeze”  Hoyo Sawayaka Junmai — 12oz",
+            "category": "Ninja",
+            "price": 37.0
+          },
+          {
+            "name": "“Summer Breeze”  Hoyo Sawayaka Junmai — 720ml",
+            "category": "Ninja",
+            "price": 66.0
+          },
+          {
+            "name": "\"Silk Dragon\" Kuzuryu Daiginjo",
+            "category": "The Emperor",
+            "price": 151.0
+          },
+          {
+            "name": "Hoyo Yamadanishiki Junmai Daiginjo, “Last Chance at Love” - 720ml",
+            "category": "The Emperor",
+            "price": 170.0
+          },
+          {
+            "name": "Futsushu Seitoku-Bessen, “Special Select Sake Ordinaire” — 6oz",
+            "category": "The Emperor",
+            "price": 14.0
+          },
+          {
+            "name": "Futsushu Seitoku-Bessen, “Special Select Sake Ordinaire” — 12oz",
+            "category": "The Emperor",
+            "price": 22.0
+          },
+          {
+            "name": "Sake Flight",
+            "category": "The Emperor",
+            "price": 40.0
+          },
+          {
+            "name": "Kamoizumi Ginjo Nigori, “Summer Snow” - 500ml",
+            "category": "Nigori - Unfiltered",
+            "price": 63.0
+          },
+          {
+            "name": "Uka Sparkling Organic Junmai Daiginjo 300ml",
+            "category": "Nigori - Unfiltered",
+            "price": 45.0
+          }
+        ],
+        "note": "Published Adams Avenue menu. Omakase courses vary with seasonal availability. Dine-in and takeout restrictions are shown in item names."
+      },
+      {
+        "label": "Wine",
+        "url": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "NV 375ml Champagne Dervin Brut France",
+            "category": "Sparkling Wine",
+            "price": 36.0
+          },
+          {
+            "name": "NV 750ml Sparkling Brut Ovum Day Moon Oregon",
+            "category": "Sparkling Wine",
+            "price": 140.0
+          },
+          {
+            "name": "2021 Flanagan \"Riley's Rows\" Rose Sonoma Coast — Glass",
+            "category": "Rosé",
+            "price": 14.0
+          },
+          {
+            "name": "2021 Flanagan \"Riley's Rows\" Rose Sonoma Coast — Bottle",
+            "category": "Rosé",
+            "price": 36.0
+          },
+          {
+            "name": "2019 Skinner Native Red Central Valley CA — Glass",
+            "category": "Rosé",
+            "price": 11.0
+          },
+          {
+            "name": "2019 Skinner Native Red Central Valley CA — Bottle",
+            "category": "Rosé",
+            "price": 33.0
+          },
+          {
+            "name": "2022 Hunter's Sauvignon Blanc New Zealand Marlborough — Glass",
+            "category": "Fresh Light Wine",
+            "price": 14.0
+          },
+          {
+            "name": "2022 Hunter's Sauvignon Blanc New Zealand Marlborough — Bottle",
+            "category": "Fresh Light Wine",
+            "price": 36.0
+          },
+          {
+            "name": "2018 Handley Pinot Gris Anderson Valley California — Glass",
+            "category": "Fresh Light Wine",
+            "price": 13.0
+          },
+          {
+            "name": "2018 Handley Pinot Gris Anderson Valley California — Bottle",
+            "category": "Fresh Light Wine",
+            "price": 33.0
+          },
+          {
+            "name": "2018 Harper Voit Pinot Blanc “Sur Lie” Oregon — Glass",
+            "category": "Fresh Light Wine",
+            "price": 15.0
+          },
+          {
+            "name": "2018 Harper Voit Pinot Blanc “Sur Lie” Oregon — Bottle",
+            "category": "Fresh Light Wine",
+            "price": 42.0
+          },
+          {
+            "name": "2021 Hardin Ranch Sauvignon Blanc Napa Valley — Glass",
+            "category": "Fresh Light Wine",
+            "price": 20.0
+          },
+          {
+            "name": "2021 Hardin Ranch Sauvignon Blanc Napa Valley — Bottle",
+            "category": "Fresh Light Wine",
+            "price": 59.0
+          },
+          {
+            "name": "2021 Ovum Off the Grid Riesling Oregon — Glass",
+            "category": "Fresh Light Wine",
+            "price": 21.0
+          },
+          {
+            "name": "2021 Ovum Off the Grid Riesling Oregon — Bottle",
+            "category": "Fresh Light Wine",
+            "price": 71.0
+          },
+          {
+            "name": "2020 Walter Hansel Chardonnay \"North Slope\" Russian River Valley — Glass",
+            "category": "Rich White Wine",
+            "price": 23.0
+          },
+          {
+            "name": "2020 Walter Hansel Chardonnay \"North Slope\" Russian River Valley — Bottle",
+            "category": "Rich White Wine",
+            "price": 60.0
+          },
+          {
+            "name": "2018 Domaine Bernard Millot Bourgogne Chardonnay France — Glass",
+            "category": "Rich White Wine",
+            "price": 18.0
+          },
+          {
+            "name": "2018 Domaine Bernard Millot Bourgogne Chardonnay France — Bottle",
+            "category": "Rich White Wine",
+            "price": 53.0
+          },
+          {
+            "name": "2020 Samsara Chardonnay Santa Rita Hill Santa Barbara — Glass",
+            "category": "Rich White Wine",
+            "price": 20.0
+          },
+          {
+            "name": "2020 Samsara Chardonnay Santa Rita Hill Santa Barbara — Bottle",
+            "category": "Rich White Wine",
+            "price": 55.0
+          },
+          {
+            "name": "2018 Carson Phillips Chardonnay Oregon — Glass",
+            "category": "Rich White Wine",
+            "price": 22.0
+          },
+          {
+            "name": "2018 Carson Phillips Chardonnay Oregon — Bottle",
+            "category": "Rich White Wine",
+            "price": 60.0
+          },
+          {
+            "name": "2020 Rivers-Marie Chardonnay Sonoma Coast — Glass",
+            "category": "Rich White Wine",
+            "price": 20.0
+          },
+          {
+            "name": "2020 Rivers-Marie Chardonnay Sonoma Coast — Bottle",
+            "category": "Rich White Wine",
+            "price": 55.0
+          },
+          {
+            "name": "2018 Domaine Bel Air Beaujolais Morgon \"Les Charmes\" France — Glass",
+            "category": "Light Red Wine",
+            "price": 15.0
+          },
+          {
+            "name": "2018 Domaine Bel Air Beaujolais Morgon \"Les Charmes\" France — Bottle",
+            "category": "Light Red Wine",
+            "price": 42.0
+          },
+          {
+            "name": "2019 Domaine Masse Givry 1er Cru Pinot Noir France — Glass",
+            "category": "Light Red Wine",
+            "price": 22.0
+          },
+          {
+            "name": "2019 Domaine Masse Givry 1er Cru Pinot Noir France — Bottle",
+            "category": "Light Red Wine",
+            "price": 66.0
+          },
+          {
+            "name": "2017 Limited Eyrie Vinyards Pinot Meunier Willamette Valley Oregon — Glass",
+            "category": "Light Red Wine",
+            "price": 31.0
+          },
+          {
+            "name": "2017 Limited Eyrie Vinyards Pinot Meunier Willamette Valley Oregon — Bottle",
+            "category": "Light Red Wine",
+            "price": 98.0
+          },
+          {
+            "name": "2017 Carson Phillips Pinot Noir Oregon — Glass",
+            "category": "Light Red Wine",
+            "price": 22.0
+          },
+          {
+            "name": "2017 Carson Phillips Pinot Noir Oregon — Bottle",
+            "category": "Light Red Wine",
+            "price": 60.0
+          },
+          {
+            "name": "2021 Peter Paul Pinot Noir Sonoma Coast — Glass",
+            "category": "Light Red Wine",
+            "price": 21.0
+          },
+          {
+            "name": "2021 Peter Paul Pinot Noir Sonoma Coast — Bottle",
+            "category": "Light Red Wine",
+            "price": 54.0
+          },
+          {
+            "name": "2018 Aston Estate Pinot Noir Sonoma Coast — Glass",
+            "category": "Light Red Wine",
+            "price": 24.0
+          },
+          {
+            "name": "2018 Aston Estate Pinot Noir Sonoma Coast — Bottle",
+            "category": "Light Red Wine",
+            "price": 71.0
+          },
+          {
+            "name": "Kuramoto No Umeshu — Glass",
+            "category": "Plum Wine",
+            "price": 10.0
+          },
+          {
+            "name": "Kuramoto No Umeshu — Bottle",
+            "category": "Plum Wine",
+            "price": 65.0
+          }
+        ],
+        "note": "Published Adams Avenue menu. Omakase courses vary with seasonal availability. Dine-in and takeout restrictions are shown in item names."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+    "name": "Ciccia Osteria",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food menu",
+        "url": "https://cicciasandiego.com/wp-content/uploads/2026/03/original-menu-ciccia-2026.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Full menu in the restaurant’s published document.",
+        "documentUrl": "https://cicciasandiego.com/wp-content/uploads/2026/03/original-menu-ciccia-2026.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/san-diego/menus/ciccia-osteria/1-1.webp",
+            "width": 1800,
+            "height": 1093
+          },
+          {
+            "src": "/restaurant-images/san-diego/menus/ciccia-osteria/1-2.webp",
+            "width": 1800,
+            "height": 1093
+          }
+        ]
+      },
+      {
+        "label": "Vegan menu",
+        "url": "https://cicciasandiego.com/wp-content/uploads/2026/03/vegan-2026.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Full menu in the restaurant’s published document.",
+        "documentUrl": "https://cicciasandiego.com/wp-content/uploads/2026/03/vegan-2026.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/san-diego/menus/ciccia-osteria/2-1.webp",
+            "width": 1391,
+            "height": 1800
+          }
+        ]
+      },
+      {
+        "label": "Gluten-free menu",
+        "url": "https://cicciasandiego.com/wp-content/uploads/2026/03/gluten-2026.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Full menu in the restaurant’s published document.",
+        "documentUrl": "https://cicciasandiego.com/wp-content/uploads/2026/03/gluten-2026.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/san-diego/menus/ciccia-osteria/3-1.webp",
+            "width": 1391,
+            "height": 1800
+          }
+        ]
+      },
+      {
+        "label": "Party menu",
+        "url": "https://cicciasandiego.com/wp-content/uploads/2025/03/Ciccia-Party-Menu.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Full menu in the restaurant’s published document.",
+        "documentUrl": "https://cicciasandiego.com/wp-content/uploads/2025/03/Ciccia-Party-Menu.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/san-diego/menus/ciccia-osteria/4-1.webp",
+            "width": 1391,
+            "height": 1800
+          }
+        ]
+      },
+      {
+        "label": "Desserts",
+        "url": "https://cicciasandiego.com/wp-content/uploads/2025/03/Ciccia-Dolci-Menu.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Full menu in the restaurant’s published document.",
+        "documentUrl": "https://cicciasandiego.com/wp-content/uploads/2025/03/Ciccia-Dolci-Menu.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/san-diego/menus/ciccia-osteria/5-1.webp",
+            "width": 697,
+            "height": 1800
+          }
+        ]
+      },
+      {
+        "label": "Cocktails",
+        "url": "https://cicciasandiego.com/wp-content/uploads/2025/03/Ciccia-Cocktails-Menu.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Full menu in the restaurant’s published document.",
+        "documentUrl": "https://cicciasandiego.com/wp-content/uploads/2025/03/Ciccia-Cocktails-Menu.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/san-diego/menus/ciccia-osteria/6-1.webp",
+            "width": 697,
+            "height": 1800
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/lola-55",
+    "name": "LOLA 55",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food menu",
+        "url": "https://order.toasttab.com/online/lola55",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Steak",
+            "category": "Tacos",
+            "price": 8.5
+          },
+          {
+            "name": "Mesquite Chicken",
+            "category": "Tacos",
+            "price": 7
+          },
+          {
+            "name": "Baja Style Fish",
+            "category": "Tacos",
+            "price": 7.5
+          },
+          {
+            "name": "Smoked Carnitas",
+            "category": "Tacos",
+            "price": 7
+          },
+          {
+            "name": "Cauliflower",
+            "category": "Tacos",
+            "price": 7
+          },
+          {
+            "name": "Pork Belly Al Pastor",
+            "category": "Tacos",
+            "price": 7
+          },
+          {
+            "name": "Squa-shroom",
+            "category": "Tacos",
+            "price": 7.5
+          },
+          {
+            "name": "Quesa Birria Taco",
+            "category": "Tacos",
+            "price": 8
+          },
+          {
+            "name": "Carnitas torta",
+            "category": "Specials",
+            "price": 16
+          },
+          {
+            "name": "Fish Torta",
+            "category": "Specials",
+            "price": 17
+          },
+          {
+            "name": "Chicken en Mole",
+            "category": "Specials",
+            "price": 23
+          },
+          {
+            "name": "Taco Platter",
+            "category": "Specials",
+            "price": 20
+          },
+          {
+            "name": "Steak plate",
+            "category": "Specials",
+            "price": 27
+          },
+          {
+            "name": "Ceviche Leche De Tigre",
+            "category": "Specials",
+            "price": 18,
+            "note": "Listed as out of stock when checked."
+          },
+          {
+            "name": "Grilled corn",
+            "category": "Specials",
+            "price": 8
+          },
+          {
+            "name": "Quesa Birria Taco",
+            "category": "Specials",
+            "price": 8
+          },
+          {
+            "name": "Mesquite chicken bowl",
+            "category": "Specials",
+            "price": 17
+          },
+          {
+            "name": "Lolas Caesar",
+            "category": "Soup and Salad",
+            "price": 13
+          },
+          {
+            "name": "Pozole Verde",
+            "category": "Soup and Salad",
+            "price": 12
+          },
+          {
+            "name": "Chipotle Rice",
+            "category": "Sides",
+            "price": 5.5
+          },
+          {
+            "name": "Lolas Beans",
+            "category": "Sides",
+            "price": 5.5
+          },
+          {
+            "name": "Quesadillas Oaxaca",
+            "category": "Sides",
+            "price": 11.5
+          },
+          {
+            "name": "Chips & Guacamole/Salsa",
+            "category": "Sides",
+            "price": 13
+          },
+          {
+            "name": "Chips & Salsa",
+            "category": "Sides",
+            "price": 7.5
+          },
+          {
+            "name": "Quesadilla with Beans & Rice",
+            "category": "Kids",
+            "price": 5
+          },
+          {
+            "name": "Mini Plate - Carnitas",
+            "category": "Kids",
+            "price": 6
+          },
+          {
+            "name": "Mini Plate - Steak",
+            "category": "Kids",
+            "price": 7
+          },
+          {
+            "name": "Mini Plate - Chicken",
+            "category": "Kids",
+            "price": 6
+          },
+          {
+            "name": "Mini Plate - Fried Fish",
+            "category": "Kids",
+            "price": 7
+          },
+          {
+            "name": "Mini Plate - Squa-shroom",
+            "category": "Kids",
+            "price": 6
+          },
+          {
+            "name": "Mini Plate - Pork Belly Al Pastor",
+            "category": "Kids",
+            "price": 7.25
+          },
+          {
+            "name": "Mini Plate - Cauliflower",
+            "category": "Kids",
+            "price": 6
+          }
+        ],
+        "note": "Full published online-ordering food menu for East Village, 1290 F Street. Online-ordering prices may differ from dine-in prices."
+      },
+      {
+        "label": "Drinks",
+        "url": "https://order.toasttab.com/online/lola55",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Coca-Cola",
+            "category": "Soft drinks",
+            "price": 3.75
+          },
+          {
+            "name": "Diet Coke",
+            "category": "Soft drinks",
+            "price": 3.75
+          },
+          {
+            "name": "Sprite",
+            "category": "Soft drinks",
+            "price": 3.75
+          },
+          {
+            "name": "Cranberry Minute Maid",
+            "category": "Soft drinks",
+            "price": 3.75
+          },
+          {
+            "name": "Seagram’s Ginger Ale",
+            "category": "Soft drinks",
+            "price": 3.75
+          },
+          {
+            "name": "Housemade Jamaica",
+            "category": "Soft drinks",
+            "price": 5
+          },
+          {
+            "name": "Horchata",
+            "category": "Soft drinks",
+            "price": 5
+          }
+        ],
+        "note": "All drinks listed on the East Village online-ordering menu."
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "The restaurant advertises happy hour; discounted items and prices are not listed on its home page.",
+        "schedule": "Sunday–Friday, 2–6 pm",
+        "sourceUrl": "https://lola55.com/"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/sovereign",
+    "name": "Sovereign",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food menu",
+        "url": "https://sovereignsandiego.com/food-menu?menu_id=1172793",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Thai Tacos",
+            "category": "Appetizer",
+            "price": 14.0
+          },
+          {
+            "name": "Spring Sticks",
+            "category": "Appetizer",
+            "price": 14.0
+          },
+          {
+            "name": "Chive Cake",
+            "category": "Appetizer",
+            "price": 17.0
+          },
+          {
+            "name": "Crispy Pork Belly",
+            "category": "Appetizer",
+            "price": 17.0
+          },
+          {
+            "name": "Chicken Wings",
+            "category": "Appetizer",
+            "price": 17.0
+          },
+          {
+            "name": "Pomelo Salad",
+            "category": "Soup & Salad",
+            "price": 18.0
+          },
+          {
+            "name": "Thai Chicken Larb",
+            "category": "Soup & Salad",
+            "price": 23.0
+          },
+          {
+            "name": "Lao Papaya Salad",
+            "category": "Soup & Salad",
+            "price": 24.0
+          },
+          {
+            "name": "Creamy Coconut Chicken Soup",
+            "category": "Soup & Salad",
+            "price": 24.0
+          },
+          {
+            "name": "Isaan Beef Soup",
+            "category": "Soup & Salad",
+            "price": 27.0
+          },
+          {
+            "name": "Turmeric Garlic Shrimp",
+            "category": "Classics",
+            "price": 21.0
+          },
+          {
+            "name": "Tom Yum Ramen",
+            "category": "Classics",
+            "price": 22.0
+          },
+          {
+            "name": "Dried Red Curry Chicken",
+            "category": "Classics",
+            "price": 25.0
+          },
+          {
+            "name": "Spicy Thai Basil Beef",
+            "category": "Classics",
+            "price": 25.0
+          },
+          {
+            "name": "Pad See Ew",
+            "category": "Classics",
+            "price": 22.0
+          },
+          {
+            "name": "Pad Thai Shrimp",
+            "category": "Classics",
+            "price": 28.0
+          },
+          {
+            "name": "Hat Yai Chicken",
+            "category": "Signatures",
+            "price": 26.0
+          },
+          {
+            "name": "Braised Beef Panang",
+            "category": "Signatures",
+            "price": 32.0
+          },
+          {
+            "name": "Massaman Lamb Curry",
+            "category": "Signatures",
+            "price": 33.0
+          },
+          {
+            "name": "Duck Curry Noodles",
+            "category": "Signatures",
+            "price": 33.0
+          },
+          {
+            "name": "Three Musketeers",
+            "category": "Signatures",
+            "price": 35.0
+          },
+          {
+            "name": "Lao BBQ Ribs",
+            "category": "Signatures",
+            "price": 35.0
+          },
+          {
+            "name": "NY Steak & Beef Tallow",
+            "category": "Signatures",
+            "price": 42.0
+          },
+          {
+            "name": "Rockfish 35",
+            "category": "Signatures",
+            "price": 35.0
+          },
+          {
+            "name": "Rockfish 40",
+            "category": "Signatures",
+            "price": 40.0
+          },
+          {
+            "name": "Rockfish 45",
+            "category": "Signatures",
+            "price": 45.0
+          },
+          {
+            "name": "Rockfish 50",
+            "category": "Signatures",
+            "price": 50.0
+          },
+          {
+            "name": "Rockfish 55",
+            "category": "Signatures",
+            "price": 55.0
+          },
+          {
+            "name": "Rockfish  60",
+            "category": "Signatures",
+            "price": 60.0
+          },
+          {
+            "name": "Crispy Baby Crab",
+            "category": "Special",
+            "price": 10.0
+          },
+          {
+            "name": "Isan Sausage",
+            "category": "Special",
+            "price": 12.0
+          },
+          {
+            "name": "Wasabi Scallop Ceviche",
+            "category": "Special",
+            "price": 25.0
+          },
+          {
+            "name": "Taro Fritters",
+            "category": "Special",
+            "price": 12.0
+          },
+          {
+            "name": "Bangkok Street Noodles",
+            "category": "Special",
+            "price": 25.0
+          },
+          {
+            "name": "Southern Salmon Curry",
+            "category": "Special",
+            "price": 28.0
+          },
+          {
+            "name": "Bok Choy",
+            "category": "Veg & Rice",
+            "price": 13.0
+          },
+          {
+            "name": "Garlic Broccoli",
+            "category": "Veg & Rice",
+            "price": 13.0
+          },
+          {
+            "name": "Sizzlng Eggplant",
+            "category": "Veg & Rice",
+            "price": 14.0
+          },
+          {
+            "name": "Vegetable Medley",
+            "category": "Veg & Rice",
+            "price": 12.0
+          },
+          {
+            "name": "Egg Fried Rice Side",
+            "category": "Veg & Rice",
+            "price": 16.0
+          },
+          {
+            "name": "Crab Fried Rice",
+            "category": "Veg & Rice",
+            "price": 25.0
+          },
+          {
+            "name": "Jasmine Rice",
+            "category": "Veg & Rice",
+            "price": 5.0
+          },
+          {
+            "name": "Purple Sticky Rice",
+            "category": "Veg & Rice",
+            "price": 6.0
+          },
+          {
+            "name": "Thai Chili Oil",
+            "category": "Veg & Rice",
+            "price": 2.0
+          },
+          {
+            "name": "Thai Chili Paste",
+            "category": "Veg & Rice",
+            "price": 2.0
+          },
+          {
+            "name": "Ginger Sauce",
+            "category": "Veg & Rice",
+            "price": 2.0
+          },
+          {
+            "name": "Peanut Sauce",
+            "category": "Veg & Rice",
+            "price": 2.0
+          },
+          {
+            "name": "Sweet & Sour",
+            "category": "Veg & Rice",
+            "price": 2.0
+          },
+          {
+            "name": "Tiger Sauce",
+            "category": "Veg & Rice",
+            "price": 2.0
+          },
+          {
+            "name": "Spicy Tomato Jam",
+            "category": "Veg & Rice",
+            "price": 2.0
+          },
+          {
+            "name": "Thai Siracha",
+            "category": "Veg & Rice",
+            "price": 2.0
+          },
+          {
+            "name": "Banana Rolls",
+            "category": "Dessert",
+            "price": 14.0
+          },
+          {
+            "name": "Mango Sticky Rice",
+            "category": "Dessert",
+            "price": 16.0
+          },
+          {
+            "name": "Banana Boat",
+            "category": "Dessert",
+            "price": 16.0
+          },
+          {
+            "name": "Sovereign Ice Cream",
+            "category": "Dessert",
+            "price": 15.0
+          },
+          {
+            "name": "2 Ice Cream Scoops",
+            "category": "Dessert",
+            "price": 10.0
+          }
+        ]
+      },
+      {
+        "label": "Drinks",
+        "url": "https://sovereignsandiego.com/food-menu?menu_id=1172798",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Raspberry Lychee Cooler",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Cucumber Mint Lemonade",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Sunset Colada",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Siam Strawberry Sparkler",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Chili Mango Crush",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Princess Peach",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Yuzu Fizz",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Mango Mint Refresher",
+            "category": "Mocktails",
+            "price": 13.0
+          },
+          {
+            "name": "Thai Tea",
+            "category": "NA Beverages",
+            "price": 7.0
+          },
+          {
+            "name": "Thai Coffee",
+            "category": "NA Beverages",
+            "price": 7.0
+          },
+          {
+            "name": "Mex Coke",
+            "category": "NA Beverages",
+            "priceLabel": "$6.00/355 ml"
+          },
+          {
+            "name": "Mex Fanta",
+            "category": "NA Beverages",
+            "priceLabel": "$6.00/355 ml"
+          },
+          {
+            "name": "Mex Sprite",
+            "category": "NA Beverages",
+            "price": 6.0
+          },
+          {
+            "name": "Club Soda",
+            "category": "NA Beverages",
+            "priceLabel": "$5.00/500 ml"
+          },
+          {
+            "name": "Diet Coke",
+            "category": "NA Beverages",
+            "priceLabel": "$5.00/355ml"
+          },
+          {
+            "name": "Ginger Ale",
+            "category": "NA Beverages",
+            "priceLabel": "$5.00/500 ml"
+          },
+          {
+            "name": "Ginger Beer",
+            "category": "NA Beverages",
+            "priceLabel": "$5.00/500 ml"
+          },
+          {
+            "name": "Iced Tea",
+            "category": "NA Beverages",
+            "price": 5.0
+          },
+          {
+            "name": "Voss Sparkling Water",
+            "category": "NA Beverages",
+            "priceLabel": "$12.00/750 ml"
+          },
+          {
+            "name": "Voss Artesian Water",
+            "category": "NA Beverages",
+            "priceLabel": "$12.00/750ml"
+          }
+        ]
+      }
+    ],
+    "specials": []
+  }
+]

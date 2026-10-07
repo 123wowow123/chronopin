@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useEffect, useState } from 'react';
 import { RefineLink } from '@/components/pin/RefineLink';
 import { Icon } from '@/components/ui/Icon';
@@ -127,7 +128,7 @@ function TickerDetails({ stock }: { stock: PinStock }) {
         <RefineLink field="ticker" value={stock.symbol} title={t('stocks.searchPins', { symbol: stock.symbol })} className="text-link hover:underline">
           {t('stocks.searchPins', { symbol: stock.symbol })}
         </RefineLink>
-        <a
+        <Anchor
           href={`https://finance.yahoo.com/quote/${encodeURIComponent(stock.symbol.replace('.', '-'))}/`}
           target="_blank"
           rel="noopener nofollow"
@@ -135,7 +136,7 @@ function TickerDetails({ stock }: { stock: PinStock }) {
         >
           {t('stocks.onYahoo', { symbol: stock.symbol })}
           <Icon name="external" className="size-3" />
-        </a>
+        </Anchor>
       </div>
     </div>
   );

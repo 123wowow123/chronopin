@@ -351,6 +351,7 @@ export default class Pins extends BasePins<Pin> {
     createdSince: Date | null;
     minConfidence: number | null;
     favoriteUserId: number | null;
+    restaurantsOnly?: boolean;
   }): Promise<Row[]> {
     return db.query(
       `
@@ -369,8 +370,11 @@ export default class Pins extends BasePins<Pin> {
         AND ($5::integer IS NULL OR EXISTS (
           SELECT 1 FROM "Favorite" AS "f"
           WHERE "f"."pinId" = "p"."id" AND "f"."userId" = $5 AND "f"."utcDeletedDateTime" IS NULL))
+        AND (NOT $6::boolean OR (
+          EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')
+          AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" IN ('Restaurant Opening', 'Restaurant', 'Restaurants'))))
       ORDER BY "p"."utcStartDateTime", "p"."id"`,
-      [bounds.from, bounds.to, bounds.createdSince, bounds.minConfidence, bounds.favoriteUserId],
+      [bounds.from, bounds.to, bounds.createdSince, bounds.minConfidence, bounds.favoriteUserId, bounds.restaurantsOnly ?? false],
     );
   }
 

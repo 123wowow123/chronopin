@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { usePathname, useRouter } from '@/lib/client/navigation';
 import { authHref, type AuthPage } from '@/lib/authRedirect';
@@ -46,7 +47,7 @@ export function AuthLink({
 export function LogoutLink({ className, children }: { className?: string; children: React.ReactNode }) {
   const pathname = usePathname();
   return (
-    <a
+    <Anchor
       href={`/logout?referrer=${encodeURIComponent(pathname)}`}
       className={className}
       onClick={(event) => {
@@ -59,6 +60,6 @@ export function LogoutLink({ className, children }: { className?: string; childr
       }}
     >
       {children}
-    </a>
+    </Anchor>
   );
 }

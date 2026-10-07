@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import dynamic from 'next/dynamic';
 import Link from '@/components/ui/Link';
 import { Fragment, useMemo, useState } from 'react';
@@ -463,9 +464,9 @@ export function AdCharts({
               title="Page"
               rows={stats.pages}
               name={(key) => (
-                <a href={key} className="text-link" title={key}>
+                <Anchor href={key} className="text-link" title={key}>
                   {readable(key)}
-                </a>
+                </Anchor>
               )}
             />
           ) : (
@@ -577,9 +578,9 @@ export function AdCharts({
           <p className="text-sm text-subtle">No ad clicks {inRange}.</p>
         )}
         <p className="text-xs text-faint">
-          <a href="https://db-ip.com" className="text-inherit">
+          <Anchor href="https://db-ip.com" className="text-inherit">
             IP Geolocation by DB-IP
-          </a>
+          </Anchor>
         </p>
       </section>
 

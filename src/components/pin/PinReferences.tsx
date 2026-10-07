@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { dateFormat } from '@/lib/format';
@@ -88,10 +89,10 @@ export function PinReferences({
           {reference.confidence == null ? '—' : `${reference.confidence}%`}
         </span>
         <div className="min-w-0 flex-1">
-          <a href={reference.url} target="_blank" rel="noopener nofollow" className="flex items-center gap-1.5 font-medium">
+          <Anchor href={reference.url} target="_blank" rel="noopener nofollow" className="flex items-center gap-1.5 font-medium">
             <span className="truncate">{reference.title || reference.url.replace(/^https?:\/\/(www\.)?/i, '').replace(/\/$/, '')}</span>
             <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
-          </a>
+          </Anchor>
           <div className="mt-0.5 flex flex-wrap gap-x-2 text-xs text-subtle">
             <span className="truncate">{site}</span>
             {dated ? <span>· {dated}</span> : null}

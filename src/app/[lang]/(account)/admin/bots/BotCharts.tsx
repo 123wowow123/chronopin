@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useMemo, useState } from 'react';
 import { type BotBucket, type BotDay, botStats } from '@/lib/botStats';
 import { botKindLabel, type BotKind } from '@/lib/bots';
@@ -198,9 +199,9 @@ export function BotCharts({
                   <tr key={p.path}>
                     <td className="w-full max-w-0 py-1.5">
                       {/* The path as the bot asked for it, language prefix and all. */}
-                      <a href={p.path} title={p.path} className="block truncate text-link">
+                      <Anchor href={p.path} title={p.path} className="block truncate text-link">
                         {p.path}
-                      </a>
+                      </Anchor>
                     </td>
                     <td className="py-1.5 pl-6 text-right">{p.hits.toLocaleString()}</td>
                     <td className="py-1.5 pl-6 text-right">{p.bots}</td>

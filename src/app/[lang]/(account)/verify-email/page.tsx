@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import { getT } from '@/lib/i18n/server';
 
@@ -19,10 +20,9 @@ export default async function VerifyEmailPage({ searchParams }: { searchParams: 
           {ok ? t('verifyEmail.ok') : status === 'expired' ? t('verifyEmail.expired') : t('verifyEmail.invalid')}
         </p>
         {/* A plain link, as the navbar's: home reloads, and with it the session. */}
-        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-        <a href="/" className="btn btn-primary">
+        <Anchor href="/" className="btn btn-primary">
           {t('verifyEmail.home')}
-        </a>
+        </Anchor>
       </div>
     </div>
   );

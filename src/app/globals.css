@@ -574,9 +574,9 @@ html .leaflet-container .leaflet-control-attribution {
 html .leaflet-container .leaflet-control-attribution a {
   @apply text-muted;
 }
-/* The map page's attribution, narrower, rises above the floating controls' pills. */
+/* On narrow maps, attribution clears the layer selector and filter pills. */
 html .leaflet-container.pins-map .leaflet-bottom.leaflet-right {
-  @apply max-xl:bottom-16;
+  @apply max-xl:bottom-28;
 }
 
 /* A page that fills the window (the map) has no room for the site footer

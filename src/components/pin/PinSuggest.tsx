@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AuthLink } from '@/components/nav/AuthLink';
 import { Icon } from '@/components/ui/Icon';
@@ -197,10 +198,10 @@ function SuggestionOutcome({ suggestion: s }: { suggestion: SuggestionJson }) {
         <ul className="mt-1 space-y-0.5">
           {added.map((r) => (
             <li key={r.url}>
-              <a href={r.url} target="_blank" rel="noopener nofollow" className="inline-flex max-w-full items-center gap-1">
+              <Anchor href={r.url} target="_blank" rel="noopener nofollow" className="inline-flex max-w-full items-center gap-1">
                 <span className="truncate">{r.title || r.url}</span>
                 <span className="shrink-0 text-subtle tabular-nums">{r.confidence}%</span>
-              </a>
+              </Anchor>
             </li>
           ))}
         </ul>

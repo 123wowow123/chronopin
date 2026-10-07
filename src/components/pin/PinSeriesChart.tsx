@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocale, useT } from '@/lib/client/i18n';
 import { INTL_LOCALES } from '@/lib/i18n/config';
@@ -202,9 +203,9 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
       </div>
 
       <p className="mt-2 text-xs text-subtle">
-        <a href={series.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-link hover:underline">
+        <Anchor href={series.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-link hover:underline">
           {t(series.source === 'fred' ? 'series.sourceFred' : 'series.source', { id: series.seriesId })}
-        </a>
+        </Anchor>
         {series.nextReleaseDate ? <span className="ms-2">{t('series.next', { date: series.nextReleaseDate })}</span> : null}
       </p>
     </figure>

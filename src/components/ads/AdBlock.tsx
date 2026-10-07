@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useEffect, useRef, useState } from 'react';
 import { hasProgramLogo, ProgramLogo } from '@/components/ads/ProgramLogo';
 import { PinThumb } from '@/components/pin/PinThumb';
@@ -185,7 +186,7 @@ function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
 
 function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; slot: AdSlot; pinId?: number; className: string; children: React.ReactNode }) {
   return (
-    <a
+    <Anchor
       href={ad.url}
       target="_blank"
       rel="noopener nofollow sponsored"
@@ -194,7 +195,7 @@ function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; slot: Ad
       className={className}
     >
       {children}
-    </a>
+    </Anchor>
   );
 }
 

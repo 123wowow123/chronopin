@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { PostedTime } from '@/components/ui/LocalTime';
 import { useT } from '@/lib/client/i18n';
@@ -184,9 +185,9 @@ function ReferenceRow({ reference, siteOnly }: { reference: PinUpdateReference; 
         : null;
   return (
     <li className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm">
-      <a href={reference.url} target="_blank" rel="noopener" className="min-w-0 font-medium break-words">
+      <Anchor href={reference.url} target="_blank" rel="noopener" className="min-w-0 font-medium break-words">
         {(!siteOnly && reference.title) || hostname(reference.url)}
-      </a>
+      </Anchor>
       {siteOnly ? null : <span className="text-xs text-subtle">{hostname(reference.url)}</span>}
       {reference.confidence != null ? (
         <ConfidenceBadge confidence={reference.confidence} className={confidenceClass(reference.confidence)} title={t('confidence.badge', { percent: reference.confidence })}>

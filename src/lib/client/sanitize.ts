@@ -1,5 +1,7 @@
 'use client';
 
+import { relativeSiteUrl } from '../siteLinks';
+
 // The browser's half of pin HTML sanitising (the server uses sanitize-html in
 // src/lib/sanitize.ts): keeps simple formatting and links, drops everything
 // else, using the DOM's own parser.
@@ -25,11 +27,13 @@ export function safeHtmlInBrowser(html: string | null | undefined): string {
       }
       for (const attr of Array.from(child.attributes)) {
         const keep = child.tagName === 'A' && (attr.name === 'href' || attr.name === 'title');
-        if (!keep || (attr.name === 'href' && !/^(https?:|mailto:)/i.test(attr.value.trim()))) {
+        if (!keep || (attr.name === 'href' && !/^(https?:|mailto:|\/(?!\/)|#)/i.test(attr.value.trim()))) {
           child.removeAttribute(attr.name);
         }
       }
       if (child.tagName === 'A') {
+        const href = child.getAttribute('href');
+        if (href) child.setAttribute('href', relativeSiteUrl(href));
         child.setAttribute('rel', 'noopener nofollow ugc');
         child.setAttribute('target', '_blank');
       }

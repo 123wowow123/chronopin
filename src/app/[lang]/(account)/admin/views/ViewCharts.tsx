@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import dynamic from 'next/dynamic';
 import Link from '@/components/ui/Link';
 import { useMemo, useState } from 'react';
@@ -327,9 +328,9 @@ export function ViewCharts({
         )}
         <p className="text-xs text-faint">
           {stats.views ? `${Math.round((summary.located / stats.views) * 100)}% of views ${inRange} have an address. ` : null}
-          <a href="https://db-ip.com" className="text-inherit">
+          <Anchor href="https://db-ip.com" className="text-inherit">
             IP Geolocation by DB-IP
-          </a>
+          </Anchor>
         </p>
       </section>
 

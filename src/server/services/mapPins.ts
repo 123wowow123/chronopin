@@ -8,6 +8,8 @@ import Pins from '../model/pins';
 import { searchPins } from './search';
 import { timelineMinConfidence } from './timeline';
 import type { MapPinJson, PinJson } from '@/lib/types';
+import { parseSearchQuery } from '../util/searchQuery';
+import { restaurantPreviewPins } from './restaurantPreview';
 
 export type MapQuery = {
   // When the plotted pins start; null either side for unbounded.
@@ -20,6 +22,7 @@ export type MapQuery = {
   userId: number | null;
   // The zone a search's date: and posted: days are the viewer's in.
   timeZone: string;
+  restaurantsOnly?: boolean;
 };
 
 // Everything off a pin that a marker reads. Applied to a search's results,
@@ -45,7 +48,16 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   // the missing places that are narrowed here instead of in the browser.
   if (query.q.trim()) {
     const found = await searchPins(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone });
-    return (found.pins as unknown as PinJson[])
+    const pins = found.pins as unknown as PinJson[];
+    // The guide's local snapshot also needs coordinates in the map API.
+    // Only supplement explicit ID searches, never broader or watched results.
+    if (process.env.NODE_ENV === 'development' && !query.onlyWatched && /^(?:pin:\d+(?:,\d+)*\s*)+$/i.test(query.q.trim())) {
+      const existing = new Set(pins.map((pin) => pin.id));
+      const missing = parseSearchQuery(query.q).ids.filter((id) => !existing.has(id));
+      pins.push(...await restaurantPreviewPins(missing));
+    }
+    return pins
+      .filter((pin) => !query.restaurantsOnly || (pin.categories?.includes('Food') && pin.tags?.some((tag) => /^(Restaurant Opening|Restaurants?)$/i.test(tag.name))))
       .filter((pin) => pin.latitude != null && pin.longitude != null)
       .filter((pin) => !query.createdSince || !pin.utcCreatedDateTime || new Date(pin.utcCreatedDateTime) >= query.createdSince!)
       .filter((pin) => inWindow(pin.utcStartDateTime, query))
@@ -60,8 +72,17 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
     // keeps every pin it lists.
     minConfidence: query.onlyWatched ? null : await timelineMinConfidence(),
     favoriteUserId: query.onlyWatched ? query.userId : null,
+    restaurantsOnly: query.restaurantsOnly,
   });
-  return rows as MapPinJson[];
+  const pins = rows as MapPinJson[];
+  if (query.restaurantsOnly && !query.onlyWatched) {
+    const existing = new Set(pins.map((pin) => pin.id));
+    const previews = await restaurantPreviewPins();
+    pins.push(...previews.filter((pin) => !existing.has(pin.id))
+      .filter((pin) => !query.createdSince || !pin.utcCreatedDateTime || new Date(pin.utcCreatedDateTime) >= query.createdSince!)
+      .filter((pin) => inWindow(pin.utcStartDateTime, query)).map(toMapPin));
+  }
+  return pins;
 }
 
 function inWindow(start: string | undefined, { from, to }: MapQuery) {

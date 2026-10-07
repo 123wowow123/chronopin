@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { isStoreWordmark, StoreLogo } from '@/components/pin/StoreLogo';
@@ -44,7 +45,7 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
     <div className="mt-2 flex flex-wrap items-center gap-2">
       <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.buyOnHeading')}</span>
       {withMatches(links, matches).map((link) => (
-        <a
+        <Anchor
           key={link.store + link.url}
           href={link.url}
           target="_blank"
@@ -69,7 +70,7 @@ export function ShopButtons({ pinId, links, productName }: { pinId: number; link
             <span className="rounded-md bg-black/15 px-1.5 py-0.5 text-xs">{t('listing.free')}</span>
           ) : null}
           <Icon name="external" className="size-3 shrink-0 opacity-60" />
-        </a>
+        </Anchor>
       ))}
     </div>
   );

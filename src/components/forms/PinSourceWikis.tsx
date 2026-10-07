@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api, ApiError } from '@/lib/client/api';
@@ -70,10 +71,10 @@ export function PinSourceWikis({ pinId }: { pinId: number }) {
             {view.sources.length === 0 && <p className="text-sm text-subtle">No links have been turned into wikis.</p>}
             {view.sources.map((source) => (
               <div key={source.id} className="rounded-lg border border-line p-3">
-                <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-sm text-link">
+                <Anchor href={source.url} target="_blank" rel="noopener noreferrer" className="text-sm text-link">
                   <span className="break-all">{source.title || source.url}</span>
                   <Icon name="external" className="ms-1 inline size-3 align-[-0.1em]" />
-                </a>
+                </Anchor>
                 <p className="text-xs text-subtle">
                   {source.kind} · {source.role} · {source.status}
                   {source.attempts ? ` · ${source.attempts} tries` : ''} · wiki v{source.wikiVersion}

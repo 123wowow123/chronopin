@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { useRouter } from '@/lib/client/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -301,10 +302,10 @@ export function PinForm({
               onPaste={(e) => mode !== 'edit' && scrape(e.clipboardData.getData('text'))}
             />
             {values.sourceUrl ? (
-              <a href={values.sourceUrl} target="_blank" rel="noopener" className="inline-flex items-center gap-1 self-center text-sm whitespace-nowrap">
+              <Anchor href={values.sourceUrl} target="_blank" rel="noopener" className="inline-flex items-center gap-1 self-center text-sm whitespace-nowrap">
                 {t('form.openLink')}
                 <Icon name="external" className="size-3" />
-              </a>
+              </Anchor>
             ) : null}
           </div>
           {scrapeError ? <p className="mt-1 text-sm text-warning">{scrapeError}</p> : null}

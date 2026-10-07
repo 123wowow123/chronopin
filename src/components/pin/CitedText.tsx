@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { useT } from '@/lib/client/i18n';
 import { citeReasoning, orderEvidence } from '@/lib/citations';
@@ -28,9 +29,9 @@ export function CitedText({ text, evidence, hrefBase, omit }: { text: string; ev
                   [{n}]
                 </Link>
               ) : (
-                <a key={n} href={`#ref-${n}`} aria-label={t('references.referenceN', { n })} className="font-medium">
+                <Anchor key={n} href={`#ref-${n}`} aria-label={t('references.referenceN', { n })} className="font-medium">
                   [{n}]
-                </a>
+                </Anchor>
               ),
             )}
           </sup>

@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useState } from 'react';
 import { blobUrl } from '@/lib/appConfig';
 import { api } from '@/lib/client/api';
@@ -62,9 +63,9 @@ export function MessageReportList({ initialReports }: { initialReports: Reported
           {report.images?.length ? (
             <div className="flex flex-wrap gap-2">
               {report.images.map((name) => (
-                <a key={name} href={blobUrl(name)} target="_blank" rel="noopener noreferrer">
+                <Anchor key={name} href={blobUrl(name)} target="_blank" rel="noopener noreferrer">
                   <img src={blobUrl(name)} alt="" className="size-24 rounded-lg object-cover" />
-                </a>
+                </Anchor>
               ))}
             </div>
           ) : null}

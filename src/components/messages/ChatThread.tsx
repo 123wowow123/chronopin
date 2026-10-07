@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { Fragment, useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon } from '@/components/ui/Icon';
@@ -102,9 +103,9 @@ function Linked({ text }: { text: string }) {
     <>
       {parts.map((part, i) =>
         i % 2 ? (
-          <a key={i} href={part} target="_blank" rel="noopener noreferrer nofollow" className="break-all underline">
+          <Anchor key={i} href={part} target="_blank" rel="noopener noreferrer nofollow" className="break-all underline">
             {part}
-          </a>
+          </Anchor>
         ) : (
           <Fragment key={i}>{part}</Fragment>
         ),

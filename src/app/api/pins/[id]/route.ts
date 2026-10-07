@@ -26,18 +26,20 @@ import log from '@/server/util/log';
 import { citePostedSummary } from '@/server/extract/references';
 import { authoredScore } from '@/server/extract/pinSentiment';
 import PinSentiment from '@/server/model/pinSentiment';
+import { restaurantPreviewPin } from '@/server/services/restaurantPreview';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
 export const GET = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
   const user = await getUser(request);
-  const { pin } = await Pin.queryById(pinId, user?.id);
+  const { pin: stored } = await Pin.queryById(pinId, user?.id);
+  const pin = stored ? toJson<PinJson>(stored) : await restaurantPreviewPin(pinId);
   if (!pin) {
     throw new HttpError(404, 'Not Found');
   }
   // English (the pin as stored) unless the page asks for its language.
-  const [body] = await localizePins([toJson<PinJson>(pin)], requestLocale(request, { cookie: false }));
+  const [body] = await localizePins([pin], requestLocale(request, { cookie: false }));
   return json(body);
 });
 

@@ -1,6 +1,7 @@
 import sanitizeHtml from 'sanitize-html';
 import { numberCitations, orderEvidence } from './citations';
 import type { Evidence } from './referenceConfidence';
+import { relativeSiteUrl } from './siteLinks';
 
 // Pin descriptions and summaries are stored as HTML (bulleted key points,
 // links). The Angular app rendered them with sanitising turned off; this keeps
@@ -12,7 +13,7 @@ export function safeHtml(html: string | null | undefined): string {
     allowedAttributes: { a: ['href', 'title'], th: ['colspan', 'rowspan', 'scope'], td: ['colspan', 'rowspan'] },
     allowedSchemes: ['http', 'https', 'mailto'],
     transformTags: {
-      a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow ugc', target: '_blank' }),
+      a: (tagName, attribs) => ({ tagName, attribs: { ...attribs, ...(attribs.href ? { href: relativeSiteUrl(attribs.href) } : {}), rel: 'noopener nofollow ugc', target: '_blank' } }),
     },
   });
 }

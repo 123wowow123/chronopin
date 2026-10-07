@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useT } from '@/lib/client/i18n';
 import { orderEvidence } from '@/lib/citations';
 import type { DateClaim, DateRange } from '@/lib/dateClaims';
@@ -68,9 +69,9 @@ function Range({ label, range, linked }: { label: string; range: DateRange; link
         ) : null}
         <span className="text-subtle">
           {refId ? (
-            <a href={`#${refId}`} className="hover:underline hover:decoration-dotted hover:underline-offset-2">
+            <Anchor href={`#${refId}`} className="hover:underline hover:decoration-dotted hover:underline-offset-2">
               {from}
-            </a>
+            </Anchor>
           ) : (
             from
           )}

@@ -45,9 +45,9 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
     }
     return search;
   };
-  const toMap = carry(['q', 'f', 'posted', 'past', 'future']);
+  const toMap = carry(['q', 'f', 'posted', 'past', 'future', 'fit']);
   const searching = !!(params.get('q') || params.get('f'));
-  const toTimeline = carry(searching ? ['q', 'f', 'sort', 'posted', 'past', 'future'] : ['posted']);
+  const toTimeline = carry(searching ? ['q', 'f', 'sort', 'posted', 'past', 'future', 'fit'] : ['posted']);
   const query = (search: URLSearchParams) => (search.size ? `?${search.toString()}` : '');
   const views = [
     { href: `${searching ? '/search' : '/'}${query(toTimeline)}`, key: 'timeline', label: t('nav.timeline'), icon: 'timeline', current: pathname === '/' || pathname === '/search' },

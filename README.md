@@ -373,12 +373,21 @@ https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-sinc
 - pin new and upcoming beer and alchololic drinks
 need landing pages
 
-- pin upcoming and new restaurants on all major US cities and creat landing page for the region
+- pin upcoming and new restaurants on all major US cities 
+
+- add daily restaurant special and list lunch special
+
 
 can anyone commit to chronopin git? should automerge PR from this computer and others will need to submit PR and wait for admin to approve
 
 
 holiday, special event days should be searchable and auto search complete should have suggesion section for them as you type if relevant
+
+
+https://www.maranellosd.com/menu
+https://www.telefericbarcelona.com/the-social-hour
+
+
 
 # Left over: link wikis for prod
 

@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
 import { notFound } from 'next/navigation';
@@ -25,6 +26,7 @@ import { PinEventInfo } from '@/components/pin/PinEventInfo';
 import { PinGameInfo } from '@/components/pin/PinGameInfo';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
+import { PinRestaurantMenu } from '@/components/pin/PinRestaurantMenu';
 import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
@@ -63,6 +65,7 @@ import { PostedTime, StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { pinDateRanges } from '@/lib/dateClaims';
 import { dayKeyIn, money } from '@/lib/format';
+import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
@@ -170,9 +173,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
                     {pin.flightPath.label ? ` · ${pin.flightPath.label}` : ''}
                   </span>
                   {pin.flightPath.sourceUrl ? (
-                    <a href={pin.flightPath.sourceUrl} target="_blank" rel="noopener noreferrer">
+                    <Anchor href={pin.flightPath.sourceUrl} target="_blank" rel="noopener noreferrer">
                       {t('pin.flightPathSimulation')}
-                    </a>
+                    </Anchor>
                   ) : null}
                 </p>
               ) : null}
@@ -234,6 +237,10 @@ function PinBody({
 }) {
   const media = pin.media ?? [];
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
+  const isRestaurant = pin.categories?.includes('Food') && pin.tags?.some((tag) => /^(Restaurant Opening|Restaurants?)$/i.test(tag.name));
+  const restaurantRegion = isRestaurant
+    ? RESTAURANT_REGIONS.find((region) => pin.tags?.some((tag) => tag.name === region.name))
+    : undefined;
   // Searches for the company, as the same label on a card does. That search
   // opens with the company's own panel - what it is, how its pins are being
   // taken, a Follow button and the link on to its Wikipedia article.
@@ -247,8 +254,8 @@ function PinBody({
     </RefineLink>
   ) : null;
   const dateRanges = pinDateRanges(pin, timeZone);
-  const shop = shopLinks(pin);
-  const listingKind = listingKindOf(pin);
+  const shop = isRestaurant ? [] : shopLinks(pin);
+  const listingKind = isRestaurant ? null : listingKindOf(pin);
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;
 
@@ -285,9 +292,9 @@ function PinBody({
           <>
             <span className="px-1.5 text-faint" aria-hidden>·</span>
             {/* To the Updates pane, which says what changed. */}
-            <a href="#updates" className="font-medium text-link hover:no-underline">
+            <Anchor href="#updates" className="font-medium text-link hover:no-underline">
               {t.rich('updates.updated', { time: () => <PostedTime value={updatedAt} serverTimeZone={timeZone} dateOnly /> })}
-            </a>
+            </Anchor>
           </>
         ) : null}
         {pin.user?.userName ? (
@@ -298,12 +305,18 @@ function PinBody({
             </RefineLink>
           </>
         ) : null}
-        {/* Opens the timeline on this pin, centred, rather than on today. */}
-        {/* The same pill as the aside's "To map". */}
-        <Link href={`/?pin=${pin.id}`} className="ms-auto inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
-          <Icon name="timeline" className="size-3.5 text-link" />
-          {t('pin.toTimeline')}
-        </Link>
+        <div className="ms-auto flex flex-wrap items-center justify-end gap-2">
+          {restaurantRegion ? <Link href={`/restaurants/${restaurantRegion.slug}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
+            <Icon name="pin" className="size-3.5 text-link" />
+            {t.dynamic('pin.curatedLocalRestaurants', 'Curated local restaurants')}
+          </Link> : null}
+          {/* Opens the timeline on this pin, centred, rather than on today. */}
+          {/* The same pill as the aside's "To map". */}
+          <Link href={`/?pin=${pin.id}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
+            <Icon name="timeline" className="size-3.5 text-link" />
+            {t('pin.toTimeline')}
+          </Link>
+        </div>
       </div>
 
       {media.length ? (
@@ -353,12 +366,12 @@ function PinBody({
       <h1 dir={pinTextDir(pin)} className="mt-3 mb-4 flex items-start gap-2 text-3xl leading-tight font-semibold tracking-tight text-pretty">
         {pin.sourceUrl ? (
           <>
-            <a href={pin.sourceUrl} target="_blank" rel="noopener" className="text-ink transition-colors hover:text-link hover:no-underline">
+            <Anchor href={pin.sourceUrl} target="_blank" rel="noopener" className="text-ink transition-colors hover:text-link hover:no-underline">
               {pin.title}
-            </a>
-            <a href={pin.sourceUrl} target="_blank" rel="noopener" aria-label={t('pin.openSource')} className="flex h-[1lh] shrink-0 items-center text-subtle hover:text-link">
+            </Anchor>
+            <Anchor href={pin.sourceUrl} target="_blank" rel="noopener" aria-label={t('pin.openSource')} className="flex h-[1lh] shrink-0 items-center text-subtle hover:text-link">
               <Icon name="external" className="size-4" />
-            </a>
+            </Anchor>
           </>
         ) : (
           pin.title
@@ -393,6 +406,8 @@ function PinBody({
 
       {pin.description ? <div dir={pinTextDir(pin)} className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div dir={pinTextDir(pin)} className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}
+
+      <PinRestaurantMenu sourceUrl={pin.sourceUrl} today={dayKeyIn(new Date(), 'America/Los_Angeles')} />
 
       {pin.user?.id && pin.user.userName ? (
         <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
@@ -439,7 +454,7 @@ function PinBody({
           {watchOrder(pin.merchants).map((merchant, index) => {
             const service = streamingService(merchant.url);
             return service ? (
-              <a
+              <Anchor
                 key={merchant.id ?? index}
                 href={affiliateUrl(merchant.url!)}
                 target="_blank"
@@ -457,7 +472,7 @@ function PinBody({
                     {service.label}
                   </>
                 )}
-              </a>
+              </Anchor>
             ) : null;
           })}
         </div>

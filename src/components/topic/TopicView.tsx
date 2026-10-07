@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { JsonLd } from '@/components/JsonLd';
 import { CardGrid } from '@/components/pin/CardGrid';
@@ -97,14 +98,14 @@ export function TopicView({
             {t('topic.moreInSearch', { name: label })}
           </Link>
           {company?.wikiUrl ? (
-            <a href={company.wikiUrl} target="_blank" rel="noopener">
+            <Anchor href={company.wikiUrl} target="_blank" rel="noopener">
               Wikipedia
-            </a>
+            </Anchor>
           ) : null}
           {company?.websiteUrl ? (
-            <a href={company.websiteUrl} target="_blank" rel="noopener">
+            <Anchor href={company.websiteUrl} target="_blank" rel="noopener">
               {t('topic.website')}
-            </a>
+            </Anchor>
           ) : null}
         </p>
       </header>

@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { useRouter } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
@@ -106,9 +107,9 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
   return (
     <li className="surface px-3 py-2.5" aria-busy={busy}>
       {/* A new tab, so the draft is not lost. */}
-      <a href={localize(pinPath(pin))} target="_blank" rel="noopener" className="text-sm font-medium text-ink hover:text-link hover:no-underline">
+      <Anchor href={localize(pinPath(pin))} target="_blank" rel="noopener" className="text-sm font-medium text-ink hover:text-link hover:no-underline">
         {pin.title}
-      </a>
+      </Anchor>
       <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-subtle">
         {pin.user?.userName ? (
           <span className="inline-flex items-center gap-1">

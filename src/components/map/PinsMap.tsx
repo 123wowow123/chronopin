@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { localizeHere, useRouter, useSearchParams, withPageLang } from '@/lib/client/navigation';
@@ -45,6 +46,27 @@ const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
 const DEFAULT_ZOOM = 4;
 // Opening on the viewer's own place: their region, with the pins around it.
 const HOME_ZOOM = 6;
+type ResultView = { bounds: L.LatLngBounds | null; fitting: boolean };
+
+function fitResultView(map: L.Map, view: ResultView) {
+  if (!view.bounds || !map.getContainer().clientWidth || !map.getContainer().clientHeight) return;
+  const zoomSnap = map.options.zoomSnap;
+  view.fitting = true;
+  try {
+    // Leaflet caches its size; navigation and pane resizing can change it.
+    map.invalidateSize({ pan: false });
+    map.options.zoomSnap = 0.1;
+    map.fitBounds(view.bounds, {
+      paddingTopLeft: [36, 48],
+      paddingBottomRight: [window.matchMedia(WIDE).matches ? 340 : 36, 64],
+      maxZoom: 16,
+      animate: false,
+    });
+  } finally {
+    map.options.zoomSnap = zoomSnap;
+    view.fitting = false;
+  }
+}
 // A year either side of now: every pin ever posted on one map does not scale.
 const DEFAULT_SPAN = '1y';
 
@@ -310,6 +332,9 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
   const rtl = isRtl(t.locale);
   const params = useSearchParams();
   const query = params.get('q') || '';
+  const restaurantLayer = params.get('show') === 'restaurants';
+  const fitResults = restaurantLayer || params.get('fit') === 'results'
+    || splitSearchQuery(query).some((part) => part.kind === 'term' && part.field === 'pin' && !part.negated);
   const focusId = Number(params.get('pin')) || undefined;
   // From a pin's distance, clicked: draw what it measured. The viewer's place
   // is the browser's to work out, so the URL only asks for it.
@@ -333,6 +358,8 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
   // marker but neither recenters nor reopens a popup the viewer already closed.
   const stickyRef = useRef<{ popup: L.Popup; pinId: number } | null>(null);
   const focusedRef = useRef<number | undefined>(undefined);
+  const fittedQueryRef = useRef<string | undefined>(undefined);
+  const resultViewRef = useRef<ResultView>({ bounds: null, fitting: false });
   // Back from logging in on the view the reader left: a focused pin still
   // gets its popup, but no longer moves the map.
   const keepViewRef = useRef(false);
@@ -439,6 +466,20 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     // it is shown again (back to the pin, "To map" again): the new map
     // has not centered on anything or opened a popup yet.
     focusedRef.current = undefined;
+    fittedQueryRef.current = undefined;
+    const resultView = resultViewRef.current;
+    resultView.bounds = null;
+    // Keep the automatic fit through layout changes until the reader moves
+    // the map themselves. A ResizeObserver also handles split-pane resizing.
+    map.on('dragstart zoomstart', () => {
+      if (!resultView.fitting) resultView.bounds = null;
+    });
+    const sizeObserver = new ResizeObserver(() => {
+      if (mapRef.current !== map) return;
+      if (resultView.bounds) fitResultView(map, resultView);
+      else map.invalidateSize({ pan: false });
+    });
+    sizeObserver.observe(canvasRef.current!);
     stickyRef.current = null;
     // A map with nothing better to show opens where the viewer is: their
     // granted position, or the default location on their account. Not the
@@ -458,6 +499,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       unmounted = true;
       clearTimeout(cleared);
       stopViewSource();
+      sizeObserver.disconnect();
       map.remove();
       mapRef.current = null;
       layerRef.current = null;
@@ -650,6 +692,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     const load = async () => {
       const searchParams = new URLSearchParams();
       if (fetchQuery) searchParams.set('q', fetchQuery);
+      if (restaurantLayer) searchParams.set('show', 'restaurants');
       if (watched) searchParams.set('f', 'watch');
       if (pastBoundary) searchParams.set('from', pastBoundary.toISOString());
       if (futureBoundary) searchParams.set('to', futureBoundary.toISOString());
@@ -657,7 +700,21 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       const res = await fetch(withPageLang(`/api/pins/map?${searchParams.toString()}`));
       if (!res.ok) throw new Error(res.statusText);
       const { pins } = (await res.json()) as { pins: MapPinJson[] };
-      if (!cancelled) plot(pins);
+      if (!cancelled) {
+        plot(pins);
+        // Regional guides request a view containing every result. Fit after
+        // loading their coordinates, once per query, so subsequent refreshes
+        // preserve the reader's pan and zoom. Leave room for map controls.
+        const fitKey = `${restaurantLayer ? 'restaurants' : 'pins'}|${fetchQuery}`;
+        if (fitResults && !focusId && fittedQueryRef.current !== fitKey) {
+          const shown = markersRef.current.filter((entry) => inCategories(entry.categories, categoriesRef.current));
+          if (shown.length) {
+            resultViewRef.current.bounds = L.latLngBounds(shown.map(({ pin }) => [pin.latitude!, pin.longitude!]));
+            fitResultView(map, resultViewRef.current);
+            fittedQueryRef.current = fitKey;
+          }
+        }
+      }
     };
 
     // The focused pin may fall outside the search or time window, so it is
@@ -683,7 +740,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     return () => {
       cancelled = true;
     };
-  }, [past, future, postedWithin, fetchQuery, watched, focusId]);
+  }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -834,10 +891,15 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
 
   // The layer is the URL's (?show=market), so a pick replaces it there. The
   // query goes with it, a pin: term too: it is in the search box to take off.
-  function setMarket(next: boolean) {
+  function setLayer(next: 'pins' | 'market' | 'restaurants') {
     const query = new URLSearchParams(window.location.search);
-    if (next) query.set('show', 'market');
+    if (next !== 'pins') query.set('show', next);
     else query.delete('show');
+    if (next === 'restaurants') {
+      query.set('past', 'all');
+      query.set('future', 'all');
+      query.set('fit', 'results');
+    }
     router.replace(query.size ? `/map?${query.toString()}` : '/map');
   }
 
@@ -851,7 +913,8 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     router.replace(query.size ? `/map?${query.toString()}` : '/map');
   }
 
-  const layerToggle = <LayerToggle market={market} onChange={(next) => next !== market && setMarket(next)} />;
+  const layer = market ? 'market' : restaurantLayer ? 'restaurants' : 'pins';
+  const layerToggle = <LayerToggle layer={layer} onChange={(next) => next !== layer && setLayer(next)} />;
 
   const phrase = (span: string | null) => spanPhrase(span, t.locale);
   const hasPast = !!past && past !== '0d';
@@ -861,15 +924,15 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     // isolate: the controls need z-[1000] to sit over Leaflet's panes, but that
     // must stay inside the map, under the navbar's menus and panels.
     <div className="relative isolate h-[calc(100dvh-52px)]">
-      {/* With the back button above them, Leaflet's zoom buttons move down a
-          row; pins-map (globals.css) lifts the attribution over the pills. */}
+      {/* Leave room for the pin's back button;
+          pins-map (globals.css) lifts attribution over the bottom pills. */}
       <div ref={canvasRef} className={`pins-map absolute inset-0 z-0 ${focusId ? '[&_.leaflet-top]:pt-10' : ''}`} />
       {focusId ? (
         // Above Leaflet's zoom buttons. Back through history when the map was
         // reached inside the app (the pin page's link), so the pin page is not
         // stacked twice; a real link to the pin when the page was loaded as
         // the map (a shared link, a new tab, a reload), where back leaves.
-        <a
+        <Anchor
           href={localizeHere(focusPin?.id === focusId ? pinPath(focusPin) : `/pin/${focusId}`)}
           onClick={(event) => {
             if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0 || loadedAsMap()) return;
@@ -880,25 +943,20 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
         >
           <Icon name="back" className="size-4 text-link" />
           {t('map.backToPin')}
-        </a>
+        </Anchor>
       ) : null}
       {/* As on the timeline: top right on wide screens, folded behind pills at
           the bottom narrower. Its fixed panels stack inside this z-[1000], over
           Leaflet's panes. */}
-      {/* Pins or Marketplace: at the top of the controls' column, over
-          Filters, on wide screens; narrower in the map's top right corner on
-          its own. */}
-      {!wide ? (
-        <div className="absolute top-2.5 end-2.5 z-[1000] flex flex-col items-stretch gap-2">
-          {layerToggle}
-        </div>
-      ) : null}
+      {/* Above the mobile filter pills, at the bottom left on every screen. */}
+      <div className="absolute bottom-16 start-2.5 z-[1000] max-w-[calc(100%-1.25rem)] xl:bottom-2.5">
+        {layerToggle}
+      </div>
       {/* The same controls on either layer, so a filter set on one is still
           set on the other; the time span only for the pins. */}
       <div className="relative z-[1000]">
         <FloatingControls
           merge
-          sort={wide ? layerToggle : undefined}
           typing={sliderTyping}
           summaryCaption={t('controls.postedWithin')}
           summary={spanLabel(postedWithin, t.locale)}
@@ -998,20 +1056,20 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
 }
 
 // Which layer the map plots: the pins, or the marketplace listings.
-function LayerToggle({ market, onChange }: { market: boolean; onChange: (market: boolean) => void }) {
+function LayerToggle({ layer, onChange }: { layer: 'pins' | 'market' | 'restaurants'; onChange: (layer: 'pins' | 'market' | 'restaurants') => void }) {
   const t = useT();
   return (
     <div role="group" aria-label={t('map.layer')} className="floating flex items-center gap-1 rounded-full p-1 text-sm">
-      {([false, true] as const).map((forMarket) => (
+      {(['pins', 'market', 'restaurants'] as const).map((option) => (
         <button
-          key={String(forMarket)}
+          key={option}
           type="button"
-          aria-pressed={market === forMarket}
-          onClick={() => onChange(forMarket)}
-          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 font-medium ${market === forMarket ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
+          aria-pressed={layer === option}
+          onClick={() => onChange(option)}
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 font-medium ${layer === option ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
         >
-          <Icon name={forMarket ? 'cart' : 'pin'} className="size-4" />
-          {forMarket ? t('map.layerMarket') : t('map.layerPins')}
+          <Icon name={option === 'market' ? 'cart' : 'pin'} className="size-4" />
+          {option === 'market' ? t('map.layerMarket') : option === 'restaurants' ? t.dynamic('map.layerRestaurants', 'Restaurants') : t('map.layerPins')}
         </button>
       ))}
     </div>

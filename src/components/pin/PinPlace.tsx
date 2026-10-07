@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
@@ -67,7 +68,7 @@ export function PinPlace({ pinId, ratings }: { pinId: number; ratings?: PinRatin
         ) : null}
 
         {place?.reservation ? (
-          <a
+          <Anchor
             href={place.reservation.url}
             target="_blank"
             rel="noopener nofollow"
@@ -80,7 +81,7 @@ export function PinPlace({ pinId, ratings }: { pinId: number; ratings?: PinRatin
               ? t('place.bookOn', { provider: place.reservation.provider })
               : t('place.book')}
             <Icon name="external" className="size-3 shrink-0 opacity-80" />
-          </a>
+          </Anchor>
         ) : null}
       </div>
 
@@ -176,10 +177,10 @@ function Source({ one }: { one: OneRating }) {
   );
   const className = 'flex items-center gap-1.5';
   return one.url ? (
-    <a href={one.url} target="_blank" rel="noopener nofollow" className={`${className} hover:underline`} title={label}>
+    <Anchor href={one.url} target="_blank" rel="noopener nofollow" className={`${className} hover:underline`} title={label}>
       {content}
       <Icon name="external" className="size-3 shrink-0 opacity-70" />
-    </a>
+    </Anchor>
   ) : (
     <span className={className} title={label}>
       {content}

@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import Image from 'next/image';
 import Link from '@/components/ui/Link';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -149,9 +150,9 @@ function ImageMedium({
     return image;
   }
   return external ? (
-    <a href={href} target="_blank" rel="noopener" className="block">
+    <Anchor href={href} target="_blank" rel="noopener" className="block">
       {image}
-    </a>
+    </Anchor>
   ) : (
     <Link href={href} className="block">
       {image}

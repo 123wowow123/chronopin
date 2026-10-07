@@ -1,5 +1,6 @@
 "use client";
 
+import Anchor from '@/components/ui/Anchor';
 import { useId, useState } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { useIntlLocale, useT } from "@/lib/client/i18n";
@@ -179,14 +180,14 @@ export function CompanyExecutivesPanel({
                     : null}
                   {e.fiscalYear && e.sourceUrl ? " · " : null}
                   {e.sourceUrl ? (
-                    <a
+                    <Anchor
                       href={e.sourceUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="text-link hover:underline"
                     >
                       {t("company.executiveSource")}
-                    </a>
+                    </Anchor>
                   ) : null}
                 </span>
               ) : null}

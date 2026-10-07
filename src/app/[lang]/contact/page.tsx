@@ -1,3 +1,4 @@
+import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { legalMetadata } from '@/components/legal/LegalPage';
@@ -21,9 +22,9 @@ export default async function ContactPage() {
       <dl className="mb-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 text-base">
         <dt className="text-subtle">{t('legal.contactEmail')}</dt>
         <dd>
-          <a href={`mailto:${CONTACT_EMAIL}`} className="font-medium">
+          <Anchor href={`mailto:${CONTACT_EMAIL}`} className="font-medium">
             {CONTACT_EMAIL}
-          </a>
+          </Anchor>
         </dd>
         <dt className="text-subtle">{t('legal.contactLocation')}</dt>
         <dd>{t('legal.locationValue')}</dd>

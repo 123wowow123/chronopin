@@ -1,5 +1,6 @@
 'use client';
 
+import Anchor from '@/components/ui/Anchor';
 import { useT } from '@/lib/client/i18n';
 import { averageRating, ratingPercent, ratingScore, reviewRatings } from '@/lib/format';
 import type { PinRatingJson } from '@/lib/types';
@@ -157,10 +158,10 @@ export function PinRatings({ ratings, search = false, className = '-mt-1 mb-4' }
         return (
           <li key={rating.id ?? index}>
             {rating.url ? (
-              <a href={rating.url} target="_blank" rel="noopener nofollow" className={`${className} hover:ring-1 hover:ring-inset hover:ring-line`}>
+              <Anchor href={rating.url} target="_blank" rel="noopener nofollow" className={`${className} hover:ring-1 hover:ring-inset hover:ring-line`}>
                 {content}
                 <Icon name="external" className="size-3 shrink-0 opacity-70" />
-              </a>
+              </Anchor>
             ) : (
               <span className={className}>{content}</span>
             )}
