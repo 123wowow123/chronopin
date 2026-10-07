@@ -18,14 +18,19 @@ import type { MessageKey } from '@/lib/i18n/translate';
 const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline active:bg-raised-2';
 const itemIconClass = 'size-4 text-subtle';
 
-type MenuItem = { href: string; label: MessageKey; icon: IconName };
+type MenuItem = { href: string; label: MessageKey | 'Restaurants'; icon: IconName };
+type MenuGroup = { title?: string; items: MenuItem[] };
 
 // The account menu, in groups separated by a rule. Admin tools only for admins.
 // Profile and settings are not a row here: the block at the head of the menu
 // (SignedInAs) is that link, since it already names the account they belong to.
-function accountGroups(isAdmin: boolean): MenuItem[][] {
-  const own: MenuItem[] = [{ href: '/listings', label: 'nav.listings', icon: 'tag' }];
-  return isAdmin ? [own, [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }]] : [own];
+function accountGroups(isAdmin: boolean): MenuGroup[] {
+  const groups: MenuGroup[] = [
+    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }] },
+    { title: 'Curated', items: [{ href: '/restaurants', label: 'Restaurants', icon: 'map' }] },
+  ];
+  if (isAdmin) groups.push({ items: [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }] });
+  return groups;
 }
 
 // Timeline or Map, with the current one highlighted, so it reads as a choice
@@ -123,16 +128,17 @@ function WatchedRow({ onToggle }: { onToggle: () => void }) {
   );
 }
 
-function MenuLinks({ groups }: { groups: MenuItem[][] }) {
+function MenuLinks({ groups }: { groups: MenuGroup[] }) {
   const t = useT();
   return (
     <>
       {groups.map((group, index) => (
         <div key={index} className="border-b border-line py-1.5">
-          {group.map((item) => (
+          {group.title ? <div className="px-3 pt-1 pb-1 text-xs font-semibold tracking-wider text-subtle uppercase">{group.title}</div> : null}
+          {group.items.map((item) => (
             <Link key={item.href} href={item.href} className={itemClass}>
               <Icon name={item.icon} className={itemIconClass} />
-              {t(item.label)}
+              {t.dynamic(item.label, item.label)}
             </Link>
           ))}
         </div>
