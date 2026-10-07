@@ -38,10 +38,12 @@ export function EpisodeCount({ pin, compact = false, chip = false, className = '
   const label = t(said.label, { count: said.count });
   const title = t(said.title);
   if (compact) {
+    // A card leaves "planned" off: the start date already says it is upcoming.
+    const bare = said.label === 'episodes.planned' ? t('episodes.complete', { count: said.count }) : label;
     return (
       <span className={`inline-flex items-center gap-1 font-medium text-muted tabular-nums ${className}`} title={title}>
         <Icon name="play" className="size-3 text-subtle" />
-        {label}
+        {bare}
       </span>
     );
   }

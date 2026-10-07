@@ -182,6 +182,22 @@ export function PinCard({
             {pin.latitude != null && pin.longitude != null ? <PinDistance pinId={pin.id} latitude={pin.latitude} longitude={pin.longitude} compact /> : null}
           </div>
           <div className="flex shrink-0 items-center gap-1">
+          {/* NEW searches for every pin posted today, UPDATED for every pin
+              updated since the day 24 hours back - both days the viewer's. */}
+          {postedToday ? (
+            <RefineLink field="posted" value={today} className={`${STATUS_PILL} bg-link/15 text-link hover:bg-link/25`} title={t('card.newTitle')}>
+              {t('card.new')}
+            </RefineLink>
+          ) : updatedRecently ? (
+            <RefineLink
+              field="updated"
+              value={`>=${dayKeyIn(now - UPDATED_WITHIN_MS, timeZone)}`}
+              className={`${STATUS_PILL} bg-success/15 text-success hover:bg-success/25`}
+              title={t('card.updatedTitle')}
+            >
+              {t('card.updated')}
+            </RefineLink>
+          ) : null}
             {pin.parentId || pin.rootThread ? (
               <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="text-subtle hover:text-ink">
                 <Icon name="thread" className="size-3.5" />
@@ -199,22 +215,6 @@ export function PinCard({
               {pin.title}
             </Link>
           </h2>
-          {/* NEW searches for every pin posted today, UPDATED for every pin
-              updated since the day 24 hours back - both days the viewer's. */}
-          {postedToday ? (
-            <RefineLink field="posted" value={today} className={`${STATUS_PILL} bg-link/15 text-link hover:bg-link/25`} title={t('card.newTitle')}>
-              {t('card.new')}
-            </RefineLink>
-          ) : updatedRecently ? (
-            <RefineLink
-              field="updated"
-              value={`>=${dayKeyIn(now - UPDATED_WITHIN_MS, timeZone)}`}
-              className={`${STATUS_PILL} bg-success/15 text-success hover:bg-success/25`}
-              title={t('card.updatedTitle')}
-            >
-              {t('card.updated')}
-            </RefineLink>
-          ) : null}
         </div>
 
         {media.length ? (
@@ -247,7 +247,6 @@ export function PinCard({
 
         <div className="mx-3">
           {!media.length ? placeRow : null}
-          {pin.restaurantPriceRange ? <div className="mb-2 text-xs text-muted"><RestaurantPriceRange range={pin.restaurantPriceRange} /></div> : null}
           {pin.utcStartDateTime || pin.ratings?.length || pin.episodeCount ? (
             <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
               <PinPillRow>
@@ -297,6 +296,7 @@ export function PinCard({
       <div className="mx-3 mt-2.5 grid grid-cols-[1fr_auto_1fr] items-center border-t border-line pt-1.5">
         <div className={`text-sm font-medium tabular-nums ${pin.price != null && pin.price < 0 ? 'text-danger' : 'text-success'}`}>
           {pin.price ? money(pin.price, pin.priceCurrency) : null}
+          {pin.restaurantPriceRange ? <span className="text-xs text-muted"><RestaurantPriceRange range={pin.restaurantPriceRange} /></span> : null}
         </div>
         <div>
           {pin.searchScore != null ? (
