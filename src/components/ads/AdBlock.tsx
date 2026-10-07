@@ -65,13 +65,14 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
 const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png' };
 const DEFAULT_TILE = { icon: 'cart' as IconName, background: '#232f3e', color: '#fff' };
 
-function useAds(slot: AdSlot, pinId: number | undefined) {
+function useAds(slot: AdSlot, pinId: number | undefined, count = SLOT_COUNT[slot]) {
   const ref = useRef<HTMLDivElement>(null);
   const [ads, setAds] = useState<AdJson[] | null>(null);
+  const [requestedCount, setRequestedCount] = useState(0);
 
   useEffect(() => {
     // Kept when the page is hidden and shown again (React Activity).
-    if (ads) return;
+    if (requestedCount >= count) return;
     const element = ref.current;
     if (!element) return;
     let cancelled = false;
@@ -81,16 +82,20 @@ function useAds(slot: AdSlot, pinId: number | undefined) {
         if (cancelled) return;
         const shown = onPage.get(scope) ?? new Set<string>();
         onPage.set(scope, shown);
-        const params = new URLSearchParams({ slot, n: String(SLOT_COUNT[slot]) });
+        const needed = Math.min(SLOT_COUNT[slot], Math.max(1, count - (ads?.length ?? 0)));
+        const params = new URLSearchParams({ slot, n: String(needed) });
         if (pinId) params.set('pin', String(pinId));
         if (shown.size) params.set('not', [...shown].slice(-100).join(','));
         return fetch(withPageLang(`/api/ads?${params}`))
           .then((res) => (res.ok ? (res.json() as Promise<{ ads: AdJson[] }>) : null))
           .then((body) => {
             if (cancelled) return;
-            const list = body?.ads ?? [];
+            const existing = new Set(ads?.map((ad) => ad.key));
+            const list = (body?.ads ?? []).filter((ad) => !existing.has(ad.key));
             for (const ad of list) shown.add(ad.key);
-            setAds(list);
+            setAds((current) => [...(current ?? []), ...list]);
+            // Fetch more batches only while the inventory provides new ads.
+            setRequestedCount(list.length < needed ? count : (ads?.length ?? 0) + list.length);
           })
           .catch(() => {});
       });
@@ -108,7 +113,7 @@ function useAds(slot: AdSlot, pinId: number | undefined) {
       cancelled = true;
       observer.disconnect();
     };
-  }, [ads, slot, pinId]);
+  }, [ads, slot, pinId, count, requestedCount]);
 
   return { ref, ads };
 }
@@ -368,28 +373,52 @@ export function AdPanel({ onAds }: { onAds?: (count: number | null) => void }) {
   );
 }
 
-// The mobile menu's ads, above Log out: up to five compact rows like the
-// side panel's, in the room the menu leaves, two at least. The block gives way
+// The mobile menu's ads, above Log out: compact rows filling the room the
+// menu leaves, with five available initially. The block gives way
 // before the menu scrolls: it is the one thing that shrinks, down to two rows,
 // and a row that does not fit wraps into a clipped second column, as the side
-// panel's do. The drawer is
-// always mounted, so the ads are fetched once, the first time it is opened
-// into view.
+// panel's do. The drawer is always mounted: it keeps its ads between opens
+// and fetches additional, distinct rows when more room becomes available.
 export function AdDrawer({ className = '' }: { className?: string }) {
   const slot = 'drawer';
   const t = useT();
-  const { ref, ads } = useAds(slot, undefined);
+  const [count, setCount] = useState(5);
+  const { ref, ads } = useAds(slot, undefined, count);
   const text = useAdText();
+  useEffect(() => {
+    const section = ref.current;
+    const drawer = section?.closest<HTMLElement>('[role="dialog"]');
+    if (!section || !drawer) return;
+    const fit = () => {
+      const list = section.querySelector('ul');
+      const row = list?.firstElementChild;
+      const rowHeight = row?.getBoundingClientRect().height || 60;
+      const headingHeight = list ? list.getBoundingClientRect().top - section.getBoundingClientRect().top : 64;
+      let footerHeight = 0;
+      for (let sibling = section.nextElementSibling; sibling; sibling = sibling.nextElementSibling) footerHeight += sibling.getBoundingClientRect().height;
+      const room = drawer.getBoundingClientRect().bottom - section.getBoundingClientRect().top - drawer.scrollTop - headingHeight - footerHeight - 12;
+      setCount(Math.min(20, Math.max(SLOT_COUNT.drawer, Math.floor(room / rowHeight))));
+    };
+    fit();
+    const observer = new ResizeObserver(fit);
+    observer.observe(drawer);
+    for (const child of drawer.children) if (child !== section) observer.observe(child);
+    window.addEventListener('resize', fit);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', fit);
+    };
+  }, [ads, ref]);
   if (!ads) return <div ref={ref} aria-hidden className={`h-px ${className}`} />;
   if (!ads.length) return null;
   return (
-    <aside aria-label={t('ads.sponsored')} className={`flex min-h-40 flex-col px-2 pt-1 pb-1 ${className}`}>
+    <aside ref={ref} aria-label={t('ads.sponsored')} className={`flex min-h-40 flex-col px-2 pt-1 pb-1 ${className}`}>
       <div className="shrink-0 px-3 pb-0.5">
         <SponsoredLabel />
         <Disclosure ads={ads} className="mt-0.5" />
       </div>
       <ul className="flex min-h-24 flex-col flex-wrap overflow-clip">
-        {ads.map((ad) => {
+        {ads.slice(0, count).map((ad) => {
           const { title, price, info, urgency } = text(ad);
           return (
             <li key={ad.key} className="w-full">

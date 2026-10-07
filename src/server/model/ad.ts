@@ -42,6 +42,8 @@ import { featuredWatch, type FeaturedWatch } from '../ebayWatches';
 // How long the ads (program rows, product listings, store ids) are reused
 // before they are read again.
 const INVENTORY_MS = 10 * 60 * 1000;
+// Discard inventory retained across dev reloads with the old pin-image mapping.
+const INVENTORY_VERSION = 2;
 // How long a slot waits for the address's country; past it, the language.
 const COUNTRY_WAIT_MS = 1500;
 // How long a slot waits for a watch brand's live eBay listing before it shows
@@ -56,7 +58,7 @@ const IMPRESSION_DAYS = 400;
 const PERFORMANCE_MS = 30 * 60 * 1000;
 const PERFORMANCE_WINDOW_DAYS = 30;
 
-type Inventory = { ads: AdCandidate[]; tags: Record<string, string>; storesWithAds: Set<string>; at: number };
+type Inventory = { ads: AdCandidate[]; tags: Record<string, string>; storesWithAds: Set<string>; at: number; version: number };
 type Performance = { baselineCtr: number; byKey: Map<string, AdPerformance> };
 
 const held = ((globalThis as any).__chronopinAds ??= { inventory: null }) as { inventory: Promise<Inventory> | null };
@@ -73,7 +75,7 @@ export default class Ad {
     const current = held.inventory;
     if (current) {
       return current.then((inv) => {
-        if (Date.now() - inv.at < INVENTORY_MS) return inv;
+        if (inv.version === INVENTORY_VERSION && Date.now() - inv.at < INVENTORY_MS) return inv;
         if (held.inventory === current) held.inventory = null;
         return Ad.inventory();
       });
@@ -357,8 +359,8 @@ async function loadInventory(): Promise<Inventory> {
     ),
     db.query<{ value: unknown }>(`SELECT "value" FROM "AppSetting" WHERE "key" = 'amazonTags'`),
     // Ads chosen for a pin (0112), working ones on live pins.
-    db.query<{ id: number; pinId: number; url: string; price: number | null; rating: number | null; reviewCount: number | null; urgency: string | null; title: string; brand: string | null; categories: string[] }>(
-      `SELECT "a"."id", "a"."pinId", "a"."url", "a"."price"::float8 AS "price", "a"."rating"::float8 AS "rating", "a"."reviewCount", "a"."urgency", "a"."title", "a"."brand",
+    db.query<{ id: number; pinId: number; url: string; price: number | null; rating: number | null; reviewCount: number | null; urgency: string | null; title: string; brand: string | null; image: string | null; categories: string[] }>(
+      `SELECT "a"."id", "a"."pinId", "a"."url", "a"."price"::float8 AS "price", "a"."rating"::float8 AS "rating", "a"."reviewCount", "a"."urgency", "a"."title", "a"."brand", "a"."image",
          coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "categories"
        FROM "PinAd" AS "a" JOIN "Pin" AS "p" ON "p"."id" = "a"."pinId" AND "p"."utcDeletedDateTime" IS NULL
        WHERE "a"."status" = 'ok'`,
@@ -368,7 +370,6 @@ async function loadInventory(): Promise<Inventory> {
   const holidayRows = await db.query<{ id: number; holiday: string; tier: AdTier; url: string; title: string; brand: string | null; price: number | null; rating: number | null; image: string | null }>(
     `SELECT "id", "holiday", "tier", "url", "title", "brand", "price"::float8 AS "price", "rating"::float8 AS "rating", "image" FROM "HolidayAd" WHERE "status" = 'ok'`,
   );
-  const chosenPictures = await PinView.pictures([...new Set(chosen.map((c) => c.pinId))]);
   const pictures = await PinView.pictures([...new Set(products.map((p) => p.pinId))]);
   const ads: AdCandidate[] = [
     ...programs.map(
@@ -442,8 +443,9 @@ async function loadInventory(): Promise<Inventory> {
         rating: row.rating,
         reviewCount: row.reviewCount,
         urgency: row.urgency,
-        thumbName: chosenPictures.get(row.pinId)?.thumbName ?? null,
-        originalUrl: chosenPictures.get(row.pinId)?.originalUrl ?? null,
+        thumbName: null,
+        originalUrl: null,
+        imageUrl: row.image,
       }),
     ),
   ];
@@ -485,7 +487,7 @@ async function loadInventory(): Promise<Inventory> {
       }),
     ),
   );
-  return { ads, tags: parseAmazonTags(setting[0]?.value), storesWithAds: new Set(ads.map((ad) => ad.store)), at: Date.now() };
+  return { ads, tags: parseAmazonTags(setting[0]?.value), storesWithAds: new Set(ads.map((ad) => ad.store)), at: Date.now(), version: INVENTORY_VERSION };
 }
 
 // Where the viewer is: the address's country, else the region their browser's

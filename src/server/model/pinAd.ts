@@ -20,6 +20,7 @@ export type PinAdRow = {
   price: number | null;
   rating: number | null;
   reviewCount: number | null;
+  image: string | null;
   // "left:12" / "low:90" as the page last said (urgencyOf), refreshed with the rest.
   urgency: string | null;
   status: 'ok' | 'broken';
@@ -27,7 +28,7 @@ export type PinAdRow = {
   checkedAt: string;
 };
 
-const COLUMNS = `"id", "pinId", "asin", "url", "title", "brand", "price"::float8 AS "price", "rating"::float8 AS "rating", "reviewCount", "urgency", "status", "problem",
+const COLUMNS = `"id", "pinId", "asin", "url", "title", "brand", "price"::float8 AS "price", "rating"::float8 AS "rating", "reviewCount", "image", "urgency", "status", "problem",
   to_char("checkedDateTime" AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"') AS "checkedAt"`;
 
 // A check this recent is not repeated by the next run's sweep.
@@ -80,12 +81,12 @@ export default class PinAd {
     const problem = adProblem(listing);
     if (problem) return { rejected: `${listing.brand ?? 'Unbranded'} "${listing.title.slice(0, 80)}": ${problem}.` };
     const rows = await db.query<PinAdRow>(
-      `INSERT INTO "PinAd" ("pinId", "asin", "url", "title", "brand", "price", "rating", "reviewCount", "urgency")
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+      `INSERT INTO "PinAd" ("pinId", "asin", "url", "title", "brand", "price", "rating", "reviewCount", "urgency", "image")
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
        ON CONFLICT ("pinId", "asin") DO UPDATE SET "title" = EXCLUDED."title", "brand" = EXCLUDED."brand", "price" = EXCLUDED."price",
-         "rating" = EXCLUDED."rating", "reviewCount" = EXCLUDED."reviewCount", "urgency" = EXCLUDED."urgency", "status" = 'ok', "problem" = NULL, "checkedDateTime" = now()
+         "rating" = EXCLUDED."rating", "reviewCount" = EXCLUDED."reviewCount", "urgency" = EXCLUDED."urgency", "image" = COALESCE(EXCLUDED."image", "PinAd"."image"), "status" = 'ok', "problem" = NULL, "checkedDateTime" = now()
        RETURNING ${COLUMNS}`,
-      [pinId, asin, url, listing.title.slice(0, 300), listing.brand?.slice(0, 120) ?? null, listing.price, listing.rating, listing.reviewCount, listing.urgency ?? null],
+      [pinId, asin, url, listing.title.slice(0, 300), listing.brand?.slice(0, 120) ?? null, listing.price, listing.rating, listing.reviewCount, listing.urgency ?? null, listing.image ?? null],
     );
     touched();
     translateTitles(rows[0].id);
@@ -131,8 +132,8 @@ export default class PinAd {
         if (ad.status === 'ok') broken.push({ pinId: ad.pinId, adId: ad.id, url: ad.url, title: rows[0]?.title ?? '', problem });
       } else if (!('gone' in listing)) {
         await db.query(
-          `UPDATE "PinAd" SET "status" = 'ok', "problem" = NULL, "title" = $2, "brand" = $3, "price" = $4, "rating" = $5, "reviewCount" = $6, "urgency" = $7, "checkedDateTime" = now() WHERE "id" = $1`,
-          [ad.id, listing.title.slice(0, 300), listing.brand?.slice(0, 120) ?? null, listing.price, listing.rating, listing.reviewCount, listing.urgency ?? null],
+          `UPDATE "PinAd" SET "status" = 'ok', "problem" = NULL, "title" = $2, "brand" = $3, "price" = $4, "rating" = $5, "reviewCount" = $6, "urgency" = $7, "image" = COALESCE($8, "image"), "checkedDateTime" = now() WHERE "id" = $1`,
+          [ad.id, listing.title.slice(0, 300), listing.brand?.slice(0, 120) ?? null, listing.price, listing.rating, listing.reviewCount, listing.urgency ?? null, listing.image ?? null],
         );
         ok++;
       }

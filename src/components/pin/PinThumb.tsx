@@ -7,9 +7,9 @@ import type { MediumJson } from '@/lib/types';
 // The medium a pin shows in a list: a video's still first, as the pin's media
 // frame shows it first, else the earliest-attached one. Mirrors
 // PinView.pictures' SQL for the pins whose media arrive whole.
-export function pinPicture(media: Pick<MediumJson, 'type' | 'thumbName'>[] | undefined) {
+export function pinPicture(media: (Pick<MediumJson, 'type' | 'thumbName'> & Partial<Pick<MediumJson, 'originalUrl'>>)[] | undefined) {
   const medium = media?.find((m) => String(m.type) === '3') ?? media?.[0];
-  return { thumbName: medium?.thumbName };
+  return { thumbName: medium?.thumbName, originalUrl: String(medium?.type) === '1' ? medium?.originalUrl : undefined };
 }
 
 // A hue for a pin with no picture, from its category when it has one (so a
@@ -21,26 +21,31 @@ function hueOf(seed: string) {
 }
 
 // A pin's small picture in a list: its small thumb (160x108, a few KB, made
-// when the thumb is saved), else a tile tinted by its category with its
-// title's first letter or digit.
+// when the thumb is saved), then the full thumb or original image. Only when
+// every image fails does it use a tinted tile with the title's first letter.
 export function PinThumb({
   thumbName,
+  originalUrl,
   title,
   category,
   className = 'h-9 w-16',
 }: {
   thumbName?: string | null;
+  originalUrl?: string | null;
   title?: string | null;
   category?: string | null;
   className?: string;
 }) {
-  const [failed, setFailed] = useState(false);
-  const src = failed || !thumbName ? undefined : blobUrl(smallThumbName(thumbName));
+  const [failedSources, setFailedSources] = useState<string[]>([]);
+  const src = [thumbName ? blobUrl(smallThumbName(thumbName)) : undefined, blobUrl(thumbName), originalUrl]
+    .find((candidate) => candidate && !failedSources.includes(candidate));
   // A server-rendered image can fail before hydration attaches onError; a
   // finished image with no pixels failed.
   const imgRef = useCallback((img: HTMLImageElement | null) => {
-    if (img?.complete && img.naturalWidth === 0) setFailed(true);
-  }, []);
+    if (src && img?.complete && img.naturalWidth === 0) {
+      setFailedSources((current) => current.includes(src) ? current : [...current, src]);
+    }
+  }, [src]);
   const letter = !src && title ? title.match(/[\p{L}\p{N}]/u)?.[0]?.toLocaleUpperCase() : undefined;
   if (letter) {
     // Mixed into the theme's own tile and text colours, so it reads on both.
@@ -63,14 +68,16 @@ export function PinThumb({
       {src ? (
         // eslint-disable-next-line @next/next/no-img-element -- already sized and cached in blob storage
         <img
+          key={src}
           src={src}
           alt=""
           width={160}
           height={108}
           loading="lazy"
+          referrerPolicy="no-referrer"
           className="size-full object-cover"
           ref={imgRef}
-          onError={() => setFailed(true)}
+          onError={() => setFailedSources((current) => current.includes(src) ? current : [...current, src])}
         />
       ) : null}
     </span>
