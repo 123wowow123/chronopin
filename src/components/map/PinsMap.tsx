@@ -1151,16 +1151,22 @@ function LayerToggle({ layer, onChange }: { layer: 'pins' | 'market' | 'restaura
   const t = useT();
   const inDrawer = useInDrawerPanel();
   return (
-    <div role="group" aria-label={t('map.layer')} className={inDrawer ? 'flex flex-col gap-1 py-2 text-sm' : 'floating flex items-center gap-1 rounded-full p-1 text-sm'}>
+    <div
+      role="group"
+      aria-label={t('map.layer')}
+      className={inDrawer ? 'my-2 grid grid-cols-3 gap-1 rounded-2xl border border-line bg-raised p-1.5' : 'floating flex items-center gap-1 rounded-full p-1 text-sm'}
+    >
       {(['pins', 'market', 'restaurants'] as const).map((option) => (
         <button
           key={option}
           type="button"
           aria-pressed={layer === option}
           onClick={() => onChange(option)}
-          className={`flex flex-1 items-center gap-1.5 px-3 font-medium ${inDrawer ? 'rounded-lg py-2.5' : 'justify-center rounded-full py-1'} ${layer === option ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
+          className={inDrawer
+            ? `flex min-w-0 flex-col items-center justify-center gap-2 rounded-xl px-1 py-3 text-xs font-semibold transition-colors ${layer === option ? 'bg-panel text-link shadow-sm ring-1 ring-accent/25' : 'text-muted hover:bg-panel/60 hover:text-ink'}`
+            : `flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 font-medium ${layer === option ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
         >
-          <Icon name={option === 'market' ? 'cart' : 'pin'} className="size-4" />
+          <Icon name={option === 'market' ? 'cart' : 'pin'} className={inDrawer ? 'size-5' : 'size-4'} />
           {option === 'market' ? t('map.layerMarket') : option === 'restaurants' ? t.dynamic('map.layerRestaurants', 'Restaurants') : t('map.layerPins')}
         </button>
       ))}

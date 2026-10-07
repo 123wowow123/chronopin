@@ -297,7 +297,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
           )}
         </div>
 
-        <nav aria-label={t('nav.main')} className="flex-1">
+        <nav aria-label={t('nav.main')} className="shrink-0">
           {/* What the page shows. */}
           <DrawerSection title={t('nav.browse')}>
             {/* Room under the switch: the watched toggle is a filter, not a
@@ -344,7 +344,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
               <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
             </DrawerSection>
           ) : null}
-          <DrawerSection title="Curated">
+          <DrawerSection title="Curated" className="pb-1!">
             {link('/restaurants', 'map', 'Restaurants')}
           </DrawerSection>
           {user && isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
