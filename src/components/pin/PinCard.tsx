@@ -44,7 +44,7 @@ const UPDATED_WITHIN_MS = 24 * 60 * 60 * 1000;
 // The NEW and UPDATED pills beside the title; each tap target grows past the
 // small pill (DelayBadge does the same).
 const STATUS_PILL =
-  "relative mt-1 shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold tracking-wide uppercase after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline";
+  "relative shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold tracking-wide uppercase after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline";
 
 // A faint wash and border in the map's past/future colours; ongoing (and untensed) pins stay plain.
 const TENSE_CLASS: Record<PinTense, string> = {
@@ -209,7 +209,7 @@ export function PinCard({
           </div>
         </div>
 
-        <div className="mx-3 mt-1.5 mb-2.5 flex items-start justify-between gap-2">
+        <div className="mx-3 mt-2.5 mb-2.5 flex items-start justify-between gap-2">
           <h2 dir={pinTextDir(pin)} className="min-w-0 font-display text-[19px] leading-snug font-medium tracking-tight text-pretty">
             <Link href={href} className="text-ink transition-colors hover:text-link hover:no-underline">
               {pin.title}
