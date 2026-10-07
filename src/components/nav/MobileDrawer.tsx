@@ -305,7 +305,6 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
             <div className="px-1 pb-3">
               <ViewSwitch pathname={pathname} />
             </div>
-            {link('/restaurants', 'map', 'Restaurants')}
             {user ? (
               <button type="button" role="switch" aria-checked={watchedOnly} onClick={toggleWatched} className={`w-full ${itemClass}`}>
                 <Icon name="eye" className={`size-6 ${watchedOnly ? 'text-link' : ''}`} />
@@ -338,16 +337,17 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
             </DrawerSection>
           )}
           {user ? (
-            <>
-              <DrawerSection title={t('nav.you')}>
-                <DrawerNotifications className={itemClass} current={pathname === '/notifications'} onClick={() => leaveDrawer('/notifications')} />
-                <DrawerMessages className={itemClass} current={pathname === '/messages'} onClick={() => leaveDrawer('/messages')} />
-                {link('/listings', 'tag', t('nav.listings'))}
-                <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
-              </DrawerSection>
-              {isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
-            </>
+            <DrawerSection title={t('nav.you')}>
+              <DrawerNotifications className={itemClass} current={pathname === '/notifications'} onClick={() => leaveDrawer('/notifications')} />
+              <DrawerMessages className={itemClass} current={pathname === '/messages'} onClick={() => leaveDrawer('/messages')} />
+              {link('/listings', 'tag', t('nav.listings'))}
+              <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
+            </DrawerSection>
           ) : null}
+          <DrawerSection title="Curated">
+            {link('/restaurants', 'map', 'Restaurants')}
+          </DrawerSection>
+          {user && isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
         </nav>
 
         {/* Sponsored rows (an admin setting), last before the way out. */}
