@@ -2,9 +2,9 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { mapPins, type MapQuery } from './mapPins';
 import snapshot from '@/server/data/sanDiegoRestaurants.preview.json';
 
-const { search, queryForMap } = vi.hoisted(() => ({ search: vi.fn(), queryForMap: vi.fn() }));
+const { search, queryForMap, queryByIds } = vi.hoisted(() => ({ search: vi.fn(), queryForMap: vi.fn(), queryByIds: vi.fn() }));
 vi.mock('./search', () => ({ searchPins: search }));
-vi.mock('../model/pins', () => ({ default: { queryForMap } }));
+vi.mock('../model/pins', () => ({ default: { queryForMap, queryByIds } }));
 vi.mock('./timeline', () => ({ timelineMinConfidence: vi.fn() }));
 
 const query: MapQuery = { from: null, to: null, createdSince: null, q: 'pin:6427,6431', onlyWatched: false, userId: null, timeZone: 'America/Los_Angeles' };
@@ -27,6 +27,15 @@ describe('restaurant map previews', () => {
     vi.stubEnv('NODE_ENV', 'production');
     search.mockResolvedValue({ pins: [snapshot[0], { ...snapshot[1], tags: [{ name: 'Recipes' }] }] });
     const pins = await mapPins({ ...query, restaurantsOnly: true });
+    expect(pins.map((pin) => pin.id)).toEqual([snapshot[0].id]);
+  });
+
+  it('loads restaurant tags omitted from lean search results', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    search.mockResolvedValue({ pins: [{ ...snapshot[0], tags: [] }, { ...snapshot[1], tags: [] }] });
+    queryByIds.mockResolvedValue({ pins: [snapshot[0], { ...snapshot[1], tags: [{ name: 'Recipes' }] }] });
+    const pins = await mapPins({ ...query, restaurantsOnly: true });
+    expect(queryByIds).toHaveBeenCalledWith([snapshot[0].id, snapshot[1].id]);
     expect(pins.map((pin) => pin.id)).toEqual([snapshot[0].id]);
   });
 

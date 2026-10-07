@@ -5,7 +5,7 @@ import { useEffect, useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
-import { openingGroup, type Restaurant, type OpeningGroup, type TopRestaurant } from '@/lib/restaurants';
+import { RESTAURANT_REGIONS, openingGroup, type Restaurant, type OpeningGroup, type TopRestaurant } from '@/lib/restaurants';
 import { pinPath } from '@/lib/seo';
 import styles from './RestaurantGuide.module.css';
 
@@ -45,7 +45,7 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
   const top = status === 'top';
   const neighborhoods = [...new Set((top ? topRestaurants : status === 'all' ? [...active, ...topRestaurants] : active).map((restaurant) => restaurant.neighborhood))].sort();
   const neighborhood = neighborhoods.includes(selectedNeighborhood) ? selectedNeighborhood : 'all';
-  const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image);
+  const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image && !restaurant.imageNote) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image);
   const matches = (restaurant: Pick<Restaurant, 'neighborhood'>) => neighborhood === 'all' || restaurant.neighborhood === neighborhood;
   const shownUpcoming = status === 'new' || top ? [] : upcoming.filter(matches);
   const shownRecent = status === 'upcoming' || top ? [] : recent.filter(matches);
@@ -69,6 +69,10 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
         <nav className={styles.guideNav} aria-label="Restaurant guide">
           <Link href="/restaurants" className={styles.wordmark}><span aria-hidden="true">✳</span> The opening guide</Link>
           <span className={styles.region}><span aria-hidden="true">↗</span> {region.name}, {region.state}</span>
+        </nav>
+
+        <nav className={styles.cityNav} aria-label="Restaurant guide city">
+          {RESTAURANT_REGIONS.map((city) => <Link key={city.slug} href={`/restaurants/${city.slug}`} aria-current={city.slug === region.slug ? 'page' : undefined}>{city.name}</Link>)}
         </nav>
 
         <header className={styles.hero}>
@@ -115,7 +119,7 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
           {status === 'all' && shownTop.length > 0 && <TopRestaurantSection restaurants={shownTop} />}
         </section>
 
-        <aside className={styles.editorialNote}><span aria-hidden="true">✳</span><div><h2>A date is a starting point.</h2><p>Opening plans can change. Month and season dates are estimates, and a passed estimate never means a restaurant is confirmed open. Each pin links to the reporting behind it—check the latest details before making plans.</p>{previewSnapshot && <p className={styles.previewNote}>Local preview: published San Diego pins from October 6, 2026.</p>}</div><Anchor href="#openings" onClick={() => setNeighborhood('all')}>Back to openings ↗</Anchor></aside>
+        <aside className={styles.editorialNote}><span aria-hidden="true">✳</span><div><h2>A date is a starting point.</h2><p>Opening plans can change. Month and season dates are estimates, and a passed estimate never means a restaurant is confirmed open. Each pin links to the reporting behind it—check the latest details before making plans.</p>{previewSnapshot && <p className={styles.previewNote}>Local preview: published {region.name} pins from October 6, 2026.</p>}</div><Anchor href="#openings" onClick={() => setNeighborhood('all')}>Back to openings ↗</Anchor></aside>
       </div>
     </main>
   );
@@ -124,16 +128,16 @@ export function RestaurantGuide({ restaurants, topRestaurants, region, today, pr
 function TopRestaurantSection({ restaurants }: { restaurants: TopRestaurant[] }) {
   return <section id="top-restaurants" className={styles.section} aria-labelledby="top-restaurants-title">
     <div className={styles.sectionHeading}><div><h2 id="top-restaurants-title">Top restaurants <span>{restaurants.length.toString().padStart(2, '0')}</span></h2><p>Established favorites for your next meal.</p></div><span className={styles.sectionSymbol} aria-hidden="true">✳</span></div>
-    <p className={styles.topNote}>A curated selection from the MICHELIN Guide, covering starred dining, Bib Gourmand value picks, and selected restaurants. Each card links to its recognition. Dollar signs are the guide’s price ranges. Checked {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${restaurants[0].checkedAt}T00:00:00Z`))}.</p>
+    <p className={styles.topNote}>{restaurants.every((restaurant) => restaurant.recognition.startsWith('MICHELIN')) ? 'A curated selection from the MICHELIN Guide, covering starred dining, Bib Gourmand value picks, and selected restaurants. Each card links to its recognition. Dollar signs are the guide’s price ranges.' : 'A Chronopin editorial selection of established restaurants. Each card links to the restaurant’s information; this selection is not an external award.'} Checked {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${restaurants[0].checkedAt}T00:00:00Z`))}.</p>
     <div className={styles.cardGrid}>{restaurants.map((restaurant) => (
       <article key={restaurant.slug} className={styles.card}>
         <Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })} className={styles.photoLink} aria-label={`See ${restaurant.name}'s restaurant details`}>
-          <Image src={restaurant.image} alt={restaurant.name} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} />
+          {restaurant.image ? <Image src={restaurant.image} alt={restaurant.name} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>}
           <span className={`${styles.cardBadge} ${styles.openBadge}`}>{restaurant.recognition}</span>
           <span className={styles.imageNote}>{restaurant.imageCredit}</span>
         </Link>
         <div className={styles.cardBody}>
-          <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}<span aria-hidden="true">·</span><span aria-label={`MICHELIN price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></p>
+          <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Guide price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}</p>
           <h3><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>{restaurant.name}</Link></h3>
           <p className={styles.cardDescription}>{restaurant.description}</p>
           <p className={styles.topAddress}>{restaurant.address}</p>
@@ -155,7 +159,7 @@ function OpeningSection({ id, title, subtitle, restaurants, group, today, href }
           {restaurant.imageNote && <span className={styles.imageNote}>{restaurant.imageNote}</span>}
         </Link>
         <div className={styles.cardBody}>
-          <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}</p>
+          <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Restaurant price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}</p>
           <h3><Link href={href(restaurant)}>{restaurant.name}</Link></h3>
           <p className={styles.cardDescription}>{restaurant.description}</p>
           <div className={styles.cardFoot}><div><span>{group === 'new' ? 'OPENED' : restaurant.day <= today ? 'LAST ANNOUNCED TARGET' : 'EXPECTED OPENING'}</span><strong><time dateTime={restaurant.day}>{restaurant.dateLabel}</time>{restaurant.estimated && <small>Estimated</small>}</strong></div><Link href={href(restaurant)} aria-label={`Read about ${restaurant.name}`} className={styles.cardArrow}>↗</Link></div>

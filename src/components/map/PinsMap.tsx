@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { localizeHere, useRouter, useSearchParams, withPageLang } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
+import { MAP_ATTRIBUTION_PREFIX, TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
 import { FloatingControls } from '@/components/timeline/FloatingControls';
 import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
@@ -436,6 +436,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
   useEffect(() => {
     const spot = peekMapSpot();
     const map = L.map(canvasRef.current!, { ...(spot ? { center: [spot.lat, spot.lng], zoom: spot.zoom } : { center: DEFAULT_CENTER, zoom: DEFAULT_ZOOM }), zoomControl: false });
+    map.attributionControl.setPrefix(MAP_ATTRIBUTION_PREFIX);
     // The zoom buttons sit in the reading edge's top corner, clear of the
     // controls in the other.
     L.control.zoom({ position: rtl ? 'topright' : 'topleft' }).addTo(map);

@@ -388,7 +388,6 @@ https://www.maranellosd.com/menu
 https://www.telefericbarcelona.com/the-social-hour
 
 
-
 # Left over: link wikis for prod
 
 As of 2026-10-04. Prod's Anthropic key has no credit, so its link wikis are written here and sent over the API (docs/okf/api/source-wikis.md, memory note prebuilt-wikis).

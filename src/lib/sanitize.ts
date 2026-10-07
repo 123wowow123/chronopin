@@ -1,7 +1,7 @@
 import sanitizeHtml from 'sanitize-html';
 import { numberCitations, orderEvidence } from './citations';
 import type { Evidence } from './referenceConfidence';
-import { relativeSiteUrl } from './siteLinks';
+import { externalLinkAttributes, relativeSiteUrl } from './siteLinks';
 
 // Pin descriptions and summaries are stored as HTML (bulleted key points,
 // links). The Angular app rendered them with sanitising turned off; this keeps
@@ -10,10 +10,10 @@ import { relativeSiteUrl } from './siteLinks';
 export function safeHtml(html: string | null | undefined): string {
   return sanitizeHtml(html || '', {
     allowedTags: ['p', 'br', 'ul', 'ol', 'li', 'b', 'strong', 'i', 'em', 's', 'u', 'a', 'h3', 'h4', 'blockquote', 'code', 'table', 'caption', 'thead', 'tbody', 'tr', 'th', 'td'],
-    allowedAttributes: { a: ['href', 'title'], th: ['colspan', 'rowspan', 'scope'], td: ['colspan', 'rowspan'] },
+    allowedAttributes: { a: ['href', 'title', 'target', 'rel'], th: ['colspan', 'rowspan', 'scope'], td: ['colspan', 'rowspan'] },
     allowedSchemes: ['http', 'https', 'mailto'],
     transformTags: {
-      a: (tagName, attribs) => ({ tagName, attribs: { ...attribs, ...(attribs.href ? { href: relativeSiteUrl(attribs.href) } : {}), rel: 'noopener nofollow ugc', target: '_blank' } }),
+      a: (tagName, attribs) => ({ tagName, attribs: { ...(attribs.title ? { title: attribs.title } : {}), ...(attribs.href ? { href: relativeSiteUrl(attribs.href) } : {}), rel: 'nofollow ugc', ...externalLinkAttributes(attribs.href, 'nofollow ugc') } }),
     },
   });
 }

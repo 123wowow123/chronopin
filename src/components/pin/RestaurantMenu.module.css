@@ -43,3 +43,5 @@
 .offerSource { margin-top:12px; }
 @media(max-width:700px) { .header { padding:20px; } .body { padding:18px 20px 20px; } .pane .title { font-size:28px; } .categories { grid-template-columns:1fr; gap:24px; } .tabs { gap:6px; } .tab { padding:8px 13px; font-size:12px; } .menuItems { max-height:36rem; } }
 @media(prefers-reduced-motion:reduce) { .tab { transition:none; } }
+
+.sections { margin-top:20px; }

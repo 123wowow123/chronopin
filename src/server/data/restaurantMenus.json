@@ -3607,5 +3607,2741 @@
       }
     ],
     "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.kinemusubi.com/",
+    "name": "Kine Musubi",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Published menu",
+        "url": "https://www.kinemusubi.com/",
+        "coverage": "published",
+        "items": [],
+        "note": "The operator’s published menu image. Confirm current availability with the shop.",
+        "documentUrl": "https://images.squarespace-cdn.com/content/v1/659afdc1a6b9d854dcd4a466/17942e3f-1e1d-4a86-92e4-b706bbf4ea83/kine-musubi-menu-new.jpg",
+        "pages": [
+          {
+            "src": "/restaurant-images/new-york/openings/kine-musubi.webp",
+            "width": 1200,
+            "height": 1800
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://ny.eater.com/news/413569/nyc-new-restaurant-openings-september-2026#anderson",
+    "name": "Anderson Cafe & Restaurant",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://148noblestreet.com/",
+    "name": "148 Noble Street",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Menus",
+        "url": "https://148noblestreet.com/menus.html",
+        "coverage": "link",
+        "items": [],
+        "note": "The restaurant links its current menus from this page. Consult the original for changing dishes and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/new-york/guides/nyc-fall-restaurant-openings-2026#one-bryant-park",
+    "name": "One Bryant Park",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/new-york/guides/nyc-fall-restaurant-openings-2026#iara",
+    "name": "Iara",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/new-york/guides/nyc-fall-restaurant-openings-2026#pari",
+    "name": "Pari",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.maree.la/",
+    "name": "Marée",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "À la carte",
+        "url": "https://www.maree.la/themenu",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Yellowtail crudo",
+            "category": "Menu",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Spaghetti vongole",
+            "category": "Menu",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Dry-aged dorade",
+            "category": "Menu",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Veal sausage",
+            "category": "Menu",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Canard à la ravigote",
+            "category": "Menu",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Dry-aged rib eye",
+            "category": "Menu",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Hamburger au poivre",
+            "category": "Menu",
+            "priceLabel": "Price not published"
+          }
+        ],
+        "note": "Selected dishes from the operator’s menu. The published page does not list prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://gable.la/",
+    "name": "Gable",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://gable.la/menus",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Little gem & chicory salad",
+            "category": "Appetizers",
+            "price": 22
+          },
+          {
+            "name": "Chopped tuna crudo",
+            "category": "Appetizers",
+            "price": 26
+          },
+          {
+            "name": "Beef tartare",
+            "category": "Appetizers",
+            "price": 28
+          },
+          {
+            "name": "Fennel cavatelli",
+            "category": "Pasta",
+            "price": 27
+          },
+          {
+            "name": "Smoked tomato agnolotti",
+            "category": "Pasta",
+            "price": 26
+          },
+          {
+            "name": "Pappardelle with duck ragu",
+            "category": "Pasta",
+            "price": 29
+          },
+          {
+            "name": "The Runyon",
+            "category": "Pizza",
+            "price": 24
+          },
+          {
+            "name": "Catalina",
+            "category": "Pizza",
+            "price": 29
+          },
+          {
+            "name": "6th and Wilshire",
+            "category": "Pizza",
+            "price": 26
+          },
+          {
+            "name": "Seared scallops",
+            "category": "Wood fire",
+            "price": 48
+          },
+          {
+            "name": "Half-chicken",
+            "category": "Wood fire",
+            "price": 40
+          },
+          {
+            "name": "Dry-aged cheeseburger",
+            "category": "Wood fire",
+            "price": 28
+          },
+          {
+            "name": "Pork chop",
+            "category": "Wood fire",
+            "price": 46
+          },
+          {
+            "name": "Hanger steak",
+            "category": "Wood fire",
+            "price": 44
+          },
+          {
+            "name": "Grilled branzino to share",
+            "category": "Wood fire",
+            "price": 72
+          }
+        ],
+        "note": "Selected dinner dishes. The original menu also includes desserts and drinks."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/los-angeles/guides/la-fall-restaurant-openings-2026#spacca-tutto",
+    "name": "Spacca Tutto",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/los-angeles/guides/la-fall-restaurant-openings-2026#kozo",
+    "name": "Kozo Los Angeles",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/los-angeles/guides/la-fall-restaurant-openings-2026#kyu",
+    "name": "KYU Los Angeles",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.littleluckla.com/",
+    "name": "Little Luck",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-bernardin",
+    "name": "Le Bernardin",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Lunch",
+        "url": "https://www.le-bernardin.com/menus/dining-room/lunch",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Three-course prix fixe",
+            "category": "Lunch",
+            "price": 142
+          }
+        ],
+        "note": "Choose courses from the full published menu. Supplements may apply.",
+        "documentUrl": "https://www.le-bernardin.com/content/pdfs/lunch-10.2.pdf"
+      },
+      {
+        "label": "Dinner",
+        "url": "https://www.le-bernardin.com/menus/dining-room/dinner",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Four-course prix fixe",
+            "category": "Dinner",
+            "price": 225
+          }
+        ],
+        "documentUrl": "https://www.le-bernardin.com/content/pdfs/dinner-9.11.pdf"
+      },
+      {
+        "label": "Chef’s tasting",
+        "url": "https://www.le-bernardin.com/menus/dining-room/chef-s-tasting",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Chef’s tasting menu",
+            "category": "Tasting menu",
+            "price": 350
+          },
+          {
+            "name": "Chef’s tasting with wine pairing",
+            "category": "Tasting menu",
+            "price": 530
+          }
+        ],
+        "documentUrl": "https://www.le-bernardin.com/content/pdfs/chef-s-tasting-9.28.26.pdf"
+      }
+    ],
+    "specials": [
+      {
+        "kind": "lunch",
+        "title": "City Harvest lunch — $98",
+        "description": "Three courses in the Lounge, with $5 donated to City Harvest.",
+        "schedule": "Lunch only",
+        "conditions": [
+          "Offered exclusively in the Lounge.",
+          "The menu changes weekly."
+        ],
+        "sourceUrl": "https://www.le-bernardin.com/menus/lounge/city-harvest"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurant/the-four-horsemen",
+    "name": "The Four Horsemen",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/superiority-burger",
+    "name": "Superiority Burger",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://menus.fyi/8604704",
+        "coverage": "link",
+        "items": [],
+        "note": "The menu provider linked by the restaurant’s official website. Open the original to see the current dishes and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/providence",
+    "name": "Providence",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://providencela.com/dinner/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Classic tasting menu",
+            "category": "Tasting menus",
+            "price": 375
+          },
+          {
+            "name": "Chef’s tasting menu",
+            "category": "Tasting menus",
+            "price": 495
+          },
+          {
+            "name": "Oysters — six",
+            "category": "Optional additions",
+            "price": 36
+          },
+          {
+            "name": "Uni egg",
+            "category": "Optional additions",
+            "price": 40
+          },
+          {
+            "name": "Sustainable caviar",
+            "category": "Optional additions",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Salt-roasted spot prawns",
+            "category": "Optional additions",
+            "priceLabel": "Market price"
+          }
+        ],
+        "note": "Menu prices exclude tax and gratuity. Seasonal courses and optional additions change."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/holbox",
+    "name": "Holbox",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Seafood",
+        "url": "https://www.holboxla.com/menu.html",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Ceviche de Atun",
+            "category": "Ceviches",
+            "price": 28
+          },
+          {
+            "name": "Ceviche Mixto",
+            "category": "Ceviches",
+            "price": 23
+          },
+          {
+            "name": "Ceviche de Kanpachi",
+            "category": "Ceviches",
+            "price": 24
+          },
+          {
+            "name": "Smoked Kanpachi Tostada",
+            "category": "Tostadas",
+            "price": 11
+          },
+          {
+            "name": "Tuna Tartare Tostada",
+            "category": "Tostadas",
+            "price": 10
+          },
+          {
+            "name": "Scallop Aguachile",
+            "category": "Aguachiles",
+            "price": 17
+          },
+          {
+            "name": "Shrimp Aguachile",
+            "category": "Aguachiles",
+            "price": 28
+          },
+          {
+            "name": "Smoked Kanpachi Taco",
+            "category": "Tacos",
+            "price": 8
+          },
+          {
+            "name": "Baja Fish Taco",
+            "category": "Tacos",
+            "price": 7
+          },
+          {
+            "name": "Baja Shrimp Taco",
+            "category": "Tacos",
+            "price": 6
+          },
+          {
+            "name": "Scallop Taco",
+            "category": "Tacos",
+            "price": 9
+          },
+          {
+            "name": "Pescado a las Brasas",
+            "category": "Entrees",
+            "price": 31
+          },
+          {
+            "name": "Camarones al Mojo",
+            "category": "Entrees",
+            "price": 32
+          },
+          {
+            "name": "Sopa de Mariscos",
+            "category": "Entrees",
+            "price": 26
+          },
+          {
+            "name": "Churros & Chocolate Sauce",
+            "category": "Dessert",
+            "price": 7
+          }
+        ],
+        "note": "Selected dishes from the October 6 menu. The restaurant changes its menu daily according to seafood availability."
+      },
+      {
+        "label": "Tasting menu",
+        "url": "https://www.holboxla.com/tasting-menu.html",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Eight-course tasting menu",
+            "category": "Tasting menu",
+            "price": 130
+          }
+        ],
+        "note": "Wednesday and Thursday counter seatings at 6 pm and 8 pm. Reservations through Resy; tax and an 18% service charge are additional."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/guelaguetza",
+    "name": "Guelaguetza",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Breakfast",
+        "url": "https://guelaguetzarestaurant.toast.site/menu",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Chilaquiles al gusto",
+            "category": "Breakfast",
+            "price": 16.5
+          },
+          {
+            "name": "Huevos 3 salsa",
+            "category": "Breakfast",
+            "price": 16
+          },
+          {
+            "name": "Huevos Divorciados",
+            "category": "Breakfast",
+            "price": 16.5
+          },
+          {
+            "name": "Huevos Rancheros",
+            "category": "Breakfast",
+            "price": 16.5
+          },
+          {
+            "name": "Salsa De Chorizo",
+            "category": "Breakfast",
+            "price": 17
+          },
+          {
+            "name": "Chocolate De Agua",
+            "category": "Hot drinks",
+            "price": 7
+          },
+          {
+            "name": "Chocolate De Leche",
+            "category": "Hot drinks",
+            "price": 7
+          },
+          {
+            "name": "Cafe De Olla",
+            "category": "Hot drinks",
+            "price": 5
+          },
+          {
+            "name": "Champurrado",
+            "category": "Hot drinks",
+            "price": 7.5
+          },
+          {
+            "name": "Atole",
+            "category": "Hot drinks",
+            "price": 6.5
+          }
+        ],
+        "note": "Selected items from the restaurant’s official ordering menu."
+      },
+      {
+        "label": "Lunch, dinner & bar",
+        "url": "https://guelaguetzarestaurant.toast.site/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s full menu for its current mole dishes, drinks, and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/san-francisco/guides/new-san-francisco-restaurant-openings#handroll-hawker",
+    "name": "Handroll Hawker",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/san-francisco/guides/new-san-francisco-restaurant-openings#florecita",
+    "name": "Florecita",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/san-francisco/guides/new-san-francisco-restaurant-openings#sergeant-ma",
+    "name": "Sergeant Ma",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.sergeantma.com/dinner",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Poached prawn cocktail",
+            "category": "Starters",
+            "price": 22
+          },
+          {
+            "name": "Lobster salad",
+            "category": "Salads",
+            "price": 33
+          },
+          {
+            "name": "Grilled Spanish octopus",
+            "category": "Small plates",
+            "price": 26
+          },
+          {
+            "name": "Lobster mafaldine",
+            "category": "Pasta",
+            "price": 38
+          }
+        ],
+        "note": "Selected dishes from the operator’s current dinner menu; availability and prices can change."
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Early evening service in the lounge and around the fire pits.",
+        "schedule": "Monday–Friday, 4–5:30 pm",
+        "conditions": [
+          "Lounge and fire pits only; unavailable in the dining room."
+        ],
+        "sourceUrl": "https://www.sergeantma.com/dinner"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.eatolivejuice.com/",
+    "name": "Olive Juice",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Opening menu",
+        "url": "https://www.eatolivejuice.com/menus/",
+        "coverage": "link",
+        "items": [],
+        "note": "The operator has published a pop-up menu ahead of opening. Service and availability remain subject to launch plans."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://sfstandard.com/2026/09/29/sf-best-new-restaurants-bars-october/#15-romolo",
+    "name": "15 Romolo",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://jayhotelsf.com/eat-drink/shinka/",
+    "name": "Shinka",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.blackbriarchi.com/",
+    "name": "Black Briar",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://gunnyspub.com/",
+    "name": "Gunny’s Pub",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dining room & bar",
+        "url": "https://gunnyspub.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "The operator updates its dining room and bar menus frequently; the bar menu also covers lunch."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://victoryandvicechicago.com/",
+    "name": "Victory & Vice",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food",
+        "url": "https://victoryandvicechicago.com/menu",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Salmon dip",
+            "category": "Starters",
+            "price": 18
+          },
+          {
+            "name": "Chicken wings",
+            "category": "Starters",
+            "price": 19
+          },
+          {
+            "name": "Tuna nachos",
+            "category": "Starters",
+            "price": 19
+          },
+          {
+            "name": "Gyro empanadas",
+            "category": "Starters",
+            "price": 16
+          },
+          {
+            "name": "Bulgogi cheesesteak",
+            "category": "Sandwiches",
+            "price": 19
+          }
+        ],
+        "note": "Selected items checked October 6, 2026. Menus and prices can change."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://chicago.eater.com/restaurant-news/169239/anticipated-new-chicago-restaurants-opening-fall-2026#molino-los-hermanos",
+    "name": "Molino Los Hermanos",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://chicago.eater.com/restaurant-news/169239/anticipated-new-chicago-restaurants-opening-fall-2026#cha-chin",
+    "name": "Cha Chin",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://chicago.eater.com/restaurant-news/169239/anticipated-new-chicago-restaurants-opening-fall-2026#gibsons-tavern",
+    "name": "Gibsons Tavern",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.mackallens.com/",
+    "name": "Mack Allen’s",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.mackallens.com/menus/dinner",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Escargots",
+            "category": "Appetizers",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "Saffron scallops",
+            "category": "Appetizers",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "Smoked pork belly",
+            "category": "Appetizers",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "Chilean seabass",
+            "category": "Entrees",
+            "priceLabel": "Price not listed"
+          }
+        ],
+        "note": "The operator publishes dish descriptions without prices; confirm pricing before ordering."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.trill-burgers.com/#westheimer",
+    "name": "Trill Burgers — Westheimer",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Brand menu",
+        "url": "https://www.trill-burgers.com/",
+        "coverage": "link",
+        "items": [],
+        "note": "The official brand site publishes its menu as images. Confirm Westheimer-specific pricing and availability with the restaurant."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.houstonpress.com/restaurants/openings-and-closings-the-branch-is-open-trill-4-arrives/#tapestry",
+    "name": "Tapestry",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.houstonpress.com/restaurants/openings-and-closings-the-branch-is-open-trill-4-arrives/#the-bixby",
+    "name": "The Bixby",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.houstonchronicle.com/food-restaurants/article/little-bird-heights-opening-22416342.php/#little-bird",
+    "name": "Little Bird",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.barbludorn.com/#the-woodlands",
+    "name": "Bar Bludorn — The Woodlands",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://eggbred.com/#phoenix",
+    "name": "EggBred",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Brand menu",
+        "url": "https://eggbred.com/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "The official brand menu covers breakfast and lunch; confirm Phoenix-specific prices and availability when ordering."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://grandiosophoenix.com/",
+    "name": "Grandioso",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Pizza & sides",
+        "url": "https://grandiosophoenix.com/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "The Gran Dioso pizza",
+            "category": "18-inch pizza",
+            "price": 30
+          },
+          {
+            "name": "Pushing P pizza",
+            "category": "18-inch pizza",
+            "price": 25
+          },
+          {
+            "name": "White Iverson pizza",
+            "category": "18-inch pizza",
+            "price": 26
+          },
+          {
+            "name": "Cheezus pizza",
+            "category": "18-inch pizza",
+            "price": 22
+          },
+          {
+            "name": "Market salad",
+            "category": "Salads",
+            "price": 8
+          }
+        ],
+        "note": "Published ordering-menu prices. Items may be unavailable when online ordering is closed."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://solunaeatsaz.com/",
+    "name": "SoLuna Eats",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://phosedonaaz.com/",
+    "name": "Pho Sedona",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://phosedonaaz.com/menu.php",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for current items, availability and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://zanespizzaicecream.com/",
+    "name": "Zane’s Pizza & Ice Cream",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Pizza & ice cream",
+        "url": "https://zanespizzaicecream.com/menu#menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for current items, availability and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.whatsopening.com/az/phoenix/downtown-phoenix#salta",
+    "name": "Salta",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://amar-sa.com/",
+    "name": "Amar",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.sixtyvines.com/#san-antonio",
+    "name": "Sixty Vines — La Cantera",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "San Antonio menu",
+        "url": "https://www.sixtyvines.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Select the San Antonio location on the operator’s menu page for current dishes and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.visitsanantonio.com/media/media-kit/whats-new-in-san-antonio/#rosso",
+    "name": "Rosso",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.visitsanantonio.com/media/media-kit/whats-new-in-san-antonio/#barberry",
+    "name": "Barberry",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.lostiosrestaurant.com/#alamo-heights",
+    "name": "Los Tios — Alamo Heights",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://zenitarooftop.com/",
+    "name": "Zenita",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Breakfast & brunch",
+        "url": "https://zenitarooftop.com/menu/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Pan con tomate",
+            "category": "Breakfast",
+            "price": 17
+          },
+          {
+            "name": "Morning empanadas",
+            "category": "Breakfast",
+            "price": 21
+          },
+          {
+            "name": "Churro French toast",
+            "category": "Breakfast",
+            "price": 17
+          },
+          {
+            "name": "Charred octopus",
+            "category": "Brunch",
+            "price": 31
+          },
+          {
+            "name": "Stir fry paella",
+            "category": "Brunch",
+            "price": 49
+          }
+        ],
+        "note": "Selected items from the operator’s published menu. Restaurant opening date and service availability remain unconfirmed."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.carolynsvietnamese.com/",
+    "name": "Carolyn’s Modern Vietnamese",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.carolynsvietnamese.com/menu",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Tofu hummus",
+            "category": "Small plates",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "Daikon grits fries",
+            "category": "Small plates",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "Chicken liver mousse",
+            "category": "Small plates",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "Corn & crab congee",
+            "category": "Large plates",
+            "priceLabel": "Price not listed"
+          }
+        ],
+        "note": "The operator publishes dishes without prices; confirm pricing with the restaurant."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://aogamiphilly.com/",
+    "name": "Aogami",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://pancophilly.com/",
+    "name": "Panco",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Takeout menu",
+        "url": "https://pancophilly.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for current items, availability and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.ayatnyc.com/#philadelphia",
+    "name": "Ayat — Center City",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.fielddayphilly.com/",
+    "name": "Field Day",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.kamparphilly.com/",
+    "name": "Kampar",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.elephanterestaurants.com/location/dallas/",
+    "name": "Élephante",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Lunch",
+        "url": "https://www.elephanterestaurants.com/menus-dallas/#lunch",
+        "coverage": "link",
+        "items": [],
+        "note": "Dallas-specific menu; open the operator’s page for current dishes and prices."
+      },
+      {
+        "label": "Brunch",
+        "url": "https://www.elephanterestaurants.com/menus-dallas/#brunch",
+        "coverage": "link",
+        "items": [],
+        "note": "Dallas-specific menu; open the operator’s page for current dishes and prices."
+      },
+      {
+        "label": "Dinner",
+        "url": "https://www.elephanterestaurants.com/menus-dallas/#dinner",
+        "coverage": "link",
+        "items": [],
+        "note": "Dallas-specific menu; open the operator’s page for current dishes and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://marlowelounge.com/",
+    "name": "Marlowe",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://bluebonnetandthyme.com/",
+    "name": "Bluebonnet & Thyme",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://bluebonnetandthyme.com/menu-new/",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for current items, availability and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.docentsteak.com/",
+    "name": "Docent Steak & Lounge",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food",
+        "url": "https://www.docentsteak.com/menus/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Lump crab cake",
+            "category": "Appetizers",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "Kobe potstickers",
+            "category": "Appetizers",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "Filet mignon, 8 oz",
+            "category": "Prime cuts",
+            "priceLabel": "Price not listed"
+          },
+          {
+            "name": "NY strip, 16 oz",
+            "category": "Prime cuts",
+            "priceLabel": "Price not listed"
+          }
+        ],
+        "note": "The published menu lists cuts and dishes without prices. Confirm service availability and prices with the restaurant."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.papercitymag.com/restaurants/dallas-restaurant-openings-this-fall/#river-sing",
+    "name": "River Sing",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.casapio.rest/",
+    "name": "Casa Pio",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/californios",
+    "name": "Californios",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/state-bird-provisions",
+    "name": "State Bird Provisions",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Sample dinner menu",
+        "url": "https://www.statebirdsf.com/s/10426-SBP-Kitchen-Menu.pdf",
+        "coverage": "link",
+        "items": [],
+        "note": "The operator publishes a changing sample menu; the dishes offered on your visit may differ."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/nari",
+    "name": "Nari",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.narisf.com/food-menu",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Gaeng gradang tod",
+            "category": "Small bites",
+            "price": 15
+          },
+          {
+            "name": "Yum tawai",
+            "category": "Salads",
+            "price": 24
+          },
+          {
+            "name": "Som tum khao pod",
+            "category": "Salads",
+            "price": 22
+          },
+          {
+            "name": "Laab jin",
+            "category": "Salads",
+            "price": 29
+          },
+          {
+            "name": "Naem khao tod",
+            "category": "Salads",
+            "price": 30
+          }
+        ],
+        "note": "Selected items checked October 6, 2026. Menus and prices can change."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/illinois/chicago/restaurant/oriole",
+    "name": "Oriole",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://www.oriolechicago.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/illinois/chicago/restaurant/lula-cafe",
+    "name": "Lula Cafe",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://www.lulacafe.com/menus/",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/illinois/chicago/restaurant/carino",
+    "name": "Cariño",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://www.carinochicago.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/houston_2986624/restaurant/march",
+    "name": "MARCH",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://www.marchrestaurant.com/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/houston_2986624/restaurant/bcn-taste-tradition",
+    "name": "BCN Taste & Tradition",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://www.bcnhouston.com/menus/",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/houston_2986624/restaurant/truth-bbq",
+    "name": "Truth BBQ",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Houston menu",
+        "url": "https://order.toasttab.com/online/truth-bbq-htx-110-s-heights-blvd",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Brisket sandwich",
+            "category": "Sandwiches",
+            "price": 16
+          },
+          {
+            "name": "Brisket banh mi",
+            "category": "Sandwiches",
+            "price": 18
+          },
+          {
+            "name": "Pulled pork sandwich",
+            "category": "Sandwiches",
+            "price": 16
+          },
+          {
+            "name": "Jalapeno cheddar sausage link",
+            "category": "Meats",
+            "price": 9
+          },
+          {
+            "name": "Carrot cake slice",
+            "category": "Desserts",
+            "price": 8.99
+          }
+        ],
+        "note": "Selected items checked October 6, 2026. Menus and prices can change."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/arizona/phoenix_2875757/restaurant/bacanora",
+    "name": "Bacanora",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.bacanoraphx.com/menu",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Embered elote",
+            "category": "Starters",
+            "price": 11
+          },
+          {
+            "name": "Frijol dip",
+            "category": "Starters",
+            "price": 16
+          },
+          {
+            "name": "Cucumber salad",
+            "category": "Salads",
+            "price": 18
+          },
+          {
+            "name": "Bone marrow",
+            "category": "Starters",
+            "price": 24
+          },
+          {
+            "name": "Calabasitas",
+            "category": "Vegetables",
+            "price": 22
+          }
+        ],
+        "note": "Selected dishes from the operator’s frequently changing dinner menu; availability varies."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/arizona/phoenix_2875757/restaurant/pizzeria-bianco-1246609",
+    "name": "Pizzeria Bianco — Heritage Square",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Heritage Square menu",
+        "url": "https://www.pizzeriabianco.com/pizzeria-bianco-heritage-square",
+        "coverage": "link",
+        "items": [],
+        "note": "The operator links a sample menu dated April 2023. Current pricing remains unverified; confirm with the restaurant."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/arizona/phoenix_2875757/restaurant/fry-bread-house",
+    "name": "Fry Bread House",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://www.azfrybreadhouse.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/san-antonio_2958156/restaurant/mixtli",
+    "name": "Mixtli",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://restaurantmixtli.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/san-antonio_2958156/restaurant/cullum-s-attaboy",
+    "name": "Cullum’s Attaboy",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Breakfast & lunch",
+        "url": "https://www.cullumsattaboy.com/s/Attaboy-DayMenu-Oct-25-85X11-FINAL.pdf",
+        "coverage": "link",
+        "items": [],
+        "note": "The operator’s currently linked breakfast and lunch PDF is dated October 2025; confirm current prices with the restaurant."
+      },
+      {
+        "label": "Dinner",
+        "url": "https://www.cullumsattaboy.com/s/Attaboy-DinnerMenu-Oct-25-85X11-FINAL.pdf",
+        "coverage": "link",
+        "items": [],
+        "note": "The operator’s currently linked dinner PDF is dated October 2025; confirm current prices with the restaurant."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/san-antonio_2958156/restaurant/ladino",
+    "name": "Ladino",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://ladinosatx.com/menus/dinner-menu",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Hummus",
+            "category": "Dips",
+            "price": 14
+          },
+          {
+            "name": "Spicy feta",
+            "category": "Dips",
+            "price": 10
+          },
+          {
+            "name": "Beet muhammara",
+            "category": "Dips",
+            "price": 10
+          },
+          {
+            "name": "Shishbarak",
+            "category": "Hot meze",
+            "price": 17
+          },
+          {
+            "name": "Mushroom shawarma",
+            "category": "Mains",
+            "price": 24
+          }
+        ],
+        "note": "Selected items checked October 6, 2026. Menus and prices can change."
+      },
+      {
+        "label": "Turkish brunch",
+        "url": "https://ladinosatx.com/menus/turkish-brunch",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for current items, availability and prices."
+      },
+      {
+        "label": "Happy hour",
+        "url": "https://ladinosatx.com/menus/happy-hour-menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for current items, availability and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/pennsylvania/philadelphia_2942787/restaurant/friday-saturday-sunday",
+    "name": "Friday Saturday Sunday",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Tasting menu",
+        "url": "https://www.fridaysaturdaysunday.com/eat",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Chef’s tasting menu",
+            "category": "Per person",
+            "price": 205
+          }
+        ],
+        "note": "Published per-person price excludes tax and tip. Courses change with the season."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/pennsylvania/philadelphia_2942787/restaurant/her-place-supper-club",
+    "name": "Her Place Supper Club",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://www.herplacephilly.com/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/pennsylvania/philadelphia_2942787/restaurant/kalaya",
+    "name": "Kalaya",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://kalayaphilly.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/dallas_2954570/restaurant/tatsu-dallas",
+    "name": "Tatsu Dallas",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Omakase",
+        "url": "https://www.tatsu-dallas.com/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Seasonal omakase",
+            "category": "Tasting menu",
+            "priceLabel": "Price not published"
+          }
+        ],
+        "note": "The operator describes appetizers, nigiri, a hand roll, soup and dessert. Confirm the current price when booking."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/dallas_2954570/restaurant/lucia-1209114",
+    "name": "Lucia",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Sample dinner menu",
+        "url": "https://www.luciadallas.com/#",
+        "coverage": "link",
+        "items": [],
+        "note": "The operator publishes a changing sample menu; the dishes offered on your visit may differ."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/dallas_2954570/restaurant/cattleack-barbeque",
+    "name": "Cattleack Barbeque",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Current menu",
+        "url": "https://cattleackbbq.com/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "Open the restaurant’s official menu for its current dining options and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#teo-teo",
+    "name": "Teo Teo",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.instagram.com/anakomiami/",
+    "name": "Anako",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#flaky",
+    "name": "Flaky",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#kush-wynwood",
+    "name": "Kush — Wynwood",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.instagram.com/royalenapoletana/",
+    "name": "Royale Pizza Napoletana",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#genghis-cohen-miami",
+    "name": "Genghis Cohen — Miami",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://thehawksmoor.com/us/locations/boston/",
+    "name": "Hawksmoor — Boston",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.celineboston.com/",
+    "name": "Celine",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.celineboston.com/menus",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Poutine",
+            "category": "Dinner",
+            "price": 15
+          },
+          {
+            "name": "Celine Burger",
+            "category": "Dinner",
+            "price": 23
+          },
+          {
+            "name": "Steak Frites",
+            "category": "Dinner",
+            "price": 35
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://boston.eater.com/restaurant-news/124663/boston-restaurants-fall-2026-openings-preview#harry-hares",
+    "name": "Harry Hare’s",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.jazzurbanecafe.com/",
+    "name": "Jazz Urbane Cafe",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://boston.eater.com/restaurant-news/124663/boston-restaurants-fall-2026-openings-preview#session-house",
+    "name": "Session House",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.ebisuyamarket.com/",
+    "name": "Ebisuya Market",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/seattle/reviews/goodmart#goodmart",
+    "name": "GoodMart",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#rubys",
+    "name": "Rubys",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://tazseattle.com/",
+    "name": "Taz + Kohta",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#janta",
+    "name": "Janta",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#pearl-diver",
+    "name": "Pearl Diver",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#cairo-seattle",
+    "name": "Cairo",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.asadolife.com/what-to-know",
+    "name": "Asado Life — Jacksonville",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.jaxdailyrecord.com/news/2026/sep/18/habit-burger-opening-sept-21-in-river-city-marketplace/#habit-river-city",
+    "name": "Habit Burger & Grill — River City",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.whatsopening.com/fl/jacksonville/restaurants#sweetgreen-jacksonville",
+    "name": "Sweetgreen — Jacksonville",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.jaxdailyrecord.com/news/2026/sep/25/boathouse-avondale-set-to-open-around-thanksgiving/#boathouse-avondale",
+    "name": "Boathouse Avondale",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.news4jax.com/news/local/2026/08/26/new-italian-restaurant-announced-in-five-points-theater-building/#dalmoros-jacksonville",
+    "name": "Dalmoros Fresh Italian — Jacksonville",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.whatsopening.com/fl/jacksonville/restaurants#happy-medium-cafe",
+    "name": "Happy Medium Books Café",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://fortworthfounded.com/fort-worths-newest-restaurants-and-bars-now-open-and-opening-soon-september-2026/#j-raes-fort-worth",
+    "name": "J. Rae’s Bakery — Fort Worth",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://mariscoscortez.com/",
+    "name": "Mariscos Cortez",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.avefortworth.com/",
+    "name": "Ave Modern Mediterranean",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://fortworthfounded.com/fort-worths-newest-restaurants-and-bars-now-open-and-opening-soon-september-2026/#flora-house",
+    "name": "Flora House",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://fortworthfounded.com/fort-worths-newest-restaurants-and-bars-now-open-and-opening-soon-september-2026/#beverlys-downtown",
+    "name": "Beverly’s Downtown",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.musumedallas.com/fort-worth-tx",
+    "name": "Musume — Fort Worth",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://escuelafarm.com/home",
+    "name": "Escuela",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.benandlynns.com/",
+    "name": "Ben & Lynn’s",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/austin/guides/austin-new-restaurant-openings#panciuto-austin",
+    "name": "Panciuto",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/austin/guides/austin-fall-restaurant-openings-2026#nishi-austin",
+    "name": "Nishi",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/austin/guides/austin-fall-restaurant-openings-2026#chista-austin",
+    "name": "Chista",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/austin/guides/austin-fall-restaurant-openings-2026#shola-austin",
+    "name": "Shola",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.eatatignite.com/",
+    "name": "Ignite",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.thesanjoseblog.com/2026/09/bitterbuck-soft-opens-today-in-fountain.html#bitterbuck",
+    "name": "BitterBuck",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.bizjournals.com/sanjose/news/2026/08/06/grande-pizzeria-san-jose-reopening.html#grande-pizzeria",
+    "name": "Grande Pizzeria",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.whatsopening.com/ca/san-jose/restaurants#tejer-san-jose",
+    "name": "Tejer",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.whatsopening.com/ca/san-jose/restaurants#tai-er-valley-fair",
+    "name": "Tai Er Sichuan Cuisine — Valley Fair",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.whatsopening.com/ca/san-jose/restaurants#tang-bar-san-jose",
+    "name": "Tang Bar — San Jose",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.guardandgrace.com/charlotte",
+    "name": "Guard and Grace — Charlotte",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.raicesclt.com/",
+    "name": "Raíces",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.raicesclt.com/menus",
+        "coverage": "published",
+        "note": "Published menu pages linked by this restaurant, checked October 6, 2026. Availability and prices can change.",
+        "documentUrl": "https://www.raicesclt.com/s/Raices_Dinner_Menu_Sept.jpg",
+        "pages": [
+          {
+            "src": "/restaurant-images/charlotte/menus/raices-charlotte/dinner-1.webp",
+            "width": 1200,
+            "height": 2700
+          }
+        ],
+        "items": []
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://theminagroup.com/restaurants/sweet-july-cafe-charlotte/",
+    "name": "Sweet July Cafe — Charlotte",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://traceyknowscharlotte.com/blog/new-restaurants-charlotte-fall-2026/#fare-charlotte",
+    "name": "FARE — Charlotte",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://traceyknowscharlotte.com/blog/new-restaurants-charlotte-fall-2026/#bourbon-steak-charlotte",
+    "name": "Bourbon Steak — Charlotte",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.axios.com/local/charlotte/2026/08/19/roe-olivias-restaurant-lower-south-end-charlotte#roe-olivias",
+    "name": "Roe & Olivia’s",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.kvidabar.com/",
+    "name": "K Vida",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.kvidabar.com/menu/",
+        "coverage": "published",
+        "note": "Published menu pages linked by this restaurant, checked October 6, 2026. Availability and prices can change.",
+        "pages": [
+          {
+            "src": "/restaurant-images/columbus/menus/k-vida/menu-1.webp",
+            "width": 1600,
+            "height": 2239
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/k-vida/menu-2.webp",
+            "width": 914,
+            "height": 1280
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/k-vida/menu-3.webp",
+            "width": 914,
+            "height": 1280
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/k-vida/menu-4.webp",
+            "width": 915,
+            "height": 1280
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/k-vida/menu-5.webp",
+            "width": 1600,
+            "height": 2239
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/k-vida/menu-6.webp",
+            "width": 1600,
+            "height": 2239
+          }
+        ],
+        "items": []
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.blackponypizza.com/",
+    "name": "Black Pony Pizza",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.instagram.com/honeyboypizzeria/",
+    "name": "Honey Boy Pizzeria",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.columbusnavigator.com/new-restaurants-columbus/#valencia-bakery",
+    "name": "Valencia Bakery",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://braserosbarandgrill.com/",
+    "name": "Braseros Bar & Grill",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://braserosbarandgrill.com/",
+        "coverage": "published",
+        "note": "Published menu pages linked by this restaurant, checked October 6, 2026. Availability and prices can change.",
+        "documentUrl": "https://assets.cdn.filesafe.space/W8yDwXserH9JYlb1p0ec/media/69d62dcb3d829c73b2d17a53.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-2.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Appetizers, nachos & salads"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-3.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Brunch & lunch"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-4.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Combinations, vegetarian & kids"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-5.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Enchiladas & burritos"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-6.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Mexican favorites & tacos"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-7.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "From the grill"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-8.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Chicken & seafood"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-9.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Birria, fajitas & desserts"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-10.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Drinks"
+          },
+          {
+            "src": "/restaurant-images/columbus/menus/braseros-columbus/menu-1.webp",
+            "width": 1100,
+            "height": 1800,
+            "label": "Welcome"
+          }
+        ],
+        "items": []
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.metsisitalian.com/park-service-coffee-breakfast",
+    "name": "Park Service Coffee at Metsi’s",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Coffee",
+        "url": "https://www.metsisitalian.com/park-service-coffee-breakfast",
+        "coverage": "published",
+        "note": "All items published on the restaurant's Park Service page, checked October 6, 2026. Availability and prices can change.",
+        "items": [
+          {
+            "name": "Espresso",
+            "category": "espresso drinks",
+            "price": 4.0,
+            "note": "blend"
+          },
+          {
+            "name": "Espresso",
+            "category": "espresso drinks",
+            "price": 5.0,
+            "note": "single origin"
+          },
+          {
+            "name": "Americano",
+            "category": "espresso drinks",
+            "price": 4.0,
+            "note": "one shot of espresso blend and hot water"
+          },
+          {
+            "name": "Cortado",
+            "category": "espresso drinks",
+            "price": 5.0,
+            "note": "one shot of espresso blend and 2oz steamed milk"
+          },
+          {
+            "name": "Cappuccino",
+            "category": "espresso drinks",
+            "price": 5.0,
+            "note": "one shot of espresso blend and 6oz steamed milk"
+          },
+          {
+            "name": "Latte",
+            "category": "espresso drinks",
+            "price": 6.0,
+            "note": "one shot of espresso blend and 10oz steamed milk"
+          },
+          {
+            "name": "Drip Coffee",
+            "category": "coffee drinks",
+            "price": 4.0,
+            "note": "12 oz"
+          },
+          {
+            "name": "Drip Coffee",
+            "category": "coffee drinks",
+            "price": 5.0,
+            "note": "16 oz"
+          },
+          {
+            "name": "Pour Over Coffee",
+            "category": "coffee drinks",
+            "priceLabel": "MKT",
+            "note": "12 oz / 16 oz"
+          },
+          {
+            "name": "Cold Brew",
+            "category": "coffee drinks",
+            "price": 5.0,
+            "note": "12 oz"
+          },
+          {
+            "name": "Cold Brew",
+            "category": "coffee drinks",
+            "price": 6.0,
+            "note": "16 oz"
+          },
+          {
+            "name": "Chai Tea",
+            "category": "teas",
+            "price": 7.0,
+            "note": "12 oz"
+          },
+          {
+            "name": "Matcha Latte",
+            "category": "teas",
+            "price": 8.0,
+            "note": "12 oz"
+          },
+          {
+            "name": "Loose Leaf Tea",
+            "category": "teas",
+            "price": 5.0,
+            "note": "12 oz"
+          },
+          {
+            "name": "House-Made Syrups",
+            "category": "add-ons",
+            "price": 1.0,
+            "note": "vanilla, rose vanilla, spiced brown sugar, coconut lavendar, local honey, local maple, mocha"
+          }
+        ]
+      },
+      {
+        "label": "Food",
+        "url": "https://www.metsisitalian.com/park-service-coffee-breakfast",
+        "coverage": "published",
+        "note": "All items published on the restaurant's Park Service page, checked October 6, 2026. Availability and prices can change.",
+        "items": [
+          {
+            "name": "Zeppole",
+            "category": "sweet treats",
+            "price": 8.0,
+            "note": "ricotta donuts, cinnamon sugar (Veg, NF)"
+          },
+          {
+            "name": "Almond Cake",
+            "category": "sweet treats",
+            "price": 10.0,
+            "note": "gluten-free almond cake, powdered sugar (Veg, GF)"
+          },
+          {
+            "name": "Wood-Fired Pepper Quiche",
+            "category": "breakfast & lunch",
+            "price": 12.0,
+            "note": "balsamic-marinated peppers, oregano, eggs, savory tart (Veg, NF)"
+          },
+          {
+            "name": "Chicken Caesar Wrap",
+            "category": "breakfast & lunch",
+            "price": 12.0,
+            "note": "grilled chicken, caesar dressing, gem lettuce, parmesan (NF)"
+          },
+          {
+            "name": "Mortadella Sandwich",
+            "category": "breakfast & lunch",
+            "price": 12.0,
+            "note": "mortadella, mozzarella, arugula, pepperoncini, duke’s mayo, pomodoro, house-made sourdough focaccia (NF)"
+          },
+          {
+            "name": "Farro & Stone Fruit Salad",
+            "category": "breakfast & lunch",
+            "price": 12.0,
+            "note": "farro, grilled peaches, arugula, hearts of palm, lemon vinaigrette, DF basil pesto (Vegan, DF)"
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.boiaderestaurant.com/",
+    "name": "Boia De",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.boiaderestaurant.com/menus/",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Scallop Crudo",
+            "category": "Dinner",
+            "price": 30
+          },
+          {
+            "name": "Baked Clams",
+            "category": "Dinner",
+            "price": 16
+          },
+          {
+            "name": "Crispy Polenta",
+            "category": "Dinner",
+            "price": 16
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://arietecoconutgrove.com/",
+    "name": "Ariete",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://arietecoconutgrove.com/",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Bread Service",
+            "category": "Dinner",
+            "price": 10
+          },
+          {
+            "name": "Caviar Pastelito",
+            "category": "Dinner",
+            "price": 55
+          },
+          {
+            "name": "Grilled Oysters (2pc)",
+            "category": "Dinner",
+            "price": 15
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.cotekoreansteakhouse.com/locations/cotemiami",
+    "name": "COTE — Miami",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.astaboston.com/",
+    "name": "Asta",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.barvolpe.com/",
+    "name": "Bar Volpe",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.barvolpe.com/menus/",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Shrimp Toast",
+            "category": "Dinner",
+            "price": 14
+          },
+          {
+            "name": "Malloreddus",
+            "category": "Dinner",
+            "price": 25
+          },
+          {
+            "name": "Spaghetti al limone",
+            "category": "Dinner",
+            "price": 31
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.311boston.com/",
+    "name": "311 Omakase",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://canlis.com/",
+    "name": "Canlis",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://canlis.com/menu/",
+        "coverage": "sample",
+        "note": "Selected courses in a six-course dining experience; individual course prices are not listed.",
+        "items": [
+          {
+            "name": "Sashimi",
+            "category": "Dinner",
+            "priceLabel": "Included in tasting menu"
+          },
+          {
+            "name": "Chowder",
+            "category": "Dinner",
+            "priceLabel": "Included in tasting menu"
+          },
+          {
+            "name": "Halibut",
+            "category": "Dinner",
+            "priceLabel": "Included in tasting menu"
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.alturarestaurant.com/",
+    "name": "Altura",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://thewalrusbar.com/",
+    "name": "The Walrus and the Carpenter",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Food menu",
+        "url": "https://thewalrusbar.com/menu",
+        "coverage": "published",
+        "note": "Published menu pages linked by this restaurant, checked October 6, 2026. Availability and prices can change.",
+        "documentUrl": "https://sea-creatures-satellites.sfo3.digitaloceanspaces.com/walrus-carpenter/uploads/Walrus-Food-Menu-10.06.26.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/seattle/menus/walrus-carpenter/food-menu-1.webp",
+            "width": 1391,
+            "height": 1800
+          }
+        ],
+        "items": []
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://ruesaintmarc.com/",
+    "name": "Rue Saint-Marc",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://restaurantorsay.com/",
+    "name": "Restaurant Orsay",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.congareeandpenn.com/",
+    "name": "Congaree and Penn",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://goldeesbbq.com/",
+    "name": "Goldee’s Barbecue",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.panthercitybbq.com/",
+    "name": "Panther City BBQ",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.panthercitybbq.com/bbq-menu/",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Brisket",
+            "category": "Dinner",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Pork belly jalapeño poppers",
+            "category": "Dinner",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Brisket elote",
+            "category": "Dinner",
+            "priceLabel": "Price not published"
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://brixbarbecue.com/",
+    "name": "Brix Barbecue",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.barleyswine.com/",
+    "name": "Barley Swine",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://uchi.uchirestaurants.com/location/austin/",
+    "name": "Uchi — Austin",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.theinterstellarbbq.com/",
+    "name": "InterStellar BBQ",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://www.theinterstellarbbq.com/menu",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Peach Tea Glazed Pork Belly",
+            "category": "Dinner",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Tipsy Turkey",
+            "category": "Dinner",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Brisket",
+            "category": "Dinner",
+            "priceLabel": "Price not published"
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.adegarest.com/",
+    "name": "ADEGA",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.petiscosadega.com/",
+    "name": "Petiscos",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://petiscosadega.com/menu.html",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Codfish Cakes",
+            "category": "Dinner",
+            "price": 12
+          },
+          {
+            "name": "Octopus Salad",
+            "category": "Dinner",
+            "price": 19
+          },
+          {
+            "name": "Seafood Rice",
+            "category": "Dinner",
+            "price": 49
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.lunamexicankitchen.com/hours-and-locations/",
+    "name": "LUNA Mexican Kitchen — The Alameda",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.counterclt.com/",
+    "name": "Counter-",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.radaclt.com/",
+    "name": "Rada",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://haberdish.com/",
+    "name": "Haberdish",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Dinner",
+        "url": "https://haberdish.com/menu/",
+        "coverage": "published",
+        "note": "Published document linked by the restaurant on October 6, 2026. The dinner document is dated May 2025; lunch is April 2026. Confirm current prices with the restaurant.",
+        "documentUrl": "https://haberdish.com/wp-content/uploads/2025/05/Haberdish-Dinner-Menu.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/charlotte/menus/haberdish/dinner-1.webp",
+            "width": 1600,
+            "height": 885
+          }
+        ],
+        "items": []
+      },
+      {
+        "label": "Weekday lunch",
+        "url": "https://haberdish.com/menu/",
+        "coverage": "published",
+        "note": "Published document linked by the restaurant on October 6, 2026. The dinner document is dated May 2025; lunch is April 2026. Confirm current prices with the restaurant.",
+        "documentUrl": "https://haberdish.com/wp-content/uploads/2026/04/Haberdish-New-Lunch-Haber-Dish.pdf",
+        "pages": [
+          {
+            "src": "/restaurant-images/charlotte/menus/haberdish/weekday-lunch-1.webp",
+            "width": 1391,
+            "height": 1800
+          },
+          {
+            "src": "/restaurant-images/charlotte/menus/haberdish/weekday-lunch-2.webp",
+            "width": 1391,
+            "height": 1800
+          }
+        ],
+        "items": []
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://veritasrestaurant.com/",
+    "name": "Veritas",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Bar menu",
+        "url": "https://veritasrestaurant.com/menus-1",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Lobster roll",
+            "category": "Bar menu",
+            "price": 30
+          },
+          {
+            "name": "Potato Croquette",
+            "category": "Bar menu",
+            "price": 15
+          },
+          {
+            "name": "Confit Wings",
+            "category": "Bar menu",
+            "price": 18
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.dineatagni.com/",
+    "name": "Agni",
+    "checkedAt": "2026-10-06",
+    "menus": [
+      {
+        "label": "Bar menu",
+        "url": "https://www.dineatagni.com/menu",
+        "coverage": "sample",
+        "note": "Selected items from the restaurant’s published menu. See the original for the full selection and current availability.",
+        "items": [
+          {
+            "name": "Bulgogi Pierogi",
+            "category": "Bar menu",
+            "price": 17
+          },
+          {
+            "name": "Moo Ping",
+            "category": "Bar menu",
+            "price": 27
+          },
+          {
+            "name": "Typhoon Mushrooms",
+            "category": "Bar menu",
+            "price": 21
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.eatchapmans.com/",
+    "name": "Chapman’s Eat Market",
+    "checkedAt": "2026-10-06",
+    "menus": [],
+    "specials": []
   }
 ]

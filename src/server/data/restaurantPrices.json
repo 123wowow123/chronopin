@@ -1,0 +1,673 @@
+[
+  {
+    "pinSourceUrl": "https://148noblestreet.com/",
+    "name": "148 Noble Street",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/new-york/reviews/148-noble-street",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "148 Noble Street · 148 Noble St"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/new-york/guides/nyc-fall-restaurant-openings-2026#one-bryant-park",
+    "name": "One Bryant Park",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.theinfatuation.com/new-york/reviews/one-bryant-park",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "One Bryant Park · 135 W 42nd St"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/new-york/guides/nyc-fall-restaurant-openings-2026#iara",
+    "name": "Iara",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/new-york/reviews/iara",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Iara · 205 Allen St"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/new-york/guides/nyc-fall-restaurant-openings-2026#pari",
+    "name": "Pari",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/new-york/reviews/pari",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Pari · 138 N 8th StB"
+  },
+  {
+    "pinSourceUrl": "https://www.maree.la/",
+    "name": "Marée",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/los-angeles/reviews/maree",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Maree · 9575 W Pico Blvd 2nd Floor"
+  },
+  {
+    "pinSourceUrl": "https://gable.la/",
+    "name": "Gable",
+    "priceRange": "$$$",
+    "sourceUrl": "https://gable.la/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "Gable · 7000 Hollywood Blvd"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/los-angeles/guides/la-fall-restaurant-openings-2026#spacca-tutto",
+    "name": "Spacca Tutto",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/los-angeles/reviews/spacca-tutto",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Spacca Tutto · 15225 Palisades Village Ln"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/los-angeles/guides/la-fall-restaurant-openings-2026#kozo",
+    "name": "Kozo Los Angeles",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/los-angeles/guides/la-fall-restaurant-openings-2026",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Kozo Los Angeles · 8500 Sunset Blvd"
+  },
+  {
+    "pinSourceUrl": "https://www.littleluckla.com/",
+    "name": "Little Luck",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/los-angeles/reviews/little-luck",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Little Luck · 9229 W Sunset Blvd"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/san-francisco/guides/new-san-francisco-restaurant-openings#handroll-hawker",
+    "name": "Handroll Hawker",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/san-francisco/reviews/handroll-hawker",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Handroll Hawker · 2360 Polk St"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/san-francisco/guides/new-san-francisco-restaurant-openings#florecita",
+    "name": "Florecita",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/san-francisco/reviews/florecita",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Florecita · 3349 23rd St"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/san-francisco/guides/new-san-francisco-restaurant-openings#sergeant-ma",
+    "name": "Sergeant Ma",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.theinfatuation.com/san-francisco/reviews/sergeant-ma",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Sergeant Ma · 185 Berry St"
+  },
+  {
+    "pinSourceUrl": "https://sfstandard.com/2026/09/29/sf-best-new-restaurants-bars-october/#15-romolo",
+    "name": "15 Romolo",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/san-francisco/reviews/15-romolo",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "15 Romolo · 15 Romolo Pl"
+  },
+  {
+    "pinSourceUrl": "https://www.blackbriarchi.com/",
+    "name": "Black Briar",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/chicago/reviews/black-briar",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Black Briar · 201 N Morgan St"
+  },
+  {
+    "pinSourceUrl": "https://victoryandvicechicago.com/",
+    "name": "Victory & Vice",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/chicago/reviews/victory-and-vice",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Victory & Vice · 318 N Carpenter St"
+  },
+  {
+    "pinSourceUrl": "https://www.mackallens.com/",
+    "name": "Mack Allen’s",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.theinfatuation.com/houston/reviews/mack-allens",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Mack Allen's · 4400 Post Oak Pkwy"
+  },
+  {
+    "pinSourceUrl": "https://www.houstonpress.com/restaurants/openings-and-closings-the-branch-is-open-trill-4-arrives/#the-bixby",
+    "name": "The Bixby",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/houston/reviews/the-bixby",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "The Bixby · 7202 Long Point Rd Suite A"
+  },
+  {
+    "pinSourceUrl": "https://grandiosophoenix.com/",
+    "name": "Grandioso",
+    "priceRange": "$$",
+    "sourceUrl": "https://grandiosophoenix.com/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "Grandioso · 1229 Grand Ave"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#teo-teo",
+    "name": "Teo Teo",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/miami/reviews/teo-teo",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Teo Teo · 7285 Biscayne Blvd"
+  },
+  {
+    "pinSourceUrl": "https://www.instagram.com/anakomiami/",
+    "name": "Anako",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/miami/reviews/anako-miami",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Anako Miami · 8222 NE 2nd Ave"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#flaky",
+    "name": "Flaky",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Flaky · 321 Collins Ave"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#kush-wynwood",
+    "name": "Kush — Wynwood",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/miami/reviews/kush",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Kush Wynwood · 2003 N Miami Ave"
+  },
+  {
+    "pinSourceUrl": "https://www.instagram.com/royalenapoletana/",
+    "name": "Royale Pizza Napoletana",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Royale Pizza Napoletana · 1680 Meridian Ave"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#genghis-cohen-miami",
+    "name": "Genghis Cohen — Miami",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/miami/reviews/genghis-cohen-miami",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Genghis Cohen · 1801 Purdy Ave"
+  },
+  {
+    "pinSourceUrl": "https://thehawksmoor.com/us/locations/boston/",
+    "name": "Hawksmoor — Boston",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://thehawksmoor.com/us/locations/boston/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "Hawksmoor Boston · 15 Necco Street"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#rubys",
+    "name": "Rubys",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/seattle/reviews/rubys-pike-place",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Rubys · 85 Pike St"
+  },
+  {
+    "pinSourceUrl": "https://tazseattle.com/",
+    "name": "Taz + Kohta",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.theinfatuation.com/seattle/reviews/taz-kohta",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Taz + Kohta · 410 Stewart St"
+  },
+  {
+    "pinSourceUrl": "https://www.whatsopening.com/fl/jacksonville/restaurants#sweetgreen-jacksonville",
+    "name": "Sweetgreen — Jacksonville",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.sweetgreen.com/locations/st-johns-town-center",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "Sweetgreen - St. Johns Town Center · 4624 Town Crossing Drive"
+  },
+  {
+    "pinSourceUrl": "https://escuelafarm.com/home",
+    "name": "Escuela",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.theinfatuation.com/austin/reviews/escuela",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Escuela · 6240 US-290"
+  },
+  {
+    "pinSourceUrl": "https://www.benandlynns.com/",
+    "name": "Ben & Lynn’s",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/austin/reviews/ben-and-lynns",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Ben & Lynn's · 2600 E Cesar Chavez St"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/austin/guides/austin-new-restaurant-openings#panciuto-austin",
+    "name": "Panciuto",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/austin/reviews/panciuto",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Panciuto · 4413 Guadalupe St"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/austin/guides/austin-fall-restaurant-openings-2026#nishi-austin",
+    "name": "Nishi",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/austin/reviews/nishi",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Nishi · 2000 Southern Oaks Dr"
+  },
+  {
+    "pinSourceUrl": "https://www.eatatignite.com/",
+    "name": "Ignite",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.eatatignite.com/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "IGNITE San Jose · 26 N San Pedro St"
+  },
+  {
+    "pinSourceUrl": "https://www.boiaderestaurant.com/",
+    "name": "Boia De",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.boiaderestaurant.com/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "Boia De · 5205 NE 2nd Ave"
+  },
+  {
+    "pinSourceUrl": "https://arietecoconutgrove.com/",
+    "name": "Ariete",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.theinfatuation.com/miami/reviews/ariete",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Ariete · 3540 Main Hwy"
+  },
+  {
+    "pinSourceUrl": "https://www.cotekoreansteakhouse.com/locations/cotemiami",
+    "name": "COTE — Miami",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.theinfatuation.com/miami/reviews/cote-miami",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Cote Miami · 3900 NE 2nd Ave"
+  },
+  {
+    "pinSourceUrl": "https://www.astaboston.com/",
+    "name": "Asta",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.theinfatuation.com/boston/reviews/asta",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Asta · 47 Massachusetts Ave"
+  },
+  {
+    "pinSourceUrl": "https://www.barvolpe.com/",
+    "name": "Bar Volpe",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.barvolpe.com/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "Bar Volpe · 170 W Broadway; matched operator JSON-LD $$ takes precedence over OpenTable $31–$50"
+  },
+  {
+    "pinSourceUrl": "https://canlis.com/",
+    "name": "Canlis",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.theinfatuation.com/seattle/reviews/canlis",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Canlis · 2576 Aurora Ave N"
+  },
+  {
+    "pinSourceUrl": "https://thewalrusbar.com/",
+    "name": "The Walrus and the Carpenter",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/seattle/reviews/the-walrus-and-the-carpenter",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "The Walrus And The Carpenter · 4743 Ballard Ave NW"
+  },
+  {
+    "pinSourceUrl": "https://uchi.uchirestaurants.com/location/austin/",
+    "name": "Uchi — Austin",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.theinfatuation.com/austin/reviews/uchi",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Uchi · 801 S Lamar Blvd"
+  },
+  {
+    "pinSourceUrl": "https://www.adegarest.com/",
+    "name": "ADEGA",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.theinfatuation.com/san-jose/reviews/adega",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Adega · 1614 Alum Rock Ave"
+  },
+  {
+    "pinSourceUrl": "https://www.petiscosadega.com/",
+    "name": "Petiscos",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/san-jose/reviews/petiscos",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Petiscos · 399 S 1st St"
+  },
+  {
+    "pinSourceUrl": "https://www.counterclt.com/",
+    "name": "Counter-",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.theinfatuation.com/charlotte/reviews/counter",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Counter · 2001 W Morehead St"
+  },
+  {
+    "pinSourceUrl": "https://haberdish.com/",
+    "name": "Haberdish",
+    "priceRange": "$",
+    "sourceUrl": "https://www.theinfatuation.com/charlotte/reviews/haberdish",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Haberdish · 3106 N Davidson St"
+  },
+  {
+    "pinSourceUrl": "https://www.dineatagni.com/",
+    "name": "Agni",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.theinfatuation.com/columbus/reviews/agni",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Agni · 716 S High St"
+  },
+  {
+    "pinSourceUrl": "https://www.eatchapmans.com/",
+    "name": "Chapman’s Eat Market",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/columbus/reviews/chapmans-eat-market",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Chapman's Eat Market · 739 S 3rd St"
+  },
+  {
+    "pinSourceUrl": "https://www.theinfatuation.com/los-angeles/guides/la-fall-restaurant-openings-2026#kyu",
+    "name": "KYU Los Angeles",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.theinfatuation.com/los-angeles/guides/la-fall-restaurant-openings-2026",
+    "sourceLabel": "Price range: The Infatuation",
+    "checkedAt": "2026-10-06",
+    "evidence": "Kyu · 2421 Michigan Ave"
+  },
+  {
+    "pinSourceUrl": "https://zanespizzaicecream.com/",
+    "name": "Zane’s Pizza & Ice Cream",
+    "priceRange": "$$",
+    "sourceUrl": "https://zanespizzaicecream.com/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "Zane’s Pizza and Ice Cream · 3550 W Cactus Rd"
+  },
+  {
+    "pinSourceUrl": "https://www.lunamexicankitchen.com/hours-and-locations/",
+    "name": "LUNA Mexican Kitchen — The Alameda",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.lunamexicankitchen.com/hours-and-locations/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "The Alameda · 1495 The Alameda"
+  },
+  {
+    "pinSourceUrl": "https://www.elephanterestaurants.com/location/dallas/",
+    "name": "Élephante",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.elephanterestaurants.com/location/dallas/",
+    "sourceLabel": "Price range: operator",
+    "checkedAt": "2026-10-06",
+    "evidence": "Dallas · 2701 Maple Avenue; operator publishes $$, OpenTable publishes $31–$50"
+  },
+  {
+    "pinSourceUrl": "https://www.docentsteak.com/",
+    "name": "Docent Steak & Lounge",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.opentable.com/r/docent-dallas",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$50 and over · 2801 N Harwood St",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://www.asadolife.com/what-to-know",
+    "name": "Asado Life — Jacksonville",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.opentable.com/r/asado-life-ii-jacksonville",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$31–$50 · 5 Tower Court",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://www.raicesclt.com/",
+    "name": "Raíces",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.opentable.com/r/raices-charlotte",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$50 and over · 1422 S Tryon St Unit 140",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://www.guardandgrace.com/charlotte",
+    "name": "Guard and Grace — Charlotte",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.opentable.com/restaurant/profile/1549540",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$31–$50 · 111 E Carson Blvd ste 100",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://www.sixtyvines.com/#san-antonio",
+    "name": "Sixty Vines — La Cantera",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.opentable.com/r/sixty-vines-la-cantera-san-antonio",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$30 and under · 15900 La Cantera Pkwy suite 7300",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://ruesaintmarc.com/",
+    "name": "Rue Saint-Marc",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.opentable.com/r/rue-saint-marc-reservations-jacksonville",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$50 and over · 2103 San Marco Blvd",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://restaurantorsay.com/",
+    "name": "Restaurant Orsay",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.opentable.com/r/restaurant-orsay-jacksonville",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$30 and under · 3630 Park Street; inactive booking listing, price remains published",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://bluebonnetandthyme.com/",
+    "name": "Bluebonnet & Thyme",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.opentable.com/r/bluebonnet-and-thyme-reservations-dallas",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$31–$50 · 2610 N Houston St",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://zenitarooftop.com/",
+    "name": "Zenita",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.opentable.com/r/zenita-reservations-san-antonio",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$31–$50 · 201 E Commerce St",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://amar-sa.com/",
+    "name": "Amar",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.opentable.com/restaurant/profile/1519672",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$50 and over · 403 Pearl Parkway",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://www.carolynsvietnamese.com/",
+    "name": "Carolyn’s Modern Vietnamese",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.opentable.com/restaurant/profile/1494604",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$31–$50 · 2015 Walnut St",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "pinSourceUrl": "https://www.311boston.com/",
+    "name": "311 Omakase",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://guide.michelin.com/en/massachusetts/boston_2914838/restaurant/311-omakase",
+    "sourceLabel": "Price range: MICHELIN Guide",
+    "checkedAt": "2026-10-06",
+    "evidence": "$$$$ · 605 Tremont St"
+  },
+  {
+    "pinSourceUrl": "https://goldeesbbq.com/",
+    "name": "Goldee’s Barbecue",
+    "priceRange": "$$",
+    "sourceUrl": "https://guide.michelin.com/us/en/texas/fort-worth_2954653/restaurant/goldee-s",
+    "sourceLabel": "Price range: MICHELIN Guide",
+    "checkedAt": "2026-10-06",
+    "evidence": "$$ · 4645 Dick Price Rd"
+  },
+  {
+    "pinSourceUrl": "https://www.panthercitybbq.com/",
+    "name": "Panther City BBQ",
+    "priceRange": "$$",
+    "sourceUrl": "https://guide.michelin.com/us/en/texas/fort-worth_2954653/restaurant/panther-city-bbq",
+    "sourceLabel": "Price range: MICHELIN Guide",
+    "checkedAt": "2026-10-06",
+    "evidence": "$$ · 201 E Hattie St"
+  },
+  {
+    "pinSourceUrl": "https://www.barleyswine.com/",
+    "name": "Barley Swine",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://guide.michelin.com/us/en/texas/austin_2958315/restaurant/barley-swine",
+    "sourceLabel": "Price range: MICHELIN Guide",
+    "checkedAt": "2026-10-06",
+    "evidence": "$$$$ · 6555 Burnet Rd ste 400"
+  },
+  {
+    "pinSourceUrl": "https://www.theinterstellarbbq.com/",
+    "name": "InterStellar BBQ",
+    "priceRange": "$$",
+    "sourceUrl": "https://guide.michelin.com/us/en/texas/austin_2958315/restaurant/interstellar-bbq",
+    "sourceLabel": "Price range: MICHELIN Guide",
+    "checkedAt": "2026-10-06",
+    "evidence": "$$ · 12233 Ranch Rd 620 N ste 105"
+  },
+  {
+    "pinSourceUrl": "https://www.radaclt.com/",
+    "name": "Rada",
+    "priceRange": "$$$",
+    "sourceUrl": "https://guide.michelin.com/us/en/north-carolina/charlotte_2987283/restaurant/rada-1241833",
+    "sourceLabel": "Price range: MICHELIN Guide",
+    "checkedAt": "2026-10-06",
+    "evidence": "$$$ · 2820 Selwyn Ave ste 180"
+  },
+  {
+    "pinSourceUrl": "https://www.congareeandpenn.com/",
+    "name": "Congaree and Penn",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://www.visitjacksonville.com/directory/congaree-and-penn-restaurant/",
+    "sourceLabel": "Price range: Visit Jacksonville",
+    "checkedAt": "2026-10-06",
+    "evidence": "$$$$ · 11830 Old Kings Road"
+  },
+  {
+    "pinSourceUrl": "https://www.alturarestaurant.com/",
+    "name": "Altura",
+    "priceRange": "$$$$",
+    "sourceUrl": "https://restaurantguru.com/Altura-Seattle",
+    "sourceLabel": "Price range: Restaurant Guru",
+    "checkedAt": "2026-10-06",
+    "evidence": "$$$$ · 617 Broadway E; corroborated by operator dinner menu at $195 per person"
+  },
+  {
+    "pinSourceUrl": "https://serpentandstonesd.com/",
+    "name": "Serpent & Stone",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.opentable.com/r/a-serpent-and-stone-san-diego",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$31–$50 · 750 Front St, San Diego",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "name": "Maranello",
+    "pinSourceUrl": "https://www.maranellosd.com/",
+    "priceRange": "$$$",
+    "sourceUrl": "https://www.opentable.com/r/maranello-san-diego",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$31–$50 · 2101 Kettner Blvd, San Diego",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  },
+  {
+    "name": "Telefèric Barcelona",
+    "pinSourceUrl": "https://www.telefericbarcelona.com/lajolla",
+    "priceRange": "$$",
+    "sourceUrl": "https://www.opentable.com/r/teleferic-barcelona-san-diego",
+    "sourceLabel": "Price range: OpenTable",
+    "checkedAt": "2026-10-06",
+    "evidence": "$30 and under · 4489 La Jolla Village Dr, San Diego",
+    "normalization": "Application display convention: OpenTable $30 and under → $$; $31 to $50 → $$$; $50 and over → $$$$."
+  }
+]

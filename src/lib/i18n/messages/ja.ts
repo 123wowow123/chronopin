@@ -1615,6 +1615,7 @@ const ja: Messages = {
       musicunlimited: { title: 'Amazon Music Unlimited', body: '広告なしで曲やプレイリストを。新規会員は無料で体験できます。', cta: '無料で試す' },
       kindleunlimited: { title: 'Kindle Unlimited', body: '数百万冊の本とオーディオブックが読み放題・聴き放題。無料体験あり。', cta: '読み始める' },
       subscribesave: { title: '定期おトク便', body: '日用品を好きなペースで届けてお得に。', cta: '節約を始める' },
+      abracadabra: { title: 'Abracadabra NYC', body: 'ニューヨークの有名コスチューム店の衣装、コスプレ、小道具、コレクターズアイテム。', cta: 'ショップを見る' },
     },
   },
 };

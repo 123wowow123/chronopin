@@ -1615,6 +1615,7 @@ const zh: Messages = {
       musicunlimited: { title: '亚马逊 Music Unlimited', body: '无广告的歌曲和歌单，新会员可免费试用。', cta: '免费试用' },
       kindleunlimited: { title: 'Kindle Unlimited', body: '畅读数百万本图书并收听有声书，可免费试用。', cta: '开始阅读' },
       subscribesave: { title: '订阅省钱', body: '按你的节奏配送日常用品，还能省钱。', cta: '开始省钱' },
+      abracadabra: { title: 'Abracadabra NYC', body: '来自纽约知名服装店的戏服、Cosplay、道具和收藏品。', cta: '逛逛商店' },
     },
   },
 };

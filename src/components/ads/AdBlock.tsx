@@ -47,6 +47,8 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   musicunlimited: { icon: 'play', background: '#25d1da', color: '#1d1d1d' },
   kindleunlimited: { icon: 'eye', background: '#232f3e', color: '#fff' },
   subscribesave: { icon: 'clock', background: '#e47911', color: '#fff' },
+  // Abracadabra NYC (0134, CJ Affiliate): a violet-to-midnight wash with a gold sparkle.
+  abracadabra: { icon: 'sparkle', background: 'linear-gradient(135deg, #4c1d95 0%, #1e1033 100%)', color: '#f5d77a' },
   // Watch brands (0130): the house's own colour behind a clock.
   watch_rolex: { icon: 'clock', background: '#0b5d3b', color: '#e9d8a6' },
   watch_omega: { icon: 'clock', background: '#c8102e', color: '#fff' },
@@ -59,6 +61,8 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   watch_iwc: { icon: 'clock', background: '#2b2b2b', color: '#fff' },
   watch_gs: { icon: 'clock', background: '#3b4a5a', color: '#fff' },
 };
+// Programs whose own picture sits on their tile (a file in public/ads).
+const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png' };
 const DEFAULT_TILE = { icon: 'cart' as IconName, background: '#232f3e', color: '#fff' };
 
 function useAds(slot: AdSlot, pinId: number | undefined) {
@@ -179,7 +183,12 @@ function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
   const tile = PROGRAM_TILE[ad.program] ?? DEFAULT_TILE;
   return (
     <span aria-hidden className={`flex shrink-0 items-center justify-center rounded ${className}`} style={{ background: tile.background, color: tile.color }}>
-      <Icon name={tile.icon} className="size-1/2 max-h-8 max-w-8" />
+      {PROGRAM_IMAGE[ad.program] ? (
+        // eslint-disable-next-line @next/next/no-img-element -- a small static logo on the tile
+        <img src={PROGRAM_IMAGE[ad.program]} alt="" loading="lazy" className="size-full object-contain p-1" />
+      ) : (
+        <Icon name={tile.icon} className="size-1/2 max-h-8 max-w-8" />
+      )}
     </span>
   );
 }
@@ -259,7 +268,7 @@ export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 
 }
 
 // The tall space under a pin's comments: a column of larger ads on a desktop,
-// only the first on a phone.
+// only the first two on a phone.
 export function AdColumn({ pinId, className = '' }: { pinId: number; className?: string }) {
   const slot = 'pin-side';
   const t = useT();
@@ -270,7 +279,7 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
   return (
     <aside aria-label={t('ads.sponsored')} className={`surface p-4 sm:p-5 ${className}`}>
       <SponsoredLabel />
-      <ul className="mt-2 space-y-2 max-lg:[&>li:nth-child(n+2)]:hidden">
+      <ul className="mt-2 space-y-2 max-lg:[&>li:nth-child(n+3)]:hidden">
         {ads.map((ad) => {
           const { title, body, urgency, cta } = text(ad);
           return (

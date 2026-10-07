@@ -1618,6 +1618,7 @@ const th: Messages = {
       musicunlimited: { title: 'Amazon Music Unlimited', body: 'เพลงและเพลย์ลิสต์ไม่มีโฆษณา สมาชิกใหม่ลองใช้ฟรี', cta: 'ลองใช้ฟรี' },
       kindleunlimited: { title: 'Kindle Unlimited', body: 'อ่านหนังสือหลายล้านเล่มและฟังหนังสือเสียง ลองใช้ฟรี', cta: 'เริ่มอ่าน' },
       subscribesave: { title: 'สมัครรับและประหยัด', body: 'ประหยัดกับของใช้ประจำวัน จัดส่งตามกำหนดของคุณ', cta: 'เริ่มประหยัด' },
+      abracadabra: { title: 'Abracadabra NYC', body: 'ชุดแฟนซี คอสเพลย์ พร็อพ และของสะสมจากร้านชุดชื่อดังของนิวยอร์ก', cta: 'ดูร้านค้า' },
     },
   },
 };

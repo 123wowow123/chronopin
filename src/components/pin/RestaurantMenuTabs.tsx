@@ -3,7 +3,7 @@
 import { useId, useState, type ReactNode, type KeyboardEvent } from 'react';
 import styles from './RestaurantMenu.module.css';
 
-export function RestaurantMenuTabs({ tabs }: { tabs: { label: string; content: ReactNode }[] }) {
+export function RestaurantMenuTabs({ tabs, label = 'Restaurant menus and specials' }: { tabs: { label: string; content: ReactNode }[]; label?: string }) {
   const id = useId();
   const [selected, setSelected] = useState(0);
   const active = Math.min(selected, tabs.length - 1);
@@ -24,7 +24,7 @@ export function RestaurantMenuTabs({ tabs }: { tabs: { label: string; content: R
   }
   return (
     <div>
-      <div role="tablist" aria-label="Restaurant menus and specials" className={styles.tabs}>
+      <div role="tablist" aria-label={label} className={styles.tabs}>
         {tabs.map((tab, index) => (
           <button key={tab.label} type="button" role="tab" id={`${id}-tab-${index}`} aria-controls={`${id}-panel-${index}`} aria-selected={active === index} tabIndex={active === index ? 0 : -1} onClick={() => setSelected(index)} onKeyDown={(event) => move(event, index)} className={styles.tab}>
             {tab.label}

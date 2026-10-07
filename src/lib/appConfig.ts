@@ -43,6 +43,7 @@ export const siteDescription =
 // The small copy of a Medium thumb, made for list rows that show it a few dozen
 // pixels wide (src/server/image.ts smallThumb; npm run thumbs:small backfills).
 export function smallThumbName(thumbName: string): string {
+  if (thumbName.startsWith('/') || /^https?:\/\//i.test(thumbName)) return thumbName;
   return `s/${thumbName}`;
 }
 
@@ -52,5 +53,5 @@ export function blobUrl(nameOrUrl: string | null | undefined): string | undefine
   if (!nameOrUrl) {
     return undefined;
   }
-  return /^https?:\/\//i.test(nameOrUrl) ? nameOrUrl : thumbUrlPrefix + nameOrUrl;
+  return nameOrUrl.startsWith('/') || /^https?:\/\//i.test(nameOrUrl) ? nameOrUrl : thumbUrlPrefix + nameOrUrl;
 }

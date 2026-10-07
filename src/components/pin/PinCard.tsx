@@ -18,6 +18,8 @@ import { CitedText } from './CitedText';
 import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
 import { DelayBadge } from './DelayBadge';
 import { PinConfidence } from './PinConfidence';
+import { PinPillRow } from './PinPillRow';
+import { RestaurantPriceRange } from './RestaurantPriceRange';
 import { PinMenu } from './PinMenu';
 import { PinDistance } from './PinDistance';
 import { CompanyTicker } from './CompanyTicker';
@@ -245,25 +247,28 @@ export function PinCard({
 
         <div className="mx-3">
           {!media.length ? placeRow : null}
+          {pin.restaurantPriceRange ? <div className="mb-2 text-xs text-muted"><RestaurantPriceRange range={pin.restaurantPriceRange} /></div> : null}
           {pin.utcStartDateTime || pin.ratings?.length || pin.episodeCount ? (
             <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
-              {pin.utcStartDateTime ? (
-                <>
-                  <StartTime pin={pin} serverTimeZone={serverTimeZone} search />
-                  <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
-                  <DateConfidence level={pin.dateConfidence} />
-                  <DelayBadge pin={pin} search />
-                  <PinConfidence evidence={pinEvidence(pin)} />
-                </>
-              ) : null}
-              {/* The review-site average, for a film, series or anime pin, or
-                  the one source's own score where that is all the pin has -
-                  a card lists no sources beside it, same as a thread row. */}
-              <RatingSummary ratings={pin.ratings} search />
-              {/* How many episodes, for a series, anime or other episodic work. */}
-              <EpisodeCount pin={pin} compact />
-              {/* How far the start is from today, at the tail of the pills. */}
-              {pin.utcStartDateTime && todayKey ? <StartDistance pin={pin} todayKey={todayKey} serverTimeZone={serverTimeZone} /> : null}
+              <PinPillRow>
+                {pin.utcStartDateTime ? (
+                  <>
+                    <StartTime pin={pin} serverTimeZone={serverTimeZone} search />
+                    <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
+                    <DateConfidence level={pin.dateConfidence} />
+                    <DelayBadge pin={pin} search />
+                    <PinConfidence evidence={pinEvidence(pin)} />
+                  </>
+                ) : null}
+                {/* The review-site average, for a film, series or anime pin, or
+                    the one source's own score where that is all the pin has -
+                    a card lists no sources beside it, same as a thread row. */}
+                <RatingSummary ratings={pin.ratings} search />
+                {/* How many episodes, for a series, anime or other episodic work. */}
+                <EpisodeCount pin={pin} compact />
+                {/* How far the start is from today, at the tail of the pills. */}
+                {pin.utcStartDateTime && todayKey ? <StartDistance pin={pin} todayKey={todayKey} serverTimeZone={serverTimeZone} /> : null}
+              </PinPillRow>
               {/* Last, on a line of its own. An unverified pin's reasoning only restates
                   that nothing was found, so it stays hidden. */}
               {pin.utcStartDateTime && pin.dateConfidence !== 'unknown' ? (

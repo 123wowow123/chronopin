@@ -5,6 +5,7 @@ import Merchant from './merchant';
 import PinRating from './pinRating';
 import PinReference from './pinReference';
 import User from './user';
+import { restaurantPriceRange } from '../restaurantPrice';
 
 export const BasePinProp = [
   'id',
@@ -228,6 +229,8 @@ export default class BasePin {
     if (json.user) {
       json.user = _.omitBy(_.pick(json.user, PUBLIC_USER_PROPS), _.isNil);
     }
+    const range = restaurantPriceRange(json.sourceUrl);
+    if (range) json.restaurantPriceRange = range;
     return json;
   }
 

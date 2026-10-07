@@ -48,7 +48,7 @@ export function ConfidenceBadge({
 }) {
   const t = useT();
   const band = confidenceBand(confidence);
-  const pill = `rounded-full px-2 py-px text-[10px] font-semibold tracking-wider tabular-nums ring-1 ring-inset ${className}`;
+  const pill = `pill-compact rounded-full px-2 py-px text-[10px] font-semibold tracking-wider tabular-nums ring-1 ring-inset ${className}`;
   if (!band) {
     return <span className={pill} title={title}>{children}</span>;
   }
@@ -88,6 +88,10 @@ export function PinConfidence({ evidence }: { evidence: Evidence[] }) {
   if (confidence === undefined) {
     return null;
   }
+  const label = t('confidence.badge', { percent: confidence });
+  // Keep localized digits and any space before the percent sign together.
+  const value = label.match(/[\p{N}]+\s*%/u)?.[0] ?? `${confidence}%`;
+  const [before, after] = label.split(value);
   const count = evidence.filter((e) => e.confidence != null).length;
   return (
     <ConfidenceBadge
@@ -103,7 +107,9 @@ export function PinConfidence({ evidence }: { evidence: Evidence[] }) {
         </>
       }
     >
-      {t('confidence.badge', { percent: confidence })}
+      {before ? <span className="pill-label">{before}</span> : null}
+      <span className="pill-value">{value}</span>
+      {after ? <span className="pill-label">{after}</span> : null}
     </ConfidenceBadge>
   );
 }

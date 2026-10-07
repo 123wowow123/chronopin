@@ -1,8 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import { restaurantMenuFor, restaurantMenuRescrapeCandidates, restaurantMenuState, type RestaurantMenuProfile } from './restaurantMenus';
 import topPins from '@/server/data/sanDiegoTopRestaurants.preview.json';
+import regionalCatalog from '@/server/data/regionalRestaurants.json';
 
 describe('branch-specific restaurant menus and specials', () => {
+  it('matches every new regional venue to its own menu profile, including roundup anchors', () => {
+    for (const restaurant of regionalCatalog) {
+      expect(restaurantMenuFor(restaurant.sourceUrl)?.name, restaurant.sourceUrl).toBe(restaurant.name);
+    }
+    expect(restaurantMenuFor('https://www.le-bernardin.com/menus')?.name).toBeUndefined();
+    expect(restaurantMenuFor('https://www.holboxla.com/')?.name).toBeUndefined();
+  });
   it('includes a published menu or document for every curated top restaurant pin', () => {
     for (const pin of topPins) {
       const profile = restaurantMenuFor(pin.sourceUrl);

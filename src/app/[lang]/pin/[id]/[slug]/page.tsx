@@ -20,6 +20,7 @@ import { AddressShare } from '@/components/pin/PinShare';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
+import { PinPillRow } from '@/components/pin/PinPillRow';
 import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinEventInfo } from '@/components/pin/PinEventInfo';
@@ -27,6 +28,7 @@ import { PinGameInfo } from '@/components/pin/PinGameInfo';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
 import { PinRestaurantMenu } from '@/components/pin/PinRestaurantMenu';
+import { PinRestaurantDetails } from '@/components/pin/PinRestaurantDetails';
 import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
@@ -36,6 +38,8 @@ import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
 import { hasPlace } from '@/lib/places';
 import { affiliateUrl, isAmazonStoreUrl } from '@/lib/affiliate';
 import { shopLinks } from '@/lib/shopping';
+import { restaurantOpenTableUrl } from '@/lib/restaurantDetails';
+import { StoreLogo } from '@/components/pin/StoreLogo';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
 import { AdColumn, AdRow } from '@/components/ads/AdBlock';
@@ -255,6 +259,7 @@ function PinBody({
   ) : null;
   const dateRanges = pinDateRanges(pin, timeZone);
   const shop = isRestaurant ? [] : shopLinks(pin);
+  const openTableUrl = isRestaurant ? restaurantOpenTableUrl(pin.sourceUrl, pin.place?.reservationUrl) : null;
   const listingKind = isRestaurant ? null : listingKindOf(pin);
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;
@@ -343,10 +348,12 @@ function PinBody({
 
       {pin.utcStartDateTime ? (
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
-          <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix search />
-          <DateConfidence level={pin.dateConfidence} />
-          <DelayBadge pin={pin} search />
-          <PinConfidence evidence={pinEvidence(pin)} />
+          <PinPillRow>
+            <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix search />
+            <DateConfidence level={pin.dateConfidence} />
+            <DelayBadge pin={pin} search />
+            <PinConfidence evidence={pinEvidence(pin)} />
+          </PinPillRow>
           {/* Last: the reasoning takes a line of its own below the badges. */}
           <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning} dir={pinTextDir(pin)}>
             {pin.dateConfidenceReasoning ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} /> : undefined}
@@ -408,6 +415,7 @@ function PinBody({
       {pin.longFormSummary ? <div dir={pinTextDir(pin)} className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}
 
       <PinRestaurantMenu sourceUrl={pin.sourceUrl} today={dayKeyIn(new Date(), 'America/Los_Angeles')} />
+      <PinRestaurantDetails sourceUrl={pin.sourceUrl} name={pin.company || pin.title} isRestaurant={isRestaurant} priceRange={pin.restaurantPriceRange} />
 
       {pin.user?.id && pin.user.userName ? (
         <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
@@ -479,6 +487,12 @@ function PinBody({
       ) : null}
 
       {/* Where to buy the product the pin is about (src/lib/shopping.ts). */}
+      {openTableUrl ? <div className="mt-2 flex flex-wrap items-center gap-2">
+        <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t.dynamic('pin.reserveHeading', 'Reserve')}</span>
+        <Anchor href={openTableUrl} target="_blank" rel="noopener noreferrer" aria-label={t.dynamic('pin.reserveOnOpenTable', 'Reserve on OpenTable')} className="btn h-8 gap-1.5 border border-white/15 px-3 py-0 shadow-sm transition hover:-translate-y-px hover:brightness-110 hover:shadow-md" style={{ backgroundColor: '#DA3743', color: '#FFFFFF' }}>
+          <StoreLogo store="OpenTable" className="h-4 w-[22px] shrink-0" /> OpenTable <Icon name="external" className="size-3 shrink-0 opacity-60" />
+        </Anchor>
+      </div> : null}
       {shop.length ? <ShopButtons pinId={pin.id} links={shop} productName={pin.productName} /> : null}
       {/* Amazon Associates asks for this wherever a tagged link is shown: an
           Amazon listing or search, or a Prime Video title (sent to amazon.com,

@@ -1619,6 +1619,7 @@ const pt: Messages = {
       musicunlimited: { title: 'Amazon Music Unlimited', body: 'Músicas e playlists sem anúncios, grátis para testar para novos membros.', cta: 'Testar grátis' },
       kindleunlimited: { title: 'Kindle Unlimited', body: 'Leia entre milhões de livros e ouça audiolivros, grátis para testar.', cta: 'Começar a ler' },
       subscribesave: { title: 'Assine e Economize', body: 'Economize em itens do dia a dia entregues no ritmo que você escolher.', cta: 'Começar a economizar' },
+      abracadabra: { title: 'Abracadabra NYC', body: 'Fantasias, cosplay, adereços e colecionáveis da famosa loja de fantasias de Nova York.', cta: 'Ver a loja' },
     },
   },
 };

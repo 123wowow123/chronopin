@@ -1616,6 +1616,7 @@ const ko: Messages = {
       musicunlimited: { title: '아마존 뮤직 언리미티드', body: '광고 없이 즐기는 음악과 플레이리스트, 신규 회원은 무료 체험.', cta: '무료 체험' },
       kindleunlimited: { title: '킨들 언리미티드', body: '수백만 권의 책과 오디오북을 무료로 체험해 보세요.', cta: '읽기 시작' },
       subscribesave: { title: '정기 배송 할인', body: '일상용품을 원하는 주기로 받고 절약하세요.', cta: '절약 시작' },
+      abracadabra: { title: 'Abracadabra NYC', body: '뉴욕의 유명 의상 가게에서 만나는 코스튬, 코스프레, 소품, 수집품.', cta: '매장 보기' },
     },
   },
 };

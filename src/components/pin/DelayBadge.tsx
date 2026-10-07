@@ -23,7 +23,7 @@ export function DelayBadge({ pin, search = false }: { pin: Pick<PinJson, 'origin
   }
   const estimate = isEstimate(pin.delayReasoning);
   const from = formatDayKey(delay.from, t.locale);
-  const className = 'rounded-full bg-red-500/15 px-2 py-px text-[10px] font-semibold tracking-wider text-danger-soft uppercase tabular-nums not-italic ring-1 ring-red-500/30 ring-inset';
+  const className = 'pill-compact rounded-full bg-red-500/15 px-2 py-px text-[10px] font-semibold tracking-wider text-danger-soft uppercase tabular-nums not-italic ring-1 ring-red-500/30 ring-inset';
   const title = t(estimate ? 'delay.titleEstimated' : 'delay.title', { span: delay.label, date: from }) + (pin.delayReasoning ? ` — ${pin.delayReasoning}` : '');
   const text = (
     <>
@@ -34,7 +34,7 @@ export function DelayBadge({ pin, search = false }: { pin: Pick<PinJson, 'origin
   if (!search) {
     return (
       <span className={className} title={title}>
-        {text}
+        <span className="pill-label">{text}</span>
       </span>
     );
   }
@@ -47,7 +47,7 @@ export function DelayBadge({ pin, search = false }: { pin: Pick<PinJson, 'origin
       className={`relative ${className} after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-red-500/60`}
       title={`${title}\n${t('delay.searchFrom', { span: delay.label })}`}
     >
-      {text}
+      <span className="pill-label">{text}</span>
     </RefineLink>
   );
 }

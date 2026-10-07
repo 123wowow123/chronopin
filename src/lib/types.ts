@@ -127,6 +127,8 @@ export type PinJson = {
   title: string;
   description?: string;
   sourceUrl?: string;
+  // Verified restaurant cost category, from $ through $$$$.
+  restaurantPriceRange?: string;
   longFormSummary?: string;
   address?: string;
   latitude?: number;

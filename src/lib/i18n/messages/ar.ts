@@ -2002,6 +2002,7 @@ const ar: Messages = {
       musicunlimited: { title: 'Amazon Music Unlimited', body: 'أغانٍ وقوائم تشغيل بلا إعلانات، وتجربة مجانية للأعضاء الجدد.', cta: 'جرّبه مجانًا' },
       kindleunlimited: { title: 'Kindle Unlimited', body: 'اقرأ من ملايين الكتب واستمع إلى الكتب الصوتية، مجانًا للتجربة.', cta: 'ابدأ القراءة' },
       subscribesave: { title: 'اشترك ووفّر', body: 'وفّر على احتياجاتك اليومية بتوصيل يناسب جدولك.', cta: 'ابدأ التوفير' },
+      abracadabra: { title: 'Abracadabra NYC', body: 'أزياء وكوسبلاي وإكسسوارات ومقتنيات من متجر الأزياء الشهير في نيويورك.', cta: 'تسوّق الآن' },
     },
   },
 };

@@ -1633,6 +1633,7 @@ const vi: Messages = {
       musicunlimited: { title: 'Amazon Music Unlimited', body: 'Bài hát và danh sách phát không quảng cáo, thành viên mới dùng thử miễn phí.', cta: 'Dùng thử miễn phí' },
       kindleunlimited: { title: 'Kindle Unlimited', body: 'Đọc hàng triệu cuốn sách và nghe sách nói, dùng thử miễn phí.', cta: 'Bắt đầu đọc' },
       subscribesave: { title: 'Đăng ký và Tiết kiệm', body: 'Tiết kiệm cho đồ dùng hằng ngày, giao theo lịch của bạn.', cta: 'Bắt đầu tiết kiệm' },
+      abracadabra: { title: 'Abracadabra NYC', body: 'Trang phục, cosplay, đạo cụ và đồ sưu tầm từ cửa hàng hóa trang nổi tiếng của New York.', cta: 'Xem cửa hàng' },
     },
   },
 };

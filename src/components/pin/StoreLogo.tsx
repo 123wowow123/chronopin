@@ -11,6 +11,9 @@ import type { SVGProps } from "react";
 // WORDMARKS spell the name, so the button shows the mark alone, cropped to
 // the letters (the icon box leaves most of its height empty).
 const MARKS: Record<string, string> = {
+  // OpenTable's symbol, from its logo SVG (OpenTable, via Wikimedia Commons).
+  OpenTable:
+    "M229.0112 327.0475c0-.635.51117-1.14988 1.14141-1.14988.6305 0 1.14168.51488 1.14168 1.14988 0 .63526-.51118 1.15014-1.14168 1.15014-.63024 0-1.14141-.51461-1.14141-1.15014zm8.0182 1.15014c-.6305 0-1.14141-.51488-1.14141-1.15014 0-.635.51091-1.14988 1.14141-1.14988.63024 0 1.14167.51488 1.14167 1.14988 0 .63526-.51143 1.15014-1.14167 1.15014zm0-5.74992c-2.52148 0-4.56592 2.05952-4.56592 4.59978 0 2.54079 2.04417 4.60005 4.56592 4.60005 2.52201 0 4.56618-2.05926 4.56618-4.60005 0-2.54-2.04417-4.59978-4.56618-4.59978z",
   Facebook:
     "M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z",
   StockX:
@@ -32,7 +35,7 @@ export function StoreLogo({
 }: { store: string } & SVGProps<SVGSVGElement>) {
   const mark =
     WORDMARKS[store] ??
-    (MARKS[store] && { viewBox: "0 0 24 24", d: MARKS[store] });
+    (MARKS[store] && { viewBox: store === 'OpenTable' ? '228.87891 322.31543 12.849 9.464' : "0 0 24 24", d: MARKS[store] });
   if (!mark) return null;
   return (
     <svg
@@ -42,7 +45,7 @@ export function StoreLogo({
       focusable="false"
       {...props}
     >
-      <path d={mark.d} />
+      <path d={mark.d} fillRule={store === 'OpenTable' ? 'evenodd' : undefined} />
     </svg>
   );
 }

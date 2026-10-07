@@ -28,6 +28,6 @@ async function GuideContent({ params }: Props) {
   const { region: slug } = await params;
   const region = RESTAURANT_REGIONS.find((item) => item.slug === slug);
   if (!region) notFound();
-  const data = await regionalRestaurants(region.name);
-  return <RestaurantGuide {...data} topRestaurants={regionalTopRestaurants(region.slug)} region={region} today={dayKeyIn(new Date(), region.timeZone)} />;
+  const [data, topRestaurants] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug)]);
+  return <RestaurantGuide {...data} topRestaurants={topRestaurants} region={region} today={dayKeyIn(new Date(), region.timeZone)} />;
 }

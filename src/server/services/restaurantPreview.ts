@@ -1,4 +1,5 @@
 import type { PinJson } from '@/lib/types';
+import { restaurantPriceRange } from '../restaurantPrice';
 
 // Read-only local previews of the restaurant batch published after the local
 // database snapshot. Production always uses its stored pins.
@@ -16,6 +17,7 @@ export async function restaurantPreviewPins(ids?: number[]): Promise<PinJson[]> 
   const requested = ids ? new Set(ids) : null;
   return snapshot.filter((pin) => !requested || requested.has(pin.id)).map((pin) => ({
     ...pin,
+    restaurantPriceRange: restaurantPriceRange(pin.sourceUrl),
     media: pin.media.map((medium) => ({ ...medium, thumbName: `https://chronopin.blob.core.windows.net/thumb/${medium.thumbName}` })),
   })) as unknown as PinJson[];
 }

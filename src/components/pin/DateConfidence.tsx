@@ -45,10 +45,10 @@ export function DateConfidence({ level }: { level?: string | null }) {
         <RefineLink
           field="confidence"
           value={meta.term}
-          className={`relative rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-current ${meta.className}`}
+          className={`pill-compact relative rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-current ${meta.className}`}
           describedBy={describedBy}
         >
-          {label}
+          <span className="pill-label">{label}</span>
         </RefineLink>
       )}
     </PillTip>

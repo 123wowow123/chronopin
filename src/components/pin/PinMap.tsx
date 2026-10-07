@@ -19,7 +19,8 @@ const icon = L.icon({
 });
 
 export const TILE_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-export const TILE_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+export const TILE_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>';
+export const MAP_ATTRIBUTION_PREFIX = '<a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer" title="A JavaScript library for interactive maps">Leaflet</a>';
 export { icon as markerIcon };
 
 // A pin's place on an OpenStreetMap map.
@@ -41,6 +42,7 @@ export default function PinMap({
   useEffect(() => {
     if (!ref.current) return;
     const map = L.map(ref.current, { center: [latitude, longitude], zoom: 11, scrollWheelZoom: false });
+    map.attributionControl.setPrefix(MAP_ATTRIBUTION_PREFIX);
     // The map sits mid-page, so the wheel only zooms once the map is
     // deliberately in use: a click or a tab onto it arms the wheel, and
     // leaving or blurring the map hands the wheel back to the page.

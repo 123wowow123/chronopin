@@ -1634,6 +1634,7 @@ const en = {
       musicunlimited: { title: 'Amazon Music Unlimited', body: 'Songs and playlists without ads, free to try for new members.', cta: 'Try it free' },
       kindleunlimited: { title: 'Kindle Unlimited', body: 'Read from millions of books and listen to audiobooks, free to try.', cta: 'Start reading' },
       subscribesave: { title: 'Subscribe & Save', body: 'Save on everyday items delivered on your schedule.', cta: 'Start saving' },
+      abracadabra: { title: 'Abracadabra NYC', body: 'Costumes, cosplay, props and collectibles from the famous New York costume shop.', cta: 'Shop the store' },
     },
   },
 } as const;

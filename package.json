@@ -65,6 +65,7 @@
     "games:markets": "tsx scripts/games/markets.ts",
     "places:resolve": "tsx scripts/places/resolve.ts",
     "places:refresh": "tsx scripts/places/refresh.ts",
+    "restaurants:seed": "tsx scripts/restaurants/seed.ts",
     "events:refresh": "tsx scripts/events/refresh.ts",
     "ai:retirements": "tsx scripts/ai/retirements.ts",
     "sports:tournaments": "tsx scripts/sports/tournaments.ts",

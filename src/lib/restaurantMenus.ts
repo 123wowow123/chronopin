@@ -23,16 +23,17 @@ export type RestaurantMenu = {
   label: string;
   url: string;
   note?: string;
-  coverage?: 'published' | 'sample';
+  coverage?: 'published' | 'sample' | 'link';
   documentUrl?: string;
-  pages?: { src: string; width: number; height: number }[];
+  pages?: { src: string; width: number; height: number; label?: string }[];
   items: { name: string; category?: string; price?: number; priceLabel?: string; note?: string }[];
 };
 
-function sourceKey(value: string): string {
+export function restaurantSourceKey(value: string): string {
   try {
     const url = new URL(value);
-    return `${url.hostname.replace(/^www\./, '')}${url.pathname.replace(/\/$/, '')}${url.search}`;
+    // A roundup can source several venues, each identified by its anchor.
+    return `${url.hostname.replace(/^www\./, '')}${url.pathname.replace(/\/$/, '')}${url.search}${url.hash}`;
   } catch {
     return value;
   }
@@ -42,7 +43,7 @@ function sourceKey(value: string): string {
 // between installations. Never borrow another branch's menu or promotions.
 export function restaurantMenuFor(sourceUrl: string | null | undefined): RestaurantMenuProfile | undefined {
   if (!sourceUrl) return undefined;
-  return (profiles as RestaurantMenuProfile[]).find((profile) => sourceKey(profile.pinSourceUrl) === sourceKey(sourceUrl));
+  return (profiles as RestaurantMenuProfile[]).find((profile) => restaurantSourceKey(profile.pinSourceUrl) === restaurantSourceKey(sourceUrl));
 }
 
 export function restaurantMenuState(profile: RestaurantMenuProfile, today: string) {

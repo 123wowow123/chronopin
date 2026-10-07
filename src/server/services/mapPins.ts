@@ -7,7 +7,7 @@
 import Pins from '../model/pins';
 import { searchPins } from './search';
 import { timelineMinConfidence } from './timeline';
-import type { MapPinJson, PinJson } from '@/lib/types';
+import { toJson, type MapPinJson, type PinJson } from '@/lib/types';
 import { parseSearchQuery } from '../util/searchQuery';
 import { restaurantPreviewPins } from './restaurantPreview';
 
@@ -48,7 +48,12 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   // the missing places that are narrowed here instead of in the browser.
   if (query.q.trim()) {
     const found = await searchPins(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone });
-    const pins = found.pins as unknown as PinJson[];
+    let pins = found.pins as unknown as PinJson[];
+    // Search uses lean timeline rows, which omit tags. Load the matched
+    // pins' full records before applying the restaurant tag filter.
+    if (query.restaurantsOnly && pins.some((pin) => !pin.tags?.length)) {
+      pins = toJson<PinJson[]>((await Pins.queryByIds(pins.map((pin) => pin.id))).pins);
+    }
     // The guide's local snapshot also needs coordinates in the map API.
     // Only supplement explicit ID searches, never broader or watched results.
     if (process.env.NODE_ENV === 'development' && !query.onlyWatched && /^(?:pin:\d+(?:,\d+)*\s*)+$/i.test(query.q.trim())) {

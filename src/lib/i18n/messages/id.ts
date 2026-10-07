@@ -1634,6 +1634,7 @@ const id: Messages = {
       musicunlimited: { title: 'Amazon Music Unlimited', body: 'Lagu dan playlist tanpa iklan, gratis dicoba untuk anggota baru.', cta: 'Coba gratis' },
       kindleunlimited: { title: 'Kindle Unlimited', body: 'Baca jutaan buku dan dengarkan buku audio, gratis dicoba.', cta: 'Mulai membaca' },
       subscribesave: { title: 'Berlangganan & Hemat', body: 'Hemat untuk kebutuhan sehari-hari yang dikirim sesuai jadwalmu.', cta: 'Mulai hemat' },
+      abracadabra: { title: 'Abracadabra NYC', body: 'Kostum, cosplay, properti, dan barang koleksi dari toko kostum terkenal di New York.', cta: 'Belanja sekarang' },
     },
   },
 };
