@@ -31,14 +31,21 @@ rsync -az --delete -e "ssh -i $KEY" \
   --exclude scripts/backup/seedUsers.json \
   "$tmp/" "$HOST:chronopin/"
 
-# Migrations first, from the tools image (the same build stage the app's image
+# Disk first: a failed deploy (2026-10-07, "no space left on device" while
+# building) left the disk too full for the next build to start, so room is made
+# before building as well as after. Images no container uses are dropped (the
+# running containers' images stay), and the build cache is cut to 4GB, least
+# recently used first, which keeps the npm and Turbopack caches the next build
+# reads: they had filled 14GB of the VM's 30GB disk, and every deploy had used
+# them. Volumes are never pruned (the database lives in one). A failed prune
+# does not stop the deploy.
+CLEAN="docker image prune -af >/dev/null; docker builder prune -f --max-used-space 4gb >/dev/null"
+
+# Migrations next, from the tools image (the same build stage the app's image
 # is made from, so it costs little): new code may read a table a new schema
-# file creates, such as PinBaseCache. Afterwards, the images each build leaves
-# untagged are dropped, and the build cache is cut to 4GB, least recently used
-# first, which keeps the npm and Turbopack caches the next build reads: they
-# had filled 14GB of the VM's 30GB disk, and every deploy had used them.
+# file creates, such as PinBaseCache.
 services=${*:-app}
-ssh -i "$KEY" "$HOST" "cd chronopin && C='docker compose -f Docker/docker-compose.prod.yml' && \$C --profile tools build tools && \$C --profile tools run --rm tools npm run create:db && \$C up -d --build $services && docker image prune -f >/dev/null && docker builder prune -f --max-used-space 4gb >/dev/null"
+ssh -i "$KEY" "$HOST" "$CLEAN; df -h / | tail -1; cd chronopin && C='docker compose -f Docker/docker-compose.prod.yml' && \$C --profile tools build tools && \$C --profile tools run --rm tools npm run create:db && \$C up -d --build $services && $CLEAN; df -h / | tail -1"
 echo "Deployed $rev."
 # Always ship the latest HEAD: a commit made during the build needs another run.
 [ "$(git rev-parse --short HEAD)" = "$rev" ] || echo "HEAD is now $(git rev-parse --short HEAD), not $rev - run npm run deploy again."
