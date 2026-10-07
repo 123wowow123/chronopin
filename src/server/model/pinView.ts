@@ -171,10 +171,11 @@ export default class PinView {
   // only pins with more now than then, busiest first. Pins the timeline hides
   // for confidence (minConfidence, null for none) are left out here too.
   static async trending(days: number, limit: number, minConfidence: number | null) {
-    const top = await db.query<{ id: number; title: string; category: string | null; address: string | null; utcStartDateTime: Date; allDay: boolean; views: number; previousViews: number }>(
+    const top = await db.query<{ id: number; title: string; category: string | null; address: string | null; utcStartDateTime: Date; allDay: boolean; viewCount: number; views: number; previousViews: number }>(
       `SELECT "p"."id", "p"."title",
          (SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id" LIMIT 1) AS "category",
-         "p"."address", "p"."utcStartDateTime", "p"."allDay", "t"."views", "t"."previousViews"
+         "p"."address", "p"."utcStartDateTime", "p"."allDay", "t"."views", "t"."previousViews",
+         (SELECT COUNT(*)::integer FROM "PinView" AS "total" WHERE "total"."pinId" = "p"."id") AS "viewCount"
        FROM (
          SELECT "pinId",
            COUNT(*) FILTER (WHERE "day" > (now() AT TIME ZONE 'UTC')::date - $1::integer)::integer AS "views",

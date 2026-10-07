@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { useCountBump } from '@/lib/client/countBump';
-import { onLive } from '@/lib/client/liveFeed';
+import { updateViewCount, useViewCount } from '@/lib/client/viewCounts';
 import { compactCount } from '@/lib/format';
 import { useLocale, useT } from '@/lib/client/i18n';
 import type { Locale } from '@/lib/i18n/config';
@@ -34,7 +34,7 @@ function recordView(pinId: number, locale: Locale): Promise<number | null> {
 // (the page HTML is cached and shared, so the count is sent from the
 // browser), and the answer brings the count up to date.
 export function ViewCount({ pinId, initial, track = false }: { pinId: number; initial?: number; track?: boolean }) {
-  const [count, setCount] = useState(initial ?? 0);
+  const count = useViewCount(pinId, initial);
   const countRef = useCountBump<HTMLSpanElement>(count);
   const t = useT();
   const locale = useLocale();
@@ -43,18 +43,12 @@ export function ViewCount({ pinId, initial, track = false }: { pinId: number; in
     if (!track) return;
     let live = true;
     recordView(pinId, locale).then((viewCount) => {
-      if (live && viewCount !== null) setCount(viewCount);
+      if (live && viewCount !== null) updateViewCount(pinId, viewCount);
     });
     return () => {
       live = false;
     };
   }, [pinId, track, locale]);
-
-  useEffect(() => {
-    return onLive<{ id?: number; viewCount?: number }>('pin:view', (changed) => {
-      if (changed.id === pinId && typeof changed.viewCount === 'number') setCount(changed.viewCount);
-    });
-  }, [pinId]);
 
   const label = t('pin.views', { count });
   return (

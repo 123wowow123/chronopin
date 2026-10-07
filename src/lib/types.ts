@@ -266,6 +266,8 @@ export type TrendingPin = {
   // When it starts, for the row's "Starts in" / "Started".
   utcStartDateTime: string;
   allDay?: boolean;
+  // Lifetime total displayed beside the pin; recent views only rank growth.
+  viewCount: number;
   views: number;
   previousViews: number;
   thumbName?: string | null;

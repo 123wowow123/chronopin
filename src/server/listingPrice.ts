@@ -202,11 +202,13 @@ export function urgencyOf(html: string): string | null {
 }
 
 // The listing's own picture ("https://m.media-amazon.com/images/I/<id>._AC_SL300_.jpg"),
-// from the page's hi-res gallery, else its landing image.
+// from its landing image (the selected variant), else the hi-res gallery.
 export function amazonImageOf(html: string): string | null {
+  const landing = html.match(/<img\b[^>]*\bid=["']landingImage["'][^>]*>/i)?.[0] ?? '';
   const id =
-    html.match(/"hiRes":"https:\/\/m\.media-amazon\.com\/images\/I\/([\w%+-]+)\./)?.[1] ??
-    html.match(/id="landingImage"[^>]*?(?:src|data-old-hires)="https:\/\/m\.media-amazon\.com\/images\/I\/([\w%+-]+)\./)?.[1];
+    landing.match(/data-old-hires=["']https:\/\/m\.media-amazon\.com\/images\/I\/([\w%+-]+)\./)?.[1] ??
+    landing.match(/\bsrc=["']https:\/\/m\.media-amazon\.com\/images\/I\/([\w%+-]+)\./)?.[1] ??
+    html.match(/["']hiRes["']\s*:\s*["']https:\/\/m\.media-amazon\.com\/images\/I\/([\w%+-]+)\./)?.[1];
   return id ? `https://m.media-amazon.com/images/I/${id}._AC_SL300_.jpg` : null;
 }
 

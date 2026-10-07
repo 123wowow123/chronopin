@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readAmazonPage, readOfferMarkup, readSwappaPage, storeUrlOf, urgencyOf } from './listingPrice';
+import { amazonImageOf, readAmazonPage, readOfferMarkup, readSwappaPage, storeUrlOf, urgencyOf } from './listingPrice';
 
 // Every Amazon product page carries this template, in stock or not.
 const TEMPLATE = '<script type="text/template">Currently unavailable.</script>';
@@ -83,5 +83,16 @@ describe('urgencyOf', () => {
   });
   it('says nothing for an ordinary page', () => {
     expect(urgencyOf(page('In Stock'))).toBeNull();
+  });
+});
+
+describe('Amazon product images', () => {
+  it('reads the landing image regardless of attribute order and prefers the high resolution photo', () => {
+    expect(amazonImageOf('<img src="https://m.media-amazon.com/images/I/low.jpg" data-old-hires="https://m.media-amazon.com/images/I/seiko._AC_SL1500_.jpg" id="landingImage">')).toBe('https://m.media-amazon.com/images/I/seiko._AC_SL300_.jpg');
+    expect(amazonImageOf('<img id="landingImage" src="https://m.media-amazon.com/images/I/garmin.jpg">')).toBe('https://m.media-amazon.com/images/I/garmin._AC_SL300_.jpg');
+  });
+  it('handles spaced gallery JSON and avoids unrelated recommendation photos', () => {
+    expect(amazonImageOf('{"hiRes" : "https://m.media-amazon.com/images/I/chrono._AC_SL1500_.jpg"}')).toBe('https://m.media-amazon.com/images/I/chrono._AC_SL300_.jpg');
+    expect(amazonImageOf('<img src="https://m.media-amazon.com/images/I/unrelated.jpg">')).toBeNull();
   });
 });

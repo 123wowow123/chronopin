@@ -43,7 +43,7 @@ import { featuredWatch, type FeaturedWatch } from '../ebayWatches';
 // before they are read again.
 const INVENTORY_MS = 10 * 60 * 1000;
 // Discard inventory retained across dev reloads with the old pin-image mapping.
-const INVENTORY_VERSION = 2;
+const INVENTORY_VERSION = 3;
 // How long a slot waits for the address's country; past it, the language.
 const COUNTRY_WAIT_MS = 1500;
 // How long a slot waits for a watch brand's live eBay listing before it shows
@@ -363,7 +363,7 @@ async function loadInventory(): Promise<Inventory> {
       `SELECT "a"."id", "a"."pinId", "a"."url", "a"."price"::float8 AS "price", "a"."rating"::float8 AS "rating", "a"."reviewCount", "a"."urgency", "a"."title", "a"."brand", "a"."image",
          coalesce((SELECT array_agg("t"."name"::text ORDER BY "t"."id") FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "categories"
        FROM "PinAd" AS "a" JOIN "Pin" AS "p" ON "p"."id" = "a"."pinId" AND "p"."utcDeletedDateTime" IS NULL
-       WHERE "a"."status" = 'ok'`,
+       WHERE "a"."status" = 'ok' AND "a"."image" IS NOT NULL`,
     ),
   ]);
   // The goods of the cultural holidays (0121); served only in a holiday's window.
@@ -450,7 +450,7 @@ async function loadInventory(): Promise<Inventory> {
     ),
   ];
   ads.push(
-    ...(await ProductAd.list()).filter((row) => row.status === 'ok').map(
+    ...(await ProductAd.list()).filter((row) => row.status === 'ok' && row.image).map(
       (row): AdCandidate => ({
         key: `s:${row.id}`, kind: 'product', program: null, url: row.url,
         store: 'US', categories: row.categories, company: row.brand, brand: row.brand,

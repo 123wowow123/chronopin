@@ -177,7 +177,7 @@ function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
       </span>
     );
   }
-  if (!ad.program) return <PinThumb thumbName={ad.thumbName} title={ad.title} category={ad.category} className={className} />;
+  if (!ad.program) return <PinThumb thumbName={ad.thumbName} originalUrl={ad.originalUrl} title={ad.title} category={ad.category} className={className} />;
   if (hasProgramLogo(ad.program)) {
     return (
       <span aria-hidden className={`flex shrink-0 items-center justify-center rounded border border-line bg-white p-2 ${className}`}>

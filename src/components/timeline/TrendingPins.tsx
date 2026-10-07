@@ -6,6 +6,7 @@ import { Icon } from '@/components/ui/Icon';
 import { compactCount } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { TrendingPin } from '@/lib/types';
+import { useViewCount } from '@/lib/client/viewCounts';
 import { useT } from '@/lib/client/i18n';
 import { PlacePills } from './CityPill';
 import { StartsWhen } from './StartsWhen';
@@ -53,6 +54,7 @@ export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number
 export function TrendingRow({ pin }: { pin: TrendingPin }) {
   const t = useT();
   const grew = growth(pin);
+  const viewCount = useViewCount(pin.id, pin.viewCount);
   return (
     <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised">
       <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-12 w-[4.5rem]" />
@@ -61,7 +63,7 @@ export function TrendingRow({ pin }: { pin: TrendingPin }) {
           {pin.title}
         </span>
         <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle tabular-nums">
-          <span className="shrink-0">{t('trending.views', { count: pin.views, compact: compactCount(pin.views) })}</span>
+          <span className="shrink-0">{t('trending.views', { count: viewCount, compact: compactCount(viewCount) })}</span>
           {grew ? (
             <>
               <span aria-hidden="true">·</span>

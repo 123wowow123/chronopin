@@ -78,7 +78,7 @@ export default class PinAd {
     const listing = await readAmazonListing(url);
     if ('gone' in listing) return { rejected: 'Amazon has no such listing (404).' };
     if ('unknown' in listing) return { rejected: `The listing page could not be read (${listing.unknown}); try again later.` };
-    const problem = adProblem(listing);
+    const problem = adProblem(listing) ?? (!listing.image ? 'no product image on the listing' : null);
     if (problem) return { rejected: `${listing.brand ?? 'Unbranded'} "${listing.title.slice(0, 80)}": ${problem}.` };
     const rows = await db.query<PinAdRow>(
       `INSERT INTO "PinAd" ("pinId", "asin", "url", "title", "brand", "price", "rating", "reviewCount", "urgency", "image")
@@ -108,7 +108,7 @@ export default class PinAd {
     const due = await db.query<{ id: number; pinId: number; url: string; status: string }>(
       `SELECT "a"."id", "a"."pinId", "a"."url", "a"."status" FROM "PinAd" AS "a"
          JOIN "Pin" AS "p" ON "p"."id" = "a"."pinId" AND "p"."utcDeletedDateTime" IS NULL
-       WHERE $1::boolean OR "a"."checkedDateTime" < now() - make_interval(hours => $2::integer)
+       WHERE $1::boolean OR "a"."image" IS NULL OR "a"."checkedDateTime" < now() - make_interval(hours => $2::integer)
        ORDER BY "a"."checkedDateTime" LIMIT $3`,
       [all, RECHECK_HOURS, limit],
     );

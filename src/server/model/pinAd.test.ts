@@ -29,3 +29,10 @@ it('refreshes the product image with the listing facts', async () => {
   expect(db.query).toHaveBeenLastCalledWith(expect.stringContaining('"image" = COALESCE($8, "image")'),
     [19, listing.title, 'Swatch', 180, 4.7, 736, null, listing.image]);
 });
+
+it('rejects a new product ad without a listing photo', async () => {
+  vi.mocked(readAmazonListing).mockResolvedValue({ ...listing, image: null });
+  vi.mocked(db.query).mockResolvedValueOnce([{ company: 'Swatch' }]);
+  expect(await PinAd.add(6334, 'https://www.amazon.com/dp/B0D35Y89T6')).toEqual({ rejected: expect.stringContaining('no product image') });
+  expect(db.query).toHaveBeenCalledTimes(1);
+});

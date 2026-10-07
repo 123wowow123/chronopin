@@ -34,7 +34,7 @@ export default class ProductAd {
     const listing = await readAmazonListing(url);
     if ('gone' in listing) return { rejected: 'Amazon has no such listing (404).' };
     if ('unknown' in listing) return { rejected: `The listing could not be read (${listing.unknown}).` };
-    const problem = adProblem(listing);
+    const problem = adProblem(listing) ?? (!listing.image ? 'no product image on the listing' : null);
     if (problem) return { rejected: problem };
     const [added] = await db.query<ProductAdRow>(
       `INSERT INTO "ProductAd" ("asin", "url", "title", "brand", "price", "rating", "reviewCount", "image", "urgency", "categories")

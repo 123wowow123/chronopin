@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { openingDateLabel, openingGroup } from './restaurants';
+import { nearestRestaurantRegion, openingDateLabel, openingGroup } from './restaurants';
 import { blobUrl, smallThumbName } from './appConfig';
 
 describe('regional restaurant opening status', () => {
@@ -30,5 +30,19 @@ describe('regional restaurant opening status', () => {
     expect(openingDateLabel('2026-12-31', true, 'Late 2026 target')).toBe('Late 2026');
     expect(openingDateLabel('2027-03-31', true, 'Early 2027 target')).toBe('Early 2027');
     expect(openingDateLabel('2026-08-28', false)).toBe('Aug 28, 2026');
+  });
+});
+
+describe('nearest restaurant guide', () => {
+  it('chooses the closest supported city, including neighboring cities', () => {
+    expect(nearestRestaurantRegion({ latitude: 32.8, longitude: -117.2 }).slug).toBe('san-diego');
+    expect(nearestRestaurantRegion({ latitude: 37.35, longitude: -121.95 }).slug).toBe('san-jose');
+    expect(nearestRestaurantRegion({ latitude: 40.73, longitude: -73.9 }).slug).toBe('new-york');
+    expect(nearestRestaurantRegion({ latitude: 45.52, longitude: -122.68 }).slug).toBe('seattle');
+  });
+  it('falls back to San Diego for absent or invalid coordinates', () => {
+    for (const place of [null, undefined, { latitude: NaN, longitude: 0 }, { latitude: 91, longitude: 0 }]) {
+      expect(nearestRestaurantRegion(place).slug).toBe('san-diego');
+    }
   });
 });
