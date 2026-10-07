@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { Suspense } from 'react';
+import Link from '@/components/ui/Link';
 import { blobUrl, siteName } from '@/lib/appConfig';
-import { plainText } from '@/lib/format';
+import { dateFormat, plainText } from '@/lib/format';
+import { INTL_LOCALES } from '@/lib/i18n/config';
 import { alternates, getT } from '@/lib/i18n/server';
+import { pinPath } from '@/lib/seo';
 import Listing from '@/server/model/listing';
+import { upcomingMapPins } from '@/server/services/mapSummary';
 import { sliderTyping, webOverlay } from '@/server/services/pages';
 import { siteCardImages } from '@/server/services/shareCard';
 import { MapLoader } from './MapLoader';
@@ -41,7 +45,9 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     alternates: links,
     openGraph: { type: 'website', siteName, url, title, description, images },
     twitter: { card: 'summary_large_image', title, description, images: images.map((i) => i.url) },
-    ...(listing ? { robots: { index: false, follow: true } } : {}),
+    // A ?pin= link opens the client-drawn map on a pin: the server HTML is
+    // empty, which Search Console reports as a soft 404.
+    ...(listing || (await searchParams).pin ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -54,6 +60,9 @@ export default async function MapPage() {
       <Suspense fallback={<div className="h-[calc(100dvh-52px)] animate-pulse bg-raised" />}>
         <MapWithSettings />
       </Suspense>
+      <Suspense>
+        <UpcomingPins />
+      </Suspense>
     </main>
   );
 }
@@ -65,4 +74,27 @@ async function MapWithSettings() {
   await connection();
   const [typing, web] = await Promise.all([sliderTyping(), webOverlay()]);
   return <MapLoader sliderTyping={typing.enabled} webOverlay={web.enabled} />;
+}
+
+// The map is drawn in the browser, so this is what the page says to a crawler
+// and a screen reader: the next pins and where they happen. Out of sight like
+// the heading, since the map fills the window.
+async function UpcomingPins() {
+  await connection();
+  const t = await getT();
+  const pins = await upcomingMapPins(t.locale);
+  if (!pins.length) return null;
+  const date = dateFormat(INTL_LOCALES[t.locale], { dateStyle: 'long', timeZone: 'UTC' });
+  return (
+    <section className="sr-only">
+      <p>{t('meta.mapDescription')}</p>
+      <ul>
+        {pins.map((pin) => (
+          <li key={pin.id}>
+            <Link href={pinPath(pin)}>{pin.title}</Link> <time dateTime={pin.utcStartDateTime}>{date.format(new Date(pin.utcStartDateTime!))}</time>, {pin.address}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 }
