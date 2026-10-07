@@ -1340,9 +1340,18 @@
     "name": "LOLA 55",
     "websiteUrl": "https://lola55.com/",
     "phone": "(619) 542-9155",
-    "openingHours": [],
-    "checkedAt": "2026-10-06",
-    "hoursNote": "The restaurant’s page lists conflicting Friday/Saturday closing times (10 PM and 11 PM); confirm directly.",
+    "openingHours": [
+      {
+        "days": "Sunday–Thursday",
+        "hours": "11:00 AM–9:00 PM"
+      },
+      {
+        "days": "Friday–Saturday",
+        "hours": "11:00 AM–10:00 PM"
+      }
+    ],
+    "checkedAt": "2026-10-07",
+    "hoursNote": "Happy hour: Sunday–Friday, 2:00–6:00 PM.",
     "detailsSourceUrl": "https://lola55.com/"
   },
   {
