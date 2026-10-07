@@ -195,6 +195,13 @@ export const TOOLS: JobTool[] = [
       }),
   },
   {
+    name: 'restaurant_regions',
+    description:
+      "Restaurant landing pages (/restaurants/<slug>) to refresh: each region where a restaurant-opening pin was created since this job's last completed run (or the last 24 hours before its first), with the new pins, how many opening pins and catalog entries the region has, and when its catalog was last checked. Empty means nothing to refresh.",
+    input_schema: obj(),
+    run: (_input, ctx) => signals.restaurantRegionsToRefresh(ctx.since ?? new Date(Date.now() - 24 * 60 * 60 * 1000)),
+  },
+  {
     name: 'pins_this_week',
     description: 'Pins happening from yesterday to a week out, least vetted first: date confidence, reference and media counts, whether it has a place, when it last changed, and its author.',
     input_schema: obj(),

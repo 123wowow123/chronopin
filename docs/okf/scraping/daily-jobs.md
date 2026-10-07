@@ -19,7 +19,7 @@ into its instructions, so changing this page changes the next run.
 
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
-| `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
+| `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
 | `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 
@@ -285,6 +285,26 @@ is genuinely uncertain (a rumour, a "by 2030" plan) stays low, and the run
 leaves it alone and says so in the report. A reference that only repeats the
 source (the same wire story on another site) is not independent. A pin whose
 event turned out not to happen is marked for revisiting, not deleted.
+
+### restaurantRegions
+
+The midnight job's task (owner, 2026-10-06: "if a new restaurant pin is
+created then mark nightly job to include refreshing of the restaurant landing
+page for that region"). The page itself lists live pins, so the new pin shows
+up on its own; the refresh is for the hand-kept parts of that region's guide
+([regionalRestaurants.json](../../../src/server/data/regionalRestaurants.json):
+openings and top restaurants with their `checkedAt`).
+**Reads** `restaurant_regions`: each region with a restaurant-opening pin
+created since the last run, with the new pins, how many openings and catalog
+entries it has and when the catalog was last checked. Nothing listed, nothing
+to do.
+**Does** for each region: re-check its catalog entries' opening dates and
+status against their sources and the new pin, update the pins that went stale
+(`update_pin`), and mark for revisiting what the run cannot change. Catalog
+edits themselves are a repo change: list what needs adding in the report.
+**Traps.** Only pins tagged `Restaurant Opening`, `Food` (category) and the
+region's city tag reach the page ([restaurants.ts](../../../src/server/services/restaurants.ts)),
+so a new pin missing the city tag never refreshes anything.
 
 ### thinPins
 

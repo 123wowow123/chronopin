@@ -73,6 +73,11 @@ export const TASKS = {
     label: 'Holiday ads',
     summary: "Stock the traditional goods of the cultural holidays coming up, and of any holiday a pin falls on (mooncakes and lanterns for the Mid-Autumn Festival) as inexpensive, middle and expensive Amazon ads, keep them working, and drop any that are not truly traditional.",
   },
+  restaurantRegions: {
+    group: 'upkeep',
+    label: 'Restaurant region pages',
+    summary: "Refresh the restaurant landing page of every region where a restaurant pin was created since the last run: re-check its openings and top restaurants, and fill in what the new pin implies.",
+  },
   trends: {
     group: 'discover',
     label: 'Google Trends',
@@ -177,7 +182,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       dayOfMonth: null,
       // No sentiment: the news job scores new pins twice a day (owner, 2026-09-23).
       // thinPins fills out a batch of the pins hidden from search as thin (owner, 2026-10-04).
-      tasks: ['revisits', 'pinHealth', 'thinPins', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
+      tasks: ['revisits', 'pinHealth', 'thinPins', 'restaurantRegions', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,

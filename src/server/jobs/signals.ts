@@ -14,6 +14,8 @@ import { pinConfidenceOf } from '../model/pins';
 import { sourceCountSql, textLengthSql } from '../model/searchIssues';
 import { MIN_SOURCES, THIN_TEXT_CHARS } from '@/lib/searchQuality';
 import { CURATORS } from './curators';
+import { RESTAURANT_REGIONS } from '@/lib/restaurants';
+import regionalCatalog from '../data/regionalRestaurants.json';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -259,6 +261,36 @@ export function pinsChangedSince(since: Date, limit = 50) {
     ORDER BY 4 DESC LIMIT $2`,
     [since, limit],
   );
+}
+
+// The restaurant landing pages (/restaurants/<slug>) that need a refresh:
+// each region with a restaurant-opening pin created since `since`, with those
+// pins, how many openings the region's page shows, and when its catalog was
+// last checked. A region is the pin's city tag (RESTAURANT_REGIONS), the same
+// match regionalRestaurants uses for the page.
+export async function restaurantRegionsToRefresh(since: Date) {
+  const rows = await db.query<{ region: string; pins: { id: number; title: string; created: Date }[]; total: number }>(
+    `
+    SELECT "c"."name"::text AS "region",
+      json_agg(json_build_object('id', "p"."id", 'title', "p"."title", 'created', "p"."utcCreatedDateTime") ORDER BY "p"."utcCreatedDateTime" DESC) AS "pins",
+      (SELECT count(*)::int FROM "PinTag" AS "ct" JOIN "Pin" AS "cp" ON "cp"."id" = "ct"."pinId"
+        WHERE "ct"."name" = "c"."name" AND "cp"."utcDeletedDateTime" IS NULL
+          AND EXISTS (SELECT 1 FROM "PinTag" AS "o" WHERE "o"."pinId" = "cp"."id" AND "o"."name" = 'Restaurant Opening')) AS "total"
+    FROM "Pin" AS "p"
+    JOIN "PinTag" AS "c" ON "c"."pinId" = "p"."id" AND "c"."name" = ANY($2::citext[])
+    WHERE "p"."utcDeletedDateTime" IS NULL AND "p"."utcCreatedDateTime" > $1
+      AND EXISTS (SELECT 1 FROM "PinTag" AS "o" WHERE "o"."pinId" = "p"."id" AND "o"."name" = 'Restaurant Opening')
+      AND EXISTS (SELECT 1 FROM "PinTag" AS "f" WHERE "f"."pinId" = "p"."id" AND "f"."name" = 'Food' AND "f"."kind" = 'category')
+    GROUP BY "c"."name"
+    ORDER BY max("p"."utcCreatedDateTime") DESC`,
+    [since, RESTAURANT_REGIONS.map((region) => region.name)],
+  );
+  return rows.map((row) => {
+    const region = RESTAURANT_REGIONS.find((item) => item.name === row.region)!;
+    const catalog = regionalCatalog.filter((entry) => entry.regionSlug === region.slug);
+    const checked = catalog.map((entry) => (entry as { checkedAt?: string }).checkedAt).filter(Boolean).sort().pop() ?? null;
+    return { region: region.name, slug: region.slug, page: `/restaurants/${region.slug}`, newPins: row.pins, openingPins: row.total, catalogEntries: catalog.length, catalogCheckedAt: checked };
+  });
 }
 
 // How well each named company is covered: its pins in total and ahead of
