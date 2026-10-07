@@ -35,7 +35,7 @@ describe('regional restaurant opening status', () => {
 
 describe('nearest restaurant guide', () => {
   it('routes European visitors to their local guide with a valid local time zone', () => {
-    for (const slug of ['london', 'paris', 'amsterdam', 'berlin', 'madrid', 'barcelona', 'lisbon', 'rome', 'copenhagen', 'vienna']) {
+    for (const slug of ['london', 'paris', 'amsterdam', 'berlin', 'madrid', 'barcelona', 'lisbon', 'rome', 'copenhagen', 'vienna', 'dublin', 'stockholm']) {
       const region = RESTAURANT_REGIONS.find((item) => item.slug === slug)!;
       expect(nearestRestaurantRegion(region).slug).toBe(slug);
       expect(() => new Intl.DateTimeFormat('en', { timeZone: region.timeZone })).not.toThrow();

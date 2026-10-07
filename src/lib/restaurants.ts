@@ -22,6 +22,7 @@ export const RESTAURANT_REGIONS = [
   { slug: 'new-york', name: 'New York', country: 'United States', state: 'New York', timeZone: 'America/New_York', latitude: 40.7128, longitude: -74.006 },
   { slug: 'boston', name: 'Boston', country: 'United States', state: 'Massachusetts', timeZone: 'America/New_York', latitude: 42.3601, longitude: -71.0589 },
   { slug: 'lisbon', name: 'Lisbon', country: 'Portugal', state: 'Portugal', timeZone: 'Europe/Lisbon', latitude: 38.7223, longitude: -9.1393 },
+  { slug: 'dublin', name: 'Dublin', country: 'Ireland', state: 'Ireland', timeZone: 'Europe/Dublin', latitude: 53.3498, longitude: -6.2603 },
   { slug: 'madrid', name: 'Madrid', country: 'Spain', state: 'Spain', timeZone: 'Europe/Madrid', latitude: 40.4168, longitude: -3.7038 },
   { slug: 'london', name: 'London', country: 'United Kingdom', state: 'United Kingdom', timeZone: 'Europe/London', latitude: 51.5074, longitude: -0.1278 },
   { slug: 'barcelona', name: 'Barcelona', country: 'Spain', state: 'Spain', timeZone: 'Europe/Madrid', latitude: 41.3874, longitude: 2.1686 },
@@ -31,6 +32,7 @@ export const RESTAURANT_REGIONS = [
   { slug: 'copenhagen', name: 'Copenhagen', country: 'Denmark', state: 'Denmark', timeZone: 'Europe/Copenhagen', latitude: 55.6761, longitude: 12.5683 },
   { slug: 'berlin', name: 'Berlin', country: 'Germany', state: 'Germany', timeZone: 'Europe/Berlin', latitude: 52.52, longitude: 13.405 },
   { slug: 'vienna', name: 'Vienna', country: 'Austria', state: 'Austria', timeZone: 'Europe/Vienna', latitude: 48.2082, longitude: 16.3738 },
+  { slug: 'stockholm', name: 'Stockholm', country: 'Sweden', state: 'Sweden', timeZone: 'Europe/Stockholm', latitude: 59.3293, longitude: 18.0686 },
 ] as const;
 
 export const RESTAURANT_COUNTRIES = [...new Set(RESTAURANT_REGIONS.map((region) => region.country))]

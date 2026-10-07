@@ -9,6 +9,10 @@ The European collection covers London, Paris, Amsterdam, Berlin, Madrid,
 Barcelona, Lisbon, Rome, Copenhagen and Vienna, with three established editorial
 picks per city and sourced opening announcements. Every entry includes its
 venue/report URL, image provenance, verification date and neighborhood.
+Additional guides cover Dublin and Stockholm, each with an announced October
+2026 opening and two established editorial picks. Onóra's opening is a month
+estimate; Bouillon's announced date is October 23. Preview images are labeled,
+including Söderhallarna's food hall rather than Bouillon's own dining room.
 An estimated month-end date is a sorting placeholder, never an exact opening
 claim. Established picks use the verification date, not an invented opening date.
 Opening photos from a sibling venue, illustrations and renderings are labeled.
@@ -19,6 +23,12 @@ public images before seeding a production database. To seed just these cities:
 
 ```sh
 npm run restaurants:seed -- --regions=london,paris,amsterdam,berlin,madrid,barcelona,lisbon,rome,copenhagen,vienna
+```
+
+To add the Dublin and Stockholm batches:
+
+```sh
+npm run restaurants:seed -- --regions=dublin,stockholm
 ```
 
 The seed is idempotent and preserves existing pins. It uses FoodDesk by default;
