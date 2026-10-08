@@ -5,12 +5,14 @@
 .offers .browseHeading { flex-wrap:wrap; margin-bottom:12px; }
 .offers time { color:var(--soft); font-size:12px; }
 .offerIntro { color:var(--soft); font-size:12px; line-height:1.7; margin:12px 0; }
-.offerSort { margin-left:auto; flex-shrink:0; }
+.offerSort { margin-left:auto; display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:12px; }
 .offerSort>div { display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:12px; }
 .offerSort span { margin-right:6px; }
-.offerSort button { padding:8px 14px; border:1px solid var(--rule); border-radius:4px; background:var(--paper-raised); color:var(--text); cursor:pointer; }
+.offerSort button,.offerSort .offerMapButton { padding:8px 14px; border:1px solid var(--rule); border-radius:4px; background:var(--paper-raised); color:var(--text); cursor:pointer; }
 .offerSort button[aria-pressed='true'] { background:var(--green); color:var(--paper); border-color:var(--green); }
 .offerSort button:disabled { opacity:.6; cursor:wait; }
+.offerMapButton { display:inline-flex; align-items:center; gap:6px; }
+.offerMapButton svg { width:14px; height:14px; flex-shrink:0; }
 .offerSortNote { color:var(--soft); font-size:11px; line-height:1.7; }
 .offerDistance { color:var(--green); font-size:12px; margin-top:6px; }
 .offers .cardGrid { margin-top:20px; align-items:start; grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr)); }

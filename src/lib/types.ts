@@ -241,6 +241,9 @@ export type CardPin = PinJson & { safeDescription?: string };
 // from /api/pins/:id.
 export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories' | 'allDay' | 'utcStartDateTime' | 'utcCreatedDateTime' | 'latitude' | 'longitude'> & {
   media?: Pick<MediumJson, 'type' | 'thumbName' | 'originalUrl'>[];
+  // Curated restaurant specials may have no database pin yet.
+  restaurantHref?: string;
+  specialLabel?: string;
 };
 
 export type DateTimeJson = {

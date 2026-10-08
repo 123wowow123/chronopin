@@ -31,7 +31,7 @@ import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 import { refineQuery } from '@/lib/searchTerms';
 import { useT } from '@/lib/client/i18n';
-import { isRtl } from '@/lib/i18n/config';
+import { isRtl, splitLocale } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import type { ListingJson } from '@/lib/listings';
@@ -194,14 +194,16 @@ function pictureImg(sources: string[], className: string, gone: () => void) {
 
 function popupContent(pin: MapPinJson) {
   const content = document.createElement('div');
+  const href = localizeHere(pin.restaurantHref ?? pinPath(pin));
   content.innerHTML =
-    `<div class="px-2.5 pt-1.5 pb-2"><a href="${localizeHere(pinPath(pin))}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
+    `<div class="px-2.5 pt-1.5 pb-2"><a href="${escapeHtml(href)}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
+    `${pin.specialLabel ? `<div class="mt-1 text-subtle">${escapeHtml(pin.specialLabel)}</div>` : ''}` +
     `${pin.address ? `<div class="truncate text-subtle">${escapeHtml(pin.address)}</div>` : ''}</div>`;
   const sources = pictureSources(pin);
   if (!sources.length) return content;
 
   const link = document.createElement('a');
-  link.href = localizeHere(pinPath(pin));
+  link.href = href;
   link.className = 'block';
   link.append(pictureImg(sources, 'block aspect-video w-full object-cover', () => link.remove()));
   content.prepend(link);
@@ -332,7 +334,7 @@ function syncCopies(map: L.Map, layer: L.LayerGroup, entries: MapEntry<Spot>[], 
 // client-side navigation from another page of the app.
 function loadedAsMap() {
   const entry = performance.getEntriesByType('navigation')[0];
-  return !entry || new URL(entry.name).pathname.startsWith('/map');
+  return !entry || splitLocale(new URL(entry.name).pathname).path.startsWith('/map');
 }
 
 // Every pin with a location between the past and future windows around now,
@@ -350,6 +352,10 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
   const params = useSearchParams();
   const query = params.get('q') || '';
   const restaurantLayer = params.get('show') === 'restaurants';
+  const specials = params.get('specials');
+  const requestedBounds = params.get('bounds');
+  const returnParam = params.get('returnTo') ?? '';
+  const returnTo = /^\/restaurants(?:\/[a-z0-9-]+)?#available-now$/.test(returnParam) ? returnParam : undefined;
   // Layer switches keep the viewport; links to a guide can still fit results.
   const preserveView = params.get('fit') === 'view';
   const fitResults = !preserveView && (restaurantLayer || params.get('fit') === 'results'
@@ -523,7 +529,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
         locationPointRef.current = [place.latitude, place.longitude];
         locationMarkerRef.current = locationMarker(map, locationPointRef.current, t('map.yourPlace'));
       }
-      if (keepViewRef.current || place.source === 'timeZone' || focusedRef.current !== undefined) return;
+      if (keepViewRef.current || resultViewRef.current.bounds || place.source === 'timeZone' || focusedRef.current !== undefined) return;
       const center = map.getCenter();
       if (map.getZoom() !== DEFAULT_ZOOM || center.lat !== DEFAULT_CENTER[0] || center.lng !== DEFAULT_CENTER[1]) return;
       map.setView([place.latitude, place.longitude], HOME_ZOOM);
@@ -542,6 +548,19 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       marketLayerRef.current = null;
     };
   }, [rtl, t]);
+
+  // Guide links carry their restaurants' bounds, so even a restored map opens
+  // on that area immediately, before the marker request finishes.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !fitResults || !requestedBounds) return;
+    const values = requestedBounds.split(',').map(Number);
+    if (values.length !== 4 || !values.every(Number.isFinite)) return;
+    const [south, west, north, east] = values;
+    if (south < -90 || north > 90 || west < -180 || east > 180 || south > north || west > east) return;
+    resultViewRef.current.bounds = L.latLngBounds([south, west], [north, east]);
+    fitResultView(map, resultViewRef.current);
+  }, [requestedBounds, fitResults, rtl, t]);
 
   // The Marketplace shown: the pins' layers come off the map and the
   // listings' go on, fetched afresh each time it is picked.
@@ -727,6 +746,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       const searchParams = new URLSearchParams();
       if (fetchQuery) searchParams.set('q', fetchQuery);
       if (restaurantLayer) searchParams.set('show', 'restaurants');
+      if (specials !== null) searchParams.set('specials', specials);
       if (watched) searchParams.set('f', 'watch');
       if (pastBoundary) searchParams.set('from', pastBoundary.toISOString());
       if (futureBoundary) searchParams.set('to', futureBoundary.toISOString());
@@ -739,7 +759,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
         // Regional guides request a view containing every result. Fit after
         // loading their coordinates, once per query, so subsequent refreshes
         // preserve the reader's pan and zoom. Leave room for map controls.
-        const fitKey = `${restaurantLayer ? 'restaurants' : 'pins'}|${fetchQuery}`;
+        const fitKey = `${restaurantLayer ? 'restaurants' : 'pins'}|${fetchQuery}|${specials ?? ''}`;
         if (fitResults && !focusId && fittedQueryRef.current !== fitKey) {
           const shown = markersRef.current.filter((entry) => inCategories(entry.categories, categoriesRef.current));
           if (shown.length) {
@@ -774,7 +794,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     return () => {
       cancelled = true;
     };
-  }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer, preserveView]);
+  }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer, preserveView, specials]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -930,6 +950,8 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     resultViewRef.current.bounds = null;
     mapRef.current?.stop();
     const query = new URLSearchParams(window.location.search);
+    query.delete('specials');
+    query.delete('bounds');
     if (next !== 'pins') query.set('show', next);
     else query.delete('show');
     if (next === 'restaurants') {
@@ -997,7 +1019,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     <div className="relative isolate h-[calc(100dvh-52px)]">
       {/* Leave room for the pin's back button;
           pins-map (globals.css) lifts attribution over the bottom pills. */}
-      <div ref={canvasRef} className={`pins-map absolute inset-0 z-0 ${focusId ? '[&_.leaflet-top]:pt-10' : ''}`} />
+      <div ref={canvasRef} className={`pins-map absolute inset-0 z-0 ${focusId || returnTo ? '[&_.leaflet-top]:pt-10' : ''}`} />
       <div className="fixed end-3 bottom-3 z-[1000] flex max-w-[calc(100%-1.5rem)] flex-col items-end gap-2 lg:end-4 lg:bottom-4">
         {locationError ? (
           <p role="alert" className="floating max-w-72 px-3 py-2 text-sm text-ink">{locationError}</p>
@@ -1014,7 +1036,20 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
           <Icon name="target" className={`size-5 ${locating ? 'motion-safe:animate-pulse' : ''}`} />
         </button>
       </div>
-      {focusId ? (
+      {returnTo ? (
+        <Anchor
+          href={localizeHere(returnTo)}
+          onClick={(event) => {
+            if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0 || loadedAsMap()) return;
+            event.preventDefault();
+            router.back();
+          }}
+          className="floating absolute top-2.5 start-2.5 z-[1000] flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-raised hover:no-underline active:bg-raised-2"
+        >
+          <Icon name="back" className="size-4 text-link" />
+          {t.dynamic('map.backToSpecials', 'Back to specials')}
+        </Anchor>
+      ) : focusId ? (
         // Above Leaflet's zoom buttons. Back through history when the map was
         // reached inside the app (the pin page's link), so the pin page is not
         // stacked twice; a real link to the pin when the page was loaded as

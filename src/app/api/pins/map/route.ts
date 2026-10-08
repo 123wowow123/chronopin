@@ -6,6 +6,7 @@ import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { requestTimeZone } from '@/server/viewer';
 import { requestLocale } from '@/lib/i18n/request';
 import { localizePins } from '@/server/services/translations';
+import { restaurantSpecialMap } from '@/server/services/restaurantSpecialMap';
 
 // Every located pin the map should plot, in one answer.
 // GET /api/pins/map?from=ISO&to=ISO&created_within=1w
@@ -15,6 +16,13 @@ import { localizePins } from '@/server/services/translations';
 // "now" it plots against.
 export const GET = route(async (request: NextRequest) => {
   const params = request.nextUrl.searchParams;
+  const specials = params.get('specials');
+  if (specials !== null) {
+    let ids: unknown;
+    try { ids = JSON.parse(specials); } catch { throw new HttpError(400, 'Invalid specials list'); }
+    if (!Array.isArray(ids) || ids.length > 200 || !ids.every((id) => typeof id === 'string')) throw new HttpError(400, 'Invalid specials list');
+    return json({ pins: restaurantSpecialMap(ids) });
+  }
   const user = await getUser(request);
   const onlyWatched = params.get('f')?.toLowerCase() === 'watch';
 

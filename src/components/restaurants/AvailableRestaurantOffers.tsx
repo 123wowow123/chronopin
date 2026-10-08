@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
+import { Icon } from '@/components/ui/Icon';
+import { usePathname } from '@/lib/client/navigation';
 import { HIGH_REVIEW_COUNT, HIGH_REVIEW_SCORE, restaurantOffersToShow, restaurantOfferDistance, offerEndLabel, type RestaurantOffer, type RestaurantOfferSort } from '@/lib/restaurantOffers';
 import { formatDistance } from '@/lib/distance';
 import { usesImperial } from '@/lib/weather';
@@ -11,6 +13,7 @@ import { viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
 import styles from './RestaurantGuide.module.css';
 
 export function AvailableRestaurantOffers({ offers, timeZone, now, city }: { offers: RestaurantOffer[]; timeZone: string; now: string; city: string }) {
+  const pathname = usePathname();
   const [sort, setSort] = useState<RestaurantOfferSort>('rating');
   const [origin, setOrigin] = useState<ViewerPlace>();
   const [locating, setLocating] = useState(false);
@@ -51,12 +54,19 @@ export function AvailableRestaurantOffers({ offers, timeZone, now, city }: { off
   };
   const date = new Date(now);
   const { upcoming, offers: shown } = restaurantOffersToShow(offers, date, timeZone, { sort, origin });
+  const mapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', specials: JSON.stringify(shown.map((offer) => offer.id)), returnTo: `${pathname}#available-now` });
+  const locations = shown.flatMap((offer) => {
+    const place = offer.location;
+    return place && Number.isFinite(place.latitude) && Math.abs(place.latitude) <= 90 && Number.isFinite(place.longitude) && Math.abs(place.longitude) <= 180 ? [place] : [];
+  });
+  if (locations.length) mapParams.set('bounds', [Math.min(...locations.map((place) => place.latitude)), Math.min(...locations.map((place) => place.longitude)), Math.max(...locations.map((place) => place.latitude)), Math.max(...locations.map((place) => place.longitude))].join(','));
   const nextTime = (startsAt: string) => new Intl.DateTimeFormat('en-US', { timeZone, weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }).format(new Date(startsAt));
   return <section id="available-now" className={styles.offers} aria-labelledby="available-now-title">
     <div className={styles.browseHeading}>
       <div><p className={styles.eyebrow}>GOOD FOOD. BETTER PRICES.</p><h2 id="available-now-title">{upcoming ? 'Next specials at highly rated restaurants' : 'Discounted menus available now'}</h2></div>
       {shown.length > 0 && <div className={styles.offerSort}>
         <div role="group" aria-label="Sort specials"><span>Sort by</span><button type="button" aria-pressed={sort === 'rating'} onClick={() => selectSort('rating')}>Rating</button><button type="button" aria-pressed={sort === 'distance'} disabled={locating} onClick={() => selectSort('distance')}>Distance</button></div>
+        <Link href={`/map?${mapParams}`} className={styles.offerMapButton} prefetch={false}><Icon name="map" />Map</Link>
       </div>}
     </div>
     <p className={styles.offerIntro}>Happy hours, daily specials, and limited offers during published service hours in {city}. Times follow the restaurant’s local clock.</p>
