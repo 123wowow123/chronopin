@@ -1,12 +1,15 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { identifyBot } from '@/lib/bots';
+import { isLandingPath, isReload, landingReferrerPath, pinIdOfPath, referrerSource } from '@/lib/landing';
 import { isOffered } from '@/lib/multilingual';
 import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE, localizePath, negotiateLocale, splitLocale, type Locale } from '@/lib/i18n/config';
 import { pinPath } from '@/lib/seo';
 import { topicSlug } from '@/lib/topics';
 import * as db from '@/server/db';
+import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
 import { botRetryAfter } from '@/server/botLimit';
 import BotVisit from '@/server/model/botVisit';
+import LandingVisit from '@/server/model/landingVisit';
 import Topics from '@/server/model/topics';
 import { timelineMinConfidence } from '@/server/services/timeline';
 import { offeredLocales, pinPathCache } from '@/server/services/cache';
@@ -94,8 +97,29 @@ export async function proxy(request: NextRequest) {
   }
   const locale = prefix ?? DEFAULT_LOCALE;
 
+  // Human visits to landing pages, by referrer. Prefetches, reloads and admins'
+  // own visits are not counted, and this runs after the redirects, so each visit is
+  // counted once.
+  const prefetch = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
+  const reload = isReload(request.headers.get('cache-control'), request.headers.get('pragma'));
+  const session = await sessionOf(request.cookies.get(TOKEN_COOKIE)?.value);
+  const counted = !bot && !prefetch && !reload && request.method === 'GET' && !session?.admin;
+  // Each viewer counts once a day: by user id, else the visitor cookie (set
+  // when they first view a pin), else address and user agent.
+  const vid = request.cookies.get('vid')?.value;
+  const viewer = session ? `u:${session.id}` : vid ? `v:${vid}` : `ip:${request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? ''}|${userAgent ?? ''}`;
+  if (counted && isLandingPath(path) && (await LandingVisit.firstToday(viewer, `page\n${path}`))) {
+    LandingVisit.record(path, referrerSource(request.headers.get('referer'), request.nextUrl.host));
+  }
+
   const pin = await checkPinPath(request, path, locale);
   if (pin) return pin;
+  // A restaurant opened from a landing page: its pin page, referred by it.
+  const pinId = counted ? pinIdOfPath(path) : null;
+  if (pinId) {
+    const from = landingReferrerPath(request.headers.get('referer'), request.nextUrl.host, (p) => splitLocale(p).path);
+    if (from && (await LandingVisit.firstToday(viewer, `pin\n${pinId}`))) LandingVisit.recordClick(from, pinId);
+  }
   const topic = await checkTopicPath(request, path, locale);
   if (topic) return topic;
 

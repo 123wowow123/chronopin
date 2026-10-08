@@ -6,27 +6,30 @@ import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { RESTAURANT_COUNTRIES, RESTAURANT_REGIONS, openingGroup, type Restaurant, type OpeningGroup, type TopRestaurant } from '@/lib/restaurants';
+import type { ScheduledRestaurantOffer } from '@/lib/restaurantOffers';
+import { guidePageHref, type GuideItem, type GuidePage, type GuideSummary, type GuideView } from '@/lib/restaurantGuide';
 import { pinPath } from '@/lib/seo';
 import styles from './RestaurantGuide.module.css';
 import { AvailableRestaurantOffers } from './AvailableRestaurantOffers';
-import { restaurantOffersToShow, type RestaurantOffer } from '@/lib/restaurantOffers';
-import { restaurantDistance, sortRestaurants, type RestaurantDetails } from '@/lib/restaurantSort';
+import { restaurantDistance, type RestaurantDetails } from '@/lib/restaurantSort';
 import { formatDistance } from '@/lib/distance';
 import { usesImperial } from '@/lib/weather';
 import { usePathname } from '@/lib/client/navigation';
 import { RestaurantControls, RestaurantSortNote, useRestaurantSort } from './RestaurantControls';
+import { CityGuideLink } from './CityGuideLink';
+import { PagedCardGrid, useGuidePages, type GuidePages } from './PagedCardGrid';
 
 type Props = {
-  restaurants: Restaurant[];
-  topRestaurants: TopRestaurant[];
+  summary: GuideSummary;
+  // The view a ?view= URL asked for, shown until the reader picks another.
+  initialView: GuideView;
+  // The first page of the view the guide opens on, by guideKey; the rest is fetched.
+  initialPages: Record<string, GuidePage<GuideItem>>;
   availableRegionSlugs: string[];
   region: { name: string; state: string; slug: string; country: string };
   today: string;
   previewSnapshot: boolean;
-  offers: RestaurantOffer[];
   timeZone: string;
-  initialNow: string;
-  details?: Record<number, RestaurantDetails>;
 };
 
 const VIEWS = [
@@ -47,21 +50,11 @@ function subscribeToHash(listener: () => void) {
 const currentHash = () => window.location.hash;
 const serverHash = () => '';
 
-export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSlugs, region, today, previewSnapshot, offers, timeZone, initialNow, details = {} }: Props) {
+export function RestaurantGuide({ summary, initialView, initialPages, availableRegionSlugs, region, today, previewSnapshot, timeZone }: Props) {
   const pathname = usePathname();
   const recentSort = useRestaurantSort('Restaurants');
   const topSort = useRestaurantSort('Restaurants');
   const upcomingSort = useRestaurantSort('Restaurants', 'opening-date');
-  const [now, setNow] = useState(initialNow);
-  useEffect(() => {
-    const refresh = () => setNow(new Date().toISOString());
-    const onVisibility = () => { if (document.visibilityState === 'visible') refresh(); };
-    refresh();
-    const timer = window.setInterval(refresh, 15_000);
-    document.addEventListener('visibilitychange', onVisibility);
-    window.addEventListener('focus', refresh);
-    return () => { window.clearInterval(timer); document.removeEventListener('visibilitychange', onVisibility); window.removeEventListener('focus', refresh); };
-  }, []);
   const hash = useSyncExternalStore(subscribeToHash, currentHash, serverHash);
   const [selectedNeighborhood, setNeighborhood] = useState('all');
   const [countrySelection, setCountrySelection] = useState({ regionSlug: region.slug, country: region.country });
@@ -72,26 +65,20 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
   const countryNav = useRef<HTMLElement>(null);
   const viewNav = useRef<HTMLElement>(null);
   const cities = availableRegions.filter((city) => city.country === selectedCountry);
-  const active = restaurants.filter((restaurant) => openingGroup(restaurant, today));
-  const upcoming = active.filter((restaurant) => openingGroup(restaurant, today) === 'upcoming').sort((a, b) => a.day.localeCompare(b.day));
-  const recent = active.filter((restaurant) => openingGroup(restaurant, today) === 'new').sort((a, b) => b.day.localeCompare(a.day));
-  const shownOffers = restaurantOffersToShow(offers, new Date(now), timeZone);
-  const views = VIEWS.filter((view) => ({ upcoming: upcoming.length, new: recent.length, top: topRestaurants.length, discounts: shownOffers.offers.length })[view.key] > 0);
+  const { counts } = summary;
+  const specialCount = counts.discounts;
+  const views = VIEWS.filter((view) => counts[view.key] > 0);
   // Old bookmarks and links from another city can point to an empty view.
-  const status = views.find((view) => view.hash === hash)?.key ?? views[0]?.key ?? 'upcoming';
+  const status: GuideView = views.find((view) => view.hash === hash || (view.key === 'discounts' && hash === '#next-specials'))?.key ?? views.find((view) => view.key === initialView)?.key ?? views[0]?.key ?? 'upcoming';
   const top = status === 'top';
   const discounts = status === 'discounts';
-  const neighborhoods = [...new Set((discounts ? offers : top ? topRestaurants : status === 'new' ? recent : status === 'upcoming' ? upcoming : [...active, ...topRestaurants]).map((restaurant) => restaurant.neighborhood))].sort();
+  const neighborhoods = summary.neighborhoods[status];
   const neighborhood = neighborhoods.includes(selectedNeighborhood) ? selectedNeighborhood : 'all';
-  const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image && !restaurant.imageNote) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image);
-  const matches = (restaurant: Pick<Restaurant, 'neighborhood'>) => neighborhood === 'all' || restaurant.neighborhood === neighborhood;
-  const shownUpcoming = status === 'new' || top ? [] : status === 'upcoming' ? sortRestaurants(upcoming.filter(matches), (r) => details[r.id], upcomingSort.sort, upcomingSort.origin, (r) => r.day) : upcoming.filter(matches);
-  const shownRecent = status === 'upcoming' || top ? [] : status === 'new' ? sortRestaurants(recent.filter(matches), (r) => details[r.id], recentSort.sort, recentSort.origin) : recent.filter(matches);
-  const shownTop = top ? sortRestaurants(topRestaurants.filter(matches), (r) => details[r.pinId], topSort.sort, topSort.origin) : topRestaurants.filter(matches);
+  const featured = summary.featured;
   const selectedSort = top ? topSort : status === 'upcoming' ? upcomingSort : recentSort;
-  const selectedIds = top ? shownTop.map((r) => r.pinId) : (status === 'upcoming' ? shownUpcoming : shownRecent).map((r) => r.id);
-  const selectedMapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', q: `pin:${selectedIds.join(',')}`, returnTo: `${pathname}${top ? '#top-restaurants' : status === 'upcoming' ? '#upcoming' : '#new'}` });
-  const shown = top ? shownTop.length : shownUpcoming.length + shownRecent.length;
+  const pages = useGuidePages<Restaurant | TopRestaurant>(discounts ? null : { region: region.slug, view: status, neighborhood, sort: selectedSort.sort, origin: selectedSort.origin }, initialPages as Record<string, GuidePage<Restaurant | TopRestaurant>>);
+  const selectedMapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', q: `pin:${pages.ids.join(',')}`, returnTo: `${pathname}${top ? '#top-restaurants' : status === 'upcoming' ? '#upcoming' : '#new'}` });
+  const shown = pages.total;
   const href = (restaurant: Restaurant) => pinPath(restaurant);
   const reset = () => { setNeighborhood('all'); };
 
@@ -113,7 +100,7 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
   }, [status]);
 
   useEffect(() => {
-    if (!VIEWS.some((view) => view.hash === hash)) return;
+    if (!VIEWS.some((view) => view.hash === hash) && hash !== '#next-specials') return;
     // A filtered section may only mount after the hash selects its view.
     const frame = requestAnimationFrame(() => document.getElementById(hash.slice(1))?.scrollIntoView({ block: 'start' }));
     return () => cancelAnimationFrame(frame);
@@ -132,7 +119,7 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
         </div>
 
         <nav className={styles.cityNav} aria-label={`${selectedCountry} restaurant guide cities`}>
-          {cities.map((city) => <Link key={city.slug} href={`/restaurants/${city.slug}`} aria-current={city.slug === region.slug ? 'page' : undefined}>{city.name}</Link>)}
+          {cities.map((city) => <CityGuideLink key={city.slug} slug={city.slug} name={city.name} current={city.slug === region.slug} />)}
         </nav>
 
         <header className={styles.hero}>
@@ -154,9 +141,9 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
 
         <div className={styles.digest}>
           <p>A little discovery.<br /><strong>A lot to look forward to.</strong></p>
-          {upcoming.length > 0 && <Anchor href="#upcoming" onClick={() => setNeighborhood('all')}><strong>{upcoming.length.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
-          {recent.length > 0 && <Anchor href="#new" onClick={() => setNeighborhood('all')}><strong>{recent.length.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
-          {shownOffers.offers.length > 0 && <Anchor href="#available-now" onClick={() => setNeighborhood('all')}><strong>{shownOffers.offers.length.toString().padStart(2, '0')}</strong><span>Specials <span aria-hidden="true">↗</span></span></Anchor>}
+          {counts.upcoming > 0 && <Anchor href="#upcoming" onClick={() => setNeighborhood('all')}><strong>{counts.upcoming.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
+          {counts.new > 0 && <Anchor href="#new" onClick={() => setNeighborhood('all')}><strong>{counts.new.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
+          {specialCount > 0 && <Anchor href="#available-now" onClick={() => setNeighborhood('all')}><strong>{specialCount.toString().padStart(2, '0')}</strong><span>Specials <span aria-hidden="true">↗</span></span></Anchor>}
         </div>
 
         <section id="openings" className={styles.openings} aria-label="Browse restaurants">
@@ -169,14 +156,11 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
               <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>
             </div>
           </div>
-          {discounts ? <AvailableRestaurantOffers key={region.slug} offers={offers.filter(matches)} timeZone={timeZone} now={now} city={region.name} /> : <>
-          <p className={styles.results} aria-live="polite">{shown} {top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>
-          {!shown ? <div className={styles.empty}><h3>{top ? 'No top restaurants match those filters.' : active.length ? 'No openings match those filters.' : 'The next opening is still on its way.'}</h3><p>{top || active.length ? 'Try another neighborhood.' : 'Check back for newly announced restaurants in this region.'}</p>{(top || active.length > 0) && <button type="button" onClick={top ? () => { setNeighborhood('all'); } : reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection restaurants={shownTop} details={details} sortState={selectedSort} mapHref={`/map?${selectedMapParams}`} /> : (
-            <>
-              {shownUpcoming.length > 0 && <OpeningSection id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." restaurants={shownUpcoming} group="upcoming" today={today} href={href} details={details} sortState={status === 'upcoming' ? upcomingSort : undefined} mapHref={status === 'upcoming' ? `/map?${selectedMapParams}` : undefined} />}
-              {shownRecent.length > 0 && <OpeningSection id="new" title="Freshly opened" subtitle="New tables, new flavors. Opened within the last 90 days." restaurants={shownRecent} group="new" today={today} href={href} details={details} sortState={status === 'new' ? recentSort : undefined} mapHref={status === 'new' ? `/map?${selectedMapParams}` : undefined} />}
-            </>
-          )}
+          {discounts ? <AvailableRestaurantOffers key={region.slug} regionSlug={region.slug} neighborhood={neighborhood} initialPages={initialPages as Record<string, GuidePage<ScheduledRestaurantOffer>>} timeZone={timeZone} city={region.name} /> : <>
+          {pages.ready && <p className={styles.results} aria-live="polite">{shown} {top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>}
+          {pages.ready && !shown ? <div className={styles.empty}><h3>{top ? 'No top restaurants match those filters.' : counts.upcoming + counts.new ? 'No openings match those filters.' : 'The next opening is still on its way.'}</h3><p>{top || counts.upcoming + counts.new ? 'Try another neighborhood.' : 'Check back for newly announced restaurants in this region.'}</p>{(top || counts.upcoming + counts.new > 0) && <button type="button" onClick={top ? () => { setNeighborhood('all'); } : reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection pageHref={(page) => guidePageHref(pathname, 'top', page, '#top-restaurants')} pages={pages as GuidePages<TopRestaurant>} sortState={selectedSort} mapHref={`/map?${selectedMapParams}`} /> : status === 'upcoming'
+            ? <OpeningSection pageHref={(page) => guidePageHref(pathname, 'upcoming', page, '#upcoming')} id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." pages={pages as GuidePages<Restaurant>} group="upcoming" today={today} href={href} sortState={upcomingSort} mapHref={`/map?${selectedMapParams}`} />
+            : <OpeningSection pageHref={(page) => guidePageHref(pathname, 'new', page, '#new')} id="new" title="Freshly opened" subtitle="New tables, new flavors. Opened within the last 90 days." pages={pages as GuidePages<Restaurant>} group="new" today={today} href={href} sortState={recentSort} mapHref={`/map?${selectedMapParams}`} />}
           </>}
         </section>
 
@@ -199,12 +183,14 @@ function RestaurantFacts({ details, sortState }: { details?: RestaurantDetails; 
   </>;
 }
 
-function TopRestaurantSection({ restaurants, details = {}, sortState, mapHref }: { restaurants: TopRestaurant[]; details?: Record<number, RestaurantDetails>; sortState?: SortState; mapHref?: string }) {
+function TopRestaurantSection({ pages, pageHref, sortState, mapHref }: { pages: GuidePages<TopRestaurant>; pageHref: (page: number) => string; sortState?: SortState; mapHref?: string }) {
+  const restaurants = pages.items;
+  const details = pages.details;
   return <section id="top-restaurants" className={styles.section} aria-labelledby="top-restaurants-title">
-    <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id="top-restaurants-title">Top restaurants <span>{restaurants.length.toString().padStart(2, '0')}</span></h2><p>Established favorites for your next meal.</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label="top restaurants" mapHref={mapHref} /> : <span className={styles.sectionSymbol} aria-hidden="true">✳</span>}</div>
+    <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id="top-restaurants-title">Top restaurants <span>{pages.total.toString().padStart(2, '0')}</span></h2><p>Established favorites for your next meal.</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label="top restaurants" mapHref={mapHref} /> : <span className={styles.sectionSymbol} aria-hidden="true">✳</span>}</div>
     {sortState && <RestaurantSortFeedback state={sortState} />}
-    <p className={styles.topNote}>{restaurants.every((restaurant) => restaurant.recognition.startsWith('MICHELIN')) ? 'A curated selection from the MICHELIN Guide, covering starred dining, Bib Gourmand value picks, and selected restaurants. Each card links to its recognition. Dollar signs are the guide’s price ranges.' : 'A Chronopin editorial selection of established restaurants. Each card links to the restaurant’s information; this selection is not an external award.'} Checked {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${restaurants[0].checkedAt}T00:00:00Z`))}.</p>
-    <div className={styles.cardGrid}>{restaurants.map((restaurant) => (
+    {restaurants.length > 0 && <p className={styles.topNote}>{restaurants.every((restaurant) => restaurant.recognition.startsWith('MICHELIN')) ? 'A curated selection from the MICHELIN Guide, covering starred dining, Bib Gourmand value picks, and selected restaurants. Each card links to its recognition. Dollar signs are the guide’s price ranges.' : 'A Chronopin editorial selection of established restaurants. Each card links to the restaurant’s information; this selection is not an external award.'} Checked {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${restaurants[0].checkedAt}T00:00:00Z`))}.</p>}
+    <PagedCardGrid pages={pages} pageHref={pageHref}>{(restaurant) => (
       <article key={restaurant.slug} className={styles.card}>
         <Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })} className={styles.photoLink} aria-label={`See ${restaurant.name}'s restaurant details`}>
           {restaurant.image ? <Image src={restaurant.image} alt={restaurant.name} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>}
@@ -220,15 +206,16 @@ function TopRestaurantSection({ restaurants, details = {}, sortState, mapHref }:
           <div className={styles.topLinks}><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>View restaurant ↗</Link><Anchor href={restaurant.websiteUrl} target="_blank" rel="noopener noreferrer">Visit website ↗</Anchor></div>
         </div>
       </article>
-    ))}</div>
+    )}</PagedCardGrid>
   </section>;
 }
 
-function OpeningSection({ id, title, subtitle, restaurants, group, today, href, details = {}, sortState, mapHref }: { id: string; title: string; subtitle: string; restaurants: Restaurant[]; group: OpeningGroup; today: string; href: (restaurant: Restaurant) => string; details?: Record<number, RestaurantDetails>; sortState?: SortState; mapHref?: string }) {
+function OpeningSection({ pageHref, id, title, subtitle, pages, group, today, href, sortState, mapHref }: { pageHref: (page: number) => string; id: string; title: string; subtitle: string; pages: GuidePages<Restaurant>; group: OpeningGroup; today: string; href: (restaurant: Restaurant) => string; sortState?: SortState; mapHref?: string }) {
+  const details = pages.details;
   return <section id={id} className={styles.section} aria-labelledby={`${id}-title`}>
-    <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id={`${id}-title`}>{title} <span>{restaurants.length.toString().padStart(2, '0')}</span></h2><p>{subtitle}</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label={group === 'upcoming' ? 'coming soon restaurants' : 'just opened restaurants'} mapHref={mapHref} openingDate={group === 'upcoming'} /> : <span className={styles.sectionSymbol} aria-hidden="true">{group === 'new' ? '↗' : '✳'}</span>}</div>
+    <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id={`${id}-title`}>{title} <span>{pages.total.toString().padStart(2, '0')}</span></h2><p>{subtitle}</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label={group === 'upcoming' ? 'coming soon restaurants' : 'just opened restaurants'} mapHref={mapHref} openingDate={group === 'upcoming'} /> : <span className={styles.sectionSymbol} aria-hidden="true">{group === 'new' ? '↗' : '✳'}</span>}</div>
     {sortState && <RestaurantSortFeedback state={sortState} />}
-    {restaurants.length ? <div className={styles.cardGrid}>{restaurants.map((restaurant) => (
+    <PagedCardGrid pages={pages} pageHref={pageHref}>{(restaurant) => (
       <article key={restaurant.id} className={styles.card}>
         <Link href={href(restaurant)} className={styles.photoLink} aria-label={`See ${restaurant.name}'s opening details`}>
           {restaurant.image ? <Image src={restaurant.image} alt={`${restaurant.name} · ${restaurant.imageNote ?? 'restaurant photo'}`} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <div className={styles.photoPlaceholder}><span aria-hidden="true">✳</span></div>}
@@ -243,6 +230,6 @@ function OpeningSection({ id, title, subtitle, restaurants, group, today, href, 
           <div className={styles.cardFoot}><div><span>{group === 'new' ? 'OPENED' : restaurant.day <= today ? 'LAST ANNOUNCED TARGET' : 'EXPECTED OPENING'}</span><strong><time dateTime={restaurant.day}>{restaurant.dateLabel}</time>{restaurant.estimated && <small>Estimated</small>}</strong></div><Link href={href(restaurant)} aria-label={`Read about ${restaurant.name}`} className={styles.cardArrow}>↗</Link></div>
         </div>
       </article>
-    ))}</div> : <p className={styles.sectionEmpty}>No {group === 'new' ? 'recent' : 'upcoming'} openings match this selection.</p>}
+    )}</PagedCardGrid>
   </section>;
 }

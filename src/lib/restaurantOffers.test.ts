@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { RestaurantSpecial } from './restaurantMenus';
 import { restaurantMenuFor } from './restaurantMenus';
-import { activeRestaurantOffer, nextRestaurantOffer, restaurantOffersToShow, offerEndLabel, type RestaurantOffer } from './restaurantOffers';
+import { activeRestaurantOffer, nextRestaurantOffer, restaurantOfferSections, restaurantOffersToShow, offerEndLabel, type RestaurantOffer } from './restaurantOffers';
 
 const zone = 'America/Los_Angeles';
 const happyHour = restaurantMenuFor('https://www.maranellosd.com/')!.specials[0];
@@ -82,6 +82,39 @@ describe('next highly reviewed restaurant specials', () => {
     expect(shown.offers.map((offer) => offer.name)).toEqual(['Favorite', 'New venue']);
     expect(shown.offers.every((offer) => !offer.startsAt)).toBe(true);
   });
+  it('keeps inactive specials visible in their own section while another offer is active', () => {
+    const current = offer('Available');
+    const later = { ...offer('Later'), special: { ...happyHour, availability: { windows: [{ days: [3], start: '18:00', end: '20:00' }] } } };
+    const lowRated = { ...later, ...offer('Below threshold', 4.4), special: later.special };
+    const sections = restaurantOfferSections([current, later, lowRated], new Date('2026-10-07T23:30:00Z'), zone);
+    expect(sections.available.map((item) => item.id)).toEqual(['Available']);
+    expect(sections.upcoming.map((item) => item.id)).toEqual(['Later']);
+    expect(sections.upcoming[0].startsAt).toBe('2026-10-08T01:00:00.000Z');
+  });
+  it('puts lunch specials first, each group by rating, when sorted by lunch', () => {
+    const lunch = { ...offer('Lunch place', 4.6, 120), special: { ...happyHour, kind: 'lunch' as const } };
+    const now = new Date('2026-10-07T23:30:00Z');
+    const shown = restaurantOfferSections([offer('Favorite', 4.9, 500), lunch, offer('Other', 4.7, 200)], now, zone, { sort: 'lunch' });
+    expect(shown.available.map((item) => item.name)).toEqual(['Lunch place', 'Favorite', 'Other']);
+  });
+  it('moves an ended recurring offer to upcoming without repeating an active offer there', () => {
+    const venue = offer('Favorite');
+    const during = restaurantOfferSections([venue], new Date('2026-10-07T23:30:00Z'), zone);
+    expect(during.available).toHaveLength(1);
+    expect(during.upcoming).toEqual([]);
+    const after = restaurantOfferSections([venue], new Date('2026-10-08T01:00:00Z'), zone);
+    expect(after.available).toEqual([]);
+    expect(after.upcoming[0].id).toBe(venue.id);
+    expect(after.upcoming[0].startsAt).toBe('2026-10-08T23:00:00.000Z');
+  });
+  it('caps and deduplicates upcoming restaurants independently of the active section', () => {
+    const current = offer('Available');
+    const later = Array.from({ length: 105 }, (_, index) => ({ ...offer(`Later ${index}`), special: { ...happyHour, availability: { windows: [{ days: [3], start: '18:00', end: '20:00' }] } } }));
+    const sections = restaurantOfferSections([current, ...later, ...later], new Date('2026-10-07T23:30:00Z'), zone, { sort: 'rating' });
+    expect(sections.available).toHaveLength(1);
+    expect(sections.upcoming).toHaveLength(100);
+    expect(new Set(sections.upcoming.map((item) => item.restaurantHref)).size).toBe(100);
+  });
   it('requires high ratings with enough reviews and ranks starts before ratings', () => {
     const earlier = { ...offer('Earlier', 4.6), special: { ...happyHour, availability: { windows: [{ days: [1, 2, 3, 4, 5], start: '15:30', end: '17:30' }] } } };
     const unrated = { ...offer('Unknown'), review: undefined };
@@ -97,12 +130,12 @@ describe('next highly reviewed restaurant specials', () => {
     expect(shown.offers).toHaveLength(1);
     expect(shown.offers[0].id).toBe('Favorite');
   });
-  it('shows up to fifty distinct restaurants with the earliest specials first', () => {
-    const venues = Array.from({ length: 55 }, (_, index) => offer(`Venue ${String(index).padStart(2, '0')}`));
+  it('shows up to one hundred distinct restaurants with the earliest specials first', () => {
+    const venues = Array.from({ length: 105 }, (_, index) => offer(`Venue ${String(index).padStart(3, '0')}`));
     const shown = restaurantOffersToShow([...venues, ...venues], new Date('2026-10-07T20:00:00Z'), zone);
-    expect(shown.offers).toHaveLength(50);
-    expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(50);
-    expect(shown.offers.map((item) => item.name)).toEqual(venues.slice(0, 50).map((item) => item.name));
+    expect(shown.offers).toHaveLength(100);
+    expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(100);
+    expect(shown.offers.map((item) => item.name)).toEqual(venues.slice(0, 100).map((item) => item.name));
   });
   it.each(['2026-10-07T20:00:00Z', '2026-10-07T23:30:00Z'])('sorts current and upcoming specials by rating or distance at %s', (time) => {
     const origin = { latitude: 32.7, longitude: -117.1 };
@@ -115,14 +148,14 @@ describe('next highly reviewed restaurant specials', () => {
     expect(restaurantOffersToShow(venues, new Date(time), zone, { sort: 'distance', origin }).offers.map((item) => item.name)).toEqual(['Nearby', 'Highest', 'Unknown distance', 'Invalid coordinates']);
     expect(restaurantOffersToShow(venues, new Date(time), zone, { sort: 'distance' }).offers.map((item) => item.name)).toEqual(['Highest', 'Unknown distance', 'Invalid coordinates', 'Nearby']);
   });
-  it('applies sorting before the fifty-venue cap while keeping each venue’s earliest special', () => {
-    const venues = Array.from({ length: 51 }, (_, index) => ({ ...offer(`Venue ${index}`, index === 50 ? 5 : 4.5), location: { latitude: 32.7 + (50 - index) / 100, longitude: -117.1 } }));
-    const later = { ...venues[50], id: 'later', special: { ...happyHour, availability: { windows: [{ days: [5], start: '18:00', end: '20:00' }] } } };
+  it('applies sorting before the one hundred-venue cap while keeping each venue’s earliest special', () => {
+    const venues = Array.from({ length: 101 }, (_, index) => ({ ...offer(`Venue ${index}`, index === 100 ? 5 : 4.5), location: { latitude: 32.7 + (100 - index) / 100, longitude: -117.1 } }));
+    const later = { ...venues[100], id: 'later', special: { ...happyHour, availability: { windows: [{ days: [5], start: '18:00', end: '20:00' }] } } };
     for (const sort of ['rating', 'distance'] as const) {
-      const shown = restaurantOffersToShow([later, ...venues], new Date('2026-10-07T20:00:00Z'), zone, { sort, origin: venues[50].location });
-      expect(shown.offers).toHaveLength(50);
-      expect(shown.offers[0].id).toBe('Venue 50');
-      expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(50);
+      const shown = restaurantOffersToShow([later, ...venues], new Date('2026-10-07T20:00:00Z'), zone, { sort, origin: venues[100].location });
+      expect(shown.offers).toHaveLength(100);
+      expect(shown.offers[0].id).toBe('Venue 100');
+      expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(100);
     }
   });
 });

@@ -38,9 +38,9 @@ export function useRestaurantSort(label: string, defaultSort: 'rating' | 'openin
   return { sort, origin, locating, locationError, selectSort };
 }
 
-export function RestaurantControls({ state, label, mapHref, openingDate = false }: { state: ReturnType<typeof useRestaurantSort>; label: string; mapHref: string; openingDate?: boolean }) {
+export function RestaurantControls({ state, label, mapHref, openingDate = false, lunch = false }: { state: ReturnType<typeof useRestaurantSort>; label: string; mapHref: string; openingDate?: boolean; lunch?: boolean }) {
   return <div className={styles.offerSort}>
-    <div role="group" aria-label={`Sort ${label}`}><span>Sort by</span>{!openingDate && <button type="button" aria-pressed={state.sort === 'rating'} onClick={() => state.selectSort('rating')}>Rating</button>}<button type="button" aria-pressed={state.sort === 'distance'} disabled={state.locating} onClick={() => state.selectSort('distance')}>Distance</button>{openingDate && <button type="button" aria-pressed={state.sort === 'opening-date'} onClick={() => state.selectSort('opening-date')}>Expected opening date</button>}</div>
+    <div role="group" aria-label={`Sort ${label}`}><span>Sort by</span>{!openingDate && <button type="button" aria-pressed={state.sort === 'rating'} onClick={() => state.selectSort('rating')}>Rating</button>}{lunch && <button type="button" aria-pressed={state.sort === 'lunch'} onClick={() => state.selectSort('lunch')}>Lunch specials first</button>}<button type="button" aria-pressed={state.sort === 'distance'} disabled={state.locating} onClick={() => state.selectSort('distance')}>Distance</button>{openingDate && <button type="button" aria-pressed={state.sort === 'opening-date'} onClick={() => state.selectSort('opening-date')}>Expected opening date</button>}</div>
     <Link href={mapHref} className={styles.offerMapButton} prefetch={false}><Icon name="map" />Map</Link>
   </div>;
 }

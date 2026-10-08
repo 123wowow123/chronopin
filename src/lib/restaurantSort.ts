@@ -2,7 +2,7 @@ import { distanceKm, type Place } from './distance';
 import type { PinRatingJson } from './types';
 
 export type RestaurantDetails = { location?: Place; rating?: Pick<PinRatingJson, 'score' | 'scoreMax' | 'source' | 'url'> };
-export type RestaurantSort = 'rating' | 'distance' | 'opening-date';
+export type RestaurantSort = 'rating' | 'distance' | 'opening-date' | 'lunch';
 export function restaurantDistance(details?: RestaurantDetails, origin?: Place): number | undefined {
   const valid = (place?: Place) => !!place && Number.isFinite(place.latitude) && Math.abs(place.latitude) <= 90 && Number.isFinite(place.longitude) && Math.abs(place.longitude) <= 180;
   return valid(details?.location) && valid(origin) ? distanceKm(origin!, details!.location!) : undefined;

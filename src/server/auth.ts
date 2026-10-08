@@ -65,6 +65,21 @@ async function verify(token: string): Promise<{ id: number } | null> {
   }
 }
 
+// Who a session token (the cookie's value) is - its user id and whether it
+// carries the admin role - read from the token alone, with no database lookup,
+// for the proxy. A role changed since the token was issued shows up when it
+// expires. Null for no token or one that does not verify.
+export async function sessionOf(token: string | undefined): Promise<{ id: number; admin: boolean } | null> {
+  if (!token) return null;
+  try {
+    const { payload } = await jwtVerify(token, secret, { algorithms: ['HS256'] });
+    const id = Number(payload.id);
+    return Number.isInteger(id) ? { id, admin: payload.role === 'admin' } : null;
+  } catch {
+    return null;
+  }
+}
+
 // The signed-in user, or null. A token that fails to verify counts as
 // signed out rather than an error, so an expired cookie never breaks a page.
 export async function getUser(request?: Request): Promise<User | null> {

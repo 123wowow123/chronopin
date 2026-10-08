@@ -48,6 +48,10 @@
 .cityNav a { padding:8px 12px; border:1px solid var(--rule); border-radius:4px; }
 .cityNav a[aria-current='page'] { background:var(--text); color:var(--paper); }
 .cityNav a:hover { text-decoration:underline; text-underline-offset:3px; }
+.cityLoading { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); z-index:60; display:flex; align-items:center; gap:10px; padding:14px 20px; border:1px solid var(--rule); border-radius:6px; background:var(--paper); color:var(--text); box-shadow:0 4px 20px rgb(0 0 0 / 12%); font-size:14px; white-space:nowrap; pointer-events:none; }
+.citySpinner { display:inline-block; width:18px; height:18px; vertical-align:middle; border:2px solid var(--rule, #d7ddcf); border-top-color:var(--text, #293f35); border-radius:50%; animation:citySpin .8s linear infinite; }
+@keyframes citySpin { to { transform:rotate(360deg); } }
+@media (prefers-reduced-motion:reduce) { .citySpinner { animation:none; } }
 .hero { display:grid; grid-template-columns:1fr 1fr; gap:50px; padding:44px 0 40px; align-items:center; }
 .eyebrow { font-size:10px; font-weight:700; letter-spacing:2px; color:var(--green); margin-bottom:22px; }
 .heroCopy h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(48px,5.6vw,76px); line-height:1.05; font-weight:400; letter-spacing:-3px; margin:0 0 22px; }
