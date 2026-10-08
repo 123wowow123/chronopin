@@ -1,59 +1,21 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
-import { Icon } from '@/components/ui/Icon';
 import { usePathname } from '@/lib/client/navigation';
-import { HIGH_REVIEW_COUNT, HIGH_REVIEW_SCORE, restaurantOffersToShow, restaurantOfferDistance, offerEndLabel, type RestaurantOffer, type RestaurantOfferSort } from '@/lib/restaurantOffers';
+import { HIGH_REVIEW_COUNT, HIGH_REVIEW_SCORE, restaurantOffersToShow, restaurantOfferDistance, offerEndLabel, type RestaurantOffer } from '@/lib/restaurantOffers';
 import { formatDistance } from '@/lib/distance';
 import { usesImperial } from '@/lib/weather';
-import { viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
+import { RestaurantControls, RestaurantSortNote, useRestaurantSort } from './RestaurantControls';
 import styles from './RestaurantGuide.module.css';
 
 export function AvailableRestaurantOffers({ offers, timeZone, now, city }: { offers: RestaurantOffer[]; timeZone: string; now: string; city: string }) {
   const pathname = usePathname();
-  const [sort, setSort] = useState<RestaurantOfferSort>('rating');
-  const [origin, setOrigin] = useState<ViewerPlace>();
-  const [locating, setLocating] = useState(false);
-  const [locationError, setLocationError] = useState('');
-  const request = useRef(0);
-  useEffect(() => {
-    const pendingRequests = request;
-    const id = pendingRequests.current;
-    // Reuse the location available to other pin cards without prompting.
-    void viewerPlace().then((place) => {
-      if (place && id === pendingRequests.current) setOrigin(place);
-    }).catch(() => {});
-    return () => { pendingRequests.current++; };
-  }, []);
-  const selectSort = (value: RestaurantOfferSort) => {
-    const id = ++request.current;
-    setLocationError('');
-    setLocating(false);
-    if (value === 'rating' || origin?.source === 'device') {
-      setSort(value);
-      return;
-    }
-    if (!navigator.geolocation) {
-      setLocationError('Location is unavailable in this browser. Specials are sorted by rating.');
-      return;
-    }
-    setLocating(true);
-    navigator.geolocation.getCurrentPosition(({ coords }) => {
-      if (id !== request.current) return;
-      setOrigin({ latitude: coords.latitude, longitude: coords.longitude, source: 'device' });
-      setSort('distance');
-      setLocating(false);
-    }, (error) => {
-      if (id !== request.current) return;
-      setLocating(false);
-      setLocationError(error.code === 1 ? 'Allow location access in your browser to sort by distance. Specials are sorted by rating.' : 'Couldn’t find your location. Try distance again. Specials are sorted by rating.');
-    }, { maximumAge: 5 * 60 * 1000, timeout: 10000 });
-  };
+  const sortState = useRestaurantSort('Specials');
+  const { sort, origin } = sortState;
   const date = new Date(now);
-  const { upcoming, offers: shown } = restaurantOffersToShow(offers, date, timeZone, { sort, origin });
+  const { upcoming, offers: shown } = restaurantOffersToShow(offers, date, timeZone, { sort: sort === 'distance' ? 'distance' : 'rating', origin });
   const mapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', specials: JSON.stringify(shown.map((offer) => offer.id)), returnTo: `${pathname}#available-now` });
   const locations = shown.flatMap((offer) => {
     const place = offer.location;
@@ -64,15 +26,12 @@ export function AvailableRestaurantOffers({ offers, timeZone, now, city }: { off
   return <section id="available-now" className={styles.offers} aria-labelledby="available-now-title">
     <div className={styles.browseHeading}>
       <div><p className={styles.eyebrow}>GOOD FOOD. BETTER PRICES.</p><h2 id="available-now-title">{upcoming ? 'Next specials at highly rated restaurants' : 'Discounted menus available now'}</h2></div>
-      {shown.length > 0 && <div className={styles.offerSort}>
-        <div role="group" aria-label="Sort specials"><span>Sort by</span><button type="button" aria-pressed={sort === 'rating'} onClick={() => selectSort('rating')}>Rating</button><button type="button" aria-pressed={sort === 'distance'} disabled={locating} onClick={() => selectSort('distance')}>Distance</button></div>
-        <Link href={`/map?${mapParams}`} className={styles.offerMapButton} prefetch={false}><Icon name="map" />Map</Link>
-      </div>}
+      {shown.length > 0 && <RestaurantControls state={sortState} label="specials" mapHref={`/map?${mapParams}`} />}
     </div>
     <p className={styles.offerIntro}>Happy hours, daily specials, and limited offers during published service hours in {city}. Times follow the restaurant’s local clock.</p>
     <p className={styles.results} role="status">{upcoming ? `No offers available now. ${shown.length} upcoming ${shown.length === 1 ? 'special' : 'specials'}.` : `${shown.length} ${shown.length === 1 ? 'offer' : 'offers'} available now`}</p>
     {upcoming && shown.length > 0 && <p className={styles.offerIntro}>Rated {HIGH_REVIEW_SCORE}/5 or higher from at least {HIGH_REVIEW_COUNT} reviews. Each restaurant’s next special is shown.</p>}
-    {shown.length > 0 && (locating || locationError || sort === 'distance') && <p className={styles.offerSortNote} role="status">{locating ? 'Finding your location…' : locationError || 'Nearest first · Approximate straight-line distance from your location. Unknown distances shown last.'}</p>}
+    {shown.length > 0 && <RestaurantSortNote state={sortState} />}
     {shown.length ? <div className={styles.cardGrid}>{shown.map((offer) => <article key={offer.id} className={styles.card}>
       {offer.photo && <Link href={offer.restaurantHref} className={styles.photoLink} aria-label={`See ${offer.name}'s restaurant details`}>
         <Image src={offer.photo.src} alt={offer.photo.alt} fill unoptimized className={styles.cardImage} />

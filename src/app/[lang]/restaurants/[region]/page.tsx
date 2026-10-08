@@ -8,6 +8,7 @@ import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { absoluteUrl } from '@/lib/seo';
 import { regionalRestaurants, regionalTopRestaurants, restaurantGuideRegionSlugs } from '@/server/services/restaurants';
 import { regionalRestaurantOffers } from '@/server/services/restaurantOffers';
+import { restaurantGuideDetails } from '@/server/services/restaurantGuideDetails';
 
 type Props = { params: Promise<{ region: string }> };
 
@@ -32,6 +33,6 @@ async function GuideContent({ params }: Props) {
   const [data, topRestaurants, availableRegionSlugs] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug), restaurantGuideRegionSlugs()]);
   const now = new Date();
   const today = dayKeyIn(now, region.timeZone);
-  const offers = await regionalRestaurantOffers(data.restaurants, topRestaurants, today, region.slug);
-  return <RestaurantGuide {...data} topRestaurants={topRestaurants} availableRegionSlugs={availableRegionSlugs} region={region} today={today} offers={offers} timeZone={region.timeZone} initialNow={now.toISOString()} />;
+  const [offers, details] = await Promise.all([regionalRestaurantOffers(data.restaurants, topRestaurants, today, region.slug), restaurantGuideDetails(data.restaurants, topRestaurants)]);
+  return <RestaurantGuide {...data} topRestaurants={topRestaurants} availableRegionSlugs={availableRegionSlugs} region={region} today={today} offers={offers} details={details} timeZone={region.timeZone} initialNow={now.toISOString()} />;
 }

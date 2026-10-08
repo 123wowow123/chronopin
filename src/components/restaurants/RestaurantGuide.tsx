@@ -10,6 +10,11 @@ import { pinPath } from '@/lib/seo';
 import styles from './RestaurantGuide.module.css';
 import { AvailableRestaurantOffers } from './AvailableRestaurantOffers';
 import { restaurantOffersToShow, type RestaurantOffer } from '@/lib/restaurantOffers';
+import { restaurantDistance, sortRestaurants, type RestaurantDetails } from '@/lib/restaurantSort';
+import { formatDistance } from '@/lib/distance';
+import { usesImperial } from '@/lib/weather';
+import { usePathname } from '@/lib/client/navigation';
+import { RestaurantControls, RestaurantSortNote, useRestaurantSort } from './RestaurantControls';
 
 type Props = {
   restaurants: Restaurant[];
@@ -21,10 +26,10 @@ type Props = {
   offers: RestaurantOffer[];
   timeZone: string;
   initialNow: string;
+  details?: Record<number, RestaurantDetails>;
 };
 
 const VIEWS = [
-  { key: 'all', label: 'All openings', mobileLabel: 'All', hash: '#openings' },
   { key: 'upcoming', label: 'Coming soon', mobileLabel: 'Soon', hash: '#upcoming' },
   { key: 'new', label: 'Just opened', mobileLabel: 'New', hash: '#new' },
   { key: 'top', label: 'Top restaurants', mobileLabel: 'Top rated', hash: '#top-restaurants' },
@@ -42,7 +47,11 @@ function subscribeToHash(listener: () => void) {
 const currentHash = () => window.location.hash;
 const serverHash = () => '';
 
-export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSlugs, region, today, previewSnapshot, offers, timeZone, initialNow }: Props) {
+export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSlugs, region, today, previewSnapshot, offers, timeZone, initialNow, details = {} }: Props) {
+  const pathname = usePathname();
+  const recentSort = useRestaurantSort('Restaurants');
+  const topSort = useRestaurantSort('Restaurants');
+  const upcomingSort = useRestaurantSort('Restaurants', 'opening-date');
   const [now, setNow] = useState(initialNow);
   useEffect(() => {
     const refresh = () => setNow(new Date().toISOString());
@@ -67,23 +76,24 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
   const upcoming = active.filter((restaurant) => openingGroup(restaurant, today) === 'upcoming').sort((a, b) => a.day.localeCompare(b.day));
   const recent = active.filter((restaurant) => openingGroup(restaurant, today) === 'new').sort((a, b) => b.day.localeCompare(a.day));
   const shownOffers = restaurantOffersToShow(offers, new Date(now), timeZone);
-  const views = VIEWS.filter((view) => ({ all: active.length, upcoming: upcoming.length, new: recent.length, top: topRestaurants.length, discounts: shownOffers.offers.length })[view.key] > 0);
+  const views = VIEWS.filter((view) => ({ upcoming: upcoming.length, new: recent.length, top: topRestaurants.length, discounts: shownOffers.offers.length })[view.key] > 0);
   // Old bookmarks and links from another city can point to an empty view.
-  const status = views.find((view) => view.hash === hash)?.key ?? views[0]?.key ?? 'all';
+  const status = views.find((view) => view.hash === hash)?.key ?? views[0]?.key ?? 'upcoming';
   const top = status === 'top';
   const discounts = status === 'discounts';
-  const neighborhoods = [...new Set((discounts ? offers : top ? topRestaurants : status === 'all' ? [...active, ...topRestaurants] : active).map((restaurant) => restaurant.neighborhood))].sort();
+  const neighborhoods = [...new Set((discounts ? offers : top ? topRestaurants : status === 'new' ? recent : status === 'upcoming' ? upcoming : [...active, ...topRestaurants]).map((restaurant) => restaurant.neighborhood))].sort();
   const neighborhood = neighborhoods.includes(selectedNeighborhood) ? selectedNeighborhood : 'all';
   const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image && !restaurant.imageNote) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image);
   const matches = (restaurant: Pick<Restaurant, 'neighborhood'>) => neighborhood === 'all' || restaurant.neighborhood === neighborhood;
-  const shownUpcoming = status === 'new' || top ? [] : upcoming.filter(matches);
-  const shownRecent = status === 'upcoming' || top ? [] : recent.filter(matches);
-  const shownTop = topRestaurants.filter(matches);
+  const shownUpcoming = status === 'new' || top ? [] : status === 'upcoming' ? sortRestaurants(upcoming.filter(matches), (r) => details[r.id], upcomingSort.sort, upcomingSort.origin, (r) => r.day) : upcoming.filter(matches);
+  const shownRecent = status === 'upcoming' || top ? [] : status === 'new' ? sortRestaurants(recent.filter(matches), (r) => details[r.id], recentSort.sort, recentSort.origin) : recent.filter(matches);
+  const shownTop = top ? sortRestaurants(topRestaurants.filter(matches), (r) => details[r.pinId], topSort.sort, topSort.origin) : topRestaurants.filter(matches);
+  const selectedSort = top ? topSort : status === 'upcoming' ? upcomingSort : recentSort;
+  const selectedIds = top ? shownTop.map((r) => r.pinId) : (status === 'upcoming' ? shownUpcoming : shownRecent).map((r) => r.id);
+  const selectedMapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', q: `pin:${selectedIds.join(',')}`, returnTo: `${pathname}${top ? '#top-restaurants' : status === 'upcoming' ? '#upcoming' : '#new'}` });
   const shown = top ? shownTop.length : shownUpcoming.length + shownRecent.length;
   const href = (restaurant: Restaurant) => pinPath(restaurant);
-  const mapIds = [...new Set([...active.map((restaurant) => restaurant.id), ...topRestaurants.map((restaurant) => restaurant.pinId)])];
-  const mapHref = `/map?fit=results&past=all&future=all&q=${encodeURIComponent(mapIds.length ? `pin:${mapIds.join(',')}` : `place:"${region.name}" tag:"Restaurant"`)}`;
-  const reset = () => { setNeighborhood('all'); window.location.hash = 'openings'; };
+  const reset = () => { setNeighborhood('all'); };
 
   useEffect(() => {
     const nav = countryNav.current;
@@ -146,7 +156,7 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
           <p>A little discovery.<br /><strong>A lot to look forward to.</strong></p>
           {upcoming.length > 0 && <Anchor href="#upcoming" onClick={() => setNeighborhood('all')}><strong>{upcoming.length.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
           {recent.length > 0 && <Anchor href="#new" onClick={() => setNeighborhood('all')}><strong>{recent.length.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
-          <Anchor href={mapHref} className={styles.mapLink}><span aria-hidden="true">⌖</span><span>Find your next stop<br /><strong>Explore the map ↗</strong></span></Anchor>
+          {shownOffers.offers.length > 0 && <Anchor href="#available-now" onClick={() => setNeighborhood('all')}><strong>{shownOffers.offers.length.toString().padStart(2, '0')}</strong><span>Specials <span aria-hidden="true">↗</span></span></Anchor>}
         </div>
 
         <section id="openings" className={styles.openings} aria-label="Browse restaurants">
@@ -161,25 +171,38 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
           </div>
           {discounts ? <AvailableRestaurantOffers key={region.slug} offers={offers.filter(matches)} timeZone={timeZone} now={now} city={region.name} /> : <>
           <p className={styles.results} aria-live="polite">{shown} {top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>
-          {!shown ? <div className={styles.empty}><h3>{top ? 'No top restaurants match those filters.' : active.length ? 'No openings match those filters.' : 'The next opening is still on its way.'}</h3><p>{top || active.length ? 'Try another neighborhood.' : 'Check back for newly announced restaurants in this region.'}</p>{(top || active.length > 0) && <button type="button" onClick={top ? () => { setNeighborhood('all'); } : reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection restaurants={shownTop} /> : (
+          {!shown ? <div className={styles.empty}><h3>{top ? 'No top restaurants match those filters.' : active.length ? 'No openings match those filters.' : 'The next opening is still on its way.'}</h3><p>{top || active.length ? 'Try another neighborhood.' : 'Check back for newly announced restaurants in this region.'}</p>{(top || active.length > 0) && <button type="button" onClick={top ? () => { setNeighborhood('all'); } : reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection restaurants={shownTop} details={details} sortState={selectedSort} mapHref={`/map?${selectedMapParams}`} /> : (
             <>
-              {shownUpcoming.length > 0 && <OpeningSection id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." restaurants={shownUpcoming} group="upcoming" today={today} href={href} />}
-              {shownRecent.length > 0 && <OpeningSection id="new" title="Freshly opened" subtitle="New tables, new flavors. Opened within the last 90 days." restaurants={shownRecent} group="new" today={today} href={href} />}
+              {shownUpcoming.length > 0 && <OpeningSection id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." restaurants={shownUpcoming} group="upcoming" today={today} href={href} details={details} sortState={status === 'upcoming' ? upcomingSort : undefined} mapHref={status === 'upcoming' ? `/map?${selectedMapParams}` : undefined} />}
+              {shownRecent.length > 0 && <OpeningSection id="new" title="Freshly opened" subtitle="New tables, new flavors. Opened within the last 90 days." restaurants={shownRecent} group="new" today={today} href={href} details={details} sortState={status === 'new' ? recentSort : undefined} mapHref={status === 'new' ? `/map?${selectedMapParams}` : undefined} />}
             </>
           )}
-          {status === 'all' && shownTop.length > 0 && <TopRestaurantSection restaurants={shownTop} />}
           </>}
         </section>
 
-        <aside className={styles.editorialNote}><span aria-hidden="true">✳</span><div><h2>A date is a starting point.</h2><p>Opening plans can change. Month and season dates are estimates, and a passed estimate never means a restaurant is confirmed open. Each pin links to the reporting behind it—check the latest details before making plans.</p>{previewSnapshot && <p className={styles.previewNote}>Local preview: published {region.name} pins from October 6, 2026.</p>}</div><Anchor href="#openings" onClick={() => setNeighborhood('all')}>Back to openings ↗</Anchor></aside>
+        <aside className={styles.editorialNote}><span aria-hidden="true">✳</span><div><h2>A date is a starting point.</h2><p>Opening plans can change. Month and season dates are estimates, and a passed estimate never means a restaurant is confirmed open. Each pin links to the reporting behind it—check the latest details before making plans.</p>{previewSnapshot && <p className={styles.previewNote}>Local preview: published {region.name} pins from October 6, 2026.</p>}</div><Anchor href={views.find((view) => view.key === status)?.hash ?? '#openings'} onClick={() => setNeighborhood('all')}>Back to restaurants ↗</Anchor></aside>
       </div>
     </main>
   );
 }
 
-function TopRestaurantSection({ restaurants }: { restaurants: TopRestaurant[] }) {
+type SortState = ReturnType<typeof useRestaurantSort>;
+function RestaurantSortFeedback({ state }: { state: SortState }) {
+  return <div className={styles.restaurantSortNotes}><RestaurantSortNote state={state} />{state.sort === 'rating' && <p className={styles.offerSortNote}>Highest published rating first. Restaurants without ratings retain their guide order and appear last.</p>}</div>;
+}
+function RestaurantFacts({ details, sortState }: { details?: RestaurantDetails; sortState?: SortState }) {
+  const rating = details?.rating;
+  const distance = restaurantDistance(details, sortState?.origin);
+  return <>
+    {rating && <p className={styles.offerReview}>{rating.url ? <Anchor href={rating.url} target="_blank" rel="noopener noreferrer">★ {rating.score}/{rating.scoreMax} · {rating.source} ↗</Anchor> : <>★ {rating.score}/{rating.scoreMax} · {rating.source}</>}</p>}
+    {sortState?.sort === 'distance' && <p className={styles.offerDistance} title="Approximate straight-line distance">{distance === undefined ? 'Distance unavailable' : `${formatDistance(distance, usesImperial())} away`}</p>}
+  </>;
+}
+
+function TopRestaurantSection({ restaurants, details = {}, sortState, mapHref }: { restaurants: TopRestaurant[]; details?: Record<number, RestaurantDetails>; sortState?: SortState; mapHref?: string }) {
   return <section id="top-restaurants" className={styles.section} aria-labelledby="top-restaurants-title">
-    <div className={styles.sectionHeading}><div><h2 id="top-restaurants-title">Top restaurants <span>{restaurants.length.toString().padStart(2, '0')}</span></h2><p>Established favorites for your next meal.</p></div><span className={styles.sectionSymbol} aria-hidden="true">✳</span></div>
+    <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id="top-restaurants-title">Top restaurants <span>{restaurants.length.toString().padStart(2, '0')}</span></h2><p>Established favorites for your next meal.</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label="top restaurants" mapHref={mapHref} /> : <span className={styles.sectionSymbol} aria-hidden="true">✳</span>}</div>
+    {sortState && <RestaurantSortFeedback state={sortState} />}
     <p className={styles.topNote}>{restaurants.every((restaurant) => restaurant.recognition.startsWith('MICHELIN')) ? 'A curated selection from the MICHELIN Guide, covering starred dining, Bib Gourmand value picks, and selected restaurants. Each card links to its recognition. Dollar signs are the guide’s price ranges.' : 'A Chronopin editorial selection of established restaurants. Each card links to the restaurant’s information; this selection is not an external award.'} Checked {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${restaurants[0].checkedAt}T00:00:00Z`))}.</p>
     <div className={styles.cardGrid}>{restaurants.map((restaurant) => (
       <article key={restaurant.slug} className={styles.card}>
@@ -191,6 +214,7 @@ function TopRestaurantSection({ restaurants }: { restaurants: TopRestaurant[] })
         <div className={styles.cardBody}>
           <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Guide price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}</p>
           <h3><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>{restaurant.name}</Link></h3>
+          <RestaurantFacts details={details[restaurant.pinId]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
           <p className={styles.topAddress}>{restaurant.address}</p>
           <div className={styles.topLinks}><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>View restaurant ↗</Link><Anchor href={restaurant.websiteUrl} target="_blank" rel="noopener noreferrer">Visit website ↗</Anchor></div>
@@ -200,9 +224,10 @@ function TopRestaurantSection({ restaurants }: { restaurants: TopRestaurant[] })
   </section>;
 }
 
-function OpeningSection({ id, title, subtitle, restaurants, group, today, href }: { id: string; title: string; subtitle: string; restaurants: Restaurant[]; group: OpeningGroup; today: string; href: (restaurant: Restaurant) => string }) {
+function OpeningSection({ id, title, subtitle, restaurants, group, today, href, details = {}, sortState, mapHref }: { id: string; title: string; subtitle: string; restaurants: Restaurant[]; group: OpeningGroup; today: string; href: (restaurant: Restaurant) => string; details?: Record<number, RestaurantDetails>; sortState?: SortState; mapHref?: string }) {
   return <section id={id} className={styles.section} aria-labelledby={`${id}-title`}>
-    <div className={styles.sectionHeading}><div><h2 id={`${id}-title`}>{title} <span>{restaurants.length.toString().padStart(2, '0')}</span></h2><p>{subtitle}</p></div><span className={styles.sectionSymbol} aria-hidden="true">{group === 'new' ? '↗' : '✳'}</span></div>
+    <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id={`${id}-title`}>{title} <span>{restaurants.length.toString().padStart(2, '0')}</span></h2><p>{subtitle}</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label={group === 'upcoming' ? 'coming soon restaurants' : 'just opened restaurants'} mapHref={mapHref} openingDate={group === 'upcoming'} /> : <span className={styles.sectionSymbol} aria-hidden="true">{group === 'new' ? '↗' : '✳'}</span>}</div>
+    {sortState && <RestaurantSortFeedback state={sortState} />}
     {restaurants.length ? <div className={styles.cardGrid}>{restaurants.map((restaurant) => (
       <article key={restaurant.id} className={styles.card}>
         <Link href={href(restaurant)} className={styles.photoLink} aria-label={`See ${restaurant.name}'s opening details`}>
@@ -213,6 +238,7 @@ function OpeningSection({ id, title, subtitle, restaurants, group, today, href }
         <div className={styles.cardBody}>
           <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Restaurant price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}</p>
           <h3><Link href={href(restaurant)}>{restaurant.name}</Link></h3>
+          <RestaurantFacts details={details[restaurant.id]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
           <div className={styles.cardFoot}><div><span>{group === 'new' ? 'OPENED' : restaurant.day <= today ? 'LAST ANNOUNCED TARGET' : 'EXPECTED OPENING'}</span><strong><time dateTime={restaurant.day}>{restaurant.dateLabel}</time>{restaurant.estimated && <small>Estimated</small>}</strong></div><Link href={href(restaurant)} aria-label={`Read about ${restaurant.name}`} className={styles.cardArrow}>↗</Link></div>
         </div>
