@@ -1,0 +1,3636 @@
+[
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.fortoaksd.com/",
+    "name": "Fort Oak",
+    "neighborhood": "Mission Hills",
+    "address": "1011 Fort Stockton Drive, San Diego, CA 92103",
+    "websiteUrl": "https://www.fortoaksd.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 701,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/fort-oak-san-diego",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.fortoaksd.com/happy-hour",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Kennebec fries",
+            "price": 8
+          },
+          {
+            "name": "Al pastor tostada",
+            "price": 10
+          },
+          {
+            "name": "Wagyu longaniza",
+            "price": 11
+          },
+          {
+            "name": "Baja shrimp cocktail",
+            "price": 13
+          },
+          {
+            "name": "Crispy fried chicken wings",
+            "price": 15
+          },
+          {
+            "name": "Lemon drop",
+            "price": 10
+          },
+          {
+            "name": "Gimlet",
+            "price": 10
+          },
+          {
+            "name": "Old fashioned",
+            "price": 10
+          }
+        ]
+      },
+      {
+        "label": "Oyster Monday",
+        "url": "https://www.fortoaksd.com/oyster-monday",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Oysters on the half shell (each)",
+            "price": 1
+          },
+          {
+            "name": "Gin + tonic",
+            "price": 10
+          },
+          {
+            "name": "Hugo spritz",
+            "price": 10
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Small plates and $10 classic cocktails.",
+        "schedule": "Wednesday–Sunday, 4–6 pm",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "discounted": true,
+        "sourceUrl": "https://www.fortoaksd.com/happy-hour",
+        "menuLabel": "Happy hour",
+        "conditions": [
+          "Bar and patio only; unavailable in the dining room.",
+          "Walk-ins only, first come, first served."
+        ]
+      },
+      {
+        "kind": "other",
+        "title": "Oyster Monday",
+        "description": "Oysters for $1 each, with cocktail specials.",
+        "schedule": "Monday, 4–6 pm",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "discounted": true,
+        "sourceUrl": "https://www.fortoaksd.com/oyster-monday",
+        "menuLabel": "Oyster Monday",
+        "conditions": [
+          "Bar and patio only; unavailable in the dining room.",
+          "Walk-ins only, first come, first served."
+        ]
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/fort-oak-c46029db19e1d12a.webp",
+      "alt": "Dining room and patio at Fort Oak",
+      "credit": "Photo via Fort Oak",
+      "sourceUrl": "https://www.fortoaksd.com/",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/61411d106130f534bb526640/4315c1a7-6e9d-4674-ab04-46d1986b8393/best_SDM+-+Fort+Oak+Chef+Counter+%2888%29-Enhanced+copy.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 32.7508011,
+      "longitude": -117.1724541,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1011+Fort+Stockton+Drive%2C+San+Diego%2C+CA%2C+92103&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.clevelsd.com/",
+    "name": "C Level",
+    "neighborhood": "Harbor Island",
+    "address": "880 Harbor Island Drive, San Diego, CA 92101",
+    "websiteUrl": "https://www.clevelsd.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 6805,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/c-level-san-diego",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour on the bay",
+        "description": "$11 cocktails and $11 appetizers.",
+        "schedule": "Monday–Friday, 3:30–5:30 pm",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:30",
+              "end": "17:30"
+            }
+          ]
+        },
+        "discounted": true,
+        "sourceUrl": "https://www.clevelsd.com/",
+        "conditions": [
+          "Call the restaurant for holiday service hours."
+        ]
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/c-level-2762005f4b7c57fe.webp",
+      "alt": "Waterfront dining patio at C Level",
+      "credit": "Photo via C Level",
+      "sourceUrl": "https://www.clevelsd.com/",
+      "originalUrl": "https://www.clevelsd.com/wp-content/uploads/2025/01/Main-Slider-1800-1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 32.7245929,
+      "longitude": -117.1914684,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=880+Harbor+Island+Drive%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-antonio",
+    "pinSourceUrl": "https://guide.michelin.com/us/en/texas/san-antonio_2958156/restaurant/ladino",
+    "name": "Ladino",
+    "neighborhood": "Pearl District",
+    "address": "200 E Grayson St #100, San Antonio, TX 78215",
+    "websiteUrl": "https://ladinosatx.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 1684,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/ladino-san-antonio?ot_marketing=true",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://ladinosatx.com/menus/happy-hour-menu",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Hummus",
+            "price": 10
+          },
+          {
+            "name": "Spicy feta",
+            "price": 7
+          },
+          {
+            "name": "Tirshi",
+            "price": 7
+          },
+          {
+            "name": "Fire roasted corn",
+            "price": 7
+          },
+          {
+            "name": "Beet muhammara",
+            "price": 7
+          },
+          {
+            "name": "Saganaki",
+            "price": 11
+          },
+          {
+            "name": "Lamb belly ribs",
+            "price": 15
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "$5 off house cocktails and wines by the glass; $2 off beer, alongside small plates.",
+        "schedule": "Monday–Friday, 5–6:30 pm",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "17:00",
+              "end": "18:30"
+            }
+          ]
+        },
+        "discounted": true,
+        "sourceUrl": "https://ladinosatx.com/menus/happy-hour-menu",
+        "menuLabel": "Happy hour",
+        "conditions": [
+          "Upstairs in the Ladino bar."
+        ]
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-antonio/specials/ladino-b7f558e3f36ec929.webp",
+      "alt": "Set dining table inside Ladino in San Antonio",
+      "credit": "Photo via Ladino",
+      "sourceUrl": "https://ladinosatx.com/",
+      "originalUrl": "https://static.spacecrafted.com/cd6a5a83acb44dc7987545632987dd96/i/a369343a427b4d60a559108b6ad44591/1/4SoifmQp7LJ6yDtMuFY2x/Ladino%20DR-1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 29.4442433,
+      "longitude": -98.4803786,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=200+E+Grayson+St%2C+San+Antonio%2C+TX%2C+78215&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.herbandwood.com/",
+    "name": "Herb & Wood",
+    "neighborhood": "Little Italy",
+    "address": "936 West Ivy Street, San Diego, CA 92101",
+    "websiteUrl": "https://www.herbandwood.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 7465,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/herb-and-wood",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.herbandwood.com/happy-hour",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Happy Meal",
+            "price": 20
+          },
+          {
+            "name": "Roasted oysters (3)",
+            "price": 6
+          },
+          {
+            "name": "Half-pound burger",
+            "price": 8
+          },
+          {
+            "name": "Frites",
+            "price": 4
+          },
+          {
+            "name": "Tequila mule",
+            "price": 10
+          },
+          {
+            "name": "Pilsner",
+            "price": 6
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "A $20 Happy Meal pairs a burger, three roasted oysters, fries, and bubbles. Bottles of bubbles are half off.",
+        "schedule": "Daily, 5–6 pm",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "17:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "discounted": true,
+        "sourceUrl": "https://www.herbandwood.com/happy-hour",
+        "conditions": [
+          "Bar and counter seats only; unavailable in the dining room.",
+          "Walk-ins only, first come, first served."
+        ],
+        "menuLabel": "Happy hour"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/herb-wood-68076d73467b65b4.webp",
+      "alt": "Bar and dining room at Herb & Wood",
+      "credit": "Photo via Herb & Wood",
+      "sourceUrl": "https://www.herbandwood.com/",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/5e82c1733ddff337f1d4f916/1620036153281-CDYUSCI60NZK6LHJV1F6/Print_06+-1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 32.7270742,
+      "longitude": -117.1709855,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=936+West+Ivy+Street%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://tomhamslighthouse.com/",
+    "name": "Tom Ham’s Lighthouse",
+    "neighborhood": "Harbor Island",
+    "address": "2150 Harbor Island Drive, San Diego, CA 92101",
+    "websiteUrl": "https://tomhamslighthouse.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 7134,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/restaurant/profile/7583?lang=en-US",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://tomhamslighthouse.com/happy-hour-menu/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Daily-selection oysters (each)",
+            "price": 1.5
+          },
+          {
+            "name": "Selected beer (8 oz)",
+            "price": 3
+          },
+          {
+            "name": "Selected beer (16 oz)",
+            "price": 5
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Daily-selection oysters are $1.50 each. Small bites are $2 off, appetizers $3 off, wines by the glass $1 off, and lighthouse libations $2 off.",
+        "schedule": "Monday–Friday, 3–6 pm",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "discounted": true,
+        "sourceUrl": "https://tomhamslighthouse.com/happy-hour-menu/",
+        "conditions": [
+          "First come, first served in the bar.",
+          "A 5% surcharge applies to all checks. Parties of eight or more have one check and an 18% service charge."
+        ],
+        "menuLabel": "Happy hour"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/tom-hams-lighthouse-60817f24e55d304c.webp",
+      "alt": "Waterfront exterior of Tom Ham’s Lighthouse",
+      "credit": "Photo via Tom Ham’s Lighthouse",
+      "sourceUrl": "https://tomhamslighthouse.com/",
+      "originalUrl": "https://tomhamslighthouse.com/wp-content/uploads/2026/02/thl-entry-patio-photo.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 32.7253664,
+      "longitude": -117.2063226,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2150+Harbor+Island+Drive%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.pradobalboa.com/",
+    "name": "The Prado at Balboa Park",
+    "neighborhood": "Balboa Park",
+    "address": "1549 El Prado, Suite 12, San Diego, CA 92101",
+    "websiteUrl": "https://www.pradobalboa.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 8473,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/restaurant/profile/3846/reserve?rid=3846",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.pradobalboa.com/menu/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Chicken taquitos",
+            "price": 6
+          },
+          {
+            "name": "Quesadilla",
+            "price": 6
+          },
+          {
+            "name": "Queso dip",
+            "price": 7
+          },
+          {
+            "name": "Prado caesar",
+            "price": 7
+          },
+          {
+            "name": "Mole rojo chicken wings",
+            "price": 8
+          },
+          {
+            "name": "Baja fish tacos",
+            "price": 8
+          },
+          {
+            "name": "Strawberry margarita",
+            "price": 8
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Happy-hour bites from $6, select wines for $7, and margaritas for $8. Wednesday happy hour runs until closing.",
+        "schedule": "Tuesday, Thursday & Friday, 4–6 pm · Wednesday, 4–8 pm",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                2,
+                4,
+                5
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            },
+            {
+              "days": [
+                3
+              ],
+              "start": "16:00",
+              "end": "20:00"
+            }
+          ]
+        },
+        "discounted": true,
+        "sourceUrl": "https://www.pradobalboa.com/menu/",
+        "conditions": [
+          "A 5% supplemental fee applies to guest checks; removal is available on request.",
+          "Call the restaurant for holiday service hours."
+        ],
+        "menuLabel": "Happy hour"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/prado-balboa-park-848f4570925ba16d.webp",
+      "alt": "Courtyard at The Prado in Balboa Park",
+      "credit": "Photo via The Prado at Balboa Park",
+      "sourceUrl": "https://www.pradobalboa.com/",
+      "originalUrl": "https://www.pradobalboa.com/wp-content/uploads/2023/06/About-Us-square-1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 32.7313931,
+      "longitude": -117.1497333,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1549+El+Prado%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.coasterra.com/",
+    "name": "Coasterra",
+    "neighborhood": "Harbor Island",
+    "address": "880 B Harbor Island Drive, San Diego, CA 92101",
+    "websiteUrl": "https://www.coasterra.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 8744,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/coasterra-san-diego-3?page=1",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "The happy-hour menu includes guacamole, ceviche, calamari, mini chicken tinga tostadas, signature cocktails, wine, and beer.",
+        "schedule": "Monday–Friday, 3:30–5:30 pm",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:30",
+              "end": "17:30"
+            }
+          ]
+        },
+        "discounted": true,
+        "sourceUrl": "https://www.coasterra.com/menu/",
+        "conditions": [
+          "Happy-hour prices are not displayed on the operator’s online menu; ask the restaurant for current prices.",
+          "A 5% supplemental fee applies to guest checks; removal is available on request.",
+          "Call the restaurant for holiday service hours."
+        ]
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/coasterra-f0b3bae1eee4aab4.webp",
+      "alt": "Coasterra’s waterfront restaurant at sunset",
+      "credit": "Photo via Coasterra",
+      "sourceUrl": "https://www.coasterra.com/",
+      "originalUrl": "https://coasterra.wpengine.com/wp-content/uploads/2023/05/Main-Slider-Desktop-min.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 32.7245929,
+      "longitude": -117.1914684,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=880+B+Harbor+Island+Drive%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-francisco",
+    "pinSourceUrl": "https://www.prospectsf.com/",
+    "name": "Prospect",
+    "slug": "prospect",
+    "neighborhood": "SoMa",
+    "address": "300 Spear Street, San Francisco, CA 94105",
+    "websiteUrl": "https://www.prospectsf.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 2702,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/prospect",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.prospectsf.com/menus/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Rosemary spiced nuts",
+            "price": 7
+          },
+          {
+            "name": "Marinated Italian olives",
+            "price": 7
+          },
+          {
+            "name": "Fieldwork draft beer",
+            "price": 6
+          },
+          {
+            "name": "Happy-hour specialty cocktails",
+            "price": 11
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Bar & lounge happy hour",
+        "description": "Discounted cocktails and beer with a published bar-snack menu.",
+        "schedule": "Monday–Friday, 4–6 pm",
+        "conditions": [
+          "Bar and lounge only.",
+          "6% staff healthcare surcharge; 20% service added for parties of 8 or more."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.prospectsf.com/menus/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-francisco/specials/prospect-3542983aa5a48125.webp",
+      "alt": "Prospect’s dining room and bar seen through its front windows",
+      "credit": "Photo via OpenTable",
+      "sourceUrl": "https://www.opentable.com/prospect",
+      "originalUrl": "https://resizer.otstatic.com/v4/photos/26557535-3?width=1000&height=750&format=jpeg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 37.789989,
+      "longitude": -122.3909715,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=300+Spear+Street%2C+San+Francisco%2C+CA%2C+94105&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "seattle",
+    "pinSourceUrl": "https://www.relayrestaurantgroup.com/restaurants/revel/",
+    "name": "Revel",
+    "slug": "revel",
+    "neighborhood": "Fremont",
+    "address": "401 N. 36th Street, Seattle, WA 98103",
+    "websiteUrl": "https://www.relayrestaurantgroup.com/restaurants/revel/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 606,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/revel-seattle",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.relayrestaurantgroup.com/restaurants/revel/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Short rib wontons (3)",
+            "price": 6
+          },
+          {
+            "name": "Chinese broccoli",
+            "price": 10
+          },
+          {
+            "name": "Korean fried chicken",
+            "price": 12
+          },
+          {
+            "name": "Draft beer",
+            "price": 6
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Fremont Hour",
+        "description": "Korean small plates, snacks, and drink specials during Fremont Hour.",
+        "schedule": "Tuesday–Thursday, 5–6 pm",
+        "conditions": [
+          "Call for the latest menu; reservations encouraged, walk-ins welcome."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                2,
+                3,
+                4
+              ],
+              "start": "17:00",
+              "end": "18:00"
+            }
+          ],
+          "excludedDates": [
+            "2026-12-25",
+            "2026-12-30",
+            "2026-12-31"
+          ]
+        },
+        "sourceUrl": "https://www.relayrestaurantgroup.com/restaurants/revel/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/seattle/specials/revel-1c9ab487fc1bb1ba.webp",
+      "alt": "Dining tables beneath artwork at Revel",
+      "credit": "Photo via Revel",
+      "sourceUrl": "https://www.relayrestaurantgroup.com/restaurants/revel/",
+      "originalUrl": "https://www.relayrestaurantgroup.com/wp-content/uploads/2022/03/2.png",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 47.6521714,
+      "longitude": -122.3544235,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=401+N.+36th+Street%2C+Seattle%2C+WA%2C+98103&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-jose",
+    "pinSourceUrl": "https://pressroomsj.com/",
+    "name": "The Pressroom",
+    "slug": "pressroom",
+    "neighborhood": "Downtown",
+    "address": "189 W. Santa Clara Street, San Jose, CA 95113",
+    "websiteUrl": "https://pressroomsj.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.5,
+      "count": 425,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/pressroom-san-jose",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://pressroomsj.com/happyhour",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Oysters",
+            "priceLabel": "$2 each"
+          },
+          {
+            "name": "Garlic noodles",
+            "price": 12
+          },
+          {
+            "name": "Short rib sliders",
+            "price": 12
+          },
+          {
+            "name": "Cocktails",
+            "price": 10
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Daily happy hour",
+        "description": "Oysters, small plates, and discounted wine, draft beer, cocktails, and martinis.",
+        "schedule": "Daily, 3–5 pm",
+        "conditions": [],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "15:00",
+              "end": "17:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://pressroomsj.com/happyhour"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-jose/specials/pressroom-9e4b8569d5e66c65.webp",
+      "alt": "Exterior of The Pressroom in downtown San Jose",
+      "credit": "Photo via The Pressroom",
+      "sourceUrl": "https://pressroomsj.com/",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/670ee3989068ea505568e244/d0b61ce2-c4b6-4239-8d8e-01be84f20bc3/i-R7DqrnG-4K.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 37.3347726,
+      "longitude": -121.8936369,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=189+W.+Santa+Clara+Street%2C+San+Jose%2C+CA%2C+95113&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "los-angeles",
+    "pinSourceUrl": "https://www.eatwithbacari.com/silverlake",
+    "name": "Bacari Silverlake",
+    "slug": "bacari-silverlake",
+    "neighborhood": "Silver Lake",
+    "address": "3626 Sunset Boulevard, Los Angeles, CA 90026",
+    "websiteUrl": "https://www.eatwithbacari.com/silverlake",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 5070,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/restaurant/profile/1180669/reserve?rid=1180669",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.eatwithbacari.com/silverlake",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Cold plates, hot plates, and pizza",
+            "priceLabel": "$2 off"
+          },
+          {
+            "name": "House wine (5 oz)",
+            "priceLabel": "$2 off"
+          },
+          {
+            "name": "Well cocktails",
+            "priceLabel": "$2 off"
+          },
+          {
+            "name": "House beer",
+            "priceLabel": "$1 off"
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Weekday happy hour",
+        "description": "Discounts on small plates and pizza, house wine, sangria, well cocktails, and house beer.",
+        "schedule": "Monday–Friday, 5–6 pm",
+        "conditions": [
+          "Gratuity added for parties of 6 or more."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "17:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.opentable.com/r/bacari-silver-lake-los-angeles"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/los-angeles/specials/bacari-silverlake-a0557888ca19a5e8.webp",
+      "alt": "Tree-lined dining patio at Bacari Silverlake",
+      "credit": "Photo via OpenTable",
+      "sourceUrl": "https://www.opentable.com/restaurant/profile/1180669/reserve?rid=1180669",
+      "originalUrl": "https://resizer.otstatic.com/v4/photos/42587711-3?width=1000&height=750&format=jpeg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 34.090169,
+      "longitude": -118.2773499,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3626+Sunset+Boulevard%2C+Los+Angeles%2C+CA%2C+90026&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "phoenix",
+    "pinSourceUrl": "https://www.thegladly.com/",
+    "name": "The Gladly",
+    "slug": "the-gladly",
+    "neighborhood": "Biltmore",
+    "address": "2201 E. Camelback Road, Phoenix, AZ 85016",
+    "websiteUrl": "https://www.thegladly.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.9,
+      "count": 2914,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/restaurant/profile/111574",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy-hour food",
+        "url": "https://www.thegladly.com/s/032726-GLAD-Happy-Hour-Card-WEB.pdf",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Bacon fat popcorn",
+            "price": 5
+          },
+          {
+            "name": "Brussels sprouts & polenta",
+            "price": 8
+          },
+          {
+            "name": "Smoked mozzarella fondue",
+            "price": 12
+          },
+          {
+            "name": "Shrimp cocktail",
+            "price": 14
+          }
+        ]
+      },
+      {
+        "label": "Happy-hour drinks",
+        "url": "https://www.thegladly.com/s/032726-GLAD-Happy-Hour-Card-WEB.pdf",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Draft cocktails",
+            "price": 12
+          },
+          {
+            "name": "Featured wine",
+            "price": 9
+          },
+          {
+            "name": "Whiskey pick",
+            "price": 12
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy-hour food",
+        "description": "Selected snacks and small plates on the happy-hour menu.",
+        "schedule": "Monday–Friday, 3–6 pm; Saturday, 4–6 pm",
+        "conditions": [
+          "Saturday starts at the restaurant’s published 4 pm opening; closed Sunday."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy-hour food",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            },
+            {
+              "days": [
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.thegladly.com/s/032726-GLAD-Happy-Hour-Card-WEB.pdf"
+      },
+      {
+        "kind": "other",
+        "title": "Happy-hour drinks",
+        "description": "Selected draft cocktails, featured wines, and a whiskey pick at happy-hour prices.",
+        "schedule": "Monday–Friday, 11 am–6 pm; Saturday, 4–6 pm",
+        "conditions": [
+          "Closed Sunday.",
+          "Food discounts begin at 3 pm on weekdays; Saturday opens at 4 pm."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy-hour drinks",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "11:00",
+              "end": "18:00"
+            },
+            {
+              "days": [
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.thegladly.com/s/032726-GLAD-Happy-Hour-Card-WEB.pdf"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/phoenix/specials/the-gladly-41a5f930cc908a08.webp",
+      "alt": "Dining room at The Gladly",
+      "credit": "Photo via The Gladly",
+      "sourceUrl": "https://www.thegladly.com/",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/62d0aac3df649314665624d6/f1ef289e-7c02-496b-b538-564b1f5bb634/2026_01_20_TheGladly-34.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 33.5092326,
+      "longitude": -112.0344505,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2201+E.+Camelback+Road%2C+Phoenix%2C+AZ%2C+85016&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "austin",
+    "pinSourceUrl": "https://uchiko.uchirestaurants.com/location/sushi-austin/",
+    "name": "Uchiko Austin",
+    "slug": "uchiko-austin",
+    "neighborhood": "Rosedale",
+    "address": "4200 North Lamar Boulevard, Austin, TX 78756",
+    "websiteUrl": "https://uchiko.uchirestaurants.com/location/sushi-austin/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.9,
+      "count": 6021,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/restaurant/profile/46240/reserve?rid=46240",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://uchiko.uchirestaurants.com/location/sushi-austin/menu/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Raw oyster",
+            "price": 3
+          },
+          {
+            "name": "Salmon gunkan (2 pieces)",
+            "price": 6
+          },
+          {
+            "name": "Wagyu lumpia",
+            "price": 9
+          },
+          {
+            "name": "Orange creamsicle dessert",
+            "price": 3
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Daily happy hour",
+        "description": "Japanese bites at $3, $6, and $9, plus drink specials and a tasting option.",
+        "schedule": "Daily, 4–6 pm",
+        "conditions": [
+          "Reservations accepted; walk-ins welcome."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://uchiko.uchirestaurants.com/location/sushi-austin/menu/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/austin/specials/uchiko-austin-3d822262e4e8b870.webp",
+      "alt": "Bar at Uchiko Austin",
+      "credit": "Photo via Uchiko Austin",
+      "sourceUrl": "https://uchiko.uchirestaurants.com/location/sushi-austin/",
+      "originalUrl": "https://uchiko.uchirestaurants.com/wp-content/uploads/2022/09/Uchiko-Austin4-1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 30.3100285,
+      "longitude": -97.7400623,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4200+North+Lamar+Boulevard%2C+Austin%2C+TX%2C+78756&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "fort-worth",
+    "pinSourceUrl": "https://www.torotorofortworth.com/",
+    "name": "Toro Toro Fort Worth",
+    "slug": "toro-toro",
+    "neighborhood": "Downtown",
+    "address": "200 Main Street, Fort Worth, TX 76102",
+    "websiteUrl": "https://www.torotorofortworth.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 1359,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/toro-toro-fort-worth",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.torotorofortworth.com/happy-hour",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Well drinks",
+            "price": 6
+          },
+          {
+            "name": "Wines by the glass",
+            "priceLabel": "50% off"
+          },
+          {
+            "name": "Draft beer",
+            "price": 4
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Lobby & bar happy hour",
+        "description": "Discounted well drinks, wine by the glass, and draft beer.",
+        "schedule": "Monday–Thursday, 4–7 pm",
+        "conditions": [
+          "Lobby and bar only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "start": "16:00",
+              "end": "19:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.torotorofortworth.com/happy-hour"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fort-worth/specials/toro-toro-98b94b9ab4b9db53.webp",
+      "alt": "Dining room at Toro Toro Fort Worth",
+      "credit": "Photo via Toro Toro Fort Worth",
+      "sourceUrl": "https://www.torotorofortworth.com/",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/62f1545dd5f31b6dd6261d2c/1659982954658-LCZAQ52671BQ7JDDTFKQ/_D857969And8more_Fusion-Interior+%281%29.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 32.756371,
+      "longitude": -97.3324549,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=200+Main+Street%2C+Fort+Worth%2C+TX%2C+76102&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "dallas",
+    "pinSourceUrl": "https://uchi.uchirestaurants.com/location/sushi-dallas/",
+    "name": "Uchi Dallas",
+    "slug": "uchi-dallas",
+    "neighborhood": "Uptown",
+    "address": "2817 Maple Avenue, Dallas, TX 75201",
+    "websiteUrl": "https://uchi.uchirestaurants.com/location/sushi-dallas/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.9,
+      "count": 4189,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/uchi-dallas",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://uchi.uchirestaurants.com/location/sushi-dallas/menu/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Nasu nigiri (2 pieces)",
+            "price": 3
+          },
+          {
+            "name": "Seasonal oyster",
+            "price": 3
+          },
+          {
+            "name": "Karaage",
+            "price": 6
+          },
+          {
+            "name": "Sakana croquettes",
+            "price": 6
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Daily happy hour",
+        "description": "Japanese small plates, nigiri, and selected drinks at happy-hour prices.",
+        "schedule": "Daily, 4–6 pm",
+        "conditions": [
+          "Reservations accepted; walk-ins welcome."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://uchi.uchirestaurants.com/location/sushi-dallas/menu/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dallas/specials/uchi-dallas-2a4a820faacbdaa2.webp",
+      "alt": "Private dining room at Uchi Dallas",
+      "credit": "Photo via Uchi Dallas",
+      "sourceUrl": "https://uchi.uchirestaurants.com/location/sushi-dallas/",
+      "originalUrl": "https://uchi.uchirestaurants.com/wp-content/uploads/2022/10/image-177-e1668667778337.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 32.7967844,
+      "longitude": -96.8060038,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2817+Maple+Avenue%2C+Dallas%2C+TX%2C+75201&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "houston",
+    "pinSourceUrl": "https://uchi.uchirestaurants.com/location/omakase-houston/",
+    "name": "Uchi Houston",
+    "slug": "uchi-houston",
+    "neighborhood": "Montrose",
+    "address": "904 Westheimer Road, Suite A, Houston, TX 77006",
+    "websiteUrl": "https://uchi.uchirestaurants.com/location/omakase-houston/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 4685,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/uchi-houston",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://uchi.uchirestaurants.com/location/omakase-houston/menu/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Nasu nigiri (2 pieces)",
+            "price": 4
+          },
+          {
+            "name": "Korean fried chicken",
+            "price": 8
+          },
+          {
+            "name": "Walu walu",
+            "price": 9.5
+          },
+          {
+            "name": "Coconut tapioca",
+            "price": 6
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Daily happy hour",
+        "description": "Selected Japanese tastings, nigiri, dessert, and drink specials.",
+        "schedule": "Daily, 4–6 pm",
+        "conditions": [
+          "This is the main Uchi Houston menu, separate from Oheya’s omakase seatings."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://uchi.uchirestaurants.com/location/omakase-houston/menu/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/houston/specials/uchi-houston-0ba51b90535dc5f9.webp",
+      "alt": "Dining room and open kitchen at Uchi Houston",
+      "credit": "Photo via Uchi Houston",
+      "sourceUrl": "https://uchi.uchirestaurants.com/location/omakase-houston/",
+      "originalUrl": "https://uchi.uchirestaurants.com/wp-content/uploads/2022/10/Uchi_–_Michael_Hsu_Office_of_Architecture-4.png",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 29.7447305,
+      "longitude": -95.3906871,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=904+Westheimer+Road%2C+Houston%2C+TX%2C+77006&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "chicago",
+    "pinSourceUrl": "https://www.beatrixrestaurants.com/beatrix/river-north/",
+    "name": "Beatrix River North",
+    "slug": "beatrix-river-north",
+    "neighborhood": "River North",
+    "address": "519 North Clark Street, Chicago, IL 60654",
+    "websiteUrl": "https://www.beatrixrestaurants.com/beatrix/river-north/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 5733,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/beatrix-river-north",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.beatrixrestaurants.com/happenings/happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Mushroom & quinoa burger or prime cheeseburger",
+            "price": 12
+          },
+          {
+            "name": "Happy-hour snacks",
+            "price": 9
+          },
+          {
+            "name": "Select wines",
+            "price": 7
+          },
+          {
+            "name": "Hand-crafted cocktails",
+            "price": 8
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Weekday happy hour",
+        "description": "Burger, snack, and selected beer, wine, and cocktail specials at the River North branch.",
+        "schedule": "Monday–Friday, 3–6 pm",
+        "conditions": [
+          "River North only; dine-in only.",
+          "Valid on selected beers, wines, and cocktails."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.beatrixrestaurants.com/happenings/happy-hour/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chicago/specials/beatrix-river-north-87dea05366aa1582.webp",
+      "alt": "Dining room at Beatrix River North",
+      "credit": "Photo via Beatrix River North",
+      "sourceUrl": "https://www.beatrixrestaurants.com/beatrix/river-north/",
+      "originalUrl": "https://storage.googleapis.com/beatrix2023_bucket/wp-content/uploads/4a60dccb-beatrix_rivernorth_interior.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 41.8913353,
+      "longitude": -87.6310412,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=519+North+Clark+Street%2C+Chicago%2C+IL%2C+60654&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "columbus",
+    "pinSourceUrl": "https://thepearlrestaurant.com/locations-menus/short-north/",
+    "name": "The Pearl — Short North",
+    "slug": "pearl-short-north",
+    "neighborhood": "Short North",
+    "address": "641 North High Street, Columbus, OH 43215",
+    "websiteUrl": "https://thepearlrestaurant.com/locations-menus/short-north/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 6110,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/the-pearl-short-north-columbus-2?page=1",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://thepearlrestaurant.com/locations-menus/short-north/menus/happy-hour-menu/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Snacks, starters, and pub burgers",
+            "priceLabel": "50% off"
+          },
+          {
+            "name": "Selected beer, wine, spirits, and specialty cocktails",
+            "priceLabel": "50% off"
+          },
+          {
+            "name": "Raw, baked, or fried oysters",
+            "priceLabel": "$3 each"
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Tavern bar happy hour",
+        "description": "Half-price snacks, starters, pub burgers, and selected drinks; oyster specials.",
+        "schedule": "Monday–Friday, 4–6 pm",
+        "conditions": [
+          "Available in the tavern bar.",
+          "Short North branch only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://thepearlrestaurant.com/locations-menus/short-north/menus/happy-hour-menu/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/columbus/specials/pearl-short-north-6359539e574339a1.webp",
+      "alt": "Tavern bar at The Pearl Short North",
+      "credit": "Photo via The Pearl — Short North",
+      "sourceUrl": "https://thepearlrestaurant.com/locations-menus/short-north/",
+      "originalUrl": "https://thepearlrestaurant.com/wp-content/uploads/2024/11/SN-dining-room-wide-shot-ATP-37-1600x1067-1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 39.9754307,
+      "longitude": -83.0032716,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=641+North+High+Street%2C+Columbus%2C+OH%2C+43215&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "jacksonville",
+    "pinSourceUrl": "https://restaurantorsay.com/",
+    "name": "Restaurant Orsay",
+    "slug": "orsay",
+    "neighborhood": "Avondale",
+    "address": "3630 Park Street, Jacksonville, FL 32205",
+    "websiteUrl": "https://restaurantorsay.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 3135,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/restaurant-orsay-jacksonville?sitelink=04",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.restaurantorsay.com/menus/cocktail-hour?location=restaurant-orsay",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Gulf Coast oysters",
+            "priceLabel": "$2 each"
+          },
+          {
+            "name": "Shrimp cocktail",
+            "price": 12
+          },
+          {
+            "name": "Sea scallop tartare",
+            "price": 12
+          },
+          {
+            "name": "House cocktails",
+            "price": 12
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Cocktail-hour food & drinks",
+        "description": "French bistro small plates, Gulf oysters, and drink specials on the cocktail-hour menu.",
+        "schedule": "Tuesday–Sunday, 4–6 pm",
+        "conditions": [
+          "Closed Monday.",
+          "Saturday’s earlier cocktail-only happy hour does not extend the food discount window."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.restaurantorsay.com/menus/cocktail-hour?location=restaurant-orsay"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/jacksonville/top/orsay-jacksonville-5457bd6c8d118c5c.webp",
+      "alt": "Exterior of Restaurant Orsay in Jacksonville",
+      "credit": "Photo via Orsay official gallery",
+      "sourceUrl": "https://www.restaurantorsay.com/gallery",
+      "originalUrl": "https://www.restaurantorsay.com/gallery",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 30.3001977,
+      "longitude": -81.7103952,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3630+Park+Street%2C+Jacksonville%2C+FL%2C+32205&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "charlotte",
+    "pinSourceUrl": "https://www.flemingssteakhouse.com/Locations/NC/Charlotte",
+    "name": "Fleming’s Charlotte",
+    "slug": "flemings-charlotte",
+    "neighborhood": "Uptown",
+    "address": "210 East Trade Street, Suite C-110, Charlotte, NC 28202",
+    "websiteUrl": "https://www.flemingssteakhouse.com/Locations/NC/Charlotte",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 2283,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/flemings-steakhouse-charlotte",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Social Hour",
+        "url": "https://www.flemingssteakhouse.com/Locations/NC/Charlotte",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Selected hand-crafted cocktails",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Social Hour",
+        "description": "Selected hand-crafted cocktails and shareable bar bites during nightly Social Hour.",
+        "schedule": "Daily, 4–6:30 pm",
+        "conditions": [
+          "Bar only.",
+          "Ask the restaurant for current bar-bite prices.",
+          "Closed Christmas Day."
+        ],
+        "discounted": true,
+        "menuLabel": "Social Hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:30"
+            }
+          ],
+          "excludedDates": [
+            "2026-12-25"
+          ]
+        },
+        "sourceUrl": "https://www.flemingssteakhouse.com/Locations/NC/Charlotte"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/charlotte/specials/flemings-charlotte-093eb50afcfcf00c.webp",
+      "alt": "Exterior of Fleming’s in Uptown Charlotte",
+      "credit": "Photo via Fleming’s Charlotte",
+      "sourceUrl": "https://www.flemingssteakhouse.com/Locations/NC/Charlotte",
+      "originalUrl": "https://flemingssteakhouse.b-cdn.net/-/media/fsh/locations/exteriors/4403-charlotte.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 35.2260767,
+      "longitude": -80.8418782,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+East+Trade+Street%2C+Charlotte%2C+NC%2C+28202&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "miami",
+    "pinSourceUrl": "https://uchi.uchirestaurants.com/location/sushi-miami/",
+    "name": "Uchi Miami",
+    "slug": "uchi-miami",
+    "neighborhood": "Wynwood",
+    "address": "252 NW 25th Street, Miami, FL 33127",
+    "websiteUrl": "https://uchi.uchirestaurants.com/location/sushi-miami/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 1816,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/uchi-miami/",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://uchi.uchirestaurants.com/location/sushi-miami/menu/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Oyster",
+            "price": 3.5
+          },
+          {
+            "name": "Avocado nigiri (2 pieces)",
+            "price": 6
+          },
+          {
+            "name": "Walu walu",
+            "price": 9.5
+          },
+          {
+            "name": "Sakana encurtido",
+            "price": 8.5
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Daily happy hour",
+        "description": "Selected Japanese tastings, sushi, and drinks on the Wynwood happy-hour menu.",
+        "schedule": "Daily, 5–6:30 pm",
+        "conditions": [
+          "Reservations accepted; walk-ins welcome."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "17:00",
+              "end": "18:30"
+            }
+          ]
+        },
+        "sourceUrl": "https://uchi.uchirestaurants.com/location/sushi-miami/menu/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/miami/specials/uchi-miami-0887b10608d01c16.webp",
+      "alt": "Private dining room at Uchi Miami",
+      "credit": "Photo via Uchi Miami",
+      "sourceUrl": "https://uchi.uchirestaurants.com/location/sushi-miami/",
+      "originalUrl": "https://uchi.uchirestaurants.com/wp-content/uploads/2022/10/image-183-e1668656196643.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 25.8006472,
+      "longitude": -80.2001505,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=252+NW+25th+Street%2C+Miami%2C+FL%2C+33127&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "philadelphia",
+    "pinSourceUrl": "https://harpcrown.com/",
+    "name": "Harp & Crown",
+    "slug": "harp-crown",
+    "neighborhood": "Rittenhouse / Center City",
+    "address": "1525 Sansom Street, Philadelphia, PA 19102",
+    "websiteUrl": "https://harpcrown.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.5,
+      "count": 2084,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/harp-and-crown-philadelphia?page=1",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://harpcrown.com/menu",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Spicy chicken sandwich",
+            "price": 8
+          },
+          {
+            "name": "Cheeseburger",
+            "price": 8
+          },
+          {
+            "name": "Whipped ricotta",
+            "price": 8
+          },
+          {
+            "name": "Featured beer",
+            "price": 5
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Bar & lounge happy hour",
+        "description": "An $8 small-plate menu and selected cocktail, wine, and beer specials.",
+        "schedule": "Monday–Saturday, 4–7 pm",
+        "conditions": [
+          "Walk-ins at the bar and lounge only.",
+          "No Sunday happy hour is published in the operator’s weekly hours."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "19:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://harpcrown.com/menu"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/philadelphia/specials/harp-crown-6b66b869eac54255.webp",
+      "alt": "Bar and dining room at Harp & Crown",
+      "credit": "Photo via Harp & Crown",
+      "sourceUrl": "https://harpcrown.com/",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/57d089e1f5e2315aa12c1de2/1504281527797-R20MCS8TPB5WHEG9WNFX/20161118harp%26crown_brighter-15.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 39.9504259,
+      "longitude": -75.1661862,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1525+Sansom+Street%2C+Philadelphia%2C+PA%2C+19102&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "new-york",
+    "pinSourceUrl": "https://www.themermaidnyc.com/location/the-mermaid-inn-chelsea/",
+    "name": "The Mermaid Inn Chelsea",
+    "slug": "mermaid-inn-chelsea",
+    "neighborhood": "Chelsea",
+    "address": "227 10th Avenue, New York, NY 10011",
+    "websiteUrl": "https://www.themermaidnyc.com/location/the-mermaid-inn-chelsea/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 1223,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/the-mermaid-inn-chelsea-new-york?ot_marketing=true",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.themermaidnyc.com/the-mermaid-inn-chelsea-menus/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Chef’s choice oysters & littleneck clams",
+            "priceLabel": "$2 each",
+            "note": "Minimum of 6"
+          },
+          {
+            "name": "Mini New England clam chowder",
+            "price": 4
+          },
+          {
+            "name": "Mini Mermaid fish taco",
+            "priceLabel": "$4 each"
+          },
+          {
+            "name": "Happy-hour cocktails",
+            "price": 12
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Daily seafood happy hour",
+        "description": "Oysters, clams, seafood bites, and selected drinks on Chelsea’s happy-hour menu.",
+        "schedule": "Daily, 4:30–6 pm",
+        "conditions": [
+          "Chelsea branch only.",
+          "Minimum six for the oyster and clam special."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:30",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.themermaidnyc.com/the-mermaid-inn-chelsea-menus/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/new-york/specials/mermaid-inn-chelsea-e9d63708520ffae7.webp",
+      "alt": "Exterior of The Mermaid Inn Chelsea",
+      "credit": "Photo via The Mermaid Inn Chelsea",
+      "sourceUrl": "https://www.themermaidnyc.com/location/the-mermaid-inn-chelsea/",
+      "originalUrl": "https://images.getbento.com/accounts/ed7339fabff5bfe766d3ed8cf0a585d2/media/images/96769284870853_137716918582913_9196244653318796948_n.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 40.7481852,
+      "longitude": -74.0038936,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=227+10th+Avenue%2C+New+York%2C+NY%2C+10011&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "boston",
+    "pinSourceUrl": "https://www.blacklambsouthend.com/",
+    "name": "Black Lamb",
+    "slug": "black-lamb",
+    "neighborhood": "South End",
+    "address": "571 Tremont Street, Boston, MA 02118",
+    "websiteUrl": "https://www.blacklambsouthend.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 711,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/black-lamb-boston?ot_marketing=true",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Oyster special",
+        "url": "https://www.blacklambsouthend.com/menus/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Two Buck Shuck oysters",
+            "priceLabel": "$2 each"
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Two Buck Shuck",
+        "description": "Rotating raw-bar oysters at $2 each until 5 pm, with the deal running all day Monday.",
+        "schedule": "Monday, 11 am–10 pm; Tuesday–Friday, 11 am–5 pm; Saturday–Sunday, 10 am–5 pm",
+        "conditions": [
+          "Oyster selections rotate daily and are subject to availability.",
+          "Bar remains open between meal services."
+        ],
+        "discounted": true,
+        "menuLabel": "Oyster special",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1
+              ],
+              "start": "11:00",
+              "end": "22:00"
+            },
+            {
+              "days": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "11:00",
+              "end": "17:00"
+            },
+            {
+              "days": [
+                0,
+                6
+              ],
+              "start": "10:00",
+              "end": "17:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.blacklambsouthend.com/menus/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/boston/specials/black-lamb-1645c88ac4e1bb0a.webp",
+      "alt": "Bar and dining room at Black Lamb",
+      "credit": "Photo via Black Lamb",
+      "sourceUrl": "https://www.blacklambsouthend.com/",
+      "originalUrl": "https://images.getbento.com/accounts/ba6e350e679c9055845e97e6704659bd/media/images/70190BlackLambINT-2_2.png",
+      "checkedAt": "2026-10-07"
+    },
+    "location": {
+      "latitude": 42.3436211,
+      "longitude": -71.0724222,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=571+Tremont+Street%2C+Boston%2C+MA%2C+02118&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.urbankitchengroup.com/cucina-urbana-bankers-hill/",
+    "name": "CUCINA urbana",
+    "slug": "cucina",
+    "neighborhood": "Bankers Hill",
+    "address": "505 Laurel Street, San Diego, CA 92101",
+    "websiteUrl": "https://www.urbankitchengroup.com/cucina-urbana-bankers-hill/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 7287,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/cucina-urbana-san-diego?ot_marketing=true",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/cucina-1dde00a5a15751a7.webp",
+      "alt": "Restaurant at CUCINA urbana",
+      "credit": "Photo via CUCINA urbana",
+      "sourceUrl": "https://www.urbankitchengroup.com/cucina-urbana-bankers-hill/",
+      "originalUrl": "https://www.urbankitchengroup.com/cucina-urbana-bankers-hill/wp-content/uploads/sites/4/2023/02/dining-room-CU-768x768.png",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.urbankitchengroup.com/cucina-urbana-bankers-hill/menu/happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Salt & pepper fries",
+            "price": 7
+          },
+          {
+            "name": "Roasted garlic focaccia",
+            "price": 7
+          },
+          {
+            "name": "Draft beer",
+            "price": 7
+          },
+          {
+            "name": "Happy-hour red or white wine",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Selected discounted food and drinks during the restaurant’s published happy hour.",
+        "sourceUrl": "https://www.urbankitchengroup.com/cucina-urbana-bankers-hill/menu/happy-hour/",
+        "schedule": "Daily, 4–6 pm",
+        "conditions": [
+          "Bar only.",
+          "A 3.95% surcharge applies to each check."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7313302,
+      "longitude": -117.1601907,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=505+Laurel+Street%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.gravityheights.com/sorrento-mesa",
+    "name": "Gravity Heights Sorrento Valley",
+    "slug": "gravity-sorrento",
+    "neighborhood": "Sorrento Valley",
+    "address": "9920 Pacific Heights Boulevard, San Diego, CA 92121",
+    "websiteUrl": "https://www.gravityheights.com/sorrento-mesa",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 1368,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/gravity-heights-sorrento-valley-san-diego",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/gravity-sorrento-44a9f494748be3e3.webp",
+      "alt": "Restaurant at Gravity Heights Sorrento Valley",
+      "credit": "Photo via Gravity Heights Sorrento Valley",
+      "sourceUrl": "https://www.gravityheights.com/sorrento-mesa",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/62dc42b42ac2da0d602a3cfb/1658761964921-2VYYAUJOPJQ52BDQHHOI/_T9A7713+%281%29.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Tapa the Hour",
+        "url": "https://www.gravityheights.com/happy-hour-sorrento-valley",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Patatas bravas",
+            "price": 9
+          },
+          {
+            "name": "Tinga tacos",
+            "price": 9
+          },
+          {
+            "name": "La pizza",
+            "price": 11
+          },
+          {
+            "name": "Full pours of house beers",
+            "priceLabel": "$2 off"
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Tapa the Hour",
+        "description": "Discounted house beer, cocktails, wine, and a happy-hour tapas menu.",
+        "sourceUrl": "https://www.gravityheights.com/happy-hour-sorrento-valley",
+        "schedule": "Daily, 3–6 pm",
+        "conditions": [
+          "Bar and beer garden only.",
+          "A 4% surcharge applies; removal is available on request."
+        ],
+        "discounted": true,
+        "menuLabel": "Tapa the Hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.9002834,
+      "longitude": -117.1898708,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=9920+Pacific+Heights+Boulevard%2C+San+Diego%2C+CA%2C+92121&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.gravityheights.com/mission-valley",
+    "name": "Gravity Heights Mission Valley",
+    "slug": "gravity-mission",
+    "neighborhood": "Mission Valley",
+    "address": "525 Camino De La Reina, Suite 101, San Diego, CA 92108",
+    "websiteUrl": "https://www.gravityheights.com/mission-valley",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 489,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/gravity-heights-mission-valley-san-diego",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/gravity-mission-a3db97e6a0b340d0.webp",
+      "alt": "Restaurant at Gravity Heights Mission Valley",
+      "credit": "Photo via Gravity Heights Mission Valley",
+      "sourceUrl": "https://www.gravityheights.com/mission-valley",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/62dc42b42ac2da0d602a3cfb/0bfe254c-8623-4049-aef5-9ce7d390ced5/GHMV+-+private+events+on+the+visit+page.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Tapa the Hour",
+        "url": "https://www.gravityheights.com/happy-hour-mission-valley",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Patatas bravas",
+            "price": 9
+          },
+          {
+            "name": "Tinga tacos",
+            "price": 9
+          },
+          {
+            "name": "La pizza",
+            "price": 11
+          },
+          {
+            "name": "Full pours of house beers",
+            "priceLabel": "$3 off"
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Tapa the Hour",
+        "description": "Discounted house beer, cocktails, wine, and a happy-hour tapas menu.",
+        "sourceUrl": "https://www.gravityheights.com/happy-hour-mission-valley",
+        "schedule": "Daily, 3–6 pm",
+        "conditions": [
+          "Bar and lounge only.",
+          "A 4% surcharge applies; removal is available on request."
+        ],
+        "discounted": true,
+        "menuLabel": "Tapa the Hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7663293,
+      "longitude": -117.1617533,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=525+Camino+De+La+Reina%2C+San+Diego%2C+CA%2C+92108&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.eatpuesto.com/location/san-diego/",
+    "name": "Puesto at the Headquarters",
+    "slug": "puesto-hq",
+    "neighborhood": "Downtown / Seaport Village",
+    "address": "789 W. Harbor Drive, San Diego, CA 92101",
+    "websiteUrl": "https://www.eatpuesto.com/location/san-diego/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.5,
+      "count": 3761,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/puesto-at-the-headquarters-san-diego?rid=113968",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/puesto-hq-0afbed44bdacd367.webp",
+      "alt": "Restaurant at Puesto at the Headquarters",
+      "credit": "Photo via Puesto at the Headquarters",
+      "sourceUrl": "https://www.eatpuesto.com/location/san-diego/",
+      "originalUrl": "https://images.getbento.com/accounts/b3eb43356d326c9cbb1f0ef418f77ccb/media/images/56406Courtyard_from_Corner.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.eatpuesto.com/menu/happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Cucumber salad",
+            "price": 5
+          },
+          {
+            "name": "Esquite",
+            "price": 5
+          },
+          {
+            "name": "Mini burrito",
+            "price": 6
+          },
+          {
+            "name": "Puesto Perfect Margarita",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Happy-hour snacks, mini burritos, shares, margaritas, and house beer.",
+        "sourceUrl": "https://www.eatpuesto.com/san-diego/",
+        "schedule": "Monday–Friday, 3–5 pm",
+        "conditions": [
+          "Dine-in only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "17:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7114181,
+      "longitude": -117.1700176,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=789+W.+Harbor+Drive%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.eatpuesto.com/location/la-jolla/",
+    "name": "Puesto La Jolla",
+    "slug": "puesto-lajolla",
+    "neighborhood": "La Jolla",
+    "address": "1026 Wall Street, La Jolla, CA 92037",
+    "websiteUrl": "https://www.eatpuesto.com/location/la-jolla/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 2399,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/puesto-la-jolla-reservations-san-diego?lang=en",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/puesto-lajolla-77781190dcd12041.webp",
+      "alt": "Restaurant at Puesto La Jolla",
+      "credit": "Photo via Puesto La Jolla",
+      "sourceUrl": "https://www.eatpuesto.com/location/la-jolla/",
+      "originalUrl": "https://images.getbento.com/accounts/b3eb43356d326c9cbb1f0ef418f77ccb/media/images/13465LJ_Expo-View-to-host-stand.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.eatpuesto.com/menu/happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Cucumber salad",
+            "price": 5
+          },
+          {
+            "name": "Esquite",
+            "price": 5
+          },
+          {
+            "name": "Mini burrito",
+            "price": 6
+          },
+          {
+            "name": "Puesto Perfect Margarita",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Happy-hour snacks, mini burritos, shares, margaritas, and house beer.",
+        "sourceUrl": "https://www.eatpuesto.com/san-diego/",
+        "schedule": "Monday–Friday, 3–5 pm",
+        "conditions": [
+          "Dine-in only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "17:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.8468858,
+      "longitude": -117.2736984,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1026+Wall+Street%2C+La+Jolla%2C+CA%2C+92037&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.eatpuesto.com/location/mission-valley/",
+    "name": "Puesto Mission Valley",
+    "slug": "puesto-mission",
+    "neighborhood": "Mission Valley",
+    "address": "5010 Mission Center Road, San Diego, CA 92108",
+    "websiteUrl": "https://www.eatpuesto.com/san-diego/#mission-valley",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 2398,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/puesto-mission-valley-san-diego",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/puesto-mission-c9800b3b67ebe4fb.webp",
+      "alt": "Restaurant at Puesto Mission Valley",
+      "credit": "Photo via OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/puesto-mission-valley-san-diego",
+      "originalUrl": "https://resizer.otstatic.com/v4/photos/78943645-1?format=jpeg&height=750&width=1000",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.eatpuesto.com/menu/happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Cucumber salad",
+            "price": 5
+          },
+          {
+            "name": "Esquite",
+            "price": 5
+          },
+          {
+            "name": "Mini burrito",
+            "price": 6
+          },
+          {
+            "name": "Puesto Perfect Margarita",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Happy-hour snacks, mini burritos, shares, margaritas, and house beer.",
+        "sourceUrl": "https://www.eatpuesto.com/san-diego/",
+        "schedule": "Daily, 3–5 pm",
+        "conditions": [
+          "Dine-in only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "15:00",
+              "end": "17:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7670429,
+      "longitude": -117.1534943,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5010+Mission+Center+Road%2C+San+Diego%2C+CA%2C+92108&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.brigantine.com/locations/portside-pier/",
+    "name": "Brigantine Portside Pier",
+    "slug": "brig-portside",
+    "neighborhood": "Embarcadero",
+    "address": "1360 North Harbor Drive, San Diego, CA 92101",
+    "websiteUrl": "https://www.brigantine.com/locations/portside-pier/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 5403,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/brigantine-at-portside-pier-san-diego",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/brig-portside-1fac5481dd05437d.webp",
+      "alt": "Restaurant at Brigantine Portside Pier",
+      "credit": "Photo via Brigantine Portside Pier",
+      "sourceUrl": "https://www.brigantine.com/locations/portside-pier/",
+      "originalUrl": "https://www.brigantine.com/wp-content/uploads/2023/06/turned2021_Q3_Brigantine_BrigantineSeafood_Lifestyle_IMG_9891-e1686340822826.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.brigantine.com/locations/portside-pier/",
+        "coverage": "sample",
+        "note": "Ask the restaurant for current happy-hour dishes and prices.",
+        "items": []
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "The branch’s published happy-hour menu; ask the restaurant for current food, drink, and price selections.",
+        "sourceUrl": "https://www.brigantine.com/locations/portside-pier/",
+        "schedule": "Sunday–Friday, 2–5 pm",
+        "conditions": [
+          "Oyster bar / lounge only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "14:00",
+              "end": "17:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7192704,
+      "longitude": -117.1735839,
+      "sourceUrl": "https://www.brigantine.com/locations/portside-pier/",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.brigantine.com/locations/point-loma/",
+    "name": "Brigantine Point Loma",
+    "slug": "brig-pointloma",
+    "neighborhood": "Point Loma",
+    "address": "2725 Shelter Island Drive, San Diego, CA 92106",
+    "websiteUrl": "https://www.brigantine.com/locations/point-loma/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 2040,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/brigantine-point-loma",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/brig-pointloma-67531544cd68e91a.webp",
+      "alt": "Restaurant at Brigantine Point Loma",
+      "credit": "Photo via Brigantine Point Loma",
+      "sourceUrl": "https://www.brigantine.com/locations/point-loma/",
+      "originalUrl": "https://www.brigantine.com/wp-content/uploads/2022/01/Bar2.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.brigantine.com/locations/point-loma/",
+        "coverage": "sample",
+        "note": "Ask the restaurant for current happy-hour dishes and prices.",
+        "items": []
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "The branch’s published happy-hour menu; ask the restaurant for current food, drink, and price selections.",
+        "sourceUrl": "https://www.brigantine.com/locations/point-loma/",
+        "schedule": "Monday, 3 pm–close; Tuesday–Friday & Sunday, 3–6 pm",
+        "conditions": [
+          "Oyster bar / lounge only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1
+              ],
+              "start": "15:00",
+              "end": "21:00"
+            },
+            {
+              "days": [
+                0,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7207675,
+      "longitude": -117.2286142,
+      "sourceUrl": "https://www.brigantine.com/locations/point-loma/",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.brigantine.com/locations/coronado/",
+    "name": "Brigantine Coronado",
+    "slug": "brig-coronado",
+    "neighborhood": "Coronado",
+    "address": "1333 Orange Avenue, Coronado, CA 92118",
+    "websiteUrl": "https://www.brigantine.com/locations/coronado/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 3465,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/brigantine-coronado",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/brig-coronado-20102ae8d514ea77.webp",
+      "alt": "Restaurant at Brigantine Coronado",
+      "credit": "Photo via Brigantine Coronado",
+      "sourceUrl": "https://www.brigantine.com/locations/coronado/",
+      "originalUrl": "https://www.brigantine.com/wp-content/uploads/2022/01/coronado-featimg.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.brigantine.com/locations/coronado/",
+        "coverage": "sample",
+        "note": "Ask the restaurant for current happy-hour dishes and prices.",
+        "items": []
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "The branch’s published happy-hour menu; ask the restaurant for current food, drink, and price selections.",
+        "sourceUrl": "https://www.brigantine.com/locations/coronado/",
+        "schedule": "Monday, 3 pm–close; Tuesday–Friday & Sunday, 3–6 pm",
+        "conditions": [
+          "Oyster bar / lounge only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1
+              ],
+              "start": "15:00",
+              "end": "21:00"
+            },
+            {
+              "days": [
+                0,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.682813,
+      "longitude": -117.1780115,
+      "sourceUrl": "https://www.brigantine.com/locations/coronado/",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.brigantine.com/locations/la-mesa/",
+    "name": "Brigantine La Mesa",
+    "slug": "brig-lamesa",
+    "neighborhood": "La Mesa",
+    "address": "9350 Fuerte Drive, La Mesa, CA 91941",
+    "websiteUrl": "https://www.brigantine.com/locations/la-mesa/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 4490,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/brigantine-la-mesa",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/brig-lamesa-40d319507905af88.webp",
+      "alt": "Restaurant at Brigantine La Mesa",
+      "credit": "Photo via Brigantine La Mesa",
+      "sourceUrl": "https://www.brigantine.com/locations/la-mesa/",
+      "originalUrl": "https://www.brigantine.com/wp-content/uploads/2022/01/la-mesa-featimg.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.brigantine.com/locations/la-mesa/",
+        "coverage": "sample",
+        "note": "Ask the restaurant for current happy-hour dishes and prices.",
+        "items": []
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "The branch’s published happy-hour menu; ask the restaurant for current food, drink, and price selections.",
+        "sourceUrl": "https://www.brigantine.com/locations/la-mesa/",
+        "schedule": "Monday, 3 pm–close; Tuesday–Friday & Sunday, 3–6 pm",
+        "conditions": [
+          "Oyster bar / lounge only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1
+              ],
+              "start": "15:00",
+              "end": "21:30"
+            },
+            {
+              "days": [
+                0,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7783372,
+      "longitude": -116.9956763,
+      "sourceUrl": "https://www.brigantine.com/locations/la-mesa/",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://queenstownpublichouse.com/",
+    "name": "Queenstown Public House",
+    "slug": "queenstown",
+    "neighborhood": "Little Italy",
+    "address": "1557 Columbia Street, San Diego, CA 92101",
+    "websiteUrl": "https://queenstownpublichouse.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.7,
+      "count": 818,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/restaurant/profile/1033627",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/queenstown-77b86d6f58873cab.webp",
+      "alt": "Restaurant at Queenstown Public House",
+      "credit": "Photo via Queenstown Public House",
+      "sourceUrl": "https://queenstownpublichouse.com/",
+      "originalUrl": "https://queenstownhg.com/wp-content/uploads/2026/08/Queenstown-Little-Italy-1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://queenstownpublichouse.com/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Happy-hour bites",
+            "price": 10
+          },
+          {
+            "name": "House wine, sangria, or selected cocktails",
+            "price": 10
+          },
+          {
+            "name": "Two 12 oz beers",
+            "price": 10
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Selected bites, house wines, sangrias, cocktails, and beer pairs for $10.",
+        "sourceUrl": "https://queenstownpublichouse.com/",
+        "schedule": "Monday–Friday, 3–6 pm; Sunday, 6 pm–close",
+        "conditions": [
+          "Sunday happy hour is in the bar only."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            },
+            {
+              "days": [
+                0
+              ],
+              "start": "18:00",
+              "end": "21:30"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7214922,
+      "longitude": -117.1673215,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1557+Columbia+Street%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://waterbarsd.com/",
+    "name": "Waterbar San Diego",
+    "slug": "waterbar",
+    "neighborhood": "Pacific Beach",
+    "address": "4325 Ocean Boulevard, San Diego, CA 92109",
+    "websiteUrl": "https://waterbarsd.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.5,
+      "count": 511,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/waterbar-san-diego",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/waterbar-8c14872658150288.webp",
+      "alt": "Restaurant at Waterbar San Diego",
+      "credit": "Photo via Waterbar San Diego",
+      "sourceUrl": "https://waterbarsd.com/",
+      "originalUrl": "https://static.spotapps.co/website_images/ab_websites/514304_website_v1/video_poster_v1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://waterbarsd.com/food-menu",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Draft beer",
+            "price": 6
+          },
+          {
+            "name": "Crispy calamari",
+            "price": 6
+          },
+          {
+            "name": "Sushi roll selections",
+            "price": 8
+          },
+          {
+            "name": "Fresh oysters",
+            "priceLabel": "Half off"
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Happy-hour seafood, sushi, beer, wine, and spritzes.",
+        "sourceUrl": "https://waterbarsd.com/specials",
+        "schedule": "Monday–Friday, 3–5 pm",
+        "conditions": [],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "17:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7939358,
+      "longitude": -117.255688,
+      "sourceUrl": "https://waterbarsd.com/",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.lionfishsd.com/",
+    "name": "Lionfish at Pendry San Diego",
+    "slug": "lionfish",
+    "neighborhood": "Gaslamp Quarter",
+    "address": "435 Fifth Avenue, San Diego, CA 92101",
+    "websiteUrl": "https://www.lionfishsd.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.5,
+      "count": 2015,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/lionfish-restaurant-at-pendry-san-diego",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/lionfish-725a8a73eec4ccdc.webp",
+      "alt": "Restaurant at Lionfish at Pendry San Diego",
+      "credit": "Photo via Lionfish at Pendry San Diego",
+      "sourceUrl": "https://www.lionfishsd.com/",
+      "originalUrl": "https://images.getbento.com/accounts/0219482a7703f5f516e223b90312e9da/media/images/19543Lionfish_Web_Res-1.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.pendry.com/san-diego/dining/lionfish/",
+        "coverage": "sample",
+        "note": "Ask the restaurant for current happy-hour dishes and prices.",
+        "items": []
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "A special seafood, handroll, and small-plate menu with wine, beer, and cocktail specials.",
+        "sourceUrl": "https://www.pendry.com/san-diego/dining/lionfish/",
+        "schedule": "Monday–Thursday, 5–6 pm",
+        "conditions": [],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "start": "17:00",
+              "end": "18:00"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7097585,
+      "longitude": -117.1600413,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=435+Fifth+Avenue%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://www.dukeslajolla.com/",
+    "name": "Duke’s La Jolla",
+    "slug": "dukes",
+    "neighborhood": "La Jolla",
+    "address": "1216 Prospect Street, La Jolla, CA 92037",
+    "websiteUrl": "https://www.dukeslajolla.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 7727,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/restaurant/profile/185761?lang=en-us",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/dukes-7900e00d335feffb.webp",
+      "alt": "Restaurant at Duke’s La Jolla",
+      "credit": "Photo via Duke’s La Jolla",
+      "sourceUrl": "https://www.dukeslajolla.com/",
+      "originalUrl": "https://www.dukeslajolla.com/wp-content/uploads/2018/05/3_web.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Monday Burger & a Beer",
+        "url": "https://www.dukeslajolla.com/wp-content/uploads/2026/01/26_TSR_DLJ_Menus_BurgerandBeer_JAN21.pdf",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Burger, fries & a 16 oz beer",
+            "price": 21
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Monday Burger & a Beer",
+        "description": "Choose from the published burger selection, served with fries and a selected 16 oz beer for $21.",
+        "sourceUrl": "https://www.dukeslajolla.com/wp-content/uploads/2026/01/26_TSR_DLJ_Menus_BurgerandBeer_JAN21.pdf",
+        "schedule": "Monday in the Barefoot Bar, 3 pm–close",
+        "conditions": [
+          "Barefoot Bar only."
+        ],
+        "discounted": true,
+        "menuLabel": "Monday Burger & a Beer",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1
+              ],
+              "start": "15:00",
+              "end": "20:30"
+            }
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.8490419,
+      "longitude": -117.2722915,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1216+Prospect+Street%2C+La+Jolla%2C+CA%2C+92037&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-diego",
+    "pinSourceUrl": "https://cloakandpetal.com/",
+    "name": "Cloak + Petal",
+    "slug": "cloak",
+    "neighborhood": "Little Italy",
+    "address": "1953 India Street, San Diego, CA 92101",
+    "websiteUrl": "https://cloakandpetal.com/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.6,
+      "count": 1248,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/cloak-and-petal-san-diego/photos/39",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-diego/specials/cloak-5f6774ba4f95ad0a.webp",
+      "alt": "Restaurant at Cloak + Petal",
+      "credit": "Photo via Cloak + Petal",
+      "sourceUrl": "https://cloakandpetal.com/",
+      "originalUrl": "https://cloakandpetal.com/wp-content/themes/cloak-petal-v2/images/interior/DSC00050-Enhanced-SR.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://cloakandpetal.com/happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Specialty cocktails",
+            "price": 13
+          },
+          {
+            "name": "Hot or cold sake",
+            "price": 10
+          },
+          {
+            "name": "Sapporo",
+            "price": 7
+          },
+          {
+            "name": "Spicy tuna roll",
+            "price": 7
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Selected discounted food and drinks during the restaurant’s published happy hour.",
+        "sourceUrl": "https://cloakandpetal.com/happy-hour/",
+        "schedule": "Monday–Friday, 4–6 pm",
+        "conditions": [
+          "Excludes holidays and special events.",
+          "Available at the bar and dining tables."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ],
+          "excludesHolidays": true
+        }
+      }
+    ],
+    "location": {
+      "latitude": 32.7249603,
+      "longitude": -117.1687311,
+      "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1953+India+Street%2C+San+Diego%2C+CA%2C+92101&benchmark=Public_AR_Current&format=json",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "austin",
+    "pinSourceUrl": "https://www.flemingssteakhouse.com/Locations/TX/Austin-The-Domain",
+    "name": "Fleming’s Austin — The Domain",
+    "slug": "flem-austin",
+    "neighborhood": "The Domain",
+    "address": "11600 Century Oaks Terrace, Suite 140, Austin, TX 78758",
+    "websiteUrl": "https://www.flemingssteakhouse.com/Locations/TX/Austin-The-Domain",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.8,
+      "count": 1865,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/flemings-steakhouse-austin-the-domain?lang=en-US",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/austin/specials/flem-austin-d0581daff37075e2.webp",
+      "alt": "Exterior of Fleming’s Austin — The Domain",
+      "credit": "Photo via Fleming’s Austin — The Domain",
+      "sourceUrl": "https://www.flemingssteakhouse.com/Locations/TX/Austin-The-Domain",
+      "originalUrl": "https://flemingssteakhouse.b-cdn.net/-/media/fsh/locations/exteriors/5406-austin-domain.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Social Hour",
+        "url": "https://www.flemingssteakhouse.com/Locations/TX/Austin-The-Domain",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Hand-crafted cocktails",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Social Hour",
+        "description": "Hand-crafted cocktails and shareable bar bites during Social Hour.",
+        "sourceUrl": "https://www.flemingssteakhouse.com/Locations/TX/Austin-The-Domain",
+        "schedule": "Daily, 3–6:30 pm",
+        "conditions": [
+          "Bar only.",
+          "Closed Christmas Day."
+        ],
+        "discounted": true,
+        "menuLabel": "Social Hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "15:00",
+              "end": "18:30"
+            }
+          ],
+          "excludedDates": [
+            "2026-12-25"
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 30.4026502,
+      "longitude": -97.7253511,
+      "sourceUrl": "https://www.flemingssteakhouse.com/Locations/TX/Austin-The-Domain",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "san-antonio",
+    "pinSourceUrl": "https://www.flemingssteakhouse.com/locations/tx/san-antonio/",
+    "name": "Fleming’s San Antonio",
+    "slug": "flem-san-antonio",
+    "neighborhood": "Alamo Heights / Quarry",
+    "address": "255 East Basse Road, Suite 200, San Antonio, TX 78209",
+    "websiteUrl": "https://www.flemingssteakhouse.com/locations/tx/san-antonio/",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.5,
+      "count": 1640,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/flemings-steakhouse-san-antonio?lang=en-US",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/san-antonio/specials/flem-san-antonio-a516375caaca335a.webp",
+      "alt": "Exterior of Fleming’s San Antonio",
+      "credit": "Photo via Fleming’s San Antonio",
+      "sourceUrl": "https://www.flemingssteakhouse.com/locations/tx/san-antonio/",
+      "originalUrl": "https://flemingssteakhouse.b-cdn.net/-/media/fsh/locations/exteriors/5405-san-antonio.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Social Hour",
+        "url": "https://www.flemingssteakhouse.com/locations/tx/san-antonio/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Hand-crafted cocktails",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Social Hour",
+        "description": "Hand-crafted cocktails and shareable bar bites during Social Hour.",
+        "sourceUrl": "https://www.flemingssteakhouse.com/locations/tx/san-antonio/",
+        "schedule": "Daily, 3–6:30 pm",
+        "conditions": [
+          "Bar only.",
+          "Closed Christmas Day."
+        ],
+        "discounted": true,
+        "menuLabel": "Social Hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "15:00",
+              "end": "18:30"
+            }
+          ],
+          "excludedDates": [
+            "2026-12-25"
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 29.495313,
+      "longitude": -98.479773,
+      "sourceUrl": "https://www.flemingssteakhouse.com/locations/tx/san-antonio/",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  {
+    "regionSlug": "houston",
+    "pinSourceUrl": "https://www.flemingssteakhouse.com/Locations/TX/Houston-Town-and-Country",
+    "name": "Fleming’s Houston — Town & Country",
+    "slug": "flem-houston",
+    "neighborhood": "Memorial / Town & Country",
+    "address": "788 W. Sam Houston Parkway North, Suite 120, Houston, TX 77024",
+    "websiteUrl": "https://www.flemingssteakhouse.com/Locations/TX/Houston-Town-and-Country",
+    "checkedAt": "2026-10-07",
+    "review": {
+      "score": 4.5,
+      "count": 1666,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/flemings-steakhouse-houston-beltway?lang=en-US",
+      "checkedAt": "2026-10-07"
+    },
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/houston/specials/flem-houston-29d29c0c0257de4d.webp",
+      "alt": "Exterior of Fleming’s Houston — Town & Country",
+      "credit": "Photo via Fleming’s Houston — Town & Country",
+      "sourceUrl": "https://www.flemingssteakhouse.com/Locations/TX/Houston-Town-and-Country",
+      "originalUrl": "https://flemingssteakhouse.b-cdn.net/-/media/fsh/locations/exteriors/5407-houston-town-country.jpg",
+      "checkedAt": "2026-10-07"
+    },
+    "menus": [
+      {
+        "label": "Social Hour",
+        "url": "https://www.flemingssteakhouse.com/Locations/TX/Houston-Town-and-Country",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Hand-crafted cocktails",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Social Hour",
+        "description": "Hand-crafted cocktails and shareable bar bites during Social Hour.",
+        "sourceUrl": "https://www.flemingssteakhouse.com/Locations/TX/Houston-Town-and-Country",
+        "schedule": "Daily, 4–6:30 pm",
+        "conditions": [
+          "Bar only.",
+          "Closed Christmas Day."
+        ],
+        "discounted": true,
+        "menuLabel": "Social Hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:30"
+            }
+          ],
+          "excludedDates": [
+            "2026-12-25"
+          ]
+        }
+      }
+    ],
+    "location": {
+      "latitude": 29.7785927,
+      "longitude": -95.5625207,
+      "sourceUrl": "https://www.flemingssteakhouse.com/Locations/TX/Houston-Town-and-Country",
+      "checkedAt": "2026-10-07"
+    }
+  }
+]

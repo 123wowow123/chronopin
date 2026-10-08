@@ -15,6 +15,9 @@ import { sourceCountSql, textLengthSql } from '../model/searchIssues';
 import { MIN_SOURCES, THIN_TEXT_CHARS } from '@/lib/searchQuality';
 import { CURATORS } from './curators';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
+import { dayKeyIn } from '@/lib/format';
+import { restaurantTabCoverage } from '@/lib/restaurantCoverage';
+import topRestaurants from '../data/topRestaurants.json';
 import regionalCatalog from '../data/regionalRestaurants.json';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -263,34 +266,44 @@ export function pinsChangedSince(since: Date, limit = 50) {
   );
 }
 
-// The restaurant landing pages (/restaurants/<slug>) that need a refresh:
-// each region with a restaurant-opening pin created since `since`, with those
-// pins, how many openings the region's page shows, and when its catalog was
-// last checked. A region is the pin's city tag (RESTAURANT_REGIONS), the same
-// match regionalRestaurants uses for the page.
+// Refresh new openings and replenish each city's three tabs toward 12 pins.
+// Count the same live, city-tagged openings and curated top picks as the guide.
 export async function restaurantRegionsToRefresh(since: Date) {
-  const rows = await db.query<{ region: string; pins: { id: number; title: string; created: Date }[]; total: number }>(
-    `
-    SELECT "c"."name"::text AS "region",
-      json_agg(json_build_object('id', "p"."id", 'title', "p"."title", 'created', "p"."utcCreatedDateTime") ORDER BY "p"."utcCreatedDateTime" DESC) AS "pins",
-      (SELECT count(*)::int FROM "PinTag" AS "ct" JOIN "Pin" AS "cp" ON "cp"."id" = "ct"."pinId"
-        WHERE "ct"."name" = "c"."name" AND "cp"."utcDeletedDateTime" IS NULL
-          AND EXISTS (SELECT 1 FROM "PinTag" AS "o" WHERE "o"."pinId" = "cp"."id" AND "o"."name" = 'Restaurant Opening')) AS "total"
-    FROM "Pin" AS "p"
-    JOIN "PinTag" AS "c" ON "c"."pinId" = "p"."id" AND "c"."name" = ANY($2::citext[])
-    WHERE "p"."utcDeletedDateTime" IS NULL AND "p"."utcCreatedDateTime" > $1
-      AND EXISTS (SELECT 1 FROM "PinTag" AS "o" WHERE "o"."pinId" = "p"."id" AND "o"."name" = 'Restaurant Opening')
-      AND EXISTS (SELECT 1 FROM "PinTag" AS "f" WHERE "f"."pinId" = "p"."id" AND "f"."name" = 'Food' AND "f"."kind" = 'category')
-    GROUP BY "c"."name"
-    ORDER BY max("p"."utcCreatedDateTime") DESC`,
-    [since, RESTAURANT_REGIONS.map((region) => region.name)],
+  const rows = await db.query<{
+    region: string; id: number; title: string; created: Date; day: string | null;
+    dateConfidence: string | null; sourceUrl: string | null; opening: boolean;
+  }>(
+    `SELECT "c"."name"::text AS "region", "p"."id", "p"."title",
+       "p"."utcCreatedDateTime" AS "created", "p"."sourceUrl", "p"."dateConfidence",
+       to_char("p"."utcStartDateTime", 'YYYY-MM-DD') AS "day",
+       EXISTS (SELECT 1 FROM "PinTag" AS "o" WHERE "o"."pinId" = "p"."id" AND "o"."name" = 'Restaurant Opening') AS "opening"
+     FROM "Pin" AS "p"
+     JOIN "PinTag" AS "c" ON "c"."pinId" = "p"."id" AND "c"."name" = ANY($1::citext[])
+     WHERE "p"."utcDeletedDateTime" IS NULL
+       AND EXISTS (SELECT 1 FROM "PinTag" AS "f" WHERE "f"."pinId" = "p"."id" AND "f"."name" = 'Food' AND "f"."kind" = 'category')
+     ORDER BY "p"."utcCreatedDateTime" DESC`,
+    [RESTAURANT_REGIONS.map((region) => region.name)],
   );
-  return rows.map((row) => {
-    const region = RESTAURANT_REGIONS.find((item) => item.name === row.region)!;
+  const now = new Date();
+  return RESTAURANT_REGIONS.flatMap((region) => {
+    const pins = rows.filter((row) => row.region.toLowerCase() === region.name.toLowerCase());
     const catalog = regionalCatalog.filter((entry) => entry.regionSlug === region.slug);
-    const checked = catalog.map((entry) => (entry as { checkedAt?: string }).checkedAt).filter(Boolean).sort().pop() ?? null;
-    return { region: region.name, slug: region.slug, page: `/restaurants/${region.slug}`, newPins: row.pins, openingPins: row.total, catalogEntries: catalog.length, catalogCheckedAt: checked };
-  });
+    const openings = pins.filter((pin) => pin.opening);
+    const visible = openings.flatMap((pin) => {
+      if (!pin.day) return [];
+      const entry = catalog.find((entry) => entry.kind === 'opening' && entry.sourceUrl === pin.sourceUrl);
+      return [{ id: pin.id, day: pin.day, confirmed: pin.dateConfidence === 'confirmed' || (entry?.openingConfirmed === true && entry.day === pin.day) }];
+    });
+    const curatedSources = new Set(catalog.filter((entry) => entry.kind === 'top').map((entry) => entry.sourceUrl));
+    const fixedIds = new Set(topRestaurants.filter((entry) => entry.regionSlug === region.slug).map((entry) => entry.pinId));
+    const topIds = pins.filter((pin) => fixedIds.has(pin.id) || (pin.sourceUrl != null && curatedSources.has(pin.sourceUrl))).map((pin) => pin.id);
+    const coverage = restaurantTabCoverage(visible, topIds, dayKeyIn(now, region.timeZone));
+    const newPins = openings.filter((pin) => new Date(pin.created) > since).map(({ id, title, created }) => ({ id, title, created }));
+    if (!newPins.length && !Object.values(coverage.needed).some((count) => count > 0)) return [];
+    const checked = catalog.map((entry) => entry.checkedAt).filter(Boolean).sort().pop() ?? null;
+    return [{ region: region.name, slug: region.slug, page: `/restaurants/${region.slug}`, newPins, openingPins: openings.length, catalogEntries: catalog.length, catalogCheckedAt: checked, ...coverage }];
+  }).sort((a, b) => Number(b.newPins.length > 0) - Number(a.newPins.length > 0)
+    || (b.needed.upcoming + b.needed.new + b.needed.top) - (a.needed.upcoming + a.needed.new + a.needed.top));
 }
 
 // How well each named company is covered: its pins in total and ahead of

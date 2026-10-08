@@ -6,6 +6,10 @@ or claims displayed in ads. All five passed the site's brand, stock, 4.3-star,
 and 100-review checks at import. Fire TV Stick HD was excluded for its 4.1-star
 rating; other streaming listings did not return a readable buy-box price.
 
+The catalog also includes the owner-selected MAGNA-TILES Metropolis 110-Piece
+set (B07WDDB59W), added October 7, 2026 under Toys / Building Toys. It passed
+the same listing checks; it has no electronics bestseller rank.
+
 Apply the schema and populate the configured database:
 
 ```sh

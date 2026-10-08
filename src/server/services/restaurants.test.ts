@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { regionalTopRestaurants, restaurantOf, restaurantGuideRegionSlugs } from './restaurants';
+import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import type { PinJson } from '@/lib/types';
 import catalog from '@/server/data/regionalRestaurants.json';
 
@@ -23,7 +24,7 @@ describe('regional restaurant data', () => {
       { city: 'berlin', day: '2026-11-01', dateConfidence: 'estimated', sourceUrl: null },
       { city: 'Vienna', day: '2026-01-01', dateConfidence: 'estimated', sourceUrl: null },
     ]);
-    expect(await restaurantGuideRegionSlugs()).toEqual(['san-diego', 'madrid', 'paris', 'berlin']);
+    expect(await restaurantGuideRegionSlugs()).toEqual([...RESTAURANT_REGIONS.filter((region) => region.country === 'United States').map((region) => region.slug), 'madrid', 'paris', 'berlin']);
     expect(query.mock.calls[0][0]).toContain('"utcDeletedDateTime" IS NULL');
     expect(query.mock.calls[0][0]).toContain("'Restaurant Opening'");
     expect(query.mock.calls[0][0]).toContain("'Food'");

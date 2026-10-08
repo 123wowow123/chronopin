@@ -4,6 +4,7 @@ import { RESTAURANT_REGIONS, openingDateLabel, openingGroup, type Restaurant, ty
 import { dayKeyIn } from '@/lib/format';
 import topRestaurants from '@/server/data/topRestaurants.json';
 import regionalCatalog from '@/server/data/regionalRestaurants.json';
+import specialVenues from '@/server/data/restaurantSpecials.json';
 import { toJson, type PinJson } from '@/lib/types';
 import * as db from '@/server/db';
 import Pins from '@/server/model/pins';
@@ -32,7 +33,7 @@ export async function restaurantGuideRegionSlugs(): Promise<string[]> {
     ),
     Pin.findBySourceUrls(catalog.map((restaurant) => restaurant.sourceUrl)),
   ]);
-  const populated = new Set(topRestaurants.map((restaurant) => restaurant.regionSlug));
+  const populated = new Set([...topRestaurants.map((restaurant) => restaurant.regionSlug), ...specialVenues.map((restaurant) => restaurant.regionSlug)]);
   for (const restaurant of catalog) {
     if (pins.has(restaurant.sourceUrl)) populated.add(restaurant.regionSlug);
   }
@@ -85,6 +86,7 @@ export function restaurantOf(pin: PinJson, city: string): Restaurant | null {
     image: picture ? blobUrl(picture.thumbName) ?? picture.originalUrl ?? null : null,
     imageNote: catalog?.imageNote ?? imageNote, address: pin.address || '',
     priceRange: restaurantPriceRange(pin.sourceUrl),
+    sourceUrl: pin.sourceUrl,
   };
 }
 

@@ -294,14 +294,28 @@ page for that region"). The page itself lists live pins, so the new pin shows
 up on its own; the refresh is for the hand-kept parts of that region's guide
 ([regionalRestaurants.json](../../../src/server/data/regionalRestaurants.json):
 openings and top restaurants with their `checkedAt`).
-**Reads** `restaurant_regions`: each region with a restaurant-opening pin
-created since the last run, with the new pins, how many openings and catalog
-entries it has and when the catalog was last checked. Nothing listed, nothing
-to do.
+**Reads** `restaurant_regions`: each region with a new restaurant-opening pin
+or fewer than 12 live pins in any of Coming soon, Just opened, or Top restaurants
+(owner, 2026-10-07: these tabs should try to get 12 pins if possible). The signal
+includes `targetPerTab`, `counts`, and `needed` for `upcoming`, `new`, and `top`,
+as well as new pins and catalog check dates. Shortages remain visible even when
+no new opening pin has arrived. Regions with new pins come first, then the
+largest shortages. Twelve is a collection target, not a display cap.
 **Does** for each region: re-check its catalog entries' opening dates and
-status against their sources and the new pin, update the pins that went stale
-(`update_pin`), and mark for revisiting what the run cannot change. Catalog
-edits themselves are a repo change: list what needs adding in the report.
+status against their sources and the new pins, update stale pins (`update_pin`),
+and research additional distinct local restaurants for each undersupplied tab.
+Aim for 12 per tab when sources support it, within the run's normal budget;
+rotate through cities rather than exhausting the run on one city. Coming soon
+requires an announced opening, and Just opened requires verified opening
+within the existing 90-day window in the city's time zone. Do not widen that
+window or turn a passed estimated target into an opening to meet the count.
+Top restaurants count only live curated guide selections: an arbitrary Food
+pin or an offer without a pin does not fill that tab. Verify the specific branch,
+source facts, and photos using [restaurant-scraping.md](../../restaurant-scraping.md).
+Do not duplicate restaurants or invent dates, reviews, or awards. If 12 cannot
+be verified, keep fewer and report the remaining shortage and sources checked.
+Catalog edits are repo changes: list required additions in the report; a newly
+created top pin needs a catalog entry before the tab can display it.
 **Traps.** Only pins tagged `Restaurant Opening`, `Food` (category) and the
 region's city tag reach the page ([restaurants.ts](../../../src/server/services/restaurants.ts)),
 so a new pin missing the city tag never refreshes anything.

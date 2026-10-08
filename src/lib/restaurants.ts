@@ -62,6 +62,7 @@ export type Restaurant = {
   imageNote: string | null;
   address: string;
   priceRange?: string;
+  sourceUrl?: string | null;
 };
 
 export type OpeningGroup = 'upcoming' | 'new' | null;

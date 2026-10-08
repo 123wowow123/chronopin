@@ -8,6 +8,8 @@ import Link from '@/components/ui/Link';
 import { RESTAURANT_COUNTRIES, RESTAURANT_REGIONS, openingGroup, type Restaurant, type OpeningGroup, type TopRestaurant } from '@/lib/restaurants';
 import { pinPath } from '@/lib/seo';
 import styles from './RestaurantGuide.module.css';
+import { AvailableRestaurantOffers } from './AvailableRestaurantOffers';
+import { restaurantOffersToShow, type RestaurantOffer } from '@/lib/restaurantOffers';
 
 type Props = {
   restaurants: Restaurant[];
@@ -16,13 +18,17 @@ type Props = {
   region: { name: string; state: string; slug: string; country: string };
   today: string;
   previewSnapshot: boolean;
+  offers: RestaurantOffer[];
+  timeZone: string;
+  initialNow: string;
 };
 
 const VIEWS = [
-  { key: 'all', label: 'All openings', hash: '#openings' },
-  { key: 'upcoming', label: 'Coming soon', hash: '#upcoming' },
-  { key: 'new', label: 'Just opened', hash: '#new' },
-  { key: 'top', label: 'Top restaurants', hash: '#top-restaurants' },
+  { key: 'all', label: 'All openings', mobileLabel: 'All', hash: '#openings' },
+  { key: 'upcoming', label: 'Coming soon', mobileLabel: 'Soon', hash: '#upcoming' },
+  { key: 'new', label: 'Just opened', mobileLabel: 'New', hash: '#new' },
+  { key: 'top', label: 'Top restaurants', mobileLabel: 'Top rated', hash: '#top-restaurants' },
+  { key: 'discounts', label: 'Discounted menus available now', mobileLabel: 'Specials', hash: '#available-now' },
 ] as const;
 
 function subscribeToHash(listener: () => void) {
@@ -36,7 +42,17 @@ function subscribeToHash(listener: () => void) {
 const currentHash = () => window.location.hash;
 const serverHash = () => '';
 
-export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSlugs, region, today, previewSnapshot }: Props) {
+export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSlugs, region, today, previewSnapshot, offers, timeZone, initialNow }: Props) {
+  const [now, setNow] = useState(initialNow);
+  useEffect(() => {
+    const refresh = () => setNow(new Date().toISOString());
+    const onVisibility = () => { if (document.visibilityState === 'visible') refresh(); };
+    refresh();
+    const timer = window.setInterval(refresh, 15_000);
+    document.addEventListener('visibilitychange', onVisibility);
+    window.addEventListener('focus', refresh);
+    return () => { window.clearInterval(timer); document.removeEventListener('visibilitychange', onVisibility); window.removeEventListener('focus', refresh); };
+  }, []);
   const hash = useSyncExternalStore(subscribeToHash, currentHash, serverHash);
   const [selectedNeighborhood, setNeighborhood] = useState('all');
   const [countrySelection, setCountrySelection] = useState({ regionSlug: region.slug, country: region.country });
@@ -45,15 +61,18 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
   const preferredCountry = countrySelection.regionSlug === region.slug ? countrySelection.country : region.country;
   const selectedCountry = countries.find((country) => country === preferredCountry) ?? countries[0];
   const countryNav = useRef<HTMLElement>(null);
+  const viewNav = useRef<HTMLElement>(null);
   const cities = availableRegions.filter((city) => city.country === selectedCountry);
   const active = restaurants.filter((restaurant) => openingGroup(restaurant, today));
   const upcoming = active.filter((restaurant) => openingGroup(restaurant, today) === 'upcoming').sort((a, b) => a.day.localeCompare(b.day));
   const recent = active.filter((restaurant) => openingGroup(restaurant, today) === 'new').sort((a, b) => b.day.localeCompare(a.day));
-  const views = VIEWS.filter((view) => ({ all: active.length, upcoming: upcoming.length, new: recent.length, top: topRestaurants.length })[view.key] > 0);
+  const shownOffers = restaurantOffersToShow(offers, new Date(now), timeZone);
+  const views = VIEWS.filter((view) => ({ all: active.length, upcoming: upcoming.length, new: recent.length, top: topRestaurants.length, discounts: shownOffers.offers.length })[view.key] > 0);
   // Old bookmarks and links from another city can point to an empty view.
   const status = views.find((view) => view.hash === hash)?.key ?? views[0]?.key ?? 'all';
   const top = status === 'top';
-  const neighborhoods = [...new Set((top ? topRestaurants : status === 'all' ? [...active, ...topRestaurants] : active).map((restaurant) => restaurant.neighborhood))].sort();
+  const discounts = status === 'discounts';
+  const neighborhoods = [...new Set((discounts ? offers : top ? topRestaurants : status === 'all' ? [...active, ...topRestaurants] : active).map((restaurant) => restaurant.neighborhood))].sort();
   const neighborhood = neighborhoods.includes(selectedNeighborhood) ? selectedNeighborhood : 'all';
   const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image && !restaurant.imageNote) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image);
   const matches = (restaurant: Pick<Restaurant, 'neighborhood'>) => neighborhood === 'all' || restaurant.neighborhood === neighborhood;
@@ -71,6 +90,17 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
     const selected = nav?.querySelector<HTMLElement>('[aria-pressed="true"]');
     if (nav && selected) nav.scrollLeft = selected.offsetLeft - (nav.clientWidth - selected.clientWidth) / 2;
   }, [selectedCountry]);
+
+  useEffect(() => {
+    const revealSelected = () => {
+      const nav = viewNav.current;
+      const selected = nav?.querySelector<HTMLElement>('[aria-current="location"]');
+      if (nav && selected && window.matchMedia('(max-width:600px)').matches) nav.scrollLeft = selected.offsetLeft - (nav.clientWidth - selected.clientWidth) / 2;
+    };
+    revealSelected();
+    window.addEventListener('resize', revealSelected);
+    return () => window.removeEventListener('resize', revealSelected);
+  }, [status]);
 
   useEffect(() => {
     if (!VIEWS.some((view) => view.hash === hash)) return;
@@ -119,16 +149,17 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
           <Anchor href={mapHref} className={styles.mapLink}><span aria-hidden="true">⌖</span><span>Find your next stop<br /><strong>Explore the map ↗</strong></span></Anchor>
         </div>
 
-        <section id="openings" className={styles.openings} aria-label="Browse restaurant openings">
+        <section id="openings" className={styles.openings} aria-label="Browse restaurants">
           <div className={styles.browseHeading}><div><p className={styles.eyebrow}>THE LOCAL LINEUP</p><h2>{top ? 'Great tables, already here.' : 'Something new on the menu.'}</h2></div><span>{region.name} edition</span></div>
           <div className={styles.filters}>
-            <nav className={styles.statusFilters} aria-label="Restaurant view">
-              {views.map((item) => <Anchor key={item.key} href={item.hash} aria-current={status === item.key ? 'location' : undefined} onClick={() => { if ((item.key === 'top') !== top) setNeighborhood('all'); }}>{item.label}</Anchor>)}
+            <nav ref={viewNav} className={styles.statusFilters} aria-label="Restaurant view">
+              {views.map((item) => <Anchor key={item.key} href={item.hash} aria-label={item.label} aria-current={status === item.key ? 'location' : undefined} onClick={() => { if ((item.key === 'top') !== top || (item.key === 'discounts') !== discounts) setNeighborhood('all'); }}><span className={styles.viewLabel} aria-hidden="true">{item.label}</span><span className={styles.mobileViewLabel} aria-hidden="true">{item.mobileLabel}</span></Anchor>)}
             </nav>
             <div className={styles.filterFields}>
               <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>
             </div>
           </div>
+          {discounts ? <AvailableRestaurantOffers key={region.slug} offers={offers.filter(matches)} timeZone={timeZone} now={now} city={region.name} /> : <>
           <p className={styles.results} aria-live="polite">{shown} {top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>
           {!shown ? <div className={styles.empty}><h3>{top ? 'No top restaurants match those filters.' : active.length ? 'No openings match those filters.' : 'The next opening is still on its way.'}</h3><p>{top || active.length ? 'Try another neighborhood.' : 'Check back for newly announced restaurants in this region.'}</p>{(top || active.length > 0) && <button type="button" onClick={top ? () => { setNeighborhood('all'); } : reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection restaurants={shownTop} /> : (
             <>
@@ -137,6 +168,7 @@ export function RestaurantGuide({ restaurants, topRestaurants, availableRegionSl
             </>
           )}
           {status === 'all' && shownTop.length > 0 && <TopRestaurantSection restaurants={shownTop} />}
+          </>}
         </section>
 
         <aside className={styles.editorialNote}><span aria-hidden="true">✳</span><div><h2>A date is a starting point.</h2><p>Opening plans can change. Month and season dates are estimates, and a passed estimate never means a restaurant is confirmed open. Each pin links to the reporting behind it—check the latest details before making plans.</p>{previewSnapshot && <p className={styles.previewNote}>Local preview: published {region.name} pins from October 6, 2026.</p>}</div><Anchor href="#openings" onClick={() => setNeighborhood('all')}>Back to openings ↗</Anchor></aside>

@@ -1,6 +1,32 @@
 .guide { --paper:#f6f3eb; --paper-raised:#fffdf7; --text:#263c32; --soft:#627069; --rule:#d8dcd0; --green:#244d39; background:var(--paper); color:var(--text); padding:0 24px 64px; }
 :global([data-theme='dark']) .guide { --paper:#151e19; --paper-raised:#1c2821; --text:#eeeee0; --soft:#abb8ad; --rule:#34483b; --green:#c6daa4; }
 .container { max-width:1200px; margin:auto; }
+.offers { padding:40px 0; border-bottom:1px solid var(--rule); scroll-margin-top:76px; }
+.offers .browseHeading { flex-wrap:wrap; margin-bottom:12px; }
+.offers time { color:var(--soft); font-size:12px; }
+.offerIntro { color:var(--soft); font-size:12px; line-height:1.7; margin:12px 0; }
+.offerSort { margin-left:auto; flex-shrink:0; }
+.offerSort>div { display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:12px; }
+.offerSort span { margin-right:6px; }
+.offerSort button { padding:8px 14px; border:1px solid var(--rule); border-radius:4px; background:var(--paper-raised); color:var(--text); cursor:pointer; }
+.offerSort button[aria-pressed='true'] { background:var(--green); color:var(--paper); border-color:var(--green); }
+.offerSort button:disabled { opacity:.6; cursor:wait; }
+.offerSortNote { color:var(--soft); font-size:11px; line-height:1.7; }
+.offerDistance { color:var(--green); font-size:12px; margin-top:6px; }
+.offers .cardGrid { margin-top:20px; align-items:start; grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr)); }
+.offers .photoLink { flex-shrink:0; }
+.offerStatus { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; align-items:center; font-size:11px; margin-bottom:18px; }
+.offerStatus>span { background:var(--green); color:var(--paper); border-radius:4px; padding:5px 8px; }
+.offerTitle { margin-top:12px; font-size:15px; font-weight:650; }
+.offerReview { margin-top:8px; font-size:12px; color:var(--green); }
+.offerReview a:hover { text-decoration:underline; }
+.offerReview small { display:block; color:var(--soft); font-size:10px; margin-top:4px; }
+.offerMenu { list-style:none; padding:0; margin:10px 0; }
+.offerMenu li { display:flex; justify-content:space-between; gap:16px; font-size:12px; line-height:1.5; padding:8px 0; border-bottom:1px solid var(--rule); }
+.offerMenu strong { text-align:right; flex-shrink:0; max-width:45%; }
+.offerMenu small { display:block; color:var(--soft); }
+.offerSchedule,.offerConditions { color:var(--soft); font-size:11px; line-height:1.7; margin-top:12px; }
+.offerConditions { list-style:disc; padding-left:16px; }
 .guide a { color:inherit; text-decoration:none; }
 .guide h1,.guide h2,.guide h3 { color:inherit; }
 .guide a:focus-visible,.guide button:focus-visible,.guide input:focus-visible,.guide select:focus-visible { outline:3px solid var(--green); outline-offset:5px; }
@@ -55,6 +81,7 @@
 .browseHeading>span { color:var(--soft); font-size:11px; padding-bottom:3px; }
 .filters { display:flex; justify-content:space-between; align-items:center; gap:16px; padding-block:18px; border-block:1px solid var(--rule); }
 .statusFilters { display:flex; flex-wrap:wrap; gap:5px; flex-shrink:0; }
+.mobileViewLabel { display:none; }
 .statusFilters a { font-size:11px; font-weight:600; border-radius:4px; padding:9px 13px; cursor:pointer; color:var(--soft); }
 .statusFilters a[aria-current='location'] { background:var(--text); color:var(--paper); }
 .statusFilters a:hover { background:var(--rule); color:var(--text); }
@@ -108,4 +135,17 @@
 @media(max-width:1000px) { .hero { gap:28px; } .filters { align-items:start; flex-direction:column; } .filterFields { width:100%; justify-content:space-between; } .cardGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } .digest { gap:14px; } .digest>a { padding-left:17px; } }
 @media(max-width:760px) { .hero { grid-template-columns:1fr; padding-top:30px; gap:30px; } .heroCopy h1 { font-size:58px; } .featured { min-height:340px; } .heroCopy .eyebrow { margin-bottom:18px; } .digest { grid-auto-flow:row; grid-template-columns:1fr 1fr; gap:24px 15px; } .digest>p { grid-column:1/-1; } .digest>a { border-left:0; padding-left:0; } .digest .mapLink { grid-column:1/-1; border-top:1px solid var(--rule); padding-top:18px; } .browseHeading { align-items:start; } .browseHeading>span { display:none; } .browseHeading h2 { font-size:29px; } .editorialNote { flex-wrap:wrap; gap:15px; } .editorialNote>div { flex:1; } .editorialNote>a { margin-left:47px; } }
 @media(max-width:600px) { .guide { padding:0 18px 40px; } .guideNav { gap:12px; } .wordmark { font-size:12px; } .wordmark>span { font-size:25px; } .heroCopy h1 { font-size:53px; letter-spacing:-2px; } .lead { font-size:14px; } .cardGrid { grid-template-columns:1fr; gap:20px; } .filterFields { flex-wrap:wrap; gap:8px; } .filterFields>label:last-child { width:100%; } .filterFields select { width:100%; max-width:none; } .statusFilters { width:100%; } .statusFilters a { flex:1; padding:10px 7px; } .photoLink { aspect-ratio:1.75; } .cardMeta { font-size:11px; } .cardDescription { font-size:12px; } .cardFoot strong { font-size:12px; } .editorialNote>div { flex:1 1 calc(100% - 47px); } }
+@media(max-width:600px) {
+  .offerSort { margin-left:0; }
+  .offerSort button { min-height:44px; }
+  .filters { gap:12px; padding-block:12px; }
+  .statusFilters { position:relative; display:flex; flex-wrap:nowrap; gap:8px; overflow-x:auto; scrollbar-width:none; border-bottom:1px solid var(--rule); }
+  .statusFilters::-webkit-scrollbar { display:none; }
+  .statusFilters a { display:flex; flex:1 0 auto; align-items:center; justify-content:center; min-height:44px; padding:7px 12px 13px; border-radius:0; border-bottom:2px solid transparent; background:transparent; color:var(--soft); font-size:16px; line-height:1.4; white-space:nowrap; }
+  .statusFilters a[aria-current='location'],.statusFilters a[aria-current='location']:hover { background:transparent; color:var(--green); border-bottom-color:var(--green); }
+  .statusFilters a:hover { background:transparent; color:var(--text); }
+  .viewLabel { display:none; }
+  .mobileViewLabel { display:inline; }
+  .statusFilters a:focus-visible { outline-offset:-3px; }
+}
 @media(prefers-reduced-motion:reduce) { .featuredImage,.cardImage { transition:none; } .featured:hover .featuredImage,.photoLink:hover .cardImage { transform:none; } }

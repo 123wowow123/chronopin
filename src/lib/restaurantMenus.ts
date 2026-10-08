@@ -1,5 +1,22 @@
 import profiles from '@/server/data/restaurantMenus.json';
 
+export type RestaurantPhoto = {
+  src: string;
+  alt: string;
+  credit: string;
+  sourceUrl: string;
+  originalUrl: string;
+  checkedAt: string;
+};
+
+export type RestaurantReview = {
+  score: number;
+  count: number;
+  provider: string;
+  sourceUrl: string;
+  checkedAt: string;
+};
+
 export type RestaurantSpecial = {
   kind: 'lunch' | 'other';
   title: string;
@@ -9,6 +26,15 @@ export type RestaurantSpecial = {
   sourceUrl: string;
   validFrom?: string;
   validThrough?: string;
+  availability?: {
+    // Local wall-clock times; weekday 0 is Sunday. End times are exclusive.
+    windows: { days: number[]; start: string; end: string }[];
+    excludedDates?: string[];
+    excludesHolidays?: boolean;
+  };
+  discounted?: boolean;
+  menuLabel?: string;
+  excludedMenuItems?: string[];
 };
 export type RestaurantMenuProfile = {
   pinSourceUrl: string;
@@ -17,6 +43,9 @@ export type RestaurantMenuProfile = {
   menus: RestaurantMenu[];
   specials: RestaurantSpecial[];
   lunchNote?: { text: string; sourceUrl: string };
+  review?: RestaurantReview;
+  photo?: RestaurantPhoto;
+  location?: { latitude: number; longitude: number; sourceUrl: string; checkedAt: string };
 };
 
 export type RestaurantMenu = {
