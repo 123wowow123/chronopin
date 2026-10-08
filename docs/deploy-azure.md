@@ -80,6 +80,13 @@ changed since `~/chronopin/.deployed-sha`. Roll back with
 (`APP_IMAGE`, `TOOLS_IMAGE`) so a later `docker compose up` by hand uses the
 same image.
 
+The image deploy prunes unused images before pulling and after restarting
+the app. Images referenced by containers and all data volumes are preserved.
+If a pull fails with `no space left on device`, free space on the VM with
+`docker image prune -af`, check `df -h /`, then retry `npm run deploy:image`.
+The Compose suggestion to build `app` can accompany a failed pull; disk
+exhaustion must be resolved first.
+
 One-time setup: push, let the first run finish, then in GitHub's package
 settings set both packages to **public** so the VM pulls without a login.
 `npm run deploy` (build on the VM) still works as a fallback.

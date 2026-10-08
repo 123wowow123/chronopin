@@ -50,11 +50,17 @@ fi
 # Docker/.env keeps APP_IMAGE for any later `docker compose up` by hand, which
 # would otherwise fall back to the old locally built chronopin:latest.
 ssh -i "$KEY" "$HOST" "set -eu; cd chronopin
+# Make room before extracting new layers. A failed pull never reaches the
+# cleanup at the end; retaining a day's unused images can fill this 30GB disk.
+# Images referenced by containers are preserved; volumes are never pruned.
+docker image prune -af >/dev/null
+df -h / | tail -1
 printf 'APP_IMAGE=%s\nTOOLS_IMAGE=%s\n' '$APP_IMAGE' '$TOOLS_IMAGE' > Docker/.env
 C='docker compose -f Docker/docker-compose.prod.yml'
 \$C pull app
 if [ $migrate = 1 ]; then \$C --profile tools pull tools && \$C --profile tools run --rm tools npm run create:db; fi
 \$C up -d --no-build app
 echo $full > .deployed-sha
-docker image prune -af --filter until=24h >/dev/null"
+docker image prune -af >/dev/null
+df -h / | tail -1"
 echo "Deployed $rev."
