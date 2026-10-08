@@ -3,8 +3,11 @@ import { regionalTopRestaurants, restaurantOf, restaurantGuideRegionSlugs } from
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import type { PinJson } from '@/lib/types';
 import catalog from '@/server/data/regionalRestaurants.json';
+import specials from '@/server/data/restaurantSpecials.json';
 
-const { findBySourceUrls, query } = vi.hoisted(() => ({ findBySourceUrls: vi.fn(), query: vi.fn() }));
+const { findBySourceUrls, query, listSpecialVenues } = vi.hoisted(() => ({ findBySourceUrls: vi.fn(), query: vi.fn(), listSpecialVenues: vi.fn() }));
+vi.mock('../model/restaurantSpecialVenue', () => ({ listSpecialVenues }));
+listSpecialVenues.mockImplementation(async () => specials.map(({ regionSlug, ...profile }) => ({ regionSlug, profile })));
 vi.mock('next/cache', () => ({ cacheLife: vi.fn(), cacheTag: vi.fn() }));
 vi.mock('./cache', () => ({ TAGS: { timeline: 'timeline' } }));
 vi.mock('../db', () => ({ query }));
@@ -13,6 +16,13 @@ vi.mock('../model/pin', () => ({ default: { findBySourceUrls } }));
 afterEach(() => { vi.clearAllMocks(); vi.useRealTimers(); });
 
 describe('regional restaurant data', () => {
+  it('discovers a newly managed city and removes it when its database offers disappear', async () => {
+    findBySourceUrls.mockResolvedValue(new Map());
+    query.mockResolvedValue([]);
+    listSpecialVenues.mockResolvedValueOnce([{ regionSlug: 'vienna', profile: { specials: [{}] } }]).mockResolvedValueOnce([]);
+    expect(await restaurantGuideRegionSlugs()).toContain('vienna');
+    expect(await restaurantGuideRegionSlugs()).not.toContain('vienna');
+  });
   it('excludes empty and expired guides while including live curated picks and visible openings', async () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date('2026-10-07T12:00:00Z'));

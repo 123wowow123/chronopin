@@ -1,16 +1,20 @@
 import type { RestaurantMenuProfile } from '@/lib/restaurantMenus';
 import type { MapPinJson } from '@/lib/types';
-import menus from '@/server/data/restaurantMenus.json';
-import specials from '@/server/data/restaurantSpecials.json';
+import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
 
 type Venue = RestaurantMenuProfile & { address?: string; websiteUrl?: string };
 
 // Resolve only known curated offers. Never accept marker coordinates or links
 // from the URL. This also covers venues not yet stored as database pins.
-export function restaurantSpecialMap(ids: string[]): MapPinJson[] {
+export async function restaurantSpecialMap(ids: string[]): Promise<MapPinJson[]> {
+  if (!ids.length) return [];
+  return buildRestaurantSpecialMap(ids, (await listSpecialVenues()).map((record) => record.profile));
+}
+
+export function buildRestaurantSpecialMap(ids: string[], profiles: Venue[]): MapPinJson[] {
   const requested = new Set(ids);
   const venues = new Map<string, Venue>();
-  for (const venue of [...menus, ...specials] as Venue[]) venues.set(venue.pinSourceUrl, venue);
+  for (const venue of profiles) venues.set(venue.pinSourceUrl, venue);
   return [...venues.values()].flatMap((venue, index) => {
     const matches = venue.specials.filter((special, specialIndex) => special.discounted && requested.has(`${venue.pinSourceUrl}#${specialIndex}`));
     const location = venue.location;

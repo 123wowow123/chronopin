@@ -97,12 +97,12 @@ describe('next highly reviewed restaurant specials', () => {
     expect(shown.offers).toHaveLength(1);
     expect(shown.offers[0].id).toBe('Favorite');
   });
-  it('shows up to twenty distinct restaurants with the earliest specials first', () => {
-    const venues = Array.from({ length: 25 }, (_, index) => offer(`Venue ${String(index).padStart(2, '0')}`));
+  it('shows up to fifty distinct restaurants with the earliest specials first', () => {
+    const venues = Array.from({ length: 55 }, (_, index) => offer(`Venue ${String(index).padStart(2, '0')}`));
     const shown = restaurantOffersToShow([...venues, ...venues], new Date('2026-10-07T20:00:00Z'), zone);
-    expect(shown.offers).toHaveLength(20);
-    expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(20);
-    expect(shown.offers.map((item) => item.name)).toEqual(venues.slice(0, 20).map((item) => item.name));
+    expect(shown.offers).toHaveLength(50);
+    expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(50);
+    expect(shown.offers.map((item) => item.name)).toEqual(venues.slice(0, 50).map((item) => item.name));
   });
   it.each(['2026-10-07T20:00:00Z', '2026-10-07T23:30:00Z'])('sorts current and upcoming specials by rating or distance at %s', (time) => {
     const origin = { latitude: 32.7, longitude: -117.1 };
@@ -115,14 +115,14 @@ describe('next highly reviewed restaurant specials', () => {
     expect(restaurantOffersToShow(venues, new Date(time), zone, { sort: 'distance', origin }).offers.map((item) => item.name)).toEqual(['Nearby', 'Highest', 'Unknown distance', 'Invalid coordinates']);
     expect(restaurantOffersToShow(venues, new Date(time), zone, { sort: 'distance' }).offers.map((item) => item.name)).toEqual(['Highest', 'Unknown distance', 'Invalid coordinates', 'Nearby']);
   });
-  it('applies sorting before the twenty-venue cap while keeping each venue’s earliest special', () => {
-    const venues = Array.from({ length: 21 }, (_, index) => ({ ...offer(`Venue ${index}`, index === 20 ? 5 : 4.5), location: { latitude: 32.7 + (20 - index) / 100, longitude: -117.1 } }));
-    const later = { ...venues[20], id: 'later', special: { ...happyHour, availability: { windows: [{ days: [5], start: '18:00', end: '20:00' }] } } };
+  it('applies sorting before the fifty-venue cap while keeping each venue’s earliest special', () => {
+    const venues = Array.from({ length: 51 }, (_, index) => ({ ...offer(`Venue ${index}`, index === 50 ? 5 : 4.5), location: { latitude: 32.7 + (50 - index) / 100, longitude: -117.1 } }));
+    const later = { ...venues[50], id: 'later', special: { ...happyHour, availability: { windows: [{ days: [5], start: '18:00', end: '20:00' }] } } };
     for (const sort of ['rating', 'distance'] as const) {
-      const shown = restaurantOffersToShow([later, ...venues], new Date('2026-10-07T20:00:00Z'), zone, { sort, origin: venues[20].location });
-      expect(shown.offers).toHaveLength(20);
-      expect(shown.offers[0].id).toBe('Venue 20');
-      expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(20);
+      const shown = restaurantOffersToShow([later, ...venues], new Date('2026-10-07T20:00:00Z'), zone, { sort, origin: venues[50].location });
+      expect(shown.offers).toHaveLength(50);
+      expect(shown.offers[0].id).toBe('Venue 50');
+      expect(new Set(shown.offers.map((item) => item.restaurantHref)).size).toBe(50);
     }
   });
 });

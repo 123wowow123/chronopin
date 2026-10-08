@@ -38,6 +38,7 @@ const NO_ACCESS = new Set(['Session', 'spatial_ref_sys']);
 
 // Listed and readable, never written here.
 const READ_ONLY: Record<string, string> = {
+  RestaurantSpecialVenue: 'Manage validated offers and revisions through /api/admin/restaurant-specials.',
   schemaMigrations: 'Written by npm run create:db.',
   PinBaseCache: "Kept in step with PinBaseView by 0072's triggers.",
   AdminAudit: "The record of this API's own writes.",

@@ -32,6 +32,6 @@ async function GuideContent({ params }: Props) {
   const [data, topRestaurants, availableRegionSlugs] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug), restaurantGuideRegionSlugs()]);
   const now = new Date();
   const today = dayKeyIn(now, region.timeZone);
-  const offers = regionalRestaurantOffers(data.restaurants, topRestaurants, today, region.slug);
+  const offers = await regionalRestaurantOffers(data.restaurants, topRestaurants, today, region.slug);
   return <RestaurantGuide {...data} topRestaurants={topRestaurants} availableRegionSlugs={availableRegionSlugs} region={region} today={today} offers={offers} timeZone={region.timeZone} initialNow={now.toISOString()} />;
 }

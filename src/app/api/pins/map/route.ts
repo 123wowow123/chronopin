@@ -21,7 +21,7 @@ export const GET = route(async (request: NextRequest) => {
     let ids: unknown;
     try { ids = JSON.parse(specials); } catch { throw new HttpError(400, 'Invalid specials list'); }
     if (!Array.isArray(ids) || ids.length > 200 || !ids.every((id) => typeof id === 'string')) throw new HttpError(400, 'Invalid specials list');
-    return json({ pins: restaurantSpecialMap(ids) });
+    return json({ pins: await restaurantSpecialMap(ids) }, 200, { 'Cache-Control': 'no-store' });
   }
   const user = await getUser(request);
   const onlyWatched = params.get('f')?.toLowerCase() === 'watch';

@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { restaurantSpecialMap } from './restaurantSpecialMap';
+import { buildRestaurantSpecialMap } from './restaurantSpecialMap';
+import specials from '@/server/data/restaurantSpecials.json';
+import menus from '@/server/data/restaurantMenus.json';
+import type { RestaurantMenuProfile } from '@/lib/restaurantMenus';
+
+function restaurantSpecialMap(ids: string[]) { return buildRestaurantSpecialMap(ids, [...menus, ...specials] as RestaurantMenuProfile[]); }
 
 describe('restaurant specials on the main map', () => {
   const fortOak = 'https://www.fortoaksd.com/#0';

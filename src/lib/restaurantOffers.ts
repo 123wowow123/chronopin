@@ -84,7 +84,7 @@ export function nextRestaurantOffer(special: RestaurantSpecial, now: Date, timeZ
 
 export const HIGH_REVIEW_SCORE = 4.5;
 export const HIGH_REVIEW_COUNT = 100;
-export const NEXT_SPECIALS_LIMIT = 20;
+export const NEXT_SPECIALS_LIMIT = 50;
 export function highlyReviewed(offer: RestaurantOffer): boolean {
   return !!offer.review && Number.isFinite(offer.review.score) && offer.review.score >= HIGH_REVIEW_SCORE && offer.review.score <= 5 && Number.isInteger(offer.review.count) && offer.review.count >= HIGH_REVIEW_COUNT;
 }

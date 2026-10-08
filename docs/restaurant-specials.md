@@ -1,12 +1,20 @@
-# Restaurant specials checked October 7, 2026
+# Restaurant specials
+
+## Current coverage — October 8, 2026
+
+New York and Los Angeles each have 50 qualifying restaurants; San Diego has 51, including a backup for an expiring promotion. The next-specials view supports up to 50 distinct venues. See the [expansion audit](restaurant-specials-expansion.md) for the 128 additions, published schedules, rating snapshots, and limitations.
+
+## October 7, 2026 research
 
 Added 42 established venues with 44 specials across all 19 US city guides.
 San Diego now has 21 qualifying restaurants, so its unfiltered next-specials
 view shows the earliest 20 distinct choices after service, including weekends. Neighborhood
-filters can narrow that list. San Antonio has the verified Ladino offer; each other US city has at least one qualifying venue. Most cities currently have one; Austin, San Antonio, and Houston have two. The view supports up to 20 distinct restaurants per city. The tab is hidden when no active or qualifying future offer exists.
+filters can narrow that list. San Antonio has the verified Ladino offer; each other US city has at least one qualifying venue. Most cities currently have one; Austin, San Antonio, and Houston have two. The view originally supported up to 20 distinct restaurants per city. The tab is hidden when no active or qualifying future offer exists.
 Published menu prices are selected samples, and ratings are snapshots from
 OpenTable. The next-specials fallback requires 4.5/5 and at least 100 reviews.
-New venues are maintained in `src/server/data/restaurantSpecials.json`; they do
+Venues are maintained in the `RestaurantSpecialVenue` database table through the
+[specials management API](okf/api/restaurant-specials.md). The JSON catalogs are
+initial import fixtures; runtime specials come from the database. Venues do
 not depend on a newly seeded opening pin. Ladino retains its existing MICHELIN
 source key so an existing guide pin receives the enriched offers without a
 duplicate venue.
@@ -118,6 +126,6 @@ Added 18 verified restaurants: 15 in the San Diego metro area (including Coronad
 
 CUCINA’s current daily 4–6 pm page supersedes an old linked 2019 PDF with a different schedule. Lionfish’s event page says 4–6 pm, but its hotel owner’s dining page and published restaurant opening time support 5–6 pm Monday–Thursday; the narrower verified window is used. Brigantine’s Monday “until close” uses each branch’s oyster-bar/lounge closing time. Duke’s Monday special starts at the published 3 pm Barefoot Bar opening and ends at its published evening closing time. Puesto Mission Valley’s later “8 pm–late” promotion is omitted because its end is unspecified; its daily 3–5 pm menu is included. Fleming’s branches differ: Austin/The Domain and San Antonio start Social Hour at 3 pm, Houston/Town & Country at 4 pm. Their Christmas closure is excluded. California English was not added because its current operator site returns a Website Expired page. Existing San Diego tests check 20 distinct next restaurants across every weekday after service.
 
-The specials tab has a Rating/Distance toggle for both active and upcoming offers. Rating is the default (highest score, then most reviews). Distance asks for browser location on selection, measures straight-line distance locally, and sorts before the 20-venue limit. Permission denial or a failed lookup keeps rating order. Every venue retains its earliest qualifying upcoming special regardless of sorting.
+The specials tab has a Rating/Distance toggle for both active and upcoming offers. Rating is the default (highest score, then most reviews). Distance asks for browser location on selection, measures straight-line distance locally, and sorts before the current 50-venue limit. Permission denial or a failed lookup keeps rating order. Every venue retains its earliest qualifying upcoming special regardless of sorting.
 
 Coordinates for all 42 supplemental venues and the two existing active-menu venues were checked on 2026-10-07. Each profile’s `location` records its coordinate source and check date. Most use address matches from the [US Census Geocoder](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html), whose points are interpolated along street address ranges. Branch operator map coordinates are preferred for Brigantine’s four branches, Waterbar, the three added Fleming’s branches, and Telefèric La Jolla. Distances are labeled approximate; unknown or invalid venue coordinates sort last.

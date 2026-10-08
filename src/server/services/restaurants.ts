@@ -4,7 +4,7 @@ import { RESTAURANT_REGIONS, openingDateLabel, openingGroup, type Restaurant, ty
 import { dayKeyIn } from '@/lib/format';
 import topRestaurants from '@/server/data/topRestaurants.json';
 import regionalCatalog from '@/server/data/regionalRestaurants.json';
-import specialVenues from '@/server/data/restaurantSpecials.json';
+import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
 import { toJson, type PinJson } from '@/lib/types';
 import * as db from '@/server/db';
 import Pins from '@/server/model/pins';
@@ -15,12 +15,9 @@ import { restaurantPriceRange } from '../restaurantPrice';
 const CUISINES = new Set(['Mexican', 'Mediterranean', 'Cafe', 'Sandwiches', 'Japanese', 'Chinese', 'Italian', 'Greek', 'Spanish', 'Hawaiian', 'American', 'European', 'Brazilian', 'French', 'Californian', 'Afro-Asian', 'Asian', 'Vegetarian', 'Seafood', 'Oaxacan']);
 
 export async function restaurantGuideRegionSlugs(): Promise<string[]> {
-  'use cache';
-  cacheLife('minutes');
-  cacheTag(TAGS.timeline);
   // Match the guide's live opening query without hydrating every city's pins and media.
   const catalog = regionalCatalog.filter((restaurant) => restaurant.kind === 'top');
-  const [openings, pins] = await Promise.all([
+  const [openings, pins, specialVenues] = await Promise.all([
     db.query<{ city: string; day: string; dateConfidence: string | null; sourceUrl: string | null }>(
       `SELECT "city"."name" AS "city", to_char("p"."utcStartDateTime", 'YYYY-MM-DD') AS "day",
               "p"."dateConfidence", "p"."sourceUrl"
@@ -32,8 +29,9 @@ export async function restaurantGuideRegionSlugs(): Promise<string[]> {
       [RESTAURANT_REGIONS.map((region) => region.name)],
     ),
     Pin.findBySourceUrls(catalog.map((restaurant) => restaurant.sourceUrl)),
+    listSpecialVenues(),
   ]);
-  const populated = new Set([...topRestaurants.map((restaurant) => restaurant.regionSlug), ...specialVenues.map((restaurant) => restaurant.regionSlug)]);
+  const populated = new Set([...topRestaurants.map((restaurant) => restaurant.regionSlug), ...specialVenues.filter((restaurant) => restaurant.profile.specials.length).map((restaurant) => restaurant.regionSlug)]);
   for (const restaurant of catalog) {
     if (pins.has(restaurant.sourceUrl)) populated.add(restaurant.regionSlug);
   }

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { restaurantMenuFor, restaurantMenuState, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
 import { RestaurantMenuTabs } from './RestaurantMenuTabs';
 import styles from './RestaurantMenu.module.css';
+import { specialVenueForSource } from '@/server/model/restaurantSpecialVenue';
 
 function SourceLink({ url, children }: { url: string; children: ReactNode }) {
   return <Anchor href={url} target="_blank" rel="noopener noreferrer" className={styles.source}>{children} <span aria-hidden="true">↗</span></Anchor>;
@@ -66,10 +67,12 @@ function Special({ special }: { special: RestaurantSpecial }) {
 
 // Curated branch-specific information. Missing information is a verification
 // gap, not a claim that a venue has no menu or offers.
-export function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: string | null | undefined; today: string }) {
-  const profile = restaurantMenuFor(sourceUrl);
+export async function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: string | null | undefined; today: string }) {
+  const stored = await specialVenueForSource(sourceUrl);
+  const menuOnly = restaurantMenuFor(sourceUrl);
+  const profile = stored?.profile ?? (menuOnly ? { ...menuOnly, specials: [] } : undefined);
   if (!profile) return null;
-  const menus = profile.menus.filter((menu) => menu.items.length || menu.pages?.length);
+  const menus = profile.menus.filter((menu) => menu.items.length || menu.pages?.length || menu.coverage === 'link');
   if (!menus.length) return null;
   const { rescrapeCandidate, specials } = restaurantMenuState(profile, today);
   const lunch = specials.filter((special) => special.kind === 'lunch');
