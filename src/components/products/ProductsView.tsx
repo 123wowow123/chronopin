@@ -1,4 +1,5 @@
 import { ShelfTabs } from '@/components/products/ShelfTabs';
+import { CardImage } from '@/components/pin/CardImage';
 import { JsonLd } from '@/components/JsonLd';
 import { RatingSummary } from '@/components/pin/PinRatings';
 import Anchor from '@/components/ui/Anchor';
@@ -8,7 +9,6 @@ import styles from '@/components/restaurants/RestaurantGuide.module.css';
 import { blobUrl } from '@/lib/appConfig';
 import { pinTextDir } from '@/lib/i18n/config';
 import { absoluteUrl, pinPath } from '@/lib/seo';
-import { tagPath } from '@/lib/topics';
 import { LandingMark } from '@/components/ui/LandingMark';
 import type { PinJson } from '@/lib/types';
 import type { ProductPin, ProductShelf } from '@/server/services/products';
@@ -17,7 +17,8 @@ import type { ProductPin, ProductShelf } from '@/server/services/products';
 // module: a video's still first, else the earliest medium.
 function picture(media: PinJson['media']) {
   const medium = media?.find((m) => String(m.type) === '3') ?? media?.[0];
-  return { thumbName: medium?.thumbName, originalUrl: String(medium?.type) === '1' ? medium?.originalUrl : undefined };
+  return { thumbName: medium?.thumbName, originalUrl: String(medium?.type) === '1' ? medium?.originalUrl : undefined,
+    portrait: !!(medium?.thumbWidth && medium.thumbHeight && medium.thumbHeight > medium.thumbWidth * 1.2) };
 }
 
 // Why the product is worth a look: its curated line (ProductBlurb), else the
@@ -111,7 +112,6 @@ export function ProductsView({ shelves, title, description }: { shelves: Product
                   <h2 id={`${id(shelf.name)}-title`}>{label} <span>{shelf.pins.length.toString().padStart(2, '0')}</span></h2>
                   <p>Why each one is worth a look.</p>
                 </div>
-                <Link href={tagPath(shelf.name)} className={styles.sectionSymbol}>All {label} dates ↗</Link>
               </div>
               <div className={styles.cardGrid}>
                 {shelf.pins.map((pin) => {
@@ -121,8 +121,7 @@ export function ProductsView({ shelves, title, description }: { shelves: Product
                     <article key={pin.id} className={styles.card}>
                       <Link href={pinPath(pin)} className={styles.photoLink} aria-label={`See ${name}`}>
                         {image ? (
-                          // eslint-disable-next-line @next/next/no-img-element -- pin thumbs come from the blob store
-                          <img src={image} alt={name} loading="lazy" className={styles.cardImage} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} />
+                          <CardImage thumbName={picture(pin.media).thumbName!} alt={name} portrait={picture(pin.media).portrait} className={styles.cardImage} />
                         ) : (
                           <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>
                         )}

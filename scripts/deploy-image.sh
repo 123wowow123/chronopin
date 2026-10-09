@@ -35,7 +35,7 @@ fi
 # Compose file, Caddyfile and the faiss/postgis build contexts; the env files
 # and Docker/.env (which names the images) stay as they are on the VM.
 rsync -az --delete -e "ssh -i $KEY" \
-  --exclude 'env.*.list' --exclude .env \
+  --inplace --exclude 'env.*.list' --exclude .env \
   Docker/ "$HOST:chronopin/Docker/"
 
 # Schema files changed since the last deployed commit? (Last commit unknown:
@@ -47,8 +47,23 @@ if [ -n "$prev" ] && git cat-file -e "$prev^{commit}" 2>/dev/null &&
   migrate=0
 fi
 
+# The site keeps serving throughout (Docker/Caddyfile fails over between `app`
+# and the `app-next` standby, retrying up to 15s):
+#   1. pull, migrate (schema changes keep the running app working), and start
+#      the standby on the new image;
+#   2. warm the standby, still without traffic;
+#   3. recreate `app` on the new image - the standby serves meanwhile;
+#   4. warm `app`, stop the standby.
 # Docker/.env keeps APP_IMAGE for any later `docker compose up` by hand, which
 # would otherwise fall back to the old locally built chronopin:latest.
+# The Caddyfile is bind-mounted, so rsync --inplace keeps its inode and the
+# reload sees the change.
+C='docker compose -f Docker/docker-compose.prod.yml'
+WAIT='n=0; until curl -fsS -o /dev/null -m 10 "http://$ip:9000/"; do n=$((n+1)); [ $n -ge 60 ] && { echo "$ip never answered"; exit 1; }; sleep 3; done'
+IP='$(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" $($C ps -q SVC))'
+
+ipof() { printf '%s' "$IP" | sed "s/SVC/$1/"; }
+
 ssh -i "$KEY" "$HOST" "set -eu; cd chronopin
 # Make room before extracting new layers. A failed pull never reaches the
 # cleanup at the end; retaining a day's unused images can fill this 30GB disk.
@@ -56,13 +71,29 @@ ssh -i "$KEY" "$HOST" "set -eu; cd chronopin
 docker image prune -af >/dev/null
 df -h / | tail -1
 printf 'APP_IMAGE=%s\nTOOLS_IMAGE=%s\n' '$APP_IMAGE' '$TOOLS_IMAGE' > Docker/.env
-C='docker compose -f Docker/docker-compose.prod.yml'
+C='$C'
 \$C pull app
 if [ $migrate = 1 ]; then \$C --profile tools pull tools && \$C --profile tools run --rm tools npm run create:db; fi
+docker exec docker-caddy-1 caddy validate --config /etc/caddy/Caddyfile >/dev/null
+docker exec docker-caddy-1 caddy reload --config /etc/caddy/Caddyfile
+\$C --profile next up -d --no-build app-next
+ip=$(ipof app-next); $WAIT
+echo \$ip > .standby-ip"
+warm() { ssh -i "$KEY" "$HOST" "sh -s http://$(ssh -i "$KEY" "$HOST" "cat chronopin/$1"):9000" < scripts/warm.sh || true; }
+warm .standby-ip
+
+ssh -i "$KEY" "$HOST" "set -eu; cd chronopin
+C='$C'
 \$C up -d --no-build app
+ip=$(ipof app); $WAIT
+echo \$ip > .app-ip"
+warm .app-ip
+
+ssh -i "$KEY" "$HOST" "set -eu; cd chronopin
+C='$C'
+\$C --profile next stop app-next
+\$C --profile next rm -f app-next >/dev/null
 echo $full > .deployed-sha
 docker image prune -af >/dev/null
 df -h / | tail -1"
 echo "Deployed $rev."
-# A restart empties the caches, and a visitor would pay for each cold one.
-sh scripts/warm.sh || true

@@ -4,9 +4,24 @@
 # points here the certificate requests fail and back off; restart Caddy after
 # switching the records to retry at once.
 
+# Deploys (scripts/deploy-image.sh) never leave the site without an upstream:
+# `app` is preferred, and `app-next` (the standby, only running during a
+# deploy) takes over while `app` is recreated. A request that finds neither
+# waits up to 15s for one rather than failing. Passive checks only: a probe of
+# a page would mark a busy but healthy app down.
+(upstreams) {
+	reverse_proxy app:9000 app-next:9000 {
+		lb_policy first
+		lb_try_duration 15s
+		lb_try_interval 250ms
+		fail_duration 3s
+		max_fails 1
+	}
+}
+
 www.chronopin.com {
 	encode zstd gzip
-	reverse_proxy app:9000
+	import upstreams
 }
 
 chronopin.com {
@@ -15,5 +30,5 @@ chronopin.com {
 
 # Before the DNS switch, and for anything asked for by IP: plain HTTP to the app.
 :80 {
-	reverse_proxy app:9000
+	import upstreams
 }

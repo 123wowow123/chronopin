@@ -2,7 +2,8 @@
 
 import { Jimp } from 'jimp';
 import sharp from 'sharp';
-import { smallThumbName } from '@/lib/appConfig';
+import { cardThumbName, smallThumbName } from '@/lib/appConfig';
+import { createCardThumb } from './cardThumb';
 import * as azureBlob from './azureBlob';
 import config from './config';
 import { imageHash } from './imageHash';
@@ -271,11 +272,17 @@ export async function uploadSmallThumb(thumbName: string, buffer: Buffer) {
   await azureBlob.uploadThumb(smallThumbName(thumbName), small, 'image/jpeg', 'public, max-age=31536000, immutable');
 }
 
+export async function uploadCardThumb(thumbName: string, buffer: Buffer) {
+  const card = await createCardThumb(buffer);
+  await azureBlob.uploadThumb(cardThumbName(thumbName), card, 'image/jpeg', 'public, max-age=31536000, immutable');
+}
+
 export async function saveThumb<T extends { thumbName: string; buffer: Buffer; mimeType: string }>(thumb: T): Promise<T> {
   try {
     await azureBlob.uploadThumb(thumb.thumbName, thumb.buffer, thumb.mimeType);
     // A list row can live without it (it shows a tile), so a failure here must not lose the pin's picture.
     await uploadSmallThumb(thumb.thumbName, thumb.buffer).catch((err) => log.warn('small-thumb error:', thumb.thumbName, (err as Error).message));
+    await uploadCardThumb(thumb.thumbName, thumb.buffer).catch((err) => log.warn('card-thumb error:', thumb.thumbName, (err as Error).message));
     return thumb;
   } catch (err) {
     log.error('save-thumb error:', err);

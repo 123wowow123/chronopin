@@ -21,6 +21,7 @@ done
 hit() {
   code=$(curl -s -o /dev/null -m 120 -w '%{http_code} %{time_total}s' "$BASE$1")
   echo "$code $1"
+  sleep 0.5
 }
 
 hit /api/pins/tag-counts

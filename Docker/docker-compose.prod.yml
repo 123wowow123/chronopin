@@ -46,6 +46,23 @@ services:
         condition: service_started
     restart: unless-stopped
 
+  # The standby for zero-downtime deploys (scripts/deploy-image.sh): started on
+  # the new image and warmed while `app` still serves, it takes the traffic
+  # (Caddyfile: the second upstream) while `app` is recreated, then is stopped.
+  # Never running between deploys.
+  app-next:
+    image: ${APP_IMAGE:-chronopin:latest}
+    env_file: env.prod.list
+    environment:
+      FAISS_URL: http://faiss:5050
+    depends_on:
+      postgres:
+        condition: service_healthy
+      faiss:
+        condition: service_started
+    profiles: [next]
+    restart: 'no'
+
   caddy:
     image: caddy:2
     ports:

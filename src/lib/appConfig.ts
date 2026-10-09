@@ -47,6 +47,14 @@ export function smallThumbName(thumbName: string): string {
   return `s/${thumbName}`;
 }
 
+// Separate landscape rendition: the full thumb remains available on pin details.
+export function cardThumbName(thumbName: string): string {
+  const prefix = [thumbUrlPrefix, 'https://chronopin.blob.core.windows.net/thumb/'].find((value) => thumbName.startsWith(value));
+  if (prefix) return `${prefix}card/v1/${thumbName.slice(prefix.length)}`;
+  if (thumbName.startsWith('/') || /^https?:\/\//i.test(thumbName)) return thumbName;
+  return `card/v1/${thumbName}`;
+}
+
 // A stored picture is either a full URL (a social login's photo) or a blob
 // name under the thumb container (an uploaded picture, or a Medium thumb).
 export function blobUrl(nameOrUrl: string | null | undefined): string | undefined {

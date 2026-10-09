@@ -25,6 +25,7 @@
     "thumbs:push": "sh scripts/db/pushThumbs.sh",
     "thumbs:pull": "tsx scripts/db/pullThumbs.ts",
     "thumbs:small": "tsx scripts/db/makeSmallThumbs.ts",
+    "thumbs:cards": "tsx scripts/db/makeCardThumbs.ts",
     "create:data": "tsx scripts/data/index.ts --seed",
     "backup:data": "tsx scripts/data/index.ts --save",
     "backup:tables": "tsx scripts/data/tables.ts",
