@@ -59,17 +59,25 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
     { href: `/map${query(toMap)}`, key: 'map', label: t('nav.map'), icon: 'map', current: pathname.startsWith('/map') },
   ] as const;
   return (
-    <div className={`flex rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>
+    <div className={`relative grid auto-cols-fr grid-flow-col rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>
+      {/* The highlight is one pill that slides between the two views, rather
+          than each link swapping its own background. */}
+      <span
+        aria-hidden
+        className={`pointer-events-none absolute inset-y-0.5 start-0.5 w-[calc(50%-0.125rem)] rounded-full bg-raised-2 shadow-sm transition-[transform,opacity] duration-300 ease-out motion-reduce:transition-none ${
+          views[0].current ? 'opacity-100' : views[1].current ? 'translate-x-full opacity-100 rtl:-translate-x-full' : 'opacity-0'
+        }`}
+      />
       {views.map((view) => (
         <Link
           key={view.key}
           href={view.href}
           aria-current={view.current ? 'page' : undefined}
-          className={`group/view flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium whitespace-nowrap transition-colors hover:no-underline ${
-            view.current ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:bg-raised hover:text-ink active:bg-raised-2'
+          className={`group/view relative flex items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium whitespace-nowrap transition-colors duration-300 hover:no-underline motion-reduce:transition-none ${
+            view.current ? 'text-ink' : 'text-muted hover:bg-raised/60 hover:text-ink'
           }`}
         >
-          <Icon name={view.icon} className="size-4 transition-transform duration-300 ease-out group-hover/view:scale-110 group-hover/view:-rotate-6 motion-reduce:transition-none motion-reduce:group-hover/view:transform-none" />
+          <Icon name={view.icon} className="size-4 group-hover/view:animate-pop motion-reduce:animate-none" />
           {view.label}
         </Link>
       ))}
