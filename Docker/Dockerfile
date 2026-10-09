@@ -5,9 +5,12 @@
 #   docker run --rm -p 9000:9000 --env-file Docker/env.prod.list chronopin
 #
 # No database is needed to build: pages that read data render per request.
+#
+# The base image comes from AWS ECR Public's mirror of Docker Hub's official
+# node image: GitHub's shared runners are rate limited by Docker Hub (429).
 
 # --- Dependencies and build ---------------------------------------------------
-FROM node:24-alpine AS build
+FROM public.ecr.aws/docker/library/node:24-alpine AS build
 WORKDIR /code
 
 # Chromium for the scraper comes from apk in the runtime image.
@@ -24,7 +27,7 @@ COPY . .
 RUN --mount=type=cache,target=/code/.next/cache npm run build
 
 # --- Runtime --------------------------------------------------------------------
-FROM node:24-alpine AS runtime
+FROM public.ecr.aws/docker/library/node:24-alpine AS runtime
 WORKDIR /app
 
 # Chromium and fonts for puppeteer (page scraping); bind-tools for nslookup.
