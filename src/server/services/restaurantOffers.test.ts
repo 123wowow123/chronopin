@@ -19,8 +19,9 @@ const venue: Restaurant = {
   image: null, imageNote: null, address: 'Test address',
 };
 
-// Guides seeded with established picks only; no researched specials yet.
-const NO_SPECIALS_YET = ['sacramento', 'palm-springs', 'honolulu', 'nashville', 'orlando', 'las-vegas', 'washington-dc', 'atlanta', 'fort-lauderdale'];
+// Fort Lauderdale's only researched venue (Daniel's) has no OpenTable rating yet, and Honolulu's (Hy's)
+// publishes prices without a stated discount, and so does Palm Springs' (The Tropicale), so none qualify as discounts yet.
+const NO_SPECIALS_YET = ['fort-lauderdale', 'honolulu', 'palm-springs'];
 
 describe('regional restaurant offers', () => {
   it('attaches only discounted specials with known schedules to confirmed venues', () => {
@@ -51,7 +52,7 @@ describe('regional restaurant offers', () => {
   it('provides highly rated upcoming specials and Azure photos for every US guide', () => {
     const now = new Date('2026-10-08T13:00:00Z');
     const cities = RESTAURANT_REGIONS.filter((region) => region.country === 'United States' && !NO_SPECIALS_YET.includes(region.slug));
-    expect(cities).toHaveLength(19);
+    expect(cities).toHaveLength(25);
     for (const city of cities) {
       const offers = regionalRestaurantOffers([], [], '2026-10-07', city.slug);
       const shown = restaurantOffersToShow(offers, now, city.timeZone);

@@ -132,3 +132,34 @@ tab counts and shortages, including cities without a newly created opening.
 Just opened retains its 90-day window and requires a confirmed opening; stale
 estimates, expired openings, deleted pins, and uncataloged top picks do not
 fill shortages. See [the refresh task](okf/scraping/daily-jobs.md#restaurantregions).
+
+## October 9, 2026 city additions
+
+Sacramento, Palm Springs, Honolulu, Nashville, Orlando, Las Vegas,
+Washington, DC, Atlanta and Fort Lauderdale were added (`RESTAURANT_REGIONS`,
+west-to-east order is enforced by a test). Each has three established picks
+(MICHELIN where the Guide covers the city; Honolulu is "Chronopin selection"
+because Hawaii is not covered), 4–5 openings, 1–2 specials venues, and
+website/phone/hours rows for every pick and opening. Research for each city
+lives in nine files under a working folder and is merged with
+`npx tsx scripts/restaurants/mergeCityGuides.ts <dir>`: it downloads each photo,
+converts it to WebP, uploads it to Azure (`restaurant-images/<region>/{top,openings,specials}/`),
+verifies the public download, and only then writes the catalogs. Re-running replaces rows by source URL.
+Then run `npm run restaurants:seed -- --regions=<slugs>` and
+`npm run restaurants:specials:seed`.
+
+Gaps to close later:
+- **Specials that do not qualify as discounts:** Honolulu (Hy's) and Palm Springs
+  (The Tropicale) publish happy-hour prices but state no discount, so
+  `discounted` is false and the discounts tab stays hidden. Fort Lauderdale's only
+  venue (Daniel's) has no OpenTable rating; its Google score was not accepted.
+- **Ratings** for the other specials venues were read from OpenTable's JSON-LD in
+  the logged-in browser (the claude-in-chrome tab loads OpenTable; curl/WebFetch
+  hit its bot wall). Use that route to verify any rating.
+- **Openings** are mostly `estimated`; several are announced, not open (Category 10,
+  The Corner Store, Mastro's, Sweetwaters, Caviar Club, Fiore del Vino, Oak Room).
+  Some photos are labeled renders, street views or sibling-location pictures.
+- **Menus:** only the sample items inside the specials rows; no full menus or menu pages.
+- **Prices (`$`-`$$$$`):** blank for Honolulu, taken from the MICHELIN tier elsewhere.
+- Existing local pins for the picks seeded before their photos were stored keep no
+  picture (the seed never adds media to an existing pin); a fresh/prod seed has them.

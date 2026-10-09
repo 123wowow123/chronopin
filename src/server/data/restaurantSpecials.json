@@ -12730,5 +12730,1158 @@
       "sourceUrl": "https://www.opentable.com/restaurant/profile/11161",
       "checkedAt": "2026-10-08"
     }
+  },
+  {
+    "regionSlug": "atlanta",
+    "pinSourceUrl": "https://www.indacorestaurant.com/",
+    "name": "Indaco Atlanta",
+    "slug": "indaco-atlanta",
+    "neighborhood": "Poncey-Highland",
+    "address": "725 Ponce De Leon Ave NE, Suite 250, Atlanta, GA 30306",
+    "websiteUrl": "https://www.indacorestaurant.com/location/indaco-atlanta-beltline/",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.7,
+      "count": 565,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/indaco-atlanta",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Aperitivo Hour food",
+        "url": "https://www.indacorestaurant.com/atlanta-menu/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Marinated olives",
+            "price": 5
+          },
+          {
+            "name": "Little Gem salad",
+            "price": 8
+          },
+          {
+            "name": "Polpette",
+            "price": 10
+          },
+          {
+            "name": "Pizza Margherita",
+            "price": 12
+          },
+          {
+            "name": "Spicy soppressata pizza",
+            "price": 12
+          }
+        ]
+      },
+      {
+        "label": "Aperitivo Hour drinks",
+        "url": "https://www.indacorestaurant.com/atlanta-menu/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Peroni lager",
+            "price": 6
+          },
+          {
+            "name": "Weekly spritz",
+            "price": 10
+          },
+          {
+            "name": "Old Fashioned",
+            "price": 10
+          },
+          {
+            "name": "Negroni",
+            "price": 10
+          },
+          {
+            "name": "Minitini",
+            "price": 10
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Aperitivo Hour",
+        "description": "Selected antipasti, pizzas, beer, spritz and cocktails at Aperitivo Hour prices.",
+        "schedule": "Monday–Friday, 4–6 pm",
+        "conditions": [
+          "Bar menu opens at 4 pm Monday–Friday per the location page."
+        ],
+        "discounted": true,
+        "menuLabel": "Aperitivo Hour food",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indacorestaurant.com/atlanta-menu/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/atlanta/specials/indaco-atlanta-89813f51fa0e965f.webp",
+      "alt": "Indaco Atlanta",
+      "credit": "Photo via Indaco",
+      "sourceUrl": "https://www.indacorestaurant.com/",
+      "originalUrl": "https://images.getbento.com/accounts/5cbb7ec98a8c1b28f9e7010a07d6860c/media/images/59678DSC02140_Large.jpeg",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 33.7737217,
+      "longitude": -84.36195,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=725+Ponce+De+Leon+Ave+NE%2C+Atlanta%2C+GA+30306&format=json",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "fort-lauderdale",
+    "pinSourceUrl": "https://www.danielssteak.com/",
+    "name": "Daniel’s, A Florida Steakhouse",
+    "slug": "daniels",
+    "neighborhood": "Downtown",
+    "address": "620 S Federal Hwy, Fort Lauderdale, FL 33301",
+    "websiteUrl": "https://www.danielssteak.com/fort-lauderdale/",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Happy-hour drinks",
+        "url": "https://www.danielssteak.com/fort-lauderdale/menus/happy-hour-menu/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Lychee Martini",
+            "price": 9
+          },
+          {
+            "name": "Saddle Up",
+            "price": 9
+          },
+          {
+            "name": "Floridita Daiquiri",
+            "price": 10
+          },
+          {
+            "name": "Walk the Line",
+            "price": 8
+          },
+          {
+            "name": "Canyon Paloma",
+            "price": 9
+          },
+          {
+            "name": "Prosecco, Bisol",
+            "price": 8
+          },
+          {
+            "name": "Gulf Stream Hold My Beer Lager",
+            "price": 3
+          }
+        ]
+      },
+      {
+        "label": "Happy-hour bar bites",
+        "url": "https://www.danielssteak.com/fort-lauderdale/menus/happy-hour-menu/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Caramelized onion dip",
+            "price": 12
+          },
+          {
+            "name": "Daniel’s wagyu smash slider",
+            "price": 14
+          },
+          {
+            "name": "Hamachi tartare",
+            "price": 12
+          },
+          {
+            "name": "Florida rosemary fries",
+            "price": 9
+          },
+          {
+            "name": "Chicken nuggets & caviar",
+            "price": 22
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Selected cocktails, wine, beer and bar bites at the bar at happy-hour prices.",
+        "schedule": "Tuesday–Thursday, 5–7 pm",
+        "conditions": [
+          "The happy-hour page lists Monday–Thursday, but the Contact page lists Monday as closed with happy hour Tuesday–Thursday; the narrower window is used.",
+          "Ounce of caviar add-on to the onion dip is $45.",
+          "Dress code: no athletic shorts, flip-flops or baseball caps."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy-hour drinks",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                2,
+                3,
+                4
+              ],
+              "start": "17:00",
+              "end": "19:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.danielssteak.com/fort-lauderdale/menus/happy-hour-menu/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fort-lauderdale/specials/daniels-14920b488051eea9.webp",
+      "alt": "Exterior of Daniel’s, A Florida Steakhouse",
+      "credit": "Photo via Daniel’s Steakhouse",
+      "sourceUrl": "https://www.danielssteak.com/fort-lauderdale/",
+      "originalUrl": "https://www.danielssteak.com/fort-lauderdale/wp-content/uploads/2025/04/LAAL0548-Enhanced-NR-Edit-1-1536x1025-1.jpg",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 26.1142814,
+      "longitude": -80.1365892,
+      "sourceUrl": "https://nominatim.openstreetmap.org/",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "honolulu",
+    "pinSourceUrl": "https://hyswaikiki.com/",
+    "name": "Hy's Steak House",
+    "slug": "hys-steak-house",
+    "neighborhood": "Waikiki",
+    "address": "2440 Kuhio Ave, Honolulu, HI 96815",
+    "websiteUrl": "https://hyswaikiki.com/",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.8,
+      "count": 7981,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/hys-steak-house-waikiki",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Happy-hour bar menu",
+        "url": "https://hyswaikiki.com/happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published items; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Mini Beef Wellington",
+            "price": 32
+          },
+          {
+            "name": "Steak Bites",
+            "price": 35
+          },
+          {
+            "name": "Hy's French Dip",
+            "price": 31
+          },
+          {
+            "name": "Black Garlic Burger",
+            "price": 25
+          },
+          {
+            "name": "Ahi Poke",
+            "price": 21
+          },
+          {
+            "name": "Oysters on the Half Shell",
+            "price": 17
+          },
+          {
+            "name": "Shrimp Cocktail",
+            "price": 15
+          },
+          {
+            "name": "Martini, well gin or vodka",
+            "price": 13
+          },
+          {
+            "name": "Sommelier selected wine by the glass",
+            "price": 13
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy-hour bar menu",
+        "description": "Bar bites, classic cocktails and house wines on the happy-hour menu, served only in the bar and lounge.",
+        "schedule": "Nightly, 5–6:30 pm",
+        "conditions": [
+          "Exclusively in the bar and lounge; the page says reservations are highly recommended and seating is limited.",
+          "5:00-6:30 PM is stated as the last-seating window.",
+          "Hawaii state tax (4.712%) is added; checks split 3+ ways carry a 20% service charge and parties of eight or more a 20% service charge."
+        ],
+        "discounted": false,
+        "menuLabel": "Happy-hour bar menu",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "17:00",
+              "end": "18:30"
+            }
+          ]
+        },
+        "sourceUrl": "https://hyswaikiki.com/happy-hour/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/honolulu/specials/hys-steak-house-a5d072e08691bf15.webp",
+      "alt": "Filet mignon with lobster tail and baked potato at Hy's Steak House",
+      "credit": "Photo via Hy's Steak House",
+      "sourceUrl": "https://hyswaikiki.com/",
+      "originalUrl": "https://hyssteakhouse1.wpengine.com/wp-content/uploads/2022/07/3J7A1193.jpg",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 21.2768529,
+      "longitude": -157.8229294,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=2440+Kuhio+Ave%2C+Honolulu%2C+HI+96815&format=json&limit=1",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "las-vegas",
+    "pinSourceUrl": "https://www.lawrysonline.com/lawrys-the-prime-rib-las-vegas/",
+    "name": "Lawry's The Prime Rib",
+    "slug": "lawrys-the-prime-rib-las-vegas",
+    "neighborhood": "Hughes Center",
+    "address": "4043 Howard Hughes Parkway, Las Vegas, NV 89169",
+    "websiteUrl": "https://www.lawrysonline.com/lawrys-the-prime-rib-las-vegas/",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.7,
+      "count": 13583,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/lawrys-the-prime-rib-las-vegas",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Prime Time happy-hour bites",
+        "url": "https://www.lawrysonline.com/lawrys-the-prime-rib-las-vegas/happenings/prime-time-happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published prime-time prices; the page also lists regular prices. See the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Golden Fried Calamari",
+            "price": 14
+          },
+          {
+            "name": "Shrimp, Corn & Jalapeño Fritters",
+            "price": 12
+          },
+          {
+            "name": "Cheesy Onion Fondue",
+            "price": 9
+          },
+          {
+            "name": "Prime Rib Chili",
+            "price": 9
+          }
+        ]
+      },
+      {
+        "label": "Prime Time happy-hour drinks",
+        "url": "https://www.lawrysonline.com/lawrys-the-prime-rib-las-vegas/happenings/prime-time-happy-hour/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Bottled beer",
+            "price": 5
+          },
+          {
+            "name": "Daily specialty cocktails",
+            "price": 8
+          },
+          {
+            "name": "Select wines by the glass",
+            "price": 10
+          },
+          {
+            "name": "Decoy Brut Cuvée sparkling",
+            "price": 13
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Prime Time Happy Hour",
+        "description": "Discounted bites, wines by the glass, bottled beer and daily specialty cocktails in the bar and lounge.",
+        "schedule": "Monday–Friday, 4:30–6 pm",
+        "conditions": [
+          "Bar/lounge only.",
+          "Reservations are recommended for the dining room; the operator accommodates walk-ins where it can.",
+          "The page lists no service charge or surcharge for happy hour."
+        ],
+        "discounted": true,
+        "menuLabel": "Prime Time happy-hour bites",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "16:30",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.lawrysonline.com/lawrys-the-prime-rib-las-vegas/happenings/prime-time-happy-hour/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/las-vegas/specials/lawrys-the-prime-rib-las-vegas-e8ae5ada6dfde1f7.webp",
+      "alt": "Art Deco dining room at Lawry's The Prime Rib, Las Vegas",
+      "credit": "Photo via Lawry's Restaurants",
+      "sourceUrl": "https://www.lawrysonline.com/lawrys-the-prime-rib-las-vegas/",
+      "originalUrl": "https://www.lawrysonline.com/wp-content/uploads/2026/05/Lawrys-The-Prime-Rib-Las-Vegas-Interior-Dining-Room.webp",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 36.1160765,
+      "longitude": -115.1584954,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=4043+Howard+Hughes+Parkway%2C+Las+Vegas%2C+NV+89169&format=json&limit=1",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "nashville",
+    "pinSourceUrl": "https://www.lolanashville.com/",
+    "name": "Lola",
+    "slug": "lola",
+    "neighborhood": "Sylvan Park",
+    "address": "4401 Murphy Rd, Nashville, TN 37209",
+    "websiteUrl": "https://www.lolanashville.com/",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.9,
+      "count": 764,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/lola-nashville",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Social Hour",
+        "url": "https://www.lolanashville.com/menu-",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Gin and tonic",
+            "price": 10
+          },
+          {
+            "name": "Old fashioned",
+            "price": 10
+          },
+          {
+            "name": "Margarita",
+            "price": 10
+          },
+          {
+            "name": "Cosmo",
+            "price": 10
+          },
+          {
+            "name": "Wine",
+            "price": 10
+          },
+          {
+            "name": "Estrella beer",
+            "price": 5
+          },
+          {
+            "name": "Papas bravas",
+            "price": 8
+          },
+          {
+            "name": "Veggie gildas",
+            "price": 3
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Social Hour",
+        "description": "Selected cocktails, wine, beer and snacks at Social Hour prices.",
+        "schedule": "Daily, 4–6 pm",
+        "conditions": [
+          "Served at the bar; the restaurant says it runs every day it is open."
+        ],
+        "discounted": true,
+        "menuLabel": "Social Hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.lolanashville.com/menu-"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nashville/specials/lola-d13a50a38c530122.webp",
+      "alt": "Exterior and patio of Lola in Sylvan Park",
+      "credit": "Photo via Lola",
+      "sourceUrl": "https://www.lolanashville.com/",
+      "originalUrl": "https://images.squarespace-cdn.com/content/v1/5fd1468dc461dc1c6e53de4d/1d4165b8-1341-4af5-b268-053db8d55fc5/lola__0132.jpg",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 36.14089,
+      "longitude": -86.83929,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=4401+Murphy+Rd%2C+Nashville%2C+TN+37209&format=json&limit=1",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "orlando",
+    "pinSourceUrl": "https://www.flemingssteakhouse.com/Locations/FL/Orlando",
+    "name": "Fleming’s Prime Steakhouse & Wine Bar — Orlando/Sand Lake",
+    "slug": "flemings-orlando-sand-lake",
+    "neighborhood": "Dr. Phillips",
+    "address": "8030 Via Dellagio Way, Building F, Orlando, FL 32819",
+    "websiteUrl": "https://www.flemingssteakhouse.com/Locations/FL/Orlando",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.8,
+      "count": 2630,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/flemings-steakhouse-orlando",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Social Hour",
+        "url": "https://www.flemingssteakhouse.com/Locations/FL/Orlando",
+        "coverage": "sample",
+        "note": "Only the price the Orlando page states; the bar-bite list was not published for this branch.",
+        "items": [
+          {
+            "name": "Hand-crafted cocktails",
+            "price": 9
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Social Hour",
+        "description": "Shareable bar bites and $9 hand-crafted cocktails in the bar.",
+        "schedule": "Daily, 4–6:30 pm",
+        "conditions": [
+          "In the bar."
+        ],
+        "discounted": true,
+        "menuLabel": "Social Hour",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:30"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.flemingssteakhouse.com/Locations/FL/Orlando"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/orlando/specials/flemings-orlando-sand-lake-9fda10880b507a26.webp",
+      "alt": "Fleming’s brand image",
+      "credit": "Photo via Fleming’s",
+      "sourceUrl": "https://www.flemingssteakhouse.com/Locations/FL/Orlando",
+      "originalUrl": "https://flemingssteakhouse.b-cdn.net/images/share.jpg",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 28.4506569,
+      "longitude": -81.4941957,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=8030+Via+Dellagio+Way%2C+Orlando%2C+FL+32819&format=json&limit=1",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "palm-springs",
+    "pinSourceUrl": "https://www.thetropicale.com/",
+    "name": "The Tropicale",
+    "slug": "the-tropicale",
+    "neighborhood": "Downtown",
+    "address": "330 East Amado Road, Palm Springs, CA 92262",
+    "websiteUrl": "https://www.thetropicale.com/",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.8,
+      "count": 11168,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/the-tropicale",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Happy-hour menu",
+        "url": "https://www.thetropicale.com/happy-hour",
+        "coverage": "sample",
+        "note": "Selected published happy-hour items; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Carne asada street corn tacos",
+            "price": 25
+          },
+          {
+            "name": "Steamed edamame",
+            "price": 18
+          },
+          {
+            "name": "Truffled Parmesan fries",
+            "price": 26
+          },
+          {
+            "name": "Baja chipotle shrimp tacos",
+            "price": 22
+          },
+          {
+            "name": "Crispy calamari fritti",
+            "price": 22
+          },
+          {
+            "name": "Bowl of guacamole",
+            "price": 20
+          },
+          {
+            "name": "Holy mole chicken nachos",
+            "price": 27
+          },
+          {
+            "name": "Pepperoni & jalapeño pizza",
+            "price": 22
+          },
+          {
+            "name": "Classic three cheese pizza",
+            "price": 20
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Dedicated happy-hour menu of shared plates, tacos and pizzas.",
+        "schedule": "Daily, 4–7 pm; Wednesday, 4 pm to close",
+        "conditions": [
+          "Wednesday happy hour runs 4 pm to close.",
+          "The restaurant's page lists prices but does not state a discount amount."
+        ],
+        "discounted": false,
+        "menuLabel": "Happy-hour menu",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "19:00"
+            },
+            {
+              "days": [
+                3
+              ],
+              "start": "19:00",
+              "end": "22:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.thetropicale.com/happy-hour"
+      }
+    ],
+    "location": {
+      "latitude": 33.8269317,
+      "longitude": -116.5441074,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=330+E+Amado+Rd%2C+Palm+Springs%2C+CA+92262&format=json&limit=1",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "sacramento",
+    "pinSourceUrl": "https://elladiningroomandbar.com/",
+    "name": "Ella Dining Room & Bar",
+    "slug": "ella-dining-room-and-bar",
+    "neighborhood": "Downtown",
+    "address": "1131 K Street, Sacramento, CA 95814",
+    "websiteUrl": "https://elladiningroomandbar.com/",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.6,
+      "count": 5605,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/ella-dining-room-and-bar",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Happy-hour food",
+        "url": "https://elladiningroomandbar.com/menus/happy-hour/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Steak tartare",
+            "price": 9
+          },
+          {
+            "name": "Ella Caesar",
+            "price": 8
+          },
+          {
+            "name": "Blistered shishitos",
+            "price": 10
+          },
+          {
+            "name": "Artichoke dip",
+            "price": 14
+          },
+          {
+            "name": "Oysters on the half shell (half dozen)",
+            "price": 22
+          }
+        ]
+      },
+      {
+        "label": "Happy-hour drinks",
+        "url": "https://elladiningroomandbar.com/menus/happy-hour/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "The real gin and tonic",
+            "price": 10
+          },
+          {
+            "name": "Old fashioned",
+            "price": 11
+          },
+          {
+            "name": "Camilo's margarita",
+            "price": 10
+          },
+          {
+            "name": "Sommelier's selections (wine and beer)",
+            "price": 6
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy-hour food",
+        "description": "Small plates from the bar and lounge happy-hour menu.",
+        "schedule": "Monday–Friday, 3–6 pm",
+        "conditions": [
+          "Bar and lounge only; no reservations, first come, first served.",
+          "Closed Saturday and Sunday for lunch/happy hour per published hours."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy-hour food",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://elladiningroomandbar.com/menus/happy-hour/"
+      },
+      {
+        "kind": "other",
+        "title": "Happy-hour drinks",
+        "description": "Cocktails at $10–$11 and sommelier-selected wine or beer at $6.",
+        "schedule": "Monday–Friday, 3–6 pm",
+        "conditions": [
+          "Bar and lounge only; no reservations, first come, first served."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy-hour drinks",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://elladiningroomandbar.com/menus/happy-hour/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sacramento/specials/ella-dining-room-and-bar-715fb079686c2297.webp",
+      "alt": "Main dining room at Ella Dining Room & Bar",
+      "credit": "Photo via Ella Dining Room & Bar",
+      "sourceUrl": "https://elladiningroomandbar.com/",
+      "originalUrl": "https://elladiningroomandbar.com/wp-content/uploads/2018/09/main-dining-room-day-2.jpg",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 38.5787044,
+      "longitude": -121.4914495,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=1131+K+St,+Sacramento,+CA+95814",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "washington-dc",
+    "pinSourceUrl": "https://www.boqueriarestaurant.com/",
+    "name": "Boqueria Penn Quarter",
+    "slug": "boqueria-penn-quarter",
+    "neighborhood": "Penn Quarter",
+    "address": "777 9th St NW, Washington, DC 20001",
+    "websiteUrl": "https://www.boqueriarestaurant.com/",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.6,
+      "count": 711,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/boqueria-penn-quarter-washington-district-of-columbia",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Happy-hour bites",
+        "url": "https://www.boqueriarestaurant.com/location/penn-quarter/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Pan con tomate (per piece)",
+            "price": 2
+          },
+          {
+            "name": "Croquetas de jamón",
+            "price": 6
+          },
+          {
+            "name": "Patatas bravas",
+            "price": 6
+          },
+          {
+            "name": "Patatinas",
+            "price": 6
+          },
+          {
+            "name": "Charred corn ribs",
+            "price": 8
+          },
+          {
+            "name": "Serrano ham grilled cheese",
+            "price": 8
+          },
+          {
+            "name": "Angus beef sliders",
+            "price": 12
+          }
+        ]
+      },
+      {
+        "label": "Happy-hour drinks",
+        "url": "https://www.boqueriarestaurant.com/location/penn-quarter/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Classic mini martini",
+            "price": 8
+          },
+          {
+            "name": "Dirty mini martini",
+            "price": 8
+          },
+          {
+            "name": "Espresso mini martini",
+            "price": 9
+          },
+          {
+            "name": "Spanish beer",
+            "price": 6
+          },
+          {
+            "name": "Forget-Me-Not (zero proof)",
+            "price": 6
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Tapas bites, mini martinis, beer and sangría at happy-hour prices.",
+        "schedule": "Daily, 3-7 pm",
+        "conditions": [
+          "The location page invites guests to take a bar seat for happy hour; the menu shows no sangría or wine prices."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy-hour bites",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "15:00",
+              "end": "19:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.boqueriarestaurant.com/location/penn-quarter/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/washington-dc/specials/boqueria-penn-quarter-0ef39314e0f93c9c.webp",
+      "alt": "Boqueria Penn Quarter banner photo",
+      "credit": "Photo via Boqueria",
+      "sourceUrl": "https://www.boqueriarestaurant.com/location/penn-quarter/",
+      "originalUrl": "https://boqueriarestaurant.com/wp-content/uploads/2024/11/Banner_PQ_1.jpg",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 38.8995716,
+      "longitude": -77.0238572,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=777+9th+St+NW+Washington+DC+20001&format=json",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "washington-dc",
+    "pinSourceUrl": "https://www.dauphinesdc.com/",
+    "name": "Dauphine's",
+    "slug": "dauphines",
+    "neighborhood": "Downtown",
+    "address": "1100 15th St NW, Washington, DC 20005",
+    "websiteUrl": "https://www.dauphinesdc.com/",
+    "checkedAt": "2026-10-09",
+    "review": {
+      "score": 4.6,
+      "count": 2040,
+      "provider": "OpenTable",
+      "sourceUrl": "https://www.opentable.com/r/dauphines-washington",
+      "checkedAt": "2026-10-09"
+    },
+    "menus": [
+      {
+        "label": "Happy-hour snacks",
+        "url": "https://www.dauphinesdc.com/menus/",
+        "coverage": "sample",
+        "note": "Selected published specials; see the restaurant for the full menu.",
+        "items": [
+          {
+            "name": "Local oysters, three",
+            "price": 8
+          },
+          {
+            "name": "Local oysters, six",
+            "price": 14
+          },
+          {
+            "name": "6oz burger",
+            "price": 18
+          },
+          {
+            "name": "Fried oyster po boy sliders",
+            "price": 12
+          },
+          {
+            "name": "Blackened catfish spread",
+            "price": 12
+          },
+          {
+            "name": "Crab & artichoke dip",
+            "price": 10
+          },
+          {
+            "name": "Creole shrimp cocktail",
+            "price": 13
+          },
+          {
+            "name": "Deviled eggs, three",
+            "price": 4
+          }
+        ]
+      },
+      {
+        "label": "Happy-hour drinks",
+        "url": "https://www.dauphinesdc.com/menus/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Select cocktails",
+            "price": 11
+          },
+          {
+            "name": "Miller High Life",
+            "price": 6
+          },
+          {
+            "name": "Cigar City Jai Alai",
+            "price": 7
+          },
+          {
+            "name": "Sparkling / white / rosé / red wine",
+            "price": 10
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Oysters, snacks, select cocktails, beer and wine at the bar.",
+        "schedule": "Monday-Friday, 4-7 pm; Saturday, 3-7 pm; Sunday, 11 am-9 pm",
+        "conditions": [
+          "Bar area and high tops only; most seating is first come, first served.",
+          "The menu page lists Sunday 11 am-9 pm while the location page says 11 am to last call; the menu page is used.",
+          "The site states a 4% operational surcharge that does not go toward gratuity."
+        ],
+        "discounted": true,
+        "menuLabel": "Happy-hour snacks",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "16:00",
+              "end": "19:00"
+            },
+            {
+              "days": [
+                6
+              ],
+              "start": "15:00",
+              "end": "19:00"
+            },
+            {
+              "days": [
+                0
+              ],
+              "start": "11:00",
+              "end": "21:00"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.dauphinesdc.com/menus/"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/washington-dc/specials/dauphines-686e5c0508b03a35.webp",
+      "alt": "Bar high tops and banquette at Dauphine's",
+      "credit": "Photo via Dauphine's",
+      "sourceUrl": "https://www.dauphinesdc.com/location/dauphines-dc/",
+      "originalUrl": "https://images.getbento.com/accounts/7d72c944018b10970914d0f2f3773dbb/media/images/13133Bar_High_Tops_banquette.jpg",
+      "checkedAt": "2026-10-09"
+    },
+    "location": {
+      "latitude": 38.9039919,
+      "longitude": -77.0349553,
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=1100+15th+St+NW+Washington+DC&format=json",
+      "checkedAt": "2026-10-09"
+    }
   }
 ]
