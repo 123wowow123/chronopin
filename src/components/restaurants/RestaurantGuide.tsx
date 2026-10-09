@@ -107,7 +107,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   }, [hash]);
 
   return (
-    <main className={styles.guide} lang="en">
+    <main className={styles.guide} data-landing lang="en">
       <div className={styles.container}>
         <div className={styles.guideNav}>
           <Link href="/restaurants" className={styles.wordmark}><span aria-hidden="true">✳</span> The opening guide</Link>

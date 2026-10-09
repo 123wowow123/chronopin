@@ -1,5 +1,8 @@
 .guide { --paper:#f6f3eb; --paper-raised:#fffdf7; --text:#263c32; --soft:#627069; --rule:#d8dcd0; --green:#244d39; background:var(--paper); color:var(--text); padding:0 24px 64px; }
 :global([data-theme='dark']) .guide { --paper:#151e19; --paper-raised:#1c2821; --text:#eeeee0; --soft:#abb8ad; --rule:#34483b; --green:#c6daa4; }
+/* The site header, and the search box, pills and menus in it, take the guide's paper colors while a guide is on the page. */
+:global(body:has([data-landing]) [data-navbar]) { --color-header:#f6f3eb; --color-panel:#fbf8f0; --color-field:#fbf8f0; --color-popover:#fffdf7; --color-raised:#ece7da; --color-raised-2:#e0dacb; --color-line:#d8dcd0; }
+:global([data-theme='dark'] body:has([data-landing]) [data-navbar]) { --color-header:#151e19; --color-panel:#1c2821; --color-field:#111a15; --color-popover:#1c2821; --color-raised:#26362c; --color-raised-2:#31453a; --color-line:#34483b; }
 .container { max-width:1200px; margin:auto; }
 .offers { padding:40px 0; border-bottom:1px solid var(--rule); scroll-margin-top:76px; }
 .offers .browseHeading { flex-wrap:wrap; margin-bottom:12px; }
