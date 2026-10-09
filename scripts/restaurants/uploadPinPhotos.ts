@@ -2,7 +2,7 @@
 // --update-prod also migrates production Medium rows using .scrape/admin.token.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { readFile, writeFile, unlink } from 'node:fs/promises';
+import { readdir, readFile, writeFile, unlink } from 'node:fs/promises';
 import { BlobServiceClient, StorageSharedKeyCredential } from '@azure/storage-blob';
 import sharp from 'sharp';
 
@@ -13,7 +13,8 @@ const token = updateProd ? (await readFile('.scrape/admin.token', 'utf8')).trim(
 const account = 'chronopin';
 const key = execFileSync('az', ['storage', 'account', 'keys', 'list', '--subscription', '9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5', '-n', account, '--query', '[0].value', '-o', 'tsv'], { encoding: 'utf8' }).trim();
 const container = new BlobServiceClient(`https://${account}.blob.core.windows.net`, new StorageSharedKeyCredential(account, key)).getContainerClient('thumb');
-const files = execFileSync('rg', ['--files', '--no-ignore', 'public/restaurant-images'], {encoding: 'utf8'}).trim().split('\n').filter(Boolean);
+// A plain directory walk: ripgrep is not installed on every machine.
+const files = (await readdir('public/restaurant-images', { recursive: true, withFileTypes: true })).filter((entry) => entry.isFile()).map((entry) => `${entry.parentPath}/${entry.name}`);
 const mapping = new Map<string, string>();
 const records: { previousPath: string; blobUrl: string; sha256: string; bytes: number }[] = [];
 async function batch<T>(items: T[], work: (item: T) => Promise<void>, concurrency = 4) {

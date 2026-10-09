@@ -337,27 +337,33 @@ list these information on people if available
 • Religion
 • Health
 • Recent leisure trips
-• Majore property or houses owned
+• Major property or houses owned
 
 
 Build KG with people, companies, properties, vacations, products / shows
 
 
-
+- check all menu on restaurant pins exist have tabs if needs and are correct and links are correct
 
 - famous people should have page like congressmen too
 
 - generate most corrupt people page collage
 
+- add restaurant reservation and ordering adamin portal in bunsiness account
+
+- need restaurant button to find current special discounts available
+
+
 
 - Grammy needs nomination and related music
 https://www.chronopin.com/es/pin/4861/the-2027-grammy-nominations-set-the-song-of-the-year-field
 
-performance optimization
 
 https://help.opentable.com/s/article/OpenTable-Affiliate-Program-1505261059868?language=en_US
 https://www.temu.com/affiliate_recruit.html?_x_ads_csite=affiliate_seo&aff_sub_csite=https%3A%2F%2Fwww.google.com%2F&aff_disable_switch_flow=1
 
+
+- pin affordable housing project
 
 generic ads that applies to everyone like junk removal can be added to ad rotation too and storage and moving services
 
@@ -373,15 +379,6 @@ https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-sinc
 - pin new and upcoming beer and alchololic drinks
 need landing pages
 
-- pin upcoming and new restaurants on all major US cities 
-
-- add daily restaurant special and list lunch special
-
-
-can anyone commit to chronopin git? should automerge PR from this computer and others will need to submit PR and wait for admin to approve
-
-
-holiday, special event days should be searchable and auto search complete should have suggesion section for them as you type if relevant
 
 
 https://www.maranellosd.com/menu
@@ -397,3 +394,26 @@ As of 2026-10-04. Prod's Anthropic key has no credit, so its link wikis are writ
 - **New pins:** `wiki:prod export --drafts DRAFTS/`, answer the jobs, `wiki:prod attach --dir DIR --drafts DRAFTS/`, then post as usual, so the pin carries its wikis (`sourceWikis`) and prod runs no wiki work.
 - **Only the wiki step is skipped on prod.** Podcast cross-checks, sentiment, stocks, awards and the other save listeners still run on prod for every post; the rest of "process locally, post the final pin" is still open.
 - Wikis pushed with `--rewrite` bump the version and put every citing pin's summary behind its links; leave it off for a backfill.
+
+
+
+this should be a thread
+https://www.chronopin.com/pin/2015/chicago-fire-season-15-premieres
+
+
+
+
+
+ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187 'cd chronopin && docker compose -f Docker/docker-compose.prod.yml exec -T postgres sh -c '"'"'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT round(total_exec_time) AS total_ms, calls, round(mean_exec_time::numeric,1) AS mean_ms, left(regexp_replace(query, E\"\\\\s+\", \" \", \"g\"),140) AS query FROM pg_stat_statements ORDER BY total_exec_time DESC LIMIT 15;"'"'"
+
+
+
+
+need ability for user to take and upload media for pins, and have ability for other users to flag for issue
+
+
+
+can anyone commit to chronopin git? should automerge PR from this computer and others will need to submit PR and wait for admin to approve
+
+
+add button on landing page to suggest a product or restaurant to add to list. should have community voted section

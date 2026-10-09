@@ -2,6 +2,7 @@ import { distanceKm, type Place } from './distance';
 
 // City navigation runs west to east by city-center longitude.
 export const RESTAURANT_REGIONS = [
+  { slug: 'honolulu', name: 'Honolulu', country: 'United States', state: 'Hawaii', timeZone: 'Pacific/Honolulu', latitude: 21.3099, longitude: -157.8581 },
   { slug: 'victoria', name: 'Victoria', country: 'Canada', state: 'British Columbia', timeZone: 'America/Vancouver', latitude: 48.4284, longitude: -123.3656 },
   { slug: 'vancouver', name: 'Vancouver', country: 'Canada', state: 'British Columbia', timeZone: 'America/Vancouver', latitude: 49.2827, longitude: -123.1207 },
   { slug: 'san-francisco', name: 'San Francisco', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 37.7749, longitude: -122.4194 },
@@ -11,6 +12,7 @@ export const RESTAURANT_REGIONS = [
   { slug: 'los-angeles', name: 'Los Angeles', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 34.0522, longitude: -118.2437 },
   { slug: 'san-diego', name: 'San Diego', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 32.7157, longitude: -117.1611 },
   { slug: 'palm-springs', name: 'Palm Springs', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 33.8303, longitude: -116.5453 },
+  { slug: 'las-vegas', name: 'Las Vegas', country: 'United States', state: 'Nevada', timeZone: 'America/Los_Angeles', latitude: 36.1699, longitude: -115.1398 },
   { slug: 'calgary', name: 'Calgary', country: 'Canada', state: 'Alberta', timeZone: 'America/Edmonton', latitude: 51.0447, longitude: -114.0719 },
   { slug: 'edmonton', name: 'Edmonton', country: 'Canada', state: 'Alberta', timeZone: 'America/Edmonton', latitude: 53.5461, longitude: -113.4938 },
   { slug: 'phoenix', name: 'Phoenix', country: 'United States', state: 'Arizona', timeZone: 'America/Phoenix', latitude: 33.4484, longitude: -112.074 },
@@ -22,12 +24,17 @@ export const RESTAURANT_REGIONS = [
   { slug: 'dallas', name: 'Dallas', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 32.7767, longitude: -96.797 },
   { slug: 'houston', name: 'Houston', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 29.7604, longitude: -95.3698 },
   { slug: 'chicago', name: 'Chicago', country: 'United States', state: 'Illinois', timeZone: 'America/Chicago', latitude: 41.8781, longitude: -87.6298 },
+  { slug: 'nashville', name: 'Nashville', country: 'United States', state: 'Tennessee', timeZone: 'America/Chicago', latitude: 36.1627, longitude: -86.7816 },
+  { slug: 'atlanta', name: 'Atlanta', country: 'United States', state: 'Georgia', timeZone: 'America/New_York', latitude: 33.749, longitude: -84.388 },
   { slug: 'columbus', name: 'Columbus', country: 'United States', state: 'Ohio', timeZone: 'America/New_York', latitude: 39.9612, longitude: -82.9988 },
   { slug: 'jacksonville', name: 'Jacksonville', country: 'United States', state: 'Florida', timeZone: 'America/New_York', latitude: 30.3322, longitude: -81.6557 },
+  { slug: 'orlando', name: 'Orlando', country: 'United States', state: 'Florida', timeZone: 'America/New_York', latitude: 28.5383, longitude: -81.3792 },
   { slug: 'charlotte', name: 'Charlotte', country: 'United States', state: 'North Carolina', timeZone: 'America/New_York', latitude: 35.2271, longitude: -80.8431 },
   { slug: 'miami', name: 'Miami', country: 'United States', state: 'Florida', timeZone: 'America/New_York', latitude: 25.7617, longitude: -80.1918 },
+  { slug: 'fort-lauderdale', name: 'Fort Lauderdale', country: 'United States', state: 'Florida', timeZone: 'America/New_York', latitude: 26.1224, longitude: -80.1373 },
   { slug: 'hamilton', name: 'Hamilton', country: 'Canada', state: 'Ontario', timeZone: 'America/Toronto', latitude: 43.2557, longitude: -79.8711 },
   { slug: 'toronto', name: 'Toronto', country: 'Canada', state: 'Ontario', timeZone: 'America/Toronto', latitude: 43.6532, longitude: -79.3832 },
+  { slug: 'washington-dc', name: 'Washington, DC', country: 'United States', state: 'District of Columbia', timeZone: 'America/New_York', latitude: 38.9072, longitude: -77.0369 },
   { slug: 'ottawa', name: 'Ottawa', country: 'Canada', state: 'Ontario', timeZone: 'America/Toronto', latitude: 45.4215, longitude: -75.6972 },
   { slug: 'philadelphia', name: 'Philadelphia', country: 'United States', state: 'Pennsylvania', timeZone: 'America/New_York', latitude: 39.9526, longitude: -75.1652 },
   { slug: 'new-york', name: 'New York', country: 'United States', state: 'New York', timeZone: 'America/New_York', latitude: 40.7128, longitude: -74.006 },
@@ -48,8 +55,10 @@ export const RESTAURANT_REGIONS = [
   { slug: 'vienna', name: 'Vienna', country: 'Austria', state: 'Austria', timeZone: 'Europe/Vienna', latitude: 48.2082, longitude: 16.3738 },
   { slug: 'stockholm', name: 'Stockholm', country: 'Sweden', state: 'Sweden', timeZone: 'Europe/Stockholm', latitude: 59.3293, longitude: 18.0686 },
   { slug: 'perth', name: 'Perth', country: 'Australia', state: 'Western Australia', timeZone: 'Australia/Perth', latitude: -31.9523, longitude: 115.8613 },
+  { slug: 'adelaide', name: 'Adelaide', country: 'Australia', state: 'South Australia', timeZone: 'Australia/Adelaide', latitude: -34.9285, longitude: 138.6007 },
   { slug: 'melbourne', name: 'Melbourne', country: 'Australia', state: 'Victoria', timeZone: 'Australia/Melbourne', latitude: -37.8136, longitude: 144.9631 },
   { slug: 'sydney', name: 'Sydney', country: 'Australia', state: 'New South Wales', timeZone: 'Australia/Sydney', latitude: -33.8688, longitude: 151.2093 },
+  { slug: 'brisbane', name: 'Brisbane', country: 'Australia', state: 'Queensland', timeZone: 'Australia/Brisbane', latitude: -27.4698, longitude: 153.0251 },
 ] as const;
 
 // Countries follow their westernmost guide city in the west-to-east region list.

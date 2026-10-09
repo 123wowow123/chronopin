@@ -15,6 +15,8 @@ vi.mock('../model/pins', () => ({ default: {} }));
 vi.mock('../model/pin', () => ({ default: { findBySourceUrls } }));
 afterEach(() => { vi.clearAllMocks(); vi.useRealTimers(); });
 
+const NO_PINS_YET = ['sacramento', 'palm-springs', 'honolulu', 'nashville', 'orlando', 'las-vegas', 'washington-dc', 'atlanta', 'fort-lauderdale'];
+
 describe('regional restaurant data', () => {
   it('shows seeded Canadian guides in navigation and resolves their restaurant links', async () => {
     const canadian = catalog.filter((restaurant) => RESTAURANT_REGIONS.some((region) => region.country === 'Canada' && region.slug === restaurant.regionSlug));
@@ -46,7 +48,7 @@ describe('regional restaurant data', () => {
       { city: 'berlin', day: '2026-11-01', dateConfidence: 'estimated', sourceUrl: null },
       { city: 'Vienna', day: '2026-01-01', dateConfidence: 'estimated', sourceUrl: null },
     ]);
-    expect(await restaurantGuideRegionSlugs()).toEqual([...RESTAURANT_REGIONS.filter((region) => region.country === 'United States' && !['sacramento', 'palm-springs'].includes(region.slug)).map((region) => region.slug), 'madrid', 'paris', 'berlin']);
+    expect(await restaurantGuideRegionSlugs()).toEqual([...RESTAURANT_REGIONS.filter((region) => region.country === 'United States' && !NO_PINS_YET.includes(region.slug)).map((region) => region.slug), 'madrid', 'paris', 'berlin']);
     expect(query.mock.calls[0][0]).toContain('"utcDeletedDateTime" IS NULL');
     expect(query.mock.calls[0][0]).toContain("'Restaurant Opening'");
     expect(query.mock.calls[0][0]).toContain("'Food'");

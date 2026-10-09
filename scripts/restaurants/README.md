@@ -56,3 +56,14 @@ blob downloads against SHA-256, updates catalog and production media references,
 expires affected pin caches, checks public pins, and removes the local image files.
 The production migration uses the existing Azure CLI login and `.scrape/admin.token`.
 Temporary files under `public/restaurant-images/` are ignored by Git.
+
+The Australian collection covers Perth (Wildflower), Adelaide (Press* Food & Wine,
+Africola), Melbourne (Attica, Flower Drum), Sydney (Bennelong, Saint Peter) and
+Brisbane (OTTO, Montrachet, Bistro Suzette), checked October 9, 2026 against each
+operator's own site. Quay, Gerard's Bistro and Orana are closed and were excluded.
+Africola has no photo (its site publishes none). Bennelong, OTTO, Montrachet and
+Press* have approximate map points because no street number resolves. Seed with:
+
+```sh
+npm run restaurants:seed -- --regions=perth,adelaide,melbourne,sydney,brisbane
+```

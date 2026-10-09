@@ -1,0 +1,57 @@
+[
+  {
+    "name": "firmus",
+    "url": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-09/firmus-8d6b12b234977721.webp",
+    "sourceUrl": "https://www.forbes.com.au/wp-content/uploads/2026/10/23fec56256c0aaa0edb204ca7cb347135ae9cc84-1958x1002-1.webp",
+    "credit": "Firmus / supplied to Forbes Australia",
+    "sha256": "8d6b12b23497772119e01a6e4157570766071da90f2d03a21e1492014b8cbb1c",
+    "width": 1920,
+    "height": 983,
+    "pinId": 6929,
+    "sourcePage": "https://www.forbes.com.au/news/investing/firmus-pulls-its-gigantic-ipo-heres-what-you-need-to-know/"
+  },
+  {
+    "name": "pillay",
+    "url": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-09/pillay-a8a658531462f265.webp",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Navi_Pillay_June_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "credit": "Wikimedia Commons",
+    "sha256": "a8a658531462f26572e94734ae41fff3fe9b7429e96bc3405c39d65241a82d3f",
+    "width": 730,
+    "height": 940,
+    "pinId": 1948
+  },
+  {
+    "name": "carson",
+    "url": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-09/carson-baeea3b43d428d9e.webp",
+    "sourceUrl": "https://www.svenskaakademien.se/og/19ae94c4-aeaf-4c12-954e-ecc6f450d4ca.jpg",
+    "credit": "Swedish Academy",
+    "sha256": "baeea3b43d428d9eee4f19a96febc478f8389779f161f5e611f1291f9669be45",
+    "width": 1200,
+    "height": 630,
+    "pinId": 1997
+  },
+  {
+    "name": "firmus-site-0",
+    "pinId": 6929,
+    "url": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-09/firmus-site-0-36e9ba9aaa8314c5.webp",
+    "sourceUrl": "https://live-production.wcms.abc-cdn.net.au/145a97825a4db1bd592f1f354e4b57e6?impolicy=wcms_watermark_news&cropH=2813&cropW=5000&xPos=0&yPos=473&width=862&height=485&imformat=generic",
+    "sourcePage": "https://www.abc.net.au/news/2026-06-15/firmus-ai-company-tasmania-biggest-power-user-three-sites/106783142",
+    "credit": "Firmus / supplied to ABC News",
+    "caption": "Inside Firmus’s AI factory in Singapore",
+    "sha256": "36e9ba9aaa8314c56530eb113ec110dec8188d051c170a8e83fba430bee0c923",
+    "width": 862,
+    "height": 485
+  },
+  {
+    "name": "firmus-site-1",
+    "pinId": 6929,
+    "url": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-09/firmus-site-1-cdee2fabf5a170c8.webp",
+    "sourceUrl": "https://live-production.wcms.abc-cdn.net.au/ed930b2e69d0d2da847446593a413d78?impolicy=wcms_crop_resize&cropH=2534&cropW=4505&xPos=0&yPos=669&width=862&height=485",
+    "sourcePage": "https://www.abc.net.au/news/2026-06-15/firmus-ai-company-tasmania-biggest-power-user-three-sites/106783142",
+    "credit": "Tasmanian government / supplied to ABC News",
+    "caption": "Firmus’s St Leonards site in Launceston, Tasmania",
+    "sha256": "cdee2fabf5a170c875422d318ef2544685c62b76d381e0aa86a65a02acd515d7",
+    "width": 862,
+    "height": 485
+  }
+]
