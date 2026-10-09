@@ -1,4 +1,3 @@
-# syntax=docker/dockerfile:1
 # Chronopin: Next.js standalone server on Node.js 24 LTS.
 #
 #   docker build -f Docker/Dockerfile -t chronopin .
