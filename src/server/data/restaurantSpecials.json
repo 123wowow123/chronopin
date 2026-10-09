@@ -12392,7 +12392,7 @@
     "neighborhood": "Downtown",
     "address": "1355 North Harbor Drive, San Diego, CA 92101",
     "websiteUrl": "https://www.opentable.com/restaurant/profile/3508",
-    "checkedAt": "2026-10-08",
+    "checkedAt": "2026-10-09",
     "review": {
       "score": 4.8,
       "count": 5392,
@@ -12404,15 +12404,108 @@
       {
         "label": "Happy hour",
         "url": "https://www.ruthschris.com/happy-hour/ca/san-diego-restaurant/7310",
-        "coverage": "link",
-        "items": []
+        "coverage": "published",
+        "items": [
+          {
+            "name": "10 oz prime cheeseburger",
+            "category": "Happy-hour food",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Seared ahi tuna",
+            "category": "Happy-hour food",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Steak sandwich",
+            "category": "Happy-hour food",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Spicy shrimp",
+            "category": "Happy-hour food",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Goat cheese and artichoke dip",
+            "category": "Happy-hour food",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Zucchini fries",
+            "category": "Happy-hour food",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Artisan chicken sandwich",
+            "category": "Happy-hour food",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Rocks Rita",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Pomegranate Martini",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Ruth’s Manhattan",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Dirty Goose Martini",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Narrative Chardonnay",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Acquisition Cabernet Sauvignon",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "House mixed drinks",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Classic Lemon Drop",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Blueberry Mojito",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Gamblers Old Fashioned",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Select beers",
+            "category": "Happy-hour drinks",
+            "priceLabel": "Price not published"
+          }
+        ],
+        "currency": "USD",
+        "note": "Food and drink items verified on the operator’s San Diego happy-hour page on October 9, 2026. Item prices are not published on that branch page. Other franchise menus were checked during research but are not used for San Diego pricing or availability."
       }
     ],
     "specials": [
       {
         "kind": "other",
         "title": "Happy hour",
-        "description": "Happy-hour food and drink specials. See the restaurant for current prices.",
+        "description": "Seven published food options plus cocktails, wines and beers. The San Diego happy-hour page does not publish item prices.",
         "schedule": "Sun, Mon, Tue, Wed, Thu, Fri 16:00–18:00 (local time)",
         "conditions": [
           "Food specials at the bar only.",
@@ -13881,6 +13974,1335 @@
       "latitude": 38.9039919,
       "longitude": -77.0349553,
       "sourceUrl": "https://nominatim.openstreetmap.org/search?q=1100+15th+St+NW+Washington+DC&format=json",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "tokyo",
+    "slug": "bbqpit-tokyo-prince",
+    "pinSourceUrl": "https://www.herofield.com/bbq/tokyoprince/",
+    "name": "BBQPIT@Tokyo Prince Hotel",
+    "neighborhood": "Shiba-koen",
+    "address": "Tokyo Prince Hotel front garden, 3-3-1 Shiba-koen, Minato-ku, Tokyo 105-0011, Japan",
+    "websiteUrl": "https://www.herofield.com/bbq/tokyoprince/",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Opening member BBQ sets",
+        "url": "https://prtimes.jp/main/html/rd/p/000000006.000151224.html",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Tax included. Requires Seibu Prince Global Rewards membership; see the operator for the booking plan and site.",
+        "items": [
+          {
+            "name": "Basic member BBQ set",
+            "price": 6100,
+            "note": "Normally ¥6,600; sirloin, pork, frankfurter, vegetables, yakisoba and sides."
+          },
+          {
+            "name": "Signature member BBQ set",
+            "price": 7800,
+            "note": "Normally ¥8,800; beef, smoked chicken, frankfurter, vegetables, pizza, yakisoba and sides."
+          },
+          {
+            "name": "Prime member BBQ set",
+            "price": 10000,
+            "note": "Normally ¥11,000; wagyu, ribeye, lamb, seafood, vegetables and sides."
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Opening member offer",
+        "description": "Reduced BBQ set prices for new and existing Seibu Prince Global Rewards members.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000006.000151224.html",
+        "discounted": true,
+        "menuLabel": "Opening member BBQ sets",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "17:00",
+              "end": "22:00"
+            },
+            {
+              "days": [
+                6
+              ],
+              "start": "11:00",
+              "end": "16:00"
+            },
+            {
+              "days": [
+                6
+              ],
+              "start": "17:00",
+              "end": "21:00"
+            }
+          ],
+          "excludesHolidays": true,
+          "excludedDates": [
+            "2026-11-02"
+          ]
+        },
+        "conditions": [
+          "Membership required; new and existing members qualify.",
+          "Adult BBQ sets require at least two people.",
+          "Published opening prices apply to the stated plan; confirm outdoor/indoor pricing when booking.",
+          "Prime guests who purchase all-you-can-drink receive an upgrade up to 180 minutes.",
+          "Sunday, public-holiday and holiday-eve service differs; excluded from these scheduled windows."
+        ],
+        "validFrom": "2026-10-08",
+        "validThrough": "2026-11-30"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/researched/bbqpit-tokyo-prince-42353850f0fcb959.webp",
+      "alt": "Tokyo Prince Hotel garden barbecue setting shown in the operator’s opening announcement",
+      "credit": "Photo: restaurant operator",
+      "sourceUrl": "https://www.herofield.com/bbq/tokyoprince/",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/151224/6/151224-6-c01275b518fad5a392a90a27e88cbfcf-1255x706.png",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "kyoto",
+    "slug": "essex-century",
+    "pinSourceUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+    "name": "Essex — Kyoto Century Hotel",
+    "neighborhood": "Kyoto Station",
+    "address": "Kyoto Century Hotel 2F, 680 Higashi Shiokoji-cho, Shimogyo-ku, Kyoto 600-8216, Japan",
+    "websiteUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Happy-hour drinks and snack",
+        "url": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "All 60 named happy-hour choices transcribed from the operator. Tax and 15% service included; ¥500 first-drink table charge additional unless a second drink is ordered.",
+        "items": [
+          {
+            "name": "Gin tonic",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Moscow mule",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Rum and cola",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Screwdriver",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Cuba libre",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Tequila sunrise",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Cassis orange",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Campari orange",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Campari soda",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Campari grapefruit",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Fuzzy navel",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Lychee grapefruit",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Malibu cola",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Malibu pineapple",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Cassis oolong",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Reggae punch",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Gin buck",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Vodka rickey",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Gin rickey",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Tequila cola",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Dita grapefruit",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Bulldog",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Black Russian",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Kalimotxo",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Spritzer",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Operator",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Kitty",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Kir",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Shandygaff",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Red eye",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Bitter orange",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Mojito",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Bourbon cola",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Highball",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Gin soda",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Rum soda",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Apricot orange",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Strawberry milk",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Matcha milk",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Kahlúa milk",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Baileys milk",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Midori tonic",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Plum-wine soda",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Plum-wine ginger",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Shoyojurin",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Amaretto ginger",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Amaretto milk",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Framboise soda",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Yogurito orange",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Yogurito pineapple",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Cocktails"
+          },
+          {
+            "name": "Saratoga cooler",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Shirley Temple",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Summer delight",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Lemonade",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Russian heart",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Grapefruit tonic",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Orange flower cooler",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Virgin fuzzy navel",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Virgin breeze",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          },
+          {
+            "name": "Sunset peach",
+            "price": 1000,
+            "note": "One drink plus snack.",
+            "category": "Nonalcoholic"
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "A drink and snack for ¥1,000; choose from 50 alcoholic and 10 nonalcoholic drinks.",
+        "sourceUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+        "discounted": true,
+        "menuLabel": "Happy-hour drinks and snack",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "17:30",
+              "end": "19:00"
+            }
+          ]
+        },
+        "conditions": [
+          "¥500 table charge on the first drink; waived when ordering a second ¥1,000 drink.",
+          "Two-hour seating limit. Last orders at 19:00.",
+          "Tax and 15% service included; menu and operating hours may change."
+        ]
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/researched/essex-century-94cd52755a3647fd.webp",
+      "alt": "Essex bar and drink shown in the hotel’s happy-hour promotion",
+      "credit": "Photo: Kyoto Century Hotel",
+      "sourceUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+      "originalUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/wp/wp-content/uploads/2025/06/thumbnail_happyhour.jpg",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "osaka",
+    "slug": "myplace-hilton",
+    "pinSourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+    "name": "MYPLACE café & bar — Hilton Osaka",
+    "neighborhood": "Umeda",
+    "address": "Hilton Osaka 1F, 1-8-8 Umeda, Kita-ku, Osaka 530-0001, Japan",
+    "websiteUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Happy-hour drinks",
+        "url": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+        "currency": "JPY",
+        "coverage": "sample",
+        "note": "Published examples from the discounted selection. Overall offer starts at ¥900 including tax and service; the operator does not assign individual item prices.",
+        "items": [
+          {
+            "name": "Highball",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Gin tonic",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Moscow mule",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Cuba libre",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Tequila sunrise",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Salty dog",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Asahi Super Dry",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Minoh Osaru IPA",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Coedo Shikkoku",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Sparkling wine — one selection",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "White wine — three selections",
+            "priceLabel": "50% off · item price not published"
+          },
+          {
+            "name": "Red wine — three selections",
+            "priceLabel": "50% off · item price not published"
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Weekday happy hour",
+        "description": "Selected drinks at 50% off; published offer starts at ¥900.",
+        "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+        "discounted": true,
+        "menuLabel": "Happy-hour drinks",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "17:00",
+              "end": "19:00"
+            }
+          ],
+          "excludesHolidays": true
+        },
+        "conditions": [
+          "Excludes Saturdays, Sundays and Japanese public holidays.",
+          "¥900 cover charge during live music, except hotel guests.",
+          "Tax and service included. Menu and hours may change."
+        ]
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/myplace-hilton-e706a749366769b9.webp",
+      "alt": "Illustrative cocktails from Hilton Osaka’s happy-hour promotion",
+      "credit": "Photo: Hilton Osaka",
+      "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+      "originalUrl": "https://osaka.hiltonjapan.co.jp/img/plans/up_img/restaurants/20250404151019_img_l.jpg",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "auckland",
+    "slug": "somm",
+    "pinSourceUrl": "https://sommcellardoor.co.nz/whats-on/somm-sundowns",
+    "name": "Somm Wine Bar & Bistro",
+    "neighborhood": "Princes Wharf",
+    "address": "Shed 22, Princes Wharf, Auckland 1010, New Zealand",
+    "websiteUrl": "https://sommcellardoor.co.nz/",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Somm Sundowns",
+        "url": "https://sommcellardoor.co.nz/whats-on/somm-sundowns",
+        "currency": "NZD",
+        "coverage": "published",
+        "note": "Transcribed from the operator’s July 2026 happy-hour menu image. Wine producers and guest beer change.",
+        "items": [
+          {
+            "name": "Aperol Spritz",
+            "price": 15
+          },
+          {
+            "name": "Classic Margarita",
+            "price": 15
+          },
+          {
+            "name": "Chilli Margarita",
+            "price": 15
+          },
+          {
+            "name": "Negroni",
+            "price": 15
+          },
+          {
+            "name": "Cosmopolitan",
+            "price": 15
+          },
+          {
+            "name": "Rosé",
+            "price": 10
+          },
+          {
+            "name": "Pinot Gris",
+            "price": 10
+          },
+          {
+            "name": "Chardonnay",
+            "price": 10
+          },
+          {
+            "name": "Sauvignon Blanc",
+            "price": 10
+          },
+          {
+            "name": "Pinot Noir",
+            "price": 10
+          },
+          {
+            "name": "Guest beer",
+            "price": 8
+          }
+        ],
+        "documentUrl": "https://sommcellardoor.co.nz/media/pages/whats-on/somm-sundowns/8ac67fb1fd-1785288350/somm_hh-menu_a5_0726.png"
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Somm Sundowns",
+        "description": "Specially priced cocktails, wine and guest beer from 16:00 to 18:00.",
+        "sourceUrl": "https://sommcellardoor.co.nz/whats-on/somm-sundowns",
+        "discounted": true,
+        "menuLabel": "Somm Sundowns",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "conditions": [
+          "Tuesday–Sunday service. Promotion says daily; Monday is omitted because the operator publishes no Monday opening hours."
+        ]
+      }
+    ]
+  },
+  {
+    "regionSlug": "christchurch",
+    "slug": "rambler",
+    "pinSourceUrl": "https://www.therambler.co.nz/whats-on",
+    "name": "Rambler Christchurch",
+    "neighborhood": "Christchurch Central",
+    "address": "96 Lichfield Street, Christchurch Central, New Zealand",
+    "websiteUrl": "https://www.therambler.co.nz/",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Happy-hour menu",
+        "url": "https://www.therambler.co.nz/menu",
+        "currency": "NZD",
+        "coverage": "published",
+        "note": "Published happy-hour section; gyro choices are beef, lamb or chicken.",
+        "items": [
+          {
+            "name": "Bandini Prosecco",
+            "price": 9
+          },
+          {
+            "name": "Rose & Rose Sauvignon Blanc",
+            "price": 9
+          },
+          {
+            "name": "Rose & Rose Chardonnay",
+            "price": 9
+          },
+          {
+            "name": "Rose & Rose Rosé",
+            "price": 9
+          },
+          {
+            "name": "Obliix Pinot Noir",
+            "price": 11
+          },
+          {
+            "name": "Drifter Lager",
+            "price": 9
+          },
+          {
+            "name": "Speights Summit Ultra",
+            "price": 9
+          },
+          {
+            "name": "ParrotDog Birdseye Hazy IPA",
+            "price": 11
+          },
+          {
+            "name": "Peach Fizz",
+            "price": 12
+          },
+          {
+            "name": "Aperol Spritz",
+            "price": 12
+          },
+          {
+            "name": "Limoncello Spritz",
+            "price": 12
+          },
+          {
+            "name": "Negroni",
+            "price": 12
+          },
+          {
+            "name": "Grilled pita and dips",
+            "price": 10
+          },
+          {
+            "name": "Mini charcuterie",
+            "price": 15
+          },
+          {
+            "name": "Gyro and fries",
+            "price": 10
+          },
+          {
+            "name": "Shaker fries",
+            "price": 8
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Daily happy hour",
+        "description": "Discounted food, cocktails, beer and wine daily from 16:00 to 18:00.",
+        "sourceUrl": "https://www.therambler.co.nz/whats-on",
+        "discounted": true,
+        "menuLabel": "Happy-hour menu",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "16:00",
+              "end": "18:00"
+            }
+          ]
+        },
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "regionSlug": "wellington",
+    "slug": "bebemos",
+    "pinSourceUrl": "https://bebemos.co.nz/",
+    "name": "Bebemos",
+    "neighborhood": "Newtown",
+    "address": "88 Riddiford Street, Newtown, Wellington, New Zealand",
+    "websiteUrl": "https://bebemos.co.nz/",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Happy-hour specials",
+        "url": "https://bebemos.co.nz/",
+        "currency": "NZD",
+        "coverage": "sample",
+        "note": "Promotion prices from the homepage. Named desserts checked against the autumn 2026 all-day menu; selection may change.",
+        "items": [
+          {
+            "name": "House red wine",
+            "price": 10
+          },
+          {
+            "name": "House white wine",
+            "price": 10
+          },
+          {
+            "name": "House sparkling wine",
+            "price": 10
+          },
+          {
+            "name": "Gisborne Gold — pint",
+            "price": 10
+          },
+          {
+            "name": "Tap ginger beer — pint",
+            "price": 10
+          },
+          {
+            "name": "Chocolate fudge brownie",
+            "price": 10
+          },
+          {
+            "name": "Mango cheesecake",
+            "price": 10
+          },
+          {
+            "name": "Beer tasting board",
+            "price": 15
+          }
+        ],
+        "documentUrl": "https://bebemos.co.nz/uploads/all-day-menu-autumn-2026.pdf"
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Happy hour",
+        "description": "Selected drinks and desserts at NZ$10; beer tasting board NZ$15.",
+        "sourceUrl": "https://bebemos.co.nz/",
+        "discounted": true,
+        "menuLabel": "Happy-hour specials",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "15:00",
+              "end": "17:00"
+            },
+            {
+              "days": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "20:00",
+              "end": "22:00"
+            }
+          ]
+        },
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "regionSlug": "guadalajara",
+    "slug": "moshi-the-landmark",
+    "pinSourceUrl": "https://www.moshimoshi.mx/tycs#moshi-the-landmark",
+    "name": "Moshi Moshi — The Landmark",
+    "neighborhood": "Puerta de Hierro",
+    "address": "The Landmark, Guadalajara, Mexico",
+    "websiteUrl": "https://www.moshimoshi.mx/ubicaciones",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Jueves de Moshi",
+        "url": "https://www.moshimoshi.mx/copia-de-para-compartir",
+        "currency": "MXN",
+        "coverage": "sample",
+        "note": "Shared brand Kaiten menu. These branches are explicitly eligible in the 2026 terms; only four-piece rolls on the belt qualify. Item availability varies by branch.",
+        "items": [
+          {
+            "name": "Kiko — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kani Karaage — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Ikari — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kiro — four pieces",
+            "price": 31
+          },
+          {
+            "name": "California — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kakiage — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Filadelfia — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Nanda Yo — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Cho — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kakashi — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Mazinger — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Spicy Tuna — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Tori — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Chihiro — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Moori — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Avocado — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Keto Lucas — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Sake Drink",
+            "price": 51
+          },
+          {
+            "name": "Mocktail",
+            "price": 51
+          }
+        ],
+        "documentUrl": "https://www.moshimoshi.mx/tycs"
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Jueves de Moshi",
+        "description": "Thursday four-piece Kaiten rolls at MX$31 and Sake Drinks or mocktails at MX$51.",
+        "sourceUrl": "https://www.moshimoshi.mx/tycs#moshi-the-landmark",
+        "discounted": true,
+        "menuLabel": "Jueves de Moshi",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                4
+              ],
+              "start": "12:00",
+              "end": "22:00"
+            }
+          ]
+        },
+        "conditions": [
+          "Any menu drink purchase per guest required for roll pricing.",
+          "Dine-in only; four-piece rolls on the belt, without modifications. Eight-piece ordered rolls excluded.",
+          "While supplies last. Personal promotion; no additional discounts or Club Moshi points payment.",
+          "Sake Drinks require legal-age guests, official ID and food purchase."
+        ],
+        "validFrom": "2026-01-08",
+        "validThrough": "2026-12-31"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/mexico-city/top/moshi-kaiten-faa40a65ca486a25.webp",
+      "alt": "Moshi Moshi Kiko roll from the brand’s Kaiten menu; illustrative food image",
+      "credit": "Image: Moshi Moshi",
+      "sourceUrl": "https://www.moshimoshi.mx/copia-de-para-compartir",
+      "originalUrl": "https://static.wixstatic.com/media/05e3f5_2e79a8932f0044faab312db5317c1350~mv2.png",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "monterrey",
+    "slug": "moshi-galerias-monterrey",
+    "pinSourceUrl": "https://www.moshimoshi.mx/tycs#moshi-galerias-monterrey",
+    "name": "Moshi Moshi — Galerías Monterrey",
+    "neighborhood": "Galerías Monterrey",
+    "address": "Galerías Monterrey, Monterrey, Mexico",
+    "websiteUrl": "https://www.moshimoshi.mx/ubicaciones",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Jueves de Moshi",
+        "url": "https://www.moshimoshi.mx/copia-de-para-compartir",
+        "currency": "MXN",
+        "coverage": "sample",
+        "note": "Shared brand Kaiten menu. These branches are explicitly eligible in the 2026 terms; only four-piece rolls on the belt qualify. Item availability varies by branch.",
+        "items": [
+          {
+            "name": "Kiko — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kani Karaage — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Ikari — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kiro — four pieces",
+            "price": 31
+          },
+          {
+            "name": "California — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kakiage — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Filadelfia — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Nanda Yo — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Cho — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kakashi — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Mazinger — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Spicy Tuna — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Tori — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Chihiro — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Moori — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Avocado — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Keto Lucas — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Sake Drink",
+            "price": 51
+          },
+          {
+            "name": "Mocktail",
+            "price": 51
+          }
+        ],
+        "documentUrl": "https://www.moshimoshi.mx/tycs"
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Jueves de Moshi",
+        "description": "Thursday four-piece Kaiten rolls at MX$31 and Sake Drinks or mocktails at MX$51.",
+        "sourceUrl": "https://www.moshimoshi.mx/tycs#moshi-galerias-monterrey",
+        "discounted": true,
+        "menuLabel": "Jueves de Moshi",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                4
+              ],
+              "start": "12:00",
+              "end": "22:00"
+            }
+          ]
+        },
+        "conditions": [
+          "Any menu drink purchase per guest required for roll pricing.",
+          "Dine-in only; four-piece rolls on the belt, without modifications. Eight-piece ordered rolls excluded.",
+          "While supplies last. Personal promotion; no additional discounts or Club Moshi points payment.",
+          "Sake Drinks require legal-age guests, official ID and food purchase."
+        ],
+        "validFrom": "2026-01-08",
+        "validThrough": "2026-12-31"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/mexico-city/top/moshi-kaiten-faa40a65ca486a25.webp",
+      "alt": "Moshi Moshi Kiko roll from the brand’s Kaiten menu; illustrative food image",
+      "credit": "Image: Moshi Moshi",
+      "sourceUrl": "https://www.moshimoshi.mx/copia-de-para-compartir",
+      "originalUrl": "https://static.wixstatic.com/media/05e3f5_2e79a8932f0044faab312db5317c1350~mv2.png",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "regionSlug": "mexico-city",
+    "slug": "moshi-roma",
+    "pinSourceUrl": "https://www.moshimoshi.mx/tycs#moshi-roma",
+    "name": "Moshi Moshi — Roma",
+    "neighborhood": "Roma Norte",
+    "address": "Roma, Mexico City, Mexico",
+    "websiteUrl": "https://www.moshimoshi.mx/ubicaciones",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Jueves de Moshi",
+        "url": "https://www.moshimoshi.mx/copia-de-para-compartir",
+        "currency": "MXN",
+        "coverage": "sample",
+        "note": "Shared brand Kaiten menu. These branches are explicitly eligible in the 2026 terms; only four-piece rolls on the belt qualify. Item availability varies by branch.",
+        "items": [
+          {
+            "name": "Kiko — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kani Karaage — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Ikari — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kiro — four pieces",
+            "price": 31
+          },
+          {
+            "name": "California — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kakiage — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Filadelfia — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Nanda Yo — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Cho — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Kakashi — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Mazinger — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Spicy Tuna — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Tori — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Chihiro — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Moori — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Avocado — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Keto Lucas — four pieces",
+            "price": 31
+          },
+          {
+            "name": "Sake Drink",
+            "price": 51
+          },
+          {
+            "name": "Mocktail",
+            "price": 51
+          }
+        ],
+        "documentUrl": "https://www.moshimoshi.mx/tycs"
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Jueves de Moshi",
+        "description": "Thursday four-piece Kaiten rolls at MX$31 and Sake Drinks or mocktails at MX$51.",
+        "sourceUrl": "https://www.moshimoshi.mx/tycs#moshi-roma",
+        "discounted": true,
+        "menuLabel": "Jueves de Moshi",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                4
+              ],
+              "start": "12:00",
+              "end": "23:00"
+            }
+          ]
+        },
+        "conditions": [
+          "Any menu drink purchase per guest required for roll pricing.",
+          "Dine-in only; four-piece rolls on the belt, without modifications. Eight-piece ordered rolls excluded.",
+          "While supplies last. Personal promotion; no additional discounts or Club Moshi points payment.",
+          "Sake Drinks require legal-age guests, official ID and food purchase."
+        ],
+        "validFrom": "2026-01-08",
+        "validThrough": "2026-12-31"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/mexico-city/top/moshi-kaiten-faa40a65ca486a25.webp",
+      "alt": "Moshi Moshi Kiko roll from the brand’s Kaiten menu; illustrative food image",
+      "credit": "Image: Moshi Moshi",
+      "sourceUrl": "https://www.moshimoshi.mx/copia-de-para-compartir",
+      "originalUrl": "https://static.wixstatic.com/media/05e3f5_2e79a8932f0044faab312db5317c1350~mv2.png",
       "checkedAt": "2026-10-09"
     }
   }

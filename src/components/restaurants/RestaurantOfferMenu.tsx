@@ -3,7 +3,7 @@
 import { useId, useState } from 'react';
 import Image from 'next/image';
 import Anchor from '@/components/ui/Anchor';
-import type { RestaurantMenu } from '@/lib/restaurantMenus';
+import { restaurantMenuAmount, type RestaurantMenu } from '@/lib/restaurantMenus';
 import styles from './RestaurantGuide.module.css';
 
 export function RestaurantOfferMenu({ menu, restaurant }: { menu?: RestaurantMenu; restaurant: string }) {
@@ -15,7 +15,7 @@ export function RestaurantOfferMenu({ menu, restaurant }: { menu?: RestaurantMen
   const category = categories.find((category) => category === selected) ?? categories[0];
   const items = menu.items.filter((item) => (item.category || 'Menu') === category);
   const shown = expanded ? items : items.slice(0, 6);
-  const amount = (price: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: Number.isInteger(price) ? 0 : 2 }).format(price);
+  const amount = (price: number) => restaurantMenuAmount(price, menu.currency);
   const source = menu.documentUrl || menu.url;
 
   return <div className={styles.offerMenuBlock}>

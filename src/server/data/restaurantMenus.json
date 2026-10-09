@@ -8401,5 +8401,1390 @@
       }
     ],
     "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.ukai.co.jp/english/ginza/",
+    "name": "Ginza Ukai-tei",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Teppanyaki courses",
+        "url": "https://www.ukai.co.jp/english/ginza/#menu",
+        "documentUrl": "https://www.ukai.co.jp/menupdf/ginza-20261008142942.pdf",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Prices in Japanese yen, per person, including consumption tax; 13% service charge is additional. Guests at one table order the same course. Seasonal ingredients may change. Course prices and dish selections transcribed from the operator’s October 8, 2026 PDF.",
+        "items": [
+          {
+            "name": "Special lunch course",
+            "category": "Lunch courses",
+            "price": 13200,
+            "note": "Seasonal appetizer, sea bream in pastry, clams, selected beef steak, meal and dessert."
+          },
+          {
+            "name": "Abalone and beef steak lunch course",
+            "category": "Lunch courses",
+            "price": 19800,
+            "note": "Appetizer, seasonal vegetables, chestnut soup, abalone, selected beef steak, meal and dessert."
+          },
+          {
+            "name": "Beef tenderloin substitution (70 g)",
+            "category": "Lunch courses",
+            "price": 4400,
+            "note": "Supplement to the selected beef steak."
+          },
+          {
+            "name": "Grand course",
+            "category": "Dinner courses",
+            "priceLabel": "¥27,500 / ¥38,500",
+            "note": "Two published course tiers; see original menu for their seasonal dishes."
+          }
+        ]
+      }
+    ],
+    "specials": [],
+    "location": {
+      "latitude": 35.6680494,
+      "longitude": 139.7670808,
+      "sourceUrl": "https://goo.gl/maps/3mHx5N5iqfq",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinSourceUrl": "https://kikunoi.jp/restaurant/roan.html",
+    "name": "Roan Kikunoi",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Kaiseki courses",
+        "url": "https://kikunoi.jp/restaurant/roan.html",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Prices in Japanese yen, including consumption tax; 10% or 15% service charge is additional according to the operator. The Roan page publishes course tiers rather than a branch-specific dish list. The group’s monthly sample menu is not treated as Roan’s menu.",
+        "items": [
+          {
+            "name": "Lunch kaiseki",
+            "category": "Lunch",
+            "priceLabel": "¥13,200 / ¥16,500"
+          },
+          {
+            "name": "Kaiseki dinner",
+            "category": "Dinner",
+            "priceLabel": "¥22,000 / ¥27,500 / ¥33,000"
+          }
+        ]
+      }
+    ],
+    "specials": [],
+    "location": {
+      "latitude": 35.0034513,
+      "longitude": 135.7706684,
+      "sourceUrl": "https://maps.app.goo.gl/227D6WjFNaFs8FJN9",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinSourceUrl": "https://www.harijyu.co.jp/shop-info/category/doutonbori/",
+    "name": "Harijyu Dotonbori — Japanese Cuisine",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Sukiyaki and shabu-shabu",
+        "url": "https://www.harijyu.co.jp/menu/category/en/",
+        "documentUrl": "https://www.harijyu.co.jp/swp/wp-content/uploads/2025/02/28e2d31ddf109a89cbcfbf9c5334d7fb.pdf",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Prices in Japanese yen, including tax. Second-floor Japanese restaurant only. Course tiers differ by beef quality. The operator announces some price revisions from November 2026; recheck before visiting. The shop page’s current lunch hours take precedence over the older PDF.",
+        "items": [
+          {
+            "name": "Sukiyaki lunch course",
+            "category": "Lunch",
+            "price": 6600,
+            "note": "150 g beef, appetizer, rice and pickles."
+          },
+          {
+            "name": "Shabu-shabu lunch course",
+            "category": "Lunch",
+            "price": 6600,
+            "note": "150 g beef, appetizer, rice and pickles."
+          },
+          {
+            "name": "Extra lunch beef",
+            "category": "Lunch",
+            "price": 3850
+          },
+          {
+            "name": "Sukiyaki course",
+            "category": "Regular courses",
+            "priceLabel": "¥8,800 / ¥11,000 / ¥13,750 / ¥16,500 / ¥19,800",
+            "note": "180 g beef per person, appetizer, rice and pickles."
+          },
+          {
+            "name": "Shabu-shabu course",
+            "category": "Regular courses",
+            "priceLabel": "¥8,800 / ¥11,000 / ¥13,750 / ¥16,500 / ¥19,800",
+            "note": "180 g beef per person, appetizer, rice and pickles."
+          },
+          {
+            "name": "Additional beef (180 g)",
+            "category": "Extras",
+            "priceLabel": "¥4,400 / ¥5,500 / ¥7,700 / ¥9,900 / ¥12,100"
+          },
+          {
+            "name": "Vegetables for the pot",
+            "category": "Extras",
+            "price": 1650
+          },
+          {
+            "name": "Assorted tempura",
+            "category": "Sides",
+            "price": 3850
+          },
+          {
+            "name": "Vegetable tempura",
+            "category": "Sides",
+            "price": 1650
+          },
+          {
+            "name": "Sashimi — three varieties",
+            "category": "Sides",
+            "price": 2200
+          },
+          {
+            "name": "Sashimi — four varieties",
+            "category": "Sides",
+            "price": 3530
+          },
+          {
+            "name": "Grilled beef",
+            "category": "Sides",
+            "priceLabel": "¥4,950 / ¥7,480"
+          },
+          {
+            "name": "Roast beef",
+            "category": "Sides",
+            "price": 1430
+          },
+          {
+            "name": "Steamed egg custard",
+            "category": "Sides",
+            "price": 1430
+          },
+          {
+            "name": "Red miso soup",
+            "category": "Sides",
+            "price": 660
+          },
+          {
+            "name": "Beef tsukudani",
+            "category": "Sides",
+            "price": 990
+          },
+          {
+            "name": "Bavarian cream",
+            "category": "Desserts",
+            "price": 770
+          },
+          {
+            "name": "Ice cream",
+            "category": "Desserts",
+            "price": 550
+          },
+          {
+            "name": "Fruit jelly",
+            "category": "Desserts",
+            "price": 880
+          },
+          {
+            "name": "Seasonal fruit",
+            "category": "Desserts",
+            "price": 1320
+          },
+          {
+            "name": "Melon",
+            "category": "Desserts",
+            "price": 2860
+          }
+        ]
+      }
+    ],
+    "specials": [],
+    "location": {
+      "latitude": 34.6685251,
+      "longitude": 135.5006312,
+      "sourceUrl": "https://goo.gl/maps/Ldr6geJHeBeKUV1S7",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinSourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+    "name": "Jardin des Sens Tokyo",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Opening courses",
+        "url": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Published total course prices include 10% tax and 15% service. Branch-specific course dishes have not been released; no dishes borrowed from the Montpellier restaurant.",
+        "items": [
+          {
+            "name": "Menu d’Affaire",
+            "price": 8855,
+            "category": "Weekday lunch"
+          },
+          {
+            "name": "Menu Éclosion",
+            "price": 12650,
+            "category": "Lunch"
+          },
+          {
+            "name": "Menu Escapade",
+            "price": 17710,
+            "category": "Lunch"
+          },
+          {
+            "name": "Menu Découverte",
+            "price": 18975,
+            "category": "Dinner"
+          },
+          {
+            "name": "Menu Sens & Saveurs",
+            "price": 25300,
+            "category": "Dinner"
+          },
+          {
+            "name": "Menu Signature",
+            "price": 35420,
+            "category": "Dinner"
+          }
+        ]
+      }
+    ],
+    "specials": [],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/researched/jardin-des-sens-tokyo-863c2103f0d33047.webp",
+      "alt": "Portrait of chefs Jacques and Laurent Pourcel; not a photograph of the new Tokyo dining room",
+      "credit": "Photo: restaurant operator",
+      "sourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+      "originalUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/files/images/home/img_profile_1.webp",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinSourceUrl": "https://www.herofield.com/bbq/tokyoprince/",
+    "name": "BBQPIT@Tokyo Prince Hotel",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "BBQ sets",
+        "url": "https://www.herofield.com/bbq/tokyoprince/",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Prices include tax and soft drinks. Adult sets require at least two guests. Signature price here is the outdoor plan; the indoor Signature plan is ¥9,350. Ingredients can change.",
+        "items": [
+          {
+            "name": "Basic BBQ set",
+            "price": 6600,
+            "note": "Sirloin, pork shoulder and belly, frankfurter, corn, paprika, yakisoba, foil potatoes, tortilla chips with salsa and s’more."
+          },
+          {
+            "name": "Signature BBQ set",
+            "price": 8800,
+            "note": "Sirloin, ribeye, smoked chicken, frankfurter, vegetables, pizza, yakisoba, foil potatoes, chips with salsa, edamame and berry churros."
+          },
+          {
+            "name": "Prime BBQ set",
+            "price": 11000,
+            "note": "Kurohana wagyu, ribeye, lamb, frankfurter, abalone, squid, vegetables, pizza, garlic bread, yakisoba, bacon-Camembert ajillo and berry ice cream."
+          },
+          {
+            "name": "Kids BBQ set",
+            "price": 2750,
+            "note": "Published children’s set; see venue for contents."
+          }
+        ]
+      },
+      {
+        "label": "Opening member BBQ sets",
+        "url": "https://prtimes.jp/main/html/rd/p/000000006.000151224.html",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Tax included. Requires Seibu Prince Global Rewards membership; see the operator for the booking plan and site.",
+        "items": [
+          {
+            "name": "Basic member BBQ set",
+            "price": 6100,
+            "note": "Normally ¥6,600; sirloin, pork, frankfurter, vegetables, yakisoba and sides."
+          },
+          {
+            "name": "Signature member BBQ set",
+            "price": 7800,
+            "note": "Normally ¥8,800; beef, smoked chicken, frankfurter, vegetables, pizza, yakisoba and sides."
+          },
+          {
+            "name": "Prime member BBQ set",
+            "price": 10000,
+            "note": "Normally ¥11,000; wagyu, ribeye, lamb, seafood, vegetables and sides."
+          }
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Opening member offer",
+        "description": "Reduced BBQ set prices for new and existing Seibu Prince Global Rewards members.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000006.000151224.html",
+        "discounted": true,
+        "menuLabel": "Opening member BBQ sets",
+        "availability": {
+          "windows": [
+            {
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "start": "17:00",
+              "end": "22:00"
+            },
+            {
+              "days": [
+                6
+              ],
+              "start": "11:00",
+              "end": "16:00"
+            },
+            {
+              "days": [
+                6
+              ],
+              "start": "17:00",
+              "end": "21:00"
+            }
+          ],
+          "excludesHolidays": true,
+          "excludedDates": [
+            "2026-11-02"
+          ]
+        },
+        "conditions": [
+          "Membership required; new and existing members qualify.",
+          "Adult BBQ sets require at least two people.",
+          "Published opening prices apply to the stated plan; confirm outdoor/indoor pricing when booking.",
+          "Prime guests who purchase all-you-can-drink receive an upgrade up to 180 minutes.",
+          "Sunday, public-holiday and holiday-eve service differs; excluded from these scheduled windows."
+        ],
+        "validFrom": "2026-10-08",
+        "validThrough": "2026-11-30"
+      }
+    ],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/researched/bbqpit-tokyo-prince-42353850f0fcb959.webp",
+      "alt": "Tokyo Prince Hotel garden barbecue setting shown in the operator’s opening announcement",
+      "credit": "Photo: restaurant operator",
+      "sourceUrl": "https://www.herofield.com/bbq/tokyoprince/",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/151224/6/151224-6-c01275b518fad5a392a90a27e88cbfcf-1255x706.png",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000010.000035415.html",
+    "name": "Kanijenne Gion",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Opening crab courses",
+        "url": "https://prtimes.jp/main/html/rd/p/000000010.000035415.html",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Seasonal prices depend on crab and supply.",
+        "items": [
+          {
+            "name": "October live-crab and matsutake course",
+            "priceLabel": "From ¥38,000",
+            "note": "Tax included; 10% service additional."
+          },
+          {
+            "name": "Winter seasonal crab course",
+            "priceLabel": "From ¥60,000",
+            "note": "Available after the Kyoto crab season starts in November; tax included, 10% service additional."
+          }
+        ]
+      },
+      {
+        "label": "Published course dishes",
+        "url": "https://prtimes.jp/main/html/rd/p/000000010.000035415.html",
+        "currency": "JPY",
+        "coverage": "published",
+        "note": "Examples published by the operator; daily course composition varies.",
+        "items": [
+          {
+            "name": "Crab sashimi",
+            "priceLabel": "Included in course"
+          },
+          {
+            "name": "Charcoal-grilled crab",
+            "priceLabel": "Included in course"
+          },
+          {
+            "name": "Crab shabu-shabu",
+            "priceLabel": "Included in course"
+          },
+          {
+            "name": "Crab cream croquette",
+            "priceLabel": "Included in course"
+          },
+          {
+            "name": "Sake in crab shell",
+            "priceLabel": "Included in course"
+          },
+          {
+            "name": "Stone-cooked crab with abalone-liver miso",
+            "priceLabel": "Included in course"
+          },
+          {
+            "name": "Crab and egg rice bowl",
+            "priceLabel": "Included in course"
+          },
+          {
+            "name": "Crab rice porridge",
+            "priceLabel": "Included in course"
+          }
+        ]
+      }
+    ],
+    "specials": [],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/researched/kanijenne-gion-fdbf15d18a1e3d7e.webp",
+      "alt": "Crab shown in Kanijenne’s opening announcement; seasonal promotional image",
+      "credit": "Photo: restaurant operator",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000010.000035415.html",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/35415/10/35415-10-acc84c57065085b86d0f404d5ae79327-1567x1045.jpg",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000043.000129324.html",
+    "name": "Neo Nice Burger Kyoto Teramachi",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Published Kyoto burgers",
+        "url": "https://prtimes.jp/main/html/rd/p/000000043.000129324.html",
+        "currency": "JPY",
+        "coverage": "sample",
+        "note": "Published Kyoto-specific items, not the complete burger menu. Prices include takeaway tax; eat-in prices may differ.",
+        "items": [
+          {
+            "name": "Fried fish with shibazuke tartar burger",
+            "price": 550
+          },
+          {
+            "name": "Kyoto vegetable miso-teriyaki burger",
+            "price": 680
+          },
+          {
+            "name": "Kyoto turnip gratin burger",
+            "price": 680
+          },
+          {
+            "name": "Sansho beef sukiyaki burger",
+            "price": 900
+          }
+        ]
+      }
+    ],
+    "specials": [],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/researched/neo-nice-burger-teramachi-c5f1f1ba08e55504.webp",
+      "alt": "Promotional burger assortment from Neo Nice Burger’s Kyoto opening announcement",
+      "credit": "Photo: restaurant operator",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000043.000129324.html",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/129324/43/129324-43-42c4dbc8fc355c19f46ea0079589111b-3543x2362.jpg",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinSourceUrl": "https://www.oreno.co.jp/restaurant/kappou_umeda_kitashinchi",
+    "name": "Oreno Kappo Umeda Kitashinchi",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Published food menu",
+        "url": "https://www.oreno.co.jp/restaurant/kappou_umeda_kitashinchi",
+        "currency": "JPY",
+        "coverage": "sample",
+        "note": "Prices include tax; ¥550 cover charge additional. Published food dishes transcribed from the branch PDF; drinks and some per-person/skewer options remain in the full document.",
+        "items": [
+          {
+            "name": "Crab cream croquette",
+            "price": 968
+          },
+          {
+            "name": "Uni, salmon roe and crab shell",
+            "price": 968
+          },
+          {
+            "name": "Karasumi soba",
+            "price": 1518
+          },
+          {
+            "name": "Octopus and Kujo onion with vinegar miso",
+            "price": 858
+          },
+          {
+            "name": "Black bean mascarpone",
+            "price": 968
+          },
+          {
+            "name": "Wasabi whelk and tobiko",
+            "price": 748
+          },
+          {
+            "name": "Seafood salad",
+            "price": 1408
+          },
+          {
+            "name": "Beef tongue and onion salad",
+            "price": 1188
+          },
+          {
+            "name": "Low-temperature beef tongue sashimi",
+            "price": 1078
+          },
+          {
+            "name": "Fish chanja",
+            "price": 1078
+          },
+          {
+            "name": "Marinated quail eggs",
+            "price": 638
+          },
+          {
+            "name": "Soy-marinated yam",
+            "price": 638
+          },
+          {
+            "name": "Duck and eggplant",
+            "price": 1078
+          },
+          {
+            "name": "Cucumber",
+            "price": 748
+          },
+          {
+            "name": "Taro dumpling",
+            "price": 858
+          },
+          {
+            "name": "Beef tongue miso stew",
+            "price": 968
+          },
+          {
+            "name": "Saikyo-grilled sablefish",
+            "price": 1408
+          },
+          {
+            "name": "Whole hokke",
+            "price": 2728
+          },
+          {
+            "name": "Conger eel and burdock with sansho",
+            "price": 1078
+          },
+          {
+            "name": "Fish collar",
+            "price": 1628
+          },
+          {
+            "name": "Dashimaki with thickened sauce",
+            "price": 968
+          },
+          {
+            "name": "Matsusaka beef stone steak",
+            "price": 3938
+          },
+          {
+            "name": "Matsusaka beef sukiyaki",
+            "price": 2508
+          },
+          {
+            "name": "Fried tofu",
+            "price": 968
+          },
+          {
+            "name": "Large shrimp tempura",
+            "price": 1188
+          },
+          {
+            "name": "Fried chicken",
+            "price": 858
+          },
+          {
+            "name": "Salmon and roe kamameshi",
+            "price": 2618
+          },
+          {
+            "name": "Matsusaka steak kamameshi",
+            "price": 2838
+          },
+          {
+            "name": "Nyumen",
+            "price": 968
+          },
+          {
+            "name": "Chocolate gâteau",
+            "price": 968
+          },
+          {
+            "name": "Daifuku ice cream",
+            "price": 638
+          },
+          {
+            "name": "Seasonal ice cream",
+            "price": 528
+          }
+        ],
+        "documentUrl": "https://www.oreno.co.jp/wp-corp/wp-content/uploads/2026/09/851555b032e8af5e1b6787c0aa6fe0ad.pdf"
+      }
+    ],
+    "specials": [],
+    "photo": {
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/oreno-kappo-kitashinchi-923abcebefae21aa.webp",
+      "alt": "Karasumi soba from Oreno Kappo’s official branch page",
+      "credit": "Photo: restaurant operator",
+      "sourceUrl": "https://www.oreno.co.jp/restaurant/kappou_umeda_kitashinchi",
+      "originalUrl": "https://www.oreno.co.jp/wp-corp/wp-content/uploads/2026/08/d03a4d4613925d6c11f04fa70ba280e2.jpg",
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinSourceUrl": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra",
+    "name": "AOI NAPOLI OMBRA",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Opening menu",
+        "url": "https://ombra.aoinapoli.jp/",
+        "currency": "JPY",
+        "coverage": "link",
+        "note": "The official branch profile, venue launch page and linked Toreta reservation page publish no named dishes or prices yet. Wood-fired pizza and Italian cooking are announced, but no item names can be verified; recheck before November 20. No menu borrowed from another AOI NAPOLI branch.",
+        "items": []
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://ahirestaurant.co.nz/",
+    "name": "Ahi",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Dinner menu",
+        "url": "https://ahirestaurant.co.nz/menu-ahi/",
+        "currency": "NZD",
+        "coverage": "published",
+        "note": "Seasonal menu. Food Story is four snacks and four courses per person; pairing is additional.",
+        "items": [
+          {
+            "name": "Paraoa — sourdough",
+            "price": 7
+          },
+          {
+            "name": "Tio — Te Matuku oyster",
+            "price": 9
+          },
+          {
+            "name": "Koura rangi — poached scampi",
+            "priceLabel": "Price on application"
+          },
+          {
+            "name": "Mapari tartare tart",
+            "price": 20
+          },
+          {
+            "name": "Pāua fritter",
+            "price": 20
+          },
+          {
+            "name": "Tuna hūhunu — smoked eel",
+            "price": 16
+          },
+          {
+            "name": "Hāmana — salmon",
+            "price": 34
+          },
+          {
+            "name": "Wheke — octopus",
+            "price": 36
+          },
+          {
+            "name": "Kamokamo terrine",
+            "price": 34
+          },
+          {
+            "name": "Koura — crayfish 500g",
+            "price": 139
+          },
+          {
+            "name": "Ika — steamed fish",
+            "price": 46
+          },
+          {
+            "name": "Hīpi — Matangi lamb",
+            "price": 46
+          },
+          {
+            "name": "Rakiraki — wood-fired duck",
+            "price": 55
+          },
+          {
+            "name": "Kau — backyard BBQ 500g",
+            "price": 180
+          },
+          {
+            "name": "Hua whenua — greens",
+            "price": 15
+          },
+          {
+            "name": "Riwai — crispy Agria potatoes",
+            "price": 15
+          },
+          {
+            "name": "Huamata — salad",
+            "price": 15
+          },
+          {
+            "name": "A New Zealand Food Story",
+            "price": 195
+          },
+          {
+            "name": "Aotearoa beverage pairing",
+            "price": 150
+          }
+        ],
+        "documentUrl": "https://ahirestaurant.co.nz/wp-content/uploads/2026/06/Ahi-Dinner-Menu.pdf"
+      },
+      {
+        "label": "Desserts",
+        "url": "https://ahirestaurant.co.nz/menu-ahi/",
+        "currency": "NZD",
+        "coverage": "published",
+        "note": "Desserts from the operator’s current linked PDF.",
+        "items": [
+          {
+            "name": "Burnt bush honey tart",
+            "price": 26
+          },
+          {
+            "name": "Banana Louise cake",
+            "price": 26
+          },
+          {
+            "name": "Paināporo — barbecued pineapple",
+            "price": 26
+          }
+        ],
+        "documentUrl": "https://ahirestaurant.co.nz/wp-content/uploads/2026/06/Ahi-Dessert-Menu.pdf"
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://boulcottstreetbistro.co.nz/",
+    "name": "Boulcott Street Bistro",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Bistro menu",
+        "url": "https://boulcottstreetbistro.co.nz/menu/",
+        "currency": "NZD",
+        "coverage": "published",
+        "note": "September 2026 food menu. T-bone is lunch only. Credit card and PayWave surcharge 2%.",
+        "items": [
+          {
+            "name": "Natural oyster — each",
+            "price": 7
+          },
+          {
+            "name": "Battered oyster — each, minimum six",
+            "price": 8
+          },
+          {
+            "name": "Tuna tartare — small",
+            "price": 17
+          },
+          {
+            "name": "Tuna tartare — large",
+            "price": 28
+          },
+          {
+            "name": "Pork and green peppercorn terrine",
+            "price": 25
+          },
+          {
+            "name": "Yuzu-cured kingfish crudo",
+            "price": 27
+          },
+          {
+            "name": "Provençal crumbed lamb tongue",
+            "price": 24
+          },
+          {
+            "name": "French onion soup",
+            "price": 19
+          },
+          {
+            "name": "Porcini and Portobello tortellini",
+            "price": 24
+          },
+          {
+            "name": "Crumbed calamari",
+            "price": 23
+          },
+          {
+            "name": "Lunch T-bone — 300g",
+            "price": 25
+          },
+          {
+            "name": "Aged fillet of beef",
+            "price": 54
+          },
+          {
+            "name": "Roasted carrot rose",
+            "price": 42
+          },
+          {
+            "name": "Chargrilled Toulouse sausage",
+            "price": 48
+          },
+          {
+            "name": "Pan-fried market fish",
+            "price": 48
+          },
+          {
+            "name": "Seared lamb rump",
+            "price": 48
+          },
+          {
+            "name": "Duck confit",
+            "price": 49
+          },
+          {
+            "name": "Sautéed green beans",
+            "price": 12
+          },
+          {
+            "name": "Cauliflower gratin",
+            "price": 14
+          },
+          {
+            "name": "Baby cos",
+            "price": 11
+          },
+          {
+            "name": "Hand-cut fries — small",
+            "price": 8
+          },
+          {
+            "name": "Hand-cut fries — large",
+            "price": 12
+          },
+          {
+            "name": "Confit garlic mash",
+            "price": 12
+          },
+          {
+            "name": "Roasted baby carrots",
+            "price": 12
+          },
+          {
+            "name": "Chopped cos salad",
+            "price": 14
+          },
+          {
+            "name": "Crème brûlée",
+            "price": 19
+          },
+          {
+            "name": "Ricotta beignet",
+            "price": 18
+          },
+          {
+            "name": "Meyer lemon tart",
+            "price": 17
+          },
+          {
+            "name": "Whittaker’s dark chocolate cremeux",
+            "price": 18
+          },
+          {
+            "name": "Artisan cheese — single",
+            "price": 16
+          },
+          {
+            "name": "Artisan cheese — triple",
+            "price": 38
+          }
+        ],
+        "documentUrl": "https://boulcottstreetbistro.co.nz/wp-content/uploads/2026/09/BSB-Menu-September-2026-1.pdf"
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://twentysevensteps.co.nz/twentyseven",
+    "name": "Twenty Seven Steps",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Seasonal menu",
+        "url": "https://twentysevensteps.co.nz/twentyseven",
+        "currency": "NZD",
+        "coverage": "published",
+        "note": "Prices and dishes from the current operator menu. PayWave/Mastercard/Visa surcharge 1.5%; Amex 2.2%.",
+        "items": [
+          {
+            "name": "House bread",
+            "price": 9.5
+          },
+          {
+            "name": "Olives",
+            "price": 14.5
+          },
+          {
+            "name": "Soup",
+            "price": 18
+          },
+          {
+            "name": "Slow-braised beef cheek",
+            "price": 27.5
+          },
+          {
+            "name": "Sardine escabeche",
+            "price": 22.5
+          },
+          {
+            "name": "Pork belly",
+            "price": 26.5
+          },
+          {
+            "name": "Roast baby beets",
+            "price": 23.5
+          },
+          {
+            "name": "Charred, pickled and puréed cauliflower",
+            "price": 18.5
+          },
+          {
+            "name": "Canterbury aged beef fillet — 200g",
+            "price": 63.5
+          },
+          {
+            "name": "Spring risotto — starter",
+            "price": 21.5
+          },
+          {
+            "name": "Spring risotto — main",
+            "price": 39.5
+          },
+          {
+            "name": "Fresh fish of the night",
+            "priceLabel": "Price on application"
+          },
+          {
+            "name": "Celeriac steak",
+            "price": 42.5
+          },
+          {
+            "name": "Mountain River venison",
+            "price": 54.5
+          },
+          {
+            "name": "Canterbury lamb rack",
+            "price": 59.5
+          },
+          {
+            "name": "Dark chocolate tart",
+            "price": 18.5
+          },
+          {
+            "name": "Sticky date pudding",
+            "price": 17.5
+          },
+          {
+            "name": "Brown sugar meringue roulade",
+            "price": 18
+          },
+          {
+            "name": "Vanilla poached pear",
+            "price": 18.5
+          },
+          {
+            "name": "Affogato",
+            "priceLabel": "Price on application"
+          },
+          {
+            "name": "Cheese board",
+            "priceLabel": "Price on application"
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://alcalde.com.mx/",
+    "name": "Alcalde",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Ten-course tasting experience",
+        "url": "https://www.opentable.com.mx/r/alcalde-guadalajara",
+        "currency": "MXN",
+        "coverage": "sample",
+        "note": "Current branch reservation experience. Individual courses vary and are not published. Operator menu PDFs return 404; the January 2024 à la carte listing is too old to present as current.",
+        "items": [
+          {
+            "name": "Ten-course tasting menu — per person",
+            "price": 3150
+          }
+        ]
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://restaurantepangea.com/",
+    "name": "Pangea",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "À la carte",
+        "url": "https://restaurantepangea.com/menu-restaurante-pangea/",
+        "currency": "MXN",
+        "coverage": "sample",
+        "note": "À la carte food selection; separate set menus are not reproduced. Includes 16% VAT.",
+        "items": [
+          {
+            "name": "Tomato tower",
+            "price": 285
+          },
+          {
+            "name": "Octopus and shrimp aguachile",
+            "price": 435
+          },
+          {
+            "name": "Bluefin tuna tartare",
+            "price": 435
+          },
+          {
+            "name": "Kampachi tataki",
+            "price": 485
+          },
+          {
+            "name": "Ensenada mussels",
+            "price": 385
+          },
+          {
+            "name": "Crab gratin",
+            "price": 565
+          },
+          {
+            "name": "Angus fillet tartare",
+            "price": 395
+          },
+          {
+            "name": "Foie gras terrine",
+            "price": 795
+          },
+          {
+            "name": "Green bean, asparagus and artichoke salad",
+            "price": 285
+          },
+          {
+            "name": "Beetroot and burrata",
+            "price": 295
+          },
+          {
+            "name": "Camembert soup",
+            "price": 375
+          },
+          {
+            "name": "Crispy Brie salad",
+            "price": 325
+          },
+          {
+            "name": "Fig salad",
+            "price": 345
+          },
+          {
+            "name": "Sweet corn soup",
+            "price": 295
+          },
+          {
+            "name": "Spaghetti with scampi",
+            "price": 425
+          },
+          {
+            "name": "Bucatini",
+            "price": 425
+          },
+          {
+            "name": "Zarandeado fish",
+            "price": 785
+          },
+          {
+            "name": "Roasted sweet potato",
+            "price": 395
+          },
+          {
+            "name": "Grilled prawns",
+            "price": 655
+          },
+          {
+            "name": "Confit pork",
+            "price": 545
+          },
+          {
+            "name": "Octopus",
+            "price": 495
+          },
+          {
+            "name": "Braised cabrito",
+            "price": 595
+          },
+          {
+            "name": "Fish rice",
+            "price": 645
+          },
+          {
+            "name": "Angus fillet",
+            "price": 745
+          },
+          {
+            "name": "Glazed salmon",
+            "price": 585
+          },
+          {
+            "name": "Angus ribeye",
+            "price": 1115
+          },
+          {
+            "name": "Roast chicken",
+            "price": 395
+          },
+          {
+            "name": "Rossini fillet",
+            "price": 1175
+          },
+          {
+            "name": "Duck breast",
+            "price": 695
+          },
+          {
+            "name": "SRF American Wagyu New York",
+            "price": 1895
+          }
+        ],
+        "documentUrl": "https://drive.google.com/file/d/1d1fZu-hMRWTcHkiAMozmSdOSlx_OIb6S/view"
+      },
+      {
+        "label": "Desserts",
+        "url": "https://restaurantepangea.com/menu-restaurante-pangea/",
+        "currency": "MXN",
+        "coverage": "published",
+        "note": "Food items from the linked dessert menu. Includes 16% VAT.",
+        "items": [
+          {
+            "name": "Chocolate financier",
+            "price": 295
+          },
+          {
+            "name": "Apple millefeuille",
+            "price": 265
+          },
+          {
+            "name": "Corn chiffon",
+            "price": 295
+          },
+          {
+            "name": "Raspberry and lychee pavlova",
+            "price": 265
+          },
+          {
+            "name": "Warm chocolate cake",
+            "price": 295
+          },
+          {
+            "name": "Sticky fig cake",
+            "price": 265
+          },
+          {
+            "name": "Mamey mostachón",
+            "price": 295
+          },
+          {
+            "name": "Ice creams and sorbets — three choices",
+            "price": 245
+          },
+          {
+            "name": "Seasonal mango",
+            "price": 285
+          }
+        ],
+        "documentUrl": "https://drive.google.com/file/d/1_wix1Bl2_2yzmRiMnAQEHaIraaQvF_E5/view"
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://rosetta.com.mx/",
+    "name": "Rosetta",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Seasonal menu",
+        "url": "https://rosetta.com.mx/menu",
+        "currency": "MXN",
+        "coverage": "published",
+        "note": "All named dishes from the current Spanish operator menu. Prices are not published; confirm dishes and prices directly.",
+        "items": [
+          {
+            "name": "Sardinas encurtidas, pesto de hierbas y cebolla morada",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Callo margarita y leche de tigre de maíz cacahuazintle",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Ensalada de peras, queso pecorino y hoja de aguacate",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Endivias, nogada y granada",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Tomatillos, nopales, piloncillo, queso de Ocosingo y chile meco",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Ensalada de ejotes, habas, papa y parmesano",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Pan de maíz y ceniza con mantequilla de hormigas chicatanas",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Mole blanco y zanahorias fermentadas",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Tacos de col rizada, pipián de pistaches y romeritos",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Tamal de elote y huitlacoche con crema ahumada",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Minestrone de verduras",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Chileatole de maíz tierno, epazote y aguacate",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Gnocchi de papa, broccolini, flor de nabo y anchoas",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Orecchiette de trigo sarraceno con frijoles ahumados",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Risotto con esquites y queso cotija",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Pansotti de papa y parmesano con hongos duraznillo",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Tagliolini de chile cascabel, escamoles y caldo de camarón",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Tagliatelle, morillas y paté de higaditos de pollo",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Tagliatelle con salchicha italiana y chile de árbol",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Ravioles de short rib, zanahoria y chile serrano",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Tamal de camote, salsa macha y suero de leche",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Alcachofa de Jerusalén, romesco rojo, col de Bruselas y verdolagas",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Huachinango, puré de piña y xoconostle",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Robalo en costra de sal, verdolagas y salicornia",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Filete de cordero, puré de berenjena y pimientos encurtidos",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Cabeza de lomo de cerdo, entomatado de hormigas chicatanas y verdolagas",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Nicuatole de tamarindo, piloncillo y chile meco",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Peras, flor de saúco y estragón",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Hierbas frescas, helado de romero y aceite de oliva",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Gelatina de miel Tsitsilché, durazno y helado de mantequilla avellanada",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Hoja santa y cacao criollo blanco",
+            "priceLabel": "Price not published"
+          },
+          {
+            "name": "Pastel tres leches de mamey y pixtle",
+            "priceLabel": "Price not published"
+          }
+        ]
+      }
+    ],
+    "specials": []
   }
 ]

@@ -4861,5 +4861,256 @@
         "url": "https://www.africola.com.au/#bookings"
       }
     ]
+  },
+  {
+    "pinSourceUrl": "https://www.ukai.co.jp/english/ginza/",
+    "name": "Ginza Ukai-tei",
+    "websiteUrl": "https://www.ukai.co.jp/english/ginza/",
+    "phone": "+81-3-3544-5252",
+    "openingHours": [
+      {
+        "days": "Monday–Friday (subject to closing days)",
+        "hours": "12:00–16:00; 17:00–21:30"
+      },
+      {
+        "days": "Saturday and public holidays",
+        "hours": "11:30–16:00; 17:00–21:30"
+      }
+    ],
+    "hoursNote": "Closed Sundays and twice monthly on Mondays. Last orders: lunch 13:30, dinner 19:30. Check the operator calendar.",
+    "detailsSourceUrl": "https://www.ukai.co.jp/english/ginza/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://kikunoi.jp/restaurant/roan.html",
+    "name": "Roan Kikunoi",
+    "websiteUrl": "https://kikunoi.jp/restaurant/roan.html",
+    "phone": "+81-75-361-5580",
+    "openingHours": [
+      {
+        "days": "Lunch",
+        "hours": "11:30–15:30 (last seating 13:30)"
+      },
+      {
+        "days": "Dinner",
+        "hours": "17:00–22:00 (last seating 19:30)"
+      }
+    ],
+    "hoursNote": "Reservations by telephone. The booking section lists Wednesday closures; the shop-information section also notes irregular and New Year closures. Confirm the date when booking.",
+    "detailsSourceUrl": "https://kikunoi.jp/restaurant/roan.html",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://www.harijyu.co.jp/shop-info/category/doutonbori/",
+    "name": "Harijyu Dotonbori — Japanese Cuisine",
+    "websiteUrl": "https://www.harijyu.co.jp/shop-info/category/doutonbori/",
+    "phone": "+81-6-6211-7777",
+    "openingHours": [
+      {
+        "days": "Wednesday–Monday",
+        "hours": "11:30–15:30; 17:00–21:00"
+      }
+    ],
+    "hoursNote": "Closed Tuesdays except public holidays and December. Last orders: lunch 14:30, dinner 20:00. These details are for the second-floor Japanese restaurant, not the grill or curry shop.",
+    "detailsSourceUrl": "https://www.harijyu.co.jp/shop-info/category/doutonbori/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+    "name": "Jardin des Sens Tokyo",
+    "websiteUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+    "phone": "+81-3-5220-2701",
+    "openingHours": [
+      {
+        "days": "Daily lunch",
+        "hours": "11:30–15:30"
+      },
+      {
+        "days": "Monday–Saturday dinner",
+        "hours": "18:00–23:00"
+      },
+      {
+        "days": "Sunday and public-holiday dinner",
+        "hours": "18:00–22:00"
+      }
+    ],
+    "hoursNote": "Restaurant service from October 30. Last orders: lunch 13:30; dinner 20:00. Lounge hours differ.",
+    "detailsSourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://www.herofield.com/bbq/tokyoprince/",
+    "name": "BBQPIT@Tokyo Prince Hotel",
+    "websiteUrl": "https://www.herofield.com/bbq/tokyoprince/",
+    "phone": "+81-50-1792-5828",
+    "openingHours": [
+      {
+        "days": "Weekdays",
+        "hours": "17:00–22:00"
+      },
+      {
+        "days": "Saturday",
+        "hours": "11:00–16:00; 17:00–21:00"
+      }
+    ],
+    "hoursNote": "Sunday by enquiry. Public holidays: 11:00–16:00; days before holidays: 11:00–16:00 and 17:00–21:00. Last orders 30 minutes before closing. Confirm the chosen site and booking time.",
+    "detailsSourceUrl": "https://www.herofield.com/bbq/tokyoprince/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000010.000035415.html",
+    "name": "Kanijenne Gion",
+    "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000010.000035415.html",
+    "phone": "+81-75-746-7555",
+    "openingHours": [
+      {
+        "days": "Reservation seatings",
+        "hours": "12:00; 18:00; 20:30"
+      }
+    ],
+    "hoursNote": "Irregular closing days. Reservation required; listed times are course seatings.",
+    "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000010.000035415.html",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000043.000129324.html",
+    "name": "Neo Nice Burger Kyoto Teramachi",
+    "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000043.000129324.html",
+    "phone": null,
+    "openingHours": [
+      {
+        "days": "Daily",
+        "hours": "11:00–22:00"
+      }
+    ],
+    "hoursNote": "Last order 21:30; irregular closing days. Operator announcement supplies the opening date; an October 7 local report confirms the shop opened.",
+    "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000043.000129324.html",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://www.oreno.co.jp/restaurant/kappou_umeda_kitashinchi",
+    "name": "Oreno Kappo Umeda Kitashinchi",
+    "websiteUrl": "https://www.oreno.co.jp/restaurant/kappou_umeda_kitashinchi",
+    "phone": "+81-6-6136-7560",
+    "openingHours": [
+      {
+        "days": "Daily",
+        "hours": "17:00–23:00"
+      }
+    ],
+    "hoursNote": "Food last order 22:00; drinks 22:30. The September opening discount expired September 30 and is not presented as current.",
+    "detailsSourceUrl": "https://www.oreno.co.jp/restaurant/kappou_umeda_kitashinchi",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra",
+    "name": "AOI NAPOLI OMBRA",
+    "websiteUrl": "https://ombra.aoinapoli.jp/",
+    "phone": "+81-70-1241-4413",
+    "openingHours": [
+      {
+        "days": "Daily lunch",
+        "hours": "11:00–15:00"
+      },
+      {
+        "days": "Daily dinner",
+        "hours": "17:00–23:00"
+      },
+      {
+        "days": "Daily cafe",
+        "hours": "11:00–23:00"
+      }
+    ],
+    "hoursNote": "Opening day November 20 starts at noon. Regular hours from operator; lunch last order 15:00, dinner/cafe last order 22:00.",
+    "detailsSourceUrl": "https://ombra.aoinapoli.jp/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://ahirestaurant.co.nz/",
+    "name": "Ahi",
+    "websiteUrl": "https://ahirestaurant.co.nz/",
+    "phone": null,
+    "openingHours": [],
+    "hoursNote": "Confirm service hours with the restaurant; no complete hours verified.",
+    "detailsSourceUrl": "https://ahirestaurant.co.nz/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://boulcottstreetbistro.co.nz/",
+    "name": "Boulcott Street Bistro",
+    "websiteUrl": "https://boulcottstreetbistro.co.nz/",
+    "phone": "+64-4-4994199",
+    "openingHours": [
+      {
+        "days": "Monday–Friday lunch",
+        "hours": "From 12:00"
+      },
+      {
+        "days": "Monday–Saturday dinner",
+        "hours": "From 17:30"
+      }
+    ],
+    "hoursNote": "Closing times are not published; confirm holiday service.",
+    "detailsSourceUrl": "https://boulcottstreetbistro.co.nz/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://twentysevensteps.co.nz/twentyseven",
+    "name": "Twenty Seven Steps",
+    "websiteUrl": "https://twentysevensteps.co.nz/twentyseven",
+    "phone": "+64-3-3662727",
+    "openingHours": [
+      {
+        "days": "Daily",
+        "hours": "From 17:00"
+      }
+    ],
+    "hoursNote": "Closed public holidays and Christmas Eve; closing time not published.",
+    "detailsSourceUrl": "https://twentysevensteps.co.nz/twentyseven",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://alcalde.com.mx/",
+    "name": "Alcalde",
+    "websiteUrl": "https://alcalde.com.mx/",
+    "phone": "+52-33-36157400",
+    "openingHours": [
+      {
+        "days": "Monday–Saturday",
+        "hours": "13:30–23:00"
+      }
+    ],
+    "hoursNote": "18:00–19:00 drinks only. Tasting-menu service 14:00–16:30 and 19:00–22:00; Sunday closed.",
+    "detailsSourceUrl": "https://alcalde.com.mx/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://restaurantepangea.com/",
+    "name": "Pangea",
+    "websiteUrl": "https://restaurantepangea.com/",
+    "phone": "+52-81-81146601",
+    "openingHours": [
+      {
+        "days": "Monday–Saturday",
+        "hours": "13:00–00:00"
+      },
+      {
+        "days": "Sunday",
+        "hours": "13:00–18:00"
+      }
+    ],
+    "hoursNote": "",
+    "detailsSourceUrl": "https://restaurantepangea.com/",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://rosetta.com.mx/",
+    "name": "Rosetta",
+    "websiteUrl": "https://rosetta.com.mx/",
+    "phone": "+52-55-55337804",
+    "openingHours": [],
+    "hoursNote": "No complete service hours verified on the operator contact page.",
+    "detailsSourceUrl": "https://rosetta.com.mx/",
+    "checkedAt": "2026-10-09"
   }
 ]

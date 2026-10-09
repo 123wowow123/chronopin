@@ -1,7 +1,7 @@
 import Anchor from '@/components/ui/Anchor';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
-import { restaurantMenuFor, restaurantMenuState, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
+import { restaurantMenuAmount, restaurantMenuFor, restaurantMenuState, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
 import { RestaurantMenuTabs } from './RestaurantMenuTabs';
 import styles from './RestaurantMenu.module.css';
 import { specialVenueForSource } from '@/server/model/restaurantSpecialVenue';
@@ -12,7 +12,7 @@ function SourceLink({ url, children }: { url: string; children: ReactNode }) {
 
 function MenuContent({ menu }: { menu: RestaurantMenu }) {
   const categories = [...new Set(menu.items.map((item) => item.category || 'Menu'))];
-  const amount = (value: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: Number.isInteger(value) ? 0 : 2 }).format(value);
+  const amount = (value: number) => restaurantMenuAmount(value, menu.currency);
   const categoryTabs = categories.map((category) => {
     const items = menu.items.filter((item) => (item.category || 'Menu') === category);
     return { label: category, content: <div className={styles.menuItems} tabIndex={0} aria-label={`${category} items`}>

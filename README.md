@@ -417,3 +417,13 @@ can anyone commit to chronopin git? should automerge PR from this computer and o
 
 
 add button on landing page to suggest a product or restaurant to add to list. should have community voted section
+
+
+
+add china restaurant landing page
+add taiwan restaurant landing page
+
+add restaurant landing page for all major cities around the world
+
+
+https://www.chronopin.com/pin/6939/africola-adelaide-restaurant-guide

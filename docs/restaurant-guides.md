@@ -98,19 +98,14 @@ to their branch. `menuLabel` attaches the discounted menu, and
 The section refreshes every 15 seconds and on tab focus using the city's time
 zone, displays conditions and the menu check date, and links to the operator
 for redemption. Chronopin does not process restaurant orders.
-When no offers are active in the selected neighborhood, the tab shows the next
-specials at restaurants rated at least 4.5/5 from 100 reviews. Show each venue’s
-earliest special once, up to 20 venues. The Rating/Distance toggle defaults to
-highest rating, then most reviews. Distance requests the viewer’s browser
-location only when selected, orders approximate straight-line distances nearest
-first, and puts unknown coordinates last. Denied or failed location requests
-keep rating order with a retry message. Both sorts apply before the 20-venue cap.
-Coordinates include their source and check date on the menu profile. Local
-calendar calculations preserve service hours through DST changes, validity
-dates, and holiday exclusions. The fallback never labels future service as
-available now. Verified review scores include their publisher, count, source,
-and check date; unrated venues remain eligible for active offers but cannot
-enter the highly rated fallback.
+Keep the Specials tab visible whenever verified active or upcoming offers exist,
+including outside service hours and without published review scores. Active and
+upcoming offers have separate sections; each upcoming card displays its next
+start date and time in the restaurant's time zone. Show each venue's earliest
+special once, up to 100 venues. Expired offers are excluded. Rating and distance
+sorting still apply; ratings determine order, not eligibility. Unknown coordinates
+sort last. Coordinates retain source and check date. Local calendar calculations
+preserve service hours through DST changes, validity dates and holiday exclusions.
 Additional established venues live in `restaurantSpecials.json`, allowing
 specials to appear without requiring a recent opening pin. Existing source
 matches keep their pin links; other venues link to their operator website.

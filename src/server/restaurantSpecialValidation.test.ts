@@ -12,7 +12,7 @@ describe('restaurant special management validation', () => {
   it('rejects invalid source links, coordinates, ratings, and service windows', () => {
     const invalid = input(); invalid.profile.specials[0].sourceUrl = 'javascript:alert(1)';
     expect(() => parseSpecialVenue(invalid)).toThrow('Invalid special');
-    const location = input(); location.profile.location.latitude = 91;
+    const location = input(); location.profile.location!.latitude = 91;
     expect(() => parseSpecialVenue(location)).toThrow('Invalid location');
     const review = input(); review.profile.review!.count = 2.5;
     expect(() => parseSpecialVenue(review)).toThrow('Invalid review evidence');

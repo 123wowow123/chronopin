@@ -17,6 +17,9 @@ export const RESTAURANT_REGIONS = [
   { slug: 'edmonton', name: 'Edmonton', country: 'Canada', state: 'Alberta', timeZone: 'America/Edmonton', latitude: 53.5461, longitude: -113.4938 },
   { slug: 'phoenix', name: 'Phoenix', country: 'United States', state: 'Arizona', timeZone: 'America/Phoenix', latitude: 33.4484, longitude: -112.074 },
   { slug: 'saskatoon', name: 'Saskatoon', country: 'Canada', state: 'Saskatchewan', timeZone: 'America/Regina', latitude: 52.1332, longitude: -106.67 },
+  { slug: 'guadalajara', name: 'Guadalajara', country: 'Mexico', state: 'Jalisco', timeZone: 'America/Mexico_City', latitude: 20.6597, longitude: -103.3496 },
+  { slug: 'monterrey', name: 'Monterrey', country: 'Mexico', state: 'Nuevo León', timeZone: 'America/Monterrey', latitude: 25.6866, longitude: -100.3161 },
+  { slug: 'mexico-city', name: 'Mexico City', country: 'Mexico', state: 'Mexico City', timeZone: 'America/Mexico_City', latitude: 19.4326, longitude: -99.1332 },
   { slug: 'san-antonio', name: 'San Antonio', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 29.4241, longitude: -98.4936 },
   { slug: 'austin', name: 'Austin', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 30.2672, longitude: -97.7431 },
   { slug: 'fort-worth', name: 'Fort Worth', country: 'United States', state: 'Texas', timeZone: 'America/Chicago', latitude: 32.7555, longitude: -97.3308 },
@@ -55,10 +58,16 @@ export const RESTAURANT_REGIONS = [
   { slug: 'vienna', name: 'Vienna', country: 'Austria', state: 'Austria', timeZone: 'Europe/Vienna', latitude: 48.2082, longitude: 16.3738 },
   { slug: 'stockholm', name: 'Stockholm', country: 'Sweden', state: 'Sweden', timeZone: 'Europe/Stockholm', latitude: 59.3293, longitude: 18.0686 },
   { slug: 'perth', name: 'Perth', country: 'Australia', state: 'Western Australia', timeZone: 'Australia/Perth', latitude: -31.9523, longitude: 115.8613 },
+  { slug: 'osaka', name: 'Osaka', country: 'Japan', state: 'Osaka', timeZone: 'Asia/Tokyo', latitude: 34.6937, longitude: 135.5023 },
+  { slug: 'kyoto', name: 'Kyoto', country: 'Japan', state: 'Kyoto', timeZone: 'Asia/Tokyo', latitude: 35.0116, longitude: 135.7681 },
   { slug: 'adelaide', name: 'Adelaide', country: 'Australia', state: 'South Australia', timeZone: 'Australia/Adelaide', latitude: -34.9285, longitude: 138.6007 },
+  { slug: 'tokyo', name: 'Tokyo', country: 'Japan', state: 'Tokyo', timeZone: 'Asia/Tokyo', latitude: 35.6762, longitude: 139.6503 },
   { slug: 'melbourne', name: 'Melbourne', country: 'Australia', state: 'Victoria', timeZone: 'Australia/Melbourne', latitude: -37.8136, longitude: 144.9631 },
   { slug: 'sydney', name: 'Sydney', country: 'Australia', state: 'New South Wales', timeZone: 'Australia/Sydney', latitude: -33.8688, longitude: 151.2093 },
   { slug: 'brisbane', name: 'Brisbane', country: 'Australia', state: 'Queensland', timeZone: 'Australia/Brisbane', latitude: -27.4698, longitude: 153.0251 },
+  { slug: 'christchurch', name: 'Christchurch', country: 'New Zealand', state: 'Canterbury', timeZone: 'Pacific/Auckland', latitude: -43.5321, longitude: 172.6362 },
+  { slug: 'auckland', name: 'Auckland', country: 'New Zealand', state: 'Auckland', timeZone: 'Pacific/Auckland', latitude: -36.8509, longitude: 174.7645 },
+  { slug: 'wellington', name: 'Wellington', country: 'New Zealand', state: 'Wellington', timeZone: 'Pacific/Auckland', latitude: -41.2866, longitude: 174.7756 },
 ] as const;
 
 // Countries follow their westernmost guide city in the west-to-east region list.

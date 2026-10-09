@@ -1,6 +1,14 @@
 # Restaurant specials
 
-## Current coverage — October 8, 2026
+## Display behavior — October 9, 2026
+
+Keep Specials visible whenever verified active or upcoming offers exist, including
+outside service hours and without published ratings. Each upcoming card shows
+its next local start date and time; active cards show when service ends. Expired
+offers are excluded. The earlier rating thresholds described in the research
+history below no longer control display eligibility.
+
+## Coverage — October 8, 2026
 
 New York and Los Angeles each have 50 qualifying restaurants; San Diego has 51, including a backup for an expiring promotion. The next-specials view supports up to 50 distinct venues. See the [expansion audit](restaurant-specials-expansion.md) for the 128 additions, published schedules, rating snapshots, and limitations.
 

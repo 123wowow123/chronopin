@@ -51,12 +51,20 @@ export type RestaurantMenuProfile = {
 export type RestaurantMenu = {
   label: string;
   url: string;
+  currency?: string;
   note?: string;
   coverage?: 'published' | 'sample' | 'link';
   documentUrl?: string;
   pages?: { src: string; width: number; height: number; label?: string }[];
   items: { name: string; category?: string; price?: number; priceLabel?: string; note?: string }[];
 };
+
+export function restaurantMenuAmount(value: number, currency = 'USD'): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency', currency,
+    minimumFractionDigits: Number.isInteger(value) ? 0 : undefined,
+  }).format(value);
+}
 
 export function restaurantSourceKey(value: string): string {
   try {

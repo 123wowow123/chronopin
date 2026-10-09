@@ -1,10 +1,52 @@
 import { describe, expect, it } from 'vitest';
-import { restaurantMenuFor, restaurantMenuRescrapeCandidates, restaurantMenuState, type RestaurantMenuProfile } from './restaurantMenus';
+import { restaurantMenuAmount, restaurantMenuFor, restaurantMenuRescrapeCandidates, restaurantMenuState, type RestaurantMenuProfile } from './restaurantMenus';
 import topPins from '@/server/data/sanDiegoTopRestaurants.preview.json';
 import regionalCatalog from '@/server/data/regionalRestaurants.json';
 import { RESTAURANT_REGIONS } from './restaurants';
 
 describe('branch-specific restaurant menus and specials', () => {
+  it('keeps New Zealand and Mexican menu coverage sourced and distinguishes unpublished prices', () => {
+    const countries = new Map<string, string>(RESTAURANT_REGIONS.map((region) => [region.slug, region.country]));
+    const restaurants = regionalCatalog.filter((row) => ['New Zealand', 'Mexico'].includes(countries.get(row.regionSlug)!));
+    expect(restaurants).toHaveLength(6);
+    for (const restaurant of restaurants) {
+      const profile = restaurantMenuFor(restaurant.sourceUrl)!;
+      expect(profile.name).toBe(restaurant.name);
+      expect(profile.menus.every((menu) => menu.items.length > 0 && menu.currency === (countries.get(restaurant.regionSlug) === 'Mexico' ? 'MXN' : 'NZD'))).toBe(true);
+    }
+    const rosetta = restaurantMenuFor('https://rosetta.com.mx/')!;
+    expect(rosetta.menus[0].items).toHaveLength(32);
+    expect(rosetta.menus[0].items.every((item) => item.price === undefined && item.priceLabel === 'Price not published')).toBe(true);
+    const alcalde = restaurantMenuFor('https://alcalde.com.mx/')!;
+    expect(alcalde.menus[0].items[0].price).toBe(3150);
+    expect(alcalde.menus[0].note).toContain('404');
+  });
+  it('formats yen without dollars or decimal places and preserves existing dollar prices', () => {
+    expect(restaurantMenuAmount(13200, 'JPY')).toBe('¥13,200');
+    expect(restaurantMenuAmount(6600, 'JPY')).toBe('¥6,600');
+    expect(restaurantMenuAmount(14)).toBe('$14');
+    expect(restaurantMenuAmount(14.5)).toBe('$14.50');
+    expect(restaurantMenuAmount(195, 'NZD')).toBe('NZ$195');
+    expect(restaurantMenuAmount(27.5, 'NZD')).toBe('NZ$27.50');
+    expect(restaurantMenuAmount(31, 'MXN')).toBe('MX$31');
+  });
+  it('gives Japanese selections sourced yen menus and explains unreleased opening menus', () => {
+    const restaurants = regionalCatalog.filter((row) => RESTAURANT_REGIONS.some((region) => region.country === 'Japan' && region.slug === row.regionSlug));
+    expect(new Set(restaurants.map((row) => row.regionSlug))).toEqual(new Set(['tokyo', 'kyoto', 'osaka']));
+    for (const restaurant of restaurants) {
+      const profile = restaurantMenuFor(restaurant.sourceUrl)!;
+      expect(profile.name).toBe(restaurant.name);
+      expect(profile.menus.every((menu) => menu.currency === 'JPY')).toBe(true);
+      if (restaurant.slug === 'aoinapoli-ombra') {
+        expect(profile.menus[0].coverage).toBe('link');
+        expect(profile.menus[0].note).toContain('publish no named dishes or prices yet');
+      } else {
+        expect(profile.menus.every((menu) => ['published', 'sample'].includes(menu.coverage!) && menu.items.length > 0)).toBe(true);
+      }
+      if (restaurant.kind === 'top') expect(profile.specials).toEqual([]);
+      expect(restaurant.image).toMatch(/^https:\/\/chronopin\.blob\.core\.windows\.net\//);
+    }
+  });
   it('keeps Canadian menu sources specific to each restaurant and marks prices as CAD', () => {
     for (const restaurant of regionalCatalog.filter((row) => RESTAURANT_REGIONS.some((region) => region.country === 'Canada' && region.slug === row.regionSlug))) {
       const profile = restaurantMenuFor(restaurant.sourceUrl)!;

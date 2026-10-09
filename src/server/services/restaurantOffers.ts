@@ -28,15 +28,20 @@ export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants:
       if (!special.discounted || !special.availability) return [];
       let availability = special.availability!;
       if (availability.excludesHolidays) {
-        // Resolve only calendars confirmed for these California promotions.
+        // Resolve only calendars confirmed for these branch-specific promotions.
         // With no branch-specific calendar, leave the offer unresolved/hidden.
-        if ([
+        const californiaPromotion = [
           'https://www.telefericbarcelona.com/lajolla',
           'https://cloakandpetal.com/',
           'https://www.opentable.com/restaurant/profile/2811', // ROCK’N FISH Manhattan Beach
           'https://www.opentable.com/restaurant/profile/3973', // Il Fornaio Del Mar
-        ].includes(profile.pinSourceUrl)) {
-          const holidays = new Holidays('US', 'ca');
+        ].includes(profile.pinSourceUrl);
+        const japanPromotion = [
+          'https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour',
+          'https://www.herofield.com/bbq/tokyoprince/',
+        ].includes(profile.pinSourceUrl);
+        if (californiaPromotion || japanPromotion) {
+          const holidays = japanPromotion ? new Holidays('JP') : new Holidays('US', 'ca');
           const year = Number(today.slice(0, 4));
           const excludedDates = [year - 1, year, year + 1].flatMap((year) => holidays.getHolidays(year).filter((holiday) => holiday.type === 'public').map((holiday) => holiday.date.slice(0, 10)));
           availability = { ...availability, excludedDates: [...new Set([...availability.excludedDates ?? [], ...excludedDates])] };

@@ -38,7 +38,7 @@ const VIEWS = [
   { key: 'upcoming', label: 'Coming soon', mobileLabel: 'Soon', hash: '#upcoming' },
   { key: 'new', label: 'Just opened', mobileLabel: 'New', hash: '#new' },
   { key: 'top', label: 'Top restaurants', mobileLabel: 'Top rated', hash: '#top-restaurants' },
-  { key: 'discounts', label: 'Discounted menus available now', mobileLabel: 'Specials', hash: '#available-now' },
+  { key: 'discounts', label: 'Specials', mobileLabel: 'Specials', hash: '#available-now' },
 ] as const;
 
 function subscribeToHash(listener: () => void) {
@@ -60,11 +60,9 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const hash = useSyncExternalStore(subscribeToHash, currentHash, serverHash);
   const queryView = useQueryParam('view');
   const [selectedNeighborhood, setNeighborhood] = useState('all');
-  const [countrySelection, setCountrySelection] = useState({ regionSlug: region.slug, country: region.country });
   const availableRegions = RESTAURANT_REGIONS.filter((city) => availableRegionSlugs.includes(city.slug));
   const countries = RESTAURANT_COUNTRIES.filter((country) => availableRegions.some((city) => city.country === country));
-  const preferredCountry = countrySelection.regionSlug === region.slug ? countrySelection.country : region.country;
-  const selectedCountry = countries.find((country) => country === preferredCountry) ?? countries[0];
+  const selectedCountry = countries.find((country) => country === region.country) ?? countries[0];
   const countryNav = useRef<HTMLElement>(null);
   const cityNav = useRef<HTMLElement>(null);
   const viewNav = useRef<HTMLElement>(null);
@@ -72,7 +70,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const { counts } = summary;
   const specialCount = counts.discounts;
   const views = VIEWS.filter((view) => counts[view.key] > 0);
-  // Old bookmarks and links from another city can point to an empty view.
+  // Empty tabs stay hidden; old links fall back to a populated view.
   const status: GuideView = views.find((view) => view.key === queryView)?.key ?? views.find((view) => view.hash === hash || (view.key === 'discounts' && hash === '#next-specials'))?.key ?? views.find((view) => view.key === initialView)?.key ?? views[0]?.key ?? 'upcoming';
   const top = status === 'top';
   const discounts = status === 'discounts';
@@ -90,7 +88,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
 
   useEffect(() => {
     const nav = countryNav.current;
-    const selected = nav?.querySelector<HTMLElement>('[aria-pressed="true"]');
+    const selected = nav?.querySelector<HTMLElement>('[aria-current="location"]');
     if (nav && selected) nav.scrollLeft = selected.offsetLeft - (nav.clientWidth - selected.clientWidth) / 2;
   }, [selectedCountry]);
 
@@ -130,9 +128,10 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
         <div className={styles.guideNav}>
           <Link href="/restaurants" className={styles.wordmark}><span aria-hidden="true">✳</span> The opening guide</Link>
           <nav ref={countryNav} className={styles.countryNav} aria-label="Restaurant guide country">
-            {countries.map((country) => (
-              <button key={country} type="button" aria-pressed={country === selectedCountry} onClick={() => setCountrySelection({ regionSlug: region.slug, country })}>{country}</button>
-            ))}
+            {countries.map((country) => {
+              const firstCity = availableRegions.find((city) => city.country === country)!;
+              return <Link key={country} href={`/restaurants/${country === selectedCountry ? region.slug : firstCity.slug}`} aria-current={country === selectedCountry ? 'location' : undefined}>{country}</Link>;
+            })}
           </nav>
         </div>
 
@@ -185,7 +184,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
           </div>
           {discounts ? <AvailableRestaurantOffers key={region.slug} regionSlug={region.slug} neighborhood={neighborhood} initialPages={initialPages as Record<string, GuidePage<ScheduledRestaurantOffer>>} timeZone={timeZone} city={region.name} /> : <>
           {pages.ready && <p className={styles.results} aria-live="polite">{shown} {top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>}
-          {pages.ready && !shown ? <div className={styles.empty}><h3>{top ? 'No top restaurants match those filters.' : counts.upcoming + counts.new ? 'No openings match those filters.' : 'The next opening is still on its way.'}</h3><p>{top || counts.upcoming + counts.new ? 'Try another neighborhood.' : 'Check back for newly announced restaurants in this region.'}</p>{(top || counts.upcoming + counts.new > 0) && <button type="button" onClick={top ? () => { setNeighborhood('all'); } : reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection pageHref={(page) => guidePageHref(pathname, 'top', page, '#top-restaurants')} pages={pages as GuidePages<TopRestaurant>} sortState={selectedSort} mapHref={`/map?${selectedMapParams}`} /> : status === 'upcoming'
+          {pages.ready && !shown ? <div className={styles.empty}><h3>{neighborhood !== 'all' ? (top ? 'No top restaurants match those filters.' : 'No openings match those filters.') : top ? 'No top restaurant selections yet.' : status === 'new' ? 'No confirmed openings in the last 90 days yet.' : 'No upcoming openings announced yet.'}</h3><p>{neighborhood !== 'all' ? 'Try another neighborhood.' : 'Check back for newly sourced restaurants in this region.'}</p>{neighborhood !== 'all' && <button type="button" onClick={reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection pageHref={(page) => guidePageHref(pathname, 'top', page, '#top-restaurants')} pages={pages as GuidePages<TopRestaurant>} sortState={selectedSort} mapHref={`/map?${selectedMapParams}`} /> : status === 'upcoming'
             ? <OpeningSection pageHref={(page) => guidePageHref(pathname, 'upcoming', page, '#upcoming')} id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." pages={pages as GuidePages<Restaurant>} group="upcoming" today={today} href={href} sortState={upcomingSort} mapHref={`/map?${selectedMapParams}`} />
             : <OpeningSection pageHref={(page) => guidePageHref(pathname, 'new', page, '#new')} id="new" title="Freshly opened" subtitle="New tables, new flavors. Opened within the last 90 days." pages={pages as GuidePages<Restaurant>} group="new" today={today} href={href} sortState={recentSort} mapHref={`/map?${selectedMapParams}`} />}
           </>}

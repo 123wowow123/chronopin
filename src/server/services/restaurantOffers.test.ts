@@ -24,6 +24,42 @@ const venue: Restaurant = {
 const NO_SPECIALS_YET = ['fort-lauderdale', 'honolulu', 'palm-springs'];
 
 describe('regional restaurant offers', () => {
+  it('honors Mexican promotion expiry and New Zealand branch hours', () => {
+    for (const slug of ['guadalajara', 'monterrey', 'mexico-city']) {
+      const offers = regionalRestaurantOffers([], [], '2026-10-08', slug);
+      expect(offers).toHaveLength(1);
+      expect(offers[0].menu?.currency).toBe('MXN');
+      expect(offers[0].menu?.items[0].price).toBe(31);
+      expect(activeRestaurantOffer(offers[0].special, new Date('2026-10-08T19:00:00Z'), 'America/Mexico_City')).not.toBeNull();
+      expect(activeRestaurantOffer(offers[0].special, new Date('2026-10-09T19:00:00Z'), 'America/Mexico_City')).toBeNull();
+      expect(restaurantOffersToShow(offers, new Date('2027-01-07T19:00:00Z'), 'America/Mexico_City').offers).toEqual([]);
+    }
+    const somm = regionalRestaurantOffers([], [], '2026-10-09', 'auckland')[0];
+    expect(somm.menu?.items.find((item) => item.name === 'Guest beer')?.price).toBe(8);
+    expect(activeRestaurantOffer(somm.special, new Date('2026-10-09T03:30:00Z'), 'Pacific/Auckland')).not.toBeNull();
+    expect(activeRestaurantOffer(somm.special, new Date('2026-10-12T03:30:00Z'), 'Pacific/Auckland')).toBeNull();
+    const rambler = regionalRestaurantOffers([], [], '2026-10-09', 'christchurch')[0];
+    expect(activeRestaurantOffer(rambler.special, new Date('2026-10-12T03:30:00Z'), 'Pacific/Auckland')).not.toBeNull();
+    expect(activeRestaurantOffer(rambler.special, new Date('2026-10-12T05:00:00Z'), 'Pacific/Auckland')).toBeNull();
+  });
+  it('uses Japanese holiday calendars and the published end date for researched Japan offers', () => {
+    const osaka = regionalRestaurantOffers([], [], '2026-10-09', 'osaka');
+    expect(osaka).toHaveLength(1);
+    const happyHour = osaka[0];
+    expect(happyHour.special.availability?.excludedDates).toContain('2026-10-12');
+    expect(happyHour.special.availability?.excludedDates).toContain('2026-11-03');
+    expect(activeRestaurantOffer(happyHour.special, new Date('2026-10-09T08:30:00Z'), 'Asia/Tokyo')).not.toBeNull();
+    expect(activeRestaurantOffer(happyHour.special, new Date('2026-10-12T08:30:00Z'), 'Asia/Tokyo')).toBeNull();
+    const tokyo = regionalRestaurantOffers([], [], '2026-10-09', 'tokyo')[0];
+    expect(tokyo.menu?.items.map((item) => item.price)).toEqual([6100, 7800, 10000]);
+    expect(activeRestaurantOffer(tokyo.special, new Date('2026-11-30T08:30:00Z'), 'Asia/Tokyo')).not.toBeNull();
+    expect(activeRestaurantOffer(tokyo.special, new Date('2026-12-01T08:30:00Z'), 'Asia/Tokyo')).toBeNull();
+    expect(activeRestaurantOffer(tokyo.special, new Date('2026-11-02T08:30:00Z'), 'Asia/Tokyo')).toBeNull();
+    const kyoto = regionalRestaurantOffers([], [], '2026-10-09', 'kyoto')[0];
+    expect(kyoto.menu?.items).toHaveLength(60);
+    expect(activeRestaurantOffer(kyoto.special, new Date('2026-10-09T08:30:00Z'), 'Asia/Tokyo')).not.toBeNull();
+    expect(activeRestaurantOffer(kyoto.special, new Date('2026-10-09T10:00:00Z'), 'Asia/Tokyo')).toBeNull();
+  });
   it('attaches only discounted specials with known schedules to confirmed venues', () => {
     const offers = regionalRestaurantOffers([venue, venue, { ...venue, id: 2, sourceUrl: 'https://example.com/' }], [], '2026-10-07');
     expect(offers).toHaveLength(1);

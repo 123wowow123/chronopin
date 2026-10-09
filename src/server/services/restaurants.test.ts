@@ -46,7 +46,11 @@ describe('regional restaurant data', () => {
       { city: 'berlin', day: '2026-11-01', dateConfidence: 'estimated', sourceUrl: null },
       { city: 'Vienna', day: '2026-01-01', dateConfidence: 'estimated', sourceUrl: null },
     ]);
-    expect(await restaurantGuideRegionSlugs()).toEqual([...RESTAURANT_REGIONS.filter((region) => region.country === 'United States').map((region) => region.slug), 'madrid', 'paris', 'berlin']);
+    const supported = new Set([
+      ...RESTAURANT_REGIONS.filter((region) => ['United States', 'Mexico', 'Japan', 'New Zealand'].includes(region.country)).map((region) => region.slug),
+      'madrid', 'paris', 'berlin',
+    ]);
+    expect(await restaurantGuideRegionSlugs()).toEqual(RESTAURANT_REGIONS.filter((region) => supported.has(region.slug)).map((region) => region.slug));
     expect(query.mock.calls[0][0]).toContain('"utcDeletedDateTime" IS NULL');
     expect(query.mock.calls[0][0]).toContain("'Restaurant Opening'");
     expect(query.mock.calls[0][0]).toContain("'Food'");

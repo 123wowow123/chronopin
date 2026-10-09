@@ -57,7 +57,7 @@ describe('restaurant discounts available now', () => {
   });
 });
 
-describe('next highly reviewed restaurant specials', () => {
+describe('next restaurant specials', () => {
   const offer = (name: string, score = 4.7, count = 500): RestaurantOffer => ({
     id: name, name, restaurantHref: `https://example.com/${name}`, neighborhood: 'Downtown', address: '', checkedAt: '2026-10-07', special: happyHour,
     review: { score, count, provider: 'OpenTable', sourceUrl: 'https://example.com/reviews', checkedAt: '2026-10-07' },
@@ -88,7 +88,7 @@ describe('next highly reviewed restaurant specials', () => {
     const lowRated = { ...later, ...offer('Below threshold', 4.4), special: later.special };
     const sections = restaurantOfferSections([current, later, lowRated], new Date('2026-10-07T23:30:00Z'), zone);
     expect(sections.available.map((item) => item.id)).toEqual(['Available']);
-    expect(sections.upcoming.map((item) => item.id)).toEqual(['Later']);
+    expect(sections.upcoming.map((item) => item.id)).toEqual(['Later', 'Below threshold']);
     expect(sections.upcoming[0].startsAt).toBe('2026-10-08T01:00:00.000Z');
   });
   it('puts lunch specials first, each group by rating, when sorted by lunch', () => {
@@ -115,12 +115,12 @@ describe('next highly reviewed restaurant specials', () => {
     expect(sections.upcoming).toHaveLength(100);
     expect(new Set(sections.upcoming.map((item) => item.restaurantHref)).size).toBe(100);
   });
-  it('requires high ratings with enough reviews and ranks starts before ratings', () => {
+  it('includes unrated and less-reviewed specials and ranks starts before ratings', () => {
     const earlier = { ...offer('Earlier', 4.6), special: { ...happyHour, availability: { windows: [{ days: [1, 2, 3, 4, 5], start: '15:30', end: '17:30' }] } } };
     const unrated = { ...offer('Unknown'), review: undefined };
     const shown = restaurantOffersToShow([offer('Lower', 4.4), offer('Too few', 4.9, 99), unrated, offer('Highest', 4.9), offer('Good', 4.6), earlier], new Date('2026-10-07T20:00:00Z'), zone);
     expect(shown.upcoming).toBe(true);
-    expect(shown.offers.map((offer) => offer.name)).toEqual(['Earlier', 'Highest', 'Good']);
+    expect(shown.offers.map((offer) => offer.name)).toEqual(['Earlier', 'Highest', 'Too few', 'Good', 'Lower', 'Unknown']);
   });
   it('shows only the nearest special per venue and excludes expired promotions', () => {
     const first = offer('Favorite');

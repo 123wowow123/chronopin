@@ -34,6 +34,27 @@ describe('regional restaurant opening status', () => {
 });
 
 describe('nearest restaurant guide', () => {
+  it('routes New Zealand and Mexican visitors to their local cities and clocks', () => {
+    for (const slug of ['christchurch', 'auckland', 'wellington', 'guadalajara', 'monterrey', 'mexico-city']) {
+      const region = RESTAURANT_REGIONS.find((item) => item.slug === slug)!;
+      expect(nearestRestaurantRegion(region).slug).toBe(slug);
+      expect(() => new Intl.DateTimeFormat('en', { timeZone: region.timeZone })).not.toThrow();
+    }
+    const hour = (slug: string) => new Intl.DateTimeFormat('en-GB', {
+      timeZone: RESTAURANT_REGIONS.find((item) => item.slug === slug)!.timeZone,
+      hour: '2-digit', hourCycle: 'h23',
+    }).format(new Date('2026-10-09T00:00:00Z'));
+    expect(hour('auckland')).toBe('13');
+    expect(hour('mexico-city')).toBe('18');
+  });
+  it('routes Japanese visitors to the nearest supported city on Japan time', () => {
+    for (const slug of ['tokyo', 'kyoto', 'osaka']) {
+      const region = RESTAURANT_REGIONS.find((item) => item.slug === slug)!;
+      expect(nearestRestaurantRegion(region).slug).toBe(slug);
+      expect(region.country).toBe('Japan');
+      expect(new Intl.DateTimeFormat('en-GB', { timeZone: region.timeZone, hour: '2-digit', hourCycle: 'h23' }).format(new Date('2026-10-09T00:00:00Z'))).toBe('09');
+    }
+  });
   it('routes Canadian visitors to local guides, including neighboring Canadian cities', () => {
     expect(nearestRestaurantRegion({ latitude: 49.26, longitude: -123.12 }).slug).toBe('vancouver');
     expect(nearestRestaurantRegion({ latitude: 48.43, longitude: -123.37 }).slug).toBe('victoria');

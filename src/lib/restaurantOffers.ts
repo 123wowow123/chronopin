@@ -82,12 +82,7 @@ export function nextRestaurantOffer(special: RestaurantSpecial, now: Date, timeZ
   return null;
 }
 
-export const HIGH_REVIEW_SCORE = 4.5;
-export const HIGH_REVIEW_COUNT = 100;
 export const NEXT_SPECIALS_LIMIT = 100;
-export function highlyReviewed(offer: RestaurantOffer): boolean {
-  return !!offer.review && Number.isFinite(offer.review.score) && offer.review.score >= HIGH_REVIEW_SCORE && offer.review.score <= 5 && Number.isInteger(offer.review.count) && offer.review.count >= HIGH_REVIEW_COUNT;
-}
 
 export type ScheduledRestaurantOffer = RestaurantOffer & { end: string; startsAt?: string };
 export type RestaurantOfferSort = 'rating' | 'distance' | 'lunch';
@@ -114,7 +109,7 @@ export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, ti
     return active ? [{ ...offer, ...active }] : [];
   }).sort(bySelectedSort);
   const activeIds = new Set(available.map((offer) => offer.id));
-  const upcoming = offers.filter((offer) => !activeIds.has(offer.id) && highlyReviewed(offer)).flatMap((offer) => {
+  const upcoming = offers.filter((offer) => !activeIds.has(offer.id)).flatMap((offer) => {
     const next = nextRestaurantOffer(offer.special, now, timeZone);
     return next ? [{ ...offer, ...next }] : [];
   }).sort((a, b) => a.startsAt.localeCompare(b.startsAt) || byReview(a, b));
