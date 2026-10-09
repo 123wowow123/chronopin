@@ -4608,5 +4608,258 @@
     "checkedAt": "2026-10-09",
     "hoursNote": "Not yet open; the site lists no hours and a placeholder phone number that is not used. Washingtonian reports last call 1:30 AM weekdays and 2:30 AM weekends.",
     "detailsSourceUrl": "https://www.astrozombiedc.com/"
+  },
+  {
+    "pinSourceUrl": "https://statebuildings.com/wildflower/",
+    "name": "Wildflower",
+    "websiteUrl": "https://statebuildings.com/wildflower/",
+    "phone": "+61 485 016 414",
+    "openingHours": [
+      {
+        "days": "Wednesday–Friday · lunch",
+        "hours": "12:00 PM–2:30 PM"
+      },
+      {
+        "days": "Tuesday–Saturday · dinner",
+        "hours": "5:30 PM–late"
+      }
+    ],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://statebuildings.com/wildflower/",
+    "additionalSources": [
+      {
+        "label": "Reservations",
+        "url": "https://statebuildings.com/book-now"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.attica.com.au/",
+    "name": "Attica",
+    "websiteUrl": "https://www.attica.com.au/",
+    "phone": "+61 3 9530 0111",
+    "openingHours": [
+      {
+        "days": "Tuesday–Saturday · dinner",
+        "hours": "Guests seated 6:00–8:00 PM"
+      }
+    ],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://www.attica.com.au/",
+    "hoursNote": "Mid-week tables, and tables for fewer than four guests, are easier to secure; the restaurant keeps a waiting list for full dates.",
+    "additionalSources": [
+      {
+        "label": "Reservations",
+        "url": "https://www.attica.com.au/reservations"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://flowerdrum.melbourne/",
+    "name": "Flower Drum",
+    "websiteUrl": "https://flowerdrum.melbourne/",
+    "phone": "+61 3 9662 3655",
+    "openingHours": [],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://flowerdrum.melbourne/",
+    "hoursNote": "The restaurant’s home page publishes no opening hours; see its bookings page.",
+    "additionalSources": [
+      {
+        "label": "Bookings",
+        "url": "https://flowerdrum.melbourne/bookings/"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.bennelong.com.au/",
+    "name": "Bennelong",
+    "websiteUrl": "https://www.bennelong.com.au/",
+    "phone": "02 9240 8000",
+    "openingHours": [
+      {
+        "days": "Friday–Sunday · lunch",
+        "hours": "Reservations 12:00–2:00 PM"
+      },
+      {
+        "days": "Sunday–Thursday · dinner",
+        "hours": "Reservations 5:30–8:45 PM"
+      },
+      {
+        "days": "Friday–Saturday · dinner",
+        "hours": "Reservations 5:30–9:15 PM"
+      },
+      {
+        "days": "Bennelong Bar · Monday–Thursday",
+        "hours": "5:30 PM–late"
+      },
+      {
+        "days": "Bennelong Bar · Friday–Sunday",
+        "hours": "12:00 PM–late"
+      }
+    ],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://www.bennelong.com.au/",
+    "hoursNote": "The bar welcomes walk-ins.",
+    "additionalSources": [
+      {
+        "label": "Reservations",
+        "url": "https://www.bennelong.com.au/make-a-reservation/"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.saintpeter.com.au/",
+    "name": "Saint Peter",
+    "websiteUrl": "https://www.saintpeter.com.au/",
+    "phone": "02 9167 3703",
+    "openingHours": [
+      {
+        "days": "Dining room · lunch",
+        "hours": "Thursday–Sunday from 12:00 PM"
+      },
+      {
+        "days": "Dining room · dinner",
+        "hours": "Daily from 5:30 PM"
+      },
+      {
+        "days": "Bar · Monday–Wednesday",
+        "hours": "From 5:00 PM"
+      },
+      {
+        "days": "Bar · Thursday–Sunday",
+        "hours": "From 12:00 PM"
+      }
+    ],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://www.saintpeter.com.au/",
+    "hoursNote": "The bar’s kitchen closes at 9:00 PM. Walk-ins are always welcome at the bar; bookings are available but not required.",
+    "additionalSources": [
+      {
+        "label": "Reservations",
+        "url": "https://www.opentable.com.au/booking/restref/availability?rid=60911&restRef=60911"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://ottoristorante.com.au/brisbane/",
+    "name": "OTTO",
+    "websiteUrl": "https://ottoristorante.com.au/brisbane/",
+    "phone": "(07) 3835 2888",
+    "openingHours": [
+      {
+        "days": "Ristorante · Wednesday–Sunday",
+        "hours": "All-day dining 12:00–9:00 PM"
+      },
+      {
+        "days": "Bar · Wednesday–Sunday",
+        "hours": "12:00 PM–late"
+      }
+    ],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://ottoristorante.com.au/brisbane/",
+    "additionalSources": [
+      {
+        "label": "Reservations",
+        "url": "https://ottoristorante.com.au/brisbane/make-a-reservation/"
+      },
+      {
+        "label": "Reservation policy",
+        "url": "https://ottoristorante.com.au/brisbane/reservation-policy/"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.chauvinhospitalitygroup.com.au/montrachet",
+    "name": "Montrachet",
+    "websiteUrl": "https://www.chauvinhospitalitygroup.com.au/montrachet",
+    "phone": "(07) 3367 0030",
+    "openingHours": [
+      {
+        "days": "Tuesday–Saturday · lunch",
+        "hours": "12:00–2:00 PM"
+      },
+      {
+        "days": "Tuesday–Saturday · dinner",
+        "hours": "5:30–9:00 PM"
+      }
+    ],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://www.chauvinhospitalitygroup.com.au/montrachet",
+    "hoursNote": "Closed Sunday and Monday. Public-holiday hours are posted by the restaurant. Bookings go through its online tool; a card is requested to confirm them, and a table is held for 15 minutes.",
+    "additionalSources": [
+      {
+        "label": "Reservations (OpenTable)",
+        "url": "https://www.opentable.com.au/r/montrachet-reservations-bowen-hills?restref=52478&lang=en-AU"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.sofitelbrisbane.com.au/dining/suzette",
+    "name": "Bistro Suzette",
+    "websiteUrl": "https://www.sofitelbrisbane.com.au/dining/suzette",
+    "phone": null,
+    "openingHours": [],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://www.sofitelbrisbane.com.au/dining/suzette",
+    "hoursNote": "The hotel describes the bistro as open for all-day dining but publishes no hours on this page; see the booking page.",
+    "additionalSources": [
+      {
+        "label": "Reservations",
+        "url": "https://www.sevenrooms.com/reservations/suzette"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.pressfoodandwine.com.au/",
+    "name": "Press* Food & Wine",
+    "websiteUrl": "https://www.pressfoodandwine.com.au/",
+    "phone": "(08) 8211 8048",
+    "openingHours": [
+      {
+        "days": "Monday–Friday · lunch",
+        "hours": "12:00–2:30 PM"
+      },
+      {
+        "days": "Monday–Friday · dinner",
+        "hours": "5:30 PM–late"
+      },
+      {
+        "days": "Saturday",
+        "hours": "5:00 PM–late"
+      },
+      {
+        "days": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://www.pressfoodandwine.com.au/",
+    "additionalSources": [
+      {
+        "label": "Reservations",
+        "url": "https://www.sevenrooms.com/reservations/pressfoodandwine?venues=pressfoodandwine%2Cleighstreetwineroom%2Cpeelst"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.africola.com.au/",
+    "name": "Africola",
+    "websiteUrl": "https://www.africola.com.au/",
+    "phone": "08 8223 3885",
+    "openingHours": [
+      {
+        "days": "Dinner",
+        "hours": "6:00 PM–late, Tuesday–Saturday"
+      }
+    ],
+    "checkedAt": "2026-10-09",
+    "detailsSourceUrl": "https://www.africola.com.au/",
+    "hoursNote": "The restaurant’s own page gives Monday–Saturday in one place and Tuesday–Saturday in another; confirm before visiting. Bookings are welcome by email, phone or walk-in.",
+    "additionalSources": [
+      {
+        "label": "Bookings",
+        "url": "https://www.africola.com.au/#bookings"
+      }
+    ]
   }
 ]

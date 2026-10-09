@@ -14,7 +14,7 @@ describe('restaurant special management validation', () => {
     expect(() => parseSpecialVenue(invalid)).toThrow('Invalid special');
     const location = input(); location.profile.location.latitude = 91;
     expect(() => parseSpecialVenue(location)).toThrow('Invalid location');
-    const review = input(); review.profile.review.count = 2.5;
+    const review = input(); review.profile.review!.count = 2.5;
     expect(() => parseSpecialVenue(review)).toThrow('Invalid review evidence');
     const hours = input(); hours.profile.specials[0].availability!.windows[0].start = '25:00';
     expect(() => parseSpecialVenue(hours)).toThrow('Invalid service times');

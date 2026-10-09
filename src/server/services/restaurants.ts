@@ -57,7 +57,7 @@ export async function regionalTopRestaurants(regionSlug: string): Promise<TopRes
   const curated = catalog.flatMap((restaurant) => {
     const pin = pins.get(restaurant.sourceUrl);
     if (!pin) return [];
-    return [{ ...restaurant, pinId: pin.id, pinTitle: pin.title, image: restaurant.image!, recognition: restaurant.recognition!, priceRange: restaurant.priceRange!, imageCredit: restaurant.imageCredit! }];
+    return [{ ...restaurant, websiteUrl: restaurant.websiteUrl ?? '', pinId: pin.id, pinTitle: pin.title, image: restaurant.image!, recognition: restaurant.recognition!, priceRange: restaurant.priceRange!, imageCredit: restaurant.imageCredit! }];
   });
   return [...topRestaurants.filter((restaurant) => restaurant.regionSlug === regionSlug), ...curated];
 }

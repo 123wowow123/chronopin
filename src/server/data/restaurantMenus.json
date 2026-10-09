@@ -7024,5 +7024,203 @@
       }
     ],
     "specials": []
+  },
+  {
+    "pinSourceUrl": "https://statebuildings.com/wildflower/",
+    "name": "Wildflower",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Menus",
+        "url": "https://statebuildings.com/wildflower/",
+        "coverage": "link",
+        "items": [],
+        "note": "Wildflower’s menus follow the six seasons of the Noongar calendar and change with them. The page lists no dish or set-menu prices; gluten-free and vegetarian diets are catered for on request."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.attica.com.au/",
+    "name": "Attica",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.attica.com.au/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "The restaurant publishes its current menu on this page. Consult the original for changing dishes and prices. The page publishes no prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://flowerdrum.melbourne/",
+    "name": "Flower Drum",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "A la carte",
+        "url": "https://flowerdrum.melbourne/a-la-carte/",
+        "coverage": "link",
+        "items": [],
+        "note": "The restaurant publishes its current menu on this page. Consult the original for changing dishes and prices. The page publishes no prices."
+      },
+      {
+        "label": "Lunch banquets",
+        "url": "https://flowerdrum.melbourne/lunch-banquets/",
+        "coverage": "link",
+        "items": [],
+        "note": "Set banquet menus served at lunch."
+      },
+      {
+        "label": "Dinner banquets",
+        "url": "https://flowerdrum.melbourne/dinner-banquets/",
+        "coverage": "link",
+        "items": [],
+        "note": "Set banquet menus served at dinner."
+      },
+      {
+        "label": "Wine list (PDF)",
+        "url": "https://flowerdrum.melbourne/wp-content/uploads/2026/09/Wine-List-2026.pdf",
+        "coverage": "link",
+        "items": [],
+        "note": "The restaurant’s 2026 wine list."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.bennelong.com.au/",
+    "name": "Bennelong",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.bennelong.com.au/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "The restaurant publishes its current menu on this page. Consult the original for changing dishes and prices. The page publishes no prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.saintpeter.com.au/",
+    "name": "Saint Peter",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Menus",
+        "url": "https://www.saintpeter.com.au/menu",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Lunch choice menu",
+            "category": "Dining room",
+            "price": 195,
+            "note": "Per person"
+          },
+          {
+            "name": "Dinner tasting menu",
+            "category": "Dining room",
+            "price": 395,
+            "note": "Per person"
+          }
+        ],
+        "note": "The restaurant’s two published menu prices are shown below. Prices are in Australian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://ottoristorante.com.au/brisbane/",
+    "name": "OTTO",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://ottoristorante.com.au/brisbane/menu/",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Mangia! sharing menu",
+            "category": "Sharing menu",
+            "price": 89,
+            "note": "Per person, served family-style to the table"
+          }
+        ],
+        "note": "The restaurant lists one price on its home page, for its family-style sharing menu. Prices are in Australian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.chauvinhospitalitygroup.com.au/montrachet",
+    "name": "Montrachet",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Menus",
+        "url": "https://www.chauvinhospitalitygroup.com.au/montrachet",
+        "coverage": "link",
+        "items": [],
+        "note": "Montrachet publishes its menus as PDFs from this page; prices appear only in those files. Consult the original for changing dishes and prices."
+      },
+      {
+        "label": "Wine list (PDF)",
+        "url": "https://static1.squarespace.com/static/5ee0755938b58801aa9f7bb6/t/69f847b182601b1a550f61af/1777878961394/Montrachet+Wine+list+WLOTY+MAY26.pdf",
+        "coverage": "link",
+        "items": [],
+        "note": "The restaurant’s wine list as published in May 2026."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.sofitelbrisbane.com.au/dining/suzette",
+    "name": "Bistro Suzette",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.menumodo.com/app.php/viewer/outlet/10185?lang=en",
+        "coverage": "link",
+        "items": [],
+        "note": "The hotel links this menu from the Bistro Suzette page. Consult the original for changing dishes and prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.pressfoodandwine.com.au/",
+    "name": "Press* Food & Wine",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Eat & drink",
+        "url": "https://pressfoodandwine.com.au/eat-and-drink",
+        "coverage": "link",
+        "items": [],
+        "note": "The restaurant publishes its current menu on this page. Consult the original for changing dishes and prices. The page publishes no prices."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.africola.com.au/",
+    "name": "Africola",
+    "checkedAt": "2026-10-09",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.africola.com.au/#menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Africola publishes a sample menu on its home page; it changes with availability and season. The one price shown is a $20 supplement for the Rangers Valley petit tender with Africola béarnaise. Prices are in Australian dollars."
+      }
+    ],
+    "specials": []
   }
 ]
