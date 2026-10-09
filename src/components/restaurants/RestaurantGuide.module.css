@@ -65,8 +65,8 @@
 .countryNav button:hover { color:var(--text); background:var(--paper-raised); }
 .countryNav button:focus-visible { outline-offset:-4px; }
 @media(max-width:760px) { .countryNav { font-size:12px; } }
-.cityNav { display:flex; flex-wrap:wrap; gap:8px; padding-top:14px; font-size:12px; }
-.cityNav a { padding:8px 12px; border:1px solid var(--rule); border-radius:4px; }
+.cityNav { position:relative; display:flex; flex-wrap:nowrap; gap:8px; overflow-x:auto; scrollbar-width:thin; padding:14px 0 8px; font-size:12px; }
+.cityNav a { flex:none; white-space:nowrap; padding:8px 12px; border:1px solid var(--rule); border-radius:4px; }
 .cityNav a[aria-current='page'] { background:var(--text); color:var(--paper); }
 .cityNav a:hover { text-decoration:underline; text-underline-offset:3px; }
 .cityLoading { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); z-index:60; display:flex; align-items:center; gap:10px; padding:14px 20px; border:1px solid var(--rule); border-radius:6px; background:var(--paper); color:var(--text); box-shadow:0 4px 20px rgb(0 0 0 / 12%); font-size:14px; white-space:nowrap; pointer-events:none; }

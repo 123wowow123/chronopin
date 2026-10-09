@@ -72,9 +72,11 @@ transaction and preserves existing or deleted pins. It is safe to rerun.
 Restaurant IDs are assigned by the database; top cards resolve their detail
 links from source URLs rather than depending on an installation's IDs.
 
-The local database has been seeded. Production still reads its own live pins;
-the command must be run there when these changes are deployed. San Diego's
-development preview remains available when its opening batch is missing.
+Production was seeded on October 8, 2026 with all 245 regional catalog records
+(121 openings and 124 restaurant picks), authored by FoodDesk. All records were
+read back, and all 121 openings and 124 picks were verified through the live
+guide API. This includes all 36 Canadian picks. Existing specials were retained.
+San Diego's development preview remains available when its opening batch is missing.
 
 Menus labeled as samples contain selected verified items. Links to changing
 menus do not imply their prices were transcribed. Missing menus and promotions

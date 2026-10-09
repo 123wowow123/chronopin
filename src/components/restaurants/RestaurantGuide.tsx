@@ -63,6 +63,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const preferredCountry = countrySelection.regionSlug === region.slug ? countrySelection.country : region.country;
   const selectedCountry = countries.find((country) => country === preferredCountry) ?? countries[0];
   const countryNav = useRef<HTMLElement>(null);
+  const cityNav = useRef<HTMLElement>(null);
   const viewNav = useRef<HTMLElement>(null);
   const cities = availableRegions.filter((city) => city.country === selectedCountry);
   const { counts } = summary;
@@ -89,6 +90,17 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
     const selected = nav?.querySelector<HTMLElement>('[aria-pressed="true"]');
     if (nav && selected) nav.scrollLeft = selected.offsetLeft - (nav.clientWidth - selected.clientWidth) / 2;
   }, [selectedCountry]);
+
+  useEffect(() => {
+    const revealSelected = () => {
+      const nav = cityNav.current;
+      const selected = nav?.querySelector<HTMLElement>('[aria-current="page"]');
+      if (nav) nav.scrollLeft = selected ? selected.offsetLeft - (nav.clientWidth - selected.clientWidth) / 2 : 0;
+    };
+    revealSelected();
+    window.addEventListener('resize', revealSelected);
+    return () => window.removeEventListener('resize', revealSelected);
+  }, [region.slug, selectedCountry]);
 
   useEffect(() => {
     const revealSelected = () => {
@@ -120,7 +132,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
           </nav>
         </div>
 
-        <nav className={styles.cityNav} aria-label={`${selectedCountry} restaurant guide cities`}>
+        <nav ref={cityNav} className={styles.cityNav} aria-label={`${selectedCountry} restaurant guide cities`}>
           {cities.map((city) => <CityGuideLink key={city.slug} slug={city.slug} name={city.name} current={city.slug === region.slug} />)}
         </nav>
 

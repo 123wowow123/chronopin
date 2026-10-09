@@ -47,8 +47,8 @@ export const RESTAURANT_REGIONS = [
   { slug: 'stockholm', name: 'Stockholm', country: 'Sweden', state: 'Sweden', timeZone: 'Europe/Stockholm', latitude: 59.3293, longitude: 18.0686 },
 ] as const;
 
-export const RESTAURANT_COUNTRIES = [...new Set(RESTAURANT_REGIONS.map((region) => region.country))]
-  .sort((a, b) => a === b ? 0 : a === 'United States' ? -1 : b === 'United States' ? 1 : a.localeCompare(b));
+// Countries follow their westernmost guide city in the west-to-east region list.
+export const RESTAURANT_COUNTRIES = [...new Set(RESTAURANT_REGIONS.map((region) => region.country))];
 
 // Only supported city guides are candidates. With no usable location, use San Diego.
 export function nearestRestaurantRegion(place: Place | null | undefined) {

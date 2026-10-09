@@ -52,8 +52,11 @@ database to make the guides available in production navigation:
 npm run restaurants:seed -- --regions=victoria,vancouver,calgary,edmonton,saskatoon,winnipeg,hamilton,toronto,ottawa,montreal,quebec-city,halifax
 ```
 
-The seed is idempotent and preserves existing pins. This change does not deploy
-or push code, and does not populate Canadian discounted specials.
+The seed is idempotent and preserves existing pins. Production was seeded on
+October 8, 2026: the 36 Canadian records are pins 6879–6914. All 12 city guides
+return their three picks through the live guide API, and production browser
+checks confirmed Toronto and Vancouver cards with loaded photographs and
+Canada navigation. Canadian discounted specials are not populated by this seed.
 
 Validation: all 12 local routes return HTTP 200 and display their three picks
 and Canada navigation. Desktop/mobile browser checks pass, with no browser
