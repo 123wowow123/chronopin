@@ -376,10 +376,6 @@ Trade deficit pin series
 https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html
 
 
-- pin new and upcoming beer and alchololic drinks
-need landing pages
-
-
 
 https://www.maranellosd.com/menu
 https://www.telefericbarcelona.com/the-social-hour
@@ -395,10 +391,6 @@ As of 2026-10-04. Prod's Anthropic key has no credit, so its link wikis are writ
 - **Only the wiki step is skipped on prod.** Podcast cross-checks, sentiment, stocks, awards and the other save listeners still run on prod for every post; the rest of "process locally, post the final pin" is still open.
 - Wikis pushed with `--rewrite` bump the version and put every citing pin's summary behind its links; leave it off for a backfill.
 
-
-
-this should be a thread
-https://www.chronopin.com/pin/2015/chicago-fire-season-15-premieres
 
 
 

@@ -47,5 +47,7 @@ CLEAN="docker image prune -af >/dev/null; docker builder prune -f --max-used-spa
 services=${*:-app}
 ssh -i "$KEY" "$HOST" "$CLEAN; df -h / | tail -1; cd chronopin && C='docker compose -f Docker/docker-compose.prod.yml' && \$C --profile tools build tools && \$C --profile tools run --rm tools npm run create:db && \$C up -d --build $services && $CLEAN; df -h / | tail -1"
 echo "Deployed $rev."
+# A restart empties the caches, and a visitor would pay for each cold one.
+sh scripts/warm.sh || true
 # Always ship the latest HEAD: a commit made during the build needs another run.
 [ "$(git rev-parse --short HEAD)" = "$rev" ] || echo "HEAD is now $(git rev-parse --short HEAD), not $rev - run npm run deploy again."

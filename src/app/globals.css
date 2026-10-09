@@ -34,6 +34,7 @@
   --font-sans: var(--font-noto-sans), var(--font-noto-vietnamese), var(--font-noto-cyrillic), var(--font-noto-thai), var(--font-noto-arabic), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-plex-sans), var(--font-plex-vietnamese), var(--font-plex-cyrillic), var(--font-noto-thai), var(--font-plex-arabic), ui-sans-serif, system-ui, sans-serif;
   --font-astro: var(--font-astro-signs);
+  --font-luxe: var(--font-cinzel), Georgia, "Times New Roman", serif;
 
   --color-page: #0f1115;
   --color-header: #13161b;
@@ -85,6 +86,7 @@
   --color-tradition-soft: var(--color-violet-300);
   /* What only a pin's authors or admins see (duplicate suggestions). */
   --color-privileged: var(--color-violet-400);
+  --color-curated: #ffc400;
 
   /* Hairlines and washes over panels: white on dark, black on light. */
   --color-tint: #fff;
@@ -168,6 +170,7 @@
   --color-holiday-ink: #ffffff;
   --color-tradition-soft: oklch(47% 0.13 295);
   --color-privileged: var(--color-violet-700);
+  --color-curated: #a86f00;
 
   --color-tint: #000;
   --color-shade: rgb(30 41 59 / 0.35);

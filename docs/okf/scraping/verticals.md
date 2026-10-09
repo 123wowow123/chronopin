@@ -250,6 +250,13 @@ Thailand and the United States.
    target) stays `coverage: "link"` with a note saying so - never invent a dish or a price. Check the
    link you store: a relative `/s/x.pdf` on a Squarespace site resolves on the site's own domain, and the
    same filename can 404 on another host.
+20. **A restaurant pin's start date is its opening date whenever one can be found** (Ian, 2026-10-09).
+   The Australian guide pins first carried the verification date (2026-10-09), which put every
+   established restaurant at "today". Look for the opening date first - the restaurant's own history
+   page, the Wikipedia infobox, Gourmet Traveller / Broadsheet / Eater - and fall back to the
+   verification date only when nothing dates it, saying so in `dateConfidenceReasoning`. A month- or
+   year-only opening is `estimated` at the period's last day; an announced date is a schedule until a
+   report says it opened. Update the catalog row and the live pin together.
 
 # Museum builds and upgrades
 

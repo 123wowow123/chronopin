@@ -149,7 +149,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           floored by its content's min-width, which scrolls the page sideways. */}
       <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
         <article>
-          <PinBody pin={pin} timeZone={timeZone} t={t} updatedAt={updates[0]?.utcCreatedDateTime} eventInfo={eventInfo} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} />
         </article>
 
         <aside className="min-w-0">
@@ -225,18 +225,15 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   );
 }
 
-// updatedAt: the pin's newest update, when it has changed since it was posted.
 function PinBody({
   pin,
   timeZone,
   t,
-  updatedAt,
   eventInfo,
 }: {
   pin: PinJson;
   timeZone: string;
   t: Translator;
-  updatedAt?: string;
   eventInfo?: PinEventInfoJson | null;
 }) {
   const media = pin.media ?? [];
@@ -293,15 +290,6 @@ function PinBody({
             {t.rich('pin.posted', { time: () => <PostedTime value={pin.utcCreatedDateTime!} serverTimeZone={timeZone} dateOnly="phone" search /> })}
           </span>
         ) : null}
-        {updatedAt ? (
-          <>
-            <span className="px-1.5 text-faint" aria-hidden>·</span>
-            {/* To the Updates pane, which says what changed. */}
-            <Anchor href="#updates" className="font-medium text-link hover:no-underline">
-              {t.rich('updates.updated', { time: () => <PostedTime value={updatedAt} serverTimeZone={timeZone} dateOnly /> })}
-            </Anchor>
-          </>
-        ) : null}
         {pin.user?.userName ? (
           <>
             <span className="px-1.5 text-faint" aria-hidden>·</span>
@@ -311,9 +299,9 @@ function PinBody({
           </>
         ) : null}
         <div className="ms-auto flex flex-wrap items-center justify-end gap-2">
-          {restaurantRegion ? <Link href={`/restaurants/${restaurantRegion.slug}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
-            <Icon name="pin" className="size-3.5 text-link" />
-            {t.dynamic('pin.curatedLocalRestaurants', 'Curated local restaurants')}
+          {restaurantRegion ? <Link href={`/restaurants/${restaurantRegion.slug}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-curated/15 px-2.5 py-0.5 font-luxe text-xs font-semibold text-curated ring-1 ring-curated/40 ring-inset transition-colors hover:bg-curated/25 hover:no-underline active:ring-curated/70">
+            <Icon name="pin" className="size-3.5 text-curated" />
+            {t.dynamic('pin.curatedRestaurants', 'Curated restaurants')}
           </Link> : null}
           {/* Opens the timeline on this pin, centred, rather than on today. */}
           {/* The same pill as the aside's "To map". */}

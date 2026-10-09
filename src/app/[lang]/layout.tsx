@@ -2,7 +2,7 @@ import Anchor from '@/components/ui/Anchor';
 import type { Metadata, Viewport } from 'next';
 import { Suspense } from 'react';
 import { cacheLife, cacheTag } from 'next/cache';
-import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic, Noto_Sans, Noto_Sans_Arabic, Noto_Sans_Thai } from 'next/font/google';
+import { Cinzel, IBM_Plex_Sans, IBM_Plex_Sans_Arabic, Noto_Sans, Noto_Sans_Arabic, Noto_Sans_Thai } from 'next/font/google';
 import localFont from 'next/font/local';
 import { lang } from 'next/root-params';
 import { HideDevIssues } from '@/components/HideDevIssues';
@@ -43,6 +43,7 @@ const plexArabic = IBM_Plex_Sans_Arabic({ subsets: ['arabic'], weight: ['400', '
 // Vietnamese's stacked diacritics, which the Latin subsets lack.
 const notoVietnamese = Noto_Sans({ subsets: ['vietnamese'], variable: '--font-noto-vietnamese', display: 'swap', preload: false });
 const plexVietnamese = IBM_Plex_Sans({ subsets: ['vietnamese'], weight: ['400', '500', '600'], variable: '--font-plex-vietnamese', display: 'swap', preload: false });
+const cinzel = Cinzel({ subsets: ['latin'], weight: ['600', '700'], variable: '--font-cinzel', display: 'swap', preload: false });
 const astroSigns = localFont({
   src: '../fonts/AstronomicSigns.ttf',
   variable: '--font-astro-signs',
@@ -115,7 +116,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     // suppressHydrationWarning: the inline script sets data-theme before React
     // hydrates, so <html> never matches the server markup.
-    <html lang={languageTag(locale)} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${notoCyrillic.variable} ${plexCyrillic.variable} ${notoVietnamese.variable} ${plexVietnamese.variable} ${notoThai.variable} ${notoArabic.variable} ${plexArabic.variable} ${astroSigns.variable}`} suppressHydrationWarning>
+    <html lang={languageTag(locale)} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={`${notoSans.variable} ${plexSans.variable} ${notoCyrillic.variable} ${plexCyrillic.variable} ${notoVietnamese.variable} ${plexVietnamese.variable} ${notoThai.variable} ${notoArabic.variable} ${plexArabic.variable} ${astroSigns.variable} ${cinzel.variable}`} suppressHydrationWarning>
       <body className="min-h-dvh">
         {/* Before first paint, from the stored preference (src/lib/theme.ts).
             First in <body>, not in <head>: AdSense inserts its own script at

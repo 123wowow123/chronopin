@@ -152,18 +152,18 @@ export function PinCard({
           area 8px above themselves, which overflow-hidden would cut off. */}
       <div ref={contentRef} className="relative max-h-[600px] overflow-hidden pt-2.5">
         <div className="mx-3 flex items-center justify-between text-[11px] text-subtle [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
-          {/* A dot before every item but the first, kept on the item's line when the row wraps. */}
-          <div className="flex min-w-0 flex-wrap items-center [&>*]:whitespace-nowrap [&>*+*]:before:px-1.5 [&>*+*]:before:text-faint [&>*+*]:before:content-['·']">
+          {/* A dot before every item but the first. The row stays on one line: the user name and the distance (the last item, first to give) are cut short with an ellipsis. */}
+          <div className="flex min-w-0 flex-nowrap items-center [&>*]:min-w-0 [&>*]:truncate [&>*]:whitespace-nowrap [&>*+*]:before:px-1.5 [&>*+*]:before:text-faint [&>*+*]:before:content-['·']">
             {/* Its main category: the pin page lists the rest. */}
             {pin.categories?.[0] ? (
-              <span>
+              <span className="shrink-0">
                 <RefineLink field="tag" value={pin.categories[0]} className="font-medium text-muted hover:text-ink hover:no-underline">
                   {categoryLabel(t, pin.categories[0])}
                 </RefineLink>
               </span>
             ) : null}
             {pin.utcCreatedDateTime ? (
-              <span>
+              <span className="shrink-0">
                 <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} dateOnly search />
               </span>
             ) : null}
@@ -185,7 +185,7 @@ export function PinCard({
           {/* NEW searches for every pin posted today, UPDATED for every pin
               updated since the day 24 hours back - both days the viewer's. */}
           {pin.curated ? (
-            <RefineLink field="tag" value="Curated" className={`${STATUS_PILL} bg-accent/15 text-accent hover:bg-accent/25`} title={t('card.curatedTitle')}>
+            <RefineLink field="tag" value="Curated" className={`${STATUS_PILL} bg-curated/15 font-luxe italic text-curated hover:bg-curated/25`} title={t('card.curatedTitle')}>
               {t('card.curated')}
             </RefineLink>
           ) : null}
@@ -204,11 +204,11 @@ export function PinCard({
             </RefineLink>
           ) : null}
             {pin.parentId || pin.rootThread ? (
-              <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="text-subtle hover:text-ink">
+              <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="shrink-0 text-subtle hover:text-ink">
                 <Icon name="thread" className="size-3.5" />
               </Link>
             ) : null}
-            <span className="-my-1.5 -me-1.5">
+            <span className="-my-1.5 -me-1.5 shrink-0">
               <PinMenu pin={pin} buttonClassName="size-7" iconClassName="size-4" />
             </span>
           </div>

@@ -23,9 +23,8 @@ import { usesImperial } from '@/lib/weather';
 // measured from moves to the title. There it is also the item that gives: it
 // measures nothing for the row's wrapping (a zero basis), takes what the
 // items before it leave and is cut short there, so a long distance never
-// costs the card a second line of meta. Below 5rem there is nothing left to
-// read, so that is its floor, and a row with less to spare wraps it onto a
-// line of its own whole rather than showing a sliver of it.
+// costs the card a second line of meta. The row never wraps: with no room
+// left it shrinks to an ellipsis, then the user name does.
 export function PinDistance({ pinId, latitude, longitude, compact }: { pinId: number; latitude: number; longitude: number; compact?: boolean }) {
   const [text, setText] = useState<{ away: string; from: string } | null>(null);
   const t = useT();
@@ -47,7 +46,7 @@ export function PinDistance({ pinId, latitude, longitude, compact }: { pinId: nu
   const href = `/map?pin=${pinId}&from=me`;
   if (compact) {
     return (
-      <Link href={href} title={t('pin.distanceOnMap')} className="min-w-20 flex-1 truncate text-inherit hover:text-ink hover:no-underline">
+      <Link href={href} title={t('pin.distanceOnMap')} className="min-w-0 flex-1 shrink-[10] truncate text-inherit hover:text-ink hover:no-underline">
         {text.away}
       </Link>
     );

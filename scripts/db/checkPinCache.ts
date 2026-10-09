@@ -1,4 +1,4 @@
-// Compares PinBaseCache (0072) with PinBaseView, which defines it: every
+// Compares PinTagCache (0145) and PinBaseCache (0072) with the views that define them: every
 // pin's rows, as JSON, must match. The triggers keep the two together; this
 // is how to know they did. Reading the whole view takes seconds.
 //
@@ -21,12 +21,37 @@ const digest = (source: string) => `
   FROM ${source} AS "r"
   GROUP BY "id"`;
 
-async function run() {
-  if (flags.rebuild) {
-    await db.query('SELECT "pinBaseCacheRebuild"()');
-    console.log('Rebuilt PinBaseCache');
+// PinTagCache (0145) against PinTagBaseView, by pin.
+async function checkTags() {
+  const tagDigest = (source: string) => `
+    SELECT "pinId" AS "id", array_agg(md5(row_to_json("r")::text) ORDER BY md5(row_to_json("r")::text)) AS "rows"
+    FROM ${source} AS "r" GROUP BY "pinId"`;
+  const rows = await db.query<{ id: number }>(`
+    SELECT COALESCE("v"."id", "c"."id") AS "id"
+    FROM (${tagDigest('"PinTagBaseView"')}) AS "v"
+      FULL JOIN (${tagDigest('"PinTagCache"')}) AS "c" ON "c"."id" = "v"."id"
+    WHERE "v"."rows" IS DISTINCT FROM "c"."rows" ORDER BY 1`);
+  if (!rows.length) {
+    console.log('PinTagCache matches PinTagBaseView');
     return;
   }
+  console.log(`PinTagCache differs for ${rows.length} pin(s): ${rows.slice(0, 20).map((r) => r.id).join(', ')}`);
+  if (flags.fix) {
+    await db.query('SELECT "pinTagCacheRefresh"($1::integer[])', [rows.map((r) => r.id)]);
+    console.log(`Re-copied ${rows.length} pin(s)`);
+  } else {
+    process.exitCode = 1;
+  }
+}
+
+async function run() {
+  if (flags.rebuild) {
+    await db.query('SELECT "pinTagCacheRebuild"()');
+    await db.query('SELECT "pinBaseCacheRebuild"()');
+    console.log('Rebuilt PinTagCache and PinBaseCache');
+    return;
+  }
+  await checkTags();
   const rows = await db.query<{ id: number; problem: string }>(`
     SELECT COALESCE("v"."id", "c"."id") AS "id",
            CASE WHEN "c"."id" IS NULL THEN 'missing from the cache'

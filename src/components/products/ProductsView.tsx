@@ -56,7 +56,7 @@ export function ProductsView({ shelves, title, description }: { shelves: Product
 
   const imageOf = (pin: PinJson) => blobUrl(picture(pin.media).thumbName);
   const featured = products.find((pin) => imageOf(pin));
-  const id = (category: string) => category.toLowerCase();
+  const id = (category: string) => category.toLowerCase().replace(/\s+/g, '-');
 
   return (
     <main className={styles.guide} data-landing>
@@ -134,6 +134,14 @@ export function ProductsView({ shelves, title, description }: { shelves: Product
                           <Score pin={pin} />
                         </div>
                         <h3><Link href={pinPath(pin)} dir={pinTextDir(pin)}>{name}</Link></h3>
+                        {shelf.name === 'Alcoholic Drinks' && pin.utcStartDateTime && (
+                          <p className={styles.cardMeta}>
+                            {new Date(pin.utcStartDateTime).getTime() > Date.now() ? 'Coming' : 'Released'}{' '}
+                            <time dateTime={String(pin.utcStartDateTime).slice(0, 10)}>
+                              {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(pin.utcStartDateTime))}
+                            </time>
+                          </p>
+                        )}
                         <p className={styles.cardDescription} dir={pinTextDir(pin)}>{blurb(pin)}</p>
                       </div>
                     </article>

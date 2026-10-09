@@ -16,6 +16,7 @@
     "create:db": "tsx scripts/db/migrate.ts",
     "db:reset": "tsx scripts/db/migrate.ts --reset",
     "db:refresh": "npm run create:db && npm run create:data",
+    "warm": "sh scripts/warm.sh",
     "db:check-pin-cache": "tsx scripts/db/checkPinCache.ts",
     "ads:pin": "tsx scripts/ads/pinAds.ts",
     "ads:products": "tsx scripts/ads/productAds.ts",
