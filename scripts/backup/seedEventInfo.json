@@ -4713,6 +4713,19 @@
     "checkedAt": "2026-09-26T16:28:27.764Z"
   },
   {
+    "pinId": 4294,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://securityconference.org/en/",
+    "checkedAt": "2026-10-07T14:27:46.248Z"
+  },
+  {
     "pinId": 4335,
     "performers": [],
     "ticketUrl": "https://meetings.ausa.org/annual/2026/Badge_Registration_ticket_sales_2026.cfm",
@@ -4750,6 +4763,45 @@
     "source": "claude",
     "sourceUrl": "https://www.airshow.com.cn/Category_1216/Index.aspx",
     "checkedAt": "2026-09-29T14:06:03.228Z"
+  },
+  {
+    "pinId": 4338,
+    "performers": [],
+    "ticketUrl": "https://registration.xporience.com/registration/?badge_name=visitor&token=iqxdPZS109Fjyss",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.idexuae.ae/",
+    "checkedAt": "2026-10-07T14:22:54.591Z"
+  },
+  {
+    "pinId": 4339,
+    "performers": [],
+    "ticketUrl": "https://aeroindia.gov.in/register",
+    "lowPrice": 20,
+    "highPrice": 5000,
+    "priceCurrency": "INR",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://aeroindia.gov.in/",
+    "checkedAt": "2026-10-07T14:26:14.227Z"
+  },
+  {
+    "pinId": 4352,
+    "performers": [],
+    "ticketUrl": "https://www.coachella.com/passes",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.coachella.com/",
+    "checkedAt": "2026-10-07T14:33:32.056Z"
   },
   {
     "pinId": 4361,
@@ -4921,6 +4973,19 @@
     "source": "claude",
     "sourceUrl": "https://www.aclfestival.com/",
     "checkedAt": "2026-09-29T14:01:46.136Z"
+  },
+  {
+    "pinId": 4402,
+    "performers": [],
+    "ticketUrl": "https://brasil.tomorrowland.com/en/tickets/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.tomorrowland.com/home/",
+    "checkedAt": "2026-10-07T14:35:58.396Z"
   },
   {
     "pinId": 4428,
@@ -5095,6 +5160,63 @@
     "checkedAt": "2026-09-29T14:01:46.117Z"
   },
   {
+    "pinId": 4614,
+    "performers": [],
+    "ticketUrl": "https://vinexposium.mybadgeonline.com/Pro-Login-en-US?trk=OWEBHOMGB&utm_source=siteweb&utm_medium=organic&utm_campaign=wp27_vis_gb_homepage_gb_wp27_vis_homepage",
+    "lowPrice": 35,
+    "highPrice": 120,
+    "priceCurrency": "EUR",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.wineparis.com/en/opening-hours-access-and-map",
+    "checkedAt": "2026-10-07T14:27:46.360Z"
+  },
+  {
+    "pinId": 4615,
+    "performers": [
+      {
+        "name": "Klaus Postmann",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://www.prowein.com/en/Visit/Preparations/Tickets_and_Vouchers/Tickets",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.prowein.com/en/Media_News/Press/Press_Releases/ProWein_2027_%E2%80%9CThe_Industry_Needs_Positive_Signals%E2%80%9D",
+    "checkedAt": "2026-10-07T14:29:29.635Z"
+  },
+  {
+    "pinId": 4617,
+    "performers": [],
+    "ticketUrl": "https://www.vinitaly.com/en/verona/buyer/ticketing/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.vinitaly.com/en/",
+    "checkedAt": "2026-10-07T14:33:32.173Z"
+  },
+  {
+    "pinId": 4619,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://ugcb.net/en/evenement/en-primeurs-week/",
+    "checkedAt": "2026-10-07T14:33:32.238Z"
+  },
+  {
     "pinId": 4620,
     "performers": [],
     "ticketUrl": null,
@@ -5132,6 +5254,19 @@
     "source": "claude",
     "sourceUrl": "https://www.wto.org/english/news_e/news26_e/fish_01may26_382_e.htm",
     "checkedAt": "2026-09-29T14:03:23.478Z"
+  },
+  {
+    "pinId": 4659,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.bassmaster.com/classic/news/lake-hartwell-to-host-2027-bass-pro-shops-bassmaster-classic-presented-by-under-armour/",
+    "checkedAt": "2026-10-07T14:29:29.986Z"
   },
   {
     "pinId": 4663,
@@ -5184,6 +5319,45 @@
     "source": "claude",
     "sourceUrl": "https://tayrivers.org/conservation-code/",
     "checkedAt": "2026-09-29T14:11:16.438Z"
+  },
+  {
+    "pinId": 4676,
+    "performers": [],
+    "ticketUrl": "https://invitepeople.com/events/da3c46a7b6",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://nor-seafood.com/",
+    "checkedAt": "2026-10-07T14:29:29.876Z"
+  },
+  {
+    "pinId": 4680,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.seafoodexpo.com/global/",
+    "checkedAt": "2026-10-07T14:34:45.005Z"
+  },
+  {
+    "pinId": 4682,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.seafoodexpo.com/north-america/",
+    "checkedAt": "2026-10-07T14:29:29.795Z"
   },
   {
     "pinId": 4695,
@@ -5419,6 +5593,167 @@
     "checkedAt": "2026-09-30T14:32:57.369Z"
   },
   {
+    "pinId": 4869,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://cnevpost.com/2025/11/30/2025-guangzhou-auto-show-wraps-up/",
+    "checkedAt": "2026-10-07T14:11:17.481Z"
+  },
+  {
+    "pinId": 4870,
+    "performers": [],
+    "ticketUrl": "https://detroitautoshow.com/public-show-tickets/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.detroitautoshow.com",
+    "checkedAt": "2026-10-07T14:17:26.459Z"
+  },
+  {
+    "pinId": 4871,
+    "performers": [],
+    "ticketUrl": "https://www.tokyoautosalon.jp/2027/ticket/",
+    "lowPrice": 3000,
+    "highPrice": 4000,
+    "priceCurrency": "JPY",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.tokyoautosalon.jp/2027/ticket/",
+    "checkedAt": "2026-10-07T14:17:26.511Z"
+  },
+  {
+    "pinId": 4872,
+    "performers": [],
+    "ticketUrl": "https://shop.messe-duesseldorf.de/boot_e?ticket=g_u_e_s_t&lang=2&ticket=g_u_e_s_t&oid=30775",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.boot.com/en/Exhibit/Information/Data_Facts",
+    "checkedAt": "2026-10-07T14:22:54.425Z"
+  },
+  {
+    "pinId": 4873,
+    "performers": [],
+    "ticketUrl": "https://www.eventspass.com/event/dbmibs27?pr=WEB-ES/#/buyTickets",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.miamiboatshow.com",
+    "checkedAt": "2026-10-07T14:27:46.062Z"
+  },
+  {
+    "pinId": 4874,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.chicagoautoshow.com",
+    "checkedAt": "2026-10-07T14:27:46.306Z"
+  },
+  {
+    "pinId": 4875,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.defenceconnect.com.au/air/17897-dates-confirmed-for-avalon-australian-international-airshow-in-2027",
+    "checkedAt": "2026-10-07T14:28:28.695Z"
+  },
+  {
+    "pinId": 4876,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://ameliaconcours.com/",
+    "checkedAt": "2026-10-07T14:28:28.902Z"
+  },
+  {
+    "pinId": 4877,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.daytonabeach.com/bike-week/",
+    "checkedAt": "2026-10-07T14:28:28.953Z"
+  },
+  {
+    "pinId": 4878,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://autoshowny.com/plan-your-visit/",
+    "checkedAt": "2026-10-07T14:31:27.844Z"
+  },
+  {
+    "pinId": 4879,
+    "performers": [
+      {
+        "name": "Russell Dickerson",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://systems.aceedu.org/pos/stores/sun-n-fun-tickets",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://flysnf.org/",
+    "checkedAt": "2026-10-07T14:33:31.892Z"
+  },
+  {
+    "pinId": 4880,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://cnevpost.com/2026/09/08/2027-shanghai-auto-show-apr-23-may-2/",
+    "checkedAt": "2026-10-07T14:34:45.258Z"
+  },
+  {
     "pinId": 4890,
     "performers": [],
     "ticketUrl": "https://www.twitchcon.com/san-diego-2026/passes/",
@@ -5523,6 +5858,19 @@
     "checkedAt": "2026-09-30T00:43:12.714Z"
   },
   {
+    "pinId": 4898,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.expowest.com/",
+    "checkedAt": "2026-10-07T14:28:28.849Z"
+  },
+  {
     "pinId": 4899,
     "performers": [],
     "ticketUrl": "https://www.emeraldcitycomiccon.com/en-us/buy/tickets.html",
@@ -5560,6 +5908,45 @@
     "source": "hand",
     "sourceUrl": "https://www.comic-con.org/wc/badges/attendee-badge-sale/",
     "checkedAt": "2026-09-30T00:45:25.648Z"
+  },
+  {
+    "pinId": 4902,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.moscone.com/events/rsac-2027-conference",
+    "checkedAt": "2026-10-07T14:31:28.233Z"
+  },
+  {
+    "pinId": 4903,
+    "performers": [],
+    "ticketUrl": "https://www.himssconference.com/register/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.himssconference.com/",
+    "checkedAt": "2026-10-07T14:31:28.295Z"
+  },
+  {
+    "pinId": 4904,
+    "performers": [],
+    "ticketUrl": "https://east.paxsite.com/en-us/registration.html",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://east.paxsite.com/",
+    "checkedAt": "2026-10-07T14:34:45.198Z"
   },
   {
     "pinId": 4905,
@@ -5812,6 +6199,19 @@
     "checkedAt": "2026-10-01T13:27:25.336Z"
   },
   {
+    "pinId": 5028,
+    "performers": [],
+    "ticketUrl": "https://www.londonmarathonevents.co.uk/london-marathon/good-age-entry",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.tcslondonmarathon.com/",
+    "checkedAt": "2026-10-07T14:34:45.327Z"
+  },
+  {
     "pinId": 5029,
     "performers": [],
     "ticketUrl": null,
@@ -5849,6 +6249,19 @@
     "source": "claude",
     "sourceUrl": "https://www.tcsamsterdammarathon.eu/",
     "checkedAt": "2026-10-02T14:12:09.013Z"
+  },
+  {
+    "pinId": 5033,
+    "performers": [],
+    "ticketUrl": "https://www.asicsmarathondeparis.com/fr/inscription",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.sortiraparis.com/en/what-to-do-in-paris/sport-wellness/articles/50290-paris-marathon-2027-the-date-of-the-city-s-biggest-race-and-the-registration-details",
+    "checkedAt": "2026-10-07T14:31:28.057Z"
   },
   {
     "pinId": 5034,
@@ -5981,6 +6394,32 @@
     "checkedAt": "2026-10-06T16:06:17.012Z"
   },
   {
+    "pinId": 5110,
+    "performers": [],
+    "ticketUrl": "https://mundo-ticket.com/en-US/events/ccxp26",
+    "lowPrice": 240,
+    "highPrice": 2550,
+    "priceCurrency": "BRL",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://new.ccxp.com.br/en/",
+    "checkedAt": "2026-10-07T14:17:26.261Z"
+  },
+  {
+    "pinId": 5118,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.dnv.com/events/euronaval-2026/",
+    "checkedAt": "2026-10-07T13:59:53.989Z"
+  },
+  {
     "pinId": 5124,
     "performers": [],
     "ticketUrl": null,
@@ -6031,6 +6470,19 @@
     "source": "claude",
     "sourceUrl": "https://en.riviera-villages.com/Voiles-de-Saint-Tropez",
     "checkedAt": "2026-10-02T14:10:55.642Z"
+  },
+  {
+    "pinId": 5157,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.tamiya.com/japan/mini4wd/japancup.html",
+    "checkedAt": "2026-10-07T13:57:16.759Z"
   },
   {
     "pinId": 5179,
@@ -6100,6 +6552,19 @@
     "source": "hand",
     "sourceUrl": "https://hobbyshow.co.jp/ticket/",
     "checkedAt": "2026-10-02T14:49:27.854Z"
+  },
+  {
+    "pinId": 5190,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "JPY",
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.tamiya.com/english/tamiyafair2026.html",
+    "checkedAt": "2026-10-07T13:57:16.886Z"
   },
   {
     "pinId": 5191,
@@ -6180,6 +6645,19 @@
     "checkedAt": "2026-10-03T01:17:13.972Z"
   },
   {
+    "pinId": 5445,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.thepopverse.com/comics-dc-absolute-batman-fcbd-2027-matt-fraction",
+    "checkedAt": "2026-10-07T14:35:58.378Z"
+  },
+  {
     "pinId": 5471,
     "performers": [
       {
@@ -6250,6 +6728,45 @@
     "checkedAt": "2026-10-03T22:16:18.580Z"
   },
   {
+    "pinId": 5505,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://en.wikipedia.org/wiki/2026_Straight_Talk_Wireless_400",
+    "checkedAt": "2026-10-07T13:57:16.600Z"
+  },
+  {
+    "pinId": 5509,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.fiaformulae.com/en/news/1074657",
+    "checkedAt": "2026-10-07T14:17:26.406Z"
+  },
+  {
+    "pinId": 5512,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": null,
+    "checkedAt": "2026-10-07T14:11:17.644Z"
+  },
+  {
     "pinId": 5518,
     "performers": [],
     "ticketUrl": "https://www.vrc.com.au/products/2026-2027/general-admission/general-admission/?eventId=92743",
@@ -6274,5 +6791,18 @@
     "source": "claude",
     "sourceUrl": "https://bigtex.com/",
     "checkedAt": "2026-10-05T13:59:35.307Z"
+  },
+  {
+    "pinId": 6356,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://en.endurance-info.com/auto/article/119029-daytona-international-speedway-announces-2027-rolex-24-date",
+    "checkedAt": "2026-10-07T14:26:14.039Z"
   }
 ]

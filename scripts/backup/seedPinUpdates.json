@@ -10029,5 +10029,490 @@
     ],
     "note": null,
     "utcCreatedDateTime": "2026-10-06T15:55:04.360Z"
+  },
+  {
+    "id": 451,
+    "pinId": 6424,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://community.openai.com/t/gpt-6-1-sol-in-the-api-a-meaningful-step-up-in-cost-performance/1402388",
+        "title": "GPT-6.1 Sol in the API: a meaningful step up in cost-performance",
+        "confidence": 80,
+        "publishedDate": "2026-09-30"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-06T17:02:20.767Z"
+  },
+  {
+    "id": 452,
+    "pinId": 1996,
+    "kind": "edit",
+    "userId": 304,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Henri Kagan and Kenso Soai Win the 2026 Nobel Prize in Chemistry",
+        "field": "title",
+        "before": "The Royal Swedish Academy Names the 2026 Chemistry Laureates"
+      },
+      {
+        "after": "Henri B. Kagan and Kenso Soai share the chemistry Nobel for reactions that amplify one molecular mirror image. Their work explains how chemical handedness can emerge and supports selective pharmaceutical synthesis.",
+        "field": "description",
+        "before": "The Royal Swedish Academy of Sciences announces the 2026 Nobel Prize in Chemistry from its Session Hall at Frescati in Stockholm, a day after the physics prize."
+      },
+      {
+        "after": "<ul><li>Henri B. Kagan and Kenso Soai receive the 2026 chemistry Nobel for discoveries involving non-linear effects and autocatalysis in asymmetric organic synthesis.<cite data-ref=\"https://www.nobelprize.org/prizes/chemistry/2026/press-release/\"></cite></li><li>The central problem is molecular handedness: two mirror-image forms can have different biological effects, making selective synthesis important for medicines.<cite data-ref=\"https://www.nobelprize.org/prizes/chemistry/2026/press-release/\"></cite></li><li>Kagan's 1986 work showed that reactions could amplify a small imbalance between mirror-image forms; Soai developed an autocatalytic reaction in 1995 and demonstrated formation of a single handed form in 2003.<cite data-ref=\"https://www.nobelprize.org/prizes/chemistry/2026/press-release/\"></cite></li><li>Their experiments offer a chemical route to homochirality, connecting a longstanding question about life's asymmetry with practical methods for pharmaceutical manufacture.<cite data-ref=\"https://www.nobelprize.org/prizes/chemistry/2026/press-release/\"></cite></li><li>The laureates share SEK 12 million equally. Kagan is emeritus at the former Université Paris-Sud; Soai is emeritus at Tokyo University of Science.<cite data-ref=\"https://www.nobelprize.org/prizes/chemistry/2026/press-release/\"></cite></li><li>The announcement belongs to Nobel week; the medals and diplomas are presented on 10 December.<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 2026 Nobel Prize in Chemistry is announced on Wednesday, 7 October, \"11:45 CEST at the earliest\", by the Royal Swedish Academy of Sciences<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The venue is the Academy's Session Hall, Lilla Frescativagen 4A, Stockholm<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>It is the third of six 2026 announcements, which \"will take place on 5-12 October\", the day after the physics prize on Tuesday 6 October and before literature on Thursday 8 October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>Like every announcement except the peace prize, the time carries the hedge \"at the earliest\"<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>All prize announcements \"will be broadcast live on the official digital channels of the Nobel Prize\", with a YouTube live stream listed for each<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The Nobel Prize YouTube channel's live stream page for this announcement, \"Announcement of the 2026 Nobel Prize in Chemistry\", was published 2026-09-14T09:43:10Z and says only \"The Nobel Prize in Chemistry will be announced at the Royal Swedish Academy of Sciences in Stockholm, Sweden\"; it names no laureates and gives no announcement date<cite data-ref=\"https://www.youtube.com/live/a9Bhx9wEt8U\"></cite></li><li>A press invitation is listed for the chemistry announcement, and \"Media wishing to attend the announcements should apply to the respective prize-awarding institution in the early fall\"<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The announcement follows a year-long process: nominations open in September, close at \"midnight on 31 January\", are considered February to September by a Nobel committee of 5 to 10 members, and the prize-awarding institutions \"take a final vote to select their newest laureates\" in October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>The laureates receive their medals, prize money and diplomas on Nobel Day, 10 December, in Stockholm and Oslo<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>The schedule was set out in a Nobel Foundation press release dated 2 February 2026; the nobelprize.org announcement-dates page carries no publication or last-updated date<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
+        "title": "Nobel Prize in Chemistry 2026 — official press release",
+        "confidence": 100,
+        "publishedDate": "2026-10-07"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-07T13:57:39.351Z"
+  },
+  {
+    "id": 453,
+    "pinId": 2003,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Nuri Successfully Launches NEONSAT-2 to 6 on Its Fifth Flight",
+        "field": "title",
+        "before": "Nuri launches NeonSat-2 to 6"
+      },
+      {
+        "after": "South Korea's fifth Nuri flight lifted off at 12:25 KST on 7 October, deploying five NEONSAT spacecraft and nine CubeSats into their target orbits. KASA confirmed normal stage operation and the first NEONSAT ground contact.",
+        "field": "description",
+        "before": "NeonSat-2 to 6 are part of the South Korean government's Earth observation micro-satellite constellation NeonSat (New-space Earth Observation Satellite). The NeonSat constellation is the first satellite system developed by the government using a mass-production approach for precise monitoring of the Korean Peninsula. Lifts off from LC-2, Naro Space Center, South Korea to Sun-Synchronous Orbit."
+      },
+      {
+        "after": "2026-10-07T03:25:00.000Z",
+        "field": "start",
+        "allDay": false,
+        "before": "2026-10-07T03:23:00.000Z"
+      },
+      {
+        "after": null,
+        "field": "end",
+        "allDay": false,
+        "before": "2026-10-07T04:23:00.000Z"
+      },
+      {
+        "after": "<ul><li>Nuri lifted off from Naro Space Center at 12:25 KST on 7 October 2026. KASA and KARI confirmed five NEONSAT spacecraft and nine CubeSats were separated into their target orbits.<cite data-ref=\"https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=515\"></cite></li><li>The confirmed result replaces the earlier launch forecast: all three rocket stages operated normally, and the fairing separated as planned.<cite data-ref=\"https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=515\"></cite></li><li>NEONSAT-6 made initial contact with the Antarctic King Sejong ground station at about 13:08 KST. The release described subsequent contact attempts for the other spacecraft.<cite data-ref=\"https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=515\"></cite></li><li>The mission used a low-shock separation device and procedures intended to avoid collisions between constellation spacecraft. Greater industrial participation also advances the transition toward commercial launch operations.<cite data-ref=\"https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=515\"></cite></li><li>KASA targets the sixth flight for the second half of 2027, with at least annual launches planned through 2032.<cite data-ref=\"https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=515\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>On 30 September the Korea AeroSpace Administration's chief, Oh Tae-seok, said &lsquo;Preparations have been proceeding without any problems so far&rsquo; for the fifth Nuri launch on 7 October from the Naro Space Center in Goheung<cite data-ref=\"https://www.koreatimes.co.kr/business/tech-science/20260930/space-agency-chief-says-preparations-for-5th-nuri-launch-on-track\"></cite></li><li>Nuri will carry 15 satellites: five NEONSAT satellites as the primary payload, forming the country's first domestically launched microsatellite constellation, and 10 CubeSats as secondary payload; Oh called launching different satellites into different orbits &lsquo;a key capability for commercial launch services&rsquo;<cite data-ref=\"https://www.koreatimes.co.kr/business/tech-science/20260930/space-agency-chief-says-preparations-for-5th-nuri-launch-on-track\"></cite></li><li>KARI's Nuri is set to launch NeonSat-2 to 6 from pad LC-2 at the Naro Space Center in South Jeolla's Goheung County, South Korea, with T-0 at 2026-10-07T03:23:00Z and a window running to 04:23Z<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/e0741415-6c63-4236-9736-24a6c04485bc/\"></cite></li><li>Status is &ldquo;Go for Launch&rdquo;: &ldquo;Current T-0 confirmed by official or reliable sources&rdquo;, following an update of 2026-08-27 reading &ldquo;GO for launch on October 7&rdquo;<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/e0741415-6c63-4236-9736-24a6c04485bc/\"></cite></li><li>The mission, typed &ldquo;Earth Science&rdquo;, goes to Sun-Synchronous Orbit; NeonSat-2 to 6 belong to the South Korean government's Earth observation micro-satellite constellation NeonSat, &ldquo;the first satellite system developed by the government using a mass-production approach for precise monitoring of the Korean Peninsula&rdquo;<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/e0741415-6c63-4236-9736-24a6c04485bc/\"></cite></li><li>The date has slipped repeatedly since the record was added on 2025-12-09: NET Q3 2026 (2025-12-17), NET September (2026-07-17), &ldquo;Delayed to NET October&rdquo; (2026-07-29), then the confirmed 7 October slot<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/e0741415-6c63-4236-9736-24a6c04485bc/\"></cite></li><li>The Korea Aerospace Research Institute released a video of the assembly of the rocket's three stages at Naro on the Tuesday before the 30 September report<cite data-ref=\"https://www.koreatimes.co.kr/business/tech-science/20260930/space-agency-chief-says-preparations-for-5th-nuri-launch-on-track\"></cite></li></ul><h3>Notable features</h3><ul><li>Nuri, also known as KSLV-II, is &ldquo;South Korea's second carrier rocket and the successor to KSLV-1&rdquo;: three stages, 47.2 m long, 3.5 m across, 200 t at launch, 2,600 kg to LEO, maiden flight 2021-10-21<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/e0741415-6c63-4236-9736-24a6c04485bc/\"></cite></li><li>The Nuri configuration stands at 4 launches, 3 successful, 1 failed; operator KARI has 8 launches, 5 successful, 3 failed<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/e0741415-6c63-4236-9736-24a6c04485bc/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=515",
+        "title": "KASA confirms successful fifth Nuri launch carrying NEONSAT-2 to 6",
+        "confidence": 100,
+        "publishedDate": "2026-10-07"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-07T13:58:05.593Z"
+  },
+  {
+    "id": 454,
+    "pinId": 1998,
+    "kind": "edit",
+    "userId": 304,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>The 2026 Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel is announced on Monday 12 October 2026 by the Royal Swedish Academy of Sciences, the last of the six 2026 Nobel announcements, which run 5&ndash;12 October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>Both nobelprize.org pages time it as &ldquo;11:45 CEST at the earliest&rdquo;, keeping the hedge; only the peace prize announcement is given a time without it<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The Nobel Foundation press release gives the venue in full as the Royal Swedish Academy of Sciences, Session Hall, Lilla Frescativagen 4A, Stockholm<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The YouTube description is vaguer on place, saying only that the prize &ldquo;will be announced at the Royal Swedish Academy of Sciences in Stockholm, Sweden&rdquo;<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>The announcement is broadcast live: &ldquo;All prize announcements will be broadcast live on the official digital channels of the Nobel Prize&rdquo;, with a YouTube live stream listed for each<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The pin's source is that live stream page, titled &ldquo;Announcement of the 2026 Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel&rdquo; on the Nobel Prize channel, published 2026-09-14 and tagged #NobelPrize<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>No laureates are named: the live stream page gives no laureate names and no announcement date beyond its own publication timestamp<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>Both pages give the prize its full formal name, &ldquo;Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2026&rdquo;, setting it apart from the five prizes named for Nobel himself, though neither states that it was not established by his will<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The press release setting the 2026 dates and venues is dated 2 February 2026, lists a press invitation for this announcement, and says media wishing to attend &ldquo;should apply to the respective prize-awarding institution in the early fall&rdquo;<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The announcement closes a selection year that opens with nominations in September, closes them at midnight on 31 January, runs evaluation from February to September and ends with the institutions' final vote in October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>The laureates receive their medals, prize money and diplomas on Nobel Day, 10 December, in Stockholm and Oslo<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>On October 7, Polymarket showed approximately $48,536 traded across its economics-prize market. Ariel Pakes was quoted at 19% and Susan Athey at 17%, with individual books below $10,000. These are thin-market trading estimates, not official predictions; inconsistent quotes for other candidates were omitted. <a href=\"https://polymarket.com/event/nobel-economics-prize-winner-2026\">Polymarket</a></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 2026 Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel is announced on Monday 12 October 2026 by the Royal Swedish Academy of Sciences, the last of the six 2026 Nobel announcements, which run 5&ndash;12 October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>Both nobelprize.org pages time it as &ldquo;11:45 CEST at the earliest&rdquo;, keeping the hedge; only the peace prize announcement is given a time without it<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The Nobel Foundation press release gives the venue in full as the Royal Swedish Academy of Sciences, Session Hall, Lilla Frescativagen 4A, Stockholm<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The YouTube description is vaguer on place, saying only that the prize &ldquo;will be announced at the Royal Swedish Academy of Sciences in Stockholm, Sweden&rdquo;<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>The announcement is broadcast live: &ldquo;All prize announcements will be broadcast live on the official digital channels of the Nobel Prize&rdquo;, with a YouTube live stream listed for each<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The pin's source is that live stream page, titled &ldquo;Announcement of the 2026 Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel&rdquo; on the Nobel Prize channel, published 2026-09-14 and tagged #NobelPrize<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>No laureates are named: the live stream page gives no laureate names and no announcement date beyond its own publication timestamp<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>Both pages give the prize its full formal name, &ldquo;Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2026&rdquo;, setting it apart from the five prizes named for Nobel himself, though neither states that it was not established by his will<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The press release setting the 2026 dates and venues is dated 2 February 2026, lists a press invitation for this announcement, and says media wishing to attend &ldquo;should apply to the respective prize-awarding institution in the early fall&rdquo;<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The announcement closes a selection year that opens with nominations in September, closes them at midnight on 31 January, runs evaluation from February to September and ends with the institutions' final vote in October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>The laureates receive their medals, prize money and diplomas on Nobel Day, 10 December, in Stockholm and Oslo<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://polymarket.com/event/nobel-economics-prize-winner-2026",
+        "title": "Nobel Economics Prize Winner 2026 — Polymarket",
+        "confidence": 75,
+        "publishedDate": "2026-10-06"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-07T14:19:03.740Z"
+  },
+  {
+    "id": 455,
+    "pinId": 2474,
+    "kind": "edit",
+    "userId": 374,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Earlier reports set a March 2027 antitrust trial over Paramount's Warner Bros. Discovery acquisition. The transaction closed on October 6, 2026 after a settlement with the states; the status of the separately filed Writers Guild case and the prior trial schedule still need docket verification.",
+        "field": "description",
+        "before": "Twelve state attorneys general led by California's Rob Bonta, and separately the Writers Guild of America, get their day in court against Paramount Skydance's $111bn acquisition of Warner Bros. Discovery. Judge Araceli Martinez-Olguin set 12 court days, and the merger is on hold behind the result."
+      },
+      {
+        "after": "<ul><li>Paramount completed its Warner Bros. Discovery acquisition on October 6, 2026, according to its SEC filing. The earlier claim that the transaction remained on hold is no longer current. <a href=\"https://www.sec.gov/Archives/edgar/data/1437107/000119312526415055/d200872d8k.htm\">SEC filing</a></li><li>Earlier reporting scheduled a trial for March 2–19, 2027 and a pretrial conference on February 24. Those dates are retained provisionally pending a current court-docket check. <a href=\"https://www.screendaily.com/news/paramount-wbd-merger-antitrust-trial-scheduled-for-march-2027/5219113.article\">Earlier scheduling report</a></li><li>The state challenge settled before closing. This does not establish the outcome of the separately filed Writers Guild challenge; the remaining claims and calendar need independent verification. <a href=\"https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close\">AP: state settlement approved</a></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The trial runs from 2 March to 19 March 2027, with a final pretrial conference on 24 February 2027. [S]</li><li>Two suits were filed in mid-July 2026 - a coalition of state attorneys general and the Writers Guild of America - both seeking to stop the deal. [S]</li><li>Waiting costs money: the deal carries a ticking fee of about $1.06bn while the case runs. [S]</li><li>Paramount's position is that the transaction \"is lawful, pro-competitive, and raises no antitrust concerns\"; Bonta's office calls it \"a clear-cut antitrust case\". [S]</li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1437107/000119312526415055/d200872d8k.htm",
+        "title": "Paramount October 6, 2026 Form 8-K: merger completion",
+        "confidence": 100,
+        "publishedDate": "2026-10-06"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-07T14:27:21.848Z"
+  },
+  {
+    "id": 456,
+    "pinId": 2474,
+    "kind": "edit",
+    "userId": 374,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Previously Scheduled Paramount–Warner Bros. Discovery Antitrust Trial",
+        "field": "title",
+        "before": "The Paramount-Warner Bros. Discovery Antitrust Trial Opens"
+      },
+      {
+        "after": "The previously reported March 2027 trial schedule has been superseded by settlements. A judge approved the states' agreement on September 30, and AP reported that the Writers Guild also settled its separate suit. Paramount completed the acquisition on October 6.",
+        "field": "description",
+        "before": "Earlier reports set a March 2027 antitrust trial over Paramount's Warner Bros. Discovery acquisition. The transaction closed on October 6, 2026 after a settlement with the states; the status of the separately filed Writers Guild case and the prior trial schedule still need docket verification."
+      },
+      {
+        "after": "<ul><li>Earlier reports scheduled a March 2–19, 2027 antitrust trial. That prospective schedule should no longer be treated as an active hearing calendar following settlement of the described challenges. <a href=\"https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close\">AP court reporting</a></li><li>The judge approved the 12 states' consent decree on September 30. AP also reported that the Writers Guild had reached a separate settlement the previous week. <a href=\"https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close\">AP</a></li><li>Paramount completed its Warner Bros. Discovery acquisition on October 6. The prior statement that the merger was on hold is obsolete. This pin remains marked for docket review and removal of the stale trial entry if no proceeding remains. <a href=\"https://www.sec.gov/Archives/edgar/data/1437107/000119312526415055/d200872d8k.htm\">SEC filing</a></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Paramount completed its Warner Bros. Discovery acquisition on October 6, 2026, according to its SEC filing. The earlier claim that the transaction remained on hold is no longer current. <a href=\"https://www.sec.gov/Archives/edgar/data/1437107/000119312526415055/d200872d8k.htm\">SEC filing</a></li><li>Earlier reporting scheduled a trial for March 2–19, 2027 and a pretrial conference on February 24. Those dates are retained provisionally pending a current court-docket check. <a href=\"https://www.screendaily.com/news/paramount-wbd-merger-antitrust-trial-scheduled-for-march-2027/5219113.article\">Earlier scheduling report</a></li><li>The state challenge settled before closing. This does not establish the outcome of the separately filed Writers Guild challenge; the remaining claims and calendar need independent verification. <a href=\"https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close\">AP: state settlement approved</a></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close",
+        "title": "AP: states' settlement approved; Writers Guild also settled",
+        "confidence": 95,
+        "publishedDate": "2026-09-30"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-07T14:30:28.808Z"
+  },
+  {
+    "id": 457,
+    "pinId": 2053,
+    "kind": "edit",
+    "userId": 51,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Season 3 begins October 8 on CBS at 8 p.m. ET/PT. Georgie and Mandy's Texas family faces another clash with Mary, while Connor seeks Georgie's help in the premiere.",
+        "field": "description",
+        "before": "Georgie & Mandy's First Marriage follows Georgie and Mandy as they raise their young family in Texas while navigating the challenges of adulthood, parenting and marriage. The premiere, \"Feminine Wiles and Some Tire Thing in Lubbock\": Tensions rise when Mandy and the family side against Georgie in his fight with Mary. Meanwhile, Connor turns to Georgie when he gets himself into trouble. Season 3 starts on CBS."
+      },
+      {
+        "after": null,
+        "field": "address",
+        "before": "CBS Building, Manhattan, United States"
+      },
+      {
+        "after": "<ul><li>The third season premieres Thursday, October 8, on CBS at 8–8:30 p.m. ET/PT, with live and on-demand availability on Paramount+. <a href=\"https://www.paramountpressexpress.com/cbs-entertainment/shows/georgie-mandys-first-marriage/about/\">CBS</a></li><li>The series continues Georgie and Mandy's effort to balance raising their child with marriage and adult responsibilities in Texas. It follows the family established in Young Sheldon. <a href=\"https://www.paramountpressexpress.com/cbs-entertainment/shows/georgie-mandys-first-marriage/about/\">Official series background</a></li><li>The opening episode is titled “Feminine Wiles and Some Tire Thing in Lubbock.” Its story puts Georgie at odds with Mary and brings Connor to him for assistance. <a href=\"https://www.tvmaze.com/episodes/3676275/georgie-mandys-first-marriage-3x01-feminine-wiles-and-some-tire-thing-in-lubbock\">Episode listing</a></li><li>Montana Jordan and Emily Osment lead the cast. Rachel Bay Jones, Will Sasso, Dougie Baldwin and Jessie Prez also return in the family ensemble. <a href=\"https://www.paramountpressexpress.com/cbs-entertainment/shows/georgie-mandys-first-marriage/about/\">CBS cast</a></li><li>Chuck Lorre Productions makes the series in association with Warner Bros. Television. Chuck Lorre and Steve Holland are executive producers, with Steven Molaro as executive consultant. <a href=\"https://www.paramountpressexpress.com/cbs-entertainment/shows/georgie-mandys-first-marriage/about/\">Production credits</a></li><li>The October 9 UTC timestamp represents the October 8 Eastern broadcast; the separately scheduled Pacific airing follows at 8 p.m. local time. <a href=\"https://www.paramountpressexpress.com/cbs-entertainment/shows/georgie-mandys-first-marriage/about/\">CBS broadcast slot</a></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Georgie & Mandy's First Marriage season 3 opens with episode 3x01, \"Feminine Wiles and Some Tire Thing in Lubbock\", on Thursday Oct 8, 2026 at 20:00 on CBS, running 30 minutes<cite data-ref=\"https://www.tvmaze.com/episodes/3676275/georgie-mandys-first-marriage-3x01-feminine-wiles-and-some-tire-thing-in-lubbock\"></cite><cite data-ref=\"https://www.tvmaze.com/shows/76566/georgie-mandys-first-marriage\"></cite></li><li>Directed by Mark Cendrowski, story by Jim Reynolds and Nadiya Chettiar, teleplay by Steve Holland and Connor Kilpatrick<cite data-ref=\"https://www.tvmaze.com/episodes/3676275/georgie-mandys-first-marriage-3x01-feminine-wiles-and-some-tire-thing-in-lubbock\"></cite></li><li>Synopsis: \"Tensions rise when Mandy and the family side against Georgie in his fight with Mary. Meanwhile, Connor turns to Georgie when he gets himself into trouble\"<cite data-ref=\"https://www.tvmaze.com/episodes/3676275/georgie-mandys-first-marriage-3x01-feminine-wiles-and-some-tire-thing-in-lubbock\"></cite><cite data-ref=\"https://www.tvmaze.com/shows/76566/georgie-mandys-first-marriage\"></cite></li><li>The show is listed on CBS (2024 - now), Thursdays at 20:00, status \"Running; returning October 2026\", 22 episodes ordered, genres Comedy and Family, created by Chuck Lorre, Steven Molaro and Steve Holland, rated 7.5 from 57 votes<cite data-ref=\"https://www.tvmaze.com/shows/76566/georgie-mandys-first-marriage\"></cite></li><li>Season 2 ended with 2x22 \"A New Beau and Someone Else's Mom's House\" on May 21, 2026, a double bill with 2x21 the same night<cite data-ref=\"https://www.tvmaze.com/shows/76566/georgie-mandys-first-marriage\"></cite></li><li>Cast: Montana Jordan as George \"Georgie\" Cooper Jr., Emily Osment as Mandy McAllister, Will Sasso as Jim McAllister, Rachel Bay Jones as Audrey McAllister, Dougie Baldwin as Connor McAllister and Jessie Prez as Ruben Alvarez; Young Sheldon is listed as the parent franchise<cite data-ref=\"https://www.tvmaze.com/shows/76566/georgie-mandys-first-marriage\"></cite></li><li>The pin's 2026-10-09T00:00Z start is the Thursday Oct 8, 2026 20:00 US Eastern slot the listings give<cite data-ref=\"https://www.tvmaze.com/episodes/3676275/georgie-mandys-first-marriage-3x01-feminine-wiles-and-some-tire-thing-in-lubbock\"></cite><cite data-ref=\"https://www.tvmaze.com/shows/76566/georgie-mandys-first-marriage\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.paramountpressexpress.com/cbs-entertainment/shows/georgie-mandys-first-marriage/about/",
+        "title": "CBS official Georgie & Mandy show information",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-07T14:32:48.358Z"
+  },
+  {
+    "id": 458,
+    "pinId": 2474,
+    "kind": "edit",
+    "userId": 374,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Earlier reports scheduled a March 2–19, 2027 antitrust trial. That prospective schedule has been superseded by settlement of the described challenges. <a href=\"https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close\">AP court reporting</a></li><li>The judge approved the 12 states’ consent decree on September 30. AP also reported that the Writers Guild reached a separate settlement the previous week. <a href=\"https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close\">AP</a></li><li>Paramount completed its Warner Bros. Discovery acquisition on October 6. The prior statement that the merger was on hold is obsolete. <a href=\"https://www.sec.gov/Archives/edgar/data/1437107/000119312526415055/d200872d8k.htm\">SEC filing</a></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Earlier reports scheduled a March 2–19, 2027 antitrust trial. That prospective schedule should no longer be treated as an active hearing calendar following settlement of the described challenges. <a href=\"https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close\">AP court reporting</a></li><li>The judge approved the 12 states' consent decree on September 30. AP also reported that the Writers Guild had reached a separate settlement the previous week. <a href=\"https://ny1.com/nyc/all-boroughs/ap-top-news/2026/09/30/judge-approves-paramounts-settlement-with-states-over-warner-buyout-allowing-merger-to-soon-close\">AP</a></li><li>Paramount completed its Warner Bros. Discovery acquisition on October 6. The prior statement that the merger was on hold is obsolete. This pin remains marked for docket review and removal of the stale trial entry if no proceeding remains. <a href=\"https://www.sec.gov/Archives/edgar/data/1437107/000119312526415055/d200872d8k.htm\">SEC filing</a></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-07T14:32:50.485Z"
+  },
+  {
+    "id": 459,
+    "pinId": 5097,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "NOAA Forecasts an 83% Chance of a Historic El Niño in October–December",
+        "field": "title",
+        "before": "NOAA's October El Niño Update Follows a 75% Chance of a Record Event"
+      },
+      {
+        "after": "NOAA forecasts an 83% chance of a historic El Niño during October–December 2026, with a three-month relative ocean temperature index of at least +2.5 °C. Strong-to-very strong conditions are likely to continue through January–March 2027.",
+        "field": "description",
+        "before": "After NOAA's 10 September advisory put 75% odds on a historic El Niño this autumn, the Climate Prediction Center issues its next ENSO discussion on 8 October 2026."
+      },
+      {
+        "after": "2026-10-01T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-10-08T00:00:00.000Z"
+      },
+      {
+        "after": "2027-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-10-09T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>NOAA’s 8 October 2026 discussion gives an 83% chance of a historic El Niño for October–December, compared with 54% for September–November and 70% for November–January<cite data-ref=\"https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml\"></cite></li><li>Historic strength means a three-month Relative Oceanic Niño Index (RONI) of +2.5 °C or more, exceeding the strength of previous El Niño events dating back to 1950<cite data-ref=\"https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml\"></cite></li><li>El Niño strengthened further in September, with the Niño-3.4 index reaching +2.1 °C; strong-to-very strong conditions are likely through January–March 2027<cite data-ref=\"https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml\"></cite></li><li>The WMO’s September update expects El Niño to persist through February 2027, with risks of floods, drought and extreme heat as rainfall and temperature patterns shift<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The Climate Prediction Center will issue its next ENSO Diagnostic Discussion on 8 October 2026; the 10 September edition kept an El Niño Advisory in force<cite data-ref=\"https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml\"></cite></li><li>It put a greater than 90% chance on a very strong El Niño during the northern fall and winter of 2026-27<cite data-ref=\"https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml\"></cite></li><li>For October-December 2026 it gave a 75% chance of a historic event, one stronger than any since 1950 (a three-month RONI of +2.5 °C or more), and reported the Niño-3.4 index at +1.8 °C<cite data-ref=\"https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml\"></cite></li><li>The WMO separately expects El Niño to persist through at least February 2027, with flooding, drought and heat risks as rainfall patterns shift<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-09T02:11:40.470Z"
+  },
+  {
+    "id": 460,
+    "pinId": 1838,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Nvidia Revenue Expected to Grow About 70% in Fiscal 2028",
+        "field": "title",
+        "before": "Nvidia guides about 70% growth for fiscal 2028 (~$673 billion)"
+      },
+      {
+        "after": "Nvidia expects roughly 70% revenue growth during fiscal 2028, with chip supply constraining demand. The forecast covers the fiscal year beginning February 1, 2027 and ending January 30, 2028, rather than the August 2026 earnings call on which it was announced.",
+        "field": "description",
+        "before": "On its August earnings call Nvidia gave its first-ever year-ahead forecast: about 70% revenue growth in the fiscal year ending January 2028, roughly $673 billion, limited by supply rather than demand."
+      },
+      {
+        "after": "2027-02-01T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-08-26T00:00:00.000Z"
+      },
+      {
+        "after": "2028-01-31T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      },
+      {
+        "after": "<ul><li>The estimated growth window is fiscal 2028, February 1, 2027–January 30, 2028, derived from Nvidia’s last-Sunday-in-January calendar policy<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/R8.htm\"></cite></li><li>On its Q2 fiscal 2027 earnings call on 26 August 2026, Nvidia gave its first-ever year-ahead forecast: CFO Colette Kress said fiscal 2028 (ending January 2028) revenue growth would be about 70%, against a 44% analyst average<cite data-ref=\"https://www.cnbc.com/2026/08/26/nvidia-70percent-growth-forecast-puts-it-on-track-to-be-tech-no-2-company.html\"></cite><cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite><cite data-ref=\"https://www.cfodive.com/news/nvidia-cfo-predicts-70-percent-revenue-jump-fiscal-2028-ai/828989/\"></cite></li><li>On consensus fiscal 2027 revenue of $396 billion that implies about $673 billion (Fortune puts it at $690-700 billion against analyst projections of roughly $570 billion)<cite data-ref=\"https://www.cnbc.com/2026/08/26/nvidia-70percent-growth-forecast-puts-it-on-track-to-be-tech-no-2-company.html\"></cite><cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite></li><li>Huang said demand is 'much greater than 70%' but supply 'allows us to confidently deliver 70%'; Kress said supply will remain a bottleneck to at least the end of that year, and memory pricing pressures margins<cite data-ref=\"https://www.cnbc.com/2026/08/26/nvidia-70percent-growth-forecast-puts-it-on-track-to-be-tech-no-2-company.html\"></cite><cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite><cite data-ref=\"https://www.cfodive.com/news/nvidia-cfo-predicts-70-percent-revenue-jump-fiscal-2028-ai/828989/\"></cite></li><li>Q2 revenue (quarter ended 26 July) was $96.2 billion, up 106% year on year, net income rose 126% to about $60 billion, and Q3 guidance is $108 billion<cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite><cite data-ref=\"https://www.cfodive.com/news/nvidia-cfo-predicts-70-percent-revenue-jump-fiscal-2028-ai/828989/\"></cite></li><li>Non-hyperscalers are about half of the business and growing 100% a year; Huang coined 'ACIE' for regional AI companies, neoclouds, startups and enterprises<cite data-ref=\"https://www.cnbc.com/2026/08/26/nvidia-70percent-growth-forecast-puts-it-on-track-to-be-tech-no-2-company.html\"></cite><cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite></li><li>Kress defended against 'circular financing' criticism, citing maximum gross guarantee exposure of $108.5 billion and nearly $50 billion invested in frontier labs<cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite></li><li>Kress expects Vera Rubin to be the fastest product ramp in Nvidia's history, with a $40 billion opportunity for Vera GPUs and CPUs; shares rose over 4% after hours (Fortune)<cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite><cite data-ref=\"https://www.cfodive.com/news/nvidia-cfo-predicts-70-percent-revenue-jump-fiscal-2028-ai/828989/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>On its Q2 fiscal 2027 earnings call on 26 August 2026, Nvidia gave its first-ever year-ahead forecast: CFO Colette Kress said fiscal 2028 (ending early February 2028) revenue growth would be about 70%, against a 44% analyst average<cite data-ref=\"https://www.cnbc.com/2026/08/26/nvidia-70percent-growth-forecast-puts-it-on-track-to-be-tech-no-2-company.html\"></cite><cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite><cite data-ref=\"https://www.cfodive.com/news/nvidia-cfo-predicts-70-percent-revenue-jump-fiscal-2028-ai/828989/\"></cite></li><li>On consensus fiscal 2027 revenue of $396 billion that implies about $673 billion (Fortune puts it at $690-700 billion against analyst projections of roughly $570 billion)<cite data-ref=\"https://www.cnbc.com/2026/08/26/nvidia-70percent-growth-forecast-puts-it-on-track-to-be-tech-no-2-company.html\"></cite><cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite></li><li>Huang said demand is 'much greater than 70%' but supply 'allows us to confidently deliver 70%'; Kress said supply will remain a bottleneck to at least the end of that year, and memory pricing pressures margins<cite data-ref=\"https://www.cnbc.com/2026/08/26/nvidia-70percent-growth-forecast-puts-it-on-track-to-be-tech-no-2-company.html\"></cite><cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite><cite data-ref=\"https://www.cfodive.com/news/nvidia-cfo-predicts-70-percent-revenue-jump-fiscal-2028-ai/828989/\"></cite></li><li>Q2 revenue (quarter ended 26 July) was $96.2 billion, up 106% year on year, net income rose 126% to about $60 billion, and Q3 guidance is $108 billion<cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite><cite data-ref=\"https://www.cfodive.com/news/nvidia-cfo-predicts-70-percent-revenue-jump-fiscal-2028-ai/828989/\"></cite></li><li>Non-hyperscalers are about half of the business and growing 100% a year; Huang coined 'ACIE' for regional AI companies, neoclouds, startups and enterprises<cite data-ref=\"https://www.cnbc.com/2026/08/26/nvidia-70percent-growth-forecast-puts-it-on-track-to-be-tech-no-2-company.html\"></cite><cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite></li><li>Kress defended against 'circular financing' criticism, citing maximum gross guarantee exposure of $108.5 billion and nearly $50 billion invested in frontier labs<cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite></li><li>Kress expects Vera Rubin to be the fastest product ramp in Nvidia's history, with a $40 billion opportunity for Vera GPUs and CPUs; shares rose over 4% after hours (Fortune)<cite data-ref=\"https://fortune.com/2026/08/26/nvidia-q2-growth-results-jensen-huang/\"></cite><cite data-ref=\"https://www.cfodive.com/news/nvidia-cfo-predicts-70-percent-revenue-jump-fiscal-2028-ai/828989/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/R8.htm",
+        "title": "Nvidia Q2 FY2027 Form 10-Q — fiscal calendar policy",
+        "confidence": 90,
+        "publishedDate": "2026-08-27"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-09T02:17:10.623Z"
+  },
+  {
+    "id": 461,
+    "pinId": 4562,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Bristol Bay’s 2026 Sockeye Run Forecast at 45.3 Million Fish",
+        "field": "title",
+        "before": "ADF&G Forecasts a 45.3-Million-Fish Bristol Bay Sockeye Run for 2026"
+      },
+      {
+        "after": "ADF&G’s preseason forecast put the 2026 Bristol Bay sockeye run at 45.32 million fish, a strong year by its scale, with about 32.3 million harvestable fish in the bay. The pin dates the expected summer run rather than the forecast’s November 2025 publication.",
+        "field": "description",
+        "before": "Alaska forecast a 2026 Bristol Bay sockeye run of 45.32 million fish, a 'strong' year by its own scale, with a harvest of about 32.3 million fish in the bay."
+      },
+      {
+        "after": "2026-06-01T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2025-11-13T21:00:00.000Z"
+      },
+      {
+        "after": "2026-08-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      },
+      {
+        "after": "<ul><li>The run is dated to an estimated June–July 2026 window, based on the 2026 fishing outlook; the dates are seasonal boundaries, not confirmed run-onset dates<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1760976706.pdf\"></cite></li><li>ADF&G forecast a 2026 Bristol Bay sockeye total run of 45.32 million fish, with an 80% range of 31.12-59.52 million<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite></li><li>An inshore run of 44.05 million, escapement of 11.79 million and a Bristol Bay harvestable surplus of 32.26 million fish (1.27 million more in the South Peninsula)<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite></li><li>ADF&G rates a run of 43-55 million as 'strong', the 60th-80th percentile of runs since 1961<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite></li><li>Since 2006 its preseason forecasts have under-forecast the run by 14% on average, from 36% under in 2014 to 21% over in 2011<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite></li><li>It followed a 2025 inshore run of 56.7 million fish and a harvest of 41.2 million<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1738640423.pdf\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>ADF&G forecast a 2026 Bristol Bay sockeye total run of 45.32 million fish, with an 80% range of 31.12-59.52 million<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite></li><li>An inshore run of 44.05 million, escapement of 11.79 million and a Bristol Bay harvestable surplus of 32.26 million fish (1.27 million more in the South Peninsula)<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite></li><li>ADF&G rates a run of 43-55 million as 'strong', the 60th-80th percentile of runs since 1961<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite></li><li>Since 2006 its preseason forecasts have under-forecast the run by 14% on average, from 36% under in 2014 to 21% over in 2011<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite></li><li>It followed a 2025 inshore run of 56.7 million fish and a harvest of 41.2 million<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1738640423.pdf\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1760976706.pdf",
+        "title": "2026 Bristol Bay Commercial Salmon Fishing Outlook — ADF&G",
+        "confidence": 70,
+        "publishedDate": "2026-03-23"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-09T02:17:12.898Z"
+  },
+  {
+    "id": 462,
+    "pinId": 4566,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Bristol Bay’s 2027 Sockeye Run Expected in June–July",
+        "field": "title",
+        "before": "ADF&G Issues Its 2027 Bristol Bay Sockeye Salmon Forecast"
+      },
+      {
+        "after": "Bristol Bay’s next sockeye run is expected during the summer of 2027, using the previous season’s fishing cadence as an estimate. ADF&G has not yet published its 2027 run-size forecast; the 2026 inshore run was 45.7 million fish.",
+        "field": "description",
+        "before": "Alaska's forecast for the 2027 Bristol Bay sockeye run, the number the fleet and processors plan the next season around, is due in November after a 2026 run of 45.7 million fish."
+      },
+      {
+        "after": "2027-06-01T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-11-12T00:00:00.000Z"
+      },
+      {
+        "after": "2027-08-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-11-13T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>As of October 8, 2026, ADF&G’s forecast list ends with 2026; no 2027 run-size forecast has been published on this page<cite data-ref=\"https://www.adfg.alaska.gov/index.cfm?adfg=commercialbyareabristolbay.salmon\"></cite></li><li>The run is dated to an estimated June–July 2027 window, based on the 2026 fishing outlook; the dates are seasonal boundaries, not confirmed run-onset dates<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1760976706.pdf\"></cite></li><li>ADF&G's Bristol Bay commercial salmon page lists a sockeye forecast for every season from 2021 to 2026; the 2027 forecast is the next in the series<cite data-ref=\"https://www.adfg.alaska.gov/index.cfm?adfg=commercialbyareabristolbay.salmon\"></cite></li><li>The 2026 season it follows ended with a 45.7-million-fish inshore run, the first under 50 million since 2014, and a 30.1-million sockeye harvest<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1838297519.pdf\"></cite></li><li>The 2026 run came in 4% above the inshore forecast of 44.1 million, while the harvest was 7% under its forecast<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1838297519.pdf\"></cite></li><li>Salmon were worth a preliminary $264.0 million to fishermen in 2026<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1838297519.pdf\"></cite></li><li>ADF&G issued its last two forecasts at noon on 7 November 2024 and 13 November 2025<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite><cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1643354231.pdf\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>ADF&G's Bristol Bay commercial salmon page lists a sockeye forecast for every season from 2021 to 2026; the 2027 forecast is the next in the series<cite data-ref=\"https://www.adfg.alaska.gov/index.cfm?adfg=commercialbyareabristolbay.salmon\"></cite></li><li>The 2026 season it follows ended with a 45.7-million-fish inshore run, the first under 50 million since 2014, and a 30.1-million sockeye harvest<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1838297519.pdf\"></cite></li><li>The 2026 run came in 4% above the inshore forecast of 44.1 million, while the harvest was 7% under its forecast<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1838297519.pdf\"></cite></li><li>Salmon were worth a preliminary $264.0 million to fishermen in 2026<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1838297519.pdf\"></cite></li><li>ADF&G issued its last two forecasts at noon on 7 November 2024 and 13 November 2025<cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1745780946.pdf\"></cite><cite data-ref=\"https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1643354231.pdf\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.adfg.alaska.gov/static/applications/dcfnewsrelease/1760976706.pdf",
+        "title": "2026 Bristol Bay Commercial Salmon Fishing Outlook — ADF&G",
+        "confidence": 70,
+        "publishedDate": "2026-03-23"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-09T02:17:15.302Z"
+  },
+  {
+    "id": 463,
+    "pinId": 5098,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "El Niño Expected to Intensify Through Winter 2026–27",
+        "field": "title",
+        "before": "WMO Warns El Niño Will Be Very Strong and Last Into 2027"
+      },
+      {
+        "after": "WMO expects the established El Niño to strengthen in the coming months and persist through February 2027, with increased risks of floods, drought and extreme heat. Its September–November outlook already anticipates rainfall and temperature patterns associated with strong El Niño.",
+        "field": "description",
+        "before": "The World Meteorological Organization says El Niño will persist through February 2027 at very strong levels, raising the risk of floods, droughts and extreme heat in the months ahead."
+      },
+      {
+        "after": "2026-09-01T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-09-03T00:00:00.000Z"
+      },
+      {
+        "after": "2027-03-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-09-04T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>The estimated forecast period begins with September–November 2026 conditions and extends through February 2027; its first day is a window boundary, not a confirmed onset of very strong intensity<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>The WMO says there is nearly a 100% probability that El Niño persists through February 2027; it separately expects further strengthening to very strong intensity<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>Niño 3.4 sea surface temperatures ran +2.2 to +2.6 °C above average from late July to mid-August, with subsurface waters in places more than 8 °C above normal<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>It expects widespread above-normal temperatures over most land areas for September-November 2026 and shifted rainfall, with flooding, drought and extreme heat risks<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>A positive Indian Ocean Dipole of about 0.9 °C is also forecast, which could reinforce or alter the usual El Niño effects<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>WMO Secretary-General Celeste Saulo says \"this exceptional El Niño demands exceptional preparation and response\", and UN Secretary-General António Guterres says \"the planet is in uncharted waters, and those waters are heating up\"<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>In July the WMO had forecast rapid intensification, noting record heatwaves such as Germany's 41.7 °C in late June and likely drought in Indonesia and Southeast Asia<cite data-ref=\"https://news.un.org/en/story/2026/07/1167870\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The WMO says there is nearly a 100% probability that El Niño persists through February 2027, and that it will become very strong<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>Niño 3.4 sea surface temperatures ran +2.2 to +2.6 °C above average from late July to mid-August, with subsurface waters in places more than 8 °C above normal<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>It expects widespread above-normal temperatures over most land areas for September-November 2026 and shifted rainfall, with flooding, drought and extreme heat risks<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>A positive Indian Ocean Dipole of about 0.9 °C is also forecast, which could reinforce or alter the usual El Niño effects<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>WMO Secretary-General Celeste Saulo says \"this exceptional El Niño demands exceptional preparation and response\", and UN Secretary-General António Guterres says \"the planet is in uncharted waters, and those waters are heating up\"<cite data-ref=\"https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027\"></cite></li><li>In July the WMO had forecast rapid intensification, noting record heatwaves such as Germany's 41.7 °C in late June and likely drought in Indonesia and Southeast Asia<cite data-ref=\"https://news.un.org/en/story/2026/07/1167870\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-09T02:17:17.909Z"
+  },
+  {
+    "id": 464,
+    "pinId": 6628,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "International Tourist Arrivals Forecast to Grow 1–2% in 2026",
+        "field": "title",
+        "before": "UN Tourism Cuts 2026 Arrivals Forecast to 1-2% as Middle East Conflict Bites"
+      },
+      {
+        "after": "UN Tourism forecasts 1–2% growth in international tourist arrivals for calendar 2026, down from its earlier 3–4% projection as Middle East conflict and travel costs weigh on demand. Arrivals grew just 0.4% in the first half.",
+        "field": "description",
+        "before": "UN Tourism's September World Tourism Barometer shows international arrivals up only 0.4% in H1 2026 at about 690 million, and cuts its full-year forecast from 3-4% to 1-2%."
+      },
+      {
+        "after": "2026-01-01T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-09-17T00:00:00.000Z"
+      },
+      {
+        "after": "2027-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-09T02:17:20.235Z"
   }
 ]
