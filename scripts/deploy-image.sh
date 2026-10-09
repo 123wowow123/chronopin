@@ -64,3 +64,5 @@ echo $full > .deployed-sha
 docker image prune -af >/dev/null
 df -h / | tail -1"
 echo "Deployed $rev."
+# A restart empties the caches, and a visitor would pay for each cold one.
+sh scripts/warm.sh || true
