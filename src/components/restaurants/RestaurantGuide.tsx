@@ -75,6 +75,8 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const neighborhoods = summary.neighborhoods[status];
   const neighborhood = neighborhoods.includes(selectedNeighborhood) ? selectedNeighborhood : 'all';
   const featured = summary.featured;
+  const establishedOnly = counts.upcoming + counts.new === 0 && counts.top > 0;
+  const featuredTop = !featured ? Object.values(initialPages).flatMap((page) => page.items).find((item): item is TopRestaurant => 'pinId' in item && Boolean(item.image)) : undefined;
   const selectedSort = top ? topSort : status === 'upcoming' ? upcomingSort : recentSort;
   const pages = useGuidePages<Restaurant | TopRestaurant>(discounts ? null : { region: region.slug, view: status, neighborhood, sort: selectedSort.sort, origin: selectedSort.origin }, initialPages as Record<string, GuidePage<Restaurant | TopRestaurant>>);
   const selectedMapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', q: `pin:${pages.ids.join(',')}`, returnTo: `${pathname}${top ? '#top-restaurants' : status === 'upcoming' ? '#upcoming' : '#new'}` });
@@ -124,9 +126,9 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
 
         <header className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>GOOD FOOD. NEW BEGINNINGS.</p>
+            <p className={styles.eyebrow}>{establishedOnly ? 'GOOD FOOD. GREAT TABLES.' : 'GOOD FOOD. NEW BEGINNINGS.'}</p>
             <h1>{region.name}’s<br />next great <em>table.</em></h1>
-            <p className={styles.lead}>The places about to open. The ones that just did. Your guide to what’s new on the local dining scene.</p>
+            <p className={styles.lead}>{establishedOnly ? `Discover restaurants around ${region.name}, with menus, neighbourhoods, and local details to help you choose your next meal.` : 'The places about to open. The ones that just did. Your guide to what’s new on the local dining scene.'}</p>
           </div>
           {featured ? (
             <Link href={href(featured)} className={styles.featured} aria-label={`Explore ${featured.name}'s opening`}>
@@ -136,11 +138,20 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
               <div className={styles.featuredCopy}><p>{featured.neighborhood} · {featured.cuisine}</p><h2>{featured.name}</h2><span>Discover the opening <span aria-hidden="true">↗</span></span></div>
               {featured.imageNote && <span className={styles.featuredNote}>{featured.imageNote}</span>}
             </Link>
+          ) : featuredTop ? (
+            <Link href={pinPath({ id: featuredTop.pinId, title: featuredTop.pinTitle })} className={styles.featured} aria-label={`Explore ${featuredTop.name}`}>
+              <Image src={featuredTop.image!} alt={`${featuredTop.name} · restaurant photo`} fill sizes="(max-width: 760px) 100vw, 50vw" priority className={styles.featuredImage} />
+              <div className={styles.featuredShade} />
+              <span className={styles.featuredBadge}>CHRONOPIN SELECTION</span>
+              <div className={styles.featuredCopy}><p>{featuredTop.neighborhood} · {featuredTop.cuisine}</p><h2>{featuredTop.name}</h2><span>Explore the restaurant <span aria-hidden="true">↗</span></span></div>
+              <span className={styles.featuredNote}>{featuredTop.imageCredit}</span>
+            </Link>
           ) : <div className={styles.noFeature}><span aria-hidden="true">✳</span><p>A new chapter<br />for local dining.</p></div>}
         </header>
 
         <div className={styles.digest}>
           <p>A little discovery.<br /><strong>A lot to look forward to.</strong></p>
+          {establishedOnly && <Anchor href="#top-restaurants" onClick={() => setNeighborhood('all')}><strong>{counts.top.toString().padStart(2, '0')}</strong><span>Restaurants to explore <span aria-hidden="true">↗</span></span></Anchor>}
           {counts.upcoming > 0 && <Anchor href="#upcoming" onClick={() => setNeighborhood('all')}><strong>{counts.upcoming.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
           {counts.new > 0 && <Anchor href="#new" onClick={() => setNeighborhood('all')}><strong>{counts.new.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
           {specialCount > 0 && <Anchor href="#available-now" onClick={() => setNeighborhood('all')}><strong>{specialCount.toString().padStart(2, '0')}</strong><span>Specials <span aria-hidden="true">↗</span></span></Anchor>}
@@ -153,7 +164,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
               {views.map((item) => <Anchor key={item.key} href={item.hash} aria-label={item.label} aria-current={status === item.key ? 'location' : undefined} onClick={() => { if ((item.key === 'top') !== top || (item.key === 'discounts') !== discounts) setNeighborhood('all'); }}><span className={styles.viewLabel} aria-hidden="true">{item.label}</span><span className={styles.mobileViewLabel} aria-hidden="true">{item.mobileLabel}</span></Anchor>)}
             </nav>
             <div className={styles.filterFields}>
-              <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>
+              <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onMouseDown={(event) => { event.currentTarget.dataset.mouse = ''; }} onKeyDown={(event) => { delete event.currentTarget.dataset.mouse; }} onBlur={(event) => { delete event.currentTarget.dataset.mouse; }} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>
             </div>
           </div>
           {discounts ? <AvailableRestaurantOffers key={region.slug} regionSlug={region.slug} neighborhood={neighborhood} initialPages={initialPages as Record<string, GuidePage<ScheduledRestaurantOffer>>} timeZone={timeZone} city={region.name} /> : <>

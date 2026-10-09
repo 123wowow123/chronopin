@@ -2,8 +2,25 @@ import { describe, expect, it } from 'vitest';
 import { restaurantMenuFor, restaurantMenuRescrapeCandidates, restaurantMenuState, type RestaurantMenuProfile } from './restaurantMenus';
 import topPins from '@/server/data/sanDiegoTopRestaurants.preview.json';
 import regionalCatalog from '@/server/data/regionalRestaurants.json';
+import { RESTAURANT_REGIONS } from './restaurants';
 
 describe('branch-specific restaurant menus and specials', () => {
+  it('keeps Canadian menu sources specific to each restaurant and marks prices as CAD', () => {
+    for (const restaurant of regionalCatalog.filter((row) => RESTAURANT_REGIONS.some((region) => region.country === 'Canada' && region.slug === row.regionSlug))) {
+      const profile = restaurantMenuFor(restaurant.sourceUrl)!;
+      expect(profile?.name, restaurant.sourceUrl).toBe(restaurant.name);
+      expect(profile.menus[0].note).toContain('Canadian dollars');
+    }
+    const toronto = restaurantMenuFor('https://alorestaurant.com/')!;
+    const victoria = restaurantMenuFor('https://www.marilenacafe.com/')!;
+    const halifax = restaurantMenuFor('https://barkismet.com/')!;
+    expect(toronto.name).toBe('Alo');
+    expect(toronto.menus[0].note).toContain('Canadian dollars');
+    expect(victoria.menus[0].documentUrl).toContain('Marilena_DinnerMenu_2Page_17JULY2026.pdf');
+    expect(halifax.menus[0].documentUrl).toContain('/2026/09/CURRENT-MENU-192.pdf');
+    expect(toronto.specials).toEqual([]);
+    expect(victoria.specials).toEqual([]);
+  });
   it('matches every new regional venue to its own menu profile, including roundup anchors', () => {
     for (const restaurant of regionalCatalog) {
       expect(restaurantMenuFor(restaurant.sourceUrl)?.name, restaurant.sourceUrl).toBe(restaurant.name);

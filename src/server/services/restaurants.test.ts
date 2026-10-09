@@ -16,6 +16,18 @@ vi.mock('../model/pin', () => ({ default: { findBySourceUrls } }));
 afterEach(() => { vi.clearAllMocks(); vi.useRealTimers(); });
 
 describe('regional restaurant data', () => {
+  it('shows seeded Canadian guides in navigation and resolves their restaurant links', async () => {
+    const canadian = catalog.filter((restaurant) => RESTAURANT_REGIONS.some((region) => region.country === 'Canada' && region.slug === restaurant.regionSlug));
+    findBySourceUrls.mockResolvedValue(new Map(canadian.map((restaurant, index) => [restaurant.sourceUrl, { id: 93000 + index, title: restaurant.name }])));
+    query.mockResolvedValue([]);
+    const slugs = await restaurantGuideRegionSlugs();
+    expect(slugs).toContain('toronto');
+    expect(slugs).toContain('montreal');
+    expect(slugs).toContain('vancouver');
+    const toronto = await regionalTopRestaurants('toronto');
+    expect(toronto.map((restaurant) => restaurant.name)).toEqual(['Alo', 'DaiLo', 'Richmond Station']);
+    expect(toronto.every((restaurant) => restaurant.pinId >= 93000)).toBe(true);
+  });
   it('discovers a newly managed city and removes it when its database offers disappear', async () => {
     findBySourceUrls.mockResolvedValue(new Map());
     query.mockResolvedValue([]);

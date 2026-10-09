@@ -4,6 +4,13 @@ Fort Worth, Austin, San Jose, Charlotte, and Columbus guides share the regional 
 page and neighborhood, opening status, and map controls. City registrations
 also feed the sitemap and each page's canonical metadata.
 
+The Canadian guides cover Victoria, Vancouver, Calgary, Edmonton, Saskatoon,
+Winnipeg, Hamilton, Toronto, Ottawa, Montréal, Québec City and Halifax. Each
+starts with three sourced established restaurant picks. They share city
+navigation, sorting and maps, use kilometre distances and regional time zones,
+and accept Canadian OpenTable booking links. Sources, menu links and rollout
+instructions are in [Canadian guide coverage](restaurant-canada-guides.md).
+
 For future collection and refresh work, follow the
 [restaurant scraping strategy](restaurant-scraping.md), including the OpenTable
 fallback, location matching, source attribution, and validation workflow.

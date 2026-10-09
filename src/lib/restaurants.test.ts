@@ -34,6 +34,23 @@ describe('regional restaurant opening status', () => {
 });
 
 describe('nearest restaurant guide', () => {
+  it('routes Canadian visitors to local guides, including neighboring Canadian cities', () => {
+    expect(nearestRestaurantRegion({ latitude: 49.26, longitude: -123.12 }).slug).toBe('vancouver');
+    expect(nearestRestaurantRegion({ latitude: 48.43, longitude: -123.37 }).slug).toBe('victoria');
+    expect(nearestRestaurantRegion({ latitude: 43.25, longitude: -79.86 }).slug).toBe('hamilton');
+    expect(nearestRestaurantRegion({ latitude: 43.67, longitude: -79.39 }).slug).toBe('toronto');
+    expect(nearestRestaurantRegion({ latitude: 44.65, longitude: -63.58 }).slug).toBe('halifax');
+  });
+  it('keeps Saskatchewan on the same clock while Alberta observes daylight saving', () => {
+    const hour = (slug: string, day: string) => new Intl.DateTimeFormat('en-GB', {
+      timeZone: RESTAURANT_REGIONS.find((region) => region.slug === slug)!.timeZone,
+      hour: '2-digit', hourCycle: 'h23',
+    }).format(new Date(`${day}T12:00:00Z`));
+    expect(hour('saskatoon', '2026-01-15')).toBe('06');
+    expect(hour('saskatoon', '2026-07-15')).toBe('06');
+    expect(hour('calgary', '2026-01-15')).toBe('05');
+    expect(hour('calgary', '2026-07-15')).toBe('06');
+  });
   it('routes European visitors to their local guide with a valid local time zone', () => {
     for (const slug of ['london', 'paris', 'amsterdam', 'berlin', 'madrid', 'barcelona', 'lisbon', 'rome', 'copenhagen', 'vienna', 'dublin', 'stockholm']) {
       const region = RESTAURANT_REGIONS.find((item) => item.slug === slug)!;

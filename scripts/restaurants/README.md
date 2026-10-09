@@ -35,6 +35,16 @@ The seed is idempotent and preserves existing pins. It uses FoodDesk by default;
 pass `--user-id=<existing curator id>` to choose another owner. With no
 `--regions`, it processes the full regional catalog.
 
+The Canadian collection contains three established restaurant picks per city
+across Victoria, Vancouver, Calgary, Edmonton, Saskatoon, Winnipeg, Hamilton,
+Toronto, Ottawa, Montréal, Québec City and Halifax. Menu links and contact
+details were checked October 8, 2026. See [Canadian guide coverage](../../docs/restaurant-canada-guides.md).
+After deploying the matching catalog and public images, populate production with:
+
+```sh
+npm run restaurants:seed -- --regions=victoria,vancouver,calgary,edmonton,saskatoon,winnipeg,hamilton,toronto,ottawa,montreal,quebec-city,halifax
+```
+
 After pulling production pins into a local database, restore any missing
 restaurant thumbnails to Azurite with `npm run thumbs:pull -- --restaurants`.
 This copies original and small thumbnails, skips public image paths and full

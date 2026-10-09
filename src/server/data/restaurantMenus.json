@@ -6427,5 +6427,547 @@
     "checkedAt": "2026-10-06",
     "menus": [],
     "specials": []
+  },
+  {
+    "pinSourceUrl": "https://publishedonmain.com/",
+    "name": "Published on Main",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://publishedonmain.com/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.stlawrencerestaurant.com/",
+    "name": "St. Lawrence",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.stlawrencerestaurant.com/stlmenu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.annalena.ca/",
+    "name": "AnnaLena",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.annalena.ca/tastingmenu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.marilenacafe.com/",
+    "name": "Marilena",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.marilenacafe.com/pdf/Marilena_DinnerMenu_2Page_17JULY2026.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars.",
+        "documentUrl": "https://www.marilenacafe.com/pdf/Marilena_DinnerMenu_2Page_17JULY2026.pdf"
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.ilterrazzo.com/",
+    "name": "Il Terrazzo",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://ilterrazzo.com/menu/dinner/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.windcriesmary.ca/",
+    "name": "Wind Cries Mary",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.windcriesmary.ca/food",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.river-cafe.com/",
+    "name": "River Café",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.river-cafe.com/menus",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.majortombar.ca/",
+    "name": "Major Tom",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.majortombar.ca/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.modelmilk.ca/",
+    "name": "Model Milk",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.modelmilk.ca/food",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.rgerd.ca/",
+    "name": "RGE RD",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.rgerd.ca/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://woodworkyeg.com/",
+    "name": "Woodwork",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://woodworkyeg.com/menus",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://sabor.ca/",
+    "name": "Sabor",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.sabor.ca/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.hearth.restaurant/",
+    "name": "Hearth",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.hearth.restaurant/dinner-menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.odla.ca/",
+    "name": "Odla",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.odla.ca/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://primalpasta.ca/",
+    "name": "Primal",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://primalpasta.ca/menus/dine-in-menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.deerandalmond.com/",
+    "name": "deer + almond",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.deerandalmond.com/#menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://clementinewinnipeg.com/",
+    "name": "Clementine",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://clementinewinnipeg.com/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.passerowinnipeg.com/",
+    "name": "Passero",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.passerowinnipeg.com/passeromenu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.berkeleynorth.ca/",
+    "name": "Berkeley North",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.berkeleynorth.ca/menus",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.quatrefoilrestaurant.com/",
+    "name": "Quatrefoil",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://quatrefoilrestaurant.com/menus/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://ancastermill.ca/",
+    "name": "Ancaster Mill",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://ancastermill.ca/menus/lunch/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://alorestaurant.com/",
+    "name": "Alo",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Tasting menu information",
+        "url": "https://alorestaurant.com/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://dailoto.com/",
+    "name": "DaiLo",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://dailoto.com/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://richmondstation.ca/",
+    "name": "Richmond Station",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://richmondstation.ca/menu/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.atelierrestaurant.ca/",
+    "name": "Atelier",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Tasting menu information",
+        "url": "https://www.atelierrestaurant.ca/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://dineriviera.com/",
+    "name": "Riviera",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://dineriviera.com/#menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.northandnavy.com/",
+    "name": "North & Navy",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.opentable.ca/north-and-navy",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.restaurant-toque.com/",
+    "name": "Toqué!",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.restaurant-toque.com/fr/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://vinmonlapin.com/",
+    "name": "Mon Lapin",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Dining information",
+        "url": "https://vinmonlapin.com/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.damas.ca/",
+    "name": "Damas",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.damas.ca/fr/menus/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://taniere3.com/",
+    "name": "Tanière³",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://taniere3.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://laurieraphael.com/",
+    "name": "Laurie Raphaël",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://laurieraphael.com/menus/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.restaurantarvi.ca/",
+    "name": "ARVI",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.restaurantarvi.ca/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://barkismet.com/",
+    "name": "Bar Kismet",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://barkismet.com/wp-content/uploads/2026/09/CURRENT-MENU-192.pdf",
+        "coverage": "published",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars.",
+        "documentUrl": "https://barkismet.com/wp-content/uploads/2026/09/CURRENT-MENU-192.pdf"
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://www.ednarestaurant.com/",
+    "name": "Edna",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://www.ednarestaurant.com/menu",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
+  },
+  {
+    "pinSourceUrl": "https://bicyclethief.ca/",
+    "name": "The Bicycle Thief",
+    "checkedAt": "2026-10-08",
+    "menus": [
+      {
+        "label": "Menu",
+        "url": "https://bicyclethief.ca/food-wine/",
+        "coverage": "link",
+        "items": [],
+        "note": "Prices on Canadian restaurant menus are in Canadian dollars."
+      }
+    ],
+    "specials": []
   }
 ]

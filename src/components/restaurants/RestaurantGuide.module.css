@@ -13,7 +13,14 @@
 .offerSort span { margin-right:6px; }
 .offerSort button,.offerSort .offerMapButton { padding:8px 14px; border:1px solid var(--rule); border-radius:4px; background:var(--paper-raised); color:var(--text); cursor:pointer; }
 .offerSort button[aria-pressed='true'] { background:var(--green); color:var(--paper); border-color:var(--green); }
+.guide .offerSort button:focus-visible,.guide .offerSort .offerMapButton:focus-visible { outline-width:2px; outline-offset:1px; }
 .offerSort button:disabled { opacity:.6; cursor:wait; }
+.offerSort button,.offerSort .offerMapButton,.countryNav button,.statusFilters a,.cardArrow { transition:background-color .15s,border-color .15s,color .15s,transform .1s; }
+.offerSort button:not(:disabled):hover,.offerSort .offerMapButton:hover { background:var(--rule); border-color:var(--green); }
+.offerSort button[aria-pressed='true']:not(:disabled):hover { background:color-mix(in srgb,var(--green) 85%,black); border-color:var(--green); }
+.offerSort button:not(:disabled):active,.offerSort .offerMapButton:active { transform:scale(.97); background:var(--rule); }
+.offerSort button[aria-pressed='true']:not(:disabled):active { background:color-mix(in srgb,var(--green) 70%,black); }
+.countryNav button:active,.statusFilters a:active,.cardArrow:active { transform:scale(.97); }
 .offerMapButton { display:inline-flex; align-items:center; gap:6px; }
 .offerMapButton svg { width:14px; height:14px; flex-shrink:0; }
 .offerSortNote { color:var(--soft); font-size:11px; line-height:1.7; }
@@ -97,6 +104,11 @@
 .neighborhoodField { position:relative; }
 .selectChevron { position:absolute; inset-inline-end:12px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--soft); pointer-events:none; }
 .filterFields select { appearance:none; max-width:185px; font-size:11px; padding-block:10px; padding-inline:12px 36px; color:var(--text); background:var(--paper-raised); border:1px solid var(--rule); border-radius:4px; cursor:pointer; }
+.filterFields select { transition:background-color .15s,border-color .15s; }
+.filterFields select:hover { background:var(--rule); border-color:var(--green); }
+.filterFields select:active,.filterFields select:not([data-mouse]):focus { border-color:var(--green); background:var(--paper-raised); }
+.filterFields select[data-mouse]:focus-visible { outline:none; }
+.filterFields label:hover .selectChevron,.filterFields select:not([data-mouse]):focus+.selectChevron { color:var(--text); }
 .results { font-size:10px; color:var(--soft); margin:15px 0 0; }
 .section { margin-top:33px; }
 .sectionHeading { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:22px; }
@@ -107,6 +119,8 @@
 .cardGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px 22px; }
 .card { border:1px solid var(--rule); border-radius:5px; background:var(--paper-raised); overflow:hidden; display:flex; flex-direction:column; }
 .photoLink { position:relative; display:block; aspect-ratio:1.6; overflow:hidden; }
+.guide .photoLink:focus-visible { outline:none; }
+.photoLink:focus-visible::after { content:''; position:absolute; inset:0; z-index:1; pointer-events:none; box-shadow:inset 0 0 0 3px var(--green),inset 0 0 0 5px #fff; }
 .cardBadge { position:absolute; top:14px; left:14px; color:#3b452b; background:#edf0cf; font-weight:750; font-size:8px; letter-spacing:.9px; padding:7px 9px; border-radius:2px; }
 .openBadge { color:#fffef0; background:#254d3c; }
 .imageNote { position:absolute; bottom:0; right:0; left:0; font-size:9px; padding:8px 12px; background:linear-gradient(transparent,rgba(0,0,0,.75)); color:white; text-align:right; }
@@ -155,4 +169,4 @@
   .mobileViewLabel { display:inline; }
   .statusFilters a:focus-visible { outline-offset:-3px; }
 }
-@media(prefers-reduced-motion:reduce) { .featuredImage,.cardImage { transition:none; } .featured:hover .featuredImage,.photoLink:hover .cardImage { transform:none; } }
+@media(prefers-reduced-motion:reduce) { .filterFields select { transition:none; } .offerSort button,.offerSort .offerMapButton,.countryNav button,.statusFilters a,.cardArrow { transition:none; } .offerSort button:active,.offerSort .offerMapButton:active,.countryNav button:active,.statusFilters a:active,.cardArrow:active { transform:none; } .featuredImage,.cardImage { transition:none; } .featured:hover .featuredImage,.photoLink:hover .cardImage { transform:none; } }

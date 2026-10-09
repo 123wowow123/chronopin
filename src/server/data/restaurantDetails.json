@@ -2798,5 +2798,527 @@
         "url": "https://www.theinfatuation.com/columbus/reviews/chapmans-eat-market"
       }
     ]
+  },
+  {
+    "pinSourceUrl": "https://publishedonmain.com/",
+    "name": "Published on Main",
+    "websiteUrl": "https://publishedonmain.com/",
+    "phone": "604-423-4840",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://publishedonmain.com/contact/",
+    "reservationUrl": "https://www.opentable.ca/booking/restref/availability?lang=en-CA&correlationId=05a2ef93-e840-428e-a7ed-c95461c0c424&restRef=1147369"
+  },
+  {
+    "pinSourceUrl": "https://www.stlawrencerestaurant.com/",
+    "name": "St. Lawrence",
+    "websiteUrl": "https://www.stlawrencerestaurant.com/",
+    "phone": "604-620-3800",
+    "openingHours": [
+      {
+        "days": "Wednesday–Sunday",
+        "hours": "17:00–22:30"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.stlawrencerestaurant.com/"
+  },
+  {
+    "pinSourceUrl": "https://www.annalena.ca/",
+    "name": "AnnaLena",
+    "websiteUrl": "https://www.annalena.ca/",
+    "phone": "778-379-4052",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.annalena.ca/"
+  },
+  {
+    "pinSourceUrl": "https://www.marilenacafe.com/",
+    "name": "Marilena",
+    "websiteUrl": "https://www.marilenacafe.com/",
+    "phone": "778-405-5200",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.marilenacafe.com/",
+    "reservationUrl": "https://www.opentable.ca/booking/experiences-availability?rid=328063&restref=328063&experienceId=769329&utm_source=external&utm_medium=referral&utm_campaign=shared&fbclid=IwY2xjawT1pb9wZG9mBWV4dG4DYWVtAjEwAGJyaWQRMTB2b3dvVXZ1TUp6Y0VFTzVzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeGynnxHVDGXLY6ihqT9DBXMHqEaITN3FTG6pUxaL9_C3ZFwyMSbWOjHkoX1w_aem_4W630sUfcEcPP54kImu5KQ"
+  },
+  {
+    "pinSourceUrl": "https://www.ilterrazzo.com/",
+    "name": "Il Terrazzo",
+    "websiteUrl": "https://www.ilterrazzo.com/",
+    "phone": "250-361-0028",
+    "openingHours": [
+      {
+        "days": "Daily · dinner",
+        "hours": "From 16:00; last seating 21:15"
+      },
+      {
+        "days": "Saturday–Sunday · brunch",
+        "hours": "10:00–14:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://ilterrazzo.com/contact/"
+  },
+  {
+    "pinSourceUrl": "https://www.windcriesmary.ca/",
+    "name": "Wind Cries Mary",
+    "websiteUrl": "https://www.windcriesmary.ca/",
+    "phone": "250-590-8989",
+    "openingHours": [
+      {
+        "days": "Daily",
+        "hours": "16:00–01:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.windcriesmary.ca/contact",
+    "reservationUrl": "https://www.opentable.ca/r/wind-cries-mary-reservations-victoria?restref=1147390&lang=en-CA&ot_source=Restaurant%20website"
+  },
+  {
+    "pinSourceUrl": "https://www.river-cafe.com/",
+    "name": "River Café",
+    "websiteUrl": "https://www.river-cafe.com/",
+    "phone": null,
+    "openingHours": [
+      {
+        "days": "Monday–Friday · lunch",
+        "hours": "11:00–16:00"
+      },
+      {
+        "days": "Saturday–Sunday · brunch",
+        "hours": "10:00–16:00"
+      },
+      {
+        "days": "Daily · dinner",
+        "hours": "17:00–21:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.river-cafe.com/contact"
+  },
+  {
+    "pinSourceUrl": "https://www.majortombar.ca/",
+    "name": "Major Tom",
+    "websiteUrl": "https://www.majortombar.ca/",
+    "phone": null,
+    "openingHours": [
+      {
+        "days": "Monday–Friday · lunch",
+        "hours": "11:00–15:00"
+      },
+      {
+        "days": "Daily · golden hour",
+        "hours": "15:00–17:00"
+      },
+      {
+        "days": "Daily · dinner",
+        "hours": "17:00–23:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.majortombar.ca/contact",
+    "hoursNote": "The restaurant’s contact number is a text-only line; see its website for contact options."
+  },
+  {
+    "pinSourceUrl": "https://www.modelmilk.ca/",
+    "name": "Model Milk",
+    "websiteUrl": "https://www.modelmilk.ca/",
+    "phone": "403-265-7343",
+    "openingHours": [
+      {
+        "days": "Tuesday–Sunday",
+        "hours": "15:00–close"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.modelmilk.ca/contact"
+  },
+  {
+    "pinSourceUrl": "https://www.rgerd.ca/",
+    "name": "RGE RD",
+    "websiteUrl": "https://www.rgerd.ca/",
+    "phone": "780-447-4577",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.rgerd.ca/contact/"
+  },
+  {
+    "pinSourceUrl": "https://woodworkyeg.com/",
+    "name": "Woodwork",
+    "websiteUrl": "https://woodworkyeg.com/",
+    "phone": "780-757-4100",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://woodworkyeg.com/"
+  },
+  {
+    "pinSourceUrl": "https://sabor.ca/",
+    "name": "Sabor",
+    "websiteUrl": "https://sabor.ca/",
+    "phone": "780-757-1114",
+    "openingHours": [
+      {
+        "days": "Monday–Thursday",
+        "hours": "16:00–22:00"
+      },
+      {
+        "days": "Friday–Saturday",
+        "hours": "16:00–23:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.sabor.ca/hours-location/",
+    "reservationUrl": "https://www.opentable.com/restref/client/?restref=31549&lang=en&corrid=0d83ba73-4908-4f87-8422-a02fee27f7b9"
+  },
+  {
+    "pinSourceUrl": "https://www.hearth.restaurant/",
+    "name": "Hearth",
+    "websiteUrl": "https://www.hearth.restaurant/",
+    "phone": "306-664-6677",
+    "openingHours": [
+      {
+        "days": "Wednesday–Friday · lunch",
+        "hours": "11:00–16:00"
+      },
+      {
+        "days": "Saturday–Sunday · brunch",
+        "hours": "11:00–15:30"
+      },
+      {
+        "days": "Wednesday–Sunday · dinner",
+        "hours": "16:00–22:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.hearth.restaurant/"
+  },
+  {
+    "pinSourceUrl": "https://www.odla.ca/",
+    "name": "Odla",
+    "websiteUrl": "https://www.odla.ca/",
+    "phone": "306-955-6352",
+    "openingHours": [
+      {
+        "days": "Monday, Wednesday–Thursday, Sunday",
+        "hours": "17:00–21:00"
+      },
+      {
+        "days": "Friday–Saturday",
+        "hours": "17:00–22:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.odla.ca/"
+  },
+  {
+    "pinSourceUrl": "https://primalpasta.ca/",
+    "name": "Primal",
+    "websiteUrl": "https://primalpasta.ca/",
+    "phone": "306-974-8111",
+    "openingHours": [
+      {
+        "days": "Monday–Saturday · dine in",
+        "hours": "17:00–22:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://primalpasta.ca/"
+  },
+  {
+    "pinSourceUrl": "https://www.deerandalmond.com/",
+    "name": "deer + almond",
+    "websiteUrl": "https://www.deerandalmond.com/",
+    "phone": "204-504-8562",
+    "openingHours": [
+      {
+        "days": "Tuesday–Saturday",
+        "hours": "17:00–late"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.deerandalmond.com/#contact"
+  },
+  {
+    "pinSourceUrl": "https://clementinewinnipeg.com/",
+    "name": "Clementine",
+    "websiteUrl": "https://clementinewinnipeg.com/",
+    "phone": "204-942-9497",
+    "openingHours": [
+      {
+        "days": "Daily",
+        "hours": "09:00–14:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://clementinewinnipeg.com/"
+  },
+  {
+    "pinSourceUrl": "https://www.passerowinnipeg.com/",
+    "name": "Passero",
+    "websiteUrl": "https://www.passerowinnipeg.com/",
+    "phone": "204-219-7300",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.passerowinnipeg.com/contact"
+  },
+  {
+    "pinSourceUrl": "https://www.berkeleynorth.ca/",
+    "name": "Berkeley North",
+    "websiteUrl": "https://www.berkeleynorth.ca/",
+    "phone": "905-522-5858",
+    "openingHours": [
+      {
+        "days": "Monday–Thursday",
+        "hours": "11:30–22:00"
+      },
+      {
+        "days": "Friday–Saturday",
+        "hours": "11:30–23:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.berkeleynorth.ca/"
+  },
+  {
+    "pinSourceUrl": "https://www.quatrefoilrestaurant.com/",
+    "name": "Quatrefoil",
+    "websiteUrl": "https://www.quatrefoilrestaurant.com/",
+    "phone": "905-628-7800",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.quatrefoilrestaurant.com/"
+  },
+  {
+    "pinSourceUrl": "https://ancastermill.ca/",
+    "name": "Ancaster Mill",
+    "websiteUrl": "https://ancastermill.ca/",
+    "phone": "905-648-1828",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://ancastermill.ca/contact/",
+    "reservationUrl": "https://www.opentable.ca/ancaster-mill-reservations-ancaster?restref=47704&lang=en-CA&ot_source=Restaurant%20website"
+  },
+  {
+    "pinSourceUrl": "https://alorestaurant.com/",
+    "name": "Alo",
+    "websiteUrl": "https://alorestaurant.com/",
+    "phone": "416-260-2222",
+    "openingHours": [
+      {
+        "days": "Tuesday–Saturday",
+        "hours": "From 17:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://alorestaurant.com/"
+  },
+  {
+    "pinSourceUrl": "https://dailoto.com/",
+    "name": "DaiLo",
+    "websiteUrl": "https://dailoto.com/",
+    "phone": "647-341-8882",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://dailoto.com/#contact"
+  },
+  {
+    "pinSourceUrl": "https://richmondstation.ca/",
+    "name": "Richmond Station",
+    "websiteUrl": "https://richmondstation.ca/",
+    "phone": "647-748-1444",
+    "openingHours": [
+      {
+        "days": "Wednesday–Friday · lunch",
+        "hours": "11:30–14:30"
+      },
+      {
+        "days": "Daily · dinner",
+        "hours": "16:30–22:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://richmondstation.ca/"
+  },
+  {
+    "pinSourceUrl": "https://www.atelierrestaurant.ca/",
+    "name": "Atelier",
+    "websiteUrl": "https://www.atelierrestaurant.ca/",
+    "phone": "613-321-3537",
+    "openingHours": [
+      {
+        "days": "Wednesday–Saturday · seating times",
+        "hours": "18:00–20:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.atelierrestaurant.ca/"
+  },
+  {
+    "pinSourceUrl": "https://dineriviera.com/",
+    "name": "Riviera",
+    "websiteUrl": "https://dineriviera.com/",
+    "phone": null,
+    "openingHours": [
+      {
+        "days": "Sunday–Wednesday",
+        "hours": "17:00–22:00"
+      },
+      {
+        "days": "Thursday–Saturday",
+        "hours": "17:00–23:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://dineriviera.com/",
+    "reservationUrl": "https://www.opentable.ca/restref/client/?restref=269377&lang=en-CA&ot_source=Restaurant%20website&corrid=c3cca7f9-34a2-4558-b604-9838733d77b3"
+  },
+  {
+    "pinSourceUrl": "https://www.northandnavy.com/",
+    "name": "North & Navy",
+    "websiteUrl": "https://www.northandnavy.com/",
+    "phone": "613-232-6289",
+    "openingHours": [
+      {
+        "days": "Monday–Saturday",
+        "hours": "17:00–22:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.opentable.ca/north-and-navy",
+    "reservationUrl": "https://www.opentable.ca/north-and-navy",
+    "additionalSources": [
+      {
+        "label": "Address, phone & hours on OpenTable",
+        "url": "https://www.opentable.ca/north-and-navy"
+      }
+    ]
+  },
+  {
+    "pinSourceUrl": "https://www.restaurant-toque.com/",
+    "name": "Toqué!",
+    "websiteUrl": "https://www.restaurant-toque.com/",
+    "phone": "514-499-2084",
+    "openingHours": [
+      {
+        "days": "Tuesday–Friday · lunch",
+        "hours": "11:30–13:45"
+      },
+      {
+        "days": "Tuesday–Saturday · dinner",
+        "hours": "17:30–21:30"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.restaurant-toque.com/fr/nous-joindre",
+    "reservationUrl": "https://www.opentable.com/restaurant/profile/7559/reserve?rid=7559&restref=7559&lang=fr-CA"
+  },
+  {
+    "pinSourceUrl": "https://vinmonlapin.com/",
+    "name": "Mon Lapin",
+    "websiteUrl": "https://vinmonlapin.com/",
+    "phone": "514-379-4550",
+    "openingHours": [
+      {
+        "days": "Tuesday–Saturday",
+        "hours": "17:00–22:30"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://vinmonlapin.com/",
+    "reservationUrl": "https://www.opentable.ca/r/mon-lapin-reservations-montreal?restref=1274992&lang=en-CA&ot_source=Restaurant%20website"
+  },
+  {
+    "pinSourceUrl": "https://www.damas.ca/",
+    "name": "Damas",
+    "websiteUrl": "https://www.damas.ca/",
+    "phone": "514-439-5435",
+    "openingHours": [
+      {
+        "days": "Daily · dinner",
+        "hours": "17:30–22:00"
+      },
+      {
+        "days": "Saturday–Sunday · brunch",
+        "hours": "11:00–15:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.damas.ca/fr/contact/"
+  },
+  {
+    "pinSourceUrl": "https://taniere3.com/",
+    "name": "Tanière³",
+    "websiteUrl": "https://taniere3.com/",
+    "phone": "418-872-4386",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://taniere3.com/contact"
+  },
+  {
+    "pinSourceUrl": "https://laurieraphael.com/",
+    "name": "Laurie Raphaël",
+    "websiteUrl": "https://laurieraphael.com/",
+    "phone": "418-692-4555",
+    "openingHours": [],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://laurieraphael.com/contact/"
+  },
+  {
+    "pinSourceUrl": "https://www.restaurantarvi.ca/",
+    "name": "ARVI",
+    "websiteUrl": "https://www.restaurantarvi.ca/",
+    "phone": "581-742-4202",
+    "openingHours": [
+      {
+        "days": "Tuesday–Saturday",
+        "hours": "18:00–22:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.restaurantarvi.ca/"
+  },
+  {
+    "pinSourceUrl": "https://barkismet.com/",
+    "name": "Bar Kismet",
+    "websiteUrl": "https://barkismet.com/",
+    "phone": null,
+    "openingHours": [
+      {
+        "days": "Tuesday–Sunday",
+        "hours": "From 17:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://barkismet.com/"
+  },
+  {
+    "pinSourceUrl": "https://www.ednarestaurant.com/",
+    "name": "Edna",
+    "websiteUrl": "https://www.ednarestaurant.com/",
+    "phone": "902-429-2550",
+    "openingHours": [
+      {
+        "days": "Daily · supper",
+        "hours": "17:00–22:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://www.ednarestaurant.com/",
+    "reservationUrl": "https://www.opentable.com/r/edna-restaurant-reservations-halifax?lang=en-US&ot_source=Restaurant%20website&restref=342271"
+  },
+  {
+    "pinSourceUrl": "https://bicyclethief.ca/",
+    "name": "The Bicycle Thief",
+    "websiteUrl": "https://bicyclethief.ca/",
+    "phone": "902-425-7993",
+    "openingHours": [
+      {
+        "days": "Daily",
+        "hours": "11:30–23:00"
+      }
+    ],
+    "checkedAt": "2026-10-08",
+    "detailsSourceUrl": "https://bicyclethief.ca/contact-us-reservations/"
   }
 ]

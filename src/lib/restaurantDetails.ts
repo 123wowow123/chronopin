@@ -29,7 +29,7 @@ export function restaurantOpenTableUrl(sourceUrl: string | null | undefined, pla
     if (!value) continue;
     try {
       const url = new URL(value);
-      if (url.protocol === 'https:' && ['opentable.com', 'www.opentable.com'].includes(url.hostname)) return value;
+      if (url.protocol === 'https:' && ['opentable.com', 'www.opentable.com', 'opentable.ca', 'www.opentable.ca'].includes(url.hostname)) return value;
     } catch {}
   }
   return null;

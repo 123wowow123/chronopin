@@ -6,6 +6,10 @@ describe('restaurant contact details', () => {
   it('uses verified booking listings and accepts stored OpenTable reservations', () => {
     expect(restaurantOpenTableUrl('https://serpentandstonesd.com/')).toBe('https://www.opentable.com/r/a-serpent-and-stone-san-diego');
     expect(restaurantOpenTableUrl(null, 'https://www.opentable.com/r/verified-location')).toBe('https://www.opentable.com/r/verified-location');
+    expect(restaurantOpenTableUrl('https://www.windcriesmary.ca/')).toContain('https://www.opentable.ca/r/wind-cries-mary-reservations-victoria');
+    expect(restaurantOpenTableUrl('https://www.northandnavy.com/')).toBe('https://www.opentable.ca/north-and-navy');
+    expect(restaurantOpenTableUrl(null, 'https://opentable.ca.example.com/r/restaurant')).toBeNull();
+    expect(restaurantOpenTableUrl(null, 'http://www.opentable.ca/r/restaurant')).toBeNull();
     expect(restaurantOpenTableUrl(null, 'https://opentable.com.example.com/r/restaurant')).toBeNull();
     expect(restaurantOpenTableUrl(null, 'https://www.exploretock.com/restaurant')).toBeNull();
     expect(restaurantOpenTableUrl('https://www.kinemusubi.com/')).toBeNull();
