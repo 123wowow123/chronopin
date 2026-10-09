@@ -59,7 +59,9 @@ export function PinThumb({
           color: `color-mix(in oklab, ${tint} 65%, var(--color-ink))`,
         }}
       >
-        {letter}
+        <span className="transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.3] [button:hover_&]:scale-[1.3] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100 motion-reduce:[button:hover_&]:scale-100">
+          {letter}
+        </span>
       </span>
     );
   }
