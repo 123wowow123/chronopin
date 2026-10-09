@@ -10,7 +10,6 @@ import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from 
 import { parseAmazonTags } from '@/lib/ads';
 import { DEFAULT_ADSENSE_SLOTS, parseAdsenseSlots, type AdsenseSlotsSetting } from '@/lib/adsense';
 import { DEFAULT_HIDE_THIN_PINS, parseHideThinPins, type HideThinPinsSetting } from '@/lib/searchQuality';
-import { DEFAULT_WEB_OVERLAY, parseWebOverlay, type WebOverlaySetting } from '@/lib/webOverlay';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
@@ -27,7 +26,6 @@ const SITE_VERIFICATION = 'siteVerification';
 const AMAZON_TAGS = 'amazonTags';
 const ADSENSE_SLOTS = 'adsenseSlots';
 const HIDE_THIN_PINS = 'hideThinPins';
-const WEB_OVERLAY = 'webOverlay';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -173,12 +171,3 @@ export function setHideThinPins(setting: HideThinPinsSetting, userId: number | n
   return write(HIDE_THIN_PINS, setting, userId);
 }
 
-// Whether the map offers its web of related-pin lines and graph (src/lib/webOverlay.ts).
-export async function getWebOverlay(): Promise<WebOverlaySetting> {
-  const parsed = parseWebOverlay(await read(WEB_OVERLAY));
-  return 'setting' in parsed ? parsed.setting : DEFAULT_WEB_OVERLAY;
-}
-
-export function setWebOverlay(setting: WebOverlaySetting, userId: number | null) {
-  return write(WEB_OVERLAY, setting, userId);
-}

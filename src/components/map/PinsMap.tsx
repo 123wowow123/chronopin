@@ -9,8 +9,6 @@ import { MAP_ATTRIBUTION_PREFIX, TILE_ATTRIBUTION, TILE_URL } from '@/components
 import { FloatingControls, useInDrawerPanel } from '@/components/timeline/FloatingControls';
 import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
-import { PinWebGraph } from '@/components/map/PinWebGraph';
-import { WebLegend } from '@/components/map/WebLegend';
 import { ListingView } from '@/components/listings/ListingView';
 import { listingTitle, mediaUrl, priceLine } from '@/components/listings/parts';
 import { Icon } from '@/components/ui/Icon';
@@ -26,7 +24,6 @@ import { usesImperial } from '@/lib/weather';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, offsetDate, spanFromParam, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { pinPath } from '@/lib/seo';
-import { webColor, webIntensity, webModeFromParam, type WebEdge, type WebKind, type WebMode } from '@/lib/pinWeb';
 import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 import { refineQuery } from '@/lib/searchTerms';
@@ -117,10 +114,7 @@ const inCategories = (categories: string[], picks: string[]) => !picks.length ||
 const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 const POPUP_WIDTH = 200;
-// Wider than a pin's: a web line's popup sets a picture beside each title.
-const WEB_POPUP_WIDTH = 260;
-
-// Where the map has room beside the pins for the web's toggle and graph (xl).
+// Where the map has room for the controls beside the pins (xl).
 const WIDE = '(width >= 80rem)';
 
 // A pin's popup: its picture (an image's thumb or a video's still) edge to
@@ -143,27 +137,23 @@ function pinPopup(pin: MapPinJson, options: L.PopupOptions = {}) {
 }
 
 // Opens a pin's popup to stay, replacing the last one that did: a marker
-// clicked, a graph node picked, or the focused pin. autoClose off: hovering
+// clicked or the focused pin. autoClose off: hovering
 // other pins opens their popups beside it. The map's closePopupOnClick still
 // closes it on a click elsewhere (a marker's click does not reach the map).
-// The graph's picked node follows it: set while it shows, cleared when it goes.
 function stickPopup(
   map: L.Map,
   stickyRef: { current: { popup: L.Popup; pinId: number } | null },
   pin: MapPinJson,
   at: L.LatLng,
-  pick: (id: number | undefined) => void,
 ) {
   if (stickyRef.current?.pinId === pin.id && map.hasLayer(stickyRef.current.popup)) return;
   const sticky = pinPopup(pin, { autoClose: false }).setLatLng(at);
   sticky.on('remove', () => {
     if (stickyRef.current?.popup !== sticky) return;
     stickyRef.current = null;
-    pick(undefined);
   });
   stickyRef.current?.popup.close();
   stickyRef.current = { popup: sticky, pinId: pin.id };
-  pick(pin.id);
   sticky.openOn(map);
 }
 
@@ -207,57 +197,6 @@ function popupContent(pin: MapPinJson) {
   link.className = 'block';
   link.append(pictureImg(sources, 'block aspect-video w-full object-cover', () => link.remove()));
   content.prepend(link);
-  return content;
-}
-
-// One end of a web line: its picture beside its title, as a link to the pin.
-// The picture keeps its tile when there is none or every source fails, so the
-// two rows stay aligned and the connector between them runs straight.
-function webPopupRow(pin: MapPinJson) {
-  const row = document.createElement('a');
-  row.href = localizeHere(pinPath(pin));
-  row.className = 'relative -mx-1 flex items-center gap-2.5 rounded-md px-1 py-1 hover:bg-raised hover:no-underline';
-
-  const tile = document.createElement('span');
-  tile.className = 'block aspect-video w-14 shrink-0 overflow-hidden rounded-md bg-raised ring-1 ring-line';
-  const sources = pictureSources(pin);
-  if (sources.length) tile.append(pictureImg(sources, 'block h-full w-full object-cover', () => (tile.innerHTML = '')));
-
-  const title = document.createElement('span');
-  title.className = 'line-clamp-2 font-medium';
-  title.textContent = pin.title;
-
-  row.append(tile, title);
-  return row;
-}
-
-// A web line's popup: why the two pins are joined — the kind of relation in
-// its own colour over the thing they share (the tag, the company, the source),
-// and how much else they have in common, since a line is only drawn once a
-// pair shares enough — and a row for each end, threaded by a line in the same
-// colour so the two read as the ends of one connection. Kinds with nothing
-// shared (a thread, a duplicate) put the kind itself in the headline instead.
-function webPopupContent(from: MapPinJson, to: MapPinJson, kind: WebKind, kindLabel: string, label?: string, also?: string) {
-  const color = webColor(kind);
-  const content = document.createElement('div');
-  content.className = 'px-3 py-2.5';
-  content.innerHTML =
-    `<div class="flex items-center gap-1.5">` +
-    `<span class="h-1 w-4 shrink-0 rounded-full" style="background-color:${color}"></span>` +
-    (label
-      ? `<span class="truncate text-[10px] font-semibold tracking-wider uppercase text-muted">${escapeHtml(kindLabel)}</span></div>` +
-        `<div class="mt-1 line-clamp-2 text-sm leading-snug font-semibold">${escapeHtml(label)}</div>`
-      : `<span class="truncate text-sm leading-snug font-semibold">${escapeHtml(kindLabel)}</span></div>`) +
-    (also ? `<div class="mt-0.5 text-xs text-muted">${escapeHtml(also)}</div>` : '');
-
-  const ends = document.createElement('div');
-  ends.className = 'relative mt-2 flex flex-col gap-1';
-  // Behind the rows: the opaque tiles cover it, leaving it visible in the gap.
-  const thread = document.createElement('span');
-  thread.className = 'absolute inset-y-3 left-8 w-0.5 -translate-x-1/2 rounded-full opacity-50';
-  thread.style.backgroundColor = color;
-  ends.append(thread, webPopupRow(from), webPopupRow(to));
-  content.append(ends);
   return content;
 }
 
@@ -344,8 +283,7 @@ function loadedAsMap() {
 // /map?pin=<id> (a pin page's "To map") centers on that pin, shows it
 // whatever the filters, and keeps its popup open until the map is clicked.
 // sliderTyping: whether the filter sliders offer a typed box (the admin setting).
-// webOverlay: whether the web of related-pin lines and graph is offered at all (the admin setting).
-export default function PinsMap({ sliderTyping = false, webOverlay = false }: { sliderTyping?: boolean; webOverlay?: boolean }) {
+export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boolean }) {
   const router = useRouter();
   const t = useT();
   const rtl = isRtl(t.locale);
@@ -402,32 +340,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     future: spanToParam(future, DEFAULT_SPAN),
     posted: spanToParam(postedWithin, DEFAULT_POSTED_WITHIN),
   });
-  // The web of relations between the plotted pins: lines over the map, or
-  // those and a graph of them beside it. Only from xl up: narrower, its
-  // toggle, legend and graph would cover the map they are drawn over, so the
-  // web is not offered at all - and a ?web= link opened on a phone lands on a
-  // plain map rather than on lines nothing can turn off. This component only
-  // ever renders in the browser (MapLoader loads it with ssr: false), so the
-  // width is known from the first render. Off entirely, same as narrow, while
-  // the admin setting is off.
-  const [wide, setWide] = useState(() => window.matchMedia(WIDE).matches);
-  const [web, setWeb] = useState<WebMode>(() => (webOverlay && window.matchMedia(WIDE).matches ? webModeFromParam(params.get('web')) : 'off'));
-  const [webEdges, setWebEdges] = useState<WebEdge[]>([]);
-  const [webNodes, setWebNodes] = useState<{ id: number; title: string }[]>([]);
-  const [webPicked, setWebPicked] = useState<number | undefined>();
-  const webLayerRef = useRef<L.LayerGroup | null>(null);
   const fromLayerRef = useRef<L.LayerGroup | null>(null);
-  useQueryState({ web: web === 'off' ? null : web });
-  // Turned to a phone's width (a rotated tablet), the web goes with its toggle.
-  useEffect(() => {
-    const query = window.matchMedia(WIDE);
-    const resized = () => {
-      setWide(query.matches);
-      if (!query.matches) setWeb('off');
-    };
-    query.addEventListener('change', resized);
-    return () => query.removeEventListener('change', resized);
-  }, []);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
   // What the map plots: the pins, or the marketplace listings that say
@@ -482,7 +395,6 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     layerRef.current = layer;
     // Under the markers, so a line never hides a pin.
     map.createPane('web').style.zIndex = '350';
-    webLayerRef.current = L.layerGroup().addTo(map);
     fromLayerRef.current = L.layerGroup().addTo(map);
     // On the map only while the Marketplace is shown (the effect below).
     const marketLayer = L.layerGroup();
@@ -543,7 +455,6 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       mapRef.current = null;
       locationMarkerRef.current = null;
       layerRef.current = null;
-      webLayerRef.current = null;
       fromLayerRef.current = null;
       marketLayerRef.current = null;
     };
@@ -569,7 +480,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     const marketLayer = marketLayerRef.current;
     if (!map || !marketLayer) return;
     map.closePopup();
-    for (const pinLayer of [layerRef.current, webLayerRef.current]) {
+    for (const pinLayer of [layerRef.current]) {
       if (!pinLayer) continue;
       if (market) map.removeLayer(pinLayer);
       else map.addLayer(pinLayer);
@@ -684,7 +595,7 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     const futureBoundary = future ? offsetDate(now, future, 1) : null;
     const seen = new Set<number>();
 
-    const stick = (pin: MapPinJson, at: L.LatLng) => stickPopup(map, stickyRef, pin, at, setWebPicked);
+    const stick = (pin: MapPinJson, at: L.LatLng) => stickPopup(map, stickyRef, pin, at);
 
     const plot = (pins: MapPinJson[]) => {
       for (const pin of pins) {
@@ -807,56 +718,6 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
     setCount(markersRef.current.filter((e) => e.focus || inCategories(e.categories, picks)).length);
   }, [categoryKey]);
 
-  // The relations among the pins the map is showing. Fetched when the web is
-  // on and the pins or the category picks change, and redrawn as lines.
-  useEffect(() => {
-    const web$ = webLayerRef.current;
-    if (!web$) return;
-    web$.clearLayers();
-    if (web === 'off' || status !== 'ready') return;
-    let cancelled = false;
-    const shown = markersRef.current.filter((e) => e.focus || inCategories(e.categories, categoriesRef.current));
-    const byId = new Map(shown.map((e) => [e.pin.id, e.pin]));
-    fetch('/api/pins/graph', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ids: [...byId.keys()].slice(0, 5000) }) })
-      .then((res) => (res.ok ? (res.json() as Promise<{ edges: WebEdge[] }>) : { edges: [] }))
-      .then(({ edges }) => {
-        if (cancelled) return;
-        for (const { a, b, kind, label, strength, shared } of edges) {
-          const from = byId.get(a);
-          const to = byId.get(b);
-          if (!from || !to) continue;
-          // The copy of the world where the two are nearest, so a line never crosses the map.
-          const toLng = to.longitude! + 360 * nearestOffset(to.longitude!, from.longitude!);
-          // The more the two share, the heavier and more solid their line.
-          const firm = webIntensity(strength);
-          const line = L.polyline([[from.latitude!, from.longitude!], [to.latitude!, toLng]], {
-            color: webColor(kind),
-            weight: 1.5 + firm * 1.5,
-            opacity: 0.45 + firm * 0.35,
-            pane: 'web',
-          });
-          // Clicked: why the two are joined, as a popup in the map's own
-          // styling. Leaflet stops the click reaching the map and opens a
-          // path's popup where it was clicked, so it lands on the line.
-          const also = shared && shared > 1 ? t('map.web.alsoShared', { count: shared - 1 }) : undefined;
-          line.bindPopup(() => webPopupContent(from, to, kind, t(`map.web.${kind}`), label, also), {
-            className: 'pin-popup',
-            minWidth: WEB_POPUP_WIDTH,
-            maxWidth: WEB_POPUP_WIDTH,
-            closeButton: false,
-            autoPan: false,
-          });
-          line.addTo(web$);
-        }
-        setWebEdges(edges);
-        setWebNodes(shown.map((e) => ({ id: e.pin.id, title: e.pin.title })));
-      })
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
-  }, [web, status, categoryKey, fetchQuery, past, future, postedWithin, watched, t]);
-
   // "1,240 km from Los Angeles" clicked on a pin: the line it measured, from
   // where the viewer's browser puts them to the pin, once that pin is plotted.
   // A great circle rather than a straight segment, so the curve on the flat
@@ -918,18 +779,6 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
       cancelled = true;
     };
   }, [fromMe, focusPin, t, rtl, preserveView]);
-
-  // A graph node picked: the map goes to that pin.
-  function showPin(id: number) {
-    const map = mapRef.current;
-    const pin = markersRef.current.find((e) => e.pin.id === id)?.pin;
-    if (!map || !pin) return;
-    const at = L.latLng(pin.latitude!, pin.longitude! + 360 * nearestOffset(pin.longitude!, map.getCenter().lng));
-    map.setView(at, Math.max(map.getZoom(), 6));
-    // Also the hover popup still open from the pointer's last pass over a marker.
-    map.closePopup();
-    stickPopup(map, stickyRef, pin, at, setWebPicked);
-  }
 
   // Picks edit the query in the URL, so the navbar search box shows them.
   function go(edit: (q: string) => string) {
@@ -1116,31 +965,6 @@ export default function PinsMap({ sliderTyping = false, webOverlay = false }: { 
           <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly collapsible onChange={(value) => setPostedWithin(value.past)} />
         </FloatingControls>
       </div>
-      {/* The web toggle, with the graph above it when it is on. */}
-      {webOverlay && wide && !market ? (
-        <div className="absolute bottom-8 start-2.5 z-[999] flex w-[min(26rem,calc(100%-1.25rem))] flex-col items-start gap-2">
-          {web === 'graph' ? (
-            <div className="floating h-72 w-full overflow-hidden">
-              <PinWebGraph nodes={webNodes} edges={webEdges} selectedId={webPicked} onSelect={showPin} />
-            </div>
-          ) : null}
-          {web !== 'off' ? <WebLegend /> : null}
-          <div className="floating flex items-center gap-1 rounded-full p-1 text-sm">
-            <Icon name="web" className="ml-2 size-4 text-muted" />
-            {(['off', 'lines', 'graph'] as const).map((mode) => (
-              <button
-                key={mode}
-                type="button"
-                aria-pressed={web === mode}
-                onClick={() => setWeb(web === mode ? 'off' : mode)}
-                className={`rounded-full px-2.5 py-1 ${web === mode ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
-              >
-                {mode === 'off' ? t('map.webOff') : mode === 'lines' ? t('map.lines') : t('map.graph')}
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : null}
       {/* Narrower, clear of the pills at the bottom, and a layer under the
           controls so an open fold covers it rather than the other way round. */}
       {market ? (

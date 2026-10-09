@@ -16,12 +16,12 @@ export type ListingFacts = {
 };
 
 // Why a listing may not be advertised, or null when it clears the bar.
-export function adProblem(listing: ListingFacts): string | null {
+export function adProblem(listing: ListingFacts, minRating = MIN_AD_RATING): string | null {
   if (!listing.available || listing.price == null) return 'out of stock or no buy-box price';
   if (!listing.brand) return 'no brand on the listing';
   if (listing.rating == null || listing.reviewCount == null) return 'no reviews yet';
   if (listing.reviewCount < MIN_AD_REVIEWS) return `only ${listing.reviewCount} reviews (need ${MIN_AD_REVIEWS})`;
-  if (listing.rating < MIN_AD_RATING) return `rated ${listing.rating} (need ${MIN_AD_RATING})`;
+  if (listing.rating < minRating) return `rated ${listing.rating} (need ${minRating})`;
   return null;
 }
 

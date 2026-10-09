@@ -1,9 +1,9 @@
 // Add the checked restaurant catalog to the configured database without
 // replacing existing pins. IDs are assigned here and resolved by source URL
-// when the guide renders. Run after deploying the matching public images.
+// when the guide renders. Upload and verify the images in Azure before seeding.
 import '../env';
 import { parseArgs } from 'node:util';
-import sharp from 'sharp';
+import { imageMetadata } from './imageMetadata';
 import catalog from '@/server/data/regionalRestaurants.json';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import * as db from '@/server/db';
@@ -19,7 +19,7 @@ try {
     ? await db.query<{ id: number }>('SELECT "id" FROM "User" WHERE "id" = $1', [Number(values['user-id'])])
     : await db.query<{ id: number }>('SELECT "id" FROM "User" WHERE "userName" = $1', ['FoodDesk']);
   if (!user) throw new Error('A restaurant curator is required. Pass --user-id for an existing user, or create FoodDesk.');
-  const images = await Promise.all(restaurants.map((restaurant) => restaurant.image ? sharp(`public${restaurant.image}`).metadata() : null));
+  const images = await imageMetadata(restaurants.map((restaurant) => restaurant.image));
   const inserted = await db.transaction(async (query) => {
     await query('SELECT pg_advisory_xact_lock(731906)');
     // San Diego's local preview pins already use 6427–6444, although they

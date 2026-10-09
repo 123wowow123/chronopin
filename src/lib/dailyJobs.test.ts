@@ -4,11 +4,12 @@ import { DEFAULT_DAILY_JOBS, dueSlot, groupTasks, nextRun, parseDailyJobs, TASK_
 const midnight = DEFAULT_DAILY_JOBS.jobs[0];
 const news = DEFAULT_DAILY_JOBS.jobs[1];
 const monthly = DEFAULT_DAILY_JOBS.jobs[2];
+const weekly = DEFAULT_DAILY_JOBS.jobs[3];
 
 describe('parseDailyJobs', () => {
   it('accepts its own default: off, at the top limits', () => {
     expect(parseDailyJobs(DEFAULT_DAILY_JOBS)).toEqual({ setting: DEFAULT_DAILY_JOBS });
-    expect(DEFAULT_DAILY_JOBS.jobs.every((j) => !j.enabled && j.maxUpdates === 250)).toBe(true);
+    expect(DEFAULT_DAILY_JOBS.jobs.every((j) => !j.enabled && j.maxUpdates === (j.id === 'weekly' ? 100 : 250))).toBe(true);
     expect([midnight, news].every((j) => j.maxNewPins === 100 && j.dayOfMonth === null)).toBe(true);
   });
 
@@ -16,14 +17,32 @@ describe('parseDailyJobs', () => {
     expect(monthly).toMatchObject({ id: 'monthly', dayOfMonth: 1, tasks: ['lowConfidence'], maxNewPins: 0 });
   });
 
+  it('ships the products refresh weekly, on Monday, as updates only', () => {
+    expect(weekly).toMatchObject({ id: 'weekly', dayOfWeek: 1, dayOfMonth: null, tasks: ['products'], maxNewPins: 0 });
+  });
+
+  it('refuses a job with both a day of the week and a day of the month', () => {
+    expect(parseDailyJobs({ jobs: [{ ...weekly, dayOfMonth: 3 }] })).toHaveProperty('problem');
+    expect(parseDailyJobs({ jobs: [{ ...weekly, dayOfWeek: 7 }] })).toHaveProperty('problem');
+  });
+
+  it('runs a weekly job only on its weekday, and waits a day for a missed slot', () => {
+    // Monday 2026-10-12 04:00 PDT is 11:00Z.
+    expect(dueSlot(weekly, new Date('2026-10-12T11:30:00Z'))?.key).toBe('weekly@2026-10-12T04:00 America/Los_Angeles');
+    expect(dueSlot(weekly, new Date('2026-10-13T10:00:00Z'))?.key).toBe('weekly@2026-10-12T04:00 America/Los_Angeles');
+    expect(dueSlot(weekly, new Date('2026-10-13T12:00:00Z'))).toBeNull();
+    expect(nextRun(weekly, new Date('2026-10-08T12:00:00Z'))).toEqual(new Date('2026-10-12T11:00:00Z'));
+    expect(nextRun(weekly, new Date('2026-10-12T11:05:00Z'))).toEqual(new Date('2026-10-19T11:00:00Z'));
+  });
+
   it('reads a job saved before monthly jobs as every day', () => {
-    const { dayOfMonth: _, ...saved } = news;
+    const { dayOfMonth: _, dayOfWeek: __, ...saved } = news;
     expect(parseDailyJobs({ jobs: [saved] })).toEqual({ setting: { jobs: [news] } });
   });
 
   it('adds default jobs a saved setting lacks, and keeps the saved ones', () => {
     const saved = { jobs: [{ ...midnight, enabled: true }] };
-    expect(withDefaultJobs(saved).jobs.map((j) => j.id)).toEqual(['midnight', 'news', 'monthly']);
+    expect(withDefaultJobs(saved).jobs.map((j) => j.id)).toEqual(['midnight', 'news', 'monthly', 'weekly']);
     expect(withDefaultJobs(saved).jobs[0].enabled).toBe(true);
     expect(withDefaultJobs(DEFAULT_DAILY_JOBS)).toBe(DEFAULT_DAILY_JOBS);
   });

@@ -22,9 +22,10 @@ into its instructions, so changing this page changes the next run.
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
 | `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
+| `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
-All are set on **/admin/jobs**: on or off, every day or once a month (on a
-day from 1 to 28, so every month has it), the times (up to six a day) and
+All are set on **/admin/jobs**: on or off, every day, once a week (on a
+weekday) or once a month (on a day from 1 to 28, so every month has it), the times (up to six a day) and
 their time zone, which tasks, which driver, and the two limits. A job added
 to the defaults after the setting was first saved is added to it, off. They ship
 **off** (owner, 2026-09-23: "turn off nightly jobs by default"); turn a job on
@@ -393,6 +394,29 @@ resale price, or a kids' ticket sold only with an adult one. A ticketUrl must
 be copied from the links given; the tool drops any other. A row someone set
 by hand is kept. First pass (2026-09-26): 75 of 151 upcoming event pins had
 anything to read - blank beats guessed.
+
+### products
+
+The weekly job's task (owner, 2026-10-08: "a weekly job that refreshes the
+product landing page for new products or updated information on them"). The
+/products page shelves the product pins (a `productName`) of a few categories
+and tags - Electronics, Audio, Fashion, Watches, Gaming, Collectibles, Snacks,
+Comics ([products.ts](../../../src/lib/products.ts)) - and shows each with a
+short line on why it is good and, when a source publishes one, a rating
+(`ProductBlurb`, 0142-0143).
+**Reads** `product_candidates`: the products on the shelves with no line yet
+(new to the page: a pin another run created, or one that has just reached the
+newest 12 of its shelf) or a line older than 21 days.
+**Does** research each one - the maker's page, then reviews and best-seller
+lists - and saves it with `save_product_blurb`: a line of at most 220
+characters, one or two sentences, in the style "Ranked as the #1 ... best-seller
+featuring ...". State a rank, award, score or feature **only** when a page you
+opened says so, and give that page as `sourceUrl`; never invent one. Add a
+`rating` only when a page you opened publishes it (a reviewer's score, or a
+retailer's average stars) on its own scale, with the source's name and URL. A
+page you cannot open (403) is no source. A product that is unreleased and
+unreviewed gets a factual line from the announcement and no rating. The page
+refreshes at once; it is cached for hours otherwise.
 
 ### pinAds
 

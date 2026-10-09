@@ -57,7 +57,7 @@ customer reviews are not evidence for phone numbers, schedules, or prices.
 | Website, phone, hours, booking link | `src/server/data/restaurantDetails.json` | Match `pinSourceUrl`; store `checkedAt`, `detailsSourceUrl`, and field-specific `additionalSources` for fallback evidence. |
 | Restaurant cost category (`$`–`$$$$`) | `src/server/data/restaurantPrices.json`, plus `priceRange` in the regional/top catalog | Record the pin source key, matched location, tier, evidence URL, evidence text, and price verification date. Leave the range empty when unverified. |
 | Menus, items, prices, specials | `src/server/data/restaurantMenus.json` | Use the same `pinSourceUrl`, dated sources, and the actual location's menu. |
-| Restaurant photos and rendered menu pages | `public/restaurant-images/{city}/`, with rendered menus under `menus/{restaurant}/` | Keep source URLs and credits; identify renderings, brand photos, and older documents. |
+| Restaurant photos and rendered menu pages | Azure Blob Storage; catalogs record public blob URLs | Never commit pin images to Git. Keep source URLs and credits; identify renderings, brand photos, and older documents. |
 
 Remove marketing parameters such as `utm_*`, `fbclid`, and `shareReferrer`
 from outgoing booking links while retaining parameters required to identify
@@ -88,7 +88,7 @@ than skipping the venue because its official website is missing.
 Follow the public post or
 embed to the actual photograph; ignore profile avatars, related-post thumbnails,
 and loading placeholders. Honey Boy Pizzeria's opening report, for example,
-embeds a pizza photo from its own Instagram account. Save a local image asset
+embeds a pizza photo from its own Instagram account. Upload the image to Azure Blob Storage
 so temporary social-media CDN links are not required to display it, retain the
 stable post/page URL in `imageSourceUrl`, and credit the original photographer
 or restaurant in `imageCredit`. Update the catalog and the existing pin's media
@@ -100,6 +100,8 @@ not be filled. Do not treat a failed social embed or an absent operator photo as
 the end of the search when the opening report has a usable image. After adding
 media, invalidate the pin and timeline caches and verify the actual pin page,
 landing-page card, and city guide display the saved image.
+
+When the restaurant has an official food gallery, collect up to **six media total** for its pin (owner, 2026-10-08, AnnaLena gallery). Count existing media toward the cap, retain useful existing images, and choose distinct food photos from that venue's own gallery. Inspect the images; skip logos, awards graphics, staff portraits and duplicate views when food photos are available. Store the photos in Azure Blob Storage and keep source/credit records with the blob URLs. Attach them to the production pin through the normal pin API so thumbnails and caches update; verify the blob before removing temporary local files. Gallery dishes can be seasonal examples: label them accordingly rather than implying they are the current menu. Verify the saved total and that every image decodes on the live pin. This is an exception to the general three-media target.
 
 For menus, read linked HTML, PDFs, or images. Use browser rendering or OCR
 when needed, then verify dish names, prices, and service labels against the
@@ -224,6 +226,18 @@ check dates in any reused seed summaries with the new batch's verification date.
 
 ## Backfill images on existing restaurant pins
 
+The 2026-10-08 food-gallery audit covers all 369 live restaurant-tagged pins.
+See [`galleryAudit-2026-10-08.json`](../scripts/restaurants/galleryAudit-2026-10-08.json)
+for production medium IDs, before/after counts, checked official pages, source
+credits, Azure blob URLs, and the outcome for each pin. Inaccessible sites and
+unconfirmed venue photos remain explicit gaps; six is a cap, not a quota.
+
+For gallery enrichment, append reviewed media through the authenticated normal
+pin API, retaining the freshly fetched existing media and references. Verify
+the public pin, source attribution, seasonal qualification, and every uploaded
+thumbnail after saving. The older `backfillMedia.ts` script below fills empty
+pins; it does not append a gallery to pins that already have photos.
+
 Audit every live restaurant-tagged pin, not only the current city page. Follow
 the original report to the operator and its branch-specific reservation listing.
 Inspect CSS background images, embedded gallery metadata, `srcset`, and the
@@ -231,7 +245,8 @@ normal public browser page when the initial HTML has no photo. Match the venue
 or named section before selecting an asset; roundup heroes and related-story
 images often belong to a different restaurant.
 
-Save reviewed assets locally and preserve the source page, original asset URL,
+Store reviewed gallery assets in Azure Blob Storage, record the blob URL in the
+`image` field, and preserve the source page, original asset URL,
 photographer credit, qualification label, and license in
 `scripts/restaurants/mediaBackfill.json`. Explicitly label restaurant logos,
 brand illustrations, chef portraits, renderings, earlier-location photographs,

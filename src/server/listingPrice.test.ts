@@ -27,6 +27,20 @@ describe('readAmazonPage', () => {
     expect(readAmazonPage(gone)).toEqual({ kind: 'unavailable', title: 'Thing' });
   });
 
+  it('reads only the selected variant\'s new offer from the size picker', () => {
+    const page = (state: string, offerType: string) => `${padding}<span id="productTitle">ANUA Cream</span>
+      <span class="priceToPay">$22.80</span>
+      <script type="a-state" data-a-state="{&quot;key&quot;:&quot;desktop-twister-sort-filter-data&quot;}">${JSON.stringify({
+        sortedDimValuesForAllDims: { size_name: [
+          { dimensionValueState: 'AVAILABLE', slots: [{ displayData: { offerType: 'newOffer', priceWithoutCurrencySymbol: '50.00' } }] },
+          { dimensionValueState: state, slots: [{ displayData: { offerType, priceWithoutCurrencySymbol: '24.00' } }] },
+        ] },
+      })}</script>`;
+    expect(readAmazonPage(page('SELECTED', 'newOffer'))).toEqual({ kind: 'price', price: 24, title: 'ANUA Cream' });
+    expect(readAmazonPage(page('AVAILABLE', 'newOffer')).kind).toBe('unknown');
+    expect(readAmazonPage(page('SELECTED', 'usedOffer')).kind).toBe('unknown');
+  });
+
   it('treats the small "continue shopping" page as a block, not a missing product', () => {
     expect(readAmazonPage('<title>Amazon.com</title><form action="/errors/validateCaptcha">Continue shopping</form>')).toEqual({
       kind: 'unknown',

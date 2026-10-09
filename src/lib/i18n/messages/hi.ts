@@ -481,6 +481,7 @@ const hi: Messages = {
     semiconductors: 'सेमीकंडक्टर',
     telecom: 'टेलिकॉम',
     gaming: 'गेमिंग',
+    tabletop: 'टेबलटॉप गेम',
     anime: 'एनीमे',
     manga: 'मंगा',
     comics: 'कॉमिक्स',
@@ -1159,24 +1160,6 @@ const hi: Messages = {
   map: {
     backToPin: 'पिन पर वापस जाएं',
     yourPlace: 'आप',
-    webOff: 'ग्राफ़ बंद',
-    lines: 'लाइनें',
-    graph: 'ग्राफ़',
-    web: {
-      thread: 'थ्रेड',
-      duplicate: 'डुप्लीकेट',
-      company: 'कंपनी',
-      source: 'सोर्स',
-      tag: 'टैग',
-      alsoShared: { one: 'और {count} समान बात', other: 'और {count} समान बातें' },
-    },
-    // The ⓘ beside the legend: how a pair earns a line, since the row beside
-    // it already names the kinds. The numbers come from the map's own weights.
-    webHelpTitle: 'लाइन कैसे बनती है',
-    webHelpScore: 'दो पिन जो कुछ भी शेयर करते हैं उसे जोड़ा जाता है: कोई कंपनी या आर्टिकल {full} का, एक टैग {tag} का, हर एक को नज़र आ रहे उतने पिन के log₂ से भाग दिया जाता है जिनमें वह मौजूद है।',
-    webHelpThreshold: 'लाइन बनने के लिए {min} चाहिए। ऐसा टैग जो सिर्फ़ ये दोनों रखते हैं उसकी कीमत {tag} है; {pins} पिन पर मौजूद टैग की कीमत सिर्फ़ {common} है, इसलिए ऐसे कई टैग चाहिए होंगे।',
-    webHelpDeclared: 'थ्रेड या पुष्ट डुप्लीकेट की लाइन हमेशा बनती है, चाहे दोनों में और कुछ भी समान हो या न हो।',
-    webHelpCap: 'हर पिन अपनी {links} सबसे मज़बूत लाइनें रखता है, और जितना ज़्यादा जोड़, लाइन उतनी मोटी।',
     loadingPins: 'पिन लोड हो रहे हैं…',
     layer: 'मानचित्र पर दिखाएँ',
     layerPins: 'पिन',

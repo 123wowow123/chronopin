@@ -38,6 +38,18 @@ describe('standalone product ads', () => {
       ['B0FQFB8FMG', row.url, listing.title, 'Apple', 179, 4.4, 16062, listing.image, null, ['Audio']]);
   });
 
+  it('allows the owner-selected Shark at 4.2 while retaining its other checks', async () => {
+    const url = 'https://www.amazon.com/dp/B0B89P16MC';
+    vi.mocked(db.query).mockResolvedValue([row]);
+    vi.mocked(readAmazonListing).mockResolvedValue({ ...listing, brand: 'Shark', rating: 4.2 });
+    expect(await ProductAd.add(url)).toHaveProperty('added');
+    for (const override of [{ rating: 4.1 }, { reviewCount: 99 }, { available: false }, { brand: null }]) {
+      vi.mocked(readAmazonListing).mockResolvedValue({ ...listing, rating: 4.2, ...override });
+      expect(await ProductAd.add(url)).toHaveProperty('rejected');
+    }
+    expect(db.query).toHaveBeenCalledTimes(1);
+  });
+
   it('keeps existing facts when Amazon blocks a refresh', async () => {
     vi.mocked(db.query).mockResolvedValueOnce([row]);
     vi.mocked(readAmazonListing).mockResolvedValue({ unknown: 'robot check' });

@@ -3,8 +3,8 @@ import { TZDate } from '@date-fns/tz';
 // The daily pin jobs: when each runs, what it works on, and who reasons for it
 // (src/server/jobs, docs/okf/scraping/daily-jobs.md). An admin setting
 // (AppSetting "dailyJobs"); this is its shape, its default and its parser.
-// A job runs every day at its times, or - with a dayOfMonth - only on that
-// day of each month.
+// A job runs every day at its times, or - with a dayOfWeek or a dayOfMonth -
+// only on that day of each week or month.
 //
 // A job is a list of tasks run as one LLM-orchestrated session at each of its
 // times. The tasks' full guidance lives in the OKF page, which the run reads
@@ -62,6 +62,11 @@ export const TASKS = {
     group: 'upkeep',
     label: 'Performers and tickets',
     summary: "Read the upcoming event pins' own pages for who performs, ticket prices, whether tickets are on sale or sold out, and the ticket link.",
+  },
+  products: {
+    group: 'upkeep',
+    label: 'Products page',
+    summary: "Refresh the /products landing page: a researched why-it-is-good line and published rating for each product that is new to a shelf or whose line has gone stale, checked against reviews and the maker's page.",
   },
   pinAds: {
     group: 'upkeep',
@@ -151,6 +156,9 @@ export type JobSetting = {
   // The day of the month it runs on (1-28, so every month has it), or null
   // to run every day.
   dayOfMonth: number | null;
+  // The day of the week it runs on (0 Sunday to 6 Saturday), or null. A job
+  // has a day of the week or a day of the month, not both.
+  dayOfWeek: number | null;
   tasks: TaskId[];
   // auto: the app's API key when it has credit, else a Claude Code session.
   driver: DriverChoice;
@@ -164,6 +172,7 @@ export const MAX_NEW_PINS = 100;
 export const MAX_UPDATES = 250;
 export const MAX_TIMES = 6;
 export const MAX_DAY_OF_MONTH = 28;
+export const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] as const;
 
 // The jobs the owner asked for, with up to 100 new pins and 250 updates a run
 // (owner, 2026-09-22), and the monthly re-check of low-confidence pins
@@ -180,6 +189,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       times: ['00:00'],
       timeZone: 'America/Los_Angeles',
       dayOfMonth: null,
+      dayOfWeek: null,
       // No sentiment: the news job scores new pins twice a day (owner, 2026-09-23).
       // thinPins fills out a batch of the pins hidden from search as thin (owner, 2026-10-04).
       tasks: ['revisits', 'pinHealth', 'thinPins', 'restaurantRegions', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
@@ -194,6 +204,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       times: ['06:00', '18:00'],
       timeZone: 'America/Los_Angeles',
       dayOfMonth: null,
+      dayOfWeek: null,
       // eventInfo twice a day, so a sell-out shows by the next run; the
       // prediction markets too, for the week's events the money is on (owner,
       // 2026-10-01).
@@ -210,10 +221,26 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       times: ['03:00'],
       timeZone: 'America/Los_Angeles',
       dayOfMonth: 1,
+      dayOfWeek: null,
       tasks: ['lowConfidence'],
       driver: 'auto',
       maxNewPins: 0,
       maxUpdates: MAX_UPDATES,
+    },
+    {
+      // Monday early, so the week opens with the page refreshed (owner,
+      // 2026-10-08: "a weekly job that refreshes the product landing page").
+      id: 'weekly',
+      label: 'Weekly products page refresh',
+      enabled: false,
+      times: ['04:00'],
+      timeZone: 'America/Los_Angeles',
+      dayOfMonth: null,
+      dayOfWeek: 1,
+      tasks: ['products'],
+      driver: 'auto',
+      maxNewPins: 0,
+      maxUpdates: 100,
     },
   ],
 };
@@ -254,6 +281,11 @@ function parseJob(value: unknown, index: number): { job: JobSetting } | { proble
   if (dayOfMonth !== null && !(Number.isInteger(dayOfMonth) && (dayOfMonth as number) >= 1 && (dayOfMonth as number) <= MAX_DAY_OF_MONTH)) {
     return { problem: `${at}.dayOfMonth must be null or a whole number from 1 to ${MAX_DAY_OF_MONTH}` };
   }
+  const dayOfWeek = raw.dayOfWeek ?? null;
+  if (dayOfWeek !== null && !(Number.isInteger(dayOfWeek) && (dayOfWeek as number) >= 0 && (dayOfWeek as number) <= 6)) {
+    return { problem: `${at}.dayOfWeek must be null or a whole number from 0 (Sunday) to 6 (Saturday)` };
+  }
+  if (dayOfWeek !== null && dayOfMonth !== null) return { problem: `${at} can have a dayOfWeek or a dayOfMonth, not both` };
   if (!Array.isArray(raw.tasks) || !raw.tasks.length || !raw.tasks.every((t) => TASK_IDS.includes(t as TaskId))) {
     return { problem: `${at}.tasks must be one or more of ${TASK_IDS.join(', ')}` };
   }
@@ -274,6 +306,7 @@ function parseJob(value: unknown, index: number): { job: JobSetting } | { proble
       times: [...new Set(raw.times as string[])].sort(),
       timeZone: raw.timeZone,
       dayOfMonth: dayOfMonth as number | null,
+      dayOfWeek: dayOfWeek as number | null,
       tasks: TASK_IDS.filter((t) => (raw.tasks as string[]).includes(t)),
       driver: raw.driver as DriverChoice,
       maxNewPins,
@@ -299,27 +332,28 @@ export function parseDailyJobs(value: unknown): { setting: DailyJobsSetting } | 
 
 // How long after its time a missed slot still runs: a server that was down at
 // 06:00 and back at 06:40 runs the morning check, one back at 17:00 does not
-// run it late into the evening's. A monthly job's slot waits a day instead -
-// letting it go would skip a month, and it may sit behind a long midnight run.
+// run it late into the evening's. A weekly or monthly job's slot waits a day
+// instead - letting it go would skip a week or a month, and it may sit behind a long midnight run.
 export const CATCH_UP_MS = 2 * 60 * 60 * 1000;
 export const MONTHLY_CATCH_UP_MS = 24 * 60 * 60 * 1000;
 
-type Schedule = Pick<JobSetting, 'id' | 'times' | 'timeZone' | 'dayOfMonth'>;
+type Schedule = Pick<JobSetting, 'id' | 'times' | 'timeZone' | 'dayOfMonth' | 'dayOfWeek'>;
 
-export function catchUpMs(job: Pick<JobSetting, 'dayOfMonth'>): number {
-  return job.dayOfMonth ? MONTHLY_CATCH_UP_MS : CATCH_UP_MS;
+export function catchUpMs(job: Pick<JobSetting, 'dayOfMonth' | 'dayOfWeek'>): number {
+  return job.dayOfMonth || job.dayOfWeek != null ? MONTHLY_CATCH_UP_MS : CATCH_UP_MS;
 }
 
 export type Slot = { key: string; at: Date };
 
 // The job's slots on the local days `from` to `to` days from now's, oldest
-// first; a monthly job has them only on its day of the month.
+// first; a weekly or monthly job has them only on its day.
 function slotsAround(job: Schedule, now: Date, from = -1, to = 0): Slot[] {
   const local = new TZDate(now.getTime(), job.timeZone);
   const slots: Slot[] = [];
   for (let dayOffset = from; dayOffset <= to; dayOffset++) {
     const day = new TZDate(local.getFullYear(), local.getMonth(), local.getDate() + dayOffset, 12, 0, job.timeZone);
     if (job.dayOfMonth && day.getDate() !== job.dayOfMonth) continue;
+    if (job.dayOfWeek != null && day.getDay() !== job.dayOfWeek) continue;
     for (const time of job.times) {
       const [hh, mm] = time.split(':').map(Number);
       const at = new TZDate(day.getFullYear(), day.getMonth(), day.getDate(), hh, mm, job.timeZone);
@@ -342,6 +376,6 @@ export function dueSlot(job: Schedule, now: Date): Slot | null {
 // When the job next runs, for the admin page. A month is at most 31 days, so
 // a monthly job's next slot is within the next 32.
 export function nextRun(job: Schedule, now: Date): Date {
-  const upcoming = slotsAround(job, now, 0, job.dayOfMonth ? 32 : 1).filter((s) => s.at.getTime() > now.getTime());
+  const upcoming = slotsAround(job, now, 0, job.dayOfMonth ? 32 : job.dayOfWeek != null ? 8 : 1).filter((s) => s.at.getTime() > now.getTime());
   return upcoming[0].at;
 }

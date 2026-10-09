@@ -7,6 +7,7 @@ import {
   DRIVERS,
   groupTasks,
   MAX_DAY_OF_MONTH,
+  WEEKDAYS,
   MAX_NEW_PINS,
   MAX_TIMES,
   MAX_UPDATES,
@@ -209,14 +210,27 @@ function JobCard({
         <legend className="text-sm font-medium">Runs at</legend>
         <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
           <select
-            value={job.dayOfMonth ? 'monthly' : 'daily'}
-            onChange={(e) => onChange({ dayOfMonth: e.target.value === 'monthly' ? 1 : null })}
+            value={job.dayOfMonth ? 'monthly' : job.dayOfWeek != null ? 'weekly' : 'daily'}
+            onChange={(e) => onChange({ dayOfMonth: e.target.value === 'monthly' ? 1 : null, dayOfWeek: e.target.value === 'weekly' ? 1 : null })}
             className="field w-auto"
             aria-label="How often"
           >
             <option value="daily">Every day</option>
+            <option value="weekly">Once a week</option>
             <option value="monthly">Once a month</option>
           </select>
+          {job.dayOfWeek != null ? (
+            <label className="flex items-center gap-2">
+              on
+              <select value={job.dayOfWeek} onChange={(e) => onChange({ dayOfWeek: Number(e.target.value) })} className="field w-auto">
+                {WEEKDAYS.map((name, day) => (
+                  <option key={day} value={day}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : null}
           {job.dayOfMonth ? (
             <label className="flex items-center gap-2">
               on day

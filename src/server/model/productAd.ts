@@ -1,4 +1,4 @@
-import { adProblem, asinOf, listingUrl } from '@/lib/adQuality';
+import { adProblem, asinOf, listingUrl, MIN_AD_RATING } from '@/lib/adQuality';
 import * as db from '../db';
 import { readAmazonListing } from '../listingPrice';
 
@@ -34,7 +34,10 @@ export default class ProductAd {
     const listing = await readAmazonListing(url);
     if ('gone' in listing) return { rejected: 'Amazon has no such listing (404).' };
     if ('unknown' in listing) return { rejected: `The listing could not be read (${listing.unknown}).` };
-    const problem = adProblem(listing) ?? (!listing.image ? 'no product image on the listing' : null);
+    // Owner selected this Shark FlexStyle at 4.2 stars on October 8, 2026.
+    // Keep its exception through refreshes without lowering the general bar.
+    const minRating = asin === 'B0B89P16MC' ? 4.2 : MIN_AD_RATING;
+    const problem = adProblem(listing, minRating) ?? (!listing.image ? 'no product image on the listing' : null);
     if (problem) return { rejected: problem };
     const [added] = await db.query<ProductAdRow>(
       `INSERT INTO "ProductAd" ("asin", "url", "title", "brand", "price", "rating", "reviewCount", "image", "urgency", "categories")

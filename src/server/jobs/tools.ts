@@ -25,6 +25,9 @@ import HolidayAd from '../model/holidayAd';
 import PinAd from '../model/pinAd';
 import ProductAd from '../model/productAd';
 import { stockMovieMerchandise } from '../movieMerchandise';
+import Products from '../model/products';
+import { timelineMinConfidence } from '../services/timeline';
+import { PRODUCT_SHELVES, SHELF_SIZE } from '@/lib/products';
 import PinRevisit from '../model/pinRevisit';
 import { MIN_AD_RATING, MIN_AD_REVIEWS, MIN_HOLIDAY_AD_RATING, MIN_HOLIDAY_AD_REVIEWS } from '@/lib/adQuality';
 import PinSentiment, { shortHash } from '../model/pinSentiment';
@@ -193,6 +196,39 @@ export const TOOLS: JobTool[] = [
         skipDays: int(input.skipDays, 14, 0, 365),
         exclude: Array.isArray(input.exclude) ? input.exclude.map((id: unknown) => int(id, 0, 0, 2 ** 31 - 1)).filter(Boolean) : [],
       }),
+  },
+  {
+    name: 'product_candidates',
+    description:
+      "The products on the /products landing page (by shelf: " + PRODUCT_SHELVES.map((s) => s.label).join(', ') + ") that need a look: no why-it-is-good line yet (new to the page) or a line older than `staleDays` (default 21). Each has the pin's productName, title, description, company, its current line and age, and the rating now shown. Research each product online (the maker's page, reviews, best-seller lists) and save it with save_product_blurb. Empty means the page is up to date.",
+    input_schema: obj({ staleDays: num('Lines older than this many days are stale, default 21') }),
+    run: async (input) => ({ shelfSize: SHELF_SIZE, products: await Products.needingReview(PRODUCT_SHELVES.map((s) => s.name), SHELF_SIZE, int(input.staleDays, 21, 1, 365), await timelineMinConfidence()) }),
+  },
+  {
+    name: 'save_product_blurb',
+    description:
+      "Saves a product's why-it-is-good line (at most 220 characters, one or two sentences) and, when a source publishes one, its rating, for the /products page. State a rank, award, score or feature only when a page you opened says so, and give that page as sourceUrl. rating is a reviewer's score or a retailer's average stars on its own scale, with the source's name and the page it is on; leave it out when there is none. Only a product product_candidates lists may be saved. Counts as an update.",
+    input_schema: obj(
+      {
+        pinId: num('Pin id'),
+        blurb: str('Why the product is good, 220 characters at most'),
+        sourceUrl: str('The page backing the line'),
+        rating: { type: 'object', properties: { score: { type: 'number' }, max: { type: 'number' }, source: { type: 'string' }, url: { type: 'string' } }, required: ['score', 'max', 'source'], additionalProperties: false },
+      },
+      ['pinId', 'blurb'],
+    ),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      if (String(input.blurb).trim().length > 220) throw new Error('Keep the line to 220 characters');
+      if (ctx.updated >= ctx.maxUpdates) throw new Error(`This run's limit of ${ctx.maxUpdates} updates is reached.`);
+      const listed = (await Products.needingReview(PRODUCT_SHELVES.map((s) => s.name), SHELF_SIZE, 365, await timelineMinConfidence())).some((p) => p.pinId === pinId);
+      if (!listed) throw new Error('That pin is not a product on the products page, or is not one product_candidates lists');
+      await Products.saveBlurb({ pinId, blurb: String(input.blurb), sourceUrl: input.sourceUrl ?? null, rating: input.rating ?? null });
+      ctx.updated++;
+      invalidateTimeline();
+      await act(ctx, { tool: 'save_product_blurb', pinId, detail: String(input.blurb) });
+      return { saved: true };
+    },
   },
   {
     name: 'restaurant_regions',

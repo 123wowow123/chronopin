@@ -7,6 +7,6 @@ const PinsMap = dynamic(() => import('@/components/map/PinsMap'), {
   loading: () => <div className="h-[calc(100dvh-52px)] animate-pulse bg-raised" />,
 });
 
-export function MapLoader({ sliderTyping, webOverlay }: { sliderTyping: boolean; webOverlay: boolean }) {
-  return <PinsMap sliderTyping={sliderTyping} webOverlay={webOverlay} />;
+export function MapLoader({ sliderTyping }: { sliderTyping: boolean }) {
+  return <PinsMap sliderTyping={sliderTyping} />;
 }

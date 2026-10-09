@@ -5,7 +5,7 @@
 // own words.
 
 import { cacheLife, cacheTag } from 'next/cache';
-import { getPersonalBag, getSliderTyping, getAdPlacements, getAdsenseSlots, getHideThinPins, getTimelineVideo, getWebOverlay } from '../model/appSetting';
+import { getPersonalBag, getSliderTyping, getAdPlacements, getAdsenseSlots, getHideThinPins, getTimelineVideo } from '../model/appSetting';
 import Company from '../model/company';
 import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
@@ -23,7 +23,6 @@ import type { PinUpdateJson } from '@/lib/pinUpdates';
 import { safeHtml } from '@/lib/sanitize';
 import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { SliderTypingSetting } from '@/lib/sliderTyping';
-import type { WebOverlaySetting } from '@/lib/webOverlay';
 import type { AdPlacementsSetting } from '@/lib/adPlacements';
 import type { AdsenseSlotsSetting } from '@/lib/adsense';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
@@ -81,14 +80,6 @@ export async function sliderTyping(): Promise<SliderTypingSetting> {
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   return getSliderTyping();
-}
-
-// Whether the map offers its web of related-pin lines and graph, cached and expired the same way.
-export async function webOverlay(): Promise<WebOverlaySetting> {
-  'use cache';
-  cacheLife('minutes');
-  cacheTag(TAGS.timeline);
-  return getWebOverlay();
 }
 
 // The signed-in viewer's preference wiki, which a crowded day's cards are

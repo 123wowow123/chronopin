@@ -15,7 +15,9 @@ import { restaurantDistance, type RestaurantDetails } from '@/lib/restaurantSort
 import { formatDistance } from '@/lib/distance';
 import { usesImperial } from '@/lib/weather';
 import { usePathname } from '@/lib/client/navigation';
+import { queryTabHref, selectQueryTab, useQueryParam } from '@/lib/client/queryTabs';
 import { RestaurantControls, RestaurantSortNote, useRestaurantSort } from './RestaurantControls';
+import { LandingMark } from '@/components/ui/LandingMark';
 import { CityGuideLink } from './CityGuideLink';
 import { PagedCardGrid, useGuidePages, type GuidePages } from './PagedCardGrid';
 
@@ -56,6 +58,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const topSort = useRestaurantSort('Restaurants');
   const upcomingSort = useRestaurantSort('Restaurants', 'opening-date');
   const hash = useSyncExternalStore(subscribeToHash, currentHash, serverHash);
+  const queryView = useQueryParam('view');
   const [selectedNeighborhood, setNeighborhood] = useState('all');
   const [countrySelection, setCountrySelection] = useState({ regionSlug: region.slug, country: region.country });
   const availableRegions = RESTAURANT_REGIONS.filter((city) => availableRegionSlugs.includes(city.slug));
@@ -70,7 +73,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const specialCount = counts.discounts;
   const views = VIEWS.filter((view) => counts[view.key] > 0);
   // Old bookmarks and links from another city can point to an empty view.
-  const status: GuideView = views.find((view) => view.hash === hash || (view.key === 'discounts' && hash === '#next-specials'))?.key ?? views.find((view) => view.key === initialView)?.key ?? views[0]?.key ?? 'upcoming';
+  const status: GuideView = views.find((view) => view.key === queryView)?.key ?? views.find((view) => view.hash === hash || (view.key === 'discounts' && hash === '#next-specials'))?.key ?? views.find((view) => view.key === initialView)?.key ?? views[0]?.key ?? 'upcoming';
   const top = status === 'top';
   const discounts = status === 'discounts';
   const neighborhoods = summary.neighborhoods[status];
@@ -80,7 +83,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const featuredTop = !featured ? Object.values(initialPages).flatMap((page) => page.items).find((item): item is TopRestaurant => 'pinId' in item && Boolean(item.image)) : undefined;
   const selectedSort = top ? topSort : status === 'upcoming' ? upcomingSort : recentSort;
   const pages = useGuidePages<Restaurant | TopRestaurant>(discounts ? null : { region: region.slug, view: status, neighborhood, sort: selectedSort.sort, origin: selectedSort.origin }, initialPages as Record<string, GuidePage<Restaurant | TopRestaurant>>);
-  const selectedMapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', q: `pin:${pages.ids.join(',')}`, returnTo: `${pathname}${top ? '#top-restaurants' : status === 'upcoming' ? '#upcoming' : '#new'}` });
+  const selectedMapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', q: `pin:${pages.ids.join(',')}`, returnTo: queryTabHref(pathname, 'view', status) });
   const shown = pages.total;
   const href = (restaurant: Restaurant) => pinPath(restaurant);
   const reset = () => { setNeighborhood('all'); };
@@ -122,6 +125,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
 
   return (
     <main className={styles.guide} data-landing lang="en">
+      <LandingMark />
       <div className={styles.container}>
         <div className={styles.guideNav}>
           <Link href="/restaurants" className={styles.wordmark}><span aria-hidden="true">✳</span> The opening guide</Link>
@@ -163,17 +167,17 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
 
         <div className={styles.digest}>
           <p>A little discovery.<br /><strong>A lot to look forward to.</strong></p>
-          {establishedOnly && <Anchor href="#top-restaurants" onClick={() => setNeighborhood('all')}><strong>{counts.top.toString().padStart(2, '0')}</strong><span>Restaurants to explore <span aria-hidden="true">↗</span></span></Anchor>}
-          {counts.upcoming > 0 && <Anchor href="#upcoming" onClick={() => setNeighborhood('all')}><strong>{counts.upcoming.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
-          {counts.new > 0 && <Anchor href="#new" onClick={() => setNeighborhood('all')}><strong>{counts.new.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
-          {specialCount > 0 && <Anchor href="#available-now" onClick={() => setNeighborhood('all')}><strong>{specialCount.toString().padStart(2, '0')}</strong><span>Specials <span aria-hidden="true">↗</span></span></Anchor>}
+          {establishedOnly && <Anchor href={queryTabHref(pathname, 'view', 'top')} onClick={selectQueryTab('view', 'top', () => setNeighborhood('all'))}><strong>{counts.top.toString().padStart(2, '0')}</strong><span>Restaurants to explore <span aria-hidden="true">↗</span></span></Anchor>}
+          {counts.upcoming > 0 && <Anchor href={queryTabHref(pathname, 'view', 'upcoming')} onClick={selectQueryTab('view', 'upcoming', () => setNeighborhood('all'))}><strong>{counts.upcoming.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
+          {counts.new > 0 && <Anchor href={queryTabHref(pathname, 'view', 'new')} onClick={selectQueryTab('view', 'new', () => setNeighborhood('all'))}><strong>{counts.new.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
+          {specialCount > 0 && <Anchor href={queryTabHref(pathname, 'view', 'discounts')} onClick={selectQueryTab('view', 'discounts', () => setNeighborhood('all'))}><strong>{specialCount.toString().padStart(2, '0')}</strong><span>Specials <span aria-hidden="true">↗</span></span></Anchor>}
         </div>
 
         <section id="openings" className={styles.openings} aria-label="Browse restaurants">
           <div className={styles.browseHeading}><div><p className={styles.eyebrow}>THE LOCAL LINEUP</p><h2>{top ? 'Great tables, already here.' : 'Something new on the menu.'}</h2></div><span>{region.name} edition</span></div>
           <div className={styles.filters}>
             <nav ref={viewNav} className={styles.statusFilters} aria-label="Restaurant view">
-              {views.map((item) => <Anchor key={item.key} href={item.hash} aria-label={item.label} aria-current={status === item.key ? 'location' : undefined} onClick={() => { if ((item.key === 'top') !== top || (item.key === 'discounts') !== discounts) setNeighborhood('all'); }}><span className={styles.viewLabel} aria-hidden="true">{item.label}</span><span className={styles.mobileViewLabel} aria-hidden="true">{item.mobileLabel}</span></Anchor>)}
+              {views.map((item) => <Anchor key={item.key} href={queryTabHref(pathname, 'view', item.key)} aria-label={item.label} aria-current={status === item.key ? 'location' : undefined} onClick={selectQueryTab('view', item.key, () => { if ((item.key === 'top') !== top || (item.key === 'discounts') !== discounts) setNeighborhood('all'); })}><span className={styles.viewLabel} aria-hidden="true">{item.label}</span><span className={styles.mobileViewLabel} aria-hidden="true">{item.mobileLabel}</span></Anchor>)}
             </nav>
             <div className={styles.filterFields}>
               <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onMouseDown={(event) => { event.currentTarget.dataset.mouse = ''; }} onKeyDown={(event) => { delete event.currentTarget.dataset.mouse; }} onBlur={(event) => { delete event.currentTarget.dataset.mouse; }} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>

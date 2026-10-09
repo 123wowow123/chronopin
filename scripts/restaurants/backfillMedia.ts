@@ -1,14 +1,14 @@
-// Attach reviewed local images to existing restaurant pins. The opening seed
+// Attach reviewed images, including Azure Blob URLs, to existing restaurant pins. The opening seed
 // deliberately skips existing pins, so image enrichment runs separately.
 import '../env';
-import sharp from 'sharp';
+import { imageMetadata } from './imageMetadata';
 import media from './mediaBackfill.json';
 import * as db from '@/server/db';
 
 const escapeHtml = (value: string) => value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]!);
 
 try {
-  const dimensions = await Promise.all(media.map((item) => sharp(`public${item.image}`).metadata()));
+  const dimensions = await imageMetadata(media.map((item) => item.image));
   const changed = await db.transaction(async (query) => {
     await query('SELECT pg_advisory_xact_lock(731906)');
     const ids: number[] = [];
@@ -20,7 +20,7 @@ try {
       if (!pin) continue;
       const existing = await query<{ id: number; thumbName: string }>(`SELECT m."id", m."thumbName" FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId" WHERE pm."pinId" = $1 AND pm."utcDeletedDateTime" IS NULL AND m."type" = '1'`, [pin.id]);
       if (existing.length && !existing.some((medium) => medium.thumbName === item.image)) continue;
-      const image = dimensions[index];
+      const image = dimensions[index]!;
       const caption = [item.imageCredit, item.imageNote].filter(Boolean).join(' · ');
       const license = item.license && item.licenseUrl
         ? ` · <a href="${escapeHtml(item.licenseUrl)}">${escapeHtml(item.license)}</a>` : '';

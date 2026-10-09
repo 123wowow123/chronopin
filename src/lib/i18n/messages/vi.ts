@@ -481,6 +481,7 @@ const vi: Messages = {
     semiconductors: 'Bán dẫn',
     telecom: 'Viễn thông',
     gaming: 'Trò chơi',
+    tabletop: 'Trò chơi bàn',
     anime: 'Anime',
     manga: 'Manga',
     comics: 'Truyện tranh',
@@ -1152,24 +1153,6 @@ const vi: Messages = {
   map: {
     backToPin: 'Quay lại ghim',
     yourPlace: 'Bạn',
-    webOff: 'Tắt biểu đồ',
-    lines: 'Đường nối',
-    graph: 'Biểu đồ',
-    web: {
-      thread: 'Chuỗi',
-      duplicate: 'Bản trùng',
-      company: 'Công ty',
-      source: 'Nguồn',
-      tag: 'Thẻ',
-      alsoShared: 'và {count} điểm chung nữa',
-    },
-    // The ⓘ beside the legend: how a pair earns a line, since the row beside
-    // it already names the kinds. The numbers come from the map's own weights.
-    webHelpTitle: 'Một đường nối được tạo ra thế nào',
-    webHelpScore: 'Mọi thứ hai ghim có chung được cộng lại: một công ty hoặc một bài viết được {full}, một thẻ được {tag}, mỗi giá trị được chia cho log₂ số ghim đang hiển thị mang nó.',
-    webHelpThreshold: 'Cần {min} để vẽ đường nối. Một thẻ chỉ hai ghim này có đáng giá {tag}; một thẻ có trên {pins} ghim đáng giá {common}, nên cần vài điểm chung như vậy.',
-    webHelpDeclared: 'Một chuỗi hoặc một bản trùng đã xác nhận luôn được vẽ, bất kể hai ghim còn có gì chung.',
-    webHelpCap: 'Mỗi ghim giữ {links} đường nối mạnh nhất, và tổng càng cao thì đường càng đậm.',
     loadingPins: 'Đang tải ghim…',
     layer: 'Hiện trên bản đồ',
     layerPins: 'Ghim',

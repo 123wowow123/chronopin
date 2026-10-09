@@ -16,6 +16,10 @@ next-env.d.ts
 
 .tmp
 .scrape
+# Pin media belongs in Azure Blob Storage; these are temporary upload caches.
+/public/restaurant-images/
+/public/pin-images/
+/public/uploads/
 /scratchpad/
 .idea
 npm-debug.log

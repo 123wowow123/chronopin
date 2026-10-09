@@ -38,7 +38,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
       Array.from({ length: Math.ceil(summary.counts[view] / GUIDE_PAGE_SIZE) }, (_, index) => `/restaurants/${slug}?view=${view}${index ? `&page=${index + 1}` : ''}`));
   }))).flat();
   // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
-  const pins = await Pins.listForSitemap(0, MAX_URLS - 8 - topics.length - RESTAURANT_REGIONS.length - guidePaths.length, (await hideThinPins()).enabled);
+  const pins = await Pins.listForSitemap(0, MAX_URLS - 9 - topics.length - RESTAURANT_REGIONS.length - guidePaths.length, (await hideThinPins()).enabled);
   const inEveryLanguage = (path: string) => {
     if (!offered.length) return undefined;
     const { languages = {} } = languageAlternates(path, DEFAULT_LOCALE, offered);
@@ -55,6 +55,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     { url: absoluteUrl('/terms'), changeFrequency: 'yearly', priority: 0.2 },
     { url: absoluteUrl('/map'), changeFrequency: 'daily', priority: 0.5, alternates: inEveryLanguage('/map') },
     { url: absoluteUrl('/tags'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/tags') },
+    { url: absoluteUrl('/products'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/products') },
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },
     ...topics.map((path) => ({ url: absoluteUrl(path), alternates: inEveryLanguage(path), changeFrequency: 'daily' as const, priority: 0.7 })),
     ...pins.map((pin) => ({

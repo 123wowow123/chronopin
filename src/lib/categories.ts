@@ -13,6 +13,7 @@ export const CATEGORIES = [
   'Semiconductors',
   'Telecom',
   'Gaming',
+  'Tabletop',
   'Anime',
   'Manga',
   'Comics',

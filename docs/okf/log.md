@@ -1,5 +1,10 @@
 # Update Log
 
+## 2026-10-08
+
+* **Update:** All pin images must use Azure Blob Storage and stay out of Git. Migrated and verified 300 older restaurant images, updated 245 production pins and catalog references, and removed the tracked image files from the working tree. Added Git exclusions and the standing rule to AGENTS.md; existing Git history is unchanged. See [learnings](scraping/learnings.md#2026-10-08---remove-existing-pin-images-from-git).
+* **Update:** Recorded the requirement to store restaurant gallery photos in Azure Blob Storage. Verified all 532 added photos on production, updated the photo records to blob URLs, and removed repository gallery copies. See [learnings](scraping/learnings.md#2026-10-08---restaurant-gallery-photos-stored-in-azure) and [Strategy](scraping/strategy.md).
+
 ## 2026-10-04
 * **Update**: **239 thin pin summaries rewritten for the AdSense review** (235 on prod, 436 references added incl. prediction markets; 4 OpenAI entries held). See [learnings](scraping/learnings.md).
 * **Update**: **AdSense refused chronopin.com for "low value content".** Every generated pin must now add value of its own: an original multi-source summary with context, no copied or template text, fewer and richer pins, kept current. See [Strategy](/scraping/strategy.md#principles) principle 9 and [learnings](scraping/learnings.md).

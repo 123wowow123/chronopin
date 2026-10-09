@@ -482,6 +482,7 @@ const id: Messages = {
     semiconductors: 'Semikonduktor',
     telecom: 'Telekomunikasi',
     gaming: 'Gim',
+    tabletop: 'Permainan papan',
     anime: 'Anime',
     manga: 'Manga',
     comics: 'Komik',
@@ -1153,24 +1154,6 @@ const id: Messages = {
   map: {
     backToPin: 'Kembali ke pin',
     yourPlace: 'Anda',
-    webOff: 'Grafik mati',
-    lines: 'Garis',
-    graph: 'Grafik',
-    web: {
-      thread: 'Utas',
-      duplicate: 'Duplikat',
-      company: 'Perusahaan',
-      source: 'Sumber',
-      tag: 'Tag',
-      alsoShared: 'dan {count} kesamaan lainnya',
-    },
-    // The ⓘ beside the legend: how a pair earns a line, since the row beside
-    // it already names the kinds. The numbers come from the map's own weights.
-    webHelpTitle: 'Bagaimana garis terbentuk',
-    webHelpScore: 'Semua kesamaan dua pin dijumlahkan: perusahaan atau artikel bernilai {full}, tag bernilai {tag}, masing-masing dibagi log₂ dari jumlah pin yang terlihat yang memilikinya.',
-    webHelpThreshold: 'Dibutuhkan {min} untuk menggambar garis. Tag yang hanya dimiliki kedua pin ini bernilai {tag}; tag pada {pins} pin bernilai {common}, jadi diperlukan beberapa kesamaan seperti itu.',
-    webHelpDeclared: 'Utas atau duplikat yang dikonfirmasi selalu digambar, apa pun kesamaan lain di antara keduanya.',
-    webHelpCap: 'Setiap pin mempertahankan {links} garis terkuatnya, dan makin tinggi jumlahnya, makin tebal garisnya.',
     loadingPins: 'Memuat pin…',
     layer: 'Tampilkan di peta',
     layerPins: 'Pin',

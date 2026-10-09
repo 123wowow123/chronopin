@@ -18,7 +18,7 @@ fallback, location matching, source attribution, and validation workflow.
 The regional catalog is in
 `src/server/data/regionalRestaurants.json`, with branch-specific menu profiles
 in `src/server/data/restaurantMenus.json` and pictures in
-`public/restaurant-images/`. Dates, sources, photo credits, and rendering labels
+Azure Blob Storage; keep public blob URLs in the catalogs and no pin image files in Git. Dates, sources, photo credits, and rendering labels
 were checked October 6, 2026. A planned day remains estimated until an opening
 is confirmed. Where reporting verifies an opening but supplies only a month,
 `openingConfirmed` records that evidence without claiming an exact day. It

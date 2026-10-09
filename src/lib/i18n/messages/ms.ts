@@ -482,6 +482,7 @@ const ms: Messages = {
     semiconductors: 'Semikonduktor',
     telecom: 'Telekomunikasi',
     gaming: 'Permainan',
+    tabletop: 'Permainan papan',
     anime: 'Anime',
     manga: 'Manga',
     comics: 'Komik',
@@ -1153,24 +1154,6 @@ const ms: Messages = {
   map: {
     backToPin: 'Kembali ke pin',
     yourPlace: 'Anda',
-    webOff: 'Graf mati',
-    lines: 'Garisan',
-    graph: 'Graf',
-    web: {
-      thread: 'Utas',
-      duplicate: 'Pendua',
-      company: 'Syarikat',
-      source: 'Sumber',
-      tag: 'Teg',
-      alsoShared: 'dan {count} lagi persamaan',
-    },
-    // The ⓘ beside the legend: how a pair earns a line, since the row beside
-    // it already names the kinds. The numbers come from the map's own weights.
-    webHelpTitle: 'Bagaimana garisan diperoleh',
-    webHelpScore: 'Semua yang dikongsi oleh dua pin dijumlahkan: syarikat atau artikel bernilai {full}, teg bernilai {tag}, masing-masing dibahagikan dengan log₂ bilangan pin dalam pandangan yang membawanya.',
-    webHelpThreshold: 'Ia memerlukan {min} untuk melukis garisan. Teg yang hanya dibawa oleh kedua-dua pin ini bernilai {tag}; teg pada {pins} pin bernilai {common}, jadi ia memerlukan beberapa perkongsian sebegitu.',
-    webHelpDeclared: 'Utas atau pendua yang disahkan dilukis walau apa pun yang dikongsi oleh kedua-duanya.',
-    webHelpCap: 'Setiap pin mengekalkan {links} garisan terkuatnya, dan semakin tinggi jumlahnya semakin tebal garisan.',
     loadingPins: 'Memuatkan pin…',
     layer: 'Tunjuk pada peta',
     layerPins: 'Pin',

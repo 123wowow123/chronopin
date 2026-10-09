@@ -42,6 +42,7 @@ async function llmsText(): Promise<string> {
     `- [Timeline](${absoluteUrl('/')}): every pin by date, centred on today`,
     `- [Map](${absoluteUrl('/map')}): pins with a place, on a world map`,
     `- [Tags](${absoluteUrl('/tags')}): a page per subject (/tag/anime), with its upcoming dates and the next one first`,
+    `- [Products](${absoluteUrl('/products')}): product pins by shelf, each with a short note on why it is good`,
     `- [Companies](${absoluteUrl('/companies')}): a page per company (/company/nintendo), with its upcoming dates and the next one first`,
     `- [About](${absoluteUrl('/about')}): what ${siteName} is, what it covers and where its dates come from`,
     `- [Sitemap](${absoluteUrl('/sitemap.xml')}): every pin, tag and company page, with its other languages`,

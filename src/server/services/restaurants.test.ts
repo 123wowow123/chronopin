@@ -68,7 +68,7 @@ describe('regional restaurant data', () => {
     findBySourceUrls.mockResolvedValue(new Map(tops.map((restaurant, index) => [restaurant.sourceUrl, { id: 92000 + index, title: restaurant.name }])));
     const restaurants = await regionalTopRestaurants('paris');
     expect(restaurants).toHaveLength(3);
-    expect(restaurants.every((restaurant) => restaurant.pinId >= 92000 && restaurant.image?.startsWith('/restaurant-images/paris/top/'))).toBe(true);
+    expect(restaurants.every((restaurant) => restaurant.pinId >= 92000 && restaurant.image?.startsWith('https://chronopin.blob.core.windows.net/thumb/restaurant-images/paris/top/'))).toBe(true);
     expect(restaurants.every((restaurant) => restaurant.recognition === 'Chronopin selection')).toBe(true);
   });
   it('keeps an estimated European target upcoming and an independently verified month opening new', () => {

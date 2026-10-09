@@ -52,6 +52,26 @@ export function readAmazonPage(html: string): PriceRead {
   // offer, "New (3) from $399.99": the lowest new offer.
   const newFrom = html.match(/id="aod-ingress-link"[^>]*href="[^"]*condition=NEW[^"]*"[\s\S]{0,400}?class="a-offscreen">\$([\d,]+\.\d{2})</)?.[1];
   if (newFrom) return { kind: 'price', price: Number(newFrom.replace(/,/g, '')), title };
+  // Some pages suppress the buy box but give the selected variant's lowest
+  // new offer in the size picker. Ignore other variants and subscription prices.
+  const variationData = html.match(/<script\b[^>]*data-a-state="[^"]*desktop-twister-sort-filter-data[^"]*"[^>]*>([\s\S]*?)<\/script>/)?.[1];
+  if (variationData) {
+    try {
+      const dimensions = JSON.parse(variationData).sortedDimValuesForAllDims;
+      for (const variants of Object.values(dimensions ?? {}) as { dimensionValueState?: string; slots?: { displayData?: { offerType?: string; priceWithoutCurrencySymbol?: string } }[] }[][]) {
+        for (const variant of variants) {
+          if (variant.dimensionValueState !== 'SELECTED') continue;
+          for (const slot of variant.slots ?? []) {
+            const offer = slot.displayData;
+            const price = Number(offer?.priceWithoutCurrencySymbol?.replace(/,/g, ''));
+            if (offer?.offerType === 'newOffer' && price > 0) return { kind: 'price', price, title };
+          }
+        }
+      }
+    } catch {
+      // Malformed variation data says nothing about the listing's price.
+    }
+  }
   // Every page carries "Currently unavailable" in a template, so only the
   // out-of-stock block or the availability line itself says so.
   const availability = html.match(/id="availability"[^>]*>([\s\S]{0,600}?)<\/div>/)?.[1]?.replace(/<style[\s\S]*?<\/style>|<[^>]+>/g, ' ') ?? '';
