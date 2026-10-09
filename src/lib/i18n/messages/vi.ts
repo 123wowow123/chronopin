@@ -1540,6 +1540,7 @@ const vi: Messages = {
     dark: 'Tối',
     light: 'Sáng',
     system: 'Hệ thống',
+    cream: 'Kem',
     saved: 'Đã lưu giao diện.',
     saveFailed: 'Không lưu được giao diện vào tài khoản của bạn. Nó vẫn áp dụng trên thiết bị này.',
     heading: 'Giao diện',

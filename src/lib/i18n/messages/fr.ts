@@ -1535,6 +1535,7 @@ const fr: Messages = {
     dark: 'Sombre',
     light: 'Clair',
     system: 'Système',
+    cream: 'Crème',
     saved: 'Thème enregistré.',
     saveFailed: 'Impossible d’enregistrer le thème sur votre compte. Il reste appliqué sur cet appareil.',
     heading: 'Thème',

@@ -1522,6 +1522,7 @@ const zh: Messages = {
     dark: '深色',
     light: '浅色',
     system: '跟随系统',
+    cream: '奶油色',
     saved: '主题已保存。',
     saveFailed: '无法将主题保存到你的账户，但在此设备上仍然有效。',
     heading: '主题',

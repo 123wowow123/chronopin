@@ -64,7 +64,7 @@ export function PinThumb({
     );
   }
   return (
-    <span className={`relative block shrink-0 overflow-hidden rounded bg-raised-2 ${className}`}>
+    <span className={`relative block shrink-0 overflow-hidden rounded bg-raised-2 hover:[&_img]:scale-[1.08] motion-reduce:hover:[&_img]:scale-100 ${className}`}>
       {src ? (
         // eslint-disable-next-line @next/next/no-img-element -- already sized and cached in blob storage
         <img
@@ -75,7 +75,7 @@ export function PinThumb({
           height={108}
           loading="lazy"
           referrerPolicy="no-referrer"
-          className="size-full object-cover"
+          className="size-full object-cover transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] [button:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100 motion-reduce:[button:hover_&]:scale-100"
           ref={imgRef}
           onError={() => setFailedSources((current) => current.includes(src) ? current : [...current, src])}
         />

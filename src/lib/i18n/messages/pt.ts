@@ -1526,6 +1526,7 @@ const pt: Messages = {
     dark: 'Escuro',
     light: 'Claro',
     system: 'Sistema',
+    cream: 'Creme',
     saved: 'Tema salvo.',
     saveFailed: 'Não foi possível salvar o tema na sua conta. Ele continua valendo neste dispositivo.',
     heading: 'Tema',

@@ -41,7 +41,7 @@ export const PUT = route(async (request: NextRequest) => {
   if ('themePreference' in body) {
     const theme = body.themePreference;
     if (theme !== null && !isThemePreference(theme)) {
-      throw new HttpError(400, '', { message: "themePreference must be 'dark', 'light', 'system' or null" });
+      throw new HttpError(400, '', { message: "themePreference must be 'dark', 'light', 'cream', 'system' or null" });
     }
     user.themePreference = theme;
   }

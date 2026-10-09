@@ -1535,6 +1535,7 @@ const de: Messages = {
     dark: 'Dunkel',
     light: 'Hell',
     system: 'System',
+    cream: 'Creme',
     saved: 'Design gespeichert.',
     saveFailed: 'Das Design konnte nicht in deinem Konto gespeichert werden. Auf diesem Gerät gilt es trotzdem.',
     heading: 'Design',

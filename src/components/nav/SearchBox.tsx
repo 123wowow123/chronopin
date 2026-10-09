@@ -829,7 +829,7 @@ export function SearchBox() {
       <div
         // Its caret and selection are worked out in pixels from the left edge.
         dir="ltr"
-        className="relative flex min-w-0 flex-1 cursor-text items-center rounded-full bg-field text-muted ring-1 ring-line transition-shadow ring-inset focus-within:ring-2 focus-within:ring-link"
+        className="group/search relative flex min-w-0 flex-1 cursor-text items-center rounded-full bg-field text-muted ring-1 ring-line transition-shadow ring-inset hover:ring-subtle/50 focus-within:ring-2 focus-within:ring-link"
         // A press on the box itself, not an item or button, types something new
         // after the items.
         onMouseDown={(event) => {
@@ -873,7 +873,7 @@ export function SearchBox() {
           if (anchor) beginDrag(anchor, all, moving ? all.length : editAt + drafted);
         }}
       >
-        <Icon name="search" className="ms-3 size-4 shrink-0 text-subtle" />
+        <Icon name="search" className="ms-3 size-4 shrink-0 text-subtle transition-transform duration-300 ease-out group-hover/search:-rotate-12 group-hover/search:scale-110 motion-reduce:transition-none motion-reduce:group-hover/search:transform-none" />
         <div
           ref={rowRef}
           // gap-1.5: room for the caret to stand between two items without

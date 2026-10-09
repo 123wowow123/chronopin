@@ -1522,6 +1522,7 @@ const ja: Messages = {
     dark: 'ダーク',
     light: 'ライト',
     system: 'システム',
+    cream: 'クリーム',
     saved: 'テーマを保存しました。',
     saveFailed: 'テーマをアカウントに保存できませんでした。このデバイスでは引き続き適用されます。',
     heading: 'テーマ',

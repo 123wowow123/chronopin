@@ -1541,6 +1541,7 @@ const ms: Messages = {
     dark: 'Gelap',
     light: 'Cerah',
     system: 'Sistem',
+    cream: 'Krim',
     saved: 'Tema disimpan.',
     saveFailed: 'Tidak dapat menyimpan tema ke akaun anda. Ia masih digunakan pada peranti ini.',
     heading: 'Tema',

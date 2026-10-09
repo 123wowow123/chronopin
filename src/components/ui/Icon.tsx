@@ -166,6 +166,12 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M8 20h8M12 16v4" />
     </>
   ),
+  coffee: (
+    <>
+      <path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z" />
+      <path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 3v2M12 3v2" />
+    </>
+  ),
   cloud: <path d="M7 18h10a4 4 0 0 0 .6-8 6 6 0 0 0-11.4 1.6A3.2 3.2 0 0 0 7 18z" />,
   rain: (
     <>

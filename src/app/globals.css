@@ -16,7 +16,7 @@
 }
 
 /* The Chronopin palette: a cool, low-glare dark theme, as Tailwind tokens.
-   The light theme redefines them below, under [data-theme="light"]. */
+   The light theme redefines them below, under [data-theme="light"], and cream under [data-theme="cream"]. */
 @theme {
   /* A day's cards get another column (TimeBlock's WIDE_COLUMNS) once every
      card can still be 384px wide with it; between one column and the next
@@ -99,6 +99,18 @@
     }
   }
 
+  /* The navbar's bell rings and its message bubble pops on hover. */
+  --animate-ring: ring 0.6s ease-in-out both;
+  @keyframes ring {
+    20% { rotate: 7deg; }
+    45% { rotate: -5deg; }
+    70% { rotate: 2deg; }
+  }
+  --animate-pop: pop 0.4s ease-out both;
+  @keyframes pop {
+    45% { scale: 1.08; }
+  }
+
   /* An indeterminate bar: a pending admin tab's underline. */
   --animate-sweep: sweep 0.9s ease-in-out infinite;
   @keyframes sweep {
@@ -112,7 +124,8 @@
 }
 
 /* Tailwind's @theme puts the tokens on :root; these win on specificity. */
-:root[data-theme="light"] {
+:root[data-theme="light"],
+:root[data-theme="cream"] {
   color-scheme: light;
 
   --color-page: #f3f5f8;
@@ -158,6 +171,31 @@
 
   --color-tint: #000;
   --color-shade: rgb(30 41 59 / 0.35);
+}
+
+/* Cream: the light theme on warm paper, the restaurant guide's colors site-wide. */
+:root[data-theme="cream"] {
+  --color-page: #f6f3eb;
+  --color-header: #faf7ef;
+  --color-panel: #fbf8f0;
+  --color-field: #f1ede1;
+  --color-raised: #ebe6d8;
+  --color-raised-2: #ddd6c4;
+  --color-popover: #fffdf7;
+  --color-line: #d8d2c0;
+
+  --color-ink: #1f2420;
+  --color-muted: #454a40;
+  --color-subtle: #5d6157;
+  --color-faint: #8a8d80;
+
+  --color-rail: #cfc8b4;
+}
+
+/* Cards and other things that brighten on hover would wash cream out to white;
+   on cream they darken a touch instead. */
+:root[data-theme="cream"] [class*="hover:brightness-110"]:hover {
+  filter: brightness(0.97);
 }
 
 @layer base {
@@ -373,7 +411,8 @@
     --color-tag-holiday: var(--color-cyan-300);
     --color-tradition-soft: var(--color-cyan-300);
   }
-  :root[data-theme="light"] .holiday-hue-1 {
+  :root[data-theme="light"] .holiday-hue-1,
+  :root[data-theme="cream"] .holiday-hue-1 {
     --color-tag-holiday: var(--color-cyan-700);
     --color-tradition-soft: var(--color-cyan-600);
   }
@@ -381,7 +420,8 @@
     --color-tag-holiday: oklch(87% 0.07 85);
     --color-tradition-soft: oklch(87% 0.07 85);
   }
-  :root[data-theme="light"] .holiday-hue-2 {
+  :root[data-theme="light"] .holiday-hue-2,
+  :root[data-theme="cream"] .holiday-hue-2 {
     --color-tag-holiday: oklch(52% 0.09 75);
     --color-tradition-soft: oklch(48% 0.09 75);
   }
@@ -389,7 +429,8 @@
     --color-tag-holiday: oklch(86% 0.08 130);
     --color-tradition-soft: oklch(86% 0.08 130);
   }
-  :root[data-theme="light"] .holiday-hue-3 {
+  :root[data-theme="light"] .holiday-hue-3,
+  :root[data-theme="cream"] .holiday-hue-3 {
     --color-tag-holiday: oklch(50% 0.09 135);
     --color-tradition-soft: oklch(46% 0.09 135);
   }
@@ -397,7 +438,8 @@
     --color-tag-holiday: var(--color-teal-300);
     --color-tradition-soft: var(--color-teal-300);
   }
-  :root[data-theme="light"] .holiday-hue-4 {
+  :root[data-theme="light"] .holiday-hue-4,
+  :root[data-theme="cream"] .holiday-hue-4 {
     --color-tag-holiday: var(--color-teal-700);
     --color-tradition-soft: var(--color-teal-600);
   }
@@ -405,7 +447,8 @@
     --color-tag-holiday: var(--color-indigo-300);
     --color-tradition-soft: var(--color-indigo-300);
   }
-  :root[data-theme="light"] .holiday-hue-5 {
+  :root[data-theme="light"] .holiday-hue-5,
+  :root[data-theme="cream"] .holiday-hue-5 {
     --color-tag-holiday: var(--color-indigo-700);
     --color-tradition-soft: var(--color-indigo-600);
   }
@@ -413,7 +456,8 @@
     --color-tag-holiday: oklch(85% 0.06 235);
     --color-tradition-soft: oklch(85% 0.06 235);
   }
-  :root[data-theme="light"] .holiday-hue-6 {
+  :root[data-theme="light"] .holiday-hue-6,
+  :root[data-theme="cream"] .holiday-hue-6 {
     --color-tag-holiday: oklch(52% 0.09 235);
     --color-tradition-soft: oklch(48% 0.09 235);
   }

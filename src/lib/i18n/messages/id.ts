@@ -1541,6 +1541,7 @@ const id: Messages = {
     dark: 'Gelap',
     light: 'Terang',
     system: 'Sistem',
+    cream: 'Krem',
     saved: 'Tema disimpan.',
     saveFailed: 'Gagal menyimpan tema ke akun Anda. Tema tetap berlaku di perangkat ini.',
     heading: 'Tema',

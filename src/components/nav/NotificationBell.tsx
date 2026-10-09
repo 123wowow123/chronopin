@@ -532,10 +532,10 @@ export function NotificationBell({ className = '' }: { className?: string }) {
 
   return (
     <div ref={rootRef} className={`relative ${className}`}>
-      <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(t, count)} title={weather ? `${t('notifications.title')} · ${weather.summary}` : t('notifications.title')} className="flex h-9 items-center gap-0.5 rounded-lg px-2 text-muted hover:bg-raised hover:text-ink">
+      <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(t, count)} title={weather ? `${t('notifications.title')} · ${weather.summary}` : t('notifications.title')} className="group/nav flex h-9 items-center gap-0.5 rounded-lg px-2 text-muted hover:bg-raised hover:text-ink">
         <WeatherPeek />
         <span className="relative flex">
-          <Icon name="bell" className="size-5" />
+          <Icon name="bell" className="size-5 origin-top group-hover/nav:animate-ring motion-reduce:animate-none" />
           <UnreadBadge count={count} className="-top-1 -end-1.5" />
         </span>
       </button>

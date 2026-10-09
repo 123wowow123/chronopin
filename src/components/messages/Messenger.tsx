@@ -100,10 +100,10 @@ export function MessengerButton({ className = '' }: { className?: string }) {
         aria-expanded={open}
         aria-label={unreadLabel(t, count)}
         title={t('dm.title')}
-        className="flex size-9 items-center justify-center rounded-lg text-muted hover:bg-raised hover:text-ink aria-expanded:text-accent"
+        className="group/nav flex size-9 items-center justify-center rounded-lg text-muted hover:bg-raised hover:text-ink aria-expanded:text-accent"
       >
         <span className="relative flex">
-          <Icon name="message" className="size-5" />
+          <Icon name="message" className="size-5 group-hover/nav:animate-pop motion-reduce:animate-none" />
           <Badge count={count} className="-top-1 -end-1.5" />
         </span>
       </button>

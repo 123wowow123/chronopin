@@ -12,6 +12,7 @@ import type { MessageKey } from '@/lib/i18n/translate';
 const OPTIONS: { value: ThemePreference; label: MessageKey; icon: IconName }[] = [
   { value: 'dark', label: 'theme.dark', icon: 'moon' },
   { value: 'light', label: 'theme.light', icon: 'sun' },
+  { value: 'cream', label: 'theme.cream', icon: 'coffee' },
   { value: 'system', label: 'theme.system', icon: 'monitor' },
 ];
 
@@ -42,7 +43,7 @@ export function ThemePicker({ userId }: { userId: number }) {
         <h2 id="theme-label" className="field-label">
           {t('theme.heading')}
         </h2>
-        <div role="radiogroup" aria-labelledby="theme-label" className="grid grid-cols-3 gap-1 rounded-lg bg-field p-1 ring-1 ring-line ring-inset">
+        <div role="radiogroup" aria-labelledby="theme-label" className="grid grid-cols-2 sm:grid-cols-4 gap-1 rounded-lg bg-field p-1 ring-1 ring-line ring-inset">
           {OPTIONS.map((option) => {
             const selected = current === option.value;
             return (

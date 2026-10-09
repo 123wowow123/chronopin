@@ -184,26 +184,26 @@ function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
     return (
       <span aria-hidden className={`flex shrink-0 items-center justify-center overflow-hidden rounded border border-line bg-white ${className}`}>
         {/* eslint-disable-next-line @next/next/no-img-element -- Amazon's own image host */}
-        <img src={ad.imageUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-full object-contain" />
+        <img src={ad.imageUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-full object-contain transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100" />
       </span>
     );
   }
   if (!ad.program) return <PinThumb thumbName={ad.thumbName} originalUrl={ad.originalUrl} title={ad.title} category={ad.category} className={className} />;
   if (hasProgramLogo(ad.program)) {
     return (
-      <span aria-hidden className={`flex shrink-0 items-center justify-center rounded border border-line bg-white p-2 ${className}`}>
-        <ProgramLogo program={ad.program} className="h-full w-full" />
+      <span aria-hidden className={`flex shrink-0 items-center justify-center overflow-hidden rounded border border-line bg-white p-2 ${className}`}>
+        <ProgramLogo program={ad.program} className="h-full w-full transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100" />
       </span>
     );
   }
   const tile = PROGRAM_TILE[ad.program] ?? DEFAULT_TILE;
   return (
-    <span aria-hidden className={`flex shrink-0 items-center justify-center rounded ${className}`} style={{ background: tile.background, color: tile.color }}>
+    <span aria-hidden className={`flex shrink-0 items-center justify-center overflow-hidden rounded ${className}`} style={{ background: tile.background, color: tile.color }}>
       {PROGRAM_IMAGE[ad.program] ? (
         // eslint-disable-next-line @next/next/no-img-element -- a small static logo on the tile
-        <img src={PROGRAM_IMAGE[ad.program]} alt="" loading="lazy" className="size-full object-contain p-1" />
+        <img src={PROGRAM_IMAGE[ad.program]} alt="" loading="lazy" className="size-full object-contain p-1 transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100" />
       ) : (
-        <Icon name={tile.icon} className="size-1/2 max-h-8 max-w-8" />
+        <Icon name={tile.icon} className="size-1/2 max-h-8 max-w-8 transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100" />
       )}
     </span>
   );

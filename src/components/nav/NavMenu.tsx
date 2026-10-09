@@ -65,11 +65,11 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
           key={view.key}
           href={view.href}
           aria-current={view.current ? 'page' : undefined}
-          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium whitespace-nowrap transition-colors hover:no-underline ${
+          className={`group/view flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium whitespace-nowrap transition-colors hover:no-underline ${
             view.current ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:bg-raised hover:text-ink active:bg-raised-2'
           }`}
         >
-          <Icon name={view.icon} className="size-4" />
+          <Icon name={view.icon} className="size-4 transition-transform duration-300 ease-out group-hover/view:scale-110 group-hover/view:-rotate-6 motion-reduce:transition-none motion-reduce:group-hover/view:transform-none" />
           {view.label}
         </Link>
       ))}
@@ -243,15 +243,15 @@ export function NavMenu() {
         <div ref={accountRef} className="relative hidden lg:block">
           <button
             type="button"
-            className="flex items-center gap-2 rounded-full py-1 pe-2.5 ps-1 text-sm font-medium text-muted ring-1 ring-line transition-colors ring-inset hover:bg-raised hover:text-ink"
+            className="group/acct flex items-center gap-2 rounded-full py-1 pe-2.5 ps-1 text-sm font-medium text-muted ring-1 ring-line transition-colors ring-inset hover:bg-raised hover:text-ink"
             aria-expanded={accountOpen}
             onClick={() => setAccountOpen((o) => !o)}
           >
             <span aria-hidden className="contents">
-              <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-7 text-xs" />
+              <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-7 text-xs transition-transform duration-300 ease-out group-hover/acct:scale-110 motion-reduce:transition-none motion-reduce:group-hover/acct:scale-100" />
             </span>
             <span className="max-w-40 truncate">{user.userName}</span>
-            <Icon name="chevron" className={`size-3.5 text-subtle transition-transform ${accountOpen ? 'rotate-180' : ''}`} />
+            <Icon name="chevron" className={`size-3.5 text-subtle transition-transform duration-300 ${accountOpen ? 'rotate-180' : 'group-hover/acct:translate-y-0.5 motion-reduce:group-hover/acct:translate-y-0'}`} />
           </button>
           {accountOpen ? (
             <div className="floating absolute end-0 z-50 mt-2 w-60 overflow-hidden">

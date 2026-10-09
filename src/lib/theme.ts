@@ -1,9 +1,9 @@
-// Light or dark colours. A visitor's choice lives in localStorage so the inline
+// Light, cream or dark colours. A visitor's choice lives in localStorage so the inline
 // script in the root layout can apply it before the first paint (the server
 // HTML is cached and never depends on who is looking); a signed-in user's
 // choice is also saved on their account, so it follows them to other devices.
 
-export const THEME_PREFERENCES = ['dark', 'light', 'system'] as const;
+export const THEME_PREFERENCES = ['dark', 'light', 'cream', 'system'] as const;
 export type ThemePreference = (typeof THEME_PREFERENCES)[number];
 export type Theme = Exclude<ThemePreference, 'system'>;
 
@@ -12,7 +12,7 @@ export const DEFAULT_THEME_PREFERENCE: ThemePreference = 'system';
 export const THEME_STORAGE_KEY = 'theme';
 
 // The browser chrome (theme-color, set by ThemeSync) matches the navbar.
-export const THEME_COLORS: Record<Theme, string> = { dark: '#13161b', light: '#ffffff' };
+export const THEME_COLORS: Record<Theme, string> = { dark: '#13161b', light: '#ffffff', cream: '#faf7ef' };
 
 export function isThemePreference(value: unknown): value is ThemePreference {
   return typeof value === 'string' && (THEME_PREFERENCES as readonly string[]).includes(value);

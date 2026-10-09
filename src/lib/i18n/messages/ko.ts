@@ -1523,6 +1523,7 @@ const ko: Messages = {
     dark: '다크',
     light: '라이트',
     system: '시스템',
+    cream: '크림',
     saved: '테마를 저장했습니다.',
     saveFailed: '테마를 계정에 저장하지 못했습니다. 이 기기에는 계속 적용됩니다.',
     heading: '테마',

@@ -1541,6 +1541,7 @@ const en = {
     dark: 'Dark',
     light: 'Light',
     system: 'System',
+    cream: 'Cream',
     saved: 'Theme saved.',
     saveFailed: 'Could not save the theme to your account. It still applies on this device.',
     heading: 'Theme',
