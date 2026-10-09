@@ -141,6 +141,12 @@ export class SearchPins extends BasePins<SearchPin> {
   // compared on their first 64 characters, case-insensitively - or whose title
   // in any of its translations does. k caps the pins returned.
   //
+  // The translation title is compared bare, not as left("title", 64): a
+  // prefix of at most 64 characters matches the same rows either way, and
+  // only the bare column can use IX_PinTranslation_title_trgm (0104). With
+  // left() it read all ~100k translations per keystroke (106-176 ms locally,
+  // 5-31 ms now).
+  //
   // Read off "Pin", not the view. A suggestion is a title and a date in a
   // dropdown, and this runs on every keystroke - going through the view built
   // each candidate's references, ratings, view count and duplicate group, and
@@ -156,7 +162,7 @@ export class SearchPins extends BasePins<SearchPin> {
             OR left("description", 64) ILIKE rtrim(left($2, 64)) || '%'
             OR EXISTS (
               SELECT 1 FROM "PinTranslation" AS "tr"
-              WHERE "tr"."pinId" = "Pin"."id" AND left("tr"."title", 64) ILIKE rtrim(left($1, 64)) || '%'))
+              WHERE "tr"."pinId" = "Pin"."id" AND "tr"."title" ILIKE rtrim(left($1, 64)) || '%'))
         ORDER BY "utcStartDateTime", "id"
         LIMIT $3`,
       [title, description, k],

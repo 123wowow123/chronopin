@@ -43,7 +43,7 @@ export const config = {
     url: env('DATABASE_URL'),
     pool: {
       max: 10,
-      idleTimeoutMillis: 10000,
+      idleTimeoutMillis: 60000,
       // No JIT compiling: at a few thousand pins it costs a search more than
       // it saves (41 ms of 181 when its cost estimate tipped over the line).
       options: '-c jit=off',
