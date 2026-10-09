@@ -240,6 +240,16 @@ Thailand and the United States.
    OpenTable and Resy listings read in the owner's browser - their first photo is the
    restaurant's own. View every candidate: press pages mix in ads and sidebars, and booking
    sites mix in reviewers' profile pictures.
+19. **Every restaurant pin lists its menu items on the pin detail, always** (Ian, 2026-10-09, after the
+   Australian guides shipped with menu *links* only and Montrachet's pin showed no dishes). A link to
+   the restaurant's menu page is the floor, not the finish: read the published menu (HTML page or
+   PDF, `pdftotext -layout`) and transcribe the dishes into `src/server/data/restaurantMenus.json` as
+   `items` (`name`, `category`, `price` or `priceLabel`, a one-line `note` for the description) with
+   `coverage: "published"`, plus hours and phone in `restaurantDetails.json`. Only a menu that is truly
+   unpublished (an image-only page, a booking-gated tasting menu, a "View Menus" button with no
+   target) stays `coverage: "link"` with a note saying so - never invent a dish or a price. Check the
+   link you store: a relative `/s/x.pdf` on a Squarespace site resolves on the site's own domain, and the
+   same filename can 404 on another host.
 
 # Museum builds and upgrades
 

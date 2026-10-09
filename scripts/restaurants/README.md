@@ -67,3 +67,9 @@ Press* have approximate map points because no street number resolves. Seed with:
 ```sh
 npm run restaurants:seed -- --regions=perth,adelaide,melbourne,sydney,brisbane
 ```
+
+Every restaurant entry must list its menu items on the pin detail, not just link to
+the menu. Read the published menu (page or PDF) and transcribe the dishes with their
+prices into `src/server/data/restaurantMenus.json` (`coverage: "published"`), with
+hours and phone in `restaurantDetails.json`. Leave `coverage: "link"` only when the
+menu is genuinely unpublished, and say so in the note. Never invent a dish or price.

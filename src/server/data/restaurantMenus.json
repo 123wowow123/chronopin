@@ -7048,9 +7048,16 @@
       {
         "label": "Menu",
         "url": "https://www.attica.com.au/menu",
-        "coverage": "link",
-        "items": [],
-        "note": "The restaurant publishes its current menu on this page. Consult the original for changing dishes and prices. The page publishes no prices."
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Tasting menu",
+            "category": "Dining room",
+            "price": 425,
+            "note": "Per person, multi-course"
+          }
+        ],
+        "note": "The restaurant’s menu page publishes one price, $425 per person for the multi-course tasting menu (Prices are in Australian dollars). Its linked sample menu PDF is from March 2024 and was not reachable on October 9, 2026, so no dishes are listed."
       }
     ],
     "specials": []
@@ -7061,11 +7068,533 @@
     "checkedAt": "2026-10-09",
     "menus": [
       {
-        "label": "A la carte",
+        "label": "A la carte (sample)",
         "url": "https://flowerdrum.melbourne/a-la-carte/",
-        "coverage": "link",
-        "items": [],
-        "note": "The restaurant publishes its current menu on this page. Consult the original for changing dishes and prices. The page publishes no prices."
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Jellyfish",
+            "category": "Barbecue & cold appetizers",
+            "price": 20,
+            "note": "Per person"
+          },
+          {
+            "name": "Turnip in sweet soy",
+            "category": "Barbecue & cold appetizers",
+            "price": 18,
+            "note": "Per serve"
+          },
+          {
+            "name": "Cucumber in Chinkiang vinegar",
+            "category": "Barbecue & cold appetizers",
+            "price": 18,
+            "note": "Per serve"
+          },
+          {
+            "name": "Beancurd and shiitake mushroom roll",
+            "category": "Barbecue & cold appetizers",
+            "price": 6.5,
+            "note": "Each"
+          },
+          {
+            "name": "Roast duck",
+            "category": "Barbecue & cold appetizers",
+            "price": 100,
+            "note": "Whole; 60 for half"
+          },
+          {
+            "name": "Char siu",
+            "category": "Barbecue & cold appetizers",
+            "price": 28,
+            "note": "Per serve"
+          },
+          {
+            "name": "Roast suckling pig",
+            "category": "Barbecue & cold appetizers",
+            "price": 1150,
+            "note": "Whole; two days’ notice"
+          },
+          {
+            "name": "Squab, drunken",
+            "category": "Barbecue & cold appetizers",
+            "price": 140,
+            "note": "Whole"
+          },
+          {
+            "name": "Squab, barbecued",
+            "category": "Barbecue & cold appetizers",
+            "price": 140,
+            "note": "Whole; 45 minutes"
+          },
+          {
+            "name": "Seafood soup dumpling",
+            "category": "Dim sum",
+            "price": 30,
+            "note": "Each"
+          },
+          {
+            "name": "Scallop siu mai",
+            "category": "Dim sum",
+            "price": 6,
+            "note": "Each"
+          },
+          {
+            "name": "Prawn har gao",
+            "category": "Dim sum",
+            "price": 5.5,
+            "note": "Each"
+          },
+          {
+            "name": "Prawn and chive har gao",
+            "category": "Dim sum",
+            "price": 5.5,
+            "note": "Each"
+          },
+          {
+            "name": "Berkshire pork siu lung bao",
+            "category": "Dim sum",
+            "price": 5.5,
+            "note": "Each"
+          },
+          {
+            "name": "Berkshire pork and prawn siu mai",
+            "category": "Dim sum",
+            "price": 5.5,
+            "note": "Each"
+          },
+          {
+            "name": "Vegetarian fun gor",
+            "category": "Dim sum",
+            "price": 5.5,
+            "note": "Each"
+          },
+          {
+            "name": "Duck wonton with tangerine peel in roast duck reduction",
+            "category": "Dim sum",
+            "price": 18,
+            "note": "Three pieces"
+          },
+          {
+            "name": "Jiaozi, pork",
+            "category": "Dim sum",
+            "price": 5.5,
+            "note": "Each"
+          },
+          {
+            "name": "Jiaozi, chicken",
+            "category": "Dim sum",
+            "price": 5.5,
+            "note": "Each"
+          },
+          {
+            "name": "Pearl meat",
+            "category": "Appetizers",
+            "price": 36,
+            "note": "Per person"
+          },
+          {
+            "name": "Tiger abalone with crystal noodles",
+            "category": "Appetizers",
+            "price": 32,
+            "note": "Per person"
+          },
+          {
+            "name": "Stuffed boneless garfish",
+            "category": "Appetizers",
+            "price": 40,
+            "note": "Per serve"
+          },
+          {
+            "name": "Sauté crayfish omelette",
+            "category": "Appetizers",
+            "price": 72,
+            "note": "Per person"
+          },
+          {
+            "name": "Toothfish rice paper roll",
+            "category": "Appetizers",
+            "price": 17,
+            "note": "Per person"
+          },
+          {
+            "name": "Dragon boat prawn",
+            "category": "Appetizers",
+            "price": 25,
+            "note": "Each"
+          },
+          {
+            "name": "Crispy garlic ribs",
+            "category": "Appetizers",
+            "price": 36,
+            "note": "Per person"
+          },
+          {
+            "name": "Scotch century egg",
+            "category": "Appetizers",
+            "price": 22,
+            "note": "Each"
+          },
+          {
+            "name": "Potato pear",
+            "category": "Appetizers",
+            "price": 18,
+            "note": "Per serve"
+          },
+          {
+            "name": "Lamb spring rolls",
+            "category": "Appetizers",
+            "price": 18,
+            "note": "Two pieces"
+          },
+          {
+            "name": "Egg rolls, chicken",
+            "category": "Appetizers",
+            "price": 12,
+            "note": "Each"
+          },
+          {
+            "name": "Egg rolls, vegetarian",
+            "category": "Appetizers",
+            "price": 12,
+            "note": "Each"
+          },
+          {
+            "name": "Wonton soup",
+            "category": "Soups",
+            "price": 26,
+            "note": "Per person"
+          },
+          {
+            "name": "Crab and fish maw soup",
+            "category": "Soups",
+            "price": 36,
+            "note": "Per person"
+          },
+          {
+            "name": "Crab and spinach soup",
+            "category": "Soups",
+            "price": 32,
+            "note": "Per person"
+          },
+          {
+            "name": "Chicken and sweet corn soup",
+            "category": "Soups",
+            "price": 25,
+            "note": "Per person"
+          },
+          {
+            "name": "King prawn and tofu soup",
+            "category": "Soups",
+            "price": 25,
+            "note": "Per person"
+          },
+          {
+            "name": "Hot and sour soup",
+            "category": "Soups",
+            "price": 25,
+            "note": "Per person"
+          },
+          {
+            "name": "Roast duck soup",
+            "category": "Soups",
+            "price": 25,
+            "note": "Per person"
+          },
+          {
+            "name": "West Lake beef soup",
+            "category": "Soups",
+            "price": 25,
+            "note": "Per person"
+          },
+          {
+            "name": "Crayfish (live)",
+            "category": "Seafood",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Mud crab (live)",
+            "category": "Seafood",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Snow crab (live)",
+            "category": "Seafood",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Sea scallops",
+            "category": "Seafood",
+            "price": 64,
+            "note": "Eight pieces"
+          },
+          {
+            "name": "King prawns",
+            "category": "Seafood",
+            "price": 66,
+            "note": "Six pieces"
+          },
+          {
+            "name": "South Australian calamari",
+            "category": "Seafood",
+            "price": 30,
+            "note": "Small; 55 for large"
+          },
+          {
+            "name": "Coral trout (live)",
+            "category": "Seafood",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Morwong (live)",
+            "category": "Seafood",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Wild barramundi fillet",
+            "category": "Seafood",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Glacier 51 Patagonian toothfish",
+            "category": "Seafood",
+            "priceLabel": "Market price"
+          },
+          {
+            "name": "Green lip abalone, braised with oyster sauce",
+            "category": "Seafood",
+            "price": 2450,
+            "note": "Per kg"
+          },
+          {
+            "name": "Green lip abalone (live)",
+            "category": "Seafood",
+            "price": 390,
+            "note": "Per kg"
+          },
+          {
+            "name": "Tiger abalone (live)",
+            "category": "Seafood",
+            "price": 245,
+            "note": "Per kg"
+          },
+          {
+            "name": "Peking duck",
+            "category": "Poultry & meats",
+            "price": 22,
+            "note": "Two pieces"
+          },
+          {
+            "name": "Crispy skinned chicken",
+            "category": "Poultry & meats",
+            "price": 60,
+            "note": "Whole; 32 for half"
+          },
+          {
+            "name": "Chicken with Moutai",
+            "category": "Poultry & meats",
+            "price": 60,
+            "note": "Per serve"
+          },
+          {
+            "name": "Honeyed spare ribs",
+            "category": "Poultry & meats",
+            "price": 68,
+            "note": "Per serve"
+          },
+          {
+            "name": "Typhoon shelter lamb cutlets",
+            "category": "Poultry & meats",
+            "price": 60,
+            "note": "Per serve"
+          },
+          {
+            "name": "Lamb pockets",
+            "category": "Poultry & meats",
+            "price": 38,
+            "note": "Per serve"
+          },
+          {
+            "name": "Braised lamb claypot",
+            "category": "Poultry & meats",
+            "price": 75,
+            "note": "Per serve"
+          },
+          {
+            "name": "Black Angus eye fillet",
+            "category": "Poultry & meats",
+            "price": 60,
+            "note": "Per serve"
+          },
+          {
+            "name": "Braised wagyu cheek",
+            "category": "Poultry & meats",
+            "price": 50,
+            "note": "Per serve"
+          },
+          {
+            "name": "Wagyu striploin",
+            "category": "Poultry & meats",
+            "price": 115,
+            "note": "Per serve"
+          },
+          {
+            "name": "Thousand leaf tofu",
+            "category": "Vegetables",
+            "price": 24,
+            "note": "Per serve"
+          },
+          {
+            "name": "Eggplant in spicy salt",
+            "category": "Vegetables",
+            "price": 24,
+            "note": "Three pieces"
+          },
+          {
+            "name": "Vegetarian pocket",
+            "category": "Vegetables",
+            "price": 24,
+            "note": "Per serve"
+          },
+          {
+            "name": "Spinach in superior broth",
+            "category": "Vegetables",
+            "price": 30,
+            "note": "Per serve"
+          },
+          {
+            "name": "Shiitake mushroom and tofu in oyster sauce",
+            "category": "Vegetables",
+            "price": 28,
+            "note": "Per serve"
+          },
+          {
+            "name": "Lo hon braised vegetables",
+            "category": "Vegetables",
+            "price": 45,
+            "note": "Per serve"
+          },
+          {
+            "name": "Sauté mushrooms",
+            "category": "Vegetables",
+            "price": 28,
+            "note": "Per serve"
+          },
+          {
+            "name": "Sauté seasonal vegetables",
+            "category": "Vegetables",
+            "price": 30,
+            "note": "Per serve"
+          },
+          {
+            "name": "Yeung Chow fried rice",
+            "category": "Rice & noodles",
+            "price": 30,
+            "note": "Small; 48 for large"
+          },
+          {
+            "name": "Conpoy fried rice",
+            "category": "Rice & noodles",
+            "price": 45,
+            "note": "Small; 60 for large"
+          },
+          {
+            "name": "Seafood fried rice with black truffle",
+            "category": "Rice & noodles",
+            "price": 48,
+            "note": "Small; 65 for large"
+          },
+          {
+            "name": "Roast duck in lotus leaf fried rice",
+            "category": "Rice & noodles",
+            "price": 30,
+            "note": "Small; 38 for large"
+          },
+          {
+            "name": "Hokkien fried rice",
+            "category": "Rice & noodles",
+            "price": 50,
+            "note": "Per serve"
+          },
+          {
+            "name": "Steamed rice",
+            "category": "Rice & noodles",
+            "price": 6,
+            "note": "Per person"
+          },
+          {
+            "name": "Roast duck vermicelli noodles",
+            "category": "Rice & noodles",
+            "price": 32,
+            "note": "Per serve"
+          },
+          {
+            "name": "Braised e-fu noodles",
+            "category": "Rice & noodles",
+            "price": 28,
+            "note": "Per serve"
+          },
+          {
+            "name": "Singapore noodles",
+            "category": "Rice & noodles",
+            "price": 36,
+            "note": "Per serve"
+          },
+          {
+            "name": "Black Angus hor fun",
+            "category": "Rice & noodles",
+            "price": 34,
+            "note": "Per serve"
+          },
+          {
+            "name": "Bird’s nest in almond cream",
+            "category": "Dessert",
+            "price": 150,
+            "note": "Per serve"
+          },
+          {
+            "name": "Almond tofu with fruit salad",
+            "category": "Dessert",
+            "price": 20,
+            "note": "Per serve"
+          },
+          {
+            "name": "Ice cream selection",
+            "category": "Dessert",
+            "price": 8,
+            "note": "Lychee sorbet, blood orange sorbet, vanilla, cinnamon or hazelnut"
+          },
+          {
+            "name": "Banana fritters",
+            "category": "Dessert",
+            "price": 22,
+            "note": "Per serve"
+          },
+          {
+            "name": "Fried ice cream",
+            "category": "Dessert",
+            "price": 24,
+            "note": "Per serve"
+          },
+          {
+            "name": "Baked chestnut sago crumble",
+            "category": "Dessert",
+            "price": 24,
+            "note": "Per serve"
+          },
+          {
+            "name": "Almond cream with sesame dumplings",
+            "category": "Dessert",
+            "price": 20,
+            "note": "Per serve"
+          },
+          {
+            "name": "Red bean soup with sesame dumplings",
+            "category": "Dessert",
+            "price": 18,
+            "note": "Per serve"
+          }
+        ],
+        "note": "Transcribed from the restaurant’s published à la carte page on October 9, 2026, which it marks as a sample subject to change without notice. Prices are in Australian dollars. Portion sizes are in each item’s note."
       },
       {
         "label": "Lunch banquets",
@@ -7097,11 +7626,164 @@
     "checkedAt": "2026-10-09",
     "menus": [
       {
-        "label": "Menu",
+        "label": "Menus (current PDFs)",
         "url": "https://www.bennelong.com.au/menu/",
-        "coverage": "link",
-        "items": [],
-        "note": "The restaurant publishes its current menu on this page. Consult the original for changing dishes and prices. The page publishes no prices."
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Lobster, salt and pepper, lime, hollandaise",
+            "category": "Three-course choice menu — $240 per person",
+            "note": "Main course option",
+            "priceLabel": "$90 supplement"
+          },
+          {
+            "name": "Australian cheese course",
+            "category": "Three-course choice menu, $240 per person",
+            "price": 52,
+            "note": "Additional course"
+          },
+          {
+            "name": "Cheese course wine pairing",
+            "category": "Three-course choice menu, $240 per person",
+            "price": 36,
+            "note": "Per person"
+          },
+          {
+            "name": "Black River Oscietra caviar, crème fraîche, buckwheat pikelets",
+            "category": "Three-course choice menu, $240 per person",
+            "price": 95,
+            "note": "10 g; 190 for 20 g, 285 for 30 g"
+          },
+          {
+            "name": "Sydney Rock oysters, lemon pepper granita",
+            "category": "The Counter à la carte — snacks",
+            "price": 9,
+            "note": "Each; 54 for half a dozen"
+          },
+          {
+            "name": "Heritage whole wheat sourdough, CopperTree Farms cultured butter",
+            "category": "The Counter à la carte — snacks",
+            "price": 7,
+            "note": "Two per serve"
+          },
+          {
+            "name": "Pumpkin, pinenut, pepitas and goat’s feta arancini",
+            "category": "The Counter à la carte — snacks",
+            "price": 14,
+            "note": "Two per serve"
+          },
+          {
+            "name": "Prawn toast, fermented chilli",
+            "category": "The Counter à la carte — snacks",
+            "price": 22,
+            "note": "Two per serve"
+          },
+          {
+            "name": "Wagyu bresaola, brown butter aioli, pickled eschallot on panisse",
+            "category": "The Counter à la carte — snacks",
+            "price": 22,
+            "note": "Two per serve"
+          },
+          {
+            "name": "House-made noodles, Kurobuta pork jowl, black garlic, tempura Black Pearl mushrooms",
+            "category": "The Counter à la carte — snacks",
+            "price": 60
+          },
+          {
+            "name": "Yellowfin tuna, kohlrabi remoulade, anchovy aioli, seaweed",
+            "category": "The Counter à la carte — snacks",
+            "price": 55
+          },
+          {
+            "name": "Aquna Murray cod, garden greens, lemon and fennel purée",
+            "category": "The Counter à la carte — mains",
+            "price": 80
+          },
+          {
+            "name": "Tortellini of sweetcorn, mascarpone, Jerusalem artichoke, smoked almonds",
+            "category": "The Counter à la carte — mains",
+            "price": 60
+          },
+          {
+            "name": "Pure bred Black Angus, parsley, kombu, horseradish, Black Pearl mushrooms",
+            "category": "The Counter à la carte — mains",
+            "price": 110
+          },
+          {
+            "name": "Red velvet lettuce, fine herbs",
+            "category": "The Counter à la carte — sides",
+            "price": 18
+          },
+          {
+            "name": "Southern Highlands potatoes, cultured cream emulsion",
+            "category": "The Counter à la carte — sides",
+            "price": 18
+          },
+          {
+            "name": "Pineapple, crème caramel, lime, vanilla",
+            "category": "The Counter à la carte — desserts",
+            "price": 45
+          },
+          {
+            "name": "Sour cherry, dark chocolate, almond",
+            "category": "The Counter à la carte — desserts",
+            "price": 45
+          },
+          {
+            "name": "Selection of Australian cheese",
+            "category": "The Counter à la carte — desserts",
+            "price": 52,
+            "note": "Cheese wine pairing 36 per person"
+          },
+          {
+            "name": "House-smoked Willunga almonds",
+            "category": "Bennelong Bar food",
+            "price": 9
+          },
+          {
+            "name": "Mount Zero marinated olives",
+            "category": "Bennelong Bar food",
+            "price": 9
+          },
+          {
+            "name": "Pumpkin arancini, pinenut, pepitas and goat’s feta",
+            "category": "Bennelong Bar food",
+            "price": 19,
+            "note": "Two per serve"
+          },
+          {
+            "name": "Mooloolaba yellowfin tuna, egg yolk, Koshihikari rice, seaweed and tonburi",
+            "category": "Bennelong Bar food",
+            "price": 45
+          },
+          {
+            "name": "Wollemi duck and shiitake sausage roll, black garlic",
+            "category": "Bennelong Bar food",
+            "price": 35
+          },
+          {
+            "name": "XO pipis and garlic, served with a Parker House roll",
+            "category": "Bennelong Bar food",
+            "price": 47
+          },
+          {
+            "name": "Kurobuta pork empanada, finger lime chimichurri",
+            "category": "Bennelong Bar food",
+            "price": 29,
+            "note": "Two per serve"
+          },
+          {
+            "name": "Australian cheeses",
+            "category": "Bennelong Bar food",
+            "price": 52
+          },
+          {
+            "name": "Pineapple, crème caramel, lime, vanilla",
+            "category": "Bennelong Bar food",
+            "price": 45
+          }
+        ],
+        "note": "Transcribed from Bennelong’s published October 2026 menu PDFs on October 9, 2026: the three-course choice menu ($240 per person), The Counter à la carte and the bar food menu. Prices are in Australian dollars. A 15% surcharge applies on public holidays. The restaurant also publishes a two-course house lunch, a group menu, a wine list and a cocktail list as separate PDFs."
       }
     ],
     "specials": []
@@ -7112,9 +7794,9 @@
     "checkedAt": "2026-10-09",
     "menus": [
       {
-        "label": "Menus",
+        "label": "Menus (sample PDFs)",
         "url": "https://www.saintpeter.com.au/menu",
-        "coverage": "published",
+        "coverage": "sample",
         "items": [
           {
             "name": "Lunch choice menu",
@@ -7127,9 +7809,137 @@
             "category": "Dining room",
             "price": 395,
             "note": "Per person"
+          },
+          {
+            "name": "Fiore sourdough and cultured butter",
+            "category": "Bar menu",
+            "price": 6.5,
+            "note": "Each"
+          },
+          {
+            "name": "Yellowfin tuna ’nduja olives",
+            "category": "Bar menu",
+            "price": 22
+          },
+          {
+            "name": "Swordfish empanada and roast garlic yoghurt",
+            "category": "Bar menu",
+            "price": 14,
+            "note": "Each"
+          },
+          {
+            "name": "Raw yellowfin tuna on fermented rice blini",
+            "category": "Bar menu",
+            "price": 18,
+            "note": "Each"
+          },
+          {
+            "name": "Fried salt and pepperberry Corner Inlet calamari",
+            "category": "Bar menu",
+            "price": 24
+          },
+          {
+            "name": "Salt and vinegar blue mackerel in Gordal olive brine",
+            "category": "Bar menu",
+            "price": 28
+          },
+          {
+            "name": "Selection of raw fish and poorman’s orange ponzu",
+            "category": "Bar menu",
+            "price": 34
+          },
+          {
+            "name": "Double yellowfin tuna and swordfish belly bacon cheeseburger",
+            "category": "Bar menu",
+            "price": 38
+          },
+          {
+            "name": "Batter-fried yellowbelly flounder, hand-cut chips and yoghurt tartare",
+            "category": "Bar menu",
+            "price": 44
+          },
+          {
+            "name": "Curried wild barramundi pie",
+            "category": "Bar menu",
+            "price": 48
+          },
+          {
+            "name": "Charcoal rock flathead, smoked corn and macadamia",
+            "category": "Bar menu",
+            "price": 78
+          },
+          {
+            "name": "Salad of Dylan’s leaves, desert lime and herbs",
+            "category": "Bar menu",
+            "price": 16
+          },
+          {
+            "name": "Hand-cut chips and bull kelp salt",
+            "category": "Bar menu",
+            "price": 16
+          },
+          {
+            "name": "Selection of condiments",
+            "category": "Bar menu",
+            "price": 9
+          },
+          {
+            "name": "Caramelised coral trout scale and cocoa nib magnum",
+            "category": "Bar menu",
+            "price": 18
+          },
+          {
+            "name": "Strawberries, crème fraîche mousse, sorrel and yoghurt sorbet",
+            "category": "Bar menu",
+            "price": 24
+          },
+          {
+            "name": "Selection of Australian cheese and condiments",
+            "category": "Bar menu",
+            "price": 42
+          },
+          {
+            "name": "Coral trout bone noodle soup",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "Raw albacore, green almond, peas, ginger and lime leaf",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "A selection of fish charcuterie",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "Salt and vinegar line-caught blue mackerel, Gordal olive brine, Fiore sourdough and cultured butter",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "Southern calamari, yellowfin tuna ’nduja",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "Hand-line caught coral trout, Dylan’s carrots, nasturtium and macadamia curry",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "12-day dry-aged swordfish, spring vegetables and mountain pepper sauce",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "Selection of native fruits",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "Bergamot meringue tart, Very Good cream",
+            "category": "Dinner (summer sample menu)"
+          },
+          {
+            "name": "Sweets of the sea",
+            "category": "Dinner (summer sample menu)"
           }
         ],
-        "note": "The restaurant’s two published menu prices are shown below. Prices are in Australian dollars."
+        "note": "Set-menu prices are from the restaurant’s menu page; the bar menu is transcribed from its published sample PDF and the dinner dishes from its summer sample menu, on October 9, 2026. Prices are in Australian dollars. The restaurant calls its menus indicative; dishes and prices change with the seasons. A 10% surcharge applies on Sundays and 15% on public holidays."
       }
     ],
     "specials": []
@@ -7162,11 +7972,200 @@
     "checkedAt": "2026-10-09",
     "menus": [
       {
-        "label": "Menus",
-        "url": "https://www.chauvinhospitalitygroup.com.au/montrachet",
-        "coverage": "link",
-        "items": [],
-        "note": "Montrachet publishes its menus as PDFs from this page; prices appear only in those files. Consult the original for changing dishes and prices."
+        "label": "Menu (published PDF)",
+        "url": "https://www.chauvinhospitalitygroup.com.au/s/Menu-Back-1.pdf",
+        "documentUrl": "https://www.chauvinhospitalitygroup.com.au/s/Menu-Back-1.pdf",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Le pain",
+            "category": "Les Amuses-Gueules",
+            "price": 6,
+            "note": "House-made sourdough bread with Copper Tree Farms cultured butter. Per person."
+          },
+          {
+            "name": "Les escargots",
+            "category": "Les Amuses-Gueules",
+            "price": 28,
+            "note": "Six Burgundy snails, traditional garlic and parsley butter."
+          },
+          {
+            "name": "Le foie gras",
+            "category": "Les Amuses-Gueules",
+            "price": 55,
+            "note": "French imported duck foie gras with pain d’épice, pickled rhubarb and nasturtium."
+          },
+          {
+            "name": "Le trio d’amuse-bouche",
+            "category": "Les Amuses-Gueules",
+            "price": 16,
+            "note": "Three bite-sized canapés."
+          },
+          {
+            "name": "Le pâté de foie de canard",
+            "category": "Les Amuses-Gueules",
+            "price": 24,
+            "note": "Duck liver parfait, pickled cherry, brioche."
+          },
+          {
+            "name": "Le Boursin",
+            "category": "Les Amuses-Gueules",
+            "price": 19,
+            "note": "French goat’s cheese dip with sun-dried tomato cracker."
+          },
+          {
+            "name": "La soupe du jour",
+            "category": "Les Entrées",
+            "price": 26,
+            "note": "Seasonal soup of the day."
+          },
+          {
+            "name": "Maquereau escabeche",
+            "category": "Les Entrées",
+            "price": 30,
+            "note": "Cured Spanish mackerel with broad beans and peas and blood orange sorbet."
+          },
+          {
+            "name": "Le vol-au-vent",
+            "category": "Les Entrées",
+            "price": 32,
+            "note": "Puff pastry filled with veal sweetbreads, green asparagus and herb salad, served with sauce suprême."
+          },
+          {
+            "name": "Le steak tartare",
+            "category": "Les Entrées",
+            "price": 33,
+            "priceLabel": "$33 entrée / $49 main",
+            "note": "Grain-fed Black Angus eye fillet tartare, confit egg yolk, cornichon, caper, parsley, eschalot, puffed beef tendon cracker. $33 as an entrée, $49 as a main."
+          },
+          {
+            "name": "Le soufflé au crabe et au comté",
+            "category": "Les Entrées",
+            "price": 34,
+            "note": "Double-baked soufflé with Australian crab meat and Comté cheese, finished with a light cream bisque."
+          },
+          {
+            "name": "Le poisson du jour",
+            "category": "Les Plats",
+            "priceLabel": "Market price",
+            "note": "Fresh catch of the day, cooked à la façon du chef."
+          },
+          {
+            "name": "Le navarin d’agneau",
+            "category": "Les Plats",
+            "price": 59,
+            "note": "Slow-cooked lamb shoulder, panisse, Falls Farm beetroot and turnip, apricot compote."
+          },
+          {
+            "name": "Le steak frites",
+            "category": "Les Plats",
+            "price": 82,
+            "note": "Stockyard 200-day grain-fed eye fillet with caramelised onion tatin and pommes frites; red wine jus, sauce au poivre or béarnaise."
+          },
+          {
+            "name": "Le canard",
+            "category": "Les Plats",
+            "price": 75,
+            "note": "Northern Rivers duck: house-aged breast, confit leg ballotine, textures of beetroot, radicchio and blueberry duck jus."
+          },
+          {
+            "name": "Les gnocchis à la parisienne",
+            "category": "Les Plats",
+            "price": 46,
+            "note": "Parisian gnocchi (gluten-free), sautéed mushrooms and pumpkin, Comté and sauce suprême."
+          },
+          {
+            "name": "La côte de bœuf",
+            "category": "Mains to share",
+            "price": 200,
+            "note": "1 kg Stockyard 200-day grain-fed Black Angus OP rib, cooked to your liking, with red wine jus, béarnaise or pepper sauce and herb salad. Allow 40 minutes."
+          },
+          {
+            "name": "Le bœuf en croûte",
+            "category": "Mains to share",
+            "price": 75,
+            "note": "Beef Wellington: Stockyard 200-day grain-fed Black Angus eye fillet, mushroom duxelles and foie gras, herbed crêpes and butter puff pastry, with red wine jus. Per person."
+          },
+          {
+            "name": "La salade aux herbes",
+            "category": "Les Accompagnements",
+            "price": 12,
+            "note": "Mixed leaf salad, fresh herbs and house dressing."
+          },
+          {
+            "name": "Les patates Gascogne",
+            "category": "Les Accompagnements",
+            "price": 16,
+            "note": "Duck-fat roasted potatoes with rosemary salt."
+          },
+          {
+            "name": "Les petits pois à la française",
+            "category": "Les Accompagnements",
+            "price": 16,
+            "note": "Green peas, braised onions, lettuce and smoked speck."
+          },
+          {
+            "name": "Les haricots verts",
+            "category": "Les Accompagnements",
+            "price": 16,
+            "note": "Sautéed green beans with confit shallots, preserved lemon and capers."
+          },
+          {
+            "name": "Les pommes frites",
+            "category": "Les Accompagnements",
+            "price": 14,
+            "note": "Shoestring fries with aioli."
+          },
+          {
+            "name": "La crème brûlée flambée",
+            "category": "Les Desserts",
+            "price": 21,
+            "note": "Traditional French custard with a burnt-sugar crust, flamed with Cointreau."
+          },
+          {
+            "name": "Soufflé au chocolat",
+            "category": "Les Desserts",
+            "price": 28,
+            "note": "Signature soufflé of dark Veliche chocolate, poached quince, roasted oats crumble and yoghurt sorbet."
+          },
+          {
+            "name": "Le pain perdu",
+            "category": "Les Desserts",
+            "price": 25,
+            "note": "French toast, crème anglaise, apple and tarragon sorbet and fresh apple."
+          },
+          {
+            "name": "La tarte tatin",
+            "category": "Les Desserts",
+            "price": 44,
+            "note": "Upside-down caramelised apple tart with Tahitian vanilla ice cream. For two."
+          },
+          {
+            "name": "Les fromages",
+            "category": "Les Desserts",
+            "price": 12,
+            "note": "Served with condiments and crackers. Price is for each cheese."
+          },
+          {
+            "name": "Chef’s selection, 6 courses",
+            "category": "Set menus",
+            "price": 155,
+            "note": "Head chef and owner Clément Chauvin’s tasting menu."
+          },
+          {
+            "name": "Chef’s selection, 8 courses",
+            "category": "Set menus",
+            "price": 180,
+            "note": "Head chef and owner Clément Chauvin’s tasting menu."
+          },
+          {
+            "name": "Make your own menu, 4 courses",
+            "category": "Set menus",
+            "price": 135,
+            "note": "An entrée, main and dessert from the à la carte menu, with canapés included. Excludes the côte de bœuf."
+          }
+        ],
+        "note": "Transcribed from the restaurant’s published one-page menu PDF on October 9, 2026. Prices are in Australian dollars. Dishes and prices change; consult the original."
       },
       {
         "label": "Wine list (PDF)",
@@ -7199,11 +8198,121 @@
     "checkedAt": "2026-10-09",
     "menus": [
       {
-        "label": "Eat & drink",
+        "label": "Menu (sample)",
         "url": "https://pressfoodandwine.com.au/eat-and-drink",
-        "coverage": "link",
-        "items": [],
-        "note": "The restaurant publishes its current menu on this page. Consult the original for changing dishes and prices. The page publishes no prices."
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "House-made baguette",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "Fennel and dill dip",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "Gazander oysters with raspberry mignonette",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "Kangaroo and saltbush tartare, potato hash",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "Raw scallops, buttermilk, apple, chilli oil",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "Casarecce, pork and fennel sausage, cavalo nero, lemon",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "Kilcoy sirloin, chimichurri",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "Fried potatoes, ranch",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "Tiramisu",
+            "category": "Set menu, $95 per person"
+          },
+          {
+            "name": "House-made baguette, whipped butter",
+            "category": "Snacks & small plates"
+          },
+          {
+            "name": "Gazander oysters",
+            "category": "Snacks & small plates",
+            "note": "Natural or raspberry mignonette"
+          },
+          {
+            "name": "Fennel and dill dip",
+            "category": "Snacks & small plates"
+          },
+          {
+            "name": "House pickled vegetables",
+            "category": "Snacks & small plates"
+          },
+          {
+            "name": "Kangaroo and saltbush tartare, potato hash",
+            "category": "Snacks & small plates"
+          },
+          {
+            "name": "Mushroom pithivier, potato mash",
+            "category": "Snacks & small plates"
+          },
+          {
+            "name": "Smoked cauliflower, ajo blanco, mojo verde",
+            "category": "Snacks & small plates"
+          },
+          {
+            "name": "Raw scallops, buttermilk, green apple, chilli oil",
+            "category": "Snacks & small plates"
+          },
+          {
+            "name": "Grilled king prawns, fermented tomato, ’nduja butter",
+            "category": "Snacks & small plates"
+          },
+          {
+            "name": "Casarecce, pork and fennel sausage, cavalo nero, lemon",
+            "category": "Larger plates"
+          },
+          {
+            "name": "Grilled market fish",
+            "category": "Larger plates"
+          },
+          {
+            "name": "Kilcoy sirloin, caramelised onion",
+            "category": "Larger plates"
+          },
+          {
+            "name": "Roasted lamb rump, black garlic cream, spring onion",
+            "category": "Larger plates"
+          },
+          {
+            "name": "Fried potatoes, ranch",
+            "category": "Sides"
+          },
+          {
+            "name": "Grilled sugarloaf, mushroom ketchup, herb emulsion",
+            "category": "Sides"
+          },
+          {
+            "name": "Roasted beetroot, onion, spinach, tahini, fresh herbs",
+            "category": "Sides"
+          },
+          {
+            "name": "Tiramisu",
+            "category": "Desserts"
+          },
+          {
+            "name": "Basque cheesecake, rhubarb compote",
+            "category": "Desserts"
+          }
+        ],
+        "note": "Transcribed from the restaurant’s published sample menu on October 9, 2026; it is subject to change. A 5-course shared set menu is $95 per person (Prices are in Australian dollars). The page publishes no prices for the à la carte dishes."
       }
     ],
     "specials": []
@@ -7214,11 +8323,81 @@
     "checkedAt": "2026-10-09",
     "menus": [
       {
-        "label": "Menu",
+        "label": "Menu (sample)",
         "url": "https://www.africola.com.au/#menu",
-        "coverage": "link",
-        "items": [],
-        "note": "Africola publishes a sample menu on its home page; it changes with availability and season. The one price shown is a $20 supplement for the Rangers Valley petit tender with Africola béarnaise. Prices are in Australian dollars."
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Crispy chicken tea sandwich with peri peri drippings",
+            "category": "Snacks"
+          },
+          {
+            "name": "Falafel, tahini cream",
+            "category": "Snacks"
+          },
+          {
+            "name": "Hummus, pepita, currants",
+            "category": "Snacks"
+          },
+          {
+            "name": "Kohlrabi cake, tofu cream",
+            "category": "Snacks"
+          },
+          {
+            "name": "Mushroom, white bean, chilli crisp",
+            "category": "Vegetables"
+          },
+          {
+            "name": "Dahl, coconut, coriander chutney",
+            "category": "Vegetables"
+          },
+          {
+            "name": "Barley, almonds, sumac labneh",
+            "category": "Vegetables"
+          },
+          {
+            "name": "Cabbage, whey, prawn",
+            "category": "Vegetables"
+          },
+          {
+            "name": "Cipollini onions, flatbread sauce",
+            "category": "Vegetables"
+          },
+          {
+            "name": "Kingfish sashimi, nectarine, buckwheat",
+            "category": "Seafood"
+          },
+          {
+            "name": "Goolwa pipis, fermented chilli, white pea",
+            "category": "Seafood"
+          },
+          {
+            "name": "Coorong mullet, green tomato, caper",
+            "category": "Seafood"
+          },
+          {
+            "name": "Peri peri chicken with Mpumalanga fire, boom chakalaka",
+            "category": "Meats"
+          },
+          {
+            "name": "Boston Bay pork loin, mustard leaf gremolata",
+            "category": "Meats"
+          },
+          {
+            "name": "Rangers Valley petit tender, Africola béarnaise",
+            "category": "Meats",
+            "priceLabel": "$20 supplement"
+          },
+          {
+            "name": "Yoghurt ice cream, rockmelon granita",
+            "category": "Desserts"
+          },
+          {
+            "name": "Chocolate torte, crème fraîche",
+            "category": "Desserts"
+          }
+        ],
+        "note": "Transcribed from the sample menu on the restaurant’s home page on October 9, 2026; it changes with availability and season. The only price published is the $20 supplement (Prices are in Australian dollars)."
       }
     ],
     "specials": []
