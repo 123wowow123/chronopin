@@ -62,6 +62,7 @@ export function importSpecialMenu(menu: SourceSpecialMenu): { items: RestaurantM
   const text = [menu.description, ...sections.flatMap((section) => [section.title, section.description])].join(' ');
   const surcharges = [...text.matchAll(/(\d+(?:\.\d+)?)%\s+(?:[\w-]+\s+){0,3}surcharge|surcharge\s+(?:of\s+)?(\d+(?:\.\d+)?)%/gi)].map((match) => match[1] || match[2]);
   const conditions = [...new Set(surcharges.map((amount) => `Published menu lists a ${amount}% surcharge.`))];
+  if (surcharges.length && /request to have this taken off/i.test(text)) conditions.push('The published surcharge can be removed on request.');
   if (/dine[\s-]*in only|not available for take out/i.test(text)) conditions.push('Dine-in only.');
   if (/bar\s*(?:&|and|\+)\s*patio/i.test(text)) conditions.push('Available in the bar and patio.');
   else if (/bar only|served in the bar|at the bar|in bar only|bar seats|bar areas/i.test(text)) conditions.push('Available in the bar.');
