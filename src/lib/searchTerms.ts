@@ -11,7 +11,7 @@
 // 'rating' and 'delay' are bounds (rating:>=81, delay:>=2months), which their
 // pills write. 'ticker' is a company's stock symbol, written bare with a $
 // ($NKE) rather than as a field.
-export type LabelField = 'user' | 'ticker' | 'company' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | '-tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated';
+export type LabelField = 'user' | 'ticker' | 'company' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | '-tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday';
 // Fields a query may still hold but no label writes: category: is the old
 // name for a category's tag: term, which can only be taken out.
 type AnyField = LabelField | 'category' | '-category';

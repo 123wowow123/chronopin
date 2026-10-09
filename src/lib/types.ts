@@ -184,6 +184,8 @@ export type PinJson = {
   // When its newest update (PinUpdate, 0081) came, on timeline pages and
   // search results: a card under a day old says UPDATED.
   utcLastUpdateDateTime?: string | null;
+  // On the Curated pages (Products, Restaurants); the card's CURATED pill.
+  curated?: boolean;
   favoriteCount?: number;
   likeCount?: number;
   // Page views, once per viewer per day.

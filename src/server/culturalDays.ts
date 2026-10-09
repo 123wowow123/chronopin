@@ -40,11 +40,14 @@ function countryHolidays(country: string): Holidays {
   return hd;
 }
 
+const countryYears = new Map<string, ReturnType<Holidays['getHolidays']>>();
+
 // Where the package says a country's holiday of that English name falls in a year.
 function packageDate(country: string, name: string, year: number): string | null {
-  const found = countryHolidays(country)
-    .getHolidays(year, 'en')
-    .find((h) => h.name === name);
+  const key = `${country}:${year}`;
+  let list = countryYears.get(key);
+  if (!list) countryYears.set(key, (list = countryHolidays(country).getHolidays(year, 'en')));
+  const found = list.find((h) => h.name === name);
   return found ? found.date.slice(0, 10) : null;
 }
 
@@ -81,6 +84,34 @@ function startOf(def: HolidayDef, year: number, easter: () => string | null): st
   const other = holidayById(rule.sameAs);
   const base = other ? startOf(other, year, easter) : null;
   return base ? addDays(base, rule.offset ?? 0) : null;
+}
+
+const easterIn = (year: number) => {
+  let date: string | null | undefined;
+  return () => (date === undefined ? (date = packageDate('US', 'Easter Sunday', year)) : date);
+};
+
+// One holiday's occurrence that starts in a year, without working out the
+// other holidays' (a name searched for needs only its own).
+export function occurrenceIn(def: HolidayDef, year: number): Occurrence | null {
+  const start = startOf(def, year, easterIn(year));
+  return start ? { def, start, end: addDays(start, (def.span ?? 1) - 1) } : null;
+}
+
+const runCache = new Map<string, Occurrence[]>();
+
+// One holiday's occurrences in every year the catalog covers.
+export function occurrencesOf(def: HolidayDef): Occurrence[] {
+  let found = runCache.get(def.id);
+  if (!found) {
+    found = [];
+    for (let year = FIRST_YEAR; year <= LAST_YEAR; year++) {
+      const o = occurrenceIn(def, year);
+      if (o) found.push(o);
+    }
+    runCache.set(def.id, found);
+  }
+  return found;
 }
 
 const yearCache = new Map<number, Occurrence[]>();

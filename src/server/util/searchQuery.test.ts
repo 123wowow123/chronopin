@@ -77,6 +77,7 @@ describe('parseSearchQuery', () => {
       rated: [],
       ratings: [],
       delays: [],
+      holidays: [],
       text: 'ios',
     });
   });
@@ -93,6 +94,13 @@ describe('parseSearchQuery', () => {
     expect(parseSearchQuery('date:2026-09-08 date:-2560-01-01 date:2026-09-08 date:tomorrow').dates).toEqual(['2026-09-08', '-2560-01-01']);
     expect(parseSearchQuery('posted:2026-09-13 date:2026-09-08')).toMatchObject({ dates: ['2026-09-08'], postedDays: ['2026-09-13'] });
     expect(parseSearchQuery('updated:2026-10-02 posted:2026-09-13')).toMatchObject({ updatedDays: ['2026-10-02'], postedDays: ['2026-09-13'] });
+  });
+
+  it('reads holidays by name, quoted like any value, once each, as a filter that follows the viewer\'s days', () => {
+    const query = parseSearchQuery('holiday:Halloween holiday:"Mid-Autumn Festival" HOLIDAY:halloween candy');
+    expect(query).toMatchObject({ holidays: ['Halloween', 'Mid-Autumn Festival'], text: 'candy' });
+    expect(hasFilters(query)).toBe(true);
+    expect(dependsOnZone(query)).toBe(true);
   });
 
   it('reads pin ids, comma-separated, once each and never anything else', () => {

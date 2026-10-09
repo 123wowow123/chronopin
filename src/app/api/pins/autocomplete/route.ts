@@ -4,6 +4,8 @@ import Company from '@/server/model/company';
 import PinTag from '@/server/model/pinTag';
 import { Users } from '@/server/model/user';
 import { SearchPins } from '@/server/model/searchPin';
+import { loadAstronomy, suggestHolidays } from '@/server/holidays';
+import { requestTimeZone } from '@/server/viewer';
 import { localizePins } from '@/server/services/translations';
 import { CATEGORIES } from '@/lib/categories';
 import { DEFAULT_LOCALE, LOCALES } from '@/lib/i18n/config';
@@ -11,13 +13,16 @@ import { categoryLabel } from '@/lib/i18n/labels';
 import { getMessages } from '@/lib/i18n/messages';
 import { requestLocale } from '@/lib/i18n/request';
 import { createTranslator } from '@/lib/i18n/translate';
+import { dayKeyIn } from '@/lib/format';
 import { reservedSuggestions, type TagCount } from '@/lib/tags';
 import { toJson, type PinJson } from '@/lib/types';
 
 // What the navbar search suggests as you type: pins whose title or
 // description starts with the text, and the companies, pin authors ("@fish"
 // or "fish" for @FishingDesk) and tags (categories among them, kind
-// 'category') with a word starting with it. Titles and
+// 'category') with a word starting with it, and the holidays and special days
+// ("Halloween", "National Peanut Day") with a word starting with it, each with
+// its next day, which holiday: searches. Titles and
 // category names in every language the site has are matched too, whatever the
 // page's language, and the pins are shown in the page's language.
 //
@@ -29,7 +34,7 @@ import { toJson, type PinJson } from '@/lib/types';
 // "PinTagView" - and carry no count: the row shows the term it writes.
 export const GET = route(async (request: NextRequest) => {
   const q = request.nextUrl.searchParams.get('q') || '';
-  if (!q.trim()) return json({ pins: [], queryCount: 0, tags: [], companies: [], users: [] });
+  if (!q.trim()) return json({ pins: [], queryCount: 0, tags: [], companies: [], users: [], holidays: [] });
   const locale = requestLocale(request);
   const [pins, tags, named, companies, users] = await Promise.all([
     SearchPins.querySearchPin(q, q, 10),
@@ -38,12 +43,15 @@ export const GET = route(async (request: NextRequest) => {
     Company.suggest(q, 4),
     Users.suggest(q, 4),
   ]);
+  const zone = requestTimeZone(request);
+  await loadAstronomy();
+  const holidays = suggestHolidays(q, locale, dayKeyIn(new Date(), zone), 4, zone);
   const body = toJson<{ pins: PinJson[]; queryCount: number }>(pins);
   await localizePins(body.pins, locale);
   const reserved: TagCount[] = reservedSuggestions(q).map((filter) => ({ name: filter.name, kind: 'reserved', count: 0 }));
   const seen = new Set(tags.map((tag) => tag.name.toLowerCase()));
   const translated = named.filter((tag) => !seen.has(tag.name.toLowerCase())).slice(0, 6);
-  return json({ ...body, tags: [...reserved, ...translated, ...tags].slice(0, reserved.length + 6), companies, users });
+  return json({ ...body, tags: [...reserved, ...translated, ...tags].slice(0, reserved.length + 6), companies, users, holidays });
 });
 
 // The categories whose name in another of the site's languages has a word

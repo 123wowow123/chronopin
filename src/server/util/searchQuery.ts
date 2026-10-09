@@ -39,6 +39,15 @@
 // reads days as an exact one does: all-day pins by UTC date, timed ones by the
 // viewer's.
 //
+// holiday: takes a holiday or special day by name (holiday:Halloween,
+// holiday:"Mid-Autumn Festival", holiday:"National Peanut Day"): the pins
+// starting on any of its days, the way date: reads them, in every year the
+// site works holidays out for (src/server/holidays.ts, the cultural holidays
+// of the timeline's date tags, its specialty days, and the solstices, equinoxes,
+// aphelion and perihelion - holiday:"Winter Solstice" - whose day is the
+// viewer's, as the timeline places them). The search box
+// suggests them as you type. A name nobody keeps matches nothing.
+//
 // place: takes anywhere a pin's address names - a city, a state, a postal
 // code, a country (place:Chicago, place:60601, place:Texas, place:"New
 // York"). The address is one label written by whoever placed the pin
@@ -155,6 +164,9 @@ export type SearchQuery = {
   ratings: RatingBound[];
   // Bounds a pin's delay must meet, every one of them.
   delays: DelayBound[];
+  // Holidays and special days by name, any of them (holiday:Halloween); the
+  // server turns each into the days it falls on.
+  holidays: string[];
   text: string;
 };
 
@@ -163,7 +175,7 @@ const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -183,7 +195,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated';
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -259,6 +271,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     rated: [],
     ratings: [],
     delays: [],
+    holidays: [],
     text: '',
   };
 
@@ -297,6 +310,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       // A name nobody ships on is left out rather than matching nothing.
       const key = platformFromName(part.value) ?? (isPlatformKey(part.value.toLowerCase()) ? part.value.toLowerCase() : undefined);
       if (key) addUnique(query.platforms, key);
+    } else if (part.field === 'holiday') {
+      if (part.value) addUnique(query.holidays, part.value);
     } else if (part.field === 'rated') {
       if (part.value) addUnique(query.rated, part.value);
     } else if (part.field === 'rating') {
@@ -337,7 +352,8 @@ export function hasFilters(query: SearchQuery): boolean {
     query.platforms.length ||
     query.rated.length ||
     query.ratings.length ||
-    query.delays.length
+    query.delays.length ||
+    query.holidays.length
   );
 }
 
@@ -351,7 +367,8 @@ export function dependsOnZone(query: SearchQuery): boolean {
     query.updatedDays.length ||
     query.dateBounds.length ||
     query.postedBounds.length ||
-    query.updatedBounds.length
+    query.updatedBounds.length ||
+    query.holidays.length
   );
 }
 

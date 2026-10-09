@@ -6,6 +6,7 @@ import Pin from './pin';
 import PinTag from './pinTag';
 import { THIN_PIN_SQL } from './searchIssues';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
+import { holidayRanges, loadAstronomy } from '../holidays';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
@@ -16,6 +17,10 @@ import type { DayBound, DelayBound, RatingBound } from '../util/searchQuery';
 // the main one alone.
 const CATEGORIES = `ARRAY(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id")`;
 const MAIN_CATEGORY = `(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id" LIMIT 1)`;
+
+// A pin on the Curated pages: a product with a ProductBlurb, or a Top
+// Restaurants one. tag:Curated searches it (the card's CURATED pill).
+const CURATED = `(EXISTS (SELECT 1 FROM "ProductBlurb" AS "b" WHERE "b"."pinId" = "Pin"."id") OR EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "Pin"."id" AND "t"."name" = 'Top Restaurants'))`;
 
 export type PinSearchFilters = {
   userNames: string[];
@@ -37,6 +42,7 @@ export type PinSearchFilters = {
   rated: string[];
   ratings: RatingBound[];
   delays: DelayBound[];
+  holidays: string[];
 };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
@@ -195,7 +201,8 @@ export default class Pins extends BasePins<Pin> {
   // The search results after `order`'s cursor, best first (or in date order
   // the way it walks), at most limit pins - every one when limit is null.
   // Only ids and sort keys: querySearchRanked loads the pins themselves.
-  static rankSearch(filter: SearchFilter, order: SearchOrder, limit: number | null): Promise<SearchRank[]> {
+  static async rankSearch(filter: SearchFilter, order: SearchOrder, limit: number | null): Promise<SearchRank[]> {
+    if (filter.holidays.length) await loadAstronomy();
     const { ctes, from, where, params, score } = searchClauses(filter);
     const add = (value: unknown) => {
       params.push(value);
@@ -253,7 +260,8 @@ export default class Pins extends BasePins<Pin> {
   }
 
   // Search results' tags with how many results carry each, busiest first.
-  static countSearchTags(filter: SearchFilter, limit: number) {
+  static async countSearchTags(filter: SearchFilter, limit: number) {
+    if (filter.holidays.length) await loadAstronomy();
     const { ctes, from, where, params } = searchClauses(filter);
     return countTags(from, where, params, limit, ctes);
   }
@@ -583,6 +591,9 @@ const PAGE_COLUMNS = `
   -- utcUpdatedDateTime is no use there: translations, episode counts and
   -- summary rebuilds all touch it.
   (SELECT max("u"."utcCreatedDateTime") FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "Pin"."id") AS "utcLastUpdateDateTime",
+  -- In the curated section (Products: has a ProductBlurb; Restaurants: tagged
+  -- Top Restaurants), for the card's CURATED pill.
+  ${CURATED} AS "curated",
   "Pin"."favoriteCount",
   "Pin"."likeCount",
   "Pin"."rootThread",
@@ -946,7 +957,8 @@ function searchClauses(filter: SearchFilter) {
   // Any of these tags (PinTagView: the form's, its categories, the prose's
   // and the awards').
   if (filter.tags.length) {
-    where.push(`EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))`);
+    const curated = filter.tags.some((tag) => tag.toLowerCase() === 'curated');
+    where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))${curated ? ` OR ${CURATED}` : ''})`);
   }
   // None of these (-tag:), each read as a tag: term is, so leaving out an
   // award body leaves out every year of it.
@@ -965,6 +977,18 @@ function searchClauses(filter: SearchFilter) {
       return `(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${localDay('"Pin"."utcStartDateTime"', day)}))`;
     });
     where.push(`(${days.join(' OR ')})`);
+  }
+  // holiday: - the days its names fall on (every year), read as date: reads a
+  // day, and narrowing the other date terms. A name nobody keeps matches nothing.
+  if (filter.holidays.length) {
+    const runs = holidayRanges(filter.holidays, zone);
+    const days = runs.map(({ from, to }) => {
+      const after = nextDayKey(to);
+      const utc = between('"Pin"."utcStartDateTime"', dayKeyToMs(from), dayKeyToMs(after));
+      const local = between('"Pin"."utcStartDateTime"', dayStartIn(from, zone), dayStartIn(after, zone));
+      return `(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${local}))`;
+    });
+    where.push(days.length ? `(${days.join(' OR ')})` : 'FALSE');
   }
   if (filter.postedDays.length) {
     where.push(`(${filter.postedDays.map((day) => localDay('"Pin"."utcCreatedDateTime"', day)).join(' OR ')})`);

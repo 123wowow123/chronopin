@@ -9,7 +9,7 @@ import { api } from '@/lib/client/api';
 import { withPageLang } from '@/lib/client/navigation';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useTimeZone } from '@/lib/client/timeZone';
-import { formatStart } from '@/lib/format';
+import { formatDayKey, formatStart } from '@/lib/format';
 import { hasTerm, term } from '@/lib/searchTerms';
 import { reservedName, reservedTag, type ReservedTag, type TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
@@ -112,13 +112,14 @@ function termLabel(part: TermPart, t: Translator) {
 }
 
 // One row of the suggestions: a category or other tag to filter by (both
-// tag: terms), a company (a company: term), a pin author (a user: term), one
-// of the site's own filters
+// tag: terms), a company (a company: term), a pin author (a user: term), a
+// holiday or special day (a holiday: term), one of the site's own filters
 // (RESERVED_TAGS, which writes its own term), or a pin's title to search for.
 type Suggestion =
   | { kind: 'category'; name: string; count: number }
   | { kind: 'company'; name: string; logoUrl: string | null; count: number }
   | { kind: 'user'; name: string; pictureUrl: string | null; count: number }
+  | { kind: 'holiday'; name: string; label: string; next: string | null }
   | { kind: 'reserved'; name: string; filter: ReservedTag }
   | { kind: 'tag'; name: string; count: number }
   | { kind: 'pin'; pin: PinJson };
@@ -128,10 +129,11 @@ type AutocompleteJson = {
   tags?: TagCount[];
   companies?: { name: string; logoUrl: string | null; count: number }[];
   users?: { userName: string; pictureUrl: string | null; count: number }[];
+  holidays?: { name: string; label: string; next: string | null }[];
 };
 
-// The rows in the order they show: categories, companies, accounts, then the
-// site's own filters and the tags people wrote (one group, the site's first),
+// The rows in the order they show: categories, companies, accounts, holidays,
+// then the site's own filters and the tags people wrote (one group, the site's first),
 // then pins.
 function toSuggestions(res: AutocompleteJson): Suggestion[] {
   const tags = res.tags || [];
@@ -139,6 +141,7 @@ function toSuggestions(res: AutocompleteJson): Suggestion[] {
     ...tags.filter((t) => t.kind === 'category').map((c): Suggestion => ({ kind: 'category', name: canonicalCategory(c.name), count: c.count })),
     ...(res.companies || []).map((c): Suggestion => ({ kind: 'company', ...c })),
     ...(res.users || []).map((u): Suggestion => ({ kind: 'user', name: u.userName, pictureUrl: u.pictureUrl, count: u.count })),
+    ...(res.holidays || []).map((h): Suggestion => ({ kind: 'holiday', name: h.name, label: h.label, next: h.next })),
     ...tags.flatMap((t): Suggestion[] => {
       const filter = t.kind === 'reserved' ? reservedTag(t.name) : undefined;
       return filter ? [{ kind: 'reserved', name: filter.name, filter }] : [];
@@ -154,6 +157,7 @@ const GROUP_LABEL = {
   category: 'search.groupCategories',
   company: 'search.groupCompanies',
   user: 'search.groupAccounts',
+  holiday: 'search.groupHolidays',
   reserved: 'search.groupTags',
   tag: 'search.groupTags',
   pin: 'search.groupPins',
@@ -421,7 +425,7 @@ export function SearchBox() {
 
   // Searches for a picked suggestion: a category or tag takes the typed text's
   // place as a tag: term (once), a company as a company: term, an account as
-  // a user: term, a site filter as the term it stands for
+  // a user: term, a holiday as a holiday: term, a site filter as the term it stands for
   // (confidence:estimated), a pin's title as text.
   function pick(suggestion: Suggestion) {
     if (suggestion.kind === 'pin') {
@@ -433,7 +437,14 @@ export function SearchBox() {
       suggestion.kind === 'reserved'
         ? suggestion.filter
         : {
-            field: suggestion.kind === 'company' ? ('company' as const) : suggestion.kind === 'user' ? ('user' as const) : ('tag' as const),
+            field:
+              suggestion.kind === 'company'
+                ? ('company' as const)
+                : suggestion.kind === 'user'
+                  ? ('user' as const)
+                  : suggestion.kind === 'holiday'
+                    ? ('holiday' as const)
+                    : ('tag' as const),
             value: suggestion.name,
           };
     const rest = query('');
@@ -1059,6 +1070,15 @@ export function SearchBox() {
                       <UserAvatar userName={suggestion.name} pictureUrl={suggestion.pictureUrl} className="mt-0.5 size-3.5 text-[7px]" />
                       <span className="min-w-0 flex-1 truncate text-ink">{suggestion.name}</span>
                       <span className="shrink-0 text-xs text-subtle tabular-nums">{suggestion.count}</span>
+                    </>
+                  ) : suggestion.kind === 'holiday' ? (
+                    // A holiday or special day, by its name in the page's
+                    // language, and its next day: the days the holiday: term
+                    // searches are every year's.
+                    <>
+                      <Icon name="sparkle" className="mt-0.5 size-3.5 shrink-0 text-faint" />
+                      <span className="min-w-0 flex-1 truncate text-ink">{suggestion.label}</span>
+                      {suggestion.next ? <span className="shrink-0 text-xs text-subtle tabular-nums">{formatDayKey(suggestion.next, t.locale)}</span> : null}
                     </>
                   ) : suggestion.kind === 'reserved' ? (
                     // The site's own filter: outlined as in the tag cloud's

@@ -47,3 +47,18 @@ export function specialtyDaysOn(monthDay: string, locale: Locale): SpecialtyDay[
 export function allSpecialtyDays(locale: Locale): Record<string, SpecialtyDay[]> {
   return Object.fromEntries(Object.keys(NAMES).map((monthDay) => [monthDay, specialtyDaysOn(monthDay, locale)]));
 }
+
+// Every specialty day by English name, with the dates ("09-13") it falls on
+// each year and its name in the page's language - what holiday: search and
+// its suggestions read.
+export function specialtyDayNames(locale: Locale): { name: string; label: string; monthDays: string[] }[] {
+  const dates = (DATES_BY_NAME ??= (() => {
+    const found = new Map<string, string[]>();
+    for (const [monthDay, names] of Object.entries(NAMES)) for (const name of names) found.set(name, [...(found.get(name) ?? []), monthDay]);
+    return found;
+  })());
+  const labels = LABELS[locale];
+  return [...dates].map(([name, monthDays]) => ({ name, label: labels?.[name] || name, monthDays }));
+}
+
+let DATES_BY_NAME: Map<string, string[]> | undefined;

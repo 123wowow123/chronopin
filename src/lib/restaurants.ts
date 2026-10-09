@@ -7,8 +7,10 @@ export const RESTAURANT_REGIONS = [
   { slug: 'san-francisco', name: 'San Francisco', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 37.7749, longitude: -122.4194 },
   { slug: 'seattle', name: 'Seattle', country: 'United States', state: 'Washington', timeZone: 'America/Los_Angeles', latitude: 47.6062, longitude: -122.3321 },
   { slug: 'san-jose', name: 'San Jose', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 37.3382, longitude: -121.8863 },
+  { slug: 'sacramento', name: 'Sacramento', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 38.5816, longitude: -121.4944 },
   { slug: 'los-angeles', name: 'Los Angeles', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 34.0522, longitude: -118.2437 },
   { slug: 'san-diego', name: 'San Diego', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 32.7157, longitude: -117.1611 },
+  { slug: 'palm-springs', name: 'Palm Springs', country: 'United States', state: 'California', timeZone: 'America/Los_Angeles', latitude: 33.8303, longitude: -116.5453 },
   { slug: 'calgary', name: 'Calgary', country: 'Canada', state: 'Alberta', timeZone: 'America/Edmonton', latitude: 51.0447, longitude: -114.0719 },
   { slug: 'edmonton', name: 'Edmonton', country: 'Canada', state: 'Alberta', timeZone: 'America/Edmonton', latitude: 53.5461, longitude: -113.4938 },
   { slug: 'phoenix', name: 'Phoenix', country: 'United States', state: 'Arizona', timeZone: 'America/Phoenix', latitude: 33.4484, longitude: -112.074 },
@@ -45,6 +47,9 @@ export const RESTAURANT_REGIONS = [
   { slug: 'berlin', name: 'Berlin', country: 'Germany', state: 'Germany', timeZone: 'Europe/Berlin', latitude: 52.52, longitude: 13.405 },
   { slug: 'vienna', name: 'Vienna', country: 'Austria', state: 'Austria', timeZone: 'Europe/Vienna', latitude: 48.2082, longitude: 16.3738 },
   { slug: 'stockholm', name: 'Stockholm', country: 'Sweden', state: 'Sweden', timeZone: 'Europe/Stockholm', latitude: 59.3293, longitude: 18.0686 },
+  { slug: 'perth', name: 'Perth', country: 'Australia', state: 'Western Australia', timeZone: 'Australia/Perth', latitude: -31.9523, longitude: 115.8613 },
+  { slug: 'melbourne', name: 'Melbourne', country: 'Australia', state: 'Victoria', timeZone: 'Australia/Melbourne', latitude: -37.8136, longitude: 144.9631 },
+  { slug: 'sydney', name: 'Sydney', country: 'Australia', state: 'New South Wales', timeZone: 'Australia/Sydney', latitude: -33.8688, longitude: 151.2093 },
 ] as const;
 
 // Countries follow their westernmost guide city in the west-to-east region list.

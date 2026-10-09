@@ -184,6 +184,11 @@ export function PinCard({
           <div className="flex shrink-0 items-center gap-1">
           {/* NEW searches for every pin posted today, UPDATED for every pin
               updated since the day 24 hours back - both days the viewer's. */}
+          {pin.curated ? (
+            <RefineLink field="tag" value="Curated" className={`${STATUS_PILL} bg-accent/15 text-accent hover:bg-accent/25`} title={t('card.curatedTitle')}>
+              {t('card.curated')}
+            </RefineLink>
+          ) : null}
           {postedToday ? (
             <RefineLink field="posted" value={today} className={`${STATUS_PILL} bg-link/15 text-link hover:bg-link/25`} title={t('card.newTitle')}>
               {t('card.new')}
