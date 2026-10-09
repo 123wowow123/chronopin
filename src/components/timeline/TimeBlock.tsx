@@ -13,6 +13,7 @@ import { pinPath } from '@/lib/seo';
 import type { Bag } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
 import type { personalWeigher } from '@/lib/userWiki';
+import { RailMarker } from '@/components/timeline/RailMarker';
 import { PinCard } from '@/components/pin/PinCard';
 import { useLeftOut } from '@/lib/client/leftOut';
 import { useLocale, useT } from '@/lib/client/i18n';
@@ -259,19 +260,17 @@ export function TimeBlock({
           rail sticks that much lower, the phone strip's page colour reaching
           back up behind the pill. */}
       <div className="sticky top-[calc(52px+var(--rail-drop,0px))] z-20 max-lg:-mt-2 max-lg:h-12 max-lg:bg-page max-lg:before:absolute max-lg:before:inset-x-0 max-lg:before:bottom-full max-lg:before:h-[var(--rail-drop,0px)] max-lg:before:bg-page lg:h-(--tags-h) lg:w-[170px]">
-        <div
-          className={`rail-marker absolute top-6 cursor-default start-[140px] z-10 -ms-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
-          title={`${planet.planet}\n${planet.weekday}\n${t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })}`}
+        <RailMarker
+          today={isToday}
+          glyph={planet.glyph}
+          weekday={planet.weekday}
+          lines={[planet.planet, planet.weekday, t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })]}
         >
           {/* The circle is the day's moon: its lit part a soft tint behind the planet. */}
           <svg viewBox="0 0 32 32" className="absolute inset-0 size-full" aria-hidden>
             <path d={moon.path} fill="currentColor" opacity={0.22} />
           </svg>
-          <span className="relative font-astro" aria-hidden>
-            {planet.glyph}
-          </span>
-          <span className="sr-only">{planet.weekday}</span>
-        </div>
+        </RailMarker>
 
         <div ref={tagRowRef} className={`${tagRow} max-lg:top-2 lg:top-[26px]`}>
           <Tag variant={isToday ? 'today' : 'date'} className={`${leadTag} tag-link`}>

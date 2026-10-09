@@ -72,7 +72,7 @@ export function ThreadWatchButton({ pinId }: { pinId: number }) {
       aria-pressed={watching}
       aria-label={label}
       title={label}
-      className={`inline-flex items-center rounded-md p-1 transition-colors ${watching ? 'bg-accent/15 text-link' : 'text-subtle hover:bg-raised hover:text-ink'}`}
+      className={`inline-flex items-center rounded-md p-1 cursor-pointer transition duration-150 active:scale-95 motion-reduce:transition-none motion-reduce:active:scale-100 ${watching ? 'bg-accent/15 text-link hover:bg-accent/25 active:bg-accent/35' : 'text-subtle hover:bg-ink/10 hover:text-ink active:bg-ink/20'}`}
     >
       <Icon name="eye" className="size-4" />
     </button>

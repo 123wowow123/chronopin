@@ -193,10 +193,10 @@ export function PopMenu({
           if (instead?.()) return;
           setOpen(placeFor(buttonRef.current!.getBoundingClientRect(), align));
         }}
-        className={`inline-flex shrink-0 items-center justify-center rounded-full transition-colors ${
+        className={`inline-flex shrink-0 items-center justify-center cursor-pointer rounded-full transition duration-150 hover:scale-110 active:scale-95 motion-reduce:transition-none motion-reduce:hover:scale-100 motion-reduce:active:scale-100 ${
           accent
             ? `text-link hover:bg-link/15 focus-visible:bg-link/15 active:bg-link/25 ${open ? 'bg-link/15' : ''}`
-            : `text-muted hover:bg-raised hover:text-ink focus-visible:bg-raised active:bg-raised-2 ${open ? 'bg-raised text-ink' : ''}`
+            : `text-muted hover:bg-ink/10 hover:text-ink focus-visible:bg-ink/10 active:bg-ink/20 ${open ? 'bg-ink/15 text-ink' : ''}`
         } ${buttonClassName}`}
       >
         <Icon name={icon} className={iconClassName} />

@@ -10,6 +10,7 @@ import { usesImperial } from '@/lib/weather';
 import { RestaurantControls, RestaurantSortNote, useRestaurantSort } from './RestaurantControls';
 import type { GuidePage } from '@/lib/restaurantGuide';
 import { PagedCardGrid, useGuidePages } from './PagedCardGrid';
+import { RestaurantOfferMenu } from './RestaurantOfferMenu';
 import styles from './RestaurantGuide.module.css';
 
 type Props = { regionSlug: string; neighborhood: string; initialPages: Record<string, GuidePage<ScheduledRestaurantOffer>>; timeZone: string; city: string };
@@ -49,8 +50,8 @@ function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZo
         <h3><Link href={offer.restaurantHref}>{offer.name}</Link></h3>
         {offer.review && <p className={styles.offerReview}><Anchor href={offer.review.sourceUrl} target="_blank" rel="noopener noreferrer">★ {offer.review.score.toFixed(1)}/5 · {offer.review.count.toLocaleString('en-US')} {offer.review.provider} reviews ↗</Anchor><small>Rating checked {offer.review.checkedAt}</small></p>}
         <h4 className={styles.offerTitle}>{offer.special.title}</h4>
-        <p className={styles.cardDescription}>{offer.special.description}</p>
-        {offer.menu?.items.length ? <ul className={styles.offerMenu}>{offer.menu.items.map((item, index) => <li key={`${item.name}-${index}`}><span>{item.name}{item.note && <small>{item.note}</small>}</span><strong>{item.priceLabel ?? (item.price != null ? `$${item.price}` : 'Ask restaurant')}</strong></li>)}</ul> : null}
+        {offer.special.description && <p className={styles.cardDescription}>{offer.special.description}</p>}
+        <RestaurantOfferMenu menu={offer.menu} restaurant={offer.name} />
         <p className={styles.offerSchedule}>{offer.special.schedule}</p>
         {offer.special.conditions?.length ? <ul className={styles.offerConditions}>{offer.special.conditions.map((condition) => <li key={condition}>{condition}</li>)}</ul> : null}
         {offer.menu?.note && <p className={styles.offerSchedule}>{offer.menu.note}</p>}

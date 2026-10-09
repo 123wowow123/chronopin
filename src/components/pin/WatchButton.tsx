@@ -138,7 +138,7 @@ export function WatchButton({
       aria-pressed={watching}
       aria-label={`${watching ? t('watch.stop') : t('watch.start')} (${t('watch.count', { count })})`}
       title={watching ? t('watch.stop') : t('watch.start')}
-      className={`inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-sm tabular-nums transition-colors ${watching ? 'bg-accent/15 text-link' : 'text-subtle hover:bg-raised hover:text-ink'}`}
+      className={`inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-sm tabular-nums cursor-pointer transition duration-150 active:scale-95 motion-reduce:transition-none motion-reduce:active:scale-100 ${watching ? 'bg-accent/15 text-link hover:bg-accent/25 active:bg-accent/35' : 'text-subtle hover:bg-ink/10 hover:text-ink active:bg-ink/20'}`}
     >
       <Icon name="eye" className="size-4" />
       <span ref={countRef} className="inline-block">

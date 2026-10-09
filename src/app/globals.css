@@ -469,6 +469,34 @@
       0 0 0 4px var(--color-page),
       0 4px 14px 4px color-mix(in oklab, var(--color-shade) 35%, transparent);
   }
+  .rail-marker {
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease;
+  }
+  .rail-marker:hover,
+  .rail-marker[aria-expanded='true'] {
+    transform: translateY(-1px) scale(1.08);
+  }
+  .rail-marker:active {
+    transform: scale(0.97);
+  }
+  .rail-marker-tip {
+    animation: rail-tip-in 140ms ease-out;
+  }
+  @keyframes rail-tip-in {
+    from {
+      opacity: 0;
+      margin-top: -4px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rail-marker,
+    .rail-marker-tip {
+      transition: none;
+      animation: none;
+    }
+  }
   .rail-marker-today {
     @apply border-tag-today/40 bg-tag-today/15 text-warning-soft;
   }
