@@ -257,6 +257,11 @@ Thailand and the United States.
    verification date only when nothing dates it, saying so in `dateConfidenceReasoning`. A month- or
    year-only opening is `estimated` at the period's last day; an announced date is a schedule until a
    report says it opened. Update the catalog row and the live pin together.
+21. **There is no image-rights rule** (Ian, 2026-10-09). If a restaurant's own site has no photo, use one
+   from press, a tourism board or a booking site, credit it (`imageSourceUrl`, `imageCredit`: "Photo via
+   <source>") and store it in Azure Blob Storage, not Git. Do not leave a pin without a picture, or refuse
+   one, over unclear licensing. The only media rules are storage (AGENTS.md "Pin media storage") and
+   three pictures per pin (point 18). View every candidate first: a name-matching image can be the wrong place.
 
 # Museum builds and upgrades
 

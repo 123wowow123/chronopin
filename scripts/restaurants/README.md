@@ -76,7 +76,7 @@ The Australian collection covers Perth (Wildflower), Adelaide (Press* Food & Win
 Africola), Melbourne (Attica, Flower Drum), Sydney (Bennelong, Saint Peter) and
 Brisbane (OTTO, Montrachet, Bistro Suzette), checked October 9, 2026 against each
 operator's own site. Quay, Gerard's Bistro and Orana are closed and were excluded.
-Africola has no photo (its site publishes none). Bennelong, OTTO, Montrachet and
+Africola's site publishes no photo, so its three come from Broadsheet (credited). Bennelong, OTTO, Montrachet and
 Press* have approximate map points because no street number resolves. Seed with:
 
 ```sh
@@ -119,3 +119,7 @@ See [coverage, menu research and remaining gaps](../../docs/restaurant-new-zeala
 ```sh
 npm run restaurants:seed -- --regions=guadalajara,monterrey,mexico-city,christchurch,auckland,wellington
 ```
+
+There is no image-rights rule: when a venue's own site has no photo, take one from press or
+a tourism board, credit it (`imageSourceUrl`, `imageCredit`) and store it in Azure. Never
+leave a pin without a picture over unclear licensing.
