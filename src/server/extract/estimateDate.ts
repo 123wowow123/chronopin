@@ -15,6 +15,7 @@ import type Anthropic from '@anthropic-ai/sdk';
 import log from '../util/log';
 import { describeError, getClient, MODEL, withNote } from '.';
 import type { FoundReference } from './references';
+import { PREDICTION_DATE_RULE } from './systemPrompt';
 
 const MAX_SOURCE_CHARS = 20000;
 
@@ -39,6 +40,7 @@ export const ESTIMATE_SCHEMA = {
 
 export const SYSTEM_PROMPT = `You estimate the date of an event for a pin on a timeline when no page states it outright. You are given the source the pin was made from and the references found for it (each with its title, publication date and what it says). Work out the single event the pin is about, then estimate the day it happens, or its span, from ALL of the evidence together:
 - A window a source or reference states ("in Q1 2027", "spring 2027", "by end of year") is dated by its end: a year alone is 31 December, a quarter or season its last day, a month its last day - unless the wording says the event runs from that period, which takes its first day.
+- ${PREDICTION_DATE_RULE}
 - A schedule, calendar or cadence: the gap between earlier occurrences, the usual weekday and season, an agency's standing rhythm (e.g. a committee that meets at least every three months), how long comparable things take.
 - Firmer sources outrank looser ones: an official calendar or filing over a news article's "later this year".
 - A publication date is not the event's date; it only bounds it (an event reported as upcoming is after it; one reported as done is before it).
