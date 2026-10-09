@@ -11,6 +11,7 @@
 #   --no-seeds to leave scripts/backup/*.json, --no-thumbs to skip the thumbnail copy
 #   LOCAL_DB=chronopin_prod npm run db:pull-prod   into a side database instead
 #
+# Only the newest prod and local dump are kept (older ones are pruned after a successful pull).
 # Before anything is replaced the local database is dumped next to the prod
 # copy, so `--file ~/chronopin-backups/local-<time>.dump` puts it back. Dumps
 # hold real accounts (emails, password hashes), so they live outside the
@@ -128,6 +129,12 @@ psql_local \
   -c "DROP DATABASE IF EXISTS \"$DB\" WITH (FORCE)" \
   -c "ALTER DATABASE \"$incoming\" RENAME TO \"$DB\"" > /dev/null
 echo "Local \"$DB\" is now production as of $(basename "$dump")"
+
+# Dumps are 100-200 MB each, so only the newest prod and local copies are kept; older ones are
+# removed now that the swap has succeeded (a failed pull returns above and prunes nothing).
+for prefix in prod local; do
+  ls -1t "$BACKUP_DIR/$prefix"-*.dump 2>/dev/null | tail -n +2 | while read -r old; do rm -f "$old"; done
+done
 
 # 4. Schema files this branch has and prod does not yet, then search and the seed files.
 npm run --silent create:db
