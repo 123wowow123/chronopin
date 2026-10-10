@@ -8589,13 +8589,14 @@
     "state": "New Jersey",
     "address": "55 Harvey Street,  New Brunswick,  NJ 08901",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/55-harvey-at-providence/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2010-11-22 (NJHMFA press release: 55 Harvey at Providence Square dedicated)",
+    "timelineBoundary": "2010-11-22",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2010-11-22 from NJHMFA press release: 55 Harvey at Providence Square dedicated (https://www.nj.gov/dca/hmfa/about/pressreleases/2010/20101122a.shtml). HMFA press release dated Nov 22, 2010 announcing the dedication of the 53-unit senior building adjacent to Providence Square; press release page gives no street address, matched by name and developer.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/55-harvey-at-providence/",
-      "https://www.pennrose.com/media/jzffuhec/55-harvey-flyer_2025.pdf"
+      "https://www.pennrose.com/media/jzffuhec/55-harvey-flyer_2025.pdf",
+      "https://www.nj.gov/dca/hmfa/about/pressreleases/2010/20101122a.shtml"
     ],
     "references": [
       {
@@ -8662,13 +8663,14 @@
     "state": "New Jersey",
     "address": "125A Olive Street,  Trenton,  NJ 08618",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/academy-place/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2013 (HUD LIHTC database (ArcGIS FeatureService))",
+    "timelineBoundary": "2013-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2013 from HUD LIHTC database (ArcGIS FeatureService) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). Renovated historic buildings (rehab); 2013 Trenton Times coverage said Pennrose was ready to re-open 40 apartments/townhomes after renovation of 15 historic buildings. Exact reopening day not found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/academy-place/",
-      "https://www.pennrose.com/media/ictmrz5f/academy-place-flyer_1-26.pdf"
+      "https://www.pennrose.com/media/ictmrz5f/academy-place-flyer_1-26.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -8743,14 +8745,15 @@
     "state": "New Jersey",
     "address": "685 Dr Martin Luther King Jr Blvd,  Newark,  NJ 07102",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: other 2019 (Pennrose Nears Opening Of All-Affordable Apartment Building In Newark (Bisnow, 2018-09-14) + listing-site year built)",
+    "timelineBoundary": "2019-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2019 from Pennrose Nears Opening Of All-Affordable Apartment Building In Newark (Bisnow, 2018-09-14) + listing-site year built (https://www.pennrose.com/news-views/media/2018/2018-pennrose-nears-opening-of-all-affordable-apartment-building-in-newark/). Confidence: low. No ribbon-cutting/opening announcement found. HUD LIHTC record 'Montgomery Heights Phase II' (NJA0000X050) has YR_PIS 9999 (unknown). Agency/developer projection (NJHMFA Jul 2017: completion Oct 2018; Pennrose Sep 2018: complete end of 2018, leasing from Oct 2018). Aggregator listings (ApartmentGuide/ApartmentFinder, via search snippets) give 'built 2019', consistent with a slip of the projection; a Feb 2019 photo caption (prior pass) suggested work still underway. Best estimate: opened/first leased in 2019 (possibly very late 2018). Year-only; not a verified day. Treat as low confidence.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
       "https://www.pennrose.com/media/umcaash0/aston-heights-flyer_2025.pdf",
-      "https://www.pennrose.com/media/lz4ihry5/aston-heights-pre-app-2022.pdf"
+      "https://www.pennrose.com/media/lz4ihry5/aston-heights-pre-app-2022.pdf",
+      "https://www.pennrose.com/news-views/media/2018/2018-pennrose-nears-opening-of-all-affordable-apartment-building-in-newark/"
     ],
     "references": [
       {
@@ -8912,13 +8915,14 @@
     "state": "Pennsylvania",
     "address": "6000 Baltimore Avenue,  Philadelphia,  PA 19143",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bernice-arms/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 1999 (HUD LIHTC database (HUD_ID PAA19990205) + PHFA Philadelphia multifamily inventory)",
+    "timelineBoundary": "1999-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1999 from HUD LIHTC database (HUD_ID PAA19990205) + PHFA Philadelphia multifamily inventory (https://www.phfa.org/forms/multifamily_inventory/dv_philadelphia.pdf). Confidence: medium. Match is by name alias (PHFA lists 'Residence at 6000 Baltimore' aka Bernice Arms, 46 units, same as HUD record at 6018 Baltimore Ave). 1999 is the LIHTC placed-in-service year, i.e. the first LIHTC (re)opening; rental listings claim building built 1925 (unverified), so 1999 is likely a rehab/conversion to senior LIHTC housing. No month/day found. If the pin must be the original construction date, 1925 is only a low-confidence listing claim.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/bernice-arms/",
-      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+      "https://www.phfa.org/forms/multifamily_inventory/dv_philadelphia.pdf"
     ],
     "references": [
       {
@@ -8989,10 +8993,10 @@
     "state": "Pennsylvania",
     "address": "4130  Parkside Ave,  Philadelphia,  PA 19104",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/brentwood/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 1996 (Parkside Historic District timeline (via search summary); Pennrose Brentwood page)",
+    "timelineBoundary": "1996-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1996 from Parkside Historic District timeline (via search summary); Pennrose Brentwood page (https://www.pennrose.com/apartments/pennsylvania/brentwood/). Address 4130 Parkside is The Brentwood (completed 1996 per Parkside timeline). Brantwood II (4142 Parkside) completed 1999. Historic building rehab; original construction year not found. Timeline source seen only via search summary, not independently opened. An Inquirer obituary mentions a 2001 rehab of the Brentwood (43-unit brownstone), unresolved.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/brentwood/",
       "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
@@ -9089,13 +9093,14 @@
     "state": "Pennsylvania",
     "address": "630 Lawrence Ct,  Allentown,  PA 18102",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2024-12-19 (Harkins celebrates the grand opening of Bridgeside Estates)",
+    "timelineBoundary": "2024-12-19",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2024-12-19 from Harkins celebrates the grand opening of Bridgeside Estates (https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/). Phase I of Little Lehigh public housing redevelopment (50 units); replaced 1950s-60s era 76-unit public housing. Pennrose release also says December 2024.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
-      "https://www.pennrose.com/media/ofkaetyf/bridgeside-estates-2025-flyer.pdf"
+      "https://www.pennrose.com/media/ofkaetyf/bridgeside-estates-2025-flyer.pdf",
+      "https://harkinsbuilders.com/news/harkins-celebrates-the-grand-opening-of-bridgeside-estates/"
     ],
     "references": [
       {
@@ -9174,13 +9179,14 @@
     "state": "Maryland",
     "address": "901 Cherry Hill Road,  Baltimore,  MD 21225",
     "sourceUrl": "https://www.pennrose.com/apartments/maryland/cherry-hill-senior-manor/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: completion 2024-02-14 (Pennrose completes 2,500 affordable homes in Maryland)",
+    "timelineBoundary": "2024-02-14",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2024-02-14 from Pennrose completes 2,500 affordable homes in Maryland (https://devnew.pennrose.com/news-views/news/2024/pennrose-completes-2-500-affordable-homes-in-maryland/). Rehab/renovation completion announced by Pennrose Feb 14, 2024 (press release date, not necessarily the exact completion day). Original building constructed 2001; renovation of the 80-unit 62+ community added new roof, windows, flooring, HVAC.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/maryland/cherry-hill-senior-manor/",
-      "https://www.pennrose.com/media/komgpv5h/cherry-hill-pre-app-2020.pdf"
+      "https://www.pennrose.com/media/komgpv5h/cherry-hill-pre-app-2020.pdf",
+      "https://devnew.pennrose.com/news-views/news/2024/pennrose-completes-2-500-affordable-homes-in-maryland/"
     ],
     "references": [
       {
@@ -9260,14 +9266,15 @@
     "state": "New Jersey",
     "address": "1998 Route 18 North,  Old Bridge,  NJ 08857",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/chuck-costello-complex/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2006 (HUD LIHTC database (ArcGIS FeatureService))",
+    "timelineBoundary": "2006-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2006 from HUD LIHTC database (ArcGIS FeatureService) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). Two HUD records both give 2006. No press release found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/chuck-costello-complex/",
       "https://www.pennrose.com/media/30ckvcmd/chuck-costello-flyer_2025.pdf",
-      "https://www.pennrose.com/media/1kflbf2t/chuck-costello-pre-app-2022.pdf"
+      "https://www.pennrose.com/media/1kflbf2t/chuck-costello-pre-app-2022.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -9352,13 +9359,14 @@
     "state": "New Jersey",
     "address": "195 West Kinney Street,  Newark,  NJ 07103",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/city-view-landing/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2008 (HUD LIHTC database (ArcGIS FeatureServer): Scudder Homes Senior Urban Renewal, 195 W Kinney St)",
+    "timelineBoundary": "2008-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2008 from HUD LIHTC database (ArcGIS FeatureServer): Scudder Homes Senior Urban Renewal, 195 W Kinney St (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). Pennrose lists City View Landing Senior (62+) and City View Landing Family at the same address; 2008 applies to the 48-unit senior building (formerly Scudder Homes Senior). Family townhouse component date not found. Likely a Scudder Homes redevelopment.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/city-view-landing/",
-      "https://www.pennrose.com/media/mjshkamx/city-view-family-pre-app-2026.pdf"
+      "https://www.pennrose.com/media/mjshkamx/city-view-family-pre-app-2026.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -9446,13 +9454,14 @@
     "state": "Pennsylvania",
     "address": "3900 Haverford Avenue,  Philadelphia,  PA 19104",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/cloisters-iii/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2007 (Cloisters III - Affordable Housing Hub (LIHTC))",
+    "timelineBoundary": "2007-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2007 from Cloisters III - Affordable Housing Hub (LIHTC) (https://affordablehousinghub.org/housing/pennsylvania/philadelphia-county/philadelphia/cloisters-iii-37954-lihtc). Placed-in-service year only from third-party LIHTC listing (50 units, 9% LIHTC, HOME/CDBG). No press release found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/cloisters-iii/",
-      "https://www.pennrose.com/media/snclm5hc/pennrose-2024-2025-corporate-responsibility-report-final.pdf"
+      "https://www.pennrose.com/media/snclm5hc/pennrose-2024-2025-corporate-responsibility-report-final.pdf",
+      "https://affordablehousinghub.org/housing/pennsylvania/philadelphia-county/philadelphia/cloisters-iii-37954-lihtc"
     ],
     "references": [
       {
@@ -9531,13 +9540,14 @@
     "state": "Alabama",
     "address": "7600 Cottage Hill Road,  Mobile,  AL 36695",
     "sourceUrl": "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2018-05 (Cottage Hill Place - Capstone Building Corp. (project page))",
+    "timelineBoundary": "2018-05-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2018-05 from Cottage Hill Place - Capstone Building Corp. (project page) (https://capstonebuilding.com/projects/cottage-hill-place/). Confidence: medium. Contractor-reported construction completion (May 2018), not a ribbon-cutting or first-lease date. Operator page and MHA give no opening date. Not in HUD LIHTC DB under this name. Do not confuse with Cottage Hill Pointe (7959 Cottage Hill Rd, PIS 2003). First occupancy likely mid-2018; use 2018-05 as completion.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
-      "https://www.pennrose.com/media/ggvjwz20/cottage-hill-flyer_62026.pdf"
+      "https://www.pennrose.com/media/ggvjwz20/cottage-hill-flyer_62026.pdf",
+      "https://capstonebuilding.com/projects/cottage-hill-place/"
     ],
     "references": [
       {
@@ -9604,12 +9614,13 @@
     "state": "Pennsylvania",
     "address": "2231 Hamilton Avenue,  Willow Grove,  PA 19090",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/crest-manor/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: grand-opening 2018-06 (Crest Manor celebrates ribbon cutting (Pennrose, June 25, 2018))",
+    "timelineBoundary": "2018-06-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2018-06 from Crest Manor celebrates ribbon cutting (Pennrose, June 25, 2018) (https://devnew.pennrose.com/news-views/news/2018/2018-crest-manor-celebrates-ribbon-cutting/). Pennrose release dated 2018-06-25; Patch says grand opening 'on Monday' (June 25, 2018 was a Monday) but exact ceremony day not stated by source. Rehab/redevelopment of 1963 public housing (original built 1963); work began April 2016. Resident first move-in date not found.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/pennsylvania/crest-manor/"
+      "https://www.pennrose.com/apartments/pennsylvania/crest-manor/",
+      "https://devnew.pennrose.com/news-views/news/2018/2018-crest-manor-celebrates-ribbon-cutting/"
     ],
     "references": [],
     "notes": [
@@ -9670,13 +9681,14 @@
     "state": "New Jersey",
     "address": "25 Sawyer Avenue,  Eastampton,  NJ 08060",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/eastampton-town-center/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2002 (J. Kenny (US EPA Region 2), A pilot program to encourage construction of affordable and sustainable housing in New Jersey, WIT Transactions on Ecology and the Environment vol 63 (2003))",
+    "timelineBoundary": "2002-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2002 from J. Kenny (US EPA Region 2), A pilot program to encourage construction of affordable and sustainable housing in New Jersey, WIT Transactions on Ecology and the Environment vol 63 (2003) (https://www.witpress.com/Secure/elibrary/papers/ECO03/ECO03053FU1.pdf). Confidence: high. 100-unit (30 2BR/70 3BR) townhouse development, 25 acres, 25 Sawyer Ave. Tax credits awarded by HMFA June 13, 2000 (Appellate Div. affirmed Jan 15, 2002). Completed fall 2002 per EPA paper; Yelp also says established 2002. Exact first-lease day not found. The '37+63' phases in the 2025 township marketing plan are a later split of the same 100 units and do not change the opening.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/eastampton-town-center/",
-      "https://www.pennrose.com/media/uo0mdvil/eastampton-flyer_2025.pdf"
+      "https://www.pennrose.com/media/uo0mdvil/eastampton-flyer_2025.pdf",
+      "https://www.witpress.com/Secure/elibrary/papers/ECO03/ECO03053FU1.pdf"
     ],
     "references": [
       {
@@ -9747,13 +9759,14 @@
     "state": "New Jersey",
     "address": "1655 Park Boulevard,  Camden,  NJ 08103",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/faison-mews/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2006 (Camden history (dvrbs.camdenhistory.com) Parkside; HUD LIHTC)",
+    "timelineBoundary": "2006-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2006 from Camden history (dvrbs.camdenhistory.com) Parkside; HUD LIHTC (https://dvrbs.camdenhistory.com/camden/camdennj-parkside.htm). Announced 2004, construction began 2005, done 2006 (conversion/replacement of garden apartments). Third-party listing says 2003, conflicts.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/faison-mews/",
-      "https://www.pennrose.com/media/pvcialga/faison-mews-flyer-2023.pdf"
+      "https://www.pennrose.com/media/pvcialga/faison-mews-flyer-2023.pdf",
+      "https://dvrbs.camdenhistory.com/camden/camdennj-parkside.htm"
     ],
     "references": [
       {
@@ -9820,13 +9833,14 @@
     "state": "Pennsylvania",
     "address": "100 South Fourth Street,  Steelton,  PA 17113",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/felton-lofts/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2012 (HUD LIHTC database (ArcGIS FeatureServer): Felton Building Apts, S Third St, Steelton PA 17113)",
+    "timelineBoundary": "2012-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2012 from HUD LIHTC database (ArcGIS FeatureServer): Felton Building Apts, S Third St, Steelton PA 17113 (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). Rehab of historic Felton School campus (oldest building 1882, three school buildings) into 83 affordable units; 83 units matches Navarro & Wright/Quandel description; completion had been projected for Q1 2012. Match by unit count and zip, not by street address (HUD record lists South Third St). Exact month not found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/felton-lofts/",
-      "https://www.pennrose.com/media/ix2ctxar/felton-lofts-flyer_626.pdf"
+      "https://www.pennrose.com/media/ix2ctxar/felton-lofts-flyer_626.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -9973,14 +9987,15 @@
     "state": "New Jersey",
     "address": "69 Straight Street,  Paterson,  NJ 07501",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/freedom-village/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: grand-opening 2015-08 (NJHMFA press release Aug 14, 2015: Christie Administration Marks Grand Opening of Freedom Village in Paterson)",
+    "timelineBoundary": "2015-08-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2015-08 from NJHMFA press release Aug 14, 2015: Christie Administration Marks Grand Opening of Freedom Village in Paterson (https://www.nj.gov/dca/hmfa/about/pressreleases/2015/20150814.shtml). Phase I (King's Court at Freedom Village, 70 senior units) held its grand opening in August 2015 (release dated 2015-08-14 says officials 'recently' celebrated; exact ceremony day not stated). Phase II (Park's Crossing, 63 units) grand opening announced by Pennrose 2017-09-19.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/freedom-village/",
       "https://www.pennrose.com/media/kbrkkbdi/freedom-village-flyer_2025.pdf",
-      "https://www.pennrose.com/media/eylfhs0t/freedom-village-i-plus-ii-pre-app-2022.pdf"
+      "https://www.pennrose.com/media/eylfhs0t/freedom-village-i-plus-ii-pre-app-2022.pdf",
+      "https://www.nj.gov/dca/hmfa/about/pressreleases/2015/20150814.shtml"
     ],
     "references": [
       {
@@ -10056,14 +10071,15 @@
     "state": "Georgia",
     "address": "1000 South Armed Forces Blvd,  Warner Robins,  GA 31088",
     "sourceUrl": "https://www.pennrose.com/apartments/georgia/gateway-pointe/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: grand-opening 2019-11 (Pennrose Celebrates Grand Opening of Gateway Pointe I in Georgia)",
+    "timelineBoundary": "2019-11-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2019-11 from Pennrose Celebrates Grand Opening of Gateway Pointe I in Georgia (https://devnew.pennrose.com/news-views/news/2019/pennrose-celebrates-grand-opening-of-gateway-pointe-i-in-georgia/). Pennrose portfolio page says Phase I completed December 2019. Pennrose property page for 1000 S Armed Forces Blvd covers Phases I and II; Phase II (900 S Armed Forces) grand opening May 19, 2022. Exact day of 2019 ceremony not stated.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/georgia/gateway-pointe/",
       "https://www.pennrose.com/media/ya4dwlvp/gateway-pointe-flyer_62026.pdf",
-      "https://www.pennrose.com/portfolio/gateway-pointe-i-ii/"
+      "https://www.pennrose.com/portfolio/gateway-pointe-i-ii/",
+      "https://devnew.pennrose.com/news-views/news/2019/pennrose-celebrates-grand-opening-of-gateway-pointe-i-in-georgia/"
     ],
     "references": [
       {
@@ -10467,14 +10483,15 @@
     "state": "New Jersey",
     "address": "1450 Rahway Ave,  Avenel,  NJ 07001",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/greens-at-avenel/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2019-10-18 (NJHMFA Celebrates Opening of 101 New Apartments in Avenel)",
+    "timelineBoundary": "2019-10-18",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2019-10-18 from NJHMFA Celebrates Opening of 101 New Apartments in Avenel (https://www.nj.gov/dca/hmfa/about/pressreleases/2019/20191018.shtml). New construction on vacant lot. First move-ins expected late Oct 2019.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/greens-at-avenel/",
       "https://www.pennrose.com/media/hurb0li3/greens-at-avenel-flyer_2026.pdf",
-      "https://www.pennrose.com/media/zbghj5zc/greens-at-avenel-pre-app-2022.pdf"
+      "https://www.pennrose.com/media/zbghj5zc/greens-at-avenel-pre-app-2022.pdf",
+      "https://www.nj.gov/dca/hmfa/about/pressreleases/2019/20191018.shtml"
     ],
     "references": [
       {
@@ -10554,13 +10571,14 @@
     "state": "New Jersey",
     "address": "685 E. 34th Street,  Paterson,  NJ 07513",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/heritage-at-alexander-hamilton/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2011 (Alexander Hamilton Phase I (259 Alabama Ave, Paterson) - LIHTC listing)",
+    "timelineBoundary": "2011-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2011 from Alexander Hamilton Phase I (259 Alabama Ave, Paterson) - LIHTC listing (https://affordablehousinghub.org/housing/new-jersey/passaic-county/paterson/alexander-hamilton-phase-i-23777-lihtc). Confidence: medium. First phase (Phase I, 80 units, 259-275 Alabama Ave) broke ground Oct 22, 2009 (HMFA) and was in place by 23 May 2011 (HUD photo caption 'the first phase of 80 units'); LIHTC aggregator lists PIS 2011. Paterson Housing Authority update (mid-2014) says Phase I 'was completed over a year ago and is fully occupied'. Later phases: Phase III (50 units) grand opening announced by HMFA 21 Jul 2014 (MHN ribbon cutting ~28 Jul 2014); final Freedom Village Phase II opened 19 Sep 2017. Exact Phase I first-lease day not found; 2011 comes from an aggregator, not IRS/HUD primary data. If the pin should represent the whole development use Phase I (2011); if a dated event is required, the 2014 Phase III ribbon cutting is the best documented day.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/heritage-at-alexander-hamilton/",
-      "https://www.pennrose.com/media/vschdgp0/heritage-at-alexander-hamilton-flyer_2023.pdf"
+      "https://www.pennrose.com/media/vschdgp0/heritage-at-alexander-hamilton-flyer_2023.pdf",
+      "https://affordablehousinghub.org/housing/new-jersey/passaic-county/paterson/alexander-hamilton-phase-i-23777-lihtc"
     ],
     "references": [
       {
@@ -10635,14 +10653,15 @@
     "state": "New Jersey",
     "address": "62 Church Street,  Flemington,  NJ 08822",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/herman-e-kapp-senior-residences/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2005 (HUD LIHTC database (ArcGIS FeatureService))",
+    "timelineBoundary": "2005-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2005 from HUD LIHTC database (ArcGIS FeatureService) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). New construction, 59 units (NJ LIHTC list at novoco.com agrees: 2005). No ribbon-cutting date found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/herman-e-kapp-senior-residences/",
       "https://www.pennrose.com/media/3fanxr3u/herman-e-kapp-flyer_2026.pdf",
-      "https://www.pennrose.com/media/v1ngpxhf/herman-e-kapp-pre-app-2022.pdf"
+      "https://www.pennrose.com/media/v1ngpxhf/herman-e-kapp-pre-app-2022.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -10722,13 +10741,14 @@
     "state": "Connecticut",
     "address": "410 Asylum Street,  Hartford,  CT 06103",
     "sourceUrl": "https://www.pennrose.com/apartments/connecticut/hollander/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2009 (CT Mirror: In Hartford, a model for sustainable housing (2011); HUD LIHTC record Hollander Building)",
+    "timelineBoundary": "2009-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2009 from CT Mirror: In Hartford, a model for sustainable housing (2011); HUD LIHTC record Hollander Building (https://ctmirror.org/2011/11/07/hartford-model-sustainable-housing/). HUD LIHTC: HOLLANDER BUILDING, 410 Asylum St, YR_PIS 2009, 70 units. Rehab of 1926 office building by Common Ground (now Breaking Ground); 2009 reporting targeted an Aug 2009 completion. Exact month not found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/connecticut/hollander/",
-      "https://www.pennrose.com/media/ed5nwldo/hollander-flyer_2024.pdf"
+      "https://www.pennrose.com/media/ed5nwldo/hollander-flyer_2024.pdf",
+      "https://ctmirror.org/2011/11/07/hartford-model-sustainable-housing/"
     ],
     "references": [
       {
@@ -10803,13 +10823,14 @@
     "state": "Delaware",
     "address": "1400 Todds Lane,  Wilmington,  DE 19802",
     "sourceUrl": "https://www.pennrose.com/apartments/delaware/imani-village/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2022-08-16 (Delaware LIVE: Imani Village aims to end cycle of poverty (and Pennrose release Aug 16, 2022))",
+    "timelineBoundary": "2022-08-16",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2022-08-16 from Delaware LIVE: Imani Village aims to end cycle of poverty (and Pennrose release Aug 16, 2022) (https://delawarelive.com/imani-village-aims-to-end-cycle-of-poverty/). Phase I (74 mixed-income units) grand opening/ribbon cutting Tuesday Aug 16, 2022. WHYY reported first residents moving in over the preceding month. Later phases (II, III) opened afterward.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/delaware/imani-village/",
-      "https://www.pennrose.com/portfolio/imani-village/"
+      "https://www.pennrose.com/portfolio/imani-village/",
+      "https://delawarelive.com/imani-village-aims-to-end-cycle-of-poverty/"
     ],
     "references": [
       {
@@ -10974,13 +10995,14 @@
     "state": "Pennsylvania",
     "address": "1133 Hyatt Street,  Chester,  PA 19013",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/jefferis-square/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2013 (Affordable Housing Hub - Jefferis Square (LIHTC))",
+    "timelineBoundary": "2013-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2013 from Affordable Housing Hub - Jefferis Square (LIHTC) (https://affordablehousinghub.org/housing/pennsylvania/delaware-county/chester/jefferis-square-54809-lihtc). Two Hub entries (54809, 38856) both 2013, 36 units, matches Delaware County inventory's 36 units at 1133 Hyatt St. Likely a rehab (Pennrose describes 'newly renovated'). No news/ribbon-cutting found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/jefferis-square/",
-      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+      "https://affordablehousinghub.org/housing/pennsylvania/delaware-county/chester/jefferis-square-54809-lihtc"
     ],
     "references": [
       {
@@ -11055,12 +11077,13 @@
     "state": "Virginia",
     "address": "1600 Jefferson Avenue,  Newport News,  VA 23607",
     "sourceUrl": "https://www.pennrose.com/apartments/virginia/legacy-landing/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2025-06-05 (Newport News celebrates major milestone with ribbon cutting at Legacy Landing)",
+    "timelineBoundary": "2025-06-05",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2025-06-05 from Newport News celebrates major milestone with ribbon cutting at Legacy Landing (https://www.pennrose.com/news-views/news/2025/newport-news-celebrates-major-milestone-with-ribbon-cutting-at-legacy-landing). Phase I only (part of 155-unit plan, remaining work through Sept 2026). Pennrose release dated June 6, 2025; WHRO dated June 5, 2025. Former Ridley Place site.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/virginia/legacy-landing/"
+      "https://www.pennrose.com/apartments/virginia/legacy-landing/",
+      "https://www.pennrose.com/news-views/news/2025/newport-news-celebrates-major-milestone-with-ribbon-cutting-at-legacy-landing"
     ],
     "references": [],
     "notes": [
@@ -11125,13 +11148,14 @@
     "state": "Pennsylvania",
     "address": "100 Liberty House Lane,  Phoenixville,  PA 19460",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/liberty-house/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 1996 (Chester County Commissioners Approve $2.8M for Renovation of Liberty House in Phoenixville)",
+    "timelineBoundary": "1996-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1996 from Chester County Commissioners Approve $2.8M for Renovation of Liberty House in Phoenixville (https://www.chesco.org/CivicAlerts.aspx?AID=1514). Confidence: high. Original housing opening 1996 (month not found). Building itself dates to 1942 (Valley Forge General Hospital campus; sold 1976 to Valley Forge Christian College). $11.7M rehab kicked off 2024-05-21 with Bisnow (2024-05-22) saying completion 'in November' (year implied 2024) and county saying work runs through 2025; no completion/reopening announcement found, so rehab completion is not documented. If owner prefers rehab reopening, no verified date exists (estimate late 2024-2025).",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/liberty-house/",
-      "https://www.pennrose.com/media/w5ee5qb1/liberty-house-pre-app-2019.pdf"
+      "https://www.pennrose.com/media/w5ee5qb1/liberty-house-pre-app-2019.pdf",
+      "https://www.chesco.org/CivicAlerts.aspx?AID=1514"
     ],
     "references": [
       {
@@ -11215,13 +11239,14 @@
     "state": "New Jersey",
     "address": "101 Cedar Street,  Fort Lee,  NJ 07024",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/liberty-place-at-fort-lee/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2003 (HUD LIHTC database (ArcGIS FeatureService))",
+    "timelineBoundary": "2003-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2003 from HUD LIHTC database (ArcGIS FeatureService) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). 60 units; NJ LIHTC list also shows 2003. No exact date found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/liberty-place-at-fort-lee/",
-      "https://www.pennrose.com/media/frlj1w3z/liberty-place-at-fort-lee-flyer_2024.pdf"
+      "https://www.pennrose.com/media/frlj1w3z/liberty-place-at-fort-lee-flyer_2024.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -11296,13 +11321,14 @@
     "state": "New Jersey",
     "address": "116 Livingston Avenue,  New Brunswick,  NJ 08901",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/livingston-manor/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 1995 (HUD LIHTC database (ArcGIS FeatureServer): Livingston Manor, 116 Livingston Ave)",
+    "timelineBoundary": "1995-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1995 from HUD LIHTC database (ArcGIS FeatureServer): Livingston Manor, 116 Livingston Ave (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). After55 listing says built 1996 (weaker source). No ribbon-cutting coverage found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/livingston-manor/",
-      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -11369,14 +11395,15 @@
     "state": "New Jersey",
     "address": "2000 Route 18 North,  Old Bridge,  NJ 08857",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/maher-manor/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2005 (Maher Manor Old Bridge Senior Housing - Affordable Housing Hub (LIHTC))",
+    "timelineBoundary": "2005-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2005 from Maher Manor Old Bridge Senior Housing - Affordable Housing Hub (LIHTC) (https://affordablehousinghub.org/housing/new-jersey/middlesex-county/old-bridge/maher-manor-old-bridge-senior-housing-22745-lihtc). Low-to-moderate confidence: one rental listing site (after55) says built 2008; no completion announcement found. HUD-derived LIHTC PIS year 2005 preferred.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/maher-manor/",
       "https://www.pennrose.com/media/3pyb25cz/maher-manor-flyer_2026.pdf",
-      "https://www.pennrose.com/media/wmwi5jwk/maher-manor-pre-app-2022.pdf"
+      "https://www.pennrose.com/media/wmwi5jwk/maher-manor-pre-app-2022.pdf",
+      "https://affordablehousinghub.org/housing/new-jersey/middlesex-county/old-bridge/maher-manor-old-bridge-senior-housing-22745-lihtc"
     ],
     "references": [
       {
@@ -11456,14 +11483,15 @@
     "state": "New Jersey",
     "address": "40 Brubaker Lane,  Maple Shade,  NJ 08052",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/maple-shade-mews/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2004 (HUD LIHTC database record 'Maple Shade Senior Housing' (NJA20049032))",
+    "timelineBoundary": "2004-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2004 from HUD LIHTC database record 'Maple Shade Senior Housing' (NJA20049032) (https://affordablehousinghub.org/housing/new-jersey/burlington-county/maple-shade/maple-shade-senior-housing-22489-lihtc). Confidence: medium. HUD record is under former name 'Maple Shade Senior Housing' at the identical address 40 Brubaker Lane, 100 units. Rental aggregators give built 2005/2006 (lower weight). No grand-opening article found; month/day unknown.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/maple-shade-mews/",
       "https://www.pennrose.com/media/vgphvusd/maple-shade-mews-flyer_2025.pdf",
-      "https://www.pennrose.com/media/tk1naelw/maple-shade-mews-pre-app-2022.pdf"
+      "https://www.pennrose.com/media/tk1naelw/maple-shade-mews-pre-app-2022.pdf",
+      "https://affordablehousinghub.org/housing/new-jersey/burlington-county/maple-shade/maple-shade-senior-housing-22489-lihtc"
     ],
     "references": [
       {
@@ -11543,13 +11571,14 @@
     "state": "Pennsylvania",
     "address": "1721 - 1729 Marlton Ave,  Philadelphia,  PA 19104",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/marlton-residences/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 1999 (HUD LIHTC database record: MARLTON RESIDENCES, 1731 Marlton Ave, Philadelphia (YR_PIS 1999, YR_ALLOC 1997, 25 units))",
+    "timelineBoundary": "1999-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1999 from HUD LIHTC database record: MARLTON RESIDENCES, 1731 Marlton Ave, Philadelphia (YR_PIS 1999, YR_ALLOC 1997, 25 units) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20LIKE%20%27%25MARLTON%25%27&outFields=*&f=json). Confidence: medium. HUD record is for the 1721-1731 Marlton Ave rehab: 25 units matches Campbell Thomas Architects' project page (six 1890s Poth-built rowhouses rehabbed into 25 units; owners Marlton Housing Partnership & We The People With AIDS; CDBG, LIHTC, historic tax credits, FHLB Pittsburgh). Placed-in-service year is 1999, rehab/reopening of an older building; no month/day found. Building original construction late 19th century.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/marlton-residences/",
-      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20LIKE%20%27%25MARLTON%25%27&outFields=*&f=json"
     ],
     "references": [
       {
@@ -11712,13 +11741,14 @@
     "state": "Pennsylvania",
     "address": "326 North Walnut Street,  West Chester,  PA 19380",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/mary-taylor-house/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2011-03-16 (Mary Taylor House offers new digs for seniors (6abc Action News archive))",
+    "timelineBoundary": "2011-03-16",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2011-03-16 from Mary Taylor House offers new digs for seniors (6abc Action News archive) (https://6abc.com/archive/8017365/). Confidence: medium. 6abc archive page is dated March 16, 2011 (a Wednesday) and reports the grand opening 'on Wednesday', groundbreaking about a year earlier (c. March 2010); building nearly fully occupied at opening. Page dateline accepted as the article date; if it is wrong the opening is still spring 2011 or earlier. 2011 Edson award and listing 'built 2011' are consistent. 60-unit senior (62+) LEED-silver building, Pennrose + Hickman Friends Senior Community.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/mary-taylor-house/",
-      "https://www.pennrose.com/media/1mhdw0lf/mary-taylor-house-pre-app-2020.pdf"
+      "https://www.pennrose.com/media/1mhdw0lf/mary-taylor-house-pre-app-2020.pdf",
+      "https://6abc.com/archive/8017365/"
     ],
     "references": [
       {
@@ -11798,13 +11828,14 @@
     "state": "New Jersey",
     "address": "99 Leonard Avenue,  Hamilton,  NJ 08610",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/mccorristin-square/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2000 (HUD LIHTC database (ArcGIS FeatureService))",
+    "timelineBoundary": "2000-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2000 from HUD LIHTC database (ArcGIS FeatureService) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). HUD address is 75 Leonard Ave vs Pennrose 99 Leonard Ave; same name and street, treated as same property. Medium confidence.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/mccorristin-square/",
-      "https://www.pennrose.com/media/i2rje4jc/mccorristin-flyer_2026-updated.pdf"
+      "https://www.pennrose.com/media/i2rje4jc/mccorristin-flyer_2026-updated.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -11965,13 +11996,14 @@
     "state": "New Jersey",
     "address": "671 Dr. Martin Luther King Jr. Blvd.,  Newark,  NJ 07103",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/montgomery-heights/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2009 (HUD LIHTC database (ArcGIS FeatureServer): Brick Towers Phase I / Montgomery Heights, 671-683 MLK Blvd)",
+    "timelineBoundary": "2009-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2009 from HUD LIHTC database (ArcGIS FeatureServer): Brick Towers Phase I / Montgomery Heights, 671-683 MLK Blvd (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). Conflict: another HUD record 'Brick Towers/Montgomery Street' (671 MLK) shows YR_PIS 2010 with allocation 2008. This is Phase I of the Brick Towers replacement (Phase II = Aston Heights). Exact date not found; 2009-2010.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/montgomery-heights/",
-      "https://www.pennrose.com/media/axsasx22/montgomery-heights-pre-app-2026.pdf"
+      "https://www.pennrose.com/media/axsasx22/montgomery-heights-pre-app-2026.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -12055,13 +12087,14 @@
     "state": "Pennsylvania",
     "address": "100 Felicity Drive,  Pittsburgh,  PA 15237",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/north-hills-highlands/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2010 (Yardi Matrix: North Hills Highlands, 100 Felicity Drive)",
+    "timelineBoundary": "2010-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2010 from Yardi Matrix: North Hills Highlands, 100 Felicity Drive (https://www.yardimatrix.com/property-types/multifamily/pittsburgh/north-hills-highlands-100-felicity-drive-pa-15237--137616). Low confidence. Single commercial-database 'delivered 2010' for 97 units (Phase I 60 + Phase II 37 combined listing). Allegheny County Housing Authority-managed; no press release or LIHTC PIS year found; Phase I may predate Phase II.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/north-hills-highlands/",
-      "https://www.pennrose.com/media/ks3bgueo/north-hills-highlands-pre-app-2020.pdf"
+      "https://www.pennrose.com/media/ks3bgueo/north-hills-highlands-pre-app-2020.pdf",
+      "https://www.yardimatrix.com/property-types/multifamily/pittsburgh/north-hills-highlands-100-felicity-drive-pa-15237--137616"
     ],
     "references": [
       {
@@ -12317,13 +12350,14 @@
     "state": "Maryland",
     "address": "199 Bertina A Nick Way,  Annapolis,  MD 21401",
     "sourceUrl": "https://www.pennrose.com/apartments/maryland/obery-court-college-creek/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2010 (Obery Court Phase I - Annapolis LIHTC listing)",
+    "timelineBoundary": "2010-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2010 from Obery Court Phase I - Annapolis LIHTC listing (https://affordablehousinghub.org/housing/maryland/anne-arundel-county/annapolis/obery-court-phase-i-12887-lihtc). Confidence: medium. Three phases. Phase I (Obery Court, 50 units) placed in service 2010; Baltimore Sun 13 Nov 2011: Obery Court 'was demolished and rebuilt for about $10 million into brick townhouse-style apartments last year'. Phase II (College Creek) grand opening/ribbon cutting 14 Nov 2012 (Patch). Phase III (61 units) completed 2015 (Pando Alliance). Property as a whole therefore first opened 2010; no exact day found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/maryland/obery-court-college-creek/",
-      "https://www.pennrose.com/media/ndzd2dsv/obery-court-pre-app-2020.pdf"
+      "https://www.pennrose.com/media/ndzd2dsv/obery-court-pre-app-2020.pdf",
+      "https://affordablehousinghub.org/housing/maryland/anne-arundel-county/annapolis/obery-court-phase-i-12887-lihtc"
     ],
     "references": [
       {
@@ -12407,13 +12441,14 @@
     "state": "New Jersey",
     "address": "615 South Clinton Avenue,  Trenton,  NJ 08611",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/pellettieri-homes/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 1998 (HUD LIHTC database record PELLETTIERI HOMES (HUD_ID NJA19980075))",
+    "timelineBoundary": "1998-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1998 from HUD LIHTC database record PELLETTIERI HOMES (HUD_ID NJA19980075) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20like%20%27%25PELLETTIERI%25%27&outFields=*&f=json). Confidence: medium. LIHTC placed in service 1998 (credits allocated 1996). Adaptive reuse of an 1899 Roebling wire mill; first new senior housing in the Roebling complex (Clarke Caton Hintz). A Princeton Info article mentions 'senior housing built in the neighborhood in 1996' without naming the building, so occupancy could have started 1996-1998; HUD year used. No ribbon-cutting article found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/pellettieri-homes/",
-      "https://www.pennrose.com/media/ll4phzah/pellettieri-homes-flyer_2026-pennrose-0277.pdf"
+      "https://www.pennrose.com/media/ll4phzah/pellettieri-homes-flyer_2026-pennrose-0277.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20like%20%27%25PELLETTIERI%25%27&outFields=*&f=json"
     ],
     "references": [
       {
@@ -12484,13 +12519,14 @@
     "state": "Connecticut",
     "address": "20 Old Firehouse Road,  Naugatuck,  CT 06770",
     "sourceUrl": "https://www.pennrose.com/apartments/connecticut/platform-at-naugatuck/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2026-10 (Pennrose Kicks Off Parcel B Affordable Housing Development in Naugatuck, CT)",
+    "timelineBoundary": "2026-10-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2026-10 from Pennrose Kicks Off Parcel B Affordable Housing Development in Naugatuck, CT (https://www.pennrose.com/news-views/news/2025/pennrose-kicks-off-parcel-b-affordable-housing-development-in-naugatuck-ct). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Projected by Pennrose (Oct 2025 groundbreaking release, groundbreaking Oct 28 2025). Pennrose property page (checked Oct 2026) still says 'COMING FALL 2026 / Now Pre-Leasing'; no ribbon-cutting or first-lease found, so not yet confirmed open. 'Fall' mapped to 2026-10 (month is an approximation within Sep-Nov). Commercial Record (Nov 2025) instead says 'mid-2027' for the project overall (tied to the train station), so slippage possible. Phase I only; phases II/III have no dates.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/connecticut/platform-at-naugatuck/",
-      "https://www.pennrose.com/media/s2jnavyk/platform-at-naugatuck_92026.pdf"
+      "https://www.pennrose.com/media/s2jnavyk/platform-at-naugatuck_92026.pdf",
+      "https://www.pennrose.com/news-views/news/2025/pennrose-kicks-off-parcel-b-affordable-housing-development-in-naugatuck-ct"
     ],
     "references": [
       {
@@ -12569,13 +12605,14 @@
     "state": "Maryland",
     "address": "3136 Bel Pre Road,  Silver Spring,  MD 20906",
     "sourceUrl": "https://www.pennrose.com/apartments/maryland/pointe-view-at-aspen-hill/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2019-12-11 (Pointe View at Aspen Hill Celebrates Grand Opening (Harkins Builders))",
+    "timelineBoundary": "2019-12-11",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2019-12-11 from Pointe View at Aspen Hill Celebrates Grand Opening (Harkins Builders) (https://harkinsbuilders.com/news/pointe-view-aspen-hill-celebrates-grand-opening/). HUD LIHTC lists it as PARK VIEW AT ASPEN HILL, 3136 Bel Pre Rd, YR_PIS 2019. Pennrose release (2019) said first residents welcomed; move-in likely a bit earlier.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/maryland/pointe-view-at-aspen-hill/",
-      "https://www.pennrose.com/media/wtycdajn/pvah-2026-flyer.pdf"
+      "https://www.pennrose.com/media/wtycdajn/pvah-2026-flyer.pdf",
+      "https://harkinsbuilders.com/news/pointe-view-aspen-hill-celebrates-grand-opening/"
     ],
     "references": [
       {
@@ -12646,13 +12683,14 @@
     "state": "New Jersey",
     "address": "217 Somerset Street,  New Brunswick,  NJ 08901",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/providence-square/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 1993 (HUD LIHTC database (ArcGIS FeatureServer): Providence Square, 217 Somerset St)",
+    "timelineBoundary": "1993-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1993 from HUD LIHTC database (ArcGIS FeatureServer): Providence Square, 217 Somerset St (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). Allocation year 1991. Companion building 55 Harvey at Providence Square was dedicated 2010-11-22 (NJHMFA), not this property. Exact month not found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/providence-square/",
-      "https://www.pennrose.com/media/eddnt1hi/providence-square-flyer_2024.pdf"
+      "https://www.pennrose.com/media/eddnt1hi/providence-square-flyer_2024.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -12814,15 +12852,16 @@
     "state": "Virginia",
     "address": "7250 Nightingale Hill Lane,  Alexandria,  VA 22306",
     "sourceUrl": "https://www.pennrose.com/apartments/virginia/residences-at-north-hill/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2023-06-14 (FFXnow: New affordable housing development on Richmond Highway opens today)",
+    "timelineBoundary": "2023-06-14",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2023-06-14 from FFXnow: New affordable housing development on Richmond Highway opens today (https://www.ffxnow.com/2023/06/14/new-affordable-housing-development-on-richmond-highway-opens-today/). Ceremonial grand opening; some leasing/move-ins may have begun earlier (not documented). 279 units; Pennrose release dated June 15, 2023.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/virginia/residences-at-north-hill/",
       "https://www.pennrose.com/portfolio/residences-at-north-hill/",
       "https://www.pennrose.com/apartments/virginia/active-adult-residences-at-north-hill/",
-      "https://www.pennrose.com/media/tuwfbpsz/active-adult-building-11-2025.pdf"
+      "https://www.pennrose.com/media/tuwfbpsz/active-adult-building-11-2025.pdf",
+      "https://www.ffxnow.com/2023/06/14/new-affordable-housing-development-on-richmond-highway-opens-today/"
     ],
     "references": [
       {
@@ -12924,14 +12963,15 @@
     "state": "New Jersey",
     "address": "49 Catherine Street,  Red Bank,  NJ 07701",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/river-street-commons/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 1996 (Affordable Housing Hub - River Street Commons LIHTC)",
+    "timelineBoundary": "1996-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1996 from Affordable Housing Hub - River Street Commons LIHTC (https://affordablehousinghub.org/housing/new-jersey/monmouth-county/red-bank/river-street-commons-23046-lihtc). 62 units, 9% LIHTC, 55+; historic building preserved per NJ Future award. Year only; single aggregator source.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/river-street-commons/",
       "https://www.pennrose.com/media/xuelazl1/river-street-commons-flyer_2023.pdf",
-      "https://www.nj.gov/dca/dlps/hss/COAH/units.pdf"
+      "https://www.nj.gov/dca/dlps/hss/COAH/units.pdf",
+      "https://affordablehousinghub.org/housing/new-jersey/monmouth-county/red-bank/river-street-commons-23046-lihtc"
     ],
     "references": [
       {
@@ -13011,13 +13051,14 @@
     "state": "New Jersey",
     "address": "813 Ferry Ave.,  Camden,  NJ 08104",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/roosevelt-manor/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2009-07-14 (NJ/NAHRO newsletter, September 2009: Camden's Roosevelt Manor Better Than Ever)",
+    "timelineBoundary": "2009-07-14",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2009-07-14 from NJ/NAHRO newsletter, September 2009: Camden's Roosevelt Manor Better Than Ever (http://s3images.coroflot.com/user_files/individual_files/430354_0lKTiQc109bwwPIZ9htdgAT9W.pdf). Confidence: medium. Year (2009) inferred from the newsletter's September 2009 issue; July 14 is the CHA's unveiling of the rebuilt HOPE VI development as a whole (original 1954 development demolished 2007). The pin's address 813 Ferry Ave is Phase 12 (70 tax-credit units, HUD PIS 2009); Phase 7 PIS 2008 so individual phases leased earlier in 2008-2009 and the first units of the rebuilt community may predate the unveiling. Original Roosevelt Manor opened 1954.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/roosevelt-manor/",
-      "https://www.pennrose.com/media/0hscuqn0/roosevelt-manor-flyer-2024.pdf"
+      "https://www.pennrose.com/media/0hscuqn0/roosevelt-manor-flyer-2024.pdf",
+      "http://s3images.coroflot.com/user_files/individual_files/430354_0lKTiQc109bwwPIZ9htdgAT9W.pdf"
     ],
     "references": [
       {
@@ -13096,13 +13137,14 @@
     "state": "New Jersey",
     "address": "100 Rider Avenue,  Trenton,  NJ 08609",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/rush-crossing/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2014-06-06 (Christie Administration Marks Grand Opening of Rush Crossing in Trenton)",
+    "timelineBoundary": "2014-06-06",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2014-06-06 from Christie Administration Marks Grand Opening of Rush Crossing in Trenton (https://nj.gov/dca/hmfa/about/pressreleases/2014/approved/20140606.shtml). HMFA release dated June 6, 2014 announcing grand opening; 204-unit redevelopment of former Carl Miller Homes. A secondary source says construction was completed end of July 2014; ceremony date taken from release date.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/rush-crossing/",
-      "https://www.pennrose.com/media/xlteg10m/rush-crossing-flyer_2026.pdf"
+      "https://www.pennrose.com/media/xlteg10m/rush-crossing-flyer_2026.pdf",
+      "https://nj.gov/dca/hmfa/about/pressreleases/2014/approved/20140606.shtml"
     ],
     "references": [
       {
@@ -13181,13 +13223,14 @@
     "state": "Pennsylvania",
     "address": "3601 Olive Street, Philadelphia, PA 19104",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/spencers-place/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2007 (HUD LIHTC database (ArcGIS FeatureService))",
+    "timelineBoundary": "2007-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2007 from HUD LIHTC database (ArcGIS FeatureService) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). INFERRED: Pennrose's Spencer's Place page gives 3900 Haverford Ave (townhomes at 3601-3619 Olive St) and leasing contact cloisters@pennrose.com, matching Cloisters III. No source names Spencer's Place directly. Medium-low confidence.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/spencers-place/",
-      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -13354,14 +13397,15 @@
     "state": "Alabama",
     "address": "1700 Balch Road,  Madison,  AL 35757",
     "sourceUrl": "https://www.pennrose.com/apartments/alabama/stoneridge-villas/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: grand-opening 2019-09 (Pennrose Celebrates Grand Opening of Stoneridge Villas Phase 1 (2019-09-24))",
+    "timelineBoundary": "2019-09-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2019-09 from Pennrose Celebrates Grand Opening of Stoneridge Villas Phase 1 (2019-09-24) (https://pennrose.com/news-views/news/2019/2019-pennrose-celebrates-grand-opening-of-stoneridge-villas-phase-1-in-huntsville-alabama). Phase I (80 units) grand opening Sept 2019; HUD LIHTC YR_PIS 2019 (record 1730 Balch Rd). Phase II (65 units) completed 2022, grand opening June 14, 2023 (release date). Exact day of Phase I event not stated; release dated 2019-09-24.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/alabama/stoneridge-villas/",
       "https://www.pennrose.com/media/n0djzvv3/stoneridge-villas-iplusii-flyer_62026.pdf",
-      "https://www.pennrose.com/media/stql5lvs/stoneridge-villas-pre-app-2023.pdf"
+      "https://www.pennrose.com/media/stql5lvs/stoneridge-villas-pre-app-2023.pdf",
+      "https://pennrose.com/news-views/news/2019/2019-pennrose-celebrates-grand-opening-of-stoneridge-villas-phase-1-in-huntsville-alabama"
     ],
     "references": [
       {
@@ -13437,13 +13481,14 @@
     "state": "Rhode Island",
     "address": "55 George M Cohan Boulevard,  Providence,  RI 02903",
     "sourceUrl": "https://www.pennrose.com/apartments/rhode-island/tempo-tandem/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2025-04-08 (195 District: Tempo Building Ribbon Cutting & Tandem Groundbreaking)",
+    "timelineBoundary": "2025-04-08",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2025-04-08 from 195 District: Tempo Building Ribbon Cutting & Tandem Groundbreaking (https://www.195district.com/tempo-building-ribbon-cutting-tandem-groundbreaking/). Tempo (66 units) ribbon cutting April 8, 2025 (NEF write-up April 15, 2025 confirms April 2025). Tandem (61 units) grand opening around Aug 20, 2026 (Pennrose release dated Aug 21, 2026). Date given is first building opening.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/rhode-island/tempo-tandem/",
-      "https://www.pennrose.com/media/ateok55z/tandem-now-leasing-flyer_92026.pdf"
+      "https://www.pennrose.com/media/ateok55z/tandem-now-leasing-flyer_92026.pdf",
+      "https://www.195district.com/tempo-building-ribbon-cutting-tandem-groundbreaking/"
     ],
     "references": [
       {
@@ -13522,14 +13567,15 @@
     "state": "Maryland",
     "address": "901 Druid Park Lake Drive,  Baltimore,  MD 21217",
     "sourceUrl": "https://www.pennrose.com/apartments/maryland/the-chateau-the-riviera/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2000 (Reservoir Hill ready to glow (Baltimore Sun, June 17, 2001))",
+    "timelineBoundary": "2000-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2000 from Reservoir Hill ready to glow (Baltimore Sun, June 17, 2001) (https://www.baltimoresun.com/2001/06/17/reservoir-hill-ready-to-glow/). Confidence: low. Date is the Pennrose rehab completion of the Riviera (summer 2000, per June 2001 Sun article; a tenant review says it reopened 2001). Originally built 1915 (Riviera). Chateau's separate rehab/reopening date not found, so the combined 101-unit listing is dated by the Riviera rehab only; Pennrose's own page says only 'recently renovated' and a later, undated renovation is mentioned by tenants. Use 2000 as the rehab reopening year.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/maryland/the-chateau-the-riviera/",
       "https://www.pennrose.com/media/tgjo2ucs/2023-chateau-riviera-flyer-60percent-ami-and-up.pdf",
-      "https://www.pennrose.com/media/i2kh510y/chateau-and-riviera-pre-app-2020.pdf"
+      "https://www.pennrose.com/media/i2kh510y/chateau-and-riviera-pre-app-2020.pdf",
+      "https://www.baltimoresun.com/2001/06/17/reservoir-hill-ready-to-glow/"
     ],
     "references": [
       {
@@ -13609,14 +13655,15 @@
     "state": "Virginia",
     "address": "2800 Jefferson Avenue,  Newport News,  VA 23607",
     "sourceUrl": "https://www.pennrose.com/apartments/virginia/the-lift-rise-on-jefferson/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2022-12-08 (Newport News opens first phase of Choice Neighborhood housing)",
+    "timelineBoundary": "2022-12-08",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2022-12-08 from Newport News opens first phase of Choice Neighborhood housing (https://www.pennrose.com/news-views/news/2022/newport-news-opens-first-phase-of-choice-neighborhood-housing). Ribbon cutting Dec 8, 2022 for Phase I (81 apts + townhomes). WAVY said move-ins from early 2023. Virginia Business reported Breeden finished construction Jan 2024 (likely Phase II/full completion).",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/virginia/the-lift-rise-on-jefferson/",
       "https://www.pennrose.com/media/1mfnlng5/lift-and-rise-on-jefferson-now-leasing.pdf",
-      "https://www.pennrose.com/portfolio/the-lift-and-rise-on-jefferson/"
+      "https://www.pennrose.com/portfolio/the-lift-and-rise-on-jefferson/",
+      "https://www.pennrose.com/news-views/news/2022/newport-news-opens-first-phase-of-choice-neighborhood-housing"
     ],
     "references": [
       {
@@ -13700,13 +13747,14 @@
     "state": "Pennsylvania",
     "address": "15 Leopard Road,  Berwyn,  PA 19312",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/trinity-house/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: other 1981 (Trinity House - 15 Leopard Rd Berwyn PA (listing / property records via search))",
+    "timelineBoundary": "1981-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1981 from Trinity House - 15 Leopard Rd Berwyn PA (listing / property records via search) (https://www.apartmentfinder.com/Pennsylvania/Berwyn-Apartments/Trinity-House-Apartments). Confidence: low. Only a year-built figure (1981) surfaced, from commercial listing/property-record sites; no HUD 202 record, news item, sponsor or ribbon cutting found (HUD multifamily DB and Chester County deed not reachable). Pennrose page has no history. Treat as year-built estimate, not an opening date; no month/day exists in sources checked.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/trinity-house/",
-      "https://www.huduser.gov/datasets/weatherize/Qualified%20Assisted%20Programs%20Weatherization%20Eligible%202009.pdf"
+      "https://www.huduser.gov/datasets/weatherize/Qualified%20Assisted%20Programs%20Weatherization%20Eligible%202009.pdf",
+      "https://www.apartmentfinder.com/Pennsylvania/Berwyn-Apartments/Trinity-House-Apartments"
     ],
     "references": [
       {
@@ -13778,13 +13826,14 @@
     "state": "New Jersey",
     "address": "111 Truman Dr S,  Edison,  NJ 08817",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/truman-square/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2021-11-12 (Pennrose: Grand Opening of Veterans Housing at Former Army Camp Kilmer Base (Nov 15, 2021))",
+    "timelineBoundary": "2021-11-12",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2021-11-12 from Pennrose: Grand Opening of Veterans Housing at Former Army Camp Kilmer Base (Nov 15, 2021) (https://www.pennrose.com/news-views/news/2021/grand-opening-of-veterans-housing-at-former-army-camp-kilmer-base). Day from Greater Media News report (cj.gmnews.com/?p=439479) quoting the Nov 15, 2021 release. Phase I groundbreaking May 15, 2019; phased, so earlier Phase I lease-up possible.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/truman-square/",
-      "https://www.pennrose.com/media/gvbnmyp0/truman-square-flyer_2025.pdf"
+      "https://www.pennrose.com/media/gvbnmyp0/truman-square-flyer_2025.pdf",
+      "https://www.pennrose.com/news-views/news/2021/grand-opening-of-veterans-housing-at-former-army-camp-kilmer-base"
     ],
     "references": [
       {
@@ -13859,13 +13908,14 @@
     "state": "Pennsylvania",
     "address": "1500 Christian Street, Philadelphia, PA 19146",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/universal-court-i/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 1999 (HUD LIHTC database record UNIVERSAL COURT I (HUD_ID PAA19990260))",
+    "timelineBoundary": "1999-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1999 from HUD LIHTC database record UNIVERSAL COURT I (HUD_ID PAA19990260) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20like%20%27%25UNIVERSAL%20COURT%25%27&outFields=*&f=json). Confidence: low. Name match only: Pennrose lists 800 S 13th St (listings also say 1500 Christian / 1601 Federal); HUD record is 913 S 15th, 32 units; sibling records Universal Courts II (800 S 16th, PIS 2000, 19 units) and a 'Universal Courts I' (19 units, PIS unknown 8888). Universal Companies began Universal Court in the 1990s (Wikipedia). 1999 is the best-supported single year but address match unverified; no dedication article found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/universal-court-i/",
-      "https://www.apartments.com/universal-court-1-philadelphia-pa/qkk1d8y/"
+      "https://www.apartments.com/universal-court-1-philadelphia-pa/qkk1d8y/",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20like%20%27%25UNIVERSAL%20COURT%25%27&outFields=*&f=json"
     ],
     "references": [
       {
@@ -13945,13 +13995,14 @@
     "state": "Pennsylvania",
     "address": "3434 Vista Lane,  Upland,  PA 19015",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/upland-estates/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: other 2007 (Upland Estates rental listing (year built 2007); HUD LIHTC record PAA00000267)",
+    "timelineBoundary": "2007-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2007 from Upland Estates rental listing (year built 2007); HUD LIHTC record PAA00000267 (https://www.apartmentfinder.com/Pennsylvania/Upland-Apartments/Upland-Estates-Apartments). Confidence: low. No grand-opening or press coverage found. HUD allocation year is 2004 and placed-in-service is the placeholder 8888, so the true PIS is unknown; 2007 comes only from rental-listing 'built' fields (aggregators, low weight). The prior '2004' was the allocation year, not opening. Plausible range 2005-2007. PHFA inventory (7/30/2026) confirms 50 units, LIHTC $768,802 + PennHOMES, Pennrose owner rep and manager at 3434 Vista Ln. Recommend year 2007 only if a low-confidence year is acceptable; otherwise treat as unverified.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/upland-estates/",
-      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+      "https://www.apartmentfinder.com/Pennsylvania/Upland-Apartments/Upland-Estates-Apartments"
     ],
     "references": [
       {
@@ -14113,13 +14164,14 @@
     "state": "Pennsylvania",
     "address": "3226 Clifford Street,  Philadelphia,  PA 19121",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/vernon-house/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2005 (HUD LIHTC database record: VERNON HOUSE, 3228 Clifford St, Philadelphia (YR_PIS 2005, YR_ALLOC 2003, 68 units))",
+    "timelineBoundary": "2005-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2005 from HUD LIHTC database record: VERNON HOUSE, 3228 Clifford St, Philadelphia (YR_PIS 2005, YR_ALLOC 2003, 68 units) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20LIKE%20%27%25VERNON%20HOUSE%25%27&outFields=*&f=json). Confidence: medium. Original construction 1909 (Plaza Apartments, Sauer & Hahn). Rehabbed as 62+ senior housing; HUD says placed in service 2005 (allocation 2003). NRHP listing Feb 15, 2005 and nomination prepared April 2004 are consistent with a 2005 reopening. No month/day found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/vernon-house/",
-      "https://www.pennrose.com/media/snclm5hc/pennrose-2024-2025-corporate-responsibility-report-final.pdf"
+      "https://www.pennrose.com/media/snclm5hc/pennrose-2024-2025-corporate-responsibility-report-final.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20LIKE%20%27%25VERNON%20HOUSE%25%27&outFields=*&f=json"
     ],
     "references": [
       {
@@ -14186,15 +14238,16 @@
     "state": "Massachusetts",
     "address": "101 Nauset Green Way,  Eastham,  MA 02642",
     "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/village-at-nauset-green/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: first-lease 2020-01-21 (Pennrose welcomes first residents to Village at Nauset Green in Eastham)",
+    "timelineBoundary": "2020-01-21",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2020-01-21 from Pennrose welcomes first residents to Village at Nauset Green in Eastham (https://devnew.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/). Release dated Jan 21, 2020; first residents moving in around then (January 2020). Groundbreaking Dec 2018.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/massachusetts/village-at-nauset-green/",
       "https://www.pennrose.com/media/vh3mbsip/village-at-nauset-green_2026.pdf",
       "https://www.pennrose.com/media/p43ln4g1/village-at-nauset-green-pre-app-2024.pdf",
-      "https://www.pennrose.com/portfolio/village-at-nauset-green/"
+      "https://www.pennrose.com/portfolio/village-at-nauset-green/",
+      "https://devnew.pennrose.com/news-views/news/2020/2020-pennrose-welcomes-first-residents-to-village-at-nauset-green-in-eastham/"
     ],
     "references": [
       {
@@ -14287,10 +14340,10 @@
     "state": "Connecticut",
     "address": "99 Park River Drive,  Hartford,  CT 06112",
     "sourceUrl": "https://www.pennrose.com/apartments/connecticut/village-at-park-river/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2020 (Village at Park River - Pennrose portfolio)",
+    "timelineBoundary": "2020-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2020 from Village at Park River - Pennrose portfolio (https://www.pennrose.com/portfolio/village-at-park-river/). Six-phase redevelopment of the former Westbrook Village (post-war public housing). Phase I completed Fall 2020 (first new residents); Phase IV Spring 2023; final phase Heights (34 Park River Dr) later. Date is season-level only; reported as year.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/connecticut/village-at-park-river/",
       "https://www.pennrose.com/portfolio/village-at-park-river/",
@@ -14579,13 +14632,14 @@
     "state": "Pennsylvania",
     "address": "2001 N. 54th Street,  Philadelphia,  PA 19131",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/wynne-senior-residences/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: grand-opening 2017-05 (WORC (St. Joseph's Univ.) - Wynne Senior Residences)",
+    "timelineBoundary": "2017-05-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2017-05 from WORC (St. Joseph's Univ.) - Wynne Senior Residences (https://sites.sju.edu/worc/?p=1335). HUD LIHTC: WYNNE SENIOR RESIDENCES YR_PIS 2017. Single local source for month.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/wynne-senior-residences/",
-      "https://www.pennrose.com/portfolio/wynne-senior-residences/"
+      "https://www.pennrose.com/portfolio/wynne-senior-residences/",
+      "https://sites.sju.edu/worc/?p=1335"
     ],
     "references": [
       {
@@ -14717,12 +14771,13 @@
     "state": "Wyoming",
     "address": "90 Virginian Lane,  Jackson,  WY 83001",
     "sourceUrl": "https://www.pennrose.com/apartments/wyoming/90-virginian-lane/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: planning 2025-02-10 (Town, County debate details to Virginian workforce housing project (Buckrail, Feb 10, 2025))",
+    "timelineBoundary": "2025-02-10",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2025-02-10 from Town, County debate details to Virginian workforce housing project (Buckrail, Feb 10, 2025) (https://buckrail.com/town-county-debate-details-to-virginian-workforce-housing-project/). Latest milestone: groundbreaking slated for 2026. No completion or occupancy date was ever published, and on July 14, 2026 the County and Town voted to end the Pennrose partnership.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/wyoming/90-virginian-lane/"
+      "https://www.pennrose.com/apartments/wyoming/90-virginian-lane/",
+      "https://buckrail.com/town-county-debate-details-to-virginian-workforce-housing-project/"
     ],
     "references": [],
     "notes": [
@@ -14769,12 +14824,13 @@
     "state": "New York",
     "address": "150 Smith Street,  Newburgh,  NY 12550",
     "sourceUrl": "https://www.pennrose.com/apartments/new-york/bourne-kenney/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2028-03 (The Bourne Apartments - Resident Meeting, April 6, 2026 (Pennrose / Contour Housing Partners))",
+    "timelineBoundary": "2028-03-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2028-03 from The Bourne Apartments - Resident Meeting, April 6, 2026 (Pennrose / Contour Housing Partners) (https://www.pennrose.com/media/f4ue1unk/bourne-and-kenney-resident-meeting-2026-04-06.pdf). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Existing occupied 205-unit property (Bourne tower 150 Smith St, reported built 1954; Kenney garden apts reported built 1965 - listing sites, low weight; prior LIHTC rehab late 1990s/PIS 2000 per Pennrose deck and LIHTC database). The only forward date is Pennrose/Contour's April 6, 2026 resident-meeting schedule: acquisition closing and construction start August 2026 (PILOT approved by Newburgh council 13 Apr 2026, 7-0), tenant-occupied rehab complete March 2028. This is rehab completion, not a first opening; if the pin needs an original opening date, 1954 (Bourne) is the only sourced figure but low confidence.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/new-york/bourne-kenney/"
+      "https://www.pennrose.com/apartments/new-york/bourne-kenney/",
+      "https://www.pennrose.com/media/f4ue1unk/bourne-and-kenney-resident-meeting-2026-04-06.pdf"
     ],
     "references": [],
     "notes": [
@@ -14812,14 +14868,15 @@
     "state": "Tennessee",
     "address": "460 South Lauderdale Street,  Memphis,  TN 38126",
     "sourceUrl": "https://www.pennrose.com/apartments/tennessee/cleaborn-pointe-at-heritage-landing-senior/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2014 (After55 - Cleaborn Pointe at Heritage Senior Apartments)",
+    "timelineBoundary": "2014-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2014 from After55 - Cleaborn Pointe at Heritage Senior Apartments (https://after55.com/tn/memphis/cleaborn-pointe-at-heritage-senior-apartments/fhsvgrv). LOW CONFIDENCE: single third-party listing site; no press release/ribbon cutting found. 84-unit senior building on former Cleaborn Homes site (HOPE VI FY2009, $22M; Cleaborn Homes demolished from 2011).",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/tennessee/cleaborn-pointe-at-heritage-landing-senior/",
       "https://www.pennrose.com/media/rjshb2jm/cleaborn-senior-flyer_2026.pdf",
-      "https://www.pennrose.com/media/qwhoraay/cleaborn-pointe-senior-pre-app-2021.pdf"
+      "https://www.pennrose.com/media/qwhoraay/cleaborn-pointe-senior-pre-app-2021.pdf",
+      "https://after55.com/tn/memphis/cleaborn-pointe-at-heritage-senior-apartments/fhsvgrv"
     ],
     "references": [
       {
@@ -14885,13 +14942,14 @@
     "state": "Pennsylvania",
     "address": "170 Persimmon Lane,  Phoenixville,  PA 19460",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2013-08 (Affordable housing opens doors in Phoenixville (Philadelphia Inquirer, Dec 24, 2013))",
+    "timelineBoundary": "2013-08-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2013-08 from Affordable housing opens doors in Phoenixville (Philadelphia Inquirer, Dec 24, 2013) (https://inquirer.com/philly/news/20131225_Affordable_housing_opens_doors_in_Phoenixville.html). Then called Fairview Village (renamed Don Coppedge Village). Redevelopment of Chester County Housing Authority public housing; 36 units, $10.8M. Fully occupied by early Nov 2013.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
-      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+      "https://inquirer.com/philly/news/20131225_Affordable_housing_opens_doors_in_Phoenixville.html"
     ],
     "references": [
       {
@@ -14948,13 +15006,14 @@
     "state": "Maryland",
     "address": "705 Dover Street,  Easton,  MD 21601",
     "sourceUrl": "https://www.pennrose.com/apartments/maryland/doverbrook/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2025-11-07 (Pennrose and Housing Commission of Talbot Celebrate Doverbrook Apartments Grand Opening)",
+    "timelineBoundary": "2025-11-07",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2025-11-07 from Pennrose and Housing Commission of Talbot Celebrate Doverbrook Apartments Grand Opening (https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/). Pennrose page dated Nov 7, 2025 (agency repost shows 'Nov 06'; Daily Record Nov 12, 2025 says 'recently celebrated'). Revitalization replaced a 40-year-old 50-unit public housing community; 64 units. Day may be Nov 6 or 7.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/maryland/doverbrook/",
-      "https://www.pennrose.com/media/wnyphqol/doverbrook-pre-app-2025_v2.pdf"
+      "https://www.pennrose.com/media/wnyphqol/doverbrook-pre-app-2025_v2.pdf",
+      "https://www.pennrose.com/news-views/news/2025/pennrose-and-housing-commission-of-talbot-celebrate-doverbrook-apartments-grand-opening/"
     ],
     "references": [
       {
@@ -15020,13 +15079,14 @@
     "state": "Pennsylvania",
     "address": "4349 Ridge Avenue,  Philadelphia,  PA 19129",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/falls-ridge/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: placed-in-service 2003 (HUD LIHTC database record SCHUYLKILL FALLS (HUD_ID PAA20030145) / Inquirer 2007-07-13)",
+    "timelineBoundary": "2003-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2003 from HUD LIHTC database record SCHUYLKILL FALLS (HUD_ID PAA20030145) / Inquirer 2007-07-13 (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20like%20%27%25SCHUYLKILL%20FALLS%25%27&outFields=*&f=json). Confidence: low. Falls Ridge = HOPE VI redevelopment of Schuylkill Falls (HUD grant 1997); 135 rental units (50 senior midrise + 85 family) match the HUD 135-unit record, placed in service 2003 (phase II homeownership finished Aug 2007). Pennrose page address (4349 Ridge Ave) differs from HUD (4409 Ridge Ave). The separate 96-unit Pennrose building proposed 2015 on the vacant Merrick/Ridge lot is not this property. No ribbon-cutting article found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/falls-ridge/",
-      "https://www.pha.phila.gov/housing/public-housing/about-developments/family-developments/"
+      "https://www.pha.phila.gov/housing/public-housing/about-developments/family-developments/",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20like%20%27%25SCHUYLKILL%20FALLS%25%27&outFields=*&f=json"
     ],
     "references": [
       {
@@ -15083,10 +15143,10 @@
     "state": "Pennsylvania",
     "address": "730 Byberry Road,  Philadelphia,  PA 19116",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/fop-senior/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: other 1968 (FOP Senior | Pennrose)",
+    "timelineBoundary": "1968-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 1968 from FOP Senior | Pennrose (https://www.pennrose.com/apartments/pennsylvania/fop-senior/). Confidence: medium. Original development year 1968 per operator (other sources 1969/1971). No HUD LIHTC record under this name. $24M rehab launched Dec 2024 with projected completion spring 2026 (Pennrose); no completion confirmation found as of Oct 2026, so rehab reopening date unknown. Pennrose property page shows waiting list 12/5/24-1/4/25. PHFA inventory (7/30/2026) lists 106 units, PHFA primary funding $3.2M.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/fop-senior/"
     ],
@@ -15135,12 +15195,13 @@
     "state": "Georgia",
     "address": "199 Grove Way,  Roswell,  GA 30075",
     "sourceUrl": "https://www.pennrose.com/apartments/georgia/gates-at-waller-park/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2027-02 (Roswell Housing Authority Redevelopment Phase I Groundbreaking (Pennrose, Oct 31, 2025))",
+    "timelineBoundary": "2027-02-28",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2027-02 from Roswell Housing Authority Redevelopment Phase I Groundbreaking (Pennrose, Oct 31, 2025) (https://www.pennrose.com/news-views/news/2025/roswell-housing-authority-redevelopment-phase-i-groundbreaking). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Projected by Pennrose in its Oct 31, 2025 press release (groundbreaking held Oct 30, 2025); Appen Media reported completion about 16 months after construction start (approx. Feb 2027), consistent with Pennrose's 'early 2027'. 102 units (99 one-bed, 3 two-bed) on former Pelfrey Pines site; Phase II (102 more) later. No later revision found.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/georgia/gates-at-waller-park/"
+      "https://www.pennrose.com/apartments/georgia/gates-at-waller-park/",
+      "https://www.pennrose.com/news-views/news/2025/roswell-housing-authority-redevelopment-phase-i-groundbreaking"
     ],
     "references": [],
     "notes": [
@@ -15178,12 +15239,13 @@
     "state": "District of Columbia",
     "address": "203 M Street Southwest,  Washington DC,  DC 20024",
     "sourceUrl": "https://www.pennrose.com/apartments/washington-dc/greenleaf-redevelopment/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: planning 2022-04-21 (Greenleaf Redevelopment Inches Forward (Hill Rag, Apr 21, 2022))",
+    "timelineBoundary": "2022-04-21",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2022-04-21 from Greenleaf Redevelopment Inches Forward (Hill Rag, Apr 21, 2022) (https://www.hillrag.com/2022/04/21/greenleaf-redevelopment-inches-forward/). Published phase starts only (Phase One 2023, Phase Two 2025, later blocks 2028-2032); no completion or first-delivery date. As of October 2024 the development agreement was unsigned and the PUD not filed.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/washington-dc/greenleaf-redevelopment/"
+      "https://www.pennrose.com/apartments/washington-dc/greenleaf-redevelopment/",
+      "https://www.hillrag.com/2022/04/21/greenleaf-redevelopment-inches-forward/"
     ],
     "references": [],
     "notes": [
@@ -15230,12 +15292,13 @@
     "state": "New York",
     "address": "30 Liberty Street,  Haverstraw,  NY 10927",
     "sourceUrl": "https://www.pennrose.com/apartments/new-york/haverstraw/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2028-12 (Haverstraw Chair Factory Redevelopment Project - Modified General Project Plan (Empire State Development, adopted Jan 15, 2026, affirmed as modified Feb 19, 2026))",
+    "timelineBoundary": "2028-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2028-12 from Haverstraw Chair Factory Redevelopment Project - Modified General Project Plan (Empire State Development, adopted Jan 15, 2026, affirmed as modified Feb 19, 2026) (https://esd.ny.gov/sites/default/files/media/document/VI-A-Village-of-Haverstraw-Chair-Factory-Redevelopment-Project-Exhibit-1-Modified-GPP.pdf). Not yet open: this is the projected opening, not a confirmed date. Confidence: low. Not built. ESD GPP (Feb 2026) projects construction start June 2026 and completion of all but the hotel by end of Dec 2028 (450 units, ~$310-340M). Developer said in Feb 2026 build-out would take ~3.5 years from a summer 2026 groundbreaking, which would put full completion nearer 2030; a confirmed groundbreaking was not found as of Oct 2026. Large multi-phase project so first residents likely earlier than final completion; treat 2028-12 as the agency-stated full-completion date and low confidence.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/new-york/haverstraw/"
+      "https://www.pennrose.com/apartments/new-york/haverstraw/",
+      "https://esd.ny.gov/sites/default/files/media/document/VI-A-Village-of-Haverstraw-Chair-Factory-Redevelopment-Project-Exhibit-1-Modified-GPP.pdf"
     ],
     "references": [],
     "notes": [
@@ -15282,12 +15345,13 @@
     "state": "New Jersey",
     "address": "75 Neilson Street,  New Brunswick,  NJ 08901",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/hildebrand-commons/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2026-10 (Hildebrand Commons groundbreaking (Pennrose, 2025-07-23))",
+    "timelineBoundary": "2026-10-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2026-10 from Hildebrand Commons groundbreaking (Pennrose, 2025-07-23) (https://www.pennrose.com/news-views/news/2025/hildebrand-commons-groundbreaking/). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Projected by Pennrose (release 2025-07-23; groundbreaking held 2025-07-22) and repeated by JerseyDigs 2025-07-25; NY YIMBY June 2026 still says completion this fall. Season-level only ('fall 2026'); 2026-10 is a mid-season placeholder. HUD record (Hoffman Pavilion, NJA0000X135) has YR_PIS 9999, YR_ALLOC 2019. No topping-out/leasing news found as of 2026-10-10.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/new-jersey/hildebrand-commons/"
+      "https://www.pennrose.com/apartments/new-jersey/hildebrand-commons/",
+      "https://www.pennrose.com/news-views/news/2025/hildebrand-commons-groundbreaking/"
     ],
     "references": [],
     "notes": [
@@ -15335,13 +15399,14 @@
     "state": "Connecticut",
     "address": "2380 Corbin Avenue,  New Britain,  CT 06053",
     "sourceUrl": "https://www.pennrose.com/apartments/connecticut/jefferson-the/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: first-lease 2013-12 (Multi-Housing News / REBusiness, Dec 2, 2013)",
+    "timelineBoundary": "2013-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2013-12 from Multi-Housing News / REBusiness, Dec 2, 2013 (https://rebusinessonline.com/70-unit-seniors-housing-community-coming-to-new-britain/). Groundbreaking June 21, 2013 (Patch), completion targeted December 2013; HUD LIHTC: JEFFERSON HEIGHTS, 2380 CORBIN AVE, YR_PIS 2013. Move-in was expected, not confirmed, in Dec 2013.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/connecticut/jefferson-the/",
-      "https://www.pennrose.com/media/p4wl2zvk/the-jefferson-flyer_2023.pdf"
+      "https://www.pennrose.com/media/p4wl2zvk/the-jefferson-flyer_2023.pdf",
+      "https://rebusinessonline.com/70-unit-seniors-housing-community-coming-to-new-britain/"
     ],
     "references": [
       {
@@ -15398,14 +15463,15 @@
     "state": "Pennsylvania",
     "address": "217 North 9th Street,  Philadelphia,  PA 19107",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/man-an-house/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2025-06-10 (CBS Philadelphia: New affordable housing development for seniors opens in Chinatown)",
+    "timelineBoundary": "2025-06-10",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2025-06-10 from CBS Philadelphia: New affordable housing development for seniors opens in Chinatown (https://www.cbsnews.com/philadelphia/news/man-an-house-chinatown-pennrose-philadelphia). Pennrose press release dated 2025-06-11 ('Pennrose and PCDC Celebrate Man An House Grand Opening'). 51 units, 62+, formerly 800 Vine Senior. First move-in date not found (may predate ceremony).",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/man-an-house/",
       "https://www.pennrose.com/media/2uxbrdgf/man-an-house-marketing-flyer_v4.pdf",
-      "https://www.pennrose.com/media/lx2dkb1w/man-an-house-pre-app-chinese.pdf"
+      "https://www.pennrose.com/media/lx2dkb1w/man-an-house-pre-app-chinese.pdf",
+      "https://www.cbsnews.com/philadelphia/news/man-an-house-chinatown-pennrose-philadelphia"
     ],
     "references": [
       {
@@ -15488,12 +15554,13 @@
     "state": "New York",
     "address": "2500 Grant Boulevard,  Syracuse,  NY 13208",
     "sourceUrl": "https://www.pennrose.com/apartments/new-york/maria-regina-gardens/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2029 (Mayor: 156-unit senior housing plan on track as Maria Regina Campus sale nears closing (CNY Central, 2026-09-16))",
+    "timelineBoundary": "2029-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2029 from Mayor: 156-unit senior housing plan on track as Maria Regina Campus sale nears closing (CNY Central, 2026-09-16) (https://cnycentral.com/news/local/mayor-156-unit-senior-housing-plan-on-track-as-maria-regina-campus-sale-nears-closing). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Projected by CNY Central reporting (Sep 16 2026) and Home Leasing development manager Lindsey Allen (May 5 2026: plan to 'start construction in October' 2026; overall 'expected to be completed in 2029'). Hangs on closing the campus sale (mayor: possibly October 2026) and construction financing close (Pennrose page said June 2026, already slipped), then ~30 months of construction (Hueber Breuer GC). Project has a history of delay (earlier targets 2023). Home Leasing leads with Pennrose.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/new-york/maria-regina-gardens/"
+      "https://www.pennrose.com/apartments/new-york/maria-regina-gardens/",
+      "https://cnycentral.com/news/local/mayor-156-unit-senior-housing-plan-on-track-as-maria-regina-campus-sale-nears-closing"
     ],
     "references": [],
     "notes": [
@@ -15540,13 +15607,14 @@
     "state": "Pennsylvania",
     "address": "800 South 13th Street,  Philadelphia,  PA 19147",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/martin-luther-king-i-iii/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: first-lease 2005-04 (HUD LIHTC database record: MARTIN LUTHER KING HOPE VI, 1207 Christian St, Philadelphia (YR_PIS 2003, YR_ALLOC 2001, 45 units))",
+    "timelineBoundary": "2005-04-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2005-04 from HUD LIHTC database record: MARTIN LUTHER KING HOPE VI, 1207 Christian St, Philadelphia (YR_PIS 2003, YR_ALLOC 2001, 45 units) (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20LIKE%20%27%25MARTIN%20LUTHER%20KING%25%27&outFields=*&f=json). Confidence: medium. CNU (June 2005) reports the first phase of 49 rental townhouses opened April 2005; HUD lists a 2003 placed-in-service year for a presumed Phase I record. Low confidence: HUD record is the only Philadelphia MLK LIHTC record besides Phase IV (PIS 2006); 1207 Christian St is at the 13th & Christian site (800 S 13th), so it is presumed to be Phase I (rental). Conflicting contemporaneous source: CNU Public Square (June 1, 2005) says the first phase of MLK Plaza (49 rental townhouses) opened April 2005 and overall HOPE VI completed summer 2005. If the owner prefers a news-confirmed date, use 2005-04 (CNU, medium-low). Phase III not separately identified. Towers imploded Oct 17, 1999; HOPE VI grant 1998.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/martin-luther-king-i-iii/",
-      "https://www.pennrose.com/media/aqwdw05c/mlk-i-iii-pre-app-2019.pdf"
+      "https://www.pennrose.com/media/aqwdw05c/mlk-i-iii-pre-app-2019.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?where=PROJECT%20LIKE%20%27%25MARTIN%20LUTHER%20KING%25%27&outFields=*&f=json"
     ],
     "references": [
       {
@@ -15612,12 +15680,13 @@
     "state": "Georgia",
     "address": "300 Chamberlain St SE,  Atlanta,  GA 30312",
     "sourceUrl": "https://www.pennrose.com/apartments/georgia/mcauley-station-north/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2027-04 (McAuley Station second phase to add nearly 100 affordable apartments for seniors (Rough Draft Atlanta, Nov 28, 2025))",
+    "timelineBoundary": "2027-04-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2027-04 from McAuley Station second phase to add nearly 100 affordable apartments for seniors (Rough Draft Atlanta, Nov 28, 2025) (https://roughdraftatlanta.com/2025/11/28/mcauley-station-second-phase-to-add-nearly-100-affordable-apartments-for-seniors/). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Projected by Pennrose/Mercy Care as reported Nov 2025, hanging on the Nov 2025 groundbreaking; Pennrose's property page says construction 'set to be complete in Spring 2027'. 96-97 units, 55+. Phase I (170 units) ribbon cut Nov 2024 is a separate property.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/georgia/mcauley-station-north/"
+      "https://www.pennrose.com/apartments/georgia/mcauley-station-north/",
+      "https://roughdraftatlanta.com/2025/11/28/mcauley-station-second-phase-to-add-nearly-100-affordable-apartments-for-seniors/"
     ],
     "references": [],
     "notes": [
@@ -15664,15 +15733,16 @@
     "state": "Pennsylvania",
     "address": "210A Jones Houston Way,  Easton,  PA 18042",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/neston-heights/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: first-lease 2011-12-28 (Neston Heights Reaches New Phase (Patch, Dec 27, 2011))",
+    "timelineBoundary": "2011-12-28",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2011-12-28 from Neston Heights Reaches New Phase (Patch, Dec 27, 2011) (https://patch.com/pennsylvania/easton/neston-heights-reaches-new-phase). Senior building first resident move-in Wednesday Dec 28, 2011 (article posted Dec 27, 2011). Family homes phase opened earlier (date not found); final phase 'Homes at Neston Heights' homeownership later. Replaced Delaware Terrace public housing (HOPE VI).",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/neston-heights/",
       "https://www.pennrose.com/media/tknn4xgt/neston-heights-flyer_2026.pdf",
       "https://www.pennrose.com/apartments/pennsylvania/neston-heights-senior/",
-      "https://www.pennrose.com/media/cwyf0pus/neston-heights-senior-flyer_2026.pdf"
+      "https://www.pennrose.com/media/cwyf0pus/neston-heights-senior-flyer_2026.pdf",
+      "https://patch.com/pennsylvania/easton/neston-heights-reaches-new-phase"
     ],
     "references": [
       {
@@ -15748,14 +15818,15 @@
     "state": "Pennsylvania",
     "address": "1741 Frankford Avenue,  Philadelphia,  PA 19125",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/neumann-north/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2006 (Pennrose Kicks Off Neumann North Affordable Housing Revitalization (Dec 2025))",
+    "timelineBoundary": "2006-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2006 from Pennrose Kicks Off Neumann North Affordable Housing Revitalization (Dec 2025) (https://www.pennrose.com/news-views/news/2025/pennrose-kicks-off-neumann-north-affordable-housing-revitalization). Adaptive reuse of former Neumann hospital building; currently in a 2025-2027 rehab (not yet reopened). HUD LIHTC record has YR_ALLOC 2005, YR_PIS unreported.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/neumann-north/",
       "https://www.pennrose.com/media/rqpgskl1/neumann-north-flyer.pdf",
-      "https://www.pennrose.com/media/nc0lubbi/neumann-north-pre-app-2022.pdf"
+      "https://www.pennrose.com/media/nc0lubbi/neumann-north-pre-app-2022.pdf",
+      "https://www.pennrose.com/news-views/news/2025/pennrose-kicks-off-neumann-north-affordable-housing-revitalization"
     ],
     "references": [
       {
@@ -15884,12 +15955,13 @@
     "state": "Pennsylvania",
     "address": "3115 Walnut Avenue,  Glenside,  PA 19038",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/north-hills-manor/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: grand-opening 2022-10 (Grand Opening of North Hills Manor in Montgomery County (2022-10-24))",
+    "timelineBoundary": "2022-10-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2022-10 from Grand Opening of North Hills Manor in Montgomery County (2022-10-24) (https://www.pennrose.com/news-views/news/2022/grand-opening-of-north-hills-manor-in-montgomery-county). Press release dated Oct 24, 2022; ceremony day not stated (Rep. Dean's page also Oct 2022). Redevelopment of 1950s 50-unit public housing; begun 2017 in phases, so some units occupied earlier. Located in Upper Dublin Twp.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/pennsylvania/north-hills-manor/"
+      "https://www.pennrose.com/apartments/pennsylvania/north-hills-manor/",
+      "https://www.pennrose.com/news-views/news/2022/grand-opening-of-north-hills-manor-in-montgomery-county"
     ],
     "references": [],
     "notes": [
@@ -15936,14 +16008,15 @@
     "state": "Georgia",
     "address": "716 W. Society Avenue,  Albany,  GA 31701",
     "sourceUrl": "https://www.pennrose.com/apartments/georgia/oaks-intown/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: grand-opening 2021-11 (Grand Opening of Oaks Intown in Albany, GA (Pennrose, Nov 4, 2021))",
+    "timelineBoundary": "2021-11-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2021-11 from Grand Opening of Oaks Intown in Albany, GA (Pennrose, Nov 4, 2021) (https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga). RAD rehab of four existing public housing communities (McIntosh Homes, O.B. Hines, Thronateeska Homes, Golden Age); groundbreaking Oct 2020; grand opening early Nov 2021 (Hunt release file dated 11-3-2021). Original construction years not found.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/georgia/oaks-intown/",
       "https://www.pennrose.com/media/uo1b1ddv/oaks-intown-flyer_2026.pdf",
-      "https://www.pennrose.com/media/53dosnyt/oaks-intown-pre-app-2021.pdf"
+      "https://www.pennrose.com/media/53dosnyt/oaks-intown-pre-app-2021.pdf",
+      "https://www.pennrose.com/news-views/news/2021/grand-opening-of-oaks-intown-in-albany-ga"
     ],
     "references": [
       {
@@ -16009,13 +16082,14 @@
     "state": "Pennsylvania",
     "address": "445 Hanover Avenue,  Suite 105,  Allentown,  PA 18109",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/overlook-park/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: other 2007 (Overlook Park Housing Project to Be Completed by 2009 (WFMZ))",
+    "timelineBoundary": "2007-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2007 from Overlook Park Housing Project to Be Completed by 2009 (WFMZ) (https://www.wfmz.com/news/overlook-park-housing-project-to-be-completed-by-2009/article_836dc926-b8a7-5db5-ae5a-69ab42c2f4a4.html). Confidence: low. HUD announced the $20M HOPE VI grant May 2005; Allentown Housing Authority says reconstruction began 2006. WFMZ reported the first two phases (159 rentals) 'officially opened' with the rest due by 2009 (article date not retrievable). Rental listing sites give 'built 2007'. Phase 1A (Overlook Park 1A, 80 public-housing units, 123 N Bradford St) most likely first. Exact opening day not found; 2007 is an inference from WFMZ + listing build year + 2009 target, so low confidence. Whole development completed ~2009.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/overlook-park/",
-      "https://www.pennrose.com/media/aqlodgmt/overlook-park-flyer_2026.pdf"
+      "https://www.pennrose.com/media/aqlodgmt/overlook-park-flyer_2026.pdf",
+      "https://www.wfmz.com/news/overlook-park-housing-project-to-be-completed-by-2009/article_836dc926-b8a7-5db5-ae5a-69ab42c2f4a4.html"
     ],
     "references": [
       {
@@ -16072,12 +16146,13 @@
     "state": "New York",
     "address": "386 Perry Street,  Buffalo,  NY 14204",
     "sourceUrl": "https://www.pennrose.com/apartments/new-york/perry-homes/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: first-lease 2025-07-01 (Governor Hochul announces Perry Homes I in Buffalo welcomes first residents)",
+    "timelineBoundary": "2025-07-01",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2025-07-01 from Governor Hochul announces Perry Homes I in Buffalo welcomes first residents (https://www.governor.ny.gov/news/governor-hochul-announces-perry-homes-i-buffalo-welcomes-first-residents). Date is the governor's announcement (July 1, 2025), so first move-ins occurred on or shortly before. Phase I of redevelopment of Commodore Perry Homes (originally built 1930s).",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/new-york/perry-homes/"
+      "https://www.pennrose.com/apartments/new-york/perry-homes/",
+      "https://www.governor.ny.gov/news/governor-hochul-announces-perry-homes-i-buffalo-welcomes-first-residents"
     ],
     "references": [],
     "notes": [
@@ -16124,12 +16199,13 @@
     "state": "New Jersey",
     "address": "1440 Rahway Avenue,  Avenel,  NJ 07001",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/petersen-commons/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2027-04 (Pennrose and Woodbridge Township Break Ground on Petersen Commons (2026-04-13))",
+    "timelineBoundary": "2027-04-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2027-04 from Pennrose and Woodbridge Township Break Ground on Petersen Commons (2026-04-13) (https://www.pennrose.com/news-views/news/2026/pennrose-and-woodbridge-township-break-ground-on-petersen-commons-new-affordable-senior-housing-community-for-veterans-in-avenel/). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Projected by Pennrose/Woodbridge Township at the 2026-04-13 groundbreaking (about 12 months of construction). Season-level only ('spring 2027'); 2027-04 is a placeholder within spring. 60 units, 55+ with veteran preference.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/new-jersey/petersen-commons/"
+      "https://www.pennrose.com/apartments/new-jersey/petersen-commons/",
+      "https://www.pennrose.com/news-views/news/2026/pennrose-and-woodbridge-township-break-ground-on-petersen-commons-new-affordable-senior-housing-community-for-veterans-in-avenel/"
     ],
     "references": [],
     "notes": [
@@ -16276,12 +16352,13 @@
     "state": "New York",
     "address": "Reed Street,  Little Falls,  NY 13365",
     "sourceUrl": "https://www.pennrose.com/apartments/new-york/reed-street/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: planning 2024-05-28 (100+ Little Falls Residents Attend Meeting on Public Housing Plan (WKTV, May 28, 2024))",
+    "timelineBoundary": "2024-05-28",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2024-05-28 from 100+ Little Falls Residents Attend Meeting on Public Housing Plan (WKTV, May 28, 2024) (https://www.wktv.com/news/100-little-falls-residents-attend-meeting-on-public-housing-plan/article_564722a6-1d5e-11ef-a06b-ff06e6cd85c1.html). Groundbreaking was projected for the end of 2025 and did not happen; no financing award, construction start or completion date has been published.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/new-york/reed-street/"
+      "https://www.pennrose.com/apartments/new-york/reed-street/",
+      "https://www.wktv.com/news/100-little-falls-residents-attend-meeting-on-public-housing-plan/article_564722a6-1d5e-11ef-a06b-ff06e6cd85c1.html"
     ],
     "references": [],
     "notes": [
@@ -16329,13 +16406,14 @@
     "state": "Georgia",
     "address": "939 Wheaton Street,  Savannah,  GA 31401",
     "sourceUrl": "https://www.pennrose.com/apartments/georgia/river-pointe/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2017 (HUD LIHTC database (ArcGIS FeatureServer): River Point I + II (939 Wheaton St); Housing Authority of Savannah history)",
+    "timelineBoundary": "2017-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2017 from HUD LIHTC database (ArcGIS FeatureServer): River Point I + II (939 Wheaton St); Housing Authority of Savannah history (https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0). HUD LIHTC YR_PIS 2017, 280 units. Rehab/RAD conversion of former Fred Wessels and Edgar Blackshear Homes (original public housing older). A later new-construction phase (River Pointe II Phase II, 53 units, 2019 DCA study) is separate.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/georgia/river-pointe/",
-      "https://www.pennrose.com/media/hm1ouclb/pmc-affordable-application-river-pointe.pdf"
+      "https://www.pennrose.com/media/hm1ouclb/pmc-affordable-application-river-pointe.pdf",
+      "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0"
     ],
     "references": [
       {
@@ -16494,10 +16572,10 @@
     "state": "Pennsylvania",
     "address": "2415 North 33rd Street,  Philadelphia,  PA 19132",
     "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/strawberry-mansion-village/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2026-04 (Strawberry Mansion Village (Pennrose project page, original schedule))",
+    "timelineBoundary": "2026-04-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2026-04 from Strawberry Mansion Village (Pennrose project page, original schedule) (https://www.pennrose.com/apartments/pennsylvania/strawberry-mansion-village/). Original planned completion, set before the zoning appeal and litigation (Inquirer, May and June 2025; still in legal action August 2026). The project has not broken ground, so this date has been overtaken; it is kept as the pin's original-schedule date and will move if a new schedule is published.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/pennsylvania/strawberry-mansion-village/"
     ],
@@ -16537,14 +16615,15 @@
     "state": "New York",
     "address": "150 River Street,  Troy,  NY 12180",
     "sourceUrl": "https://www.pennrose.com/apartments/new-york/taylor-apartments/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2025-05-28 (Governor Hochul Announces Completion of 141-Unit Public Housing Development in Troy)",
+    "timelineBoundary": "2025-05-28",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2025-05-28 from Governor Hochul Announces Completion of 141-Unit Public Housing Development in Troy (https://www.governor.ny.gov/news/governor-hochul-announces-completion-141-unit-public-housing-development-troy). John P. Taylor Apartments Building 1, 141 units, $67M, replaced two demolished towers. Local WNYT report says ribbon cutting on a Wednesday (May 28, 2025 was a Wednesday) and all units already leased. THA lists 125/150 River St.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-york/taylor-apartments/",
       "https://www.pennrose.com/apartments/new-york/taylor-ii/",
-      "https://www.pennrose.com/media/122cdmn4/2024-06-18-flyer.pdf"
+      "https://www.pennrose.com/media/122cdmn4/2024-06-18-flyer.pdf",
+      "https://www.governor.ny.gov/news/governor-hochul-announces-completion-141-unit-public-housing-development-troy"
     ],
     "references": [
       {
@@ -16611,13 +16690,14 @@
     "state": "Georgia",
     "address": "280 Randolph Street ,  Savannah,  GA 31401",
     "sourceUrl": "https://www.pennrose.com/apartments/georgia/the-view-at-oglethorpe/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: completion 2017 (The View at Oglethorpe (Synergy Custom Services completed projects, 2017))",
+    "timelineBoundary": "2017-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2017 from The View at Oglethorpe (Synergy Custom Services completed projects, 2017) (https://synergycustomservices.com/completed-projects/view-oglethorpe1/). Confidence: medium. Phase I (72 units, 280 Randolph St, Hitch Village site) built by Synergy, construction started summer 2016, completed 2017 (Hunt Companies had projected Q3 2017). Phase II (100 units, 220 McAlister St) started summer 2017, placed in service 2018 per LIHTC listing; Pennrose's 172-unit community combines both. No ribbon-cutting article or exact day found. Use 2017 (first phase), year precision.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/georgia/the-view-at-oglethorpe/",
-      "https://agenda.savannahga.gov/content/files/city-council-mobile-workshop-booklet-051821-rev-051721.pdf"
+      "https://agenda.savannahga.gov/content/files/city-council-mobile-workshop-booklet-051821-rev-051721.pdf",
+      "https://synergycustomservices.com/completed-projects/view-oglethorpe1/"
     ],
     "references": [
       {
@@ -16674,12 +16754,13 @@
     "state": "Connecticut",
     "address": "18 Trinity Street, Hartford, CT 06106",
     "sourceUrl": "https://www.pennrose.com/apartments/connecticut/trinity-street/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2027 (Trinity Groundbreaking (Pennrose, May 14, 2025))",
+    "timelineBoundary": "2027-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2027 from Trinity Groundbreaking (Pennrose, May 14, 2025) (https://www.pennrose.com/news-views/news/2025/trinity-groundbreaking/). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Pennrose/The Cloud Company projected, at the May 2025 groundbreaking, that residents begin moving in 'early 2027' (104 units, 83 market-rate/21 income-restricted, 18-20 and 30 Trinity St). Hangs on construction that began May 2025 (about 20-24 months). Early 2027 means approx Jan-Apr 2027; no firmer month published, so precision year. Buildings are 1920s-era state offices; original construction not sourced.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/connecticut/trinity-street/"
+      "https://www.pennrose.com/apartments/connecticut/trinity-street/",
+      "https://www.pennrose.com/news-views/news/2025/trinity-groundbreaking/"
     ],
     "references": [],
     "notes": [
@@ -16726,12 +16807,13 @@
     "state": "Massachusetts",
     "address": "91 Crest Avenue,  Chelsea,  MA 02150",
     "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/veterans-home-in-chelsea/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2028-08 (MA Asset Management Board presentation, 2026-06-25 (Veterans' Home at Chelsea domiciliary campus) - via search summary)",
+    "timelineBoundary": "2028-08-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2028-08 from MA Asset Management Board presentation, 2026-06-25 (Veterans' Home at Chelsea domiciliary campus) - via search summary (https://www.mass.gov/doc/amb-presentation-june-25-2026/download). Not yet open: this is the projected opening, not a confirmed date. Confidence: low. Schedule has slipped repeatedly: Jan 2024 Pennrose deck: Phase I completion spring 2026; Chelsea Record 2025-02-06: Phase I closing/construction start Sept 2025 (delayed by tax-exempt bond supply), Phase II complete fall 2027; state AMB deck 2026-06-25 reportedly shows Phase 1 Aug 2026 - Aug 2028 (read only through a search summary; whether Aug 2026 is closing/start is not labeled). Phase 1 construction start not confirmed as of 2026-10-10. Estimate hangs on an Aug 2026 start with ~24-month build; likely to slip further. The campus itself dates to the 1880s; new housing is not open.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/massachusetts/veterans-home-in-chelsea/"
+      "https://www.pennrose.com/apartments/massachusetts/veterans-home-in-chelsea/",
+      "https://www.mass.gov/doc/amb-presentation-june-25-2026/download"
     ],
     "references": [],
     "notes": [
@@ -16778,13 +16860,14 @@
     "state": "New Jersey",
     "address": "400 Roland Avenue,  Glassboro,  NJ 08028",
     "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/village-at-harmony-garden/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
+    "targetMilestone": "Opening / first-lease: grand-opening 2023-06-07 (Bisnow Philadelphia Deal Sheet, week of June 5, 2023)",
+    "timelineBoundary": "2023-06-07",
     "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "dateConfidenceReasoning": "Opening / first-lease date 2023-06-07 from Bisnow Philadelphia Deal Sheet, week of June 5, 2023 (https://www.bisnow.com/news/philadelphia/deal-sheet/philadelphia-deal-sheet-week-of-jun-5-2023-119292). Deal sheet dated June 7, 2023 (a Wednesday), so ribbon-cutting date inferred as 2023-06-07. 64 units on former Ellis Manor public housing site.",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/new-jersey/village-at-harmony-garden/",
-      "https://www.pennrose.com/media/zgxn40f5/vhg-flyer_2023.pdf"
+      "https://www.pennrose.com/media/zgxn40f5/vhg-flyer_2023.pdf",
+      "https://www.bisnow.com/news/philadelphia/deal-sheet/philadelphia-deal-sheet-week-of-jun-5-2023-119292"
     ],
     "references": [
       {
@@ -16841,12 +16924,13 @@
     "state": "Ohio",
     "address": "5701 Carnegie Avenue,  Cleveland,  OH 44103",
     "sourceUrl": "https://www.pennrose.com/apartments/ohio/warner-swasey/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: projected 2028-01 (Miracle: The Warner & Swasey redevelopment in Cleveland's Midtown is finally happening (News 5 Cleveland, ~Dec 2025))",
+    "timelineBoundary": "2028-01-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2028-01 from Miracle: The Warner & Swasey redevelopment in Cleveland's Midtown is finally happening (News 5 Cleveland, ~Dec 2025) (https://www.news5cleveland.com/news/local-news/miracle-the-warner-swasey-redevelopment-in-clevelands-midtown-is-finally-happening). Not yet open: this is the projected opening, not a confirmed date. Confidence: medium. Projected by Pennrose/MidTown Cleveland as reported by News 5 Cleveland (Dec 2025): leasing January 2028. Spectrum News (Mar 5 2026): 'Construction is set to be completed by winter 2028'. Hangs on construction start (site work from Jan 2026; ceremonial groundbreaking June 1-2, 2026) plus ~2 years; Phase I = 112 apartments. Phase II (about 28 units) unfunded and undated.",
     "sourcesChecked": [
-      "https://www.pennrose.com/apartments/ohio/warner-swasey/"
+      "https://www.pennrose.com/apartments/ohio/warner-swasey/",
+      "https://www.news5cleveland.com/news/local-news/miracle-the-warner-swasey-redevelopment-in-clevelands-midtown-is-finally-happening"
     ],
     "references": [],
     "notes": [
@@ -16894,13 +16978,14 @@
     "state": "Maryland",
     "address": "801 Newtowne Drive,  Annapolis,  MD 21401",
     "sourceUrl": "https://www.pennrose.com/apartments/maryland/wilbourn-estates/",
-    "targetMilestone": "Property information reviewed October 10, 2026",
-    "timelineBoundary": "2026-10-10",
-    "dateConfidence": "confirmed",
-    "dateConfidenceReasoning": "Research verification date: operator listing and available program documents reviewed October 10, 2026. This is not an opening, construction-start or completion date; no original project milestone was established in the sources used.",
+    "targetMilestone": "Opening / first-lease: grand-opening 2022-06 (Grand Opening of Wilbourn Estates Affordable Housing Community in Annapolis)",
+    "timelineBoundary": "2022-06-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Opening / first-lease date 2022-06 from Grand Opening of Wilbourn Estates Affordable Housing Community in Annapolis (https://www.pennrose.com/news-views/news/2022/grand-opening-of-wilbourn-estates-affordable-housing-community-in-annapolis/). 78 apartments replacing former Newtowne 20 public housing site; exact ceremony day not stated (release June 23, 2022).",
     "sourcesChecked": [
       "https://www.pennrose.com/apartments/maryland/wilbourn-estates/",
-      "https://www.pennrose.com/media/bbljyupr/wilbourn-estates_now-leasing.pdf"
+      "https://www.pennrose.com/media/bbljyupr/wilbourn-estates_now-leasing.pdf",
+      "https://www.pennrose.com/news-views/news/2022/grand-opening-of-wilbourn-estates-affordable-housing-community-in-annapolis/"
     ],
     "references": [
       {

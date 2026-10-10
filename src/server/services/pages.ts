@@ -9,7 +9,9 @@ import { getPersonalBag, getSliderTyping, getAdPlacements, getAdsenseSlots, getH
 import Company from '../model/company';
 import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
+import { candidatesForPin } from '../model/pinCandidate';
 import { gameInfoForPin } from '../model/pinGameInfo';
+import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import Pin from '../model/pin';
@@ -96,20 +98,31 @@ export const TRENDING_DAYS = 3;
 
 // The most viewed pins with views on the rise. Views are recorded without
 // expiring anything, so this simply goes stale for a few minutes at a time.
-export async function trendingPins(locale: Locale = DEFAULT_LOCALE): Promise<TrendingPin[]> {
+// The cache holds the English list and is not keyed by language: keyed by it,
+// every one of the site's languages ran the same query for its own copy.
+async function trendingEnglish(): Promise<TrendingPin[]> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  return localizePins(await PinView.trending(TRENDING_DAYS, 12, await timelineMinConfidence()), locale);
+  return PinView.trending(TRENDING_DAYS, 12, await timelineMinConfidence());
+}
+
+export async function trendingPins(locale: Locale = DEFAULT_LOCALE): Promise<TrendingPin[]> {
+  return localizePins(structuredClone(await trendingEnglish()), locale);
 }
 
 // The pins added most recently. A new pin expires the timeline tag, so this
-// refreshes as pins are added rather than on a timer alone.
-export async function newPins(locale: Locale = DEFAULT_LOCALE): Promise<NewPin[]> {
+// refreshes as pins are added rather than on a timer alone. Cached in English
+// and translated after, like trendingPins above.
+async function newPinsEnglish(): Promise<NewPin[]> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  return loadNewPins(locale);
+  return loadNewPins();
+}
+
+export async function newPins(locale: Locale = DEFAULT_LOCALE): Promise<NewPin[]> {
+  return localizePins(structuredClone(await newPinsEnglish()), locale);
 }
 
 // around opens the first page on a pin instead of now (the pin page's "To
@@ -194,6 +207,15 @@ export async function pinEventInfo(id: number): Promise<PinEventInfoJson | null>
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return eventInfoForPin(id);
+}
+
+// The big-four contenders an awards pin lists, empty for any other pin.
+// Tagged with the pin, so saving them redraws its page.
+export async function pinCandidates(id: number): Promise<PinCandidateJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return candidatesForPin(id);
 }
 
 // A game's maturity rating and platforms, or null when none were read.

@@ -483,12 +483,6 @@ async function countReserved(from: string, where: string[], params: unknown[], c
   return [...counted].map(([name, count]) => ({ name, kind: 'reserved' as const, count }));
 }
 
-// A pin's confidence scored straight off "PinReference", for the queries that
-// filter by it before the view is involved. Spelled out here rather than
-// wrapped in a SQL function of its own: a function whose body calls
-// "pinConfidence" cannot be inlined, and the planner then scores every
-// candidate row instead of stopping once a page is full - three times the
-// cost of this on a page, five times on a whole-table count.
 // How well the rest of a pin's thread is sourced: the mean confidence of the
 // other pins in its chain, which the bag weight leans on (src/lib/bagSample.ts)
 // so a pin in a well-evidenced story weighs more than a lone one. Null for a
@@ -537,8 +531,15 @@ async function withThreadConfidence(pins: Pins): Promise<Pins> {
   return pins;
 }
 
+// A pin's confidence, read from "PinConfidence" (0147), which triggers keep
+// current as its references, source and date confidence change. Scoring it
+// off "PinReference" per row (what this used to do, and what "pinConfidence"
+// still computes for the table) meant a page of the newest N pins had to score
+// every live pin before it could stop: 1-2 s a call in production. As a
+// primary-key lookup per candidate row the planner walks the date index and
+// stops when the page is full.
 export const pinConfidenceOf = (as: string) =>
-  `"pinConfidence"(${leanReferences(as)}, "${as}"."sourceUrl", "${as}"."dateConfidence", "${as}"."utcCreatedDateTime")`;
+  `(SELECT "pcs"."score" FROM "PinConfidence" AS "pcs" WHERE "pcs"."pinId" = "${as}"."id")`;
 
 // Pin "as" inside the viewer's ring: the EWKT point at $point and the radius
 // in metres at $meters, both null when the request named no ring. A pin with

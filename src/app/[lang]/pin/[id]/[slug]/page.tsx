@@ -32,6 +32,7 @@ import { PinRestaurantDetails } from '@/components/pin/PinRestaurantDetails';
 import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
+import { PinCandidates } from '@/components/pin/PinCandidates';
 import { PinTags } from '@/components/pin/PinTags';
 import { PinUpdates } from '@/components/pin/PinUpdates';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
@@ -77,9 +78,10 @@ import { isAttendableEvent, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { thinReasons } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
+import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinGameInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinGameInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -129,12 +131,13 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   // how it got there. An event people can attend also carries its host's
   // website, performers and tickets, for the page and its Event markup.
   const event = isAttendableEvent(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, ads, adsense, viewer] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, candidates, ads, adsense, viewer] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     event && pin.companyId ? companyWebsite(pin.companyId) : null,
     event ? pinEventInfo(pin.id) : null,
     pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
+    pinCandidates(pin.id),
     adPlacements(),
     adsenseSlots(),
     viewerUser(),
@@ -149,7 +152,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           floored by its content's min-width, which scrolls the page sideways. */}
       <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
         <article>
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} candidates={candidates} />
         </article>
 
         <aside className="min-w-0">
@@ -230,11 +233,13 @@ function PinBody({
   timeZone,
   t,
   eventInfo,
+  candidates,
 }: {
   pin: PinJson;
   timeZone: string;
   t: Translator;
   eventInfo?: PinEventInfoJson | null;
+  candidates?: PinCandidateJson[];
 }) {
   const media = pin.media ?? [];
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
@@ -393,6 +398,7 @@ function PinBody({
       </div>
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
+      {candidates?.length ? <PinCandidates candidates={candidates} t={t} /> : null}
       <PinStocks pinId={pin.id} />
       {/* The publisher's own chart for a series this event moves (PinSeries,
           0062). The pin's JSON says whether it has one, so a pin without a

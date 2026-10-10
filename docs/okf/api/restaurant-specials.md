@@ -1,3 +1,11 @@
+---
+type: API Endpoint
+title: Restaurant specials
+description: Manage database-backed restaurant offers, menus and venue profiles from a session without redeploying. Admin only.
+resource: "../../../src/app/api/admin/restaurant-specials/route.ts"
+tags: [api, admin, restaurants]
+---
+
 # Restaurant specials management
 
 Specials live in PostgreSQL's `RestaurantSpecialVenue` table. Each row contains a

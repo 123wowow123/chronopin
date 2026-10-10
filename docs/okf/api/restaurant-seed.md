@@ -1,3 +1,11 @@
+---
+type: API Endpoint
+title: Restaurant seed
+description: POST to load the bundled restaurant catalogs (pins, photos, special venues) into a deployed server's database, dry run first. Admin only.
+resource: "../../../src/app/api/admin/restaurant-seed/route.ts"
+tags: [api, admin, restaurants]
+---
+
 # Restaurant seed API
 
 Loads the restaurant catalogs bundled in the deployed build (`regionalRestaurants.json`,

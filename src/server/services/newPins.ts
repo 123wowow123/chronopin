@@ -14,14 +14,34 @@ import { localizePins } from './translations';
 // cached list can still be a save behind - missing the very pin the page went
 // looking for. Twelve rows, NEW_PINS_LIMIT in NewPins.tsx.
 export async function loadNewPins(locale: Locale = DEFAULT_LOCALE): Promise<NewPin[]> {
+  // A copy: the list is shared with whoever asked while it was being read,
+  // and localizePins writes the translations into the pins it is given.
+  return localizePins(structuredClone(await newestPins()), locale);
+}
+
+// The English list, one read at a time: a reconnecting page fetches it fresh
+// (no cache, so it cannot miss a save), and a dropped stream drops every open
+// page's at once. Callers that arrive while a read is under way share it
+// rather than each run the query; the next caller after it finishes reads
+// again, so nothing is ever older than the read it joined.
+let reading: Promise<NewPin[]> | null = null;
+
+function newestPins(): Promise<NewPin[]> {
+  reading ??= readNewestPins().finally(() => {
+    reading = null;
+  });
+  return reading;
+}
+
+async function readNewestPins(): Promise<NewPin[]> {
   const pins = await Pins.newest(12, await timelineMinConfidence());
   const pictures = await PinView.pictures(pins.map((p) => p.id));
-  return localizePins(pins.map(({ sourceUrl, referenceUrls, address, ...p }) => ({
+  return pins.map(({ sourceUrl, referenceUrls, address, ...p }) => ({
     ...p,
     city: cityOf(address),
     utcStartDateTime: p.utcStartDateTime.toISOString(),
     utcCreatedDateTime: p.utcCreatedDateTime.toISOString(),
     hasMarket: pinMarketRefs({ sourceUrl, references: referenceUrls.map((url) => ({ url })) }).length > 0,
     ...pictures.get(p.id),
-  })), locale);
+  }));
 }

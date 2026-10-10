@@ -42,6 +42,7 @@ const READ_ONLY: Record<string, string> = {
   schemaMigrations: 'Written by npm run create:db.',
   PinBaseCache: "Kept in step with PinBaseView by 0072's triggers.",
   PinTagCache: "Kept in step with PinTagBaseView by 0145's triggers.",
+  PinConfidence: "Each pin's confidence score, kept in step with its references by 0147's triggers.",
   AdminAudit: "The record of this API's own writes.",
 };
 
