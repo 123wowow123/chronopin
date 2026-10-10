@@ -11,7 +11,13 @@ import type { Translator } from '@/lib/i18n/translate';
 // read, and is dropped once the event has started.
 export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; started: boolean; t: Translator }) {
   const locale = INTL_LOCALES[t.locale] ?? 'en-US';
-  const day = (iso: string) => new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(iso));
+  const day = (iso: string) =>
+    new Intl.DateTimeFormat(locale, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      timeZone: 'UTC',
+    }).format(new Date(iso));
   // A ticket price in full ("$2,499", not the "$2.5K" figures elsewhere get),
   // with cents only when it has them.
   const amount = (value: number) =>
@@ -49,6 +55,60 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
     return null;
   }
 
+  const buyButton =
+    info.ticketUrl && !started && info.availability !== 'SoldOut' ? (
+      <Anchor
+        href={info.ticketUrl}
+        target="_blank"
+        rel="noopener nofollow sponsored"
+        className={`btn gap-1.5 ${seller ? 'border border-white/15 hover:brightness-110' : 'btn-secondary'}`}
+        style={seller ? { backgroundColor: seller.background, color: seller.text } : undefined}
+      >
+        {seller ? (
+          <TicketLogo seller={seller.label} className={isTicketWordmark(seller.label) ? 'h-3 w-auto shrink-0' : 'size-4 shrink-0'} />
+        ) : (
+          <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
+        )}
+        {seller && isTicketWordmark(seller.label) ? <span className="sr-only">{seller.label}</span> : null}
+        {t('pin.getTickets')}
+        {seller ? <Icon name="external" className="size-3 shrink-0 opacity-60" /> : null}
+      </Anchor>
+    ) : null;
+  const saleLine = sale ? (
+    <span className={info.availability === 'SoldOut' ? 'text-danger' : 'text-subtle'}>
+      {sale} <span className="text-xs">({t('pin.ticketsCheckedAt', { date: day(info.checkedAt) })})</span>
+    </span>
+  ) : null;
+
+  // A price list: one panel, status and buy button on top, a row per tier.
+  const tierPanel = tiers.length ? (
+    <section className="w-full max-w-md overflow-hidden rounded-xl border border-line bg-raised/40">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line px-4 py-3">
+        <div className="flex flex-col gap-0.5">
+          <span className="text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.ticketsHeading')}</span>
+          {saleLine ? <div className="text-sm">{saleLine}</div> : null}
+        </div>
+        {buyButton}
+      </div>
+      <table className="w-full border-collapse text-sm">
+        <caption className="sr-only">{t('pin.ticketsHeading')}</caption>
+        <tbody className="divide-y divide-line">
+          {tiers.map((tier, index) => (
+            <tr key={`${tier.label}-${index}`}>
+              <th scope="row" className="px-4 py-2.5 text-start font-normal">
+                {tier.label}
+                {tier.note ? <span className="block text-xs text-subtle">{tier.note}</span> : null}
+              </th>
+              <td className={`px-4 py-2.5 text-end font-semibold tabular-nums ${tier.price === 0 ? 'text-success' : ''}`}>
+                {tier.price === 0 ? t('pin.ticketsFree') : amount(tier.price)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  ) : null;
+
   return (
     <div className="mt-2 flex flex-col gap-2">
       {info.performers.length ? (
@@ -68,45 +128,13 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
           ))}
         </div>
       ) : null}
-      {tiers.length ? (
-        <table className="w-full max-w-sm border-collapse text-sm">
-          <caption className="sr-only">{t('pin.ticketsHeading')}</caption>
-          <tbody>
-            {tiers.map((tier, index) => (
-              <tr key={`${tier.label}-${index}`} className="border-b border-white/10 last:border-0">
-                <th scope="row" className="py-1 pe-4 text-start font-normal">
-                  {tier.label}
-                  {tier.note ? <span className="ms-1 text-xs text-subtle">{tier.note}</span> : null}
-                </th>
-                <td className="py-1 text-end font-semibold tabular-nums">{tier.price === 0 ? t('pin.ticketsFree') : amount(tier.price)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : null}
-      {hasTickets ? (
+      {tierPanel}
+      {hasTickets && !tiers.length ? (
         <div className="flex flex-wrap items-center gap-2">
           <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.ticketsHeading')}</span>
           {price && !tiers.length ? <span className="font-semibold tabular-nums">{price}</span> : null}
-          {sale ? (
-            <span className={info.availability === 'SoldOut' ? 'text-danger' : 'text-subtle'}>
-              {sale} <span className="text-xs">({t('pin.ticketsCheckedAt', { date: day(info.checkedAt) })})</span>
-            </span>
-          ) : null}
-          {info.ticketUrl && !started && info.availability !== 'SoldOut' ? (
-            <Anchor
-              href={info.ticketUrl}
-              target="_blank"
-              rel="noopener nofollow sponsored"
-              className={`btn gap-1.5 ${seller ? 'border border-white/15 hover:brightness-110' : 'btn-secondary'}`}
-              style={seller ? { backgroundColor: seller.background, color: seller.text } : undefined}
-            >
-              {seller ? <TicketLogo seller={seller.label} className={isTicketWordmark(seller.label) ? 'h-3 w-auto shrink-0' : 'size-4 shrink-0'} /> : <Icon name="external" className="size-3.5 shrink-0 opacity-70" />}
-              {seller && isTicketWordmark(seller.label) ? <span className="sr-only">{seller.label}</span> : null}
-              {t('pin.getTickets')}
-              {seller ? <Icon name="external" className="size-3 shrink-0 opacity-60" /> : null}
-            </Anchor>
-          ) : null}
+          {saleLine}
+          {buyButton}
         </div>
       ) : null}
     </div>
