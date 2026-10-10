@@ -386,7 +386,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'record_event_info',
     description:
-      'Saves readings of pins handed out by pending_event_info: { pinId, performers: [{ name, type, url }], lowPrice, highPrice, priceCurrency, availability, onSaleDate, ticketUrl, sourceUrl } per the rules, "" or null where the pages say nothing. The page markup\'s claims win, a ticketUrl must be one of the links given, and a pin whose pages said nothing is marked checked. A row someone set by hand is kept.',
+      'Saves readings of pins handed out by pending_event_info: { pinId, performers: [{ name, type, url }], lowPrice, highPrice, priceCurrency, tiers: [{ label, price, note }], availability, onSaleDate, ticketUrl, sourceUrl } per the rules, "" or null where the pages say nothing. The page markup\'s claims win, a ticketUrl must be one of the links given, and a pin whose pages said nothing is marked checked. A row someone set by hand is kept.',
     input_schema: obj({
       readings: {
         type: 'array',
@@ -397,6 +397,7 @@ export const TOOLS: JobTool[] = [
             lowPrice: { type: ['number', 'null'], description: 'Cheapest ticket, null for none quoted' },
             highPrice: { type: ['number', 'null'], description: 'Dearest ticket, null for none quoted' },
             priceCurrency: str('ISO 4217, empty with no price'),
+            tiers: { type: 'array', description: 'Every named ticket price when the pages list more than one, else empty', items: obj({ label: str('As the page names it'), price: num('Price in priceCurrency, 0 for free'), note: str('Condition, else empty') }, ['label', 'price']) },
             availability: str('InStock, SoldOut, PreOrder or empty'),
             onSaleDate: str('ISO 8601 for PreOrder, else empty'),
             ticketUrl: str('Exactly one of the ticket links given, else empty'),

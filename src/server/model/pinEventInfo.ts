@@ -11,9 +11,10 @@ import {
   type EventInfoSource,
   type Performer,
   type PinEventInfoJson,
+  type TicketTier,
 } from '@/lib/eventInfo';
 
-const COLUMNS = `"performers", "ticketUrl", "lowPrice", "highPrice", "priceCurrency", "availability", "onSaleDate", "source", "sourceUrl", "checkedAt"`;
+const COLUMNS = `"performers", "ticketUrl", "lowPrice", "highPrice", "priceCurrency", "tiers", "availability", "onSaleDate", "source", "sourceUrl", "checkedAt"`;
 
 type EventInfoRow = Omit<PinEventInfoJson, 'lowPrice' | 'highPrice' | 'onSaleDate' | 'checkedAt'> & {
   lowPrice: string | null;
@@ -52,13 +53,26 @@ export function eventInfoProblem(body: Record<string, unknown>): { fields: Event
   if (performers.length > 150) return 'At most 150 performers.';
 
   const price = (value: unknown) => (value == null || value === '' ? null : Number(value));
-  const lowPrice = price(body.lowPrice);
-  const highPrice = price(body.highPrice ?? body.lowPrice);
+  const tierPrices = Array.isArray(body.tiers) ? body.tiers.map((t: { price?: unknown }) => Number(t?.price)).filter((n: number) => n >= 0) : [];
+  const lowPrice = price(body.lowPrice) ?? (tierPrices.length ? Math.min(...tierPrices) : null);
+  const highPrice = price(body.highPrice) ?? (tierPrices.length ? Math.max(...tierPrices) : lowPrice);
   if ((lowPrice != null && !(lowPrice >= 0)) || (highPrice != null && !(highPrice >= 0))) return 'Prices must be numbers of 0 or more.';
   if (lowPrice != null && highPrice != null && highPrice < lowPrice) return 'highPrice is below lowPrice.';
   const priceCurrency = typeof body.priceCurrency === 'string' && body.priceCurrency.trim() ? body.priceCurrency.trim().toUpperCase() : null;
   if (priceCurrency && !/^[A-Z]{3}$/.test(priceCurrency)) return 'priceCurrency must be a three-letter code (USD).';
   if (lowPrice != null && !priceCurrency) return 'A price needs its priceCurrency.';
+
+  const tiers: TicketTier[] = [];
+  for (const t of Array.isArray(body.tiers) ? body.tiers : body.tiers == null ? [] : [null]) {
+    const label = typeof t?.label === 'string' ? t.label.trim() : '';
+    const amount = t?.price === '' || t?.price == null ? NaN : Number(t.price);
+    if (!label || label.length > 120) return 'Each ticket tier needs a label of at most 120 characters.';
+    if (!(amount >= 0)) return `Ticket tier "${label}" needs a price of 0 or more.`;
+    const note = typeof t.note === 'string' && t.note.trim() ? t.note.trim().slice(0, 200) : undefined;
+    tiers.push({ label, price: amount, ...(note ? { note } : {}) });
+  }
+  if (tiers.length > 30) return 'At most 30 ticket tiers.';
+  if (tiers.length && !priceCurrency) return 'Ticket tiers need their priceCurrency.';
 
   const availability = body.availability == null || body.availability === '' ? null : String(body.availability);
   if (availability && !AVAILABILITIES.includes(availability as Availability)) return `availability must be one of ${AVAILABILITIES.join(', ')}.`;
@@ -78,6 +92,7 @@ export function eventInfoProblem(body: Record<string, unknown>): { fields: Event
       lowPrice,
       highPrice: lowPrice == null ? null : highPrice,
       priceCurrency: lowPrice == null ? null : priceCurrency,
+      tiers: lowPrice == null ? [] : tiers,
       availability: (availability as Availability | null) ?? null,
       onSaleDate: onSale ? onSale.toISOString() : null,
     },
@@ -99,11 +114,11 @@ export async function saveEventInfo(
   { source, sourceUrl, checkedAt }: { source: EventInfoSource; sourceUrl?: string | null; checkedAt?: string | Date },
 ): Promise<boolean> {
   const rows = await db.query(
-    `INSERT INTO "PinEventInfo" ("pinId", "performers", "ticketUrl", "lowPrice", "highPrice", "priceCurrency", "availability", "onSaleDate", "source", "sourceUrl", "checkedAt")
-     VALUES ($1, $2::jsonb, $3, $4, $5, $6, $7, $8, $9, $10, COALESCE($11::timestamptz, now()))
+    `INSERT INTO "PinEventInfo" ("pinId", "performers", "ticketUrl", "lowPrice", "highPrice", "priceCurrency", "tiers", "availability", "onSaleDate", "source", "sourceUrl", "checkedAt")
+     VALUES ($1, $2::jsonb, $3, $4, $5, $6, $12::jsonb, $7, $8, $9, $10, COALESCE($11::timestamptz, now()))
      ON CONFLICT ("pinId") DO UPDATE SET
        "performers" = EXCLUDED."performers", "ticketUrl" = EXCLUDED."ticketUrl", "lowPrice" = EXCLUDED."lowPrice",
-       "highPrice" = EXCLUDED."highPrice", "priceCurrency" = EXCLUDED."priceCurrency", "availability" = EXCLUDED."availability",
+       "highPrice" = EXCLUDED."highPrice", "priceCurrency" = EXCLUDED."priceCurrency", "tiers" = EXCLUDED."tiers", "availability" = EXCLUDED."availability",
        "onSaleDate" = EXCLUDED."onSaleDate", "source" = EXCLUDED."source", "sourceUrl" = EXCLUDED."sourceUrl", "checkedAt" = EXCLUDED."checkedAt"
      WHERE "PinEventInfo"."source" <> 'hand' OR EXCLUDED."source" = 'hand'
      RETURNING "pinId"`,
@@ -119,6 +134,7 @@ export async function saveEventInfo(
       source,
       sourceUrl ?? null,
       checkedAt ? new Date(checkedAt).toISOString() : null,
+      JSON.stringify(fields.tiers ?? []),
     ],
   );
   return rows.length > 0;

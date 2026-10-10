@@ -46,6 +46,7 @@ The event is given by its title, its date and its venue. Pages often cover more 
 
 - performers: who is billed to perform - the headline act and billed support, the two teams (or the named competitors) of a match, the keynote speakers a conference names. Never the organizer, promoter, ticket seller, sponsor or venue. type "PerformingGroup" for a band, a team, an orchestra or a group; "Person" for one person. url: that performer's own page if the pages link it, else "". Empty when the pages name nobody.
 - lowPrice / highPrice / priceCurrency: the cheapest and dearest ticket or pass price the pages quote for this event, with its ISO 4217 code ("USD"). One price: both the same. A free event: 0 and 0 with the local currency. Null when no price is quoted. Never a resale price, a past year's price, or a price you know from elsewhere.
+- tiers: when the pages list more than one named ticket price (adult, senior, student; seating sections), every one as { label, price, note } with the label as the page names it and note any condition it attaches (else ""). Free tiers (children, members) are listed with price 0. Empty when the pages quote one price or none. lowPrice and highPrice then span the paid tiers.
 - availability: "InStock" when the pages say tickets or registration are on sale now (or entry is free and open); "SoldOut" when they say sold out; "PreOrder" when they say tickets are not on sale yet (coming soon, presale sign-up, waitlist, "on sale <date>"). "" when the pages do not say.
 - onSaleDate: for PreOrder, the date and time sales open as ISO 8601 ("2027-01-10T10:00:00-08:00"), else "".
 - ticketUrl: the link for buying tickets or registering, copied exactly from the links listed with the page, else "".
@@ -70,12 +71,21 @@ export const EVENT_INFO_SCHEMA = {
     lowPrice: { type: ['number', 'null'] },
     highPrice: { type: ['number', 'null'] },
     priceCurrency: { type: 'string' },
+    tiers: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { label: { type: 'string' }, price: { type: 'number' }, note: { type: 'string' } },
+        required: ['label', 'price', 'note'],
+        additionalProperties: false,
+      },
+    },
     availability: { type: 'string', enum: ['', ...AVAILABILITIES] },
     onSaleDate: { type: 'string' },
     ticketUrl: { type: 'string' },
     sourceUrl: { type: 'string' },
   },
-  required: ['performers', 'lowPrice', 'highPrice', 'priceCurrency', 'availability', 'onSaleDate', 'ticketUrl', 'sourceUrl'],
+  required: ['performers', 'lowPrice', 'highPrice', 'priceCurrency', 'tiers', 'availability', 'onSaleDate', 'ticketUrl', 'sourceUrl'],
   additionalProperties: false,
 };
 
@@ -234,6 +244,7 @@ export function combineReading(answer: Record<string, unknown> | null, pages: Pa
     lowPrice: priced.lowPrice,
     highPrice: priced.highPrice,
     priceCurrency: priced.priceCurrency,
+    tiers: priced.tiers.length ? priced.tiers : read.tiers,
     availability: markup.availability ?? read.availability,
     onSaleDate: markup.availability ? markup.onSaleDate : read.onSaleDate,
   };
@@ -250,6 +261,7 @@ export function describeReading(fields: EventInfoFields): string {
   const parts = [
     fields.performers.length ? `performers: ${fields.performers.map((p) => `${p.name} (${p.type === 'Person' ? 'person' : 'group'})`).join(', ')}` : 'no performers',
     fields.lowPrice != null ? `price ${fields.lowPrice}${fields.highPrice !== fields.lowPrice ? `-${fields.highPrice}` : ''} ${fields.priceCurrency}` : 'no price',
+    fields.tiers.length > 1 ? `${fields.tiers.length} tiers: ${fields.tiers.map((t) => `${t.label} ${t.price}`).join(', ')}` : null,
     fields.availability ?? 'sale state unknown',
     fields.onSaleDate ? `on sale ${fields.onSaleDate}` : null,
     fields.ticketUrl ? `tickets ${fields.ticketUrl}` : null,

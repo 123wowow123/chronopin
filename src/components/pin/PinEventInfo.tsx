@@ -41,6 +41,8 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
         : info.availability === 'InStock' && !free
           ? t('pin.ticketsOnSale')
           : null;
+  // More than one named price: a table, in place of the span's range.
+  const tiers = info.tiers?.length > 1 && info.lowPrice != null ? info.tiers : [];
   const hasTickets = !!(price || sale || (info.ticketUrl && !started));
   const seller = ticketSeller(info.ticketUrl);
   if (!info.performers.length && !hasTickets) {
@@ -66,10 +68,26 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
           ))}
         </div>
       ) : null}
+      {tiers.length ? (
+        <table className="w-full max-w-sm border-collapse text-sm">
+          <caption className="sr-only">{t('pin.ticketsHeading')}</caption>
+          <tbody>
+            {tiers.map((tier, index) => (
+              <tr key={`${tier.label}-${index}`} className="border-b border-white/10 last:border-0">
+                <th scope="row" className="py-1 pe-4 text-start font-normal">
+                  {tier.label}
+                  {tier.note ? <span className="ms-1 text-xs text-subtle">{tier.note}</span> : null}
+                </th>
+                <td className="py-1 text-end font-semibold tabular-nums">{tier.price === 0 ? t('pin.ticketsFree') : amount(tier.price)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : null}
       {hasTickets ? (
         <div className="flex flex-wrap items-center gap-2">
           <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.ticketsHeading')}</span>
-          {price ? <span className="font-semibold tabular-nums">{price}</span> : null}
+          {price && !tiers.length ? <span className="font-semibold tabular-nums">{price}</span> : null}
           {sale ? (
             <span className={info.availability === 'SoldOut' ? 'text-danger' : 'text-subtle'}>
               {sale} <span className="text-xs">({t('pin.ticketsCheckedAt', { date: day(info.checkedAt) })})</span>

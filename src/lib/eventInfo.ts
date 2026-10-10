@@ -13,12 +13,19 @@ export type Availability = (typeof AVAILABILITIES)[number];
 export const EVENT_INFO_SOURCES = ['markup', 'claude', 'session', 'hand'] as const;
 export type EventInfoSource = (typeof EVENT_INFO_SOURCES)[number];
 
+// One named ticket price: "Adult" 25, "Senior (65+)" 21. note: a condition the
+// page attaches ("Weekdays only").
+export type TicketTier = { label: string; price: number; note?: string };
+
 export type PinEventInfoJson = {
   performers: Performer[];
   ticketUrl: string | null;
   lowPrice: number | null;
   highPrice: number | null;
   priceCurrency: string | null;
+  // Every named price, when a page lists more than one; lowPrice and
+  // highPrice span them.
+  tiers: TicketTier[];
   availability: Availability | null;
   onSaleDate: string | null;
   source: EventInfoSource;
@@ -35,6 +42,7 @@ export const EMPTY_EVENT_INFO: EventInfoFields = {
   lowPrice: null,
   highPrice: null,
   priceCurrency: null,
+  tiers: [],
   availability: null,
   onSaleDate: null,
 };
@@ -124,6 +132,15 @@ export function eventInfoFromMarkup(event: Node | undefined): EventInfoFields {
   const offers = [event.offers]
     .flat()
     .flatMap((o) => (o && typeof o === 'object' ? [o as Node, ...[(o as Node).offers].flat().filter((x): x is Node => !!x && typeof x === 'object')] : []));
+  // Named offers at different prices are a price list.
+  const tiers: TicketTier[] = [];
+  for (const o of offers) {
+    const label = text(o.name);
+    const amount = price(o.price);
+    if (label && amount != null && !tiers.some((t) => t.label.toLowerCase() === label.toLowerCase())) {
+      tiers.push({ label: label.slice(0, 120), price: amount });
+    }
+  }
   const prices = offers.flatMap((o) => [price(o.price), price(o.lowPrice), price(o.highPrice)]).filter((p): p is number => p != null);
   const availabilities = offers.map((o) => availabilityOf(o.availability)).filter((a): a is Availability => !!a);
   const availability = availabilities.includes('InStock')
@@ -143,6 +160,7 @@ export function eventInfoFromMarkup(event: Node | undefined): EventInfoFields {
     lowPrice: prices.length ? Math.min(...prices) : null,
     highPrice: prices.length ? Math.max(...prices) : null,
     priceCurrency: prices.length && currency ? currency.toUpperCase() : null,
+    tiers: tiers.length > 1 && prices.length && currency ? tiers : [],
     availability,
     onSaleDate: availability === 'PreOrder' && onSale ? new Date(onSale).toISOString() : null,
   };
