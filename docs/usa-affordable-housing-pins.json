@@ -1,0 +1,2875 @@
+[
+  {
+    "pinId": 7023,
+    "pinUrl": "https://www.chronopin.com/pin/7023",
+    "checkedAt": "2026-10-09",
+    "title": "Timbale Terrace Opens Affordable Housing in East Harlem",
+    "city": "New York City",
+    "state": "New York",
+    "address": "East 118th Street & Park Avenue, New York, NY 10035",
+    "sourceUrl": "https://lanternhousing.org/properties/timbale-terrace/",
+    "targetMilestone": "Lantern Organization lists occupancy in 2028",
+    "timelineBoundary": "2028-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: Lantern Organization lists occupancy in 2028. 2028-12-31 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://lanternhousing.org/properties/timbale-terrace/",
+      "https://www.nyc.gov/site/hpd/news/010-26/mamdani-administration-breaks-ground-timbale-terrace-affordable-housing-development",
+      "https://newyorkyimby.com/2026/02/timbale-terrace-breaks-ground-at-101-east-118th-street-in-east-harlem-manhattan.html"
+    ],
+    "references": [
+      {
+        "url": "https://www.nyc.gov/site/hpd/news/010-26/mamdani-administration-breaks-ground-timbale-terrace-affordable-housing-development",
+        "title": "NYC HPD: Timbale Terrace groundbreaking",
+        "confidence": 95,
+        "publishedDate": "2026-02-19",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Official 2026 announcement supports 341 homes, 97 supportive homes, foster-care set-aside and site location."
+      },
+      {
+        "url": "https://newyorkyimby.com/2026/02/timbale-terrace-breaks-ground-at-101-east-118th-street-in-east-harlem-manhattan.html",
+        "title": "New York YIMBY: Timbale Terrace construction and rent examples",
+        "confidence": 80,
+        "publishedDate": "2026-02-19",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "February 2026 reporting gives approximate rent examples for selected homes and a 2028 target, not a current full leasing schedule."
+      }
+    ],
+    "notes": [
+      "Lantern publishes 100 East 118th Street; architect and YIMBY publish 101. Pin uses the officially described Park Avenue / East 118th Street intersection instead of resolving conflicting postal numbers.",
+      "Architect’s 2025 target is obsolete; sponsor now lists 2028 occupancy.",
+      "Sponsor lists $255M in text and $225M in key facts; no project price field is set.",
+      "A current Housing Connect application or complete rent matrix was not found."
+    ],
+    "rentResearch": {
+      "source": "https://newyorkyimby.com/2026/02/timbale-terrace-breaks-ground-at-101-east-118th-street-in-east-harlem-manhattan.html",
+      "asOf": "2026-02-19",
+      "currentLeasingRateVerified": false,
+      "intro": "February 2026 reporting gives approximate monthly rents for selected units, not every apartment or a current leasing offer.",
+      "rows": [
+        [
+          "Selected one-bedroom homes (61 reported)",
+          "Approximately $900"
+        ],
+        [
+          "Selected two-bedroom homes (44 reported)",
+          "Approximately $2,250"
+        ]
+      ],
+      "note": "The article does not assign these examples to a complete income-tier matrix. Final rates, availability, eligibility and utility conditions require the operator’s leasing information."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "E 118th St & Park Ave, New York, New York, 10035",
+      "matchScore": 100,
+      "matchType": "StreetInt",
+      "latitude": 40.800561001897,
+      "longitude": -73.942163006376
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-ny-eaf00fa7b69e179b.jpg",
+        "sourceImageUrl": "https://lanternhousing.org/wp-content/uploads/2025/12/Timbale-Terrace-Rendering_streetscape-view-2000x1126.jpg",
+        "sourcePageUrl": "https://lanternhousing.org/properties/timbale-terrace/",
+        "credit": "Lantern Organization / Urban Architectural Initiatives",
+        "kind": "Architectural rendering",
+        "sha256": "eaf00fa7b69e179b73e50f05db3cf25b5159033631b10f6270d57960593032dd",
+        "publicBlobVerified": true
+      },
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-ny-courtyard-97379c91e1f7a869.jpg",
+        "sourceImageUrl": "https://lanternhousing.org/wp-content/uploads/2025/12/Timbale-Terrace-Rendering_rear-court-yard-1024x575.jpg",
+        "sourcePageUrl": "https://lanternhousing.org/properties/timbale-terrace/",
+        "credit": "Lantern Organization / Urban Architectural Initiatives",
+        "kind": "Architectural rendering",
+        "sha256": "97379c91e1f7a86982e0e0899a9461b51539b14e6b80f72912afe71c9245b4a9",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7024,
+    "pinUrl": "https://www.chronopin.com/pin/7024",
+    "checkedAt": "2026-10-09",
+    "title": "327 Harbor Affordable Apartments Completes in San Pedro",
+    "city": "Los Angeles",
+    "state": "California",
+    "address": "327 N. Harbor Boulevard, San Pedro, Los Angeles, CA 90731",
+    "sourceUrl": "https://nationalcore.org/communities/327-harbor/",
+    "targetMilestone": "National CORE anticipates fall 2026 completion",
+    "timelineBoundary": "2026-11-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: National CORE anticipates fall 2026 completion. 2026-11-30 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://nationalcore.org/communities/327-harbor/",
+      "https://hacla.org/sites/default/files/2024-08/2024.08.08%20ITEM%20A2-%20327%20Harbor%20Construction%20Closing_0.pdf",
+      "https://nationalcore.org/one-san-pedro-collaborative-breaks-ground-on-new-apartment-community/"
+    ],
+    "references": [
+      {
+        "url": "https://hacla.org/sites/default/files/2024-08/2024.08.08%20ITEM%20A2-%20327%20Harbor%20Construction%20Closing_0.pdf",
+        "title": "HACLA: 327 Harbor construction financing report",
+        "confidence": 90,
+        "publishedDate": "2024-08-08",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Official report explains 46 restricted homes, manager unit, initial resident eligibility, subsidy mix and income-based tenant rent."
+      },
+      {
+        "url": "https://nationalcore.org/one-san-pedro-collaborative-breaks-ground-on-new-apartment-community/",
+        "title": "National CORE: 327 Harbor groundbreaking",
+        "confidence": 80,
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Corroborates project partners and amenities; older 2027 completion window differs from current fall-2026 operator target."
+      }
+    ],
+    "notes": [
+      "Operator’s unit list repeats two-bedroom wording for the final 12 homes; HACLA lists those as three-bedrooms.",
+      "Existing-resident priority and replacement-unit conditions are prominently recorded."
+    ],
+    "rentResearch": {
+      "source": "https://hacla.org/sites/default/files/2024-08/2024.08.08%20ITEM%20A2-%20327%20Harbor%20Construction%20Closing_0.pdf",
+      "asOf": "2024-08-08",
+      "currentLeasingRateVerified": false,
+      "intro": "HACLA’s 2024 report states that monthly tenant rent in the restricted homes must not exceed 30% of adjusted monthly income.",
+      "rows": [
+        [
+          "Restricted homes; income-based tenant contribution",
+          "At most 30% of adjusted monthly income"
+        ]
+      ],
+      "note": "This is a published affordability condition, not a fixed dollar asking rent. The report describes project-based subsidies and initial leasing for eligible Rancho San Pedro residents. A current tenant payment schedule was not found."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "327 N Harbor Blvd, San Pedro, California, 90731",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 33.745650562339,
+      "longitude": -118.279867702294
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-la-8886d8686d246aeb.jpg",
+        "sourceImageUrl": "https://nationalcore.org/wp-content/uploads/2024/11/327-harbor-render-01.jpg",
+        "sourcePageUrl": "https://nationalcore.org/communities/327-harbor/",
+        "credit": "National CORE",
+        "kind": "Architectural rendering",
+        "sha256": "8886d8686d246aeb9450171d0e07a169c069a6c0060373f410be9eca304aa00a",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7025,
+    "pinUrl": "https://www.chronopin.com/pin/7025",
+    "checkedAt": "2026-10-09",
+    "title": "Jigzibik Affordable Apartments Opens in Irving Park",
+    "city": "Chicago",
+    "state": "Illinois",
+    "address": "2909 W. Irving Park Road, Chicago, IL 60618",
+    "sourceUrl": "https://www.fccommunities.org/jigzibik/",
+    "targetMilestone": "October 2026 ICT reporting expects a December 2026 opening",
+    "timelineBoundary": "2026-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: October 2026 ICT reporting expects a December 2026 opening. 2026-12-31 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://www.fccommunities.org/jigzibik/",
+      "https://ictnews.org/news/north-central-bureau/chicago-housing-project-aims-to-fulfill-70-year-old-promise-to-native-people/",
+      "https://www.skender.com/news-media/skender-breaks-ground-on-chicagos-first-native-american-focused-affordable-housing-project/"
+    ],
+    "references": [
+      {
+        "url": "https://ictnews.org/news/north-central-bureau/chicago-housing-project-aims-to-fulfill-70-year-old-promise-to-native-people/",
+        "title": "ICT: Native-led Chicago housing and December opening target",
+        "confidence": 85,
+        "publishedDate": "2026-10-02",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "October 2026 reporting updates the anticipated opening to December; operator confirms current waitlist status."
+      },
+      {
+        "url": "https://www.skender.com/news-media/skender-breaks-ground-on-chicagos-first-native-american-focused-affordable-housing-project/",
+        "title": "Skender: Jigzibik construction start",
+        "confidence": 85,
+        "publishedDate": "2025-07-15",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Contractor supports project size and earlier second-half-2026 target."
+      }
+    ],
+    "notes": [
+      "Checked operator’s floor-plan PDFs and application-resource links; no rent schedule found on the public property page.",
+      "RentCafe application site could not be read; no account was created and no application submitted."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Monthly rent not published in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "2909 W Irving Park Rd, Chicago, Illinois, 60618",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 41.953676437006,
+      "longitude": -87.701183384145
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-chicago-9810adf70b75764e.jpg",
+        "sourceImageUrl": "https://www.fccommunities.org/wp-content/uploads/2026/06/Jigzibik-Rendering-Front-e1780946508630.jpg",
+        "sourcePageUrl": "https://www.fccommunities.org/jigzibik/",
+        "credit": "Full Circle Communities / Canopy Architecture + Design",
+        "kind": "Architectural rendering",
+        "sha256": "9810adf70b75764e4fa138cafa5177a45a25abb29aae6b1f60c2f2a2019cb4cf",
+        "publicBlobVerified": true
+      },
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-chicago-kitchen-c2778f1b842c849c.jpg",
+        "sourceImageUrl": "https://www.fccommunities.org/wp-content/uploads/2026/06/Jigzibik_Residential-Kitchen-2-6-Floor-e1780946590794.jpg",
+        "sourcePageUrl": "https://www.fccommunities.org/jigzibik/",
+        "credit": "Full Circle Communities / Canopy Architecture + Design",
+        "kind": "Architectural rendering",
+        "sha256": "c2778f1b842c849c0667d7437fc742d1b02f2b94e391a2ef5c3610a80047ec99",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7026,
+    "pinUrl": "https://www.chronopin.com/pin/7026",
+    "checkedAt": "2026-10-09",
+    "title": "160 Freelon Affordable Apartments Completes in SoMa",
+    "city": "San Francisco",
+    "state": "California",
+    "address": "160 Freelon Street, San Francisco, CA 94107",
+    "sourceUrl": "https://www.related.com/our-company/properties/160-freelon",
+    "targetMilestone": "Related expects completion in Q1 2027",
+    "timelineBoundary": "2027-03-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: Related expects completion in Q1 2027. 2027-03-31 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://www.related.com/our-company/properties/160-freelon",
+      "https://sgc.ca.gov/newsroom/press-releases/2026/160-freelon-marks-milestone-in-development-of-85-new-state-funded-affordable-homes-in-san-francisco/",
+      "https://sfgov.legistar.com/View.ashx?GUID=171B03F4-7BC5-41FD-B973-E9D206F98A1C&ID=14200549&M=F"
+    ],
+    "references": [
+      {
+        "url": "https://sgc.ca.gov/newsroom/press-releases/2026/160-freelon-marks-milestone-in-development-of-85-new-state-funded-affordable-homes-in-san-francisco/",
+        "title": "California SGC: 160 Freelon topping out",
+        "confidence": 95,
+        "publishedDate": "2026-05-01",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "May 2026 state announcement supports 85 homes, income tiers and construction progress."
+      },
+      {
+        "url": "https://sfgov.legistar.com/View.ashx?GUID=171B03F4-7BC5-41FD-B973-E9D206F98A1C&ID=14200549&M=F",
+        "title": "San Francisco: 160 Freelon financing presentation",
+        "confidence": 80,
+        "publishedDate": "2025-05-14",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Official May 2025 presentation projected December 2026 lottery, March 2027 completion and later lease-up."
+      }
+    ],
+    "notes": [
+      "Operator, state release, project-update and city-financing sources searched for rents. Older 2023 city financing PDF could not be fetched; no current rent matrix verified."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Monthly rent not published in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "160 Freelon St, San Francisco, California, 94107",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 37.777946343542,
+      "longitude": -122.398260087892
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-sf-9d5df0f761f45c10.jpg",
+        "sourceImageUrl": "https://www.related.com/sites/default/files/styles/gallery_images_622_height/public/2026-03/acquiadam-assets/160%20Freelon%20main%20render%20crop.jpg?itok=NQ1ufAdP",
+        "sourcePageUrl": "https://www.related.com/our-company/properties/160-freelon",
+        "credit": "Related California / San Francisco Housing Development Corporation",
+        "kind": "Architectural rendering",
+        "sha256": "9d5df0f761f45c10a4b20597746e6bb3241d12ca6d552b921cfd5b39c4464502",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7027,
+    "pinUrl": "https://www.chronopin.com/pin/7027",
+    "checkedAt": "2026-10-09",
+    "title": "The Pointe at Thomas Affordable Housing Groundbreaking Announced in Seattle",
+    "city": "Seattle",
+    "state": "Washington",
+    "address": "228 11th Avenue East, Seattle, WA 98102",
+    "sourceUrl": "https://press.aboutamazon.com/2026/6/c-a-development-and-amazon-bring-new-affordable-homes-to-seattles-capitol-hill",
+    "targetMilestone": "Amazon and C&A announced the groundbreaking on June 12, 2026",
+    "timelineBoundary": "2026-06-12",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed: Amazon and C&A announced the groundbreaking on June 12, 2026. The timeline records this announced milestone, not a move-in or application date.",
+    "sourcesChecked": [
+      "https://press.aboutamazon.com/2026/6/c-a-development-and-amazon-bring-new-affordable-homes-to-seattles-capitol-hill",
+      "https://www.exxelpacific.com/portfolio-items/the-pointe-at-thomas/",
+      "https://www.exxelpacific.com/with-amazon-support-plus-cliff-avrils-backing-exxel-pacific-to-build-affordable-capitol-hill-units/"
+    ],
+    "references": [
+      {
+        "url": "https://www.exxelpacific.com/portfolio-items/the-pointe-at-thomas/",
+        "title": "Exxel Pacific: The Pointe at Thomas",
+        "confidence": 90,
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Contractor confirms current project, 67 homes, income range, owner and architect."
+      },
+      {
+        "url": "https://www.exxelpacific.com/with-amazon-support-plus-cliff-avrils-backing-exxel-pacific-to-build-affordable-capitol-hill-units/",
+        "title": "Exxel Pacific / Seattle DJC: Capitol Hill affordable housing",
+        "confidence": 85,
+        "publishedDate": "2026-06-22",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Contractor-hosted trade reporting corroborates the seven-story project and financing, but offers only a conditional construction duration."
+      }
+    ],
+    "notes": [
+      "Contractor portfolio page fetched locally; web search fetch timed out.",
+      "Conditional 18-month build duration in trade report was not converted into an invented completion date.",
+      "Sponsor release and contractor pages do not publish dollar rents or an application opening."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Monthly rent not published in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "228 11th Ave E, Seattle, Washington, 98102",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 47.620766795064,
+      "longitude": -122.317901608682
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-seattle-ff2e31a38146d766.jpg",
+        "sourceImageUrl": "https://www.exxelpacific.com/wp-content/uploads/2026/06/Rendering-scaled.jpg",
+        "sourcePageUrl": "https://www.exxelpacific.com/portfolio-items/the-pointe-at-thomas/",
+        "credit": "Atelier Drome via Exxel Pacific",
+        "kind": "Architectural rendering",
+        "sha256": "ff2e31a38146d7661a50b91937c7a06e98e35060b3c2befdfa50d427ead7ce5f",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7028,
+    "pinUrl": "https://www.chronopin.com/pin/7028",
+    "checkedAt": "2026-10-09",
+    "title": "4965 Washington Street Affordable Housing Opens in Globeville",
+    "city": "Denver",
+    "state": "Colorado",
+    "address": "4965 Washington Street, Denver, CO 80216",
+    "sourceUrl": "https://www.evergreenreg.com/communities/4965-washington-street/",
+    "targetMilestone": "Evergreen lists the community as coming fall 2027",
+    "timelineBoundary": "2027-11-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: Evergreen lists the community as coming fall 2027. 2027-11-30 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://www.evergreenreg.com/communities/4965-washington-street/",
+      "https://www.nationalequityfund.org/news/first-mass-timber-affordable-housing-project-in-denver-will-offer-170-family-homes-public-library-on-ground-floor/",
+      "https://www.evergreenreg.com/blog/evergreen-real-estate-group-and-globeville-redevelopment-partners-llc-break-ground-on-mixed-use-development-with-co-located-library-in-denvers-globeville-neighborhood/"
+    ],
+    "references": [
+      {
+        "url": "https://www.nationalequityfund.org/news/first-mass-timber-affordable-housing-project-in-denver-will-offer-170-family-homes-public-library-on-ground-floor/",
+        "title": "National Equity Fund: Globeville housing construction",
+        "confidence": 90,
+        "publishedDate": "2026-01-26",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Financing partner corroborates 170 homes, library, community-owned spaces and January 2026 construction start."
+      },
+      {
+        "url": "https://www.evergreenreg.com/blog/evergreen-real-estate-group-and-globeville-redevelopment-partners-llc-break-ground-on-mixed-use-development-with-co-located-library-in-denvers-globeville-neighborhood/",
+        "title": "Evergreen: Globeville groundbreaking",
+        "confidence": 90,
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Developer announcement corroborates project partners, site and construction."
+      }
+    ],
+    "notes": [
+      "Operator page, developer announcement and financing-partner release checked; no fixed monthly rents or application opening verified."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Monthly rent not published in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "4965 Washington St, Denver, Colorado, 80216",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 39.787044697342,
+      "longitude": -104.979220500672
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-denver-56c8ab696b105456.jpg",
+        "sourceImageUrl": "https://www.evergreenreg.com/wp-content/uploads/2026/04/4965-Washington-Denver-Rendering-Exterior-900x506.webp",
+        "sourcePageUrl": "https://www.evergreenreg.com/communities/4965-washington-street/",
+        "credit": "Evergreen Real Estate Group",
+        "kind": "Architectural rendering",
+        "sha256": "56c8ab696b105456ee138e5e9a2c785438e3d2c000abc30e8d4dcabf6ef2aac6",
+        "publicBlobVerified": true
+      },
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-denver-courtyard-8cb677b557a23ebe.jpg",
+        "sourceImageUrl": "https://www.evergreenreg.com/wp-content/uploads/2026/04/4965-Washington-Denver-Rendering-Courtyard-300x169.webp",
+        "sourcePageUrl": "https://www.evergreenreg.com/communities/4965-washington-street/",
+        "credit": "Evergreen Real Estate Group",
+        "kind": "Architectural rendering",
+        "sha256": "8cb677b557a23ebe4ff750371c034a97f9752b42247aa445e58dbc8e532ac1d2",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7029,
+    "pinUrl": "https://www.chronopin.com/pin/7029",
+    "checkedAt": "2026-10-09",
+    "title": "Blessed Sacrament Church Completes Affordable Housing Conversion in Boston",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "address": "361 Centre Street, Boston, MA 02130",
+    "sourceUrl": "https://www.pennrose.com/news-views/news/2026/mayor-wu-community-leaders-join-pennrose-and-hyde-square-task-force-to-break-ground-on-blessed-sacrament-church-redevelopment/",
+    "targetMilestone": "Pennrose’s May 2026 announcement expects completion by the end of 2027",
+    "timelineBoundary": "2027-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: Pennrose’s May 2026 announcement expects completion by the end of 2027. 2027-12-31 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://www.pennrose.com/news-views/news/2026/mayor-wu-community-leaders-join-pennrose-and-hyde-square-task-force-to-break-ground-on-blessed-sacrament-church-redevelopment/",
+      "https://www.massdevelopment.com/news/new-chapter-for-historic-church-as-affordable-housing/",
+      "https://www.boston.gov/buildinghousing/361-centre-street-aka-blessed-sacrament"
+    ],
+    "references": [
+      {
+        "url": "https://www.massdevelopment.com/news/new-chapter-for-historic-church-as-affordable-housing/",
+        "title": "MassDevelopment: Blessed Sacrament bond financing",
+        "confidence": 85,
+        "publishedDate": "2025-09-17",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Official financing release confirms unit mix, income tiers and six supportive set-asides; its early-2028 schedule predates the developer’s latest update."
+      },
+      {
+        "url": "https://www.boston.gov/buildinghousing/361-centre-street-aka-blessed-sacrament",
+        "title": "Boston: 361 Centre Street housing project",
+        "confidence": 90,
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "City project page verifies address and construction status; completion is listed as to be determined."
+      }
+    ],
+    "notes": [
+      "Latest developer target used; older official early-2028 target retained as a discrepancy.",
+      "Checked developer release, city project page, financing release and leasing searches; rents remain unpublished."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Monthly rent not published in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "361 Centre St, Jamaica Plain, Massachusetts, 02130",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 42.322965991834,
+      "longitude": -71.10748398635
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-boston-51dd65f8c6044052.jpg",
+        "sourceImageUrl": "https://www.pennrose.com/media/fhapjopo/20260430_blessedsacrament_mm_024_55241031665_o.jpg",
+        "sourcePageUrl": "https://www.pennrose.com/news-views/news/2026/mayor-wu-community-leaders-join-pennrose-and-hyde-square-task-force-to-break-ground-on-blessed-sacrament-church-redevelopment/",
+        "credit": "Pennrose",
+        "kind": "Groundbreaking photograph",
+        "sha256": "51dd65f8c6044052bcb4cfe1fb497601f54600e4d69db43c9a60a7b5f6e07652",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7030,
+    "pinUrl": "https://www.chronopin.com/pin/7030",
+    "checkedAt": "2026-10-09",
+    "title": "Hillsdale Flats Phase I Breaks Ground at Barry Farm in Washington DC",
+    "city": "Washington DC",
+    "state": "District of Columbia",
+    "address": "Sumner Road SE & Wade Road SE, Washington, DC 20020",
+    "sourceUrl": "https://www.dchousing.org/wordpress/dmped-dcha-poah-break-ground-on-90-units-of-affordable-housing-in-ward-8/",
+    "targetMilestone": "DCHA celebrated the Hillsdale Flats Phase I groundbreaking on June 3, 2026",
+    "timelineBoundary": "2026-06-03",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed: DCHA celebrated the Hillsdale Flats Phase I groundbreaking on June 3, 2026. The timeline records this announced milestone, not a move-in or application date.",
+    "sourcesChecked": [
+      "https://www.dchousing.org/wordpress/dmped-dcha-poah-break-ground-on-90-units-of-affordable-housing-in-ward-8/",
+      "https://barryfarmredevelopment.org/portfolio/phase-1-rental-flats/",
+      "https://dchfa.org/wp-content/uploads/2025/12/Press-Release_Benning-Rd-and-Hillsdale-KA2025122306.docx.pdf"
+    ],
+    "references": [
+      {
+        "url": "https://barryfarmredevelopment.org/portfolio/phase-1-rental-flats/",
+        "title": "Barry Farm redevelopment: Hillsdale Flats I",
+        "confidence": 90,
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Project site confirms 90 homes, 42 replacement units, layout and unannounced completion."
+      },
+      {
+        "url": "https://dchfa.org/wp-content/uploads/2025/12/Press-Release_Benning-Rd-and-Hillsdale-KA2025122306.docx.pdf",
+        "title": "DCHFA: Hillsdale Flats financing",
+        "confidence": 85,
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Official financing source supports the 90-unit development and family-sized mix."
+      }
+    ],
+    "notes": [
+      "Project page has stale construction-start TBA despite the June 2026 ceremony; current official announcement is used.",
+      "Rents, application-opening date and completion date not verified.",
+      "Location is an explicitly labeled intersection marker within the officially described site area."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Monthly rent not published in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "Sumner Rd SE & Wade Rd SE, Washington, District of Columbia, 20020",
+      "matchScore": 100,
+      "matchType": "StreetInt",
+      "latitude": 38.859987388765,
+      "longitude": -76.996301960664
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-dc-1afebef62a1feab9.jpg",
+        "sourceImageUrl": "https://barryfarmredevelopment.org/wp-content/uploads/2024/04/Rental-Flats.png",
+        "sourcePageUrl": "https://barryfarmredevelopment.org/portfolio/phase-1-rental-flats/",
+        "credit": "Barry Farm Redevelopment / POAH",
+        "kind": "Architectural rendering",
+        "sha256": "1afebef62a1feab96c8cd7efdc3bd4de66baf8b745753d29006c9a5e9c3a970c",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7031,
+    "pinUrl": "https://www.chronopin.com/pin/7031",
+    "checkedAt": "2026-10-09",
+    "title": "Bailey at Stassney Affordable Apartments Completes in South Austin",
+    "city": "Austin",
+    "state": "Texas",
+    "address": "5516 Humming Bird Lane, Austin, TX 78745",
+    "sourceUrl": "https://nationalcore.org/communities/bailey-at-stassney-2/",
+    "targetMilestone": "National CORE anticipates summer 2027 completion",
+    "timelineBoundary": "2027-08-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: National CORE anticipates summer 2027 completion. 2027-08-31 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://nationalcore.org/communities/bailey-at-stassney-2/",
+      "https://nationalcore.org/national-core-strengthens-texas-standing-with-twin-groundbreaking-event/",
+      "https://tdhca.legistar.com/View.ashx?GUID=9B726C4D-C6FC-48EC-8278-4391B91319AC&ID=15070630&M=F"
+    ],
+    "references": [
+      {
+        "url": "https://nationalcore.org/national-core-strengthens-texas-standing-with-twin-groundbreaking-event/",
+        "title": "National CORE: Austin Bailey communities groundbreaking",
+        "confidence": 90,
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Developer confirms Stassney’s unit mix, 16 VASH and 10 Continuum of Care homes and city partnership."
+      },
+      {
+        "url": "https://tdhca.legistar.com/View.ashx?GUID=9B726C4D-C6FC-48EC-8278-4391B91319AC&ID=15070630&M=F",
+        "title": "TDHCA: Bailey at Stassney underwriting and rent schedule",
+        "confidence": 90,
+        "publishedDate": "2024-06-28",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "June 28, 2024 report, page 14, uses 2023 program rents and separates utility allowances, unassisted net rents and PBV contract rents. Historical planning figures are not current asking rents."
+      }
+    ],
+    "notes": [
+      "Older report describes all 26 assisted units as PBV; latest developer distinguishes 16 VASH and 10 CoC. Current set-aside description preserved.",
+      "Older Stassney Lane site address differs from the current operator’s Humming Bird Lane address. Current operator address used."
+    ],
+    "rentResearch": {
+      "source": "https://tdhca.legistar.com/View.ashx?GUID=9B726C4D-C6FC-48EC-8278-4391B91319AC&ID=15070630&M=F",
+      "asOf": "2024-06-28",
+      "programRentYear": 2023,
+      "currentLeasingRateVerified": false,
+      "intro": "The June 28, 2024 TDHCA report uses 2023 program rents. Its unassisted monthly net-rent estimates, after listed utility allowances, are:",
+      "rows": [
+        [
+          "Studio, 50% AMI; unassisted",
+          "$934"
+        ],
+        [
+          "1 bedroom, 50% AMI; unassisted",
+          "$994"
+        ],
+        [
+          "1 bedroom, 60% AMI; unassisted",
+          "$1,213"
+        ]
+      ],
+      "note": "The report separately lists PBV gross contract rents of $1,519 for studios and $1,635 for one-bedrooms. Those are subsidy contract amounts, not residents’ verified payments. Current leasing rates and utility allowances are not verified."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "5516 Humming Bird Ln, Austin, Texas, 78745",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 30.207402552575,
+      "longitude": -97.778653119588
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-austin-abe381eea519d88c.jpg",
+        "sourceImageUrl": "https://nationalcore.org/wp-content/uploads/2026/04/Bailey-at-Stassney.jpg",
+        "sourcePageUrl": "https://nationalcore.org/communities/bailey-at-stassney-2/",
+        "credit": "National CORE",
+        "kind": "Architectural rendering",
+        "sha256": "abe381eea519d88cfed69ee09e2832a53ff1657d3156b23e27045fec45fe5687",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7032,
+    "pinUrl": "https://www.chronopin.com/pin/7032",
+    "checkedAt": "2026-10-09",
+    "title": "The JHB at Acres Homes Opens Affordable Housing in Houston",
+    "city": "Houston",
+    "state": "Texas",
+    "address": "1131 Bland Street, Houston, TX 77091",
+    "sourceUrl": "https://newhopehousing.com/locations/the-jhb-at-acres-homes",
+    "targetMilestone": "New Hope Housing targets a fall 2027 opening",
+    "timelineBoundary": "2027-11-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: New Hope Housing targets a fall 2027 opening. 2027-11-30 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://newhopehousing.com/locations/the-jhb-at-acres-homes",
+      "https://newhopehousing.com/news-and-stories/the-jhb-at-acres-homes-groundbreaking-2"
+    ],
+    "references": [
+      {
+        "url": "https://newhopehousing.com/news-and-stories/the-jhb-at-acres-homes-groundbreaking-2",
+        "title": "New Hope Housing: JHB at Acres Homes groundbreaking",
+        "confidence": 90,
+        "publishedDate": "2026-04-22",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Developer’s April 2026 release verifies 103 homes, family unit sizes, naming and fall-2027 opening."
+      }
+    ],
+    "notes": [
+      "No precise AMI schedule, fixed rents or application-opening date found on developer’s property and groundbreaking pages.",
+      "Other property-page gallery assets contain Ennis filenames; excluded to avoid misattributing another development."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Monthly rent not published in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "1131 Bland St, Houston, Texas, 77091",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 29.860192397544,
+      "longitude": -95.430327744889
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-houston-0b53d70435de3b6e.jpg",
+        "sourceImageUrl": "https://newhopehousing.com/media/images/_4000x2250_crop_center-center_100_none/33808/NHH-Wheatley-Renderings_2.webp",
+        "sourcePageUrl": "https://newhopehousing.com/locations/the-jhb-at-acres-homes",
+        "credit": "New Hope Housing",
+        "kind": "Architectural rendering",
+        "sha256": "0b53d70435de3b6ee70d1f84325448a2d55a71c3b0e19d415f06a8dee18482cb",
+        "publicBlobVerified": true
+      },
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-houston-groundbreaking-10af0ebac1e0cd0d.jpg",
+        "sourceImageUrl": "https://newhopehousing.com/media/images/_3000x2400_crop_center-center_100_none/34097/NHH-WheatleyGroundBreaking2026-18.webp",
+        "sourcePageUrl": "https://newhopehousing.com/news-and-stories/the-jhb-at-acres-homes-groundbreaking-2",
+        "credit": "New Hope Housing",
+        "kind": "Groundbreaking photograph",
+        "sha256": "10af0ebac1e0cd0dc7ea2cdef8fa9b86e4f24e257791002436f10fbb92fd1bef",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7033,
+    "pinUrl": "https://www.chronopin.com/pin/7033",
+    "checkedAt": "2026-10-09",
+    "title": "The Overlook at Garson Affordable Housing Completes Near the Atlanta Beltline",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "address": "579 Garson Drive NE, Atlanta, GA 30324",
+    "sourceUrl": "https://mcshaneconstruction.com/mcshane-to-build-affordable-apartments-atlanta-beltline/",
+    "targetMilestone": "McShane expects completion in May 2028",
+    "timelineBoundary": "2028-05-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: McShane expects completion in May 2028. 2028-05-31 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://mcshaneconstruction.com/mcshane-to-build-affordable-apartments-atlanta-beltline/",
+      "https://www.atlantahousing.org/atlanta-housing-atlanta-beltline-and-partners-break-ground-on-100-percent-affordable-overlook-at-garson/",
+      "https://www.gpb.org/news/2026/08/06/atlanta-breaks-ground-on-its-latest-affordable-housing-development-the-twist-its-on"
+    ],
+    "references": [
+      {
+        "url": "https://www.atlantahousing.org/atlanta-housing-atlanta-beltline-and-partners-break-ground-on-100-percent-affordable-overlook-at-garson/",
+        "title": "Atlanta Housing: Overlook at Garson groundbreaking",
+        "confidence": 90,
+        "publishedDate": "2026-08-05",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Housing authority verifies project partners, 130 affordable homes, trail location and spring-2028 target."
+      },
+      {
+        "url": "https://www.gpb.org/news/2026/08/06/atlanta-breaks-ground-on-its-latest-affordable-housing-development-the-twist-its-on",
+        "title": "GPB: Overlook at Garson affordable housing",
+        "confidence": 85,
+        "publishedDate": "2026-08-06",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Public broadcasting corroborates project, transit location and 50%–80% AMI eligibility."
+      }
+    ],
+    "notes": [
+      "Sources differ on site acreage and ceremonial date (August 4 vs August 5 announcement); neither is used as the timeline milestone.",
+      "No verified operator rent schedule or application-opening date found."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Monthly rent not published in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "579 Garson Dr NE, Atlanta, Georgia, 30324",
+      "matchScore": 100,
+      "matchType": "StreetAddress",
+      "latitude": 33.818046426414,
+      "longitude": -84.369713607779
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-atlanta-413c258140debdf9.jpg",
+        "sourceImageUrl": "https://mcshaneconstruction.com/wp-content/uploads/2026/07/The-Overlook-at-Garson-Rendering-1_web.jpg",
+        "sourcePageUrl": "https://mcshaneconstruction.com/portfolio/the-overlook-at-garson/",
+        "credit": "Pennrose via McShane Construction",
+        "kind": "Architectural rendering",
+        "sha256": "413c258140debdf960f9dfe7df81ffe44233dc360b2a9808e0ca42f811bca75a",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7034,
+    "pinUrl": "https://www.chronopin.com/pin/7034",
+    "checkedAt": "2026-10-09",
+    "title": "Rhapsody at Rainbow Village Affordable Housing Completes in Overtown",
+    "city": "Miami",
+    "state": "Florida",
+    "address": "2000 NW 3rd Avenue, Miami, FL 33127",
+    "sourceUrl": "https://www.htgf.com/communities/rhapsody",
+    "targetMilestone": "Housing Trust Group lists completion in 2027",
+    "timelineBoundary": "2027-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated: Housing Trust Group lists completion in 2027. 2027-12-31 is a boundary representing that published window; no exact completion or move-in day has been announced.",
+    "sourcesChecked": [
+      "https://www.htgf.com/communities/rhapsody",
+      "https://www.miamidade.gov/global/release.page?Mduid_release=rel1745586881204218",
+      "https://multifamilyaffordablehousing.com/anf-htg-top-out-185-million-miami-affordable-housing-development/",
+      "https://www.rhapsodyhtgm.com/floorplans"
+    ],
+    "references": [
+      {
+        "url": "https://www.miamidade.gov/global/release.page?Mduid_release=rel1745586881204218",
+        "title": "Miami-Dade County: Rainbow Village / Rhapsody groundbreaking",
+        "confidence": 90,
+        "publishedDate": "2025-05-29",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "County verifies 310 apartments, unit mix, income tiers, 2027 completion year and site address."
+      },
+      {
+        "url": "https://multifamilyaffordablehousing.com/anf-htg-top-out-185-million-miami-affordable-housing-development/",
+        "title": "Multifamily & Affordable Housing Business: Rhapsody rent estimates",
+        "confidence": 80,
+        "publishedDate": "2025-09-15",
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "September 2025 trade report publishes anticipated $793–$2,634 monthly rents and an early-2027 target, not current leasing quotes."
+      },
+      {
+        "url": "https://www.rhapsodyhtgm.com/floorplans",
+        "title": "Rhapsody community website: floor plans",
+        "confidence": 90,
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null,
+        "reasoning": "Current public floor-plan page was checked; it did not show dollar rents."
+      }
+    ],
+    "notes": [
+      "HTG lists ZIP 33136 while county and community website use 33127; county / community website ZIP used.",
+      "Leasing site contact page checked; no inquiries sent and no applications submitted.",
+      "Public floor-plan page has no dollar prices; older trade range is clearly historical."
+    ],
+    "rentResearch": {
+      "source": "https://multifamilyaffordablehousing.com/anf-htg-top-out-185-million-miami-affordable-housing-development/",
+      "asOf": "2025-09-15",
+      "currentLeasingRateVerified": false,
+      "intro": "September 15, 2025 trade reporting gives anticipated monthly rents for one-, two- and three-bedroom apartments, without a bedroom-specific price matrix.",
+      "rows": [
+        [
+          "Reported 1–3 bedroom range",
+          "$793–$2,634"
+        ]
+      ],
+      "note": "This historical range does not price the studios or four-bedroom homes and is not a verified current offer. Final rates, household eligibility and utility conditions require confirmation through the property’s leasing information."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "2000 NW 3rd Ave, Miami, Florida, 33127",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 25.795602233054,
+      "longitude": -80.200528362859
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-miami-fe05c64077880acf.jpg",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/6997bbfcd260072bff8daf08/6a316ff6a3acac8316a34eb6_6a1f08286673f4a5372a6bf1_Image%2520(5)%2520(3).avif",
+        "sourcePageUrl": "https://www.htgf.com/communities/rhapsody",
+        "credit": "Housing Trust Group",
+        "kind": "Architectural rendering",
+        "sha256": "fe05c64077880acf74a892b76d4cb0a75e32fbb2ec6fd891898d2b996dd362d7",
+        "publicBlobVerified": true
+      },
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-miami-interior-ff2c7ec4c392505a.jpg",
+        "sourceImageUrl": "https://cdn.prod.website-files.com/6997bbfcd260072bff8daf08/6a316ff6a3acac8316a34efe_6a1f0828cd013ade2134d3f2_Image%2520(4)%2520(2).avif",
+        "sourcePageUrl": "https://www.htgf.com/communities/rhapsody",
+        "credit": "Housing Trust Group",
+        "kind": "Architectural rendering",
+        "sha256": "ff2c7ec4c392505a7f955b1bf96c9f677b85d2625f3dbed336f44fddeb460772",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7035,
+    "pinUrl": "https://www.chronopin.com/pin/7035",
+    "checkedAt": "2026-10-09",
+    "title": "Willets Point Commons — New York City affordable housing",
+    "city": "New York City",
+    "state": "New York",
+    "address": "126-55 39th Avenue, Queens, NY 11368",
+    "sourceUrl": "https://www.nychdc.com/newsroom/city-and-partners-celebrate-opening-affordable-housing-willets-point-and-groundbreaking",
+    "targetMilestone": "Grand opening celebrated May 18, 2026",
+    "timelineBoundary": "2026-05-18",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening celebrated May 18, 2026. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.nychdc.com/newsroom/city-and-partners-celebrate-opening-affordable-housing-willets-point-and-groundbreaking",
+      "https://www.livewilletspoint.com/home",
+      "https://housingconnect.nyc.gov/PublicWeb/details/7378"
+    ],
+    "references": [
+      {
+        "url": "https://www.livewilletspoint.com/home",
+        "title": "Willets Point Commons: current pricing and inquiries",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://housingconnect.nyc.gov/PublicWeb/details/7378",
+        "title": "Housing Connect: closed Willets Point Commons lottery",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Official opening release describes 30%–120% AMI; current leasing page separately offers selected 150% AMI apartments. Both are labeled without treating every apartment as one income tier."
+    ],
+    "rentResearch": {
+      "source": "https://www.livewilletspoint.com/home",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Selected 2-bedroom, 150% AMI",
+          "$3,377"
+        ],
+        [
+          "Selected 3-bedroom, 150% AMI",
+          "$3,890"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "These current advertised rents apply only to the stated 150% AMI homes. The lower-income lottery had different prices and is closed. Household size, asset limits and utilities affect eligibility and total cost."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "126-55 39th Ave, Corona, New York, 11368",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 40.756543982195,
+      "longitude": -73.841711093598
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-willets-41afeb0019fe49bd.jpg",
+        "sourceImageUrl": "https://www.nychdc.com/sites/default/files/styles/max_890/public/2026-05/Willets%20Point%20Event_Ribbon%20Cutting%20Ceremony%20for%20Willets%20Point%20Commons_Courtesy%20of%20QDG.jpg?itok=Mfg1_aUs",
+        "sourcePageUrl": "https://www.nychdc.com/newsroom/city-and-partners-celebrate-opening-affordable-housing-willets-point-and-groundbreaking",
+        "credit": "QDG, via NYC Housing Development Corporation",
+        "kind": "Opening ceremony photograph",
+        "sha256": "41afeb0019fe49bd0bedbc6a20325b8f9e0099e8bef68ac23db6afa53af1715a",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7036,
+    "pinUrl": "https://www.chronopin.com/pin/7036",
+    "checkedAt": "2026-10-09",
+    "title": "La Olazul — New York City affordable housing",
+    "city": "New York City",
+    "state": "New York",
+    "address": "1940 Jerome Avenue, Bronx, NY 10453",
+    "sourceUrl": "https://www.westhab.org/vaya-development-and-westhab-close-on-financing-for-la-olazul-81-million-supportive-housing-development/",
+    "targetMilestone": "Sponsor’s financing announcement targets completion in 2026",
+    "timelineBoundary": "2026-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Sponsor’s financing announcement targets completion in 2026. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://www.westhab.org/vaya-development-and-westhab-close-on-financing-for-la-olazul-81-million-supportive-housing-development/",
+      "https://www.westhab.org/a-vision-for-affordable-and-supportive-housing-breaking-ground-on-la-olazul/",
+      "https://newyorkyimby.com/2026/03/housing-lottery-launches-for-la-olazul-in-mount-hope-the-bronx.html"
+    ],
+    "references": [
+      {
+        "url": "https://www.westhab.org/a-vision-for-affordable-and-supportive-housing-breaking-ground-on-la-olazul/",
+        "title": "Westhab: project mix and groundbreaking",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://newyorkyimby.com/2026/03/housing-lottery-launches-for-la-olazul-in-mount-hope-the-bronx.html",
+        "title": "YIMBY: March 2026 lottery announcement",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Completion target originates in April 2024 sponsor release; no confirmed completion found.",
+      "March 2026 reporting contains contradictory AMI labels and other local reporting quotes different rents. No official current rent matrix verified; withheld conflicting dollar figures."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "1940 Jerome Ave, Bronx, New York, 10453",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 40.850888966048,
+      "longitude": -73.90958187818
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-olazul-c18c54a60fa2e858.jpg",
+        "sourceImageUrl": "https://www.westhab.org/wp-content/uploads/2-La-Olazul.jpg",
+        "sourcePageUrl": "https://www.westhab.org/vaya-development-and-westhab-close-on-financing-for-la-olazul-81-million-supportive-housing-development/",
+        "credit": "Westhab / Vaya Development",
+        "kind": "Architectural rendering",
+        "sha256": "c18c54a60fa2e858cc82ed3f16a1bed96c574bdeafe5b2feb58e193d55fc5cf8",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7037,
+    "pinUrl": "https://www.chronopin.com/pin/7037",
+    "checkedAt": "2026-10-09",
+    "title": "Las Dahlias (East Los Angeles) — Los Angeles affordable housing",
+    "city": "Los Angeles",
+    "state": "California",
+    "address": "4655 East 3rd Street, East Los Angeles, CA 90022",
+    "sourceUrl": "https://nationalcore.org/communities/las-dahlias/",
+    "targetMilestone": "Grand opening scheduled for August 14, 2024 and subsequently reported celebrated",
+    "timelineBoundary": "2024-08-14",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening scheduled for August 14, 2024 and subsequently reported celebrated. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://nationalcore.org/communities/las-dahlias/",
+      "https://www.liveatlasdahlias.com/floorplans",
+      "https://nationalcore.org/innovative-east-la-community-welcomes-residents/",
+      "https://www.acmartin.com/story/las-dahlias-affordable-housing-grand-opening"
+    ],
+    "references": [
+      {
+        "url": "https://www.liveatlasdahlias.com/floorplans",
+        "title": "Las Dahlias: operator floor plans",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://nationalcore.org/innovative-east-la-community-welcomes-residents/",
+        "title": "National CORE: move-ins and August 14 ceremony",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.acmartin.com/story/las-dahlias-affordable-housing-grand-opening",
+        "title": "AC Martin: August 2024 grand opening",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Metro-area coverage: East Los Angeles is an unincorporated community, not the City of Los Angeles.",
+      "Public floor plans say call for pricing; no dollar rates inferred."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "4655 E 3rd St, Los Angeles, California, 90022",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 34.03364299053,
+      "longitude": -118.165192789475
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-dahlias-2855f15499f70d76.jpg",
+        "sourceImageUrl": "https://nationalcore.org/wp-content/uploads/2021/08/las-dahlias-001-1080x675.jpg",
+        "sourcePageUrl": "https://nationalcore.org/communities/las-dahlias/",
+        "credit": "National CORE",
+        "kind": "Architectural rendering",
+        "sha256": "2855f15499f70d76bbff0ea86cb34f22cd9e5cb6513857dc765774639a0f4a6f",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7038,
+    "pinUrl": "https://www.chronopin.com/pin/7038",
+    "checkedAt": "2026-10-09",
+    "title": "456 West — Los Angeles affordable housing",
+    "city": "Los Angeles",
+    "state": "California",
+    "address": "456 West 9th Street, San Pedro, Los Angeles, CA 90731",
+    "sourceUrl": "https://nationalcore.org/communities/456-west/",
+    "targetMilestone": "Grand opening celebrated October 26, 2023",
+    "timelineBoundary": "2023-10-26",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening celebrated October 26, 2023. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://nationalcore.org/communities/456-west/",
+      "https://www.liveat456west.com/floorplans",
+      "https://nationalcore.org/national-core-linc-housing-provide-affordable-housing-in-san-pedro/"
+    ],
+    "references": [
+      {
+        "url": "https://www.liveat456west.com/floorplans",
+        "title": "456 West: current operator floor plans",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://nationalcore.org/national-core-linc-housing-provide-affordable-housing-in-san-pedro/",
+        "title": "National CORE: grand opening",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Floor plans publish sizes but require a pricing inquiry."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "456 W 9th St, San Pedro, California, 90731",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 33.736457751941,
+      "longitude": -118.287155515648
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-west-70165f2154828aea.jpg",
+        "sourceImageUrl": "https://nationalcore.org/wp-content/uploads/2021/02/456West-001-1080x675.jpg",
+        "sourcePageUrl": "https://nationalcore.org/communities/456-west/",
+        "credit": "National CORE / Linc Housing",
+        "kind": "Architectural rendering",
+        "sha256": "70165f2154828aea4ca9ced7b215e62d568207e119f364231225ecaf33cb76a6",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7039,
+    "pinUrl": "https://www.chronopin.com/pin/7039",
+    "checkedAt": "2026-10-09",
+    "title": "Encuentro Square — Chicago affordable housing",
+    "city": "Chicago",
+    "state": "Illinois",
+    "address": "3759 West Cortland Street, Chicago, IL 60647",
+    "sourceUrl": "https://www.thecha.org/property/encuentro-square",
+    "targetMilestone": "Grand opening celebrated February 15, 2025",
+    "timelineBoundary": "2025-02-15",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening celebrated February 15, 2025. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.thecha.org/property/encuentro-square",
+      "https://www.thecha.org/news/cha-partners-cut-ribbon-encuentro-square-includes-89-affordable-units-logan-square",
+      "https://encuentrosquare.com/"
+    ],
+    "references": [
+      {
+        "url": "https://www.thecha.org/news/cha-partners-cut-ribbon-encuentro-square-includes-89-affordable-units-logan-square",
+        "title": "CHA: February 15 grand opening and full 89-home project",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://encuentrosquare.com/",
+        "title": "Encuentro Square: rents and application status",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [],
+    "rentResearch": {
+      "source": "https://encuentrosquare.com/",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "1 bedroom",
+          "$1,100"
+        ],
+        [
+          "2 bedrooms",
+          "$1,300"
+        ],
+        [
+          "3 bedrooms",
+          "$1,600"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "The operator page publishes these rents but currently declines new applications. Its posted income thresholds may be older; obtain current eligibility requirements. These figures do not establish the tenant contribution for CHA voucher-assisted homes."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "3759 W Cortland St, Chicago, Illinois, 60647",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 41.915271017661,
+      "longitude": -87.721074981485
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-encuentro-bfd98df322d78117.jpg",
+        "sourceImageUrl": "https://www.thecha.org/sites/default/files/styles/property_header/public/EncuentroSquare.jpg?h=aad454ab&itok=Qgq2xqyk",
+        "sourcePageUrl": "https://www.thecha.org/property/encuentro-square",
+        "credit": "Evergreen Real Estate Group / LUCHA",
+        "kind": "Project photograph",
+        "sha256": "bfd98df322d781178f2ec42d3b91dc2302febdfd54e407e57d9316d2869e5814",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7040,
+    "pinUrl": "https://www.chronopin.com/pin/7040",
+    "checkedAt": "2026-10-09",
+    "title": "Fifth City Commons — Chicago affordable housing",
+    "city": "Chicago",
+    "state": "Illinois",
+    "address": "3155 West Fifth Avenue, Chicago, IL 60612",
+    "sourceUrl": "https://fifthcitycommons.org/",
+    "targetMilestone": "POAH announced the grand-opening celebration on January 28, 2025",
+    "timelineBoundary": "2025-01-28",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: POAH announced the grand-opening celebration on January 28, 2025. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://fifthcitycommons.org/",
+      "https://www.poahchicago.org/news/poah-opening-its-first-all-electric-chicago-apartment-building-week",
+      "https://fifthcitycommons.org/about/",
+      "https://www.fifthcitycommons.com/floorplans"
+    ],
+    "references": [
+      {
+        "url": "https://www.poahchicago.org/news/poah-opening-its-first-all-electric-chicago-apartment-building-week",
+        "title": "POAH: dated opening announcement",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://fifthcitycommons.org/about/",
+        "title": "Fifth City Commons: project design",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.fifthcitycommons.com/floorplans",
+        "title": "Fifth City Commons: operator floor plans",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "No fixed dollar rent verified; current listing requests pricing."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "3155 W 5th Ave, Chicago, Illinois, 60612",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 41.87818972947,
+      "longitude": -87.705658314613
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-fifth-bb6a68914d2a9e63.jpg",
+        "sourceImageUrl": "https://i0.wp.com/fifthcitycommons.org/wp-content/uploads/2025/08/Fifth-City-Commons-exterior-1-MURAL.jpg?resize=1024%2C683&ssl=1",
+        "sourcePageUrl": "https://fifthcitycommons.org/",
+        "credit": "Preservation of Affordable Housing",
+        "kind": "Project photograph",
+        "sha256": "bb6a68914d2a9e635c7ebb932142d08da58d78348552603fac0161e0eb4d4b55",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7041,
+    "pinUrl": "https://www.chronopin.com/pin/7041",
+    "checkedAt": "2026-10-09",
+    "title": "Cielo at Sunnydale — San Francisco affordable housing",
+    "city": "San Francisco",
+    "state": "California",
+    "address": "101 Santos Street, San Francisco, CA 94134",
+    "sourceUrl": "https://www.mercyhousing.org/california/cielo/",
+    "targetMilestone": "Operator expects construction to end in spring 2027",
+    "timelineBoundary": "2027-05-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Operator expects construction to end in spring 2027. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://www.mercyhousing.org/california/cielo/",
+      "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/"
+    ],
+    "references": [
+      {
+        "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+        "title": "Mercy Housing: Cielo groundbreaking context",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Fall-2026 application window is a published projection, not a verified active lottery."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "101 Santos St, San Francisco, California, 94134",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 37.710541006043,
+      "longitude": -122.418702040994
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-cielo-bc1d00859228a65e.jpg",
+        "sourceImageUrl": "https://www.mercyhousing.org/wp-content/uploads/2026/05/Cielo_View-from-Santos-North-scaled.png",
+        "sourcePageUrl": "https://www.mercyhousing.org/california/cielo/",
+        "credit": "Mercy Housing / Related California",
+        "kind": "Architectural rendering",
+        "sha256": "bc1d00859228a65eef6e609e9800f7015f368b79dd59587d1da4228343f444d1",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7042,
+    "pinUrl": "https://www.chronopin.com/pin/7042",
+    "checkedAt": "2026-10-09",
+    "title": "Amani Apartments — San Francisco affordable housing",
+    "city": "San Francisco",
+    "state": "California",
+    "address": "1529 Sunnydale Avenue, San Francisco, CA 94134",
+    "sourceUrl": "https://www.mercyhousing.org/california/amani-apartments/",
+    "targetMilestone": "Mercy Housing announced the Amani and Nia grand opening on November 18, 2025",
+    "timelineBoundary": "2025-11-18",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Mercy Housing announced the Amani and Nia grand opening on November 18, 2025. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.mercyhousing.org/california/amani-apartments/",
+      "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/"
+    ],
+    "references": [
+      {
+        "url": "https://www.mercyhousing.org/2025/11/celebrating-the-grand-opening-of-170-new-affordable-apartment-homes-as-part-of-san-franciscos-largest-public-housing-transformation/",
+        "title": "Mercy Housing: Amani and Nia opening announcement",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Timeline records the dated operator announcement, not an independently verified ceremony day."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "1529 Sunnydale Ave, San Francisco, California, 94134",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 37.711676083371,
+      "longitude": -122.416780405872
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-amani-6b8cd9a1c0bcdc75.jpg",
+        "sourceImageUrl": "https://www.mercyhousing.org/wp-content/uploads/2024/05/4-MEWS-FROM-SUNNYDALE.jpg",
+        "sourcePageUrl": "https://www.mercyhousing.org/california/amani-apartments/",
+        "credit": "Mercy Housing / Related California",
+        "kind": "Architectural rendering",
+        "sha256": "6b8cd9a1c0bcdc7594b2c0850fef1e64c20ad0f6563b2978a680a36d3e8830fc",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7043,
+    "pinUrl": "https://www.chronopin.com/pin/7043",
+    "checkedAt": "2026-10-09",
+    "title": "The Rise on Madison — Seattle affordable housing",
+    "city": "Seattle",
+    "state": "Washington",
+    "address": "1400 Madison Street, Seattle, WA 98104",
+    "sourceUrl": "https://www.bellwetherhousing.org/properties/the-rise-on-madison",
+    "targetMilestone": "Grand opening celebrated May 23, 2023",
+    "timelineBoundary": "2023-05-23",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening celebrated May 23, 2023. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.bellwetherhousing.org/properties/the-rise-on-madison",
+      "https://www.bellwetherhousing.org/post/plymouth-housing-and-bellwether-housing-celebrate-first-affordablehigh-rise-development-in-50-years",
+      "https://theriseonmadison.bellwetherhousing.org/floorplans"
+    ],
+    "references": [
+      {
+        "url": "https://www.bellwetherhousing.org/post/plymouth-housing-and-bellwether-housing-celebrate-first-affordablehigh-rise-development-in-50-years",
+        "title": "Bellwether: May 23 grand opening",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://theriseonmadison.bellwetherhousing.org/floorplans",
+        "title": "The Rise on Madison: current floor-plan rents",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Ignored stale Future Building / June 2022 template fields."
+    ],
+    "rentResearch": {
+      "source": "https://theriseonmadison.bellwetherhousing.org/floorplans",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Studio, 60% AMI",
+          "From $1,399"
+        ],
+        [
+          "Open 1 bedroom, 50% AMI",
+          "From $1,352"
+        ],
+        [
+          "Open 1 bedroom, 60% AMI",
+          "From $1,499"
+        ],
+        [
+          "1 bedroom, 60% AMI",
+          "From $1,635"
+        ],
+        [
+          "2 bedrooms, 50% AMI",
+          "From $1,697"
+        ],
+        [
+          "3 bedrooms / 2 baths, 50% AMI",
+          "From $1,966"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "Rates and availability may change. Confirm eligibility, utilities, fees and the final lease quote with the operator."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "1400 Madison St, Seattle, Washington, 98104",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 47.610950371069,
+      "longitude": -122.321645553374
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-rise-a041f8f488ca56b5.jpg",
+        "sourceImageUrl": "https://static.wixstatic.com/media/fab506_6098348c52be41b19bc4dfaf36865e8e~mv2.jpg",
+        "sourcePageUrl": "https://www.bellwetherhousing.org/properties/the-rise-on-madison",
+        "credit": "Bellwether Housing",
+        "kind": "Project photograph",
+        "sha256": "a041f8f488ca56b5d75730539f455a889cba60c2e5770bbfc807218cdf8b4de5",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7044,
+    "pinUrl": "https://www.chronopin.com/pin/7044",
+    "checkedAt": "2026-10-09",
+    "title": "Flourish on Rainier — Seattle affordable housing",
+    "city": "Seattle",
+    "state": "Washington",
+    "address": "7930 Rainier Avenue South, Seattle, WA 98118",
+    "sourceUrl": "https://www.bellwetherhousing.org/properties/flourish-on-rainier",
+    "targetMilestone": "Grand-opening celebration scheduled September 12, 2024",
+    "timelineBoundary": "2024-09-12",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand-opening celebration scheduled September 12, 2024. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.bellwetherhousing.org/properties/flourish-on-rainier",
+      "https://www.bellwetherhousing.org/event-details/flourish-on-rainier-grand-opening-celebration",
+      "https://flourishonrainier.bellwetherhousing.org/floorplans"
+    ],
+    "references": [
+      {
+        "url": "https://www.bellwetherhousing.org/event-details/flourish-on-rainier-grand-opening-celebration",
+        "title": "Bellwether: September 2024 opening celebration",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://flourishonrainier.bellwetherhousing.org/floorplans",
+        "title": "Flourish on Rainier: current floor-plan rents",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Portfolio lists established 2023; September 2024 is the separately verified grand-opening celebration. Ignored stale template fields."
+    ],
+    "rentResearch": {
+      "source": "https://flourishonrainier.bellwetherhousing.org/floorplans",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Studio, 50% AMI",
+          "From $1,050"
+        ],
+        [
+          "Studio, 60% AMI",
+          "From $1,150"
+        ],
+        [
+          "1 bedroom, 50% AMI",
+          "From $1,325"
+        ],
+        [
+          "1 bedroom, 60% AMI",
+          "From $1,400"
+        ],
+        [
+          "Open 1 bedroom, 60% AMI",
+          "From $1,350"
+        ],
+        [
+          "2 bedrooms, 50% AMI",
+          "From $1,682"
+        ],
+        [
+          "2 bedrooms, 60% AMI",
+          "From $1,999"
+        ],
+        [
+          "3 bedrooms, 60% AMI",
+          "From $2,299"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "Rates and availability may change. Confirm eligibility, utilities, fees and the final lease quote with the operator."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "7930 Rainier Ave S, Seattle, Washington, 98118",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 47.530724577387,
+      "longitude": -122.269721423401
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-flourish-248960ccb3f875cd.jpg",
+        "sourceImageUrl": "https://static.wixstatic.com/media/fab506_12b5ef721339487ca4d9b9dd0425de5e~mv2.jpg",
+        "sourcePageUrl": "https://www.bellwetherhousing.org/properties/flourish-on-rainier",
+        "credit": "Bellwether Housing",
+        "kind": "Project photograph",
+        "sha256": "248960ccb3f875cd8790a02967a40e4733f5355c044b958bcce92e401b9554ab",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7045,
+    "pinUrl": "https://www.chronopin.com/pin/7045",
+    "checkedAt": "2026-10-09",
+    "title": "Flo Senior Apartments — Denver affordable housing",
+    "city": "Denver",
+    "state": "Colorado",
+    "address": "919 Alcott Street, Denver, CO 80204",
+    "sourceUrl": "https://www.denverhousing.org/flo/",
+    "targetMilestone": "Grand opening celebrated September 18, 2025",
+    "timelineBoundary": "2025-09-18",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening celebrated September 18, 2025. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.denverhousing.org/flo/",
+      "https://www.denverhousing.org/press/denver-housing-authority-opens-flo-in-sun-valley-final-building-in-redevelopment/"
+    ],
+    "references": [
+      {
+        "url": "https://www.denverhousing.org/press/denver-housing-authority-opens-flo-in-sun-valley-final-building-in-redevelopment/",
+        "title": "DHA: September 2025 Flo opening",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Main rate section and form branch rates differ; both recorded and flagged rather than silently choosing one."
+    ],
+    "rentResearch": {
+      "source": "https://www.denverhousing.org/flo/",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Main pricing section: 1 bedroom",
+          "$1,249"
+        ],
+        [
+          "Main pricing section: 2 bedrooms",
+          "$1,499"
+        ],
+        [
+          "Some application-form branches: 1 bedroom",
+          "From $1,539"
+        ],
+        [
+          "Some application-form branches: 2 bedrooms",
+          "From $1,846"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "The operator page contains conflicting pricing sections, possibly for different income/program groups, without clearly reconciling them. Utilities are included; obtain a program-specific quote. The older September 2025 opening release has a different rent schedule."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "919 Alcott St, Denver, Colorado, 80204",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 39.731577578807,
+      "longitude": -105.01838309924
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-flo-eca2fa4581b85ec9.jpg",
+        "sourceImageUrl": "https://kaleidoscopedenverliving.com/wp-content/uploads/2026/03/Flo-Kitchen-Dining-Gray-1.png",
+        "sourcePageUrl": "https://www.denverhousing.org/flo/",
+        "credit": "Denver Housing Authority",
+        "kind": "Operator-published staged apartment interior",
+        "sha256": "eca2fa4581b85ec95c2929c5a22817d3edcc3a0124768a732943c3df8baea9b6",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7046,
+    "pinUrl": "https://www.chronopin.com/pin/7046",
+    "checkedAt": "2026-10-09",
+    "title": "Joli Apartments and Townhomes — Denver affordable housing",
+    "city": "Denver",
+    "state": "Colorado",
+    "address": "988 North Bryant Street, Denver, CO 80204",
+    "sourceUrl": "https://www.denverhousing.org/joli/",
+    "targetMilestone": "Architect reported the Joli grand opening on March 24, 2025",
+    "timelineBoundary": "2025-03-24",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Architect reported the Joli grand opening on March 24, 2025. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.denverhousing.org/joli/",
+      "https://ozarch.com/news/joli-apartments-and-townhomes-officially-opens-in-the-sun-valley-neighborhood"
+    ],
+    "references": [
+      {
+        "url": "https://ozarch.com/news/joli-apartments-and-townhomes-officially-opens-in-the-sun-valley-neighborhood",
+        "title": "OZ Architecture: dated opening report",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Do not treat market-rate and non-subsidized homes as deeply subsidized housing. No current dollar matrix verified."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "988 N Bryant St, Denver, Colorado, 80204",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 39.732921784619,
+      "longitude": -105.019362105531
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-joli-84b7c9e2220ee642.jpg",
+        "sourceImageUrl": "https://www.denverhousing.org/wp-content/uploads/2024/10/20250702_sol-joli_034-1024x682.jpg",
+        "sourcePageUrl": "https://www.denverhousing.org/joli/",
+        "credit": "Denver Housing Authority",
+        "kind": "Project photograph",
+        "sha256": "84b7c9e2220ee6422377d58967b83cee292886b428d7ecb0a270588bd9a73d47",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7047,
+    "pinUrl": "https://www.chronopin.com/pin/7047",
+    "checkedAt": "2026-10-09",
+    "title": "95 Everett — Boston affordable housing",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "address": "95 Everett Street, Allston, Boston, MA 02134",
+    "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/95-everett/",
+    "targetMilestone": "Operator expects completion in summer 2027",
+    "timelineBoundary": "2027-08-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Operator expects completion in summer 2027. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://www.pennrose.com/apartments/massachusetts/95-everett/"
+    ],
+    "references": [],
+    "notes": [],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "95 Everett St, Allston, Massachusetts, 02134",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 42.356347382235,
+      "longitude": -71.137957484991
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-everett-f28f55dcc4f5a375.jpg",
+        "sourceImageUrl": "https://www.pennrose.com/media/cpph0zfx/95-everett-website.jpg",
+        "sourcePageUrl": "https://www.pennrose.com/apartments/massachusetts/95-everett/",
+        "credit": "Pennrose",
+        "kind": "Architectural rendering",
+        "sha256": "f28f55dcc4f5a375a7fe7e88bc6c5c445ae1c462bb41b476eeac9b6e919ec46e",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7048,
+    "pinUrl": "https://www.chronopin.com/pin/7048",
+    "checkedAt": "2026-10-09",
+    "title": "Mary Ellen McCormack Building A — Boston affordable housing",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "address": "345 Old Colony Avenue, South Boston, MA 02127",
+    "sourceUrl": "https://www.bostonhousing.org/en/News/WinnCompanies-and-Boston-Housing-Authority-Secure.aspx",
+    "targetMilestone": "Official financing announcement targets fall 2026 occupancy for Building A",
+    "timelineBoundary": "2026-11-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Official financing announcement targets fall 2026 occupancy for Building A. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://www.bostonhousing.org/en/News/WinnCompanies-and-Boston-Housing-Authority-Secure.aspx",
+      "https://search.boston.gov/news/mayor-wu-joins-federal-and-state-leaders-celebrate-start-mary-ellen-mccormack-public-housing",
+      "https://www.bostonhousing.org/en/Community-Engagement/Resident-Empowerment/Local-Tenant-Organizations/Family-LTO-List.aspx"
+    ],
+    "references": [
+      {
+        "url": "https://search.boston.gov/news/mayor-wu-joins-federal-and-state-leaders-celebrate-start-mary-ellen-mccormack-public-housing",
+        "title": "Boston: groundbreaking and resident protections",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.bostonhousing.org/en/Community-Engagement/Resident-Empowerment/Local-Tenant-Organizations/Family-LTO-List.aspx",
+        "title": "BHA: McCormack tenant organization site address",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "345 Old Colony Avenue is a site-area marker, not a verified new apartment building postal number.",
+      "The published fall-2026 target is not confirmation of completed construction."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "345 Old Colony Ave, South Boston, Massachusetts, 02127",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 42.328780015152,
+      "longitude": -71.052910001507
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-mccormack-32da8d69add4e719.jpg",
+        "sourceImageUrl": "https://files.constantcontact.com/e7a569b1501/a7e9a73c-290e-4650-a0bb-d40441681a59.jpg?rdr=true",
+        "sourcePageUrl": "https://search.boston.gov/news/mayor-wu-joins-federal-and-state-leaders-celebrate-start-mary-ellen-mccormack-public-housing",
+        "credit": "City of Boston",
+        "kind": "Groundbreaking ceremony photograph",
+        "sha256": "32da8d69add4e719e3d26c1c1a0496b18c31dcf4305a3df9a9c781f68b4ee654",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7049,
+    "pinUrl": "https://www.chronopin.com/pin/7049",
+    "checkedAt": "2026-10-09",
+    "title": "The Asberry at Barry Farm — Washington DC affordable housing",
+    "city": "Washington DC",
+    "state": "District of Columbia",
+    "address": "1200 Sumner Road SE, Washington, DC 20020",
+    "sourceUrl": "https://www.theasberry.com/",
+    "targetMilestone": "Grand opening celebrated November 21, 2024",
+    "timelineBoundary": "2024-11-21",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening celebrated November 21, 2024. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.theasberry.com/",
+      "https://communityaffairs.dc.gov/content/mayor-bowser-cuts-ribbon-asberry-first-site-building-delivered-historic-barry-farm%E2%80%93hillsdale",
+      "https://barryfarmredevelopment.org/portfolio/asberry/",
+      "https://www.theasberry.com/floorplans"
+    ],
+    "references": [
+      {
+        "url": "https://communityaffairs.dc.gov/content/mayor-bowser-cuts-ribbon-asberry-first-site-building-delivered-historic-barry-farm%E2%80%93hillsdale",
+        "title": "DC: November 21 Asberry grand opening",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://barryfarmredevelopment.org/portfolio/asberry/",
+        "title": "Barry Farm: Asberry project facts",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.theasberry.com/floorplans",
+        "title": "The Asberry: floor plans and waitlist",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "1200 Sumner Rd SE, Washington, District of Columbia, 20020",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 38.860992504685,
+      "longitude": -76.99720259616
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-asberry-818de60957655d70.jpg",
+        "sourceImageUrl": "https://www.poahchicago.org/sites/default/files/styles/large_rectangle_770_x_440/public/property-photos/Asberry_Ext_Hammel%20%283%29_0.jpg?h=94b90b66&itok=BUwKsrJd",
+        "sourcePageUrl": "https://www.poahchicago.org/index.php/property/district-columbia/barry-farm",
+        "credit": "Preservation of Affordable Housing / Hammel",
+        "kind": "Project photograph",
+        "sha256": "818de60957655d709dc8803672812e689dc241f0c94aaf085cc5dab2bb14aee7",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7050,
+    "pinUrl": "https://www.chronopin.com/pin/7050",
+    "checkedAt": "2026-10-09",
+    "title": "Rise at Temple Courts — Washington DC affordable housing",
+    "city": "Washington DC",
+    "state": "District of Columbia",
+    "address": "2 L Street NW, Washington, DC 20001",
+    "sourceUrl": "https://www.risetemplecourts.com/",
+    "targetMilestone": "District scheduled the Northwest One ribbon cutting for December 19, 2022",
+    "timelineBoundary": "2022-12-19",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: District scheduled the Northwest One ribbon cutting for December 19, 2022. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.risetemplecourts.com/",
+      "https://beta.dc.gov/news/mayor-bowser-dc-housing-authority-cut-ribbon-long-awaited-northwest-one",
+      "https://www.risetemplecourtsaffordable.com/floorplans"
+    ],
+    "references": [
+      {
+        "url": "https://beta.dc.gov/news/mayor-bowser-dc-housing-authority-cut-ribbon-long-awaited-northwest-one",
+        "title": "DC mayor: December 2022 milestone and affordable-home mix",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.risetemplecourtsaffordable.com/floorplans",
+        "title": "Rise at Temple Courts: affordable floor-plan rents",
+        "confidence": 95,
+        "reasoning": "Separate affordable operator leasing site, checked October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Did not assign third-party market-rate apartment prices to income-restricted homes.",
+      "Found current restricted-rent listings on separate risetemplecourtsaffordable.com site; used these rather than market-rate listings."
+    ],
+    "rentResearch": {
+      "source": "https://www.risetemplecourtsaffordable.com/floorplans",
+      "rows": [
+        [
+          "Studio S3A",
+          "From $688"
+        ],
+        [
+          "Studio S2Z",
+          "From $1,319"
+        ],
+        [
+          "1 bedroom A10P / A17Z",
+          "From $1,479"
+        ],
+        [
+          "3 bedrooms C2Z",
+          "From $2,151"
+        ],
+        [
+          "3 bedrooms C6Z",
+          "From $2,307"
+        ]
+      ],
+      "currentLeasingRateVerified": true,
+      "intro": "Current starting monthly rents from the separate affordable leasing site, checked October 9, 2026.",
+      "note": "Subject to household income qualification, apartment availability and additional fees. C2Z lists November 7, 2026 availability; the other listed plans show current availability, which can change."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "2 L St NW, Washington, District of Columbia, 20001",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 38.903545624997,
+      "longitude": -77.009902436756
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-temple-070811aec855ca23.jpg",
+        "sourceImageUrl": "https://resource.rentcafe.com/image/upload/s3/2/101498/rise%20at%20temple%20courts%20staged%20photos%20%286%29.jpg",
+        "sourcePageUrl": "https://www.risetemplecourts.com/",
+        "credit": "MRP Realty / Kettler",
+        "kind": "Project photograph",
+        "sha256": "070811aec855ca23864b23408c5c4178bffc72dcdccb4e1358dd757c15f2bd76",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7051,
+    "pinUrl": "https://www.chronopin.com/pin/7051",
+    "checkedAt": "2026-10-09",
+    "title": "Zilker Studios — Austin affordable housing",
+    "city": "Austin",
+    "state": "Texas",
+    "address": "1508 South Lamar Boulevard, Austin, TX 78704",
+    "sourceUrl": "https://foundcom.org/housing/our-austin-communities/zilker-studios/",
+    "targetMilestone": "Operator reports opening in late May 2023",
+    "timelineBoundary": "2023-05-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Operator reports opening in late May 2023. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://foundcom.org/housing/our-austin-communities/zilker-studios/",
+      "https://foundcom.org/2023/07/building-zilker-studios-seizing-opportunities-overcoming-challenges/"
+    ],
+    "references": [
+      {
+        "url": "https://foundcom.org/2023/07/building-zilker-studios-seizing-opportunities-overcoming-challenges/",
+        "title": "Foundation Communities: late-May 2023 opening",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "May 31 represents the published opening month’s boundary."
+    ],
+    "rentResearch": {
+      "source": "https://foundcom.org/housing/our-austin-communities/zilker-studios/",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Efficiency studio for single adult",
+          "$555–$1,519"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "Operator says utilities and water are included. Range varies by eligibility and apartment/program; not a guaranteed available unit."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "1508 S Lamar Blvd, Austin, Texas, 78704",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 30.252151815338,
+      "longitude": -97.765089691507
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-zilker-c6702c503f355ad8.jpg",
+        "sourceImageUrl": "https://foundcom.org/wp-content/uploads/2023/07/DSC07003-1.jpeg",
+        "sourcePageUrl": "https://foundcom.org/2023/07/building-zilker-studios-seizing-opportunities-overcoming-challenges/",
+        "credit": "Foundation Communities",
+        "kind": "Project photograph",
+        "sha256": "c6702c503f355ad8dba400d47a8ba84111313e61136695f8bc5a4bf7ea2e0dec",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7052,
+    "pinUrl": "https://www.chronopin.com/pin/7052",
+    "checkedAt": "2026-10-09",
+    "title": "Parker Lane Apartments — Austin affordable housing",
+    "city": "Austin",
+    "state": "Texas",
+    "address": "2105 Parker Lane, Austin, TX 78741",
+    "sourceUrl": "https://www.parkerlaneapts.org/",
+    "targetMilestone": "Operator newsletter reports ribbon cutting February 12, 2025",
+    "timelineBoundary": "2025-02-12",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Operator newsletter reports ribbon cutting February 12, 2025. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.parkerlaneapts.org/",
+      "https://foundcom.org/wp-content/uploads/2025/07/FC-Impact-Newsletter-Feb-March-2025.pdf",
+      "https://www.parkerlaneapts.org/apartments/tx/austin/floor-plans"
+    ],
+    "references": [
+      {
+        "url": "https://foundcom.org/wp-content/uploads/2025/07/FC-Impact-Newsletter-Feb-March-2025.pdf",
+        "title": "Foundation Communities: February 12 ribbon cutting",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.parkerlaneapts.org/apartments/tx/austin/floor-plans",
+        "title": "Parker Lane: selected 2x2 promotional rate",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [],
+    "rentResearch": {
+      "source": "https://www.parkerlaneapts.org/apartments/tx/austin/floor-plans",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Selected 2-bedroom / 2-bath apartments; promotion",
+          "$1,199"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "Promotional rate is for selected homes, not all floor plans. Banner also advertises no application fee and no deposit, with restrictions. No offer deadline verified; confirm terms. Property states water, trash, pest control and Wi-Fi are included on its floor-plan page."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "2105 Parker Ln, Austin, Texas, 78741",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 30.233752993044,
+      "longitude": -97.734748962212
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-parker-1e8d5dcf0781684f.jpg",
+        "sourceImageUrl": "https://g5-assets-cld-res.cloudinary.com/image/upload/x_61,y_0,h_960,w_960,c_crop/q_auto,f_auto,c_fill,g_center,h_500,w_500/v1758314138/g5/g5-c-66njr5ndh-foundation-communities/g5-cl-1pujhlnpvf-foundation-communities-austin-tx/uploads/Parker_Lane_Apartment_d10ts2_jxvykt.jpg",
+        "sourcePageUrl": "https://www.parkerlaneapts.org/",
+        "credit": "Foundation Communities",
+        "kind": "Project photograph",
+        "sha256": "1e8d5dcf0781684f2e4827ecb62a3eba66d0bd101ad94b0e30bec4501077c34a",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7053,
+    "pinUrl": "https://www.chronopin.com/pin/7053",
+    "checkedAt": "2026-10-09",
+    "title": "New Hope Housing The Gray — Houston affordable housing",
+    "city": "Houston",
+    "state": "Texas",
+    "address": "2604 Gray Street, Houston, TX 77003",
+    "sourceUrl": "https://newhopehousing.com/locations/thegray",
+    "targetMilestone": "Operator announced the grand opening September 18, 2025",
+    "timelineBoundary": "2025-09-18",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Operator announced the grand opening September 18, 2025. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://newhopehousing.com/locations/thegray",
+      "https://newhopehousing.com/news-and-stories/a-new-affordable-home-for-seniors-in-the-third-ward",
+      "https://www.liveatgray.com/floorplans/"
+    ],
+    "references": [
+      {
+        "url": "https://newhopehousing.com/news-and-stories/a-new-affordable-home-for-seniors-in-the-third-ward",
+        "title": "New Hope Housing: Gray grand-opening announcement",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.liveatgray.com/floorplans/",
+        "title": "The Gray: leasing-site floor plans checked",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "The Gray property URL is /locations/thegray. No current dollar rates verified in readable operator pages."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "2604 Gray St, Houston, Texas, 77003",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 29.739873907408,
+      "longitude": -95.357780612706
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-gray-05c3b4716c05a6a4.jpg",
+        "sourceImageUrl": "https://newhopehousing.com/media/images/_1915x1276_crop_center-center_100_none/34946/NHH-The-Gray-1.webp",
+        "sourcePageUrl": "https://newhopehousing.com/locations/thegray",
+        "credit": "New Hope Housing",
+        "kind": "Project photograph",
+        "sha256": "05c3b4716c05a6a4ef1ad7371d98affc712938f940dbcec3e627460d9a5ad3db",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7054,
+    "pinUrl": "https://www.chronopin.com/pin/7054",
+    "checkedAt": "2026-10-09",
+    "title": "New Hope Housing Avenue C — Houston affordable housing",
+    "city": "Houston",
+    "state": "Texas",
+    "address": "7520 Avenue C, Houston, TX 77012",
+    "sourceUrl": "https://newhopehousing.com/locations/avenue-c",
+    "targetMilestone": "Operator announced the grand opening June 4, 2026",
+    "timelineBoundary": "2026-06-04",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Operator announced the grand opening June 4, 2026. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://newhopehousing.com/locations/avenue-c",
+      "https://newhopehousing.com/news-and-stories/welcoming-seniors-to-a-new-community-in-magnolia-park-2",
+      "https://newhopehousing.com/locations",
+      "https://www.liveatavenuec.com/floorplans/"
+    ],
+    "references": [
+      {
+        "url": "https://newhopehousing.com/news-and-stories/welcoming-seniors-to-a-new-community-in-magnolia-park-2",
+        "title": "New Hope Housing: June 2026 opening announcement",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://newhopehousing.com/locations",
+        "title": "New Hope Housing: 120-home property listing",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.liveatavenuec.com/floorplans/",
+        "title": "Avenue C: leasing-site floor plans checked",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "7520 Avenue C, Houston, Texas, 77012",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 29.73292229219,
+      "longitude": -95.291534240959
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-avenuec-57c0c72e575f7018.jpg",
+        "sourceImageUrl": "https://newhopehousing.com/media/images/_5712x4284_crop_center-center_100_none/31623/Avenue-C-Sunset-Photo.webp",
+        "sourcePageUrl": "https://newhopehousing.com/locations/avenue-c",
+        "credit": "New Hope Housing",
+        "kind": "Project photograph",
+        "sha256": "57c0c72e575f70183b417b42f349001f0eb9245f9048c796b9a513013b7cabed",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7055,
+    "pinUrl": "https://www.chronopin.com/pin/7055",
+    "checkedAt": "2026-10-09",
+    "title": "Legacy at Herndon Square — Atlanta affordable housing",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "address": "527 Herndon Square Avenue, Atlanta, GA 30318",
+    "sourceUrl": "https://www.pennrose.com/apartments/georgia/legacy-at-herndon-square/",
+    "targetMilestone": "Atlanta Housing announced the grand opening August 28, 2026",
+    "timelineBoundary": "2026-08-28",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Atlanta Housing announced the grand opening August 28, 2026. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.pennrose.com/apartments/georgia/legacy-at-herndon-square/",
+      "https://www.atlantahousing.org/atlanta-housing-and-partners-celebrate-the-grand-opening-of-legacy-at-herndon-square-phase-ii-of-former-herndon-homes-redevelopment/",
+      "https://www.liveherndon.com/"
+    ],
+    "references": [
+      {
+        "url": "https://www.atlantahousing.org/atlanta-housing-and-partners-celebrate-the-grand-opening-of-legacy-at-herndon-square-phase-ii-of-former-herndon-homes-redevelopment/",
+        "title": "Atlanta Housing: August 2026 opening announcement",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.liveherndon.com/",
+        "title": "Herndon community leasing site checked",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Dated promotion recorded separately from base rent; no perpetual or unconditional discount inferred.",
+      "Rejected ArcGIS postal centroid (score 84). Coordinates come from the Pennrose property-specific map: latitude 33.767845, longitude -84.403994."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "Pennrose property page embedded Google Maps coordinates",
+      "matchAddress": "527 Herndon Square Avenue, Atlanta, GA 30318",
+      "matchScore": null,
+      "matchType": "Operator map coordinates",
+      "latitude": 33.767845,
+      "longitude": -84.403994
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-herndon-a9103684c533c619.jpg",
+        "sourceImageUrl": "https://www.pennrose.com/media/t3qf05nb/44.jpg",
+        "sourcePageUrl": "https://www.pennrose.com/apartments/georgia/legacy-at-herndon-square/",
+        "credit": "Pennrose / Hunt / Oakwood",
+        "kind": "Project photograph",
+        "sha256": "a9103684c533c619344048b11370d1c1289d45b8e3f6317caeee2aa560dfe7a6",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7056,
+    "pinUrl": "https://www.chronopin.com/pin/7056",
+    "checkedAt": "2026-10-09",
+    "title": "McAuley Station — Atlanta affordable housing",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "address": "375 Gartrell Street SE, Atlanta, GA 30312",
+    "sourceUrl": "https://www.pennrose.com/apartments/georgia/mcauley-station/",
+    "targetMilestone": "Grand opening celebrated November 4, 2024",
+    "timelineBoundary": "2024-11-04",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening celebrated November 4, 2024. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.pennrose.com/apartments/georgia/mcauley-station/",
+      "https://mercyatlanta.org/mcauley-station-grand-opening/"
+    ],
+    "references": [
+      {
+        "url": "https://mercyatlanta.org/mcauley-station-grand-opening/",
+        "title": "Mercy Care: November 4 opening ceremony",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [],
+    "rentResearch": {
+      "source": "https://www.pennrose.com/apartments/georgia/mcauley-station/",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "1 bedroom",
+          "$1,295"
+        ],
+        [
+          "2 bedrooms",
+          "$1,550"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "These are the current operator’s published rates, not a price for every income tier or supportive housing placement. Residents pay electricity and cable; optional pet charges may apply."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "375 Gartrell St SE, Atlanta, Georgia, 30312",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 33.752150770161,
+      "longitude": -84.374846315186
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-mcauley-38fd9128b8317352.jpg",
+        "sourceImageUrl": "https://www.pennrose.com/media/ucmf1ubd/pennrose-mcauley-station-8.jpg",
+        "sourcePageUrl": "https://www.pennrose.com/apartments/georgia/mcauley-station/",
+        "credit": "Pennrose / Mercy Care",
+        "kind": "Project photograph",
+        "sha256": "38fd9128b83173522f9ad9afa91278cb66fac3cabb6110b8c2ec678260d930a9",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7057,
+    "pinUrl": "https://www.chronopin.com/pin/7057",
+    "checkedAt": "2026-10-09",
+    "title": "The Residences at Sawyer’s Walk — Miami affordable housing",
+    "city": "Miami",
+    "state": "Florida",
+    "address": "249 NW 6th Street, Miami, FL 33136",
+    "sourceUrl": "https://www.sawyerswalk.com/",
+    "targetMilestone": "County scheduled the grand opening July 18, 2024",
+    "timelineBoundary": "2024-07-18",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: County scheduled the grand opening July 18, 2024. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.sawyerswalk.com/",
+      "https://www.miamidade.gov/global/release.page?Mduid_release=rel1720633281064810"
+    ],
+    "references": [
+      {
+        "url": "https://www.miamidade.gov/global/release.page?Mduid_release=rel1720633281064810",
+        "title": "Miami-Dade: July 2024 opening and replacement apartments",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [],
+    "rentResearch": {
+      "source": "https://www.sawyerswalk.com/",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Operator-published net rent range; selected eligible homes",
+          "$1,663–$2,272"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "Operator describes these as net rents without a bedroom-specific matrix. Qualifying senior age, household income, program rules and availability apply; confirm fees and utility conditions."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "249 NW 6th St, Miami, Florida, 33136",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 25.780302158455,
+      "longitude": -80.198784591723
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-sawyer-3d707470cb0649e3.jpg",
+        "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/67503def372d8a4fb0f22700/e5e559dc-e5a3-4e59-8cf4-664741d20409/Block55-Updated-26.jpg",
+        "sourcePageUrl": "https://www.sawyerswalk.com/",
+        "credit": "Swerdlow Group",
+        "kind": "Project photograph",
+        "sha256": "3d707470cb0649e38160ad0e77a8affa7efc94eca89867940ffb4c869aa0208e",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7058,
+    "pinUrl": "https://www.chronopin.com/pin/7058",
+    "checkedAt": "2026-10-09",
+    "title": "Courtside Apartments II — Miami affordable housing",
+    "city": "Miami",
+    "state": "Florida",
+    "address": "1698 NW 3rd Avenue, Miami, FL 33136",
+    "sourceUrl": "https://www.courtside2htgm.com/",
+    "targetMilestone": "WLRN reports the grand opening on October 9, 2026",
+    "timelineBoundary": "2026-10-09",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: WLRN reports the grand opening on October 9, 2026. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.courtside2htgm.com/",
+      "https://www.wlrn.org/development/2026-10-09/overtown-miami-alonzo-mourning-affordable-housing",
+      "https://www.courtside2htgm.com/floorplans"
+    ],
+    "references": [
+      {
+        "url": "https://www.wlrn.org/development/2026-10-09/overtown-miami-alonzo-mourning-affordable-housing",
+        "title": "WLRN: October 9 grand opening",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.courtside2htgm.com/floorplans",
+        "title": "Courtside Apartments II: current floor-plan rents",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [],
+    "rentResearch": {
+      "source": "https://www.courtside2htgm.com/floorplans",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "2 bedrooms / 2 baths",
+          "$2,050"
+        ],
+        [
+          "3 bedrooms / 2 baths",
+          "$1,995–$2,349"
+        ],
+        [
+          "1 bedroom / 1 bath",
+          "Inquire for pricing"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "Prices vary by apartment and income program. Published deposits are $700 / $800 / $900 for 1 / 2 / 3 bedrooms; deposits are not monthly rent. Do not assign the advertised rents to voucher tenant contributions."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "1698 NW 3rd Ave, Miami, Florida, 33136",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 25.791486676685,
+      "longitude": -80.200319150556
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-courtside-d7b70d65c984af7b.jpg",
+        "sourceImageUrl": "https://resource.rentcafe.com/image/upload/s3/2/149426/courtside%202%20-%203d%20rendering%20%282%29.png",
+        "sourcePageUrl": "https://www.courtside2htgm.com/",
+        "credit": "Housing Trust Group / AM Affordable Housing",
+        "kind": "Architectural rendering",
+        "sha256": "d7b70d65c984af7b56292f1e4f5697de92e6448a2fd5afc5571e43d7ee69fdfe",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  }
+]

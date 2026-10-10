@@ -1,0 +1,439 @@
+[
+  {
+    "pinId": 2167,
+    "pinUrl": "https://www.chronopin.com/pin/2167/kindred-affordable-apartments-completes-in-cortez-hill",
+    "checkedAt": "2026-10-09",
+    "title": "Kindred Affordable Apartments Completes in Cortez Hill",
+    "address": "1555 Sixth Avenue, San Diego, CA 92101",
+    "sourceUrl": "https://bridgehousing.com/properties/kindred/",
+    "targetCompletion": "May 2027",
+    "timelineBoundary": "2027-05-31",
+    "exactDayAnnounced": false,
+    "sourcesChecked": [
+      "https://bridgehousing.com/properties/kindred/",
+      "https://sdhc.org/news-release/kindred-apts-groundbreaking/",
+      "https://sdhc.org/housing-opportunities/affordable-rentals/sdhc-partnership-development/",
+      "https://sdhc.org/wp-content/uploads/2024/03/106_Kindred-Loan_final.pdf"
+    ],
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/kindred-ba733e3226a99d0a.jpg",
+        "sourceUrl": "https://bridgehousing.com/wp-content/uploads/2025/09/Northeast-View-1-scaled.jpg",
+        "credit": "BRIDGE Housing",
+        "kind": "Architectural rendering",
+        "publicBlobVerified": true
+      },
+      {
+        "sourceUrl": "https://www.youtube.com/embed/r4q9OD2vNu8?feature=oembed",
+        "credit": "San Diego Housing Commission",
+        "kind": "Groundbreaking video"
+      }
+    ],
+    "notes": [
+      "Updated existing pin 2167 to avoid duplicating the project.",
+      "Developer now gives May 2027 completion; SDHC\u2019s April 2025 announcement and development listing say early 2027.",
+      "Completion target does not establish a leasing or move-in date.",
+      "No current operator leasing rates or application-opening date found; historical SDHC financing estimates are now recorded.",
+      "Retained existing construction photograph.",
+      "County News Center and California Construction News could not be read in this run.",
+      "SDHC\u2019s March 15, 2024 financing presentation estimated monthly CTCAC gross rents of $775\u2013$2,150. These figures describe the 2024 plan; the current developer page does not publish leasing rates. The unit allocation has since changed, so the older table does not establish today\u2019s available homes."
+    ],
+    "rentResearch": {
+      "year": 2024,
+      "date": "2024-03-15",
+      "min": 775,
+      "max": 2150,
+      "kind": "Historical CTCAC gross rent estimates",
+      "source": "https://sdhc.org/wp-content/uploads/2024/03/106_Kindred-Loan_final.pdf",
+      "rows": [
+        [
+          "1 bedroom",
+          "30%",
+          "$775"
+        ],
+        [
+          "1 bedroom",
+          "40%",
+          "$1,034"
+        ],
+        [
+          "1 bedroom",
+          "50%",
+          "$1,292"
+        ],
+        [
+          "1 bedroom",
+          "60%",
+          "$1,551"
+        ],
+        [
+          "2 bedrooms",
+          "30%",
+          "$930"
+        ],
+        [
+          "2 bedrooms",
+          "40%",
+          "$1,241"
+        ],
+        [
+          "2 bedrooms",
+          "50%",
+          "$1,551"
+        ],
+        [
+          "2 bedrooms",
+          "60%",
+          "$1,861"
+        ],
+        [
+          "3 bedrooms",
+          "30%",
+          "$1,075"
+        ],
+        [
+          "3 bedrooms",
+          "40%",
+          "$1,433"
+        ],
+        [
+          "3 bedrooms",
+          "50%",
+          "$1,791"
+        ],
+        [
+          "3 bedrooms",
+          "60%",
+          "$2,150"
+        ]
+      ],
+      "currency": "USD",
+      "period": "month",
+      "currentLeasingRateVerified": false,
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinId": 7019,
+    "pinUrl": "https://www.chronopin.com/pin/7019/rose-creek-village-completes-in-pacific-beach",
+    "checkedAt": "2026-10-09",
+    "title": "Rose Creek Village Completes in Pacific Beach",
+    "address": "2662 Garnet Avenue, San Diego, CA 92109",
+    "sourceUrl": "https://nationalcore.org/communities/rose-creek-village/",
+    "targetMilestone": "Fall 2026 completion",
+    "timelineBoundary": "2026-11-30",
+    "exactDayAnnounced": false,
+    "sourcesChecked": [
+      "https://nationalcore.org/communities/rose-creek-village/",
+      "https://nationalcore.org/rose-creek-village-brings-stability-and-opportunity-to-pacific-beach/",
+      "https://sdhc.org/news-release/rose-creek-village-groundbreaking/",
+      "https://sdhc.org/wp-content/uploads/2024/07/HAR24-013-Rose-Creek-Loan.pdf",
+      "https://sdhc.org/wp-content/uploads/2024/06/104_Rose-Creek-Village_final.pdf"
+    ],
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/rose-rendering-d6d2e84dce3f8516.jpg",
+        "sourceUrl": "https://nationalcore.org/wp-content/uploads/2025/08/Exterior-Render_Rose-Creek-scaled.jpg",
+        "credit": "National CORE",
+        "publicBlobVerified": true
+      },
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/rose-groundbreaking-1f739dee4512bf15.jpg",
+        "sourceUrl": "https://nationalcore.org/wp-content/uploads/2025/09/R6__6665-1080x675.jpg",
+        "credit": "National CORE",
+        "publicBlobVerified": true
+      },
+      {
+        "sourceUrl": "https://www.youtube.com/embed/vdvccIFmcbg?feature=oembed",
+        "credit": "San Diego Housing Commission",
+        "kind": "Video"
+      }
+    ],
+    "notes": [
+      "Prominent operator notice says waitlist closed; older generic application text lower on the page conflicts.",
+      "Developer targets fall 2026; county groundbreaking coverage said 2027. Current operator target used.",
+      "No exact milestone day announced; broad date is explicitly estimated.",
+      "No current project rent schedule or exact application-opening date verified.",
+      "SDHC\u2019s 2024 loan report, Table 6 on page 9, estimated monthly gross rents of $723\u2013$1,447 for approximately 375-square-foot studios. The operator does not publish current leasing rates on its property page.",
+      "A separate June 21, 2024 SDHC presentation lists TCAC maximum rents of $795 at 30% AMI and $1,591 at 60% AMI. The two documents give different figures; neither establishes a current leasing quote. AMI means area median income. The report says voucher-supported tenants pay an income-based amount subject to a minimum, with a federal subsidy covering the remainder up to an approved gross rent."
+    ],
+    "rentResearch": {
+      "year": 2024,
+      "date": "2024-06-13",
+      "min": 723,
+      "max": 1447,
+      "kind": "Historical estimated gross rents; separate TCAC maxima differ",
+      "source": "https://sdhc.org/wp-content/uploads/2024/07/HAR24-013-Rose-Creek-Loan.pdf",
+      "rows": [
+        [
+          "Studio with VASH voucher",
+          "30%",
+          "$723"
+        ],
+        [
+          "Studio",
+          "30%",
+          "$723"
+        ],
+        [
+          "Studio",
+          "60%",
+          "$1,447"
+        ]
+      ],
+      "currency": "USD",
+      "period": "month",
+      "currentLeasingRateVerified": false,
+      "checkedAt": "2026-10-09",
+      "separateMaximumRentSchedule": {
+        "source": "https://sdhc.org/wp-content/uploads/2024/06/104_Rose-Creek-Village_final.pdf",
+        "date": "2024-06-21",
+        "rows": [
+          [
+            "Studio",
+            "30%",
+            "$795"
+          ],
+          [
+            "Studio",
+            "60%",
+            "$1,591"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "pinId": 7020,
+    "pinUrl": "https://www.chronopin.com/pin/7020/the-grant-at-mission-trails-completes-in-grantville",
+    "checkedAt": "2026-10-09",
+    "title": "The Grant at Mission Trails Completes in Grantville",
+    "address": "5945 Mission Gorge Road, San Diego, CA 92120",
+    "sourceUrl": "https://www.crpaffordable.com/thegrant",
+    "targetMilestone": "May 2027 completion",
+    "timelineBoundary": "2027-05-31",
+    "exactDayAnnounced": false,
+    "sourcesChecked": [
+      "https://www.crpaffordable.com/thegrant",
+      "https://www.crpaffordable.com/ourprojects",
+      "https://sdhc.org/news-release/grant-mission-trails-groundbreaking/",
+      "https://sdhc.org/wp-content/uploads/2025/06/105_Grant-at-Mission-Trails-Loan_final.pdf"
+    ],
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/grant-rendering-3ebcc2112057e6fc.png",
+        "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5c50894f8ab72295c5d6819b/e7c1ef46-41fe-4545-b636-0cc21d8e1d10/the+Grant+at+Mission+Trail%E2%80%99s.png",
+        "credit": "CRP Affordable Housing & Community Development",
+        "publicBlobVerified": true
+      }
+    ],
+    "notes": [
+      "Developer target May 2027 supersedes the June 2027 schedule in the older SDHC loan report.",
+      "CRP summary reserves restricted units for current or former military households.",
+      "The unique source page publishes its project information in a linked image.",
+      "Video was sought on SDHC and county reporting, but SDHC\u2019s video URL could not be recovered in this run. Duplicate brochure image was excluded.",
+      "No exact milestone day announced; broad date is explicitly estimated.",
+      "No current project rent schedule or exact application-opening date verified.",
+      "SDHC\u2019s June 20, 2025 financing presentation estimated monthly CTCAC gross rents of $993\u2013$2,481. These are historical planning figures, and a current operator leasing schedule was not found."
+    ],
+    "rentResearch": {
+      "year": 2025,
+      "date": "2025-06-20",
+      "min": 993,
+      "max": 2481,
+      "kind": "Historical CTCAC gross rent estimates",
+      "source": "https://sdhc.org/wp-content/uploads/2025/06/105_Grant-at-Mission-Trails-Loan_final.pdf",
+      "rows": [
+        [
+          "1 bedroom, supportive / project-based voucher",
+          "30%",
+          "$993"
+        ],
+        [
+          "2 bedrooms",
+          "30%",
+          "$1,116"
+        ],
+        [
+          "2 bedrooms",
+          "40%",
+          "$1,489"
+        ],
+        [
+          "2 bedrooms",
+          "50%",
+          "$1,861"
+        ],
+        [
+          "2 bedrooms",
+          "60%",
+          "$2,233"
+        ],
+        [
+          "3 bedrooms",
+          "50%",
+          "$2,068"
+        ],
+        [
+          "3 bedrooms",
+          "60%",
+          "$2,481"
+        ]
+      ],
+      "currency": "USD",
+      "period": "month",
+      "currentLeasingRateVerified": false,
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinId": 7021,
+    "pinUrl": "https://www.chronopin.com/pin/7021/the-becker-opens-affordable-homes-at-riverwalk",
+    "checkedAt": "2026-10-09",
+    "title": "The Becker Opens Affordable Homes at Riverwalk",
+    "address": "Riverwalk San Diego, Mission Valley, San Diego, CA",
+    "sourceUrl": "https://riverwalksd.com/construction-update-q2-2026/",
+    "targetMilestone": "July 2027 first residences",
+    "timelineBoundary": "2027-07-31",
+    "exactDayAnnounced": false,
+    "sourcesChecked": [
+      "https://riverwalksd.com/construction-update-q2-2026/",
+      "https://www.kpbs.org/news/living/2025/08/01/groundbreaking-will-lead-to-hundreds-of-affordable-housing-units-coming-to-mission-valley",
+      "https://multifamilyaffordablehousing.com/wakeland-housing-breaks-ground-on-140-million-project-at-riverwalk-san-diego/",
+      "https://riverwalksd.com/first-homes-break-ground-at-riverwalk-san-diego/"
+    ],
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/becker-rendering-5ebd511f156183c7.jpg",
+        "sourceUrl": "https://riverwalksd.com/wp-content/uploads/2025/07/view-2-1.jpg",
+        "credit": "Riverwalk San Diego",
+        "publicBlobVerified": true
+      },
+      {
+        "sourceUrl": "https://www.youtube.com/embed/jTTQ3DCufwI?enablejsapi=1",
+        "credit": "KPBS",
+        "kind": "Video"
+      }
+    ],
+    "notes": [
+      "Latest April 2026 owner update gives July 2027 first residences; earlier mid-2027 target superseded.",
+      "Exact parcel coordinates unresolved: geocoder returned Carlsbad or ZIP centroid for the published 6364 Village Drive address. Those incorrect points were rejected; location remains Riverwalk, Mission Valley.",
+      "Project image and KPBS video retained; other media sources largely reuse the rendering.",
+      "No exact milestone day announced; broad date is explicitly estimated.",
+      "No current project rent schedule or exact application-opening date verified.",
+      "August 1, 2025 trade reporting published anticipated asking rents of $930\u2013$2,580 per month. No bedroom-by-bedroom rent breakdown was provided, and a current operator leasing schedule was not found."
+    ],
+    "rentResearch": {
+      "year": 2025,
+      "date": "2025-08-01",
+      "min": 930,
+      "max": 2580,
+      "kind": "Historical trade-reported asking-rent range",
+      "source": "https://multifamilyaffordablehousing.com/wakeland-housing-breaks-ground-on-140-million-project-at-riverwalk-san-diego/",
+      "rows": [
+        [
+          "Unit sizes not specified in rent report",
+          "Up to 60%",
+          "$930\u2013$2,580"
+        ]
+      ],
+      "currency": "USD",
+      "period": "month",
+      "currentLeasingRateVerified": false,
+      "checkedAt": "2026-10-09"
+    }
+  },
+  {
+    "pinId": 7022,
+    "pinUrl": "https://www.chronopin.com/pin/7022/navajo-family-apartments-begins-leasing-in-san-carlos",
+    "checkedAt": "2026-10-09",
+    "title": "Navajo Family Apartments Begins Leasing in San Carlos",
+    "address": "7005 Navajo Road, San Diego, CA 92119",
+    "sourceUrl": "https://chworks.org/property/navajo/",
+    "targetMilestone": "Fall 2027 leasing",
+    "timelineBoundary": "2027-11-30",
+    "exactDayAnnounced": false,
+    "sourcesChecked": [
+      "https://chworks.org/property/navajo/",
+      "https://www.insidesandiego.org/san-carlos-affordable-housing-project-breaks-ground-44-new-homes",
+      "https://chworks.org/navajo-family-apartments-groundbreaking-celebration-2/",
+      "https://sdhc.org/wp-content/uploads/2022/06/108_Navajo-Family_final.pdf"
+    ],
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/navajo-rendering-3f26fad9cc2f1e84.jpg",
+        "sourceUrl": "https://chworks.org/wp-content/uploads/2026/07/Navajo-Rendering-06-2026-resize.jpg",
+        "credit": "Community HousingWorks",
+        "publicBlobVerified": true
+      },
+      {
+        "sourceUrl": "https://www.youtube.com/watch?v=LvEfr99_1cU",
+        "credit": "City of San Diego",
+        "kind": "Video"
+      }
+    ],
+    "notes": [
+      "Pin dates leasing, not construction completion. City article targeted May 2027 construction completion; developer lists fall 2027 lease-up.",
+      "City describes eight disability homes with vouchers; developer lists eight voucher homes and an additional eight disability homes. Keep attribution and do not merge those counts.",
+      "Official rendering and city video included; a third distinct project image was not found in sources checked.",
+      "No exact milestone day announced; broad date is explicitly estimated.",
+      "No current project rent schedule or exact application-opening date verified.",
+      "SDHC\u2019s June 10, 2022 financing presentation estimated monthly CTCAC gross rents of $732\u2013$2,030. This is an older planning schedule, not a current leasing quote. Recent project announcements describe income tiers up to 70% AMI; the 2022 table gives no rent for that tier.",
+      "AMI means area median income. The 2022 source lists two prices for some 60% AMI unit types without identifying the allocation between them. Current tenant-paid rents, applicable allowances and voucher payments were not verified."
+    ],
+    "rentResearch": {
+      "year": 2022,
+      "date": "2022-06-10",
+      "min": 732,
+      "max": 2030,
+      "kind": "Historical CTCAC gross rent estimates",
+      "source": "https://sdhc.org/wp-content/uploads/2022/06/108_Navajo-Family_final.pdf",
+      "rows": [
+        [
+          "1 bedroom",
+          "30%",
+          "$732"
+        ],
+        [
+          "1 bedroom",
+          "50%",
+          "$1,135"
+        ],
+        [
+          "1 bedroom",
+          "60%",
+          "$1,220 or $1,464"
+        ],
+        [
+          "2 bedrooms",
+          "30%",
+          "$878"
+        ],
+        [
+          "2 bedrooms",
+          "50%",
+          "$1,349"
+        ],
+        [
+          "2 bedrooms",
+          "60%",
+          "$1,463 or $1,756"
+        ],
+        [
+          "3 bedrooms",
+          "30%",
+          "$1,015"
+        ],
+        [
+          "3 bedrooms",
+          "60%",
+          "$1,691 or $2,030"
+        ]
+      ],
+      "currency": "USD",
+      "period": "month",
+      "currentLeasingRateVerified": false,
+      "checkedAt": "2026-10-09"
+    }
+  }
+]

@@ -5,7 +5,6 @@ import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { dateFormat } from '@/lib/format';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
-import { UserAvatar } from '@/components/ui/UserAvatar';
 import { CitedText } from './CitedText';
 import { orderEvidence } from '@/lib/citations';
 import type { DateClaim, DateRange } from '@/lib/dateClaims';
@@ -101,7 +100,6 @@ export function PinReferences({
               <span className="inline-flex items-center gap-1">
                 · {t('references.addedBy')}
                 <RefineLink field="user" value={reference.addedByUserName} className="inline-flex items-center gap-1 text-muted hover:text-ink hover:no-underline">
-                  <UserAvatar userName={reference.addedByUserName} pictureUrl={reference.addedByUserPictureUrl} className="size-4 text-[8px]" />
                   {reference.addedByUserName}
                 </RefineLink>
               </span>

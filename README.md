@@ -363,7 +363,6 @@ https://help.opentable.com/s/article/OpenTable-Affiliate-Program-1505261059868?l
 https://www.temu.com/affiliate_recruit.html?_x_ads_csite=affiliate_seo&aff_sub_csite=https%3A%2F%2Fwww.google.com%2F&aff_disable_switch_flow=1
 
 
-- pin affordable housing project
 
 generic ads that applies to everyone like junk removal can be added to ad rotation too and storage and moving services
 
@@ -419,3 +418,4 @@ add restaurant landing page for all major cities around the world
 
 
 https://www.chronopin.com/pin/6939/africola-adelaide-restaurant-guide
+
