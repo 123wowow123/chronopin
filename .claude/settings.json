@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(docker exec chronopin-postgres psql:*)",
-      "Bash(curl * https://www.chronopin.com/api/admin/db/*)"
+      "Bash(curl * https://www.chronopin.com/api/admin/db/*)",
+      "mcp__claude-in-chrome__*"
     ]
   }
 }

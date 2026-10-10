@@ -20,7 +20,8 @@ export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/p
     // Matches how long src/server/weather.ts keeps a forecast.
     return json(result, 200, { 'Cache-Control': `public, max-age=${result.kind === 'forecast' ? 900 : 3600}` });
   } catch (err) {
-    log.error('showWeather', (err as Error)?.message);
-    return new Response(null, { status: 502 });
+    // One line when a quota trips (weather.ts), not one per card.
+    if (!weather.quotaExhausted()) log.error('showWeather', (err as Error)?.message);
+    return new Response(null, { status: 502, headers: { 'Cache-Control': 'public, max-age=300' } });
   }
 });

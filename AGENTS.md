@@ -8,6 +8,12 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+## Deploying to production
+
+Never deploy, restart, resize or build on the production VM (20.109.175.187) unless the user has asked for that deploy in this conversation, in words. Editing code, committing and pushing are not a request to deploy, and approval for one deploy does not cover the next.
+
+`npm run deploy` is the only deploy: GitHub builds the image and the VM pulls it (scripts/deploy-image.sh). Never build on the VM - `next build` beside the live site swaps the 2-vCPU box and the site returns 502s for the length of the build (2026-10-10). `npm run deploy:vm` exists only as a fallback and needs `DEPLOY_ON_VM=1`; use it only when the user explicitly asks for a VM build. The deploy scripts refuse a non-interactive shell unless `DEPLOY_CONFIRMED=1`; set that only after the user has asked for this deploy, and never to get around a refusal. If a deploy or build is already running on the VM (`pgrep -f next-build`), wait; do not start another.
+
 ## Pin media storage
 
 Store pin images in Azure Blob Storage. Do not add pin photos or generated thumbnails to Git. Keep blob URLs, source URLs, credits and other metadata in the repository. Use ignored temporary files while sourcing or uploading; verify the public blob before removing a local file or switching a live pin reference. Application icons, logos and other UI assets may remain in Git.

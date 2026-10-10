@@ -1,6 +1,6 @@
 import * as db from '@/server/db';
 import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
-import { restaurantSourceKey } from '@/lib/restaurantMenus';
+import { restaurantMenuFor, restaurantSourceKey } from '@/lib/restaurantMenus';
 import { restaurantRating, type RestaurantDetails } from '@/lib/restaurantSort';
 import type { Restaurant, TopRestaurant } from '@/lib/restaurants';
 import type { PinRatingJson } from '@/lib/types';
@@ -20,6 +20,8 @@ export async function restaurantGuideDetails(restaurants: Restaurant[], tops: To
     result[pin.id] = { rating, ...(pin.latitude != null && pin.longitude != null ? { location: { latitude: pin.latitude, longitude: pin.longitude } } : {}) };
   }
   for (const source of sources) {
+    const menu = restaurantMenuFor(source.source)?.menus.find((menu) => menu.items.length);
+    if (menu) result[source.id] = { ...result[source.id], menu: { ...menu, coverage: 'sample', items: menu.items.slice(0, 6) } };
     const profile = venues.find((v) => restaurantSourceKey(v.profile.pinSourceUrl) === restaurantSourceKey(source.source ?? ''))?.profile;
     if (!profile) continue;
     result[source.id] = { ...result[source.id], ...(profile.location ? { location: profile.location } : {}), ...(profile.review ? { rating: { score: profile.review.score, scoreMax: 5, source: profile.review.provider, url: profile.review.sourceUrl } } : {}) };

@@ -49,6 +49,7 @@ describe('regional restaurant data', () => {
     const supported = new Set([
       ...RESTAURANT_REGIONS.filter((region) => ['United States', 'Mexico', 'Japan', 'New Zealand'].includes(region.country)).map((region) => region.slug),
       'madrid', 'paris', 'berlin',
+      'kaohsiung', 'taichung', 'taipei',
     ]);
     expect(await restaurantGuideRegionSlugs()).toEqual(RESTAURANT_REGIONS.filter((region) => supported.has(region.slug)).map((region) => region.slug));
     expect(query.mock.calls[0][0]).toContain('"utcDeletedDateTime" IS NULL');

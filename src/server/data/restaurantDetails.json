@@ -5112,5 +5112,146 @@
     "hoursNote": "No complete service hours verified on the operator contact page.",
     "detailsSourceUrl": "https://rosetta.com.mx/",
     "checkedAt": "2026-10-09"
+  },
+  {
+    "pinSourceUrl": "https://www.smithandwollensky.com.tw/en/menu/taipei",
+    "name": "Smith & Wollensky — Taipei",
+    "websiteUrl": "https://www.smithandwollensky.com.tw/en/menu/taipei",
+    "phone": "+886 2 2345 5647",
+    "openingHours": [
+      {
+        "days": "Sunday–Thursday",
+        "hours": "11:30–22:00"
+      },
+      {
+        "days": "Friday–Saturday",
+        "hours": "11:30–23:00"
+      }
+    ],
+    "detailsSourceUrl": "https://www.smithandwollensky.com.tw/en/locations",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://www.smithandwollensky.com.tw/en/menu/taichung",
+    "name": "Smith & Wollensky — Taichung",
+    "websiteUrl": "https://www.smithandwollensky.com.tw/en/menu/taichung",
+    "phone": "+886 4 2252 5647",
+    "openingHours": [
+      {
+        "days": "Monday–Thursday",
+        "hours": "11:30–15:30; 17:00–22:00"
+      },
+      {
+        "days": "Friday–Saturday",
+        "hours": "11:30–23:00"
+      },
+      {
+        "days": "Sunday",
+        "hours": "11:30–22:00"
+      }
+    ],
+    "detailsSourceUrl": "https://www.smithandwollensky.com.tw/en/locations",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://mume.tw/reservation",
+    "name": "MUME",
+    "websiteUrl": "https://mume.tw/reservation",
+    "phone": null,
+    "openingHours": [],
+    "detailsSourceUrl": "https://mume.tw/reservation",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://roughcutstaipei.com/",
+    "name": "Rough Cuts",
+    "websiteUrl": "https://www.ihg.com/intercontinental/hotels/us/en/taipei/tpepi/hoteldetail/dining",
+    "phone": null,
+    "openingHours": [],
+    "detailsSourceUrl": "https://www.mirrormedia.mg/external/setn_1919247",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://akirabacktaipei.com/",
+    "name": "Akira Back",
+    "websiteUrl": "https://www.ihg.com/intercontinental/hotels/us/en/taipei/tpepi/hoteldetail/dining",
+    "phone": null,
+    "openingHours": [],
+    "detailsSourceUrl": "https://www.mirrormedia.mg/external/setn_1919247",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://dosataipei.com/",
+    "name": "DOSA by Akira Back",
+    "websiteUrl": "https://www.ihg.com/intercontinental/hotels/us/en/taipei/tpepi/hoteldetail/dining",
+    "phone": null,
+    "openingHours": [],
+    "detailsSourceUrl": "https://www.mirrormedia.mg/external/setn_1919247",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://www.construction.taichung.gov.tw/3386051/post",
+    "name": "Flyjoy (飛樂)",
+    "websiteUrl": "https://www.construction.taichung.gov.tw/3386051/post",
+    "phone": null,
+    "openingHours": [],
+    "detailsSourceUrl": "https://hotmessage.co/archives/207189",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://linu.tw/",
+    "name": "Li.nu",
+    "websiteUrl": "https://linu.tw/",
+    "phone": null,
+    "openingHours": [],
+    "detailsSourceUrl": "https://www.nownews.com/news/6876260",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://ickaohsiung.com/en/restaurant-en/hawker/",
+    "name": "HAWKER",
+    "websiteUrl": "https://ickaohsiung.com/en/restaurant-en/hawker/",
+    "phone": "+886 7 3391888",
+    "openingHours": [
+      {
+        "days": "Monday, Wednesday–Sunday",
+        "hours": "11:30–14:30; 17:30–21:30"
+      }
+    ],
+    "detailsSourceUrl": "https://ickaohsiung.com/en/restaurant-en/hawker/",
+    "checkedAt": "2026-10-10",
+    "hoursNote": "Closed Tuesday. Last orders at 14:00 and 21:00."
+  },
+  {
+    "pinSourceUrl": "https://www.hanshin.com.tw/漢神巨蛋/tw/News/品牌活動/韓美膳",
+    "name": "Hanbijae (韓美膳) — Hanshin Arena",
+    "websiteUrl": "https://www.hanshin.com.tw/漢神巨蛋/tw/News/品牌活動/韓美膳",
+    "phone": null,
+    "openingHours": [],
+    "detailsSourceUrl": "https://www.hanshin.com.tw/漢神巨蛋/tw/News/品牌活動/韓美膳",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://www.1111.com.tw/job/132826364/",
+    "name": "Five Star Noodles (五星麵舖) — Fumin",
+    "websiteUrl": "https://www.tofuglobal.com/tw/AllStore.html",
+    "phone": null,
+    "openingHours": [],
+    "detailsSourceUrl": "https://www.1111.com.tw/job/132826364/",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "pinSourceUrl": "https://ickaohsiung.com/en/restaurant-en/blt33-en/",
+    "name": "BL.T33 Lobby Bar",
+    "websiteUrl": "https://ickaohsiung.com/en/restaurant-en/blt33-en/",
+    "phone": "+886 7 3391888",
+    "openingHours": [
+      {
+        "days": "Daily",
+        "hours": "10:00–24:00"
+      }
+    ],
+    "detailsSourceUrl": "https://ickaohsiung.com/en/restaurant-en/blt33-en/",
+    "checkedAt": "2026-10-10"
   }
 ]

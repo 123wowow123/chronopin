@@ -13,6 +13,8 @@
 // stay one day inside that, because the date is asked for with a day of
 // padding either side (see dayAt). All date arithmetic here is in UTC.
 
+import log from '@/server/util/log';
+
 const FORECAST_URL = 'https://api.open-meteo.com/v1/forecast';
 const ARCHIVE_URL = 'https://archive-api.open-meteo.com/v1/archive';
 const GEOCODE_URL = 'https://geocoding-api.open-meteo.com/v1/search';
@@ -37,7 +39,16 @@ const TTL = {
   observed: 24 * 60 * 60 * 1000,
   typical: 7 * 24 * 60 * 60 * 1000,
 };
-const CACHE_LIMIT = 2000;
+// Dates older than the forecast API's reach come from the archive, which no
+// longer changes.
+const ARCHIVED_TTL = 30 * 24 * 60 * 60 * 1000;
+const CACHE_LIMIT = 5000;
+// A failed lookup is kept this long, so a pin Open-Meteo cannot answer is not
+// asked again on every view (2026-10-10: 7,700 refused requests in 6 hours).
+const FAILURE_TTL = 60 * 1000;
+// The archive starts here; a date before it (or within a day of it, given the
+// day of padding asked for either side) is a 400, never an answer.
+const ARCHIVE_START = Date.UTC(1940, 0, 1);
 // Current conditions at a viewer's place; they move faster than the forecast.
 const LOCAL_TTL = 15 * 60 * 1000;
 // A time zone's city moves only when the tz database does.
@@ -74,11 +85,19 @@ const state = ((globalThis as any).__chronopinWeather ??= {
   cache: new Map<string, { promise: Promise<unknown>; expires: number }>(),
   active: 0,
   queue: [] as (() => Promise<void>)[],
+  blockedUntil: 0,
 }) as {
   cache: Map<string, { promise: Promise<unknown>; expires: number }>;
   active: number;
   queue: (() => Promise<void>)[];
+  // Open-Meteo has refused us for a quota: nothing is sent before this time.
+  blockedUntil: number;
 };
+
+// True while a daily or hourly quota has Open-Meteo refusing everything.
+export function quotaExhausted(): boolean {
+  return state.blockedUntil > Date.now();
+}
 
 // Resolves the weather for a pin, or null when it has no coordinates or no
 // start date. Rejects when Open-Meteo fails.
@@ -96,13 +115,18 @@ export function forPin(pin: Record<string, any> & {
   const place = { latitude: +pin.latitude, longitude: +pin.longitude };
   const allDay = !!pin.allDay;
   const kind = kindFor(start);
+  // Nothing before the archive can be asked for.
+  if (kind === 'observed' && utcDay(start.getTime()) - DAY_MS < ARCHIVE_START) {
+    return Promise.resolve(null);
+  }
   const key = [kind, place.latitude.toFixed(2), place.longitude.toFixed(2), start.toISOString(), allDay].join('|');
 
-  return cached(key, TTL[kind], async () => {
+  const archived = kind === 'observed' && start.getTime() < today() - FORECAST_DAYS_BACK * DAY_MS;
+  return cached(key, archived ? ARCHIVED_TTL : TTL[kind], async () => {
     if (kind === 'typical') {
       return typical(place, start, allDay);
     }
-    const url = kind === 'observed' && start.getTime() < today() - FORECAST_DAYS_BACK * DAY_MS ? ARCHIVE_URL : FORECAST_URL;
+    const url = archived ? ARCHIVE_URL : FORECAST_URL;
     const day = await dayAt(url, place, start, allDay, kind === 'forecast');
     return day && { kind, ...day };
   });
@@ -325,6 +349,11 @@ function mean(values: (number | null | undefined)[]): number | null {
 }
 
 async function get(baseUrl: string, params: Record<string, string | number>): Promise<any> {
+  if (quotaExhausted()) {
+    const err = new Error('Open-Meteo quota exhausted; not asking') as Error & { status: number };
+    err.status = 429;
+    throw err;
+  }
   const query = Object.keys(params)
     .map((k) => `${encodeURIComponent(k)}=${encodeURIComponent(params[k])}`)
     .join('&');
@@ -332,7 +361,7 @@ async function get(baseUrl: string, params: Record<string, string | number>): Pr
   try {
     return await limited(() => fetchJson(url));
   } catch (err) {
-    if ((err as { status?: number }).status !== 429) {
+    if ((err as { status?: number }).status !== 429 || quotaExhausted()) {
       throw err;
     }
     // Open-Meteo also refuses bursts ("Too many concurrent requests") that
@@ -348,6 +377,16 @@ async function fetchJson(url: string) {
   if (!res.ok || body.error) {
     const err = new Error(`GET ${url} failed with ${res.status}: ${body.reason || ''}`) as Error & { status: number };
     err.status = res.status;
+    // "Daily API request limit exceeded" lasts until the next UTC midnight,
+    // "Hourly ..." until the next hour: stop asking until then.
+    if (res.status === 429) {
+      const reason = String(body.reason || '');
+      const step = /daily/i.test(reason) ? DAY_MS : /hourly/i.test(reason) ? 3_600_000 : 0;
+      if (step) {
+        if (!quotaExhausted()) log.error('weather', `Open-Meteo quota reached (${reason}); pausing lookups`);
+        state.blockedUntil = (Math.floor(Date.now() / step) + 1) * step + 30_000;
+      }
+    }
     throw err;
   }
   return body;
@@ -375,7 +414,8 @@ function drain() {
 }
 
 // Shares one lookup between everyone viewing the same pin, including requests
-// that arrive while it is still in flight. Failures are not kept.
+// that arrive while it is still in flight. A failure is kept only briefly
+// (FAILURE_TTL).
 function cached<T>(key: string, ttl: number, load: () => Promise<T>): Promise<T> {
   const hit = state.cache.get(key);
   if (hit && hit.expires > Date.now()) {
@@ -386,8 +426,9 @@ function cached<T>(key: string, ttl: number, load: () => Promise<T>): Promise<T>
   state.cache.delete(key);
   state.cache.set(key, { promise, expires: Date.now() + ttl });
   promise.catch(() => {
-    if (state.cache.get(key)?.promise === promise) {
-      state.cache.delete(key);
+    const entry = state.cache.get(key);
+    if (entry?.promise === promise) {
+      entry.expires = Date.now() + FAILURE_TTL;
     }
   });
 

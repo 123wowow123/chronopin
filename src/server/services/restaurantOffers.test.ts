@@ -24,6 +24,23 @@ const venue: Restaurant = {
 const NO_SPECIALS_YET = ['fort-lauderdale', 'honolulu', 'palm-springs'];
 
 describe('regional restaurant offers', () => {
+  it('excludes Taiwan public holidays and retains upcoming specials without ratings', () => {
+    const taichung = regionalRestaurantOffers([], [], '2026-10-10', 'taichung')[0];
+    expect(taichung.menu?.currency).toBe('TWD');
+    expect(taichung.special.availability?.excludedDates).toContain('2026-10-10');
+    expect(taichung.special.availability?.excludedDates).toContain('2026-10-09');
+    expect(taichung.special.availability?.excludedDates).toContain('2026-12-25');
+    expect(activeRestaurantOffer(taichung.special, new Date('2026-10-10T07:00:00Z'), 'Asia/Taipei')).toBeNull();
+    expect(activeRestaurantOffer(taichung.special, new Date('2026-10-16T07:00:00Z'), 'Asia/Taipei')).not.toBeNull();
+    expect(restaurantOffersToShow([taichung], new Date('2026-10-10T07:00:00Z'), 'Asia/Taipei').offers).toHaveLength(1);
+    const taipei = regionalRestaurantOffers([], [], '2026-10-10', 'taipei')[0];
+    expect(taipei.special.availability?.excludedDates).toContain('2026-09-28');
+    expect(taipei.special.availability?.excludedDates).toContain('2026-10-26');
+    expect(activeRestaurantOffer(taipei.special, new Date('2026-10-26T08:00:00Z'), 'Asia/Taipei')).toBeNull();
+    const kaohsiung = regionalRestaurantOffers([], [], '2026-12-31', 'kaohsiung')[0];
+    expect(activeRestaurantOffer(kaohsiung.special, new Date('2026-12-31T11:00:00Z'), 'Asia/Taipei')).not.toBeNull();
+    expect(restaurantOffersToShow([kaohsiung], new Date('2027-01-01T11:00:00Z'), 'Asia/Taipei').offers).toEqual([]);
+  });
   it('honors Mexican promotion expiry and New Zealand branch hours', () => {
     for (const slug of ['guadalajara', 'monterrey', 'mexico-city']) {
       const offers = regionalRestaurantOffers([], [], '2026-10-08', slug);

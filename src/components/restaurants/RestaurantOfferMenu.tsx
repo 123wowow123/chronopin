@@ -6,7 +6,7 @@ import Anchor from '@/components/ui/Anchor';
 import { restaurantMenuAmount, type RestaurantMenu } from '@/lib/restaurantMenus';
 import styles from './RestaurantGuide.module.css';
 
-export function RestaurantOfferMenu({ menu, restaurant }: { menu?: RestaurantMenu; restaurant: string }) {
+export function RestaurantOfferMenu({ menu, restaurant, specials = true }: { menu?: RestaurantMenu; restaurant: string; specials?: boolean }) {
   const id = useId();
   const [selected, setSelected] = useState<string | null>(null);
   const [expanded, setExpanded] = useState(false);
@@ -20,14 +20,14 @@ export function RestaurantOfferMenu({ menu, restaurant }: { menu?: RestaurantMen
 
   return <div className={styles.offerMenuBlock}>
     <div className={styles.offerMenuHeading}>
-      <h5>{menu.coverage === 'sample' ? 'Specials menu · selected items' : 'Specials menu'}</h5>
+      <h5>{specials ? 'Specials menu' : menu.label}{menu.coverage === 'sample' && ' · selected items'}</h5>
       <Anchor href={source} target="_blank" rel="noopener noreferrer">Published menu ↗</Anchor>
     </div>
-    {categories.length > 1 && <div className={styles.offerMenuCategories} role="group" aria-label={`${restaurant} specials menu sections`}>
+    {categories.length > 1 && <div className={styles.offerMenuCategories} role="group" aria-label={`${restaurant} ${specials ? 'specials' : 'menu'} sections`}>
       {categories.map((categoryName) => <button key={categoryName} type="button" aria-pressed={category === categoryName} onClick={() => { setSelected(categoryName); setExpanded(false); }}>{categoryName}</button>)}
     </div>}
     {shown.length > 0 ? <>
-      <ul id={id} className={styles.offerMenu} aria-label={`${restaurant} ${category} specials`}>
+      <ul id={id} className={styles.offerMenu} aria-label={`${restaurant} ${category} ${specials ? 'specials' : 'items'}`}>
         {shown.map((item, index) => <li key={`${item.name}-${index}`}><span>{item.name}{item.note && <small>{item.note}</small>}</span><strong>{item.priceLabel ?? (item.price != null ? amount(item.price) : 'Price not published')}</strong></li>)}
       </ul>
       {items.length > 6 && <button type="button" className={styles.offerMenuExpand} aria-expanded={expanded} aria-controls={id} onClick={() => setExpanded((expanded) => !expanded)}>{expanded ? 'Show fewer items' : `Show all ${items.length} items`}</button>}

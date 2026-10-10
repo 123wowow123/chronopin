@@ -40,8 +40,21 @@ export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants:
           'https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour',
           'https://www.herofield.com/bbq/tokyoprince/',
         ].includes(profile.pinSourceUrl);
-        if (californiaPromotion || japanPromotion) {
-          const holidays = japanPromotion ? new Holidays('JP') : new Holidays('US', 'ca');
+        const taiwanPromotion = [
+          'https://www.smithandwollensky.com.tw/en/menu/taipei',
+          'https://www.smithandwollensky.com.tw/en/menu/taichung',
+        ].includes(profile.pinSourceUrl);
+        if (californiaPromotion || japanPromotion || taiwanPromotion) {
+          const holidays = taiwanPromotion ? new Holidays('TW') : japanPromotion ? new Holidays('JP') : new Holidays('US', 'ca');
+          if (taiwanPromotion) {
+            // The bundled TW rules predate the 2025 holiday restoration and omit
+            // Saturday substitutes. DGPA publishes the current statutory dates:
+            // https://www.dgpa.gov.tw/information?fid=9898&pid=12982&uid=30
+            for (const date of ['01-01', '02-28', '04-04', '05-01', '09-28', '10-10', '10-25', '12-25']) {
+              holidays.setHoliday(`${date} and if Saturday then previous Friday if Sunday then next Monday`, { name: 'Taiwan public holiday', type: 'public', substitute: true });
+            }
+            holidays.setHoliday('1 day before chinese 01-0-00', { name: 'Day before Lunar New Year’s Eve', type: 'public' });
+          }
           const year = Number(today.slice(0, 4));
           const excludedDates = [year - 1, year, year + 1].flatMap((year) => holidays.getHolidays(year).filter((holiday) => holiday.type === 'public').map((holiday) => holiday.date.slice(0, 10)));
           availability = { ...availability, excludedDates: [...new Set([...availability.excludedDates ?? [], ...excludedDates])] };

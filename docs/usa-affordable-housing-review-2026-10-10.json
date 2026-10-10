@@ -1,0 +1,1426 @@
+{
+  "reviewedAt": "2026-10-10",
+  "scope": "All 120 remaining listings in the reviewed Pennrose apartment directory after comparison with the tracked US collection. This is an operator-catalog review, not a complete national inventory.",
+  "catalogSource": "https://www.pennrose.com/apartments/",
+  "reviewedCount": 120,
+  "qualifiedProjectCount": 109,
+  "publishedRentTableCount": 74,
+  "method": "Read current property pages and linked program documents; compare campus and phase listings; verify addresses and source/title duplicates; source project media and verify public Azure blobs; check public pin APIs and pages after publishing.",
+  "interpretationNotes": [
+    "Published ranges can include market-rate homes; tiers are identified only where a source explicitly assigns them.",
+    "Older tiered schedules remain labeled with their effective dates and are not called new lease quotes.",
+    "Program rents and voucher tenant contributions are separate.",
+    "A listed price, contact form or application link is not treated as proof of current vacancy.",
+    "Where an original milestone was not established, timeline uses the explicitly labeled research-verification date, not a guessed opening date.",
+    "Generic coming-soon graphics and nonphotographic inventory tables are not used as pin media."
+  ],
+  "excludedOrCombined": [
+    {
+      "key": "active-adult-residences-at-north-hill",
+      "name": "Active Adult Residences at North Hill - For Adults 55+ - NOW OPEN",
+      "sourceUrl": "https://www.pennrose.com/apartments/virginia/active-adult-residences-at-north-hill/",
+      "reason": "Included as the 55+ building in the North Hill campus pin."
+    },
+    {
+      "key": "brantwood-ii",
+      "name": "Brantwood II, The",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/brantwood-ii/",
+      "reason": "Combined with adjacent Brentwood in one community pin."
+    },
+    {
+      "key": "heights-at-village-at-park-river",
+      "name": "Heights at Village at Park River",
+      "sourceUrl": "https://www.pennrose.com/apartments/connecticut/heights-at-village-at-park-river/",
+      "reason": "Included with the Village at Park River campus."
+    },
+    {
+      "key": "residences-at-glenarden-hills",
+      "name": "Residences at Glenarden Hills - Now For Seniors 55+",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/residences-at-glenarden-hills/",
+      "reason": "Included as the 55+ building in the Glenarden Hills campus pin."
+    },
+    {
+      "key": "blessed-sacrament",
+      "name": "Blessed Sacrament - Coming Soon!",
+      "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/blessed-sacrament/",
+      "reason": "Already pinned as Blessed Sacrament Church redevelopment."
+    },
+    {
+      "key": "hanobe",
+      "name": "HaNoBe",
+      "sourceUrl": "https://www.pennrose.com/apartments/ohio/hanobe/",
+      "reason": "Portfolio identifies this property as market rate."
+    },
+    {
+      "key": "hardy-williams-village",
+      "name": "Hardy Williams Village",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/hardy-williams-village/",
+      "reason": "Operator says long-term affordability, but income program, application timing and current project status remain unverified after operator and government searches."
+    },
+    {
+      "key": "lofts-at-brewerytown-the",
+      "name": "The Lofts at Brewerytown",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/lofts-at-brewerytown-the/",
+      "reason": "Operator explicitly states this community is not income restricted."
+    },
+    {
+      "key": "neston-heights-senior",
+      "name": "Neston Heights Senior",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/neston-heights-senior/",
+      "reason": "Included in the Neston Heights campus pin."
+    },
+    {
+      "key": "taylor-ii",
+      "name": "Taylor II - Coming Soon!",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/taylor-ii/",
+      "reason": "Future phase referenced in the Taylor Apartments pin."
+    },
+    {
+      "key": "vue-the",
+      "name": "The Vue",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/vue-the/",
+      "reason": "Developer portfolio identifies market-rate housing."
+    }
+  ],
+  "qualificationSources": [
+    {
+      "key": "55-harvey-at-providence",
+      "city": "New Brunswick",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/55-harvey-at-providence/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/55-harvey-at-providence/",
+        "https://www.pennrose.com/media/jzffuhec/55-harvey-flyer_2025.pdf"
+      ],
+      "pinId": 7132,
+      "pinUrl": "https://www.chronopin.com/pin/7132"
+    },
+    {
+      "key": "academy-place",
+      "city": "Trenton",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/academy-place/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/academy-place/",
+        "https://www.pennrose.com/media/ictmrz5f/academy-place-flyer_1-26.pdf"
+      ],
+      "pinId": 7133,
+      "pinUrl": "https://www.chronopin.com/pin/7133"
+    },
+    {
+      "key": "aston-heights",
+      "city": "Newark",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/aston-heights/",
+        "https://www.pennrose.com/media/umcaash0/aston-heights-flyer_2025.pdf",
+        "https://www.pennrose.com/media/lz4ihry5/aston-heights-pre-app-2022.pdf"
+      ],
+      "pinId": 7134,
+      "pinUrl": "https://www.chronopin.com/pin/7134"
+    },
+    {
+      "key": "bensalem-veterans-residences",
+      "city": "Bensalem",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bensalem-veterans-residences/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/bensalem-veterans-residences/",
+        "https://www.pennrose.com/media/qesjbzbu/bensalem-vets_2026-flyer.pdf",
+        "https://www.pennrose.com/news-views/news/2021/grand-opening-of-bensalem-veterans-residences-in-bucks-county/"
+      ],
+      "pinId": 7135,
+      "pinUrl": "https://www.chronopin.com/pin/7135"
+    },
+    {
+      "key": "bernice-arms",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bernice-arms/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/bernice-arms/",
+        "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      ],
+      "pinId": 7136,
+      "pinUrl": "https://www.chronopin.com/pin/7136"
+    },
+    {
+      "key": "brentwood",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/brentwood/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/brentwood/",
+        "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN",
+        "https://www.pennrose.com/apartments/pennsylvania/brantwood-ii/"
+      ],
+      "pinId": 7137,
+      "pinUrl": "https://www.chronopin.com/pin/7137"
+    },
+    {
+      "key": "bridgeside-estates",
+      "city": "Allentown",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/bridgeside-estates/",
+        "https://www.pennrose.com/media/ofkaetyf/bridgeside-estates-2025-flyer.pdf"
+      ],
+      "pinId": 7138,
+      "pinUrl": "https://www.chronopin.com/pin/7138"
+    },
+    {
+      "key": "cherry-hill-senior-manor",
+      "city": "Baltimore",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/cherry-hill-senior-manor/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/cherry-hill-senior-manor/",
+        "https://www.pennrose.com/media/komgpv5h/cherry-hill-pre-app-2020.pdf"
+      ],
+      "pinId": 7139,
+      "pinUrl": "https://www.chronopin.com/pin/7139"
+    },
+    {
+      "key": "chuck-costello-complex",
+      "city": "Old Bridge",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/chuck-costello-complex/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/chuck-costello-complex/",
+        "https://www.pennrose.com/media/30ckvcmd/chuck-costello-flyer_2025.pdf",
+        "https://www.pennrose.com/media/1kflbf2t/chuck-costello-pre-app-2022.pdf"
+      ],
+      "pinId": 7140,
+      "pinUrl": "https://www.chronopin.com/pin/7140"
+    },
+    {
+      "key": "city-view-landing",
+      "city": "Newark",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/city-view-landing/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/city-view-landing/",
+        "https://www.pennrose.com/media/mjshkamx/city-view-family-pre-app-2026.pdf"
+      ],
+      "pinId": 7141,
+      "pinUrl": "https://www.chronopin.com/pin/7141"
+    },
+    {
+      "key": "cloisters-iii",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/cloisters-iii/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/cloisters-iii/",
+        "https://www.pennrose.com/media/snclm5hc/pennrose-2024-2025-corporate-responsibility-report-final.pdf"
+      ],
+      "pinId": 7142,
+      "pinUrl": "https://www.chronopin.com/pin/7142"
+    },
+    {
+      "key": "cottage-hill-place",
+      "city": "Mobile",
+      "state": "Alabama",
+      "sourceUrl": "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/alabama/cottage-hill-place/",
+        "https://www.pennrose.com/media/ggvjwz20/cottage-hill-flyer_62026.pdf"
+      ],
+      "pinId": 7143,
+      "pinUrl": "https://www.chronopin.com/pin/7143"
+    },
+    {
+      "key": "crest-manor",
+      "city": "Willow Grove",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/crest-manor/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/crest-manor/"
+      ],
+      "pinId": 7144,
+      "pinUrl": "https://www.chronopin.com/pin/7144"
+    },
+    {
+      "key": "eastampton-town-center",
+      "city": "Eastampton",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/eastampton-town-center/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/eastampton-town-center/",
+        "https://www.pennrose.com/media/uo0mdvil/eastampton-flyer_2025.pdf"
+      ],
+      "pinId": 7145,
+      "pinUrl": "https://www.chronopin.com/pin/7145"
+    },
+    {
+      "key": "faison-mews",
+      "city": "Camden",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/faison-mews/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/faison-mews/",
+        "https://www.pennrose.com/media/pvcialga/faison-mews-flyer-2023.pdf"
+      ],
+      "pinId": 7146,
+      "pinUrl": "https://www.chronopin.com/pin/7146"
+    },
+    {
+      "key": "felton-lofts",
+      "city": "Steelton",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/felton-lofts/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/felton-lofts/",
+        "https://www.pennrose.com/media/ix2ctxar/felton-lofts-flyer_626.pdf"
+      ],
+      "pinId": 7147,
+      "pinUrl": "https://www.chronopin.com/pin/7147"
+    },
+    {
+      "key": "forge",
+      "city": "Lenox",
+      "state": "Massachusetts",
+      "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/forge/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/massachusetts/forge/",
+        "https://www.pennrose.com/news-views/news/2026/pennrose-celebrates-grand-opening-of-forge-a-new-mixed-income-rental-community-in-lenox/"
+      ],
+      "pinId": 7148,
+      "pinUrl": "https://www.chronopin.com/pin/7148"
+    },
+    {
+      "key": "freedom-village",
+      "city": "Paterson",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/freedom-village/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/freedom-village/",
+        "https://www.pennrose.com/media/kbrkkbdi/freedom-village-flyer_2025.pdf",
+        "https://www.pennrose.com/media/eylfhs0t/freedom-village-i-plus-ii-pre-app-2022.pdf"
+      ],
+      "pinId": 7149,
+      "pinUrl": "https://www.chronopin.com/pin/7149"
+    },
+    {
+      "key": "gateway-pointe",
+      "city": "Warner Robins",
+      "state": "Georgia",
+      "sourceUrl": "https://www.pennrose.com/apartments/georgia/gateway-pointe/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/georgia/gateway-pointe/",
+        "https://www.pennrose.com/media/ya4dwlvp/gateway-pointe-flyer_62026.pdf",
+        "https://www.pennrose.com/portfolio/gateway-pointe-i-ii/"
+      ],
+      "pinId": 7150,
+      "pinUrl": "https://www.chronopin.com/pin/7150"
+    },
+    {
+      "key": "glenarden-hills",
+      "city": "Glenarden",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/glenarden-hills/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/glenarden-hills/",
+        "https://www.pennrose.com/media/cjehrqcc/glenarden-hills-flyer-phase-iii-60-ami-2026.pdf",
+        "https://www.pennrose.com/media/h3zhhtdp/glenarden-hills-pre-app-2023.pdf",
+        "https://www.pennrose.com/portfolio/glenarden-hills/",
+        "https://www.pennrose.com/apartments/maryland/residences-at-glenarden-hills/",
+        "https://www.pennrose.com/media/0xypc3za/residences-at-glenarden-hills-flyer-2026.pdf",
+        "https://www.pennrose.com/media/2pnbjtzr/residences-at-glenarden-hills-flyer.pdf"
+      ],
+      "pinId": 7151,
+      "pinUrl": "https://www.chronopin.com/pin/7151"
+    },
+    {
+      "key": "gloria-robinson-court-homes",
+      "city": "Jersey City",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/gloria-robinson-court-homes/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/gloria-robinson-court-homes/",
+        "https://www.pennrose.com/media/2xchigvz/gloria-robinson-flyer_2026.pdf",
+        "https://www.pennrose.com/portfolio/gloria-robinson-court-homes-iii-iv-1/"
+      ],
+      "pinId": 7152,
+      "pinUrl": "https://www.chronopin.com/pin/7152"
+    },
+    {
+      "key": "golden-hill",
+      "city": "Kingston",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/golden-hill/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/golden-hill/",
+        "https://www.pennrose.com/media/myndl1xg/golden-hill-flyer_2026.pdf",
+        "https://www.pennrose.com/news-views/blog/2025/golden-hill-grand-opening-highlights-video/"
+      ],
+      "pinId": 7153,
+      "pinUrl": "https://www.chronopin.com/pin/7153"
+    },
+    {
+      "key": "greens-at-avenel",
+      "city": "Avenel",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/greens-at-avenel/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/greens-at-avenel/",
+        "https://www.pennrose.com/media/hurb0li3/greens-at-avenel-flyer_2026.pdf",
+        "https://www.pennrose.com/media/zbghj5zc/greens-at-avenel-pre-app-2022.pdf"
+      ],
+      "pinId": 7154,
+      "pinUrl": "https://www.chronopin.com/pin/7154"
+    },
+    {
+      "key": "heritage-at-alexander-hamilton",
+      "city": "Paterson",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/heritage-at-alexander-hamilton/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/heritage-at-alexander-hamilton/",
+        "https://www.pennrose.com/media/vschdgp0/heritage-at-alexander-hamilton-flyer_2023.pdf"
+      ],
+      "pinId": 7155,
+      "pinUrl": "https://www.chronopin.com/pin/7155"
+    },
+    {
+      "key": "herman-e-kapp-senior-residences",
+      "city": "Flemington",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/herman-e-kapp-senior-residences/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/herman-e-kapp-senior-residences/",
+        "https://www.pennrose.com/media/3fanxr3u/herman-e-kapp-flyer_2026.pdf",
+        "https://www.pennrose.com/media/v1ngpxhf/herman-e-kapp-pre-app-2022.pdf"
+      ],
+      "pinId": 7156,
+      "pinUrl": "https://www.chronopin.com/pin/7156"
+    },
+    {
+      "key": "hollander",
+      "city": "Hartford",
+      "state": "Connecticut",
+      "sourceUrl": "https://www.pennrose.com/apartments/connecticut/hollander/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/connecticut/hollander/",
+        "https://www.pennrose.com/media/ed5nwldo/hollander-flyer_2024.pdf"
+      ],
+      "pinId": 7157,
+      "pinUrl": "https://www.chronopin.com/pin/7157"
+    },
+    {
+      "key": "imani-village",
+      "city": "Wilmington",
+      "state": "Delaware",
+      "sourceUrl": "https://www.pennrose.com/apartments/delaware/imani-village/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/delaware/imani-village/",
+        "https://www.pennrose.com/portfolio/imani-village/"
+      ],
+      "pinId": 7158,
+      "pinUrl": "https://www.chronopin.com/pin/7158"
+    },
+    {
+      "key": "iris-at-park-pointe",
+      "city": "Griffin",
+      "state": "Georgia",
+      "sourceUrl": "https://www.pennrose.com/apartments/georgia/iris-at-park-pointe/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/georgia/iris-at-park-pointe/",
+        "https://www.pennrose.com/media/2zklye3m/iris-at-park-pointe-flyer_82026.pdf",
+        "https://www.pennrose.com/portfolio/meriwether-homes-redevelopment/"
+      ],
+      "pinId": 7159,
+      "pinUrl": "https://www.chronopin.com/pin/7159"
+    },
+    {
+      "key": "jefferis-square",
+      "city": "Chester",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/jefferis-square/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/jefferis-square/",
+        "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      ],
+      "pinId": 7160,
+      "pinUrl": "https://www.chronopin.com/pin/7160"
+    },
+    {
+      "key": "legacy-landing",
+      "city": "Newport News",
+      "state": "Virginia",
+      "sourceUrl": "https://www.pennrose.com/apartments/virginia/legacy-landing/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/virginia/legacy-landing/"
+      ],
+      "pinId": 7161,
+      "pinUrl": "https://www.chronopin.com/pin/7161"
+    },
+    {
+      "key": "liberty-house",
+      "city": "Phoenixville",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/liberty-house/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/liberty-house/",
+        "https://www.pennrose.com/media/w5ee5qb1/liberty-house-pre-app-2019.pdf"
+      ],
+      "pinId": 7162,
+      "pinUrl": "https://www.chronopin.com/pin/7162"
+    },
+    {
+      "key": "liberty-place-at-fort-lee",
+      "city": "Fort Lee",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/liberty-place-at-fort-lee/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/liberty-place-at-fort-lee/",
+        "https://www.pennrose.com/media/frlj1w3z/liberty-place-at-fort-lee-flyer_2024.pdf"
+      ],
+      "pinId": 7163,
+      "pinUrl": "https://www.chronopin.com/pin/7163"
+    },
+    {
+      "key": "livingston-manor",
+      "city": "New Brunswick",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/livingston-manor/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/livingston-manor/",
+        "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      ],
+      "pinId": 7164,
+      "pinUrl": "https://www.chronopin.com/pin/7164"
+    },
+    {
+      "key": "maher-manor",
+      "city": "Old Bridge",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/maher-manor/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/maher-manor/",
+        "https://www.pennrose.com/media/3pyb25cz/maher-manor-flyer_2026.pdf",
+        "https://www.pennrose.com/media/wmwi5jwk/maher-manor-pre-app-2022.pdf"
+      ],
+      "pinId": 7165,
+      "pinUrl": "https://www.chronopin.com/pin/7165"
+    },
+    {
+      "key": "maple-shade-mews",
+      "city": "Maple Shade",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/maple-shade-mews/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/maple-shade-mews/",
+        "https://www.pennrose.com/media/vgphvusd/maple-shade-mews-flyer_2025.pdf",
+        "https://www.pennrose.com/media/tk1naelw/maple-shade-mews-pre-app-2022.pdf"
+      ],
+      "pinId": 7166,
+      "pinUrl": "https://www.chronopin.com/pin/7166"
+    },
+    {
+      "key": "marlton-residences",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/marlton-residences/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/marlton-residences/",
+        "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      ],
+      "pinId": 7167,
+      "pinUrl": "https://www.chronopin.com/pin/7167"
+    },
+    {
+      "key": "mary-d-stone",
+      "city": "Auburn",
+      "state": "Massachusetts",
+      "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/mary-d-stone/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/massachusetts/mary-d-stone/",
+        "https://www.pennrose.com/media/kzoithnq/mary-d-stone_pre-app-2024.pdf",
+        "https://www.pennrose.com/portfolio/mary-d-stone-apartments/"
+      ],
+      "pinId": 7168,
+      "pinUrl": "https://www.chronopin.com/pin/7168"
+    },
+    {
+      "key": "mary-taylor-house",
+      "city": "West Chester",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/mary-taylor-house/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/mary-taylor-house/",
+        "https://www.pennrose.com/media/1mhdw0lf/mary-taylor-house-pre-app-2020.pdf"
+      ],
+      "pinId": 7169,
+      "pinUrl": "https://www.chronopin.com/pin/7169"
+    },
+    {
+      "key": "mccorristin-square",
+      "city": "Hamilton",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/mccorristin-square/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/mccorristin-square/",
+        "https://www.pennrose.com/media/i2rje4jc/mccorristin-flyer_2026-updated.pdf"
+      ],
+      "pinId": 7170,
+      "pinUrl": "https://www.chronopin.com/pin/7170"
+    },
+    {
+      "key": "meriden-commons",
+      "city": "Meriden",
+      "state": "Connecticut",
+      "sourceUrl": "https://www.pennrose.com/apartments/connecticut/meriden-commons/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/connecticut/meriden-commons/",
+        "https://www.pennrose.com/media/tmihytub/mc-i-plus-ii-flyer_2026.pdf",
+        "https://www.pennrose.com/portfolio/meriden-commons-i-ii/"
+      ],
+      "pinId": 7171,
+      "pinUrl": "https://www.chronopin.com/pin/7171"
+    },
+    {
+      "key": "montgomery-heights",
+      "city": "Newark",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/montgomery-heights/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/montgomery-heights/",
+        "https://www.pennrose.com/media/axsasx22/montgomery-heights-pre-app-2026.pdf"
+      ],
+      "pinId": 7172,
+      "pinUrl": "https://www.chronopin.com/pin/7172"
+    },
+    {
+      "key": "north-hills-highlands",
+      "city": "Pittsburgh",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/north-hills-highlands/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/north-hills-highlands/",
+        "https://www.pennrose.com/media/ks3bgueo/north-hills-highlands-pre-app-2020.pdf"
+      ],
+      "pinId": 7173,
+      "pinUrl": "https://www.chronopin.com/pin/7173"
+    },
+    {
+      "key": "northside-village",
+      "city": "Schenectady",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/northside-village/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/northside-village/",
+        "https://www.pennrose.com/media/0a5ftqpe/northside-village-flyer_2026.pdf",
+        "https://www.pennrose.com/portfolio/northside-village/"
+      ],
+      "pinId": 7174,
+      "pinUrl": "https://www.chronopin.com/pin/7174"
+    },
+    {
+      "key": "oaks-at-park-pointe",
+      "city": "Griffin",
+      "state": "Georgia",
+      "sourceUrl": "https://www.pennrose.com/apartments/georgia/oaks-at-park-pointe/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/georgia/oaks-at-park-pointe/",
+        "https://www.pennrose.com/media/1m1bxdnt/oaks-at-park-pointe-flyer_2026.pdf",
+        "https://www.pennrose.com/portfolio/meriwether-homes-redevelopment/"
+      ],
+      "pinId": 7175,
+      "pinUrl": "https://www.chronopin.com/pin/7175"
+    },
+    {
+      "key": "obery-court-college-creek",
+      "city": "Annapolis",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/obery-court-college-creek/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/obery-court-college-creek/",
+        "https://www.pennrose.com/media/ndzd2dsv/obery-court-pre-app-2020.pdf"
+      ],
+      "pinId": 7176,
+      "pinUrl": "https://www.chronopin.com/pin/7176"
+    },
+    {
+      "key": "pellettieri-homes",
+      "city": "Trenton",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/pellettieri-homes/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/pellettieri-homes/",
+        "https://www.pennrose.com/media/ll4phzah/pellettieri-homes-flyer_2026-pennrose-0277.pdf"
+      ],
+      "pinId": 7177,
+      "pinUrl": "https://www.chronopin.com/pin/7177"
+    },
+    {
+      "key": "platform-at-naugatuck",
+      "city": "Naugatuck",
+      "state": "Connecticut",
+      "sourceUrl": "https://www.pennrose.com/apartments/connecticut/platform-at-naugatuck/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/connecticut/platform-at-naugatuck/",
+        "https://www.pennrose.com/media/s2jnavyk/platform-at-naugatuck_92026.pdf"
+      ],
+      "pinId": 7178,
+      "pinUrl": "https://www.chronopin.com/pin/7178"
+    },
+    {
+      "key": "pointe-view-at-aspen-hill",
+      "city": "Silver Spring",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/pointe-view-at-aspen-hill/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/pointe-view-at-aspen-hill/",
+        "https://www.pennrose.com/media/wtycdajn/pvah-2026-flyer.pdf"
+      ],
+      "pinId": 7179,
+      "pinUrl": "https://www.chronopin.com/pin/7179"
+    },
+    {
+      "key": "providence-square",
+      "city": "New Brunswick",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/providence-square/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/providence-square/",
+        "https://www.pennrose.com/media/eddnt1hi/providence-square-flyer_2024.pdf"
+      ],
+      "pinId": 7180,
+      "pinUrl": "https://www.chronopin.com/pin/7180"
+    },
+    {
+      "key": "residence-at-roosevelt-park",
+      "city": "Edison",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/residence-at-roosevelt-park/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/residence-at-roosevelt-park/",
+        "https://www.pennrose.com/media/x0yck1ax/residence-at-roosevelt-park-pre-app-2026.pdf",
+        "https://www.pennrose.com/portfolio/residence-at-roosevelt-park/"
+      ],
+      "pinId": 7181,
+      "pinUrl": "https://www.chronopin.com/pin/7181"
+    },
+    {
+      "key": "residences-at-north-hill",
+      "city": "Alexandria",
+      "state": "Virginia",
+      "sourceUrl": "https://www.pennrose.com/apartments/virginia/residences-at-north-hill/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/virginia/residences-at-north-hill/",
+        "https://www.pennrose.com/portfolio/residences-at-north-hill/",
+        "https://www.pennrose.com/apartments/virginia/active-adult-residences-at-north-hill/",
+        "https://www.pennrose.com/media/tuwfbpsz/active-adult-building-11-2025.pdf"
+      ],
+      "pinId": 7182,
+      "pinUrl": "https://www.chronopin.com/pin/7182"
+    },
+    {
+      "key": "river-street-commons",
+      "city": "Red Bank",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/river-street-commons/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/river-street-commons/",
+        "https://www.pennrose.com/media/xuelazl1/river-street-commons-flyer_2023.pdf",
+        "https://www.nj.gov/dca/dlps/hss/COAH/units.pdf"
+      ],
+      "pinId": 7183,
+      "pinUrl": "https://www.chronopin.com/pin/7183"
+    },
+    {
+      "key": "roosevelt-manor",
+      "city": "Camden",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/roosevelt-manor/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/roosevelt-manor/",
+        "https://www.pennrose.com/media/0hscuqn0/roosevelt-manor-flyer-2024.pdf"
+      ],
+      "pinId": 7184,
+      "pinUrl": "https://www.chronopin.com/pin/7184"
+    },
+    {
+      "key": "rush-crossing",
+      "city": "Trenton",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/rush-crossing/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/rush-crossing/",
+        "https://www.pennrose.com/media/xlteg10m/rush-crossing-flyer_2026.pdf"
+      ],
+      "pinId": 7185,
+      "pinUrl": "https://www.chronopin.com/pin/7185"
+    },
+    {
+      "key": "spencers-place",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/spencers-place/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/spencers-place/",
+        "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      ],
+      "pinId": 7186,
+      "pinUrl": "https://www.chronopin.com/pin/7186"
+    },
+    {
+      "key": "stone-grove-crossing",
+      "city": "Salisbury",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/stone-grove-crossing/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/stone-grove-crossing/",
+        "https://www.pennrose.com/media/14ulaqcn/stone-grove-crossing-pre-app-2022.pdf",
+        "https://www.pennrose.com/portfolio/stone-grove-crossing/"
+      ],
+      "pinId": 7187,
+      "pinUrl": "https://www.chronopin.com/pin/7187"
+    },
+    {
+      "key": "stoneridge-villas",
+      "city": "Madison",
+      "state": "Alabama",
+      "sourceUrl": "https://www.pennrose.com/apartments/alabama/stoneridge-villas/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/alabama/stoneridge-villas/",
+        "https://www.pennrose.com/media/n0djzvv3/stoneridge-villas-iplusii-flyer_62026.pdf",
+        "https://www.pennrose.com/media/stql5lvs/stoneridge-villas-pre-app-2023.pdf"
+      ],
+      "pinId": 7188,
+      "pinUrl": "https://www.chronopin.com/pin/7188"
+    },
+    {
+      "key": "tempo-tandem",
+      "city": "Providence",
+      "state": "Rhode Island",
+      "sourceUrl": "https://www.pennrose.com/apartments/rhode-island/tempo-tandem/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/rhode-island/tempo-tandem/",
+        "https://www.pennrose.com/media/ateok55z/tandem-now-leasing-flyer_92026.pdf"
+      ],
+      "pinId": 7189,
+      "pinUrl": "https://www.chronopin.com/pin/7189"
+    },
+    {
+      "key": "the-chateau-the-riviera",
+      "city": "Baltimore",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/the-chateau-the-riviera/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/the-chateau-the-riviera/",
+        "https://www.pennrose.com/media/tgjo2ucs/2023-chateau-riviera-flyer-60percent-ami-and-up.pdf",
+        "https://www.pennrose.com/media/i2kh510y/chateau-and-riviera-pre-app-2020.pdf"
+      ],
+      "pinId": 7190,
+      "pinUrl": "https://www.chronopin.com/pin/7190"
+    },
+    {
+      "key": "the-lift-rise-on-jefferson",
+      "city": "Newport News",
+      "state": "Virginia",
+      "sourceUrl": "https://www.pennrose.com/apartments/virginia/the-lift-rise-on-jefferson/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/virginia/the-lift-rise-on-jefferson/",
+        "https://www.pennrose.com/media/1mfnlng5/lift-and-rise-on-jefferson-now-leasing.pdf",
+        "https://www.pennrose.com/portfolio/the-lift-and-rise-on-jefferson/"
+      ],
+      "pinId": 7191,
+      "pinUrl": "https://www.chronopin.com/pin/7191"
+    },
+    {
+      "key": "trinity-house",
+      "city": "Berwyn",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/trinity-house/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/trinity-house/",
+        "https://www.huduser.gov/datasets/weatherize/Qualified%20Assisted%20Programs%20Weatherization%20Eligible%202009.pdf"
+      ],
+      "pinId": 7192,
+      "pinUrl": "https://www.chronopin.com/pin/7192"
+    },
+    {
+      "key": "truman-square",
+      "city": "Edison",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/truman-square/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/truman-square/",
+        "https://www.pennrose.com/media/gvbnmyp0/truman-square-flyer_2025.pdf"
+      ],
+      "pinId": 7193,
+      "pinUrl": "https://www.chronopin.com/pin/7193"
+    },
+    {
+      "key": "universal-court-i",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/universal-court-i/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/universal-court-i/",
+        "https://www.apartments.com/universal-court-1-philadelphia-pa/qkk1d8y/"
+      ],
+      "pinId": 7194,
+      "pinUrl": "https://www.chronopin.com/pin/7194"
+    },
+    {
+      "key": "upland-estates",
+      "city": "Upland",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/upland-estates/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/upland-estates/",
+        "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      ],
+      "pinId": 7195,
+      "pinUrl": "https://www.chronopin.com/pin/7195"
+    },
+    {
+      "key": "uplands",
+      "city": "Baltimore",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/uplands/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/uplands/",
+        "https://www.pennrose.com/media/b5kl3qpl/uplands-pre-app-2022_phase-ii_leaseup_v2.pdf",
+        "https://www.pennrose.com/portfolio/uplands-rentals/"
+      ],
+      "pinId": 7196,
+      "pinUrl": "https://www.chronopin.com/pin/7196"
+    },
+    {
+      "key": "vernon-house",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/vernon-house/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/vernon-house/",
+        "https://www.pennrose.com/media/snclm5hc/pennrose-2024-2025-corporate-responsibility-report-final.pdf"
+      ],
+      "pinId": 7197,
+      "pinUrl": "https://www.chronopin.com/pin/7197"
+    },
+    {
+      "key": "village-at-nauset-green",
+      "city": "Eastham",
+      "state": "Massachusetts",
+      "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/village-at-nauset-green/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/massachusetts/village-at-nauset-green/",
+        "https://www.pennrose.com/media/vh3mbsip/village-at-nauset-green_2026.pdf",
+        "https://www.pennrose.com/media/p43ln4g1/village-at-nauset-green-pre-app-2024.pdf",
+        "https://www.pennrose.com/portfolio/village-at-nauset-green/"
+      ],
+      "pinId": 7198,
+      "pinUrl": "https://www.chronopin.com/pin/7198"
+    },
+    {
+      "key": "village-at-park-river",
+      "city": "Hartford",
+      "state": "Connecticut",
+      "sourceUrl": "https://www.pennrose.com/apartments/connecticut/village-at-park-river/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/connecticut/village-at-park-river/",
+        "https://www.pennrose.com/portfolio/village-at-park-river/",
+        "https://www.pennrose.com/apartments/connecticut/heights-at-village-at-park-river/",
+        "https://www.pennrose.com/media/lv2nl0pc/heights-at-vpr-flyer_2026.pdf"
+      ],
+      "pinId": 7199,
+      "pinUrl": "https://www.chronopin.com/pin/7199"
+    },
+    {
+      "key": "weinberg-commons",
+      "city": "Cherry Hill",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/weinberg-commons/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/weinberg-commons/",
+        "https://www.pennrose.com/media/prucw5z3/weinberg-commons-flyer_2026.pdf",
+        "https://www.pennrose.com/media/0rzme2ku/weinberg-commons-pre-app-2022.pdf",
+        "https://www.pennrose.com/portfolio/weinberg-commons/"
+      ],
+      "pinId": 7200,
+      "pinUrl": "https://www.chronopin.com/pin/7200"
+    },
+    {
+      "key": "west-turner-residences",
+      "city": "Allentown",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/west-turner-residences/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/west-turner-residences/",
+        "https://www.pennrose.com/media/1zuprglv/west-turner-flyer_6-2025.pdf",
+        "https://www.pennrose.com/portfolio/west-turner-residences/"
+      ],
+      "pinId": 7201,
+      "pinUrl": "https://www.chronopin.com/pin/7201"
+    },
+    {
+      "key": "wynne-senior-residences",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/wynne-senior-residences/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/wynne-senior-residences/",
+        "https://www.pennrose.com/portfolio/wynne-senior-residences/"
+      ],
+      "pinId": 7202,
+      "pinUrl": "https://www.chronopin.com/pin/7202"
+    },
+    {
+      "key": "238-pittsfield-road",
+      "city": "Lenox",
+      "state": "Massachusetts",
+      "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/238-pittsfield-road/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/massachusetts/238-pittsfield-road/",
+        "https://www.pennrose.com/news-views/news/2026/pennrose-breaks-ground-at-238-pittsfield-road-bringing-68-units-of-affordable-family-housing-to-lenox-massachusetts/"
+      ],
+      "pinId": 7203,
+      "pinUrl": "https://www.chronopin.com/pin/7203"
+    },
+    {
+      "key": "90-virginian-lane",
+      "city": "Jackson",
+      "state": "Wyoming",
+      "sourceUrl": "https://www.pennrose.com/apartments/wyoming/90-virginian-lane/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/wyoming/90-virginian-lane/"
+      ],
+      "pinId": 7204,
+      "pinUrl": "https://www.chronopin.com/pin/7204"
+    },
+    {
+      "key": "bourne-kenney",
+      "city": "Newburgh",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/bourne-kenney/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/bourne-kenney/"
+      ],
+      "pinId": 7205,
+      "pinUrl": "https://www.chronopin.com/pin/7205"
+    },
+    {
+      "key": "cleaborn-pointe-at-heritage-landing-senior",
+      "city": "Memphis",
+      "state": "Tennessee",
+      "sourceUrl": "https://www.pennrose.com/apartments/tennessee/cleaborn-pointe-at-heritage-landing-senior/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/tennessee/cleaborn-pointe-at-heritage-landing-senior/",
+        "https://www.pennrose.com/media/rjshb2jm/cleaborn-senior-flyer_2026.pdf",
+        "https://www.pennrose.com/media/qwhoraay/cleaborn-pointe-senior-pre-app-2021.pdf"
+      ],
+      "pinId": 7206,
+      "pinUrl": "https://www.chronopin.com/pin/7206"
+    },
+    {
+      "key": "don-coppedge-village",
+      "city": "Phoenixville",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/don-coppedge-village/",
+        "https://www.town.orleans.ma.us/DocumentCenter/View/6988/112723_PENNROSE-SUBMISSION_GOVERNOR-PRENCE-INN"
+      ],
+      "pinId": 7207,
+      "pinUrl": "https://www.chronopin.com/pin/7207"
+    },
+    {
+      "key": "doverbrook",
+      "city": "Easton",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/doverbrook/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/doverbrook/",
+        "https://www.pennrose.com/media/wnyphqol/doverbrook-pre-app-2025_v2.pdf"
+      ],
+      "pinId": 7208,
+      "pinUrl": "https://www.chronopin.com/pin/7208"
+    },
+    {
+      "key": "falls-ridge",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/falls-ridge/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/falls-ridge/",
+        "https://www.pha.phila.gov/housing/public-housing/about-developments/family-developments/"
+      ],
+      "pinId": 7209,
+      "pinUrl": "https://www.chronopin.com/pin/7209"
+    },
+    {
+      "key": "fop-senior",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/fop-senior/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/fop-senior/"
+      ],
+      "pinId": 7210,
+      "pinUrl": "https://www.chronopin.com/pin/7210"
+    },
+    {
+      "key": "gates-at-waller-park",
+      "city": "Roswell",
+      "state": "Georgia",
+      "sourceUrl": "https://www.pennrose.com/apartments/georgia/gates-at-waller-park/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/georgia/gates-at-waller-park/"
+      ],
+      "pinId": 7211,
+      "pinUrl": "https://www.chronopin.com/pin/7211"
+    },
+    {
+      "key": "greenleaf-redevelopment",
+      "city": "Washington DC",
+      "state": "District of Columbia",
+      "sourceUrl": "https://www.pennrose.com/apartments/washington-dc/greenleaf-redevelopment/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/washington-dc/greenleaf-redevelopment/"
+      ],
+      "pinId": 7212,
+      "pinUrl": "https://www.chronopin.com/pin/7212"
+    },
+    {
+      "key": "haverstraw",
+      "city": "Haverstraw",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/haverstraw/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/haverstraw/"
+      ],
+      "pinId": 7213,
+      "pinUrl": "https://www.chronopin.com/pin/7213"
+    },
+    {
+      "key": "hildebrand-commons",
+      "city": "New Brunswick",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/hildebrand-commons/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/hildebrand-commons/"
+      ],
+      "pinId": 7214,
+      "pinUrl": "https://www.chronopin.com/pin/7214"
+    },
+    {
+      "key": "jefferson-the",
+      "city": "New Britain",
+      "state": "Connecticut",
+      "sourceUrl": "https://www.pennrose.com/apartments/connecticut/jefferson-the/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/connecticut/jefferson-the/",
+        "https://www.pennrose.com/media/p4wl2zvk/the-jefferson-flyer_2023.pdf"
+      ],
+      "pinId": 7215,
+      "pinUrl": "https://www.chronopin.com/pin/7215"
+    },
+    {
+      "key": "man-an-house",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/man-an-house/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/man-an-house/",
+        "https://www.pennrose.com/media/2uxbrdgf/man-an-house-marketing-flyer_v4.pdf",
+        "https://www.pennrose.com/media/lx2dkb1w/man-an-house-pre-app-chinese.pdf"
+      ],
+      "pinId": 7216,
+      "pinUrl": "https://www.chronopin.com/pin/7216"
+    },
+    {
+      "key": "maria-regina-gardens",
+      "city": "Syracuse",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/maria-regina-gardens/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/maria-regina-gardens/"
+      ],
+      "pinId": 7217,
+      "pinUrl": "https://www.chronopin.com/pin/7217"
+    },
+    {
+      "key": "martin-luther-king-i-iii",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/martin-luther-king-i-iii/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/martin-luther-king-i-iii/",
+        "https://www.pennrose.com/media/aqwdw05c/mlk-i-iii-pre-app-2019.pdf"
+      ],
+      "pinId": 7218,
+      "pinUrl": "https://www.chronopin.com/pin/7218"
+    },
+    {
+      "key": "mcauley-station-north",
+      "city": "Atlanta",
+      "state": "Georgia",
+      "sourceUrl": "https://www.pennrose.com/apartments/georgia/mcauley-station-north/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/georgia/mcauley-station-north/"
+      ],
+      "pinId": 7219,
+      "pinUrl": "https://www.chronopin.com/pin/7219"
+    },
+    {
+      "key": "neston-heights",
+      "city": "Easton",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/neston-heights/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/neston-heights/",
+        "https://www.pennrose.com/media/tknn4xgt/neston-heights-flyer_2026.pdf",
+        "https://www.pennrose.com/apartments/pennsylvania/neston-heights-senior/",
+        "https://www.pennrose.com/media/cwyf0pus/neston-heights-senior-flyer_2026.pdf"
+      ],
+      "pinId": 7220,
+      "pinUrl": "https://www.chronopin.com/pin/7220"
+    },
+    {
+      "key": "neumann-north",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/neumann-north/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/neumann-north/",
+        "https://www.pennrose.com/media/rqpgskl1/neumann-north-flyer.pdf",
+        "https://www.pennrose.com/media/nc0lubbi/neumann-north-pre-app-2022.pdf"
+      ],
+      "pinId": 7221,
+      "pinUrl": "https://www.chronopin.com/pin/7221"
+    },
+    {
+      "key": "north-aud",
+      "city": "Buffalo",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/north-aud/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/north-aud/",
+        "https://www.pennrose.com/news-views/news/2026/governor-hochul-announces-start-of-construction-on-225-million-north-aud-block-in-buffalo-s-canalside/"
+      ],
+      "pinId": 7222,
+      "pinUrl": "https://www.chronopin.com/pin/7222"
+    },
+    {
+      "key": "north-hills-manor",
+      "city": "Glenside",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/north-hills-manor/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/north-hills-manor/"
+      ],
+      "pinId": 7223,
+      "pinUrl": "https://www.chronopin.com/pin/7223"
+    },
+    {
+      "key": "oaks-intown",
+      "city": "Albany",
+      "state": "Georgia",
+      "sourceUrl": "https://www.pennrose.com/apartments/georgia/oaks-intown/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/georgia/oaks-intown/",
+        "https://www.pennrose.com/media/uo1b1ddv/oaks-intown-flyer_2026.pdf",
+        "https://www.pennrose.com/media/53dosnyt/oaks-intown-pre-app-2021.pdf"
+      ],
+      "pinId": 7224,
+      "pinUrl": "https://www.chronopin.com/pin/7224"
+    },
+    {
+      "key": "overlook-park",
+      "city": "Allentown",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/overlook-park/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/overlook-park/",
+        "https://www.pennrose.com/media/aqlodgmt/overlook-park-flyer_2026.pdf"
+      ],
+      "pinId": 7225,
+      "pinUrl": "https://www.chronopin.com/pin/7225"
+    },
+    {
+      "key": "perry-homes",
+      "city": "Buffalo",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/perry-homes/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/perry-homes/"
+      ],
+      "pinId": 7226,
+      "pinUrl": "https://www.chronopin.com/pin/7226"
+    },
+    {
+      "key": "petersen-commons",
+      "city": "Avenel",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/petersen-commons/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/petersen-commons/"
+      ],
+      "pinId": 7227,
+      "pinUrl": "https://www.chronopin.com/pin/7227"
+    },
+    {
+      "key": "premiere-residences",
+      "city": "New Brunswick",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/premiere-residences/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/premiere-residences/",
+        "https://www.pennrose.com/media/432la0is/premiere_affordable_2025.pdf",
+        "https://www.pennrose.com/portfolio/new-brunswick-performing-arts-center-premiere-residences/"
+      ],
+      "pinId": 7228,
+      "pinUrl": "https://www.chronopin.com/pin/7228"
+    },
+    {
+      "key": "reed-street",
+      "city": "Little Falls",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/reed-street/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/reed-street/"
+      ],
+      "pinId": 7229,
+      "pinUrl": "https://www.chronopin.com/pin/7229"
+    },
+    {
+      "key": "river-pointe",
+      "city": "Savannah",
+      "state": "Georgia",
+      "sourceUrl": "https://www.pennrose.com/apartments/georgia/river-pointe/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/georgia/river-pointe/",
+        "https://www.pennrose.com/media/hm1ouclb/pmc-affordable-application-river-pointe.pdf"
+      ],
+      "pinId": 7230,
+      "pinUrl": "https://www.chronopin.com/pin/7230"
+    },
+    {
+      "key": "riverfront-torrington",
+      "city": "Torrington",
+      "state": "Connecticut",
+      "sourceUrl": "https://www.pennrose.com/apartments/connecticut/riverfront-torrington/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/connecticut/riverfront-torrington/",
+        "https://www.pennrose.com/portfolio/riverfront-torrington/",
+        "https://www.demarcomc.com/riverfront"
+      ],
+      "pinId": 7231,
+      "pinUrl": "https://www.chronopin.com/pin/7231"
+    },
+    {
+      "key": "strawberry-mansion-village",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "sourceUrl": "https://www.pennrose.com/apartments/pennsylvania/strawberry-mansion-village/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/pennsylvania/strawberry-mansion-village/"
+      ],
+      "pinId": 7232,
+      "pinUrl": "https://www.chronopin.com/pin/7232"
+    },
+    {
+      "key": "taylor-apartments",
+      "city": "Troy",
+      "state": "New York",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-york/taylor-apartments/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-york/taylor-apartments/",
+        "https://www.pennrose.com/apartments/new-york/taylor-ii/",
+        "https://www.pennrose.com/media/122cdmn4/2024-06-18-flyer.pdf"
+      ],
+      "pinId": 7233,
+      "pinUrl": "https://www.chronopin.com/pin/7233"
+    },
+    {
+      "key": "the-view-at-oglethorpe",
+      "city": "Savannah",
+      "state": "Georgia",
+      "sourceUrl": "https://www.pennrose.com/apartments/georgia/the-view-at-oglethorpe/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/georgia/the-view-at-oglethorpe/",
+        "https://agenda.savannahga.gov/content/files/city-council-mobile-workshop-booklet-051821-rev-051721.pdf"
+      ],
+      "pinId": 7234,
+      "pinUrl": "https://www.chronopin.com/pin/7234"
+    },
+    {
+      "key": "trinity-street",
+      "city": "Hartford",
+      "state": "Connecticut",
+      "sourceUrl": "https://www.pennrose.com/apartments/connecticut/trinity-street/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/connecticut/trinity-street/"
+      ],
+      "pinId": 7235,
+      "pinUrl": "https://www.chronopin.com/pin/7235"
+    },
+    {
+      "key": "veterans-home-in-chelsea",
+      "city": "Chelsea",
+      "state": "Massachusetts",
+      "sourceUrl": "https://www.pennrose.com/apartments/massachusetts/veterans-home-in-chelsea/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/massachusetts/veterans-home-in-chelsea/"
+      ],
+      "pinId": 7236,
+      "pinUrl": "https://www.chronopin.com/pin/7236"
+    },
+    {
+      "key": "village-at-harmony-garden",
+      "city": "Glassboro",
+      "state": "New Jersey",
+      "sourceUrl": "https://www.pennrose.com/apartments/new-jersey/village-at-harmony-garden/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/new-jersey/village-at-harmony-garden/",
+        "https://www.pennrose.com/media/zgxn40f5/vhg-flyer_2023.pdf"
+      ],
+      "pinId": 7237,
+      "pinUrl": "https://www.chronopin.com/pin/7237"
+    },
+    {
+      "key": "warner-swasey",
+      "city": "Cleveland",
+      "state": "Ohio",
+      "sourceUrl": "https://www.pennrose.com/apartments/ohio/warner-swasey/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/ohio/warner-swasey/"
+      ],
+      "pinId": 7238,
+      "pinUrl": "https://www.chronopin.com/pin/7238"
+    },
+    {
+      "key": "wilbourn-estates",
+      "city": "Annapolis",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/wilbourn-estates/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/wilbourn-estates/",
+        "https://www.pennrose.com/media/bbljyupr/wilbourn-estates_now-leasing.pdf"
+      ],
+      "pinId": 7239,
+      "pinUrl": "https://www.chronopin.com/pin/7239"
+    },
+    {
+      "key": "wyman-house",
+      "city": "Baltimore",
+      "state": "Maryland",
+      "sourceUrl": "https://www.pennrose.com/apartments/maryland/wyman-house/",
+      "sourcesChecked": [
+        "https://www.pennrose.com/apartments/maryland/wyman-house/",
+        "https://www.pennrose.com/media/plmjrkc1/wyman-house-pre-app-2020.pdf",
+        "https://www.pennrose.com/portfolio/wyman-house/"
+      ],
+      "pinId": 7240,
+      "pinUrl": "https://www.chronopin.com/pin/7240"
+    }
+  ],
+  "publishedProjectCount": 109,
+  "publicPinVerification": "All 109 public pin APIs and pages checked successfully, including coordinates, timeline dates, summary and media references."
+}

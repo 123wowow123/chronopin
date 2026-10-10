@@ -4,8 +4,10 @@
 # live site. Postgres, FAISS and Caddy are not touched. Schema files are applied
 # only when the commit changed some since the last deploy.
 #
-#   npm run deploy:image            deploy HEAD (waits for its build)
-#   npm run deploy:image -- <sha>   deploy or roll back to another commit
+#   npm run deploy            deploy HEAD (waits for its build)
+#   npm run deploy -- <sha>   deploy or roll back to another commit
+#
+# (`npm run deploy:image` is the same.) Never builds on the VM.
 #
 # The GHCR packages must be public (the repository is, and .dockerignore keeps
 # secrets out of the image): the VM pulls without a login.
@@ -15,6 +17,7 @@ HOST=azureuser@20.109.175.187
 KEY="$HOME/.ssh/chronopin_azure"
 OWNER=123wowow123
 cd "$(dirname "$0")/.."
+. scripts/deploy-guard.sh
 
 full=$(git rev-parse "${1:-HEAD}")
 rev=$(echo "$full" | cut -c1-7)

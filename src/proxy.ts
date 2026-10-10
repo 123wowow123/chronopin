@@ -7,7 +7,7 @@ import { pinPath } from '@/lib/seo';
 import { topicSlug } from '@/lib/topics';
 import * as db from '@/server/db';
 import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
-import { botRetryAfter } from '@/server/botLimit';
+import { botRetryAfter, SHED_RETRY_AFTER } from '@/server/botLimit';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
 import Topics from '@/server/model/topics';
@@ -62,13 +62,18 @@ export async function proxy(request: NextRequest) {
   const bot = identifyBot(userAgent);
   BotVisit.record(bot, userAgent, pathname);
   // AI crawlers, scrapers and Applebot have per-bot and shared rate limits
-  // (src/server/botLimit.ts). Other search engines pass through. robots.txt stays open to
+  // (src/server/botLimit.ts), and are turned away while the server is
+  // struggling; Google's crawlers are held to 10 a minute then. Other search
+  // engines pass through. robots.txt stays open to
   // them - it is where they read the Crawl-delay - and so does llms.txt, the
   // one page written for them.
   const retryAfter = pathname === '/robots.txt' || pathname === '/llms.txt' ? null : botRetryAfter(bot);
   if (retryAfter != null) {
-    return new NextResponse('Too many requests - please crawl more slowly.', {
-      status: 429,
+    // 503 while the server sheds crawlers to protect itself (botLimit.shedding);
+    // 429 when a bot is over its own budget.
+    const shed = retryAfter === SHED_RETRY_AFTER;
+    return new NextResponse(shed ? 'Temporarily unavailable - please retry later.' : 'Too many requests - please crawl more slowly.', {
+      status: shed ? 503 : 429,
       headers: { 'Retry-After': String(retryAfter), 'Content-Type': 'text/plain; charset=utf-8' },
     });
   }

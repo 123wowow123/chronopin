@@ -104,6 +104,14 @@ async function priceSnapshot(row: PriceRow, ticker: { symbol: string; assetClass
 // The company's related and supplier tickers, asked of Claude the first time
 // and kept only if Nasdaq knows the symbol. With Claude out of reach (no key,
 // no credit) the company is left to be asked next time; hand-set ones stand.
+// With Claude out of reach every pin view would log this; say it once an hour.
+let lastRelationsWarning = 0;
+function warnOnce(message: string) {
+  if (Date.now() - lastRelationsWarning < 3_600_000) return;
+  lastRelationsWarning = Date.now();
+  log.warn(message);
+}
+
 async function companyRelations(pin: PinFacts, ownSymbol: string | null): Promise<CompanyRelationRow[]> {
   if (!pin.companyId || !pin.company) return [];
   if (!pin.utcRelationsCheckedDateTime) {
@@ -121,7 +129,7 @@ async function companyRelations(pin: PinFacts, ownSymbol: string | null): Promis
       await CompanyRelation.markChecked(pin.companyId);
     } catch (err) {
       if (!(err instanceof RelationsUnavailable)) throw err;
-      log.warn(`company relations for ${pin.company} not asked:`, err.message);
+      warnOnce(`company relations not asked: ${err.message}`);
     }
   }
   return CompanyRelation.forCompany(pin.companyId);

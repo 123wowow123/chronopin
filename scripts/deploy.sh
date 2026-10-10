@@ -3,18 +3,28 @@
 # `git archive HEAD` rather than the working tree, so work in progress - this
 # session's or another's - never reaches production. Applies pending schema
 # files, then rebuilds and restarts the app; pass service names to rebuild
-# others too (`npm run deploy -- app faiss`).
+# others too (`DEPLOY_ON_VM=1 npm run deploy:vm -- app faiss`).
 #
 # It never resizes the VM (owner, 2026-10-03): the size it has is the size it
 # keeps. `next build` alone holds 1.3GB, so on a 4GB VM (Standard_B2s) it swaps
 # beside the live site; resize by hand first if that matters (docs/deploy-azure.md).
 #
-#   npm run deploy
+# This builds on the VM beside the live site, which swaps and 502s for the
+# length of the build. `npm run deploy` is scripts/deploy-image.sh (GitHub
+# builds, the VM pulls); this is the fallback for when that cannot work, and
+# must be asked for: DEPLOY_ON_VM=1 npm run deploy:vm
 set -eu
 
 HOST=azureuser@20.109.175.187
 KEY="$HOME/.ssh/chronopin_azure"
 cd "$(dirname "$0")/.."
+
+if [ "${DEPLOY_ON_VM:-}" != 1 ]; then
+  echo "This builds on the live VM and takes the site down for minutes." >&2
+  echo "Use 'npm run deploy' (GitHub builds the image). If you really mean it: DEPLOY_ON_VM=1 npm run deploy:vm" >&2
+  exit 1
+fi
+. scripts/deploy-guard.sh
 
 # The commit is fixed here, as the archive is made: HEAD can move while the
 # build runs (another commit, another session), and that is not what went out.
@@ -22,7 +32,7 @@ rev=$(git rev-parse --short HEAD)
 git diff --quiet HEAD || echo "Note: uncommitted changes are not deployed; deploying $rev."
 
 tmp=$(mktemp -d)
-trap 'rm -rf "$tmp"' EXIT
+trap 'rm -rf "$tmp" "$lock"' EXIT
 git archive "$rev" | tar -x -C "$tmp"
 
 # The VM's env files and the gitignored seed of user accounts live only there.

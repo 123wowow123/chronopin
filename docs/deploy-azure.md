@@ -59,7 +59,7 @@ ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187 \
 file. A new schema file needs `npm run create:db` through the tools container
 (below) before or right after the app restarts.
 
-`npm run deploy` (scripts/deploy.sh) does this and never resizes the VM
+`DEPLOY_ON_VM=1 npm run deploy:vm` (scripts/deploy.sh) does this and never resizes the VM
 (owner, 2026-10-03), so `az login` is not needed. The build needs about 1.3GB
 beyond what a 4GB box (Standard_B2s) has free beside the running site, and on
 that size it swaps for an hour; to give it room, resize by hand first (a restart,
@@ -71,25 +71,30 @@ and the same with `Standard_B2s` to shrink it back.
 
 `.github/workflows/build-image.yml` builds the app and tools images on every
 push to master and pushes them to `ghcr.io/123wowow123/chronopin` and
-`chronopin-tools`, tagged with the commit. `npm run deploy:image` (scripts/
-deploy-image.sh) waits for that build, syncs `Docker/`, pulls the images and
+`chronopin-tools`, tagged with the commit. `npm run deploy` (scripts/
+deploy-image.sh; also `deploy:image`) waits for that build, syncs `Docker/`, pulls the images and
 restarts only the app; Postgres, FAISS and Caddy keep running (their data is in
 named volumes either way). Schema files are applied only when `scripts/db`
 changed since `~/chronopin/.deployed-sha`. Roll back with
-`npm run deploy:image -- <sha>`. The script writes `Docker/.env` on the VM
+`npm run deploy -- <sha>`. The script writes `Docker/.env` on the VM
 (`APP_IMAGE`, `TOOLS_IMAGE`) so a later `docker compose up` by hand uses the
 same image.
 
 The image deploy prunes unused images before pulling and after restarting
 the app. Images referenced by containers and all data volumes are preserved.
 If a pull fails with `no space left on device`, free space on the VM with
-`docker image prune -af`, check `df -h /`, then retry `npm run deploy:image`.
+`docker image prune -af`, check `df -h /`, then retry `npm run deploy`.
 The Compose suggestion to build `app` can accompany a failed pull; disk
 exhaustion must be resolved first.
 
 One-time setup: push, let the first run finish, then in GitHub's package
 settings set both packages to **public** so the VM pulls without a login.
-`npm run deploy` (build on the VM) still works as a fallback.
+`npm run deploy:vm` (build on the VM, `DEPLOY_ON_VM=1`) is only a fallback: the
+build swaps the 8GB box and the site 502s for its length (2026-10-10).
+
+Both deploy scripts source scripts/deploy-guard.sh: they refuse a
+non-interactive shell unless `DEPLOY_CONFIRMED=1`, refuse to overlap another
+deploy, and refuse while the VM is already building.
 
 ## One-off scripts
 
@@ -106,7 +111,7 @@ docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools 
 `search:index:db` upserts every pin into both FAISS indexes (English and
 multilingual, see `Docker/faiss/app.py`) without emptying them first, so search
 keeps answering while it runs (a few minutes). Run it after a change to the
-service's models (`npm run deploy -- app faiss`), which leaves a new index empty.
+service's models (`DEPLOY_ON_VM=1 npm run deploy:vm -- app faiss`), which leaves a new index empty.
 
 Rebuild it (`--profile tools build tools`) after a code change the script needs.
 

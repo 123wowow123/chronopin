@@ -1,10 +1,44 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { BURST, PER_SECOND, SHARED_BURST, SHARED_PER_SECOND, botRetryAfter } from './botLimit';
+import { BURST, PER_SECOND, SHARED_BURST, SHARED_PER_SECOND, GOOGLE_PER_MINUTE, SHED_RETRY_AFTER, botRetryAfter, shedding } from './botLimit';
 import { identifyBot } from '@/lib/bots';
 
 describe('botRetryAfter', () => {
   beforeEach(() => {
     delete (globalThis as unknown as { __chronopinCrawlerLimits?: unknown }).__chronopinCrawlerLimits;
+    delete (globalThis as unknown as { __chronopinShed?: unknown }).__chronopinShed;
+  });
+
+  it('holds Google\'s crawlers to 10 requests a minute while the server is slow, and not before', () => {
+    const google = { name: 'Googlebot', kind: 'search' as const };
+    const image = { name: 'Googlebot-Image', kind: 'search' as const };
+    // Not slow: no limit at all.
+    expect(shedding(10_000, () => ({ loopMs: 0, loadPerCore: 0.1 }))).toBe(false);
+    for (let i = 0; i < GOOGLE_PER_MINUTE * 5; i++) expect(botRetryAfter(google, 10_001)).toBeNull();
+    // Slow: ten between all Google crawlers, then they are told to wait.
+    expect(shedding(20_000, () => ({ loopMs: 3_000, loadPerCore: 0.1 }))).toBe(true);
+    for (let i = 0; i < GOOGLE_PER_MINUTE / 2; i++) expect(botRetryAfter(google, 20_001)).toBeNull();
+    for (let i = 0; i < GOOGLE_PER_MINUTE / 2; i++) expect(botRetryAfter(image, 20_001)).toBeNull();
+    expect(botRetryAfter(google, 20_001)).toBe(6);
+    expect(botRetryAfter(image, 20_001)).toBe(6);
+    // One request every six seconds thereafter.
+    expect(botRetryAfter(google, 26_001)).toBeNull();
+    expect(botRetryAfter(google, 26_001)).not.toBeNull();
+  });
+
+  it('turns AI crawlers and scrapers away while the server is slow, but not Google outright', () => {
+    expect(shedding(10_000, () => ({ loopMs: 2_000, loadPerCore: 0.2 }))).toBe(true);
+    expect(botRetryAfter({ name: 'GPTBot', kind: 'ai' }, 10_001)).toBe(SHED_RETRY_AFTER);
+    expect(botRetryAfter({ name: 'AhrefsBot', kind: 'other' }, 10_001)).toBe(SHED_RETRY_AFTER);
+    expect(botRetryAfter({ name: 'Google-Extended', kind: 'ai' }, 10_001)).toBeNull();
+    expect(botRetryAfter({ name: 'Googlebot', kind: 'search' }, 10_001)).toBeNull();
+    expect(botRetryAfter(null, 10_001)).toBeNull();
+  });
+
+  it('keeps shedding until the load is clearly down', () => {
+    expect(shedding(10_000, () => ({ loopMs: 0, loadPerCore: 2.5 }))).toBe(true);
+    expect(shedding(20_000, () => ({ loopMs: 0, loadPerCore: 1.7 }))).toBe(true);
+    expect(shedding(30_000, () => ({ loopMs: 0, loadPerCore: 1.0 }))).toBe(false);
+    expect(shedding(40_000, () => ({ loopMs: 0, loadPerCore: 1.7 }))).toBe(false);
   });
 
   it('shares ShapBot\'s budget across user-agent casing and versions', () => {

@@ -2,6 +2,10 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'standalone',
+  // Caddy compresses (Docker/Caddyfile: encode zstd gzip). Next's own gzip
+  // costs CPU on the 2-vCPU VM and logged MaxListenersExceededWarning (11
+  // drain listeners on a Gzip stream) under streaming responses.
+  compress: false,
   reactCompiler: true,
   cacheComponents: true,
   // Hide the "N" dev-tools badge; compile and runtime errors still show.

@@ -317,7 +317,7 @@ https://www.fooddive.com/
 https://www.eventbrite.com/e/sneaker-con-los-angeles-october-17-18-2026-tickets-2000208801369?aff=erelpanelorg
 
 
-grammy's should have who was up for consideration and show their work and view link
+
 
 
 organize admin pages to more intuitive layout and groupings
@@ -340,12 +340,12 @@ list these information on people if available
 • Major property or houses owned
 
 
+- famous people should have page like congressmen too
+
+
 Build KG with people, companies, properties, vacations, products / shows
 
 
-- check all menu on restaurant pins exist have tabs if needs and are correct and links are correct
-
-- famous people should have page like congressmen too
 
 - generate most corrupt people page collage
 
@@ -403,19 +403,23 @@ ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187 'cd chronopin && docker c
 need ability for user to take and upload media for pins, and have ability for other users to flag for issue
 
 
-
-can anyone commit to chronopin git? should automerge PR from this computer and others will need to submit PR and wait for admin to approve
-
-
 add button on landing page to suggest a product or restaurant to add to list. should have community voted section
 
 
 
 add china restaurant landing page
-add taiwan restaurant landing page
 
 add restaurant landing page for all major cities around the world
 
 
 https://www.chronopin.com/pin/6939/africola-adelaide-restaurant-guide
 
+
+
+tenmu ads
+
+
+grammy's should have who was up for consideration and show their work and view link
+
+
+add strip and disable ads
