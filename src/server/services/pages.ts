@@ -210,12 +210,15 @@ export async function pinEventInfo(id: number): Promise<PinEventInfoJson | null>
 }
 
 // The big-four contenders an awards pin lists, empty for any other pin.
-// Tagged with the pin, so saving them redraws its page.
+// Tagged with the pin and its works' pins, so saving any of them redraws it.
 export async function pinCandidates(id: number): Promise<PinCandidateJson[]> {
   'use cache';
   cacheLife('hours');
-  cacheTag(TAGS.pin(id));
-  return candidatesForPin(id);
+  const candidates = await candidatesForPin(id);
+  // Each row shows its work pin's picture and title, so a change to one of
+  // them redraws this page too.
+  cacheTag(TAGS.pin(id), ...candidates.flatMap((c) => (c.work ? [TAGS.pin(c.work.id)] : [])));
+  return candidates;
 }
 
 // A game's maturity rating and platforms, or null when none were read.

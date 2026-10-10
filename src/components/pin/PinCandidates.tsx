@@ -1,4 +1,5 @@
 import Link from '@/components/ui/Link';
+import { PinThumb } from '@/components/pin/PinThumb';
 import { CANDIDATE_CATEGORIES, type CandidateCategory, type PinCandidateJson } from '@/lib/candidates';
 import type { Translator } from '@/lib/i18n/translate';
 import { localizePath } from '@/lib/i18n/config';
@@ -37,8 +38,15 @@ export function PinCandidates({ candidates, t }: { candidates: PinCandidateJson[
             <p className="mt-0.5 mb-2.5 text-xs text-subtle">{t(rows[0].oddsLabel === 'winner' ? 'pin.candidateWinner' : 'pin.candidateNominee')}</p>
             <ol className="flex flex-col gap-2.5">
               {rows.map((c) => (
-                <li key={`${c.category}-${c.rank}`} className="grid grid-cols-[1.25rem_minmax(0,1fr)] items-start gap-x-2 text-sm">
-                  <span className="pt-px text-xs font-semibold tabular-nums text-subtle">{c.rank}</span>
+                <li key={`${c.category}-${c.rank}`} className="grid grid-cols-[1rem_4rem_minmax(0,1fr)] items-center gap-x-2.5 text-sm">
+                  <span className="text-xs font-semibold tabular-nums text-subtle">{c.rank}</span>
+                  {c.work ? (
+                    <Link href={localizePath(pinPath(c.work), t.locale)} tabIndex={-1} aria-hidden>
+                      <PinThumb thumbName={c.work.thumbName} originalUrl={c.work.originalUrl} title={c.name} category={c.category} className="h-11 w-16" />
+                    </Link>
+                  ) : (
+                    <PinThumb title={c.name} category={c.category} className="h-11 w-16" />
+                  )}
                   <div className="min-w-0">
                     <div className="leading-snug">
                       {c.work ? (

@@ -14,6 +14,8 @@ type Row = {
   asOf: Date | string;
   workPinId: number | null;
   workTitle: string | null;
+  thumbName: string | null;
+  thumbOriginalUrl: string | null;
 };
 
 const day = (value: Date | string) => (typeof value === 'string' ? value.slice(0, 10) : value.toISOString().slice(0, 10));
@@ -21,9 +23,17 @@ const day = (value: Date | string) => (typeof value === 'string' ? value.slice(0
 export async function candidatesForPin(pinId: number): Promise<PinCandidateJson[]> {
   const rows = await db.query<Row>(
     `SELECT c."category", c."rank", c."name", c."artist", c."odds", c."oddsLabel", c."sourceUrl", c."asOf",
-            c."workPinId", w."title" AS "workTitle"
+            c."workPinId", w."title" AS "workTitle", pic."thumbName", pic."originalUrl" AS "thumbOriginalUrl"
      FROM "PinCandidate" c
      LEFT JOIN "Pin" w ON w."id" = c."workPinId" AND w."utcDeletedDateTime" IS NULL
+     -- The work's first image (its cover or photo), else its first medium.
+     LEFT JOIN LATERAL (
+       SELECT m."thumbName", CASE WHEN m."type" = '1' THEN m."originalUrl" END AS "originalUrl"
+       FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId"
+       WHERE pm."pinId" = c."workPinId" AND pm."utcDeletedDateTime" IS NULL
+       ORDER BY m."type" = '1' DESC, pm."weight" DESC, pm."id"
+       LIMIT 1
+     ) pic ON true
      WHERE c."pinId" = $1
      ORDER BY c."category", c."rank"`,
     [pinId],
@@ -33,7 +43,7 @@ export async function candidatesForPin(pinId: number): Promise<PinCandidateJson[
     rank: r.rank,
     name: r.name,
     artist: r.artist,
-    work: r.workPinId && r.workTitle ? { id: r.workPinId, title: r.workTitle } : null,
+    work: r.workPinId && r.workTitle ? { id: r.workPinId, title: r.workTitle, thumbName: r.thumbName, originalUrl: r.thumbOriginalUrl } : null,
     odds: r.odds,
     oddsLabel: r.oddsLabel,
     sourceUrl: r.sourceUrl,

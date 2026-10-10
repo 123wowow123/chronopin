@@ -12,8 +12,9 @@ export type PinCandidateJson = {
   rank: number;
   name: string;
   artist: string | null;
-  // The pin for the candidate's work, already shaped for pinPath().
-  work: { id: number; title: string } | null;
+  // The pin for the candidate's work, already shaped for pinPath(), with the
+  // picture a list shows for it (its first image: the cover, the press photo).
+  work: { id: number; title: string; thumbName: string | null; originalUrl: string | null } | null;
   odds: number | null;
   oddsLabel: 'nominee' | 'winner' | null;
   sourceUrl: string | null;
