@@ -35,6 +35,8 @@ Street addresses were matched using Esri World Geocoding, with candidate scores 
 
 ## Publication state
 
+User instruction, October 10, 2026: “do not deploy anything to prod without my consent.” Obtain explicit consent for each production deployment. Requests to add notes, continue local work, or “go” on those tasks do not authorize a production deployment. Keep the final Taiwan guide changes and pin import local until publishing is explicitly approved.
+
 The final implementation is committed on isolated branch `taiwan-restaurant-guides` at `5dd9138` and remains in the shared working tree. Local pins 7025–7036 are seeded. No production Taiwan restaurant pins have been imported.
 
 A preliminary core build (`8bf279e`) was deployed before the workspace gained its explicit deployment-approval rule. The remaining VM build was stopped after that rule was discovered; no `next-build` process remains, and the live homepage returned HTTP 200 in 0.54 seconds. The final card-menu and restored-holiday corrections have not been published. Publishing the final version and importing its 12 pins awaits the user’s explicit request and must use a GitHub-built image, per AGENTS.md.

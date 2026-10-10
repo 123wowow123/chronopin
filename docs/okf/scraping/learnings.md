@@ -6678,3 +6678,33 @@ Ian's README item "pin watches news and events". Four drafting lanes (Rolex/Tudo
 * **Learned** (holiday ads) After holiday stocking, reapply the rating/review quality bar to every working row before publishing. On 9 October, mooncake B0CHSLGCDQ was reported newly broken but ended up locally ok with 3.7 stars and 3 reviews; it was removed rather than published. Reject sesame supplement balls as Dongzhi tangyuan goods.
 * **Learned** (prediction markets) Market close time is a settlement boundary, not the event time: the Singapore F1 race is officially 11 October 12:00 UTC, although fresh Kalshi contracts close 18 October. Attach markets to existing CPI/Gemini/race subjects; preserve Google’s unstated broad Gemini release date unless official evidence changes.
 * **Learned** (event information) Read the edition and venue, not just registration links: COMPUTEX and Seatrade pages mix 2027 save-the-date headers with 2026 programmes; keep 2027 speakers and ticket availability blank without matching evidence. A ticket link alone does not prove an on-sale price or available stock.
+
+## 2026-10-10 - Media top-up of the next 180 days' sparse pins, on production
+
+Ian started from pin 2544 (LACMA: 1 picture, "pins should have at least 3 media"), then asked for the sweep. At
+that point 2,877 of 6,935 live prod pins had under 3 media. He chose the **next 90 days** first, then "do both":
+a second search pass on the leftovers plus the following window. Window 1 = 297 pins dated 10 Oct 2026 - 8 Jan
+2027; window 2 = 81 pins dated 9 Jan - 9 Apr 2027. Ten agents (window 1) and six (retry + window 2) proposed
+media to files; the lead downloaded every picture, viewed it on contact sheets and checked every YouTube/Vimeo
+channel through oEmbed; then `apply.py` / `apply2.py` did a serial GET -> PUT as admin behind the homepage load
+gate (15 s pause). Scripts, proposals and logs: `.scrape/prod-batches/media-next90-2026-10-10/`.
+
+* **Result:** window 1 266 of 297 at 3+ (was 0); window 2 67 of 81 at 3+. 45 pins stay under 3
+  (`still-under3-final.json`): pre-opening restaurants with one rendering and nothing else, pharma/OpenAI
+  retirement notices, and a few where prod cannot download the only picture (6761).
+* **Rejected on sight:** OpenAI docs title cards and a Langfuse blog card (2307, 2308), a stock cartoon
+  (3553), a CAD site plan (7232), a storefront photo of the wrong tenant (6993), a splash247 pumpjack field
+  for a Panjin refinery. Floor plans of the exact building were accepted as media.
+* **Traps:**
+  - **Prod's server fetches each image itself.** A host that served my browser UA can 403/406 the server
+    (cepro, travelmole, splash247, sofistadium, dotnews). One bad URL fails the whole PUT with
+    `HTTP 500 Image download failed ...: <url>`, saving nothing. `apply2.py` parses that URL, drops it and retries
+    the PUT; test candidates with `curl -A chronopin-batch/1.0` first.
+  - **GET omits empty `media` and `tags`** (use `.get`); a pin with 0 media has no `media` key.
+  - **Parallel downloads from Commons 429** at 8 threads; download serially with the Wikimedia UA and 4-5 s gaps.
+  - **A 502 from the proxy can still be a saved PUT.** Read the pin back before retrying.
+  - **The admin token dies after about 5 h** mid-run (401 -> `token expired`); refresh from `.env.local`.
+  - **Past-edition videos** (Grammys, MWC, FOMC press conferences) stand in for future events when nothing
+    newer exists; the notes on those pins' proposals say so.
+* **Not done:** window 3 onward (the ~2,500 older or further-out sparse pins), the 45 above, translations of
+  nothing (media is language-neutral).

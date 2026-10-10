@@ -46,3 +46,11 @@ This batch does not fill every restaurant's menu. Offers with unpublished prices
 - Browser checks passed on desktop and a 390px mobile viewport: published prices, six-item preview, expansion to 21 food items, switching to cocktails, no horizontal overflow and no page errors.
 
 The import helper is in scripts/restaurants/specialMenuImport.ts; it converts an already verified, branch-specific menu into factual item names/prices and restrictions. Source selection and service-window verification remain necessary before saving its output through the API.
+
+## San Diego follow-up — October 10, 2026
+
+Pushed 25 San Diego venue menus to production through the management API (revision-checked PUTs, read back by dry run first): 21 menus already transcribed in `restaurantSpecials.json` that the database lacked, plus fresh research for Lionfish (16 priced items, schedule corrected to Mon–Fri 5–6 pm), Casa Gabriela (21 priced items from the happy-hour flyer), NINE-TEN (half-price bottles only) and Chez Loma (16 happy-hour items from its own Toast menu, plus the $39 Early Bird Prix Fixe from chezloma.net).
+
+Left link-only after a deep search (no branch-published items reachable): Brigantine Portside Pier, Point Loma, Coronado, La Mesa, Poway (location pages publish only the schedule; ChowNow and OpenTable menus have no happy-hour category; Coronado's only items are from a 2022 article and were dropped); Born & Raised (operator publishes a regular food PDF and cocktail flipbook, no happy-hour menu; third-party listing items unconfirmed); The Plot (lunch tasting menu courses are "seasonal" and not itemized; its Wed–Sun 3–5 pm happy hour has no published items).
+
+Chez Loma's site text says happy hour is 5–6 pm while its calendar and OpenTable say 4:30–6 pm; the stored schedule keeps 4:30–6 pm and the menu note records the conflict. Casa Gabriela's flyer says daily while its site says Tue–Sun; the site schedule is kept.
