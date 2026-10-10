@@ -53,7 +53,10 @@ export function eventInfoProblem(body: Record<string, unknown>): { fields: Event
   if (performers.length > 150) return 'At most 150 performers.';
 
   const price = (value: unknown) => (value == null || value === '' ? null : Number(value));
-  const tierPrices = Array.isArray(body.tiers) ? body.tiers.map((t: { price?: unknown }) => Number(t?.price)).filter((n: number) => n >= 0) : [];
+  // Derived from the paid tiers: a free tier (children, members) does not make
+  // the cheapest ticket free.
+  const allTiers: number[] = Array.isArray(body.tiers) ? body.tiers.map((t: { price?: unknown }) => Number(t?.price)).filter((n: number) => n >= 0) : [];
+  const tierPrices = allTiers.some((n) => n > 0) ? allTiers.filter((n) => n > 0) : allTiers;
   const lowPrice = price(body.lowPrice) ?? (tierPrices.length ? Math.min(...tierPrices) : null);
   const highPrice = price(body.highPrice) ?? (tierPrices.length ? Math.max(...tierPrices) : lowPrice);
   if ((lowPrice != null && !(lowPrice >= 0)) || (highPrice != null && !(highPrice >= 0))) return 'Prices must be numbers of 0 or more.';

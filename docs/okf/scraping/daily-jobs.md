@@ -385,6 +385,11 @@ src/lib/seo.ts) are handed out too, with `kind: "venue"`, even after opening
 and until they end: the reading is the standard paid admission and the
 admission-page link, no performers, and the pin page keeps the ticket button
 after the start date.
+**Price tiers (0149).** When the pages list more than one named price
+(adult, senior, child; seating sections) the reading also carries `tiers`
+`[{ label, price, note? }]`; lowPrice/highPrice span the paid ones, and the
+pin page shows a table instead of the range. The same field is accepted by
+`PUT /api/pins/:id/event-info`.
 **When.** In the news job, twice a day, so a sell-out or a new on-sale date
 shows by the next run. `npm run events:refresh` does the same from a
 terminal (with `--export`/`--import` for a session when the key has no
