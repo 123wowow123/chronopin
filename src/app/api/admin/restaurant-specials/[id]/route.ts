@@ -1,3 +1,4 @@
+import { invalidateRestaurantContent } from '@/server/services/restaurantContent';
 import type { NextRequest } from 'next/server';
 import { requireRole } from '@/server/auth';
 import { HttpError, intParam, json, readJson, route } from '@/server/http';
@@ -14,18 +15,24 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const admin = await requireRole('admin', request);
   const body = await readJson(request);
   const revision = specialVenueRevision(body?.revision);
-  return json(await updateSpecialVenue(intParam((await ctx.params).id), revision, parseSpecialVenue(body), admin.id), 200, headers);
+  const saved = await updateSpecialVenue(intParam((await ctx.params).id), revision, parseSpecialVenue(body), admin.id);
+  await invalidateRestaurantContent(saved.profile.pinSourceUrl);
+  return json(saved, 200, headers);
 });
 export const PATCH = route(async (request: NextRequest, ctx: Ctx) => {
   const admin = await requireRole('admin', request);
   const body = await readJson(request);
   const revision = specialVenueRevision(body?.revision);
   if (typeof body.enabled !== 'boolean' || Object.keys(body).some((k) => !['enabled', 'revision'].includes(k))) throw new HttpError(400, 'PATCH accepts enabled and revision only; use PUT for profile edits');
-  return json(await updateSpecialVenue(intParam((await ctx.params).id), revision, { enabled: body.enabled }, admin.id), 200, headers);
+  const saved = await updateSpecialVenue(intParam((await ctx.params).id), revision, { enabled: body.enabled }, admin.id);
+  await invalidateRestaurantContent(saved.profile.pinSourceUrl);
+  return json(saved, 200, headers);
 });
 // Archive rather than remove: the source stays reserved and can be restored.
 export const DELETE = route(async (request: NextRequest, ctx: Ctx) => {
   const admin = await requireRole('admin', request);
   const body = await readJson(request);
-  return json(await updateSpecialVenue(intParam((await ctx.params).id), specialVenueRevision(body?.revision), { enabled: false }, admin.id), 200, headers);
+  const saved = await updateSpecialVenue(intParam((await ctx.params).id), specialVenueRevision(body?.revision), { enabled: false }, admin.id);
+  await invalidateRestaurantContent(saved.profile.pinSourceUrl);
+  return json(saved, 200, headers);
 });

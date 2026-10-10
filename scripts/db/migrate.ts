@@ -15,6 +15,7 @@ import '../env';
 import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import * as db from '@/server/db';
+import { seedRestaurantContent } from '../restaurants/seedContent';
 
 const SCHEMA_DIR = path.join(import.meta.dirname, 'schema');
 const reset = process.argv.includes('--reset');
@@ -50,6 +51,7 @@ async function run() {
     const sql = readFileSync(path.join(SCHEMA_DIR, file), 'utf8');
     await db.transaction(async (query) => {
       await query(sql);
+      if (file === '0148_restaurant_content.sql') await seedRestaurantContent(query);
       await query('INSERT INTO "schemaMigrations" ("name") VALUES ($1)', [file]);
     });
     viewChanged ||= /VIEW\s+"PinBaseView"/.test(sql) && file >= '0072';

@@ -40,6 +40,7 @@ import { hasPlace } from '@/lib/places';
 import { affiliateUrl, isAmazonStoreUrl } from '@/lib/affiliate';
 import { shopLinks } from '@/lib/shopping';
 import { restaurantOpenTableUrl } from '@/lib/restaurantDetails';
+import { contentForSource } from '@/server/model/restaurantContent';
 import { StoreLogo } from '@/components/pin/StoreLogo';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
@@ -228,7 +229,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   );
 }
 
-function PinBody({
+async function PinBody({
   pin,
   timeZone,
   t,
@@ -261,7 +262,8 @@ function PinBody({
   ) : null;
   const dateRanges = pinDateRanges(pin, timeZone);
   const shop = isRestaurant ? [] : shopLinks(pin);
-  const openTableUrl = isRestaurant ? restaurantOpenTableUrl(pin.sourceUrl, pin.place?.reservationUrl) : null;
+  const restaurantContent = isRestaurant ? await contentForSource(pin.sourceUrl) : null;
+  const openTableUrl = isRestaurant ? restaurantOpenTableUrl(undefined, pin.place?.reservationUrl || restaurantContent?.profile.details?.reservationUrl) : null;
   const listingKind = isRestaurant ? null : listingKindOf(pin);
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;

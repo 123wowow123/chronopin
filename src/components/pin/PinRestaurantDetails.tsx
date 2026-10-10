@@ -1,15 +1,18 @@
 import Anchor from '@/components/ui/Anchor';
-import { restaurantDetailsFor, restaurantPhoneHref } from '@/lib/restaurantDetails';
+import { restaurantPhoneHref } from '@/lib/restaurantDetails';
+import { contentForSource } from '@/server/model/restaurantContent';
 import styles from './RestaurantDetails.module.css';
 import { RestaurantPriceRange } from './RestaurantPriceRange';
 
-export function PinRestaurantDetails({ sourceUrl, name, isRestaurant, priceRange }: {
+export async function PinRestaurantDetails({ sourceUrl, name, isRestaurant, priceRange }: {
   sourceUrl: string | null | undefined;
   name: string;
   isRestaurant: boolean | undefined;
   priceRange?: string;
 }) {
-  const details = restaurantDetailsFor(sourceUrl);
+  const content = await contentForSource(sourceUrl);
+  const details = content?.profile.details;
+  priceRange = content?.profile.tile?.priceRange ?? priceRange;
   if (!isRestaurant && !details) return null;
   return (
     <section id="restaurant-details" aria-labelledby="restaurant-details-title" lang="en" className={styles.pane}>

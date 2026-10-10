@@ -6,6 +6,7 @@ import { DEFAULT_MULTILINGUAL, type OtherLocale } from '@/lib/multilingual';
 import { getMultilingual } from '../model/appSetting';
 
 export const TAGS = {
+  restaurantContent: 'restaurant-content',
   timeline: 'timeline',
   sitemap: 'sitemap',
   siteVerification: 'site-verification',

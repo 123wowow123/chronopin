@@ -4,6 +4,11 @@ import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import type { PinJson } from '@/lib/types';
 import catalog from '@/server/data/regionalRestaurants.json';
 import specials from '@/server/data/restaurantSpecials.json';
+import { legacyRestaurantContent } from '../../../scripts/restaurants/seedContent';
+import { restaurantSourceKey } from '@/lib/restaurantMenus';
+const content = legacyRestaurantContent().map((profile, id) => ({ id, profile, enabled: true }));
+const tileFor = (source: string) => content.find((record) => restaurantSourceKey(record.profile.pinSourceUrl) === restaurantSourceKey(source))?.profile.tile;
+vi.mock('../model/restaurantContent', () => ({ listRestaurantContent: async ({ region }: { region?: string } = {}) => content.filter((record) => !region || record.profile.tile?.regionSlug === region) }));
 
 const { findBySourceUrls, query, listSpecialVenues } = vi.hoisted(() => ({ findBySourceUrls: vi.fn(), query: vi.fn(), listSpecialVenues: vi.fn() }));
 vi.mock('../model/restaurantSpecialVenue', () => ({ listSpecialVenues }));
@@ -82,19 +87,19 @@ describe('regional restaurant data', () => {
         ?? catalog.find((restaurant) => restaurant.regionSlug === 'barcelona' && restaurant.slug === slug)!;
       return { id: 1, title: row.name, sourceUrl: row.sourceUrl, utcStartDateTime: `${row.day}T00:00:00Z`, dateConfidence: row.dateConfidence } as PinJson;
     };
-    expect(restaurantOf(pinFor('blue-pearl'), 'Berlin')).toMatchObject({ confirmed: false, dateLabel: 'Nov 2026', neighborhood: 'Nikolaiviertel' });
-    expect(restaurantOf(pinFor('mineral'), 'Barcelona')).toMatchObject({ confirmed: true, dateLabel: 'Sep 2026', cuisine: 'Catalan' });
+    expect(restaurantOf(pinFor('blue-pearl'), 'Berlin', tileFor(pinFor('blue-pearl').sourceUrl!))).toMatchObject({ confirmed: false, dateLabel: 'Nov 2026', neighborhood: 'Nikolaiviertel' });
+    expect(restaurantOf(pinFor('mineral'), 'Barcelona', tileFor(pinFor('mineral').sourceUrl!))).toMatchObject({ confirmed: true, dateLabel: 'Sep 2026', cuisine: 'Catalan' });
   });
   it('includes a sourced price tier on opening cards without assigning unknown venues a default', () => {
     const restaurant = catalog.find((row) => row.slug === 'one-bryant-park')!;
     const pin = { id: 1, title: restaurant.name, sourceUrl: restaurant.sourceUrl, utcStartDateTime: `${restaurant.day}T00:00:00Z` } as PinJson;
-    expect(restaurantOf(pin, 'New York')?.priceRange).toBe('$$$');
+    expect(restaurantOf(pin, 'New York', tileFor(pin.sourceUrl!))?.priceRange).toBe('$$$');
     expect(restaurantOf({ ...pin, sourceUrl: 'https://example.com/unverified' }, 'New York')?.priceRange).toBeUndefined();
   });
 
   it('uses the requested city as a fallback and excludes city tags from neighborhoods', () => {
     const pin = { id: 1, title: 'An opening', utcStartDateTime: '2026-10-31T00:00:00Z', tags: [{ name: 'New York' }, { name: 'Restaurant' }, { name: 'Food' }, { name: 'French' }, { name: 'Restaurant Opening' }, { name: 'West Village' }] } as PinJson;
-    expect(restaurantOf(pin, 'New York')).toMatchObject({ neighborhood: 'West Village', cuisine: 'French' });
+    expect(restaurantOf(pin, 'New York', tileFor(pin.sourceUrl!))).toMatchObject({ neighborhood: 'West Village', cuisine: 'French' });
     expect(restaurantOf({ ...pin, tags: [{ name: 'Los Angeles', kind: 'topic', source: 'user' }] }, 'Los Angeles')?.neighborhood).toBe('Los Angeles');
   });
 
@@ -110,9 +115,9 @@ describe('regional restaurant data', () => {
   it('separates a verified opening month from an exact opening date', () => {
     const restaurant = catalog.find((row) => row.slug === 'grandioso')!;
     const pin = { id: 1, title: restaurant.name, sourceUrl: restaurant.sourceUrl, utcStartDateTime: `${restaurant.day}T00:00:00Z`, dateConfidence: 'estimated', dateConfidenceReasoning: restaurant.dateConfidenceReasoning } as PinJson;
-    expect(restaurantOf(pin, 'Phoenix')).toMatchObject({ confirmed: true, estimated: true, dateLabel: 'Sep 2026' });
-    expect(restaurantOf({ ...pin, utcStartDateTime: '2026-11-30T00:00:00Z' }, 'Phoenix')?.confirmed).toBe(false);
+    expect(restaurantOf(pin, 'Phoenix', tileFor(pin.sourceUrl!))).toMatchObject({ confirmed: true, estimated: true, dateLabel: 'Sep 2026' });
+    expect(restaurantOf({ ...pin, utcStartDateTime: '2026-11-30T00:00:00Z' }, 'Phoenix', tileFor(pin.sourceUrl!))?.confirmed).toBe(false);
     const planned = catalog.find((row) => row.slug === 'casa-pio')!;
-    expect(restaurantOf({ ...pin, sourceUrl: planned.sourceUrl }, 'Dallas')?.confirmed).toBe(false);
+    expect(restaurantOf({ ...pin, sourceUrl: planned.sourceUrl }, 'Dallas', tileFor(planned.sourceUrl))?.confirmed).toBe(false);
   });
 });

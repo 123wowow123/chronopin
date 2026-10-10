@@ -15,6 +15,7 @@ async function guideBase(regionSlug: string) {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
+  cacheTag(TAGS.restaurantContent);
   const region = RESTAURANT_REGIONS.find((item) => item.slug === regionSlug)!;
   const [data, tops] = await Promise.all([regionalRestaurants(region.name), regionalTopRestaurants(region.slug)]);
   const today = dayKeyIn(new Date(), region.timeZone);

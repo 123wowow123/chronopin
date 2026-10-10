@@ -2,36 +2,37 @@ import { cacheLife, cacheTag } from 'next/cache';
 import { blobUrl } from '@/lib/appConfig';
 import { RESTAURANT_REGIONS, openingDateLabel, openingGroup, type Restaurant, type TopRestaurant } from '@/lib/restaurants';
 import { dayKeyIn } from '@/lib/format';
-import topRestaurants from '@/server/data/topRestaurants.json';
-import regionalCatalog from '@/server/data/regionalRestaurants.json';
+import { listRestaurantContent } from '@/server/model/restaurantContent';
+import { restaurantSourceKey } from '@/lib/restaurantMenus';
+import type { RestaurantTile } from '@/server/restaurantContentValidation';
 import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
 import { toJson, type PinJson } from '@/lib/types';
 import * as db from '@/server/db';
 import Pins from '@/server/model/pins';
 import Pin from '@/server/model/pin';
 import { TAGS } from './cache';
-import { restaurantPriceRange } from '../restaurantPrice';
 
 const CUISINES = new Set(['Mexican', 'Mediterranean', 'Cafe', 'Sandwiches', 'Japanese', 'Chinese', 'Italian', 'Greek', 'Spanish', 'Hawaiian', 'American', 'European', 'Brazilian', 'French', 'Californian', 'Afro-Asian', 'Asian', 'Vegetarian', 'Seafood', 'Oaxacan']);
 
 export async function restaurantGuideRegionSlugs(): Promise<string[]> {
   // Match the guide's live opening query without hydrating every city's pins and media.
-  const catalog = regionalCatalog.filter((restaurant) => restaurant.kind === 'top');
+  const records = await listRestaurantContent({ includeDisabled: true });
+  const catalog = records.filter((record) => record.enabled && record.profile.tile?.kind === 'top').map((record) => ({ ...record.profile.tile!, sourceUrl: record.profile.pinSourceUrl }));
   const [openings, pins, specialVenues] = await Promise.all([
     db.query<{ city: string; day: string; dateConfidence: string | null; sourceUrl: string | null }>(
       `SELECT "city"."name" AS "city", to_char("p"."utcStartDateTime", 'YYYY-MM-DD') AS "day",
               "p"."dateConfidence", "p"."sourceUrl"
-       FROM "Pin" AS "p" JOIN "PinTag" AS "city" ON "city"."pinId" = "p"."id"
+       FROM "Pin" AS "p" LEFT JOIN "PinTag" AS "city" ON "city"."pinId" = "p"."id" AND "city"."name" = ANY($1::citext[])
        WHERE "p"."utcDeletedDateTime" IS NULL AND "p"."utcStartDateTime" IS NOT NULL
-         AND "city"."name" = ANY($1::citext[])
+         AND (("city"."name" IS NOT NULL
          AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Restaurant Opening')
-         AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')`,
-      [RESTAURANT_REGIONS.map((region) => region.name)],
+         AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')) OR "p"."sourceUrl" = ANY($2::text[]))`,
+      [RESTAURANT_REGIONS.map((region) => region.name), records.filter((record) => record.enabled && record.profile.tile?.kind === 'opening').map((record) => record.profile.pinSourceUrl)],
     ),
     Pin.findBySourceUrls(catalog.map((restaurant) => restaurant.sourceUrl)),
     listSpecialVenues(),
   ]);
-  const populated = new Set([...topRestaurants.map((restaurant) => restaurant.regionSlug), ...specialVenues.filter((restaurant) => restaurant.profile.specials.length).map((restaurant) => restaurant.regionSlug)]);
+  const populated = new Set([...specialVenues.filter((restaurant) => restaurant.profile.specials.length).map((restaurant) => restaurant.regionSlug)]);
   for (const restaurant of catalog) {
     if (pins.has(restaurant.sourceUrl)) populated.add(restaurant.regionSlug);
   }
@@ -39,8 +40,10 @@ export async function restaurantGuideRegionSlugs(): Promise<string[]> {
   for (const region of RESTAURANT_REGIONS) {
     const today = dayKeyIn(now, region.timeZone);
     if (openings.some((opening) => {
-      if (opening.city.toLowerCase() !== region.name.toLowerCase()) return false;
-      const catalogOpening = regionalCatalog.find((restaurant) => restaurant.kind === 'opening' && restaurant.sourceUrl === opening.sourceUrl);
+      const record = records.find((record) => restaurantSourceKey(record.profile.pinSourceUrl) === restaurantSourceKey(opening.sourceUrl ?? ''));
+      if (record && (!record.enabled || (record.profile.tile && (record.profile.tile.kind !== 'opening' || record.profile.tile.regionSlug !== region.slug)))) return false;
+      if (!record?.profile.tile && opening.city?.toLowerCase() !== region.name.toLowerCase()) return false;
+      const catalogOpening = record?.profile.tile;
       const confirmed = opening.dateConfidence === 'confirmed' || (catalogOpening?.openingConfirmed === true && catalogOpening.day === opening.day);
       return !!openingGroup({ day: opening.day, confirmed }, today);
     })) populated.add(region.slug);
@@ -52,23 +55,25 @@ export async function regionalTopRestaurants(regionSlug: string): Promise<TopRes
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  const catalog = regionalCatalog.filter((restaurant) => restaurant.regionSlug === regionSlug && restaurant.kind === 'top');
-  const pins = await Pin.findBySourceUrls(catalog.map((restaurant) => restaurant.sourceUrl));
-  const curated = catalog.flatMap((restaurant) => {
-    const pin = pins.get(restaurant.sourceUrl);
+  cacheTag(TAGS.restaurantContent);
+  const records = await listRestaurantContent({ region: regionSlug });
+  const catalog = records.filter((record) => record.profile.tile?.kind === 'top');
+  const pins = await Pin.findBySourceUrls(catalog.map((record) => record.profile.pinSourceUrl));
+  return catalog.flatMap((record) => {
+    const restaurant = record.profile.tile!;
+    const pin = pins.get(record.profile.pinSourceUrl);
     if (!pin) return [];
-    return [{ ...restaurant, websiteUrl: restaurant.websiteUrl ?? '', pinId: pin.id, pinTitle: pin.title, image: restaurant.image!, recognition: restaurant.recognition!, priceRange: restaurant.priceRange!, imageCredit: restaurant.imageCredit! }];
+    return [{ ...restaurant, sourceUrl: record.profile.pinSourceUrl, pinId: pin.id, pinTitle: pin.title }];
   });
-  return [...topRestaurants.filter((restaurant) => restaurant.regionSlug === regionSlug), ...curated];
 }
 
-export function restaurantOf(pin: PinJson, city: string): Restaurant | null {
+export function restaurantOf(pin: PinJson, city: string, tile?: RestaurantTile): Restaurant | null {
   if (!pin.utcStartDateTime) return null;
   const day = pin.utcStartDateTime.slice(0, 10);
   const tags = (pin.tags ?? []).map((tag) => tag.name);
   const cuisine = tags.find((tag) => CUISINES.has(tag)) ?? 'Restaurant';
   const neighborhood = tags.find((tag) => !CUISINES.has(tag) && ![...RESTAURANT_REGIONS.map((region) => region.name), 'Restaurant Opening', 'Restaurant', 'Restaurants', 'Top Restaurants', 'Food', 'Thread'].includes(tag)) ?? city;
-  const catalog = regionalCatalog.find((restaurant) => restaurant.kind === 'opening' && restaurant.sourceUrl === pin.sourceUrl);
+  const catalog = tile;
   const picture = pin.media?.find((medium) => Number(medium.type) === 1);
   const summary = pin.longFormSummary ?? '';
   const estimated = pin.dateConfidence === 'estimated' || pin.dateConfidence === 'unknown' || !pin.dateConfidence;
@@ -76,14 +81,14 @@ export function restaurantOf(pin: PinJson, city: string): Restaurant | null {
     : /founding team/.test(summary) && pin.id === 6429 ? 'Founding team'
     : /previous tenant|existing Fish Guts building/.test(summary) ? 'Existing building · before opening' : null;
   return {
-    id: pin.id, title: pin.title, name: pin.company || pin.title, description: pin.description || '', day,
+    id: pin.id, title: pin.title, name: tile?.name ?? pin.company ?? pin.title, description: tile?.description ?? pin.description ?? '', day,
     // An opening can be verified even when reporting supplies only its month.
     // Do not apply that verification after the live pin's date has changed.
     dateLabel: openingDateLabel(day, estimated, pin.dateConfidenceReasoning || ''), estimated, confirmed: pin.dateConfidence === 'confirmed' || (catalog?.openingConfirmed === true && catalog.day === day),
     neighborhood: catalog?.neighborhood ?? neighborhood, cuisine: catalog?.cuisine ?? (cuisine === 'Cafe' ? 'Café & wine bar' : cuisine),
-    image: picture ? blobUrl(picture.thumbName) ?? picture.originalUrl ?? null : null,
-    imageNote: catalog?.imageNote ?? imageNote, address: pin.address || '',
-    priceRange: restaurantPriceRange(pin.sourceUrl),
+    image: tile ? tile.image : picture ? blobUrl(picture.thumbName) ?? picture.originalUrl ?? null : null,
+    imageNote: catalog?.imageNote ?? imageNote, address: tile?.address ?? pin.address ?? '',
+    priceRange: tile?.priceRange || undefined,
     sourceUrl: pin.sourceUrl,
   };
 }
@@ -92,13 +97,18 @@ export async function regionalRestaurants(city: string): Promise<{ restaurants: 
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
+  cacheTag(TAGS.restaurantContent);
+  const region = RESTAURANT_REGIONS.find((r) => r.name === city);
+  const records = await listRestaurantContent({ includeDisabled: true });
+  const tiles = new Map(records.map((record) => [restaurantSourceKey(record.profile.pinSourceUrl), record]));
+  const openingSources = records.filter((record) => record.enabled && record.profile.tile?.kind === 'opening' && record.profile.tile.regionSlug === region?.slug).map((record) => record.profile.pinSourceUrl);
   const rows = await db.query<{ id: number }>(
     `SELECT "p"."id" FROM "Pin" AS "p"
      WHERE "p"."utcDeletedDateTime" IS NULL
-       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = $1::citext)
+       AND ((EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = $1::citext)
        AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Restaurant Opening')
-       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')
-     ORDER BY "p"."utcStartDateTime", "p"."id"`, [city],
+       AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')) OR "p"."sourceUrl" = ANY($2::text[]))
+     ORDER BY "p"."utcStartDateTime", "p"."id"`, [city, openingSources],
   );
   let pins = rows.length ? toJson<PinJson[]>((await Pins.queryByIds(rows.map((row) => row.id))).pins) : [];
   const previewSnapshot = process.env.NODE_ENV === 'development' && !pins.length && city === 'San Diego';
@@ -108,5 +118,8 @@ export async function regionalRestaurants(city: string): Promise<{ restaurants: 
     const { default: snapshot } = await import('@/server/data/sanDiegoRestaurants.preview.json');
     pins = snapshot.map((pin) => ({ ...pin, media: pin.media.map((medium) => ({ ...medium, thumbName: `https://chronopin.blob.core.windows.net/thumb/${medium.thumbName}` })) })) as unknown as PinJson[];
   }
-  return { restaurants: pins.map((pin) => restaurantOf(pin, city)).filter((r): r is Restaurant => !!r), previewSnapshot };
+  return { restaurants: pins.filter((pin) => {
+    const record = tiles.get(restaurantSourceKey(pin.sourceUrl ?? ''));
+    return !record || (record.enabled && (!record.profile.tile || (record.profile.tile.kind === 'opening' && record.profile.tile.regionSlug === region?.slug)));
+  }).map((pin) => restaurantOf(pin, city, tiles.get(restaurantSourceKey(pin.sourceUrl ?? ''))?.profile.tile)).filter((r): r is Restaurant => !!r), previewSnapshot };
 }

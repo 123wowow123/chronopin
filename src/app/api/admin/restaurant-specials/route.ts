@@ -1,3 +1,4 @@
+import { invalidateRestaurantContent } from '@/server/services/restaurantContent';
 import type { NextRequest } from 'next/server';
 import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
@@ -14,5 +15,7 @@ export const GET = route(async (request: NextRequest) => {
 });
 export const POST = route(async (request: NextRequest) => {
   const admin = await requireRole('admin', request);
-  return json(await createSpecialVenue(parseSpecialVenue(await readJson(request)), admin.id), 201, headers);
+  const saved = await createSpecialVenue(parseSpecialVenue(await readJson(request)), admin.id);
+  await invalidateRestaurantContent(saved.profile.pinSourceUrl);
+  return json(saved, 201, headers);
 });

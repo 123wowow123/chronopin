@@ -1,10 +1,10 @@
 import Anchor from '@/components/ui/Anchor';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
-import { restaurantMenuAmount, restaurantMenuFor, restaurantMenuState, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
+import { restaurantMenuAmount, restaurantMenuState, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
 import { RestaurantMenuTabs } from './RestaurantMenuTabs';
 import styles from './RestaurantMenu.module.css';
-import { specialVenueForSource } from '@/server/model/restaurantSpecialVenue';
+import { restaurantMenuProfileFor } from '@/server/services/restaurantContent';
 
 function SourceLink({ url, children }: { url: string; children: ReactNode }) {
   return <Anchor href={url} target="_blank" rel="noopener noreferrer" className={styles.source}>{children} <span aria-hidden="true">↗</span></Anchor>;
@@ -68,9 +68,7 @@ function Special({ special }: { special: RestaurantSpecial }) {
 // Curated branch-specific information. Missing information is a verification
 // gap, not a claim that a venue has no menu or offers.
 export async function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: string | null | undefined; today: string }) {
-  const stored = await specialVenueForSource(sourceUrl);
-  const menuOnly = restaurantMenuFor(sourceUrl);
-  const profile = stored?.profile ?? (menuOnly ? { ...menuOnly, specials: [] } : undefined);
+  const profile = await restaurantMenuProfileFor(sourceUrl);
   if (!profile) return null;
   const menus = profile.menus.filter((menu) => menu.items.length || menu.pages?.length || menu.coverage === 'link');
   if (!menus.length) return null;
@@ -97,7 +95,7 @@ export async function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: strin
       <div className={styles.body}>
         {rescrapeCandidate ? <p role="status" className={styles.update}>Update due. Showing the last verified menu and specials; check the restaurant’s links for the latest details.</p> : null}
         <RestaurantMenuTabs tabs={tabs} />
-        <p className={styles.footer}>Prices in USD. Times are local to the restaurant. Confirm availability before visiting.</p>
+        <p className={styles.footer}>Prices use each menu’s currency. Times are local to the restaurant. Confirm availability before visiting.</p>
       </div>
     </section>
   );
