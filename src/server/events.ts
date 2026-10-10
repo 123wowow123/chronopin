@@ -18,7 +18,12 @@ export const PIN_EVENTS: PinEvent[] = ['save', 'update', 'remove', 'favorite', '
 // noBrowser: the work that follows the save may not launch Chromium (admin API posts).
 // prebuiltWikis: the post carried its links' wikis (services/prebuiltWikis.ts), so
 // the save fetches no page and calls no API to write them.
-export type PinEventOptions = { userId?: number; noBrowser?: boolean; prebuiltWikis?: boolean };
+//
+// lightweight: an admin edit that changed nothing the listeners derive from
+// (a date, its confidence), made on a machine that has already done the work.
+// Only the search index follows it; the wiki, translation, sentiment and
+// other listeners that spend prod's CPU, network or API credit are skipped.
+export type PinEventOptions = { userId?: number; noBrowser?: boolean; prebuiltWikis?: boolean; lightweight?: boolean };
 type Listener = (pin: Row, options?: PinEventOptions) => void;
 
 const g = globalThis as unknown as { __chronopinPinEvents?: EventEmitter; __chronopinPinListeners?: boolean };
@@ -94,6 +99,13 @@ export function onWatchAlert(listener: (alert: WatchAlert) => void) {
 if (!g.__chronopinPinListeners) {
   g.__chronopinPinListeners = true;
 
+  // Every 'update' listener but the search index goes through this.
+  const unlessLight =
+    (listener: Listener): Listener =>
+    (pin, options) => {
+      if (!options?.lightweight) listener(pin, options);
+    };
+
   // Search index: pins added or edited are (re)embedded, deleted ones removed.
   // A search service that is down must not fail the write that triggered this.
   const syncSearch = (action: 'upsert' | 'remove') => (pin: Row) => {
@@ -115,7 +127,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`wiki refresh failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', refreshWiki);
-  pinEvents.on('update', refreshWiki);
+  pinEvents.on('update', unlessLight(refreshWiki));
 
   // Duplicate suggestions for the pin's author or an admin to review.
   const suggestDuplicates = (pin: Row) => {
@@ -124,7 +136,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`duplicate suggestions failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', suggestDuplicates);
-  pinEvents.on('update', suggestDuplicates);
+  pinEvents.on('update', unlessLight(suggestDuplicates));
 
   // New pins only: podcast episodes around the event that back it up are
   // added as references (services/podcastReferences.ts).
@@ -143,7 +155,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`stock sync failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', syncStocks);
-  pinEvents.on('update', syncStocks);
+  pinEvents.on('update', unlessLight(syncStocks));
 
   // A film, series, anime or game saved with no place of its own goes on the
   // map at its studio's headquarters (studioLocation.ts); a pin posted by API
@@ -155,7 +167,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`studio location failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', placeStudio);
-  pinEvents.on('update', placeStudio);
+  pinEvents.on('update', unlessLight(placeStudio));
 
   // How the pin reads as news for its company (extract/pinSentiment.ts), for
   // the company search's graph; again only when its title or summary changed.
@@ -172,7 +184,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`sentiment scoring failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', scoreTone);
-  pinEvents.on('update', scoreTone);
+  pinEvents.on('update', unlessLight(scoreTone));
 
   // A film, series or anime's awards, from the award bodies' own pages
   // (services/pinAwards.ts); a new title can match a different work.
@@ -183,7 +195,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`awards sync failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', syncAwards);
-  pinEvents.on('update', syncAwards);
+  pinEvents.on('update', unlessLight(syncAwards));
 
   // The money on the prediction markets the pin links to, stored for its
   // timeline weight (services/pinMarketVolume.ts). A scraped market pin gets
@@ -195,7 +207,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`market volume sync failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', syncMarketVolume);
-  pinEvents.on('update', syncMarketVolume);
+  pinEvents.on('update', unlessLight(syncMarketVolume));
 
   // A film, show or game's review score from Kalshi's markets on it
   // (services/pinScoreMarket.ts); a pin posted by API without a scrape gets
@@ -207,7 +219,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`score market sync failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', syncScoreMarket);
-  pinEvents.on('update', syncScoreMarket);
+  pinEvents.on('update', unlessLight(syncScoreMarket));
 
   // The awards the pin's description and summary name, as tags
   // (model/pinTag.ts); the award bodies' own tags come with syncAwards.
@@ -218,7 +230,7 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`tag sync failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', syncAutoTags);
-  pinEvents.on('update', syncAutoTags);
+  pinEvents.on('update', unlessLight(syncAutoTags));
 
   // The pin's words in the languages offered (services/translations.ts,
   // src/lib/multilingual.ts), redone only for a language whose translation
@@ -236,5 +248,5 @@ if (!g.__chronopinPinListeners) {
     })().catch((err) => log.warn(`translation failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', translate);
-  pinEvents.on('update', translate);
+  pinEvents.on('update', unlessLight(translate));
 }

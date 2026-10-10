@@ -104,7 +104,10 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
     postedAt: existing.utcCreatedDateTime,
   });
   if (score && typeof score !== 'string') await PinSentiment.setAuthored(updated.id, score);
-  emitPinEvent('update', updated, { userId: user.id });
+  // ?lightweight=1, admin only: a date or confidence correction whose text
+  // work was already done locally runs just the search sync (events.ts).
+  const lightweight = isAdmin(user) && new URL(request.url).searchParams.get('lightweight') === '1';
+  emitPinEvent('update', updated, { userId: user.id, ...(lightweight ? { lightweight } : {}) });
   // A pin that has just been given a company is news to that company's
   // followers, as a new pin for it would be. Editing it again tells nobody
   // twice: a follower gets one notification per pin and company.
