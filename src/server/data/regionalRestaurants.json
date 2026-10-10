@@ -9063,17 +9063,76 @@
     "reportUrl": "https://mume.tw/reservation",
     "websiteUrl": "https://mume.tw/reservation",
     "checkedAt": "2026-10-10",
-    "image": null,
-    "imageSourceUrl": "",
-    "imageCredit": "",
-    "imageNote": "",
+    "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/taipei/researched/mume-gallery-02-1662a38b7a47fd19.webp",
+    "imageSourceUrl": "https://mume.tw/images/gallery/02.jpg",
+    "imageCredit": "MUME",
+    "imageNote": "Food photograph 02 from MUME’s official gallery; dish name and current menu availability are not published.",
     "kind": "top",
     "recognition": "Chronopin selection",
     "priceRange": "",
     "latitude": 25.036232776491,
     "longitude": 121.548054982698,
     "locationNote": "Approximate street-address position from Esri World Geocoding; not a surveyed restaurant entrance.",
-    "detailSummary": ""
+    "detailSummary": "",
+    "gallerySourceUrl": "https://mume.tw/gallery.html",
+    "galleryImages": [
+      {
+        "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/taipei/researched/mume-gallery-01-fd6a0497ba70fe1a.webp",
+        "imageSourceUrl": "https://mume.tw/images/gallery/01.jpg",
+        "gallerySourceUrl": "https://mume.tw/gallery.html",
+        "imageCredit": "MUME",
+        "imageNote": "Food photograph 01 from MUME’s official gallery; dish name and current menu availability are not published.",
+        "sha256": "fd6a0497ba70fe1aa98fbda1b1cacdefbf35ffbc57d5a68d3c8266aa3cfb0a0c"
+      },
+      {
+        "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/taipei/researched/mume-gallery-02-1662a38b7a47fd19.webp",
+        "imageSourceUrl": "https://mume.tw/images/gallery/02.jpg",
+        "gallerySourceUrl": "https://mume.tw/gallery.html",
+        "imageCredit": "MUME",
+        "imageNote": "Food photograph 02 from MUME’s official gallery; dish name and current menu availability are not published.",
+        "sha256": "1662a38b7a47fd199d6dd45a25b32d756cf26561204b4dfd5a7f03110d9c28fa"
+      },
+      {
+        "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/taipei/researched/mume-gallery-03-096c22615e941bb1.webp",
+        "imageSourceUrl": "https://mume.tw/images/gallery/03.jpg",
+        "gallerySourceUrl": "https://mume.tw/gallery.html",
+        "imageCredit": "MUME",
+        "imageNote": "Food photograph 03 from MUME’s official gallery; dish name and current menu availability are not published.",
+        "sha256": "096c22615e941bb1f5ddebc0530fef4203e9f9067af6a29b2c9d7c2eab7bdccc"
+      },
+      {
+        "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/taipei/researched/mume-gallery-04-0043798116169211.webp",
+        "imageSourceUrl": "https://mume.tw/images/gallery/04.jpg",
+        "gallerySourceUrl": "https://mume.tw/gallery.html",
+        "imageCredit": "MUME",
+        "imageNote": "Food photograph 04 from MUME’s official gallery; dish name and current menu availability are not published.",
+        "sha256": "0043798116169211a7b5cd0d82ffa34452ad5b24cc9cc8914158ac1faf8f561f"
+      },
+      {
+        "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/taipei/researched/mume-gallery-05-cc38c63f693b5fee.webp",
+        "imageSourceUrl": "https://mume.tw/images/gallery/05.jpg",
+        "gallerySourceUrl": "https://mume.tw/gallery.html",
+        "imageCredit": "MUME",
+        "imageNote": "Food photograph 05 from MUME’s official gallery; dish name and current menu availability are not published.",
+        "sha256": "cc38c63f693b5fee279fd021685075cdb4fd1fb2da6a249cb73a82b83ce14071"
+      },
+      {
+        "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/taipei/researched/mume-gallery-06-06a940a215048573.webp",
+        "imageSourceUrl": "https://mume.tw/images/gallery/06.jpg",
+        "gallerySourceUrl": "https://mume.tw/gallery.html",
+        "imageCredit": "MUME",
+        "imageNote": "Food photograph 06 from MUME’s official gallery; dish name and current menu availability are not published.",
+        "sha256": "06a940a215048573acb530e14d49b3aed2e0e4745a83a389ca4d818f603f3d15"
+      },
+      {
+        "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/taipei/researched/mume-gallery-07-ca99b2b7e05d8400.webp",
+        "imageSourceUrl": "https://mume.tw/images/gallery/07.jpg",
+        "gallerySourceUrl": "https://mume.tw/gallery.html",
+        "imageCredit": "MUME",
+        "imageNote": "Food photograph 07 from MUME’s official gallery; dish name and current menu availability are not published.",
+        "sha256": "ca99b2b7e05d84008a145bab46cdba6122a60c37a3d6f2867adab83129b73aca"
+      }
+    ]
   },
   {
     "regionSlug": "taipei",

@@ -22,6 +22,13 @@ export type RestaurantSeedResult = {
 
 const escapeHtml = (value: string) => value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]!);
 
+type Restaurant = (typeof catalog)[number];
+const photosFor = (restaurant: Restaurant) => {
+  const photos = restaurant.image ? [{ image: restaurant.image, imageCredit: restaurant.imageCredit, imageSourceUrl: restaurant.imageSourceUrl, imageNote: restaurant.imageNote }] : [];
+  if (restaurant.galleryImages) photos.push(...restaurant.galleryImages);
+  return [...new Map(photos.map((photo) => [photo.image, photo])).values()];
+};
+
 // Width and height of each catalog photo, read from the public blob.
 async function dimensions(url: string) {
   const response = await fetch(url, { signal: AbortSignal.timeout(30_000) });
@@ -41,12 +48,20 @@ export async function seedRestaurants(options: { regions?: string[]; userId?: nu
     : await db.query<{ id: number }>('SELECT "id" FROM "User" WHERE "userName" = $1', ['FoodDesk']);
   if (!user) throw new HttpError(400, 'A restaurant curator is required: pass userId for an existing user, or create FoodDesk.');
 
-  const existing = new Map((await db.query<{ id: number; sourceUrl: string; title: string; media: number }>(
-    `SELECT "p"."id", "p"."sourceUrl", "p"."title", (SELECT count(*)::int FROM "PinMedium" WHERE "pinId" = "p"."id") AS "media"
+  const existing = new Map((await db.query<{ id: number; sourceUrl: string; title: string; media: number; images: string[] }>(
+    `SELECT "p"."id", "p"."sourceUrl", "p"."title", (SELECT count(*)::int FROM "PinMedium" WHERE "pinId" = "p"."id" AND "utcDeletedDateTime" IS NULL) AS "media",
+      ARRAY(SELECT m."thumbName" FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId" WHERE pm."pinId" = p."id" AND pm."utcDeletedDateTime" IS NULL) AS "images"
      FROM "Pin" AS "p" WHERE "p"."sourceUrl" = ANY($1::text[])`, [restaurants.map((restaurant) => restaurant.sourceUrl)],
   )).map((row) => [row.sourceUrl, row]));
   const missing = restaurants.filter((restaurant) => !existing.has(restaurant.sourceUrl));
-  const needMedia = restaurants.filter((restaurant) => restaurant.image && existing.get(restaurant.sourceUrl)?.media === 0);
+  const pendingPhotos = (restaurant: Restaurant) => {
+    const pin = existing.get(restaurant.sourceUrl);
+    if (!pin) return photosFor(restaurant);
+    // Keep existing editorial photos; add explicitly researched galleries without duplicates.
+    if (pin.media > 0 && !restaurant.galleryImages) return [];
+    return photosFor(restaurant).filter((photo) => !pin.images.includes(photo.image));
+  };
+  const needMedia = restaurants.filter((restaurant) => existing.has(restaurant.sourceUrl) && pendingPhotos(restaurant).length);
   const titleOf = (restaurant: (typeof restaurants)[number]) => {
     const region = RESTAURANT_REGIONS.find((item) => item.slug === restaurant.regionSlug)!;
     return restaurant.kind === 'top' ? `${restaurant.name} — ${region.name} restaurant guide`
@@ -63,11 +78,12 @@ export async function seedRestaurants(options: { regions?: string[]; userId?: nu
 
   // Measure photos before opening the transaction so no connection waits on the network.
   const sizes = new Map<string, { width: number; height: number }>();
-  for (const restaurant of [...missing, ...needMedia]) if (restaurant.image && !sizes.has(restaurant.image)) sizes.set(restaurant.image, await dimensions(restaurant.image));
-  const attach = async (query: db.QueryFn, pinId: number, image: string) => {
+  for (const restaurant of [...missing, ...needMedia]) for (const photo of pendingPhotos(restaurant)) if (!sizes.has(photo.image)) sizes.set(photo.image, await dimensions(photo.image));
+  const attach = async (query: db.QueryFn, pinId: number, photo: ReturnType<typeof photosFor>[number]) => {
+    const { image } = photo;
     const size = sizes.get(image)!;
     // The saved asset remains viewable when a source is a post/page or its CDN URL expires.
-    const [medium] = await query<{ id: number }>(`INSERT INTO "Medium" ("type", "thumbName", "thumbWidth", "thumbHeight", "originalUrl", "originalWidth", "originalHeight") VALUES ('1', $1, $2, $3, $1, $2, $3) RETURNING "id"`, [image, size.width, size.height]);
+    const [medium] = await query<{ id: number }>(`INSERT INTO "Medium" ("type", "thumbName", "thumbWidth", "thumbHeight", "originalUrl", "originalWidth", "originalHeight", "authorName", "authorUrl") VALUES ('1', $1, $2, $3, $1, $2, $3, $4, $5) RETURNING "id"`, [image, size.width, size.height, [photo.imageCredit, photo.imageNote].filter(Boolean).join(' · '), photo.imageSourceUrl]);
     await query(`INSERT INTO "PinMedium" ("pinId", "mediumId") VALUES ($1, $2)`, [pinId, medium.id]);
   };
 
@@ -95,13 +111,13 @@ export async function seedRestaurants(options: { regions?: string[]; userId?: nu
       const tags = [restaurant.neighborhood, restaurant.cuisine, restaurant.kind === 'top' ? 'Top Restaurants' : 'Restaurant Opening', 'Restaurant', region.name, 'Food'];
       await query(`INSERT INTO "PinTag" ("pinId", "name", "kind", "source") SELECT $1, name, CASE WHEN name = 'Food' THEN 'category' ELSE 'topic' END, 'user' FROM unnest($2::citext[]) AS name`, [pin.id, [...new Set(tags)]]);
       await query(`INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "reasoning") VALUES ($1, $2, $3, 90, $4)`, [pin.id, restaurant.reportUrl, restaurant.kind === 'top' ? `${restaurant.name} official website` : `${restaurant.name} opening reporting`, restaurant.dateConfidenceReasoning]);
-      if (restaurant.image) await attach(query, pin.id, restaurant.image);
+      for (const photo of pendingPhotos(restaurant)) await attach(query, pin.id, photo);
       pinsAdded.push({ id: pin.id, title });
     }
     const mediaAttached: RestaurantSeedResult['mediaAttached'] = [];
     for (const restaurant of needMedia) {
       const { id } = existing.get(restaurant.sourceUrl)!;
-      await attach(query, id, restaurant.image!);
+      for (const photo of pendingPhotos(restaurant)) await attach(query, id, photo);
       mediaAttached.push({ id, title: titleOf(restaurant) });
     }
     let venuesAdded = 0;

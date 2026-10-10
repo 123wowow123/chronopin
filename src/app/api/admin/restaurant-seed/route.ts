@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
-import { invalidateTimeline } from '@/server/services/cache';
+import { invalidatePin, invalidateTimeline } from '@/server/services/cache';
 import { seedRestaurants } from '@/server/services/restaurantSeed';
 
 // Load the bundled restaurant catalogs into this server's database (docs/okf/api/restaurant-seed.md).
@@ -15,6 +15,7 @@ export const POST = route(async (request: NextRequest) => {
   if (dryRun !== undefined && typeof dryRun !== 'boolean') throw new HttpError(400, 'dryRun must be boolean');
   if (userId !== undefined && !Number.isSafeInteger(userId)) throw new HttpError(400, 'userId must be an integer');
   const result = await seedRestaurants({ regions: regions as string[] | undefined, specials: specials as boolean | undefined, dryRun: dryRun as boolean | undefined, userId: userId as number | undefined });
+  if (!result.dryRun) for (const pin of result.mediaAttached) invalidatePin(pin.id);
   if (!result.dryRun && (result.pinsAdded.length || result.mediaAttached.length || result.venuesAdded)) invalidateTimeline();
   console.log(`restaurant-seed by user ${admin.id}: ${result.pinsAdded.length} pins, ${result.mediaAttached.length} photos, ${result.venuesAdded} venues`);
   return json(result, 200, { 'Cache-Control': 'private, no-store' });

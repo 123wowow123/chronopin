@@ -18,6 +18,8 @@ Never deploy, restart, resize or build on the production VM (20.109.175.187) unl
 
 Store pin images in Azure Blob Storage. Do not add pin photos or generated thumbnails to Git. Keep blob URLs, source URLs, credits and other metadata in the repository. Use ignored temporary files while sourcing or uploading; verify the public blob before removing a local file or switching a live pin reference. Application icons, logos and other UI assets may remain in Git.
 
+Always check official galleries and linked photo pages when researching pins, including restaurant websites. Add verified, relevant gallery photos to pin details and use a representative photo on the corresponding landing-page card. Preserve source URLs, photographer/operator credits and accurate captions. Distinguish the venue’s own photos from collaboration or other-branch photos; do not infer dish names or current menu availability from an unlabelled photograph. Record inaccessible galleries and remaining photo gaps in the research notes.
+
 ## Restaurant guide navigation
 
 Keep both country and city navigation menus sorted from west to east, not alphabetically. Order cities by city-center longitude; order countries by their westernmost supported guide city. Preserve this ordering when adding or updating guides.

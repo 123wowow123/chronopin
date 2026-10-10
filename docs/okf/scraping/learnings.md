@@ -125,6 +125,13 @@ Ian: "pin new and historical grammy news and events and make into thread where p
 * **Dropped:** four "new" drafts (Music Educator quarterfinalists, Grammy Camp Seattle, GRAMMY House Giza October 2026 estimate, Latin Grammy Foundation symposium) - thin, unreferenced or unconfirmed.
 * **To extend:** ceremonies not drafted (1966-67 Sinatra, 1985, 2002 Alicia Keys, 2004 Outkast, 2006 U2, 2013 Gotye, 2017 Chance the Rapper), the 1957-58 founding, the 2027 host/performers once announced; the Giza House once a date is published.
 
+
+## 2026-10-10 - Annual Grammys thread completed, 35 ceremony pins on prod 7406-7440 (@MusicDesk)
+
+Ian: "annual grammy should have thread". Chose fill-every-missing-ceremony, on prod. Five drafting agents (c1-c5, seven ceremonies each), lead lint + `run_prod.py`, 15 translation agents (525 rows). Folder `.scrape/prod-batches/grammy-ceremonies-2026-10-10/`.
+* **Result:** one linear 90-pin chain 5569 (1st) -> 1962 (69th); `run_prod.py` merges drafts into the existing skeleton by date and re-threads with whole-pin PUTs (18, counts of media/references/tags checked each time). The loose 68th-ceremony cluster 4836-4850 was folded in (4345 between 4845 and 4846).
+* **Learned - sources:** grammy.com ceremony pages carry winners tables only (no narrative), so the 1960s-70s pins lean on awardsandshows.com, Beatles Bible, Grammy.com retrospectives and KU/Stacker reprints of AP/UPI. Venues for the 2nd, 5th (Beverly Hilton) and 11th, 12th (Century Plaza) are inferred, flagged in `_notes`.
+* **Learned - process:** one shared `/tmp/og.html` in og.sh would clash between parallel agents (now mktemp); the admin token expired mid-run (401) - re-run resumes; a re-thread PUT that 401s saves nothing. Thai keeps English award names, consistent with the 2026-10-03 batch (Ian declined changing it).
 ## 2026-09-29 - Grammy news events, 29 pins straight to production (@MusicDesk, @LawDesk, @OddsDesk)
 
 Ian's README to-do "pins grammy news event"; he chose prod and ~40. 29 pins posted (4833-4861), none failed; then "translate to all language after this" (zh/es/ja/de/fr/ko/hi by hand, admin translations API). Threads: the road to the 2027 Grammys (Disney deal -> prod 4345 -> date, categories, entry window, members, BTS opting out, first-round voting -> prod 4346 -> final-round voting, MusiCares U2 -> prod 1962), the 68th ceremony (nominations to ratings), Hall of Fame, Grammys On The Hill -> NO FAKES Act vote (@LawDesk), Latin Grammys (announcement, nominations, Person of the Year gala -> prod 4397), the Rodrigo Grammy Museum exhibit and four Kalshi Grammy markets (@OddsDesk). Existing pins 4345, 4346, 1962 and 4397 were re-threaded by whole-pin PUT (rethread.py).
