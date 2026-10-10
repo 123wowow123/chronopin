@@ -2,7 +2,9 @@
 
 Ordinary menus, contact/hours details and restaurant guide tiles live in `RestaurantContent`, keyed by the original branch-specific pin source URL. Pin details and restaurant landing pages read these records from PostgreSQL. Updating content through the management API does not require a build, Git push, restart or deployment. Images live in Azure Blob Storage; records retain public blob URLs, original source URLs and credits.
 
-This feature requires an initial approved application deployment and migration `0148_restaurant_content.sql`. That migration imports the existing menu/detail/guide catalogs once, in the same transaction as the schema migration. It preserves branch identity, recognition, approximate-date evidence, photos, prices and source links. The JSON catalogs remain research/import snapshots, not runtime content authorities. Re-running migrations does not overwrite API edits. This implementation has only been migrated and verified locally; production rollout has not been authorized.
+This feature requires an initial approved application deployment and migration `0148_restaurant_content.sql`. That migration imports the existing menu/detail/guide catalogs once, in the same transaction as the schema migration. It preserves branch identity, recognition, approximate-date evidence, photos, prices and source links. The JSON catalogs remain research/import snapshots, not runtime content authorities. Re-running migrations does not overwrite API edits.
+
+Production verification after the user reported deployment: running commit `f9b187f0585f839eaaff24e3cff023f2a25147ee`, the management API returned HTTP 200 and PostgreSQL contained 372 content records. MUME's live Taipei guide tile uses its Azure gallery photo and database menu. Its seven credited gallery photos were subsequently attached to production pin 7443 through the admin restaurant seed API, following a dry run limited to that existing pin; no pins or special venues were added and no additional deployment was performed.
 
 ## Management API
 
