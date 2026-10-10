@@ -5252,9 +5252,36 @@
     "menus": [
       {
         "label": "Late-night happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/1230778",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.citricocafe.com/",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Margaritas",
+            "category": "Drinks",
+            "price": 9
+          },
+          {
+            "name": "Mezcalitas",
+            "category": "Drinks",
+            "price": 9
+          },
+          {
+            "name": "Frozen margaritas",
+            "category": "Drinks",
+            "price": 9
+          },
+          {
+            "name": "Beer",
+            "category": "Drinks",
+            "price": 5
+          },
+          {
+            "name": "Wine",
+            "category": "Drinks",
+            "price": 6
+          }
+        ],
+        "note": "Citrico's own site confirms a late-night happy hour every night 11pm-1am but shows items only as images/no text. Items and prices come from the OpenTable listing description (last resort); the 'and much more' there suggests the list is not exhaustive."
       }
     ],
     "specials": [
@@ -5449,16 +5476,34 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/10447",
-        "coverage": "link",
-        "items": []
+        "url": "https://peranyc.com/happy-hour",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Choice of wine, cocktail or beer plus 2 mezes",
+            "category": "Drinks & Food",
+            "note": "Bar & lounge only",
+            "price": 24
+          },
+          {
+            "name": "Additional round: wine or cocktail",
+            "category": "Drinks",
+            "price": 12
+          },
+          {
+            "name": "Additional round: choice of two mezes",
+            "category": "Food",
+            "price": 14
+          }
+        ],
+        "note": "Page: daily 3:30pm-7pm in the bar & lounge, matching the schedule. Specific mezes are not listed and are subject to change without notice."
       }
     ],
     "specials": [
       {
         "kind": "other",
         "title": "Happy hour",
-        "description": "Happy-hour food and drink specials. See the restaurant for current prices.",
+        "description": "Happy-hour items and prices as listed on the restaurant’s published menu.",
         "schedule": "Sun, Mon, Tue, Wed, Thu, Fri, Sat 15:30–19:00 (local time)",
         "conditions": [
           "Bar only."
@@ -5518,9 +5563,25 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/1403800",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.opentable.com/r/luckys-soho-new-york",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Oysters",
+            "category": "Food",
+            "price": 2
+          },
+          {
+            "name": "Mr. Lucky cocktail",
+            "category": "Drinks"
+          },
+          {
+            "name": "Glass of wine",
+            "category": "Drinks",
+            "price": 14
+          }
+        ],
+        "note": "Lucky's own site (luckyssoho.com/menus/soho) has no happy hour section (regular Mr. Lucky is $19, oysters $5). Items from OpenTable listing via search summary (last resort); it states Lucky Hour weekdays 5-6pm. Mr. Lucky price conflicts ($12 in input vs $13 in search summary) so left unpriced; input also mentions $5 prime sliders, not confirmed."
       }
     ],
     "specials": [
@@ -5583,9 +5644,98 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/30211",
-        "coverage": "link",
-        "items": []
+        "url": "https://flexmussels.com/happy-hour-3rdave",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Oysters",
+            "category": "Food",
+            "price": 2
+          },
+          {
+            "name": "Guacamole",
+            "category": "Food",
+            "note": "avocado, jalapeno, red onion, cilantro, lime, tortilla chips; add crab +6",
+            "price": 12
+          },
+          {
+            "name": "Shrimp lettuce wrap",
+            "category": "Food",
+            "price": 8
+          },
+          {
+            "name": "Ricotta toast",
+            "category": "Food",
+            "price": 10
+          },
+          {
+            "name": "Fried calamari",
+            "category": "Food",
+            "price": 14
+          },
+          {
+            "name": "Fish taco",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Sliders",
+            "category": "Food",
+            "note": "2 sliders; add fries +5, add beer +5, add fries and beer +10",
+            "price": 12
+          },
+          {
+            "name": "Classic mussels & fries",
+            "category": "Food",
+            "price": 25
+          },
+          {
+            "name": "Parma mussels & fries",
+            "category": "Food",
+            "price": 26
+          },
+          {
+            "name": "Fra Diavolo mussels & fries",
+            "category": "Food",
+            "price": 25
+          },
+          {
+            "name": "Thai mussels & fries",
+            "category": "Food",
+            "price": 26
+          },
+          {
+            "name": "Flex fries",
+            "category": "Food",
+            "price": 7
+          },
+          {
+            "name": "Old Bay fries",
+            "category": "Food",
+            "price": 8
+          },
+          {
+            "name": "Parmesan truffle fries",
+            "category": "Food",
+            "price": 9
+          },
+          {
+            "name": "Cocktails (Teeny Tini, Aperol spritz, Margarita, N/A Nojito)",
+            "category": "Drinks",
+            "price": 12
+          },
+          {
+            "name": "Wine (sparkling, white, rose, red)",
+            "category": "Drinks",
+            "priceLabel": "$11 glass / $44 bottle"
+          },
+          {
+            "name": "Narragansett lager",
+            "category": "Drinks",
+            "price": 6
+          }
+        ],
+        "note": "Third Ave (UES) page: everyday 4-6, plus Sun-Thu 9-10 and Fri-Sat 9-10:30 (input schedule says only 16:00-18:00). Also Martini Mondays: with a full-priced mussel pot all night Monday, vodka Teeny-Tini $8."
       }
     ],
     "specials": [
@@ -7119,9 +7269,74 @@
     "menus": [
       {
         "label": "$10.95 happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/2811",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.rocknfish.com",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Puerto Nuevo Rock Shrimp Ceviche",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "Oak-Grilled Artichoke",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "Mediterranean Grilled Octopus",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "Caesar Salad",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "Blue Cheese Wedge",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "New England Clam Chowder",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "Garlic Cheese Toast",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "Popcorn Shrimp",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "New Orleans Gumbo",
+            "category": "Food",
+            "price": 10.95
+          },
+          {
+            "name": "Oysters on the Half Shell",
+            "category": "Food",
+            "note": "each",
+            "price": 3
+          },
+          {
+            "name": "Jumbo Prawns on Ice",
+            "category": "Food",
+            "note": "each",
+            "price": 3
+          },
+          {
+            "name": "Peruvian Scallop Crudo on the Half Shell",
+            "category": "Food",
+            "note": "each",
+            "price": 3.5
+          }
+        ],
+        "note": "Venue site lists Mon-Fri 3-5 PM, not available during holidays or special events; page lists no drink prices. Seafood Tower ($89.95) omitted as it is not a discount item."
       }
     ],
     "specials": [
@@ -7463,9 +7678,52 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/1352833",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.orlasantamonica.com/menus/sunset-sips-menu",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Aperitivo",
+            "category": "Cocktails",
+            "price": 18,
+            "note": "Cocchi americano, riesling, celery, dill, caraway, chamomile"
+          },
+          {
+            "name": "Costa d’Oro",
+            "category": "Cocktails",
+            "price": 18,
+            "note": "Niepoort white port, lemon grass, cinchona, saffron, allspice"
+          },
+          {
+            "name": "Notturno",
+            "category": "Cocktails",
+            "price": 18,
+            "note": "Averna and See the Elephant amaro, espresso, black walnut, sumac"
+          },
+          {
+            "name": "Cocktail flight",
+            "category": "Cocktails",
+            "price": 45
+          },
+          {
+            "name": "Zucchini fritters",
+            "category": "Bites",
+            "price": 17,
+            "note": "Tzatziki, dill, Meyer lemon; pairs with the Aperitivo"
+          },
+          {
+            "name": "Marinated bigeye tuna",
+            "category": "Bites",
+            "price": 29,
+            "note": "Gluten free; Egyptian falafel, whipped tahini, urfa, spicy cucumbers; pairs with the Costa d’Oro"
+          },
+          {
+            "name": "Lamb kofta “pops”",
+            "category": "Bites",
+            "price": 28,
+            "note": "Gluten free; medjool date glaze, cinnamon, tangerine labneh; pairs with the Notturno"
+          }
+        ],
+        "note": "Transcribed from the restaurant's Sunset Sips menu page on October 9, 2026 (read in a browser, since the page loads its menu with a script). The page says low-proof pours, Monday–Friday 5–7 pm, served in the Bar & Lounge. Prices are as published."
       }
     ],
     "specials": [
@@ -7681,9 +7939,51 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/1023619",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.opentable.ie/r/bacari-west-third-los-angeles",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Cold and hot dishes, and pizza",
+            "category": "Food",
+            "priceLabel": "$2 off"
+          },
+          {
+            "name": "House wine 5oz pour",
+            "category": "Drinks",
+            "priceLabel": "$2 off"
+          },
+          {
+            "name": "House wine 8oz pour",
+            "category": "Drinks",
+            "priceLabel": "$3 off"
+          },
+          {
+            "name": "House wine liter",
+            "category": "Drinks",
+            "priceLabel": "$10 off"
+          },
+          {
+            "name": "Sangria glass",
+            "category": "Drinks",
+            "priceLabel": "$2 off"
+          },
+          {
+            "name": "Sangria liter",
+            "category": "Drinks",
+            "priceLabel": "$7 off"
+          },
+          {
+            "name": "Well cocktails",
+            "category": "Drinks",
+            "priceLabel": "$2 off"
+          },
+          {
+            "name": "House beer",
+            "category": "Drinks",
+            "priceLabel": "$1 off"
+          }
+        ],
+        "note": "Discounts only, from the OpenTable listing via search summary (venue's own site not read). Sources disagree on hours (OpenTable 5-6pm Mon-Fri, Time Out 3-6pm)."
       }
     ],
     "specials": [
@@ -7949,9 +8249,94 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.perchla.com/",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.perchla.com/menu-aperitif",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Kronenburg 1664",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "Poema Cava Brut",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Hess Chardonnay",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Bieler Père & Fils Rosé",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Conundrum Red Blend",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Pinard",
+            "category": "Drinks",
+            "note": "Ask for today's featured wine",
+            "price": 10
+          },
+          {
+            "name": "Citrus Hi-Ball",
+            "category": "Drinks",
+            "note": "Choice of whisky, tequila, vodka, or gin",
+            "price": 10
+          },
+          {
+            "name": "Cocktail of the Day",
+            "category": "Drinks",
+            "note": "Ask your server",
+            "price": 10
+          },
+          {
+            "name": "Linguica Parker House Roll",
+            "category": "Food",
+            "price": 5
+          },
+          {
+            "name": "Brioche Beef Slider",
+            "category": "Food",
+            "price": 5
+          },
+          {
+            "name": "Vadouvan Chicken Skewers",
+            "category": "Food",
+            "price": 8
+          },
+          {
+            "name": "Avocado Toast",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Prime Rib Roll",
+            "category": "Food",
+            "price": 7
+          },
+          {
+            "name": "Campari Tomato Burrata",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Wild Mushroom Arancini",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Maryland Blue Crab Cake",
+            "category": "Food",
+            "price": 9
+          }
+        ],
+        "note": "Schedule matches (Mon-Thu 4-6pm, Fri 3-6pm)."
       }
     ],
     "specials": [
@@ -8274,9 +8659,116 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.dearjanesla.com/",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.dearjanesla.com/happy-hour",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Oyster on the half shell",
+            "category": "Food",
+            "price": 4.5
+          },
+          {
+            "name": "Oyster rockefeller (1 pc)",
+            "category": "Food",
+            "price": 6.5
+          },
+          {
+            "name": "Deviled eggs",
+            "category": "Food",
+            "price": 6.5
+          },
+          {
+            "name": "Chips & seven-layer dip",
+            "category": "Food",
+            "price": 9
+          },
+          {
+            "name": "Sushi hand roll",
+            "category": "Food",
+            "price": 10
+          },
+          {
+            "name": "Fried calamari",
+            "category": "Food",
+            "price": 10
+          },
+          {
+            "name": "Wagyu beef pigs in a blanket",
+            "category": "Food",
+            "price": 12
+          },
+          {
+            "name": "Yellowtail carpaccio",
+            "category": "Food",
+            "price": 12.5
+          },
+          {
+            "name": "Shrimp cocktail",
+            "category": "Food",
+            "price": 12.5
+          },
+          {
+            "name": "Fish & chips",
+            "category": "Food",
+            "price": 14.5
+          },
+          {
+            "name": "Burger",
+            "category": "Food",
+            "price": 14.25
+          },
+          {
+            "name": "Scampi",
+            "category": "Food",
+            "price": 17
+          },
+          {
+            "name": "Steak frites",
+            "category": "Food",
+            "price": 19
+          },
+          {
+            "name": "Bella Vera",
+            "category": "Drinks",
+            "price": 13
+          },
+          {
+            "name": "Ode to John",
+            "category": "Drinks",
+            "price": 13
+          },
+          {
+            "name": "Fonda 75",
+            "category": "Drinks",
+            "price": 13
+          },
+          {
+            "name": "Catamaran Breeze",
+            "category": "Drinks",
+            "price": 13
+          },
+          {
+            "name": "Highball (base + mixer)",
+            "category": "Drinks",
+            "price": 12
+          },
+          {
+            "name": "Wine (white, rosé or red)",
+            "category": "Drinks",
+            "price": 8
+          },
+          {
+            "name": "Sky Duster West Coast IPA",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "Boomtown \"Bad Hombre\" Lager",
+            "category": "Drinks",
+            "price": 7
+          }
+        ],
+        "note": "Bar only, first-come first-served. Schedule matches Tue-Sat 5:30-7:00pm."
       }
     ],
     "specials": [
@@ -8342,8 +8834,35 @@
       {
         "label": "Happy hour",
         "url": "https://www.opentable.com/restaurant/profile/83296",
-        "coverage": "link",
-        "items": []
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Natural wine",
+            "category": "Drinks",
+            "price": 8
+          },
+          {
+            "name": "Draft beer",
+            "category": "Drinks",
+            "price": 6
+          },
+          {
+            "name": "Baja Tacos",
+            "category": "Food",
+            "price": 10
+          },
+          {
+            "name": "Loaded Nacho Fries",
+            "category": "Food",
+            "price": 10
+          },
+          {
+            "name": "BBQ Hawaiian Sliders",
+            "category": "Food",
+            "price": 10
+          }
+        ],
+        "note": "From the OpenTable listing (venue's own description, via search summary); bites listed as 'like' these, so a sample. Mon-Fri 3-6pm matches. Time Out lists a different 4-7pm window."
       }
     ],
     "specials": [
@@ -8696,8 +9215,25 @@
       {
         "label": "Happy hour",
         "url": "https://dellaterrarestaurant.com/",
-        "coverage": "link",
-        "items": []
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Cocktails",
+            "category": "Drinks",
+            "priceLabel": "$4 off"
+          },
+          {
+            "name": "Wine by the glass",
+            "category": "Drinks",
+            "priceLabel": "$4 off"
+          },
+          {
+            "name": "Pizzas",
+            "category": "Food",
+            "priceLabel": "Half price"
+          }
+        ],
+        "note": "Mon-Fri 3-6 PM, matches schedule."
       }
     ],
     "specials": [
