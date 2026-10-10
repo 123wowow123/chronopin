@@ -15,7 +15,9 @@
 //                                                  store through that site's API instead
 //
 // Which pins: those the site marks as events (isAttendableEvent in
-// src/lib/seo.ts) that have not started. Which pages: the pin's source, then
+// src/lib/seo.ts) that have not started, plus ticketed venues (isTicketedVenue:
+// a museum, park or stadium, read for its standard admission even once open).
+// Which pages: the pin's source, then
 // its two most confident references.
 //
 // How: the page's own schema.org Event markup first - it is the event's own

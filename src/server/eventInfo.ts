@@ -16,7 +16,7 @@ import { describeError, MODEL } from './extract';
 import { eventInfoProblem } from './model/pinEventInfo';
 import { IN_PAGE_META, type PageMetadata } from './scrape/inPage';
 import { AVAILABILITIES, EMPTY_EVENT_INFO, eventInfoFromMarkup, findEventNode, hasEventInfo, type EventInfoFields, type EventInfoSource } from '@/lib/eventInfo';
-import { isAttendableEvent } from '@/lib/seo';
+import { isAttendableEvent, isTicketedVenue, VENUE_TAGS } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
 
 export type EventPin = {
@@ -29,6 +29,9 @@ export type EventPin = {
   sourceUrl: string | null;
   // Its two most confident references other than the source.
   references: string[];
+  // A museum, park or stadium: admission is ongoing, so it is read after its
+  // opening date too, and the price is its standard admission.
+  venue?: boolean;
 };
 
 export type PageRead = { url: string; text: string; ticketLinks: { text: string; href: string }[]; markup: EventInfoFields | null };
@@ -47,6 +50,8 @@ The event is given by its title, its date and its venue. Pages often cover more 
 - onSaleDate: for PreOrder, the date and time sales open as ISO 8601 ("2027-01-10T10:00:00-08:00"), else "".
 - ticketUrl: the link for buying tickets or registering, copied exactly from the links listed with the page, else "".
 - sourceUrl: the page the answer mostly came from.
+
+A museum, park, stadium or theater (the event's \"kind\" is "venue") has no performance date: its dates are when it opened. Report its standard admission - the cheapest and dearest paid ticket (adult, senior, student), ignoring free tiers such as children or members, with ticketUrl its own admission page - and no performers. Free admission: 0 and 0.
 
 The page's own schema.org markup, when it has any, is given as "markup": trust it, and fill only what it leaves out.`;
 
@@ -79,33 +84,44 @@ export const EVENT_INFO_SCHEMA = {
 // ago, soonest first.
 export async function eventPins({ ids, hours = 0, limit = 500 }: { ids?: number[]; hours?: number; limit?: number } = {}): Promise<EventPin[]> {
   const rows = await db.query<
-    Omit<EventPin, 'utcStartDateTime' | 'utcEndDateTime' | 'references'> & {
+    Omit<EventPin, 'utcStartDateTime' | 'utcEndDateTime' | 'references' | 'venue'> & {
       utcStartDateTime: Date;
       utcEndDateTime: Date | null;
       hasLocation: boolean;
       categories: string[];
+      tagNames: string[];
       references: string[] | null;
     }
   >(
     `SELECT "p"."id", "p"."title", "p"."utcStartDateTime", "p"."utcEndDateTime", "p"."allDay", "p"."address", "p"."sourceUrl",
             "p"."location" IS NOT NULL AS "hasLocation",
             COALESCE((SELECT array_agg("t"."name"::text) FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."kind" = 'category'), '{}') AS "categories",
+            COALESCE((SELECT array_agg("t"."name"::text) FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id"), '{}') AS "tagNames",
             (SELECT array_agg("r"."url" ORDER BY "r"."confidence" DESC, "r"."id") FROM "PinReference" AS "r" WHERE "r"."pinId" = "p"."id") AS "references"
      FROM "Pin" AS "p"
      LEFT JOIN "PinEventInfo" AS "e" ON "e"."pinId" = "p"."id"
      WHERE "p"."utcDeletedDateTime" IS NULL
        AND ($1::int[] IS NOT NULL AND "p"."id" = ANY($1::int[])
-            OR $1::int[] IS NULL AND COALESCE("p"."utcEndDateTime", "p"."utcStartDateTime") > now()
+            OR $1::int[] IS NULL
+               AND (COALESCE("p"."utcEndDateTime", "p"."utcStartDateTime") > now()
+                    OR "p"."utcEndDateTime" IS NULL AND "p"."location" IS NOT NULL AND EXISTS (
+                         SELECT 1 FROM "PinTag" AS "v" WHERE "v"."pinId" = "p"."id" AND lower("v"."name"::text) = ANY($3::text[])))
                AND ("e"."checkedAt" IS NULL OR "e"."checkedAt" < now() - make_interval(hours => $2)))
      ORDER BY "e"."checkedAt" NULLS FIRST, "p"."utcStartDateTime"`,
-    [ids?.length ? ids : null, hours],
+    [ids?.length ? ids : null, hours, VENUE_TAGS],
   );
+  const asPin = (row: (typeof rows)[number]) =>
+    ({
+      ...row,
+      latitude: row.hasLocation ? 0 : undefined,
+      longitude: row.hasLocation ? 0 : undefined,
+      tags: row.tagNames.map((name) => ({ name, kind: 'topic', source: 'user' })),
+    }) as unknown as PinJson;
   return rows
-    .filter((row) =>
-      isAttendableEvent({ ...row, latitude: row.hasLocation ? 0 : undefined, longitude: row.hasLocation ? 0 : undefined } as unknown as PinJson),
-    )
+    .filter((row) => isAttendableEvent(asPin(row)) || isTicketedVenue(asPin(row)))
     .slice(0, limit)
     .map((row) => ({
+      venue: !isAttendableEvent(asPin(row)) && isTicketedVenue(asPin(row)) ? true : undefined,
       id: row.id,
       title: row.title,
       utcStartDateTime: new Date(row.utcStartDateTime).toISOString(),
@@ -164,6 +180,7 @@ export async function readEventPages(browser: Browser, pin: EventPin, maxChars?:
 export function describeEvent(pin: EventPin) {
   return {
     title: pin.title,
+    ...(pin.venue ? { kind: 'venue' } : {}),
     start: pin.allDay ? pin.utcStartDateTime.slice(0, 10) : pin.utcStartDateTime,
     end: pin.utcEndDateTime ? (pin.allDay ? `${pin.utcEndDateTime.slice(0, 10)} (exclusive)` : pin.utcEndDateTime) : null,
     venue: pin.address,

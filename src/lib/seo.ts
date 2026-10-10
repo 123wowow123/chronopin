@@ -102,6 +102,21 @@ export function isAttendableEvent(pin: PinJson): boolean {
   return categories.includes('Sports') || (categories.includes('Music') && !pin.allDay);
 }
 
+// Tags that make a pin a place people pay to enter (a museum, a theme park):
+// it has no Event markup of its own, but its admission price and ticket link
+// are shown, and stay shown after it opens - admission is ongoing.
+export const VENUE_TAGS = [
+  'museum', 'art museum', 'science museum', 'history museum', 'gallery', 'art gallery', 'exhibition', 'planetarium', 'observatory',
+  'theme park', 'amusement park', 'water park', 'zoo', 'aquarium', 'garden', 'botanical garden', 'attraction', 'tourist attraction',
+  'stadium', 'arena', 'ballpark', 'amphitheater', 'amphitheatre', 'theater', 'theatre', 'concert hall', 'opera house', 'music venue',
+  'concert venue', 'venue', 'cinema', 'movie theater', 'broadway', 'racetrack', 'speedway', 'casino', 'observation deck', 'landmark',
+];
+
+export function isTicketedVenue(pin: PinJson): boolean {
+  const hasPlace = !!pin.address || (pin.latitude != null && pin.longitude != null);
+  return hasPlace && !!pin.tags?.some((tag) => VENUE_TAGS.includes(tag.name.trim().toLowerCase()));
+}
+
 // The Event's offers: the ticket price, sale state and link read off the
 // event's pages (PinEventInfo), else the pin's own price. A price without a
 // currency is left out rather than assumed to be dollars.

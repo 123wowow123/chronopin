@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isAttendableEvent, pinJsonLd, temporalCoverage } from './seo';
+import { isAttendableEvent, isTicketedVenue, pinJsonLd, temporalCoverage } from './seo';
 import type { PinJson } from './types';
 
 const place = { address: 'Moscone Center, San Francisco, CA', latitude: 37.784, longitude: -122.401 };
@@ -26,6 +26,17 @@ describe('isAttendableEvent', () => {
     expect(isAttendableEvent(pin({ ...place, categories: ['Anime'] }))).toBe(false);
     expect(isAttendableEvent(pin({ ...place, categories: ['Business'] }))).toBe(false);
     expect(isAttendableEvent(pin({ categories: ['Conference'] }))).toBe(false);
+  });
+});
+
+describe('isTicketedVenue', () => {
+  it('counts a museum with a place, not a museum pin without one', () => {
+    const tags = [{ name: 'Museum', kind: 'topic', source: 'user' }] as PinJson['tags'];
+    expect(isTicketedVenue(pin({ ...place, categories: ['Art'], tags }))).toBe(true);
+    const stadium = [{ name: 'Stadium', kind: 'topic', source: 'user' }] as PinJson['tags'];
+    expect(isTicketedVenue(pin({ ...place, categories: ['Sports'], tags: stadium }))).toBe(true);
+    expect(isTicketedVenue(pin({ categories: ['Art'], tags }))).toBe(false);
+    expect(isTicketedVenue(pin({ ...place, categories: ['Art'] }))).toBe(false);
   });
 });
 

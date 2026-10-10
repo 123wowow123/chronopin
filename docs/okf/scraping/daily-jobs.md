@@ -379,6 +379,12 @@ it checked, so it is not read again until due). Ask again until nothing is
 left or 40 pins have been read. The pin page shows these as Performing and
 Tickets lines, and its Event markup gives them to search as performer and
 offers (Google Search Console asked for both, 2026-09-26).
+**Venues (2026-10-10).** Pins with a place and a venue tag (museum, theme
+park, zoo, stadium, theater, ... - `isTicketedVenue`, `VENUE_TAGS` in
+src/lib/seo.ts) are handed out too, with `kind: "venue"`, even after opening
+and until they end: the reading is the standard paid admission and the
+admission-page link, no performers, and the pin page keeps the ticket button
+after the start date.
 **When.** In the news job, twice a day, so a sell-out or a new on-sale date
 shows by the next run. `npm run events:refresh` does the same from a
 terminal (with `--export`/`--import` for a session when the key has no

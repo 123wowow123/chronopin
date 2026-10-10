@@ -75,7 +75,7 @@ import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
-import { isAttendableEvent, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
+import { isAttendableEvent, isTicketedVenue, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { thinReasons } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
@@ -132,11 +132,13 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   // how it got there. An event people can attend also carries its host's
   // website, performers and tickets, for the page and its Event markup.
   const event = isAttendableEvent(pin);
+  // A museum or park sells admission, not a dated event: same ticket panel.
+  const venue = !event && isTicketedVenue(pin);
   const [updates, timeZone, organizerUrl, eventInfo, gameInfo, candidates, ads, adsense, viewer] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
-    event && pin.companyId ? companyWebsite(pin.companyId) : null,
-    event ? pinEventInfo(pin.id) : null,
+    (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
+    event || venue ? pinEventInfo(pin.id) : null,
     pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
     pinCandidates(pin.id),
     adPlacements(),
@@ -153,7 +155,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           floored by its content's min-width, which scrolls the page sideways. */}
       <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
         <article>
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} candidates={candidates} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} venue={venue} candidates={candidates} />
         </article>
 
         <aside className="min-w-0">
@@ -234,12 +236,14 @@ async function PinBody({
   timeZone,
   t,
   eventInfo,
+  venue,
   candidates,
 }: {
   pin: PinJson;
   timeZone: string;
   t: Translator;
   eventInfo?: PinEventInfoJson | null;
+  venue?: boolean;
   candidates?: PinCandidateJson[];
 }) {
   const media = pin.media ?? [];
@@ -448,7 +452,7 @@ async function PinBody({
         </div>
       </div>
 
-      {eventInfo ? <PinEventInfo info={eventInfo} started={pinTense(pin, new Date(), dayKeyIn(new Date(), timeZone)) !== 'future'} t={t} /> : null}
+      {eventInfo ? <PinEventInfo info={eventInfo} started={!venue && pinTense(pin, new Date(), dayKeyIn(new Date(), timeZone)) !== 'future'} t={t} /> : null}
 
       {/* Where to watch a film, series or anime: a merchant whose link is a
           streaming service (src/lib/streaming.ts), in the service's colours. */}
