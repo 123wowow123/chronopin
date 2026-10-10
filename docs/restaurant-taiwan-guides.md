@@ -49,3 +49,18 @@ Live browser checks passed for all four view links in each city, Taichung’s em
 The subsequent MUME gallery enrichment was prepared locally pending publication. After the user reported the restaurant content feature deployed, production commit `f9b187f` and its migrated database content were verified. MUME's representative guide photo is live; all seven credited gallery photos were then attached to production pin 7443 through the admin restaurant seed API after a dry run confirmed only that existing pin would change. No additional deployment was performed. The restaurant seeder fills missing gallery photos on existing pins, preserves other photos and avoids importing the same gallery image twice.
 
 Gallery validation: 14 restaurant seed/service tests, TypeScript and targeted ESLint passed. The local MUME pin (7027) displays seven gallery images with source credits, and the Taipei guide card’s Azure-backed image loads successfully. A repeated seed dry run reports no missing photos. The admin seed route now invalidates enriched pins’ page caches as well as the timeline.
+
+## Opening dates for top selections (2026-10-10)
+
+Top-selection pins start on the restaurant's opening date, not the guide-check date. Sources checked and results:
+
+| Pin | Start | Confidence | Evidence |
+| --- | --- | --- | --- |
+| MUME (7443) | 2014-12-23 | estimated | [Commercial Times via LINE Today](https://today.line.me/tw/v3/article/ML7OEq0) gives the day; [MMHG history](https://mmhg.co/en/our-story/) and Tatler confirm late 2014. The day rests on that one report. |
+| Smith & Wollensky Taipei (7441) | 2019-01-10 | confirmed | [ETtoday pre-opening report](https://travel.ettoday.net/article/1350532.htm) schedules January 10 with the Breeze Nan Shan opening; blog reviews dated January 22, 2019 treat it as new. |
+| Smith & Wollensky Taichung (7442) | 2023-06-12 | confirmed | [Operator press release](https://www.smithandwollensky.com/press-events/smith-wollensky-opens-in-taichung/) dated June 12, 2023; Tatler Asia reports a 6/12 opening. Wikipedia’s “June 2024” is wrong. |
+| Li.nu (7448) | 2024-07-01 | estimated | A [Kaohsiung review](https://nigi33.tw/li-nu/) says July 2024; the July 2025 one-year menu agrees. No day published. |
+| HAWKER (7449) | 2023-06-02 | confirmed | [Review](https://nigi33.tw/hawker/) and [opening-coverage blog](https://ku5553221.pixnet.net/blog/post/226598338) both give June 2, 2023. |
+| BL.T33 Lobby Bar (7452) | 2021-11-21 | estimated | No bar-specific date; uses the hotel’s opening day from [Wikipedia](https://en.wikipedia.org/wiki/InterContinental_Kaohsiung) (Mable says November 22). |
+
+Gaps: exact days for MUME (single source), Li.nu and BL.T33. Translations exist only for MUME among the Taiwan pins; the other ten (7441, 7442, 7444-7452) have none in any locale.
