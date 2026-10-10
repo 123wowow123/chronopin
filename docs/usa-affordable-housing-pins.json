@@ -2871,5 +2871,944 @@
       "media": true,
       "timeline": true
     }
+  },
+  {
+    "pinId": 7059,
+    "pinUrl": "https://www.chronopin.com/pin/7059",
+    "checkedAt": "2026-10-09",
+    "title": "Sol on Park — New York City affordable housing",
+    "city": "New York City",
+    "state": "New York",
+    "address": "3728 Park Avenue, Bronx, NY 10456",
+    "sourceUrl": "https://www.nychdc.com/newsroom/mamdani-administration-nycha-and-development-partners-put-public-land-work-breaking-ground",
+    "targetMilestone": "Groundbreaking celebrated September 29, 2026",
+    "timelineBoundary": "2026-09-29",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Groundbreaking celebrated September 29, 2026. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.nychdc.com/newsroom/mamdani-administration-nycha-and-development-partners-put-public-land-work-breaking-ground",
+      "https://nrpgroup.com/capabilities/construction/bidding"
+    ],
+    "references": [
+      {
+        "url": "https://nrpgroup.com/capabilities/construction/bidding",
+        "title": "NRP: project address and scope",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "229 is the headline total; listed resident allocations sum to 228, without counting the remaining apartment as a public lottery home.",
+      "Timeline marks groundbreaking, not future move-in."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "3728 Park Ave, Bronx, New York, 10456",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 40.836669737863,
+      "longitude": -73.904797739305
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-solpark-6e45f562460b921e.jpg",
+        "sourceImageUrl": "https://www.nychdc.com/sites/default/files/styles/max_890/public/2026-09/sol-on-park-1%5B1%5D.jpeg?itok=qjI-Az2n",
+        "sourcePageUrl": "https://www.nychdc.com/newsroom/mamdani-administration-nycha-and-development-partners-put-public-land-work-breaking-ground",
+        "credit": "The NRP Group / Selfhelp Realty Group / Foxy Management",
+        "kind": "Architectural rendering",
+        "sha256": "6e45f562460b921e9194ad15e5a3886eafd40a3ddb520a79d261cb70290e6925",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7060,
+    "pinUrl": "https://www.chronopin.com/pin/7060",
+    "checkedAt": "2026-10-09",
+    "title": "Rose Apartments (Venice) — Los Angeles affordable housing",
+    "city": "Los Angeles",
+    "state": "California",
+    "address": "718 Rose Avenue, Venice, Los Angeles, CA 90291",
+    "sourceUrl": "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+    "targetMilestone": "Grand opening celebrated May 19, 2022",
+    "timelineBoundary": "2022-05-19",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand opening celebrated May 19, 2022. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.hacla.org/en/news/mayor-garcetti-joins-hacla-celebrate-grand-opening-hhh-rose-apartments-venice",
+      "https://vchcorp.org/housing/affordable-and-permanent-supportive-housing/",
+      "https://cityclerk.lacity.org/onlinedocs/2019/19-0950_rpt_MAYOR_01-22-2020.pdf"
+    ],
+    "references": [
+      {
+        "url": "https://vchcorp.org/housing/affordable-and-permanent-supportive-housing/",
+        "title": "VCH: Rose Apartments and housing access routes",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://cityclerk.lacity.org/onlinedocs/2019/19-0950_rpt_MAYOR_01-22-2020.pdf",
+        "title": "Los Angeles: Rose Apartments site at 718–720 Rose Avenue",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Do not confuse this development with market-rate Venice on Rose at 512 Rose Avenue."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "718 Rose Ave, Venice, California, 90291",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 34.000610999763,
+      "longitude": -118.469010711866
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-rose-5bd9cbb3964a885a.jpg",
+        "sourceImageUrl": "https://vchcorp.org/wp-content/uploads/2023/05/Rose-Apartments.jpg",
+        "sourcePageUrl": "https://vchcorp.org/housing/affordable-and-permanent-supportive-housing/",
+        "credit": "Venice Community Housing",
+        "kind": "Project photograph",
+        "sha256": "5bd9cbb3964a885aa51641d8d26f8d850534d7850d629e32575ac98e5896262c",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7061,
+    "pinUrl": "https://www.chronopin.com/pin/7061",
+    "checkedAt": "2026-10-09",
+    "title": "43 Green East — Chicago affordable housing",
+    "city": "Chicago",
+    "state": "Illinois",
+    "address": "4308 South Calumet Avenue, Chicago, IL 60653",
+    "sourceUrl": "https://www.43greeneast.com/floorplans",
+    "targetMilestone": "First resident move-ins reported for June 2023",
+    "timelineBoundary": "2023-06-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: First resident move-ins reported for June 2023. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://www.43greeneast.com/floorplans",
+      "https://www.habitat.com/post/habitat-tops-off-second-apartment-building-at-43-green-in-chicago-s-historic-bronzeville",
+      "https://www.live43green.com/"
+    ],
+    "references": [
+      {
+        "url": "https://www.habitat.com/post/habitat-tops-off-second-apartment-building-at-43-green-in-chicago-s-historic-bronzeville",
+        "title": "Habitat: first move-ins and 50 affordable homes",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.live43green.com/",
+        "title": "43 Green: East and West communities",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "June 30 is an estimated month boundary, not an exact move-in day.",
+      "No current dollar rents published for the tax-credit plans."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "4308 S Calumet Ave, Chicago, Illinois, 60653",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 41.816370008428,
+      "longitude": -87.618498004795
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-green-d5914389d775d818.jpg",
+        "sourceImageUrl": "https://resource.rentcafe.com/image/upload/s3/2/88552/00741_001%20%281%29.jpg",
+        "sourcePageUrl": "https://www.43greeneast.com/floorplans",
+        "credit": "The Habitat Company / P3 Markets",
+        "kind": "Project photograph",
+        "sha256": "d5914389d775d81899376d3ada49a8cc5ca73c9c477b8bd8b15e1ff05ab4b0a5",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7062,
+    "pinUrl": "https://www.chronopin.com/pin/7062",
+    "checkedAt": "2026-10-09",
+    "title": "600 Seventh — San Francisco affordable housing",
+    "city": "San Francisco",
+    "state": "California",
+    "address": "600 7th Street, San Francisco, CA 94103",
+    "sourceUrl": "https://www.mercyhousing.org/california/600-seventh/",
+    "targetMilestone": "Mercy Housing published its opening celebration report December 3, 2025",
+    "timelineBoundary": "2025-12-03",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Mercy Housing published its opening celebration report December 3, 2025. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.mercyhousing.org/california/600-seventh/",
+      "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+      "https://sfgov.legistar.com/View.ashx?GUID=35336E3D-9E7E-4A42-8AC4-C2EBB8B748CE&ID=10894160&M=F",
+      "https://www.sf.gov/sites/default/files/2024-06/600%207th%20Street%20RSC_0.pdf"
+    ],
+    "references": [
+      {
+        "url": "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+        "title": "Mercy Housing: opening announcement",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://sfgov.legistar.com/View.ashx?GUID=35336E3D-9E7E-4A42-8AC4-C2EBB8B748CE&ID=10894160&M=F",
+        "title": "San Francisco: 100 affordable, 120 supportive and one manager apartment",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.sf.gov/sites/default/files/2024-06/600%207th%20Street%20RSC_0.pdf",
+        "title": "600 Seventh: resident selection criteria",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Property retains an older Fall 2024 schedule; timeline uses the dated December 2025 opening report, not that old target.",
+      "Commercial retail rents are not residential apartment rents."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "600 7th St, San Francisco, California, 94103",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 37.772834304614,
+      "longitude": -122.403206248955
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-seventh-f9f968521a625a4b.jpg",
+        "sourceImageUrl": "https://mercyhousing.org/wp-content/uploads/2025/12/600_Seventh_St_Ribbon_Cutting.jpg",
+        "sourcePageUrl": "https://mercyhousing.org/2025/12/600-seventh-street-opens-in-san-francisco/",
+        "credit": "Mercy Housing California",
+        "kind": "Opening ceremony photograph",
+        "sha256": "f9f968521a625a4ba625864c415ab094cfde4f822a99391a8872f52a8c719d89",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7063,
+    "pinUrl": "https://www.chronopin.com/pin/7063",
+    "checkedAt": "2026-10-09",
+    "title": "Cedar Crossing — Seattle affordable housing",
+    "city": "Seattle",
+    "state": "Washington",
+    "address": "6620 Roosevelt Way NE, Seattle, WA 98115",
+    "sourceUrl": "https://www.bellwetherhousing.org/properties/cedar-crossing",
+    "targetMilestone": "Grand-opening celebration scheduled September 14, 2022",
+    "timelineBoundary": "2022-09-14",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Grand-opening celebration scheduled September 14, 2022. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.bellwetherhousing.org/properties/cedar-crossing",
+      "https://www.bellwetherhousing.org/post/bellwether-housing-and-mercy-housing-northwest-celebrate-the-opening-of-cedar-crossing",
+      "https://cedarcrossing.bellwetherhousing.org/floorplans"
+    ],
+    "references": [
+      {
+        "url": "https://www.bellwetherhousing.org/post/bellwether-housing-and-mercy-housing-northwest-celebrate-the-opening-of-cedar-crossing",
+        "title": "Bellwether: September 2022 opening",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://cedarcrossing.bellwetherhousing.org/floorplans",
+        "title": "Cedar Crossing: current floor-plan rents",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Current operator portfolio uses 6620 Roosevelt Way NE; the opening release used 6600 for the same development."
+    ],
+    "rentResearch": {
+      "source": "https://cedarcrossing.bellwetherhousing.org/floorplans",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Studio, 60% AMI",
+          "From $1,412"
+        ],
+        [
+          "Open 1 bedroom, 60% AMI",
+          "From $1,599"
+        ],
+        [
+          "2 bedrooms, 50% AMI",
+          "From $1,630"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "Rates and availability may change. Confirm eligibility, utilities, fees and the final lease quote with the operator."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "6620 Roosevelt Way NE, Seattle, Washington, 98115",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 47.676984219661,
+      "longitude": -122.317071548811
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-cedar-489259ec7e5412c2.jpg",
+        "sourceImageUrl": "https://static.wixstatic.com/media/cfddca_8f49049a9ace4e4d974e80c09ea0d110~mv2.jpg",
+        "sourcePageUrl": "https://www.bellwetherhousing.org/properties/cedar-crossing",
+        "credit": "Bellwether Housing / Mercy Housing Northwest",
+        "kind": "Project photograph",
+        "sha256": "489259ec7e5412c2a46ac877ee2c669cf8dd0b2282aa98b654bf39b61570e732",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7064,
+    "pinUrl": "https://www.chronopin.com/pin/7064",
+    "checkedAt": "2026-10-09",
+    "title": "Sol Apartments and Townhomes — Denver affordable housing",
+    "city": "Denver",
+    "state": "Colorado",
+    "address": "2699 West 10th Avenue, Denver, CO 80204",
+    "sourceUrl": "https://kaleidoscopedenverliving.com/sol/",
+    "targetMilestone": "Grand opening reported during May 2025",
+    "timelineBoundary": "2025-05-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Grand opening reported during May 2025. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://kaleidoscopedenverliving.com/sol/",
+      "https://content.govdelivery.com/accounts/CODOLA/bulletins/3e2e020"
+    ],
+    "references": [
+      {
+        "url": "https://content.govdelivery.com/accounts/CODOLA/bulletins/3e2e020",
+        "title": "Colorado Division of Housing: May 2025 Sol ribbon cutting",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "May 31 is a month boundary; exact ceremony day is not established by the cited state bulletin.",
+      "Market-rate form prices are excluded from the affordable rent table."
+    ],
+    "rentResearch": {
+      "source": "https://kaleidoscopedenverliving.com/sol/",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Affordable 1 bedroom, qualifying form branch",
+          "From $1,539"
+        ],
+        [
+          "Affordable 2 bedrooms, qualifying form branch",
+          "From $1,846"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "These are conditional operator-form starting rents, not voucher tenant contributions. Utilities and parking are listed as included. Program qualification and final deposit must be confirmed."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "2699 W 10th Ave, Denver, Colorado, 80204",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 39.733112598645,
+      "longitude": -105.020445634155
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-sol-6f22a56df92bdf15.jpg",
+        "sourceImageUrl": "https://kaleidoscopedenverliving.com/wp-content/uploads/2026/01/20250703_sol_008.jpg",
+        "sourcePageUrl": "https://kaleidoscopedenverliving.com/sol/",
+        "credit": "Denver Housing Authority",
+        "kind": "Project photograph",
+        "sha256": "6f22a56df92bdf15fb899c9ba058ff3b2b269131c0ef9893c475415d087f76e7",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7065,
+    "pinUrl": "https://www.chronopin.com/pin/7065",
+    "checkedAt": "2026-10-09",
+    "title": "Grace Apartments — Boston affordable housing",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "address": "187 Sumner Street, East Boston, MA 02128",
+    "sourceUrl": "https://www.ebcdc.com/grace",
+    "targetMilestone": "Official opening celebrated July 25, 2024",
+    "timelineBoundary": "2024-07-25",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Official opening celebrated July 25, 2024. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.ebcdc.com/grace",
+      "https://www.boston.gov/buildinghousing/grace-apartments"
+    ],
+    "references": [
+      {
+        "url": "https://www.boston.gov/buildinghousing/grace-apartments",
+        "title": "Boston: project and leasing guidance",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Operator’s current address is 187 Sumner Street; city development page uses parcel address 201 Sumner Street.",
+      "Operator says fully leased; generic site-wide application forms do not establish an open Grace waitlist."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "187 Sumner St, East Boston, Massachusetts, 02128",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 42.369018850089,
+      "longitude": -71.040493636877
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-grace-68f26f34c12b077b.jpg",
+        "sourceImageUrl": "https://images.squarespace-cdn.com/content/v1/5ed542b0bbcd44157c79adbf/359641fa-8f78-4c7c-89e8-e1f865767224/20240709_132916.jpg",
+        "sourcePageUrl": "https://www.ebcdc.com/grace",
+        "credit": "East Boston Community Development Corporation / Metro Management",
+        "kind": "Project photograph",
+        "sha256": "68f26f34c12b077be2e081f86698478e4252d216e7e586e98dba39f7b6d1bb76",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7066,
+    "pinUrl": "https://www.chronopin.com/pin/7066",
+    "checkedAt": "2026-10-09",
+    "title": "The Edmonson at Barry Farm — Washington DC affordable housing",
+    "city": "Washington DC",
+    "state": "District of Columbia",
+    "address": "1130 Sumner Road SE, Washington, DC 20020",
+    "sourceUrl": "https://www.theedmonson.com/",
+    "targetMilestone": "Operator advertises a late-fall opening; local September 2026 reporting expects completion by year end",
+    "timelineBoundary": "2026-11-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Operator advertises a late-fall opening; local September 2026 reporting expects completion by year end. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://www.theedmonson.com/",
+      "https://dchfa.org/wp-content/uploads/2024/06/Edmonson-Press-Release-FINAL.pdf",
+      "https://www.theedmonson.com/floorplans",
+      "https://eastoftheriverdcnews.com/2026/09/15/anc-8c-seeks-say-in-barry-farm-redevelopment/"
+    ],
+    "references": [
+      {
+        "url": "https://dchfa.org/wp-content/uploads/2024/06/Edmonson-Press-Release-FINAL.pdf",
+        "title": "DCHFA: Edmonson financing and eligibility",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.theedmonson.com/floorplans",
+        "title": "The Edmonson: floor plans and pricing inquiries",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://eastoftheriverdcnews.com/2026/09/15/anc-8c-seeks-say-in-barry-farm-redevelopment/",
+        "title": "September 2026: expected completion by year end",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "November 30 is an estimated late-fall boundary, not an announced opening day.",
+      "No fixed dollar rent inferred from AMI tiers."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "1130 Sumner Rd SE, Washington, District of Columbia, 20020",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 38.861311687558,
+      "longitude": -76.998071128967
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-edmonson-181c5e81599c3538.jpg",
+        "sourceImageUrl": "https://www.poahchicago.org/sites/default/files/styles/large_rectangle_770_x_440/public/property-photos/The%20Edmonson.png?h=003e2444&itok=ERtIAKOU",
+        "sourcePageUrl": "https://www.poahchicago.org/index.php/property/district-columbia/barry-farm",
+        "credit": "Preservation of Affordable Housing / DC Housing Authority",
+        "kind": "Architectural rendering",
+        "sha256": "181c5e81599c353819df533d5807c6f93d0571fa733579a5a93514047d7a41da",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7067,
+    "pinUrl": "https://www.chronopin.com/pin/7067",
+    "checkedAt": "2026-10-09",
+    "title": "Juniper Creek Apartments — Austin affordable housing",
+    "city": "Austin",
+    "state": "Texas",
+    "address": "11630 North Lamar Boulevard, Austin, TX 78753",
+    "sourceUrl": "https://www.junipercreekapts.org/",
+    "targetMilestone": "Ribbon cutting celebrated February 12, 2026",
+    "timelineBoundary": "2026-02-12",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Ribbon cutting celebrated February 12, 2026. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.junipercreekapts.org/",
+      "https://foundcom.org/2026/02/juniper-creek-ribbon-cutting-celebrates-opening-and-many-funding-partners/",
+      "https://foundcom.org/wp-content/uploads/2026/03/74949-FC-0324-IGE-NL-Proof.pdf",
+      "https://www.junipercreekapts.org/apartments/tx/austin/floor-plans"
+    ],
+    "references": [
+      {
+        "url": "https://foundcom.org/2026/02/juniper-creek-ribbon-cutting-celebrates-opening-and-many-funding-partners/",
+        "title": "Foundation Communities: February 12 ribbon cutting",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://foundcom.org/wp-content/uploads/2026/03/74949-FC-0324-IGE-NL-Proof.pdf",
+        "title": "Foundation Communities Winter 2026: 110 homes, opened late 2025",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.junipercreekapts.org/apartments/tx/austin/floor-plans",
+        "title": "Juniper Creek: apartment types and included services",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Ribbon cutting is distinct from the late-2025 opening noted in the operator newsletter."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "11630 N Lamar Blvd, Austin, Texas, 78753",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 30.386302373552,
+      "longitude": -97.685301600809
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-juniper-bca01e6acb4184cb.jpg",
+        "sourceImageUrl": "https://g5-assets-cld-res.cloudinary.com/image/upload/x_733,y_0,h_2000,w_2000,c_crop/q_auto,f_auto,c_fill,g_center,h_500,w_500/v1758303600/g5/g5-c-66njr5ndh-foundation-communities/g5-cl-1pujhlauwo-foundation-communities-austin-tx/uploads/Juniper_Creek_Kitchen_yyxbns_zmkmes.jpg",
+        "sourcePageUrl": "https://www.junipercreekapts.org/",
+        "credit": "Foundation Communities",
+        "kind": "Project photograph",
+        "sha256": "bca01e6acb4184cbc6b249affe8b53b4270a625c2de0bf86b23e3cbe710f473f",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7068,
+    "pinUrl": "https://www.chronopin.com/pin/7068",
+    "checkedAt": "2026-10-09",
+    "title": "New Hope Housing Reed — Houston affordable housing",
+    "city": "Houston",
+    "state": "Texas",
+    "address": "2605 Reed Road, Houston, TX 77051",
+    "sourceUrl": "https://newhopehousing.com/locations/reed",
+    "targetMilestone": "Dedicated in September 2018",
+    "timelineBoundary": "2018-09-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Dedicated in September 2018. The date represents the end of the published window, not an announced exact day; completion and move-in remain distinct.",
+    "sourcesChecked": [
+      "https://newhopehousing.com/locations/reed",
+      "https://newhopehousing.com/media/reports/attachments/New-Hope-Housings-30th-Anniversary-Book-2023_2023-06-09-145643_nbqu.pdf",
+      "https://newhopehousing.com/media/reports/attachments/2018_NHH_CommunityReport.pdf"
+    ],
+    "references": [
+      {
+        "url": "https://newhopehousing.com/media/reports/attachments/New-Hope-Housings-30th-Anniversary-Book-2023_2023-06-09-145643_nbqu.pdf",
+        "title": "New Hope Housing: Reed scope and 187 homes",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://newhopehousing.com/media/reports/attachments/2018_NHH_CommunityReport.pdf",
+        "title": "New Hope Housing 2018: September dedication",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "September 30 is an estimated dedication-month boundary."
+    ],
+    "rentResearch": {
+      "currentLeasingRateVerified": false,
+      "status": "Dollar rents not verified in sources checked"
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "2605 Reed Rd, Houston, Texas, 77051",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 29.658902585348,
+      "longitude": -95.390619149148
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-reed-038509db4ef5f488.jpg",
+        "sourceImageUrl": "https://newhopehousing.com/media/images/_1200x1100_crop_center-center_100_none/5710/Reed-1.webp",
+        "sourcePageUrl": "https://newhopehousing.com/locations/reed",
+        "credit": "New Hope Housing",
+        "kind": "Project photograph",
+        "sha256": "038509db4ef5f488717d56be54884ea07279a28fb7f3568a2a5831577487ee16",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7069,
+    "pinUrl": "https://www.chronopin.com/pin/7069",
+    "checkedAt": "2026-10-09",
+    "title": "Haven at South Atlanta — Atlanta affordable housing",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "address": "57 Hardwick Street SE, Atlanta, GA 30315",
+    "sourceUrl": "https://www.pennrose.com/apartments/georgia/haven-at-south-atlanta/",
+    "targetMilestone": "Pennrose announced the groundbreaking June 10, 2021; community is now operating",
+    "timelineBoundary": "2021-06-10",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Pennrose announced the groundbreaking June 10, 2021; community is now operating. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.pennrose.com/apartments/georgia/haven-at-south-atlanta/",
+      "https://www.pennrose.com/news-views/news/2021/groundbreaking-of-haven-at-south-atlanta/"
+    ],
+    "references": [
+      {
+        "url": "https://www.pennrose.com/news-views/news/2021/groundbreaking-of-haven-at-south-atlanta/",
+        "title": "Pennrose: groundbreaking and income mix",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Timeline marks the dated groundbreaking announcement, not a newly opened community in 2026."
+    ],
+    "rentResearch": {
+      "source": "https://www.pennrose.com/apartments/georgia/haven-at-south-atlanta/",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "1 bedroom, published mixed-income range",
+          "$937–$1,250"
+        ],
+        [
+          "2 bedrooms, published mixed-income range",
+          "$1,117–$1,450"
+        ],
+        [
+          "3 bedrooms, published mixed-income range",
+          "$1,260–$1,650"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "The operator does not map each endpoint to an income tier. Confirm restricted-unit eligibility and the final quote. Residents pay electric and cable separately."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "57 Hardwick St SE, Atlanta, Georgia, 30315",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 33.709849400311,
+      "longitude": -84.385500300855
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-haven-65a28c10e92741f1.jpg",
+        "sourceImageUrl": "https://www.pennrose.com/media/dgzhna04/haven-atlanta-final-23.jpg",
+        "sourcePageUrl": "https://www.pennrose.com/apartments/georgia/haven-at-south-atlanta/",
+        "credit": "Pennrose / Focused Community Strategies",
+        "kind": "Project photograph",
+        "sha256": "65a28c10e92741f1d1feb7f2cc2852b3d6a4666d263f26ba265fb7c2d1944d2d",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
+  },
+  {
+    "pinId": 7070,
+    "pinUrl": "https://www.chronopin.com/pin/7070",
+    "checkedAt": "2026-10-09",
+    "title": "Atlantic Square — Miami affordable housing",
+    "city": "Miami",
+    "state": "Florida",
+    "address": "777 NW 2nd Avenue, Miami, FL 33136",
+    "sourceUrl": "https://www.atlanticsquareliving.com/",
+    "targetMilestone": "Developer published its grand-opening announcement June 4, 2026",
+    "timelineBoundary": "2026-06-04",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed announced milestone: Developer published its grand-opening announcement June 4, 2026. The date records the stated ceremony or dated announcement; it does not imply current apartment availability.",
+    "sourcesChecked": [
+      "https://www.atlanticsquareliving.com/",
+      "https://apcompanies.com/news/atlantic-square-celebrated-its-grand-opening-as-miami-dadecountys-largest-mixed-income-transit-orienteddevelopment/",
+      "https://www.atlanticsquareliving.com/workforce-housing/",
+      "https://www.atlanticsquareliving.com/floorplans/"
+    ],
+    "references": [
+      {
+        "url": "https://apcompanies.com/news/atlantic-square-celebrated-its-grand-opening-as-miami-dadecountys-largest-mixed-income-transit-orienteddevelopment/",
+        "title": "Atlantic Pacific: June 2026 grand-opening announcement",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.atlanticsquareliving.com/workforce-housing/",
+        "title": "Atlantic Square: 140% AMI workforce program",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.atlanticsquareliving.com/floorplans/",
+        "title": "Atlantic Square: current floor-plan pricing",
+        "confidence": 90,
+        "reasoning": "Project-specific operator, government or project-partner source reviewed on October 9, 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "notes": [
+      "Older cached search result listed $2,235 workforce starting price; current page and direct fetch list $1,980, used here.",
+      "Do not represent all 616 homes as low-income affordable apartments."
+    ],
+    "rentResearch": {
+      "source": "https://www.atlanticsquareliving.com/floorplans/",
+      "asOf": "2026-10-09",
+      "currentLeasingRateVerified": true,
+      "rows": [
+        [
+          "Workforce plans, operator FAQ starting price",
+          "From $1,980"
+        ]
+      ],
+      "intro": "Operator-published rents checked October 9, 2026. These amounts depend on apartment, income tier and availability.",
+      "note": "The FAQ’s workforce starting figure is not a rent quote for the separate low-income homes, nor for every WF apartment. Individual unit rents, fees, lease term and availability must be confirmed."
+    },
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "matchAddress": "777 NW 2nd Ave, Miami, Florida, 33136",
+      "matchScore": 100,
+      "matchType": "PointAddress",
+      "latitude": 25.78117605568,
+      "longitude": -80.197779685351
+    },
+    "media": [
+      {
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-atlantic-a34b43329e8c1a06.jpg",
+        "sourceImageUrl": "https://sxxweb7cdn.cachefly.net/img/thumbnail.aspx?w=1920&h=1080&q=71&p=/common/uploads/client/1125/media/3211bef9-9906-4ee9-944e-3577006c9312.jpg&q=71",
+        "sourcePageUrl": "https://www.atlanticsquareliving.com/",
+        "credit": "Atlantic Pacific Companies",
+        "kind": "Project photograph",
+        "sha256": "a34b43329e8c1a06683eb82cfb26cc1c6453596de65dac8b01a32981293df3a4",
+        "publicBlobVerified": true
+      }
+    ],
+    "verification": {
+      "publicPinAPI": true,
+      "publicPinPage": true,
+      "title": true,
+      "coordinates": true,
+      "media": true,
+      "timeline": true
+    }
   }
 ]

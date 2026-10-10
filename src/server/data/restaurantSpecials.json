@@ -158,7 +158,94 @@
       "sourceUrl": "https://www.opentable.com/r/c-level-san-diego",
       "checkedAt": "2026-10-07"
     },
-    "menus": [],
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.clevelsd.com/menu?menu=2277104",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Chicken potstickers",
+            "category": "Food",
+            "price": 11
+          },
+          {
+            "name": "Crispy calamari",
+            "category": "Food",
+            "price": 11
+          },
+          {
+            "name": "Coconut shrimp",
+            "category": "Food",
+            "price": 11
+          },
+          {
+            "name": "Chef Deborah's pepita & sesame crusted brie",
+            "category": "Food",
+            "price": 11
+          },
+          {
+            "name": "Steamed mussels",
+            "category": "Food",
+            "price": 11
+          },
+          {
+            "name": "C-Level Caesar salad",
+            "category": "Food",
+            "price": 11
+          },
+          {
+            "name": "Endless Summer",
+            "category": "Drinks",
+            "price": 11
+          },
+          {
+            "name": "Sangria del Presidio",
+            "category": "Drinks",
+            "price": 11
+          },
+          {
+            "name": "Cabrillo Cooler",
+            "category": "Drinks",
+            "price": 11
+          },
+          {
+            "name": "Featured seasonal margarita",
+            "category": "Drinks",
+            "price": 11
+          },
+          {
+            "name": "Well spirits",
+            "category": "Drinks"
+          },
+          {
+            "name": "Select wines",
+            "category": "Drinks"
+          },
+          {
+            "name": "Stone Delicious IPA",
+            "category": "Drinks"
+          },
+          {
+            "name": "Modelo Especial",
+            "category": "Drinks"
+          },
+          {
+            "name": "Firestone Cali Squeeze Hefeweizen",
+            "category": "Drinks"
+          },
+          {
+            "name": "Michelob Ultra",
+            "category": "Drinks"
+          },
+          {
+            "name": "Zero proof beers, wines, and cocktails",
+            "category": "Drinks"
+          }
+        ],
+        "note": "Home page states $11 cocktails and $11 appetizers; the happy-hour menu page shows items with blank prices, so $11 applied only to bites and the named cocktails. Beer, wine and well prices not published. Schedule matches (Mon-Fri 3:30-5:30 pm). Read via WebFetch."
+      }
+    ],
     "specials": [
       {
         "kind": "other",
@@ -591,7 +678,108 @@
       "sourceUrl": "https://www.opentable.com/r/coasterra-san-diego-3?page=1",
       "checkedAt": "2026-10-07"
     },
-    "menus": [],
+    "menus": [
+      {
+        "label": "Happy hour",
+        "url": "https://www.coasterra.com/menu/",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Guacamole",
+            "category": "Food"
+          },
+          {
+            "name": "Ceviche Clasico",
+            "category": "Food"
+          },
+          {
+            "name": "Crispy Calamari",
+            "category": "Food"
+          },
+          {
+            "name": "Bacon Wrapped Jalapenos (2)",
+            "category": "Food"
+          },
+          {
+            "name": "Mini Chicken Tinga Tostadas (2)",
+            "category": "Food"
+          },
+          {
+            "name": "TJ Dogs (2)",
+            "category": "Food"
+          },
+          {
+            "name": "House red wine",
+            "category": "Drinks"
+          },
+          {
+            "name": "House white wine",
+            "category": "Drinks"
+          },
+          {
+            "name": "Deb's Coconut",
+            "category": "Drinks"
+          },
+          {
+            "name": "Mango Passionfruit",
+            "category": "Drinks"
+          },
+          {
+            "name": "Paloma",
+            "category": "Drinks"
+          },
+          {
+            "name": "Pura Sandia",
+            "category": "Drinks"
+          },
+          {
+            "name": "Pineapple Tamarind",
+            "category": "Drinks"
+          },
+          {
+            "name": "Red Sangria",
+            "category": "Drinks"
+          },
+          {
+            "name": "Cali Squeeze Blood Orange Hef (draft)",
+            "category": "Drinks"
+          },
+          {
+            "name": "Coasterra IPA (draft)",
+            "category": "Drinks"
+          },
+          {
+            "name": "Modelo Especial (draft)",
+            "category": "Drinks"
+          },
+          {
+            "name": "Bud Light (bottle)",
+            "category": "Drinks"
+          },
+          {
+            "name": "Victoria (bottle)",
+            "category": "Drinks"
+          },
+          {
+            "name": "Pacifico (bottle)",
+            "category": "Drinks"
+          },
+          {
+            "name": "House N/A Wine",
+            "category": "Drinks"
+          },
+          {
+            "name": "Staycation",
+            "category": "Drinks"
+          },
+          {
+            "name": "Athletic Brewing",
+            "category": "Drinks"
+          }
+        ],
+        "note": "Page lists items with no price amounts. Schedule matches (Mon-Fri 3:30-5:30 pm). 5% supplemental fee added to checks. Read via WebFetch."
+      }
+    ],
     "specials": [
       {
         "kind": "other",
@@ -3198,8 +3386,25 @@
         "label": "Happy hour",
         "url": "https://www.pendry.com/san-diego/dining/lionfish/",
         "coverage": "sample",
-        "note": "Ask the restaurant for current happy-hour dishes and prices.",
-        "items": []
+        "items": [
+          {
+            "name": "Chicken Karaage",
+            "category": "Food"
+          },
+          {
+            "name": "Peking Duck Bao Buns",
+            "category": "Food"
+          },
+          {
+            "name": "Baked Crab Handrolls",
+            "category": "Food"
+          },
+          {
+            "name": "Fresh oysters",
+            "category": "Food"
+          }
+        ],
+        "note": "Page returned 403 to direct fetch; item names come from a search-result summary of the venue's own Pendry page, which lists these 'and more' with no prices. Summary showed Monday-Friday 5-6 pm, input says Monday-Thursday; confirm. No prices stated on the venue page."
       }
     ],
     "specials": [
@@ -3652,8 +3857,51 @@
       {
         "label": "Happy hour",
         "url": "https://www.ladybluenyc.com/",
-        "coverage": "link",
-        "items": []
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Limoncello Lemon Drop Martini",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "House Margarita",
+            "category": "Drinks",
+            "note": "Passionfruit, strawberry, spicy or dragonfruit add $1",
+            "price": 9
+          },
+          {
+            "name": "Old Fashioned",
+            "category": "Drinks",
+            "price": 9
+          },
+          {
+            "name": "Stella Artois",
+            "category": "Drinks",
+            "price": 6
+          },
+          {
+            "name": "Kona Big Wave Golden Ale",
+            "category": "Drinks",
+            "price": 6
+          },
+          {
+            "name": "Red, white or rosé wine",
+            "category": "Drinks",
+            "price": 9
+          },
+          {
+            "name": "Oysters and Bubbles (dozen oysters and a bottle of prosecco)",
+            "category": "Food",
+            "price": 38
+          },
+          {
+            "name": "Select small plates",
+            "category": "Food",
+            "priceLabel": "$2 off"
+          }
+        ],
+        "note": "Mon-Fri 4-7 pm matches. Site also lists a separate Late Night Happy Hour (Sun-Thu from 10 pm, Fri-Sat from 11 pm): wine $9, Stella $6, Kona $6, Negroni/Manhattan/Margarita $11. The site's happy hour prices differ between sections, so confirm."
       }
     ],
     "specials": [
@@ -3716,16 +3964,68 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.theconsulate.nyc/",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.theconsulate.nyc/food-menu-midtown?menu_id=133213",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Cotes du Rhone (red)",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Cabernet Hussonet Reserve (red)",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Pinot Grigio (white)",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Cava Brut (sparkling)",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Rosé",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Kronenbourg 1664",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "Kronenbourg Blanc",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "IPA",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "Porter",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "Allagash White",
+            "category": "Drinks",
+            "price": 7
+          }
+        ],
+        "note": "Only the items labeled HH Wine and HH Beer are listed. Schedule Mon-Fri 3:30-6:30 pm matches. Cocktails and food are not labeled happy hour on this menu page, so they were left out."
       }
     ],
     "specials": [
       {
         "kind": "other",
         "title": "Happy hour",
-        "description": "Happy-hour food and drink specials. See the restaurant for current prices.",
+        "description": "Happy-hour items and prices as listed on the restaurant’s published menu.",
         "schedule": "Mon, Tue, Wed, Thu, Fri 15:30–18:30 (local time)",
         "conditions": [],
         "sourceUrl": "https://www.theconsulate.nyc/",
@@ -3781,16 +4081,130 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.theconsulate.nyc/",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.theconsulate.nyc/food-menu?menu_id=76897",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Kafta Style Lamb Meatballs",
+            "category": "Food",
+            "price": 19
+          },
+          {
+            "name": "Fig and Gorgonzola Pinza Bread",
+            "category": "Food",
+            "note": "Add prosciutto +$4",
+            "price": 18
+          },
+          {
+            "name": "Wild Mushroom Pinza Bread",
+            "category": "Food",
+            "price": 16
+          },
+          {
+            "name": "Fish & Chips",
+            "category": "Food",
+            "price": 13
+          },
+          {
+            "name": "Escargot (6 pcs)",
+            "category": "Food",
+            "price": 11
+          },
+          {
+            "name": "Oysters (Blue Point)",
+            "category": "Food",
+            "note": "Each, minimum 3",
+            "price": 2
+          },
+          {
+            "name": "Pulled Pork Slider",
+            "category": "Food",
+            "price": 14
+          },
+          {
+            "name": "Crispy Tuna Tacos (3 pcs)",
+            "category": "Food",
+            "price": 12
+          },
+          {
+            "name": "Foie Gras Terrine",
+            "category": "Food",
+            "price": 20
+          },
+          {
+            "name": "NY Pretzel Sticks",
+            "category": "Food",
+            "price": 15
+          },
+          {
+            "name": "Your Love is King",
+            "category": "Drinks",
+            "price": 13
+          },
+          {
+            "name": "Oui Mademoiselle",
+            "category": "Drinks",
+            "price": 14
+          },
+          {
+            "name": "The Consulate Old Fashioned",
+            "category": "Drinks",
+            "price": 13
+          },
+          {
+            "name": "French 85th",
+            "category": "Drinks",
+            "price": 12
+          },
+          {
+            "name": "White wine (Pinot Grigio)",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Red wine (Côtes du Rhône)",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Rosé wine (Provence)",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Sparkling wine (Cava)",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Kronenbourg",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "IPA",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "Porter",
+            "category": "Drinks",
+            "price": 7
+          },
+          {
+            "name": "Allagash White",
+            "category": "Drinks",
+            "price": 7
+          }
+        ],
+        "note": "Page is headed as the UWS happy hour menu, Mon-Fri 3:30-6:30 pm, matching the input."
       }
     ],
     "specials": [
       {
         "kind": "other",
         "title": "Happy hour",
-        "description": "Happy-hour food and drink specials. See the restaurant for current prices.",
+        "description": "Happy-hour items and prices as listed on the restaurant’s published menu.",
         "schedule": "Mon, Tue, Wed, Thu, Fri 15:30–18:30 (local time)",
         "conditions": [],
         "sourceUrl": "https://www.theconsulate.nyc/",
@@ -3847,8 +4261,21 @@
       {
         "label": "Happy hour",
         "url": "https://www.opentable.com/restaurant/profile/1335778",
-        "coverage": "link",
-        "items": []
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Hand rolls (open-style, all flavors)",
+            "category": "Sushi",
+            "note": "Daily specials vary with the fishmonger",
+            "price": 8
+          },
+          {
+            "name": "Highball cocktails",
+            "category": "Drinks",
+            "price": 10
+          }
+        ],
+        "note": "Venue site not reachable; from a search summary of the OpenTable listing (last resort). Listing says every day 5-6:30 pm, matching the input; its offer window reads 17:00-21:45, so confirm hours."
       }
     ],
     "specials": [
@@ -3982,8 +4409,25 @@
       {
         "label": "Happy hour",
         "url": "https://www.opentable.com/restaurant/profile/116389",
-        "coverage": "link",
-        "items": []
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Oysters",
+            "category": "Food",
+            "price": 2.5
+          },
+          {
+            "name": "Burgers",
+            "category": "Food",
+            "price": 19.95
+          },
+          {
+            "name": "Beer",
+            "category": "Drinks",
+            "priceLabel": "From $7.95"
+          }
+        ],
+        "note": "Venue site blocked (403) and no own-domain happy-hour page found; items taken from the OpenTable listing's happy-hour description, so specific burger/beer/oyster varieties are not named."
       }
     ],
     "specials": [
@@ -4143,9 +4587,46 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/77635",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.tinysnyc.com/menus",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Oysters (daily selection)",
+            "category": "Food",
+            "price": 2
+          },
+          {
+            "name": "Tiny's Tipsy Tower (4 oysters, 4 shrimp cocktail, summer ceviche)",
+            "category": "Food",
+            "price": 33
+          },
+          {
+            "name": "Shrimp Cocktail (set of 2)",
+            "category": "Food",
+            "price": 9
+          },
+          {
+            "name": "Tinis & Tots (classic martini and Tiny's tater tots)",
+            "category": "Drinks",
+            "price": 22
+          },
+          {
+            "name": "Parmesan Truffle Fries",
+            "category": "Food",
+            "price": 10
+          },
+          {
+            "name": "Palomarita (hibiscus tequila, grapefruit, lime)",
+            "category": "Drinks",
+            "price": 13
+          },
+          {
+            "name": "House Wine (daily selection)",
+            "category": "Drinks",
+            "price": 11
+          }
+        ],
+        "note": "Venue page says 4-6 PM every day, matching the schedule. Page did not list the sangria mentioned in the OpenTable description."
       }
     ],
     "specials": [
@@ -4396,9 +4877,96 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/188416",
-        "coverage": "link",
-        "items": []
+        "url": "https://boqueriarestaurant.com/location/nyc/soho/",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Pan con Tomato",
+            "category": "Food",
+            "note": "Priced by the piece",
+            "price": 2
+          },
+          {
+            "name": "Croquetas de Jamón",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Croquetas de Setas",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Patatas Bravas",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Patatinas (house potato chips with whipped miti crema)",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Classic Churros (5 pieces)",
+            "category": "Food",
+            "price": 6
+          },
+          {
+            "name": "Serrano Ham Grilled Cheese",
+            "category": "Food",
+            "price": 8
+          },
+          {
+            "name": "Angus Beef Sliders",
+            "category": "Food",
+            "price": 12
+          },
+          {
+            "name": "El Chupito Octo-Shot (tequila, Licor 43, lime; serves six)",
+            "category": "Drinks",
+            "note": "Comes with a free side of Patatinas or Patatas Bravas",
+            "price": 35
+          },
+          {
+            "name": "Octo-Shot, choice of liquor (vodka, gin, tequila, rum or whiskey)",
+            "category": "Drinks",
+            "note": "Comes with a free side of Patatinas or Patatas Bravas",
+            "price": 52
+          },
+          {
+            "name": "Classic or Dirty Martini",
+            "category": "Drinks",
+            "price": 8
+          },
+          {
+            "name": "Espresso Martini",
+            "category": "Drinks",
+            "price": 9
+          },
+          {
+            "name": "Spanish beer (Cerveza)",
+            "category": "Drinks",
+            "price": 6
+          },
+          {
+            "name": "Forget-Me-Not (zero proof)",
+            "category": "Drinks",
+            "price": 6
+          },
+          {
+            "name": "Sangría",
+            "category": "Drinks"
+          },
+          {
+            "name": "Shishito Margarita",
+            "category": "Drinks"
+          },
+          {
+            "name": "House wines (white, rosé, red)",
+            "category": "Drinks"
+          }
+        ],
+        "note": "Venue page schedule is Mon-Fri 3-6pm and Sat-Sun 4-6pm, differing from the input (Mon-Fri 14:30-17:30). Sangría, Shishito Margarita and house wines are listed as happy hour without prices."
       }
     ],
     "specials": [
@@ -4597,9 +5165,31 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.opentable.com/restaurant/profile/109453",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.opentable.com/r/superfine",
+        "coverage": "sample",
+        "items": [
+          {
+            "name": "Tecate",
+            "category": "Drinks",
+            "price": 3
+          },
+          {
+            "name": "Selected draft beer",
+            "category": "Drinks",
+            "price": 5
+          },
+          {
+            "name": "House wine",
+            "category": "Drinks",
+            "price": 6
+          },
+          {
+            "name": "Well cocktails",
+            "category": "Drinks",
+            "price": 6
+          }
+        ],
+        "note": "Superfine's own site (superfine.nyc) lists no happy hour; prices come from the OpenTable listing (last resort) and conflict with the venue's stated hours (closed Mondays, Tue 2-10pm, Wed-Sat 12pm on), so the schedule is unreliable."
       }
     ],
     "specials": [
@@ -5499,8 +6089,25 @@
       {
         "label": "Happy hour",
         "url": "https://www.opentable.com/restaurant/profile/168805",
-        "coverage": "link",
-        "items": []
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Wine by the glass",
+            "category": "Drinks",
+            "priceLabel": "$4 off a glass"
+          },
+          {
+            "name": "Wine carafe",
+            "category": "Drinks",
+            "priceLabel": "$8 off a carafe"
+          },
+          {
+            "name": "Wine bottle",
+            "category": "Drinks",
+            "priceLabel": "$10 off a bottle"
+          }
+        ],
+        "note": "Taken from OpenTable listing summary via search (last resort; venue's own site not found). Soft drinks excluded. Listing showed Sun and Tue-Sat 5:00-6:30 PM (Monday not listed), differing from input schedule."
       }
     ],
     "specials": [
@@ -12634,16 +13241,118 @@
     "menus": [
       {
         "label": "Happy hour",
-        "url": "https://www.bluewatergrill.com/location/coronado/",
-        "coverage": "link",
-        "items": []
+        "url": "https://www.bluewatergrill.com/coronado-menu/#happy-hour-sushi",
+        "coverage": "published",
+        "items": [
+          {
+            "name": "Bottled beer",
+            "category": "Drinks",
+            "price": 6
+          },
+          {
+            "name": "Draft beers",
+            "category": "Drinks",
+            "price": 6.5
+          },
+          {
+            "name": "House cocktails, margaritas, wine and bubbly",
+            "category": "Drinks",
+            "price": 9
+          },
+          {
+            "name": "Handcrafted cocktails",
+            "category": "Drinks",
+            "price": 12
+          },
+          {
+            "name": "House vodka or gin martini",
+            "category": "Drinks",
+            "price": 10
+          },
+          {
+            "name": "Charred edamame",
+            "category": "Small plates",
+            "price": 6
+          },
+          {
+            "name": "Garlic Parmesan fries",
+            "category": "Small plates",
+            "price": 6
+          },
+          {
+            "name": "Crispy calamari strips",
+            "category": "Small plates",
+            "price": 10
+          },
+          {
+            "name": "Blackened fish tacos (two)",
+            "category": "Small plates",
+            "price": 10
+          },
+          {
+            "name": "Firecracker shrimp “tacos” in a lettuce cup (two)",
+            "category": "Small plates",
+            "price": 10
+          },
+          {
+            "name": "Bar burger and fries",
+            "category": "Small plates",
+            "price": 14
+          },
+          {
+            "name": "Steamed clams",
+            "category": "Small plates",
+            "price": 14
+          },
+          {
+            "name": "Baked crab and artichoke dip",
+            "category": "Small plates",
+            "price": 14
+          },
+          {
+            "name": "Oysters on the half shell (four)",
+            "category": "Small plates",
+            "price": 14
+          },
+          {
+            "name": "Kalifornia roll",
+            "category": "Sushi",
+            "price": 9
+          },
+          {
+            "name": "Spicy tuna roll",
+            "category": "Sushi",
+            "price": 10
+          },
+          {
+            "name": "Phoenix roll",
+            "category": "Sushi",
+            "price": 12
+          },
+          {
+            "name": "Spicy Avalon roll",
+            "category": "Sushi",
+            "price": 14
+          },
+          {
+            "name": "Surfrider roll",
+            "category": "Sushi",
+            "price": 16
+          },
+          {
+            "name": "Sashimi trio: salmon, tuna and yellowtail (12 pieces)",
+            "category": "Sushi",
+            "price": 20
+          }
+        ],
+        "note": "Transcribed from the Happy Hour section of the restaurant's published Coronado menu on October 9, 2026. The page lists no happy-hour hours or conditions; the schedule shown comes from the restaurant's location page."
       }
     ],
     "specials": [
       {
         "kind": "other",
         "title": "Happy hour",
-        "description": "Happy-hour food and drink specials. See the restaurant for current prices.",
+        "description": "Happy-hour drinks, small plates and sushi, listed with prices on the published menu.",
         "schedule": "Sun, Mon, Tue, Wed, Thu 15:00–18:00 (local time)",
         "conditions": [],
         "sourceUrl": "https://www.bluewatergrill.com/location/coronado/",
