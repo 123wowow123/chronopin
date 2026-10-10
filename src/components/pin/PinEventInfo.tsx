@@ -82,7 +82,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
 
   // A price list: one panel, status and buy button on top, a row per tier.
   const tierPanel = tiers.length ? (
-    <section className="w-full max-w-md overflow-hidden rounded-xl border border-line bg-raised/40">
+    <section className="w-full overflow-hidden rounded-xl border border-line bg-raised/40">
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line px-4 py-3">
         <div className="flex flex-col gap-0.5">
           <span className="text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.ticketsHeading')}</span>

@@ -108,8 +108,8 @@ export function isAttendableEvent(pin: PinJson): boolean {
 export const VENUE_TAGS = [
   'museum', 'art museum', 'science museum', 'history museum', 'gallery', 'art gallery', 'exhibition', 'planetarium', 'observatory',
   'theme park', 'amusement park', 'water park', 'zoo', 'aquarium', 'garden', 'botanical garden', 'attraction', 'tourist attraction',
-  'stadium', 'arena', 'ballpark', 'amphitheater', 'amphitheatre', 'theater', 'theatre', 'concert hall', 'opera house', 'music venue',
-  'concert venue', 'venue', 'cinema', 'movie theater', 'broadway', 'racetrack', 'speedway', 'casino', 'observation deck', 'landmark',
+  'stadium', 'arena', 'amphitheater', 'amphitheatre', 'theater', 'theatre', 'concert hall', 'opera house', 'music venue',
+  'concert venue', 'venue', 'cinema', 'movie theater', 'racetrack', 'speedway', 'observation deck',
 ];
 
 export function isTicketedVenue(pin: PinJson): boolean {
