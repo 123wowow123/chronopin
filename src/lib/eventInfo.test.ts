@@ -12,6 +12,27 @@ describe('availabilityOf', () => {
   });
 });
 
+describe('eventInfoFromMarkup tiers', () => {
+  it('keeps named offers at different prices as a price list', () => {
+    const info = eventInfoFromMarkup({
+      '@type': 'Event',
+      offers: [
+        { '@type': 'Offer', name: 'Adult', price: '25.00', priceCurrency: 'USD' },
+        { '@type': 'Offer', name: 'Senior (65+)', price: '21.00', priceCurrency: 'USD' },
+      ],
+    });
+    expect(info.tiers).toEqual([
+      { label: 'Adult', price: 25 },
+      { label: 'Senior (65+)', price: 21 },
+    ]);
+    expect([info.lowPrice, info.highPrice]).toEqual([21, 25]);
+  });
+
+  it('has no tiers for one offer', () => {
+    expect(eventInfoFromMarkup({ '@type': 'Event', offers: { name: 'General', price: 10, priceCurrency: 'USD' } }).tiers).toEqual([]);
+  });
+});
+
 describe('eventInfoFromMarkup', () => {
   it('reads performers, a price range, the ticket link and whether it is on sale', () => {
     const info = eventInfoFromMarkup({
