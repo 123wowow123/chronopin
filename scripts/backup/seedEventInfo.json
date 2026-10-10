@@ -6,11 +6,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://la28.org/en/newsroom/la28-unveils-2028-olympic-paralympic-opening-and-closing-ceremony-locations.html",
-    "checkedAt": "2026-09-26T15:38:48.070Z"
+    "source": "hand",
+    "sourceUrl": "https://la28.org/en/newsroom/la28-launches-global-olympic-ticket-sales.html",
+    "checkedAt": "2026-10-10T21:46:01.617Z"
   },
   {
     "pinId": 252,
@@ -19,6 +20,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -32,6 +34,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -45,6 +48,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -58,6 +62,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -76,6 +81,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -170,6 +176,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -192,6 +199,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -205,6 +213,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -218,6 +227,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -231,6 +241,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -244,6 +255,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -257,6 +269,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -287,6 +300,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -309,6 +323,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -322,6 +337,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -335,6 +351,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -348,6 +365,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -361,6 +379,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -374,6 +393,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -387,6 +407,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -400,6 +421,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -413,6 +435,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -426,24 +449,26 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": "PreOrder",
+    "tiers": [],
+    "availability": "InStock",
     "onSaleDate": "2026-10-01T02:00:00.000Z",
-    "source": "session",
-    "sourceUrl": "https://www.rugbyworldcup.com/2027",
-    "checkedAt": "2026-09-26T15:38:48.012Z"
+    "source": "hand",
+    "sourceUrl": "https://www.world.rugby/news/1002155/mens-rugby-world-cup-2027-ticketing-programme-unveiled-a-new-era-of-openness-and-inclusivity",
+    "checkedAt": "2026-10-10T21:46:00.959Z"
   },
   {
     "pinId": 2074,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://tickets.cricketworldcup.com",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-09-26T16:28:31.436Z"
+    "source": "hand",
+    "sourceUrl": "https://www.icc-cricket.com/tournaments/icc-cricket-world-cup-2027/news/icc-men-s-cricket-world-cup-2027-ticket-applications-surpass-one-million",
+    "checkedAt": "2026-10-10T21:46:01.317Z"
   },
   {
     "pinId": 2075,
@@ -452,6 +477,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -474,11 +500,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.rydercup.com",
-    "checkedAt": "2026-09-26T15:38:47.902Z"
+    "source": "hand",
+    "sourceUrl": "https://www.rydercup.com/attend/ticket-information",
+    "checkedAt": "2026-10-10T21:45:59.898Z"
   },
   {
     "pinId": 2077,
@@ -487,6 +514,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -500,6 +528,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -513,6 +542,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -526,6 +556,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -541,14 +572,26 @@
       }
     ],
     "ticketUrl": "https://registration.experientevent.com/showCES271/Wizard/Landing",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 149,
+    "highPrice": 1450,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "through Nov 30; $349 Dec 1-Jan 9",
+        "label": "Standard Pass",
+        "price": 149
+      },
+      {
+        "note": "through Nov 30; $1,750 Dec 1-Jan 9",
+        "label": "Premium Pass",
+        "price": 1450
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.ces.tech/",
-    "checkedAt": "2026-09-26T15:38:45.737Z"
+    "source": "hand",
+    "sourceUrl": "https://www.ces.tech/attendee-guides/registration-information/",
+    "checkedAt": "2026-10-10T21:45:39.579Z"
   },
   {
     "pinId": 2109,
@@ -557,6 +600,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -570,6 +614,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -583,6 +628,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -596,6 +642,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -609,6 +656,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -622,6 +670,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -635,6 +684,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -648,11 +698,32 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": null,
     "checkedAt": "2026-09-26T16:28:32.327Z"
+  },
+  {
+    "pinId": 2274,
+    "performers": [],
+    "ticketUrl": "https://powerhouse.com.au/visit/parramatta",
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "AUD",
+    "tiers": [
+      {
+        "note": "Free; book arrival time. Task Eternal exhibition is separately ticketed, price not found",
+        "label": "General entry (museum and 4 exhibitions)",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://powerhouse.com.au/visit/parramatta",
+    "checkedAt": "2026-10-10T21:46:02.361Z"
   },
   {
     "pinId": 2318,
@@ -667,6 +738,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -686,6 +758,7 @@
     "lowPrice": 193.57,
     "highPrice": 448.45,
     "priceCurrency": "AUD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -705,6 +778,7 @@
     "lowPrice": 193.57,
     "highPrice": 448.45,
     "priceCurrency": "AUD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -724,6 +798,7 @@
     "lowPrice": 193.57,
     "highPrice": 448.45,
     "priceCurrency": "AUD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -737,6 +812,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -750,6 +826,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -759,15 +836,63 @@
   {
     "pinId": 2379,
     "performers": [],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "ticketUrl": "https://www.comic-con.org/cc/badges/",
+    "lowPrice": 34,
+    "highPrice": 88,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "only with Thu-Sun badges",
+        "label": "Adult - Wednesday Preview Night",
+        "price": 67
+      },
+      {
+        "label": "Adult - Thursday",
+        "price": 88
+      },
+      {
+        "label": "Adult - Friday",
+        "price": 88
+      },
+      {
+        "label": "Adult - Saturday",
+        "price": 88
+      },
+      {
+        "label": "Adult - Sunday",
+        "price": 67
+      },
+      {
+        "label": "Junior / U.S. Military / Senior - Preview Night",
+        "price": 34
+      },
+      {
+        "label": "Junior / U.S. Military / Senior - Thursday",
+        "price": 44
+      },
+      {
+        "label": "Junior / U.S. Military / Senior - Friday",
+        "price": 44
+      },
+      {
+        "label": "Junior / U.S. Military / Senior - Saturday",
+        "price": 44
+      },
+      {
+        "label": "Junior / U.S. Military / Senior - Sunday",
+        "price": 34
+      },
+      {
+        "note": "free with paying adult",
+        "label": "Child (12 and under)",
+        "price": 0
+      }
+    ],
     "availability": "PreOrder",
-    "onSaleDate": "2026-11-14T00:00:00.000Z",
-    "source": "session",
-    "sourceUrl": "https://www.thepopverse.com/comics-movies-tv-gaming-literary-comic-con-san-diego-international-2027-dates-badges-tickets-guests",
-    "checkedAt": "2026-09-26T15:38:47.788Z"
+    "onSaleDate": "2026-10-17T00:00:00.000Z",
+    "source": "hand",
+    "sourceUrl": "https://www.comic-con.org/cc/badges/",
+    "checkedAt": "2026-10-10T21:45:57.280Z"
   },
   {
     "pinId": 2382,
@@ -776,6 +901,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -789,6 +915,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -802,11 +929,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://ausopen.com/",
-    "checkedAt": "2026-09-26T15:38:45.902Z"
+    "source": "hand",
+    "sourceUrl": "https://www.ticketmaster.com.au/ausopen",
+    "checkedAt": "2026-10-10T21:45:43.161Z"
   },
   {
     "pinId": 2481,
@@ -815,11 +943,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://ausopen.com/",
-    "checkedAt": "2026-09-26T15:38:45.848Z"
+    "source": "hand",
+    "sourceUrl": "https://www.ticketmaster.com.au/ausopen",
+    "checkedAt": "2026-10-10T21:45:42.759Z"
   },
   {
     "pinId": 2482,
@@ -828,6 +957,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -841,6 +971,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -854,11 +985,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.wimbledon.com/en_GB/atoz/dates.html",
-    "checkedAt": "2026-09-26T15:38:47.689Z"
+    "checkedAt": "2026-10-10T21:45:56.500Z"
   },
   {
     "pinId": 2485,
@@ -867,11 +999,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.wimbledon.com/en_GB/atoz/dates.html",
-    "checkedAt": "2026-09-26T15:38:47.636Z"
+    "checkedAt": "2026-10-10T21:45:56.169Z"
   },
   {
     "pinId": 2486,
@@ -880,6 +1013,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -893,6 +1027,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -902,15 +1037,16 @@
   {
     "pinId": 2494,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://ticketing.formula1.com/tickets/en/bahrain/general-admission-f1-sakhir",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": null,
+    "tiers": [],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-09-26T16:28:29.075Z"
+    "source": "hand",
+    "sourceUrl": "https://ticketing.formula1.com/tickets/en/bahrain/general-admission-f1-sakhir",
+    "checkedAt": "2026-10-10T21:45:47.058Z"
   },
   {
     "pinId": 2495,
@@ -919,24 +1055,26 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://ticketing.formula1.com/saudi-arabia/",
-    "checkedAt": "2026-09-26T16:28:29.127Z"
+    "source": "hand",
+    "sourceUrl": "https://ticketing.formula1.com/tickets/en/saudi-arabia/general-admission-f1-jeddah-corniche-circuit",
+    "checkedAt": "2026-10-10T21:45:47.773Z"
   },
   {
     "pinId": 2496,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://www.grandprix.com.au/en/tickets/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": "2026-10-06T01:00:00.000Z",
-    "source": "session",
-    "sourceUrl": "https://www.grandprix.com.au/en/news/4577322/formula-1-australian-grand-prix-2027-dates-confirmed-with-debut-of-sprint-race",
-    "checkedAt": "2026-09-26T16:28:29.181Z"
+    "source": "hand",
+    "sourceUrl": "https://www.grandprix.com.au/",
+    "checkedAt": "2026-10-10T21:45:49.121Z"
   },
   {
     "pinId": 2497,
@@ -945,6 +1083,7 @@
     "lowPrice": 22000,
     "highPrice": 1400000,
     "priceCurrency": "JPY",
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": "2026-11-15T02:00:00.000Z",
     "source": "session",
@@ -954,15 +1093,16 @@
   {
     "pinId": 2498,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://ticketing.formula1.com/china/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": null,
+    "tiers": [],
+    "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-09-26T16:28:29.390Z"
+    "source": "hand",
+    "sourceUrl": "https://ticketing.formula1.com/china/",
+    "checkedAt": "2026-10-10T21:45:51.241Z"
   },
   {
     "pinId": 2499,
@@ -971,11 +1111,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://f1miamigp.com/news/press-release/tickets-on-sale-2027/",
-    "checkedAt": "2026-09-26T16:28:29.495Z"
+    "source": "hand",
+    "sourceUrl": "https://f1miamigp.com/tickets/",
+    "checkedAt": "2026-10-10T21:45:52.659Z"
   },
   {
     "pinId": 2500,
@@ -984,24 +1125,26 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://gpcanada.ca/en/2027-tickets/",
-    "checkedAt": "2026-09-26T16:28:29.665Z"
+    "checkedAt": "2026-10-10T21:45:54.079Z"
   },
   {
     "pinId": 2501,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://ticketing.formula1.com/monaco/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": "PreOrder",
+    "tiers": [],
+    "availability": "InStock",
     "onSaleDate": "2026-10-01T00:00:00.000Z",
-    "source": "session",
-    "sourceUrl": "https://acm.mc/en/a-sprint-weekend-in-2027/",
-    "checkedAt": "2026-09-26T16:28:30.173Z"
+    "source": "hand",
+    "sourceUrl": "https://ticketing.formula1.com/monaco/",
+    "checkedAt": "2026-10-10T21:45:54.385Z"
   },
   {
     "pinId": 2502,
@@ -1010,6 +1153,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -1023,11 +1167,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.silverstone.co.uk/events/formula-1-british-grand-prix/tickets",
-    "checkedAt": "2026-09-26T16:28:30.444Z"
+    "checkedAt": "2026-10-10T21:45:55.802Z"
   },
   {
     "pinId": 2504,
@@ -1036,6 +1181,7 @@
     "lowPrice": 155,
     "highPrice": 750,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -1046,14 +1192,15 @@
     "pinId": 2505,
     "performers": [],
     "ticketUrl": "https://www.spagrandprix.com/en/billetterie",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 90,
+    "highPrice": 1182,
+    "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.spagrandprix.com/en/billetterie",
-    "checkedAt": "2026-09-26T16:28:30.609Z"
+    "checkedAt": "2026-10-10T21:45:57.657Z"
   },
   {
     "pinId": 2506,
@@ -1062,6 +1209,7 @@
     "lowPrice": 155,
     "highPrice": 1950,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -1075,6 +1223,7 @@
     "lowPrice": 50,
     "highPrice": 1614,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -1084,15 +1233,16 @@
   {
     "pinId": 2508,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://ticketing.formula1.com/madrid-spain/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": "PreOrder",
+    "tiers": [],
+    "availability": "InStock",
     "onSaleDate": "2026-09-29T15:00:00.000Z",
-    "source": "session",
-    "sourceUrl": "https://www.madring.com/en/press-releases/pre-sale-amex",
-    "checkedAt": "2026-09-26T16:28:31.228Z"
+    "source": "hand",
+    "sourceUrl": "https://ticketing.formula1.com/madrid-spain/",
+    "checkedAt": "2026-10-10T21:45:59.521Z"
   },
   {
     "pinId": 2509,
@@ -1101,6 +1251,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1114,6 +1265,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1127,6 +1279,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1140,6 +1293,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -1153,6 +1307,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1166,6 +1321,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1179,6 +1335,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1192,6 +1349,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1205,6 +1363,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1218,6 +1377,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1231,6 +1391,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1244,6 +1405,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1257,6 +1419,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -1279,11 +1442,100 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
     "sourceUrl": "https://www.skysports.com/boxing/news/13584326/tyson-fury-vs-anthony-joshua-british-heavyweight-showdown-set-for-cardiff-s-principality-stadium-on-december-11",
     "checkedAt": "2026-09-26T15:38:45.305Z"
+  },
+  {
+    "pinId": 2544,
+    "performers": [],
+    "ticketUrl": "https://www.lacma.org/tickets",
+    "lowPrice": 15,
+    "highPrice": 30,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Adults",
+        "price": 30
+      },
+      {
+        "note": "With valid ID",
+        "label": "Adults, L.A. County residents",
+        "price": 25
+      },
+      {
+        "note": "With ID; $21 for L.A. County residents",
+        "label": "Seniors (65+)",
+        "price": 26
+      },
+      {
+        "note": "With ID; $21 for L.A. County residents",
+        "label": "Students (18+)",
+        "price": 26
+      },
+      {
+        "note": "$21 for L.A. County residents",
+        "label": "Visitors with disability",
+        "price": 26
+      },
+      {
+        "note": "Free for L.A. County residents",
+        "label": "Teens (13–17)",
+        "price": 15
+      },
+      {
+        "note": "Free for L.A. County residents",
+        "label": "Youth (3–12)",
+        "price": 15
+      },
+      {
+        "label": "Youth (2 & under)",
+        "price": 0
+      },
+      {
+        "label": "Members",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.lacma.org/tickets",
+    "checkedAt": "2026-10-10T21:30:59.006Z"
+  },
+  {
+    "pinId": 2545,
+    "performers": [],
+    "ticketUrl": "https://www.lucasmuseum.org/tickets",
+    "lowPrice": 21,
+    "highPrice": 25,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Adult",
+        "price": 25
+      },
+      {
+        "label": "Senior (65+)",
+        "price": 21
+      },
+      {
+        "label": "Children (17 and under)",
+        "price": 0
+      },
+      {
+        "label": "Members",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.lucasmuseum.org/plan-your-visit",
+    "checkedAt": "2026-10-10T21:16:13.547Z"
   },
   {
     "pinId": 2859,
@@ -1297,6 +1549,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1323,11 +1576,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.hpe.com/us/en/discover/barcelona.html",
-    "checkedAt": "2026-09-26T15:38:45.031Z"
+    "source": "hand",
+    "sourceUrl": "https://www.hpe.com/us/en/discover/barcelona/registration.html",
+    "checkedAt": "2026-10-10T21:45:35.106Z"
   },
   {
     "pinId": 2863,
@@ -1336,6 +1590,7 @@
     "lowPrice": 250,
     "highPrice": 810,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -1411,14 +1666,26 @@
       }
     ],
     "ticketUrl": "https://register.ignite.microsoft.com/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 1625,
+    "highPrice": 2325,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "in person + online, Nov 17-20",
+        "label": "Full Conference pass",
+        "price": 2325
+      },
+      {
+        "note": "in person + online, Nov 17-19",
+        "label": "Hub Conference pass",
+        "price": 1625
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://ignite.microsoft.com/en-US/home",
-    "checkedAt": "2026-09-26T15:38:44.498Z"
+    "source": "hand",
+    "sourceUrl": "https://register.ignite.microsoft.com/",
+    "checkedAt": "2026-10-10T21:45:27.125Z"
   },
   {
     "pinId": 2886,
@@ -1432,6 +1699,7 @@
     "lowPrice": 2499,
     "highPrice": 2499,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -1470,11 +1738,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.nvidia.com/en-eu/gtc/",
-    "checkedAt": "2026-09-26T16:28:32.812Z"
+    "checkedAt": "2026-10-10T21:45:21.261Z"
   },
   {
     "pinId": 2953,
@@ -1485,14 +1754,31 @@
       }
     ],
     "ticketUrl": "https://register.nvidia.com/flow/nvidia/gtcdc26/reg",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 375,
+    "highPrice": 899,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "Tue-Thu",
+        "label": "Conference Pass",
+        "price": 899
+      },
+      {
+        "note": "Tue-Thu",
+        "label": "Exhibits Only",
+        "price": 375
+      },
+      {
+        "note": "Monday",
+        "label": "Full-Day Workshop",
+        "price": 395
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.nvidia.com/gtc/dc/faq",
-    "checkedAt": "2026-09-26T15:38:44.973Z"
+    "source": "hand",
+    "sourceUrl": "https://www.nvidia.com/en-us/gtc/dc/pricing/",
+    "checkedAt": "2026-10-10T21:45:34.713Z"
   },
   {
     "pinId": 2954,
@@ -1501,6 +1787,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -1527,6 +1814,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1540,6 +1828,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1562,6 +1851,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1592,6 +1882,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1622,6 +1913,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1635,6 +1927,7 @@
     "lowPrice": 295,
     "highPrice": 295,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -1648,6 +1941,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1661,6 +1955,7 @@
     "lowPrice": 295,
     "highPrice": 295,
     "priceCurrency": "GBP",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -1674,6 +1969,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1687,6 +1983,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -1700,6 +1997,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1713,6 +2011,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1726,6 +2025,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1756,6 +2056,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1818,6 +2119,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1912,6 +2214,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1925,6 +2228,7 @@
     "lowPrice": 270,
     "highPrice": 270,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1938,11 +2242,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.formula1.com/en/latest/article/f1-to-race-in-las-vegas-through-2037-following-new-10-year-extension.5I6G8MKSr2U2rabMaZP10R",
-    "checkedAt": "2026-09-26T15:38:44.807Z"
+    "source": "hand",
+    "sourceUrl": "https://www.8newsnow.com/sports/vegas-full-throttle/f1-las-vegas-grand-prix-ticket-prices-for-2026-begin-at-50-3-day-general-admission-from-492/amp/",
+    "checkedAt": "2026-10-10T21:45:29.404Z"
   },
   {
     "pinId": 3173,
@@ -1960,6 +2265,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -1982,6 +2288,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2004,6 +2311,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2013,15 +2321,22 @@
   {
     "pinId": 3195,
     "performers": [],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
+    "ticketUrl": "https://www.tickettailor.com/events/headofthecharles",
+    "lowPrice": 25,
+    "highPrice": 25,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "per day",
+        "label": "Riverbender admission",
+        "price": 25
+      }
+    ],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://hocr.org/",
-    "checkedAt": "2026-09-26T16:28:27.988Z"
+    "source": "hand",
+    "sourceUrl": "https://hocr.org/spectators/where-to-watch/",
+    "checkedAt": "2026-10-10T21:45:19.989Z"
   },
   {
     "pinId": 3206,
@@ -2091,6 +2406,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2104,6 +2420,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2126,6 +2443,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2139,6 +2457,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2189,6 +2508,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2219,6 +2539,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2253,6 +2574,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2275,6 +2597,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2595,6 +2918,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -2757,6 +3081,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -2781,6 +3106,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2832,6 +3158,7 @@
     "lowPrice": 75,
     "highPrice": 1199,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -2841,15 +3168,36 @@
   {
     "pinId": 3303,
     "performers": [],
-    "ticketUrl": "https://www.ticketmaster.com/national-finals-rodeo-tickets/artist/804200",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "ticketUrl": "https://www.axs.com/events/1567526/2026-nfr-tickets",
+    "lowPrice": 80,
+    "highPrice": 783,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Balcony - single performance",
+        "price": 130.5
+      },
+      {
+        "note": "first four performances; sold out",
+        "label": "Balcony - 4-day pack",
+        "price": 522
+      },
+      {
+        "note": "last six performances; sold out",
+        "label": "Balcony - 6-day pack",
+        "price": 783
+      },
+      {
+        "note": "arena entry, no seat; all fees included",
+        "label": "NFR Access ONLY",
+        "price": 80
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.visitlasvegas.com/nfr/",
-    "checkedAt": "2026-09-26T15:38:45.166Z"
+    "source": "hand",
+    "sourceUrl": "https://aws.nfrexperience.com/ticket_faqs",
+    "checkedAt": "2026-10-10T21:45:35.842Z"
   },
   {
     "pinId": 3308,
@@ -2867,6 +3215,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2880,6 +3229,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2910,6 +3260,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2923,6 +3274,7 @@
     "lowPrice": 69,
     "highPrice": 109,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -2936,6 +3288,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -2949,6 +3302,7 @@
     "lowPrice": 50,
     "highPrice": 1575,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -2962,11 +3316,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://sfoutsidelands.com/tickets/",
-    "checkedAt": "2026-09-26T16:28:30.857Z"
+    "source": "hand",
+    "sourceUrl": "https://sfoutsidelands.com/tickets",
+    "checkedAt": "2026-10-10T21:45:58.373Z"
   },
   {
     "pinId": 3327,
@@ -2975,11 +3330,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://poinsettiabowl.com/",
-    "checkedAt": "2026-09-26T15:38:45.361Z"
+    "checkedAt": "2026-10-10T21:45:37.080Z"
   },
   {
     "pinId": 3331,
@@ -2988,11 +3344,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://holidaybowl.com/",
-    "checkedAt": "2026-09-26T15:38:45.417Z"
+    "source": "hand",
+    "sourceUrl": "https://holidaybowl.com/tickets/game-tickets/",
+    "checkedAt": "2026-10-10T21:45:38.420Z"
   },
   {
     "pinId": 3334,
@@ -3001,6 +3358,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -3014,11 +3372,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.visitlasvegas.com/cfp2027/",
-    "checkedAt": "2026-09-26T15:38:45.792Z"
+    "source": "hand",
+    "sourceUrl": "https://collegefootballplayoff.com/sports/2018/9/25/cfp-tickets.aspx",
+    "checkedAt": "2026-10-10T21:45:42.065Z"
   },
   {
     "pinId": 3337,
@@ -3036,6 +3395,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3074,6 +3434,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3087,6 +3448,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3125,6 +3487,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -3138,6 +3501,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3172,11 +3536,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://us.money2020.com/",
-    "checkedAt": "2026-09-26T15:38:44.001Z"
+    "checkedAt": "2026-10-10T21:45:20.832Z"
   },
   {
     "pinId": 3409,
@@ -3185,6 +3550,7 @@
     "lowPrice": 75,
     "highPrice": 100,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -3198,6 +3564,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -3211,6 +3578,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3224,6 +3592,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -3233,15 +3602,54 @@
   {
     "pinId": 3434,
     "performers": [],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": "PreOrder",
-    "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.ciscolive.com/global.html",
-    "checkedAt": "2026-09-26T15:38:47.367Z"
+    "ticketUrl": "https://www.ciscolive.com/global/attend/registration-packages.html",
+    "lowPrice": 895,
+    "highPrice": 3595,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "Launch sale: Full Conference $2,595 with code CL27SAVE600 until 10/31",
+        "label": "Full Conference - Advance",
+        "price": 2795
+      },
+      {
+        "label": "Full Conference - Standard",
+        "price": 2995
+      },
+      {
+        "label": "Full Conference - Late",
+        "price": 3195
+      },
+      {
+        "label": "IT Leadership - Advance",
+        "price": 3195
+      },
+      {
+        "label": "IT Leadership - Standard",
+        "price": 3395
+      },
+      {
+        "label": "IT Leadership - Late",
+        "price": 3595
+      },
+      {
+        "label": "Explorer - Advance",
+        "price": 895
+      },
+      {
+        "label": "Explorer - Standard",
+        "price": 995
+      },
+      {
+        "label": "Explorer - Late",
+        "price": 1095
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": "2026-10-06T09:00:00.000Z",
+    "source": "hand",
+    "sourceUrl": "https://www.ciscolive.com/global/attend/registration-packages.html",
+    "checkedAt": "2026-10-10T21:45:54.749Z"
   },
   {
     "pinId": 3435,
@@ -3250,6 +3658,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3263,6 +3672,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3282,6 +3692,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -3295,6 +3706,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3308,6 +3720,7 @@
     "lowPrice": 399.99,
     "highPrice": 1699.99,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3321,6 +3734,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3343,6 +3757,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3369,6 +3784,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3391,6 +3807,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3404,6 +3821,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3427,14 +3845,35 @@
       }
     ],
     "ticketUrl": "https://www.oracle.com/ai-world/register/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 1399,
+    "highPrice": 2399,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "available until Oct 28",
+        "label": "General attendee",
+        "price": 2399
+      },
+      {
+        "note": "5+ attendees from one company; until Oct 28",
+        "label": "Group pass",
+        "price": 1899
+      },
+      {
+        "note": "public sector employees; $1,099 without The Party",
+        "label": "Public sector",
+        "price": 1399
+      },
+      {
+        "label": "Oracle AI World On Air (livestream)",
+        "price": 0
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.oracle.com/ai-world/",
-    "checkedAt": "2026-09-26T15:38:44.220Z"
+    "source": "hand",
+    "sourceUrl": "https://www.oracle.com/ai-world/register/",
+    "checkedAt": "2026-10-10T21:45:23.194Z"
   },
   {
     "pinId": 3497,
@@ -3448,6 +3887,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3472,6 +3912,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -3482,14 +3923,26 @@
     "pinId": 3512,
     "performers": [],
     "ticketUrl": "https://fest.afi.com/passes/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 300,
+    "highPrice": 600,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "all screenings incl. Red Carpet Premieres, 2 tickets each premiere",
+        "label": "Patron Pass",
+        "price": 600
+      },
+      {
+        "note": "all screenings except Red Carpet Premieres",
+        "label": "Star Pass",
+        "price": 300
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.afi.com/press/afi-fest-announces-2026-passes-now-on-sale/",
-    "checkedAt": "2026-09-26T16:28:28.237Z"
+    "source": "hand",
+    "sourceUrl": "https://fest.afi.com/passes/",
+    "checkedAt": "2026-10-10T21:45:22.141Z"
   },
   {
     "pinId": 3513,
@@ -3503,6 +3956,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3513,27 +3967,116 @@
     "pinId": 3517,
     "performers": [],
     "ticketUrl": "https://www.eventim.com/campaign/la-auto-show",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 9,
+    "highPrice": 95,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Any Day - Adult (13+)",
+        "price": 25
+      },
+      {
+        "label": "Any Day - Senior (65+)",
+        "price": 13
+      },
+      {
+        "label": "Any Day - Child (6-12)",
+        "price": 13
+      },
+      {
+        "label": "Opening Day Nov 20 - Adult",
+        "price": 20
+      },
+      {
+        "label": "Opening Day Nov 20 - Senior/Child",
+        "price": 9
+      },
+      {
+        "label": "Weekdays Only Nov 23-26 - Adult",
+        "price": 22
+      },
+      {
+        "label": "Weekdays Only Nov 23-26 - Senior/Child",
+        "price": 11
+      },
+      {
+        "label": "Weekend Priority Entry - Adult",
+        "price": 45
+      },
+      {
+        "label": "Weekend Priority Entry - Senior/Child",
+        "price": 23
+      },
+      {
+        "note": "flat price for four",
+        "label": "Family Four Pack Nov 25-26",
+        "price": 66
+      },
+      {
+        "label": "VIP Guided Tour - Adult",
+        "price": 95
+      },
+      {
+        "label": "VIP Guided Tour - Child",
+        "price": 45
+      },
+      {
+        "note": "free with Any Day admission",
+        "label": "Children under 6",
+        "price": 0
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://laautoshow.com/",
-    "checkedAt": "2026-09-26T15:38:44.753Z"
+    "source": "hand",
+    "sourceUrl": "https://www.theautochannel.com/news/2026/08/04/1699803-los-angeles-auto-show-tickets-now-sale-ten-days-hundreds.html",
+    "checkedAt": "2026-10-10T21:45:28.685Z"
   },
   {
     "pinId": 3522,
     "performers": [],
-    "ticketUrl": "https://sharpseating.com/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "ticketUrl": "https://tickets.sharpseating.com/tickets",
+    "lowPrice": 82,
+    "highPrice": 133,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "range $120-$133",
+        "label": "Area 1, S. Orange Grove Blvd.",
+        "price": 120
+      },
+      {
+        "label": "Area 1, W. Colorado Blvd. A",
+        "price": 133
+      },
+      {
+        "label": "Area 1, W. Colorado Blvd. B",
+        "price": 133
+      },
+      {
+        "label": "Area 2, E. Colorado Blvd.",
+        "price": 103
+      },
+      {
+        "note": "range $92-$103",
+        "label": "Area 3, E. Colorado Blvd.",
+        "price": 92
+      },
+      {
+        "note": "range $82-$103",
+        "label": "Area 4, E. Colorado Blvd.",
+        "price": 82
+      },
+      {
+        "label": "Area 5, E. Colorado Blvd.",
+        "price": 82
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.visitpasadena.com/events/annual-events/rose-parade-guide/",
-    "checkedAt": "2026-09-26T15:38:45.585Z"
+    "source": "hand",
+    "sourceUrl": "https://tickets.sharpseating.com/tickets",
+    "checkedAt": "2026-10-10T21:45:38.808Z"
   },
   {
     "pinId": 3528,
@@ -3542,6 +4085,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3551,28 +4095,30 @@
   {
     "pinId": 3529,
     "performers": [],
-    "ticketUrl": "https://collegefootballplayoff.com/sports/2021/9/7/rose-bowl",
+    "ticketUrl": "https://www.ticketmaster.com/rose-bowl-game-pasadena-california-01-01-2027/event/0B0065155D6716B6",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": null,
-    "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://collegefootballplayoff.com/sports/2024/7/1/schedule",
-    "checkedAt": "2026-09-26T15:38:45.528Z"
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": "2026-09-02T16:00:00.000Z",
+    "source": "hand",
+    "sourceUrl": "https://rosebowlgame.com/news/2026/9/1/general-the-pasadena-tournament-of-roses-announces-public-ticket-sale-for-the-2027-cfp-quarterfinal-at-the-rose-bowl-game-presented-by-prudential.aspx",
+    "checkedAt": "2026-10-10T21:45:39.155Z"
   },
   {
     "pinId": 3533,
     "performers": [],
-    "ticketUrl": "https://www.mccourtfoundation.org/event/los-angeles-marathon/register/#register",
+    "ticketUrl": "https://www.mccourtfoundation.org/event/los-angeles-marathon/register/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.mccourtfoundation.org/event/los-angeles-marathon/",
-    "checkedAt": "2026-09-26T15:38:46.496Z"
+    "source": "hand",
+    "sourceUrl": "https://www.mccourtfoundation.org/event/los-angeles-marathon/register/",
+    "checkedAt": "2026-10-10T21:45:46.110Z"
   },
   {
     "pinId": 3534,
@@ -3581,6 +4127,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3594,6 +4141,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "GBP",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -3607,11 +4155,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.visitlongbeach.com/events/acura-grand-prix-of-long-beach/",
-    "checkedAt": "2026-09-26T15:38:47.026Z"
+    "source": "hand",
+    "sourceUrl": "https://www.gplb.com/tickets",
+    "checkedAt": "2026-10-10T21:45:50.933Z"
   },
   {
     "pinId": 3540,
@@ -3620,6 +4169,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3633,6 +4183,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3659,28 +4210,30 @@
         "type": "Person"
       }
     ],
-    "ticketUrl": "https://www.salesforce.com/jp/events/world-tour/tokyo/register/?pr=https%3A%2F%2Fwww.salesforce.com%2Fjp%2Fevents%2Fworld-tour%2Ftokyo%2F&d=7010M000002Mw7OQAS&utm_agent_cohort=qualified",
+    "ticketUrl": "https://www.salesforce.com/jp/events/world-tour/tokyo/register/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.salesforce.com/jp/events/world-tour/tokyo/",
-    "checkedAt": "2026-09-26T15:38:44.637Z"
+    "checkedAt": "2026-10-10T21:45:28.386Z"
   },
   {
     "pinId": 3550,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://reg.salesforce.com/flow/plus/wtmunich26/reg/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.salesforce.com/de/events/munich/",
-    "checkedAt": "2026-09-26T15:38:44.861Z"
+    "checkedAt": "2026-10-10T21:45:30.868Z"
   },
   {
     "pinId": 3553,
@@ -3689,6 +4242,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -3702,6 +4256,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "session",
@@ -3715,6 +4270,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3761,6 +4317,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3931,6 +4488,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -3953,6 +4511,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4022,6 +4581,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4032,14 +4592,43 @@
     "pinId": 3631,
     "performers": [],
     "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 449,
+    "highPrice": 899,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Individual Pass",
+        "price": 699
+      },
+      {
+        "label": "Individual Pass saver",
+        "price": 799
+      },
+      {
+        "label": "Individual Pass late",
+        "price": 899
+      },
+      {
+        "note": "per person, min 3 from same company",
+        "label": "Group Pass",
+        "price": 599
+      },
+      {
+        "note": "2025/2026 general attendees",
+        "label": "Alumni Pass",
+        "price": 599
+      },
+      {
+        "note": "with attendee party; $449 without",
+        "label": "Public Sector",
+        "price": 499
+      }
+    ],
     "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://www.oracle.com/javaone/",
-    "checkedAt": "2026-09-26T15:38:46.799Z"
+    "checkedAt": "2026-10-10T21:45:48.066Z"
   },
   {
     "pinId": 3655,
@@ -4061,6 +4650,7 @@
     "lowPrice": 54.98,
     "highPrice": 109.42,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -4074,6 +4664,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4084,14 +4675,21 @@
     "pinId": 3662,
     "performers": [],
     "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "free, no tickets; first come first served",
+        "label": "Public viewing",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": null,
-    "checkedAt": "2026-09-26T16:28:28.632Z"
+    "source": "hand",
+    "sourceUrl": "https://www.rockefellercenter.com/es-us/holidays/rockefeller-center-christmas-tree/",
+    "checkedAt": "2026-10-10T21:45:35.418Z"
   },
   {
     "pinId": 3666,
@@ -4100,6 +4698,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -4130,6 +4729,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4193,14 +4793,21 @@
       }
     ],
     "ticketUrl": "https://event.attendstar.com/event/show/san-francisco-fleet-week-2026/?c=ICYMC3",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "free, Oct 9-11 12:00-16:00",
+        "label": "General Admission",
+        "price": 0
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "hand",
     "sourceUrl": "https://fleetweeksf.org/air-show/",
-    "checkedAt": "2026-09-26T15:38:43.774Z"
+    "checkedAt": "2026-10-10T21:45:15.186Z"
   },
   {
     "pinId": 3690,
@@ -4209,6 +4816,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -4222,6 +4830,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4248,6 +4857,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4261,6 +4871,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4279,6 +4890,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4292,6 +4904,7 @@
     "lowPrice": 2500,
     "highPrice": 2500,
     "priceCurrency": "INR",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "session",
@@ -4305,6 +4918,7 @@
     "lowPrice": 1800,
     "highPrice": 1800,
     "priceCurrency": "PHP",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "session",
@@ -4318,6 +4932,7 @@
     "lowPrice": 150,
     "highPrice": 150,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "session",
@@ -4331,6 +4946,7 @@
     "lowPrice": 45,
     "highPrice": 45,
     "priceCurrency": "GBP",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "session",
@@ -4344,6 +4960,7 @@
     "lowPrice": 1000,
     "highPrice": 1000,
     "priceCurrency": "MXN",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "session",
@@ -4357,6 +4974,7 @@
     "lowPrice": 120,
     "highPrice": 120,
     "priceCurrency": "AUD",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "session",
@@ -4375,6 +4993,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4393,6 +5012,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4411,6 +5031,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4437,6 +5058,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4459,6 +5081,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4481,6 +5104,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4503,6 +5127,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4525,6 +5150,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4538,6 +5164,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -4551,6 +5178,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4573,6 +5201,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4595,6 +5224,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4617,6 +5247,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4647,11 +5278,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.wtatennis.com/news/4528823/wta-announces-indian-wells-as-host-of-the-2026-wta-finals",
-    "checkedAt": "2026-09-26T15:38:44.440Z"
+    "source": "hand",
+    "sourceUrl": "https://www.wtatennis.com/news/4526239/how-to-get-tickets-for-the-2026-wta-finals-in-indian-wells",
+    "checkedAt": "2026-10-10T21:45:26.147Z"
   },
   {
     "pinId": 4052,
@@ -4660,6 +5292,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4706,6 +5339,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "session",
@@ -4719,6 +5353,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -4729,14 +5364,21 @@
     "pinId": 4335,
     "performers": [],
     "ticketUrl": "https://meetings.ausa.org/annual/2026/Badge_Registration_ticket_sales_2026.cfm",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "free but registration required",
+        "label": "Annual Meeting attendance (badge)",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://meetings.ausa.org/annual/2026/index.cfm",
-    "checkedAt": "2026-09-29T14:02:14.565Z"
+    "source": "hand",
+    "sourceUrl": "https://meetings.ausa.org/annual/2026/Badge_Registration_ticket_sales_2026.cfm",
+    "checkedAt": "2026-10-10T21:45:18.784Z"
   },
   {
     "pinId": 4336,
@@ -4745,6 +5387,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -4758,6 +5401,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -4767,15 +5411,16 @@
   {
     "pinId": 4338,
     "performers": [],
-    "ticketUrl": "https://registration.xporience.com/registration/?badge_name=visitor&token=iqxdPZS109Fjyss",
+    "ticketUrl": "https://www.idexuae.ae/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.idexuae.ae/",
-    "checkedAt": "2026-10-07T14:22:54.591Z"
+    "checkedAt": "2026-10-10T21:45:41.709Z"
   },
   {
     "pinId": 4339,
@@ -4784,6 +5429,7 @@
     "lowPrice": 20,
     "highPrice": 5000,
     "priceCurrency": "INR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -4797,11 +5443,40 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": null,
+    "tiers": [],
+    "availability": "SoldOut",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.coachella.com/passes",
+    "checkedAt": "2026-10-10T21:45:50.198Z"
+  },
+  {
+    "pinId": 4354,
+    "performers": [],
+    "ticketUrl": "http://glastonbury.seetickets.com/",
+    "lowPrice": 408,
+    "highPrice": 408,
+    "priceCurrency": "GBP",
+    "tiers": [],
+    "availability": "SoldOut",
     "onSaleDate": null,
     "source": "claude",
-    "sourceUrl": "https://www.coachella.com/",
-    "checkedAt": "2026-10-07T14:33:32.056Z"
+    "sourceUrl": "https://www.glastonburyfestivals.co.uk/news/glastonbury-2027-ticket-information-confirmed/",
+    "checkedAt": "2026-10-09T14:25:24.921Z"
+  },
+  {
+    "pinId": 4356,
+    "performers": [],
+    "ticketUrl": "https://www.primaverasound.com/en/tickets",
+    "lowPrice": 275,
+    "highPrice": 545,
+    "priceCurrency": "EUR",
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.primaverasound.com/en/barcelona",
+    "checkedAt": "2026-10-09T14:24:03.594Z"
   },
   {
     "pinId": 4361,
@@ -4821,6 +5496,7 @@
     "lowPrice": 11800,
     "highPrice": 149800,
     "priceCurrency": "JPY",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "session",
@@ -4843,6 +5519,7 @@
     "lowPrice": 99000,
     "highPrice": 280000,
     "priceCurrency": "KRW",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -4861,6 +5538,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -4890,6 +5568,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -4908,6 +5587,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -4926,11 +5606,89 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://en.wikipedia.org/wiki/Life_Burns_Faster",
     "checkedAt": "2026-10-06T16:22:12.017Z"
+  },
+  {
+    "pinId": 4370,
+    "performers": [
+      {
+        "url": "https://www.ticketmaster.ca/metallica-tickets/artist/735647",
+        "name": "Metallica",
+        "type": "PerformingGroup"
+      },
+      {
+        "url": "https://www.ticketmaster.ca/limp-bizkit-tickets/artist/792633",
+        "name": "Limp Bizkit",
+        "type": "PerformingGroup"
+      },
+      {
+        "url": "https://www.ticketmaster.ca/avatar-tickets/artist/1451312",
+        "name": "Avatar",
+        "type": "PerformingGroup"
+      }
+    ],
+    "ticketUrl": "https://www.ticketmaster.ca/metallica-m72-world-tour-vancouver-british-columbia-05-08-2027/event/1100652ED2CADD90",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "markup",
+    "sourceUrl": "https://www.ticketmaster.ca/metallica-tickets/artist/735647",
+    "checkedAt": "2026-10-09T14:17:14.008Z"
+  },
+  {
+    "pinId": 4371,
+    "performers": [
+      {
+        "name": "Metallica",
+        "type": "PerformingGroup"
+      },
+      {
+        "name": "Limp Bizkit",
+        "type": "PerformingGroup"
+      },
+      {
+        "name": "Avatar",
+        "type": "PerformingGroup"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://blabbermouth.net/news/metallica-announces-spring-2027-north-american-tour-with-limp-bizkit-and-avatar",
+    "checkedAt": "2026-10-09T14:25:22.847Z"
+  },
+  {
+    "pinId": 4372,
+    "performers": [
+      {
+        "url": "https://oasisinet.com/live/8903-2/",
+        "name": "Oasis",
+        "type": "PerformingGroup"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://oasisinet.com/live/8903-2/",
+    "checkedAt": "2026-10-09T14:17:16.148Z"
   },
   {
     "pinId": 4391,
@@ -4968,24 +5726,26 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.aclfestival.com/",
-    "checkedAt": "2026-09-29T14:01:46.136Z"
+    "source": "hand",
+    "sourceUrl": "https://www.aclfestival.com/tickets",
+    "checkedAt": "2026-10-10T21:45:12.262Z"
   },
   {
     "pinId": 4402,
     "performers": [],
-    "ticketUrl": "https://brasil.tomorrowland.com/en/tickets/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "ticketUrl": "https://brasil.tomorrowland.com/en/tickets/festival-tickets/",
+    "lowPrice": 635,
+    "highPrice": 9715,
+    "priceCurrency": "BRL",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.tomorrowland.com/home/",
-    "checkedAt": "2026-10-07T14:35:58.396Z"
+    "source": "hand",
+    "sourceUrl": "https://brasil.tomorrowland.com/en/tickets/festival-tickets/",
+    "checkedAt": "2026-10-10T21:45:51.975Z"
   },
   {
     "pinId": 4428,
@@ -5023,6 +5783,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5036,6 +5797,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5049,11 +5811,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://sneakercon.com/event/sneaker-con-macau-october-10-11-2026/",
-    "checkedAt": "2026-09-29T14:02:14.547Z"
+    "checkedAt": "2026-10-10T21:45:18.152Z"
   },
   {
     "pinId": 4439,
@@ -5062,6 +5825,7 @@
     "lowPrice": 12,
     "highPrice": 25,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5075,6 +5839,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5088,6 +5853,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5101,6 +5867,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5114,6 +5881,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5127,6 +5895,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5140,6 +5909,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5153,6 +5923,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5166,6 +5937,7 @@
     "lowPrice": 35,
     "highPrice": 120,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5184,11 +5956,31 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": null,
+    "tiers": [],
+    "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.prowein.com/en/Media_News/Press/Press_Releases/ProWein_2027_%E2%80%9CThe_Industry_Needs_Positive_Signals%E2%80%9D",
-    "checkedAt": "2026-10-07T14:29:29.635Z"
+    "source": "hand",
+    "sourceUrl": "https://www.prowein.com/en/Visit/Preparations/Tickets_and_Vouchers/Tickets",
+    "checkedAt": "2026-10-10T21:45:46.409Z"
+  },
+  {
+    "pinId": 4616,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "label": "Festival grounds and tents entry",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.muenchen.de/en/events/oktoberfest",
+    "checkedAt": "2026-10-10T21:46:00.568Z"
   },
   {
     "pinId": 4617,
@@ -5197,6 +5989,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5210,6 +6003,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5223,6 +6017,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5236,6 +6031,7 @@
     "lowPrice": 66.53,
     "highPrice": 170.38,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5249,6 +6045,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5262,11 +6059,26 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.bassmaster.com/classic/news/lake-hartwell-to-host-2027-bass-pro-shops-bassmaster-classic-presented-by-under-armour/",
     "checkedAt": "2026-10-07T14:29:29.986Z"
+  },
+  {
+    "pinId": 4661,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://thebigrock.com/",
+    "checkedAt": "2026-10-09T14:24:03.883Z"
   },
   {
     "pinId": 4663,
@@ -5275,6 +6087,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5284,15 +6097,16 @@
   {
     "pinId": 4670,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://www.eventbrite.com/e/the-champions-a-world-bass-championship-tickets-1992387308072",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": null,
+    "tiers": [],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.worldbassenterprises.com/",
-    "checkedAt": "2026-09-29T14:04:44.627Z"
+    "source": "hand",
+    "sourceUrl": "https://www.worldbassenterprises.com/vip-passes",
+    "checkedAt": "2026-10-10T21:45:23.882Z"
   },
   {
     "pinId": 4671,
@@ -5301,6 +6115,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5314,6 +6129,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5327,6 +6143,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5340,6 +6157,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5353,6 +6171,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5379,6 +6198,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -5405,6 +6225,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -5423,15 +6244,16 @@
         "type": "Person"
       }
     ],
-    "ticketUrl": "https://www.ticketmaster.com.mx/bruno-mars-the-romantic-tour-ciudad-de-mexico-03-12-2026/event/14006453B3E6C5F7",
+    "ticketUrl": "https://www.ticketmaster.com.mx/bruno-mars-boletos/artist/1466801",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.ticketmaster.com.mx/bruno-mars-boletos/artist/1466801",
-    "checkedAt": "2026-09-28T05:55:07.047Z"
+    "source": "hand",
+    "sourceUrl": "https://www.estadiognpseguros.com/todos-los-eventos/bruno-mars-boletos-ae147754",
+    "checkedAt": "2026-10-10T21:45:36.263Z"
   },
   {
     "pinId": 4699,
@@ -5451,6 +6273,7 @@
     "lowPrice": 11800,
     "highPrice": 149800,
     "priceCurrency": "JPY",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "session",
@@ -5473,6 +6296,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "session",
@@ -5491,15 +6315,16 @@
         "type": "Person"
       }
     ],
-    "ticketUrl": "https://hkt.hkticketing.com/#/allEvents/detail?projectId=50000001587007",
+    "ticketUrl": "https://www.livenation.hk/en/event/bruno-mars-the-romantic-tour-hong-kong-tickets-edp1692929",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
-    "onSaleDate": null,
-    "source": "session",
+    "onSaleDate": "2026-09-24T04:00:00.000Z",
+    "source": "hand",
     "sourceUrl": "https://www.livenation.hk/en/event/bruno-mars-the-romantic-tour-hong-kong-tickets-edp1692929",
-    "checkedAt": "2026-09-28T05:55:07.518Z"
+    "checkedAt": "2026-10-10T21:45:53.029Z"
   },
   {
     "pinId": 4862,
@@ -5508,6 +6333,7 @@
     "lowPrice": 32,
     "highPrice": 45,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5518,14 +6344,44 @@
     "pinId": 4863,
     "performers": [],
     "ticketUrl": "https://mondial.paris/en/practical-info/ticketing",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 13,
+    "highPrice": 24,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "label": "Online full price weekday",
+        "price": 20
+      },
+      {
+        "label": "Online full price weekend",
+        "price": 22
+      },
+      {
+        "label": "Online full price evening",
+        "price": 17
+      },
+      {
+        "label": "Online child (7-17) / student",
+        "price": 13
+      },
+      {
+        "label": "Online reduced mobility",
+        "price": 13
+      },
+      {
+        "label": "On-site weekend",
+        "price": 24
+      },
+      {
+        "label": "On-site weekday and evening",
+        "price": 22
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.mondial.paris/en",
-    "checkedAt": "2026-09-30T14:32:01.500Z"
+    "source": "hand",
+    "sourceUrl": "https://mondial.paris/en/practical-info/ticketing",
+    "checkedAt": "2026-10-10T21:45:19.216Z"
   },
   {
     "pinId": 4864,
@@ -5534,6 +6390,7 @@
     "lowPrice": 32,
     "highPrice": 55,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5544,27 +6401,81 @@
     "pinId": 4865,
     "performers": [],
     "ticketUrl": "https://nbaabace.org/register",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 170,
+    "highPrice": 1030,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Full registration, member (regular Sept 15-Oct 19)",
+        "price": 580
+      },
+      {
+        "label": "Full registration, non-member (regular)",
+        "price": 900
+      },
+      {
+        "label": "Full registration, member late/on-site (after Oct 19)",
+        "price": 710
+      },
+      {
+        "label": "Full registration, non-member late/on-site",
+        "price": 1030
+      },
+      {
+        "label": "Last Day Only (Oct 22)",
+        "price": 170
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://nbaabace.org/",
-    "checkedAt": "2026-09-30T14:32:01.506Z"
+    "source": "hand",
+    "sourceUrl": "https://nbaabace.org/register",
+    "checkedAt": "2026-10-10T21:45:21.779Z"
   },
   {
     "pinId": 4866,
     "performers": [],
     "ticketUrl": "https://www.eventspass.com/event/flibs26?pr=WEB/#/buyTickets",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 19,
+    "highPrice": 459,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "valid any one day Wed-Sun",
+        "label": "Wednesday Preview Ticket",
+        "price": 73
+      },
+      {
+        "note": "any two days Wed-Sun",
+        "label": "Adult 2-Day Preview + General Admission",
+        "price": 105
+      },
+      {
+        "note": "any two days Thu-Sun",
+        "label": "Adult 2-Day General Admission",
+        "price": 80
+      },
+      {
+        "note": "one day Thu-Sun",
+        "label": "Adult 1-Day General Admission",
+        "price": 48
+      },
+      {
+        "note": "ages 6-12, one day Wed-Sun",
+        "label": "Child 1-Day General Admission",
+        "price": 19
+      },
+      {
+        "note": "one day Wed-Sun",
+        "label": "Windward VIP Experience",
+        "price": 459
+      }
+    ],
     "availability": "InStock",
-    "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.flibs.com",
-    "checkedAt": "2026-09-30T14:32:57.346Z"
+    "onSaleDate": "2026-08-04T00:00:00.000Z",
+    "source": "hand",
+    "sourceUrl": "https://www.flibs.com/press/flibs-launches-ticket-sales/",
+    "checkedAt": "2026-10-10T21:45:23.565Z"
   },
   {
     "pinId": 4867,
@@ -5573,6 +6484,7 @@
     "lowPrice": 20,
     "highPrice": 20,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5583,14 +6495,26 @@
     "pinId": 4868,
     "performers": [],
     "ticketUrl": "https://www.metstrade.com/registration",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
+    "lowPrice": 90,
+    "highPrice": 90,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "note": "trade visitors, 18+",
+        "label": "Online registration until 31 Oct 2026",
+        "price": 0
+      },
+      {
+        "note": "excl. VAT",
+        "label": "Online registration from 1 Nov 2026",
+        "price": 90
+      }
+    ],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.metstrade.com",
-    "checkedAt": "2026-09-30T14:32:57.369Z"
+    "source": "hand",
+    "sourceUrl": "https://www.metstrade.com/registration",
+    "checkedAt": "2026-10-10T21:45:27.588Z"
   },
   {
     "pinId": 4869,
@@ -5599,6 +6523,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5612,11 +6537,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": null,
+    "tiers": [],
+    "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.detroitautoshow.com",
-    "checkedAt": "2026-10-07T14:17:26.459Z"
+    "source": "hand",
+    "sourceUrl": "https://detroitautoshow.com/public-show-tickets/",
+    "checkedAt": "2026-10-10T21:45:40.342Z"
   },
   {
     "pinId": 4871,
@@ -5625,6 +6551,7 @@
     "lowPrice": 3000,
     "highPrice": 4000,
     "priceCurrency": "JPY",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -5634,15 +6561,16 @@
   {
     "pinId": 4872,
     "performers": [],
-    "ticketUrl": "https://shop.messe-duesseldorf.de/boot_e?ticket=g_u_e_s_t&lang=2&ticket=g_u_e_s_t&oid=30775",
+    "ticketUrl": "https://shop.messe-duesseldorf.de/boot_e?ticket=g_u_e_s_t&lang=2&oid=30775",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": null,
+    "tiers": [],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.boot.com/en/Exhibit/Information/Data_Facts",
-    "checkedAt": "2026-10-07T14:22:54.425Z"
+    "source": "hand",
+    "sourceUrl": "https://shop.messe-duesseldorf.de/boot_e?ticket=g_u_e_s_t&lang=2&oid=30775",
+    "checkedAt": "2026-10-10T21:45:41.407Z"
   },
   {
     "pinId": 4873,
@@ -5651,24 +6579,44 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.miamiboatshow.com",
-    "checkedAt": "2026-10-07T14:27:46.062Z"
+    "source": "hand",
+    "sourceUrl": "https://www.miamiboatshow.com/press/tickets-on-sale-for-the-2027-discover-boating-miami-international-boat-show/",
+    "checkedAt": "2026-10-10T21:45:44.614Z"
   },
   {
     "pinId": 4874,
     "performers": [],
     "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
+    "lowPrice": 15,
+    "highPrice": 20,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "General admission",
+        "price": 20
+      },
+      {
+        "label": "Seniors 62+",
+        "price": 15
+      },
+      {
+        "label": "Children 4-12",
+        "price": 15
+      },
+      {
+        "note": "free with paying adult",
+        "label": "Children 3 and under",
+        "price": 0
+      }
+    ],
+    "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.chicagoautoshow.com",
-    "checkedAt": "2026-10-07T14:27:46.306Z"
+    "source": "hand",
+    "sourceUrl": "https://www.chicagoautoshow.com/?p=14",
+    "checkedAt": "2026-10-10T21:45:45.050Z"
   },
   {
     "pinId": 4875,
@@ -5677,6 +6625,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5690,6 +6639,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5703,6 +6653,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5716,6 +6667,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5734,11 +6686,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://flysnf.org/",
-    "checkedAt": "2026-10-07T14:33:31.892Z"
+    "checkedAt": "2026-10-10T21:45:49.882Z"
   },
   {
     "pinId": 4880,
@@ -5747,11 +6700,68 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://cnevpost.com/2026/09/08/2027-shanghai-auto-show-apr-23-may-2/",
     "checkedAt": "2026-10-07T14:34:45.258Z"
+  },
+  {
+    "pinId": 4881,
+    "performers": [],
+    "ticketUrl": "https://www.goodwood.com/motorsport/festival-of-speed/tickets-and-packages/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "PreOrder",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.goodwood.com/motorsport/festival-of-speed/tickets-and-packages/",
+    "checkedAt": "2026-10-10T21:45:56.884Z"
+  },
+  {
+    "pinId": 4882,
+    "performers": [],
+    "ticketUrl": "https://www.eaa.org/airventure/EAA-AirVenture-Tickets",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "PreOrder",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.eaa.org/airventure/EAA-AirVenture-Tickets",
+    "checkedAt": "2026-10-10T21:45:57.996Z"
+  },
+  {
+    "pinId": 4883,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.marinebusinessnews.com.au/2026/06/informa-to-launch-australian-international-boat-show-in-sydneys-darling-harbour/",
+    "checkedAt": "2026-10-09T14:33:01.256Z"
+  },
+  {
+    "pinId": 4886,
+    "performers": [],
+    "ticketUrl": "https://www.caravan-salon.com/en/For_Visitors/Tickets_and_Registration/Ticket_shop",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "PreOrder",
+    "onSaleDate": "2027-06-01T00:00:00.000Z",
+    "source": "hand",
+    "sourceUrl": "https://www.caravan-salon.com/en/For_Visitors/Tickets_and_Registration/Ticket_shop",
+    "checkedAt": "2026-10-10T21:45:58.803Z"
   },
   {
     "pinId": 4890,
@@ -5760,24 +6770,26 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.twitchcon.com/san-diego-2026/passes/",
-    "checkedAt": "2026-09-30T00:39:36.625Z"
+    "checkedAt": "2026-10-10T21:45:26.458Z"
   },
   {
     "pinId": 4891,
     "performers": [],
     "ticketUrl": "https://sc26.supercomputing.org/attendees/registration/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 100,
+    "highPrice": 1100,
+    "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://sc26.supercomputing.org/attendees/registration/",
-    "checkedAt": "2026-09-30T00:40:09.908Z"
+    "checkedAt": "2026-10-10T21:45:26.814Z"
   },
   {
     "pinId": 4892,
@@ -5786,11 +6798,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.rsna.org/annual-meeting/attendee-resources/pricing-and-registration",
-    "checkedAt": "2026-09-30T00:40:37.409Z"
+    "checkedAt": "2026-10-10T21:45:33.413Z"
   },
   {
     "pinId": 4893,
@@ -5799,6 +6812,7 @@
     "lowPrice": 45,
     "highPrice": 101.99,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -5809,14 +6823,57 @@
     "pinId": 4894,
     "performers": [],
     "ticketUrl": "https://nrfbigshow.nrf.com/register",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 500,
+    "highPrice": 3800,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "by 19 Nov 2026; $1,300 by 7 Jan; $1,400 from 8 Jan",
+        "label": "All-Access - Retail Member",
+        "price": 1200
+      },
+      {
+        "note": "by 19 Nov 2026; $2,300 by 7 Jan; $2,400 from 8 Jan",
+        "label": "All-Access - Retail Non-Member",
+        "price": 2200
+      },
+      {
+        "note": "flat",
+        "label": "All-Access - Non-Retail Member",
+        "price": 2600
+      },
+      {
+        "note": "flat",
+        "label": "All-Access - Non-Retail Non-Member",
+        "price": 3800
+      },
+      {
+        "label": "All-Access - Educator Member",
+        "price": 500
+      },
+      {
+        "label": "All-Access - Educator Non-Member",
+        "price": 1000
+      },
+      {
+        "note": "free through 30 Dec 2026, then $100",
+        "label": "Retail Expo Pass",
+        "price": 0
+      },
+      {
+        "label": "Press (approved)",
+        "price": 0
+      },
+      {
+        "label": "Analyst (approved)",
+        "price": 500
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://nrfbigshow.nrf.com/register",
-    "checkedAt": "2026-09-30T00:41:38.640Z"
+    "checkedAt": "2026-10-10T21:45:39.972Z"
   },
   {
     "pinId": 4895,
@@ -5825,11 +6882,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.namm.org/thenammshow/registration-process",
-    "checkedAt": "2026-09-30T00:42:12.677Z"
+    "checkedAt": "2026-10-10T21:45:42.437Z"
   },
   {
     "pinId": 4896,
@@ -5838,11 +6896,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://registration.experientevent.com/ShowNHB271",
-    "checkedAt": "2026-09-30T00:42:42.924Z"
+    "sourceUrl": "https://www.buildersshow.com/",
+    "checkedAt": "2026-10-10T21:45:43.534Z"
   },
   {
     "pinId": 4897,
@@ -5851,6 +6910,7 @@
     "lowPrice": 99,
     "highPrice": 1149,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -5864,6 +6924,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5874,14 +6935,81 @@
     "pinId": 4899,
     "performers": [],
     "ticketUrl": "https://www.emeraldcitycomiccon.com/en-us/buy/tickets.html",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 16.8,
+    "highPrice": 610.03,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "4-Day",
+        "price": 166.94
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Thursday",
+        "price": 27.3
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Friday",
+        "price": 64.05
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Saturday",
+        "price": 84
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Sunday",
+        "price": 64.05
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "4-Day Kids (6-12)",
+        "price": 27.3
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Thursday Kids",
+        "price": 16.8
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Friday Kids",
+        "price": 16.8
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Saturday Kids",
+        "price": 16.8
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Sunday Kids",
+        "price": 16.8
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "VIP",
+        "price": 305.54
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Celeb VIP",
+        "price": 394.79
+      },
+      {
+        "note": "Price includes taxes and fees; early-bird pricing through Dec 27",
+        "label": "Family VIP",
+        "price": 610.03
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.emeraldcitycomiccon.com/en-us/buy/tickets.html",
-    "checkedAt": "2026-09-30T00:44:17.868Z"
+    "checkedAt": "2026-10-10T21:45:45.737Z"
   },
   {
     "pinId": 4900,
@@ -5890,6 +7018,7 @@
     "lowPrice": 625,
     "highPrice": 1495,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -5900,14 +7029,55 @@
     "pinId": 4901,
     "performers": [],
     "ticketUrl": "https://www.comic-con.org/wc/badges/attendee-badge-sale/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 22,
+    "highPrice": 135,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "ends Feb 11, 2027",
+        "label": "3-Day Adult (early bird)",
+        "price": 135
+      },
+      {
+        "note": "early bird",
+        "label": "3-Day Junior/Military/Senior",
+        "price": 68
+      },
+      {
+        "label": "Friday Adult",
+        "price": 51
+      },
+      {
+        "label": "Friday Junior/Military/Senior",
+        "price": 26
+      },
+      {
+        "label": "Saturday Adult",
+        "price": 61
+      },
+      {
+        "label": "Saturday Junior/Military/Senior",
+        "price": 31
+      },
+      {
+        "label": "Sunday Adult",
+        "price": 44
+      },
+      {
+        "label": "Sunday Junior/Military/Senior",
+        "price": 22
+      },
+      {
+        "note": "free with paying adult",
+        "label": "Child 12 and under",
+        "price": 0
+      }
+    ],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.comic-con.org/wc/badges/attendee-badge-sale/",
-    "checkedAt": "2026-09-30T00:45:25.648Z"
+    "sourceUrl": "https://www.comic-con.org/wc/badges/",
+    "checkedAt": "2026-10-10T21:45:48.441Z"
   },
   {
     "pinId": 4902,
@@ -5916,6 +7086,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5926,14 +7097,15 @@
     "pinId": 4903,
     "performers": [],
     "ticketUrl": "https://www.himssconference.com/register/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 325,
+    "highPrice": 2295,
+    "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.himssconference.com/",
-    "checkedAt": "2026-10-07T14:31:28.295Z"
+    "source": "hand",
+    "sourceUrl": "https://www.himssconference.com/register/",
+    "checkedAt": "2026-10-10T21:45:49.513Z"
   },
   {
     "pinId": 4904,
@@ -5942,6 +7114,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -5955,6 +7128,7 @@
     "lowPrice": 50.14,
     "highPrice": 420.73,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -5964,15 +7138,92 @@
   {
     "pinId": 4906,
     "performers": [],
+    "ticketUrl": "https://megaconorlando.fanexpohq.com/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "PreOrder",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://megaconorlando.fanexpohq.com/",
+    "checkedAt": "2026-10-10T21:45:53.330Z"
+  },
+  {
+    "pinId": 4907,
+    "performers": [],
+    "ticketUrl": "https://registration.nationalrestaurantshow.com/shownra271/flow/ATT",
+    "lowPrice": 125,
+    "highPrice": 1000,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "Advanced $435, Regular $485, Onsite $535",
+        "label": "Essential Badge (Early Bird, to 31 Dec 2026)",
+        "price": 385
+      },
+      {
+        "note": "Advanced $175, Regular $225, Onsite $299",
+        "label": "Expo Badge (Early Bird, to 31 Dec 2026)",
+        "price": 125
+      },
+      {
+        "note": "$750 from 6 Apr 2027",
+        "label": "Premium Badge (to 5 Apr 2027)",
+        "price": 699
+      },
+      {
+        "label": "Non-Exhibiting Supplier Expo Badge",
+        "price": 1000
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": "2026-10-01T00:00:00.000Z",
+    "source": "hand",
+    "sourceUrl": "https://www.nationalrestaurantshow.com/home/badge-pricing/",
+    "checkedAt": "2026-10-10T21:45:53.697Z"
+  },
+  {
+    "pinId": 4908,
+    "performers": [],
     "ticketUrl": null,
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": "PreOrder",
+    "tiers": [],
+    "availability": null,
     "onSaleDate": null,
-    "source": "hand",
-    "sourceUrl": "https://fanexpohq.com/megaconorlando/",
-    "checkedAt": "2026-09-30T00:48:05.707Z"
+    "source": "session",
+    "sourceUrl": "https://www.snowflake.com/en/summit/",
+    "checkedAt": "2026-10-09T14:24:03.628Z"
+  },
+  {
+    "pinId": 4909,
+    "performers": [],
+    "ticketUrl": "https://unplugged.paxsite.com/houston/en-us/registration.html",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://unplugged.paxsite.com/houston/en-us.html",
+    "checkedAt": "2026-10-09T14:26:38.548Z"
+  },
+  {
+    "pinId": 4910,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.specialtyfood.com/fancy-food-shows/summer/",
+    "checkedAt": "2026-10-09T14:26:38.865Z"
   },
   {
     "pinId": 4913,
@@ -5981,6 +7232,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
@@ -5994,11 +7246,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://cphia.africacdc.org/",
-    "checkedAt": "2026-09-30T14:32:57.372Z"
+    "source": "hand",
+    "sourceUrl": "https://cphia.africacdc.org/register",
+    "checkedAt": "2026-10-10T21:45:30.101Z"
   },
   {
     "pinId": 4982,
@@ -6048,6 +7301,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -6066,6 +7320,7 @@
     "lowPrice": 380,
     "highPrice": 5000,
     "priceCurrency": "SGD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -6075,28 +7330,67 @@
   {
     "pinId": 4984,
     "performers": [],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
+    "ticketUrl": "https://pretix.eu/berlinscienceweek/2026-festival/",
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "note": "free, booking required",
+        "label": "3-Day Festival Centre Pass (Haus der Kulturen der Welt)",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://berlinscienceweek.com/",
-    "checkedAt": "2026-10-02T14:13:18.730Z"
+    "checkedAt": "2026-10-10T21:45:24.286Z"
   },
   {
     "pinId": 4985,
     "performers": [],
-    "ticketUrl": "https://falling-walls.com/science-summit/tickets-2026",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
+    "ticketUrl": "https://pretix.eu/fallingwalls/sciencesummit26/",
+    "lowPrice": 519,
+    "highPrice": 2802.6,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "note": "incl. taxes",
+        "label": "Falling Walls Science Summit (6-9 Nov)",
+        "price": 2802.6
+      },
+      {
+        "note": "incl. taxes",
+        "label": "Falling Walls Pitches (6 Nov)",
+        "price": 1349.4
+      },
+      {
+        "note": "incl. taxes",
+        "label": "Falling Walls Circle (7 Nov)",
+        "price": 1349.4
+      },
+      {
+        "note": "incl. taxes",
+        "label": "Falling Walls Circle (8 Nov)",
+        "price": 1349.4
+      },
+      {
+        "note": "incl. taxes",
+        "label": "Falling Walls Breakthroughs & Circle (9 Nov)",
+        "price": 1557
+      },
+      {
+        "note": "incl. taxes",
+        "label": "Falling Walls Student Ticket (6-9 Nov)",
+        "price": 519
+      }
+    ],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://falling-walls.com/science-summit",
-    "checkedAt": "2026-10-04T15:01:12.243Z"
+    "source": "hand",
+    "sourceUrl": "https://pretix.eu/fallingwalls/sciencesummit26/",
+    "checkedAt": "2026-10-10T21:45:25.706Z"
   },
   {
     "pinId": 4986,
@@ -6118,6 +7412,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6128,14 +7423,32 @@
     "pinId": 4989,
     "performers": [],
     "ticketUrl": "https://hkmarathon.fringebackerevents.com/events/standard-chartered-hong-kong-marathon-2027/register/select-type/",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 350,
+    "highPrice": 600,
+    "priceCurrency": "HKD",
+    "tiers": [
+      {
+        "label": "Marathon (local participant)",
+        "price": 600
+      },
+      {
+        "label": "Half Marathon (local participant)",
+        "price": 520
+      },
+      {
+        "label": "10km (local participant)",
+        "price": 420
+      },
+      {
+        "label": "10km Wheelchair Race / Wheelchair Trial (local participant)",
+        "price": 350
+      }
+    ],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.hkmarathon.com/important-dates",
-    "checkedAt": "2026-10-06T16:08:52.026Z"
+    "source": "hand",
+    "sourceUrl": "https://www.hkmarathon.com/race-information",
+    "checkedAt": "2026-10-10T21:45:40.640Z"
   },
   {
     "pinId": 4990,
@@ -6145,28 +7458,51 @@
         "type": "Person"
       }
     ],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "availability": null,
+    "ticketUrl": "https://www.runrocknroll.com/events/manila/register",
+    "lowPrice": 1242,
+    "highPrice": 2970,
+    "priceCurrency": "PHP",
+    "tiers": [
+      {
+        "note": "sale price; original 3,726; presale 3,942",
+        "label": "Marathon",
+        "price": 2970
+      },
+      {
+        "note": "sale price; original 3,024",
+        "label": "Half Marathon",
+        "price": 2430
+      },
+      {
+        "note": "sale price; original 2,376",
+        "label": "10K",
+        "price": 1782
+      },
+      {
+        "note": "sale price; original 1,890",
+        "label": "5K",
+        "price": 1242
+      }
+    ],
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.runrocknroll.com/events/manila",
-    "checkedAt": "2026-10-06T16:02:24.595Z"
+    "source": "hand",
+    "sourceUrl": "https://www.runrocknroll.com/events/manila/register",
+    "checkedAt": "2026-10-10T21:45:34.278Z"
   },
   {
     "pinId": 4991,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://www.techshowmadrid.es/registro",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.esmadrid.com/agenda/madrid-tech-show-ifema-madrid",
-    "checkedAt": "2026-10-02T14:13:19.073Z"
+    "source": "hand",
+    "sourceUrl": "https://www.techshowmadrid.es/",
+    "checkedAt": "2026-10-10T21:45:25.330Z"
   },
   {
     "pinId": 5027,
@@ -6192,6 +7528,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6205,24 +7542,57 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.tcslondonmarathon.com/",
-    "checkedAt": "2026-10-07T14:34:45.327Z"
+    "source": "hand",
+    "sourceUrl": "https://www.londonmarathonevents.co.uk/london-marathon",
+    "checkedAt": "2026-10-10T21:45:51.600Z"
   },
   {
     "pinId": 5029,
     "performers": [],
     "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 19800,
+    "highPrice": 19800,
+    "priceCurrency": "JPY",
+    "tiers": [
+      {
+        "note": "entry fee incl. tax; international participants pay USD 230",
+        "label": "Domestic participants",
+        "price": 19800
+      }
+    ],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://tokyo42195.org/en/calendar/ec_260622_02.html",
-    "checkedAt": "2026-10-06T16:19:34.213Z"
+    "source": "hand",
+    "sourceUrl": "https://www.marathon.tokyo/en/participants/guideline/",
+    "checkedAt": "2026-10-10T21:45:46.769Z"
+  },
+  {
+    "pinId": 5030,
+    "performers": [],
+    "ticketUrl": "https://www.tcssydneymarathon.com/sign-up",
+    "lowPrice": 280,
+    "highPrice": 330,
+    "priceCurrency": "AUD",
+    "tiers": [
+      {
+        "note": "charged only if drawn in ballot",
+        "label": "Domestic entry",
+        "price": 280
+      },
+      {
+        "note": "charged only if drawn in ballot",
+        "label": "International entry",
+        "price": 330
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": "2026-09-29T00:00:00.000Z",
+    "source": "hand",
+    "sourceUrl": "https://www.tcssydneymarathon.com/sign-up",
+    "checkedAt": "2026-10-10T21:45:59.221Z"
   },
   {
     "pinId": 5031,
@@ -6231,6 +7601,7 @@
     "lowPrice": 200,
     "highPrice": 200,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "SoldOut",
     "onSaleDate": null,
     "source": "claude",
@@ -6240,15 +7611,16 @@
   {
     "pinId": 5032,
     "performers": [],
-    "ticketUrl": "https://atleta.cc/e/nhIVWn50Rcez",
+    "ticketUrl": "https://www.tcsamsterdammarathon.eu/registration",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.tcsamsterdammarathon.eu/",
-    "checkedAt": "2026-10-02T14:12:09.013Z"
+    "source": "hand",
+    "sourceUrl": "https://www.tcsamsterdammarathon.eu/registration",
+    "checkedAt": "2026-10-10T21:45:20.519Z"
   },
   {
     "pinId": 5033,
@@ -6257,6 +7629,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6266,15 +7639,56 @@
   {
     "pinId": 5034,
     "performers": [],
-    "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "ticketUrl": "https://enter.twooceansmarathon.org.za/two-oceans-2027/entry-windows",
+    "lowPrice": 450,
+    "highPrice": 840,
+    "priceCurrency": "ZAR",
+    "tiers": [
+      {
+        "label": "Ultra Marathon (56km, 4 Apr) - licensed South African",
+        "price": 840
+      },
+      {
+        "note": "unlicensed pay extra R95 temporary licence",
+        "label": "Half Marathon (21.1km, 3 Apr) - South African",
+        "price": 450
+      }
+    ],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.sabcsport.com/main-domain/news/two-oceans-marathon-confirms-2027-dates",
-    "checkedAt": "2026-10-06T16:23:25.937Z"
+    "source": "hand",
+    "sourceUrl": "https://www.twooceansmarathon.org.za/ultra-marathon/",
+    "checkedAt": "2026-10-10T21:45:48.817Z"
+  },
+  {
+    "pinId": 5035,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": 1200,
+    "highPrice": 4500,
+    "priceCurrency": "ZAR",
+    "tiers": [
+      {
+        "note": "plus Easyreg administration fee",
+        "label": "South African entrants",
+        "price": 1200
+      },
+      {
+        "note": "plus Easyreg administration fee",
+        "label": "Rest of Africa entrants",
+        "price": 2000
+      },
+      {
+        "note": "plus Easyreg administration fee",
+        "label": "International entrants",
+        "price": 4500
+      }
+    ],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://comrades.com/2027-entry-schedule",
+    "checkedAt": "2026-10-10T21:45:55.417Z"
   },
   {
     "pinId": 5092,
@@ -6283,6 +7697,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6296,6 +7711,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6305,15 +7721,16 @@
   {
     "pinId": 5094,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://romacinemafest.boxol.it/en/home/romacinemafest",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.romacinemafest.it/en/rome-film-fest/",
-    "checkedAt": "2026-10-02T14:10:55.956Z"
+    "checkedAt": "2026-10-10T21:45:19.629Z"
   },
   {
     "pinId": 5095,
@@ -6322,6 +7739,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6335,6 +7753,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6348,6 +7767,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6361,11 +7781,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
-    "sourceUrl": "https://www.turismoroma.it/en/events/maker-faire-rome-2026",
-    "checkedAt": "2026-10-02T14:12:09.125Z"
+    "source": "hand",
+    "sourceUrl": "https://shop.midaticket.it/makerfaire/Event/1149/Dates",
+    "checkedAt": "2026-10-10T21:45:22.833Z"
   },
   {
     "pinId": 5108,
@@ -6374,11 +7795,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.smartnationexpo.org/visit-us/",
-    "checkedAt": "2026-10-06T15:59:16.519Z"
+    "checkedAt": "2026-10-10T21:45:28.013Z"
   },
   {
     "pinId": 5109,
@@ -6387,6 +7809,7 @@
     "lowPrice": 180,
     "highPrice": 180,
     "priceCurrency": "CNY",
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6400,6 +7823,7 @@
     "lowPrice": 240,
     "highPrice": 2550,
     "priceCurrency": "BRL",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -6409,15 +7833,16 @@
   {
     "pinId": 5118,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://euronaval.mybadgeonline.com/Vis-Login-en-US/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.dnv.com/events/euronaval-2026/",
-    "checkedAt": "2026-10-07T13:59:53.989Z"
+    "source": "hand",
+    "sourceUrl": "https://www.euronaval.com/i-want-to-visit/",
+    "checkedAt": "2026-10-10T21:45:24.657Z"
   },
   {
     "pinId": 5124,
@@ -6426,6 +7851,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6439,6 +7865,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6446,17 +7873,32 @@
     "checkedAt": "2026-10-02T14:10:55.516Z"
   },
   {
-    "pinId": 5128,
+    "pinId": 5126,
     "performers": [],
     "ticketUrl": null,
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
-    "sourceUrl": "https://cyca.com.au/event/2026-rolex-sydney-hobart-yacht-race/",
-    "checkedAt": "2026-10-06T16:06:19.328Z"
+    "sourceUrl": "https://www.boatingnz.co.nz/2026/09/grazie-napoli/",
+    "checkedAt": "2026-10-09T14:17:18.219Z"
+  },
+  {
+    "pinId": 5128,
+    "performers": [],
+    "ticketUrl": "https://events.humanitix.com/rolex-sydney-hobart-yacht-race-or-2026-or-official-spectator-vessel-the-jackson",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://events.humanitix.com/rolex-sydney-hobart-yacht-race-or-2026-or-official-spectator-vessel-the-jackson",
+    "checkedAt": "2026-10-10T21:45:37.524Z"
   },
   {
     "pinId": 5129,
@@ -6465,6 +7907,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6478,6 +7921,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6508,6 +7952,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -6521,6 +7966,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6534,6 +7980,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6547,6 +7994,7 @@
     "lowPrice": 1100,
     "highPrice": 1500,
     "priceCurrency": "JPY",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -6560,6 +8008,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "JPY",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
@@ -6573,6 +8022,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -6586,6 +8036,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -6599,6 +8050,7 @@
     "lowPrice": 13,
     "highPrice": 35,
     "priceCurrency": "EUR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -6612,6 +8064,7 @@
     "lowPrice": 175,
     "highPrice": 450,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -6621,15 +8074,16 @@
   {
     "pinId": 5204,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://www.festivaldesjeux-cannes.com/en/take-part/tickets/",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
-    "availability": "PreOrder",
+    "tiers": [],
+    "availability": "InStock",
     "onSaleDate": "2026-10-06T00:00:00.000Z",
     "source": "hand",
-    "sourceUrl": "https://www.festivaldesjeux-cannes.com/",
-    "checkedAt": "2026-10-02T14:55:27.639Z"
+    "sourceUrl": "https://www.festivaldesjeux-cannes.com/en/take-part/tickets/",
+    "checkedAt": "2026-10-10T21:45:45.378Z"
   },
   {
     "pinId": 5439,
@@ -6638,6 +8092,7 @@
     "lowPrice": 0,
     "highPrice": 0,
     "priceCurrency": "JPY",
+    "tiers": [],
     "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
@@ -6648,14 +8103,20 @@
     "pinId": 5445,
     "performers": [],
     "ticketUrl": null,
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Free Comic Book Day (free comics at participating shops)",
+        "price": 0
+      }
+    ],
     "availability": null,
     "onSaleDate": null,
-    "source": "claude",
+    "source": "hand",
     "sourceUrl": "https://www.thepopverse.com/comics-dc-absolute-batman-fcbd-2027-matt-fraction",
-    "checkedAt": "2026-10-07T14:35:58.378Z"
+    "checkedAt": "2026-10-10T21:45:52.289Z"
   },
   {
     "pinId": 5471,
@@ -6669,11 +8130,57 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/02/2003865283",
     "checkedAt": "2026-10-04T15:01:11.768Z"
+  },
+  {
+    "pinId": 5478,
+    "performers": [
+      {
+        "name": "Scott Dixon",
+        "type": "Person"
+      },
+      {
+        "name": "Felix Rosenqvist",
+        "type": "Person"
+      },
+      {
+        "name": "Pato O’Ward",
+        "type": "Person"
+      },
+      {
+        "name": "Ryan Hunter-Reay",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.foxsports.com/articles/motor/scott-dixon-and-felix-rosenqvist-sign-multiyear-deals-to-begin-racing-for-arrow-mclaren-in-2027",
+    "checkedAt": "2026-10-09T14:19:15.636Z"
+  },
+  {
+    "pinId": 5481,
+    "performers": [],
+    "ticketUrl": "https://www.24h-lemans.com/en/tickets",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "PreOrder",
+    "onSaleDate": null,
+    "source": "markup",
+    "sourceUrl": "https://www.24h-lemans.com/en/",
+    "checkedAt": "2026-10-09T14:25:20.207Z"
   },
   {
     "pinId": 5491,
@@ -6682,6 +8189,7 @@
     "lowPrice": 198,
     "highPrice": 7508,
     "priceCurrency": "SGD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -6695,6 +8203,7 @@
     "lowPrice": 600,
     "highPrice": 2000,
     "priceCurrency": "QAR",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -6708,6 +8217,7 @@
     "lowPrice": 50,
     "highPrice": 99,
     "priceCurrency": "AUD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": "2026-05-26T02:00:00.000Z",
     "source": "hand",
@@ -6721,11 +8231,12 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://tickets.motogp.com/en/21151-valencia/",
-    "checkedAt": "2026-10-03T22:16:18.580Z"
+    "checkedAt": "2026-10-10T21:45:31.636Z"
   },
   {
     "pinId": 5505,
@@ -6734,6 +8245,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6747,6 +8259,7 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
@@ -6760,11 +8273,26 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": null,
     "checkedAt": "2026-10-07T14:11:17.644Z"
+  },
+  {
+    "pinId": 5515,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.iomttraces.com/latest/news/tt-2027-dates-isle-of-man-tt-races/",
+    "checkedAt": "2026-10-09T14:19:16.179Z"
   },
   {
     "pinId": 5518,
@@ -6773,6 +8301,7 @@
     "lowPrice": 120,
     "highPrice": 2195,
     "priceCurrency": "AUD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
@@ -6786,11 +8315,68 @@
     "lowPrice": 10,
     "highPrice": 25,
     "priceCurrency": "USD",
+    "tiers": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://bigtex.com/",
     "checkedAt": "2026-10-05T13:59:35.307Z"
+  },
+  {
+    "pinId": 6077,
+    "performers": [],
+    "ticketUrl": "https://www.ghibli-museum.jp/en/tickets/",
+    "lowPrice": 100,
+    "highPrice": 1000,
+    "priceCurrency": "JPY",
+    "tiers": [
+      {
+        "note": "Advance reservation only",
+        "label": "Ages 19 and over",
+        "price": 1000
+      },
+      {
+        "label": "Ages 13 to 18",
+        "price": 700
+      },
+      {
+        "label": "Ages 7 to 12",
+        "price": 400
+      },
+      {
+        "label": "Ages 4 to 6",
+        "price": 100
+      },
+      {
+        "label": "Ages 3 and under",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.ghibli-museum.jp/en/tickets/",
+    "checkedAt": "2026-10-10T21:30:59.177Z"
+  },
+  {
+    "pinId": 6324,
+    "performers": [],
+    "ticketUrl": "https://watchart2026.patek.com/en/registration/ce482c95-60f3-460a-b3c4-a4f9f24669d6",
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "note": "Free; reservation recommended",
+        "label": "General admission",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.patek.com/en/manufacture/inside-patek-philippe/watch-art-grand-exhibitions/milan",
+    "checkedAt": "2026-10-10T21:46:01.981Z"
   },
   {
     "pinId": 6356,
@@ -6799,10 +8385,462 @@
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
+    "tiers": [],
     "availability": null,
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://en.endurance-info.com/auto/article/119029-daytona-international-speedway-announces-2027-rolex-24-date",
     "checkedAt": "2026-10-07T14:26:14.039Z"
+  },
+  {
+    "pinId": 6510,
+    "performers": [
+      {
+        "name": "Takashi NIINO",
+        "type": "Person"
+      },
+      {
+        "name": "Koji SATO",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://www.ceatec.com/redirect/?callback_id=regist_jms",
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "JPY",
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.jesa.or.jp/en/news/post/press-releaseceatec-2026-japan-mobility-show-bizweek-2026-chairmen-of-both-organizations-to-appear-in-an-opening-day-special-dialogue-session/",
+    "checkedAt": "2026-10-09T14:00:35.420Z"
+  },
+  {
+    "pinId": 6512,
+    "performers": [],
+    "ticketUrl": "https://www.goodwood.com/motorsport/members-meeting/tickets-and-packages/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.goodwood.com/motorsport/members-meeting/tickets-and-packages/",
+    "checkedAt": "2026-10-10T21:45:50.560Z"
+  },
+  {
+    "pinId": 6513,
+    "performers": [],
+    "ticketUrl": "https://www.goodwood.com/motorsport/goodwood-revival/tickets-and-packages/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "PreOrder",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.goodwood.com/grr/event-coverage/goodwood-revival/2027-revival-dates-revealed/",
+    "checkedAt": "2026-10-10T21:46:00.264Z"
+  },
+  {
+    "pinId": 6544,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://focustaiwan.tw/politics/202610020019",
+    "checkedAt": "2026-10-09T14:00:35.273Z"
+  },
+  {
+    "pinId": 6554,
+    "performers": [],
+    "ticketUrl": "https://autoemotodepoca.com/en/ticket-office/",
+    "lowPrice": 22,
+    "highPrice": 143,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "note": "no reductions on Thursday",
+        "label": "Thursday 22 Oct full-price",
+        "price": 58
+      },
+      {
+        "label": "Friday 23 Oct full-price",
+        "price": 35
+      },
+      {
+        "label": "Saturday 24 or Sunday 25 Oct single day",
+        "price": 27
+      },
+      {
+        "label": "2 days Sat 24 + Sun 25",
+        "price": 50
+      },
+      {
+        "label": "2 days Fri 23 + Sat 24",
+        "price": 60
+      },
+      {
+        "label": "3 days Fri 23 - Sun 25",
+        "price": 85
+      },
+      {
+        "label": "4 days Thu 22 - Sun 25",
+        "price": 143
+      },
+      {
+        "note": "bought/collected at event ticket office with ID/certificate",
+        "label": "Reduced (age 13-17, disability under 80%)",
+        "price": 22
+      },
+      {
+        "note": "collect at ticket office; under 4 need no ticket",
+        "label": "Free (children up to 12; disability 80%+ with companion)",
+        "price": 0
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://autoemotodepoca.com/en/ticket-office/",
+    "checkedAt": "2026-10-10T21:45:22.517Z"
+  },
+  {
+    "pinId": 6556,
+    "performers": [],
+    "ticketUrl": "https://www.messe-ticket.de/ESSEN_Shop/EMS26/Shop",
+    "lowPrice": 14,
+    "highPrice": 32,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "note": "on-site price is higher",
+        "label": "Adult day ticket (online)",
+        "price": 20
+      },
+      {
+        "note": "on-site price is higher",
+        "label": "Adult afternoon ticket (Mon-Fri from 2pm) (online)",
+        "price": 14
+      },
+      {
+        "note": "on-site price is higher",
+        "label": "Reduced day ticket (6-16, pupils, students, disabled) (online)",
+        "price": 16
+      },
+      {
+        "note": "on-site price is higher",
+        "label": "Reduced afternoon ticket (Mon-Fri from 2pm) (online)",
+        "price": 14
+      },
+      {
+        "note": "on-site price is higher",
+        "label": "Previewday Nov 27 adult day ticket (online)",
+        "price": 32
+      },
+      {
+        "note": "on-site price is higher",
+        "label": "Previewday adult afternoon ticket (online)",
+        "price": 17
+      },
+      {
+        "note": "on-site price is higher",
+        "label": "Previewday reduced day ticket (online)",
+        "price": 27
+      },
+      {
+        "note": "on-site price is higher",
+        "label": "Previewday reduced afternoon ticket (online)",
+        "price": 17
+      },
+      {
+        "label": "Children under 6",
+        "price": 0
+      }
+    ],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.essen-motorshow.de/tickets/index-9.html",
+    "checkedAt": "2026-10-10T21:45:32.449Z"
+  },
+  {
+    "pinId": 6559,
+    "performers": [],
+    "ticketUrl": "https://www.retromobile.com/en/box-office/buy-my-ticket",
+    "lowPrice": 12,
+    "highPrice": 270,
+    "priceCurrency": "EUR",
+    "tiers": [
+      {
+        "label": "Web rate during the show (3-7 Feb 2027)",
+        "price": 23
+      },
+      {
+        "label": "On-site price",
+        "price": 25
+      },
+      {
+        "label": "Group rate (from 10 tickets)",
+        "price": 17
+      },
+      {
+        "note": "on sale on site only with proof of purchase",
+        "label": "Teenagers under 16",
+        "price": 12
+      },
+      {
+        "label": "Children under 12",
+        "price": 0
+      },
+      {
+        "note": "on site only, with disability card",
+        "label": "People with disabilities and companions",
+        "price": 17
+      },
+      {
+        "label": "Preview party, Tue 2 Feb 2027 18:00-23:00",
+        "price": 120
+      },
+      {
+        "label": "Club Retromobile - Day",
+        "price": 270
+      }
+    ],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.retromobile.com/en/box-office/buy-my-ticket",
+    "checkedAt": "2026-10-10T21:45:43.841Z"
+  },
+  {
+    "pinId": 6564,
+    "performers": [],
+    "ticketUrl": "https://www.bharat-mobility.com/visitor-registration",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.bharat-mobility.com/visitor-registration",
+    "checkedAt": "2026-10-10T21:45:44.244Z"
+  },
+  {
+    "pinId": 6570,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://view.asiae.co.kr/en/article/2026090915254540957",
+    "checkedAt": "2026-10-09T14:14:43.734Z"
+  },
+  {
+    "pinId": 6600,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.taiwannews.com.tw/news/6448957",
+    "checkedAt": "2026-10-09T14:02:36.083Z"
+  },
+  {
+    "pinId": 6604,
+    "performers": [],
+    "ticketUrl": "https://www.taipeicitymarathon.com/en/",
+    "lowPrice": 2200,
+    "highPrice": 2200,
+    "priceCurrency": "TWD",
+    "tiers": [],
+    "availability": "SoldOut",
+    "onSaleDate": null,
+    "source": "markup",
+    "sourceUrl": "https://fatmarathoner.com/taipei-marathon-guide/",
+    "checkedAt": "2026-10-09T14:07:30.948Z"
+  },
+  {
+    "pinId": 6606,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://udn.com/news/story/7241/9464732",
+    "checkedAt": "2026-10-09T14:13:02.391Z"
+  },
+  {
+    "pinId": 6610,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.computextaipei.com.tw/en/index.html",
+    "checkedAt": "2026-10-09T14:19:16.238Z"
+  },
+  {
+    "pinId": 6612,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.apec.org/",
+    "checkedAt": "2026-10-09T14:07:30.439Z"
+  },
+  {
+    "pinId": 6613,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://news.cgtn.com/news/2026-09-30/China-s-World-Internet-Conference-summit-to-focus-on-open-source-AI-1QQPSohYhjO/share_amp.html",
+    "checkedAt": "2026-10-09T14:04:20.206Z"
+  },
+  {
+    "pinId": 6616,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+    "checkedAt": "2026-10-09T14:12:44.682Z"
+  },
+  {
+    "pinId": 6630,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://meetings.skift.com/2026/05/14/routes-world-diverts-2026-conference-from-riyadh-to-frankfurt/",
+    "checkedAt": "2026-10-09T14:00:35.487Z"
+  },
+  {
+    "pinId": 6637,
+    "performers": [],
+    "ticketUrl": "https://www.wtm.com/london/en-gb/tickets.html",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.wtm.com/london/en-gb/tickets.html",
+    "checkedAt": "2026-10-10T21:45:24.957Z"
+  },
+  {
+    "pinId": 6638,
+    "performers": [],
+    "ticketUrl": "https://www.itb.com/en/besuchen/tickets/",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "PreOrder",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.itb.com/en/besuchen/tickets/",
+    "checkedAt": "2026-10-10T21:45:47.399Z"
+  },
+  {
+    "pinId": 6639,
+    "performers": [],
+    "ticketUrl": "https://www.ifema.es/en/fitur/tickets",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "PreOrder",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://www.ifema.es/en/fitur/tickets",
+    "checkedAt": "2026-10-10T21:45:41.013Z"
+  },
+  {
+    "pinId": 6641,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.seatradecruiseevents.com/global/",
+    "checkedAt": "2026-10-09T14:15:09.605Z"
+  },
+  {
+    "pinId": 6643,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "session",
+    "sourceUrl": "https://www.iata.org/en/pressroom/2026-releases/06-07-xiamen-airlines-host-83rd-iata-agm/",
+    "checkedAt": "2026-10-09T14:19:15.843Z"
+  },
+  {
+    "pinId": 6660,
+    "performers": [],
+    "ticketUrl": "https://europe.money2020.com/pass-picker",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "hand",
+    "sourceUrl": "https://europe.money2020.com/",
+    "checkedAt": "2026-10-10T21:45:55.126Z"
   }
 ]
