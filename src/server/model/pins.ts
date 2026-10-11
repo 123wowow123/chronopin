@@ -170,17 +170,18 @@ export default class Pins extends BasePins<Pin> {
     return queryPinByIds(ids).then((res) => new Pins(res));
   }
 
-  // The thread around a pin, its own place in it first. Two steps, as a page
-  // and a search take: the thread is walked on "Pin", then those pins are read
-  // out of the view by id. Joining the view to the walk instead left Postgres
-  // building all of it - every pin's references, ratings, views and duplicate
-  // group - before keeping the handful the thread names: 44ms to answer with
-  // a single pin.
   // The ids of every pin in the thread around pinId, pinId itself included.
   static async threadIds(pinId: number): Promise<number[]> {
     return (await queryThreadOrder(pinId)).map((o) => o.id);
   }
 
+  // The thread around a pin: its whole tree, top pin first, each pin's
+  // responses under it (see queryThreadOrder). Two steps, as a page and a
+  // search take: the thread is walked on "Pin", then those pins are read out
+  // of the view by id. Joining the view to the walk instead left Postgres
+  // building all of it - every pin's references, ratings, views and duplicate
+  // group - before keeping the handful the thread names: 44ms to answer with
+  // a single pin.
   static async getThreadPins(pinId: number) {
     const order = await queryThreadOrder(pinId);
     if (!order.length) {
@@ -195,9 +196,10 @@ export default class Pins extends BasePins<Pin> {
       ORDER BY "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
       [order.map((o) => o.id)],
     );
-    const place = new Map(order.map((o) => [o.id, o.reverseOrder]));
+    const place = new Map(order.map((o) => [o.id, o]));
     rows.forEach((row) => {
-      row.reverseOrder = place.get(row.id);
+      row.reverseOrder = place.get(row.id)?.reverseOrder;
+      row.threadLevel = place.get(row.id)?.level;
     });
     return new Pins().setPinsSortBy(rows, 'reverseOrder', true);
   }
@@ -759,40 +761,77 @@ function queryPinByIds(ids: number[]): Promise<PageResult> {
     .then(result);
 }
 
-// Every pin in the thread around pinId with its place in it: the pin's
-// ancestors (reverseOrder 1, 2... walking up) and the same author's replies
-// below it (-1, -2...), with pinId itself at 0. Ids and places only;
-// getThreadPins reads the pins themselves.
-function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrder: number }[]> {
-  return db.query<{ id: number; reverseOrder: number }>(
+// A pin's whole thread as a tree, in the order it reads: the top pin first,
+// then each pin's responses under it, depth first, siblings oldest first. The
+// tree is the pin's ancestors (any author) with, under every one of them and
+// under the pin itself, each reply by the same author as the pin it answers.
+// A reader on any branch therefore sees the other branches too, not just the
+// line down to the top.
+//
+// level is how far a row is nested: it steps in only below a pin that has
+// more than one response, so a long unbranched chain stays flush left however
+// deep it runs. reverseOrder keeps its old meaning - 0 for pinId, positive
+// above it, negative below - so the flat API order is unchanged for a chain.
+// Ids and places only; getThreadPins reads the pins themselves.
+async function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrder: number; level: number }[]> {
+  // UNION, not UNION ALL, so a parentId cycle ends instead of looping.
+  const rows = await db.query<{ id: number; parentId: number | null; start: Date | string }>(
     `
     WITH RECURSIVE
-      "previous" ("id", "parentId", "userId", "reverseOrder") AS (
-          SELECT "id", "parentId", "userId", 0
+      "above" ("id", "parentId", "userId", "start") AS (
+          SELECT "id", "parentId", "userId", "utcStartDateTime"
           FROM "Pin"
           WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
-        UNION ALL
-          SELECT "Pin"."id", "Pin"."parentId", "Pin"."userId", "previous"."reverseOrder" + 1
+        UNION
+          SELECT "Pin"."id", "Pin"."parentId", "Pin"."userId", "Pin"."utcStartDateTime"
           FROM "Pin"
-            JOIN "previous" ON "Pin"."id" = "previous"."parentId"
+            JOIN "above" ON "Pin"."id" = "above"."parentId"
           WHERE "Pin"."utcDeletedDateTime" IS NULL
       ),
-      "next" ("id", "parentId", "userId", "reverseOrder") AS (
-          SELECT "id", "parentId", "userId", 0
+      "tree" ("id", "parentId", "userId", "start") AS (
+          SELECT "id", "parentId", "userId", "start" FROM "above"
+        UNION
+          SELECT "Pin"."id", "Pin"."parentId", "Pin"."userId", "Pin"."utcStartDateTime"
           FROM "Pin"
-          WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
-        UNION ALL
-          SELECT "Pin"."id", "Pin"."parentId", "Pin"."userId", "next"."reverseOrder" - 1
-          FROM "Pin"
-            JOIN "next" ON "Pin"."parentId" = "next"."id"
+            JOIN "tree" ON "Pin"."parentId" = "tree"."id"
           WHERE "Pin"."utcDeletedDateTime" IS NULL
-            AND "next"."userId" = "Pin"."userId"
+            AND "tree"."userId" = "Pin"."userId"
       )
-    SELECT "id", "reverseOrder" FROM "previous"
-    UNION
-    SELECT "id", "reverseOrder" FROM "next"`,
+    SELECT "id", "parentId", "start" FROM "tree"`,
     [pinId],
   );
+  if (!rows.length) return [];
+
+  const byId = new Set(rows.map((r) => Number(r.id)));
+  const children = new Map<number, typeof rows>();
+  const tops: typeof rows = [];
+  for (const row of rows) {
+    const parent = row.parentId == null ? null : Number(row.parentId);
+    if (parent === null || !byId.has(parent)) {
+      tops.push(row);
+    } else {
+      children.set(parent, [...(children.get(parent) ?? []), row]);
+    }
+  }
+  const oldestFirst = (a: (typeof rows)[number], b: (typeof rows)[number]) => new Date(a.start).getTime() - new Date(b.start).getTime() || Number(a.id) - Number(b.id);
+
+  // Depth first, with an explicit stack: a chain can run to hundreds of pins.
+  const ordered: { id: number; level: number }[] = [];
+  const seen = new Set<number>();
+  const stack = tops.sort(oldestFirst).reverse().map((row) => ({ row, level: 0 }));
+  while (stack.length) {
+    const { row, level } = stack.pop()!;
+    const id = Number(row.id);
+    if (seen.has(id)) continue;
+    seen.add(id);
+    ordered.push({ id, level });
+    const below = (children.get(id) ?? []).sort(oldestFirst);
+    const next = below.length > 1 ? level + 1 : level;
+    for (let i = below.length - 1; i >= 0; i--) stack.push({ row: below[i], level: next });
+  }
+
+  const at = Math.max(0, ordered.findIndex((o) => o.id === pinId));
+  return ordered.map((o, index) => ({ ...o, reverseOrder: at - index }));
 }
 
 // The SQL for each rating: and delay: comparison, so nothing typed reaches the query.

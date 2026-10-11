@@ -201,6 +201,9 @@ export type PinJson = {
   hasLike?: boolean;
   searchScore?: number;
   reverseOrder?: number;
+  // Only on a thread's pins: how far in the row is nested. A thread steps in
+  // below a pin with more than one response, so an unbranched chain stays 0.
+  threadLevel?: number;
   userId?: number;
   user?: PinUserJson;
   media?: MediumJson[];

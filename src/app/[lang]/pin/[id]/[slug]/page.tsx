@@ -35,6 +35,7 @@ import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
 import { PinCandidates } from '@/components/pin/PinCandidates';
 import { PinTags } from '@/components/pin/PinTags';
+import { branchesUnder, threadNumbers } from '@/lib/thread';
 import { PinUpdates } from '@/components/pin/PinUpdates';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
 import { hasPlace } from '@/lib/places';
@@ -203,7 +204,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           ) : null}
 
           {/* Beside the pin on wide screens, under its map; after it on phones. */}
-          <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
+          <Suspense fallback={<PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />}>
+            <ThreadAwareTags pin={pin} />
+          </Suspense>
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
 
@@ -526,9 +529,22 @@ async function PinBody({
   );
 }
 
+// The pin's tags, the thread tag's icon forked when the thread branches under
+// the pin. Only a pin in a thread reads the thread, and that read is cached.
+async function ThreadAwareTags({ pin }: { pin: PinJson }) {
+  const inThread = !!pin.parentId || !!pin.rootThread;
+  const branching = inThread ? branchesUnder(await threadPins(pin.id, (await getT()).locale), pin.id) : false;
+  return <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} branching={branching} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />;
+}
+
+// The thread pane's nesting: pixels a branch steps in, and how many steps show.
+const THREAD_INDENT = 16;
+const MAX_THREAD_INDENT = 4;
+
 async function Thread({ pin }: { pin: PinJson }) {
   const t = await getT();
   const pins = await threadPins(pin.id, t.locale);
+  const numbers = threadNumbers(pins);
   return (
     <section aria-labelledby="thread-heading" className="surface mt-6 p-5">
       <div className="flex items-center justify-between">
@@ -546,26 +562,35 @@ async function Thread({ pin }: { pin: PinJson }) {
       <ThreadList
         key={pin.id}
         current={Math.max(0, pins.findIndex((p) => p.id === pin.id))}
-        items={pins.map((p, index) => (
-          <Link
-            key={p.id}
-            href={pinPath(p)}
-            aria-current={p.id === pin.id ? 'page' : undefined}
-            className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
-          >
-            <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{index + 1}</span>
-            <span className="min-w-0">
-              <span dir={pinTextDir(p)}>{p.title}</span>
-              <span className="mt-1.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
-                <CompanyTicker pin={p} bare />
-                {/* A season's own score and run length, the way a card shows them. */}
-                <RatingSummary ratings={p.ratings} />
-                <EpisodeCount pin={p} chip />
-                <ThreadAge start={p.utcStartDateTime} allDay={p.allDay} />
-              </span>
-            </span>
-          </Link>
-        ))}
+        items={pins.map((p) => {
+          // A branch steps in under the pin it answers (threadLevel, capped so a
+          // deep tree still fits the pane); an unbranched chain stays flush left.
+          const level = Math.min(p.threadLevel ?? 0, MAX_THREAD_INDENT);
+          return (
+            <div key={p.id} className="relative" style={level ? { paddingInlineStart: level * THREAD_INDENT } : undefined}>
+              {Array.from({ length: level }, (_, i) => (
+                <span key={i} aria-hidden className="absolute -inset-y-0.5 w-px bg-line" style={{ insetInlineStart: i * THREAD_INDENT + THREAD_INDENT / 2 }} />
+              ))}
+              <Link
+                href={pinPath(p)}
+                aria-current={p.id === pin.id ? 'page' : undefined}
+                className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
+              >
+                <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{numbers.get(p.id)}</span>
+                <span className="min-w-0">
+                  <span dir={pinTextDir(p)}>{p.title}</span>
+                  <span className="mt-1.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
+                    <CompanyTicker pin={p} bare />
+                    {/* A season's own score and run length, the way a card shows them. */}
+                    <RatingSummary ratings={p.ratings} />
+                    <EpisodeCount pin={p} chip />
+                    <ThreadAge start={p.utcStartDateTime} allDay={p.allDay} />
+                  </span>
+                </span>
+              </Link>
+            </div>
+          );
+        })}
       />
     </section>
   );

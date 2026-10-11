@@ -500,3 +500,55 @@ made by tag name through the admin DB API with
 `python3 scripts/people/link_pins_prod.py [--apply]` (prod pin ids differ from
 local ones): 165 PinPerson rows. The script reads the admin token from
 `.scrape/admin.token`; it is idempotent (`?upsert=1`).
+
+### Congress.gov through the browser (2026-10-11)
+
+congress.gov and govtrack.us return 403 to scripted fetches, so sponsored-law
+lists were read in Ian's own Chrome (Claude in Chrome): an in-page `fetch` of
+`/member/x/<bioguideId>?q={"sponsorship":"sponsored","bill-status":"law"}`
+returns the member's enacted sponsored bills (verified for the 90
+longest-serving representatives: 516 enacted bills, 370 after dropping
+namings/commemoratives, 72 members with at least one). Results came back
+through the tool, not to a local server (a localhost upload from the page was
+refused by the permission classifier and not worked around).
+
+Nine laws with real ex-post literature were sent to agents; none was stored:
+WIOA was a House-Senate compromise substituted into Foxx's bill number (vehicle);
+the Farm Bill, ACPERA, SCRA, Identity Theft Penalty Enhancement Act, Perkins V
+and the Cruise Vessel Act had only implementation or descriptive reports; the
+GPRA Modernization Act's GAO review measures use of performance information,
+not a welfare criterion; the Microbead-Free Waters Act's one study mixes US and
+Canadian bans and its figure was not fetched. Also dropped as vehicles: CARES
+Act (Courtney), PPP and Health Care Enhancement Act, HERA, USMCA and Peru TPA.
+The assessed total stays at Pelosi (Economic Stimulus Act 2008) and Danny
+Davis (Second Chance Act).
+
+### Congress.gov pull completed (2026-10-11)
+
+All 1,001 representatives and senators were read through Ian's Chrome (the
+90 longest-serving first, then 911 more in two parts, four in-page fetches at a
+time). The first 449 yielded 658 non-naming, non-appropriations laws across 158
+members; the remaining 462 only 6 laws for 3 members (mostly former members whose sponsorship data congress.gov does
+not carry). Thirteen laws with real ex-post literature were assessed by agents;
+vehicle bills (CARES Act, PPP, HERA, USMCA, 21st Century Cures, First Step Act)
+were excluded because the formal sponsor did not write the enacted text.
+
+Stored (`people:add-assessed`): Grassley, BAPCPA 2005 (efficiency 0,
+distribution -1, contested; Gross et al. AER 2021, Albanesi & Nosal);
+Schumer, Brady Act (externalities 0, contested; Ludwig & Cook JAMA 2000);
+Durbin, Fair Sentencing Act (fiscal +1, low; USSC 2015 retroactivity report);
+Crapo, 2018 regulatory relief law (efficiency +1, externalities -1, low; one
+working paper); Cline, Small Business Reorganization Act (efficiency +1;
+Hotchkiss, Iverson & Zheng, NBER conference paper). Left out: Markey's
+Insider Trading and Securities Fraud Enforcement Act (abstract only, no
+magnitudes). With Pelosi's and Davis's earlier ones, 7 representatives and
+senators now carry an assessed contribution from this pass.
+
+### API keys (2026-10-11)
+
+One api.data.gov key serves both openFEC and api.congress.gov. It lives in
+`.env.local` and in `Docker/env.prod.list` on the VM as `DATA_GOV_API_KEY`,
+`CONGRESS_API_KEY` and `FEC_API_KEY` (same value; scripts read the specific
+name). Limits seen: openFEC 60 requests an hour, api.congress.gov 20,000. The
+VM copy takes effect at the next container restart or deploy; nothing was
+restarted. `people:import --laws` reads `CONGRESS_API_KEY`.

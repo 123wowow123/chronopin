@@ -9,3 +9,5 @@
 * [Nightly scrape jobs](nightly-jobs.md) - The standing roster of scheduled jobs: vertical, source, curator, cadence and the already-pinned test
 * [Daily pin jobs](daily-jobs.md) - The midnight and 6am/6pm LLM runs that add and maintain pins: each task's guidance, the tools, the drivers and the learning loop
 * [Learnings and feedback](learnings.md) - Dated log of what each job taught and what the owner corrected; update after every scraping job
+
+* [Snack and beverage product guides](../../product-guide-strategy.md) - Parent guide, individual product/flavor pins in its thread, native taste radars, sourced images and eligible ads

@@ -1,0 +1,262 @@
+[
+  {
+    "pinId": 7664,
+    "product": "White Rabbit — original milk candy",
+    "scores": {
+      "aroma": 2.5,
+      "bitterness": 0,
+      "sweetness": 4.5,
+      "astringency": 0,
+      "umami": 0.5,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Sweet and creamy, with a soft, chewy texture. This row covers the original milk candy in the bundle.",
+    "sourceUrl": "https://www.worldmarket.com/p/white-rabbit-creamy-milk-candy-471041.html",
+    "sourceTitle": "White Rabbit Creamy Milk Candy",
+    "basis": "Retailer describes the original candy as chewy and creamy.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7656
+  },
+  {
+    "pinId": 7665,
+    "product": "White Rabbit — matcha candy",
+    "scores": {
+      "aroma": 3,
+      "bitterness": 1,
+      "sweetness": 4,
+      "astringency": 0.5,
+      "umami": 0.5,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Sweet milk-candy base with a green-tea note and chewy texture. Tea bitterness and dryness are conservative estimates; this is the matcha half of the bundle.",
+    "sourceUrl": "https://www.auntiekcandy.com/collections/green-tea-candy/products/white-rabbit-matcha-green-tea-milk-chewy-candy-5-3-oz",
+    "sourceTitle": "White Rabbit Matcha Green Tea Milk Chewy Candy",
+    "basis": "Retailer identifies the matcha variant as creamy, chewy green-tea milk candy.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7656
+  },
+  {
+    "pinId": 7666,
+    "product": "Weilong — fragrant spicy konjac",
+    "scores": {
+      "aroma": 3.5,
+      "bitterness": 0.5,
+      "sweetness": 0.5,
+      "astringency": 0,
+      "umami": 2.5,
+      "pungent": 3.5,
+      "coolness": 0
+    },
+    "notes": "Spice-forward and savory, with a springy, chewy bite. The reviewed red fragrant-spicy variant is hotter than the orange mala version; the selected listing specifies 香辣.",
+    "sourceUrl": "https://middleclass.sg/treats/weilong-konjac-snack-review/",
+    "sourceTitle": "Weilong Spicy Konjac Snack Review",
+    "basis": "Firsthand review distinguishes the red fragrant-spicy flavor from mala and sour-spicy variants, reporting similar seasoning with a higher heat level.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7656
+  },
+  {
+    "pinId": 7667,
+    "product": "Want Want — sugar-glazed rice crackers",
+    "scores": {
+      "aroma": 2,
+      "bitterness": 0,
+      "sweetness": 3,
+      "astringency": 0,
+      "umami": 1.5,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Sweet glaze over a savory rice cracker; light and crisp. Saltiness is described here because it is not a separate radar axis.",
+    "sourceUrl": "https://wantwantindonesia.co.id/en/product-en/senbei-2/",
+    "sourceTitle": "Want Want Shelly Senbei",
+    "basis": "Operator describes Shelly Senbei as sweet and savory.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7656
+  },
+  {
+    "pinId": 7668,
+    "product": "ChaCha — roasted salted sunflower seeds",
+    "scores": {
+      "aroma": 2.5,
+      "bitterness": 0.5,
+      "sweetness": 0.5,
+      "astringency": 0,
+      "umami": 1,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Roasted seed flavor and a salty shell, with a firm kernel. This covers the natural salted version, not coconut, caramel or spiced variants.",
+    "sourceUrl": "https://www.amazon.com/dp/B0057PTVIU",
+    "sourceTitle": "ChaCha roasted and salted sunflower seeds",
+    "basis": "Verified listing names roasted and salted natural sunflower seeds. Roast, nutty aroma and low sweetness scores are editorial inference from that description.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7656
+  },
+  {
+    "pinId": 7669,
+    "product": "Huang Fei Hong — spicy peanuts",
+    "scores": {
+      "aroma": 3,
+      "bitterness": 2,
+      "sweetness": 0,
+      "astringency": 0,
+      "umami": 2,
+      "pungent": 1.5,
+      "coolness": 0
+    },
+    "notes": "Peanut and chili flavors with peppercorn tingling. One firsthand reviewer found mild heat and some bitterness; heat tolerance and batches can differ.",
+    "sourceUrl": "https://heckinhot.com/2025/05/15/huang-fei-hong-spicy-crispy-peanuts/",
+    "sourceTitle": "Huang Fei Hong Spicy Crispy Peanuts review",
+    "basis": "Firsthand review reports peanut and chili notes, bitterness 2/5, umami 2/5, no sweetness, low heat and a numbing sensation. Heat is editorially mapped to the site’s pungent axis rather than copied from its 10-point scale.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7656
+  },
+  {
+    "pinId": 7670,
+    "product": "Haw flakes — hawthorn sweets",
+    "scores": {
+      "aroma": 2.5,
+      "bitterness": 0.5,
+      "sweetness": 4,
+      "astringency": 0.5,
+      "umami": 0,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Jammy fruit sweetness with tartness, in thin discs with a crumbly-chewy bite. Tartness is described separately; it is not astringency. This is a product-category estimate, not a firsthand review of the selected four-pack.",
+    "sourceUrl": "https://www.bonappetit.com/story/haw-flakes",
+    "sourceTitle": "Haw Flakes Are the Childhood Snack I Still Crave",
+    "basis": "Firsthand essay describes haw flakes as jammy, fruity and chewy-crumbly.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7656
+  },
+  {
+    "pinId": 7658,
+    "product": "Oriental Leaf — jasmine green tea",
+    "scores": {
+      "aroma": 3.5,
+      "bitterness": 1.5,
+      "sweetness": 0,
+      "astringency": 1.5,
+      "umami": 1,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Floral jasmine aroma over unsweetened green tea. Mild bitterness, astringency and tea savoriness are conservative estimates, not measured scores.",
+    "sourceUrl": "https://www.nongfuspring.com/mobile/goods/detail-all.html?id=1&pid=2",
+    "sourceTitle": "Nongfu Spring Oriental Leaf jasmine tea",
+    "basis": "Manufacturer describes jasmine-scented green tea, a floral aroma and a mellow fresh taste; the selected listing is unsweetened jasmine green tea.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7657
+  },
+  {
+    "pinId": 7659,
+    "product": "CHI FOREST — Lychee Fizzy",
+    "scores": {
+      "aroma": 3,
+      "bitterness": 0,
+      "sweetness": 3.5,
+      "astringency": 0,
+      "umami": 0,
+      "pungent": 0.5,
+      "coolness": 0
+    },
+    "notes": "Lychee sweetness and a light floral note, with carbonation. Sweetness is perceived intensity, not sugar content. Pungency reflects a small estimated carbonation prickle, not chili heat.",
+    "sourceUrl": "https://www.chiforest.com/lychee",
+    "sourceTitle": "CHI FOREST Lychee Fizzy",
+    "basis": "Manufacturer describes lychee sweetness and a slightly floral taste.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7657
+  },
+  {
+    "pinId": 7660,
+    "product": "Wanglaoji — canned herbal tea",
+    "scores": {
+      "aroma": 3,
+      "bitterness": 1,
+      "sweetness": 3.5,
+      "astringency": 0.5,
+      "umami": 0,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Sweetened herbal flavor, with gentle earthy-floral notes. Scores have lower confidence: based on the product description rather than a controlled tasting of this US listing.",
+    "sourceUrl": "https://trovasia.com/en/products/te-freddo-erboristico-310ml",
+    "sourceTitle": "Wanglaoji herbal iced tea",
+    "basis": "Retailer describes the herbal drink and its traditional herbal blend. The precise numeric intensities are editorial estimates, not laboratory measurements.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7657
+  },
+  {
+    "pinId": 7661,
+    "product": "Jia Duo Bao — canned herbal tea",
+    "scores": {
+      "aroma": 3,
+      "bitterness": 1,
+      "sweetness": 3.5,
+      "astringency": 0.5,
+      "umami": 0,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Herbal flavor led by mesona and licorice, recalling grass-jelly drinks. Sweetness and mild bitterness are estimated for the sweetened canned drink.",
+    "sourceUrl": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/",
+    "sourceTitle": "Heard of this Chinese tisane beverage?",
+    "basis": "Firsthand tasting describes mesona and licorice as dominant flavors and compares Jia Duo Bao with grass jelly.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7657
+  },
+  {
+    "pinId": 7662,
+    "product": "Wahaha — A&D milk drink",
+    "scores": {
+      "aroma": 2,
+      "bitterness": 0,
+      "sweetness": 3.5,
+      "astringency": 0,
+      "umami": 0.5,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Sweet dairy flavor with a tangy finish. Sourness is separate from astringency and is described here; texture and exact intensity vary with formulation.",
+    "sourceUrl": "https://www.sayweee.com/th/social/video/116974",
+    "sourceTitle": "Wahaha AD calcium milk tasting",
+    "basis": "Product-specific customer tasting describes the drink as sweet and sour. This is customer evidence, not a controlled panel.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7657
+  },
+  {
+    "pinId": 7663,
+    "product": "Coconut Palm — coconut milk drink",
+    "scores": {
+      "aroma": 3,
+      "bitterness": 0,
+      "sweetness": 3,
+      "astringency": 0,
+      "umami": 0.5,
+      "pungent": 0,
+      "coolness": 0
+    },
+    "notes": "Coconut aroma with a smooth, lightly creamy mouthfeel. Sweetness is a conservative estimate for the ready-to-drink beverage, not canned cooking coconut milk.",
+    "sourceUrl": "https://www.walmart.com/ip/275741327",
+    "sourceTitle": "Coconut Palm Coconut Milk Drink",
+    "basis": "Retailer identifies Coconut Palm ready-to-drink coconut milk with a smooth, lightly creamy consistency. The selected pack is 1 L cartons; numeric scores are an estimate of this product family.",
+    "source": "session",
+    "checkedOn": "2026-10-11",
+    "guidePinId": 7657
+  }
+]

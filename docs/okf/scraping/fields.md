@@ -92,6 +92,20 @@ top, which is both correct and what the page shows. Pin 2694 (Opus 5.5, whose
 header reads "September 22, 2026") is the worked example; pin 2693 (Fable 5.1,
 which carries no date at all) is the other case.
 
+## Product launch dating
+
+Owner, 2026-10-11: products should attempt a launch-date estimate when no real
+launch date is available. Research the exact product/flavor and market before
+using company or brand history. Prefer a verified day; otherwise use a sourced
+launch window and `estimated`, explaining any family-level inference and the
+last-day timeline placement. Cite the historical evidence with a dated
+reference so an undated retailer listing does not appear to verify the launch.
+Keep rebrand and regional introductions clearly scoped. If no defensible
+estimate is found, mark the date `unknown` and document the gap; a retained
+publication placeholder must explicitly say it is not a launch date. Guide
+overviews still use their curation dates. See the
+[product-guide strategy](../../product-guide-strategy.md).
+
 # Adding a category
 
 A category name lives in **seven files**: `categories.ts` and all six

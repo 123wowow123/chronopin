@@ -1,5 +1,13 @@
 # Update Log
 
+## 2026-10-11
+
+* **Update:** Added verified customer ratings to all thirteen Chinese product pins and verified TV-style badges in both live guide threads. Recorded source scores, review counts, small-sample caveats and flavor-specific evidence; the [product guide strategy](../product-guide-strategy.md) now requires rating research and native `PinRating` storage.
+
+* **Update:** Product pins now prefer verified launch dates, otherwise sourced estimates with explicit scope and uncertainty. Updated ten Chinese product launch-history dates and marked three unresolved launches unknown; preserved all thirteen taste radars and media. See [launch evidence](../chinese-product-launch-dates-2026-10-11.json) and [the guide strategy](../product-guide-strategy.md).
+
+* **Update:** Recorded the owner-confirmed [snack and beverage guide strategy](../product-guide-strategy.md): a parent guide thread, one child pin per product or distinct flavor, and a native taste radar on each child. Linked from scraping recipes and learnings; verified the 13 Chinese snack/beverage product pins.
+
 ## 2026-10-08
 
 * **Update:** All pin images must use Azure Blob Storage and stay out of Git. Migrated and verified 300 older restaurant images, updated 245 production pins and catalog references, and removed the tracked image files from the working tree. Added Git exclusions and the standing rule to AGENTS.md; existing Git history is unchanged. See [learnings](scraping/learnings.md#2026-10-08---remove-existing-pin-images-from-git).

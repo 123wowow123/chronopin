@@ -407,4 +407,4 @@ Thin coverage: cider and Japan/Korea snack awards are still thin; the agents ran
 sync watch list to calendar
 add a pin to calendar and keep in sync
 
-get live politition stock alerts
+get live politicians stock trading alerts

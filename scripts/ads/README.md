@@ -80,3 +80,16 @@ npm run ads:products -- add https://www.amazon.com/dp/ASINHERE00 Electronics
 Use an actual product URL returned by Amazon and categories that suit it.
 Deploy the code and run the migration and stock command against the target
 database to make the same ads available there.
+
+The October 11 Chinese-food selection added eight verified ads: White Rabbit
+milk-and-matcha candy bundle, Weilong spicy konjac strips, Want Want
+sugar-glazed rice crackers, ChaCha roasted and salted sunflower seeds
+(18-bag case), Huang Fei Hong spicy peanuts, haw flakes, Nongfu Spring
+Oriental Leaf jasmine tea and CHI FOREST Lychee Fizzy. Each cleared the
+standard listing checks; live rows and image availability were verified.
+These are curated favorites, with no national sales-rank claim. Want Want
+is a Taiwan-origin brand widely sold in China. Misleading search results
+for unrelated Smarties, BOOST, herbal-tea pods and coconut water were rejected.
+Wanglaoji, Jia Duo Bao, Wahaha and Coconut Palm were researched for the
+beverage guide but excluded from ads because their checked listings had
+fewer than 100 reviews (Coconut Palm also rated below 4.3).

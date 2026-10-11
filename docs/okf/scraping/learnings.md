@@ -13,6 +13,12 @@ After **every** scraping job (a scrape, a backfill, a batch of pins, a reference
 
 Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (owner corrections and confirmed approaches) and `* **Changed**` (which page was updated).
 
+## 2026-10-11 - Product guides need individual pins and native taste radars
+
+* **Learned:** `PinTaste` stores one taste profile per pin. Multi-product taste tables do not produce the individual native radar widgets the owner expects.
+* **Feedback:** Each snack or beverage product should have a separate pin in the guide's thread, with its taste profile on the native radar widget. Apply this to both snack and beverage guides. Distinct flavors with different profiles need separate pins.
+* **Changed:** Recorded the reusable [product guide strategy](../../product-guide-strategy.md), linked it from the vertical recipes and scraping index, and implemented six beverage pins under 7657 and seven snack/flavor pins under 7656. All 13 live native radars, public images and thread memberships were verified. Product dates are explicitly research/publication dates, not invented launches.
+
 # Standing feedback from the owner
 
 * **Pin images must not be stored in Git.** Owner, 2026-10-08: "pin inages should not be stored in git". This applies to all pin photos and generated thumbnails, beyond restaurant galleries. Store them in Azure Blob Storage, retain URLs and provenance in Git, and verify uploads and migrate references before removing existing files. Use ignored temporary caches; application UI assets may remain tracked.

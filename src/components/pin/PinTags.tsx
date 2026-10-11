@@ -15,7 +15,9 @@ import { RefineLink } from './RefineLink';
 // of the page, and the others are tags like any other here (a category reads
 // as a tag: term), rather than a row of headings that says which of them the
 // pin is really about.
-export function PinTags({ tags, categories, className = '' }: { tags?: PinTagJson[]; categories?: string[]; className?: string }) {
+// branching: the pin's thread branches somewhere below it (src/lib/thread.ts),
+// which the thread tag's icon shows as a fork.
+export function PinTags({ tags, categories, branching = false, className = '' }: { tags?: PinTagJson[]; categories?: string[]; branching?: boolean; className?: string }) {
   const t = useT();
   const shown = [
     ...(categories ?? []).map((name) => ({ name, label: categoryLabel(t, name), reserved: undefined })),
@@ -40,7 +42,7 @@ export function PinTags({ tags, categories, className = '' }: { tags?: PinTagJso
                 tag.reserved ? 'border border-dashed border-line' : 'bg-field ring-1 ring-line ring-inset'
               }`}
             >
-              {tag.reserved ? <Icon name={tag.reserved.icon} className="me-1 size-3.5" /> : null}
+              {tag.reserved ? <Icon name={branching && tag.reserved.icon === 'thread' ? 'threadBranch' : tag.reserved.icon} className="me-1 size-3.5" /> : null}
               {tag.label}
             </RefineLink>
           </li>

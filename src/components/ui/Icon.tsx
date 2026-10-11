@@ -153,6 +153,16 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M6 8v4a4 4 0 0 0 4 4h6" />
     </>
   ),
+  // The thread icon with a second line leaving the first: a thread that
+  // branches below the pin it is shown for.
+  threadBranch: (
+    <>
+      <circle cx="6" cy="4" r="2" />
+      <circle cx="18" cy="12" r="2" />
+      <circle cx="18" cy="20" r="2" />
+      <path d="M6 6v10a4 4 0 0 0 4 4h6M6 8a4 4 0 0 0 4 4h6" />
+    </>
+  ),
   sun: (
     <>
       <circle cx="12" cy="12" r="4" />

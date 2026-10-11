@@ -291,6 +291,8 @@ async function push() {
       if (r.status !== 'saved') console.log(`${r.status}: ${r.url}${r.message ? ` - ${r.message}` : ''}`);
     }
     console.log(`${Math.min(i + MAX_PREBUILT_WIKIS, found.length)}/${found.length} sent`);
+    // One write at a time with a gap, so a big push does not load the small production VM.
+    if (i + MAX_PREBUILT_WIKIS < found.length) await new Promise((resolve) => setTimeout(resolve, 15_000));
   }
   console.log(Object.entries(tally).map(([k, v]) => `${v} ${k}`).join(', '));
 }
