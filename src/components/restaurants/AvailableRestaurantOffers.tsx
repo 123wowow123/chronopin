@@ -37,7 +37,7 @@ function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZo
     <p className={styles.results} role="status">{!pages.ready ? 'Loading…' : upcoming ? `${pages.total} upcoming ${pages.total === 1 ? 'special' : 'specials'}.` : `${pages.total} ${pages.total === 1 ? 'offer' : 'offers'} available now`}</p>
     {upcoming && pages.total > 0 && <p className={styles.offerIntro}>Each restaurant’s next special is shown with its local start time.</p>}
     {pages.total > 0 && <RestaurantSortNote state={sortState} />}
-    {sortState.sort === 'starts' && pages.total > 0 && <p className={styles.offerSortNote}>Starting soonest first. Ties are ordered by rating.</p>}
+    {sortState.sort === 'starts' && pages.total > 0 && <p className={styles.offerSortNote}>Soonest start first. Ties are ordered by rating.</p>}
     {sortState.sort === 'lunch' && pages.total > 0 && <p className={styles.offerSortNote}>Lunch specials first. Each group is ordered by rating.</p>}
     {pages.total ? <PagedCardGrid pages={pages}>{(offer) => <article key={offer.id} className={styles.card}>
       {offer.photo && <Link href={offer.restaurantHref} className={styles.photoLink} aria-label={`See ${offer.name}'s restaurant details`}>
