@@ -46,7 +46,8 @@ async function GuideContent({ params, searchParams }: Props) {
   const page = view === 'discounts' ? 1 : Math.min(pageNumber(query.page), Math.max(1, Math.ceil(summary.counts[view] / GUIDE_PAGE_SIZE)));
   const sort = view === 'upcoming' ? 'opening-date' : 'rating';
   const queries: GuideQuery[] = view === 'discounts'
-    ? (['available', 'next'] as const).map((section) => ({ region: region.slug, view, section, neighborhood: 'all', sort }))
+    // Upcoming specials open soonest-first (AvailableRestaurantOffers' default).
+    ? (['available', 'next'] as const).map((section) => ({ region: region.slug, view, section, neighborhood: 'all', sort: section === 'next' ? 'starts' as const : sort }))
     : [{ region: region.slug, view, neighborhood: 'all', sort }];
   const initialPages = Object.fromEntries((await Promise.all(queries.map(async (request) => [guideKey(request), await guidePage(request, (page - 1) * GUIDE_PAGE_SIZE, now)] as const))).filter((entry): entry is [string, GuidePage<GuideItem>] => !!entry[1]));
   const { counts, neighborhoods, featured, featuredTop, today, previewSnapshot } = summary;

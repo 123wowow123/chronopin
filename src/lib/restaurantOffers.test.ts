@@ -97,6 +97,13 @@ describe('next restaurant specials', () => {
     const shown = restaurantOfferSections([offer('Favorite', 4.9, 500), lunch, offer('Other', 4.7, 200)], now, zone, { sort: 'lunch' });
     expect(shown.available.map((item) => item.name)).toEqual(['Lunch place', 'Favorite', 'Other']);
   });
+  it('puts the soonest start first, ties by rating, when sorted by start', () => {
+    const at = (name: string, rating: number, start: string) => ({ ...offer(name, rating), special: { ...happyHour, availability: { windows: [{ days: [1, 2, 3, 4, 5], start, end: '22:00' }] } } });
+    const now = new Date('2026-10-07T12:00:00Z');
+    const offers = [at('Late favorite', 4.9, '20:00'), at('Early', 4.6, '15:00'), at('Mid', 4.7, '17:00'), at('Early better', 4.8, '15:00')];
+    expect(restaurantOfferSections(offers, now, zone, { sort: 'rating' }).upcoming.map((item) => item.name)).toEqual(['Late favorite', 'Early better', 'Mid', 'Early']);
+    expect(restaurantOfferSections(offers, now, zone, { sort: 'starts' }).upcoming.map((item) => item.name)).toEqual(['Early better', 'Early', 'Mid', 'Late favorite']);
+  });
   it('moves an ended recurring offer to upcoming without repeating an active offer there', () => {
     const venue = offer('Favorite');
     const during = restaurantOfferSections([venue], new Date('2026-10-07T23:30:00Z'), zone);

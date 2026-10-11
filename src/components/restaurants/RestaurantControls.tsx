@@ -7,7 +7,7 @@ import { viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
 import type { RestaurantSort } from '@/lib/restaurantSort';
 import styles from './RestaurantGuide.module.css';
 
-export function useRestaurantSort(label: string, defaultSort: 'rating' | 'opening-date' = 'rating') {
+export function useRestaurantSort(label: string, defaultSort: 'rating' | 'opening-date' | 'starts' = 'rating') {
   const [sort, setSort] = useState<RestaurantSort>(defaultSort);
   const [origin, setOrigin] = useState<ViewerPlace>();
   const [locating, setLocating] = useState(false);
@@ -22,7 +22,7 @@ export function useRestaurantSort(label: string, defaultSort: 'rating' | 'openin
     const id = ++request.current;
     setLocationError(''); setLocating(false);
     if (value !== 'distance' || origin?.source === 'device') { setSort(value); return; }
-    const fallback = defaultSort === 'opening-date' ? 'expected opening date' : 'rating';
+    const fallback = defaultSort === 'opening-date' ? 'expected opening date' : defaultSort === 'starts' ? 'start time' : 'rating';
     if (!navigator.geolocation) { setLocationError(`Location is unavailable in this browser. ${label} are sorted by ${fallback}.`); return; }
     setLocating(true);
     navigator.geolocation.getCurrentPosition(({ coords }) => {
@@ -38,9 +38,9 @@ export function useRestaurantSort(label: string, defaultSort: 'rating' | 'openin
   return { sort, origin, locating, locationError, selectSort };
 }
 
-export function RestaurantControls({ state, label, mapHref, openingDate = false, lunch = false }: { state: ReturnType<typeof useRestaurantSort>; label: string; mapHref: string; openingDate?: boolean; lunch?: boolean }) {
+export function RestaurantControls({ state, label, mapHref, openingDate = false, lunch = false, starts = false }: { state: ReturnType<typeof useRestaurantSort>; label: string; mapHref: string; openingDate?: boolean; lunch?: boolean; starts?: boolean }) {
   return <div className={styles.offerSort}>
-    <div role="group" aria-label={`Sort ${label}`}><span>Sort by</span>{!openingDate && <button type="button" aria-pressed={state.sort === 'rating'} onClick={() => state.selectSort('rating')}>Rating</button>}{lunch && <button type="button" aria-pressed={state.sort === 'lunch'} onClick={() => state.selectSort('lunch')}>Lunch specials first</button>}<button type="button" aria-pressed={state.sort === 'distance'} disabled={state.locating} onClick={() => state.selectSort('distance')}>Distance</button>{openingDate && <button type="button" aria-pressed={state.sort === 'opening-date'} onClick={() => state.selectSort('opening-date')}>Expected opening date</button>}</div>
+    <div role="group" aria-label={`Sort ${label}`}><span>Sort by</span>{!openingDate && <button type="button" aria-pressed={state.sort === 'rating'} onClick={() => state.selectSort('rating')}>Rating</button>}{starts && <button type="button" aria-pressed={state.sort === 'starts'} onClick={() => state.selectSort('starts')}>Starting soonest</button>}{lunch && <button type="button" aria-pressed={state.sort === 'lunch'} onClick={() => state.selectSort('lunch')}>Lunch specials first</button>}<button type="button" aria-pressed={state.sort === 'distance'} disabled={state.locating} onClick={() => state.selectSort('distance')}>Distance</button>{openingDate && <button type="button" aria-pressed={state.sort === 'opening-date'} onClick={() => state.selectSort('opening-date')}>Expected opening date</button>}</div>
     <Link href={mapHref} className={styles.offerMapButton} prefetch={false}><Icon name="map" />Map</Link>
   </div>;
 }

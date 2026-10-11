@@ -52,7 +52,7 @@ export async function guidePage(query: GuideQuery, offset: number, now: Date, li
   const withDetails = (items: GuideItem[], idOf: (item: any) => number): GuidePage<GuideItem>['details'] => Object.fromEntries(items.flatMap((item) => (details[idOf(item)] ? [[idOf(item), details[idOf(item)]]] : [])));
   const view: GuideView = query.view;
   if (view === 'discounts') {
-    const sections = restaurantOfferSections(offers.filter(matches), now, region.timeZone, { sort: query.sort === 'distance' || query.sort === 'lunch' ? query.sort : 'rating', origin: query.origin });
+    const sections = restaurantOfferSections(offers.filter(matches), now, region.timeZone, { sort: query.sort === 'distance' || query.sort === 'lunch' || query.sort === 'starts' ? query.sort : 'rating', origin: query.origin });
     const list = query.section === 'next' ? sections.upcoming : sections.available;
     const located = list.flatMap((offer) => offer.location && Number.isFinite(offer.location.latitude) && Math.abs(offer.location.latitude) <= 90 && Number.isFinite(offer.location.longitude) && Math.abs(offer.location.longitude) <= 180 ? [offer.location] : []);
     const bounds = located.length ? [Math.min(...located.map((place) => place.latitude)), Math.min(...located.map((place) => place.longitude)), Math.max(...located.map((place) => place.latitude)), Math.max(...located.map((place) => place.longitude))].join(',') : undefined;

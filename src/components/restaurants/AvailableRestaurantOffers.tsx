@@ -21,7 +21,7 @@ export function AvailableRestaurantOffers(props: Props) {
 
 function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZone, city, upcoming }: Props & { upcoming: boolean }) {
   const pathname = usePathname();
-  const sortState = useRestaurantSort('Specials');
+  const sortState = useRestaurantSort('Specials', upcoming ? 'starts' : 'rating');
   const { sort, origin } = sortState;
   const pages = useGuidePages<ScheduledRestaurantOffer>({ region: regionSlug, view: 'discounts', section: upcoming ? 'next' : 'available', neighborhood, sort, origin }, initialPages);
   const sectionId = upcoming ? 'next-specials' : 'available-now';
@@ -31,12 +31,13 @@ function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZo
   return <section id={sectionId} className={styles.offers} aria-labelledby={`${sectionId}-title`}>
     <div className={styles.browseHeading}>
       <div><p className={styles.eyebrow}>GOOD FOOD. SPECIALS.</p><h2 id={`${sectionId}-title`}>{upcoming ? 'Upcoming specials' : 'Specials available now'}</h2></div>
-      {pages.total > 0 && <RestaurantControls state={sortState} label="specials" mapHref={`/map?${mapParams}`} lunch={!upcoming} />}
+      {pages.total > 0 && <RestaurantControls state={sortState} label="specials" mapHref={`/map?${mapParams}`} lunch={!upcoming} starts={upcoming} />}
     </div>
     <p className={styles.offerIntro}>Happy hours, daily specials, and limited offers during published service hours in {city}. Times follow the restaurant’s local clock.</p>
     <p className={styles.results} role="status">{!pages.ready ? 'Loading…' : upcoming ? `${pages.total} upcoming ${pages.total === 1 ? 'special' : 'specials'}.` : `${pages.total} ${pages.total === 1 ? 'offer' : 'offers'} available now`}</p>
     {upcoming && pages.total > 0 && <p className={styles.offerIntro}>Each restaurant’s next special is shown with its local start time.</p>}
     {pages.total > 0 && <RestaurantSortNote state={sortState} />}
+    {sortState.sort === 'starts' && pages.total > 0 && <p className={styles.offerSortNote}>Starting soonest first. Ties are ordered by rating.</p>}
     {sortState.sort === 'lunch' && pages.total > 0 && <p className={styles.offerSortNote}>Lunch specials first. Each group is ordered by rating.</p>}
     {pages.total ? <PagedCardGrid pages={pages}>{(offer) => <article key={offer.id} className={styles.card}>
       {offer.photo && <Link href={offer.restaurantHref} className={styles.photoLink} aria-label={`See ${offer.name}'s restaurant details`}>

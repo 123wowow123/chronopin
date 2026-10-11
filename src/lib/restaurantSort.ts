@@ -3,7 +3,7 @@ import type { PinRatingJson } from './types';
 import type { RestaurantMenu } from './restaurantMenus';
 
 export type RestaurantDetails = { location?: Place; rating?: Pick<PinRatingJson, 'score' | 'scoreMax' | 'source' | 'url'>; menu?: RestaurantMenu };
-export type RestaurantSort = 'rating' | 'distance' | 'opening-date' | 'lunch';
+export type RestaurantSort = 'rating' | 'distance' | 'opening-date' | 'lunch' | 'starts';
 export function restaurantDistance(details?: RestaurantDetails, origin?: Place): number | undefined {
   const valid = (place?: Place) => !!place && Number.isFinite(place.latitude) && Math.abs(place.latitude) <= 90 && Number.isFinite(place.longitude) && Math.abs(place.longitude) <= 180;
   return valid(details?.location) && valid(origin) ? distanceKm(origin!, details!.location!) : undefined;

@@ -90,7 +90,7 @@ export function nextRestaurantOffer(special: RestaurantSpecial, now: Date, timeZ
 export const NEXT_SPECIALS_LIMIT = 100;
 
 export type ScheduledRestaurantOffer = RestaurantOffer & { end: string; startsAt?: string };
-export type RestaurantOfferSort = 'rating' | 'distance' | 'lunch';
+export type RestaurantOfferSort = 'rating' | 'distance' | 'lunch' | 'starts';
 export function restaurantOfferDistance(offer: RestaurantOffer, origin?: Place): number | undefined {
   const valid = (place?: Place) => !!place && Number.isFinite(place.latitude) && Math.abs(place.latitude) <= 90 && Number.isFinite(place.longitude) && Math.abs(place.longitude) <= 180;
   return valid(origin) && valid(offer.location) ? distanceKm(origin!, offer.location!) : undefined;
@@ -126,7 +126,10 @@ export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, ti
     return true;
   });
   // Choose each venue's earliest offer before applying the selected sort and cap.
-  if (options) unique.sort(bySelectedSort);
+  // 'starts' is the soonest start first (the section was already built in that
+  // order, ties by rating); only upcoming offers have a start to sort by.
+  if (options?.sort === 'starts') unique.sort((a, b) => a.startsAt.localeCompare(b.startsAt) || byReview(a, b));
+  else if (options) unique.sort(bySelectedSort);
   return { available, upcoming: unique.slice(0, NEXT_SPECIALS_LIMIT) };
 }
 

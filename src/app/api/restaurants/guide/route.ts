@@ -4,10 +4,10 @@ import type { RestaurantSort } from '@/lib/restaurantSort';
 import { json, route } from '@/server/http';
 import { guidePage } from '@/server/services/restaurantGuidePage';
 
-const SORTS: RestaurantSort[] = ['rating', 'distance', 'opening-date', 'lunch'];
+const SORTS: RestaurantSort[] = ['rating', 'distance', 'opening-date', 'lunch', 'starts'];
 
 // One page of a restaurant guide list: ?region=&view=upcoming|new|top|discounts
-// [&section=available|next]&neighborhood=&sort=rating|distance|opening-date
+// [&section=available|next]&neighborhood=&sort=rating|distance|opening-date|lunch|starts
 // [&lat=&lon=]&offset=. Answers { items, total, ids, bounds?, details }.
 export const GET = route(async (request: NextRequest) => {
   const params = request.nextUrl.searchParams;
