@@ -106,10 +106,17 @@
     "sweetness": 4.5,
     "astringency": 0.5,
     "umami": 0.5,
-    "basis": "Premium chocolate bars in Ferrero Rocher and Raffaello flavours: hazelnut, milk chocolate and coconut, sweet.",
+    "basis": "Premium chocolate bars in Ferrero Rocher and Raffaello flavours: hazelnut, milk chocolate and coconut, sweet. Tasting-review scope: Dark 55% hazelnut bar only; this review does not cover the milk, white or Raffaello bars in the launch collection. Existing seven-axis editorial estimates are retained.",
     "pungent": 0,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://www.chocolatier.co.uk/ferrero-rocher-dark-55-hazelnut-chocolate-bar-review/",
+        "title": "David Fiske — Ferrero Rocher Dark 55% bar (Chocolatier)",
+        "quote": "Taste-wise, the hazelnut flavour dominates, accompanied by a prominent sweetness.",
+        "publishedDate": "2023-03-12"
+      }
+    ]
   },
   {
     "pinId": 3425,
@@ -460,7 +467,7 @@
     "sweetness": 4.5,
     "astringency": 0.5,
     "umami": 0.5,
-    "basis": "Milk chocolate over wafer, as in a regular KitKat: sweet and creamy with a light cocoa edge.",
+    "basis": "Milk chocolate over wafer, as in a regular KitKat: sweet and creamy with a light cocoa edge. Review check (October 11, 2026): No firsthand tasting review verified for the UK 132 g F1 tin. An Indian 10-car tin review and the 138 g travel-retail assortment have different pack contents and were excluded.",
     "pungent": 0,
     "coolness": 0,
     "reviews": []
@@ -472,7 +479,7 @@
     "sweetness": 4.5,
     "astringency": 0.5,
     "umami": 0.5,
-    "basis": "A hollow Cadbury Dairy Milk shell: milky, sweet chocolate with little bitterness.",
+    "basis": "A hollow Cadbury Dairy Milk shell: milky, sweet chocolate with little bitterness. Review check (October 11, 2026): No firsthand tasting review verified for the Freddo Faces Smash Bauble 90 g. Retailers publish descriptions but no usable tasting text.",
     "pungent": 0,
     "coolness": 0,
     "reviews": []
@@ -484,7 +491,7 @@
     "sweetness": 5,
     "astringency": 0.5,
     "umami": 0.5,
-    "basis": "Cadbury milk chocolate round a crunchy Biscoff filling: sweet with a caramelised-biscuit aroma.",
+    "basis": "Cadbury milk chocolate round a crunchy Biscoff filling: sweet with a caramelised-biscuit aroma. Review check (October 11, 2026): No firsthand tasting review text verified for Biscoff Filled Centres. Morrisons shows one aggregate score but zero written customer reviews; launch announcements were excluded.",
     "pungent": 0,
     "coolness": 0,
     "reviews": []
@@ -496,10 +503,17 @@
     "sweetness": 4,
     "astringency": 2.5,
     "umami": 0,
-    "basis": "Sour fruit gummies (orange, green apple, cherry and blackcurrant): sweet under a sharp, puckering acid coating.",
+    "basis": "Sour fruit gummies (orange, green apple, cherry and blackcurrant): sweet under a sharp, puckering acid coating. Tasting-review scope: Historical Sour Bats tasting with matching cherry, apple, orange and blackcurrant flavors; the 2026 UK formulation and batch are not independently verified. Existing seven-axis editorial estimates are retained.",
     "pungent": 0,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://peanutfreereviews.blogspot.com/2024/11/haribo-sour-bats.html",
+        "title": "Katilina — Haribo Sour Bats (Peanut Free Reviews)",
+        "quote": "The apple is more sour, with a good strong green apple flavor.",
+        "publishedDate": "2024-11-04"
+      }
+    ]
   },
   {
     "pinId": 5614,
@@ -508,10 +522,17 @@
     "sweetness": 4,
     "astringency": 0.5,
     "umami": 0.5,
-    "basis": "Strawberry-cream filled biscuits: sweet and fruity, light on every other axis.",
+    "basis": "Strawberry-cream filled biscuits: sweet and fruity, light on every other axis. Tasting-review scope: Historical strawberry biscuit review with a negative flavor verdict; not a tasting of the 2026 CUTIE STREET collaboration or its current formulation. Existing seven-axis editorial estimates are retained.",
     "pungent": 0,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://quirkspace.com/jsfr/?p=278",
+        "title": "Boo — Koala’s March strawberry (historical review)",
+        "quote": "Not only is this flavor bad, but it lingers too.",
+        "publishedDate": "2005-02-13"
+      }
+    ]
   },
   {
     "pinId": 5615,
@@ -520,10 +541,17 @@
     "sweetness": 4,
     "astringency": 1,
     "umami": 0.5,
-    "basis": "Rum-raisin and cognac liqueur chocolates: a strong spirit aroma and a little alcohol warmth over sweet chocolate.",
+    "basis": "Rum-raisin and cognac liqueur chocolates: a strong spirit aroma and a little alcohol warmth over sweet chocolate. Tasting-review scope: Historical Rummy and Bacchus chocolate tasting, not a review of the returning 2026 batch. The linked article also tastes a separate shochu chocolate. Existing seven-axis editorial estimates are retained.",
     "pungent": 1,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://gigazine.net/gsc_news/en/20071101_lotte_rummy_bacchus",
+        "title": "GIGAZINE — Rummy and Bacchus (historical tasting)",
+        "quote": "The compatibility of chocolate and liquor is quite nice",
+        "publishedDate": "2007-11-01"
+      }
+    ]
   },
   {
     "pinId": 5617,
@@ -532,10 +560,17 @@
     "sweetness": 4.5,
     "astringency": 0.5,
     "umami": 0,
-    "basis": "Fuji apple and Kosui pear fruit chews: sweet, fragrant and bright, with no bitterness.",
+    "basis": "Fuji apple and Kosui pear fruit chews: sweet, fragrant and bright, with no bitterness. Tasting-review scope: Crisp Fruit Mix Hi-Chew only, not the Umai-Chew assortment. The Japanese review describes the combined sweet-tart Fuji apple and Kosui pear flavor. Existing seven-axis editorial estimates are retained.",
     "pungent": 0,
     "coolness": 0.5,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://shareview.jp/item/detail/64285",
+        "title": "ねこわんウサギ — Crisp Fruit Mix Hi-Chew (ShareView)",
+        "quote": "ふじりんごと幸水梨の甘酸っぱさが2つ一緒に楽しめて美味しい味わいです。",
+        "publishedDate": "2026-09-29"
+      }
+    ]
   },
   {
     "pinId": 5619,
@@ -588,10 +623,17 @@
     "sweetness": 1.5,
     "astringency": 0.5,
     "umami": 4,
-    "basis": "Thick-cut chips seasoned beef and cheese: a savoury, cheesy depth with little sweetness.",
+    "basis": "Thick-cut chips seasoned beef and cheese: a savoury, cheesy depth with little sweetness. Tasting-review scope: Exact Beef & Cheese flavor. The Japanese reviewer describes an intense taste and lingering burger-like flavor. Existing seven-axis editorial estimates are retained.",
     "pungent": 0.5,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://www.tomo-diary.com/entry/2026/10/07/193500",
+        "title": "tomomo13 — Pure Potato Beef & Cheese tasting",
+        "quote": "味が濃い、ビールが進む。",
+        "publishedDate": "2026-10-07"
+      }
+    ]
   },
   {
     "pinId": 5625,
@@ -600,7 +642,7 @@
     "sweetness": 1.5,
     "astringency": 0.5,
     "umami": 4.5,
-    "basis": "Onion rings in Neoguri's spicy seafood seasoning: a strong savoury, umami-led profile.",
+    "basis": "Onion rings in Neoguri's spicy seafood seasoning: a strong savoury, umami-led profile. Review check (October 11, 2026): No firsthand tasting review verified for Neoguling ahead of its announced October 12 release; Neoguri ramen and ordinary onion-ring reviews were excluded.",
     "pungent": 3.5,
     "coolness": 0,
     "reviews": []
@@ -612,7 +654,7 @@
     "sweetness": 4.5,
     "astringency": 0.5,
     "umami": 0.5,
-    "basis": "Chocolate biscuits with a real-pistachio cream: sweet and nutty with a cocoa edge.",
+    "basis": "Chocolate biscuits with a real-pistachio cream: sweet and nutty with a cocoa edge. Review check (October 11, 2026): No usable firsthand tasting review verified for the UAE Pistash-YO edition. Launch coverage and PR posts were found; other pistachio Oreo variants were excluded.",
     "pungent": 0,
     "coolness": 0,
     "reviews": []
@@ -624,7 +666,7 @@
     "sweetness": 1,
     "astringency": 1,
     "umami": 3,
-    "basis": "Popped (not fried) chips in Magic Masala and Pudina: spice and mint aroma, savoury rather than sweet.",
+    "basis": "Popped (not fried) chips in Magic Masala and Pudina: spice and mint aroma, savoury rather than sweet. Review check (October 11, 2026): No firsthand tasting review verified for Avvatar Popped Protein Chips. The manufacturer’s review widget exposes no written reviews; protein powder, wafer and other-brand chip reviews were excluded.",
     "pungent": 2,
     "coolness": 1.5,
     "reviews": []
@@ -636,10 +678,17 @@
     "sweetness": 4.5,
     "astringency": 0.5,
     "umami": 0,
-    "basis": "Berry-cherry gummy with a foam top: sweet and fruity, with no bitterness.",
+    "basis": "Berry-cherry gummy with a foam top: sweet and fruity, with no bitterness. Tasting-review scope: Berry & Cherry Fruity Pigs. Customer review hosted by the manufacturer; not its AI-generated review summary. Existing seven-axis editorial estimates are retained.",
     "pungent": 0,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+        "title": "Ms S. — Fruity Pigs customer review (FUNDAY)",
+        "quote": "the cherry flavour is nicely coming through",
+        "publishedDate": null
+      }
+    ]
   },
   {
     "pinId": 5633,
@@ -648,10 +697,17 @@
     "sweetness": 4.5,
     "astringency": 0,
     "umami": 0,
-    "basis": "Strawberry and vanilla ice-cream-cone gummies with a foamy texture: sweet and creamy.",
+    "basis": "Strawberry and vanilla ice-cream-cone gummies with a foamy texture: sweet and creamy. Tasting-review scope: Strawberry & Vanilla Mr Whippy gummies. Customer review hosted by the manufacturer; not its AI-generated review summary. Existing seven-axis editorial estimates are retained.",
     "pungent": 0,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+        "title": "Nicole — Mr Whippy customer review (FUNDAY)",
+        "quote": "They are soft, but so subtle in flavour that they’re almost imperceptible.",
+        "publishedDate": null
+      }
+    ]
   },
   {
     "pinId": 5635,
@@ -822,10 +878,17 @@
     "sweetness": 4,
     "astringency": 0.5,
     "umami": 1,
-    "basis": "A bite-size pie with peanut-butter cream: sweet and nutty with a light savoury edge.",
+    "basis": "A bite-size pie with peanut-butter cream: sweet and nutty with a light savoury edge. Tasting-review scope: Exact peanut-butter cream mini pie. The Korean reviewer describes crisp pastry and thick peanut-butter cream. Existing seven-axis editorial estimates are retained.",
     "pungent": 0,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://namcandler.tistory.com/entry/haitai-frenchpie-ligo-peanut-butter-review?category=1122240",
+        "title": "nam_candler — French Pie Mini × Ligo tasting",
+        "quote": "한입 베어 물면 겉은 바삭한 파이, 안은 꾸덕한 피넛버터 크림이 같이 씹혀요.",
+        "publishedDate": "2026-09-21"
+      }
+    ]
   },
   {
     "pinId": 5735,
@@ -834,7 +897,7 @@
     "sweetness": 4.5,
     "astringency": 0.5,
     "umami": 0.5,
-    "basis": "A Christmas panettone with a Paçoquita (peanut-candy) filling: sweet, nutty and cake-like.",
+    "basis": "A Christmas panettone with a Paçoquita (peanut-candy) filling: sweet, nutty and cake-like. Review check (October 11, 2026): No firsthand tasting review verified for Bauducco Chocottone Paçoquita 2026 after Portuguese-language searches. Retailer descriptions and launch copy were excluded, as were Havanna’s different Paçoquita panettone.",
     "pungent": 0,
     "coolness": 0,
     "reviews": []
@@ -865,11 +928,18 @@
     "sweetness": 3,
     "astringency": 1,
     "umami": 0.5,
-    "basis": "A 6.5% juicy IPA with tropical aromas and a sweet, balanced hop profile.",
+    "basis": "A 6.5% juicy IPA with tropical aromas and a sweet, balanced hop profile. Tasting-review scope: Exact Sweet Ride IPA; a subjective customer tasting, not a measured seven-axis profile. Existing seven-axis editorial estimates are retained.",
     "abv": 6.5,
     "pungent": 0.5,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://www.beeradvocate.com/beer/profile/192/778452/",
+        "title": "Peach63 — Sweet Ride tasting (BeerAdvocate)",
+        "quote": "Taste follows nose: papaya, mango, orange.",
+        "publishedDate": "2026-07-26"
+      }
+    ]
   },
   {
     "pinId": 7013,
@@ -878,12 +948,19 @@
     "sweetness": 2,
     "astringency": 1,
     "umami": 0,
-    "basis": "A four-berry flavoured vodka with no added sugar: berry aroma, a clean, dry finish.",
+    "basis": "A four-berry flavoured vodka with no added sugar: berry aroma, a clean, dry finish. Tasting-review scope: Exact Berry Rouge vodka tasted by the reviewer. Existing seven-axis editorial estimates are retained.",
     "abv": 40,
     "abvSourceUrl": "https://www.marketwatchmag.com/grey-goose-berry-rouge-released/",
     "pungent": 1,
     "coolness": 0,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://www.besttastingspirits.com/review-grey-goose-berry-rouge/",
+        "title": "Jeff Ellingson — Grey Goose Berry Rouge (Best Tasting Spirits)",
+        "quote": "The sweet strawberry and blueberry jam entry has a soft creamy mouth feel.",
+        "publishedDate": "2026-01-26"
+      }
+    ]
   },
   {
     "pinId": 7014,
@@ -892,12 +969,19 @@
     "sweetness": 2,
     "astringency": 1.5,
     "umami": 0,
-    "basis": "A vodka seltzer with grape, lime and ginger: light and fruity, with a ginger bite.",
+    "basis": "A vodka seltzer with grape, lime and ginger: light and fruity, with a ginger bite. Tasting-review scope: Exact vodka Transfusion flavor; customer review, not Target’s product description. Existing seven-axis editorial estimates are retained.",
     "abv": 4.5,
     "abvSourceUrl": "https://www.thespiritsbusiness.com/2026/04/high-noon-drops-first-limited-edition-flavour/",
     "pungent": 1.5,
     "coolness": 1,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://www.target.com/p/-/A-95047225",
+        "title": "AF — High Noon Transfusion customer tasting (Target)",
+        "quote": "If you like grape, lime, and a touch of ginger flavor, this is for you.",
+        "publishedDate": "2026-05-21"
+      }
+    ]
   },
   {
     "pinId": 7015,
@@ -906,11 +990,18 @@
     "sweetness": 1.5,
     "astringency": 1,
     "umami": 1,
-    "basis": "A 4.7% British lager brewed with British barley: a light malt aroma, gentle bitterness and a dry finish.",
+    "basis": "A 4.7% British lager brewed with British barley: a light malt aroma, gentle bitterness and a dry finish. Tasting-review scope: UK 2026 4.7% relaunch; not the South African or US product. Existing seven-axis editorial estimates are retained.",
     "abv": 4.7,
     "pungent": 0,
     "coolness": 1,
-    "reviews": []
+    "reviews": [
+      {
+        "url": "https://www.andysbeerreviews.com/2026/04/carling-black-label-review-uk-return.html",
+        "title": "Andy — Carling Black Label UK return tasting",
+        "quote": "A slightly fuller body, a noticeable malt presence, and an earthy bitterness that gives it a bit of backbone.",
+        "publishedDate": "2026-04-29"
+      }
+    ]
   },
   {
     "pinId": 7016,
@@ -957,7 +1048,7 @@
     "sweetness": 4.5,
     "astringency": 1.5,
     "umami": 1.5,
-    "basis": "A 13.9% bourbon barrel-aged imperial stout with apple, cinnamon, clove, nutmeg, oats and panela sugar: spiced and sweet.",
+    "basis": "A 13.9% bourbon barrel-aged imperial stout with apple, cinnamon, clove, nutmeg, oats and panela sugar: spiced and sweet. Review check (October 11, 2026): No firsthand tasting review verified for the 2026 Apple Crisp Stout ahead of its November 27 release. Published brewer notes and lineup previews remain the basis of this estimate.",
     "abv": 13.9,
     "pungent": 1.5,
     "coolness": 0,
@@ -970,11 +1061,23 @@
     "sweetness": 4,
     "astringency": 2,
     "umami": 1,
-    "basis": "A 16.2% barleywine aged in bourbon barrels and finished in three oak casks: rich malt and oak, sweet and warming.",
+    "basis": "A 16.2% barleywine aged in bourbon barrels and finished in three oak casks: rich malt and oak, sweet and warming. Review check (October 11, 2026): No firsthand tasting review verified for the 2026 Triple Oak Barleywine ahead of its November 27 release. Published brewer notes and lineup previews remain the basis of this estimate.",
     "abv": 16.2,
     "pungent": 1.5,
     "coolness": 0,
     "reviews": []
+  },
+  {
+    "pinId": 7564,
+    "aroma": 3,
+    "bitterness": 0.5,
+    "sweetness": 0.5,
+    "astringency": 0.5,
+    "umami": 1,
+    "pungent": 0,
+    "coolness": 0,
+    "basis": "The Irish Times and RTÉ name the winner as Arán's spelt sourdough, made with 80 per cent local spelt flour and finished with sesame seeds; neither gives tasting notes, so the scores rest on the style: a nutty toasted-grain aroma, a gentle sour tang and little sweetness.",
+    "sourceUrl": "https://www.irishtimes.com/food/2026/10/02/aran-bakery-in-kilkenny-takes-top-blas-na-heireann-award-for-second-time/"
   },
   {
     "pinId": 7576,
@@ -990,7 +1093,7 @@
     "sourceUrl": "https://www.koreatimes.co.kr/business/companies/20260903/cass-sweeps-2026-brand-awards-with-triple-win"
   },
   {
-    "pinId": 7564,
+    "pinId": 7626,
     "aroma": 3,
     "bitterness": 0.5,
     "sweetness": 0.5,
@@ -998,8 +1101,33 @@
     "umami": 1,
     "pungent": 0,
     "coolness": 0,
-    "basis": "The Irish Times and RTÉ name the winner as Arán's spelt sourdough, made with 80 per cent local spelt flour and finished with sesame seeds; neither gives tasting notes, so the scores rest on the style: a nutty toasted-grain aroma, a gentle sour tang and little sweetness.",
-    "sourceUrl": "https://www.irishtimes.com/food/2026/10/02/aran-bakery-in-kilkenny-takes-top-blas-na-heireann-award-for-second-time/"
+    "abv": null,
+    "abvSourceUrl": null,
+    "sourceUrl": "https://www.irishfoodawards.com/awards-presentation-timings/",
+    "reviews": [],
+    "basis": "The Irish Times and RTÉ name the winner as Arán's spelt sourdough, made with 80 per cent local spelt flour and finished with sesame seeds; neither gives tasting notes, so the scores rest on the style: a nutty toasted-grain aroma, a gentle sour tang and little sweetness. Review check (October 11, 2026): No descriptive firsthand tasting review verified for the award-winning 80% spelt sourdough. General bakery reviews and praise of its spelt bread lack flavor detail; other Arán bakeries and other loaves were excluded."
+  },
+  {
+    "pinId": 7638,
+    "aroma": 2,
+    "bitterness": 1.5,
+    "sweetness": 1.5,
+    "astringency": 0.5,
+    "umami": 0.5,
+    "pungent": 0,
+    "coolness": 1,
+    "abv": 0,
+    "abvSourceUrl": null,
+    "sourceUrl": "https://www.koreatimes.co.kr/business/companies/20260903/cass-sweeps-2026-brand-awards-with-triple-win",
+    "reviews": [
+      {
+        "url": "https://soberwave.com/카스-제로-cass-zero-무알콜-맥주-리뷰/",
+        "title": "SoberWave — Cass Zero 0.00% review",
+        "quote": null,
+        "publishedDate": "2026-04-17"
+      }
+    ],
+    "basis": "OB Beer credits Cass Zero's 0.00% \"smart zero\" process with keeping beer-like body and crispness; no tasting notes are published, so the scores rest on the style of a light non-alcoholic lager. Tasting-review scope: Cass All Zero 0.00% product reviewed in 2026, not the older Cass 0.0 formulation. Review link verified through indexed publisher content; full text became inaccessible during recheck, so no excerpt is reproduced. Existing seven-axis editorial estimates are retained."
   },
   {
     "pinId": 7658,
@@ -1010,8 +1138,15 @@
     "umami": 1,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Manufacturer describes jasmine-scented green tea, a floral aroma and a mellow fresh taste; the selected listing is unsweetened jasmine green tea. Floral jasmine aroma over unsweetened green tea. Mild bitterness, astringency and tea savoriness are conservative estimates, not measured scores.",
-    "reviews": [],
+    "basis": "Manufacturer describes jasmine-scented green tea, a floral aroma and a mellow fresh taste; the selected listing is unsweetened jasmine green tea. Floral jasmine aroma over unsweetened green tea. Mild bitterness, astringency and tea savoriness are conservative estimates, not measured scores. Tasting-review scope: Same unsweetened jasmine tea family in a 900 ml bottle, not the listed 500 ml US pack. Weee Ambassador account; perceived sweetness does not imply added sugar. Existing seven-axis editorial estimates are retained.",
+    "reviews": [
+      {
+        "url": "https://www.weee.com/en/social/video/379051",
+        "title": "Kaོren📿 — Oriental Leaf jasmine tea tasting (Weee!)",
+        "quote": "a light flavor, a rich tea aroma, and no cloying sweetness",
+        "publishedDate": "2026-06-11"
+      }
+    ],
     "sourceUrl": "https://www.nongfuspring.com/mobile/goods/detail-all.html?id=1&pid=2"
   },
   {
@@ -1023,8 +1158,15 @@
     "umami": 0,
     "pungent": 0.5,
     "coolness": 0,
-    "basis": "Manufacturer describes lychee sweetness and a slightly floral taste. Lychee sweetness and a light floral note, with carbonation. Sweetness is perceived intensity, not sugar content. Pungency reflects a small estimated carbonation prickle, not chili heat.",
-    "reviews": [],
+    "basis": "Manufacturer describes lychee sweetness and a slightly floral taste. Lychee sweetness and a light floral note, with carbonation. Sweetness is perceived intensity, not sugar content. Pungency reflects a small estimated carbonation prickle, not chili heat. Tasting-review scope: Lychee Fizzy 330 ml can customer tasting, not the retailer’s response or a different CHI FOREST flavor. Existing seven-axis editorial estimates are retained.",
+    "reviews": [
+      {
+        "url": "https://helloasia.co.za/products/chi-forest-sugar-free-sparkling-water-lychee-fizzy-330ml",
+        "title": "Michelle — CHI FOREST Lychee Fizzy tasting (HelloAsia!)",
+        "quote": "Doesn't taste of artificial sweeteners at all like some sugar free drinks do. Quite fizzy!",
+        "publishedDate": null
+      }
+    ],
     "sourceUrl": "https://www.chiforest.com/lychee"
   },
   {
@@ -1062,8 +1204,15 @@
     "umami": 0,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Firsthand tasting describes mesona and licorice as dominant flavors and compares Jia Duo Bao with grass jelly. Herbal flavor led by mesona and licorice, recalling grass-jelly drinks. Sweetness and mild bitterness are estimated for the sweetened canned drink.",
-    "reviews": [],
+    "basis": "Firsthand tasting describes mesona and licorice as dominant flavors and compares Jia Duo Bao with grass jelly. Herbal flavor led by mesona and licorice, recalling grass-jelly drinks. Sweetness and mild bitterness are estimated for the sweetened canned drink. Tasting-review scope: Historical Jia Duo Bao canned herbal tea tasting; not a current-pack laboratory measurement. Existing seven-axis editorial estimates are retained.",
+    "reviews": [
+      {
+        "url": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/",
+        "title": "Ifang Hsieh — Jia Duo Bao herbal tea (T Ching)",
+        "quote": "with mesona and Chinese licorice producing the dominant flavors.",
+        "publishedDate": null
+      }
+    ],
     "sourceUrl": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/"
   },
   {
@@ -1075,8 +1224,15 @@
     "umami": 0.5,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Product-specific customer tasting describes the drink as sweet and sour. This is customer evidence, not a controlled panel. Sweet dairy flavor with a tangy finish. Sourness is separate from astringency and is described here; texture and exact intensity vary with formulation.",
-    "reviews": [],
+    "basis": "Product-specific customer tasting describes the drink as sweet and sour. This is customer evidence, not a controlled panel. Sweet dairy flavor with a tangy finish. Sourness is separate from astringency and is described here; texture and exact intensity vary with formulation. Tasting-review scope: Wahaha AD calcium milk customer account on Weee!; a Weee Ambassador review. Its spicy-food comment is the reviewer’s subjective experience. Existing seven-axis editorial estimates are retained.",
+    "reviews": [
+      {
+        "url": "https://www.sayweee.com/en/social/video/116974",
+        "title": "小薇 — Wahaha AD milk tasting (Weee!)",
+        "quote": "Sour and sweet, it can also relieve the spiciness when eating spicy hot pot!",
+        "publishedDate": "2024-05-01"
+      }
+    ],
     "sourceUrl": "https://www.sayweee.com/th/social/video/116974"
   },
   {

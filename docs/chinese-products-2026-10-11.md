@@ -308,3 +308,15 @@ seven-axis scores, ABV fields, launch date, photo, customer ratings and pin
 references were preserved. Updated the native taste snapshot and structured
 evidence; API readback and both rendered review links beneath the radar were
 verified. No deployment was performed.
+
+
+## Review coverage for all taste-profile pins
+
+The global taste-profile audit completed the remaining Chinese beverage reviews:
+Oriental Leaf jasmine tea (7658), CHI FOREST Lychee Fizzy (7659), Jia Duo Bao (7661)
+and Wahaha AD milk (7662). All six beverage children and seven snack children
+now display native tasting-review links beneath their radars. The new sources
+are attributed and scoped in the [global audit](taste-review-audit-2026-10-11.md)
+and the Chinese taste snapshot. Scores, ABV, launch dates, thread membership,
+photos, references and published ratings were preserved. Public rendered review
+links and excerpts were checked across all 13 Chinese product pins.

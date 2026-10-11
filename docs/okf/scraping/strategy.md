@@ -26,6 +26,11 @@ and unresolved gap rather than inventing evidence. Verify the review section,
 source links and excerpts beneath the radar on the live pin, and keep the
 research evidence and taste snapshot synchronized. See the
 [product-guide strategy](../../product-guide-strategy.md#native-taste-radar-on-every-product-pin).
+This applies to all existing taste-profile pins as well as new pins. Backfill
+empty review arrays without replacing scores or existing reviews; put a dated,
+specific review gap in the visible `basis` when no suitable account can be
+verified. The [October 11 audit](../../taste-review-audit-2026-10-11.json)
+records every profile, new review sources and remaining research gaps.
 
 1. **One pin per event, not per article.** The pin is the thing that happens (an opening, a launch, a release), dated to when it happens. The article is only its source. A roundup or listicle becomes many pins, each with its own deep link or product page as `sourceUrl`, never the shared article.
 2. **Report only what a page supports.** Null is the right answer for a field the source does not state. The two exceptions are dates: a delay with no new date, and a future release with no announced date (see [Which date](#decision-rules)). Both are estimated and say so with `Estimated:` (see [Fields](fields.md)).

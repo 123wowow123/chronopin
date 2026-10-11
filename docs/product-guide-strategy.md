@@ -88,6 +88,16 @@ reviews or invent quotes/dates. If research finds no usable tasting review,
 record that gap rather than silently treating the profile as fully sourced.
 Verify the actual review links and excerpts on the public pin after saving.
 
+Apply this review requirement to **every existing pin with a native taste
+profile**, including older product launches, not just newly curated guides.
+Audit `PinTaste` for empty `reviews`, preserve existing reviews and all scores,
+and backfill verified accounts through the taste API. When no suitable review
+can be verified, put a dated, specific gap in the visible profile `basis` and
+record the searches and sources in the audit notes. For upcoming releases,
+do not pass off lineup previews or brewer notes as firsthand tastings. Label
+historical batches, individual variants within collections and other markets
+explicitly; never imply that one variant's review validates the whole range.
+
 Provide all seven axes: `aroma`, `bitterness`, `sweetness`, `astringency`,
 `umami`, `pungent` and `coolness`. Scores range from 0 to 5 in half steps.
 Set `source: "session"`, a sourced `basis` and `sourceUrl`. Read an existing
