@@ -288,3 +288,23 @@ customer ratings and pin references. Synchronized the native taste snapshot
 and structured evidence. Taste API readbacks and all seven rendered public
 review sections beneath the native radars passed verification. Runtime API
 updates only; no deployment was performed.
+
+## Wanglaoji / Walovi tasting reviews
+
+Follow-up on beverage pin 7660: the previous seven-snack update did not cover
+this beverage. Added two verified firsthand tasting links beneath its native
+radar: 爱吃的小猪's November 15, 2022 Yami community account and
+ChimaFanIndiana's Reddit canned-Wanglaoji account. Quotes describe tea/herbal
+notes, some sweetness and an iced-tea comparison. Reddit's exact publication
+date was not established and is left null. Both are visibly labeled
+product-family reviews; they do not establish the taste of this exact US
+WALOVI 24-can listing or equivalence between market formulations.
+
+The original Yamibuy hostname returned 405; the canonical Yami page was
+accessible with the complete original and translated post. Walmart's US
+WALOVI customer-review page was also checked but returned a robot challenge,
+so indexed snippets were not used as verified review excerpts. Existing
+seven-axis scores, ABV fields, launch date, photo, customer ratings and pin
+references were preserved. Updated the native taste snapshot and structured
+evidence; API readback and both rendered review links beneath the radar were
+verified. No deployment was performed.

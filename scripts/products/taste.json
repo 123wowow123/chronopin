@@ -1036,9 +1036,22 @@
     "umami": 0,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Retailer describes the herbal drink and its traditional herbal blend. The precise numeric intensities are editorial estimates, not laboratory measurements. Sweetened herbal flavor, with gentle earthy-floral notes. Scores have lower confidence: based on the product description rather than a controlled tasting of this US listing.",
-    "reviews": [],
-    "sourceUrl": "https://trovasia.com/en/products/te-freddo-erboristico-310ml"
+    "basis": "Editorial estimate for sweetened Wanglaoji/Walovi herbal tea. A Yami community tasting describes tea fragrance, herbal flavor and a little sweetness; a Reddit firsthand canned-drink account compares it to slightly herbal iced tea. These are Wanglaoji product-family reviews, not verified tastings of this exact US WALOVI 24-can listing. Market formulations and perceived sweetness may differ. The existing seven-axis scores remain lower-confidence editorial estimates, not measured sensory-panel results.",
+    "reviews": [
+      {
+        "url": "https://www.yami.com/en/show/article/1740193",
+        "quote": "It has a little tea fragrance but also has the taste of Chinese herbal medicine. The overall taste is a little sweet.",
+        "title": "爱吃的小猪 — Yami community Wanglaoji tasting (product-family review)",
+        "publishedDate": "2022-11-15"
+      },
+      {
+        "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+        "quote": "It was delicious like a slightly herbal lipton iced tea.",
+        "title": "ChimaFanIndiana — Reddit canned Wanglaoji tasting (product-family review)",
+        "publishedDate": null
+      }
+    ],
+    "sourceUrl": "https://www.yami.com/en/show/article/1740193"
   },
   {
     "pinId": 7661,

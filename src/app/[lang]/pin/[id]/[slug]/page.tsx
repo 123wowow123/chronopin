@@ -152,6 +152,8 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   ]);
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
+  // The tags follow whatever the aside shows above them; first in the column they need no gap.
+  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste ? 'mt-4' : '';
 
   return (
     <>
@@ -203,12 +205,14 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
             </div>
           ) : null}
 
-          {/* Beside the pin on wide screens, under its map; after it on phones. */}
-          <Suspense fallback={<PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />}>
-            <ThreadAwareTags pin={pin} />
-          </Suspense>
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+
+          {/* Beside the pin on wide screens, under its map, game facts and taste
+              profile; after them on phones. */}
+          <Suspense fallback={<PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={tagsClass} />}>
+            <ThreadAwareTags pin={pin} className={tagsClass} />
+          </Suspense>
 
           {/* Related ads, one row under what the pin is about. */}
           {ads['pin-strip'] ? <AdRow slot="pin-strip" pinId={pin.id} className="mt-6" /> : null}
@@ -531,10 +535,10 @@ async function PinBody({
 
 // The pin's tags, the thread tag's icon forked when the thread branches under
 // the pin. Only a pin in a thread reads the thread, and that read is cached.
-async function ThreadAwareTags({ pin }: { pin: PinJson }) {
+async function ThreadAwareTags({ pin, className }: { pin: PinJson; className?: string }) {
   const inThread = !!pin.parentId || !!pin.rootThread;
   const branching = inThread ? branchesUnder(await threadPins(pin.id, (await getT()).locale), pin.id) : false;
-  return <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} branching={branching} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />;
+  return <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} branching={branching} className={className} />;
 }
 
 // The thread pane's nesting: pixels a branch steps in, and how many steps show.
