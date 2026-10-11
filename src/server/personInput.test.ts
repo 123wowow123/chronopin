@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { commonsFileUrl, day, PersonInputError, readImpact, readMatter, readPerson, readPhase } from './personInput';
+import { commonsFileUrl, day, PersonInputError, readImpact, readMatter, readPerson, readPhase, readResearchNote } from './personInput';
 
 describe('day', () => {
   it('takes real ISO days only', () => {
@@ -147,6 +147,30 @@ describe('readPhase', () => {
     expect(readPhase({ label: 'X', startYear: 2021, endYear: 2017, axes: { standing: axis(3) } })).toMatchObject({ startYear: 2021, endYear: null });
     expect(readPerson({ name: 'A', phases: [{ label: 'X', axes: { standing: axis(3) } }, { label: 'Y' }] }).phases).toHaveLength(1);
     expect(() => readPerson({ name: 'A', phases: 'many' })).toThrow('phases must be an array');
+  });
+});
+
+describe('readResearchNote', () => {
+  it('needs a known topic and some words, and defaults the coverage to partial', () => {
+    expect(readResearchNote({ topic: 'legal', note: '' })).toBeNull();
+    expect(readResearchNote({ topic: 'sports', note: 'x' })).toBeNull();
+    expect(readResearchNote({ topic: 'legal', note: 'Swept the House Ethics list.', checkedDate: '2026-10-11' })).toMatchObject({
+      topic: 'legal', coverage: 'partial', checkedDate: '2026-10-11', unciteable: [],
+    });
+  });
+
+  it('keeps only https pages among those that could not be cited', () => {
+    const n = readResearchNote({
+      topic: 'standing', coverage: 'searched', note: 'Morning Consult chart only.',
+      unciteable: [{ url: 'https://morningconsult.com/x', why: 'chart' }, { url: 'http://insecure.example', why: 'x' }, 'junk'],
+    });
+    expect(n?.coverage).toBe('searched');
+    expect(n?.unciteable).toEqual([{ url: 'https://morningconsult.com/x', why: 'chart' }]);
+  });
+
+  it('reaches the person input as a list, and an absent list stays absent', () => {
+    expect(readPerson({ name: 'A', researchNotes: [{ topic: 'legal', note: 'n' }] }).researchNotes).toHaveLength(1);
+    expect(readPerson({ name: 'A' }).researchNotes).toBeUndefined();
   });
 });
 

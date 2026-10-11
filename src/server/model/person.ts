@@ -289,6 +289,7 @@ export default class Person {
       if (p.trips) await Person.replaceTrips(q, id, p.trips);
       if (p.matters) await Person.replaceMatters(q, id, p.matters);
       if (p.phases) await Person.replacePhases(q, id, p.phases);
+      if (p.researchNotes) await Person.replaceResearchNotes(q, id, p.researchNotes);
       return id;
     }).then(async (id) => {
       // The wiki the page renders from is compiled from what was just saved.
@@ -385,6 +386,20 @@ export default class Person {
            "startYear" = EXCLUDED."startYear", "endYear" = EXCLUDED."endYear", "summary" = EXCLUDED."summary",
            "axes" = EXCLUDED."axes", "origin" = 'hand'`,
         [id, ph.label, ph.startYear, ph.endYear, ph.summary, JSON.stringify(ph.axes)],
+      );
+    }
+  }
+
+  // One note per topic: the list sent is the notes the person now has.
+  private static async replaceResearchNotes(q: db.QueryFn, id: number, list: PersonResearchNote[]) {
+    await q(`DELETE FROM "PersonResearchNote" WHERE "personId" = $1`, [id]);
+    for (const n of list) {
+      await q(
+        `INSERT INTO "PersonResearchNote" ("personId", "topic", "coverage", "checkedDate", "note", "unciteable")
+         VALUES ($1, $2, $3, $4, $5, $6::jsonb)
+         ON CONFLICT ("personId", "topic") DO UPDATE SET
+           "coverage" = EXCLUDED."coverage", "checkedDate" = EXCLUDED."checkedDate", "note" = EXCLUDED."note", "unciteable" = EXCLUDED."unciteable"`,
+        [id, n.topic, n.coverage, n.checkedDate, n.note, JSON.stringify(n.unciteable)],
       );
     }
   }

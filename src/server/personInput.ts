@@ -13,6 +13,8 @@ import {
   MATTER_STATUSES,
   PERSON_ROLES,
   PROPERTY_KINDS,
+  RESEARCH_COVERAGE,
+  RESEARCH_TOPICS,
   TRIP_KINDS,
   safeUrl,
   type ContributionKind,
@@ -27,8 +29,11 @@ import {
   type PersonContribution,
   type PersonEarning,
   type PersonProperty,
+  type PersonResearchNote,
   type PersonRole,
   type PersonTrip,
+  type ResearchCoverage,
+  type ResearchTopic,
   type PropertyKind,
   type TripKind,
 } from '@/lib/people';
@@ -77,6 +82,8 @@ export type PersonInput = {
   trips?: PersonTrip[];
   matters?: PersonMatter[];
   phases?: PersonPhase[];
+  // What was searched on a topic and how far it got (0163); one per topic.
+  researchNotes?: PersonResearchNote[];
 };
 
 export class PersonInputError extends Error {}
@@ -230,6 +237,23 @@ export function readMatter(r: Record<string, unknown>): PersonMatter | null {
 // confidence and an https evidence URL - the rest are dropped, so the chart
 // shows a gap where there is no evidence, never a guess. A phase with no axis
 // left is dropped.
+// A research note says how far a search on one topic went (0163). It carries
+// no fact of its own, so what it needs is a known topic, a coverage, a day and
+// the words; pages that were looked at but could not be cited keep only an
+// https URL.
+export function readResearchNote(r: Record<string, unknown>): PersonResearchNote | null {
+  const topic = RESEARCH_TOPICS.find((t) => t === r.topic) as ResearchTopic | undefined;
+  const note = text(r.note, 4000);
+  if (!topic || !note) return null;
+  const coverage = (RESEARCH_COVERAGE.find((c) => c === r.coverage) ?? 'partial') as ResearchCoverage;
+  const unciteable = (Array.isArray(r.unciteable) ? r.unciteable : [])
+    .filter(isRecord)
+    .map((u) => ({ url: safeUrl(text(u.url, 2000)), why: text(u.why, 200) }))
+    .filter((u): u is { url: string; why: string | null } => !!u.url)
+    .slice(0, 20);
+  return { topic, coverage, checkedDate: day(r.checkedDate) ?? new Date().toISOString().slice(0, 10), note, unciteable };
+}
+
 export function readPhase(r: Record<string, unknown>): PersonPhase | null {
   const label = text(r.label, 80);
   if (!label || !isRecord(r.axes)) return null;
@@ -323,6 +347,7 @@ export function readPerson(body: unknown): PersonInput {
   if (body.contributions !== undefined) out.contributions = rows(body.contributions, readContribution, 'contributions');
   if (body.properties !== undefined) out.properties = rows(body.properties, readProperty, 'properties');
   if (body.trips !== undefined) out.trips = rows(body.trips, readTrip, 'trips');
+  if (body.researchNotes !== undefined) out.researchNotes = rows(body.researchNotes, readResearchNote, 'researchNotes');
   if (body.matters !== undefined) out.matters = rows(body.matters, readMatter, 'matters');
   if (body.phases !== undefined) out.phases = rows(body.phases, readPhase, 'phases');
   return out;

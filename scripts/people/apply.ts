@@ -6,8 +6,9 @@
 //   npm run people:apply -- profiles.json            local DB: an array of profiles
 //   npm run people:apply -- profiles.json --dry-run  read and validate, save nothing
 //   npm run people:apply -- --prod --token-file <admin token file> [--only slug,slug]
-//       POST each local person (with earnings, contributions, property and
-//       trips) to www.chronopin.com/api/people - an admin token is needed
+//       POST each local person (with earnings, contributions, property,
+//       trips, matters, researched phases, the degree and the research notes)
+//       to www.chronopin.com/api/people - an admin token is needed
 //
 // A profile: { name, role, office, jurisdiction, party, birthDate, religion,
 // religionSourceUrl, weightKg, weightAsOf, weightSourceUrl, health, healthAsOf,

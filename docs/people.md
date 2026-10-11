@@ -445,3 +445,46 @@ earnings row is never replaced.
   Pro+ data, so most senators remain without a score; every searched person
   has a `standing` research note (partial when pages were blocked). Presidents
   before Truman have no polling and were not searched.
+
+### Second deep pass: state ethics, FEC, social/economic (2026-10-11)
+
+- **State ethics bodies (51 governors, 17 batches)**: state ethics commissions,
+  campaign-finance regulators, AG and state courts. 44 matters found, 39 kept (Gianforte alone has 10 Montana COPP decisions);
+  dropped as not about the person or not final: Sanders's two matters (both
+  about the Governor's Office), a campaign-committee-only conciliation (Green),
+  an interim denial of a motion to dismiss (McMaster) and an advisory opinion
+  that was later withdrawn (Scott). New examples: Newsom's FPPC stipulation
+  and 2026 decision, Ferguson's Executive Ethics Board settlement, Kotek's
+  OGEC dismissal. Many rest on news reports because the state sites blocked
+  fetches (ethics.ri.gov, ethics.la.gov, iec.colorado.gov); each note says so.
+  Coverage stays `partial`.
+- **FEC MURs**: **not done**. The openFEC DEMO_KEY allows 10 requests an hour
+  and was exhausted (retry-after ~18 h); there are about 7,700 MURs to page
+  through at 100 per call. A background fetcher
+  (`scratchpad/fecwork/fetch_murs.py`) pages at 400 s intervals once the key
+  resets; matching respondent names to people then goes through
+  `people:sweep`. Registering a real key needs an email address and was not
+  done. Until then FEC enforcement stays listed as "not swept" in every legal
+  note.
+- **Social/economic assessments**: 90 longest-serving current representatives,
+  30 batches launched, 17 completed. govtrack.us and congress.gov returned
+  403 to every fetch (the API also reset connections), so sponsorship could
+  rarely be verified and most batches returned only notes. Two assessed laws
+  stored: Pelosi, Economic Stimulus Act of 2008 (growth +1, distribution +1,
+  contested; Parker et al., NBER 16684) and Danny Davis, Second Chance Act of
+  2007 (efficiency 0, externalities 0; NIJ randomized trial). CHIPRA 2009 for
+  Pallone was dropped as program-level evidence. 51 representatives have a
+  `society` research note saying which enacted laws were found and why none
+  could be assessed. The remaining batches (a17-a29) were not launched.
+
+### Research notes travel with the profile (2026-10-11)
+
+`researchNotes` (topic, coverage, checkedDate, note, unciteable) is now part of
+the person input: `readResearchNote` in src/server/personInput.ts validates it
+(a known topic, words, coverage defaulting to `partial`, only https URLs among
+the uncited pages) and `Person.save` replaces the person's notes with the list
+sent, one per topic. `POST /api/people`, `PUT /api/people/:id`, the wiki PUT and
+`npm run people:apply -- --prod` therefore carry them, so a prod push no longer
+loses the "what was searched / what stayed a gap" section. Absent list = notes
+left alone. Round-trip checked locally (profile -> readPerson -> save -> same
+notes); needs a deploy before prod accepts the field.
