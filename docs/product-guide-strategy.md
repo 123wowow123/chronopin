@@ -78,6 +78,16 @@ Generate each product's taste profile and save it through
 native radar widget. A prose taste description or table alone is insufficient;
 a collection-wide average is not a substitute for individual profiles.
 
+Populate the native `reviews` array with verified tasting accounts so the
+existing review section appears directly beneath the radar. Include a source
+URL, reviewer/title, a short accurate excerpt and publication date when
+verified. Customer star aggregates are separate from tasting reviews. Identify
+ambassador or promotional posts and label reviews of another pack/formulation
+as product-family evidence. Do not present retailer descriptions as independent
+reviews or invent quotes/dates. If research finds no usable tasting review,
+record that gap rather than silently treating the profile as fully sourced.
+Verify the actual review links and excerpts on the public pin after saving.
+
 Provide all seven axes: `aroma`, `bitterness`, `sweetness`, `astringency`,
 `umami`, `pungent` and `coolness`. Scores range from 0 to 5 in half steps.
 Set `source: "session"`, a sourced `basis` and `sourceUrl`. Read an existing

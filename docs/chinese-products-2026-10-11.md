@@ -164,6 +164,11 @@ removed, while pack prices, source citations, photos and references were
 preserved. API readback and the live table links passed verification.
 The reusable guide strategy records this navigation pattern.
 
+Follow-up correction: beverage guide 7657 now uses the same pattern. Its six
+product-name cells link directly to pins 7658–7663, and the separate bottom
+list is removed. Public table links, preserved reference content and photos
+passed verification through the runtime API; no deployment was needed.
+
 ## Product launch dates
 
 Owner correction: individual product pins should use a real launch date when
@@ -233,3 +238,53 @@ Both parent guides were saved to refresh their public thread pages; native
 ratings were verified in the thread APIs and live rating badges. No app code
 change or deployment was required. The reusable strategy now requires rating
 research and native rating storage for future product threads.
+
+## Coconut Palm tasting reviews beneath the radar
+
+Owner correction on pin 7663: a taste radar should include the native review
+section below it. Added two verified consumer tasting accounts to `PinTaste.reviews`:
+Trang's April 29, 2023 Weee community ambassador post (links both 1 L cartons
+and cans), and fractal324's Reddit tasting of the canned product. The latter
+is explicitly identified as canned-version/product-family evidence, not a
+tasting of the selected 1 L carton pack; its exact publication date was not
+verified and remains null. The Weee quote covers coconut aroma, slight
+sweetness and refreshment; the Reddit excerpt describes a thinner milky drink
+with mild coconut flavor. These subjective reports do not establish measured
+sensory scores or formulation identity across packs.
+
+Joybuy's exact 1 L listing returned a 403 interruption page, so its indexed
+review summary was not used as a firsthand excerpt. Existing seven-axis
+scores and ABV fields were preserved. Updated the native taste snapshot and
+structured research evidence; API readback and both live review links below
+the native radar passed verification. No deployment was needed.
+
+## Tasting reviews on all seven snack children
+
+Applied the owner's same requirement to snack pins 7664–7670. Each native
+taste profile now contains a verified tasting review, rendered with its source
+link and short excerpt directly beneath the radar. Research evidence, dates,
+scope and excerpts are preserved in
+[snack tasting reviews](chinese-snack-tasting-reviews-2026-10-11.json).
+
+Sources: Brand Eating's original White Rabbit milk-candy review; Hylton
+Warburton's matcha-specific HelloAsia customer review; MiddleClass's red
+fragrant-spicy Weilong tasting; Boo's plain sugar-frosted Shelly Senbei review;
+Seed Guy's natural roasted salted ChaCha review; Heckin’ Hot's Huang Fei Hong
+spicy peanut review; and MacKenzie Chung Fegan's Bon Appétit haw-flakes essay.
+Matcha's customer-review publication date was not established and remains
+null. MiddleClass's affiliate disclosure is labeled; the haw-flakes essay is
+explicitly category evidence, not a tasting of the selected four-pack, and
+its affiliate disclosure is recorded. Historical single-pack reviews do not
+verify the current multipack's formulation or freshness.
+
+Curated Cook's Shelly Senbei page was searched but returned 403 to direct
+fetch; an accessible firsthand review of the same plain sugar-frosted product
+was used instead. Seed Guy's page was inaccessible to the web parser but
+successfully fetched directly, with article text and publication metadata
+saved in ignored research files. No invented review dates or taste quotes.
+
+Preserved all seven taste scores, ABV fields, launch dates, photos, parent IDs,
+customer ratings and pin references. Synchronized the native taste snapshot
+and structured evidence. Taste API readbacks and all seven rendered public
+review sections beneath the native radars passed verification. Runtime API
+updates only; no deployment was performed.

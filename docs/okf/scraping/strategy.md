@@ -13,6 +13,20 @@ Turn one source (a web page, YouTube video, X post, market page, or a topic to r
 
 # Principles
 
+**Taste-profile reviews (owner, 2026-10-11).** Research and attach verified
+tasting reviews to every consumable product's native taste profile so they
+appear directly beneath its radar, using `PinTaste.reviews` through
+`PUT /api/pins/:id/taste`. Each entry needs a verified source URL, reviewer/title,
+a short accurate tasting excerpt and a publication date when established.
+Label ambassador/promotional posts and reviews of another pack or formulation;
+do not treat retailer descriptions or customer star aggregates as firsthand
+tasting reviews. Preserve hand-set profiles and existing scores during a
+review-only update. If no usable review is found, document the sources checked
+and unresolved gap rather than inventing evidence. Verify the review section,
+source links and excerpts beneath the radar on the live pin, and keep the
+research evidence and taste snapshot synchronized. See the
+[product-guide strategy](../../product-guide-strategy.md#native-taste-radar-on-every-product-pin).
+
 1. **One pin per event, not per article.** The pin is the thing that happens (an opening, a launch, a release), dated to when it happens. The article is only its source. A roundup or listicle becomes many pins, each with its own deep link or product page as `sourceUrl`, never the shared article.
 2. **Report only what a page supports.** Null is the right answer for a field the source does not state. The two exceptions are dates: a delay with no new date, and a future release with no announced date (see [Which date](#decision-rules)). Both are estimated and say so with `Estimated:` (see [Fields](fields.md)).
 3. **Never type a URL from memory.** A reference, image or purchase link must have been returned by a fetch or search in this run. `sourceUrl` may be a URL found by search but never fetched (IMDb), and nothing else may be.

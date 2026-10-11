@@ -2,6 +2,8 @@
 
 ## 2026-10-11
 
+* **Update:** Added the owner's taste-review requirement to the main [scraping strategy](scraping/strategy.md) and snack/beverage recipe: research verified tasting accounts, store them in `PinTaste.reviews`, and verify links and excerpts directly beneath the radar. Preserve scores, identify source/pack limitations, and document unresolved review gaps.
+
 * **Update:** Added verified customer ratings to all thirteen Chinese product pins and verified TV-style badges in both live guide threads. Recorded source scores, review counts, small-sample caveats and flavor-specific evidence; the [product guide strategy](../product-guide-strategy.md) now requires rating research and native `PinRating` storage.
 
 * **Update:** Product pins now prefer verified launch dates, otherwise sourced estimates with explicit scope and uncertainty. Updated ten Chinese product launch-history dates and marked three unresolved launches unknown; preserved all thirteen taste radars and media. See [launch evidence](../chinese-product-launch-dates-2026-10-11.json) and [the guide strategy](../product-guide-strategy.md).
