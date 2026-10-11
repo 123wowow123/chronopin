@@ -203,10 +203,13 @@ function RestaurantSortFeedback({ state }: { state: SortState }) {
 }
 function RestaurantFacts({ details, sortState }: { details?: RestaurantDetails; sortState?: SortState }) {
   const rating = details?.rating;
-  const distance = restaurantDistance(details, sortState?.origin);
+  const origin = sortState?.origin;
+  const distance = restaurantDistance(details, origin);
   return <>
     {rating && <p className={styles.offerReview}>{rating.url ? <Anchor href={rating.url} target="_blank" rel="noopener noreferrer">★ {rating.score}/{rating.scoreMax} · {rating.source} ↗</Anchor> : <>★ {rating.score}/{rating.scoreMax} · {rating.source}</>}</p>}
-    {sortState?.sort === 'distance' && <p className={styles.offerDistance} title="Approximate straight-line distance">{distance === undefined ? 'Distance unavailable' : `${formatDistance(distance, usesImperial())} away`}</p>}
+    {distance !== undefined
+      ? <p className={styles.offerDistance} title="Approximate straight-line distance">{formatDistance(distance, usesImperial())} {origin && origin.source !== 'device' && origin.name ? `from ${origin.name}` : 'away'}</p>
+      : sortState?.sort === 'distance' ? <p className={styles.offerDistance}>Distance unavailable</p> : null}
   </>;
 }
 
