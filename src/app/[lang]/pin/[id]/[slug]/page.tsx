@@ -139,7 +139,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
-    event || venue ? pinEventInfo(pin.id) : null,
+    // Any pin may carry a hand-entered reading (a Food pin for a wine expo), so
+    // the panel does not wait on the category; the Event markup still does.
+    pinEventInfo(pin.id),
     pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
     pinTaste(pin.id),
     pinCandidates(pin.id),
