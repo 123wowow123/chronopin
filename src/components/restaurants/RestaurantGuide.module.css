@@ -169,7 +169,7 @@
 @media(max-width:600px) { .guide { padding:0 18px 40px; } .guideNav { gap:12px; } .wordmark { font-size:12px; } .wordmark>span { font-size:25px; } .heroCopy h1 { font-size:53px; letter-spacing:-2px; } .lead { font-size:14px; } .cardGrid { grid-template-columns:1fr; gap:20px; } .filterFields { flex-wrap:wrap; gap:8px; } .filterFields>label:last-child { width:100%; } .filterFields select { width:100%; max-width:none; } .statusFilters { width:100%; } .statusFilters a { flex:1; padding:10px 7px; } .photoLink { aspect-ratio:1.75; } .cardMeta { font-size:11px; } .cardDescription { font-size:12px; } .cardFoot strong { font-size:12px; } .editorialNote>div { flex:1 1 calc(100% - 47px); } }
 @media(max-width:600px) {
   .offerSort { margin-left:0; }
-  .offerSort button { min-height:44px; }
+  .offerSort button,.offerSort .offerMapButton { min-height:44px; }
   .filters { gap:12px; padding-block:12px; }
   .statusFilters { position:relative; display:flex; flex-wrap:nowrap; gap:8px; overflow-x:auto; scrollbar-width:none; border-bottom:1px solid var(--rule); }
   .statusFilters::-webkit-scrollbar { display:none; }
