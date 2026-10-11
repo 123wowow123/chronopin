@@ -34,6 +34,24 @@ an installed product-ad runtime need no deployment; the inventory cache
 refreshes within ten minutes. `products.json` remains the research/import
 snapshot, and scheduled listing checks refresh the live facts.
 
+The October 11 international expansion added another 18 products directly to
+the live catalog: nine snacks (Pocky, Meiji Hello Panda, Lotus Biscoff, Kinder
+Bueno, Loacker Quadratini, Tim Tam, Walker's Shortbread, Takis Fuego and Tao Kae
+Noi seaweed) and nine beverages (Sanpellegrino Blood Orange, Perrier, Sangaria
+Ramune Grape, Calpico Original, Ito En Oi Ocha, Inca Kola, Guaraná Antarctica,
+Jumex Mango Nectar and Twinings English Breakfast tea bags). Every listing
+passed the standard brand, stock, price, photo, 4.3-star and 100-review checks;
+the saved rows were read back. Sources and checked dates are per product.
+These are familiar international brands, with no live bestseller-rank or
+country-of-manufacture claims. Twinings is clearly sold as tea bags.
+
+The first Perrier candidate (B09NX4GKH3) lacked a readable brand, so the
+verified branded B0017TK7PQ listing was used. Jarritos soda searches did not
+yield a verified suitable soda listing: the candidate that cleared the review
+bar was slushie syrup and was excluded. Nongshim candidates that appeared in
+shrimp-cracker searches were noodle cups and were excluded. Search-result
+brand labels alone are not enough to establish the product being advertised.
+
 Apply the schema and populate the configured database:
 
 ```sh

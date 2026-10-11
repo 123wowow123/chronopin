@@ -179,12 +179,13 @@ function AdInfoLine({ price, info, urgent }: { price: string; info: string; urge
 }
 
 function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
-  // A holiday's product, pictured as Amazon shows it: on white, whole.
+  // Fill the thumbnail instead of letterboxing square product photos in a
+  // landscape slot. Keep the crop centred on the product and its label.
   if (ad.imageUrl) {
     return (
       <span aria-hidden className={`flex shrink-0 items-center justify-center overflow-hidden rounded border border-line bg-white ${className}`}>
         {/* eslint-disable-next-line @next/next/no-img-element -- Amazon's own image host */}
-        <img src={ad.imageUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-full object-contain transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100" />
+        <img src={ad.imageUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-full object-cover object-center transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100" />
       </span>
     );
   }
