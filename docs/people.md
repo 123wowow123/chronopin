@@ -488,3 +488,15 @@ sent, one per topic. `POST /api/people`, `PUT /api/people/:id`, the wiki PUT and
 loses the "what was searched / what stayed a gap" section. Absent list = notes
 left alone. Round-trip checked locally (profile -> readPerson -> save -> same
 notes); needs a deploy before prod accepts the field.
+
+### On prod (2026-10-11)
+
+After the research-note deploy the whole local set was sent with
+`npm run people:apply -- --prod --token-file .scrape/admin.token` (1,256
+profiles, all 201, about 4 minutes). Prod counts match local row for row:
+Person 1,256, earnings 1,600, contributions 1,186 (96 assessed), matters 618,
+phases 1,309, research notes 2,009, wikis 1,256, 1,190 degrees. Pin links were
+made by tag name through the admin DB API with
+`python3 scripts/people/link_pins_prod.py [--apply]` (prod pin ids differ from
+local ones): 165 PinPerson rows. The script reads the admin token from
+`.scrape/admin.token`; it is idempotent (`?upsert=1`).
