@@ -167,9 +167,9 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
 
         <div className={styles.digest}>
           <p>A little discovery.<br /><strong>A lot to look forward to.</strong></p>
-          {establishedOnly && <Anchor href={queryTabHref(pathname, 'view', 'top')} onClick={selectQueryTab('view', 'top', () => setNeighborhood('all'))}><strong>{counts.top.toString().padStart(2, '0')}</strong><span>Restaurants to explore <span aria-hidden="true">↗</span></span></Anchor>}
           {counts.upcoming > 0 && <Anchor href={queryTabHref(pathname, 'view', 'upcoming')} onClick={selectQueryTab('view', 'upcoming', () => setNeighborhood('all'))}><strong>{counts.upcoming.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
           {counts.new > 0 && <Anchor href={queryTabHref(pathname, 'view', 'new')} onClick={selectQueryTab('view', 'new', () => setNeighborhood('all'))}><strong>{counts.new.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
+          {counts.top > 0 && <Anchor href={queryTabHref(pathname, 'view', 'top')} onClick={selectQueryTab('view', 'top', () => setNeighborhood('all'))}><strong>{counts.top.toString().padStart(2, '0')}</strong><span>{establishedOnly ? 'Restaurants to explore' : 'Top restaurants'} <span aria-hidden="true">↗</span></span></Anchor>}
           {specialCount > 0 && <Anchor href={queryTabHref(pathname, 'view', 'discounts')} onClick={selectQueryTab('view', 'discounts', () => setNeighborhood('all'))}><strong>{specialCount.toString().padStart(2, '0')}</strong><span>Specials <span aria-hidden="true">↗</span></span></Anchor>}
         </div>
 
