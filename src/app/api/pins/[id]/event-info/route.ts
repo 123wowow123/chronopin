@@ -3,7 +3,7 @@ import { isAdmin, requireUser } from '@/server/auth';
 import * as db from '@/server/db';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
 import { deleteEventInfo, eventInfoForPin, eventInfoProblem, saveEventInfo } from '@/server/model/pinEventInfo';
-import { expirePinPage } from '@/server/services/cache';
+import { invalidatePin } from '@/server/services/cache';
 
 type Ctx = RouteContext<'/api/pins/[id]/event-info'>;
 
@@ -36,7 +36,7 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   if (checkedAt && Number.isNaN(checkedAt.getTime())) throw new HttpError(400, 'checkedAt is not a date.');
   const stored = await saveEventInfo(pinId, checked.fields, { source: checked.source, sourceUrl: checked.sourceUrl, checkedAt });
   if (!stored) throw new HttpError(409, 'This pin has event info set by hand; send source "hand" to replace it.');
-  expirePinPage(pinId);
+  invalidatePin(pinId);
   return json(await eventInfoForPin(pinId));
 });
 
@@ -44,6 +44,6 @@ export const DELETE = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
   await authorOrAdmin(request, pinId);
   await deleteEventInfo(pinId);
-  expirePinPage(pinId);
+  invalidatePin(pinId);
   return noContent();
 });

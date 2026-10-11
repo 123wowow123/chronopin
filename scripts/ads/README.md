@@ -19,6 +19,21 @@ The owner also selected medicube Deep Vita C toner pads (B0BPLYHDPG) under
 Beauty / Skincare and the Hanes EcoSmart fleece hoodie (B071GCRXN9) under
 Clothing / Hoodies on October 8, 2026. Both passed the standard listing checks.
 
+On October 11, 2026, eight snack products were researched through Amazon US
+searches and their individual listings: Goldfish Cheddar snack packs, OREO
+snack packs, Frito-Lay Classic Mix, SkinnyPop Original, Wonderful Pistachios
+Roasted & Salted, KIND Dark Chocolate Nuts & Sea Salt bars, Haribo Goldbears,
+and Cheez-It Original. Each passed the standard in-stock, brand, photo,
+4.3-star and 100-review checks. Their categories include Food / Snacks and
+the appropriate snack type. Product and search sources and the research date
+are recorded per entry; these have no bestseller-rank claims.
+
+All eight were saved directly to the live `ProductAd` table through the audited
+admin table API and verified by reading the rows back. Content additions to
+an installed product-ad runtime need no deployment; the inventory cache
+refreshes within ten minutes. `products.json` remains the research/import
+snapshot, and scheduled listing checks refresh the live facts.
+
 Apply the schema and populate the configured database:
 
 ```sh

@@ -328,35 +328,6 @@ Is there any improvement we can do to make search better? Should we check the se
 
 
 
-- senators and congressmen and executive branch members, governers and other major political figures should have page like companies. It should show their yearly earning as tiles under the main pane. It should show their laws they passed and other major contributions they have don in thier career
-
-list these information on people if available
-• Age
-• Weight
-• Politics
-• Religion
-• Health
-• Recent leisure trips
-• Major property or houses owned
-
-
-
-- Hexagonal Human - Octagonal Human 
-
-https://winefolly.com/tips/flavor-profiles-of-white-wines/
-- corruptness
-Social good
-Economic good
-https://annals.yonsei.ac.kr/news/articleView.html?idxno=11210
-
-Octagon chart during different phases of life
-Thin coverage: cider and Japan/Korea snack awards are still thin; the agents ran out of sourced items.
-
-https://www.magnific.com/free-vector/radar-chart-design-template_29760021.htm#fromView=keyword&page=1&position=2&uuid=30ad836d-b00b-451c-8bd5-35bd9eb8906e&track=ais_hybrid&query=Gpx+hexagon
-
-https://www.magnific.com/free-vector/radar-chart-infographic-design-template_29959936.htm#fromView=keyword&page=1&position=8&uuid=a9588756-0c5a-43d6-b2e0-99fe17a8f1f7&track=ais_hybrid&query=Gpx+hexagon
-
-
 Build KG with people, companies, properties, vacations, products / shows
 
 
@@ -428,3 +399,7 @@ tenmu ads
 
 
 add stripe and disable ads
+
+
+
+Thin coverage: cider and Japan/Korea snack awards are still thin; the agents ran out of sourced items.
