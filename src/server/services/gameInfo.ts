@@ -71,6 +71,10 @@ export async function gameFactsOfPin(pinId: number): Promise<GameFacts | undefin
 
 // Whether anything was stored. A pin with no Steam page still gets scores.
 export async function refreshGameInfo(pinId: number): Promise<boolean> {
+  // Only a Gaming pin has a game's facts: the Wikidata fallback finds an item by
+  // title, so a film or a news pin named like a game would otherwise get one.
+  const [pin] = await db.query<{ categories: string[] }>(`SELECT ${PIN_CATEGORIES} AS "categories" FROM "Pin" WHERE "id" = $1`, [pinId]);
+  if (!pin || !hasCategory(pin.categories, GAME_CATEGORIES)) return false;
   const facts = await gameFactsOfPin(pinId);
   const ratings = await gameScoresOfPin(pinId, facts);
   let stored = false;
