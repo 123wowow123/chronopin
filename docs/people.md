@@ -552,3 +552,20 @@ One api.data.gov key serves both openFEC and api.congress.gov. It lives in
 name). Limits seen: openFEC 60 requests an hour, api.congress.gov 20,000. The
 VM copy takes effect at the next container restart or deploy; nothing was
 restarted. `people:import --laws` reads `CONGRESS_API_KEY`.
+
+### FEC enforcement sweep (2026-10-11)
+
+With a real api.data.gov key openFEC's legal search paged through all 7,669
+MURs (`type=murs`, `hits_returned=200`, **`from_hit`** - `offset` is ignored and
+returns the same page). A respondent "Last, First" was matched to a person by
+last + first name and kept only when the last name also appears in the case
+name or in another respondent (a committee), and only when the respondent has a
+recorded disposition. Names shared by two people in the database (John
+Kennedy, John F. Kennedy, George W. Bush, George H. W. Bush) were skipped.
+Result: 351 matters on 206 people (dismissed 330ish, conciliation/settled and
+findings the rest; Trump 33, Hillary Clinton 10, Patrick Murphy 8, John McCain
+7). Dispositions map: Dismissed-*, Dismiss..., No Reason to Believe, Take No
+Further Action -> dismissed; Conciliation -> settled with the civil penalty;
+Reason to Believe Finding -> findings-issued. Every person's `legal` note now
+says the sweep ran and what it cannot see (committee-only respondents, name
+spellings). Pushed to prod the same day: PersonMatter 618 -> 969.
