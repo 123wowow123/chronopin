@@ -4,11 +4,11 @@ import { pinConfidenceOf } from './pins';
 // The product pins the /products landing page shelves: live pins the timeline
 // would show (minConfidence is its floor, null for none) that name one
 // purchasable product (Pin.productName, 0085) and carry one of a shelf's
-// category or tag. A film or a restaurant also has a productName, so those tags
-// are left out. A pin with a stored listing (a Merchant row, found or checked
+// category or tag. A film, a restaurant or a festival also has a productName
+// (the event's own name), so those tags are left out. A pin with a stored listing (a Merchant row, found or checked
 // by a curator or the scrape) goes first, then the newest. Only this year's
 // products: released so far or still to come before the year ends.
-const NOT_GOODS = ['Restaurant', 'Restaurant Opening', 'Top Restaurants', 'Movie'];
+const NOT_GOODS = ['Restaurant', 'Restaurant Opening', 'Top Restaurants', 'Movie', 'Festival', 'Conference'];
 
 export type ProductBlurb = { blurb: string; rating: { score: number; max: number; source: string; url: string | null } | null };
 
