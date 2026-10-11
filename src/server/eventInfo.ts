@@ -245,6 +245,7 @@ export function combineReading(answer: Record<string, unknown> | null, pages: Pa
     highPrice: priced.highPrice,
     priceCurrency: priced.priceCurrency,
     tiers: priced.tiers.length ? priced.tiers : read.tiers,
+    itinerary: read.itinerary,
     availability: markup.availability ?? read.availability,
     onSaleDate: markup.availability ? markup.onSaleDate : read.onSaleDate,
   };

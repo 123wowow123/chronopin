@@ -161,7 +161,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           final sponsored block. From lg they sit under the article, as the
           grid-row-start / row-span pins say; row 2 is 1fr so the tall aside
           stretches that row, not the gap between article and references. */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
+      <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
           <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} venue={venue} candidates={candidates} />
         </article>
@@ -235,7 +235,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
         {/* What backs the pin, then: a missing link, date or fact goes to the
             AI, which adds whatever page backs it up to the list above. The
             first child's own top margin and the grid gap would double up. */}
-        <div className="min-w-0 lg:col-start-1 lg:row-start-2 lg:-mt-4 [&>:first-child]:mt-0">
+        <div data-pin-main-end className="min-w-0 lg:col-start-1 lg:row-start-2 lg:-mt-4 [&>:first-child]:mt-0">
           <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={pinDateRanges(pin, timeZone)} timeZone={timeZone} />
           <PinSuggest pinId={pin.id} />
         </div>

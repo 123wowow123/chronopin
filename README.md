@@ -403,3 +403,8 @@ add stripe and disable ads
 
 
 Thin coverage: cider and Japan/Korea snack awards are still thin; the agents ran out of sourced items.
+
+sync watch list to calendar
+add a pin to calendar and keep in sync
+
+get live politition stock alerts

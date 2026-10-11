@@ -1669,6 +1669,7 @@ const pt: Messages = {
     earnings: 'Ganhos por ano',
     earningsAbout: 'O que cada ano somou: o salário, mais rendimentos externos, royalties, patrocínios, prêmios em dinheiro e rendimentos de investimentos quando uma fonte os indica. Uma declaração financeira dá intervalos, mostrados como tal.',
     earningsTotal: 'Total',
+    showAllYears: 'Mostrar todos os {count} anos',
     earningsLines: 'Do que é feito',
     earningsRangeNote: 'Uma declaração dá um intervalo; a sua barra é desenhada no meio do intervalo.',
     earningKinds: {

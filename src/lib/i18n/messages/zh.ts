@@ -1672,6 +1672,7 @@ const zh: Messages = {
     earnings: '按年份的收入',
     earningsAbout: '每年的收入由哪些部分合计而成：薪酬，加上来源报告的外部收入、版税、代言收入、奖金和投资收益。财务披露给出的是区间，会按区间显示。',
     earningsTotal: '合计',
+    showAllYears: '显示全部 {count} 年',
     earningsLines: '构成',
     earningsRangeNote: '申报给出的是一个区间；其条形按区间中点绘制。',
     earningKinds: {

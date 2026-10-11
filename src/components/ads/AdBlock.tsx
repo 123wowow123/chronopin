@@ -1,7 +1,7 @@
 'use client';
 
 import Anchor from '@/components/ui/Anchor';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { hasProgramLogo, ProgramLogo } from '@/components/ads/ProgramLogo';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon, type IconName } from '@/components/ui/Icon';
@@ -284,18 +284,50 @@ export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 
 }
 
 // The tall space under a pin's comments: a column of larger ads on a desktop,
-// only the first two on a phone.
+// only the first two on a phone. Up to ten are fetched; on a desktop only as
+// many show as fit beside the pin's own column (the references and suggest
+// blocks), never fewer than two, so the ads never make the page taller.
 export function AdColumn({ pinId, className = '' }: { pinId: number; className?: string }) {
   const slot = 'pin-side';
   const t = useT();
   const { ref, ads } = useAds(slot, pinId);
   const text = useAdText();
+  const listRef = useRef<HTMLUListElement>(null);
+  const adCount = ads?.length ?? 0;
+  useLayoutEffect(() => {
+    const list = listRef.current;
+    if (!list || adCount < 3) return;
+    const grid = list.closest<HTMLElement>('[data-pin-grid]');
+    const end = grid?.querySelector<HTMLElement>('[data-pin-main-end]');
+    if (!grid || !end) return;
+    const items = [...list.children] as HTMLElement[];
+    const wide = window.matchMedia('(min-width: 1024px)');
+    const fit = () => {
+      for (const item of items) item.style.display = '';
+      if (!wide.matches) return;
+      // The bottom of the left column's last block, not the grid row, which
+      // stretches to hold this column.
+      const content = end.lastElementChild as HTMLElement | null;
+      if (!content) return;
+      const limit = content.getBoundingClientRect().bottom;
+      for (let i = items.length - 1; i >= 2 && list.getBoundingClientRect().bottom > limit; i--) items[i].style.display = 'none';
+    };
+    fit();
+    const observer = new ResizeObserver(fit);
+    observer.observe(grid);
+    observer.observe(end);
+    wide.addEventListener('change', fit);
+    return () => {
+      observer.disconnect();
+      wide.removeEventListener('change', fit);
+    };
+  }, [adCount]);
   if (!ads) return <div ref={ref} aria-hidden className={`h-px ${className}`} />;
   if (!ads.length) return null;
   return (
     <aside aria-label={t('ads.sponsored')} className={`surface p-4 sm:p-5 ${className}`}>
       <SponsoredLabel />
-      <ul className="mt-2 space-y-2 max-lg:[&>li:nth-child(n+3)]:hidden">
+      <ul ref={listRef} className="mt-2 space-y-2 max-lg:[&>li:nth-child(n+3)]:hidden">
         {ads.map((ad) => {
           const { title, body, urgency, cta } = text(ad);
           return (

@@ -9,12 +9,13 @@ import {
   type Availability,
   type EventInfoFields,
   type EventInfoSource,
+  type ItineraryDay,
   type Performer,
   type PinEventInfoJson,
   type TicketTier,
 } from '@/lib/eventInfo';
 
-const COLUMNS = `"performers", "ticketUrl", "lowPrice", "highPrice", "priceCurrency", "tiers", "availability", "onSaleDate", "source", "sourceUrl", "checkedAt"`;
+const COLUMNS = `"performers", "ticketUrl", "lowPrice", "highPrice", "priceCurrency", "tiers", "itinerary", "availability", "onSaleDate", "source", "sourceUrl", "checkedAt"`;
 
 type EventInfoRow = Omit<PinEventInfoJson, 'lowPrice' | 'highPrice' | 'onSaleDate' | 'checkedAt'> & {
   lowPrice: string | null;
@@ -77,6 +78,21 @@ export function eventInfoProblem(body: Record<string, unknown>): { fields: Event
   if (tiers.length > 30) return 'At most 30 ticket tiers.';
   if (tiers.length && !priceCurrency) return 'Ticket tiers need their priceCurrency.';
 
+  const itinerary: ItineraryDay[] = [];
+  for (const d of Array.isArray(body.itinerary) ? body.itinerary : body.itinerary == null ? [] : [null]) {
+    const label = typeof d?.label === 'string' ? d.label.trim() : '';
+    if (!label || label.length > 120) return 'Each itinerary day needs a label of at most 120 characters.';
+    const items: string[] = [];
+    for (const item of Array.isArray(d.items) ? d.items : [null]) {
+      const line = typeof item === 'string' ? item.trim() : '';
+      if (!line || line.length > 200) return `Itinerary day "${label}" needs items of 1-200 characters.`;
+      items.push(line);
+    }
+    if (!items.length || items.length > 30) return `Itinerary day "${label}" needs 1-30 items.`;
+    itinerary.push({ label, items });
+  }
+  if (itinerary.length > 20) return 'At most 20 itinerary days.';
+
   const availability = body.availability == null || body.availability === '' ? null : String(body.availability);
   if (availability && !AVAILABILITIES.includes(availability as Availability)) return `availability must be one of ${AVAILABILITIES.join(', ')}.`;
   const onSale = body.onSaleDate == null || body.onSaleDate === '' ? null : new Date(String(body.onSaleDate));
@@ -96,6 +112,7 @@ export function eventInfoProblem(body: Record<string, unknown>): { fields: Event
       highPrice: lowPrice == null ? null : highPrice,
       priceCurrency: lowPrice == null ? null : priceCurrency,
       tiers: lowPrice == null ? [] : tiers,
+      itinerary,
       availability: (availability as Availability | null) ?? null,
       onSaleDate: onSale ? onSale.toISOString() : null,
     },
@@ -117,11 +134,11 @@ export async function saveEventInfo(
   { source, sourceUrl, checkedAt }: { source: EventInfoSource; sourceUrl?: string | null; checkedAt?: string | Date },
 ): Promise<boolean> {
   const rows = await db.query(
-    `INSERT INTO "PinEventInfo" ("pinId", "performers", "ticketUrl", "lowPrice", "highPrice", "priceCurrency", "tiers", "availability", "onSaleDate", "source", "sourceUrl", "checkedAt")
-     VALUES ($1, $2::jsonb, $3, $4, $5, $6, $12::jsonb, $7, $8, $9, $10, COALESCE($11::timestamptz, now()))
+    `INSERT INTO "PinEventInfo" ("pinId", "performers", "ticketUrl", "lowPrice", "highPrice", "priceCurrency", "tiers", "itinerary", "availability", "onSaleDate", "source", "sourceUrl", "checkedAt")
+     VALUES ($1, $2::jsonb, $3, $4, $5, $6, $12::jsonb, $13::jsonb, $7, $8, $9, $10, COALESCE($11::timestamptz, now()))
      ON CONFLICT ("pinId") DO UPDATE SET
        "performers" = EXCLUDED."performers", "ticketUrl" = EXCLUDED."ticketUrl", "lowPrice" = EXCLUDED."lowPrice",
-       "highPrice" = EXCLUDED."highPrice", "priceCurrency" = EXCLUDED."priceCurrency", "tiers" = EXCLUDED."tiers", "availability" = EXCLUDED."availability",
+       "highPrice" = EXCLUDED."highPrice", "priceCurrency" = EXCLUDED."priceCurrency", "tiers" = EXCLUDED."tiers", "itinerary" = EXCLUDED."itinerary", "availability" = EXCLUDED."availability",
        "onSaleDate" = EXCLUDED."onSaleDate", "source" = EXCLUDED."source", "sourceUrl" = EXCLUDED."sourceUrl", "checkedAt" = EXCLUDED."checkedAt"
      WHERE "PinEventInfo"."source" <> 'hand' OR EXCLUDED."source" = 'hand'
      RETURNING "pinId"`,
@@ -138,6 +155,7 @@ export async function saveEventInfo(
       sourceUrl ?? null,
       checkedAt ? new Date(checkedAt).toISOString() : null,
       JSON.stringify(fields.tiers ?? []),
+      JSON.stringify(fields.itinerary ?? []),
     ],
   );
   return rows.length > 0;

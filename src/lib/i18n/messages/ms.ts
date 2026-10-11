@@ -1682,6 +1682,7 @@ const ms: Messages = {
     earnings: 'Pendapatan mengikut tahun',
     earningsAbout: 'Jumlah bagi setiap tahun: gaji, serta pendapatan luar, royalti, endorsemen, wang hadiah dan pendapatan pelaburan jika dilaporkan oleh sesuatu sumber. Pengisytiharan kewangan memberikan julat, yang dipaparkan sebagaimana adanya.',
     earningsTotal: 'Jumlah',
+    showAllYears: 'Tunjukkan semua {count} tahun',
     earningsLines: 'Terdiri daripada apa',
     earningsRangeNote: 'Pendedahan memberikan julat; palangnya dilukis pada tengah julat.',
     earningKinds: {

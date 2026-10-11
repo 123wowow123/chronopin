@@ -66,8 +66,9 @@ export const AD_SLOTS = ['timeline-row', 'timeline-side', 'pin-strip', 'pin-side
 export type AdSlot = (typeof AD_SLOTS)[number];
 // How many ads a slot asks for at most: what it shows at its widest. The
 // timeline's side panel stops at five however tall the window is; a pin's
-// side column runs taller, so it stops at seven.
-export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 7, drawer: 5 };
+// side column runs taller, so it stops at ten (AdColumn then shows only as
+// many as fit beside the pin's own column).
+export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 10, drawer: 5 };
 // Reserve one seasonal tile, leaving room for other categories in every block.
 export const HOLIDAY_COUNT: Record<AdSlot, number> = { 'timeline-row': 1, 'timeline-side': 1, 'pin-strip': 1, 'pin-side': 1, drawer: 1 };
 // Slots on a pin's page, whose ads are its related ones first.

@@ -1682,6 +1682,7 @@ const en = {
     earnings: 'Earnings by year',
     earningsAbout: 'What each year added up to: salary, plus outside income, royalties, endorsements, prizes and investment income where a source reports them. A financial disclosure gives ranges, shown as such.',
     earningsTotal: 'Total',
+    showAllYears: 'Show all {count} years',
     earningsLines: 'What it is made of',
     earningsRangeNote: 'A disclosure gives a range; its bar is drawn at the middle of the range.',
     earningKinds: {

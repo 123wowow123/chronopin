@@ -1669,6 +1669,7 @@ const it: Messages = {
     earnings: 'Guadagni per anno',
     earningsAbout: "Quanto ha totalizzato ogni anno: lo stipendio, più redditi esterni, diritti d'autore, sponsorizzazioni, premi in denaro e redditi da investimenti quando una fonte li riporta. Una dichiarazione finanziaria indica intervalli, mostrati come tali.",
     earningsTotal: 'Totale',
+    showAllYears: 'Mostra tutti i {count} anni',
     earningsLines: 'Da cosa è composto',
     earningsRangeNote: "Una dichiarazione indica un intervallo; la sua barra è disegnata a metà dell'intervallo.",
     earningKinds: {

@@ -1678,6 +1678,7 @@ const de: Messages = {
     earnings: 'Einkünfte nach Jahr',
     earningsAbout: 'Was jedes Jahr zusammenkam: das Gehalt, plus Nebeneinkünfte, Tantiemen, Werbeverträge, Preisgelder und Kapitalerträge, soweit eine Quelle sie ausweist. Eine Offenlegung der Finanzen nennt Spannen, die auch als solche angezeigt werden.',
     earningsTotal: 'Gesamt',
+    showAllYears: 'Alle {count} Jahre anzeigen',
     earningsLines: 'Woraus es sich zusammensetzt',
     earningsRangeNote: 'Eine Offenlegung nennt eine Spanne; ihr Balken ist in der Mitte der Spanne gezeichnet.',
     earningKinds: {

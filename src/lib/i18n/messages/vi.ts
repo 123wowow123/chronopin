@@ -1681,6 +1681,7 @@ const vi: Messages = {
     earnings: 'Thu nhập theo năm',
     earningsAbout: 'Tổng của mỗi năm: lương, cộng với thu nhập bên ngoài, tiền bản quyền, hợp đồng quảng cáo, tiền thưởng và thu nhập đầu tư khi có nguồn ghi nhận. Bản kê khai tài chính đưa ra khoảng giá trị và được hiển thị đúng như vậy.',
     earningsTotal: 'Tổng',
+    showAllYears: 'Hiển thị tất cả {count} năm',
     earningsLines: 'Cấu thành từ gì',
     earningsRangeNote: 'Bản kê khai đưa ra một khoảng; thanh của nó được vẽ ở giữa khoảng.',
     earningKinds: {

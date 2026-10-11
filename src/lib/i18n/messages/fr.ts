@@ -1678,6 +1678,7 @@ const fr: Messages = {
     earnings: 'Revenus par année',
     earningsAbout: "Ce que chaque année a totalisé : le traitement, plus les revenus extérieurs, les droits d'auteur, les contrats publicitaires, les prix et les revenus de placements lorsqu'une source les mentionne. Une déclaration financière donne des fourchettes, affichées comme telles.",
     earningsTotal: 'Total',
+    showAllYears: 'Afficher les {count} années',
     earningsLines: 'Détail',
     earningsRangeNote: 'Une déclaration donne une fourchette ; sa barre est tracée au milieu de la fourchette.',
     earningKinds: {

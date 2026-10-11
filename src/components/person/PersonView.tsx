@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { JsonLd } from '@/components/JsonLd';
+import { EarningsRow } from '@/components/person/EarningsRow';
 import { OctagonChart } from '@/components/person/OctagonChart';
 import { PinSection } from '@/components/topic/TopicView';
 import { siteName } from '@/lib/appConfig';
@@ -235,8 +236,11 @@ export function PersonView({
       <div className="mt-12 flex flex-col gap-14">
         {/* Earnings, a tile a year, directly under the main pane. */}
         {years.length ? (
-          <Section id="earnings" title={t('person.earnings')} count={years.length} about={t('person.earningsAbout')}>
-            <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <section id="earnings" aria-labelledby="earnings-heading" className="scroll-mt-20">
+            <EarningsRow
+              count={years.length}
+              heading={<SectionHeading id="earnings" title={t('person.earnings')} count={years.length} about={t('person.earningsAbout')} />}
+            >
               {years.map((y) => (
                 <li key={y.year} className="floating flex flex-col gap-1 px-4 py-4">
                   <span className="text-xs font-semibold tracking-wide text-subtle tabular-nums">{y.year}</span>
@@ -278,8 +282,8 @@ export function PersonView({
                   {!y.exact ? <p className="mt-1 text-[10px] leading-snug text-subtle">{t('person.earningsRangeNote')}</p> : null}
                 </li>
               ))}
-            </ul>
-          </Section>
+            </EarningsRow>
+          </section>
         ) : null}
 
         <Section id="phases" title={t('person.octagon.title')} count={phases.length} about={t('person.octagon.about', { name: profile.name })}>
@@ -499,16 +503,22 @@ const BADGE = {
 } as const;
 
 // A section: its heading with a count, a line on what it is, and the content.
+function SectionHeading({ id, title, count, about, wide }: { id: string; title: string; count?: number; about?: ReactNode; wide?: boolean }) {
+  return (
+    <div className="mb-5 border-s-4 border-accent ps-4">
+      <h2 id={`${id}-heading`} className="flex items-center gap-2.5 text-2xl font-semibold tracking-tight">
+        {title}
+        {count != null ? <span className="rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted tabular-nums">{count}</span> : null}
+      </h2>
+      {about ? <p className={`mt-1.5 text-xs leading-relaxed text-subtle ${wide ? '' : 'max-w-3xl'}`}>{about}</p> : null}
+    </div>
+  );
+}
+
 function Section({ id, title, count, about, wide, children }: { id: string; title: string; count?: number; about?: ReactNode; wide?: boolean; children: ReactNode }) {
   return (
     <section id={id} aria-labelledby={`${id}-heading`} className="scroll-mt-20">
-      <div className="mb-5 border-s-4 border-accent ps-4">
-        <h2 id={`${id}-heading`} className="flex items-center gap-2.5 text-2xl font-semibold tracking-tight">
-          {title}
-          {count != null ? <span className="rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted tabular-nums">{count}</span> : null}
-        </h2>
-        {about ? <p className={`mt-1.5 text-xs leading-relaxed text-subtle ${wide ? '' : 'max-w-3xl'}`}>{about}</p> : null}
-      </div>
+      <SectionHeading id={id} title={title} count={count} about={about} wide={wide} />
       {children}
     </section>
   );

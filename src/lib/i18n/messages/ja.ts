@@ -1672,6 +1672,7 @@ const ja: Messages = {
     earnings: '年別の収入',
     earningsAbout: '各年の合計の内訳：給与に加え、出典で報告された副収入、印税、スポンサー契約料、賞金、投資収入。財務開示は金額の範囲で示されるため、範囲のまま表示します。',
     earningsTotal: '合計',
+    showAllYears: '{count}年すべてを表示',
     earningsLines: '内訳',
     earningsRangeNote: '開示は範囲で示されます。その棒は範囲の中間で描かれています。',
     earningKinds: {

@@ -1678,6 +1678,7 @@ const es: Messages = {
     earnings: 'Ingresos por año',
     earningsAbout: 'Lo que sumó cada año: el sueldo, más ingresos externos, regalías, patrocinios, premios e ingresos por inversiones cuando una fuente los recoge. Una declaración financiera da rangos, que se muestran como tales.',
     earningsTotal: 'Total',
+    showAllYears: 'Mostrar los {count} años',
     earningsLines: 'De qué se compone',
     earningsRangeNote: 'Una declaración da un rango; su barra se dibuja en el punto medio del rango.',
     earningKinds: {

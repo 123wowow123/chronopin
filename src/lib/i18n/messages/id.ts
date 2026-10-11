@@ -1682,6 +1682,7 @@ const id: Messages = {
     earnings: 'Penghasilan per tahun',
     earningsAbout: 'Jumlah tiap tahun: gaji, ditambah penghasilan luar, royalti, endorsement, hadiah uang, dan pendapatan investasi bila dilaporkan oleh suatu sumber. Laporan keuangan memberi rentang, yang ditampilkan apa adanya.',
     earningsTotal: 'Total',
+    showAllYears: 'Tampilkan semua {count} tahun',
     earningsLines: 'Terdiri dari apa',
     earningsRangeNote: 'Pengungkapan memberi rentang; batangnya digambar di tengah rentang.',
     earningKinds: {

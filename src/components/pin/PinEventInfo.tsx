@@ -51,7 +51,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
   const tiers = info.tiers?.length > 1 && info.lowPrice != null ? info.tiers : [];
   const hasTickets = !!(price || sale || (info.ticketUrl && !started));
   const seller = ticketSeller(info.ticketUrl);
-  if (!info.performers.length && !hasTickets) {
+  if (!info.performers.length && !hasTickets && !info.itinerary?.length) {
     return null;
   }
 
@@ -109,6 +109,34 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
     </section>
   ) : null;
 
+  // What the ticket includes, a row a day: shown with the price, so a package
+  // reads as what it buys.
+  const itineraryPanel = info.itinerary?.length ? (
+    <section className="w-full overflow-hidden rounded-xl border border-line bg-raised/40">
+      <table className="w-full border-collapse text-sm">
+        <caption className="border-b border-line px-4 py-3 text-start text-xs font-semibold tracking-wider text-subtle uppercase">
+          {t.dynamic('pin.itineraryHeading', 'Itinerary')}
+        </caption>
+        <tbody className="divide-y divide-line">
+          {info.itinerary.map((day, index) => (
+            <tr key={`${day.label}-${index}`}>
+              <th scope="row" className="w-1/3 px-4 py-2.5 text-start align-top font-semibold">
+                {day.label}
+              </th>
+              <td className="px-4 py-2.5">
+                <ul className="flex flex-col gap-1">
+                  {day.items.map((item, i) => (
+                    <li key={`${item}-${i}`}>{item}</li>
+                  ))}
+                </ul>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  ) : null;
+
   return (
     <div className="mt-2 flex flex-col gap-2">
       {info.performers.length ? (
@@ -137,6 +165,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
           {buyButton}
         </div>
       ) : null}
+      {itineraryPanel}
     </div>
   );
 }

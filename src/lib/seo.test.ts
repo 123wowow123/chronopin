@@ -64,6 +64,7 @@ describe('pinJsonLd', () => {
       highPrice: 250,
       priceCurrency: 'AUD',
       tiers: [],
+      itinerary: [],
       availability: 'InStock' as const,
       onSaleDate: null,
       source: 'markup' as const,

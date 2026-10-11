@@ -1673,6 +1673,7 @@ const ko: Messages = {
     earnings: '연도별 수입',
     earningsAbout: '매년 수입이 어떻게 합산되었는지: 급여에, 출처에서 보고된 외부 수입, 인세, 광고 계약, 상금, 투자 소득을 더한 것입니다. 재산 공개는 범위로 제공되며 범위 그대로 표시합니다.',
     earningsTotal: '합계',
+    showAllYears: '{count}개 연도 모두 보기',
     earningsLines: '구성 내역',
     earningsRangeNote: '공시는 범위로 제시되며, 그 막대는 범위의 중간 값으로 그려집니다.',
     earningKinds: {

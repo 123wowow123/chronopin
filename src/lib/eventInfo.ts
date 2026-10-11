@@ -17,6 +17,9 @@ export type EventInfoSource = (typeof EVENT_INFO_SOURCES)[number];
 // page attaches ("Weekdays only").
 export type TicketTier = { label: string; price: number; note?: string };
 
+// One part of what a ticket or package includes: a day and what it holds.
+export type ItineraryDay = { label: string; items: string[] };
+
 export type PinEventInfoJson = {
   performers: Performer[];
   ticketUrl: string | null;
@@ -26,6 +29,9 @@ export type PinEventInfoJson = {
   // Every named price, when a page lists more than one; lowPrice and
   // highPrice span them.
   tiers: TicketTier[];
+  // What the ticket includes, day by day, for a package; empty when the page
+  // lists none.
+  itinerary: ItineraryDay[];
   availability: Availability | null;
   onSaleDate: string | null;
   source: EventInfoSource;
@@ -43,6 +49,7 @@ export const EMPTY_EVENT_INFO: EventInfoFields = {
   highPrice: null,
   priceCurrency: null,
   tiers: [],
+  itinerary: [],
   availability: null,
   onSaleDate: null,
 };
@@ -161,6 +168,7 @@ export function eventInfoFromMarkup(event: Node | undefined): EventInfoFields {
     highPrice: prices.length ? Math.max(...prices) : null,
     priceCurrency: prices.length && currency ? currency.toUpperCase() : null,
     tiers: tiers.length > 1 && prices.length && currency ? tiers : [],
+    itinerary: [],
     availability,
     onSaleDate: availability === 'PreOrder' && onSale ? new Date(onSale).toISOString() : null,
   };
