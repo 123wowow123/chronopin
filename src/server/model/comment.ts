@@ -321,6 +321,23 @@ export default class Comment extends PinUserLink {
     );
   }
 
+  // The newest comments on the pins a person is linked to, for their
+  // sentiment graph; hidden and deleted ones sit out as in forCompany.
+  static forPerson(personId: number, limit: number) {
+    return db.query<{ pinId: number; sentiment: number | null; utcCreatedDateTime: Date }>(
+      `
+    SELECT "Comment"."pinId", "Comment"."sentiment", "Comment"."utcCreatedDateTime"
+    FROM "Comment"
+      JOIN "Pin" ON "Pin"."id" = "Comment"."pinId"
+    WHERE "Pin"."utcDeletedDateTime" IS NULL AND "Comment"."utcDeletedDateTime" IS NULL
+      AND EXISTS (SELECT 1 FROM "PinPerson" WHERE "PinPerson"."pinId" = "Pin"."id" AND "PinPerson"."personId" = $1)
+      AND (SELECT COUNT(*) FROM "CommentReport" WHERE "commentId" = "Comment"."id" AND "utcDismissedDateTime" IS NULL) < $3
+    ORDER BY "Comment"."utcCreatedDateTime" DESC, "Comment"."id" DESC
+    LIMIT $2`,
+      [personId, limit, COMMENT_HIDE_REPORTS],
+    );
+  }
+
   // What scoring a comment's tone reads: its text, the pin it is on, and for a
   // reply the comment it answers. Undefined when the comment is gone.
   static async sentimentContext(id: number) {

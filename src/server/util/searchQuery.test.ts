@@ -56,6 +56,24 @@ describe('joinSearchQuery', () => {
 });
 
 describe('parseSearchQuery', () => {
+  it('reads taste: axes, leaving out names the profile does not have', () => {
+    expect(parseSearchQuery('taste:Bitterness taste:umami taste:bitterness taste:salty').tastes).toEqual(['bitterness', 'umami']);
+  });
+  it('reads person: names and radar-axis bounds', () => {
+    expect(parseSearchQuery('person:"Joe Biden" person:"joe biden"').people).toEqual(['Joe Biden']);
+    expect(parseSearchQuery('misconduct:>3 wealth:2-4 senate').personAxes).toEqual([
+      { axis: 'misconduct', op: '>', value: 3 },
+      { axis: 'wealth', op: '>=', value: 2 },
+      { axis: 'wealth', op: '<=', value: 4 },
+    ]);
+    expect(parseSearchQuery('misconduct:>3 senate').text).toBe('senate');
+    expect(parseSearchQuery('public-standing:>=4 social-good:3').personAxes).toEqual([
+      { axis: 'standing', op: '>=', value: 4 },
+      { axis: 'social', op: '>=', value: 3 },
+    ]);
+    expect(parseSearchQuery('health:high').personAxes).toEqual([]);
+    expect(hasFilters(parseSearchQuery('economic:>2'))).toBe(true);
+  });
   it('reads the old category: terms as tags, in any case, once each', () => {
     expect(parseSearchQuery('category:software CATEGORY:Software tag:Software ios')).toEqual({
       userNames: [],
@@ -75,6 +93,9 @@ describe('parseSearchQuery', () => {
       places: [],
       platforms: [],
       rated: [],
+      tastes: [],
+      people: [],
+      personAxes: [],
       ratings: [],
       delays: [],
       holidays: [],

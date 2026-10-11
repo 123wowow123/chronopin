@@ -1,0 +1,1858 @@
+{
+  "checkedAt": "2026-10-10",
+  "country": "China",
+  "regions": [
+    "kunming",
+    "foshan",
+    "dongguan",
+    "jinan",
+    "hefei",
+    "xiamen",
+    "ningbo",
+    "dalian",
+    "shenyang",
+    "harbin"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Jian Xin Yuan — Baoshan Street — Kunming restaurant guide",
+        "description": "A Baoshan Street rice-noodle shop serving crossing-the-bridge rice noodles, cold noodles and Yunnan snacks.",
+        "sourceUrl": "https://you.ctrip.com/food/kunming29/15941289.html",
+        "address": "195 Baoshan Street, Wuhua District, Kunming, Yunnan, China",
+        "latitude": 25.0389555,
+        "longitude": 102.7120881,
+        "productName": "Jian Xin Yuan — Baoshan Street",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kunming",
+          "China",
+          "Wuhua · Baoshan Street",
+          "Yunnan rice noodles"
+        ],
+        "longFormSummary": "<p>A Baoshan Street rice-noodle shop serving crossing-the-bridge rice noodles, cold noodles and Yunnan snacks. <cite data-ref=\"https://you.ctrip.com/food/kunming29/15941289.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://you.ctrip.com/food/kunming29/15941289.html",
+            "title": "Jian Xin Yuan — Baoshan Street — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8922142453",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://you.ctrip.com/food/kunming29/15941289.html",
+          "menu": {
+            "pinSourceUrl": "https://you.ctrip.com/food/kunming29/15941289.html",
+            "name": "Jian Xin Yuan — Baoshan Street",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Verified branch dishes",
+                "url": "https://you.ctrip.com/food/kunming29/15941289.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Standard crossing-the-bridge rice noodles (标准过桥米线)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Rice noodles with cracklings and blood curd (脆旺米线)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Cold rice noodles (凉米线)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Braised chicken leg (卤鸡腿)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Blood curd in chilli oil (红油血旺)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Papaya drink (木瓜水)",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch-specific published dish selection, not a full menu. Individual prices were not recovered from the operator, linked PDFs, ordering listings or menu-image pages. Confirm current availability and prices with the branch."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 25.0389555,
+              "longitude": 102.7120881,
+              "sourceUrl": "https://you.ctrip.com/food/kunming29/15941289.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kunming/researched/jianxin-baoshan-1-9d92a54668469710.webp",
+              "alt": "Photograph from the verified jianxin-baoshan branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "洋芋熊 / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8922142453",
+              "originalUrl": "https://qcloud.dpfile.com/pc/toakoUWt7wHfufAd3bW7Ffj9Z0yv8bhFO-HlLD1PJ0P0q_CvTsdQNMOcrdE2Cnukl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://you.ctrip.com/food/kunming29/15941289.html",
+            "name": "Jian Xin Yuan — Baoshan Street",
+            "websiteUrl": "https://you.ctrip.com/food/kunming29/15941289.html",
+            "phone": "+86 199 1278 5591",
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://you.ctrip.com/food/kunming29/15941289.html"
+          },
+          "tile": {
+            "regionSlug": "kunming",
+            "kind": "top",
+            "slug": "jianxin-baoshan",
+            "name": "Jian Xin Yuan — Baoshan Street",
+            "neighborhood": "Wuhua · Baoshan Street",
+            "cuisine": "Yunnan rice noodles",
+            "address": "195 Baoshan Street, Wuhua District, Kunming, Yunnan, China",
+            "websiteUrl": "https://you.ctrip.com/food/kunming29/15941289.html",
+            "description": "A Baoshan Street rice-noodle shop serving crossing-the-bridge rice noodles, cold noodles and Yunnan snacks.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kunming/researched/jianxin-baoshan-1-9d92a54668469710.webp",
+            "imageCredit": "洋芋熊 / Dianping",
+            "imageSourceUrl": "https://qcloud.dpfile.com/pc/toakoUWt7wHfufAd3bW7Ffj9Z0yv8bhFO-HlLD1PJ0P0q_CvTsdQNMOcrdE2Cnukl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+            "imageNote": "Photograph from the verified jianxin-baoshan branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "kunming",
+          "slug": "jianxin-baoshan-1",
+          "source": "https://qcloud.dpfile.com/pc/toakoUWt7wHfufAd3bW7Ffj9Z0yv8bhFO-HlLD1PJ0P0q_CvTsdQNMOcrdE2Cnukl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8922142453",
+          "credit": "洋芋熊 / Dianping",
+          "note": "Photograph from the verified jianxin-baoshan branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kunming/researched/jianxin-baoshan-1-9d92a54668469710.webp",
+          "sha256": "9d92a546684697109c3e27692842f100bdef07c0d44d5e92f76089f79d0c5efb",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 25.0389555,
+        "longitude": 102.7120881,
+        "sourceUrl": "https://you.ctrip.com/food/kunming29/15941289.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 25.0359824, 102.7135293; inverse converted to WGS84 for the map."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Renxin Laopu — Dongle Road — Foshan restaurant guide",
+        "description": "The Dongle Road branch serves Shunde double-skin milk, fried milk and milk desserts alongside savoury snacks.",
+        "sourceUrl": "https://you.ctrip.com/food/foshan207/5490198.html",
+        "address": "Shop 25, Defu Building, 3 Dongle Road, Daliang, Shunde District, Foshan, Guangdong, China",
+        "latitude": 22.8379793,
+        "longitude": 113.2529852,
+        "productName": "Renxin Laopu — Dongle Road",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Foshan",
+          "China",
+          "Shunde · Daliang",
+          "Shunde desserts"
+        ],
+        "longFormSummary": "<p>The Dongle Road branch serves Shunde double-skin milk, fried milk and milk desserts alongside savoury snacks. <cite data-ref=\"https://you.ctrip.com/food/foshan207/5490198.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://you.ctrip.com/food/foshan207/5490198.html",
+            "title": "Renxin Laopu — Dongle Road — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8958992012",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8934144088",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8417662981",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://you.ctrip.com/food/foshan207/5490198.html",
+          "menu": {
+            "pinSourceUrl": "https://you.ctrip.com/food/foshan207/5490198.html",
+            "name": "Renxin Laopu — Dongle Road",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Verified branch dishes",
+                "url": "https://you.ctrip.com/food/foshan207/5490198.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Renxin double-skin milk (仁信双皮奶)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Low-sugar double-skin milk (低糖双皮奶)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Mango double-skin milk (芒果双皮奶)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fried milk (大良炸牛奶)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Snow-white milk rolls (雪白牛奶卷)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Taro cake (芋头糕)",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch-specific published dish selection, not a full menu. Individual prices were not recovered from the operator, linked PDFs, ordering listings or menu-image pages. Confirm current availability and prices with the branch."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 22.8379793,
+              "longitude": 113.2529852,
+              "sourceUrl": "https://you.ctrip.com/food/foshan207/5490198.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/renxin-dongle-2-a8a6d4f04ff700bf.webp",
+              "alt": "Photograph from the verified renxin-dongle branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "我很饱 / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8958992012",
+              "originalUrl": "https://qcloud.dpfile.com/pc/iCaQtPAnfB2rPCe-3Bsnr7PYkkkyvgYgWYQj1okn2X13Li0atPpkcPtfkJerNztOl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://you.ctrip.com/food/foshan207/5490198.html",
+            "name": "Renxin Laopu — Dongle Road",
+            "websiteUrl": "https://you.ctrip.com/food/foshan207/5490198.html",
+            "phone": "+86 757 2222 3423",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "09:30–24:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://you.ctrip.com/food/foshan207/5490198.html"
+          },
+          "tile": {
+            "regionSlug": "foshan",
+            "kind": "top",
+            "slug": "renxin-dongle",
+            "name": "Renxin Laopu — Dongle Road",
+            "neighborhood": "Shunde · Daliang",
+            "cuisine": "Shunde desserts",
+            "address": "Shop 25, Defu Building, 3 Dongle Road, Daliang, Shunde District, Foshan, Guangdong, China",
+            "websiteUrl": "https://you.ctrip.com/food/foshan207/5490198.html",
+            "description": "The Dongle Road branch serves Shunde double-skin milk, fried milk and milk desserts alongside savoury snacks.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/renxin-dongle-2-a8a6d4f04ff700bf.webp",
+            "imageCredit": "我很饱 / Dianping",
+            "imageSourceUrl": "https://qcloud.dpfile.com/pc/iCaQtPAnfB2rPCe-3Bsnr7PYkkkyvgYgWYQj1okn2X13Li0atPpkcPtfkJerNztOl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+            "imageNote": "Photograph from the verified renxin-dongle branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "foshan",
+          "slug": "renxin-dongle-2",
+          "source": "https://qcloud.dpfile.com/pc/iCaQtPAnfB2rPCe-3Bsnr7PYkkkyvgYgWYQj1okn2X13Li0atPpkcPtfkJerNztOl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8958992012",
+          "credit": "我很饱 / Dianping",
+          "note": "Photograph from the verified renxin-dongle branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/renxin-dongle-2-a8a6d4f04ff700bf.webp",
+          "sha256": "a8a6d4f04ff700bff795172cfa2a6e47bc0095d61f51ed793cfee3ee874ba9bc",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "foshan",
+          "slug": "renxin-dongle-1",
+          "source": "https://qcloud.dpfile.com/pc/McLT6Y2OukO-o-reS6-zDeqwXuAJeckvbiE0AkTTZErajYbyPuzZiyUMCfjcoxuSl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8934144088",
+          "credit": "洋红酒窝 / Dianping",
+          "note": "Photograph from the verified renxin-dongle branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/renxin-dongle-1-00a33960fcce3109.webp",
+          "sha256": "00a33960fcce310994e7816585f4b9c738ae6bee4ada173199c718a781afdcb8",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "foshan",
+          "slug": "renxin-dongle-3",
+          "source": "https://qcloud.dpfile.com/pc/GDix4O8V-j3GO9DUquosrb6ed6kYJZOpk6K-Kw7zt5-rMVJYG9mde8t_BvHDGD4bl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8417662981",
+          "credit": "司徒吐司 / Dianping",
+          "note": "Photograph from the verified renxin-dongle branch gallery: 雪白牛奶卷. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/renxin-dongle-3-89bce1f86e37013a.webp",
+          "sha256": "89bce1f86e37013aeadfe0a09e6a852e132d83d0bc365676db850f117509b37e",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 22.8379793,
+        "longitude": 113.2529852,
+        "sourceUrl": "https://you.ctrip.com/food/foshan207/5490198.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 22.8351773, 113.2582903; inverse converted to WGS84 for the map."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shen He Food Shop — Tangxia — Dongguan restaurant guide",
+        "description": "A Tangxia neighbourhood restaurant serving crispy chicken, pork meatballs and Cantonese home-style dishes.",
+        "sourceUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+        "address": "Unit 113, 11 Zhufoling Road (诸佛岭路), Tangxia Town, Dongguan, Guangdong, China",
+        "latitude": 22.8073194,
+        "longitude": 114.0853147,
+        "productName": "Shen He Food Shop — Tangxia",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Dongguan",
+          "China",
+          "Tangxia · Zhufoling Road",
+          "Cantonese home cooking"
+        ],
+        "longFormSummary": "<p>A Tangxia neighbourhood restaurant serving crispy chicken, pork meatballs and Cantonese home-style dishes. <cite data-ref=\"https://maps.apple.com/place?auid=1118505220013791&amp;lsp=57879\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+            "title": "Shen He Food Shop — Tangxia — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8596981842",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8296065600",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8734777152",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+          "menu": {
+            "pinSourceUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+            "name": "Shen He Food Shop — Tangxia",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch dishes and published listing prices",
+                "url": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Crispy chicken (炸子鸡)",
+                    "price": 60
+                  },
+                  {
+                    "name": "Pork ribs and meatballs (排骨肉丸)",
+                    "price": 60
+                  },
+                  {
+                    "name": "Fish braised with preserved greens (酸菜炆鱼)",
+                    "price": 48
+                  },
+                  {
+                    "name": "Stir-fried pork intestines (炒猪大肠)",
+                    "price": 58
+                  },
+                  {
+                    "name": "Pork belly with preserved olives (榄角花肉)",
+                    "price": 45
+                  },
+                  {
+                    "name": "Steamed loofah (蒸丝瓜)",
+                    "price": 28
+                  }
+                ],
+                "note": "CNY prices displayed by Apple Maps from Dianping community recommendation data, fetched October 10, 2026; not an operator-issued price guarantee. Portions and ordering conditions are not specified unless noted. Confirm current prices when ordering. Fetched prices differ from older indexed excerpts for the meatball and pork-intestine dishes; the newly fetched listing is used."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 22.8073194,
+              "longitude": 114.0853147,
+              "sourceUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dongguan/researched/shenhe-tangxia-1-346a45d7c8355cc5.webp",
+              "alt": "Photograph from the verified shenhe-tangxia branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "辉辉 / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8596981842",
+              "originalUrl": "https://qcloud.dpfile.com/pc/ufelMlkElizTPKQTUnskBL2LrtQaYxHbBvLLPqolGNCHori3gQtS4ec2JGwT-Pcwl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+            "name": "Shen He Food Shop — Tangxia",
+            "websiteUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+            "phone": "+86 137 1270 4871",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–14:00; 17:00–21:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879"
+          },
+          "tile": {
+            "regionSlug": "dongguan",
+            "kind": "top",
+            "slug": "shenhe-tangxia",
+            "name": "Shen He Food Shop — Tangxia",
+            "neighborhood": "Tangxia · Zhufoling Road",
+            "cuisine": "Cantonese home cooking",
+            "address": "Unit 113, 11 Zhufoling Road (诸佛岭路), Tangxia Town, Dongguan, Guangdong, China",
+            "websiteUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+            "description": "A Tangxia neighbourhood restaurant serving crispy chicken, pork meatballs and Cantonese home-style dishes.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dongguan/researched/shenhe-tangxia-1-346a45d7c8355cc5.webp",
+            "imageCredit": "辉辉 / Dianping",
+            "imageSourceUrl": "https://qcloud.dpfile.com/pc/ufelMlkElizTPKQTUnskBL2LrtQaYxHbBvLLPqolGNCHori3gQtS4ec2JGwT-Pcwl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+            "imageNote": "Photograph from the verified shenhe-tangxia branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "dongguan",
+          "slug": "shenhe-tangxia-1",
+          "source": "https://qcloud.dpfile.com/pc/ufelMlkElizTPKQTUnskBL2LrtQaYxHbBvLLPqolGNCHori3gQtS4ec2JGwT-Pcwl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8596981842",
+          "credit": "辉辉 / Dianping",
+          "note": "Photograph from the verified shenhe-tangxia branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dongguan/researched/shenhe-tangxia-1-346a45d7c8355cc5.webp",
+          "sha256": "346a45d7c8355cc57c4e41eb815afc99421d722c3d5b0135254e7bc6991a666d",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "dongguan",
+          "slug": "shenhe-tangxia-2",
+          "source": "https://qcloud.dpfile.com/pc/TMb3mX8WKR9F6J6AvcQJIPeCtsm1X2pqfGu36v-HLOKUgT6fKzJNE3LeUnWjdVn3l0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8296065600",
+          "credit": "christina- / Dianping",
+          "note": "Photograph from the verified shenhe-tangxia branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dongguan/researched/shenhe-tangxia-2-a675ab1c6056c9e5.webp",
+          "sha256": "a675ab1c6056c9e5c28c8b4512ac3a4db98383f62ab408dd35b1818ee8e86cf0",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "dongguan",
+          "slug": "shenhe-tangxia-3",
+          "source": "https://qcloud.dpfile.com/pc/ySW3VzbHq-3Pv0wxarAP0YVP0hH8nw_N2z0H563RF5BLASmrR1IF44ZxAKsCTcTVl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8734777152",
+          "credit": "来杯冰美式 / Dianping",
+          "note": "Photograph from the verified shenhe-tangxia branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dongguan/researched/shenhe-tangxia-3-773a918be70e1f34.webp",
+          "sha256": "773a918be70e1f348713b36c28aaaf131fe2bc51e193b645e6b75d6fb51fc868",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 22.8073194,
+        "longitude": 114.0853147,
+        "sourceUrl": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
+        "addressType": "Approximate Apple Maps/Dianping position, presumed GCJ-02",
+        "note": "Approximate property position. Published GCJ-02 22.804694, 114.090461; inverse converted to WGS84 for the map. Apple Maps does not document this record’s datum. GCJ-02 is inferred from exact Apple/Dianping-to-Amap coordinate matches at the three other researched branches. Follow the published address to confirm the entrance."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Cao Bao Bun Shop — Puli Street — Jinan restaurant guide",
+        "description": "An established Puli Street bun shop with soup-filled pork buns and Shandong dishes.",
+        "sourceUrl": "https://you.ctrip.com/food/jinan128/5272860.html",
+        "address": "15 Puli Street, Weijiazhuang, Shizhong District, Jinan, Shandong, China",
+        "latitude": 36.6639431,
+        "longitude": 117.0055637,
+        "productName": "Cao Bao Bun Shop — Puli Street",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Jinan",
+          "China",
+          "Shizhong · Puli Street",
+          "Shandong buns and dishes"
+        ],
+        "longFormSummary": "<p>An established Puli Street bun shop with soup-filled pork buns and Shandong dishes. <cite data-ref=\"https://www.jnsprxh.com/sys-nd/37.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://www.jnsprxh.com/sys-nd/37.html",
+            "title": "Cao Bao Bun Shop — Puli Street — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://you.ctrip.com/food/jinan128/5272860.html",
+            "title": "Verified branch dishes",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8293407632",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8806885300",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://you.ctrip.com/food/jinan128/5272860.html",
+          "menu": {
+            "pinSourceUrl": "https://you.ctrip.com/food/jinan128/5272860.html",
+            "name": "Cao Bao Bun Shop — Puli Street",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Verified branch dishes",
+                "url": "https://you.ctrip.com/food/jinan128/5272860.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Three-delicacy buns (三鲜包)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Traditional meat buns (传统肉包)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Prawn buns (虾仁包子)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Soup-filled pork buns (猪肉灌汤包)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Flash-fried kidneys (爆炒腰花)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Milky cattail soup (奶汤蒲菜)",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch-specific published dish selection, not a full menu. Individual prices were not recovered from the operator, linked PDFs, ordering listings or menu-image pages. Confirm current availability and prices with the branch."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 36.6639431,
+              "longitude": 117.0055637,
+              "sourceUrl": "https://you.ctrip.com/food/jinan128/5272860.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/jinan/researched/caobao-puli-1-f6bf29024d0c3888.webp",
+              "alt": "Photograph from the verified caobao-puli branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "爱吃蜜桃的草莓 / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8293407632",
+              "originalUrl": "https://qcloud.dpfile.com/pc/BcfefdVuuiHekoVj2K0UCjm4O_ykJdM949MFrPRjJPtsPtG5Yemz42TBAO-JS0YLl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://you.ctrip.com/food/jinan128/5272860.html",
+            "name": "Cao Bao Bun Shop — Puli Street",
+            "websiteUrl": "https://you.ctrip.com/food/jinan128/5272860.html",
+            "phone": "+86 531 8888 0077",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "07:00–21:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.jnsprxh.com/sys-nd/37.html"
+          },
+          "tile": {
+            "regionSlug": "jinan",
+            "kind": "top",
+            "slug": "caobao-puli",
+            "name": "Cao Bao Bun Shop — Puli Street",
+            "neighborhood": "Shizhong · Puli Street",
+            "cuisine": "Shandong buns and dishes",
+            "address": "15 Puli Street, Weijiazhuang, Shizhong District, Jinan, Shandong, China",
+            "websiteUrl": "https://you.ctrip.com/food/jinan128/5272860.html",
+            "description": "An established Puli Street bun shop with soup-filled pork buns and Shandong dishes.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/jinan/researched/caobao-puli-1-f6bf29024d0c3888.webp",
+            "imageCredit": "爱吃蜜桃的草莓 / Dianping",
+            "imageSourceUrl": "https://qcloud.dpfile.com/pc/BcfefdVuuiHekoVj2K0UCjm4O_ykJdM949MFrPRjJPtsPtG5Yemz42TBAO-JS0YLl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+            "imageNote": "Photograph from the verified caobao-puli branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "jinan",
+          "slug": "caobao-puli-1",
+          "source": "https://qcloud.dpfile.com/pc/BcfefdVuuiHekoVj2K0UCjm4O_ykJdM949MFrPRjJPtsPtG5Yemz42TBAO-JS0YLl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8293407632",
+          "credit": "爱吃蜜桃的草莓 / Dianping",
+          "note": "Photograph from the verified caobao-puli branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/jinan/researched/caobao-puli-1-f6bf29024d0c3888.webp",
+          "sha256": "f6bf29024d0c388893d67a4e935c5cd62ea3d34834d7bf117ab545de428cfba2",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "jinan",
+          "slug": "caobao-puli-3",
+          "source": "https://qcloud.dpfile.com/pc/2IshY4h4bGDS-lCXq5EJFrAlYi51kiIBUZ-TYQawKJGIQfHxvG4qpLv16uRkJk9cl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8806885300",
+          "credit": "翱翔蓝天 / Dianping",
+          "note": "Photograph from the verified caobao-puli branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/jinan/researched/caobao-puli-3-21abab7098042710.webp",
+          "sha256": "21abab7098042710bc4b226b09505a5af9440bb957583353c86bbda71a69e091",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 36.6639431,
+        "longitude": 117.0055637,
+        "sourceUrl": "https://you.ctrip.com/food/jinan128/5272860.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 36.6642204, 117.0114297; inverse converted to WGS84 for the map."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Geng Fu Xing — Xinghua Park — Hefei restaurant guide",
+        "description": "An Xinghua Park snack restaurant with prawn-roe noodles, soup-filled buns and Anhui sweets.",
+        "sourceUrl": "https://you.ctrip.com/food/hefei196/15760816.html",
+        "address": "89 Mengcheng Road, east gate of Xinghua Park, Luyang District, Hefei, Anhui, China",
+        "latitude": 31.8705751,
+        "longitude": 117.2723614,
+        "productName": "Geng Fu Xing — Xinghua Park",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Hefei",
+          "China",
+          "Luyang · Xinghua Park",
+          "Anhui snacks"
+        ],
+        "longFormSummary": "<p>An Xinghua Park snack restaurant with prawn-roe noodles, soup-filled buns and Anhui sweets. <cite data-ref=\"https://you.ctrip.com/food/hefei196/15760816.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://you.ctrip.com/food/hefei196/15760816.html",
+            "title": "Geng Fu Xing — Xinghua Park — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://us.trip.com/restaurant/china/hefei/detail/geng-fu-xing-31322679/",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://you.ctrip.com/food/hefei196/15760816.html",
+          "menu": {
+            "pinSourceUrl": "https://you.ctrip.com/food/hefei196/15760816.html",
+            "name": "Geng Fu Xing — Xinghua Park",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Verified branch dishes",
+                "url": "https://you.ctrip.com/food/hefei196/15760816.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Prawn-roe noodles (虾籽面)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fresh-meat soup-filled buns (鲜肉汤包)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Prawn soup-filled buns (虾仁汤包)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Osmanthus red-bean paste (桂花赤豆糊)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Wuhu red beans with fermented rice (芜湖赤豆酒酿)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shredded tofu with chicken and ham (鸡火干丝)",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch-specific published dish selection, not a full menu. Individual prices were not recovered from the operator, linked PDFs, ordering listings or menu-image pages. Confirm current availability and prices with the branch."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 31.8705751,
+              "longitude": 117.2723614,
+              "sourceUrl": "https://you.ctrip.com/food/hefei196/15760816.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hefei/researched/geng-xinghua-1-ba04af8ced85a4d4.webp",
+              "alt": "Photograph published in the Xinghua branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "Trip.com Xinghua branch gallery; photographer not identified",
+              "sourceUrl": "https://us.trip.com/restaurant/china/hefei/detail/geng-fu-xing-31322679/",
+              "originalUrl": "https://ak-d.tripcdn.com/images/0101712000lo1i1rjEB62_D_750_520_Q90.jpg?proc=autoorient",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://you.ctrip.com/food/hefei196/15760816.html",
+            "name": "Geng Fu Xing — Xinghua Park",
+            "websiteUrl": "https://you.ctrip.com/food/hefei196/15760816.html",
+            "phone": "+86 551 6555 3704",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "06:30–14:00; 17:00–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://you.ctrip.com/food/hefei196/15760816.html"
+          },
+          "tile": {
+            "regionSlug": "hefei",
+            "kind": "top",
+            "slug": "geng-xinghua",
+            "name": "Geng Fu Xing — Xinghua Park",
+            "neighborhood": "Luyang · Xinghua Park",
+            "cuisine": "Anhui snacks",
+            "address": "89 Mengcheng Road, east gate of Xinghua Park, Luyang District, Hefei, Anhui, China",
+            "websiteUrl": "https://you.ctrip.com/food/hefei196/15760816.html",
+            "description": "An Xinghua Park snack restaurant with prawn-roe noodles, soup-filled buns and Anhui sweets.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hefei/researched/geng-xinghua-1-ba04af8ced85a4d4.webp",
+            "imageCredit": "Trip.com Xinghua branch gallery; photographer not identified",
+            "imageSourceUrl": "https://ak-d.tripcdn.com/images/0101712000lo1i1rjEB62_D_750_520_Q90.jpg?proc=autoorient",
+            "imageNote": "Photograph published in the Xinghua branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "hefei",
+          "slug": "geng-xinghua-1",
+          "source": "https://ak-d.tripcdn.com/images/0101712000lo1i1rjEB62_D_750_520_Q90.jpg?proc=autoorient",
+          "sourcePage": "https://us.trip.com/restaurant/china/hefei/detail/geng-fu-xing-31322679/",
+          "credit": "Trip.com Xinghua branch gallery; photographer not identified",
+          "note": "Photograph published in the Xinghua branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hefei/researched/geng-xinghua-1-ba04af8ced85a4d4.webp",
+          "sha256": "ba04af8ced85a4d4ce5b4ab71208526aaa319b3342ec8ef8bbfef690c0de0040",
+          "width": 750,
+          "height": 520
+        },
+        {
+          "region": "hefei",
+          "slug": "geng-xinghua-2",
+          "source": "https://ak-d.tripcdn.com/images/0103u12000lo1it51AD01_D_750_520_Q90.jpg?proc=autoorient",
+          "sourcePage": "https://us.trip.com/restaurant/china/hefei/detail/geng-fu-xing-31322679/",
+          "credit": "Trip.com Xinghua branch gallery; photographer not identified",
+          "note": "Photograph published in the Xinghua branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hefei/researched/geng-xinghua-2-26e5bf9e0ee00b93.webp",
+          "sha256": "26e5bf9e0ee00b93228a1e524e52cd6c94dad29b075b18fd883f70dff4054c09",
+          "width": 750,
+          "height": 520
+        },
+        {
+          "region": "hefei",
+          "slug": "geng-xinghua-3",
+          "source": "https://ak-d.tripcdn.com/images/0105612000lo1hlsxE200_D_750_520_Q90.jpg?proc=autoorient",
+          "sourcePage": "https://us.trip.com/restaurant/china/hefei/detail/geng-fu-xing-31322679/",
+          "credit": "Trip.com Xinghua branch gallery; photographer not identified",
+          "note": "Photograph published in the Xinghua branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hefei/researched/geng-xinghua-3-77ccf7002c67d238.webp",
+          "sha256": "77ccf7002c67d238f1bca0aa228fba619f98942e525be160a66fac7a543b9873",
+          "width": 750,
+          "height": 520
+        }
+      ],
+      "geocoding": {
+        "latitude": 31.8705751,
+        "longitude": 117.2723614,
+        "sourceUrl": "https://you.ctrip.com/food/hefei196/15760816.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 31.8685666, 117.2778668; inverse converted to WGS84 for the map."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Huang Ze He Peanut Soup — Zhongshan Road — Xiamen restaurant guide",
+        "description": "A Zhongshan Road snack stop for peanut soup, shacha noodles, oyster omelettes and pork zongzi.",
+        "sourceUrl": "https://maps.apple.com/place?auid=1117327135778056&lsp=57879",
+        "address": "22–24 Zhongshan Road, Siming District, Xiamen, Fujian, China",
+        "latitude": 24.4559768,
+        "longitude": 118.071134,
+        "productName": "Huang Ze He Peanut Soup — Zhongshan Road",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Xiamen",
+          "China",
+          "Siming · Zhongshan Road",
+          "Minnan snacks"
+        ],
+        "longFormSummary": "<p>A Zhongshan Road snack stop for peanut soup, shacha noodles, oyster omelettes and pork zongzi. <cite data-ref=\"https://you.ctrip.com/food/xiamen21/319796.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://you.ctrip.com/food/xiamen21/319796.html",
+            "title": "Huang Ze He Peanut Soup — Zhongshan Road — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://maps.apple.com/place?auid=1117327135778056&lsp=57879",
+            "title": "Branch dishes and published listing prices",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8804643121",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8962130651",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://maps.apple.com/place?auid=1117327135778056&lsp=57879",
+          "menu": {
+            "pinSourceUrl": "https://maps.apple.com/place?auid=1117327135778056&lsp=57879",
+            "name": "Huang Ze He Peanut Soup — Zhongshan Road",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch dishes and published listing prices",
+                "url": "https://maps.apple.com/place?auid=1117327135778056&lsp=57879",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Peanut soup (花生汤)",
+                    "price": 6
+                  },
+                  {
+                    "name": "Sticky rice with chicken (糯米鸡)",
+                    "price": 7
+                  },
+                  {
+                    "name": "Shacha noodles (沙茶面)",
+                    "price": 25
+                  },
+                  {
+                    "name": "Oyster omelette (海蛎煎)",
+                    "price": 25
+                  },
+                  {
+                    "name": "Xiamen five-spice rolls (厦门五香卷)",
+                    "price": 4
+                  },
+                  {
+                    "name": "Pork rice zongzi (烧肉粽)",
+                    "price": 10
+                  }
+                ],
+                "note": "CNY prices displayed by Apple Maps from Dianping community recommendation data, fetched October 10, 2026; not an operator-issued price guarantee. Portions and ordering conditions are not specified unless noted. Confirm current prices when ordering. Peanut soup temperature and added-egg options are not specified for the listed CNY 6 item. Newly fetched chicken, five-spice-roll and zongzi prices differ from older indexed excerpts."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 24.4559768,
+              "longitude": 118.071134,
+              "sourceUrl": "https://you.ctrip.com/food/xiamen21/319796.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xiamen/researched/huangzehe-zhongshan-1-f14b4bb75fccce81.webp",
+              "alt": "Photograph from the verified huangzehe-zhongshan branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "水晶 / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8804643121",
+              "originalUrl": "https://qcloud.dpfile.com/pc/L94-GYIRIhdD8gQql_UgnNonlCH33w6XQSZi2lOQChmRtgdk3NZZ0H2jY4LiV98Ql0cm-Lf9tDMlLZpO7rb3bg.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://maps.apple.com/place?auid=1117327135778056&lsp=57879",
+            "name": "Huang Ze He Peanut Soup — Zhongshan Road",
+            "websiteUrl": "https://maps.apple.com/place?auid=1117327135778056&lsp=57879",
+            "phone": "+86 592 202 4670",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "07:30–22:30 (Apple Maps; Ctrip lists 22:00 closing—confirm with the branch)"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://you.ctrip.com/food/xiamen21/319796.html"
+          },
+          "tile": {
+            "regionSlug": "xiamen",
+            "kind": "top",
+            "slug": "huangzehe-zhongshan",
+            "name": "Huang Ze He Peanut Soup — Zhongshan Road",
+            "neighborhood": "Siming · Zhongshan Road",
+            "cuisine": "Minnan snacks",
+            "address": "22–24 Zhongshan Road, Siming District, Xiamen, Fujian, China",
+            "websiteUrl": "https://maps.apple.com/place?auid=1117327135778056&lsp=57879",
+            "description": "A Zhongshan Road snack stop for peanut soup, shacha noodles, oyster omelettes and pork zongzi.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xiamen/researched/huangzehe-zhongshan-1-f14b4bb75fccce81.webp",
+            "imageCredit": "水晶 / Dianping",
+            "imageSourceUrl": "https://qcloud.dpfile.com/pc/L94-GYIRIhdD8gQql_UgnNonlCH33w6XQSZi2lOQChmRtgdk3NZZ0H2jY4LiV98Ql0cm-Lf9tDMlLZpO7rb3bg.jpg",
+            "imageNote": "Photograph from the verified huangzehe-zhongshan branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "xiamen",
+          "slug": "huangzehe-zhongshan-1",
+          "source": "https://qcloud.dpfile.com/pc/L94-GYIRIhdD8gQql_UgnNonlCH33w6XQSZi2lOQChmRtgdk3NZZ0H2jY4LiV98Ql0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8804643121",
+          "credit": "水晶 / Dianping",
+          "note": "Photograph from the verified huangzehe-zhongshan branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xiamen/researched/huangzehe-zhongshan-1-f14b4bb75fccce81.webp",
+          "sha256": "f14b4bb75fccce81582e12e94ff50c855385d426eec5b2e5ac61301eadbe25ce",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "xiamen",
+          "slug": "huangzehe-zhongshan-2",
+          "source": "https://qcloud.dpfile.com/pc/lsDI5mhth1S5qvmkXZ4H_Pr-FLuaICTGwkXhmwZVU_QFhOOpOf8VBRhb_NwuVQQql0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8962130651",
+          "credit": "芥末解末芥末胖 / Dianping",
+          "note": "Photograph from the verified huangzehe-zhongshan branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xiamen/researched/huangzehe-zhongshan-2-6a4fad30d223966d.webp",
+          "sha256": "6a4fad30d223966ddc256619794aba722ece3474800859dcfecbd00bd5388a01",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 24.4559768,
+        "longitude": 118.071134,
+        "sourceUrl": "https://you.ctrip.com/food/xiamen21/319796.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 24.4533195, 118.076102; inverse converted to WGS84 for the map."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Tie Ge Bi — Dongdu Road — Ningbo restaurant guide",
+        "description": "A Dongdu Road restaurant serving Ningbo dishes, crab with rice cakes and bean-curd-wrapped yellow croaker.",
+        "sourceUrl": "https://you.ctrip.com/food/ningbo83/4928007.html",
+        "address": "Ground floor, Jiangxia Yinzuo, 16 Dongdu Road, Haishu District, Ningbo, Zhejiang, China",
+        "latitude": 29.8710465,
+        "longitude": 121.5544961,
+        "productName": "Tie Ge Bi — Dongdu Road",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Ningbo",
+          "China",
+          "Haishu · Tianyi Square",
+          "Ningbo"
+        ],
+        "longFormSummary": "<p>A Dongdu Road restaurant serving Ningbo dishes, crab with rice cakes and bean-curd-wrapped yellow croaker. <cite data-ref=\"https://you.ctrip.com/food/ningbo83/4928007.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://you.ctrip.com/food/ningbo83/4928007.html",
+            "title": "Tie Ge Bi — Dongdu Road — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8326525044",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8261988006",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8304583237",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://you.ctrip.com/food/ningbo83/4928007.html",
+          "menu": {
+            "pinSourceUrl": "https://you.ctrip.com/food/ningbo83/4928007.html",
+            "name": "Tie Ge Bi — Dongdu Road",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Verified branch dishes",
+                "url": "https://you.ctrip.com/food/ningbo83/4928007.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Chestnut and bullfrog (栗子牛蛙)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "White crab with rice cakes (白蟹炒年糕)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Stone-pot tofu (石锅豆腐)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Clams in hot broth (汤爆花蛤)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Ningbo braised greens (宁波烤菜)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Bean-curd-wrapped yellow croaker (腐皮包黄鱼)",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch-specific published dish selection, not a full menu. Individual prices were not recovered from the operator, linked PDFs, ordering listings or menu-image pages. Confirm current availability and prices with the branch."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 29.8710465,
+              "longitude": 121.5544961,
+              "sourceUrl": "https://you.ctrip.com/food/ningbo83/4928007.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/ningbo/researched/tiegebi-dongdu-1-e80afad4448517ec.webp",
+              "alt": "Photograph from the verified tiegebi-dongdu branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "贴阁碧东渡路店 / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8326525044",
+              "originalUrl": "http://p0.meituan.net/biztone/db4934cbaf6a160f47972c6bd32e7d093111208.png%40240w_180h_1e_1c_1l%7Cwatermark%3D0",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://you.ctrip.com/food/ningbo83/4928007.html",
+            "name": "Tie Ge Bi — Dongdu Road",
+            "websiteUrl": "https://you.ctrip.com/food/ningbo83/4928007.html",
+            "phone": "+86 574 5668 1666",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:30–13:30; 16:30–20:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://you.ctrip.com/food/ningbo83/4928007.html"
+          },
+          "tile": {
+            "regionSlug": "ningbo",
+            "kind": "top",
+            "slug": "tiegebi-dongdu",
+            "name": "Tie Ge Bi — Dongdu Road",
+            "neighborhood": "Haishu · Tianyi Square",
+            "cuisine": "Ningbo",
+            "address": "Ground floor, Jiangxia Yinzuo, 16 Dongdu Road, Haishu District, Ningbo, Zhejiang, China",
+            "websiteUrl": "https://you.ctrip.com/food/ningbo83/4928007.html",
+            "description": "A Dongdu Road restaurant serving Ningbo dishes, crab with rice cakes and bean-curd-wrapped yellow croaker.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/ningbo/researched/tiegebi-dongdu-1-e80afad4448517ec.webp",
+            "imageCredit": "贴阁碧东渡路店 / Dianping",
+            "imageSourceUrl": "http://p0.meituan.net/biztone/db4934cbaf6a160f47972c6bd32e7d093111208.png%40240w_180h_1e_1c_1l%7Cwatermark%3D0",
+            "imageNote": "Photograph from the verified tiegebi-dongdu branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "ningbo",
+          "slug": "tiegebi-dongdu-1",
+          "source": "http://p0.meituan.net/biztone/db4934cbaf6a160f47972c6bd32e7d093111208.png%40240w_180h_1e_1c_1l%7Cwatermark%3D0",
+          "sourcePage": "https://www.dianping.com/photos/8326525044",
+          "credit": "贴阁碧东渡路店 / Dianping",
+          "note": "Photograph from the verified tiegebi-dongdu branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/ningbo/researched/tiegebi-dongdu-1-e80afad4448517ec.webp",
+          "sha256": "e80afad4448517ecc85cc581dcf05b23ea4b0fe9e6f42bc3d831dd2b94306d38",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "ningbo",
+          "slug": "tiegebi-dongdu-2",
+          "source": "http://p0.meituan.net/biztone/c09ff960fc55949fcd2738a83fb8d4c83227944.png%40240w_180h_1e_1c_1l%7Cwatermark%3D0",
+          "sourcePage": "https://www.dianping.com/photos/8261988006",
+          "credit": "贴阁碧东渡路店 / Dianping",
+          "note": "Photograph from the verified tiegebi-dongdu branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/ningbo/researched/tiegebi-dongdu-2-efd728f55483c525.webp",
+          "sha256": "efd728f55483c52518492defbfe53d7eea704dc9fd5c7ddd4ec8f9962990573f",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "ningbo",
+          "slug": "tiegebi-dongdu-3",
+          "source": "http://p0.meituan.net/biztone/46d07755b1e0c15b1a56fef4b854aed63729704.png%40240w_180h_1e_1c_1l%7Cwatermark%3D0",
+          "sourcePage": "https://www.dianping.com/photos/8304583237",
+          "credit": "贴阁碧东渡路店 / Dianping",
+          "note": "Photograph from the verified tiegebi-dongdu branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/ningbo/researched/tiegebi-dongdu-3-9ad7f946217d447b.webp",
+          "sha256": "9ad7f946217d447b3834ca43c490eca6ceacf3b853a2978e81ff130a71dfa4d1",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 29.8710465,
+        "longitude": 121.5544961,
+        "sourceUrl": "https://you.ctrip.com/food/ningbo83/4928007.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 29.8684548, 121.5586434; inverse converted to WGS84 for the map."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ri Feng Yuan — Xiaopingdao — Dalian restaurant guide",
+        "description": "The Xiaopingdao restaurant serves sea-intestine dumplings and Dalian seafood dishes.",
+        "sourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
+        "address": "Building 48, Xiaopingdao, Qinhai Street, Lingshui, Ganjingzi District, Dalian, Liaoning, China",
+        "latitude": 38.8287083,
+        "longitude": 121.4939052,
+        "productName": "Ri Feng Yuan — Xiaopingdao",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Dalian",
+          "China",
+          "Ganjingzi · Xiaopingdao",
+          "Dalian seafood and dumplings"
+        ],
+        "longFormSummary": "<p>The Xiaopingdao restaurant serves sea-intestine dumplings and Dalian seafood dishes. <cite data-ref=\"https://you.ctrip.com/food/dalian4/4925258.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://you.ctrip.com/food/dalian4/4925258.html",
+            "title": "Ri Feng Yuan — Xiaopingdao — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
+            "title": "Branch dishes and published listing prices",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8195589344",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8942591593",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8339256477",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
+          "menu": {
+            "pinSourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
+            "name": "Ri Feng Yuan — Xiaopingdao",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch dishes and published listing prices",
+                "url": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Sea-intestine dumplings (海肠水饺)",
+                    "price": 120
+                  },
+                  {
+                    "name": "Small abalone in sauce (酱小鲍鱼)",
+                    "price": 76
+                  },
+                  {
+                    "name": "Clams stewed with aubergine (茄子炖蚬子)",
+                    "price": 36
+                  },
+                  {
+                    "name": "Fish-ball soup (鱼丸汤)",
+                    "price": 48
+                  },
+                  {
+                    "name": "Surf-clam salad (拌鸟贝)",
+                    "price": 58
+                  },
+                  {
+                    "name": "Seaweed corn cakes (海菜饼子)",
+                    "price": 5
+                  }
+                ],
+                "note": "CNY prices displayed by Apple Maps from Dianping community recommendation data, fetched October 10, 2026; not an operator-issued price guarantee. Portions and ordering conditions are not specified unless noted. Confirm current prices when ordering. The listing separately shows a similarly named 海肠饺子 at CNY 80, without explaining the portion or product difference; that ambiguous variant is not merged with the CNY 120 海肠水饺 entry."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 38.8287083,
+              "longitude": 121.4939052,
+              "sourceUrl": "https://you.ctrip.com/food/dalian4/4925258.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dalian/researched/rifeng-xiaopingdao-1-49cd28b44b0c151d.webp",
+              "alt": "Photograph from the verified rifeng-xiaopingdao branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "麦兜兜响当当 / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8195589344",
+              "originalUrl": "https://qcloud.dpfile.com/pc/zaM5B2nbznFOTsQsIdFEwi9MXtEVuc70MddizUoVd7WXvEcs9_GNTMuz1N3gjFq9l0cm-Lf9tDMlLZpO7rb3bg.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
+            "name": "Ri Feng Yuan — Xiaopingdao",
+            "websiteUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
+            "phone": "+86 411 8477 8315",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–14:00; 17:00–20:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://you.ctrip.com/food/dalian4/4925258.html"
+          },
+          "tile": {
+            "regionSlug": "dalian",
+            "kind": "top",
+            "slug": "rifeng-xiaopingdao",
+            "name": "Ri Feng Yuan — Xiaopingdao",
+            "neighborhood": "Ganjingzi · Xiaopingdao",
+            "cuisine": "Dalian seafood and dumplings",
+            "address": "Building 48, Xiaopingdao, Qinhai Street, Lingshui, Ganjingzi District, Dalian, Liaoning, China",
+            "websiteUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
+            "description": "The Xiaopingdao restaurant serves sea-intestine dumplings and Dalian seafood dishes.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dalian/researched/rifeng-xiaopingdao-1-49cd28b44b0c151d.webp",
+            "imageCredit": "麦兜兜响当当 / Dianping",
+            "imageSourceUrl": "https://qcloud.dpfile.com/pc/zaM5B2nbznFOTsQsIdFEwi9MXtEVuc70MddizUoVd7WXvEcs9_GNTMuz1N3gjFq9l0cm-Lf9tDMlLZpO7rb3bg.jpg",
+            "imageNote": "Photograph from the verified rifeng-xiaopingdao branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "dalian",
+          "slug": "rifeng-xiaopingdao-1",
+          "source": "https://qcloud.dpfile.com/pc/zaM5B2nbznFOTsQsIdFEwi9MXtEVuc70MddizUoVd7WXvEcs9_GNTMuz1N3gjFq9l0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8195589344",
+          "credit": "麦兜兜响当当 / Dianping",
+          "note": "Photograph from the verified rifeng-xiaopingdao branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dalian/researched/rifeng-xiaopingdao-1-49cd28b44b0c151d.webp",
+          "sha256": "49cd28b44b0c151d2234e2c9954f34bba5811164b5f01706180512d0d96817bc",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "dalian",
+          "slug": "rifeng-xiaopingdao-2",
+          "source": "https://qcloud.dpfile.com/pc/LbEALkZW07LYiAkExZVDqx2d6vwB4SbaaPNh3xrQ8SG6ael0CeJ2u5J_0LaSHDunl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8942591593",
+          "credit": "在窑洞岭听音乐的炒花菜 / Dianping",
+          "note": "Photograph from the verified rifeng-xiaopingdao branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dalian/researched/rifeng-xiaopingdao-2-4fb3faa87281cb9e.webp",
+          "sha256": "4fb3faa87281cb9e2885d5e96b04bb6fd7201c773a346ad02fe260ce1bbb7a5c",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "dalian",
+          "slug": "rifeng-xiaopingdao-3",
+          "source": "https://qcloud.dpfile.com/pc/ddp-oOI1Q2xVRb9oGfHkU1zVdT4uWtH4XDTKbRl68mIPQPtvjMk22EcUeeOIT6okl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8339256477",
+          "credit": "Anonymous contributor / Dianping",
+          "note": "Photograph from the verified rifeng-xiaopingdao branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/dalian/researched/rifeng-xiaopingdao-3-b5ea48e34b5717f5.webp",
+          "sha256": "b5ea48e34b5717f5cd0943bab954da7b777cba12b21b195564cb464db2309b9a",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 38.8287083,
+        "longitude": 121.4939052,
+        "sourceUrl": "https://you.ctrip.com/food/dalian4/4925258.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 38.829632, 121.4991105; inverse converted to WGS84 for the map."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Lao Fengtian Ma Jia Shaomai — Santaizi — Shenyang restaurant guide",
+        "description": "The Santaizi branch serves beef, lamb and prawn shaomai with Northeast Chinese dishes.",
+        "sourceUrl": "https://you.ctrip.com/food/shenyang155/15519617.html",
+        "address": "72 Huanghe North Street, Yuhong District, Shenyang, Liaoning, China",
+        "latitude": 41.8629686,
+        "longitude": 123.4109384,
+        "productName": "Lao Fengtian Ma Jia Shaomai — Santaizi",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shenyang",
+          "China",
+          "Yuhong · Santaizi",
+          "Northeast Chinese shaomai"
+        ],
+        "longFormSummary": "<p>The Santaizi branch serves beef, lamb and prawn shaomai with Northeast Chinese dishes. <cite data-ref=\"https://you.ctrip.com/food/shenyang155/15519617.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://you.ctrip.com/food/shenyang155/15519617.html",
+            "title": "Lao Fengtian Ma Jia Shaomai — Santaizi — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8184184597",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8928973371",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://you.ctrip.com/food/shenyang155/15519617.html",
+          "menu": {
+            "pinSourceUrl": "https://you.ctrip.com/food/shenyang155/15519617.html",
+            "name": "Lao Fengtian Ma Jia Shaomai — Santaizi",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Verified branch dishes",
+                "url": "https://you.ctrip.com/food/shenyang155/15519617.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Classic beef shaomai (经典牛肉烧卖)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Lamb shaomai (羊肉烧麦)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Beef and sauerkraut shaomai (牛肉酸菜烧麦)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Celery and beef shaomai (芹菜牛肉烧麦)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Courgette, egg and prawn shaomai (角瓜鸡蛋虾仁烧麦)",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Paper-wrapped lamb (纸包羊肉)",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch-specific published dish selection, not a full menu. Individual prices were not recovered from the operator, linked PDFs, ordering listings or menu-image pages. Confirm current availability and prices with the branch."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 41.8629686,
+              "longitude": 123.4109384,
+              "sourceUrl": "https://you.ctrip.com/food/shenyang155/15519617.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenyang/researched/majia-santai-2-888064082bc2c156.webp",
+              "alt": "Photograph from the verified majia-santai branch gallery: 羊肉烧麦. Pictured food does not independently establish current menu availability.",
+              "credit": "BenjaminSong_825 / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8184184597",
+              "originalUrl": "https://qcloud.dpfile.com/pc/KvzM17SMYUM8g-jZd6XFj_VvD9qDSjpO3Mz8cIsCBLtjkCTwHkU37pj5PWzLy1c5l0cm-Lf9tDMlLZpO7rb3bg.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://you.ctrip.com/food/shenyang155/15519617.html",
+            "name": "Lao Fengtian Ma Jia Shaomai — Santaizi",
+            "websiteUrl": "https://you.ctrip.com/food/shenyang155/15519617.html",
+            "phone": "+86 24 8653 0060",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "09:00–21:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://you.ctrip.com/food/shenyang155/15519617.html"
+          },
+          "tile": {
+            "regionSlug": "shenyang",
+            "kind": "top",
+            "slug": "majia-santai",
+            "name": "Lao Fengtian Ma Jia Shaomai — Santaizi",
+            "neighborhood": "Yuhong · Santaizi",
+            "cuisine": "Northeast Chinese shaomai",
+            "address": "72 Huanghe North Street, Yuhong District, Shenyang, Liaoning, China",
+            "websiteUrl": "https://you.ctrip.com/food/shenyang155/15519617.html",
+            "description": "The Santaizi branch serves beef, lamb and prawn shaomai with Northeast Chinese dishes.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenyang/researched/majia-santai-2-888064082bc2c156.webp",
+            "imageCredit": "BenjaminSong_825 / Dianping",
+            "imageSourceUrl": "https://qcloud.dpfile.com/pc/KvzM17SMYUM8g-jZd6XFj_VvD9qDSjpO3Mz8cIsCBLtjkCTwHkU37pj5PWzLy1c5l0cm-Lf9tDMlLZpO7rb3bg.jpg",
+            "imageNote": "Photograph from the verified majia-santai branch gallery: 羊肉烧麦. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "shenyang",
+          "slug": "majia-santai-2",
+          "source": "https://qcloud.dpfile.com/pc/KvzM17SMYUM8g-jZd6XFj_VvD9qDSjpO3Mz8cIsCBLtjkCTwHkU37pj5PWzLy1c5l0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8184184597",
+          "credit": "BenjaminSong_825 / Dianping",
+          "note": "Photograph from the verified majia-santai branch gallery: 羊肉烧麦. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenyang/researched/majia-santai-2-888064082bc2c156.webp",
+          "sha256": "888064082bc2c1565ecfb5745229ff2de3c32bcefd98b202f3111ba531a1d53a",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "shenyang",
+          "slug": "majia-santai-3",
+          "source": "https://qcloud.dpfile.com/pc/lQ0HhqplKGk-DT_kCVnhL5BuhfijolKM9hPm3VIdmaYniNiDZZjc1t15hf4a_FZ-l0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8928973371",
+          "credit": "不眠患者 / Dianping",
+          "note": "Photograph from the verified majia-santai branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenyang/researched/majia-santai-3-6f7e9d0b223ad6c9.webp",
+          "sha256": "6f7e9d0b223ad6c9df4db70a3d4e0078aa2a9412804c13b4ec6f9a01afb5103d",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 41.8629686,
+        "longitude": 123.4109384,
+        "sourceUrl": "https://you.ctrip.com/food/shenyang155/15519617.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 41.8654137, 123.4170967; inverse converted to WGS84 for the map."
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Huamei Western Restaurant — Zhongyang Street — Harbin restaurant guide",
+        "description": "A Central Street restaurant serving Russian-style pot-stewed meats, borscht and bread.",
+        "sourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F825573205FC",
+        "address": "112 Zhongyang Street, Daoli District, Harbin, Heilongjiang, China",
+        "latitude": 45.7712294,
+        "longitude": 126.6129365,
+        "productName": "Huamei Western Restaurant — Zhongyang Street",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Harbin",
+          "China",
+          "Daoli · Central Street",
+          "Russian and Western"
+        ],
+        "longFormSummary": "<p>A Central Street restaurant serving Russian-style pot-stewed meats, borscht and bread. <cite data-ref=\"https://you.ctrip.com/food/harbin151/4925349.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p><p>Verified branch menu selections appear on the pin and restaurant card; prices are shown where published, with unavailable prices labelled explicitly.</p>",
+        "references": [
+          {
+            "url": "https://you.ctrip.com/food/harbin151/4925349.html",
+            "title": "Huamei Western Restaurant — Zhongyang Street — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F825573205FC",
+            "title": "Branch dishes and published listing prices",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8494006294",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          },
+          {
+            "url": "https://www.dianping.com/photos/8745056307",
+            "title": "Credited branch gallery photograph",
+            "confidence": 85,
+            "reasoning": "Branch-specific source checked October 10, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F825573205FC",
+          "menu": {
+            "pinSourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F825573205FC",
+            "name": "Huamei Western Restaurant — Zhongyang Street",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch dishes and published listing prices",
+                "url": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F825573205FC",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Pot-stewed beef (闷罐牛肉)",
+                    "price": 60
+                  },
+                  {
+                    "name": "Borscht (红菜汤)",
+                    "price": 17
+                  },
+                  {
+                    "name": "Sliced bread (切片面包)",
+                    "price": 10
+                  },
+                  {
+                    "name": "Pan-fried salmon (软煎马哈鱼)",
+                    "price": 40
+                  },
+                  {
+                    "name": "Pot-stewed prawns (罐焖虾仁)",
+                    "price": 60
+                  },
+                  {
+                    "name": "Pot-stewed lamb (罐焖羊肉)",
+                    "price": 60
+                  }
+                ],
+                "note": "CNY prices displayed by Apple Maps from Dianping community recommendation data, fetched October 10, 2026; not an operator-issued price guarantee. Portions and ordering conditions are not specified unless noted. Confirm current prices when ordering. "
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 45.7712294,
+              "longitude": 126.6129365,
+              "sourceUrl": "https://you.ctrip.com/food/harbin151/4925349.html",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/harbin/researched/huamei-zhongyang-1-e35ccd8095ccdf5e.webp",
+              "alt": "Photograph from the verified huamei-zhongyang branch gallery. Pictured food does not independently establish current menu availability.",
+              "credit": "R. / Dianping",
+              "sourceUrl": "https://www.dianping.com/photos/8494006294",
+              "originalUrl": "https://qcloud.dpfile.com/pc/ckmOz6S2GC56C62-C9UL_qF5dzHgyLgkit8avLyOJoXPmgMTRZ6S51ChWDmtQU-el0cm-Lf9tDMlLZpO7rb3bg.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F825573205FC",
+            "name": "Huamei Western Restaurant — Zhongyang Street",
+            "websiteUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F825573205FC",
+            "phone": "+86 451 8412 4999",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:30–21:00 (Apple Maps; Ctrip lists 20:30 closing—confirm with the branch)"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://you.ctrip.com/food/harbin151/4925349.html"
+          },
+          "tile": {
+            "regionSlug": "harbin",
+            "kind": "top",
+            "slug": "huamei-zhongyang",
+            "name": "Huamei Western Restaurant — Zhongyang Street",
+            "neighborhood": "Daoli · Central Street",
+            "cuisine": "Russian and Western",
+            "address": "112 Zhongyang Street, Daoli District, Harbin, Heilongjiang, China",
+            "websiteUrl": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F825573205FC",
+            "description": "A Central Street restaurant serving Russian-style pot-stewed meats, borscht and bread.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/harbin/researched/huamei-zhongyang-1-e35ccd8095ccdf5e.webp",
+            "imageCredit": "R. / Dianping",
+            "imageSourceUrl": "https://qcloud.dpfile.com/pc/ckmOz6S2GC56C62-C9UL_qF5dzHgyLgkit8avLyOJoXPmgMTRZ6S51ChWDmtQU-el0cm-Lf9tDMlLZpO7rb3bg.jpg",
+            "imageNote": "Photograph from the verified huamei-zhongyang branch gallery. Pictured food does not independently establish current menu availability."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "harbin",
+          "slug": "huamei-zhongyang-1",
+          "source": "https://qcloud.dpfile.com/pc/ckmOz6S2GC56C62-C9UL_qF5dzHgyLgkit8avLyOJoXPmgMTRZ6S51ChWDmtQU-el0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8494006294",
+          "credit": "R. / Dianping",
+          "note": "Photograph from the verified huamei-zhongyang branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/harbin/researched/huamei-zhongyang-1-e35ccd8095ccdf5e.webp",
+          "sha256": "e35ccd8095ccdf5eb945875b7a781c4ae1ed1170d48ac0a0f8f14237a42d808d",
+          "width": 240,
+          "height": 180
+        },
+        {
+          "region": "harbin",
+          "slug": "huamei-zhongyang-2",
+          "source": "https://qcloud.dpfile.com/pc/SV-QfuFTraBG8KZFXwzoHAuzQEs3r306eRs14L_T1XXdH4I3KbdDX_inOo7ew9ZAl0cm-Lf9tDMlLZpO7rb3bg.jpg",
+          "sourcePage": "https://www.dianping.com/photos/8745056307",
+          "credit": "白云哎哟喂 / Dianping",
+          "note": "Photograph from the verified huamei-zhongyang branch gallery. Pictured food does not independently establish current menu availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/harbin/researched/huamei-zhongyang-2-e055b19e3ad9d7a6.webp",
+          "sha256": "e055b19e3ad9d7a642eb3392ed78d5ee3881387118da2ebcbd50d004508f9c1f",
+          "width": 240,
+          "height": 180
+        }
+      ],
+      "geocoding": {
+        "latitude": 45.7712294,
+        "longitude": 126.6129365,
+        "sourceUrl": "https://you.ctrip.com/food/harbin151/4925349.html",
+        "addressType": "Ctrip branch gaodeCoord (GCJ-02), converted to WGS84",
+        "note": "Approximate property position. Published GCJ-02 45.7731423, 126.6188577; inverse converted to WGS84 for the map."
+      }
+    }
+  ],
+  "notes": "Third additional round of ten established China restaurants. Live menu/detail/tile/offer edits use database APIs; this file is a reviewed import snapshot. See restaurant-china-round-three.md for source checks and remaining gaps."
+}

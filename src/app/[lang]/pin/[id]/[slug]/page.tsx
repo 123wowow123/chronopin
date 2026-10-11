@@ -25,6 +25,7 @@ import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinEventInfo } from '@/components/pin/PinEventInfo';
 import { PinGameInfo } from '@/components/pin/PinGameInfo';
+import { PinTaste } from '@/components/pin/PinTaste';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
 import { PinRestaurantMenu } from '@/components/pin/PinRestaurantMenu';
@@ -82,7 +83,7 @@ import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinGameInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinGameInfo, pinTaste, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -134,12 +135,13 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, candidates, ads, adsense, viewer] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, taste, candidates, ads, adsense, viewer] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
     event || venue ? pinEventInfo(pin.id) : null,
     pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
+    pinTaste(pin.id),
     pinCandidates(pin.id),
     adPlacements(),
     adsenseSlots(),
@@ -153,12 +155,16 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
       <JsonLd data={pinJsonLd(pin, t.locale, { organizerUrl, eventInfo })} />
       {/* grid-cols-[minmax(0,1fr)]: the single column below lg is otherwise
           floored by its content's min-width, which scrolls the page sideways. */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
-        <article>
+      {/* On a phone the references and the correction box come last, under the
+          final sponsored block. From lg they sit under the article, as the
+          grid-row-start / row-span pins say; row 2 is 1fr so the tall aside
+          stretches that row, not the gap between article and references. */}
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
+        <article className="lg:col-start-1 lg:row-start-1">
           <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} venue={venue} candidates={candidates} />
         </article>
 
-        <aside className="min-w-0">
+        <aside className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
           {pin.latitude != null && pin.longitude != null ? (
             <div>
               <div className="mb-2 flex items-center justify-between gap-3 text-sm">
@@ -197,6 +203,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           {/* Beside the pin on wide screens, under its map; after it on phones. */}
           <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
+          {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
 
           {/* Related ads, one row under what the pin is about. */}
           {ads['pin-strip'] ? <AdRow slot="pin-strip" pinId={pin.id} className="mt-6" /> : null}
@@ -219,10 +226,18 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           {/* The tall space the side column leaves under the comments. */}
           {ads['pin-side'] ? google['pin-side'] ? <AdsenseColumn unit={google['pin-side']} className="mt-6" /> : <AdColumn pinId={pin.id} className="mt-6" /> : null}
         </aside>
-      </div>
 
-      {/* Across the foot of the page: a Google banner, when the admin has given it a unit. */}
-      {google['pin-bottom'] ? <AdsenseBanner unit={google['pin-bottom']} className="mt-8" /> : null}
+        {/* Across the foot of the page: a Google banner, when the admin has given it a unit. */}
+        {google['pin-bottom'] ? <AdsenseBanner unit={google['pin-bottom']} className="lg:col-span-2 lg:row-start-3" /> : null}
+
+        {/* What backs the pin, then: a missing link, date or fact goes to the
+            AI, which adds whatever page backs it up to the list above. The
+            first child's own top margin and the grid gap would double up. */}
+        <div className="min-w-0 lg:col-start-1 lg:row-start-2 lg:-mt-4 [&>:first-child]:mt-0">
+          <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={pinDateRanges(pin, timeZone)} timeZone={timeZone} />
+          <PinSuggest pinId={pin.id} />
+        </div>
+      </div>
 
       <Suspense fallback={null}>
         <Related pin={pin} />
@@ -505,10 +520,6 @@ async function PinBody({
       {/* Readers' own listings of the product, and "Sell this item here". */}
       {listingKind ? <PinListings pinId={pin.id} kind={listingKind} productName={pin.productName} categories={pin.categories} /> : null}
 
-      <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={dateRanges} timeZone={timeZone} />
-      {/* Right under what backs the pin: a missing link, date or fact goes to
-          the AI, which adds whatever page backs it up to the list above. */}
-      <PinSuggest pinId={pin.id} />
     </>
   );
 }

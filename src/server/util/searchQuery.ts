@@ -60,6 +60,19 @@
 // or platform:xbox-series for a game on any of the platforms given, and
 // rated:"ESRB Mature 17+" for a game with any of the maturity ratings given.
 // The game info's platform pills and rating block write them.
+// taste: takes a taste axis (taste:bitterness, taste:umami; aroma, bitterness,
+// sweetness, astringency, umami, pungent, coolness): the products whose taste
+// profile (PinTaste) scores it TASTE_STRONG or more, every axis given. The
+// taste profile's axis labels write them.
+// person: takes a person's name as the People pages write it (person:"Joe
+// Biden"): the pins linked to them (PinPerson). A person's radar axes
+// (education, wealth, position, standing, health, misconduct, social,
+// economic: scored 0-5, src/lib/people.ts; public-standing, social-good and
+// economic-good are the chart's labels for the last three) take the bounds rating: does -
+// misconduct:>3, wealth:>=4, social:2-4, or a bare wealth:4 for "4 or more" -
+// and match the pins linked to anyone whose best score on that axis, across
+// their life phases, meets every bound given. The search box suggests the
+// people themselves as you type.
 // rating: takes a bound on a pin's rating as a percentage - the headline
 // number its card shows: the average of its review scores, each rescaled to
 // a percentage of its own maximum (MyAnimeList's 8.2/10 is 82), or its one
@@ -115,7 +128,9 @@
 // the end of the query follows it: company:'McDonald's' is one company.
 
 import { compareDayKeys, nextDayKey } from '@/lib/format';
+import { OCTAGON_AXES, type OctagonAxis } from '@/lib/people';
 import { isPlatformKey, platformFromName } from '@/lib/gameInfo';
+import { TASTE_KEYS, type TasteAxis } from '@/lib/pinTaste';
 import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
 
 // One side of a rating: term, compared with the pin's rounded percentage.
@@ -129,6 +144,10 @@ export type DelayBound = { op: RatingBound['op']; unit: 'days' | 'months'; value
 // of that day on (">="), or before the start of it ("<"). "after D" and "on or
 // before D" are written as the day after.
 export type DayBound = { op: '>=' | '<'; day: string };
+
+// One side of an axis term (misconduct:>3): a bound on a person's best score
+// on a radar axis, 0 to 5.
+export type PersonAxisBound = RatingBound & { axis: OctagonAxis };
 
 export type SearchQuery = {
   userNames: string[];
@@ -160,6 +179,13 @@ export type SearchQuery = {
   platforms: string[];
   // A game's maturity rating, board first (rated:"ESRB Mature 17+"); any.
   rated: string[];
+  // Taste axes (taste:umami) a product's taste profile must score strongly on; all.
+  tastes: TasteAxis[];
+  // People by name (person:"Joe Biden"), any of them; the pins linked to them.
+  people: string[];
+  // Radar-axis bounds (misconduct:>3) a linked person's best score must meet,
+  // every one of them.
+  personAxes: PersonAxisBound[];
   // Bounds a pin's rating must meet, every one of them.
   ratings: RatingBound[];
   // Bounds a pin's delay must meet, every one of them.
@@ -173,9 +199,13 @@ export type SearchQuery = {
 const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
+// The chart's own labels for the three axes whose field is shorter:
+// public-standing:>3 is standing:>3.
+const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing', 'social-good': 'social', 'economic-good': 'economic' };
+
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday|taste|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -195,7 +225,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday';
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday' | 'taste' | 'person' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -233,7 +263,8 @@ export function splitSearchQuery(searchText: string | null | undefined): QueryPa
     const at = groups.findIndex((group, index) => index % 2 === 0 && group !== undefined);
     const written = groups[at]!.toLowerCase();
     const negated = written.startsWith('-');
-    const field = written.replace(/^-/, '') as TermField;
+    const unsigned = written.replace(/^-/, '');
+    const field = (AXIS_ALIASES[unsigned] ?? unsigned) as TermField;
     parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length), ...(negated ? { negated } : {}) });
     from = match.index + match[0].length;
   }
@@ -269,6 +300,9 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     places: [],
     platforms: [],
     rated: [],
+    tastes: [],
+    people: [],
+    personAxes: [],
     ratings: [],
     delays: [],
     holidays: [],
@@ -312,6 +346,18 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       if (key) addUnique(query.platforms, key);
     } else if (part.field === 'holiday') {
       if (part.value) addUnique(query.holidays, part.value);
+    } else if (part.field === 'taste') {
+      // An axis the profile doesn't have is left out rather than matching nothing.
+      const axis = TASTE_KEYS.find((key) => key === part.value.trim().toLowerCase());
+      if (axis) addUnique(query.tastes, axis);
+    } else if (part.field === 'person') {
+      if (part.value) addUnique(query.people, part.value);
+    } else if ((OCTAGON_AXES as readonly string[]).includes(part.field)) {
+      // A value that is not a bound is left out rather than matching nothing.
+      for (const bound of ratingBounds(part.value)) {
+        const axis = part.field as OctagonAxis;
+        if (!query.personAxes.some((b) => b.axis === axis && b.op === bound.op && b.value === bound.value)) query.personAxes.push({ axis, ...bound });
+      }
     } else if (part.field === 'rated') {
       if (part.value) addUnique(query.rated, part.value);
     } else if (part.field === 'rating') {
@@ -351,6 +397,9 @@ export function hasFilters(query: SearchQuery): boolean {
     query.places.length ||
     query.platforms.length ||
     query.rated.length ||
+    query.tastes.length ||
+    query.people.length ||
+    query.personAxes.length ||
     query.ratings.length ||
     query.delays.length ||
     query.holidays.length

@@ -15,6 +15,10 @@ import { TAGS } from './cache';
 const CUISINES = new Set(['Mexican', 'Mediterranean', 'Cafe', 'Sandwiches', 'Japanese', 'Chinese', 'Italian', 'Greek', 'Spanish', 'Hawaiian', 'American', 'European', 'Brazilian', 'French', 'Californian', 'Afro-Asian', 'Asian', 'Vegetarian', 'Seafood', 'Oaxacan']);
 
 export async function restaurantGuideRegionSlugs(): Promise<string[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  cacheTag(TAGS.restaurantContent);
   // Match the guide's live opening query without hydrating every city's pins and media.
   const records = await listRestaurantContent({ includeDisabled: true });
   const catalog = records.filter((record) => record.enabled && record.profile.tile?.kind === 'top').map((record) => ({ ...record.profile.tile!, sourceUrl: record.profile.pinSourceUrl }));
@@ -37,10 +41,17 @@ export async function restaurantGuideRegionSlugs(): Promise<string[]> {
     if (pins.has(restaurant.sourceUrl)) populated.add(restaurant.regionSlug);
   }
   const now = new Date();
+  // Each opening's catalog record, found once: looking it up inside the region
+  // loop re-parsed every record's URL for every region and opening (~1s).
+  const recordByKey = new Map<string, (typeof records)[number]>();
+  for (const record of records) {
+    const key = restaurantSourceKey(record.profile.pinSourceUrl);
+    if (!recordByKey.has(key)) recordByKey.set(key, record);
+  }
+  const openingRecords = openings.map((opening) => ({ opening, record: recordByKey.get(restaurantSourceKey(opening.sourceUrl ?? '')) }));
   for (const region of RESTAURANT_REGIONS) {
     const today = dayKeyIn(now, region.timeZone);
-    if (openings.some((opening) => {
-      const record = records.find((record) => restaurantSourceKey(record.profile.pinSourceUrl) === restaurantSourceKey(opening.sourceUrl ?? ''));
+    if (openingRecords.some(({ opening, record }) => {
       if (record && (!record.enabled || (record.profile.tile && (record.profile.tile.kind !== 'opening' || record.profile.tile.regionSlug !== region.slug)))) return false;
       if (!record?.profile.tile && opening.city?.toLowerCase() !== region.name.toLowerCase()) return false;
       const catalogOpening = record?.profile.tile;

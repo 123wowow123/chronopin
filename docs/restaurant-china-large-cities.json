@@ -1,0 +1,3530 @@
+{
+  "checkedAt": "2026-10-10",
+  "country": "China",
+  "regions": [
+    "changsha",
+    "zhengzhou",
+    "tianjin",
+    "nanjing",
+    "qingdao",
+    "suzhou"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Niccolo Kitchen — Changsha — Changsha restaurant guide",
+        "description": "Tuscan dishes, city views and a verified Explorer Club dining benefit at Changsha IFS.",
+        "sourceUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+        "address": "93/F, Tower 1, Changsha IFS, 188 Jiefang West Road, Furong District, Changsha, China",
+        "latitude": 28.191381,
+        "longitude": 112.978299,
+        "productName": "Niccolo Kitchen — Changsha",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Changsha",
+          "China",
+          "Furong · Changsha IFS",
+          "Tuscan and international"
+        ],
+        "longFormSummary": "<p>Tuscan dishes, city views and a verified Explorer Club dining benefit at Changsha IFS. <cite data-ref=\"https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+            "title": "Niccolo Kitchen — Changsha — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.niccolohotels.com/getmedia/3ea92233-c6d7-4763-bf3e-3ea8826da1fe/Contemporary-Tuscan-Menu-Menu.pdf",
+            "title": "Tuscan à la carte",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+            "title": "Explorer Club à la carte benefit",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://www.places2swim.com/locations/niccolo-changsha-in-changsha-hunan-province-china-peoples-republic-of/170c9d44-6111-4496-8b4c-89dacc79ec50",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+          "menu": {
+            "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+            "name": "Niccolo Kitchen — Changsha",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Tuscan à la carte",
+                "url": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Panzanella Tuscan bread salad",
+                    "price": 58
+                  },
+                  {
+                    "name": "Ciabatta bruschetta with ricotta, fig and prosciutto",
+                    "price": 88
+                  },
+                  {
+                    "name": "Burrata with tomatoes and basil",
+                    "price": 118
+                  },
+                  {
+                    "name": "Porcini mushroom soup",
+                    "price": 68
+                  },
+                  {
+                    "name": "Roasted whole perch with white bean stew",
+                    "price": 248
+                  },
+                  {
+                    "name": "Grilled New Zealand lamb chops",
+                    "price": 458
+                  },
+                  {
+                    "name": "Tiramisu",
+                    "price": 108
+                  },
+                  {
+                    "name": "Tuscan iced tea",
+                    "price": 68
+                  }
+                ],
+                "note": "Currently linked branch PDF; CNY prices include service charge and tax.",
+                "documentUrl": "https://www.niccolohotels.com/getmedia/3ea92233-c6d7-4763-bf3e-3ea8826da1fe/Contemporary-Tuscan-Menu-Menu.pdf"
+              },
+              {
+                "label": "Explorer Club à la carte benefit",
+                "url": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Eligible à la carte food and beverages — 15% member discount",
+                    "priceLabel": "Price not published",
+                    "note": "Discount applies to eligible menu purchases, not service charge or VAT; member-card, reservation and table-size conditions apply."
+                  }
+                ],
+                "note": "Published base dish prices remain in the separate branch menu. The club page was checked with the relevant hotel selected; no discounted dish totals are inferred."
+              }
+            ],
+            "specials": [
+              {
+                "kind": "other",
+                "title": "Explorer Club members — 15% off à la carte dining",
+                "description": "The operator publishes a 15% food-and-beverage benefit for eligible Explorer Club members.",
+                "schedule": "Weekday lunch 11:30–14:30; daily dinner 17:30–22:30, excluding blackout dates",
+                "conditions": [
+                  "Invitation-only Explorer Club membership, prior reservation and availability required; present the membership card when paying.",
+                  "One card and one receipt per table, up to 12 people including the member.",
+                  "À la carte only; cannot combine with other special offers or events. Catering, room service, takeaway, service charge and VAT are excluded.",
+                  "New Year’s Eve, Chinese New Year’s Eve, Valentine’s Day, May 20, Qixi, Christmas Eve, holidays and other hotel promotions are blacked out; confirm additional venue exclusions.",
+                  "No operator expiry is published. The displayed schedule is checked only through December 23, 2026, pending a new holiday-calendar review."
+                ],
+                "sourceUrl": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+                "discounted": true,
+                "menuLabel": "Explorer Club à la carte benefit",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:30",
+                      "end": "14:30"
+                    },
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30",
+                      "end": "22:30"
+                    }
+                  ],
+                  "excludesHolidays": true,
+                  "excludedDates": [
+                    "2026-01-01",
+                    "2026-01-02",
+                    "2026-01-03",
+                    "2026-02-14",
+                    "2026-02-15",
+                    "2026-02-16",
+                    "2026-02-17",
+                    "2026-02-18",
+                    "2026-02-19",
+                    "2026-02-20",
+                    "2026-02-21",
+                    "2026-02-22",
+                    "2026-02-23",
+                    "2026-04-04",
+                    "2026-04-05",
+                    "2026-04-06",
+                    "2026-05-01",
+                    "2026-05-02",
+                    "2026-05-03",
+                    "2026-05-04",
+                    "2026-05-05",
+                    "2026-05-20",
+                    "2026-06-19",
+                    "2026-06-20",
+                    "2026-06-21",
+                    "2026-08-19",
+                    "2026-09-25",
+                    "2026-09-26",
+                    "2026-09-27",
+                    "2026-10-01",
+                    "2026-10-02",
+                    "2026-10-03",
+                    "2026-10-04",
+                    "2026-10-05",
+                    "2026-10-06",
+                    "2026-10-07",
+                    "2026-12-24",
+                    "2026-12-31"
+                  ],
+                  "holidayCalendarThrough": "2026-12-23"
+                }
+              }
+            ],
+            "location": {
+              "latitude": 28.191381,
+              "longitude": 112.978299,
+              "sourceUrl": "https://www.places2swim.com/locations/niccolo-changsha-in-changsha-hunan-province-china-peoples-republic-of/170c9d44-6111-4496-8b4c-89dacc79ec50",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/changsha/researched/niccolo-changsha-8-47fea9aa4fc61deb.webp",
+              "alt": "Niccolo Kitchen ",
+              "credit": "Niccolo Changsha",
+              "sourceUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+              "originalUrl": "https://www.niccolohotels.com/getmedia/0c6f5e87-de4c-4586-8c6e-4ff1b26d685a/1920px-x-940px-Niccolo-Kitchen-dinner-with-view.jpg?width=1920&height=940&ext=.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+            "name": "Niccolo Kitchen — Changsha",
+            "websiteUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+            "phone": "+86 731 8895 8888",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "Lunch 11:30–14:30"
+              },
+              {
+                "days": "Daily",
+                "hours": "Dinner 17:30–22:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen"
+          },
+          "tile": {
+            "regionSlug": "changsha",
+            "kind": "top",
+            "slug": "niccolo-changsha",
+            "name": "Niccolo Kitchen — Changsha",
+            "neighborhood": "Furong · Changsha IFS",
+            "cuisine": "Tuscan and international",
+            "address": "93/F, Tower 1, Changsha IFS, 188 Jiefang West Road, Furong District, Changsha, China",
+            "websiteUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+            "description": "Tuscan dishes, city views and a verified Explorer Club dining benefit at Changsha IFS.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/changsha/researched/niccolo-changsha-8-47fea9aa4fc61deb.webp",
+            "imageCredit": "Niccolo Changsha",
+            "imageSourceUrl": "https://www.niccolohotels.com/getmedia/0c6f5e87-de4c-4586-8c6e-4ff1b26d685a/1920px-x-940px-Niccolo-Kitchen-dinner-with-view.jpg?width=1920&height=940&ext=.jpg",
+            "imageNote": "Niccolo Kitchen "
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "changsha",
+        "profile": {
+          "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+          "name": "Niccolo Kitchen — Changsha",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "Tuscan à la carte",
+              "url": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Panzanella Tuscan bread salad",
+                  "price": 58
+                },
+                {
+                  "name": "Ciabatta bruschetta with ricotta, fig and prosciutto",
+                  "price": 88
+                },
+                {
+                  "name": "Burrata with tomatoes and basil",
+                  "price": 118
+                },
+                {
+                  "name": "Porcini mushroom soup",
+                  "price": 68
+                },
+                {
+                  "name": "Roasted whole perch with white bean stew",
+                  "price": 248
+                },
+                {
+                  "name": "Grilled New Zealand lamb chops",
+                  "price": 458
+                },
+                {
+                  "name": "Tiramisu",
+                  "price": 108
+                },
+                {
+                  "name": "Tuscan iced tea",
+                  "price": 68
+                }
+              ],
+              "note": "Currently linked branch PDF; CNY prices include service charge and tax.",
+              "documentUrl": "https://www.niccolohotels.com/getmedia/3ea92233-c6d7-4763-bf3e-3ea8826da1fe/Contemporary-Tuscan-Menu-Menu.pdf"
+            },
+            {
+              "label": "Explorer Club à la carte benefit",
+              "url": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Eligible à la carte food and beverages — 15% member discount",
+                  "priceLabel": "Price not published",
+                  "note": "Discount applies to eligible menu purchases, not service charge or VAT; member-card, reservation and table-size conditions apply."
+                }
+              ],
+              "note": "Published base dish prices remain in the separate branch menu. The club page was checked with the relevant hotel selected; no discounted dish totals are inferred."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Explorer Club members — 15% off à la carte dining",
+              "description": "The operator publishes a 15% food-and-beverage benefit for eligible Explorer Club members.",
+              "schedule": "Weekday lunch 11:30–14:30; daily dinner 17:30–22:30, excluding blackout dates",
+              "conditions": [
+                "Invitation-only Explorer Club membership, prior reservation and availability required; present the membership card when paying.",
+                "One card and one receipt per table, up to 12 people including the member.",
+                "À la carte only; cannot combine with other special offers or events. Catering, room service, takeaway, service charge and VAT are excluded.",
+                "New Year’s Eve, Chinese New Year’s Eve, Valentine’s Day, May 20, Qixi, Christmas Eve, holidays and other hotel promotions are blacked out; confirm additional venue exclusions.",
+                "No operator expiry is published. The displayed schedule is checked only through December 23, 2026, pending a new holiday-calendar review."
+              ],
+              "sourceUrl": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+              "discounted": true,
+              "menuLabel": "Explorer Club à la carte benefit",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "22:30"
+                  }
+                ],
+                "excludesHolidays": true,
+                "excludedDates": [
+                  "2026-01-01",
+                  "2026-01-02",
+                  "2026-01-03",
+                  "2026-02-14",
+                  "2026-02-15",
+                  "2026-02-16",
+                  "2026-02-17",
+                  "2026-02-18",
+                  "2026-02-19",
+                  "2026-02-20",
+                  "2026-02-21",
+                  "2026-02-22",
+                  "2026-02-23",
+                  "2026-04-04",
+                  "2026-04-05",
+                  "2026-04-06",
+                  "2026-05-01",
+                  "2026-05-02",
+                  "2026-05-03",
+                  "2026-05-04",
+                  "2026-05-05",
+                  "2026-05-20",
+                  "2026-06-19",
+                  "2026-06-20",
+                  "2026-06-21",
+                  "2026-08-19",
+                  "2026-09-25",
+                  "2026-09-26",
+                  "2026-09-27",
+                  "2026-10-01",
+                  "2026-10-02",
+                  "2026-10-03",
+                  "2026-10-04",
+                  "2026-10-05",
+                  "2026-10-06",
+                  "2026-10-07",
+                  "2026-12-24",
+                  "2026-12-31"
+                ],
+                "holidayCalendarThrough": "2026-12-23"
+              }
+            }
+          ],
+          "location": {
+            "latitude": 28.191381,
+            "longitude": 112.978299,
+            "sourceUrl": "https://www.places2swim.com/locations/niccolo-changsha-in-changsha-hunan-province-china-peoples-republic-of/170c9d44-6111-4496-8b4c-89dacc79ec50",
+            "checkedAt": "2026-10-10"
+          },
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/changsha/researched/niccolo-changsha-8-47fea9aa4fc61deb.webp",
+            "alt": "Niccolo Kitchen ",
+            "credit": "Niccolo Changsha",
+            "sourceUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+            "originalUrl": "https://www.niccolohotels.com/getmedia/0c6f5e87-de4c-4586-8c6e-4ff1b26d685a/1920px-x-940px-Niccolo-Kitchen-dinner-with-view.jpg?width=1920&height=940&ext=.jpg",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Furong · Changsha IFS",
+          "address": "93/F, Tower 1, Changsha IFS, 188 Jiefang West Road, Furong District, Changsha, China",
+          "websiteUrl": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "changsha",
+          "slug": "niccolo-changsha-8",
+          "source": "https://www.niccolohotels.com/getmedia/0c6f5e87-de4c-4586-8c6e-4ff1b26d685a/1920px-x-940px-Niccolo-Kitchen-dinner-with-view.jpg?width=1920&height=940&ext=.jpg",
+          "sourcePage": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+          "credit": "Niccolo Changsha",
+          "note": "Niccolo Kitchen ",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/changsha/researched/niccolo-changsha-8-47fea9aa4fc61deb.webp",
+          "sha256": "47fea9aa4fc61deb7450f80db1e3d22509da48587e279976d279d5cb1e3a6b63",
+          "width": 1400,
+          "height": 685
+        },
+        {
+          "region": "changsha",
+          "slug": "niccolo-changsha-10",
+          "source": "https://www.niccolohotels.com/getmedia/9cecd821-da62-4ff4-a72e-c6d70b4b8e41/1920-940-Thumbnail-DINING-LISTING-PAG.png?width=1920&height=940&ext=.png",
+          "sourcePage": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
+          "credit": "Niccolo Changsha",
+          "note": "Niccolo Changsha — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/changsha/researched/niccolo-changsha-10-edc480fa6de3525b.webp",
+          "sha256": "edc480fa6de3525badd1e4f7b93d40ad71fd3e10694ae120529d1131d1747bb8",
+          "width": 1400,
+          "height": 685
+        }
+      ],
+      "geocoding": {
+        "latitude": 28.191381,
+        "longitude": 112.978299,
+        "sourceUrl": "https://www.places2swim.com/locations/niccolo-changsha-in-changsha-hunan-province-china-peoples-republic-of/170c9d44-6111-4496-8b4c-89dacc79ec50",
+        "matchedAddress": "niccolo-changsha",
+        "addressType": "Property",
+        "method": "Published property map coordinates"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sushiro — Yuefang ID Mall opens in Tianxin · Pozi Street",
+        "description": "Sushiro’s first Hunan branch opened on September 6 at Yuefang ID Mall.",
+        "sourceUrl": "https://www.icswb.com/h/158/20260901/993627.html",
+        "address": "1/F, Yuefang ID Mall, 216 Pozi Street, Tianxin District, Changsha, China",
+        "latitude": 28.192874193306,
+        "longitude": 112.969277845989,
+        "productName": "Sushiro — Yuefang ID Mall",
+        "utcStartDateTime": "2026-09-06T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Changsha Evening News announces September 6; Xiaoxiang Morning News’s September 7 report confirms the branch opened.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Changsha",
+          "China",
+          "Tianxin · Pozi Street",
+          "Conveyor-belt sushi"
+        ],
+        "longFormSummary": "<p>Sushiro’s first Hunan branch opened on September 6 at Yuefang ID Mall. <cite data-ref=\"https://news.ifeng.com/c/8wEUYCdh9so\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://news.ifeng.com/c/8wEUYCdh9so",
+            "title": "Sushiro — Yuefang ID Mall — research source",
+            "confidence": 90,
+            "reasoning": "Changsha Evening News announces September 6; Xiaoxiang Morning News’s September 7 report confirms the branch opened."
+          },
+          {
+            "url": "https://www.icswb.com/h/158/20260901/993627.html",
+            "title": "Branch opening dishes",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E9%95%BF%E6%B2%99%E6%82%A6%E6%96%B9IDMALL%E5%9D%A1%E5%AD%90%E8%A1%97216%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.icswb.com/h/158/20260901/993627.html",
+          "menu": {
+            "pinSourceUrl": "https://www.icswb.com/h/158/20260901/993627.html",
+            "name": "Sushiro — Yuefang ID Mall",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch opening dishes",
+                "url": "https://www.icswb.com/h/158/20260901/993627.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Bluefin tuna otoro",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Seared tuna otoro with sauce",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Large-cut salmon sushi",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Steamed kuruma prawn sushi — two pieces",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Seared foie gras sushi",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chawanmushi",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Beef udon",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch announcement verifies dishes. September 6–29 opening prices have expired; ordinary current prices are not verified. Operator, branch ordering, menu-image and gallery searches checked; other-city prices and photographs are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 28.192874193306,
+              "longitude": 112.969277845989,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E9%95%BF%E6%B2%99%E6%82%A6%E6%96%B9IDMALL%E5%9D%A1%E5%AD%90%E8%A1%97216%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.icswb.com/h/158/20260901/993627.html",
+            "name": "Sushiro — Yuefang ID Mall",
+            "websiteUrl": "https://www.icswb.com/h/158/20260901/993627.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Monday–Thursday",
+                "hours": "11:00–22:00"
+              },
+              {
+                "days": "Friday",
+                "hours": "11:00–22:30"
+              },
+              {
+                "days": "Saturday",
+                "hours": "10:30–22:30"
+              },
+              {
+                "days": "Sunday and public holidays",
+                "hours": "10:30–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://news.ifeng.com/c/8wEUYCdh9so"
+          },
+          "tile": {
+            "regionSlug": "changsha",
+            "kind": "opening",
+            "slug": "sushiro-yuefang",
+            "name": "Sushiro — Yuefang ID Mall",
+            "neighborhood": "Tianxin · Pozi Street",
+            "cuisine": "Conveyor-belt sushi",
+            "address": "1/F, Yuefang ID Mall, 216 Pozi Street, Tianxin District, Changsha, China",
+            "websiteUrl": "https://www.icswb.com/h/158/20260901/993627.html",
+            "description": "Sushiro’s first Hunan branch opened on September 6 at Yuefang ID Mall.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-09-06",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 28.192874193306,
+        "longitude": 112.969277845989,
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E9%95%BF%E6%B2%99%E6%82%A6%E6%96%B9IDMALL%E5%9D%A1%E5%AD%90%E8%A1%97216%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+        "matchedAddress": "iDmall",
+        "score": 78.9,
+        "addressType": "POI"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yu Garden — Hilton Zhengzhou — Zhengzhou restaurant guide",
+        "description": "Henan signature dishes alongside Cantonese and Sichuan cooking at Hilton Zhengzhou.",
+        "sourceUrl": "https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html",
+        "address": "5/F, Hilton Zhengzhou, 288 Jinshui Road, Zhengzhou, Henan, China",
+        "latitude": 34.76445,
+        "longitude": 113.70195,
+        "productName": "Yu Garden — Hilton Zhengzhou",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Zhengzhou",
+          "China",
+          "Jinshui",
+          "Henan, Cantonese and Sichuan"
+        ],
+        "longFormSummary": "<p>Henan signature dishes alongside Cantonese and Sichuan cooking at Hilton Zhengzhou. <cite data-ref=\"https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html",
+            "title": "Yu Garden — Hilton Zhengzhou — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Hilton+Zhengzhou%2C+Zhengzhou%2C+China&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html",
+          "menu": {
+            "pinSourceUrl": "https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html",
+            "name": "Yu Garden — Hilton Zhengzhou",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Operator signature dishes",
+                "url": "https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Taizu roast lamb chops",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chao roast duck — Kaifeng style",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "The branch operator describes these two dishes without prices. Global/Chinese operator dining pages, indexed menus and PDFs, branch ordering/menu-image searches and a branch-specific Ctrip dish list checked. An unrelated Yi Yuan PDF and outdated third-party prices are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 34.76445,
+              "longitude": 113.70195,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Hilton+Zhengzhou%2C+Zhengzhou%2C+China&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html",
+            "name": "Yu Garden — Hilton Zhengzhou",
+            "websiteUrl": "https://www.hilton.com/en/hotels/cgozhhi-hilton-zhengzhou/dining/",
+            "phone": "+86 371 8996 0822",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Lunch 11:30–14:00; dinner 17:30–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html"
+          },
+          "tile": {
+            "regionSlug": "zhengzhou",
+            "kind": "top",
+            "slug": "yu-garden-zhengzhou",
+            "name": "Yu Garden — Hilton Zhengzhou",
+            "neighborhood": "Jinshui",
+            "cuisine": "Henan, Cantonese and Sichuan",
+            "address": "5/F, Hilton Zhengzhou, 288 Jinshui Road, Zhengzhou, Henan, China",
+            "websiteUrl": "https://www.hilton.com/en/hotels/cgozhhi-hilton-zhengzhou/dining/",
+            "description": "Henan signature dishes alongside Cantonese and Sichuan cooking at Hilton Zhengzhou.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": ""
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 34.76445,
+        "longitude": 113.70195,
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Hilton+Zhengzhou%2C+Zhengzhou%2C+China&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+        "matchedAddress": "Hilton Zhengzhou",
+        "score": 100,
+        "addressType": "POI"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Fairfield Restaurant — Zhengzhou Beilonghu opens in Zhengdong · North Longhu",
+        "description": "The newly opened hotel’s breakfast restaurant serves local Henan dishes with views of North Longhu.",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+        "address": "7/F, Fairfield Zhengzhou Beilonghu, 200 metres northeast of Longyuan West Third Street and Longrun West Road, Zhengdong New District, Zhengzhou, China",
+        "latitude": 34.827259,
+        "longitude": 113.723241,
+        "productName": "Fairfield Restaurant — Zhengzhou Beilonghu",
+        "utcStartDateTime": "2026-09-24T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Marriott’s September 24 operator press release confirms that the hotel opened that day and names its seventh-floor breakfast restaurant.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Zhengzhou",
+          "China",
+          "Zhengdong · North Longhu",
+          "Henan and international breakfast"
+        ],
+        "longFormSummary": "<p>The newly opened hotel’s breakfast restaurant serves local Henan dishes with views of North Longhu. <cite data-ref=\"https://www.prnasia.com/story/549365-1.shtml\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.prnasia.com/story/549365-1.shtml",
+            "title": "Fairfield Restaurant — Zhengzhou Beilonghu — research source",
+            "confidence": 90,
+            "reasoning": "Marriott’s September 24 operator press release confirms that the hotel opened that day and names its seventh-floor breakfast restaurant."
+          },
+          {
+            "url": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+            "title": "Breakfast dishes and drinks",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/photos/",
+            "title": "Official branch gallery",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+          "menu": {
+            "pinSourceUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+            "name": "Fairfield Restaurant — Zhengzhou Beilonghu",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Breakfast dishes and drinks",
+                "url": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hu la tang — Henan spicy soup",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hui mian — Henan stewed noodles",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Juice",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tea",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch operator lists items without prices and states breakfast is available for a fee. Confirm non-resident access and inclusions with the property; free breakfast at other Fairfield branches is not applied here."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 34.827259,
+              "longitude": 113.723241,
+              "sourceUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/zhengzhou/researched/fairfield-beilonghu-0-8e49f4f619a85fef.webp",
+              "alt": "Fairfield Zhengzhou Beilonghu — official restaurant photograph",
+              "credit": "Fairfield by Marriott Zhengzhou Beilonghu",
+              "sourceUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/photos/",
+              "originalUrl": "https://cache.marriott.com/is/image/marriotts7prod/fi-cgobf-restaurant-29796:Classic-Hor?wid=1336&fit=constrain",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+            "name": "Fairfield Restaurant — Zhengzhou Beilonghu",
+            "websiteUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+            "phone": "+86 371 5363 5999",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "Breakfast 06:30–10:00"
+              },
+              {
+                "days": "Saturday–Sunday",
+                "hours": "Breakfast 06:30–10:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.prnasia.com/story/549365-1.shtml"
+          },
+          "tile": {
+            "regionSlug": "zhengzhou",
+            "kind": "opening",
+            "slug": "fairfield-beilonghu",
+            "name": "Fairfield Restaurant — Zhengzhou Beilonghu",
+            "neighborhood": "Zhengdong · North Longhu",
+            "cuisine": "Henan and international breakfast",
+            "address": "7/F, Fairfield Zhengzhou Beilonghu, 200 metres northeast of Longyuan West Third Street and Longrun West Road, Zhengdong New District, Zhengzhou, China",
+            "websiteUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+            "description": "The newly opened hotel’s breakfast restaurant serves local Henan dishes with views of North Longhu.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/zhengzhou/researched/fairfield-beilonghu-0-8e49f4f619a85fef.webp",
+            "imageCredit": "Fairfield by Marriott Zhengzhou Beilonghu",
+            "imageSourceUrl": "https://cache.marriott.com/is/image/marriotts7prod/fi-cgobf-restaurant-29796:Classic-Hor?wid=1336&fit=constrain",
+            "imageNote": "Fairfield Zhengzhou Beilonghu — official restaurant photograph",
+            "day": "2026-09-24",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "zhengzhou",
+          "slug": "fairfield-beilonghu-0",
+          "source": "https://cache.marriott.com/is/image/marriotts7prod/fi-cgobf-restaurant-29796:Classic-Hor?wid=1336&fit=constrain",
+          "sourcePage": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/photos/",
+          "credit": "Fairfield by Marriott Zhengzhou Beilonghu",
+          "note": "Fairfield Zhengzhou Beilonghu — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/zhengzhou/researched/fairfield-beilonghu-0-8e49f4f619a85fef.webp",
+          "sha256": "8e49f4f619a85fef11aeb3c418e7e139e3c7286c276452f54a7960e8de52a207",
+          "width": 1336,
+          "height": 892
+        },
+        {
+          "region": "zhengzhou",
+          "slug": "fairfield-beilonghu-1",
+          "source": "https://cache.marriott.com/is/image/marriotts7prod/fi-cgobf-restaurant-12306:Classic-Hor?wid=1336&fit=constrain",
+          "sourcePage": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/photos/",
+          "credit": "Fairfield by Marriott Zhengzhou Beilonghu",
+          "note": "Fairfield Zhengzhou Beilonghu — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/zhengzhou/researched/fairfield-beilonghu-1-cfc781af4b997abe.webp",
+          "sha256": "cfc781af4b997abeaa06272fb76192845f8616fe912e3e0840303a2b84a633e9",
+          "width": 1336,
+          "height": 892
+        },
+        {
+          "region": "zhengzhou",
+          "slug": "fairfield-beilonghu-2",
+          "source": "https://cache.marriott.com/is/image/marriotts7prod/fi-cgobf-restaurant-11143:Classic-Hor?wid=1336&fit=constrain",
+          "sourcePage": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/photos/",
+          "credit": "Fairfield by Marriott Zhengzhou Beilonghu",
+          "note": "Fairfield Zhengzhou Beilonghu — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/zhengzhou/researched/fairfield-beilonghu-2-c5cca456ab31aaa4.webp",
+          "sha256": "c5cca456ab31aaa4c7da95d1ad74b89f14fd154b6c18d87ff49f1286528cbd2b",
+          "width": 1336,
+          "height": 892
+        }
+      ],
+      "geocoding": {
+        "latitude": 34.827259,
+        "longitude": 113.723241,
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/cgobf-fairfield-zhengzhou-beilonghu/dining/",
+        "matchedAddress": "fairfield-beilonghu",
+        "addressType": "Property",
+        "method": "Published property map coordinates"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Jin House — Tianjin restaurant guide",
+        "description": "Cantonese cooking, dim sum and private dining around a sunken dining hall at Four Seasons Tianjin.",
+        "sourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+        "address": "Four Seasons Hotel Tianjin, 138 Chifeng Road, Heping District, Tianjin, China",
+        "latitude": 39.12,
+        "longitude": 117.1988,
+        "productName": "Jin House",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tianjin",
+          "China",
+          "Heping · Chifeng Road",
+          "Cantonese"
+        ],
+        "longFormSummary": "<p>Cantonese cooking, dim sum and private dining around a sunken dining hall at Four Seasons Tianjin. <cite data-ref=\"https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+            "title": "Jin House — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/jin-house-a-la-carte/",
+            "title": "À la carte",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://impt.io/hotels/people-s-republic-of-china/tianjin/four-seasons-hotel-tianjin/",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "menu": {
+            "pinSourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+            "name": "Jin House",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/jin-house-a-la-carte/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Steamed prawn dumplings — four pieces",
+                    "price": 98,
+                    "note": "Dim sum is available at lunch only."
+                  },
+                  {
+                    "name": "Dim sum platter — four pieces",
+                    "price": 108,
+                    "note": "Lunch only."
+                  },
+                  {
+                    "name": "Pork and abalone siu mai",
+                    "price": 88,
+                    "note": "Lunch only."
+                  },
+                  {
+                    "name": "Pigeon",
+                    "price": 98
+                  },
+                  {
+                    "name": "Barbecue delicacy selection",
+                    "price": 316
+                  },
+                  {
+                    "name": "Honey barbecued pork",
+                    "price": 218
+                  },
+                  {
+                    "name": "Sweet and sour pork with seasonal fruit",
+                    "price": 218
+                  }
+                ],
+                "note": "Current branch operator menu. Prices are CNY; service-charge and tax treatment are not published on this online menu, so confirm the final bill with the venue."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 39.12,
+              "longitude": 117.1988,
+              "sourceUrl": "https://impt.io/hotels/people-s-republic-of-china/tianjin/four-seasons-hotel-tianjin/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-3-db20d1d9cce73b8a.webp",
+              "alt": "Jin House purple chairs under dining tables under full ceiling with teardrop-shaped crystals",
+              "credit": "Four Seasons Hotel Tianjin",
+              "sourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+              "originalUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-274,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_146_original.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+            "name": "Jin House",
+            "websiteUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+            "phone": "+86 22 2716 6262",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Lunch 11:30–14:00; dinner 17:30–21:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/"
+          },
+          "tile": {
+            "regionSlug": "tianjin",
+            "kind": "top",
+            "slug": "jin-house",
+            "name": "Jin House",
+            "neighborhood": "Heping · Chifeng Road",
+            "cuisine": "Cantonese",
+            "address": "Four Seasons Hotel Tianjin, 138 Chifeng Road, Heping District, Tianjin, China",
+            "websiteUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+            "description": "Cantonese cooking, dim sum and private dining around a sunken dining hall at Four Seasons Tianjin.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-3-db20d1d9cce73b8a.webp",
+            "imageCredit": "Four Seasons Hotel Tianjin",
+            "imageSourceUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-274,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_146_original.jpg",
+            "imageNote": "Jin House purple chairs under dining tables under full ceiling with teardrop-shaped crystals"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "tianjin",
+          "slug": "jin-house-3",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-274,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_146_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Jin House purple chairs under dining tables under full ceiling with teardrop-shaped crystals",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-3-db20d1d9cce73b8a.webp",
+          "sha256": "db20d1d9cce73b8a920af40dd8a1671fa34ce273be2d37e66fbcae2ac794c00d",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "jin-house-2",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-165,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_142_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Sculptures, woman at end of long dimly-lit hallway with sleek, wood-grain walls",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-2-6335b85ce3606ac7.webp",
+          "sha256": "6335b85ce3606ac7d2ce4375965f54dffbef3b06d6cd99ee534c5606e4532331",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "jin-house-4",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-728,8702-2001,0000-1125,5625/publish/content/dam/fourseasons/images/web/TNJ/TNJ_144_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Close-up and clear and gold glass teardrop-shaped lights ",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-4-122171f226ea7e33.webp",
+          "sha256": "122171f226ea7e33bb8ab6f4fc57fe23358c4b9f9eb5a82bbae27b108a491baa",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "jin-house-5",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-242,0293-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_147_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Jin House large round dining table with purple flowers in centre, large chandelier",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-5-680cc9b371bdda65.webp",
+          "sha256": "680cc9b371bdda654f6d7aab38f6e0f3a7781eb8d3ad1320141b039181169e43",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "jin-house-6",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-308,1659-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_148_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Jin House large round dining table by burgundy leather sofas, under gold, glass lights",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-6-d6432fb1c9c4d8d4.webp",
+          "sha256": "d6432fb1c9c4d8d4649d279449fb6e5e205106c1a3331055514caadcba879efc",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "jin-house-7",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-189,3495-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_781_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Jin House — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-7-25578622cd9b13ab.webp",
+          "sha256": "25578622cd9b13aba27c598b2e32dd20f3ea5f5b5aac0e7b91ef48560ad07767",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "jin-house-8",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-1281,9560-2000,0000-1125,0000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_761_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Jin House — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-8-20512f657e85dadd.webp",
+          "sha256": "20512f657e85dadd390d4c7c0aa396cb89ab7f5920290798608b201b59f94fc0",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "jin-house-9",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-364,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_767_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Jin House — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-9-80f273bea13e31f9.webp",
+          "sha256": "80f273bea13e31f973cef0be78b86851ab334b26e34bffc2ec52ce6adccb2168",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "jin-house-10",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-235,8272-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_765_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Jin House — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/jin-house-10-7b3ba23ec9d9ae93.webp",
+          "sha256": "7b3ba23ec9d9ae93dfc478304b83c68cc7881fe537e6e061884a89922d916eb5",
+          "width": 1400,
+          "height": 788
+        }
+      ],
+      "geocoding": {
+        "latitude": 39.12,
+        "longitude": 117.1988,
+        "sourceUrl": "https://impt.io/hotels/people-s-republic-of-china/tianjin/four-seasons-hotel-tianjin/",
+        "matchedAddress": "jin-house",
+        "addressType": "Property",
+        "method": "Published property map coordinates"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Cielo — Tianjin restaurant guide",
+        "description": "International dining with a verified Bohai Bay seafood menu served on selected autumn evenings.",
+        "sourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+        "address": "Four Seasons Hotel Tianjin, 138 Chifeng Road, Heping District, Tianjin, China",
+        "latitude": 39.12,
+        "longitude": 117.1988,
+        "productName": "Cielo",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tianjin",
+          "China",
+          "Heping · Chifeng Road",
+          "International and seafood"
+        ],
+        "longFormSummary": "<p>International dining with a verified Bohai Bay seafood menu served on selected autumn evenings. <cite data-ref=\"https://www.prnasia.com/story/548785-1.shtml\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.prnasia.com/story/548785-1.shtml",
+            "title": "Cielo — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+            "title": "Official branch gallery",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://impt.io/hotels/people-s-republic-of-china/tianjin/four-seasons-hotel-tianjin/",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "menu": {
+            "pinSourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+            "name": "Cielo",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Bohai Bay seasonal seafood menu",
+                "url": "https://www.prnasia.com/story/548785-1.shtml",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Seasonal seafood set — per person",
+                    "price": 698
+                  },
+                  {
+                    "name": "Chilli-tomato crab",
+                    "priceLabel": "Price not published",
+                    "note": "Named course in the set; no separate à la carte price is published."
+                  },
+                  {
+                    "name": "Yuzu oyster",
+                    "priceLabel": "Price not published",
+                    "note": "Named course in the set; no separate price is published."
+                  },
+                  {
+                    "name": "Sea urchin steamed egg",
+                    "priceLabel": "Price not published",
+                    "note": "Named course in the set; no separate price is published."
+                  },
+                  {
+                    "name": "Seasonal seafood platter",
+                    "priceLabel": "Price not published",
+                    "note": "Named course in the set; no separate price is published."
+                  },
+                  {
+                    "name": "Chargrilled beef tenderloin",
+                    "priceLabel": "Price not published",
+                    "note": "Named course in the set; no separate price is published."
+                  }
+                ],
+                "note": "Operator press release: Friday/Saturday dinner October 16–November 28, 2026. CNY 698/person; service/tax treatment is not stated. A limited-time menu, not an advertised discount."
+              }
+            ],
+            "specials": [
+              {
+                "kind": "other",
+                "title": "Bohai Bay seasonal seafood — CNY 698 per person",
+                "description": "A limited-time dinner menu celebrates the Bohai Bay fishing season; no price reduction is claimed.",
+                "schedule": "Friday and Saturday dinner, 17:30–21:00, October 16–November 28, 2026",
+                "conditions": [
+                  "CNY 698 per person.",
+                  "Named dishes are courses in the seasonal menu; separate dish prices and service/tax treatment are not published.",
+                  "Confirm reservations, availability and the final bill with the venue."
+                ],
+                "sourceUrl": "https://www.prnasia.com/story/548785-1.shtml",
+                "discounted": false,
+                "limitedTime": true,
+                "menuLabel": "Bohai Bay seasonal seafood menu",
+                "validFrom": "2026-10-16",
+                "validThrough": "2026-11-28",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        5,
+                        6
+                      ],
+                      "start": "17:30",
+                      "end": "21:00"
+                    }
+                  ]
+                }
+              }
+            ],
+            "location": {
+              "latitude": 39.12,
+              "longitude": 117.1988,
+              "sourceUrl": "https://impt.io/hotels/people-s-republic-of-china/tianjin/four-seasons-hotel-tianjin/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-2-6a3082128ac5d8f7.webp",
+              "alt": "Server sets dining table behind glass wall with Cielo name, logo",
+              "credit": "Four Seasons Hotel Tianjin",
+              "sourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+              "originalUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-260,7678-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_118_original.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+            "name": "Cielo",
+            "websiteUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+            "phone": "+86 22 2716 6263",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "Breakfast 06:30–10:00"
+              },
+              {
+                "days": "Saturday–Sunday",
+                "hours": "Breakfast 06:30–10:30; lunch 12:00–14:30"
+              },
+              {
+                "days": "Tuesday–Friday",
+                "hours": "Lunch 11:30–14:00"
+              },
+              {
+                "days": "Tuesday–Sunday",
+                "hours": "Dinner 17:30–21:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.prnasia.com/story/548785-1.shtml"
+          },
+          "tile": {
+            "regionSlug": "tianjin",
+            "kind": "top",
+            "slug": "cielo",
+            "name": "Cielo",
+            "neighborhood": "Heping · Chifeng Road",
+            "cuisine": "International and seafood",
+            "address": "Four Seasons Hotel Tianjin, 138 Chifeng Road, Heping District, Tianjin, China",
+            "websiteUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+            "description": "International dining with a verified Bohai Bay seafood menu served on selected autumn evenings.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-2-6a3082128ac5d8f7.webp",
+            "imageCredit": "Four Seasons Hotel Tianjin",
+            "imageSourceUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-260,7678-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_118_original.jpg",
+            "imageNote": "Server sets dining table behind glass wall with Cielo name, logo"
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "tianjin",
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "name": "Cielo",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "Bohai Bay seasonal seafood menu",
+              "url": "https://www.prnasia.com/story/548785-1.shtml",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Seasonal seafood set — per person",
+                  "price": 698
+                },
+                {
+                  "name": "Chilli-tomato crab",
+                  "priceLabel": "Price not published",
+                  "note": "Named course in the set; no separate à la carte price is published."
+                },
+                {
+                  "name": "Yuzu oyster",
+                  "priceLabel": "Price not published",
+                  "note": "Named course in the set; no separate price is published."
+                },
+                {
+                  "name": "Sea urchin steamed egg",
+                  "priceLabel": "Price not published",
+                  "note": "Named course in the set; no separate price is published."
+                },
+                {
+                  "name": "Seasonal seafood platter",
+                  "priceLabel": "Price not published",
+                  "note": "Named course in the set; no separate price is published."
+                },
+                {
+                  "name": "Chargrilled beef tenderloin",
+                  "priceLabel": "Price not published",
+                  "note": "Named course in the set; no separate price is published."
+                }
+              ],
+              "note": "Operator press release: Friday/Saturday dinner October 16–November 28, 2026. CNY 698/person; service/tax treatment is not stated. A limited-time menu, not an advertised discount."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Bohai Bay seasonal seafood — CNY 698 per person",
+              "description": "A limited-time dinner menu celebrates the Bohai Bay fishing season; no price reduction is claimed.",
+              "schedule": "Friday and Saturday dinner, 17:30–21:00, October 16–November 28, 2026",
+              "conditions": [
+                "CNY 698 per person.",
+                "Named dishes are courses in the seasonal menu; separate dish prices and service/tax treatment are not published.",
+                "Confirm reservations, availability and the final bill with the venue."
+              ],
+              "sourceUrl": "https://www.prnasia.com/story/548785-1.shtml",
+              "discounted": false,
+              "limitedTime": true,
+              "menuLabel": "Bohai Bay seasonal seafood menu",
+              "validFrom": "2026-10-16",
+              "validThrough": "2026-11-28",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "21:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "location": {
+            "latitude": 39.12,
+            "longitude": 117.1988,
+            "sourceUrl": "https://impt.io/hotels/people-s-republic-of-china/tianjin/four-seasons-hotel-tianjin/",
+            "checkedAt": "2026-10-10"
+          },
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-2-6a3082128ac5d8f7.webp",
+            "alt": "Server sets dining table behind glass wall with Cielo name, logo",
+            "credit": "Four Seasons Hotel Tianjin",
+            "sourceUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+            "originalUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-260,7678-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_118_original.jpg",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Heping · Chifeng Road",
+          "address": "Four Seasons Hotel Tianjin, 138 Chifeng Road, Heping District, Tianjin, China",
+          "websiteUrl": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "tianjin",
+          "slug": "cielo-2",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-260,7678-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_118_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Server sets dining table behind glass wall with Cielo name, logo",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-2-6a3082128ac5d8f7.webp",
+          "sha256": "6a3082128ac5d8f7971f605ae525039e11736909ef4d860bafce00c6d16447ca",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "cielo-3",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-282,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_117_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Close-up of dozens of modern crystal lights hanging from strings",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-3-882cea9b9b2d3e59.webp",
+          "sha256": "882cea9b9b2d3e593e0f155f86dd22abeb250d411b9ee3f5e4bd0a0e1fe991be",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "cielo-4",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_119_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Cielo dining room, tables and chairs under sunny window, large round chandelier with candles",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-4-99b5bcb7843aaf99.webp",
+          "sha256": "99b5bcb7843aaf9992ebb611983b3eaa9d9a8d1cbf9c952f7060286950b64042",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "cielo-5",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-807,4694-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_122_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Cielo dining room, tables and chairs, modern silver sculpture, accent wall",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-5-4fc1972f153792c6.webp",
+          "sha256": "4fc1972f153792c6c450d9f683cce47016ee19b5ebbb09d5ba5f18a4db76264b",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "cielo-6",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-229,7397-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_123_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Server sets table in large Cielo dining room under hanging strings with crystal lights",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-6-0135e11ac68f63cf.webp",
+          "sha256": "0135e11ac68f63cf94f16c8382f81763ee29d8ac086c50afa98ebf9e508e29bd",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "cielo-7",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-313,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_125_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Chef in uniform with tattoos on arm carves large piece of raw meat on butcher's block",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-7-24cc1b0650e81872.webp",
+          "sha256": "24cc1b0650e818724d500497cac5b23a78f10ae9d8c93c3d7a36e961fc7ebc7f",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "tianjin",
+          "slug": "cielo-8",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-38,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TNJ/TNJ_126_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
+          "credit": "Four Seasons Hotel Tianjin",
+          "note": "Long private dining table under row of glowing lanterns, tall windows at dusk",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tianjin/researched/cielo-8-6cfda625f5365953.webp",
+          "sha256": "6cfda625f5365953b6a6baf4a0e68d7c0e1a93cfda4b605da41d9ff576304d55",
+          "width": 1400,
+          "height": 788
+        }
+      ],
+      "geocoding": {
+        "latitude": 39.12,
+        "longitude": 117.1988,
+        "sourceUrl": "https://impt.io/hotels/people-s-republic-of-china/tianjin/four-seasons-hotel-tianjin/",
+        "matchedAddress": "jin-house",
+        "addressType": "Property",
+        "method": "Published property map coordinates"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Jiangnan Wok — Nanjing restaurant guide",
+        "description": "Huaiyang signatures and Jinling salted duck at Shangri-La Nanjing.",
+        "sourceUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+        "address": "Level 1, Shangri-La Nanjing, 329 Zhongyang Road, Gulou District, Nanjing, China",
+        "latitude": 32.078443,
+        "longitude": 118.782775,
+        "productName": "Jiangnan Wok",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nanjing",
+          "China",
+          "Gulou · Zhongyang Road",
+          "Huaiyang"
+        ],
+        "longFormSummary": "<p>Huaiyang signatures and Jinling salted duck at Shangri-La Nanjing. <cite data-ref=\"https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+            "title": "Jiangnan Wok — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+          "menu": {
+            "pinSourceUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+            "name": "Jiangnan Wok",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Current operator signature dishes",
+                "url": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Braised black-marbled pork",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Crispy braised veal",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Huaiyang braised eel in brown sauce",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Jinling classic salted duck",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fish head with abalone and sea cucumber",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Duck stuffed with abalone and glutinous rice",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "The current branch page names these dishes without prices. An older indexed operator PDF is not linked by the current page and is not treated as a current price list. Linked menus, branch PDF/menu-image and ordering searches checked; Yun and Shanghai Jiangnan Wok prices are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 32.078443,
+              "longitude": 118.782775,
+              "sourceUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-2-e205a795ce185d70.webp",
+              "alt": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary",
+              "credit": "Shangri-La Nanjing",
+              "sourceUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+              "originalUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW6.png",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+            "name": "Jiangnan Wok",
+            "websiteUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+            "phone": "+86 25 8630 5988",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–14:00; 17:00–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/"
+          },
+          "tile": {
+            "regionSlug": "nanjing",
+            "kind": "top",
+            "slug": "jiangnan-wok",
+            "name": "Jiangnan Wok",
+            "neighborhood": "Gulou · Zhongyang Road",
+            "cuisine": "Huaiyang",
+            "address": "Level 1, Shangri-La Nanjing, 329 Zhongyang Road, Gulou District, Nanjing, China",
+            "websiteUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+            "description": "Huaiyang signatures and Jinling salted duck at Shangri-La Nanjing.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-2-e205a795ce185d70.webp",
+            "imageCredit": "Shangri-La Nanjing",
+            "imageSourceUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW6.png",
+            "imageNote": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "nanjing",
+          "slug": "jiangnan-wok-2",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW6.png",
+          "sourcePage": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+          "credit": "Shangri-La Nanjing",
+          "note": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-2-e205a795ce185d70.webp",
+          "sha256": "e205a795ce185d70413b5b3d8f1a5d4c1dda98f4a7451cfa7513161e5d18537b",
+          "width": 600,
+          "height": 430
+        },
+        {
+          "region": "nanjing",
+          "slug": "jiangnan-wok-3",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW7.png",
+          "sourcePage": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+          "credit": "Shangri-La Nanjing",
+          "note": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-3-4fe08d1e6a863d7c.webp",
+          "sha256": "4fe08d1e6a863d7c2e3b128e306433a655bf937ec31db7e3cde4acb37515be11",
+          "width": 600,
+          "height": 430
+        },
+        {
+          "region": "nanjing",
+          "slug": "jiangnan-wok-4",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW5.png",
+          "sourcePage": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+          "credit": "Shangri-La Nanjing",
+          "note": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-4-2d34703493cd73f1.webp",
+          "sha256": "2d34703493cd73f1210b48ad4c933781efeae37c33b494d3a3f3dea0fc7421f1",
+          "width": 600,
+          "height": 430
+        },
+        {
+          "region": "nanjing",
+          "slug": "jiangnan-wok-5",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW4.png",
+          "sourcePage": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+          "credit": "Shangri-La Nanjing",
+          "note": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-5-df854af2db1e50e3.webp",
+          "sha256": "df854af2db1e50e3599a6b54422d2b4505f9f346ca91e73144cfcc27f4321e33",
+          "width": 600,
+          "height": 430
+        },
+        {
+          "region": "nanjing",
+          "slug": "jiangnan-wok-6",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW1.png",
+          "sourcePage": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+          "credit": "Shangri-La Nanjing",
+          "note": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-6-7fa52fb405bdabb0.webp",
+          "sha256": "7fa52fb405bdabb00885ac8a8505decb6886706e7bbbab52787d2ec32121dbf4",
+          "width": 600,
+          "height": 430
+        },
+        {
+          "region": "nanjing",
+          "slug": "jiangnan-wok-7",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW2.png",
+          "sourcePage": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+          "credit": "Shangri-La Nanjing",
+          "note": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-7-8fa926368e6d04c9.webp",
+          "sha256": "8fa926368e6d04c9f8f8b9d9ff7eb4725e000210146e1f4f1a29ccf70641e9c6",
+          "width": 600,
+          "height": 430
+        },
+        {
+          "region": "nanjing",
+          "slug": "jiangnan-wok-8",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/nanjing_shangrila/dining/restaurants/jiangnan-wok/20251216_SLNJ_JNW_Head3.png",
+          "sourcePage": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+          "credit": "Shangri-La Nanjing",
+          "note": "Jiangnan Wok — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nanjing/researched/jiangnan-wok-8-2542b13d88958b90.webp",
+          "sha256": "2542b13d88958b903b554d8f1d1c236cc56c4249bd5f0bb47268537419d4782f",
+          "width": 600,
+          "height": 430
+        }
+      ],
+      "geocoding": {
+        "latitude": 32.078443,
+        "longitude": 118.782775,
+        "sourceUrl": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
+        "matchedAddress": "jiangnan-wok",
+        "addressType": "Property",
+        "method": "Published property map coordinates"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Goodme Fresh Experience — Yuhua MixC World opens in Yuhuatai · Yuhua MixC World",
+        "description": "Goodme’s first fresh-experience store opened at Yuhua MixC World with coffee and locally inspired gelato.",
+        "sourceUrl": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml",
+        "address": "1/F, Yuhua MixC World, 1 Xiangxiu Road (向秀路), Yuhuatai District, Nanjing, China",
+        "latitude": 31.9625627,
+        "longitude": 118.7274398,
+        "productName": "Goodme Fresh Experience — Yuhua MixC World",
+        "utcStartDateTime": "2026-09-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Yangtze Evening News’s September 20 visit reports the September 19 opening; Nanjing Daily’s September 19 announcement corroborates it.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nanjing",
+          "China",
+          "Yuhuatai · Yuhua MixC World",
+          "Coffee, tea and gelato"
+        ],
+        "longFormSummary": "<p>Goodme’s first fresh-experience store opened at Yuhua MixC World with coffee and locally inspired gelato. <cite data-ref=\"https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml",
+            "title": "Goodme Fresh Experience — Yuhua MixC World — research source",
+            "confidence": 90,
+            "reasoning": "Yangtze Evening News’s September 20 visit reports the September 19 opening; Nanjing Daily’s September 19 announcement corroborates it."
+          },
+          {
+            "url": "https://ditu.amap.com/place/B0KU7A3X8U",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml",
+          "menu": {
+            "pinSourceUrl": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml",
+            "name": "Goodme Fresh Experience — Yuhua MixC World",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Opening menu selections",
+                "url": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Light coconut latte",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Jinling rice-wine gelato",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pistachio gelato",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Extra-matcha gelato",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Guanyun Tea Harmony gelato",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Yangtze Evening News’s opening visit names these items without prices. Checked September 7 planning report, Nanjing Daily confirmation, operator/domain, ordering and gallery searches. Other Goodme branches’ drinks and expired September 12–14 pop-up tastings are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 31.9625627,
+              "longitude": 118.7274398,
+              "sourceUrl": "https://ditu.amap.com/place/B0KU7A3X8U",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml",
+            "name": "Goodme Fresh Experience — Yuhua MixC World",
+            "websiteUrl": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml"
+          },
+          "tile": {
+            "regionSlug": "nanjing",
+            "kind": "opening",
+            "slug": "goodme-yuhua",
+            "name": "Goodme Fresh Experience — Yuhua MixC World",
+            "neighborhood": "Yuhuatai · Yuhua MixC World",
+            "cuisine": "Coffee, tea and gelato",
+            "address": "1/F, Yuhua MixC World, 1 Xiangxiu Road (向秀路), Yuhuatai District, Nanjing, China",
+            "websiteUrl": "https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnhav1505510.shtml",
+            "description": "Goodme’s first fresh-experience store opened at Yuhua MixC World with coffee and locally inspired gelato.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-09-19",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 31.9625627,
+        "longitude": 118.7274398,
+        "sourceUrl": "https://ditu.amap.com/place/B0KU7A3X8U",
+        "matchedAddress": "goodme-yuhua",
+        "addressType": "Property",
+        "method": "Published mall coordinates in GCJ-02; converted to approximate WGS84",
+        "originalLatitude": 31.960542,
+        "originalLongitude": 118.732649,
+        "originalCoordinateSystem": "GCJ-02"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shang Palace — Qingdao — Qingdao restaurant guide",
+        "description": "Cantonese and regional dishes with local seafood at Shangri-La Qingdao.",
+        "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+        "address": "Level 1, City Wing, Shangri-La Qingdao, 9 Xianggang Middle Road, Shinan District, Qingdao, China",
+        "latitude": 36.064802,
+        "longitude": 120.378659,
+        "productName": "Shang Palace — Qingdao",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Qingdao",
+          "China",
+          "Shinan · Xianggang Middle Road",
+          "Cantonese and regional Chinese"
+        ],
+        "longFormSummary": "<p>Cantonese and regional dishes with local seafood at Shangri-La Qingdao. <cite data-ref=\"https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+            "title": "Shang Palace — Qingdao — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/250723shangpalacemenu.pdf",
+            "title": "À la carte selections",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "menu": {
+            "pinSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+            "name": "Shang Palace — Qingdao",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte selections",
+                "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Goose liver with haw slices",
+                    "price": 96
+                  },
+                  {
+                    "name": "Steamed lotus root with glutinous rice",
+                    "price": 32
+                  },
+                  {
+                    "name": "Bamboo shoots with chilli sauce",
+                    "price": 48
+                  },
+                  {
+                    "name": "Tossed octopus",
+                    "price": 108,
+                    "note": "Choose spring-onion or spring-onion-and-pepper preparation."
+                  }
+                ],
+                "note": "Currently linked July 2025 branch PDF, visually checked pages 6 and 12. CNY prices include 10% service charge and 6% VAT. Summer-specific items are excluded; no October 2026 price revision is claimed.",
+                "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/250723shangpalacemenu.pdf"
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 36.064802,
+              "longitude": 120.378659,
+              "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-0-24de6ca4657ecc12.webp",
+              "alt": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+              "credit": "Shangri-La Qingdao",
+              "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+              "originalUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/250328SP1920500below1m4.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+            "name": "Shang Palace — Qingdao",
+            "websiteUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+            "phone": "+86 532 8388 3838",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Lunch 11:30–14:30; dinner 17:30–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/"
+          },
+          "tile": {
+            "regionSlug": "qingdao",
+            "kind": "top",
+            "slug": "shang-palace-qingdao",
+            "name": "Shang Palace — Qingdao",
+            "neighborhood": "Shinan · Xianggang Middle Road",
+            "cuisine": "Cantonese and regional Chinese",
+            "address": "Level 1, City Wing, Shangri-La Qingdao, 9 Xianggang Middle Road, Shinan District, Qingdao, China",
+            "websiteUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+            "description": "Cantonese and regional dishes with local seafood at Shangri-La Qingdao.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-0-24de6ca4657ecc12.webp",
+            "imageCredit": "Shangri-La Qingdao",
+            "imageSourceUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/250328SP1920500below1m4.jpg",
+            "imageNote": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "qingdao",
+          "slug": "shang-palace-qingdao-0",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/250328SP1920500below1m4.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "credit": "Shangri-La Qingdao",
+          "note": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-0-24de6ca4657ecc12.webp",
+          "sha256": "24de6ca4657ecc12d35340c4c9e883c1be0f1891600e632262892a94dfb4ac00",
+          "width": 1400,
+          "height": 365
+        },
+        {
+          "region": "qingdao",
+          "slug": "shang-palace-qingdao-1",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/shangpalace1920500_below1m_240412.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "credit": "Shangri-La Qingdao",
+          "note": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-1-93f84ca51f4936d7.webp",
+          "sha256": "93f84ca51f4936d7201263eb4946e680c161ad8328ad64530e2ab311b5f99baf",
+          "width": 1400,
+          "height": 365
+        },
+        {
+          "region": "qingdao",
+          "slug": "shang-palace-qingdao-2",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/250328SP1920500below1m1.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "credit": "Shangri-La Qingdao",
+          "note": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-2-86a30a9f8ba4dd59.webp",
+          "sha256": "86a30a9f8ba4dd59e170789108e1047067374b20d1609a29cfaaf74947e67dd6",
+          "width": 1400,
+          "height": 365
+        },
+        {
+          "region": "qingdao",
+          "slug": "shang-palace-qingdao-3",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/duck600340.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "credit": "Shangri-La Qingdao",
+          "note": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-3-5c5625744b31df2f.webp",
+          "sha256": "5c5625744b31df2fb4171d25ee3ef938975071e089d28008fbbfe3d90d6b4622",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "qingdao",
+          "slug": "shang-palace-qingdao-4",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/fotiaoqiang600340.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "credit": "Shangri-La Qingdao",
+          "note": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-4-8caad8a761de1453.webp",
+          "sha256": "8caad8a761de1453ee4e91f93be9b9123abc3ceb180fb4962f6e36a1bb035275",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "qingdao",
+          "slug": "shang-palace-qingdao-5",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/paigu600340.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "credit": "Shangri-La Qingdao",
+          "note": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-5-08eb3f7934a041cb.webp",
+          "sha256": "08eb3f7934a041cbedd6c92594adb4977819fc52b3c2e788e4357f80f958a6fe",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "qingdao",
+          "slug": "shang-palace-qingdao-6",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/xiaodaomian600340.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "credit": "Shangri-La Qingdao",
+          "note": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-6-99b2dfef2372578e.webp",
+          "sha256": "99b2dfef2372578e9152ca91fb30133ec5590d1a63c047433da5e9d6e56bbc7a",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "qingdao",
+          "slug": "shang-palace-qingdao-7",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/ShangPalace600340.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+          "credit": "Shangri-La Qingdao",
+          "note": "Shang Palace Qingdao — official branch dining photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/shang-palace-qingdao-7-2b2d378d1579fa53.webp",
+          "sha256": "2b2d378d1579fa5310a91df1a2ac43485337e0d56e2faccea76d9123464b5109",
+          "width": 600,
+          "height": 340
+        }
+      ],
+      "geocoding": {
+        "latitude": 36.064802,
+        "longitude": 120.378659,
+        "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+        "matchedAddress": "shang-palace-qingdao",
+        "addressType": "Property",
+        "method": "Published property map coordinates"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Café Yum — Qingdao restaurant guide",
+        "description": "International buffets and a priced à la carte menu, with a published children’s dining benefit.",
+        "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+        "address": "Level 1, Valley Wing, Shangri-La Qingdao, 9 Xianggang Middle Road, Shinan District, Qingdao, China",
+        "latitude": 36.064802,
+        "longitude": 120.378659,
+        "productName": "Café Yum",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Qingdao",
+          "China",
+          "Shinan · Xianggang Middle Road",
+          "International buffet"
+        ],
+        "longFormSummary": "<p>International buffets and a priced à la carte menu, with a published children’s dining benefit. <cite data-ref=\"https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+            "title": "Café Yum — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/cafeyummenu.pdf",
+            "title": "À la carte",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+          "menu": {
+            "pinSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+            "name": "Café Yum",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Barley and cranberry salad",
+                    "price": 48
+                  },
+                  {
+                    "name": "Hainanese chicken rice",
+                    "price": 78
+                  },
+                  {
+                    "name": "Mackerel fish dumplings",
+                    "price": 68
+                  },
+                  {
+                    "name": "Beef burger with chips",
+                    "price": 98
+                  },
+                  {
+                    "name": "Grilled salmon steak",
+                    "price": 118
+                  },
+                  {
+                    "name": "Classic tiramisu",
+                    "price": 48
+                  }
+                ],
+                "note": "Currently linked branch PDF; CNY prices include 10% service charge and 6% VAT. The PDF lists à la carte until midnight while the branch page lists 23:00; confirm the later service window.",
+                "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/cafeyummenu.pdf"
+              },
+              {
+                "label": "Buffet prices",
+                "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Breakfast buffet — per person",
+                    "price": 182
+                  },
+                  {
+                    "name": "Lunch buffet — per person",
+                    "price": 378
+                  },
+                  {
+                    "name": "Dinner buffet — per person",
+                    "price": 378
+                  }
+                ],
+                "note": "Current branch-page prices; buffet service/tax treatment is not specified separately. Confirm charges and current selections."
+              },
+              {
+                "label": "Children’s buffet dining benefit",
+                "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Eligible under-six child buffet",
+                    "price": 0,
+                    "note": "Up to two children under six, registered hotel guests, dining with a paying Shangri-La Circle member."
+                  },
+                  {
+                    "name": "Eligible child buffet — 50% discount",
+                    "priceLabel": "Price not published",
+                    "note": "Additional under-six children and children aged 6–11 qualify subject to the operator’s Children’s Meal Plan terms."
+                  }
+                ],
+                "note": "A child/membership eligibility benefit, not an unconditional free meal. Confirm registered-guest eligibility and applicable buffet charges with the venue."
+              }
+            ],
+            "specials": [
+              {
+                "kind": "other",
+                "title": "Children’s buffet dining benefit",
+                "description": "Eligible hotel-guest children receive complimentary or half-price buffet dining with a paying Shangri-La Circle member.",
+                "schedule": "Daily buffet lunch 11:30–14:30 and dinner 17:30–21:00",
+                "conditions": [
+                  "Children must be registered hotel guests dining with a paying Shangri-La Circle member.",
+                  "Up to two children under six receive complimentary buffet dining.",
+                  "Additional children under six and children aged 6–11 receive 50% off the buffet price, subject to the Children’s Meal Plan terms.",
+                  "Confirm eligibility and buffet availability with the venue. No operator expiry is published."
+                ],
+                "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+                "discounted": true,
+                "menuLabel": "Children’s buffet dining benefit",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "11:30",
+                      "end": "14:30"
+                    },
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30",
+                      "end": "21:00"
+                    }
+                  ]
+                }
+              }
+            ],
+            "location": {
+              "latitude": 36.064802,
+              "longitude": 120.378659,
+              "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/cafe-yum-0-b1b906124cb41397.webp",
+              "alt": "Café Yum — official branch restaurant photograph",
+              "credit": "Shangri-La Qingdao / Café Yum",
+              "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+              "originalUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/250328YUM1920500below1m_1.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+            "name": "Café Yum",
+            "websiteUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+            "phone": "+86 532 8388 3838",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "Breakfast 06:00–10:00"
+              },
+              {
+                "days": "Saturday–Sunday and public holidays",
+                "hours": "Breakfast 06:00–10:30"
+              },
+              {
+                "days": "Daily",
+                "hours": "Lunch 11:30–14:30; dinner 17:30–21:00; à la carte 06:00–23:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/"
+          },
+          "tile": {
+            "regionSlug": "qingdao",
+            "kind": "top",
+            "slug": "cafe-yum",
+            "name": "Café Yum",
+            "neighborhood": "Shinan · Xianggang Middle Road",
+            "cuisine": "International buffet",
+            "address": "Level 1, Valley Wing, Shangri-La Qingdao, 9 Xianggang Middle Road, Shinan District, Qingdao, China",
+            "websiteUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+            "description": "International buffets and a priced à la carte menu, with a published children’s dining benefit.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/cafe-yum-0-b1b906124cb41397.webp",
+            "imageCredit": "Shangri-La Qingdao / Café Yum",
+            "imageSourceUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/250328YUM1920500below1m_1.jpg",
+            "imageNote": "Café Yum — official branch restaurant photograph"
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "qingdao",
+        "profile": {
+          "pinSourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+          "name": "Café Yum",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "À la carte",
+              "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Barley and cranberry salad",
+                  "price": 48
+                },
+                {
+                  "name": "Hainanese chicken rice",
+                  "price": 78
+                },
+                {
+                  "name": "Mackerel fish dumplings",
+                  "price": 68
+                },
+                {
+                  "name": "Beef burger with chips",
+                  "price": 98
+                },
+                {
+                  "name": "Grilled salmon steak",
+                  "price": 118
+                },
+                {
+                  "name": "Classic tiramisu",
+                  "price": 48
+                }
+              ],
+              "note": "Currently linked branch PDF; CNY prices include 10% service charge and 6% VAT. The PDF lists à la carte until midnight while the branch page lists 23:00; confirm the later service window.",
+              "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/cafeyummenu.pdf"
+            },
+            {
+              "label": "Buffet prices",
+              "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Breakfast buffet — per person",
+                  "price": 182
+                },
+                {
+                  "name": "Lunch buffet — per person",
+                  "price": 378
+                },
+                {
+                  "name": "Dinner buffet — per person",
+                  "price": 378
+                }
+              ],
+              "note": "Current branch-page prices; buffet service/tax treatment is not specified separately. Confirm charges and current selections."
+            },
+            {
+              "label": "Children’s buffet dining benefit",
+              "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Eligible under-six child buffet",
+                  "price": 0,
+                  "note": "Up to two children under six, registered hotel guests, dining with a paying Shangri-La Circle member."
+                },
+                {
+                  "name": "Eligible child buffet — 50% discount",
+                  "priceLabel": "Price not published",
+                  "note": "Additional under-six children and children aged 6–11 qualify subject to the operator’s Children’s Meal Plan terms."
+                }
+              ],
+              "note": "A child/membership eligibility benefit, not an unconditional free meal. Confirm registered-guest eligibility and applicable buffet charges with the venue."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Children’s buffet dining benefit",
+              "description": "Eligible hotel-guest children receive complimentary or half-price buffet dining with a paying Shangri-La Circle member.",
+              "schedule": "Daily buffet lunch 11:30–14:30 and dinner 17:30–21:00",
+              "conditions": [
+                "Children must be registered hotel guests dining with a paying Shangri-La Circle member.",
+                "Up to two children under six receive complimentary buffet dining.",
+                "Additional children under six and children aged 6–11 receive 50% off the buffet price, subject to the Children’s Meal Plan terms.",
+                "Confirm eligibility and buffet availability with the venue. No operator expiry is published."
+              ],
+              "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+              "discounted": true,
+              "menuLabel": "Children’s buffet dining benefit",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "21:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "location": {
+            "latitude": 36.064802,
+            "longitude": 120.378659,
+            "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+            "checkedAt": "2026-10-10"
+          },
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/cafe-yum-0-b1b906124cb41397.webp",
+            "alt": "Café Yum — official branch restaurant photograph",
+            "credit": "Shangri-La Qingdao / Café Yum",
+            "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+            "originalUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/250328YUM1920500below1m_1.jpg",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Shinan · Xianggang Middle Road",
+          "address": "Level 1, Valley Wing, Shangri-La Qingdao, 9 Xianggang Middle Road, Shinan District, Qingdao, China",
+          "websiteUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "qingdao",
+          "slug": "cafe-yum-0",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/250328YUM1920500below1m_1.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+          "credit": "Shangri-La Qingdao / Café Yum",
+          "note": "Café Yum — official branch restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/cafe-yum-0-b1b906124cb41397.webp",
+          "sha256": "b1b906124cb41397aeda2a07f0990d6308a1cd71975071cff97daea3be0eba6f",
+          "width": 1400,
+          "height": 365
+        },
+        {
+          "region": "qingdao",
+          "slug": "cafe-yum-1",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/cafeyum1920500_below1m_240412.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+          "credit": "Shangri-La Qingdao / Café Yum",
+          "note": "Café Yum — official branch restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/cafe-yum-1-13cccccd36ad6e6a.webp",
+          "sha256": "13cccccd36ad6e6a37ac5420cdbbac14fa157497235ba1ad0613f03996ff194d",
+          "width": 1400,
+          "height": 365
+        },
+        {
+          "region": "qingdao",
+          "slug": "cafe-yum-2",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/250328YUM1920500below1m.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+          "credit": "Shangri-La Qingdao / Café Yum",
+          "note": "Café Yum — official branch restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/cafe-yum-2-d02450d9e6f6ddd2.webp",
+          "sha256": "d02450d9e6f6ddd2c99be255d89392b0f094a3d78718541286de1de349bb67c4",
+          "width": 1400,
+          "height": 365
+        },
+        {
+          "region": "qingdao",
+          "slug": "cafe-yum-3",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/250328CAFEYUM1920500below1m.jpg",
+          "sourcePage": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
+          "credit": "Shangri-La Qingdao / Café Yum",
+          "note": "Café Yum — official branch restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/qingdao/researched/cafe-yum-3-bebf654055d42fab.webp",
+          "sha256": "bebf654055d42fab7f9983bea7dcae301a851b337c20f97e06adcffa6433af9c",
+          "width": 1400,
+          "height": 365
+        }
+      ],
+      "geocoding": {
+        "latitude": 36.064802,
+        "longitude": 120.378659,
+        "sourceUrl": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
+        "matchedAddress": "shang-palace-qingdao",
+        "addressType": "Property",
+        "method": "Published property map coordinates"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Haidilao Dapaidang — AEON West Coast opens in Huangdao · West Coast",
+        "description": "The new seafood hotpot branch began trial service on September 24 at AEON Mall West Coast.",
+        "sourceUrl": "https://qingdao.dzwww.com/qingdaonews/202609/t20260924_18151563.htm",
+        "address": "4/F, AEON Mall West Coast, 1669 Lijiang West Road, Huangdao District, Qingdao, China",
+        "latitude": 35.93197,
+        "longitude": 120.15965,
+        "productName": "Haidilao Dapaidang — AEON West Coast",
+        "utcStartDateTime": "2026-09-24T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Dazhong Qingdao’s September 24, 2026 report explicitly confirms trial opening that day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Qingdao",
+          "China",
+          "Huangdao · West Coast",
+          "Seafood and hotpot"
+        ],
+        "longFormSummary": "<p>The new seafood hotpot branch began trial service on September 24 at AEON Mall West Coast. <cite data-ref=\"https://qingdao.dzwww.com/qingdaonews/202609/t20260924_18151563.htm\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://qingdao.dzwww.com/qingdaonews/202609/t20260924_18151563.htm",
+            "title": "Haidilao Dapaidang — AEON West Coast — research source",
+            "confidence": 90,
+            "reasoning": "Dazhong Qingdao’s September 24, 2026 report explicitly confirms trial opening that day."
+          },
+          {
+            "url": "https://mapcarta.com/W863839775",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://qingdao.dzwww.com/qingdaonews/202609/t20260924_18151563.htm",
+          "menu": {
+            "pinSourceUrl": "https://qingdao.dzwww.com/qingdaonews/202609/t20260924_18151563.htm",
+            "name": "Haidilao Dapaidang — AEON West Coast",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Verified trial-opening dishes",
+                "url": "https://qingdao.dzwww.com/qingdaonews/202609/t20260924_18151563.htm",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Fresh oysters",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Six-head abalone",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Black tiger prawns",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fresh-cut diaolong beef",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Rice-congee broth",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tom yum broth",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Golden chicken and fish-maw broth",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Dazhong’s branch report names these items without dish-level prices. Its average spend is not used as a dish price. Operator, ordering/menu-image and gallery searches checked. October 1–7 tasting promotions have expired; other branches’ menus/photos are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 35.93197,
+              "longitude": 120.15965,
+              "sourceUrl": "https://mapcarta.com/W863839775",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://qingdao.dzwww.com/qingdaonews/202609/t20260924_18151563.htm",
+            "name": "Haidilao Dapaidang — AEON West Coast",
+            "websiteUrl": "https://www.haidilao.com/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://qingdao.dzwww.com/qingdaonews/202609/t20260924_18151563.htm"
+          },
+          "tile": {
+            "regionSlug": "qingdao",
+            "kind": "opening",
+            "slug": "haidilao-westcoast",
+            "name": "Haidilao Dapaidang — AEON West Coast",
+            "neighborhood": "Huangdao · West Coast",
+            "cuisine": "Seafood and hotpot",
+            "address": "4/F, AEON Mall West Coast, 1669 Lijiang West Road, Huangdao District, Qingdao, China",
+            "websiteUrl": "https://www.haidilao.com/",
+            "description": "The new seafood hotpot branch began trial service on September 24 at AEON Mall West Coast.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-09-24",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 35.93197,
+        "longitude": 120.15965,
+        "sourceUrl": "https://mapcarta.com/W863839775",
+        "matchedAddress": "haidilao-westcoast",
+        "addressType": "Property",
+        "method": "Mapped AEON West Coast mall centre, approximate branch location"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Jin Jing Ge — Suzhou restaurant guide",
+        "description": "Suzhou and Chinese regional cooking on a private island in Jinji Lake.",
+        "sourceUrl": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+        "address": "Four Seasons Hotel Suzhou, 88 Siji Road (Four Seasons Boulevard), Suzhou, Jiangsu, China",
+        "latitude": 31.30093755786,
+        "longitude": 120.694306195523,
+        "productName": "Jin Jing Ge",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Suzhou",
+          "China",
+          "Jinji Lake · Private island",
+          "Suzhou and Chinese regional"
+        ],
+        "longFormSummary": "<p>Suzhou and Chinese regional cooking on a private island in Jinji Lake. <cite data-ref=\"https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+            "title": "Jin Jing Ge — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.fourseasons.com/suzhou/dining/menus/jin-jing-ge-a-la-carte/",
+            "title": "À la carte",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%9B%9B%E5%AD%A3%E8%B7%AF88%E5%8F%B7%E5%9B%9B%E5%AD%A3%E9%85%92%E5%BA%97&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "menu": {
+            "pinSourceUrl": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+            "name": "Jin Jing Ge",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.fourseasons.com/suzhou/dining/menus/jin-jing-ge-a-la-carte/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Honey-soy carp",
+                    "price": 198
+                  },
+                  {
+                    "name": "Wheat gluten with four delights",
+                    "price": 68
+                  },
+                  {
+                    "name": "Suzhou sautéed river prawns",
+                    "price": 398
+                  },
+                  {
+                    "name": "Sweet-and-sour mandarin fish",
+                    "price": 348
+                  },
+                  {
+                    "name": "Steamed duck with fish maw, ham and bamboo",
+                    "price": 398
+                  },
+                  {
+                    "name": "Red-rice braised pork belly — full portion",
+                    "price": 438
+                  },
+                  {
+                    "name": "Crispy chicken with spiced salt",
+                    "price": 178
+                  },
+                  {
+                    "name": "Pork-belly noodle soup — per person",
+                    "price": 88
+                  }
+                ],
+                "note": "Current operator à la carte prices in CNY; service/tax treatment is not published online. The branch weekday set advertisement and linked set menu conflict (CNY 528 versus 928 for two), so that set price and a special are not inferred."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 31.30093755786,
+              "longitude": 120.694306195523,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%9B%9B%E5%AD%A3%E8%B7%AF88%E5%8F%B7%E5%9B%9B%E5%AD%A3%E9%85%92%E5%BA%97&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-0-160266719194632a.webp",
+              "alt": "Jin Jing Ge — official branch photograph; pictured dishes may vary",
+              "credit": "Four Seasons Hotel Suzhou",
+              "sourceUrl": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+              "originalUrl": "https://www.fourseasons.com/alt/img-opt/~75.701.762,3741-2,1167-1498,4123-1997,8833/publish/content/dam/fourseasons/images/web/SUZ/SUZ_489_original.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+            "name": "Jin Jing Ge",
+            "websiteUrl": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+            "phone": "+86 512 6281 8888",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Lunch 11:30–14:00; dinner 17:30–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/"
+          },
+          "tile": {
+            "regionSlug": "suzhou",
+            "kind": "top",
+            "slug": "jin-jing-ge",
+            "name": "Jin Jing Ge",
+            "neighborhood": "Jinji Lake · Private island",
+            "cuisine": "Suzhou and Chinese regional",
+            "address": "Four Seasons Hotel Suzhou, 88 Siji Road (Four Seasons Boulevard), Suzhou, Jiangsu, China",
+            "websiteUrl": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+            "description": "Suzhou and Chinese regional cooking on a private island in Jinji Lake.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-0-160266719194632a.webp",
+            "imageCredit": "Four Seasons Hotel Suzhou",
+            "imageSourceUrl": "https://www.fourseasons.com/alt/img-opt/~75.701.762,3741-2,1167-1498,4123-1997,8833/publish/content/dam/fourseasons/images/web/SUZ/SUZ_489_original.jpg",
+            "imageNote": "Jin Jing Ge — official branch photograph; pictured dishes may vary"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-0",
+          "source": "https://www.fourseasons.com/alt/img-opt/~75.701.762,3741-2,1167-1498,4123-1997,8833/publish/content/dam/fourseasons/images/web/SUZ/SUZ_489_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Jin Jing Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-0-160266719194632a.webp",
+          "sha256": "160266719194632a2c90f77f840a4e3a00b0b7f2c7337358db45fa6b3c4c9ab3",
+          "width": 701,
+          "height": 935
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-2",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-1288,0588-2250,0000-1265,6250/publish/content/dam/fourseasons/images/web/SUZ/SUZ_1607_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Jin Jing Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-2-4f58f6cad40d19ca.webp",
+          "sha256": "4f58f6cad40d19ca62a5c1e96daa0855bb1a8143892682ad417f5531257baab1",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-3",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-454,8321-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SUZ/SUZ_1744_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Braised pork belly fine dining dish",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-3-1371ccb5ed984798.webp",
+          "sha256": "1371ccb5ed984798906790b4e75ebfb8aed0a6306b4ac890ae31fb3c9ebce105",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-4",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-281,2500-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SUZ/SUZ_1745_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Deep fried fish fine dining dish",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-4-a9d20932526dffa8.webp",
+          "sha256": "a9d20932526dffa8ae6f6f57fac391432ec12c574a0a289a13ca42ae7aa12c57",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-5",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-281,2500-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SUZ/SUZ_1746_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Crispy chicken dish on white plate",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-5-0651b5d2b00239b8.webp",
+          "sha256": "0651b5d2b00239b8d4bbe443f65a44c2b1914a651c2ce47ada3e966940cedafc",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-6",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-485,2503-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SUZ/SUZ_1743_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Soft boiled egg dish in a white cup",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-6-69fc5b4f95185d95.webp",
+          "sha256": "69fc5b4f95185d95b2a76eb8d6d0f96a65acad8029a7371cf2934fdbc3c1b226",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-7",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-1247,4893-2250,0000-1265,6250/publish/content/dam/fourseasons/images/web/SUZ/SUZ_1734_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Jin Jing Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-7-6dc3ba82d94fe11f.webp",
+          "sha256": "6dc3ba82d94fe11f4e29a1d072f503e99d662548eb1b5f7517775aa3c667f796",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-8",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-1402,5512-2001,0000-1125,5625/publish/content/dam/fourseasons/images/web/SUZ/SUZ_185_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Jin Jing Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-8-763fbe145bf1de84.webp",
+          "sha256": "763fbe145bf1de84f5a2ef2cacbe29c7d2d7070a3d16857db16b4dcbbe733dea",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-9",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-937,2188-2001,0000-1125,5625/publish/content/dam/fourseasons/images/web/SUZ/SUZ_348_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Jin Jing Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-9-40e00ffcb3b207f5.webp",
+          "sha256": "40e00ffcb3b207f5f3bf8c94e551eb4dd25c17449de41800c9e003924aecc597",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "suzhou",
+          "slug": "jin-jing-ge-11",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.880.0,0000-162,8306-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SUZ/SUZ_488_original.jpg",
+          "sourcePage": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
+          "credit": "Four Seasons Hotel Suzhou",
+          "note": "Large 15-person private dining table at luxury hotel restaurant",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/jin-jing-ge-11-46fab5a1c075c2ee.webp",
+          "sha256": "46fab5a1c075c2ee1befcdbec8390af407b90696839501c9d893bd56b2d8a46e",
+          "width": 880,
+          "height": 495
+        }
+      ],
+      "geocoding": {
+        "latitude": 31.30093755786,
+        "longitude": 120.694306195523,
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%9B%9B%E5%AD%A3%E8%B7%AF88%E5%8F%B7%E5%9B%9B%E5%AD%A3%E9%85%92%E5%BA%97&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+        "matchedAddress": "江苏省苏州市苏州工业园区熙岸社区四季路",
+        "score": 81.15,
+        "addressType": "StreetName"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Niccolo Kitchen — Suzhou — Suzhou restaurant guide",
+        "description": "Tuscan cooking above Jinji Lake, with a branch-specific Explorer Club benefit.",
+        "sourceUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+        "address": "115/F, Suzhou IFS, 409 Suzhou Avenue East, Suzhou Industrial Park, Suzhou, China",
+        "latitude": 31.322296,
+        "longitude": 120.717064,
+        "productName": "Niccolo Kitchen — Suzhou",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Suzhou",
+          "China",
+          "Industrial Park · Suzhou IFS",
+          "Tuscan and international"
+        ],
+        "longFormSummary": "<p>Tuscan cooking above Jinji Lake, with a branch-specific Explorer Club benefit. <cite data-ref=\"https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+            "title": "Niccolo Kitchen — Suzhou — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          },
+          {
+            "url": "https://www.niccolohotels.com/getattachment/d02c747f-a5bb-4fc2-9866-df4e6c85e750/NSZ-NK-Tuscan-Menu-Lunch-2026-August-1.pdf",
+            "title": "Tuscan lunch à la carte",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+            "title": "Explorer Club à la carte benefit",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          },
+          {
+            "url": "https://www.travelmyth.co.uk/Suzhou/Hotels/Niccolo-Suzhou_tmid4067713",
+            "title": "Approximate map location",
+            "confidence": 90,
+            "reasoning": "Checked October 10, 2026. Branch provenance, published menu conditions and approximate map coordinates are retained."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+          "menu": {
+            "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+            "name": "Niccolo Kitchen — Suzhou",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Tuscan lunch à la carte",
+                "url": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Panzanella Tuscan bread salad",
+                    "price": 88
+                  },
+                  {
+                    "name": "Ciabatta bruschetta with ricotta, fig and prosciutto",
+                    "price": 88
+                  },
+                  {
+                    "name": "Burrata with tomatoes and basil",
+                    "price": 118
+                  },
+                  {
+                    "name": "Porcini mushroom soup",
+                    "price": 68
+                  },
+                  {
+                    "name": "Roasted whole perch with white bean stew",
+                    "price": 228
+                  },
+                  {
+                    "name": "Grilled New Zealand lamb chops",
+                    "price": 358
+                  },
+                  {
+                    "name": "Tiramisu",
+                    "price": 108
+                  },
+                  {
+                    "name": "Tuscan iced tea",
+                    "price": 68
+                  }
+                ],
+                "note": "Currently linked August 1, 2026 branch lunch PDF, visually transcribed. CNY prices include service charge and tax. These are Suzhou prices, not Changsha’s.",
+                "documentUrl": "https://www.niccolohotels.com/getattachment/d02c747f-a5bb-4fc2-9866-df4e6c85e750/NSZ-NK-Tuscan-Menu-Lunch-2026-August-1.pdf"
+              },
+              {
+                "label": "Explorer Club à la carte benefit",
+                "url": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Eligible à la carte food and beverages — 15% member discount",
+                    "priceLabel": "Price not published",
+                    "note": "Discount applies to eligible menu purchases, not service charge or VAT; member-card, reservation and table-size conditions apply."
+                  }
+                ],
+                "note": "Published base dish prices remain in the separate branch menu. The club page was checked with the relevant hotel selected; no discounted dish totals are inferred."
+              }
+            ],
+            "specials": [
+              {
+                "kind": "other",
+                "title": "Explorer Club members — 15% off à la carte dining",
+                "description": "The operator publishes a 15% food-and-beverage benefit for eligible Explorer Club members.",
+                "schedule": "Daily lunch 12:00–14:30 and dinner 17:30–22:00, excluding blackout dates",
+                "conditions": [
+                  "Invitation-only Explorer Club membership, prior reservation and availability required; present the membership card when paying.",
+                  "One card and one receipt per table, up to 8 people including the member.",
+                  "À la carte only; cannot combine with other special offers or events. Catering, room service, takeaway, service charge and VAT are excluded.",
+                  "New Year’s Eve, Chinese New Year’s Eve, Valentine’s Day, May 20, Qixi, Christmas Eve, holidays and other hotel promotions are blacked out; confirm additional venue exclusions.",
+                  "No operator expiry is published. The displayed schedule is checked only through December 23, 2026, pending a new holiday-calendar review."
+                ],
+                "sourceUrl": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+                "discounted": true,
+                "menuLabel": "Explorer Club à la carte benefit",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "12:00",
+                      "end": "14:30"
+                    },
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30",
+                      "end": "22:00"
+                    }
+                  ],
+                  "excludesHolidays": true,
+                  "excludedDates": [
+                    "2026-01-01",
+                    "2026-01-02",
+                    "2026-01-03",
+                    "2026-02-14",
+                    "2026-02-15",
+                    "2026-02-16",
+                    "2026-02-17",
+                    "2026-02-18",
+                    "2026-02-19",
+                    "2026-02-20",
+                    "2026-02-21",
+                    "2026-02-22",
+                    "2026-02-23",
+                    "2026-04-04",
+                    "2026-04-05",
+                    "2026-04-06",
+                    "2026-05-01",
+                    "2026-05-02",
+                    "2026-05-03",
+                    "2026-05-04",
+                    "2026-05-05",
+                    "2026-05-20",
+                    "2026-06-19",
+                    "2026-06-20",
+                    "2026-06-21",
+                    "2026-08-19",
+                    "2026-09-25",
+                    "2026-09-26",
+                    "2026-09-27",
+                    "2026-10-01",
+                    "2026-10-02",
+                    "2026-10-03",
+                    "2026-10-04",
+                    "2026-10-05",
+                    "2026-10-06",
+                    "2026-10-07",
+                    "2026-12-24",
+                    "2026-12-31"
+                  ],
+                  "holidayCalendarThrough": "2026-12-23"
+                }
+              }
+            ],
+            "location": {
+              "latitude": 31.322296,
+              "longitude": 120.717064,
+              "sourceUrl": "https://www.travelmyth.co.uk/Suzhou/Hotels/Niccolo-Suzhou_tmid4067713",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/niccolo-suzhou-8-a6cdd190070f724e.webp",
+              "alt": "Niccolo Kitchen",
+              "credit": "Niccolo Suzhou",
+              "sourceUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+              "originalUrl": "https://www.niccolohotels.com/getmedia/17f313dc-6298-4023-ad2e-0e86c8042be5/nsz-niccolo-kitchen.jpg?width=1920&height=840&ext=.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+            "name": "Niccolo Kitchen — Suzhou",
+            "websiteUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+            "phone": "+86 512 6068 0306",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Lunch 12:00–14:30; dinner 17:30–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen"
+          },
+          "tile": {
+            "regionSlug": "suzhou",
+            "kind": "top",
+            "slug": "niccolo-suzhou",
+            "name": "Niccolo Kitchen — Suzhou",
+            "neighborhood": "Industrial Park · Suzhou IFS",
+            "cuisine": "Tuscan and international",
+            "address": "115/F, Suzhou IFS, 409 Suzhou Avenue East, Suzhou Industrial Park, Suzhou, China",
+            "websiteUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+            "description": "Tuscan cooking above Jinji Lake, with a branch-specific Explorer Club benefit.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/niccolo-suzhou-8-a6cdd190070f724e.webp",
+            "imageCredit": "Niccolo Suzhou",
+            "imageSourceUrl": "https://www.niccolohotels.com/getmedia/17f313dc-6298-4023-ad2e-0e86c8042be5/nsz-niccolo-kitchen.jpg?width=1920&height=840&ext=.jpg",
+            "imageNote": "Niccolo Kitchen"
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "suzhou",
+        "profile": {
+          "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+          "name": "Niccolo Kitchen — Suzhou",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "Tuscan lunch à la carte",
+              "url": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Panzanella Tuscan bread salad",
+                  "price": 88
+                },
+                {
+                  "name": "Ciabatta bruschetta with ricotta, fig and prosciutto",
+                  "price": 88
+                },
+                {
+                  "name": "Burrata with tomatoes and basil",
+                  "price": 118
+                },
+                {
+                  "name": "Porcini mushroom soup",
+                  "price": 68
+                },
+                {
+                  "name": "Roasted whole perch with white bean stew",
+                  "price": 228
+                },
+                {
+                  "name": "Grilled New Zealand lamb chops",
+                  "price": 358
+                },
+                {
+                  "name": "Tiramisu",
+                  "price": 108
+                },
+                {
+                  "name": "Tuscan iced tea",
+                  "price": 68
+                }
+              ],
+              "note": "Currently linked August 1, 2026 branch lunch PDF, visually transcribed. CNY prices include service charge and tax. These are Suzhou prices, not Changsha’s.",
+              "documentUrl": "https://www.niccolohotels.com/getattachment/d02c747f-a5bb-4fc2-9866-df4e6c85e750/NSZ-NK-Tuscan-Menu-Lunch-2026-August-1.pdf"
+            },
+            {
+              "label": "Explorer Club à la carte benefit",
+              "url": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Eligible à la carte food and beverages — 15% member discount",
+                  "priceLabel": "Price not published",
+                  "note": "Discount applies to eligible menu purchases, not service charge or VAT; member-card, reservation and table-size conditions apply."
+                }
+              ],
+              "note": "Published base dish prices remain in the separate branch menu. The club page was checked with the relevant hotel selected; no discounted dish totals are inferred."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Explorer Club members — 15% off à la carte dining",
+              "description": "The operator publishes a 15% food-and-beverage benefit for eligible Explorer Club members.",
+              "schedule": "Daily lunch 12:00–14:30 and dinner 17:30–22:00, excluding blackout dates",
+              "conditions": [
+                "Invitation-only Explorer Club membership, prior reservation and availability required; present the membership card when paying.",
+                "One card and one receipt per table, up to 8 people including the member.",
+                "À la carte only; cannot combine with other special offers or events. Catering, room service, takeaway, service charge and VAT are excluded.",
+                "New Year’s Eve, Chinese New Year’s Eve, Valentine’s Day, May 20, Qixi, Christmas Eve, holidays and other hotel promotions are blacked out; confirm additional venue exclusions.",
+                "No operator expiry is published. The displayed schedule is checked only through December 23, 2026, pending a new holiday-calendar review."
+              ],
+              "sourceUrl": "https://www.niccoloexplorerclub.com/aspx/MemberBenefits.aspx",
+              "discounted": true,
+              "menuLabel": "Explorer Club à la carte benefit",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "14:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "22:00"
+                  }
+                ],
+                "excludesHolidays": true,
+                "excludedDates": [
+                  "2026-01-01",
+                  "2026-01-02",
+                  "2026-01-03",
+                  "2026-02-14",
+                  "2026-02-15",
+                  "2026-02-16",
+                  "2026-02-17",
+                  "2026-02-18",
+                  "2026-02-19",
+                  "2026-02-20",
+                  "2026-02-21",
+                  "2026-02-22",
+                  "2026-02-23",
+                  "2026-04-04",
+                  "2026-04-05",
+                  "2026-04-06",
+                  "2026-05-01",
+                  "2026-05-02",
+                  "2026-05-03",
+                  "2026-05-04",
+                  "2026-05-05",
+                  "2026-05-20",
+                  "2026-06-19",
+                  "2026-06-20",
+                  "2026-06-21",
+                  "2026-08-19",
+                  "2026-09-25",
+                  "2026-09-26",
+                  "2026-09-27",
+                  "2026-10-01",
+                  "2026-10-02",
+                  "2026-10-03",
+                  "2026-10-04",
+                  "2026-10-05",
+                  "2026-10-06",
+                  "2026-10-07",
+                  "2026-12-24",
+                  "2026-12-31"
+                ],
+                "holidayCalendarThrough": "2026-12-23"
+              }
+            }
+          ],
+          "location": {
+            "latitude": 31.322296,
+            "longitude": 120.717064,
+            "sourceUrl": "https://www.travelmyth.co.uk/Suzhou/Hotels/Niccolo-Suzhou_tmid4067713",
+            "checkedAt": "2026-10-10"
+          },
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/niccolo-suzhou-8-a6cdd190070f724e.webp",
+            "alt": "Niccolo Kitchen",
+            "credit": "Niccolo Suzhou",
+            "sourceUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+            "originalUrl": "https://www.niccolohotels.com/getmedia/17f313dc-6298-4023-ad2e-0e86c8042be5/nsz-niccolo-kitchen.jpg?width=1920&height=840&ext=.jpg",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Industrial Park · Suzhou IFS",
+          "address": "115/F, Suzhou IFS, 409 Suzhou Avenue East, Suzhou Industrial Park, Suzhou, China",
+          "websiteUrl": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "suzhou",
+          "slug": "niccolo-suzhou-8",
+          "source": "https://www.niccolohotels.com/getmedia/17f313dc-6298-4023-ad2e-0e86c8042be5/nsz-niccolo-kitchen.jpg?width=1920&height=840&ext=.jpg",
+          "sourcePage": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+          "credit": "Niccolo Suzhou",
+          "note": "Niccolo Kitchen",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/niccolo-suzhou-8-a6cdd190070f724e.webp",
+          "sha256": "a6cdd190070f724ec413452ae1607671a1b54c744234d9860d6920ec850986f6",
+          "width": 1400,
+          "height": 613
+        },
+        {
+          "region": "suzhou",
+          "slug": "niccolo-suzhou-10",
+          "source": "https://www.niccolohotels.com/getmedia/6c49a6ed-078a-4562-9643-a3a1768b8e82/Bistecca-Alla-Fiorentina_1920x840.jpg?width=2000&height=875&ext=.jpg",
+          "sourcePage": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
+          "credit": "Niccolo Suzhou",
+          "note": "Niccolo Kitchen",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/niccolo-suzhou-10-f2fc7c4d836db8ca.webp",
+          "sha256": "f2fc7c4d836db8cab26d0469009befe21c82997c51770aa5b507bbec30094913",
+          "width": 1400,
+          "height": 613
+        }
+      ],
+      "geocoding": {
+        "latitude": 31.322296,
+        "longitude": 120.717064,
+        "sourceUrl": "https://www.travelmyth.co.uk/Suzhou/Hotels/Niccolo-Suzhou_tmid4067713",
+        "matchedAddress": "niccolo-suzhou",
+        "addressType": "Property",
+        "method": "Published property map coordinates"
+      }
+    }
+  ],
+  "notes": "Reviewed research/import snapshot. Runtime menus, details, tiles and promotions are managed in the database through APIs. Branch galleries are verified public Azure blobs. Coverage gaps, inaccessible galleries, menu conflicts and researched exclusions are recorded in restaurant-china-large-cities.md."
+}

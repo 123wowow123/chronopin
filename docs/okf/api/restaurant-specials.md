@@ -82,3 +82,7 @@ invalid inputs return 400. Every API write records its before/after state and
 admin identity in `AdminAudit`. DELETE archives the row and retains its source
 identity. The generic admin table API exposes this table as read-only so edits
 always use the validation and revision checks above.
+
+### Limited-time seasonal menus
+
+A verified seasonal menu can use `limitedTime: true` with `discounted: false`. It must provide both `validFrom` and `validThrough`, a sourced menu and explicit local service windows. These dated menus appear in Specials without claiming a price reduction; the existing availability checks show the next local start outside hours and remove expired menus. Ordinary non-discounted menus without this explicit dated flag remain excluded.

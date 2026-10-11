@@ -199,6 +199,8 @@ export default class Source {
          AND NOT EXISTS (
            SELECT 1 FROM "PinSource" JOIN "Pin" ON "Pin"."id" = "PinSource"."pinId" AND "Pin"."utcDeletedDateTime" IS NULL
            WHERE "PinSource"."sourceId" = "Source"."id" AND "PinSource"."utcRemovedDateTime" IS NULL)
+         -- A reference a person's wiki cites is not an orphan (0151).
+         AND NOT EXISTS (SELECT 1 FROM "PersonSource" WHERE "PersonSource"."sourceId" = "Source"."id")
        ORDER BY "Source"."id"`,
       [olderThanDays],
     );

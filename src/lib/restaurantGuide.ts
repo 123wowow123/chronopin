@@ -54,4 +54,5 @@ export type GuideSummary = {
   neighborhoods: Record<GuideView, string[]>;
   // The restaurant in the hero, chosen from the openings.
   featured: Restaurant | null;
+  featuredTop?: TopRestaurant | null;
 };

@@ -7,6 +7,8 @@ import { getMultilingual } from '../model/appSetting';
 
 export const TAGS = {
   restaurantContent: 'restaurant-content',
+  // The /person pages and their index (src/server/services/people.ts).
+  people: 'people',
   timeline: 'timeline',
   sitemap: 'sitemap',
   siteVerification: 'site-verification',
@@ -84,4 +86,10 @@ export function expireTimeline() {
 export function expireSearchIndex() {
   revalidateTag(TAGS.searchIndex, { expire: 0 });
   revalidateTag(TAGS.sitemap, { expire: 0 });
+}
+
+// A person was added or changed: their page, the index and the sitemap.
+export function invalidatePeople() {
+  revalidateTag(TAGS.people, { expire: 0 });
+  revalidateTag(TAGS.sitemap, 'max');
 }

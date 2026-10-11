@@ -349,11 +349,26 @@ export type SearchedCompany = {
   parents?: { id: number; name: string; logoUrl: string | null; wikiUrl: string | null }[];
 };
 
+// The one person a person: search names, for the panel about them.
+export type SearchedPerson = {
+  id: number;
+  name: string;
+  slug: string;
+  office: string | null;
+  party: string | null;
+  photoUrl: string | null;
+  description: string | null;
+  wikiUrl: string | null;
+  // How their pins and the comments on them read over time; null when none is scored.
+  sentiment?: CompanySentiment | null;
+};
+
 export type SearchPage = {
   pins: PinJson[];
   queryCount?: number;
   user?: { id: number; userName: string };
   company?: SearchedCompany;
+  person?: SearchedPerson;
   // Query strings for /api/pins/search: the pages before and after this one.
   links?: { previous?: string; next?: string };
 };

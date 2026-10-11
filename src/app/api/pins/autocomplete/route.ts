@@ -2,6 +2,8 @@ import type { NextRequest } from 'next/server';
 import { json, route } from '@/server/http';
 import Company from '@/server/model/company';
 import PinTag from '@/server/model/pinTag';
+import Person from '@/server/model/person';
+import { parseSearchQuery } from '@/server/util/searchQuery';
 import { Users } from '@/server/model/user';
 import { SearchPins } from '@/server/model/searchPin';
 import { loadAstronomy, suggestHolidays } from '@/server/holidays';
@@ -22,7 +24,9 @@ import { toJson, type PinJson } from '@/lib/types';
 // or "fish" for @FishingDesk) and tags (categories among them, kind
 // 'category') with a word starting with it, and the holidays and special days
 // ("Halloween", "National Peanut Day") with a word starting with it, each with
-// its next day, which holiday: searches. Titles and
+// its next day, which holiday: searches, and the people whose name has a word
+// starting with it (or whose radar meets a misconduct:>3 style bound), which
+// person: searches. Titles and
 // category names in every language the site has are matched too, whatever the
 // page's language, and the pins are shown in the page's language.
 //
@@ -34,14 +38,20 @@ import { toJson, type PinJson } from '@/lib/types';
 // "PinTagView" - and carry no count: the row shows the term it writes.
 export const GET = route(async (request: NextRequest) => {
   const q = request.nextUrl.searchParams.get('q') || '';
-  if (!q.trim()) return json({ pins: [], queryCount: 0, tags: [], companies: [], users: [], holidays: [] });
+  if (!q.trim()) return json({ pins: [], queryCount: 0, tags: [], companies: [], users: [], people: [], holidays: [] });
   const locale = requestLocale(request);
-  const [pins, tags, named, companies, users] = await Promise.all([
+  // People: the typed words as a name, and any radar-axis bound written
+  // (misconduct:>3) as a filter on the people themselves; a person: term
+  // supplies the name too.
+  const typed = parseSearchQuery(q);
+  const personName = [...typed.people, typed.text].join(' ').trim();
+  const [pins, tags, named, companies, users, people] = await Promise.all([
     SearchPins.querySearchPin(q, q, 10),
     PinTag.suggest(q, 6),
     categoriesNamed(q).then((names) => PinTag.counted(names)),
     Company.suggest(q, 4),
     Users.suggest(q, 4),
+    Person.suggest(personName, typed.personAxes, 5),
   ]);
   const zone = requestTimeZone(request);
   await loadAstronomy();
@@ -51,7 +61,7 @@ export const GET = route(async (request: NextRequest) => {
   const reserved: TagCount[] = reservedSuggestions(q).map((filter) => ({ name: filter.name, kind: 'reserved', count: 0 }));
   const seen = new Set(tags.map((tag) => tag.name.toLowerCase()));
   const translated = named.filter((tag) => !seen.has(tag.name.toLowerCase())).slice(0, 6);
-  return json({ ...body, tags: [...reserved, ...translated, ...tags].slice(0, reserved.length + 6), companies, users, holidays });
+  return json({ ...body, tags: [...reserved, ...translated, ...tags].slice(0, reserved.length + 6), companies, users, people, holidays });
 });
 
 // The categories whose name in another of the site's languages has a word

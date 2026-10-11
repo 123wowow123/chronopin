@@ -8,6 +8,7 @@ import config from '../config';
 import Comment from '../model/comment';
 import Company from '../model/company';
 import CompanyFollow from '../model/companyFollow';
+import Person from '../model/person';
 import PinSentiment from '../model/pinSentiment';
 import Pins, { type SearchFilter, type SearchRank } from '../model/pins';
 import PinView from '../model/pinView';
@@ -167,7 +168,7 @@ export async function searchPinsPage(request: SearchRequest): Promise<{ pins: Pi
   }
 
   const pins = await Pins.querySearchRanked(ranked, request.userId || 0);
-  if (!cursor) await Promise.all([attachSearchedUser(pins, query), attachSearchedCompany(pins, query)]);
+  if (!cursor) await Promise.all([attachSearchedUser(pins, query), attachSearchedCompany(pins, query), attachSearchedPerson(pins, query)]);
   return { pins, links };
 }
 
@@ -229,6 +230,26 @@ async function attachSearchedUser(pins: Pins, query: SearchQuery) {
       (pins as Pins & { user?: unknown }).user = { id: user.id, userName: user.userName };
     }
   }
+}
+
+// A search that names exactly one person (person:"Elon Musk") answers with
+// who they are too, so the page can open a panel about them with a link to
+// their page. Axis bounds alone (misconduct:>3) name no one.
+async function attachSearchedPerson(pins: Pins, query: SearchQuery) {
+  if (query.people.length !== 1) return;
+  const person = await Person.forSearch(query.people[0]);
+  if (!person) return;
+  const [pinTones, comments] = await Promise.all([PinSentiment.forPerson(person.id), Comment.forPerson(person.id, COMPANY_MOOD_COMMENTS)]);
+  // The same graph a company search draws (src/lib/companySentiment.ts), over
+  // the pins they are linked to. Left off when nothing has been scored.
+  const sentiment = {
+    pins: pinTones.map((p) => ({ id: p.id, title: p.title, at: p.utcStartDateTime.toISOString(), value: p.sentiment, product: p.product })),
+    comments: comments
+      .filter((c): c is typeof c & { sentiment: number } => c.sentiment != null)
+      .map((c) => ({ at: c.utcCreatedDateTime.toISOString(), value: c.sentiment, pinId: c.pinId }))
+      .reverse(),
+  };
+  (pins as Pins & { person?: unknown }).person = { ...person, sentiment: sentiment.pins.length || sentiment.comments.length ? sentiment : null };
 }
 
 // How many of a company's comments its mood is read from. Plenty for a trend

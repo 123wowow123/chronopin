@@ -7,11 +7,12 @@ import PinTag from './pinTag';
 import { THIN_PIN_SQL } from './searchIssues';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { holidayRanges, loadAstronomy } from '../holidays';
+import { TASTE_KEYS, TASTE_STRONG, type TasteAxis } from '@/lib/pinTaste';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
-import type { DayBound, DelayBound, RatingBound } from '../util/searchQuery';
+import type { DayBound, DelayBound, PersonAxisBound, RatingBound } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
@@ -40,6 +41,9 @@ export type PinSearchFilters = {
   places: string[];
   platforms: string[];
   rated: string[];
+  tastes: TasteAxis[];
+  people: string[];
+  personAxes: PersonAxisBound[];
   ratings: RatingBound[];
   delays: DelayBound[];
   holidays: string[];
@@ -930,6 +934,27 @@ function searchClauses(filter: SearchFilter) {
   // (rated:, the board then its label), from PinGameInfo.
   if (filter.platforms.length) {
     where.push(`EXISTS (SELECT 1 FROM "PinGameInfo" AS "g" WHERE "g"."pinId" = "Pin"."id" AND "g"."platforms" ?| ${add(filter.platforms)}::text[])`);
+  }
+  // taste: a product whose taste profile scores every one of these axes strongly.
+  // The axis names are TASTE_KEYS, so they are safe as column names.
+  if (filter.tastes.length) {
+    const scored = filter.tastes.filter((axis) => TASTE_KEYS.includes(axis)).map((axis) => `"t"."${axis}" >= ${TASTE_STRONG}`);
+    if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinTaste" AS "t" WHERE "t"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
+  }
+  // person: and the radar-axis bounds (misconduct:>3): a pin linked to a
+  // person who is any of the names given and whose best score across their
+  // life phases meets every bound. The axis names are OCTAGON_AXES, so they
+  // are safe as JSON keys here only because they are bound as parameters.
+  if (filter.people.length || filter.personAxes.length) {
+    const who: string[] = [];
+    if (filter.people.length) {
+      const names = add(filter.people.map((name) => name.toLowerCase()));
+      who.push(`(lower("pe"."name") = ANY(${names}::text[]) OR "pe"."slug" = ANY(${names}::text[]))`);
+    }
+    for (const { axis, op, value } of filter.personAxes) {
+      who.push(`(SELECT max(("ph"."axes" -> ${add(axis)}::text ->> 'score')::numeric) FROM "PersonPhase" AS "ph" WHERE "ph"."personId" = "pe"."id") ${RATING_OPS[op]} ${add(value)}::numeric`);
+    }
+    where.push(`EXISTS (SELECT 1 FROM "PinPerson" AS "pp" JOIN "Person" AS "pe" ON "pe"."id" = "pp"."personId" WHERE "pp"."pinId" = "Pin"."id" AND ${who.join(' AND ')})`);
   }
   if (filter.rated.length) {
     where.push(`EXISTS (SELECT 1 FROM "PinGameInfo" AS "g" WHERE "g"."pinId" = "Pin"."id" AND lower("g"."maturityBoard" || ' ' || "g"."maturityRating") = ANY(${add(filter.rated.map((r) => r.toLowerCase()))}::text[]))`);

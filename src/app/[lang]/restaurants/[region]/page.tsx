@@ -49,6 +49,6 @@ async function GuideContent({ params, searchParams }: Props) {
     ? (['available', 'next'] as const).map((section) => ({ region: region.slug, view, section, neighborhood: 'all', sort }))
     : [{ region: region.slug, view, neighborhood: 'all', sort }];
   const initialPages = Object.fromEntries((await Promise.all(queries.map(async (request) => [guideKey(request), await guidePage(request, (page - 1) * GUIDE_PAGE_SIZE, now)] as const))).filter((entry): entry is [string, GuidePage<GuideItem>] => !!entry[1]));
-  const { counts, neighborhoods, featured, today, previewSnapshot } = summary;
-  return <RestaurantGuide initialView={view} summary={{ counts, neighborhoods, featured }} initialPages={initialPages} availableRegionSlugs={availableRegionSlugs} region={region} today={today} previewSnapshot={previewSnapshot} timeZone={region.timeZone} />;
+  const { counts, neighborhoods, featured, featuredTop, today, previewSnapshot } = summary;
+  return <RestaurantGuide initialView={view} summary={{ counts, neighborhoods, featured, featuredTop }} initialPages={initialPages} availableRegionSlugs={availableRegionSlugs} region={region} today={today} previewSnapshot={previewSnapshot} timeZone={region.timeZone} />;
 }

@@ -1,0 +1,1744 @@
+{
+  "checkedAt": "2026-10-10",
+  "country": "China",
+  "regions": [
+    "chengdu",
+    "beijing",
+    "shanghai"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "TIVANO — Chengdu restaurant guide",
+        "description": "Italian dining at Upper House Chengdu, with handmade pasta and a wood-fired kitchen.",
+        "sourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+        "address": "B1F, 81 Bitieshi Street, Jinjiang District, Chengdu, China",
+        "latitude": 30.655599671881,
+        "longitude": 104.079708401051,
+        "productName": "TIVANO",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Chengdu",
+          "China",
+          "Jinjiang · Taikoo Li",
+          "Italian"
+        ],
+        "longFormSummary": "<p>Italian dining at Upper House Chengdu, with handmade pasta and a wood-fired kitchen. <cite data-ref=\"https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+            "title": "TIVANO — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+          "menu": {
+            "pinSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+            "name": "TIVANO",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Orange and fennel salad",
+                    "price": 98
+                  },
+                  {
+                    "name": "Beef tartare",
+                    "price": 198
+                  },
+                  {
+                    "name": "Burrata",
+                    "price": 168
+                  },
+                  {
+                    "name": "Seafood spaghetti",
+                    "price": 188
+                  },
+                  {
+                    "name": "Sichuan pepperoni pizza",
+                    "price": 158
+                  },
+                  {
+                    "name": "Four-cheese pizza",
+                    "price": 128
+                  }
+                ],
+                "note": "Currently linked 2026 spring menu. Service charge and VAT included; ordinary dishes are not automatically eligible for the lunch offer.",
+                "documentUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Files/pdf/dine/tivano/Tivano-A-La-Carte-Menu-2026-Spring.pdf"
+              },
+              {
+                "label": "Weekday set lunch",
+                "url": "https://www.upperhouse.com/en/chengdu/special-offers/tivano-lunch-set/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday set lunch (per person)",
+                    "price": 178,
+                    "note": "Starting price; selected set dishes are not published."
+                  }
+                ],
+                "note": "From CNY 178. Reserve one day ahead; Monday–Friday 11:30–14:30, excluding public holidays. Dine in only."
+              }
+            ],
+            "specials": [
+              {
+                "kind": "lunch",
+                "title": "Weekday set lunch — from CNY 178",
+                "description": "A published weekday lunch offer; selected dishes vary.",
+                "schedule": "Monday–Friday, 11:30–14:30",
+                "conditions": [
+                  "From CNY 178 per person; selected set composition is not published.",
+                  "Reserve at least one day in advance. Dine in only.",
+                  "Weekends and public holidays excluded. Calendar checked against the State Council’s 2026 notice; later calendars require verification."
+                ],
+                "sourceUrl": "https://www.upperhouse.com/en/chengdu/special-offers/tivano-lunch-set/",
+                "discounted": true,
+                "menuLabel": "Weekday set lunch",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:30",
+                      "end": "14:30"
+                    }
+                  ],
+                  "excludesHolidays": true,
+                  "excludedDates": [
+                    "2026-01-01",
+                    "2026-01-02",
+                    "2026-01-03",
+                    "2026-02-15",
+                    "2026-02-16",
+                    "2026-02-17",
+                    "2026-02-18",
+                    "2026-02-19",
+                    "2026-02-20",
+                    "2026-02-21",
+                    "2026-02-22",
+                    "2026-02-23",
+                    "2026-04-04",
+                    "2026-04-05",
+                    "2026-04-06",
+                    "2026-05-01",
+                    "2026-05-02",
+                    "2026-05-03",
+                    "2026-05-04",
+                    "2026-05-05",
+                    "2026-06-19",
+                    "2026-06-20",
+                    "2026-06-21",
+                    "2026-09-25",
+                    "2026-09-26",
+                    "2026-09-27",
+                    "2026-10-01",
+                    "2026-10-02",
+                    "2026-10-03",
+                    "2026-10-04",
+                    "2026-10-05",
+                    "2026-10-06",
+                    "2026-10-07"
+                  ],
+                  "holidayCalendarThrough": "2026-12-31"
+                }
+              }
+            ],
+            "location": {
+              "latitude": 30.655599671881,
+              "longitude": 104.079708401051,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%88%90%E9%83%BD%E5%B8%82%E9%94%A6%E6%B1%9F%E5%8C%BA%E7%AC%94%E5%B8%96%E5%BC%8F%E8%A1%9781%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=3&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/tivano-1-b9b9690905f04c8f.webp",
+              "alt": "TIVANO photograph from the operator’s branch page.",
+              "credit": "Upper House Chengdu",
+              "sourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+              "originalUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/tivano/tivano-feat2.jpg?h=5389&iar=0&w=3593",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+            "name": "TIVANO",
+            "websiteUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+            "phone": "+86 28 6297 4190",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:30–14:30; 17:30–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/"
+          },
+          "tile": {
+            "regionSlug": "chengdu",
+            "kind": "top",
+            "slug": "tivano",
+            "name": "TIVANO",
+            "neighborhood": "Jinjiang · Taikoo Li",
+            "cuisine": "Italian",
+            "address": "B1F, 81 Bitieshi Street, Jinjiang District, Chengdu, China",
+            "websiteUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+            "description": "Italian dining at Upper House Chengdu, with handmade pasta and a wood-fired kitchen.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/tivano-1-b9b9690905f04c8f.webp",
+            "imageCredit": "Upper House Chengdu",
+            "imageSourceUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/tivano/tivano-feat2.jpg?h=5389&iar=0&w=3593",
+            "imageNote": "TIVANO photograph from the operator’s branch page."
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "chengdu",
+        "profile": {
+          "pinSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+          "name": "TIVANO",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "À la carte",
+              "url": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Orange and fennel salad",
+                  "price": 98
+                },
+                {
+                  "name": "Beef tartare",
+                  "price": 198
+                },
+                {
+                  "name": "Burrata",
+                  "price": 168
+                },
+                {
+                  "name": "Seafood spaghetti",
+                  "price": 188
+                },
+                {
+                  "name": "Sichuan pepperoni pizza",
+                  "price": 158
+                },
+                {
+                  "name": "Four-cheese pizza",
+                  "price": 128
+                }
+              ],
+              "note": "Currently linked 2026 spring menu. Service charge and VAT included; ordinary dishes are not automatically eligible for the lunch offer.",
+              "documentUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Files/pdf/dine/tivano/Tivano-A-La-Carte-Menu-2026-Spring.pdf"
+            },
+            {
+              "label": "Weekday set lunch",
+              "url": "https://www.upperhouse.com/en/chengdu/special-offers/tivano-lunch-set/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday set lunch (per person)",
+                  "price": 178,
+                  "note": "Starting price; selected set dishes are not published."
+                }
+              ],
+              "note": "From CNY 178. Reserve one day ahead; Monday–Friday 11:30–14:30, excluding public holidays. Dine in only."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "lunch",
+              "title": "Weekday set lunch — from CNY 178",
+              "description": "A published weekday lunch offer; selected dishes vary.",
+              "schedule": "Monday–Friday, 11:30–14:30",
+              "conditions": [
+                "From CNY 178 per person; selected set composition is not published.",
+                "Reserve at least one day in advance. Dine in only.",
+                "Weekends and public holidays excluded. Calendar checked against the State Council’s 2026 notice; later calendars require verification."
+              ],
+              "sourceUrl": "https://www.upperhouse.com/en/chengdu/special-offers/tivano-lunch-set/",
+              "discounted": true,
+              "menuLabel": "Weekday set lunch",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  }
+                ],
+                "excludesHolidays": true,
+                "excludedDates": [
+                  "2026-01-01",
+                  "2026-01-02",
+                  "2026-01-03",
+                  "2026-02-15",
+                  "2026-02-16",
+                  "2026-02-17",
+                  "2026-02-18",
+                  "2026-02-19",
+                  "2026-02-20",
+                  "2026-02-21",
+                  "2026-02-22",
+                  "2026-02-23",
+                  "2026-04-04",
+                  "2026-04-05",
+                  "2026-04-06",
+                  "2026-05-01",
+                  "2026-05-02",
+                  "2026-05-03",
+                  "2026-05-04",
+                  "2026-05-05",
+                  "2026-06-19",
+                  "2026-06-20",
+                  "2026-06-21",
+                  "2026-09-25",
+                  "2026-09-26",
+                  "2026-09-27",
+                  "2026-10-01",
+                  "2026-10-02",
+                  "2026-10-03",
+                  "2026-10-04",
+                  "2026-10-05",
+                  "2026-10-06",
+                  "2026-10-07"
+                ],
+                "holidayCalendarThrough": "2026-12-31"
+              }
+            }
+          ],
+          "location": {
+            "latitude": 30.655599671881,
+            "longitude": 104.079708401051,
+            "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%88%90%E9%83%BD%E5%B8%82%E9%94%A6%E6%B1%9F%E5%8C%BA%E7%AC%94%E5%B8%96%E5%BC%8F%E8%A1%9781%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=3&sourceCountry=CHN",
+            "checkedAt": "2026-10-10"
+          },
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/tivano-1-b9b9690905f04c8f.webp",
+            "alt": "TIVANO photograph from the operator’s branch page.",
+            "credit": "Upper House Chengdu",
+            "sourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+            "originalUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/tivano/tivano-feat2.jpg?h=5389&iar=0&w=3593",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Jinjiang · Taikoo Li",
+          "address": "B1F, 81 Bitieshi Street, Jinjiang District, Chengdu, China",
+          "websiteUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "chengdu",
+          "slug": "tivano-1",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/tivano/tivano-feat2.jpg?h=5389&iar=0&w=3593",
+          "credit": "Upper House Chengdu",
+          "sourcePage": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+          "note": "TIVANO photograph from the operator’s branch page.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/tivano-1-b9b9690905f04c8f.webp",
+          "sha256": "b9b9690905f04c8fd94d6a7de6aa43e5891b4e43c12ab8e1cec37e2a57e598ce",
+          "width": 1400,
+          "height": 2100
+        },
+        {
+          "region": "chengdu",
+          "slug": "tivano-2",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/tivano/tivano-feat1.jpg?h=1504&iar=0&w=1200",
+          "credit": "Upper House Chengdu",
+          "sourcePage": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/tivano/",
+          "note": "TIVANO photograph from the operator’s branch page.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/tivano-2-c3641c2733bf44de.webp",
+          "sha256": "c3641c2733bf44de081e347462fbd2568bec7e7c8c1f92873148cee1495186e3",
+          "width": 1200,
+          "height": 1504
+        }
+      ],
+      "geocoding": {
+        "latitude": 30.655599671881,
+        "longitude": 104.079708401051,
+        "score": 91.92,
+        "matchedAddress": "四川省成都市锦江区锦官驿街道笔帖式街",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%88%90%E9%83%BD%E5%B8%82%E9%94%A6%E6%B1%9F%E5%8C%BA%E7%AC%94%E5%B8%96%E5%BC%8F%E8%A1%9781%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=3&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Mi Xun Teahouse — Chengdu restaurant guide",
+        "description": "A vegetarian teahouse in a restored courtyard at Upper House Chengdu.",
+        "sourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+        "address": "81 Bitieshi Street, Jinjiang District, Chengdu, China",
+        "latitude": 30.655599671881,
+        "longitude": 104.079708401051,
+        "productName": "Mi Xun Teahouse",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Chengdu",
+          "China",
+          "Jinjiang · Taikoo Li",
+          "Vegetarian Sichuan"
+        ],
+        "longFormSummary": "<p>A vegetarian teahouse in a restored courtyard at Upper House Chengdu. <cite data-ref=\"https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+            "title": "Mi Xun Teahouse — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+          "menu": {
+            "pinSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+            "name": "Mi Xun Teahouse",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Farm-to-table tasting menu",
+                "url": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Farm-to-table tasting menu (per person)",
+                    "price": 388
+                  },
+                  {
+                    "name": "Handmade spinach noodles with dan dan sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Part of the tasting menu."
+                  },
+                  {
+                    "name": "Wild mushroom tofu with guokui",
+                    "priceLabel": "Price not published",
+                    "note": "Part of the tasting menu."
+                  },
+                  {
+                    "name": "Black sesame milk custard",
+                    "priceLabel": "Price not published",
+                    "note": "Part of the tasting menu."
+                  }
+                ],
+                "note": "Currently linked operator PDF; service charge and VAT included. Individual dishes have no separate published prices.",
+                "documentUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Files/pdf/dine/mi-xun-tea-house/MICHELIN-Tasting-Menu-for-One_2026-Spring.pdf"
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 30.655599671881,
+              "longitude": 104.079708401051,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%88%90%E9%83%BD%E5%B8%82%E9%94%A6%E6%B1%9F%E5%8C%BA%E7%AC%94%E5%B8%96%E5%BC%8F%E8%A1%9781%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=3&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/mixun-1-aee342c862e9d535.webp",
+              "alt": "Mi Xun Teahouse photograph from the operator’s branch page.",
+              "credit": "Upper House Chengdu",
+              "sourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+              "originalUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/mi-xun/mixun-feat2.jpg?h=3400&iar=0&w=5100",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+            "name": "Mi Xun Teahouse",
+            "websiteUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+            "phone": "+86 28 6297 4193",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "12:00–14:00; 17:30–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/"
+          },
+          "tile": {
+            "regionSlug": "chengdu",
+            "kind": "top",
+            "slug": "mixun",
+            "name": "Mi Xun Teahouse",
+            "neighborhood": "Jinjiang · Taikoo Li",
+            "cuisine": "Vegetarian Sichuan",
+            "address": "81 Bitieshi Street, Jinjiang District, Chengdu, China",
+            "websiteUrl": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+            "description": "A vegetarian teahouse in a restored courtyard at Upper House Chengdu.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/mixun-1-aee342c862e9d535.webp",
+            "imageCredit": "Upper House Chengdu",
+            "imageSourceUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/mi-xun/mixun-feat2.jpg?h=3400&iar=0&w=5100",
+            "imageNote": "Mi Xun Teahouse photograph from the operator’s branch page."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "chengdu",
+          "slug": "mixun-1",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/mi-xun/mixun-feat2.jpg?h=3400&iar=0&w=5100",
+          "credit": "Upper House Chengdu",
+          "sourcePage": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+          "note": "Mi Xun Teahouse photograph from the operator’s branch page.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/mixun-1-aee342c862e9d535.webp",
+          "sha256": "aee342c862e9d535bfa6808ea60fc0fa84765f11c1fc6bb82022e68424cbc9b7",
+          "width": 1400,
+          "height": 933
+        },
+        {
+          "region": "chengdu",
+          "slug": "mixun-2",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/SwireHotels/TheHouseCollective/TheTempleHouse/Images/dine/mi-xun/mixun-feat1/Mi-Xun-Teahouse-Environment-2.JPEG?h=4096&iar=0&w=2732",
+          "credit": "Upper House Chengdu",
+          "sourcePage": "https://www.upperhouse.com/en/chengdu/restaurants-and-bars/mi-xun-teahouse/",
+          "note": "Mi Xun Teahouse photograph from the operator’s branch page.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chengdu/researched/mixun-2-635ab25aeb7ce951.webp",
+          "sha256": "635ab25aeb7ce951db8cc086ceec1016d12311446f590d0a9f989e498a1174be",
+          "width": 1400,
+          "height": 2099
+        }
+      ],
+      "geocoding": {
+        "latitude": 30.655599671881,
+        "longitude": 104.079708401051,
+        "score": 91.92,
+        "matchedAddress": "四川省成都市锦江区锦官驿街道笔帖式街",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%88%90%E9%83%BD%E5%B8%82%E9%94%A6%E6%B1%9F%E5%8C%BA%E7%AC%94%E5%B8%96%E5%BC%8F%E8%A1%9781%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=3&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Grande A’moo — UFun opens in Wuhou · Jiaozi Avenue",
+        "description": "The Italian restaurant’s first southwest China branch opened September 16 at UFun Mall.",
+        "sourceUrl": "https://www.sohu.com/a/1077029550_121805474",
+        "address": "L1 units 126–127, UFun Mall, 300 Jiaozi Avenue, Chengdu, China",
+        "latitude": 30.58552650762,
+        "longitude": 104.054645450811,
+        "productName": "Grande A’moo — UFun",
+        "utcStartDateTime": "2026-09-16T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Chengdu WEEK’s September 17 branch report confirms September 16, 2026.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Chengdu",
+          "China",
+          "Wuhou · Jiaozi Avenue",
+          "Italian"
+        ],
+        "longFormSummary": "<p>The Italian restaurant’s first southwest China branch opened September 16 at UFun Mall. <cite data-ref=\"https://www.sohu.com/a/1077029550_121805474\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://www.sohu.com/a/1077029550_121805474",
+            "title": "Grande A’moo — UFun — research source",
+            "confidence": 90,
+            "reasoning": "Chengdu WEEK’s September 17 branch report confirms September 16, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.sohu.com/a/1077029550_121805474",
+          "menu": {
+            "pinSourceUrl": "https://www.sohu.com/a/1077029550_121805474",
+            "name": "Grande A’moo — UFun",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch opening dishes",
+                "url": "https://www.sohu.com/a/1077029550_121805474",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Cheese-wheel pasta",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Wood-fired pizza",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Steak",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "The branch launch report names these dishes without prices. Checked launch reporting, mall/address sources, brand and branch menu searches. Other-city menus are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 30.58552650762,
+              "longitude": 104.054645450811,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=300+Jiaozi+Avenue+Chengdu+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.sohu.com/a/1077029550_121805474",
+            "name": "Grande A’moo — UFun",
+            "websiteUrl": "https://www.sohu.com/a/1077029550_121805474",
+            "phone": "+86 191 3625 5052",
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.sohu.com/a/1077029550_121805474"
+          },
+          "tile": {
+            "regionSlug": "chengdu",
+            "kind": "opening",
+            "slug": "grande",
+            "name": "Grande A’moo — UFun",
+            "neighborhood": "Wuhou · Jiaozi Avenue",
+            "cuisine": "Italian",
+            "address": "L1 units 126–127, UFun Mall, 300 Jiaozi Avenue, Chengdu, China",
+            "websiteUrl": "https://www.sohu.com/a/1077029550_121805474",
+            "description": "The Italian restaurant’s first southwest China branch opened September 16 at UFun Mall.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-09-16",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 30.58552650762,
+        "longitude": 104.054645450811,
+        "score": 100,
+        "matchedAddress": "300 Jiaozi Avenue, Jinhui Community, South High-Tech Zone, Chengdu, Sichuan",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=300+Jiaozi+Avenue+Chengdu+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Mio — Beijing restaurant guide",
+        "description": "Italian dining at Four Seasons Hotel Beijing, with Tuscan dishes and two open kitchens.",
+        "sourceUrl": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+        "address": "Four Seasons Hotel Beijing, 48 Liangmaqiao Road, Chaoyang District, Beijing, China",
+        "latitude": 39.947931959987,
+        "longitude": 116.455987817916,
+        "productName": "Mio",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Beijing",
+          "China",
+          "Chaoyang · Liangmaqiao",
+          "Italian"
+        ],
+        "longFormSummary": "<p>Italian dining at Four Seasons Hotel Beijing, with Tuscan dishes and two open kitchens. <cite data-ref=\"https://www.fourseasons.com/beijing/dining/restaurants/mio/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+            "title": "Mio — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+          "menu": {
+            "pinSourceUrl": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+            "name": "Mio",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.fourseasons.com/beijing/dining/restaurants/mio/mio-a-la-carte/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Burrata with tomatoes and basil",
+                    "price": 128
+                  },
+                  {
+                    "name": "Tuscan tomato soup",
+                    "price": 128
+                  },
+                  {
+                    "name": "Duck ragout pici — single portion",
+                    "price": 168
+                  },
+                  {
+                    "name": "Wild-boar pappardelle — single portion",
+                    "price": 188
+                  },
+                  {
+                    "name": "Margherita pizza",
+                    "price": 138
+                  },
+                  {
+                    "name": "Tiramisu",
+                    "price": 118
+                  }
+                ],
+                "note": "Branch-specific online menu. Prices are CNY; confirm applicable charges with the restaurant."
+              },
+              {
+                "label": "Chef’s sharing menu",
+                "url": "https://www.fourseasons.com/beijing/dining/restaurants/mio/set-menu/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Chef’s recommendation sharing menu — 4–6 people",
+                    "price": 2588
+                  }
+                ],
+                "note": "Add 10% service charge and 6% applicable taxes. Includes choices of appetizers, pasta and sides, plus specified entrées and dessert."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 39.947931959987,
+              "longitude": 116.455987817916,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=48+Liangmaqiao+Road+Beijing+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/beijing/researched/mio-interior-e9fd1d1c744db5ca.webp",
+              "alt": "Mio dining photograph from the operator’s branch gallery.",
+              "credit": "Four Seasons Hotel Beijing",
+              "sourceUrl": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+              "originalUrl": "https://www.fourseasons.com/content/dam/fourseasons/images/web/BEJ/BEJ_170_original.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+            "name": "Mio",
+            "websiteUrl": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+            "phone": "+86 10 5695 8522",
+            "openingHours": [
+              {
+                "days": "Tuesday–Sunday",
+                "hours": "11:30–14:00; 17:30–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.fourseasons.com/beijing/dining/restaurants/mio/"
+          },
+          "tile": {
+            "regionSlug": "beijing",
+            "kind": "top",
+            "slug": "mio",
+            "name": "Mio",
+            "neighborhood": "Chaoyang · Liangmaqiao",
+            "cuisine": "Italian",
+            "address": "Four Seasons Hotel Beijing, 48 Liangmaqiao Road, Chaoyang District, Beijing, China",
+            "websiteUrl": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+            "description": "Italian dining at Four Seasons Hotel Beijing, with Tuscan dishes and two open kitchens.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/beijing/researched/mio-interior-e9fd1d1c744db5ca.webp",
+            "imageCredit": "Four Seasons Hotel Beijing",
+            "imageSourceUrl": "https://www.fourseasons.com/content/dam/fourseasons/images/web/BEJ/BEJ_170_original.jpg",
+            "imageNote": "Mio dining photograph from the operator’s branch gallery."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "beijing",
+          "slug": "mio-interior",
+          "source": "https://www.fourseasons.com/content/dam/fourseasons/images/web/BEJ/BEJ_170_original.jpg",
+          "credit": "Four Seasons Hotel Beijing",
+          "sourcePage": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+          "note": "Mio dining photograph from the operator’s branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/beijing/researched/mio-interior-e9fd1d1c744db5ca.webp",
+          "sha256": "e9fd1d1c744db5ca8c34182c98ff730ff9f2494cedfe272f68a02bfc9ee52bdb",
+          "width": 1400,
+          "height": 934
+        },
+        {
+          "region": "beijing",
+          "slug": "mio-table",
+          "source": "https://www.fourseasons.com/content/dam/fourseasons/images/web/BEJ/BEJ_2051_original.jpg",
+          "credit": "Four Seasons Hotel Beijing",
+          "sourcePage": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+          "note": "Mio dining photograph from the operator’s branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/beijing/researched/mio-table-202084c997ceb69d.webp",
+          "sha256": "202084c997ceb69d7475ccf672c026af2b17af5747474616008c88792b2593f9",
+          "width": 1400,
+          "height": 929
+        }
+      ],
+      "geocoding": {
+        "latitude": 39.947931959987,
+        "longitude": 116.455987817916,
+        "score": 98.9,
+        "matchedAddress": "48 Liangmaqiao Road, Chaoyang District, Beijing, Beijing City",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=48+Liangmaqiao+Road+Beijing+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Five Guys — Chaoyang Joy City opens in Chaoyang",
+        "description": "Five Guys opened its Chaoyang Joy City branch on August 3, alongside a second Beijing location.",
+        "sourceUrl": "https://restaurants.fiveguys.cn/zh_hans_cn/101-chaoyang-north-road",
+        "address": "Shop 08A, 2F, Chaoyang Joy City, 101 Chaoyang North Road, Beijing, China",
+        "latitude": 39.922332810376,
+        "longitude": 116.536443644552,
+        "productName": "Five Guys — Chaoyang Joy City",
+        "utcStartDateTime": "2026-08-03T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Beijing government’s September 24 report and Beijing Business Daily confirm August 3, 2026.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Beijing",
+          "China",
+          "Chaoyang",
+          "American burgers"
+        ],
+        "longFormSummary": "<p>Five Guys opened its Chaoyang Joy City branch on August 3, alongside a second Beijing location. <cite data-ref=\"https://finance.sina.com.cn/jjxw/2026-08-03/doc-inikyaqz6542906.shtml\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://finance.sina.com.cn/jjxw/2026-08-03/doc-inikyaqz6542906.shtml",
+            "title": "Five Guys — Chaoyang Joy City — research source",
+            "confidence": 90,
+            "reasoning": "Beijing government’s September 24 report and Beijing Business Daily confirm August 3, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://restaurants.fiveguys.cn/zh_hans_cn/101-chaoyang-north-road",
+          "menu": {
+            "pinSourceUrl": "https://restaurants.fiveguys.cn/zh_hans_cn/101-chaoyang-north-road",
+            "name": "Five Guys — Chaoyang Joy City",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch launch burger prices",
+                "url": "https://finance.sina.com.cn/jjxw/2026-08-03/doc-inikyaqz6542906.shtml",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hamburger",
+                    "price": 60
+                  },
+                  {
+                    "name": "Cheeseburger",
+                    "price": 70
+                  },
+                  {
+                    "name": "Bacon burger",
+                    "price": 75
+                  },
+                  {
+                    "name": "Bacon cheeseburger",
+                    "price": 85
+                  }
+                ],
+                "note": "Beijing Business Daily’s August 3 branch reporting. Sixteen toppings are free. Operator branch and national menu checked; these are the verified launch prices, not a claim of an October menu revision."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 39.922332810376,
+              "longitude": 116.536443644552,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=101+Chaoyang+North+Road+Beijing+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/beijing/researched/fiveguys-2-68f277ef50c562e4.webp",
+              "alt": "Five Guys brand food photograph shown on the Chaoyang Joy City branch page; not an interior photograph.",
+              "credit": "Five Guys China",
+              "sourceUrl": "https://restaurants.fiveguys.cn/zh_hans_cn/101-chaoyang-north-road",
+              "originalUrl": "https://dynl.mktgcdn.com/p/RGklgkyFFNsyURrRW2Xt8-CokaUu1T7qsKf8NKFzQAE/600x355.png",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://restaurants.fiveguys.cn/zh_hans_cn/101-chaoyang-north-road",
+            "name": "Five Guys — Chaoyang Joy City",
+            "websiteUrl": "https://restaurants.fiveguys.cn/zh_hans_cn/101-chaoyang-north-road",
+            "phone": "+86 156 5203 2889",
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://finance.sina.com.cn/jjxw/2026-08-03/doc-inikyaqz6542906.shtml"
+          },
+          "tile": {
+            "regionSlug": "beijing",
+            "kind": "opening",
+            "slug": "fiveguys",
+            "name": "Five Guys — Chaoyang Joy City",
+            "neighborhood": "Chaoyang",
+            "cuisine": "American burgers",
+            "address": "Shop 08A, 2F, Chaoyang Joy City, 101 Chaoyang North Road, Beijing, China",
+            "websiteUrl": "https://restaurants.fiveguys.cn/zh_hans_cn/101-chaoyang-north-road",
+            "description": "Five Guys opened its Chaoyang Joy City branch on August 3, alongside a second Beijing location.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/beijing/researched/fiveguys-2-68f277ef50c562e4.webp",
+            "imageCredit": "Five Guys China",
+            "imageSourceUrl": "https://dynl.mktgcdn.com/p/RGklgkyFFNsyURrRW2Xt8-CokaUu1T7qsKf8NKFzQAE/600x355.png",
+            "imageNote": "Five Guys brand food photograph shown on the Chaoyang Joy City branch page; not an interior photograph.",
+            "day": "2026-08-03",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "beijing",
+          "slug": "fiveguys-2",
+          "source": "https://dynl.mktgcdn.com/p/RGklgkyFFNsyURrRW2Xt8-CokaUu1T7qsKf8NKFzQAE/600x355.png",
+          "sourcePage": "https://restaurants.fiveguys.cn/zh_hans_cn/101-chaoyang-north-road",
+          "credit": "Five Guys China",
+          "note": "Five Guys brand food photograph shown on the Chaoyang Joy City branch page; not an interior photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/beijing/researched/fiveguys-2-68f277ef50c562e4.webp",
+          "sha256": "68f277ef50c562e48c21b41a395df3296915cc3b1cfcfd1ed56f97b713724f8d",
+          "width": 600,
+          "height": 355
+        }
+      ],
+      "geocoding": {
+        "latitude": 39.922332810376,
+        "longitude": 116.536443644552,
+        "score": 96.72,
+        "matchedAddress": "Chaoyang North Road, Chaoyang District, Beijing, Beijing City",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=101+Chaoyang+North+Road+Beijing+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Calypso Restaurant & Lounge — Shanghai restaurant guide",
+        "description": "Mediterranean dining and a terrace lounge at Jing An Shangri-La, Shanghai.",
+        "sourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+        "address": "Jing An Kerry Centre Piazza, 1218 Middle Yan’an Road, Shanghai, China",
+        "latitude": 31.224732287798,
+        "longitude": 121.445883773941,
+        "productName": "Calypso Restaurant & Lounge",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China",
+          "Jing’an",
+          "Mediterranean"
+        ],
+        "longFormSummary": "<p>Mediterranean dining and a terrace lounge at Jing An Shangri-La, Shanghai. <cite data-ref=\"https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+            "title": "Calypso Restaurant & Lounge — research source",
+            "confidence": 90,
+            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+          "menu": {
+            "pinSourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+            "name": "Calypso Restaurant & Lounge",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Salmon and ricotta ravioli",
+                    "price": 188
+                  },
+                  {
+                    "name": "Duck-ragout tagliatelle",
+                    "price": 148
+                  },
+                  {
+                    "name": "Truffle, egg and guanciale tagliolini",
+                    "price": 138
+                  },
+                  {
+                    "name": "Asparagus risotto",
+                    "price": 128
+                  },
+                  {
+                    "name": "Grilled spring lamb rack",
+                    "price": 358
+                  },
+                  {
+                    "name": "Beef tenderloin",
+                    "price": 428
+                  }
+                ],
+                "note": "Currently linked 2026 spring menu, pages 2–3. CNY prices include 10% service charge and prevailing government taxes.",
+                "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/Calypso2026SpringALaCarteMenu.pdf"
+              },
+              {
+                "label": "Sunset Social Club cocktails",
+                "url": "https://www.shangri-la.com/shanghai/jinganshangrila/offer-detail/dining/the-sunset-social-club-a-mediterranean-ritual-of-slow-living/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Atardecer / Sunset",
+                    "price": 98
+                  },
+                  {
+                    "name": "Brisa / Breeze",
+                    "price": 98
+                  },
+                  {
+                    "name": "Beso / Kiss",
+                    "price": 98
+                  }
+                ],
+                "note": "June 26–October 11, 2026, daily from 15:00 until late. Co-branded cocktail gift while supplies last; see conditions.",
+                "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/The-Sunset-Social-Club-Menu-EN.pdf"
+              },
+              {
+                "label": "Sunset Social Club snacks",
+                "url": "https://www.shangri-la.com/shanghai/jinganshangrila/offer-detail/dining/the-sunset-social-club-a-mediterranean-ritual-of-slow-living/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Garlic prawns",
+                    "price": 98
+                  },
+                  {
+                    "name": "Fried calamari",
+                    "price": 88
+                  },
+                  {
+                    "name": "Patatas bravas",
+                    "price": 68
+                  },
+                  {
+                    "name": "Iberian ham and Manchego",
+                    "price": 148
+                  },
+                  {
+                    "name": "Piquillo peppers with goat cheese",
+                    "price": 88
+                  },
+                  {
+                    "name": "Spanish potato omelette",
+                    "price": 68
+                  }
+                ],
+                "note": "Limited collaboration menu, ending October 11. Snacks alone are not verified as qualifying for the cocktail gift.",
+                "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/The-Sunset-Social-Club-Menu-EN.pdf"
+              }
+            ],
+            "specials": [
+              {
+                "kind": "other",
+                "title": "Sunset Social Club — cocktail gift",
+                "description": "A co-branded cocktail purchase includes a Natura Bissé gift set while supplies last.",
+                "schedule": "Daily from 15:00 until lounge closing; through October 11, 2026",
+                "conditions": [
+                  "Gift set contains skincare samples and spa/retail vouchers; operator-stated value CNY 180. While supplies last.",
+                  "Cocktails cost CNY 98 per glass. Regular snacks and mocktails are not verified as qualifying purchases."
+                ],
+                "sourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/offer-detail/dining/the-sunset-social-club-a-mediterranean-ritual-of-slow-living/",
+                "discounted": true,
+                "menuLabel": "Sunset Social Club cocktails",
+                "validFrom": "2026-06-26",
+                "validThrough": "2026-10-11",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "15:00",
+                      "end": "00:00"
+                    }
+                  ]
+                }
+              }
+            ],
+            "location": {
+              "latitude": 31.224732287798,
+              "longitude": 121.445883773941,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1218+Yanan+Middle+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/calypso-interior-cb1f91e2ed1ee4c4.webp",
+              "alt": "Calypso dining room, photographed by the operator.",
+              "credit": "Jing An Shangri-La, Shanghai",
+              "sourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+              "originalUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/calypso-restaurant-interior-630x364.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+            "name": "Calypso Restaurant & Lounge",
+            "websiteUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+            "phone": "+86 21 2203 8889",
+            "openingHours": [
+              {
+                "days": "Daily — restaurant",
+                "hours": "11:30–22:00"
+              },
+              {
+                "days": "Daily — lounge",
+                "hours": "14:30–24:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/"
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "calypso",
+            "name": "Calypso Restaurant & Lounge",
+            "neighborhood": "Jing’an",
+            "cuisine": "Mediterranean",
+            "address": "Jing An Kerry Centre Piazza, 1218 Middle Yan’an Road, Shanghai, China",
+            "websiteUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+            "description": "Mediterranean dining and a terrace lounge at Jing An Shangri-La, Shanghai.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/calypso-interior-cb1f91e2ed1ee4c4.webp",
+            "imageCredit": "Jing An Shangri-La, Shanghai",
+            "imageSourceUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/calypso-restaurant-interior-630x364.jpg",
+            "imageNote": "Calypso dining room, photographed by the operator."
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "shanghai",
+        "profile": {
+          "pinSourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+          "name": "Calypso Restaurant & Lounge",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "À la carte",
+              "url": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Salmon and ricotta ravioli",
+                  "price": 188
+                },
+                {
+                  "name": "Duck-ragout tagliatelle",
+                  "price": 148
+                },
+                {
+                  "name": "Truffle, egg and guanciale tagliolini",
+                  "price": 138
+                },
+                {
+                  "name": "Asparagus risotto",
+                  "price": 128
+                },
+                {
+                  "name": "Grilled spring lamb rack",
+                  "price": 358
+                },
+                {
+                  "name": "Beef tenderloin",
+                  "price": 428
+                }
+              ],
+              "note": "Currently linked 2026 spring menu, pages 2–3. CNY prices include 10% service charge and prevailing government taxes.",
+              "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/Calypso2026SpringALaCarteMenu.pdf"
+            },
+            {
+              "label": "Sunset Social Club cocktails",
+              "url": "https://www.shangri-la.com/shanghai/jinganshangrila/offer-detail/dining/the-sunset-social-club-a-mediterranean-ritual-of-slow-living/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Atardecer / Sunset",
+                  "price": 98
+                },
+                {
+                  "name": "Brisa / Breeze",
+                  "price": 98
+                },
+                {
+                  "name": "Beso / Kiss",
+                  "price": 98
+                }
+              ],
+              "note": "June 26–October 11, 2026, daily from 15:00 until late. Co-branded cocktail gift while supplies last; see conditions.",
+              "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/The-Sunset-Social-Club-Menu-EN.pdf"
+            },
+            {
+              "label": "Sunset Social Club snacks",
+              "url": "https://www.shangri-la.com/shanghai/jinganshangrila/offer-detail/dining/the-sunset-social-club-a-mediterranean-ritual-of-slow-living/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Garlic prawns",
+                  "price": 98
+                },
+                {
+                  "name": "Fried calamari",
+                  "price": 88
+                },
+                {
+                  "name": "Patatas bravas",
+                  "price": 68
+                },
+                {
+                  "name": "Iberian ham and Manchego",
+                  "price": 148
+                },
+                {
+                  "name": "Piquillo peppers with goat cheese",
+                  "price": 88
+                },
+                {
+                  "name": "Spanish potato omelette",
+                  "price": 68
+                }
+              ],
+              "note": "Limited collaboration menu, ending October 11. Snacks alone are not verified as qualifying for the cocktail gift.",
+              "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/The-Sunset-Social-Club-Menu-EN.pdf"
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Sunset Social Club — cocktail gift",
+              "description": "A co-branded cocktail purchase includes a Natura Bissé gift set while supplies last.",
+              "schedule": "Daily from 15:00 until lounge closing; through October 11, 2026",
+              "conditions": [
+                "Gift set contains skincare samples and spa/retail vouchers; operator-stated value CNY 180. While supplies last.",
+                "Cocktails cost CNY 98 per glass. Regular snacks and mocktails are not verified as qualifying purchases."
+              ],
+              "sourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/offer-detail/dining/the-sunset-social-club-a-mediterranean-ritual-of-slow-living/",
+              "discounted": true,
+              "menuLabel": "Sunset Social Club cocktails",
+              "validFrom": "2026-06-26",
+              "validThrough": "2026-10-11",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "15:00",
+                    "end": "00:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "location": {
+            "latitude": 31.224732287798,
+            "longitude": 121.445883773941,
+            "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1218+Yanan+Middle+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+            "checkedAt": "2026-10-10"
+          },
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/calypso-interior-cb1f91e2ed1ee4c4.webp",
+            "alt": "Calypso dining room, photographed by the operator.",
+            "credit": "Jing An Shangri-La, Shanghai",
+            "sourceUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+            "originalUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/calypso-restaurant-interior-630x364.jpg",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Jing’an",
+          "address": "Jing An Kerry Centre Piazza, 1218 Middle Yan’an Road, Shanghai, China",
+          "websiteUrl": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "shanghai",
+          "slug": "calypso-interior",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/calypso-restaurant-interior-630x364.jpg",
+          "sourcePage": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+          "credit": "Jing An Shangri-La, Shanghai",
+          "note": "Calypso dining room, photographed by the operator.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/calypso-interior-cb1f91e2ed1ee4c4.webp",
+          "sha256": "cb1f91e2ed1ee4c4358c520b85525c91b5b2e90dafa90a906ad923633ffc9765",
+          "width": 630,
+          "height": 364
+        },
+        {
+          "region": "shanghai",
+          "slug": "calypso-prawns",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/Garlic-prawns600340.jpg",
+          "sourcePage": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+          "credit": "Jing An Shangri-La, Shanghai",
+          "note": "Garlic prawns shown on Calypso’s official branch page.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/calypso-prawns-f2d6b24c5403fb9d.webp",
+          "sha256": "f2d6b24c5403fb9d2f6defcc01ee583b2d9faea08dddfbf894bab7ef8001b724",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "shanghai",
+          "slug": "calypso-offer",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shanghai_jinganshangrila/dining/restaurants/calypso/sunsetoffer600.JPG",
+          "sourcePage": "https://www.shangri-la.com/shanghai/jinganshangrila/dining/restaurants/calypso/",
+          "credit": "Jing An Shangri-La, Shanghai",
+          "note": "Sunset Social Club promotion from Calypso’s official page.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/calypso-offer-29e803de9faa8056.webp",
+          "sha256": "29e803de9faa8056f74150820fc0054b6b45c32e4e2f09f158324a2bce2e721d",
+          "width": 600,
+          "height": 340
+        }
+      ],
+      "geocoding": {
+        "latitude": 31.224732287798,
+        "longitude": 121.445883773941,
+        "score": 100,
+        "matchedAddress": "1218 Yanan Middle Rd, Jing'an District, Shanghai, Shanghai City",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1218+Yanan+Middle+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "JUJU opens in Changning · Yuyuan Road",
+        "description": "JUJU returned in the former Cannery space, with a September 21 soft opening.",
+        "sourceUrl": "https://rachelgouk.com/listings/juju-shanghai/",
+        "address": "1107 Yuyuan Road, Changning District, Shanghai, China",
+        "latitude": 31.220516469038,
+        "longitude": 121.424037558778,
+        "productName": "JUJU",
+        "utcStartDateTime": "2026-09-21T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Nomfluence’s September 22 report states the September 21, 2026 soft opening.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shanghai",
+          "China",
+          "Changning · Yuyuan Road",
+          "Korean barbecue"
+        ],
+        "longFormSummary": "<p>JUJU returned in the former Cannery space, with a September 21 soft opening. <cite data-ref=\"https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "JUJU — research source",
+            "confidence": 90,
+            "reasoning": "Nomfluence’s September 22 report states the September 21, 2026 soft opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/listings/juju-shanghai/",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/juju-shanghai/",
+            "name": "JUJU",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Current branch dishes",
+                "url": "https://rachelgouk.com/listings/juju-shanghai/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Wagyu beef for the grill",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Japchae",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Korean pancakes",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Jjigae stew",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Spicy buldak with rice cakes and cheese",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Bulgogi and kimchi poutine",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Current branch listing and September opening report name these dishes without prices. No verified new-branch operator price sheet found after brand, address and menu searches. September 21–24 launch discount has expired and is excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 31.220516469038,
+              "longitude": 121.424037558778,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1107+Yuyuan+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/juju-shanghai/",
+            "name": "JUJU",
+            "websiteUrl": "https://rachelgouk.com/listings/juju-shanghai/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/"
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "opening",
+            "slug": "juju",
+            "name": "JUJU",
+            "neighborhood": "Changning · Yuyuan Road",
+            "cuisine": "Korean barbecue",
+            "address": "1107 Yuyuan Road, Changning District, Shanghai, China",
+            "websiteUrl": "https://rachelgouk.com/listings/juju-shanghai/",
+            "description": "JUJU returned in the former Cannery space, with a September 21 soft opening.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-09-21",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 31.220516469038,
+        "longitude": 121.424037558778,
+        "score": 100,
+        "matchedAddress": "1107 Yuyuan Road, Jiangsu St, Changning District, Shanghai, Shanghai City",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1107+Yuyuan+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Nuits — Pavilion plans an opening in Jing’an · Plaza 66",
+        "description": "Planned for October 2026 at Plaza 66’s Pavilion.",
+        "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#nuits",
+        "address": "Pavilion at Plaza 66, 1266 Nanjing West Road, Jing’an District, Shanghai, China",
+        "latitude": 31.229831711962,
+        "longitude": 121.449660910969,
+        "productName": "Nuits — Pavilion",
+        "utcStartDateTime": "2026-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "September 22 reporting targets October 2026. October 31 is only a month-end sorting estimate; exact opening day is unannounced.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shanghai",
+          "China",
+          "Jing’an · Plaza 66",
+          "Restaurant and bistro"
+        ],
+        "longFormSummary": "<p>Planned for October 2026 at Plaza 66’s Pavilion. <cite data-ref=\"https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "Nuits — Pavilion — research source",
+            "confidence": 90,
+            "reasoning": "September 22 reporting targets October 2026. October 31 is only a month-end sorting estimate; exact opening day is unannounced."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#nuits",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#nuits",
+            "name": "Nuits — Pavilion",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Forthcoming Shanghai branch menu",
+                "url": "https://www.plaza66.com/",
+                "currency": "CNY",
+                "coverage": "link",
+                "items": [],
+                "note": "Checked the September roundup, Plaza 66/Pavilion announcements, operator website, branch-name and menu searches. No forthcoming branch dishes, prices or gallery verified. Previous-location and Bangkok menus/photos are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 31.229831711962,
+              "longitude": 121.449660910969,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1266+Nanjing+West+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#nuits",
+            "name": "Nuits — Pavilion",
+            "websiteUrl": "https://www.plaza66.com/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/"
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "opening",
+            "slug": "nuits",
+            "name": "Nuits — Pavilion",
+            "neighborhood": "Jing’an · Plaza 66",
+            "cuisine": "Restaurant and bistro",
+            "address": "Pavilion at Plaza 66, 1266 Nanjing West Road, Jing’an District, Shanghai, China",
+            "websiteUrl": "https://www.plaza66.com/",
+            "description": "Planned for October 2026 at Plaza 66’s Pavilion.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-10-31",
+            "openingConfirmed": false
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 31.229831711962,
+        "longitude": 121.449660910969,
+        "score": 100,
+        "matchedAddress": "1266 Nanjing West Road, Jing'an District, Shanghai, Shanghai City",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1266+Nanjing+West+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Tribe Sky Beach Club — Shanghai plans an opening in Jing’an · Plaza 66",
+        "description": "Planned for late Q4 2026 on Plaza 66’s rooftop; exact opening date unannounced.",
+        "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#tribe",
+        "address": "6F rooftop garden, Plaza 66, 1266 Nanjing West Road, Jing’an District, Shanghai, China",
+        "latitude": 31.229831711962,
+        "longitude": 121.449660910969,
+        "productName": "Tribe Sky Beach Club — Shanghai",
+        "utcStartDateTime": "2026-12-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "September 22 reporting targets late 2026 (late Q4). December 31 is only a quarter-end sorting estimate; not a confirmed day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shanghai",
+          "China",
+          "Jing’an · Plaza 66",
+          "Beach club dining"
+        ],
+        "longFormSummary": "<p>Planned for late Q4 2026 on Plaza 66’s rooftop; exact opening date unannounced. <cite data-ref=\"https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "Tribe Sky Beach Club — Shanghai — research source",
+            "confidence": 90,
+            "reasoning": "September 22 reporting targets late 2026 (late Q4). December 31 is only a quarter-end sorting estimate; not a confirmed day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#tribe",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#tribe",
+            "name": "Tribe Sky Beach Club — Shanghai",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Forthcoming Shanghai branch menu",
+                "url": "https://tribeskybeachclub.com/",
+                "currency": "CNY",
+                "coverage": "link",
+                "items": [],
+                "note": "Checked the September roundup, Plaza 66/Pavilion announcements, operator website, branch-name and menu searches. No forthcoming branch dishes, prices or gallery verified. Previous-location and Bangkok menus/photos are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 31.229831711962,
+              "longitude": 121.449660910969,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1266+Nanjing+West+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#tribe",
+            "name": "Tribe Sky Beach Club — Shanghai",
+            "websiteUrl": "https://tribeskybeachclub.com/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/"
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "opening",
+            "slug": "tribe",
+            "name": "Tribe Sky Beach Club — Shanghai",
+            "neighborhood": "Jing’an · Plaza 66",
+            "cuisine": "Beach club dining",
+            "address": "6F rooftop garden, Plaza 66, 1266 Nanjing West Road, Jing’an District, Shanghai, China",
+            "websiteUrl": "https://tribeskybeachclub.com/",
+            "description": "Planned for late Q4 2026 on Plaza 66’s rooftop; exact opening date unannounced.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-12-31",
+            "openingConfirmed": false
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 31.229831711962,
+        "longitude": 121.449660910969,
+        "score": 100,
+        "matchedAddress": "1266 Nanjing West Road, Jing'an District, Shanghai, Shanghai City",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1266+Nanjing+West+Road+Shanghai+China&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    }
+  ],
+  "notes": "Research/import snapshot; live menus, details and tiles are stored in RestaurantContent. API edits are authoritative. Photos are public, verified Azure blobs; no image binaries are committed."
+}

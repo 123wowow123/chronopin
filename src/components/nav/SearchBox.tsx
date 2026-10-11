@@ -3,6 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
+import { thumb } from '@/components/person/PeopleDirectory';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { canonicalCategory } from '@/lib/categories';
 import { api } from '@/lib/client/api';
@@ -10,6 +11,7 @@ import { withPageLang } from '@/lib/client/navigation';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { formatDayKey, formatStart } from '@/lib/format';
+import { OCTAGON_AXES } from '@/lib/people';
 import { hasTerm, term } from '@/lib/searchTerms';
 import { reservedName, reservedTag, type ReservedTag, type TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
@@ -106,7 +108,8 @@ function termLabel(part: TermPart, t: Translator) {
   // any other value is shown as it was typed.
   const named = part.field === 'tag' || part.field === 'category' || part.field === 'confidence';
   const name = part.field === 'confidence' ? (reservedName('confidence', part.value) ?? part.value) : part.value;
-  const field = t.dynamic(`search.fields.${part.field}`, part.field);
+  const axis = (OCTAGON_AXES as readonly string[]).includes(part.field);
+  const field = axis ? t.dynamic(`person.octagon.axes.${part.field}`, part.field) : t.dynamic(`search.fields.${part.field}`, part.field);
   // -tag: leaves the tag out, and says so: "not tag Anime".
   return { field: part.negated ? t('search.notField', { field }) : field, value: named ? tagLabel(t, { name }) : part.value };
 }
@@ -120,6 +123,7 @@ type Suggestion =
   | { kind: 'company'; name: string; logoUrl: string | null; count: number }
   | { kind: 'user'; name: string; pictureUrl: string | null; count: number }
   | { kind: 'holiday'; name: string; label: string; next: string | null }
+  | { kind: 'person'; name: string; photoUrl: string | null; line: string; count: number }
   | { kind: 'reserved'; name: string; filter: ReservedTag }
   | { kind: 'tag'; name: string; count: number }
   | { kind: 'pin'; pin: PinJson };
@@ -130,9 +134,10 @@ type AutocompleteJson = {
   companies?: { name: string; logoUrl: string | null; count: number }[];
   users?: { userName: string; pictureUrl: string | null; count: number }[];
   holidays?: { name: string; label: string; next: string | null }[];
+  people?: { name: string; photoUrl: string | null; line: string; count: number }[];
 };
 
-// The rows in the order they show: categories, companies, accounts, holidays,
+// The rows in the order they show: categories, companies, accounts, people, holidays,
 // then the site's own filters and the tags people wrote (one group, the site's first),
 // then pins.
 function toSuggestions(res: AutocompleteJson): Suggestion[] {
@@ -141,6 +146,7 @@ function toSuggestions(res: AutocompleteJson): Suggestion[] {
     ...tags.filter((t) => t.kind === 'category').map((c): Suggestion => ({ kind: 'category', name: canonicalCategory(c.name), count: c.count })),
     ...(res.companies || []).map((c): Suggestion => ({ kind: 'company', ...c })),
     ...(res.users || []).map((u): Suggestion => ({ kind: 'user', name: u.userName, pictureUrl: u.pictureUrl, count: u.count })),
+    ...(res.people || []).map((p): Suggestion => ({ kind: 'person', ...p })),
     ...(res.holidays || []).map((h): Suggestion => ({ kind: 'holiday', name: h.name, label: h.label, next: h.next })),
     ...tags.flatMap((t): Suggestion[] => {
       const filter = t.kind === 'reserved' ? reservedTag(t.name) : undefined;
@@ -157,6 +163,7 @@ const GROUP_LABEL = {
   category: 'search.groupCategories',
   company: 'search.groupCompanies',
   user: 'search.groupAccounts',
+  person: 'search.groupPeople',
   holiday: 'search.groupHolidays',
   reserved: 'search.groupTags',
   tag: 'search.groupTags',
@@ -444,7 +451,9 @@ export function SearchBox() {
                   ? ('user' as const)
                   : suggestion.kind === 'holiday'
                     ? ('holiday' as const)
-                    : ('tag' as const),
+                    : suggestion.kind === 'person'
+                      ? ('person' as const)
+                      : ('tag' as const),
             value: suggestion.name,
           };
     const rest = query('');
@@ -1069,6 +1078,18 @@ export function SearchBox() {
                     <>
                       <UserAvatar userName={suggestion.name} pictureUrl={suggestion.pictureUrl} className="mt-0.5 size-3.5 text-[7px]" />
                       <span className="min-w-0 flex-1 truncate text-ink">{suggestion.name}</span>
+                      <span className="shrink-0 text-xs text-subtle tabular-nums">{suggestion.count}</span>
+                    </>
+                  ) : suggestion.kind === 'person' ? (
+                    // A person from the People pages: their photo (initials
+                    // when there is none), name, office and party, and how
+                    // many pins the person: term finds.
+                    <>
+                      <UserAvatar userName={suggestion.name} pictureUrl={thumb(suggestion.photoUrl)} className="mt-0.5 size-3.5 text-[7px]" />
+                      <span className="min-w-0 flex-1 truncate text-ink">
+                        {suggestion.name}
+                        {suggestion.line ? <span className="ml-2 text-xs text-subtle">{suggestion.line}</span> : null}
+                      </span>
                       <span className="shrink-0 text-xs text-subtle tabular-nums">{suggestion.count}</span>
                     </>
                   ) : suggestion.kind === 'holiday' ? (

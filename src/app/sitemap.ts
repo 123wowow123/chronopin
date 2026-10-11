@@ -5,7 +5,9 @@ import { absoluteUrl, pinPath } from '@/lib/seo';
 import Pins from '@/server/model/pins';
 import { offeredLocales, TAGS } from '@/server/services/cache';
 import { hideThinPins } from '@/server/services/pages';
+import { personIndex } from '@/server/services/people';
 import { topicIndex } from '@/server/services/topics';
+import { personPath } from '@/lib/people';
 import { companyPath, MIN_INDEXED_PINS, tagPath } from '@/lib/topics';
 import { DEFAULT_LOCALE, languageAlternates, type Locale } from '@/lib/i18n/config';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
@@ -28,6 +30,8 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
   const topics = [
     ...index.tags.filter((t) => t.pins >= MIN_INDEXED_PINS).map((t) => tagPath(t.name)),
     ...index.companies.filter((c) => c.pins >= MIN_INDEXED_PINS).map((c) => companyPath(c.name)),
+    // A person's page is a profile, not a list of pins: every one is worth indexing.
+    ...(await personIndex()).map((p) => personPath(p.name)),
   ];
   // Each city guide's lists, and their later pages, are crawlable URLs (?view=&page=).
   const now = new Date();
@@ -57,6 +61,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     { url: absoluteUrl('/tags'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/tags') },
     { url: absoluteUrl('/products'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/products') },
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },
+    { url: absoluteUrl('/people'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/people') },
     ...topics.map((path) => ({ url: absoluteUrl(path), alternates: inEveryLanguage(path), changeFrequency: 'daily' as const, priority: 0.7 })),
     ...pins.map((pin) => ({
       url: absoluteUrl(pinPath(pin)),

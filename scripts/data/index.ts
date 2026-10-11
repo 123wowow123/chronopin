@@ -29,6 +29,7 @@ import PinTranslation from '@/server/model/pinTranslation';
 import PinSentiment from '@/server/model/pinSentiment';
 import ProductPicture from '@/server/model/productPicture';
 import CompanyExecutive from '@/server/model/companyExecutive';
+import Person from '@/server/model/person';
 import Listing from '@/server/model/listing';
 import Message from '@/server/model/message';
 
@@ -67,6 +68,7 @@ const { values: flags } = parseArgs({
     sentimentfile: { type: 'string', default: './scripts/backup/seedPinSentiments.json' },
     productpicturefile: { type: 'string', default: './scripts/backup/seedProductPictures.json' },
     executivefile: { type: 'string', default: './scripts/backup/seedCompanyExecutives.json' },
+    personfile: { type: 'string', default: './scripts/backup/seedPeople.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -302,6 +304,9 @@ async function saveDB() {
 
   console.log('Backup Company Executives');
   writeJson(flags.executivefile, (await CompanyExecutive.getAll()).filter((e) => keptCompanyIds.has(e.companyId)));
+
+  console.log('Backup People');
+  writeJson(flags.personfile, await Person.backupAll());
 
   console.log('Data Backup Complete');
 }
@@ -605,6 +610,14 @@ async function seedDB() {
       await CompanyExecutive.restore(readJson(flags.executivefile));
     } catch (error) {
       log.error('Company Executives Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.personfile)) {
+    try {
+      await Person.restoreAll(readJson(flags.personfile));
+    } catch (error) {
+      log.error('People Save Error', JSON.stringify(error));
     }
   }
 

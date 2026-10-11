@@ -325,6 +325,63 @@ export function topicJsonLd({
   return [page, breadcrumbs];
 }
 
+// A person's page: a ProfilePage about a schema.org Person, with the
+// facts the page states (birth, party, office, where it is known) and the
+// sources it quotes, plus its breadcrumb.
+export function personJsonLd({
+  name,
+  path,
+  description,
+  locale = DEFAULT_LOCALE,
+  person,
+}: {
+  name: string;
+  path: string;
+  description: string;
+  locale?: Locale;
+  person: {
+    jobTitle: string | null;
+    party: string | null;
+    birthDate: string | null;
+    deathDate: string | null;
+    image: string | null;
+    sameAs: string[];
+  };
+}) {
+  const url = absoluteUrl(localizePath(path, locale));
+  const about = {
+    '@type': 'Person',
+    name,
+    ...(person.jobTitle ? { jobTitle: person.jobTitle } : {}),
+    ...(person.party ? { affiliation: { '@type': 'PoliticalParty', name: person.party } } : {}),
+    ...(person.birthDate ? { birthDate: person.birthDate } : {}),
+    ...(person.deathDate ? { deathDate: person.deathDate } : {}),
+    ...(person.image ? { image: person.image } : {}),
+    ...(person.sameAs.length ? { sameAs: person.sameAs } : {}),
+  };
+  const page = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    '@id': `${url}#page`,
+    url,
+    name,
+    description,
+    inLanguage: languageTag(locale),
+    isPartOf: { '@id': `${siteUrl}/#website` },
+    mainEntity: about,
+  };
+  const breadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: siteName, item: absoluteUrl(localizePath('/', locale)) },
+      { '@type': 'ListItem', position: 2, name: 'People', item: absoluteUrl(localizePath('/people', locale)) },
+      { '@type': 'ListItem', position: 3, name, item: url },
+    ],
+  };
+  return [page, breadcrumbs];
+}
+
 // An all-day pin is a date, not an instant; its stored end is the day after
 // its last day, so the last day is one before it.
 function eventDate(iso: string, allDay?: boolean, isEnd = false): string {

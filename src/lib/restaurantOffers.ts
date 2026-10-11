@@ -2,6 +2,10 @@ import { TZDate } from '@date-fns/tz';
 import { distanceKm, type Place } from './distance';
 import type { RestaurantMenu, RestaurantPhoto, RestaurantReview, RestaurantSpecial } from './restaurantMenus';
 
+export function isRestaurantPromotion(special: RestaurantSpecial): boolean {
+  return Boolean(special.discounted || (special.limitedTime && special.validFrom && special.validThrough));
+}
+
 export type RestaurantOffer = {
   id: string;
   name: string;
@@ -25,7 +29,7 @@ function minutes(value: string): number {
 
 // Never infer availability from prose such as "lunch only" or "daily special".
 export function activeRestaurantOffer(special: RestaurantSpecial, now: Date, timeZone: string): { end: string } | null {
-  if (!special.discounted || !special.availability?.windows.length || !Number.isFinite(now.getTime())) return null;
+  if (!isRestaurantPromotion(special) || !special.availability?.windows.length || !Number.isFinite(now.getTime())) return null;
   const parts = new Intl.DateTimeFormat('en-US', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(now);
   const part = (type: Intl.DateTimeFormatPartTypes) => parts.find((item) => item.type === type)!.value;
   const today = `${part('year')}-${part('month')}-${part('day')}`;
@@ -44,6 +48,7 @@ export function activeRestaurantOffer(special: RestaurantSpecial, now: Date, tim
     const offerWeekday = afterMidnight ? (weekday + 6) % 7 : weekday;
     if (!window.days.includes(offerWeekday)) continue;
     if (special.validFrom && offerDay < special.validFrom) continue;
+    if (special.availability.holidayCalendarThrough && offerDay > special.availability.holidayCalendarThrough) continue;
     if (special.availability.excludedDates?.includes(offerDay)) continue;
     // Holiday-restricted offers require a resolved calendar from the server.
     if (special.availability.excludesHolidays && !special.availability.excludedDates) continue;
@@ -59,7 +64,7 @@ export function offerEndLabel(value: string): string {
 }
 
 export function nextRestaurantOffer(special: RestaurantSpecial, now: Date, timeZone: string): { startsAt: string; end: string } | null {
-  if (!special.discounted || !special.availability?.windows.length || !Number.isFinite(now.getTime())) return null;
+  if (!isRestaurantPromotion(special) || !special.availability?.windows.length || !Number.isFinite(now.getTime())) return null;
   // Construct local calendar dates so DST changes never shift a service hour.
   const local = new TZDate(now, timeZone);
   const day = new Date(Date.UTC(local.getFullYear(), local.getMonth(), local.getDate()));

@@ -11,6 +11,8 @@ import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
 import { candidatesForPin } from '../model/pinCandidate';
 import { gameInfoForPin } from '../model/pinGameInfo';
+import { tasteForPin } from '../model/pinTaste';
+import type { PinTasteJson } from '@/lib/pinTaste';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
@@ -227,6 +229,14 @@ export async function pinGameInfo(id: number): Promise<PinGameInfoJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return gameInfoForPin(id);
+}
+
+// A consumable pin's taste profile, or null when it has none.
+export async function pinTaste(id: number): Promise<PinTasteJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return tasteForPin(id);
 }
 
 // Tagged with every pin in the thread, so a change to any of them - a

@@ -1,6 +1,6 @@
 import Holidays from 'date-holidays';
 import { restaurantSourceKey, type RestaurantMenuProfile } from '@/lib/restaurantMenus';
-import type { RestaurantOffer } from '@/lib/restaurantOffers';
+import { isRestaurantPromotion, type RestaurantOffer } from '@/lib/restaurantOffers';
 import type { Restaurant, TopRestaurant } from '@/lib/restaurants';
 import { pinPath } from '@/lib/seo';
 import { listSpecialVenues, type RestaurantSpecialVenue } from '@/server/model/restaurantSpecialVenue';
@@ -25,7 +25,7 @@ export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants:
     if (!profile || seen.has(profile.pinSourceUrl)) return [];
     seen.add(profile.pinSourceUrl);
     return profile.specials.flatMap((special, index) => {
-      if (!special.discounted || !special.availability) return [];
+      if (!isRestaurantPromotion(special) || !special.availability) return [];
       let availability = special.availability!;
       if (availability.excludesHolidays) {
         // Resolve only calendars confirmed for these branch-specific promotions.

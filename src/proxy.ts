@@ -10,6 +10,7 @@ import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
 import { botRetryAfter, SHED_RETRY_AFTER } from '@/server/botLimit';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
+import Person from '@/server/model/person';
 import Topics from '@/server/model/topics';
 import { timelineMinConfidence } from '@/server/services/timeline';
 import { offeredLocales, pinPathCache } from '@/server/services/cache';
@@ -181,10 +182,10 @@ export const config = {
   ],
 };
 
-// The slugs that have a /tag or /company page, kept a minute on
+// The slugs that have a /tag, /company or /person page, kept a minute on
 // globalThis like the pin paths: a new tag's page can wait that long, and
 // one that lost its last pin renders its own not-found meanwhile.
-type TopicSlugs = { tag: Set<string>; company: Set<string> };
+type TopicSlugs = { tag: Set<string>; company: Set<string>; person: Set<string> };
 
 // The promise is kept, so requests arriving while it loads share one query
 // (the tag list reads PinTagView, about 100ms); a failed load is not kept.
@@ -193,8 +194,12 @@ function topicSlugs(): Promise<TopicSlugs> {
   if (g.__chronopinTopicSlugs && g.__chronopinTopicSlugs.expires > Date.now()) return g.__chronopinTopicSlugs.slugs;
   const slugs = (async () => {
     const minConfidence = await timelineMinConfidence();
-    const [tags, companies] = await Promise.all([Topics.tags(minConfidence), Topics.companies(minConfidence)]);
-    return { tag: new Set(tags.map((t) => topicSlug(t.name))), company: new Set(companies.map((c) => topicSlug(c.name))) };
+    const [tags, companies, people] = await Promise.all([Topics.tags(minConfidence), Topics.companies(minConfidence), Person.list()]);
+    return {
+      tag: new Set(tags.map((t) => topicSlug(t.name))),
+      company: new Set(companies.map((c) => topicSlug(c.name))),
+      person: new Set(people.map((p) => p.slug)),
+    };
   })();
   const entry = { slugs, expires: Date.now() + TTL_MS };
   g.__chronopinTopicSlugs = entry;
@@ -207,11 +212,11 @@ function topicSlugs(): Promise<TopicSlugs> {
 // Tag and company URLs, the way pin URLs are checked above: a 308 to the
 // slug's one spelling (/tag/Anime -> /tag/anime), or a real 404.
 async function checkTopicPath(request: NextRequest, path: string, locale: Locale): Promise<NextResponse | null> {
-  const match = /^\/(tag|company)\/([^/]+)\/?$/.exec(path);
+  const match = /^\/(tag|company|person)\/([^/]+)\/?$/.exec(path);
   if (!match) {
     return null;
   }
-  const kind = match[1] as 'tag' | 'company';
+  const kind = match[1] as 'tag' | 'company' | 'person';
   let raw = match[2];
   try {
     raw = decodeURIComponent(raw);

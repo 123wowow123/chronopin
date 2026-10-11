@@ -56,6 +56,8 @@ export function parseSpecialVenue(value: unknown): SpecialVenueInput {
     optionalStrings(special, ['schedule', 'menuLabel']);
     for (const key of ['conditions', 'excludedMenuItems']) if (special[key] !== undefined) { list(special[key], 100); check(special[key].every(text), `Invalid ${key}`); }
     check(special.discounted === undefined || typeof special.discounted === 'boolean', 'Invalid discounted flag');
+    check(special.limitedTime === undefined || typeof special.limitedTime === 'boolean', 'Invalid limitedTime flag');
+    check(!special.limitedTime || (date(special.validFrom) && date(special.validThrough)), 'Limited-time specials require start and end dates');
     for (const key of ['validFrom', 'validThrough']) check(special[key] === undefined || date(special[key]), `Invalid ${key}`);
     check(!special.validFrom || !special.validThrough || special.validFrom <= special.validThrough, 'Validity dates are reversed');
     check(!special.menuLabel || p.menus.some((m: any) => m.label === special.menuLabel), 'menuLabel must identify a menu');
@@ -64,8 +66,10 @@ export function parseSpecialVenue(value: unknown): SpecialVenueInput {
       for (const w of a.windows) {
         object(w); list(w.days, 7);
         check(w.days.length && w.days.every((d: unknown) => Number.isInteger(d) && Number(d) >= 0 && Number(d) <= 6) && new Set(w.days).size === w.days.length, 'Invalid service weekdays');
-        check([w.start, w.end].every((t) => typeof t === 'string' && /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(t)) && w.start !== w.end, 'Invalid service times');
+        const clock = (t: unknown) => typeof t === 'string' && /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(t);
+        check(clock(w.start) && (clock(w.end) || w.end === '24:00') && w.start !== w.end, 'Invalid service times');
       }
+      check(a.holidayCalendarThrough === undefined || (a.excludesHolidays === true && date(a.holidayCalendarThrough)), 'Invalid holiday calendar coverage');
       check(a.excludesHolidays === undefined || typeof a.excludesHolidays === 'boolean', 'Invalid holiday flag');
       if (a.excludedDates !== undefined) { list(a.excludedDates, 1000); check(a.excludedDates.every(date), 'Invalid excludedDates'); }
     }

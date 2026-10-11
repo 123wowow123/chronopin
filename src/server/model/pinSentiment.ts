@@ -160,6 +160,22 @@ export default class PinSentiment {
     );
   }
 
+  // The scored pins a person is linked to (PinPerson), as forCompany reads a
+  // company's. Only pins with a company are scored, so a pin of theirs with
+  // none sits out.
+  static forPerson(personId: number) {
+    return db.query<{ id: number; title: string; utcStartDateTime: Date; sentiment: number; product: string | null }>(
+      `
+    SELECT "Pin"."id", "Pin"."title", "Pin"."utcStartDateTime", "PinSentiment"."sentiment", "PinSentiment"."product"
+    FROM "PinPerson"
+      JOIN "Pin" ON "Pin"."id" = "PinPerson"."pinId"
+      JOIN "PinSentiment" ON "PinSentiment"."pinId" = "Pin"."id"
+    WHERE "PinPerson"."personId" = $1 AND "Pin"."utcDeletedDateTime" IS NULL
+    ORDER BY "Pin"."utcStartDateTime", "Pin"."id"`,
+      [personId],
+    );
+  }
+
   static async getAll(): Promise<StoredPinSentiment[]> {
     const rows = await db.query<{ pinId: number; sentiment: number; textHash: string; utcScoredDateTime: Date; product: string | null; productHash: string | null }>(
       `SELECT "pinId", "sentiment", "textHash", "utcScoredDateTime", "product", "productHash" FROM "PinSentiment" ORDER BY "pinId"`,

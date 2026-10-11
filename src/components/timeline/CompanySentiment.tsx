@@ -67,7 +67,9 @@ export function CompanySentimentChart({ name, sentiment }: { name: string; senti
 
   // The dates the plot spans, a little wider than the points so none sits on
   // the edge, and never narrower than a month.
-  const times = all.map((p) => p.at);
+  // The averages count too: a month's sits mid-month, which can fall outside
+  // the points when they are few and close.
+  const times = [...all, ...newsLine, ...commentLine].map((p) => p.at);
   let from = Math.min(...times);
   let to = Math.max(...times);
   const minSpan = 31 * 86400000;

@@ -27,11 +27,12 @@ import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, offsetDate
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
-import type { CardPin, SearchedCompany, SearchPage } from '@/lib/types';
+import type { CardPin, SearchedCompany, SearchedPerson, SearchPage } from '@/lib/types';
 import { CompanyExecutivesPanel } from './CompanyExecutives';
 import { CompanyParentsPanel } from './CompanyParents';
 import { CompanyProductsPanel } from './CompanyProducts';
 import { SearchedCompanyPanel } from './SearchedCompany';
+import { SearchedPersonPanel } from './SearchedPerson';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
@@ -127,6 +128,7 @@ export function SearchResults({
   serverNow,
   searchedUser,
   searchedCompany,
+  searchedPerson,
   specialtyDays: initialSpecialtyDays,
   culturalDays: initialCulturalDays,
   searchedDays = [],
@@ -145,6 +147,8 @@ export function SearchResults({
   searchedUser?: { id: number; userName: string };
   // The one company a company: search names, for the panel about it.
   searchedCompany?: SearchedCompany;
+  // The one person a person: search names, for the panel about them.
+  searchedPerson?: SearchedPerson;
   specialtyDays: Record<string, SpecialtyDay[]>;
   culturalDays: Record<string, CulturalDay[]>;
   // The days a date: search keeps to; today is on the timeline only when it is one of them.
@@ -534,9 +538,9 @@ export function SearchResults({
           merge
           typing={sliderTyping}
           filterSummary={spanLabel(postedWithin, t.locale)}
-          summaryCaption={searchedUser || searchedCompany ? undefined : t('controls.postedWithin')}
-          summary={searchedUser ? searchedUser.userName : searchedCompany ? searchedCompany.name : spanLabel(postedWithin, t.locale)}
-          summaryIsPostedWithin={!searchedUser && !searchedCompany}
+          summaryCaption={searchedUser || searchedCompany || searchedPerson ? undefined : t('controls.postedWithin')}
+          summary={searchedUser ? searchedUser.userName : searchedCompany ? searchedCompany.name : searchedPerson ? searchedPerson.name : spanLabel(postedWithin, t.locale)}
+          summaryIsPostedWithin={!searchedUser && !searchedCompany && !searchedPerson}
           onToday={sortBy === 'date' && bags.length ? holdNow : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
           // The sort to hand below xl; from xl it is in the panel.
@@ -560,7 +564,7 @@ export function SearchResults({
               : undefined
           }
           cards={
-            searchedUser || searchedCompany ? (
+            searchedUser || searchedCompany || searchedPerson ? (
               <>
                 {searchedUser ? (
                   <div className="floating flex flex-col gap-3 px-4 py-3.5">
@@ -592,6 +596,7 @@ export function SearchResults({
                     )}
                   </div>
                 ) : null}
+                {searchedPerson ? <SearchedPersonPanel person={searchedPerson} /> : null}
                 {searchedCompany?.parents?.length ? <CompanyParentsPanel parents={searchedCompany.parents} /> : null}
                 {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
                 {searchedCompany?.sentiment ? <CompanyProductsPanel name={searchedCompany.name} sentiment={searchedCompany.sentiment} /> : null}

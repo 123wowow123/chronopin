@@ -340,14 +340,28 @@ list these information on people if available
 • Major property or houses owned
 
 
-- famous people should have page like congressmen too
+
+- Hexagonal Human - Octagonal Human 
+
+https://winefolly.com/tips/flavor-profiles-of-white-wines/
+- corruptness
+Social good
+Economic good
+https://annals.yonsei.ac.kr/news/articleView.html?idxno=11210
+
+Octagon chart during different phases of life
+Thin coverage: cider and Japan/Korea snack awards are still thin; the agents ran out of sourced items.
+
+https://www.magnific.com/free-vector/radar-chart-design-template_29760021.htm#fromView=keyword&page=1&position=2&uuid=30ad836d-b00b-451c-8bd5-35bd9eb8906e&track=ais_hybrid&query=Gpx+hexagon
+
+https://www.magnific.com/free-vector/radar-chart-infographic-design-template_29959936.htm#fromView=keyword&page=1&position=8&uuid=a9588756-0c5a-43d6-b2e0-99fe17a8f1f7&track=ais_hybrid&query=Gpx+hexagon
 
 
 Build KG with people, companies, properties, vacations, products / shows
 
 
 
-- generate most corrupt people page collage
+- add south korea restaurant landing page
 
 - add restaurant reservation and ordering adamin portal in bunsiness account
 
@@ -395,11 +409,6 @@ As of 2026-10-04. Prod's Anthropic key has no credit, so its link wikis are writ
 
 
 
-ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187 'cd chronopin && docker compose -f Docker/docker-compose.prod.yml exec -T postgres sh -c '"'"'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT round(total_exec_time) AS total_ms, calls, round(mean_exec_time::numeric,1) AS mean_ms, left(regexp_replace(query, E\"\\\\s+\", \" \", \"g\"),140) AS query FROM pg_stat_statements ORDER BY total_exec_time DESC LIMIT 15;"'"'"
-
-
-
-
 need ability for user to take and upload media for pins, and have ability for other users to flag for issue
 
 
@@ -407,7 +416,6 @@ add button on landing page to suggest a product or restaurant to add to list. sh
 
 
 
-add china restaurant landing page
 
 add restaurant landing page for all major cities around the world
 
@@ -419,8 +427,4 @@ https://www.chronopin.com/pin/6939/africola-adelaide-restaurant-guide
 tenmu ads
 
 
-grammy's should have who was up for consideration and show their work and view link
-
-
-add strip and disable ads
-
+add stripe and disable ads

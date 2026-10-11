@@ -30,7 +30,7 @@ function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZo
   const nextTime = (startsAt: string) => new Intl.DateTimeFormat('en-US', { timeZone, weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }).format(new Date(startsAt));
   return <section id={sectionId} className={styles.offers} aria-labelledby={`${sectionId}-title`}>
     <div className={styles.browseHeading}>
-      <div><p className={styles.eyebrow}>GOOD FOOD. BETTER PRICES.</p><h2 id={`${sectionId}-title`}>{upcoming ? 'Upcoming specials' : 'Discounted menus available now'}</h2></div>
+      <div><p className={styles.eyebrow}>GOOD FOOD. SPECIALS.</p><h2 id={`${sectionId}-title`}>{upcoming ? 'Upcoming specials' : 'Specials available now'}</h2></div>
       {pages.total > 0 && <RestaurantControls state={sortState} label="specials" mapHref={`/map?${mapParams}`} lunch={!upcoming} />}
     </div>
     <p className={styles.offerIntro}>Happy hours, daily specials, and limited offers during published service hours in {city}. Times follow the restaurant’s local clock.</p>
@@ -59,7 +59,7 @@ function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZo
         <div className={styles.topLinks}><Anchor href={offer.special.sourceUrl} target="_blank" rel="noopener noreferrer">{upcoming ? 'View upcoming offer' : 'View offer at restaurant'} ↗</Anchor><Link href={offer.restaurantHref}>Restaurant details ↗</Link></div>
         <p className={styles.offerSchedule}>Menu checked {offer.checkedAt}</p>
       </div>
-    </article>}</PagedCardGrid> : pages.ready ? <div className={styles.empty}><h3>{upcoming ? 'No upcoming specials yet.' : 'No discounted menus available right now.'}</h3><p>{upcoming ? 'Try another neighborhood or check back for new offers.' : 'See the next published specials below.'}</p></div> : null}
+    </article>}</PagedCardGrid> : pages.ready ? <div className={styles.empty}><h3>{upcoming ? 'No upcoming specials yet.' : 'No specials available right now.'}</h3><p>{upcoming ? 'Try another neighborhood or check back for new offers.' : 'See the next published specials below.'}</p></div> : null}
     <p className={styles.offerIntro}>Offers follow published schedules; item availability can change. Order or redeem directly with the restaurant. Seating restrictions and extra charges are shown with each offer.</p>
   </section>;
 }

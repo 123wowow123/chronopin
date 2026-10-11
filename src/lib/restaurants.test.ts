@@ -34,6 +34,14 @@ describe('regional restaurant opening status', () => {
 });
 
 describe('nearest restaurant guide', () => {
+  it('orders China cities west to east and uses China local time', () => {
+    const regions = RESTAURANT_REGIONS.filter((region) => region.country === 'China');
+    expect(regions.map((region) => region.slug)).toEqual(['kunming', 'chengdu', 'chongqing', 'xian', 'sanya', 'haikou', 'changsha', 'foshan', 'guangzhou', 'zhengzhou', 'dongguan', 'shenzhen', 'wuhan', 'beijing', 'jinan', 'hefei', 'tianjin', 'xiamen', 'nanjing', 'hangzhou', 'qingdao', 'suzhou', 'shanghai', 'ningbo', 'dalian', 'shenyang', 'harbin']);
+    for (const region of regions) {
+      expect(nearestRestaurantRegion(region).slug).toBe(region.slug);
+      expect(new Intl.DateTimeFormat('en-GB', { timeZone: region.timeZone, hour: '2-digit', hourCycle: 'h23' }).format(new Date('2026-10-10T00:00:00Z'))).toBe('08');
+    }
+  });
   it('orders Taiwan cities west to east and uses their local clock', () => {
     const regions = RESTAURANT_REGIONS.filter((region) => region.country === 'Taiwan');
     expect(regions.map((region) => region.slug)).toEqual(['kaohsiung', 'taichung', 'taipei']);

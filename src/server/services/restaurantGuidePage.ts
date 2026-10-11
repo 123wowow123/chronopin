@@ -37,6 +37,7 @@ export async function guideSummary(regionSlug: string, now: Date): Promise<(Guid
   const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image && !restaurant.imageNote) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image) ?? null;
   return {
     today, previewSnapshot, featured,
+    featuredTop: featured ? null : tops.find((restaurant) => restaurant.image) ?? null,
     counts: { upcoming: upcoming.length, new: recent.length, top: tops.length, discounts: sections.available.length + sections.upcoming.length },
     neighborhoods: { upcoming: names(upcoming), new: names(recent), top: names(tops), discounts: names(offers) },
   };

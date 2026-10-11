@@ -31,8 +31,12 @@ export type RestaurantSpecial = {
     windows: { days: number[]; start: string; end: string }[];
     excludedDates?: string[];
     excludesHolidays?: boolean;
+    // Last day covered by an explicitly researched holiday calendar.
+    holidayCalendarThrough?: string;
   };
   discounted?: boolean;
+  // A sourced seasonal menu, with explicit start/end dates, need not be a discount.
+  limitedTime?: boolean;
   menuLabel?: string;
   excludedMenuItems?: string[];
 };

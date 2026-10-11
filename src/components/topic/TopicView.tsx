@@ -145,7 +145,7 @@ function PinDate({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
   return <time dateTime={pin.allDay ? day : pin.utcStartDateTime}>{dateFormat(INTL_LOCALES[t.locale], { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${day}T00:00:00Z`))}</time>;
 }
 
-function PinSection({ id, heading, pins, timeZone, now, todayKey }: { id: string; heading: string; pins: PinJson[]; timeZone: string; now: Date; todayKey: string }) {
+export function PinSection({ id, heading, pins, timeZone, now, todayKey }: { id: string; heading: string; pins: PinJson[]; timeZone: string; now: Date; todayKey: string }) {
   if (!pins.length) return null;
   return (
     <section aria-labelledby={`${id}-heading`} className="mt-10 first:mt-0">

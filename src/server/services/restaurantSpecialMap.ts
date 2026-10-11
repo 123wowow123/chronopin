@@ -1,4 +1,5 @@
 import type { RestaurantMenuProfile } from '@/lib/restaurantMenus';
+import { isRestaurantPromotion } from '@/lib/restaurantOffers';
 import type { MapPinJson } from '@/lib/types';
 import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
 
@@ -16,7 +17,7 @@ export function buildRestaurantSpecialMap(ids: string[], profiles: Venue[]): Map
   const venues = new Map<string, Venue>();
   for (const venue of profiles) venues.set(venue.pinSourceUrl, venue);
   return [...venues.values()].flatMap((venue, index) => {
-    const matches = venue.specials.filter((special, specialIndex) => special.discounted && requested.has(`${venue.pinSourceUrl}#${specialIndex}`));
+    const matches = venue.specials.filter((special, specialIndex) => isRestaurantPromotion(special) && requested.has(`${venue.pinSourceUrl}#${specialIndex}`));
     const location = venue.location;
     if (!matches.length || !location || !Number.isFinite(location.latitude) || Math.abs(location.latitude) > 90 || !Number.isFinite(location.longitude) || Math.abs(location.longitude) > 180) return [];
     return [{

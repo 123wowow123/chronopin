@@ -79,7 +79,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const neighborhood = neighborhoods.includes(selectedNeighborhood) ? selectedNeighborhood : 'all';
   const featured = summary.featured;
   const establishedOnly = counts.upcoming + counts.new === 0 && counts.top > 0;
-  const featuredTop = !featured ? Object.values(initialPages).flatMap((page) => page.items).find((item): item is TopRestaurant => 'pinId' in item && Boolean(item.image)) : undefined;
+  const featuredTop = !featured ? summary.featuredTop ?? Object.values(initialPages).flatMap((page) => page.items).find((item): item is TopRestaurant => 'pinId' in item && Boolean(item.image)) : undefined;
   const selectedSort = top ? topSort : status === 'upcoming' ? upcomingSort : recentSort;
   const pages = useGuidePages<Restaurant | TopRestaurant>(discounts ? null : { region: region.slug, view: status, neighborhood, sort: selectedSort.sort, origin: selectedSort.origin }, initialPages as Record<string, GuidePage<Restaurant | TopRestaurant>>);
   const selectedMapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', q: `pin:${pages.ids.join(',')}`, returnTo: queryTabHref(pathname, 'view', status) });

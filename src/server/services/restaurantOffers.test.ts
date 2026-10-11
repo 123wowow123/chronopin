@@ -24,6 +24,17 @@ const venue: Restaurant = {
 const NO_SPECIALS_YET = ['fort-lauderdale', 'honolulu', 'palm-springs'];
 
 describe('regional restaurant offers', () => {
+  it('includes a dated seasonal menu without inventing a discount', () => {
+    const special = { kind: 'other' as const, title: 'Seasonal menu', description: 'Published seasonal menu', sourceUrl: 'https://example.com/seasonal', discounted: false, limitedTime: true, validFrom: '2026-10-16', validThrough: '2026-11-28', availability: { windows: [{ days: [5, 6], start: '17:30', end: '21:00' }] } };
+    const profile = { pinSourceUrl: special.sourceUrl, name: 'Seasonal venue', checkedAt: '2026-10-10', neighborhood: 'Test area', address: 'Test address', websiteUrl: special.sourceUrl, menus: [], specials: [special] };
+    const record = { id: 9000, regionSlug: 'tianjin', profile, enabled: true, revision: 1, utcUpdatedDateTime: new Date() };
+    const offers = buildRestaurantOffers([], [], '2026-10-10', 'tianjin', [record]);
+    expect(offers).toHaveLength(1);
+    expect(restaurantOffersToShow(offers, new Date('2026-10-10T00:00:00Z'), 'Asia/Shanghai').offers).toHaveLength(1);
+    expect(restaurantOffersToShow(offers, new Date('2026-11-29T00:00:00Z'), 'Asia/Shanghai').offers).toEqual([]);
+    expect(buildRestaurantOffers([], [], '2026-10-10', 'tianjin', [{ ...record, profile: { ...profile, specials: [{ ...special, validThrough: undefined }] } }])).toEqual([]);
+  });
+
   it('excludes Taiwan public holidays and retains upcoming specials without ratings', () => {
     const taichung = regionalRestaurantOffers([], [], '2026-10-10', 'taichung')[0];
     expect(taichung.menu?.currency).toBe('TWD');
