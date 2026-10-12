@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { affiliateUrl, amazonAssociateTag, awinPublisherId, ebayCampaignId, isAmazonStoreUrl, isAwinUrl, isEbayUrl, isPurchaseLinkShown } from './affiliate';
+import { teslaReferralCode, affiliateUrl, amazonAssociateTag, awinPublisherId, ebayCampaignId, isAmazonStoreUrl, isAwinUrl, isEbayUrl, isPurchaseLinkShown } from './affiliate';
 
 describe('affiliateUrl', () => {
   it('tags an amazon.com listing', () => {
@@ -118,5 +118,19 @@ describe('Awin links', () => {
 
   it('leaves other hosts alone', () => {
     expect(affiliateUrl('https://example.com/brkox.com')).toBe('https://example.com/brkox.com');
+  });
+});
+
+describe('Tesla referral links', () => {
+  it('shows a tesla.com model or order page as the referral page', () => {
+    const referral = `https://ts.la/${teslaReferralCode}`;
+    expect(affiliateUrl('https://www.tesla.com/modely')).toBe(referral);
+    expect(affiliateUrl('https://tesla.com/roadster?utm_source=x')).toBe(referral);
+  });
+
+  it('leaves support pages and other countries alone', () => {
+    expect(affiliateUrl('https://www.tesla.com/support/charging')).toBe('https://www.tesla.com/support/charging');
+    expect(affiliateUrl('https://www.tesla.cn/modely')).toBe('https://www.tesla.cn/modely');
+    expect(affiliateUrl('https://www.tesla.com/de_de/modely')).toBe('https://www.tesla.com/de_de/modely');
   });
 });

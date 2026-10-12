@@ -117,6 +117,30 @@ export function isAwinUrl(url: string | undefined | null): boolean {
   }
 }
 
+// Tesla referral code (ts.la/<code>, Tesla's short link to tesla.com/referral/<code>). Tesla has no tracked
+// product-page link: the referral page is the landing page that applies the
+// code and offers the order, so a tesla.com link is shown as that page. Only
+// tesla.com itself; another country's store (tesla.cn) takes its own codes.
+export const teslaReferralCode = 'ian10897';
+const TESLA_HOSTS = new Set(['tesla.com', 'www.tesla.com']);
+
+function teslaReferralPage(url: string | undefined | null): URL | undefined {
+  if (!url) return undefined;
+  try {
+    const parsed = new URL(url);
+    if (!TESLA_HOSTS.has(parsed.hostname.toLowerCase())) return undefined;
+    // Ordering, inventory and model pages; not the support, shop or investor pages.
+    const path = parsed.pathname.toLowerCase();
+    // The code is a US one: tesla.com's other countries are a locale prefix
+    // (/de_de/, /tr_tr/), and a link to one is left as it is.
+    if (/^\/[a-z]{2}_[a-z]{2}(?:\/|$)/.test(path)) return undefined;
+    if (/^\/(?:support|shop|ir|about|careers|legal|blog)(?:\/|$)/.test(path)) return undefined;
+    return new URL(`https://ts.la/${teslaReferralCode}`);
+  } catch {
+    return undefined;
+  }
+}
+
 // The purchase link as it should be clicked: an amazon.com listing (or Prime
 // Video title, moved to amazon.com) carries our tag, an ebay.com page our
 // EPN campaign, replacing anyone else's, and a joined Awin advertiser's page
@@ -129,6 +153,8 @@ export function affiliateUrl(url: string): string {
     page.searchParams.set('tag', amazonAssociateTag);
     return page.toString();
   }
+  const tesla = teslaReferralPage(url);
+  if (tesla) return tesla.toString();
   const ebay = ebayPage(url);
   if (!ebay) return url;
   for (const [key, value] of Object.entries(EBAY_PARAMS)) ebay.searchParams.set(key, value);
@@ -137,6 +163,9 @@ export function affiliateUrl(url: string): string {
 
 // Whether the link is shown tagged, so the page owes the Associates disclosure.
 export const isAmazonStoreUrl = (url: string | undefined | null): boolean => !!amazonStorePage(url);
+
+// Whether the link is shown as our Tesla referral page.
+export const isTeslaReferralUrl = (url: string | undefined | null): boolean => !!teslaReferralPage(url);
 
 // Whether the link is shown with our EPN campaign, so the page owes a
 // disclosure that it earns from eBay purchases.
