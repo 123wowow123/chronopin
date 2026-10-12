@@ -20,12 +20,20 @@ export async function productShelves(locale: Locale = DEFAULT_LOCALE): Promise<P
   cacheLife('hours');
   cacheTag(TAGS.timeline, TAGS.sitemap);
   const minConfidence = await timelineMinConfidence();
-  const ids = await Promise.all(PRODUCT_SHELVES.map((shelf) => Products.shelfIds(shelf.name, SHELF_SIZE, minConfidence)));
+  // A pin on two shelves (glasses are Electronics and Audio, an ice cream is
+  // Ice Cream and Snack) stays on the first, and the later shelf fills its
+  // places with other products instead of going short.
+  const ids: number[][] = [];
+  const taken: number[] = [];
+  for (const shelf of PRODUCT_SHELVES) {
+    const shelfIds = await Products.shelfIds(shelf.name, SHELF_SIZE, minConfidence, taken);
+    ids.push(shelfIds);
+    taken.push(...shelfIds);
+  }
   const loaded = toJson<PinJson[]>((await Pins.queryByIds(ids.flat())).pins);
   await localizePins(loaded, locale);
   const blurbs = await Products.blurbs(loaded.map((p) => p.id));
   const byId = new Map(loaded.map((p) => [p.id, p]));
-  // A pin on two shelves (glasses are Electronics and Audio) stays on the first.
   const shelved = new Set<number>();
   return PRODUCT_SHELVES.map((shelf, i) => ({
     ...shelf,

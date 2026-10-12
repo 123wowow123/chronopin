@@ -14,7 +14,7 @@ const NOT_GOODS = ['Restaurant', 'Restaurant Opening', 'Top Restaurants', 'Movie
 export type ProductBlurb = { blurb: string; rating: { score: number; max: number; source: string; url: string | null } | null };
 
 export default class Products {
-  static async shelfIds(category: string, limit: number, minConfidence: number | null): Promise<number[]> {
+  static async shelfIds(category: string, limit: number, minConfidence: number | null, exclude: number[] = []): Promise<number[]> {
     // One pin per product: a launch has a pin for each stage (announced, on
     // sale), and the one with a stored listing, then the newest, stands for it.
     const rows = await db.query<{ id: number }>(
@@ -30,11 +30,12 @@ export default class Products {
           AND "p"."utcStartDateTime" >= date_trunc('year', now()) AND "p"."utcStartDateTime" < date_trunc('year', now()) + interval '1 year'
           AND EXISTS (SELECT 1 FROM "PinTagView" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" <> 'reserved' AND "c"."name" = $1::citext)
           AND NOT EXISTS (SELECT 1 FROM "PinTagView" AS "x" WHERE "x"."pinId" = "p"."id" AND "x"."name" = ANY($4::citext[]))
+          AND "p"."id" <> ALL($5::integer[])
         ORDER BY lower("p"."productName"), "listed" DESC, "blurbed" DESC, "p"."utcStartDateTime" DESC, "p"."id" DESC
       ) AS "one"
       ORDER BY "listed" DESC, "blurbed" DESC, "utcStartDateTime" DESC, "id" DESC
       LIMIT $3::integer`,
-      [category, minConfidence, limit, NOT_GOODS],
+      [category, minConfidence, limit, NOT_GOODS, exclude],
     );
     return rows.map((r) => r.id);
   }
