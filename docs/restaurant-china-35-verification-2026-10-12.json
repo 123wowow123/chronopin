@@ -1,0 +1,862 @@
+{
+  "savedContent": {
+    "payloadsChecked": 876,
+    "distinctBranchesChecked": 875,
+    "allContentAndMenuItemsMatch": true,
+    "allPreparedOffersPresent": true,
+    "newProfiles": 870,
+    "existingProfilesRefreshed": 5
+  },
+  "pinPages": [
+    {
+      "pinId": 14255,
+      "region": "shanghai",
+      "name": "Bread & Bistro",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14255/bread-bistro-restaurant-week-winners-2026-shanghai",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14290,
+      "region": "beijing",
+      "name": "In Food We Trust",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14290/in-food-we-trust-restaurant-week-winners-2026-beijing",
+      "menuItemCount": 20,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14325,
+      "region": "shenzhen",
+      "name": "L’MODA Med Cuisine",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14325/l-moda-med-cuisine-restaurant-week-winners-2026-shenzhen",
+      "menuItemCount": 14,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14338,
+      "region": "guangzhou",
+      "name": "Guangzhou Tian shui Catering",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14338/guangzhou-tian-shui-catering-restaurant-week-winners-2026-guangzhou",
+      "menuItemCount": 27,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14349,
+      "region": "hangzhou",
+      "name": "Oviedo @ InterContinental Hangzhou Wulin",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14349/oviedo-intercontinental-hangzhou-wulin-restaurant-week-winners-2026-hangzhou",
+      "menuItemCount": 9,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14371,
+      "region": "suzhou",
+      "name": "Jin Jing Ge",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14371/jin-jing-ge-restaurant-week-winners-2026-suzhou",
+      "menuItemCount": 22,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14377,
+      "region": "nanjing",
+      "name": "Xuan Ling Ge @ The Grand Mansion Hotel",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14377/xuan-ling-ge-the-grand-mansion-hotel-restaurant-week-winners-2026-nanjing",
+      "menuItemCount": 24,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14380,
+      "region": "wuhan",
+      "name": "BRASSERIE 46 @ The Ritz Carlton Wuhan",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14380/brasserie-46-the-ritz-carlton-wuhan-restaurant-week-winners-2026-wuhan",
+      "menuItemCount": 20,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14382,
+      "region": "tianjin",
+      "name": "Bella Vita Restaurant",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14382/bella-vita-restaurant-restaurant-week-winners-2026-tianjin",
+      "menuItemCount": 31,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14384,
+      "region": "sanya",
+      "name": "Grandpa's Coconut Chicken (Coconut Dream Corridor Branch)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14384/grandpa-s-coconut-chicken-coconut-dream-corridor-branch-sanya-restaurant-guide",
+      "menuItemCount": 5,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14385,
+      "region": "chongqing",
+      "name": "仪表厂火锅老店",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14385/chongqing-restaurant-guide",
+      "menuItemCount": 17,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14386,
+      "region": "haikou",
+      "name": "CHAR Grill & Sky Bar",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14386/char-grill-sky-bar-haikou-restaurant-guide",
+      "menuItemCount": 18,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14388,
+      "region": "dalian",
+      "name": "Lin Zhi Liu Ba 6886 Dalian Local Cuisine Restaurant",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14388/lin-zhi-liu-ba-6886-dalian-local-cuisine-restaurant-dalian-restaurant-guide",
+      "menuItemCount": 20,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14389,
+      "region": "suzhou",
+      "name": "DeYueLou (LaoLou)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14389/deyuelou-laolou-suzhou-restaurant-guide",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14392,
+      "region": "harbin",
+      "name": "Huamei western restaurant",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14392/huamei-western-restaurant-harbin-restaurant-guide",
+      "menuItemCount": 15,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14398,
+      "region": "nanjing",
+      "name": "Plum Garden",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14398/plum-garden-nanjing-restaurant-guide",
+      "menuItemCount": 13,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14399,
+      "region": "kunming",
+      "name": "Airuochun · Thirty Years Heritage Yunnan Cuisine (Jinbi Park Branch)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14399/airuochun-thirty-years-heritage-yunnan-cuisine-jinbi-park-branch-kunming-restaur",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14400,
+      "region": "chengdu",
+      "name": "COUPLE BEEF COOKING RESTAURANT",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14400/couple-beef-cooking-restaurant-chengdu-restaurant-guide",
+      "menuItemCount": 19,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14401,
+      "region": "wuhan",
+      "name": "Liangliang Signature Steamed Shrimp (Xuesong Road Main Branch)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14401/liangliang-signature-steamed-shrimp-xuesong-road-main-branch-wuhan-restaurant-gu",
+      "menuItemCount": 14,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14402,
+      "region": "xiamen",
+      "name": "DAZHONG",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14402/dazhong-xiamen-restaurant-guide",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14404,
+      "region": "zhengzhou",
+      "name": "萧记三鲜烩面(郑汴路店)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14404/zhengzhou-restaurant-guide",
+      "menuItemCount": 15,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14410,
+      "region": "guangzhou",
+      "name": "Yin Ji Changfen Dian (Shangjiu Road Branch)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14410/yin-ji-changfen-dian-shangjiu-road-branch-guangzhou-restaurant-guide",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14413,
+      "region": "xian",
+      "name": "Laoliujiayiweixiangrouwanhulatangzhuanmai",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14413/laoliujiayiweixiangrouwanhulatangzhuanmai-xian-restaurant-guide",
+      "menuItemCount": 13,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14414,
+      "region": "hangzhou",
+      "name": "Green Tea",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14414/green-tea-hangzhou-restaurant-guide",
+      "menuItemCount": 18,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14415,
+      "region": "changsha",
+      "name": "Black Classic Stinky Tofu & Hunan Specialty (Xiaoxiang Culture Branch)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14415/black-classic-stinky-tofu-hunan-specialty-xiaoxiang-culture-branch-changsha-rest",
+      "menuItemCount": 15,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14416,
+      "region": "ningbo",
+      "name": "TIE GE BI",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14416/tie-ge-bi-ningbo-restaurant-guide",
+      "menuItemCount": 19,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14417,
+      "region": "tianjin",
+      "name": "GO BELIEVE",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14417/go-believe-tianjin-restaurant-guide",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14425,
+      "region": "qingdao",
+      "name": "JiuLong Restaurant (DaGu Road No.2)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14425/jiulong-restaurant-dagu-road-no-2-qingdao-restaurant-guide",
+      "menuItemCount": 19,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14479,
+      "region": "shenzhen",
+      "name": "Laurel Group",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14479/laurel-group-shenzhen-restaurant-guide",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14510,
+      "region": "jinan",
+      "name": "JINSANBEI RESTAURANT",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14510/jinsanbei-restaurant-jinan-restaurant-guide",
+      "menuItemCount": 14,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14568,
+      "region": "shenyang",
+      "name": "BAIFUYUAN",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14568/baifuyuan-shenyang-restaurant-guide",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14588,
+      "region": "hefei",
+      "name": "Budaoweng Anhui Cuisine Restaurant (Pedestrian Street Branch)",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14588/budaoweng-anhui-cuisine-restaurant-pedestrian-street-branch-hefei-restaurant-gui",
+      "menuItemCount": 14,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14598,
+      "region": "foshan",
+      "name": "BAIWEICHAUN RESTAURANT·Pavilion Court · Friendship Court",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14598/baiweichaun-restaurant-pavilion-court-friendship-court-foshan-restaurant-guide",
+      "menuItemCount": 16,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14611,
+      "region": "dongguan",
+      "name": "Tang Palace",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14611/tang-palace-dongguan-restaurant-guide",
+      "menuItemCount": 13,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15169,
+      "region": "shanghai",
+      "name": "Atelier Kaulou",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15169/atelier-kaulou-shanghai",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15171,
+      "region": "shanghai",
+      "name": "Uni Shushi — Xintiandi",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15171/uni-shushi-xintiandi-shanghai",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15172,
+      "region": "shanghai",
+      "name": "Leyas Middle Eastern Cuisine",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15172/leyas-middle-eastern-cuisine-shanghai",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15173,
+      "region": "shanghai",
+      "name": "Caffe Yaya",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15173/caffe-yaya-shanghai",
+      "menuItemCount": 4,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15174,
+      "region": "shanghai",
+      "name": "Melt in July — Plaza 66",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15174/melt-in-july-plaza-66-shanghai",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15175,
+      "region": "shanghai",
+      "name": "Horse & Cow",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15175/horse-cow-shanghai",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15177,
+      "region": "shanghai",
+      "name": "Le Chai Charcoal Grill",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15177/le-chai-charcoal-grill-shanghai",
+      "menuItemCount": 2,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15178,
+      "region": "shanghai",
+      "name": "Accents 洋泾浜",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15178/accents-shanghai",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15179,
+      "region": "shanghai",
+      "name": "Bar Cerino",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15179/bar-cerino-shanghai",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15180,
+      "region": "shanghai",
+      "name": "Molo di Dario",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15180/molo-di-dario-shanghai",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15181,
+      "region": "shanghai",
+      "name": "Feral Xiaoye — planned reopening",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15181/feral-xiaoye-planned-reopening-shanghai",
+      "menuItemCount": 2,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15182,
+      "region": "foshan",
+      "name": "Feicui Taizi · Shengyan",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15182/feicui-taizi-shengyan-foshan",
+      "menuItemCount": 0,
+      "firstMenuItemPresent": false,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15184,
+      "region": "hefei",
+      "name": "Chayan Yuese — Huaihe Pedestrian Street",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15184/chayan-yuese-huaihe-pedestrian-street-hefei",
+      "menuItemCount": 2,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15185,
+      "region": "suzhou",
+      "name": "GOODBAI Café — Suzhou nomadic pop-up",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15185/goodbai-cafe-suzhou-nomadic-pop-up-suzhou",
+      "menuItemCount": 2,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15186,
+      "region": "ningbo",
+      "name": "Ba Quan Shi Man — H99, planned",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15186/ba-quan-shi-man-h99-planned-ningbo",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 14440,
+      "region": "xian",
+      "name": "Yi Café — Shangri-La Xi’an",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/14440/yi-cafe-xian-restaurant-guide",
+      "menuItemCount": 36,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15187,
+      "region": "chengdu",
+      "name": "Café Z — Shangri-La Chengdu",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15187/cafe-z-shangri-la-chengdu-official-dining-guide",
+      "menuItemCount": 13,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15188,
+      "region": "qingdao",
+      "name": "Café Yum — Shangri-La Qingdao",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15188/cafe-yum-shangri-la-qingdao-official-dining-guide",
+      "menuItemCount": 12,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 7510,
+      "region": "jinan",
+      "name": "Café Spring — Shangri-La Jinan",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7510/cafe-spring-jinan-restaurant-guide",
+      "menuItemCount": 6,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15190,
+      "region": "shenyang",
+      "name": "Café Liao — Shangri-La Shenyang",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15190/cafe-liao-shangri-la-shenyang-official-dining-guide",
+      "menuItemCount": 15,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15191,
+      "region": "harbin",
+      "name": "Café Song — Shangri-La Songbei, Harbin",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15191/cafe-song-shangri-la-songbei-harbin-official-dining-guide",
+      "menuItemCount": 5,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15192,
+      "region": "harbin",
+      "name": "Coffee Garden — Shangri-La Harbin",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15192/coffee-garden-shangri-la-harbin-official-dining-guide",
+      "menuItemCount": 5,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 7516,
+      "region": "dalian",
+      "name": "iCafé — Shangri-La Dalian",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7516/i-cafe-dalian-restaurant-guide",
+      "menuItemCount": 5,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15194,
+      "region": "wuhan",
+      "name": "Café Wu — Shangri-La Wuhan",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15194/cafe-wu-shangri-la-wuhan-official-dining-guide",
+      "menuItemCount": 5,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 7504,
+      "region": "xiamen",
+      "name": "Café Amoy — Shangri-La Xiamen",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7504/cafe-amoy-xiamen-restaurant-guide",
+      "menuItemCount": 9,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15195,
+      "region": "ningbo",
+      "name": "Yi Café — Shangri-La Ningbo",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15195/yi-cafe-shangri-la-ningbo-official-dining-guide",
+      "menuItemCount": 5,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 7508,
+      "region": "hefei",
+      "name": "Café Wan — Shangri-La Hefei",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7508/cafe-wan-hefei-restaurant-guide",
+      "menuItemCount": 5,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15197,
+      "region": "shenzhen",
+      "name": "Meet Plus · 觅品 — MGM Shenzhen Prince Bay",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15197/meet-plus-mgm-shenzhen-prince-bay-shenzhen",
+      "menuItemCount": 0,
+      "firstMenuItemPresent": false,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15198,
+      "region": "shenzhen",
+      "name": "Festival · 欢宴 — MGM Shenzhen Prince Bay",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15198/festival-mgm-shenzhen-prince-bay-shenzhen",
+      "menuItemCount": 3,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15199,
+      "region": "shenzhen",
+      "name": "Yu Hoi Heen · 御海轩 — MGM Shenzhen Prince Bay",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15199/yu-hoi-heen-mgm-shenzhen-prince-bay-shenzhen",
+      "menuItemCount": 2,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15200,
+      "region": "shenzhen",
+      "name": "The Purple · 紫堂 — MGM Shenzhen Prince Bay",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15200/the-purple-mgm-shenzhen-prince-bay-shenzhen",
+      "menuItemCount": 2,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    },
+    {
+      "pinId": 15201,
+      "region": "shenzhen",
+      "name": "The Lobby Lounge · 大堂吧 — MGM Shenzhen Prince Bay",
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15201/the-lobby-lounge-mgm-shenzhen-prince-bay-shenzhen",
+      "menuItemCount": 2,
+      "firstMenuItemPresent": true,
+      "tileImagePresent": true,
+      "restaurantNamePresent": true
+    }
+  ],
+  "guidePages": [
+    {
+      "city": "haikou",
+      "requested": "upcoming",
+      "status": 200,
+      "tabs": [
+        "Top restaurants"
+      ],
+      "selected": "Top restaurants",
+      "expected": "Top restaurants",
+      "localOfferTimes": []
+    },
+    {
+      "city": "foshan",
+      "requested": "upcoming",
+      "status": 200,
+      "tabs": [
+        "Just opened",
+        "Top restaurants"
+      ],
+      "selected": "Just opened",
+      "expected": "Just opened",
+      "localOfferTimes": []
+    },
+    {
+      "city": "shanghai",
+      "requested": "discounts",
+      "status": 200,
+      "tabs": [
+        "Coming soon",
+        "Just opened",
+        "Top restaurants",
+        "Specials"
+      ],
+      "selected": "Specials",
+      "expected": "Specials",
+      "localOfferTimes": [
+        "Starts Tue, Oct 13, 10:00 AM GMT+8",
+        "Starts Tue, Oct 13, 10:00 AM GMT+8",
+        "Starts Tue, Oct 13, 10:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8"
+      ]
+    },
+    {
+      "city": "ningbo",
+      "requested": "upcoming",
+      "status": 200,
+      "tabs": [
+        "Coming soon",
+        "Top restaurants",
+        "Specials"
+      ],
+      "selected": "Coming soon",
+      "expected": "Coming soon",
+      "localOfferTimes": []
+    },
+    {
+      "city": "wuhan",
+      "requested": "discounts",
+      "status": 200,
+      "tabs": [
+        "Just opened",
+        "Top restaurants",
+        "Specials"
+      ],
+      "selected": "Specials",
+      "expected": "Specials",
+      "localOfferTimes": [
+        "Starts Tue, Oct 13, 6:00 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8",
+        "Starts Tue, Oct 13, 11:30 AM GMT+8"
+      ]
+    },
+    {
+      "city": "hefei",
+      "requested": "discounts",
+      "status": 200,
+      "tabs": [
+        "Coming soon",
+        "Just opened",
+        "Top restaurants",
+        "Specials"
+      ],
+      "selected": "Specials",
+      "expected": "Specials",
+      "localOfferTimes": [
+        "Starts Tue, Oct 13, 6:15 AM GMT+8"
+      ]
+    },
+    {
+      "city": "shenzhen",
+      "requested": "new",
+      "status": 200,
+      "tabs": [
+        "Just opened",
+        "Top restaurants",
+        "Specials"
+      ],
+      "selected": "Just opened",
+      "expected": "Just opened",
+      "localOfferTimes": []
+    }
+  ]
+}

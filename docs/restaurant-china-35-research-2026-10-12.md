@@ -10,7 +10,7 @@ The research covers all 27 supported China cities, in the existing west-to-east 
 - `restaurant-china-top-35-2026-10-12.json`: 714 additional branch-specific Top restaurants, with 9,887 named menu items from Trip.com and separately checked Chinese Ctrip branch pages. Published community ratings and their review counts are retained with their source. Currency was explicitly requested as CNY; prices were not converted from USD. These are published listing prices, not independently confirmed current operator prices.
 - `restaurant-china-openings-2026-10-12.json`: 15 independently researched additions: five recent openings or a temporary café opening, two announced openings, and eight additional restaurants whose exact opening dates are not established. Two have verified current offers.
 - `restaurant-china-mgm-openings-2026-10-12.json`: five named dining venues confirmed in MGM’s 10 September Prince Bay opening announcement, with nine reviewed operator gallery images. Four profiles have published products or branch-specific named dishes without prices; Meet Plus uses link-only coverage after deeper menu searches failed. The Lobby Lounge operator page conflicts on its floor number, so the address does not invent a resolution.
-- `restaurant-china-official-offers-2026-10-12.json`: 12 official hotel restaurant profiles and 14 branch-specific offers. Xi’an and Hefei merge into existing branches. Hotel children’s policies differ by venue; eligibility, age limits, paying-adult ratios, hotel-guest or loyalty requirements and eligible meal periods are preserved.
+- `restaurant-china-official-offers-2026-10-12.json`: 12 official hotel restaurant profiles and 14 branch-specific offers. Xi’an, Jinan, Dalian, Xiamen and Hefei merge into existing branches. Hotel children’s policies differ by venue; eligibility, age limits, paying-adult ratios, hotel-guest or loyalty requirements and eligible meal periods are preserved.
 
 Restaurant Week evidence came from the public project, branch, meal, photo and dining-calendar endpoints for `rwcn_autumn_2026_extended` at `api.diningcity.asia`, plus public DiningCity branch pages. Each offer uses actual published reservation arrival slots and dates, rather than assumed continuous service. A Restaurant Week selection is not an opening announcement or evidence of a price reduction.
 
@@ -24,7 +24,7 @@ Reviewed images are stored in Azure Blob Storage, with source pages, credits and
 
 Trip.com galleries are community sources, not venue-owned photography. Review-author credits are preserved where the source identifies the image’s author; otherwise the caption identifies the branch gallery and unpublished photographer. Some photos show a hotel property rather than a confirmed restaurant interior. Current operator menu and photographic corroboration remains a gap for many community-listed venues; it is not represented as completed official verification.
 
-The hotel research checked 17 distinct linked PDFs, including seven image-only files rendered for visual reading. Jinan’s linked PDF was room service; Dalian’s linked PDFs were room service or Shang Palace. Those dishes were excluded from Café Spring and iCafé menus. Older Harbin buffet PDFs were not treated as current buffet courses. Current official buffet product prices remain useful menu entries without inventing their rotating dishes. Xi’an and Qingdao supplied actual priced à la carte dishes; Chengdu supplied priced drinks; Shenyang supplied priced regular dishes. Those regular items are not automatically included in a buffet or promotional menu. Published service charges, taxes and “from” prices are preserved. The Chengdu voucher’s published USD price remains USD.
+The hotel research checked 17 distinct linked PDFs, including seven image-only files rendered for visual reading. Jinan’s linked PDF was room service; Dalian’s linked PDFs were room service or Shang Palace. Those dishes were excluded from Café Spring and iCafé menus. Previously saved Café Spring room-service selections were also removed during the merge refresh; four older duplicate children’s-offer cards were replaced by the refreshed branch policies. Older Harbin buffet PDFs were not treated as current buffet courses. Current official buffet product prices remain useful menu entries without inventing their rotating dishes. Xi’an and Qingdao supplied actual priced à la carte dishes; Chengdu supplied priced drinks; Shenyang supplied priced regular dishes. Those regular items are not automatically included in a buffet or promotional menu. Published service charges, taxes and “from” prices are preserved. The Chengdu voucher’s published USD price remains USD.
 
 Official Shangri-La galleries were checked for all 12 hotel profiles. Published hotel coordinates refer to the property building, with the dining floor identified by its address. DiningCity/gallery coverage for all 130 programme venues is recorded, but independent operator galleries were not accessible or discoverable for every branch. The Hilton Fucheng gallery returned an access error. Official Spago/St. Regis and Grand Boat/Shangri-La pages were also checked. The opening notes record remaining gallery gaps, including the Hefei launch preview and Ningbo rendering.
 
@@ -74,4 +74,42 @@ Representative opening sources: [Nomfluence September roundup](https://rachelgou
 
 ## Live verification
 
-Final API counts, publication totals and representative page checks will be recorded here after the serial production import finishes. Counts for Specials must union active and upcoming offers and remove per-offer suffixes, counting each restaurant once. Empty sections must remain hidden and empty-tab links must fall back to a populated section.
+The live API audit confirms **all 27 city guides have at least 35 Top restaurants**: 962 Top listings in total, up from 104. Shanghai has 44, Beijing 36, and the other guides have 35–37. Specials has 160 distinct restaurants across the country, including 36 in Shanghai and 35 in Beijing. Coming soon has six verified announcements and Just opened has 28 eligible branches across the country. Those two sections, and Specials in the other cities, remain below the requested 35-per-city target after the research described above.
+
+The counts below are restaurants, not menu items, reservation times or offer cards. Specials unions active and upcoming offers and removes per-offer suffixes before counting. The four refreshed existing hotel policies replace duplicate older offer cards; their restaurants still count once.
+
+| City | Top before | Top now | Coming soon | Just opened | Specials |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Kunming | 7 | 35 | 0 | 1 | 1 |
+| Chengdu | 2 | 36 | 0 | 1 | 2 |
+| Chongqing | 1 | 35 | 0 | 1 | 1 |
+| Xi’an | 1 | 35 | 0 | 1 | 1 |
+| Sanya | 4 | 35 | 0 | 1 | 1 |
+| Haikou | 2 | 35 | 0 | 0 | 0 |
+| Changsha | 1 | 35 | 0 | 1 | 1 |
+| Foshan | 7 | 35 | 0 | 1 | 0 |
+| Guangzhou | 1 | 35 | 0 | 1 | 11 |
+| Zhengzhou | 1 | 35 | 0 | 1 | 0 |
+| Dongguan | 7 | 35 | 0 | 1 | 1 |
+| Shenzhen | 2 | 35 | 0 | 6 | 15 |
+| Wuhan | 1 | 36 | 0 | 1 | 3 |
+| Beijing | 1 | 36 | 0 | 1 | 35 |
+| Jinan | 9 | 35 | 0 | 1 | 3 |
+| Hefei | 8 | 35 | 1 | 2 | 1 |
+| Tianjin | 2 | 35 | 0 | 0 | 3 |
+| Xiamen | 8 | 35 | 0 | 0 | 1 |
+| Nanjing | 1 | 35 | 0 | 1 | 3 |
+| Hangzhou | 1 | 35 | 1 | 1 | 22 |
+| Qingdao | 2 | 36 | 0 | 1 | 2 |
+| Suzhou | 2 | 35 | 0 | 1 | 8 |
+| Shanghai | 1 | 44 | 3 | 3 | 36 |
+| Ningbo | 8 | 36 | 1 | 0 | 2 |
+| Dalian | 8 | 35 | 0 | 0 | 2 |
+| Shenyang | 8 | 36 | 0 | 0 | 2 |
+| Harbin | 8 | 37 | 0 | 0 | 3 |
+
+Machine-readable counts are saved in `restaurant-china-35-counts-2026-10-12.json` and `.csv`. API counts were checked after the last prepared import; China’s local date had advanced to 13 October. The rolling opening window and offer status use each guide’s actual local time.
+
+All content payloads passed the restaurant-content validator; offer payloads passed the specials validator; pin source wikis passed validation. Reviewed Azure images were publicly downloaded, checked against their byte hashes and decoded. All 66 representative live pin pages returned HTTP 200 and displayed their gallery images; named menu samples were checked where items are published. The two deliberate link-only menus are Feicui Taizi·Shengyan and Meet Plus, with the research gaps preserved above.
+
+After the merge refresh, canonical API reads verified all 876 import payloads across 875 distinct branches: 870 new content profiles and five existing profiles refreshed. Every prepared menu item and offer matches its saved record. Seven representative guide views passed checks for visible populated tabs, hidden empty tabs, empty-view fallback, and local upcoming offer times. The Shanghai Specials page showed its next starts in GMT+8 outside service hours. All 66 checked pins showed the restaurant name and gallery image; all 64 with published items showed the sampled menu item. Verification metadata is saved in `restaurant-china-35-verification-2026-10-12.json`.

@@ -5,9 +5,11 @@
 // (GET /api/admin/db/Pin?sourceUrl=...); one that is missing or ambiguous is
 // skipped and reported.
 //
-// Sign-in is flynni2008@gmail.com with a password typed at the prompt (not
-// echoed, not stored, never an argument or an env var); the token is kept for
-// the run only.
+// Sign-in reuses the admin token the other prod scripts keep
+// (.scrape/admin.token for www.chronopin.com, .scrape/admin-<host>.token for
+// another server) while it is still valid. Without one, it signs in as
+// flynni2008@gmail.com with a password typed at the prompt (not echoed, not
+// stored, never an argument or an env var); that token is kept for the run only.
 //
 //   npm run restaurants:dining:prod                      all entries to www.chronopin.com
 //   npm run restaurants:dining:prod -- --dry             find the pins, send nothing
@@ -16,7 +18,8 @@
 // Needs migration 0170 applied on the server (deploys run it).
 
 import '../env';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { createInterface } from 'node:readline';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
@@ -63,11 +66,20 @@ function askPassword(prompt: string): Promise<string> {
 
 async function run() {
   const entries: Entry[] = JSON.parse(readFileSync(flags.file ?? new URL('./diningRubric.json', import.meta.url), 'utf8'));
-  if (!process.stdin.isTTY) throw new Error('Run this from an interactive terminal: it asks for the password.');
-  const password = await askPassword(`Password for ${EMAIL} on ${BASE}: `);
-  const login = await call('POST', '/auth/local', undefined, { email: EMAIL, password });
-  if (login.status !== 200 || !login.data?.token) throw new Error(`sign-in failed: ${login.status}`);
-  const token: string = login.data.token;
+  const { host } = new URL(BASE);
+  const tokenFile = path.resolve(host === 'www.chronopin.com' ? '.scrape/admin.token' : `.scrape/admin-${host.replace(/\W+/g, '_')}.token`);
+  const kept = existsSync(tokenFile) ? readFileSync(tokenFile, 'utf8').trim() : '';
+  let token = '';
+  if (kept && (await call('GET', '/api/users/me', kept)).status === 200) {
+    token = kept;
+    console.log(`Signed in with the saved admin token (${path.relative('.', tokenFile)})`);
+  } else {
+    if (!process.stdin.isTTY) throw new Error(`No valid saved admin token (${path.relative('.', tokenFile)}), and this is not an interactive terminal, which the password prompt needs.`);
+    const password = await askPassword(`Password for ${EMAIL} on ${BASE}: `);
+    const login = await call('POST', '/auth/local', undefined, { email: EMAIL, password });
+    if (login.status !== 200 || !login.data?.token) throw new Error(`sign-in failed: ${login.status}`);
+    token = login.data.token;
+  }
 
   let sent = 0;
   const problems: string[] = [];

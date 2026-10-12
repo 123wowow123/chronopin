@@ -2,7 +2,7 @@
 
 Published **37 verified project pins across 18 country/area labels**, including **17 U.S. projects**. The live global and U.S. maps matched the eligible catalog exactly. Content was saved through production management APIs; no production VM deploy, build or restart was performed.
 
-Browse the [worldwide map](https://www.chronopin.com/map?q=tag%3A%22Electric%20Generation%20Projects%22) or [U.S. map](https://www.chronopin.com/map?q=tag%3A%22Electric%20Generation%20Projects%22%20place%3A%22United%20States%22).
+Browse the [worldwide map](https://www.chronopin.com/map?q=tag%3A%22Electric+Generation+Projects%22&past=all&future=all&posted=all&fit=results) or [U.S. map](https://www.chronopin.com/map?q=tag%3A%22Electric+Generation+Projects%22+place%3A%22United+States%22&past=all&future=all&posted=all&fit=results).
 
 ## Final inclusion rule
 
@@ -105,3 +105,7 @@ Browser visual QA was unavailable; verification used the public map and pin APIs
 ## Backing source wikis
 
 All 37 pins were verified through the pin editor’s source-wiki API at 2026-10-12T04:02:52Z. Their 105 current citation bindings resolve to 70 distinct ready source wikis; all summaries match the current wiki versions. Two older operator wikis were expanded with verified project costs, two legacy primary-source wikis were completed, and the shared EIA/GEM wikis now include inspected project/unit rows backing the capacity figures. Forty obsolete bindings were removed without deleting their source records or wikis. No pending or removed source bindings remain on the 37 pins. Cost/output tables, scope labels and credited Azure photos were preserved. Wiki source/page IDs and versions are included in the project catalog. The admin pin editor shows these in “OKF wikis behind this pin”.
+
+## Through-2030 buildout view — published October 12, 2026
+
+The live collection now also has a [12-project estimated completion view](https://www.chronopin.com/map?q=tag%3A%22Electric+Generation+Full+Completion+Through+2030%22&past=all&future=all&posted=all&fit=results) and a [13-pin view including Hinkley’s first-reactor milestone](https://www.chronopin.com/map?q=tag%3A%22Electric+Generation+Buildout+Through+2030%22&past=all&future=all&posted=all&fit=results). Those 13 existing pins now use estimated future target dates on the timeline; their construction evidence remains in the details. Other collection pins retain their physical milestone/reporting dates. See [buildout scope, dates and verification](electric-generation-buildout-through-2030-2026-10-12.md). The overall cost-qualified collection remains 37 pins; no duplicates were created.

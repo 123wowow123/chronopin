@@ -239,13 +239,13 @@ function pinFor(index: ModelPinIndex, key: string, keys: string[][]): ModelPin |
   }
 }
 
-// Only models the site has a pin for are drawn: a dot is a way into its pin,
+// Only the models the site has a pin for are drawn: a dot is a way into its pin,
 // so a model without one is left out rather than shown as a dead end. The
 // frontier was worked out over every model with a score and a price, so it is
 // still the true one - a frontier model with no pin is a gap in the pins, not
 // a reason to move the line. The pin being read is always drawn, with its own
 // id, even when it is not in the AI Models index (a pin in the AI category).
-export function chartFor(universe: ModelUniverse, pinnedKey: string | null, pins: ModelPinIndex = [], currentPinId?: number): ModelChartData {
+export function buildModelChart(universe: ModelUniverse, pinnedKey: string | null, pins: ModelPinIndex = [], currentPinId?: number): ModelChartData {
   const own = pinnedKey ? findPinned(universe.points, pinnedKey) : null;
   const keys = universe.points.map((p) => wordsOf(p.key));
   const points = universe.points

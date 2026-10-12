@@ -1,0 +1,782 @@
+{
+  "verifiedAtUTC": "2026-10-12T22:10:08Z",
+  "fullCompletionTargetProjects": 12,
+  "additionalFirstReactorMilestones": 1,
+  "targetsByYear": {
+    "2027": 6,
+    "2028": 5,
+    "2030": 1
+  },
+  "newPinsCreated": 0,
+  "totalOriginalCollectionPins": 37,
+  "publicMapMatches": true,
+  "wikisVerified": true,
+  "targets": [
+    {
+      "key": "eia-1364",
+      "pinId": 7690,
+      "name": "Mill Creek 5",
+      "country": "United States",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "2027",
+      "targetSource": "https://lge-ku.com/mc5",
+      "targetEvidence": "The current operator project page identifies construction underway and expected customer supply in 2027.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-1364",
+        "name": "Mill Creek 5",
+        "country": "United States",
+        "capacityMW": 645,
+        "capacityBasis": "Current operator page: 645 MW nameplate",
+        "costValue": 902000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://lge-ku.com/mc5",
+        "sourceDate": null,
+        "facts": "LG&E/KU’s current Mill Creek 5 page states a 645 MW nameplate rating, $902 million cost, construction underway and estimated completion in 2027. Its 2024 groundbreaking release used 640 MW; the current page is used for the primary output rating. EIA’s separate 740 MW figure is retained as inventory context, not extra generating capacity.",
+        "extra": [
+          [
+            "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+            "November 13, 2024 groundbreaking verifies physical construction."
+          ]
+        ],
+        "costGroup": "eia-1364",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://lge-ku.com/mc5",
+        "physicalSourceUrl": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+        "costFacts": "Published project-specific cost for Mill Creek 5: USD 9.02e+08. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Mill Creek 5: 645 MW. Basis: Current operator page: 645 MW nameplate."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79762,
+          "url": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+          "version": 1,
+          "wikiPageId": 9661
+        },
+        {
+          "id": 90926,
+          "url": "https://lge-ku.com/mc5",
+          "version": 2,
+          "wikiPageId": 10774
+        }
+      ]
+    },
+    {
+      "key": "existing-5511",
+      "pinId": 5511,
+      "name": "Coastal Virginia Offshore Wind commercial project",
+      "country": "United States",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "2027",
+      "targetSource": "https://coastalvawind.com/about/the-project/timeline",
+      "targetEvidence": "The operator timeline identifies 2026–2027 project construction and commissioning. First power in March 2026 does not mean full completion; the retained target is 2027, without asserting an exact day.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "existing-5511",
+        "name": "Coastal Virginia Offshore Wind commercial project",
+        "country": "United States",
+        "capacityMW": 2600,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 11700000000.0,
+        "currency": "USD",
+        "costBasis": "Estimated total project cost excluding financing; includes $0.1 billion contingency",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+        "sourceDate": "2026-06-30",
+        "facts": "Dominion’s June 30, 2026 quarterly filing gives approximately $11.7 billion estimated total project cost, excluding financing and including $0.1 billion contingency. It supersedes earlier $10.7 billion/$11.5 billion estimates. The commercial project rating is approximately 2,600 MW, separate from the older 12 MW pilot; first power occurred March 23, 2026 while construction continues.",
+        "extra": [
+          [
+            "https://coastalvawind.com/about/the-project/timeline",
+            "Operator records first power March 23, 2026; full-project completion is expected in 2027."
+          ],
+          [
+            "https://coastalvawind.com/",
+            "The operator identifies approximately 2.6 GW for the commercial project."
+          ]
+        ],
+        "costGroup": "existing-5511",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://coastalvawind.com/",
+        "physicalSourceUrl": "https://coastalvawind.com/about/the-project/timeline",
+        "costFacts": "Published project-specific cost for Coastal Virginia Offshore Wind commercial project: USD 1.17e+10. Basis: Estimated total project cost excluding financing; includes $0.1 billion contingency.",
+        "capacityFacts": "Published electric generating project rating for Coastal Virginia Offshore Wind commercial project: 2600 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 39456,
+          "url": "https://offshorewind.biz/2026/08/03/largest-us-offshore-wind-farm-81-pct-complete-final-turbine-expected-by-end-of-2027",
+          "version": 1,
+          "wikiPageId": 9771
+        },
+        {
+          "id": 80142,
+          "url": "https://coastalvawind.com/about/the-project/timeline",
+          "version": 2,
+          "wikiPageId": 10775
+        },
+        {
+          "id": 80149,
+          "url": "https://coastalvawind.com/",
+          "version": 1,
+          "wikiPageId": 9691
+        },
+        {
+          "id": 90940,
+          "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+          "version": 1,
+          "wikiPageId": 9728
+        }
+      ]
+    },
+    {
+      "key": "eia-68443",
+      "pinId": 7688,
+      "name": "Empire Wind 1",
+      "country": "United States",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "2027",
+      "targetSource": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+      "targetEvidence": "Equinor identifies an expected commercial-operation date in 2027 for Empire Wind 1.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-68443",
+        "name": "Empire Wind 1",
+        "country": "United States",
+        "capacityMW": 810,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 5000000000.0,
+        "currency": "USD",
+        "costBasis": "Total capital investment including terminal-use fees and expected tax credits; tax-credit-adjusted, not gross pre-credit cost",
+        "sourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+        "sourceDate": "2025-01-02",
+        "facts": "Equinor describes total Empire Wind capital expenditure estimated at $5 billion after tax credits, covering 54 bottom-fixed turbines and the Brooklyn cable landfall. This is a tax-credit-adjusted estimate, not gross pre-credit cost and not the over-$3 billion financing package. Empire Wind 1 has an 810 MW generation rating and documented offshore construction; full operation is targeted for 2027.",
+        "extra": [
+          [
+            "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+            "Official project announcement identifies 810 MW and distinguishes financing from project capital expenditure."
+          ]
+        ],
+        "costGroup": "eia-68443",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+        "physicalSourceUrl": "https://www.empirewind.com/offshore-installation/",
+        "costFacts": "Equinor January 2, 2025 publishes approximately USD5 billion expected total capital investment, including South Brooklyn Marine Terminal use fees and the effect of expected future investment tax credits. The financing package above USD3 billion is separate.",
+        "capacityFacts": "Published electric generating project rating for Empire Wind 1: 810 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 80049,
+          "url": "https://www.empirewind.com/offshore-installation/",
+          "version": 1,
+          "wikiPageId": 9682
+        },
+        {
+          "id": 90942,
+          "url": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+          "version": 2,
+          "wikiPageId": 10776
+        }
+      ]
+    },
+    {
+      "key": "eia-3407",
+      "pinId": 14048,
+      "name": "Kingston combined-cycle replacement plant",
+      "country": "United States",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "End of 2027",
+      "targetSource": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+      "targetEvidence": "TVA’s FY2025 filing identifies physical construction of the 1,500 MW Kingston combined-cycle replacement plant and expected operation by the end of calendar 2027.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-3407",
+        "name": "Kingston combined-cycle replacement plant",
+        "country": "United States",
+        "capacityMW": 1500,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 2900000000.0,
+        "currency": "USD",
+        "costBasis": "Sum of disclosed spent and forecast remaining project expenditure; approximately $2.9 billion",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "sourceDate": "2025-09-30",
+        "facts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $1.1 billion expected additional spending on the 1,500 MW Kingston combined-cycle plant as of September 30, 2025. Their sum is approximately $2.9 billion. This total is arithmetic on disclosed project amounts, not a benchmark estimate. Battery RFPs, proposed expansions and the wider campus rating are not included.",
+        "extra": [],
+        "costGroup": "eia-3407",
+        "checkedAt": "2026-10-11",
+        "costFacts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $1.1 billion expected additional spending on the 1,500 MW Kingston combined-cycle plant as of September 30, 2025. Their sum is approximately $2.9 billion. This total is arithmetic on disclosed project amounts, not a benchmark estimate. Battery RFPs, proposed expansions and the wider campus rating are not included.",
+        "capacityFacts": "Kingston combined-cycle replacement plant: published generating capacity 1500 MW. Operator-reported electric generating capacity; not annual energy production",
+        "capacitySourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalSourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalFacts": "TVA explicitly states it is constructing the 1,500 MW combined-cycle plant, targeting the end of 2027. The capacity is for the combined-cycle plant, not all units at the Kingston site."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 90944,
+          "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+          "version": 2,
+          "wikiPageId": 10777
+        }
+      ]
+    },
+    {
+      "key": "gem-L100000900883",
+      "pinId": 14063,
+      "name": "Hai Long offshore wind project",
+      "country": "Taiwan",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "2027",
+      "targetSource": "https://northlandpower.com/northland-power-reports-second-quarter-2026-results-and-construction-progress-updates/",
+      "targetEvidence": "Northland’s Q2 2026 update reports 71 of 73 turbines installed, 59 generating and full commercial operations targeted for 2027.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "gem-L100000900883",
+        "name": "Hai Long offshore wind project",
+        "country": "Taiwan",
+        "capacityMW": 1022,
+        "capacityBasis": "294 + 728 MW contracted output, total 1,022 MW; operator rounded 1 GW",
+        "costValue": 9000000000.0,
+        "currency": "CAD",
+        "costBasis": "Full-project capital cost in Canadian dollars; not project debt",
+        "sourceUrl": "https://northlandpower.com/northland-power-announces-signing-of-credit-agreement-for-5-0-billion-project-financing-at-hai-long-offshore-wind-project/",
+        "sourceDate": "2023-09-22",
+        "facts": "Northland September 22, 2023 publishes approximately C$9 billion total capital cost for Hai Long, separate from its C$5 billion financing. Published project portions are 294 MW and 728 MW, totaling 1,022 MW; the operator rounds the complex to 1 GW. Older inventory 1,044 MW reflects a different turbine/project rating and is not additive.",
+        "extra": [
+          [
+            "https://northlandpower.com/northland-power-reports-second-quarter-2026-results-and-construction-progress-updates/",
+            "Northland Q2 2026 release confirms 71 of 73 turbines installed and 59 generating; full commercial operation remains targeted for 2027. Overall costs are described as aligned with original expectations."
+          ]
+        ],
+        "costGroup": "gem-L100000900883",
+        "checkedAt": "2026-10-11",
+        "costFacts": "Northland September 22, 2023 publishes approximately C$9 billion total capital cost for Hai Long, separate from its C$5 billion financing. Published project portions are 294 MW and 728 MW, totaling 1,022 MW; the operator rounds the complex to 1 GW. Older inventory 1,044 MW reflects a different turbine/project rating and is not additive.",
+        "capacitySourceUrl": "https://northlandpower.com/northland-power-announces-signing-of-credit-agreement-for-5-0-billion-project-financing-at-hai-long-offshore-wind-project/",
+        "capacityFacts": "Hai Long offshore wind project: 1022 MW generating project rating. 294 + 728 MW contracted output, total 1,022 MW; operator rounded 1 GW",
+        "physicalSourceUrl": "https://northlandpower.com/northland-power-reports-second-quarter-2026-results-and-construction-progress-updates/",
+        "physicalFacts": "Northland Q2 2026 release confirms 71 of 73 turbines installed and 59 generating; full commercial operation remains targeted for 2027. Overall costs are described as aligned with original expectations."
+      },
+      "backingWikis": [
+        {
+          "id": 75849,
+          "url": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000921971",
+          "version": 4,
+          "wikiPageId": 9773
+        },
+        {
+          "id": 90936,
+          "url": "https://northlandpower.com/northland-power-reports-second-quarter-2026-results-and-construction-progress-updates/",
+          "version": 2,
+          "wikiPageId": 10778
+        },
+        {
+          "id": 90968,
+          "url": "https://northlandpower.com/northland-power-announces-signing-of-credit-agreement-for-5-0-billion-project-financing-at-hai-long-offshore-wind-project/",
+          "version": 1,
+          "wikiPageId": 9752
+        }
+      ]
+    },
+    {
+      "key": "gem-L100000808731",
+      "pinId": 14065,
+      "name": "MTerra Solar and battery complex",
+      "country": "Philippines",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "Phase 2 in 2027",
+      "targetSource": "https://www.meralcopowergen.com.ph/mterra-solar-becomes-largest-solar-pv-installation-in-ph/",
+      "targetEvidence": "MGEN’s July 8, 2025 project update identifies Phase 1 completion in early 2026 and Phase 2 targeted the following year, 2027. Its September 2026 release separately confirms Phase 1 commercial operation; the whole complex is not described as already fully operating.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "gem-L100000808731",
+        "name": "MTerra Solar and battery complex",
+        "country": "Philippines",
+        "capacityMW": 3500,
+        "capacityBasis": "Full complex design: 3,500 MWp DC solar; Phase 1 contracted firm supply 600 MW AC, not additive",
+        "costValue": 200000000000.0,
+        "currency": "PHP",
+        "costBasis": "Above PHP200 billion full-project capital investment including battery and interconnection",
+        "sourceUrl": "https://www.meralcopowergen.com.ph/mterra-solar-project-breaks-ground-a-monumental-milestone-in-the-philippines-renewable-energy-transition/",
+        "sourceDate": "2024-11",
+        "facts": "MGEN’s November 2024 groundbreaking release identifies investment above PHP200 billion for 3,500 MWp PV with 4,500 MWh battery storage and related interconnection. This is a published approximate lower-bound project investment, not an enterprise valuation. Generation excludes battery MW/MWh.",
+        "extra": [
+          [
+            "https://www.meralcopowergen.com.ph/mterra-solar-phase-1-begins-commercial-operations/",
+            "MGEN September 3, 2026 confirms Phase 1 commercial operation for 600 MWac mid-merit supply under its PPA. The entire built complex is still being completed; full 3,500 MWp must not be called currently commercially operating."
+          ]
+        ],
+        "costGroup": "mterra-full-complex",
+        "checkedAt": "2026-10-11",
+        "costFacts": "MGEN’s November 2024 groundbreaking release identifies investment above PHP200 billion for 3,500 MWp PV with 4,500 MWh battery storage and related interconnection. This is a published approximate lower-bound project investment, not an enterprise valuation. Generation excludes battery MW/MWh.",
+        "capacitySourceUrl": "https://www.meralcopowergen.com.ph/mterra-solar-project-breaks-ground-a-monumental-milestone-in-the-philippines-renewable-energy-transition/",
+        "capacityFacts": "MTerra Solar and battery complex: 3500 MW generating project rating. Full complex design: 3,500 MWp DC solar; Phase 1 contracted firm supply 600 MW AC, not additive",
+        "physicalSourceUrl": "https://www.meralcopowergen.com.ph/mterra-solar-phase-1-begins-commercial-operations/",
+        "physicalFacts": "MGEN September 3, 2026 confirms Phase 1 commercial operation for 600 MWac mid-merit supply under its PPA. The entire built complex is still being completed; full 3,500 MWp must not be called currently commercially operating."
+      },
+      "backingWikis": [
+        {
+          "id": 75849,
+          "url": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000921971",
+          "version": 4,
+          "wikiPageId": 9773
+        },
+        {
+          "id": 90977,
+          "url": "https://www.meralcopowergen.com.ph/mterra-solar-project-breaks-ground-a-monumental-milestone-in-the-philippines-renewable-energy-transition/",
+          "version": 1,
+          "wikiPageId": 9756
+        },
+        {
+          "id": 90978,
+          "url": "https://www.meralcopowergen.com.ph/mterra-solar-phase-1-begins-commercial-operations/",
+          "version": 1,
+          "wikiPageId": 9757
+        },
+        {
+          "id": 99402,
+          "url": "https://www.meralcopowergen.com.ph/mterra-solar-becomes-largest-solar-pv-installation-in-ph/",
+          "version": 1,
+          "wikiPageId": 10779
+        }
+      ]
+    },
+    {
+      "key": "eia-69223",
+      "pinId": 7685,
+      "name": "Vicksburg Advanced Power Station",
+      "country": "United States",
+      "year": 2028,
+      "dateMarker": "2028-08-31",
+      "targetLabel": "August 2028",
+      "targetSource": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+      "targetEvidence": "Entergy’s October 21, 2025 project release targets completion of Vicksburg Advanced Power Station in August 2028.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-69223",
+        "name": "Vicksburg Advanced Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1200000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+        "sourceDate": "2025-10-21",
+        "facts": "Entergy’s October 21, 2025 release identifies the 754 MW Vicksburg combined-cycle project and its $1.2 billion investment. August 2026 EIA units report construction; the operator targets completion in August 2028. The rating is the operator project figure, distinct from EIA’s unit nameplate sum.",
+        "extra": [],
+        "costGroup": "eia-69223",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+        "physicalSourceUrl": "https://www.entergymississippi.com/generation/vicksburg",
+        "costFacts": "Published project-specific cost for Vicksburg Advanced Power Station: USD 1.2e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Vicksburg Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79792,
+          "url": "https://www.entergymississippi.com/generation/vicksburg",
+          "version": 1,
+          "wikiPageId": 9664
+        },
+        {
+          "id": 90927,
+          "url": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+          "version": 2,
+          "wikiPageId": 10780
+        }
+      ]
+    },
+    {
+      "key": "eia-67914",
+      "pinId": 14044,
+      "name": "Delta Blues Advanced Power Station",
+      "country": "United States",
+      "year": 2028,
+      "dateMarker": "2028-12-31",
+      "targetLabel": "2028",
+      "targetSource": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+      "targetEvidence": "Entergy’s May 19, 2026 update documents HRSG module erection and turbine delivery and retains the Delta Blues opening target in 2028.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-67914",
+        "name": "Delta Blues Advanced Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1200000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "sourceDate": "2026-05-19",
+        "facts": "Entergy’s May 19, 2026 update reports HRSG module erection and turbine delivery at Delta Blues, and states 754 MW and $1.2 billion investment. The operator’s physical-work evidence qualifies the project despite the conflicting preliminary inventory status. Service in 2028 remains a target.",
+        "extra": [],
+        "costGroup": "eia-67914",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "physicalSourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "costFacts": "Published project-specific cost for Delta Blues Advanced Power Station: USD 1.2e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Delta Blues Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79771,
+          "url": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "version": 3,
+          "wikiPageId": 10781
+        }
+      ]
+    },
+    {
+      "key": "eia-68053",
+      "pinId": 8483,
+      "name": "Legend Power Station",
+      "country": "United States",
+      "year": 2028,
+      "dateMarker": "2028-12-31",
+      "targetLabel": "2028",
+      "targetSource": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+      "targetEvidence": "Entergy’s April 2026 groundbreaking release identifies Legend and Lone Star as physically progressing projects expected to begin serving customers in 2028.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-68053",
+        "name": "Legend Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1600000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+        "sourceDate": "2025-09-11",
+        "facts": "Entergy’s September 11, 2025 approval release gives a $1.6 billion investment for Legend, updating the earlier $1.46 billion proposal. The operator’s design rating is 754 MW and physical groundbreaking occurred April 9, 2026. Economic-impact and customer-benefit figures are not the construction budget.",
+        "extra": [
+          [
+            "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "The operator identifies Legend as a 754 MW combined-cycle plant."
+          ],
+          [
+            "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "April 9, 2026 groundbreaking verifies physical construction; target service is 2028."
+          ]
+        ],
+        "costGroup": "eia-68053",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+        "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "costFacts": "Published project-specific cost for Legend Power Station: USD 1.6e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Legend Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79834,
+          "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "version": 2,
+          "wikiPageId": 10782
+        },
+        {
+          "id": 90928,
+          "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+          "version": 1,
+          "wikiPageId": 9718
+        },
+        {
+          "id": 90929,
+          "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+          "version": 1,
+          "wikiPageId": 9719
+        }
+      ]
+    },
+    {
+      "key": "eia-69077",
+      "pinId": 8615,
+      "name": "Lone Star Power Station",
+      "country": "United States",
+      "year": 2028,
+      "dateMarker": "2028-12-31",
+      "targetLabel": "2028",
+      "targetSource": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+      "targetEvidence": "Entergy’s April 2026 groundbreaking release identifies Legend and Lone Star as physically progressing projects expected to begin serving customers in 2028.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-69077",
+        "name": "Lone Star Power Station",
+        "country": "United States",
+        "capacityMW": 453,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 799000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+        "sourceDate": "2025-09-11",
+        "facts": "Entergy’s September 11, 2025 approval release gives a $799 million investment for Lone Star, updating the earlier $735 million proposal. The operator describes a 453 MW combustion-turbine project; April 9, 2026 groundbreaking establishes physical construction. EIA reports a different nameplate rating; neither figure is extra capacity.",
+        "extra": [
+          [
+            "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "The operator identifies Lone Star as a 453 MW combustion-turbine plant."
+          ],
+          [
+            "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "April 9, 2026 groundbreaking verifies physical construction; target service is 2028."
+          ]
+        ],
+        "costGroup": "eia-69077",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+        "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "costFacts": "Published project-specific cost for Lone Star Power Station: USD 7.99e+08. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Lone Star Power Station: 453 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79834,
+          "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "version": 2,
+          "wikiPageId": 10782
+        },
+        {
+          "id": 90928,
+          "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+          "version": 1,
+          "wikiPageId": 9718
+        },
+        {
+          "id": 90929,
+          "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+          "version": 1,
+          "wikiPageId": 9719
+        }
+      ]
+    },
+    {
+      "key": "gem-L100000603040",
+      "pinId": 14064,
+      "name": "Mohmand multipurpose dam and hydropower project",
+      "country": "Pakistan",
+      "year": 2028,
+      "dateMarker": "2028-12-31",
+      "targetLabel": "Early 2028 electricity generation",
+      "targetSource": "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+      "targetEvidence": "WAPDA’s current Mohmand project page targets electricity generation in early 2028. The whole multipurpose-dam investment includes non-power water infrastructure. The timeline uses a year-level marker; it does not claim a specific early-2028 commissioning day.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "gem-L100000603040",
+        "name": "Mohmand multipurpose dam and hydropower project",
+        "country": "Pakistan",
+        "capacityMW": 800,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 2249600000.0,
+        "currency": "USD",
+        "costBasis": "Financier-published full multipurpose-project cost; includes non-power water infrastructure",
+        "sourceUrl": "https://opecfund.org/where-we-work/list/mohmand-dam-multipurpose-project",
+        "sourceDate": null,
+        "facts": "The OPEC Fund’s project record publishes total project cost US$2,249.60 million. It covers the multipurpose dam programme, including water supply, irrigation and flood-control works, not just the power station. The Fund’s loan is not used as project cost.",
+        "extra": [
+          [
+            "https://wapda.gov.pk/category/media/news/page/4/",
+            "WAPDA January 19, 2026 reports construction continuing on ten key sites."
+          ],
+          [
+            "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+            "WAPDA’s current project page identifies 800 MW installed design capacity, ongoing construction, river diversion November 2024, dam impounding targeted late 2026 and electricity generation early 2028. Targets are not completion claims."
+          ]
+        ],
+        "costGroup": "gem-L100000603040",
+        "checkedAt": "2026-10-11",
+        "costFacts": "The OPEC Fund’s project record publishes total project cost US$2,249.60 million. It covers the multipurpose dam programme, including water supply, irrigation and flood-control works, not just the power station. The Fund’s loan is not used as project cost.",
+        "capacitySourceUrl": "https://opecfund.org/where-we-work/list/mohmand-dam-multipurpose-project",
+        "capacityFacts": "Mohmand multipurpose dam and hydropower project: 800 MW generating project rating. Operator-reported electric generating capacity; not annual energy production",
+        "physicalSourceUrl": "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+        "physicalFacts": "WAPDA’s current project page identifies 800 MW installed design capacity, ongoing construction, river diversion November 2024, dam impounding targeted late 2026 and electricity generation early 2028. Targets are not completion claims."
+      },
+      "backingWikis": [
+        {
+          "id": 75849,
+          "url": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000921971",
+          "version": 4,
+          "wikiPageId": 9773
+        },
+        {
+          "id": 90970,
+          "url": "https://opecfund.org/where-we-work/list/mohmand-dam-multipurpose-project",
+          "version": 1,
+          "wikiPageId": 9753
+        },
+        {
+          "id": 90973,
+          "url": "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+          "version": 2,
+          "wikiPageId": 10783
+        },
+        {
+          "id": 90975,
+          "url": "https://wapda.gov.pk/category/media/news/page/4/",
+          "version": 1,
+          "wikiPageId": 9755
+        }
+      ]
+    },
+    {
+      "key": "existing-5488",
+      "pinId": 5488,
+      "name": "Darlington New Nuclear Project — Unit 1",
+      "country": "Canada",
+      "year": 2030,
+      "dateMarker": "2030-12-31",
+      "targetLabel": "Grid connection by end of 2030",
+      "targetSource": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+      "targetEvidence": "OPG’s planning goal is completion of the first SMR by the end of this decade and grid connection by the end of 2030. Only Unit 1 is included; three future reactors require further approvals.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "existing-5488",
+        "name": "Darlington New Nuclear Project — Unit 1",
+        "country": "Canada",
+        "capacityMW": 300,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 7700000000.0,
+        "currency": "CAD",
+        "costBasis": "Unit 1 plus shared infrastructure; includes interest, escalation and contingency",
+        "sourceUrl": "https://www.opg.com/wp-content/uploads/2026/03/2025-Q4-OPG-PR-MDA-FS-FINAL.pdf",
+        "sourceDate": "2026-03",
+        "facts": "OPG publishes a C$7.7 billion release-quality budget for the first SMR and shared site infrastructure: C$6.1 billion Unit 1 plus C$1.6 billion common systems/services. The budget includes interest, escalation and contingency. Included output is the first 300 MWe reactor under physical construction; the three additional proposed units and their combined C$20.9 billion fleet budget are excluded.",
+        "extra": [
+          [
+            "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+            "Operator confirms 300 MWe per unit and summer-2026 reactor-building construction after basemat installation."
+          ]
+        ],
+        "costGroup": "existing-5488",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+        "physicalSourceUrl": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+        "costFacts": "Published project-specific cost for Darlington New Nuclear Project — Unit 1: CAD 7.7e+09. Basis: Unit 1 plus shared infrastructure; includes interest, escalation and contingency.",
+        "capacityFacts": "Published electric generating project rating for Darlington New Nuclear Project — Unit 1: 300 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 39353,
+          "url": "https://www.powermag.com/ontario-authorizes-opg-to-start-construction-of-first-commercial-nuclear-smr",
+          "version": 1,
+          "wikiPageId": 9770
+        },
+        {
+          "id": 90932,
+          "url": "https://www.opg.com/wp-content/uploads/2026/03/2025-Q4-OPG-PR-MDA-FS-FINAL.pdf",
+          "version": 1,
+          "wikiPageId": 9722
+        },
+        {
+          "id": 90933,
+          "url": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+          "version": 2,
+          "wikiPageId": 10784
+        }
+      ]
+    },
+    {
+      "key": "existing-221",
+      "pinId": 221,
+      "name": "Hinkley Point C",
+      "country": "United Kingdom",
+      "year": 2030,
+      "dateMarker": "2030-12-31",
+      "targetLabel": "Unit 1 in 2030; Unit 2 later",
+      "targetSource": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+      "targetEvidence": "EDF’s February 20, 2026 presentation organises Hinkley Unit 1 for operation in 2030 and Unit 2 twelve months later. The 3.3 GW capacity and GBP35 billion estimate in 2015 sterling cover both reactors; neither is represented as wholly delivered by 2030.",
+      "scope": "first-reactor milestone only",
+      "fullProjectCount": false,
+      "cost": {
+        "key": "existing-221",
+        "name": "Hinkley Point C",
+        "country": "United Kingdom",
+        "capacityMW": 3300,
+        "capacityBasis": "EDF presentation rounded electric project rating: 3.3 GW",
+        "costValue": 35000000000.0,
+        "currency": "GBP",
+        "costBasis": "Completion estimate in constant 2015 GBP; not nominal 2026 GBP",
+        "sourceUrl": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+        "sourceDate": "2026-02-20",
+        "facts": "EDF’s February 20, 2026 results presentation labels Hinkley Point C as a 3.3 GW EPR project and estimates completion cost at £35 billion in 2015 sterling. A 12-month delay could add around £1 billion in the same price basis. Both reactors have documented construction progress; Unit 1 is organized for 2030, with Unit 2 twelve months later. This is actual construction, not an announcement-only proposal.",
+        "extra": [],
+        "costGroup": "existing-221",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+        "physicalSourceUrl": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+        "costFacts": "Published project-specific cost for Hinkley Point C: GBP 3.5e+10. Basis: Completion estimate in constant 2015 GBP; not nominal 2026 GBP.",
+        "capacityFacts": "Published electric generating project rating for Hinkley Point C: 3300 MW. Basis: EDF presentation rounded electric project rating: 3.3 GW."
+      },
+      "backingWikis": [
+        {
+          "id": 1363,
+          "url": "https://en.wikipedia.org/wiki/Hinkley_Point_C_nuclear_power_station",
+          "version": 1,
+          "wikiPageId": 831
+        },
+        {
+          "id": 90934,
+          "url": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+          "version": 2,
+          "wikiPageId": 10785
+        }
+      ]
+    }
+  ]
+}

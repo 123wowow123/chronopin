@@ -2,11 +2,9 @@
 
 import Anchor from '@/components/ui/Anchor';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
-import { useLocale, useT } from '@/lib/client/i18n';
-import { localizePath } from '@/lib/i18n/config';
+import { useT } from '@/lib/client/i18n';
 import { loadModelChart, showPrice, type ModelChartData, type ModelPoint } from '@/lib/modelChart';
 
 // Cost against quality for the AI models, on an AI model pin's side panel:
@@ -15,9 +13,9 @@ import { loadModelChart, showPrice, type ModelChartData, type ModelPoint } from 
 // per release year (the chart is a lot of dots; a year is a field you can
 // read), opening on the newest year; the pinned model is drawn in every tab,
 // the axes widening to take it, so "how does it fare against 2026's models"
-// is one click. Hovering a dot names it and rings it; clicking it (or its
-// name underneath) opens the pin that announced that model, when the site has
-// one. Nothing when the pin is not about a known model line or a
+// is one click. Hovering a dot names it and rings it; clicking it keeps it
+// selected, and its name underneath is the link to the pin that announced that
+// model, when the site has one. Nothing when the pin is not about a known model line or a
 // source is down.
 //
 // One kind of mark, so no categorical palette: the field is a recessive dot,
@@ -73,12 +71,12 @@ export function PinModelChart({ pinId, has, className = '' }: { pinId: number; h
 
 function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number; className: string }) {
   const t = useT();
-  const router = useRouter();
-  const locale = useLocale();
   // Opens on the newest year, the field the model is read against today; the
   // dot on the pin's own year's tab says where it was released.
   const [year, setYear] = useState<number>(data.years[0]);
   const [hover, setHover] = useState<ModelPoint | null>(null);
+  // The dot a click picked: it stays marked, and its name below is the link.
+  const [selected, setSelected] = useState<ModelPoint | null>(null);
   const [expanded, setExpanded] = useState(false);
   const svg = useRef<SVGSVGElement>(null);
 
@@ -147,13 +145,9 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
     setHover(best);
   };
 
-  const label = hover ?? pinned;
+  const label = hover ?? selected ?? pinned;
   // A model with its own pin goes there; the pin being read is already open.
   const linkOf = (p: ModelPoint | null) => (p?.href && p.pinId !== pinId ? p.href : null);
-  const go = (p: ModelPoint | null) => {
-    const href = linkOf(p);
-    if (href) router.push(localizePath(href, locale));
-  };
   const tabs = data.years;
 
   return (
@@ -182,6 +176,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
               onClick={() => {
                 setYear(y);
                 setHover(null);
+                setSelected(null);
               }}
               className={`rounded-full px-2.5 py-0.5 text-xs font-medium tabular-nums ring-1 ring-inset transition-colors ${
                 y === year ? 'bg-accent/15 text-ink ring-accent' : 'bg-raised text-muted ring-line hover:bg-raised-2 hover:text-ink'
@@ -215,9 +210,10 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
             model: pinned ? `${pinned.name}: ${pinned.elo}, ${showPrice(pinned.price)}` : t('pin.modelChart.notPriced'),
           })}
           onPointerMove={nearest}
+          onPointerDown={nearest}
           onPointerLeave={() => setHover(null)}
-          onClick={() => go(hover)}
-          style={{ cursor: linkOf(hover) ? 'pointer' : undefined }}
+          onClick={() => setSelected(hover)}
+          style={{ cursor: hover ? 'pointer' : undefined }}
         >
           {yTicks.map((v) => (
             <g key={v}>
@@ -255,7 +251,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
             />
           ))}
           {field
-            .filter((p) => labelled.has(p.key) && p.key !== hover?.key)
+            .filter((p) => labelled.has(p.key) && p.key !== hover?.key && p.key !== selected?.key)
             .map((p) => (
               <text key={p.key} x={x(p.price) + 7} y={y(p.elo) + 4} className="fill-current text-[11px] text-muted">
                 {p.name}
@@ -279,22 +275,24 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
             </g>
           ) : null}
 
-          {hover ? (
-            <g>
-              <circle cx={x(hover.price)} cy={y(hover.elo)} r={hover.key === data.pinned ? 19 : 9} className="fill-ink/10 stroke-ink" strokeWidth="2" />
-              <text
-                x={x(hover.price)}
-                y={y(hover.elo) - (hover.key === data.pinned ? 26 : 14)}
-                textAnchor={x(hover.price) > PAD.left + PLOT.w * 0.65 ? 'end' : x(hover.price) < PAD.left + PLOT.w * 0.2 ? 'start' : 'middle'}
-                className="fill-current text-[12px] font-bold text-ink"
-                paintOrder="stroke"
-                strokeWidth="3"
-                stroke="var(--color-panel, transparent)"
-              >
-                {hover.name}
-              </text>
-            </g>
-          ) : null}
+          {[selected, hover && hover.key !== selected?.key ? hover : null].map((p) =>
+            p ? (
+              <g key={p.key}>
+                <circle cx={x(p.price)} cy={y(p.elo)} r={p.key === data.pinned ? 19 : 9} className="fill-ink/10 stroke-ink" strokeWidth="2" />
+                <text
+                  x={x(p.price)}
+                  y={y(p.elo) - (p.key === data.pinned ? 26 : 14)}
+                  textAnchor={x(p.price) > PAD.left + PLOT.w * 0.65 ? 'end' : x(p.price) < PAD.left + PLOT.w * 0.2 ? 'start' : 'middle'}
+                  className="fill-current text-[12px] font-bold text-ink"
+                  paintOrder="stroke"
+                  strokeWidth="3"
+                  stroke="var(--color-panel, transparent)"
+                >
+                  {p.name}
+                </text>
+              </g>
+            ) : null,
+          )}
         </svg>
 
         <div className="mt-1 flex min-h-5 flex-wrap items-baseline gap-x-3 gap-y-1 text-xs">

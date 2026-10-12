@@ -91,7 +91,7 @@
       "address": "Mill Creek (KY), Jefferson County, KY, United States",
       "latitude": 38.0525,
       "longitude": -85.9103,
-      "timelineDate": "2024-11-13",
+      "timelineDate": "2027-12-31",
       "dateConfidence": "estimated",
       "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
       "cost": {
@@ -137,11 +137,21 @@
         {
           "id": 90926,
           "url": "https://lge-ku.com/mc5",
-          "version": 1,
-          "wikiPageId": 9716
+          "version": 2,
+          "wikiPageId": 10774
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "buildoutTarget": {
+        "year": 2027,
+        "dateMarker": "2027-12-31",
+        "targetLabel": "2027",
+        "targetSource": "https://lge-ku.com/mc5",
+        "targetEvidence": "The current operator project page identifies construction underway and expected customer supply in 2027.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true
+      },
+      "timelineRole": "Estimated future completion/operation target"
     },
     {
       "key": "eia-69223",
@@ -161,7 +171,7 @@
       "address": "Vicksburg Advanced Power Station, Warren County, MS, United States",
       "latitude": 32.28526,
       "longitude": -90.92568,
-      "timelineDate": "2025-10-21",
+      "timelineDate": "2028-08-31",
       "dateConfidence": "estimated",
       "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
       "cost": {
@@ -202,11 +212,21 @@
         {
           "id": 90927,
           "url": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
-          "version": 1,
-          "wikiPageId": 9717
+          "version": 2,
+          "wikiPageId": 10780
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "buildoutTarget": {
+        "year": 2028,
+        "dateMarker": "2028-08-31",
+        "targetLabel": "August 2028",
+        "targetSource": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+        "targetEvidence": "Entergy’s October 21, 2025 project release targets completion of Vicksburg Advanced Power Station in August 2028.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true
+      },
+      "timelineRole": "Estimated future completion/operation target"
     },
     {
       "key": "eia-67914",
@@ -226,7 +246,7 @@
       "address": "Delta Blues Advanced Power Station, Washington County, MS, United States",
       "latitude": 33.330476,
       "longitude": -91.13058,
-      "timelineDate": "2026-05-19",
+      "timelineDate": "2028-12-31",
       "dateConfidence": "estimated",
       "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
       "cost": {
@@ -261,11 +281,21 @@
         {
           "id": 79771,
           "url": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
-          "version": 2,
-          "wikiPageId": 9769
+          "version": 3,
+          "wikiPageId": 10781
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "buildoutTarget": {
+        "year": 2028,
+        "dateMarker": "2028-12-31",
+        "targetLabel": "2028",
+        "targetSource": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "targetEvidence": "Entergy’s May 19, 2026 update documents HRSG module erection and turbine delivery and retains the Delta Blues opening target in 2028.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true
+      },
+      "timelineRole": "Estimated future completion/operation target"
     },
     {
       "key": "eia-68053",
@@ -285,7 +315,7 @@
       "address": "Legend Power Station, Jefferson County, TX, United States",
       "latitude": 29.880219,
       "longitude": -93.99573,
-      "timelineDate": "2026-04-09",
+      "timelineDate": "2028-12-31",
       "dateConfidence": "estimated",
       "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
       "cost": {
@@ -329,8 +359,8 @@
         {
           "id": 79834,
           "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
-          "version": 1,
-          "wikiPageId": 9667
+          "version": 2,
+          "wikiPageId": 10782
         },
         {
           "id": 90928,
@@ -345,7 +375,17 @@
           "wikiPageId": 9719
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "buildoutTarget": {
+        "year": 2028,
+        "dateMarker": "2028-12-31",
+        "targetLabel": "2028",
+        "targetSource": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "targetEvidence": "Entergy’s April 2026 groundbreaking release identifies Legend and Lone Star as physically progressing projects expected to begin serving customers in 2028.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true
+      },
+      "timelineRole": "Estimated future completion/operation target"
     },
     {
       "key": "eia-69077",
@@ -365,7 +405,7 @@
       "address": "Lone Star Power Station, San Jacinto County, TX, United States",
       "latitude": 30.414158,
       "longitude": -95.01671,
-      "timelineDate": "2026-04-09",
+      "timelineDate": "2028-12-31",
       "dateConfidence": "estimated",
       "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
       "cost": {
@@ -409,8 +449,8 @@
         {
           "id": 79834,
           "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
-          "version": 1,
-          "wikiPageId": 9667
+          "version": 2,
+          "wikiPageId": 10782
         },
         {
           "id": 90928,
@@ -425,7 +465,17 @@
           "wikiPageId": 9719
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "buildoutTarget": {
+        "year": 2028,
+        "dateMarker": "2028-12-31",
+        "targetLabel": "2028",
+        "targetSource": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "targetEvidence": "Entergy’s April 2026 groundbreaking release identifies Legend and Lone Star as physically progressing projects expected to begin serving customers in 2028.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true
+      },
+      "timelineRole": "Estimated future completion/operation target"
     },
     {
       "key": "eia-66923",
@@ -525,7 +575,7 @@
       "address": "Virginia Beach, Virginia, United States",
       "latitude": 36.8496579,
       "longitude": -75.9760751,
-      "timelineDate": "2026-03-23",
+      "timelineDate": "2027-12-31",
       "dateConfidence": "estimated",
       "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
       "cost": {
@@ -569,8 +619,8 @@
         {
           "id": 80142,
           "url": "https://coastalvawind.com/about/the-project/timeline",
-          "version": 1,
-          "wikiPageId": 9690
+          "version": 2,
+          "wikiPageId": 10775
         },
         {
           "id": 80149,
@@ -585,7 +635,17 @@
           "wikiPageId": 9728
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "buildoutTarget": {
+        "year": 2027,
+        "dateMarker": "2027-12-31",
+        "targetLabel": "2027",
+        "targetSource": "https://coastalvawind.com/about/the-project/timeline",
+        "targetEvidence": "The operator timeline identifies 2026–2027 project construction and commissioning. First power in March 2026 does not mean full completion; the retained target is 2027, without asserting an exact day.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true
+      },
+      "timelineRole": "Estimated future completion/operation target"
     },
     {
       "key": "eia-68443",
@@ -605,7 +665,7 @@
       "address": "Empire Wind 1, Kings County, NY, United States",
       "latitude": 40.32,
       "longitude": -73.42,
-      "timelineDate": "2026-08-31",
+      "timelineDate": "2027-12-31",
       "dateConfidence": "estimated",
       "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
       "cost": {
@@ -651,11 +711,21 @@
         {
           "id": 90942,
           "url": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
-          "version": 1,
-          "wikiPageId": 9729
+          "version": 2,
+          "wikiPageId": 10776
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "buildoutTarget": {
+        "year": 2027,
+        "dateMarker": "2027-12-31",
+        "targetLabel": "2027",
+        "targetSource": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+        "targetEvidence": "Equinor identifies an expected commercial-operation date in 2027 for Empire Wind 1.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true
+      },
+      "timelineRole": "Estimated future completion/operation target"
     },
     {
       "key": "eia-3406",
@@ -806,7 +876,7 @@
       "address": "Kingston, Roane County, TN, United States",
       "latitude": 35.8992,
       "longitude": -84.5194,
-      "timelineDate": "2025-09-30",
+      "timelineDate": "2027-12-31",
       "dateConfidence": "estimated",
       "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
       "cost": {
@@ -842,11 +912,21 @@
         {
           "id": 90944,
           "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
-          "version": 1,
-          "wikiPageId": 9730
+          "version": 2,
+          "wikiPageId": 10777
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "buildoutTarget": {
+        "year": 2027,
+        "dateMarker": "2027-12-31",
+        "targetLabel": "End of 2027",
+        "targetSource": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "targetEvidence": "TVA’s FY2025 filing identifies physical construction of the 1,500 MW Kingston combined-cycle replacement plant and expected operation by the end of calendar 2027.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true
+      },
+      "timelineRole": "Estimated future completion/operation target"
     },
     {
       "key": "gem-L100000104184",
@@ -1819,5 +1899,489 @@
     "allCurrentSourcesHaveReadyWiki": true,
     "allSummariesCurrent": true,
     "inventoryProjectRowsAdded": true
+  },
+  "buildoutThrough2030": {
+    "verifiedAtUTC": "2026-10-12T22:10:08Z",
+    "fullCompletionTargetProjects": 12,
+    "additionalFirstReactorMilestones": 1,
+    "targetsByYear": {
+      "2027": 6,
+      "2028": 5,
+      "2030": 1
+    },
+    "newPinsCreated": 0,
+    "totalOriginalCollectionPins": 37,
+    "publicMapMatches": true,
+    "wikisVerified": true,
+    "targets": [
+      {
+        "key": "eia-1364",
+        "pinId": 7690,
+        "name": "Mill Creek 5",
+        "country": "United States",
+        "year": 2027,
+        "dateMarker": "2027-12-31",
+        "targetLabel": "2027",
+        "targetSource": "https://lge-ku.com/mc5",
+        "targetEvidence": "The current operator project page identifies construction underway and expected customer supply in 2027.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true,
+        "cost": {
+          "key": "eia-1364",
+          "name": "Mill Creek 5",
+          "country": "United States",
+          "capacityMW": 645,
+          "capacityBasis": "Current operator page: 645 MW nameplate",
+          "costValue": 902000000.0,
+          "currency": "USD",
+          "costBasis": "Published project-specific capital/construction estimate",
+          "sourceUrl": "https://lge-ku.com/mc5",
+          "sourceDate": null,
+          "facts": "LG&E/KU’s current Mill Creek 5 page states a 645 MW nameplate rating, $902 million cost, construction underway and estimated completion in 2027. Its 2024 groundbreaking release used 640 MW; the current page is used for the primary output rating. EIA’s separate 740 MW figure is retained as inventory context, not extra generating capacity.",
+          "extra": [
+            [
+              "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+              "November 13, 2024 groundbreaking verifies physical construction."
+            ]
+          ],
+          "costGroup": "eia-1364",
+          "checkedAt": "2026-10-11",
+          "capacitySourceUrl": "https://lge-ku.com/mc5",
+          "physicalSourceUrl": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+          "costFacts": "Published project-specific cost for Mill Creek 5: USD 9.02e+08. Basis: Published project-specific capital/construction estimate.",
+          "capacityFacts": "Published electric generating project rating for Mill Creek 5: 645 MW. Basis: Current operator page: 645 MW nameplate."
+        },
+        "backingWikis": [
+          {
+            "id": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "version": 4,
+            "wikiPageId": 9772
+          },
+          {
+            "id": 79762,
+            "url": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+            "version": 1,
+            "wikiPageId": 9661
+          },
+          {
+            "id": 90926,
+            "url": "https://lge-ku.com/mc5",
+            "version": 2,
+            "wikiPageId": 10774
+          }
+        ]
+      },
+      {
+        "key": "existing-5511",
+        "pinId": 5511,
+        "name": "Coastal Virginia Offshore Wind commercial project",
+        "country": "United States",
+        "year": 2027,
+        "dateMarker": "2027-12-31",
+        "targetLabel": "2027",
+        "targetSource": "https://coastalvawind.com/about/the-project/timeline",
+        "targetEvidence": "The operator timeline identifies 2026–2027 project construction and commissioning. First power in March 2026 does not mean full completion; the retained target is 2027, without asserting an exact day.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true,
+        "cost": {
+          "key": "existing-5511",
+          "name": "Coastal Virginia Offshore Wind commercial project",
+          "country": "United States",
+          "capacityMW": 2600,
+          "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+          "costValue": 11700000000.0,
+          "currency": "USD",
+          "costBasis": "Estimated total project cost excluding financing; includes $0.1 billion contingency",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+          "sourceDate": "2026-06-30",
+          "facts": "Dominion’s June 30, 2026 quarterly filing gives approximately $11.7 billion estimated total project cost, excluding financing and including $0.1 billion contingency. It supersedes earlier $10.7 billion/$11.5 billion estimates. The commercial project rating is approximately 2,600 MW, separate from the older 12 MW pilot; first power occurred March 23, 2026 while construction continues.",
+          "extra": [
+            [
+              "https://coastalvawind.com/about/the-project/timeline",
+              "Operator records first power March 23, 2026; full-project completion is expected in 2027."
+            ],
+            [
+              "https://coastalvawind.com/",
+              "The operator identifies approximately 2.6 GW for the commercial project."
+            ]
+          ],
+          "costGroup": "existing-5511",
+          "checkedAt": "2026-10-11",
+          "capacitySourceUrl": "https://coastalvawind.com/",
+          "physicalSourceUrl": "https://coastalvawind.com/about/the-project/timeline",
+          "costFacts": "Published project-specific cost for Coastal Virginia Offshore Wind commercial project: USD 1.17e+10. Basis: Estimated total project cost excluding financing; includes $0.1 billion contingency.",
+          "capacityFacts": "Published electric generating project rating for Coastal Virginia Offshore Wind commercial project: 2600 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+        },
+        "backingWikis": [
+          {
+            "id": 39456,
+            "url": "https://offshorewind.biz/2026/08/03/largest-us-offshore-wind-farm-81-pct-complete-final-turbine-expected-by-end-of-2027",
+            "version": 1,
+            "wikiPageId": 9771
+          },
+          {
+            "id": 80142,
+            "url": "https://coastalvawind.com/about/the-project/timeline",
+            "version": 2,
+            "wikiPageId": 10775
+          },
+          {
+            "id": 80149,
+            "url": "https://coastalvawind.com/",
+            "version": 1,
+            "wikiPageId": 9691
+          },
+          {
+            "id": 90940,
+            "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+            "version": 1,
+            "wikiPageId": 9728
+          }
+        ]
+      },
+      {
+        "key": "eia-68443",
+        "pinId": 7688,
+        "name": "Empire Wind 1",
+        "country": "United States",
+        "year": 2027,
+        "dateMarker": "2027-12-31",
+        "targetLabel": "2027",
+        "targetSource": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+        "targetEvidence": "Equinor identifies an expected commercial-operation date in 2027 for Empire Wind 1.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true,
+        "cost": {
+          "key": "eia-68443",
+          "name": "Empire Wind 1",
+          "country": "United States",
+          "capacityMW": 810,
+          "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+          "costValue": 5000000000.0,
+          "currency": "USD",
+          "costBasis": "Total capital investment including terminal-use fees and expected tax credits; tax-credit-adjusted, not gross pre-credit cost",
+          "sourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+          "sourceDate": "2025-01-02",
+          "facts": "Equinor describes total Empire Wind capital expenditure estimated at $5 billion after tax credits, covering 54 bottom-fixed turbines and the Brooklyn cable landfall. This is a tax-credit-adjusted estimate, not gross pre-credit cost and not the over-$3 billion financing package. Empire Wind 1 has an 810 MW generation rating and documented offshore construction; full operation is targeted for 2027.",
+          "extra": [
+            [
+              "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+              "Official project announcement identifies 810 MW and distinguishes financing from project capital expenditure."
+            ]
+          ],
+          "costGroup": "eia-68443",
+          "checkedAt": "2026-10-11",
+          "capacitySourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+          "physicalSourceUrl": "https://www.empirewind.com/offshore-installation/",
+          "costFacts": "Equinor January 2, 2025 publishes approximately USD5 billion expected total capital investment, including South Brooklyn Marine Terminal use fees and the effect of expected future investment tax credits. The financing package above USD3 billion is separate.",
+          "capacityFacts": "Published electric generating project rating for Empire Wind 1: 810 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+        },
+        "backingWikis": [
+          {
+            "id": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "version": 4,
+            "wikiPageId": 9772
+          },
+          {
+            "id": 80049,
+            "url": "https://www.empirewind.com/offshore-installation/",
+            "version": 1,
+            "wikiPageId": 9682
+          },
+          {
+            "id": 90942,
+            "url": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+            "version": 2,
+            "wikiPageId": 10776
+          }
+        ]
+      },
+      {
+        "key": "eia-3407",
+        "pinId": 14048,
+        "name": "Kingston combined-cycle replacement plant",
+        "country": "United States",
+        "year": 2027,
+        "dateMarker": "2027-12-31",
+        "targetLabel": "End of 2027",
+        "targetSource": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "targetEvidence": "TVA’s FY2025 filing identifies physical construction of the 1,500 MW Kingston combined-cycle replacement plant and expected operation by the end of calendar 2027.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true,
+        "cost": {
+          "key": "eia-3407",
+          "name": "Kingston combined-cycle replacement plant",
+          "country": "United States",
+          "capacityMW": 1500,
+          "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+          "costValue": 2900000000.0,
+          "currency": "USD",
+          "costBasis": "Sum of disclosed spent and forecast remaining project expenditure; approximately $2.9 billion",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+          "sourceDate": "2025-09-30",
+          "facts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $1.1 billion expected additional spending on the 1,500 MW Kingston combined-cycle plant as of September 30, 2025. Their sum is approximately $2.9 billion. This total is arithmetic on disclosed project amounts, not a benchmark estimate. Battery RFPs, proposed expansions and the wider campus rating are not included.",
+          "extra": [],
+          "costGroup": "eia-3407",
+          "checkedAt": "2026-10-11",
+          "costFacts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $1.1 billion expected additional spending on the 1,500 MW Kingston combined-cycle plant as of September 30, 2025. Their sum is approximately $2.9 billion. This total is arithmetic on disclosed project amounts, not a benchmark estimate. Battery RFPs, proposed expansions and the wider campus rating are not included.",
+          "capacityFacts": "Kingston combined-cycle replacement plant: published generating capacity 1500 MW. Operator-reported electric generating capacity; not annual energy production",
+          "capacitySourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+          "physicalSourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+          "physicalFacts": "TVA explicitly states it is constructing the 1,500 MW combined-cycle plant, targeting the end of 2027. The capacity is for the combined-cycle plant, not all units at the Kingston site."
+        },
+        "backingWikis": [
+          {
+            "id": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "version": 4,
+            "wikiPageId": 9772
+          },
+          {
+            "id": 90944,
+            "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+            "version": 2,
+            "wikiPageId": 10777
+          }
+        ]
+      },
+      {
+        "key": "eia-69223",
+        "pinId": 7685,
+        "name": "Vicksburg Advanced Power Station",
+        "country": "United States",
+        "year": 2028,
+        "dateMarker": "2028-08-31",
+        "targetLabel": "August 2028",
+        "targetSource": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+        "targetEvidence": "Entergy’s October 21, 2025 project release targets completion of Vicksburg Advanced Power Station in August 2028.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true,
+        "cost": {
+          "key": "eia-69223",
+          "name": "Vicksburg Advanced Power Station",
+          "country": "United States",
+          "capacityMW": 754,
+          "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+          "costValue": 1200000000.0,
+          "currency": "USD",
+          "costBasis": "Published project-specific capital/construction estimate",
+          "sourceUrl": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+          "sourceDate": "2025-10-21",
+          "facts": "Entergy’s October 21, 2025 release identifies the 754 MW Vicksburg combined-cycle project and its $1.2 billion investment. August 2026 EIA units report construction; the operator targets completion in August 2028. The rating is the operator project figure, distinct from EIA’s unit nameplate sum.",
+          "extra": [],
+          "costGroup": "eia-69223",
+          "checkedAt": "2026-10-11",
+          "capacitySourceUrl": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+          "physicalSourceUrl": "https://www.entergymississippi.com/generation/vicksburg",
+          "costFacts": "Published project-specific cost for Vicksburg Advanced Power Station: USD 1.2e+09. Basis: Published project-specific capital/construction estimate.",
+          "capacityFacts": "Published electric generating project rating for Vicksburg Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+        },
+        "backingWikis": [
+          {
+            "id": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "version": 4,
+            "wikiPageId": 9772
+          },
+          {
+            "id": 79792,
+            "url": "https://www.entergymississippi.com/generation/vicksburg",
+            "version": 1,
+            "wikiPageId": 9664
+          },
+          {
+            "id": 90927,
+            "url": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+            "version": 2,
+            "wikiPageId": 10780
+          }
+        ]
+      },
+      {
+        "key": "eia-67914",
+        "pinId": 14044,
+        "name": "Delta Blues Advanced Power Station",
+        "country": "United States",
+        "year": 2028,
+        "dateMarker": "2028-12-31",
+        "targetLabel": "2028",
+        "targetSource": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "targetEvidence": "Entergy’s May 19, 2026 update documents HRSG module erection and turbine delivery and retains the Delta Blues opening target in 2028.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true,
+        "cost": {
+          "key": "eia-67914",
+          "name": "Delta Blues Advanced Power Station",
+          "country": "United States",
+          "capacityMW": 754,
+          "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+          "costValue": 1200000000.0,
+          "currency": "USD",
+          "costBasis": "Published project-specific capital/construction estimate",
+          "sourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "sourceDate": "2026-05-19",
+          "facts": "Entergy’s May 19, 2026 update reports HRSG module erection and turbine delivery at Delta Blues, and states 754 MW and $1.2 billion investment. The operator’s physical-work evidence qualifies the project despite the conflicting preliminary inventory status. Service in 2028 remains a target.",
+          "extra": [],
+          "costGroup": "eia-67914",
+          "checkedAt": "2026-10-11",
+          "capacitySourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "physicalSourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "costFacts": "Published project-specific cost for Delta Blues Advanced Power Station: USD 1.2e+09. Basis: Published project-specific capital/construction estimate.",
+          "capacityFacts": "Published electric generating project rating for Delta Blues Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+        },
+        "backingWikis": [
+          {
+            "id": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "version": 4,
+            "wikiPageId": 9772
+          },
+          {
+            "id": 79771,
+            "url": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+            "version": 3,
+            "wikiPageId": 10781
+          }
+        ]
+      },
+      {
+        "key": "eia-68053",
+        "pinId": 8483,
+        "name": "Legend Power Station",
+        "country": "United States",
+        "year": 2028,
+        "dateMarker": "2028-12-31",
+        "targetLabel": "2028",
+        "targetSource": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "targetEvidence": "Entergy’s April 2026 groundbreaking release identifies Legend and Lone Star as physically progressing projects expected to begin serving customers in 2028.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true,
+        "cost": {
+          "key": "eia-68053",
+          "name": "Legend Power Station",
+          "country": "United States",
+          "capacityMW": 754,
+          "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+          "costValue": 1600000000.0,
+          "currency": "USD",
+          "costBasis": "Published project-specific capital/construction estimate",
+          "sourceUrl": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+          "sourceDate": "2025-09-11",
+          "facts": "Entergy’s September 11, 2025 approval release gives a $1.6 billion investment for Legend, updating the earlier $1.46 billion proposal. The operator’s design rating is 754 MW and physical groundbreaking occurred April 9, 2026. Economic-impact and customer-benefit figures are not the construction budget.",
+          "extra": [
+            [
+              "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+              "The operator identifies Legend as a 754 MW combined-cycle plant."
+            ],
+            [
+              "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+              "April 9, 2026 groundbreaking verifies physical construction; target service is 2028."
+            ]
+          ],
+          "costGroup": "eia-68053",
+          "checkedAt": "2026-10-11",
+          "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+          "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "costFacts": "Published project-specific cost for Legend Power Station: USD 1.6e+09. Basis: Published project-specific capital/construction estimate.",
+          "capacityFacts": "Published electric generating project rating for Legend Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+        },
+        "backingWikis": [
+          {
+            "id": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "version": 4,
+            "wikiPageId": 9772
+          },
+          {
+            "id": 79834,
+            "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "version": 2,
+            "wikiPageId": 10782
+          },
+          {
+            "id": 90928,
+            "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+            "version": 1,
+            "wikiPageId": 9718
+          },
+          {
+            "id": 90929,
+            "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "version": 1,
+            "wikiPageId": 9719
+          }
+        ]
+      },
+      {
+        "key": "eia-69077",
+        "pinId": 8615,
+        "name": "Lone Star Power Station",
+        "country": "United States",
+        "year": 2028,
+        "dateMarker": "2028-12-31",
+        "targetLabel": "2028",
+        "targetSource": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "targetEvidence": "Entergy’s April 2026 groundbreaking release identifies Legend and Lone Star as physically progressing projects expected to begin serving customers in 2028.",
+        "scope": "included project/phase completion target",
+        "fullProjectCount": true,
+        "cost": {
+          "key": "eia-69077",
+          "name": "Lone Star Power Station",
+          "country": "United States",
+          "capacityMW": 453,
+          "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+          "costValue": 799000000.0,
+          "currency": "USD",
+          "costBasis": "Published project-specific capital/construction estimate",
+          "sourceUrl": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+          "sourceDate": "2025-09-11",
+          "facts": "Entergy’s September 11, 2025 approval release gives a $799 million investment for Lone Star, updating the earlier $735 million proposal. The operator describes a 453 MW combustion-turbine project; April 9, 2026 groundbreaking establishes physical construction. EIA reports a different nameplate rating; neither figure is extra capacity.",
+          "extra": [
+            [
+              "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+              "The operator identifies Lone Star as a 453 MW combustion-turbine plant."
+            ],
+            [
+              "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+              "April 9, 2026 groundbreaking verifies physical construction; target service is 2028."
+            ]
+          ],
+          "costGroup": "eia-69077",
+          "checkedAt": "2026-10-11",
+          "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+          "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "costFacts": "Published project-specific cost for Lone Star Power Station: USD 7.99e+08. Basis: Published project-specific capital/construction estimate.",
+          "capacityFacts": "Published electric generating project rating for Lone Star Power Station: 453 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+        },
+        "backingWikis": [
+          {
+            "id": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "version": 4,
+            "wikiPageId": 9772
+          },
+          {
+            "id": 79834,
+            "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "version": 2,
+            "wikiPageId": 10782
+          },
+          {
+            "id": 90928,
+            "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+            "version": 1,
+            "wikiPageId": 9718
+          },
+          {
+            "id": 90929,
+            "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "version": 1,
+            "wikiPageId": 9719
+          }
+        ]
+      }
+    ]
   }
 }

@@ -5,10 +5,10 @@
       "food": 4.5,
       "service": 5,
       "ambience": 4.5,
-      "value": null,
+      "value": 2.5,
       "acclaim": 5
     },
-    "basis": "OpenTable (3,657 verified diner ratings, 4.7 overall, read 2026-10-12): Food 4.7, Service 4.8, Ambience 4.6. Value is not scored: OpenTable prints 0.2 for it, which is out of line with the 4.7 overall and not treated as a real score. Acclaim: three Michelin stars (MICHELIN Guide 3/3).",
+    "basis": "OpenTable (3,657 verified diner ratings, 4.7 overall, read 2026-10-12): Food 4.7, Service 4.8, Ambience 4.6; OpenTable's Value (0.2) is out of line with its 4.7 overall and not used. Value 2.5 from Tripadvisor (2,783 reviews, Value 4.0). Acclaim: three Michelin stars (MICHELIN Guide 3/3).",
     "sourceUrl": "https://www.opentable.com/r/eleven-madison-park",
     "sources": [
       {
@@ -19,10 +19,46 @@
         "wiki": {
           "title": "Eleven Madison Park on OpenTable",
           "summary": "OpenTable's diner ratings for Eleven Madison Park: 4.7 overall from 3,657 verified ratings, with Food 4.7, Service 4.8 and Ambience 4.6; the Value figure printed there (0.2) is anomalous.",
-          "body": "# Eleven Madison Park on OpenTable\n\nOpenTable's listing for Eleven Madison Park, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.7 out of 5 from 3,657 verified diner ratings.\n- Food: 4.7\n- Service: 4.8\n- Ambience: 4.6\n- Value: 0.2 as printed, out of line with the 4.7 overall and not used as a score\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 4.5, Service 5 and Ambience 4.5 from these figures. Value is left unscored.\n",
+          "body": "# Eleven Madison Park on OpenTable\n\nOpenTable's listing for Eleven Madison Park, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.7 out of 5 from 3,657 verified diner ratings.\n- Food: 4.7\n- Service: 4.8\n- Ambience: 4.6\n- Value: 0.2 as printed, out of line with the 4.7 overall and not used as a score\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 4.5, Service 5 and Ambience 4.5 from these figures. OpenTable's Value is not used; Value comes from the venue's Tripadvisor listing instead (4.0, scored 2.5).\n",
           "tags": [
             "OpenTable",
             "diner ratings",
+            "restaurant",
+            "New York"
+          ],
+          "lastModified": "2026-10-12"
+        },
+        "rewrite": true
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/eleven-madison-park",
+        "title": "Eleven Madison Park - a MICHELIN Guide Restaurant",
+        "reasoning": "The MICHELIN Guide's own entry: Three MICHELIN Stars, price band $$$$; the source of the rubric's Critic acclaim score.",
+        "text": "Eleven Madison Park. 11 Madison Ave., New York, NY 10010. Three MICHELIN Stars. $$$$. Contemporary, Vegan.",
+        "wiki": {
+          "title": "Eleven Madison Park in the MICHELIN Guide",
+          "summary": "The MICHELIN Guide's entry for Eleven Madison Park: Three MICHELIN Stars, $$$$, Contemporary, Vegan.",
+          "body": "# Eleven Madison Park in the MICHELIN Guide\n\nThe guide's restaurant page for Eleven Madison Park, read on 2026-10-12 (through a page fetch; the distinction is shown on the page as an icon, and the page states no edition year for it).\n\n## Facts\n\n- Address: 11 Madison Ave., New York, NY 10010\n- Distinction: Three MICHELIN Stars\n- Price band: $$$$\n- Cuisine: Contemporary, Vegan\n\n## What the guide says\n\nChef Daniel Humm's precise, custom-made, elegant dining room serving a plant-based menu the guide calls a bold vision of luxury dining; highlights include a vegan roll with faux butter and a tonburi 'caviar' quenelle, with a few animal-protein courses optional.\n\n## Use on the pin\n\nThe pin's dining rubric scores Critic acclaim 5 for three MICHELIN stars.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "restaurant"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60763-d479020-Reviews-Eleven_Madison_Park-New_York_City_New_York.html",
+        "title": "Eleven Madison Park on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.4 from 2,783 reviews with Service 4.6, Food 4.5, Value 4.0 and Atmosphere 4.5; its Value is used where OpenTable's printed Value was out of line.",
+        "text": "4.4 (2783) Service 4.6 Food 4.5 Value 4.0 Atmosphere 4.5.",
+        "wiki": {
+          "title": "Eleven Madison Park on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Eleven Madison Park in New York: 4.4 overall from 2,783 reviews; Service 4.6, Food 4.5, Value 4.0, Atmosphere 4.5.",
+          "body": "# Eleven Madison Park on Tripadvisor\n\nTripadvisor's listing for Eleven Madison Park in New York, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.4 out of 5 from 2,783 reviews.\n- Service: 4.6\n- Food: 4.5\n- Value: 4.0\n- Atmosphere: 4.5\n\n## Use on the pin\n\nThe pin's dining rubric takes Value 2.5 from Tripadvisor's Value 4.0 because OpenTable's printed Value (0.2) is implausible next to its 4.7 overall. Food, Service and Ambience stay on OpenTable's figures (Tripadvisor's 4.5, 4.6 and 4.5 agree within 0.2).\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
             "restaurant",
             "New York"
           ],
@@ -60,6 +96,23 @@
           ],
           "lastModified": "2026-10-12"
         }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+        "title": "Ciccia Osteria - a MICHELIN Guide Restaurant",
+        "reasoning": "The MICHELIN Guide's own entry: MICHELIN Bib Gourmand, price band $$; the source of the rubric's Critic acclaim score.",
+        "text": "Ciccia Osteria. 2233 Logan Ave., San Diego, CA 92113. MICHELIN Bib Gourmand. $$. Italian, Milanese.",
+        "wiki": {
+          "title": "Ciccia Osteria in the MICHELIN Guide",
+          "summary": "The MICHELIN Guide's entry for Ciccia Osteria: MICHELIN Bib Gourmand, $$, Italian, Milanese.",
+          "body": "# Ciccia Osteria in the MICHELIN Guide\n\nThe guide's restaurant page for Ciccia Osteria, read on 2026-10-12 (through a page fetch; the distinction is shown on the page as an icon, and the page states no edition year for it).\n\n## Facts\n\n- Address: 2233 Logan Ave., San Diego, CA 92113\n- Distinction: MICHELIN Bib Gourmand\n- Price band: $$\n- Cuisine: Italian, Milanese\n\n## What the guide says\n\nA welcoming osteria in a converted home in Barrio Logan led by Chef Mario Cassineri, best known for its tree-lined courtyard seating; over a dozen handmade pastas (some gluten-free), complimentary focaccia and modestly priced starters such as mushroom flan and tuna tartare.\n\n## Use on the pin\n\nThe pin's dining rubric scores Critic acclaim 3 for the Bib Gourmand.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "restaurant"
+          ],
+          "lastModified": "2026-10-12"
+        }
       }
     ]
   },
@@ -92,6 +145,23 @@
           ],
           "lastModified": "2026-10-12"
         }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/lola-55",
+        "title": "LOLA 55 - a MICHELIN Guide Restaurant",
+        "reasoning": "The MICHELIN Guide's own entry: MICHELIN Bib Gourmand, price band $; the source of the rubric's Critic acclaim score.",
+        "text": "LOLA 55. 1290 F St., San Diego, CA 92101. MICHELIN Bib Gourmand. $. Mexican.",
+        "wiki": {
+          "title": "LOLA 55 in the MICHELIN Guide",
+          "summary": "The MICHELIN Guide's entry for LOLA 55: MICHELIN Bib Gourmand, $, Mexican.",
+          "body": "# LOLA 55 in the MICHELIN Guide\n\nThe guide's restaurant page for LOLA 55, read on 2026-10-12 (through a page fetch; the distinction is shown on the page as an icon, and the page states no edition year for it).\n\n## Facts\n\n- Address: 1290 F St., San Diego, CA 92101\n- Distinction: MICHELIN Bib Gourmand\n- Price band: $\n- Cuisine: Mexican\n\n## What the guide says\n\nAn East Village taqueria the guide calls a cut above the city's many others, with a breezy space and a full bar; fresh tortillas filled with things like pork belly adobada and smoked pork shoulder, plus posole verde and mole-chocolate ice cream and churros.\n\n## Use on the pin\n\nThe pin's dining rubric scores Critic acclaim 3 for the Bib Gourmand.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "restaurant"
+          ],
+          "lastModified": "2026-10-12"
+        }
       }
     ]
   },
@@ -121,6 +191,457 @@
             "diner ratings",
             "restaurant",
             "San Diego"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/addison",
+        "title": "Addison - a MICHELIN Guide Restaurant",
+        "reasoning": "The MICHELIN Guide's own entry: Three MICHELIN Stars, price band $$$$; the source of the rubric's Critic acclaim score.",
+        "text": "Addison. Fairmont Grand Del Mar, 5200 Grand Del Mar Way, San Diego, CA 92130. Three MICHELIN Stars. $$$$. Contemporary, Californian.",
+        "wiki": {
+          "title": "Addison in the MICHELIN Guide",
+          "summary": "The MICHELIN Guide's entry for Addison: Three MICHELIN Stars, $$$$, Contemporary, Californian.",
+          "body": "# Addison in the MICHELIN Guide\n\nThe guide's restaurant page for Addison, read on 2026-10-12 (through a page fetch; the distinction is shown on the page as an icon, and the page states no edition year for it).\n\n## Facts\n\n- Address: Fairmont Grand Del Mar, 5200 Grand Del Mar Way, San Diego, CA 92130\n- Distinction: Three MICHELIN Stars\n- Price band: $$$$\n- Cuisine: Contemporary, Californian\n\n## What the guide says\n\nChef William Bradley's resort-set destination just north of San Diego; the guide notes global inspiration with Californian sentimentality, a playful canapé opening (a chicken liver churro, bluefin nigiri) and skilled handling of top-quality product such as Japanese shima aji.\n\n## Use on the pin\n\nThe pin's dining rubric scores Critic acclaim 5 for three MICHELIN stars.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "restaurant"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2577,
+    "scores": {
+      "food": 4.5,
+      "service": 5,
+      "ambience": 4.5,
+      "value": 4,
+      "acclaim": 3
+    },
+    "basis": "OpenTable (2,437 verified diner ratings, 4.7 overall, read 2026-10-12): Food 4.7, Service 4.8, Ambience 4.6, Value 4.4. Acclaim 3: James Beard Foundation America's Classics award (1998) per Wikipedia; the MICHELIN Guide lists it with no distinction shown.",
+    "sourceUrl": "https://www.opentable.com/r/joes-stone-crab-miami-beach",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/r/joes-stone-crab-miami-beach",
+        "title": "Joe's Stone Crab on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.7 from 2,437 ratings with Food 4.7, Service 4.8, Ambience 4.6 and Value 4.4.",
+        "text": "4.7 (2437) 4.7 Food 4.8 Service 4.6 Ambience 4.4 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "Joe's Stone Crab on OpenTable",
+          "summary": "OpenTable's diner ratings for Joe's Stone Crab in Miami Beach: 4.7 overall from 2,437 verified ratings; Food 4.7, Service 4.8, Ambience 4.6, Value 4.4.",
+          "body": "# Joe's Stone Crab on OpenTable\n\nOpenTable's listing for Joe's Stone Crab in Miami Beach, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.7 out of 5 from 2,437 verified diner ratings.\n- Food: 4.7\n- Service: 4.8\n- Ambience: 4.6\n- Value: 4.4\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 4.5, Service 5, Ambience 4.5 and Value 4.\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Miami Beach"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Joe%27s_Stone_Crab",
+        "title": "Joe's Stone Crab - recognition (Wikipedia)",
+        "reasoning": "Wikipedia: the restaurant won a James Beard Foundation America's Classic Award in 1998 (also in its list of America's Classics, opened 1913), and ranks among the highest-grossing restaurants in the US.",
+        "text": "In 1998 the restaurant won an America's Classic Award from the James Beard Foundation. Miami Beach historic landmark 1975.",
+        "wiki": {
+          "title": "Joe's Stone Crab - recognition (Wikipedia)",
+          "summary": "Joe's Stone Crab won a James Beard Foundation America's Classic Award in 1998; it is a Miami Beach historic landmark (1975) and one of the highest-grossing US restaurants.",
+          "body": "# Joe's Stone Crab - recognition\n\nResearch note for the pin's dining rubric, from Wikipedia's article and its List of James Beard America's Classics (read in full on 2026-10-12).\n\n## Recognition stated there\n\n- James Beard Foundation America's Classics: 1998 (Florida, Miami Beach, opened 1913).\n- Miami Beach historic landmark: 1975.\n- Revenue rankings: second-highest-grossing restaurant in the US in 2013 and 2017, highest-grossing independent in 2019, highest in the US in 2024 (these are sales, not critic recognition).\n- Michelin: not mentioned in the article.\n\n## Use on the pin\n\nCritic acclaim is scored 3: a national best-of award (America's Classics). Revenue rankings are not counted.\n",
+          "tags": [
+            "Joe's Stone Crab",
+            "James Beard Foundation",
+            "America's Classics",
+            "critic acclaim",
+            "Miami Beach"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/florida/miami-beach/restaurant/joe-s-stone-crab",
+        "title": "Joe's Stone Crab - a MICHELIN Guide Restaurant",
+        "reasoning": "The MICHELIN Guide lists the restaurant (Fish and Seafood, $$$, tagged Iconic and Family Friendly) with no star, Bib Gourmand or Plate icon shown on the page.",
+        "text": "Joe's Stone Crab - Miami Beach. 11 Washington Ave., Miami Beach, FL 33139. Fish and Seafood. $$$. Distinction not shown.",
+        "wiki": {
+          "title": "Joe's Stone Crab - a MICHELIN Guide Restaurant",
+          "summary": "The MICHELIN Guide's page for Joe's Stone Crab lists it (Fish and Seafood, $$$, 'Iconic') without showing any star, Bib Gourmand or Plate distinction.",
+          "body": "# Joe's Stone Crab in the MICHELIN Guide\n\nResearch note, from the guide's restaurant page read through a page fetch on 2026-10-12.\n\n## Facts\n\n- Address: 11 Washington Ave., Miami Beach, FL 33139\n- Cuisine: Fish and Seafood; price band $$$; tags 'Iconic' and 'Family Friendly'\n- Distinction: none shown on the page (neighbouring listings on the same page do show star and Bib icons, so they render when present)\n\n## What the guide says\n\nOpened as a lunch counter in 1913, it remains one of the city's prime attractions; boiled, chilled stone crab claws with mustard sauce are the signature dish, ending with key lime pie.\n\n## Use on the pin\n\nA guide listing without a distinction is the 'listed in a guide' tier (2); the America's Classics award (3) is the higher figure used.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "Miami Beach",
+            "Joe's Stone Crab"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2559,
+    "scores": {
+      "food": 4.5,
+      "service": 5,
+      "ambience": 5,
+      "value": 4,
+      "acclaim": 2
+    },
+    "basis": "OpenTable (5,688 verified diner ratings, 4.8 overall, read 2026-10-12): Food 4.7, Service 4.8, Ambience 4.8, Value 4.4. Acclaim 2: Wine Spectator Grand Award (since 2010) per Wikipedia. Its two Michelin stars (2008 and 2009) are past editions and not counted; no current guide distinction was found.",
+    "sourceUrl": "https://www.opentable.com/spago-beverly-hills",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/spago-beverly-hills",
+        "title": "Spago on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.8 from 5,688 ratings with Food 4.7, Service 4.8, Ambience 4.8 and Value 4.4.",
+        "text": "4.8 (5688) 4.7 Food 4.8 Service 4.8 Ambience 4.4 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "Spago on OpenTable",
+          "summary": "OpenTable's diner ratings for Spago in Beverly Hills: 4.8 overall from 5,688 verified ratings; Food 4.7, Service 4.8, Ambience 4.8, Value 4.4.",
+          "body": "# Spago on OpenTable\n\nOpenTable's listing for Spago in Beverly Hills, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.8 out of 5 from 5,688 verified diner ratings.\n- Food: 4.7\n- Service: 4.8\n- Ambience: 4.8\n- Value: 4.4\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 4.5, Service 5, Ambience 5 and Value 4.\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Beverly Hills"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Spago",
+        "title": "Spago - awards and recognition (Wikipedia)",
+        "reasoning": "Wikipedia's awards section: two Michelin stars in 2008 and 2009, the Wine Spectator Grand Award since 2010 and Zagat's 'most iconic restaurant in Los Angeles' in 2013; no current guide distinction stated.",
+        "text": "In 2008 and 2009, Spago was awarded two Michelin stars. Since 2010, Spago has received the Wine Spectator Grand Award. In 2013, Zagat named Spago the most iconic restaurant in the city of Los Angeles.",
+        "wiki": {
+          "title": "Spago - awards and recognition (Wikipedia)",
+          "summary": "Spago's recognition as Wikipedia lists it: two Michelin stars in 2008 and 2009, a Wine Spectator Grand Award since 2010 and Zagat's most iconic Los Angeles restaurant in 2013.",
+          "body": "# Spago - awards and recognition\n\nResearch note for the pin's dining rubric, from Wikipedia's Spago article (awards section read verbatim on 2026-10-12).\n\n## Recognition stated there\n\n- Michelin: two stars in 2008 and 2009 (cited to an LA Times article of 10 November 2007); the page does not say which Spago location or later editions.\n- Wine Spectator Grand Award: since 2010.\n- Zagat: named Spago the most iconic restaurant in Los Angeles in 2013.\n- James Beard Foundation: no award, category or year is given in the article body.\n\n## What was not found\n\nA current Michelin page for the Beverly Hills restaurant could not be located (a guessed guide URL returned 404 and the guide's search showed no restaurant result), so no current distinction is claimed.\n\n## Use on the pin\n\nCritic acclaim is scored 2: a current Wine Spectator Grand Award (a wine-program award). The 2008-2009 Michelin stars are past editions and not counted.\n",
+          "tags": [
+            "Spago",
+            "Michelin Guide",
+            "Wine Spectator",
+            "critic acclaim",
+            "Beverly Hills"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2581,
+    "scores": {
+      "food": 3.5,
+      "service": 4,
+      "ambience": 4.5,
+      "value": 2.5,
+      "acclaim": 2.5
+    },
+    "basis": "OpenTable (9,216 verified diner ratings, 4.4 overall, read 2026-10-12): Food 4.3, Service 4.5, Ambience 4.6, Value 4.0. Acclaim 2.5: named North America's Best Landmark Restaurant at the World Culinary Awards in 2020, 2024 and 2025 per Wikipedia; no James Beard or Michelin recognition found.",
+    "sourceUrl": "https://www.opentable.com/r/union-oyster-house-boston",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/r/union-oyster-house-boston",
+        "title": "Union Oyster House on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.4 from 9,216 ratings with Food 4.3, Service 4.5, Ambience 4.6 and Value 4.0.",
+        "text": "4.4 (9216) 4.3 Food 4.5 Service 4.6 Ambience 4.0 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "Union Oyster House on OpenTable",
+          "summary": "OpenTable's diner ratings for Union Oyster House in Boston: 4.4 overall from 9,216 verified ratings; Food 4.3, Service 4.5, Ambience 4.6, Value 4.0.",
+          "body": "# Union Oyster House on OpenTable\n\nOpenTable's listing for Union Oyster House in Boston, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.4 out of 5 from 9,216 verified diner ratings.\n- Food: 4.3\n- Service: 4.5\n- Ambience: 4.6\n- Value: 4.0\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 3.5, Service 4, Ambience 4.5 and Value 2.5.\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Boston"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Union_Oyster_House",
+        "title": "Union Oyster House - recognition (Wikipedia)",
+        "reasoning": "Wikipedia's recognition section: North America's Best Landmark Restaurant at the World Culinary Awards in 2020, 2024 and 2025; National Historic Landmark since 2003; no James Beard or Michelin recognition stated.",
+        "text": "The restaurant was named North America's Best Landmark Restaurant at the World Culinary Awards in 2020, 2024 and 2025. National Historic Landmark designated May 27, 2003.",
+        "wiki": {
+          "title": "Union Oyster House - recognition (Wikipedia)",
+          "summary": "Union Oyster House was named North America's Best Landmark Restaurant at the World Culinary Awards in 2020, 2024 and 2025 and is a National Historic Landmark (2003); no James Beard or Michelin recognition is stated.",
+          "body": "# Union Oyster House - recognition\n\nResearch note for the pin's dining rubric, from Wikipedia's article (recognition section read verbatim on 2026-10-12).\n\n## Recognition stated there\n\n- World Culinary Awards: North America's Best Landmark Restaurant, 2020, 2024 and 2025.\n- National Historic Landmark: designated 27 May 2003 (heritage status, not culinary acclaim).\n- James Beard Foundation and Michelin: not mentioned. The restaurant is also absent from Wikipedia's List of James Beard America's Classics.\n\n## Use on the pin\n\nCritic acclaim is scored 2.5: a repeated continent-level best-of award in a niche category, below a national critics' award. Heritage designation is not counted.\n",
+          "tags": [
+            "Union Oyster House",
+            "World Culinary Awards",
+            "critic acclaim",
+            "Boston"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2590,
+    "scores": {
+      "food": 4.5,
+      "service": 4.5,
+      "ambience": 4.5,
+      "value": 4,
+      "acclaim": null
+    },
+    "basis": "OpenTable (31,519 verified diner ratings, 4.7 overall, read 2026-10-12): Food 4.7, Service 4.7, Ambience 4.7, Value 4.5. Acclaim is n/a: only a 2011 local trade award was found (no James Beard or Michelin recognition); the guide's own listing could not be checked, so absence is not asserted.",
+    "sourceUrl": "https://www.opentable.com/old-ebbitt-grill",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/old-ebbitt-grill",
+        "title": "Old Ebbitt Grill on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.7 from 31,519 ratings with Food 4.7, Service 4.7, Ambience 4.7 and Value 4.5.",
+        "text": "4.7 (31519) 4.7 Food 4.7 Service 4.7 Ambience 4.5 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "Old Ebbitt Grill on OpenTable",
+          "summary": "OpenTable's diner ratings for Old Ebbitt Grill in Washington: 4.7 overall from 31,519 verified ratings; Food 4.7, Service 4.7, Ambience 4.7, Value 4.5.",
+          "body": "# Old Ebbitt Grill on OpenTable\n\nOpenTable's listing for Old Ebbitt Grill in Washington, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.7 out of 5 from 31,519 verified diner ratings.\n- Food: 4.7\n- Service: 4.7\n- Ambience: 4.7\n- Value: 4.5\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 4.5, Service 4.5, Ambience 4.5 and Value 4.\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Washington"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Old_Ebbitt_Grill",
+        "title": "Old Ebbitt Grill - recognition (Wikipedia)",
+        "reasoning": "Wikipedia: Visitors' Choice Award (2011) from the Restaurant Association of Metropolitan Washington and press praise for its raw bar; no James Beard, Michelin or Zagat recognition found.",
+        "text": "Visitors' Choice Award in 2011 from the Restaurant Association of Metropolitan Washington. Washington Post: 2003 'the best raw bar in the city'.",
+        "wiki": {
+          "title": "Old Ebbitt Grill - recognition (Wikipedia)",
+          "summary": "Old Ebbitt Grill's recognition as Wikipedia lists it: a 2011 Visitors' Choice Award from the Restaurant Association of Metropolitan Washington and Washington Post praise for its raw bar; no national award is stated.",
+          "body": "# Old Ebbitt Grill - recognition\n\nResearch note for the pin's dining rubric, from Wikipedia's article (the awards section was only available as a summary of the page on 2026-10-12).\n\n## Recognition found\n\n- Visitors' Choice Award (2011), Restaurant Association of Metropolitan Washington - a local trade award.\n- Washington Post: 1984 'the best dining ambience of any restaurant in the city'; 2003 'the best raw bar in the city'.\n- Restaurant Business: third in national revenue for 2013 (a sales ranking).\n- James Beard Foundation America's Classics: not listed. Michelin: not mentioned.\n\n## Use on the pin\n\nNo current guide or national award was found, so Critic acclaim stays n/a. The guide's own Washington listing could not be read, so the absence of a distinction is not asserted.\n",
+          "tags": [
+            "Old Ebbitt Grill",
+            "critic acclaim",
+            "Washington"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2587,
+    "scores": {
+      "food": 4,
+      "service": 4.5,
+      "ambience": 4.5,
+      "value": 3,
+      "acclaim": null
+    },
+    "basis": "OpenTable (2,632 verified diner ratings, 4.6 overall, read 2026-10-12): Food 4.5, Service 4.7, Ambience 4.7, Value 4.1. Acclaim is n/a: no James Beard, Michelin or other guide recognition was found (only a National Register listing); the guide's own listing could not be checked, so absence is not asserted.",
+    "sourceUrl": "https://www.opentable.com/buckhorn-exchange",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/buckhorn-exchange",
+        "title": "The Buckhorn Exchange on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.6 from 2,632 ratings with Food 4.5, Service 4.7, Ambience 4.7 and Value 4.1.",
+        "text": "4.6 (2632) 4.5 Food 4.7 Service 4.7 Ambience 4.1 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "The Buckhorn Exchange on OpenTable",
+          "summary": "OpenTable's diner ratings for The Buckhorn Exchange in Denver: 4.6 overall from 2,632 verified ratings; Food 4.5, Service 4.7, Ambience 4.7, Value 4.1.",
+          "body": "# The Buckhorn Exchange on OpenTable\n\nOpenTable's listing for The Buckhorn Exchange in Denver, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.6 out of 5 from 2,632 verified diner ratings.\n- Food: 4.5\n- Service: 4.7\n- Ambience: 4.7\n- Value: 4.1\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 4, Service 4.5, Ambience 4.5 and Value 3.\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Denver"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Buckhorn_Exchange",
+        "title": "Buckhorn Exchange - recognition (Wikipedia)",
+        "reasoning": "Wikipedia states no awards or dining-guide recognition: National Register of Historic Places listing (1983) and 'oldest continuously operating restaurant in Denver'.",
+        "text": "National Register of Historic Places, April 21, 1983. Oldest continuously operating restaurant in Denver.",
+        "wiki": {
+          "title": "Buckhorn Exchange - recognition (Wikipedia)",
+          "summary": "Wikipedia's Buckhorn Exchange article states no awards or dining-guide recognition, only a 1983 National Register listing and its status as Denver's oldest continuously operating restaurant.",
+          "body": "# Buckhorn Exchange - recognition\n\nResearch note for the pin's dining rubric, from Wikipedia's article (read in full on 2026-10-12).\n\n## What the page states\n\n- National Register of Historic Places: listed 21 April 1983 (as the Zeitz Buckhorn Exchange).\n- 'Oldest continuously operating restaurant in Denver'; ranked among the oldest operating US restaurants by The Daily Meal (2012).\n- No James Beard, Michelin or other dining award is stated, and it is not in Wikipedia's List of James Beard America's Classics.\n\n## Use on the pin\n\nNo culinary recognition was found, so Critic acclaim stays n/a. The guide's own Colorado listing could not be read, so absence of a distinction is not asserted.\n",
+          "tags": [
+            "Buckhorn Exchange",
+            "critic acclaim",
+            "Denver"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2771,
+    "scores": {
+      "food": 5,
+      "service": 5,
+      "ambience": 5,
+      "value": 4.5,
+      "acclaim": 3
+    },
+    "basis": "OpenTable (1,002 verified diner ratings, 4.9 overall, read 2026-10-12): Food 4.9, Service 4.9, Ambience 4.9, Value 4.6. Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).",
+    "sourceUrl": "https://www.opentable.com/durants",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/durants",
+        "title": "Durant's on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.9 from 1,002 ratings with Food 4.9, Service 4.9, Ambience 4.9 and Value 4.6.",
+        "text": "4.9 (1002) 4.9 Food 4.9 Service 4.9 Ambience 4.6 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "Durant's on OpenTable",
+          "summary": "OpenTable's diner ratings for Durant's in Phoenix: 4.9 overall from 1,002 verified ratings; Food 4.9, Service 4.9, Ambience 4.9, Value 4.6.",
+          "body": "# Durant's on OpenTable\n\nOpenTable's listing for Durant's in Phoenix, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.9 out of 5 from 1,002 verified diner ratings.\n- Food: 4.9\n- Service: 4.9\n- Ambience: 4.9\n- Value: 4.6\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 5, Service 5, Ambience 5 and Value 4.5 (Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).).\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Phoenix"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2731,
+    "scores": {
+      "food": 5,
+      "service": 5,
+      "ambience": 5,
+      "value": 4.5,
+      "acclaim": 4
+    },
+    "basis": "OpenTable (59 verified diner ratings, 4.9 overall, read 2026-10-12): Food 4.9, Service 5.0, Ambience 4.9, Value 4.7. Acclaim 4: one MICHELIN star (the pin's MICHELIN Guide rating, 1/3) and The New York Times' 2026 best restaurants in America list.",
+    "sourceUrl": "https://www.opentable.com/r/maize-denver",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/r/maize-denver",
+        "title": "Milpero on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.9 from 59 ratings with Food 4.9, Service 5.0, Ambience 4.9 and Value 4.7.",
+        "text": "4.9 (59) 4.9 Food 5.0 Service 4.9 Ambience 4.7 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "Milpero on OpenTable",
+          "summary": "OpenTable's diner ratings for Milpero in Denver: 4.9 overall from 59 verified ratings; Food 4.9, Service 5.0, Ambience 4.9, Value 4.7.",
+          "body": "# Milpero on OpenTable\n\nOpenTable's listing for Milpero in Denver, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.9 out of 5 from 59 verified diner ratings.\n- Food: 4.9\n- Service: 5.0\n- Ambience: 4.9\n- Value: 4.7\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 5, Service 5, Ambience 5 and Value 4.5 (Acclaim 4: one MICHELIN star (the pin's MICHELIN Guide rating, 1/3) and The New York Times' 2026 best restaurants in America list.).\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Denver"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2575,
+    "scores": {
+      "food": 4.5,
+      "service": 5,
+      "ambience": 4.5,
+      "value": 2.5,
+      "acclaim": 4
+    },
+    "basis": "OpenTable (2,479 verified diner ratings, 4.7 overall, read 2026-10-12): Food 4.6, Service 4.8, Ambience 4.7; OpenTable's Value (0.7) is out of line with its 4.7 overall and not used. Value 2.5 from Tripadvisor (1,247 reviews, Value 3.9). Acclaim 4: James Beard Foundation Restaurant and Chef Award for Outstanding Wine Program (2017) and Design Icon (2019) per Wikipedia, plus Wine Spectator Grand Award 1997-2022.",
+    "sourceUrl": "https://www.opentable.com/r/canlis",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/r/canlis",
+        "title": "Canlis on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.7 from 2,479 ratings with Food 4.6, Service 4.8, Ambience 4.7.",
+        "text": "4.7 (2479) 4.6 Food 4.8 Service 4.7 Ambience 0.7 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "Canlis on OpenTable",
+          "summary": "OpenTable's diner ratings for Canlis in Seattle: 4.7 overall from 2,479 verified ratings; Food 4.6, Service 4.8, Ambience 4.7, Value 0.7 (not used as a score).",
+          "body": "# Canlis on OpenTable\n\nOpenTable's listing for Canlis in Seattle, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.7 out of 5 from 2,479 verified diner ratings.\n- Food: 4.6\n- Service: 4.8\n- Ambience: 4.7\n- Value: 0.7 as printed, Value is not scored: OpenTable prints 0.7, which is out of line with the 4.7 overall and not treated as a real score.\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 4.5, Service 5 and Ambience 4.5 from these figures. OpenTable's Value is not used; Value comes from the venue's Tripadvisor listing instead (3.9, scored 2.5).\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Seattle"
+          ],
+          "lastModified": "2026-10-12"
+        },
+        "rewrite": true
+      },
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60878-d432552-Reviews-Canlis_Restaurant-Seattle_Washington.html",
+        "title": "Canlis on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.5 from 1,247 reviews with Service 4.7, Food 4.5, Value 3.9 and Atmosphere 4.8; its Value is used where OpenTable's printed Value was out of line.",
+        "text": "4.5 (1247) Service 4.7 Food 4.5 Value 3.9 Atmosphere 4.8.",
+        "wiki": {
+          "title": "Canlis on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Canlis in Seattle: 4.5 overall from 1,247 reviews; Service 4.7, Food 4.5, Value 3.9, Atmosphere 4.8.",
+          "body": "# Canlis on Tripadvisor\n\nTripadvisor's listing for Canlis in Seattle, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.5 out of 5 from 1,247 reviews.\n- Service: 4.7\n- Food: 4.5\n- Value: 3.9\n- Atmosphere: 4.8\n\n## Use on the pin\n\nThe pin's dining rubric takes Value 2.5 from Tripadvisor's Value 3.9 because OpenTable's printed Value (0.7) is implausible next to its 4.7 overall. Food, Service and Ambience stay on OpenTable's figures (Tripadvisor's 4.5, 4.7 and 4.8 agree within 0.1).\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Seattle"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Canlis",
+        "title": "Canlis - awards and recognition (Wikipedia)",
+        "reasoning": "Wikipedia's awards section for Canlis: Wine Spectator Grand Award 1997-2022 and James Beard Foundation wins for Outstanding Wine Program (2017), Design Icon (2019) and Best New Chef Northwest (2019, Brady Williams), with 15 nominations in all.",
+        "text": "Awards: Wine Spectator Grand Award Winner 1997-2022. James Beard Awards: 15 total nominations with wins for Outstanding Wine Program (2017), Design Icon (2019), Best New Chef Northwest (2019) with Brady Williams.",
+        "wiki": {
+          "title": "Canlis - awards and recognition (Wikipedia)",
+          "summary": "Canlis's recognition as Wikipedia lists it: a Wine Spectator Grand Award every year 1997-2022 and James Beard Foundation wins for Outstanding Wine Program (2017) and Design Icon (2019), with 15 nominations; no Michelin mention.",
+          "body": "# Canlis - awards and recognition\n\nResearch note for the pin's dining rubric, from Wikipedia's Canlis article (awards section read verbatim on 2026-10-12).\n\n## Recognition stated there\n\n- Wine Spectator Grand Award: 1997-2022.\n- James Beard Foundation: 15 total nominations; wins for Outstanding Wine Program (2017), Design Icon (2019) and, for Brady Williams, Best New Chef Northwest (2019). The page does not list the nominations' categories or years.\n- Gourmet Magazine: cited for a 'top 20 restaurants in America' listing (2006 source).\n- Michelin: not mentioned in the article.\n\n## Use on the pin\n\nCritic acclaim is scored 4: restaurant-level James Beard Foundation Restaurant and Chef Awards (Outstanding Wine Program 2017) and a long-running Wine Spectator Grand Award. The score rests on Wikipedia's account and has not been checked against the Foundation's own database.\n",
+          "tags": [
+            "Canlis",
+            "James Beard Foundation",
+            "Wine Spectator",
+            "critic acclaim",
+            "Seattle"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2730,
+    "scores": {
+      "food": 5,
+      "service": 5,
+      "ambience": 4.5,
+      "value": 4,
+      "acclaim": 3
+    },
+    "basis": "OpenTable (156 verified diner ratings, 4.7 overall, read 2026-10-12): Food 4.8, Service 4.8, Ambience 4.6, Value 4.4. Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).",
+    "sourceUrl": "https://www.opentable.com/r/heretik-denver",
+    "sources": [
+      {
+        "url": "https://www.opentable.com/r/heretik-denver",
+        "title": "Heretík on OpenTable",
+        "reasoning": "Verified diner ratings: overall 4.7 from 156 ratings with Food 4.8, Service 4.8, Ambience 4.6 and Value 4.4.",
+        "text": "4.7 (156) 4.8 Food 4.8 Service 4.6 Ambience 4.4 Value. Noise: Moderate.",
+        "wiki": {
+          "title": "Heretík on OpenTable",
+          "summary": "OpenTable's diner ratings for Heretík in Denver: 4.7 overall from 156 verified ratings; Food 4.8, Service 4.8, Ambience 4.6, Value 4.4.",
+          "body": "# Heretík on OpenTable\n\nOpenTable's listing for Heretík in Denver, read in a browser on 2026-10-12.\n\n## Diner ratings\n\n- Overall: 4.7 out of 5 from 156 verified diner ratings.\n- Food: 4.8\n- Service: 4.8\n- Ambience: 4.6\n- Value: 4.4\n- Noise level: Moderate.\n\n## Use on the pin\n\nThe pin's dining rubric scores Food 5, Service 5, Ambience 4.5 and Value 4 (Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).).\n",
+          "tags": [
+            "OpenTable",
+            "diner ratings",
+            "restaurant",
+            "Denver"
           ],
           "lastModified": "2026-10-12"
         }

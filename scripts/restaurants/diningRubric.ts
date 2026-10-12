@@ -13,7 +13,8 @@
 //                    "title": "Eleven Madison Park on OpenTable",
 //                    "reasoning": "What the page states that the rubric uses.",
 //                    "text": "the figures as read from the page",
-//                    "wiki": { "title": "...", "summary": "...", "body": "...", "tags": ["..."], "lastModified": "2026-10-12" } } ] }
+//                    "wiki": { "title": "...", "summary": "...", "body": "...", "tags": ["..."], "lastModified": "2026-10-12" },
+//                    "rewrite": false } ] }
 //
 // Each score is 0-5 in half steps, or null where no figure is published (the
 // rubric is in docs/okf/scraping/strategy.md, "Dining rubric"). "sources" is
@@ -38,7 +39,7 @@ const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default
 const ADMIN_USER_ID = 1;
 const ACTOR = 'claude-code/claude-sonnet-5-5';
 
-type Source = { url: string; title?: string; reasoning?: string; text?: string; wiki?: Record<string, unknown> };
+type Source = { url: string; title?: string; reasoning?: string; text?: string; wiki?: Record<string, unknown>; rewrite?: boolean };
 type Entry = { pinId: number; scores?: Record<string, unknown>; basis?: string | null; sourceUrl?: string | null; reviews?: unknown; sources?: Source[] };
 
 async function run() {
@@ -76,10 +77,14 @@ async function run() {
       referenced += added?.added.length ?? 0;
     }
     // ...and each gets a wiki written from what was read there.
-    const written = sources.filter((s) => s.wiki);
-    if (written.length) {
+    // "rewrite": true replaces a wiki the link already has (a score changed
+    // since it was written). With the pin named the pin's summary counts as
+    // built from it, so nothing is rebuilt.
+    for (const rewrite of [false, true]) {
+      const written = sources.filter((s) => s.wiki && !!s.rewrite === rewrite);
+      if (!written.length) continue;
       const items = parsePrebuiltWikis(written.map((s) => ({ url: s.url, title: s.title, text: s.text, generatedBy: ACTOR, wiki: s.wiki })));
-      const results = await applyPrebuiltWikis(items, { pinId });
+      const results = await applyPrebuiltWikis(items, { pinId, rewrite });
       for (const r of results) {
         if (r.status === 'saved') wikis++;
         else console.log(`  wiki ${r.status}: ${r.url}${'message' in r ? ` (${r.message})` : ''}`);
