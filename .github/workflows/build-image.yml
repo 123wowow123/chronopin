@@ -32,6 +32,19 @@ jobs:
 
       # BuildKit's image comes from AWS ECR Public's mirror: Docker Hub's
       # registry and auth service time out and rate limit GitHub's runners.
+      # ECR Public throttles shared runner IPs too ("toomanyrequests: Rate
+      # exceeded", 2026-10-11), so pull the image ahead with retries; buildx
+      # then finds it in the local store instead of pulling it itself.
+      - name: Pull BuildKit image (with retries)
+        run: |
+          image=public.ecr.aws/vend/moby/buildkit:buildx-stable-1
+          for attempt in 1 2 3 4 5 6; do
+            docker pull "$image" && exit 0
+            echo "pull attempt $attempt failed; waiting $((attempt * 20))s"
+            sleep $((attempt * 20))
+          done
+          exit 1
+
       - uses: docker/setup-buildx-action@v4
         with:
           driver-opts: image=public.ecr.aws/vend/moby/buildkit:buildx-stable-1
