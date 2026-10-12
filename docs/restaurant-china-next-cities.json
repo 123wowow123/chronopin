@@ -24,11 +24,11 @@
         "latitude": 25.038495,
         "longitude": 102.727954,
         "productName": "SUMA Bar",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2025-04-30T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidenceReasoning": "SUMA Bar opened ahead of the rest of Shangri-La Kunming on 30 April 2025, in partnership with SG Group; the hotel itself only had its grand opening on about 21-22 April 2026. Two English trade articles state the exact date; a Trip.com user post also says 4/30.",
         "parentId": null,
         "categories": [
           "Food"
@@ -47,7 +47,7 @@
             "url": "https://www.shangri-la.com/kunming/shangrila/dining/bars-lounges/suma-bar/",
             "title": "SUMA Bar — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "SUMA Bar opened ahead of the rest of Shangri-La Kunming on 30 April 2025, in partnership with SG Group; the hotel itself only had its grand opening on about 21-22 April 2026. Two English trade articles state the exact date; a Trip.com user post also says 4/30."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/kunming_shangrila/dining/bars-lounges/suma/042_SUMA_Food_Menu.pdf",
@@ -351,11 +351,11 @@
         "latitude": 24.490492,
         "longitude": 118.196093,
         "productName": "Fu Gong",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2017-08-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Fu Gong is part of the original dining lineup of Shangri-La Xiamen, which soft opened in August 2017 (announced 24 Aug 2017) with a grand opening announced 22 Nov 2017. No restaurant-specific date or exact soft-opening day was found, so the hotel soft-opening month is used. Estimated: 2017-08 is a best estimate and 2017-08-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -374,7 +374,7 @@
             "url": "https://www.shangri-la.com/xiamen/shangrila/dining/restaurants/fu-gong/",
             "title": "Fu Gong — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Fu Gong is part of the original dining lineup of Shangri-La Xiamen, which soft opened in August 2017 (announced 24 Aug 2017) with a grand opening announced 22 Nov 2017. No restaurant-specific date or exact soft-opening day was found, so the hotel soft-opening month is used. Estimated: 2017-08 is a best estimate and 2017-08-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/21/21375264.html",
@@ -509,11 +509,11 @@
         "latitude": 24.490492,
         "longitude": 118.196093,
         "productName": "Café Amoy",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2017-08-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Café Amoy is the all-day restaurant in the original lineup of Shangri-La Xiamen, which soft opened in August 2017 (announced 24 Aug 2017; grand opening release 22 Nov 2017). No exact day or restaurant-specific date found; hotel soft-opening month used. Estimated: 2017-08 is a best estimate and 2017-08-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -532,7 +532,7 @@
             "url": "https://www.shangri-la.com/xiamen/shangrila/dining/restaurants/amoy/",
             "title": "Café Amoy — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Café Amoy is the all-day restaurant in the original lineup of Shangri-La Xiamen, which soft opened in August 2017 (announced 24 Aug 2017; grand opening release 22 Nov 2017). No exact day or restaurant-specific date found; hotel soft-opening month used. Estimated: 2017-08 is a best estimate and 2017-08-31 is used only as a period-end sorting date, not a confirmed opening day."
           }
         ]
       },
@@ -899,11 +899,11 @@
         "latitude": 29.867383,
         "longitude": 121.561679,
         "productName": "Shang Palace — Ningbo",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2009-08-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Shang Palace was in the launch lineup of Shangri-La Ningbo, reported as opened on 24 Aug 2009 (Baidu Baike/Chinese listings variously say Aug 2009 soft opening, with all facilities formally celebrated 22 April 2010). Exact day for the restaurant not found; hotel opening month used. Estimated: 2009-08 is a best estimate and 2009-08-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -922,7 +922,7 @@
             "url": "https://www.shangri-la.com/ningbo/shangrila/dining/restaurants/shang-palace/",
             "title": "Shang Palace — Ningbo — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Shang Palace was in the launch lineup of Shangri-La Ningbo, reported as opened on 24 Aug 2009 (Baidu Baike/Chinese listings variously say Aug 2009 soft opening, with all facilities formally celebrated 22 April 2010). Exact day for the restaurant not found; hotel opening month used. Estimated: 2009-08 is a best estimate and 2009-08-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/ningbo_shangrila/dining/restaurants/shang-palace/Shang-Palace.pdf",
@@ -1090,11 +1090,11 @@
         "latitude": 29.867383,
         "longitude": 121.561679,
         "productName": "Yi Café",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2009-08-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Yi Café was the all-day dining venue in the launch lineup of Shangri-La Ningbo, which opened in August 2009 (reported 24 Aug 2009); formal grand opening with all facilities was 22 April 2010. No restaurant-specific day found. Estimated: 2009-08 is a best estimate and 2009-08-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1113,7 +1113,7 @@
             "url": "https://www.shangri-la.com/ningbo/shangrila/dining/restaurants/yi-cafe/",
             "title": "Yi Café — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Yi Café was the all-day dining venue in the launch lineup of Shangri-La Ningbo, which opened in August 2009 (reported 24 Aug 2009); formal grand opening with all facilities was 22 April 2010. No restaurant-specific day found. Estimated: 2009-08 is a best estimate and 2009-08-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/83/263445.html",
@@ -1512,11 +1512,11 @@
         "latitude": 31.879948,
         "longitude": 117.268587,
         "productName": "Yang Zi Xuan",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2015-06-30T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Yang Zi Xuan was part of the opening dining lineup of Shangri-La Hefei, whose opening was announced on 25 June 2015 (Beijing dateline, 'today announced the opening'). The press-release day is not confirmed as the first service day, so June 2015 is given. Estimated: 2015-06 is a best estimate and 2015-06-30 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1535,7 +1535,7 @@
             "url": "https://www.shangri-la.com/hefei/shangrila/dining/restaurants/yang-zi-xuan/",
             "title": "Yang Zi Xuan — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Yang Zi Xuan was part of the opening dining lineup of Shangri-La Hefei, whose opening was announced on 25 June 2015 (Beijing dateline, 'today announced the opening'). The press-release day is not confirmed as the first service day, so June 2015 is given. Estimated: 2015-06 is a best estimate and 2015-06-30 is used only as a period-end sorting date, not a confirmed opening day."
           }
         ]
       },
@@ -1688,11 +1688,11 @@
         "latitude": 31.879948,
         "longitude": 117.268587,
         "productName": "Café Wan",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2015-06-30T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Café Wan was the all-day food-theatre restaurant in the opening lineup of Shangri-La Hefei, whose opening was announced on 25 June 2015. No restaurant-specific day found; June 2015 given. Estimated: 2015-06 is a best estimate and 2015-06-30 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1711,7 +1711,7 @@
             "url": "https://www.shangri-la.com/hefei/shangrila/dining/restaurants/cafe-wan/",
             "title": "Café Wan — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Café Wan was the all-day food-theatre restaurant in the opening lineup of Shangri-La Hefei, whose opening was announced on 25 June 2015. No restaurant-specific day found; June 2015 given. Estimated: 2015-06 is a best estimate and 2015-06-30 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/hefei_shangrila/dining/restaurants/cafe-wan/250325_SLHF_Caf-Wan-Menu.pdf",
@@ -2264,11 +2264,11 @@
         "latitude": 36.659444,
         "longitude": 117.022371,
         "productName": "Café Spring",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2017-12-13T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Café Spring is the all-day dining restaurant of Shangri-La Jinan, which soft opened on 13 December 2017 per Shangri-La's release (a 21 Dec 2017 report says it 'soft opened earlier this month'). The restaurant's own start was not separately documented, so the hotel soft-opening date is used as an estimate; the adjoining complex was due Q1 2018. Estimated: 2017-12-13 is a best estimate and 2017-12-13 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -2287,7 +2287,7 @@
             "url": "https://www.shangri-la.com/jinan/shangrila/dining/restaurants/cafe-spring/",
             "title": "Café Spring — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Café Spring is the all-day dining restaurant of Shangri-La Jinan, which soft opened on 13 December 2017 per Shangri-La's release (a 21 Dec 2017 report says it 'soft opened earlier this month'). The restaurant's own start was not separately documented, so the hotel soft-opening date is used as an estimate; the adjoining complex was due Q1 2018. Estimated: 2017-12-13 is a best estimate and 2017-12-13 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/jinan_shangrila/dining/restaurants/A-La-Cart-Menu.pdf",
@@ -2833,15 +2833,15 @@
         "title": "Zaogaofeng — Qingyuan Dajie — Jinan restaurant guide",
         "description": "Freshly baked jujube cake in the Line 8 station hall, with a published branch purchase benefit.",
         "sourceUrl": "https://news.e23.cn/jnnews/2026-08-18/2026081800033.html",
-        "address": "Qingyuan Dajie metro station, Line 8, east escalator side, Zhangqiu District, Jinan, Shandong, China",
+        "address": "Qingyuan Dajie metro station concourse, Line 8, Zhangqiu District, Jinan, Shandong, China",
         "latitude": 36.667694274061,
         "longitude": 117.478109740057,
         "productName": "Zaogaofeng — Qingyuan Dajie",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2026-09-24T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Dazhong Net (dzwww, 2026-09-24) lists 枣糕峰 as a new store (全新入驻) in the Line 8 Qingyuan Dajie station concourse, framed around Mid-Autumn; no opening day is published, so 2026-09-24 is the announcement date used as an estimate, not a confirmed opening. The e23.cn article of 2026-08-18 documents a different 枣糕峰 store at Line 4 Wenlvcheng station; its Qingyuan Dajie entry is a Cotti Coffee, and its “east escalator side” wording is not this store’s.",
         "parentId": null,
         "categories": [
           "Food"
@@ -2860,7 +2860,13 @@
             "url": "https://news.e23.cn/jnnews/2026-08-18/2026081800033.html",
             "title": "Zaogaofeng — Qingyuan Dajie — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Primary source for the pin identity (kept for continuity). It documents the sister 枣糕峰 store at Line 4 Wenlvcheng station and the Qingyuan Dajie Cotti Coffee, not this store’s concourse position."
+          },
+          {
+            "url": "https://auto.dzwww.com/ycjp/202609/t20260924_18154135.htm",
+            "title": "Dazhong Net: 枣糕峰 new store in Line 8 Qingyuan Dajie station",
+            "confidence": 85,
+            "reasoning": "Dazhong Net (dzwww, 2026-09-24) lists 枣糕峰 as a new store (全新入驻) in the Line 8 Qingyuan Dajie station concourse, framed around Mid-Autumn; no opening day is published, so 2026-09-24 is the announcement date used as an estimate, not a confirmed opening. The e23.cn article of 2026-08-18 documents a different 枣糕峰 store at Line 4 Wenlvcheng station; its Qingyuan Dajie entry is a Cotti Coffee, and its “east escalator side” wording is not this store’s."
           },
           {
             "url": "https://auto.dzwww.com/ycjp/202609/t20260924_18154135.htm",
@@ -2886,7 +2892,7 @@
             "menus": [
               {
                 "label": "Branch cake",
-                "url": "https://news.e23.cn/jnnews/2026-08-18/2026081800033.html",
+                "url": "https://auto.dzwww.com/ycjp/202609/t20260924_18154135.htm",
                 "currency": "CNY",
                 "coverage": "sample",
                 "items": [
@@ -2895,7 +2901,7 @@
                     "priceLabel": "Price not published"
                   }
                 ],
-                "note": "August 18 report confirms the branch was already operating; its exact opening date and cake price are not published."
+                "note": "The 2026-09-24 Dazhong Net report lists the Qingyuan Dajie (Line 8) store as newly opened, daily 09:00–21:30; its exact opening day and cake price are not published."
               },
               {
                 "label": "Qingyuan opening benefit",
@@ -2973,7 +2979,7 @@
             "name": "Zaogaofeng — Qingyuan Dajie",
             "neighborhood": "Zhangqiu · Qingyuan Dajie metro",
             "cuisine": "Fresh-baked cakes",
-            "address": "Qingyuan Dajie metro station, Line 8, east escalator side, Zhangqiu District, Jinan, Shandong, China",
+            "address": "Qingyuan Dajie metro station concourse, Line 8, Zhangqiu District, Jinan, Shandong, China",
             "websiteUrl": "https://auto.dzwww.com/ycjp/202609/t20260924_18154135.htm",
             "description": "Freshly baked jujube cake in the Line 8 station hall, with a published branch purchase benefit.",
             "checkedAt": "2026-10-10",
@@ -2994,7 +3000,7 @@
           "menus": [
             {
               "label": "Branch cake",
-              "url": "https://news.e23.cn/jnnews/2026-08-18/2026081800033.html",
+              "url": "https://auto.dzwww.com/ycjp/202609/t20260924_18154135.htm",
               "currency": "CNY",
               "coverage": "sample",
               "items": [
@@ -3003,7 +3009,7 @@
                   "priceLabel": "Price not published"
                 }
               ],
-              "note": "August 18 report confirms the branch was already operating; its exact opening date and cake price are not published."
+              "note": "The 2026-09-24 Dazhong Net report lists the Qingyuan Dajie (Line 8) store as newly opened, daily 09:00–21:30; its exact opening day and cake price are not published."
             },
             {
               "label": "Qingyuan opening benefit",
@@ -3060,7 +3066,7 @@
             "checkedAt": "2026-10-10"
           },
           "neighborhood": "Zhangqiu · Qingyuan Dajie metro",
-          "address": "Qingyuan Dajie metro station, Line 8, east escalator side, Zhangqiu District, Jinan, Shandong, China",
+          "address": "Qingyuan Dajie metro station concourse, Line 8, Zhangqiu District, Jinan, Shandong, China",
           "websiteUrl": "https://auto.dzwww.com/ycjp/202609/t20260924_18154135.htm"
         },
         "enabled": true
@@ -3084,11 +3090,11 @@
         "latitude": 41.777424,
         "longitude": 123.436734,
         "productName": "Summer Palace — Shenyang",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2013-08-15T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidenceReasoning": "Summer Palace was one of the hotel's launch outlets (listed with Café Liao and Shinsen in the opening press release); Shangri-La Hotel Shenyang opened 15 August 2013 after an earlier 1 August target slipped. Venue-specific relaunch not found.",
         "parentId": null,
         "categories": [
           "Food"
@@ -3107,7 +3113,7 @@
             "url": "https://www.shangri-la.com/shenyang/shangrila/dining/restaurants/summer-palace/",
             "title": "Summer Palace — Shenyang — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Summer Palace was one of the hotel's launch outlets (listed with Café Liao and Shinsen in the opening press release); Shangri-La Hotel Shenyang opened 15 August 2013 after an earlier 1 August target slipped. Venue-specific relaunch not found."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shenyang_shangrila/dining/restaurants/summer-palace/20260314_Sp-menu.pdf",
@@ -3243,11 +3249,11 @@
         "latitude": 41.777424,
         "longitude": 123.436734,
         "productName": "Café Liao",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2013-08-15T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidenceReasoning": "Café Liao is the all-day dining restaurant listed in the launch press release for Shangri-La Hotel Shenyang, which opened 15 August 2013. No later relaunch found.",
         "parentId": null,
         "categories": [
           "Food"
@@ -3266,7 +3272,7 @@
             "url": "https://www.shangri-la.com/shenyang/shangrila/dining/restaurants/cafe-liao/",
             "title": "Café Liao — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Café Liao is the all-day dining restaurant listed in the launch press release for Shangri-La Hotel Shenyang, which opened 15 August 2013. No later relaunch found."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/shenyang_shangrila/settings/cafe-liao-alaca-menu.pdf",
@@ -3685,11 +3691,11 @@
         "latitude": 38.925214,
         "longitude": 121.653347,
         "productName": "Shang Palace — Dalian",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1997-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Shangri-La Hotel Dalian opened in December 1997 per Baidu Baike (booking pages give 1997-12-01 / 1997-12-03). Shang Palace is the hotel's original Chinese restaurant presumably opening with it; no restaurant-specific date or refit date was found, and the hotel was refurbished around 2006/2008. Estimated: 1997-12 is a best estimate and 1997-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -3708,7 +3714,7 @@
             "url": "https://www.shangri-la.com/dalian/shangrila/dining/restaurants/shang-palace/",
             "title": "Shang Palace — Dalian — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Shangri-La Hotel Dalian opened in December 1997 per Baidu Baike (booking pages give 1997-12-01 / 1997-12-03). Shang Palace is the hotel's original Chinese restaurant presumably opening with it; no restaurant-specific date or refit date was found, and the hotel was refurbished around 2006/2008. Estimated: 1997-12 is a best estimate and 1997-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/dalian_shangrila/dining/restaurants/Shang-Palace/Shang-Palace-Menu-A.pdf",
@@ -3864,11 +3870,11 @@
         "latitude": 38.925214,
         "longitude": 121.653347,
         "productName": "i Café",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1997-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The hotel opened December 1997 (Baidu Baike). i Café is the all-day dining outlet, presumably original but possibly renamed or refitted in the 2006/2008 renovation; no outlet-specific date found. Estimated: 1997-12 is a best estimate and 1997-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -3887,7 +3893,7 @@
             "url": "https://www.shangri-la.com/dalian/shangrila/dining/restaurants/icafe/",
             "title": "i Café — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "The hotel opened December 1997 (Baidu Baike). i Café is the all-day dining outlet, presumably original but possibly renamed or refitted in the 2006/2008 renovation; no outlet-specific date found. Estimated: 1997-12 is a best estimate and 1997-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           }
         ]
       },
@@ -4262,11 +4268,11 @@
         "latitude": 45.764455,
         "longitude": 126.595169,
         "productName": "Shang Palace — Harbin",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1999-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Most sources (People's Daily travel, one Baidu Baike entry) date Shangri-La Hotel Harbin to 1999; travel listings say 1998 and one Baidu entry says 1993, so the year is uncertain. No outlet-specific date found; the outlet is assumed to date from hotel opening. Estimated: 1999 is a best estimate and 1999-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -4285,7 +4291,7 @@
             "url": "https://www.shangri-la.com/harbin/shangrila/dining/restaurants/shang-palace/",
             "title": "Shang Palace — Harbin — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Most sources (People's Daily travel, one Baidu Baike entry) date Shangri-La Hotel Harbin to 1999; travel listings say 1998 and one Baidu entry says 1993, so the year is uncertain. No outlet-specific date found; the outlet is assumed to date from hotel opening. Estimated: 1999 is a best estimate and 1999-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/harbin_shangrila/dining/restaurants/shang-palace/260812_SHAR_ShangPalaceMenu.pdf",
@@ -4433,11 +4439,11 @@
         "latitude": 45.764455,
         "longitude": 126.595169,
         "productName": "Coffee Garden",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1999-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "All-day dining of Shangri-La Hotel Harbin, dated by the hotel's opening (mostly reported as 1999; 1998 and 1993 also appear). No outlet-specific date found. Estimated: 1999 is a best estimate and 1999-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -4456,7 +4462,7 @@
             "url": "https://www.shangri-la.com/harbin/shangrila/dining/restaurants/coffee-garden/",
             "title": "Coffee Garden — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "All-day dining of Shangri-La Hotel Harbin, dated by the hotel's opening (mostly reported as 1999; 1998 and 1993 also appear). No outlet-specific date found. Estimated: 1999 is a best estimate and 1999-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/harbin_shangrila/dining/260817_SHAR_Coffee-Garden-Dinner-Buffet-Menu.pdf",
@@ -4875,11 +4881,11 @@
         "latitude": 22.9272358,
         "longitude": 113.8849409,
         "productName": "Song Shan Tea House",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2006-08-01T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "An older report found via search said the guest rooms, café, lobby bar, Song Shan Tea House (松山茶居), Qinyuan VIP room and ballroom opened on 1 August 2006, matching Baidu Baike's 'August 2006' hotel opening (other listings say 2008). The report URL was not retrieved, so the exact day is unverified; marked estimated. Estimated: 2006-08-01 is a best estimate and 2006-08-01 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -4898,7 +4904,7 @@
             "url": "https://weibo.com/2/detail/5339386252103292",
             "title": "Song Shan Tea House — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "An older report found via search said the guest rooms, café, lobby bar, Song Shan Tea House (松山茶居), Qinyuan VIP room and ballroom opened on 1 August 2006, matching Baidu Baike's 'August 2006' hotel opening (other listings say 2008). The report URL was not retrieved, so the exact day is unverified; marked estimated. Estimated: 2006-08-01 is a best estimate and 2006-08-01 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://ditu.amap.com/place/B03017UNEH",
@@ -5363,11 +5369,11 @@
         "latitude": 22.98944,
         "longitude": 113.11856,
         "productName": "Yuxi — Hilton Foshan",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2014-03-18T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Hilton Foshan officially opened 18 March 2014 (Guandian report, with five restaurants and bars). Yuxi (likely 御玺 Chinese restaurant) is not named in the opening report, so its date is inferred from the hotel and it may have been relaunched or renamed since. Estimated: 2014-03-18 is a best estimate and 2014-03-18 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -5386,7 +5392,7 @@
             "url": "https://www.hilton.com.cn/zh-cn/hotel/foshan/hilton-foshan-fuocdhi/dinings.html",
             "title": "Yuxi — Hilton Foshan — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Hilton Foshan officially opened 18 March 2014 (Guandian report, with five restaurants and bars). Yuxi (likely 御玺 Chinese restaurant) is not named in the opening report, so its date is inferred from the hotel and it may have been relaunched or renamed since. Estimated: 2014-03-18 is a best estimate and 2014-03-18 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://findit.city/cn/china/foshan/places/hotels/-1530300933",

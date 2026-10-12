@@ -20,11 +20,11 @@
         "latitude": 28.191381,
         "longitude": 112.978299,
         "productName": "Niccolo Kitchen — Changsha",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2018-10-29T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidenceReasoning": "Niccolo Changsha, the hotel on floors 93+ of Changsha IFS Tower 1 that houses Niccolo Kitchen, officially opened 29 October 2018 per Wharf Hotels coverage; Niccolo Kitchen is the hotel's all-day dining venue named in the pre-opening announcements, so this is taken as the restaurant's opening. No separate restaurant-specific opening announcement found (date is the hotel's).",
         "parentId": null,
         "categories": [
           "Food"
@@ -43,7 +43,7 @@
             "url": "https://www.niccolohotels.com/en/niccolo-changsha/dining/niccolo-kitchen",
             "title": "Niccolo Kitchen — Changsha — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Niccolo Changsha, the hotel on floors 93+ of Changsha IFS Tower 1 that houses Niccolo Kitchen, officially opened 29 October 2018 per Wharf Hotels coverage; Niccolo Kitchen is the hotel's all-day dining venue named in the pre-opening announcements, so this is taken as the restaurant's opening. No separate restaurant-specific opening announcement found (date is the hotel's)."
           },
           {
             "url": "https://www.niccolohotels.com/getmedia/3ea92233-c6d7-4763-bf3e-3ea8826da1fe/Contemporary-Tuscan-Menu-Menu.pdf",
@@ -649,11 +649,11 @@
         "latitude": 34.76445,
         "longitude": 113.70195,
         "productName": "Yu Garden — Hilton Zhengzhou",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2014-03-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Hilton Zhengzhou opened in March 2014 (Hilton announcement dated 14 March per TravelPulse; Hotel-Online press release dated 17 March 2014), and the opening release lists Yu Garden Chinese Restaurant among its venues. Exact day differs between sources, so month-level; restaurant date is inferred from hotel opening. Estimated: 2014-03 is a best estimate and 2014-03-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -672,7 +672,7 @@
             "url": "https://www.hilton.com.cn/zh-CN/HOTEL/ZHENGZHOU/HILTON-ZHENGZHOU-CGOZHHI/dinings.html",
             "title": "Yu Garden — Hilton Zhengzhou — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Hilton Zhengzhou opened in March 2014 (Hilton announcement dated 14 March per TravelPulse; Hotel-Online press release dated 17 March 2014), and the opening release lists Yu Garden Chinese Restaurant among its venues. Exact day differs between sources, so month-level; restaurant date is inferred from hotel opening. Estimated: 2014-03 is a best estimate and 2014-03-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Hilton+Zhengzhou%2C+Zhengzhou%2C+China&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
@@ -960,11 +960,11 @@
         "latitude": 39.12,
         "longitude": 117.1988,
         "productName": "Jin House",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2017-01-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Four Seasons Hotel Tianjin opened in January 2017 (Four Seasons 'Now Open' release dated 24-25 January 2017), and that release already describes JIN House on the 7th floor as an open venue. Exact day not stated; date is the hotel's opening. Estimated: 2017-01 is a best estimate and 2017-01-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -983,7 +983,7 @@
             "url": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/",
             "title": "Jin House — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Four Seasons Hotel Tianjin opened in January 2017 (Four Seasons 'Now Open' release dated 24-25 January 2017), and that release already describes JIN House on the 7th floor as an open venue. Exact day not stated; date is the hotel's opening. Estimated: 2017-01 is a best estimate and 2017-01-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.fourseasons.com/tianjin/dining/restaurants/jin-house/jin-house-a-la-carte/",
@@ -1228,11 +1228,11 @@
         "latitude": 39.12,
         "longitude": 117.1988,
         "productName": "Cielo",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2017-01-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Cielo, the signature Italian restaurant on the 9th floor, is described as open in Four Seasons Hotel Tianjin's 'Now Open' release of 24-25 January 2017; hotel opened January 2017. Exact day not stated; date is the hotel's opening (the outdoor terrace was listed as 'coming soon'). Estimated: 2017-01 is a best estimate and 2017-01-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1251,7 +1251,7 @@
             "url": "https://www.prnasia.com/story/548785-1.shtml",
             "title": "Cielo — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Cielo, the signature Italian restaurant on the 9th floor, is described as open in Four Seasons Hotel Tianjin's 'Now Open' release of 24-25 January 2017; hotel opened January 2017. Exact day not stated; date is the hotel's opening (the outdoor terrace was listed as 'coming soon'). Estimated: 2017-01 is a best estimate and 2017-01-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.fourseasons.com/tianjin/dining/restaurants/cielo/",
@@ -1609,11 +1609,11 @@
         "latitude": 32.078443,
         "longitude": 118.782775,
         "productName": "Jiangnan Wok",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2014-10-27T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Shangri-La Hotel Nanjing, which houses Jiangnan Wok as its signature Chinese restaurant at launch, officially opened 27 October 2014 per a 28 Oct 2014 Chinese trade report; Baidu Baike/Zhihu give 14 November 2014 instead and English press coverage is dated 16-17 Nov 2014, so the day is uncertain (late Oct to mid Nov 2014). Date is the hotel's opening. Estimated: 2014-10-27 is a best estimate and 2014-10-27 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1632,7 +1632,7 @@
             "url": "https://www.shangri-la.com/nanjing/shangrila/dining/restaurants/jiangnan-wok/",
             "title": "Jiangnan Wok — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Shangri-La Hotel Nanjing, which houses Jiangnan Wok as its signature Chinese restaurant at launch, officially opened 27 October 2014 per a 28 Oct 2014 Chinese trade report; Baidu Baike/Zhihu give 14 November 2014 instead and English press coverage is dated 16-17 Nov 2014, so the day is uncertain (late Oct to mid Nov 2014). Date is the hotel's opening. Estimated: 2014-10-27 is a best estimate and 2014-10-27 is used only as a period-end sorting date, not a confirmed opening day."
           }
         ]
       },
@@ -1966,11 +1966,11 @@
         "latitude": 36.064802,
         "longitude": 120.378659,
         "productName": "Shang Palace — Qingdao",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1997-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Shang Palace is in the City Wing, the original Shangri-La Qingdao hotel, listed as built 1997 (refurbished 2007-2008); no restaurant-specific date found and the exact 1997 opening day is not confirmed. The Valley Wing (not this restaurant's wing) opened March 2008, and the restaurant may have been relocated or renovated since. Estimated: 1997 is a best estimate and 1997-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1989,7 +1989,7 @@
             "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/shang-palace/",
             "title": "Shang Palace — Qingdao — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Shang Palace is in the City Wing, the original Shangri-La Qingdao hotel, listed as built 1997 (refurbished 2007-2008); no restaurant-specific date found and the exact 1997 opening day is not confirmed. The Valley Wing (not this restaurant's wing) opened March 2008, and the restaurant may have been relocated or renovated since. Estimated: 1997 is a best estimate and 1997-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/shang-palace/250723shangpalacemenu.pdf",
@@ -2203,11 +2203,11 @@
         "latitude": 36.064802,
         "longitude": 120.378659,
         "productName": "Café Yum",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2008-03-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Café Yum is the all-day international buffet in the Valley Wing, which opened in March 2008 per Hotel Management Network; date inferred from the wing's opening, no restaurant-specific announcement found. Estimated: 2008-03 is a best estimate and 2008-03-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -2226,7 +2226,7 @@
             "url": "https://www.shangri-la.com/qingdao/shangrila/dining/restaurants/cafe-yum/",
             "title": "Café Yum — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Café Yum is the all-day international buffet in the Valley Wing, which opened in March 2008 per Hotel Management Network; date inferred from the wing's opening, no restaurant-specific announcement found. Estimated: 2008-03 is a best estimate and 2008-03-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/qingdao_shangrila/dining/restaurants/cafe-yum/cafeyummenu.pdf",
@@ -2785,11 +2785,11 @@
         "latitude": 31.30093755786,
         "longitude": 120.694306195523,
         "productName": "Jin Jing Ge",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2023-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Four Seasons Hotel Suzhou opened in December 2023 (Four Seasons 'now open' release dated 15 Dec 2023; PR Newswire grand-opening datelines 25-26 Dec 2023) and the release presents Jin Jing Ge as its signature Chinese restaurant. Exact day unclear; date is the hotel's opening. Estimated: 2023-12 is a best estimate and 2023-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -2808,7 +2808,7 @@
             "url": "https://www.fourseasons.com/suzhou/dining/restaurants/jin-jing-ge/",
             "title": "Jin Jing Ge — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Four Seasons Hotel Suzhou opened in December 2023 (Four Seasons 'now open' release dated 15 Dec 2023; PR Newswire grand-opening datelines 25-26 Dec 2023) and the release presents Jin Jing Ge as its signature Chinese restaurant. Exact day unclear; date is the hotel's opening. Estimated: 2023-12 is a best estimate and 2023-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.fourseasons.com/suzhou/dining/menus/jin-jing-ge-a-la-carte/",
@@ -3066,11 +3066,11 @@
         "latitude": 31.322296,
         "longitude": 120.717064,
         "productName": "Niccolo Kitchen — Suzhou",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2021-04-01T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidenceReasoning": "Niccolo Suzhou, on the top floors of Suzhou IFS, opened 1 April 2021 (originally planned for 2020), and its opening coverage lists Niccolo Kitchen among its venues. Restaurant date is the hotel's opening; no separate restaurant announcement found.",
         "parentId": null,
         "categories": [
           "Food"
@@ -3089,7 +3089,7 @@
             "url": "https://www.niccolohotels.com/en/niccolo-suzhou/dining/niccolo-kitchen",
             "title": "Niccolo Kitchen — Suzhou — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Niccolo Suzhou, on the top floors of Suzhou IFS, opened 1 April 2021 (originally planned for 2020), and its opening coverage lists Niccolo Kitchen among its venues. Restaurant date is the hotel's opening; no separate restaurant announcement found."
           },
           {
             "url": "https://www.niccolohotels.com/getattachment/d02c747f-a5bb-4fc2-9866-df4e6c85e750/NSZ-NK-Tuscan-Menu-Lunch-2026-August-1.pdf",

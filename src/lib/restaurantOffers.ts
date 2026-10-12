@@ -27,10 +27,22 @@ function minutes(value: string): number {
   return hour * 60 + minute;
 }
 
+// Building an Intl.DateTimeFormat is the slow part of scheduling an offer, and
+// one guide build asks for it thousands of times, so keep one per zone.
+const clocks = new Map<string, Intl.DateTimeFormat>();
+function localClock(timeZone: string): Intl.DateTimeFormat {
+  let clock = clocks.get(timeZone);
+  if (!clock) {
+    clock = new Intl.DateTimeFormat('en-US', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+    clocks.set(timeZone, clock);
+  }
+  return clock;
+}
+
 // Never infer availability from prose such as "lunch only" or "daily special".
 export function activeRestaurantOffer(special: RestaurantSpecial, now: Date, timeZone: string): { end: string } | null {
   if (!isRestaurantPromotion(special) || !special.availability?.windows.length || !Number.isFinite(now.getTime())) return null;
-  const parts = new Intl.DateTimeFormat('en-US', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(now);
+  const parts = localClock(timeZone).formatToParts(now);
   const part = (type: Intl.DateTimeFormatPartTypes) => parts.find((item) => item.type === type)!.value;
   const today = `${part('year')}-${part('month')}-${part('day')}`;
   if ((special.validFrom && today < special.validFrom) || (special.validThrough && today > special.validThrough)) return null;
@@ -95,8 +107,37 @@ export function restaurantOfferDistance(offer: RestaurantOffer, origin?: Place):
   const valid = (place?: Place) => !!place && Number.isFinite(place.latitude) && Math.abs(place.latitude) <= 90 && Number.isFinite(place.longitude) && Math.abs(place.longitude) <= 180;
   return valid(origin) && valid(offer.location) ? distanceKm(origin!, offer.location!) : undefined;
 }
-export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place }): { available: ScheduledRestaurantOffer[]; upcoming: ScheduledRestaurantOffer[] } {
-  const byReview = (a: RestaurantOffer, b: RestaurantOffer) => (b.review?.score ?? 0) - (a.review?.score ?? 0) || (b.review?.count ?? 0) - (a.review?.count ?? 0) || a.name.localeCompare(b.name);
+export type OfferSchedule = { available: ScheduledRestaurantOffer[]; upcoming: ScheduledRestaurantOffer[] };
+
+// Which offers are on now and when each venue's next one starts. This is the
+// expensive part and does not depend on a sort or a neighborhood, so a caller
+// can compute it once per minute and arrange it many ways.
+export function scheduleRestaurantOffers(offers: RestaurantOffer[], now: Date, timeZone: string): OfferSchedule {
+  const available = offers.flatMap((offer) => {
+    const active = activeRestaurantOffer(offer.special, now, timeZone);
+    return active ? [{ ...offer, ...active }] : [];
+  });
+  const activeIds = new Set(available.map((offer) => offer.id));
+  const byReview = compareOffersByReview;
+  const upcoming = offers.filter((offer) => !activeIds.has(offer.id)).flatMap((offer) => {
+    const next = nextRestaurantOffer(offer.special, now, timeZone);
+    return next ? [{ ...offer, ...next }] : [];
+  }).sort((a, b) => a.startsAt.localeCompare(b.startsAt) || byReview(a, b));
+  // Show each restaurant's nearest special once, rather than repeating venues.
+  const seen = new Set<string>();
+  return { available, upcoming: upcoming.filter((offer) => {
+    if (seen.has(offer.restaurantHref)) return false;
+    seen.add(offer.restaurantHref);
+    return true;
+  }) };
+}
+
+const compareOffersByReview = (a: RestaurantOffer, b: RestaurantOffer) => (b.review?.score ?? 0) - (a.review?.score ?? 0) || (b.review?.count ?? 0) - (a.review?.count ?? 0) || a.name.localeCompare(b.name);
+
+// Orders a schedule the way a guide section shows it. `matches` narrows it to
+// a neighborhood before the cap, so a filtered section still fills up.
+export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?: { sort: RestaurantOfferSort; origin?: Place }, matches?: (offer: RestaurantOffer) => boolean): OfferSchedule {
+  const byReview = compareOffersByReview;
   const bySelectedSort = (a: RestaurantOffer, b: RestaurantOffer) => {
     // Lunch specials first, each group then by rating.
     if (options?.sort === 'lunch') {
@@ -109,28 +150,18 @@ export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, ti
     }
     return byReview(a, b);
   };
-  const available = offers.flatMap((offer) => {
-    const active = activeRestaurantOffer(offer.special, now, timeZone);
-    return active ? [{ ...offer, ...active }] : [];
-  }).sort(bySelectedSort);
-  const activeIds = new Set(available.map((offer) => offer.id));
-  const upcoming = offers.filter((offer) => !activeIds.has(offer.id)).flatMap((offer) => {
-    const next = nextRestaurantOffer(offer.special, now, timeZone);
-    return next ? [{ ...offer, ...next }] : [];
-  }).sort((a, b) => a.startsAt.localeCompare(b.startsAt) || byReview(a, b));
-  // Show each restaurant's nearest special once, rather than repeating venues.
-  const seen = new Set<string>();
-  const unique = upcoming.filter((offer) => {
-    if (seen.has(offer.restaurantHref)) return false;
-    seen.add(offer.restaurantHref);
-    return true;
-  });
+  const available = (matches ? schedule.available.filter(matches) : [...schedule.available]).sort(bySelectedSort);
+  const unique = matches ? schedule.upcoming.filter(matches) : [...schedule.upcoming];
   // Choose each venue's earliest offer before applying the selected sort and cap.
   // 'starts' is the soonest start first (the section was already built in that
   // order, ties by rating); only upcoming offers have a start to sort by.
-  if (options?.sort === 'starts') unique.sort((a, b) => a.startsAt.localeCompare(b.startsAt) || byReview(a, b));
+  if (options?.sort === 'starts') unique.sort((a, b) => a.startsAt!.localeCompare(b.startsAt!) || byReview(a, b));
   else if (options) unique.sort(bySelectedSort);
   return { available, upcoming: unique.slice(0, NEXT_SPECIALS_LIMIT) };
+}
+
+export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place }): { available: ScheduledRestaurantOffer[]; upcoming: ScheduledRestaurantOffer[] } {
+  return arrangeRestaurantOfferSections(scheduleRestaurantOffers(offers, now, timeZone), options);
 }
 
 export function restaurantOffersToShow(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place }): { upcoming: boolean; offers: ScheduledRestaurantOffer[] } {

@@ -569,3 +569,19 @@ Further Action -> dismissed; Conciliation -> settled with the civil penalty;
 Reason to Believe Finding -> findings-issued. Every person's `legal` note now
 says the sweep ran and what it cannot see (committee-only respondents, name
 spellings). Pushed to prod the same day: PersonMatter 618 -> 969.
+
+### Follow-up pass (2026-10-11)
+
+- **FEC spot check.** Matters were compared with each person's tenure window (+-8
+  years of the MUR's election cycles). One false match: the 1837 vice president
+  Richard Mentor Johnson matched "Dr. Richard A. Johnson III" (MUR 7346); removed
+  locally and on prod (351 -> 350 FEC matters).
+- **Second wave of assessed laws (8).** One stored: Wyden, Fertility Clinic
+  Success Rate and Certification Act of 1992 (efficiency +1, medium; Bundorf,
+  Chun, Goda & Kessler, NBER 13888 / J Health Econ 2009). Not stored: False
+  Claims Amendments Act (key figures only from a firm summary, paper unread),
+  Fair Credit and Charge Card Disclosure Act (abstract only), Anti-Car Theft
+  Act (evidence is the 1984 Act's marked lines), Market Reform Act,
+  Formaldehyde Standards Act, Ocean Shipping Reform Act, CALM Act (no
+  independent ex-post study of the law). The assessed total is 8 people with an
+  assessed contribution from the congress.gov pass.

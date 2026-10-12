@@ -1,7 +1,7 @@
 import { cacheLife, cacheTag } from 'next/cache';
 import { dayKeyIn } from '@/lib/format';
 import { GUIDE_PAGE_SIZE, type GuideItem, type GuidePage, type GuideQuery, type GuideSummary, type GuideView } from '@/lib/restaurantGuide';
-import { restaurantOfferSections } from '@/lib/restaurantOffers';
+import { arrangeRestaurantOfferSections, scheduleRestaurantOffers, type OfferSchedule, type RestaurantOffer } from '@/lib/restaurantOffers';
 import { sortRestaurants } from '@/lib/restaurantSort';
 import { RESTAURANT_REGIONS, openingGroup } from '@/lib/restaurants';
 import { TAGS } from './cache';
@@ -22,17 +22,35 @@ async function guideBase(regionSlug: string) {
   const [offers, details] = await Promise.all([regionalRestaurantOffers(data.restaurants, tops, today, region.slug), restaurantGuideDetails(data.restaurants, tops)]);
   const active = data.restaurants.filter((restaurant) => openingGroup(restaurant, today));
   return {
+    // Changes only when this cache entry is rebuilt, so it tells a memo below when the offers did.
+    version: crypto.randomUUID(),
     today, tops, offers, details, previewSnapshot: data.previewSnapshot,
     upcoming: active.filter((restaurant) => openingGroup(restaurant, today) === 'upcoming').sort((a, b) => a.day.localeCompare(b.day)),
     recent: active.filter((restaurant) => openingGroup(restaurant, today) === 'new').sort((a, b) => b.day.localeCompare(a.day)),
   };
 }
 
+// The schedule of one region's offers for one minute. The page asks for it
+// three times (counts, available, next) and the API once per scroll.
+const schedules = new Map<string, OfferSchedule>();
+function offerSchedule(regionSlug: string, version: string, offers: RestaurantOffer[], now: Date, timeZone: string): OfferSchedule {
+  const minute = Math.floor(now.getTime() / 60_000);
+  const key = `${regionSlug}|${version}|${minute}`;
+  let schedule = schedules.get(key);
+  if (!schedule) {
+    // Entries from earlier minutes are never asked for again.
+    for (const stale of schedules.keys()) if (!stale.endsWith(`|${minute}`)) schedules.delete(stale);
+    schedule = scheduleRestaurantOffers(offers, now, timeZone);
+    schedules.set(key, schedule);
+  }
+  return schedule;
+}
+
 export async function guideSummary(regionSlug: string, now: Date): Promise<(GuideSummary & { today: string; previewSnapshot: boolean }) | null> {
   const region = RESTAURANT_REGIONS.find((item) => item.slug === regionSlug);
   if (!region) return null;
-  const { today, tops, offers, upcoming, recent, previewSnapshot } = await guideBase(region.slug);
-  const sections = restaurantOfferSections(offers, now, region.timeZone);
+  const { today, tops, offers, upcoming, recent, previewSnapshot, version } = await guideBase(region.slug);
+  const sections = arrangeRestaurantOfferSections(offerSchedule(region.slug, version, offers, now, region.timeZone));
   const names = (list: { neighborhood: string }[]) => [...new Set(list.map((item) => item.neighborhood))].sort();
   const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image && !restaurant.imageNote) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image) ?? null;
   return {
@@ -47,12 +65,12 @@ export async function guideSummary(regionSlug: string, now: Date): Promise<(Guid
 export async function guidePage(query: GuideQuery, offset: number, now: Date, limit = GUIDE_PAGE_SIZE): Promise<GuidePage<GuideItem> | null> {
   const region = RESTAURANT_REGIONS.find((item) => item.slug === query.region);
   if (!region) return null;
-  const { tops, offers, details, upcoming, recent } = await guideBase(region.slug);
+  const { tops, offers, details, upcoming, recent, version } = await guideBase(region.slug);
   const matches = (item: { neighborhood: string }) => query.neighborhood === 'all' || item.neighborhood === query.neighborhood;
   const withDetails = (items: GuideItem[], idOf: (item: any) => number): GuidePage<GuideItem>['details'] => Object.fromEntries(items.flatMap((item) => (details[idOf(item)] ? [[idOf(item), details[idOf(item)]]] : [])));
   const view: GuideView = query.view;
   if (view === 'discounts') {
-    const sections = restaurantOfferSections(offers.filter(matches), now, region.timeZone, { sort: query.sort === 'distance' || query.sort === 'lunch' || query.sort === 'starts' ? query.sort : 'rating', origin: query.origin });
+    const sections = arrangeRestaurantOfferSections(offerSchedule(region.slug, version, offers, now, region.timeZone), { sort: query.sort === 'distance' || query.sort === 'lunch' || query.sort === 'starts' ? query.sort : 'rating', origin: query.origin }, matches);
     const list = query.section === 'next' ? sections.upcoming : sections.available;
     const located = list.flatMap((offer) => offer.location && Number.isFinite(offer.location.latitude) && Math.abs(offer.location.latitude) <= 90 && Number.isFinite(offer.location.longitude) && Math.abs(offer.location.longitude) <= 180 ? [offer.location] : []);
     const bounds = located.length ? [Math.min(...located.map((place) => place.latitude)), Math.min(...located.map((place) => place.longitude)), Math.max(...located.map((place) => place.latitude)), Math.max(...located.map((place) => place.longitude))].join(',') : undefined;

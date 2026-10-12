@@ -15,11 +15,11 @@
         "latitude": 22.277744501958,
         "longitude": 114.165402657429,
         "productName": "Salisterra",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2021-04-30T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Salisterra replaced Cafe Gray Deluxe on the 49th floor and opened in mid-April 2021; Michelin Guide's 14 April 2021 article says it 'has officially opened', so the opening was on or before 14 April. One search summary mentioned 17 April but could not be verified; the upper-house hotel itself opened in 2009 (not this restaurant). Estimated: 2021-04 is a best estimate and 2021-04-30 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -37,7 +37,7 @@
             "url": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
             "title": "Salisterra — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Salisterra replaced Cafe Gray Deluxe on the 49th floor and opened in mid-April 2021; Michelin Guide's 14 April 2021 article says it 'has officially opened', so the opening was on or before 14 April. One search summary mentioned 17 April but could not be verified; the upper-house hotel itself opened in 2009 (not this restaurant). Estimated: 2021-04 is a best estimate and 2021-04-30 is used only as a period-end sorting date, not a confirmed opening day."
           }
         ]
       },
@@ -231,11 +231,11 @@
         "latitude": 22.283017724884,
         "longitude": 114.152468961735,
         "productName": "Ho Lee Fook",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2014-07-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Sassy Hong Kong's city guide says the restaurant 'opened its doors in July 2014'; Nuvo Magazine has chef Jowett Yu watching ovens being installed in summer 2014 and Time Out says opened 2014, all consistent. Exact day not found. It was renovated and relaunched in 2021 with a new chef, but same Elgin Street site; address varies across sources (1, 2 or 3-5 Elgin St), the restaurant's own site gives 3-5 Elgin Street. Estimated: 2014-07 is a best estimate and 2014-07-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -253,7 +253,7 @@
             "url": "https://www.holeefook.com.hk/",
             "title": "Ho Lee Fook — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Sassy Hong Kong's city guide says the restaurant 'opened its doors in July 2014'; Nuvo Magazine has chef Jowett Yu watching ovens being installed in summer 2014 and Time Out says opened 2014, all consistent. Exact day not found. It was renovated and relaunched in 2021 with a new chef, but same Elgin Street site; address varies across sources (1, 2 or 3-5 Elgin St), the restaurant's own site gives 3-5 Elgin Street. Estimated: 2014-07 is a best estimate and 2014-07-31 is used only as a period-end sorting date, not a confirmed opening day."
           }
         ]
       },

@@ -24,11 +24,11 @@
         "latitude": 25.0404104,
         "longitude": 102.7068868,
         "productName": "YiKeYin — Maolu",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2014-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Real name is 一颗印(懋庐店), a restaurant in a century-old courtyard house at 吉祥巷18-19号. Travel notes and reviews dated 2014-2018 already list it, so it existed by about 2014 (upper bound; true opening may be a few years earlier). No opening announcement found; the building's age is not the restaurant's. Estimated: 2014 is a best estimate and 2014-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -47,7 +47,7 @@
             "url": "https://you.ctrip.com/food/kunming29/4926006.html",
             "title": "YiKeYin — Maolu — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Real name is 一颗印(懋庐店), a restaurant in a century-old courtyard house at 吉祥巷18-19号. Travel notes and reviews dated 2014-2018 already list it, so it existed by about 2014 (upper bound; true opening may be a few years earlier). No opening announcement found; the building's age is not the restaurant's. Estimated: 2014 is a best estimate and 2014-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8788628972",
@@ -236,11 +236,11 @@
         "latitude": 22.8038842,
         "longitude": 113.2634266,
         "productName": "ShunFeng — Daliang",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1990-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Ctrip lists 顺峰(大良店) 'inside Shunfeng Mountain Tourism Centre, National Road 105'; Bing map lists the same site as 顺峰山庄 (大良店), Shunfeng Shan Gong Yuan area. Foshan News Net says 顺峰山庄 was built on Shunfeng Mountain in '1990年初' (early 1990s/start of the 1990s). This assumes the Ctrip entry is the 顺峰山庄 flagship; the park itself began construction in 1999, so the date could be later if the tourism-centre venue is a newer building. Low confidence. Estimated: 1990 is a best estimate and 1990-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -259,7 +259,7 @@
             "url": "https://www.sdlib.com.cn/home/sdms/mscymdxqy/id/105708.html",
             "title": "ShunFeng — Daliang — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Ctrip lists 顺峰(大良店) 'inside Shunfeng Mountain Tourism Centre, National Road 105'; Bing map lists the same site as 顺峰山庄 (大良店), Shunfeng Shan Gong Yuan area. Foshan News Net says 顺峰山庄 was built on Shunfeng Mountain in '1990年初' (early 1990s/start of the 1990s). This assumes the Ctrip entry is the 顺峰山庄 flagship; the park itself began construction in 1999, so the date could be later if the tourism-centre venue is a newer building. Low confidence. Estimated: 1990 is a best estimate and 1990-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://you.ctrip.com/food/foshan207/5490137.html",
@@ -454,11 +454,11 @@
         "latitude": 23.0700779,
         "longitude": 113.8568262,
         "productName": "BaoNiu Beef Hotpot — Chashan Times Hui",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2018-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Ctrip names it 宝牛火锅鲜活牛肉(茶山时代荟店), shops 137-142 of 时代荟. Property sites say 时代荟 (Antai Rd/Chashan South Rd) was completed in 2017 as residential with ground-floor shops, so the store likely opened 2018 or later; no tenant or store opening report found. Low confidence. Note the input 'Times Hui' is 时代荟. Estimated: 2018 is a best estimate and 2018-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -477,7 +477,7 @@
             "url": "https://you.ctrip.com/food/dongguan212/130461555.html",
             "title": "BaoNiu Beef Hotpot — Chashan Times Hui — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Ctrip names it 宝牛火锅鲜活牛肉(茶山时代荟店), shops 137-142 of 时代荟. Property sites say 时代荟 (Antai Rd/Chashan South Rd) was completed in 2017 as residential with ground-floor shops, so the store likely opened 2018 or later; no tenant or store opening report found. Low confidence. Note the input 'Times Hui' is 时代荟. Estimated: 2018 is a best estimate and 2018-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           }
         ]
       },
@@ -630,11 +630,11 @@
         "latitude": 36.6694832,
         "longitude": 117.0221812,
         "productName": "KuiShengJu — Xianxi Lane",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2026-02-28T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "No founding or branch opening date found; the 'century-old' claim is the brand's. The only dated evidence is a Dianping review from Feb 2026 at 县西巷5号荷芳里街区1楼108, so 2026-02 is an upper bound on opening, and the branch is in the redeveloped 荷芳里 block, suggesting a recent (2020s) opening. Treat as a weak upper bound only. Estimated: 2026-02 is a best estimate and 2026-02-28 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -653,7 +653,7 @@
             "url": "https://you.ctrip.com/food/jinan128/120732882.html",
             "title": "KuiShengJu — Xianxi Lane — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "No founding or branch opening date found; the 'century-old' claim is the brand's. The only dated evidence is a Dianping review from Feb 2026 at 县西巷5号荷芳里街区1楼108, so 2026-02 is an upper bound on opening, and the branch is in the redeveloped 荷芳里 block, suggesting a recent (2020s) opening. Treat as a weak upper bound only. Estimated: 2026-02 is a best estimate and 2026-02-28 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8712914936",
@@ -824,11 +824,11 @@
         "latitude": 31.8588308,
         "longitude": 117.2967139,
         "productName": "TongQingLou — Baohe Wanda",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2011-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Re-fetched the operator's own branch page, which says this branch opened at the start of 2011 (2011年年初开业); no day given. Wanda Plaza opened 23 Dec 2010, consistent. Estimated: 2011 is a best estimate and 2011-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -847,7 +847,7 @@
             "url": "https://you.ctrip.com/food/hefei196/5472620.html",
             "title": "TongQingLou — Baohe Wanda — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Re-fetched the operator's own branch page, which says this branch opened at the start of 2011 (2011年年初开业); no day given. Wanda Plaza opened 23 Dec 2010, consistent. Estimated: 2011 is a best estimate and 2011-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.tongqinglou.cn/tql/index/storedisplay_detail?id=13",
@@ -1030,11 +1030,11 @@
         "latitude": 24.4623403,
         "longitude": 118.07214,
         "productName": "Lao Song Bian Shi Dian — Xiahe Road",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1991-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Michelin Guide lists 劳松扁食店 at 思明区厦禾路202-101号 (matches input address; Xiahe Road is 厦禾路) and says it has been open over thirty years; a Tencent feature (prior pass) says wontons served since 1991. Whether the shop has always been at this exact unit is unverified. Estimated: 1991 is a best estimate and 1991-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1053,7 +1053,7 @@
             "url": "https://guide.michelin.com/gb/en/fujian-province/xiamen_1031934/restaurant/lao-song-bian-shi-dian",
             "title": "Lao Song Bian Shi Dian — Xiahe Road — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Michelin Guide lists 劳松扁食店 at 思明区厦禾路202-101号 (matches input address; Xiahe Road is 厦禾路) and says it has been open over thirty years; a Tencent feature (prior pass) says wontons served since 1991. Whether the shop has always been at this exact unit is unverified. Estimated: 1991 is a best estimate and 1991-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://you.ctrip.com/food/xiamen21/5158600.html",
@@ -1205,11 +1205,11 @@
         "latitude": 29.8977882,
         "longitude": 121.5573113,
         "productName": "NingHaiShiFu — Rihu Courtyard",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2021-03-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "UPPER bound only: a Ctrip travel note published 2021-04-19 describes a March visit to 宁海食府·私宴(日湖店) at 湖西路280号, so the branch operated by about March 2021. No opening announcement found; likely opened some time before, undetermined. Address matches Ctrip (湖西路280号, beside Rihu Park). Estimated: 2021-03 is a best estimate and 2021-03-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1228,7 +1228,7 @@
             "url": "https://you.ctrip.com/food/ningbo83/5225087.html",
             "title": "NingHaiShiFu — Rihu Courtyard — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "UPPER bound only: a Ctrip travel note published 2021-04-19 describes a March visit to 宁海食府·私宴(日湖店) at 湖西路280号, so the branch operated by about March 2021. No opening announcement found; likely opened some time before, undetermined. Address matches Ctrip (湖西路280号, beside Rihu Park). Estimated: 2021-03 is a best estimate and 2021-03-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8885150725",
@@ -1417,11 +1417,11 @@
         "latitude": 38.8761511,
         "longitude": 121.6803586,
         "productName": "PinHaiLou — Laohutan Fisherman’s Wharf",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2010-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "品海楼·老虎滩店 is a standalone villa inside Laohutan Fisherman's Wharf, which opened around 2008-2010 (from memory, not verified here); a 2018-10-14 Qunar post and 2019-10-26 Ctrip reviews show it operating by 2018. Brand 1992/2000 (憩园 renamed 2000) is a brand date only, not this venue. Estimated: 2010 is a best estimate and 2010-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1440,7 +1440,7 @@
             "url": "https://you.ctrip.com/food/dalian4/8643684.html",
             "title": "PinHaiLou — Laohutan Fisherman’s Wharf — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "品海楼·老虎滩店 is a standalone villa inside Laohutan Fisherman's Wharf, which opened around 2008-2010 (from memory, not verified here); a 2018-10-14 Qunar post and 2019-10-26 Ctrip reviews show it operating by 2018. Brand 1992/2000 (憩园 renamed 2000) is a brand date only, not this venue. Estimated: 2010 is a best estimate and 2010-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8397146390",
@@ -1629,11 +1629,11 @@
         "latitude": 41.8017595,
         "longitude": 123.4061558,
         "productName": "XiTaDaLengMian — Shifu Avenue",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1952-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "A Smzdm article states 'In 1952 the Korean-ethnic canteen opened (20 sqm, 8 tables, 5 staff), became public-private in 1956 as Shenyang Korean Restaurant' and Maigoo says founded in the 1950s; the article does not name 31 Shifu Avenue, so the 1952 date for this exact site is inferred from the earlier Baidu Baike note. Ctrip says only 'open for several decades'. Estimated: 1952 is a best estimate and 1952-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1652,7 +1652,7 @@
             "url": "https://www.amap.com/place/B00180BQQU",
             "title": "XiTaDaLengMian — Shifu Avenue — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "A Smzdm article states 'In 1952 the Korean-ethnic canteen opened (20 sqm, 8 tables, 5 staff), became public-private in 1956 as Shenyang Korean Restaurant' and Maigoo says founded in the 1950s; the article does not name 31 Shifu Avenue, so the 1952 date for this exact site is inferred from the earlier Baidu Baike note. Ctrip says only 'open for several decades'. Estimated: 1952 is a best estimate and 1952-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://you.ctrip.com/food/shenyang155/5381239.html",
@@ -1847,11 +1847,11 @@
         "latitude": 45.7727829,
         "longitude": 126.6129764,
         "productName": "TaDaoSi Western Restaurant — Central Street",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2005-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Brand dates from 1901 (Ctrip: 创于1901年); first-pass blog says the Tatoc name was revived at this building in 2005 after it was the Jinjiao Hotel from 1947. I could not re-verify 2005; a 2015 Qunar review notes a renovation that opened the upper floor. Address 127 Central Street at Xiwudao Street confirmed. Estimated: 2005 is a best estimate and 2005-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1870,7 +1870,7 @@
             "url": "https://you.ctrip.com/food/harbin151/4925468.html",
             "title": "TaDaoSi Western Restaurant — Central Street — research source",
             "confidence": 90,
-            "reasoning": "Restaurant guide checked October 10, 2026; the guide date is not its opening date."
+            "reasoning": "Brand dates from 1901 (Ctrip: 创于1901年); first-pass blog says the Tatoc name was revived at this building in 2005 after it was the Jinjiao Hotel from 1947. I could not re-verify 2005; a 2015 Qunar review notes a renovation that opened the upper floor. Address 127 Central Street at Xiwudao Street confirmed. Estimated: 2005 is a best estimate and 2005-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8496429315",
