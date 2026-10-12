@@ -1839,6 +1839,8 @@ const th: Messages = {
     seeOnEbay: 'ดูบน eBay',
     seeOnBrkox: 'ดูที่ BRKOX',
     legoBody: 'อุปกรณ์เสริมอิสระสำหรับเซ็ต LEGO® ไม่ได้ผลิตหรือรับรองโดย LEGO Group',
+    seeOnTidewe: 'ดูที่ TideWe',
+    huntingBody: 'เต็นท์พรางล่าสัตว์ ชุดลุยน้ำ เสื้อผ้าทำความร้อน และอุปกรณ์กลางแจ้ง',
     watchBody: 'นาฬิกา {brand} มือสองบน eBay พร้อมการรับประกันความแท้สำหรับรายการที่เข้าเงื่อนไข',
     urgencyLeft: 'เหลือเพียง {count} ชิ้น',
     urgencyLow: 'ราคาต่ำสุดใน {days} วัน',

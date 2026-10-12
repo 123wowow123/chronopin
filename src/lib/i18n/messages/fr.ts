@@ -1849,6 +1849,8 @@ const fr: Messages = {
     seeOnEbay: 'Voir sur eBay',
     seeOnBrkox: 'Voir chez BRKOX',
     legoBody: 'Accessoires indépendants pour les sets LEGO®. Non fabriqués ni approuvés par le groupe LEGO.',
+    seeOnTidewe: 'Voir chez TideWe',
+    huntingBody: 'Affûts de chasse, waders, vêtements chauffants et équipement de plein air.',
     watchBody: 'Montres {brand} d\'occasion sur eBay, avec Garantie d\'authenticité sur les annonces éligibles.',
     urgencyLeft: 'Plus que {count} en stock',
     urgencyLow: 'Prix le plus bas depuis {days} jours',

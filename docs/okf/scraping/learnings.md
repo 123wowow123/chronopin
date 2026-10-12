@@ -13,6 +13,19 @@ After **every** scraping job (a scrape, a backfill, a batch of pins, a reference
 
 Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (owner corrections and confirmed approaches) and `* **Changed**` (which page was updated).
 
+## 2026-10-11 - Maker-link backfill, third pass (the 13 no-URL pins)
+
+* **Learned:** A fresh search budget (3 agents, 4-5 pins each) found 9 of the 13: Funday x2 (fundaysweets.com), Cortina (Kefalos Food parent site), Patang (thepatangstory.com), Gelato World Tour Japan (carpigiani.com/jp news page, read with curl because WebFetch hit a cert-chain error), Blas na hEireann (organiser's Aran Bakery page), Indian Ice Cream Congress (organiser homepage, currently the 2027 edition), London Craft Chocolate Fair (cocoarunners.com/fair, 403 to scripts, confirmed in Chrome), Oreo (global homepage only).
+* **Learned:** Still no link for 13915 Canopy Foods (the Tasmanian maker's own site is not linked by any article; canopyicecream.com.au is unconfirmed), 13916 Bombay Creamery (no brand site; bombaycreamery.in is parked), 13974 Urso/Los Los (Cimed's site never mentions Urso), 6225 Pikachu Illustrator (only Goldin's auction lot, not a maker).
+* **Data issue:** pin 13936's title says "Chihiro Takeno" but PR Times and Carpigiani name the winner 竹野智大 (Tomohiro Takeno); fix the pin title.
+
+## 2026-10-11 - Maker-link backfill, all product pins (second pass)
+
+* **Learned:** The /products page shows only 12 pins per shelf, but 163 more 2026 product pins (tags Ice Cream 61, Fashion 38, Snack 36, Audio 19, Gaming/Electronics/Tabletop 9) also had no maker link. Six agents found pages; 133 Merchant rows posted to prod. Find the list with the admin DB API: `Pin?productName.null=false&utcDeletedDateTime.null=true&utcStartDateTime.gte=<year>`, then `Merchant?pinId.in=` and `PinTag?pinId.in=` (drop Restaurant/Movie/Festival/Conference tags, keep the shelf tags).
+* **Learned:** The agents shared one 200-search budget, so the later lanes found little by search and mostly followed maker links; 12 pins got no URL (Canopy Foods, Gelato World Tour Japan, Funday, Patang, Cortina, Oreo China, Bombay Creamery, IICE, Los Los/Urso, Arán Bakery, London Craft Chocolate Fair, Pikachu Illustrator). Re-run them with a fresh budget.
+* **Learned:** The Chrome extension only opens allowed domains: **adidas.com, newbalance.com, uniqlo.com and the nike.com launch 404 could not be verified**, so those 7 adidas, 1 New Balance and 2 Uniqlo pins got no link (4404-4409, 4412, 4413, 4422, 4545, 4546); H&M returned an empty body (4539, 4541). A Nike SNKRS URL from search 404'd (4435). Skip, never post unverified.
+* **Learned:** Colourway pins share their model's page when the maker has no per-colourway page, and a brand-level link is accepted when no product page exists yet; pin 4437's only page was the toddler variant and was dropped, and 13944's 2026 claim did not match akagi.com.
+
 ## 2026-10-11 - Maker-link backfill for the /products tiles
 
 * **Learned:** Of the 117 pins the /products shelves showed on prod, 59 had no maker link (only Amazon or nothing). Four research agents (15 pins each) found the maker's page for 57; one more by hand. Gaps: **13915** Canopy Foods (the Tasmanian site is probably the same business but the award coverage never links it), **13936** Gelato World Tour Japan (organiser Carpigiani's Japan page does not mention the tour). Weak matches kept as brand/collection pages: Skittles Gummy Crystals (no product page yet), Fini Minhocas, Swensen's High Protein, Peters Frosty Fruits mango, Santini x Zumub, Carling Black Label (Molson Coors launch post), SIAL Paris (organiser site).

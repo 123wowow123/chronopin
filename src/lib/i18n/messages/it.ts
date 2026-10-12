@@ -1840,6 +1840,8 @@ const it: Messages = {
     seeOnEbay: 'Guardalo su eBay',
     seeOnBrkox: 'Guardalo su BRKOX',
     legoBody: 'Accessori indipendenti per i set LEGO®. Non prodotti né approvati dal Gruppo LEGO.',
+    seeOnTidewe: 'Vedilo su TideWe',
+    huntingBody: 'Capanni da caccia, waders, abbigliamento riscaldato e attrezzatura outdoor.',
     watchBody: 'Orologi {brand} usati su eBay, con Garanzia di autenticità sugli annunci idonei.',
     urgencyLeft: 'Ne restano solo {count}',
     urgencyLow: 'Prezzo più basso degli ultimi {days} giorni',

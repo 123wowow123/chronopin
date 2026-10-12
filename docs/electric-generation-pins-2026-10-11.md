@@ -101,3 +101,7 @@ Verified at **2026-10-12T03:46:52Z**:
 - All eight retained/reviewed research images remained attached to their intended pins; the three added global images passed public Azure download/hash and pin read-back checks.
 
 Browser visual QA was unavailable; verification used the public map and pin APIs. No application code was changed for this content update.
+
+## Backing source wikis
+
+All 37 pins were verified through the pin editor’s source-wiki API at 2026-10-12T04:02:52Z. Their 105 current citation bindings resolve to 70 distinct ready source wikis; all summaries match the current wiki versions. Two older operator wikis were expanded with verified project costs, two legacy primary-source wikis were completed, and the shared EIA/GEM wikis now include inspected project/unit rows backing the capacity figures. Forty obsolete bindings were removed without deleting their source records or wikis. No pending or removed source bindings remain on the 37 pins. Cost/output tables, scope labels and credited Azure photos were preserved. Wiki source/page IDs and versions are included in the project catalog. The admin pin editor shows these in “OKF wikis behind this pin”.

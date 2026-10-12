@@ -25,12 +25,14 @@ import { isCategory } from './categories';
 // brand on eBay, which earns through the EPN campaign (affiliate.ts).
 // 'lego' ads (0165) are brkox's LEGO-compatible light kits, frames and cases,
 // which earn through our Awin publisher account (affiliate.ts).
-export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker' | 'lego';
+// 'hunting' ads (0166) are TideWe's hunting blinds, waders and heated gear,
+// also through Awin.
+export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker' | 'lego' | 'hunting';
 
 // Each kind's share of the picks, before relatedness and preference.
 // A watch pool is small, so on the timeline it only comes up now and then;
 // on a Watches pin's page its ads are related (shared tag) and come first.
-export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1, lego: 1 };
+export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1, lego: 1, hunting: 1 };
 
 // The watch brands advertised (Ad.program is `watch_<key>`), by the name the
 // ad shows. Owner, 2026-10-05: "add ads for rolex and other desirable watches".
@@ -76,6 +78,18 @@ export const LEGO_ADS: Record<string, { title: string; brand: string }> = {
 };
 
 export const legoAd = (program: string | null | undefined) => (program && LEGO_ADS[program]) || null;
+
+// TideWe collections (Ad.program is `hunting_<key>`), named for what they hold.
+export const HUNTING_ADS: Record<string, { title: string; brand: string }> = {
+  hunting_blinds: { title: 'Hunting blinds', brand: 'TideWe' },
+  hunting_waders: { title: 'Hunting waders', brand: 'TideWe' },
+  hunting_heated: { title: 'Heated hunting clothing', brand: 'TideWe' },
+  hunting_boots: { title: 'Hunting boots', brand: 'TideWe' },
+  hunting_clothing: { title: 'Hunting clothing', brand: 'TideWe' },
+  hunting_packs: { title: 'Hunting backpacks', brand: 'TideWe' },
+};
+
+export const huntingAd = (program: string | null | undefined) => (program && HUNTING_ADS[program]) || null;
 
 const FOOTWEAR_TAGS = new Set(['sneakers', 'sneaker', 'shoes', 'shoe', 'footwear']);
 const hasFootwear = (names: string[]) => names.some((name) => FOOTWEAR_TAGS.has(name.trim().toLowerCase()));
@@ -397,6 +411,7 @@ export function adCategory(ad: AdCandidate): string {
   if (ad.kind === 'watch' || categories.some((name) => /^(?:watches|watch|smartwatches)$/.test(name)) || /\b(?:watches|watch|smartwatch)\b/i.test(ad.title ?? '')) return 'watches';
   if (ad.kind === 'sneaker' || hasFootwear(ad.categories) || /\b(?:sneakers?|shoes?|footwear)\b/i.test(ad.title ?? '')) return 'shoes';
   if (ad.kind === 'lego') return 'lego';
+  if (ad.kind === 'hunting') return 'hunting';
   if (ad.holiday) return 'seasonal';
   return topicName(categories.find(isCategory) ?? categories.find(Boolean) ?? ad.program ?? 'products');
 }

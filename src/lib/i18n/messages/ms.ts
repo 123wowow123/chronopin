@@ -1853,6 +1853,8 @@ const ms: Messages = {
     seeOnEbay: 'Lihat di eBay',
     seeOnBrkox: 'Lihat di BRKOX',
     legoBody: 'Aksesori bebas untuk set LEGO®. Tidak dibuat atau disahkan oleh LEGO Group.',
+    seeOnTidewe: 'Lihat di TideWe',
+    huntingBody: 'Khemah penyamaran memburu, wader, pakaian berpemanas dan peralatan luar.',
     watchBody: 'Jam tangan {brand} terpakai di eBay, dengan Jaminan Ketulenan pada penyenaraian yang layak.',
     urgencyLeft: 'Tinggal {count}',
     urgencyLow: 'Harga terendah {days} hari',

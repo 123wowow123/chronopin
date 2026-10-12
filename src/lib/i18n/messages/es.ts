@@ -1849,6 +1849,8 @@ const es: Messages = {
     seeOnEbay: 'Verlo en eBay',
     seeOnBrkox: 'Verlo en BRKOX',
     legoBody: 'Accesorios independientes para sets LEGO®. No fabricados ni avalados por el Grupo LEGO.',
+    seeOnTidewe: 'Verlo en TideWe',
+    huntingBody: 'Escondites de caza, vadeadores, ropa calefactada y equipo para exteriores.',
     watchBody: 'Relojes {brand} de segunda mano en eBay, con Garantía de autenticidad en los anuncios aptos.',
     urgencyLeft: 'Solo quedan {count}',
     urgencyLow: 'Precio más bajo en {days} días',

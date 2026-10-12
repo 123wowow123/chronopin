@@ -92,6 +92,15 @@ describe('eBay Partner Network links', () => {
 });
 
 describe('Awin links', () => {
+  it('sends a TideWe page through our Awin tracking link', () => {
+    const tracked = new URL(affiliateUrl('https://www.tidewe.com/collections/hunting-jackets'));
+    expect(tracked.hostname).toBe('www.awin1.com');
+    expect(tracked.searchParams.get('awinmid')).toBe('78182');
+    expect(tracked.searchParams.get('awinaffid')).toBe('3115479');
+    expect(tracked.searchParams.get('ued')).toBe('https://www.tidewe.com/collections/hunting-jackets');
+    expect(isAwinUrl(tracked.toString())).toBe(true);
+  });
+
   it('sends a brkox page through our Awin tracking link', () => {
     const tracked = new URL(affiliateUrl('https://brkox.com/collections/lego-light-kits'));
     expect(tracked.origin + tracked.pathname).toBe('https://www.awin1.com/cread.php');

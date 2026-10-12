@@ -1860,6 +1860,8 @@ const hi: Messages = {
     seeOnEbay: 'eBay पर देखें',
     seeOnBrkox: 'BRKOX पर देखें',
     legoBody: 'LEGO® सेट के लिए स्वतंत्र एक्सेसरीज़। LEGO ग्रुप द्वारा निर्मित या अनुमोदित नहीं।',
+    seeOnTidewe: 'TideWe पर देखें',
+    huntingBody: 'शिकार के ब्लाइंड, वेडर, गर्म कपड़े और आउटडोर उपकरण।',
     watchBody: 'eBay पर पुरानी {brand} घड़ियाँ, पात्र लिस्टिंग पर प्रामाणिकता की गारंटी के साथ।',
     urgencyLeft: 'सिर्फ़ {count} बचे हैं',
     urgencyLow: '{days} दिनों में सबसे कम कीमत',

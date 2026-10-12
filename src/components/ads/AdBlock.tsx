@@ -75,6 +75,13 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   lego_space: { icon: 'sparkle', background: '#1e1b4b', color: '#fcd34d' },
   lego_buildings: { icon: 'bolt', background: '#78350f', color: '#fde68a' },
   lego_christmas: { icon: 'sparkle', background: '#166534', color: '#fecaca' },
+  // TideWe (0166, Awin): field colors.
+  hunting_blinds: { icon: 'eye', background: '#3f4a2f', color: '#fff' },
+  hunting_waders: { icon: 'tag', background: '#1f3b2d', color: '#fff' },
+  hunting_heated: { icon: 'bolt', background: '#9a3412', color: '#fff' },
+  hunting_boots: { icon: 'tag', background: '#44403c', color: '#fde68a' },
+  hunting_clothing: { icon: 'tag', background: '#365314', color: '#fff' },
+  hunting_packs: { icon: 'tag', background: '#292524', color: '#fcd34d' },
 };
 // Programs whose own picture sits on their tile (a file in public/ads).
 const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png' };
@@ -149,6 +156,10 @@ function useAdText() {
     if (ad.kind === 'lego') {
       const line = t('ads.legoBody');
       return { title: ad.title ?? '', body: line, price: '', info: line, urgency: '', cta: t('ads.seeOnBrkox') };
+    }
+    if (ad.kind === 'hunting') {
+      const line = t('ads.huntingBody');
+      return { title: ad.title ?? '', body: line, price: '', info: line, urgency: '', cta: t('ads.seeOnTidewe') };
     }
     if (ad.kind === 'sneaker') {
       const price = ad.price != null ? money(ad.price, ad.currency) : '';

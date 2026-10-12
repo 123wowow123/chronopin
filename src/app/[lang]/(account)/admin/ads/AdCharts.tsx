@@ -28,7 +28,7 @@ const SERIES = [
   { label: 'Product ads', color: SERIES_ORANGE, value: (b: Bucket) => b.products },
 ];
 
-const KIND_LABEL: Record<AdKind, string> = { special: 'Special program', bonus: 'Bonus event', tradein: 'Trade-In', product: 'Product', watch: 'Watch brand', sneaker: 'Sneakers', lego: 'LEGO accessories' };
+const KIND_LABEL: Record<AdKind, string> = { special: 'Special program', bonus: 'Bonus event', tradein: 'Trade-In', product: 'Product', watch: 'Watch brand', sneaker: 'Sneakers', lego: 'LEGO accessories', hunting: 'Hunting gear' };
 const RECENT = 50;
 const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
 const countryName = (code: string | null) => {

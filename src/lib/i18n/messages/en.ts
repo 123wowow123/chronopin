@@ -1853,6 +1853,8 @@ const en = {
     seeOnEbay: 'See it on eBay',
     seeOnBrkox: 'See it at BRKOX',
     legoBody: 'Independent accessories for LEGO® sets. Not made or endorsed by the LEGO Group.',
+    seeOnTidewe: 'See it at TideWe',
+    huntingBody: 'Hunting blinds, waders, heated clothing and outdoor gear.',
     watchBody: 'Pre-owned {brand} watches on eBay, with Authenticity Guarantee on eligible listings.',
     urgencyLeft: 'Only {count} left',
     urgencyLow: '{days}-day low price',

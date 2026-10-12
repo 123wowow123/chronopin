@@ -1844,6 +1844,8 @@ const ko: Messages = {
     seeOnEbay: 'eBay에서 보기',
     seeOnBrkox: 'BRKOX에서 보기',
     legoBody: 'LEGO® 세트용 독립 액세서리입니다. LEGO 그룹이 제조하거나 승인한 제품이 아닙니다.',
+    seeOnTidewe: 'TideWe에서 보기',
+    huntingBody: '사냥용 블라인드, 웨이더, 열선 의류, 아웃도어 장비.',
     watchBody: 'eBay의 중고 {brand} 시계. 해당 상품에는 정품 보증이 적용됩니다.',
     urgencyLeft: '{count}개 남음',
     urgencyLow: '{days}일 최저가',

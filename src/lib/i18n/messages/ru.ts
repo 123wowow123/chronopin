@@ -1941,6 +1941,8 @@ const ru: Messages = {
     seeOnEbay: 'Смотреть на eBay',
     seeOnBrkox: 'Смотреть на BRKOX',
     legoBody: 'Независимые аксессуары для наборов LEGO®. Не производятся и не одобрены LEGO Group.',
+    seeOnTidewe: 'Смотреть в TideWe',
+    huntingBody: 'Охотничьи скрадки, вейдерсы, одежда с подогревом и туристическое снаряжение.',
     watchBody: 'Часы {brand} с пробегом на eBay, с гарантией подлинности на подходящих лотах.',
     urgencyLeft: 'Осталось всего {count}',
     urgencyLow: 'Минимальная цена за {days} дн.',

@@ -2221,6 +2221,8 @@ const ar: Messages = {
     seeOnEbay: 'شاهدها على eBay',
     seeOnBrkox: 'شاهدها على BRKOX',
     legoBody: 'إكسسوارات مستقلة لمجموعات LEGO®. غير مصنّعة أو معتمدة من مجموعة LEGO.',
+    seeOnTidewe: 'شاهده على TideWe',
+    huntingBody: 'أكشاك صيد، وبدلات خوض، وملابس مدفأة، ومعدات للأنشطة الخارجية.',
     watchBody: 'ساعات {brand} مستعملة على eBay، مع ضمان الأصالة على الإعلانات المؤهلة.',
     urgencyLeft: 'متبقي {count} فقط',
     urgencyLow: 'أقل سعر خلال {days} يومًا',

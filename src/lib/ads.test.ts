@@ -24,6 +24,7 @@ import {
   watchBrand,
   sneakerAd,
   legoAd,
+  huntingAd,
 } from './ads';
 import { CATEGORIES } from './categories';
 
@@ -516,5 +517,24 @@ describe('brkox LEGO ads', () => {
 
   it('is its own category', () => {
     expect(adCategory(lego)).toBe('lego');
+  });
+});
+
+describe('TideWe hunting ads', () => {
+  const hunting = ad({ key: 'ad:300', kind: 'hunting', program: 'hunting_blinds', url: 'https://tidewe.com/collections/hunting-blind', title: 'Hunting blinds', company: 'TideWe', minAge: 18, categories: ['Hunting'] });
+
+  it('names a collection and its brand', () => {
+    expect(huntingAd('hunting_blinds')?.brand).toBe('TideWe');
+    expect(huntingAd('lego_lights')).toBeNull();
+  });
+
+  it('is sent through Awin and credited to our publisher id', () => {
+    expect(taggedAdUrl(hunting.url, 'US', {})).toContain('awinmid=78182');
+    expect(adTag(hunting, {})).toBe('3115479');
+  });
+
+  it('is its own category and 18+', () => {
+    expect(adCategory(hunting)).toBe('hunting');
+    expect(adAllowed(hunting, { preference: null, age: 16, performance: undefined } as never)).toBe(false);
   });
 });

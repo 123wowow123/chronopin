@@ -50,7 +50,28 @@
         "capacityFacts": "Published electric generating project rating for Chokecherry and Sierra Madre: 3550 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79702,
+          "url": "https://www.powercompanyofwyoming.com/wind-generation/index.shtml",
+          "version": 2,
+          "wikiPageId": 9768
+        },
+        {
+          "id": 90925,
+          "url": "https://www.powercompanyofwyoming.com/wind-generation/purpose.shtml",
+          "version": 1,
+          "wikiPageId": 9715
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-1364",
@@ -99,7 +120,28 @@
         "capacityFacts": "Published electric generating project rating for Mill Creek 5: 645 MW. Basis: Current operator page: 645 MW nameplate."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79762,
+          "url": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+          "version": 1,
+          "wikiPageId": 9661
+        },
+        {
+          "id": 90926,
+          "url": "https://lge-ku.com/mc5",
+          "version": 1,
+          "wikiPageId": 9716
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-69223",
@@ -143,7 +185,28 @@
         "capacityFacts": "Published electric generating project rating for Vicksburg Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79792,
+          "url": "https://www.entergymississippi.com/generation/vicksburg",
+          "version": 1,
+          "wikiPageId": 9664
+        },
+        {
+          "id": 90927,
+          "url": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+          "version": 1,
+          "wikiPageId": 9717
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-67914",
@@ -187,7 +250,22 @@
         "capacityFacts": "Published electric generating project rating for Delta Blues Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79771,
+          "url": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "version": 2,
+          "wikiPageId": 9769
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-68053",
@@ -240,7 +318,34 @@
         "capacityFacts": "Published electric generating project rating for Legend Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79834,
+          "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "version": 1,
+          "wikiPageId": 9667
+        },
+        {
+          "id": 90928,
+          "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+          "version": 1,
+          "wikiPageId": 9718
+        },
+        {
+          "id": 90929,
+          "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+          "version": 1,
+          "wikiPageId": 9719
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-69077",
@@ -293,7 +398,34 @@
         "capacityFacts": "Published electric generating project rating for Lone Star Power Station: 453 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79834,
+          "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "version": 1,
+          "wikiPageId": 9667
+        },
+        {
+          "id": 90928,
+          "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+          "version": 1,
+          "wikiPageId": 9718
+        },
+        {
+          "id": 90929,
+          "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+          "version": 1,
+          "wikiPageId": 9719
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-66923",
@@ -346,7 +478,34 @@
         "capacityFacts": "Published electric generating project rating for SunZia Wind and Transmission: 3650 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79723,
+          "url": "https://patternenergy.com/sunzia-comes-online/",
+          "version": 1,
+          "wikiPageId": 9658
+        },
+        {
+          "id": 90930,
+          "url": "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+          "version": 1,
+          "wikiPageId": 9720
+        },
+        {
+          "id": 90931,
+          "url": "https://patternenergy.com/projects/sunzia/",
+          "version": 1,
+          "wikiPageId": 9721
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "existing-5511",
@@ -399,7 +558,34 @@
         "capacityFacts": "Published electric generating project rating for Coastal Virginia Offshore Wind commercial project: 2600 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 39456,
+          "url": "https://offshorewind.biz/2026/08/03/largest-us-offshore-wind-farm-81-pct-complete-final-turbine-expected-by-end-of-2027",
+          "version": 1,
+          "wikiPageId": 9771
+        },
+        {
+          "id": 80142,
+          "url": "https://coastalvawind.com/about/the-project/timeline",
+          "version": 1,
+          "wikiPageId": 9690
+        },
+        {
+          "id": 80149,
+          "url": "https://coastalvawind.com/",
+          "version": 1,
+          "wikiPageId": 9691
+        },
+        {
+          "id": 90940,
+          "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+          "version": 1,
+          "wikiPageId": 9728
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-68443",
@@ -448,7 +634,28 @@
         "capacityFacts": "Published electric generating project rating for Empire Wind 1: 810 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 80049,
+          "url": "https://www.empirewind.com/offshore-installation/",
+          "version": 1,
+          "wikiPageId": 9682
+        },
+        {
+          "id": 90942,
+          "url": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+          "version": 1,
+          "wikiPageId": 9729
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-3406",
@@ -493,7 +700,22 @@
         "physicalFacts": "Units 21–25 and 27–30 entered commercial operation May 6, 2025; Unit 26 followed August 20, 2025. Existing units 1–20 are not included."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 90944,
+          "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+          "version": 1,
+          "wikiPageId": 9730
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-3399",
@@ -543,7 +765,28 @@
         "physicalFacts": "TVA reports this first 1,450 MW plant in construction. Its June 2026 filing reports pre-commercial operation of Cumberland Units 1 and 2 during the fiscal third quarter; this is commissioning, not proof of full commercial operation."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 90944,
+          "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+          "version": 1,
+          "wikiPageId": 9730
+        },
+        {
+          "id": 90946,
+          "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+          "version": 1,
+          "wikiPageId": 9731
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-3407",
@@ -588,7 +831,22 @@
         "physicalFacts": "TVA explicitly states it is constructing the 1,500 MW combined-cycle plant, targeting the end of 2027. The capacity is for the combined-cycle plant, not all units at the Kingston site."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 90944,
+          "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+          "version": 1,
+          "wikiPageId": 9730
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "gem-L100000104184",
@@ -634,7 +892,22 @@
         "physicalFacts": "TVA explicitly reports constructing this 200 MW project after a December 2025 air permit. The planning-only Lagoon Creek project is separate and excluded."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75849,
+          "url": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000921971",
+          "version": 4,
+          "wikiPageId": 9773
+        },
+        {
+          "id": 90946,
+          "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+          "version": 1,
+          "wikiPageId": 9731
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "existing-5492",
@@ -684,7 +957,22 @@
         "physicalFacts": "TerraPower April 23, 2026 confirms official plant construction following the construction permit. Non-nuclear site support construction started June 2024. Reactor output is 345 MWe; storage-assisted 500 MW peak output is not additional continuous generating capacity."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 39370,
+          "url": "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
+          "version": 1,
+          "wikiPageId": 9688
+        },
+        {
+          "id": 90979,
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB9048_web.pdf",
+          "version": 1,
+          "wikiPageId": 9758
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-66621",
@@ -734,7 +1022,28 @@
         "physicalFacts": "Entergy April 23, 2026 confirms first fire and continued commissioning, with operator generating capacity approximately 1,215 MW. First fire is not commercial operation; the historical late-summer 2026 target is not proof of COD."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 80255,
+          "url": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+          "version": 1,
+          "wikiPageId": 9699
+        },
+        {
+          "id": 90980,
+          "url": "https://www.sec.gov/Archives/edgar/data/7323/000006598426000174/etr-20251231.htm",
+          "version": 1,
+          "wikiPageId": 9759
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-67005",
@@ -784,7 +1093,28 @@
         "physicalFacts": "Kindle’s Magnolia case study identifies December 2025 completion; EIA August 2026 reports recent operation. The proposed second expansion in a broader GEM grouping is excluded."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 90981,
+          "url": "https://www.opportunitylouisiana.gov/news/kindle-energy-breaks-ground-on-750-million-power-station-in-iberville-parish",
+          "version": 1,
+          "wikiPageId": 9760
+        },
+        {
+          "id": 90982,
+          "url": "https://kindle-energy.com/case-studies/magnolia",
+          "version": 1,
+          "wikiPageId": 9761
+        }
+      ],
+      "wikiSummaryCurrent": true
     },
     {
       "key": "eia-66545",
@@ -834,7 +1164,28 @@
         "physicalFacts": "Doral’s October 7, 2026 announcement confirms 900 MWac in the final South, Central I and Central II phases constructed over 18 months and nearing commercial operation. Full-complex rated output is 1.3 GW; 900 MW is the 2026 commissioning addition. The announced future expansion to 2,245 MW is excluded."
       },
       "publicationState": "published",
-      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only",
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 90983,
+          "url": "https://www.iedc.in.gov/events/news/details/2022/11/03/doral-renewables-launches-next-phase-of-1.5b-solar-farm-in-northwest-indiana",
+          "version": 1,
+          "wikiPageId": 9762
+        },
+        {
+          "id": 90984,
+          "url": "https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html",
+          "version": 1,
+          "wikiPageId": 9763
+        }
+      ],
+      "wikiSummaryCurrent": true
     }
   ],
   "retainedEarlierOperatorUpdates": [
@@ -1457,5 +1808,16 @@
     "excludedImportIdsVerifiedHidden": 6228,
     "activeImportCohortMatchesQualifiedPins": true,
     "photosAfterContentSaveVerified": true
+  },
+  "wikiVerification": {
+    "verifiedAtUTC": "2026-10-12T04:02:52Z",
+    "verifiedPins": 37,
+    "distinctBackingSourceWikis": 70,
+    "pinWikiBindings": 105,
+    "rewrittenOrAddedSourceWikis": 6,
+    "obsoleteBindingsRemoved": 40,
+    "allCurrentSourcesHaveReadyWiki": true,
+    "allSummariesCurrent": true,
+    "inventoryProjectRowsAdded": true
   }
 }

@@ -73,8 +73,14 @@ function ebayPage(url: string | undefined | null): URL | undefined {
 export const awinPublisherId = '3115479';
 
 // Awin advertisers we have joined, by the host their site answers on. brkox
-// (LEGO-compatible light kits and display frames, US) invited us 2026-10-11.
-const AWIN_ADVERTISERS: Record<string, string> = { 'brkox.com': '129093', 'www.brkox.com': '129093' };
+// (LEGO-compatible light kits and display frames, US) invited us 2026-10-11;
+// TideWe (hunting gear, 10% commission, 30-day cookie) accepted us the same day.
+const AWIN_ADVERTISERS: Record<string, string> = {
+  'brkox.com': '129093',
+  'www.brkox.com': '129093',
+  'tidewe.com': '78182',
+  'www.tidewe.com': '78182',
+};
 
 function awinAdvertiser(url: string | undefined | null): { page: URL; merchantId: string } | undefined {
   if (!url) return undefined;
