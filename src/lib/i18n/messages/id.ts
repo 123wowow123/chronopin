@@ -633,6 +633,7 @@ const id: Messages = {
       pungent: 'Pedas',
       coolness: 'Sensasi dingin',
       note: 'Perkiraan editorial pada skala 0 sampai {max}.',
+      showAll: 'Tampilkan semua pin dengan profil rasa',
       abv: 'Kadar alkohol',
       reviews: 'Ulasan rasa',
     },

@@ -12,7 +12,7 @@ import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
-import type { DayBound, DelayBound, PersonAxisBound, RatingBound } from '../util/searchQuery';
+import type { DayBound, DelayBound, PersonAxisBound, RatingBound, TasteTerm } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
@@ -44,7 +44,7 @@ export type PinSearchFilters = {
   places: string[];
   platforms: string[];
   rated: string[];
-  tastes: TasteAxis[];
+  tastes: TasteTerm[];
   people: string[];
   personAxes: PersonAxisBound[];
   ratings: RatingBound[];
@@ -1018,7 +1018,9 @@ function searchClauses(filter: SearchFilter) {
   // taste: a product whose taste profile scores every one of these axes strongly.
   // The axis names are TASTE_KEYS, so they are safe as column names.
   if (filter.tastes.length) {
-    const scored = filter.tastes.filter((axis) => TASTE_KEYS.includes(axis)).map((axis) => `"t"."${axis}" >= ${TASTE_STRONG}`);
+    // taste:any asks only for a profile; axes ask for a strong score.
+    const scored = filter.tastes.filter((axis): axis is TasteAxis => axis !== 'any' && TASTE_KEYS.includes(axis)).map((axis) => `"t"."${axis}" >= ${TASTE_STRONG}`);
+    if (!scored.length && filter.tastes.includes('any')) scored.push('TRUE');
     if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinTaste" AS "t" WHERE "t"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
   }
   // person: and the radar-axis bounds (misconduct:>3): a pin linked to a

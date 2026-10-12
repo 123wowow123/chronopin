@@ -62,8 +62,9 @@
 // The game info's platform pills and rating block write them.
 // taste: takes a taste axis (taste:bitterness, taste:umami; aroma, bitterness,
 // sweetness, astringency, umami, pungent, coolness): the products whose taste
-// profile (PinTaste) scores it TASTE_STRONG or more, every axis given. The
-// taste profile's axis labels write them.
+// profile (PinTaste) scores it TASTE_STRONG or more, every axis given;
+// taste:any is every product that has a taste profile. The taste profile's
+// heading and axis labels write them.
 // person: takes a person's name as the People pages write it (person:"Joe
 // Biden"): the pins linked to them (PinPerson). A person's radar axes
 // (education, wealth, position, standing, health, misconduct, social,
@@ -149,6 +150,9 @@ export type DayBound = { op: '>=' | '<'; day: string };
 // on a radar axis, 0 to 5.
 export type PersonAxisBound = RatingBound & { axis: OctagonAxis };
 
+// A taste axis, or 'any' for a product with any taste profile (taste:any).
+export type TasteTerm = TasteAxis | 'any';
+
 export type SearchQuery = {
   userNames: string[];
   // Pin ids, matching exactly those pins.
@@ -180,7 +184,7 @@ export type SearchQuery = {
   // A game's maturity rating, board first (rated:"ESRB Mature 17+"); any.
   rated: string[];
   // Taste axes (taste:umami) a product's taste profile must score strongly on; all.
-  tastes: TasteAxis[];
+  tastes: TasteTerm[];
   // People by name (person:"Joe Biden"), any of them; the pins linked to them.
   people: string[];
   // Radar-axis bounds (misconduct:>3) a linked person's best score must meet,
@@ -348,7 +352,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       if (part.value) addUnique(query.holidays, part.value);
     } else if (part.field === 'taste') {
       // An axis the profile doesn't have is left out rather than matching nothing.
-      const axis = TASTE_KEYS.find((key) => key === part.value.trim().toLowerCase());
+      const value = part.value.trim().toLowerCase();
+      const axis: TasteTerm | undefined = value === 'any' ? 'any' : TASTE_KEYS.find((key) => key === value);
       if (axis) addUnique(query.tastes, axis);
     } else if (part.field === 'person') {
       if (part.value) addUnique(query.people, part.value);

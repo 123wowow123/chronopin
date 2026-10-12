@@ -628,6 +628,7 @@ const de: Messages = {
       pungent: 'Schärfe',
       coolness: 'Kühle',
       note: 'Redaktionelle Einschätzung auf einer Skala von 0 bis {max}.',
+      showAll: 'Alle Pins mit Geschmacksprofil anzeigen',
       abv: 'Alkoholgehalt',
       reviews: 'Verkostungsberichte',
     },

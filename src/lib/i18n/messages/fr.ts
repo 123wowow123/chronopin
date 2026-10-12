@@ -628,6 +628,7 @@ const fr: Messages = {
       pungent: 'Piquant',
       coolness: 'Fraîcheur',
       note: 'Estimation éditoriale sur une échelle de 0 à {max}.',
+      showAll: 'Afficher tous les pins avec un profil de goût',
       abv: 'Alcool par volume',
       reviews: 'Avis de dégustation',
     },

@@ -633,6 +633,7 @@ const en = {
       pungent: 'Pungent',
       coolness: 'Coolness',
       note: 'Editorial estimate on a 0–{max} scale.',
+      showAll: 'Show every pin with a taste profile',
       abv: 'Alcohol by volume',
       reviews: 'Tasting reviews',
     },

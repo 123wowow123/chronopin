@@ -628,6 +628,7 @@ const ja: Messages = {
       pungent: '辛味',
       coolness: '清涼感',
       note: '0〜{max}の段階による編集部の推定値。',
+      showAll: '味覚プロフィールのあるピンをすべて表示',
       abv: 'アルコール度数',
       reviews: '試食レビュー',
     },

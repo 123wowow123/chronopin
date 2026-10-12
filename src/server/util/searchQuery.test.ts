@@ -58,6 +58,7 @@ describe('joinSearchQuery', () => {
 describe('parseSearchQuery', () => {
   it('reads taste: axes, leaving out names the profile does not have', () => {
     expect(parseSearchQuery('taste:Bitterness taste:umami taste:bitterness taste:salty').tastes).toEqual(['bitterness', 'umami']);
+    expect(parseSearchQuery('taste:any').tastes).toEqual(['any']);
   });
   it('reads person: names and radar-axis bounds', () => {
     expect(parseSearchQuery('person:"Joe Biden" person:"joe biden"').people).toEqual(['Joe Biden']);

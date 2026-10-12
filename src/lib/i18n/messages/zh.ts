@@ -629,6 +629,7 @@ const zh: Messages = {
       pungent: '辛辣',
       coolness: '清凉感',
       note: '编辑估算，满分 {max} 分。',
+      showAll: '显示所有带口味档案的图钉',
       abv: '酒精度',
       reviews: '试吃评测',
     },

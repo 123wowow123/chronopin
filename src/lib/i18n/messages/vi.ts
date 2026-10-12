@@ -632,6 +632,7 @@ const vi: Messages = {
       pungent: 'Vị cay',
       coolness: 'Vị mát',
       note: 'Ước tính của biên tập viên trên thang 0 đến {max}.',
+      showAll: 'Hiện mọi ghim có hồ sơ vị',
       abv: 'Nồng độ cồn',
       reviews: 'Đánh giá hương vị',
     },

@@ -626,6 +626,7 @@ const it: Messages = {
       pungent: 'Piccante',
       coolness: 'Freschezza',
       note: 'Stima editoriale su una scala da 0 a {max}.',
+      showAll: 'Mostra tutti i pin con un profilo gustativo',
       abv: 'Gradazione alcolica',
       reviews: 'Recensioni di assaggio',
     },

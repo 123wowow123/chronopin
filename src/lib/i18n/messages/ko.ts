@@ -628,6 +628,7 @@ const ko: Messages = {
       pungent: '매운맛',
       coolness: '청량감',
       note: '0~{max} 척도의 편집 추정치입니다.',
+      showAll: '맛 프로필이 있는 모든 핀 보기',
       abv: '알코올 도수',
       reviews: '시식 후기',
     },

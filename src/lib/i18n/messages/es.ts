@@ -628,6 +628,7 @@ const es: Messages = {
       pungent: 'Picante',
       coolness: 'Frescor',
       note: 'Estimación editorial en una escala de 0 a {max}.',
+      showAll: 'Ver todos los pines con perfil de sabor',
       abv: 'Alcohol por volumen',
       reviews: 'Reseñas de cata',
     },

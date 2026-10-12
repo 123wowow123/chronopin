@@ -4,6 +4,7 @@ import type { Translator } from '@/lib/i18n/translate';
 import type { Evidence } from '@/lib/referenceConfidence';
 import { TASTE_AXES, TASTE_MAX, hasTaste, type PinTasteJson, type TasteAxis } from '@/lib/pinTaste';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
+import { RefineLink } from './RefineLink';
 import { TasteRadar } from './TasteRadar';
 
 const hostOf = (url: string) => {
@@ -71,7 +72,11 @@ export function PinTaste({
   const summary = TASTE_AXES.map((axis) => `${labels[axis.key]} ${taste[axis.key]}/${TASTE_MAX}`).join(', ');
   return (
     <section className={`text-sm ${className}`} aria-label={t('pin.taste.heading')}>
-      <h2 className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">{t('pin.taste.heading')}</h2>
+      <h2 className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">
+        <RefineLink field="taste" value="any" className="text-inherit hover:text-link hover:no-underline" title={t('pin.taste.showAll')}>
+          {t('pin.taste.heading')}
+        </RefineLink>
+      </h2>
       <div className="surface rounded-lg px-3 py-2">
         <TasteRadar scores={taste} labels={labels} summary={`${t('pin.taste.heading')}: ${summary}${abv ? `, ${abv.label} ${abv.value}` : ''}`} showJa={locale !== 'ja'} abv={abv} />
         <p className="text-xs text-muted">
