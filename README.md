@@ -438,5 +438,3 @@ https://x.com/INArteCarloDoss/status/2109620584401277228/photo/1
 add AI buildout on map
 
 https://cleanview.co/
-
-add tesla referal

@@ -24,6 +24,7 @@ import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinEventInfo } from '@/components/pin/PinEventInfo';
 import { PinGameInfo } from '@/components/pin/PinGameInfo';
 import { PinCarPerf } from '@/components/pin/PinCarPerf';
+import { PinDining } from '@/components/pin/PinDining';
 import { PinModelChart } from '@/components/pin/PinModelChart';
 import { modelRelease } from '@/lib/modelSeries';
 import { PinTaste } from '@/components/pin/PinTaste';
@@ -85,7 +86,7 @@ import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinCarPerf, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinCarPerf, pinDining, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -143,7 +144,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, taste, carPerf, candidates, ads, adsense, viewer] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, taste, carPerf, dining, candidates, ads, adsense, viewer] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -153,6 +154,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
     pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
     pinTaste(pin.id),
     pinCarPerf(pin.id),
+    pinDining(pin.id),
     pinCandidates(pin.id),
     adPlacements(),
     adsenseSlots(),
@@ -163,7 +165,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   // The tags follow whatever the aside shows above them; first in the column they need no gap.
   // An AI model pin gets the cost/quality chart; the chart asks for its own data.
   const modelChart = (!!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models')) && !!modelRelease(pin.title);
-  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || carPerf || modelChart ? 'mt-4' : '';
+  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || carPerf || dining || modelChart ? 'mt-4' : '';
 
   return (
     <>
@@ -218,6 +220,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+          {dining ? <PinDining dining={dining} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
 
           {/* Beside the pin on wide screens, under its map, game facts, taste
