@@ -648,6 +648,8 @@ const en = {
       value: 'Value',
       note: 'Editorial estimate on a 0–{max} scale, from published specifications.',
       estimate: 'Estimate',
+      rubricYear: '{year} criteria',
+      rubricYearNote: 'Scored against the {year} criteria, which are tightened over time; compare scores only within the same year.',
       na: 'n/a',
       showAll: 'Show every pin with a car performance rubric',
       reviews: 'Independent reviews',

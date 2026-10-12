@@ -4,6 +4,7 @@ import { CAR_PERF_AXES, CAR_PERF_KEYS, CAR_PERF_MAX, hasCarPerf, type CarPerfAxi
 import { Cite } from './PinTaste';
 import { RefineLink } from './RefineLink';
 import { ReviewList } from './ReviewList';
+import { RubricYearPill } from './RubricYearPill';
 import { TasteRadar } from './TasteRadar';
 
 // A vehicle pin's car performance rubric as a radar (PinCarPerf, 0167), drawn
@@ -12,7 +13,9 @@ import { TasteRadar } from './TasteRadar';
 // published is "n/a" at the centre and not part of the shape. The basis line
 // says which variant was scored and what drove each score, with the citation
 // of the page the figures came from, and the independent reviews it was
-// checked against are listed under it, as under the taste radar.
+// checked against are listed under it, as under the taste radar. The header
+// also says which year's criteria the scores were set against (rubricYear):
+// the anchors get tighter, so scores are only comparable within a year.
 export function PinCarPerf({
   perf,
   t,
@@ -29,6 +32,7 @@ export function PinCarPerf({
   if (!hasCarPerf(perf)) return null;
   const labels = Object.fromEntries(CAR_PERF_AXES.map((axis) => [axis.key, t(`pin.carPerf.${axis.key}` as 'pin.carPerf.range')])) as Record<CarPerfAxis, string>;
   const na = t('pin.carPerf.na');
+  const year = String(perf.rubricYear);
   const summary = CAR_PERF_KEYS.map((key) => `${labels[key]} ${perf[key] == null ? na : `${perf[key]}/${CAR_PERF_MAX}`}`).join(', ');
   return (
     <section className={`text-sm ${className}`} aria-label={t('pin.carPerf.heading')}>
@@ -37,6 +41,7 @@ export function PinCarPerf({
           {t('pin.carPerf.heading')}
         </RefineLink>
         <span className="rounded-full bg-raised px-2 py-px text-[0.625rem] font-medium tracking-wide text-muted ring-1 ring-line ring-inset">{t('pin.carPerf.estimate')}</span>
+        <RubricYearPill label={t('pin.carPerf.rubricYear', { year })} />
       </h2>
       <div className="surface rounded-lg px-3 py-2">
         <TasteRadar
@@ -51,7 +56,7 @@ export function PinCarPerf({
           height={312}
         />
         <p className="text-xs text-muted">
-          {t('pin.carPerf.note', { max: CAR_PERF_MAX })}
+          {t('pin.carPerf.note', { max: CAR_PERF_MAX })} {t('pin.carPerf.rubricYearNote', { year })}
           {perf.basis ? ` ${perf.basis}` : ''}
           {perf.sourceUrl ? <Cite url={perf.sourceUrl} evidence={evidence} t={t} /> : null}
         </p>

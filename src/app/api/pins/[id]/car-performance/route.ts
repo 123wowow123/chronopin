@@ -24,8 +24,11 @@ export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
 // value (each 0-5 in half steps, or null where the spec is not published; all
 // six keys required, at least one score), reviews ([{url, title, publishedDate,
 // quote}], at most 6, pages that review how this model drives; left out it
-// keeps the pin's existing reviews, [] clears them), source ('session' |
-// 'hand'), basis, sourceUrl }.
+// keeps the pin's existing reviews, [] clears them), rubricYear (the edition
+// of the criteria the scores were set against, 2020-2100; left out a new row
+// takes the current edition, CAR_PERF_RUBRIC_YEAR, and an existing row keeps
+// its year; a year overwrites it), source ('session' | 'hand'), basis,
+// sourceUrl }.
 export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
   await authorOrAdmin(request, pinId);

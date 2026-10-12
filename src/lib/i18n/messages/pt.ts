@@ -641,6 +641,8 @@ const pt: Messages = {
       value: 'Custo-benefício',
       note: 'Estimativa editorial numa escala de 0 a {max}, com base nas especificações publicadas.',
       estimate: 'Estimativa',
+      rubricYear: 'Critérios de {year}',
+      rubricYearNote: 'Pontuado pelos critérios de {year}, que ficam mais exigentes com o tempo; compare pontuações apenas do mesmo ano.',
       na: 'n/d',
       showAll: 'Mostrar todos os pins com avaliação de desempenho',
       reviews: 'Avaliações independentes',

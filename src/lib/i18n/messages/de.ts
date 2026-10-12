@@ -643,6 +643,8 @@ const de: Messages = {
       value: 'Preis-Leistung',
       note: 'Redaktionelle Einschätzung auf einer Skala von 0 bis {max}, nach veröffentlichten Daten.',
       estimate: 'Schätzung',
+      rubricYear: 'Kriterien {year}',
+      rubricYearNote: 'Bewertet nach den Kriterien von {year}, die mit der Zeit strenger werden; Werte nur innerhalb desselben Jahres vergleichen.',
       na: 'k. A.',
       showAll: 'Alle Pins mit Fahrleistungs-Bewertung anzeigen',
       reviews: 'Unabhängige Testberichte',

@@ -5,12 +5,13 @@
 
 import * as db from '../db';
 import { reviewsProblem } from '@/lib/pinReviews';
-import { CAR_PERF_KEYS, CAR_PERF_MAX, CAR_PERF_SOURCES, MAX_CAR_PERF_REVIEWS, MAX_CAR_PERF_REVIEW_QUOTE, isCarPerfScore, type CarPerfReview, type CarPerfScores, type CarPerfSource, type PinCarPerfJson } from '@/lib/pinCarPerf';
+import { rubricYearProblem } from '@/lib/rubricYear';
+import { CAR_PERF_KEYS, CAR_PERF_RUBRIC_YEAR, CAR_PERF_MAX, CAR_PERF_SOURCES, MAX_CAR_PERF_REVIEWS, MAX_CAR_PERF_REVIEW_QUOTE, isCarPerfScore, type CarPerfReview, type CarPerfScores, type CarPerfSource, type PinCarPerfJson } from '@/lib/pinCarPerf';
 
 type Row = Omit<PinCarPerfJson, 'checkedAt'> & { checkedAt: Date };
 
 // numeric comes back from pg as a string; the cast gives the chart numbers (and keeps NULL).
-const COLUMNS = `${CAR_PERF_KEYS.map((key) => `"${key}"::float8 AS "${key}"`).join(', ')}, "reviews", "source", "basis", "sourceUrl", "checkedAt"`;
+const COLUMNS = `${CAR_PERF_KEYS.map((key) => `"${key}"::float8 AS "${key}"`).join(', ')}, "reviews", "source", "basis", "sourceUrl", "rubricYear", "checkedAt"`;
 
 const toJson = (row: Row): PinCarPerfJson => ({ ...row, checkedAt: new Date(row.checkedAt).toISOString() });
 
@@ -23,7 +24,16 @@ export async function carPerfForPin(pinId: number): Promise<PinCarPerfJson | nul
 // present: a number, or null for a spec the manufacturer does not publish.
 // `reviews` is undefined when the body has no reviews key (a save then keeps
 // the row's existing reviews) and a list - empty to clear them - when it does.
-export function carPerfProblem(body: Record<string, unknown>): { scores: CarPerfScores; reviews: CarPerfReview[] | undefined; source: CarPerfSource; basis: string | null; sourceUrl: string | null } | string {
+// `rubricYear` is likewise undefined when the body has none: an insert then
+// takes the current edition and an update keeps the stored year.
+export function carPerfProblem(body: Record<string, unknown>): {
+  scores: CarPerfScores;
+  reviews: CarPerfReview[] | undefined;
+  rubricYear: number | undefined;
+  source: CarPerfSource;
+  basis: string | null;
+  sourceUrl: string | null;
+} | string {
   const scores = {} as CarPerfScores;
   for (const key of CAR_PERF_KEYS) {
     const value = body[key];
@@ -33,21 +43,30 @@ export function carPerfProblem(body: Record<string, unknown>): { scores: CarPerf
   if (CAR_PERF_KEYS.every((key) => scores[key] === null)) return 'At least one axis needs a score.';
   const reviews = body.reviews === undefined ? undefined : reviewsProblem(body.reviews, { max: MAX_CAR_PERF_REVIEWS, maxQuote: MAX_CAR_PERF_REVIEW_QUOTE });
   if (typeof reviews === 'string') return reviews;
+  const rubricYear = rubricYearProblem(body.rubricYear);
+  if (typeof rubricYear === 'string') return rubricYear;
   const source = String(body.source ?? 'hand') as CarPerfSource;
   if (!CAR_PERF_SOURCES.includes(source)) return `source must be one of ${CAR_PERF_SOURCES.join(', ')}.`;
   const basis = typeof body.basis === 'string' && body.basis.trim() ? body.basis.trim() : null;
   if (basis && basis.length > 1000) return 'basis is at most 1000 characters.';
   const sourceUrl = typeof body.sourceUrl === 'string' && /^https?:\/\/\S+$/i.test(body.sourceUrl) && body.sourceUrl.length <= 4000 ? body.sourceUrl : null;
   if (body.sourceUrl && !sourceUrl) return 'sourceUrl is not a web address.';
-  return { scores, reviews, source, basis, sourceUrl };
+  return { scores, reviews, rubricYear, source, basis, sourceUrl };
 }
 
 // Resolves to whether it was stored (a hand row keeps winning over an estimate).
-// Without `reviews` the row keeps the reviews it has; [] clears them.
-export async function saveCarPerf(pinId: number, scores: CarPerfScores, { reviews, source, basis, sourceUrl }: { reviews?: CarPerfReview[]; source: CarPerfSource; basis?: string | null; sourceUrl?: string | null }): Promise<boolean> {
-  const columns = ['pinId', ...CAR_PERF_KEYS, 'source', 'basis', 'sourceUrl', ...(reviews ? ['reviews'] : [])];
-  const values: unknown[] = [pinId, ...CAR_PERF_KEYS.map((key) => scores[key]), source, basis ?? null, sourceUrl ?? null, ...(reviews ? [JSON.stringify(reviews)] : [])];
-  const updates = columns.slice(1).map((column) => `"${column}" = EXCLUDED."${column}"`);
+// Without `reviews` the row keeps the reviews it has; [] clears them. Without
+// `rubricYear` a new row is scored under the current edition and an existing
+// row keeps the year it has; a year overwrites it (a re-score against a later
+// edition).
+export async function saveCarPerf(
+  pinId: number,
+  scores: CarPerfScores,
+  { reviews, rubricYear, source, basis, sourceUrl }: { reviews?: CarPerfReview[]; rubricYear?: number; source: CarPerfSource; basis?: string | null; sourceUrl?: string | null },
+): Promise<boolean> {
+  const columns = ['pinId', ...CAR_PERF_KEYS, 'source', 'basis', 'sourceUrl', 'rubricYear', ...(reviews ? ['reviews'] : [])];
+  const values: unknown[] = [pinId, ...CAR_PERF_KEYS.map((key) => scores[key]), source, basis ?? null, sourceUrl ?? null, rubricYear ?? CAR_PERF_RUBRIC_YEAR, ...(reviews ? [JSON.stringify(reviews)] : [])];
+  const updates = columns.slice(1).filter((column) => column !== 'rubricYear' || rubricYear !== undefined).map((column) => `"${column}" = EXCLUDED."${column}"`);
   const rows = await db.query(
     `INSERT INTO "PinCarPerf" (${columns.map((column) => `"${column}"`).join(', ')})
      VALUES (${values.map((_, i) => `$${i + 1}${columns[i] === 'reviews' ? '::jsonb' : ''}`).join(', ')})

@@ -413,10 +413,15 @@ get live politicians stock trading alerts
 
 
 
-chinese restaurant landing page tabs should try to get at least 20 restaurant each
-
 chinese ev car news and events and new model releases
 - performance rubrics?
 
 
 add landing page for best ev and gasoline car
+
+
+for people pages, add trading data and etc like these pages. use browser to view if needed.
+
+https://www.quiverquant.com/congresstrading/politician/Nancy%20Pelosi-P000197/opponents
+
+https://www.opensecrets.org/profiles/mike-johnson/us_congress/elections?mpid=1055439

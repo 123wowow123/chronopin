@@ -643,6 +643,8 @@ const ja: Messages = {
       value: 'コストパフォーマンス',
       note: '公表仕様に基づく0〜{max}の段階による編集部の推定値。',
       estimate: '推定',
+      rubricYear: '{year}年の基準',
+      rubricYearNote: '{year}年の基準で採点しています。基準は年々厳しくなるため、同じ年の評価どうしで比較してください。',
       na: '非公表',
       showAll: '車の性能評価のあるピンをすべて表示',
       reviews: '第三者レビュー',

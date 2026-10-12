@@ -3,10 +3,20 @@
 // sibling of the taste radar (src/lib/pinTaste.ts). The anchors for each score
 // are the rubric in docs/okf/scraping/strategy.md ("Car performance rubric").
 //
+// Scores are anchored to the criteria of a rubric year (src/lib/rubricYear.ts):
+// the anchors are re-baselined when CAR_PERF_RUBRIC_YEAR changes, and a row
+// keeps the year it was scored under (shown as "2026 criteria"), so a 2026
+// score is never read against a 2028 one.
+//
 // An axis is null when the spec it rests on is not published for the model:
 // the radar draws it as "n/a" and leaves it out of the shape, never as a zero.
 
 import type { PinReview } from './pinReviews';
+
+// The edition of the criteria new scores are written against. Bump it when the
+// anchors in docs/okf/scraping/strategy.md are tightened: old rows keep the
+// year they were scored under and are re-scored deliberately, not silently.
+export const CAR_PERF_RUBRIC_YEAR = 2026;
 
 export const CAR_PERF_AXES = [
   { key: 'range' },
@@ -42,6 +52,8 @@ export type PinCarPerfJson = CarPerfScores & {
   source: CarPerfSource;
   basis: string | null;
   sourceUrl: string | null;
+  // The edition of the criteria the scores were set against (2020..2100).
+  rubricYear: number;
   checkedAt: string;
 };
 

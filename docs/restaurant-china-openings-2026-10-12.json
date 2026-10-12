@@ -1,0 +1,2390 @@
+{
+  "checkedAt": "2026-10-12",
+  "entries": [
+    {
+      "restaurantId": 1,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Atelier Kaulou — Shanghai",
+        "description": "Contemporary Cantonese at 9/F, 291 Fumin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "sourceUrl": "https://rachelgouk.com/listings/atelier-kaulou/",
+        "address": "9/F, 291 Fumin Road, Shanghai",
+        "productName": "Atelier Kaulou",
+        "utcStartDateTime": "2026-09-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Contemporary Cantonese at 9/F, 291 Fumin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Dongshan Baby Squid — CNY 68</li><li>Boston Lobster Mapo Tofu — CNY 328</li><li>Black Truffle Abalone Chicken Clay Pot — CNY 98</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://rachelgouk.com/listings/atelier-kaulou/",
+            "title": "Atelier Kaulou",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Atelier Kaulou — verified venue facts",
+              "summary": "Contemporary Cantonese at 9/F, 291 Fumin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+              "body": "<p>Contemporary Cantonese at 9/F, 291 Fumin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Dongshan Baby Squid — CNY 68</li><li>Boston Lobster Mapo Tofu — CNY 328</li><li>Black Truffle Abalone Chicken Clay Pot — CNY 98</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/listings/atelier-kaulou/",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/atelier-kaulou/",
+            "name": "Atelier Kaulou",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://rachelgouk.com/atelier-kaulou-shanghais-new-cantonese-showpiece/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Dongshan Baby Squid",
+                    "price": 68
+                  },
+                  {
+                    "name": "Boston Lobster Mapo Tofu",
+                    "price": 328
+                  },
+                  {
+                    "name": "Black Truffle Abalone Chicken Clay Pot",
+                    "price": 98
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-1-0-46b676b19bbd6c3c.webp",
+              "alt": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+              "credit": "Rachel Gouk / Nomfluence",
+              "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+              "originalUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/atelier-jiulou-shanghai-cantonese-restaurant-bar-63.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "researched-atelier-kaulou",
+            "name": "Atelier Kaulou",
+            "neighborhood": "Shanghai",
+            "cuisine": "Contemporary Cantonese",
+            "description": "Contemporary Cantonese at 9/F, 291 Fumin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+            "address": "9/F, 291 Fumin Road, Shanghai",
+            "websiteUrl": "https://rachelgouk.com/listings/atelier-kaulou/",
+            "checkedAt": "2026-10-12",
+            "recognition": "Guide selection with a published branch menu",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-1-0-46b676b19bbd6c3c.webp",
+            "imageCredit": "Rachel Gouk / Nomfluence",
+            "imageSourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/atelier-jiulou-shanghai-cantonese-restaurant-bar-63.jpg",
+            "imageNote": "Published branch gallery photograph; no unlabelled dish availability inferred."
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/atelier-kaulou/",
+            "name": "Atelier Kaulou",
+            "websiteUrl": "https://rachelgouk.com/listings/atelier-kaulou/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://rachelgouk.com/listings/atelier-kaulou/",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-1-0-46b676b19bbd6c3c.webp",
+          "sha256": "46b676b19bbd6c3c599aa3dd0180d3ab87e8b1a07eef673a4b6250124aa24298",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/atelier-jiulou-shanghai-cantonese-restaurant-bar-63.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-1-1-81c7818eab1bcc2a.webp",
+          "sha256": "81c7818eab1bcc2a6559cde14a8850ebc516f6e62278eb4ea6079c7361ad8d34",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/atelier-jiulou-shanghai-cantonese-restaurant-bar-58.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+        "menuSource": "https://rachelgouk.com/atelier-kaulou-shanghais-new-cantonese-showpiece/",
+        "remainingGap": " Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+      }
+    },
+    {
+      "restaurantId": 2,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Uni Shushi — Xintiandi — Shanghai",
+        "description": "Japanese omakase at 3/F, Hubindao Mall, 150 Hubin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "sourceUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+        "address": "3/F, Hubindao Mall, 150 Hubin Road, Shanghai",
+        "productName": "Uni Shushi — Xintiandi",
+        "utcStartDateTime": "2026-09-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Japanese omakase at 3/F, Hubindao Mall, 150 Hubin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Omakase set — CNY 498</li><li>Premium omakase set — CNY 698</li></ul><h2>Nomfluence readers lunch set — CNY 298</h2><p>Nomfluence reader booking required via the linked reservation page; lunch only. Seasonal sushi choices are not fixed.</p><ul><li>Lunch set — ten selected sushi, miso soup, tamagoyaki and dessert — CNY 298</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+            "title": "Uni Shushi — Xintiandi",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Uni Shushi — Xintiandi — verified venue facts",
+              "summary": "Japanese omakase at 3/F, Hubindao Mall, 150 Hubin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+              "body": "<p>Japanese omakase at 3/F, Hubindao Mall, 150 Hubin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Omakase set — CNY 498</li><li>Premium omakase set — CNY 698</li></ul><h2>Nomfluence readers lunch set — CNY 298</h2><p>Nomfluence reader booking required via the linked reservation page; lunch only. Seasonal sushi choices are not fixed.</p><ul><li>Lunch set — ten selected sushi, miso soup, tamagoyaki and dessert — CNY 298</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+            "name": "Uni Shushi — Xintiandi",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Omakase set",
+                    "price": 498
+                  },
+                  {
+                    "name": "Premium omakase set",
+                    "price": 698
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+              },
+              {
+                "label": "Nomfluence readers lunch set — CNY 298",
+                "url": "https://rachelgouk.com/affordable-omakase-uni-shushi-expands-to-xintiandi/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch set — ten selected sushi, miso soup, tamagoyaki and dessert",
+                    "price": 298
+                  }
+                ],
+                "note": "Nomfluence reader booking required via the linked reservation page; lunch only. Seasonal sushi choices are not fixed."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-2-0-d18cebdea599cd86.webp",
+              "alt": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+              "credit": "Rachel Gouk / Nomfluence",
+              "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+              "originalUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/uni-shushi-omakase-japanese-sushi-shanghai-xintiandi-02.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "researched-uni-xintiandi",
+            "name": "Uni Shushi — Xintiandi",
+            "neighborhood": "Shanghai",
+            "cuisine": "Japanese omakase",
+            "description": "Japanese omakase at 3/F, Hubindao Mall, 150 Hubin Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+            "address": "3/F, Hubindao Mall, 150 Hubin Road, Shanghai",
+            "websiteUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+            "checkedAt": "2026-10-12",
+            "recognition": "Guide selection with a published branch menu",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-2-0-d18cebdea599cd86.webp",
+            "imageCredit": "Rachel Gouk / Nomfluence",
+            "imageSourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/uni-shushi-omakase-japanese-sushi-shanghai-xintiandi-02.jpg",
+            "imageNote": "Published branch gallery photograph; no unlabelled dish availability inferred."
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+            "name": "Uni Shushi — Xintiandi",
+            "websiteUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "special": {
+        "enabled": true,
+        "regionSlug": "shanghai",
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+          "name": "Uni Shushi — Xintiandi",
+          "checkedAt": "2026-10-12",
+          "menus": [
+            {
+              "label": "Published branch selection",
+              "url": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Omakase set",
+                  "price": 498
+                },
+                {
+                  "name": "Premium omakase set",
+                  "price": 698
+                }
+              ],
+              "note": "Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+            },
+            {
+              "label": "Nomfluence readers lunch set — CNY 298",
+              "url": "https://rachelgouk.com/affordable-omakase-uni-shushi-expands-to-xintiandi/",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Lunch set — ten selected sushi, miso soup, tamagoyaki and dessert",
+                  "price": 298
+                }
+              ],
+              "note": "Nomfluence reader booking required via the linked reservation page; lunch only. Seasonal sushi choices are not fixed."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "lunch",
+              "title": "Nomfluence readers lunch set — CNY 298",
+              "description": "Nomfluence reader booking required via the linked reservation page; lunch only. Seasonal sushi choices are not fixed.",
+              "schedule": "11:30–14:00 Asia/Shanghai",
+              "conditions": [
+                "Nomfluence reader booking required via the linked reservation page; lunch only. Seasonal sushi choices are not fixed."
+              ],
+              "sourceUrl": "https://rachelgouk.com/affordable-omakase-uni-shushi-expands-to-xintiandi/",
+              "validFrom": "2026-09-29",
+              "validThrough": "2026-12-31",
+              "limitedTime": true,
+              "discounted": false,
+              "menuLabel": "Nomfluence readers lunch set — CNY 298",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-2-0-d18cebdea599cd86.webp",
+            "alt": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+            "credit": "Rachel Gouk / Nomfluence",
+            "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "originalUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/uni-shushi-omakase-japanese-sushi-shanghai-xintiandi-02.jpg",
+            "checkedAt": "2026-10-12"
+          },
+          "address": "3/F, Hubindao Mall, 150 Hubin Road, Shanghai",
+          "neighborhood": "Shanghai",
+          "websiteUrl": "https://rachelgouk.com/listings/uni-shushi-xintiandi/"
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-2-0-d18cebdea599cd86.webp",
+          "sha256": "d18cebdea599cd86d2471f44bbb37f8d8d32fdd2f49a75de294898bba62681f5",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/uni-shushi-omakase-japanese-sushi-shanghai-xintiandi-02.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-2-1-03294f71aac68927.webp",
+          "sha256": "03294f71aac68927d60b01d440f25e192c74777209564323460efe4d133012ae",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/uni-shushi-omakase-japanese-sushi-shanghai-xintiandi-17.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+        "menuSource": "https://rachelgouk.com/listings/uni-shushi-xintiandi/",
+        "remainingGap": " Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+      }
+    },
+    {
+      "restaurantId": 3,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Leyas Middle Eastern Cuisine — Shanghai",
+        "description": "Middle Eastern at No. 18, 181 Taicang Road, Xintiandi, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "sourceUrl": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+        "address": "No. 18, 181 Taicang Road, Xintiandi, Shanghai",
+        "productName": "Leyas Middle Eastern Cuisine",
+        "utcStartDateTime": "2026-09-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Middle Eastern at No. 18, 181 Taicang Road, Xintiandi, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Lamb shank over saffron rice — Price not published</li><li>Batata Harra — Price not published</li><li>Sambousek Lahme — Price not published</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+            "title": "Leyas Middle Eastern Cuisine",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Leyas Middle Eastern Cuisine — verified venue facts",
+              "summary": "Middle Eastern at No. 18, 181 Taicang Road, Xintiandi, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+              "body": "<p>Middle Eastern at No. 18, 181 Taicang Road, Xintiandi, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Lamb shank over saffron rice — Price not published</li><li>Batata Harra — Price not published</li><li>Sambousek Lahme — Price not published</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+            "name": "Leyas Middle Eastern Cuisine",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lamb shank over saffron rice",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Batata Harra",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Sambousek Lahme",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-3-0-8ace640d342657b2.webp",
+              "alt": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+              "credit": "Rachel Gouk / Nomfluence",
+              "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+              "originalUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/leyas-middle-eastern-halal-restaurant-shanghai-xintiandi-06-rotated.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "researched-leyas",
+            "name": "Leyas Middle Eastern Cuisine",
+            "neighborhood": "Shanghai",
+            "cuisine": "Middle Eastern",
+            "description": "Middle Eastern at No. 18, 181 Taicang Road, Xintiandi, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+            "address": "No. 18, 181 Taicang Road, Xintiandi, Shanghai",
+            "websiteUrl": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+            "checkedAt": "2026-10-12",
+            "recognition": "Guide selection with a published branch menu",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-3-0-8ace640d342657b2.webp",
+            "imageCredit": "Rachel Gouk / Nomfluence",
+            "imageSourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/leyas-middle-eastern-halal-restaurant-shanghai-xintiandi-06-rotated.jpg",
+            "imageNote": "Published branch gallery photograph; no unlabelled dish availability inferred."
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+            "name": "Leyas Middle Eastern Cuisine",
+            "websiteUrl": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-3-0-8ace640d342657b2.webp",
+          "sha256": "8ace640d342657b2aba13ac459d43566273d2ff11a3ef8b8785a8e9cb9e909ca",
+          "width": 800,
+          "height": 527,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/leyas-middle-eastern-halal-restaurant-shanghai-xintiandi-06-rotated.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-3-1-dab92e0fead401b9.webp",
+          "sha256": "dab92e0fead401b9fec20579a951f51b3ef57629cf9c5d5a44c0ea663bbc519a",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/leyas-middle-eastern-halal-restaurant-shanghai-xintiandi-07.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+        "menuSource": "https://rachelgouk.com/listings/leyas-middle-eastern-cuisine/",
+        "remainingGap": " Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+      }
+    },
+    {
+      "restaurantId": 4,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Caffe Yaya — Shanghai",
+        "description": "Chinese-Italian at 1/F, NOA Hotel, 969 Wuding Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "sourceUrl": "https://rachelgouk.com/listings/caffe-yaya/",
+        "address": "1/F, NOA Hotel, 969 Wuding Road, Shanghai",
+        "productName": "Caffe Yaya",
+        "utcStartDateTime": "2026-09-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Chinese-Italian at 1/F, NOA Hotel, 969 Wuding Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Black pepper steak spaghetti — CNY 108</li><li>Spicy mala sausage and tomato spaghetti — CNY 88</li><li>Creamy salmon — CNY 98</li><li>Burrata salad — CNY 108</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://rachelgouk.com/listings/caffe-yaya/",
+            "title": "Caffe Yaya",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Caffe Yaya — verified venue facts",
+              "summary": "Chinese-Italian at 1/F, NOA Hotel, 969 Wuding Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+              "body": "<p>Chinese-Italian at 1/F, NOA Hotel, 969 Wuding Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Black pepper steak spaghetti — CNY 108</li><li>Spicy mala sausage and tomato spaghetti — CNY 88</li><li>Creamy salmon — CNY 98</li><li>Burrata salad — CNY 108</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/listings/caffe-yaya/",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/caffe-yaya/",
+            "name": "Caffe Yaya",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://rachelgouk.com/caffe-yaya-chinese-italian-pasta-viral-affogatos/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Black pepper steak spaghetti",
+                    "price": 108
+                  },
+                  {
+                    "name": "Spicy mala sausage and tomato spaghetti",
+                    "price": 88
+                  },
+                  {
+                    "name": "Creamy salmon",
+                    "price": 98
+                  },
+                  {
+                    "name": "Burrata salad",
+                    "price": 108
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-4-0-f27798328d859e9b.webp",
+              "alt": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+              "credit": "Rachel Gouk / Nomfluence",
+              "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+              "originalUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/caffe-yayas-italian-restaurant-shanghai-19.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "researched-caffe-yaya",
+            "name": "Caffe Yaya",
+            "neighborhood": "Shanghai",
+            "cuisine": "Chinese-Italian",
+            "description": "Chinese-Italian at 1/F, NOA Hotel, 969 Wuding Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+            "address": "1/F, NOA Hotel, 969 Wuding Road, Shanghai",
+            "websiteUrl": "https://rachelgouk.com/listings/caffe-yaya/",
+            "checkedAt": "2026-10-12",
+            "recognition": "Guide selection with a published branch menu",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-4-0-f27798328d859e9b.webp",
+            "imageCredit": "Rachel Gouk / Nomfluence",
+            "imageSourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/caffe-yayas-italian-restaurant-shanghai-19.jpg",
+            "imageNote": "Published branch gallery photograph; no unlabelled dish availability inferred."
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/caffe-yaya/",
+            "name": "Caffe Yaya",
+            "websiteUrl": "https://rachelgouk.com/listings/caffe-yaya/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://rachelgouk.com/listings/caffe-yaya/",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-4-0-f27798328d859e9b.webp",
+          "sha256": "f27798328d859e9b6aaa0f6455ef5790ec5bdf3f211a1d84d5442713c2fae3f6",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/caffe-yayas-italian-restaurant-shanghai-19.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-4-1-ec5ecdfb78bde296.webp",
+          "sha256": "ec5ecdfb78bde2965b28421871fabedbcf89c7ad565cb0ac4cea5dbc7eb4c521",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/caffe-yayas-italian-restaurant-shanghai-09.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+        "menuSource": "https://rachelgouk.com/caffe-yaya-chinese-italian-pasta-viral-affogatos/",
+        "remainingGap": " Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+      }
+    },
+    {
+      "restaurantId": 5,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Melt in July — Plaza 66 — Shanghai",
+        "description": "Chinese farm-to-table at 5/F, Plaza 66, 1266 Nanjing West Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.",
+        "sourceUrl": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+        "address": "5/F, Plaza 66, 1266 Nanjing West Road, Shanghai",
+        "productName": "Melt in July — Plaza 66",
+        "utcStartDateTime": "2026-09-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Chinese farm-to-table at 5/F, Plaza 66, 1266 Nanjing West Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.</p><ul><li>Tomato and egg stir-fry — Price not published</li><li>Braised beef brisket — Price not published</li><li>Yellow croaker rice — Price not published</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+            "title": "Melt in July — Plaza 66",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Melt in July — Plaza 66 — verified venue facts",
+              "summary": "Chinese farm-to-table at 5/F, Plaza 66, 1266 Nanjing West Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.",
+              "body": "<p>Chinese farm-to-table at 5/F, Plaza 66, 1266 Nanjing West Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.</p><ul><li>Tomato and egg stir-fry — Price not published</li><li>Braised beef brisket — Price not published</li><li>Yellow croaker rice — Price not published</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+            "name": "Melt in July — Plaza 66",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tomato and egg stir-fry",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Braised beef brisket",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Yellow croaker rice",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-5-0-5667be75a4dd621f.webp",
+              "alt": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+              "credit": "Rachel Gouk / Nomfluence",
+              "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+              "originalUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/melt-in-july-farm-house-restaurant-shanghai-40.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "researched-melt-july",
+            "name": "Melt in July — Plaza 66",
+            "neighborhood": "Shanghai",
+            "cuisine": "Chinese farm-to-table",
+            "description": "Chinese farm-to-table at 5/F, Plaza 66, 1266 Nanjing West Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date.",
+            "address": "5/F, Plaza 66, 1266 Nanjing West Road, Shanghai",
+            "websiteUrl": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+            "checkedAt": "2026-10-12",
+            "recognition": "Guide selection with a published branch menu",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-5-0-5667be75a4dd621f.webp",
+            "imageCredit": "Rachel Gouk / Nomfluence",
+            "imageSourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/melt-in-july-farm-house-restaurant-shanghai-40.jpg",
+            "imageNote": "Published branch gallery photograph; no unlabelled dish availability inferred."
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+            "name": "Melt in July — Plaza 66",
+            "websiteUrl": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-5-0-5667be75a4dd621f.webp",
+          "sha256": "5667be75a4dd621f774700ed92aeb46cda9697c11d1b1024ef59affdcb79352a",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/melt-in-july-farm-house-restaurant-shanghai-40.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-5-1-1d33ed75e9d631df.webp",
+          "sha256": "1d33ed75e9d631df97d1bf7c860c90f94f384d606e5562a1e68f4e7ffec01786",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/melt-in-july-farm-house-restaurant-shanghai-14.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+        "menuSource": "https://rachelgouk.com/listings/melt-in-july-farm-house/",
+        "remainingGap": " Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date. Operator recruitment and first-half-year reporting indicate a June-or-earlier launch; September roundup is not an opening date."
+      }
+    },
+    {
+      "restaurantId": 6,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Horse & Cow — Shanghai",
+        "description": "French-Chinese bistro at 4-1 Xiangyang North Road, Shanghai. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "sourceUrl": "https://rachelgouk.com/listings/horse-cow/",
+        "address": "4-1 Xiangyang North Road, Shanghai",
+        "productName": "Horse & Cow",
+        "utcStartDateTime": "2026-09-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms operation by the dated report; opening date remains unknown. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>French-Chinese bistro at 4-1 Xiangyang North Road, Shanghai. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Spicy cream seafood pasta — Price not published</li><li>Prawn gnocchi with chilies — Price not published</li><li>Fried river shrimp — Price not published</li></ul><p>Source confirms operation by the dated report; opening date remains unknown. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+        "references": [
+          {
+            "url": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms operation by the dated report; opening date remains unknown. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://rachelgouk.com/listings/horse-cow/",
+            "title": "Horse & Cow",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Horse & Cow — verified venue facts",
+              "summary": "French-Chinese bistro at 4-1 Xiangyang North Road, Shanghai. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+              "body": "<p>French-Chinese bistro at 4-1 Xiangyang North Road, Shanghai. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Spicy cream seafood pasta — Price not published</li><li>Prawn gnocchi with chilies — Price not published</li><li>Fried river shrimp — Price not published</li></ul><p>Source confirms operation by the dated report; opening date remains unknown. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://rachelgouk.com/listings/horse-cow/",
+          "menu": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/horse-cow/",
+            "name": "Horse & Cow",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://rachelgouk.com/listings/horse-cow/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Spicy cream seafood pasta",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Prawn gnocchi with chilies",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fried river shrimp",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-6-0-6f798eebaa226d90.webp",
+              "alt": "Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting.",
+              "credit": "Rachel Gouk / Nomfluence",
+              "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+              "originalUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/horse-cow-wine-bar-restaurant-shanghai-06.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "researched-horse-cow",
+            "name": "Horse & Cow",
+            "neighborhood": "Shanghai",
+            "cuisine": "French-Chinese bistro",
+            "description": "French-Chinese bistro at 4-1 Xiangyang North Road, Shanghai. Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+            "address": "4-1 Xiangyang North Road, Shanghai",
+            "websiteUrl": "https://rachelgouk.com/listings/horse-cow/",
+            "checkedAt": "2026-10-12",
+            "recognition": "Guide selection with a published branch menu",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-6-0-6f798eebaa226d90.webp",
+            "imageCredit": "Rachel Gouk / Nomfluence",
+            "imageSourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/horse-cow-wine-bar-restaurant-shanghai-06.jpg",
+            "imageNote": "Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting."
+          },
+          "details": {
+            "pinSourceUrl": "https://rachelgouk.com/listings/horse-cow/",
+            "name": "Horse & Cow",
+            "websiteUrl": "https://rachelgouk.com/listings/horse-cow/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://rachelgouk.com/listings/horse-cow/",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-6-0-6f798eebaa226d90.webp",
+          "sha256": "6f798eebaa226d90704b832c16556faa505d97e2ee8b936e0d41558e9a96eeef",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/horse-cow-wine-bar-restaurant-shanghai-06.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-6-1-0738ad2fdd934f8d.webp",
+          "sha256": "0738ad2fdd934f8d278a8fbaca4b9d69492f94726e2f2be9ca98fe1813c6c2de",
+          "width": 800,
+          "height": 533,
+          "credit": "Rachel Gouk / Nomfluence",
+          "note": "Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting.",
+          "sourcePage": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+          "sourceUrl": "https://rachelgouk.com/wp-content/uploads/2026/09/horse-cow-wine-bar-restaurant-shanghai-02.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+        "menuSource": "https://rachelgouk.com/listings/horse-cow/",
+        "remainingGap": "Directory English and Chinese street directions conflict; confirm the entrance with the venue before visiting. Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+      }
+    },
+    {
+      "restaurantId": 7,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Le Chai Charcoal Grill — Shanghai",
+        "description": "Charcoal grill at 1052-3 Wuding Road, Shanghai. Reported opening in mid-September; exact day not published.",
+        "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+        "address": "1052-3 Wuding Road, Shanghai",
+        "productName": "Le Chai Charcoal Grill",
+        "utcStartDateTime": "2026-09-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms opening in mid-September 2026; exact day unpublished. Reported opening in mid-September; exact day not published.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Charcoal grill at 1052-3 Wuding Road, Shanghai. Reported opening in mid-September; exact day not published.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Reported opening in mid-September; exact day not published.</p><ul><li>Marinated beef short ribs — Price not published</li><li>Charcoal-grilled saury — Price not published</li></ul><p>Source confirms opening in mid-September 2026; exact day unpublished. Reported opening in mid-September; exact day not published.</p>",
+        "references": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms opening in mid-September 2026; exact day unpublished. Reported opening in mid-September; exact day not published."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+            "title": "Le Chai Charcoal Grill",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Le Chai Charcoal Grill — verified venue facts",
+              "summary": "Charcoal grill at 1052-3 Wuding Road, Shanghai. Reported opening in mid-September; exact day not published.",
+              "body": "<p>Charcoal grill at 1052-3 Wuding Road, Shanghai. Reported opening in mid-September; exact day not published.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Reported opening in mid-September; exact day not published.</p><ul><li>Marinated beef short ribs — Price not published</li><li>Charcoal-grilled saury — Price not published</li></ul><p>Source confirms opening in mid-September 2026; exact day unpublished. Reported opening in mid-September; exact day not published.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+          "menu": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+            "name": "Le Chai Charcoal Grill",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Marinated beef short ribs",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Charcoal-grilled saury",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. Reported opening in mid-September; exact day not published."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-7-0-55e5d9d385a3c6e0.webp",
+              "alt": "Reported opening in mid-September; exact day not published.",
+              "credit": "Venue-provided (Ti Gong) / City News Service",
+              "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+              "originalUrl": "https://obj.shine.cn/files/2026/09/25/fef7d0f0-0075-43b5-bdb8-68f1dca36ac1_0.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "opening",
+            "slug": "researched-le-chai",
+            "name": "Le Chai Charcoal Grill",
+            "neighborhood": "Shanghai",
+            "cuisine": "Charcoal grill",
+            "description": "Charcoal grill at 1052-3 Wuding Road, Shanghai. Reported opening in mid-September; exact day not published.",
+            "address": "1052-3 Wuding Road, Shanghai",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+            "checkedAt": "2026-10-12",
+            "recognition": "Sourced venue-specific opening report",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-7-0-55e5d9d385a3c6e0.webp",
+            "imageCredit": "Venue-provided (Ti Gong) / City News Service",
+            "imageSourceUrl": "https://obj.shine.cn/files/2026/09/25/fef7d0f0-0075-43b5-bdb8-68f1dca36ac1_0.jpg",
+            "imageNote": "Reported opening in mid-September; exact day not published.",
+            "day": "2026-09-15",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+            "name": "Le Chai Charcoal Grill",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-7-0-55e5d9d385a3c6e0.webp",
+          "sha256": "55e5d9d385a3c6e00e6a66d5f364a595c22a503ede282117bf201818eaec005d",
+          "width": 940,
+          "height": 1174,
+          "credit": "Venue-provided (Ti Gong) / City News Service",
+          "note": "Reported opening in mid-September; exact day not published.",
+          "sourcePage": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+          "sourceUrl": "https://obj.shine.cn/files/2026/09/25/fef7d0f0-0075-43b5-bdb8-68f1dca36ac1_0.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-7-1-4c900f4176d6a6b8.webp",
+          "sha256": "4c900f4176d6a6b8e796940983f6f0b72e35f748baf1bd23bc7ee855655ab8e6",
+          "width": 940,
+          "height": 956,
+          "credit": "Venue-provided (Ti Gong) / City News Service",
+          "note": "Reported opening in mid-September; exact day not published.",
+          "sourcePage": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+          "sourceUrl": "https://obj.shine.cn/files/2026/09/25/4199b652-14b4-494d-a179-d771ff8b9008_0.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+        "menuSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#le-chai",
+        "remainingGap": "Reported opening in mid-September; exact day not published."
+      }
+    },
+    {
+      "restaurantId": 8,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Accents 洋泾浜 — Shanghai",
+        "description": "Contemporary Chinese-French at Room 202, 47 Yongfu Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+        "address": "Room 202, 47 Yongfu Road, Shanghai",
+        "productName": "Accents 洋泾浜",
+        "utcStartDateTime": "2026-09-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Contemporary Chinese-French at Room 202, 47 Yongfu Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Roasted pork collar steak with scallion fondue — CNY 238</li><li>Baked eggplant with wagyu ragù and Parmesan — CNY 138</li><li>M7 Australian wagyu ribeye with XO bone sauce — CNY 498</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+            "title": "Accents 洋泾浜",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Accents 洋泾浜 — verified venue facts",
+              "summary": "Contemporary Chinese-French at Room 202, 47 Yongfu Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+              "body": "<p>Contemporary Chinese-French at Room 202, 47 Yongfu Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Roasted pork collar steak with scallion fondue — CNY 238</li><li>Baked eggplant with wagyu ragù and Parmesan — CNY 138</li><li>M7 Australian wagyu ribeye with XO bone sauce — CNY 498</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+          "menu": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+            "name": "Accents 洋泾浜",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Roasted pork collar steak with scallion fondue",
+                    "price": 238
+                  },
+                  {
+                    "name": "Baked eggplant with wagyu ragù and Parmesan",
+                    "price": 138
+                  },
+                  {
+                    "name": "M7 Australian wagyu ribeye with XO bone sauce",
+                    "price": 498
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-8-0-cf309f4edeb4da52.webp",
+              "alt": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+              "credit": "Venue-provided (Ti Gong) / City News Service",
+              "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+              "originalUrl": "https://obj.shine.cn/files/2026/09/25/511b3c07-a0d0-4fe5-bee0-fa8bb3f87d8f_0.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "researched-accents",
+            "name": "Accents 洋泾浜",
+            "neighborhood": "Shanghai",
+            "cuisine": "Contemporary Chinese-French",
+            "description": "Contemporary Chinese-French at Room 202, 47 Yongfu Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+            "address": "Room 202, 47 Yongfu Road, Shanghai",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+            "checkedAt": "2026-10-12",
+            "recognition": "Guide selection with a published branch menu",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-8-0-cf309f4edeb4da52.webp",
+            "imageCredit": "Venue-provided (Ti Gong) / City News Service",
+            "imageSourceUrl": "https://obj.shine.cn/files/2026/09/25/511b3c07-a0d0-4fe5-bee0-fa8bb3f87d8f_0.jpg",
+            "imageNote": "Published branch gallery photograph; no unlabelled dish availability inferred."
+          },
+          "details": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+            "name": "Accents 洋泾浜",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-8-0-cf309f4edeb4da52.webp",
+          "sha256": "cf309f4edeb4da523cbc43636034ce58d9067de749ff80ce958129d13c183153",
+          "width": 940,
+          "height": 1145,
+          "credit": "Venue-provided (Ti Gong) / City News Service",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+          "sourceUrl": "https://obj.shine.cn/files/2026/09/25/511b3c07-a0d0-4fe5-bee0-fa8bb3f87d8f_0.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+        "menuSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+        "remainingGap": " Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+      }
+    },
+    {
+      "restaurantId": 9,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Bar Cerino — Shanghai",
+        "description": "Italian café and cocktail bar at Rooms 101 and 201, 130 Yongjia Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+        "address": "Rooms 101 and 201, 130 Yongjia Road, Shanghai",
+        "productName": "Bar Cerino",
+        "utcStartDateTime": "2026-09-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Italian café and cocktail bar at Rooms 101 and 201, 130 Yongjia Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Maritozzo — Price not published</li><li>Garibaldi — Price not published</li><li>Sesame Martini — Price not published</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+            "title": "Bar Cerino",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Bar Cerino — verified venue facts",
+              "summary": "Italian café and cocktail bar at Rooms 101 and 201, 130 Yongjia Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+              "body": "<p>Italian café and cocktail bar at Rooms 101 and 201, 130 Yongjia Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p><ul><li>Maritozzo — Price not published</li><li>Garibaldi — Price not published</li><li>Sesame Martini — Price not published</li></ul><p>Source confirms operation by the dated report; opening date remains unknown.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+          "menu": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+            "name": "Bar Cerino",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Maritozzo",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Garibaldi",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Sesame Martini",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-9-0-7156f7e42f893a47.webp",
+              "alt": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+              "credit": "Sophie Steiner / City News Service",
+              "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+              "originalUrl": "https://obj.shine.cn/files/2026/09/25/5ea30a0a-c950-42ed-a051-67685d62b0aa_0.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "top",
+            "slug": "researched-bar-cerino",
+            "name": "Bar Cerino",
+            "neighborhood": "Shanghai",
+            "cuisine": "Italian café and cocktail bar",
+            "description": "Italian café and cocktail bar at Rooms 101 and 201, 130 Yongjia Road, Shanghai.  Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date.",
+            "address": "Rooms 101 and 201, 130 Yongjia Road, Shanghai",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+            "checkedAt": "2026-10-12",
+            "recognition": "Guide selection with a published branch menu",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-9-0-7156f7e42f893a47.webp",
+            "imageCredit": "Sophie Steiner / City News Service",
+            "imageSourceUrl": "https://obj.shine.cn/files/2026/09/25/5ea30a0a-c950-42ed-a051-67685d62b0aa_0.jpg",
+            "imageNote": "Published branch gallery photograph; no unlabelled dish availability inferred."
+          },
+          "details": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+            "name": "Bar Cerino",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-9-0-7156f7e42f893a47.webp",
+          "sha256": "7156f7e42f893a47a96db0e38719ff46c144544c88710f0f293febc7cedf0568",
+          "width": 940,
+          "height": 1175,
+          "credit": "Sophie Steiner / City News Service",
+          "note": "Published branch gallery photograph; no unlabelled dish availability inferred.",
+          "sourcePage": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+          "sourceUrl": "https://obj.shine.cn/files/2026/09/25/5ea30a0a-c950-42ed-a051-67685d62b0aa_0.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+        "menuSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+        "remainingGap": " Opening day/month is not sufficiently confirmed; included in Top restaurants rather than Just opened. The pin date is a dated report of operation, not an opening date."
+      }
+    },
+    {
+      "restaurantId": 10,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Molo di Dario — Shanghai",
+        "description": "Chinese-Italian seafood at Room 101, 1101 Wuding Road, Shanghai. Source confirms opening at the beginning of August; exact day not published.",
+        "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+        "address": "Room 101, 1101 Wuding Road, Shanghai",
+        "productName": "Molo di Dario",
+        "utcStartDateTime": "2026-08-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Source confirms opening at the beginning of August 2026; exact day unpublished. Source confirms opening at the beginning of August; exact day not published.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Chinese-Italian seafood at Room 101, 1101 Wuding Road, Shanghai. Source confirms opening at the beginning of August; exact day not published.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Source confirms opening at the beginning of August; exact day not published.</p><ul><li>Wood-grilled yellow croaker — Price not published</li><li>South China striped cuttlefish — Price not published</li><li>Seafood risotto — Price not published</li></ul><p>Source confirms opening at the beginning of August 2026; exact day unpublished. Source confirms opening at the beginning of August; exact day not published.</p>",
+        "references": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Source confirms opening at the beginning of August 2026; exact day unpublished. Source confirms opening at the beginning of August; exact day not published."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+            "title": "Molo di Dario",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Molo di Dario — verified venue facts",
+              "summary": "Chinese-Italian seafood at Room 101, 1101 Wuding Road, Shanghai. Source confirms opening at the beginning of August; exact day not published.",
+              "body": "<p>Chinese-Italian seafood at Room 101, 1101 Wuding Road, Shanghai. Source confirms opening at the beginning of August; exact day not published.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Source confirms opening at the beginning of August; exact day not published.</p><ul><li>Wood-grilled yellow croaker — Price not published</li><li>South China striped cuttlefish — Price not published</li><li>Seafood risotto — Price not published</li></ul><p>Source confirms opening at the beginning of August 2026; exact day unpublished. Source confirms opening at the beginning of August; exact day not published.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+          "menu": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+            "name": "Molo di Dario",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Wood-grilled yellow croaker",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "South China striped cuttlefish",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Seafood risotto",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. Source confirms opening at the beginning of August; exact day not published."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-10-8-a588bfd30dbaa7aa.webp",
+              "alt": "Source confirms opening at the beginning of August; exact day not published.",
+              "credit": "Venue-provided (Ti Gong) / City News Service",
+              "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m",
+              "originalUrl": "https://obj.shine.cn/files/2026/08/29/21924525-2ff8-4a6b-a084-29e194848a8d_0.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "opening",
+            "slug": "researched-molo-dario",
+            "name": "Molo di Dario",
+            "neighborhood": "Shanghai",
+            "cuisine": "Chinese-Italian seafood",
+            "description": "Chinese-Italian seafood at Room 101, 1101 Wuding Road, Shanghai. Source confirms opening at the beginning of August; exact day not published.",
+            "address": "Room 101, 1101 Wuding Road, Shanghai",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+            "checkedAt": "2026-10-12",
+            "recognition": "Sourced venue-specific opening report",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-10-8-a588bfd30dbaa7aa.webp",
+            "imageCredit": "Venue-provided (Ti Gong) / City News Service",
+            "imageSourceUrl": "https://obj.shine.cn/files/2026/08/29/21924525-2ff8-4a6b-a084-29e194848a8d_0.jpg",
+            "imageNote": "Source confirms opening at the beginning of August; exact day not published.",
+            "day": "2026-08-01",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+            "name": "Molo di Dario",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-10-8-a588bfd30dbaa7aa.webp",
+          "sha256": "a588bfd30dbaa7aae6fe207b2934b636490149102585b3105bcc149a38e693d2",
+          "width": 940,
+          "height": 705,
+          "credit": "Venue-provided (Ti Gong) / City News Service",
+          "note": "Source confirms opening at the beginning of August; exact day not published.",
+          "sourcePage": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m",
+          "sourceUrl": "https://obj.shine.cn/files/2026/08/29/21924525-2ff8-4a6b-a084-29e194848a8d_0.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-10-9-ac7d66392b975996.webp",
+          "sha256": "ac7d66392b975996b8fdf64744529c284ab467eb630f91ee76d3c20bbe8823a9",
+          "width": 940,
+          "height": 628,
+          "credit": "Sophie Steiner / City News Service",
+          "note": "Chef Dario, photographed for the specific Molo di Dario opening report; no dish availability inferred.",
+          "sourcePage": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m",
+          "sourceUrl": "https://obj.shine.cn/files/2026/08/29/4ee5e9e3-bf77-407a-a9f2-15c9984f937d_0.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m",
+        "menuSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-august-11-new-places-rooftops-french-buffets-juju-gno5q07m#molo-di-dario",
+        "remainingGap": "Source confirms opening at the beginning of August; exact day not published."
+      }
+    },
+    {
+      "restaurantId": 11,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Feral Xiaoye — planned reopening — Shanghai",
+        "description": "Vietnamese at Yuyuan Road, Jing’an, Shanghai. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.",
+        "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+        "address": "Yuyuan Road, Jing’an, Shanghai",
+        "productName": "Feral Xiaoye — planned reopening",
+        "utcStartDateTime": "2026-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Announced October 2026 opening; the month-end date is a sorting placeholder, not a confirmed opening day. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shanghai",
+          "China"
+        ],
+        "longFormSummary": "<p>Vietnamese at Yuyuan Road, Jing’an, Shanghai. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.</p><h2>Announced opening menu</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.</p><ul><li>Banh mi sandwiches — Price not published</li><li>Pho — Price not published</li></ul><p>Announced October 2026 opening; the month-end date is a sorting placeholder, not a confirmed opening day. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.</p>",
+        "references": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Announced October 2026 opening; the month-end date is a sorting placeholder, not a confirmed opening day. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+            "title": "Feral Xiaoye — planned reopening",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Feral Xiaoye — planned reopening — verified venue facts",
+              "summary": "Vietnamese at Yuyuan Road, Jing’an, Shanghai. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.",
+              "body": "<p>Vietnamese at Yuyuan Road, Jing’an, Shanghai. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.</p><h2>Announced opening menu</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.</p><ul><li>Banh mi sandwiches — Price not published</li><li>Pho — Price not published</li></ul><p>Announced October 2026 opening; the month-end date is a sorting placeholder, not a confirmed opening day. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shanghai"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+          "menu": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+            "name": "Feral Xiaoye — planned reopening",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Announced opening menu",
+                "url": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Banh mi sandwiches",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pho",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-11-0-5cd459ae973e346b.webp",
+              "alt": "Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.",
+              "credit": "Sophie Steiner / City News Service",
+              "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+              "originalUrl": "https://obj.shine.cn/files/2026/09/25/81e9681e-895f-428d-be45-30c7d3e78efc_0.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shanghai",
+            "kind": "opening",
+            "slug": "researched-feral-xiaoye",
+            "name": "Feral Xiaoye — planned reopening",
+            "neighborhood": "Shanghai",
+            "cuisine": "Vietnamese",
+            "description": "Vietnamese at Yuyuan Road, Jing’an, Shanghai. Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.",
+            "address": "Yuyuan Road, Jing’an, Shanghai",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+            "checkedAt": "2026-10-12",
+            "recognition": "Sourced venue-specific opening report",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-11-0-5cd459ae973e346b.webp",
+            "imageCredit": "Sophie Steiner / City News Service",
+            "imageSourceUrl": "https://obj.shine.cn/files/2026/09/25/81e9681e-895f-428d-be45-30c7d3e78efc_0.jpg",
+            "imageNote": "Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.",
+            "day": "2026-10-31",
+            "openingConfirmed": false
+          },
+          "details": {
+            "pinSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+            "name": "Feral Xiaoye — planned reopening",
+            "websiteUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shanghai/researched/opening-11-0-5cd459ae973e346b.webp",
+          "sha256": "5cd459ae973e346ba75d4a075013398081d4ff8ef30a7e7244f46dda9abfe3d0",
+          "width": 940,
+          "height": 628,
+          "credit": "Sophie Steiner / City News Service",
+          "note": "Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu.",
+          "sourcePage": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+          "sourceUrl": "https://obj.shine.cn/files/2026/09/25/81e9681e-895f-428d-be45-30c7d3e78efc_0.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk",
+        "menuSource": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#feral-xiaoye",
+        "remainingGap": "Announced for October. Reports conflict between 753 and 863 Yuyuan Road; the final address and opening day remain unconfirmed. Photo shows the earlier Feral concept, not the forthcoming branch or a confirmed new-branch menu."
+      }
+    },
+    {
+      "restaurantId": 12,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Feicui Taizi · Shengyan — Foshan",
+        "description": "Cantonese / Shunde at Lingzhan Tower, Tanzhou International Convention and Exhibition Center, Foshan. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.",
+        "sourceUrl": "https://www.foshannews.net/h/175/20261012/8850935.html",
+        "address": "Lingzhan Tower, Tanzhou International Convention and Exhibition Center, Foshan",
+        "productName": "Feicui Taizi · Shengyan",
+        "utcStartDateTime": "2026-10-11T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Published restaurant-specific opening date. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Foshan",
+          "China"
+        ],
+        "longFormSummary": "<p>Cantonese / Shunde at Lingzhan Tower, Tanzhou International Convention and Exhibition Center, Foshan. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.</p><ul></ul><p>Published restaurant-specific opening date. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.</p>",
+        "references": [
+          {
+            "url": "https://www.foshannews.net/h/175/20261012/8850935.html",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Published restaurant-specific opening date. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.foshannews.net/h/175/20261012/8850935.html",
+            "title": "Feicui Taizi · Shengyan",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Feicui Taizi · Shengyan — verified venue facts",
+              "summary": "Cantonese / Shunde at Lingzhan Tower, Tanzhou International Convention and Exhibition Center, Foshan. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.",
+              "body": "<p>Cantonese / Shunde at Lingzhan Tower, Tanzhou International Convention and Exhibition Center, Foshan. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.</p><ul></ul><p>Published restaurant-specific opening date. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Foshan"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.foshannews.net/h/175/20261012/8850935.html",
+          "menu": {
+            "pinSourceUrl": "https://www.foshannews.net/h/175/20261012/8850935.html",
+            "name": "Feicui Taizi · Shengyan",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://www.foshannews.net/h/175/20261012/8850935.html",
+                "currency": "CNY",
+                "coverage": "link",
+                "items": [],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/opening-12-1-7d246f9533e9f223.webp",
+              "alt": "Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.",
+              "credit": "Foshan News / opening-event coverage",
+              "sourceUrl": "https://www.foshannews.net/h/175/20261012/8850935.html",
+              "originalUrl": "https://www.foshannews.net/upload/site_2/2026/10/12/contribution/sub_7/6207/20261012/content_6acc3e98c725f.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "foshan",
+            "kind": "opening",
+            "slug": "researched-feicui-taizi",
+            "name": "Feicui Taizi · Shengyan",
+            "neighborhood": "Foshan",
+            "cuisine": "Cantonese / Shunde",
+            "description": "Cantonese / Shunde at Lingzhan Tower, Tanzhou International Convention and Exhibition Center, Foshan. Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.",
+            "address": "Lingzhan Tower, Tanzhou International Convention and Exhibition Center, Foshan",
+            "websiteUrl": "https://www.foshannews.net/h/175/20261012/8850935.html",
+            "checkedAt": "2026-10-12",
+            "recognition": "Sourced venue-specific opening report",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/opening-12-1-7d246f9533e9f223.webp",
+            "imageCredit": "Foshan News / opening-event coverage",
+            "imageSourceUrl": "https://www.foshannews.net/upload/site_2/2026/10/12/contribution/sub_7/6207/20261012/content_6acc3e98c725f.jpg",
+            "imageNote": "Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.",
+            "day": "2026-10-11",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.foshannews.net/h/175/20261012/8850935.html",
+            "name": "Feicui Taizi · Shengyan",
+            "websiteUrl": "https://www.foshannews.net/h/175/20261012/8850935.html",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.foshannews.net/h/175/20261012/8850935.html",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/opening-12-1-7d246f9533e9f223.webp",
+          "sha256": "7d246f9533e9f223d05c37567adbfb541befa7603c6d9daa2ba09b2e9aafeb6a",
+          "width": 1400,
+          "height": 933,
+          "credit": "Foshan News / opening-event coverage",
+          "note": "Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.",
+          "sourcePage": "https://www.foshannews.net/h/175/20261012/8850935.html",
+          "sourceUrl": "https://www.foshannews.net/upload/site_2/2026/10/12/contribution/sub_7/6207/20261012/content_6acc3e98c725f.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/foshan/researched/opening-12-0-dc89b40354a0b1c6.webp",
+          "sha256": "dc89b40354a0b1c60058f0d6e8bda1af3e9db334cfcd29bb0f3a2a6829f41a95",
+          "width": 1400,
+          "height": 933,
+          "credit": "Foshan News / opening-event coverage",
+          "note": "Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room.",
+          "sourcePage": "https://www.foshannews.net/h/175/20261012/8850935.html",
+          "sourceUrl": "https://uio.alltuu.com/pl1et7pqK66.jpg?Expires=1796071732&OSSAccessKeyId=LTAI5tCKgYFjLSzev9mGY4Vs&Signature=%2B3rcqOpsTDBlBuuHXHf9gEJdv64%3D&response-content-disposition=attachment%3Bfilename%3D_GDD0078-opq5082058930.jpg&response-content-type=image%2Fjpeg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://www.foshannews.net/h/175/20261012/8850935.html",
+        "menuSource": "https://www.foshannews.net/h/175/20261012/8850935.html",
+        "remainingGap": "Restaurant-specific opening is confirmed. Actual menu items and prices remain unpublished after branch/operator searches; other branches’ menus are excluded. Photographs cover the joint hotel and restaurant opening, not an identified restaurant dining room."
+      }
+    },
+    {
+      "restaurantId": 13,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Chayan Yuese — Huaihe Pedestrian Street — Hefei",
+        "description": "Tea café at Building 4, ground floor, Huaihe Road Pedestrian Street, Luyang, Hefei. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.",
+        "sourceUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxtas1101914.shtml",
+        "address": "Building 4, ground floor, Huaihe Road Pedestrian Street, Luyang, Hefei",
+        "productName": "Chayan Yuese — Huaihe Pedestrian Street",
+        "utcStartDateTime": "2026-08-03T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Published restaurant-specific opening date. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Hefei",
+          "China"
+        ],
+        "longFormSummary": "<p>Tea café at Building 4, ground floor, Huaihe Road Pedestrian Street, Luyang, Hefei. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.</p><ul><li>幽兰拿铁 / Youlan Latte — Price not published</li><li>声声乌龙 / Shengsheng Oolong — Price not published</li></ul><p>Published restaurant-specific opening date. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.</p>",
+        "references": [
+          {
+            "url": "https://www.jiemian.com/article/14768551.html",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Published restaurant-specific opening date. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxtas1101914.shtml",
+            "title": "Chayan Yuese — Huaihe Pedestrian Street",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Chayan Yuese — Huaihe Pedestrian Street — verified venue facts",
+              "summary": "Tea café at Building 4, ground floor, Huaihe Road Pedestrian Street, Luyang, Hefei. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.",
+              "body": "<p>Tea café at Building 4, ground floor, Huaihe Road Pedestrian Street, Luyang, Hefei. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.</p><ul><li>幽兰拿铁 / Youlan Latte — Price not published</li><li>声声乌龙 / Shengsheng Oolong — Price not published</li></ul><p>Published restaurant-specific opening date. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Hefei"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxtas1101914.shtml",
+          "menu": {
+            "pinSourceUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxtas1101914.shtml",
+            "name": "Chayan Yuese — Huaihe Pedestrian Street",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://www.jiemian.com/article/14768551.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "幽兰拿铁 / Youlan Latte",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "声声乌龙 / Shengsheng Oolong",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hefei/researched/opening-13-2-01f60d2cc89ed42a.webp",
+              "alt": "Published Hefei launch preview; not a current branch menu photograph.",
+              "credit": "Luyang district announcement / Sina",
+              "sourceUrl": "https://www.jiemian.com/article/14768551.html",
+              "originalUrl": "https://n.sinaimg.cn/spider20260716/640/w960h1280/20260716/fa88-c2a86472674d38a8f23aacd1f027c114.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "hefei",
+            "kind": "opening",
+            "slug": "researched-chayan-huaihe",
+            "name": "Chayan Yuese — Huaihe Pedestrian Street",
+            "neighborhood": "Hefei",
+            "cuisine": "Tea café",
+            "description": "Tea café at Building 4, ground floor, Huaihe Road Pedestrian Street, Luyang, Hefei. Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers.",
+            "address": "Building 4, ground floor, Huaihe Road Pedestrian Street, Luyang, Hefei",
+            "websiteUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxtas1101914.shtml",
+            "checkedAt": "2026-10-12",
+            "recognition": "Sourced venue-specific opening report",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hefei/researched/opening-13-2-01f60d2cc89ed42a.webp",
+            "imageCredit": "Luyang district announcement / Sina",
+            "imageSourceUrl": "https://n.sinaimg.cn/spider20260716/640/w960h1280/20260716/fa88-c2a86472674d38a8f23aacd1f027c114.jpg",
+            "imageNote": "Published Hefei launch preview; not a current branch menu photograph.",
+            "day": "2026-08-03",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxtas1101914.shtml",
+            "name": "Chayan Yuese — Huaihe Pedestrian Street",
+            "websiteUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxtas1101914.shtml",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxtas1101914.shtml",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hefei/researched/opening-13-2-01f60d2cc89ed42a.webp",
+          "sha256": "01f60d2cc89ed42af6f401baff223d46bbefc3cfa4e3b0b5f6eadd04bbd468a3",
+          "width": 960,
+          "height": 1280,
+          "credit": "Luyang district announcement / Sina",
+          "note": "Published Hefei launch preview; not a current branch menu photograph.",
+          "sourcePage": "https://www.jiemian.com/article/14768551.html",
+          "sourceUrl": "https://n.sinaimg.cn/spider20260716/640/w960h1280/20260716/fa88-c2a86472674d38a8f23aacd1f027c114.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://www.jiemian.com/article/14768551.html",
+        "menuSource": "https://www.jiemian.com/article/14768551.html",
+        "remainingGap": "Published named items explicitly apply to both first Hefei branches; prices are not published. Historic opening-period prizes and purchase limits are not presented as current offers."
+      }
+    },
+    {
+      "restaurantId": 14,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "GOODBAI Café — Suzhou nomadic pop-up — Suzhou",
+        "description": "Café / ice cream at L1 High Street, Suzhou MixC World, Gusu, Suzhou. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+        "sourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+        "address": "L1 High Street, Suzhou MixC World, Gusu, Suzhou",
+        "productName": "GOODBAI Café — Suzhou nomadic pop-up",
+        "utcStartDateTime": "2026-09-25T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Published restaurant-specific opening date. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Suzhou",
+          "China"
+        ],
+        "longFormSummary": "<p>Café / ice cream at L1 High Street, Suzhou MixC World, Gusu, Suzhou. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.</p><ul><li>Suzhou Biluochun and fermented-rice ice cream — Price not published</li></ul><h2>Suzhou limited café pop-up</h2><p>Temporary pop-up inside the brand shop; menu price not published. No discount is claimed.</p><ul><li>Suzhou Biluochun and fermented-rice ice cream — Price not published</li></ul><p>Published restaurant-specific opening date. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.</p>",
+        "references": [
+          {
+            "url": "https://www.sina.cn/news/detail/5347472855794470.html",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Published restaurant-specific opening date. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.sina.cn/news/detail/5347472855794470.html",
+            "title": "GOODBAI Café — Suzhou nomadic pop-up",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "GOODBAI Café — Suzhou nomadic pop-up — verified venue facts",
+              "summary": "Café / ice cream at L1 High Street, Suzhou MixC World, Gusu, Suzhou. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+              "body": "<p>Café / ice cream at L1 High Street, Suzhou MixC World, Gusu, Suzhou. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.</p><h2>Published branch selection</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.</p><ul><li>Suzhou Biluochun and fermented-rice ice cream — Price not published</li></ul><h2>Suzhou limited café pop-up</h2><p>Temporary pop-up inside the brand shop; menu price not published. No discount is claimed.</p><ul><li>Suzhou Biluochun and fermented-rice ice cream — Price not published</li></ul><p>Published restaurant-specific opening date. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Suzhou"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+          "menu": {
+            "pinSourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+            "name": "GOODBAI Café — Suzhou nomadic pop-up",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch selection",
+                "url": "https://www.sina.cn/news/detail/5347472855794470.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Suzhou Biluochun and fermented-rice ice cream",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant."
+              },
+              {
+                "label": "Suzhou limited café pop-up",
+                "url": "https://www.sina.cn/news/detail/5347472855794470.html",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Suzhou Biluochun and fermented-rice ice cream",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Temporary pop-up inside the brand shop; menu price not published. No discount is claimed."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/opening-14-0-f15525eb6ac81555.webp",
+              "alt": "Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+              "credit": "GOODBAI official / Sina",
+              "sourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+              "originalUrl": "http://wx4.sinaimg.cn/middle/008rRun3gy1ihh9g7aemaj32a231fqv6.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "suzhou",
+            "kind": "opening",
+            "slug": "researched-goodbai-suzhou",
+            "name": "GOODBAI Café — Suzhou nomadic pop-up",
+            "neighborhood": "Suzhou",
+            "cuisine": "Café / ice cream",
+            "description": "Café / ice cream at L1 High Street, Suzhou MixC World, Gusu, Suzhou. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+            "address": "L1 High Street, Suzhou MixC World, Gusu, Suzhou",
+            "websiteUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+            "checkedAt": "2026-10-12",
+            "recognition": "Sourced venue-specific opening report",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/opening-14-0-f15525eb6ac81555.webp",
+            "imageCredit": "GOODBAI official / Sina",
+            "imageSourceUrl": "http://wx4.sinaimg.cn/middle/008rRun3gy1ihh9g7aemaj32a231fqv6.jpg",
+            "imageNote": "Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+            "day": "2026-09-25",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+            "name": "GOODBAI Café — Suzhou nomadic pop-up",
+            "websiteUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "special": {
+        "enabled": true,
+        "regionSlug": "suzhou",
+        "profile": {
+          "pinSourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+          "name": "GOODBAI Café — Suzhou nomadic pop-up",
+          "checkedAt": "2026-10-12",
+          "menus": [
+            {
+              "label": "Published branch selection",
+              "url": "https://www.sina.cn/news/detail/5347472855794470.html",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Suzhou Biluochun and fermented-rice ice cream",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant."
+            },
+            {
+              "label": "Suzhou limited café pop-up",
+              "url": "https://www.sina.cn/news/detail/5347472855794470.html",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Suzhou Biluochun and fermented-rice ice cream",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "note": "Temporary pop-up inside the brand shop; menu price not published. No discount is claimed."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Suzhou limited café pop-up",
+              "description": "Temporary pop-up inside the brand shop; menu price not published. No discount is claimed.",
+              "schedule": "10:00–22:00 Asia/Shanghai",
+              "conditions": [
+                "Temporary pop-up inside the brand shop; menu price not published. No discount is claimed."
+              ],
+              "sourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+              "validFrom": "2026-09-25",
+              "validThrough": "2026-11-29",
+              "limitedTime": true,
+              "discounted": false,
+              "menuLabel": "Suzhou limited café pop-up",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00",
+                    "end": "22:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/opening-14-0-f15525eb6ac81555.webp",
+            "alt": "Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+            "credit": "GOODBAI official / Sina",
+            "sourceUrl": "https://www.sina.cn/news/detail/5347472855794470.html",
+            "originalUrl": "http://wx4.sinaimg.cn/middle/008rRun3gy1ihh9g7aemaj32a231fqv6.jpg",
+            "checkedAt": "2026-10-12"
+          },
+          "address": "L1 High Street, Suzhou MixC World, Gusu, Suzhou",
+          "neighborhood": "Suzhou",
+          "websiteUrl": "https://www.sina.cn/news/detail/5347472855794470.html"
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/opening-14-0-f15525eb6ac81555.webp",
+          "sha256": "f15525eb6ac81555e616eb146f769ea6d2b066d8d0171b4bee2caaffa6f8d53c",
+          "width": 517,
+          "height": 690,
+          "credit": "GOODBAI official / Sina",
+          "note": "Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+          "sourcePage": "https://www.sina.cn/news/detail/5347472855794470.html",
+          "sourceUrl": "http://wx4.sinaimg.cn/middle/008rRun3gy1ihh9g7aemaj32a231fqv6.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/opening-14-1-2779913e70e036f3.webp",
+          "sha256": "2779913e70e036f345d3b71a11846bfd4988e7c43d8b6ad28181665bcfc6d790",
+          "width": 690,
+          "height": 518,
+          "credit": "GOODBAI official / Sina",
+          "note": "Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+          "sourcePage": "https://www.sina.cn/news/detail/5347472855794470.html",
+          "sourceUrl": "http://wx2.sinaimg.cn/middle/008rRun3gy1ihh9g9rdcmj33342bcnpi.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/suzhou/researched/opening-14-2-8e1e5d3bad8fe2a0.webp",
+          "sha256": "8e1e5d3bad8fe2a069d21c8df5654cb3d603ac5380a6d779564e462c03e9d320",
+          "width": 690,
+          "height": 518,
+          "credit": "GOODBAI official / Sina",
+          "note": "Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant.",
+          "sourcePage": "https://www.sina.cn/news/detail/5347472855794470.html",
+          "sourceUrl": "http://wx1.sinaimg.cn/middle/008rRun3gy1ihh9gc53ddj33342bc4qt.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://www.sina.cn/news/detail/5347472855794470.html",
+        "menuSource": "https://www.sina.cn/news/detail/5347472855794470.html",
+        "remainingGap": "Temporary café within the GOODBAI pop-up, not a permanent standalone restaurant."
+      }
+    },
+    {
+      "restaurantId": 15,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ba Quan Shi Man — H99, planned — Ningbo",
+        "description": "Japanese-style rice bowls at H99, Hongtai Plaza, 1/F, Ningbo. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.",
+        "sourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+        "address": "H99, Hongtai Plaza, 1/F, Ningbo",
+        "productName": "Ba Quan Shi Man — H99, planned",
+        "utcStartDateTime": "2026-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Announced October 2026 opening; the month-end date is a sorting placeholder, not a confirmed opening day. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Ningbo",
+          "China"
+        ],
+        "longFormSummary": "<p>Japanese-style rice bowls at H99, Hongtai Plaza, 1/F, Ningbo. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.</p><h2>Announced opening menu</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.</p><ul><li>Black pepper mushroom beef rice — Price not published</li><li>Curry pork cutlet rice set — Price not published</li><li>Cheese beef donburi — Price not published</li></ul><p>Announced October 2026 opening; the month-end date is a sorting placeholder, not a confirmed opening day. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.</p>",
+        "references": [
+          {
+            "url": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml",
+            "title": "Branch-specific venue evidence",
+            "confidence": 90,
+            "reasoning": "Announced October 2026 opening; the month-end date is a sorting placeholder, not a confirmed opening day. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+            "title": "Ba Quan Shi Man — H99, planned",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Ba Quan Shi Man — H99, planned — verified venue facts",
+              "summary": "Japanese-style rice bowls at H99, Hongtai Plaza, 1/F, Ningbo. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.",
+              "body": "<p>Japanese-style rice bowls at H99, Hongtai Plaza, 1/F, Ningbo. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.</p><h2>Announced opening menu</h2><p>Published branch-specific dishes; confirm current price and availability with the restaurant. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.</p><ul><li>Black pepper mushroom beef rice — Price not published</li><li>Curry pork cutlet rice set — Price not published</li><li>Cheese beef donburi — Price not published</li></ul><p>Announced October 2026 opening; the month-end date is a sorting placeholder, not a confirmed opening day. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Ningbo"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+          "menu": {
+            "pinSourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+            "name": "Ba Quan Shi Man — H99, planned",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Announced opening menu",
+                "url": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Black pepper mushroom beef rice",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Curry pork cutlet rice set",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Cheese beef donburi",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Published branch-specific dishes; confirm current price and availability with the restaurant. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/ningbo/researched/opening-15-0-a6db8d84c394cf47.webp",
+              "alt": "Published rendering/brand preview for the announced H99 branch; not a photograph of an operating venue.",
+              "credit": "Ningbo Evening News / Sina",
+              "sourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml",
+              "originalUrl": "https://n.sinaimg.cn/spider20261002/20/w1080h540/20261002/9b2d-2bd676d558aa9bfc04c9f9a2a09ec8d9.png",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "ningbo",
+            "kind": "opening",
+            "slug": "researched-baquan-shiman",
+            "name": "Ba Quan Shi Man — H99, planned",
+            "neighborhood": "Ningbo",
+            "cuisine": "Japanese-style rice bowls",
+            "description": "Japanese-style rice bowls at H99, Hongtai Plaza, 1/F, Ningbo. October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service.",
+            "address": "H99, Hongtai Plaza, 1/F, Ningbo",
+            "websiteUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+            "checkedAt": "2026-10-12",
+            "recognition": "Sourced venue-specific opening report",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/ningbo/researched/opening-15-0-a6db8d84c394cf47.webp",
+            "imageCredit": "Ningbo Evening News / Sina",
+            "imageSourceUrl": "https://n.sinaimg.cn/spider20261002/20/w1080h540/20261002/9b2d-2bd676d558aa9bfc04c9f9a2a09ec8d9.png",
+            "imageNote": "Published rendering/brand preview for the announced H99 branch; not a photograph of an operating venue.",
+            "day": "2026-10-31",
+            "openingConfirmed": false
+          },
+          "details": {
+            "pinSourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+            "name": "Ba Quan Shi Man — H99, planned",
+            "websiteUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+            "hoursNote": "Confirm current hours and the exact entrance with the venue."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/ningbo/researched/opening-15-0-a6db8d84c394cf47.webp",
+          "sha256": "a6db8d84c394cf47a2828c748bf16551b4eee9b1f739b360a6b35b4c42cb736a",
+          "width": 1080,
+          "height": 540,
+          "credit": "Ningbo Evening News / Sina",
+          "note": "Published rendering/brand preview for the announced H99 branch; not a photograph of an operating venue.",
+          "sourcePage": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml",
+          "sourceUrl": "https://n.sinaimg.cn/spider20261002/20/w1080h540/20261002/9b2d-2bd676d558aa9bfc04c9f9a2a09ec8d9.png"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml",
+        "menuSource": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+        "remainingGap": "October opening announced in the 2 October report; exact day and subsequent opening confirmation unavailable. Preview menu and brand photographs do not establish current service."
+      }
+    }
+  ]
+}

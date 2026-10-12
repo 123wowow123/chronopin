@@ -648,6 +648,8 @@ const ms: Messages = {
       value: 'Nilai',
       note: 'Anggaran editorial pada skala 0 hingga {max}, berdasarkan spesifikasi yang diterbitkan.',
       estimate: 'Anggaran',
+      rubricYear: 'Kriteria {year}',
+      rubricYearNote: 'Dinilai mengikut kriteria {year}, yang diperketatkan dari semasa ke semasa; bandingkan skor hanya dalam tahun yang sama.',
       na: 'T/A',
       showAll: 'Tunjukkan semua pin dengan penilaian prestasi kereta',
       reviews: 'Ulasan bebas',

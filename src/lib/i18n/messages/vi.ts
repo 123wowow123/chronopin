@@ -647,6 +647,8 @@ const vi: Messages = {
       value: 'Giá trị',
       note: 'Ước tính của biên tập viên trên thang 0 đến {max}, dựa trên thông số đã công bố.',
       estimate: 'Ước tính',
+      rubricYear: 'Tiêu chí {year}',
+      rubricYearNote: 'Chấm theo tiêu chí năm {year}, các tiêu chí sẽ khắt khe hơn theo thời gian; chỉ so sánh điểm trong cùng một năm.',
       na: 'chưa có',
       showAll: 'Hiện mọi ghim có đánh giá hiệu năng xe',
       reviews: 'Đánh giá độc lập',

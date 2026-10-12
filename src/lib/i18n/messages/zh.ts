@@ -644,6 +644,8 @@ const zh: Messages = {
       value: '性价比',
       note: '依据已公布规格的编辑估算，满分 {max} 分。',
       estimate: '估算',
+      rubricYear: '{year} 年标准',
+      rubricYearNote: '按 {year} 年标准评分；标准会随时间趋严，请仅在同一年份的评分之间比较。',
       na: '未公布',
       showAll: '显示所有带汽车性能评分的图钉',
       reviews: '独立评测',

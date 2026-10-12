@@ -4,10 +4,17 @@
 //   { "pinId": 14012,
 //     "scores": { "range": 4, "charging": 3.5, "acceleration": 4.5,
 //                 "assistance": null, "space": 3, "value": 5 },
+//     "rubricYear": 2026,
 //     "basis": "CLTC 800 km ... (variant scored, figures, any null axis)",
 //     "sourceUrl": "https://...",
 //     "reviews": [ { "url": "https://...", "title": "...",
 //                    "publishedDate": "2026-09-30", "quote": "..." } ] }
+//
+// "rubricYear" is optional: the edition of the criteria the scores were set
+// against (2020-2100). Absent it is the current edition, CAR_PERF_RUBRIC_YEAR
+// in src/lib/pinCarPerf.ts, so write the year explicitly on every entry: the
+// anchors are tightened by edition and a row is labelled with the year it was
+// scored under. A later year overwrites the stored row (a re-score).
 //
 // "reviews" is optional: independent road tests of this model, at most 6, each
 // with an https url, a title, a YYYY-MM-DD day (or null) and a short quote (at
@@ -30,11 +37,12 @@ import '../env';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
+import { CAR_PERF_RUBRIC_YEAR } from '@/lib/pinCarPerf';
 import { carPerfProblem, saveCarPerf } from '@/server/model/pinCarPerf';
 
 const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default: false }, out: { type: 'string' }, file: { type: 'string' } } });
 
-type Entry = { pinId: number; scores?: Record<string, unknown>; basis?: string | null; sourceUrl?: string | null; reviews?: unknown };
+type Entry = { pinId: number; rubricYear?: unknown; scores?: Record<string, unknown>; basis?: string | null; sourceUrl?: string | null; reviews?: unknown };
 
 async function run() {
   const file = flags.file ? flags.file : new URL('./carPerf.json', import.meta.url);
@@ -48,14 +56,15 @@ async function run() {
   let kept = 0;
   let skipped = 0;
   const invalid: string[] = [];
-  for (const { pinId, scores, basis, sourceUrl, reviews } of entries) {
+  for (const { pinId, rubricYear, scores, basis, sourceUrl, reviews } of entries) {
     const [pin] = await db.query<{ title: string }>(`SELECT "title" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [pinId]);
     if (!pin) {
       skipped++;
       continue;
     }
     // No reviews key: the body has none either, so a stored row keeps its reviews.
-    const body = { ...scores, ...(reviews === undefined ? {} : { reviews }), source: 'session', basis: basis ?? null, sourceUrl: sourceUrl ?? null };
+    // No rubricYear: the current edition, written explicitly so --out carries it.
+    const body = { ...scores, ...(reviews === undefined ? {} : { reviews }), rubricYear: rubricYear ?? CAR_PERF_RUBRIC_YEAR, source: 'session', basis: basis ?? null, sourceUrl: sourceUrl ?? null };
     const checked = carPerfProblem(body);
     if (typeof checked === 'string') {
       invalid.push(`${pinId} ${pin.title}: ${checked}`);

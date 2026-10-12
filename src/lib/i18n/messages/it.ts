@@ -641,6 +641,8 @@ const it: Messages = {
       value: 'Rapporto qualità-prezzo',
       note: 'Stima editoriale su una scala da 0 a {max}, in base alle specifiche pubblicate.',
       estimate: 'Stima',
+      rubricYear: 'Criteri {year}',
+      rubricYearNote: 'Valutato con i criteri {year}, che diventano più severi nel tempo; confronta solo punteggi dello stesso anno.',
       na: 'n.d.',
       showAll: 'Mostra tutti i pin con una griglia delle prestazioni',
       reviews: 'Recensioni indipendenti',

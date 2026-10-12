@@ -643,6 +643,8 @@ const ko: Messages = {
       value: '가성비',
       note: '공개된 사양을 바탕으로 한 0~{max} 척도의 편집 추정치입니다.',
       estimate: '추정',
+      rubricYear: '{year}년 기준',
+      rubricYearNote: '{year}년 기준으로 채점했습니다. 기준은 시간이 지날수록 엄격해지므로 같은 연도의 점수끼리만 비교하세요.',
       na: '미공개',
       showAll: '자동차 성능 평가가 있는 모든 핀 보기',
       reviews: '독립 매체 리뷰',

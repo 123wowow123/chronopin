@@ -643,6 +643,8 @@ const es: Messages = {
       value: 'Relación calidad-precio',
       note: 'Estimación editorial en una escala de 0 a {max}, a partir de las especificaciones publicadas.',
       estimate: 'Estimación',
+      rubricYear: 'Criterios {year}',
+      rubricYearNote: 'Puntuado con los criterios de {year}, que se endurecen con el tiempo; compara puntuaciones solo del mismo año.',
       na: 'n/d',
       showAll: 'Ver todos los pines con evaluación del rendimiento',
       reviews: 'Reseñas independientes',

@@ -648,6 +648,8 @@ const id: Messages = {
       value: 'Nilai',
       note: 'Perkiraan editorial pada skala 0 sampai {max}, berdasarkan spesifikasi yang dipublikasikan.',
       estimate: 'Perkiraan',
+      rubricYear: 'Kriteria {year}',
+      rubricYearNote: 'Dinilai dengan kriteria {year}, yang diperketat seiring waktu; bandingkan skor hanya dalam tahun yang sama.',
       na: 'T/A',
       showAll: 'Tampilkan semua pin dengan penilaian performa mobil',
       reviews: 'Ulasan independen',
