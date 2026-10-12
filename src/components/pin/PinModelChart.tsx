@@ -78,6 +78,9 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   // The dot a click picked: it stays marked, and its name below is the link.
   const [selected, setSelected] = useState<ModelPoint | null>(null);
   const [expanded, setExpanded] = useState(false);
+  // The same-thread names are off until asked for: the red dots already say
+  // which models they are, and the names crowd the plot.
+  const [threadNames, setThreadNames] = useState(false);
   const svg = useRef<SVGSVGElement>(null);
 
   // Expanded: Escape closes, and the page behind does not scroll.
@@ -149,6 +152,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   // A model with its own pin goes there; the pin being read is already open.
   const linkOf = (p: ModelPoint | null) => (p?.href && p.pinId !== pinId ? p.href : null);
   const tabs = data.years;
+  const hasThread = field.some((p) => p.thread);
 
   return (
     <div
@@ -187,16 +191,32 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
             </button>
           ))}
         </div>
+        <div className="flex shrink-0 items-center gap-1.5">
+          {hasThread ? (
+            <button
+              type="button"
+              aria-pressed={threadNames}
+              aria-label={t('pin.modelChart.threadNames')}
+              title={t('pin.modelChart.threadNames')}
+              onClick={() => setThreadNames((v) => !v)}
+              className={`inline-flex items-center rounded-full px-2.5 py-1.5 ring-1 ring-inset transition-colors ${
+                threadNames ? 'bg-red-500/10 ring-red-500' : 'bg-raised ring-line hover:bg-raised-2'
+              }`}
+            >
+              <span aria-hidden className="inline-block size-2.5 rounded-full bg-red-500" />
+            </button>
+          ) : null}
         <button
           type="button"
           aria-expanded={expanded}
           aria-label={expanded ? t('pin.modelChart.collapse') : t('pin.modelChart.expand')}
           title={expanded ? t('pin.modelChart.collapse') : t('pin.modelChart.expand')}
           onClick={() => setExpanded((v) => !v)}
-          className="hidden shrink-0 items-center rounded-full lg:inline-flex bg-raised px-2.5 py-0.5 text-muted ring-1 ring-inset ring-line transition-colors hover:bg-raised-2 hover:text-ink"
+          className="hidden items-center rounded-full lg:inline-flex bg-raised px-2.5 py-0.5 text-muted ring-1 ring-inset ring-line transition-colors hover:bg-raised-2 hover:text-ink"
         >
           <Icon name={expanded ? 'close' : 'expand'} className="size-4" />
         </button>
+        </div>
         </div>
 
         <svg
@@ -245,17 +265,17 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
               key={p.key}
               cx={x(p.price)}
               cy={y(p.elo)}
-              r={p.frontier ? 4.5 : 3.5}
+              r={p.thread ? 5.5 : p.frontier ? 4.5 : 3.5}
               className={
                 p.thread
-                  ? p.frontier ? 'fill-red-600 stroke-panel' : 'fill-red-500/80 stroke-panel'
+                  ? 'fill-red-500 stroke-panel'
                   : p.frontier ? 'fill-muted stroke-panel' : 'fill-subtle/60 stroke-panel'
               }
               strokeWidth="1"
             />
           ))}
           {field
-            .filter((p) => (labelled.has(p.key) || p.thread) && p.key !== hover?.key && p.key !== selected?.key)
+            .filter((p) => (labelled.has(p.key) || (p.thread && threadNames)) && p.key !== hover?.key && p.key !== selected?.key)
             .map((p) => (
               <text key={p.key} x={x(p.price) + 7} y={y(p.elo) + 4} className={`fill-current text-[11px] ${p.thread ? 'font-medium text-red-600' : 'text-muted'}`}>
                 {p.name}

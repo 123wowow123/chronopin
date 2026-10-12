@@ -17,6 +17,7 @@ import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { invalidatePin } from '@/server/services/cache';
 import { welcomeToThread } from '@/server/services/watchAlerts';
 import { reslotSeries, seriesPinFor } from '@/server/scrape/modelSeries';
+import { tagIfFrontier } from './frontierTag';
 import { prequelPinFor, reslotSequels } from '@/server/scrape/prequel';
 import { applyPrebuiltWikis, type PrebuiltResult, type PrebuiltWiki } from '@/server/services/prebuiltWikis';
 import { flightPathProblem, saveFlightPath } from '@/server/services/pinFlightPath';
@@ -119,6 +120,12 @@ export async function createPin(body: Record<string, any>, user: User, { noBrows
       if (moved.length && !saved.parentId) after(() => welcomeToThread(saved.id, user.id));
     })
     .catch((err) => log.warn('re-slotting later seasons failed:', (err as Error).message));
+  // A model pin that led its year's cost/quality frontier is tagged so, once.
+  after(() =>
+    tagIfFrontier(saved.id)
+      .then((added) => added && invalidatePin(saved.id))
+      .catch((err) => log.warn('frontier tag failed:', (err as Error).message)),
+  );
   if (stocks.length) after(() => addPinStocksQuietly(saved.id, stocks));
   // A game's maturity rating, platforms and scores, from its Steam page.
   after(() => refreshGameInfo(saved.id).catch((err) => log.warn('game info lookup failed:', (err as Error).message)));

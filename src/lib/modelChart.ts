@@ -31,6 +31,10 @@ export type ModelPoint = {
   thread?: boolean;
 };
 
+// The tag a model's pin carries when the model was on its year's cost/quality
+// frontier at the time it was pinned. Added once and never taken off.
+export const FRONTIER_TAG = 'Frontier Model';
+
 export type ModelChartData = {
   // Every model with both a score and a price, newest year first in `years`.
   points: ModelPoint[];
@@ -43,9 +47,16 @@ export type ModelChartData = {
   publishedOn: string | null;
 };
 
+// The response may be cached for an hour (the route's Cache-Control), so a
+// change to its shape would not reach a browser that holds the old one until it
+// expired: a new data field (the same-thread flag) showed nothing for an hour
+// after the deploy. Bump this with any change to what the route sends, and the
+// URL - and so the cache entry - is new.
+export const CHART_VERSION = 4;
+
 export async function loadModelChart(pinId: number): Promise<ModelChartData | null> {
   try {
-    const response = await fetch(`/api/pins/${pinId}/model-chart`);
+    const response = await fetch(`/api/pins/${pinId}/model-chart?v=${CHART_VERSION}`);
     if (response.status !== 200) return null;
     return (await response.json()) as ModelChartData;
   } catch {

@@ -648,6 +648,7 @@ const ja: Messages = {
       note: '上ほど高品質、左ほど低価格。灰色の線は、各価格で得られる最高スコアです。',
       sourceElo: 'LMArenaのスコア',
       sourcePrice: 'OpenRouterの価格',
+      threadNames: '名前',
     },
     carPerf: {
       heading: '車の性能評価',

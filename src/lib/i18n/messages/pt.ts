@@ -646,6 +646,7 @@ const pt: Messages = {
       note: 'Mais alto é melhor, mais à esquerda é mais barato. Linha cinza: a melhor pontuação que cada preço compra.',
       sourceElo: 'Pontuações da LMArena',
       sourcePrice: 'Preços da OpenRouter',
+      threadNames: 'Nomes',
     },
     carPerf: {
       heading: 'Avaliação do desempenho do carro',

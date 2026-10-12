@@ -653,6 +653,7 @@ const en = {
       note: 'Higher is better, further left is cheaper. Grey line: the best score each price buys.',
       sourceElo: 'LMArena scores',
       sourcePrice: 'OpenRouter prices',
+      threadNames: 'Names',
     },
     carPerf: {
       heading: 'Car performance rubric',

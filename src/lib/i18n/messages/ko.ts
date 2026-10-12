@@ -648,6 +648,7 @@ const ko: Messages = {
       note: '위쪽일수록 우수하고 왼쪽일수록 저렴합니다. 회색 선: 가격대별 최고 점수.',
       sourceElo: 'LMArena 점수',
       sourcePrice: 'OpenRouter 가격',
+      threadNames: '이름',
     },
     carPerf: {
       heading: '자동차 성능 평가',

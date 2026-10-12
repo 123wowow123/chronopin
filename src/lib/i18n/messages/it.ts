@@ -646,6 +646,7 @@ const it: Messages = {
       note: 'Più in alto è meglio, più a sinistra costa meno. Linea grigia: il miglior punteggio che ogni prezzo compra.',
       sourceElo: 'Punteggi LMArena',
       sourcePrice: 'Prezzi OpenRouter',
+      threadNames: 'Nomi',
     },
     carPerf: {
       heading: 'Griglia delle prestazioni dell’auto',

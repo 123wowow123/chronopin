@@ -648,6 +648,7 @@ const fr: Messages = {
       note: 'Plus haut, c’est mieux ; plus à gauche, c’est moins cher. Ligne grise : le meilleur score que chaque prix permet.',
       sourceElo: 'Scores LMArena',
       sourcePrice: 'Prix OpenRouter',
+      threadNames: 'Noms',
     },
     carPerf: {
       heading: 'Grille de performances de la voiture',

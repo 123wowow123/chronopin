@@ -645,6 +645,7 @@ const th: Messages = {
       note: 'ยิ่งสูงยิ่งดี ยิ่งซ้ายยิ่งถูก เส้นสีเทา: คะแนนสูงสุดที่แต่ละราคาซื้อได้',
       sourceElo: 'คะแนน LMArena',
       sourcePrice: 'ราคา OpenRouter',
+      threadNames: 'ชื่อ',
     },
     carPerf: {
       heading: 'การประเมินสมรรถนะรถยนต์',

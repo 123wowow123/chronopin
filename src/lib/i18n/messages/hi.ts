@@ -651,6 +651,7 @@ const hi: Messages = {
       note: 'ऊपर बेहतर है, बाईं ओर सस्ता है। धूसर रेखा: हर कीमत पर मिलने वाला सर्वश्रेष्ठ स्कोर।',
       sourceElo: 'LMArena स्कोर',
       sourcePrice: 'OpenRouter कीमतें',
+      threadNames: 'नाम',
     },
     carPerf: {
       heading: 'कार प्रदर्शन मूल्यांकन',

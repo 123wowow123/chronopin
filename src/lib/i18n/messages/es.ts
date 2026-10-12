@@ -648,6 +648,7 @@ const es: Messages = {
       note: 'Más alto es mejor, más a la izquierda es más barato. Línea gris: la mejor puntuación que compra cada precio.',
       sourceElo: 'Puntuaciones de LMArena',
       sourcePrice: 'Precios de OpenRouter',
+      threadNames: 'Nombres',
     },
     carPerf: {
       heading: 'Evaluación del rendimiento del coche',

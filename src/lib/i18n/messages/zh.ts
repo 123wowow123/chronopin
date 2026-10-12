@@ -649,6 +649,7 @@ const zh: Messages = {
       note: '越高越好，越靠左越便宜。灰线：每个价位能买到的最高分。',
       sourceElo: 'LMArena 评分',
       sourcePrice: 'OpenRouter 价格',
+      threadNames: '名称',
     },
     carPerf: {
       heading: '汽车性能评分',

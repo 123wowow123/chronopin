@@ -652,6 +652,7 @@ const vi: Messages = {
       note: 'Càng cao càng tốt, càng về bên trái càng rẻ. Đường xám: điểm số tốt nhất mà mỗi mức giá mua được.',
       sourceElo: 'Điểm LMArena',
       sourcePrice: 'Giá OpenRouter',
+      threadNames: 'Tên',
     },
     carPerf: {
       heading: 'Đánh giá hiệu năng xe',

@@ -648,6 +648,7 @@ const de: Messages = {
       note: 'Höher ist besser, weiter links ist günstiger. Graue Linie: die beste Wertung, die ein Preis erkauft.',
       sourceElo: 'LMArena-Werte',
       sourcePrice: 'OpenRouter-Preise',
+      threadNames: 'Namen',
     },
     carPerf: {
       heading: 'Fahrleistungs-Bewertung',

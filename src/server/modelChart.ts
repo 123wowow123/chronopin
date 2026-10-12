@@ -277,3 +277,17 @@ export function buildModelChart(
     publishedOn: universe.publishedOn,
   };
 }
+
+// The frontier models a single pin is the pin of, judged against the arena and
+// the price list as they are now: the pin's title is matched to the chart's
+// models alone (a fresh pin is not in the cached pin index yet), and a model it
+// names counts when nothing cheaper scored as high among its year's models.
+// Empty when the pin names none, or when either source cannot be read.
+export async function frontierModelsOf(pin: { id: number; title: string }): Promise<string[]> {
+  const universe = await cachedModelUniverse();
+  if (!universe) return [];
+  const only: ModelPinIndex = [{ id: pin.id, title: pin.title, words: wordsOf(pin.title) }];
+  return buildModelChart(universe, null, only)
+    .points.filter((p) => p.frontier && p.pinId === pin.id)
+    .map((p) => p.name);
+}

@@ -653,6 +653,7 @@ const ms: Messages = {
       note: 'Lebih tinggi lebih baik, lebih ke kiri lebih murah. Garis kelabu: skor terbaik yang dibeli oleh setiap harga.',
       sourceElo: 'Skor LMArena',
       sourcePrice: 'Harga OpenRouter',
+      threadNames: 'Nama',
     },
     carPerf: {
       heading: 'Penilaian prestasi kereta',

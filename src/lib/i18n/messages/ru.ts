@@ -657,6 +657,7 @@ const ru: Messages = {
       note: 'Выше — лучше, левее — дешевле. Серая линия: лучший результат, который даёт каждая цена.',
       sourceElo: 'Оценки LMArena',
       sourcePrice: 'Цены OpenRouter',
+      threadNames: 'Названия',
     },
     carPerf: {
       heading: 'Оценка характеристик автомобиля',

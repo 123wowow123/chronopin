@@ -722,6 +722,7 @@ const ar: Messages = {
       note: 'الأعلى أفضل، والأقرب إلى اليسار أرخص. الخط الرمادي: أفضل نتيجة يشتريها كل سعر.',
       sourceElo: 'نتائج LMArena',
       sourcePrice: 'أسعار OpenRouter',
+      threadNames: 'الأسماء',
     },
     carPerf: {
       heading: 'تقييم أداء السيارة',
