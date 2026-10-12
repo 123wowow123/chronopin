@@ -642,7 +642,92 @@
       "price": 799000000,
       "priceCurrency": "USD",
       "priceLowerBound": null,
-      "priceUpperBound": null
+      "priceUpperBound": null,
+      "media": [
+        {
+          "key": "eia-69077",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/legend-lone-star-stations-groundbreaking-april-2026.jpg",
+          "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "credit": "Office of the Texas Governor, via Entergy Texas",
+          "caption": "Joint groundbreaking ceremony for Legend and Lone Star power stations in Port Arthur, Texas, April 9, 2026. This is the shared project ceremony, not a photograph of a completed Lone Star plant or its Cleveland-area construction site.",
+          "type": "photograph",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-66cc784ea3b8525a4fa1.webp",
+          "sha256": "66cc784ea3b8525a4fa12a90c15cae2f32cd2c5f600f5fec4c8771c5e3b41013",
+          "bytes": 204338
+        },
+        {
+          "key": "eia-69077-map",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/LoneStar_Legend_map-FINAL-small-600x338.png",
+          "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "credit": "Entergy Texas",
+          "caption": "Operator location diagram for Lone Star near Cleveland and Legend near Port Arthur. The 453 MW Lone Star figure is design generating capacity; this diagram is not a photograph or evidence of operating output.",
+          "type": "operator location diagram",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-map-95e231446de226b908f8.webp",
+          "sha256": "95e231446de226b908f83055c662dfcfdd5f6b671c270b5a2e2d6b85d7be0839",
+          "bytes": 21414
+        },
+        {
+          "key": "eia-69077-site-1",
+          "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=60",
+          "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+          "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+          "caption": "View toward the planned spray-irrigation field, looking south from below the planned stormwater pond. Photograph 1 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 60. Capture date is not published; this is a filed site view, not a current progress update.",
+          "type": "filed site photograph",
+          "captureDate": null,
+          "sourcePdfPage": 60,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-1-9524ddf1c862bef95589.webp",
+          "sha256": "9524ddf1c862bef955896baa8e1a2f52a5792fd0b7864c297c58582d24bd6ccd",
+          "bytes": 57094
+        },
+        {
+          "key": "eia-69077-site-2",
+          "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=60",
+          "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+          "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+          "caption": "View east toward planned wastewater-storage tank positions, from south of the plant area. Photograph 2 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 60. Capture date is not published; this is a filed site view, not a current progress update.",
+          "type": "filed site photograph",
+          "captureDate": null,
+          "sourcePdfPage": 60,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-2-73f2c7415230ed47599b.webp",
+          "sha256": "73f2c7415230ed47599bae73de697073f0a61beaa4ecd0b8651e40fc192755df",
+          "bytes": 104872
+        },
+        {
+          "key": "eia-69077-site-3",
+          "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=61",
+          "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+          "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+          "caption": "View west toward the planned wastewater sump, photographed from its east side, showing equipment and site works. Photograph 3 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 61. Capture date is not published; the image alone does not establish today’s construction progress.",
+          "type": "filed site photograph",
+          "captureDate": null,
+          "sourcePdfPage": 61,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-3-304c46c14f19e26e94b4.webp",
+          "sha256": "304c46c14f19e26e94b4107c8d476bb78cc2213a4399fa038cde8e3a41a0a978",
+          "bytes": 59688
+        },
+        {
+          "key": "eia-69077-rendering",
+          "sourceUrl": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1#page=10",
+          "sourcePage": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1",
+          "credit": "Entergy Texas, presentation by Jessica Hill hosted by TXCPA",
+          "caption": "Lone Star Power Station design rendering extracted from the panel labelled Lone Star on page 10 of Entergy Texas’s presentation dated February 4, 2026. It depicts the planned facility near Cleveland and is not a photograph of completed construction. The slide’s 453 MW is operator design capacity.",
+          "type": "operator design rendering",
+          "sourcePdfPage": 10,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-rendering-2f560decdb648f1ff470.webp",
+          "sha256": "2f560decdb648f1ff47082e89b1ec0cdba9d3c596d3fc996be107210f9342fa0",
+          "bytes": 66112
+        }
+      ],
+      "mediaVerification": {
+        "pinId": 8615,
+        "pinUrl": "https://www.chronopin.com/pin/8615/lone-star-power-station-estimated-target-2028",
+        "verifiedAtUTC": "2026-10-12T22:29:53Z",
+        "mediaCount": 6,
+        "productionPageIncludesAllImages": true,
+        "publicAzureImagesVerified": true,
+        "costAndDatePreserved": true,
+        "sourceWikisReadyAndCurrent": true
+      }
     },
     {
       "key": "gem-L100000603040",
@@ -837,5 +922,15 @@
     "buildoutPinsIncluded": 13,
     "publicPinAndMapCostFieldsVerified": true,
     "costCurrencyScopeDatesAndMediaPreserved": true
+  },
+  "loneStarGalleryResearch": {
+    "operatorNewsPage": "Official joint groundbreaking photo and shared location diagram checked",
+    "operatorProjectPage": "STEP Ahead dispatchable-power page checked; no additional verified progress gallery",
+    "governmentNewsAndPhotoPage": "Official April 9, 2026 event page and linked public Dropbox gallery checked",
+    "linkedDropboxGallery": "Direct HTML accessible but supplies no photograph listing; web research could not access gallery media. No photographs inferred.",
+    "permitApplication": "TCEQ WQ0005513000 administrative package: complete relevant photo pages 59–62 visually inspected; three embedded originals extracted. Receipt March 16, 2026; capture dates unpublished.",
+    "operatorPresentation": "Entergy Texas presentation dated February 4, 2026 hosted by TXCPA: page 10 visually inspected, lower Lone Star rendering extracted, upper Legend rendering excluded.",
+    "localAndOtherSources": "Bluebonnet June 4, 2024 operator announcement and linked images checked; RTO Insider rendering corroboration, operator LinkedIn announcements, construction reporting, contractor-related results and video searches reviewed. No verified standalone current drone or progress video located. Getty/Bloomberg event image was not copied.",
+    "remainingGap": "Filed site photographs now found. No verified capture dates, current progress photo series, or Lone Star-specific drone video found; filed views must not be described as current construction progress."
   }
 }

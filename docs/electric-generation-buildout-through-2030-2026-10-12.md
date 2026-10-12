@@ -35,3 +35,7 @@ The first shared link omitted the map date-window controls. The map defaults to 
 ## Dedicated Cost fields
 
 All 37 cost-qualified production pins, including the 13 through-2030 buildout pins, now store the published amount in the pin’s Cost field (`price`) and original ISO currency in `priceCurrency`. The public pin and map APIs returned the expected values at 2026-10-12T22:18:41Z. Known bounds are retained for Allen (upper forecast) and MTerra (lower-bound investment). Estimate dates, price-year/tax-credit/component scope, citations, backing wikis, target dates and media remain in the details.
+
+## Lone Star media added
+
+Six verified images are attached to pin 8615: three applicant-filed San Jacinto site photographs extracted from TCEQ wastewater application pages 60–61; the Lone Star design rendering from page 10 of an Entergy presentation dated February 4, 2026; the shared April 9 groundbreaking ceremony photograph; and the operator location diagram. All six are publicly verified Azure blobs and appear in the production pin page HTML. Captions retain source credits, PDF page numbers, shared-event context and rendering labels. Filed site photos have no published capture date and are not represented as current progress updates. Two additional cited media sources have ready backing wikis. Operator/government galleries, linked Dropbox, local reporting and video searches were checked; no verified dated construction-progress series or Lone Star drone video was found. Cost and timeline fields were preserved.

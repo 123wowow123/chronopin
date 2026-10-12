@@ -26,7 +26,6 @@ import { PinGameInfo } from '@/components/pin/PinGameInfo';
 import { PinCarPerf } from '@/components/pin/PinCarPerf';
 import { PinDining } from '@/components/pin/PinDining';
 import { PinModelChart } from '@/components/pin/PinModelChart';
-import { modelRelease } from '@/lib/modelSeries';
 import { PinTaste } from '@/components/pin/PinTaste';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
@@ -164,7 +163,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
   // The tags follow whatever the aside shows above them; first in the column they need no gap.
   // An AI model pin gets the cost/quality chart; the chart asks for its own data.
-  const modelChart = (!!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models')) && !!modelRelease(pin.title);
+  const modelChart = !!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models');
   const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || carPerf || dining || modelChart ? 'mt-4' : '';
 
   return (
