@@ -28,6 +28,11 @@ services:
     image: chronopin-faiss:latest
     volumes:
       - faiss-data:/data
+    # "Too many open files" on accept() stalled every search on 2026-10-12.
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
     restart: unless-stopped
 
   app:
