@@ -68,7 +68,11 @@
           "version": 2,
           "wikiPageId": 10774
         }
-      ]
+      ],
+      "price": 902000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "existing-5511",
@@ -136,7 +140,11 @@
           "version": 1,
           "wikiPageId": 9728
         }
-      ]
+      ],
+      "price": 11700000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-68443",
@@ -194,7 +202,11 @@
           "version": 2,
           "wikiPageId": 10776
         }
-      ]
+      ],
+      "price": 5000000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-3407",
@@ -242,7 +254,11 @@
           "version": 2,
           "wikiPageId": 10777
         }
-      ]
+      ],
+      "price": 2900000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "gem-L100000900883",
@@ -301,7 +317,11 @@
           "version": 1,
           "wikiPageId": 9752
         }
-      ]
+      ],
+      "price": 9000000000,
+      "priceCurrency": "CAD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "gem-L100000808731",
@@ -366,7 +386,11 @@
           "version": 1,
           "wikiPageId": 10779
         }
-      ]
+      ],
+      "price": 200000000000,
+      "priceCurrency": "PHP",
+      "priceLowerBound": 200000000000,
+      "priceUpperBound": null
     },
     {
       "key": "eia-69223",
@@ -419,7 +443,11 @@
           "version": 2,
           "wikiPageId": 10780
         }
-      ]
+      ],
+      "price": 1200000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-67914",
@@ -466,7 +494,11 @@
           "version": 3,
           "wikiPageId": 10781
         }
-      ]
+      ],
+      "price": 1200000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-68053",
@@ -534,7 +566,11 @@
           "version": 1,
           "wikiPageId": 9719
         }
-      ]
+      ],
+      "price": 1600000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-69077",
@@ -602,7 +638,11 @@
           "version": 1,
           "wikiPageId": 9719
         }
-      ]
+      ],
+      "price": 799000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "gem-L100000603040",
@@ -671,7 +711,11 @@
           "version": 1,
           "wikiPageId": 9755
         }
-      ]
+      ],
+      "price": 2249600000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "existing-5488",
@@ -729,7 +773,11 @@
           "version": 2,
           "wikiPageId": 10784
         }
-      ]
+      ],
+      "price": 7700000000,
+      "priceCurrency": "CAD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "existing-221",
@@ -776,7 +824,18 @@
           "version": 2,
           "wikiPageId": 10785
         }
-      ]
+      ],
+      "price": 35000000000,
+      "priceCurrency": "GBP",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     }
-  ]
+  ],
+  "costFieldVerification": {
+    "verifiedAtUTC": "2026-10-12T22:18:41Z",
+    "pinCostFieldsSaved": 37,
+    "buildoutPinsIncluded": 13,
+    "publicPinAndMapCostFieldsVerified": true,
+    "costCurrencyScopeDatesAndMediaPreserved": true
+  }
 }

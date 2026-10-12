@@ -109,3 +109,7 @@ All 37 pins were verified through the pin editor’s source-wiki API at 2026-10-
 ## Through-2030 buildout view — published October 12, 2026
 
 The live collection now also has a [12-project estimated completion view](https://www.chronopin.com/map?q=tag%3A%22Electric+Generation+Full+Completion+Through+2030%22&past=all&future=all&posted=all&fit=results) and a [13-pin view including Hinkley’s first-reactor milestone](https://www.chronopin.com/map?q=tag%3A%22Electric+Generation+Buildout+Through+2030%22&past=all&future=all&posted=all&fit=results). Those 13 existing pins now use estimated future target dates on the timeline; their construction evidence remains in the details. Other collection pins retain their physical milestone/reporting dates. See [buildout scope, dates and verification](electric-generation-buildout-through-2030-2026-10-12.md). The overall cost-qualified collection remains 37 pins; no duplicates were created.
+
+## Dedicated Cost fields
+
+All 37 cost-qualified production pins, including the 13 through-2030 buildout pins, now store the published amount in the pin’s Cost field (`price`) and original ISO currency in `priceCurrency`. The public pin and map APIs returned the expected values at 2026-10-12T22:18:41Z. Known bounds are retained for Allen (upper forecast) and MTerra (lower-bound investment). Estimate dates, price-year/tax-credit/component scope, citations, backing wikis, target dates and media remain in the details.

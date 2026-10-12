@@ -71,7 +71,11 @@
           "wikiPageId": 9715
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 5000000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-1364",
@@ -151,7 +155,11 @@
         "scope": "included project/phase completion target",
         "fullProjectCount": true
       },
-      "timelineRole": "Estimated future completion/operation target"
+      "timelineRole": "Estimated future completion/operation target",
+      "price": 902000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-69223",
@@ -226,7 +234,11 @@
         "scope": "included project/phase completion target",
         "fullProjectCount": true
       },
-      "timelineRole": "Estimated future completion/operation target"
+      "timelineRole": "Estimated future completion/operation target",
+      "price": 1200000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-67914",
@@ -295,7 +307,11 @@
         "scope": "included project/phase completion target",
         "fullProjectCount": true
       },
-      "timelineRole": "Estimated future completion/operation target"
+      "timelineRole": "Estimated future completion/operation target",
+      "price": 1200000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-68053",
@@ -385,7 +401,11 @@
         "scope": "included project/phase completion target",
         "fullProjectCount": true
       },
-      "timelineRole": "Estimated future completion/operation target"
+      "timelineRole": "Estimated future completion/operation target",
+      "price": 1600000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-69077",
@@ -475,7 +495,11 @@
         "scope": "included project/phase completion target",
         "fullProjectCount": true
       },
-      "timelineRole": "Estimated future completion/operation target"
+      "timelineRole": "Estimated future completion/operation target",
+      "price": 799000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-66923",
@@ -555,7 +579,11 @@
           "wikiPageId": 9721
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 11000000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "existing-5511",
@@ -645,7 +673,11 @@
         "scope": "included project/phase completion target",
         "fullProjectCount": true
       },
-      "timelineRole": "Estimated future completion/operation target"
+      "timelineRole": "Estimated future completion/operation target",
+      "price": 11700000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-68443",
@@ -725,7 +757,11 @@
         "scope": "included project/phase completion target",
         "fullProjectCount": true
       },
-      "timelineRole": "Estimated future completion/operation target"
+      "timelineRole": "Estimated future completion/operation target",
+      "price": 5000000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-3406",
@@ -785,7 +821,11 @@
           "wikiPageId": 9730
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 652000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-3399",
@@ -856,7 +896,11 @@
           "wikiPageId": 9731
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 2112000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-3407",
@@ -926,7 +970,11 @@
         "scope": "included project/phase completion target",
         "fullProjectCount": true
       },
-      "timelineRole": "Estimated future completion/operation target"
+      "timelineRole": "Estimated future completion/operation target",
+      "price": 2900000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "gem-L100000104184",
@@ -987,7 +1035,11 @@
           "wikiPageId": 9731
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 431000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": 431000000
     },
     {
       "key": "existing-5492",
@@ -1052,7 +1104,11 @@
           "wikiPageId": 9758
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 4000000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-66621",
@@ -1123,7 +1179,11 @@
           "wikiPageId": 9759
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 1550000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-67005",
@@ -1194,7 +1254,11 @@
           "wikiPageId": 9761
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 750000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     },
     {
       "key": "eia-66545",
@@ -1265,7 +1329,11 @@
           "wikiPageId": 9763
         }
       ],
-      "wikiSummaryCurrent": true
+      "wikiSummaryCurrent": true,
+      "price": 1500000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null
     }
   ],
   "retainedEarlierOperatorUpdates": [
@@ -2383,5 +2451,12 @@
         ]
       }
     ]
+  },
+  "costFieldVerification": {
+    "verifiedAtUTC": "2026-10-12T22:18:41Z",
+    "pinCostFieldsSaved": 37,
+    "buildoutPinsIncluded": 13,
+    "publicPinAndMapCostFieldsVerified": true,
+    "costCurrencyScopeDatesAndMediaPreserved": true
   }
 }

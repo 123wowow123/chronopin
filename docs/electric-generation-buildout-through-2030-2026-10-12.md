@@ -31,3 +31,7 @@ This was a production content update through management APIs. No application dep
 ## Map-link visibility correction
 
 The first shared link omitted the map date-window controls. The map defaults to one year into the future, hiding the 2027–2030 target markers. Collection links now explicitly set `past=all`, `future=all`, `posted=all` and `fit=results`. The equivalent production API checks returned zero pins with the default one-year window and all 13 with the unbounded collection query. Browser visual verification was blocked because Computer Use permissions were not granted; the correction was verified against the public production API and the map parameter handling.
+
+## Dedicated Cost fields
+
+All 37 cost-qualified production pins, including the 13 through-2030 buildout pins, now store the published amount in the pin’s Cost field (`price`) and original ISO currency in `priceCurrency`. The public pin and map APIs returned the expected values at 2026-10-12T22:18:41Z. Known bounds are retained for Allen (upper forecast) and MTerra (lower-bound investment). Estimate dates, price-year/tax-credit/component scope, citations, backing wikis, target dates and media remain in the details.
