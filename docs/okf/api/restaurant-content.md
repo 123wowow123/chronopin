@@ -1,3 +1,11 @@
+---
+type: API Endpoint
+title: Restaurant content
+description: Read and update restaurant menus, contact/hours details and landing-page tiles in the database through the admin management API, with no deployment needed.
+resource: "../../../src/app/api/admin/restaurant-content/route.ts"
+tags: [api, admin, restaurants]
+---
+
 # Restaurant menus and landing-page tiles
 
 Ordinary menus, contact/hours details and restaurant guide tiles live in `RestaurantContent`, keyed by the original branch-specific pin source URL. Pin details and restaurant landing pages read these records from PostgreSQL. Updating content through the management API does not require a build, Git push, restart or deployment. Images live in Azure Blob Storage; records retain public blob URLs, original source URLs and credits.

@@ -9,8 +9,8 @@ const entry = (slug: string) => research.entries.find(e => e.content.profile.til
 const special = (slug: string) => entry(slug).content.profile.menu.specials[0] as RestaurantSpecial;
 describe('next ten China restaurant cities', () => {
   it('validates all ten guides, branch menus and Azure gallery provenance', () => {
-    expect(research.entries).toHaveLength(22);
-    expect(new Set(research.entries.map(e => e.pin.sourceUrl)).size).toBe(22);
+    expect(research.entries).toHaveLength(23);
+    expect(new Set(research.entries.map(e => e.pin.sourceUrl)).size).toBe(23);
     expect(new Set(research.entries.map(e => e.content.profile.tile.regionSlug))).toEqual(new Set(research.regions));
     for (const e of research.entries) {
       expect(() => parseRestaurantContent(e.content)).not.toThrow();
