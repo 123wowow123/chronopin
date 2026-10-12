@@ -100,7 +100,7 @@ const ko: Messages = {
     pinCount: '핀 {count}개',
     searchPins: '핀 검색',
     sortResultsBy: '결과 정렬 기준',
-    sortBy: '정렬 기준',
+    sortBy: '정렬',
     sortRelevance: '관련도',
     sortDate: '날짜',
     searching: '검색 중…',

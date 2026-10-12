@@ -50,7 +50,7 @@ export function UserList({ initialUsers }: { initialUsers: AdminUser[] }) {
   return (
     <>
       <div className="mb-3 flex flex-wrap items-center gap-2 text-sm" role="group" aria-label="Sort users">
-        <span className="text-subtle">Sort by</span>
+        <span className="text-subtle">Sort</span>
         {SORTS.map((s) => {
           const active = s.key === sort.key;
           return (

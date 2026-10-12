@@ -101,7 +101,7 @@ const hi: Messages = {
     pinCount: { one: '{count} पिन', other: '{count} पिन' },
     searchPins: 'पिन खोजें',
     sortResultsBy: 'नतीजे क्रमबद्ध करें',
-    sortBy: 'इसके अनुसार क्रमबद्ध करें',
+    sortBy: 'क्रमबद्ध करें',
     sortRelevance: 'प्रासंगिकता',
     sortDate: 'तारीख',
     searching: 'खोजा जा रहा है…',
