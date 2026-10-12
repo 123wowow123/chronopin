@@ -637,6 +637,8 @@ const pt: Messages = {
       heading: 'Custo vs. qualidade',
       asOf: 'Pontuações da arena em {date}',
       years: 'Ano de lançamento',
+      expand: 'Ampliar gráfico',
+      collapse: 'Fechar gráfico ampliado',
       alt: 'Modelos de IA lançados em {year}: {count} modelos, preço de um milhão de tokens contra o Elo da arena. Este pin: {model}.',
       notPriced: 'Este modelo ainda não tem um preço público para representar.',
       price: '$ por milhão de tokens (5:1 entrada:saída, escala log.)',

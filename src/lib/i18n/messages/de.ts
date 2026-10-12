@@ -639,6 +639,8 @@ const de: Messages = {
       heading: 'Kosten und Qualität',
       asOf: 'Arena-Werte vom {date}',
       years: 'Erscheinungsjahr',
+      expand: 'Diagramm vergrößern',
+      collapse: 'Vergrößerte Ansicht schließen',
       alt: 'KI-Modelle, erschienen {year}: {count} Modelle, Preis für eine Million Token gegen Arena-Elo. Dieser Pin: {model}.',
       notPriced: 'Für dieses Modell gibt es noch keinen öffentlichen Preis.',
       price: '$ pro Million Token (5:1 Eingabe:Ausgabe, log. Skala)',

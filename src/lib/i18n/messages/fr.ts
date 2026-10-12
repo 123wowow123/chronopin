@@ -639,6 +639,8 @@ const fr: Messages = {
       heading: 'Coût et qualité',
       asOf: 'Scores de l’arène au {date}',
       years: 'Année de sortie',
+      expand: 'Agrandir le graphique',
+      collapse: 'Fermer le graphique agrandi',
       alt: 'Modèles d’IA sortis en {year} : {count} modèles, prix d’un million de jetons face au Elo de l’arène. Cette épingle : {model}.',
       notPriced: 'Ce modèle n’a pas encore de prix public à représenter.',
       price: '$ par million de jetons (5:1 entrée:sortie, échelle log.)',

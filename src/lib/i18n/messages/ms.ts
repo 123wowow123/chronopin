@@ -644,6 +644,8 @@ const ms: Messages = {
       heading: 'Kos berbanding kualiti',
       asOf: 'Skor arena setakat {date}',
       years: 'Tahun keluaran',
+      expand: 'Besarkan carta',
+      collapse: 'Tutup carta yang dibesarkan',
       alt: 'Model AI yang dikeluarkan pada {year}: {count} model, harga sejuta token berbanding Elo arena. Pin ini: {model}.',
       notPriced: 'Model ini belum mempunyai harga awam untuk diplotkan.',
       price: '$ sejuta token (5:1 input:output, skala log)',

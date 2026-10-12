@@ -639,6 +639,8 @@ const es: Messages = {
       heading: 'Coste frente a calidad',
       asOf: 'Puntuaciones de la arena a {date}',
       years: 'Año de lanzamiento',
+      expand: 'Ampliar gráfico',
+      collapse: 'Cerrar gráfico ampliado',
       alt: 'Modelos de IA lanzados en {year}: {count} modelos, precio de un millón de tokens frente al Elo de la arena. Este pin: {model}.',
       notPriced: 'Este modelo aún no tiene un precio público que representar.',
       price: '$ por millón de tokens (5:1 entrada:salida, escala log.)',

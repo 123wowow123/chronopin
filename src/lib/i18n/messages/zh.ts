@@ -640,6 +640,8 @@ const zh: Messages = {
       heading: '成本与质量',
       asOf: '竞技场评分截至 {date}',
       years: '发布年份',
+      expand: '放大图表',
+      collapse: '关闭放大的图表',
       alt: '{year} 年发布的 AI 模型：共 {count} 个，每百万 token 价格与竞技场 Elo 对比。此图钉：{model}。',
       notPriced: '该模型暂无可绘制的公开价格。',
       price: '每百万 token 美元（输入:输出 5:1，对数刻度）',

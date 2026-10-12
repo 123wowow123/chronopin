@@ -3,6 +3,7 @@
 import Anchor from '@/components/ui/Anchor';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { useLocale, useT } from '@/lib/client/i18n';
 import { localizePath } from '@/lib/i18n/config';
@@ -27,6 +28,12 @@ import { loadModelChart, showPrice, type ModelChartData, type ModelPoint } from 
 // The x axis is a log scale: prices span three orders of magnitude. The
 // arena's own page and OpenRouter are linked underneath, which is the
 // accessible table view for this chart.
+//
+// The expand button at the card's top right opens the chart in a large
+// overlay (Escape, the same button or a click outside closes it), for reading
+// a crowded year's dots and names at size. Desktop only (lg, where the pin
+// page is two columns and the chart sits in the narrow one): on a phone the
+// card already runs the full width.
 
 const VIEW = { w: 640, h: 380 };
 const PAD = { top: 16, right: 16, bottom: 44, left: 48 };
@@ -72,7 +79,23 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   // dot on the pin's own year's tab says where it was released.
   const [year, setYear] = useState<number>(data.years[0]);
   const [hover, setHover] = useState<ModelPoint | null>(null);
+  const [expanded, setExpanded] = useState(false);
   const svg = useRef<SVGSVGElement>(null);
+
+  // Expanded: Escape closes, and the page behind does not scroll.
+  useEffect(() => {
+    if (!expanded) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setExpanded(false);
+    };
+    document.addEventListener('keydown', onKey);
+    const overflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = overflow;
+    };
+  }, [expanded]);
 
   const pinned = useMemo(() => data.points.find((p) => p.key === data.pinned) ?? null, [data]);
   const field = useMemo(() => data.points.filter((p) => p.year === year && p.key !== data.pinned), [data, year]);
@@ -134,13 +157,22 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   const tabs = data.years;
 
   return (
-    <section className={`text-sm ${className}`} aria-label={t('pin.modelChart.heading')}>
+    <div
+      className={expanded ? 'fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-shade/60 p-2 sm:p-4' : undefined}
+      onClick={expanded ? () => setExpanded(false) : undefined}
+    >
+      <section
+        className={`text-sm ${expanded ? 'w-full max-w-[min(96vw,1800px)] rounded-xl bg-panel p-3 shadow-2xl sm:p-5' : className}`}
+        aria-label={t('pin.modelChart.heading')}
+        onClick={expanded ? (event) => event.stopPropagation() : undefined}
+      >
       <h2 className="mb-1 flex flex-wrap items-baseline justify-between gap-x-3 text-xs font-semibold tracking-wide text-muted uppercase">
         <span>{t('pin.modelChart.heading')}</span>
         {data.publishedOn ? <span className="font-normal tracking-normal text-subtle normal-case">{t('pin.modelChart.asOf', { date: data.publishedOn })}</span> : null}
       </h2>
       <div className="surface rounded-lg px-3 py-3">
-        <div role="tablist" aria-label={t('pin.modelChart.years')} className="mb-2 flex flex-wrap gap-1.5">
+        <div className="mb-2 flex items-start justify-between gap-2">
+        <div role="tablist" aria-label={t('pin.modelChart.years')} className="flex flex-wrap gap-1.5">
           {tabs.map((y) => (
             <button
               key={y}
@@ -160,11 +192,22 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          aria-expanded={expanded}
+          aria-label={expanded ? t('pin.modelChart.collapse') : t('pin.modelChart.expand')}
+          title={expanded ? t('pin.modelChart.collapse') : t('pin.modelChart.expand')}
+          onClick={() => setExpanded((v) => !v)}
+          className="hidden shrink-0 items-center rounded-full lg:inline-flex bg-raised px-2.5 py-0.5 text-muted ring-1 ring-inset ring-line transition-colors hover:bg-raised-2 hover:text-ink"
+        >
+          <Icon name={expanded ? 'close' : 'expand'} className="size-4" />
+        </button>
+        </div>
 
         <svg
           ref={svg}
           viewBox={`0 0 ${VIEW.w} ${VIEW.h}`}
-          className="h-auto w-full touch-pan-y"
+          className={`h-auto w-full touch-pan-y ${expanded ? 'max-h-[calc(100dvh-14rem)]' : ''}`}
           role="img"
           aria-label={t('pin.modelChart.alt', {
             year,
@@ -283,6 +326,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
           </Anchor>
         </p>
       </div>
-    </section>
+      </section>
+    </div>
   );
 }

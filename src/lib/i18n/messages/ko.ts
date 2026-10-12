@@ -639,6 +639,8 @@ const ko: Messages = {
       heading: '비용 대비 품질',
       asOf: '{date} 기준 아레나 점수',
       years: '출시 연도',
+      expand: '차트 확대',
+      collapse: '확대한 차트 닫기',
       alt: '{year}년에 출시된 AI 모델 {count}개: 100만 토큰당 가격과 아레나 Elo. 이 핀: {model}.',
       notPriced: '이 모델은 아직 표시할 공개 가격이 없습니다.',
       price: '100만 토큰당 $ (입력:출력 5:1, 로그 척도)',

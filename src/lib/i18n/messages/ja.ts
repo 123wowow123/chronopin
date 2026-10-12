@@ -639,6 +639,8 @@ const ja: Messages = {
       heading: 'コストと品質',
       asOf: '{date}時点のアリーナスコア',
       years: 'リリース年',
+      expand: 'グラフを拡大',
+      collapse: '拡大表示を閉じる',
       alt: '{year}年に公開されたAIモデル：{count}件。100万トークンあたりの価格とアリーナEloの関係。このピン：{model}。',
       notPriced: 'このモデルにはまだ表示できる公開価格がありません。',
       price: '100万トークンあたり$（入力:出力＝5:1、対数目盛）',

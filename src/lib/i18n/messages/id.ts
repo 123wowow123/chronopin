@@ -644,6 +644,8 @@ const id: Messages = {
       heading: 'Biaya vs. kualitas',
       asOf: 'Skor arena per {date}',
       years: 'Tahun rilis',
+      expand: 'Perbesar grafik',
+      collapse: 'Tutup grafik yang diperbesar',
       alt: 'Model AI yang dirilis pada {year}: {count} model, harga sejuta token terhadap Elo arena. Pin ini: {model}.',
       notPriced: 'Model ini belum memiliki harga publik untuk diplot.',
       price: '$ per sejuta token (5:1 input:output, skala log)',

@@ -644,6 +644,8 @@ const en = {
       heading: 'Cost vs. quality',
       asOf: 'Arena scores of {date}',
       years: 'Release year',
+      expand: 'Expand chart',
+      collapse: 'Close expanded chart',
       alt: 'AI models released in {year}: {count} models, price of a million tokens against arena Elo. This pin: {model}.',
       notPriced: 'This model has no public price to plot yet.',
       price: '$ per million tokens (5:1 input:output, log scale)',
