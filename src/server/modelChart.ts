@@ -1,0 +1,226 @@
+// The data behind the AI model pins' cost/quality chart: every text model's
+// LMArena Elo joined to its price on OpenRouter. Both are public and keyless,
+// and both are read on view with an hour's cache, never stored - a copied
+// score is stale within a week (the PinSeries rule, ../lib/series).
+//
+//   Elo     the arena's "overall" text leaderboard, published as a HuggingFace
+//           dataset. Rows come sorted with "overall" first, a hundred a page,
+//           so paging stops at the first page that has another category in it.
+//   price   OpenRouter's model list: prompt and completion dollars per token,
+//           and `created`, which is the listing date and is the year the chart
+//           segments on. :free / :batch variants are the same model at another
+//           price and are skipped; a model priced at zero has no point on a
+//           log axis and is skipped too.
+//
+// The two name a model differently ("claude-opus-4-6-high" against
+// "anthropic/claude-opus-4.6"), so they are joined on modelKey(). A model the
+// router does not list has a score but no price and is left out, not guessed.
+
+import { blendedPrice, markFrontier, modelKey, type ModelChartData, type ModelPoint } from '@/lib/modelChart';
+import { pinPath } from '@/lib/seo';
+import * as db from './db';
+import log from './util/log';
+
+const ARENA_URL = 'https://datasets-server.huggingface.co/rows?dataset=lmarena-ai/leaderboard-dataset&config=text&split=latest';
+const ROUTER_URL = 'https://openrouter.ai/api/v1/models';
+const PAGE = 100;
+const MAX_PAGES = 8;
+const TIMEOUT_MS = 20000;
+const TTL_MS = 60 * 60 * 1000;
+const ERROR_TTL_MS = 5 * 60 * 1000;
+const UA = 'ChronoPin/1.0 (https://chronopin.com) model chart fetch';
+
+type Arena = { name: string; organization: string | null; elo: number; publishedOn: string | null };
+type Router = { price: number; year: number };
+export type ModelUniverse = { points: ModelPoint[]; publishedOn: string | null };
+
+async function getJson<T>(url: string): Promise<T> {
+  const response = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(TIMEOUT_MS) });
+  if (!response.ok) throw new Error(`${new URL(url).host} answered ${response.status}`);
+  return (await response.json()) as T;
+}
+
+async function readArena(): Promise<Map<string, Arena>> {
+  const best = new Map<string, Arena>();
+  for (let page = 0; page < MAX_PAGES; page++) {
+    const body = await getJson<{ rows: { row: Record<string, unknown> }[] }>(`${ARENA_URL}&offset=${page * PAGE}&length=${PAGE}`);
+    let overall = 0;
+    for (const { row } of body.rows) {
+      if (row.category !== 'overall') continue;
+      overall++;
+      const name = String(row.model_name ?? '');
+      const elo = Number(row.rating);
+      if (!name || !Number.isFinite(elo)) continue;
+      const key = modelKey(name);
+      // Several effort settings of one model: the best score is the model's.
+      if (key && elo > (best.get(key)?.elo ?? -Infinity)) {
+        best.set(key, {
+          name,
+          organization: typeof row.organization === 'string' ? row.organization : null,
+          elo,
+          publishedOn: typeof row.leaderboard_publish_date === 'string' ? row.leaderboard_publish_date : null,
+        });
+      }
+    }
+    if (overall < PAGE) break;
+  }
+  return best;
+}
+
+async function readRouter(): Promise<Map<string, Router>> {
+  const body = await getJson<{ data: { id: string; created?: number; pricing?: Record<string, string> }[] }>(ROUTER_URL);
+  const out = new Map<string, Router>();
+  for (const m of body.data) {
+    if (/:(free|batch)$/.test(m.id)) continue;
+    const prompt = Number(m.pricing?.prompt);
+    const completion = Number(m.pricing?.completion);
+    if (!(prompt > 0) || !(completion > 0) || !m.created) continue;
+    const key = modelKey(m.id);
+    const price = blendedPrice(prompt, completion);
+    const year = new Date(m.created * 1000).getUTCFullYear();
+    // One model listed by several providers or snapshots: the earliest listing
+    // is its release year, the lowest price what it costs to run.
+    const seen = out.get(key);
+    out.set(key, seen ? { price: Math.min(seen.price, price), year: Math.min(seen.year, year) } : { price, year });
+  }
+  return out;
+}
+
+export async function readModelUniverse(): Promise<ModelUniverse> {
+  const [arena, router] = await Promise.all([readArena(), readRouter()]);
+  const raw: ModelPoint[] = [];
+  let publishedOn: string | null = null;
+  for (const [key, a] of arena) {
+    const r = router.get(key);
+    if (!r) continue;
+    raw.push({ key, name: a.name, organization: a.organization, elo: Math.round(a.elo), price: r.price, year: r.year });
+    if (a.publishedOn && (!publishedOn || a.publishedOn > publishedOn)) publishedOn = a.publishedOn;
+  }
+  // The frontier is read within a year, which is how the chart is segmented.
+  const byYear = new Map<number, ModelPoint[]>();
+  for (const p of raw) byYear.set(p.year, [...(byYear.get(p.year) ?? []), p]);
+  const points = [...byYear.values()].flatMap((group) => markFrontier(group));
+  return { points, publishedOn };
+}
+
+type Entry = { expires: number; promise: Promise<ModelUniverse | null> };
+let cache: Entry | null = null;
+
+// null when either source is down, so the page shows no chart rather than a
+// half-joined one. A failure is remembered briefly so a dead host is not hit
+// by every pin view.
+export function modelUniverse(): Promise<ModelUniverse | null> {
+  if (cache && cache.expires > Date.now()) return cache.promise;
+  const entry: Entry = {
+    expires: Date.now() + TTL_MS,
+    promise: readModelUniverse().then(
+      (universe) => {
+        if (!universe.points.length) entry.expires = Date.now() + ERROR_TTL_MS;
+        return universe.points.length ? universe : null;
+      },
+      (err) => {
+        entry.expires = Date.now() + ERROR_TTL_MS;
+        log.error('modelChart', (err as Error)?.message);
+        return null;
+      },
+    ),
+  };
+  cache = entry;
+  return entry.promise;
+}
+
+// The model a pin is about, among the chart's points: the exact key, or the
+// shortest key that continues it ("gemini 3.1 pro" -> "gemini 3.1 pro
+// preview"), which is how a router names a model that the title does not.
+export function findPinned(points: ModelPoint[], key: string): ModelPoint | null {
+  const exact = points.find((p) => p.key === key);
+  if (exact) return exact;
+  const longer = points.filter((p) => p.key.startsWith(`${key} `)).sort((a, b) => a.key.length - b.key.length);
+  return longer[0] ?? null;
+}
+
+// The pin that announced each model the site has one for. Of the AI Models
+// pins naming a model, the earliest-starting - the release, not a later update
+// to it. A pin names a model when the model's key appears in its title as a
+// run of whole words ("deepseek v4.1 flash" in "DeepSeek-V4.1-Flash
+// Released"; "claude opus 4" is not in "Claude Opus 4.5 Released"). Titles are
+// read the way the arena's names are, so every vendor's models match, not only
+// the families src/lib/modelSeries.ts knows to thread.
+type ModelPin = { id: number; title: string; words: string[] };
+export type ModelPinIndex = ModelPin[];
+
+const wordsOf = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[‐‑‒–—]/g, '-')
+    .replace(/[^a-z0-9.+\- ]/g, ' ')
+    .split(/[-\s]+/)
+    .filter(Boolean);
+
+let pinIndex: { expires: number; promise: Promise<ModelPinIndex> } | null = null;
+
+export function modelPinIndex(): Promise<ModelPinIndex> {
+  if (pinIndex && pinIndex.expires > Date.now()) return pinIndex.promise;
+  const promise = db
+    .query<{ id: number; title: string }>(
+      `SELECT p."id", p."title" FROM "Pin" p JOIN "PinTag" t ON t."pinId" = p."id"
+       WHERE t."name" = 'AI Models' AND p."utcDeletedDateTime" IS NULL
+       ORDER BY p."utcStartDateTime", p."id"`,
+    )
+    .then((rows) => rows.map((row) => ({ ...row, words: wordsOf(row.title) })))
+    .catch((err) => {
+      log.error('modelChart', (err as Error)?.message);
+      return [] as ModelPinIndex;
+    });
+  pinIndex = { expires: Date.now() + TTL_MS, promise };
+  return promise;
+}
+
+function hasRun(words: string[], run: string[]): boolean {
+  if (!run.length) return false;
+  for (let i = 0; i + run.length <= words.length; i++) {
+    if (run.every((w, j) => words[i + j] === w)) return true;
+  }
+  return false;
+}
+
+// Words the arena puts on the end of a model's name that a release's own title
+// does not ("gemma-3-4b-it", "llama-3.1-8b-instruct").
+const NAME_TAIL = new Set(['it', 'instruct', 'chat', 'base', 'turbo']);
+
+// The earliest pin whose title names the model; the pins are in start order.
+// Tried as the key reads, then without its trailing instruct/it-style words.
+function pinFor(index: ModelPinIndex, key: string): ModelPin | undefined {
+  const run = wordsOf(key);
+  for (;;) {
+    const found = index.find((pin) => hasRun(pin.words, run));
+    if (found || run.length < 2 || !NAME_TAIL.has(run[run.length - 1])) return found;
+    run.pop();
+  }
+}
+
+// Only models the site has a pin for are drawn: a dot is a way into its pin,
+// so a model without one is left out rather than shown as a dead end. The
+// frontier was worked out over every model with a score and a price, so it is
+// still the true one - a frontier model with no pin is a gap in the pins, not
+// a reason to move the line. The pin being read is always drawn, with its own
+// id, even when it is not in the AI Models index (a pin in the AI category).
+export function chartFor(universe: ModelUniverse, pinnedKey: string | null, pins: ModelPinIndex = [], currentPinId?: number): ModelChartData {
+  const own = pinnedKey ? findPinned(universe.points, pinnedKey) : null;
+  const points = universe.points
+    .map((p) => {
+      const pin = pinFor(pins, p.key);
+      if (p === own && currentPinId != null) return { ...p, pinId: currentPinId, href: pin ? pinPath(pin) : undefined };
+      return pin ? { ...p, pinId: pin.id, href: pinPath(pin) } : p;
+    })
+    .filter((p) => p.pinId != null);
+  const pinned = own ? (points.find((p) => p.key === own.key) ?? null) : null;
+  const years = [...new Set(points.map((p) => p.year))].sort((a, b) => b - a);
+  return {
+    points,
+    years,
+    pinned: pinned?.key ?? null,
+    pinnedYear: pinned?.year ?? null,
+    publishedOn: universe.publishedOn,
+  };
+}

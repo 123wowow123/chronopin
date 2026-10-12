@@ -634,6 +634,18 @@ const ja: Messages = {
       abv: 'アルコール度数',
       reviews: '試食レビュー',
     },
+    modelChart: {
+      heading: 'コストと品質',
+      asOf: '{date}時点のアリーナスコア',
+      years: 'リリース年',
+      alt: '{year}年に公開されたAIモデル：{count}件。100万トークンあたりの価格とアリーナEloの関係。このピン：{model}。',
+      notPriced: 'このモデルにはまだ表示できる公開価格がありません。',
+      price: '100万トークンあたり$（入力:出力＝5:1、対数目盛）',
+      elo: 'アリーナElo（テキスト）',
+      note: '上ほど高品質、左ほど低価格。灰色の線は、各価格で得られる最高スコアです。',
+      sourceElo: 'LMArenaのスコア',
+      sourcePrice: 'OpenRouterの価格',
+    },
     carPerf: {
       heading: '車の性能評価',
       range: '航続距離',

@@ -59,6 +59,17 @@ describe('shopLinks', () => {
   });
 });
 
+describe('shopLinks for a vehicle', () => {
+  it('offers no marketplace searches for a car, but keeps a stored maker page', () => {
+    const car = { productName: 'Xiaomi SU7 Ultra', categories: ['Automotive'], tags: [] };
+    expect(shopLinks({ ...car, merchants: [] })).toEqual([]);
+    const links = shopLinks({ ...car, merchants: [{ label: 'Xiaomi', url: 'https://www.mi.com/global/' } as any] });
+    expect(links.map((l) => l.store)).toEqual(['Xiaomi']);
+    // A scale-model kit is not a car.
+    expect(shopLinks({ productName: 'Tamiya 1/10 The Falcon', categories: ['Automotive'], tags: [], merchants: [] }).length).toBeGreaterThan(0);
+  });
+});
+
 describe('withoutTracking', () => {
   it('keeps a link with no tracking exactly as it is', () => {
     expect(withoutTracking('https://www.goat.com/sneakers/x?size=10')).toBe('https://www.goat.com/sneakers/x?size=10');
@@ -79,6 +90,12 @@ describe('isExactListing', () => {
     expect(isExactListing('Google Pixel Watch 5', 'Google Pixel Watch 5 Sport Band')).toBe(false);
     expect(isExactListing('Nintendo Switch 2', 'Nintendo Switch 2 EMPTY BOX only')).toBe(false);
     expect(isExactListing('Nintendo Switch 2', 'Nintendo Switch 2 for parts not working')).toBe(false);
+  });
+
+  it('refuses a toy or scale model that carries every word of the product', () => {
+    expect(isExactListing('Xiaomi SU7 Ultra', 'Xiaomi SU7 Ultra 1:24 Diecast Model Car Toy')).toBe(false);
+    expect(isExactListing('Xiaomi SU7 Ultra', 'Xiaomi SU7 Ultra 1/18 scale model')).toBe(false);
+    expect(isExactListing('Xiaomi SU7 Ultra', 'Xiaomi SU7 Ultra RC remote control car for kids')).toBe(false);
   });
 
   it("lets an accessory word through when it is in the product's own name", () => {

@@ -24,6 +24,8 @@ import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinEventInfo } from '@/components/pin/PinEventInfo';
 import { PinGameInfo } from '@/components/pin/PinGameInfo';
 import { PinCarPerf } from '@/components/pin/PinCarPerf';
+import { PinModelChart } from '@/components/pin/PinModelChart';
+import { modelRelease } from '@/lib/modelSeries';
 import { PinTaste } from '@/components/pin/PinTaste';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
@@ -159,7 +161,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
   // The tags follow whatever the aside shows above them; first in the column they need no gap.
-  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || carPerf ? 'mt-4' : '';
+  // An AI model pin gets the cost/quality chart; the chart asks for its own data.
+  const modelChart = (!!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models')) && !!modelRelease(pin.title);
+  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || carPerf || modelChart ? 'mt-4' : '';
 
   return (
     <>
@@ -214,6 +218,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+          <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
 
           {/* Beside the pin on wide screens, under its map, game facts, taste
               profile and car performance rubric; after them on phones. */}

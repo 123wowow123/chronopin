@@ -635,6 +635,18 @@ const zh: Messages = {
       abv: '酒精度',
       reviews: '试吃评测',
     },
+    modelChart: {
+      heading: '成本与质量',
+      asOf: '竞技场评分截至 {date}',
+      years: '发布年份',
+      alt: '{year} 年发布的 AI 模型：共 {count} 个，每百万 token 价格与竞技场 Elo 对比。此图钉：{model}。',
+      notPriced: '该模型暂无可绘制的公开价格。',
+      price: '每百万 token 美元（输入:输出 5:1，对数刻度）',
+      elo: '竞技场 Elo（文本）',
+      note: '越高越好，越靠左越便宜。灰线：每个价位能买到的最高分。',
+      sourceElo: 'LMArena 评分',
+      sourcePrice: 'OpenRouter 价格',
+    },
     carPerf: {
       heading: '汽车性能评分',
       range: '续航',

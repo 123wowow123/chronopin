@@ -13,6 +13,7 @@
 // also gets a brighter border, or it vanishes into the dark theme's page.
 
 import { affiliateUrl, isAmazonStoreUrl, isEbayUrl, isPurchaseLinkShown } from './affiliate';
+import { listingKindOf } from './listings';
 import { streamingService } from './streaming';
 import type { MerchantJson, PinJson } from './types';
 
@@ -111,6 +112,10 @@ const STORES = {
 
 type StoreId = keyof typeof STORES;
 
+// A scale model, kit or toy is a product pin in Automotive, and it does sell
+// on the marketplaces: it is not a car.
+const MODEL_KIT = /\b(tamiya|mini 4wd|1\/\d{1,2}|1:\d{1,2}|diecast|die-cast|hot wheels|matchbox|lego|rc|kit|toy)\b/i;
+
 const GENERAL: StoreId[] = ['amazon', 'ebay', 'mercari', 'facebook'];
 
 // A vertical's own stores, shown ahead of the general ones: by one of the
@@ -198,9 +203,11 @@ export type ShopMatch = { store: string; url: string; price: number; currency: s
 // Words a listing title shares with every product and so proves nothing by.
 const FILLER = new Set(['a', 'an', 'and', 'the', 'of', 'x', 'with', 'edition']);
 // A title with one of these sells something for the product, or only part of
-// it: "Case for Pixel Watch 5", "Pixel Watch 5 box only", "for parts".
+// it: "Case for Pixel Watch 5", "Pixel Watch 5 box only", "for parts"; or a
+// toy or scale model of it ("Xiaomi SU7 Ultra 1:24 diecast"), which carries
+// every word of the product's name and costs a fraction of it.
 const NOT_THE_PRODUCT =
-  /\b(for|fits|compatible|replacement|case|cover|band|strap|charger|cable|protector|skin|sticker|decal|stand|mount|holder|adapter|box only|empty box|no box|parts|broken|repair|lot|bundle)\b/;
+  /\b(for|fits|compatible|replacement|case|cover|band|strap|charger|cable|protector|skin|sticker|decal|stand|mount|holder|adapter|box only|empty box|no box|parts|broken|repair|lot|bundle|toys?|diecast|die cast|miniatures?|replica|figures?|figurines?|rc|remote control|kids|children|hot wheels|matchbox|lego|plush)\b|\b1 (12|18|24|32|36|43|64)\b/;
 
 // Trademark signs go first: NFKD spells ™ as "TM", which would fuse onto the
 // word before it ("Kingdom™" -> "kingdomtm").
@@ -289,7 +296,10 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
     };
   });
   const product = pin.productName?.trim();
-  if (product) {
+  // A car is not sold from a marketplace search: the stores' results for its
+  // name are toys, parts and other people's cars. A vehicle keeps its stored
+  // listings (the maker's own page) and the readers' listings panel.
+  if (product && !(listingKindOf(pin) === 'vehicle' && !MODEL_KIT.test(product))) {
     for (const id of storesFor(pin)) {
       if (covered.has(id)) continue;
       const store: Store = STORES[id];

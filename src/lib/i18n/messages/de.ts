@@ -634,6 +634,18 @@ const de: Messages = {
       abv: 'Alkoholgehalt',
       reviews: 'Verkostungsberichte',
     },
+    modelChart: {
+      heading: 'Kosten und Qualität',
+      asOf: 'Arena-Werte vom {date}',
+      years: 'Erscheinungsjahr',
+      alt: 'KI-Modelle, erschienen {year}: {count} Modelle, Preis für eine Million Token gegen Arena-Elo. Dieser Pin: {model}.',
+      notPriced: 'Für dieses Modell gibt es noch keinen öffentlichen Preis.',
+      price: '$ pro Million Token (5:1 Eingabe:Ausgabe, log. Skala)',
+      elo: 'Arena-Elo (Text)',
+      note: 'Höher ist besser, weiter links ist günstiger. Graue Linie: die beste Wertung, die ein Preis erkauft.',
+      sourceElo: 'LMArena-Werte',
+      sourcePrice: 'OpenRouter-Preise',
+    },
     carPerf: {
       heading: 'Fahrleistungs-Bewertung',
       range: 'Reichweite',

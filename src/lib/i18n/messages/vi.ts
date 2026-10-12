@@ -638,6 +638,18 @@ const vi: Messages = {
       abv: 'Nồng độ cồn',
       reviews: 'Đánh giá hương vị',
     },
+    modelChart: {
+      heading: 'Chi phí so với chất lượng',
+      asOf: 'Điểm đấu trường tính đến {date}',
+      years: 'Năm phát hành',
+      alt: 'Các mô hình AI phát hành năm {year}: {count} mô hình, giá một triệu token so với Elo đấu trường. Ghim này: {model}.',
+      notPriced: 'Mô hình này chưa có giá công khai để vẽ.',
+      price: '$ mỗi triệu token (đầu vào:đầu ra 5:1, thang log)',
+      elo: 'Elo đấu trường (văn bản)',
+      note: 'Càng cao càng tốt, càng về bên trái càng rẻ. Đường xám: điểm số tốt nhất mà mỗi mức giá mua được.',
+      sourceElo: 'Điểm LMArena',
+      sourcePrice: 'Giá OpenRouter',
+    },
     carPerf: {
       heading: 'Đánh giá hiệu năng xe',
       range: 'Quãng đường',

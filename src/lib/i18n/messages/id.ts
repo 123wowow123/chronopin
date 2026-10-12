@@ -639,6 +639,18 @@ const id: Messages = {
       abv: 'Kadar alkohol',
       reviews: 'Ulasan rasa',
     },
+    modelChart: {
+      heading: 'Biaya vs. kualitas',
+      asOf: 'Skor arena per {date}',
+      years: 'Tahun rilis',
+      alt: 'Model AI yang dirilis pada {year}: {count} model, harga sejuta token terhadap Elo arena. Pin ini: {model}.',
+      notPriced: 'Model ini belum memiliki harga publik untuk diplot.',
+      price: '$ per sejuta token (5:1 input:output, skala log)',
+      elo: 'Elo arena (teks)',
+      note: 'Makin tinggi makin baik, makin ke kiri makin murah. Garis abu-abu: skor terbaik yang dibeli setiap harga.',
+      sourceElo: 'Skor LMArena',
+      sourcePrice: 'Harga OpenRouter',
+    },
     carPerf: {
       heading: 'Penilaian performa mobil',
       range: 'Jangkauan',

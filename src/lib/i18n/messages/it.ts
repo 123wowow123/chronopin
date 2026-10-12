@@ -632,6 +632,18 @@ const it: Messages = {
       abv: 'Gradazione alcolica',
       reviews: 'Recensioni di assaggio',
     },
+    modelChart: {
+      heading: 'Costo e qualità',
+      asOf: 'Punteggi dell’arena al {date}',
+      years: 'Anno di uscita',
+      alt: 'Modelli di IA usciti nel {year}: {count} modelli, prezzo di un milione di token contro Elo dell’arena. Questo pin: {model}.',
+      notPriced: 'Questo modello non ha ancora un prezzo pubblico da rappresentare.',
+      price: '$ per milione di token (5:1 input:output, scala log.)',
+      elo: 'Elo dell’arena (testo)',
+      note: 'Più in alto è meglio, più a sinistra costa meno. Linea grigia: il miglior punteggio che ogni prezzo compra.',
+      sourceElo: 'Punteggi LMArena',
+      sourcePrice: 'Prezzi OpenRouter',
+    },
     carPerf: {
       heading: 'Griglia delle prestazioni dell’auto',
       range: 'Autonomia',

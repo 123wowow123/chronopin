@@ -429,9 +429,14 @@ https://www.opensecrets.org/profiles/mike-johnson/us_congress/elections?mpid=105
 
 https://x.com/INArteCarloDoss/status/2109620584401277228/photo/1
 
+- are there any pin categories that can display a rubric for the pins
+
+- ai models should have cost / performance shared live chart widget on side panel and pinned model should show noticible point to see how it fair with other models. Live Chart widget should be segmented for each year
 
 
 
 add AI buildout on map
 
 https://cleanview.co/
+
+add tesla referal

@@ -634,6 +634,18 @@ const fr: Messages = {
       abv: 'Alcool par volume',
       reviews: 'Avis de dégustation',
     },
+    modelChart: {
+      heading: 'Coût et qualité',
+      asOf: 'Scores de l’arène au {date}',
+      years: 'Année de sortie',
+      alt: 'Modèles d’IA sortis en {year} : {count} modèles, prix d’un million de jetons face au Elo de l’arène. Cette épingle : {model}.',
+      notPriced: 'Ce modèle n’a pas encore de prix public à représenter.',
+      price: '$ par million de jetons (5:1 entrée:sortie, échelle log.)',
+      elo: 'Elo de l’arène (texte)',
+      note: 'Plus haut, c’est mieux ; plus à gauche, c’est moins cher. Ligne grise : le meilleur score que chaque prix permet.',
+      sourceElo: 'Scores LMArena',
+      sourcePrice: 'Prix OpenRouter',
+    },
     carPerf: {
       heading: 'Grille de performances de la voiture',
       range: 'Autonomie',

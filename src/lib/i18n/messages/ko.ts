@@ -634,6 +634,18 @@ const ko: Messages = {
       abv: '알코올 도수',
       reviews: '시식 후기',
     },
+    modelChart: {
+      heading: '비용 대비 품질',
+      asOf: '{date} 기준 아레나 점수',
+      years: '출시 연도',
+      alt: '{year}년에 출시된 AI 모델 {count}개: 100만 토큰당 가격과 아레나 Elo. 이 핀: {model}.',
+      notPriced: '이 모델은 아직 표시할 공개 가격이 없습니다.',
+      price: '100만 토큰당 $ (입력:출력 5:1, 로그 척도)',
+      elo: '아레나 Elo (텍스트)',
+      note: '위쪽일수록 우수하고 왼쪽일수록 저렴합니다. 회색 선: 가격대별 최고 점수.',
+      sourceElo: 'LMArena 점수',
+      sourcePrice: 'OpenRouter 가격',
+    },
     carPerf: {
       heading: '자동차 성능 평가',
       range: '주행거리',

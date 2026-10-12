@@ -632,6 +632,18 @@ const pt: Messages = {
       abv: 'Teor alcoólico',
       reviews: 'Avaliações de degustação',
     },
+    modelChart: {
+      heading: 'Custo vs. qualidade',
+      asOf: 'Pontuações da arena em {date}',
+      years: 'Ano de lançamento',
+      alt: 'Modelos de IA lançados em {year}: {count} modelos, preço de um milhão de tokens contra o Elo da arena. Este pin: {model}.',
+      notPriced: 'Este modelo ainda não tem um preço público para representar.',
+      price: '$ por milhão de tokens (5:1 entrada:saída, escala log.)',
+      elo: 'Elo da arena (texto)',
+      note: 'Mais alto é melhor, mais à esquerda é mais barato. Linha cinza: a melhor pontuação que cada preço compra.',
+      sourceElo: 'Pontuações da LMArena',
+      sourcePrice: 'Preços da OpenRouter',
+    },
     carPerf: {
       heading: 'Avaliação do desempenho do carro',
       range: 'Autonomia',
