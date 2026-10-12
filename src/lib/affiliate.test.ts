@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { affiliateUrl, amazonAssociateTag, ebayCampaignId, isAmazonStoreUrl, isEbayUrl, isPurchaseLinkShown } from './affiliate';
+import { affiliateUrl, amazonAssociateTag, awinPublisherId, ebayCampaignId, isAmazonStoreUrl, isAwinUrl, isEbayUrl, isPurchaseLinkShown } from './affiliate';
 
 describe('affiliateUrl', () => {
   it('tags an amazon.com listing', () => {
@@ -88,5 +88,26 @@ describe('eBay Partner Network links', () => {
     expect(isEbayUrl('https://www.ebay.com/sch/i.html?_nkw=x')).toBe(true);
     expect(isEbayUrl('https://www.amazon.com/dp/B0727ZQ21F')).toBe(false);
     expect(isEbayUrl(undefined)).toBe(false);
+  });
+});
+
+describe('Awin links', () => {
+  it('sends a brkox page through our Awin tracking link', () => {
+    const tracked = new URL(affiliateUrl('https://brkox.com/collections/lego-light-kits'));
+    expect(tracked.origin + tracked.pathname).toBe('https://www.awin1.com/cread.php');
+    expect(tracked.searchParams.get('awinmid')).toBe('129093');
+    expect(tracked.searchParams.get('awinaffid')).toBe(awinPublisherId);
+    expect(tracked.searchParams.get('ued')).toBe('https://brkox.com/collections/lego-light-kits');
+  });
+
+  it('recognises its own tracked links only', () => {
+    expect(isAwinUrl(affiliateUrl('https://www.brkox.com/'))).toBe(true);
+    expect(isAwinUrl('https://www.awin1.com/cread.php?awinmid=1&awinaffid=999&ued=https%3A%2F%2Fx.com')).toBe(false);
+    expect(isAwinUrl('https://brkox.com/')).toBe(false);
+    expect(isAwinUrl(null)).toBe(false);
+  });
+
+  it('leaves other hosts alone', () => {
+    expect(affiliateUrl('https://example.com/brkox.com')).toBe('https://example.com/brkox.com');
   });
 });

@@ -24,6 +24,7 @@ import {
   taggedAdUrl,
   watchBrand,
   sneakerAd,
+  legoAd,
 } from '@/lib/ads';
 import { WINDOW_AFTER_DAYS, WINDOW_BEFORE_DAYS, type AdTier } from '@/lib/culturalDays';
 import * as db from '../db';
@@ -121,7 +122,8 @@ export default class Ad {
     // Under Global Earning an amazon.com product link is sent by Amazon to the
     // shopper's local store, so the US product ads serve there too (without
     // their dollar price); Amazon programs are the store's own. eBay's search
-    // ads are available independently of that Amazon store.
+    // ads are available independently of that Amazon store. brkox sells to the
+    // US only (its Awin programme's region), so its ads serve in the US store.
     const abroad = store !== 'US' && GLOBAL_EARNING_STORES.has(store);
     const candidates = inventory.ads.filter((ad) => ad.store === store || (ad.store === 'US' && (isEbayUrl(ad.url) || (abroad && ad.kind === 'product'))));
     // One seasonal tile first, leaving room for a variety of other categories.
@@ -155,7 +157,7 @@ export default class Ad {
         title: titles.get(ad.key) ?? ad.title,
         price: featured.get(ad.key)?.price ?? (ad.store === store ? ad.price : null),
         currency: featured.get(ad.key) || (ad.price != null && ad.store === store) ? 'USD' : null,
-        brand: ad.kind === 'product' || ad.kind === 'sneaker' ? (ad.brand ?? ad.company) : null,
+        brand: ad.kind === 'product' || ad.kind === 'sneaker' || ad.kind === 'lego' ? (ad.brand ?? ad.company) : null,
         rating: ad.rating ?? null,
         // A price in another store's currency is no price here, nor is its stock.
         urgency: ad.store === store ? (ad.urgency ?? null) : null,
@@ -390,7 +392,7 @@ async function loadInventory(): Promise<Inventory> {
         url: row.url,
         store: row.store,
         categories: row.categories,
-        company: sneakerAd(row.program)?.brand ?? watchBrand(row.program),
+        company: sneakerAd(row.program)?.brand ?? legoAd(row.program)?.brand ?? watchBrand(row.program),
         weight: row.weight,
         rewardUsd: row.rewardUsd,
         minAge: row.minAge,
@@ -398,7 +400,7 @@ async function loadInventory(): Promise<Inventory> {
         targetAgeTo: row.targetAgeTo,
         pinId: null,
         forPinId: null,
-        title: sneakerAd(row.program)?.title ?? watchBrand(row.program),
+        title: sneakerAd(row.program)?.title ?? legoAd(row.program)?.title ?? watchBrand(row.program),
         price: null,
         thumbName: null,
         originalUrl: null,

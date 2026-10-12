@@ -14,6 +14,7 @@ export const PRODUCT_SHELVES = [
   { name: 'Gaming', label: 'Video Games' },
   { name: 'Tabletop', label: 'Board & Card Games' },
   { name: 'Collectibles', label: 'Collectibles' },
+  { name: 'Ice Cream', label: 'Ice Cream' },
   { name: 'Snack', label: 'Snacks' },
   { name: 'Alcoholic Drinks', label: 'Beer & Alcoholic Drinks' },
   { name: 'Comics', label: 'Comics' },

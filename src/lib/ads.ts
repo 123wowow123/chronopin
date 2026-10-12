@@ -16,19 +16,21 @@
 // a pin page, so this is tracked and weighed per slot, not globally).
 
 import type { UserPreference } from './userWiki';
-import { affiliateUrl, amazonAssociateTag, ebayCampaignId, isEbayUrl } from './affiliate';
+import { affiliateUrl, amazonAssociateTag, awinPublisherId, ebayCampaignId, isAwinUrl, isEbayUrl } from './affiliate';
 import { asinOf, sameBrand, sameProductFamily } from './adQuality';
 import { AD_TIERS, type AdTier } from './culturalDays';
 import { isCategory } from './categories';
 
 // 'watch' ads (0130) are not Amazon's: the pre-owned luxury watches of one
 // brand on eBay, which earns through the EPN campaign (affiliate.ts).
-export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker';
+// 'lego' ads (0165) are brkox's LEGO-compatible light kits, frames and cases,
+// which earn through our Awin publisher account (affiliate.ts).
+export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker' | 'lego';
 
 // Each kind's share of the picks, before relatedness and preference.
 // A watch pool is small, so on the timeline it only comes up now and then;
 // on a Watches pin's page its ads are related (shared tag) and come first.
-export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1 };
+export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1, lego: 1 };
 
 // The watch brands advertised (Ad.program is `watch_<key>`), by the name the
 // ad shows. Owner, 2026-10-05: "add ads for rolex and other desirable watches".
@@ -58,6 +60,22 @@ export const SNEAKER_ADS: Record<string, { title: string; brand: string }> = {
 };
 
 export const sneakerAd = (program: string | null | undefined) => (program && SNEAKER_ADS[program]) || null;
+
+// brkox collections (Ad.program is `lego_<key>`), named for what they hold.
+// BRKOX says its products are independent accessories, so the ad names LEGO
+// only as the thing they are compatible with.
+export const LEGO_ADS: Record<string, { title: string; brand: string }> = {
+  lego_lights: { title: 'LED light kits for LEGO® sets', brand: 'BRKOX' },
+  lego_frames: { title: 'Wall display frames for LEGO® sets', brand: 'BRKOX' },
+  lego_cases: { title: 'Display cases for LEGO® sets', brand: 'BRKOX' },
+  lego_movies: { title: 'Movie & TV light kits for LEGO® sets', brand: 'BRKOX' },
+  lego_cars: { title: 'Car & vehicle light kits for LEGO® sets', brand: 'BRKOX' },
+  lego_space: { title: 'Space & aircraft light kits for LEGO® sets', brand: 'BRKOX' },
+  lego_buildings: { title: 'Building & landmark light kits for LEGO® sets', brand: 'BRKOX' },
+  lego_christmas: { title: 'Christmas light kits for LEGO® sets', brand: 'BRKOX' },
+};
+
+export const legoAd = (program: string | null | undefined) => (program && LEGO_ADS[program]) || null;
 
 const FOOTWEAR_TAGS = new Set(['sneakers', 'sneaker', 'shoes', 'shoe', 'footwear']);
 const hasFootwear = (names: string[]) => names.some((name) => FOOTWEAR_TAGS.has(name.trim().toLowerCase()));
@@ -292,6 +310,7 @@ const TOPIC_ALIASES: Record<string, string> = {
   sneaker: 'shoes', sneakers: 'shoes', shoe: 'shoes', footwear: 'shoes',
   watch: 'watches', smartwatch: 'watches', smartwatches: 'watches',
   book: 'literature', books: 'literature',
+  bricks: 'lego', 'lego sets': 'lego', 'building sets': 'lego',
   game: 'gaming', games: 'gaming', 'video games': 'gaming',
   movies: 'movie', film: 'movie', films: 'movie', television: 'tv',
 };
@@ -377,6 +396,7 @@ export function adCategory(ad: AdCandidate): string {
   const categories = ad.categories.map((name) => name.trim().toLowerCase());
   if (ad.kind === 'watch' || categories.some((name) => /^(?:watches|watch|smartwatches)$/.test(name)) || /\b(?:watches|watch|smartwatch)\b/i.test(ad.title ?? '')) return 'watches';
   if (ad.kind === 'sneaker' || hasFootwear(ad.categories) || /\b(?:sneakers?|shoes?|footwear)\b/i.test(ad.title ?? '')) return 'shoes';
+  if (ad.kind === 'lego') return 'lego';
   if (ad.holiday) return 'seasonal';
   return topicName(categories.find(isCategory) ?? categories.find(Boolean) ?? ad.program ?? 'products');
 }
@@ -619,13 +639,15 @@ export function tagForStore(store: string, tags: Record<string, string>): string
 }
 
 // The tracking id an ad's link carries: the EPN campaign for an eBay link,
-// else the store's Associates id (null when it has none).
+// our Awin publisher id for a joined Awin advertiser, else the store's
+// Associates id (null when it has none).
 export function adTag(ad: Pick<AdCandidate, 'url' | 'store'>, tags: Record<string, string>): string | null {
+  if (isAwinUrl(affiliateUrl(ad.url))) return awinPublisherId;
   return isEbayUrl(ad.url) ? ebayCampaignId : tagForStore(ad.store, tags);
 }
 
 export function taggedAdUrl(url: string, store: string, tags: Record<string, string>): string {
-  if (isEbayUrl(url)) return affiliateUrl(url);
+  if (isEbayUrl(url) || isAwinUrl(affiliateUrl(url))) return affiliateUrl(url);
   const tag = tagForStore(store, tags);
   if (!tag) return url;
   try {

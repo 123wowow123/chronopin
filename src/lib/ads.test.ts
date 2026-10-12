@@ -23,6 +23,7 @@ import {
   validateAmazonTags,
   watchBrand,
   sneakerAd,
+  legoAd,
 } from './ads';
 import { CATEGORIES } from './categories';
 
@@ -497,5 +498,23 @@ describe('watch ads', () => {
   it('are for adults', () => {
     expect(adAllowed({ ...rolex, minAge: 18 }, { ...none, age: 16 })).toBe(false);
     expect(adAllowed({ ...rolex, minAge: 18 }, { ...none, age: 30 })).toBe(true);
+  });
+});
+
+describe('brkox LEGO ads', () => {
+  const lego = ad({ key: 'ad:200', kind: 'lego', program: 'lego_lights', url: 'https://brkox.com/collections/lego-light-kits', title: 'LED light kits for LEGO® sets', company: 'BRKOX', minAge: 13, categories: ['LEGO'] });
+
+  it('names a collection and its brand', () => {
+    expect(legoAd('lego_lights')?.brand).toBe('BRKOX');
+    expect(legoAd('prime')).toBeNull();
+  });
+
+  it('is sent through Awin and credited to our publisher id', () => {
+    expect(taggedAdUrl(lego.url, 'US', {})).toContain('awin1.com/cread.php');
+    expect(adTag(lego, {})).toBe('3115479');
+  });
+
+  it('is its own category', () => {
+    expect(adCategory(lego)).toBe('lego');
   });
 });

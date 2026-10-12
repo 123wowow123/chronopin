@@ -6,7 +6,8 @@ import { pinConfidenceOf } from './pins';
 // purchasable product (Pin.productName, 0085) and carry one of a shelf's
 // category or tag. A film, a restaurant or a festival also has a productName
 // (the event's own name), so those tags are left out. A pin with a stored listing (a Merchant row, found or checked
-// by a curator or the scrape) goes first, then the newest. Only this year's
+// by a curator or the scrape) goes first, then one with a curated line
+// (ProductBlurb: the top rated, award winners), then the newest. Only this year's
 // products: released so far or still to come before the year ends.
 const NOT_GOODS = ['Restaurant', 'Restaurant Opening', 'Top Restaurants', 'Movie', 'Festival', 'Conference'];
 
@@ -20,7 +21,8 @@ export default class Products {
       `
       SELECT "id" FROM (
         SELECT DISTINCT ON (lower("p"."productName")) "p"."id", "p"."utcStartDateTime",
-          EXISTS (SELECT 1 FROM "Merchant" AS "m" WHERE "m"."pinId" = "p"."id") AS "listed"
+          EXISTS (SELECT 1 FROM "Merchant" AS "m" WHERE "m"."pinId" = "p"."id") AS "listed",
+          EXISTS (SELECT 1 FROM "ProductBlurb" AS "b" WHERE "b"."pinId" = "p"."id") AS "blurbed"
         FROM "Pin" AS "p"
         WHERE "p"."utcDeletedDateTime" IS NULL
           AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $2) >= $2)
@@ -28,9 +30,9 @@ export default class Products {
           AND "p"."utcStartDateTime" >= date_trunc('year', now()) AND "p"."utcStartDateTime" < date_trunc('year', now()) + interval '1 year'
           AND EXISTS (SELECT 1 FROM "PinTagView" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" <> 'reserved' AND "c"."name" = $1::citext)
           AND NOT EXISTS (SELECT 1 FROM "PinTagView" AS "x" WHERE "x"."pinId" = "p"."id" AND "x"."name" = ANY($4::citext[]))
-        ORDER BY lower("p"."productName"), "listed" DESC, "p"."utcStartDateTime" DESC, "p"."id" DESC
+        ORDER BY lower("p"."productName"), "listed" DESC, "blurbed" DESC, "p"."utcStartDateTime" DESC, "p"."id" DESC
       ) AS "one"
-      ORDER BY "listed" DESC, "utcStartDateTime" DESC, "id" DESC
+      ORDER BY "listed" DESC, "blurbed" DESC, "utcStartDateTime" DESC, "id" DESC
       LIMIT $3::integer`,
       [category, minConfidence, limit, NOT_GOODS],
     );

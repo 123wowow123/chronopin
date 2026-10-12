@@ -67,10 +67,57 @@ function ebayPage(url: string | undefined | null): URL | undefined {
   return EBAY_HOSTS.has(parsed.hostname.toLowerCase()) ? parsed : undefined;
 }
 
+// Awin publisher account "Chronopin" (ui.awin.com). A link to an Awin
+// advertiser's own site is sent through awin1.com's tracking redirect at render
+// time, like the Amazon tag and EPN campaign, so stored links stay plain.
+export const awinPublisherId = '3115479';
+
+// Awin advertisers we have joined, by the host their site answers on. brkox
+// (LEGO-compatible light kits and display frames, US) invited us 2026-10-11.
+const AWIN_ADVERTISERS: Record<string, string> = { 'brkox.com': '129093', 'www.brkox.com': '129093' };
+
+function awinAdvertiser(url: string | undefined | null): { page: URL; merchantId: string } | undefined {
+  if (!url) return undefined;
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return undefined;
+  }
+  const merchantId = AWIN_ADVERTISERS[parsed.hostname.toLowerCase()];
+  return merchantId ? { page: parsed, merchantId } : undefined;
+}
+
+// The tracked link for an advertiser page; an awin1.com link is left alone.
+function awinTrackedUrl(url: string): string | undefined {
+  const advertiser = awinAdvertiser(url);
+  if (!advertiser) return undefined;
+  const tracked = new URL('https://www.awin1.com/cread.php');
+  tracked.searchParams.set('awinmid', advertiser.merchantId);
+  tracked.searchParams.set('awinaffid', awinPublisherId);
+  tracked.searchParams.set('ued', advertiser.page.toString());
+  return tracked.toString();
+}
+
+// Whether the link is a tracked Awin link of ours, so the page owes a
+// disclosure that it earns from purchases there.
+export function isAwinUrl(url: string | undefined | null): boolean {
+  if (!url) return false;
+  try {
+    const parsed = new URL(url);
+    return /(^|\.)awin1\.com$/i.test(parsed.hostname) && parsed.searchParams.get('awinaffid') === awinPublisherId;
+  } catch {
+    return false;
+  }
+}
+
 // The purchase link as it should be clicked: an amazon.com listing (or Prime
-// Video title, moved to amazon.com) carries our tag and an ebay.com page our
-// EPN campaign, replacing anyone else's; anything else comes back untouched.
+// Video title, moved to amazon.com) carries our tag, an ebay.com page our
+// EPN campaign, replacing anyone else's, and a joined Awin advertiser's page
+// goes through our Awin tracking link; anything else comes back untouched.
 export function affiliateUrl(url: string): string {
+  const awin = awinTrackedUrl(url);
+  if (awin) return awin;
   const page = amazonStorePage(url);
   if (page) {
     page.searchParams.set('tag', amazonAssociateTag);

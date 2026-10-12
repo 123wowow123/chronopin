@@ -409,3 +409,10 @@ sync watch list to calendar
 add a pin to calendar and keep in sync
 
 get live politicians stock trading alerts
+
+
+
+
+chinese restaurant landing page tabs shouls try to get at least 20 restaurant each
+
+chinese ev car news and events and new model releases

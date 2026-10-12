@@ -7,7 +7,7 @@ import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { withPageLang } from '@/lib/client/navigation';
-import { isEbayUrl } from '@/lib/affiliate';
+import { isAwinUrl, isEbayUrl } from '@/lib/affiliate';
 import { money } from '@/lib/format';
 import { parseUrgency, SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
 
@@ -66,6 +66,15 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   sneaker_samba: { icon: 'tag', background: '#171717', color: '#fff' },
   sneaker_nb: { icon: 'tag', background: '#475569', color: '#fff' },
   sneaker_asics: { icon: 'tag', background: '#1e3a8a', color: '#fff' },
+  // brkox (0165, Awin): light kits glow, frames and cases are quieter.
+  lego_lights: { icon: 'bolt', background: '#111827', color: '#fcd34d' },
+  lego_frames: { icon: 'eye', background: '#1f2937', color: '#fff' },
+  lego_cases: { icon: 'eye', background: '#334155', color: '#fff' },
+  lego_movies: { icon: 'play', background: '#111827', color: '#fcd34d' },
+  lego_cars: { icon: 'bolt', background: '#b91c1c', color: '#fff' },
+  lego_space: { icon: 'sparkle', background: '#1e1b4b', color: '#fcd34d' },
+  lego_buildings: { icon: 'bolt', background: '#78350f', color: '#fde68a' },
+  lego_christmas: { icon: 'sparkle', background: '#166534', color: '#fecaca' },
 };
 // Programs whose own picture sits on their tile (a file in public/ads).
 const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png' };
@@ -136,6 +145,11 @@ function report(ad: AdJson, slot: AdSlot, pinId: number | undefined) {
 function useAdText() {
   const t = useT();
   return (ad: AdJson) => {
+    // A brkox collection: its name, then one line that is also the trademark note.
+    if (ad.kind === 'lego') {
+      const line = t('ads.legoBody');
+      return { title: ad.title ?? '', body: line, price: '', info: line, urgency: '', cta: t('ads.seeOnBrkox') };
+    }
     if (ad.kind === 'sneaker') {
       const price = ad.price != null ? money(ad.price, ad.currency) : '';
       const info = ad.brand ?? '';
@@ -228,7 +242,9 @@ function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; slot: Ad
 function Disclosure({ ads, className = '' }: { ads?: AdJson[]; className?: string }) {
   const t = useT();
   const ebay = ads?.some((ad) => isEbayUrl(ad.url));
-  return <p className={`text-[11px] leading-snug text-subtle ${className}`}>{ebay ? `${t('pin.amazonDisclosure')} ${t('pin.ebayDisclosure')}` : t('pin.amazonDisclosure')}</p>;
+  const awin = ads?.some((ad) => isAwinUrl(ad.url));
+  const text = [t('pin.amazonDisclosure'), ebay ? t('pin.ebayDisclosure') : '', awin ? t('pin.awinDisclosure') : ''].filter(Boolean).join(' ');
+  return <p className={`text-[11px] leading-snug text-subtle ${className}`}>{text}</p>;
 }
 
 function SponsoredLabel() {
