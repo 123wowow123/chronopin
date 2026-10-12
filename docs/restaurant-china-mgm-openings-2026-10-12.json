@@ -1,0 +1,854 @@
+{
+  "checkedAt": "2026-10-12",
+  "entries": [
+    {
+      "restaurantId": 201,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Meet Plus · 觅品 — MGM Shenzhen Prince Bay — Shenzhen",
+        "description": "Meet Plus · 觅品 serves yunnan, guizhou and sichuan at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+        "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+        "address": "1/F, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+        "productName": "Meet Plus · 觅品 — MGM Shenzhen Prince Bay",
+        "utcStartDateTime": "2026-09-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "MGM’s 10 September 2026 official opening release explicitly names this dining venue as available at the newly opened Prince Bay hotel.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shenzhen",
+          "China"
+        ],
+        "longFormSummary": "<p>Meet Plus · 觅品 serves yunnan, guizhou and sichuan at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Official branch menu enquiry</h2><ul></ul><p>No verifiable named dishes or prices were found after checking both official language pages, linked navigation, branch-specific menu searches and launch reporting. Another MGM property or the Macau collaboration menu is excluded.</p>",
+        "references": [
+          {
+            "url": "https://en.mgmchinaholdings.com/media-releases?item=855",
+            "title": "MGM official opening announcement",
+            "confidence": 95,
+            "reasoning": "Operator names all five dining venues as available at the 10 September opening."
+          },
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+            "title": "Official branch dining page",
+            "confidence": 95,
+            "reasoning": "Branch-specific address, hours and gallery."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+            "title": "Meet Plus · 觅品 — MGM Shenzhen Prince Bay",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Meet Plus · 觅品 — MGM Shenzhen Prince Bay",
+              "summary": "Meet Plus · 觅品 serves yunnan, guizhou and sichuan at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+              "body": "<p>Meet Plus · 觅品 serves yunnan, guizhou and sichuan at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Official branch menu enquiry</h2><ul></ul><p>No verifiable named dishes or prices were found after checking both official language pages, linked navigation, branch-specific menu searches and launch reporting. Another MGM property or the Macau collaboration menu is excluded.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shenzhen"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+          "menu": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+            "name": "Meet Plus · 觅品 — MGM Shenzhen Prince Bay",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Official branch menu enquiry",
+                "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+                "currency": "CNY",
+                "coverage": "link",
+                "items": [],
+                "note": "No verifiable named dishes or prices were found after checking both official language pages, linked navigation, branch-specific menu searches and launch reporting. Another MGM property or the Macau collaboration menu is excluded."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-201-0-2c85a7d9891a59f6.webp",
+              "alt": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+              "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+              "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+              "originalUrl": "https://obs-gw.dytmgm.com/u/cms/www/202609/23125018u7ds.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shenzhen",
+            "kind": "opening",
+            "slug": "mgm-prince-bay-38749",
+            "name": "Meet Plus · 觅品 — MGM Shenzhen Prince Bay",
+            "neighborhood": "Shekou, Nanshan",
+            "cuisine": "Yunnan, Guizhou and Sichuan",
+            "description": "Meet Plus · 觅品 serves yunnan, guizhou and sichuan at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+            "address": "1/F, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+            "checkedAt": "2026-10-12",
+            "recognition": "Operator-confirmed September opening",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-201-0-2c85a7d9891a59f6.webp",
+            "imageCredit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+            "imageSourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202609/23125018u7ds.jpg",
+            "imageNote": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+            "day": "2026-09-10",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+            "name": "Meet Plus · 觅品 — MGM Shenzhen Prince Bay",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+            "phone": "+86 755 3665 8888",
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:30–14:30"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:30–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+            "hoursNote": "Hours from the named Prince Bay venue’s own page. "
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-201-0-2c85a7d9891a59f6.webp",
+          "sha256": "2c85a7d9891a59f6c15de8cc7fc86e62efd455d55c2322c8ee23372ea2ac6459",
+          "width": 1400,
+          "height": 935,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202609/23125018u7ds.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-201-1-c3c44f90fdda1914.webp",
+          "sha256": "c3c44f90fdda191466d303705443476ffe790456747f29667ee2ca309fa5af40",
+          "width": 1400,
+          "height": 935,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202609/23125025abku.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://en.mgmchinaholdings.com/media-releases?item=855",
+        "operatorPage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+        "menuSource": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+        "sourcesChecked": [
+          "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38749",
+          "https://www.mgmhospitality.com/en/mgmshenzhenprincebay/dining/38749",
+          "https://en.mgmchinaholdings.com/media-releases?item=855",
+          "https://www.sohu.com/a/1076238786_121948408",
+          "Chinese and English branch-specific menu/price searches"
+        ],
+        "remainingGap": "No verifiable named dishes or prices were found after checking both official language pages, linked navigation, branch-specific menu searches and launch reporting. Another MGM property or the Macau collaboration menu is excluded."
+      }
+    },
+    {
+      "restaurantId": 202,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Festival · 欢宴 — MGM Shenzhen Prince Bay — Shenzhen",
+        "description": "Festival · 欢宴 serves international buffet at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+        "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+        "address": "6/F, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+        "productName": "Festival · 欢宴 — MGM Shenzhen Prince Bay",
+        "utcStartDateTime": "2026-09-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "MGM’s 10 September 2026 official opening release explicitly names this dining venue as available at the newly opened Prince Bay hotel.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shenzhen",
+          "China"
+        ],
+        "longFormSummary": "<p>Festival · 欢宴 serves international buffet at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Published branch menu selection</h2><ul><li>Breakfast buffet — Price not published</li><li>Saturday–Sunday buffet lunch — Price not published</li><li>Friday–Sunday buffet dinner — Price not published</li></ul><p>Named dish prices are not published on the operator page; confirm the current menu with the restaurant.</p>",
+        "references": [
+          {
+            "url": "https://en.mgmchinaholdings.com/media-releases?item=855",
+            "title": "MGM official opening announcement",
+            "confidence": 95,
+            "reasoning": "Operator names all five dining venues as available at the 10 September opening."
+          },
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+            "title": "Official branch dining page",
+            "confidence": 95,
+            "reasoning": "Branch-specific address, hours and gallery."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+            "title": "Festival · 欢宴 — MGM Shenzhen Prince Bay",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Festival · 欢宴 — MGM Shenzhen Prince Bay",
+              "summary": "Festival · 欢宴 serves international buffet at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+              "body": "<p>Festival · 欢宴 serves international buffet at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Published branch menu selection</h2><ul><li>Breakfast buffet — Price not published</li><li>Saturday–Sunday buffet lunch — Price not published</li><li>Friday–Sunday buffet dinner — Price not published</li></ul><p>Named dish prices are not published on the operator page; confirm the current menu with the restaurant.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shenzhen"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+          "menu": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+            "name": "Festival · 欢宴 — MGM Shenzhen Prince Bay",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch menu selection",
+                "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Breakfast buffet",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  },
+                  {
+                    "name": "Saturday–Sunday buffet lunch",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  },
+                  {
+                    "name": "Friday–Sunday buffet dinner",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  }
+                ],
+                "note": "Named dish prices are not published on the operator page; confirm the current menu with the restaurant."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-202-0-90f10520b7a9e84c.webp",
+              "alt": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+              "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+              "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+              "originalUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161343mu2i.png",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shenzhen",
+            "kind": "opening",
+            "slug": "mgm-prince-bay-38750",
+            "name": "Festival · 欢宴 — MGM Shenzhen Prince Bay",
+            "neighborhood": "Shekou, Nanshan",
+            "cuisine": "International buffet",
+            "description": "Festival · 欢宴 serves international buffet at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+            "address": "6/F, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+            "checkedAt": "2026-10-12",
+            "recognition": "Operator-confirmed September opening",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-202-0-90f10520b7a9e84c.webp",
+            "imageCredit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+            "imageSourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161343mu2i.png",
+            "imageNote": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+            "day": "2026-09-10",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+            "name": "Festival · 欢宴 — MGM Shenzhen Prince Bay",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+            "phone": "+86 755 3665 8888",
+            "openingHours": [
+              {
+                "days": "Daily breakfast",
+                "hours": "06:30–10:30"
+              },
+              {
+                "days": "Weekday à la carte",
+                "hours": "11:00–22:30"
+              },
+              {
+                "days": "Saturday–Sunday buffet lunch",
+                "hours": "12:00–15:00"
+              },
+              {
+                "days": "Friday–Sunday buffet dinner",
+                "hours": "17:30–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+            "hoursNote": "Hours from the named Prince Bay venue’s own page. "
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-202-0-90f10520b7a9e84c.webp",
+          "sha256": "90f10520b7a9e84c807ba0e8b8c6f5cef214f5fde913cd53395bc80eac4547b7",
+          "width": 1345,
+          "height": 890,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161343mu2i.png"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-202-1-337b065f9af2e88c.webp",
+          "sha256": "337b065f9af2e88c12d10adfc698c458eed20731077fce63dce3b3628d3098b0",
+          "width": 1334,
+          "height": 889,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161353nrkh.png"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://en.mgmchinaholdings.com/media-releases?item=855",
+        "operatorPage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+        "menuSource": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+        "sourcesChecked": [
+          "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38750",
+          "https://www.mgmhospitality.com/en/mgmshenzhenprincebay/dining/38750",
+          "https://en.mgmchinaholdings.com/media-releases?item=855",
+          "https://www.sohu.com/a/1076238786_121948408",
+          "Chinese and English branch-specific menu/price searches"
+        ],
+        "remainingGap": "Named dish prices are not published on the operator page; confirm the current menu with the restaurant."
+      }
+    },
+    {
+      "restaurantId": 203,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yu Hoi Heen · 御海轩 — MGM Shenzhen Prince Bay — Shenzhen",
+        "description": "Yu Hoi Heen · 御海轩 serves cantonese at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+        "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+        "address": "31/F, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+        "productName": "Yu Hoi Heen · 御海轩 — MGM Shenzhen Prince Bay",
+        "utcStartDateTime": "2026-09-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "MGM’s 10 September 2026 official opening release explicitly names this dining venue as available at the newly opened Prince Bay hotel.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shenzhen",
+          "China"
+        ],
+        "longFormSummary": "<p>Yu Hoi Heen · 御海轩 serves cantonese at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Published branch menu selection</h2><ul><li>凤城刺龟鱼皮羹 — Price not published</li><li>螃蜞膏香芋冬瓜 — Price not published</li></ul><p>Named dish prices are not published on the operator page; confirm the current menu with the restaurant. Two named dishes are published in branch-specific editorial reporting; the article was search-index accessible but its page returned 403.</p>",
+        "references": [
+          {
+            "url": "https://en.mgmchinaholdings.com/media-releases?item=855",
+            "title": "MGM official opening announcement",
+            "confidence": 95,
+            "reasoning": "Operator names all five dining venues as available at the 10 September opening."
+          },
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+            "title": "Official branch dining page",
+            "confidence": 95,
+            "reasoning": "Branch-specific address, hours and gallery."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+            "title": "Yu Hoi Heen · 御海轩 — MGM Shenzhen Prince Bay",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "Yu Hoi Heen · 御海轩 — MGM Shenzhen Prince Bay",
+              "summary": "Yu Hoi Heen · 御海轩 serves cantonese at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+              "body": "<p>Yu Hoi Heen · 御海轩 serves cantonese at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Published branch menu selection</h2><ul><li>凤城刺龟鱼皮羹 — Price not published</li><li>螃蜞膏香芋冬瓜 — Price not published</li></ul><p>Named dish prices are not published on the operator page; confirm the current menu with the restaurant. Two named dishes are published in branch-specific editorial reporting; the article was search-index accessible but its page returned 403.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shenzhen"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+          "menu": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+            "name": "Yu Hoi Heen · 御海轩 — MGM Shenzhen Prince Bay",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch menu selection",
+                "url": "https://www.sohu.com/a/1076238786_121948408",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "凤城刺龟鱼皮羹",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  },
+                  {
+                    "name": "螃蜞膏香芋冬瓜",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  }
+                ],
+                "note": "Named dish prices are not published on the operator page; confirm the current menu with the restaurant. Two named dishes are published in branch-specific editorial reporting; the article was search-index accessible but its page returned 403."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-203-0-1ff01d83716b8261.webp",
+              "alt": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+              "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+              "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+              "originalUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161644oqgk.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shenzhen",
+            "kind": "opening",
+            "slug": "mgm-prince-bay-38751",
+            "name": "Yu Hoi Heen · 御海轩 — MGM Shenzhen Prince Bay",
+            "neighborhood": "Shekou, Nanshan",
+            "cuisine": "Cantonese",
+            "description": "Yu Hoi Heen · 御海轩 serves cantonese at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+            "address": "31/F, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+            "checkedAt": "2026-10-12",
+            "recognition": "Operator-confirmed September opening",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-203-0-1ff01d83716b8261.webp",
+            "imageCredit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+            "imageSourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161644oqgk.jpg",
+            "imageNote": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+            "day": "2026-09-10",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+            "name": "Yu Hoi Heen · 御海轩 — MGM Shenzhen Prince Bay",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+            "phone": "+86 755 3665 8888",
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:30–14:30"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:30–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+            "hoursNote": "Hours from the named Prince Bay venue’s own page. "
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-203-0-1ff01d83716b8261.webp",
+          "sha256": "1ff01d83716b8261115ab6352084655b8c9cc5be0300075529de2218ac0dee65",
+          "width": 1400,
+          "height": 935,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161644oqgk.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-203-1-5895cc64e1eaa1e4.webp",
+          "sha256": "5895cc64e1eaa1e439843494a75624f7c59a97f948e88d125ddadb0ff13004b6",
+          "width": 1400,
+          "height": 935,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161650yb51.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://en.mgmchinaholdings.com/media-releases?item=855",
+        "operatorPage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+        "menuSource": "https://www.sohu.com/a/1076238786_121948408",
+        "sourcesChecked": [
+          "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38751",
+          "https://www.mgmhospitality.com/en/mgmshenzhenprincebay/dining/38751",
+          "https://en.mgmchinaholdings.com/media-releases?item=855",
+          "https://www.sohu.com/a/1076238786_121948408",
+          "Chinese and English branch-specific menu/price searches"
+        ],
+        "remainingGap": "Named dish prices are not published on the operator page; confirm the current menu with the restaurant. Two named dishes are published in branch-specific editorial reporting; the article was search-index accessible but its page returned 403."
+      }
+    },
+    {
+      "restaurantId": 204,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "The Purple · 紫堂 — MGM Shenzhen Prince Bay — Shenzhen",
+        "description": "The Purple · 紫堂 serves cocktail bar at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+        "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+        "address": "32/F, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+        "productName": "The Purple · 紫堂 — MGM Shenzhen Prince Bay",
+        "utcStartDateTime": "2026-09-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "MGM’s 10 September 2026 official opening release explicitly names this dining venue as available at the newly opened Prince Bay hotel.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shenzhen",
+          "China"
+        ],
+        "longFormSummary": "<p>The Purple · 紫堂 serves cocktail bar at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Published branch menu selection</h2><ul><li>Champagne — Price not published</li><li>Caviar — Price not published</li></ul><p>Named dish prices are not published on the operator page; confirm the current menu with the restaurant.</p>",
+        "references": [
+          {
+            "url": "https://en.mgmchinaholdings.com/media-releases?item=855",
+            "title": "MGM official opening announcement",
+            "confidence": 95,
+            "reasoning": "Operator names all five dining venues as available at the 10 September opening."
+          },
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+            "title": "Official branch dining page",
+            "confidence": 95,
+            "reasoning": "Branch-specific address, hours and gallery."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+            "title": "The Purple · 紫堂 — MGM Shenzhen Prince Bay",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "The Purple · 紫堂 — MGM Shenzhen Prince Bay",
+              "summary": "The Purple · 紫堂 serves cocktail bar at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+              "body": "<p>The Purple · 紫堂 serves cocktail bar at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Published branch menu selection</h2><ul><li>Champagne — Price not published</li><li>Caviar — Price not published</li></ul><p>Named dish prices are not published on the operator page; confirm the current menu with the restaurant.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shenzhen"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+          "menu": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+            "name": "The Purple · 紫堂 — MGM Shenzhen Prince Bay",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch menu selection",
+                "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Champagne",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  },
+                  {
+                    "name": "Caviar",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  }
+                ],
+                "note": "Named dish prices are not published on the operator page; confirm the current menu with the restaurant."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-204-1-450246c402450672.webp",
+              "alt": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+              "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+              "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+              "originalUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161902styh.jpg",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shenzhen",
+            "kind": "opening",
+            "slug": "mgm-prince-bay-38752",
+            "name": "The Purple · 紫堂 — MGM Shenzhen Prince Bay",
+            "neighborhood": "Shekou, Nanshan",
+            "cuisine": "Cocktail bar",
+            "description": "The Purple · 紫堂 serves cocktail bar at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+            "address": "32/F, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+            "checkedAt": "2026-10-12",
+            "recognition": "Operator-confirmed September opening",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-204-1-450246c402450672.webp",
+            "imageCredit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+            "imageSourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161902styh.jpg",
+            "imageNote": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+            "day": "2026-09-10",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+            "name": "The Purple · 紫堂 — MGM Shenzhen Prince Bay",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+            "phone": "+86 755 3665 8888",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "16:00–01:00"
+              }
+            ],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+            "hoursNote": "Hours from the named Prince Bay venue’s own page. "
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-204-1-450246c402450672.webp",
+          "sha256": "450246c4024506729860a42f67e28461445319db8aaa62c0e75996a4918005b6",
+          "width": 1400,
+          "height": 935,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161902styh.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-204-0-03072503fe6ec785.webp",
+          "sha256": "03072503fe6ec7856fd796f8956d1f82105157f1cb89bcc34a3716a30c73a2ff",
+          "width": 1400,
+          "height": 935,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19161854a7y8.jpg"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://en.mgmchinaholdings.com/media-releases?item=855",
+        "operatorPage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+        "menuSource": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+        "sourcesChecked": [
+          "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38752",
+          "https://www.mgmhospitality.com/en/mgmshenzhenprincebay/dining/38752",
+          "https://en.mgmchinaholdings.com/media-releases?item=855",
+          "https://www.sohu.com/a/1076238786_121948408",
+          "Chinese and English branch-specific menu/price searches"
+        ],
+        "remainingGap": "Named dish prices are not published on the operator page; confirm the current menu with the restaurant."
+      }
+    },
+    {
+      "restaurantId": 205,
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "The Lobby Lounge · 大堂吧 — MGM Shenzhen Prince Bay — Shenzhen",
+        "description": "The Lobby Lounge · 大堂吧 serves afternoon tea and coffee at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+        "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+        "address": "Lobby Lounge, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+        "productName": "The Lobby Lounge · 大堂吧 — MGM Shenzhen Prince Bay",
+        "utcStartDateTime": "2026-09-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "MGM’s 10 September 2026 official opening release explicitly names this dining venue as available at the newly opened Prince Bay hotel.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shenzhen",
+          "China"
+        ],
+        "longFormSummary": "<p>The Lobby Lounge · 大堂吧 serves afternoon tea and coffee at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Published branch menu selection</h2><ul><li>Custom-themed afternoon tea — Price not published</li><li>Yunnan-sourced craft coffee — Price not published</li></ul><p>Named dish prices are not published on the operator page; confirm the current menu with the restaurant. The operator description says 5/F but its address says 6/F; confirm the exact floor before visiting.</p>",
+        "references": [
+          {
+            "url": "https://en.mgmchinaholdings.com/media-releases?item=855",
+            "title": "MGM official opening announcement",
+            "confidence": 95,
+            "reasoning": "Operator names all five dining venues as available at the 10 September opening."
+          },
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+            "title": "Official branch dining page",
+            "confidence": 95,
+            "reasoning": "Branch-specific address, hours and gallery."
+          }
+        ],
+        "sourceWikis": [
+          {
+            "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+            "title": "The Lobby Lounge · 大堂吧 — MGM Shenzhen Prince Bay",
+            "generatedBy": "process:restaurant-guide-research",
+            "wiki": {
+              "title": "The Lobby Lounge · 大堂吧 — MGM Shenzhen Prince Bay",
+              "summary": "The Lobby Lounge · 大堂吧 serves afternoon tea and coffee at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+              "body": "<p>The Lobby Lounge · 大堂吧 serves afternoon tea and coffee at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.</p><h2>Published branch menu selection</h2><ul><li>Custom-themed afternoon tea — Price not published</li><li>Yunnan-sourced craft coffee — Price not published</li></ul><p>Named dish prices are not published on the operator page; confirm the current menu with the restaurant. The operator description says 5/F but its address says 6/F; confirm the exact floor before visiting.</p>",
+              "tags": [
+                "Restaurants",
+                "China",
+                "Shenzhen"
+              ]
+            }
+          }
+        ]
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+          "menu": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+            "name": "The Lobby Lounge · 大堂吧 — MGM Shenzhen Prince Bay",
+            "checkedAt": "2026-10-12",
+            "menus": [
+              {
+                "label": "Published branch menu selection",
+                "url": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Custom-themed afternoon tea",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  },
+                  {
+                    "name": "Yunnan-sourced craft coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch-specific product; confirm current availability with the restaurant."
+                  }
+                ],
+                "note": "Named dish prices are not published on the operator page; confirm the current menu with the restaurant. The operator description says 5/F but its address says 6/F; confirm the exact floor before visiting."
+              }
+            ],
+            "specials": [],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-205-0-0ef0ab99c4cd038f.webp",
+              "alt": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+              "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+              "sourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+              "originalUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19162101bwwb.png",
+              "checkedAt": "2026-10-12"
+            }
+          },
+          "tile": {
+            "regionSlug": "shenzhen",
+            "kind": "opening",
+            "slug": "mgm-prince-bay-38753",
+            "name": "The Lobby Lounge · 大堂吧 — MGM Shenzhen Prince Bay",
+            "neighborhood": "Shekou, Nanshan",
+            "cuisine": "Afternoon tea and coffee",
+            "description": "The Lobby Lounge · 大堂吧 serves afternoon tea and coffee at MGM Shenzhen Prince Bay. The operator’s 10 September 2026 opening announcement confirms this named dining venue.",
+            "address": "Lobby Lounge, MGM Shenzhen Prince Bay, No. 8 Yonghai Road, Nanshan District, Shenzhen",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+            "checkedAt": "2026-10-12",
+            "recognition": "Operator-confirmed September opening",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-205-0-0ef0ab99c4cd038f.webp",
+            "imageCredit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+            "imageSourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19162101bwwb.png",
+            "imageNote": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+            "day": "2026-09-10",
+            "openingConfirmed": true
+          },
+          "details": {
+            "pinSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+            "name": "The Lobby Lounge · 大堂吧 — MGM Shenzhen Prince Bay",
+            "websiteUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+            "phone": "+86 755 3665 8888",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-12",
+            "detailsSourceUrl": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+            "hoursNote": "Hours from the named Prince Bay venue’s own page. Exact lobby floor is inconsistent in the operator page; confirm before visiting."
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/mgm-opening-205-0-0ef0ab99c4cd038f.webp",
+          "sha256": "0ef0ab99c4cd038fd90b093bd31af391035118104bfa385371f1a148b8026b46",
+          "width": 1335,
+          "height": 884,
+          "credit": "MGM Shenzhen Prince Bay / official restaurant gallery",
+          "note": "Operator-published interior image for this named Prince Bay venue; photography/rendering status is not specified. No menu item or current offer participation inferred from the image.",
+          "sourcePage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+          "sourceUrl": "https://obs-gw.dytmgm.com/u/cms/www/202608/19162101bwwb.png"
+        }
+      ],
+      "evidence": {
+        "openingSource": "https://en.mgmchinaholdings.com/media-releases?item=855",
+        "operatorPage": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+        "menuSource": "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+        "sourcesChecked": [
+          "https://www.mgmhospitality.com/cn/mgmshenzhenprincebay/dining/38753",
+          "https://www.mgmhospitality.com/en/mgmshenzhenprincebay/dining/38753",
+          "https://en.mgmchinaholdings.com/media-releases?item=855",
+          "https://www.sohu.com/a/1076238786_121948408",
+          "Chinese and English branch-specific menu/price searches"
+        ],
+        "remainingGap": "Named dish prices are not published on the operator page; confirm the current menu with the restaurant. The operator description says 5/F but its address says 6/F; confirm the exact floor before visiting."
+      }
+    }
+  ]
+}
