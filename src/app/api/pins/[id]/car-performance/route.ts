@@ -22,8 +22,10 @@ export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
 
 // Stores a rubric: body { range, charging, acceleration, assistance, space,
 // value (each 0-5 in half steps, or null where the spec is not published; all
-// six keys required, at least one score), source ('session' | 'hand'), basis,
-// sourceUrl }.
+// six keys required, at least one score), reviews ([{url, title, publishedDate,
+// quote}], at most 6, pages that review how this model drives; left out it
+// keeps the pin's existing reviews, [] clears them), source ('session' |
+// 'hand'), basis, sourceUrl }.
 export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
   await authorOrAdmin(request, pinId);

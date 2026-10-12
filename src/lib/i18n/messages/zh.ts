@@ -646,6 +646,7 @@ const zh: Messages = {
       estimate: '估算',
       na: '未公布',
       showAll: '显示所有带汽车性能评分的图钉',
+      reviews: '独立评测',
     },
     candidatesHeading: '热门候选',
     candidatesNote: '截至{date}的热门候选。百分比为预测市场价格，并非结果。',

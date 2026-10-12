@@ -650,6 +650,7 @@ const en = {
       estimate: 'Estimate',
       na: 'n/a',
       showAll: 'Show every pin with a car performance rubric',
+      reviews: 'Independent reviews',
     },
     candidatesHeading: 'Contenders',
     candidatesNote: 'Contenders as of {date}. Percentages are prediction-market prices, not results.',

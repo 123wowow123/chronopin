@@ -643,6 +643,7 @@ const pt: Messages = {
       estimate: 'Estimativa',
       na: 'n/d',
       showAll: 'Mostrar todos os pins com avaliação de desempenho',
+      reviews: 'Avaliações independentes',
     },
     candidatesHeading: 'Candidatos',
     candidatesNote: 'Candidatos em {date}. As percentagens são preços de um mercado de previsões, não resultados.',

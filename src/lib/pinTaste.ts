@@ -3,6 +3,8 @@
 // sake guides print (pungent and coolness were added for snacks and drinks), so
 // each carries its Japanese label beside the translated one.
 
+import type { PinReview } from './pinReviews';
+
 export const TASTE_AXES = [
   { key: 'aroma', ja: '香り' },
   { key: 'bitterness', ja: '苦味' },
@@ -26,8 +28,9 @@ export type TasteSource = (typeof TASTE_SOURCES)[number];
 export type TasteScores = Record<TasteAxis, number>;
 
 // A page that describes how the product tastes, with a short extract.
-export type TasteReview = { url: string; title: string | null; publishedDate: string | null; quote: string | null };
+export type TasteReview = PinReview;
 export const MAX_TASTE_REVIEWS = 6;
+export const MAX_TASTE_REVIEW_QUOTE = 400;
 
 export type PinTasteJson = TasteScores & {
   // Alcohol by volume in percent, from a figure the source states; null when

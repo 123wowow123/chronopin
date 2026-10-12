@@ -645,6 +645,7 @@ const ko: Messages = {
       estimate: '추정',
       na: '미공개',
       showAll: '자동차 성능 평가가 있는 모든 핀 보기',
+      reviews: '독립 매체 리뷰',
     },
     candidatesHeading: '유력 후보',
     candidatesNote: '{date} 기준 유력 후보입니다. 퍼센트는 예측 시장 가격이며 결과가 아닙니다.',

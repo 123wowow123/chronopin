@@ -10,10 +10,20 @@ import type { PinJson } from './types';
 
 // The fewest characters of summary text (description and long-form summary,
 // tags stripped) a pin needs. On prod the median is ~1,700 and the bottom
-// tenth ~840.
-export const THIN_TEXT_CHARS = 600;
+// tenth ~840. Raised from 600 / 2 sources on 2026-10-12: Search Console had
+// 1,174 pages "crawled - currently not indexed", and the English ones that
+// passed the old floor sat at 750-1,400 characters.
+export const THIN_TEXT_CHARS = 900;
 // The fewest cited pages (its source plus its references) a pin needs.
-export const MIN_SOURCES = 2;
+export const MIN_SOURCES = 3;
+
+// The higher bar for its translated pages to be indexed. 97% of those not
+// indexed were non-English copies (about 137,000 hreflang alternates for ~8,300
+// sitemap URLs); until the English side has the authority, only the strongest
+// pins ask for their translations to be indexed. A pin under it keeps its
+// translated pages (viewers get them) as "noindex, follow", with no hreflang.
+export const TRANSLATION_TEXT_CHARS = 1200;
+export const TRANSLATION_MIN_SOURCES = 3;
 
 export type ThinReason = 'shortText' | 'oneSource';
 
@@ -44,8 +54,14 @@ export function thinReasons(pin: Pick<PinJson, 'description' | 'longFormSummary'
   return reasons;
 }
 
-// The admin setting: whether thin pins ask search engines not to index them.
-// On by default.
+// Whether the pin's translated pages are worth indexing: judged, like
+// thinReasons, on the English pin. The SQL twin is TRANSLATABLE_PIN_SQL.
+export function translationReady(pin: Pick<PinJson, 'description' | 'longFormSummary' | 'sourceUrl' | 'references'>): boolean {
+  return thinReasons(pin).length === 0 && pinTextLength(pin) >= TRANSLATION_TEXT_CHARS && pinSourceCount(pin) >= TRANSLATION_MIN_SOURCES;
+}
+
+// The admin setting: whether thin pins, and the translations of pins under the
+// translation bar, ask search engines not to index them. On by default.
 export type HideThinPinsSetting = { enabled: boolean };
 
 export const DEFAULT_HIDE_THIN_PINS: HideThinPinsSetting = { enabled: true };

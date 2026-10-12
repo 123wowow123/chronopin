@@ -4,7 +4,7 @@ import type { Row } from '../db';
 import BasePins from './basePins';
 import Pin from './pin';
 import PinTag from './pinTag';
-import { THIN_PIN_SQL } from './searchIssues';
+import { THIN_PIN_SQL, TRANSLATABLE_PIN_SQL } from './searchIssues';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { holidayRanges, loadAstronomy } from '../holidays';
 import { TASTE_KEYS, TASTE_STRONG, type TasteAxis } from '@/lib/pinTaste';
@@ -331,11 +331,13 @@ export default class Pins extends BasePins<Pin> {
   }
 
   // Every live pin's id and last change, oldest first, for the sitemap; with
-  // skipThin, not the thin pins that ask not to be indexed (src/lib/searchQuality.ts).
+  // skipThin, not the thin pins that ask not to be indexed (src/lib/searchQuality.ts),
+  // and `translatable` says whether its translated pages are indexed (and so listed).
   static async listForSitemap(offset: number, limit: number, skipThin = false) {
-    return db.query<{ id: number; title: string; lastModified: Date }>(
+    return db.query<{ id: number; title: string; lastModified: Date; translatable: boolean }>(
       `
-      SELECT "id", "title", COALESCE("utcUpdatedDateTime", "utcCreatedDateTime") AS "lastModified"
+      SELECT "id", "title", COALESCE("utcUpdatedDateTime", "utcCreatedDateTime") AS "lastModified",
+        ${skipThin ? TRANSLATABLE_PIN_SQL('"Pin"') : 'true'} AS "translatable"
       FROM "Pin"
       WHERE "utcDeletedDateTime" IS NULL${skipThin ? ` AND NOT ${THIN_PIN_SQL('"Pin"')}` : ''}
       ORDER BY "id"

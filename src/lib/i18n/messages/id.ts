@@ -650,6 +650,7 @@ const id: Messages = {
       estimate: 'Perkiraan',
       na: 'T/A',
       showAll: 'Tampilkan semua pin dengan penilaian performa mobil',
+      reviews: 'Ulasan independen',
     },
     candidatesHeading: 'Kandidat',
     candidatesNote: 'Kandidat per {date}. Persentase adalah harga pasar prediksi, bukan hasil.',

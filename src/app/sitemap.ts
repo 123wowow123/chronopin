@@ -66,7 +66,8 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     ...topics.map((path) => ({ url: absoluteUrl(path), alternates: inEveryLanguage(path), changeFrequency: 'daily' as const, priority: 0.7 })),
     ...pins.map((pin) => ({
       url: absoluteUrl(pinPath(pin)),
-      alternates: inEveryLanguage(pinPath(pin)),
+      // A pin under the translation bar lists no languages: its copies are noindex.
+      alternates: pin.translatable ? inEveryLanguage(pinPath(pin)) : undefined,
       lastModified: pin.lastModified,
       changeFrequency: 'weekly' as const,
       priority: 0.8,

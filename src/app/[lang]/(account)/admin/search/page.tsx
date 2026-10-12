@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Link from '@/components/ui/Link';
-import { THIN_REASON_LABELS, THIN_TEXT_CHARS, MIN_SOURCES } from '@/lib/searchQuality';
+import { THIN_REASON_LABELS, THIN_TEXT_CHARS, MIN_SOURCES, TRANSLATION_MIN_SOURCES, TRANSLATION_TEXT_CHARS } from '@/lib/searchQuality';
 import { pinPath } from '@/lib/seo';
 import { MIN_INDEXED_PINS } from '@/lib/topics';
 import { requireAdminViewer } from '@/server/guard';
@@ -68,9 +68,10 @@ export default async function AdminSearchPage() {
         intro={
           <>
             A pin is thin with under {THIN_TEXT_CHARS} characters of summary text ({counts.shortText.toLocaleString()} pins) or fewer than {MIN_SOURCES}{' '}
-            cited pages, meaning only its own source ({counts.oneSource.toLocaleString()}); {counts.both.toLocaleString()} are both. Fix one by
+            cited pages, its source plus references ({counts.oneSource.toLocaleString()}); {counts.both.toLocaleString()} are both. Fix one by
             writing a fuller summary or adding references, and it is indexed again on its own. Thinnest first
-            {counts.thin > THIN_SHOWN ? `, the first ${THIN_SHOWN}` : ''}.
+            {counts.thin > THIN_SHOWN ? `, the first ${THIN_SHOWN}` : ''}. A pin under {TRANSLATION_TEXT_CHARS.toLocaleString()} characters or {TRANSLATION_MIN_SOURCES}{' '}
+            cited pages is indexed in English only; its translated pages say noindex and list no hreflang.
           </>
         }
       >

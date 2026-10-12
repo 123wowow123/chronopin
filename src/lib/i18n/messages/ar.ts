@@ -719,6 +719,7 @@ const ar: Messages = {
       estimate: 'تقدير',
       na: 'غير متاح',
       showAll: 'عرض كل الدبابيس التي لها تقييم أداء السيارة',
+      reviews: 'مراجعات مستقلة',
     },
     candidatesHeading: 'المرشحون',
     candidatesNote: 'المرشحون حتى {date}. النسب المئوية أسعار سوق توقعات وليست نتائج.',

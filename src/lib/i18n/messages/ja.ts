@@ -645,6 +645,7 @@ const ja: Messages = {
       estimate: '推定',
       na: '非公表',
       showAll: '車の性能評価のあるピンをすべて表示',
+      reviews: '第三者レビュー',
     },
     candidatesHeading: '有力候補',
     candidatesNote: '{date}時点の有力候補。パーセンテージは予測市場の価格であり、結果ではありません。',

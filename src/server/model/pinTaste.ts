@@ -3,7 +3,8 @@
 // by hand is never overwritten by an estimate.
 
 import * as db from '../db';
-import { MAX_TASTE_REVIEWS, TASTE_KEYS, TASTE_MAX, TASTE_SOURCES, isAbv, isTasteScore, type PinTasteJson, type TasteReview, type TasteScores, type TasteSource } from '@/lib/pinTaste';
+import { reviewsProblem } from '@/lib/pinReviews';
+import { MAX_TASTE_REVIEWS, MAX_TASTE_REVIEW_QUOTE, TASTE_KEYS, TASTE_MAX, TASTE_SOURCES, isAbv, isTasteScore, type PinTasteJson, type TasteReview, type TasteScores, type TasteSource } from '@/lib/pinTaste';
 
 type Row = Omit<PinTasteJson, 'checkedAt'> & { checkedAt: Date };
 
@@ -15,34 +16,6 @@ const toJson = (row: Row): PinTasteJson => ({ ...row, checkedAt: new Date(row.ch
 export async function tasteForPin(pinId: number): Promise<PinTasteJson | null> {
   const [row] = await db.query<Row>(`SELECT ${COLUMNS} FROM "PinTaste" WHERE "pinId" = $1`, [pinId]);
   return row ? toJson(row) : null;
-}
-
-// The reviews, cleaned, or a sentence saying what is wrong with them.
-function reviewsProblem(value: unknown): TasteReview[] | string {
-  if (value == null) return [];
-  if (!Array.isArray(value) || value.length > MAX_TASTE_REVIEWS) return `reviews is a list of at most ${MAX_TASTE_REVIEWS}.`;
-  const seen = new Set<string>();
-  const reviews: TasteReview[] = [];
-  for (const raw of value as Record<string, unknown>[]) {
-    const url = raw && typeof raw.url === 'string' ? raw.url.trim() : '';
-    if (!/^https?:\/\/\S+$/i.test(url) || url.length > 4000) return 'A review needs an http(s) url.';
-    if (seen.has(url)) continue;
-    seen.add(url);
-    const text = (key: string, max: number): string | null | string => {
-      const v = raw[key];
-      if (v == null || v === '') return null;
-      return typeof v === 'string' && v.trim().length <= max ? v.trim() : `A review ${key} is a string of at most ${max} characters.`;
-    };
-    const title = text('title', 300);
-    const quote = text('quote', 400);
-    const publishedDate = raw.publishedDate == null || raw.publishedDate === '' ? null : String(raw.publishedDate);
-    if (publishedDate && !/^\d{4}-\d{2}-\d{2}$/.test(publishedDate)) return 'A review publishedDate must be YYYY-MM-DD.';
-    for (const [key, v] of [['title', title], ['quote', quote]] as const) {
-      if (v && v.startsWith(`A review ${key} is`)) return v;
-    }
-    reviews.push({ url, title, publishedDate, quote });
-  }
-  return reviews;
 }
 
 // The scores, or a sentence saying what is wrong with them.
@@ -57,7 +30,7 @@ export function tasteProblem(body: Record<string, unknown>): { scores: TasteScor
   const abv = body.abv == null ? null : (body.abv as number);
   const abvSourceUrl = abv != null && typeof body.abvSourceUrl === 'string' && /^https?:\/\/\S+$/i.test(body.abvSourceUrl) && body.abvSourceUrl.length <= 4000 ? body.abvSourceUrl : null;
   if (abv != null && body.abvSourceUrl && !abvSourceUrl) return 'abvSourceUrl is not a web address.';
-  const reviews = reviewsProblem(body.reviews);
+  const reviews = reviewsProblem(body.reviews, { max: MAX_TASTE_REVIEWS, maxQuote: MAX_TASTE_REVIEW_QUOTE });
   if (typeof reviews === 'string') return reviews;
   const source = String(body.source ?? 'hand') as TasteSource;
   if (!TASTE_SOURCES.includes(source)) return `source must be one of ${TASTE_SOURCES.join(', ')}.`;

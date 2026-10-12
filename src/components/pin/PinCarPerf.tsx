@@ -3,6 +3,7 @@ import type { Evidence } from '@/lib/referenceConfidence';
 import { CAR_PERF_AXES, CAR_PERF_KEYS, CAR_PERF_MAX, hasCarPerf, type CarPerfAxis, type PinCarPerfJson } from '@/lib/pinCarPerf';
 import { Cite } from './PinTaste';
 import { RefineLink } from './RefineLink';
+import { ReviewList } from './ReviewList';
 import { TasteRadar } from './TasteRadar';
 
 // A vehicle pin's car performance rubric as a radar (PinCarPerf, 0167), drawn
@@ -10,15 +11,18 @@ import { TasteRadar } from './TasteRadar';
 // model's published specs and the section says so; an axis whose spec is not
 // published is "n/a" at the centre and not part of the shape. The basis line
 // says which variant was scored and what drove each score, with the citation
-// of the page the figures came from.
+// of the page the figures came from, and the independent reviews it was
+// checked against are listed under it, as under the taste radar.
 export function PinCarPerf({
   perf,
   t,
+  locale,
   evidence,
   className = '',
 }: {
   perf: PinCarPerfJson;
   t: Translator;
+  locale: string;
   evidence: Evidence[];
   className?: string;
 }) {
@@ -51,6 +55,7 @@ export function PinCarPerf({
           {perf.basis ? ` ${perf.basis}` : ''}
           {perf.sourceUrl ? <Cite url={perf.sourceUrl} evidence={evidence} t={t} /> : null}
         </p>
+        <ReviewList reviews={perf.reviews} heading={t('pin.carPerf.reviews')} locale={locale} />
       </div>
     </section>
   );

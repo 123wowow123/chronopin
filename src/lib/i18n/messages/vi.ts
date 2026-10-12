@@ -649,6 +649,7 @@ const vi: Messages = {
       estimate: 'Ước tính',
       na: 'chưa có',
       showAll: 'Hiện mọi ghim có đánh giá hiệu năng xe',
+      reviews: 'Đánh giá độc lập',
     },
     candidatesHeading: 'Ứng viên',
     candidatesNote: 'Các ứng viên tính đến {date}. Tỷ lệ phần trăm là giá thị trường dự đoán, không phải kết quả.',

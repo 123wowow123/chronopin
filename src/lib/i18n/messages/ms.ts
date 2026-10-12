@@ -650,6 +650,7 @@ const ms: Messages = {
       estimate: 'Anggaran',
       na: 'T/A',
       showAll: 'Tunjukkan semua pin dengan penilaian prestasi kereta',
+      reviews: 'Ulasan bebas',
     },
     candidatesHeading: 'Calon',
     candidatesNote: 'Calon setakat {date}. Peratusan ialah harga pasaran ramalan, bukan keputusan.',

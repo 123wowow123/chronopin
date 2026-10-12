@@ -6,6 +6,8 @@
 // An axis is null when the spec it rests on is not published for the model:
 // the radar draws it as "n/a" and leaves it out of the shape, never as a zero.
 
+import type { PinReview } from './pinReviews';
+
 export const CAR_PERF_AXES = [
   { key: 'range' },
   { key: 'charging' },
@@ -28,7 +30,15 @@ export type CarPerfSource = (typeof CAR_PERF_SOURCES)[number];
 // null: the spec for this axis is not published for the model.
 export type CarPerfScores = Record<CarPerfAxis, number | null>;
 
+// A page that reviews how the model drives or performs (a road test, not the
+// launch announcement), with a short extract.
+export type CarPerfReview = PinReview;
+export const MAX_CAR_PERF_REVIEWS = 6;
+export const MAX_CAR_PERF_REVIEW_QUOTE = 300;
+
 export type PinCarPerfJson = CarPerfScores & {
+  // Independent reviews the scores were checked against, best first.
+  reviews: CarPerfReview[];
   source: CarPerfSource;
   basis: string | null;
   sourceUrl: string | null;

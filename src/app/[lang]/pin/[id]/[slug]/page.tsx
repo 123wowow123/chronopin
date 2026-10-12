@@ -77,7 +77,7 @@ import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml } from '@/lib/sanitize';
 import { isAttendableEvent, isTicketedVenue, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
-import { thinReasons } from '@/lib/searchQuality';
+import { thinReasons, translationReady } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinCandidateJson } from '@/lib/candidates';
@@ -104,13 +104,19 @@ async function loadPin(params: Props['params']) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const [pin, t, offered] = await Promise.all([loadPin(params), getT(), localesOffered()]);
   if (!pin) return { title: t('meta.pinNotFound'), robots: { index: false } };
-  const metadata = pinMetadata(pin, t.locale, offered);
   // Read after the pin (which waits on the URL), never while prerendering at
   // build time, when there is no database.
-  if (!(await hideThinPins()).enabled) return metadata;
+  if (!(await hideThinPins()).enabled) return pinMetadata(pin, t.locale, offered);
   // Judged on the English pin, so every language's copy agrees (src/lib/searchQuality.ts).
   const english = t.locale === DEFAULT_LOCALE ? pin : await pinById(pin.id, DEFAULT_LOCALE);
-  return english && thinReasons(english).length ? { ...metadata, robots: { index: false, follow: true } } : metadata;
+  if (!english) return pinMetadata(pin, t.locale, offered);
+  if (thinReasons(english).length) return { ...pinMetadata(pin, t.locale, offered), robots: { index: false, follow: true } };
+  // A pin under the translation bar offers no hreflang, and its translated pages are not indexed.
+  if (!translationReady(english)) {
+    const metadata = pinMetadata(pin, t.locale, []);
+    return t.locale === DEFAULT_LOCALE ? metadata : { ...metadata, robots: { index: false, follow: true } };
+  }
+  return pinMetadata(pin, t.locale, offered);
 }
 
 export default function PinPage({ params }: Props) {
@@ -207,7 +213,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
 
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
-          {carPerf ? <PinCarPerf perf={carPerf} t={t} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+          {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
 
           {/* Beside the pin on wide screens, under its map, game facts, taste
               profile and car performance rubric; after them on phones. */}

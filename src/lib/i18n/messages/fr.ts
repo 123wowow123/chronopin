@@ -645,6 +645,7 @@ const fr: Messages = {
       estimate: 'Estimation',
       na: 'n.d.',
       showAll: 'Afficher tous les pins avec une grille de performances',
+      reviews: 'Avis indépendants',
     },
     candidatesHeading: 'Prétendants',
     candidatesNote: "Prétendants au {date}. Les pourcentages sont des prix d'un marché de prédiction, pas des résultats.",

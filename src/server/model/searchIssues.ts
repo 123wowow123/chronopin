@@ -1,6 +1,6 @@
 // What may keep pin pages out of Google, or count against the site, for the
 // admin Search tab (/admin/search). Read straight off "Pin", live pins only.
-import { MIN_SOURCES, THIN_TEXT_CHARS } from '@/lib/searchQuality';
+import { MIN_SOURCES, THIN_TEXT_CHARS, TRANSLATION_MIN_SOURCES, TRANSLATION_TEXT_CHARS } from '@/lib/searchQuality';
 import * as db from '../db';
 
 // A pin's summary text length and its cited pages, the SQL twins of
@@ -13,6 +13,10 @@ export const sourceCountSql = (p: string) =>
 
 // Whether the pin is thin (thinReasons is non-empty).
 export const THIN_PIN_SQL = (p: string) => `(${textLengthSql(p)} < ${THIN_TEXT_CHARS} OR ${sourceCountSql(p)} < ${MIN_SOURCES})`;
+
+// Whether the pin's translated pages are worth indexing (translationReady).
+export const TRANSLATABLE_PIN_SQL = (p: string) =>
+  `(NOT ${THIN_PIN_SQL(p)} AND ${textLengthSql(p)} >= ${TRANSLATION_TEXT_CHARS} AND ${sourceCountSql(p)} >= ${TRANSLATION_MIN_SOURCES})`;
 
 // Past this, Google cuts a title short in its results.
 export const LONG_TITLE_CHARS = 70;

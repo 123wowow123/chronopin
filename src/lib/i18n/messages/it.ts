@@ -643,6 +643,7 @@ const it: Messages = {
       estimate: 'Stima',
       na: 'n.d.',
       showAll: 'Mostra tutti i pin con una griglia delle prestazioni',
+      reviews: 'Recensioni indipendenti',
     },
     candidatesHeading: 'Candidati',
     candidatesNote: "Candidati al {date}. Le percentuali sono prezzi di un mercato predittivo, non risultati.",

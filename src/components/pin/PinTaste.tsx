@@ -5,15 +5,8 @@ import type { Evidence } from '@/lib/referenceConfidence';
 import { TASTE_AXES, TASTE_MAX, hasTaste, type PinTasteJson, type TasteAxis } from '@/lib/pinTaste';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 import { RefineLink } from './RefineLink';
+import { ReviewList, hostOf } from './ReviewList';
 import { TasteRadar } from './TasteRadar';
-
-export const hostOf = (url: string) => {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    return url;
-  }
-};
 
 // The citation after the basis: [n] linking to that row of the pin's
 // References panel when the page the estimate was read from is one of them,
@@ -84,26 +77,7 @@ export function PinTaste({
           {taste.basis ? ` ${taste.basis}` : ''}
           {taste.sourceUrl ? <Cite url={taste.sourceUrl} evidence={evidence} t={t} /> : null}
         </p>
-        {taste.reviews.length ? (
-          <div className="mt-2 border-t border-line pt-2">
-            <h3 className="mb-1 text-xs font-semibold text-muted">{t('pin.taste.reviews')}</h3>
-            <ul className="grid gap-1.5 text-xs">
-              {taste.reviews.map((review) => (
-                <li key={review.url}>
-                  <Anchor href={review.url} className="font-medium">
-                    {review.title || hostOf(review.url)}
-                  </Anchor>
-                  <span className="text-muted">
-                    {' · '}
-                    {hostOf(review.url)}
-                    {review.publishedDate ? ` · ${new Intl.DateTimeFormat(INTL_LOCALES[locale as Locale] ?? 'en', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(review.publishedDate))}` : ''}
-                  </span>
-                  {review.quote ? <q className="mt-0.5 block text-muted">{review.quote}</q> : null}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+        <ReviewList reviews={taste.reviews} heading={t('pin.taste.reviews')} locale={locale} />
       </div>
     </section>
   );

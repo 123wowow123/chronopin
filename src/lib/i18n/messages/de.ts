@@ -645,6 +645,7 @@ const de: Messages = {
       estimate: 'Schätzung',
       na: 'k. A.',
       showAll: 'Alle Pins mit Fahrleistungs-Bewertung anzeigen',
+      reviews: 'Unabhängige Testberichte',
     },
     candidatesHeading: 'Anwärter',
     candidatesNote: 'Anwärter, Stand {date}. Prozentwerte sind Preise eines Prognosemarkts, keine Ergebnisse.',

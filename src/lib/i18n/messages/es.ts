@@ -645,6 +645,7 @@ const es: Messages = {
       estimate: 'Estimación',
       na: 'n/d',
       showAll: 'Ver todos los pines con evaluación del rendimiento',
+      reviews: 'Reseñas independientes',
     },
     candidatesHeading: 'Candidatos',
     candidatesNote: 'Candidatos a {date}. Los porcentajes son precios de un mercado de predicciones, no resultados.',

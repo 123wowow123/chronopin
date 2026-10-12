@@ -46,6 +46,30 @@ describe('carPerfProblem', () => {
     expect(carPerfProblem({ range: null, charging: null, acceleration: null, assistance: null, space: null, value: null })).toMatch(/At least one axis/);
   });
 
+  it('keeps road-test reviews, once each, and refuses a bad one', () => {
+    const review = { url: 'https://example.com/r', title: 'Road test', publishedDate: '2026-09-30', quote: 'Quick and quiet.' };
+    expect(carPerfProblem({ ...scores, reviews: [review, review] })).toMatchObject({ reviews: [review] });
+    expect(carPerfProblem({ ...scores, reviews: [{ url: 'https://example.com/r' }] })).toMatchObject({
+      reviews: [{ url: 'https://example.com/r', title: null, publishedDate: null, quote: null }],
+    });
+    expect(carPerfProblem({ ...scores, reviews: [{ ...review, publishedDate: null, quote: '' }] })).toMatchObject({ reviews: [{ publishedDate: null, quote: null }] });
+    expect(carPerfProblem({ ...scores, reviews: [{ url: 'javascript:1' }] })).toMatch(/needs an http/);
+    expect(carPerfProblem({ ...scores, reviews: [{ url: 'http://' }] })).toMatch(/needs an http/);
+    expect(carPerfProblem({ ...scores, reviews: [{ ...review, publishedDate: '30/09/2026' }] })).toMatch(/YYYY-MM-DD/);
+    expect(carPerfProblem({ ...scores, reviews: [{ ...review, publishedDate: '2026-13-45' }] })).toMatch(/YYYY-MM-DD/);
+    expect(carPerfProblem({ ...scores, reviews: [{ ...review, quote: 'x'.repeat(300) }] })).toMatchObject({ reviews: [{ quote: 'x'.repeat(300) }] });
+    expect(carPerfProblem({ ...scores, reviews: [{ ...review, quote: 'x'.repeat(301) }] })).toMatch(/quote is a string of at most 300/);
+    expect(carPerfProblem({ ...scores, reviews: [{ ...review, title: 'x'.repeat(301) }] })).toMatch(/title is a string/);
+    expect(carPerfProblem({ ...scores, reviews: Array.from({ length: 7 }, (_, i) => ({ url: `https://example.com/${i}` })) })).toMatch(/at most 6/);
+    expect(carPerfProblem({ ...scores, reviews: 'https://example.com' })).toMatch(/at most 6/);
+  });
+
+  it('leaves reviews undefined when the body has none, and takes [] as clearing them', () => {
+    expect(carPerfProblem(scores)).toMatchObject({ reviews: undefined });
+    expect(carPerfProblem({ ...scores, reviews: [] })).toMatchObject({ reviews: [] });
+    expect(carPerfProblem({ ...scores, reviews: null })).toMatchObject({ reviews: [] });
+  });
+
   it('defaults to a hand row', () => {
     const checked = carPerfProblem(scores);
     expect(typeof checked === 'object' && checked.source).toBe('hand');
