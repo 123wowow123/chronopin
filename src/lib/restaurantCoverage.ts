@@ -1,7 +1,7 @@
 import { openingGroup } from './restaurants';
 
 export const RESTAURANT_TAB_TARGET = 12;
-export const CHINA_RESTAURANT_TAB_TARGET = 20;
+export const CHINA_RESTAURANT_TAB_TARGET = 35;
 
 export function restaurantTabTarget(country: string) {
   return country === 'China' ? CHINA_RESTAURANT_TAB_TARGET : RESTAURANT_TAB_TARGET;

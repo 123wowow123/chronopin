@@ -67,8 +67,8 @@ describe('restaurant refresh coverage', () => {
     ]);
     const result = await restaurantRegionsToRefresh(new Date('2026-10-10T00:00:00Z'));
     expect(result.find((region) => region.slug === 'beijing')).toMatchObject({
-      targetPerTab: 20, counts: { upcoming: 0, new: 1, top: 1, discounts: 0 },
-      needed: { upcoming: 20, new: 19, top: 19, discounts: 20 },
+      targetPerTab: 35, counts: { upcoming: 0, new: 1, top: 1, discounts: 0 },
+      needed: { upcoming: 35, new: 34, top: 34, discounts: 35 },
     });
   });
 
@@ -85,6 +85,6 @@ describe('restaurant refresh coverage', () => {
       { enabled: false, regionSlug: 'beijing', profile: { ...profile, pinSourceUrl: 'https://example.com/disabled' } },
     ]);
     const result = await restaurantRegionsToRefresh(new Date('2026-10-10T00:00:00Z'));
-    expect(result.find((region) => region.slug === 'beijing')).toMatchObject({ targetPerTab: 20, counts: { discounts: 1 }, needed: { discounts: 19 } });
+    expect(result.find((region) => region.slug === 'beijing')).toMatchObject({ targetPerTab: 35, counts: { discounts: 1 }, needed: { discounts: 34 } });
   });
 });

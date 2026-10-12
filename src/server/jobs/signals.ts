@@ -270,7 +270,7 @@ export function pinsChangedSince(since: Date, limit = 50) {
   );
 }
 
-// Replenish all four tabs using live content, with a 20-restaurant target in China.
+// Replenish all four tabs using live content, with a 35-restaurant target in China.
 // Archived tiles, deleted pins and expired offers do not fill a shortage.
 export async function restaurantRegionsToRefresh(since: Date) {
   const [records, specials] = await Promise.all([

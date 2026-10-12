@@ -296,7 +296,7 @@ up on its own; the refresh maintains the database-backed menus, details, tiles
 and offers ([restaurant-content API](../api/restaurant-content.md)).
 **Reads** `restaurant_regions`: each region with a new restaurant-opening pin
 or a shortage in Coming soon, Just opened, Top restaurants or Specials.
-China city guides aim for **at least 20 distinct restaurants in each tab**
+China city guides aim for **at least 35 distinct restaurants in each tab**
 (owner, 2026-10-11); other guides retain the 12-restaurant target.
 The signal includes `targetPerTab`, `counts`, and `needed` for `upcoming`, `new`,
 `top` and `discounts`, plus new pins and content check dates. Shortages remain

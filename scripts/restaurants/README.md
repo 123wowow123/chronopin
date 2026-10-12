@@ -19,7 +19,7 @@ announcements, local reporting and branch-specific promotions before accepting
 incomplete coverage. Add verified records where possible; never invent dates,
 discounts, ratings or dishes to fill a tab. Document sources checked and remaining
 coverage gaps. This applies to Japan and all future regional guides. For China city guides, aim
-for at least 20 distinct restaurants in each of the four tabs. Count venues,
+for at least 35 distinct restaurants in each of the four tabs. Count venues,
 not repeated offers; preserve eligibility and record any remaining shortages.
 
 The European collection covers London, Paris, Amsterdam, Berlin, Madrid,
