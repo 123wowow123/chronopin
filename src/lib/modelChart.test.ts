@@ -10,6 +10,19 @@ describe('modelKey', () => {
     expect(modelKey('muse-spark-1.2 (xHigh)')).toBe('muse spark 1.2');
     expect(modelKey('google/gemini-3-flash-preview:batch')).toBe('gemini 3 flash');
   });
+  it('keeps a size suffix apart from the version', () => {
+    expect(modelKey('granite-4.2-8b')).toBe('granite 4.2 8b');
+    expect(modelKey('gemma-3-4b-it')).toBe('gemma 3 4b it');
+    expect(modelKey('llama-3.1-8b-instruct')).toBe('llama 3.1 8b instruct');
+    expect(modelKey('command-r-plus-08-2024')).toBe('command r plus');
+    expect(modelKey('claude-3-5-sonnet')).toBe('claude 3.5 sonnet');
+    expect(modelKey('gemini-2-5-pro')).toBe('gemini 2.5 pro');
+  });
+  it('keeps medium in Mistral names but not as an effort suffix', () => {
+    expect(modelKey('mistral-medium-2508')).toBe('mistral medium');
+    expect(modelKey('mistral-medium-3.5')).toBe('mistral medium 3.5');
+    expect(modelKey('gemini-3.5-flash-medium')).toBe('gemini 3.5 flash');
+  });
   it('reads a title-spaced name the same way', () => {
     expect(modelKey('o 3')).toBe('o3');
     expect(modelKey('deepseek v 3.1')).toBe('deepseek v3.1');

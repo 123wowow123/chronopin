@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { intParam, json, noContent, route } from '@/server/http';
 import Pin from '@/server/model/pin';
-import { chartFor, modelPinIndex, modelUniverse } from '@/server/modelChart';
+import { chartFor, modelPinIndex, cachedModelUniverse } from '@/server/modelChart';
 import { modelKey } from '@/lib/modelChart';
 import { modelRelease } from '@/lib/modelSeries';
 
@@ -17,7 +17,7 @@ export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/p
   const release = modelRelease(pin.title);
   if (!release) return noContent();
 
-  const [universe, pins] = await Promise.all([modelUniverse(), modelPinIndex()]);
+  const [universe, pins] = await Promise.all([cachedModelUniverse(), modelPinIndex()]);
   if (!universe) return new Response(null, { status: 502 });
   return json(chartFor(universe, modelKey(release.model), pins, id), 200, { 'Cache-Control': 'public, max-age=3600' });
 });

@@ -28,6 +28,7 @@ const MAX_PAGES = 8;
 const TIMEOUT_MS = 20000;
 const TTL_MS = 60 * 60 * 1000;
 const ERROR_TTL_MS = 5 * 60 * 1000;
+const PIN_INDEX_TTL_MS = 5 * 60 * 1000;
 const UA = 'ChronoPin/1.0 (https://chronopin.com) model chart fetch';
 
 type Arena = { name: string; organization: string | null; elo: number; publishedOn: string | null };
@@ -109,7 +110,7 @@ let cache: Entry | null = null;
 // null when either source is down, so the page shows no chart rather than a
 // half-joined one. A failure is remembered briefly so a dead host is not hit
 // by every pin view.
-export function modelUniverse(): Promise<ModelUniverse | null> {
+export function cachedModelUniverse(): Promise<ModelUniverse | null> {
   if (cache && cache.expires > Date.now()) return cache.promise;
   const entry: Entry = {
     expires: Date.now() + TTL_MS,
@@ -154,6 +155,8 @@ const wordsOf = (text: string) =>
     .toLowerCase()
     .replace(/[‐‑‒–—]/g, '-')
     .replace(/[^a-z0-9.+\- ]/g, ' ')
+    // "Pro4" and "Pro 4", "Qwen3" and "Qwen 3" are one name; both sides are read this way.
+    .replace(/([a-z])(\d)/g, '$1 $2')
     .split(/[-\s]+/)
     .filter(Boolean);
 
@@ -172,7 +175,8 @@ export function modelPinIndex(): Promise<ModelPinIndex> {
       log.error('modelChart', (err as Error)?.message);
       return [] as ModelPinIndex;
     });
-  pinIndex = { expires: Date.now() + TTL_MS, promise };
+  // Short, unlike the sources: a pin posted a minute ago should get its dot.
+  pinIndex = { expires: Date.now() + PIN_INDEX_TTL_MS, promise };
   return promise;
 }
 
@@ -184,17 +188,53 @@ function hasRun(words: string[], run: string[]): boolean {
   return false;
 }
 
+// A parameter-count word: "27b", "70b", "270m", "1.5b".
+const SIZE = /^\d+(?:\.\d+)?[bm]$/;
+
+// A family launched in several sizes is one pin ("Llama 3.1 8B, 70B and 405B
+// Released"), and a size is not next to the family name there. The model's key
+// reads as the family run plus its size ("llama 3.1 70b"): it is in the title
+// when the run is and the size is named anywhere after it.
+function hasFamilySize(words: string[], run: string[]): boolean {
+  const size = run[run.length - 1];
+  if (run.length < 3 || !SIZE.test(size)) return false;
+  const family = run.slice(0, -1);
+  for (let i = 0; i + family.length <= words.length; i++) {
+    if (family.every((w, j) => words[i + j] === w) && words.slice(i + family.length).includes(size)) return true;
+  }
+  return false;
+}
+
 // Words the arena puts on the end of a model's name that a release's own title
 // does not ("gemma-3-4b-it", "llama-3.1-8b-instruct").
 const NAME_TAIL = new Set(['it', 'instruct', 'chat', 'base', 'turbo']);
 
 // The earliest pin whose title names the model; the pins are in start order.
 // Tried as the key reads, then without its trailing instruct/it-style words.
-function pinFor(index: ModelPinIndex, key: string): ModelPin | undefined {
+// A pin that also names a longer chart key which continues this one is that
+// model's pin, not this one's ("DeepSeek-V3.2-Exp Released" is the pin for
+// "deepseek v3.2 exp", so "deepseek v3.2" goes to the pin after it), unless it
+// is the only pin there is.
+function pinFor(index: ModelPinIndex, key: string, keys: string[][]): ModelPin | undefined {
   const run = wordsOf(key);
+  const named = (pin: ModelPin, words: string[]) => hasRun(pin.words, words) || hasFamilySize(pin.words, words);
+  // Longer keys read the way the pins are matched: without their trailing
+  // instruct/it words, so "mistral small 3.1 24b instruct" owns its pin.
+  const longer = keys
+    .filter((other) => other.length > run.length && run.every((w, i) => other[i] === w))
+    .map((other) => {
+      const words = [...other];
+      while (words.length > run.length && NAME_TAIL.has(words[words.length - 1])) words.pop();
+      return words;
+    })
+    .filter((words) => words.length > run.length);
   for (;;) {
-    const found = index.find((pin) => hasRun(pin.words, run));
-    if (found || run.length < 2 || !NAME_TAIL.has(run[run.length - 1])) return found;
+    const matches = index.filter((pin) => named(pin, run));
+    if (matches.length) {
+      const own = matches.filter((pin) => !longer.some((words) => named(pin, words)));
+      return (own.length ? own : matches)[0];
+    }
+    if (run.length < 2 || !NAME_TAIL.has(run[run.length - 1])) return undefined;
     run.pop();
   }
 }
@@ -207,9 +247,10 @@ function pinFor(index: ModelPinIndex, key: string): ModelPin | undefined {
 // id, even when it is not in the AI Models index (a pin in the AI category).
 export function chartFor(universe: ModelUniverse, pinnedKey: string | null, pins: ModelPinIndex = [], currentPinId?: number): ModelChartData {
   const own = pinnedKey ? findPinned(universe.points, pinnedKey) : null;
+  const keys = universe.points.map((p) => wordsOf(p.key));
   const points = universe.points
     .map((p) => {
-      const pin = pinFor(pins, p.key);
+      const pin = pinFor(pins, p.key, keys);
       if (p === own && currentPinId != null) return { ...p, pinId: currentPinId, href: pin ? pinPath(pin) : undefined };
       return pin ? { ...p, pinId: pin.id, href: pinPath(pin) } : p;
     })

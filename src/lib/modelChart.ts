@@ -60,7 +60,7 @@ export function blendedPrice(promptPerToken: number, completionPerToken: number)
 // lists the model once, so they are not part of its identity.
 const SUFFIX = /(?:[- ](?:xhigh|high|medium|low|minimal|max|thinking|reasoning|non-thinking|no-thinking|adaptive|preview|\d+k))+$/;
 const PAREN = /\s*\([^)]*\)\s*/g;
-const DATE_STAMP = /[- ](?:20\d{2}-?\d{2}-?\d{2}|\d{4}|\d{6,8})$/;
+const DATE_STAMP = /[- ](?:20\d{2}-?\d{2}-?\d{2}|\d{2}-20\d{2}|\d{4}|\d{6,8})$/;
 const ROUTER_VARIANT = /:(?:free|batch|extended|thinking|nitro|floor|exacto)$/;
 
 // "claude-opus-4-6-high" and "anthropic/claude-opus-4.6" are one model:
@@ -69,6 +69,8 @@ const ROUTER_VARIANT = /:(?:free|batch|extended|thinking|nitro|floor|exacto)$/;
 export function modelKey(raw: string): string {
   let s = raw.toLowerCase().trim();
   s = s.replace(ROUTER_VARIANT, '');
+  // "medium" is an effort suffix on most names and part of the name on Mistral's.
+  s = s.replace(/\b(mistral|magistral)[- ]medium\b/g, '$1 mediumx');
   if (s.includes('/')) s = s.slice(s.lastIndexOf('/') + 1);
   s = s.replace(PAREN, ' ').trim();
   for (let i = 0; i < 3; i++) {
@@ -76,9 +78,10 @@ export function modelKey(raw: string): string {
     s = s.replace(SUFFIX, '').replace(DATE_STAMP, '');
     if (s === before) break;
   }
-  // 4-6 -> 4.6, only between single digits so "gpt-4-1106" style stamps stay out.
-  s = s.replace(/(\d)-(\d)(?!\d)/g, '$1.$2');
-  s = s.replace(/[-_\s]+/g, ' ').trim();
+  // 4-6 -> 4.6, only between single digits so "gpt-4-1106" style stamps stay out,
+  // and not before a size letter: "granite-4.2-8b" is 4.2 and 8B, not 4.2.8b.
+  s = s.replace(/(\d)-(\d)(?![\da-z])/g, '$1.$2');
+  s = s.replace(/[-_\s]+/g, ' ').trim().replace(/\bmediumx\b/g, 'medium');
   // Names a title spaces out ("o 3", "v 3.1") are the arena's "o3" and "v3.1".
   return s.replace(/\b([ov]) (\d)/g, '$1$2');
 }
