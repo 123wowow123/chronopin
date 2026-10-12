@@ -1903,7 +1903,8 @@
       "caption": "Operator rendering of Mill Creek 5. This is an illustration of the planned unit, not a photograph of a completed plant.",
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-1d5c92c4787766e14f05.webp",
       "sha256": "1d5c92c4787766e14f0561e0b47e6966ff2834a0b0d4a76d091cefe2aa4d2039",
-      "bytes": 67610
+      "bytes": 67610,
+      "pinId": 7690
     },
     {
       "key": "eia-1364",
@@ -1913,7 +1914,8 @@
       "caption": "Mill Creek 5 groundbreaking ceremony, November 13, 2024, as published in the operator release.",
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-cfb82f4bf3e482fb2d7d.webp",
       "sha256": "cfb82f4bf3e482fb2d7dac5fa4fe7d09b967e3d105469c6f0900a5c9600d1633",
-      "bytes": 513532
+      "bytes": 513532,
+      "pinId": 7690
     },
     {
       "key": "eia-68443",
@@ -1923,7 +1925,8 @@
       "caption": "Offshore installation photograph from Empire Wind’s operator project page.",
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-7bc2d23cd26d1e7157ee.webp",
       "sha256": "7bc2d23cd26d1e7157ee6d6ef1460fe332ea477e05ef1921c0cb94d34f40cd1f",
-      "bytes": 108862
+      "bytes": 108862,
+      "pinId": 7688
     },
     {
       "key": "eia-68443",
@@ -1933,7 +1936,8 @@
       "caption": "Empire Wind offshore substation installation image published in the operator construction gallery; the page identifies installation in January 2026.",
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-ea63a6b45472a11eda10.webp",
       "sha256": "ea63a6b45472a11eda1074d43b58d98d2434e3db78ef44c45bef7fa08f9dfdf3",
-      "bytes": 188536
+      "bytes": 188536,
+      "pinId": 7688
     },
     {
       "key": "eia-58987",
@@ -1943,7 +1947,8 @@
       "caption": "CCSM project infrastructure construction in 2025, distributed by Power Company of Wyoming. ",
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-58987-4c13a49f2fbfdd65f87c.webp",
       "sha256": "4c13a49f2fbfdd65f87cd73524dae09bc6096d7fe53f02776adbce33bbfe5818",
-      "bytes": 51376
+      "bytes": 51376,
+      "pinId": 7671
     },
     {
       "key": "eia-69077",
@@ -1954,7 +1959,8 @@
       "type": "photograph",
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-66cc784ea3b8525a4fa1.webp",
       "sha256": "66cc784ea3b8525a4fa12a90c15cae2f32cd2c5f600f5fec4c8771c5e3b41013",
-      "bytes": 204338
+      "bytes": 204338,
+      "pinId": 8615
     },
     {
       "key": "eia-69077-map",
@@ -1965,7 +1971,8 @@
       "type": "operator location diagram",
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-map-95e231446de226b908f8.webp",
       "sha256": "95e231446de226b908f83055c662dfcfdd5f6b671c270b5a2e2d6b85d7be0839",
-      "bytes": 21414
+      "bytes": 21414,
+      "pinId": 8615
     },
     {
       "key": "eia-69077-site-1",
@@ -1978,7 +1985,8 @@
       "sourcePdfPage": 60,
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-1-9524ddf1c862bef95589.webp",
       "sha256": "9524ddf1c862bef955896baa8e1a2f52a5792fd0b7864c297c58582d24bd6ccd",
-      "bytes": 57094
+      "bytes": 57094,
+      "pinId": 8615
     },
     {
       "key": "eia-69077-site-2",
@@ -1991,7 +1999,8 @@
       "sourcePdfPage": 60,
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-2-73f2c7415230ed47599b.webp",
       "sha256": "73f2c7415230ed47599bae73de697073f0a61beaa4ecd0b8651e40fc192755df",
-      "bytes": 104872
+      "bytes": 104872,
+      "pinId": 8615
     },
     {
       "key": "eia-69077-site-3",
@@ -2004,7 +2013,8 @@
       "sourcePdfPage": 61,
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-3-304c46c14f19e26e94b4.webp",
       "sha256": "304c46c14f19e26e94b4107c8d476bb78cc2213a4399fa038cde8e3a41a0a978",
-      "bytes": 59688
+      "bytes": 59688,
+      "pinId": 8615
     },
     {
       "key": "eia-69077-rendering",
@@ -2016,7 +2026,411 @@
       "sourcePdfPage": 10,
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-rendering-2f560decdb648f1ff470.webp",
       "sha256": "2f560decdb648f1ff47082e89b1ec0cdba9d3c596d3fc996be107210f9342fa0",
-      "bytes": 66112
+      "bytes": 66112,
+      "pinId": 8615
+    },
+    {
+      "pinId": 7690,
+      "key": "eia-1364-media-1",
+      "name": "Mill Creek 5",
+      "sourcePage": "https://lge-ku.com/mc5",
+      "sourceUrl": "https://lge-ku.com/sites/default/files/styles/image_xl/public/2025-03/Mill-Creek-5-Groundbreaking-Construction-1.jpg?itok=iBOTofLc",
+      "caption": "Mill Creek 5 construction site, from LG&E and KU’s project gallery. Capture date not separately stated.",
+      "credit": "LG&E and KU; photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 28,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-media-1-3b6b738cc70f33b5101d.webp",
+      "sha256": "3b6b738cc70f33b5101dd8b98cd4c1c32183acc795d483123e959aff179c73f6",
+      "bytes": 291594
+    },
+    {
+      "pinId": 7690,
+      "key": "eia-1364-media-2",
+      "name": "Mill Creek 5",
+      "sourcePage": "https://lge-ku.com/mc5",
+      "sourceUrl": "https://lge-ku.com/sites/default/files/styles/image_xl/public/2025-03/Mill-Creek-5-Groundbreaking-Construction-2.jpg?itok=29pn4hkb",
+      "caption": "Mill Creek 5 construction site, from LG&E and KU’s project gallery. Capture date not separately stated.",
+      "credit": "LG&E and KU; photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 29,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-media-2-ca52b1832a3ce31b2ced.webp",
+      "sha256": "ca52b1832a3ce31b2ced6a74487c6ae82300a8a945ee455a9154a9a2744a43ac",
+      "bytes": 215358
+    },
+    {
+      "pinId": 7685,
+      "key": "eia-69223-media-1",
+      "name": "Vicksburg Advanced Power Station",
+      "sourcePage": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+      "sourceUrl": "https://www.entergy.com/wp-content/uploads/2025/10/VAPS_rendering_001.jpg",
+      "caption": "Operator design rendering of Vicksburg Advanced Power Station; not an as-built photograph.",
+      "credit": "Entergy; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 0,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69223-media-1-187ee30141d4a1404749.webp",
+      "sha256": "187ee30141d4a140474926930cd695378bc92f9b3f77d16f1305450c52250cec",
+      "bytes": 258700
+    },
+    {
+      "pinId": 7685,
+      "key": "eia-69223-media-2",
+      "name": "Vicksburg Advanced Power Station",
+      "sourcePage": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+      "sourceUrl": "https://www.entergy.com/wp-content/uploads/2025/10/VAPS-Groundbreaking_Speakers.jpg",
+      "caption": "Vicksburg Advanced Power Station groundbreaking speakers, from the operator’s October 2025 announcement.",
+      "credit": "Entergy; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 1,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69223-media-2-49ac0fca2b2713bbb726.webp",
+      "sha256": "49ac0fca2b2713bbb726f68a12a6e0b3ed2a64d7e66e33e85b635b7235bebd42",
+      "bytes": 239024
+    },
+    {
+      "pinId": 14044,
+      "key": "eia-67914-media-1",
+      "name": "Delta Blues Advanced Power Station",
+      "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+      "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-HRSG-7-1280x630.jpg",
+      "caption": "Delta Blues construction: heat-recovery steam generator milestone, published May 2026.",
+      "credit": "Entergy Mississippi; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 2,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-1-9c6796e935bd385d492a.webp",
+      "sha256": "9c6796e935bd385d492a41c490ebe0ca3c912477cca83c591b367fd9ff0f936c",
+      "bytes": 237408
+    },
+    {
+      "pinId": 14044,
+      "key": "eia-67914-media-2",
+      "name": "Delta Blues Advanced Power Station",
+      "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+      "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-HRSG-22-1280x430.jpg",
+      "caption": "Delta Blues construction work from the operator’s May 2026 milestone gallery.",
+      "credit": "Entergy Mississippi; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 3,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-2-b3129b71cfc0b16210cd.webp",
+      "sha256": "b3129b71cfc0b16210cd7cc547adf5b942dff444328500b90c69313a48c51cb3",
+      "bytes": 67570
+    },
+    {
+      "pinId": 14044,
+      "key": "eia-67914-media-3",
+      "name": "Delta Blues Advanced Power Station",
+      "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+      "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-TBEK1661-1280x430.jpg",
+      "caption": "Transport of a Delta Blues project component, from Entergy Mississippi’s May 2026 construction gallery.",
+      "credit": "Entergy Mississippi; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 4,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-3-bc37d18483cd58edede0.webp",
+      "sha256": "bc37d18483cd58edede0de43b0067efc0e5f1759870045b727f8645fc7f8cdaf",
+      "bytes": 127898
+    },
+    {
+      "pinId": 8483,
+      "key": "eia-68053-media-1",
+      "name": "Legend Power Station",
+      "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+      "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/legend-lone-star-stations-groundbreaking-april-2026.jpg",
+      "caption": "Joint groundbreaking ceremony for Legend and Lone Star power stations in Port Arthur, Texas, April 9, 2026. This is the shared project ceremony, not a photograph of a completed Lone Star plant or its Cleveland-area construction site.",
+      "credit": "Office of the Texas Governor, via Entergy Texas",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 32,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68053-media-1-66cc784ea3b8525a4fa1.webp",
+      "sha256": "66cc784ea3b8525a4fa12a90c15cae2f32cd2c5f600f5fec4c8771c5e3b41013",
+      "bytes": 204338
+    },
+    {
+      "pinId": 8483,
+      "name": "Legend Power Station",
+      "key": "eia-68053-deep-rendering",
+      "sourcePage": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1",
+      "sourceUrl": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1#page=10",
+      "credit": "Entergy Texas, Jessica Hill presentation hosted by TXCPA",
+      "caption": "Legend Power Station design rendering from the upper panel of Entergy Texas’s February 4, 2026 presentation, PDF page 10. This is the Legend panel, not the Lone Star design below it, and is not an as-built photograph.",
+      "mediaType": 1,
+      "verified": true,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68053-deep-rendering-47fe83a187015968b91b.webp",
+      "sha256": "47fe83a187015968b91b9411ed08fcb412511706f1d46b7d82d616de5bed81e9",
+      "bytes": 59006
+    },
+    {
+      "pinId": 8312,
+      "name": "SunZia Wind and Transmission",
+      "key": "eia-66923-deep-1",
+      "sourcePage": "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+      "sourceUrl": "https://patternenergy.com/wp-content/uploads/2026/07/SunZia-Wind-and-Transmission_2026-scaled.jpg",
+      "caption": "SunZia wind turbines shown in the operator’s July 2026 project announcement. Capture date is not separately published.",
+      "credit": "Pattern Energy; photographer not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66923-deep-1-702f612b351bde9d1009.webp",
+      "sha256": "702f612b351bde9d10095d901408d6ed18c4d4fa5359dce72874adbf7ca1c90b",
+      "bytes": 265804
+    },
+    {
+      "pinId": 5511,
+      "name": "Coastal Virginia Offshore Wind commercial project",
+      "key": "existing-5511-deep-1",
+      "sourcePage": "https://coastalvawind.com/about/the-project/timeline",
+      "sourceUrl": "https://coastalvawind.com/assets/images/jan26.jpg",
+      "caption": "First commercial wind turbine being installed. From Dominion Energy’s CVOW commercial-project timeline; gallery label January 2026.",
+      "credit": "Dominion Energy / CVOW; photographer not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5511-deep-1-ffc3c4e4160f53af4184.webp",
+      "sha256": "ffc3c4e4160f53af41846b74aaa65dad6717e1af7a63e730ade709866c2e67e2",
+      "bytes": 47658
+    },
+    {
+      "pinId": 5511,
+      "name": "Coastal Virginia Offshore Wind commercial project",
+      "key": "existing-5511-deep-2",
+      "sourcePage": "https://coastalvawind.com/about/the-project/timeline",
+      "sourceUrl": "https://coastalvawind.com/assets/images/march26.jpg",
+      "caption": "First electrons being delivered to the grid. From Dominion Energy’s CVOW commercial-project timeline; gallery label March 2026.",
+      "credit": "Dominion Energy / CVOW; photographer not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5511-deep-2-2706e84a7be5e214367d.webp",
+      "sha256": "2706e84a7be5e214367dfc2f948e62ffe349ce73aa0496b539831cb0b26b2e2e",
+      "bytes": 58954
+    },
+    {
+      "pinId": 7688,
+      "name": "Empire Wind 1",
+      "key": "eia-68443-deep-1",
+      "sourcePage": "https://www.empirewind.com/offshore-installation/",
+      "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2025/12/Underwater-Rock-Lay-1024x552.jpg",
+      "caption": "Underwater rock layer around an Empire Wind foundation. Capture date not separately stated.",
+      "credit": "Empire Wind / Equinor; photographer not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-deep-1-268fe4178e2d25fc057c.webp",
+      "sha256": "268fe4178e2d25fc057c1034bfbf2aa206ea7865ae34ca597bcee6324333876d",
+      "bytes": 49376
+    },
+    {
+      "pinId": 7688,
+      "name": "Empire Wind 1",
+      "key": "eia-68443-deep-2",
+      "sourcePage": "https://www.empirewind.com/offshore-installation/",
+      "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2025/12/IAC-in-MP-scaled-e1770655317744-1024x696.jpg",
+      "caption": "Empire Wind inter-array cable work, from the official offshore-installation gallery. Capture date not separately stated.",
+      "credit": "Empire Wind / Equinor; photographer not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-deep-2-9a4bc35a585de9264322.webp",
+      "sha256": "9a4bc35a585de92643225d2d41008d882c251952e05209d04abc758b8a511c76",
+      "bytes": 165012
+    },
+    {
+      "pinId": 14046,
+      "key": "eia-3406-media-1",
+      "name": "Johnsonville aeroderivative units 21–30",
+      "sourcePage": "https://www.tva.com/the-powerhouse/stories/johnsonville-s-jet-set",
+      "sourceUrl": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/images/default-source/transmission-towers/aeros-33-web-crop.jpg?sfvrsn=4ba26947_1",
+      "caption": "Johnsonville’s new aeroderivative turbine plant, from TVA’s April 15, 2025 photo gallery.",
+      "credit": "Tennessee Valley Authority; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 30,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3406-media-1-c3e4337124460f53e627.webp",
+      "sha256": "c3e4337124460f53e627a968b4530e9d411c9a3f0fa121199596b84d59f1109c",
+      "bytes": 67928
+    },
+    {
+      "pinId": 14046,
+      "key": "eia-3406-media-2",
+      "name": "Johnsonville aeroderivative units 21–30",
+      "sourcePage": "https://www.tva.com/the-powerhouse/stories/johnsonville-s-jet-set",
+      "sourceUrl": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/images/default-source/transmission-towers/aeros-19-stacks-with-crane-wide.jpg?sfvrsn=b2c3d123_1",
+      "caption": "Final construction work on the new Johnsonville aeroderivative turbine stacks, shown in TVA’s April 15, 2025 gallery.",
+      "credit": "Tennessee Valley Authority; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 31,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3406-media-2-6f38840be7b128d69e99.webp",
+      "sha256": "6f38840be7b128d69e99fda0f39e021a49072bc7b332b5a607642dff53f1f961",
+      "bytes": 57522
+    },
+    {
+      "pinId": 14047,
+      "name": "Cumberland combined-cycle replacement plant",
+      "key": "eia-3399-deep-1",
+      "sourcePage": "https://clarksvillenow.com/local/tva-on-track-building-new-cumberland-natural-gas-power-plant-southeast-of-clarksville-photos/",
+      "sourceUrl": "https://clarksvillenow.com/wp-content/blogs.dir/43/files/2025/07/TVA-69.jpg",
+      "caption": "New Cumberland natural-gas plant construction, photographed July 16, 2025. This is the new plant, not the existing coal plant’s control room.",
+      "credit": "Lee Erwin / Clarksville Now",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3399-deep-1-d77840a8bd5ab6bad8ca.webp",
+      "sha256": "d77840a8bd5ab6bad8ca7fffbe1cb7c1eed672de0ba735286e7bd109cda9cc26",
+      "bytes": 166212
+    },
+    {
+      "pinId": 14048,
+      "name": "Kingston combined-cycle replacement plant",
+      "key": "eia-3407-deep-1",
+      "sourcePage": "https://3bmedianews.com/site-construction-begins-at-new-kingston-energy-complex/",
+      "sourceUrl": "https://3bmedianews.com/wp-content/uploads/2025/03/New-Kingston-TVA-energy-complex.png",
+      "caption": "Kingston Energy Complex site construction, published March 6, 2025 alongside a TVA construction announcement. The image covers the wider energy complex, including the combined-cycle and aeroderivative work; it is not a photograph of a completed replacement plant.",
+      "credit": "Tennessee Valley Authority announcement via 3B Media News; photographer not identified",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3407-deep-1-d1123d30d2242513c34f.webp",
+      "sha256": "d1123d30d2242513c34fbe553eaf01a99fe187a82fd06d6e1720d85522512f42",
+      "bytes": 145566
+    },
+    {
+      "pinId": 14049,
+      "name": "Allen aeroderivative addition",
+      "key": "gem-L100000104184-deep-1",
+      "sourcePage": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3",
+      "sourceUrl": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3#page=10",
+      "caption": "TVA’s planned six-unit Allen aeroderivative addition, shown in the April 2025 public meeting materials, PDF page 10. This is an official design rendering, not a photograph of operating equipment.",
+      "credit": "Tennessee Valley Authority; artist not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000104184-deep-1-4e6b5add75b70c134d33.webp",
+      "sha256": "4e6b5add75b70c134d33fa976f17e8736e3574f8c9410eeab4f14949128cd730",
+      "bytes": 125342
+    },
+    {
+      "pinId": 14049,
+      "name": "Allen aeroderivative addition",
+      "key": "gem-L100000104184-deep-2",
+      "sourcePage": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3",
+      "sourceUrl": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3#page=3",
+      "caption": "TVA’s Allen site location and proposed aeroderivative design, April 2025 meeting materials, PDF page 3. The labelled aerial separates the retired coal plant, existing combined-cycle plant and the new aeroderivative site.",
+      "credit": "Tennessee Valley Authority; underlying aerial imagery credit not separately stated",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000104184-deep-2-1c361072088adc8a8915.webp",
+      "sha256": "1c361072088adc8a8915af67c9bb7e2887d411461d7d7d2c7ac9729ffacbc68b",
+      "bytes": 153946
+    },
+    {
+      "pinId": 5492,
+      "name": "Natrium — Kemmerer Unit 1",
+      "key": "existing-5492-deep-1",
+      "sourcePage": "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
+      "sourceUrl": "https://www.terrapower.com/images/news/construction_news.jpg",
+      "credit": "TerraPower; individual photographer not named",
+      "caption": "Kemmerer Unit 1 construction-start event, supplied with TerraPower’s April 23, 2026 announcement following the NRC construction permit. This is an event photograph, not a completed reactor.",
+      "mediaType": 1,
+      "verified": true,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5492-deep-1-e65127d43804ba420e67.webp",
+      "sha256": "e65127d43804ba420e67401bb3efe3537aec50f5f3ae04d9c6b615e342999b89",
+      "bytes": 191960
+    },
+    {
+      "pinId": 14066,
+      "key": "eia-66621-media-1",
+      "name": "Orange County Advanced Power Station",
+      "sourcePage": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+      "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/OCAPS-first-fire-857x630.jpg",
+      "caption": "Orange County Advanced Power Station first-fire milestone image supplied by Entergy, April 2026.",
+      "credit": "Entergy; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 17,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66621-media-1-353470b58d8565563f27.webp",
+      "sha256": "353470b58d8565563f27d85bf5a541f744b01f38a1c7c9e3857ef159295ec1b8",
+      "bytes": 162332
+    },
+    {
+      "pinId": 14066,
+      "key": "eia-66621-media-2",
+      "name": "Orange County Advanced Power Station",
+      "sourcePage": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+      "sourceUrl": "https://www.entergy.com/wp-content/uploads/2025/11/OCAPS-aerial-view-November-2025.jpg",
+      "caption": "Orange County Advanced Power Station aerial construction view identified by Entergy as November 2025.",
+      "credit": "Entergy; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 18,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66621-media-2-3faa8e1452a09c6f86f1.webp",
+      "sha256": "3faa8e1452a09c6f86f1ee5b09c538ae7fad28c14a0cc1bb83082462acea12a5",
+      "bytes": 283802
+    },
+    {
+      "pinId": 14067,
+      "key": "eia-67005-media-1",
+      "name": "Magnolia Power Generating Station",
+      "sourcePage": "https://www.opportunitylouisiana.gov/news/kindle-energy-breaks-ground-on-750-million-power-station-in-iberville-parish",
+      "sourceUrl": "https://www.opportunitylouisiana.gov/wp-content/uploads/2023/10/magnolia-power-groundbreaking.jpg",
+      "caption": "Magnolia Power Generating Station groundbreaking ceremony, published by Louisiana Economic Development, October 2023.",
+      "credit": "Louisiana Economic Development; individual photographer not named",
+      "captureDate": null,
+      "verified": true,
+      "candidateIndex": 19,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67005-media-1-00d3fa686260a40d91f5.webp",
+      "sha256": "00d3fa686260a40d91f5b8a7a2f74e812f1ed6940e573816a1031c02b82cf757",
+      "bytes": 327204
+    },
+    {
+      "pinId": 14068,
+      "name": "Mammoth Solar — original 1.3 GW complex",
+      "key": "eia-66545-deep-1",
+      "sourcePage": "https://doral-energy.com/en/projects/mammoth-solar/",
+      "sourceUrl": "https://doral-energy.com/wp-content/uploads/2022/12/DJI_0462-1-460x260.jpg",
+      "caption": "Mammoth North early construction aerial from Doral’s project gallery. This shows the older North phase, not the 900 MW South/Central phases now reaching operation.",
+      "credit": "Doral Group / Doral Renewables; photographer not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66545-deep-1-19f55b7f2bda8dc7abbf.webp",
+      "sha256": "19f55b7f2bda8dc7abbf13683114cb2f17e792e35900b6fe5a06947f74364e68",
+      "bytes": 33088
+    },
+    {
+      "pinId": 14068,
+      "name": "Mammoth Solar — original 1.3 GW complex",
+      "key": "eia-66545-deep-2",
+      "sourcePage": "https://doral-energy.com/en/projects/mammoth-solar/",
+      "sourceUrl": "https://doral-energy.com/wp-content/uploads/2022/12/2022-Doral-Mammoth-Solar-Ground-Breaking-237-460x260.jpg",
+      "caption": "Mammoth South groundbreaking ceremony from Doral’s official project gallery; an event photo from the phase launch, not a completed solar-field view.",
+      "credit": "Doral Group / Doral Renewables; photographer not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66545-deep-2-04907640bd5f6ba17845.webp",
+      "sha256": "04907640bd5f6ba178455dfa25407456a3c5fb0857008cdabbaebbd3abe2d379",
+      "bytes": 22638
+    },
+    {
+      "pinId": 14068,
+      "name": "Mammoth Solar — original 1.3 GW complex",
+      "key": "eia-66545-deep-3",
+      "sourcePage": "https://doral-energy.com/en/projects/mammoth-solar/",
+      "sourceUrl": "https://doral-energy.com/wp-content/uploads/2022/10/6-e1670235681217-460x260.jpg",
+      "caption": "Group at Mammoth South’s solar project, from Doral’s official project gallery. Capture date not independently published; it does not establish today’s completion percentage.",
+      "credit": "Doral Group / Doral Renewables; photographer not named",
+      "verified": true,
+      "mediaType": 1,
+      "captureDate": null,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66545-deep-3-60a463187fd6e5821896.webp",
+      "sha256": "60a463187fd6e58218962db7292aa56647c85d9b6203ec9557dbc3a012365007",
+      "bytes": 41848
     }
   ],
   "verification": {
@@ -2626,5 +3040,1303 @@
       "localAndOtherSources": "Bluebonnet June 4, 2024 operator announcement and linked images checked; RTO Insider rendering corroboration, operator LinkedIn announcements, construction reporting, contractor-related results and video searches reviewed. No verified standalone current drone or progress video located. Getty/Bloomberg event image was not copied.",
       "remainingGap": "Filed site photographs now found. No verified capture dates, current progress photo series, or Lone Star-specific drone video found; filed views must not be described as current construction progress."
     }
+  },
+  "mediaResearchAudit": {
+    "verifiedAtUTC": "2026-10-12T22:50:01Z",
+    "scope": "The 37 cost/output-qualified generation pins previously published in this collection. Excluded broad-import proposals remain excluded.",
+    "pinsAudited": 37,
+    "pinsWithVerifiedMedia": 37,
+    "previouslyEmptyPins": 25,
+    "remainingEmptyPins": 0,
+    "newMediaItems": 50,
+    "totalMediaItems": 77,
+    "totalImages": 72,
+    "totalVideos": 5,
+    "allPublicPagesVerified": true,
+    "allNewImagesInVerifiedAzureStorage": true,
+    "allSourceWikisReadyAndCurrent": true,
+    "costDatesLocationsAndTagsPreserved": true,
+    "checks": [
+      {
+        "pinId": 7671,
+        "name": "Chokecherry and Sierra Madre",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/7671",
+        "mediaCount": 1,
+        "verifiedMediaCount": 1,
+        "newMediaCount": 0,
+        "images": 1,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "key": "eia-58987",
+            "sourceUrl": "https://powercompanyofwyoming.com/news/alerts/2025/images/042125-construction-kick-off-1.jpg",
+            "sourcePage": "https://www.powercompanyofwyoming.com/news/alerts/2025/042125-ccsm-project-2025-construction-begins.html",
+            "credit": "Power Company of Wyoming; photographer not named on source page",
+            "caption": "CCSM project infrastructure construction in 2025, distributed by Power Company of Wyoming. ",
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-58987-4c13a49f2fbfdd65f87c.webp",
+            "sha256": "4c13a49f2fbfdd65f87cd73524dae09bc6096d7fe53f02776adbce33bbfe5818",
+            "bytes": 51376,
+            "pinId": 7671
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 79702,
+            "url": "https://www.powercompanyofwyoming.com/wind-generation/index.shtml",
+            "wikiPageId": 9768,
+            "wikiVersion": 2
+          },
+          {
+            "sourceId": 90925,
+            "url": "https://www.powercompanyofwyoming.com/wind-generation/purpose.shtml",
+            "wikiPageId": 9715,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.powercompanyofwyoming.com/news/alerts/2025/042125-ccsm-project-2025-construction-begins.html"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 7690,
+        "name": "Mill Creek 5",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/7690",
+        "mediaCount": 4,
+        "verifiedMediaCount": 4,
+        "newMediaCount": 2,
+        "images": 4,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "key": "eia-1364",
+            "sourceUrl": "https://lge-ku.com/sites/default/files/2024-11/Mill-Creek-5-Rendering.jpg",
+            "sourcePage": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+            "credit": "LG&E and KU; artist not named on source page",
+            "caption": "Operator rendering of Mill Creek 5. This is an illustration of the planned unit, not a photograph of a completed plant.",
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-1d5c92c4787766e14f05.webp",
+            "sha256": "1d5c92c4787766e14f0561e0b47e6966ff2834a0b0d4a76d091cefe2aa4d2039",
+            "bytes": 67610,
+            "pinId": 7690
+          },
+          {
+            "key": "eia-1364",
+            "sourceUrl": "https://lge-ku.com/sites/default/files/2024-11/Mill-Creek-5-Groundbreaking.jpg",
+            "sourcePage": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+            "credit": "LG&E and KU; photographer not named on source page",
+            "caption": "Mill Creek 5 groundbreaking ceremony, November 13, 2024, as published in the operator release.",
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-cfb82f4bf3e482fb2d7d.webp",
+            "sha256": "cfb82f4bf3e482fb2d7dac5fa4fe7d09b967e3d105469c6f0900a5c9600d1633",
+            "bytes": 513532,
+            "pinId": 7690
+          },
+          {
+            "pinId": 7690,
+            "key": "eia-1364-media-1",
+            "name": "Mill Creek 5",
+            "sourcePage": "https://lge-ku.com/mc5",
+            "sourceUrl": "https://lge-ku.com/sites/default/files/styles/image_xl/public/2025-03/Mill-Creek-5-Groundbreaking-Construction-1.jpg?itok=iBOTofLc",
+            "caption": "Mill Creek 5 construction site, from LG&E and KU’s project gallery. Capture date not separately stated.",
+            "credit": "LG&E and KU; photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 28,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-media-1-3b6b738cc70f33b5101d.webp",
+            "sha256": "3b6b738cc70f33b5101dd8b98cd4c1c32183acc795d483123e959aff179c73f6",
+            "bytes": 291594
+          },
+          {
+            "pinId": 7690,
+            "key": "eia-1364-media-2",
+            "name": "Mill Creek 5",
+            "sourcePage": "https://lge-ku.com/mc5",
+            "sourceUrl": "https://lge-ku.com/sites/default/files/styles/image_xl/public/2025-03/Mill-Creek-5-Groundbreaking-Construction-2.jpg?itok=29pn4hkb",
+            "caption": "Mill Creek 5 construction site, from LG&E and KU’s project gallery. Capture date not separately stated.",
+            "credit": "LG&E and KU; photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 29,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-media-2-ca52b1832a3ce31b2ced.webp",
+            "sha256": "ca52b1832a3ce31b2ced6a74487c6ae82300a8a945ee455a9154a9a2744a43ac",
+            "bytes": 215358
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 79762,
+            "url": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+            "wikiPageId": 9661,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90926,
+            "url": "https://lge-ku.com/mc5",
+            "wikiPageId": 10774,
+            "wikiVersion": 2
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+          "https://lge-ku.com/mc5"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 7685,
+        "name": "Vicksburg Advanced Power Station",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/7685",
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "newMediaCount": 2,
+        "images": 2,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 7685,
+            "key": "eia-69223-media-1",
+            "name": "Vicksburg Advanced Power Station",
+            "sourcePage": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2025/10/VAPS_rendering_001.jpg",
+            "caption": "Operator design rendering of Vicksburg Advanced Power Station; not an as-built photograph.",
+            "credit": "Entergy; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 0,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69223-media-1-187ee30141d4a1404749.webp",
+            "sha256": "187ee30141d4a140474926930cd695378bc92f9b3f77d16f1305450c52250cec",
+            "bytes": 258700
+          },
+          {
+            "pinId": 7685,
+            "key": "eia-69223-media-2",
+            "name": "Vicksburg Advanced Power Station",
+            "sourcePage": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2025/10/VAPS-Groundbreaking_Speakers.jpg",
+            "caption": "Vicksburg Advanced Power Station groundbreaking speakers, from the operator’s October 2025 announcement.",
+            "credit": "Entergy; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 1,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69223-media-2-49ac0fca2b2713bbb726.webp",
+            "sha256": "49ac0fca2b2713bbb726f68a12a6e0b3ed2a64d7e66e33e85b635b7235bebd42",
+            "bytes": 239024
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 79792,
+            "url": "https://www.entergymississippi.com/generation/vicksburg",
+            "wikiPageId": 9664,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90927,
+            "url": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+            "wikiPageId": 10780,
+            "wikiVersion": 2
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 14044,
+        "name": "Delta Blues Advanced Power Station",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/14044",
+        "mediaCount": 3,
+        "verifiedMediaCount": 3,
+        "newMediaCount": 3,
+        "images": 3,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 14044,
+            "key": "eia-67914-media-1",
+            "name": "Delta Blues Advanced Power Station",
+            "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-HRSG-7-1280x630.jpg",
+            "caption": "Delta Blues construction: heat-recovery steam generator milestone, published May 2026.",
+            "credit": "Entergy Mississippi; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 2,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-1-9c6796e935bd385d492a.webp",
+            "sha256": "9c6796e935bd385d492a41c490ebe0ca3c912477cca83c591b367fd9ff0f936c",
+            "bytes": 237408
+          },
+          {
+            "pinId": 14044,
+            "key": "eia-67914-media-2",
+            "name": "Delta Blues Advanced Power Station",
+            "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-HRSG-22-1280x430.jpg",
+            "caption": "Delta Blues construction work from the operator’s May 2026 milestone gallery.",
+            "credit": "Entergy Mississippi; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 3,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-2-b3129b71cfc0b16210cd.webp",
+            "sha256": "b3129b71cfc0b16210cd7cc547adf5b942dff444328500b90c69313a48c51cb3",
+            "bytes": 67570
+          },
+          {
+            "pinId": 14044,
+            "key": "eia-67914-media-3",
+            "name": "Delta Blues Advanced Power Station",
+            "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-TBEK1661-1280x430.jpg",
+            "caption": "Transport of a Delta Blues project component, from Entergy Mississippi’s May 2026 construction gallery.",
+            "credit": "Entergy Mississippi; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 4,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-3-bc37d18483cd58edede0.webp",
+            "sha256": "bc37d18483cd58edede0de43b0067efc0e5f1759870045b727f8645fc7f8cdaf",
+            "bytes": 127898
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 79771,
+            "url": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+            "wikiPageId": 10781,
+            "wikiVersion": 3
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 8483,
+        "name": "Legend Power Station",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/8483",
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "newMediaCount": 2,
+        "images": 2,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 8483,
+            "key": "eia-68053-media-1",
+            "name": "Legend Power Station",
+            "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/legend-lone-star-stations-groundbreaking-april-2026.jpg",
+            "caption": "Joint groundbreaking ceremony for Legend and Lone Star power stations in Port Arthur, Texas, April 9, 2026. This is the shared project ceremony, not a photograph of a completed Lone Star plant or its Cleveland-area construction site.",
+            "credit": "Office of the Texas Governor, via Entergy Texas",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 32,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68053-media-1-66cc784ea3b8525a4fa1.webp",
+            "sha256": "66cc784ea3b8525a4fa12a90c15cae2f32cd2c5f600f5fec4c8771c5e3b41013",
+            "bytes": 204338
+          },
+          {
+            "pinId": 8483,
+            "name": "Legend Power Station",
+            "key": "eia-68053-deep-rendering",
+            "sourcePage": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1",
+            "sourceUrl": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1#page=10",
+            "credit": "Entergy Texas, Jessica Hill presentation hosted by TXCPA",
+            "caption": "Legend Power Station design rendering from the upper panel of Entergy Texas’s February 4, 2026 presentation, PDF page 10. This is the Legend panel, not the Lone Star design below it, and is not an as-built photograph.",
+            "mediaType": 1,
+            "verified": true,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68053-deep-rendering-47fe83a187015968b91b.webp",
+            "sha256": "47fe83a187015968b91b9411ed08fcb412511706f1d46b7d82d616de5bed81e9",
+            "bytes": 59006
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 79834,
+            "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "wikiPageId": 10782,
+            "wikiVersion": 2
+          },
+          {
+            "sourceId": 90928,
+            "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+            "wikiPageId": 9718,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90929,
+            "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "wikiPageId": 9719,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 99553,
+            "url": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1",
+            "wikiPageId": 10787,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 8615,
+        "name": "Lone Star Power Station",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/8615",
+        "mediaCount": 6,
+        "verifiedMediaCount": 6,
+        "newMediaCount": 0,
+        "images": 6,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "key": "eia-69077",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/legend-lone-star-stations-groundbreaking-april-2026.jpg",
+            "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "credit": "Office of the Texas Governor, via Entergy Texas",
+            "caption": "Joint groundbreaking ceremony for Legend and Lone Star power stations in Port Arthur, Texas, April 9, 2026. This is the shared project ceremony, not a photograph of a completed Lone Star plant or its Cleveland-area construction site.",
+            "type": "photograph",
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-66cc784ea3b8525a4fa1.webp",
+            "sha256": "66cc784ea3b8525a4fa12a90c15cae2f32cd2c5f600f5fec4c8771c5e3b41013",
+            "bytes": 204338,
+            "pinId": 8615
+          },
+          {
+            "key": "eia-69077-map",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/LoneStar_Legend_map-FINAL-small-600x338.png",
+            "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "credit": "Entergy Texas",
+            "caption": "Operator location diagram for Lone Star near Cleveland and Legend near Port Arthur. The 453 MW Lone Star figure is design generating capacity; this diagram is not a photograph or evidence of operating output.",
+            "type": "operator location diagram",
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-map-95e231446de226b908f8.webp",
+            "sha256": "95e231446de226b908f83055c662dfcfdd5f6b671c270b5a2e2d6b85d7be0839",
+            "bytes": 21414,
+            "pinId": 8615
+          },
+          {
+            "key": "eia-69077-site-3",
+            "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=61",
+            "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+            "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+            "caption": "View west toward the planned wastewater sump, photographed from its east side, showing equipment and site works. Photograph 3 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 61. Capture date is not published; the image alone does not establish today’s construction progress.",
+            "type": "filed site photograph",
+            "captureDate": null,
+            "sourcePdfPage": 61,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-3-304c46c14f19e26e94b4.webp",
+            "sha256": "304c46c14f19e26e94b4107c8d476bb78cc2213a4399fa038cde8e3a41a0a978",
+            "bytes": 59688,
+            "pinId": 8615
+          },
+          {
+            "key": "eia-69077-rendering",
+            "sourceUrl": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1#page=10",
+            "sourcePage": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1",
+            "credit": "Entergy Texas, presentation by Jessica Hill hosted by TXCPA",
+            "caption": "Lone Star Power Station design rendering extracted from the panel labelled Lone Star on page 10 of Entergy Texas’s presentation dated February 4, 2026. It depicts the planned facility near Cleveland and is not a photograph of completed construction. The slide’s 453 MW is operator design capacity.",
+            "type": "operator design rendering",
+            "sourcePdfPage": 10,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-rendering-2f560decdb648f1ff470.webp",
+            "sha256": "2f560decdb648f1ff47082e89b1ec0cdba9d3c596d3fc996be107210f9342fa0",
+            "bytes": 66112,
+            "pinId": 8615
+          },
+          {
+            "key": "eia-69077-site-1",
+            "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=60",
+            "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+            "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+            "caption": "View toward the planned spray-irrigation field, looking south from below the planned stormwater pond. Photograph 1 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 60. Capture date is not published; this is a filed site view, not a current progress update.",
+            "type": "filed site photograph",
+            "captureDate": null,
+            "sourcePdfPage": 60,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-1-9524ddf1c862bef95589.webp",
+            "sha256": "9524ddf1c862bef955896baa8e1a2f52a5792fd0b7864c297c58582d24bd6ccd",
+            "bytes": 57094,
+            "pinId": 8615
+          },
+          {
+            "key": "eia-69077-site-2",
+            "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=60",
+            "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+            "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+            "caption": "View east toward planned wastewater-storage tank positions, from south of the plant area. Photograph 2 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 60. Capture date is not published; this is a filed site view, not a current progress update.",
+            "type": "filed site photograph",
+            "captureDate": null,
+            "sourcePdfPage": 60,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-2-73f2c7415230ed47599b.webp",
+            "sha256": "73f2c7415230ed47599bae73de697073f0a61beaa4ecd0b8651e40fc192755df",
+            "bytes": 104872,
+            "pinId": 8615
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 79834,
+            "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "wikiPageId": 10782,
+            "wikiVersion": 2
+          },
+          {
+            "sourceId": 90928,
+            "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+            "wikiPageId": 9718,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90929,
+            "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "wikiPageId": 9719,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 99552,
+            "url": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+            "wikiPageId": 10786,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 99553,
+            "url": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1",
+            "wikiPageId": 10787,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Previously completed deep media research retained: TCEQ site-photo pages 59–62, operator presentation page 10, official project pages and government ceremony/gallery links checked. Three filed site photos, own design rendering, shared ceremony and shared location map are clearly distinguished. Capture dates of filed photos remain unpublished.",
+        "sourcesChecked": [
+          "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+          "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 8312,
+        "name": "SunZia Wind and Transmission",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/8312",
+        "mediaCount": 1,
+        "verifiedMediaCount": 1,
+        "newMediaCount": 1,
+        "images": 1,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 8312,
+            "name": "SunZia Wind and Transmission",
+            "key": "eia-66923-deep-1",
+            "sourcePage": "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+            "sourceUrl": "https://patternenergy.com/wp-content/uploads/2026/07/SunZia-Wind-and-Transmission_2026-scaled.jpg",
+            "caption": "SunZia wind turbines shown in the operator’s July 2026 project announcement. Capture date is not separately published.",
+            "credit": "Pattern Energy; photographer not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66923-deep-1-702f612b351bde9d1009.webp",
+            "sha256": "702f612b351bde9d10095d901408d6ed18c4d4fa5359dce72874adbf7ca1c90b",
+            "bytes": 265804
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 79723,
+            "url": "https://patternenergy.com/sunzia-comes-online/",
+            "wikiPageId": 9658,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90930,
+            "url": "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+            "wikiPageId": 9720,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90931,
+            "url": "https://patternenergy.com/projects/sunzia/",
+            "wikiPageId": 9721,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Pattern Energy project page, wind/transmission announcements and construction-newsletter links checked. Verified operator announcement photo downloaded using a successful Node HTTP fetch after Python returned 403. No photo of neighbouring Western Spirit was substituted.",
+        "sourcesChecked": [
+          "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 5511,
+        "name": "Coastal Virginia Offshore Wind commercial project",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/5511",
+        "mediaCount": 5,
+        "verifiedMediaCount": 2,
+        "newMediaCount": 2,
+        "images": 4,
+        "videos": 1,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 5511,
+            "name": "Coastal Virginia Offshore Wind commercial project",
+            "key": "existing-5511-deep-1",
+            "sourcePage": "https://coastalvawind.com/about/the-project/timeline",
+            "sourceUrl": "https://coastalvawind.com/assets/images/jan26.jpg",
+            "caption": "First commercial wind turbine being installed. From Dominion Energy’s CVOW commercial-project timeline; gallery label January 2026.",
+            "credit": "Dominion Energy / CVOW; photographer not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5511-deep-1-ffc3c4e4160f53af4184.webp",
+            "sha256": "ffc3c4e4160f53af41846b74aaa65dad6717e1af7a63e730ade709866c2e67e2",
+            "bytes": 47658
+          },
+          {
+            "pinId": 5511,
+            "name": "Coastal Virginia Offshore Wind commercial project",
+            "key": "existing-5511-deep-2",
+            "sourcePage": "https://coastalvawind.com/about/the-project/timeline",
+            "sourceUrl": "https://coastalvawind.com/assets/images/march26.jpg",
+            "caption": "First electrons being delivered to the grid. From Dominion Energy’s CVOW commercial-project timeline; gallery label March 2026.",
+            "credit": "Dominion Energy / CVOW; photographer not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5511-deep-2-2706e84a7be5e214367d.webp",
+            "sha256": "2706e84a7be5e214367dfc2f948e62ffe349ce73aa0496b539831cb0b26b2e2e",
+            "bytes": 58954
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 39456,
+            "url": "https://offshorewind.biz/2026/08/03/largest-us-offshore-wind-farm-81-pct-complete-final-turbine-expected-by-end-of-2027",
+            "wikiPageId": 9771,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 80142,
+            "url": "https://coastalvawind.com/about/the-project/timeline",
+            "wikiPageId": 10775,
+            "wikiVersion": 2
+          },
+          {
+            "sourceId": 80149,
+            "url": "https://coastalvawind.com/",
+            "wikiPageId": 9691,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90940,
+            "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+            "wikiPageId": 9728,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://coastalvawind.com/about/the-project/timeline"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 7688,
+        "name": "Empire Wind 1",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/7688",
+        "mediaCount": 4,
+        "verifiedMediaCount": 4,
+        "newMediaCount": 2,
+        "images": 4,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "key": "eia-68443",
+            "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2026/03/Empire_Wind_Thialf_large-52-scaled-e1773339179901.jpg",
+            "sourcePage": "https://www.empirewind.com/offshore-installation/",
+            "credit": "Empire Wind / Equinor; photographer not named on source page",
+            "caption": "Offshore installation photograph from Empire Wind’s operator project page.",
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-7bc2d23cd26d1e7157ee.webp",
+            "sha256": "7bc2d23cd26d1e7157ee6d6ef1460fe332ea477e05ef1921c0cb94d34f40cd1f",
+            "bytes": 108862,
+            "pinId": 7688
+          },
+          {
+            "key": "eia-68443",
+            "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2026/02/3.-Jacket-Day-1-768x1024.jpeg",
+            "sourcePage": "https://www.empirewind.com/offshore-installation/",
+            "credit": "Empire Wind / Equinor; photographer not named on source page",
+            "caption": "Empire Wind offshore substation installation image published in the operator construction gallery; the page identifies installation in January 2026.",
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-ea63a6b45472a11eda10.webp",
+            "sha256": "ea63a6b45472a11eda1074d43b58d98d2434e3db78ef44c45bef7fa08f9dfdf3",
+            "bytes": 188536,
+            "pinId": 7688
+          },
+          {
+            "pinId": 7688,
+            "name": "Empire Wind 1",
+            "key": "eia-68443-deep-1",
+            "sourcePage": "https://www.empirewind.com/offshore-installation/",
+            "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2025/12/Underwater-Rock-Lay-1024x552.jpg",
+            "caption": "Underwater rock layer around an Empire Wind foundation. Capture date not separately stated.",
+            "credit": "Empire Wind / Equinor; photographer not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-deep-1-268fe4178e2d25fc057c.webp",
+            "sha256": "268fe4178e2d25fc057c1034bfbf2aa206ea7865ae34ca597bcee6324333876d",
+            "bytes": 49376
+          },
+          {
+            "pinId": 7688,
+            "name": "Empire Wind 1",
+            "key": "eia-68443-deep-2",
+            "sourcePage": "https://www.empirewind.com/offshore-installation/",
+            "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2025/12/IAC-in-MP-scaled-e1770655317744-1024x696.jpg",
+            "caption": "Empire Wind inter-array cable work, from the official offshore-installation gallery. Capture date not separately stated.",
+            "credit": "Empire Wind / Equinor; photographer not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-deep-2-9a4bc35a585de9264322.webp",
+            "sha256": "9a4bc35a585de92643225d2d41008d882c251952e05209d04abc758b8a511c76",
+            "bytes": 165012
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 80049,
+            "url": "https://www.empirewind.com/offshore-installation/",
+            "wikiPageId": 9682,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90942,
+            "url": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+            "wikiPageId": 10776,
+            "wikiVersion": 2
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.empirewind.com/offshore-installation/"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 14046,
+        "name": "Johnsonville aeroderivative units 21–30",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/14046",
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "newMediaCount": 2,
+        "images": 2,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 14046,
+            "key": "eia-3406-media-1",
+            "name": "Johnsonville aeroderivative units 21–30",
+            "sourcePage": "https://www.tva.com/the-powerhouse/stories/johnsonville-s-jet-set",
+            "sourceUrl": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/images/default-source/transmission-towers/aeros-33-web-crop.jpg?sfvrsn=4ba26947_1",
+            "caption": "Johnsonville’s new aeroderivative turbine plant, from TVA’s April 15, 2025 photo gallery.",
+            "credit": "Tennessee Valley Authority; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 30,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3406-media-1-c3e4337124460f53e627.webp",
+            "sha256": "c3e4337124460f53e627a968b4530e9d411c9a3f0fa121199596b84d59f1109c",
+            "bytes": 67928
+          },
+          {
+            "pinId": 14046,
+            "key": "eia-3406-media-2",
+            "name": "Johnsonville aeroderivative units 21–30",
+            "sourcePage": "https://www.tva.com/the-powerhouse/stories/johnsonville-s-jet-set",
+            "sourceUrl": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/images/default-source/transmission-towers/aeros-19-stacks-with-crane-wide.jpg?sfvrsn=b2c3d123_1",
+            "caption": "Final construction work on the new Johnsonville aeroderivative turbine stacks, shown in TVA’s April 15, 2025 gallery.",
+            "credit": "Tennessee Valley Authority; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 31,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3406-media-2-6f38840be7b128d69e99.webp",
+            "sha256": "6f38840be7b128d69e99fda0f39e021a49072bc7b332b5a607642dff53f1f961",
+            "bytes": 57522
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 90944,
+            "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+            "wikiPageId": 10777,
+            "wikiVersion": 2
+          },
+          {
+            "sourceId": 99620,
+            "url": "https://www.tva.com/the-powerhouse/stories/johnsonville-s-jet-set",
+            "wikiPageId": 10810,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.tva.com/the-powerhouse/stories/johnsonville-s-jet-set"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 14047,
+        "name": "Cumberland combined-cycle replacement plant",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/14047",
+        "mediaCount": 1,
+        "verifiedMediaCount": 1,
+        "newMediaCount": 1,
+        "images": 1,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 14047,
+            "name": "Cumberland combined-cycle replacement plant",
+            "key": "eia-3399-deep-1",
+            "sourcePage": "https://clarksvillenow.com/local/tva-on-track-building-new-cumberland-natural-gas-power-plant-southeast-of-clarksville-photos/",
+            "sourceUrl": "https://clarksvillenow.com/wp-content/blogs.dir/43/files/2025/07/TVA-69.jpg",
+            "caption": "New Cumberland natural-gas plant construction, photographed July 16, 2025. This is the new plant, not the existing coal plant’s control room.",
+            "credit": "Lee Erwin / Clarksville Now",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3399-deep-1-d77840a8bd5ab6bad8ca.webp",
+            "sha256": "d77840a8bd5ab6bad8ca7fffbe1cb7c1eed672de0ba735286e7bd109cda9cc26",
+            "bytes": 166212
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 90944,
+            "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+            "wikiPageId": 10777,
+            "wikiVersion": 2
+          },
+          {
+            "sourceId": 90946,
+            "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+            "wikiPageId": 9731,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 99704,
+            "url": "https://clarksvillenow.com/local/tva-on-track-building-new-cumberland-natural-gas-power-plant-southeast-of-clarksville-photos/",
+            "wikiPageId": 10812,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "TVA gas-plant and commissioning updates checked; direct operator page fetches were inaccessible. Clarksville Now’s linked construction gallery inspected, with photo-specific captions and Lee Erwin credit. Images of the existing coal control room were excluded.",
+        "sourcesChecked": [
+          "https://clarksvillenow.com/local/tva-on-track-building-new-cumberland-natural-gas-power-plant-southeast-of-clarksville-photos/"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 14048,
+        "name": "Kingston combined-cycle replacement plant",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/14048",
+        "mediaCount": 1,
+        "verifiedMediaCount": 1,
+        "newMediaCount": 1,
+        "images": 1,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 14048,
+            "name": "Kingston combined-cycle replacement plant",
+            "key": "eia-3407-deep-1",
+            "sourcePage": "https://3bmedianews.com/site-construction-begins-at-new-kingston-energy-complex/",
+            "sourceUrl": "https://3bmedianews.com/wp-content/uploads/2025/03/New-Kingston-TVA-energy-complex.png",
+            "caption": "Kingston Energy Complex site construction, published March 6, 2025 alongside a TVA construction announcement. The image covers the wider energy complex, including the combined-cycle and aeroderivative work; it is not a photograph of a completed replacement plant.",
+            "credit": "Tennessee Valley Authority announcement via 3B Media News; photographer not identified",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3407-deep-1-d1123d30d2242513c34f.webp",
+            "sha256": "d1123d30d2242513c34fbe553eaf01a99fe187a82fd06d6e1720d85522512f42",
+            "bytes": 145566
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 90944,
+            "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+            "wikiPageId": 10777,
+            "wikiVersion": 2
+          },
+          {
+            "sourceId": 99703,
+            "url": "https://3bmedianews.com/site-construction-begins-at-new-kingston-energy-complex/",
+            "wikiPageId": 10811,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "TVA’s operator pages and contractor posts were checked. The verified new-complex site photograph is from 3B Media’s March 6, 2025 reproduction of a TVA announcement. Older Kingston coal-plant photographs were excluded from this addition. A dated 2026 construction-progress series remains a gap.",
+        "sourcesChecked": [
+          "https://3bmedianews.com/site-construction-begins-at-new-kingston-energy-complex/"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 14049,
+        "name": "Allen aeroderivative addition",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/14049",
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "newMediaCount": 2,
+        "images": 2,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 14049,
+            "name": "Allen aeroderivative addition",
+            "key": "gem-L100000104184-deep-1",
+            "sourcePage": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3",
+            "sourceUrl": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3#page=10",
+            "caption": "TVA’s planned six-unit Allen aeroderivative addition, shown in the April 2025 public meeting materials, PDF page 10. This is an official design rendering, not a photograph of operating equipment.",
+            "credit": "Tennessee Valley Authority; artist not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000104184-deep-1-4e6b5add75b70c134d33.webp",
+            "sha256": "4e6b5add75b70c134d33fa976f17e8736e3574f8c9410eeab4f14949128cd730",
+            "bytes": 125342
+          },
+          {
+            "pinId": 14049,
+            "name": "Allen aeroderivative addition",
+            "key": "gem-L100000104184-deep-2",
+            "sourcePage": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3",
+            "sourceUrl": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3#page=3",
+            "caption": "TVA’s Allen site location and proposed aeroderivative design, April 2025 meeting materials, PDF page 3. The labelled aerial separates the retired coal plant, existing combined-cycle plant and the new aeroderivative site.",
+            "credit": "Tennessee Valley Authority; underlying aerial imagery credit not separately stated",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000104184-deep-2-1c361072088adc8a8915.webp",
+            "sha256": "1c361072088adc8a8915af67c9bb7e2887d411461d7d7d2c7ac9729ffacbc68b",
+            "bytes": 153946
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75849,
+            "url": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000921971",
+            "wikiPageId": 9773,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 90946,
+            "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+            "wikiPageId": 9731,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 99707,
+            "url": "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3",
+            "wikiPageId": 10815,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "TVA project page, linked April 2025 public meeting materials and final EIS links checked. Complete relevant PDF pages 3 and 10 visually inspected and rendered; labelled site plan and six-unit design used. Existing Allen combined-cycle construction pictures belong to the older plant and were excluded. No verified current aeroderivative construction photograph found.",
+        "sourcesChecked": [
+          "https://tva-azr-eastus-cdn-ep-tvawcm-prd.azureedge.net/cdn-tvawcma/docs/default-source/environment/environmental-stewardship/nepa-environmental-reviews/allen-aerosdraft-eis-public-meeting-materials-%28april-2025%29.pdf?sfvrsn=3ed00afd_3"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 5492,
+        "name": "Natrium — Kemmerer Unit 1",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/5492",
+        "mediaCount": 4,
+        "verifiedMediaCount": 1,
+        "newMediaCount": 1,
+        "images": 3,
+        "videos": 1,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 5492,
+            "name": "Natrium — Kemmerer Unit 1",
+            "key": "existing-5492-deep-1",
+            "sourcePage": "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
+            "sourceUrl": "https://www.terrapower.com/images/news/construction_news.jpg",
+            "credit": "TerraPower; individual photographer not named",
+            "caption": "Kemmerer Unit 1 construction-start event, supplied with TerraPower’s April 23, 2026 announcement following the NRC construction permit. This is an event photograph, not a completed reactor.",
+            "mediaType": 1,
+            "verified": true,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5492-deep-1-e65127d43804ba420e67.webp",
+            "sha256": "e65127d43804ba420e67401bb3efe3537aec50f5f3ae04d9c6b615e342999b89",
+            "bytes": 191960
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 39370,
+            "url": "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
+            "wikiPageId": 9688,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90979,
+            "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB9048_web.pdf",
+            "wikiPageId": 9758,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 14066,
+        "name": "Orange County Advanced Power Station",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/14066",
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "newMediaCount": 2,
+        "images": 2,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 14066,
+            "key": "eia-66621-media-1",
+            "name": "Orange County Advanced Power Station",
+            "sourcePage": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/OCAPS-first-fire-857x630.jpg",
+            "caption": "Orange County Advanced Power Station first-fire milestone image supplied by Entergy, April 2026.",
+            "credit": "Entergy; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 17,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66621-media-1-353470b58d8565563f27.webp",
+            "sha256": "353470b58d8565563f27d85bf5a541f744b01f38a1c7c9e3857ef159295ec1b8",
+            "bytes": 162332
+          },
+          {
+            "pinId": 14066,
+            "key": "eia-66621-media-2",
+            "name": "Orange County Advanced Power Station",
+            "sourcePage": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+            "sourceUrl": "https://www.entergy.com/wp-content/uploads/2025/11/OCAPS-aerial-view-November-2025.jpg",
+            "caption": "Orange County Advanced Power Station aerial construction view identified by Entergy as November 2025.",
+            "credit": "Entergy; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 18,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66621-media-2-3faa8e1452a09c6f86f1.webp",
+            "sha256": "3faa8e1452a09c6f86f1ee5b09c538ae7fad28c14a0cc1bb83082462acea12a5",
+            "bytes": 283802
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 80255,
+            "url": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+            "wikiPageId": 9699,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90980,
+            "url": "https://www.sec.gov/Archives/edgar/data/7323/000006598426000174/etr-20251231.htm",
+            "wikiPageId": 9759,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 14067,
+        "name": "Magnolia Power Generating Station",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/14067",
+        "mediaCount": 1,
+        "verifiedMediaCount": 1,
+        "newMediaCount": 1,
+        "images": 1,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 14067,
+            "key": "eia-67005-media-1",
+            "name": "Magnolia Power Generating Station",
+            "sourcePage": "https://www.opportunitylouisiana.gov/news/kindle-energy-breaks-ground-on-750-million-power-station-in-iberville-parish",
+            "sourceUrl": "https://www.opportunitylouisiana.gov/wp-content/uploads/2023/10/magnolia-power-groundbreaking.jpg",
+            "caption": "Magnolia Power Generating Station groundbreaking ceremony, published by Louisiana Economic Development, October 2023.",
+            "credit": "Louisiana Economic Development; individual photographer not named",
+            "captureDate": null,
+            "verified": true,
+            "candidateIndex": 19,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67005-media-1-00d3fa686260a40d91f5.webp",
+            "sha256": "00d3fa686260a40d91f5b8a7a2f74e812f1ed6940e573816a1031c02b82cf757",
+            "bytes": 327204
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 90981,
+            "url": "https://www.opportunitylouisiana.gov/news/kindle-energy-breaks-ground-on-750-million-power-station-in-iberville-parish",
+            "wikiPageId": 9760,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90982,
+            "url": "https://kindle-energy.com/case-studies/magnolia",
+            "wikiPageId": 9761,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "sourcesChecked": [
+          "https://www.opportunitylouisiana.gov/news/kindle-energy-breaks-ground-on-750-million-power-station-in-iberville-parish"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      },
+      {
+        "pinId": 14068,
+        "name": "Mammoth Solar — original 1.3 GW complex",
+        "country": "United States",
+        "pinUrl": "https://www.chronopin.com/pin/14068",
+        "mediaCount": 3,
+        "verifiedMediaCount": 3,
+        "newMediaCount": 3,
+        "images": 3,
+        "videos": 0,
+        "productionPageVerified": true,
+        "costDateLocationTagsPreserved": true,
+        "verifiedMedia": [
+          {
+            "pinId": 14068,
+            "name": "Mammoth Solar — original 1.3 GW complex",
+            "key": "eia-66545-deep-1",
+            "sourcePage": "https://doral-energy.com/en/projects/mammoth-solar/",
+            "sourceUrl": "https://doral-energy.com/wp-content/uploads/2022/12/DJI_0462-1-460x260.jpg",
+            "caption": "Mammoth North early construction aerial from Doral’s project gallery. This shows the older North phase, not the 900 MW South/Central phases now reaching operation.",
+            "credit": "Doral Group / Doral Renewables; photographer not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66545-deep-1-19f55b7f2bda8dc7abbf.webp",
+            "sha256": "19f55b7f2bda8dc7abbf13683114cb2f17e792e35900b6fe5a06947f74364e68",
+            "bytes": 33088
+          },
+          {
+            "pinId": 14068,
+            "name": "Mammoth Solar — original 1.3 GW complex",
+            "key": "eia-66545-deep-2",
+            "sourcePage": "https://doral-energy.com/en/projects/mammoth-solar/",
+            "sourceUrl": "https://doral-energy.com/wp-content/uploads/2022/12/2022-Doral-Mammoth-Solar-Ground-Breaking-237-460x260.jpg",
+            "caption": "Mammoth South groundbreaking ceremony from Doral’s official project gallery; an event photo from the phase launch, not a completed solar-field view.",
+            "credit": "Doral Group / Doral Renewables; photographer not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66545-deep-2-04907640bd5f6ba17845.webp",
+            "sha256": "04907640bd5f6ba178455dfa25407456a3c5fb0857008cdabbaebbd3abe2d379",
+            "bytes": 22638
+          },
+          {
+            "pinId": 14068,
+            "name": "Mammoth Solar — original 1.3 GW complex",
+            "key": "eia-66545-deep-3",
+            "sourcePage": "https://doral-energy.com/en/projects/mammoth-solar/",
+            "sourceUrl": "https://doral-energy.com/wp-content/uploads/2022/10/6-e1670235681217-460x260.jpg",
+            "caption": "Group at Mammoth South’s solar project, from Doral’s official project gallery. Capture date not independently published; it does not establish today’s completion percentage.",
+            "credit": "Doral Group / Doral Renewables; photographer not named",
+            "verified": true,
+            "mediaType": 1,
+            "captureDate": null,
+            "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-66545-deep-3-60a463187fd6e5821896.webp",
+            "sha256": "60a463187fd6e58218962db7292aa56647c85d9b6203ec9557dbc3a012365007",
+            "bytes": 41848
+          }
+        ],
+        "sourceWikisReadyAndCurrent": true,
+        "backingWikis": [
+          {
+            "sourceId": 75843,
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+            "wikiPageId": 9772,
+            "wikiVersion": 4
+          },
+          {
+            "sourceId": 90983,
+            "url": "https://www.iedc.in.gov/events/news/details/2022/11/03/doral-renewables-launches-next-phase-of-1.5b-solar-farm-in-northwest-indiana",
+            "wikiPageId": 9762,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 90984,
+            "url": "https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html",
+            "wikiPageId": 9763,
+            "wikiVersion": 1
+          },
+          {
+            "sourceId": 99709,
+            "url": "https://doral-energy.com/en/projects/mammoth-solar/",
+            "wikiPageId": 10817,
+            "wikiVersion": 1
+          }
+        ],
+        "researchNotes": "Doral U.S. project and newsroom pages, parent-company Mammoth gallery, gallery video links and operator commercialization release checked. Historical Mammoth North and South media clearly separated; imagery is not claimed to depict the 900 MW phases’ October 2026 commissioning. A dated completion-photo series for South/Central remains a gap.",
+        "sourcesChecked": [
+          "https://doral-energy.com/en/projects/mammoth-solar/"
+        ],
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    ]
   }
 }

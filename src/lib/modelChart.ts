@@ -27,6 +27,8 @@ export type ModelPoint = {
   // the id so the chart can tell it is the pin being read.
   pinId?: number;
   href?: string;
+  // In the same thread (model line) as the pin being read: drawn reddish.
+  thread?: boolean;
 };
 
 export type ModelChartData = {

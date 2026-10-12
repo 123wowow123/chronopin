@@ -44,6 +44,23 @@ const PATTERNS: Pattern[] = [
   // generation (2.5, 3, 3.5 ... 3.8), so the chain is its generations in the
   // order they shipped. "QwenWork" and the bare "Qwen-Plus" have no number.
   { re: new RegExp(String.raw`\bqwen[- ]?${VERSION}\b`), read: (m) => ({ family: 'qwen', version: m[1] }) },
+  // The labs below name a generation the same way, so each is one chain of
+  // generations. A size or vision letter after the number (GLM-4.5V, Kimi K2.6)
+  // is the same generation, hence no \b after the version.
+  // GLM-4.6, GLM-5V-Turbo, GLM-5.3-Flash
+  { re: new RegExp(String.raw`\bglm[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'glm', version: m[1] }) },
+  // Kimi K2-0905, Kimi K2.5, Kimi K3
+  { re: new RegExp(String.raw`\bkimi[- ]?k${VERSION}(?![\d.])`), read: (m) => ({ family: 'kimi', version: m[1] }) },
+  // MiniMax-M1, MiniMax-M2.5
+  { re: new RegExp(String.raw`\bminimax[- ]?m${VERSION}(?![\d.])`), read: (m) => ({ family: 'minimax', version: m[1] }) },
+  // Mistral's tiers are separate products with their own version numbers.
+  { re: new RegExp(String.raw`\bmistral[- ](small|medium|large)[- ]${VERSION}(?![\d.])`), read: (m) => ({ family: `mistral ${m[1]}`, version: m[2] }) },
+  // Gemma 2, Gemma 3
+  { re: new RegExp(String.raw`\bgemma[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'gemma', version: m[1] }) },
+  // MiMo-V2.5-Pro, MiMo-V2.6
+  { re: new RegExp(String.raw`\bmimo[- ]?v${VERSION}(?![\d.])`), read: (m) => ({ family: 'mimo', version: m[1] }) },
+  // Muse Spark, Muse Spark 1.3: the unnumbered one is the first.
+  { re: new RegExp(String.raw`\bmuse[- ]spark(?:[- ]${VERSION})?(?![\d.])`), read: (m) => ({ family: 'muse spark', version: m[1] ?? '0' }) },
 ];
 
 // Every model of a known line the title names, in order: "OpenAI o3 and

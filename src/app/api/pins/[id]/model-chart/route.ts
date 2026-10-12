@@ -25,14 +25,14 @@ export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/p
   const [universe, pins] = await Promise.all([cachedModelUniverse(), modelPinIndex()]);
   if (!universe) return new Response(null, { status: 502 });
 
-  const mine = buildModelChart(universe, null, pins, id)
+  const mine = buildModelChart(universe, null, pins, id, pin.title)
     .points.filter((p) => p.pinId === id)
     .sort((a, b) => b.elo - a.elo)[0];
   const release = mine ? null : modelRelease(pin.title);
   const key = mine?.key ?? (release ? modelKey(release.model) : null);
   if (!key) return noContent();
 
-  const chart = buildModelChart(universe, key, pins, id);
+  const chart = buildModelChart(universe, key, pins, id, pin.title);
   if (!chart.pinned) return noContent();
   return json(chart, 200, { 'Cache-Control': 'public, max-age=3600' });
 });

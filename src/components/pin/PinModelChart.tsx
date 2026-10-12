@@ -246,14 +246,18 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
               cx={x(p.price)}
               cy={y(p.elo)}
               r={p.frontier ? 4.5 : 3.5}
-              className={p.frontier ? 'fill-muted stroke-panel' : 'fill-subtle/60 stroke-panel'}
+              className={
+                p.thread
+                  ? p.frontier ? 'fill-red-600 stroke-panel' : 'fill-red-500/80 stroke-panel'
+                  : p.frontier ? 'fill-muted stroke-panel' : 'fill-subtle/60 stroke-panel'
+              }
               strokeWidth="1"
             />
           ))}
           {field
-            .filter((p) => labelled.has(p.key) && p.key !== hover?.key && p.key !== selected?.key)
+            .filter((p) => (labelled.has(p.key) || p.thread) && p.key !== hover?.key && p.key !== selected?.key)
             .map((p) => (
-              <text key={p.key} x={x(p.price) + 7} y={y(p.elo) + 4} className="fill-current text-[11px] text-muted">
+              <text key={p.key} x={x(p.price) + 7} y={y(p.elo) + 4} className={`fill-current text-[11px] ${p.thread ? 'font-medium text-red-600' : 'text-muted'}`}>
                 {p.name}
               </text>
             ))}
@@ -298,7 +302,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
         <div className="mt-1 flex min-h-5 flex-wrap items-baseline gap-x-3 gap-y-1 text-xs">
           {label ? (
             <span className="text-ink tabular-nums">
-              <span className={`me-1.5 inline-block size-2 rounded-full align-middle ${label.key === data.pinned ? 'bg-accent' : 'bg-subtle'}`} aria-hidden />
+              <span className={`me-1.5 inline-block size-2 rounded-full align-middle ${label.key === data.pinned ? 'bg-accent' : label.thread ? 'bg-red-500' : 'bg-subtle'}`} aria-hidden />
               {linkOf(label) ? (
                 <Link href={linkOf(label)!} className="font-medium text-link hover:underline">
                   {label.name}

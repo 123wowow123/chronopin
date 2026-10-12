@@ -39,3 +39,7 @@ All 37 cost-qualified production pins, including the 13 through-2030 buildout pi
 ## Lone Star media added
 
 Six verified images are attached to pin 8615: three applicant-filed San Jacinto site photographs extracted from TCEQ wastewater application pages 60–61; the Lone Star design rendering from page 10 of an Entergy presentation dated February 4, 2026; the shared April 9 groundbreaking ceremony photograph; and the operator location diagram. All six are publicly verified Azure blobs and appear in the production pin page HTML. Captions retain source credits, PDF page numbers, shared-event context and rendering labels. Filed site photos have no published capture date and are not represented as current progress updates. Two additional cited media sources have ready backing wikis. Operator/government galleries, linked Dropbox, local reporting and video searches were checked; no verified dated construction-progress series or Lone Star drone video was found. Cost and timeline fields were preserved.
+
+## Collection-wide media research — October 12, 2026
+
+All 37 eligible live pins now have verified media. The 25 initially empty pins were filled with 50 additional media items; the collection now has 72 images and five videos. The live page HTML and current backing wikis were verified for every pin, with cost and timeline fields preserved. See [media research notes](electric-generation-media-research-2026-10-12.md) and the JSON companion for per-project sources, captions, credits and remaining gaps.

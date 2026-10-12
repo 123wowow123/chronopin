@@ -113,3 +113,7 @@ The live collection now also has a [12-project estimated completion view](https:
 ## Dedicated Cost fields
 
 All 37 cost-qualified production pins, including the 13 through-2030 buildout pins, now store the published amount in the pin’s Cost field (`price`) and original ISO currency in `priceCurrency`. The public pin and map APIs returned the expected values at 2026-10-12T22:18:41Z. Known bounds are retained for Allen (upper forecast) and MTerra (lower-bound investment). Estimate dates, price-year/tax-credit/component scope, citations, backing wikis, target dates and media remain in the details.
+
+## Collection-wide media research — October 12, 2026
+
+All 37 eligible live pins now have verified media. The 25 initially empty pins were filled with 50 additional media items; the collection now has 72 images and five videos. The live page HTML and current backing wikis were verified for every pin, with cost and timeline fields preserved. See [media research notes](electric-generation-media-research-2026-10-12.md) and the JSON companion for per-project sources, captions, credits and remaining gaps.

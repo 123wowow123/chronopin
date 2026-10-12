@@ -16,6 +16,7 @@
 // "anthropic/claude-opus-4.6"), so they are joined on modelKey(). A model the
 // router does not list has a score but no price and is left out, not guessed.
 
+import { modelRelease } from '@/lib/modelSeries';
 import { blendedPrice, markFrontier, modelKey, type ModelChartData, type ModelPoint } from '@/lib/modelChart';
 import { pinPath } from '@/lib/seo';
 import * as db from './db';
@@ -245,14 +246,25 @@ function pinFor(index: ModelPinIndex, key: string, keys: string[][]): ModelPin |
 // still the true one - a frontier model with no pin is a gap in the pins, not
 // a reason to move the line. The pin being read is always drawn, with its own
 // id, even when it is not in the AI Models index (a pin in the AI category).
-export function buildModelChart(universe: ModelUniverse, pinnedKey: string | null, pins: ModelPinIndex = [], currentPinId?: number): ModelChartData {
+export function buildModelChart(
+  universe: ModelUniverse,
+  pinnedKey: string | null,
+  pins: ModelPinIndex = [],
+  currentPinId?: number,
+  currentTitle?: string,
+): ModelChartData {
+  // The pin's thread is its model line (modelSeries): every dot whose own pin
+  // is on that line is flagged, so the chart can colour the thread's models.
+  const lineOf = (title: string | undefined) => modelRelease(title)?.line;
+  const threadLine = lineOf(currentTitle ?? pins.find((pin) => pin.id === currentPinId)?.title);
   const own = pinnedKey ? findPinned(universe.points, pinnedKey) : null;
   const keys = universe.points.map((p) => wordsOf(p.key));
   const points = universe.points
     .map((p) => {
       const pin = pinFor(pins, p.key, keys);
-      if (p === own && currentPinId != null) return { ...p, pinId: currentPinId, href: pin ? pinPath(pin) : undefined };
-      return pin ? { ...p, pinId: pin.id, href: pinPath(pin) } : p;
+      const thread = threadLine != null && (p === own || (pin != null && lineOf(pin.title) === threadLine));
+      if (p === own && currentPinId != null) return { ...p, pinId: currentPinId, href: pin ? pinPath(pin) : undefined, thread };
+      return pin ? { ...p, pinId: pin.id, href: pinPath(pin), thread } : p;
     })
     .filter((p) => p.pinId != null);
   const pinned = own ? (points.find((p) => p.key === own.key) ?? null) : null;
