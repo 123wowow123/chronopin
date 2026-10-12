@@ -612,11 +612,11 @@
         "latitude": 36.6640103,
         "longitude": 117.0181911,
         "productName": "Yan Fu Private Cuisine — Hang Lung",
-        "utcStartDateTime": "2012-12-31T00:00:00Z",
+        "utcStartDateTime": "2011-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Ctrip lists 闫府私房菜(恒隆店) at 416A, Hang Lung Plaza East Wing, run by 山东鲤承餐饮连锁 (founded 2011). Hang Lung Plaza opened Aug 2011 so the venue cannot be earlier; reviewers say 10+ years, so a 2011-2013 opening is plausible; no dated source found, 2012 is a midpoint estimate. Note the guide title 'Yan Fu' is 闫府. Estimated: 2012 is a best estimate and 2012-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Baike's 闫府私房菜 entry places the restaurant at 恒隆广场 4F 416A, 泉城路188号 and says it was established in 2011; Hang Lung Plaza opened Aug 2011, so late 2011 is the likely venue opening (possibly a brand date, but it is the Hang Lung store). Month not found. Estimated: 2011 is a best estimate and 2011-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -635,7 +635,7 @@
             "url": "https://you.ctrip.com/food/jinan128/5275469.html",
             "title": "Yan Fu Private Cuisine — Hang Lung — research source",
             "confidence": 90,
-            "reasoning": "Ctrip lists 闫府私房菜(恒隆店) at 416A, Hang Lung Plaza East Wing, run by 山东鲤承餐饮连锁 (founded 2011). Hang Lung Plaza opened Aug 2011 so the venue cannot be earlier; reviewers say 10+ years, so a 2011-2013 opening is plausible; no dated source found, 2012 is a midpoint estimate. Note the guide title 'Yan Fu' is 闫府. Estimated: 2012 is a best estimate and 2012-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Baike's 闫府私房菜 entry places the restaurant at 恒隆广场 4F 416A, 泉城路188号 and says it was established in 2011; Hang Lung Plaza opened Aug 2011, so late 2011 is the likely venue opening (possibly a brand date, but it is the Hang Lung store). Month not found. Estimated: 2011 is a best estimate and 2011-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8883135797",
@@ -1194,11 +1194,11 @@
         "latitude": 29.8678829,
         "longitude": 121.541134,
         "productName": "A La Ming Zao — Zhenming Road",
-        "utcStartDateTime": "2020-12-31T00:00:00Z",
+        "utcStartDateTime": "2019-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "No opening date is published anywhere reachable; Ctrip page has no reviews or history, and Trip.com (sa.trip.com) lists it as a newly collected shop with 55-88 reviews, which suggests a venue from the late 2010s-early 2020s rather than an old shop. Year is a low-confidence guess; the first-pass note that only the later Yinzhou branch is documented still holds. Address is consistent (Ctrip says 近水楼台底商324/326/328号, near 月湖盛园; the guide's 'Jinshui Loutai' is a romanisation variant). Estimated: 2020 is a best estimate and 2020-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Qunar has a page for 阿拉名灶(镇明路店) dated 2019-12-11, so the shop existed by end-2019 (upper bound); no registration or opening date found (the 阿婆名灶 entity registered 2018-03 in search results is a different name, not matched). The later 月湖盛园 branch is a separate newer store, per a Douyin post. Estimated: 2019 is a best estimate and 2019-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1217,7 +1217,7 @@
             "url": "https://you.ctrip.com/food/ningbo83/21404247.html",
             "title": "A La Ming Zao — Zhenming Road — research source",
             "confidence": 90,
-            "reasoning": "No opening date is published anywhere reachable; Ctrip page has no reviews or history, and Trip.com (sa.trip.com) lists it as a newly collected shop with 55-88 reviews, which suggests a venue from the late 2010s-early 2020s rather than an old shop. Year is a low-confidence guess; the first-pass note that only the later Yinzhou branch is documented still holds. Address is consistent (Ctrip says 近水楼台底商324/326/328号, near 月湖盛园; the guide's 'Jinshui Loutai' is a romanisation variant). Estimated: 2020 is a best estimate and 2020-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Qunar has a page for 阿拉名灶(镇明路店) dated 2019-12-11, so the shop existed by end-2019 (upper bound); no registration or opening date found (the 阿婆名灶 entity registered 2018-03 in search results is a different name, not matched). The later 月湖盛园 branch is a separate newer store, per a Douyin post. Estimated: 2019 is a best estimate and 2019-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8598086743",
@@ -2002,7 +2002,7 @@
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "MOFCOM's time-honored brand museum says the first Dongfang Jiaozi Wang opened on 22 April 1993 on Central Street, but gives number 39 whereas the entry is number 41; because the numbers differ (renumbering or relocation not verified) this is an estimate for this venue. Earlier forerunner: a seafood dumpling shop on Jingwei 4th Street from February 1990. Estimated: 1993-04-22 is a best estimate and 1993-04-22 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "MOFCOM's time-honored brand museum says the first Dongfang Jiaozi Wang opened on 22 April 1993 on Central Street, but gives number 39 whereas the entry is number 41; because the numbers differ (renumbering or relocation not verified) this is an estimate for this venue. Earlier forerunner: a seafood dumpling shop on Jingwei 4th Street from February 1990. Estimated: the exact day 1993-04-22 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -2021,7 +2021,7 @@
             "url": "https://you.ctrip.com/food/harbin151/4925394.html",
             "title": "Dongfang Dumpling King — Central Street — research source",
             "confidence": 90,
-            "reasoning": "MOFCOM's time-honored brand museum says the first Dongfang Jiaozi Wang opened on 22 April 1993 on Central Street, but gives number 39 whereas the entry is number 41; because the numbers differ (renumbering or relocation not verified) this is an estimate for this venue. Earlier forerunner: a seafood dumpling shop on Jingwei 4th Street from February 1990. Estimated: 1993-04-22 is a best estimate and 1993-04-22 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "MOFCOM's time-honored brand museum says the first Dongfang Jiaozi Wang opened on 22 April 1993 on Central Street, but gives number 39 whereas the entry is number 41; because the numbers differ (renumbering or relocation not verified) this is an estimate for this venue. Earlier forerunner: a seafood dumpling shop on Jingwei 4th Street from February 1990. Estimated: the exact day 1993-04-22 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           }
         ]
       },

@@ -442,11 +442,11 @@
         "latitude": 22.8183853,
         "longitude": 113.6747267,
         "productName": "Hai Cheng Xuan Seafood Restaurant — Humen",
-        "utcStartDateTime": "2021-12-31T00:00:00Z",
+        "utcStartDateTime": "2008-10-18T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "No opening date found for 海澄轩海鲜酒家 or its host 明苑度假村/明苑大酒店 (162 金龙南路). A 2021-07-12 Dianping list already describes it operating there (07:00-21:30), so 2021 is only a latest-possible bound; it is a long-running resort-hotel restaurant and probably opened earlier. Estimated: 2021 is a best estimate and 2021-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator's own profile says 海澄轩海鲜酒家 formally opened on 2008-10-18 in Humen; the business registration (东莞市虎门海澄轩海鲜酒家, 金龙大道南162号) is dated 2009-11-06. The host Mingyuan resort opened 1998 but the restaurant itself opened 2008.",
         "parentId": null,
         "categories": [
           "Food"
@@ -465,7 +465,7 @@
             "url": "https://you.ctrip.com/food/dongguan212/5505123.html",
             "title": "Hai Cheng Xuan Seafood Restaurant — Humen — research source",
             "confidence": 90,
-            "reasoning": "No opening date found for 海澄轩海鲜酒家 or its host 明苑度假村/明苑大酒店 (162 金龙南路). A 2021-07-12 Dianping list already describes it operating there (07:00-21:30), so 2021 is only a latest-possible bound; it is a long-running resort-hotel restaurant and probably opened earlier. Estimated: 2021 is a best estimate and 2021-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Operator's own profile says 海澄轩海鲜酒家 formally opened on 2008-10-18 in Humen; the business registration (东莞市虎门海澄轩海鲜酒家, 金龙大道南162号) is dated 2009-11-06. The host Mingyuan resort opened 1998 but the restaurant itself opened 2008."
           },
           {
             "url": "https://www.dianping.com/photos/8786524778",
@@ -648,11 +648,11 @@
         "latitude": 36.7003104,
         "longitude": 117.064858,
         "productName": "Mei Fei Restaurant — Sangyuan Road",
-        "utcStartDateTime": "2007-12-31T00:00:00Z",
+        "utcStartDateTime": "2009-02-25T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "No dated source found (Baike blocked, Ctrip page shows no review dates). Prior-pass reviewer remarks of 'seventeen or eighteen years' and 'about twenty years' open, counted back from 2026, point to roughly 2006-2009; 2007 is the estimate. Estimated: 2007 is a best estimate and 2007-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Aiqicha lists 济南市历城区梅飞酒家 as established 2009-02-25 at Sangyuan Road East 47 (a different house number from 9-1, possibly an older numbering); this fits reviewers' 'seventeen to twenty years' remarks and replaces the 2007 guess. It is a business-registration date, so the restaurant may have traded slightly earlier. Estimated: the exact day 2009-02-25 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -671,7 +671,7 @@
             "url": "https://you.ctrip.com/food/jinan128/5273052.html",
             "title": "Mei Fei Restaurant — Sangyuan Road — research source",
             "confidence": 90,
-            "reasoning": "No dated source found (Baike blocked, Ctrip page shows no review dates). Prior-pass reviewer remarks of 'seventeen or eighteen years' and 'about twenty years' open, counted back from 2026, point to roughly 2006-2009; 2007 is the estimate. Estimated: 2007 is a best estimate and 2007-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Aiqicha lists 济南市历城区梅飞酒家 as established 2009-02-25 at Sangyuan Road East 47 (a different house number from 9-1, possibly an older numbering); this fits reviewers' 'seventeen to twenty years' remarks and replaces the 2007 guess. It is a business-registration date, so the restaurant may have traded slightly earlier. Estimated: the exact day 2009-02-25 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8810409807",
@@ -858,7 +858,7 @@
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Only second-hand Baidu Baike snippet from first pass (founded around 2011); I could not re-verify it, and the Ctrip page (restaurant at 5F Agricultural Bank building, Huaihe Road, opposite Parkson) states no date and shows the merchant as offline. This is a brand-level date; the pedestrian-street shop is presumed to be the original. Estimated: 2011 is a best estimate and 2011-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Baike's 孙府大院 entry says the restaurant opened in 2011 and lists the Huaihe Road pedestrian-street shop (55 Huaihe Rd, Agricultural Bank/集结号KTV 5F, east of Parkson) as the original, with a second shop at Xindi City Plaza opened the same year; the operating company was registered 2014-09-10 and a 2014-12 article and 2017-01 Tencent article already feature the pedestrian-street shop. Month unknown; Ctrip shows the listing as offline. Estimated: 2011 is a best estimate and 2011-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -877,7 +877,7 @@
             "url": "https://you.ctrip.com/food/hefei196/5473076.html",
             "title": "Sun Fu Da Yuan — Pedestrian Street — research source",
             "confidence": 90,
-            "reasoning": "Only second-hand Baidu Baike snippet from first pass (founded around 2011); I could not re-verify it, and the Ctrip page (restaurant at 5F Agricultural Bank building, Huaihe Road, opposite Parkson) states no date and shows the merchant as offline. This is a brand-level date; the pedestrian-street shop is presumed to be the original. Estimated: 2011 is a best estimate and 2011-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Baike's 孙府大院 entry says the restaurant opened in 2011 and lists the Huaihe Road pedestrian-street shop (55 Huaihe Rd, Agricultural Bank/集结号KTV 5F, east of Parkson) as the original, with a second shop at Xindi City Plaza opened the same year; the operating company was registered 2014-09-10 and a 2014-12 article and 2017-01 Tencent article already feature the pedestrian-street shop. Month unknown; Ctrip shows the listing as offline. Estimated: 2011 is a best estimate and 2011-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8934296160",
@@ -1256,11 +1256,11 @@
         "latitude": 29.863917,
         "longitude": 121.542865,
         "productName": "Cang Qiao Mian Jie — Zhenming Road",
-        "utcStartDateTime": "2021-02-28T00:00:00Z",
+        "utcStartDateTime": "2000-06-06T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "UPPER bound only: the Trip.com page shows dated reviews from 2021-02-19, so the Zhenming Road shop existed by then; Ctrip calls it a long-established (老店) breakfast shop with 20-30 minute queues, so it actually opened earlier, probably years earlier. No founding year was found in any fetched or searched source. Estimated: 2021-02 is a best estimate and 2021-02-28 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "BOSS Zhipin company profile (from registry data) says 宁波市海曙仓桥面结店 was established 2000-06-06 with registered address 118 Zhenming Road, Haishu - this exact address. A 2020 Toutiao piece also lists the street's shops as 20+ years old. Replaces the 2021 upper bound. Estimated: the exact day 2000-06-06 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1279,7 +1279,7 @@
             "url": "https://you.ctrip.com/food/ningbo83/10385727.html",
             "title": "Cang Qiao Mian Jie — Zhenming Road — research source",
             "confidence": 90,
-            "reasoning": "UPPER bound only: the Trip.com page shows dated reviews from 2021-02-19, so the Zhenming Road shop existed by then; Ctrip calls it a long-established (老店) breakfast shop with 20-30 minute queues, so it actually opened earlier, probably years earlier. No founding year was found in any fetched or searched source. Estimated: 2021-02 is a best estimate and 2021-02-28 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "BOSS Zhipin company profile (from registry data) says 宁波市海曙仓桥面结店 was established 2000-06-06 with registered address 118 Zhenming Road, Haishu - this exact address. A 2020 Toutiao piece also lists the street's shops as 20+ years old. Replaces the 2021 upper bound. Estimated: the exact day 2000-06-06 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/7362265647",

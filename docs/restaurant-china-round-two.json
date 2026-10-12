@@ -365,11 +365,11 @@
         "latitude": 23.1071247,
         "longitude": 113.8500232,
         "productName": "Cui He Restaurant — Shilong",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "1994-03-09T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. Trip.com lists it as 翠河餐馆 (not 翠和), 47 Xinglong West Rd, open 17:00-02:00, 2 undated reviews. No opening or founding info found anywhere.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Qichacha/Aiqicha list 东莞市石龙翠河餐馆 as established 1994-03-09 (operator 梁福深) in Shilong; a second registration dated 2019-10-25 (operator 方燕雯) looks like a re-registration. Registry snippet does not show the street number, so match to 47 Xinglong West Road is likely but unverified. Estimated: the exact day 1994-03-09 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -388,7 +388,7 @@
             "url": "https://webzdg.sun0769.com/web/news/content/771566",
             "title": "Cui He Restaurant — Shilong — research source",
             "confidence": 90,
-            "reasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. Trip.com lists it as 翠河餐馆 (not 翠和), 47 Xinglong West Rd, open 17:00-02:00, 2 undated reviews. No opening or founding info found anywhere."
+            "reasoning": "Qichacha/Aiqicha list 东莞市石龙翠河餐馆 as established 1994-03-09 (operator 梁福深) in Shilong; a second registration dated 2019-10-25 (operator 方燕雯) looks like a re-registration. Registry snippet does not show the street number, so match to 47 Xinglong West Road is likely but unverified. Estimated: the exact day 1994-03-09 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://us.trip.com/restaurant/china/dongguan/detail/restaurant-11654390/",
@@ -547,7 +547,7 @@
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Baidu Baike (via search summary) gives the Shimao-plaza entity (registered at Shimao Plaza 4F units 410-415) as founded 2014-03-21, which is a registration date and fits the mall opening on 2014-05-01; actual trading start likely shortly after, so treat as ~March-May 2014. A Douyin post of 2024-06-27 announces a '世茂店扬帆起航' relaunch, so the current operation may be a later relaunch. Estimated: 2014-03-21 is a best estimate and 2014-03-21 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Baidu Baike (via search summary) gives the Shimao-plaza entity (registered at Shimao Plaza 4F units 410-415) as founded 2014-03-21, which is a registration date and fits the mall opening on 2014-05-01; actual trading start likely shortly after, so treat as ~March-May 2014. A Douyin post of 2024-06-27 announces a '世茂店扬帆起航' relaunch, so the current operation may be a later relaunch. Estimated: the exact day 2014-03-21 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -566,7 +566,7 @@
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/128/5283286.html",
             "title": "Jin Chun Xi — Shimao International Plaza — research source",
             "confidence": 90,
-            "reasoning": "Baidu Baike (via search summary) gives the Shimao-plaza entity (registered at Shimao Plaza 4F units 410-415) as founded 2014-03-21, which is a registration date and fits the mall opening on 2014-05-01; actual trading start likely shortly after, so treat as ~March-May 2014. A Douyin post of 2024-06-27 announces a '世茂店扬帆起航' relaunch, so the current operation may be a later relaunch. Estimated: 2014-03-21 is a best estimate and 2014-03-21 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Baidu Baike (via search summary) gives the Shimao-plaza entity (registered at Shimao Plaza 4F units 410-415) as founded 2014-03-21, which is a registration date and fits the mall opening on 2014-05-01; actual trading start likely shortly after, so treat as ~March-May 2014. A Douyin post of 2024-06-27 announces a '世茂店扬帆起航' relaunch, so the current operation may be a later relaunch. Estimated: the exact day 2014-03-21 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8255606961",
@@ -899,7 +899,7 @@
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Conrad Xiamen opened 18 August 2016 (Baidu Baike/guest report), with the opening ceremony on 20 August and Conrad's announcement on 22 August 2016; Lucheng is its 39th-floor Chinese restaurant, assumed to have opened with the hotel but no restaurant-specific date was found. Estimated: 2016-08-18 is a best estimate and 2016-08-18 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Conrad Xiamen opened 18 August 2016 (Baidu Baike/guest report), with the opening ceremony on 20 August and Conrad's announcement on 22 August 2016; Lucheng is its 39th-floor Chinese restaurant, assumed to have opened with the hotel but no restaurant-specific date was found. Estimated: the exact day 2016-08-18 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -918,7 +918,7 @@
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/2015066/15954175.html",
             "title": "Lucheng — Conrad Xiamen — research source",
             "confidence": 90,
-            "reasoning": "Conrad Xiamen opened 18 August 2016 (Baidu Baike/guest report), with the opening ceremony on 20 August and Conrad's announcement on 22 August 2016; Lucheng is its 39th-floor Chinese restaurant, assumed to have opened with the hotel but no restaurant-specific date was found. Estimated: 2016-08-18 is a best estimate and 2016-08-18 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Conrad Xiamen opened 18 August 2016 (Baidu Baike/guest report), with the opening ceremony on 20 August and Conrad's announcement on 22 August 2016; Lucheng is its 39th-floor Chinese restaurant, assumed to have opened with the hotel but no restaurant-specific date was found. Estimated: the exact day 2016-08-18 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://www.hilton.com.cn/zh-cn/hotel/xiamen/conrad-xiamen-xmncici/dinings.html",
@@ -1241,11 +1241,11 @@
         "latitude": 38.9130851,
         "longitude": 121.633824,
         "productName": "Wan Bao Seafood — Labour Park",
-        "utcStartDateTime": "2004-12-31T00:00:00Z",
+        "utcStartDateTime": "2004-04-14T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "万宝海鲜舫(劳动公园店), 160+ private rooms and banquet hall. A 2019 Ctrip reviewer ties it to a 2004 first visit to Dalian (ambiguous), and earliest dated review is 2019-08-17; no company or press history found. 2004 is a low-confidence upper-bound-style guess. Estimated: 2004 is a best estimate and 2004-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "大连万宝海鲜舫 was registered 2004-04-14 at 中山区解放路108号, the input address, matching Baike's description of the Labour Park restaurant; opening presumably in 2004 (registration-date proxy). Estimated: the exact day 2004-04-14 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1264,7 +1264,7 @@
             "url": "https://www.jtb.co.jp/kaigai_guide/china/people_s_republic_of_china/DLC/105047/",
             "title": "Wan Bao Seafood — Labour Park — research source",
             "confidence": 90,
-            "reasoning": "万宝海鲜舫(劳动公园店), 160+ private rooms and banquet hall. A 2019 Ctrip reviewer ties it to a 2004 first visit to Dalian (ambiguous), and earliest dated review is 2019-08-17; no company or press history found. 2004 is a low-confidence upper-bound-style guess. Estimated: 2004 is a best estimate and 2004-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "大连万宝海鲜舫 was registered 2004-04-14 at 中山区解放路108号, the input address, matching Baike's description of the Labour Park restaurant; opening presumably in 2004 (registration-date proxy). Estimated: the exact day 2004-04-14 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/1646/4925236.html",
@@ -1411,11 +1411,11 @@
         "latitude": 41.796253559052,
         "longitude": 123.413450578226,
         "productName": "Li Liangui Smoked Flatbread — Shenyang Station",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2020-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. Ctrip lists 李连贵熏肉大饼(沈阳站店) at 中山路4甲1号, 431 reviews, '人气老店', but shows no opening date or review dates; Tuniu listing has none either. Only brand history (Shenyang shop 1950) found, which is not this branch. Address matches input.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Upper bound only: dated Dianping reviews cited on Baidu Baike go back to 2020-09-27, and no opening or registration date was found for this Shenyang Station shop, so it likely opened earlier. Estimated: 2020 is a best estimate and 2020-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1434,7 +1434,7 @@
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/155/4925996.html",
             "title": "Li Liangui Smoked Flatbread — Shenyang Station — research source",
             "confidence": 90,
-            "reasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. Ctrip lists 李连贵熏肉大饼(沈阳站店) at 中山路4甲1号, 431 reviews, '人气老店', but shows no opening date or review dates; Tuniu listing has none either. Only brand history (Shenyang shop 1950) found, which is not this branch. Address matches input."
+            "reasoning": "Upper bound only: dated Dianping reviews cited on Baidu Baike go back to 2020-09-27, and no opening or registration date was found for this Shenyang Station shop, so it likely opened earlier. Estimated: 2020 is a best estimate and 2020-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8545331593",

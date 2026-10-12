@@ -747,11 +747,11 @@
         "latitude": 31.8705751,
         "longitude": 117.2723614,
         "productName": "Geng Fu Xing — Xinghua Park",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2017-01-13T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. No venue-level date found. Ctrip lists 耿福兴(杏花店) at 蒙城路89号杏花公园东门 (note: input says 'Mengcheng' road spelled 孟城路 in my search; the actual road is 蒙城路), open 06:30-14:00 / 17:00-21:30, 4.6 from 186 reviews, tagged '人气老店' (long-standing local favourite), but undated. 1888/'138 years' is the Wuhu brand date, not this branch, so only 'exists as of 2026' can be asserted.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Business registration of 合肥庐阳区耿福兴餐厅杏花店 at 蒙城路89号一楼 is dated 2017-01-13 (road spelling 蒙城路 confirmed); opening was probably within weeks, though trading before registration cannot be excluded. Estimated: the exact day 2017-01-13 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -770,7 +770,7 @@
             "url": "https://you.ctrip.com/food/hefei196/15760816.html",
             "title": "Geng Fu Xing — Xinghua Park — research source",
             "confidence": 90,
-            "reasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. No venue-level date found. Ctrip lists 耿福兴(杏花店) at 蒙城路89号杏花公园东门 (note: input says 'Mengcheng' road spelled 孟城路 in my search; the actual road is 蒙城路), open 06:30-14:00 / 17:00-21:30, 4.6 from 186 reviews, tagged '人气老店' (long-standing local favourite), but undated. 1888/'138 years' is the Wuhu brand date, not this branch, so only 'exists as of 2026' can be asserted."
+            "reasoning": "Business registration of 合肥庐阳区耿福兴餐厅杏花店 at 蒙城路89号一楼 is dated 2017-01-13 (road spelling 蒙城路 confirmed); opening was probably within weeks, though trading before registration cannot be excluded. Estimated: the exact day 2017-01-13 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://us.trip.com/restaurant/china/hefei/detail/geng-fu-xing-31322679/",
@@ -1111,11 +1111,11 @@
         "latitude": 29.8710465,
         "longitude": 121.5544961,
         "productName": "Tie Ge Bi — Dongdu Road",
-        "utcStartDateTime": "2009-12-31T00:00:00Z",
+        "utcStartDateTime": "2007-04-30T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Brand founded 2007 (CNPP) and the Dongdu Road branch was already listed in a May 2011 Ningbo news item (first-pass evidence), so it opened between 2007 and May 2011; 2009 is the midpoint, not a found date. Could not retrieve branch-level evidence (search engines blocked or irrelevant). Estimated: 2009 is a best estimate and 2009-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Baike: the brand's first store was registered 2007-04-12 (as 新六六顺快餐店, renamed 贴阁碧饭店 on 2007-08-31), and a 2026 article calls Dongdu Road the 'founding old shop' (创始老店); the Dongdu entity 宁波海曙东渡贴阁碧饭店 was re-registered 2013-12-30 and was already inspected in Jan 2013, so that is not the opening. Assumes the first store was the Dongdu Road one; brand founding company dates 1997/2009 are not venue dates. Estimated: 2007-04 is a best estimate and 2007-04-30 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1134,7 +1134,7 @@
             "url": "https://you.ctrip.com/food/ningbo83/4928007.html",
             "title": "Tie Ge Bi — Dongdu Road — research source",
             "confidence": 90,
-            "reasoning": "Brand founded 2007 (CNPP) and the Dongdu Road branch was already listed in a May 2011 Ningbo news item (first-pass evidence), so it opened between 2007 and May 2011; 2009 is the midpoint, not a found date. Could not retrieve branch-level evidence (search engines blocked or irrelevant). Estimated: 2009 is a best estimate and 2009-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Baike: the brand's first store was registered 2007-04-12 (as 新六六顺快餐店, renamed 贴阁碧饭店 on 2007-08-31), and a 2026 article calls Dongdu Road the 'founding old shop' (创始老店); the Dongdu entity 宁波海曙东渡贴阁碧饭店 was re-registered 2013-12-30 and was already inspected in Jan 2013, so that is not the opening. Assumes the first store was the Dongdu Road one; brand founding company dates 1997/2009 are not venue dates. Estimated: 2007-04 is a best estimate and 2007-04-30 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8326525044",
@@ -1305,11 +1305,11 @@
         "latitude": 38.8287083,
         "longitude": 121.4939052,
         "productName": "Ri Feng Yuan — Xiaopingdao",
-        "utcStartDateTime": "1995-12-31T00:00:00Z",
+        "utcStartDateTime": "1998-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Xiaopingdao is the original 日丰园 shop; reviewers call it a '40年老店' (2026 review), an 'old shop' they ate at as children, and a 2012 TV feature (舌尖上的中国). Claims span ~1986 to 2000s; 1995 is a rough midpoint, unverified, with no dated record found. City branches (百年城, 银泰城) are later. Estimated: 1995 is a best estimate and 1995-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Baike (日丰园餐馆) and Baidu Wenku say Rifengyuan was founded in 1998 by 孙杰 in Xiaopingdao; the Xiaopingdao (48 Xiaopingdao) shop is the original and general store, with city branches later. Sources conflict with '40年老店' reviewer claims, but the founding-year sources are consistent. Estimated: 1998 is a best estimate and 1998-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1328,7 +1328,7 @@
             "url": "https://you.ctrip.com/food/dalian4/4925258.html",
             "title": "Ri Feng Yuan — Xiaopingdao — research source",
             "confidence": 90,
-            "reasoning": "Xiaopingdao is the original 日丰园 shop; reviewers call it a '40年老店' (2026 review), an 'old shop' they ate at as children, and a 2012 TV feature (舌尖上的中国). Claims span ~1986 to 2000s; 1995 is a rough midpoint, unverified, with no dated record found. City branches (百年城, 银泰城) are later. Estimated: 1995 is a best estimate and 1995-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Baike (日丰园餐馆) and Baidu Wenku say Rifengyuan was founded in 1998 by 孙杰 in Xiaopingdao; the Xiaopingdao (48 Xiaopingdao) shop is the original and general store, with city branches later. Sources conflict with '40年老店' reviewer claims, but the founding-year sources are consistent. Estimated: 1998 is a best estimate and 1998-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://maps.apple.com/place?_provider=57879&place-id=H2710I3F823EECE8A08",
@@ -1505,11 +1505,11 @@
         "latitude": 41.8629686,
         "longitude": 123.4109384,
         "productName": "Lao Fengtian Ma Jia Shaomai — Santaizi",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2015-08-20T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. Only the branch listing (黄河北大街72号, 397 m from Metro Line 2 Santaizi station, 09:00-21:00) was found on Ctrip; no opening date, no dated reviews, no news. Brand history (1796) is not the branch. Line 2 Santaizi station opened 2012 so the branch plausibly postdates the area's development, but that is not evidence.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Business registration of 沈阳市于洪区老奉天马家烧麦馆 at 黄河北大街72号 is dated 2015-08-20, the same address; opening was likely at or shortly after this date. Estimated: the exact day 2015-08-20 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1528,7 +1528,7 @@
             "url": "https://you.ctrip.com/food/shenyang155/15519617.html",
             "title": "Lao Fengtian Ma Jia Shaomai — Santaizi — research source",
             "confidence": 90,
-            "reasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. Only the branch listing (黄河北大街72号, 397 m from Metro Line 2 Santaizi station, 09:00-21:00) was found on Ctrip; no opening date, no dated reviews, no news. Brand history (1796) is not the branch. Line 2 Santaizi station opened 2012 so the branch plausibly postdates the area's development, but that is not evidence."
+            "reasoning": "Business registration of 沈阳市于洪区老奉天马家烧麦馆 at 黄河北大街72号 is dated 2015-08-20, the same address; opening was likely at or shortly after this date. Estimated: the exact day 2015-08-20 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8184184597",

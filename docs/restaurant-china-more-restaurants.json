@@ -24,11 +24,11 @@
         "latitude": 25.0238984,
         "longitude": 102.7190558,
         "productName": "Fuzhaolou — Jinjiang",
-        "utcStartDateTime": "2002-12-31T00:00:00Z",
+        "utcStartDateTime": "2006-10-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Brand date, not venue: the Fuzhaolou name was revived in 2002 by chairman Yu Haoran (original 1938 Fuzhao Street shop), and the brand has 8 stores. No source dates the Jinjiang Hotel (98 Beijing Rd) outlet or the hotel's opening (Ctrip only gives a 2017 renovation), so 2002 is only the earliest plausible year; actual opening at this site is likely 2002 or later. Estimated: 2002 is a best estimate and 2002-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Operating company 昆明福照楼锦程餐饮有限公司 was founded 2006-10-10 at 北京路98号 Kunming Jinjiang Hotel, so the Jinjiang outlet most likely opened around Oct 2006 (a company-registration proxy; a pre-company opening is possible). This is the venue-level date, not the 2002/1938 brand date. Estimated: 2006-10 is a best estimate and 2006-10-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -47,7 +47,7 @@
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/29/4925981.html",
             "title": "Fuzhaolou — Jinjiang — research source",
             "confidence": 90,
-            "reasoning": "Brand date, not venue: the Fuzhaolou name was revived in 2002 by chairman Yu Haoran (original 1938 Fuzhao Street shop), and the brand has 8 stores. No source dates the Jinjiang Hotel (98 Beijing Rd) outlet or the hotel's opening (Ctrip only gives a 2017 renovation), so 2002 is only the earliest plausible year; actual opening at this site is likely 2002 or later. Estimated: 2002 is a best estimate and 2002-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Operating company 昆明福照楼锦程餐饮有限公司 was founded 2006-10-10 at 北京路98号 Kunming Jinjiang Hotel, so the Jinjiang outlet most likely opened around Oct 2006 (a company-registration proxy; a pre-company opening is possible). This is the venue-level date, not the 2002/1938 brand date. Estimated: 2006-10 is a best estimate and 2006-10-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://pmtmeishi.meituan.com/dp/prefer/list/2018851?cityid=%2A&dpid=%2A&latitude=%2A&longitude=%2A&token=%2A",
@@ -1280,7 +1280,7 @@
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Maigoo's Zhuangyuanlou entry says the old brand (originally 1785, disappeared 2000) was revived by Ningbo Shipu Hotel in Aug 2008 and reopened on Heyi Avenue on the morning of 8 July 2009. Single encyclopedia-style source, not independently verified; Heyi Avenue mall itself formally opened 27 Sept 2009, so the date is plausible but unconfirmed. This is a revival, not the 1785 original. Estimated: 2009-07-08 is a best estimate and 2009-07-08 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Maigoo's Zhuangyuanlou entry says the old brand (originally 1785, disappeared 2000) was revived by Ningbo Shipu Hotel in Aug 2008 and reopened on Heyi Avenue on the morning of 8 July 2009. Single encyclopedia-style source, not independently verified; Heyi Avenue mall itself formally opened 27 Sept 2009, so the date is plausible but unconfirmed. This is a revival, not the 1785 original. Estimated: the exact day 2009-07-08 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1299,7 +1299,7 @@
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/83/270455.html",
             "title": "Zhuangyuanlou — Heyi Road — research source",
             "confidence": 90,
-            "reasoning": "Maigoo's Zhuangyuanlou entry says the old brand (originally 1785, disappeared 2000) was revived by Ningbo Shipu Hotel in Aug 2008 and reopened on Heyi Avenue on the morning of 8 July 2009. Single encyclopedia-style source, not independently verified; Heyi Avenue mall itself formally opened 27 Sept 2009, so the date is plausible but unconfirmed. This is a revival, not the 1785 original. Estimated: 2009-07-08 is a best estimate and 2009-07-08 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Maigoo's Zhuangyuanlou entry says the old brand (originally 1785, disappeared 2000) was revived by Ningbo Shipu Hotel in Aug 2008 and reopened on Heyi Avenue on the morning of 8 July 2009. Single encyclopedia-style source, not independently verified; Heyi Avenue mall itself formally opened 27 Sept 2009, so the date is plausible but unconfirmed. This is a revival, not the 1785 original. Estimated: the exact day 2009-07-08 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8809063958",
@@ -1458,11 +1458,11 @@
         "latitude": 38.9253368,
         "longitude": 121.6830037,
         "productName": "Xiding Sea Urchin Dumplings — Donggang",
-        "utcStartDateTime": "2019-12-31T00:00:00Z",
+        "utcStartDateTime": "2016-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Real name is 喜鼎海胆水饺(东港店), a sub-brand of Xijiade launched in 2015 (brand date, not venue). The store was already operating by 2020-06-10 (earliest Ctrip review) and was listed in a 2021 company notice; 2019 is a mid-range guess within 2015-2020. Ctrip gives the address as the Gangpu Rd / Gangdong St junction, so the input address (Haizhiyun Rd 49 B31) is plausible only if it is the same Donggang waterfront compound. Estimated: 2019 is a best estimate and 2019-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "The venue's operating partnership 大连东港喜鼎海胆水饺店（有限合伙） was registered 2016-12-19 at 海之韵路49号第B31幢1单元, exactly the input address (address confirmed). Opening probably Dec 2016 to 2017; earliest Ctrip review is 2020-06. Estimated: 2016-12 is a best estimate and 2016-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1481,7 +1481,7 @@
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/0/15520091.html",
             "title": "Xiding Sea Urchin Dumplings — Donggang — research source",
             "confidence": 90,
-            "reasoning": "Real name is 喜鼎海胆水饺(东港店), a sub-brand of Xijiade launched in 2015 (brand date, not venue). The store was already operating by 2020-06-10 (earliest Ctrip review) and was listed in a 2021 company notice; 2019 is a mid-range guess within 2015-2020. Ctrip gives the address as the Gangpu Rd / Gangdong St junction, so the input address (Haizhiyun Rd 49 B31) is plausible only if it is the same Donggang waterfront compound. Estimated: 2019 is a best estimate and 2019-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "The venue's operating partnership 大连东港喜鼎海胆水饺店（有限合伙） was registered 2016-12-19 at 海之韵路49号第B31幢1单元, exactly the input address (address confirmed). Opening probably Dec 2016 to 2017; earliest Ctrip review is 2020-06. Estimated: 2016-12 is a best estimate and 2016-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8825315400",
@@ -1658,11 +1658,11 @@
         "latitude": 41.7991195,
         "longitude": 123.4545617,
         "productName": "Laobian Dumplings — Zhongjie",
-        "utcStartDateTime": "2000-12-31T00:00:00Z",
+        "utcStartDateTime": "1986-03-18T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "No source dates the 208 Zhongjie Road store. It is the brand's Zhongjie flagship (English Wikipedia lists it as such) and existed by 2015 (earliest dated Qunar review 2015-08-21; Ctrip/Tuniu pages undated). Estimate ~2000 is weak: the brand's Guinness 'longest-running dumpling restaurant' recognition was in 2000 and the Beijing branch opened 1990; the 1829/1828 date is the brand, not this venue. Estimated: 2000 is a best estimate and 2000-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Baidu Baike/Aiqicha record the operating entity 沈阳老边饺子馆 (individual proprietorship) as established 1986-03-18 with registered address 208 Zhongjie Road, Shenhe - the same address as this shop. This is a registration date, taken as the venue's start; the shop may have traded under earlier state/brand arrangements (brand dates to 1829). Estimated: the exact day 1986-03-18 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1681,7 +1681,7 @@
             "url": "http://www.laobian.com.cn/index.php?m=content&c=index&a=lists&catid=99",
             "title": "Laobian Dumplings — Zhongjie — research source",
             "confidence": 90,
-            "reasoning": "No source dates the 208 Zhongjie Road store. It is the brand's Zhongjie flagship (English Wikipedia lists it as such) and existed by 2015 (earliest dated Qunar review 2015-08-21; Ctrip/Tuniu pages undated). Estimate ~2000 is weak: the brand's Guinness 'longest-running dumpling restaurant' recognition was in 2000 and the Beijing branch opened 1990; the 1829/1828 date is the brand, not this venue. Estimated: 2000 is a best estimate and 2000-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Baidu Baike/Aiqicha record the operating entity 沈阳老边饺子馆 (individual proprietorship) as established 1986-03-18 with registered address 208 Zhongjie Road, Shenhe - the same address as this shop. This is a registration date, taken as the venue's start; the shop may have traded under earlier state/brand arrangements (brand dates to 1829). Estimated: the exact day 1986-03-18 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
           },
           {
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/120001/4926004.html",
@@ -1846,11 +1846,11 @@
         "latitude": 45.7741493,
         "longitude": 126.6123009,
         "productName": "Lao Chang Spring Pancakes — Zhongyang Street",
-        "utcStartDateTime": "2010-12-31T00:00:00Z",
+        "utcStartDateTime": "2017-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "No venue-level date found. Brand founded in Changchun in 2000 and visitor reviews call this the second store, so it opened after 2000; the Ctrip listing is a well-established Zhongyang Street shop, so roughly the 2010s is a guess (low confidence). Address 180 Zhongyang Street matches the Ctrip listing. Estimated: 2010 is a best estimate and 2010-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "UPPER bound: a Qunar review of 老昌春饼(中央大街店) is dated 2017-10-19 and already calls it a famous old spring-pancake shop; the brand began in 1992 in Harbin (brand date only). The 爱企查 entry for the shop (成立 2021-05-17) is a later business registration, not an opening, so the real opening is probably well before 2017 but undated. Estimated: 2017 is a best estimate and 2017-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1869,7 +1869,7 @@
             "url": "https://gs.ctrip.com/html5/you/foods/fooddetail/2609/4925403.html",
             "title": "Lao Chang Spring Pancakes — Zhongyang Street — research source",
             "confidence": 90,
-            "reasoning": "No venue-level date found. Brand founded in Changchun in 2000 and visitor reviews call this the second store, so it opened after 2000; the Ctrip listing is a well-established Zhongyang Street shop, so roughly the 2010s is a guess (low confidence). Address 180 Zhongyang Street matches the Ctrip listing. Estimated: 2010 is a best estimate and 2010-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "UPPER bound: a Qunar review of 老昌春饼(中央大街店) is dated 2017-10-19 and already calls it a famous old spring-pancake shop; the brand began in 1992 in Harbin (brand date only). The 爱企查 entry for the shop (成立 2021-05-17) is a later business registration, not an opening, so the real opening is probably well before 2017 but undated. Estimated: 2017 is a best estimate and 2017-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8962957573",

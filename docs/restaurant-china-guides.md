@@ -71,3 +71,7 @@ A [fourth follow-up batch](restaurant-china-round-four.md) adds ten established 
 Fifth additional round: [ten more researched branches, dishes, galleries and a Dalian reward](restaurant-china-round-five.md), with the [reviewed DB import snapshot](restaurant-china-round-five.json).
 
 Sixth additional round: [ten more branches with 58 dish selections and 44 credited Azure photos](restaurant-china-round-six.md), with the [reviewed DB import snapshot](restaurant-china-round-six.json).
+
+## Opening dates
+
+The guide pins' start dates were replaced with researched opening dates on 2026-10-11; method, sources and gaps are in [restaurant-china-opening-dates-2026-10-11.md](restaurant-china-opening-dates-2026-10-11.md).

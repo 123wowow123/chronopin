@@ -24,11 +24,11 @@
         "latitude": 25.0404104,
         "longitude": 102.7068868,
         "productName": "YiKeYin — Maolu",
-        "utcStartDateTime": "2014-12-31T00:00:00Z",
+        "utcStartDateTime": "2002-09-30T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Real name is 一颗印(懋庐店), a restaurant in a century-old courtyard house at 吉祥巷18-19号. Travel notes and reviews dated 2014-2018 already list it, so it existed by about 2014 (upper bound; true opening may be a few years earlier). No opening announcement found; the building's age is not the restaurant's. Estimated: 2014 is a best estimate and 2014-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "昆明一颗印餐饮有限责任公司 was registered 2002-09-28 at 景星街吉祥巷18、19号, the same courtyard address, so the restaurant most likely opened around autumn 2002 (company-registration proxy); this tightens the earlier 2014 upper bound. The building itself dates to the Qing era. Estimated: 2002-09 is a best estimate and 2002-09-30 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -47,7 +47,7 @@
             "url": "https://you.ctrip.com/food/kunming29/4926006.html",
             "title": "YiKeYin — Maolu — research source",
             "confidence": 90,
-            "reasoning": "Real name is 一颗印(懋庐店), a restaurant in a century-old courtyard house at 吉祥巷18-19号. Travel notes and reviews dated 2014-2018 already list it, so it existed by about 2014 (upper bound; true opening may be a few years earlier). No opening announcement found; the building's age is not the restaurant's. Estimated: 2014 is a best estimate and 2014-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "昆明一颗印餐饮有限责任公司 was registered 2002-09-28 at 景星街吉祥巷18、19号, the same courtyard address, so the restaurant most likely opened around autumn 2002 (company-registration proxy); this tightens the earlier 2014 upper bound. The building itself dates to the Qing era. Estimated: 2002-09 is a best estimate and 2002-09-30 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8788628972",
@@ -630,11 +630,11 @@
         "latitude": 36.6694832,
         "longitude": 117.0221812,
         "productName": "KuiShengJu — Xianxi Lane",
-        "utcStartDateTime": "2026-02-28T00:00:00Z",
+        "utcStartDateTime": "2020-03-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "No founding or branch opening date found; the 'century-old' claim is the brand's. The only dated evidence is a Dianping review from Feb 2026 at 县西巷5号荷芳里街区1楼108, so 2026-02 is an upper bound on opening, and the branch is in the redeveloped 荷芳里 block, suggesting a recent (2020s) opening. Treat as a weak upper bound only. Estimated: 2026-02 is a best estimate and 2026-02-28 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "济南魁盛居酒店管理有限公司 was founded 2020-03-30 and registered at 县西巷泉乐坊D区第1层108号 (the input Unit 108, Hefangli/泉乐坊 block, which was due to open about May 2020), so this is likely the original 2020 store; a separate 第一分公司 at Unit 117 (the 县西巷二店) was registered 2025-12-04. Exact opening day not found. Estimated: 2020-03 is a best estimate and 2020-03-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -653,7 +653,7 @@
             "url": "https://you.ctrip.com/food/jinan128/120732882.html",
             "title": "KuiShengJu — Xianxi Lane — research source",
             "confidence": 90,
-            "reasoning": "No founding or branch opening date found; the 'century-old' claim is the brand's. The only dated evidence is a Dianping review from Feb 2026 at 县西巷5号荷芳里街区1楼108, so 2026-02 is an upper bound on opening, and the branch is in the redeveloped 荷芳里 block, suggesting a recent (2020s) opening. Treat as a weak upper bound only. Estimated: 2026-02 is a best estimate and 2026-02-28 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "济南魁盛居酒店管理有限公司 was founded 2020-03-30 and registered at 县西巷泉乐坊D区第1层108号 (the input Unit 108, Hefangli/泉乐坊 block, which was due to open about May 2020), so this is likely the original 2020 store; a separate 第一分公司 at Unit 117 (the 县西巷二店) was registered 2025-12-04. Exact opening day not found. Estimated: 2020-03 is a best estimate and 2020-03-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8712914936",
@@ -1205,11 +1205,11 @@
         "latitude": 29.8977882,
         "longitude": 121.5573113,
         "productName": "NingHaiShiFu — Rihu Courtyard",
-        "utcStartDateTime": "2021-03-31T00:00:00Z",
+        "utcStartDateTime": "2019-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "UPPER bound only: a Ctrip travel note published 2021-04-19 describes a March visit to 宁海食府·私宴(日湖店) at 湖西路280号, so the branch operated by about March 2021. No opening announcement found; likely opened some time before, undetermined. Address matches Ctrip (湖西路280号, beside Rihu Park). Estimated: 2021-03 is a best estimate and 2021-03-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "UPPER bound tightened: Baike cites a Tencent report of 2019-11-08 putting 宁海食府日湖店 (280 Huxi Rd) on the Kongpu street red list and a 2019-12-24 year-end-dinner inspection, so it operated by Nov 2019. The brand has operated 30+ years and the building is 1990s (renovated 2025 by 大相设计), so the actual opening is likely earlier, undetermined; the 2025 refit is a renovation, not an opening. Estimated: 2019 is a best estimate and 2019-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1228,7 +1228,7 @@
             "url": "https://you.ctrip.com/food/ningbo83/5225087.html",
             "title": "NingHaiShiFu — Rihu Courtyard — research source",
             "confidence": 90,
-            "reasoning": "UPPER bound only: a Ctrip travel note published 2021-04-19 describes a March visit to 宁海食府·私宴(日湖店) at 湖西路280号, so the branch operated by about March 2021. No opening announcement found; likely opened some time before, undetermined. Address matches Ctrip (湖西路280号, beside Rihu Park). Estimated: 2021-03 is a best estimate and 2021-03-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "UPPER bound tightened: Baike cites a Tencent report of 2019-11-08 putting 宁海食府日湖店 (280 Huxi Rd) on the Kongpu street red list and a 2019-12-24 year-end-dinner inspection, so it operated by Nov 2019. The brand has operated 30+ years and the building is 1990s (renovated 2025 by 大相设计), so the actual opening is likely earlier, undetermined; the 2025 refit is a renovation, not an opening. Estimated: 2019 is a best estimate and 2019-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8885150725",
@@ -1417,11 +1417,11 @@
         "latitude": 38.8761511,
         "longitude": 121.6803586,
         "productName": "PinHaiLou — Laohutan Fisherman’s Wharf",
-        "utcStartDateTime": "2010-12-31T00:00:00Z",
+        "utcStartDateTime": "2014-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "品海楼·老虎滩店 is a standalone villa inside Laohutan Fisherman's Wharf, which opened around 2008-2010 (from memory, not verified here); a 2018-10-14 Qunar post and 2019-10-26 Ctrip reviews show it operating by 2018. Brand 1992/2000 (憩园 renamed 2000) is a brand date only, not this venue. Estimated: 2010 is a best estimate and 2010-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "dateConfidenceReasoning": "Baidu Baike's 品海楼 entry says the Laohutan flagship (滨海东路72号) opened in 2014; the operating company 大连老虎滩品海楼酒店有限公司 was only registered 2019-08-28 (a later entity). The 1992/2000 dates are brand dates; this overrides the unverified 2010 guess. Estimated: 2014 is a best estimate and 2014-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -1440,7 +1440,7 @@
             "url": "https://you.ctrip.com/food/dalian4/8643684.html",
             "title": "PinHaiLou — Laohutan Fisherman’s Wharf — research source",
             "confidence": 90,
-            "reasoning": "品海楼·老虎滩店 is a standalone villa inside Laohutan Fisherman's Wharf, which opened around 2008-2010 (from memory, not verified here); a 2018-10-14 Qunar post and 2019-10-26 Ctrip reviews show it operating by 2018. Brand 1992/2000 (憩园 renamed 2000) is a brand date only, not this venue. Estimated: 2010 is a best estimate and 2010-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+            "reasoning": "Baidu Baike's 品海楼 entry says the Laohutan flagship (滨海东路72号) opened in 2014; the operating company 大连老虎滩品海楼酒店有限公司 was only registered 2019-08-28 (a later entity). The 1992/2000 dates are brand dates; this overrides the unverified 2010 guess. Estimated: 2014 is a best estimate and 2014-12-31 is used only as a period-end sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8397146390",
