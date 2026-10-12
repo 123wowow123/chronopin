@@ -16,9 +16,13 @@ import { MIN_SOURCES, THIN_TEXT_CHARS } from '@/lib/searchQuality';
 import { CURATORS } from './curators';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { dayKeyIn } from '@/lib/format';
-import { restaurantTabCoverage } from '@/lib/restaurantCoverage';
-import topRestaurants from '../data/topRestaurants.json';
-import regionalCatalog from '../data/regionalRestaurants.json';
+import { restaurantTabCoverage, restaurantTabTarget } from '@/lib/restaurantCoverage';
+import { scheduleRestaurantOffers } from '@/lib/restaurantOffers';
+import { restaurantSourceKey } from '@/lib/restaurantMenus';
+import { listRestaurantContent } from '../model/restaurantContent';
+import { listSpecialVenues } from '../model/restaurantSpecialVenue';
+import Pin from '../model/pin';
+import { buildRestaurantOffers } from '../services/restaurantOffers';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -266,44 +270,72 @@ export function pinsChangedSince(since: Date, limit = 50) {
   );
 }
 
-// Refresh new openings and replenish each city's three tabs toward 12 pins.
-// Count the same live, city-tagged openings and curated top picks as the guide.
+// Replenish all four tabs using live content, with a 20-restaurant target in China.
+// Archived tiles, deleted pins and expired offers do not fill a shortage.
 export async function restaurantRegionsToRefresh(since: Date) {
-  const rows = await db.query<{
-    region: string; id: number; title: string; created: Date; day: string | null;
-    dateConfidence: string | null; sourceUrl: string | null; opening: boolean;
-  }>(
-    `SELECT "c"."name"::text AS "region", "p"."id", "p"."title",
-       "p"."utcCreatedDateTime" AS "created", "p"."sourceUrl", "p"."dateConfidence",
-       to_char("p"."utcStartDateTime", 'YYYY-MM-DD') AS "day",
-       EXISTS (SELECT 1 FROM "PinTag" AS "o" WHERE "o"."pinId" = "p"."id" AND "o"."name" = 'Restaurant Opening') AS "opening"
-     FROM "Pin" AS "p"
-     JOIN "PinTag" AS "c" ON "c"."pinId" = "p"."id" AND "c"."name" = ANY($1::citext[])
-     WHERE "p"."utcDeletedDateTime" IS NULL
-       AND EXISTS (SELECT 1 FROM "PinTag" AS "f" WHERE "f"."pinId" = "p"."id" AND "f"."name" = 'Food' AND "f"."kind" = 'category')
-     ORDER BY "p"."utcCreatedDateTime" DESC`,
-    [RESTAURANT_REGIONS.map((region) => region.name)],
-  );
+  const [records, specials] = await Promise.all([
+    listRestaurantContent({ includeDisabled: true }), listSpecialVenues(),
+  ]);
+  const tiles = new Map(records.map((record) => [restaurantSourceKey(record.profile.pinSourceUrl), record]));
+  const topRecords = records.filter((record) => record.enabled && record.profile.tile?.kind === 'top');
+  const openingSources = records.filter((record) => record.enabled && record.profile.tile?.kind === 'opening').map((record) => record.profile.pinSourceUrl);
+  const [topPins, rows] = await Promise.all([
+    Pin.findBySourceUrls(topRecords.map((record) => record.profile.pinSourceUrl)),
+    db.query<{
+      region: string | null; id: number; title: string; created: Date; day: string | null;
+      dateConfidence: string | null; sourceUrl: string | null; opening: boolean;
+    }>(
+      `SELECT "c"."name"::text AS "region", "p"."id", "p"."title",
+         "p"."utcCreatedDateTime" AS "created", "p"."sourceUrl", "p"."dateConfidence",
+         to_char("p"."utcStartDateTime", 'YYYY-MM-DD') AS "day",
+         EXISTS (SELECT 1 FROM "PinTag" AS "o" WHERE "o"."pinId" = "p"."id" AND "o"."name" = 'Restaurant Opening') AS "opening"
+       FROM "Pin" AS "p"
+       LEFT JOIN "PinTag" AS "c" ON "c"."pinId" = "p"."id" AND "c"."name" = ANY($1::citext[])
+       WHERE "p"."utcDeletedDateTime" IS NULL
+         AND (("c"."name" IS NOT NULL
+         AND EXISTS (SELECT 1 FROM "PinTag" AS "o" WHERE "o"."pinId" = "p"."id" AND "o"."name" = 'Restaurant Opening')
+         AND EXISTS (SELECT 1 FROM "PinTag" AS "f" WHERE "f"."pinId" = "p"."id" AND "f"."name" = 'Food' AND "f"."kind" = 'category')) OR "p"."sourceUrl" = ANY($2::text[]))
+       ORDER BY "p"."utcCreatedDateTime" DESC`,
+      [RESTAURANT_REGIONS.map((region) => region.name), openingSources],
+    ),
+  ]);
   const now = new Date();
   return RESTAURANT_REGIONS.flatMap((region) => {
-    const pins = rows.filter((row) => row.region.toLowerCase() === region.name.toLowerCase());
-    const catalog = regionalCatalog.filter((entry) => entry.regionSlug === region.slug);
-    const openings = pins.filter((pin) => pin.opening);
+    const catalog = records.filter((record) => record.enabled && record.profile.tile?.regionSlug === region.slug);
+    const openings = [...new Map(rows.filter((pin) => {
+      const record = tiles.get(restaurantSourceKey(pin.sourceUrl ?? ''));
+      if (record && (!record.enabled || (record.profile.tile && (record.profile.tile.kind !== 'opening' || record.profile.tile.regionSlug !== region.slug)))) return false;
+      if (record?.profile.tile) return true;
+      return pin.opening && pin.region?.toLowerCase() === region.name.toLowerCase();
+    }).map((pin) => [pin.id, pin])).values()];
     const visible = openings.flatMap((pin) => {
       if (!pin.day) return [];
-      const entry = catalog.find((entry) => entry.kind === 'opening' && entry.sourceUrl === pin.sourceUrl);
-      return [{ id: pin.id, day: pin.day, confirmed: pin.dateConfidence === 'confirmed' || (entry?.openingConfirmed === true && entry.day === pin.day) }];
+      const entry = tiles.get(restaurantSourceKey(pin.sourceUrl ?? ''))?.profile.tile;
+      return [{
+        id: pin.id, day: pin.day, confirmed: pin.dateConfidence === 'confirmed' || (entry?.openingConfirmed === true && entry.day === pin.day),
+        sourceUrl: pin.sourceUrl, title: pin.title, name: entry?.name ?? pin.title,
+        neighborhood: entry?.neighborhood ?? region.name, address: entry?.address ?? '',
+        description: entry?.description ?? '', cuisine: entry?.cuisine ?? 'Restaurant',
+        image: null, imageNote: null, estimated: pin.dateConfidence !== 'confirmed', dateLabel: '',
+      }];
     });
-    const curatedSources = new Set(catalog.filter((entry) => entry.kind === 'top').map((entry) => entry.sourceUrl));
-    const fixedIds = new Set(topRestaurants.filter((entry) => entry.regionSlug === region.slug).map((entry) => entry.pinId));
-    const topIds = pins.filter((pin) => fixedIds.has(pin.id) || (pin.sourceUrl != null && curatedSources.has(pin.sourceUrl))).map((pin) => pin.id);
-    const coverage = restaurantTabCoverage(visible, topIds, dayKeyIn(now, region.timeZone));
+    const tops = topRecords.filter((record) => record.profile.tile!.regionSlug === region.slug).flatMap((record) => {
+      const pin = topPins.get(record.profile.pinSourceUrl);
+      return pin ? [{ ...record.profile.tile!, sourceUrl: record.profile.pinSourceUrl, pinId: pin.id, pinTitle: pin.title }] : [];
+    });
+    const today = dayKeyIn(now, region.timeZone);
+    const offers = buildRestaurantOffers(visible, tops, today, region.slug, specials);
+    const schedule = scheduleRestaurantOffers(offers, now, region.timeZone);
+    const coverage = restaurantTabCoverage(visible, tops.map((pin) => pin.pinId), today, {
+      target: restaurantTabTarget(region.country),
+      specialRestaurantIds: [...schedule.available, ...schedule.upcoming].map((offer) => restaurantSourceKey(offer.id.slice(0, offer.id.lastIndexOf('#')))),
+    });
     const newPins = openings.filter((pin) => new Date(pin.created) > since).map(({ id, title, created }) => ({ id, title, created }));
     if (!newPins.length && !Object.values(coverage.needed).some((count) => count > 0)) return [];
-    const checked = catalog.map((entry) => entry.checkedAt).filter(Boolean).sort().pop() ?? null;
+    const checked = catalog.map((entry) => entry.profile.tile!.checkedAt).filter(Boolean).sort().pop() ?? null;
     return [{ region: region.name, slug: region.slug, page: `/restaurants/${region.slug}`, newPins, openingPins: openings.length, catalogEntries: catalog.length, catalogCheckedAt: checked, ...coverage }];
   }).sort((a, b) => Number(b.newPins.length > 0) - Number(a.newPins.length > 0)
-    || (b.needed.upcoming + b.needed.new + b.needed.top) - (a.needed.upcoming + a.needed.new + a.needed.top));
+    || Object.values(b.needed).reduce((sum, count) => sum + count, 0) - Object.values(a.needed).reduce((sum, count) => sum + count, 0));
 }
 
 // How well each named company is covered: its pins in total and ahead of

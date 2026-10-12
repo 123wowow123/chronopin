@@ -292,34 +292,41 @@ event turned out not to happen is marked for revisiting, not deleted.
 The midnight job's task (owner, 2026-10-06: "if a new restaurant pin is
 created then mark nightly job to include refreshing of the restaurant landing
 page for that region"). The page itself lists live pins, so the new pin shows
-up on its own; the refresh is for the hand-kept parts of that region's guide
-([regionalRestaurants.json](../../../src/server/data/regionalRestaurants.json):
-openings and top restaurants with their `checkedAt`).
+up on its own; the refresh maintains the database-backed menus, details, tiles
+and offers ([restaurant-content API](../api/restaurant-content.md)).
 **Reads** `restaurant_regions`: each region with a new restaurant-opening pin
-or fewer than 12 live pins in any of Coming soon, Just opened, or Top restaurants
-(owner, 2026-10-07: these tabs should try to get 12 pins if possible). The signal
-includes `targetPerTab`, `counts`, and `needed` for `upcoming`, `new`, and `top`,
-as well as new pins and catalog check dates. Shortages remain visible even when
-no new opening pin has arrived. Regions with new pins come first, then the
-largest shortages. Twelve is a collection target, not a display cap.
-**Does** for each region: re-check its catalog entries' opening dates and
-status against their sources and the new pins, update stale pins (`update_pin`),
-and research additional distinct local restaurants for each undersupplied tab.
-Aim for 12 per tab when sources support it, within the run's normal budget;
-rotate through cities rather than exhausting the run on one city. Coming soon
-requires an announced opening, and Just opened requires verified opening
-within the existing 90-day window in the city's time zone. Do not widen that
-window or turn a passed estimated target into an opening to meet the count.
-Top restaurants count only live curated guide selections: an arbitrary Food
-pin or an offer without a pin does not fill that tab. Verify the specific branch,
-source facts, and photos using [restaurant-scraping.md](../../restaurant-scraping.md).
-Do not duplicate restaurants or invent dates, reviews, or awards. If 12 cannot
-be verified, keep fewer and report the remaining shortage and sources checked.
-Catalog edits are repo changes: list required additions in the report; a newly
-created top pin needs a catalog entry before the tab can display it.
-**Traps.** Only pins tagged `Restaurant Opening`, `Food` (category) and the
-region's city tag reach the page ([restaurants.ts](../../../src/server/services/restaurants.ts)),
-so a new pin missing the city tag never refreshes anything.
+or a shortage in Coming soon, Just opened, Top restaurants or Specials.
+China city guides aim for **at least 20 distinct restaurants in each tab**
+(owner, 2026-10-11); other guides retain the 12-restaurant target.
+The signal includes `targetPerTab`, `counts`, and `needed` for `upcoming`, `new`,
+`top` and `discounts`, plus new pins and content check dates. Shortages remain
+visible even when no new opening pin has arrived. Regions with new pins come
+first, then the largest shortages. Targets are collection minimums, not display
+caps. Specials count distinct restaurants with active or upcoming verified
+offers, including outside service hours and without a published rating;
+expired offers and repeated offers at the same restaurant do not fill gaps.
+**Does** for each region: re-check opening dates and status against sources
+and new pins, update stale pins (`update_pin`), and research additional distinct
+local restaurants for every undersupplied tab. Work toward the region's target
+within the run's normal budget; rotate through cities. Search operator
+announcements, local reporting, branch-specific menus, ordering pages, linked
+PDFs, galleries and verified promotions. Coming soon requires an announced
+opening; Just opened requires a verified opening within the existing 90-day
+window in the city's time zone. Never widen that window or turn a passed
+estimate into an opening to meet the count. Top restaurants count only live
+curated guide selections backed by pins. Verify the specific branch, source
+facts, actual menu items and photos using
+[restaurant-scraping.md](../../restaurant-scraping.md).
+Save ordinary menus, visit details and landing tiles through
+`/api/admin/restaurant-content`; save offers and offer menus through
+`/api/admin/restaurant-specials`. Bundled JSON is a research/import snapshot,
+not the runtime authority. Verify the affected pin and landing page after
+saving. Do not duplicate restaurants or invent dates, dishes, discounts,
+reviews or awards. If the target cannot be verified, keep fewer and report
+the remaining shortage and sources checked.
+**Traps.** City-tagged Food/Restaurant Opening pins and enabled database
+opening tiles reach the guide; archived content and deleted pins do not count.
+New top pins need an enabled branch-specific top tile before appearing.
 
 ### thinPins
 

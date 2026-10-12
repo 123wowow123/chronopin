@@ -413,6 +413,7 @@ get live politicians stock trading alerts
 
 
 
-chinese restaurant landing page tabs shouls try to get at least 20 restaurant each
+chinese restaurant landing page tabs should try to get at least 20 restaurant each
 
 chinese ev car news and events and new model releases
+- performance rubrics?
