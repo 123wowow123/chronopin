@@ -17,8 +17,6 @@ import { MessageButton } from '@/components/messages/Messenger';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { PinMenu } from '@/components/pin/PinMenu';
 import { AddressShare } from '@/components/pin/PinShare';
-import { CardGrid } from '@/components/pin/CardGrid';
-import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinPillRow } from '@/components/pin/PinPillRow';
 import { PinDistance } from '@/components/pin/PinDistance';
@@ -60,6 +58,7 @@ import { PinSuggest } from '@/components/pin/PinSuggest';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
+import { RelatedPins } from '@/components/pin/RelatedPins';
 import { RefineLink } from '@/components/pin/RefineLink';
 import { ViewCount } from '@/components/pin/ViewCount';
 import { ThreadAge } from '@/components/pin/ThreadAge';
@@ -67,7 +66,6 @@ import { ThreadList } from '@/components/pin/ThreadList';
 import { ThreadSuggestion } from '@/components/pin/ThreadSuggestion';
 import { ThreadWatchButton } from '@/components/pin/ThreadWatchButton';
 import { WatchButton } from '@/components/pin/WatchButton';
-import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
@@ -76,7 +74,7 @@ import { dayKeyIn, money } from '@/lib/format';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinEvidence } from '@/lib/referenceConfidence';
-import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
+import { safeCitedHtml, safeHtml } from '@/lib/sanitize';
 import { isAttendableEvent, isTicketedVenue, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { thinReasons } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
@@ -84,7 +82,7 @@ import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinGameInfo, pinTaste, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -612,34 +610,20 @@ async function PinCommentsSection({ pinId }: { pinId: number }) {
   return <Comments pinId={pinId} initialComments={await pinComments(pinId)} />;
 }
 
+// "More like this" loads in the browser once scrolled to (RelatedPins), so the
+// page never waits on it.
 async function Related({ pin }: { pin: PinJson }) {
   const t = await getT();
-  const [pins, timeZone, video] = await Promise.all([
-    relatedPins(pin.id, pin.originalTitle ?? pin.title, t.locale),
-    viewerTimeZone(),
-    timelineVideo(),
-  ]);
-  if (!pins.length) {
-    return null;
-  }
-  const now = new Date();
-  const todayKey = dayKeyIn(now, timeZone);
+  const [timeZone, video] = await Promise.all([viewerTimeZone(), timelineVideo()]);
   return (
-    <section aria-labelledby="related-heading" className="mt-16 border-t border-line pt-10">
-      <h2 id="related-heading" className="mb-4 text-xl font-semibold tracking-tight">
-        {t('pin.moreLikeThis')}
-      </h2>
-      {/* These cards are a suggestion nobody asked to play, same as a page of
-          them: the admin setting decides whether they load their players. */}
-      <TimelineVideoProvider setting={video}>
-        <CardGrid className="grid-cols-[repeat(auto-fill,minmax(22rem,1fr))]! max-sm:grid-cols-1!">
-          {toCardPins(pins).map((p) => (
-            <li key={p.id}>
-              <PinCard pin={p} serverTimeZone={timeZone} tense={pinTense(p, now, todayKey)} todayKey={todayKey} />
-            </li>
-          ))}
-        </CardGrid>
-      </TimelineVideoProvider>
-    </section>
+    <RelatedPins
+      pinId={pin.id}
+      locale={t.locale}
+      heading={t('pin.moreLikeThis')}
+      loadingLabel={t('common.loading')}
+      serverTimeZone={timeZone}
+      todayKey={dayKeyIn(new Date(), timeZone)}
+      video={video}
+    />
   );
 }

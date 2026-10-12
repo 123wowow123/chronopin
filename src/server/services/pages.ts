@@ -20,7 +20,6 @@ import Pin from '../model/pin';
 import Pins from '../model/pins';
 import PinUpdate from '../model/pinUpdate';
 import PinView from '../model/pinView';
-import { SearchPins } from '../model/searchPin';
 import UserWiki from '../model/userWiki';
 import { compareDuplicateRank } from '@/lib/duplicates';
 import type { PinUpdateJson } from '@/lib/pinUpdates';
@@ -274,24 +273,20 @@ export async function pinUpdates(id: number): Promise<PinUpdateJson[]> {
   }));
 }
 
-// Pins like this one, by semantic search on its title. The search service
-// being down just means no suggestions.
-// title: the pin's own, English one, which is what the search index holds.
-export async function relatedPins(id: number, title: string, locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
+// Pins like this one, by what they share with it: tags, then company, then the
+// nearer date (Pins.relatedIds). Plain indexed reads: the semantic search this
+// replaced stalled the page for minutes when its service did.
+export async function relatedPins(id: number, locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
-  try {
-    const pins = await SearchPins.search(title);
-    // The service ranks the hits, but the pins themselves are loaded in date
-    // order, so sort by score before the top dozen are taken - otherwise the
-    // closest matches were as likely to be cut as shown, and the ones that
-    // survived read as an arbitrary run of dates.
-    const related = pins.pins.filter((p) => p.id !== id).sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0));
-    return localizePins(toJson<PinJson[]>(related).slice(0, 12), locale);
-  } catch {
-    return [];
-  }
+  const ids = await Pins.relatedIds(id, 12);
+  if (!ids.length) return [];
+  const { pins } = await Pins.queryByIds(ids);
+  // The pins are read in date order; put them back in the order of likeness.
+  const rank = new Map(ids.map((pinId, i) => [pinId, i]));
+  const ordered = pins.slice().sort((a, b) => (rank.get(a.id) ?? 0) - (rank.get(b.id) ?? 0));
+  return localizePins(toJson<PinJson[]>(ordered), locale);
 }
 
 // The sort and filters a search page's URL names: spans as the sliders set them.

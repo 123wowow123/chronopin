@@ -2,6 +2,8 @@
 
 ## 2026-10-11
 
+* **Update:** Scraping rule: product pins always get a buy link to the maker's own site ([Enrichment](scraping/enrichment.md), [learnings](scraping/learnings.md)); Graeter's pin 13910 fixed on prod.
+
 * **Update:** Added the owner's taste-review requirement to the main [scraping strategy](scraping/strategy.md) and snack/beverage recipe: research verified tasting accounts, store them in `PinTaste.reviews`, and verify links and excerpts directly beneath the radar. Preserve scores, identify source/pack limitations, and document unresolved review gaps.
 
 * **Update:** Added verified customer ratings to all thirteen Chinese product pins and verified TV-style badges in both live guide threads. Recorded source scores, review counts, small-sample caveats and flavor-specific evidence; the [product guide strategy](../product-guide-strategy.md) now requires rating research and native `PinRating` storage.

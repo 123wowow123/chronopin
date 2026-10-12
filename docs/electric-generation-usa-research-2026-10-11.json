@@ -1,7 +1,843 @@
 {
-  "checkedAt": "2026-10-11",
-  "scope": "Construction and recent openings only; broader operator plans are context, not included capacity",
-  "updates": [
+  "checkedAt": "2026-10-11 America/Los_Angeles",
+  "verifiedAtUTC": "2026-10-12T03:46:52Z",
+  "scope": "Only construction/commissioning and 2025–2026 recent openings with published project-specific costs and electrical output; no benchmarks",
+  "USQualifiedProjects": [
+    {
+      "key": "eia-58987",
+      "country": "United States",
+      "name": "Chokecherry and Sierra Madre",
+      "status": "Under construction",
+      "types": [
+        "Wind"
+      ],
+      "capacityMW": 3550,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 58987,
+      "matchedGemUrl": "https://www.gem.wiki/Chokecherry_And_Sierra_Madre_Wind_Energy_Project",
+      "pinId": 7671,
+      "pinUrl": "https://www.chronopin.com/pin/7671",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+      "address": "Chokecherry and Sierra Madre Wind, Carbon County, WY, United States",
+      "latitude": 41.683056,
+      "longitude": -107.2,
+      "timelineDate": "2026-08-31",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-58987",
+        "name": "Chokecherry and Sierra Madre",
+        "country": "United States",
+        "capacityMW": 3550,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 5000000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.powercompanyofwyoming.com/wind-generation/index.shtml",
+        "sourceDate": null,
+        "facts": "The current operator project page reports approximately 3,550 MW and a $5 billion estimated cost for the wind power plant. This is the wind-project estimate, not the separate TransWest transmission cost. Physical project infrastructure construction is documented in the operator progress pages.",
+        "extra": [
+          [
+            "https://www.powercompanyofwyoming.com/wind-generation/purpose.shtml",
+            "The purpose page also lists a $5 billion estimated wind-project cost."
+          ]
+        ],
+        "costGroup": "eia-58987",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.powercompanyofwyoming.com/wind-generation/index.shtml",
+        "physicalSourceUrl": "https://www.powercompanyofwyoming.com/wind-generation/index.shtml",
+        "costFacts": "Published project-specific cost for Chokecherry and Sierra Madre: USD 5e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Chokecherry and Sierra Madre: 3550 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-1364",
+      "country": "United States",
+      "name": "Mill Creek 5",
+      "status": "Under construction",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 645,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 1364,
+      "matchedGemUrl": "https://www.gem.wiki/Mill_Creek_Station",
+      "pinId": 7690,
+      "pinUrl": "https://www.chronopin.com/pin/7690",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-1364",
+      "address": "Mill Creek (KY), Jefferson County, KY, United States",
+      "latitude": 38.0525,
+      "longitude": -85.9103,
+      "timelineDate": "2024-11-13",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-1364",
+        "name": "Mill Creek 5",
+        "country": "United States",
+        "capacityMW": 645,
+        "capacityBasis": "Current operator page: 645 MW nameplate",
+        "costValue": 902000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://lge-ku.com/mc5",
+        "sourceDate": null,
+        "facts": "LG&E/KU’s current Mill Creek 5 page states a 645 MW nameplate rating, $902 million cost, construction underway and estimated completion in 2027. Its 2024 groundbreaking release used 640 MW; the current page is used for the primary output rating. EIA’s separate 740 MW figure is retained as inventory context, not extra generating capacity.",
+        "extra": [
+          [
+            "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+            "November 13, 2024 groundbreaking verifies physical construction."
+          ]
+        ],
+        "costGroup": "eia-1364",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://lge-ku.com/mc5",
+        "physicalSourceUrl": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+        "costFacts": "Published project-specific cost for Mill Creek 5: USD 9.02e+08. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Mill Creek 5: 645 MW. Basis: Current operator page: 645 MW nameplate."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-69223",
+      "country": "United States",
+      "name": "Vicksburg Advanced Power Station",
+      "status": "Under construction",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 754,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 69223,
+      "matchedGemUrl": "https://www.gem.wiki/Vicksburg_Advanced_Power_Station",
+      "pinId": 7685,
+      "pinUrl": "https://www.chronopin.com/pin/7685",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-69223",
+      "address": "Vicksburg Advanced Power Station, Warren County, MS, United States",
+      "latitude": 32.28526,
+      "longitude": -90.92568,
+      "timelineDate": "2025-10-21",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-69223",
+        "name": "Vicksburg Advanced Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1200000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+        "sourceDate": "2025-10-21",
+        "facts": "Entergy’s October 21, 2025 release identifies the 754 MW Vicksburg combined-cycle project and its $1.2 billion investment. August 2026 EIA units report construction; the operator targets completion in August 2028. The rating is the operator project figure, distinct from EIA’s unit nameplate sum.",
+        "extra": [],
+        "costGroup": "eia-69223",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+        "physicalSourceUrl": "https://www.entergymississippi.com/generation/vicksburg",
+        "costFacts": "Published project-specific cost for Vicksburg Advanced Power Station: USD 1.2e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Vicksburg Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-67914",
+      "country": "United States",
+      "name": "Delta Blues Advanced Power Station",
+      "status": "Under construction",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 754,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 67914,
+      "matchedGemUrl": "https://www.gem.wiki/Delta_Blues_Advanced_Power_Station",
+      "pinId": 14044,
+      "pinUrl": "https://www.chronopin.com/pin/14044",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-67914",
+      "address": "Delta Blues Advanced Power Station, Washington County, MS, United States",
+      "latitude": 33.330476,
+      "longitude": -91.13058,
+      "timelineDate": "2026-05-19",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-67914",
+        "name": "Delta Blues Advanced Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1200000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "sourceDate": "2026-05-19",
+        "facts": "Entergy’s May 19, 2026 update reports HRSG module erection and turbine delivery at Delta Blues, and states 754 MW and $1.2 billion investment. The operator’s physical-work evidence qualifies the project despite the conflicting preliminary inventory status. Service in 2028 remains a target.",
+        "extra": [],
+        "costGroup": "eia-67914",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "physicalSourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "costFacts": "Published project-specific cost for Delta Blues Advanced Power Station: USD 1.2e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Delta Blues Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-68053",
+      "country": "United States",
+      "name": "Legend Power Station",
+      "status": "Under construction",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 754,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 68053,
+      "matchedGemUrl": "https://www.gem.wiki/Legend_power_station",
+      "pinId": 8483,
+      "pinUrl": "https://www.chronopin.com/pin/8483",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-68053",
+      "address": "Legend Power Station, Jefferson County, TX, United States",
+      "latitude": 29.880219,
+      "longitude": -93.99573,
+      "timelineDate": "2026-04-09",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-68053",
+        "name": "Legend Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1600000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+        "sourceDate": "2025-09-11",
+        "facts": "Entergy’s September 11, 2025 approval release gives a $1.6 billion investment for Legend, updating the earlier $1.46 billion proposal. The operator’s design rating is 754 MW and physical groundbreaking occurred April 9, 2026. Economic-impact and customer-benefit figures are not the construction budget.",
+        "extra": [
+          [
+            "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "The operator identifies Legend as a 754 MW combined-cycle plant."
+          ],
+          [
+            "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "April 9, 2026 groundbreaking verifies physical construction; target service is 2028."
+          ]
+        ],
+        "costGroup": "eia-68053",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+        "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "costFacts": "Published project-specific cost for Legend Power Station: USD 1.6e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Legend Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-69077",
+      "country": "United States",
+      "name": "Lone Star Power Station",
+      "status": "Under construction",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 453,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 69077,
+      "matchedGemUrl": "https://www.gem.wiki/Lone_Star_power_station",
+      "pinId": 8615,
+      "pinUrl": "https://www.chronopin.com/pin/8615",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-69077",
+      "address": "Lone Star Power Station, San Jacinto County, TX, United States",
+      "latitude": 30.414158,
+      "longitude": -95.01671,
+      "timelineDate": "2026-04-09",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-69077",
+        "name": "Lone Star Power Station",
+        "country": "United States",
+        "capacityMW": 453,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 799000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+        "sourceDate": "2025-09-11",
+        "facts": "Entergy’s September 11, 2025 approval release gives a $799 million investment for Lone Star, updating the earlier $735 million proposal. The operator describes a 453 MW combustion-turbine project; April 9, 2026 groundbreaking establishes physical construction. EIA reports a different nameplate rating; neither figure is extra capacity.",
+        "extra": [
+          [
+            "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "The operator identifies Lone Star as a 453 MW combustion-turbine plant."
+          ],
+          [
+            "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "April 9, 2026 groundbreaking verifies physical construction; target service is 2028."
+          ]
+        ],
+        "costGroup": "eia-69077",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+        "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "costFacts": "Published project-specific cost for Lone Star Power Station: USD 7.99e+08. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Lone Star Power Station: 453 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-66923",
+      "country": "United States",
+      "name": "SunZia Wind and Transmission",
+      "status": "Operational",
+      "types": [
+        "Wind"
+      ],
+      "capacityMW": 3650,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 66923,
+      "matchedGemUrl": null,
+      "pinId": 8312,
+      "pinUrl": "https://www.chronopin.com/pin/8312",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-66923",
+      "address": "SunZia Wind South, Lincoln County, NM, United States",
+      "latitude": 34.351782,
+      "longitude": -105.5925,
+      "timelineDate": "2026-06-18",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-66923",
+        "name": "SunZia Wind and Transmission",
+        "country": "United States",
+        "capacityMW": 3650,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 11000000000.0,
+        "currency": "USD",
+        "costBasis": "Combined wind-and-transmission capital investment; includes associated HVDC infrastructure",
+        "sourceUrl": "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+        "sourceDate": "2026-07-08",
+        "facts": "Pattern’s July 8, 2026 release identifies an $11 billion SunZia energy investment. This cost covers the combined wind-and-transmission project, not just a wind phase. Wind generating capacity is 3,650 MW; the separate 3,000 MW transmission rating is not additional generation. The June 18, 2026 operator announcement confirms full operation. One collection pin represents the complete project; the North/South inventory records are supporting views.",
+        "extra": [
+          [
+            "https://patternenergy.com/sunzia-comes-online/",
+            "The operator announced the overall project fully operational June 18, 2026."
+          ],
+          [
+            "https://patternenergy.com/projects/sunzia/",
+            "Project page identifies 3,650 MW wind generation separately from transmission."
+          ]
+        ],
+        "costGroup": "sunzia-complete-project",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://patternenergy.com/projects/sunzia/",
+        "physicalSourceUrl": "https://patternenergy.com/sunzia-comes-online/",
+        "costFacts": "Published project-specific cost for SunZia Wind and Transmission: USD 1.1e+10. Basis: Combined wind-and-transmission capital investment; includes associated HVDC infrastructure.",
+        "capacityFacts": "Published electric generating project rating for SunZia Wind and Transmission: 3650 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "existing-5511",
+      "country": "United States",
+      "name": "Coastal Virginia Offshore Wind commercial project",
+      "status": "Partly operational / under construction",
+      "types": [
+        "Wind"
+      ],
+      "capacityMW": 2600,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 64550,
+      "matchedGemUrl": "https://www.gem.wiki/Coastal_Virginia_Offshore_Wind_(CVOW)_Commercial_Project",
+      "pinId": 5511,
+      "pinUrl": "https://www.chronopin.com/pin/5511",
+      "sourceUrl": "https://offshorewind.biz/2026/08/03/largest-us-offshore-wind-farm-81-pct-complete-final-turbine-expected-by-end-of-2027",
+      "address": "Virginia Beach, Virginia, United States",
+      "latitude": 36.8496579,
+      "longitude": -75.9760751,
+      "timelineDate": "2026-03-23",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "existing-5511",
+        "name": "Coastal Virginia Offshore Wind commercial project",
+        "country": "United States",
+        "capacityMW": 2600,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 11700000000.0,
+        "currency": "USD",
+        "costBasis": "Estimated total project cost excluding financing; includes $0.1 billion contingency",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+        "sourceDate": "2026-06-30",
+        "facts": "Dominion’s June 30, 2026 quarterly filing gives approximately $11.7 billion estimated total project cost, excluding financing and including $0.1 billion contingency. It supersedes earlier $10.7 billion/$11.5 billion estimates. The commercial project rating is approximately 2,600 MW, separate from the older 12 MW pilot; first power occurred March 23, 2026 while construction continues.",
+        "extra": [
+          [
+            "https://coastalvawind.com/about/the-project/timeline",
+            "Operator records first power March 23, 2026; full-project completion is expected in 2027."
+          ],
+          [
+            "https://coastalvawind.com/",
+            "The operator identifies approximately 2.6 GW for the commercial project."
+          ]
+        ],
+        "costGroup": "existing-5511",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://coastalvawind.com/",
+        "physicalSourceUrl": "https://coastalvawind.com/about/the-project/timeline",
+        "costFacts": "Published project-specific cost for Coastal Virginia Offshore Wind commercial project: USD 1.17e+10. Basis: Estimated total project cost excluding financing; includes $0.1 billion contingency.",
+        "capacityFacts": "Published electric generating project rating for Coastal Virginia Offshore Wind commercial project: 2600 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-68443",
+      "country": "United States",
+      "name": "Empire Wind 1",
+      "status": "Under construction",
+      "types": [
+        "Wind"
+      ],
+      "capacityMW": 810,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 68443,
+      "matchedGemUrl": null,
+      "pinId": 7688,
+      "pinUrl": "https://www.chronopin.com/pin/7688",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-68443",
+      "address": "Empire Wind 1, Kings County, NY, United States",
+      "latitude": 40.32,
+      "longitude": -73.42,
+      "timelineDate": "2026-08-31",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-68443",
+        "name": "Empire Wind 1",
+        "country": "United States",
+        "capacityMW": 810,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 5000000000.0,
+        "currency": "USD",
+        "costBasis": "Total capital investment including terminal-use fees and expected tax credits; tax-credit-adjusted, not gross pre-credit cost",
+        "sourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+        "sourceDate": "2025-01-02",
+        "facts": "Equinor describes total Empire Wind capital expenditure estimated at $5 billion after tax credits, covering 54 bottom-fixed turbines and the Brooklyn cable landfall. This is a tax-credit-adjusted estimate, not gross pre-credit cost and not the over-$3 billion financing package. Empire Wind 1 has an 810 MW generation rating and documented offshore construction; full operation is targeted for 2027.",
+        "extra": [
+          [
+            "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+            "Official project announcement identifies 810 MW and distinguishes financing from project capital expenditure."
+          ]
+        ],
+        "costGroup": "eia-68443",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+        "physicalSourceUrl": "https://www.empirewind.com/offshore-installation/",
+        "costFacts": "Equinor January 2, 2025 publishes approximately USD5 billion expected total capital investment, including South Brooklyn Marine Terminal use fees and the effect of expected future investment tax credits. The financing package above USD3 billion is separate.",
+        "capacityFacts": "Published electric generating project rating for Empire Wind 1: 810 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-3406",
+      "country": "United States",
+      "name": "Johnsonville aeroderivative units 21–30",
+      "status": "Operational",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 530,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 3406,
+      "matchedGemUrl": null,
+      "pinId": 14046,
+      "pinUrl": "https://www.chronopin.com/pin/14046",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-3406",
+      "address": "Johnsonville, Humphreys County, TN, United States",
+      "latitude": 36.0278,
+      "longitude": -87.9861,
+      "timelineDate": "2025-08-20",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-3406",
+        "name": "Johnsonville aeroderivative units 21–30",
+        "country": "United States",
+        "capacityMW": 530,
+        "capacityBasis": "TVA summer net capability of the ten new units: 530 MW",
+        "costValue": 652000000.0,
+        "currency": "USD",
+        "costBasis": "Approved project budget; not a loan or a portfolio total",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "sourceDate": "2025-09-30",
+        "facts": "TVA FY2025 Form 10-K publishes an approved $652 million budget, $646 million spent and $6 million remaining at September 30, 2025. The project comprises ten new aeroderivative units, with 530 MW summer net capability.",
+        "extra": [],
+        "costGroup": "eia-3406",
+        "checkedAt": "2026-10-11",
+        "costFacts": "TVA FY2025 Form 10-K publishes an approved $652 million budget, $646 million spent and $6 million remaining at September 30, 2025. The project comprises ten new aeroderivative units, with 530 MW summer net capability.",
+        "capacityFacts": "Johnsonville aeroderivative units 21–30: published generating capacity 530 MW. TVA summer net capability of the ten new units: 530 MW",
+        "capacitySourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalSourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalFacts": "Units 21–25 and 27–30 entered commercial operation May 6, 2025; Unit 26 followed August 20, 2025. Existing units 1–20 are not included."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-3399",
+      "country": "United States",
+      "name": "Cumberland combined-cycle replacement plant",
+      "status": "Under construction / commissioning",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 1450,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 3399,
+      "matchedGemUrl": null,
+      "pinId": 14047,
+      "pinUrl": "https://www.chronopin.com/pin/14047",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-3399",
+      "address": "Cumberland (TN), Stewart County, TN, United States",
+      "latitude": 36.3903,
+      "longitude": -87.6539,
+      "timelineDate": "2026-06-30",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-3399",
+        "name": "Cumberland combined-cycle replacement plant",
+        "country": "United States",
+        "capacityMW": 1450,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 2112000000.0,
+        "currency": "USD",
+        "costBasis": "Sum of disclosed project spending to date and forecast remaining expenditure; approximately $2.112 billion",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "sourceDate": "2025-09-30",
+        "facts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $312 million expected additional spending for the 1,450 MW first replacement combined-cycle plant, as of September 30, 2025. Their sum is approximately $2.112 billion. This explicitly calculated total uses published project components, not technology cost benchmarks. Equipment and prospective expenditure for a second replacement plant are excluded.",
+        "extra": [
+          [
+            "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+            "TVA reports pre-commercial operation of Cumberland Units 1 and 2 in April–June 2026."
+          ]
+        ],
+        "costGroup": "eia-3399",
+        "checkedAt": "2026-10-11",
+        "costFacts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $312 million expected additional spending for the 1,450 MW first replacement combined-cycle plant, as of September 30, 2025. Their sum is approximately $2.112 billion. This explicitly calculated total uses published project components, not technology cost benchmarks. Equipment and prospective expenditure for a second replacement plant are excluded.",
+        "capacityFacts": "Cumberland combined-cycle replacement plant: published generating capacity 1450 MW. Operator-reported electric generating capacity; not annual energy production",
+        "capacitySourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalSourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalFacts": "TVA reports this first 1,450 MW plant in construction. Its June 2026 filing reports pre-commercial operation of Cumberland Units 1 and 2 during the fiscal third quarter; this is commissioning, not proof of full commercial operation."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-3407",
+      "country": "United States",
+      "name": "Kingston combined-cycle replacement plant",
+      "status": "Under construction",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 1500,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 3407,
+      "matchedGemUrl": null,
+      "pinId": 14048,
+      "pinUrl": "https://www.chronopin.com/pin/14048",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-3407",
+      "address": "Kingston, Roane County, TN, United States",
+      "latitude": 35.8992,
+      "longitude": -84.5194,
+      "timelineDate": "2025-09-30",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-3407",
+        "name": "Kingston combined-cycle replacement plant",
+        "country": "United States",
+        "capacityMW": 1500,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 2900000000.0,
+        "currency": "USD",
+        "costBasis": "Sum of disclosed spent and forecast remaining project expenditure; approximately $2.9 billion",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "sourceDate": "2025-09-30",
+        "facts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $1.1 billion expected additional spending on the 1,500 MW Kingston combined-cycle plant as of September 30, 2025. Their sum is approximately $2.9 billion. This total is arithmetic on disclosed project amounts, not a benchmark estimate. Battery RFPs, proposed expansions and the wider campus rating are not included.",
+        "extra": [],
+        "costGroup": "eia-3407",
+        "checkedAt": "2026-10-11",
+        "costFacts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $1.1 billion expected additional spending on the 1,500 MW Kingston combined-cycle plant as of September 30, 2025. Their sum is approximately $2.9 billion. This total is arithmetic on disclosed project amounts, not a benchmark estimate. Battery RFPs, proposed expansions and the wider campus rating are not included.",
+        "capacityFacts": "Kingston combined-cycle replacement plant: published generating capacity 1500 MW. Operator-reported electric generating capacity; not annual energy production",
+        "capacitySourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalSourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalFacts": "TVA explicitly states it is constructing the 1,500 MW combined-cycle plant, targeting the end of 2027. The capacity is for the combined-cycle plant, not all units at the Kingston site."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "gem-L100000104184",
+      "country": "United States",
+      "name": "Allen aeroderivative addition",
+      "status": "Under construction",
+      "types": [
+        "Oil and gas"
+      ],
+      "capacityMW": 200,
+      "inventory": "GEM August 2026",
+      "gemUrl": "https://www.gem.wiki/Allen_Fossil_Plant",
+      "gemLocationId": "L100000104184",
+      "locationAccuracy": "exact",
+      "pinId": 14049,
+      "pinUrl": "https://www.chronopin.com/pin/14049",
+      "sourceUrl": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000104184",
+      "address": "Allen Fossil Plant, Memphis, Shelby, Tennessee, United States",
+      "latitude": 35.074087,
+      "longitude": -90.14868,
+      "timelineDate": "2026-06-30",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "gem-L100000104184",
+        "name": "Allen aeroderivative addition",
+        "country": "United States",
+        "capacityMW": 200,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 431000000.0,
+        "currency": "USD",
+        "costBasis": "Up to $431 million: $276 million spent plus up to $155 million remaining; disclosed project-specific components",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+        "sourceDate": "2026-06-30",
+        "facts": "TVA June 30, 2026 Form 10-Q discloses $276 million spent and up to $155 million additional spending on its 200 MW Allen aeroderivative addition. Sum: up to $431 million, explicitly calculated from published project figures. This is an upper forecast spending envelope, not a quoted fixed-price contract.",
+        "extra": [],
+        "costGroup": "gem-L100000104184",
+        "checkedAt": "2026-10-11",
+        "costFacts": "TVA June 30, 2026 Form 10-Q discloses $276 million spent and up to $155 million additional spending on its 200 MW Allen aeroderivative addition. Sum: up to $431 million, explicitly calculated from published project figures. This is an upper forecast spending envelope, not a quoted fixed-price contract.",
+        "capacityFacts": "Allen aeroderivative addition: published generating capacity 200 MW. Operator-reported electric generating capacity; not annual energy production",
+        "capacitySourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+        "physicalSourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698626000036/tve-20260630.htm",
+        "physicalFacts": "TVA explicitly reports constructing this 200 MW project after a December 2025 air permit. The planning-only Lagoon Creek project is separate and excluded."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "existing-5492",
+      "country": "United States",
+      "name": "Natrium — Kemmerer Unit 1",
+      "status": "Under construction",
+      "types": [
+        "Nuclear"
+      ],
+      "capacityMW": 345,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 68635,
+      "matchedGemUrl": null,
+      "pinId": 5492,
+      "pinUrl": "https://www.chronopin.com/pin/5492",
+      "sourceUrl": "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
+      "address": "Naughton Coal Plant, Kemmerer, Lincoln County, Wyoming, 83116, United States",
+      "latitude": 41.7571375,
+      "longitude": -110.5866183,
+      "timelineDate": "2026-04-23",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "existing-5492",
+        "name": "Natrium — Kemmerer Unit 1",
+        "country": "United States",
+        "capacityMW": 345,
+        "capacityBasis": "345 MWe net continuous reactor output; storage-assisted peak excluded",
+        "costValue": 4000000000.0,
+        "currency": "USD",
+        "costBasis": "Published demonstration-project total cost; historical 2024 estimate, separate from federal funding",
+        "sourceUrl": "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB9048_web.pdf",
+        "sourceDate": "2024",
+        "facts": "IAEA’s 2024 Climate Change and Nuclear Power report identifies US$4 billion expected total cost for the Natrium demonstration project, separately from the US$2 billion DOE contribution. It describes one 345 MWe net reactor at Kemmerer. This is a dated published project estimate; it is not represented as a refreshed 2026 fixed-price budget.",
+        "extra": [
+          [
+            "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
+            "TerraPower April 23, 2026 confirms official plant construction following the construction permit. Non-nuclear site support construction started June 2024. Reactor output is 345 MWe; storage-assisted 500 MW peak output is not additional continuous generating capacity."
+          ]
+        ],
+        "costGroup": "existing-5492",
+        "checkedAt": "2026-10-11",
+        "costFacts": "IAEA’s 2024 Climate Change and Nuclear Power report identifies US$4 billion expected total cost for the Natrium demonstration project, separately from the US$2 billion DOE contribution. It describes one 345 MWe net reactor at Kemmerer. This is a dated published project estimate; it is not represented as a refreshed 2026 fixed-price budget.",
+        "capacitySourceUrl": "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB9048_web.pdf",
+        "capacityFacts": "Natrium — Kemmerer Unit 1: 345 MW generating project rating. 345 MWe net continuous reactor output; storage-assisted peak excluded",
+        "physicalSourceUrl": "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
+        "physicalFacts": "TerraPower April 23, 2026 confirms official plant construction following the construction permit. Non-nuclear site support construction started June 2024. Reactor output is 345 MWe; storage-assisted 500 MW peak output is not additional continuous generating capacity."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-66621",
+      "country": "United States",
+      "name": "Orange County Advanced Power Station",
+      "status": "Construction complete / commissioning",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 1215,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 66621,
+      "matchedGemUrl": "https://www.gem.wiki/Orange_County_Advanced_power_station",
+      "pinId": 14066,
+      "pinUrl": "https://www.chronopin.com/pin/14066",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-66621",
+      "address": "Orange County Advanced Power Station, Orange County, TX, United States",
+      "latitude": 30.025251,
+      "longitude": -93.87134,
+      "timelineDate": "2026-04-23",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-66621",
+        "name": "Orange County Advanced Power Station",
+        "country": "United States",
+        "capacityMW": 1215,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1550000000.0,
+        "currency": "USD",
+        "costBasis": "Historical October 2022 project fixed-pricing estimate; not a verified 2026 final cost",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/7323/000006598426000174/etr-20251231.htm",
+        "sourceDate": "2022-10 (repeated in FY2025 filing)",
+        "facts": "Entergy’s FY2025 Form 10-K repeats its October 2022 estimated US$1.55 billion fixed-pricing option for Orange County Advanced Power Station. This is the historical 2022 estimate disclosed in the 2026 report; no current final outturn cost is asserted. It excludes the optional hydrogen co-firing investment under the regulatory approval.",
+        "extra": [
+          [
+            "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+            "Entergy April 23, 2026 confirms first fire and continued commissioning, with operator generating capacity approximately 1,215 MW. First fire is not commercial operation; the historical late-summer 2026 target is not proof of COD."
+          ]
+        ],
+        "costGroup": "eia-66621",
+        "checkedAt": "2026-10-11",
+        "costFacts": "Entergy’s FY2025 Form 10-K repeats its October 2022 estimated US$1.55 billion fixed-pricing option for Orange County Advanced Power Station. This is the historical 2022 estimate disclosed in the 2026 report; no current final outturn cost is asserted. It excludes the optional hydrogen co-firing investment under the regulatory approval.",
+        "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+        "capacityFacts": "Orange County Advanced Power Station: 1215 MW generating project rating. Operator-reported electric generating capacity; not annual energy production",
+        "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+        "physicalFacts": "Entergy April 23, 2026 confirms first fire and continued commissioning, with operator generating capacity approximately 1,215 MW. First fire is not commercial operation; the historical late-summer 2026 target is not proof of COD."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-67005",
+      "country": "United States",
+      "name": "Magnolia Power Generating Station",
+      "status": "Operational",
+      "types": [
+        "Natural gas"
+      ],
+      "capacityMW": 722.9,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 67005,
+      "matchedGemUrl": null,
+      "pinId": 14067,
+      "pinUrl": "https://www.chronopin.com/pin/14067",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-67005",
+      "address": "Magnolia Power, Iberville County, LA, United States",
+      "latitude": 30.252559,
+      "longitude": -91.16444,
+      "timelineDate": "2025-12-31",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-67005",
+        "name": "Magnolia Power Generating Station",
+        "country": "United States",
+        "capacityMW": 722.9,
+        "capacityBasis": "722.9 MW EIA new operating-unit nameplate sum; original operator nominal rating approximately 700 MW",
+        "costValue": 750000000.0,
+        "currency": "USD",
+        "costBasis": "Published original specific-plant capital investment; not a refreshed 2026 final cost",
+        "sourceUrl": "https://www.opportunitylouisiana.gov/news/kindle-energy-breaks-ground-on-750-million-power-station-in-iberville-parish",
+        "sourceDate": "2023-01",
+        "facts": "Louisiana Economic Development’s January 2023 groundbreaking release publishes US$750 million capital investment for the specific Magnolia plant, originally described as approximately 700 MW. EIA August 2026 reports new operating generators with a 722.9 MW nameplate sum. Operator/project nominal output and EIA nameplate are different rating conventions.",
+        "extra": [
+          [
+            "https://kindle-energy.com/case-studies/magnolia",
+            "Kindle’s Magnolia case study identifies December 2025 completion; EIA August 2026 reports recent operation. The proposed second expansion in a broader GEM grouping is excluded."
+          ]
+        ],
+        "costGroup": "eia-67005",
+        "checkedAt": "2026-10-11",
+        "costFacts": "Louisiana Economic Development’s January 2023 groundbreaking release publishes US$750 million capital investment for the specific Magnolia plant, originally described as approximately 700 MW. EIA August 2026 reports new operating generators with a 722.9 MW nameplate sum. Operator/project nominal output and EIA nameplate are different rating conventions.",
+        "capacitySourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-67005",
+        "capacityFacts": "Magnolia Power Generating Station: 722.9 MW generating project rating. 722.9 MW EIA new operating-unit nameplate sum; original operator nominal rating approximately 700 MW",
+        "physicalSourceUrl": "https://kindle-energy.com/case-studies/magnolia",
+        "physicalFacts": "Kindle’s Magnolia case study identifies December 2025 completion; EIA August 2026 reports recent operation. The proposed second expansion in a broader GEM grouping is excluded."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    },
+    {
+      "key": "eia-66545",
+      "country": "United States",
+      "name": "Mammoth Solar — original 1.3 GW complex",
+      "status": "Construction complete / commissioning",
+      "types": [
+        "Solar"
+      ],
+      "capacityMW": 1300,
+      "inventory": "EIA August 2026",
+      "eiaPlantId": 66545,
+      "matchedGemUrl": null,
+      "pinId": 14068,
+      "pinUrl": "https://www.chronopin.com/pin/14068",
+      "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-66545",
+      "address": "Mammoth South Solar Project, Pulaski County, IN, United States",
+      "latitude": 41.095334,
+      "longitude": -86.69157,
+      "timelineDate": "2026-10-07",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Documented physical milestone or dated progress/reporting marker. Period-end dates represent only the reported month/quarter; they do not invent an exact operation date. Source estimates are labelled and not treated as confirmed future opening dates.",
+      "cost": {
+        "key": "eia-66545",
+        "name": "Mammoth Solar — original 1.3 GW complex",
+        "country": "United States",
+        "capacityMW": 1300,
+        "capacityBasis": "Full original complex 1,300 MW; 900 MWac final phases commissioning in 2026",
+        "costValue": 1500000000.0,
+        "currency": "USD",
+        "costBasis": "Original full-complex project investment including the earlier North phase; 2022 estimate",
+        "sourceUrl": "https://www.iedc.in.gov/events/news/details/2022/11/03/doral-renewables-launches-next-phase-of-1.5b-solar-farm-in-northwest-indiana",
+        "sourceDate": "2022-11-03",
+        "facts": "Indiana Economic Development’s November 3, 2022 release publishes US$1.5 billion original full-complex investment for 1.3 GW Mammoth Solar. This dated estimate includes the earlier 400 MW North phase, as well as the 900 MW later phases; it is not a stand-alone budget for the new 900 MW and is not a refreshed 2026 outturn.",
+        "extra": [
+          [
+            "https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html",
+            "Doral’s October 7, 2026 announcement confirms 900 MWac in the final South, Central I and Central II phases constructed over 18 months and nearing commercial operation. Full-complex rated output is 1.3 GW; 900 MW is the 2026 commissioning addition. The announced future expansion to 2,245 MW is excluded."
+          ]
+        ],
+        "costGroup": "mammoth-original-complex",
+        "checkedAt": "2026-10-11",
+        "costFacts": "Indiana Economic Development’s November 3, 2022 release publishes US$1.5 billion original full-complex investment for 1.3 GW Mammoth Solar. This dated estimate includes the earlier 400 MW North phase, as well as the 900 MW later phases; it is not a stand-alone budget for the new 900 MW and is not a refreshed 2026 outturn.",
+        "capacitySourceUrl": "https://www.iedc.in.gov/events/news/details/2022/11/03/doral-renewables-launches-next-phase-of-1.5b-solar-farm-in-northwest-indiana",
+        "capacityFacts": "Mammoth Solar — original 1.3 GW complex: 1300 MW generating project rating. Full original complex 1,300 MW; 900 MWac final phases commissioning in 2026",
+        "physicalSourceUrl": "https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html",
+        "physicalFacts": "Doral’s October 7, 2026 announcement confirms 900 MWac in the final South, Central I and Central II phases constructed over 18 months and nearing commercial operation. Full-complex rated output is 1.3 GW; 900 MW is the 2026 commissioning addition. The announced future expansion to 2,245 MW is excluded."
+      },
+      "publicationState": "published",
+      "scope": "Physical construction, commissioning or recent 2025–2026 opening; published project-specific costs and electrical output only"
+    }
+  ],
+  "retainedEarlierOperatorUpdates": [
     {
       "key": "eia-58987",
       "status": "Under construction",
@@ -19,16 +855,6 @@
     },
     {
       "key": "eia-66923",
-      "status": "Operational",
-      "url": "https://patternenergy.com/sunzia-comes-online/",
-      "facts": "Pattern Energy announced on June 18, 2026 that SunZia Wind and its associated transmission system are fully operational. The operator reports approximately 3,650 MW for the combined wind project, spanning north/south facilities; do not assign the full-project figure to each phase or count the transmission line as generation.",
-      "date": "2026-06-18",
-      "confidence": "confirmed",
-      "reason": "The pin dates the June 18 operator announcement that the project is fully operational; this is not necessarily each individual turbine’s first operating day.",
-      "extra": []
-    },
-    {
-      "key": "eia-66924",
       "status": "Operational",
       "url": "https://patternenergy.com/sunzia-comes-online/",
       "facts": "Pattern Energy announced on June 18, 2026 that SunZia Wind and its associated transmission system are fully operational. The operator reports approximately 3,650 MW for the combined wind project, spanning north/south facilities; do not assign the full-project figure to each phase or count the transmission line as generation.",
@@ -63,6 +889,21 @@
       "extra": []
     },
     {
+      "key": "eia-67914",
+      "status": "Under construction",
+      "url": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+      "facts": "Entergy’s May 19, 2026 construction update confirms installation of heat-recovery steam-generator modules at Delta Blues in Greenville. The operator describes 754 MW and a 2028 opening target.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [
+        [
+          "https://www.entergy.com/blog/were-investing-now-to-power-mississippis-energy-future",
+          "The June 2026 operator update specifies expected in-service dates of May 2028 for Delta Blues and August 2029 for Traceview."
+        ]
+      ]
+    },
+    {
       "key": "eia-69223",
       "status": "Under construction",
       "url": "https://www.entergymississippi.com/generation/vicksburg",
@@ -74,21 +915,6 @@
         [
           "https://www.entergy.com/news/entergy-demolishes-retired-baxter-wilson-plant",
           "Operator reports demolition of retired Baxter Wilson structures and confirms the replacement Vicksburg project is under construction."
-        ]
-      ]
-    },
-    {
-      "key": "eia-70187",
-      "status": "Under construction",
-      "url": "https://www.entergymississippi.com/generation/traceview",
-      "facts": "Entergy identifies Traceview in Ridgeland, Mississippi, with construction starting in 2026 and service expected in 2029. Its June 2026 investment update specifies August 2029. This supersedes the earlier 2028 operation-year value in the EIA snapshot.",
-      "date": "2029-08-31",
-      "confidence": "estimated",
-      "reason": "Entergy’s June 2026 update gives August 2029. August 31 is an estimated month boundary; the EIA snapshot carries an earlier 2028 target.",
-      "extra": [
-        [
-          "https://www.entergy.com/blog/were-investing-now-to-power-mississippis-energy-future",
-          "Operator explicitly states Traceview is expected in service in August 2029."
         ]
       ]
     },
@@ -113,96 +939,6 @@
       "extra": []
     },
     {
-      "key": "eia-68606",
-      "status": "Under construction",
-      "url": "https://www.nrg.com/en/about/newsroom/2026/45811",
-      "facts": "NRG’s August 4, 2026 results say its two remaining Texas Energy Fund projects, Cedar Bayou 5 and Greens Bayou 6, remain on time and on budget. Its presentation identifies nameplate ratings of 721 MW and 455 MW respectively. Preserve EIA’s separately reported nameplate and summer ratings rather than silently substituting one capacity metric for another.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": [
-        [
-          "https://investors.nrg.com/static-files/166760ef-79e6-4985-b776-09660ed84ae9",
-          "NRG second-quarter presentation distinguishes project nameplate ratings and phased delivery schedules."
-        ]
-      ]
-    },
-    {
-      "key": "eia-69691",
-      "status": "Under construction",
-      "url": "https://www.nrg.com/en/about/newsroom/2026/45811",
-      "facts": "NRG’s August 4, 2026 results say its two remaining Texas Energy Fund projects, Cedar Bayou 5 and Greens Bayou 6, remain on time and on budget. Its presentation identifies nameplate ratings of 721 MW and 455 MW respectively. Preserve EIA’s separately reported nameplate and summer ratings rather than silently substituting one capacity metric for another.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": [
-        [
-          "https://investors.nrg.com/static-files/166760ef-79e6-4985-b776-09660ed84ae9",
-          "NRG second-quarter presentation distinguishes project nameplate ratings and phased delivery schedules."
-        ]
-      ]
-    },
-    {
-      "key": "eia-68068",
-      "status": "Partly operational / expansion",
-      "url": "https://fervoenergy.gcs-web.com/news-releases/news-release-details/fervo-energy-declares-commercial-operation-cape-station-ahead",
-      "facts": "Fervo’s October 1 release confirms that Cape Station’s first GeoBlock entered commercial operation on September 30, 2026 after synchronizing to the grid on September 24. It achieved 33 MW net production. This milestone covers the first block, not completion of the full Cape Station buildout.",
-      "date": "2026-09-30",
-      "confidence": "confirmed",
-      "reason": "Fervo explicitly gives September 30, 2026 as the first GeoBlock’s commercial-operation date.",
-      "extra": [
-        [
-          "https://fervoenergy.com/fervo-energy-achieves-first-power-at-cape-station-a-landmark-moment-for-the-future-of-enhanced-geothermal-systems/",
-          "September 24 first-power release describes approximately 100 MW in phase I across three 33 MW blocks, with later expansion distinct from the operating block."
-        ]
-      ]
-    },
-    {
-      "key": "gem-L100001047964",
-      "status": "Groundbreaking / site development",
-      "url": "https://www.kairospower.com/updates/kairos-power-breaks-ground-on-hermes-2-demonstration-plant",
-      "facts": "Kairos broke ground on Hermes 2 on April 17, 2026 in Oak Ridge, Tennessee. The electricity-producing demonstration plant is intended to supply up to 50 MW to TVA. Hermes 1 at the adjacent site is a separate low-power demonstration reactor; its thermal rating must not be counted as electric generation.",
-      "date": "2026-04-17",
-      "confidence": "confirmed",
-      "reason": "The operator explicitly dates Hermes 2 groundbreaking April 17, 2026. This is not a commercial-operation date.",
-      "extra": [
-        [
-          "https://www.nrc.gov/facilities-safety/non-power-facilities/new-facility-licensing/hermes-2-kairos-application",
-          "NRC confirms Hermes 2 construction permits were issued November 21, 2024. The permits and groundbreaking are different milestones."
-        ]
-      ]
-    },
-    {
-      "key": "eia-67435",
-      "status": "Under construction",
-      "url": "https://us.orsted.com/offshore-wind",
-      "facts": "Ørsted’s current U.S. offshore-wind page describes Sunrise Wind construction as well underway, with several scopes complete. The annual presentation targets commissioning in the second half of 2027; a first-power target in 2026 does not mean full commissioning.",
-      "date": "2027-12-31",
-      "confidence": "estimated",
-      "reason": "Operator presentation targets the second half of 2027 for commissioning. December 31 is the estimated boundary of that window.",
-      "extra": [
-        [
-          "https://cdn.orsted.com/-/media/annual-2025/orsted-ir-presentation-q4-2025.pdf?rev=389b59a0944042d6a33600f366cee09c",
-          "Operator presentation separates H2 2026 first power from H2 2027 commissioning."
-        ]
-      ]
-    },
-    {
-      "key": "eia-65500",
-      "status": "Partly operational / commissioning",
-      "url": "https://orsted.com/en/media/news/2026/03/revolution-wind-begins-delivering-power-to-new-eng-14833936",
-      "facts": "Revolution Wind began delivering power to New England in March 2026. Ørsted’s current U.S. page says first power is being delivered while construction continues. First power establishes partial operation; it does not prove completion of the entire 704 MW project.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": [
-        [
-          "https://us.orsted.com/offshore-wind",
-          "Operator page explicitly distinguishes Revolution Wind delivering first power from continuing construction."
-        ]
-      ]
-    },
-    {
       "key": "eia-68443",
       "status": "Under construction",
       "url": "https://www.empirewind.com/offshore-installation/",
@@ -214,21 +950,6 @@
         [
           "https://www.empirewind.com/project/",
           "Operator project overview confirms permitting and development context."
-        ]
-      ]
-    },
-    {
-      "key": "gem-L100001050840",
-      "status": "Operational",
-      "url": "https://www.intersect.com/solutions",
-      "facts": "Intersect states Quantum Clean Energy Project began operations in June 2026. Its community page separately describes 640 MW solar and 1.3 GWh battery storage. Battery energy capacity must not be added to solar generating power.",
-      "date": "2026-06-30",
-      "confidence": "estimated",
-      "reason": "Operator gives June 2026 operations. June 30 is the estimated month boundary, not an exact first-operation day.",
-      "extra": [
-        [
-          "https://www.intersect.com/community-engagement",
-          "Operator identifies Quantum’s 640 MW solar and 1.3 GWh storage components separately."
         ]
       ]
     },
@@ -273,6 +994,328 @@
       "extra": []
     },
     {
+      "key": "eia-3407",
+      "status": "Under construction",
+      "url": "https://www.tva.com/about-tva/our-leadership/board-of-directors-/meetings-archive/2026/02/11/default-calendar/tva-board-meeting---february-11--2026",
+      "facts": "TVA’s February 11, 2026 board-meeting record identifies new natural-gas generation under construction at Kingston and authorizes steps to continue the existing fossil plant alongside it. Thus construction of the energy complex should not be described as completion or proof that all older units have closed. EIA/GEM August inventories report 1,830.6 MW of new unit nameplate ratings; that sum includes several units and differs from TVA’s marketed approximately 1,500 MW energy-complex output. The EIA December 2027 targets remain estimates.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [
+        [
+          "https://s205.q4cdn.com/318912997/files/doc_financials/2026/q1/First-Quarter-Fiscal-Year-2026-Investor-Call-Presentation-For-Website.pdf",
+          "TVA’s first-quarter fiscal 2026 investor presentation labels Kingston’s energy complex as approximately 1,500 MW natural-gas generation. This is an operator project-output figure, distinct from summed EIA unit nameplates."
+        ]
+      ]
+    }
+  ],
+  "excludedEarlierOperatorResearch": [
+    {
+      "key": "eia-66924",
+      "status": "Operational",
+      "url": "https://patternenergy.com/sunzia-comes-online/",
+      "facts": "Pattern Energy announced on June 18, 2026 that SunZia Wind and its associated transmission system are fully operational. The operator reports approximately 3,650 MW for the combined wind project, spanning north/south facilities; do not assign the full-project figure to each phase or count the transmission line as generation.",
+      "date": "2026-06-18",
+      "confidence": "confirmed",
+      "reason": "The pin dates the June 18 operator announcement that the project is fully operational; this is not necessarily each individual turbine’s first operating day.",
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "eia-70187",
+      "status": "Under construction",
+      "url": "https://www.entergymississippi.com/generation/traceview",
+      "facts": "Entergy identifies Traceview in Ridgeland, Mississippi, with construction starting in 2026 and service expected in 2029. Its June 2026 investment update specifies August 2029. This supersedes the earlier 2028 operation-year value in the EIA snapshot.",
+      "date": "2029-08-31",
+      "confidence": "estimated",
+      "reason": "Entergy’s June 2026 update gives August 2029. August 31 is an estimated month boundary; the EIA snapshot carries an earlier 2028 target.",
+      "extra": [
+        [
+          "https://www.entergy.com/blog/were-investing-now-to-power-mississippis-energy-future",
+          "Operator explicitly states Traceview is expected in service in August 2029."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "eia-68606",
+      "status": "Under construction",
+      "url": "https://www.nrg.com/en/about/newsroom/2026/45811",
+      "facts": "NRG’s August 4, 2026 results say its two remaining Texas Energy Fund projects, Cedar Bayou 5 and Greens Bayou 6, remain on time and on budget. Its presentation identifies nameplate ratings of 721 MW and 455 MW respectively. Preserve EIA’s separately reported nameplate and summer ratings rather than silently substituting one capacity metric for another.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [
+        [
+          "https://investors.nrg.com/static-files/166760ef-79e6-4985-b776-09660ed84ae9",
+          "NRG second-quarter presentation distinguishes project nameplate ratings and phased delivery schedules."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "eia-69691",
+      "status": "Under construction",
+      "url": "https://www.nrg.com/en/about/newsroom/2026/45811",
+      "facts": "NRG’s August 4, 2026 results say its two remaining Texas Energy Fund projects, Cedar Bayou 5 and Greens Bayou 6, remain on time and on budget. Its presentation identifies nameplate ratings of 721 MW and 455 MW respectively. Preserve EIA’s separately reported nameplate and summer ratings rather than silently substituting one capacity metric for another.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [
+        [
+          "https://investors.nrg.com/static-files/166760ef-79e6-4985-b776-09660ed84ae9",
+          "NRG second-quarter presentation distinguishes project nameplate ratings and phased delivery schedules."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "eia-68068",
+      "status": "Partly operational / expansion",
+      "url": "https://fervoenergy.gcs-web.com/news-releases/news-release-details/fervo-energy-declares-commercial-operation-cape-station-ahead",
+      "facts": "Fervo’s October 1 release confirms that Cape Station’s first GeoBlock entered commercial operation on September 30, 2026 after synchronizing to the grid on September 24. It achieved 33 MW net production. This milestone covers the first block, not completion of the full Cape Station buildout.",
+      "date": "2026-09-30",
+      "confidence": "confirmed",
+      "reason": "Fervo explicitly gives September 30, 2026 as the first GeoBlock’s commercial-operation date.",
+      "extra": [
+        [
+          "https://fervoenergy.com/fervo-energy-achieves-first-power-at-cape-station-a-landmark-moment-for-the-future-of-enhanced-geothermal-systems/",
+          "September 24 first-power release describes approximately 100 MW in phase I across three 33 MW blocks, with later expansion distinct from the operating block."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "gem-L100000500282",
+      "status": "Construction permit issued",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20345.pdf",
+      "facts": "The NRC’s Federal Register notice confirms construction permit CPAR-2 for TVA’s Clinch River Nuclear Unit 1 was issued September 28, 2026. It authorizes construction of the reactor facility in Roane County, Tennessee. A construction permit does not establish an operating licence or prove construction has started.",
+      "date": "2026-09-28",
+      "confidence": "confirmed",
+      "reason": "The Federal Register explicitly dates permit issuance September 28, 2026, distinct from later announcements.",
+      "extra": [
+        [
+          "https://www.nrc.gov/facilities-safety/new-reactors/advanced-reactors/who-were-working-with/advanced-reactor-application-projects/tva-clinch-river-cpa",
+          "NRC application page provides project and review context; its earlier fall-2026 target is superseded by the issued permit notice."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "gem-L100001047964",
+      "status": "Groundbreaking / site development",
+      "url": "https://www.kairospower.com/updates/kairos-power-breaks-ground-on-hermes-2-demonstration-plant",
+      "facts": "Kairos broke ground on Hermes 2 on April 17, 2026 in Oak Ridge, Tennessee. The electricity-producing demonstration plant is intended to supply up to 50 MW to TVA. Hermes 1 at the adjacent site is a separate low-power demonstration reactor; its thermal rating must not be counted as electric generation.",
+      "date": "2026-04-17",
+      "confidence": "confirmed",
+      "reason": "The operator explicitly dates Hermes 2 groundbreaking April 17, 2026. This is not a commercial-operation date.",
+      "extra": [
+        [
+          "https://www.nrc.gov/facilities-safety/non-power-facilities/new-facility-licensing/hermes-2-kairos-application",
+          "NRC confirms Hermes 2 construction permits were issued November 21, 2024. The permits and groundbreaking are different milestones."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "gem-L100000500446",
+      "status": "Pre-construction / licensing",
+      "url": "https://x-energy.com/regulatory-milestones/",
+      "facts": "Dow and X-energy’s Long Mott proposal at Seadrift consists of four Xe-100 units, designed for up to 320 MWe electricity or 800 MW industrial heat. X-energy reports completion of NRC environmental review in May 2026, with safety review continuing. Environmental review is not a construction permit or operation approval.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "gem-L100000500497",
+      "status": "Pre-construction / site characterization",
+      "url": "https://x-energy.com/regulatory-milestones/",
+      "facts": "X-energy describes Cascade Advanced Energy Facility as up to twelve Xe-100 reactors co-located with Energy Northwest’s Columbia Generating Station near Richland, Washington. The project remains in regulatory engagement/site-characterization development; a twelve-unit proposal is not twelve commissioned units.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "eia-3797",
+      "status": "Approved / pre-construction",
+      "url": "https://www.scc.virginia.gov/docketsearch/DOCS/89g501%21.PDF",
+      "facts": "The Virginia SCC order authorizes Chesterfield Energy Reliability Center, described as an approximately 944 MW nominal flexible-fuel facility within the retired Unit 6 footprint at Chesterfield Power Station. This authorization is distinct from proof of construction or operation. Dominion’s project page gives an up-to-1,000 MW turbine total; the SCC nominal figure and turbine maxima must remain separately labelled.",
+      "date": "2029-06-01",
+      "confidence": "estimated",
+      "reason": "The SCC record discusses projected service June 1, 2029. This is a projected target, not a verified opening day.",
+      "extra": [
+        [
+          "https://www.dominionenergy.com/projects-and-facilities/natural-gas-facilities/chesterfield-energy-reliability-center",
+          "Operator describes four simple-cycle turbines, each up to 250 MW, and a 2029 operations target. Some page wording predates regulatory approval."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "eia-67435",
+      "status": "Under construction",
+      "url": "https://us.orsted.com/offshore-wind",
+      "facts": "Ørsted’s current U.S. offshore-wind page describes Sunrise Wind construction as well underway, with several scopes complete. The annual presentation targets commissioning in the second half of 2027; a first-power target in 2026 does not mean full commissioning.",
+      "date": "2027-12-31",
+      "confidence": "estimated",
+      "reason": "Operator presentation targets the second half of 2027 for commissioning. December 31 is the estimated boundary of that window.",
+      "extra": [
+        [
+          "https://cdn.orsted.com/-/media/annual-2025/orsted-ir-presentation-q4-2025.pdf?rev=389b59a0944042d6a33600f366cee09c",
+          "Operator presentation separates H2 2026 first power from H2 2027 commissioning."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "eia-65500",
+      "status": "Partly operational / commissioning",
+      "url": "https://orsted.com/en/media/news/2026/03/revolution-wind-begins-delivering-power-to-new-eng-14833936",
+      "facts": "Revolution Wind began delivering power to New England in March 2026. Ørsted’s current U.S. page says first power is being delivered while construction continues. First power establishes partial operation; it does not prove completion of the entire 704 MW project.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [
+        [
+          "https://us.orsted.com/offshore-wind",
+          "Operator page explicitly distinguishes Revolution Wind delivering first power from continuing construction."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "gem-L100001050840",
+      "status": "Operational",
+      "url": "https://www.intersect.com/solutions",
+      "facts": "Intersect states Quantum Clean Energy Project began operations in June 2026. Its community page separately describes 640 MW solar and 1.3 GWh battery storage. Battery energy capacity must not be added to solar generating power.",
+      "date": "2026-06-30",
+      "confidence": "estimated",
+      "reason": "Operator gives June 2026 operations. June 30 is the estimated month boundary, not an exact first-operation day.",
+      "extra": [
+        [
+          "https://www.intersect.com/community-engagement",
+          "Operator identifies Quantum’s 640 MW solar and 1.3 GWh storage components separately."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "gem-L100001026044",
+      "status": "Announced / development",
+      "url": "https://www.sagegeosystems.com/projects",
+      "facts": "Sage’s projects page lists 150 MW of geothermal generation associated with Meta and a 2030 completion target. Sage’s 3 MW San Miguel project is energy storage and is a separate project; it is not evidence that the 150 MW generating project has opened.",
+      "date": "2030-12-31",
+      "confidence": "estimated",
+      "reason": "Operator projects page publishes 2030. December 31 is an estimated year boundary; exact site and phase commissioning remain unresolved.",
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "gem-L100001080891",
+      "status": "Announced / development",
+      "url": "https://www.xgsenergy.com/xgs-energy-and-meta-to-partner-on-150-mw-advanced-geothermal-project/",
+      "facts": "XGS and Meta announced an agreement supporting 150 MW of next-generation geothermal development in New Mexico, intended to serve the PNM grid and Meta’s operations. This is an announced development agreement, not proof of construction, delivered capacity or a verified parcel. The inventory point must remain an approximate regional marker.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "existing-5960",
+      "status": "Restart project / regulatory work",
+      "url": "https://www.constellationenergy.com/news/2026/08/constellation-reports-second-quarter-2026-results.html",
+      "facts": "Constellation’s August 6, 2026 results report progress toward restarting Crane Clean Energy Center in 2027, including FERC interconnection-rights transfer and an NRC fuel-licence amendment. This is restoration of Three Mile Island Unit 1, not a new reactor or a restart of accident-damaged Unit 2.",
+      "date": "2027-12-31",
+      "confidence": "estimated",
+      "reason": "Operator targets restart in 2027. December 31 is an estimated year boundary, not a confirmed restart day.",
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "existing-5517",
+      "status": "Restart project / regulatory work",
+      "url": "https://newsroom.nexteraenergy.com/2026-09-08-U-S-Department-of-Energy-Closes-Up-to-1-9-Billion-Loan-to-Restart-NextEra-Energys-Duane-Arnold-Energy-Center",
+      "facts": "NextEra’s September 8, 2026 release confirms an up-to-$1.9 billion DOE loan for Duane Arnold’s restart. The operator targets no later than Q1 2029, pending approvals. This is restoration of the retired Iowa reactor, not a newly built nuclear unit.",
+      "date": "2029-03-31",
+      "confidence": "estimated",
+      "reason": "Operator targets restart by Q1 2029, conditional on regulatory approvals. March 31 is an estimated quarter boundary.",
+      "extra": [
+        [
+          "https://www.nexteraenergy.com/duane-arnold-energy-center/faq.html",
+          "Current operator FAQ retains first-quarter 2029 as the anticipated full-operation window."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "eia-69099",
+      "status": "Under construction / experimental fusion",
+      "url": "https://www.helionenergy.com/newsroom/helion-clears-key-regulatory-milestone-on-the-path-to-building-and-operating-the-worlds-first-fusion-power-plant",
+      "facts": "Helion’s June 16, 2026 update says Orion in Malaga has received Washington radioactive-materials and air-emissions licences. Assembly/office construction was complete and generator-building earthwork was underway. This is a fusion development project; approvals and building work do not demonstrate commercial fusion electricity.",
+      "date": "2028-12-31",
+      "confidence": "estimated",
+      "reason": "Helion targets initial operations in 2028. December 31 is an estimated year boundary; the schedule depends on first-of-a-kind technology performance.",
+      "extra": [
+        [
+          "https://www.helionenergy.com/orion",
+          "Operator describes a design intended to deliver at least 50 MW under its Microsoft purchase agreement and initial operation targeted in 2028."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "existing-2627",
+      "status": "Pre-construction / experimental fusion",
+      "url": "https://www.cfs.energy/news-and-media/commonwealth-fusion-systems-becomes-first-fusion-company-to-apply-to-pjm-interconnection-the-largest-u.s.-wholesale-electricity-market",
+      "facts": "CFS announced April 28, 2026 that its proposed 400 MW ARC plant at Chesterfield County, Virginia, named Fall Line Fusion Power Station, had applied for PJM interconnection. CFS targets the early 2030s. An interconnection application is an engineering-study request, not proof of financing, completed construction or commercial fusion output.",
+      "date": "2026-04-28",
+      "confidence": "confirmed",
+      "reason": "The pin dates the April 28, 2026 interconnection-application announcement. No exact future commissioning year or day is established; the operator targets the early 2030s.",
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
+      "key": "gem-L100001047878",
+      "status": "Site development / advanced reactor",
+      "url": "https://oklo.com/projects-and-deployments/idaho",
+      "facts": "Oklo identifies Aurora-INL as its first planned commercial fast-fission plant. DOE pilot authorization, NRC licensing and fuel-fabrication work are distinct steps. A criticality milestone for Oklo’s separate Groves research reactor does not prove Aurora-INL has begun commercial electricity production.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [
+        [
+          "https://www.energy.gov/nepa/articles/cx-271013-oklo-limited-construction-activities-rev-2",
+          "DOE environmental determination describes limited construction activities including temporary power, a production well and construction-water supply at Aurora-INL."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
+    },
+    {
       "key": "eia-69799",
       "status": "Development / staged construction",
       "url": "https://fermiamerica.com/",
@@ -289,7 +1332,34 @@
           "https://fermiamerica.com/progress/",
           "The operator progress page lists an earlier approximately 6 GW gas scope and long-lead equipment. It distinguishes a 478 MW ISO-rated SGT800 package from over 400 MW at site elevation; equipment secured/shipped is not commercial operation."
         ]
-      ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
+    },
+    {
+      "key": "eia-69798",
+      "status": "Licence application / proposed nuclear",
+      "url": "https://www.nrc.gov/facilities-safety/new-reactors/large-light-water-reactors/combined-license-applications-for-new-reactors/fermi-america-president-donald-j-trump-advanced-energy-and-intelligence-campus-units-1-4",
+      "facts": "NRC’s Project Matador application page identifies four proposed AP1000 reactors at the Texas campus. Parts 1 and 2 have been accepted for docketing and are under review; Part 3 is targeted for December 31, 2026. The Commission’s combined-licence decision remains to be determined. Application review and an applicant-prepared environmental impact statement do not establish a construction/operating licence or delivered nuclear generation. EIA reports 4,468 MW nameplate across four proposed units.",
+      "date": null,
+      "confidence": "estimated",
+      "reason": null,
+      "extra": [
+        [
+          "https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-034.pdf",
+          "NRC’s March 23, 2026 release describes public input and the applicant-prepared environmental-review pilot, not licence issuance."
+        ],
+        [
+          "https://fermiamerica.com/",
+          "The campus’s advertised 17 GW is a combined development scope, not a nuclear-only rating. First-power marketing for 2026 must not be interpreted as a nuclear commissioning date."
+        ],
+        [
+          "https://www.govinfo.gov/content/pkg/FR-2026-10-09/html/2026-20742.htm",
+          "The October 9, 2026 Federal Register notice opens public comment on the draft EIS through November 23. Staff preliminarily recommends licence issuance contingent on successful safety review; a preliminary environmental recommendation is not an issued combined licence."
+        ]
+      ],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
     },
     {
       "key": "eia-728",
@@ -299,934 +1369,31 @@
       "date": "2027-02-28",
       "confidence": "estimated",
       "reason": "August EIA inventory targets Unit 8 in February 2027, with later units in December. February 28 is an estimated month boundary; the dated operator release expects all three by end-2027.",
-      "extra": []
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "No qualifying published project-specific cost verified in this research pass."
     },
     {
-      "key": "eia-3407",
-      "status": "Under construction",
-      "url": "https://www.tva.com/about-tva/our-leadership/board-of-directors-/meetings-archive/2026/02/11/default-calendar/tva-board-meeting---february-11--2026",
-      "facts": "TVA’s February 11, 2026 board-meeting record identifies new natural-gas generation under construction at Kingston and authorizes steps to continue the existing fossil plant alongside it. Thus construction of the energy complex should not be described as completion or proof that all older units have closed. EIA/GEM August inventories report 1,830.6 MW of new unit nameplate ratings; that sum includes several units and differs from TVA’s marketed approximately 1,500 MW energy-complex output. The EIA December 2027 targets remain estimates.",
+      "key": "gem-L100001080937",
+      "status": "Development / equipment allocation",
+      "url": "https://www.tallgrass.com/newsroom/press-releases/tallgrass-and-mitsubishi-power-americas-announce-turbine-allocation-for-cheyenne-power-hub-051526",
+      "facts": "Tallgrass and Mitsubishi Power’s May 15, 2026 announcement allocates the first two M501JAC gas turbines to Phase 1 of Cheyenne Power Hub in southeast Wyoming. The operator describes approximately 1,150 MW of site-ready power at the Switchgrass Industrial Park data-center campus, supplied via Rockies Express gas. Component arrival/installation was expected as early as July; an elapsed expectation does not verify delivery, construction completion or commercial operation. GEM’s broader 2,700 MW inventory scope must not be added to Phase 1’s 1,150 MW. A final commercial-start date was not established by this release.",
       "date": null,
       "confidence": "estimated",
       "reason": null,
-      "extra": [
-        [
-          "https://s205.q4cdn.com/318912997/files/doc_financials/2026/q1/First-Quarter-Fiscal-Year-2026-Investor-Call-Presentation-For-Website.pdf",
-          "TVA’s first-quarter fiscal 2026 investor presentation labels Kingston’s energy complex as approximately 1,500 MW natural-gas generation. This is an operator project-output figure, distinct from summed EIA unit nameplates."
-        ]
-      ]
+      "extra": [],
+      "collectionState": "excluded",
+      "exclusionReason": "Physical construction/recent opening was not verified for the included electricity-producing scope; no qualifying paired cost proof."
     }
   ],
-  "applied": {
-    "eia-58987": {
-      "pinId": 7671,
-      "title": "Chokecherry and Sierra Madre Wind — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.powercompanyofwyoming.com/wind-generation/index.shtml",
-      "imageCount": 1
-    },
-    "eia-66923": {
-      "pinId": 8312,
-      "title": "SunZia Wind South — operational",
-      "status": "Operational",
-      "sourceUrl": "https://patternenergy.com/sunzia-comes-online/",
-      "imageCount": 0
-    },
-    "eia-66924": {
-      "pinId": 8412,
-      "title": "SunZia Wind North — operational",
-      "status": "Operational",
-      "sourceUrl": "https://patternenergy.com/sunzia-comes-online/",
-      "imageCount": 0
-    },
-    "eia-3399": {
-      "pinId": 8352,
-      "title": "Cumberland (TN) — under construction / commissioning",
-      "status": "Under construction / commissioning",
-      "sourceUrl": "https://www.tva.com/the-powerhouse/stories/cumberland-charges-ahead-with-back-to-back-milestones_genproj_gas",
-      "imageCount": 0
-    },
-    "eia-1364": {
-      "pinId": 7690,
-      "title": "Mill Creek (KY) — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
-      "imageCount": 2
-    },
-    "eia-69223": {
-      "pinId": 7685,
-      "title": "Vicksburg Advanced Power Station — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.entergymississippi.com/generation/vicksburg",
-      "imageCount": 0
-    },
-    "eia-70187": {
-      "pinId": 7686,
-      "title": "Traceview Advanced Power Station — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.entergymississippi.com/generation/traceview",
-      "imageCount": 0
-    },
-    "eia-68053": {
-      "pinId": 8483,
-      "title": "Legend Power Station — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
-      "imageCount": 0
-    },
-    "eia-69077": {
-      "pinId": 8615,
-      "title": "Lone Star Power Station — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
-      "imageCount": 0
-    },
-    "eia-68606": {
-      "pinId": 7691,
-      "title": "Cedar Bayou 5 — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.nrg.com/en/about/newsroom/2026/45811",
-      "imageCount": 0
-    },
-    "eia-69691": {
-      "pinId": 7711,
-      "title": "Greens Bayou 6 — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.nrg.com/en/about/newsroom/2026/45811",
-      "imageCount": 0
-    },
-    "eia-68068": {
-      "pinId": 9296,
-      "title": "Cape Generating Station — partly operational / expansion",
-      "status": "Partly operational / expansion",
-      "sourceUrl": "https://fervoenergy.gcs-web.com/news-releases/news-release-details/fervo-energy-declares-commercial-operation-cape-station-ahead",
-      "imageCount": 1
-    },
-    "gem-L100001047964": {
-      "pinId": 9298,
-      "title": "Hermes 2 electricity-producing demonstration plant — groundbreaking / site development",
-      "status": "Groundbreaking / site development",
-      "sourceUrl": "https://www.kairospower.com/updates/kairos-power-breaks-ground-on-hermes-2-demonstration-plant",
-      "imageCount": 2
-    },
-    "eia-67435": {
-      "pinId": 7681,
-      "title": "Sunrise Wind — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://us.orsted.com/offshore-wind",
-      "imageCount": 0
-    },
-    "eia-65500": {
-      "pinId": 7692,
-      "title": "Revolution Wind — partly operational / commissioning",
-      "status": "Partly operational / commissioning",
-      "sourceUrl": "https://orsted.com/en/media/news/2026/03/revolution-wind-begins-delivering-power-to-new-eng-14833936",
-      "imageCount": 0
-    },
-    "eia-68443": {
-      "pinId": 7688,
-      "title": "Empire Wind 1 — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.empirewind.com/offshore-installation/",
-      "imageCount": 2
-    },
-    "gem-L100001050840": {
-      "pinId": 8699,
-      "title": "Quantum Solar — operational",
-      "status": "Operational",
-      "sourceUrl": "https://www.intersect.com/solutions",
-      "imageCount": 0
-    },
-    "existing-5492": {
-      "pinId": 5492,
-      "title": "TerraPower Starts Nuclear Construction of Its Natrium Plant in Kemmerer",
-      "status": "Under construction",
-      "sourceUrl": "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
-      "imageCount": 0
-    },
-    "existing-5511": {
-      "pinId": 5511,
-      "title": "Virginia's CVOW Offshore Wind Farm Slips to a Final Turbine by End-2027",
-      "status": "Partly operational / under construction",
-      "sourceUrl": "https://coastalvawind.com/about/the-project/timeline",
-      "imageCount": 0
-    },
-    "eia-66621": {
-      "pinId": 8376,
-      "title": "Orange County Advanced Power Station — commissioning / first-fire milestone",
-      "status": "Commissioning / first-fire milestone",
-      "sourceUrl": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
-      "imageCount": 0
-    },
-    "eia-69799": {
-      "pinId": 8298,
-      "title": "Project Matador Gas Plant (PMG) — development / staged construction",
-      "status": "Development / staged construction",
-      "sourceUrl": "https://fermiamerica.com/",
-      "imageCount": 0
-    },
-    "eia-728": {
-      "pinId": 8366,
-      "title": "Yates — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.georgiapower.com/news-hub/press-releases/turbine-generator-unit-9-plant-yates.html",
-      "imageCount": 0
-    },
-    "eia-3407": {
-      "pinId": 8339,
-      "title": "Kingston — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.tva.com/about-tva/our-leadership/board-of-directors-/meetings-archive/2026/02/11/default-calendar/tva-board-meeting---february-11--2026",
-      "imageCount": 0
-    }
-  },
-  "additionalExistingOperatorEvidence": {
-    "5488": {
-      "name": "Darlington New Nuclear Project — Unit 1",
-      "country": "Canada",
-      "status": "Under construction",
-      "capacityMW": 300,
-      "url": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
-      "facts": "OPG reports that Unit 1 reactor-building construction is progressing above its completed basemat in summer 2026, after CNSC clearance of the foundation hold point. This collection includes the first 300 MW BWRX-300 unit under construction. Three additional units remain subject to regulatory approvals and are excluded; the proposed 1,200 MW four-unit fleet is not the included construction capacity. An operating licence is still required before commissioning/operation."
-    },
-    "5506": {
-      "name": "Palisades — existing-reactor refurbishment and commissioning",
-      "country": "United States",
-      "status": "Refurbishment / commissioning",
-      "capacityMW": null,
-      "url": "https://holtecinternational.com/hh-41-22/",
-      "facts": "Holtec reports completed major refurbishment work and ongoing testing, restoration, fuel-loading-related activities and preparations for startup at the existing Palisades reactor. It confirms reconnection to the 345-kV switchyard on September 11, 2026 after extensive restoration. That connection is not confirmation of commercial nuclear generation. This collection includes the physical existing-reactor restart work; the separate proposed Pioneer SMR-300 reactors are excluded."
-    }
-  },
-  "supplements": [
-    {
-      "key": "supplement-rabbits-foot",
-      "name": "Rabbit’s Foot Solar — Bowie County, Texas",
-      "country": "United States",
-      "status": "Under construction",
-      "types": [
-        "Solar"
-      ],
-      "capacityMW": 298,
-      "geocoding": {
-        "provider": "ArcGIS",
-        "query": "Bowie County, Texas, United States",
-        "matchAddress": "Bowie County, Texas",
-        "score": 100,
-        "precision": "locality/county; exact project parcel not verified"
-      },
-      "pinId": 9321,
-      "pinUrl": "https://www.chronopin.com/pin/9321",
-      "sourceUrl": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/",
-      "facts": "RWE’s June 11, 2026 release describes Rabbit’s Foot as a 298 MWac solar project in Bowie County. Onsite construction began earlier in 2026, Meta signed a long-term power-purchase agreement, and commercial operation is targeted by the end of 2027. This is a planned generation rating, not delivered power."
-    },
-    {
-      "key": "supplement-th-wharton",
-      "name": "T.H. Wharton new gas peaker units — Houston",
-      "country": "United States",
-      "status": "Operational",
-      "types": [
-        "Natural gas"
-      ],
-      "capacityMW": 456,
-      "geocoding": {
-        "provider": "EIA August 2026",
-        "precision": "reported existing plant point; not a verified new-unit entrance"
-      },
-      "pinId": 9323,
-      "pinUrl": "https://www.chronopin.com/pin/9323",
-      "sourceUrl": "https://www.nrg.com/en/insights/innovation/powering-texas-new-nrg-peaker-units-bring-needed-power-to-texans",
-      "facts": "NRG confirms its two new simple-cycle gas units at T.H. Wharton reached commercial operation May 26, 2026. The operator article describes a combined 456 MW nameplate rating; its quarterly results use a 415 MW project figure. These are different published ratings, not two separate additions. Older Wharton units are excluded from the new-project capacity."
-    }
-  ],
-  "standby": {
-    "standby-54813": {
-      "pinId": 9324,
-      "plantId": 54813,
-      "name": "Shepherd Center",
-      "country": "United States",
-      "capacityMW": 3.8,
-      "units": [
-        {
-          "Entity ID": 17069,
-          "Entity Name": "Shepherd Center",
-          "Plant ID": 54813,
-          "Plant Name": "Shepherd Center",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "GA",
-          "County": "Fulton",
-          "Balancing Authority Code": "SOCO",
-          "Sector": "IPP Non-CHP",
-          "Generator ID": "8",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 3.8,
-          "Net Summer Capacity (MW)": 3.8,
-          "Net Winter Capacity (MW)": 3.8,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 7,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 33.8111,
-          "Longitude": -84.3928
-        }
-      ]
-    },
-    "standby-62174": {
-      "pinId": 9325,
-      "plantId": 62174,
-      "name": "Maimonides Medical Center",
-      "country": "United States",
-      "capacityMW": 0.5,
-      "units": [
-        {
-          "Entity ID": 61690,
-          "Entity Name": "Maimonides Medical Center",
-          "Plant ID": 62174,
-          "Plant Name": "Maimonides Medical Center",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Kings",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "CN500",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 0.5,
-          "Net Summer Capacity (MW)": 0.5,
-          "Net Winter Capacity (MW)": 0.5,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 12,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 40.639538,
-          "Longitude": -73.99883
-        }
-      ]
-    },
-    "standby-62423": {
-      "pinId": 9326,
-      "plantId": 62423,
-      "name": "Regeneron Pharmaceuticals Inc.",
-      "country": "United States",
-      "capacityMW": 9.5,
-      "units": [
-        {
-          "Entity ID": 61948,
-          "Entity Name": "Regeneron Pharmaceuticals Inc.",
-          "Plant ID": 62423,
-          "Plant Name": "Regeneron Pharmaceuticals Inc.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Westchester",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "775G1",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 2,
-          "Net Summer Capacity (MW)": 2,
-          "Net Winter Capacity (MW)": 2,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 5,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 41.07875,
-          "Longitude": -73.82227
-        },
-        {
-          "Entity ID": 61948,
-          "Entity Name": "Regeneron Pharmaceuticals Inc.",
-          "Plant ID": 62423,
-          "Plant Name": "Regeneron Pharmaceuticals Inc.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Westchester",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "775G2",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 2,
-          "Net Summer Capacity (MW)": 2,
-          "Net Winter Capacity (MW)": 2,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 5,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 41.07875,
-          "Longitude": -73.82227
-        },
-        {
-          "Entity ID": 61948,
-          "Entity Name": "Regeneron Pharmaceuticals Inc.",
-          "Plant ID": 62423,
-          "Plant Name": "Regeneron Pharmaceuticals Inc.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Westchester",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "899G1",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 2.5,
-          "Net Summer Capacity (MW)": 2.5,
-          "Net Winter Capacity (MW)": 2.5,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 3,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 41.07875,
-          "Longitude": -73.82227
-        },
-        {
-          "Entity ID": 61948,
-          "Entity Name": "Regeneron Pharmaceuticals Inc.",
-          "Plant ID": 62423,
-          "Plant Name": "Regeneron Pharmaceuticals Inc.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Westchester",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "MBLG1",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 1.5,
-          "Net Summer Capacity (MW)": 1.5,
-          "Net Winter Capacity (MW)": 1.5,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 7,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 41.07875,
-          "Longitude": -73.82227
-        },
-        {
-          "Entity ID": 61948,
-          "Entity Name": "Regeneron Pharmaceuticals Inc.",
-          "Plant ID": 62423,
-          "Plant Name": "Regeneron Pharmaceuticals Inc.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Westchester",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "MBLG2",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 1.5,
-          "Net Summer Capacity (MW)": 1.5,
-          "Net Winter Capacity (MW)": 1.5,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 7,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 41.07875,
-          "Longitude": -73.82227
-        }
-      ]
-    },
-    "standby-62447": {
-      "pinId": 9327,
-      "plantId": 62447,
-      "name": "Mount Sinai South Nassau Hospital",
-      "country": "United States",
-      "capacityMW": 7.8,
-      "units": [
-        {
-          "Entity ID": 61956,
-          "Entity Name": "Mount Sinai South Nassau Hospital",
-          "Plant ID": 62447,
-          "Plant Name": "Mount Sinai South Nassau Hospital",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Nassau",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "5",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 3.9,
-          "Net Summer Capacity (MW)": 3.9,
-          "Net Winter Capacity (MW)": 3.9,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 3,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 40.651614,
-          "Longitude": -73.62993
-        },
-        {
-          "Entity ID": 61956,
-          "Entity Name": "Mount Sinai South Nassau Hospital",
-          "Plant ID": 62447,
-          "Plant Name": "Mount Sinai South Nassau Hospital",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Nassau",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "6",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 3.9,
-          "Net Summer Capacity (MW)": 3.9,
-          "Net Winter Capacity (MW)": 3.9,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 3,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 40.651614,
-          "Longitude": -73.62993
-        }
-      ]
-    },
-    "standby-63644": {
-      "pinId": 9328,
-      "plantId": 63644,
-      "name": "Wyckoff Heights Medical Center",
-      "country": "United States",
-      "capacityMW": 0.5,
-      "units": [
-        {
-          "Entity ID": 63348,
-          "Entity Name": "Wyckoff Heights Medical Center",
-          "Plant ID": 63644,
-          "Plant Name": "Wyckoff Heights Medical Center",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "NY",
-          "County": "Kings",
-          "Balancing Authority Code": "NYIS",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "ST450",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 0.5,
-          "Net Summer Capacity (MW)": 0.8,
-          "Net Winter Capacity (MW)": 0.8,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 12,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 40.70412,
-          "Longitude": -73.91773
-        }
-      ]
-    },
-    "standby-69363": {
-      "pinId": 9329,
-      "plantId": 69363,
-      "name": "CoreSite Real Estate SV9, L.P.",
-      "country": "United States",
-      "capacityMW": 14.0,
-      "units": [
-        {
-          "Entity ID": 67451,
-          "Entity Name": "CoreSite Real Estate SV9, L.P.",
-          "Plant ID": 69363,
-          "Plant Name": "CoreSite Real Estate SV9, L.P.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "CA",
-          "County": "Santa Clara",
-          "Balancing Authority Code": "CISO",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "G-6",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 3.5,
-          "Net Summer Capacity (MW)": 3.5,
-          "Net Winter Capacity (MW)": 3.5,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 8,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 37.3749,
-          "Longitude": -121.9692
-        },
-        {
-          "Entity ID": 67451,
-          "Entity Name": "CoreSite Real Estate SV9, L.P.",
-          "Plant ID": 69363,
-          "Plant Name": "CoreSite Real Estate SV9, L.P.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "CA",
-          "County": "Santa Clara",
-          "Balancing Authority Code": "CISO",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "G-7",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 3.5,
-          "Net Summer Capacity (MW)": 3.5,
-          "Net Winter Capacity (MW)": 3.5,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 8,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 37.3749,
-          "Longitude": -121.9692
-        },
-        {
-          "Entity ID": 67451,
-          "Entity Name": "CoreSite Real Estate SV9, L.P.",
-          "Plant ID": 69363,
-          "Plant Name": "CoreSite Real Estate SV9, L.P.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "CA",
-          "County": "Santa Clara",
-          "Balancing Authority Code": "CISO",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "G-8",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 3.5,
-          "Net Summer Capacity (MW)": 3.5,
-          "Net Winter Capacity (MW)": 3.5,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 8,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 37.3749,
-          "Longitude": -121.9692
-        },
-        {
-          "Entity ID": 67451,
-          "Entity Name": "CoreSite Real Estate SV9, L.P.",
-          "Plant ID": 69363,
-          "Plant Name": "CoreSite Real Estate SV9, L.P.",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "CA",
-          "County": "Santa Clara",
-          "Balancing Authority Code": "CISO",
-          "Sector": "Commercial Non-CHP",
-          "Generator ID": "G-9",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 3.5,
-          "Net Summer Capacity (MW)": 3.5,
-          "Net Winter Capacity (MW)": 3.5,
-          "Technology": "Petroleum Liquids",
-          "Energy Source Code": "DFO",
-          "Prime Mover Code": "IC",
-          "Operating Month": 8,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 37.3749,
-          "Longitude": -121.9692
-        }
-      ]
-    },
-    "standby-69725": {
-      "pinId": 9330,
-      "plantId": 69725,
-      "name": "Warroad Factory",
-      "country": "United States",
-      "capacityMW": 1.6,
-      "units": [
-        {
-          "Entity ID": 67623,
-          "Entity Name": "Marvin",
-          "Plant ID": 69725,
-          "Plant Name": "Warroad Factory",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "MN",
-          "County": "Roseau",
-          "Balancing Authority Code": "MISO",
-          "Sector": "Industrial Non-CHP",
-          "Generator ID": "4E",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 0.8,
-          "Net Summer Capacity (MW)": 0.8,
-          "Net Winter Capacity (MW)": 0.8,
-          "Technology": "Natural Gas Internal Combustion Engine",
-          "Energy Source Code": "NG",
-          "Prime Mover Code": "IC",
-          "Operating Month": 8,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 48.916352,
-          "Longitude": -95.32646
-        },
-        {
-          "Entity ID": 67623,
-          "Entity Name": "Marvin",
-          "Plant ID": 69725,
-          "Plant Name": "Warroad Factory",
-          "Google Map": "Map",
-          "Bing Map": "Map",
-          "Plant State": "MN",
-          "County": "Roseau",
-          "Balancing Authority Code": "MISO",
-          "Sector": "Industrial Non-CHP",
-          "Generator ID": "4W",
-          "Unit Code": "",
-          "Nameplate Capacity (MW)": 0.8,
-          "Net Summer Capacity (MW)": 0.8,
-          "Net Winter Capacity (MW)": 0.8,
-          "Technology": "Natural Gas Internal Combustion Engine",
-          "Energy Source Code": "NG",
-          "Prime Mover Code": "IC",
-          "Operating Month": 8,
-          "Operating Year": 2025,
-          "Planned Retirement Month": " ",
-          "Planned Retirement Year": " ",
-          "Status": "(SB) Standby/Backup: available for service but not normally used",
-          "Nameplate Energy Capacity (MWh)": " ",
-          "DC Net Capacity (MW)": " ",
-          "Planned Derate Year": " ",
-          "Planned Derate Month": " ",
-          "Planned Derate of Summer Capacity (MW)": " ",
-          "Planned Uprate Year": " ",
-          "Planned Uprate Month": " ",
-          "Planned Uprate of Summer Capacity (MW)": " ",
-          "Planned Repower Year": " ",
-          "Planned Repower Month": " ",
-          "Other Modification Year": " ",
-          "Other Modification Month": " ",
-          "Latitude": 48.916352,
-          "Longitude": -95.32646
-        }
-      ]
-    }
+  "additionalCostGaps": {
+    "Rabbit’s Foot": "Physical construction verified, but no qualifying published project-specific construction/capital cost verified.",
+    "T.H. Wharton": "Recent operation verified; TEF loan amount is financing, not a construction budget.",
+    "Seven standby/backup additions": "Recent EIA standby installations verified, but no qualifying published project costs verified.",
+    "Yates": "Official construction/output evidence found for three turbines. Published budget documents inspected were redacted; combined capital spending with batteries was not treated as its project budget.",
+    "Palisades": "Physical restart refurbishment/testing verified; loan/state funding is not a complete restart budget. No qualifying paired project cost was verified.",
+    "Hermes 2": "Physical electricity-producing construction verified; programme funding and Hermes 1 thermal figures were not treated as Hermes 2 costs/output.",
+    "Fervo Cape": "Physical first-block activity verified; financing or wider-project funding was not allocated to the included phase."
   },
   "photos": [
     {
@@ -1248,36 +1415,6 @@
       "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-cfb82f4bf3e482fb2d7d.webp",
       "sha256": "cfb82f4bf3e482fb2d7dac5fa4fe7d09b967e3d105469c6f0900a5c9600d1633",
       "bytes": 513532
-    },
-    {
-      "key": "gem-L100001047964",
-      "sourceUrl": "https://cdn.prod.website-files.com/69c2ac9b7806bfa302dc5820/69e269feb0f7010fb881b20d_H2%20Groundbreaking_Dig_1920%20x%201080.jpg",
-      "sourcePage": "https://www.kairospower.com/updates/kairos-power-breaks-ground-on-hermes-2-demonstration-plant",
-      "credit": "Kairos Power; photographer not named on source page",
-      "caption": "Hermes 2 groundbreaking, April 17, 2026. Operator event photograph.",
-      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100001047964-db2c3e23cf642a20adf8.webp",
-      "sha256": "db2c3e23cf642a20adf87050f0f52db09dbf6cf87866d0d03a6e7723718cbab7",
-      "bytes": 417056
-    },
-    {
-      "key": "gem-L100001047964",
-      "sourceUrl": "https://cdn.prod.website-files.com/69c2ac9b7806bfa302dc5820/69e26a5b95ce584b1508c28f_H2%20Groundbreaking_Group_800x600.jpg",
-      "sourcePage": "https://www.kairospower.com/updates/kairos-power-breaks-ground-on-hermes-2-demonstration-plant",
-      "credit": "Kairos Power; photographer not named on source page",
-      "caption": "Group photograph at the Hermes 2 groundbreaking, published by Kairos Power.",
-      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100001047964-fc281fcb28fcde3a3b8b.webp",
-      "sha256": "fc281fcb28fcde3a3b8b8c8796e3ce7ea3854fe2641dd380f5cadb515554bc2d",
-      "bytes": 134982
-    },
-    {
-      "key": "eia-68068",
-      "sourceUrl": "https://fervoenergy.com/wp-content/uploads/2026/09/cape_phase1_8.4.26_3-e1790116044727.png",
-      "sourcePage": "https://fervoenergy.com/fervo-energy-achieves-first-power-at-cape-station-a-landmark-moment-for-the-future-of-enhanced-geothermal-systems/",
-      "credit": "Fervo Energy; photographer not named on source page",
-      "caption": "Cape Station phase I image distributed with Fervo’s September 24, 2026 first-power announcement. The announcement covers first power from one GeoBlock, not completion of the entire development.",
-      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68068-0d997bb9beccb73cb221.webp",
-      "sha256": "0d997bb9beccb73cb221fbc5b5571f9f10733ef6aa99ab36c879226acba0dc7a",
-      "bytes": 401754
     },
     {
       "key": "eia-68443",
@@ -1309,5 +1446,16 @@
       "sha256": "4c13a49f2fbfdd65f87cd73524dae09bc6096d7fe53f02776adbce33bbfe5818",
       "bytes": 51376
     }
-  ]
+  ],
+  "verification": {
+    "verifiedAtUTC": "2026-10-12T03:46:52Z",
+    "qualifiedProjectPins": 37,
+    "USProjectPins": 17,
+    "countryAreaLabels": 18,
+    "worldwidePublicMapExactMatch": true,
+    "USPublicMapExactMatch": true,
+    "excludedImportIdsVerifiedHidden": 6228,
+    "activeImportCohortMatchesQualifiedPins": true,
+    "photosAfterContentSaveVerified": true
+  }
 }

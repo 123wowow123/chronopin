@@ -1,9 +1,11 @@
 // Rejects on a non-2xx status, so callers' catch paths still fire.
 export async function fetchJson<T = any>(
   url: string,
-  { method = 'GET', body }: { method?: string; body?: unknown } = {},
+  { method = 'GET', body, timeoutMs }: { method?: string; body?: unknown; timeoutMs?: number } = {},
 ): Promise<T> {
   const init: RequestInit = { method };
+  // A stalled service then fails the call instead of holding the page open.
+  if (timeoutMs) init.signal = AbortSignal.timeout(timeoutMs);
   if (body !== undefined) {
     init.body = JSON.stringify(body);
     init.headers = { 'Content-Type': 'application/json' };

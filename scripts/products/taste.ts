@@ -6,6 +6,7 @@
 //
 //   npm run products:taste                  what would be stored
 //   npm run products:taste -- --apply       store them in this database
+//   npm run products:taste -- --file f.json  use another list (ids of the database it is run against)
 //   npm run products:taste -- --out t.json  write [{pinId, body}] to PUT to another database's
 //                                           /api/pins/:id/taste (prod: see login-from-env-local)
 
@@ -15,12 +16,12 @@ import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
 import { saveTaste, tasteProblem } from '@/server/model/pinTaste';
 
-const { values: flags } = parseArgs({ options: { apply: { type: 'boolean', default: false }, out: { type: 'string' } } });
+const { values: flags } = parseArgs({ options: { apply: { type: 'boolean', default: false }, out: { type: 'string' }, file: { type: 'string' } } });
 
 type Entry = Record<string, unknown> & { pinId: number };
 
 async function run() {
-  const entries: Entry[] = JSON.parse(readFileSync(new URL('./taste.json', import.meta.url), 'utf8'));
+  const entries: Entry[] = JSON.parse(readFileSync(flags.file ? flags.file : new URL('./taste.json', import.meta.url), 'utf8'));
   const posts: { pinId: number; body: Record<string, unknown> }[] = [];
   let stored = 0;
   let kept = 0;

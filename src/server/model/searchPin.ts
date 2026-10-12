@@ -8,9 +8,13 @@ import BasePins from './basePins';
 import Pins from './pins';
 import type User from './user';
 
-function faissRequest<T = any>(method: string, path: string, body?: unknown) {
-  return fetchJson<T>(`${config.faiss.serviceUrl}/faiss${path}`, { method, body });
+function faissRequest<T = any>(method: string, path: string, body?: unknown, timeoutMs?: number) {
+  return fetchJson<T>(`${config.faiss.serviceUrl}/faiss${path}`, { method, body, timeoutMs });
 }
+
+// A search is read while a page renders, so a stalled service must not hold it
+// open (a pin page waited ~200 s on "More like this", 2026-10-11).
+const SEARCH_TIMEOUT_MS = 8000;
 
 type FaissSearchResult = { res: { index: number; match: number }[]; took?: number };
 
@@ -173,5 +177,5 @@ export class SearchPins extends BasePins<SearchPin> {
 
 function semanticSearch(searchText: string, numberOfResults: number, model: SearchModel = 'en') {
   const index = model === 'en' ? '' : `&model=${model}`;
-  return faissRequest<FaissSearchResult>('GET', `/search?q=${encodeURIComponent(searchText)}&k=${numberOfResults}${index}`);
+  return faissRequest<FaissSearchResult>('GET', `/search?q=${encodeURIComponent(searchText)}&k=${numberOfResults}${index}`, undefined, SEARCH_TIMEOUT_MS);
 }

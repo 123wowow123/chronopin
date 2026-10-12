@@ -19,6 +19,9 @@ import type { DayBound, DelayBound, PersonAxisBound, RatingBound } from '../util
 const CATEGORIES = `ARRAY(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id")`;
 const MAIN_CATEGORY = `(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id" LIMIT 1)`;
 
+// A tag on more pins than this says what kind of pin it is, not what it is like.
+const RELATED_MAX_TAG_PINS = 1500;
+
 // A pin on the Curated pages: a product with a ProductBlurb, or a Top
 // Restaurants one. tag:Curated searches it (the card's CURATED pill).
 const CURATED = `(EXISTS (SELECT 1 FROM "ProductBlurb" AS "b" WHERE "b"."pinId" = "Pin"."id") OR EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "Pin"."id" AND "t"."name" = 'Top Restaurants'))`;
@@ -164,6 +167,44 @@ export default class Pins extends BasePins<Pin> {
 
   static queryPinByIds(pins: BasePins) {
     return queryPinByIds(pins.getAllIds()).then((res) => new Pins(res));
+  }
+
+  // The pins most like this one, best first, from what they share with it: tags
+  // (a rare tag counts for more than a common one, and a tag on over
+  // RELATED_MAX_TAG_PINS pins is a category, not a likeness) and its company.
+  // Ties go to the nearer date. Indexed reads on the tag cache, a few ms;
+  // semantic search is not used, since its service can stall a page for minutes.
+  static async relatedIds(pinId: number, limit: number): Promise<number[]> {
+    const rows = await db.query<{ id: number }>(
+      `
+      WITH "me" AS (
+        SELECT "companyId", "utcStartDateTime" FROM "Pin" WHERE "id" = $1
+      ),
+      "shared" AS (
+        SELECT "t"."name", count(*) AS "n"
+        FROM "PinTagCache" AS "t"
+        WHERE "t"."name" IN (SELECT "name" FROM "PinTagCache" WHERE "pinId" = $1)
+        GROUP BY "t"."name"
+        HAVING count(*) <= $3
+      ),
+      "scored" AS (
+        SELECT "t"."pinId" AS "id", sum(1.0 / ln(1 + "s"."n")) AS "score"
+        FROM "PinTagCache" AS "t" JOIN "shared" AS "s" ON "s"."name" = "t"."name"
+        WHERE "t"."pinId" <> $1
+        GROUP BY "t"."pinId"
+        UNION ALL
+        SELECT "p"."id", 2.0 FROM "Pin" AS "p", "me"
+        WHERE "me"."companyId" IS NOT NULL AND "p"."companyId" = "me"."companyId" AND "p"."id" <> $1
+      )
+      SELECT "p"."id"
+      FROM (SELECT "id", sum("score") AS "score" FROM "scored" GROUP BY "id") AS "r"
+        JOIN "Pin" AS "p" ON "p"."id" = "r"."id", "me"
+      WHERE "p"."utcDeletedDateTime" IS NULL
+      ORDER BY "r"."score" DESC, abs(extract(epoch FROM "p"."utcStartDateTime" - "me"."utcStartDateTime")), "p"."id"
+      LIMIT $2`,
+      [pinId, limit, RELATED_MAX_TAG_PINS],
+    );
+    return rows.map((r) => r.id);
   }
 
   static queryByIds(ids: number[]) {

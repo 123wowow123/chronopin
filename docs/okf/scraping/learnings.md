@@ -13,6 +13,22 @@ After **every** scraping job (a scrape, a backfill, a batch of pins, a reference
 
 Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (owner corrections and confirmed approaches) and `* **Changed**` (which page was updated).
 
+## 2026-10-11 - Maker-link backfill for the /products tiles
+
+* **Learned:** Of the 117 pins the /products shelves showed on prod, 59 had no maker link (only Amazon or nothing). Four research agents (15 pins each) found the maker's page for 57; one more by hand. Gaps: **13915** Canopy Foods (the Tasmanian site is probably the same business but the award coverage never links it), **13936** Gelato World Tour Japan (organiser Carpigiani's Japan page does not mention the tour). Weak matches kept as brand/collection pages: Skittles Gummy Crystals (no product page yet), Fini Minhocas, Swensen's High Protein, Peters Frosty Fruits mango, Santini x Zumub, Carling Black Label (Molson Coors launch post), SIAL Paris (organiser site).
+* **Learned:** Agents' WebFetch gets 403/blank from many makers (Sony, Marvel, Rolex, Tudor, Absolut, Bandai, Haagen-Dazs JP, Helados Holanda, Titan, Kodansha, SIAL, Santini); all were confirmed in Chrome with `get_page_text`. Roku's page is JS-only (no text), so it is trusted on the URL. The chrome extension refused marvel.com once and allowed it on retry.
+* **Learned:** `POST /api/pins/:id/merchants` rejects `http://` URLs (400); upgrade to https first (br31.jp serves both).
+* **Feedback:** Owner: "do this for other product landing page tile and pins". Check every shelf tile, not only the pin that was reported.
+* **Changed:** 58 Merchant rows posted to prod (labels are the brand or publisher). Find the gap list again with the prod `/products` page: pins whose merchants are only amazon/ebay/mercari/facebook/stockx/goat.
+
+## 2026-10-11 - Award and product-news pins need the maker's own buy link
+
+* **Learned:** Pin 13910 (Graeter's Backstretch Bourbon Cherry, Dairy Foods Product of the Year) was scraped from trade press with no `Merchant` row, so the page had no button to the maker. The maker's seasonal page (`graeters.com/pages/derby`) is a landing page, not a product-markup page, so the automatic brand-listing match can miss it.
+* **Feedback:** Owner: "there needs to be a buy link to its own website ... add this to notes when scraping". Every pin about a sellable product (awards, launches, reviews, roundup items) gets a button to the maker's own page for that product or its seasonal/collection page, found by checking the company site, not only the article's links.
+* **Changed:** Added the `Graeter's` merchant to prod pin 13910 with `POST /api/pins/:id/merchants`. Rule folded into [Enrichment](enrichment.md#the-makers-own-listing).
+* **Learned (same day, pin 13934 Lick Gelato):** a maker's homepage can be a valid buy link when the pin is about the brand (a regional award) and no single product page exists. `lickgelato.com` returns **403 to plain `curl`/fetch**, so a script cannot verify it.
+* **Feedback:** Owner: "use browser if cannot open by script". When a maker's site refuses scripts, open it in Chrome (`mcp__claude-in-chrome__*`, a new tab, close it after) and read it with `get_page_text` before posting the link; do not post it unchecked. Chrome loaded lickgelato.com as the real Italian-style gelato maker (Mourne, NI). Merchant 3322 added to prod pin 13934.
+
 ## 2026-10-11 - Product guides need individual pins and native taste radars
 
 * **Learned:** `PinTaste` stores one taste profile per pin. Multi-product taste tables do not produce the individual native radar widgets the owner expects.
