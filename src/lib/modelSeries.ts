@@ -39,6 +39,11 @@ const PATTERNS: Pattern[] = [
   { re: new RegExp(String.raw`\bllama[- ]?${VERSION}\b`), read: (m) => ({ family: 'llama', version: m[1] }) },
   { re: new RegExp(String.raw`\bgrok[- ]?${VERSION}\b`), read: (m) => ({ family: 'grok', version: m[1] }) },
   { re: new RegExp(String.raw`\bdeepseek[- ]?(v|r)${VERSION}\b`), read: (m) => ({ family: `deepseek ${m[1]}`, version: m[2] }) },
+  // Qwen3.8-Max, Qwen3-235B-A22B-Thinking-2507, Qwen2.5-Plus. Max, Plus, VL,
+  // Next and the open-weight sizes are one line: the family has moved by
+  // generation (2.5, 3, 3.5 ... 3.8), so the chain is its generations in the
+  // order they shipped. "QwenWork" and the bare "Qwen-Plus" have no number.
+  { re: new RegExp(String.raw`\bqwen[- ]?${VERSION}\b`), read: (m) => ({ family: 'qwen', version: m[1] }) },
 ];
 
 // Every model of a known line the title names, in order: "OpenAI o3 and

@@ -17,6 +17,9 @@ describe('modelRelease', () => {
     ['OpenAI o3 and o4-mini Released', 'o', [3], 'o 3'],
     ['OpenAI Releases gpt-oss-120b and gpt-oss-20b', 'gpt-oss', [0], 'gpt-oss 0'],
     ['Gemini 2.5 Pro Released', 'gemini pro', [2, 5], 'gemini 2.5 pro'],
+    ['Qwen3.8-Max Released', 'qwen', [3, 8], 'qwen 3.8'],
+    ['Qwen3-235B-A22B-Thinking-2507 Released', 'qwen', [3], 'qwen 3'],
+    ['Qwen-Plus (Qwen2.5-Plus, qwen-plus-2025-01-25) Released', 'qwen', [2, 5], 'qwen 2.5'],
   ])('%s', (title, line, version, model) => {
     expect(modelRelease(title)).toEqual({ line, version, model });
   });
