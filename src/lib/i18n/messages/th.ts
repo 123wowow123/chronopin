@@ -99,7 +99,7 @@ const th: Messages = {
     pinsMatching: 'หมุดที่ตรงกับ {query}',
     pinCount: '{count} หมุด',
     searchPins: 'ค้นหาหมุด',
-    sortResultsBy: 'เรียงผลลัพธ์ตาม',
+    sortResultsBy: 'เรียงลำดับ',
     sortBy: 'เรียงลำดับ',
     sortRelevance: 'ความเกี่ยวข้อง',
     sortDate: 'วันที่',

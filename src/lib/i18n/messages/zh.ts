@@ -100,7 +100,7 @@ const zh: Messages = {
     pinsMatching: '与“{query}”匹配的图钉',
     pinCount: '{count} 个图钉',
     searchPins: '搜索图钉',
-    sortResultsBy: '结果排序方式',
+    sortResultsBy: '排序',
     sortBy: '排序',
     sortRelevance: '相关度',
     sortDate: '日期',

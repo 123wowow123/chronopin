@@ -100,7 +100,7 @@ const id: Messages = {
     pinsMatching: 'Pin yang cocok dengan {query}',
     pinCount: '{count} pin',
     searchPins: 'Cari pin',
-    sortResultsBy: 'Urutkan hasil menurut',
+    sortResultsBy: 'Urutkan',
     sortBy: 'Urutkan',
     sortRelevance: 'Relevansi',
     sortDate: 'Tanggal',

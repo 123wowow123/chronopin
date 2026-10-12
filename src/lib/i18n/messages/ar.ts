@@ -114,7 +114,7 @@ const ar: Messages = {
       other: '{count} دبوس',
     },
     searchPins: 'البحث في الدبابيس',
-    sortResultsBy: 'ترتيب النتائج حسب',
+    sortResultsBy: 'ترتيب',
     sortBy: 'ترتيب',
     sortRelevance: 'الأكثر صلة',
     sortDate: 'التاريخ',

@@ -100,7 +100,7 @@ const ms: Messages = {
     pinsMatching: 'Pin yang sepadan dengan {query}',
     pinCount: '{count} pin',
     searchPins: 'Cari pin',
-    sortResultsBy: 'Isih hasil mengikut',
+    sortResultsBy: 'Isih',
     sortBy: 'Isih',
     sortRelevance: 'Kaitan',
     sortDate: 'Tarikh',

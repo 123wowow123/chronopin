@@ -106,7 +106,7 @@ const ru: Messages = {
     pinsMatching: 'Пины по запросу {query}',
     pinCount: { one: '{count} пин', few: '{count} пина', many: '{count} пинов', other: '{count} пина' },
     searchPins: 'Искать пины',
-    sortResultsBy: 'Сортировать результаты по',
+    sortResultsBy: 'Сортировка',
     sortBy: 'Сортировка',
     sortRelevance: 'Релевантность',
     sortDate: 'Дата',

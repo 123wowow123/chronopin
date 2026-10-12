@@ -99,7 +99,7 @@ const vi: Messages = {
     pinsMatching: 'Ghim khớp với {query}',
     pinCount: '{count} ghim',
     searchPins: 'Tìm ghim',
-    sortResultsBy: 'Sắp xếp kết quả theo',
+    sortResultsBy: 'Sắp xếp',
     sortBy: 'Sắp xếp',
     sortRelevance: 'Mức liên quan',
     sortDate: 'Ngày',

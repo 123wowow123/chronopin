@@ -100,7 +100,7 @@ const pt: Messages = {
     pinsMatching: 'Pins que correspondem a {query}',
     pinCount: { one: '{count} pin', other: '{count} pins' },
     searchPins: 'Buscar pins',
-    sortResultsBy: 'Ordenar resultados por',
+    sortResultsBy: 'Ordenar',
     sortBy: 'Ordenar',
     sortRelevance: 'Relevância',
     sortDate: 'Data',

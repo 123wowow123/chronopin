@@ -99,7 +99,7 @@ const fr: Messages = {
     pinsMatching: 'Épingles correspondant à {query}',
     pinCount: { one: '{count} épingle', other: '{count} épingles' },
     searchPins: 'Rechercher des épingles',
-    sortResultsBy: 'Trier les résultats par',
+    sortResultsBy: 'Trier',
     sortBy: 'Trier',
     sortRelevance: 'Pertinence',
     sortDate: 'Date',

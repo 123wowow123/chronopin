@@ -99,7 +99,7 @@ const ko: Messages = {
     pinsMatching: '“{query}”와(과) 일치하는 핀',
     pinCount: '핀 {count}개',
     searchPins: '핀 검색',
-    sortResultsBy: '결과 정렬 기준',
+    sortResultsBy: '정렬',
     sortBy: '정렬',
     sortRelevance: '관련도',
     sortDate: '날짜',

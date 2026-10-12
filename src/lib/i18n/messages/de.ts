@@ -99,7 +99,7 @@ const de: Messages = {
     pinsMatching: 'Pins zu {query}',
     pinCount: { one: '{count} Pin', other: '{count} Pins' },
     searchPins: 'Pins durchsuchen',
-    sortResultsBy: 'Ergebnisse sortieren nach',
+    sortResultsBy: 'Sortieren',
     sortBy: 'Sortieren',
     sortRelevance: 'Relevanz',
     sortDate: 'Datum',

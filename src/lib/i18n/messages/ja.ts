@@ -99,7 +99,7 @@ const ja: Messages = {
     pinsMatching: '「{query}」に一致するピン',
     pinCount: 'ピン{count}件',
     searchPins: 'ピンを検索',
-    sortResultsBy: '結果の並べ替え',
+    sortResultsBy: '並べ替え',
     sortBy: '並べ替え',
     sortRelevance: '関連度',
     sortDate: '日付',

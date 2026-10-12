@@ -99,7 +99,7 @@ const es: Messages = {
     pinsMatching: 'Pines que coinciden con {query}',
     pinCount: { one: '{count} pin', other: '{count} pines' },
     searchPins: 'Buscar pines',
-    sortResultsBy: 'Ordenar resultados por',
+    sortResultsBy: 'Ordenar',
     sortBy: 'Ordenar',
     sortRelevance: 'Relevancia',
     sortDate: 'Fecha',

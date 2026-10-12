@@ -100,7 +100,7 @@ const en = {
     pinsMatching: 'Pins matching {query}',
     pinCount: { one: '{count} pin', other: '{count} pins' },
     searchPins: 'Search pins',
-    sortResultsBy: 'Sort results by',
+    sortResultsBy: 'Sort',
     sortBy: 'Sort',
     sortRelevance: 'Relevance',
     sortDate: 'Date',
