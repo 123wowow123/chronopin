@@ -420,8 +420,18 @@ chinese ev car news and events and new model releases
 add landing page for best ev and gasoline car
 
 
-for people pages, add trading data and etc like these pages. use browser to view if needed.
+For people pages, add trading data and etc like these pages. use browser to view if needed. Should be able to subscribe to stock trades via notification on the profile page
 
 https://www.quiverquant.com/congresstrading/politician/Nancy%20Pelosi-P000197/opponents
 
 https://www.opensecrets.org/profiles/mike-johnson/us_congress/elections?mpid=1055439
+
+
+https://x.com/INArteCarloDoss/status/2109620584401277228/photo/1
+
+
+
+
+add AI buildout on map
+
+https://cleanview.co/

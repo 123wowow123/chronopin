@@ -24,6 +24,15 @@ describe('refineQuery', () => {
   });
 });
 
+describe('rubric year pill', () => {
+  it('adds the year beside the axis the search already has, once', () => {
+    expect(refineQuery('', 'rubric', '2026')).toBe('rubric:2026');
+    expect(refineQuery('carperf:range', 'rubric', '2026')).toBe('carperf:range rubric:2026');
+    expect(refineQuery('carperf:range rubric:2026', 'rubric', '2026')).toBe('carperf:range rubric:2026');
+    expect(toggleTerm('carperf:range rubric:2026', 'rubric', '2026')).toBe('carperf:range');
+  });
+});
+
 describe('removeTerm', () => {
   it('removes every form the server accepts, keeping the rest of the query', () => {
     expect(removeTerm('rocket category:"Astronomy" company:NASA', 'category', 'Astronomy')).toBe('rocket company:NASA');

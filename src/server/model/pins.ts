@@ -13,6 +13,8 @@ import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
+import { isRubricYear } from '@/lib/rubricYear';
+import { rubricYearClause } from '../util/rubricSearch';
 import type { CarPerfTerm, DayBound, DelayBound, PersonAxisBound, RatingBound, TasteTerm } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
@@ -47,6 +49,7 @@ export type PinSearchFilters = {
   rated: string[];
   tastes: TasteTerm[];
   carPerfs: CarPerfTerm[];
+  rubricYears: number[];
   people: string[];
   personAxes: PersonAxisBound[];
   ratings: RatingBound[];
@@ -899,7 +902,7 @@ const DELAY_AMOUNT: Record<DelayBound['unit'], string> = {
 // the matches case-insensitive. With free-text hits, only those pins are
 // candidates and each scores as the search service said; without, every pin
 // scores 1.
-function searchClauses(filter: SearchFilter) {
+export function searchClauses(filter: SearchFilter) {
   const params: unknown[] = [];
   const add = (value: unknown) => {
     params.push(value);
@@ -1031,11 +1034,23 @@ function searchClauses(filter: SearchFilter) {
   // carperf: a car whose performance rubric scores every one of these axes
   // strongly (a null axis, no published spec, never does). The axis names are
   // CAR_PERF_KEYS, so they are safe as column names.
+  // rubric: a pin with an engineering rubric scored against any of these
+  // years' criteria (rubricYearClause: any rubric table). Beside carperf: the
+  // year is read off that same car rubric, so "carperf:range rubric:2026" is
+  // a car scoring range strongly under the 2026 criteria.
+  const years = filter.rubricYears.filter(isRubricYear);
+  const yearsParam = years.length ? add(years) : null;
+  let yearApplied = false;
   if (filter.carPerfs.length) {
     const scored = filter.carPerfs.filter((axis): axis is CarPerfAxis => axis !== 'any' && CAR_PERF_KEYS.includes(axis)).map((axis) => `"c"."${axis}" >= ${CAR_PERF_STRONG}`);
     if (!scored.length && filter.carPerfs.includes('any')) scored.push('TRUE');
+    if (yearsParam && scored.length) {
+      scored.push(`"c"."rubricYear" = ANY(${yearsParam}::integer[])`);
+      yearApplied = true;
+    }
     if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinCarPerf" AS "c" WHERE "c"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
   }
+  if (yearsParam && !yearApplied) where.push(rubricYearClause(yearsParam));
   // person: and the radar-axis bounds (misconduct:>3): a pin linked to a
   // person who is any of the names given and whose best score across their
   // life phases meets every bound. The axis names are OCTAGON_AXES, so they

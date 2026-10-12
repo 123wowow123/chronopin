@@ -67,6 +67,26 @@ describe('parseSearchQuery', () => {
     expect(parseSearchQuery('carperf:value').tastes).toEqual([]);
   });
 
+  it('reads rubric: years, leaving out anything that is not a criteria year', () => {
+    expect(parseSearchQuery('rubric:2026 rubric:2027 rubric:2026 "rubric:2028" rubric:\'2029\'').rubricYears).toEqual([2026, 2027, 2028, 2029]);
+    expect(parseSearchQuery('rubric:2019 rubric:2101 rubric:26 rubric:2026.5 rubric:abc rubric:').rubricYears).toEqual([]);
+    expect(parseSearchQuery('rubric:2020 rubric:2100').rubricYears).toEqual([2020, 2100]);
+    expect(hasFilters(parseSearchQuery('rubric:2026'))).toBe(true);
+    expect(hasFilters(parseSearchQuery('rubric:1999'))).toBe(false);
+  });
+
+  it('reads rubric: beside carperf: and free text, each in its own field', () => {
+    expect(parseSearchQuery('carperf:range rubric:2026 electric suv')).toMatchObject({ carPerfs: ['range'], rubricYears: [2026], tastes: [], text: 'electric suv' });
+    expect(parseSearchQuery('rubric:2026 carperf:any')).toMatchObject({ carPerfs: ['any'], rubricYears: [2026], text: '' });
+  });
+
+  it('writes rubric: as a pill term and reads it back', () => {
+    expect(splitSearchQuery('rubric:2026 sedan')).toEqual([
+      { kind: 'term', field: 'rubric', value: '2026', raw: 'rubric:2026' },
+      { kind: 'text', raw: ' sedan' },
+    ]);
+  });
+
   it('reads person: names and radar-axis bounds', () => {
     expect(parseSearchQuery('person:"Joe Biden" person:"joe biden"').people).toEqual(['Joe Biden']);
     expect(parseSearchQuery('misconduct:>3 wealth:2-4 senate').personAxes).toEqual([
@@ -103,6 +123,7 @@ describe('parseSearchQuery', () => {
       rated: [],
       tastes: [],
       carPerfs: [],
+      rubricYears: [],
       people: [],
       personAxes: [],
       ratings: [],

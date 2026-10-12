@@ -15,7 +15,8 @@ import { TasteRadar } from './TasteRadar';
 // of the page the figures came from, and the independent reviews it was
 // checked against are listed under it, as under the taste radar. The header
 // also says which year's criteria the scores were set against (rubricYear):
-// the anchors get tighter, so scores are only comparable within a year.
+// the anchors get tighter, so scores are only comparable within a year; the
+// year is a link to the pins scored against it (rubric:<year>).
 export function PinCarPerf({
   perf,
   t,
@@ -40,8 +41,7 @@ export function PinCarPerf({
         <RefineLink field="carperf" value="any" className="text-inherit hover:text-link hover:no-underline" title={t('pin.carPerf.showAll')}>
           {t('pin.carPerf.heading')}
         </RefineLink>
-        <span className="rounded-full bg-raised px-2 py-px text-[0.625rem] font-medium tracking-wide text-muted ring-1 ring-line ring-inset">{t('pin.carPerf.estimate')}</span>
-        <RubricYearPill label={t('pin.carPerf.rubricYear', { year })} />
+        <RubricYearPill year={year} label={t('pin.carPerf.rubricYear', { year })} title={t('pin.carPerf.rubricYearSearch', { year })} />
       </h2>
       <div className="surface rounded-lg px-3 py-2">
         <TasteRadar
