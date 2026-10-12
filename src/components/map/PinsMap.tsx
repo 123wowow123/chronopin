@@ -202,12 +202,17 @@ function popupDates(pin: MapPinJson): string {
 function popupContent(pin: MapPinJson) {
   const content = document.createElement('div');
   const href = localizeHere(pin.restaurantHref ?? pinPath(pin));
+  const dates = popupDates(pin);
+  // The price sits on the right of the date's row (alone, it still hugs the right).
+  const price = pin.price
+    ? `<span class="ml-auto font-medium tabular-nums ${pin.price < 0 ? 'text-danger' : 'text-success'}">${escapeHtml(money(pin.price, pin.priceCurrency))}</span>`
+    : pin.restaurantPriceRange && /^[$]{1,4}$/.test(pin.restaurantPriceRange)
+      ? `<span class="ml-auto font-medium tracking-wide text-success">${escapeHtml(pin.restaurantPriceRange)}</span>`
+      : '';
   content.innerHTML =
     `<div class="px-2.5 pt-1.5 pb-2"><a href="${escapeHtml(href)}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
-    `${pin.price ? `<div class="mt-1 font-medium tabular-nums ${pin.price < 0 ? 'text-danger' : 'text-success'}">${escapeHtml(money(pin.price, pin.priceCurrency))}</div>` : ''}` +
-    `${!pin.price && pin.restaurantPriceRange && /^[$]{1,4}$/.test(pin.restaurantPriceRange) ? `<div class="mt-1 font-medium tracking-wide text-success">${escapeHtml(pin.restaurantPriceRange)}</div>` : ''}` +
     `${pin.specialLabel ? `<div class="mt-1 text-subtle">${escapeHtml(pin.specialLabel)}</div>` : ''}` +
-    `${popupDates(pin) ? `<div class="mt-1 text-subtle">${escapeHtml(popupDates(pin))}</div>` : ''}</div>`;
+    `${dates || price ? `<div class="mt-1 flex items-baseline justify-between gap-2">${dates ? `<span class="text-subtle">${escapeHtml(dates)}</span>` : ''}${price}</div>` : ''}</div>`;
   const sources = pictureSources(pin);
   if (!sources.length) return content;
 
