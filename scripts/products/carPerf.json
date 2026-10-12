@@ -55,8 +55,16 @@
    "space": 4,
    "value": 4.5
   },
-  "basis": "Variant: Formula S entry RWD, 189,900 yuan, 76.7 kWh, 730 km CLTC (a later CNC article says 720). Flash charging 10-70% in 5 min, 10-97% in 9 min. 0-100 km/h 5.8 s for single-motor cars per kolesa.ru (not variant-specific). LiDAR God's Eye B with urban/highway NOA, compute not named. Wheelbase 2,960 mm. Value: Xiaomi SU7 Standard is 219,900 yuan (720 km, 5.3 s, 3,000 mm, LiDAR+Thor), so the Formula S undercuts by 30,000.",
-  "sourceUrl": "https://cnevpost.com/2026/09/16/byd-fang-cheng-bao-launches-formula-s/"
+  "basis": "Variant: Formula S entry RWD, 189,900 yuan, 76.7 kWh, 730 km CLTC (a later CNC article says 720). Flash charging 10-70% in 5 min, 10-97% in 9 min. 0-100 km/h 5.8 s for single-motor cars per kolesa.ru (not variant-specific). LiDAR God's Eye B with urban/highway NOA, compute not named. Wheelbase 2,960 mm. Value: Xiaomi SU7 Standard is 219,900 yuan (720 km, 5.3 s, 3,000 mm, LiDAR+Thor), so the Formula S undercuts by 30,000. 5.8 s is variant-specific for the 245 kW RWD entry (730 km, 76.7 kWh) per Sohu/Autohome trim lists; 300 kW RWD is also about 5.8 s and AWD 3.6 s.",
+  "sourceUrl": "https://cnevpost.com/2026/09/16/byd-fang-cheng-bao-launches-formula-s/",
+  "reviews": [
+   {
+    "url": "https://www.xchuxing.com/article/175037",
+    "title": "[static walkaround at the Chengdu show, not a drive; pre-launch 300 kW RWD car] 新出行图文详解 242期：静态体验方程豹方程 S_体验_新出行",
+    "publishedDate": null,
+    "quote": "Paraphrase: Sat in the show car: front headroom about one fist and one finger, second row two fingers of headroom and a fist and two fingers of legroom; editor says space and equipment meet daily needs and suggests trying it at a dealer."
+   }
+  ]
  },
  {
   "pinId": 14000,
@@ -95,7 +103,7 @@
    "space": 1.5,
    "value": 3.5
   },
-  "basis": "Variant: Racco 200 at 2.145 million yen (22.4 kWh, 210 km WLTC; the 300 trims reach 320 km WLTC at 2.398-2.497 million). 50 kW DC max. No 0-100 km/h published (47 kW motor), so null. 'Level 2 driver assistance' only, functions unnamed. 2,520 mm wheelbase, four seats, sliding doors. Value: Nissan Sakura starts about 2.44 million yen for 180 km and Honda N-One e: 2.7 million, but The Standard says Sakura is cheaper after subsidy.",
+  "basis": "Variant: Racco 200 at 2.145 million yen (22.4 kWh, 210 km WLTC; the 300 trims reach 320 km WLTC at 2.398-2.497 million). 50 kW DC max. No 0-100 km/h published (47 kW motor), so null. 'Level 2 driver assistance' only, functions unnamed. 2,520 mm wheelbase, four seats, sliding doors. Value: Nissan Sakura starts about 2.44 million yen for 180 km and Honda N-One e: 2.7 million, but The Standard says Sakura is cheaper after subsidy. DC charging is 35.8-37 kW on the scored Racco 200 (49-49.7 kW on the 300 grades; Electrive, ev-charge-enechange); '100 kW' in some English reviews is a pre-launch figure.",
   "sourceUrl": "https://cnevpost.com/2026/07/28/byd-launches-k-car-racco-japan/",
   "reviews": [
    {
@@ -121,14 +129,14 @@
  {
   "pinId": 14030,
   "scores": {
-   "range": 1,
+   "range": 1.5,
    "charging": 3,
    "acceleration": null,
-   "assistance": null,
+   "assistance": 2,
    "space": 1,
    "value": null
   },
-  "basis": "Variant: series-production Smart #2 (premiere 12 Oct, no price). Range 'close to 300 km' (target); 10-80% DC in under 20 min; MIIT filing gives 1,875 mm wheelbase, 2 seats, 60 kW motor, 140 km/h top speed. No 0-100 km/h, no driver-assist spec and no price published, so those three axes are null.",
+  "basis": "Variant: series-production Smart #2 (premiere 12 Oct, no price). Range 'close to 300 km' (target); 10-80% DC in under 20 min; MIIT filing gives 1,875 mm wheelbase, 2 seats, 60 kW motor, 140 km/h top speed. No 0-100 km/h, no driver-assist spec and no price published, so those three axes are null. Range 1.5: 410 km CLTC (35.8 kWh CATL LFP; Smart specs 28 Sep, CNC 12 Oct); Europe target is 290 km WLTP. Charging 65 kW DC, 10-80% in 20 min (Smart release); 0-100 km/h not published (0-50 in 3.8 s). Assistance 2: ACC with Stop&Go, Highway Assist and Pilot Assist (Smart release 12 Oct), LKA/LDW/BSD in the China config list; no LiDAR.",
   "sourceUrl": "https://mondial.paris/actualites/auto-mondial/mondial-de-lauto-2026-smart-creera-levenement-avec-la-2-63606.html"
  },
  {
@@ -141,7 +149,7 @@
    "space": 3,
    "value": 4.5
   },
-  "basis": "No Australian spec or price yet; scored as Europe-spec Core RWD, EUR 45,990. 75 kWh, 519 km WLTP (WLTP not CLTC, so conservative); 10-80% in 13 min, up to 480 kW; 0-100 km/h 5.3 s (The Driven, EVDB; a later Australian report says 6.5 s); Zeekr Assisted Drive without LiDAR named; 2,900 mm wheelbase. Value: VW ID.7 Tourer 86 kWh is EUR 60,295 (6.6 s, 199 kW peak).",
+  "basis": "No Australian spec or price yet; scored as Europe-spec Core RWD, EUR 45,990. 75 kWh, 519 km WLTP (WLTP not CLTC, so conservative); 10-80% in 13 min, up to 480 kW; 0-100 km/h 5.3 s (The Driven, EVDB; a later Australian report says 6.5 s); Zeekr Assisted Drive without LiDAR named; 2,900 mm wheelbase. Value: VW ID.7 Tourer 86 kWh is EUR 60,295 (6.6 s, 199 kW peak). Australian-spec entry RWD: 335 kW, 5.2 s, 525 km WLTP, 10-80% in 11 min (The Beep, Zecar, Sept 2026); Europe Core RWD 5.3 s/519 km. The Driven's 6.5 s is an outlier. Australian price still unannounced.",
   "sourceUrl": "https://press.zeekr.eu/zeekr-launches-the-all-new-zeekr-7gt-in-europe",
   "reviews": [
    {
@@ -175,7 +183,15 @@
    "value": 4
   },
   "basis": "Variant: 1.5T 2WD, 189,800 yuan, 350 kW, 0-100 km/h 6.4 s. Combined CLTC range 1,770 km (305 km electric, 47.14 kWh LFP); 6C, 10-80% in 10 min (CNC). Roof 192-line LiDAR with G-ASD H5/H7 on Thor-U 700 TOPS. 2,900 mm wheelbase, five seats. Value: FCB Ti 7 DM 2WD Max is 195,800 yuan with a 200 kW motor, 158 kW charging and God's Eye B a 12,000-yuan option.",
-  "sourceUrl": "https://cnevpost.com/2026/10/10/geely-galaxy-launches-cruiser-700-suv/"
+  "sourceUrl": "https://cnevpost.com/2026/10/10/geely-galaxy-launches-cruiser-700-suv/",
+  "reviews": [
+   {
+    "url": "https://club.autohome.com.cn/bbs/thread/8b5095100babd2c6/116378319-1.html",
+    "title": "[Autohome forum user post after a one-day drive, trim not stated; not a professional road test] 真实试驾｜银河战舰700：全能很强，但这些小缺点也不藏不掖",
+    "publishedDate": "2026-10-10",
+    "quote": "Paraphrase: Praises strong, light power delivery, air suspension that filters bumps and surprising agility for the size; complains about size in tight spaces, over-sensitive low-speed pedal, wind noise above 100 km/h and menu depth."
+   }
+  ]
  },
  {
   "pinId": 14056,
@@ -249,12 +265,20 @@
    "range": 3,
    "charging": 4,
    "acceleration": 2.5,
-   "assistance": 3,
+   "assistance": 1.5,
    "space": 3.5,
    "value": 4.5
   },
-  "basis": "Variant: entry 640 RWD, 129,900 yuan. 63.8 kWh, 640 km CLTC; 6C, 10-80% in 11.8 min; 245 kW, 0-100 km/h 6.5 s (CnEVPost; CNC says 7.2 s for 640 km, doubt). Entry has no LiDAR and its NOA is not itemised, so assist is 3. Wheelbase 2,920 mm. Value: Xiaomi SU7 Standard is 219,900 yuan (720 km, 5.3 s, LiDAR, 3,000 mm); the TT is 90,000 less.",
-  "sourceUrl": "https://cnevpost.com/2026/09/10/geely-launches-galaxy-tt-sedan/"
+  "basis": "Variant: entry 640 RWD, 129,900 yuan. 63.8 kWh, 640 km CLTC; 6C, 10-80% in 11.8 min; 245 kW, 0-100 km/h 6.5 s (CnEVPost; CNC says 7.2 s for 640 km, doubt). Entry has no LiDAR and its NOA is not itemised, so assist is 3. Wheelbase 2,920 mm. Value: Xiaomi SU7 Standard is 219,900 yuan (720 km, 5.3 s, LiDAR, 3,000 mm); the TT is 90,000 less. Assistance 1.5, not 3: the 129,900-yuan entry (640 RWD Zunxiang) lacks LiDAR and the G-ASD H5 NOA package, which starts one trim up at 139,900 (Autohome buying guide); only basic cruise/ADAS listed.",
+  "sourceUrl": "https://cnevpost.com/2026/09/10/geely-launches-galaxy-tt-sedan/",
+  "reviews": [
+   {
+    "url": "https://club.autohome.com.cn/bbs/thread/4e05d23aff369ca6/116206480-1.html",
+    "title": "[Autohome forum user post, 725 km RWD Flagship tested, not the 640 km entry] 试驾吉利银河TT，操控平替小米SU7？不吹不黑，优缺点一次性说透",
+    "publishedDate": "2026-09-21",
+    "quote": "Paraphrase: Handling judged on par with the Xiaomi SU7, steady rather than sharp power; BOOST gives a 20 s overtaking burst; driver assistance judged too cautious and not smooth at lights and lane changes; about three fists of rear legroom at 170 cm."
+   }
+  ]
  },
  {
   "pinId": 14029,
@@ -333,7 +357,21 @@
    "value": 4
   },
   "basis": "Variant: 2WD EM-P, 157,800 yuan guide price. 28.3 kWh, 200 km electric, combined up to 1,422 km CLTC; 30-80% in 14 min (reported, newmobility/CNC on the 07 system); 0-100 km/h 5.5 s for the 300 kW 2WD (newmobility; AWD 4 s); standard LiDAR with G-ASD H5, Thor-U H7 optional; 2,843 mm wheelbase. Value: updated Zeekr 007 GT wagon is 203,900 yuan list (BEV, 905 km, LiDAR+Thor-U).",
-  "sourceUrl": "https://cnevpost.com/2026/07/23/lynk-co-07-gt-launch/"
+  "sourceUrl": "https://cnevpost.com/2026/07/23/lynk-co-07-gt-launch/",
+  "reviews": [
+   {
+    "url": "https://www.autohome.com.cn/drive/202609/1316840.html",
+    "title": "[Autohome editorial test, 4WD Performance Ultra with MRC and H7, not the 2WD EM-P 157,800-yuan trim] 啊？裸车16万拿下双电机四驱猎装车？深度试驾领克07GT",
+    "publishedDate": "2026-09-01",
+    "quote": "Paraphrase: Euro-flavoured, tight chassis with strong body control; measured 30-80% in 14 min on a 600 kW charger and 21.8 kWh/100 km at about 99 km/h; city assist missed lane discipline; electric range called short."
+   },
+   {
+    "url": "http://auto.cnfol.com/shijiapingce/20260630/32293945.shtml",
+    "title": "[Autohome media drive reposted by CNFOL, pre-launch, MRC trims on gymkhana and jump ramps] 旅行车挑战飞坡、金卡纳？试驾领克07GT",
+    "publishedDate": "2026-06-30",
+    "quote": "领克07GT有着更接近欧系车的行驶质感，它的底盘韧性很足"
+   }
+  ]
  },
  {
   "pinId": 14213,
@@ -345,7 +383,7 @@
    "space": 4.5,
    "value": 4
   },
-  "basis": "Variant: Max dual-motor, 356,800 yuan list (329,800 limited). 660 kW, 0-100 km/h 3.7 s (Yaoying tri-motor 2.96 s); combined up to 1,416 km CLTC, up to 410 km electric (the Max's own battery/range is not itemised, doubt); 6C 20-80% in 9 min; standard single Thor-U plus long-range LiDAR; 3,069 mm wheelbase, 5-6 seats. Value: Nio 5-seat ES8 is 382,800 yuan (3.9 s, 655 km, 3,130 mm).",
+  "basis": "Variant: Max dual-motor, 356,800 yuan list (329,800 limited). 660 kW, 0-100 km/h 3.7 s (Yaoying tri-motor 2.96 s); combined up to 1,416 km CLTC, up to 410 km electric (the Max's own battery/range is not itemised, doubt); 6C 20-80% in 9 min; standard single Thor-U plus long-range LiDAR; 3,069 mm wheelbase, 5-6 seats. Value: Nio 5-seat ES8 is 382,800 yuan (3.9 s, 655 km, 3,130 mm). Max/Ultra pack is 55 kWh: 320 km electric, 1,362 km combined CLTC; 1,416 km/410 km is the 70 kWh Ultra+ (Autohome). 3.7 s, 660 kW, 6C 20-80% in 9 min unchanged.",
   "sourceUrl": "https://cnevpost.com/2026/04/17/zeekr-launches-8x-suv/",
   "reviews": [
    {
@@ -365,6 +403,12 @@
     "title": "[Ultra Plus dual-motor 660 kW, 70 kWh tested] Sunday China Drive | Zeekr 8X Ultra Plus tested with 885 hp hybrid, Europe entry late 2026",
     "publishedDate": "2026-05-03",
     "quote": "Power delivery is immediate but controlled, with a linear response that avoids abrupt torque spikes."
+   },
+   {
+    "url": "https://www.autohome.com.cn/news/202604/1313655.html",
+    "title": "[Autohome first test of the 70 kWh Ultra+ dual-motor, not the 55 kWh Max] 极氪8X新车首测！3秒级加速反向虚标？纯电续航达成率超100%！",
+    "publishedDate": "2026-04-17",
+    "quote": "Paraphrase: Measured 412.4 km electric range against 410 km CLTC (100.6%) in eco mode; strong 40-80 and 80-120 km/h times; 40-minute 120 kW charge test is limited by the charger."
    }
   ]
  },
@@ -401,11 +445,11 @@
    "range": 5.0,
    "charging": 2.0,
    "acceleration": 2.5,
-   "assistance": 3.5,
+   "assistance": 4.0,
    "space": 5.0,
    "value": 4.0
   },
-  "basis": "Variant: 1180 AWD Pro 7-seater, RMB 269,800 limited (309,800 official). CLTC combined 1,180 km (43.3 kWh, 220 km EV); 30-80% in 24 min (pre-sales report, peak kW not published); 0-100 in 6.5 s; Qianli Haohan G-Pilot H5 with 1 LiDAR, 3 radars, 11 cameras, 12 ultrasonics and highway + city NOA (CarNewsChina; compute not stated); wheelbase 3,200 mm, 6/7/8 seats. Value: Denza D9 2026 from RMB 359,800 (DM-i) / 369,800 (EV) and Xpeng X9 from RMB 309,800 (3,160 mm, 5C), so 13-27% under.",
+  "basis": "Variant: 1180 AWD Pro 7-seater, RMB 269,800 limited (309,800 official). CLTC combined 1,180 km (43.3 kWh, 220 km EV); 30-80% in 24 min (pre-sales report, peak kW not published); 0-100 in 6.5 s; Qianli Haohan G-Pilot H5 with 1 LiDAR, 3 radars, 11 cameras, 12 ultrasonics and highway + city NOA (CarNewsChina; compute not stated); wheelbase 3,200 mm, 6/7/8 seats. Value: Denza D9 2026 from RMB 359,800 (DM-i) / 369,800 (EV) and Xpeng X9 from RMB 309,800 (3,160 mm, 5C), so 13-27% under. Assistance: G-Pilot H5 with Nvidia Orin, 1 LiDAR, 3 radars, 11 cameras, highway and urban NOA (CarNewsChina 5 Jan 2026 and database); compute now stated, scored 4.",
   "sourceUrl": "https://cnevpost.com/2026/01/20/geely-galaxy-launches-v900-mpv/",
   "reviews": [
    {
@@ -432,13 +476,13 @@
   "pinId": 14037,
   "scores": {
    "range": 5.0,
-   "charging": 3.0,
+   "charging": 2.0,
    "acceleration": 3.5,
    "assistance": 3.5,
    "space": 3.0,
    "value": 3.5
   },
-  "basis": "Chinese-spec AWD EM-P, the car shown in Paris (no European price or spec yet). 1,315 km CLTC combined (28.3 kWh, 170 km EV); 30-80% in 14 min is only 'reportedly' per newmobility.news; 0-100 in about 4 s (390 kW; 2WD 5.5 s); LiDAR standard with G-ASD H5, optional H7 on Nvidia Thor-U with urban NOA (CnEVPost); wheelbase 2,843 mm. Value rests on China prices RMB 157,800-177,800 (145,800-165,800 limited) vs Zeekr 007 GT RMB 203,900 (193,900 limited; 905 km BEV, Thor-U); not a European price, so low confidence.",
+  "basis": "Chinese-spec AWD EM-P, the car shown in Paris (no European price or spec yet). 1,315 km CLTC combined (28.3 kWh, 170 km EV); 30-80% in 14 min is only 'reportedly' per newmobility.news; 0-100 in about 4 s (390 kW; 2WD 5.5 s); LiDAR standard with G-ASD H5, optional H7 on Nvidia Thor-U with urban NOA (CnEVPost); wheelbase 2,843 mm. Value rests on China prices RMB 157,800-177,800 (145,800-165,800 limited) vs Zeekr 007 GT RMB 203,900 (193,900 limited; 905 km BEV, Thor-U); not a European price, so low confidence. Charging revised: Lynk states 75 kW DC peak, 30-80% in 14 min on the 28.3 kWh pack (Gasgoo, lynkco.com.cn); 14 min is maker-confirmed, not just 'reported'; scored on peak power.",
   "sourceUrl": "https://cnevpost.com/2026/07/23/lynk-co-07-gt-launch/",
   "reviews": [
    {
@@ -525,13 +569,13 @@
   "pinId": 14040,
   "scores": {
    "range": 5.0,
-   "charging": 3.0,
+   "charging": 2.0,
    "acceleration": 2.5,
    "assistance": null,
    "space": 3.0,
    "value": null
   },
-  "basis": "Variant: Ultra AWD EM-i, the Paris show car (no European spec sheet or price). 1,100 km combined and 130 km electric (29.8 kWh) per CarNewsChina's Paris preview, cycle not stated (elektroquatsch calls the 130 km NEDC); 30-80% in 15 min per elektroquatsch; 0-100 in 5.83 s (CnEVPost, Egypt launch); wheelbase 2,845 mm. Driver-assist hardware is not published in any page opened, so assistance is null; no European price (Egypt is EGP only), so value is null. Doubt: elektroquatsch lists 250 kW system output vs 305 kW in the CarNewsChina preview.",
+  "basis": "Variant: Ultra AWD EM-i, the Paris show car (no European spec sheet or price). 1,100 km combined and 130 km electric (29.8 kWh) per CarNewsChina's Paris preview, cycle not stated (elektroquatsch calls the 130 km NEDC); 30-80% in 15 min per elektroquatsch; 0-100 in 5.83 s (CnEVPost, Egypt launch); wheelbase 2,845 mm. Driver-assist hardware is not published in any page opened, so assistance is null; no European price (Egypt is EGP only), so value is null. Doubt: elektroquatsch lists 250 kW system output vs 305 kW in the CarNewsChina preview. Charging revised: e-AWD 29.8 kWh pack rated up to 78 kW DC, 30-80% in about 15 min (CAR Magazine/Geely reference spec, NEDC-era figures, EU homologation pending); scored on peak power.",
   "sourceUrl": "https://carnewschina.com/2026/10/02/what-to-expect-from-chinese-car-brands-at-the-paris-auto-show-2026/"
  },
  {
@@ -572,12 +616,12 @@
   "scores": {
    "range": 2.0,
    "charging": 2.5,
-   "acceleration": null,
+   "acceleration": 1.5,
    "assistance": null,
    "space": 2.5,
    "value": 4.5
   },
-  "basis": "Variant: entry 42.8 kWh LFP at RMB 68,800 (65,800 discounted). 437 km CLTC (53.9 kWh 530 km; semi-solid-state 537 km at RMB 102,800); 30-80% in about 20 min (hibridosyelectricos.com, secondary; no peak kW); 0-100 not published in any page opened; upper trims have Horizon J6e highway NOA without LiDAR (same Spanish report) but entry-trim hardware is not stated, so assistance is null; wheelbase 2,750 mm. Value: BYD Dolphin RMB 99,800-129,800 in China (CarNewsChina, Dec 2025), roughly 31% above the MG4 entry price.",
+  "basis": "Variant: entry 42.8 kWh LFP at RMB 68,800 (65,800 discounted). 437 km CLTC (53.9 kWh 530 km; semi-solid-state 537 km at RMB 102,800); 30-80% in about 20 min (hibridosyelectricos.com, secondary; no peak kW); 0-100 not published in any page opened; upper trims have Horizon J6e highway NOA without LiDAR (same Spanish report) but entry-trim hardware is not stated, so assistance is null; wheelbase 2,750 mm. Value: BYD Dolphin RMB 99,800-129,800 in China (CarNewsChina, Dec 2025), roughly 31% above the MG4 entry price. Acceleration filled: Autohome measured 0-100 in 8.02 s on the 120 kW 437 Freedom trim (MG publishes only 0-50 km/h 3 s); same motor on the 42.8 kWh entry.",
   "sourceUrl": "https://cnevpost.com/2025/08/29/saic-mg-launches-redesigned-mg4/",
   "reviews": [
    {
@@ -608,9 +652,9 @@
    "acceleration": 2.5,
    "assistance": 1.5,
    "space": 3.0,
-   "value": 4.5
+   "value": 4.0
   },
-  "basis": "Variant: 650 BEV Comfort, 67 kWh Qingtao, RMB 108,900 official / 105,900 limited (the 845 km 91 kWh 5C version would score range 4.0, charging 3.5, 0-100 5.9 s). 650 km CLTC; 400 V, 3C, 30-80% in 20 min; 0-100 in 6.9 s (176 kW); entry uses Horizon J6B with no highway or urban NOA and no LiDAR (higher trims LiDAR + Momenta R7); wheelbase 2,825 mm. Value: BYD Seal 07 DM-i from RMB 149,800 (PHEV, 2,900 mm; CnEVPost) and Lynk & Co 07 EM-P RMB 139,800-159,800 limited (CarNewsChina), about 25-30% under, though BEV vs PHEV.",
+  "basis": "Variant: 650 BEV Comfort, 67 kWh Qingtao, RMB 108,900 official / 105,900 limited (the 845 km 91 kWh 5C version would score range 4.0, charging 3.5, 0-100 5.9 s). 650 km CLTC; 400 V, 3C, 30-80% in 20 min; 0-100 in 6.9 s (176 kW); entry uses Horizon J6B with no highway or urban NOA and no LiDAR (higher trims LiDAR + Momenta R7); wheelbase 2,825 mm. Value: BYD Seal 07 DM-i from RMB 149,800 (PHEV, 2,900 mm; CnEVPost) and Lynk & Co 07 EM-P RMB 139,800-159,800 limited (CarNewsChina), about 25-30% under, though BEV vs PHEV. Price correction: 650 BEV Comfort is RMB 116,900 official / 113,900 limited; 108,900/105,900 is the Hybrid 245 Comfort (CarNewsChina 21 Aug 2026, News18). Value rescored 4.0 on the corrected price.",
   "sourceUrl": "https://cnevpost.com/2026/07/29/mg-07-goes-on-pre-sales/",
   "reviews": [
    {
@@ -631,13 +675,13 @@
   "pinId": 14109,
   "scores": {
    "range": 5.0,
-   "charging": 3.5,
+   "charging": 3.0,
    "acceleration": 3.0,
    "assistance": 4.0,
    "space": 5.0,
    "value": 4.5
   },
-  "basis": "Variant: 52 Ultra EREV, RMB 322,800 (66 Ultra RMB 352,800, 1,508 km). 1,454 km CLTC combined (320 km EV, 52 kWh); 10-80% in 16.5 min on 800 V; 0-100 in 4.9 s (390 kW); 520-channel LiDAR + Nvidia Thor + IM AD Max by Momenta; wheelbase 3,160 mm, six seats. Value: Li L9 at RMB 409,800 in Sept 2025 (3,015 mm, six seats; CnEVPost) and RMB 459,800 after the May 2026 refresh (CarNewsChina), so 21-30% under with a longer wheelbase.",
+  "basis": "Variant: 52 Ultra EREV, RMB 322,800 (66 Ultra RMB 352,800, 1,508 km). 1,454 km CLTC combined (320 km EV, 52 kWh); 10-80% in 16.5 min on 800 V; 0-100 in 4.9 s (390 kW); 520-channel LiDAR + Nvidia Thor + IM AD Max by Momenta; wheelbase 3,160 mm, six seats. Value: Li L9 at RMB 409,800 in Sept 2025 (3,015 mm, six seats; CnEVPost) and RMB 459,800 after the May 2026 refresh (CarNewsChina), so 21-30% under with a longer wheelbase. Correction: 52 Ultra is 380 kW (not 390) and charges 10-80% in 19 min; 16.5 min and 390 kW belong to the 66 Ultra (IT之家, CarNewsChina database). 0-100 is 4.9 s on both trims.",
   "sourceUrl": "https://cnevpost.com/2025/11/12/im-motors-launches-ls9/",
   "reviews": [
    {
@@ -725,12 +769,12 @@
   "scores": {
    "range": 5.0,
    "charging": 2.5,
-   "acceleration": 3.0,
-   "assistance": 3.5,
+   "acceleration": 1.5,
+   "assistance": 4.0,
    "space": 5.0,
    "value": 4.5
   },
-  "basis": "Variant: RMB 159,800 entry (149,800 after subsidy); trim-level specs are not mapped. Combined CLTC range above 1,100 km, 255 km EV at most; 3.5C fast charging with no 10-80% time or peak kW published, so 2.5 is an estimate from 3.5C on the 31-42 kWh packs in the MIIT filing; 0-100 in 5.2 s is the top 4WD trim (386 kW), the entry time is not published; Huawei Qiankun ADS Pro on all trims with in-cabin Limera LiDAR (city NOA not stated); wheelbase 3,105 mm, six seats. Value: Geely Galaxy M9 six-seater RMB 183,800-248,800 official, 173,800 limited (3,030 mm, G-Pilot H5 only on upper trims; CnEVPost).",
+  "basis": "Variant: RMB 159,800 entry (149,800 after subsidy); trim-level specs are not mapped. Combined CLTC range above 1,100 km, 255 km EV at most; 3.5C fast charging with no 10-80% time or peak kW published, so 2.5 is an estimate from 3.5C on the 31-42 kWh packs in the MIIT filing; 0-100 in 5.2 s is the top 4WD trim (386 kW), the entry time is not published; Huawei Qiankun ADS Pro on all trims with in-cabin Limera LiDAR (city NOA not stated); wheelbase 3,105 mm, six seats. Value: Geely Galaxy M9 six-seater RMB 183,800-248,800 official, 173,800 limited (3,030 mm, G-Pilot H5 only on upper trims; CnEVPost). Acceleration: entry 200 km FWD 200 kW does 0-100 in 8.3 s per IT之家 launch roundup; the 5.2 s is the 386 kW 4WD top trim only. Assistance: Qiankun ADS Pro enhanced with in-cabin Limera LiDAR standard, city NCA supported at launch (IT之家 8 May 2026); scored 4.",
   "sourceUrl": "https://cnevpost.com/2026/05/08/huajing-s-launched-with-aggressive-pricing/",
   "reviews": [
    {
@@ -835,11 +879,11 @@
    "range": 3.0,
    "charging": 4.0,
    "acceleration": 2.0,
-   "assistance": 3.0,
+   "assistance": 1.5,
    "space": 4.0,
    "value": 3.5
   },
-  "basis": "Variant: 66.02 kWh RWD 225 kW, RMB 139,900 official / 135,900 limited (entry mapping from Wikipedia; 80 kWh versions 670-700 km). 602 km CLTC; 800 V SiC, 6C, 30-80% in 9 min; 0-100 in 7.1 s (dual-motor 4.8 s); standard SDA Pilot Pro with LiDAR and Horizon J6M 128 TOPS, urban navigation assist only with the RMB 9,900 Ultra option (560 TOPS); wheelbase 2,940 mm. Value: BYD Song Ultra EV from RMB 151,900 (605 km, 2,840 mm; CnEVPost) and Leapmotor C10 RMB 125,800-142,800 (BEV 660 km, 2,825 mm; Gasgoo), so at market.",
+  "basis": "Variant: 66.02 kWh RWD 225 kW, RMB 139,900 official / 135,900 limited (entry mapping from Wikipedia; 80 kWh versions 670-700 km). 602 km CLTC; 800 V SiC, 6C, 30-80% in 9 min; 0-100 in 7.1 s (dual-motor 4.8 s); standard SDA Pilot Pro with LiDAR and Horizon J6M 128 TOPS, urban navigation assist only with the RMB 9,900 Ultra option (560 TOPS); wheelbase 2,940 mm. Value: BYD Song Ultra EV from RMB 151,900 (605 km, 2,840 mm; CnEVPost) and Leapmotor C10 RMB 125,800-142,800 (BEV 660 km, 2,825 mm; Gasgoo), so at market. Assistance: the 602 entry trim reportedly lacks Tianshu Pilot Pro, LiDAR, city and memory parking (Autohome/ifeng, official configurator); Pro with LiDAR starts a trim up. Basic L2, scored 1.5.",
   "sourceUrl": "https://cnevpost.com/2026/09/24/changan-nevo-launches-q06-suv/",
   "reviews": [
    {
@@ -861,13 +905,21 @@
   "scores": {
    "range": 3.5,
    "charging": 3.0,
-   "acceleration": null,
+   "acceleration": 2.0,
    "assistance": 4.0,
    "space": 4.0,
    "value": 4.5
   },
-  "basis": "Scored on the BEV 715 km CLTC (84.8 kWh, 227 kW) Qiankun Edition. 800V: 270 km in 10 min, 30-80% in 15 min; ~190 kW average by my arithmetic. 0-100 km/h not published by CnEVPost or Wikipedia, so null. ADS 5 Pro with LiDAR (27 sensors, urban+highway NOA) is on 4 Qiankun variants only. Wheelbase 3,040 mm, 5 seats. Value: RMB 132,800-136,800 vs Leapmotor C16 RMB 151,800 EREV/161,800 BEV (wheelbase 2,825) and BYD Sealion 06 EV RMB 143,800 (2,820, 605 km).",
-  "sourceUrl": "https://cnevpost.com/2026/09/16/arcfox-launches-alpha-t7-suv/"
+  "basis": "Scored on the BEV 715 km CLTC (84.8 kWh, 227 kW) Qiankun Edition. 800V: 270 km in 10 min, 30-80% in 15 min; ~190 kW average by my arithmetic. 0-100 km/h not published by CnEVPost or Wikipedia, so null. ADS 5 Pro with LiDAR (27 sensors, urban+highway NOA) is on 4 Qiankun variants only. Wheelbase 3,040 mm, 5 seats. Value: RMB 132,800-136,800 vs Leapmotor C16 RMB 151,800 EREV/161,800 BEV (wheelbase 2,825) and BYD Sealion 06 EV RMB 143,800 (2,820, 605 km). 0-100 km/h now 7.0 s for the 84.8 kWh 715 km BEV (Wikipedia spec table citing Autohome; Auto-Data.net); maker figure not located, so 2.0 at medium confidence.",
+  "sourceUrl": "https://cnevpost.com/2026/09/16/arcfox-launches-alpha-t7-suv/",
+  "reviews": [
+   {
+    "url": "https://www.sina.cn/weibo/detail/5352898000064918.html",
+    "title": "[individual creator post after a test drive; CDC-equipped variant] 15万级中大型SUV，极狐T7把空间、底盘和智驾都照顾到了 (Weibo-certified auto blogger 车扯创始人王冬, via Sina News)",
+    "publishedDate": "2026-10-11",
+    "quote": "只试驾了带CDC的版本，最软很舒服，但遇到大的起伏船感很明显。"
+   }
+  ]
  },
  {
   "pinId": 14231,
@@ -906,13 +958,13 @@
   "pinId": 14165,
   "scores": {
    "range": 2.5,
-   "charging": 2.5,
+   "charging": 2.0,
    "acceleration": 3.0,
    "assistance": 3.0,
    "space": 5.0,
    "value": 2.0
   },
-  "basis": "Scored on the top 510 km (245 kW rear motor, 4.9 s) version; ranges are NEDC-era figures. Charging ~140 kW max comes from EV Database (84 kWh export spec), not the launch article, so doubt. Driver assist is only described as an 'L3 autopilot' with L4 parking and no sensor/compute disclosed, so 3 not 5. Wheelbase 3,110 mm, 4/6/7 seats. Value: RMB 509,800 entry (460 km) vs Nio ES8 RMB 468,000 with 580 km NEDC, 6/7 seats (KrASIA, Apr 2020): priced above.",
+  "basis": "Scored on the top 510 km (245 kW rear motor, 4.9 s) version; ranges are NEDC-era figures. Charging ~140 kW max comes from EV Database (84 kWh export spec), not the launch article, so doubt. Driver assist is only described as an 'L3 autopilot' with L4 parking and no sensor/compute disclosed, so 3 not 5. Wheelbase 3,110 mm, 4/6/7 seats. Value: RMB 509,800 entry (460 km) vs Nio ES8 RMB 468,000 with 580 km NEDC, 6/7 seats (KrASIA, Apr 2020): priced above. Charging corrected to 2.0: 99 kWh pack peaks 135-140 kW but 10-80 % takes ~37 min (EVKX 37m19s, EV Database 112 kW avg, Nybiltester 38 min); 140 kW is a peak, not a sustained rate.",
   "sourceUrl": "https://cnevpost.com/2020/12/05/hongqi-launches-all-electric-suv-e-hs9/",
   "reviews": [
    {
@@ -1144,7 +1196,15 @@
    "value": 3.0
   },
   "basis": "Single Home trim: 101 kWh, 705 km CLTC, 0-100 km/h 4.9 s, 5C with 500 km in 10 min (peak kW not stated; ~500 kW by my arithmetic). One Mach M100 + one LiDAR + Mach VLA; dual-chip package is a RMB 30,000 option. Wheelbase 3,168 mm, 6 seats, air suspension. Value: vs Nio ES8 RMB 406,800 (3,130 mm, 635 km, 3.97 s), Li i8 RMB 339,800 and XPeng GX RMB 279,800 (3,115 mm, 750 km): at market.",
-  "sourceUrl": "https://cnevpost.com/2026/09/16/li-auto-launches-i9-electric-suv/"
+  "sourceUrl": "https://cnevpost.com/2026/09/16/li-auto-launches-i9-electric-suv/",
+  "reviews": [
+   {
+    "url": "https://www.sina.cn/weibo/detail/5344943964423728.html",
+    "title": "[individual creator post after a dealership test drive, not an editorial road test] 作为女性车主，关于理想i9不得不说：它真的很好开 (Weibo-certified auto blogger 艾菲卡儿, via Sina News)",
+    "publishedDate": "2026-09-19",
+    "quote": "方向盘轻盈柔和，长时间开也不累。"
+   }
+  ]
  },
  {
   "pinId": 14095,
@@ -1501,13 +1561,13 @@
   "pinId": 14119,
   "scores": {
    "range": 3.5,
-   "charging": null,
+   "charging": 3.0,
    "acceleration": 3.0,
    "assistance": 4.0,
    "space": 4.0,
    "value": 4.5
   },
-  "basis": "Standard at 219,900. CLTC 720 km (3.5); charging null: only a 752 V platform is published for Standard/Pro (670 km in 15 min and 10-80% in 12 min are Max figures); 0-100 in 5.28 s (3.0); LiDAR, 4D radar and Thor 700 TOPS standard on all trims, Xiaomi HAD (4.0); wheelbase 3,000 mm, air suspension only on higher trims (4.0). Value: 15,600 below Model 3 (235,500) while making LiDAR/Thor standard (4.5).",
+  "basis": "Standard at 219,900. CLTC 720 km (3.5); charging null: only a 752 V platform is published for Standard/Pro (670 km in 15 min and 10-80% in 12 min are Max figures); 0-100 in 5.28 s (3.0); LiDAR, 4D radar and Thor 700 TOPS standard on all trims, Xiaomi HAD (4.0); wheelbase 3,000 mm, air suspension only on higher trims (4.0). Value: 15,600 below Model 3 (235,500) while making LiDAR/Thor standard (4.5). Charging: Standard/Pro 752 V, up to 3.5C, 10-80% in as fast as 20 min (36Kr, Electrek; Max 12 min is the separate 897 V figure), scored 3.0 at the 20-min anchor.",
   "sourceUrl": "https://cnevpost.com/2026/03/19/xiaomi-launches-next-gen-su7-further-challenge-tesla/",
   "reviews": [
    {
@@ -1567,13 +1627,13 @@
   "pinId": 14131,
   "scores": {
    "range": 5.0,
-   "charging": null,
+   "charging": 2.0,
    "acceleration": 3.0,
    "assistance": 3.5,
    "space": 5.0,
    "value": 3.0
   },
-  "basis": "EREV Max at 469,800. Combined CLTC 1,362-1,402 km with 42 or 52 kWh pack (5.0); charging null: the 800 V 150 km in 5 min figure is BEV only; 0-100 in 4.9 s (3.0); ADS 2.0 with one LiDAR, 3 radars, 11 cameras per Wikipedia, city coverage not stated (3.5); wheelbase 3,110 mm, air suspension (5.0). Value: Li L9 Max listed at 459,800 (3,105 mm) so M9 is level to slightly above; BEV vs Nio ES8 from 498,000 (3.0).",
+  "basis": "EREV Max at 469,800. Combined CLTC 1,362-1,402 km with 42 or 52 kWh pack (5.0); charging null: the 800 V 150 km in 5 min figure is BEV only; 0-100 in 4.9 s (3.0); ADS 2.0 with one LiDAR, 3 radars, 11 cameras per Wikipedia, city coverage not stated (3.5); wheelbase 3,110 mm, air suspension (5.0). Value: Li L9 Max listed at 459,800 (3,105 mm) so M9 is level to slightly above; BEV vs Nio ES8 from 498,000 (3.0). Charging: EREV has no 800 V; Aito claims 20-80% in ~30 min (Paultan), CNC database 30-80% 0.5 h; Xchuxing measured peak 71.7 kW, 30-80% in 25 min. Scored 2.0.",
   "sourceUrl": "https://cnevpost.com/2023/12/26/huawei-backed-aito-officially-launches-m9/",
   "reviews": [
    {
@@ -1635,11 +1695,11 @@
    "range": 5.0,
    "charging": null,
    "acceleration": 2.0,
-   "assistance": 3.5,
+   "assistance": 2.0,
    "space": 3.0,
    "value": 4.0
   },
-  "basis": "Pro EREV at 159,800. Combined CLTC 1,360 km (5.0); charging null: no figure on any opened page; 0-100 7.3-7.9 s across single-motor trims, midpoint scored (2.0); ADS 4 with 192-line LiDAR and 4D radar, standard per CnEVPost but 'high-end trims' per CarNewsChina (3.5, doubt); wheelbase 2,840 mm (3.0). Value: Leapmotor C11 143,800-159,800, Onvo L60 192,800, Xpeng G6 EREV 186,800 (4.0).",
+  "basis": "Pro EREV at 159,800. Combined CLTC 1,360 km (5.0); charging null: no figure on any opened page; 0-100 7.3-7.9 s across single-motor trims, midpoint scored (2.0); ADS 4 with 192-line LiDAR and 4D radar, standard per CnEVPost but 'high-end trims' per CarNewsChina (3.5, doubt); wheelbase 2,840 mm (3.0). Value: Leapmotor C11 143,800-159,800, Onvo L60 192,800, Xpeng G6 EREV 186,800 (4.0). Assistance: Pro EREV is ADS 4 basic (3 4D radars, 10 cameras, 12 ultrasonics, no LiDAR; highway NCA + parking). LiDAR and urban NCA are Max/Max+ only (Xchuxing, Autohome). Scored 2.0.",
   "sourceUrl": "https://cnevpost.com/2025/09/23/shangjie-launches-h5-suv/",
   "reviews": [
    {

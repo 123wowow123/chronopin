@@ -37,6 +37,7 @@ export function toMapPin(pin: PinJson): MapPinJson {
     categories: pin.categories ?? [],
     allDay: pin.allDay,
     utcStartDateTime: pin.utcStartDateTime,
+    utcEndDateTime: pin.utcEndDateTime,
     utcCreatedDateTime: pin.utcCreatedDateTime,
     latitude: pin.latitude,
     longitude: pin.longitude,

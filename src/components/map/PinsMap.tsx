@@ -11,7 +11,7 @@ import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { ListingView } from '@/components/listings/ListingView';
 import { listingTitle, mediaUrl, priceLine } from '@/components/listings/parts';
-import { money } from '@/lib/format';
+import { dayKeyIn, formatDayKey, money } from '@/lib/format';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { api } from '@/lib/client/api';
@@ -29,7 +29,7 @@ import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 import { refineQuery } from '@/lib/searchTerms';
 import { useT } from '@/lib/client/i18n';
-import { isRtl, splitLocale } from '@/lib/i18n/config';
+import { DEFAULT_LOCALE, isRtl, splitLocale } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import type { ListingJson } from '@/lib/listings';
@@ -183,6 +183,22 @@ function pictureImg(sources: string[], className: string, gone: () => void) {
   return img;
 }
 
+// "09/14/2026 - 03/01/2028": when the pin starts and, if it has an end, when
+// it ends. An all-day pin's stored end is exclusive (the day after its last
+// day), and its days are UTC days.
+function popupDates(pin: MapPinJson): string {
+  if (!pin.utcStartDateTime) return '';
+  const { locale } = splitLocale(window.location.pathname);
+  const zone = pin.allDay ? 'UTC' : Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const day = (instant: number) => formatDayKey(dayKeyIn(instant, zone), locale ?? DEFAULT_LOCALE);
+  const start = new Date(pin.utcStartDateTime).getTime();
+  const rawEnd = pin.utcEndDateTime ? new Date(pin.utcEndDateTime).getTime() : null;
+  const end = rawEnd == null ? null : pin.allDay ? rawEnd - 86_400_000 : rawEnd;
+  const first = day(start);
+  const last = end != null && end > start ? day(end) : null;
+  return last && last !== first ? `${first} - ${last}` : first;
+}
+
 function popupContent(pin: MapPinJson) {
   const content = document.createElement('div');
   const href = localizeHere(pin.restaurantHref ?? pinPath(pin));
@@ -191,7 +207,7 @@ function popupContent(pin: MapPinJson) {
     `${pin.price ? `<div class="mt-1 font-medium tabular-nums ${pin.price < 0 ? 'text-danger' : 'text-success'}">${escapeHtml(money(pin.price, pin.priceCurrency))}</div>` : ''}` +
     `${!pin.price && pin.restaurantPriceRange && /^[$]{1,4}$/.test(pin.restaurantPriceRange) ? `<div class="mt-1 font-medium tracking-wide text-success">${escapeHtml(pin.restaurantPriceRange)}</div>` : ''}` +
     `${pin.specialLabel ? `<div class="mt-1 text-subtle">${escapeHtml(pin.specialLabel)}</div>` : ''}` +
-    `${pin.address ? `<div class="truncate text-subtle">${escapeHtml(pin.address)}</div>` : ''}</div>`;
+    `${popupDates(pin) ? `<div class="mt-1 text-subtle">${escapeHtml(popupDates(pin))}</div>` : ''}</div>`;
   const sources = pictureSources(pin);
   if (!sources.length) return content;
 

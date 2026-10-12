@@ -415,7 +415,7 @@ export default class Pins extends BasePins<Pin> {
     return db.query(
       `
       SELECT "p"."id", "p"."title", "p"."address", ${CATEGORIES} AS "categories", "p"."allDay",
-        "p"."utcStartDateTime", "p"."utcCreatedDateTime",
+        "p"."utcStartDateTime", "p"."utcEndDateTime", "p"."utcCreatedDateTime",
         ST_Y("p"."location"::geometry) AS "latitude",
         ST_X("p"."location"::geometry) AS "longitude",
         "p"."price", "p"."priceCurrency", "p"."sourceUrl",
