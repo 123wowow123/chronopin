@@ -371,11 +371,11 @@
         "latitude": 22.8073194,
         "longitude": 114.0853147,
         "productName": "Shen He Food Shop — Tangxia",
-        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "utcStartDateTime": "2023-12-31T00:00:00Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "confirmed",
-        "dateConfidenceReasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. Bing/DDG/Sogou/Baidu are blocked or return irrelevant results, and no page mentions 深和食店 at 诸佛岭路 beyond the Apple Maps listing. No evidence of any date.",
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Upper bound only: a dated Douyin video of 2023-12-25 already calls 深和小食店 (煤场店), 11 Zhufoling Road unit 113 (Bing Maps and 360 Map listing), an old local shop, and an unverified Douyin caption of 2026-03 says it has been in Tangxia for about 30 years, so it probably opened much earlier. No registration, Meituan or opening date was found. Estimated: 2023-12 is an operating-by bound and 2023-12-31 is used only as a sorting date, not a confirmed opening day.",
         "parentId": null,
         "categories": [
           "Food"
@@ -394,7 +394,7 @@
             "url": "https://maps.apple.com/place?auid=1118505220013791&lsp=57879",
             "title": "Shen He Food Shop — Tangxia — research source",
             "confidence": 90,
-            "reasoning": "No opening date could be found for this venue after a second research pass (hotel, mall, Ctrip, Dianping, press and brand sources). The guide date October 10, 2026 is the verification date, not an opening date. Bing/DDG/Sogou/Baidu are blocked or return irrelevant results, and no page mentions 深和食店 at 诸佛岭路 beyond the Apple Maps listing. No evidence of any date."
+            "reasoning": "Upper bound only: a dated Douyin video of 2023-12-25 already calls 深和小食店 (煤场店), 11 Zhufoling Road unit 113 (Bing Maps and 360 Map listing), an old local shop, and an unverified Douyin caption of 2026-03 says it has been in Tangxia for about 30 years, so it probably opened much earlier. No registration, Meituan or opening date was found. Estimated: 2023-12 is an operating-by bound and 2023-12-31 is used only as a sorting date, not a confirmed opening day."
           },
           {
             "url": "https://www.dianping.com/photos/8596981842",

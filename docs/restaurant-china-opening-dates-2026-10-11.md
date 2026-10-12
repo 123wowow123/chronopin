@@ -7,8 +7,8 @@
 | Result | Pins |
 | --- | --- |
 | Exact opening day from a venue or operator source (`confirmed`) | 7 |
-| Best estimate (`estimated`) | 97 |
-| No usable evidence; kept at the 2026-10-10 verification date (Shen He, Tangxia) | 1 |
+| Best estimate (`estimated`) | 98 |
+| No usable evidence; kept at the 2026-10-10 verification date | 0 |
 
 Month- or year-only dates sit on the period's last day, purely for sorting. Registration dates, hotel or mall openings and earliest-dated-review upper bounds are proxies and are labelled as such in each reasoning field.
 
@@ -24,7 +24,8 @@ Upper bounds only (the shop probably opened earlier): Lao Chang Zhongyang St (20
 
 ## Gaps
 
-- **Shen He Food Shop (Tangxia):** only a 2025-07-15 SMZDM post about a similarly named shop that may be a different venue. Needs a Dianping/Meituan page or local press.
+- **Shen He Food Shop (Tangxia):** 深和小食店 (煤场店) at 11 Zhufoling Road unit 113. Only an operating-by bound (dated Douyin video 2023-12-25) and an unverified "about 30 years in Tangxia" caption were found, so the pin carries 2023-12-31 as an upper bound and probably opened much earlier. A Dianping/Meituan page or company registration would settle it.
+- **Renxin Laopu (Dongle Road):** address verified (Ctrip 5490198, Baidu Baike, Amap all give 东乐路3号德富大厦25号铺); the Huagai Road listing is a separate branch. No change.
 - **Zaogaofeng (resolved 2026-10-11):** two stores exist. The Line 4 Wenlvcheng store (e23.cn, 2026-08-18) is now its own pin (13906, estimated 2026-08-18, OSM station point), and the Line 8 Qingyuan Dajie pin (7512) is sourced to the Dazhong Net article (2026-09-24, estimated). The swap re-keyed the Qingyuan pin's source, created new content (503) and special (1176) records for it, and repurposed the old content (430) and special (944) records for Wenlvcheng, which keeps the e23 source. Neither store has a published opening day.
 - **Source URLs:** the third pass's registry citations are search-result evidence without captured page URLs; titles and quotes are in the working notes only.
 - **Name variants:** Ctrip names differ from some guide titles (Hao Ge Xian Sao / 蚝哥蚬嫂, Lao Chang / 老昌春饼, Lv Da Yin Xiang / 旅大印象, Jia Wei Zai Tian / 佳味再添). Titles were not changed. Renxin Laopu's Dongle Road address may be stale (Bing Maps lists Huagai Road 93).
