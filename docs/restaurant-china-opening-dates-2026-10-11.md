@@ -25,7 +25,7 @@ Upper bounds only (the shop probably opened earlier): Lao Chang Zhongyang St (20
 ## Gaps
 
 - **Shen He Food Shop (Tangxia):** only a 2025-07-15 SMZDM post about a similarly named shop that may be a different venue. Needs a Dianping/Meituan page or local press.
-- **Zaogaofeng:** two stores exist. The e23.cn article (2026-08-18) documents the Line 4 Wenlvcheng station store; the pin is the Line 8 Qingyuan Dajie store (Dazhong Net, 2026-09-24). The Wenlvcheng store has no pin: its only source is the e23 article already used as the Qingyuan pin's `sourceUrl`, and moving that source would orphan its content record (see [restaurant-content.md](okf/api/restaurant-content.md)).
+- **Zaogaofeng (resolved 2026-10-11):** two stores exist. The Line 4 Wenlvcheng store (e23.cn, 2026-08-18) is now its own pin (13906, estimated 2026-08-18, OSM station point), and the Line 8 Qingyuan Dajie pin (7512) is sourced to the Dazhong Net article (2026-09-24, estimated). The swap re-keyed the Qingyuan pin's source, created new content (503) and special (1176) records for it, and repurposed the old content (430) and special (944) records for Wenlvcheng, which keeps the e23 source. Neither store has a published opening day.
 - **Source URLs:** the third pass's registry citations are search-result evidence without captured page URLs; titles and quotes are in the working notes only.
 - **Name variants:** Ctrip names differ from some guide titles (Hao Ge Xian Sao / 蚝哥蚬嫂, Lao Chang / 老昌春饼, Lv Da Yin Xiang / 旅大印象, Jia Wei Zai Tian / 佳味再添). Titles were not changed. Renxin Laopu's Dongle Road address may be stale (Bing Maps lists Huagai Road 93).
 

@@ -2,7 +2,6 @@
 // newest pins' thumbs, cropped to the collage's tiles and inlined, so the card
 // a link to the home page previews with shows what was pinned lately.
 
-import { cacheLife } from 'next/cache';
 import sharp from 'sharp';
 import { blobUrl } from '@/lib/appConfig';
 import Pins from '../model/pins';
@@ -40,11 +39,9 @@ async function tile(url: string): Promise<string | null> {
 }
 
 // Up to a collage's worth of tiles from the pins added most recently, newest
-// first. Cached for a day: the card is a daily picture of the site, not a
-// live feed, and building it fetches fifteen pictures.
+// first. Not cached here: services/siteCard.tsx keeps the rendered card, so a
+// failed build is retried instead of being remembered as an empty collage.
 export async function shareCollage(): Promise<string[]> {
-  'use cache';
-  cacheLife('days');
   const pins = await Pins.newest(CANDIDATES, await timelineMinConfidence());
   const pictures = await PinView.pictures(pins.map((p) => p.id));
   const urls = [...new Set(pins.map((p) => blobUrl(pictures.get(p.id)?.thumbName)).filter((u): u is string => !!u))];

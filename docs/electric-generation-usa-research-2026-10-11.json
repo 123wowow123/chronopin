@@ -1,5 +1,6 @@
 {
   "checkedAt": "2026-10-11",
+  "scope": "Construction and recent openings only; broader operator plans are context, not included capacity",
   "updates": [
     {
       "key": "eia-58987",
@@ -60,21 +61,6 @@
       "confidence": "estimated",
       "reason": "Operator reports the year 2027. December 31 is an estimated year boundary, not a confirmed commissioning day.",
       "extra": []
-    },
-    {
-      "key": "eia-67914",
-      "status": "Under construction",
-      "url": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
-      "facts": "Entergy’s May 19, 2026 construction update confirms installation of heat-recovery steam-generator modules at Delta Blues in Greenville. The operator describes 754 MW and a 2028 opening target.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": [
-        [
-          "https://www.entergy.com/blog/were-investing-now-to-power-mississippis-energy-future",
-          "The June 2026 operator update specifies expected in-service dates of May 2028 for Delta Blues and August 2029 for Traceview."
-        ]
-      ]
     },
     {
       "key": "eia-69223",
@@ -172,21 +158,6 @@
       ]
     },
     {
-      "key": "gem-L100000500282",
-      "status": "Construction permit issued",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20345.pdf",
-      "facts": "The NRC’s Federal Register notice confirms construction permit CPAR-2 for TVA’s Clinch River Nuclear Unit 1 was issued September 28, 2026. It authorizes construction of the reactor facility in Roane County, Tennessee. A construction permit does not establish an operating licence or prove construction has started.",
-      "date": "2026-09-28",
-      "confidence": "confirmed",
-      "reason": "The Federal Register explicitly dates permit issuance September 28, 2026, distinct from later announcements.",
-      "extra": [
-        [
-          "https://www.nrc.gov/facilities-safety/new-reactors/advanced-reactors/who-were-working-with/advanced-reactor-application-projects/tva-clinch-river-cpa",
-          "NRC application page provides project and review context; its earlier fall-2026 target is superseded by the issued permit notice."
-        ]
-      ]
-    },
-    {
       "key": "gem-L100001047964",
       "status": "Groundbreaking / site development",
       "url": "https://www.kairospower.com/updates/kairos-power-breaks-ground-on-hermes-2-demonstration-plant",
@@ -198,41 +169,6 @@
         [
           "https://www.nrc.gov/facilities-safety/non-power-facilities/new-facility-licensing/hermes-2-kairos-application",
           "NRC confirms Hermes 2 construction permits were issued November 21, 2024. The permits and groundbreaking are different milestones."
-        ]
-      ]
-    },
-    {
-      "key": "gem-L100000500446",
-      "status": "Pre-construction / licensing",
-      "url": "https://x-energy.com/regulatory-milestones/",
-      "facts": "Dow and X-energy’s Long Mott proposal at Seadrift consists of four Xe-100 units, designed for up to 320 MWe electricity or 800 MW industrial heat. X-energy reports completion of NRC environmental review in May 2026, with safety review continuing. Environmental review is not a construction permit or operation approval.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": []
-    },
-    {
-      "key": "gem-L100000500497",
-      "status": "Pre-construction / site characterization",
-      "url": "https://x-energy.com/regulatory-milestones/",
-      "facts": "X-energy describes Cascade Advanced Energy Facility as up to twelve Xe-100 reactors co-located with Energy Northwest’s Columbia Generating Station near Richland, Washington. The project remains in regulatory engagement/site-characterization development; a twelve-unit proposal is not twelve commissioned units.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": []
-    },
-    {
-      "key": "eia-3797",
-      "status": "Approved / pre-construction",
-      "url": "https://www.scc.virginia.gov/docketsearch/DOCS/89g501%21.PDF",
-      "facts": "The Virginia SCC order authorizes Chesterfield Energy Reliability Center, described as an approximately 944 MW nominal flexible-fuel facility within the retired Unit 6 footprint at Chesterfield Power Station. This authorization is distinct from proof of construction or operation. Dominion’s project page gives an up-to-1,000 MW turbine total; the SCC nominal figure and turbine maxima must remain separately labelled.",
-      "date": "2029-06-01",
-      "confidence": "estimated",
-      "reason": "The SCC record discusses projected service June 1, 2029. This is a projected target, not a verified opening day.",
-      "extra": [
-        [
-          "https://www.dominionenergy.com/projects-and-facilities/natural-gas-facilities/chesterfield-energy-reliability-center",
-          "Operator describes four simple-cycle turbines, each up to 250 MW, and a 2029 operations target. Some page wording predates regulatory approval."
         ]
       ]
     },
@@ -297,26 +233,6 @@
       ]
     },
     {
-      "key": "gem-L100001026044",
-      "status": "Announced / development",
-      "url": "https://www.sagegeosystems.com/projects",
-      "facts": "Sage’s projects page lists 150 MW of geothermal generation associated with Meta and a 2030 completion target. Sage’s 3 MW San Miguel project is energy storage and is a separate project; it is not evidence that the 150 MW generating project has opened.",
-      "date": "2030-12-31",
-      "confidence": "estimated",
-      "reason": "Operator projects page publishes 2030. December 31 is an estimated year boundary; exact site and phase commissioning remain unresolved.",
-      "extra": []
-    },
-    {
-      "key": "gem-L100001080891",
-      "status": "Announced / development",
-      "url": "https://www.xgsenergy.com/xgs-energy-and-meta-to-partner-on-150-mw-advanced-geothermal-project/",
-      "facts": "XGS and Meta announced an agreement supporting 150 MW of next-generation geothermal development in New Mexico, intended to serve the PNM grid and Meta’s operations. This is an announced development agreement, not proof of construction, delivered capacity or a verified parcel. The inventory point must remain an approximate regional marker.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": []
-    },
-    {
       "key": "existing-5492",
       "status": "Under construction",
       "url": "https://www.terrapower.com/TerraPower-Commences-Construction-on-Americas-First-Utility-Scale-Advanced-Nuclear-Power-Plant",
@@ -343,71 +259,6 @@
         [
           "https://coastalvawind.com/",
           "The project homepage publishes 2027 expected completion, superseding older corporate pages that still say 2026."
-        ]
-      ]
-    },
-    {
-      "key": "existing-5960",
-      "status": "Restart project / regulatory work",
-      "url": "https://www.constellationenergy.com/news/2026/08/constellation-reports-second-quarter-2026-results.html",
-      "facts": "Constellation’s August 6, 2026 results report progress toward restarting Crane Clean Energy Center in 2027, including FERC interconnection-rights transfer and an NRC fuel-licence amendment. This is restoration of Three Mile Island Unit 1, not a new reactor or a restart of accident-damaged Unit 2.",
-      "date": "2027-12-31",
-      "confidence": "estimated",
-      "reason": "Operator targets restart in 2027. December 31 is an estimated year boundary, not a confirmed restart day.",
-      "extra": []
-    },
-    {
-      "key": "existing-5517",
-      "status": "Restart project / regulatory work",
-      "url": "https://newsroom.nexteraenergy.com/2026-09-08-U-S-Department-of-Energy-Closes-Up-to-1-9-Billion-Loan-to-Restart-NextEra-Energys-Duane-Arnold-Energy-Center",
-      "facts": "NextEra’s September 8, 2026 release confirms an up-to-$1.9 billion DOE loan for Duane Arnold’s restart. The operator targets no later than Q1 2029, pending approvals. This is restoration of the retired Iowa reactor, not a newly built nuclear unit.",
-      "date": "2029-03-31",
-      "confidence": "estimated",
-      "reason": "Operator targets restart by Q1 2029, conditional on regulatory approvals. March 31 is an estimated quarter boundary.",
-      "extra": [
-        [
-          "https://www.nexteraenergy.com/duane-arnold-energy-center/faq.html",
-          "Current operator FAQ retains first-quarter 2029 as the anticipated full-operation window."
-        ]
-      ]
-    },
-    {
-      "key": "eia-69099",
-      "status": "Under construction / experimental fusion",
-      "url": "https://www.helionenergy.com/newsroom/helion-clears-key-regulatory-milestone-on-the-path-to-building-and-operating-the-worlds-first-fusion-power-plant",
-      "facts": "Helion’s June 16, 2026 update says Orion in Malaga has received Washington radioactive-materials and air-emissions licences. Assembly/office construction was complete and generator-building earthwork was underway. This is a fusion development project; approvals and building work do not demonstrate commercial fusion electricity.",
-      "date": "2028-12-31",
-      "confidence": "estimated",
-      "reason": "Helion targets initial operations in 2028. December 31 is an estimated year boundary; the schedule depends on first-of-a-kind technology performance.",
-      "extra": [
-        [
-          "https://www.helionenergy.com/orion",
-          "Operator describes a design intended to deliver at least 50 MW under its Microsoft purchase agreement and initial operation targeted in 2028."
-        ]
-      ]
-    },
-    {
-      "key": "existing-2627",
-      "status": "Pre-construction / experimental fusion",
-      "url": "https://www.cfs.energy/news-and-media/commonwealth-fusion-systems-becomes-first-fusion-company-to-apply-to-pjm-interconnection-the-largest-u.s.-wholesale-electricity-market",
-      "facts": "CFS announced April 28, 2026 that its proposed 400 MW ARC plant at Chesterfield County, Virginia, named Fall Line Fusion Power Station, had applied for PJM interconnection. CFS targets the early 2030s. An interconnection application is an engineering-study request, not proof of financing, completed construction or commercial fusion output.",
-      "date": "2026-04-28",
-      "confidence": "confirmed",
-      "reason": "The pin dates the April 28, 2026 interconnection-application announcement. No exact future commissioning year or day is established; the operator targets the early 2030s.",
-      "extra": []
-    },
-    {
-      "key": "gem-L100001047878",
-      "status": "Site development / advanced reactor",
-      "url": "https://oklo.com/projects-and-deployments/idaho",
-      "facts": "Oklo identifies Aurora-INL as its first planned commercial fast-fission plant. DOE pilot authorization, NRC licensing and fuel-fabrication work are distinct steps. A criticality milestone for Oklo’s separate Groves research reactor does not prove Aurora-INL has begun commercial electricity production.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": [
-        [
-          "https://www.energy.gov/nepa/articles/cx-271013-oklo-limited-construction-activities-rev-2",
-          "DOE environmental determination describes limited construction activities including temporary power, a production well and construction-water supply at Aurora-INL."
         ]
       ]
     },
@@ -441,29 +292,6 @@
       ]
     },
     {
-      "key": "eia-69798",
-      "status": "Licence application / proposed nuclear",
-      "url": "https://www.nrc.gov/facilities-safety/new-reactors/large-light-water-reactors/combined-license-applications-for-new-reactors/fermi-america-president-donald-j-trump-advanced-energy-and-intelligence-campus-units-1-4",
-      "facts": "NRC’s Project Matador application page identifies four proposed AP1000 reactors at the Texas campus. Parts 1 and 2 have been accepted for docketing and are under review; Part 3 is targeted for December 31, 2026. The Commission’s combined-licence decision remains to be determined. Application review and an applicant-prepared environmental impact statement do not establish a construction/operating licence or delivered nuclear generation. EIA reports 4,468 MW nameplate across four proposed units.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": [
-        [
-          "https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-034.pdf",
-          "NRC’s March 23, 2026 release describes public input and the applicant-prepared environmental-review pilot, not licence issuance."
-        ],
-        [
-          "https://fermiamerica.com/",
-          "The campus’s advertised 17 GW is a combined development scope, not a nuclear-only rating. First-power marketing for 2026 must not be interpreted as a nuclear commissioning date."
-        ],
-        [
-          "https://www.govinfo.gov/content/pkg/FR-2026-10-09/html/2026-20742.htm",
-          "The October 9, 2026 Federal Register notice opens public comment on the draft EIS through November 23. Staff preliminarily recommends licence issuance contingent on successful safety review; a preliminary environmental recommendation is not an issued combined licence."
-        ]
-      ]
-    },
-    {
       "key": "eia-728",
       "status": "Under construction",
       "url": "https://www.georgiapower.com/news-hub/press-releases/turbine-generator-unit-9-plant-yates.html",
@@ -487,16 +315,6 @@
           "TVA’s first-quarter fiscal 2026 investor presentation labels Kingston’s energy complex as approximately 1,500 MW natural-gas generation. This is an operator project-output figure, distinct from summed EIA unit nameplates."
         ]
       ]
-    },
-    {
-      "key": "gem-L100001080937",
-      "status": "Development / equipment allocation",
-      "url": "https://www.tallgrass.com/newsroom/press-releases/tallgrass-and-mitsubishi-power-americas-announce-turbine-allocation-for-cheyenne-power-hub-051526",
-      "facts": "Tallgrass and Mitsubishi Power’s May 15, 2026 announcement allocates the first two M501JAC gas turbines to Phase 1 of Cheyenne Power Hub in southeast Wyoming. The operator describes approximately 1,150 MW of site-ready power at the Switchgrass Industrial Park data-center campus, supplied via Rockies Express gas. Component arrival/installation was expected as early as July; an elapsed expectation does not verify delivery, construction completion or commercial operation. GEM’s broader 2,700 MW inventory scope must not be added to Phase 1’s 1,150 MW. A final commercial-start date was not established by this release.",
-      "date": null,
-      "confidence": "estimated",
-      "reason": null,
-      "extra": []
     }
   ],
   "applied": {
@@ -534,13 +352,6 @@
       "status": "Under construction",
       "sourceUrl": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
       "imageCount": 2
-    },
-    "eia-67914": {
-      "pinId": 8461,
-      "title": "Delta Blues Advanced Power Station — under construction",
-      "status": "Under construction",
-      "sourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
-      "imageCount": 0
     },
     "eia-69223": {
       "pinId": 7685,
@@ -591,40 +402,12 @@
       "sourceUrl": "https://fervoenergy.gcs-web.com/news-releases/news-release-details/fervo-energy-declares-commercial-operation-cape-station-ahead",
       "imageCount": 1
     },
-    "gem-L100000500282": {
-      "pinId": 5494,
-      "title": "Clinch River BWRX-300 — construction permit issued",
-      "status": "Construction permit issued",
-      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20345.pdf",
-      "imageCount": 0
-    },
     "gem-L100001047964": {
       "pinId": 9298,
       "title": "Hermes 2 electricity-producing demonstration plant — groundbreaking / site development",
       "status": "Groundbreaking / site development",
       "sourceUrl": "https://www.kairospower.com/updates/kairos-power-breaks-ground-on-hermes-2-demonstration-plant",
       "imageCount": 2
-    },
-    "gem-L100000500446": {
-      "pinId": 8731,
-      "title": "Long Mott nuclear power plant — pre-construction / licensing",
-      "status": "Pre-construction / licensing",
-      "sourceUrl": "https://x-energy.com/regulatory-milestones/",
-      "imageCount": 0
-    },
-    "gem-L100000500497": {
-      "pinId": 8428,
-      "title": "Cascade Advanced Energy Facility (Energy Northwest / X-energy) — pre-construction / site characterization",
-      "status": "Pre-construction / site characterization",
-      "sourceUrl": "https://x-energy.com/regulatory-milestones/",
-      "imageCount": 0
-    },
-    "eia-3797": {
-      "pinId": 8414,
-      "title": "Chesterfield — approved / pre-construction",
-      "status": "Approved / pre-construction",
-      "sourceUrl": "https://www.scc.virginia.gov/docketsearch/DOCS/89g501%21.PDF",
-      "imageCount": 0
     },
     "eia-67435": {
       "pinId": 7681,
@@ -654,20 +437,6 @@
       "sourceUrl": "https://www.intersect.com/solutions",
       "imageCount": 0
     },
-    "gem-L100001026044": {
-      "pinId": 9238,
-      "title": "Sage Meta geothermal power plant — announced / development",
-      "status": "Announced / development",
-      "sourceUrl": "https://www.sagegeosystems.com/projects",
-      "imageCount": 0
-    },
-    "gem-L100001080891": {
-      "pinId": 9244,
-      "title": "XGS Meta geothermal power plant — announced / development",
-      "status": "Announced / development",
-      "sourceUrl": "https://www.xgsenergy.com/xgs-energy-and-meta-to-partner-on-150-mw-advanced-geothermal-project/",
-      "imageCount": 0
-    },
     "existing-5492": {
       "pinId": 5492,
       "title": "TerraPower Starts Nuclear Construction of Its Natrium Plant in Kemmerer",
@@ -680,41 +449,6 @@
       "title": "Virginia's CVOW Offshore Wind Farm Slips to a Final Turbine by End-2027",
       "status": "Partly operational / under construction",
       "sourceUrl": "https://coastalvawind.com/about/the-project/timeline",
-      "imageCount": 0
-    },
-    "existing-5960": {
-      "pinId": 5960,
-      "title": "Crane Clean Energy Center — proposed restart (2027 target)",
-      "status": "Restart project / regulatory work",
-      "sourceUrl": "https://www.constellationenergy.com/news/2026/08/constellation-reports-second-quarter-2026-results.html",
-      "imageCount": 0
-    },
-    "existing-5517": {
-      "pinId": 5517,
-      "title": "Iowa's Duane Arnold Nuclear Plant Is Due Back Online in Early 2029",
-      "status": "Restart project / regulatory work",
-      "sourceUrl": "https://newsroom.nexteraenergy.com/2026-09-08-U-S-Department-of-Energy-Closes-Up-to-1-9-Billion-Loan-to-Restart-NextEra-Energys-Duane-Arnold-Energy-Center",
-      "imageCount": 0
-    },
-    "eia-69099": {
-      "pinId": 9299,
-      "title": "Orion - Helion — under construction / experimental fusion",
-      "status": "Under construction / experimental fusion",
-      "sourceUrl": "https://www.helionenergy.com/newsroom/helion-clears-key-regulatory-milestone-on-the-path-to-building-and-operating-the-worlds-first-fusion-power-plant",
-      "imageCount": 0
-    },
-    "existing-2627": {
-      "pinId": 2627,
-      "title": "Fall Line Fusion Power Station (ARC) — pre-construction",
-      "status": "Pre-construction / experimental fusion",
-      "sourceUrl": "https://www.cfs.energy/news-and-media/commonwealth-fusion-systems-becomes-first-fusion-company-to-apply-to-pjm-interconnection-the-largest-u.s.-wholesale-electricity-market",
-      "imageCount": 0
-    },
-    "gem-L100001047878": {
-      "pinId": 9297,
-      "title": "Aurora nuclear power plant — site development / advanced reactor",
-      "status": "Site development / advanced reactor",
-      "sourceUrl": "https://oklo.com/projects-and-deployments/idaho",
       "imageCount": 0
     },
     "eia-66621": {
@@ -731,13 +465,6 @@
       "sourceUrl": "https://fermiamerica.com/",
       "imageCount": 0
     },
-    "eia-69798": {
-      "pinId": 8302,
-      "title": "Project Matador Nuclear — licence application / proposed nuclear",
-      "status": "Licence application / proposed nuclear",
-      "sourceUrl": "https://www.nrc.gov/facilities-safety/new-reactors/large-light-water-reactors/combined-license-applications-for-new-reactors/fermi-america-president-donald-j-trump-advanced-energy-and-intelligence-campus-units-1-4",
-      "imageCount": 0
-    },
     "eia-728": {
       "pinId": 8366,
       "title": "Yates — under construction",
@@ -751,13 +478,24 @@
       "status": "Under construction",
       "sourceUrl": "https://www.tva.com/about-tva/our-leadership/board-of-directors-/meetings-archive/2026/02/11/default-calendar/tva-board-meeting---february-11--2026",
       "imageCount": 0
+    }
+  },
+  "additionalExistingOperatorEvidence": {
+    "5488": {
+      "name": "Darlington New Nuclear Project — Unit 1",
+      "country": "Canada",
+      "status": "Under construction",
+      "capacityMW": 300,
+      "url": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+      "facts": "OPG reports that Unit 1 reactor-building construction is progressing above its completed basemat in summer 2026, after CNSC clearance of the foundation hold point. This collection includes the first 300 MW BWRX-300 unit under construction. Three additional units remain subject to regulatory approvals and are excluded; the proposed 1,200 MW four-unit fleet is not the included construction capacity. An operating licence is still required before commissioning/operation."
     },
-    "gem-L100001080937": {
-      "pinId": 8309,
-      "title": "BFC Power and Cheyenne Power Hub — development / equipment allocation",
-      "status": "Development / equipment allocation",
-      "sourceUrl": "https://www.tallgrass.com/newsroom/press-releases/tallgrass-and-mitsubishi-power-americas-announce-turbine-allocation-for-cheyenne-power-hub-051526",
-      "imageCount": 0
+    "5506": {
+      "name": "Palisades — existing-reactor refurbishment and commissioning",
+      "country": "United States",
+      "status": "Refurbishment / commissioning",
+      "capacityMW": null,
+      "url": "https://holtecinternational.com/hh-41-22/",
+      "facts": "Holtec reports completed major refurbishment work and ongoing testing, restoration, fuel-loading-related activities and preparations for startup at the existing Palisades reactor. It confirms reconnection to the 345-kV switchyard on September 11, 2026 after extensive restoration. That connection is not confirmation of commercial nuclear generation. This collection includes the physical existing-reactor restart work; the separate proposed Pioneer SMR-300 reactors are excluded."
     }
   },
   "supplements": [
@@ -778,28 +516,9 @@
         "precision": "locality/county; exact project parcel not verified"
       },
       "pinId": 9321,
+      "pinUrl": "https://www.chronopin.com/pin/9321",
       "sourceUrl": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/",
       "facts": "RWE’s June 11, 2026 release describes Rabbit’s Foot as a 298 MWac solar project in Bowie County. Onsite construction began earlier in 2026, Meta signed a long-term power-purchase agreement, and commercial operation is targeted by the end of 2027. This is a planned generation rating, not delivered power."
-    },
-    {
-      "key": "supplement-crooked-creek-ok",
-      "name": "Crooked Creek Solar — McCurtain County, Oklahoma",
-      "country": "United States",
-      "status": "Pre-construction / PPA signed",
-      "types": [
-        "Solar"
-      ],
-      "capacityMW": 155,
-      "geocoding": {
-        "provider": "ArcGIS",
-        "query": "McCurtain County, Oklahoma, United States",
-        "matchAddress": "McCurtain County, Oklahoma",
-        "score": 100,
-        "precision": "locality/county; exact project parcel not verified"
-      },
-      "pinId": 9322,
-      "sourceUrl": "https://www.rwe.com/en/investor-relations/financial-calendar-and-publications/news-and-ad-hoc-announcements/news/news-2026-08-03/",
-      "facts": "RWE and Google announced a 15-year PPA for the full output of 155 MWac Crooked Creek Solar in McCurtain County on August 3, 2026. The release’s main project description says onsite construction is planned later in 2026 and commercial operation in 2028; its footer calls the project under construction, so actual site-start timing remains unresolved. This is not Crooked Creek PV I in Illinois."
     },
     {
       "key": "supplement-th-wharton",
@@ -815,6 +534,7 @@
         "precision": "reported existing plant point; not a verified new-unit entrance"
       },
       "pinId": 9323,
+      "pinUrl": "https://www.chronopin.com/pin/9323",
       "sourceUrl": "https://www.nrg.com/en/insights/innovation/powering-texas-new-nrg-peaker-units-bring-needed-power-to-texans",
       "facts": "NRG confirms its two new simple-cycle gas units at T.H. Wharton reached commercial operation May 26, 2026. The operator article describes a combined 456 MW nameplate rating; its quarterly results use a 415 MW project figure. These are different published ratings, not two separate additions. Older Wharton units are excluded from the new-project capacity."
     }
