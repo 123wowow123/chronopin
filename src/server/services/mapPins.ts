@@ -85,7 +85,6 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   });
   // The $-$$$$ range is looked up by source URL, which the marker itself
   // does not carry.
-  require('fs').writeFileSync('/private/tmp/claude-501/-Users-ianflynn-chronopin/4bea79fa-d09d-4711-bde2-57c9ed5b6447/scratchpad/dbg.txt', JSON.stringify([rows.length, Object.keys(rows[0] ?? {}), (rows.find((r) => r.id === 6811) as any)?.sourceUrl]));
   const pins = rows.map(({ sourceUrl, ...row }) => ({ ...row, restaurantPriceRange: restaurantPriceRange(sourceUrl as string | null) })) as MapPinJson[];
   if (query.restaurantsOnly && !query.onlyWatched) {
     const existing = new Set(pins.map((pin) => pin.id));
