@@ -11,7 +11,11 @@ const WEB_URL = /^https?:\/\/\S+$/i;
 
 // A real calendar day written YYYY-MM-DD (the page formats it with Intl, which
 // throws on 2026-13-45).
-const isIsoDay = (value: string): boolean => /^\d{4}-\d{2}-\d{2}$/.test(value) && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
+const isIsoDay = (value: string): boolean => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const day = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(day.getTime()) && day.toISOString().slice(0, 10) === value;
+};
 
 // The reviews, cleaned (a repeated url is kept once), or a sentence saying what
 // is wrong with them. Null or an empty list is no reviews.

@@ -2,6 +2,7 @@
 
 ## 2026-10-12
 
+* **Update:** Car performance rubrics can carry independent reviews, as taste profiles do: `PinCarPerf.reviews` (schema 0168, `[{url, title, publishedDate, quote}]`, at most 6, quote at most 300 characters) is accepted by `PUT /api/pins/:id/car-performance` (a body without `reviews` keeps the existing list, `[]` clears it) and by `scripts/products/carPerf.json`, and is listed under the radar by the `ReviewList` component that the taste radar now shares. Rules are in the [scraping strategy](scraping/strategy.md) ("Car performance reviews"); local database only, not deployed.
 * **Update:** Added the car performance rubric: `PinCarPerf` (schema 0167) stores six 0-5 axes (range, charging, acceleration, driver assist, space and comfort, value; `null` where the spec is not published) per vehicle pin, with `PUT`/`GET`/`DELETE /api/pins/:id/car-performance`, a radar on the pin page drawn by the taste radar's chart, `carperf:<axis>` / `carperf:any` search terms, and `npm run products:carperf` for `scripts/products/carPerf.json`. The rubric and its anchors are in the [scraping strategy](scraping/strategy.md) ("Car performance rubric"); local database only, not deployed.
 
 ## 2026-10-11

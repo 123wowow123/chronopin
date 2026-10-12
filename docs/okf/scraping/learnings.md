@@ -52,6 +52,7 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 
 * **Learned:** Specs for a car launch (range, charging, 0-100 time, driver-assist hardware, size, price) are published, but there is no single score for them. The taste radar's pattern fits: an editorial estimate on a written rubric, labelled "Estimate", with the sentence it rests on and the page the figures came from.
 * **Changed:** Built `PinCarPerf` (schema 0167), the `/api/pins/:id/car-performance` route, the pin-page radar and `carperf:` search terms; the rubric and its anchors are in [Strategy](strategy.md) ("Car performance rubric"). An axis whose spec is not published is `null` ("n/a"), never a guess from a rival or a zero. Existing taste-radar rules (estimate only from what the pin states, never overwrite a `hand` row) apply unchanged.
+* **Changed (later the same day):** Added `PinCarPerf.reviews` (schema 0168), the taste profile's independent-reviews list for vehicle pins. Validation moved to the shared `src/lib/pinReviews.ts` (a real calendar date is now required, since `Intl` throws on `2026-13-45`) and the list is drawn by the shared `ReviewList`. Unlike a taste `PUT`, which clears reviews when the body has no `reviews` key, a car performance `PUT` without the key keeps them.
 
 # Standing feedback from the owner
 
