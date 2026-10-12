@@ -11,6 +11,7 @@ import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { ListingView } from '@/components/listings/ListingView';
 import { listingTitle, mediaUrl, priceLine } from '@/components/listings/parts';
+import { money } from '@/lib/format';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { api } from '@/lib/client/api';
@@ -187,6 +188,8 @@ function popupContent(pin: MapPinJson) {
   const href = localizeHere(pin.restaurantHref ?? pinPath(pin));
   content.innerHTML =
     `<div class="px-2.5 pt-1.5 pb-2"><a href="${escapeHtml(href)}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
+    `${pin.price ? `<div class="mt-1 font-medium tabular-nums ${pin.price < 0 ? 'text-danger' : 'text-success'}">${escapeHtml(money(pin.price, pin.priceCurrency))}</div>` : ''}` +
+    `${!pin.price && pin.restaurantPriceRange && /^[$]{1,4}$/.test(pin.restaurantPriceRange) ? `<div class="mt-1 font-medium tracking-wide text-success">${escapeHtml(pin.restaurantPriceRange)}</div>` : ''}` +
     `${pin.specialLabel ? `<div class="mt-1 text-subtle">${escapeHtml(pin.specialLabel)}</div>` : ''}` +
     `${pin.address ? `<div class="truncate text-subtle">${escapeHtml(pin.address)}</div>` : ''}</div>`;
   const sources = pictureSources(pin);

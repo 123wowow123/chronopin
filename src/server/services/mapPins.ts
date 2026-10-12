@@ -7,6 +7,7 @@
 import Pins from '../model/pins';
 import { searchPins } from './search';
 import { timelineMinConfidence } from './timeline';
+import { restaurantPriceRange } from '@/server/restaurantPrice';
 import { toJson, type MapPinJson, type PinJson } from '@/lib/types';
 import { parseSearchQuery } from '../util/searchQuery';
 import { restaurantPreviewPins } from './restaurantPreview';
@@ -39,6 +40,9 @@ export function toMapPin(pin: PinJson): MapPinJson {
     utcCreatedDateTime: pin.utcCreatedDateTime,
     latitude: pin.latitude,
     longitude: pin.longitude,
+    price: pin.price,
+    priceCurrency: pin.priceCurrency,
+    restaurantPriceRange: pin.restaurantPriceRange ?? restaurantPriceRange(pin.sourceUrl),
     media: pin.media?.map((medium) => ({ type: medium.type, thumbName: medium.thumbName, originalUrl: medium.originalUrl })),
   };
 }
@@ -79,7 +83,10 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
     favoriteUserId: query.onlyWatched ? query.userId : null,
     restaurantsOnly: query.restaurantsOnly,
   });
-  const pins = rows as MapPinJson[];
+  // The $-$$$$ range is looked up by source URL, which the marker itself
+  // does not carry.
+  require('fs').writeFileSync('/private/tmp/claude-501/-Users-ianflynn-chronopin/4bea79fa-d09d-4711-bde2-57c9ed5b6447/scratchpad/dbg.txt', JSON.stringify([rows.length, Object.keys(rows[0] ?? {}), (rows.find((r) => r.id === 6811) as any)?.sourceUrl]));
+  const pins = rows.map(({ sourceUrl, ...row }) => ({ ...row, restaurantPriceRange: restaurantPriceRange(sourceUrl as string | null) })) as MapPinJson[];
   if (query.restaurantsOnly && !query.onlyWatched) {
     const existing = new Set(pins.map((pin) => pin.id));
     const previews = await restaurantPreviewPins();

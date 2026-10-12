@@ -244,7 +244,7 @@ export type CardPin = PinJson & { safeDescription?: string };
 // popup. A subset of PinJson rather than a shape of its own, so the map can
 // plot one of these or a whole pin - the focused pin still arrives entire
 // from /api/pins/:id.
-export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories' | 'allDay' | 'utcStartDateTime' | 'utcCreatedDateTime' | 'latitude' | 'longitude'> & {
+export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories' | 'allDay' | 'utcStartDateTime' | 'utcCreatedDateTime' | 'latitude' | 'longitude' | 'price' | 'priceCurrency' | 'restaurantPriceRange'> & {
   media?: Pick<MediumJson, 'type' | 'thumbName' | 'originalUrl'>[];
   // Curated restaurant specials may have no database pin yet.
   restaurantHref?: string;
