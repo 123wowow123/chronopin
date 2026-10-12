@@ -418,6 +418,7 @@ export default class Pins extends BasePins<Pin> {
         "p"."utcStartDateTime", "p"."utcCreatedDateTime",
         ST_Y("p"."location"::geometry) AS "latitude",
         ST_X("p"."location"::geometry) AS "longitude",
+        "p"."price", "p"."priceCurrency", "p"."sourceUrl",
         ${MAP_MEDIA} AS "media"
       FROM "Pin" AS "p"
       WHERE "p"."location" IS NOT NULL
