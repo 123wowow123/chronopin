@@ -4,22 +4,27 @@ import { useId, useState, type ReactNode } from 'react';
 import { useLocale, useT } from '@/lib/client/i18n';
 import { useRouter } from '@/lib/client/navigation';
 import { localizePath, splitLocale } from '@/lib/i18n/config';
-import { TASTE_AXES, TASTE_MAX, type TasteAxis, type TasteScores } from '@/lib/pinTaste';
-import { refineQuery, term } from '@/lib/searchTerms';
+import { TASTE_AXES, TASTE_MAX } from '@/lib/pinTaste';
+import { refineQuery, term, type LabelField } from '@/lib/searchTerms';
 
 // The radar's geometry. Axis 0 points straight up and the rest follow
-// clockwise, so the seven read Aroma, Bitterness, Sweetness, Astringency,
-// Umami, Pungent and Coolness round the heptagon.
+// clockwise, so the seven taste axes read Aroma, Bitterness, Sweetness,
+// Astringency, Umami, Pungent and Coolness round the heptagon. The same chart
+// draws the car performance rubric (PinCarPerf) as a hexagon.
 const W = 400;
-const H = 292;
+const DEFAULT_H = 292;
 const CX = W / 2;
 const CY = 140;
 const R = 98;
 const LABEL_R = R + 22;
 
-const point = (index: number, radius: number): [number, number] => {
-  const angle = -Math.PI / 2 + (index * 2 * Math.PI) / TASTE_AXES.length;
-  return [CX + radius * Math.cos(angle), CY + radius * Math.sin(angle)];
+// A label too long for the side of the card breaks at the space nearest its middle.
+const LONG_LABEL = 13;
+const labelLines = (label: string): string[] => {
+  const spaces = [...label.matchAll(/ /g)].map((m) => m.index as number);
+  if (label.length <= LONG_LABEL || !spaces.length) return [label];
+  const at = spaces.reduce((best, i) => (Math.abs(i - label.length / 2) < Math.abs(best - label.length / 2) ? i : best));
+  return [label.slice(0, at), label.slice(at + 1)];
 };
 // Heat runs from cool blue at the centre (a score of 0) through amber to red at
 // the outer ring (5), so a stronger taste reads hotter.
@@ -37,28 +42,57 @@ const heatColor = (share: number): string => {
 };
 const heatStops = HEAT.map((stop) => ({ offset: `${stop.at * 100}%`, color: `rgb(${stop.color.join(',')})` }));
 
-const polygon = (radius: (index: number) => number) =>
-  TASTE_AXES.map((_, i) => point(i, radius(i)).map((n) => n.toFixed(1)).join(',')).join(' ');
+type RadarAxis = { key: string; ja?: string };
 
-// The radar of a taste profile (PinTaste, 0157, 0160). A vertex shows a
-// dot, and its score in the corner of the card, only while it is hovered,
-// clicked, tapped or focused (a touch screen has no hover). An axis's label
-// is a link: it searches for the products that score that axis strongly
-// (taste:bitterness), added to the search already showing on the search page.
+// The radar of a taste profile (PinTaste, 0157, 0160), or of a car's
+// performance rubric (PinCarPerf, 0167: pass its axes, field and naLabel). A
+// vertex shows a dot, and its score in the corner of the card, only while it
+// is hovered, clicked, tapped or focused (a touch screen has no hover). An
+// axis's label is a link: it searches for the products that score that axis
+// strongly (taste:bitterness, carperf:range), added to the search already
+// showing on the search page. A null score (a spec nobody published) is drawn
+// at the centre with an n/a label, and the shape skips it.
 export function TasteRadar({
   scores,
   labels,
   summary,
   showJa,
-  abv,
+  abv = null,
+  axes = TASTE_AXES,
+  field = 'taste',
+  max = TASTE_MAX,
+  naLabel = 'n/a',
+  height = DEFAULT_H,
 }: {
-  scores: TasteScores;
-  labels: Record<TasteAxis, string>;
+  // Keyed by the axes' keys; a missing or null value is an axis with no score.
+  scores: Record<string, unknown>;
+  labels: Record<string, string>;
   summary: string;
   showJa: boolean;
   // A drink's alcohol by volume, always shown at the card's top left.
-  abv: { label: string; value: string; cite: ReactNode } | null;
+  abv?: { label: string; value: string; cite: ReactNode } | null;
+  axes?: readonly RadarAxis[];
+  // The search term an axis label writes (taste:<axis>).
+  field?: LabelField;
+  max?: number;
+  // What a null score reads as, translated by the caller.
+  naLabel?: string;
+  height?: number;
 }) {
+  const H = height;
+  const count = axes.length;
+  const point = (index: number, radius: number): [number, number] => {
+    const angle = -Math.PI / 2 + (index * 2 * Math.PI) / count;
+    return [CX + radius * Math.cos(angle), CY + radius * Math.sin(angle)];
+  };
+  const fmt = (points: [number, number][]) => points.map((p) => p.map((n) => n.toFixed(1)).join(',')).join(' ');
+  const polygon = (radius: (index: number) => number) => fmt(axes.map((_, i) => point(i, radius(i))));
+  // How far out an axis's vertex sits: a null score sits on the centre.
+  const scoreOf = (i: number): number | null => {
+    const value = scores[axes[i].key];
+    return typeof value === 'number' ? value : null;
+  };
+  const radiusOf = (i: number) => (R * (scoreOf(i) ?? 0)) / max;
   const router = useRouter();
   const locale = useLocale();
   const t = useT();
@@ -94,23 +128,23 @@ export function TasteRadar({
         className={`pointer-events-none absolute top-0 right-0 flex flex-col items-end leading-tight transition-opacity ${active == null ? 'opacity-0' : 'opacity-100'}`}
       >
         <span className="text-xl font-semibold text-ink tabular-nums">
-          {active == null ? '' : scores[TASTE_AXES[active].key]}
-          <span className="text-xs font-normal text-muted">/{TASTE_MAX}</span>
+          {active == null ? '' : (scoreOf(active) ?? naLabel)}
+          {active != null && scoreOf(active) == null ? null : <span className="text-xs font-normal text-muted">/{max}</span>}
         </span>
-        <span className="text-xs text-muted">{active == null ? '' : labels[TASTE_AXES[active].key]}</span>
+        <span className="text-xs text-muted">{active == null ? '' : labels[axes[active].key]}</span>
       </span>
       <svg
         viewBox={`0 0 ${W} ${H}`}
         role="img"
         aria-label={summary}
-        className="mx-auto block w-full max-w-sm [direction:ltr]"
+        className="mx-auto block w-full max-w-sm overflow-visible [direction:ltr]"
         onClick={(event) => {
           if (event.target === event.currentTarget) setFocused(null);
         }}
       >
         <defs>
           {/* The field behind the shape: cool at the top, warm at the bottom. */}
-          <linearGradient id={fieldId} gradientUnits="userSpaceOnUse" x1={0} y1={CY - R} x2={0} y2={CY + R * Math.cos(Math.PI / TASTE_AXES.length)}>
+          <linearGradient id={fieldId} gradientUnits="userSpaceOnUse" x1={0} y1={CY - R} x2={0} y2={CY + R * Math.cos(Math.PI / count)}>
             <stop offset="0%" stopColor="#60a5fa" stopOpacity={0.3} />
             <stop offset="50%" stopColor="#c4b5fd" stopOpacity={0.2} />
             <stop offset="100%" stopColor="#fb923c" stopOpacity={0.32} />
@@ -123,19 +157,19 @@ export function TasteRadar({
           </radialGradient>
         </defs>
         <polygon points={polygon(() => R)} fill={`url(#${fieldId})`} stroke="none" />
-        {Array.from({ length: TASTE_MAX }, (_, ring) => (
-          <polygon key={ring} points={polygon(() => (R * (ring + 1)) / TASTE_MAX)} fill="none" className="stroke-raised-2" strokeWidth={ring === TASTE_MAX - 1 ? 2 : 1} />
+        {Array.from({ length: max }, (_, ring) => (
+          <polygon key={ring} points={polygon(() => (R * (ring + 1)) / max)} fill="none" className="stroke-raised-2" strokeWidth={ring === max - 1 ? 2 : 1} />
         ))}
-        {TASTE_AXES.map((axis, i) => {
+        {axes.map((axis, i) => {
           const [x, y] = point(i, R);
           return <line key={axis.key} x1={CX} y1={CY} x2={x} y2={y} className="stroke-raised-2" strokeWidth={1} />;
         })}
-        <polygon points={polygon((i) => (R * scores[TASTE_AXES[i].key]) / TASTE_MAX)} fill={`url(#${heatId})`} stroke="#f59e0b" strokeWidth={2} strokeLinejoin="round" />
+        <polygon points={fmt(axes.flatMap((_, i) => (scoreOf(i) == null ? [] : [point(i, radiusOf(i))])))} fill={`url(#${heatId})`} stroke="#f59e0b" strokeWidth={2} strokeLinejoin="round" />
         {/* The whole spoke is a hover target, drawn under the vertices: a score
             of 0 puts a vertex on the centre, where several share one point and
             the last drawn would win, so each axis stays reachable along its
             spoke and by its label. */}
-        {TASTE_AXES.map((axis, i) => {
+        {axes.map((axis, i) => {
           const [x, y] = point(i, LABEL_R - 6);
           const [hx, hy] = point(i, R);
           return (
@@ -145,8 +179,8 @@ export function TasteRadar({
             </g>
           );
         })}
-        {TASTE_AXES.map((axis, i) => {
-          const [x, y] = point(i, (R * scores[axis.key]) / TASTE_MAX);
+        {axes.map((axis, i) => {
+          const [x, y] = point(i, radiusOf(i));
           return (
             <g
               key={axis.key}
@@ -161,19 +195,19 @@ export function TasteRadar({
                 cx={x}
                 cy={y}
                 r={4.5}
-                fill={heatColor(scores[axis.key] / TASTE_MAX)}
+                fill={heatColor((scoreOf(i) ?? 0) / max)}
                 className={`origin-center stroke-panel transition [transform-box:fill-box] ${active === i ? 'scale-125 opacity-100' : 'opacity-0'}`}
                 strokeWidth={1.5}
               />
             </g>
           );
         })}
-        {TASTE_AXES.map((axis, i) => {
+        {axes.map((axis, i) => {
           const [x, y] = point(i, LABEL_R);
           const anchor = Math.abs(x - CX) < 4 ? 'middle' : x > CX ? 'start' : 'end';
           // Top label sits above its point, bottom ones below, sides centred.
           const dy = y < CY - R / 2 ? -6 : y > CY + R / 2 ? 14 : 0;
-          const href = `/search?q=${encodeURIComponent(term('taste', axis.key))}`;
+          const href = `/search?q=${encodeURIComponent(term(field, axis.key))}`;
           return (
             <a
               key={axis.key}
@@ -188,13 +222,21 @@ export function TasteRadar({
                   return;
                 }
                 const current = new URLSearchParams(window.location.search);
-                current.set('q', refineQuery(current.get('q') || '', 'taste', axis.key));
+                current.set('q', refineQuery(current.get('q') || '', field, axis.key));
                 router.push(`/search?${current.toString()}`);
               }}
             >
               <text x={x} y={y + dy} textAnchor={anchor} className="fill-ink text-[13px] hover:underline" {...bind(i)}>
-                <tspan x={x} dy={0}>{labels[axis.key]}</tspan>
-                {showJa ? (
+                {labelLines(labels[axis.key]).map((line, n) => (
+                  <tspan key={n} x={x} dy={n ? 16 : 0}>
+                    {line}
+                  </tspan>
+                ))}
+                {scoreOf(i) == null ? (
+                  <tspan x={x} dy={16} className="fill-muted text-[12px]">
+                    {naLabel}
+                  </tspan>
+                ) : showJa && axis.ja ? (
                   <tspan x={x} dy={16} className="fill-muted text-[12px]" lang="ja">
                     {axis.ja}
                   </tspan>

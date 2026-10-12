@@ -8,11 +8,12 @@ import { THIN_PIN_SQL } from './searchIssues';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { holidayRanges, loadAstronomy } from '../holidays';
 import { TASTE_KEYS, TASTE_STRONG, type TasteAxis } from '@/lib/pinTaste';
+import { CAR_PERF_KEYS, CAR_PERF_STRONG, type CarPerfAxis } from '@/lib/pinCarPerf';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
-import type { DayBound, DelayBound, PersonAxisBound, RatingBound, TasteTerm } from '../util/searchQuery';
+import type { CarPerfTerm, DayBound, DelayBound, PersonAxisBound, RatingBound, TasteTerm } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
@@ -45,6 +46,7 @@ export type PinSearchFilters = {
   platforms: string[];
   rated: string[];
   tastes: TasteTerm[];
+  carPerfs: CarPerfTerm[];
   people: string[];
   personAxes: PersonAxisBound[];
   ratings: RatingBound[];
@@ -1022,6 +1024,14 @@ function searchClauses(filter: SearchFilter) {
     const scored = filter.tastes.filter((axis): axis is TasteAxis => axis !== 'any' && TASTE_KEYS.includes(axis)).map((axis) => `"t"."${axis}" >= ${TASTE_STRONG}`);
     if (!scored.length && filter.tastes.includes('any')) scored.push('TRUE');
     if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinTaste" AS "t" WHERE "t"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
+  }
+  // carperf: a car whose performance rubric scores every one of these axes
+  // strongly (a null axis, no published spec, never does). The axis names are
+  // CAR_PERF_KEYS, so they are safe as column names.
+  if (filter.carPerfs.length) {
+    const scored = filter.carPerfs.filter((axis): axis is CarPerfAxis => axis !== 'any' && CAR_PERF_KEYS.includes(axis)).map((axis) => `"c"."${axis}" >= ${CAR_PERF_STRONG}`);
+    if (!scored.length && filter.carPerfs.includes('any')) scored.push('TRUE');
+    if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinCarPerf" AS "c" WHERE "c"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
   }
   // person: and the radar-axis bounds (misconduct:>3): a pin linked to a
   // person who is any of the names given and whose best score across their

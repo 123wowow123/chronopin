@@ -417,3 +417,6 @@ chinese restaurant landing page tabs should try to get at least 20 restaurant ea
 
 chinese ev car news and events and new model releases
 - performance rubrics?
+
+
+add landing page for best ev and gasoline car

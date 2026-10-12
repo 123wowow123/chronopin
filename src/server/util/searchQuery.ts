@@ -65,6 +65,11 @@
 // profile (PinTaste) scores it TASTE_STRONG or more, every axis given;
 // taste:any is every product that has a taste profile. The taste profile's
 // heading and axis labels write them.
+// carperf: is the same for a car's performance rubric (PinCarPerf): carperf:range,
+// charging, acceleration, assistance, space or value finds the cars scoring that
+// axis CAR_PERF_STRONG or more (an axis with no published spec never matches),
+// every axis given; carperf:any is every car that has a rubric. The rubric's
+// heading and axis labels write them.
 // person: takes a person's name as the People pages write it (person:"Joe
 // Biden"): the pins linked to them (PinPerson). A person's radar axes
 // (education, wealth, position, standing, health, misconduct, social,
@@ -132,6 +137,7 @@ import { compareDayKeys, nextDayKey } from '@/lib/format';
 import { OCTAGON_AXES, type OctagonAxis } from '@/lib/people';
 import { isPlatformKey, platformFromName } from '@/lib/gameInfo';
 import { TASTE_KEYS, type TasteAxis } from '@/lib/pinTaste';
+import { CAR_PERF_KEYS, type CarPerfAxis } from '@/lib/pinCarPerf';
 import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
 
 // One side of a rating: term, compared with the pin's rounded percentage.
@@ -152,6 +158,9 @@ export type PersonAxisBound = RatingBound & { axis: OctagonAxis };
 
 // A taste axis, or 'any' for a product with any taste profile (taste:any).
 export type TasteTerm = TasteAxis | 'any';
+
+// A car performance axis, or 'any' for a car with any rubric (carperf:any).
+export type CarPerfTerm = CarPerfAxis | 'any';
 
 export type SearchQuery = {
   userNames: string[];
@@ -185,6 +194,8 @@ export type SearchQuery = {
   rated: string[];
   // Taste axes (taste:umami) a product's taste profile must score strongly on; all.
   tastes: TasteTerm[];
+  // Car performance axes (carperf:range) a car's rubric must score strongly on; all.
+  carPerfs: CarPerfTerm[];
   // People by name (person:"Joe Biden"), any of them; the pins linked to them.
   people: string[];
   // Radar-axis bounds (misconduct:>3) a linked person's best score must meet,
@@ -209,7 +220,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday|taste|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday|taste|carperf|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -229,7 +240,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday' | 'taste' | 'person' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'person' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -305,6 +316,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     platforms: [],
     rated: [],
     tastes: [],
+    carPerfs: [],
     people: [],
     personAxes: [],
     ratings: [],
@@ -355,6 +367,10 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       const value = part.value.trim().toLowerCase();
       const axis: TasteTerm | undefined = value === 'any' ? 'any' : TASTE_KEYS.find((key) => key === value);
       if (axis) addUnique(query.tastes, axis);
+    } else if (part.field === 'carperf') {
+      const value = part.value.trim().toLowerCase();
+      const axis: CarPerfTerm | undefined = value === 'any' ? 'any' : CAR_PERF_KEYS.find((key) => key === value);
+      if (axis) addUnique(query.carPerfs, axis);
     } else if (part.field === 'person') {
       if (part.value) addUnique(query.people, part.value);
     } else if ((OCTAGON_AXES as readonly string[]).includes(part.field)) {
@@ -403,6 +419,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.platforms.length ||
     query.rated.length ||
     query.tastes.length ||
+    query.carPerfs.length ||
     query.people.length ||
     query.personAxes.length ||
     query.ratings.length ||

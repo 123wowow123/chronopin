@@ -11,7 +11,7 @@ import { personPath } from '@/lib/people';
 import { companyPath, MIN_INDEXED_PINS, tagPath } from '@/lib/topics';
 import { DEFAULT_LOCALE, languageAlternates, type Locale } from '@/lib/i18n/config';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
-import { GUIDE_PAGE_SIZE, GUIDE_VIEWS } from '@/lib/restaurantGuide';
+import { GUIDE_PAGE_SIZE, GUIDE_VIEWS, guideListPath } from '@/lib/restaurantGuide';
 import { restaurantGuideRegionSlugs } from '@/server/services/restaurants';
 import { guideSummary } from '@/server/services/restaurantGuidePage';
 
@@ -38,8 +38,9 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
   const guidePaths = (await Promise.all((await restaurantGuideRegionSlugs()).map(async (slug) => {
     const summary = await guideSummary(slug, now);
     if (!summary) return [];
+    // The default view's first page is the bare city URL, already listed with the regions.
     return GUIDE_VIEWS.filter((view) => view !== 'discounts' && summary.counts[view] > 0).flatMap((view) =>
-      Array.from({ length: Math.ceil(summary.counts[view] / GUIDE_PAGE_SIZE) }, (_, index) => `/restaurants/${slug}?view=${view}${index ? `&page=${index + 1}` : ''}`));
+      Array.from({ length: Math.ceil(summary.counts[view] / GUIDE_PAGE_SIZE) }, (_, index) => guideListPath(slug, summary.counts, view, index + 1)).filter((path, index) => index > 0 || path.includes('?')));
   }))).flat();
   // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
   const pins = await Pins.listForSitemap(0, MAX_URLS - 9 - topics.length - RESTAURANT_REGIONS.length - guidePaths.length, (await hideThinPins()).enabled);

@@ -48,6 +48,11 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Feedback:** Each snack or beverage product should have a separate pin in the guide's thread, with its taste profile on the native radar widget. Apply this to both snack and beverage guides. Distinct flavors with different profiles need separate pins.
 * **Changed:** Recorded the reusable [product guide strategy](../../product-guide-strategy.md), linked it from the vertical recipes and scraping index, and implemented six beverage pins under 7657 and seven snack/flavor pins under 7656. All 13 live native radars, public images and thread memberships were verified. Product dates are explicitly research/publication dates, not invented launches.
 
+## 2026-10-12 - Vehicle pins get a car performance rubric
+
+* **Learned:** Specs for a car launch (range, charging, 0-100 time, driver-assist hardware, size, price) are published, but there is no single score for them. The taste radar's pattern fits: an editorial estimate on a written rubric, labelled "Estimate", with the sentence it rests on and the page the figures came from.
+* **Changed:** Built `PinCarPerf` (schema 0167), the `/api/pins/:id/car-performance` route, the pin-page radar and `carperf:` search terms; the rubric and its anchors are in [Strategy](strategy.md) ("Car performance rubric"). An axis whose spec is not published is `null` ("n/a"), never a guess from a rival or a zero. Existing taste-radar rules (estimate only from what the pin states, never overwrite a `hand` row) apply unchanged.
+
 # Standing feedback from the owner
 
 * **Pin images must not be stored in Git.** Owner, 2026-10-08: "pin inages should not be stored in git". This applies to all pin photos and generated thumbnails, beyond restaurant galleries. Store them in Azure Blob Storage, retain URLs and provenance in Git, and verify uploads and migrate references before removing existing files. Use ignored temporary caches; application UI assets may remain tracked.

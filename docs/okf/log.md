@@ -1,5 +1,9 @@
 # Update Log
 
+## 2026-10-12
+
+* **Update:** Added the car performance rubric: `PinCarPerf` (schema 0167) stores six 0-5 axes (range, charging, acceleration, driver assist, space and comfort, value; `null` where the spec is not published) per vehicle pin, with `PUT`/`GET`/`DELETE /api/pins/:id/car-performance`, a radar on the pin page drawn by the taste radar's chart, `carperf:<axis>` / `carperf:any` search terms, and `npm run products:carperf` for `scripts/products/carPerf.json`. The rubric and its anchors are in the [scraping strategy](scraping/strategy.md) ("Car performance rubric"); local database only, not deployed.
+
 ## 2026-10-11
 
 * **Update:** Scraping rule: product pins always get a buy link to the maker's own site ([Enrichment](scraping/enrichment.md), [learnings](scraping/learnings.md)); Graeter's pin 13910 fixed on prod.

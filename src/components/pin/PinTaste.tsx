@@ -7,7 +7,7 @@ import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 import { RefineLink } from './RefineLink';
 import { TasteRadar } from './TasteRadar';
 
-const hostOf = (url: string) => {
+export const hostOf = (url: string) => {
   try {
     return new URL(url).hostname.replace(/^www\./, '');
   } catch {
@@ -18,7 +18,7 @@ const hostOf = (url: string) => {
 // The citation after the basis: [n] linking to that row of the pin's
 // References panel when the page the estimate was read from is one of them,
 // else the page itself, named by its host.
-function Cite({ url, evidence, t }: { url: string; evidence: Evidence[]; t: Translator }) {
+export function Cite({ url, evidence, t }: { url: string; evidence: Evidence[]; t: Translator }) {
   const key = urlKey(url);
   const n = key ? orderEvidence(evidence).findIndex((e) => urlKey(e.url) === key) + 1 : 0;
   if (n) {

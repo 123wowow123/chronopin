@@ -11,6 +11,25 @@ export type GuideView = 'upcoming' | 'new' | 'top' | 'discounts';
 export type GuideSection = 'available' | 'next';
 export const GUIDE_VIEWS: GuideView[] = ['upcoming', 'new', 'top', 'discounts'];
 
+// The view a guide page really shows: the requested one when it has content,
+// otherwise the first populated one (what the bare city URL opens on).
+export function guideDefaultView(counts: Record<GuideView, number>): GuideView {
+  return GUIDE_VIEWS.find((item) => counts[item] > 0) ?? 'upcoming';
+}
+export function guideEffectiveView(counts: Record<GuideView, number>, requested?: string): GuideView {
+  return GUIDE_VIEWS.find((item) => item === requested && counts[item] > 0) ?? guideDefaultView(counts);
+}
+
+// The one URL for a guide list. The default view's first page is the bare city
+// path (not ?view=), so /restaurants/x and /restaurants/x?view=<default> do not
+// serve identical content under two URLs.
+export function guideListPath(slug: string, counts: Record<GuideView, number>, view: GuideView, page: number): string {
+  const base = `/restaurants/${slug}`;
+  const pageable = view !== 'discounts' && page > 1;
+  if (view === guideDefaultView(counts) && !pageable) return base;
+  return `${base}?view=${view}${pageable ? `&page=${page}` : ''}`;
+}
+
 // A page request without its offset. `section` is for the discounts view only.
 export type GuideQuery = { region: string; view: GuideView; section?: GuideSection; neighborhood: string; sort: RestaurantSort; origin?: Place };
 

@@ -12,7 +12,9 @@ import { eventInfoForPin } from '../model/pinEventInfo';
 import { candidatesForPin } from '../model/pinCandidate';
 import { gameInfoForPin } from '../model/pinGameInfo';
 import { tasteForPin } from '../model/pinTaste';
+import { carPerfForPin } from '../model/pinCarPerf';
 import type { PinTasteJson } from '@/lib/pinTaste';
+import type { PinCarPerfJson } from '@/lib/pinCarPerf';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
@@ -236,6 +238,14 @@ export async function pinTaste(id: number): Promise<PinTasteJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return tasteForPin(id);
+}
+
+// A vehicle pin's car performance rubric, or null when it has none.
+export async function pinCarPerf(id: number): Promise<PinCarPerfJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return carPerfForPin(id);
 }
 
 // Tagged with every pin in the thread, so a change to any of them - a

@@ -76,6 +76,7 @@
     "merchants:movies": "tsx scripts/merchants/movies.ts",
     "games:info": "tsx scripts/games/info.ts",
     "products:taste": "tsx scripts/products/taste.ts",
+    "products:carperf": "tsx scripts/products/carPerf.ts",
     "games:markets": "tsx scripts/games/markets.ts",
     "places:resolve": "tsx scripts/places/resolve.ts",
     "places:refresh": "tsx scripts/places/refresh.ts",

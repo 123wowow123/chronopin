@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { notFound } from 'next/navigation';
 import { RestaurantGuide } from '@/components/restaurants/RestaurantGuide';
-import { GUIDE_PAGE_SIZE, GUIDE_VIEWS, guideKey, type GuideItem, type GuidePage, type GuideQuery } from '@/lib/restaurantGuide';
+import { GUIDE_PAGE_SIZE, guideEffectiveView, guideKey, guideListPath, type GuideItem, type GuidePage, type GuideQuery } from '@/lib/restaurantGuide';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { absoluteUrl } from '@/lib/seo';
 import { restaurantGuideRegionSlugs } from '@/server/services/restaurants';
@@ -17,11 +17,15 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const query = await searchParams;
   const region = RESTAURANT_REGIONS.find((item) => item.slug === slug);
   if (!region) return { robots: { index: false } };
-  const view = GUIDE_VIEWS.find((item) => item === query.view);
-  const page = pageNumber(query.page);
+  // Per request, like the page: the canonical depends on which views have content.
+  await connection();
+  const summary = await guideSummary(region.slug, new Date());
+  if (!summary) return { robots: { index: false } };
+  const view = guideEffectiveView(summary.counts, query.view);
+  const page = view === 'discounts' ? 1 : Math.min(pageNumber(query.page), Math.max(1, Math.ceil(summary.counts[view] / GUIDE_PAGE_SIZE)));
   const title = `New & Upcoming Restaurants in ${region.name}${page > 1 ? ` · Page ${page}` : ''}`;
   // Each list page is its own indexable URL, so the later restaurants are reachable by links.
-  const path = `/restaurants/${region.slug}${view ? `?view=${view}${page > 1 ? `&page=${page}` : ''}` : ''}`;
+  const path = guideListPath(region.slug, summary.counts, view, page);
   const description = `Discover recently opened and upcoming restaurants in ${region.name}. Explore neighborhoods, opening dates, photos, and sourced details on Chronopin.`;
   return { title, description, alternates: { canonical: absoluteUrl(path) }, openGraph: { title, description, type: 'website', url: absoluteUrl(path) } };
 }
@@ -40,8 +44,7 @@ async function GuideContent({ params, searchParams }: Props) {
   const [summary, availableRegionSlugs] = await Promise.all([guideSummary(region.slug, now), restaurantGuideRegionSlugs()]);
   if (!summary) notFound();
   // Only the first page of the view the guide opens on; the rest is fetched as the reader scrolls.
-  const requested = GUIDE_VIEWS.find((item) => item === query.view && summary.counts[item] > 0);
-  const view = requested ?? GUIDE_VIEWS.find((item) => summary.counts[item] > 0) ?? 'upcoming';
+  const view = guideEffectiveView(summary.counts, query.view);
   // The specials list changes by the minute, so it is not paged by URL.
   const page = view === 'discounts' ? 1 : Math.min(pageNumber(query.page), Math.max(1, Math.ceil(summary.counts[view] / GUIDE_PAGE_SIZE)));
   const sort = view === 'upcoming' ? 'opening-date' : 'rating';

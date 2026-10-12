@@ -60,6 +60,13 @@ describe('parseSearchQuery', () => {
     expect(parseSearchQuery('taste:Bitterness taste:umami taste:bitterness taste:salty').tastes).toEqual(['bitterness', 'umami']);
     expect(parseSearchQuery('taste:any').tastes).toEqual(['any']);
   });
+
+  it('reads carperf: axes, leaving out names the rubric does not have', () => {
+    expect(parseSearchQuery('carperf:Range carperf:charging carperf:range carperf:speed').carPerfs).toEqual(['range', 'charging']);
+    expect(parseSearchQuery('carperf:any').carPerfs).toEqual(['any']);
+    expect(parseSearchQuery('carperf:value').tastes).toEqual([]);
+  });
+
   it('reads person: names and radar-axis bounds', () => {
     expect(parseSearchQuery('person:"Joe Biden" person:"joe biden"').people).toEqual(['Joe Biden']);
     expect(parseSearchQuery('misconduct:>3 wealth:2-4 senate').personAxes).toEqual([
@@ -95,6 +102,7 @@ describe('parseSearchQuery', () => {
       platforms: [],
       rated: [],
       tastes: [],
+      carPerfs: [],
       people: [],
       personAxes: [],
       ratings: [],
