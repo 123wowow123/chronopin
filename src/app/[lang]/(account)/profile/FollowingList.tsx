@@ -75,7 +75,7 @@ export function FollowingList({ userId, initial, pageSize }: { userId: number; i
       ) : null}
 
       {shown ? (
-        <ul className="surface divide-y divide-line">
+        <ul className="surface divide-y divide-line lg:grid lg:grid-cols-2 lg:divide-y-0 lg:[&>li]:border-b lg:[&>li]:border-line [&>li:last-child]:border-b-0 lg:[&>li:nth-last-child(2):nth-child(odd)]:border-b-0">
           {page.following.map((u) => (
             <li key={u.id} className="flex items-center gap-3 px-4 py-3">
               <UserAvatar userName={u.userName} pictureUrl={u.pictureUrl} className="size-9 text-base" />

@@ -10,7 +10,6 @@ import { refreshSession } from '@/lib/client/session';
 import type { SessionUser } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
 
-
 // How long "Remove picture" can be taken back.
 const UNDO_MS = 10_000;
 
@@ -25,7 +24,13 @@ export function ProfileForm({ user, children }: { user: SessionUser; children?: 
   const router = useRouter();
   // An empty birthday or phone is what takes it back off the account, so the
   // patch sends the field either way.
-  const [form, setForm] = useState({ firstName: user.firstName || '', lastName: user.lastName || '', birthday: user.birthday || '', phone: user.phone || '', email: user.email || '' });
+  const [form, setForm] = useState({
+    firstName: user.firstName || '',
+    lastName: user.lastName || '',
+    birthday: user.birthday || '',
+    phone: user.phone || '',
+    email: user.email || '',
+  });
   const [pictureUrl, setPictureUrl] = useState(user.pictureUrl || '');
   const [pictureBusy, setPictureBusy] = useState(false);
   const [pictureError, setPictureError] = useState('');
@@ -136,41 +141,43 @@ export function ProfileForm({ user, children }: { user: SessionUser; children?: 
   }
 
   return (
-    <div className="space-y-4">
-      <div className="surface p-6">
-        <span className="field-label mb-3">{t('profile.picture')}</span>
-        <div className="flex items-center gap-4">
-          <UserAvatar userName={user.userName} pictureUrl={pictureUrl} className="size-20 text-3xl" />
-          <div>
-            <label className={`btn btn-secondary cursor-pointer ${pictureBusy ? 'opacity-50' : ''}`}>
-              {pictureUrl ? t('profile.changePicture') : t('profile.uploadPicture')}
-              <input ref={fileRef} type="file" accept="image/*" className="sr-only" disabled={pictureBusy} onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
-            </label>
-            {pictureUrl ? (
-              // Says what it removes - beside "Change picture" a bare "Remove"
-              // could be read as taking off anything on the page - and is red,
-              // as taking something away is across the site.
-              <button key="remove" type="button" onClick={removePicture} disabled={pictureBusy} className="btn btn-ghost ms-1 text-danger hover:bg-danger/10 hover:text-danger">
-                {t('profile.removePicture')}
-              </button>
-            ) : undoable ? (
-              // In the removal's place until it is sent, in the accent's tint:
-              // set apart from the grey upload beside it as the one thing to
-              // press to get the picture back, and not red, since putting it
-              // back takes nothing away. Keyed apart from the red one, which
-              // would otherwise be reused and fade its red out.
-              <button key="undo" type="button" onClick={undoRemoval} className="btn ms-1 bg-accent/15 text-link ring-1 ring-accent/30 ring-inset hover:bg-accent/25">
-                {t('common.undo')}
-              </button>
-            ) : null}
-            <p aria-live="polite" className={`mt-2 text-sm ${pictureError ? 'text-danger' : 'text-subtle'}`}>
-              {pictureError || (undoable ? t('profile.pictureRemoved') : t('profile.pictureHint'))}
-            </p>
+    <div className="grid gap-4 lg:grid-cols-2 lg:items-start">
+      <div className="space-y-4">
+        <div className="surface p-6">
+          <span className="field-label mb-3">{t('profile.picture')}</span>
+          <div className="flex items-center gap-4">
+            <UserAvatar userName={user.userName} pictureUrl={pictureUrl} className="size-20 text-3xl" />
+            <div>
+              <label className={`btn btn-secondary cursor-pointer ${pictureBusy ? 'opacity-50' : ''}`}>
+                {pictureUrl ? t('profile.changePicture') : t('profile.uploadPicture')}
+                <input ref={fileRef} type="file" accept="image/*" className="sr-only" disabled={pictureBusy} onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
+              </label>
+              {pictureUrl ? (
+                // Says what it removes - beside "Change picture" a bare "Remove"
+                // could be read as taking off anything on the page - and is red,
+                // as taking something away is across the site.
+                <button key="remove" type="button" onClick={removePicture} disabled={pictureBusy} className="btn btn-ghost ms-1 text-danger hover:bg-danger/10 hover:text-danger">
+                  {t('profile.removePicture')}
+                </button>
+              ) : undoable ? (
+                // In the removal's place until it is sent, in the accent's tint:
+                // set apart from the grey upload beside it as the one thing to
+                // press to get the picture back, and not red, since putting it
+                // back takes nothing away. Keyed apart from the red one, which
+                // would otherwise be reused and fade its red out.
+                <button key="undo" type="button" onClick={undoRemoval} className="btn ms-1 bg-accent/15 text-link ring-1 ring-accent/30 ring-inset hover:bg-accent/25">
+                  {t('common.undo')}
+                </button>
+              ) : null}
+              <p aria-live="polite" className={`mt-2 text-sm ${pictureError ? 'text-danger' : 'text-subtle'}`}>
+                {pictureError || (undoable ? t('profile.pictureRemoved') : t('profile.pictureHint'))}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {children}
+        {children}
+      </div>
 
       <form onSubmit={save} className="surface space-y-4 p-6" noValidate>
         {/* The handle cannot be changed, so it is plain text rather than a
@@ -217,8 +224,16 @@ export function ProfileForm({ user, children }: { user: SessionUser; children?: 
           </label>
           <input id="email" type="email" className="field" value={form.email} onChange={set('email')} />
         </div>
-        {message ? <p role="status" className="text-sm text-success">{message}</p> : null}
-        {error ? <p role="alert" className="text-sm text-danger">{error}</p> : null}
+        {message ? (
+          <p role="status" className="text-sm text-success">
+            {message}
+          </p>
+        ) : null}
+        {error ? (
+          <p role="alert" className="text-sm text-danger">
+            {error}
+          </p>
+        ) : null}
         <button type="submit" className="btn btn-primary">
           {t('profile.saveChanges')}
         </button>

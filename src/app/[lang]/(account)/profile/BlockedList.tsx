@@ -47,7 +47,7 @@ export function BlockedList({ initialUsers, initialCompanies }: { initialUsers: 
     </li>
   );
   return (
-    <div className="space-y-6">
+    <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
       {users.length ? (
         <section aria-labelledby="blocked-people">
           <h2 id="blocked-people" className="mb-2 text-sm font-semibold text-muted">

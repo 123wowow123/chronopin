@@ -70,3 +70,24 @@ export const STATUS_LABEL: Record<SponsoredStatus, string> = {
   paused: 'Paused',
   completed: 'Finished',
 };
+
+// Numbers to show an advertiser what the tracking looks like before an ad is
+// live: a made-up two weeks in which a bit over a third of the package is
+// used and about 4 in 100 views are clicked. Days are named, not dated, so
+// nobody mistakes them for results.
+const EXAMPLE_SHAPE = [0.03, 0.05, 0.06, 0.08, 0.09, 0.06, 0.05, 0.08, 0.1, 0.11, 0.09, 0.07, 0.07, 0.06];
+const EXAMPLE_WOBBLE = [0, 1, 0, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 1];
+
+export function exampleTracking(impressionsBought: number) {
+  const total = Math.round((impressionsBought * 0.36) / 10) * 10;
+  const byDay = EXAMPLE_SHAPE.map((share, i) => {
+    const impressions = Math.round(total * share);
+    const clicks = Math.max(1, Math.round(impressions * 0.035) + EXAMPLE_WOBBLE[i] - 1);
+    return { day: `Day ${i + 1}`, impressions, clicks };
+  });
+  return {
+    impressions: byDay.reduce((n, d) => n + d.impressions, 0),
+    clicks: byDay.reduce((n, d) => n + d.clicks, 0),
+    byDay,
+  };
+}

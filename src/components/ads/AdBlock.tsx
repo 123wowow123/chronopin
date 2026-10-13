@@ -271,6 +271,113 @@ function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; slot: Ad
   );
 }
 
+type TileText = { title: string; body: string; urgency: string; cta: string };
+
+// What one ad shows inside a row of the timeline (and beside a pin's tags):
+// the picture, the title, the line under it and the link's words.
+function RowTileContent({ ad, wide, title, body, urgency, cta }: { ad: AdJson; wide: boolean } & TileText) {
+  return (
+    <>
+      <AdPicture ad={ad} className={wide ? 'h-14 w-20' : 'h-12 w-[4.5rem]'} />
+      <span className="flex min-w-0 flex-col">
+        <span className="truncate text-sm font-medium text-ink" title={title}>
+          {title}
+        </span>
+        {body ? <span className={`text-xs text-muted ${ad.program ? 'line-clamp-1' : 'font-semibold text-success tabular-nums'}`}>{body}</span> : null}
+        {urgency ? <span className="truncate text-xs font-medium text-warning">{urgency}</span> : null}
+        <span className="mt-0.5 inline-flex items-center gap-1 text-xs font-medium text-link">
+          {cta}
+          <Icon name="external" className="size-3 opacity-60" />
+        </span>
+      </span>
+    </>
+  );
+}
+
+// The same for the larger rows of the column under a pin's comments.
+function ColumnRowContent({ ad, title, body, urgency, cta }: { ad: AdJson } & TileText) {
+  return (
+    <>
+      <AdPicture ad={ad} className="h-20 w-28" />
+      <span className="flex min-w-0 flex-col gap-0.5">
+        <span className="line-clamp-2 font-medium text-ink">{title}</span>
+        {body ? <span className={`text-sm ${ad.program ? 'line-clamp-2 text-muted' : 'font-semibold text-success tabular-nums'}`}>{body}</span> : null}
+        {urgency ? <span className="text-sm font-medium text-warning">{urgency}</span> : null}
+        <span className="inline-flex items-center gap-1 text-sm font-medium text-link">
+          {cta}
+          <Icon name="external" className="size-3 opacity-60" />
+        </span>
+      </span>
+    </>
+  );
+}
+
+// How a self-serve ad (SponsoredAd) looks on the site, drawn by the very
+// markup the live rows use: on a pin's page (the column under its comments)
+// and on the timeline. `layout` picks one, or both stacked. Nothing in it is
+// a link; it is for the advertiser's portal and the admin's review.
+export function AdPreview({
+  title,
+  body,
+  url,
+  imageUrl,
+  layout = 'both',
+  sideBySide = false,
+  className = '',
+}: {
+  title: string;
+  body: string;
+  url: string;
+  imageUrl: string | null;
+  layout?: 'both' | 'pin' | 'timeline';
+  // The two layouts next to each other on a wide screen, for a short block.
+  sideBySide?: boolean;
+  className?: string;
+}) {
+  const text = useAdText();
+  const ad: AdJson = {
+    key: 'u:preview',
+    kind: 'sponsored',
+    program: 'sponsored',
+    url,
+    title: title.trim() || 'Your headline',
+    body: body.trim() || null,
+    price: null,
+    currency: null,
+    pinId: null,
+    category: null,
+    thumbName: null,
+    originalUrl: null,
+    imageUrl,
+    store: 'US',
+  };
+  const shown = text(ad);
+  return (
+    <div className={sideBySide ? `grid items-start gap-3 sm:grid-cols-2 ${className}` : `space-y-3 ${className}`}>
+      {layout !== 'timeline' ? (
+        <div>
+          {layout === 'both' ? <p className="mb-1 text-xs text-subtle">On a pin&apos;s page</p> : null}
+          <div className="surface p-4 sm:p-5">
+            <div className="-mx-2 flex items-center gap-3.5 rounded-lg p-2">
+              <ColumnRowContent ad={ad} {...shown} />
+            </div>
+          </div>
+        </div>
+      ) : null}
+      {layout !== 'pin' ? (
+        <div>
+          {layout === 'both' ? <p className="mb-1 text-xs text-subtle">On the timeline</p> : null}
+          <div className="max-w-[448px]">
+            <div className="surface flex items-center gap-3 p-2.5">
+              <RowTileContent ad={ad} wide {...shown} />
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function Disclosure({ ads, className = '' }: { ads?: AdJson[]; className?: string }) {
   const t = useT();
   const ebay = ads?.some((ad) => isEbayUrl(ad.url));
@@ -311,18 +418,7 @@ export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 
           return (
             <li key={ad.key} className="min-w-0">
               <AdLink ad={ad} slot={slot} pinId={pinId} className="surface flex h-full items-center gap-3 p-2.5 hover:no-underline hover:ring-1 hover:ring-line">
-                <AdPicture ad={ad} className={slot === 'timeline-row' ? 'h-14 w-20' : 'h-12 w-[4.5rem]'} />
-                <span className="flex min-w-0 flex-col">
-                  <span className="truncate text-sm font-medium text-ink" title={title}>
-                    {title}
-                  </span>
-                  {body ? <span className={`text-xs text-muted ${ad.program ? 'line-clamp-1' : 'font-semibold text-success tabular-nums'}`}>{body}</span> : null}
-                  {urgency ? <span className="truncate text-xs font-medium text-warning">{urgency}</span> : null}
-                  <span className="mt-0.5 inline-flex items-center gap-1 text-xs font-medium text-link">
-                    {cta}
-                    <Icon name="external" className="size-3 opacity-60" />
-                  </span>
-                </span>
+                <RowTileContent ad={ad} wide={slot === 'timeline-row'} title={title} body={body} urgency={urgency} cta={cta} />
               </AdLink>
             </li>
           );
@@ -382,16 +478,7 @@ export function AdColumn({ pinId, className = '' }: { pinId: number; className?:
           return (
             <li key={ad.key}>
               <AdLink ad={ad} slot={slot} pinId={pinId} className="-mx-2 flex items-center gap-3.5 rounded-lg p-2 hover:bg-raised hover:no-underline">
-                <AdPicture ad={ad} className="h-20 w-28" />
-                <span className="flex min-w-0 flex-col gap-0.5">
-                  <span className="line-clamp-2 font-medium text-ink">{title}</span>
-                  {body ? <span className={`text-sm ${ad.program ? 'line-clamp-2 text-muted' : 'font-semibold text-success tabular-nums'}`}>{body}</span> : null}
-                  {urgency ? <span className="text-sm font-medium text-warning">{urgency}</span> : null}
-                  <span className="inline-flex items-center gap-1 text-sm font-medium text-link">
-                    {cta}
-                    <Icon name="external" className="size-3 opacity-60" />
-                  </span>
-                </span>
+                <ColumnRowContent ad={ad} title={title} body={body} urgency={urgency} cta={cta} />
               </AdLink>
             </li>
           );

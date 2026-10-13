@@ -24,11 +24,11 @@ export default async function PreferencesPage() {
   const user = await requireViewer('/profile/preferences');
   const [t, offered] = await Promise.all([getT(), localesOffered()]);
   return (
-    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
+    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-5xl">
       <ProfileTabs current="/profile/preferences" />
       <h1 className="sr-only">{t('profile.preferences')}</h1>
       <p className="mb-6 text-sm text-subtle">{t('profile.preferencesIntro')}</p>
-      <div className="space-y-4">
+      <div className="grid gap-4 lg:grid-cols-2 lg:items-start">
         <ThemePicker userId={user.id} />
         {offered.length ? <LanguageSetting userId={user.id} offered={offered} /> : null}
         <PreferencesForm userId={user.id} initial={user.defaultFilterSpanPreference ?? null} />

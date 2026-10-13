@@ -17,7 +17,7 @@ export default async function ChangePasswordPage() {
   const user = await requireViewer('/profile/password');
   const t = await getT();
   return (
-    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
+    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-5xl">
       <ProfileTabs current="/profile/password" />
       <h1 className="sr-only">{t('account.changePassword')}</h1>
       <p className="mb-6 text-sm text-subtle">{t.rich('account.changePasswordIntro', { user: () => <strong>{user.userName}</strong> })}</p>

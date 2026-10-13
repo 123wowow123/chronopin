@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { AdPreview } from '@/components/ads/AdBlock';
 import { blobUrl } from '@/lib/appConfig';
 import { dollars } from '@/lib/sponsoredAds';
 import { requireAdminViewer } from '@/server/guard';
@@ -30,20 +31,13 @@ export default async function AdminSponsoredPage() {
         {queue.map((ad) => {
           return (
             <article key={ad.id} className="surface space-y-3 p-5">
-              <div className="flex items-start gap-3">
-                {ad.imageName ? (
-                  // eslint-disable-next-line @next/next/no-img-element -- our own blob host
-                  <img src={blobUrl(ad.imageName)} alt="" className="size-20 shrink-0 rounded object-cover" />
-                ) : null}
-                <div className="min-w-0 flex-1">
-                  <h2 className="font-semibold">{ad.title}</h2>
-                  {ad.body ? <p className="text-sm">{ad.body}</p> : null}
-                  <a href={ad.url} target="_blank" rel="noopener noreferrer nofollow" className="block truncate text-sm text-link">{ad.url}</a>
-                  <p className="mt-1 text-xs text-subtle">
-                    {ad.ownerName} {ad.ownerEmail ? `(${ad.ownerEmail})` : ''} &middot; {ad.impressionsBought.toLocaleString('en-US')} impressions &middot; {dollars(ad.priceCents)}
-                    {ad.status === 'in_review' ? <> &middot; waiting {ad.waitingHours.toFixed(1)}h of {AUTO_APPROVE_HOURS}h</> : null}
-                  </p>
-                </div>
+              <AdPreview title={ad.title} body={ad.body} url={ad.url} imageUrl={blobUrl(ad.imageName) ?? null} />
+              <div className="min-w-0">
+                <a href={ad.url} target="_blank" rel="noopener noreferrer nofollow" className="block truncate text-sm text-link">{ad.url}</a>
+                <p className="mt-1 text-xs text-subtle">
+                  {ad.ownerName} {ad.ownerEmail ? `(${ad.ownerEmail})` : ''} &middot; {ad.impressionsBought.toLocaleString('en-US')} impressions &middot; {dollars(ad.priceCents)}
+                  {ad.status === 'in_review' ? <> &middot; waiting {ad.waitingHours.toFixed(1)}h of {AUTO_APPROVE_HOURS}h</> : null}
+                </p>
               </div>
               {ad.needsRefund ? (
                 <p className="text-sm text-danger">

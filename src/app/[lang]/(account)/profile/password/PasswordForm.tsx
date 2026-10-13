@@ -53,40 +53,42 @@ export function PasswordForm({ userId }: { userId: number }) {
           {message}
         </p>
       ) : null}
-      <div>
-        <label htmlFor="old" className="field-label">
-          {t('password.current')}
-        </label>
-        <input id="old" type="password" autoComplete="current-password" className="field" value={form.oldPassword} onChange={set('oldPassword')} />
-      </div>
-      <div>
-        <label htmlFor="new" className="field-label">
-          {t('password.new')}
-        </label>
-        <input id="new" type="password" autoComplete="new-password" className="field" value={form.newPassword} onChange={set('newPassword')} />
-        {form.newPassword ? (
-          <div className="mt-2 flex items-center gap-2 text-xs">
-            <div className="h-1.5 flex-1 rounded-full bg-raised-2">
-              <div className="h-full rounded-full bg-link transition-[width]" style={{ width: `${s.percent}%` }} />
+      <div className="grid gap-4 lg:grid-cols-3 lg:items-start">
+        <div>
+          <label htmlFor="old" className="field-label">
+            {t('password.current')}
+          </label>
+          <input id="old" type="password" autoComplete="current-password" className="field" value={form.oldPassword} onChange={set('oldPassword')} />
+        </div>
+        <div>
+          <label htmlFor="new" className="field-label">
+            {t('password.new')}
+          </label>
+          <input id="new" type="password" autoComplete="new-password" className="field" value={form.newPassword} onChange={set('newPassword')} />
+          {form.newPassword ? (
+            <div className="mt-2 flex items-center gap-2 text-xs">
+              <div className="h-1.5 flex-1 rounded-full bg-raised-2">
+                <div className="h-full rounded-full bg-link transition-[width]" style={{ width: `${s.percent}%` }} />
+              </div>
+              <span>{s.label}</span>
             </div>
-            <span>{s.label}</span>
-          </div>
-        ) : (
-          <p className="mt-1 text-xs text-subtle">{t('password.hint')}</p>
-        )}
-      </div>
-      <div>
-        <label htmlFor="confirm" className="field-label">
-          {t('password.confirm')}
-        </label>
-        <input id="confirm" type="password" autoComplete="new-password" className="field" value={form.confirmPassword} onChange={set('confirmPassword')} />
+          ) : (
+            <p className="mt-1 text-xs text-subtle">{t('password.hint')}</p>
+          )}
+        </div>
+        <div>
+          <label htmlFor="confirm" className="field-label">
+            {t('password.confirm')}
+          </label>
+          <input id="confirm" type="password" autoComplete="new-password" className="field" value={form.confirmPassword} onChange={set('confirmPassword')} />
+        </div>
       </div>
       {error ? (
         <p role="alert" className="text-sm text-danger">
           {error}
         </p>
       ) : null}
-      <button type="submit" disabled={busy} className="btn btn-primary w-full py-2.5">
+      <button type="submit" disabled={busy} className="btn btn-primary w-full py-2.5 lg:w-auto lg:min-w-48">
         {t('password.update')}
       </button>
     </form>

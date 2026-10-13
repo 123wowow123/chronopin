@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
+import { AdPreview } from '@/components/ads/AdBlock';
 import { blobUrl } from '@/lib/appConfig';
-import { dollars, STATUS_LABEL } from '@/lib/sponsoredAds';
+import { dollars, exampleTracking, STATUS_LABEL } from '@/lib/sponsoredAds';
 import { requireViewer } from '@/server/guard';
 import SponsoredAd from '@/server/model/sponsoredAd';
 import { stripeConfigured } from '@/server/stripe';
 import { ProfileTabs } from '../ProfileTabs';
 import { AdActions } from './AdActions';
+import { AdChart } from './AdChart';
 import { AdForm } from './AdForm';
 
 // Reads the session, so it blocks per request (see ../layout.tsx).
@@ -34,10 +36,10 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
   const justPaid = ads.find((ad) => String(ad.id) === query.paid) ?? null;
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
+    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-5xl">
       <ProfileTabs current="/profile/ads" />
       <div className="space-y-6">
-        <header>
+        <header className="lg:pr-[21.5rem]">
           <h1 className="sr-only">Ads</h1>
           <h2 className="font-display text-2xl font-semibold tracking-tight">Advertise on Chronopin</h2>
           <p className="mt-2 text-subtle">
@@ -47,7 +49,7 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
 
 
         {justPaid ? (
-          <p className="surface p-4 text-sm text-success" role="status">
+          <p className="surface p-4 text-sm text-success lg:mr-[21.5rem]" role="status">
             Thank you. &ldquo;{justPaid.title}&rdquo; is paid for and{' '}
             {justPaid.status === 'active' ? 'live now.' : 'in review. It goes live once approved, and within 24 hours at the latest.'}
           </p>
@@ -73,28 +75,24 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
           <p className="surface p-4 text-sm text-subtle">Ad purchases are not open yet.</p>
         )}
 
-        <section aria-label="Your ads" className="space-y-4">
+        <section aria-label="Your ads" className="space-y-4 lg:pr-[21.5rem]">
           <h2 className="font-display text-xl font-semibold">Your ads</h2>
           {ads.length === 0 ? <p className="text-subtle">You have no ads yet.</p> : null}
           {ads.map((ad) => {
-            const s = stats.get(ad.id)!;
+            // An ad that is not live yet shows made-up numbers, labelled as such,
+            // so the advertiser sees what the tracking will look like.
+            const example = ad.status === 'draft';
+            const s = example ? exampleTracking(ad.impressionsBought) : stats.get(ad.id)!;
+            const delivered = example ? s.impressions : ad.impressionsServed;
             const ctr = s.impressions ? ((s.clicks / s.impressions) * 100).toFixed(2) : '0.00';
-            const progress = Math.min(100, Math.round((ad.impressionsServed / ad.impressionsBought) * 100));
-            const peak = Math.max(1, ...s.byDay.map((d) => d.impressions));
+            const progress = Math.min(100, Math.round((delivered / ad.impressionsBought) * 100));
             return (
               <article key={ad.id} className="surface space-y-3 p-5">
-                <div className="flex items-start gap-3">
-                  {ad.imageName ? (
-                    // eslint-disable-next-line @next/next/no-img-element -- our own blob host
-                    <img src={blobUrl(ad.imageName)} alt="" className="size-14 shrink-0 rounded object-cover" />
-                  ) : null}
-                  <div className="min-w-0 flex-1">
-                    <h3 className="truncate font-semibold">{ad.title}</h3>
-                    {ad.body ? <p className="text-sm text-subtle">{ad.body}</p> : null}
-                    <p className="truncate text-xs text-subtle">{ad.url}</p>
-                  </div>
+                <div className="flex items-center justify-between gap-3">
+                  <p className="truncate text-xs text-subtle">{ad.url}</p>
                   <span className={`shrink-0 text-sm font-medium ${STATUS_TONE[ad.status]}`}>{STATUS_LABEL[ad.status]}</span>
                 </div>
+                <AdPreview title={ad.title} body={ad.body} url={ad.url} imageUrl={blobUrl(ad.imageName) ?? null} />
 
                 {ad.rejectionReason ? (
                   <p className="text-sm text-danger" role="alert">
@@ -102,58 +100,42 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                   </p>
                 ) : null}
 
-                {ad.status !== 'draft' ? (
-                  <>
-                    <dl className="grid grid-cols-3 gap-3 text-sm">
-                      <div>
-                        <dt className="text-subtle">Impressions</dt>
-                        <dd className="text-lg font-semibold tabular-nums">
-                          {ad.impressionsServed.toLocaleString('en-US')}
-                          <span className="text-sm font-normal text-subtle"> / {ad.impressionsBought.toLocaleString('en-US')}</span>
-                        </dd>
-                      </div>
-                      <div>
-                        <dt className="text-subtle">Clicks</dt>
-                        <dd className="text-lg font-semibold tabular-nums">{s.clicks.toLocaleString('en-US')}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-subtle">Click rate</dt>
-                        <dd className="text-lg font-semibold tabular-nums">{ctr}%</dd>
-                      </div>
-                    </dl>
-                    <div
-                      className="h-2 overflow-hidden rounded bg-raised-2"
-                      role="progressbar"
-                      aria-valuenow={progress}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                      aria-label="Impressions delivered"
-                    >
-                      <div className="h-full bg-accent" style={{ width: `${progress}%` }} />
-                    </div>
-                    {s.byDay.length ? (
-                      <div>
-                        <p className="mb-1 text-xs text-subtle">Impressions per day, last 30 days</p>
-                        <div className="flex h-12 items-end gap-0.5" aria-hidden>
-                          {s.byDay.map((d) => (
-                            <div
-                              key={d.day}
-                              title={`${d.day}: ${d.impressions} impressions, ${d.clicks} clicks`}
-                              className="min-w-1 flex-1 rounded-t bg-accent/70"
-                              style={{
-                                height: `${Math.max(6, (d.impressions / peak) * 100)}%`,
-                              }}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    ) : null}
-                  </>
-                ) : (
+                {example ? (
                   <p className="text-sm text-subtle">
-                    {ad.impressionsBought.toLocaleString('en-US')} impressions for {dollars(ad.priceCents)}, not paid yet.
+                    {ad.impressionsBought.toLocaleString('en-US')} impressions for {dollars(ad.priceCents)}, not paid yet. Once it is live you will see its tracking, like this example:
                   </p>
-                )}
+                ) : null}
+                <div className={example ? 'space-y-3 rounded-lg border border-dashed border-line p-3' : 'space-y-3'}>
+                  {example ? <p className="text-[11px] font-semibold tracking-wider text-subtle uppercase">Example tracking, not real numbers</p> : null}
+                  <dl className="grid grid-cols-3 gap-3 text-sm">
+                    <div>
+                      <dt className="text-subtle">Impressions</dt>
+                      <dd className="text-lg font-semibold tabular-nums">
+                        {delivered.toLocaleString('en-US')}
+                        <span className="text-sm font-normal text-subtle"> / {ad.impressionsBought.toLocaleString('en-US')}</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-subtle">Clicks</dt>
+                      <dd className="text-lg font-semibold tabular-nums">{s.clicks.toLocaleString('en-US')}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-subtle">Click rate</dt>
+                      <dd className="text-lg font-semibold tabular-nums">{ctr}%</dd>
+                    </div>
+                  </dl>
+                  <div
+                    className="h-2 overflow-hidden rounded bg-raised-2"
+                    role="progressbar"
+                    aria-valuenow={progress}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-label="Impressions delivered"
+                  >
+                    <div className="h-full bg-accent" style={{ width: `${progress}%` }} />
+                  </div>
+                  {s.byDay.length ? <AdChart days={s.byDay} /> : null}
+                </div>
                 <AdActions id={ad.id} status={ad.status} />
               </article>
             );

@@ -18,7 +18,7 @@ export default async function FollowingPage() {
   const user = await requireViewer('/profile/following');
   const [following, t] = await Promise.all([Follow.listFollowing(user.id), getT()]);
   return (
-    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
+    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-5xl">
       <ProfileTabs current="/profile/following" />
       <h1 className="sr-only">{t('profile.following')}</h1>
       <p className="mb-6 text-sm text-subtle">

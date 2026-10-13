@@ -21,7 +21,7 @@ export default async function BlockedPage() {
   const user = await requireViewer('/profile/blocked');
   const [users, companies, t] = await Promise.all([UserBlock.list(user.id), CompanyBlock.list(user.id), getT()]);
   return (
-    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
+    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-5xl">
       <ProfileTabs current="/profile/blocked" />
       <h1 className="sr-only">{t('profile.blocked')}</h1>
       <p className="mb-6 text-sm text-subtle">{t('profile.blockedIntro')}</p>
