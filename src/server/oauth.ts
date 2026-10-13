@@ -1,4 +1,4 @@
-// Google, Facebook and Apple sign-in: the OAuth 2.0 authorization-code flow,
+// Google, Facebook, Apple and Alibaba Cloud sign-in: the OAuth 2.0 authorization-code flow,
 // with a random state in a short-lived cookie to tie the callback to the
 // browser that started it. The callback paths are the ones passport used
 // (/auth/<provider>/callback), so the apps registered with both of the older
@@ -8,6 +8,10 @@
 // client secret is a JWT this server signs per sign-in, it posts the callback
 // back instead of redirecting to it, and everything it knows about the person
 // arrives in the id_token rather than from a userinfo endpoint.
+//
+// Alibaba Cloud (a RAM OAuth application) is plain authorization-code with the
+// client secret in the form body, but it never shares an email address: the
+// account is found by its own id, and starts with no email.
 
 import { randomBytes } from 'node:crypto';
 import { createRemoteJWKSet, importPKCS8, type JWTPayload, jwtVerify, SignJWT } from 'jose';
@@ -17,10 +21,10 @@ import { afterLoginPath } from '@/lib/authRedirect';
 import { signToken, tokenCookie } from './auth';
 import config from './config';
 import { publicOrigin } from './http';
-import User, { appleMapper, facebookMapper, googleMapper } from './model/user';
+import User, { alibabaMapper, appleMapper, facebookMapper, googleMapper } from './model/user';
 import log from './util/log';
 
-export type Provider = 'google' | 'facebook' | 'apple';
+export type Provider = 'google' | 'facebook' | 'apple' | 'alibaba' | 'alibabacn';
 
 const STATE_COOKIE = 'oauth_state';
 // The @handle the sign-up page stored before sending the user to the provider.
@@ -28,6 +32,20 @@ const HANDLE_COOKIE = 'handle';
 // The page the login page was asked to go back to (OAuthButtons).
 const AFTER_LOGIN_COOKIE = 'after_login';
 const APPLE_ISSUER = 'https://appleid.apple.com';
+// Alibaba Cloud runs two separate sites, each with its own accounts and its
+// own application: International (alibabacloud.com) and China (aliyun.com).
+const ALIBABA_SITES = {
+  alibaba: {
+    authorizeUrl: 'https://signin.alibabacloud.com/oauth2/v1/auth',
+    tokenUrl: 'https://oauth.alibabacloud.com/v1/token',
+    userinfoUrl: 'https://oauth.alibabacloud.com/v1/userinfo',
+  },
+  alibabacn: {
+    authorizeUrl: 'https://signin.aliyun.com/oauth2/v1/auth',
+    tokenUrl: 'https://oauth.aliyun.com/v1/token',
+    userinfoUrl: 'https://oauth.aliyun.com/v1/userinfo',
+  },
+} as const;
 
 type ProviderConfig = {
   authorizeUrl: string;
@@ -65,9 +83,25 @@ const PROVIDERS: Record<Provider, ProviderConfig> = {
     callbackPath: '/auth/apple/callback',
     formPost: true,
   },
+  alibaba: {
+    authorizeUrl: ALIBABA_SITES.alibaba.authorizeUrl,
+    // openid is the sub; profile the name or login name; aliuid is not asked
+    // for, nothing here uses the account or user id.
+    scope: 'openid profile',
+    clientID: config.alibaba.clientID,
+    callbackURL: config.alibaba.callbackURL,
+    callbackPath: '/auth/alibaba/callback',
+  },
+  alibabacn: {
+    authorizeUrl: ALIBABA_SITES.alibabacn.authorizeUrl,
+    scope: 'openid profile',
+    clientID: config.alibabaCn.clientID,
+    callbackURL: config.alibabaCn.callbackURL,
+    callbackPath: '/auth/alibabacn/callback',
+  },
 };
 
-const MAPPERS = { google: googleMapper, facebook: facebookMapper, apple: appleMapper };
+const MAPPERS = { google: googleMapper, facebook: facebookMapper, apple: appleMapper, alibaba: alibabaMapper, alibabacn: alibabaMapper };
 
 // The providers whose app credentials are set, in button order. config.ts
 // falls back to 'id'/'secret' placeholders, which a provider rejects, so a
@@ -78,8 +112,10 @@ export function signInProviders(): Provider[] {
     google: config.google.clientID !== 'id' && config.google.clientSecret !== 'secret',
     facebook: config.facebook.clientID !== 'id' && config.facebook.clientSecret !== 'secret',
     apple: config.apple.clientID !== 'id' && !!config.apple.teamID && !!config.apple.keyID && !!config.apple.privateKey,
+    alibaba: config.alibaba.clientID !== 'id' && config.alibaba.clientSecret !== 'secret',
+    alibabacn: config.alibabaCn.clientID !== 'id' && config.alibabaCn.clientSecret !== 'secret',
   };
-  return (['google', 'facebook', 'apple'] as const).filter((p) => ready[p]);
+  return (['google', 'facebook', 'apple', 'alibaba', 'alibabacn'] as const).filter((p) => ready[p]);
 }
 
 // DOMAIN (production) or the host the request arrived on (local development).
@@ -199,6 +235,9 @@ function fetchProfile(provider: Provider, code: string, redirectUri: string, par
       return facebookProfile(code, redirectUri);
     case 'apple':
       return appleProfile(code, redirectUri, params.get('user'));
+    case 'alibaba':
+    case 'alibabacn':
+      return alibabaProfile(provider, code, redirectUri);
   }
 }
 
@@ -265,6 +304,39 @@ async function facebookProfile(code: string, redirectUri: string): Promise<Profi
     emails: me.email ? [{ value: me.email }] : [],
     photos: me.picture?.data?.url ? [{ value: me.picture.data.url }] : [],
     _json: me,
+  };
+}
+
+async function alibabaProfile(provider: 'alibaba' | 'alibabacn', code: string, redirectUri: string): Promise<Profile> {
+  const site = ALIBABA_SITES[provider];
+  const app = provider === 'alibaba' ? config.alibaba : config.alibabaCn;
+  const token = await postForm(site.tokenUrl, {
+    code,
+    client_id: app.clientID,
+    client_secret: app.clientSecret,
+    redirect_uri: redirectUri,
+    grant_type: 'authorization_code',
+  });
+  const info = await getJson(site.userinfoUrl, token.access_token);
+  const profile = alibabaProfileFrom(info);
+  // A sub is only unique within its own application: keep the two sites'
+  // ids apart in the one column.
+  return provider === 'alibabacn' ? { ...profile, id: `cn:${profile.id}` } : profile;
+}
+
+// type is account (a root account: login_name, no name), user (a RAM user:
+// name and upn) or role (name is <RoleName:RoleSessionName>). The login name
+// is not an email address even when it is shaped like one - Alibaba does not
+// vouch for any - so emails stays empty.
+export function alibabaProfileFrom(info: Record<string, unknown>): Profile {
+  const text = (v: unknown) => (typeof v === 'string' && v.trim() ? v.trim() : undefined);
+  const display = text(info.name) ?? text(info.login_name) ?? text(info.upn);
+  return {
+    id: String(info.sub),
+    name: { givenName: display, familyName: undefined },
+    emails: [],
+    photos: [],
+    _json: info,
   };
 }
 
@@ -340,7 +412,8 @@ async function findOrCreateUser(
   handle: string | undefined,
 ): Promise<{ user: User; created: boolean }> {
   const email = profile.emails[0]?.value;
-  if (!email) {
+  const isAlibaba = provider === 'alibaba' || provider === 'alibabacn';
+  if (!email && !isAlibaba) {
     throw new Error(`${provider} did not share an email address`);
   }
 
@@ -351,7 +424,10 @@ async function findOrCreateUser(
   if (provider === 'apple') {
     ({ user: existing } = await User.getByAppleId(profile.id));
   }
-  if (!existing) {
+  if (isAlibaba) {
+    ({ user: existing } = await User.getByAlibabaId(profile.id));
+  }
+  if (!existing && email) {
     ({ user: existing } = await User.getByEmail(email));
   }
 
@@ -362,15 +438,15 @@ async function findOrCreateUser(
       log.info(`${provider} sign-in filled in:`, Object.keys(Object.assign({}, ...updatedFields)).join(', '));
       await user.patchWithoutPassword();
     }
-    await confirmProviderEmail(user, profile, email);
+    if (email) await confirmProviderEmail(user, profile, email);
     return { user, created: false };
   }
 
   user.role = 'user';
   user.provider = provider;
-  await fillRequiredFields(user, email);
+  await fillRequiredFields(user, email ?? alibabaHandleBase(profile));
   await user.save();
-  await confirmProviderEmail(user, profile, email);
+  if (email) await confirmProviderEmail(user, profile, email);
   return { user, created: true };
 }
 
@@ -395,6 +471,14 @@ async function fillRequiredFields(user: User, email: string) {
   if (!user.userName) {
     user.userName = await freeHandle(email);
   }
+}
+
+// Alibaba shares no address, so the handle comes from the part of the login
+// name before an @ (alice@example.com, alice@example.onaliyun.com), or the
+// display name.
+function alibabaHandleBase(profile: Profile): string {
+  const login = String(profile._json.login_name ?? profile._json.upn ?? '');
+  return login || profile.name.givenName || 'pinner';
 }
 
 // @handle from the address, with a number appended until it is nobody else's.

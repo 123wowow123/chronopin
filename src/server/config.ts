@@ -74,6 +74,23 @@ export const config = {
     callbackURL: domain + '/auth/apple/callback',
   },
 
+  // Sign in with Alibaba Cloud: a RAM OAuth application of type Web
+  // application (International site), with a client secret from its App
+  // Secrets tab. See oauth.ts.
+  alibaba: {
+    clientID: env('ALIBABA_ID') || 'id',
+    clientSecret: env('ALIBABA_SECRET') || 'secret',
+    callbackURL: domain + '/auth/alibaba/callback',
+  },
+
+  // The same flow on the China site (aliyun.com): a separate RAM account and
+  // a separate application, with its own id and secret.
+  alibabaCn: {
+    clientID: env('ALIBABA_CN_ID') || 'id',
+    clientSecret: env('ALIBABA_CN_SECRET') || 'secret',
+    callbackURL: domain + '/auth/alibabacn/callback',
+  },
+
   azureStorage: {
     connectionString: env('AZURE_STORAGE_CONNECTION_STRING') || '',
   },

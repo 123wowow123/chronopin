@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { appleProfileFrom, signInLanding } from './oauth';
+import { alibabaProfileFrom, appleProfileFrom, signInLanding } from './oauth';
 
 describe('appleProfileFrom', () => {
   const claims = { sub: '001234.9f3ac4d.1517', email: 'sam@example.com', email_verified: 'true' };
@@ -34,6 +34,25 @@ describe('appleProfileFrom', () => {
   it('survives a user field that is not JSON, and a sign-in with no email', () => {
     expect(appleProfileFrom(claims, 'not json').name).toEqual({ givenName: undefined, familyName: undefined });
     expect(appleProfileFrom({ sub: 'x' }, null).emails).toEqual([]);
+  });
+});
+
+describe('alibabaProfileFrom', () => {
+  it('uses the login name of a root account and shares no email', () => {
+    const info = { sub: '123456789012', type: 'account', login_name: 'alice@example.com' };
+    expect(alibabaProfileFrom(info)).toEqual({
+      id: '123456789012',
+      name: { givenName: 'alice@example.com', familyName: undefined },
+      emails: [],
+      photos: [],
+      _json: info,
+    });
+  });
+
+  it('prefers the display name of a RAM user, and falls back to its upn', () => {
+    expect(alibabaProfileFrom({ sub: 'a', type: 'user', name: 'alice', upn: 'alice@x.onaliyun.com' }).name.givenName).toBe('alice');
+    expect(alibabaProfileFrom({ sub: 'a', type: 'user', upn: 'alice@x.onaliyun.com' }).name.givenName).toBe('alice@x.onaliyun.com');
+    expect(alibabaProfileFrom({ sub: 'a' }).name.givenName).toBeUndefined();
   });
 });
 

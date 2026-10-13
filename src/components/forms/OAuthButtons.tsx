@@ -3,9 +3,9 @@
 import { useLocale, useT } from '@/lib/client/i18n';
 import { localizePath } from '@/lib/i18n/config';
 
-export type SignInProvider = 'google' | 'facebook' | 'apple';
+export type SignInProvider = 'google' | 'facebook' | 'apple' | 'alibaba' | 'alibabacn';
 
-// Sign in with Google, Facebook or Apple - whichever the server has keys for
+// Sign in with Google, Facebook, Apple or Alibaba Cloud - whichever the server has keys for
 // (signInProviders in src/server/oauth.ts), with the divider above them, or
 // nothing at all when none is set up. On the sign-up page the chosen @handle
 // is left in a short-lived cookie for the callback to give a new account; on
@@ -38,7 +38,7 @@ export function OAuthButtons({
     // this page's place in the history rather than after it.
     window.location.replace(`/auth/${provider}`);
   }
-  const columns = ['', 'sm:grid-cols-1', 'sm:grid-cols-2', 'sm:grid-cols-3'][providers.length];
+  const columns = ['', 'sm:grid-cols-1', 'sm:grid-cols-2', 'sm:grid-cols-3', 'sm:grid-cols-2', 'sm:grid-cols-3'][providers.length];
   return (
     <>
       <OrDivider />
@@ -61,8 +61,28 @@ export function OAuthButtons({
             Apple
           </button>
         ) : null}
+        {providers.includes('alibaba') ? (
+          <button type="button" onClick={() => go('alibaba')} className="btn bg-[#ff6a00] text-white hover:bg-[#e65f00]">
+            <AlibabaMark />
+            Alibaba Cloud
+          </button>
+        ) : null}
+        {providers.includes('alibabacn') ? (
+          <button type="button" onClick={() => go('alibabacn')} className="btn bg-[#ff6a00] text-white hover:bg-[#e65f00]">
+            <AlibabaMark />
+            阿里云
+          </button>
+        ) : null}
       </div>
     </>
+  );
+}
+
+function AlibabaMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden>
+      <path d="M3 8h6M3 16h6M15 8h6M15 16h6M9 8l6 8M9 16l6-8" />
+    </svg>
   );
 }
 

@@ -184,10 +184,10 @@ production's uploads.
 
 ## Social sign-in
 
-The Google, Facebook and Apple buttons appear only for a provider whose keys
+The Google, Facebook, Apple and Alibaba Cloud buttons appear only for a provider whose keys
 are set (`signInProviders` in `src/server/oauth.ts`), read per request, so
 adding them needs no rebuild. In each provider's console, register the
-callback `https://www.chronopin.com/auth/<google|facebook|apple>/callback`,
+callback `https://www.chronopin.com/auth/<google|facebook|apple|alibaba|alibabacn>/callback`,
 then add to `Docker/env.prod.list` and `docker compose ... up -d app`:
 
 - Google: `GOOGLE_ID`, `GOOGLE_SECRET` - set 2026-09-23. The client "Chronopin web"
@@ -200,6 +200,19 @@ then add to `Docker/env.prod.list` and `docker compose ... up -d app`:
 - Facebook: `FACEBOOK_ID`, `FACEBOOK_SECRET`
 - Apple: `APPLE_ID` (the Services ID), `APPLE_TEAM_ID`, `APPLE_KEY_ID`,
   `APPLE_KEY` (the .p8 file's text)
+- Alibaba Cloud: `ALIBABA_ID`, `ALIBABA_SECRET`. In the RAM console
+  (https://ram.console.alibabacloud.com/, International site) go to
+  Integrations > OAuth > Enterprise Applications > Create Application: OAuth 2.0,
+  type Web Application, callback `https://www.chronopin.com/auth/alibaba/callback`
+  (HTTPS only, so no localhost), scopes openid + profile. The client ID is in the
+  application list; the secret is created on its App Secrets tab and shown once.
+  The flow never returns an email, so these accounts start with none (matched by
+  `User.alibabaId`, migration 0176) and add one on the profile page. Other
+  Alibaba accounts must consent before they can sign in. The China site is a
+  separate RAM account and application (https://ram.console.aliyun.com/, same
+  steps, callback `https://www.chronopin.com/auth/alibabacn/callback`), kept in
+  `ALIBABA_CN_ID` / `ALIBABA_CN_SECRET`; its button reads 阿里云 and its ids are
+  stored as `cn:<sub>` in the same column.
 
 ## DNS and HTTPS
 

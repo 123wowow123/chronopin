@@ -9,7 +9,7 @@ import { wordStartPattern } from '../util/searchQuery';
 const pbkdf2Async = promisify(pbkdf2);
 const randomBytesAsync = promisify(randomBytes);
 
-const authTypes = ['github', 'twitter', 'facebook', 'google', 'apple'];
+const authTypes = ['github', 'twitter', 'facebook', 'google', 'apple', 'alibaba', 'alibabacn'];
 const PASSWORD_ITERATIONS = 10000;
 const PASSWORD_KEY_LENGTH = 64;
 const SALT_BYTES = 16;
@@ -26,6 +26,7 @@ const prop = [
   'facebookId',
   'googleId',
   'appleId',
+  'alibabaId',
   'pictureUrl',
   'fbUpdatedTime',
   'fbVerified',
@@ -271,6 +272,10 @@ export default class User {
     return getOne('"appleId" = $1', appleId);
   }
 
+  static getByAlibabaId(alibabaId: string) {
+    return getOne('"alibabaId" = $1', alibabaId);
+  }
+
   static getByEmail(email: string | undefined) {
     return getOne('"email" = $1', email);
   }
@@ -285,7 +290,7 @@ export default class User {
 // next save. Endpoints pick what they send (pickUserProps), so loading more
 // exposes nothing.
 const USER_COLUMNS = [
-  'id', 'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
+  'id', 'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId', 'appleId', 'alibabaId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
   'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'remindBeforeStart',
   'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice', 'emailVerifiedDateTime',
@@ -294,7 +299,7 @@ const USER_COLUMNS = [
 
 // The editable columns, in the order create and update bind them.
 const WRITE_COLUMNS = [
-  'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
+  'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId', 'appleId', 'alibabaId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email',
   'password', 'provider', 'role', 'salt', 'websiteUrl',
   'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice',
@@ -511,6 +516,23 @@ export function appleMapper(inUser: User | undefined, profile: unknown, handle?:
   return mapProfile(
     {
       appleId: 'id',
+      firstName: 'name.givenName',
+      lastName: 'name.familyName',
+      email: 'emails[0].value',
+    },
+    inUser,
+    profile,
+    handle,
+  );
+}
+
+// Alibaba Cloud shares a name (or login name) and an id, never an email, a
+// picture or a locale. The whole display name goes in firstName: there is no
+// given/family split to read.
+export function alibabaMapper(inUser: User | undefined, profile: unknown, handle?: string) {
+  return mapProfile(
+    {
+      alibabaId: 'id',
       firstName: 'name.givenName',
       lastName: 'name.familyName',
       email: 'emails[0].value',
