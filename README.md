@@ -438,3 +438,14 @@ https://x.com/INArteCarloDoss/status/2109620584401277228/photo/1
 add AI buildout on map
 
 https://cleanview.co/
+
+
+
+pin and create thread on everything that has more than 1 season
+
+need to add alternate name like for searching:
+Kikansha no Mahou wa Tokubetsu desu
+
+do this for all shows and movies and mangas
+
+https://myanimelist.net/anime/57612/Kikansha_no_Mahou_wa_Tokubetsu_desu_2nd_Season

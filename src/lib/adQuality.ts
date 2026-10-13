@@ -5,6 +5,11 @@
 // Owner, 2026-10-02: "try to stick with high review and trusted brands".
 export const MIN_AD_RATING = 4.3;
 export const MIN_AD_REVIEWS = 100;
+// Owner, 2026-10-12: "lower niche product reviews to 30". Manga volumes and
+// anime Blu-rays sell to a small audience, so they clear a lower review bar.
+export const MIN_NICHE_AD_REVIEWS = 30;
+const NICHE_TITLE = /\b(blu-?ray|dvd|manga|manhwa|light novel|vol(?:ume|\.)?\s*\d+|kindle edition|ebook)\b/i;
+export const isNicheListing = (title: string) => NICHE_TITLE.test(title);
 
 export type ListingFacts = {
   title: string;
@@ -20,7 +25,8 @@ export function adProblem(listing: ListingFacts, minRating = MIN_AD_RATING): str
   if (!listing.available || listing.price == null) return 'out of stock or no buy-box price';
   if (!listing.brand) return 'no brand on the listing';
   if (listing.rating == null || listing.reviewCount == null) return 'no reviews yet';
-  if (listing.reviewCount < MIN_AD_REVIEWS) return `only ${listing.reviewCount} reviews (need ${MIN_AD_REVIEWS})`;
+  const needed = isNicheListing(listing.title) ? MIN_NICHE_AD_REVIEWS : MIN_AD_REVIEWS;
+  if (listing.reviewCount < needed) return `only ${listing.reviewCount} reviews (need ${needed})`;
   if (listing.rating < minRating) return `rated ${listing.rating} (need ${minRating})`;
   return null;
 }

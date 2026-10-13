@@ -284,7 +284,9 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
     const id = storeOf(url);
     const store: Store | undefined = id && STORES[id];
     return {
-      store: store ? store.name : m.label || hostOf(url),
+      // A listing named for the edition it is (an Amazon link labelled "Vol. 2")
+      // keeps its own name, so several listings from one store stay apart.
+      store: store ? (id === 'amazon' && m.label && !/^amazon(\.com)?$/i.test(m.label.trim()) ? m.label : store.name) : m.label || hostOf(url),
       background: store?.background,
       text: store?.text,
       border: store?.border,

@@ -14,6 +14,18 @@ describe('adProblem', () => {
   });
 });
 
+describe('adProblem niche bar', () => {
+  const manga = { ...good, title: "A Returner's Magic Should Be Special, Vol. 1 (Kindle)", brand: 'Yen Press', reviewCount: 31 };
+  it('lets manga and Blu-rays through at 30 reviews', () => {
+    expect(adProblem(manga)).toBeNull();
+    expect(adProblem({ ...manga, title: 'Show - Season 1 - Blu-ray' })).toBeNull();
+  });
+  it('still wants 30 and keeps 100 for everything else', () => {
+    expect(adProblem({ ...manga, reviewCount: 29 })).toMatch(/need 30/);
+    expect(adProblem({ ...good, reviewCount: 31 })).toMatch(/need 100/);
+  });
+});
+
 describe('asinOf', () => {
   it('reads the ASIN from the product link forms, tracking noise ignored', () => {
     expect(asinOf('https://www.amazon.com/Tamiya-18710-Starter-Balanced-Rowdy/dp/B082V7DYQV/ref=sr_1_1?dib=abc&keywords=Mini+4WD')).toBe('B082V7DYQV');
