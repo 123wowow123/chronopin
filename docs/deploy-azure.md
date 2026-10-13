@@ -161,7 +161,8 @@ production's (`scripts/db/pullProd.sh`):
    blob in `backups` (needs `az login`, works when SSH is closed to your IP),
    or with `-- --file <dump>` one already on disk;
 2. `pg_restore --list` checks the dump is whole;
-3. after you confirm (`-- --yes` skips it), the local database is dumped first;
+3. after you confirm (`-- --yes` skips it), the local database is replaced - it is
+   **not** dumped first, because there is no disk space for backups;
 4. the dump restores into `chronopin_incoming`, which replaces `chronopin` only
    once the restore succeeded;
 5. `npm run create:db` applies schema files this branch has and prod does not,
@@ -169,9 +170,11 @@ production's (`scripts/db/pullProd.sh`):
    `npm run backup:data` rewrites the seed files (`scripts/backup/*.json`) from
    them (`-- --no-seeds` to skip), ready to commit.
 
-Dumps go to `~/chronopin-backups` (`BACKUP_DIR` to change it). They hold real
-accounts, so they stay outside the repository, away from git and the deploy's
-`rsync --delete`. To undo a pull, pass `-- --file ~/chronopin-backups/local-<time>.dump`.
+**No backup database is kept** (disk is full, Ian 2026-10-12): the prod dump
+is written to `~/chronopin-backups` (`BACKUP_DIR` to change it; real accounts, so
+outside the repository) only while the pull runs and is deleted once the swap
+succeeded. A pull cannot be undone; pull again instead. A `-- --file` dump is
+never deleted by the script.
 `LOCAL_DB=chronopin_prod` restores into a side database and leaves `chronopin`
 alone. Add `-- --no-search --no-seeds` too, because the search index and seed
 files are shared with it.

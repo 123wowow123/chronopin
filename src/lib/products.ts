@@ -25,3 +25,6 @@ export const SHELF_SIZE = 12;
 
 // Fewer than this and the page is thin: it asks not to be indexed.
 export const MIN_INDEXED_PRODUCTS = 8;
+
+// The /cars page is thin below this and asks not to be indexed.
+export const MIN_INDEXED_CARS = 8;

@@ -11,11 +11,10 @@
 #   --no-seeds to leave scripts/backup/*.json, --no-thumbs to skip the thumbnail copy
 #   LOCAL_DB=chronopin_prod npm run db:pull-prod   into a side database instead
 #
-# Only the newest prod and local dump are kept (older ones are pruned after a successful pull).
-# Before anything is replaced the local database is dumped next to the prod
-# copy, so `--file ~/chronopin-backups/local-<time>.dump` puts it back. Dumps
-# hold real accounts (emails, password hashes), so they live outside the
-# repository - where neither git nor the deploy's `rsync --delete` sees them.
+# No backups are kept (the disk is full): the local database is NOT dumped before it is
+# replaced, and the prod dump this script downloads is deleted once the swap succeeded
+# (a dump passed with --file is yours and is left alone). Dumps hold real accounts
+# (emails, password hashes), so while one exists it lives outside the repository.
 #
 # The restore goes into a scratch database first and is swapped in by rename
 # only when it succeeded, so a failed pull leaves the local database as it was.
@@ -102,13 +101,7 @@ if [ -z "$yes" ]; then
   case $answer in y|Y|yes) ;; *) echo "Left the local database alone."; exit 0 ;; esac
 fi
 
-# 2. Keep what is here now.
-local_copy="$BACKUP_DIR/local-$stamp.dump"
-if [ "$(psql_local -tAc "SELECT 1 FROM pg_database WHERE datname = '$DB'")" = 1 ]; then
-  docker exec "$CONTAINER" pg_dump -U "$PG_USER" -d "$DB" --format=custom --no-owner > "$local_copy"
-  chmod 600 "$local_copy"
-  echo "Local database saved -> $local_copy"
-fi
+# 2. No local backup is taken: there is no disk space for one (see the header).
 
 # 3. Restore into a scratch database, then swap it in.
 incoming="${DB}_incoming"
@@ -130,11 +123,11 @@ psql_local \
   -c "ALTER DATABASE \"$incoming\" RENAME TO \"$DB\"" > /dev/null
 echo "Local \"$DB\" is now production as of $(basename "$dump")"
 
-# Dumps are 100-200 MB each, so only the newest prod and local copies are kept; older ones are
-# removed now that the swap has succeeded (a failed pull returns above and prunes nothing).
-for prefix in prod local; do
-  ls -1t "$BACKUP_DIR/$prefix"-*.dump 2>/dev/null | tail -n +2 | while read -r old; do rm -f "$old"; done
-done
+# Dumps are 100-200 MB each and the disk is full, so none is kept: remove the one downloaded
+# now that the swap has succeeded (a failed pull exits above and keeps it for a retry with
+# --file), plus any older prod/local dumps left in the backup directory.
+[ "$source" = file ] || rm -f "$dump"
+rm -f "$BACKUP_DIR"/prod-*.dump "$BACKUP_DIR"/local-*.dump
 
 # 4. Schema files this branch has and prod does not yet, then search and the seed files.
 npm run --silent create:db

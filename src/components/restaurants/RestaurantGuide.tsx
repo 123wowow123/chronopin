@@ -165,19 +165,11 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
           ) : <div className={styles.noFeature}><span aria-hidden="true">✳</span><p>A new chapter<br />for local dining.</p></div>}
         </header>
 
-        <div className={styles.digest}>
-          <p>A little discovery.<br /><strong>A lot to look forward to.</strong></p>
-          {counts.upcoming > 0 && <Anchor href={queryTabHref(pathname, 'view', 'upcoming')} onClick={selectQueryTab('view', 'upcoming', () => setNeighborhood('all'))}><strong>{counts.upcoming.toString().padStart(2, '0')}</strong><span>Upcoming openings <span aria-hidden="true">↗</span></span></Anchor>}
-          {counts.new > 0 && <Anchor href={queryTabHref(pathname, 'view', 'new')} onClick={selectQueryTab('view', 'new', () => setNeighborhood('all'))}><strong>{counts.new.toString().padStart(2, '0')}</strong><span>New in the last 90 days <span aria-hidden="true">↗</span></span></Anchor>}
-          {counts.top > 0 && <Anchor href={queryTabHref(pathname, 'view', 'top')} onClick={selectQueryTab('view', 'top', () => setNeighborhood('all'))}><strong>{counts.top.toString().padStart(2, '0')}</strong><span>{establishedOnly ? 'Restaurants to explore' : 'Top restaurants'} <span aria-hidden="true">↗</span></span></Anchor>}
-          {specialCount > 0 && <Anchor href={queryTabHref(pathname, 'view', 'discounts')} onClick={selectQueryTab('view', 'discounts', () => setNeighborhood('all'))}><strong>{specialCount.toString().padStart(2, '0')}</strong><span>Specials <span aria-hidden="true">↗</span></span></Anchor>}
-        </div>
-
         <section id="openings" className={styles.openings} aria-label="Browse restaurants">
           <div className={styles.browseHeading}><div><p className={styles.eyebrow}>THE LOCAL LINEUP</p><h2>{top ? 'Great tables, already here.' : 'Something new on the menu.'}</h2></div><span>{region.name} edition</span></div>
           <div className={styles.filters}>
             <nav ref={viewNav} className={styles.statusFilters} aria-label="Restaurant view">
-              {views.map((item) => <Anchor key={item.key} href={queryTabHref(pathname, 'view', item.key)} aria-label={item.label} aria-current={status === item.key ? 'location' : undefined} onClick={selectQueryTab('view', item.key, () => { if ((item.key === 'top') !== top || (item.key === 'discounts') !== discounts) setNeighborhood('all'); })}><span className={styles.viewLabel} aria-hidden="true">{item.label}</span><span className={styles.mobileViewLabel} aria-hidden="true">{item.mobileLabel}</span></Anchor>)}
+              {views.map((item) => <Anchor key={item.key} href={queryTabHref(pathname, 'view', item.key)} aria-label={`${item.label} ${counts[item.key]}`} aria-current={status === item.key ? 'location' : undefined} onClick={selectQueryTab('view', item.key, () => { if ((item.key === 'top') !== top || (item.key === 'discounts') !== discounts) setNeighborhood('all'); })}><span className={styles.viewLabel} aria-hidden="true">{item.label}</span><span className={styles.mobileViewLabel} aria-hidden="true">{item.mobileLabel}</span><span className={styles.viewCount} aria-hidden="true"><span>·</span>{counts[item.key].toString().padStart(2, '0')}</span></Anchor>)}
             </nav>
             <div className={styles.filterFields}>
               <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onMouseDown={(event) => { event.currentTarget.dataset.mouse = ''; }} onKeyDown={(event) => { delete event.currentTarget.dataset.mouse; }} onBlur={(event) => { delete event.currentTarget.dataset.mouse; }} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>

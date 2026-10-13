@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { ShelfTabs } from '@/components/products/ShelfTabs';
 import { CardImage } from '@/components/pin/CardImage';
 import { JsonLd } from '@/components/JsonLd';
@@ -35,14 +36,22 @@ function blurb(pin: ProductPin): string {
 // The curated products page: the products pins are about, by shelf, each with
 // a short line on why it is good. Every product links to its pin for the dates, the
 // sources and the rest.
-export function ProductsView({ shelves, title, description }: { shelves: ProductShelf[]; title: string; description: string }) {
+export function ProductsView({ shelves, title, description, path = '/products', wordmark = 'The product guide', eyebrow = 'GOOD GEAR. GREAT TIMING.', heading = <>The products worth <em>the wait.</em></> }: {
+  shelves: ProductShelf[];
+  title: string;
+  description: string;
+  path?: string;
+  wordmark?: string;
+  eyebrow?: string;
+  heading?: ReactNode;
+}) {
   const products = shelves.flatMap((s) => s.pins);
   const collection = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: title,
     description,
-    url: absoluteUrl('/products'),
+    url: absoluteUrl(path),
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: products.length,
@@ -65,13 +74,13 @@ export function ProductsView({ shelves, title, description }: { shelves: Product
       <JsonLd data={collection} />
       <div className={styles.container}>
         <div className={styles.guideNav}>
-          <Link href="/products" className={styles.wordmark}><span aria-hidden="true">✳</span> The product guide</Link>
+          <Link href={path} className={styles.wordmark}><span aria-hidden="true">✳</span> {wordmark}</Link>
         </div>
 
         <header className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>GOOD GEAR. GREAT TIMING.</p>
-            <h1>The products worth <em>the wait.</em></h1>
+            <p className={styles.eyebrow}>{eyebrow}</p>
+            <h1>{heading}</h1>
             <p className={styles.lead}>{description}</p>
           </div>
           {featured ? (
@@ -90,16 +99,6 @@ export function ProductsView({ shelves, title, description }: { shelves: Product
             <div className={styles.noFeature}><span aria-hidden="true">✳</span><p>Good things<br />to look forward to.</p></div>
           )}
         </header>
-
-        <div className={styles.digest}>
-          <p>A little discovery.<br /><strong>A lot to look forward to.</strong></p>
-          {shelves.map((shelf) => (
-            <a key={shelf.name} href={`?shelf=${id(shelf.name)}`}>
-              <strong>{shelf.pins.length.toString().padStart(2, '0')}</strong>
-              <span>{shelf.label} <span aria-hidden="true">↗</span></span>
-            </a>
-          ))}
-        </div>
 
         <ShelfTabs
           tabs={shelves.map((shelf) => ({ id: id(shelf.name), label: shelf.label, count: shelf.pins.length }))}

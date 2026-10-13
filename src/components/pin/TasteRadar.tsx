@@ -63,6 +63,7 @@ export function TasteRadar({
   max = TASTE_MAX,
   naLabel = 'n/a',
   height = DEFAULT_H,
+  linkLabels = true,
 }: {
   // Keyed by the axes' keys; a missing or null value is an axis with no score.
   scores: Record<string, unknown>;
@@ -78,6 +79,8 @@ export function TasteRadar({
   // What a null score reads as, translated by the caller.
   naLabel?: string;
   height?: number;
+  // false: the labels are plain text (a rubric with no search term of its own).
+  linkLabels?: boolean;
 }) {
   const H = height;
   const count = axes.length;
@@ -208,23 +211,29 @@ export function TasteRadar({
           // Top label sits above its point, bottom ones below, sides centred.
           const dy = y < CY - R / 2 ? -6 : y > CY + R / 2 ? 14 : 0;
           const href = `/search?q=${encodeURIComponent(term(field, axis.key))}`;
+          const Label = linkLabels ? 'a' : 'g';
+          const linkProps = linkLabels
+            ? {
+                href: localizePath(href, locale),
+                'aria-label': t('card.showAllValue', { value: labels[axis.key] }),
+                onClick: (event: React.MouseEvent) => {
+                  if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+                  event.preventDefault();
+                  if (splitLocale(window.location.pathname).path !== '/search') {
+                    router.push(href);
+                    return;
+                  }
+                  const current = new URLSearchParams(window.location.search);
+                  current.set('q', refineQuery(current.get('q') || '', field, axis.key));
+                  router.push(`/search?${current.toString()}`);
+                },
+              }
+            : {};
           return (
-            <a
+            <Label
               key={axis.key}
-              href={localizePath(href, locale)}
-              aria-label={t('card.showAllValue', { value: labels[axis.key] })}
               className="cursor-pointer"
-              onClick={(event) => {
-                if (event.metaKey || event.ctrlKey || event.shiftKey) return;
-                event.preventDefault();
-                if (splitLocale(window.location.pathname).path !== '/search') {
-                  router.push(href);
-                  return;
-                }
-                const current = new URLSearchParams(window.location.search);
-                current.set('q', refineQuery(current.get('q') || '', field, axis.key));
-                router.push(`/search?${current.toString()}`);
-              }}
+              {...linkProps}
             >
               <text x={x} y={y + dy} textAnchor={anchor} className="fill-ink text-[13px] hover:underline" {...bind(i)}>
                 {labelLines(labels[axis.key]).map((line, n) => (
@@ -242,7 +251,7 @@ export function TasteRadar({
                   </tspan>
                 ) : null}
               </text>
-            </a>
+            </Label>
           );
         })}
       </svg>

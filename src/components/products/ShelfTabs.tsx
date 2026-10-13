@@ -25,7 +25,7 @@ export function ShelfTabs({ tabs, panels }: { tabs: { id: string; label: string;
         <nav className={styles.statusFilters} aria-label="Product shelf">
           {tabs.map((tab) => (
             <Anchor key={tab.id} href={queryTabHref(pathname, 'shelf', tab.id)} aria-current={tab.id === selected ? 'location' : undefined} onClick={selectQueryTab('shelf', tab.id)}>
-              {tab.label} <span>{tab.count.toString().padStart(2, '0')}</span>
+              {tab.label} <span aria-hidden="true">·</span> <span>{tab.count.toString().padStart(2, '0')}</span>
             </Anchor>
           ))}
         </nav>

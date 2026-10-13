@@ -13,9 +13,11 @@ import { candidatesForPin } from '../model/pinCandidate';
 import { gameInfoForPin } from '../model/pinGameInfo';
 import { tasteForPin } from '../model/pinTaste';
 import { carPerfForPin } from '../model/pinCarPerf';
+import { gasCarPerfForPin } from '../model/pinGasCarPerf';
 import { diningForPin } from '../model/pinDining';
 import type { PinTasteJson } from '@/lib/pinTaste';
 import type { PinCarPerfJson } from '@/lib/pinCarPerf';
+import type { PinGasCarPerfJson } from '@/lib/pinGasCarPerf';
 import type { PinDiningJson } from '@/lib/pinDining';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
@@ -248,6 +250,14 @@ export async function pinCarPerf(id: number): Promise<PinCarPerfJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return carPerfForPin(id);
+}
+
+// A gasoline car pin's performance rubric, or null when it has none.
+export async function pinGasCarPerf(id: number): Promise<PinGasCarPerfJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return gasCarPerfForPin(id);
 }
 
 // A restaurant pin's dining rubric, or null when it has none.
