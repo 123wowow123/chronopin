@@ -13,6 +13,14 @@ a populated section. Research every section thoroughly before accepting a gap;
 record checked sources and remaining gaps here. Never invent dates, menus,
 discounts or review scores to expose a tab.
 
+Owner instruction, October 13, 2026: target **30 distinct restaurants in each
+tab of every Japan city guide**. Count each restaurant once per tab, even when
+it has multiple specials. This is a research and replenishment target, not a
+display cap. Preserve opening, rating and offer eligibility; keep sourced
+content below 30 when verification is incomplete and record the specific
+shortage and research gaps. Populated tabs do not mean the target is met.
+See the [current target audit](restaurant-japan-30-target-2026-10-13.md).
+
 | City | Coming soon | Just opened | Established selection | Researched specials |
 | --- | --- | --- | --- | --- |
 | Tokyo | Jardin des Sens Tokyo, October 30 reopening/rebrand | BBQPIT@Tokyo Prince Hotel, October 8 | Ginza Ukai-tei | BBQPIT opening member offer, October 8–November 30 |
@@ -84,3 +92,15 @@ expiry. The focused test run passes 60 of 61 tests, with one existing global men
 St. JOHN Smithfield, also missing from the unchanged HEAD menu catalog. Browser
 checks cover populated tabs, fallback from empty section links and mobile
 layout. Specials remain visible outside service hours when upcoming offers exist.
+
+
+## October 13 expansion
+
+The original three-city set has been expanded locally to Fukuoka, Osaka, Kyoto,
+Nagoya, Tokyo and Sapporo. Japan's country entry now opens Fukuoka, its westernmost
+supported city. The batch adds 21 restaurants, 10 special venues and 33 credited
+Azure gallery photos through the management APIs. All six cities have content in
+all four guide sections. See [expansion sources, verified counts and remaining
+gaps](restaurant-japan-expansion-2026-10-13.md) and the [reviewed import
+snapshot](restaurant-japan-expansion-2026-10-13.json). Ongoing edits belong in the
+runtime content and offer APIs. No production deployment was performed.

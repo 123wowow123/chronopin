@@ -12,6 +12,8 @@ export type RestaurantOffer = {
   neighborhood: string;
   address: string;
   restaurantHref: string;
+  // Branch identity stays stable even when links change or branches share a website.
+  venueKey?: string;
   checkedAt: string;
   special: RestaurantSpecial;
   menu?: RestaurantMenu;
@@ -101,7 +103,7 @@ export function nextRestaurantOffer(special: RestaurantSpecial, now: Date, timeZ
 
 export const NEXT_SPECIALS_LIMIT = 100;
 
-export type ScheduledRestaurantOffer = RestaurantOffer & { end: string; startsAt?: string };
+export type ScheduledRestaurantOffer = RestaurantOffer & { end: string; startsAt?: string; offers?: ScheduledRestaurantOffer[] };
 export type RestaurantOfferSort = 'rating' | 'distance' | 'lunch' | 'starts';
 export function restaurantOfferDistance(offer: RestaurantOffer, origin?: Place): number | undefined {
   const valid = (place?: Place) => !!place && Number.isFinite(place.latitude) && Math.abs(place.latitude) <= 90 && Number.isFinite(place.longitude) && Math.abs(place.longitude) <= 180;
@@ -109,7 +111,11 @@ export function restaurantOfferDistance(offer: RestaurantOffer, origin?: Place):
 }
 export type OfferSchedule = { available: ScheduledRestaurantOffer[]; upcoming: ScheduledRestaurantOffer[] };
 
-// Which offers are on now and when each venue's next one starts. This is the
+export function restaurantOfferVenueKey(offer: RestaurantOffer): string {
+  return offer.venueKey ?? offer.restaurantHref;
+}
+
+// Which offers are on now and when each inactive special next starts. This is the
 // expensive part and does not depend on a sort or a neighborhood, so a caller
 // can compute it once per minute and arrange it many ways.
 export function scheduleRestaurantOffers(offers: RestaurantOffer[], now: Date, timeZone: string): OfferSchedule {
@@ -123,19 +129,15 @@ export function scheduleRestaurantOffers(offers: RestaurantOffer[], now: Date, t
     const next = nextRestaurantOffer(offer.special, now, timeZone);
     return next ? [{ ...offer, ...next }] : [];
   }).sort((a, b) => a.startsAt.localeCompare(b.startsAt) || byReview(a, b));
-  // Show each restaurant's nearest special once, rather than repeating venues.
-  const seen = new Set<string>();
-  return { available, upcoming: upcoming.filter((offer) => {
-    if (seen.has(offer.restaurantHref)) return false;
-    seen.add(offer.restaurantHref);
-    return true;
-  }) };
+  // Keep every eligible special so the guide can show them as tabs on a venue.
+  return { available, upcoming };
 }
 
 const compareOffersByReview = (a: RestaurantOffer, b: RestaurantOffer) => (b.review?.score ?? 0) - (a.review?.score ?? 0) || (b.review?.count ?? 0) - (a.review?.count ?? 0) || a.name.localeCompare(b.name);
 
-// Orders a schedule the way a guide section shows it. `matches` narrows it to
-// a neighborhood before the cap, so a filtered section still fills up.
+// Groups eligible offers into one card per restaurant before sorting and paging.
+// `matches` narrows it to a neighborhood before the cap, so a filtered section
+// still fills up. Active venues keep their future specials in the same card.
 export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?: { sort: RestaurantOfferSort; origin?: Place }, matches?: (offer: RestaurantOffer) => boolean): OfferSchedule {
   const byReview = compareOffersByReview;
   const bySelectedSort = (a: RestaurantOffer, b: RestaurantOffer) => {
@@ -150,8 +152,21 @@ export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?
     }
     return byReview(a, b);
   };
-  const available = (matches ? schedule.available.filter(matches) : [...schedule.available]).sort(bySelectedSort);
-  const unique = matches ? schedule.upcoming.filter(matches) : [...schedule.upcoming];
+  const active = (matches ? schedule.available.filter(matches) : [...schedule.available]).sort(bySelectedSort);
+  const next = matches ? schedule.upcoming.filter(matches) : [...schedule.upcoming];
+  const venues = new Map<string, ScheduledRestaurantOffer[]>();
+  for (const offer of [...active, ...next]) {
+    const key = restaurantOfferVenueKey(offer);
+    const offers = venues.get(key) ?? [];
+    if (!offers.some((item) => item.id === offer.id)) offers.push(offer);
+    venues.set(key, offers);
+  }
+  const available: ScheduledRestaurantOffer[] = [];
+  const unique: ScheduledRestaurantOffer[] = [];
+  for (const offers of venues.values()) {
+    const card = { ...offers[0], offers };
+    (card.startsAt ? unique : available).push(card);
+  }
   // Choose each venue's earliest offer before applying the selected sort and cap.
   // 'starts' is the soonest start first (the section was already built in that
   // order, ties by rating); only upcoming offers have a start to sort by.

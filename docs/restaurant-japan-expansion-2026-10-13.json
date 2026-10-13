@@ -1,0 +1,4301 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "tokyo",
+    "osaka",
+    "kyoto",
+    "fukuoka",
+    "nagoya",
+    "sapporo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Chef’s Theatre — Tokyo restaurant guide",
+        "description": "French bistronomy with an open kitchen and views over the Takeshiba waterfront.",
+        "sourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+        "address": "16F mesm Tokyo, 1-10-30 Kaigan, Minato-ku, Tokyo",
+        "productName": "Chef’s Theatre",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Takeshiba",
+          "French"
+        ],
+        "longFormSummary": "<p>French bistronomy with an open kitchen and views over the Takeshiba waterfront.<cite data-ref=\"https://www.mesm.jp/en/eat-drink/chefs-theatre.html\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+            "title": "Chef’s Theatre source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.mesm.jp/en/news/Autumn-Semi-LunchBuffet2026.html",
+            "title": "Chef’s Theatre source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "menu": {
+            "pinSourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+            "name": "Chef’s Theatre",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn Table of Northwest France",
+                "url": "https://www.mesm.jp/en/news/Autumn-Semi-LunchBuffet2026.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Autumn semi-lunch buffet",
+                    "price": 7600
+                  },
+                  {
+                    "name": "Far Breton with prosciutto",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Table of Northwest France; no separate item price published"
+                  },
+                  {
+                    "name": "Mussels in white wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Table of Northwest France; no separate item price published"
+                  },
+                  {
+                    "name": "Buckwheat crepe cake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Table of Northwest France; no separate item price published"
+                  },
+                  {
+                    "name": "Raclette cheese",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Table of Northwest France; no separate item price published"
+                  }
+                ],
+                "note": "October 1–November 30. Tax and 15% service included. Choose a main dish; last entry 13:30.",
+                "documentUrl": "https://www.mesm.jp/en/eat-drink/o239410000001m03-att/restaurant_menu_20261001.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+            "name": "Chef’s Theatre",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:30–15:00; seasonal buffet last entry 13:30"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:00–22:00; full-course last order 20:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.mesm.jp/en/news/Autumn-Semi-LunchBuffet2026.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "chef",
+            "name": "Chef’s Theatre",
+            "neighborhood": "Takeshiba",
+            "cuisine": "French",
+            "description": "French bistronomy with an open kitchen and views over the Takeshiba waterfront.",
+            "address": "16F mesm Tokyo, 1-10-30 Kaigan, Minato-ku, Tokyo",
+            "websiteUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/chef-0-3f10541dee960f2c.webp",
+            "imageCredit": "mesm Tokyo",
+            "imageSourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+            "imageNote": "Chef’s Theatre dining space"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/chef-0-3f10541dee960f2c.webp",
+          "sha256": "3f10541dee960f2c100997ddee66d6c983c77d942ed4c904607ceba4f5184f66",
+          "width": 1200,
+          "height": 800,
+          "credit": "mesm Tokyo",
+          "note": "Chef’s Theatre dining space",
+          "sourcePage": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/chef-1-d0705d8b3bbcd8ef.webp",
+          "sha256": "d0705d8b3bbcd8ef18add4eb02387a6adafd101c7d46a4fed86fe6d23e2aecbd",
+          "width": 1200,
+          "height": 800,
+          "credit": "mesm Tokyo",
+          "note": "Chef’s Theatre dining space",
+          "sourcePage": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "name": "Chef’s Theatre",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Autumn Table of Northwest France",
+              "url": "https://www.mesm.jp/en/news/Autumn-Semi-LunchBuffet2026.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Autumn semi-lunch buffet",
+                  "price": 7600
+                },
+                {
+                  "name": "Far Breton with prosciutto",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Table of Northwest France; no separate item price published"
+                },
+                {
+                  "name": "Mussels in white wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Table of Northwest France; no separate item price published"
+                },
+                {
+                  "name": "Buckwheat crepe cake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Table of Northwest France; no separate item price published"
+                },
+                {
+                  "name": "Raclette cheese",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Table of Northwest France; no separate item price published"
+                }
+              ],
+              "note": "October 1–November 30. Tax and 15% service included. Choose a main dish; last entry 13:30.",
+              "documentUrl": "https://www.mesm.jp/en/eat-drink/o239410000001m03-att/restaurant_menu_20261001.pdf"
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn Table of Northwest France",
+              "kind": "lunch",
+              "description": "Seasonal French semi-buffet lunch, ¥7,600 including tax and service.",
+              "sourceUrl": "https://www.mesm.jp/en/news/Autumn-Semi-LunchBuffet2026.html",
+              "menuLabel": "Autumn Table of Northwest France",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Last entry 13:30.",
+                "Cancellation: 50% the previous day, 100% on the day."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "16F mesm Tokyo, 1-10-30 Kaigan, Minato-ku, Tokyo",
+          "neighborhood": "Takeshiba",
+          "websiteUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/chef-0-3f10541dee960f2c.webp",
+            "alt": "Chef’s Theatre — Chef’s Theatre dining space",
+            "credit": "mesm Tokyo",
+            "sourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+            "originalUrl": "https://www.mesm.jp/en/eat-drink/o239410000001m03-img/ChefsTheatre.day.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Grand Kitchen — Tokyo restaurant guide",
+        "description": "All-day dining beside the palace moat, with a garden room and Japanese and European dishes.",
+        "sourceUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+        "address": "1-1-1 Marunouchi, Chiyoda-ku, Tokyo",
+        "productName": "Grand Kitchen",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Marunouchi",
+          "European"
+        ],
+        "longFormSummary": "<p>All-day dining beside the palace moat, with a garden room and Japanese and European dishes.<cite data-ref=\"https://en.palacehoteltokyo.com/restaurant/grand-kitchen/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+            "title": "Grand Kitchen source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://en.palacehoteltokyo.com/wp-content/uploads/2026.10.16-Grand-Kitchen-Weekday-Lunch-Menu.pdf",
+            "title": "Grand Kitchen source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://en.palacehoteltokyo.com/wp-content/uploads/2026.10.01-Grand-Kitchen-Weekday-Lunch-Menu.pdf",
+            "title": "Grand Kitchen source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+          "menu": {
+            "pinSourceUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+            "name": "Grand Kitchen",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Weekday lunch through October 15",
+                "url": "https://en.palacehoteltokyo.com/wp-content/uploads/2026.10.01-Grand-Kitchen-Weekday-Lunch-Menu.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Express lunch",
+                    "price": 4400,
+                    "note": "Soup or salad, one main, coffee or tea"
+                  },
+                  {
+                    "name": "Grand Kitchen lunch",
+                    "price": 5600
+                  },
+                  {
+                    "name": "Premium lunch",
+                    "price": 8000
+                  },
+                  {
+                    "name": "Spaghetti pescatora",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Express lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Japanese beef ribeye hayashi rice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Express lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Japanese beef burger",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Express lunch; no separate item price published"
+                  }
+                ],
+                "note": "Published October 1 menu applies through October 15; 15% service additional. October 16 replacement is linked separately. Breakfast is for hotel guests.",
+                "documentUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/2026.10.01-Grand-Kitchen-Weekday-Lunch-Menu.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+            "name": "Grand Kitchen",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "06:30–22:00; opens 06:00 weekends and public holidays"
+              }
+            ],
+            "detailsSourceUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://en.palacehoteltokyo.com/wp-content/uploads/2026.10.16-Grand-Kitchen-Weekday-Lunch-Menu.pdf"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "palace",
+            "name": "Grand Kitchen",
+            "neighborhood": "Marunouchi",
+            "cuisine": "European",
+            "description": "All-day dining beside the palace moat, with a garden room and Japanese and European dishes.",
+            "address": "1-1-1 Marunouchi, Chiyoda-ku, Tokyo",
+            "websiteUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/palace-0-83daa3c4e4a56efd.webp",
+            "imageCredit": "Palace Hotel Tokyo",
+            "imageSourceUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+            "imageNote": "Operator photo; seasonal dish shown only where captioned by the source"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/palace-0-83daa3c4e4a56efd.webp",
+          "sha256": "83daa3c4e4a56efdd0ffd077fe74d5ad385f7f193271fb0716c8698d1d5b8797",
+          "width": 640,
+          "height": 470,
+          "credit": "Palace Hotel Tokyo",
+          "note": "Operator photo; seasonal dish shown only where captioned by the source",
+          "sourcePage": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/palace-1-1f0835f6586be8a5.webp",
+          "sha256": "1f0835f6586be8a56359b91fc81d94bcbb6a1653dbf10b8285dfee5602567a2d",
+          "width": 640,
+          "height": 470,
+          "credit": "Palace Hotel Tokyo",
+          "note": "Operator photo; seasonal dish shown only where captioned by the source",
+          "sourcePage": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "YEBISU BEER HALL TOKYO Opens in Ginza",
+        "description": "A new Ginza beer hall pairing Yebisu beers with a two-hour food-and-drink course.",
+        "sourceUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+        "address": "4F Ginza Lion Building, 7-9-20 Ginza, Chuo-ku, Tokyo",
+        "productName": "YEBISU BEER HALL TOKYO",
+        "utcStartDateTime": "2026-10-27T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Sapporo Breweries announces this Ginza fourth-floor branch opening on October 27, 2026.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Ginza",
+          "Beer hall"
+        ],
+        "longFormSummary": "<p>A new Ginza beer hall pairing Yebisu beers with a two-hour food-and-drink course.<cite data-ref=\"https://www.ginzalion.jp/yebisu-beerhall-tokyo/\"></cite></p><p>Sapporo Breweries announces this Ginza fourth-floor branch opening on October 27, 2026.</p>",
+        "references": [
+          {
+            "url": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+            "title": "YEBISU BEER HALL TOKYO source",
+            "confidence": 90,
+            "reasoning": "Sapporo Breweries announces this Ginza fourth-floor branch opening on October 27, 2026."
+          },
+          {
+            "url": "https://www.sapporobreweries.com/newsroom/release/detail/20260918000050.html",
+            "title": "YEBISU BEER HALL TOKYO source",
+            "confidence": 90,
+            "reasoning": "Sapporo Breweries announces this Ginza fourth-floor branch opening on October 27, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+          "menu": {
+            "pinSourceUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+            "name": "YEBISU BEER HALL TOKYO",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Launch course",
+                "url": "https://www.sapporobreweries.com/newsroom/release/detail/20260918000050.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Two-hour food course with Yebisu beer free-flow",
+                    "price": 8800
+                  }
+                ],
+                "note": "Named dishes have not yet been published on the branch site. Checked operator release, live menu section and linked reservations; do not borrow the Ebisu branch menu."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+            "name": "YEBISU BEER HALL TOKYO",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+            "phone": "03-6281-4980",
+            "openingHours": [
+              {
+                "days": "Monday–Thursday",
+                "hours": "17:00–22:00"
+              },
+              {
+                "days": "Friday and holiday eve",
+                "hours": "17:00–22:30"
+              },
+              {
+                "days": "Saturday",
+                "hours": "15:00–22:30"
+              },
+              {
+                "days": "Sunday and holidays",
+                "hours": "15:00–22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.sapporobreweries.com/newsroom/release/detail/20260918000050.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "yebisu",
+            "name": "YEBISU BEER HALL TOKYO",
+            "neighborhood": "Ginza",
+            "cuisine": "Beer hall",
+            "description": "A new Ginza beer hall pairing Yebisu beers with a two-hour food-and-drink course.",
+            "address": "4F Ginza Lion Building, 7-9-20 Ginza, Chuo-ku, Tokyo",
+            "websiteUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/yebisu-0-c3fca45ba938cb27.webp",
+            "imageCredit": "Sapporo Lion",
+            "imageSourceUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+            "imageNote": "Operator venue photograph or launch visual",
+            "openingConfirmed": true,
+            "day": "2026-10-27"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/yebisu-0-c3fca45ba938cb27.webp",
+          "sha256": "c3fca45ba938cb270b2001f002a5354df3f3c287305690e86cf3d38c26e2934d",
+          "width": 1200,
+          "height": 769,
+          "credit": "Sapporo Lion",
+          "note": "Operator venue photograph or launch visual",
+          "sourcePage": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-expansion-2026-10-13/yebisu-1-9a8fd9b7a844c005.webp",
+          "sha256": "9a8fd9b7a844c0054d50ade79adcd78128850cb8d4fea5b027ad818dfdedbc2e",
+          "width": 1200,
+          "height": 770,
+          "credit": "Sapporo Lion",
+          "note": "Operator venue photograph or launch visual",
+          "sourcePage": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hyotei — Kyoto main store — Kyoto restaurant guide",
+        "description": "Traditional kaiseki in the Kyoto main store near Nanzenji, with published lunch and dinner course prices.",
+        "sourceUrl": "https://hyotei.co.jp/en/",
+        "address": "35 Nanzenji Kusakawa-cho, Sakyo-ku, Kyoto",
+        "productName": "Hyotei — Kyoto main store",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kyoto",
+          "Japan",
+          "Nanzenji",
+          "Kaiseki"
+        ],
+        "longFormSummary": "<p>Traditional kaiseki in the Kyoto main store near Nanzenji, with published lunch and dinner course prices.<cite data-ref=\"https://hyotei.co.jp/en/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://hyotei.co.jp/en/",
+            "title": "Hyotei — Kyoto main store source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://hyotei.co.jp/gallery/",
+            "title": "Hyotei — Kyoto main store source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://hyotei.co.jp/en/",
+          "menu": {
+            "pinSourceUrl": "https://hyotei.co.jp/en/",
+            "name": "Hyotei — Kyoto main store",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Main-store kaiseki",
+                "url": "https://hyotei.co.jp/en/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch kaiseki",
+                    "price": 31625,
+                    "note": "From; through October 31"
+                  },
+                  {
+                    "name": "Dinner kaiseki",
+                    "price": 37950,
+                    "note": "From; through October 31"
+                  },
+                  {
+                    "name": "Lunch kaiseki from November 1",
+                    "price": 44275,
+                    "note": "From"
+                  },
+                  {
+                    "name": "Dinner kaiseki from November 1",
+                    "price": 50600,
+                    "note": "From"
+                  }
+                ],
+                "note": "Tax and service included. Minimum two diners. Annex breakfast and bento prices are excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://hyotei.co.jp/en/",
+            "name": "Hyotei — Kyoto main store",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://hyotei.co.jp/en/",
+            "phone": "075-771-4116",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "12:00–15:00; last order 13:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–21:30; last order 19:00"
+              }
+            ],
+            "detailsSourceUrl": "https://hyotei.co.jp/en/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://hyotei.co.jp/gallery/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "hyotei",
+            "name": "Hyotei — Kyoto main store",
+            "neighborhood": "Nanzenji",
+            "cuisine": "Kaiseki",
+            "description": "Traditional kaiseki in the Kyoto main store near Nanzenji, with published lunch and dinner course prices.",
+            "address": "35 Nanzenji Kusakawa-cho, Sakyo-ku, Kyoto",
+            "websiteUrl": "https://hyotei.co.jp/en/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-expansion-2026-10-13/hyotei-0-d311188b8db3e3cb.webp",
+            "imageCredit": "Hyotei",
+            "imageSourceUrl": "https://hyotei.co.jp/en/",
+            "imageNote": "Hyotei Kyoto main-store exterior"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-expansion-2026-10-13/hyotei-0-d311188b8db3e3cb.webp",
+          "sha256": "d311188b8db3e3cb1cd71f262bde8315e2bb6d7f499acb269081457f8655a048",
+          "width": 635,
+          "height": 400,
+          "credit": "Hyotei",
+          "note": "Hyotei Kyoto main-store exterior",
+          "sourcePage": "https://hyotei.co.jp/en/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Kikunoi Honten — Kyoto restaurant guide",
+        "description": "Kyoto kaiseki in private rooms near Yasaka Shrine, with a branch-specific course list and seasonal sample menu.",
+        "sourceUrl": "https://kikunoi.jp/restaurant/",
+        "address": "459 Shimokawara-cho, Higashiyama-ku, Kyoto",
+        "productName": "Kikunoi Honten",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kyoto",
+          "Japan",
+          "Higashiyama",
+          "Kaiseki"
+        ],
+        "longFormSummary": "<p>Kyoto kaiseki in private rooms near Yasaka Shrine, with a branch-specific course list and seasonal sample menu.<cite data-ref=\"https://kikunoi.jp/restaurant/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://kikunoi.jp/restaurant/",
+            "title": "Kikunoi Honten source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://kikunoi.jp/cuisine/menu.html",
+            "title": "Kikunoi Honten source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://kikunoi.jp/restaurant/",
+          "menu": {
+            "pinSourceUrl": "https://kikunoi.jp/restaurant/",
+            "name": "Kikunoi Honten",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Honten kaiseki",
+                "url": "https://kikunoi.jp/restaurant/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch kaiseki",
+                    "price": 16500,
+                    "note": "Small course; tax included, 15% service additional"
+                  },
+                  {
+                    "name": "Lunch kaiseki",
+                    "price": 22000,
+                    "note": "Small course"
+                  },
+                  {
+                    "name": "Lunch or dinner kaiseki",
+                    "price": 33000
+                  },
+                  {
+                    "name": "Lunch or dinner kaiseki",
+                    "price": 55000
+                  },
+                  {
+                    "name": "Lunch or dinner kaiseki",
+                    "price": 77000
+                  },
+                  {
+                    "name": "Lunch or dinner kaiseki",
+                    "price": 110000
+                  }
+                ],
+                "note": "All listed prices include tax and exclude 15% service. The main store also offers a smaller ¥22,000 dinner course."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://kikunoi.jp/restaurant/",
+            "name": "Kikunoi Honten",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://kikunoi.jp/restaurant/",
+            "phone": "075-561-0015",
+            "openingHours": [
+              {
+                "days": "Lunch arrival",
+                "hours": "12:00–12:30"
+              },
+              {
+                "days": "Dinner arrival",
+                "hours": "17:00–19:30"
+              }
+            ],
+            "detailsSourceUrl": "https://kikunoi.jp/restaurant/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kikunoi.jp/cuisine/menu.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "kikunoi-main",
+            "name": "Kikunoi Honten",
+            "neighborhood": "Higashiyama",
+            "cuisine": "Kaiseki",
+            "description": "Kyoto kaiseki in private rooms near Yasaka Shrine, with a branch-specific course list and seasonal sample menu.",
+            "address": "459 Shimokawara-cho, Higashiyama-ku, Kyoto",
+            "websiteUrl": "https://kikunoi.jp/restaurant/",
+            "checkedAt": "2026-10-13",
+            "recognition": "Three Michelin stars in Kyoto–Osaka 2026, as reported by the operator.",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-expansion-2026-10-13/kikunoi-main-0-7798555f05203cf2.webp",
+            "imageCredit": "Kikunoi",
+            "imageSourceUrl": "https://kikunoi.jp/restaurant/",
+            "imageNote": "Kikunoi Honten gallery; excludes Roan photographs"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-expansion-2026-10-13/kikunoi-main-0-7798555f05203cf2.webp",
+          "sha256": "7798555f05203cf2adec717c605297dd36ca94de503cf62b8171050570f7a832",
+          "width": 640,
+          "height": 640,
+          "credit": "Kikunoi",
+          "note": "Kikunoi Honten gallery; excludes Roan photographs",
+          "sourcePage": "https://kikunoi.jp/restaurant/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-expansion-2026-10-13/kikunoi-main-1-e51b77f56f75bd68.webp",
+          "sha256": "e51b77f56f75bd6829b13e9a7f9f831d945aa27c0f197a1fc8f762424b8a5fe8",
+          "width": 640,
+          "height": 640,
+          "credit": "Kikunoi",
+          "note": "Kikunoi Honten gallery; excludes Roan photographs",
+          "sourcePage": "https://kikunoi.jp/restaurant/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Maeda Coffee — Heisei Chishinkan pop-up Opens in Higashiyama",
+        "description": "A temporary Maeda Coffee restaurant overlooking the museum garden during the Tale of Genji exhibition.",
+        "sourceUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+        "address": "1F Heisei Chishinkan, Kyoto National Museum, 527 Chaya-cho, Higashiyama-ku, Kyoto",
+        "productName": "Maeda Coffee — Heisei Chishinkan pop-up",
+        "utcStartDateTime": "2026-10-06T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Kyoto National Museum confirms the temporary restaurant operates October 6–November 29, 2026; this is a pop-up opening, not a permanent new branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Higashiyama",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A temporary Maeda Coffee restaurant overlooking the museum garden during the Tale of Genji exhibition.<cite data-ref=\"https://www.kyohaku.go.jp/eng/announcements/post_260928.html\"></cite></p><p>Kyoto National Museum confirms the temporary restaurant operates October 6–November 29, 2026; this is a pop-up opening, not a permanent new branch.</p>",
+        "references": [
+          {
+            "url": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+            "title": "Maeda Coffee — Heisei Chishinkan pop-up source",
+            "confidence": 90,
+            "reasoning": "Kyoto National Museum confirms the temporary restaurant operates October 6–November 29, 2026; this is a pop-up opening, not a permanent new branch."
+          },
+          {
+            "url": "https://www.maedacoffee.com/shopinfo/",
+            "title": "Maeda Coffee — Heisei Chishinkan pop-up source",
+            "confidence": 90,
+            "reasoning": "Kyoto National Museum confirms the temporary restaurant operates October 6–November 29, 2026; this is a pop-up opening, not a permanent new branch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+          "menu": {
+            "pinSourceUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+            "name": "Maeda Coffee — Heisei Chishinkan pop-up",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Pop-up menu",
+                "url": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+                "currency": "JPY",
+                "coverage": "link",
+                "items": [],
+                "note": "The museum announcement publishes dates and hours, but no named dishes or prices. Checked the Japanese and English notices, museum restaurant information and Maeda branch listings. The separate Kyohaku cafe menu is not borrowed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+            "name": "Maeda Coffee — Heisei Chishinkan pop-up",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Museum open days",
+                "hours": "11:00–16:00; last order 15:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.maedacoffee.com/shopinfo/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "maeda",
+            "name": "Maeda Coffee — Heisei Chishinkan pop-up",
+            "neighborhood": "Higashiyama",
+            "cuisine": "Cafe",
+            "description": "A temporary Maeda Coffee restaurant overlooking the museum garden during the Tale of Genji exhibition.",
+            "address": "1F Heisei Chishinkan, Kyoto National Museum, 527 Chaya-cho, Higashiyama-ku, Kyoto",
+            "websiteUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-expansion-2026-10-13/maeda-0-66de8d72ffd3409e.webp",
+            "imageCredit": "Kyoto National Museum",
+            "imageSourceUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+            "imageNote": "Garden view from the Heisei Chishinkan restaurant",
+            "openingConfirmed": true,
+            "day": "2026-10-06"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-expansion-2026-10-13/maeda-0-66de8d72ffd3409e.webp",
+          "sha256": "66de8d72ffd3409ee57a72d270871a8d48c291862b87fe8145a44c6f3ad99aba",
+          "width": 539,
+          "height": 300,
+          "credit": "Kyoto National Museum",
+          "note": "Garden view from the Heisei Chishinkan restaurant",
+          "sourcePage": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "P72 — Osaka restaurant guide",
+        "description": "Plant-focused dining shaped by Japan’s micro-seasons, with an in-house garden and a terrace.",
+        "sourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+        "address": "1F Patina Osaka, 1-4-1 Banbacho, Chuo-ku, Osaka",
+        "productName": "P72",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Osaka Castle",
+          "Seasonal Japanese-European"
+        ],
+        "longFormSummary": "<p>Plant-focused dining shaped by Japan’s micro-seasons, with an in-house garden and a terrace.<cite data-ref=\"https://patinahotels.com/osaka/drink-and-dine/p72\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://patinahotels.com/osaka/drink-and-dine/p72",
+            "title": "P72 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "menu": {
+            "pinSourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+            "name": "P72",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn Harvest Market",
+                "url": "https://patinahotels.com/osaka/drink-and-dine/p72",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Harvest market with non-alcoholic free-flow",
+                    "price": 12000
+                  },
+                  {
+                    "name": "Harvest market with alcoholic free-flow",
+                    "price": 16500
+                  },
+                  {
+                    "name": "Children ages 6–12",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Garden-herb porchetta",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Harvest Market; no separate item price published"
+                  },
+                  {
+                    "name": "Zero Waste Risotto",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Harvest Market; no separate item price published"
+                  },
+                  {
+                    "name": "Seasonal vegetable salad buffet",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Harvest Market; no separate item price published"
+                  }
+                ],
+                "note": "October 17–18 only; two-hour sessions at 11:00, 13:30, 17:00 and 19:30. Tax and service included."
+              },
+              {
+                "label": "MINORU Mont Blanc",
+                "url": "https://patinahotels.com/osaka/drink-and-dine/p72",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Roasted green tea and Japanese chestnut Mont Blanc with coffee or tea",
+                    "price": 4700
+                  }
+                ],
+                "note": "October 1–November 12, 14:00–18:00; last order 16:30. Tax and service included."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+            "name": "P72",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+            "phone": "+81 6 6949 9193",
+            "openingHours": [],
+            "detailsSourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "p72",
+            "name": "P72",
+            "neighborhood": "Osaka Castle",
+            "cuisine": "Seasonal Japanese-European",
+            "description": "Plant-focused dining shaped by Japan’s micro-seasons, with an in-house garden and a terrace.",
+            "address": "1F Patina Osaka, 1-4-1 Banbacho, Chuo-ku, Osaka",
+            "websiteUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/p72-0-0cbbcc6d4b3b4738.webp",
+            "imageCredit": "Patina Osaka",
+            "imageSourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+            "imageNote": "P72 operator gallery photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/p72-0-0cbbcc6d4b3b4738.webp",
+          "sha256": "0cbbcc6d4b3b4738f8d59d982daa08d1afb9db98722abc93b8bcde06c0856a61",
+          "width": 750,
+          "height": 469,
+          "credit": "Patina Osaka",
+          "note": "P72 operator gallery photograph",
+          "sourcePage": "https://patinahotels.com/osaka/drink-and-dine/p72"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/p72-1-b8281f7114cb7fc6.webp",
+          "sha256": "b8281f7114cb7fc64f3437aec9720891b535c3f2b87ec724654776f1e9e0ed6c",
+          "width": 750,
+          "height": 750,
+          "credit": "Patina Osaka",
+          "note": "P72 operator gallery photograph",
+          "sourcePage": "https://patinahotels.com/osaka/drink-and-dine/p72"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "name": "P72",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Autumn Harvest Market",
+              "url": "https://patinahotels.com/osaka/drink-and-dine/p72",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Harvest market with non-alcoholic free-flow",
+                  "price": 12000
+                },
+                {
+                  "name": "Harvest market with alcoholic free-flow",
+                  "price": 16500
+                },
+                {
+                  "name": "Children ages 6–12",
+                  "price": 6000
+                },
+                {
+                  "name": "Garden-herb porchetta",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Harvest Market; no separate item price published"
+                },
+                {
+                  "name": "Zero Waste Risotto",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Harvest Market; no separate item price published"
+                },
+                {
+                  "name": "Seasonal vegetable salad buffet",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Harvest Market; no separate item price published"
+                }
+              ],
+              "note": "October 17–18 only; two-hour sessions at 11:00, 13:30, 17:00 and 19:30. Tax and service included."
+            },
+            {
+              "label": "MINORU Mont Blanc",
+              "url": "https://patinahotels.com/osaka/drink-and-dine/p72",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Roasted green tea and Japanese chestnut Mont Blanc with coffee or tea",
+                  "price": 4700
+                }
+              ],
+              "note": "October 1–November 12, 14:00–18:00; last order 16:30. Tax and service included."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn Harvest Market",
+              "kind": "other",
+              "description": "Two days of live food stations and free-flow drinks; ¥12,000 non-alcoholic or ¥16,500 alcoholic.",
+              "sourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+              "menuLabel": "Autumn Harvest Market",
+              "discounted": false,
+              "validFrom": "2026-10-17",
+              "validThrough": "2026-10-18",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour reserved sessions.",
+                "Children ages 6–12: ¥6,000."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      6,
+                      0
+                    ],
+                    "start": "11:00",
+                    "end": "13:00"
+                  },
+                  {
+                    "days": [
+                      6,
+                      0
+                    ],
+                    "start": "13:30",
+                    "end": "15:30"
+                  },
+                  {
+                    "days": [
+                      6,
+                      0
+                    ],
+                    "start": "17:00",
+                    "end": "19:00"
+                  },
+                  {
+                    "days": [
+                      6,
+                      0
+                    ],
+                    "start": "19:30",
+                    "end": "21:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "MINORU Mont Blanc",
+              "kind": "other",
+              "description": "Seasonal chestnut and roasted-green-tea dessert with coffee or tea, ¥4,700.",
+              "sourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+              "menuLabel": "MINORU Mont Blanc",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-12",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Last order 16:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "18:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F Patina Osaka, 1-4-1 Banbacho, Chuo-ku, Osaka",
+          "neighborhood": "Osaka Castle",
+          "websiteUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/p72-0-0cbbcc6d4b3b4738.webp",
+            "alt": "P72 — P72 operator gallery photograph",
+            "credit": "Patina Osaka",
+            "sourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+            "originalUrl": "https://patinahotels.com/osaka/drink-and-dine/media_1bb075c8519e901a6635d42614e44d1b43621c2b9.jpg?width=750&format=jpg&optimize=medium",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Pierre — Osaka restaurant guide",
+        "description": "French tasting menus using Japanese ingredients, served above Grand Front Osaka.",
+        "sourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+        "address": "20F InterContinental Osaka, 3-60 Ofukacho, Kita-ku, Osaka",
+        "productName": "Pierre",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Umeda",
+          "French"
+        ],
+        "longFormSummary": "<p>French tasting menus using Japanese ingredients, served above Grand Front Osaka.<cite data-ref=\"https://icosaka.com/offer/pierre_autumnmenu/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://icosaka.com/offer/pierre_autumnmenu/",
+            "title": "Pierre source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+          "menu": {
+            "pinSourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+            "name": "Pierre",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn Menu Pierre",
+                "url": "https://icosaka.com/offer/pierre_autumnmenu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Chicken, paprika and mushrooms",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Menu Pierre; no separate item price published"
+                  },
+                  {
+                    "name": "Scallop, ginger and Jerusalem artichoke",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Menu Pierre; no separate item price published"
+                  },
+                  {
+                    "name": "Prawn, lemon verbena and kaffir lime",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Menu Pierre; no separate item price published"
+                  },
+                  {
+                    "name": "Alfonsino, squid and tomato",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Menu Pierre; no separate item price published"
+                  },
+                  {
+                    "name": "Gamecock, seaweed and Swiss chard",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Menu Pierre; no separate item price published"
+                  },
+                  {
+                    "name": "Fig, Valrhona Guanaja and hazelnut",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Menu Pierre; no separate item price published"
+                  }
+                ],
+                "note": "September 7–November 30. The linked menu names ingredients, not elaborate dish names. Course price is not printed in this PDF; 15% service additional. Guests must be at least 13.",
+                "documentUrl": "https://icosaka.com/wp-content/uploads/2026/09/Pierre-lunch-09072.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+            "name": "Pierre",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+            "phone": "+81 6 6374 5700",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–14:30; last order 13:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–21:30; last order 20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "pierre",
+            "name": "Pierre",
+            "neighborhood": "Umeda",
+            "cuisine": "French",
+            "description": "French tasting menus using Japanese ingredients, served above Grand Front Osaka.",
+            "address": "20F InterContinental Osaka, 3-60 Ofukacho, Kita-ku, Osaka",
+            "websiteUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/pierre-0-d8847d39af2260f7.webp",
+            "imageCredit": "InterContinental Osaka",
+            "imageSourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+            "imageNote": "Operator seasonal menu promotional photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/pierre-0-d8847d39af2260f7.webp",
+          "sha256": "d8847d39af2260f710c4fc35573763f4b9618be8affff28c184b74515d31bf67",
+          "width": 1200,
+          "height": 800,
+          "credit": "InterContinental Osaka",
+          "note": "Operator seasonal menu promotional photograph",
+          "sourcePage": "https://icosaka.com/offer/pierre_autumnmenu/"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+          "name": "Pierre",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Autumn Menu Pierre",
+              "url": "https://icosaka.com/offer/pierre_autumnmenu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Chicken, paprika and mushrooms",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Menu Pierre; no separate item price published"
+                },
+                {
+                  "name": "Scallop, ginger and Jerusalem artichoke",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Menu Pierre; no separate item price published"
+                },
+                {
+                  "name": "Prawn, lemon verbena and kaffir lime",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Menu Pierre; no separate item price published"
+                },
+                {
+                  "name": "Alfonsino, squid and tomato",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Menu Pierre; no separate item price published"
+                },
+                {
+                  "name": "Gamecock, seaweed and Swiss chard",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Menu Pierre; no separate item price published"
+                },
+                {
+                  "name": "Fig, Valrhona Guanaja and hazelnut",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Menu Pierre; no separate item price published"
+                }
+              ],
+              "note": "September 7–November 30. The linked menu names ingredients, not elaborate dish names. Course price is not printed in this PDF; 15% service additional. Guests must be at least 13.",
+              "documentUrl": "https://icosaka.com/wp-content/uploads/2026/09/Pierre-lunch-09072.pdf"
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn Menu Pierre",
+              "kind": "other",
+              "description": "A dated autumn tasting menu; ingredient-led dishes are published in the operator PDF.",
+              "sourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+              "menuLabel": "Autumn Menu Pierre",
+              "discounted": false,
+              "validFrom": "2026-09-07",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Guests aged 13 and older only.",
+                "Course price not printed in the PDF; confirm when booking.",
+                "15% service additional."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "21:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "20F InterContinental Osaka, 3-60 Ofukacho, Kita-ku, Osaka",
+          "neighborhood": "Umeda",
+          "websiteUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/pierre-0-d8847d39af2260f7.webp",
+            "alt": "Pierre — Operator seasonal menu promotional photograph",
+            "credit": "InterContinental Osaka",
+            "sourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+            "originalUrl": "https://icosaka.com/wp-content/uploads/2026/08/PGQ00786-1440x960.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "FUJIYAMA TOKYO — Osaka Umeda — Osaka restaurant guide",
+        "description": "Sushi buffet in Umeda with a verified October weekday thank-you plan.",
+        "sourceUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+        "address": "7F Bon Nouveau Building, 2-5-30 Sonezaki, Kita-ku, Osaka",
+        "productName": "FUJIYAMA TOKYO — Osaka Umeda",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Umeda",
+          "Sushi"
+        ],
+        "longFormSummary": "<p>Sushi buffet in Umeda with a verified October weekday thank-you plan.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000909.000014510.html\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+            "title": "FUJIYAMA TOKYO — Osaka Umeda source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000909.000014510.html",
+            "title": "FUJIYAMA TOKYO — Osaka Umeda source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "menu": {
+            "pinSourceUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+            "name": "FUJIYAMA TOKYO — Osaka Umeda",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "October thank-you sushi buffet",
+                "url": "https://prtimes.jp/main/html/rd/p/000000909.000014510.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "50-item sushi and side-dish buffet",
+                    "price": 3900
+                  },
+                  {
+                    "name": "Fatty tuna",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October thank-you sushi buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Sea urchin",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October thank-you sushi buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Salmon roe",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October thank-you sushi buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Salted seaweed fries",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October thank-you sushi buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Fried chicken",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October thank-you sushi buffet; no separate item price published"
+                  }
+                ],
+                "note": "Monday–Thursday in October, excluding holidays. Five groups daily, two diners minimum, 90-minute limit; last order at 60 minutes. At least one drink per person required."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+            "name": "FUJIYAMA TOKYO — Osaka Umeda",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+            "phone": "06-6131-0744",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "15:00–23:00; last order 22:30"
+              }
+            ],
+            "detailsSourceUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000909.000014510.html"
+              }
+            ]
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/fuji-0-3385ffbff8858253.webp",
+          "sha256": "3385ffbff88582535edbf902089e589f82b5d1626f9d10d642f37d028dd1f2f4",
+          "width": 1200,
+          "height": 675,
+          "credit": "Globridge / FUJIYAMA TOKYO",
+          "note": "Operator promotional sushi photograph for the October offer at Umeda and Namba",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000909.000014510.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "name": "FUJIYAMA TOKYO — Osaka Umeda",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "October thank-you sushi buffet",
+              "url": "https://prtimes.jp/main/html/rd/p/000000909.000014510.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "50-item sushi and side-dish buffet",
+                  "price": 3900
+                },
+                {
+                  "name": "Fatty tuna",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October thank-you sushi buffet; no separate item price published"
+                },
+                {
+                  "name": "Sea urchin",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October thank-you sushi buffet; no separate item price published"
+                },
+                {
+                  "name": "Salmon roe",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October thank-you sushi buffet; no separate item price published"
+                },
+                {
+                  "name": "Salted seaweed fries",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October thank-you sushi buffet; no separate item price published"
+                },
+                {
+                  "name": "Fried chicken",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October thank-you sushi buffet; no separate item price published"
+                }
+              ],
+              "note": "Monday–Thursday in October, excluding holidays. Five groups daily, two diners minimum, 90-minute limit; last order at 60 minutes. At least one drink per person required."
+            }
+          ],
+          "specials": [
+            {
+              "title": "October thank-you sushi buffet",
+              "kind": "other",
+              "description": "¥3,900 sushi buffet on eligible weekdays; limited to five groups daily.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000909.000014510.html",
+              "menuLabel": "October thank-you sushi buffet",
+              "discounted": true,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "At least two guests and one drink per person.",
+                "90 minutes; last food order at 60 minutes.",
+                "Reservations required; no other discounts."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ],
+                    "start": "15:00",
+                    "end": "23:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-12"
+                ]
+              }
+            }
+          ],
+          "address": "7F Bon Nouveau Building, 2-5-30 Sonezaki, Kita-ku, Osaka",
+          "neighborhood": "Umeda",
+          "websiteUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-expansion-2026-10-13/fuji-0-3385ffbff8858253.webp",
+            "alt": "FUJIYAMA TOKYO — Osaka Umeda — Operator promotional sushi photograph for the October offer at Umeda and Namba",
+            "credit": "Globridge / FUJIYAMA TOKYO",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000909.000014510.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/14510/909/14510-909-c7870cf40a55304931402ef74ffa4941-1600x900.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Restaurant Hiramatsu Hakata — Fukuoka restaurant guide",
+        "description": "French courses in Hakata Riverain, with published seasonal menus and tax-and-service-inclusive totals.",
+        "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+        "address": "2F Hakata Riverain, 3-1 Shimokawabata-machi, Hakata-ku, Fukuoka",
+        "productName": "Restaurant Hiramatsu Hakata",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Nakasu-Kawabata",
+          "French"
+        ],
+        "longFormSummary": "<p>French courses in Hakata Riverain, with published seasonal menus and tax-and-service-inclusive totals.<cite data-ref=\"https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+            "title": "Restaurant Hiramatsu Hakata source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+            "title": "Restaurant Hiramatsu Hakata source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "menu": {
+            "pinSourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+            "name": "Restaurant Hiramatsu Hakata",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Hakata courses",
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "PLAISIR weekday lunch",
+                    "price": 4972
+                  },
+                  {
+                    "name": "RECOMMENDATIONS lunch",
+                    "price": 7458
+                  },
+                  {
+                    "name": "DÉCOUVERTE dinner",
+                    "price": 14916
+                  },
+                  {
+                    "name": "SAISON dinner",
+                    "price": 19888
+                  },
+                  {
+                    "name": "BOURGEOIS dinner",
+                    "price": 24860
+                  }
+                ],
+                "note": "Published total prices include 10% tax and 13% service; menus change with seasonal availability."
+              },
+              {
+                "label": "Christmas lunch and dinner",
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Christmas lunch A",
+                    "price": 12430
+                  },
+                  {
+                    "name": "Christmas lunch B",
+                    "price": 18645
+                  },
+                  {
+                    "name": "Christmas lunch C",
+                    "price": 24860
+                  },
+                  {
+                    "name": "Christmas dinner A",
+                    "price": 24860
+                  },
+                  {
+                    "name": "Christmas dinner B",
+                    "price": 37290
+                  },
+                  {
+                    "name": "Christmas dinner C",
+                    "price": 49720
+                  }
+                ],
+                "note": "December 1–25. Total prices include tax and 13% service. Published courses include fish, meat and a Christmas dessert; exact dishes are not yet specified."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+            "name": "Restaurant Hiramatsu Hakata",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hiramatsurestaurant.jp/eng/hiramatsu-hakata/",
+            "phone": "092-263-6231",
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:30–15:30; last order 13:30"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:30–22:00; last order 20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hiramatsurestaurant.jp/eng/hiramatsu-hakata/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "hiramatsu",
+            "name": "Restaurant Hiramatsu Hakata",
+            "neighborhood": "Nakasu-Kawabata",
+            "cuisine": "French",
+            "description": "French courses in Hakata Riverain, with published seasonal menus and tax-and-service-inclusive totals.",
+            "address": "2F Hakata Riverain, 3-1 Shimokawabata-machi, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://www.hiramatsurestaurant.jp/eng/hiramatsu-hakata/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/hiramatsu-0-a4413eb6bb8b0969.webp",
+            "imageCredit": "Restaurant Hiramatsu Hakata",
+            "imageSourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+            "imageNote": "Operator labelled dish photo; belongs to Hakata"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/hiramatsu-0-a4413eb6bb8b0969.webp",
+          "sha256": "a4413eb6bb8b0969d5466a0fa5c91836768fa3473a3d22142cbe9e18f29edb22",
+          "width": 653,
+          "height": 490,
+          "credit": "Restaurant Hiramatsu Hakata",
+          "note": "Operator labelled dish photo; belongs to Hakata",
+          "sourcePage": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/hiramatsu-1-64b50ea7f7801a31.webp",
+          "sha256": "64b50ea7f7801a31d30e3d810e4b82f915b1f0b162e9baeae313ff71bb327b6a",
+          "width": 735,
+          "height": 490,
+          "credit": "Restaurant Hiramatsu Hakata",
+          "note": "Operator labelled dish photo; belongs to Hakata",
+          "sourcePage": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "name": "Restaurant Hiramatsu Hakata",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Hakata courses",
+              "url": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "PLAISIR weekday lunch",
+                  "price": 4972
+                },
+                {
+                  "name": "RECOMMENDATIONS lunch",
+                  "price": 7458
+                },
+                {
+                  "name": "DÉCOUVERTE dinner",
+                  "price": 14916
+                },
+                {
+                  "name": "SAISON dinner",
+                  "price": 19888
+                },
+                {
+                  "name": "BOURGEOIS dinner",
+                  "price": 24860
+                }
+              ],
+              "note": "Published total prices include 10% tax and 13% service; menus change with seasonal availability."
+            },
+            {
+              "label": "Christmas lunch and dinner",
+              "url": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Christmas lunch A",
+                  "price": 12430
+                },
+                {
+                  "name": "Christmas lunch B",
+                  "price": 18645
+                },
+                {
+                  "name": "Christmas lunch C",
+                  "price": 24860
+                },
+                {
+                  "name": "Christmas dinner A",
+                  "price": 24860
+                },
+                {
+                  "name": "Christmas dinner B",
+                  "price": 37290
+                },
+                {
+                  "name": "Christmas dinner C",
+                  "price": 49720
+                }
+              ],
+              "note": "December 1–25. Total prices include tax and 13% service. Published courses include fish, meat and a Christmas dessert; exact dishes are not yet specified."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Christmas lunch courses",
+              "kind": "lunch",
+              "description": "Christmas lunch A/B/C: ¥12,430 / ¥18,645 / ¥24,860, tax and service included.",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+              "menuLabel": "Christmas lunch and dinner",
+              "discounted": false,
+              "validFrom": "2026-12-01",
+              "validThrough": "2026-12-25",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reservations required.",
+                "Last order 13:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Christmas dinner courses",
+              "kind": "other",
+              "description": "Christmas dinner A/B/C: ¥24,860 / ¥37,290 / ¥49,720, tax and service included.",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+              "menuLabel": "Christmas lunch and dinner",
+              "discounted": false,
+              "validFrom": "2026-12-01",
+              "validThrough": "2026-12-25",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reservations required.",
+                "Last order 20:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "2F Hakata Riverain, 3-1 Shimokawabata-machi, Hakata-ku, Fukuoka",
+          "neighborhood": "Nakasu-Kawabata",
+          "websiteUrl": "https://www.hiramatsurestaurant.jp/eng/hiramatsu-hakata/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/hiramatsu-0-a4413eb6bb8b0969.webp",
+            "alt": "Restaurant Hiramatsu Hakata — Operator labelled dish photo; belongs to Hakata",
+            "credit": "Restaurant Hiramatsu Hakata",
+            "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/menu/",
+            "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/assets_c/2026/09/20260903_154335-thumb-autox490-23429.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Eggs ’n Things — Canal City Hakata Opens in Gion",
+        "description": "Hawaiian breakfast dishes all day at the newly opened Canal City Hakata branch.",
+        "sourceUrl": "https://www.eggsnthingsjapan.com/hakata/",
+        "address": "2F Canal City Hakata East Building, 9-2 Gion-machi, Hakata-ku, Fukuoka",
+        "productName": "Eggs ’n Things — Canal City Hakata",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch operator announcement confirms September 4, 2026 opening. Its September 4–10 giveaway is expired and is excluded.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Gion",
+          "Hawaiian"
+        ],
+        "longFormSummary": "<p>Hawaiian breakfast dishes all day at the newly opened Canal City Hakata branch.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000330.000012385.html\"></cite></p><p>Branch operator announcement confirms September 4, 2026 opening. Its September 4–10 giveaway is expired and is excluded.</p>",
+        "references": [
+          {
+            "url": "https://www.eggsnthingsjapan.com/hakata/",
+            "title": "Eggs ’n Things — Canal City Hakata source",
+            "confidence": 90,
+            "reasoning": "Branch operator announcement confirms September 4, 2026 opening. Its September 4–10 giveaway is expired and is excluded."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000330.000012385.html",
+            "title": "Eggs ’n Things — Canal City Hakata source",
+            "confidence": 90,
+            "reasoning": "Branch operator announcement confirms September 4, 2026 opening. Its September 4–10 giveaway is expired and is excluded."
+          },
+          {
+            "url": "https://www.eggsnthingsjapan.com/news/260918.html",
+            "title": "Eggs ’n Things — Canal City Hakata source",
+            "confidence": 90,
+            "reasoning": "Branch operator announcement confirms September 4, 2026 opening. Its September 4–10 giveaway is expired and is excluded."
+          },
+          {
+            "url": "https://www.eggsnthingsjapan.com/wp-content/uploads/TakeOut.pdf",
+            "title": "Eggs ’n Things — Canal City Hakata source",
+            "confidence": 90,
+            "reasoning": "Branch operator announcement confirms September 4, 2026 opening. Its September 4–10 giveaway is expired and is excluded."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.eggsnthingsjapan.com/hakata/",
+          "menu": {
+            "pinSourceUrl": "https://www.eggsnthingsjapan.com/hakata/",
+            "name": "Eggs ’n Things — Canal City Hakata",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Hakata linked takeaway menu",
+                "url": "https://www.eggsnthingsjapan.com/wp-content/uploads/TakeOut.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Pancakes",
+                    "price": 962
+                  },
+                  {
+                    "name": "Waffles",
+                    "price": 962
+                  },
+                  {
+                    "name": "Crepes",
+                    "price": 962
+                  },
+                  {
+                    "name": "Fruit French toast",
+                    "price": 1145
+                  },
+                  {
+                    "name": "Spinach, bacon and cheese omelette",
+                    "price": 1577
+                  },
+                  {
+                    "name": "Vegetarian omelette",
+                    "price": 1491
+                  },
+                  {
+                    "name": "Portuguese sausage and cheese omelette",
+                    "price": 1599
+                  },
+                  {
+                    "name": "Eggs ’n Burger",
+                    "price": 1685
+                  },
+                  {
+                    "name": "Avocado cheese burger",
+                    "price": 1847
+                  },
+                  {
+                    "name": "Loco moco",
+                    "price": 1458
+                  },
+                  {
+                    "name": "Garlic shrimp",
+                    "price": 1728
+                  },
+                  {
+                    "name": "Mochiko chicken plate",
+                    "price": 1610
+                  }
+                ],
+                "note": "Takeaway only: published tax-inclusive prices from the PDF currently linked by the Hakata branch. The PDF is undated. These are not dine-in or seasonal-offer prices. Omelette sides and egg cooking options are described in the original.",
+                "documentUrl": "https://www.eggsnthingsjapan.com/wp-content/uploads/TakeOut.pdf"
+              },
+              {
+                "label": "Autumn chestnut and apple menu",
+                "url": "https://www.eggsnthingsjapan.com/news/260918.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Mont Blanc pancakes",
+                    "price": 2398
+                  },
+                  {
+                    "name": "Pastrami beef sandwich",
+                    "price": 1980
+                  },
+                  {
+                    "name": "Apple tea — hot or iced",
+                    "price": 858
+                  },
+                  {
+                    "name": "Apple mint squash",
+                    "price": 858
+                  }
+                ],
+                "note": "September 24–October 20; dine-in tax-inclusive prices. Official promotion applies to domestic branches except Roppongi Hills. Pancakes have no takeaway option."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.eggsnthingsjapan.com/hakata/",
+            "name": "Eggs ’n Things — Canal City Hakata",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.eggsnthingsjapan.com/hakata/",
+            "phone": "092-292-6787",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "09:00–21:00; last order 20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.eggsnthingsjapan.com/hakata/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000330.000012385.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.eggsnthingsjapan.com/news/260918.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "eggs",
+            "name": "Eggs ’n Things — Canal City Hakata",
+            "neighborhood": "Gion",
+            "cuisine": "Hawaiian",
+            "description": "Hawaiian breakfast dishes all day at the newly opened Canal City Hakata branch.",
+            "address": "2F Canal City Hakata East Building, 9-2 Gion-machi, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://www.eggsnthingsjapan.com/hakata/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/eggs-0-c4b21670a2c69e0b.webp",
+            "imageCredit": "Eggs ’n Things Japan",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000330.000012385.html",
+            "imageNote": "Canal City Hakata launch photograph; verify caption before use",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/eggs-0-c4b21670a2c69e0b.webp",
+          "sha256": "c4b21670a2c69e0bea72ae264786f130712bd7560fe3530bfdf672e61f05569a",
+          "width": 1200,
+          "height": 840,
+          "credit": "Eggs ’n Things Japan",
+          "note": "Canal City Hakata launch photograph; verify caption before use",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000330.000012385.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/eggs-1-f363c13a7d24aa4a.webp",
+          "sha256": "f363c13a7d24aa4acd7a2c289717d84a4b7a6518083d84727c60884799de7d4b",
+          "width": 1200,
+          "height": 840,
+          "credit": "Eggs ’n Things Japan",
+          "note": "Canal City Hakata launch photograph; verify caption before use",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000330.000012385.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.eggsnthingsjapan.com/hakata/",
+          "name": "Eggs ’n Things — Canal City Hakata",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Hakata linked takeaway menu",
+              "url": "https://www.eggsnthingsjapan.com/wp-content/uploads/TakeOut.pdf",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Pancakes",
+                  "price": 962
+                },
+                {
+                  "name": "Waffles",
+                  "price": 962
+                },
+                {
+                  "name": "Crepes",
+                  "price": 962
+                },
+                {
+                  "name": "Fruit French toast",
+                  "price": 1145
+                },
+                {
+                  "name": "Spinach, bacon and cheese omelette",
+                  "price": 1577
+                },
+                {
+                  "name": "Vegetarian omelette",
+                  "price": 1491
+                },
+                {
+                  "name": "Portuguese sausage and cheese omelette",
+                  "price": 1599
+                },
+                {
+                  "name": "Eggs ’n Burger",
+                  "price": 1685
+                },
+                {
+                  "name": "Avocado cheese burger",
+                  "price": 1847
+                },
+                {
+                  "name": "Loco moco",
+                  "price": 1458
+                },
+                {
+                  "name": "Garlic shrimp",
+                  "price": 1728
+                },
+                {
+                  "name": "Mochiko chicken plate",
+                  "price": 1610
+                }
+              ],
+              "note": "Takeaway only: published tax-inclusive prices from the PDF currently linked by the Hakata branch. The PDF is undated. These are not dine-in or seasonal-offer prices. Omelette sides and egg cooking options are described in the original.",
+              "documentUrl": "https://www.eggsnthingsjapan.com/wp-content/uploads/TakeOut.pdf"
+            },
+            {
+              "label": "Autumn chestnut and apple menu",
+              "url": "https://www.eggsnthingsjapan.com/news/260918.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Mont Blanc pancakes",
+                  "price": 2398
+                },
+                {
+                  "name": "Pastrami beef sandwich",
+                  "price": 1980
+                },
+                {
+                  "name": "Apple tea — hot or iced",
+                  "price": 858
+                },
+                {
+                  "name": "Apple mint squash",
+                  "price": 858
+                }
+              ],
+              "note": "September 24–October 20; dine-in tax-inclusive prices. Official promotion applies to domestic branches except Roppongi Hills. Pancakes have no takeaway option."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn chestnut and apple menu",
+              "kind": "other",
+              "description": "Seasonal Mont Blanc pancakes, pastrami sandwich and apple drinks with published dine-in prices.",
+              "sourceUrl": "https://www.eggsnthingsjapan.com/news/260918.html",
+              "menuLabel": "Autumn chestnut and apple menu",
+              "discounted": false,
+              "validFrom": "2026-09-24",
+              "validThrough": "2026-10-20",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Last order 20:00.",
+                "Pancakes are dine-in only."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "09:00",
+                    "end": "21:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "2F Canal City Hakata East Building, 9-2 Gion-machi, Hakata-ku, Fukuoka",
+          "neighborhood": "Gion",
+          "websiteUrl": "https://www.eggsnthingsjapan.com/hakata/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/eggs-0-c4b21670a2c69e0b.webp",
+            "alt": "Eggs ’n Things — Canal City Hakata — Canal City Hakata launch photograph; verify caption before use",
+            "credit": "Eggs ’n Things Japan",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000330.000012385.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12385/330/12385-330-36ca3f00668bb3d72dd04b31fbad0e40-2500x1750.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SMAAK Hakata Opens in Hakata Station",
+        "description": "An announced Hakata branch of Jacob Jan Boerma’s restaurant, planned for November with Kyushu-focused courses.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+        "address": "9F City Dining Kuten, JR Hakata City, 1-1 Hakataeki Chuo-gai, Hakata-ku, Fukuoka",
+        "productName": "SMAAK Hakata",
+        "utcStartDateTime": "2026-11-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Operator announces November 2026, without an exact day. November 30 is a month-end sorting placeholder, not a confirmed opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Hakata Station",
+          "Innovative"
+        ],
+        "longFormSummary": "<p>An announced Hakata branch of Jacob Jan Boerma’s restaurant, planned for November with Kyushu-focused courses.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000063.000041874.html\"></cite></p><p>Operator announces November 2026, without an exact day. November 30 is a month-end sorting placeholder, not a confirmed opening date.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+            "title": "SMAAK Hakata source",
+            "confidence": 90,
+            "reasoning": "Operator announces November 2026, without an exact day. November 30 is a month-end sorting placeholder, not a confirmed opening date."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/smaak-hakata/reserve",
+            "title": "SMAAK Hakata source",
+            "confidence": 90,
+            "reasoning": "Operator announces November 2026, without an exact day. November 30 is a month-end sorting placeholder, not a confirmed opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+            "name": "SMAAK Hakata",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Hakata planned courses",
+                "url": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch course",
+                    "price": 5200,
+                    "note": "From; launch estimate"
+                  },
+                  {
+                    "name": "Dinner course",
+                    "price": 9900,
+                    "note": "From; launch estimate"
+                  }
+                ],
+                "note": "No Hakata dishes are published. Operator announcement, planned reservation page and branch Instagram were checked; Yokohama example dishes and photos are excluded. Booking-page boilerplate mentions Yokohama, so its ancillary conditions are not used."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+            "name": "SMAAK Hakata",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+            "phone": null,
+            "openingHours": [],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/shops/smaak-hakata/reserve"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "smaak",
+            "name": "SMAAK Hakata",
+            "neighborhood": "Hakata Station",
+            "cuisine": "Innovative",
+            "description": "An announced Hakata branch of Jacob Jan Boerma’s restaurant, planned for November with Kyushu-focused courses.",
+            "address": "9F City Dining Kuten, JR Hakata City, 1-1 Hakataeki Chuo-gai, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": ""
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "PERGOLA — Nagoya restaurant guide",
+        "description": "All-day buffet dining above Nagoya Station, with roast beef carving and a dated autumn lunch menu.",
+        "sourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+        "address": "15F Nagoya Marriott Associa Hotel, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "productName": "PERGOLA",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Nagoya Station",
+          "Buffet"
+        ],
+        "longFormSummary": "<p>All-day buffet dining above Nagoya Station, with roast beef carving and a dated autumn lunch menu.<cite data-ref=\"https://www.associa.com/nma/restaurant/pergola/menu/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.associa.com/nma/restaurant/pergola/",
+            "title": "PERGOLA source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.associa.com/nma/restaurant/pergola/menu/",
+            "title": "PERGOLA source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+          "menu": {
+            "pinSourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+            "name": "PERGOLA",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn roast beef and dolce lunch buffet",
+                "url": "https://www.associa.com/nma/restaurant/pergola/menu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Adult weekday lunch buffet",
+                    "price": 5000
+                  },
+                  {
+                    "name": "Adult weekend/holiday lunch buffet",
+                    "price": 6500
+                  },
+                  {
+                    "name": "Roast beef",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn roast beef and dolce lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Smoked salmon and avocado crepe roll",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn roast beef and dolce lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Mackerel and burdock focaccia sandwich",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn roast beef and dolce lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Sweet potato and chestnut Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn roast beef and dolce lunch buffet; no separate item price published"
+                  }
+                ],
+                "note": "September 10–November 10. Tax-inclusive total prices. Weekend/holiday 90-minute seatings start at 11:30, 12:30 and 13:30; weekday lunch 11:30–15:00. Menus may change."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+            "name": "PERGOLA",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.associa.com/nma/restaurant/pergola/",
+            "phone": "052-584-1101",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–15:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.associa.com/nma/restaurant/pergola/menu/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "pergola",
+            "name": "PERGOLA",
+            "neighborhood": "Nagoya Station",
+            "cuisine": "Buffet",
+            "description": "All-day buffet dining above Nagoya Station, with roast beef carving and a dated autumn lunch menu.",
+            "address": "15F Nagoya Marriott Associa Hotel, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://www.associa.com/nma/restaurant/pergola/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/pergola-site-0-9c6f502b1de6f08b.webp",
+            "imageCredit": "Nagoya Marriott Associa Hotel",
+            "imageSourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+            "imageNote": "PERGOLA operator gallery photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/pergola-site-0-9c6f502b1de6f08b.webp",
+          "sha256": "9c6f502b1de6f08b05ce3258b2243b869e97c18820c87276db6622c629e33557",
+          "width": 1200,
+          "height": 800,
+          "credit": "Nagoya Marriott Associa Hotel",
+          "note": "PERGOLA operator gallery photograph",
+          "sourcePage": "https://www.associa.com/nma/restaurant/pergola/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/pergola-site-1-f1cb658471fda651.webp",
+          "sha256": "f1cb658471fda651562d01601f22fb9fac802be73d8bfd873c1912211595dff7",
+          "width": 1200,
+          "height": 800,
+          "credit": "Nagoya Marriott Associa Hotel",
+          "note": "PERGOLA operator gallery photograph",
+          "sourcePage": "https://www.associa.com/nma/restaurant/pergola/"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+          "name": "PERGOLA",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Autumn roast beef and dolce lunch buffet",
+              "url": "https://www.associa.com/nma/restaurant/pergola/menu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Adult weekday lunch buffet",
+                  "price": 5000
+                },
+                {
+                  "name": "Adult weekend/holiday lunch buffet",
+                  "price": 6500
+                },
+                {
+                  "name": "Roast beef",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn roast beef and dolce lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Smoked salmon and avocado crepe roll",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn roast beef and dolce lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Mackerel and burdock focaccia sandwich",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn roast beef and dolce lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Sweet potato and chestnut Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn roast beef and dolce lunch buffet; no separate item price published"
+                }
+              ],
+              "note": "September 10–November 10. Tax-inclusive total prices. Weekend/holiday 90-minute seatings start at 11:30, 12:30 and 13:30; weekday lunch 11:30–15:00. Menus may change."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn roast beef and dolce lunch buffet",
+              "kind": "lunch",
+              "description": "Seasonal lunch buffet: adults ¥5,000 weekdays, ¥6,500 weekends and holidays.",
+              "sourceUrl": "https://www.associa.com/nma/restaurant/pergola/menu/",
+              "menuLabel": "Autumn roast beef and dolce lunch buffet",
+              "discounted": false,
+              "validFrom": "2026-09-10",
+              "validThrough": "2026-11-10",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Weekend/holiday seatings are 90 minutes.",
+                "Food and drinks finish at 15:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "15F Nagoya Marriott Associa Hotel, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+          "neighborhood": "Nagoya Station",
+          "websiteUrl": "https://www.associa.com/nma/restaurant/pergola/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/pergola-site-0-9c6f502b1de6f08b.webp",
+            "alt": "PERGOLA — PERGOLA operator gallery photograph",
+            "credit": "Nagoya Marriott Associa Hotel",
+            "sourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+            "originalUrl": "https://www.associa.com/nma/restaurant/pergola/qdlehi0000000b8y-img/concept_03.webp",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "MIKUNI NAGOYA — Nagoya restaurant guide",
+        "description": "French courses on the hotel’s 52nd floor, with published branch menus and panoramic views.",
+        "sourceUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+        "address": "52F Nagoya Marriott Associa Hotel, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "productName": "MIKUNI NAGOYA",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Nagoya Station",
+          "French"
+        ],
+        "longFormSummary": "<p>French courses on the hotel’s 52nd floor, with published branch menus and panoramic views.<cite data-ref=\"https://www.associa.com/nma/restaurant/mikuni/menu/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.associa.com/nma/restaurant/mikuni/",
+            "title": "MIKUNI NAGOYA source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.associa.com/nma/restaurant/mikuni/menu/",
+            "title": "MIKUNI NAGOYA source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+          "menu": {
+            "pinSourceUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+            "name": "MIKUNI NAGOYA",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn lunch courses",
+                "url": "https://www.associa.com/nma/restaurant/mikuni/menu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Ensoleillé weekday lunch",
+                    "price": 9000,
+                    "note": "Reserve at least two days ahead"
+                  },
+                  {
+                    "name": "Rivière lunch",
+                    "price": 12500
+                  },
+                  {
+                    "name": "Gourmand lunch",
+                    "price": 22000
+                  },
+                  {
+                    "name": "Snow crab and grapefruit jelly",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Rivière lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Consommé flan with XO sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Rivière lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Roasted Spanish mackerel soup de poisson",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Rivière lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Grilled Japanese beef loin with mustard sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Rivière lunch; no separate item price published"
+                  }
+                ],
+                "note": "Rivière and Gourmand sample menus: September 1–November 29. Tax-inclusive totals. Some special-event dates replace regular menus."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+            "name": "MIKUNI NAGOYA",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+            "phone": "052-584-1105",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–14:30; last order 13:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–22:00; last order 20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.associa.com/nma/restaurant/mikuni/menu/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "mikuni",
+            "name": "MIKUNI NAGOYA",
+            "neighborhood": "Nagoya Station",
+            "cuisine": "French",
+            "description": "French courses on the hotel’s 52nd floor, with published branch menus and panoramic views.",
+            "address": "52F Nagoya Marriott Associa Hotel, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/mikuni-site-0-a96030a45049ea90.webp",
+            "imageCredit": "Nagoya Marriott Associa Hotel",
+            "imageSourceUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+            "imageNote": "MIKUNI NAGOYA operator gallery photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/mikuni-site-0-a96030a45049ea90.webp",
+          "sha256": "a96030a45049ea90ac27360fd813970854325598b246a96ac075441486c30a13",
+          "width": 1200,
+          "height": 800,
+          "credit": "Nagoya Marriott Associa Hotel",
+          "note": "MIKUNI NAGOYA operator gallery photograph",
+          "sourcePage": "https://www.associa.com/nma/restaurant/mikuni/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/mikuni-site-1-61fd2b8ee1d807bd.webp",
+          "sha256": "61fd2b8ee1d807bde62d85aa48ba263a2235d7d2cd0eeaf3920d7a9b711a316b",
+          "width": 1200,
+          "height": 800,
+          "credit": "Nagoya Marriott Associa Hotel",
+          "note": "MIKUNI NAGOYA operator gallery photograph",
+          "sourcePage": "https://www.associa.com/nma/restaurant/mikuni/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Chanko Kokonoe Opens in Sakae",
+        "description": "A forthcoming sumo-themed restaurant serving Kokonoe stable’s salt chanko with Nagoya Cochin chicken.",
+        "sourceUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+        "address": "5F APA Hotel Nagoya Sakae Ekimae EXCELLENT, 3-15-30 Nishiki, Naka-ku, Nagoya",
+        "productName": "Chanko Kokonoe",
+        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator branch website and TKP release confirm October 16, 2026 opening; dinner first, lunch planned for November.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Sakae",
+          "Chanko"
+        ],
+        "longFormSummary": "<p>A forthcoming sumo-themed restaurant serving Kokonoe stable’s salt chanko with Nagoya Cochin chicken.<cite data-ref=\"https://www.tkp-food.net/restaurant/chanko-kokonoe/\"></cite></p><p>Operator branch website and TKP release confirm October 16, 2026 opening; dinner first, lunch planned for November.</p>",
+        "references": [
+          {
+            "url": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+            "title": "Chanko Kokonoe source",
+            "confidence": 90,
+            "reasoning": "Operator branch website and TKP release confirm October 16, 2026 opening; dinner first, lunch planned for November."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000561.000024137.html",
+            "title": "Chanko Kokonoe source",
+            "confidence": 90,
+            "reasoning": "Operator branch website and TKP release confirm October 16, 2026 opening; dinner first, lunch planned for November."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+          "menu": {
+            "pinSourceUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+            "name": "Chanko Kokonoe",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published launch menu",
+                "url": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Yokozuna course",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Ozeki course",
+                    "price": 5000
+                  },
+                  {
+                    "name": "Kokonoe chanko hotpot",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Rikishi yudofu",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Steamed eel with chanko broth",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Salt-fried chicken — five pieces",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Children’s Mame Rikishi set",
+                    "price": 1500
+                  }
+                ],
+                "note": "Tax included. Current operator page lists ¥6,000/¥5,000 courses, superseding ¥10,000/¥8,000 in the September press release. Lunch service begins in November, day not yet published."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+            "name": "Chanko Kokonoe",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+            "phone": "052-951-5585",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday dinner",
+                "hours": "17:00–22:00; last order 21:30"
+              },
+              {
+                "days": "Lunch, from November",
+                "hours": "11:30–14:30; last order 14:00; exact launch day unannounced"
+              }
+            ],
+            "detailsSourceUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000561.000024137.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "kokonoe-site",
+            "name": "Chanko Kokonoe",
+            "neighborhood": "Sakae",
+            "cuisine": "Chanko",
+            "description": "A forthcoming sumo-themed restaurant serving Kokonoe stable’s salt chanko with Nagoya Cochin chicken.",
+            "address": "5F APA Hotel Nagoya Sakae Ekimae EXCELLENT, 3-15-30 Nishiki, Naka-ku, Nagoya",
+            "websiteUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/kokonoe-site-3-3c1935a40b7c877d.webp",
+            "imageCredit": "TKP / Chanko Kokonoe",
+            "imageSourceUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+            "imageNote": "Operator launch photograph or interior visual",
+            "openingConfirmed": true,
+            "day": "2026-10-16"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/kokonoe-site-3-3c1935a40b7c877d.webp",
+          "sha256": "3c1935a40b7c877d34884fc3d9295d8c0d63c5486a82ec99f057dd0bcd94d5c1",
+          "width": 900,
+          "height": 600,
+          "credit": "TKP / Chanko Kokonoe",
+          "note": "Operator launch photograph or interior visual",
+          "sourcePage": "https://www.tkp-food.net/restaurant/chanko-kokonoe/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/kokonoe-site-0-5b939932a85dfa3e.webp",
+          "sha256": "5b939932a85dfa3ec2abd13696aab9dcb6e597926a95c0830c66cbec03450e10",
+          "width": 1200,
+          "height": 800,
+          "credit": "TKP / Chanko Kokonoe",
+          "note": "Operator launch photograph or interior visual",
+          "sourcePage": "https://www.tkp-food.net/restaurant/chanko-kokonoe/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/kokonoe-site-2-1700ef74e38be5fe.webp",
+          "sha256": "1700ef74e38be5fe837aa54e18117e71fa8223f4c2eccfd2ca11ed700b7ea0ea",
+          "width": 900,
+          "height": 600,
+          "credit": "TKP / Chanko Kokonoe",
+          "note": "Operator launch photograph or interior visual",
+          "sourcePage": "https://www.tkp-food.net/restaurant/chanko-kokonoe/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Totomaru — Tenpaku Opens in Tenpaku",
+        "description": "The new Tenpaku sushi branch is in soft opening through October 20, with full service and takeaway planned from October 21.",
+        "sourceUrl": "https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e",
+        "address": "2521 Horo-cho, Tenpaku-ku, Nagoya",
+        "productName": "Totomaru — Tenpaku",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator confirms October 10 soft opening. October 21 is the planned grand opening and takeaway start, not the first service day.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Tenpaku",
+          "Sushi"
+        ],
+        "longFormSummary": "<p>The new Tenpaku sushi branch is in soft opening through October 20, with full service and takeaway planned from October 21.<cite data-ref=\"https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e\"></cite></p><p>Operator confirms October 10 soft opening. October 21 is the planned grand opening and takeaway start, not the first service day.</p>",
+        "references": [
+          {
+            "url": "https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e",
+            "title": "Totomaru — Tenpaku source",
+            "confidence": 90,
+            "reasoning": "Operator confirms October 10 soft opening. October 21 is the planned grand opening and takeaway start, not the first service day."
+          },
+          {
+            "url": "https://jouhou.nagoya/totomaru-tenpaku/",
+            "title": "Totomaru — Tenpaku source",
+            "confidence": 90,
+            "reasoning": "Operator confirms October 10 soft opening. October 21 is the planned grand opening and takeaway start, not the first service day."
+          },
+          {
+            "url": "https://totomaru.ec-design.co.jp/flyers",
+            "title": "Totomaru — Tenpaku source",
+            "confidence": 90,
+            "reasoning": "Operator confirms October 10 soft opening. October 21 is the planned grand opening and takeaway start, not the first service day."
+          },
+          {
+            "url": "https://totomaru.ec-design.co.jp/flyers?selectedPrefecture=23&selectedShop=0a3009b1-fe04-427a-a4ad-f70713cdf684",
+            "title": "Totomaru — Tenpaku source",
+            "confidence": 90,
+            "reasoning": "Operator confirms October 10 soft opening. October 21 is the planned grand opening and takeaway start, not the first service day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e",
+          "menu": {
+            "pinSourceUrl": "https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e",
+            "name": "Totomaru — Tenpaku",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Tenpaku autumn dine-in menu",
+                "url": "https://totomaru.ec-design.co.jp/flyers?selectedPrefecture=23&selectedShop=0a3009b1-fe04-427a-a4ad-f70713cdf684",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hokkaido saury nigiri",
+                    "price": 429
+                  },
+                  {
+                    "name": "Seared Hokkaido saury nigiri",
+                    "price": 429
+                  },
+                  {
+                    "name": "Salmon and salmon roe autumn sushi",
+                    "price": 583
+                  },
+                  {
+                    "name": "Homemade grilled mackerel pressed sushi",
+                    "price": 286
+                  },
+                  {
+                    "name": "Grilled egg with green laver",
+                    "price": 286
+                  },
+                  {
+                    "name": "Hiroshima oyster fries — two pieces",
+                    "price": 429
+                  },
+                  {
+                    "name": "Matsutake chawanmushi",
+                    "price": 319
+                  },
+                  {
+                    "name": "Freshwater clam miso soup",
+                    "price": 209
+                  },
+                  {
+                    "name": "Autumn aori-ika gunkan",
+                    "price": 143
+                  }
+                ],
+                "note": "Official autumn flyer is returned with Tenpaku specifically selected, September 18–December 10; dine-in tax-inclusive prices. Current soft-opening hours through October 20 apply. The flyer only names an exception for Aeon Mall Okazaki.",
+                "documentUrl": "https://totomaru.ec-design.co.jp/flyers/detail/0b0241b8-7174-4e32-88f5-4075afe743a2/1"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e",
+            "name": "Totomaru — Tenpaku",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://totomaru.ec-design.co.jp/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Through October 20",
+                "hours": "11:00–14:00 and 17:00–20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://totomaru.ec-design.co.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://jouhou.nagoya/totomaru-tenpaku/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://totomaru.ec-design.co.jp/flyers"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "totomaru-news",
+            "name": "Totomaru — Tenpaku",
+            "neighborhood": "Tenpaku",
+            "cuisine": "Sushi",
+            "description": "The new Tenpaku sushi branch is in soft opening through October 20, with full service and takeaway planned from October 21.",
+            "address": "2521 Horo-cho, Tenpaku-ku, Nagoya",
+            "websiteUrl": "https://totomaru.ec-design.co.jp/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/totomaru-report-1-4141f77663ae014e.webp",
+            "imageCredit": "Nagoya Jouhou / なご通",
+            "imageSourceUrl": "https://jouhou.nagoya/totomaru-tenpaku/",
+            "imageNote": "Tenpaku branch exterior or report photograph",
+            "openingConfirmed": true,
+            "day": "2026-10-10"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-expansion-2026-10-13/totomaru-report-1-4141f77663ae014e.webp",
+          "sha256": "4141f77663ae014e590dfbb6554eb2eb25028056ba842ce43edad5422cfb96f0",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou / なご通",
+          "note": "Tenpaku branch exterior or report photograph",
+          "sourcePage": "https://jouhou.nagoya/totomaru-tenpaku/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SKY J — Sapporo restaurant guide",
+        "description": "Panoramic dining above Sapporo Station, with Hokkaido ingredients and published autumn courses.",
+        "sourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+        "address": "35F JR Tower Hotel Nikko Sapporo, 2-5 Kita 5-jo Nishi, Chuo-ku, Sapporo",
+        "productName": "SKY J",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Sapporo Station",
+          "French-European"
+        ],
+        "longFormSummary": "<p>Panoramic dining above Sapporo Station, with Hokkaido ingredients and published autumn courses.<cite data-ref=\"https://www.jrhotels.co.jp/tower/restaurant/skyj/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+            "title": "SKY J source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "menu": {
+            "pinSourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+            "name": "SKY J",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "SKY J September–October dinner",
+                "url": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Chef’s Selection",
+                    "price": 12000
+                  },
+                  {
+                    "name": "Seasons",
+                    "price": 8800
+                  },
+                  {
+                    "name": "Short Course Conception",
+                    "price": 5500
+                  },
+                  {
+                    "name": "Prosciutto and fig charcoal sable",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chef’s Selection; no separate item price published"
+                  },
+                  {
+                    "name": "Herb pork and chestnut pastry",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chef’s Selection; no separate item price published"
+                  },
+                  {
+                    "name": "Roasted fish and lobster",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chef’s Selection; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee-scented chestnut fondant",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chef’s Selection; no separate item price published"
+                  }
+                ],
+                "note": "Dinner menu September 1–October 31. Tax and service included. Course menu includes cover; à la carte/bar cover is ¥800."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+            "name": "SKY J",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+            "phone": "011-251-6377",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–15:30; last entry 14:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–20:30"
+              },
+              {
+                "days": "Bar",
+                "hours": "20:30–22:30; last order 22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "skyj",
+            "name": "SKY J",
+            "neighborhood": "Sapporo Station",
+            "cuisine": "French-European",
+            "description": "Panoramic dining above Sapporo Station, with Hokkaido ingredients and published autumn courses.",
+            "address": "35F JR Tower Hotel Nikko Sapporo, 2-5 Kita 5-jo Nishi, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/skyj-0-d9913d7e6c58119b.webp",
+            "imageCredit": "JR Tower Hotel Nikko Sapporo",
+            "imageSourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+            "imageNote": "SKY J operator gallery photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/skyj-0-d9913d7e6c58119b.webp",
+          "sha256": "d9913d7e6c58119b2f00aa46487d8a82aa0f3912a9893587e94ba59393fadf11",
+          "width": 1200,
+          "height": 338,
+          "credit": "JR Tower Hotel Nikko Sapporo",
+          "note": "SKY J operator gallery photograph",
+          "sourcePage": "https://www.jrhotels.co.jp/tower/restaurant/skyj/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/skyj-1-a4078d52dccdad2c.webp",
+          "sha256": "a4078d52dccdad2cd907222c2f2b2cfe86af88fa41775c67a66f65fd3c3b91fa",
+          "width": 1000,
+          "height": 460,
+          "credit": "JR Tower Hotel Nikko Sapporo",
+          "note": "SKY J operator gallery photograph",
+          "sourcePage": "https://www.jrhotels.co.jp/tower/restaurant/skyj/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "name": "SKY J",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "SKY J September–October dinner",
+              "url": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Chef’s Selection",
+                  "price": 12000
+                },
+                {
+                  "name": "Seasons",
+                  "price": 8800
+                },
+                {
+                  "name": "Short Course Conception",
+                  "price": 5500
+                },
+                {
+                  "name": "Prosciutto and fig charcoal sable",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chef’s Selection; no separate item price published"
+                },
+                {
+                  "name": "Herb pork and chestnut pastry",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chef’s Selection; no separate item price published"
+                },
+                {
+                  "name": "Roasted fish and lobster",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chef’s Selection; no separate item price published"
+                },
+                {
+                  "name": "Coffee-scented chestnut fondant",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chef’s Selection; no separate item price published"
+                }
+              ],
+              "note": "Dinner menu September 1–October 31. Tax and service included. Course menu includes cover; à la carte/bar cover is ¥800."
+            }
+          ],
+          "specials": [
+            {
+              "title": "SKY J September–October dinner",
+              "kind": "other",
+              "description": "Dated Hokkaido-focused autumn dinner courses from ¥5,500, with named course components.",
+              "sourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+              "menuLabel": "SKY J September–October dinner",
+              "discounted": false,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Private functions may replace regular service.",
+                "Course prices include tax, service and cover."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "20:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "35F JR Tower Hotel Nikko Sapporo, 2-5 Kita 5-jo Nishi, Chuo-ku, Sapporo",
+          "neighborhood": "Sapporo Station",
+          "websiteUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/skyj-0-d9913d7e6c58119b.webp",
+            "alt": "SKY J — SKY J operator gallery photograph",
+            "credit": "JR Tower Hotel Nikko Sapporo",
+            "sourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+            "originalUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/img/slides/01.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "BAR & GRILL Splish — Sapporo restaurant guide",
+        "description": "A Susukino hotel grill and bar with a published seasonal afternoon tea overlooking the city.",
+        "sourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+        "address": "7F Sapporo Stream Hotel, 1-1 Minami 4-jo Nishi 4-chome, Chuo-ku, Sapporo",
+        "productName": "BAR & GRILL Splish",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Susukino",
+          "Grill"
+        ],
+        "longFormSummary": "<p>A Susukino hotel grill and bar with a published seasonal afternoon tea overlooking the city.<cite data-ref=\"https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+            "title": "BAR & GRILL Splish source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000004263.000005113.html",
+            "title": "BAR & GRILL Splish source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+          "menu": {
+            "pinSourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+            "name": "BAR & GRILL Splish",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Angel or Devil afternoon tea",
+                "url": "https://prtimes.jp/main/html/rd/p/000004263.000005113.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Afternoon tea — weekday",
+                    "price": 5500
+                  },
+                  {
+                    "name": "Afternoon tea — weekend/holiday",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Strawberry shortcake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Mango millefeuille",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Grape tart",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Panna cotta with blueberry sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Ricotta with prosciutto",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Scallop and crab marinade",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                  }
+                ],
+                "note": "October 4–December 22, Sundays–Tuesdays 15:00–17:00, last entry 16:00. Tax and 12% service included. Seasonal Halloween/Christmas presentation varies; names are sampled from published examples."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+            "name": "BAR & GRILL Splish",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+            "phone": "011-206-7350",
+            "openingHours": [
+              {
+                "days": "Seasonal afternoon tea, Sunday–Tuesday",
+                "hours": "15:00–17:00; last entry 16:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000004263.000005113.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "splish-site",
+            "name": "BAR & GRILL Splish",
+            "neighborhood": "Susukino",
+            "cuisine": "Grill",
+            "description": "A Susukino hotel grill and bar with a published seasonal afternoon tea overlooking the city.",
+            "address": "7F Sapporo Stream Hotel, 1-1 Minami 4-jo Nishi 4-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/splish-site-0-e20e93fefa25e280.webp",
+            "imageCredit": "Sapporo Stream Hotel / Tokyu Hotels",
+            "imageSourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+            "imageNote": "Splish operator gallery photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/splish-site-0-e20e93fefa25e280.webp",
+          "sha256": "e20e93fefa25e2806b47fbc40b09b174dea5e51a3ca325936ea7abf29314f00a",
+          "width": 1200,
+          "height": 450,
+          "credit": "Sapporo Stream Hotel / Tokyu Hotels",
+          "note": "Splish operator gallery photograph",
+          "sourcePage": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/splish-site-1-c568c4ed6da2c5d8.webp",
+          "sha256": "c568c4ed6da2c5d88ff6fa8ec6ff91d4dcc574983e11ff8993ec79dd1b11d0fb",
+          "width": 1200,
+          "height": 450,
+          "credit": "Sapporo Stream Hotel / Tokyu Hotels",
+          "note": "Splish operator gallery photograph",
+          "sourcePage": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+          "name": "BAR & GRILL Splish",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Angel or Devil afternoon tea",
+              "url": "https://prtimes.jp/main/html/rd/p/000004263.000005113.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Afternoon tea — weekday",
+                  "price": 5500
+                },
+                {
+                  "name": "Afternoon tea — weekend/holiday",
+                  "price": 6000
+                },
+                {
+                  "name": "Strawberry shortcake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Mango millefeuille",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Grape tart",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Panna cotta with blueberry sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Ricotta with prosciutto",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Scallop and crab marinade",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Angel or Devil afternoon tea; no separate item price published"
+                }
+              ],
+              "note": "October 4–December 22, Sundays–Tuesdays 15:00–17:00, last entry 16:00. Tax and 12% service included. Seasonal Halloween/Christmas presentation varies; names are sampled from published examples."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Angel or Devil afternoon tea",
+              "kind": "other",
+              "description": "Seasonal afternoon tea, ¥5,500 weekdays or ¥6,000 weekends/holidays, tax and service included.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004263.000005113.html",
+              "menuLabel": "Angel or Devil afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-10-04",
+              "validThrough": "2026-12-22",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Last entry 16:00.",
+                "Single or odd-number bookings by phone.",
+                "Window seat with welcome drink costs ¥700 extra."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2
+                    ],
+                    "start": "15:00",
+                    "end": "17:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "7F Sapporo Stream Hotel, 1-1 Minami 4-jo Nishi 4-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Susukino",
+          "websiteUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/splish-site-0-e20e93fefa25e280.webp",
+            "alt": "BAR & GRILL Splish — Splish operator gallery photograph",
+            "credit": "Sapporo Stream Hotel / Tokyu Hotels",
+            "sourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+            "originalUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/restaurant_Splish_main_1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Matsu Grill & Bar Opens in Odori",
+        "description": "A newly opened wood-fired restaurant using Hokkaido ingredients, with a city-view dining room.",
+        "sourceUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+        "address": "17F Hyatt Centric Sapporo, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+        "productName": "Matsu Grill & Bar",
+        "utcStartDateTime": "2026-10-03T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Hotel operator confirms Matsu Grill & Bar opened with Hyatt Centric Sapporo on October 3, 2026.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Odori",
+          "Wood-fired grill"
+        ],
+        "longFormSummary": "<p>A newly opened wood-fired restaurant using Hokkaido ingredients, with a city-view dining room.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000006.000182545.html\"></cite></p><p>Hotel operator confirms Matsu Grill &amp; Bar opened with Hyatt Centric Sapporo on October 3, 2026.</p>",
+        "references": [
+          {
+            "url": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+            "title": "Matsu Grill & Bar source",
+            "confidence": 90,
+            "reasoning": "Hotel operator confirms Matsu Grill & Bar opened with Hyatt Centric Sapporo on October 3, 2026."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html",
+            "title": "Matsu Grill & Bar source",
+            "confidence": 90,
+            "reasoning": "Hotel operator confirms Matsu Grill & Bar opened with Hyatt Centric Sapporo on October 3, 2026."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/matsu-grill-bar/reserve/message",
+            "title": "Matsu Grill & Bar source",
+            "confidence": 90,
+            "reasoning": "Hotel operator confirms Matsu Grill & Bar opened with Hyatt Centric Sapporo on October 3, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "menu": {
+            "pinSourceUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+            "name": "Matsu Grill & Bar",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Matsu three-course lunch",
+                "url": "https://www.tablecheck.com/ja/matsu-grill-bar/reserve/message",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Three-course lunch set",
+                    "price": 3740
+                  },
+                  {
+                    "name": "Hokkaido mozzarella with tomato and basil",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Three-course lunch set; no separate item price published"
+                  },
+                  {
+                    "name": "Yellowtail crudo with yuzu and dill",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Three-course lunch set; no separate item price published"
+                  },
+                  {
+                    "name": "Penne with Hokkaido pork ragù",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Three-course lunch set; no separate item price published"
+                  },
+                  {
+                    "name": "Grilled Nakasatsunai half chicken",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Three-course lunch set; no separate item price published"
+                  },
+                  {
+                    "name": "Yoichi apple tarte Tatin",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Three-course lunch set; no separate item price published"
+                  }
+                ],
+                "note": "Choose one starter, one main and one dessert; coffee or tea included. Tax included; 15% service additional. Beef sirloin supplement ¥1,100 plus service."
+              },
+              {
+                "label": "Opening dinner toast",
+                "url": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Glass of sparkling wine",
+                    "price": 0,
+                    "note": "Complimentary only with a course dinner; non-alcoholic alternative available"
+                  }
+                ],
+                "note": "October 3–31. Dinner course price and named dinner dishes are not provided in the release; the lunch set is not part of this offer."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+            "name": "Matsu Grill & Bar",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–14:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "18:00–22:00"
+              },
+              {
+                "days": "Lounge and bar",
+                "hours": "10:30–23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/matsu-grill-bar/reserve/message"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/matsu-grill-bar/reserve"
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "matsu",
+            "name": "Matsu Grill & Bar",
+            "neighborhood": "Odori",
+            "cuisine": "Wood-fired grill",
+            "description": "A newly opened wood-fired restaurant using Hokkaido ingredients, with a city-view dining room.",
+            "address": "17F Hyatt Centric Sapporo, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/matsu-0-fbb3bdd9e3ba4e39.webp",
+            "imageCredit": "Hyatt Centric Sapporo",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html",
+            "imageNote": "Matsu Grill & Bar launch photograph",
+            "openingConfirmed": true,
+            "day": "2026-10-03"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/matsu-0-fbb3bdd9e3ba4e39.webp",
+          "sha256": "fbb3bdd9e3ba4e3955c0368d09d395df20c7777be7ab2812b23508a9aff542db",
+          "width": 1200,
+          "height": 800,
+          "credit": "Hyatt Centric Sapporo",
+          "note": "Matsu Grill & Bar launch photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/matsu-1-629c893479daee8c.webp",
+          "sha256": "629c893479daee8c67fd2b0930adff8594f25093f2ae9bf3f9c7450a354064d1",
+          "width": 1200,
+          "height": 800,
+          "credit": "Hyatt Centric Sapporo",
+          "note": "Matsu Grill & Bar launch photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "name": "Matsu Grill & Bar",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Matsu three-course lunch",
+              "url": "https://www.tablecheck.com/ja/matsu-grill-bar/reserve/message",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Three-course lunch set",
+                  "price": 3740
+                },
+                {
+                  "name": "Hokkaido mozzarella with tomato and basil",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Three-course lunch set; no separate item price published"
+                },
+                {
+                  "name": "Yellowtail crudo with yuzu and dill",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Three-course lunch set; no separate item price published"
+                },
+                {
+                  "name": "Penne with Hokkaido pork ragù",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Three-course lunch set; no separate item price published"
+                },
+                {
+                  "name": "Grilled Nakasatsunai half chicken",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Three-course lunch set; no separate item price published"
+                },
+                {
+                  "name": "Yoichi apple tarte Tatin",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Three-course lunch set; no separate item price published"
+                }
+              ],
+              "note": "Choose one starter, one main and one dessert; coffee or tea included. Tax included; 15% service additional. Beef sirloin supplement ¥1,100 plus service."
+            },
+            {
+              "label": "Opening dinner toast",
+              "url": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Glass of sparkling wine",
+                  "price": 0,
+                  "note": "Complimentary only with a course dinner; non-alcoholic alternative available"
+                }
+              ],
+              "note": "October 3–31. Dinner course price and named dinner dishes are not provided in the release; the lunch set is not part of this offer."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Opening dinner toast",
+              "kind": "other",
+              "description": "A complimentary glass of sparkling wine with a course dinner.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html",
+              "menuLabel": "Opening dinner toast",
+              "discounted": true,
+              "validFrom": "2026-10-03",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Course dinner purchase required.",
+                "Non-alcoholic alternative available.",
+                "Dinner course price is not published in the opening announcement."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "22:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "17F Hyatt Centric Sapporo, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Odori",
+          "websiteUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/matsu-0-fbb3bdd9e3ba4e39.webp",
+            "alt": "Matsu Grill & Bar — Matsu Grill & Bar launch photograph",
+            "credit": "Hyatt Centric Sapporo",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/182545/6/182545-6-3b878aa7c05e3bec614a110ca82a9e0d-3900x2600.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "PAIRINGx HOKKAIDO Opens in Odori",
+        "description": "HBC’s newly opened standing wine bar pairs Hokkaido wine with local food and serves sandwiches at lunch.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+        "address": "B1 Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+        "productName": "PAIRINGx HOKKAIDO",
+        "utcStartDateTime": "2026-10-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "HBC operator announcement confirms the Sapporo branch opening on October 2, 2026.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Odori",
+          "Wine bar"
+        ],
+        "longFormSummary": "<p>HBC’s newly opened standing wine bar pairs Hokkaido wine with local food and serves sandwiches at lunch.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000135.000082555.html\"></cite></p><p>HBC operator announcement confirms the Sapporo branch opening on October 2, 2026.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+            "title": "PAIRINGx HOKKAIDO source",
+            "confidence": 90,
+            "reasoning": "HBC operator announcement confirms the Sapporo branch opening on October 2, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+            "name": "PAIRINGx HOKKAIDO",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published opening dishes",
+                "url": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hokkaido white beans and tuna spice marinade",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hokkaido dried salmon steamed in white wine",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hokkaido charcuterie",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Bibai venison roast with instant smoke",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Lamb bolognese focaccia sandwich",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken and mushroom focaccia sandwich",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Items named in the operator release, without prices. Focaccia sandwiches are lunch items; no table charge is announced."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+            "name": "PAIRINGx HOKKAIDO",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:00–14:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "16:00–21:30"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "pairing",
+            "name": "PAIRINGx HOKKAIDO",
+            "neighborhood": "Odori",
+            "cuisine": "Wine bar",
+            "description": "HBC’s newly opened standing wine bar pairs Hokkaido wine with local food and serves sandwiches at lunch.",
+            "address": "B1 Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/pairing-1-fd81676e55b9e19e.webp",
+            "imageCredit": "HBC Hokkaido Broadcasting",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+            "imageNote": "Operator launch visual",
+            "openingConfirmed": true,
+            "day": "2026-10-02"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-expansion-2026-10-13/pairing-1-fd81676e55b9e19e.webp",
+          "sha256": "fd81676e55b9e19ed1169bebe0e4fb7ce9a1dd0a26e6bcb36de682114d227408",
+          "width": 701,
+          "height": 369,
+          "credit": "HBC Hokkaido Broadcasting",
+          "note": "Operator launch visual",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hakodate Shunka — Sapporo Opens in Tsukisamu",
+        "description": "An announced Sapporo branch of the Hakodate sushi restaurant, planned for November at Branch Tsukisamu.",
+        "sourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+        "address": "Branch Sapporo Tsukisamu, Tsukisamu Higashi 3-jo 11-chome, Toyohira-ku, Sapporo",
+        "productName": "Hakodate Shunka — Sapporo",
+        "utcStartDateTime": "2026-11-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Landlord confirms a November opening but no exact day. Local reporting says November 20 and gives conflicting street numbers (1-24 vs 1-26); use the official month estimate and omit the street number pending verification.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Tsukisamu",
+          "Sushi"
+        ],
+        "longFormSummary": "<p>An announced Sapporo branch of the Hakodate sushi restaurant, planned for November at Branch Tsukisamu.<cite data-ref=\"https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/\"></cite></p><p>Landlord confirms a November opening but no exact day. Local reporting says November 20 and gives conflicting street numbers (1-24 vs 1-26); use the official month estimate and omit the street number pending verification.</p>",
+        "references": [
+          {
+            "url": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+            "title": "Hakodate Shunka — Sapporo source",
+            "confidence": 90,
+            "reasoning": "Landlord confirms a November opening but no exact day. Local reporting says November 20 and gives conflicting street numbers (1-24 vs 1-26); use the official month estimate and omit the street number pending verification."
+          },
+          {
+            "url": "https://www.branch-sc.com/tsukisamu/shop/pop-eventnews.jsp?id=8179",
+            "title": "Hakodate Shunka — Sapporo source",
+            "confidence": 90,
+            "reasoning": "Landlord confirms a November opening but no exact day. Local reporting says November 20 and gives conflicting street numbers (1-24 vs 1-26); use the official month estimate and omit the street number pending verification."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+          "menu": {
+            "pinSourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+            "name": "Hakodate Shunka — Sapporo",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Sapporo opening menu",
+                "url": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+                "currency": "JPY",
+                "coverage": "link",
+                "items": [],
+                "note": "No Sapporo-specific dishes or prices are published. Checked operator site, linked Instagram, landlord recruitment announcement and local opening report. Hakodate menus are not borrowed; exact street-number conflict remains unresolved."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+            "name": "Hakodate Shunka — Sapporo",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://kaitensushi.shunka.jp/",
+            "phone": null,
+            "openingHours": [],
+            "detailsSourceUrl": "https://kaitensushi.shunka.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.branch-sc.com/tsukisamu/shop/pop-eventnews.jsp?id=8179"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "shunka-sapporo",
+            "name": "Hakodate Shunka — Sapporo",
+            "neighborhood": "Tsukisamu",
+            "cuisine": "Sushi",
+            "description": "An announced Sapporo branch of the Hakodate sushi restaurant, planned for November at Branch Tsukisamu.",
+            "address": "Branch Sapporo Tsukisamu, Tsukisamu Higashi 3-jo 11-chome, Toyohira-ku, Sapporo",
+            "websiteUrl": "https://kaitensushi.shunka.jp/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": ""
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    }
+  ]
+}

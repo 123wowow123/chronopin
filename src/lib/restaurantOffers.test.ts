@@ -136,6 +136,37 @@ describe('next restaurant specials', () => {
     const shown = restaurantOffersToShow([later, first, expired], new Date('2026-10-07T20:00:00Z'), zone);
     expect(shown.offers).toHaveLength(1);
     expect(shown.offers[0].id).toBe('Favorite');
+    expect(shown.offers[0].offers?.map((item) => item.id)).toEqual(['Favorite', 'second']);
+  });
+  it('merges simultaneous specials into one restaurant card with their own schedules and end times', () => {
+    const first = offer('Waterbar');
+    const second = { ...first, id: 'tacos', special: { ...happyHour, title: 'Tacos & Tequila Tuesdays', kind: 'lunch' as const, availability: { windows: [{ days: [3], start: '15:00', end: '21:00' }] } } };
+    const sections = restaurantOfferSections([first, second, second], new Date('2026-10-07T23:30:00Z'), zone);
+    expect(sections.available).toHaveLength(1);
+    expect(sections.available[0].offers?.map((item) => [item.id, item.end])).toEqual([['Waterbar', '18:00'], ['tacos', '21:00']]);
+    expect(sections.upcoming).toEqual([]);
+    expect(restaurantOfferSections([first, second], new Date('2026-10-07T23:30:00Z'), zone, { sort: 'lunch' }).available[0].id).toBe('tacos');
+  });
+  it('keeps a venue’s upcoming offers on its active card, excludes expired offers, and keeps branches separate', () => {
+    const first = offer('Waterbar');
+    const later = { ...first, id: 'later', special: { ...happyHour, availability: { windows: [{ days: [3], start: '18:00', end: '21:00' }] } } };
+    const expired = { ...first, id: 'expired', special: { ...happyHour, validThrough: '2026-10-06' } };
+    const branch = { ...first, id: 'other-branch', restaurantHref: '/pin/other-branch' };
+    const sections = restaurantOfferSections([later, expired, first, branch], new Date('2026-10-07T23:30:00Z'), zone);
+    expect(sections.available).toHaveLength(2);
+    expect(sections.upcoming).toEqual([]);
+    expect(sections.available[0].offers?.map((item) => item.id)).toEqual(['Waterbar', 'later']);
+    expect(sections.available[0].offers?.[1].startsAt).toBe('2026-10-08T01:00:00.000Z');
+    expect(sections.available[1].offers?.map((item) => item.id)).toEqual(['other-branch']);
+  });
+  it('groups by branch identity when destination links differ or multiple branches share a website', () => {
+    const first = { ...offer('Chain'), venueKey: 'mission-valley' };
+    const second = { ...first, id: 'second', restaurantHref: '/pin/mission-valley' };
+    const branch = { ...first, id: 'other-branch', venueKey: 'la-jolla' };
+    const sections = restaurantOfferSections([first, second, branch], new Date('2026-10-07T23:30:00Z'), zone);
+    expect(sections.available).toHaveLength(2);
+    expect(sections.available[0].offers?.map((item) => item.id)).toEqual(['Chain', 'second']);
+    expect(sections.available[1].offers?.map((item) => item.id)).toEqual(['other-branch']);
   });
   it('shows up to one hundred distinct restaurants with the earliest specials first', () => {
     const venues = Array.from({ length: 105 }, (_, index) => offer(`Venue ${String(index).padStart(3, '0')}`));

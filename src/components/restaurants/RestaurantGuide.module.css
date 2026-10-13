@@ -32,6 +32,11 @@
 .offerStatus { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; align-items:center; font-size:11px; margin-bottom:18px; }
 .offerStatus>span { background:var(--green); color:var(--paper); border-radius:4px; padding:5px 8px; }
 .offerTitle { margin-top:12px; font-size:15px; font-weight:650; }
+.offerTabs { display:flex; flex-wrap:wrap; gap:4px; margin-top:16px; border-bottom:1px solid var(--rule); }
+.offerTabs button { padding:10px 8px; min-height:44px; border-bottom:2px solid transparent; color:var(--soft); font-size:12px; cursor:pointer; }
+.offerTabs button[aria-selected='true'] { color:var(--green); border-bottom-color:var(--green); font-weight:650; }
+.offerTabs button:hover { color:var(--text); background:var(--rule); }
+.offerPanel .offerStatus { margin:12px 0; }
 .offerReview { margin-top:8px; font-size:12px; color:var(--green); }
 .offerReview a:hover { text-decoration:underline; }
 .offerReview small { display:block; color:var(--soft); font-size:10px; margin-top:4px; }

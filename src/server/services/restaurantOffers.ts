@@ -64,6 +64,7 @@ export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants:
       return {
         id: `${profile.pinSourceUrl}#${index}`, name: venue.name, neighborhood: venue.neighborhood, address: venue.address,
         restaurantHref: venue.href, checkedAt: profile.checkedAt, special: { ...special, availability },
+        venueKey: restaurantSourceKey(profile.pinSourceUrl),
         review: profile.review,
         photo: profile.photo,
         location: profile.location,

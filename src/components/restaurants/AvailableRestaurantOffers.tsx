@@ -1,16 +1,11 @@
 'use client';
 
-import Image from 'next/image';
-import Anchor from '@/components/ui/Anchor';
-import Link from '@/components/ui/Link';
 import { usePathname } from '@/lib/client/navigation';
-import { restaurantOfferDistance, offerEndLabel, type ScheduledRestaurantOffer } from '@/lib/restaurantOffers';
-import { formatDistance } from '@/lib/distance';
-import { usesImperial } from '@/lib/weather';
+import { restaurantOfferVenueKey, type ScheduledRestaurantOffer } from '@/lib/restaurantOffers';
 import { RestaurantControls, RestaurantSortNote, useRestaurantSort } from './RestaurantControls';
 import type { GuidePage } from '@/lib/restaurantGuide';
 import { PagedCardGrid, useGuidePages } from './PagedCardGrid';
-import { RestaurantOfferMenu } from './RestaurantOfferMenu';
+import { RestaurantOfferCard } from './RestaurantOfferCard';
 import styles from './RestaurantGuide.module.css';
 
 type Props = { regionSlug: string; neighborhood: string; initialPages: Record<string, GuidePage<ScheduledRestaurantOffer>>; timeZone: string; city: string };
@@ -27,40 +22,18 @@ function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZo
   const sectionId = upcoming ? 'next-specials' : 'available-now';
   const mapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', specials: JSON.stringify(pages.ids), returnTo: `${pathname}#${sectionId}` });
   if (pages.bounds) mapParams.set('bounds', pages.bounds);
-  const nextTime = (startsAt: string) => new Intl.DateTimeFormat('en-US', { timeZone, weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }).format(new Date(startsAt));
   return <section id={sectionId} className={styles.offers} aria-labelledby={`${sectionId}-title`}>
     <div className={styles.browseHeading}>
       <div><p className={styles.eyebrow}>GOOD FOOD. SPECIALS.</p><h2 id={`${sectionId}-title`}>{upcoming ? 'Upcoming specials' : 'Specials available now'}</h2></div>
       {pages.total > 0 && <RestaurantControls state={sortState} label="specials" mapHref={`/map?${mapParams}`} lunch={!upcoming} starts={upcoming} />}
     </div>
     <p className={styles.offerIntro}>Happy hours, daily specials, and limited offers during published service hours in {city}. Times follow the restaurant’s local clock.</p>
-    <p className={styles.results} role="status">{!pages.ready ? 'Loading…' : upcoming ? `${pages.total} upcoming ${pages.total === 1 ? 'special' : 'specials'}.` : `${pages.total} ${pages.total === 1 ? 'offer' : 'offers'} available now`}</p>
-    {upcoming && pages.total > 0 && <p className={styles.offerIntro}>Each restaurant’s next special is shown with its local start time.</p>}
+    <p className={styles.results} role="status">{!pages.ready ? 'Loading…' : upcoming ? `${pages.total} ${pages.total === 1 ? 'restaurant' : 'restaurants'} with upcoming specials.` : `${pages.total} ${pages.total === 1 ? 'restaurant' : 'restaurants'} with offers available now`}</p>
+    {upcoming && pages.total > 0 && <p className={styles.offerIntro}>Each restaurant’s specials are shown in tabs with their next local start times.</p>}
     {pages.total > 0 && <RestaurantSortNote state={sortState} />}
     {sortState.sort === 'starts' && pages.total > 0 && <p className={styles.offerSortNote}>Soonest start first. Ties are ordered by rating.</p>}
     {sortState.sort === 'lunch' && pages.total > 0 && <p className={styles.offerSortNote}>Lunch specials first. Each group is ordered by rating.</p>}
-    {pages.total ? <PagedCardGrid pages={pages}>{(offer) => <article key={offer.id} className={styles.card}>
-      {offer.photo && <Link href={offer.restaurantHref} className={styles.photoLink} aria-label={`See ${offer.name}'s restaurant details`}>
-        <Image src={offer.photo.src} alt={offer.photo.alt} fill unoptimized className={styles.cardImage} />
-        <span className={styles.imageNote}>{offer.photo.credit}</span>
-      </Link>}
-      <div className={styles.cardBody}>
-        <div className={styles.offerStatus}><span>{upcoming ? 'Up next' : 'Available now'}</span><strong>{offer.startsAt ? <time dateTime={offer.startsAt}>Starts {nextTime(offer.startsAt)}</time> : `Until ${offerEndLabel(offer.end)}`}</strong></div>
-        <p className={styles.cardMeta}>{offer.neighborhood}</p>
-        {origin && restaurantOfferDistance(offer, origin) != null ? <p className={styles.offerDistance} title="Approximate straight-line distance">{formatDistance(restaurantOfferDistance(offer, origin)!, usesImperial())} {origin.source !== 'device' && origin.name ? `from ${origin.name}` : 'away'}</p> : sort === 'distance' ? <p className={styles.offerDistance}>Distance unavailable</p> : null}
-        <h3><Link href={offer.restaurantHref}>{offer.name}</Link></h3>
-        {offer.review && <p className={styles.offerReview}><Anchor href={offer.review.sourceUrl} target="_blank" rel="noopener noreferrer">★ {offer.review.score.toFixed(1)}/5 · {offer.review.count.toLocaleString('en-US')} {offer.review.provider} reviews ↗</Anchor><small>Rating checked {offer.review.checkedAt}</small></p>}
-        <h4 className={styles.offerTitle}>{offer.special.title}</h4>
-        {offer.special.description && <p className={styles.cardDescription}>{offer.special.description}</p>}
-        <RestaurantOfferMenu menu={offer.menu} restaurant={offer.name} />
-        <p className={styles.offerSchedule}>{offer.special.schedule}</p>
-        {offer.special.conditions?.length ? <ul className={styles.offerConditions}>{offer.special.conditions.map((condition) => <li key={condition}>{condition}</li>)}</ul> : null}
-        {offer.menu?.note && <p className={styles.offerSchedule}>{offer.menu.note}</p>}
-        <p className={styles.topAddress}>{offer.address}</p>
-        <div className={styles.topLinks}><Anchor href={offer.special.sourceUrl} target="_blank" rel="noopener noreferrer">{upcoming ? 'View upcoming offer' : 'View offer at restaurant'} ↗</Anchor><Link href={offer.restaurantHref}>Restaurant details ↗</Link></div>
-        <p className={styles.offerSchedule}>Menu checked {offer.checkedAt}</p>
-      </div>
-    </article>}</PagedCardGrid> : pages.ready ? <div className={styles.empty}><h3>{upcoming ? 'No upcoming specials yet.' : 'No specials available right now.'}</h3><p>{upcoming ? 'Try another neighborhood or check back for new offers.' : 'See the next published specials below.'}</p></div> : null}
+    {pages.total ? <PagedCardGrid pages={pages}>{(offer) => <RestaurantOfferCard key={restaurantOfferVenueKey(offer)} card={offer} origin={origin} sort={sort} timeZone={timeZone} />}</PagedCardGrid> : pages.ready ? <div className={styles.empty}><h3>{upcoming ? 'No upcoming specials yet.' : 'No specials available right now.'}</h3><p>{upcoming ? 'Try another neighborhood or check back for new offers.' : 'See the next published specials below.'}</p></div> : null}
     <p className={styles.offerIntro}>Offers follow published schedules; item availability can change. Order or redeem directly with the restaurant. Seating restrictions and extra charges are shown with each offer.</p>
   </section>;
 }

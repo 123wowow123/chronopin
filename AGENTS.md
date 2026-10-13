@@ -34,6 +34,8 @@ Every restaurant landing page, including Japan's city guides, should support the
 
 For every China city guide, aim for at least **35 distinct restaurants in each tab**: Coming soon, Just opened, Top restaurants, and Specials. This is a research/replenishment target, not a display cap or a reason to relax eligibility. Count each restaurant once per tab, including restaurants with multiple specials. Keep verified content below the target when necessary and record the shortage and sources checked.
 
+For every Japan city guide, aim for at least **30 distinct restaurants in each tab**: Coming soon, Just opened, Top restaurants, and Specials. This is a research/replenishment target, not a display cap or a reason to relax eligibility. Count each restaurant once per tab, including restaurants with multiple specials. Continue researching and replenishing sections below 30; record each shortage, sources checked and specific unresolved research gaps in the guide notes.
+
 ## Restaurant menu research
 
 Save ongoing menu, visit-detail and landing-page tile edits through the database management APIs: `/api/admin/restaurant-content` for ordinary content and `/api/admin/restaurant-specials` for offers and their menus. Bundled JSON catalogs are import/research snapshots; do not require a deployment for content updates once the runtime content API is installed. Preserve source evidence and photo credits, and verify the affected pin and landing page after saving. See docs/okf/api/restaurant-content.md.

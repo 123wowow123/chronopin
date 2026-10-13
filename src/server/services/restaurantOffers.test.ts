@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { RESTAURANT_REGIONS, type Restaurant } from '@/lib/restaurants';
 import { distanceKm } from '@/lib/distance';
-import { activeRestaurantOffer, restaurantOffersToShow } from '@/lib/restaurantOffers';
+import { activeRestaurantOffer, restaurantOfferSections, restaurantOfferVenueKey, restaurantOffersToShow, scheduleRestaurantOffers } from '@/lib/restaurantOffers';
 import { buildRestaurantOffers, regionalRestaurantOffers as loadOffers } from './restaurantOffers';
 import specialCatalog from '@/server/data/restaurantSpecials.json';
 import menuCatalog from '@/server/data/restaurantMenus.json';
@@ -24,6 +24,36 @@ const venue: Restaurant = {
 const NO_SPECIALS_YET = ['fort-lauderdale', 'honolulu', 'palm-springs'];
 
 describe('regional restaurant offers', () => {
+  it('shows Puesto Mission Valley once with Happy hour and Taco Tuesday tabs', () => {
+    const puesto = records.find((record) => record.profile.name === 'Puesto Mission Valley')!;
+    // Taco Tuesday was added through the runtime API after the bundled snapshot.
+    const profile = { ...puesto.profile, specials: [...puesto.profile.specials, {
+      kind: 'other' as const, title: 'Taco Tuesday', description: 'Half off all tacos every Tuesday from 3 pm to close.',
+      sourceUrl: 'https://www.eatpuesto.com/san-diego/', discounted: true,
+      availability: { windows: [{ days: [2], start: '15:00', end: '21:00' }] },
+    }] };
+    const offers = buildRestaurantOffers([], [], '2026-10-13', 'san-diego', [{ ...puesto, profile }]);
+    const sections = restaurantOfferSections(offers, new Date('2026-10-13T23:00:00Z'), 'America/Los_Angeles');
+    const cards = [...sections.available, ...sections.upcoming].filter((card) => card.name === 'Puesto Mission Valley');
+    expect(cards).toHaveLength(1);
+    expect(cards[0].offers?.map((item) => [item.special.title, item.end])).toEqual([['Happy hour', '17:00'], ['Taco Tuesday', '21:00']]);
+  });
+
+  it('groups every city’s duplicate specials before pagination without losing eligible offers', () => {
+    for (const region of RESTAURANT_REGIONS) {
+      const offers = regionalRestaurantOffers([], [], '2026-10-13', region.slug);
+      const now = new Date('2026-10-13T23:00:00Z');
+      const schedule = scheduleRestaurantOffers(offers, now, region.timeZone);
+      const sections = restaurantOfferSections(offers, now, region.timeZone);
+      const cards = [...sections.available, ...sections.upcoming];
+      expect(new Set(cards.map(restaurantOfferVenueKey)).size, region.slug).toBe(cards.length);
+      for (const card of cards) {
+        const expected = [...schedule.available, ...schedule.upcoming].filter((offer) => restaurantOfferVenueKey(offer) === restaurantOfferVenueKey(card));
+        expect(card.offers?.map((item) => item.id).sort(), `${region.slug}: ${card.name}`).toEqual([...new Set(expected.map((item) => item.id))].sort());
+      }
+    }
+  });
+
   it('includes a dated seasonal menu without inventing a discount', () => {
     const special = { kind: 'other' as const, title: 'Seasonal menu', description: 'Published seasonal menu', sourceUrl: 'https://example.com/seasonal', discounted: false, limitedTime: true, validFrom: '2026-10-16', validThrough: '2026-11-28', availability: { windows: [{ days: [5, 6], start: '17:30', end: '21:00' }] } };
     const profile = { pinSourceUrl: special.sourceUrl, name: 'Seasonal venue', checkedAt: '2026-10-10', neighborhood: 'Test area', address: 'Test address', websiteUrl: special.sourceUrl, menus: [], specials: [special] };
