@@ -6,7 +6,10 @@ import { RatingSummary } from '@/components/pin/PinRatings';
 import Anchor from '@/components/ui/Anchor';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
+import { AdFilledGrid } from '@/components/restaurants/AdFilledGrid';
+import { RestaurantCardAdsProvider } from '@/components/restaurants/RestaurantAdCard';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
+import { adPlacements } from '@/server/services/pages';
 import { blobUrl } from '@/lib/appConfig';
 import { pinTextDir } from '@/lib/i18n/config';
 import { absoluteUrl, pinPath } from '@/lib/seo';
@@ -36,7 +39,7 @@ function blurb(pin: ProductPin): string {
 // The curated products page: the products pins are about, by shelf, each with
 // a short line on why it is good. Every product links to its pin for the dates, the
 // sources and the rest.
-export function ProductsView({ shelves, title, description, path = '/products', wordmark = 'The product guide', eyebrow = 'GOOD GEAR. GREAT TIMING.', heading = <>The products worth <em>the wait.</em></> }: {
+export async function ProductsView({ shelves, title, description, path = '/products', wordmark = 'The product guide', eyebrow = 'GOOD GEAR. GREAT TIMING.', heading = <>The products worth <em>the wait.</em></> }: {
   shelves: ProductShelf[];
   title: string;
   description: string;
@@ -45,6 +48,7 @@ export function ProductsView({ shelves, title, description, path = '/products', 
   eyebrow?: string;
   heading?: ReactNode;
 }) {
+  const placements = await adPlacements();
   const products = shelves.flatMap((s) => s.pins);
   const collection = {
     '@context': 'https://schema.org',
@@ -69,6 +73,7 @@ export function ProductsView({ shelves, title, description, path = '/products', 
   const id = (category: string) => category.toLowerCase().replace(/\s+/g, '-');
 
   return (
+    <RestaurantCardAdsProvider value={placements['card-grid']}>
     <main className={styles.guide} data-landing>
       <LandingMark />
       <JsonLd data={collection} />
@@ -112,8 +117,8 @@ export function ProductsView({ shelves, title, description, path = '/products', 
                   <p>Why each one is worth a look.</p>
                 </div>
               </div>
-              <div className={styles.cardGrid}>
-                {shelf.pins.map((pin) => {
+              <AdFilledGrid cards={
+                shelf.pins.map((pin) => {
                   const image = imageOf(pin);
                   const name = pin.productName ?? pin.title;
                   return (
@@ -144,8 +149,8 @@ export function ProductsView({ shelves, title, description, path = '/products', 
                       </div>
                     </article>
                   );
-                })}
-              </div>
+                })
+              } />
             </section>
           );
           })}
@@ -153,6 +158,7 @@ export function ProductsView({ shelves, title, description, path = '/products', 
 
       </div>
     </main>
+    </RestaurantCardAdsProvider>
   );
 }
 

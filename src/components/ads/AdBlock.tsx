@@ -3,6 +3,7 @@
 import Anchor from '@/components/ui/Anchor';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { hasProgramLogo, ProgramLogo } from '@/components/ads/ProgramLogo';
+import { RestaurantAdCard } from '@/components/restaurants/RestaurantAdCard';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
@@ -99,7 +100,7 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
 const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png' };
 const DEFAULT_TILE = { icon: 'cart' as IconName, background: '#232f3e', color: '#fff' };
 
-function useAds(slot: AdSlot, pinId: number | undefined, count = SLOT_COUNT[slot]) {
+export function useAds(slot: AdSlot, pinId: number | undefined, count = SLOT_COUNT[slot]) {
   const ref = useRef<HTMLDivElement>(null);
   const [ads, setAds] = useState<AdJson[] | null>(null);
   const [requestedCount, setRequestedCount] = useState(0);
@@ -110,7 +111,7 @@ function useAds(slot: AdSlot, pinId: number | undefined, count = SLOT_COUNT[slot
     const element = ref.current;
     if (!element) return;
     let cancelled = false;
-    const scope = pinId ? `pin:${pinId}` : slot === 'drawer' ? 'drawer' : 'timeline';
+    const scope = pinId ? `pin:${pinId}` : slot === 'drawer' ? 'drawer' : slot === 'card-grid' ? 'cards' : 'timeline';
     const load = () => {
       queue = queue.then(() => {
         if (cancelled) return;
@@ -161,7 +162,7 @@ function report(ad: AdJson, slot: AdSlot, pinId: number | undefined) {
   } catch {}
 }
 
-function useAdText() {
+export function useAdText() {
   const t = useT();
   return (ad: AdJson) => {
     // A brkox collection: its name, then one line that is also the trademark note.
@@ -223,7 +224,7 @@ function AdInfoLine({ price, info, urgent }: { price: string; info: string; urge
   );
 }
 
-function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
+export function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
   // Fill the thumbnail instead of letterboxing square product photos in a
   // landscape slot. Keep the crop centred on the product and its label.
   if (ad.imageUrl) {
@@ -255,7 +256,7 @@ function AdPicture({ ad, className }: { ad: AdJson; className: string }) {
   );
 }
 
-function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; slot: AdSlot; pinId?: number; className: string; children: React.ReactNode }) {
+export function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; slot: AdSlot; pinId?: number; className: string; children: React.ReactNode }) {
   return (
     <Anchor
       href={ad.url}
@@ -329,7 +330,7 @@ export function AdPreview({
   body: string;
   url: string;
   imageUrl: string | null;
-  layout?: 'both' | 'pin' | 'timeline';
+  layout?: 'both' | 'pin' | 'timeline' | 'card';
   // The two layouts next to each other on a wide screen, for a short block.
   sideBySide?: boolean;
   className?: string;
@@ -354,7 +355,7 @@ export function AdPreview({
   const shown = text(ad);
   return (
     <div className={sideBySide ? `grid items-start gap-3 sm:grid-cols-2 ${className}` : `space-y-3 ${className}`}>
-      {layout !== 'timeline' ? (
+      {layout === 'both' || layout === 'pin' ? (
         <div>
           {layout === 'both' ? <p className="mb-1 text-xs text-subtle">On a pin&apos;s page</p> : null}
           <div className="surface p-4 sm:p-5">
@@ -364,7 +365,7 @@ export function AdPreview({
           </div>
         </div>
       ) : null}
-      {layout !== 'pin' ? (
+      {layout === 'both' || layout === 'timeline' ? (
         <div>
           {layout === 'both' ? <p className="mb-1 text-xs text-subtle">On the timeline</p> : null}
           <div className="max-w-[448px]">
@@ -374,11 +375,19 @@ export function AdPreview({
           </div>
         </div>
       ) : null}
+      {layout === 'both' || layout === 'card' ? (
+        <div>
+          {layout === 'both' ? <p className="mb-1 text-xs text-subtle">In a restaurant guide</p> : null}
+          <div className="max-w-[22rem]">
+            <RestaurantAdCard ad={ad} preview />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
 
-function Disclosure({ ads, className = '' }: { ads?: AdJson[]; className?: string }) {
+export function Disclosure({ ads, className = '' }: { ads?: AdJson[]; className?: string }) {
   const t = useT();
   const ebay = ads?.some((ad) => isEbayUrl(ad.url));
   const awin = ads?.some((ad) => isAwinUrl(ad.url));
@@ -386,7 +395,7 @@ function Disclosure({ ads, className = '' }: { ads?: AdJson[]; className?: strin
   return <p className={`text-[11px] leading-snug text-subtle ${className}`}>{text}</p>;
 }
 
-function SponsoredLabel() {
+export function SponsoredLabel() {
   const t = useT();
   return <span className="text-[11px] font-semibold tracking-wider text-subtle uppercase">{t('ads.sponsored')}</span>;
 }

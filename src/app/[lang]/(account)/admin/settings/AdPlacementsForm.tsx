@@ -13,6 +13,7 @@ const SLOTS: { slot: AdSlot; note: string }[] = [
   { slot: 'pin-side', note: 'A column of ads under a pin\'s comments.' },
   { slot: 'drawer', note: 'Up to two ads in the phone and tablet menu, above Log out, only as many as fit without making the menu scroll.' },
   { slot: 'map-strip', note: 'A row of ads along the bottom of the map, picked again every 2.5 minutes for the pins in view.' },
+  { slot: 'card-grid', note: 'A card shaped like a restaurant card among the cards of a city guide: after every eighth card, and enough at the end of the list to leave no row short.' },
 ];
 
 // Which ad placements show their ads, each on its own.

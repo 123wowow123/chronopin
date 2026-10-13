@@ -478,6 +478,13 @@ function useDropdown() {
   return { open, setOpen, rootRef };
 }
 
+// The curated pages, as the account menu and the phone drawer list them.
+const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
+  { href: '/restaurants', label: 'Restaurants', icon: 'map' },
+  { href: '/products', label: 'Products', icon: 'cart' },
+  { href: '/cars', label: 'Cars', icon: 'car' },
+];
+
 // In the bell's place for visitors who are not signed in (lg and up): the
 // weather icon, with the weather row in a panel under it. Nothing once they
 // have refused their location.
@@ -507,7 +514,18 @@ export function WeatherButton({ className = '' }: { className?: string }) {
       </button>
       {open ? (
         <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
-          <LocalWeatherRow />
+          <LocalWeatherRow className={weather ? 'border-b border-line' : ''} />
+          <div className="px-4 pt-2.5 pb-1 text-[11px] font-semibold tracking-wider text-subtle uppercase">Curated</div>
+          <ul className="pb-1.5">
+            {CURATED_LINKS.map((item) => (
+              <li key={item.href} className="px-1.5">
+                <Link href={item.href} onClick={() => setOpen(false)} className="flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm font-medium text-ink hover:bg-raised hover:no-underline">
+                  <Icon name={item.icon} className="size-4 text-muted" />
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       ) : null}
     </div>

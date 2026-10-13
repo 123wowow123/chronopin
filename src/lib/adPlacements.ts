@@ -11,6 +11,7 @@ export const DEFAULT_AD_PLACEMENTS: AdPlacementsSetting = {
   'pin-side': true,
   drawer: true,
   'map-strip': true,
+  'card-grid': true,
 };
 
 // A stored or submitted value as a setting, or the problem with it. A slot

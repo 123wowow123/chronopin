@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { AdFilledGrid } from './AdFilledGrid';
 import Link from '@/components/ui/Link';
 import { GUIDE_PAGE_SIZE, guideKey, guideSearchParams, type GuidePage, type GuideQuery } from '@/lib/restaurantGuide';
 import styles from './RestaurantGuide.module.css';
@@ -90,7 +91,7 @@ export function PagedCardGrid<T>({ pages, pageHref, children }: { pages: GuidePa
   const current = Math.floor(pages.offset / GUIDE_PAGE_SIZE) + 1;
   return <>
     {!pages.ready && !pages.failed && <p className={styles.results} role="status">Loading…</p>}
-    <div className={styles.cardGrid}>{pages.items.map(children)}</div>
+    <AdFilledGrid cards={pages.items.map(children)} complete={!more} />
     {pages.ready && more && !pages.failed && <div ref={sentinel} aria-hidden="true" style={{ height: 1 }} />}
     {pageHref && pages.seeded && pageCount > 1 && <nav className={styles.results} aria-label="More pages">{Array.from({ length: pageCount }, (_, index) => index + 1).map((page) => <Link key={page} href={pageHref(page)} prefetch={false} rel={page === current + 1 ? 'next' : page === current - 1 ? 'prev' : undefined} aria-current={page === current ? 'page' : undefined} style={{ marginRight: '0.75rem' }}>{page}</Link>)}</nav>}
     {pages.failed && <p className={styles.results} role="status">Couldn’t load more. <button type="button" onClick={() => { setRetry((n) => n + 1); loadMore(); }}>Try again ↗</button></p>}
