@@ -1,4 +1,4 @@
-import { adProblem, asinOf, listingUrl, sameBrand } from '@/lib/adQuality';
+import { adProblem, asinOf, listingUrl, sameBrand, type ListingFacts } from '@/lib/adQuality';
 import * as db from '../db';
 import { readAmazonListing } from '../listingPrice';
 import log from '../util/log';
@@ -78,6 +78,12 @@ export default class PinAd {
     const listing = await readAmazonListing(url);
     if ('gone' in listing) return { rejected: 'Amazon has no such listing (404).' };
     if ('unknown' in listing) return { rejected: `The listing page could not be read (${listing.unknown}); try again later.` };
+    return PinAd.addListing(pinId, asin, url, listing, pin[0].company);
+  }
+
+  // Saves a listing read some other way (the browser, when the server's own
+  // read is blocked), under the same bar as add().
+  static async addListing(pinId: number, asin: string, url: string, listing: ListingFacts & { image?: string | null; urgency?: string | null }, company: string | null): Promise<AddResult> {
     const problem = adProblem(listing) ?? (!listing.image ? 'no product image on the listing' : null);
     if (problem) return { rejected: `${listing.brand ?? 'Unbranded'} "${listing.title.slice(0, 80)}": ${problem}.` };
     const rows = await db.query<PinAdRow>(
@@ -90,7 +96,7 @@ export default class PinAd {
     );
     touched();
     translateTitles(rows[0].id);
-    return { added: rows[0], brandMatchesPin: sameBrand(listing.brand, pin[0].company) };
+    return { added: rows[0], brandMatchesPin: sameBrand(listing.brand, company) };
   }
 
   static async remove(pinId: number, asin: string): Promise<boolean> {
