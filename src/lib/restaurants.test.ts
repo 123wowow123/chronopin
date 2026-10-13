@@ -64,7 +64,7 @@ describe('nearest restaurant guide', () => {
     expect(hour('mexico-city')).toBe('18');
   });
   it('routes Japanese visitors to the nearest supported city on Japan time', () => {
-    for (const slug of ['tokyo', 'kyoto', 'osaka']) {
+    for (const slug of ['fukuoka', 'osaka', 'kyoto', 'nagoya', 'tokyo', 'sapporo']) {
       const region = RESTAURANT_REGIONS.find((item) => item.slug === slug)!;
       expect(nearestRestaurantRegion(region).slug).toBe(slug);
       expect(region.country).toBe('Japan');

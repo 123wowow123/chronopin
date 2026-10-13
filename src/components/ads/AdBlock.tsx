@@ -355,9 +355,8 @@ export function AdPreview({
   const shown = text(ad);
   return (
     <div className={sideBySide ? `grid items-start gap-3 sm:grid-cols-2 ${className}` : `space-y-3 ${className}`}>
-      {layout === 'both' || layout === 'pin' ? (
+      {layout === 'pin' ? (
         <div>
-          {layout === 'both' ? <p className="mb-1 text-xs text-subtle">On a pin&apos;s page</p> : null}
           <div className="surface p-4 sm:p-5">
             <div className="-mx-2 flex items-center gap-3.5 rounded-lg p-2">
               <ColumnRowContent ad={ad} {...shown} />
@@ -367,7 +366,7 @@ export function AdPreview({
       ) : null}
       {layout === 'both' || layout === 'timeline' ? (
         <div>
-          {layout === 'both' ? <p className="mb-1 text-xs text-subtle">On the timeline</p> : null}
+          {layout === 'both' ? <p className="mb-1 text-xs text-subtle">In lists: the timeline, pin pages, the side panel, the menu and the map</p> : null}
           <div className="max-w-[448px]">
             <div className="surface flex items-center gap-3 p-2.5">
               <RowTileContent ad={ad} wide {...shown} />
@@ -377,7 +376,7 @@ export function AdPreview({
       ) : null}
       {layout === 'both' || layout === 'card' ? (
         <div>
-          {layout === 'both' ? <p className="mb-1 text-xs text-subtle">In a restaurant guide</p> : null}
+          {layout === 'both' ? <p className="mb-1 text-xs text-subtle">In restaurant, product and car guides</p> : null}
           <div className="max-w-[22rem]">
             <RestaurantAdCard ad={ad} preview />
           </div>
