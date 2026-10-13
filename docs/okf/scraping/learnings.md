@@ -13,6 +13,22 @@ After **every** scraping job (a scrape, a backfill, a batch of pins, a reference
 
 Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (owner corrections and confirmed approaches) and `* **Changed**` (which page was updated).
 
+## 2026-10-13 - Hotel rubric: acclaim is always checked
+
+* **Feedback:** After two hotel rubrics were stored with `acclaim` null ("Michelin lists Six Senses as New without a Key tier I could read, and Forbes and AAA weren't checked"), the owner said: "always check these". The first scoring passes left acclaim null on every property and an acclaim-only pass checked 18 of them; the unreadable ones stayed null.
+* **Changed:** Every hotel rubric must read Michelin Keys, Forbes Travel Guide and AAA Diamonds before it is saved (strategy.md, "Acclaim is always checked"). Put this in every hotel scoring brief; do not split acclaim into a later pass.
+
+## 2026-10-13 - Hotel openings batch: blocked operator photos are not a reason to hold a pin
+
+* **Learned:** 28 hotel-opening pins went to prod (15274-15301). Operator and brand sites (Four Seasons, Hilton, Marriott, Capella, Six Senses, Banyan Tree, Aman) answer 403 or Cloudflare to curl, and the magazine CDNs are off limits, so two drafts (Capella Kyoto, Six Senses London) were held with neighbourhood or pre-conversion stand-in pictures. Booking.com, Tripadvisor and Trip.com load only in Chrome (WebFetch returns an empty body or 403); a Booking search URL returned 0 properties, but a Google/Bing search for "<hotel> booking.com" finds the listing.
+* **Feedback:** The owner said to research the held pins deeply and not to let operator photos block them: "can use google or other web site source to get image, don't be blocked by operate photos", then "add that to notes". A venue pin must not be held, or posted with off-subject pictures, because the operator's own gallery is unreachable.
+* **Changed:** For a missing picture, search Google Images and the OTA galleries (Booking, Tripadvisor, Expedia, Trip.com, Agoda), travel and design press and blogs, then Commons last. Credit the source page and photographer in `_notes`, never skip a picture over unclear licensing, and spend a large search budget (dozens of searches) before settling for two media. Every picture must still download with plain `curl -A "Mozilla/5.0"` (the server fetches it the same way), be at least about 1200 px wide, and be opened and confirmed to show the property itself. Added to AGENTS.md ("Pin media storage") and the hotel batch brief.
+
+## 2026-10-13 - Standing authorization for daily-job pin maintenance
+
+* **Feedback:** After requesting "apply" for the 83 held news-job reviews, the owner said: "don't ask this next time, add that to notes". Apply routine researched job updates without another confirmation, including sentiment, event/ticket readings and verified factual/date corrections on authors outside the hardcoded curator allowlist.
+* **Changed:** Added the standing instruction to AGENTS.md and [daily jobs](daily-jobs.md). Use authenticated admin APIs when curator helpers refuse, preserve authorship and prior event details on empty readings, check current score hashes, verify saves and resolve completed review marks. Keep genuine evidence gaps queued with concrete reasons. Deployment authorization remains separate.
+
 ## 2026-10-11 - Maker-link backfill, third pass (the 13 no-URL pins)
 
 * **Learned:** A fresh search budget (3 agents, 4-5 pins each) found 9 of the 13: Funday x2 (fundaysweets.com), Cortina (Kefalos Food parent site), Patang (thepatangstory.com), Gelato World Tour Japan (carpigiani.com/jp news page, read with curl because WebFetch hit a cert-chain error), Blas na hEireann (organiser's Aran Bakery page), Indian Ice Cream Congress (organiser homepage, currently the 2027 edition), London Craft Chocolate Fair (cocoarunners.com/fair, 403 to scripts, confirmed in Chrome), Oreo (global homepage only).

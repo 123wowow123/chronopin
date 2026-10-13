@@ -159,8 +159,9 @@ local after a job. Finish by verifying the production writes and saving the
 report and learnings. Do not run a database pull, local search rebuild,
 thumbnail sync or production seed refresh just to close a production job.
 A pin created on prod may remain absent locally until the next needed pull;
-production remains the source of truth. Pins by a non-curator (the owner's
-own accounts) are still not the job's to edit, on prod or here.
+production remains the source of truth. Routine pin maintenance, including
+pins outside the curator allowlist, has the owner's standing authorization
+below; use admin APIs and preserve authorship.
 
 **A run that stayed local** (neither variable set) is replayed afterwards
 with `scripts/jobs/post-run-to-prod.sh <run id> [--dry]`, on the admin login
@@ -175,8 +176,20 @@ prod's pin is the one the run worked on ([admin table API](../api/admin-db.md#jo
   checks, threading and tags all follow ([pinApi.ts](../../../src/server/jobs/pinApi.ts)).
   Pick the desk whose vertical fits (the list is in `create_pin`'s own
   description and [curators.ts](../../../src/server/jobs/curators.ts)).
-* **Only a curator's pin is edited.** A pin posted by a person is theirs:
-  mark it for revisiting with what should change, and an admin decides.
+* **Apply routine updates without asking again.** Owner, 2026-10-13, after
+  applying the 83 held news-job reviews: "don't ask this next time, add that
+  to notes". Routine researched sentiment scores, event/ticket readings and
+  verified factual or date corrections are authorized, including pins whose
+  authors are outside the hardcoded curator allowlist. When a curator helper
+  refuses, use the authenticated admin APIs: `/api/pins/sentiments`,
+  `/api/pins/:id/event-info`, `/api/pins/:id` and `/api/admin/db` as appropriate.
+  Keep the original author; do not impersonate a person's account. Check
+  current text hashes before scoring, preserve existing event details when
+  the fresh reading supplies none, and verify production saves before
+  resolving associated review marks. An allowlist mismatch alone is not a
+  reason to leave proposals pending or request another confirmation. Queue
+  genuine research gaps or conflicting evidence with a specific reason.
+  Production deployment still requires a separate explicit user request.
 * **Already pinned is checked first.** `find_pins` on the subject's words and
   its source URL before every `create_pin`; the route rejects a repeated
   source URL anyway. A second source for a pinned subject is a reference on

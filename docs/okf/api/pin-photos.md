@@ -1,3 +1,11 @@
+---
+type: API Endpoint
+title: Reader photos on a pin
+description: Signed-in readers add photos to a pin from their own device, and other readers can flag them; hidden photos wait for an admin.
+resource: "../../../src/app/api/pins/[id]/photos/route.ts"
+tags: [api, pins, photos]
+---
+
 # Reader photos on a pin (0171)
 
 The "Your photos" pane on the pin page (`src/components/pin/PinPhotos.tsx`) is separate from the pin's sourced media. Readers add photos from their own device; other signed-in readers can flag them.

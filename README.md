@@ -349,7 +349,7 @@ Should show top competition and and benchmarks
 https://www.chronopin.com/pin/4802/gpt-6-astra-released
 
 
-Trade deficit pin series
+create this Trade deficit pin series if not already created
 https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html
 
 
@@ -372,7 +372,7 @@ As of 2026-10-04 (sizing refreshed 2026-10-11). Prod's Anthropic key has no cred
 
 
 
-add button on landing page to suggest a product or restaurant to add to list. should have community voted section
+add button on landing page to suggest a product or restaurant to add to list. should have community voted section. create admin section to manage suggestons and to approave them
 
 
 
@@ -397,8 +397,6 @@ sync watch list to calendar
 add a pin to calendar and keep in sync
 
 get live politicians stock trading alerts
-
-
 
 
 
@@ -433,8 +431,12 @@ https://myanimelist.net/anime/57612/Kikansha_no_Mahou_wa_Tokubetsu_desu_2nd_Seas
 
 
 
-need travel landing page and best restorts 
+need travel landing page and best resorts 
 
 
 
 are there any other pin categories that can display a rubric for the pins
+
+
+
+setup oauth alibaba flow on my website

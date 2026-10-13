@@ -1,5 +1,9 @@
 # Update Log
 
+## 2026-10-13
+
+* **Update:** Recorded the owner's standing authorization to apply routine researched daily-job pin maintenance without asking again, including authors outside the curator allowlist. AGENTS.md and [daily jobs](scraping/daily-jobs.md) specify admin API fallback, verification and review resolution; [learnings](scraping/learnings.md) records the feedback.
+
 ## 2026-10-12
 
 * **Update:** The "2026 criteria" pill on a car performance rubric is now a search link, like the rubric's heading and axis labels: a new `rubric:<year>` term (`rubric:2026`) finds the pins whose engineering rubric was scored against that year's criteria (`PinCarPerf.rubricYear` today, through `RUBRIC_TABLES` in `src/server/util/rubricSearch.ts` so a later ship/aircraft/battery rubric ORs in at one place). The year is validated by the shared `isRubricYear` (2020-2100; anything else is left out like an unknown taste axis), several years widen each other, it narrows with every other term, and beside `carperf:<axis>` it is read off that same car rubric (`carperf:range rubric:2026`). On `/search` a click refines the showing query; the pill's look is unchanged and it gains the title `pin.carPerf.rubricYearSearch` and the pill label `search.fields.rubric`, both in all 16 languages; parse, term and SQL tests added; no schema change, local only, not deployed.
