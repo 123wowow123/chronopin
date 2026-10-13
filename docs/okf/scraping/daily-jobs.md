@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -103,6 +103,7 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 | `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `traffic_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `thin_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `google_trends` | Trending searches in ten markets, scored for dated events, with `coveredByPin` ([trends.ts](../../../src/server/jobs/trends.ts)) | Same reader as `trends:discover` |
 | `prediction_markets` | Kalshi and Polymarket events resolving in the next week and those newly listed since the last run, biggest book first, with odds, dollars traded and `coveredByPin` ([markets.ts](../../../src/server/jobs/markets.ts)) | About 45 pages of exchange listings filtered down to a page: per-game and recurring markets out, an election's props folded together |
+| `model_scores` | AI model pins whose model OpenRouter prices but LMArena has not scored (`awaiting`), and scored frontier pins missing the Frontier Model tag (`needsFrontierTag`) ([modelScores.ts](../../../src/server/jobs/modelScores.ts)) | The arena's overall leaderboard, a few pages, plus one pin query |
 | `company_coverage`, `tagged_pins` | Where a beat left off: each company's pins and when one was last posted, stalest first; what a tag (`Layoffs`) already holds ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `find_pins`, `get_pin` | The already-pinned test; a pin's full JSON | The app's own data |
 | `pin_ads_check`, `pin_ads`, `add_pin_ad`, `remove_pin_ad` | The Amazon ads chosen for pins (`PinAd`, [pinAd.ts](../../../src/server/model/pinAd.ts)): each listing re-read for stock, price, stars and reviews, and a listing's quality gate on every add | A plain fetch of the amazon.com product page (not blocked; a robot check leaves an ad as it was) |
@@ -739,3 +740,28 @@ the tasks, every write (`actions`), its learnings, the closing report, and
 what it used (tokens and an estimated cost for `api`, turns for `session`).
 `PinRevisit` (0067): a pin a run marked to be looked at again, and how the
 mark was resolved. People ask for a fix with "Suggest a correction" instead.
+
+### modelScores
+
+**Reads** `model_scores` once: `awaiting` (AI Models pins whose model is
+priced on OpenRouter and absent from LMArena's overall text leaderboard,
+longest-waiting first) and `needsFrontierTag` (pins whose model the arena has
+scored, that sit on their year's cost/quality frontier, and lack the
+`Frontier Model` tag). Both sources are read fresh, not from the hour's cache.
+**Does** add `Frontier Model` to each `needsFrontierTag` pin with `update_pin`,
+sending `tags` as the pin's `userTags` plus `Frontier Model` (a `tags` patch
+replaces the pin's user tags, so never send the tag alone). A pin's chart
+picks a new arena score up by itself; only the tag needs the job. For each
+`awaiting` pin, look at the arena's own leaderboard when the wait is over two
+weeks and the model is a major lab's: a model the arena lists under a name the
+chart does not match (a renamed or suffixed entry) is a matching gap to
+record in the run's learnings, not something to fix by hand.
+**When.** In the news job just before sentiment (which stays last), so a score published since the 6am run is
+tagged by 6pm (owner, 2026-10-12: "checking arena score for ai model missing
+scores to 6am and 6pm job"). `npm run models:frontier-tag` is the same catch-up
+by hand.
+**Traps.** Never remove a tag: a model that has since fallen behind keeps it
+(it led when it shipped). A model that is not on OpenRouter has no price and
+is neither awaiting nor tagged; the tool does not guess. When the arena
+returns nothing the tool errors rather than reporting every pin as awaiting.
+

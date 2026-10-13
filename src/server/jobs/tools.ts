@@ -45,6 +45,7 @@ import log from '../util/log';
 import { createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { marketCandidates } from './markets';
+import { modelScores } from './modelScores';
 import { trendCandidates } from './trends';
 
 export type JobContext = {
@@ -356,6 +357,21 @@ export const TOOLS: JobTool[] = [
         }
       }
       return { pins, comments, skipped };
+    },
+  },
+  // --- Arena scores (the modelScores task) ---------------------------------
+  {
+    name: 'model_scores',
+    description:
+      "The AI model pins whose model OpenRouter prices but LMArena has not scored yet (`awaiting`, longest first, with the model's price and how many days its pin has waited), and the pins whose model the arena has scored and that sit on its year's cost/quality frontier without the 'Frontier Model' tag (`needsFrontierTag`, with the pin's own `userTags`). Both sources are read fresh. The chart on each pin picks up a new score by itself; the tag does not. Add the tag to each `needsFrontierTag` pin with update_pin, sending `tags` as its `userTags` plus 'Frontier Model'. Reads the arena's leaderboard (a few pages), so call it once a run.",
+    input_schema: obj(),
+    run: async (_input, ctx) => {
+      const result = await modelScores();
+      await act(ctx, {
+        tool: 'model_scores',
+        detail: `${result.awaiting.length} model pin(s) still awaiting an arena score, ${result.needsFrontierTag.length} frontier pin(s) to tag`,
+      });
+      return result;
     },
   },
   // --- Performers and tickets (the eventInfo task) -------------------------

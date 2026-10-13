@@ -128,6 +128,11 @@ export const TASKS = {
     label: 'Layoffs',
     summary: "Pin newly announced layoffs and closures, each checked against the company's memo, SEC filing or state WARN notice.",
   },
+  modelScores: {
+    group: 'scores',
+    label: 'Arena scores for AI models',
+    summary: "Check the AI model pins whose model has a price but no LMArena score yet, and tag 'Frontier Model' on the ones the arena has since scored that lead their year's cost/quality line.",
+  },
   sentiment: {
     group: 'scores',
     label: 'Refresh sentiment',
@@ -207,8 +212,9 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       dayOfWeek: null,
       // eventInfo twice a day, so a sell-out shows by the next run; the
       // prediction markets too, for the week's events the money is on (owner,
-      // 2026-10-01).
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'breakingNews', 'predictionMarkets', 'sentiment'],
+      // 2026-10-01). modelScores checks twice a day for the arena scores that
+      // models lack at launch (owner, 2026-10-12).
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'breakingNews', 'predictionMarkets', 'modelScores', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
