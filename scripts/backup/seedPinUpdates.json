@@ -25966,5 +25966,138 @@
     ],
     "note": null,
     "utcCreatedDateTime": "2026-10-12T23:53:32.925Z"
+  },
+  {
+    "id": 1134,
+    "pinId": 1998,
+    "kind": "edit",
+    "userId": 304,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Hall and Woodford Win the 2026 Nobel Economics Prize",
+        "field": "title",
+        "before": "The Royal Swedish Academy Names the 2026 Economic Sciences Laureates"
+      },
+      {
+        "after": "Robert E. Hall and Michael Woodford share the 2026 economics prize for models built on household and business decisions that help explain how policy can stabilise economies.",
+        "field": "description",
+        "before": "The Royal Swedish Academy of Sciences announces the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel, closing the 2026 announcement season. It is the only one of the six not established by Alfred Nobel's will."
+      },
+      {
+        "after": "2026-10-12T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-10-12T09:45:00.000Z"
+      },
+      {
+        "after": "<ul><li>The Royal Swedish Academy of Sciences awarded the 2026 economics prize jointly to Robert E. Hall and Michael Woodford on October 12 for “microeconomic foundations of macroeconomic stabilisation”. They share 12 million Swedish kronor equally.<cite data-ref=\"https://www.nobelprize.org/prizes/economic-sciences/2026/press-release/\"></cite></li><li>Their research rebuilt macroeconomic models around decisions made by individual households and firms. Expectations about future policy help explain spending and pricing, providing a basis for monetary and fiscal measures intended to soften economic fluctuations.<cite data-ref=\"https://www.nobelprize.org/prizes/economic-sciences/2026/press-release/\"></cite></li><li>Hall is an emeritus economics professor at Stanford and a senior fellow at the Hoover Institution. His university highlights research spanning employment, technology, competition and economic policy.<cite data-ref=\"https://news.stanford.edu/stories/2026/10/robert-e-hall-nobel-prize-economic-sciences\"></cite></li><li>Woodford is Columbia’s John Bates Clark Professor of Political Economy. Columbia describes how the models help central banks and finance ministries choose when to stimulate or restrain activity, and records his comments during the announcement.<cite data-ref=\"https://news.columbia.edu/news/columbias-michael-woodford-wins-2026-nobel-memorial-prize-economics\"></cite></li><li>The official laureate illustrations are by Niklas Elmehed, © Nobel Prize Outreach. They replace the unrelated 2008 news-conference photograph; the existing official announcement video is retained.<cite data-ref=\"https://www.nobelprize.org/prizes/economic-sciences/2026/summary/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 2026 Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel is announced on Monday 12 October 2026 by the Royal Swedish Academy of Sciences, the last of the six 2026 Nobel announcements, which run 5&ndash;12 October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>Both nobelprize.org pages time it as &ldquo;11:45 CEST at the earliest&rdquo;, keeping the hedge; only the peace prize announcement is given a time without it<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The Nobel Foundation press release gives the venue in full as the Royal Swedish Academy of Sciences, Session Hall, Lilla Frescativagen 4A, Stockholm<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The YouTube description is vaguer on place, saying only that the prize &ldquo;will be announced at the Royal Swedish Academy of Sciences in Stockholm, Sweden&rdquo;<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>The announcement is broadcast live: &ldquo;All prize announcements will be broadcast live on the official digital channels of the Nobel Prize&rdquo;, with a YouTube live stream listed for each<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The pin's source is that live stream page, titled &ldquo;Announcement of the 2026 Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel&rdquo; on the Nobel Prize channel, published 2026-09-14 and tagged #NobelPrize<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>No laureates are named: the live stream page gives no laureate names and no announcement date beyond its own publication timestamp<cite data-ref=\"https://www.youtube.com/live/RJjHROJh-FI\"></cite></li><li>Both pages give the prize its full formal name, &ldquo;Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2026&rdquo;, setting it apart from the five prizes named for Nobel himself, though neither states that it was not established by his will<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite><cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The press release setting the 2026 dates and venues is dated 2 February 2026, lists a press invitation for this announcement, and says media wishing to attend &ldquo;should apply to the respective prize-awarding institution in the early fall&rdquo;<cite data-ref=\"https://www.nobelprize.org/press-release/the-2026-nobel-prize-announcements/\"></cite></li><li>The announcement closes a selection year that opens with nominations in September, closes them at midnight on 31 January, runs evaluation from February to September and ends with the institutions' final vote in October<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>The laureates receive their medals, prize money and diplomas on Nobel Day, 10 December, in Stockholm and Oslo<cite data-ref=\"https://www.nobelprize.org/prizes/about/prize-announcement-dates/\"></cite></li><li>On October 7, Polymarket showed approximately $48,536 traded across its economics-prize market. Ariel Pakes was quoted at 19% and Susan Athey at 17%, with individual books below $10,000. These are thin-market trading estimates, not official predictions; inconsistent quotes for other candidates were omitted. <a href=\"https://polymarket.com/event/nobel-economics-prize-winner-2026\">Polymarket</a></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2026/press-release/",
+        "title": "2026 Prize in Economic Sciences — official award announcement",
+        "confidence": 99,
+        "publishedDate": "2026-10-12"
+      },
+      {
+        "url": "https://news.stanford.edu/stories/2026/10/robert-e-hall-nobel-prize-economic-sciences",
+        "title": "Stanford: Robert E. Hall wins Nobel Memorial Prize in Economic Sciences",
+        "confidence": 95,
+        "publishedDate": "2026-10-12"
+      },
+      {
+        "url": "https://news.columbia.edu/news/columbias-michael-woodford-wins-2026-nobel-memorial-prize-economics",
+        "title": "Columbia: Michael Woodford wins 2026 economics prize",
+        "confidence": 95,
+        "publishedDate": "2026-10-12"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-13T02:17:08.195Z"
+  },
+  {
+    "id": 1135,
+    "pinId": 1946,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Falcon 9 lifted off from Vandenberg at 5:28 p.m. PDT on October 12 with 27 Starlink satellites. The tracker identifies booster B1088; deployment and landing outcomes await verification.",
+        "field": "description",
+        "before": "A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system. Lifts off from Space Launch Complex 4E, Vandenberg SFB, CA, USA to Low Earth Orbit. The booster is due to land at Of Course I Still Love You."
+      },
+      {
+        "after": "2026-10-13T00:28:11.000Z",
+        "field": "start",
+        "allDay": false,
+        "before": "2026-10-12T23:00:00.000Z"
+      },
+      {
+        "after": null,
+        "field": "end",
+        "allDay": false,
+        "before": "2026-10-13T03:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>Falcon 9 lifted off for Starlink Group 15-25 from Vandenberg at 00:28:11 UTC on October 13, equivalent to 5:28:11 p.m. PDT on October 12. Space Launch Now records “Liftoff.” at that time, replacing the earlier no-earlier-than window.<cite data-ref=\"https://spacelaunchnow.app/launch/falcon-9-block-5-starlink-group-15-25/\"></cite></li><li>The mission carries a batch of 27 Starlink broadband satellites toward low Earth orbit. The tracker identifies booster B1088 and the droneship Of Course I Still Love You. Satellite deployment and landing outcomes are not inferred from the liftoff update.<cite data-ref=\"https://spacelaunchnow.app/launch/falcon-9-block-5-starlink-group-15-25/\"></cite></li><li>The operator’s mission page and broadcast are linked by the tracker. The launch window had run from October 12 at 23:00 UTC to October 13 at 03:00 UTC; the pin now records the reported liftoff time rather than the opening of that window.<cite data-ref=\"https://spacelaunchnow.app/launch/falcon-9-block-5-starlink-group-15-25/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Starlink Group 15-25 now targets no earlier than October 12, 2026, with the launch window opening at 23:00 UTC (16:00 PDT). The earlier October 10 and 11 targets have slipped; this remains a planned launch, not a completed flight.<cite data-ref=\"https://spaceflightnow.com/launch-schedule/\"></cite></li><li>The published window runs until 03:00 UTC on October 13. Space Launch Now records the October 8 schedule update and links the mission’s SpaceX page.<cite data-ref=\"https://spacelaunchnow.app/launch/falcon-9-block-5-starlink-group-15-25/\"></cite></li><li>Falcon 9 is scheduled to carry 27 Starlink V2 Mini optimized broadband satellites into low Earth orbit from Space Launch Complex 4E at Vandenberg Space Force Base, California.<cite data-ref=\"https://spaceflightnow.com/launch-schedule/\"></cite></li><li>The current schedule names booster B1088 for its twentieth flight, replacing the older B1082 assignment. Its first stage is planned to land on the droneship Of Course I Still Love You in the Pacific Ocean.<cite data-ref=\"https://spaceflightnow.com/launch-schedule/\"></cite></li><li>The tracker identifies the mission as a communications launch for the Starlink constellation. Its launch time and flight hardware remain subject to operational changes; verify the mission’s operator page before planning a viewing trip.<cite data-ref=\"https://spacelaunchnow.app/launch/falcon-9-block-5-starlink-group-15-25/\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-13T02:17:11.756Z"
+  },
+  {
+    "id": 1136,
+    "pinId": 2004,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>JAXA schedules MMX’s launch on H3 Flight 10 for October 20, 2026 at 04:41:03 Japan Standard Time, equivalent to October 19 at 19:41:03 UTC. The primary announcement confirms the tracker’s UTC instant; the one-day difference is a time-zone conversion.<cite data-ref=\"https://www.jaxa.jp/press/2026/08/20260820-1_j.html\"></cite></li><li>The launch is from the large rocket launch complex at Tanegashima Space Center. JAXA sets a reserve launch period of October 21 through November 7, with a separate launch time to be set for each reserve day.<cite data-ref=\"https://www.jaxa.jp/press/2026/08/20260820-1_j.html\"></cite></li><li>MMX is a planetary-science mission intended to collect samples from Phobos and return them to Earth. The tracker describes a French/German rover accompanying the Japanese probe. These are mission plans, not completed landings or a sample return.<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The launch is recorded as \"H3-24 | Martian Moon eXplorer (MMX)\", status \"Go for Launch\" - \"Current T-0 confirmed by official or reliable sources\" - with NET 2026-10-19T19:41:03Z to second precision and an instantaneous window, window start and end identical<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li><li>An update of 2026-08-19 says \"NET October 20\" while the T-0 is 19 October: the same instant, since 19:41 UTC on 19 October is 04:41 on 20 October in the pad's Asia/Tokyo timezone. The following day, 2026-08-20, Cosmic_Penguin logged \"GO for launch\" from a jaxa.jp press release<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li><li>Mission \"Martian Moon eXplorer (MMX)\", type \"Planetary Science\", orbit \"Mars Orbit\": \"MMX is a Japanese scientific mission to land on Phobos, one of the two moons of Mars, to collect samples before bringing them back to Earth. The mission includes a small French/German rover to explore the surface of Phobos\"<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li><li>The launch service provider is Mitsubishi Heavy Industries, a commercial Japanese agency founded in 1884 with 58 launches, 56 successful, 2 failed, 13 pending and 2 consecutive successes<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li><li>The rocket is the H3 in its \"24\" configuration - two LE-9 main-stage engines and four SRB-3 solid boosters - expendable, 2 stages, 63.0 m long, 5.27 m in diameter, 7900.0 kg to GTO, takeoff thrust 12142.0 and a launch cost of 50000000; this configuration first flew on 2025-10-26 and has 1 launch, 1 successful, against the H3 family's 9 launches, 7 successful, 2 failed and 8 pending since its 2023-03-07 debut<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li><li>The flight timeline runs booster separations at T+1m56s and 1m58s, fairing separation 3m17s, MECO 4m52s, stage 2 separation 4m59s, first ignition 5m12s, first cutoff 10m40s, second ignition 1h03m57s, second cutoff 1h10m21s and payload separation at 1h11m12s<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li><li>It flies from Yoshinobu Launch Complex LP-2 at Tanegashima Space Center, \"the largest rocket-launch complex in Japan ... located on the southeastern tip of Tanegashima, an island located south of Kyushu\", established in 1969 with NASDA and now run by JAXA; the pad has 18 launches to date and the site 99<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li><li>The mission had slipped once before: an update of 2023-12-06 recorded it \"Delayed to 2026 launch window due to H3 launch vehicle unavailability\", followed by \"NET October\" on 2026-01-07<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li><li>Counting: orbital launch attempt 7413 overall and 240 of the year; the record was last updated 2026-08-20T21:04:48Z, with no webcast, video or info URLs and no mission patches<cite data-ref=\"https://ll.thespacedevs.com/2.3.0/launches/69ebbcd2-b257-4070-9ef9-21e7d1f8a883/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.jaxa.jp/press/2026/08/20260820-1_j.html",
+        "title": "JAXA: H3 Flight 10 launch of MMX",
+        "confidence": 99,
+        "publishedDate": "2026-08-20"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-13T02:18:06.668Z"
+  },
+  {
+    "id": 1137,
+    "pinId": 2954,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2027-03-15T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2027-03-14T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>NVIDIA’s GTC 2027 conference returns to San Jose on March 15–18, 2027. The operator’s current homepage and call-for-submissions page both give those dates; the pin’s earlier March 14 start is corrected.<cite data-ref=\"https://www.nvidia.com/gtc/\"></cite><cite data-ref=\"https://www.nvidia.com/gtc/call-for-submissions/\"></cite></li><li>The call-for-submissions invites research posters and content suggestions for talks, panels and technical training on AI and accelerated computing. The programme and keynote roster for this edition are not treated as already announced.<cite data-ref=\"https://www.nvidia.com/gtc/call-for-submissions/\"></cite></li><li>The current event homepage offers notification when registration opens. Berlin and Washington registration links refer to separate 2026 events; the San Jose 2027 ticket price and sale date remain unpublished.<cite data-ref=\"https://www.nvidia.com/gtc/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>NVIDIA GTC, the company's flagship AI conference, returns to San Jose from Sunday 14 to Thursday 18 March 2027: NVIDIA's poster call says the event takes place between those days, with the exact schedule confirmed nearer the time<cite data-ref=\"https://www.nvidia.com/gtc/call-for-submissions/\"></cite>; the headline conference dates are 15-18 March<cite data-ref=\"https://www.nvidia.com/gtc/\"></cite><cite data-ref=\"https://www.nvidia.com/gtc/call-for-submissions/\"></cite></li><li>Registration has not opened yet; NVIDIA's page invites visitors to be notified when it does<cite data-ref=\"https://www.nvidia.com/gtc/\"></cite></li><li>The poster call opens on 29 September 2026 at 9 a.m. PT and closes on 10 November 2026 at 5 p.m. PT, with acceptances from mid-December<cite data-ref=\"https://www.nvidia.com/gtc/call-for-submissions/\"></cite></li><li>The 2027 key themes are agentic AI, AI infrastructure, AI for science, content creation and rendering, CUDA and libraries, cybersecurity and AI safety, data processing, industrial AI, and physical AI and robotics<cite data-ref=\"https://www.nvidia.com/gtc/\"></cite></li><li>GTC San Jose is held at the San Jose McEnery Convention Center<cite data-ref=\"https://www.nvidia.com/gtc/travel-and-venue/\"></cite>; the 2026 edition opened with Jensen Huang's keynote to a capacity crowd at the SAP Center on 16 March and ran through 19 March<cite data-ref=\"https://blogs.nvidia.com/blog/gtc-2026-news/\"></cite></li><li>GTC 2025 drew about 25,000 people to San Jose, and the keynote moved to the SAP Center, which holds about 17,000<cite data-ref=\"https://en.wikipedia.org/wiki/Nvidia_GTC\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-10-13T02:20:57.860Z"
   }
 ]

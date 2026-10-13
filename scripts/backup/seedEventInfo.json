@@ -363,17 +363,17 @@
   {
     "pinId": 1954,
     "performers": [],
-    "ticketUrl": "https://losangelesrams.nflonlocation.com/d/rams-super-bowl?utm_source=sofistadium.com&utm_medium=referral&utm_campaign=super_bowl_teams-venue_events_schedule_button",
+    "ticketUrl": null,
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.sofistadium.com/events/detail/super-bowl-lxi",
-    "checkedAt": "2026-09-26T15:38:45.971Z"
+    "checkedAt": "2026-10-13T02:22:33.773Z"
   },
   {
     "pinId": 1955,
@@ -634,11 +634,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.mwcbarcelona.com/",
-    "checkedAt": "2026-09-26T15:38:46.380Z"
+    "checkedAt": "2026-10-13T02:22:50.992Z"
   },
   {
     "pinId": 2110,
@@ -785,85 +785,81 @@
     "pinId": 2318,
     "performers": [
       {
-        "url": "https://www.ticketmaster.com.au/calvin-harris-tickets/artist/1149552",
         "name": "Calvin Harris",
-        "type": "PerformingGroup"
+        "type": "Person"
       }
     ],
-    "ticketUrl": "https://www.ticketmaster.com.au/calvin-harris-australia-tour-2027-perth-18-02-2027/event/1300652FB1CD5525",
+    "ticketUrl": null,
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "InStock",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.ticketmaster.com.au/calvin-harris-australia-tour-2027-perth-18-02-2027/event/1300652FB1CD5525",
-    "checkedAt": "2026-09-26T15:38:46.026Z"
+    "source": "claude",
+    "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
+    "checkedAt": "2026-10-13T02:22:35.833Z"
   },
   {
     "pinId": 2319,
     "performers": [
       {
-        "url": "https://www.ticketmaster.com.au/calvin-harris-tickets/artist/1149552",
         "name": "Calvin Harris",
-        "type": "PerformingGroup"
+        "type": "Person"
       }
     ],
-    "ticketUrl": "https://www.ticketmaster.com.au/calvin-harris-australia-tour-2027-bowen-hills-19-02-2027/event/1300652FAD854D9E",
-    "lowPrice": 193.57,
-    "highPrice": 448.45,
-    "priceCurrency": "AUD",
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "InStock",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.ticketmaster.com.au/calvin-harris-australia-tour-2027-bowen-hills-19-02-2027/event/1300652FAD854D9E",
-    "checkedAt": "2026-09-26T15:38:46.085Z"
+    "source": "claude",
+    "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
+    "checkedAt": "2026-10-13T02:22:37.896Z"
   },
   {
     "pinId": 2320,
     "performers": [
       {
-        "url": "https://www.ticketmaster.com.au/calvin-harris-tickets/artist/1149552",
         "name": "Calvin Harris",
-        "type": "PerformingGroup"
+        "type": "Person"
       }
     ],
-    "ticketUrl": "https://www.ticketmaster.com.au/calvin-harris-australia-tour-2027-sydney-20-02-2027/event/1300652F8EFD20A3",
-    "lowPrice": 193.57,
-    "highPrice": 448.45,
-    "priceCurrency": "AUD",
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "InStock",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.ticketmaster.com.au/calvin-harris-australia-tour-2027-sydney-20-02-2027/event/1300652F8EFD20A3",
-    "checkedAt": "2026-09-26T15:38:46.209Z"
+    "source": "claude",
+    "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
+    "checkedAt": "2026-10-13T02:22:39.996Z"
   },
   {
     "pinId": 2321,
     "performers": [
       {
-        "url": "https://www.ticketmaster.com.au/calvin-harris-tickets/artist/1149552",
         "name": "Calvin Harris",
-        "type": "PerformingGroup"
+        "type": "Person"
       }
     ],
-    "ticketUrl": "https://www.ticketmaster.com.au/calvin-harris-australia-tour-2027-flemington-26-02-2027/event/2500652FAEBB5F95",
-    "lowPrice": 193.57,
-    "highPrice": 448.45,
-    "priceCurrency": "AUD",
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "InStock",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.ticketmaster.com.au/calvin-harris-australia-tour-2027-flemington-26-02-2027/event/2500652FAEBB5F95",
-    "checkedAt": "2026-09-26T15:38:46.325Z"
+    "source": "claude",
+    "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
+    "checkedAt": "2026-10-13T02:22:44.713Z"
   },
   {
     "pinId": 2331,
@@ -1041,11 +1037,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.rolandgarros.com/en-us/",
-    "checkedAt": "2026-09-26T15:38:47.422Z"
+    "checkedAt": "2026-10-13T02:23:08.466Z"
   },
   {
     "pinId": 2483,
@@ -1056,11 +1052,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.rolandgarros.com/en-us/",
-    "checkedAt": "2026-09-26T15:38:47.312Z"
+    "checkedAt": "2026-10-13T02:23:06.354Z"
   },
   {
     "pinId": 2484,
@@ -1975,11 +1971,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.nvidia.com/gtc/",
-    "checkedAt": "2026-09-26T15:38:46.738Z"
+    "checkedAt": "2026-10-13T02:22:48.933Z"
   },
   {
     "pinId": 2964,
@@ -2225,11 +2221,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.vmware.com/explore",
-    "checkedAt": "2026-09-26T15:38:46.441Z"
+    "checkedAt": "2026-10-13T02:22:42.394Z"
   },
   {
     "pinId": 3101,
@@ -3569,17 +3565,23 @@
   {
     "pinId": 3317,
     "performers": [],
-    "ticketUrl": "https://www.letsdothis.com/us/checkout/ticket?preferred=true&eventId=268210&occurrenceId=21111176959&utm_source=website&utm_medium=organic&utm_campaign=general-ticket-selection&utm_organiser_id=82706",
+    "ticketUrl": "https://www.letsdothis.com/us/o/82706/checkout/ticket?preferred=true&eventId=268210&occurrenceId=21111176959&utm_source=website&utm_medium=organic&utm_campaign=general-ticket-selection&utm_organiser_id=82706&login=skipped",
     "lowPrice": 69,
-    "highPrice": 109,
+    "highPrice": 69,
     "priceCurrency": "USD",
-    "tiers": [],
+    "tiers": [
+      {
+        "note": "Includes processing fees. VIP add-on is separate; later releases are not current prices.",
+        "label": "Current release — 12k registration",
+        "price": 69
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.baytobreakers.com/12k",
-    "checkedAt": "2026-09-26T15:38:47.139Z"
+    "checkedAt": "2026-10-13T02:22:59.660Z"
   },
   {
     "pinId": 3320,
@@ -3706,9 +3708,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.mlb.com/press-release/padres-2027-schedule",
-    "checkedAt": "2026-09-26T15:38:46.853Z"
+    "checkedAt": "2026-10-13T02:22:53.412Z"
   },
   {
     "pinId": 3374,
@@ -3880,11 +3882,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.nabshow.com/las-vegas/",
-    "checkedAt": "2026-09-26T15:38:46.909Z"
+    "checkedAt": "2026-10-13T02:22:55.543Z"
   },
   {
     "pinId": 3420,
@@ -3910,11 +3912,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.googlecloudevents.com/next-vegas",
-    "checkedAt": "2026-09-26T15:38:46.965Z"
+    "checkedAt": "2026-10-13T02:23:01.722Z"
   },
   {
     "pinId": 3434,
@@ -4038,17 +4040,28 @@
   {
     "pinId": 3450,
     "performers": [],
-    "ticketUrl": "https://lasvegas.edc.com/tickets/",
+    "ticketUrl": "https://edclasvegas.frontgatetickets.com/",
     "lowPrice": 399.99,
-    "highPrice": 1699.99,
+    "highPrice": 599.99,
     "priceCurrency": "USD",
-    "tiers": [],
+    "tiers": [
+      {
+        "note": "Announced starting price, venue release May 19, 2026.",
+        "label": "One-weekend GA",
+        "price": 399.99
+      },
+      {
+        "note": "Announced starting price, venue release May 19, 2026.",
+        "label": "Two-weekend GA",
+        "price": 599.99
+      }
+    ],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.lvms.com/media/news/edc-las-vegas-introduces-new-dusk-till-dawn-2027-day-festival-concept-spanning-two-consecutive-weekends.html",
-    "checkedAt": "2026-09-26T15:38:47.081Z"
+    "checkedAt": "2026-10-13T02:22:57.604Z"
   },
   {
     "pinId": 3471,
@@ -4589,11 +4602,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.salesforce.com/events/",
-    "checkedAt": "2026-09-26T15:38:46.584Z"
+    "source": "claude",
+    "sourceUrl": "https://www.salesforce.com/tdx/form-save-date-tdx27/",
+    "checkedAt": "2026-10-13T02:22:46.840Z"
   },
   {
     "pinId": 3557,
@@ -4604,11 +4617,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": null,
     "onSaleDate": null,
-    "source": "session",
-    "sourceUrl": "https://www.salesforce.com/events/",
-    "checkedAt": "2026-09-26T15:38:47.258Z"
+    "source": "claude",
+    "sourceUrl": "https://www.salesforce.com/connections/join-the-list/",
+    "checkedAt": "2026-10-13T02:23:03.824Z"
   },
   {
     "pinId": 3601,
@@ -9621,6 +9634,21 @@
     "checkedAt": "2026-10-10T21:45:55.126Z"
   },
   {
+    "pinId": 7592,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.worldchocolatemasters.com/final-2026",
+    "checkedAt": "2026-10-13T14:05:51.695Z"
+  },
+  {
     "pinId": 7615,
     "performers": [],
     "ticketUrl": "https://web.cvent.com/event/44636c2d-0105-4515-8985-6a3f6d217342/summary",
@@ -9666,5 +9694,127 @@
     "source": "hand",
     "sourceUrl": "https://web.cvent.com/event/44636c2d-0105-4515-8985-6a3f6d217342/summary",
     "checkedAt": "2026-10-11T14:59:46.326Z"
+  },
+  {
+    "pinId": 7616,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://mundomezcal.mx/",
+    "checkedAt": "2026-10-13T14:02:41.003Z"
+  },
+  {
+    "pinId": 7630,
+    "performers": [],
+    "ticketUrl": "https://www.salon-du-chocolat.com/en/paris/practical-info/buy-my-ticket",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.salon-du-chocolat.com/en/paris",
+    "checkedAt": "2026-10-13T14:05:51.749Z"
+  },
+  {
+    "pinId": 7635,
+    "performers": [
+      {
+        "name": "James Hoffmann",
+        "type": "Person"
+      },
+      {
+        "name": "Maxwell Dashwood",
+        "type": "Person"
+      },
+      {
+        "name": "Peter McCombie",
+        "type": "Person"
+      },
+      {
+        "name": "Spencer Hyman",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://cocoarunners.com/event/craft-chocolate-fair-entry-time-slots/",
+    "lowPrice": 5,
+    "highPrice": 5,
+    "priceCurrency": "GBP",
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://cocoarunners.com/fair",
+    "checkedAt": "2026-10-13T14:02:41.118Z"
+  },
+  {
+    "pinId": 7649,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "JPY",
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://pannofes.jp/event/makuhari2026/",
+    "checkedAt": "2026-10-13T14:05:51.602Z"
+  },
+  {
+    "pinId": 7650,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "KRW",
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.mcst.go.kr/site/s_culture/festival/festivalView.jsp?pSeq=11970",
+    "checkedAt": "2026-10-13T14:02:41.064Z"
+  },
+  {
+    "pinId": 13924,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://grycan.pl/oferta/nowosci/",
+    "checkedAt": "2026-10-13T14:02:40.770Z"
+  },
+  {
+    "pinId": 14240,
+    "performers": [],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://english.beijing.gov.cn/whatson/events/forum/202609/t20260930_4886674.html",
+    "checkedAt": "2026-10-13T14:05:51.098Z"
   }
 ]
