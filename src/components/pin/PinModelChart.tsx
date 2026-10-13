@@ -182,12 +182,12 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
                 setHover(null);
                 setSelected(null);
               }}
-              className={`rounded-full px-2.5 py-0.5 text-xs font-medium tabular-nums ring-1 ring-inset transition-colors ${
+              className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs leading-4 font-medium tabular-nums ring-1 ring-inset transition-colors ${
                 y === year ? 'bg-accent/15 text-ink ring-accent' : 'bg-raised text-muted ring-line hover:bg-raised-2 hover:text-ink'
               }`}
             >
               {y}
-              {pinned && pinned.year === y ? <span aria-hidden className="ms-1 inline-block size-1.5 rounded-full bg-accent align-middle" /> : null}
+              {pinned && pinned.year === y ? <span aria-hidden className="inline-block size-1.5 shrink-0 rounded-full bg-accent" /> : null}
             </button>
           ))}
         </div>

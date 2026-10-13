@@ -1159,5 +1159,799 @@
         }
       }
     ]
+  },
+  {
+    "pinId": 2455,
+    "scores": {
+      "food": 3.5,
+      "service": 3.5,
+      "ambience": 3.5,
+      "value": 2.5,
+      "acclaim": 2
+    },
+    "basis": "Tripadvisor (13 reviews, 4.6 overall, read 2026-10-12, only 13 reviews so no axis is scored above 3.5): Service 4.3, Food 4.4, Value 4.0, Atmosphere 4.5. Acclaim 2: listed in the MICHELIN Guide (Selected, no star or Bib shown).",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g60750-d15306757-Reviews-Menya_Ultra_Mira_Mesa-San_Diego_California.html",
+    "reviews": [
+      {
+        "url": "https://www.shermansfoodadventures.com/2022/10/menya-ultra-mira-mesa.html",
+        "title": "Menya Ultra (Mira Mesa) (Sherman's Food Adventures, food blog)",
+        "publishedDate": "2022-10-19",
+        "quote": "The fermented flavor of the miso really came through with a deep salty richness (without actually being salty)."
+      },
+      {
+        "url": "https://mmm-yoso.com/?p=12688",
+        "title": "Menya Ultra (Mira Mesa) Revisited (Mmm-Yoso, food blog)",
+        "publishedDate": "2023-11-16",
+        "quote": "The noodles were cooked to a perfect al dente, with a nice stretch, slippery, and just right for slurping."
+      },
+      {
+        "url": "https://mmm-yoso.com/?p=38518",
+        "title": "Revisits - Menya Ultra (Mira Mesa) and Ramen Menma (Mmm-Yoso, food blog)",
+        "publishedDate": "2018-11-27",
+        "quote": "The broth was a bit richer and full bodied, the fragrance, a nice funky tonkotsu, the flavor mild and not too salty."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60750-d15306757-Reviews-Menya_Ultra_Mira_Mesa-San_Diego_California.html",
+        "title": "Menya Ultra (Mira Mesa) on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.6 from 13 reviews with Service 4.3, Food 4.4, Value 4.0 and Atmosphere 4.5.",
+        "text": "4.6 (13) Service 4.3 Food 4.4 Value 4.0 Atmosphere 4.5.",
+        "wiki": {
+          "title": "Menya Ultra (Mira Mesa) on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Menya Ultra (Mira Mesa) in San Diego: 4.6 overall from 13 reviews; Service 4.3, Food 4.4, Value 4.0, Atmosphere 4.5.",
+          "body": "# Menya Ultra (Mira Mesa) on Tripadvisor\n\nTripadvisor's listing for Menya Ultra (Mira Mesa) in San Diego, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.6 out of 5 from 13 reviews.\n- Service: 4.3\n- Food: 4.4\n- Value: 4.0\n- Atmosphere: 4.5\n\n## Use on the pin\n\nWith only 13 reviews the rubric caps each diner axis at 3.5; Value 4.0 is scored 2.5. Critic acclaim is 2 for the Michelin listing.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "San Diego"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/menya-ultra",
+        "title": "Menya Ultra - a MICHELIN Guide Restaurant (listing)",
+        "reasoning": "The MICHELIN Guide lists Menya Ultra in San Diego ($$, Japanese) with no star or Bib Gourmand shown (Selected).",
+        "text": "Menya Ultra. San Diego, CA. $$. Japanese. No distinction icon.",
+        "wiki": {
+          "title": "Menya Ultra - a MICHELIN Guide Restaurant (listing)",
+          "summary": "The MICHELIN Guide lists Menya Ultra in San Diego ($$, Japanese) with no star or Bib Gourmand icon, i.e. Selected.",
+          "body": "# Menya Ultra in the MICHELIN Guide\n\nResearch note for the pin's dining rubric, from the guide's San Diego listing (38 restaurants) and restaurant page read on 2026-10-12.\n\n- Price band $$; cuisine Japanese.\n- Distinction: none shown (Selected).\n- The listing gives only 'San Diego', not the Mira Mesa or Clairemont branch.\n\n## Use on the pin\n\nA guide listing without a distinction is the 'listed in a guide' tier, so Critic acclaim is 2.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "San Diego"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2557,
+    "scores": {
+      "food": 4,
+      "service": 4,
+      "ambience": 2.5,
+      "value": 2.5,
+      "acclaim": 3
+    },
+    "basis": "Tripadvisor (773 reviews, 4.3 overall, read 2026-10-12): Service 4.4, Food 4.4, Value 3.9, Atmosphere 4.0. Acclaim 3: James Beard Foundation America's Classics award (2000) per Wikipedia's list; not in the MICHELIN Guide's California listing.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g60713-d370407-Reviews-Swan_Oyster_Depot-San_Francisco_California.html",
+    "reviews": [
+      {
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/swan-oyster-depot",
+        "title": "Swan Oyster Depot - Review - Nob Hill - San Francisco (The Infatuation)",
+        "publishedDate": "2024-09-27",
+        "quote": "They arrive ice-cold, plump, and shimmering, like any briny bivalve should be."
+      },
+      {
+        "url": "https://projects.sfchronicle.com/2017/top-100-restaurants/swan-oyster-depot",
+        "title": "Top 100 Restaurants 2017: Swan Oyster Depot (San Francisco Chronicle)",
+        "publishedDate": null,
+        "quote": "They keep things simple — but every item is pristine, including the best cracked crab in the Bay Area."
+      },
+      {
+        "url": "https://timeout.com/san-francisco/restaurants/Swan-Oyster-Depot",
+        "title": "Swan Oyster Depot (Time Out San Francisco)",
+        "publishedDate": "2018-09-06",
+        "quote": "Dungeness is their specialty, served cold with a generous dish of Louie sauce."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60713-d370407-Reviews-Swan_Oyster_Depot-San_Francisco_California.html",
+        "title": "Swan Oyster Depot on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.3 from 773 reviews with Service 4.4, Food 4.4, Value 3.9 and Atmosphere 4.0.",
+        "text": "4.3 (773) Service 4.4 Food 4.4 Value 3.9 Atmosphere 4.0.",
+        "wiki": {
+          "title": "Swan Oyster Depot on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Swan Oyster Depot in San Francisco: 4.3 overall from 773 reviews; Service 4.4, Food 4.4, Value 3.9, Atmosphere 4.0.",
+          "body": "# Swan Oyster Depot on Tripadvisor\n\nTripadvisor's listing for Swan Oyster Depot in San Francisco, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.3 out of 5 from 773 reviews.\n- Service: 4.4\n- Food: 4.4\n- Value: 3.9\n- Atmosphere: 4.0\n\n## Use on the pin\n\nFood 4 and Service 4 from 4.4; Ambience 2.5 and Value 2.5 from 4.0 and 3.9. Critic acclaim is 3 for the James Beard America's Classics award.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "San Francisco"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_James_Beard_America%27s_Classics",
+        "title": "James Beard America's Classics - Swan Oyster Depot (Wikipedia list)",
+        "reasoning": "Wikipedia's list of James Beard America's Classics: Swan Oyster Depot, California, San Francisco, opened 1912, awarded 2000.",
+        "text": "Swan Oyster Depot | California | San Francisco | 1912 | 2000",
+        "wiki": {
+          "title": "James Beard America's Classics - Swan Oyster Depot (Wikipedia list)",
+          "summary": "Wikipedia's List of James Beard America's Classics shows Swan Oyster Depot (San Francisco, opened 1912) as an America's Classic in 2000.",
+          "body": "# James Beard America's Classics - Swan Oyster Depot\n\nResearch note for the pin's dining rubric, from Wikipedia's List of James Beard America's Classics (the whole list was read, in two fetches, on 2026-10-12).\n\n- Row: Swan Oyster Depot | California | San Francisco | opened 1912 | awarded 2000.\n- Swan's own article says it won the Foundation's America's Classics award in 2000 and has been a semi-finalist for service (2019).\n- The MICHELIN Guide's California listing (515 restaurants, all pages read) does not include it.\n\n## Use on the pin\n\nCritic acclaim is scored 3: a national best-of award (America's Classics).\n",
+          "tags": [
+            "James Beard Foundation",
+            "America's Classics",
+            "critic acclaim",
+            "San Francisco"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2558,
+    "scores": {
+      "food": 4,
+      "service": 4,
+      "ambience": 3.5,
+      "value": 2.5,
+      "acclaim": 2
+    },
+    "basis": "Tripadvisor (1,494 reviews, 4.4 overall, read 2026-10-12): Service 4.5, Food 4.5, Value 3.9, Atmosphere 4.3. Acclaim 2: listed in the MICHELIN Guide (Selected, no star); its one star (2006-2009) is a past edition and not counted.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g32066-d582405-Reviews-Chez_Panisse-Berkeley_California.html",
+    "reviews": [
+      {
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/chez-panisse",
+        "title": "Chez Panisse - Review - Berkeley - San Francisco (The Infatuation)",
+        "publishedDate": "2023-06-21",
+        "quote": "An evening at Chez Panisse is lovely, if predictable at times."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g32066-d582405-Reviews-Chez_Panisse-Berkeley_California.html",
+        "title": "Chez Panisse on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.4 from 1,494 reviews with Service 4.5, Food 4.5, Value 3.9 and Atmosphere 4.3.",
+        "text": "4.4 (1494) Service 4.5 Food 4.5 Value 3.9 Atmosphere 4.3.",
+        "wiki": {
+          "title": "Chez Panisse on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Chez Panisse in Berkeley: 4.4 overall from 1,494 reviews; Service 4.5, Food 4.5, Value 3.9, Atmosphere 4.3.",
+          "body": "# Chez Panisse on Tripadvisor\n\nTripadvisor's listing for Chez Panisse in Berkeley, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.4 out of 5 from 1,494 reviews.\n- Service: 4.5\n- Food: 4.5\n- Value: 3.9\n- Atmosphere: 4.3\n\n## Use on the pin\n\nFood 4 and Service 4 from 4.5; Ambience 3.5 from 4.3; Value 2.5 from 3.9. Critic acclaim is 2 for the current guide listing.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Berkeley"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/california/berkeley/restaurant/chez-panisse",
+        "title": "Chez Panisse - a MICHELIN Guide Restaurant (listing)",
+        "reasoning": "The MICHELIN Guide lists Chez Panisse (Berkeley, Californian, $$$$) with no star or Bib icon (Selected).",
+        "text": "Chez Panisse. 1517 Shattuck Ave., Berkeley. Californian. $$$$. No distinction icon.",
+        "wiki": {
+          "title": "Chez Panisse - a MICHELIN Guide Restaurant (listing)",
+          "summary": "The MICHELIN Guide lists Chez Panisse in Berkeley ($$$$, Californian) with no star or Bib icon, i.e. Selected; Wikipedia says it held one star from 2006 to 2009.",
+          "body": "# Chez Panisse in the MICHELIN Guide\n\nResearch note for the pin's dining rubric, from the guide's restaurant page (read verbatim) and the California listing on 2026-10-12.\n\n- Address: 1517 Shattuck Ave., Berkeley; cuisine Californian; price $$$$.\n- Distinction: none shown (Selected).\n- Wikipedia's Chez Panisse article states Michelin awarded one star in its San Francisco Bay Area guide from 2006 through 2009 and that it lost the star in 2010. That is a past edition and not counted.\n\n## Use on the pin\n\nA listing without a distinction is the 'listed in a guide' tier, so Critic acclaim is 2.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "Berkeley"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2573,
+    "scores": {
+      "food": 2,
+      "service": 2.5,
+      "ambience": 2.5,
+      "value": 1.5,
+      "acclaim": 0
+    },
+    "basis": "Tripadvisor (3,719 reviews, 3.8 overall, read 2026-10-12): Service 3.9, Food 3.8, Value 3.4, Atmosphere 3.9. Acclaim 0: not among the 33 restaurants in the MICHELIN Guide's Louisiana listing (read in full) and not an America's Classic.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g60864-d426392-Reviews-Antoine_s_Restaurant-New_Orleans_Louisiana.html",
+    "reviews": [
+      {
+        "url": "https://www.gayot.com/restaurants/antoines-restaurant-new-orleans-la-70130_18no9909.html",
+        "title": "Antoine's Restaurant New Orleans (GAYOT)",
+        "publishedDate": null,
+        "quote": "Today, it seems like a living museum of French Creole dining from its golden era."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60864-d426392-Reviews-Antoine_s_Restaurant-New_Orleans_Louisiana.html",
+        "title": "Antoine's on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 3.8 from 3,719 reviews with Service 3.9, Food 3.8, Value 3.4 and Atmosphere 3.9.",
+        "text": "3.8 (3719) Service 3.9 Food 3.8 Value 3.4 Atmosphere 3.9.",
+        "wiki": {
+          "title": "Antoine's on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Antoine's in New Orleans: 3.8 overall from 3,719 reviews; Service 3.9, Food 3.8, Value 3.4, Atmosphere 3.9.",
+          "body": "# Antoine's on Tripadvisor\n\nTripadvisor's listing for Antoine's in New Orleans, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 3.8 out of 5 from 3,719 reviews.\n- Service: 3.9\n- Food: 3.8\n- Value: 3.4\n- Atmosphere: 3.9\n\n## Use on the pin\n\nScored from Tripadvisor's 3.8 overall: Food 2, Service 2.5, Ambience 2.5, Value 1.5. Critic acclaim is 0: the guide covers Louisiana and its listing was read in full.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "New Orleans"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/louisiana/restaurants",
+        "title": "MICHELIN Guide - Louisiana restaurants (listing)",
+        "reasoning": "The guide's own Louisiana listing has 33 restaurants (Emeril's 2 stars, Zasu and Saint-Germain 1 star each, 11 Bib Gourmand, the rest Selected); Antoine's is not among them.",
+        "text": "Louisiana: 33 restaurants. Antoine's not listed.",
+        "wiki": {
+          "title": "MICHELIN Guide - Louisiana restaurants (listing)",
+          "summary": "The MICHELIN Guide's Louisiana listing has 33 restaurants (Emeril's two stars; Zasu and Saint-Germain one star each; 11 Bib Gourmand); Antoine's is not listed.",
+          "body": "# MICHELIN Guide - Louisiana listing\n\nResearch note for the pin's dining rubric, from the guide's Louisiana listing (one page, 33 restaurants, read verbatim on 2026-10-12).\n\n- Includes Emeril's (2 stars), Zasu and Saint-Germain (1 star each), 11 Bib Gourmand, the rest Selected; also Galatoire's, Herbsaint, Restaurant August, Clancy's, Willie Mae's and Pêche.\n- Antoine's: not listed.\n- Antoine's is also absent from Wikipedia's List of James Beard America's Classics (whole list read).\n\n## Use on the pin\n\nBecause the guide covers the state and its own listing was read in full, Critic acclaim is 0 (no recognition found).\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "New Orleans"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2582,
+    "scores": {
+      "food": 2,
+      "service": 1.5,
+      "ambience": 1,
+      "value": 1.5,
+      "acclaim": null
+    },
+    "basis": "Tripadvisor (2,974 reviews, 3.7 overall, read 2026-10-12): Service 3.4, Food 3.7, Value 3.4, Atmosphere 3.3. Acclaim is n/a: not an America's Classic, and the MICHELIN Guide does not cover Philadelphia.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g60795-d493560-Reviews-Pat_s_King_of_Steaks-Philadelphia_Pennsylvania.html",
+    "reviews": [
+      {
+        "url": "https://www.gayot.com/restaurants/awards/pats-king-steaks-philadelphia-pa-19147_11ph9975.html",
+        "title": "Pat's King of Steaks Restaurant Philadelphia (GAYOT)",
+        "publishedDate": null,
+        "quote": "This iconic spot for cheesesteaks in South Philly is allegedly the place where the Philadelphia sandwich was first invented."
+      },
+      {
+        "url": "https://cigar-coop.com/2024/12/pats-king-of-steaks-cheesesteak-review-the-blog.html",
+        "title": "Pat's King of Steaks Cheesesteak Review (Cigar Coop, food blog)",
+        "publishedDate": "2024-12-06",
+        "quote": "The meat really stood out here."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60795-d493560-Reviews-Pat_s_King_of_Steaks-Philadelphia_Pennsylvania.html",
+        "title": "Pat's King of Steaks on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 3.7 from 2,974 reviews with Service 3.4, Food 3.7, Value 3.4 and Atmosphere 3.3.",
+        "text": "3.7 (2974) Service 3.4 Food 3.7 Value 3.4 Atmosphere 3.3.",
+        "wiki": {
+          "title": "Pat's King of Steaks on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Pat's King of Steaks in Philadelphia: 3.7 overall from 2,974 reviews; Service 3.4, Food 3.7, Value 3.4, Atmosphere 3.3.",
+          "body": "# Pat's King of Steaks on Tripadvisor\n\nTripadvisor's listing for Pat's King of Steaks in Philadelphia, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 3.7 out of 5 from 2,974 reviews.\n- Service: 3.4\n- Food: 3.7\n- Value: 3.4\n- Atmosphere: 3.3\n\n## Use on the pin\n\nScored from Tripadvisor's 3.7 overall: Food 2, Service 1.5, Ambience 1, Value 1.5. Critic acclaim is n/a because no guide covers the city.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Philadelphia"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2592,
+    "scores": {
+      "food": 1.5,
+      "service": 2.5,
+      "ambience": 2.5,
+      "value": 2,
+      "acclaim": 0
+    },
+    "basis": "Tripadvisor (5,571 reviews, 3.8 overall, read 2026-10-12): Service 3.9, Food 3.5, Value 3.8, Atmosphere 3.9. Acclaim 0: not among the 62 restaurants in the MICHELIN Guide's Georgia listing (both pages read, one partly summarised) and not an America's Classic.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g60898-d492279-Reviews-The_Varsity-Atlanta_Georgia.html",
+    "reviews": [
+      {
+        "url": "https://thetakeout.com/atlanta-the-varsity-chili-dogs-1835785500",
+        "title": "91 Years Of Chili Dogs: How Atlanta's The Varsity Lasts And Lasts (The Takeout, quoting Wendell Brock)",
+        "publishedDate": "2019-07-07",
+        "quote": "The meat is ground super fine and there are no beans in it."
+      },
+      {
+        "url": "https://gardenandgun.com/varsity-atlanta-history",
+        "title": "The Varsity Celebrates 90 Years in Atlanta (Garden & Gun, Aug/Sept 2018 issue)",
+        "publishedDate": null,
+        "quote": "Loosen your belt one more notch and finish off your meal with a fried pie—peach, naturally."
+      },
+      {
+        "url": "https://jaybusbee.substack.com/p/the-best-burger-ever",
+        "title": "Atlanta's Varsity: Best burger ever. Really. (Substack newsletter)",
+        "publishedDate": "2022-10-15",
+        "quote": "The Frosted Orange has a flavor dangerously close to children's aspirin."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60898-d492279-Reviews-The_Varsity-Atlanta_Georgia.html",
+        "title": "The Varsity on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 3.8 from 5,571 reviews with Service 3.9, Food 3.5, Value 3.8 and Atmosphere 3.9.",
+        "text": "3.8 (5571) Service 3.9 Food 3.5 Value 3.8 Atmosphere 3.9.",
+        "wiki": {
+          "title": "The Varsity on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for The Varsity in Atlanta: 3.8 overall from 5,571 reviews; Service 3.9, Food 3.5, Value 3.8, Atmosphere 3.9.",
+          "body": "# The Varsity on Tripadvisor\n\nTripadvisor's listing for The Varsity in Atlanta, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 3.8 out of 5 from 5,571 reviews.\n- Service: 3.9\n- Food: 3.5\n- Value: 3.8\n- Atmosphere: 3.9\n\n## Use on the pin\n\nScored from Tripadvisor's 3.8 overall: Food 1.5, Service 2.5, Ambience 2.5, Value 2. Critic acclaim is 0: the guide covers Georgia and its listing was read.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Atlanta"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/georgia/restaurants",
+        "title": "MICHELIN Guide - Georgia restaurants (listing)",
+        "reasoning": "The guide's own Georgia listing has 62 restaurants (8 one-star, 13 Bib Gourmand, 41 Selected); The Varsity is not among them.",
+        "text": "Georgia: 62 restaurants (8 one-star, 13 Bib Gourmand, 41 Selected). The Varsity not listed.",
+        "wiki": {
+          "title": "MICHELIN Guide - Georgia restaurants (listing)",
+          "summary": "The MICHELIN Guide's Georgia listing has 62 restaurants (8 one-star, 13 Bib Gourmand, 41 Selected); The Varsity is not listed.",
+          "body": "# MICHELIN Guide - Georgia listing\n\nResearch note for the pin's dining rubric, from the guide's Georgia listing (2 pages, 62 restaurants) read on 2026-10-12.\n\n- 8 one-star, 13 Bib Gourmand, 41 Selected.\n- The Varsity: not listed. About two thirds of page 1 came back verbatim and the rest as a summary, so a missed entry there is possible but unlikely.\n- Not in Wikipedia's List of James Beard America's Classics (whole list read); the Georgia entry there is The Busy Bee Cafe (2022).\n\n## Use on the pin\n\nCritic acclaim is 0 (no recognition found) because the guide covers the state.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "Atlanta"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2687,
+    "scores": {
+      "food": 4.5,
+      "service": 4,
+      "ambience": 5,
+      "value": 2,
+      "acclaim": 0
+    },
+    "basis": "Tripadvisor (53 reviews, 4.2 overall, read 2026-10-12): Service 4.4, Food 4.6, Value 3.8, Atmosphere 5.0. Acclaim 0: not among the 361 restaurants in the MICHELIN Guide's New York City listing (all 8 pages read, 6 partly summarised).",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g60827-d11844101-Reviews-ICHIRAN_Brooklyn-Brooklyn_New_York.html",
+    "reviews": [
+      {
+        "url": "https://www.theinfatuation.com/new-york/reviews/ichiran",
+        "title": "Ichiran - Review - Bushwick - New York (The Infatuation)",
+        "publishedDate": "2022-01-14",
+        "quote": "If you're in the area, this is good soup, and the experience is a novelty worth enjoying at least once."
+      },
+      {
+        "url": "https://www.timeout.com/newyork/restaurants/two-japanese-noodle-titans-take-on-new-york",
+        "title": "Two Japanese noodle titans take on New York (Time Out New York, 2016)",
+        "publishedDate": "2016-12-06",
+        "quote": "Thin and straight, the fresh noodles have both spring and bite."
+      },
+      {
+        "url": "https://www.bkmag.com/2016/10/24/eat-pay-leave-inside-first-brooklyn-outpost-ichiran/",
+        "title": "Eat, Pay, Leave: Inside the First Brooklyn Outpost of Ichiran (Brooklyn Magazine, 2016)",
+        "publishedDate": "2016-10-24",
+        "quote": "When followed to the letter, a meal at Ichiran can indeed be transcendent, if exceedingly fleeting—as emptying your bowl and laying your chopsticks to rest hastens a swift eviction to Johnson Street."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60827-d11844101-Reviews-ICHIRAN_Brooklyn-Brooklyn_New_York.html",
+        "title": "Ichiran Brooklyn on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.2 from 53 reviews with Service 4.4, Food 4.6, Value 3.8 and Atmosphere 5.0.",
+        "text": "4.2 (53) Service 4.4 Food 4.6 Value 3.8 Atmosphere 5.0.",
+        "wiki": {
+          "title": "Ichiran Brooklyn on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Ichiran Brooklyn in Brooklyn: 4.2 overall from 53 reviews; Service 4.4, Food 4.6, Value 3.8, Atmosphere 5.0.",
+          "body": "# Ichiran Brooklyn on Tripadvisor\n\nTripadvisor's listing for Ichiran Brooklyn in Brooklyn, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.2 out of 5 from 53 reviews.\n- Service: 4.4\n- Food: 4.6\n- Value: 3.8\n- Atmosphere: 5.0\n\n## Use on the pin\n\nFood 4.5 from 4.6; Service 4 from 4.4; Ambience 5 from 5.0; Value 2 from 3.8. Reviews are mostly 2016-2019. Critic acclaim is 0.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Brooklyn"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+        "title": "MICHELIN Guide - New York City restaurants (listing)",
+        "reasoning": "The guide's own New York City listing has 361 restaurants over 8 pages; Ichiran is not among them.",
+        "text": "New York City, USA and surroundings: 361 restaurants. Ichiran not listed.",
+        "wiki": {
+          "title": "MICHELIN Guide - New York City restaurants (listing)",
+          "summary": "The MICHELIN Guide's New York City listing has 361 restaurants over 8 pages; Ichiran Brooklyn is not listed.",
+          "body": "# MICHELIN Guide - New York City listing\n\nResearch note for the pin's dining rubric, from the guide's New York City listing (8 pages, 361 restaurants) read on 2026-10-12.\n\n- Brooklyn entries are included (for example Aska, 2 stars, and Peter Luger).\n- Ichiran: not listed. Pages 1 and 8 were verbatim; pages 2-7 were part verbatim and part summary, each reporting it not listed.\n\n## Use on the pin\n\nCritic acclaim is 0 (no recognition found) because the guide covers the city.\n",
+          "tags": [
+            "MICHELIN Guide",
+            "critic acclaim",
+            "Brooklyn"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2746,
+    "scores": {
+      "food": 4,
+      "service": 3,
+      "ambience": 4,
+      "value": 3,
+      "acclaim": 3
+    },
+    "basis": "Tripadvisor (81 reviews, 4.3 overall, read 2026-10-12): Service 4.1, Food 4.4, Value 4.1, Atmosphere 4.4. Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g42139-d7046013-Reviews-Rose_s_Fine_Food-Detroit_Michigan.html",
+    "reviews": [
+      {
+        "url": "https://www.theinfatuation.com/detroit/reviews/roses-fine-foods",
+        "title": "Rose's - Review - East Jefferson - Detroit (The Infatuation)",
+        "publishedDate": "2026-07-27",
+        "quote": "Come with friends, order widely, and linger."
+      },
+      {
+        "url": "https://midbrow.org/roses-fine-food-review/",
+        "title": "Bury Me At Roses (Midbrow)",
+        "publishedDate": "2026-05-29",
+        "quote": "And no other spots elevate Polish home cooking like this into something resembling fine dining but without the pretension."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g42139-d7046013-Reviews-Rose_s_Fine_Food-Detroit_Michigan.html",
+        "title": "Rose's Fine Food on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.3 from 81 reviews with Service 4.1, Food 4.4, Value 4.1 and Atmosphere 4.4.",
+        "text": "4.3 (81) Service 4.1 Food 4.4 Value 4.1 Atmosphere 4.4.",
+        "wiki": {
+          "title": "Rose's Fine Food on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Rose's Fine Food in Detroit: 4.3 overall from 81 reviews; Service 4.1, Food 4.4, Value 4.1, Atmosphere 4.4.",
+          "body": "# Rose's Fine Food on Tripadvisor\n\nTripadvisor's listing for Rose's Fine Food in Detroit, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.3 out of 5 from 81 reviews.\n- Service: 4.1\n- Food: 4.4\n- Value: 4.1\n- Atmosphere: 4.4\n\n## Use on the pin\n\nScored from Tripadvisor: Food 4 and Ambience 4 from 4.4; Service 3 and Value 3 from 4.1. Critic acclaim 3 for the NYT 2026 list.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Detroit"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2760,
+    "scores": {
+      "food": 4.5,
+      "service": 4.5,
+      "ambience": 3,
+      "value": 4.5,
+      "acclaim": 3
+    },
+    "basis": "Tripadvisor (51 reviews, 4.5 overall, read 2026-10-12): Service 4.7, Food 4.7, Value 4.6, Atmosphere 4.1. Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g60795-d433568-Reviews-Bomb_Bomb_Restaurant-Philadelphia_Pennsylvania.html",
+    "reviews": [
+      {
+        "url": "https://www.inquirer.com/food/craig-laban/joey-baldino-bomb-bomb-bar-review-20260224.html",
+        "title": "Bomb Bomb Bar revives a classic South Philly Italian seafood spot with panache and care (Philadelphia Inquirer)",
+        "publishedDate": "2026-02-24",
+        "quote": "A shot of Calabrian chile paste and white wine give his fra diavolo sauce an irresistibly zesty ba-da-boom."
+      },
+      {
+        "url": "https://www.phillymag.com/foobooz/2026/04/07/bomb-bomb-bar-review/",
+        "title": "Bomb Bomb Bar Is a Masterclass in South Philly Nostalgia (Philadelphia Magazine)",
+        "publishedDate": "2026-04-07",
+        "quote": "The dining room (entered through the old-school “ladies entrance”) is small, close-set and rigorously anti-fancy."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60795-d433568-Reviews-Bomb_Bomb_Restaurant-Philadelphia_Pennsylvania.html",
+        "title": "Bomb Bomb Restaurant on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.5 from 51 reviews with Service 4.7, Food 4.7, Value 4.6 and Atmosphere 4.1.",
+        "text": "4.5 (51) Service 4.7 Food 4.7 Value 4.6 Atmosphere 4.1.",
+        "wiki": {
+          "title": "Bomb Bomb Restaurant on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Bomb Bomb Restaurant in Philadelphia: 4.5 overall from 51 reviews; Service 4.7, Food 4.7, Value 4.6, Atmosphere 4.1.",
+          "body": "# Bomb Bomb Restaurant on Tripadvisor\n\nTripadvisor's listing for Bomb Bomb Restaurant in Philadelphia, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.5 out of 5 from 51 reviews.\n- Service: 4.7\n- Food: 4.7\n- Value: 4.6\n- Atmosphere: 4.1\n\n## Use on the pin\n\nScored from Tripadvisor: Food, Service and Value 4.5 from 4.7, 4.7 and 4.6; Ambience 3 from 4.1. Critic acclaim 3 for the NYT 2026 list.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Philadelphia"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2462,
+    "scores": {
+      "food": 4.5,
+      "service": 4.5,
+      "ambience": 4,
+      "value": 3,
+      "acclaim": 4.5
+    },
+    "basis": "Tripadvisor (1,642 reviews, 4.6 overall, read 2026-10-12): Service 4.7, Food 4.7, Value 4.1, Atmosphere 4.5. Acclaim 4.5: two MICHELIN stars (guide listing; three stars 2011-2024) and the 2016 James Beard Outstanding Restaurant award per Wikipedia.",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g35805-d570063-Reviews-Alinea-Chicago_Illinois.html",
+    "reviews": [
+      {
+        "url": "https://timeout.com/chicago/restaurants/alinea",
+        "title": "Alinea (Time Out Chicago)",
+        "publishedDate": "2025-12-15",
+        "quote": "Service here is a highly choreographed production."
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/illinois/chicago/restaurant/alinea",
+        "title": "Alinea - a MICHELIN Guide Restaurant (guide inspector text)",
+        "publishedDate": null,
+        "quote": "Combining scented vapors, hidden ingredients and tableside service, dinner is a constant mix of whimsy and surprise."
+      },
+      {
+        "url": "https://all-things-andy-gavin.com/2026/01/03/alinea-at-long-last/",
+        "title": "Alinea at Long Last (personal blog, diner account)",
+        "publishedDate": "2026-01-03",
+        "quote": "Alinea lived up to every expectation I’d built over the years of waiting."
+      },
+      {
+        "url": "https://www.worldtraversal.com/post/alinea-review-michelin",
+        "title": "Alinea Review - 2 Stars Now With a Completely New Menu (travel blog, diner account)",
+        "publishedDate": null,
+        "quote": "The barely cooked king crab is a standout, rich but controlled, playful yet precise."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g35805-d570063-Reviews-Alinea-Chicago_Illinois.html",
+        "title": "Alinea on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.6 from 1,642 reviews with Service 4.7, Food 4.7, Value 4.1 and Atmosphere 4.5.",
+        "text": "4.6 (1642) Service 4.7 Food 4.7 Value 4.1 Atmosphere 4.5.",
+        "wiki": {
+          "title": "Alinea on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Alinea in Chicago: 4.6 overall from 1,642 reviews; Service 4.7, Food 4.7, Value 4.1, Atmosphere 4.5.",
+          "body": "# Alinea on Tripadvisor\n\nTripadvisor's listing for Alinea in Chicago, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.6 out of 5 from 1,642 reviews.\n- Service: 4.7\n- Food: 4.7\n- Value: 4.1\n- Atmosphere: 4.5\n\n## Use on the pin\n\nFood and Service 4.5 from 4.7; Ambience 4 from 4.5; Value 3 from 4.1. Critic acclaim 4.5 for two current Michelin stars.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Chicago"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      },
+      {
+        "url": "https://guide.michelin.com/us/en/illinois/chicago/restaurant/alinea",
+        "title": "Alinea - a MICHELIN Guide Restaurant (listing)",
+        "reasoning": "The MICHELIN Guide's Chicago listing shows Alinea with two MICHELIN Stars ($$$$, Creative).",
+        "text": "Alinea. Chicago. $$$$. Creative. Two MICHELIN Stars.",
+        "wiki": {
+          "title": "Alinea - a MICHELIN Guide Restaurant (listing)",
+          "summary": "The MICHELIN Guide's Chicago listing shows Alinea with two MICHELIN Stars ($$$$, Creative); Wikipedia records three stars 2011-2024 and two since November 2025.",
+          "body": "# Alinea in the MICHELIN Guide\n\nResearch note for the pin's dining rubric, from the guide's Chicago listing (page 2 of 3, 100 restaurants) read on 2026-10-12.\n\n- Distinction: two MICHELIN Stars ($$$$, Creative). The Chicago list has 1 three-star, 4 two-star and 14 one-star restaurants.\n- Wikipedia's Alinea article: three stars from 2011 to 2024, demoted to two in November 2025; the 2016 James Beard Foundation Award for Outstanding Restaurant.\n\n## Use on the pin\n\nCritic acclaim is 4.5: two current Michelin stars (the 3-star years are not counted).\n",
+          "tags": [
+            "MICHELIN Guide",
+            "James Beard Foundation",
+            "critic acclaim",
+            "Chicago"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2749,
+    "scores": {
+      "food": 3.5,
+      "service": 3.5,
+      "ambience": null,
+      "value": 3.5,
+      "acclaim": 3
+    },
+    "basis": "Tripadvisor (13 reviews, 4.5 overall, read 2026-10-12, only 13 reviews so no axis is scored above 3.5): Service 5.0, Food 5.0, Value 4.9, no atmosphere score. Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g46531-d14017717-Reviews-Korai_Kitchen-Jersey_City_New_Jersey.html",
+    "reviews": [
+      {
+        "url": "https://www.theinfatuation.com/jersey-city/reviews/korai-kitchen",
+        "title": "Korai Kitchen - Review - Journal Square - Jersey City (The Infatuation)",
+        "publishedDate": "2026-03-10",
+        "quote": "No feast is complete without shrimp, but these are almost outshone by the melting cabbage and soft potato."
+      },
+      {
+        "url": "https://www.hobokengirl.com/korai-kitchen-bangladeshi-restaurant-jersey-city/",
+        "title": "Fresh Off James Beard Nomination, Korai Kitchen in Jersey City Reintroduces Dine-in Service (Hoboken Girl)",
+        "publishedDate": "2024-02-08",
+        "quote": "Whole fish are commonly served and fish heads are the star of Korai Kitchen’s weekend menu."
+      },
+      {
+        "url": "https://www.hobokengirl.com/korai-kitchen-dining-experience-jersey-city/",
+        "title": "Korai Kitchen, a James Beard-Nominated Bangladeshi Dining Experience in the Heart of Jersey City (Hoboken Girl)",
+        "publishedDate": "2026-09-16",
+        "quote": "Dishes rotate constantly, and no two menus are ever the same."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g46531-d14017717-Reviews-Korai_Kitchen-Jersey_City_New_Jersey.html",
+        "title": "Korai Kitchen on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.5 from 13 reviews with Service 5.0, Food 5.0, Value 4.9; no atmosphere score shown.",
+        "text": "4.5 (13) Service 5.0 Food 5.0 Value 4.9.",
+        "wiki": {
+          "title": "Korai Kitchen on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Korai Kitchen in Jersey City: 4.5 overall from 13 reviews; Service 5.0, Food 5.0, Value 4.9.",
+          "body": "# Korai Kitchen on Tripadvisor\n\nTripadvisor's listing for Korai Kitchen in Jersey City, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.5 out of 5 from 13 reviews.\n- Service: 5.0\n- Food: 5.0\n- Value: 4.9\n- Atmosphere: not shown on the listing\n\n## Use on the pin\n\nWith only 13 reviews each axis is capped at 3.5; no atmosphere score is shown. Critic acclaim 3 for the NYT 2026 list.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Jersey City"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2777,
+    "scores": {
+      "food": 3,
+      "service": 3.5,
+      "ambience": 2.5,
+      "value": 3,
+      "acclaim": 3
+    },
+    "basis": "Tripadvisor (20 reviews, 4.5 overall, read 2026-10-12, only 20 reviews so no axis is scored above 3.5): Service 4.6, Food 4.2, Value 4.2, Atmosphere 4.0. Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g60864-d25258579-Reviews-Dakar_NOLA-New_Orleans_Louisiana.html",
+    "reviews": [
+      {
+        "url": "https://guide.michelin.com/us/en/louisiana/new-orleans_2906000/restaurant/dakar-nola",
+        "title": "Dakar NOLA - a MICHELIN Guide Restaurant (guide inspector text)",
+        "publishedDate": null,
+        "quote": "Original and exceptional, the restaurant offers a transportive experience."
+      },
+      {
+        "url": "https://www.outalldaynola.com/dakar-nola-new-orleans-review.html",
+        "title": "Dakar NOLA, New Orleans: Review (Out All Day: New Orleans)",
+        "publishedDate": null,
+        "quote": "Each course is joyfully contextualized, the thought behind each culinary choice made clear."
+      },
+      {
+        "url": "https://eatingreallywell.com/dakar",
+        "title": "My review of Dakar in New Orleans (personal blog)",
+        "publishedDate": "2025-07-19",
+        "quote": "The cooking was outstanding."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g60864-d25258579-Reviews-Dakar_NOLA-New_Orleans_Louisiana.html",
+        "title": "Dakar NOLA on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.5 from 20 reviews with Service 4.6, Food 4.2, Value 4.2 and Atmosphere 4.0.",
+        "text": "4.5 (20) Service 4.6 Food 4.2 Value 4.2 Atmosphere 4.0.",
+        "wiki": {
+          "title": "Dakar NOLA on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Dakar NOLA in New Orleans: 4.5 overall from 20 reviews; Service 4.6, Food 4.2, Value 4.2, Atmosphere 4.0.",
+          "body": "# Dakar NOLA on Tripadvisor\n\nTripadvisor's listing for Dakar NOLA in New Orleans, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.5 out of 5 from 20 reviews.\n- Service: 4.6\n- Food: 4.2\n- Value: 4.2\n- Atmosphere: 4.0\n\n## Use on the pin\n\nWith 20 reviews each axis is capped at 3.5: Service 3.5 (4.6, capped), Food 3 and Value 3 from 4.2, Ambience 2.5 from 4.0. Critic acclaim 3 for the NYT 2026 list.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "New Orleans"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2768,
+    "scores": {
+      "food": 4.5,
+      "service": 4,
+      "ambience": 4,
+      "value": 3,
+      "acclaim": 3
+    },
+    "basis": "Tripadvisor (165 reviews, 4.6 overall, read 2026-10-12): Service 4.4, Food 4.7, Value 4.2, Atmosphere 4.5. Acclaim 3: on The New York Times' 2026 best restaurants in America list (the pin's own source).",
+    "sourceUrl": "https://www.tripadvisor.com/Restaurant_Review-g58563-d6900499-Reviews-Hama_Hama_Oyster_Saloon-Lilliwaup_Washington.html",
+    "reviews": [
+      {
+        "url": "https://1889mag.com/?p=29709",
+        "title": "Experience the Best Beer You'll Have All Year (1889 Magazine)",
+        "publishedDate": "2023-05-31",
+        "quote": "But don’t overlook the roasted oysters with chipotle bourbon butter"
+      },
+      {
+        "url": "https://www.seattlemet.com/travel-and-outdoors/2024/02/oyster-shellfish-tasting-hood-canal-fjord-bank",
+        "title": "Forget Wine Tasting. Try Oyster Tasting. (Seattle Met, feature)",
+        "publishedDate": "2024-02-16",
+        "quote": "Today it’s grown to a village of A-frame table shelters, an outdoor bar and firepit, a gift shop with a live crab tank and merch that ranges from baby onesies to beer koozies."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g58563-d6900499-Reviews-Hama_Hama_Oyster_Saloon-Lilliwaup_Washington.html",
+        "title": "Hama Hama Oyster Saloon on Tripadvisor",
+        "reasoning": "Traveller ratings: overall 4.6 from 165 reviews with Service 4.4, Food 4.7, Value 4.2 and Atmosphere 4.5.",
+        "text": "4.6 (165) Service 4.4 Food 4.7 Value 4.2 Atmosphere 4.5.",
+        "wiki": {
+          "title": "Hama Hama Oyster Saloon on Tripadvisor",
+          "summary": "Tripadvisor's traveller ratings for Hama Hama Oyster Saloon in Lilliwaup: 4.6 overall from 165 reviews; Service 4.4, Food 4.7, Value 4.2, Atmosphere 4.5.",
+          "body": "# Hama Hama Oyster Saloon on Tripadvisor\n\nTripadvisor's listing for Hama Hama Oyster Saloon in Lilliwaup, read in a browser on 2026-10-12.\n\n## Traveller ratings\n\n- Overall: 4.6 out of 5 from 165 reviews.\n- Service: 4.4\n- Food: 4.7\n- Value: 4.2\n- Atmosphere: 4.5\n\n## Use on the pin\n\nFood 4.5 from 4.7; Service 4 from 4.4; Ambience 4 from 4.5; Value 3 from 4.2. Critic acclaim 3 for the NYT 2026 list.\n",
+          "tags": [
+            "Tripadvisor",
+            "traveller ratings",
+            "restaurant",
+            "Lilliwaup"
+          ],
+          "lastModified": "2026-10-12"
+        }
+      }
+    ]
+  },
+  {
+    "pinId": 2733,
+    "scores": {
+      "food": null,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 4
+    },
+    "basis": "Acclaim 4: one MICHELIN star (the pin's MICHELIN Guide rating, 1/3) and The New York Times' 2026 best restaurants in America list. Food, Service, Ambience and Value are n/a: no Tripadvisor or OpenTable listing with a usable rating breakdown was found (searched 2026-10-12).",
+    "sourceUrl": "https://guide.michelin.com/us/en/district-of-columbia/washington-dc/restaurant/albi",
+    "reviews": []
+  },
+  {
+    "pinId": 2752,
+    "scores": {
+      "food": null,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 4
+    },
+    "basis": "Acclaim 4: one MICHELIN star (the pin's MICHELIN Guide rating, 1/3) and The New York Times' 2026 best restaurants in America list. Food, Service, Ambience and Value are n/a: no Tripadvisor or OpenTable listing with a usable rating breakdown was found (searched 2026-10-12).",
+    "sourceUrl": "https://guide.michelin.com/us/en/new-york-state/queens/restaurant/meju",
+    "reviews": []
+  },
+  {
+    "pinId": 2772,
+    "scores": {
+      "food": null,
+      "service": null,
+      "ambience": null,
+      "value": null,
+      "acclaim": 4
+    },
+    "basis": "Acclaim 4: one MICHELIN star (the pin's MICHELIN Guide rating, 1/3) and The New York Times' 2026 best restaurants in America list. Food, Service, Ambience and Value are n/a: no Tripadvisor or OpenTable listing with a usable rating breakdown was found (searched 2026-10-12).",
+    "sourceUrl": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/naides",
+    "reviews": []
   }
 ]
