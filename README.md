@@ -379,11 +379,6 @@ As of 2026-10-04 (sizing refreshed 2026-10-11). Prod's Anthropic key has no cred
 
 
 
-
-
-need ability for user to take and upload media for pins, and have ability for other users to flag for issue
-
-
 add button on landing page to suggest a product or restaurant to add to list. should have community voted section
 
 
@@ -413,11 +408,7 @@ get live politicians stock trading alerts
 
 
 
-chinese ev car news and events and new model releases
-- performance rubrics?
 
-
-add landing page for best ev and gasoline car
 
 
 For people pages, add trading data and etc like these pages. use browser to view if needed. Should be able to subscribe to stock trades via notification on the profile page
@@ -449,3 +440,7 @@ Kikansha no Mahou wa Tokubetsu desu
 do this for all shows and movies and mangas
 
 https://myanimelist.net/anime/57612/Kikansha_no_Mahou_wa_Tokubetsu_desu_2nd_Season
+
+
+
+add landing page for best ev and gasoline car

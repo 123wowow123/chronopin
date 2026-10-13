@@ -109,6 +109,9 @@ export function Dialog({
   children,
   className = 'w-full max-w-lg',
   bare = false,
+  action,
+  meta,
+  startTitle = false,
 }: {
   label: string;
   onClose: () => void;
@@ -117,6 +120,12 @@ export function Dialog({
   // No title bar: the × floats over the corner (the listing form and view,
   // whose own headings say what they are).
   bare?: boolean;
+  // A button in the title bar, after the title (the photos modal's "Add photos").
+  action?: ReactNode;
+  // Small text at the far end of the title bar, before the × (a count).
+  meta?: ReactNode;
+  // The title at the start edge rather than centred.
+  startTitle?: boolean;
 }) {
   const t = useT();
   useEffect(() => {
@@ -141,8 +150,11 @@ export function Dialog({
     >
       <div role="dialog" aria-modal="true" aria-label={label} className={`floating relative flex max-h-[100dvh] flex-col overflow-hidden max-sm:h-[100dvh] max-sm:rounded-none sm:max-h-[92dvh] ${className}`}>
         {bare ? null : (
-          <div className="border-b border-line px-14 py-3">
-            <h2 className="text-center text-lg font-bold text-ink">{label}</h2>
+          <div className={`flex items-center gap-3 border-b border-line py-3 ${action || startTitle ? `ps-5 ${meta ? 'pe-20' : 'pe-14'}` : 'justify-center px-14'}`}>
+            <h2 className={`min-w-0 text-lg font-bold text-ink ${startTitle || action ? 'text-start' : 'text-center'}`}>{label}</h2>
+            {/* Beside the title, at the start edge. */}
+            {action}
+            {meta ? <span className="ms-auto shrink-0 text-sm text-subtle">{meta}</span> : null}
           </div>
         )}
         <button

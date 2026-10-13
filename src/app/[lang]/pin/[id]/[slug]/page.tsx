@@ -57,6 +57,7 @@ import { listingKindOf } from '@/lib/listings';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
+import { PinPhotos } from '@/components/pin/PinPhotos';
 import { PinSuggest } from '@/components/pin/PinSuggest';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
@@ -241,6 +242,8 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           <Suspense fallback={null}>
             <Thread pin={pin} />
           </Suspense>
+
+          <PinPhotos pinId={pin.id} />
 
           <Suspense fallback={<Comments pinId={pin.id} initialComments={[]} />}>
             <PinCommentsSection pinId={pin.id} />

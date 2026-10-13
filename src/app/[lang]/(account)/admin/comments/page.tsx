@@ -4,7 +4,9 @@ import { toJson } from '@/lib/types';
 import { requireAdminViewer } from '@/server/guard';
 import Comment, { COMMENT_HIDE_REPORTS } from '@/server/model/comment';
 import Message from '@/server/model/message';
+import PinPhoto, { PIN_PHOTO_HIDE_AT } from '@/server/model/pinPhoto';
 import { AdminTabs } from '../AdminTabs';
+import { PhotoReportList, type ReportedPhoto } from './PhotoReportList';
 import { MessageReportList, type ReportedMessage } from './MessageReportList';
 import { ReportList, type ReportedComment } from './ReportList';
 
@@ -17,7 +19,8 @@ export const metadata: Metadata = { title: 'Admin comments' };
 // or its reports dismissed from here. Reported direct messages (0093) below.
 export default async function AdminCommentsPage() {
   await requireAdminViewer('/admin/comments');
-  const [comments, messages] = await Promise.all([Comment.openReports(), Message.openReports()]);
+  const [comments, messages, photos] = await Promise.all([Comment.openReports(), Message.openReports(), PinPhoto.openReports()]);
+  const photoReports = photos.map((r) => ({ ...r, pinHref: pinPath({ id: r.pinId, title: r.pinTitle }) }));
   const reports = comments.map((r) => ({ ...r, pinHref: pinPath({ id: r.pinId, title: r.pinTitle }) }));
   return (
     <div className="px-4 py-6 sm:py-10 lg:px-8">
@@ -28,6 +31,9 @@ export default async function AdminCommentsPage() {
       <h2 className="mt-10 mb-2 text-lg font-semibold text-ink">Messages</h2>
       <p className="mb-4 text-sm text-subtle">Direct messages their recipients reported, as they read when reported. Only the reported message is shown, not the chat.</p>
       <MessageReportList initialReports={toJson<ReportedMessage[]>(messages)} />
+      <h2 className="mt-10 mb-2 text-lg font-semibold text-ink">Photos</h2>
+      <p className="mb-4 text-sm text-subtle">Photos readers added to pins and others flagged. Restore or keep one to close its flags, or remove it. At {PIN_PHOTO_HIDE_AT} flags a photo is hidden from readers (its owner still sees it) until you act.</p>
+      <PhotoReportList initialReports={toJson<ReportedPhoto[]>(photoReports)} />
     </div>
   );
 }
