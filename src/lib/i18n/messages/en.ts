@@ -648,6 +648,7 @@ const en = {
       collapse: 'Close expanded chart',
       alt: 'AI models released in {year}: {count} models, price of a million tokens against arena Elo. This pin: {model}.',
       notPriced: 'This model has no public price to plot yet.',
+      awaiting: '{model} · {price}/M tokens · not scored by the arena yet',
       price: '$ per million tokens (5:1 input:output, log scale)',
       elo: 'Arena Elo (text)',
       note: 'Higher is better, further left is cheaper. Grey line: the best score each price buys.',

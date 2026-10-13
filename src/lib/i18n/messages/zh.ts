@@ -644,6 +644,7 @@ const zh: Messages = {
       collapse: '关闭放大的图表',
       alt: '{year} 年发布的 AI 模型：共 {count} 个，每百万 token 价格与竞技场 Elo 对比。此图钉：{model}。',
       notPriced: '该模型暂无可绘制的公开价格。',
+      awaiting: '{model} · {price}/百万 token · 竞技场尚未评分',
       price: '每百万 token 美元（输入:输出 5:1，对数刻度）',
       elo: '竞技场 Elo（文本）',
       note: '越高越好，越靠左越便宜。灰线：每个价位能买到的最高分。',

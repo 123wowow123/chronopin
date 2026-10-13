@@ -643,6 +643,7 @@ const de: Messages = {
       collapse: 'Vergrößerte Ansicht schließen',
       alt: 'KI-Modelle, erschienen {year}: {count} Modelle, Preis für eine Million Token gegen Arena-Elo. Dieser Pin: {model}.',
       notPriced: 'Für dieses Modell gibt es noch keinen öffentlichen Preis.',
+      awaiting: '{model} · {price}/M Token · von der Arena noch nicht bewertet',
       price: '$ pro Million Token (5:1 Eingabe:Ausgabe, log. Skala)',
       elo: 'Arena-Elo (Text)',
       note: 'Höher ist besser, weiter links ist günstiger. Graue Linie: die beste Wertung, die ein Preis erkauft.',

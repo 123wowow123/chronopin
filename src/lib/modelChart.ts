@@ -35,6 +35,16 @@ export type ModelPoint = {
 // frontier at the time it was pinned. Added once and never taken off.
 export const FRONTIER_TAG = 'Frontier Model';
 
+// A model with a price but no arena score yet (a release the leaderboard has not
+// caught up with). It has no Elo, so the chart marks its price on the x axis.
+export type UnscoredModel = {
+  key: string;
+  name: string;
+  organization: string | null;
+  price: number;
+  year: number;
+};
+
 export type ModelChartData = {
   // Every model with both a score and a price, newest year first in `years`.
   points: ModelPoint[];
@@ -45,6 +55,9 @@ export type ModelChartData = {
   pinnedYear: number | null;
   // When the arena published the scores this reads (YYYY-MM-DD).
   publishedOn: string | null;
+  // The pin's own model when the router prices it but the arena has not scored
+  // it: drawn as a price line with no dot, and `pinned` is then null.
+  unscored?: UnscoredModel | null;
 };
 
 // The response may be cached for an hour (the route's Cache-Control), so a
@@ -52,7 +65,7 @@ export type ModelChartData = {
 // expired: a new data field (the same-thread flag) showed nothing for an hour
 // after the deploy. Bump this with any change to what the route sends, and the
 // URL - and so the cache entry - is new.
-export const CHART_VERSION = 4;
+export const CHART_VERSION = 5;
 
 export async function loadModelChart(pinId: number): Promise<ModelChartData | null> {
   try {

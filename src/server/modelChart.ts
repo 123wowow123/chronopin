@@ -17,7 +17,7 @@
 // router does not list has a score but no price and is left out, not guessed.
 
 import { modelRelease } from '@/lib/modelSeries';
-import { blendedPrice, markFrontier, modelKey, type ModelChartData, type ModelPoint } from '@/lib/modelChart';
+import { blendedPrice, markFrontier, modelKey, type ModelChartData, type ModelPoint, type UnscoredModel } from '@/lib/modelChart';
 import { pinPath } from '@/lib/seo';
 import * as db from './db';
 import log from './util/log';
@@ -33,8 +33,9 @@ const PIN_INDEX_TTL_MS = 5 * 60 * 1000;
 const UA = 'ChronoPin/1.0 (https://chronopin.com) model chart fetch';
 
 type Arena = { name: string; organization: string | null; elo: number; publishedOn: string | null };
-type Router = { price: number; year: number };
-export type ModelUniverse = { points: ModelPoint[]; publishedOn: string | null };
+type Router = { name: string; price: number; year: number };
+// `unscored`: priced on the router, absent from the arena's leaderboard.
+export type ModelUniverse = { points: ModelPoint[]; publishedOn: string | null; unscored: UnscoredModel[] };
 
 async function getJson<T>(url: string): Promise<T> {
   const response = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(TIMEOUT_MS) });
@@ -70,7 +71,7 @@ async function readArena(): Promise<Map<string, Arena>> {
 }
 
 async function readRouter(): Promise<Map<string, Router>> {
-  const body = await getJson<{ data: { id: string; created?: number; pricing?: Record<string, string> }[] }>(ROUTER_URL);
+  const body = await getJson<{ data: { id: string; name?: string; created?: number; pricing?: Record<string, string> }[] }>(ROUTER_URL);
   const out = new Map<string, Router>();
   for (const m of body.data) {
     if (/:(free|batch)$/.test(m.id)) continue;
@@ -83,7 +84,9 @@ async function readRouter(): Promise<Map<string, Router>> {
     // One model listed by several providers or snapshots: the earliest listing
     // is its release year, the lowest price what it costs to run.
     const seen = out.get(key);
-    out.set(key, seen ? { price: Math.min(seen.price, price), year: Math.min(seen.year, year) } : { price, year });
+    // The router names a model "Anthropic: Claude Haiku 5.5"; the lab is a prefix.
+    const name = (m.name ?? m.id).replace(/^[^:]+:\s*/, '') || m.id;
+    out.set(key, seen ? { name: seen.name, price: Math.min(seen.price, price), year: Math.min(seen.year, year) } : { name, price, year });
   }
   return out;
 }
@@ -102,7 +105,11 @@ export async function readModelUniverse(): Promise<ModelUniverse> {
   const byYear = new Map<number, ModelPoint[]>();
   for (const p of raw) byYear.set(p.year, [...(byYear.get(p.year) ?? []), p]);
   const points = [...byYear.values()].flatMap((group) => markFrontier(group));
-  return { points, publishedOn };
+  const unscored: UnscoredModel[] = [];
+  for (const [key, r] of router) {
+    if (!arena.has(key)) unscored.push({ key, name: r.name, organization: null, price: r.price, year: r.year });
+  }
+  return { points, publishedOn, unscored };
 }
 
 type Entry = { expires: number; promise: Promise<ModelUniverse | null> };
@@ -276,6 +283,28 @@ export function buildModelChart(
     pinnedYear: pinned?.year ?? null,
     publishedOn: universe.publishedOn,
   };
+}
+
+// The pin's model when the router prices it and the arena has not scored it
+// yet: the unscored model whose key the pin's title names as a run of whole
+// words, the longest key winning ("claude haiku 5.5" in "Claude Haiku 5.5
+// Released"). Null when the title names none.
+export function unscoredFor(universe: ModelUniverse, title: string): UnscoredModel | null {
+  const words = wordsOf(title);
+  let best: UnscoredModel | null = null;
+  for (const u of universe.unscored) {
+    if (!hasRun(words, wordsOf(u.key))) continue;
+    if (!best || u.key.length > best.key.length) best = u;
+  }
+  return best;
+}
+
+// The chart for a model that has a price but no score: the field as usual, no
+// pinned dot, and the model's price carried in `unscored`.
+export function buildUnscoredChart(universe: ModelUniverse, unscored: UnscoredModel, pins: ModelPinIndex, pinId: number, title: string): ModelChartData {
+  const chart = buildModelChart(universe, null, pins, pinId, title);
+  const years = chart.years.includes(unscored.year) ? chart.years : [unscored.year, ...chart.years].sort((a, b) => b - a);
+  return { ...chart, years, pinnedYear: unscored.year, unscored };
 }
 
 // The frontier models a single pin is the pin of, judged against the arena and

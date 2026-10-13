@@ -101,9 +101,11 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   const pinned = useMemo(() => data.points.find((p) => p.key === data.pinned) ?? null, [data]);
   const field = useMemo(() => data.points.filter((p) => p.year === year && p.key !== data.pinned), [data, year]);
   const shown = useMemo(() => (pinned ? [...field, pinned] : field), [field, pinned]);
+  const unscored = data.unscored ?? null;
+  const awaiting = unscored ? t('pin.modelChart.awaiting', { model: unscored.name, price: showPrice(unscored.price) }) : null;
 
   const frame = useMemo(() => {
-    const prices = shown.map((p) => p.price);
+    const prices = [...shown.map((p) => p.price), ...(unscored ? [unscored.price] : [])];
     const elos = shown.map((p) => p.elo);
     // Pad the log axis by a sixth of a decade each side, the Elo axis by a twentieth.
     const lo = 10 ** (Math.log10(Math.min(...prices)) - 0.15);
@@ -115,7 +117,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
     const span = eloHigh - eloLow + 2 * pad;
     const step = span > 240 ? 50 : 20;
     return { lo, hi, eMin: Math.floor((eloLow - pad) / step) * step, eMax: Math.ceil((eloHigh + pad) / step) * step, step };
-  }, [shown]);
+  }, [shown, unscored]);
 
   const x = (price: number) => PAD.left + ((Math.log10(price) - Math.log10(frame.lo)) / (Math.log10(frame.hi) - Math.log10(frame.lo) || 1)) * PLOT.w;
   const y = (elo: number) => PAD.top + PLOT.h - ((elo - frame.eMin) / (frame.eMax - frame.eMin || 1)) * PLOT.h;
@@ -131,11 +133,12 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   const yTicks: number[] = [];
   for (let v = frame.eMin; v <= frame.eMax; v += frame.step) yTicks.push(v);
 
-  const nearest = (event: React.PointerEvent<SVGSVGElement>) => {
+  // The dot within reach of a screen position, if any.
+  const pick = (clientX: number, clientY: number): ModelPoint | null => {
     const box = svg.current?.getBoundingClientRect();
-    if (!box) return;
-    const px = ((event.clientX - box.left) / box.width) * VIEW.w;
-    const py = ((event.clientY - box.top) / box.height) * VIEW.h;
+    if (!box) return null;
+    const px = ((clientX - box.left) / box.width) * VIEW.w;
+    const py = ((clientY - box.top) / box.height) * VIEW.h;
     let best: ModelPoint | null = null;
     let bestD = 22 * 22;
     for (const p of shown) {
@@ -145,8 +148,9 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
         bestD = d;
       }
     }
-    setHover(best);
+    return best;
   };
+  const nearest = (event: React.PointerEvent<SVGSVGElement>) => setHover(pick(event.clientX, event.clientY));
 
   const label = hover ?? selected ?? pinned;
   // A model with its own pin goes there; the pin being read is already open.
@@ -187,7 +191,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
               }`}
             >
               {y}
-              {pinned && pinned.year === y ? <span aria-hidden className="inline-block size-1.5 shrink-0 rounded-full bg-accent" /> : null}
+              {(pinned ?? unscored)?.year === y ? <span aria-hidden className="inline-block size-1.5 shrink-0 rounded-full bg-accent" /> : null}
             </button>
           ))}
         </div>
@@ -227,12 +231,17 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
           aria-label={t('pin.modelChart.alt', {
             year,
             count: shown.length,
-            model: pinned ? `${pinned.name}: ${pinned.elo}, ${showPrice(pinned.price)}` : t('pin.modelChart.notPriced'),
+            model: pinned ? `${pinned.name}: ${pinned.elo}, ${showPrice(pinned.price)}` : (awaiting ?? t('pin.modelChart.notPriced')),
           })}
           onPointerMove={nearest}
           onPointerDown={nearest}
-          onPointerLeave={() => setHover(null)}
-          onClick={() => setSelected(hover)}
+          // A finger lifting fires pointerleave before the click: hover is a
+          // mouse idea, so only a mouse leaving clears it, and the click picks
+          // the dot from where it landed rather than from hover.
+          onPointerLeave={(event) => {
+            if (event.pointerType === 'mouse') setHover(null);
+          }}
+          onClick={(event) => setSelected(pick(event.clientX, event.clientY))}
           style={{ cursor: hover ? 'pointer' : undefined }}
         >
           {yTicks.map((v) => (
@@ -281,6 +290,26 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
                 {p.name}
               </text>
             ))}
+
+          {/* A model the arena has not scored: only its price is known, so a
+              dashed line down the plot at that price, in every year's tab. */}
+          {unscored ? (
+            <g>
+              <line x1={x(unscored.price)} x2={x(unscored.price)} y1={PAD.top} y2={PAD.top + PLOT.h} className="stroke-accent" strokeWidth="2" strokeDasharray="6 4" />
+              <text
+                x={x(unscored.price)}
+                y={PAD.top + 12}
+                textAnchor={x(unscored.price) > PAD.left + PLOT.w * 0.65 ? 'end' : 'start'}
+                dx={x(unscored.price) > PAD.left + PLOT.w * 0.65 ? -6 : 6}
+                className="fill-current text-[12px] font-bold text-ink"
+                paintOrder="stroke"
+                strokeWidth="3"
+                stroke="var(--color-panel, transparent)"
+              >
+                {unscored.name}
+              </text>
+            </g>
+          ) : null}
 
           {/* The pinned model: a ring, a large dot and its name, so it is the
               first thing read, in every year's tab. */}
@@ -331,6 +360,11 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
                 label.name
               )}{' '}
               <span className="text-muted">{label.elo} Elo · {showPrice(label.price)}/M · {label.year}</span>
+            </span>
+          ) : awaiting ? (
+            <span className="text-ink tabular-nums">
+              <span className="me-1.5 inline-block h-0.5 w-3 bg-accent align-middle" aria-hidden />
+              {awaiting}
             </span>
           ) : (
             <span className="text-subtle">{t('pin.modelChart.notPriced')}</span>

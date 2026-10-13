@@ -643,6 +643,7 @@ const es: Messages = {
       collapse: 'Cerrar gráfico ampliado',
       alt: 'Modelos de IA lanzados en {year}: {count} modelos, precio de un millón de tokens frente al Elo de la arena. Este pin: {model}.',
       notPriced: 'Este modelo aún no tiene un precio público que representar.',
+      awaiting: '{model} · {price}/M tokens · aún sin puntuación en la arena',
       price: '$ por millón de tokens (5:1 entrada:salida, escala log.)',
       elo: 'Elo de la arena (texto)',
       note: 'Más alto es mejor, más a la izquierda es más barato. Línea gris: la mejor puntuación que compra cada precio.',

@@ -648,6 +648,7 @@ const ms: Messages = {
       collapse: 'Tutup carta yang dibesarkan',
       alt: 'Model AI yang dikeluarkan pada {year}: {count} model, harga sejuta token berbanding Elo arena. Pin ini: {model}.',
       notPriced: 'Model ini belum mempunyai harga awam untuk diplotkan.',
+      awaiting: '{model} · {price}/juta token · belum dinilai oleh arena',
       price: '$ sejuta token (5:1 input:output, skala log)',
       elo: 'Elo arena (teks)',
       note: 'Lebih tinggi lebih baik, lebih ke kiri lebih murah. Garis kelabu: skor terbaik yang dibeli oleh setiap harga.',

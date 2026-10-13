@@ -647,6 +647,7 @@ const vi: Messages = {
       collapse: 'Đóng biểu đồ phóng to',
       alt: 'Các mô hình AI phát hành năm {year}: {count} mô hình, giá một triệu token so với Elo đấu trường. Ghim này: {model}.',
       notPriced: 'Mô hình này chưa có giá công khai để vẽ.',
+      awaiting: '{model} · {price}/triệu token · đấu trường chưa chấm điểm',
       price: '$ mỗi triệu token (đầu vào:đầu ra 5:1, thang log)',
       elo: 'Elo đấu trường (văn bản)',
       note: 'Càng cao càng tốt, càng về bên trái càng rẻ. Đường xám: điểm số tốt nhất mà mỗi mức giá mua được.',
