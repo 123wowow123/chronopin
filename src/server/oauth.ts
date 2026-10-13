@@ -328,12 +328,24 @@ async function alibabaProfile(provider: 'alibaba' | 'alibabacn', code: string, r
 // name and upn) or role (name is <RoleName:RoleSessionName>). The login name
 // is not an email address even when it is shaped like one - Alibaba does not
 // vouch for any - so emails stays empty.
+//
+// Alibaba has no real-name claim. Only a RAM user's display name is a name at
+// all, and even that is often a role label ("root", "admin"): a login name,
+// a role session or a generic label is not shown as the person's name, and the
+// name is left blank for them to fill in on the profile page.
+const GENERIC_NAMES = ['root', 'admin', 'administrator', 'user', 'ram', 'account', 'owner'];
+
+export function alibabaDisplayName(info: Record<string, unknown>): string | undefined {
+  if (info.type !== 'user' || typeof info.name !== 'string') return undefined;
+  const name = info.name.trim();
+  if (!name || name.includes('@') || name.includes(':')) return undefined;
+  return GENERIC_NAMES.includes(name.toLowerCase()) ? undefined : name;
+}
+
 export function alibabaProfileFrom(info: Record<string, unknown>): Profile {
-  const text = (v: unknown) => (typeof v === 'string' && v.trim() ? v.trim() : undefined);
-  const display = text(info.name) ?? text(info.login_name) ?? text(info.upn);
   return {
     id: String(info.sub),
-    name: { givenName: display, familyName: undefined },
+    name: { givenName: alibabaDisplayName(info), familyName: undefined },
     emails: [],
     photos: [],
     _json: info,
@@ -478,7 +490,10 @@ async function fillRequiredFields(user: User, email: string) {
 // display name.
 function alibabaHandleBase(profile: Profile): string {
   const login = String(profile._json.login_name ?? profile._json.upn ?? '');
-  return login || profile.name.givenName || 'pinner';
+  const base = login.split('@')[0].replace(/[^a-zA-Z0-9-_]/g, '').toLowerCase();
+  // A generic login ("root") is not a handle worth giving anybody.
+  if (base.length >= 3 && !GENERIC_NAMES.includes(base)) return login;
+  return profile.name.givenName || 'pinner';
 }
 
 // @handle from the address, with a number appended until it is nobody else's.

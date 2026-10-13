@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { alibabaProfileFrom, appleProfileFrom, signInLanding } from './oauth';
+import { alibabaDisplayName, alibabaProfileFrom, appleProfileFrom, signInLanding } from './oauth';
 
 describe('appleProfileFrom', () => {
   const claims = { sub: '001234.9f3ac4d.1517', email: 'sam@example.com', email_verified: 'true' };
@@ -38,21 +38,28 @@ describe('appleProfileFrom', () => {
 });
 
 describe('alibabaProfileFrom', () => {
-  it('uses the login name of a root account and shares no email', () => {
+  it('leaves the name blank for a root account, and shares no email', () => {
     const info = { sub: '123456789012', type: 'account', login_name: 'alice@example.com' };
     expect(alibabaProfileFrom(info)).toEqual({
       id: '123456789012',
-      name: { givenName: 'alice@example.com', familyName: undefined },
+      name: { givenName: undefined, familyName: undefined },
       emails: [],
       photos: [],
       _json: info,
     });
   });
 
-  it('prefers the display name of a RAM user, and falls back to its upn', () => {
-    expect(alibabaProfileFrom({ sub: 'a', type: 'user', name: 'alice', upn: 'alice@x.onaliyun.com' }).name.givenName).toBe('alice');
-    expect(alibabaProfileFrom({ sub: 'a', type: 'user', upn: 'alice@x.onaliyun.com' }).name.givenName).toBe('alice@x.onaliyun.com');
-    expect(alibabaProfileFrom({ sub: 'a' }).name.givenName).toBeUndefined();
+  it('uses the display name of a RAM user', () => {
+    expect(alibabaProfileFrom({ sub: 'a', type: 'user', name: 'Alice Wong', upn: 'alice@x.onaliyun.com' }).name.givenName).toBe('Alice Wong');
+  });
+
+  it('never shows a generic label, a login name or a role session as a name', () => {
+    for (const name of ['root', 'Root', 'admin', 'alice@x.onaliyun.com', 'Role:session-1', '  ']) {
+      expect(alibabaDisplayName({ type: 'user', name })).toBeUndefined();
+    }
+    expect(alibabaDisplayName({ type: 'role', name: 'Dev:Alice' })).toBeUndefined();
+    expect(alibabaDisplayName({ type: 'account', name: 'Alice' })).toBeUndefined();
+    expect(alibabaDisplayName({ sub: 'a' })).toBeUndefined();
   });
 });
 
