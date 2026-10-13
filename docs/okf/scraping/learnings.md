@@ -6759,3 +6759,10 @@ gate (15 s pause). Scripts, proposals and logs: `.scrape/prod-batches/media-next
     newer exists; the notes on those pins' proposals say so.
 * **Not done:** window 3 onward (the ~2,500 older or further-out sparse pins), the 45 above, translations of
   nothing (media is language-neutral).
+
+## 2026-10-12 - Evening news job, run 7 (active Codex session)
+
+* **Learned** (Evening outcomes and ticket editions) October 12: Nobel economics pin 1998 was still a preview; confirmed Hall/Woodford and replaced 2008 press imagery with official Azure portraits. Starlink 1946 needed actual 00:28:11Z liftoff, not a NET window. GTC 2954 current primary dates start March 15, not March 14. Paris 4863 and LVMH 4095 belong to desks outside the job curator allowlist: queue exact sourced changes. Event pages mix 2026 prices and speakers under 2027 headings (Connections, NAB, GTC); never carry them forward. Tour on-sale dates in the past do not prove stock remains available.
+* **Learned** (Market noise and holiday relevance) October 12 scan read 5158 Kalshi and 1000 Polymarket events but per-game football/baseball props, routine price ladders and stale weather/traffic books still leaked into thisWeek; filter them manually. Settlement windows do not establish an actual ceasefire, indictment or model release. Holiday stock inserted a generic Dutch oven, Ramadan-specific scented candles for Eid al-Adha and a boat-shaped incense burner for Dragon Boat Festival; removed before production publication. Kept verified holiday foods, zongzi ingredients, feast supplies and festive bags/lanterns. Ramadan dates initially lacked a buy-box but a subsequent same-run read passed; rechecked the exact listing successfully before updating the old ad.
+
+* **Publishing restriction:** the current curator list rejected 23 of 40 event readings and 71 of 82 scores. Production readback is mandatory: local tool saves are not proof of production writes. The retained proposals and ownership-blocked corrections are in the run report and review queue; do not silently expand ownership permissions.

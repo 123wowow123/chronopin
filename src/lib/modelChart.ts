@@ -65,7 +65,7 @@ export type ModelChartData = {
 // expired: a new data field (the same-thread flag) showed nothing for an hour
 // after the deploy. Bump this with any change to what the route sends, and the
 // URL - and so the cache entry - is new.
-export const CHART_VERSION = 5;
+export const CHART_VERSION = 6;
 
 export async function loadModelChart(pinId: number): Promise<ModelChartData | null> {
   try {

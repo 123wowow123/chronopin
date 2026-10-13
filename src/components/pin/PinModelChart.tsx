@@ -104,6 +104,11 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   const unscored = data.unscored ?? null;
   const awaiting = unscored ? t('pin.modelChart.awaiting', { model: unscored.name, price: showPrice(unscored.price) }) : null;
 
+  const awaitingParts = useMemo(() => {
+    const cut = awaiting ? awaiting.lastIndexOf(' · ') : -1;
+    return awaiting && cut > 0 ? [awaiting.slice(0, cut), awaiting.slice(cut + 3)] : null;
+  }, [awaiting]);
+
   const frame = useMemo(() => {
     const prices = [...shown.map((p) => p.price), ...(unscored ? [unscored.price] : [])];
     const elos = shown.map((p) => p.elo);
@@ -364,7 +369,15 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
           ) : awaiting ? (
             <span className="text-ink tabular-nums">
               <span className="me-1.5 inline-block h-0.5 w-3 bg-accent align-middle" aria-hidden />
-              {awaiting}
+              {/* The caption is "model · price · not scored yet" in every
+                  language; the last part, the status, is the dark red. */}
+              {awaitingParts ? (
+                <>
+                  {awaitingParts[0]} · <span className="font-medium text-danger-soft">{awaitingParts[1]}</span>
+                </>
+              ) : (
+                awaiting
+              )}
             </span>
           ) : (
             <span className="text-subtle">{t('pin.modelChart.notPriced')}</span>
