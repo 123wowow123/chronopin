@@ -98,6 +98,7 @@
     "series:attach": "tsx scripts/series/attach.ts",
     "translations:sync": "tsx scripts/translations/sync.ts",
     "threads:prequels": "tsx scripts/threads/prequels.ts",
+    "threads:models": "tsx scripts/threads/models.ts",
     "references:list": "tsx scripts/references/list.ts",
     "references:apply": "tsx scripts/references/apply.ts",
     "references:reasoning:list": "tsx scripts/references/reasoningList.ts",

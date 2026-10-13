@@ -21,8 +21,10 @@ const GPT_FLAGSHIP_NAMES = new Set(['thinking', 'sol']);
 
 const PATTERNS: Pattern[] = [
   // Claude Opus 4.5 / Claude 3.5 Sonnet
-  { re: new RegExp(String.raw`\bclaude[- ](opus|sonnet|haiku)[- ]${VERSION}\b`), read: (m) => ({ family: `claude ${m[1]}`, version: m[2] }) },
+  { re: new RegExp(String.raw`\bclaude[- ](opus|sonnet|haiku|fable|mythos)[- ]${VERSION}\b`), read: (m) => ({ family: `claude ${m[1]}`, version: m[2] }) },
   { re: new RegExp(String.raw`\bclaude[- ]${VERSION}[- ](opus|sonnet|haiku)\b`), read: (m) => ({ family: `claude ${m[2]}`, version: m[1] }) },
+  // "Claude Fable 5.1 and Mythos 5.1": the second tier drops the "Claude".
+  { re: new RegExp(String.raw`\b(fable|mythos)[- ]${VERSION}\b`), read: (m) => ({ family: `claude ${m[1]}`, version: m[2] }) },
   // gpt-oss-120b: sizes, not versions.
   { re: /\bgpt-oss\b/, read: () => ({ family: 'gpt-oss', version: '0' }) },
   // GPT-4o, GPT 4o-mini, GPT-5.2 Thinking, GPT-5.3-Codex, GPT-5-Codex-Max
@@ -59,6 +61,31 @@ const PATTERNS: Pattern[] = [
   { re: new RegExp(String.raw`\bgemma[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'gemma', version: m[1] }) },
   // MiMo-V2.5-Pro, MiMo-V2.6
   { re: new RegExp(String.raw`\bmimo[- ]?v${VERSION}(?![\d.])`), read: (m) => ({ family: 'mimo', version: m[1] }) },
+  // Granite 3.3, Granite 4.0, Granite 4.2 8B (IBM): sizes follow the version.
+  { re: new RegExp(String.raw`\bgranite[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'granite', version: m[1] }) },
+  // Phi-3, Phi-3.5-mini, Phi-4-reasoning
+  { re: new RegExp(String.raw`\bphi[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'phi', version: m[1] }) },
+  // Cohere's Command R, Command R+ and Command A are one line: R first, A next.
+  { re: /\bcommand[- ]r(?:[- ]?(?:plus|\+))?(?![\w])/, read: () => ({ family: 'command', version: '1' }) },
+  { re: /\bcommand[- ]a\b/, read: () => ({ family: 'command', version: '2' }) },
+  // Step 3.5 Flash, Step 5 Preview (StepFun)
+  { re: new RegExp(String.raw`\bstep[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'step', version: m[1] }) },
+  // Ministral 8B and 3B (2024) came before Ministral 3: a size is not a version.
+  { re: /\bministral[- ]?\d+b\b/, read: () => ({ family: 'ministral', version: '0' }) },
+  { re: new RegExp(String.raw`\bministral[- ]?${VERSION}(?![\d.]|b\b)`), read: (m) => ({ family: 'ministral', version: m[1] }) },
+  // Arcee Trinity Large Preview / Thinking
+  { re: /\btrinity[- ](large|mini|nano)\b/, read: (m) => ({ family: `trinity ${m[1]}`, version: '0' }) },
+  // Solar Pro 2, Solar Pro 4 (Upstage)
+  { re: new RegExp(String.raw`\bsolar[- ]pro[- ]${VERSION}(?![\d.])`), read: (m) => ({ family: 'solar pro', version: m[1] }) },
+  // GPT-Image-1, GPT-Image-2.5
+  { re: new RegExp(String.raw`\bgpt[- ]image[- ]${VERSION}(?![\d.])`), read: (m) => ({ family: 'gpt-image', version: m[1] }) },
+  // Media models: Veo 3.1, Imagen 4, Lyria 3.5, Sora 2
+  { re: new RegExp(String.raw`\b(veo|imagen|lyria|sora)[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: m[1], version: m[2] }) },
+  // NVIDIA Nemotron 3, Falcon 3 / Falcon-H1, OLMo 2 / Olmo 3, ERNIE 4.5, Hunyuan, Nova 2
+  { re: new RegExp(String.raw`\bnemotron[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'nemotron', version: m[1] }) },
+  { re: new RegExp(String.raw`\bfalcon[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'falcon', version: m[1] }) },
+  { re: new RegExp(String.raw`\bolmo[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'olmo', version: m[1] }) },
+  { re: new RegExp(String.raw`\bernie[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'ernie', version: m[1] }) },
   // Muse Spark, Muse Spark 1.3: the unnumbered one is the first.
   { re: new RegExp(String.raw`\bmuse[- ]spark(?:[- ]${VERSION})?(?![\d.])`), read: (m) => ({ family: 'muse spark', version: m[1] ?? '0' }) },
 ];

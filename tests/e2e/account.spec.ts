@@ -95,7 +95,9 @@ test.describe.serial('a signed-in author', () => {
     const pinId = pinUrl.match(/\/pin\/(\d+)\//)![1];
     await expect(page.getByRole('heading', { level: 1 })).toContainText(`E2E launch ${stamp}`);
     await expect(page.getByText('ESTIMATED', { exact: true }).first()).toBeVisible();
-    await expect(page.getByRole('link', { name: /Buy on Amazon/ })).toBeVisible();
+    // The button's name is its store ("Amazon"); "Buy on Amazon" is only its
+    // title, which a link with content never takes as its name.
+    await expect(page.getByRole('link', { name: 'Amazon', exact: true })).toHaveAttribute('href', /amazon\.com\/dp\/B000000000/);
 
     // Edit only the title; everything else must survive the save.
     await page.goto(`/update/${pinId}`);
