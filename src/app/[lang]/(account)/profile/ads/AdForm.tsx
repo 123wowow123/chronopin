@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Icon } from '@/components/ui/Icon';
 import { useRouter } from '@/lib/client/navigation';
 import { api, ApiError } from '@/lib/client/api';
 import { BODY_MAX, creativeProblem, CUSTOM_MAX, CUSTOM_MIN, CUSTOM_RATE_CENTS, CUSTOM_STEP, dollars, packageFor, perThousand, SPONSORED_PACKAGES, TITLE_MAX } from '@/lib/sponsoredAds';
@@ -26,7 +27,17 @@ export function AdForm({ initial }: { initial: Initial | null }) {
   const [error, setError] = useState('');
   const priced = packageFor(impressions);
   const price = priced?.priceCents ?? 0;
-  const preview = picture ? URL.createObjectURL(picture) : (initial?.imageUrl ?? null);
+  // A chosen file is shown from the browser's own copy until it is uploaded.
+  const chosenUrl = useMemo(() => (picture ? URL.createObjectURL(picture) : null), [picture]);
+  useEffect(() => () => { if (chosenUrl) URL.revokeObjectURL(chosenUrl); }, [chosenUrl]);
+  const preview = chosenUrl ?? initial?.imageUrl ?? null;
+  const host = (() => {
+    try {
+      return new URL(url.trim()).hostname.replace(/^www\./, '');
+    } catch {
+      return '';
+    }
+  })();
 
   async function save(payNow: boolean) {
     const problem = creativeProblem({ title, body, url });
@@ -59,6 +70,37 @@ export function AdForm({ initial }: { initial: Initial | null }) {
   return (
     <form className="surface space-y-4 p-6" onSubmit={(e) => { e.preventDefault(); void save(true); }} noValidate>
       <h2 className="font-display text-xl font-semibold">{initial ? 'Edit your ad' : 'Create an ad'}</h2>
+
+      {/* Stays in view while the fields below are filled in. It is drawn the
+          way the pin page's ad column draws an ad (AdColumn in
+          src/components/ads/AdBlock.tsx): the label, a picture, the headline,
+          the text, then the link. */}
+      <div className="sticky top-2 z-10 shadow-sm" aria-live="polite">
+        <aside aria-label="Preview of your ad" className="surface p-4 sm:p-5">
+          <span className="text-[11px] font-semibold tracking-wider text-subtle uppercase">Sponsored</span>
+          <div className="mt-2 flex items-center gap-3.5">
+            {preview ? (
+              <span aria-hidden className="flex h-20 w-28 shrink-0 items-center justify-center overflow-hidden rounded border border-line bg-white">
+                {/* eslint-disable-next-line @next/next/no-img-element -- a local preview or our own blob host */}
+                <img src={preview} alt="" className="size-full object-cover object-center" />
+              </span>
+            ) : (
+              <span aria-hidden className="flex h-20 w-28 shrink-0 items-center justify-center overflow-hidden rounded bg-slate-700 text-white">
+                <Icon name="tag" className="size-1/2 max-h-8 max-w-8" />
+              </span>
+            )}
+            <span className="flex min-w-0 flex-col gap-0.5">
+              <span className={`line-clamp-2 font-medium ${title.trim() ? 'text-ink' : 'text-subtle'}`}>{title.trim() || 'Your headline'}</span>
+              <span className={`line-clamp-2 text-sm ${body.trim() ? 'text-muted' : 'text-subtle/60'}`}>{body.trim() || 'Your text appears here'}</span>
+              <span className="inline-flex items-center gap-1 text-sm font-medium text-link">
+                Visit site
+                <Icon name="external" className="size-3 opacity-60" />
+              </span>
+              {host ? <span className="truncate text-xs text-subtle">{host}</span> : null}
+            </span>
+          </div>
+        </aside>
+      </div>
 
       <div>
         <label htmlFor="ad-title" className="field-label">Headline</label>
