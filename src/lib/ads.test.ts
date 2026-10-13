@@ -25,6 +25,7 @@ import {
   sneakerAd,
   legoAd,
   huntingAd,
+  businessAd,
 } from './ads';
 import { CATEGORIES } from './categories';
 
@@ -536,5 +537,24 @@ describe('TideWe hunting ads', () => {
   it('is its own category and 18+', () => {
     expect(adCategory(hunting)).toBe('hunting');
     expect(adAllowed(hunting, { preference: null, age: 16, performance: undefined } as never)).toBe(false);
+  });
+});
+
+describe('World Businesses for Sale ads', () => {
+  const business = ad({ key: 'ad:310', kind: 'business', program: 'business_franchises', url: 'https://worldbusinessesforsale.com/collections/franchises', title: 'Franchises for sale', company: 'World Businesses for Sale', minAge: 18, categories: ['Business'] });
+
+  it('names a collection and its brand', () => {
+    expect(businessAd('business_franchises')?.brand).toBe('World Businesses for Sale');
+    expect(businessAd('hunting_blinds')).toBeNull();
+  });
+
+  it('is sent through Awin and credited to our publisher id', () => {
+    expect(taggedAdUrl(business.url, 'US', {})).toContain('awinmid=116725');
+    expect(adTag(business, {})).toBe('3115479');
+  });
+
+  it('is its own category and 18+', () => {
+    expect(adCategory(business)).toBe('business');
+    expect(adAllowed(business, { preference: null, age: 16, performance: undefined } as never)).toBe(false);
   });
 });

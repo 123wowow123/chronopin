@@ -1952,6 +1952,8 @@ const vi: Messages = {
     legoBody: 'Phụ kiện độc lập cho bộ LEGO®. Không do LEGO Group sản xuất hoặc xác nhận.',
     seeOnTidewe: 'Xem tại TideWe',
     huntingBody: 'Lều ngụy trang đi săn, quần lội nước, quần áo sưởi ấm và dụng cụ ngoài trời.',
+    seeOnWbfs: 'Xem tại World Businesses for Sale',
+    businessBody: 'Doanh nghiệp, nhượng quyền và kinh doanh trực tuyến đang rao bán.',
     watchBody: 'Đồng hồ {brand} đã qua sử dụng trên eBay, có Bảo đảm tính xác thực cho các tin đăng đủ điều kiện.',
     urgencyLeft: 'Chỉ còn {count}',
     urgencyLow: 'Giá thấp nhất trong {days} ngày',

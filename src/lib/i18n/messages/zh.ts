@@ -1943,6 +1943,8 @@ const zh: Messages = {
     legoBody: '适用于 LEGO® 套装的独立配件，非乐高集团制造或认可。',
     seeOnTidewe: '前往 TideWe 查看',
     huntingBody: '狩猎隐蔽帐篷、涉水裤、加热服装和户外装备。',
+    seeOnWbfs: '在 World Businesses for Sale 查看',
+    businessBody: '待售的企业、特许经营和网络业务。',
     watchBody: 'eBay 上的二手 {brand} 腕表，符合条件的商品享有真品保证。',
     urgencyLeft: '仅剩 {count} 件',
     urgencyLow: '{days} 天最低价',

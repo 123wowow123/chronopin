@@ -27,12 +27,14 @@ import { isCategory } from './categories';
 // which earn through our Awin publisher account (affiliate.ts).
 // 'hunting' ads (0166) are TideWe's hunting blinds, waders and heated gear,
 // also through Awin.
-export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker' | 'lego' | 'hunting';
+// 'business' ads (0175) are World Businesses for Sale's listing categories,
+// also through Awin.
+export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker' | 'lego' | 'hunting' | 'business';
 
 // Each kind's share of the picks, before relatedness and preference.
 // A watch pool is small, so on the timeline it only comes up now and then;
 // on a Watches pin's page its ads are related (shared tag) and come first.
-export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1, lego: 1, hunting: 1 };
+export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1, lego: 1, hunting: 1, business: 1 };
 
 // The watch brands advertised (Ad.program is `watch_<key>`), by the name the
 // ad shows. Owner, 2026-10-05: "add ads for rolex and other desirable watches".
@@ -90,6 +92,20 @@ export const HUNTING_ADS: Record<string, { title: string; brand: string }> = {
 };
 
 export const huntingAd = (program: string | null | undefined) => (program && HUNTING_ADS[program]) || null;
+
+// World Businesses for Sale collections (Ad.program is `business_<key>`).
+export const BUSINESS_ADS: Record<string, { title: string; brand: string }> = {
+  business_premium: { title: 'Premium businesses for sale', brand: 'World Businesses for Sale' },
+  business_online: { title: 'Online & technology businesses for sale', brand: 'World Businesses for Sale' },
+  business_food: { title: 'Restaurants, cafes & food businesses for sale', brand: 'World Businesses for Sale' },
+  business_retail: { title: 'Retail & consumer goods businesses for sale', brand: 'World Businesses for Sale' },
+  business_services: { title: 'Service businesses for sale', brand: 'World Businesses for Sale' },
+  business_franchises: { title: 'Franchises for sale', brand: 'World Businesses for Sale' },
+  business_home: { title: 'Home-based businesses for sale', brand: 'World Businesses for Sale' },
+  business_us: { title: 'US businesses for sale', brand: 'World Businesses for Sale' },
+};
+
+export const businessAd = (program: string | null | undefined) => (program && BUSINESS_ADS[program]) || null;
 
 const FOOTWEAR_TAGS = new Set(['sneakers', 'sneaker', 'shoes', 'shoe', 'footwear']);
 const hasFootwear = (names: string[]) => names.some((name) => FOOTWEAR_TAGS.has(name.trim().toLowerCase()));
@@ -412,6 +428,7 @@ export function adCategory(ad: AdCandidate): string {
   if (ad.kind === 'sneaker' || hasFootwear(ad.categories) || /\b(?:sneakers?|shoes?|footwear)\b/i.test(ad.title ?? '')) return 'shoes';
   if (ad.kind === 'lego') return 'lego';
   if (ad.kind === 'hunting') return 'hunting';
+  if (ad.kind === 'business') return 'business';
   if (ad.holiday) return 'seasonal';
   return topicName(categories.find(isCategory) ?? categories.find(Boolean) ?? ad.program ?? 'products');
 }

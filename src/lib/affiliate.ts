@@ -75,11 +75,14 @@ export const awinPublisherId = '3115479';
 // Awin advertisers we have joined, by the host their site answers on. brkox
 // (LEGO-compatible light kits and display frames, US) invited us 2026-10-11;
 // TideWe (hunting gear, 10% commission, 30-day cookie) accepted us the same day.
+// World Businesses for Sale (listings marketplace, 20% + 10% bonus) joined 2026-10-13.
 const AWIN_ADVERTISERS: Record<string, string> = {
   'brkox.com': '129093',
   'www.brkox.com': '129093',
   'tidewe.com': '78182',
   'www.tidewe.com': '78182',
+  'worldbusinessesforsale.com': '116725',
+  'www.worldbusinessesforsale.com': '116725',
 };
 
 function awinAdvertiser(url: string | undefined | null): { page: URL; merchantId: string } | undefined {

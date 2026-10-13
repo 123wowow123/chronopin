@@ -101,6 +101,13 @@ describe('Awin links', () => {
     expect(isAwinUrl(tracked.toString())).toBe(true);
   });
 
+  it('sends a World Businesses for Sale page through our Awin tracking link', () => {
+    const tracked = new URL(affiliateUrl('https://worldbusinessesforsale.com/collections/franchises'));
+    expect(tracked.searchParams.get('awinmid')).toBe('116725');
+    expect(tracked.searchParams.get('awinaffid')).toBe('3115479');
+    expect(isAwinUrl(tracked.toString())).toBe(true);
+  });
+
   it('sends a brkox page through our Awin tracking link', () => {
     const tracked = new URL(affiliateUrl('https://brkox.com/collections/lego-light-kits'));
     expect(tracked.origin + tracked.pathname).toBe('https://www.awin1.com/cread.php');

@@ -2,6 +2,8 @@
 
 ## 2026-10-13
 
+* **Update:** Backfilled 480 missing production pin translations and refreshed 105 outdated translations across 39 pins and all 15 target languages. Verified zero remaining missing/outdated/incomplete rows and public API responses in every locale; [learnings](scraping/learnings.md#2026-10-13---production-pin-translation-backfill) records the fallback and validation checks.
+
 * **Update:** Recorded the owner's standing authorization to apply routine researched daily-job pin maintenance without asking again, including authors outside the curator allowlist. AGENTS.md and [daily jobs](scraping/daily-jobs.md) specify admin API fallback, verification and review resolution; [learnings](scraping/learnings.md) records the feedback.
 
 ## 2026-10-12

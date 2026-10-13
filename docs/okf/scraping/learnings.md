@@ -13,6 +13,12 @@ After **every** scraping job (a scrape, a backfill, a batch of pins, a reference
 
 Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (owner corrections and confirmed approaches) and `* **Changed**` (which page was updated).
 
+## 2026-10-13 - Production pin translation backfill
+
+* **Done:** Filled 480 missing translations on 32 pins and refreshed 105 outdated translations on seven edited pins, covering all 15 non-English locales. Applied 585 distinct pin/language rows through `/api/admin/translations` with the exported source hashes; production's final export returned no missing, outdated or incomplete translations. Public pin API checks covered every target locale. Original pin text and authors were preserved; no deployment was needed. Source exports, rejected outputs, final rows and verification records are in the ignored `.scrape/prod-batches/translations-2026-10-13/` directory.
+* **Learned:** The configured Anthropic key had no credit. The fallback translator initially rate-limited requests, so generation was paced and completed through its public translation interface. Independent HTML text nodes and response IDs/source echoes prevent lost markup and swapped paragraphs. Machine outputs needed checks and corrections for product names, Buddhist calendar years, distance-unit changes, dropped quantities, decimal/group separators, numeric versus spelled-out ordinals and fractions. A successful translation POST does not prove that all fields were supplied: recheck completeness against the source and query the backlog after saving.
+* **Changed:** Added the hash, field-completeness and fallback verification guidance to [Enrichment](enrichment.md#pin-translations).
+
 ## 2026-10-13 - Hotel rubric: acclaim is always checked
 
 * **Feedback:** After two hotel rubrics were stored with `acclaim` null ("Michelin lists Six Senses as New without a Key tier I could read, and Forbes and AAA weren't checked"), the owner said: "always check these". The first scoring passes left acclaim null on every property and an acclaim-only pass checked 18 of them; the unreadable ones stayed null.

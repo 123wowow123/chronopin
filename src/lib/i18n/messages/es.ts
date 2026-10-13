@@ -1949,6 +1949,8 @@ const es: Messages = {
     legoBody: 'Accesorios independientes para sets LEGO®. No fabricados ni avalados por el Grupo LEGO.',
     seeOnTidewe: 'Verlo en TideWe',
     huntingBody: 'Escondites de caza, vadeadores, ropa calefactada y equipo para exteriores.',
+    seeOnWbfs: 'Ver en World Businesses for Sale',
+    businessBody: 'Negocios, franquicias y empresas en línea a la venta.',
     watchBody: 'Relojes {brand} de segunda mano en eBay, con Garantía de autenticidad en los anuncios aptos.',
     urgencyLeft: 'Solo quedan {count}',
     urgencyLow: 'Precio más bajo en {days} días',

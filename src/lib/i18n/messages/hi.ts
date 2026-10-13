@@ -1960,6 +1960,8 @@ const hi: Messages = {
     legoBody: 'LEGO® सेट के लिए स्वतंत्र एक्सेसरीज़। LEGO ग्रुप द्वारा निर्मित या अनुमोदित नहीं।',
     seeOnTidewe: 'TideWe पर देखें',
     huntingBody: 'शिकार के ब्लाइंड, वेडर, गर्म कपड़े और आउटडोर उपकरण।',
+    seeOnWbfs: 'World Businesses for Sale पर देखें',
+    businessBody: 'बिक्री के लिए सूचीबद्ध व्यवसाय, फ्रेंचाइज़ी और ऑनलाइन उद्यम।',
     watchBody: 'eBay पर पुरानी {brand} घड़ियाँ, पात्र लिस्टिंग पर प्रामाणिकता की गारंटी के साथ।',
     urgencyLeft: 'सिर्फ़ {count} बचे हैं',
     urgencyLow: '{days} दिनों में सबसे कम कीमत',

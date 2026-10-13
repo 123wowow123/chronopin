@@ -204,3 +204,9 @@ at the same building cannot share one photograph of it, because the hash drops
 it from the seven that follow. Gather the set up front: for a building, Commons
 usually has enough once the archival construction series and architectural
 drawings are filtered out.
+
+# Pin translations
+
+For a production backfill, export current source text, locale states and `sourceHash` through `GET /api/admin/translations`, then submit finished rows through its POST endpoint with that hash. Include every nonempty source field for a missing translation. An outdated translation can carry only the exported `changed` fields; the service preserves unchanged stored fields. A successful POST can still leave a row incomplete when fields were omitted, so requery the backlog after saving and spot-check localized public pin responses.
+
+When using a fallback machine translator, translate HTML text nodes and rebuild the original tags, attributes and citations locally. Match batched responses to their request IDs and source echoes. Preserve product names, numeric values, currencies, units and date meanings; review localized numeral formats, spelled ordinals and fractions rather than treating every textual difference as an error. Reject truncated output, missing quantities, changed calendar eras and unwanted unit conversions. Pace requests when rate-limited, and keep source/result artifacts in ignored scratch storage. See the [October 13 backfill notes](learnings.md#2026-10-13---production-pin-translation-backfill).

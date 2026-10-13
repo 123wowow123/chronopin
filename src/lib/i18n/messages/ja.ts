@@ -1943,6 +1943,8 @@ const ja: Messages = {
     legoBody: 'LEGO®セット用の独立系アクセサリー。LEGOグループによる製造・承認ではありません。',
     seeOnTidewe: 'TideWeで見る',
     huntingBody: 'ハンティング用ブラインド、ウェーダー、電熱ウェア、アウトドア用品。',
+    seeOnWbfs: 'World Businesses for Saleで見る',
+    businessBody: '売りに出ている事業、フランチャイズ、オンラインビジネス。',
     watchBody: 'eBayの中古{brand}腕時計。対象の出品には真贋保証が付きます。',
     urgencyLeft: '残り{count}点',
     urgencyLow: '{days}日間の最安値',

@@ -1953,6 +1953,8 @@ const id: Messages = {
     legoBody: 'Aksesori independen untuk set LEGO®. Tidak dibuat atau didukung oleh LEGO Group.',
     seeOnTidewe: 'Lihat di TideWe',
     huntingBody: 'Tenda penyamaran berburu, wader, pakaian berpemanas, dan perlengkapan luar ruangan.',
+    seeOnWbfs: 'Lihat di World Businesses for Sale',
+    businessBody: 'Bisnis, waralaba, dan usaha online yang dijual.',
     watchBody: 'Jam tangan {brand} bekas di eBay, dengan Jaminan Keaslian pada listing yang memenuhi syarat.',
     urgencyLeft: 'Tersisa {count}',
     urgencyLow: 'Harga terendah {days} hari',

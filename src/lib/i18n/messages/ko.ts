@@ -1944,6 +1944,8 @@ const ko: Messages = {
     legoBody: 'LEGO® 세트용 독립 액세서리입니다. LEGO 그룹이 제조하거나 승인한 제품이 아닙니다.',
     seeOnTidewe: 'TideWe에서 보기',
     huntingBody: '사냥용 블라인드, 웨이더, 열선 의류, 아웃도어 장비.',
+    seeOnWbfs: 'World Businesses for Sale에서 보기',
+    businessBody: '매물로 나온 사업체, 프랜차이즈, 온라인 사업.',
     watchBody: 'eBay의 중고 {brand} 시계. 해당 상품에는 정품 보증이 적용됩니다.',
     urgencyLeft: '{count}개 남음',
     urgencyLow: '{days}일 최저가',

@@ -82,6 +82,15 @@ const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: 
   hunting_boots: { icon: 'tag', background: '#44403c', color: '#fde68a' },
   hunting_clothing: { icon: 'tag', background: '#365314', color: '#fff' },
   hunting_packs: { icon: 'tag', background: '#292524', color: '#fcd34d' },
+  // World Businesses for Sale (0175, Awin): ledger blues and greens.
+  business_premium: { icon: 'sparkle', background: '#1e293b', color: '#fcd34d' },
+  business_online: { icon: 'bolt', background: '#1e3a8a', color: '#fff' },
+  business_food: { icon: 'tag', background: '#9a3412', color: '#fff' },
+  business_retail: { icon: 'cart', background: '#0f766e', color: '#fff' },
+  business_services: { icon: 'tag', background: '#334155', color: '#fff' },
+  business_franchises: { icon: 'tag', background: '#4c1d95', color: '#fff' },
+  business_home: { icon: 'eye', background: '#166534', color: '#fff' },
+  business_us: { icon: 'eye', background: '#7f1d1d', color: '#fff' },
 };
 // Programs whose own picture sits on their tile (a file in public/ads).
 const PROGRAM_IMAGE: Record<string, string> = { abracadabra: '/ads/abracadabra.png' };
@@ -160,6 +169,10 @@ function useAdText() {
     if (ad.kind === 'hunting') {
       const line = t('ads.huntingBody');
       return { title: ad.title ?? '', body: line, price: '', info: line, urgency: '', cta: t('ads.seeOnTidewe') };
+    }
+    if (ad.kind === 'business') {
+      const line = t('ads.businessBody');
+      return { title: ad.title ?? '', body: line, price: '', info: line, urgency: '', cta: t('ads.seeOnWbfs') };
     }
     if (ad.kind === 'sneaker') {
       const price = ad.price != null ? money(ad.price, ad.currency) : '';
