@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { api, ApiError } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import { useSession } from '@/lib/client/session';
+import { emailConfirmationPending } from '@/lib/emailConfirmation';
 
 const HIDDEN_KEY = 'emailVerifyBannerHidden';
 
@@ -28,7 +29,7 @@ export function EmailVerifyBanner() {
   const [state, setState] = useState<'idle' | 'sending' | 'sent' | 'tooSoon' | 'failed'>('idle');
   const [hidden, setHidden] = useState(() => (typeof window === 'undefined' ? null : hiddenFor()));
 
-  if (!user || user.emailVerifiedDateTime || hidden === String(user.id)) return null;
+  if (!user || !emailConfirmationPending(user) || hidden === String(user.id)) return null;
 
   async function resend() {
     setState('sending');

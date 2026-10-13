@@ -6,6 +6,7 @@
 import { jwtVerify, SignJWT } from 'jose';
 import { after, type NextRequest } from 'next/server';
 import { siteUrl } from '@/lib/appConfig';
+import { emailConfirmationPending } from '@/lib/emailConfirmation';
 import config from './config';
 import { type Email, sendEmail } from './email';
 import { EMAIL_LOGO_PNG_BASE64 } from './emailLogo';
@@ -175,8 +176,9 @@ export async function resendVerificationEmail(user: User, request: NextRequest):
 }
 
 // Posting needs a confirmed email; browsing, liking and following do not.
+// An Alibaba account with no email has nothing to confirm (emailConfirmation.ts).
 export function requireVerifiedEmail(user: User): void {
-  if (!user.emailVerifiedDateTime) {
+  if (emailConfirmationPending(user)) {
     throw new HttpError(403, 'Confirm your email address first.', { code: 'emailUnverified', message: 'Confirm your email address first.' });
   }
 }
