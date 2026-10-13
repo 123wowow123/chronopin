@@ -7,4 +7,5 @@ export const SLOT_LABEL: Record<AdSlot, string> = {
   'pin-strip': 'Pin page, under the tags',
   'pin-side': 'Pin page, under the comments',
   drawer: 'Mobile menu, above Log out',
+  'map-strip': 'Map, bottom strip (follows the pins in view)',
 };

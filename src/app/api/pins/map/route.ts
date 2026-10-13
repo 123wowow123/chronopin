@@ -36,6 +36,8 @@ export const GET = route(async (request: NextRequest) => {
     timeZone: requestTimeZone(request),
     restaurantsOnly: params.get('show') === 'restaurants',
   });
+  // ?count=1: only how many, for the map's layer toggle to know a layer is empty.
+  if (params.get('count') === '1') return json({ count: pins.length });
   return json({ pins: await localizePins(pins, requestLocale(request)) });
 });
 

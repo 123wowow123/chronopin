@@ -110,17 +110,22 @@ export const businessAd = (program: string | null | undefined) => (program && BU
 const FOOTWEAR_TAGS = new Set(['sneakers', 'sneaker', 'shoes', 'shoe', 'footwear']);
 const hasFootwear = (names: string[]) => names.some((name) => FOOTWEAR_TAGS.has(name.trim().toLowerCase()));
 
-export const AD_SLOTS = ['timeline-row', 'timeline-side', 'pin-strip', 'pin-side', 'drawer'] as const;
+export const AD_SLOTS = ['timeline-row', 'timeline-side', 'pin-strip', 'pin-side', 'drawer', 'map-strip'] as const;
 export type AdSlot = (typeof AD_SLOTS)[number];
 // How many ads a slot asks for at most: what it shows at its widest. The
 // timeline's side panel stops at five however tall the window is; a pin's
 // side column runs taller, so it stops at ten (AdColumn then shows only as
 // many as fit beside the pin's own column).
-export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 10, drawer: 5 };
+export const SLOT_COUNT: Record<AdSlot, number> = { 'timeline-row': 7, 'timeline-side': 5, 'pin-strip': 2, 'pin-side': 10, drawer: 5, 'map-strip': 6 };
 // Reserve one seasonal tile, leaving room for other categories in every block.
-export const HOLIDAY_COUNT: Record<AdSlot, number> = { 'timeline-row': 1, 'timeline-side': 1, 'pin-strip': 1, 'pin-side': 1, drawer: 1 };
+export const HOLIDAY_COUNT: Record<AdSlot, number> = { 'timeline-row': 1, 'timeline-side': 1, 'pin-strip': 1, 'pin-side': 1, drawer: 1, 'map-strip': 1 };
 // Slots on a pin's page, whose ads are its related ones first.
 export const PIN_SLOTS: readonly AdSlot[] = ['pin-strip', 'pin-side'];
+
+// The map's bottom strip is picked for the pins in view: at most this many ids are read.
+export const MAP_STRIP_PINS = 40;
+// How often the map's strip is picked again (ms).
+export const MAP_STRIP_REFRESH_MS = 150_000;
 
 export function isAdSlot(value: unknown): value is AdSlot {
   return typeof value === 'string' && (AD_SLOTS as readonly string[]).includes(value);

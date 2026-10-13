@@ -344,7 +344,7 @@ function TodayBar({ onToday, children }: { onToday?: () => void; children?: Reac
   const t = useT();
   if (!onToday && !children) return null;
   return (
-    <div className="fixed end-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:end-4 lg:gap-2 lg:bottom-4">
+    <div data-today-bar className="fixed end-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:end-4 lg:gap-2 lg:bottom-4">
       {children}
       {onToday ? (
         <button

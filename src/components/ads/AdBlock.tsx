@@ -9,7 +9,7 @@ import { useT } from '@/lib/client/i18n';
 import { withPageLang } from '@/lib/client/navigation';
 import { isAwinUrl, isEbayUrl } from '@/lib/affiliate';
 import { money } from '@/lib/format';
-import { parseUrgency, SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
+import { MAP_STRIP_PINS, MAP_STRIP_REFRESH_MS, parseUrgency, SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
 
 // The ad slots marked on the timeline and the pin page, filled with Amazon
 // Associates ads (/api/ads, src/lib/ads.ts): program ads (Special Program
@@ -605,6 +605,104 @@ export function AdDrawer({ className = '' }: { className?: string }) {
                 <AdPicture ad={ad} className="h-12 w-[4.5rem]" />
                 <span className="flex min-w-0 flex-col">
                   <span className="truncate text-sm font-medium text-ink" title={title}>
+                    {title}
+                  </span>
+                  <AdInfoLine price={price} info={info} urgent={!!urgency} />
+                </span>
+              </AdLink>
+            </li>
+          );
+        })}
+      </ul>
+    </aside>
+  );
+}
+
+// The row along the bottom of the map: ads picked for the pins in view, and
+// picked again every 2.5 minutes (what is in view is read then, not as the map
+// moves, so the row stays still while it is read). `getPinIds` answers which
+// pins are in view; `ready` says the map has its pins. Paused while the tab or
+// the page is hidden, and the row keeps its last ads if a fetch fails. As many
+// as fit the width show, one on a phone.
+export function AdMapStrip({ getPinIds, ready, className = '', style }: { getPinIds: () => number[]; ready: boolean; className?: string; style?: React.CSSProperties }) {
+  const slot = 'map-strip';
+  const t = useT();
+  const text = useAdText();
+  const [ads, setAds] = useState<AdJson[]>([]);
+  const ref = useRef<HTMLElement>(null);
+  // How many 14rem cards fit the row: one row only, the rest not drawn.
+  const [fit, setFit] = useState(1);
+  const getRef = useRef(getPinIds);
+  useEffect(() => {
+    getRef.current = getPinIds;
+  }, [getPinIds]);
+  useEffect(() => {
+    if (!ready) return;
+    let cancelled = false;
+    let last = 0;
+    const load = () => {
+      const element = ref.current;
+      // A page kept mounted but hidden (React Activity) takes no ads.
+      if (document.hidden || (element && element.getClientRects().length === 0 && ads.length)) return;
+      last = Date.now();
+      const pins = getRef.current().slice(0, MAP_STRIP_PINS);
+      const params = new URLSearchParams({ slot, n: String(SLOT_COUNT[slot]) });
+      if (pins.length) params.set('pins', pins.join(','));
+      // The ads on show now are skipped, so each round is a fresh row.
+      const shown = ref.current ? [...ref.current.querySelectorAll<HTMLElement>('[data-ad-key]')].map((el) => el.dataset.adKey!) : [];
+      if (shown.length) params.set('not', shown.join(','));
+      fetch(withPageLang(`/api/ads?${params}`))
+        .then((res) => (res.ok ? (res.json() as Promise<{ ads: AdJson[] }>) : null))
+        .then((body) => {
+          if (!cancelled && body?.ads.length) setAds(body.ads);
+        })
+        .catch(() => {});
+    };
+    load();
+    const timer = setInterval(load, MAP_STRIP_REFRESH_MS);
+    // Back to a tab that sat hidden past a round: pick again at once.
+    const visible = () => {
+      if (!document.hidden && Date.now() - last >= MAP_STRIP_REFRESH_MS) load();
+    };
+    document.addEventListener('visibilitychange', visible);
+    return () => {
+      cancelled = true;
+      clearInterval(timer);
+      document.removeEventListener('visibilitychange', visible);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- one loop per ready map
+  }, [ready]);
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+    const measure = () => {
+      const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const width = element.getBoundingClientRect().width;
+      // Under one card's width (between the toggle and the pills on a narrow desktop) nothing is drawn.
+      setFit(Math.floor((width + 8) / (14 * rem + 8)));
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [ads.length]);
+  if (!ads.length) return <aside ref={ref} aria-hidden className={`invisible h-0 ${className}`} style={style} />;
+  if (fit < 1) return <aside ref={ref} aria-hidden className={`invisible h-0 ${className}`} style={style} />;
+  return (
+    <aside ref={ref} aria-label={t('ads.sponsored')} className={className} style={style}>
+      {/* Once, at the top left of the group. */}
+      <div className="mb-0.5 ms-2 [text-shadow:0_0_3px_var(--color-panel),0_0_6px_var(--color-panel)]">
+        <SponsoredLabel />
+      </div>
+      <ul className="flex justify-center gap-2 px-1 pb-1">
+        {ads.slice(0, fit).map((ad) => {
+          const { title, price, info, urgency } = text(ad);
+          return (
+            <li key={ad.key} data-ad-key={ad.key} className="min-w-0 max-w-[28rem] flex-1 basis-0">
+              <AdLink ad={ad} slot={slot} className="floating flex h-full items-center gap-2.5 rounded-2xl p-2 hover:bg-raised hover:no-underline">
+                <AdPicture ad={ad} className="h-12 w-16" />
+                <span className="flex min-w-0 flex-col">
+                  <span className="truncate text-sm leading-snug font-medium text-ink" title={title}>
                     {title}
                   </span>
                   <AdInfoLine price={price} info={info} urgent={!!urgency} />

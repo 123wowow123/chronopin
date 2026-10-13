@@ -1,10 +1,11 @@
 'use client';
 
+import { AdMapStrip } from '@/components/ads/AdBlock';
 import Anchor from '@/components/ui/Anchor';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { localizeHere, useRouter, useSearchParams, withPageLang } from '@/lib/client/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { MAP_ATTRIBUTION_PREFIX, TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
 import { FloatingControls, useInDrawerPanel } from '@/components/timeline/FloatingControls';
 import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
@@ -307,7 +308,7 @@ function loadedAsMap() {
 // /map?pin=<id> (a pin page's "To map") centers on that pin, shows it
 // whatever the filters, and keeps its popup open until the map is clicked.
 // sliderTyping: whether the filter sliders offer a typed box (the admin setting).
-export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boolean }) {
+export default function PinsMap({ sliderTyping = false, ads = false }: { sliderTyping?: boolean; ads?: boolean }) {
   const router = useRouter();
   const t = useT();
   const rtl = isRtl(t.locale);
@@ -846,11 +847,63 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
   }
 
   const layer = market ? 'market' : restaurantLayer ? 'restaurants' : 'pins';
-  const layerToggle = <LayerToggle layer={layer} onChange={(next) => next !== layer && setLayer(next)} />;
+  const available = useLayerAvailability({ layer, fetchQuery, marketQuery, watched, past, future, postedWithin });
+  const layerToggle = <LayerToggle layer={layer} available={available} onChange={(next) => next !== layer && setLayer(next)} />;
 
   const phrase = (span: string | null) => spanPhrase(span, t.locale);
   const hasPast = !!past && past !== '0d';
   const hasFuture = !!future && future !== '0d';
+
+  // Where the layer toggle ends, so the ads begin just after it whatever
+  // buttons it holds.
+  const toggleBox = useRef<HTMLDivElement>(null);
+  const [toggleRight, setToggleRight] = useState(0);
+  const [stripEnd, setStripEnd] = useState(80);
+  useEffect(() => {
+    const box = toggleBox.current;
+    if (!box) return;
+    // The row of pills (and "Today") on the right: the ads end just before
+    // it, as they begin just after the toggle, the same gap either side. It
+    // is found by its mark since the controls draw it.
+    let bar: Element | null = null;
+    const observer = new ResizeObserver(() => measure());
+    const measure = () => {
+      setToggleRight(Math.round(box.getBoundingClientRect().right) + 12);
+      const found = document.querySelector('[data-today-bar]');
+      if (found !== bar) {
+        if (bar) observer.unobserve(bar);
+        bar = found;
+        if (bar) observer.observe(bar);
+      }
+      const left = bar ? bar.getBoundingClientRect().left : window.innerWidth;
+      // The locate button's column when the row is not there.
+      setStripEnd(Math.max(72, Math.round(window.innerWidth - left + 12)));
+    };
+    measure();
+    observer.observe(box);
+    window.addEventListener('resize', measure);
+    const poll = setInterval(measure, 1000);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', measure);
+      clearInterval(poll);
+    };
+  }, []);
+  // The pins on show: inside the view, and passing the category picks.
+  const visiblePinIds = useCallback(() => {
+    const map = mapRef.current;
+    if (!map) return [];
+    const bounds = map.getBounds();
+    const west = bounds.getWest();
+    const east = bounds.getEast();
+    const ids: number[] = [];
+    for (const entry of markersRef.current) {
+      const { latitude: lat, longitude: lng, id } = entry.pin;
+      if (lat == null || lng == null || !bounds.contains([lat, lng]) && !(lat >= bounds.getSouth() && lat <= bounds.getNorth() && Math.ceil((west - lng) / 360) <= Math.floor((east - lng) / 360))) continue;
+      if (entry.focus || inCategories(entry.categories, categoriesRef.current)) ids.push(id);
+    }
+    return ids;
+  }, []);
 
   function zoomToLocation() {
     const map = mapRef.current;
@@ -893,7 +946,7 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
       {/* Leave room for the pin's back button;
           pins-map (globals.css) lifts attribution over the bottom pills. */}
       <div ref={canvasRef} className={`pins-map absolute inset-0 z-0 ${focusId || returnTo ? '[&_.leaflet-top]:pt-10' : ''}`} />
-      <div className="fixed end-3 bottom-3 z-[1000] flex max-w-[calc(100%-1.5rem)] flex-col items-end gap-2 lg:end-4 lg:bottom-4">
+      <div className="fixed end-3 bottom-3 z-[1000] flex max-w-[calc(100%-1.5rem)] flex-col items-end gap-2 lg:end-4 lg:bottom-[5rem] xl:bottom-4">
         {locationError ? (
           <p role="alert" className="floating max-w-72 px-3 py-2 text-sm text-ink">{locationError}</p>
         ) : null}
@@ -909,6 +962,16 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
           <Icon name="target" className={`size-5 ${locating ? 'motion-safe:animate-pulse' : ''}`} />
         </button>
       </div>
+      {/* The ads along the bottom: left of the locate button, right of the
+          layer toggle where that sits at the bottom (xl). Pins layer only. */}
+      {ads && layer === 'pins' ? (
+        <AdMapStrip
+          ready={status === 'ready' && count > 0}
+          getPinIds={visiblePinIds}
+          style={{ ["--strip-start" as string]: `${toggleRight}px`, ["--strip-end" as string]: `${stripEnd}px` }}
+          className="absolute end-[4.25rem] bottom-3 start-3 z-[1000] lg:start-[var(--strip-start)] lg:end-[var(--strip-end)] lg:bottom-4"
+        />
+      ) : null}
       {returnTo ? (
         <Anchor
           href={localizeHere(returnTo)}
@@ -944,7 +1007,7 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
           the bottom narrower. Its fixed panels stack inside this z-[1000], over
           Leaflet's panes. */}
       {/* Below lg these destinations are already in the navigation drawer. */}
-      <div className="absolute bottom-16 start-2.5 z-[1000] hidden max-w-[calc(100%-1.25rem)] lg:block xl:bottom-2.5">
+      <div ref={toggleBox} className="absolute bottom-4 start-4 z-[1000] hidden max-w-[calc(100%-2rem)] lg:block">
         {layerToggle}
       </div>
       {/* The same controls on either layer, so a filter set on one is still
@@ -952,7 +1015,7 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
       <div className="relative z-[1000]">
         <FloatingControls
           merge
-          drawerTop={<LayerToggle layer={layer} onChange={(next) => {
+          drawerTop={<LayerToggle layer={layer} available={available} onChange={(next) => {
             if (next !== layer) setLayer(next);
             closeDrawer();
           }} />}
@@ -1030,16 +1093,67 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
 }
 
 // Which layer the map plots: the pins, or the marketplace listings.
-function LayerToggle({ layer, onChange }: { layer: 'pins' | 'market' | 'restaurants'; onChange: (layer: 'pins' | 'market' | 'restaurants') => void }) {
+type MapLayer = 'pins' | 'market' | 'restaurants';
+
+// Which layers have anything to plot under the current filters, so the toggle
+// can leave out an empty one. A layer is assumed to have content until its
+// count comes back, and the layer on show always stays.
+function useLayerAvailability({ layer, fetchQuery, marketQuery, watched, past, future, postedWithin }: {
+  layer: MapLayer;
+  fetchQuery: string;
+  marketQuery: string;
+  watched: boolean;
+  past: string | null;
+  future: string | null;
+  postedWithin: string | null;
+}) {
+  const [empty, setEmpty] = useState<Record<MapLayer, boolean>>({ pins: false, market: false, restaurants: false });
+  useEffect(() => {
+    let cancelled = false;
+    const now = new Date();
+    const base = new URLSearchParams({ count: '1' });
+    if (fetchQuery) base.set('q', fetchQuery);
+    if (watched) base.set('f', 'watch');
+    const from = past ? offsetDate(now, past, -1) : null;
+    const to = future ? offsetDate(now, future, 1) : null;
+    if (from) base.set('from', from.toISOString());
+    if (to) base.set('to', to.toISOString());
+    if (postedWithin) base.set('created_within', postedWithin);
+    const restaurants = new URLSearchParams(base);
+    restaurants.set('show', 'restaurants');
+    const listings = new URLSearchParams();
+    if (marketQuery) listings.set('q', marketQuery);
+    if (postedWithin) listings.set('created_within', postedWithin);
+    const ask = (url: string, count: (body: { count: number; listings: unknown[] }) => number, key: MapLayer) =>
+      fetch(withPageLang(url))
+        .then((res) => (res.ok ? res.json() : null))
+        .then((body) => {
+          if (body && !cancelled) setEmpty((current) => ({ ...current, [key]: count(body) === 0 }));
+        })
+        .catch(() => {});
+    ask(`/api/pins/map?${base}`, (body) => body.count, 'pins');
+    ask(`/api/pins/map?${restaurants}`, (body) => body.count, 'restaurants');
+    ask(`/api/listings/map?${listings}`, (body) => body.listings.length, 'market');
+    return () => {
+      cancelled = true;
+    };
+  }, [fetchQuery, marketQuery, watched, past, future, postedWithin]);
+  return (option: MapLayer) => option === layer || !empty[option];
+}
+
+function LayerToggle({ layer, available, onChange }: { layer: MapLayer; available: (layer: MapLayer) => boolean; onChange: (layer: MapLayer) => void }) {
   const t = useT();
   const inDrawer = useInDrawerPanel();
+  const options = (['pins', 'market', 'restaurants'] as const).filter(available);
+  // Nothing to switch to.
+  if (options.length < 2) return null;
   return (
     <div
       role="group"
       aria-label={t('map.layer')}
-      className={inDrawer ? 'my-2 grid grid-cols-3 gap-1 rounded-2xl border border-line bg-raised p-1.5' : 'floating flex items-center gap-1 rounded-full p-1 text-sm'}
+      className={inDrawer ? `my-2 grid ${options.length === 2 ? 'grid-cols-2' : 'grid-cols-3'} gap-1 rounded-2xl border border-line bg-raised p-1.5` : 'floating flex items-center gap-1 rounded-full p-1 text-sm'}
     >
-      {(['pins', 'market', 'restaurants'] as const).map((option) => (
+      {options.map((option) => (
         <button
           key={option}
           type="button"

@@ -78,7 +78,7 @@ const heldPerformance = ((globalThis as any).__chronopinAdPerformance ??= new Ma
   { at: number; data: Promise<Performance> }
 >;
 
-export type AdServeInput = { slot: AdSlot; n: number; pinId: number | null; avoid: Set<string>; userId: number | null; admin?: boolean; locale?: Locale; request: NextRequest };
+export type AdServeInput = { slot: AdSlot; n: number; pinId: number | null; pinIds?: number[]; avoid: Set<string>; userId: number | null; admin?: boolean; locale?: Locale; request: NextRequest };
 
 // Program ads (0110) and product ads (the Amazon listings on pins).
 export default class Ad {
@@ -114,12 +114,12 @@ export default class Ad {
 
   // Ads for one slot, with the store they were picked from. Nothing for a
   // signed-in viewer under MIN_AD_AGE. An admin's views are not counted.
-  static async serve({ slot, n, pinId, avoid, userId, admin = false, locale = 'en', request }: AdServeInput): Promise<{ store: string; ads: AdJson[] }> {
+  static async serve({ slot, n, pinId, pinIds, avoid, userId, admin = false, locale = 'en', request }: AdServeInput): Promise<{ store: string; ads: AdJson[] }> {
     const [inventory, country, viewer, pin, performance] = await Promise.all([
       Ad.inventory(),
       viewerCountry(request),
       userId != null ? viewerFacts(userId) : null,
-      pinId != null ? pinFacts(pinId) : null,
+      pinIds?.length ? pinsFacts(pinIds) : pinId != null ? pinFacts(pinId) : null,
       Ad.performance(slot).catch(() => undefined),
     ]);
     const age = ageOn(viewer?.birthday);
@@ -583,6 +583,24 @@ async function pinFacts(pinId: number): Promise<AdContext['pin']> {
     [pinId],
   );
   return rows[0] ? { id: pinId, ...rows[0] } : null;
+}
+
+// Several pins at once (the map's strip): their categories, tags and
+// company merged into one context, so ads related to any of them count. Its id
+// matches no pin, so none of their own products is hidden or singled out; a
+// company only counts when every pin in view shares it.
+async function pinsFacts(pinIds: number[]): Promise<AdContext['pin']> {
+  const rows = await Promise.all(pinIds.map((id) => pinFacts(id)));
+  const pins = rows.filter((row): row is NonNullable<AdContext['pin']> => row != null);
+  if (!pins.length) return null;
+  const companies = new Set(pins.map((pin) => pin.company));
+  return {
+    id: -1,
+    title: pins[0].title,
+    categories: [...new Set(pins.flatMap((pin) => pin.categories))],
+    tags: [...new Set(pins.flatMap((pin) => pin.tags))],
+    company: companies.size === 1 ? [...companies][0] : null,
+  };
 }
 
 // `store` is the viewer's; each ad's `tag` is the id on its own link.

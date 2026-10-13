@@ -9,7 +9,7 @@ import { alternates, getT } from '@/lib/i18n/server';
 import { pinPath } from '@/lib/seo';
 import Listing from '@/server/model/listing';
 import { upcomingMapPins } from '@/server/services/mapSummary';
-import { sliderTyping } from '@/server/services/pages';
+import { adPlacements, sliderTyping } from '@/server/services/pages';
 import { siteCardImages } from '@/server/services/shareCard';
 import { MapLoader } from './MapLoader';
 
@@ -72,8 +72,8 @@ export default async function MapPage() {
 // build has no database for.
 async function MapWithSettings() {
   await connection();
-  const typing = await sliderTyping();
-  return <MapLoader sliderTyping={typing.enabled} />;
+  const [typing, placements] = await Promise.all([sliderTyping(), adPlacements()]);
+  return <MapLoader sliderTyping={typing.enabled} ads={placements['map-strip']} />;
 }
 
 // The map is drawn in the browser, so this is what the page says to a crawler
