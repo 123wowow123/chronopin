@@ -73,12 +73,11 @@ export function AdForm({ initial }: { initial: Initial | null }) {
 
       {/* Stays in view while the fields below are filled in. It is drawn the
           way the pin page's ad column draws an ad (AdColumn in
-          src/components/ads/AdBlock.tsx): the label, a picture, the headline,
+          src/components/ads/AdBlock.tsx): a picture, the headline,
           the text, then the link. */}
       <div className="sticky top-2 z-10 shadow-sm" aria-live="polite">
         <aside aria-label="Preview of your ad" className="surface p-4 sm:p-5">
-          <span className="text-[11px] font-semibold tracking-wider text-subtle uppercase">Sponsored</span>
-          <div className="mt-2 flex items-center gap-3.5">
+          <div className="flex items-center gap-3.5">
             {preview ? (
               <span aria-hidden className="flex h-20 w-28 shrink-0 items-center justify-center overflow-hidden rounded border border-line bg-white">
                 {/* eslint-disable-next-line @next/next/no-img-element -- a local preview or our own blob host */}
