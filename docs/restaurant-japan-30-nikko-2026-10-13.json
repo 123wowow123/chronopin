@@ -1,0 +1,1216 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "kyoto"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sagano — Hotel Nikko Princess Kyoto — Kyoto restaurant guide",
+        "description": "Seasonal Japanese lunch with a maiko bento and published optional upgrades.",
+        "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+        "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+        "productName": "Sagano — Hotel Nikko Princess Kyoto",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kyoto",
+          "Japan",
+          "Karasuma Takatsuji",
+          "Japanese"
+        ],
+        "longFormSummary": "<p>Seasonal Japanese lunch with a maiko bento and published optional upgrades.<cite data-ref=\"https://www.princess-kyoto.co.jp/restaurant/sagano/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+            "title": "Sagano — Hotel Nikko Princess Kyoto source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "menu": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+            "name": "Sagano — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "October autumn lunch",
+                "url": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "October autumn lunch",
+                    "price": 7300
+                  },
+                  {
+                    "name": "One Harmony member October autumn lunch",
+                    "price": 6570,
+                    "note": "Membership required; price not available to all diners"
+                  },
+                  {
+                    "name": "お造里二種盛り",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October autumn lunch; no separate item price published"
+                  },
+                  {
+                    "name": "季節の小鉢・出汁巻・小袖寿司",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October autumn lunch; no separate item price published"
+                  },
+                  {
+                    "name": "鰊柔らか煮・茄子田舎煮",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October autumn lunch; no separate item price published"
+                  },
+                  {
+                    "name": "真鯛と野菜の酢の物",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October autumn lunch; no separate item price published"
+                  }
+                ],
+                "note": "Wednesday closed. Optional tempura set ¥8,500, member ¥7,650. Upgrade soup to dobin-mushi for ¥1,500. Operator notes published prices include tax and service."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+            "name": "Sagano — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Verified offer service",
+                "hours": "11:30–14:30; see menu exclusions"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "nikko-sagano",
+            "name": "Sagano — Hotel Nikko Princess Kyoto",
+            "neighborhood": "Karasuma Takatsuji",
+            "cuisine": "Japanese",
+            "description": "Seasonal Japanese lunch with a maiko bento and published optional upgrades.",
+            "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-sagano-0-bf72ed0a02c70d79.webp",
+            "imageCredit": "Hotel Nikko Princess Kyoto",
+            "imageSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+            "imageNote": "Official sagano restaurant gallery photograph; no dish names inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-sagano-0-bf72ed0a02c70d79.webp",
+          "sha256": "bf72ed0a02c70d796174041b420eede78882705ec1e41a1c2dc8c78b8e79d63e",
+          "width": 1200,
+          "height": 408,
+          "credit": "Hotel Nikko Princess Kyoto",
+          "note": "Official sagano restaurant gallery photograph; no dish names inferred",
+          "sourcePage": "https://www.princess-kyoto.co.jp/restaurant/sagano/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "name": "Sagano — Hotel Nikko Princess Kyoto",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "October autumn lunch",
+              "url": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "October autumn lunch",
+                  "price": 7300
+                },
+                {
+                  "name": "One Harmony member October autumn lunch",
+                  "price": 6570,
+                  "note": "Membership required; price not available to all diners"
+                },
+                {
+                  "name": "お造里二種盛り",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October autumn lunch; no separate item price published"
+                },
+                {
+                  "name": "季節の小鉢・出汁巻・小袖寿司",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October autumn lunch; no separate item price published"
+                },
+                {
+                  "name": "鰊柔らか煮・茄子田舎煮",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October autumn lunch; no separate item price published"
+                },
+                {
+                  "name": "真鯛と野菜の酢の物",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October autumn lunch; no separate item price published"
+                }
+              ],
+              "note": "Wednesday closed. Optional tempura set ¥8,500, member ¥7,650. Upgrade soup to dobin-mushi for ¥1,500. Operator notes published prices include tax and service."
+            }
+          ],
+          "specials": [
+            {
+              "title": "October autumn lunch",
+              "kind": "lunch",
+              "description": "Seasonal Japanese lunch with a maiko bento and published optional upgrades. Wednesday closed. Optional tempura set ¥8,500, member ¥7,650. Upgrade soup to dobin-mushi for ¥1,500.",
+              "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+              "menuLabel": "October autumn lunch",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Wednesday closed. Optional tempura set ¥8,500, member ¥7,650. Upgrade soup to dobin-mushi for ¥1,500."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+          "neighborhood": "Karasuma Takatsuji",
+          "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-sagano-0-bf72ed0a02c70d79.webp",
+            "alt": "Sagano — Hotel Nikko Princess Kyoto — Official sagano restaurant gallery photograph; no dish names inferred",
+            "credit": "Hotel Nikko Princess Kyoto",
+            "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+            "originalUrl": "https://www.princess-kyoto.co.jp/assets-static/images/restaurant-detail/sagano1_1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hisuien — Hotel Nikko Princess Kyoto — Kyoto restaurant guide",
+        "description": "Chinese afternoon tea developed with Ritsumeikan University, with dim sum and seasonal sweets.",
+        "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+        "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+        "productName": "Hisuien — Hotel Nikko Princess Kyoto",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kyoto",
+          "Japan",
+          "Karasuma Takatsuji",
+          "Chinese"
+        ],
+        "longFormSummary": "<p>Chinese afternoon tea developed with Ritsumeikan University, with dim sum and seasonal sweets.<cite data-ref=\"https://www.princess-kyoto.co.jp/restaurant/hisuien/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+            "title": "Hisuien — Hotel Nikko Princess Kyoto source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "menu": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+            "name": "Hisuien — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Chinese afternoon tea",
+                "url": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Chinese afternoon tea",
+                    "price": 6000,
+                    "note": "From"
+                  },
+                  {
+                    "name": "小籠包",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "トリュフ小籠包",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "北京ダック",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "杏仁豆腐",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "タピオカ入りココナッツミルク 巨峰風味",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "洋梨の中華風コンポート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "紫芋エッグタルト",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese afternoon tea; no separate item price published"
+                  }
+                ],
+                "note": "From ¥6,000. Reserve by the previous day; six meals daily. Tuesday closed through October; dinner last order 20:00. No discounts. Operator notes published prices include tax and service."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+            "name": "Hisuien — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Verified offer service",
+                "hours": "11:30–14:30 / 17:00–21:30; see menu exclusions"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "nikko-hisuien",
+            "name": "Hisuien — Hotel Nikko Princess Kyoto",
+            "neighborhood": "Karasuma Takatsuji",
+            "cuisine": "Chinese",
+            "description": "Chinese afternoon tea developed with Ritsumeikan University, with dim sum and seasonal sweets.",
+            "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-hisuien-0-c2c2be6cb09fa935.webp",
+            "imageCredit": "Hotel Nikko Princess Kyoto",
+            "imageSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+            "imageNote": "Official hisuien restaurant gallery photograph; no dish names inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-hisuien-0-c2c2be6cb09fa935.webp",
+          "sha256": "c2c2be6cb09fa935bd4da7189f45f156313ecfe39c6621a13ed409287cf5cfc1",
+          "width": 1200,
+          "height": 408,
+          "credit": "Hotel Nikko Princess Kyoto",
+          "note": "Official hisuien restaurant gallery photograph; no dish names inferred",
+          "sourcePage": "https://www.princess-kyoto.co.jp/restaurant/hisuien/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "name": "Hisuien — Hotel Nikko Princess Kyoto",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Chinese afternoon tea",
+              "url": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Chinese afternoon tea",
+                  "price": 6000,
+                  "note": "From"
+                },
+                {
+                  "name": "小籠包",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "トリュフ小籠包",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "北京ダック",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "杏仁豆腐",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "タピオカ入りココナッツミルク 巨峰風味",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "洋梨の中華風コンポート",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "紫芋エッグタルト",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese afternoon tea; no separate item price published"
+                }
+              ],
+              "note": "From ¥6,000. Reserve by the previous day; six meals daily. Tuesday closed through October; dinner last order 20:00. No discounts. Operator notes published prices include tax and service."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Chinese afternoon tea",
+              "kind": "other",
+              "description": "Chinese afternoon tea developed with Ritsumeikan University, with dim sum and seasonal sweets. From ¥6,000. Reserve by the previous day; six meals daily. Tuesday closed through October; dinner last order 20:00. No discounts.",
+              "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+              "menuLabel": "Chinese afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-09-02",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "From ¥6,000. Reserve by the previous day; six meals daily. Tuesday closed through October; dinner last order 20:00. No discounts."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:30"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-09-08",
+                  "2026-09-15",
+                  "2026-09-22",
+                  "2026-09-29",
+                  "2026-10-06",
+                  "2026-10-13",
+                  "2026-10-20",
+                  "2026-10-27"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+          "neighborhood": "Karasuma Takatsuji",
+          "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-hisuien-0-c2c2be6cb09fa935.webp",
+            "alt": "Hisuien — Hotel Nikko Princess Kyoto — Official hisuien restaurant gallery photograph; no dish names inferred",
+            "credit": "Hotel Nikko Princess Kyoto",
+            "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+            "originalUrl": "https://www.princess-kyoto.co.jp/assets-static/images/restaurant-detail/hisuien1_1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hoen — Hotel Nikko Princess Kyoto — Kyoto restaurant guide",
+        "description": "Teppanyaki with a sourced anniversary lunch combining lobster, Kyoto beef and a choice of steak.",
+        "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+        "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+        "productName": "Hoen — Hotel Nikko Princess Kyoto",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kyoto",
+          "Japan",
+          "Karasuma Takatsuji",
+          "Teppanyaki"
+        ],
+        "longFormSummary": "<p>Teppanyaki with a sourced anniversary lunch combining lobster, Kyoto beef and a choice of steak.<cite data-ref=\"https://www.princess-kyoto.co.jp/restaurant/hoen/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+            "title": "Hoen — Hotel Nikko Princess Kyoto source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "menu": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+            "name": "Hoen — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "September–October anniversary lunch",
+                "url": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "September–October anniversary lunch",
+                    "price": 13000
+                  },
+                  {
+                    "name": "One Harmony member September–October anniversary lunch",
+                    "price": 11700,
+                    "note": "Membership required; price not available to all diners"
+                  },
+                  {
+                    "name": "合鴨と三種の茸のサラダ仕立て",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October anniversary lunch; no separate item price published"
+                  },
+                  {
+                    "name": "オマール海老の鉄板焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October anniversary lunch; no separate item price published"
+                  },
+                  {
+                    "name": "黒毛和牛“京都肉”の東寺焼き 雲丹餡掛け",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October anniversary lunch; no separate item price published"
+                  },
+                  {
+                    "name": "国産牛フィレ80g または国産牛サーロイン100g",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October anniversary lunch; no separate item price published"
+                  },
+                  {
+                    "name": "季節野菜の焼き野菜",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October anniversary lunch; no separate item price published"
+                  }
+                ],
+                "note": "Thursday closed. Steak: choose domestic fillet 80g or sirloin 100g. Optional garlic rice ¥1,300. Operator notes published prices include tax and service."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+            "name": "Hoen — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Verified offer service",
+                "hours": "11:30–14:30; see menu exclusions"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "nikko-hoen",
+            "name": "Hoen — Hotel Nikko Princess Kyoto",
+            "neighborhood": "Karasuma Takatsuji",
+            "cuisine": "Teppanyaki",
+            "description": "Teppanyaki with a sourced anniversary lunch combining lobster, Kyoto beef and a choice of steak.",
+            "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-hoen-0-5c2818e4d3c35a7e.webp",
+            "imageCredit": "Hotel Nikko Princess Kyoto",
+            "imageSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+            "imageNote": "Official hoen restaurant gallery photograph; no dish names inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-hoen-0-5c2818e4d3c35a7e.webp",
+          "sha256": "5c2818e4d3c35a7efd152e1af8b92589397a21ed978c32c694f49f9086f683a9",
+          "width": 1200,
+          "height": 408,
+          "credit": "Hotel Nikko Princess Kyoto",
+          "note": "Official hoen restaurant gallery photograph; no dish names inferred",
+          "sourcePage": "https://www.princess-kyoto.co.jp/restaurant/hoen/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-hoen-1-462f0666a6100c33.webp",
+          "sha256": "462f0666a6100c3304de99643339be6a07dc66d4d5b8e441d976e696ec612d58",
+          "width": 1200,
+          "height": 408,
+          "credit": "Hotel Nikko Princess Kyoto",
+          "note": "Official hoen restaurant gallery photograph; no dish names inferred",
+          "sourcePage": "https://www.princess-kyoto.co.jp/restaurant/hoen/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "name": "Hoen — Hotel Nikko Princess Kyoto",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "September–October anniversary lunch",
+              "url": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "September–October anniversary lunch",
+                  "price": 13000
+                },
+                {
+                  "name": "One Harmony member September–October anniversary lunch",
+                  "price": 11700,
+                  "note": "Membership required; price not available to all diners"
+                },
+                {
+                  "name": "合鴨と三種の茸のサラダ仕立て",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October anniversary lunch; no separate item price published"
+                },
+                {
+                  "name": "オマール海老の鉄板焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October anniversary lunch; no separate item price published"
+                },
+                {
+                  "name": "黒毛和牛“京都肉”の東寺焼き 雲丹餡掛け",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October anniversary lunch; no separate item price published"
+                },
+                {
+                  "name": "国産牛フィレ80g または国産牛サーロイン100g",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October anniversary lunch; no separate item price published"
+                },
+                {
+                  "name": "季節野菜の焼き野菜",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October anniversary lunch; no separate item price published"
+                }
+              ],
+              "note": "Thursday closed. Steak: choose domestic fillet 80g or sirloin 100g. Optional garlic rice ¥1,300. Operator notes published prices include tax and service."
+            }
+          ],
+          "specials": [
+            {
+              "title": "September–October anniversary lunch",
+              "kind": "lunch",
+              "description": "Teppanyaki with a sourced anniversary lunch combining lobster, Kyoto beef and a choice of steak. Thursday closed. Steak: choose domestic fillet 80g or sirloin 100g. Optional garlic rice ¥1,300.",
+              "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+              "menuLabel": "September–October anniversary lunch",
+              "discounted": false,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Thursday closed. Steak: choose domestic fillet 80g or sirloin 100g. Optional garlic rice ¥1,300."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+          "neighborhood": "Karasuma Takatsuji",
+          "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-hoen-0-5c2818e4d3c35a7e.webp",
+            "alt": "Hoen — Hotel Nikko Princess Kyoto — Official hoen restaurant gallery photograph; no dish names inferred",
+            "credit": "Hotel Nikko Princess Kyoto",
+            "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+            "originalUrl": "https://www.princess-kyoto.co.jp/assets-static/images/restaurant-detail/hoen1_1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Darley — Hotel Nikko Princess Kyoto — Kyoto restaurant guide",
+        "description": "A hotel bar with a published weekend premium happy hour.",
+        "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+        "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+        "productName": "Darley — Hotel Nikko Princess Kyoto",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kyoto",
+          "Japan",
+          "Karasuma Takatsuji",
+          "Bar"
+        ],
+        "longFormSummary": "<p>A hotel bar with a published weekend premium happy hour.<cite data-ref=\"https://www.princess-kyoto.co.jp/restaurant/darley/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+            "title": "Darley — Hotel Nikko Princess Kyoto source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "menu": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+            "name": "Darley — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Weekend premium happy hour",
+                "url": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Draft beer",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Sparkling wine",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Gin and tonic",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Negroni",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Moscow mule",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Nikka Frontier",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Wild Turkey 8-year",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Talisker 10-year",
+                    "price": 1000
+                  }
+                ],
+                "note": "Each published eligible drink ¥1,000. Saturdays and Sundays only; no table charge. No additional discounts. Operator notes published prices include tax and service."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+            "name": "Darley — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Verified offer service",
+                "hours": "13:30–19:00; see menu exclusions"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "nikko-darley",
+            "name": "Darley — Hotel Nikko Princess Kyoto",
+            "neighborhood": "Karasuma Takatsuji",
+            "cuisine": "Bar",
+            "description": "A hotel bar with a published weekend premium happy hour.",
+            "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-darley-0-314212219993ef2d.webp",
+            "imageCredit": "Hotel Nikko Princess Kyoto",
+            "imageSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+            "imageNote": "Official darley restaurant gallery photograph; no dish names inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-darley-0-314212219993ef2d.webp",
+          "sha256": "314212219993ef2d07569dbe80f1a54fe7f54b906b65283c9280067fb9e303d2",
+          "width": 1200,
+          "height": 408,
+          "credit": "Hotel Nikko Princess Kyoto",
+          "note": "Official darley restaurant gallery photograph; no dish names inferred",
+          "sourcePage": "https://www.princess-kyoto.co.jp/restaurant/darley/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-darley-1-2056b37a8d431b6f.webp",
+          "sha256": "2056b37a8d431b6fed73ff1ba8b19f1f24c5fd6f61714d61bc60631eea3f636a",
+          "width": 1200,
+          "height": 408,
+          "credit": "Hotel Nikko Princess Kyoto",
+          "note": "Official darley restaurant gallery photograph; no dish names inferred",
+          "sourcePage": "https://www.princess-kyoto.co.jp/restaurant/darley/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "name": "Darley — Hotel Nikko Princess Kyoto",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Weekend premium happy hour",
+              "url": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Draft beer",
+                  "price": 1000
+                },
+                {
+                  "name": "Sparkling wine",
+                  "price": 1000
+                },
+                {
+                  "name": "Gin and tonic",
+                  "price": 1000
+                },
+                {
+                  "name": "Negroni",
+                  "price": 1000
+                },
+                {
+                  "name": "Moscow mule",
+                  "price": 1000
+                },
+                {
+                  "name": "Nikka Frontier",
+                  "price": 1000
+                },
+                {
+                  "name": "Wild Turkey 8-year",
+                  "price": 1000
+                },
+                {
+                  "name": "Talisker 10-year",
+                  "price": 1000
+                }
+              ],
+              "note": "Each published eligible drink ¥1,000. Saturdays and Sundays only; no table charge. No additional discounts. Operator notes published prices include tax and service."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Weekend premium happy hour",
+              "kind": "other",
+              "description": "A hotel bar with a published weekend premium happy hour. Each published eligible drink ¥1,000. Saturdays and Sundays only; no table charge. No additional discounts.",
+              "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+              "menuLabel": "Weekend premium happy hour",
+              "discounted": true,
+              "validFrom": "2026-09-05",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Each published eligible drink ¥1,000. Saturdays and Sundays only; no table charge. No additional discounts."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "13:30",
+                    "end": "19:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+          "neighborhood": "Karasuma Takatsuji",
+          "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-darley-0-314212219993ef2d.webp",
+            "alt": "Darley — Hotel Nikko Princess Kyoto — Official darley restaurant gallery photograph; no dish names inferred",
+            "credit": "Hotel Nikko Princess Kyoto",
+            "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+            "originalUrl": "https://www.princess-kyoto.co.jp/assets-static/images/restaurant-detail/darley1_1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Amber Court — Hotel Nikko Princess Kyoto — Kyoto restaurant guide",
+        "description": "French bistro dining with a dated lunch menu and explicitly priced main-course supplements.",
+        "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+        "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+        "productName": "Amber Court — Hotel Nikko Princess Kyoto",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kyoto",
+          "Japan",
+          "Karasuma Takatsuji",
+          "French bistro"
+        ],
+        "longFormSummary": "<p>French bistro dining with a dated lunch menu and explicitly priced main-course supplements.<cite data-ref=\"https://www.princess-kyoto.co.jp/restaurant/ambercourt/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+            "title": "Amber Court — Hotel Nikko Princess Kyoto source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "menu": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+            "name": "Amber Court — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "September–October bistro lunch",
+                "url": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "September–October bistro lunch",
+                    "price": 3600,
+                    "note": "From"
+                  },
+                  {
+                    "name": "One Harmony member September–October bistro lunch",
+                    "price": 3240,
+                    "note": "Membership required; price not available to all diners"
+                  },
+                  {
+                    "name": "オードブル盛り合わせ・彩り野菜のサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October bistro lunch; no separate item price published"
+                  },
+                  {
+                    "name": "本日のスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October bistro lunch; no separate item price published"
+                  },
+                  {
+                    "name": "季節の魚50gのポワレ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October bistro lunch; no separate item price published"
+                  },
+                  {
+                    "name": "季節の魚30gと海老20gのクッサン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October bistro lunch; no separate item price published"
+                  },
+                  {
+                    "name": "仔羊50gと季節野菜のブレゼ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October bistro lunch; no separate item price published"
+                  }
+                ],
+                "note": "From ¥3,600; One Harmony members from ¥3,240. Choose one main; sirloin option +¥300 or fillet +¥1,000. Bread, dessert and coffee or tea included. Operator notes published prices include tax and service."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+            "name": "Amber Court — Hotel Nikko Princess Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Verified offer service",
+                "hours": "11:00–14:30; see menu exclusions"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+            "additionalSources": []
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "nikko-ambercourt",
+            "name": "Amber Court — Hotel Nikko Princess Kyoto",
+            "neighborhood": "Karasuma Takatsuji",
+            "cuisine": "French bistro",
+            "description": "French bistro dining with a dated lunch menu and explicitly priced main-course supplements.",
+            "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-ambercourt-0-b56fa9a822c76e03.webp",
+            "imageCredit": "Hotel Nikko Princess Kyoto",
+            "imageSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+            "imageNote": "Official ambercourt restaurant gallery photograph; no dish names inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-ambercourt-0-b56fa9a822c76e03.webp",
+          "sha256": "b56fa9a822c76e03ff69f3481af5a46bd1e1d6a0a41b0b8cef6dce557097fcce",
+          "width": 1200,
+          "height": 408,
+          "credit": "Hotel Nikko Princess Kyoto",
+          "note": "Official ambercourt restaurant gallery photograph; no dish names inferred",
+          "sourcePage": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "name": "Amber Court — Hotel Nikko Princess Kyoto",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "September–October bistro lunch",
+              "url": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "September–October bistro lunch",
+                  "price": 3600,
+                  "note": "From"
+                },
+                {
+                  "name": "One Harmony member September–October bistro lunch",
+                  "price": 3240,
+                  "note": "Membership required; price not available to all diners"
+                },
+                {
+                  "name": "オードブル盛り合わせ・彩り野菜のサラダ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October bistro lunch; no separate item price published"
+                },
+                {
+                  "name": "本日のスープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October bistro lunch; no separate item price published"
+                },
+                {
+                  "name": "季節の魚50gのポワレ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October bistro lunch; no separate item price published"
+                },
+                {
+                  "name": "季節の魚30gと海老20gのクッサン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October bistro lunch; no separate item price published"
+                },
+                {
+                  "name": "仔羊50gと季節野菜のブレゼ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October bistro lunch; no separate item price published"
+                }
+              ],
+              "note": "From ¥3,600; One Harmony members from ¥3,240. Choose one main; sirloin option +¥300 or fillet +¥1,000. Bread, dessert and coffee or tea included. Operator notes published prices include tax and service."
+            }
+          ],
+          "specials": [
+            {
+              "title": "September–October bistro lunch",
+              "kind": "lunch",
+              "description": "French bistro dining with a dated lunch menu and explicitly priced main-course supplements. From ¥3,600; One Harmony members from ¥3,240. Choose one main; sirloin option +¥300 or fillet +¥1,000. Bread, dessert and coffee or tea included.",
+              "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+              "menuLabel": "September–October bistro lunch",
+              "discounted": false,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "From ¥3,600; One Harmony members from ¥3,240. Choose one main; sirloin option +¥300 or fillet +¥1,000. Bread, dessert and coffee or tea included."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "14:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "630 Takahashi-cho, Karasuma Takatsuji Higashi-iru, Shimogyo-ku, Kyoto",
+          "neighborhood": "Karasuma Takatsuji",
+          "websiteUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nikko-ambercourt-0-b56fa9a822c76e03.webp",
+            "alt": "Amber Court — Hotel Nikko Princess Kyoto — Official ambercourt restaurant gallery photograph; no dish names inferred",
+            "credit": "Hotel Nikko Princess Kyoto",
+            "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+            "originalUrl": "https://www.princess-kyoto.co.jp/assets-static/images/restaurant-detail/ambercourt1_1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

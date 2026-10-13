@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { RestaurantSpecial } from './restaurantMenus';
 import { restaurantMenuFor } from './restaurantMenus';
-import { activeRestaurantOffer, nextRestaurantOffer, restaurantOfferSections, restaurantOffersToShow, offerEndLabel, type RestaurantOffer } from './restaurantOffers';
+import { activeRestaurantOffer, deduplicateRestaurantOffers, nextRestaurantOffer, restaurantOfferSections, restaurantOffersToShow, offerEndLabel, type RestaurantOffer } from './restaurantOffers';
 
 const zone = 'America/Los_Angeles';
 const happyHour = restaurantMenuFor('https://www.maranellosd.com/')!.specials[0];
@@ -131,7 +131,7 @@ describe('next restaurant specials', () => {
   });
   it('shows only the nearest special per venue and excludes expired promotions', () => {
     const first = offer('Favorite');
-    const later = { ...first, id: 'second', special: { ...happyHour, availability: { windows: [{ days: [5], start: '18:00', end: '20:00' }] } } };
+    const later = { ...first, id: 'second', special: { ...happyHour, title: 'Weekend happy hour', availability: { windows: [{ days: [5], start: '18:00', end: '20:00' }] } } };
     const expired = { ...offer('Expired'), special: { ...happyHour, validThrough: '2026-10-06' } };
     const shown = restaurantOffersToShow([later, first, expired], new Date('2026-10-07T20:00:00Z'), zone);
     expect(shown.offers).toHaveLength(1);
@@ -149,7 +149,7 @@ describe('next restaurant specials', () => {
   });
   it('keeps a venue’s upcoming offers on its active card, excludes expired offers, and keeps branches separate', () => {
     const first = offer('Waterbar');
-    const later = { ...first, id: 'later', special: { ...happyHour, availability: { windows: [{ days: [3], start: '18:00', end: '21:00' }] } } };
+    const later = { ...first, id: 'later', special: { ...happyHour, title: 'Evening special', availability: { windows: [{ days: [3], start: '18:00', end: '21:00' }] } } };
     const expired = { ...first, id: 'expired', special: { ...happyHour, validThrough: '2026-10-06' } };
     const branch = { ...first, id: 'other-branch', restaurantHref: '/pin/other-branch' };
     const sections = restaurantOfferSections([later, expired, first, branch], new Date('2026-10-07T23:30:00Z'), zone);
@@ -161,12 +161,29 @@ describe('next restaurant specials', () => {
   });
   it('groups by branch identity when destination links differ or multiple branches share a website', () => {
     const first = { ...offer('Chain'), venueKey: 'mission-valley' };
-    const second = { ...first, id: 'second', restaurantHref: '/pin/mission-valley' };
+    const second = { ...first, id: 'second', restaurantHref: '/pin/mission-valley', special: { ...happyHour, title: 'Taco Tuesday' } };
     const branch = { ...first, id: 'other-branch', venueKey: 'la-jolla' };
     const sections = restaurantOfferSections([first, second, branch], new Date('2026-10-07T23:30:00Z'), zone);
     expect(sections.available).toHaveLength(2);
     expect(sections.available[0].offers?.map((item) => item.id)).toEqual(['Chain', 'second']);
     expect(sections.available[1].offers?.map((item) => item.id)).toEqual(['other-branch']);
+  });
+  it('removes repeated Isola tabs even when their offer IDs differ', () => {
+    const base = offer('Isola');
+    const names = ['Happy hour', 'Takeout Tuesday', 'Happy hour', 'Takeout Tuesday', 'Wine Wednesday', 'Wine Wednesday'];
+    const offers = names.map((title, index) => ({ ...base, id: `isola#${index}`, special: { ...happyHour, title } }));
+    const shown = restaurantOfferSections(offers, new Date('2026-10-07T23:30:00Z'), zone);
+    expect(shown.available).toHaveLength(1);
+    expect(shown.available[0].offers?.map((item) => item.special.title)).toEqual(['Happy hour', 'Takeout Tuesday', 'Wine Wednesday']);
+  });
+  it('prefers the latest duplicate, then the more complete menu, while preserving other branches and dated campaigns', () => {
+    const original = { ...offer('Isola'), special: { ...happyHour, title: 'Happy hour' } };
+    const updated = { ...original, id: 'updated', checkedAt: '2026-10-12', special: { ...happyHour, title: '  HAPPY   HOUR  ' } };
+    const detailed = { ...updated, id: 'menu', menu: { label: 'Happy hour', url: 'https://example.com/menu', coverage: 'published' as const, items: [{ name: 'Pizza', price: 10 }] } };
+    const branch = { ...original, id: 'branch', restaurantHref: '/other-branch' };
+    const dated = { ...original, id: 'dated', special: { ...happyHour, validFrom: '2026-12-01', validThrough: '2026-12-31' } };
+    expect(deduplicateRestaurantOffers([original, updated, detailed, branch, dated]).map((item) => item.id)).toEqual(['menu', 'branch', 'dated']);
+    expect(deduplicateRestaurantOffers([detailed, updated, original])[0].id).toBe('menu');
   });
   it('shows up to one hundred distinct restaurants with the earliest specials first', () => {
     const venues = Array.from({ length: 105 }, (_, index) => offer(`Venue ${String(index).padStart(3, '0')}`));

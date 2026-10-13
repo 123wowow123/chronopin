@@ -4,7 +4,7 @@ import { useId, useState, type KeyboardEvent } from 'react';
 import Image from 'next/image';
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
-import { restaurantOfferDistance, offerEndLabel, type ScheduledRestaurantOffer } from '@/lib/restaurantOffers';
+import { deduplicateRestaurantOffers, restaurantOfferDistance, offerEndLabel, type ScheduledRestaurantOffer } from '@/lib/restaurantOffers';
 import { formatDistance } from '@/lib/distance';
 import type { ViewerPlace } from '@/lib/client/viewerPlace';
 import type { RestaurantSort } from '@/lib/restaurantSort';
@@ -15,7 +15,7 @@ import styles from './RestaurantGuide.module.css';
 export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: ScheduledRestaurantOffer; origin?: ViewerPlace; sort: RestaurantSort; timeZone: string }) {
   const id = useId();
   const [selected, setSelected] = useState<string | null>(null);
-  const offers = card.offers ?? [card];
+  const offers = deduplicateRestaurantOffers(card.offers ?? [card]);
   const offer = offers.find((item) => item.id === selected) ?? offers[0];
   const index = offers.indexOf(offer);
   const upcoming = !!offer.startsAt;

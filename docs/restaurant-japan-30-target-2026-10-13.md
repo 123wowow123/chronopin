@@ -16,8 +16,8 @@ These are current local public guide API counts. All 24 tabs are below target; n
 | Osaka | Specials | 4 | 30 | 26 |
 | Kyoto | Coming soon | 1 | 30 | 29 |
 | Kyoto | Just opened | 2 | 30 | 28 |
-| Kyoto | Top restaurants | 3 | 30 | 27 |
-| Kyoto | Specials | 1 | 30 | 29 |
+| Kyoto | Top restaurants | 8 | 30 | 22 |
+| Kyoto | Specials | 6 | 30 | 24 |
 | Nagoya | Coming soon | 1 | 30 | 29 |
 | Nagoya | Just opened | 1 | 30 | 29 |
 | Nagoya | Top restaurants | 2 | 30 | 28 |

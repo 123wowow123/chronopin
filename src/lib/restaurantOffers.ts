@@ -115,6 +115,24 @@ export function restaurantOfferVenueKey(offer: RestaurantOffer): string {
   return offer.venueKey ?? offer.restaurantHref;
 }
 
+// Imports can repeat the same promotion under different array indexes/IDs.
+// Keep one tab per named promotion at a branch, with dated campaigns separate.
+export function deduplicateRestaurantOffers<T extends RestaurantOffer>(offers: T[]): T[] {
+  const unique = new Map<string, T>();
+  const menuQuality = (offer: T) => {
+    const menu = offer.menu;
+    return (menu?.coverage === 'published' ? 3 : menu?.coverage === 'sample' ? 2 : 0) * 10_000 + (menu?.items.length ?? 0);
+  };
+  for (const offer of offers) {
+    const special = offer.special;
+    const title = special.title.normalize('NFKC').trim().replace(/\s+/g, ' ').toLowerCase();
+    const key = JSON.stringify([restaurantOfferVenueKey(offer), title, special.kind, special.validFrom ?? '', special.validThrough ?? '']);
+    const previous = unique.get(key);
+    if (!previous || offer.checkedAt > previous.checkedAt || (offer.checkedAt === previous.checkedAt && menuQuality(offer) > menuQuality(previous))) unique.set(key, offer);
+  }
+  return [...unique.values()];
+}
+
 // Which offers are on now and when each inactive special next starts. This is the
 // expensive part and does not depend on a sort or a neighborhood, so a caller
 // can compute it once per minute and arrange it many ways.
@@ -163,16 +181,17 @@ export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?
   }
   const available: ScheduledRestaurantOffer[] = [];
   const unique: ScheduledRestaurantOffer[] = [];
-  for (const offers of venues.values()) {
+  for (const entries of venues.values()) {
+    const offers = deduplicateRestaurantOffers(entries).sort((a, b) => (a.startsAt ?? '').localeCompare(b.startsAt ?? ''));
     const card = { ...offers[0], offers };
     (card.startsAt ? unique : available).push(card);
   }
   // Choose each venue's earliest offer before applying the selected sort and cap.
   // 'starts' is the soonest start first (the section was already built in that
   // order, ties by rating); only upcoming offers have a start to sort by.
-  if (options?.sort === 'starts') unique.sort((a, b) => a.startsAt!.localeCompare(b.startsAt!) || byReview(a, b));
+  if (!options || options.sort === 'starts') unique.sort((a, b) => a.startsAt!.localeCompare(b.startsAt!) || byReview(a, b));
   else if (options) unique.sort(bySelectedSort);
-  return { available, upcoming: unique.slice(0, NEXT_SPECIALS_LIMIT) };
+  return { available: available.sort(bySelectedSort), upcoming: unique.slice(0, NEXT_SPECIALS_LIMIT) };
 }
 
 export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place }): { available: ScheduledRestaurantOffer[]; upcoming: ScheduledRestaurantOffer[] } {
