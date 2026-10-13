@@ -431,3 +431,10 @@ do this for all shows and movies and mangas
 
 https://myanimelist.net/anime/57612/Kikansha_no_Mahou_wa_Tokubetsu_desu_2nd_Season
 
+
+
+need travel landing page and best restorts 
+
+
+
+are there any other pin categories that can display a rubric for the pins

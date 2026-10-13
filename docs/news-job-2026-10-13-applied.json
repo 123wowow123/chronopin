@@ -1,0 +1,132 @@
+{
+  "authorizedAt": "2026-10-13T14:58:49.188Z",
+  "verifiedAt": "2026-10-13T15:02:22.312Z",
+  "sentiments": 71,
+  "eventChecks": 26,
+  "bankUpdates": [
+    {
+      "id": 6650,
+      "title": "JPMorgan Chase Reports USD15.3 Billion Third-Quarter Profit"
+    },
+    {
+      "id": 6651,
+      "title": "Goldman Sachs Reports Q3 EPS of USD17.01 and Revenue of USD18.68 Billion"
+    }
+  ],
+  "pins": 83,
+  "resolvedMarks": 83,
+  "remainingMarks": [],
+  "eventModes": [
+    {
+      "id": 13924,
+      "mode": "empty-check"
+    },
+    {
+      "id": 7616,
+      "mode": "reading"
+    },
+    {
+      "id": 7650,
+      "mode": "reading"
+    },
+    {
+      "id": 7635,
+      "mode": "reading"
+    },
+    {
+      "id": 14240,
+      "mode": "empty-check"
+    },
+    {
+      "id": 7649,
+      "mode": "reading"
+    },
+    {
+      "id": 7592,
+      "mode": "empty-check"
+    },
+    {
+      "id": 7630,
+      "mode": "reading"
+    },
+    {
+      "id": 7623,
+      "mode": "reading"
+    },
+    {
+      "id": 7648,
+      "mode": "reading"
+    },
+    {
+      "id": 7652,
+      "mode": "reading"
+    },
+    {
+      "id": 7609,
+      "mode": "empty-check"
+    },
+    {
+      "id": 7608,
+      "mode": "reading"
+    },
+    {
+      "id": 7627,
+      "mode": "reading"
+    },
+    {
+      "id": 13925,
+      "mode": "empty-check"
+    },
+    {
+      "id": 7631,
+      "mode": "reading"
+    },
+    {
+      "id": 13975,
+      "mode": "empty-check"
+    },
+    {
+      "id": 7625,
+      "mode": "reading"
+    },
+    {
+      "id": 7651,
+      "mode": "reading"
+    },
+    {
+      "id": 7643,
+      "mode": "reading"
+    },
+    {
+      "id": 14168,
+      "mode": "empty-check"
+    },
+    {
+      "id": 14233,
+      "mode": "empty-check"
+    },
+    {
+      "id": 3690,
+      "mode": "check-only-preserved"
+    },
+    {
+      "id": 3692,
+      "mode": "check-only-preserved"
+    },
+    {
+      "id": 254,
+      "mode": "check-only-preserved"
+    },
+    {
+      "id": 3659,
+      "mode": "check-only-preserved"
+    }
+  ],
+  "lvmhUpdate": {
+    "id": 4095,
+    "title": "LVMH Reports Q3 Revenue of EUR18.504 Billion, with Fashion Sales Down 5%",
+    "date": "2026-10-12T00:00:00.000Z",
+    "sentiment": -0.15,
+    "source": "https://www.lvmh.com/en/publications/continued-growth-in-the-third-quarter-of-2026"
+  }
+}

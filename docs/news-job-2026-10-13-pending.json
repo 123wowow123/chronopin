@@ -1,0 +1,1775 @@
+{
+  "runId": 8,
+  "date": "2026-10-13",
+  "timeZone": "America/Los_Angeles",
+  "heldSentimentProposals": [
+    {
+      "id": 221,
+      "company": "EDF",
+      "title": "Hinkley Point C — first reactor target 2030",
+      "summary": "First reactor target: 2030; second reactor later. 3,300 MW generating capacity; About GBP 35 billion published project cost (2015 GBP). Under construction. Capacity and cost describe the whole two-reactor project.",
+      "textHash": "02f667268896",
+      "author": "@ThePinGang",
+      "sentiment": 0,
+      "product": null,
+      "fullTextHash": "02f66726889637eb9c8966475ace64ec8744f9f1de80cdff025e5449853f6e01"
+    },
+    {
+      "id": 4095,
+      "company": "LVMH",
+      "title": "LVMH's Next Results: Q3 2026 Revenue Due",
+      "summary": "LVMH publishes its third-quarter 2026 revenue on Monday 12 October 2026 after the Paris close, the first read on whether the organic growth that returned in the first half held through the summer.",
+      "textHash": "09430fcc91bb",
+      "author": "@LuxuryDesk",
+      "sentiment": 0,
+      "product": null,
+      "fullTextHash": "09430fcc91bbe08c010744876f615a3326dce4c39c90552a6b1e1ac212826c4e"
+    },
+    {
+      "id": 7585,
+      "company": "Private Brauereien Bayern",
+      "title": "European Beer Star 2026 Hands Out Its Medals at BrauBeviale on 11 November",
+      "summary": "The 2,274 beers from 48 countries entered in this year's European Beer Star receive gold, silver and bronze at a ceremony during BrauBeviale in Nuremberg on 11 November 2026.",
+      "textHash": "5144156429f6",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "5144156429f6d483b72cb08f5f94a7aab34e749c2af616a0e169b771175b9744"
+    },
+    {
+      "id": 7586,
+      "company": "Brussels Beer Challenge",
+      "title": "Brussels Beer Challenge 2026 Publishes Its Medal Results on 16 November",
+      "summary": "The 15th Brussels Beer Challenge is judged in Roeselare from 27 to 30 October 2026, with its medal results due on 16 November.",
+      "textHash": "99b7a6af9819",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "99b7a6af9819a05dace230df5e819a910c286414be434df67b863835daf858d4"
+    },
+    {
+      "id": 7587,
+      "company": "Asia Brewers Network",
+      "title": "Asia Beer Championship 2026 Announces Its Medalists at Brew Asia on 29 October",
+      "summary": "The ninth Asia Beer Championship, expecting over 900 entries, presents its gold, silver and bronze results live at Brew Asia in Ho Chi Minh City on 29 October 2026.",
+      "textHash": "5f95e1bc807f",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "5f95e1bc807f8071662e0c765625ff84d12d47786b98c39cf1eb7b64843ca107"
+    },
+    {
+      "id": 7588,
+      "company": "San Diego Brewers Guild",
+      "title": "San Diego Beer Week 2026 Runs 6-15 November Across the County",
+      "summary": "The San Diego Brewers Guild's ten-day beer week fills breweries, bars and restaurants across San Diego County from 6 to 15 November 2026.",
+      "textHash": "ee1af9b2fa68",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "ee1af9b2fa6885a723cedf17611961aa8a161ab201f3e832796a655cb6730f74"
+    },
+    {
+      "id": 7589,
+      "company": "Texas Craft Brewers Guild",
+      "title": "Texas Craft Brewers Festival 2026 Pours 70+ Breweries at Fiesta Gardens",
+      "summary": "The Texas Craft Brewers Guild's festival returns to Austin's Fiesta Gardens on Saturday 14 November 2026 with 200+ Texas craft beers to sample.",
+      "textHash": "209117e9c4e0",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "209117e9c4e0099772440d92cd1d7027028b6db7d6f22a6896fed0f8968c096c"
+    },
+    {
+      "id": 7590,
+      "company": "Fresh Hop Ale Festival",
+      "title": "Fresh Hop Ale Festival Judges Yakima's Harvest Beers on 10 October",
+      "summary": "Breweries, wineries and cideries pour fresh-hop beers at Yakima's State Fair Park on 10 October 2026, with every brewery's entry judged and winners named during the night.",
+      "textHash": "9235563a9ce1",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "9235563a9ce1621d0a3f85845d9f51efbde21d3fd215228bfd6f10198bb0a895"
+    },
+    {
+      "id": 7591,
+      "company": "Mondial de la Bière",
+      "title": "Mondial de la Bière 2026 Fills Rio's Pier Mauá with 1,500 Beers",
+      "summary": "Rio de Janeiro's Mondial de la Bière runs 29 October to 1 November 2026 at Pier Mauá with about 250 breweries and more than 1,500 labels.",
+      "textHash": "622e4e19be47",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "622e4e19be479abe88c50ed8abbdd31fbf92c963fcddd7fe23fee11439035eed"
+    },
+    {
+      "id": 7592,
+      "company": "Callebaut",
+      "title": "World Chocolate Masters 2026 Final Crowns a Champion in Antwerp",
+      "summary": "Fifteen national winners compete over 26 and 27 October in Antwerp across bonbon, design, taste and share challenges, with the new World Chocolate Master streamed live on 27 October.",
+      "textHash": "dd57f3994527",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "dd57f399452775d2387f988c58b7beed0666808572e57d76522a488431c573e2"
+    },
+    {
+      "id": 7593,
+      "company": "Comexposium",
+      "title": "SIAL Paris 2026 Opens at Paris Nord Villepinte on a Saturday",
+      "summary": "The global food trade show runs 17 to 21 October 2026, opening on a Saturday to ease transport, with about 8,000 exhibitors and 295,000 professionals expected.",
+      "textHash": "27fa22a95de7",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "27fa22a95de7d132043c1bc3bd68bf19ea1bb1508e21d355a7f2718173cd1694"
+    },
+    {
+      "id": 7594,
+      "company": "Dubai World Trade Centre",
+      "title": "Gulfood 2027 Spreads Across Two Dubai Venues from 15 March",
+      "summary": "The Dubai food and beverage sourcing show runs 15 to 19 March 2027 across Dubai World Trade Centre and Dubai Exhibition Centre at Expo City, after a two-venue 2026 edition.",
+      "textHash": "32b0c13ec11b",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "32b0c13ec11b954533a834e14ab9b42120a825f72a295cbe3de7aacb466d9c66"
+    },
+    {
+      "id": 7595,
+      "company": "Specialty Food Association",
+      "title": "Winter FancyFaire 2027 Brings Specialty Food to Moscone Center",
+      "summary": "The Specialty Food Association's winter trade show runs 17 to 19 January 2027 at San Francisco's Moscone Center, with the sofi Award winners and the 2027 Trend of the Year announced on the opening Sunday.",
+      "textHash": "c1b146415e10",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "c1b146415e10a92b24f921122461252e0500598eae526f1b8cb9d0f1f1e84242"
+    },
+    {
+      "id": 7596,
+      "company": "Italian Exhibition Group",
+      "title": "SIGEP World 2027 Brings Gelato, Pastry and Coffee to Rimini",
+      "summary": "The 48th SIGEP World runs 23 to 27 January 2027 at Rimini Expo Centre for gelato, pastry, chocolate, coffee, bakery and pizza, aiming to double its top buyers to about 1,000.",
+      "textHash": "cbc49c5dd918",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "cbc49c5dd918d2c65c9dc5e9258b903d1f8377978ec8d46ec8855fbc9676911a"
+    },
+    {
+      "id": 7597,
+      "company": "Guild of Fine Food",
+      "title": "Entrepeñas Wagyu Beef Ham Crowned Great Taste 2026 Supreme Champion",
+      "summary": "Spain's Entrepeñas won the Great Taste 2026 Supreme Champion title for its Wagyu Beef Ham at the Golden Forks ceremony at Battersea Arts Centre on 15 September 2026.",
+      "textHash": "98e7577669f3",
+      "author": "@SnackDesk",
+      "sentiment": 0.2,
+      "product": null,
+      "fullTextHash": "98e7577669f36dc3020c0e003e895191b0896163b646599ec6149f492b70ff60"
+    },
+    {
+      "id": 7598,
+      "company": "International Chocolate Awards",
+      "title": "International Chocolate Awards Celebrates 2026 Americas and Canada Winners",
+      "summary": "The International Chocolate Awards holds its online winners' celebration for the 2026 Americas (USA, Latin America and Caribbean) and Canadian competitions on 8 September 2026, with Cacao Hunters, Qantu and Sleep Walk among the top-scoring makers.",
+      "textHash": "d2b7558b2233",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "d2b7558b223369c6306fba0ae4c4937030d37df0f6ba43c17f3787c85dc7c67d"
+    },
+    {
+      "id": 7599,
+      "company": "International Chocolate Awards",
+      "title": "International Chocolate Awards Names 2026 World Final Winners on 7 November",
+      "summary": "The International Chocolate Awards announces the winners of its 2026 World Final online on 7 November 2026, after remote judging of regional gold, silver and bronze winners.",
+      "textHash": "96f7fdcdb47c",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "96f7fdcdb47ce64a58f3dcb30f8aa9b44af232e35cb5f98c84ebc87e0294d1d2"
+    },
+    {
+      "id": 7600,
+      "company": "Specialty Coffee Association",
+      "title": "World Barista Championship 2026 Brings the Final to Panama City",
+      "summary": "The 26th World Barista Championship runs 22-25 October 2026 at the Panama Convention Center, the first time it has been held in Central America. Over 50 national champions each get 15 minutes to serve espresso, milk and signature drinks.",
+      "textHash": "870404bec16f",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "870404bec16f6a5ae669affbf3bb96817808c485d036c67c3a4bec2085035fdd"
+    },
+    {
+      "id": 7601,
+      "company": "Specialty Coffee Association of Japan",
+      "title": "SCAJ 2026 Specialty Coffee Exhibition Opens at Tokyo Big Sight",
+      "summary": "Asia's biggest specialty coffee show runs 14-17 October 2026 at Tokyo Big Sight, with about 560 exhibitors and six national coffee competitions. Winners of the barista and brewers cups earn places at the world finals.",
+      "textHash": "8e9249292856",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "8e92492928564d600d4f675dee7decab7c318f30959367370575af5ea8427bbf"
+    },
+    {
+      "id": 7602,
+      "company": "Alliance for Coffee Excellence",
+      "title": "Legends of Excellence Charity Coffee Auction Takes Place in Tokyo on 16 October",
+      "summary": "The Alliance for Coffee Excellence auctions twelve legendary producers' coffees from six countries at SCAJ in Tokyo on 16 October 2026, with all proceeds going to charity. Bids can be placed in person or online after advance registration.",
+      "textHash": "836fe7afb603",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "836fe7afb603fbcb57495adeff9d89fed50877341d07913997b52ac91c137cbb"
+    },
+    {
+      "id": 7603,
+      "company": "Alliance for Coffee Excellence",
+      "title": "Brazil Cup of Excellence 2026 Auction Is Set for 10 December",
+      "summary": "The top-scoring Brazilian coffees of the 2026 Cup of Excellence go to online auction at 13:00 UTC on 10 December 2026, after the international jury meets 26-29 October. Three categories each recognise their top 10 coffees scoring 87 or above.",
+      "textHash": "657bf08d9286",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "657bf08d928621a1f9fbf8e30e4392415ec32c6d42a5e39d9852b45efa0acea6"
+    },
+    {
+      "id": 7604,
+      "company": "Alliance for Coffee Excellence",
+      "title": "Indonesia Cup of Excellence 2026 Auction Is Set for 1 December",
+      "summary": "Indonesia's 2026 Cup of Excellence coffees go to online auction at 13:00 UTC on 1 December 2026, after an international jury week on 19-23 October. Only coffees scoring above 87 make the top 30 lots.",
+      "textHash": "1d19bf32368b",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "1d19bf32368bc834dbc1e1a03f4f517025838754ec06440328bc7538bdaa5131"
+    },
+    {
+      "id": 7605,
+      "company": "The 50 Best",
+      "title": "The 50 Best Bars 2026 Names Hong Kong's Bar Leone World's Best Bar",
+      "summary": "Bar Leone in Hong Kong kept the No. 1 spot on The 50 Best Bars list for a second year, announced at a live ceremony in Milan on 7 October 2026.",
+      "textHash": "31fade1d699b",
+      "author": "@DrinksDesk",
+      "sentiment": 0.25,
+      "product": null,
+      "fullTextHash": "31fade1d699b25060789b56166ea2ac70f4629dec50f0d0af0bb55904a3070c9"
+    },
+    {
+      "id": 7606,
+      "company": "The 50 Best",
+      "title": "The 50 Best Bars 2026 Extended 51-100 List Revealed",
+      "summary": "The 50 Best Bars published its 2026 extended list of bars ranked 51 to 100 on 23 September 2026, with 13 new entries across 34 cities.",
+      "textHash": "a32da04ab586",
+      "author": "@DrinksDesk",
+      "sentiment": 0.1,
+      "product": null,
+      "fullTextHash": "a32da04ab5863de0d2442dc4ba0b81fbcd0b4d20513befe860d6d6ad9e1d41e1"
+    },
+    {
+      "id": 7607,
+      "company": "La Maison du Whisky",
+      "title": "Whisky Live Paris 2026 at La Grande Halle de la Villette",
+      "summary": "The 22nd Whisky Live Paris, run by La Maison du Whisky, opened to the public on 26 and 27 September 2026 with a trade day on 28 September.",
+      "textHash": "3ef1cfe7d13e",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "3ef1cfe7d13ee14beae35fee36c34ef32014539b2554048ecb45d78ee5cae542"
+    },
+    {
+      "id": 7608,
+      "company": "Japan Whisky Research Centre",
+      "title": "Whisky Festival 2026 in Tokyo at Tokyo International Forum",
+      "summary": "Japan's large whisky tasting event returns on 6 and 7 November 2026 at Tokyo International Forum Hall E, with about 124 exhibitors and five limited single-cask bottles.",
+      "textHash": "5b1b7180d5ac",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "5b1b7180d5ac8c2c1548ee322f532c065939dfb4119d2d81fa55f2086ec644ce"
+    },
+    {
+      "id": 7609,
+      "company": "Barbados Tourism Marketing Inc.",
+      "title": "Barbados Food & Rum Festival 2026 Signature Events",
+      "summary": "The four-day Barbados festival has Rum Route on 6 November, Rise & Rum on 7 November and Liquid Gold on 8 November 2026.",
+      "textHash": "23b1ecdda062",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "23b1ecdda0620181e8ad501538e08ae6985a69e973c5c47710fb42f220af8553"
+    },
+    {
+      "id": 7610,
+      "company": "Kura Master",
+      "title": "Kura Master 2026 Names Sparkling Sake and Barley Shochu President's Award Winners",
+      "summary": "At the 10th Kura Master in Paris on 30 September 2026, Yamanashi Meijo's Shichiken Hoshi no Kagayaki Sparkling won the sake President's Award, the first sparkling sake to do so.",
+      "textHash": "0458242166e2",
+      "author": "@DrinksDesk",
+      "sentiment": 0.2,
+      "product": null,
+      "fullTextHash": "0458242166e2a41622a1dc17190e6c0fada8743af28b543b37aec56fbb886d33"
+    },
+    {
+      "id": 7611,
+      "company": "Saijo Sake Matsuri",
+      "title": "Saijo Sake Matsuri 2026 Fills Higashihiroshima with 801 Regional Sakes",
+      "summary": "Higashihiroshima's two-day Sake Matsuri runs 10-11 October 2026, with 801 sakes from across Japan poured at its paid Sake Hiroba.",
+      "textHash": "3067d052a1bf",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "3067d052a1bf6a59811a6e337aa1f94c0d48997031de9ae1f7508f6e8b5d98dd"
+    },
+    {
+      "id": 7612,
+      "company": "Hong Kong Trade Development Council",
+      "title": "Hong Kong International Wine & Spirits Fair 2026, 5-7 November",
+      "summary": "HKTDC's Hong Kong International Wine & Spirits Fair runs 5-7 November 2026 at the Hong Kong Convention and Exhibition Centre, with online matching from 29 October.",
+      "textHash": "ec86d6e72706",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "ec86d6e7270691d23e740316b4467eb8e1c966148952cad208a11aea336218f2"
+    },
+    {
+      "id": 7613,
+      "company": "Decanter",
+      "title": "Decanter Fine Wine Encounter London Returns to The Landmark, 6-7 November",
+      "summary": "Decanter's two-day Fine Wine Encounter at The Landmark London on 6-7 November 2026 offers a Grand Tasting of over 1,000 wines plus masterclasses.",
+      "textHash": "b66fcdd5b644",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "b66fcdd5b64432d6fb0af637a2b29053e3b5ec33900f9ac0968c82fc60396299"
+    },
+    {
+      "id": 7614,
+      "company": "Les Sarmentelles de Beaujeu",
+      "title": "Sarmentelles de Beaujeu Celebrate Beaujolais Nouveau, 18-22 November",
+      "summary": "Beaujeu's five-day Sarmentelles festival, 18-22 November 2026, taps the new Beaujolais at midnight ahead of the 19 November Beaujolais Nouveau release.",
+      "textHash": "e2dcca67e4bb",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "e2dcca67e4bb103d9ae4f5f513bd27c6d20ecaa660b8a5d05fc3e7f4e4bfb762"
+    },
+    {
+      "id": 7615,
+      "company": "Wine Spectator",
+      "title": "Wine Spectator's New York Wine Experience Returns to the Marquis, 22-24 October",
+      "summary": "Wine Spectator's three-day tasting weekend at the New York Marriott Marquis pours more than 200 wines rated 90+ points at its Critics' Choice Grand Tastings, with seminars on Penfolds Grange and more.",
+      "textHash": "4649568990a5",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "4649568990a58e01256baf216d2d9c0a1c191a39594018541efcaa9d20a7b89f"
+    },
+    {
+      "id": 7616,
+      "company": "Mundo Mezcal",
+      "title": "Mundo Mezcal 2026 Gathers 200+ Agave Spirit Labels at Campo Marte, 16-18 October",
+      "summary": "The second Mundo Mezcal agave festival fills the Campo Marte gardens in Mexico City, with the Copa Mundo Agave competition returning with 167 labels.",
+      "textHash": "25a3510c6a73",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "25a3510c6a734c683a9a26cb060565d54ab479b0a2331716e71a62de54a2c2df"
+    },
+    {
+      "id": 7617,
+      "company": "Whisky Advocate",
+      "title": "WhiskyFest New York Will Reveal Whisky Advocate's Whisky of the Year Live",
+      "summary": "WhiskyFest New York on 20 November at the Marriott Marquis pours over 100 whiskies and spirits and, for the first time, announces Whisky Advocate's Whisky of the Year live.",
+      "textHash": "422272aff1f1",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "422272aff1f137bac1722a8ac4687a9b864a2f42eb5676c18c986856c013d12c"
+    },
+    {
+      "id": 7618,
+      "company": "Alliance for Coffee Excellence",
+      "title": "Peru Cup of Excellence 2026 Auction Is Set for 8 December After Cusco Jury Week",
+      "summary": "Peru's tenth Cup of Excellence ends with an international online auction on 8 December 2026; coffees scoring 87+ go to buyers, after a record US$490,752 auction in 2025.",
+      "textHash": "5b047530232e",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "5b047530232ee6dab4490934156a0b77968aa5386f461793b6610bb3c5b6c245"
+    },
+    {
+      "id": 7619,
+      "company": "Espresso&CO",
+      "title": "Semana Internacional do Café 2026 Opens in Belo Horizonte With Coffee of the Year",
+      "summary": "Brazil's biggest coffee gathering runs 11-13 November at Expominas, home of the Coffee of the Year contest for the country's best arabica and canephora.",
+      "textHash": "ee74d2e623fe",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "ee74d2e623fec5316fc749f6c3fa5909a048625257fcd0d068a11577cbe78048"
+    },
+    {
+      "id": 7620,
+      "company": "Catad'Or",
+      "title": "Catad'Or World Wine Awards 2026 Will Announce Results on 1 December in Chile",
+      "summary": "The 31st Catad'Or World Wine Awards, Latin America's largest wine competition by its own billing, holds blind tastings on 24-26 November and its ceremony on 1 December.",
+      "textHash": "36c3ceee226d",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "36c3ceee226d958c021fb4b0e5d805e89fc8b38411c5bb46c742402240d47564"
+    },
+    {
+      "id": 7621,
+      "company": "DXB LIVE",
+      "title": "World of Coffee Dubai 2027 Returns to the Dubai World Trade Centre, 26-28 January",
+      "summary": "The sixth World of Coffee Dubai, the Specialty Coffee Association's regional show organised by DXB LIVE, follows a 2026 edition with 20,000+ visits and 2,100+ brands.",
+      "textHash": "5c1130d2f800",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "5c1130d2f8008cdd236a005e10e23448a8700e67e189f6927ba8b816667d0d95"
+    },
+    {
+      "id": 7622,
+      "company": "Melbourne Royal",
+      "title": "Melbourne Royal Wine Awards 2026 Trophy Presentation Names the Jimmy Watson Winner",
+      "summary": "Melbourne Royal hands out the 2026 Jimmy Watson Memorial Trophy and other wine trophies at a Victoria Pavilion luncheon on Friday 13 November 2026, after judging on 19-23 October.",
+      "textHash": "6d14e34c658a",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "6d14e34c658aa2fa2a090321ba59954db1f0250db9c45979dde01a1eb606bb0f"
+    },
+    {
+      "id": 7623,
+      "company": "Hong Kong Tourism Board",
+      "title": "Hong Kong Wine & Dine Festival 2026 Opens 29 October at Central Harbourfront",
+      "summary": "The Hong Kong Tourism Board's four-day festival runs 29 October to 1 November 2026 with over 300 booths, a Grand Wine Pavilion and 100-plus restaurants serving Only in Hong Kong dishes.",
+      "textHash": "87b49fa3fda1",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "87b49fa3fda147d83b51cd7f6cdfdea3a2f0c3be1202d9c556cbee0a7ed52ffc"
+    },
+    {
+      "id": 7624,
+      "company": "Chan Chao International",
+      "title": "Taiwan International Coffee Show 2026 Fills Nangang Hall 1 on 13-16 November",
+      "summary": "Taipei's biggest coffee trade show runs 13-16 November 2026 at Nangang Exhibition Center Hall 1, with barista, latte art and brewers cup champion events alongside a tea expo and wine festival.",
+      "textHash": "75ace820643d",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "75ace820643d34057cdf4444c90e01aaf9f852cca34943e9e70601795751c33c"
+    },
+    {
+      "id": 7625,
+      "company": "Sake Matsuri Singapore",
+      "title": "Sake Matsuri 2026 Brings 500+ Sake Labels to Marina Bay Sands on 28-29 November",
+      "summary": "Singapore's 13th Sake Matsuri moves to Marina Bay Sands on 28-29 November 2026 with 500-plus labels, 100-plus breweries and distilleries, and a new Spirits & Liquor Zone.",
+      "textHash": "c188864e84d1",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "c188864e84d1b13df94304a52872fc91a0eca179833e737a1e8d263763846b23"
+    },
+    {
+      "id": 7626,
+      "company": "Blas na hÉireann",
+      "title": "Arán Bakery Wins Blas na hÉireann 2026 Supreme Champion Again",
+      "summary": "Kilkenny's Arán Bakery & Bistro took the Supreme Champion title for its spelt sourdough on 2 October 2026, the first producer to win it twice in the Irish Food Awards.",
+      "textHash": "00e0f90e9457",
+      "author": "@SnackDesk",
+      "sentiment": 0.2,
+      "product": null,
+      "fullTextHash": "00e0f90e9457b32ed70f5e5b3d1243f324b78b90a5b07c6a1f9125ec0e79a77a"
+    },
+    {
+      "id": 7627,
+      "company": "Guild of Fine Food",
+      "title": "World Cheese Awards 2026 Heads to Córdoba for the Cheese Festival",
+      "summary": "The Guild of Fine Food's World Cheese Awards judges more than 5,000 cheeses from over 40 countries in Córdoba, Andalusia, as part of a festival running 12 to 15 November 2026.",
+      "textHash": "dcb1730fb6d4",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "dcb1730fb6d45ea47558180a033bbf542b7b54913f248647f4c6439d839375f7"
+    },
+    {
+      "id": 7628,
+      "company": "UK Tea Academy",
+      "title": "The Leafies 2026 Tea Awards Celebration at Fortnum & Mason, 22-23 January",
+      "summary": "The UK Tea Academy's international tea awards hold their 2026 awards celebration and an open winners' tasting at Fortnum & Mason in Piccadilly on 22 and 23 January 2027.",
+      "textHash": "a4d5f4a5283b",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "a4d5f4a5283b05636708e135b8479c0dc5d1310a9b5675e19d6e0796de51b431"
+    },
+    {
+      "id": 7629,
+      "company": "Campaign for Real Ale",
+      "title": "CAMRA Names The Hoptician in Dursley Cider and Perry Pub of the Year 2026",
+      "summary": "A micropub in a former optician's shop in Dursley, Gloucestershire won CAMRA's overall National Cider and Perry Pub of the Year 2026 on 2 October, with up to 20 ciders and perries on offer.",
+      "textHash": "15f107b781c9",
+      "author": "@DrinksDesk",
+      "sentiment": 0.2,
+      "product": null,
+      "fullTextHash": "15f107b781c91b8ae1a3a5714c14b514192d637901aecaaeedaa99cefe55f45e"
+    },
+    {
+      "id": 7630,
+      "company": "Comexposium",
+      "title": "Salon du Chocolat Paris 2026 Fills Porte de Versailles for Five Days",
+      "summary": "The Paris chocolate and pastry show runs 28 October to 1 November 2026 at Paris Expo Porte de Versailles, with live pastry demonstrations and a chocolate musical show.",
+      "textHash": "e39a8af7d69f",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "e39a8af7d69f16f0f9397b9b89c50366594b6013aa9b33c64bc238dda4871892"
+    },
+    {
+      "id": 7631,
+      "company": "Eurochocolate",
+      "title": "Eurochocolate 2026 Turns Perugia's Old Town into a Chocolate Fair",
+      "summary": "The 32nd Eurochocolate runs 13 to 22 November 2026 in Perugia's historic centre under the claim \"Fate Dolci\", with free entry, a Chocolate Show and bean-to-bar producers from over 20 cacao origins.",
+      "textHash": "bebbffbabc8d",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "bebbffbabc8ddac88e659bdbf67dd8c57c7cb33516cfbe4581195af523b1b710"
+    },
+    {
+      "id": 7632,
+      "company": "Koelnmesse",
+      "title": "ISM Cologne 2027 Brings Sweets and Snacks Together as One Trade Fair Trio",
+      "summary": "ISM Snacks & Sweets, ISM Ingredients and ISM Manufacturing run side by side in Cologne from 31 January to 3 February 2027, after a 2026 edition with about 1,790 exhibitors.",
+      "textHash": "382b3222a235",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "382b3222a235be970944bebb4bf11b9959aceea7e3cd21f15d3ac0746f00b2f2"
+    },
+    {
+      "id": 7633,
+      "company": "Campaign for Real Ale",
+      "title": "CAMRA's Good Beer Guide 2027 Publishes with 812 New Pub Entries",
+      "summary": "The 54th Good Beer Guide, published 24 September 2026 with a foreword by Sir Ian Rankin, lists 4,500 pubs, 1,700 brewers and 5,000 beers chosen by CAMRA volunteers.",
+      "textHash": "52dc81e675b7",
+      "author": "@DrinksDesk",
+      "sentiment": 0.25,
+      "product": "Good Beer Guide",
+      "fullTextHash": "52dc81e675b72304a0ee9487c4ab647aa0c1c25215f60f7aeeab007cb60ddee9"
+    },
+    {
+      "id": 7634,
+      "company": "Northwest Chocolate Festival",
+      "title": "Northwest Chocolate Festival 2026 Fills Seattle Center on 3-4 October",
+      "summary": "The Northwest Chocolate Festival drew artisan chocolate makers to Seattle Center on 3-4 October 2026, with an exhibition hall, workshops and a Chocolate Experience Center.",
+      "textHash": "15b36302fd0f",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "15b36302fd0fb3d08ca4310c6d17bfddae8d1151252b5b269051c74a75f31f9b"
+    },
+    {
+      "id": 7635,
+      "company": "Cocoa Runners",
+      "title": "London Craft Chocolate Fair 2026 Returns to Farringdon on 17-18 October",
+      "summary": "Cocoa Runners hosts the London Craft Chocolate Fair at Fidelio Cafe in Farringdon on 17-18 October 2026, with an indoor market of craft chocolate makers and ticketed tastings.",
+      "textHash": "f656c34cf8ef",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "f656c34cf8ef5daecb9d20a48bcdfcd2beef8d4d71695329a3db7abd6deee7ab"
+    },
+    {
+      "id": 7636,
+      "company": "The Daily Pour",
+      "title": "Zero Proof Choice Awards Names 2026 Winners in Alcohol-Free Drinks",
+      "summary": "The Daily Pour announced the second Zero Proof Choice Awards winners on 2 September 2026, with Double Gold medals for Almave, Saicho sparkling teas, Mock One gin and more. Results are given as medal tiers, with no scores published.",
+      "textHash": "3ff333cda8b3",
+      "author": "@DrinksDesk",
+      "sentiment": 0.2,
+      "product": null,
+      "fullTextHash": "3ff333cda8b3c779325932d81f37057455bf168d712e6bd28497ee6eec48e6b0"
+    },
+    {
+      "id": 7637,
+      "company": "Thai Nguyen Provincial People's Committee",
+      "title": "Thai Nguyen International Tea Festival Opens 30 October in Vietnam",
+      "summary": "Vietnam's tea heartland holds its International Tea Festival from 30 October to 7 November 2026, with a tea procession, an international tea forum and the Vietnam Master Tea Competition. The opening ceremony is at Vo Nguyen Giap Square.",
+      "textHash": "9d5e6f1675c0",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "9d5e6f1675c0f3b3d25cc39220f8da40ba9b5e9b1caa1c807cc7e6ffd59791c7"
+    },
+    {
+      "id": 7638,
+      "company": "Oriental Brewery",
+      "title": "Cass Zero Named Top Non-Alcoholic Beer in Korea for a Second Year",
+      "summary": "Oriental Brewery's Cass Zero won the non-alcoholic beer category at the 2026 Brand of the Year Awards, decided by more than 770,000 consumer votes. Cass also won the beer category for the fourth year running.",
+      "textHash": "7de1677d1b49",
+      "author": "@DrinksDesk",
+      "sentiment": 0.65,
+      "product": "Cass Zero",
+      "fullTextHash": "7de1677d1b49d15ad9d8c37a2ba3c3bec913bde61f7cf2c2f14285a430e6f7de"
+    },
+    {
+      "id": 7639,
+      "company": "COEX",
+      "title": "25th Seoul International Cafe Show Opens at COEX on 11 November",
+      "summary": "Asia's largest coffee and drinks exhibition returns to COEX in Gangnam from 11 to 14 November 2026, with two trade days and two public days. One-day tickets are 25,000 won.",
+      "textHash": "b2c2378aa6f4",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "b2c2378aa6f49bf3a950cf62e126ddb4f245c44699232a01bb29ff5dcb82a5f3"
+    },
+    {
+      "id": 7640,
+      "company": "Bar Convent Berlin",
+      "title": "Bar Convent Berlin 2026 Marks 20 Years of BCB",
+      "summary": "Bar Convent Berlin celebrates its 20th anniversary on 12 to 14 October 2026 at Exhibition Centre Berlin, with a new Embassy Stage and a Low & No area.",
+      "textHash": "c1db051c7dd5",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "c1db051c7dd5979afff507a90c666988af19561b3658b1a0739672af73da7396"
+    },
+    {
+      "id": 7641,
+      "company": "The Tasting Alliance",
+      "title": "Top Shelf 2026 and Top Shelf Awards Gala in San Francisco",
+      "summary": "The Tasting Alliance's two-day Top Shelf event, 7 and 8 November 2026 in San Francisco, combines tastings, master classes and the Top Shelf Awards Gala.",
+      "textHash": "89226fc00b08",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "89226fc00b0825c8015724240c016ec7e8e49b730dbba0e335d25d22cb445d3f"
+    },
+    {
+      "id": 7642,
+      "company": "Concours Mondial de Bruxelles",
+      "title": "Spirits Selection by CMB 2026 Judging in Madeira",
+      "summary": "The Concours Mondial de Bruxelles's Spirits Selection international spirits competition is scheduled for 16 to 18 October 2026 in Madeira, Portugal.",
+      "textHash": "b0f4608b18de",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "b0f4608b18de0ed7660d919043992b83a88f2a4e9ae89a2480d845609195e918"
+    },
+    {
+      "id": 7643,
+      "company": "Scottish National Whisky Festival",
+      "title": "Scottish National Whisky Festival 2027 at SWG3 Glasgow",
+      "summary": "Two sessions of hundreds of whiskies and other spirits at SWG3 in Glasgow on Saturday 23 January 2027, with live music, cocktails and festival-exclusive bottlings.",
+      "textHash": "d11f19af1ea0",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "d11f19af1ea0093716dfdd37baef360497349dc6c7098ba85139524c5f5af5f5"
+    },
+    {
+      "id": 7644,
+      "company": "SIPORY",
+      "title": "Super Ginjo Festival 2026 Brings 42 Breweries to Tokyo Takeshiba",
+      "summary": "SIPORY's two-day ginjo sake tasting runs 17-18 October 2026 at Tokyo Portcity Takeshiba with 42 breweries and 150-plus brands.",
+      "textHash": "e59fef4a3e8d",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "e59fef4a3e8ddfe0fb5a8f9bfa33f988815c099d73d250c48f960fe83f9f61fb"
+    },
+    {
+      "id": 7645,
+      "company": "Cider Australia",
+      "title": "Australian Cider Awards 2026 Dinner Names the Winners in Sydney",
+      "summary": "Cider Australia's 15th awards announce their winners at a dinner at Rydges World Square on 15 October, after judging by Max Allen's panel in Melbourne.",
+      "textHash": "208ed823b84b",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "208ed823b84b58ff7b13fb465f4e9b4cb8c5b103332c727df796df1ab2d0065d"
+    },
+    {
+      "id": 7646,
+      "company": "NZ Cider Festival",
+      "title": "New Zealand Cider Festival 2026 Pours 100+ Ciders in Nelson",
+      "summary": "The festival's 11th year brings 25+ cider, fruit wine and mead producers and the 2026 NZ Cider Awards winners to Founders Heritage Park on 14 November.",
+      "textHash": "8786a9accb96",
+      "author": "@DrinksDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "8786a9accb962660197a65c670b656d24ef7bd287be8c668b15de43279495838"
+    },
+    {
+      "id": 7647,
+      "company": "Sankei Shimbun",
+      "title": "Iizuka High School's Zero Wins the 19th Sweets Koshien Birthday Cake Final",
+      "summary": "A three-student team from Iizuka High School in Fukuoka took the top prize and the Kai Award at the 19th Sweets Koshien final in Tokyo on 27 September 2026 with a two-tier cake called \"My Birthday Dream\".",
+      "textHash": "5c159b21b4bb",
+      "author": "@SnackDesk",
+      "sentiment": 0.2,
+      "product": null,
+      "fullTextHash": "5c159b21b4bb6122e4d12ee03da5c9efdeded2878248f02440d2437ed86bbc11"
+    },
+    {
+      "id": 7648,
+      "company": "Setagaya Pan Matsuri Executive Committee",
+      "title": "Setagaya Pan Matsuri 2026 Pits 14 Bakeries in a Mentaiko Baguette Contest",
+      "summary": "Japan's largest bread fair returns to Setagaya Park and HOME/WORK VILLAGE on 31 October and 1 November 2026 with 71 limited breads and a Best Bread Contest on mentaiko-filled baguettes.",
+      "textHash": "d81561cd0ba2",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "d81561cd0ba2a113e557deb7f01e39a8ff653090eaae65b4e071b367f50ecbca"
+    },
+    {
+      "id": 7649,
+      "company": "Pia",
+      "title": "Pan no Fes 2026 Brings Autumn-Colour Limited Breads to Makuhari, 23-25 October",
+      "summary": "Nine limited breads built on chestnut, purple sweet potato and honey-sweet potato headline the three-day free bread fair at Toyosuna Park beside Aeon Mall Makuhari Shintoshin.",
+      "textHash": "8e7f417a1181",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "8e7f417a1181d13e5b535923daa2b92b449f15cc8a913b23b1f540640097d2fa"
+    },
+    {
+      "id": 7650,
+      "company": "Daejeon Tourism Organization",
+      "title": "Daejeon Bread Festival 2026 Gathers 120 Bakeries at Expo Science Park",
+      "summary": "Daejeon's city bread festival moves to the Expo Science Park Hanbit Tower area on 17-18 October 2026 with 120 booths, from Sungsimdang to neighbourhood bakeries, and free entry.",
+      "textHash": "f0f548cf908c",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "f0f548cf908cb761ce8460ab6990d0e4da37eddfae16df7152cb64ecd1c9cbc3"
+    },
+    {
+      "id": 7651,
+      "company": "Pia",
+      "title": "Pan no Fes 2026 Makes Its Osaka Debut in Umekita Park, 11-13 December",
+      "summary": "Japan's largest bread festival comes to Osaka for the first time, with three days of bakeries beside JR Osaka Station in Grand Green Osaka's Umekita Park.",
+      "textHash": "2d7a03676bf8",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "2d7a03676bf80a20beeaa04734a6e49b9f2d01c013f594d58713077019a7a94e"
+    },
+    {
+      "id": 7652,
+      "company": "Pia",
+      "title": "Pan no Fes Tama Minami-Osawa Marks Five Years with a Reward-Bread Theme",
+      "summary": "Sixteen bakeries, several with Pan no Fes Award medals, sell limited \"gohoubi\" reward breads at Mitsui Outlet Park Tama Minami-Osawa from 31 October to 3 November 2026.",
+      "textHash": "8c31436efd46",
+      "author": "@SnackDesk",
+      "sentiment": 0.15,
+      "product": null,
+      "fullTextHash": "8c31436efd463a1f837684fdcf304a09b65232825651ec70798816ee43404e2f"
+    },
+    {
+      "id": 7655,
+      "company": "Calbee",
+      "title": "Calbee Announces POP LAYERS Corn Snacks for Thailand’s October Rollout",
+      "summary": "Calbee announced its new multilayer corn snack on October 6. Salt, Cheese and BBQ flavors will debut at Thai 7-Eleven stores during October; the release gives no exact first-sale day or price.",
+      "textHash": "e7df2f367ca4",
+      "author": "@SnackDesk",
+      "sentiment": 0.3,
+      "product": "POP LAYERS",
+      "fullTextHash": "e7df2f367ca406907651ec35db63411c577b01aab32933afabd8c23ee982cfa4"
+    }
+  ],
+  "heldEventReadings": [
+    {
+      "pinId": 13924,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://grycan.pl/oferta/nowosci/",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7616,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://mundomezcal.mx/",
+      "author": "@DrinksDesk"
+    },
+    {
+      "pinId": 7650,
+      "performers": [],
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "KRW",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.mcst.go.kr/site/s_culture/festival/festivalView.jsp?pSeq=11970",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7635,
+      "performers": [
+        {
+          "name": "James Hoffmann",
+          "type": "Person",
+          "url": ""
+        },
+        {
+          "name": "Maxwell Dashwood",
+          "type": "Person",
+          "url": ""
+        },
+        {
+          "name": "Peter McCombie",
+          "type": "Person",
+          "url": ""
+        },
+        {
+          "name": "Spencer Hyman",
+          "type": "Person",
+          "url": ""
+        }
+      ],
+      "lowPrice": 5,
+      "highPrice": 5,
+      "priceCurrency": "GBP",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://cocoarunners.com/event/craft-chocolate-fair-entry-time-slots/",
+      "sourceUrl": "https://cocoarunners.com/fair",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 14240,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://english.beijing.gov.cn/whatson/events/forum/202609/t20260930_4886674.html",
+      "author": "@MotorDesk"
+    },
+    {
+      "pinId": 7649,
+      "performers": [],
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "JPY",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://pannofes.jp/event/makuhari2026/",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7592,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.worldchocolatemasters.com/final-2026",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7630,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.salon-du-chocolat.com/en/paris/practical-info/buy-my-ticket",
+      "sourceUrl": "https://www.salon-du-chocolat.com/en/paris",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7623,
+      "performers": [
+        {
+          "name": "Edward Lee",
+          "type": "Person",
+          "url": ""
+        }
+      ],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://newshub.medianet.com.au/2026/08/hong-kong-wine-dine-festival-returns-this-autumn/166941/",
+      "author": "@DrinksDesk"
+    },
+    {
+      "pinId": 7648,
+      "performers": [],
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "JPY",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://number.bunshun.jp/ud/pressrelease/6a5889271262179c88000001",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7652,
+      "performers": [],
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "JPY",
+      "tiers": [],
+      "availability": "InStock",
+      "ticketUrl": "",
+      "sourceUrl": "https://pannofes.jp/event/minamioosawa2026/",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7609,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.riotimesonline.com/barbados-food-and-rum-festival-2026-november-5-8-caribbean-culinary/",
+      "author": "@DrinksDesk"
+    },
+    {
+      "pinId": 7608,
+      "performers": [],
+      "lowPrice": 3500,
+      "highPrice": 5000,
+      "priceCurrency": "JPY",
+      "tiers": [
+        {
+          "label": "Premium Night",
+          "price": 3500,
+          "note": "November6,17:00–19:30; tax included."
+        },
+        {
+          "label": "November7 first session",
+          "price": 5000,
+          "note": "10:00–13:30; tax included."
+        },
+        {
+          "label": "November7 second session",
+          "price": 5000,
+          "note": "14:30–18:00; tax included."
+        }
+      ],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000328.000119996.html",
+      "author": "@DrinksDesk"
+    },
+    {
+      "pinId": 7627,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "https://internationalcheesefestival.com/tickets-2/?lang=en",
+      "sourceUrl": "https://gff.co.uk/for-producers/world-cheese-awards/",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 13925,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://sherbeth.it/",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7631,
+      "performers": [
+        {
+          "name": "Nicola Antonacci",
+          "type": "Person",
+          "url": ""
+        }
+      ],
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "EUR",
+      "tiers": [],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.eurochocolate.com/perugia2026/",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 13975,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.infobae.com/inhouse/2026/08/31/dia-nacional-del-helado-artesanal-las-claves-de-un-sector-que-busca-crecer-y-aumentar-el-consumo-de-cara-al-proximo-verano/",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7625,
+      "performers": [],
+      "lowPrice": 50,
+      "highPrice": 128,
+      "priceCurrency": "SGD",
+      "tiers": [
+        {
+          "label": "Early Bird",
+          "price": 50,
+          "note": "Until October31; GST included."
+        },
+        {
+          "label": "Regular",
+          "price": 60,
+          "note": "GST included."
+        },
+        {
+          "label": "VIP",
+          "price": 128,
+          "note": "Full day; GST included."
+        }
+      ],
+      "availability": "InStock",
+      "onSaleDate": "",
+      "ticketUrl": "https://sakematsuri.sg/pages/tickets-sake-matsuri-2026",
+      "sourceUrl": "https://sakematsuri.sg/",
+      "author": "@DrinksDesk"
+    },
+    {
+      "pinId": 7651,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "JPY",
+      "tiers": [
+        {
+          "label": "General admission",
+          "price": 0,
+          "note": "Selected times in the bakery area will be charged; the paid price is not published."
+        }
+      ],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://pannofes.jp/event/umekitakouen2026/",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 7643,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "https://www.ticketmaster.co.uk/scottish-national-whisky-festival-tickets/artist/5417900",
+      "sourceUrl": "https://swg3.tv/events/2027/january/scottish-national-whisky-festival-2027/",
+      "author": "@DrinksDesk"
+    },
+    {
+      "pinId": 14168,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://cnevpost.com/2026/09/24/next-beijing-auto-show-mar-27-apr-5-2027/",
+      "author": "@MotorDesk"
+    },
+    {
+      "pinId": 14233,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://cnevpost.com/2026/06/08/2026-shenzhen-auto-show-closes-next-edition-jun-5-2027/",
+      "author": "@MotorDesk"
+    },
+    {
+      "pinId": 3690,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://chineseparade.com/faq/",
+      "author": "@CityDesk"
+    },
+    {
+      "pinId": 3692,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://sfpride.org/",
+      "author": "@CityDesk"
+    },
+    {
+      "pinId": 254,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2030_FIFA_World_Cup",
+      "author": "@ThePinGang"
+    },
+    {
+      "pinId": 3659,
+      "performers": [],
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": "",
+      "tiers": [],
+      "availability": "",
+      "onSaleDate": "",
+      "ticketUrl": "",
+      "sourceUrl": "https://www.macysinc.com/newsroom/news/news-details/2026/Macys-Kicks-Off-the-100-Day-Countdown-to-the-100th-Macys-Thanksgiving-Day-Parade/default.aspx",
+      "author": "@CityDesk"
+    }
+  ],
+  "retainedLocalEventRows": [
+    {
+      "pinId": 3692,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": "0.00",
+      "highPrice": "0.00",
+      "priceCurrency": "USD",
+      "availability": null,
+      "onSaleDate": null,
+      "source": "session",
+      "sourceUrl": "https://sfpride.org/",
+      "checkedAt": "2026-10-13T14:16:04.875Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 254,
+      "performers": [],
+      "ticketUrl": "https://www.fifa.com/en/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "session",
+      "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/world-cup-2030-hosts-qualified-bidding-spain-argentina-morocco-uruguay-portugal-paraguay",
+      "checkedAt": "2026-10-13T14:21:31.270Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3659,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "session",
+      "sourceUrl": null,
+      "checkedAt": "2026-10-13T14:22:32.380Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 13924,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://grycan.pl/oferta/nowosci/",
+      "checkedAt": "2026-10-13T14:02:40.770Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7616,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://mundomezcal.mx/",
+      "checkedAt": "2026-10-13T14:02:41.003Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7650,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": "0.00",
+      "highPrice": "0.00",
+      "priceCurrency": "KRW",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://www.mcst.go.kr/site/s_culture/festival/festivalView.jsp?pSeq=11970",
+      "checkedAt": "2026-10-13T14:02:41.064Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7635,
+      "performers": [
+        {
+          "name": "James Hoffmann",
+          "type": "Person"
+        },
+        {
+          "name": "Maxwell Dashwood",
+          "type": "Person"
+        },
+        {
+          "name": "Peter McCombie",
+          "type": "Person"
+        },
+        {
+          "name": "Spencer Hyman",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": "https://cocoarunners.com/event/craft-chocolate-fair-entry-time-slots/",
+      "lowPrice": "5.00",
+      "highPrice": "5.00",
+      "priceCurrency": "GBP",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://cocoarunners.com/fair",
+      "checkedAt": "2026-10-13T14:02:41.118Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 14240,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://english.beijing.gov.cn/whatson/events/forum/202609/t20260930_4886674.html",
+      "checkedAt": "2026-10-13T14:05:51.098Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7649,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": "0.00",
+      "highPrice": "0.00",
+      "priceCurrency": "JPY",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://pannofes.jp/event/makuhari2026/",
+      "checkedAt": "2026-10-13T14:05:51.602Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7592,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://www.worldchocolatemasters.com/final-2026",
+      "checkedAt": "2026-10-13T14:05:51.695Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7630,
+      "performers": [],
+      "ticketUrl": "https://www.salon-du-chocolat.com/en/paris/practical-info/buy-my-ticket",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://www.salon-du-chocolat.com/en/paris",
+      "checkedAt": "2026-10-13T14:05:51.749Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7623,
+      "performers": [
+        {
+          "name": "Edward Lee",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://newshub.medianet.com.au/2026/08/hong-kong-wine-dine-festival-returns-this-autumn/166941/",
+      "checkedAt": "2026-10-13T14:07:44.628Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7648,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": "0.00",
+      "highPrice": "0.00",
+      "priceCurrency": "JPY",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://number.bunshun.jp/ud/pressrelease/6a5889271262179c88000001",
+      "checkedAt": "2026-10-13T14:07:44.847Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7652,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": "0.00",
+      "highPrice": "0.00",
+      "priceCurrency": "JPY",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://pannofes.jp/event/minamioosawa2026/",
+      "checkedAt": "2026-10-13T14:10:26.510Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7609,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://www.riotimesonline.com/barbados-food-and-rum-festival-2026-november-5-8-caribbean-culinary/",
+      "checkedAt": "2026-10-13T14:10:26.659Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7608,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": "3500.00",
+      "highPrice": "5000.00",
+      "priceCurrency": "JPY",
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000328.000119996.html",
+      "checkedAt": "2026-10-13T14:13:59.408Z",
+      "tiers": [
+        {
+          "note": "November6,17:00–19:30; tax included.",
+          "label": "Premium Night",
+          "price": 3500
+        },
+        {
+          "note": "10:00–13:30; tax included.",
+          "label": "November7 first session",
+          "price": 5000
+        },
+        {
+          "note": "14:30–18:00; tax included.",
+          "label": "November7 second session",
+          "price": 5000
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 7627,
+      "performers": [],
+      "ticketUrl": "https://internationalcheesefestival.com/tickets-2/?lang=en",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://gff.co.uk/for-producers/world-cheese-awards/",
+      "checkedAt": "2026-10-13T14:13:59.569Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 13925,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://sherbeth.it/",
+      "checkedAt": "2026-10-13T14:13:59.624Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7631,
+      "performers": [
+        {
+          "name": "Nicola Antonacci",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": "0.00",
+      "highPrice": "0.00",
+      "priceCurrency": "EUR",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://www.eurochocolate.com/perugia2026/",
+      "checkedAt": "2026-10-13T14:13:59.758Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 13975,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://www.infobae.com/inhouse/2026/08/31/dia-nacional-del-helado-artesanal-las-claves-de-un-sector-que-busca-crecer-y-aumentar-el-consumo-de-cara-al-proximo-verano/",
+      "checkedAt": "2026-10-13T14:13:59.810Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 7625,
+      "performers": [],
+      "ticketUrl": "https://sakematsuri.sg/pages/tickets-sake-matsuri-2026",
+      "lowPrice": "50.00",
+      "highPrice": "128.00",
+      "priceCurrency": "SGD",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://sakematsuri.sg/",
+      "checkedAt": "2026-10-13T14:13:59.858Z",
+      "tiers": [
+        {
+          "note": "Until October31; GST included.",
+          "label": "Early Bird",
+          "price": 50
+        },
+        {
+          "note": "GST included.",
+          "label": "Regular",
+          "price": 60
+        },
+        {
+          "note": "Full day; GST included.",
+          "label": "VIP",
+          "price": 128
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 7651,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": "0.00",
+      "highPrice": "0.00",
+      "priceCurrency": "JPY",
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://pannofes.jp/event/umekitakouen2026/",
+      "checkedAt": "2026-10-13T14:16:04.393Z",
+      "tiers": [
+        {
+          "note": "Selected times in the bakery area will be charged; the paid price is not published.",
+          "label": "General admission",
+          "price": 0
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 7643,
+      "performers": [],
+      "ticketUrl": "https://www.ticketmaster.co.uk/scottish-national-whisky-festival-tickets/artist/5417900",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://swg3.tv/events/2027/january/scottish-national-whisky-festival-2027/",
+      "checkedAt": "2026-10-13T14:16:04.654Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 14168,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://cnevpost.com/2026/09/24/next-beijing-auto-show-mar-27-apr-5-2027/",
+      "checkedAt": "2026-10-13T14:16:04.708Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 14233,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://cnevpost.com/2026/06/08/2026-shenzhen-auto-show-closes-next-edition-jun-5-2027/",
+      "checkedAt": "2026-10-13T14:16:04.759Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3690,
+      "performers": [],
+      "ticketUrl": "https://chineseparade.com/tickets/",
+      "lowPrice": "0.00",
+      "highPrice": "0.00",
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "session",
+      "sourceUrl": "https://chineseparade.com/faq/",
+      "checkedAt": "2026-10-13T14:16:04.821Z",
+      "tiers": [],
+      "itinerary": []
+    }
+  ],
+  "retainedLocalEventRowsNote": "Historical fields can survive locally when current rendered pages state nothing. heldEventReadings contains the actual answers supplied this run. Do not describe earlier retained fields as newly verified. Publication is blocked by the curator author allowlist.",
+  "substantiveReviewReasons": [
+    "2026-10-13 morning news: replace the Q3 earnings preview with reported Q3 results. Official release https://www.goldmansachs.com/pressroom/press-releases/2026/2026-10-13-q3-results gives revenue USD18.68bn, earnings USD5.29bn, EPS USD17.01 and annualized ROE18.7%; call at 09:30 EDT. Confirm the release date, retain separate call time, cite the official release. @BankDesk is outside this job allowlist.",
+    "2026-10-13 morning news: Q3 is now reported, so replace the earnings preview with confirmed results from SEC release https://www.sec.gov/Archives/edgar/data/19617/000162828026065582/a3q26erfexhibit991narrative.htm and filing https://www.sec.gov/Archives/edgar/data/19617/000162828026065582/0001628280-26-065582-index.htm (accepted Oct13 06:30:38). Reported net income USD15.3bn, EPS USD5.57; distinguish adjusted USD5.75 and managed revenue USD50.9bn from GAAP revenue. Reuters https://www.marketscreener.com/news/jpmorgan-posts-rare-profit-miss-as-dealmaking-bond-trading-lose-momentum-ce785dddde8bf12d reports a rare expectations miss. Date remains Oct13; @BankDesk is outside this job allowlist."
+  ],
+  "modelCheck": {
+    "fallbackSource": "https://arena.ai/leaderboard/chat/text",
+    "arenaPublishedOn": "2026-10-08",
+    "leaderboardRows": 414,
+    "scoredModels": 142,
+    "awaiting": [
+      {
+        "pinId": 15144,
+        "title": "Ministral 8B and Ministral 3B Released",
+        "model": "Ministral 3 3B 2512",
+        "price": 0.09999999999999999,
+        "year": 2025,
+        "daysWaiting": 727
+      },
+      {
+        "pinId": 1814,
+        "title": "OpenAI o3-pro Released",
+        "model": "o3 Pro",
+        "price": 30,
+        "year": 2025,
+        "daysWaiting": 490
+      },
+      {
+        "pinId": 1818,
+        "title": "GPT-5.1-Codex-Max Released",
+        "model": "GPT-5.1-Codex-Max",
+        "price": 2.708333333333334,
+        "year": 2025,
+        "daysWaiting": 328
+      },
+      {
+        "pinId": 1821,
+        "title": "GPT-5.3-Codex Released",
+        "model": "GPT-5.3-Codex",
+        "price": 3.791666666666666,
+        "year": 2026,
+        "daysWaiting": 250
+      },
+      {
+        "pinId": 15133,
+        "title": "Qwen3.5-397B-A17B and Qwen3.5-Plus Released",
+        "model": "Qwen3.5 Plus 2026-04-20",
+        "price": 0.5499999999999999,
+        "year": 2026,
+        "daysWaiting": 239
+      },
+      {
+        "pinId": 4815,
+        "title": "Claude Haiku 5.5 Released",
+        "model": "Claude Haiku 5.5",
+        "price": 0.16666666666666666,
+        "year": 2026,
+        "daysWaiting": 6
+      }
+    ],
+    "needsFrontierTag": [
+      {
+        "pinId": 4812,
+        "title": "DeepSeek-V4.1-Flash Released",
+        "models": [
+          "deepseek-v4.1-flash-max (2026)"
+        ],
+        "userTags": [
+          "Agents",
+          "AI",
+          "AI Models",
+          "Coding",
+          "DeepSeek",
+          "Open-Weight",
+          "Pricing"
+        ]
+      },
+      {
+        "pinId": 1819,
+        "title": "Claude Opus 4.5 Released",
+        "models": [
+          "claude-opus-4-5-20251101-high-32k (2025)"
+        ],
+        "userTags": [
+          "AI",
+          "AI Models"
+        ]
+      },
+      {
+        "pinId": 15114,
+        "title": "GLM-4.7 Released",
+        "models": [
+          "glm-4.7 (2025)"
+        ],
+        "userTags": [
+          "Agents",
+          "AI",
+          "AI Models",
+          "Coding",
+          "GLM",
+          "MIT License",
+          "Open-Weight",
+          "Reasoning",
+          "Z.ai"
+        ]
+      }
+    ]
+  },
+  "researchGaps": [
+    "HomeView: official gallery, product page, MacRumors launch report and YouTube-targeted web search yielded no verified event-specific video; used three distinct official images.",
+    "UFC 335: used the current official venue poster and existing venue photo; removed the former-headliner portraits. No new official event video was verified.",
+    "DP World India Championship: operator gives October 15–18, while the fresh market closes November 1. Kept as a lead; no complete media-backed draft was produced and no event date was inferred from settlement.",
+    "The weekly signal includes long-duration projects and contracts; prioritized imminent events rather than exhaustively investigating every long-running entry."
+  ],
+  "publicationStatus": {
+    "status": "applied",
+    "authorizedBy": "User requested “apply” in this conversation",
+    "verifiedAt": "2026-10-13T15:02:22.312Z",
+    "evidence": "docs/news-job-2026-10-13-applied.json",
+    "note": "Original proposals retained as evidence, not an open publication backlog. All83 associated production review marks are resolved. LVMH final text was additionally corrected and re-scored."
+  }
+}

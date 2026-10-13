@@ -79,6 +79,7 @@
     "products:carperf": "tsx scripts/products/carPerf.ts",
     "restaurants:dining": "tsx scripts/restaurants/diningRubric.ts",
     "restaurants:dining:prod": "tsx scripts/restaurants/diningRubricProd.ts",
+    "hotels:rubric:prod": "tsx scripts/hotels/hotelRubricProd.ts",
     "games:markets": "tsx scripts/games/markets.ts",
     "places:resolve": "tsx scripts/places/resolve.ts",
     "places:refresh": "tsx scripts/places/refresh.ts",

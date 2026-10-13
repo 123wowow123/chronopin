@@ -1,0 +1,61 @@
+{
+  "runId": 8,
+  "date": "2026-10-13",
+  "images": [
+    {
+      "name": "homeview-lineup",
+      "sourceImageUrl": "https://www.apple.com/newsroom/images/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/article/Apple-HomeView-lineup-261013_Full-Bleed-Image.jpg.large.jpg",
+      "sourcePageUrl": "https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/",
+      "credit": "Apple",
+      "caption": "Apple HomeView product lineup, official October 13, 2026 launch image.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-13/homeview-lineup-9f5c01fcfb372c99.webp",
+      "sha256": "9f5c01fcfb372c9985d2d7591c19df80205f3bab7cf8a1d97c11b2cfb9a92bdc",
+      "bytes": 78964,
+      "pinIds": [
+        15213,
+        5764
+      ]
+    },
+    {
+      "name": "homeview-kitchen",
+      "sourceImageUrl": "https://www.apple.com/newsroom/images/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/article/Apple-HomeView-lifestyle-kitchen-261013_big.jpg.large.jpg",
+      "sourcePageUrl": "https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/",
+      "credit": "Apple",
+      "caption": "HomeView used in a kitchen, official Apple launch photograph.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-13/homeview-kitchen-afa1379de69bc167.webp",
+      "sha256": "afa1379de69bc1671c442d56a0abf4e53342101cd902f64ee2bff8ec6b1b7f4f",
+      "bytes": 69004,
+      "pinIds": [
+        15213,
+        5764
+      ]
+    },
+    {
+      "name": "homeview-wall",
+      "sourceImageUrl": "https://www.apple.com/newsroom/images/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/article/Apple-HomeView-wall-mounted-261013_inline.jpg.large.jpg",
+      "sourcePageUrl": "https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/",
+      "credit": "Apple",
+      "caption": "Apple HomeView wall-mounted configuration, official Apple launch photograph.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-13/homeview-wall-86c7dd29c80199f4.webp",
+      "sha256": "86c7dd29c80199f44dbf44ca8aaa92d22867425a6bd66dc5a043a6b2753e6efb",
+      "bytes": 32644,
+      "pinIds": [
+        15213
+      ]
+    },
+    {
+      "name": "ufc335-poster",
+      "sourceImageUrl": "https://www.t-mobilearena.com/assets/img/26-SPO-13417-001-RUSH-UFC-335-Main-Card-Announce-Assets-TMA-Web-Main-Event-1200x628-3787f5757c.jpg",
+      "sourcePageUrl": "https://www.t-mobilearena.com/events/detail/ufc-335",
+      "credit": "UFC / T-Mobile Arena",
+      "caption": "Official UFC335 main-card announcement poster showing Charles Oliveira and Diego Lopes.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-13/ufc335-poster-a6167c19e62c6d61.webp",
+      "sha256": "a6167c19e62c6d6138fbd7aba32cabad56b3baa2d6652554a5d89a9f8d492acb",
+      "bytes": 150502,
+      "pinIds": [
+        2521
+      ]
+    }
+  ],
+  "verification": "Every public blob returned HTTP 200, matched the uploaded SHA-256 and was visually inspected before use. No image bytes are in Git."
+}
