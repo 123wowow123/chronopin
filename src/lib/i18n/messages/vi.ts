@@ -1600,6 +1600,7 @@ const vi: Messages = {
     stocksHint: 'Giá cổ phiếu của công ty và mức thay đổi kể từ ngày bắt đầu, bên cạnh tên công ty. Trang riêng của ghim luôn liệt kê cổ phiếu của nó.',
     alertsLabel: 'Cảnh báo ghim đang quan sát',
     alertsHint: 'Một thông báo trình duyệt khi ghim bạn quan sát bắt đầu hoặc được cập nhật, ngay cả khi Chronopin đang đóng.',
+    ads: 'Quảng cáo',
     adFreeLabel: 'Không quảng cáo',
     adFreeHint: 'Tắt mọi quảng cáo trên Chronopin với $1 mỗi tháng. Hủy bất cứ lúc nào.',
     adFreeSubscribe: 'Đăng ký $1/tháng',
@@ -1968,6 +1969,8 @@ const vi: Messages = {
     urgencyLeft: 'Chỉ còn {count}',
     urgencyLow: 'Giá thấp nhất trong {days} ngày',
     programs: {
+      advertise: { title: 'Quảng cáo trên Chronopin', body: 'Tiếp cận những người theo dõi điều sắp diễn ra. Từ $5 cho 1.000 lượt hiển thị.', cta: 'Tạo quảng cáo của bạn' },
+      sponsored: { title: 'Được tài trợ', cta: 'Truy cập trang' },
       prime: { title: 'Dùng thử Amazon Prime miễn phí', body: 'Giao hàng nhanh miễn phí, Prime Video và nhiều hơn nữa.', cta: 'Bắt đầu dùng thử miễn phí' },
       audible: { title: 'Dùng thử Audible miễn phí', body: 'Sách nói, podcast và nội dung gốc, thành viên mới được dùng thử miễn phí.', cta: 'Bắt đầu nghe' },
       business: { title: 'Amazon Business', body: 'Giá doanh nghiệp, chiết khấu theo số lượng và hóa đơn. Tham gia miễn phí.', cta: 'Tạo tài khoản miễn phí' },

@@ -1591,6 +1591,7 @@ const ja: Messages = {
     stocksHint: '企業名の横に、企業の株価と開始日からの値動きを表示します。ピンのページには常に株式が表示されます。',
     alertsLabel: 'ウォッチ中のピンの通知',
     alertsHint: 'ウォッチ中のピンが始まるときや更新されたとき、Chronopinを閉じていてもブラウザに通知します。',
+    ads: '広告',
     adFreeLabel: '広告なしにする',
     adFreeHint: '月額1ドルでChronopinのすべての広告を非表示にします。いつでも解約できます。',
     adFreeSubscribe: '月額1ドルで登録',
@@ -1959,6 +1960,8 @@ const ja: Messages = {
     urgencyLeft: '残り{count}点',
     urgencyLow: '{days}日間の最安値',
     programs: {
+      advertise: { title: 'Chronopinに広告を出す', body: 'これから起こることを追う人に届けます。1,000回表示で5ドルから。', cta: '広告を作成' },
+      sponsored: { title: 'スポンサー', cta: 'サイトを見る' },
       prime: { title: 'Amazonプライムを無料で体験', body: 'お急ぎ便無料、Prime Videoなど特典がいっぱい。', cta: '無料体験を始める' },
       audible: { title: 'Audibleを無料で体験', body: 'オーディオブック、ポッドキャスト、オリジナル作品。新規会員は無料で体験できます。', cta: '聴き始める' },
       business: { title: 'Amazonビジネス', body: '法人価格、数量割引、請求書払い。登録は無料です。', cta: '無料アカウントを作成' },

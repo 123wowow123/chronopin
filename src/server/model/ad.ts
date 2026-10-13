@@ -41,6 +41,8 @@ import HolidayAdTranslation from './holidayAdTranslation';
 import PinAdTranslation from './pinAdTranslation';
 import ProductAd from './productAd';
 import PinView from './pinView';
+import SponsoredAd from './sponsoredAd';
+import { blobUrl } from '@/lib/appConfig';
 import { featuredWatch, type FeaturedWatch } from '../ebayWatches';
 import { featuredSneaker } from '../ebaySneakers';
 import { isEbayUrl } from '@/lib/affiliate';
@@ -169,6 +171,7 @@ export default class Ad {
         thumbName: ad.thumbName,
         originalUrl: ad.originalUrl,
         imageUrl: featured.get(ad.key)?.imageUrl ?? ad.imageUrl ?? null,
+        body: ad.kind === 'sponsored' ? (ad.body ?? null) : null,
         holiday: ad.holiday ? holidayLabel(ad.holiday, locale) : null,
         store,
       })),
@@ -385,6 +388,8 @@ async function loadInventory(): Promise<Inventory> {
   const holidayRows = await db.query<{ id: number; holiday: string; tier: AdTier; url: string; title: string; brand: string | null; price: number | null; rating: number | null; image: string | null }>(
     `SELECT "id", "holiday", "tier", "url", "title", "brand", "price"::float8 AS "price", "rating"::float8 AS "rating", "image" FROM "HolidayAd" WHERE "status" = 'ok'`,
   );
+  // Ads people bought themselves (0178), live and with impressions left.
+  const sponsored = await SponsoredAd.live();
   const pictures = await PinView.pictures([...new Set(products.map((p) => p.pinId))]);
   const ads: AdCandidate[] = [
     ...programs.map(
@@ -475,6 +480,30 @@ async function loadInventory(): Promise<Inventory> {
         thumbName: null, originalUrl: null, imageUrl: row.image,
       }),
     ),
+    ...sponsored.map(
+      (row): AdCandidate => ({
+        key: `u:${row.id}`,
+        kind: 'sponsored',
+        program: 'sponsored',
+        url: row.url,
+        store: 'US',
+        categories: [],
+        company: null,
+        weight: 1,
+        rewardUsd: null,
+        minAge: 0,
+        targetAgeFrom: null,
+        targetAgeTo: null,
+        pinId: null,
+        forPinId: null,
+        title: row.title,
+        body: row.body,
+        price: null,
+        thumbName: null,
+        originalUrl: null,
+        imageUrl: blobUrl(row.imageName) ?? null,
+      }),
+    ),
     ...holidayRows.map(
       (row): AdCandidate => ({
         key: `h:${row.id}`,
@@ -541,6 +570,10 @@ async function pinFacts(pinId: number): Promise<AdContext['pin']> {
 
 // `store` is the viewer's; each ad's `tag` is the id on its own link.
 async function recordImpressions(ads: AdCandidate[], slot: AdSlot, store: string, tagOf: (ad: AdCandidate) => string, signedIn: boolean) {
+  // A self-serve ad counts down what was bought; one that reaches it stops, so
+  // the inventory is read again rather than waiting out its cache.
+  const bought = ads.filter((ad) => ad.kind === 'sponsored').map((ad) => Number(ad.key.slice(2)));
+  if (bought.length && (await SponsoredAd.served(bought))) held.inventory = null;
   await db.query(
     `INSERT INTO "AdImpression" ("day", "adKey", "kind", "slot", "store", "tag", "signedIn", "count")
      SELECT (now() AT TIME ZONE 'UTC')::date, "u"."key", "u"."kind", $3::varchar, $4::varchar, "u"."tag", $5::boolean, 1

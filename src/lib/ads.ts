@@ -29,12 +29,12 @@ import { isCategory } from './categories';
 // also through Awin.
 // 'business' ads (0175) are World Businesses for Sale's listing categories,
 // also through Awin.
-export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker' | 'lego' | 'hunting' | 'business';
+export type AdKind = 'special' | 'bonus' | 'tradein' | 'product' | 'watch' | 'sneaker' | 'lego' | 'hunting' | 'business' | 'sponsored';
 
 // Each kind's share of the picks, before relatedness and preference.
 // A watch pool is small, so on the timeline it only comes up now and then;
 // on a Watches pin's page its ads are related (shared tag) and come first.
-export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1, lego: 1, hunting: 1, business: 1 };
+export const KIND_SHARE: Record<AdKind, number> = { special: 4, bonus: 2, tradein: 2, product: 2, watch: 1, sneaker: 1, lego: 1, hunting: 1, business: 1, sponsored: 3 };
 
 // The watch brands advertised (Ad.program is `watch_<key>`), by the name the
 // ad shows. Owner, 2026-10-05: "add ads for rolex and other desirable watches".
@@ -141,6 +141,8 @@ export type AdCandidate = {
   tier?: AdTier | null;
   // The product's own picture on Amazon's image host.
   imageUrl?: string | null;
+  // A self-serve ad's second line (SponsoredAd, 0178).
+  body?: string | null;
   categories: string[];
   company: string | null;
   weight: number;
@@ -194,6 +196,8 @@ export type AdJson = {
   category: string | null;
   thumbName: string | null;
   originalUrl: string | null;
+  // A self-serve ad's text (SponsoredAd, 0178).
+  body?: string | null;
   // A holiday ad's picture, and the holiday's name in the viewer's language.
   imageUrl?: string | null;
   holiday?: string | null;

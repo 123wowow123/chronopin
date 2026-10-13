@@ -1601,6 +1601,7 @@ const id: Messages = {
     stocksHint: 'Harga saham perusahaan dan pergerakannya sejak tanggal mulai, di samping nama perusahaan. Halaman pin sendiri selalu mencantumkan sahamnya.',
     alertsLabel: 'Peringatan pin yang dipantau',
     alertsHint: 'Notifikasi browser saat pin yang Anda pantau dimulai atau diperbarui, bahkan saat Chronopin ditutup.',
+    ads: 'Iklan',
     adFreeLabel: 'Tanpa iklan',
     adFreeHint: 'Matikan semua iklan di Chronopin hanya $1 per bulan. Berhenti kapan saja.',
     adFreeSubscribe: 'Berlangganan $1/bulan',
@@ -1969,6 +1970,8 @@ const id: Messages = {
     urgencyLeft: 'Tersisa {count}',
     urgencyLow: 'Harga terendah {days} hari',
     programs: {
+      advertise: { title: 'Beriklan di Chronopin', body: 'Jangkau orang yang mengikuti apa yang akan datang. Mulai $5 untuk 1.000 tayangan.', cta: 'Buat iklan Anda' },
+      sponsored: { title: 'Bersponsor', cta: 'Kunjungi situs' },
       prime: { title: 'Coba Amazon Prime gratis', body: 'Pengiriman cepat dan gratis, Prime Video, dan banyak lagi.', cta: 'Mulai uji coba gratis' },
       audible: { title: 'Coba Audible gratis', body: 'Buku audio, podcast, dan karya orisinal, gratis dicoba untuk anggota baru.', cta: 'Mulai mendengarkan' },
       business: { title: 'Amazon Business', body: 'Harga bisnis, diskon jumlah, dan faktur. Gratis bergabung.', cta: 'Buat akun gratis' },

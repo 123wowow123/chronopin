@@ -15,6 +15,7 @@ export async function checkConfig() {
 export function startSchedules() {
   void import('@/server/services/dailyJobSchedule').then(({ startDailyJobSchedule }) => startDailyJobSchedule());
   void import('@/server/services/watchAlerts').then(({ startWatchAlerts }) => startWatchAlerts());
+  void import('@/server/services/sponsoredReview').then(({ startSponsoredReview }) => startSponsoredReview());
   void import('@/server/services/siteCard').then(({ warmSiteCard }) => warmSiteCard()).catch((err: Error) => console.warn(`share collage: ${err.message}`));
   void import('@/server/services/listingPrices').then(({ startListingPriceRefresh }) => startListingPriceRefresh());
 }

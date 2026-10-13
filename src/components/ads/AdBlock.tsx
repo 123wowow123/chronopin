@@ -34,6 +34,9 @@ let queue: Promise<unknown> = Promise.resolve();
 
 // A program's mark: its icon on its colour.
 const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: string }> = {
+  // Our own ad for the self-serve portal, and the plain tile of a bought ad with no picture.
+  advertise: { icon: 'sparkle', background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)', color: '#fff' },
+  sponsored: { icon: 'tag', background: '#334155', color: '#fff' },
   prime: { icon: 'bolt', background: '#00a8e1', color: '#fff' },
   audible: { icon: 'sparkle', background: '#f7991c', color: '#1d1d1d' },
   business: { icon: 'briefcase', background: '#232f3e', color: '#fff' },
@@ -162,6 +165,10 @@ function useAdText() {
   const t = useT();
   return (ad: AdJson) => {
     // A brkox collection: its name, then one line that is also the trademark note.
+    // An ad someone bought through the portal: their own headline and text.
+    if (ad.kind === 'sponsored') {
+      return { title: ad.title ?? '', body: ad.body ?? '', price: '', info: ad.body ?? '', urgency: '', cta: t.dynamic('ads.programs.sponsored.cta', 'Visit site') };
+    }
     if (ad.kind === 'lego') {
       const line = t('ads.legoBody');
       return { title: ad.title ?? '', body: line, price: '', info: line, urgency: '', cta: t('ads.seeOnBrkox') };
@@ -252,7 +259,8 @@ function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; slot: Ad
   return (
     <Anchor
       href={ad.url}
-      target="_blank"
+      // Our own page (the "Advertise" tile) opens in this tab; every other ad leaves the site.
+      target={ad.url.startsWith('/') ? undefined : '_blank'}
       rel="noopener nofollow sponsored"
       onClick={() => report(ad, slot, pinId)}
       onAuxClick={(event) => event.button === 1 && report(ad, slot, pinId)}

@@ -1601,6 +1601,7 @@ const en = {
     stocksHint: "The company's share price and its move since the start date, beside the company's name. A pin's own page always lists its stocks.",
     alertsLabel: 'Watched pin alerts',
     alertsHint: 'A browser notification when a pin you watch starts or is updated, even with Chronopin closed.',
+    ads: 'Ads',
     adFreeLabel: 'Go ad-free',
     adFreeHint: 'Turn off every ad on Chronopin for $1 a month. Cancel any time.',
     adFreeSubscribe: 'Subscribe for $1/month',
@@ -1969,6 +1970,8 @@ const en = {
     urgencyLeft: 'Only {count} left',
     urgencyLow: '{days}-day low price',
     programs: {
+      advertise: { title: 'Advertise on Chronopin', body: 'Reach people who follow what is coming next. From $5 for 1,000 views.', cta: 'Create your ad' },
+      sponsored: { title: 'Sponsored', cta: 'Visit site' },
       prime: { title: 'Try Amazon Prime free', body: 'Fast, free delivery, Prime Video and more.', cta: 'Start a free trial' },
       audible: { title: 'Try Audible free', body: 'Audiobooks, podcasts and originals, free to try for new members.', cta: 'Start listening' },
       business: { title: 'Amazon Business', body: 'Business prices, quantity discounts and invoicing. Free to join.', cta: 'Create a free account' },

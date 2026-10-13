@@ -558,3 +558,9 @@ describe('World Businesses for Sale ads', () => {
     expect(adAllowed(business, { preference: null, age: 16, performance: undefined } as never)).toBe(false);
   });
 });
+
+describe('an ad that links to a page of this site', () => {
+  it('keeps its relative address', () => {
+    expect(taggedAdUrl('/profile/ads', 'US', { GB: 'x-21' })).toBe('/profile/ads');
+  });
+});

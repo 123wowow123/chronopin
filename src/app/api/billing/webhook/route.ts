@@ -1,6 +1,7 @@
 import config from '@/server/config';
 import { HttpError, json, route } from '@/server/http';
 import { fetchSubscription, recordSubscription } from '@/server/services/billing';
+import { confirmAdPayment } from '@/server/services/sponsoredAds';
 import { verifyStripeSignature } from '@/server/stripe';
 import log from '@/server/util/log';
 
@@ -26,6 +27,8 @@ export const POST = route(async (request: Request) => {
     const subscription = await fetchSubscription(String(object.subscription));
     const known = await recordSubscription(subscription, Number.isInteger(userId) && userId > 0 ? userId : null);
     if (!known) log.warn(`[billing] checkout ${object.id} had no user`);
+  } else if (event.type === 'checkout.session.completed' && object.mode === 'payment' && object.payment_status === 'paid') {
+    await confirmAdPayment(object);
   } else if (event.type.startsWith('customer.subscription.') && object.id) {
     const subscription = await fetchSubscription(String(object.id));
     await recordSubscription(subscription);

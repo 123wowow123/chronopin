@@ -1591,6 +1591,7 @@ const zh: Messages = {
     stocksHint: '在公司名称旁显示公司股价及其自开始日期以来的涨跌。图钉页面始终会列出其股票。',
     alertsLabel: '关注图钉提醒',
     alertsHint: '你关注的图钉开始或更新时，即使 Chronopin 已关闭，也会收到浏览器通知。',
+    ads: '广告',
     adFreeLabel: '去除广告',
     adFreeHint: '每月 1 美元，关闭 Chronopin 上的所有广告。可随时取消。',
     adFreeSubscribe: '每月 1 美元订阅',
@@ -1959,6 +1960,8 @@ const zh: Messages = {
     urgencyLeft: '仅剩 {count} 件',
     urgencyLow: '{days} 天最低价',
     programs: {
+      advertise: { title: '在 Chronopin 投放广告', body: '触达关注即将发生之事的人。1,000 次展示起价 5 美元。', cta: '创建广告' },
+      sponsored: { title: '赞助', cta: '访问网站' },
       prime: { title: '免费试用 Amazon Prime', body: '快速免费配送、Prime Video 等更多权益。', cta: '开始免费试用' },
       audible: { title: '免费试用 Audible', body: '有声书、播客和原创节目，新会员可免费试用。', cta: '开始收听' },
       business: { title: 'Amazon Business', body: '企业价格、批量折扣和发票服务。免费注册。', cta: '创建免费账户' },

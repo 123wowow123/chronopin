@@ -1597,6 +1597,7 @@ const es: Messages = {
     stocksHint: 'El precio de la acción de la empresa y su variación desde la fecha de inicio, junto al nombre de la empresa. La página de cada pin siempre muestra sus acciones.',
     alertsLabel: 'Avisos de pins que sigues',
     alertsHint: 'Una notificación del navegador cuando un pin que sigues empieza o se actualiza, aunque Chronopin esté cerrado.',
+    ads: 'Anuncios',
     adFreeLabel: 'Sin anuncios',
     adFreeHint: 'Desactiva todos los anuncios de Chronopin por 1 $ al mes. Cancela cuando quieras.',
     adFreeSubscribe: 'Suscribirse por 1 $/mes',
@@ -1965,6 +1966,8 @@ const es: Messages = {
     urgencyLeft: 'Solo quedan {count}',
     urgencyLow: 'Precio más bajo en {days} días',
     programs: {
+      advertise: { title: 'Anúnciate en Chronopin', body: 'Llega a quienes siguen lo que viene. Desde 5 $ por 1.000 impresiones.', cta: 'Crea tu anuncio' },
+      sponsored: { title: 'Patrocinado', cta: 'Visitar sitio' },
       prime: { title: 'Prueba Amazon Prime gratis', body: 'Envíos rápidos y gratis, Prime Video y mucho más.', cta: 'Empezar la prueba gratis' },
       audible: { title: 'Prueba Audible gratis', body: 'Audiolibros, pódcasts y originales, gratis para nuevos miembros.', cta: 'Empezar a escuchar' },
       business: { title: 'Amazon Business', body: 'Precios para empresas, descuentos por volumen y facturación. Registro gratuito.', cta: 'Crear una cuenta gratis' },

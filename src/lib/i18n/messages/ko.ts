@@ -1592,6 +1592,7 @@ const ko: Messages = {
     stocksHint: '기업명 옆에 주가와 시작일 이후의 변동을 표시합니다. 핀 페이지에는 항상 주식 정보가 표시됩니다.',
     alertsLabel: '지켜보는 핀 알림',
     alertsHint: '지켜보는 핀이 시작되거나 업데이트되면 Chronopin을 닫아 두어도 브라우저 알림을 보냅니다.',
+    ads: '광고',
     adFreeLabel: '광고 없이 이용',
     adFreeHint: '월 1달러로 Chronopin의 모든 광고를 끕니다. 언제든 해지할 수 있습니다.',
     adFreeSubscribe: '월 1달러로 구독',
@@ -1960,6 +1961,8 @@ const ko: Messages = {
     urgencyLeft: '{count}개 남음',
     urgencyLow: '{days}일 최저가',
     programs: {
+      advertise: { title: 'Chronopin에 광고하기', body: '다가오는 일을 챙겨 보는 사람들에게 닿으세요. 1,000회 노출에 5달러부터.', cta: '광고 만들기' },
+      sponsored: { title: '스폰서', cta: '사이트 방문' },
       prime: { title: 'Amazon Prime 무료 체험', body: '빠른 무료 배송, Prime Video 등 다양한 혜택.', cta: '무료 체험 시작' },
       audible: { title: 'Audible 무료 체험', body: '오디오북, 팟캐스트, 오리지널 콘텐츠. 신규 회원은 무료로 체험할 수 있습니다.', cta: '듣기 시작' },
       business: { title: 'Amazon Business', body: '비즈니스 가격, 수량 할인, 청구서 결제. 가입은 무료입니다.', cta: '무료 계정 만들기' },

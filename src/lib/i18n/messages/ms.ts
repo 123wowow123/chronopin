@@ -1601,6 +1601,7 @@ const ms: Messages = {
     stocksHint: 'Harga saham syarikat dan perubahannya sejak tarikh mula, di sebelah nama syarikat. Halaman pin sendiri sentiasa menyenaraikan sahamnya.',
     alertsLabel: 'Makluman pin yang ditonton',
     alertsHint: 'Pemberitahuan pelayar apabila pin yang anda tonton bermula atau dikemas kini, walaupun Chronopin ditutup.',
+    ads: 'Iklan',
     adFreeLabel: 'Tanpa iklan',
     adFreeHint: 'Matikan semua iklan di Chronopin dengan $1 sebulan. Batalkan pada bila-bila masa.',
     adFreeSubscribe: 'Langgan dengan $1/bulan',
@@ -1969,6 +1970,8 @@ const ms: Messages = {
     urgencyLeft: 'Tinggal {count}',
     urgencyLow: 'Harga terendah {days} hari',
     programs: {
+      advertise: { title: 'Beriklan di Chronopin', body: 'Jangkau mereka yang mengikuti apa yang akan datang. Bermula $5 untuk 1,000 paparan.', cta: 'Cipta iklan anda' },
+      sponsored: { title: 'Ditaja', cta: 'Lawati laman' },
       prime: { title: 'Cuba Amazon Prime secara percuma', body: 'Penghantaran pantas dan percuma, Prime Video dan banyak lagi.', cta: 'Mulakan percubaan percuma' },
       audible: { title: 'Cuba Audible secara percuma', body: 'Buku audio, podcast dan karya asli, percuma dicuba untuk ahli baharu.', cta: 'Mula mendengar' },
       business: { title: 'Amazon Business', body: 'Harga perniagaan, diskaun kuantiti dan invois. Percuma untuk menyertai.', cta: 'Cipta akaun percuma' },

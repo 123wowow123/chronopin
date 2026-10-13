@@ -10,6 +10,7 @@ const TABS = [
   { href: '/profile/following', label: 'profile.following' },
   { href: '/profile/blocked', label: 'profile.blocked' },
   { href: '/profile/preferences', label: 'profile.preferences' },
+  { href: '/profile/ads', label: 'profile.ads' },
   { href: '/profile/password', label: 'account.password' },
 ] as const;
 
