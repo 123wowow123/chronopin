@@ -10,13 +10,14 @@ import { holidayRanges, loadAstronomy } from '../holidays';
 import { TASTE_KEYS, TASTE_STRONG, type TasteAxis } from '@/lib/pinTaste';
 import { CAR_PERF_KEYS, CAR_PERF_STRONG, type CarPerfAxis } from '@/lib/pinCarPerf';
 import { DINING_KEYS, DINING_STRONG, type DiningAxis } from '@/lib/pinDining';
+import { HOTEL_KEYS, HOTEL_STRONG, type HotelAxis } from '@/lib/pinHotel';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
 import { isRubricYear } from '@/lib/rubricYear';
 import { rubricYearClause } from '../util/rubricSearch';
-import type { CarPerfTerm, DayBound, DiningTerm, DelayBound, PersonAxisBound, RatingBound, TasteTerm } from '../util/searchQuery';
+import type { CarPerfTerm, DayBound, DiningTerm, DelayBound, HotelTerm, PersonAxisBound, RatingBound, TasteTerm } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
@@ -51,6 +52,7 @@ export type PinSearchFilters = {
   tastes: TasteTerm[];
   carPerfs: CarPerfTerm[];
   dinings: DiningTerm[];
+  hotels: HotelTerm[];
   rubricYears: number[];
   people: string[];
   personAxes: PersonAxisBound[];
@@ -1060,6 +1062,14 @@ export function searchClauses(filter: SearchFilter) {
     const scored = filter.dinings.filter((axis): axis is DiningAxis => axis !== 'any' && DINING_KEYS.includes(axis)).map((axis) => `"d"."${axis}" >= ${DINING_STRONG}`);
     if (!scored.length && filter.dinings.includes('any')) scored.push('TRUE');
     if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinDining" AS "d" WHERE "d"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
+  }
+  // hotel: a property whose hotel rubric scores every one of these axes
+  // HOTEL_STRONG or more; 'any' is any property with a rubric. The axes are
+  // HOTEL_KEYS, so they are safe as column names.
+  if (filter.hotels.length) {
+    const scored = filter.hotels.filter((axis): axis is HotelAxis => axis !== 'any' && HOTEL_KEYS.includes(axis)).map((axis) => `"h"."${axis}" >= ${HOTEL_STRONG}`);
+    if (!scored.length && filter.hotels.includes('any')) scored.push('TRUE');
+    if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinHotel" AS "h" WHERE "h"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
   }
   // person: and the radar-axis bounds (misconduct:>3): a pin linked to a
   // person who is any of the names given and whose best score across their

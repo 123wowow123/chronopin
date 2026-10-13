@@ -15,10 +15,12 @@ import { tasteForPin } from '../model/pinTaste';
 import { carPerfForPin } from '../model/pinCarPerf';
 import { gasCarPerfForPin } from '../model/pinGasCarPerf';
 import { diningForPin } from '../model/pinDining';
+import { hotelForPin } from '../model/pinHotel';
 import type { PinTasteJson } from '@/lib/pinTaste';
 import type { PinCarPerfJson } from '@/lib/pinCarPerf';
 import type { PinGasCarPerfJson } from '@/lib/pinGasCarPerf';
 import type { PinDiningJson } from '@/lib/pinDining';
+import type { PinHotelJson } from '@/lib/pinHotel';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
@@ -266,6 +268,14 @@ export async function pinDining(id: number): Promise<PinDiningJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return diningForPin(id);
+}
+
+// A hotel pin's hotel rubric, or null when it has none.
+export async function pinHotel(id: number): Promise<PinHotelJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return hotelForPin(id);
 }
 
 // Tagged with every pin in the thread, so a change to any of them - a

@@ -249,8 +249,6 @@ pin can have user uploadable pictures in comments.
 # Others:
 
 
-- add ads
-
 - add Nike affiliate program
 
 - ticketmaster Affiliate
@@ -275,16 +273,12 @@ run 6am job here in this session
 
 
 
-- product should link ebay and macari and facebook marketplace and have job to check for updatedness
-
 - add private sellers and add payment setup
 
 
 
 - sell something and pay to notify item to all watchers for the pin
 
-
-- setup second company for daily job
 
 - create crypto payment for views and clicks
 
@@ -294,7 +288,6 @@ run 6am job here in this session
 
 - add ads on mapped marketplace pin like logging, also auto show related item in area
 
-- pay to turn off ads
 
 - ability to buy an ad to the sponsored blocks
 
@@ -420,9 +413,6 @@ https://www.opensecrets.org/profiles/mike-johnson/us_congress/elections?mpid=105
 
 https://x.com/INArteCarloDoss/status/2109620584401277228/photo/1
 
-- are there any pin categories that can display a rubric for the pins
-
-- ai models should have cost / performance shared live chart widget on side panel and pinned model should show noticible point to see how it fair with other models. Live Chart widget should be segmented for each year
 
 
 

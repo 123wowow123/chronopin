@@ -124,6 +124,7 @@ describe('parseSearchQuery', () => {
       tastes: [],
       carPerfs: [],
       dinings: [],
+      hotels: [],
       rubricYears: [],
       people: [],
       personAxes: [],

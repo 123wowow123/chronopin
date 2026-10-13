@@ -75,6 +75,10 @@
 // DINING_STRONG or more (an axis with no published figure never matches),
 // every axis given; dining:any is every venue that has a rubric. The rubric's
 // heading and axis labels write them.
+// hotel: is the same for a hotel's rubric (PinHotel): hotel:rooms, service,
+// location, cleanliness, value or acclaim finds the properties scoring that
+// axis HOTEL_STRONG or more (an axis with no published figure never matches),
+// every axis given; hotel:any is every property that has a rubric.
 // rubric: takes the year of the criteria an engineering performance rubric was
 // scored against (rubric:2026, the "2026 criteria" pill on a car's rubric): the
 // pins whose rubric carries that year (PinCarPerf.rubricYear today; any later
@@ -152,6 +156,7 @@ import { isPlatformKey, platformFromName } from '@/lib/gameInfo';
 import { TASTE_KEYS, type TasteAxis } from '@/lib/pinTaste';
 import { CAR_PERF_KEYS, type CarPerfAxis } from '@/lib/pinCarPerf';
 import { DINING_KEYS, type DiningAxis } from '@/lib/pinDining';
+import { HOTEL_KEYS, type HotelAxis } from '@/lib/pinHotel';
 import { isRubricYear } from '@/lib/rubricYear';
 import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
 
@@ -178,6 +183,8 @@ export type TasteTerm = TasteAxis | 'any';
 export type CarPerfTerm = CarPerfAxis | 'any';
 // A dining axis, or 'any' for a venue with any rubric (dining:any).
 export type DiningTerm = DiningAxis | 'any';
+// A hotel axis, or 'any' for a property with any rubric (hotel:any).
+export type HotelTerm = HotelAxis | 'any';
 
 export type SearchQuery = {
   userNames: string[];
@@ -215,6 +222,8 @@ export type SearchQuery = {
   carPerfs: CarPerfTerm[];
   // Dining axes (dining:food) a restaurant's dining rubric must score strongly on; all.
   dinings: DiningTerm[];
+  // Hotel axes (hotel:rooms) a property's hotel rubric must score strongly on; all.
+  hotels: HotelTerm[];
   // Years of an engineering rubric's criteria (rubric:2026); any of them.
   rubricYears: number[];
   // People by name (person:"Joe Biden"), any of them; the pins linked to them.
@@ -241,7 +250,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday|taste|carperf|dining|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -261,7 +270,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'rubric' | 'person' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -339,6 +348,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     tastes: [],
     carPerfs: [],
     dinings: [],
+    hotels: [],
     rubricYears: [],
     people: [],
     personAxes: [],
@@ -398,6 +408,10 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       const value = part.value.trim().toLowerCase();
       const axis: DiningTerm | undefined = value === 'any' ? 'any' : DINING_KEYS.find((key) => key === value);
       if (axis) addUnique(query.dinings, axis);
+    } else if (part.field === 'hotel') {
+      const value = part.value.trim().toLowerCase();
+      const axis: HotelTerm | undefined = value === 'any' ? 'any' : HOTEL_KEYS.find((key) => key === value);
+      if (axis) addUnique(query.hotels, axis);
     } else if (part.field === 'rubric') {
       // A year the criteria never had is left out rather than matching nothing.
       const value = part.value.trim();
@@ -453,6 +467,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.tastes.length ||
     query.carPerfs.length ||
     query.dinings.length ||
+    query.hotels.length ||
     query.rubricYears.length ||
     query.people.length ||
     query.personAxes.length ||
