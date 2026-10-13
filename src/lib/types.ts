@@ -431,6 +431,8 @@ export type SessionUser = {
   // When the email was confirmed (0071); absent or null until then, and an
   // unconfirmed account cannot post pins or comments.
   emailVerifiedDateTime?: string | null;
+  // On while the $1 a month ad-free plan is active (0177); no ads are served.
+  adFree?: boolean;
 };
 
 // Converts a model object (with Dates and toJSON) into plain JSON data that

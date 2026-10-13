@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from '@/lib/client/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { birthdayProblem, birthdayToday, EARLIEST_BIRTHDAY } from '@/lib/birthday';
 import { api, ApiError } from '@/lib/client/api';
@@ -20,7 +20,8 @@ function sendRemoval(keepalive = false) {
   return fetch('/api/users/me/picture', { method: 'DELETE', credentials: 'same-origin', keepalive });
 }
 
-export function ProfileForm({ user }: { user: SessionUser }) {
+// `children` is a pane the page puts between the picture and the details.
+export function ProfileForm({ user, children }: { user: SessionUser; children?: ReactNode }) {
   const router = useRouter();
   // An empty birthday or phone is what takes it back off the account, so the
   // patch sends the field either way.
@@ -168,6 +169,8 @@ export function ProfileForm({ user }: { user: SessionUser }) {
           </div>
         </div>
       </div>
+
+      {children}
 
       <form onSubmit={save} className="surface space-y-4 p-6" noValidate>
         {/* The handle cannot be changed, so it is plain text rather than a

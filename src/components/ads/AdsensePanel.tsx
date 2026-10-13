@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
+import { useSession } from '@/lib/client/session';
 import { ADSENSE_CLIENT } from '@/lib/adsense';
 
 // Google AdSense units (src/lib/adsense.ts) in the places the admin has given
@@ -19,11 +20,16 @@ function useAdsenseUnit(unit: string) {
   const block = useRef<HTMLElement>(null);
   const slot = useRef<HTMLModElement>(null);
   const [unfilled, setUnfilled] = useState(false);
+  // A subscriber to the ad-free plan sees none. Nothing is asked of Google
+  // until the session is known, so a subscriber's page never requests one.
+  const { status, user } = useSession();
+  const ready = status === 'ready';
+  const adFree = user?.adFree === true;
 
   useEffect(() => {
     const element = block.current;
     const ins = slot.current;
-    if (!element || !ins) return;
+    if (!ready || adFree || !element || !ins) return;
     const status = new MutationObserver(() => {
       if (ins.getAttribute('data-ad-status') === 'unfilled') setUnfilled(true);
     });
@@ -46,9 +52,9 @@ function useAdsenseUnit(unit: string) {
       status.disconnect();
       observer.disconnect();
     };
-  }, [unit]);
+  }, [unit, ready, adFree]);
 
-  return { block, slot, unfilled };
+  return { block, slot, unfilled: unfilled || adFree };
 }
 
 function Unit({ unit, slot, className }: { unit: string; slot: React.RefObject<HTMLModElement | null>; className: string }) {

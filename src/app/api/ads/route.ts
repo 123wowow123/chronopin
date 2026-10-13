@@ -4,6 +4,7 @@ import { requestLocale } from '@/lib/i18n/request';
 import { getUser, isAdmin } from '@/server/auth';
 import { HttpError, json, route } from '@/server/http';
 import Ad from '@/server/model/ad';
+import AdFreeSubscription from '@/server/model/adFreeSubscription';
 
 // The ads for one ad block (src/components/ads/AdBlock.tsx), fetched once the
 // block nears the screen so that a served ad is one that was seen: ?slot= (a
@@ -21,6 +22,8 @@ export const GET = route(async (request: NextRequest) => {
   const pin = Number(params.get('pin'));
   const avoid = new Set((params.get('not') ?? '').split(',').filter((key) => /^(ad|m|p|h|s):\d+$/.test(key)).slice(0, 100));
   const user = await getUser(request);
+  // The $1 a month plan (0177): no ads, and nothing counted.
+  if (user && (await AdFreeSubscription.isActive(user.id))) return json({ store: 'US', ads: [] }, 200, headers);
   const served = await Ad.serve({
     slot,
     n,

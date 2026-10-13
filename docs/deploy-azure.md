@@ -224,3 +224,21 @@ certificates at once instead of waiting out its back-off. (The old
 
 Mail (Microsoft 365 MX/SPF at the root, Resend's `send`, `rsend`,
 `resend._domainkey` and `_dmarc` records) is unrelated to the web records.
+
+## Stripe (the $1 a month ad-free plan)
+
+Signed-in users can pay $1 a month to turn every ad off (Profile).
+Checkout and the customer portal are Stripe's own pages; the app keeps one
+`AdFreeSubscription` row per user (0177), written only by the webhook. Needs two
+values in `Docker/env.prod.list` (the button is hidden until the key is set):
+
+- `STRIPE_SECRET_KEY` - a secret (`sk_live_...`) or restricted key allowed to write
+  Checkout Sessions, Customer portal sessions and read Subscriptions.
+- `STRIPE_WEBHOOK_SECRET` - the `whsec_...` of a webhook endpoint at
+  `https://www.chronopin.com/api/billing/webhook` for `checkout.session.completed`,
+  `customer.subscription.created`, `customer.subscription.updated` and
+  `customer.subscription.deleted`.
+
+In the Stripe dashboard also save the Customer portal settings (Settings > Billing >
+Customer portal) so cancelling works. No product is created by hand: the price is
+sent inline with each checkout.

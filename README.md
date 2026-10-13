@@ -431,7 +431,7 @@ https://myanimelist.net/anime/57612/Kikansha_no_Mahou_wa_Tokubetsu_desu_2nd_Seas
 
 
 
-need travel landing page and best resorts 
+create travel landing page and best resorts 
 
 
 
@@ -441,3 +441,4 @@ are there any other pin categories that can display a rubric for the pins
 
 open the browser and walk me through signing up aliyun.com
 
+Go ad-free

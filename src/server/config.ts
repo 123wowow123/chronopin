@@ -134,6 +134,16 @@ export const config = {
     from: env('EMAIL_FROM') || 'Chronopin <noreply@chronopin.com>',
   },
 
+  // Stripe, for the $1 a month ad-free plan (src/server/stripe.ts). The secret
+  // key is the account's restricted or secret key (sk_... / rk_...) and the
+  // webhook secret (whsec_...) belongs to the endpoint pointing at
+  // /api/billing/webhook. Without a key the plan cannot be bought and nothing
+  // else changes.
+  stripe: {
+    secretKey: env('STRIPE_SECRET_KEY') || '',
+    webhookSecret: env('STRIPE_WEBHOOK_SECRET') || '',
+  },
+
   // Web Push (VAPID) keys, for browser notifications about watched pins that
   // reach a browser with the site closed (src/server/push.ts). Made once with
   // `npx web-push generate-vapid-keys`; changing them strands every stored

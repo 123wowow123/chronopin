@@ -6,6 +6,7 @@ import { normalizePhone, phoneMessage, phoneProblem } from '@/lib/phone';
 import { getUser, requireUser, signToken, tokenCookie } from '@/server/auth';
 import { sendVerificationEmailInBackground } from '@/server/emailVerification';
 import { json, readJson, route } from '@/server/http';
+import AdFreeSubscription from '@/server/model/adFreeSubscription';
 import User, { patchableUserProps, pickUserProps, takenBody, takenField } from '@/server/model/user';
 import { loadUser } from '@/server/services/users';
 
@@ -14,7 +15,8 @@ import { loadUser } from '@/server/services/users';
 // would log a failed request in every visitor's console.
 export const GET = route(async (request: NextRequest) => {
   const user = await getUser(request);
-  return json(user ? user.pick(pickUserProps) : null);
+  if (!user) return json(null);
+  return json({ ...user.pick(pickUserProps), ...((await AdFreeSubscription.isActive(user.id)) ? { adFree: true } : {}) });
 });
 
 // Change handle, name, birthday, phone or email. Only those: a patch that took every

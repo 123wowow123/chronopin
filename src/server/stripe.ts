@@ -1,0 +1,59 @@
+// Stripe's HTTP API for the ad-free plan (https://docs.stripe.com/api).
+// No SDK, like src/server/email.ts: a form-encoded POST each way, and the
+// webhook signature is an HMAC checked here. Without STRIPE_SECRET_KEY nothing
+// is sent and `stripeConfigured()` is false, so the plan is simply not offered.
+
+import { createHmac, timingSafeEqual } from 'node:crypto';
+import config from './config';
+
+const API = 'https://api.stripe.com/v1';
+const TIMEOUT_MS = 15000;
+// Stripe's own default: a signature older than this is a replay.
+const TOLERANCE_SECONDS = 300;
+
+export const AD_FREE_PRICE_CENTS = 100;
+
+export function stripeConfigured(): boolean {
+  return !!config.stripe.secretKey;
+}
+
+// Stripe's bracket syntax for nested form fields: { a: { b: 1 } } -> a[b]=1.
+export function formEncode(value: Record<string, unknown>, prefix = '', out: URLSearchParams = new URLSearchParams()): URLSearchParams {
+  for (const [key, entry] of Object.entries(value)) {
+    if (entry === undefined || entry === null) continue;
+    const name = prefix ? `${prefix}[${key}]` : key;
+    if (typeof entry === 'object') formEncode(entry as Record<string, unknown>, name, out);
+    else out.append(name, String(entry));
+  }
+  return out;
+}
+
+export async function stripeRequest<T = Record<string, any>>(method: 'GET' | 'POST', path: string, body?: Record<string, unknown>): Promise<T> {
+  const { secretKey } = config.stripe;
+  if (!secretKey) throw new Error('STRIPE_SECRET_KEY is not set');
+  const res = await fetch(`${API}${path}`, {
+    method,
+    headers: { Authorization: `Bearer ${secretKey}`, ...(body ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}) },
+    body: body ? formEncode(body).toString() : undefined,
+    signal: AbortSignal.timeout(TIMEOUT_MS),
+  });
+  const data = await res.json().catch(() => null);
+  if (!res.ok) throw new Error(`Stripe refused ${method} ${path} (${res.status}): ${String(data?.error?.message ?? '').slice(0, 300)}`);
+  return data as T;
+}
+
+// The Stripe-Signature header is "t=<unix>,v1=<hmac>[,v1=...]", the HMAC being
+// SHA-256 over "<t>.<raw body>" keyed with the endpoint's whsec_ secret.
+export function verifyStripeSignature(rawBody: string, header: string | null, secret: string, nowSeconds = Math.floor(Date.now() / 1000)): boolean {
+  if (!header || !secret) return false;
+  const parts = header.split(',').map((part) => part.trim().split('='));
+  const timestamp = parts.find(([key]) => key === 't')?.[1];
+  const signatures = parts.filter(([key]) => key === 'v1').map(([, value]) => value);
+  if (!timestamp || !signatures.length || !/^\d+$/.test(timestamp)) return false;
+  if (Math.abs(nowSeconds - Number(timestamp)) > TOLERANCE_SECONDS) return false;
+  const expected = createHmac('sha256', secret).update(`${timestamp}.${rawBody}`).digest();
+  return signatures.some((signature) => {
+    const given = Buffer.from(signature, 'hex');
+    return given.length === expected.length && timingSafeEqual(given, expected);
+  });
+}
