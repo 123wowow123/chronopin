@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AdPreview } from '@/components/ads/AdBlock';
+import { SampleReport } from './SampleReport';
 import { useRouter } from '@/lib/client/navigation';
 import { api, ApiError } from '@/lib/client/api';
 import {
@@ -93,7 +94,10 @@ export function AdForm({ initial }: { initial: Initial | null }) {
   // own, drawn live.
   const previewNode = (
     <div className="space-y-2">
-      {untouched ? <p className="text-xs font-medium text-subtle">Example. Start typing and this becomes your ad.</p> : null}
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <p className="text-xs font-medium text-subtle">{untouched ? 'Example. Start typing and this becomes your ad.' : 'Your ad'}</p>
+        <SampleReport impressions={impressions} />
+      </div>
       <AdPreview
         title={untouched ? 'Sample Bagel Shop' : title}
         body={untouched ? 'Fresh bagels baked every morning, a block from the park.' : body}

@@ -15,6 +15,7 @@ import {
   parseAmazonTags,
   pickAds,
   pickHolidayAds,
+  pickSponsoredAds,
   PIN_SLOTS,
   HOLIDAY_COUNT,
   regionFromAcceptLanguage,
@@ -35,7 +36,9 @@ import { clientIp } from '../http';
 import { countryOf } from '../ipLocation';
 import { viewerPreference } from '../services/pages';
 import { localizePins } from '../services/translations';
+import { createHash } from 'node:crypto';
 import type { Locale } from '@/lib/i18n/config';
+import config from '../config';
 import { locateUnlocated } from './ipPlaces';
 import HolidayAdTranslation from './holidayAdTranslation';
 import PinAdTranslation from './pinAdTranslation';
@@ -131,22 +134,35 @@ export default class Ad {
     // TideWe and World Businesses for Sale ads are US-store ads too.
     const abroad = store !== 'US' && GLOBAL_EARNING_STORES.has(store);
     const candidates = inventory.ads.filter((ad) => ad.store === store || (ad.store === 'US' && (isEbayUrl(ad.url) || (abroad && ad.kind === 'product'))));
+    // Ads people bought come before every other ad, and go first to people who
+    // have not seen them (pickSponsoredAds); what is left of the slot is filled
+    // from the rest as before.
+    const viewerKey = viewerKeyOf(userId, request);
+    const bought = candidates.filter((ad) => ad.kind === 'sponsored');
+    const others = candidates.filter((ad) => ad.kind !== 'sponsored');
+    const seen = new Set<string>();
+    if (bought.length && viewerKey) {
+      const rows = await db.query<{ adKey: string }>(`SELECT DISTINCT "adKey" FROM "AdUniqueViewer" WHERE "viewerKey" = $1 AND "adKey" = ANY($2::varchar[])`, [viewerKey, bought.map((ad) => ad.key)]);
+      for (const row of rows) seen.add(row.adKey);
+    }
+    const sold = pickSponsoredAds(bought, seen, n, avoid);
+    const room = n - sold.length;
     // One seasonal tile first, leaving room for a variety of other categories.
     // The holiday window runs a month before to three weeks after. A pin's page
     // carries ads for holidays on its date regardless of the pin's topic.
     const onPinPage = PIN_SLOTS.includes(slot);
     const related = onPinPage ? new Set(pin?.day ? occurrencesOn(pin.day).map((o) => o.def.id) : []) : null;
     const active = related ? [...related].map((id) => ({ id, offset: 0 })) : holidaysInWindow(new Date().toISOString().slice(0, 10), WINDOW_BEFORE_DAYS, WINDOW_AFTER_DAYS);
-    const holidayAds = related && !related.size ? [] : pickHolidayAds(candidates, ctx, active, Math.min(HOLIDAY_COUNT[slot], n), related, expandAvoid(candidates, avoid));
-    const rest = pickAds(candidates, ctx, n - holidayAds.length, expandAvoid(candidates, new Set([...avoid, ...holidayAds.map((ad) => ad.key)])), Math.random, holidayAds);
-    const picked = [...holidayAds, ...rest];
+    const holidayAds = room <= 0 || (related && !related.size) ? [] : pickHolidayAds(others, ctx, active, Math.min(HOLIDAY_COUNT[slot], room), related, expandAvoid(others, avoid));
+    const rest = room <= 0 ? [] : pickAds(others, ctx, room - holidayAds.length, expandAvoid(others, new Set([...avoid, ...sold.map((ad) => ad.key), ...holidayAds.map((ad) => ad.key)])), Math.random, holidayAds);
+    const picked = [...sold, ...holidayAds, ...rest];
     // Seasonal inventory can fill any shortage after varied regular ads have
     // been tried. The single seasonal tile is a preference, not a count limit.
     if (picked.length < n && holidayAds.length) {
-      const shown = expandAvoid(candidates, new Set(picked.map((ad) => ad.key)));
-      picked.push(...pickHolidayAds(candidates.filter((ad) => !shown.has(ad.key)), ctx, active, n - picked.length, related, avoid));
+      const shown = expandAvoid(others, new Set(picked.map((ad) => ad.key)));
+      picked.push(...pickHolidayAds(others.filter((ad) => !shown.has(ad.key)), ctx, active, n - picked.length, related, avoid));
     }
-    if (picked.length && !admin) await recordImpressions(picked, slot, store, (ad) => adTag(ad, inventory.tags) ?? '', userId != null);
+    if (picked.length && !admin) await recordImpressions(picked, slot, store, (ad) => adTag(ad, inventory.tags) ?? '', userId != null, viewerKey);
     const titles = await localizedTitles(picked, locale);
     // A watch brand's tile shows one of its live eBay listings when eBay answers.
     const featured = new Map<string, FeaturedWatch | null>(
@@ -498,6 +514,7 @@ async function loadInventory(): Promise<Inventory> {
         forPinId: null,
         title: row.title,
         body: row.body,
+        remaining: row.remaining,
         price: null,
         thumbName: null,
         originalUrl: null,
@@ -569,11 +586,30 @@ async function pinFacts(pinId: number): Promise<AdContext['pin']> {
 }
 
 // `store` is the viewer's; each ad's `tag` is the id on its own link.
-async function recordImpressions(ads: AdCandidate[], slot: AdSlot, store: string, tagOf: (ad: AdCandidate) => string, signedIn: boolean) {
+// Who is looking, for counting people and not only views: the account for a
+// signed-in viewer, else a salted hash of the address (the address itself is
+// never stored), else nobody.
+function viewerKeyOf(userId: number | null, request: NextRequest): string | null {
+  if (userId != null) return `u${userId}`;
+  const ip = clientIp(request);
+  if (!ip) return null;
+  return `i${createHash('sha256').update(`${config.secrets.session}:ad:${ip}`).digest('hex').slice(0, 24)}`;
+}
+
+async function recordImpressions(ads: AdCandidate[], slot: AdSlot, store: string, tagOf: (ad: AdCandidate) => string, signedIn: boolean, viewerKey: string | null) {
   // A self-serve ad counts down what was bought; one that reaches it stops, so
   // the inventory is read again rather than waiting out its cache.
   const bought = ads.filter((ad) => ad.kind === 'sponsored').map((ad) => Number(ad.key.slice(2)));
   if (bought.length && (await SponsoredAd.served(bought))) held.inventory = null;
+  // One row per person per day for a self-serve ad: its unique people.
+  if (bought.length && viewerKey) {
+    await db.query(
+      `INSERT INTO "AdUniqueViewer" ("day", "adKey", "viewerKey")
+       SELECT (now() AT TIME ZONE 'UTC')::date, 'u:' || "id", $2::varchar FROM unnest($1::int[]) AS "id"
+       ON CONFLICT DO NOTHING`,
+      [bought, viewerKey],
+    );
+  }
   await db.query(
     `INSERT INTO "AdImpression" ("day", "adKey", "kind", "slot", "store", "tag", "signedIn", "count")
      SELECT (now() AT TIME ZONE 'UTC')::date, "u"."key", "u"."kind", $3::varchar, $4::varchar, "u"."tag", $5::boolean, 1

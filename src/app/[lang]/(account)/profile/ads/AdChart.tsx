@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-type Day = { day: string; impressions: number; clicks: number };
+type Day = { day: string; impressions: number; uniques?: number; clicks: number };
 
 function label(day: string): string {
   // Example data names its days ("Day 3") instead of dating them.
@@ -45,6 +45,12 @@ export function AdChart({ days }: { days: Day[] }) {
               <span aria-hidden className="size-2 rounded-sm bg-accent/70" />
               {current.impressions.toLocaleString('en-US')} impressions
             </span>
+            {current.uniques != null ? (
+              <span className="flex items-center gap-1.5 tabular-nums text-muted">
+                <span aria-hidden className="size-2" />
+                {current.uniques.toLocaleString('en-US')} unique people
+              </span>
+            ) : null}
             <span className="flex items-center gap-1.5 tabular-nums text-muted">
               <span aria-hidden className="size-2 rounded-sm bg-success" />
               {current.clicks.toLocaleString('en-US')} clicks
@@ -62,7 +68,7 @@ export function AdChart({ days }: { days: Day[] }) {
               <button
                 key={d.day}
                 type="button"
-                aria-label={`${label(d.day)}: ${d.impressions} impressions, ${d.clicks} clicks`}
+                aria-label={`${label(d.day)}: ${d.impressions} impressions${d.uniques != null ? `, ${d.uniques} unique people` : ''}, ${d.clicks} clicks`}
                 className="flex h-full min-w-1 flex-1 cursor-default items-end outline-none"
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}

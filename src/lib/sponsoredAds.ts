@@ -83,10 +83,14 @@ export function exampleTracking(impressionsBought: number) {
   const byDay = EXAMPLE_SHAPE.map((share, i) => {
     const impressions = Math.round(total * share);
     const clicks = Math.max(1, Math.round(impressions * 0.035) + EXAMPLE_WOBBLE[i] - 1);
-    return { day: `Day ${i + 1}`, impressions, clicks };
+    // Most views are different people, a few are the same person again.
+    const uniques = Math.max(1, Math.round(impressions * 0.78));
+    return { day: `Day ${i + 1}`, impressions, uniques, clicks };
   });
   return {
     impressions: byDay.reduce((n, d) => n + d.impressions, 0),
+    // Across the fortnight the same people come back, so it is fewer than the days summed.
+    uniques: Math.round(byDay.reduce((n, d) => n + d.uniques, 0) * 0.8),
     clicks: byDay.reduce((n, d) => n + d.clicks, 0),
     byDay,
   };

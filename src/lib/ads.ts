@@ -143,6 +143,8 @@ export type AdCandidate = {
   imageUrl?: string | null;
   // A self-serve ad's second line (SponsoredAd, 0178).
   body?: string | null;
+  // A self-serve ad's impressions still to deliver.
+  remaining?: number;
   categories: string[];
   company: string | null;
   weight: number;
@@ -733,4 +735,26 @@ export function validateAmazonTags(value: unknown): { tags: Record<string, strin
     tags[code] = tag;
   }
   return { tags };
+}
+
+// The ads people bought (kind 'sponsored') go in front of every other ad, and
+// to people who have not seen them: an ad is first shown to someone new, in
+// proportion to how much of what was bought is still owed, so a large unfilled
+// order gets the most reach. A person who has seen one already may see it
+// again, but only in up to half the slots, so a few buyers cannot take a
+// whole page from everyone else and the same person is not shown one ad over
+// and over while others wait.
+export function pickSponsoredAds(sponsored: AdCandidate[], seen: Set<string>, n: number, avoid: Set<string> = new Set(), random = Math.random): AdCandidate[] {
+  if (n <= 0) return [];
+  const open = sponsored.filter((ad) => !avoid.has(ad.key));
+  // A weighted shuffle: each ad's draw is raised to the power of one over its
+  // weight, so an ad owed more impressions tends to come first.
+  const ordered = (list: AdCandidate[]) =>
+    list
+      .map((ad) => ({ ad, score: Math.pow(random(), 1 / Math.max(1, ad.remaining ?? 1)) }))
+      .sort((a, b) => b.score - a.score)
+      .map((entry) => entry.ad);
+  const fresh = ordered(open.filter((ad) => !seen.has(ad.key))).slice(0, n);
+  const again = ordered(open.filter((ad) => seen.has(ad.key))).slice(0, Math.min(n - fresh.length, Math.ceil(n / 2)));
+  return [...fresh, ...again];
 }

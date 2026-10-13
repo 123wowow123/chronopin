@@ -20,6 +20,7 @@ import {
   storeForLocale,
   tagForStore,
   taggedAdUrl,
+  pickSponsoredAds,
   validateAmazonTags,
   watchBrand,
   sneakerAd,
@@ -562,5 +563,35 @@ describe('World Businesses for Sale ads', () => {
 describe('an ad that links to a page of this site', () => {
   it('keeps its relative address', () => {
     expect(taggedAdUrl('/profile/ads', 'US', { GB: 'x-21' })).toBe('/profile/ads');
+  });
+});
+
+describe('pickSponsoredAds', () => {
+  const sponsored = (id: number, remaining: number) => ({ key: `u:${id}`, kind: 'sponsored', remaining }) as unknown as AdCandidate;
+  const ads = [sponsored(1, 1000), sponsored(2, 5000), sponsored(3, 200)];
+
+  it('shows ads this person has not seen before the ones they have', () => {
+    const picked = pickSponsoredAds(ads, new Set(['u:1']), 2, new Set(), () => 0.5);
+    expect(picked.map((a) => a.key).sort()).toEqual(['u:2', 'u:3']);
+  });
+
+  it('repeats a seen ad only in up to half the slots', () => {
+    const picked = pickSponsoredAds(ads, new Set(['u:1', 'u:2', 'u:3']), 4, new Set(), () => 0.5);
+    expect(picked).toHaveLength(2);
+  });
+
+  it('leaves out what the page already shows', () => {
+    const picked = pickSponsoredAds(ads, new Set(), 3, new Set(['u:2']), () => 0.5);
+    expect(picked.map((a) => a.key).sort()).toEqual(['u:1', 'u:3']);
+  });
+
+  it('favours the order that is owed the most', () => {
+    let wins = 0;
+    for (let i = 0; i < 400; i++) wins += pickSponsoredAds([sponsored(3, 200), sponsored(2, 5000)], new Set(), 1)[0].key === 'u:2' ? 1 : 0;
+    expect(wins).toBeGreaterThan(280);
+  });
+
+  it('gives nothing for no room', () => {
+    expect(pickSponsoredAds(ads, new Set(), 0)).toEqual([]);
   });
 });

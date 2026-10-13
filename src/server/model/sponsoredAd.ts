@@ -23,7 +23,7 @@ export type SponsoredRow = {
 const COLUMNS = `"id", "userId", "title", "body", "url", "imageName", "impressionsBought", "priceCents", "impressionsServed", "status",
   "rejectionReason", "needsRefund", "paidDateTime", "approvedDateTime", "utcCreatedDateTime"`;
 
-export type SponsoredStats = { impressions: number; clicks: number; byDay: { day: string; impressions: number; clicks: number }[] };
+export type SponsoredStats = { impressions: number; uniques: number; clicks: number; byDay: { day: string; impressions: number; uniques: number; clicks: number }[] };
 
 export default class SponsoredAd {
   static async get(id: number): Promise<SponsoredRow | null> {
@@ -139,8 +139,9 @@ export default class SponsoredAd {
 
   // The live ads that still have impressions left, for the ad inventory.
   static live() {
-    return db.query<{ id: number; title: string; body: string; url: string; imageName: string | null }>(
-      `SELECT "id", "title", "body", "url", "imageName" FROM "SponsoredAd" WHERE "status" = 'active' AND "impressionsServed" < "impressionsBought"`,
+    return db.query<{ id: number; title: string; body: string; url: string; imageName: string | null; remaining: number }>(
+      `SELECT "id", "title", "body", "url", "imageName", "impressionsBought" - "impressionsServed" AS "remaining"
+       FROM "SponsoredAd" WHERE "status" = 'active' AND "impressionsServed" < "impressionsBought"`,
     );
   }
 
@@ -160,10 +161,10 @@ export default class SponsoredAd {
   // Impressions and clicks for the owner's ads, from the same tables the admin
   // Ads page reads, per UTC day for the last 30 days.
   static async stats(ids: number[]): Promise<Map<number, SponsoredStats>> {
-    const out = new Map<number, SponsoredStats>(ids.map((id) => [id, { impressions: 0, clicks: 0, byDay: [] }]));
+    const out = new Map<number, SponsoredStats>(ids.map((id) => [id, { impressions: 0, uniques: 0, clicks: 0, byDay: [] }]));
     if (!ids.length) return out;
     const keys = ids.map((id) => `u:${id}`);
-    const [impressions, clicks] = await Promise.all([
+    const [impressions, clicks, perDay, distinct] = await Promise.all([
       db.query<{ adKey: string; day: string; count: number }>(
         `SELECT "adKey", to_char("day", 'YYYY-MM-DD') AS "day", sum("count")::int AS "count" FROM "AdImpression"
          WHERE "adKey" = ANY($1::varchar[]) AND "day" > (now() AT TIME ZONE 'UTC')::date - 30 GROUP BY 1, 2`,
@@ -174,16 +175,33 @@ export default class SponsoredAd {
          WHERE "adKey" = ANY($1::varchar[]) AND "utcCreatedDateTime" > now() - interval '30 days' GROUP BY 1, 2`,
         [keys],
       ),
+      db.query<{ adKey: string; day: string; count: number }>(
+        `SELECT "adKey", to_char("day", 'YYYY-MM-DD') AS "day", count(*)::int AS "count" FROM "AdUniqueViewer"
+         WHERE "adKey" = ANY($1::varchar[]) AND "day" > (now() AT TIME ZONE 'UTC')::date - 30 GROUP BY 1, 2`,
+        [keys],
+      ),
+      // People over the whole window, not the sum of the days (one person on
+      // three days is one person).
+      db.query<{ adKey: string; count: number }>(
+        `SELECT "adKey", count(DISTINCT "viewerKey")::int AS "count" FROM "AdUniqueViewer"
+         WHERE "adKey" = ANY($1::varchar[]) AND "day" > (now() AT TIME ZONE 'UTC')::date - 30 GROUP BY 1`,
+        [keys],
+      ),
     ]);
-    const days = new Map<string, { day: string; impressions: number; clicks: number }>();
+    const days = new Map<string, { day: string; impressions: number; uniques: number; clicks: number }>();
     const entry = (key: string, day: string) => {
       const id = Number(key.slice(2));
       const k = `${id}:${day}`;
-      if (!days.has(k)) days.set(k, { day, impressions: 0, clicks: 0 });
+      if (!days.has(k)) days.set(k, { day, impressions: 0, uniques: 0, clicks: 0 });
       return { id, row: days.get(k)! };
     };
     for (const r of impressions) entry(r.adKey, r.day).row.impressions += r.count;
     for (const r of clicks) entry(r.adKey, r.day).row.clicks += r.count;
+    for (const r of perDay) entry(r.adKey, r.day).row.uniques += r.count;
+    for (const r of distinct) {
+      const stats = out.get(Number(r.adKey.slice(2)));
+      if (stats) stats.uniques = r.count;
+    }
     for (const [k, row] of days) {
       const stats = out.get(Number(k.split(':')[0]));
       if (stats) {

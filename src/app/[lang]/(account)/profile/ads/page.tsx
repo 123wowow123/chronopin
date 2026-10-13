@@ -107,13 +107,17 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                 ) : null}
                 <div className={example ? 'space-y-3 rounded-lg border border-dashed border-line p-3' : 'space-y-3'}>
                   {example ? <p className="text-[11px] font-semibold tracking-wider text-subtle uppercase">Example tracking, not real numbers</p> : null}
-                  <dl className="grid grid-cols-3 gap-3 text-sm">
+                  <dl className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-4">
                     <div>
                       <dt className="text-subtle">Impressions</dt>
                       <dd className="text-lg font-semibold tabular-nums">
                         {delivered.toLocaleString('en-US')}
                         <span className="text-sm font-normal text-subtle"> / {ad.impressionsBought.toLocaleString('en-US')}</span>
                       </dd>
+                    </div>
+                    <div>
+                      <dt className="text-subtle">Unique people</dt>
+                      <dd className="text-lg font-semibold tabular-nums">{s.uniques.toLocaleString('en-US')}</dd>
                     </div>
                     <div>
                       <dt className="text-subtle">Clicks</dt>
