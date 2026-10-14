@@ -367,7 +367,7 @@ export function AdPreview({
       {layout === 'both' || layout === 'timeline' ? (
         <div>
           {layout === 'both' ? <p className="mb-1 text-xs text-subtle">In lists: the timeline, pin pages, the side panel, the menu and the map</p> : null}
-          <div className="max-w-[448px]">
+          <div className="mx-auto max-w-[448px]">
             <div className="surface flex items-center gap-3 p-2.5">
               <RowTileContent ad={ad} wide {...shown} />
             </div>
@@ -377,7 +377,7 @@ export function AdPreview({
       {layout === 'both' || layout === 'card' ? (
         <div>
           {layout === 'both' ? <p className="mb-1 text-xs text-subtle">In restaurant, product and car guides</p> : null}
-          <div className="max-w-[22rem]">
+          <div className="mx-auto max-w-[22rem]">
             <RestaurantAdCard ad={ad} preview />
           </div>
         </div>
