@@ -1,0 +1,1522 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "osaka",
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Gong cha — Minamisunamachi SUNAMO Opens in Minamisunamachi",
+        "description": "A recently opened Gong cha branch with customizable milk teas and the published ENJOY U22 youth discount.",
+        "sourceUrl": "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028",
+        "address": "1F SUNAMO, 3-4-31 Shinsuna, Koto-ku, Tokyo",
+        "productName": "Gong cha — Minamisunamachi SUNAMO",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Minamisunamachi",
+          "Tea café"
+        ],
+        "longFormSummary": "<p>A recently opened Gong cha branch with customizable milk teas and the published ENJOY U22 youth discount.<cite data-ref=\"https://www.sunamo.jp/floor/shop_detail.html?UC=1_028\"></cite></p><p>The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it.</p>",
+        "references": [
+          {
+            "url": "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028",
+            "title": "Gong cha — Minamisunamachi SUNAMO source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/",
+            "title": "Gong cha — Minamisunamachi SUNAMO source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html",
+            "title": "Gong cha — Minamisunamachi SUNAMO source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/menu/brownsugar/brownsugarblackmilktea/",
+            "title": "Gong cha — Minamisunamachi SUNAMO source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/enjoy-u22/",
+            "title": "Gong cha — Minamisunamachi SUNAMO source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://www.ryutsuu.biz/store/s092476.html",
+            "title": "Gong cha — Minamisunamachi SUNAMO source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://mrs.living.jp/tokyo/newopen/article/6970556",
+            "title": "Gong cha — Minamisunamachi SUNAMO source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028",
+          "menu": {
+            "pinSourceUrl": "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028",
+            "name": "Gong cha — Minamisunamachi SUNAMO",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Brown Sugar Black Milk Tea — regular prices",
+                "url": "https://www.gongcha.co.jp/menu/brownsugar/brownsugarblackmilktea/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Brown Sugar Black Milk Tea — small, iced or hot",
+                    "price": 540
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — medium, iced or hot",
+                    "price": 590
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — large, iced",
+                    "price": 680
+                  }
+                ],
+                "note": "Current operator product page publishes these tax-inclusive prices, identical for takeaway and eat-in. The Ekimarche branch opening release specifically recommends this drink at these prices. The operator warns individual shops can vary in assortment; confirm daily stock. This is a sample, not a claim that every chain product is sold at this branch. Checked current operator home opening news, landlord branch page, national menu categories and exact product prices, U22 conditions and price images, branch photo galleries and opening reporting. National seasonal hojicha has per-shop stock end dates and is not given an invented dated Special. Completed-venue photos were not located: representative images are accurately labelled planned-branch renderings. Full daily branch assortment and any unpublished closure dates remain gaps."
+              },
+              {
+                "label": "ENJOY U22 — eligible drinks and additions",
+                "url": "https://www.gongcha.co.jp/enjoy-u22/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Oolong Milk Tea — small, iced or hot",
+                    "price": 330,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Oolong Milk Tea — medium, iced or hot",
+                    "price": 380,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Oolong Milk Tea — large, iced",
+                    "price": 470,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Black Milk Tea — small, iced or hot",
+                    "price": 330,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Black Milk Tea — medium, iced or hot",
+                    "price": 380,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Black Milk Tea — large, iced",
+                    "price": 470,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Oolong Milk Tea — small, iced or hot",
+                    "price": 380,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Oolong Milk Tea — medium, iced or hot",
+                    "price": 430,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Oolong Milk Tea — large, iced",
+                    "price": 520,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — small, iced or hot",
+                    "price": 380,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — medium, iced or hot",
+                    "price": 430,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — large, iced",
+                    "price": 520,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Almond-milk substitution",
+                    "price": 50,
+                    "note": "Supplement for drinks carrying the almond mark"
+                  },
+                  {
+                    "name": "Pearls topping",
+                    "price": 90,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Nata de coco topping",
+                    "price": 90,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Milk foam topping",
+                    "price": 90,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Aloe topping",
+                    "price": 90,
+                    "note": "Supplement"
+                  }
+                ],
+                "note": "Ages 6–22 inclusive, until the day before the 23rd birthday; the eligible guest must visit personally. One eligible drink per person; accompanying parents are not eligible unless independently within the age range. Show age-confirming identification at a staffed register. Nonmembers use a staffed register. My Gong cha members with a registered birth date can also use supported mobile ordering or scan their membership at self-checkout. Toppings are not included; published additions are charged separately. Prices include tax. Contents can change or end without notice; no fixed end date is published. Prices visually verified against the operator price graphics. The programme page publishes no named exclusion for these operating branches. Seasonal toppings can differ and are not assigned an invented price.",
+                "documentUrl": "https://www.gongcha.co.jp/wp-content/themes/gongcha/img/u22/img_drink04.png?260226"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028",
+            "name": "Gong cha — Minamisunamachi SUNAMO",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.gongcha.co.jp/",
+            "phone": "03-6659-8510",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–21:00; last order not separately published"
+              },
+              {
+                "days": "Seating",
+                "hours": "12 seats, as announced in branch opening reporting"
+              }
+            ],
+            "detailsSourceUrl": "https://www.gongcha.co.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gongcha.co.jp/menu/brownsugar/brownsugarblackmilktea/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gongcha.co.jp/enjoy-u22/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.ryutsuu.biz/store/s092476.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://mrs.living.jp/tokyo/newopen/article/6970556"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan40-sunamo-shop",
+            "name": "Gong cha — Minamisunamachi SUNAMO",
+            "neighborhood": "Minamisunamachi",
+            "cuisine": "Tea café",
+            "description": "A recently opened Gong cha branch with customizable milk teas and the published ENJOY U22 youth discount.",
+            "address": "1F SUNAMO, 3-4-31 Shinsuna, Koto-ku, Tokyo",
+            "websiteUrl": "https://www.gongcha.co.jp/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/japan40-sunamo-shop-0-92086caef8358b81.webp",
+            "imageCredit": "Gong cha Japan, via Living Tokyo",
+            "imageSourceUrl": "https://mrs.living.jp/tokyo/newopen/article/6970556",
+            "imageNote": "Planned SUNAMO entrance, operator rendering reproduced in branch opening report.",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/japan40-sunamo-shop-0-92086caef8358b81.webp",
+          "sha256": "92086caef8358b813b8ee03d6d9d82ffbf26e477a49972960de00b4dc58c3379",
+          "width": 860,
+          "height": 636,
+          "credit": "Gong cha Japan, via Living Tokyo",
+          "note": "Planned SUNAMO entrance, operator rendering reproduced in branch opening report.",
+          "sourcePage": "https://mrs.living.jp/tokyo/newopen/article/6970556"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/japan40-sunamo-shop-1-5aeeb6037e7abfe6.webp",
+          "sha256": "5aeeb6037e7abfe638323ea0e62f5d11d71d2792276b778ccfecef910d556b6c",
+          "width": 880,
+          "height": 659,
+          "credit": "Gong cha Japan, via Living Tokyo",
+          "note": "Planned SUNAMO seating and counter, operator interior rendering.",
+          "sourcePage": "https://mrs.living.jp/tokyo/newopen/article/6970556"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028",
+          "name": "Gong cha — Minamisunamachi SUNAMO",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Brown Sugar Black Milk Tea — regular prices",
+              "url": "https://www.gongcha.co.jp/menu/brownsugar/brownsugarblackmilktea/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Brown Sugar Black Milk Tea — small, iced or hot",
+                  "price": 540
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — medium, iced or hot",
+                  "price": 590
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — large, iced",
+                  "price": 680
+                }
+              ],
+              "note": "Current operator product page publishes these tax-inclusive prices, identical for takeaway and eat-in. The Ekimarche branch opening release specifically recommends this drink at these prices. The operator warns individual shops can vary in assortment; confirm daily stock. This is a sample, not a claim that every chain product is sold at this branch. Checked current operator home opening news, landlord branch page, national menu categories and exact product prices, U22 conditions and price images, branch photo galleries and opening reporting. National seasonal hojicha has per-shop stock end dates and is not given an invented dated Special. Completed-venue photos were not located: representative images are accurately labelled planned-branch renderings. Full daily branch assortment and any unpublished closure dates remain gaps."
+            },
+            {
+              "label": "ENJOY U22 — eligible drinks and additions",
+              "url": "https://www.gongcha.co.jp/enjoy-u22/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Oolong Milk Tea — small, iced or hot",
+                  "price": 330,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Oolong Milk Tea — medium, iced or hot",
+                  "price": 380,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Oolong Milk Tea — large, iced",
+                  "price": 470,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Black Milk Tea — small, iced or hot",
+                  "price": 330,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Black Milk Tea — medium, iced or hot",
+                  "price": 380,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Black Milk Tea — large, iced",
+                  "price": 470,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Oolong Milk Tea — small, iced or hot",
+                  "price": 380,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Oolong Milk Tea — medium, iced or hot",
+                  "price": 430,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Oolong Milk Tea — large, iced",
+                  "price": 520,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — small, iced or hot",
+                  "price": 380,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — medium, iced or hot",
+                  "price": 430,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — large, iced",
+                  "price": 520,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Almond-milk substitution",
+                  "price": 50,
+                  "note": "Supplement for drinks carrying the almond mark"
+                },
+                {
+                  "name": "Pearls topping",
+                  "price": 90,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Nata de coco topping",
+                  "price": 90,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Milk foam topping",
+                  "price": 90,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Aloe topping",
+                  "price": 90,
+                  "note": "Supplement"
+                }
+              ],
+              "note": "Ages 6–22 inclusive, until the day before the 23rd birthday; the eligible guest must visit personally. One eligible drink per person; accompanying parents are not eligible unless independently within the age range. Show age-confirming identification at a staffed register. Nonmembers use a staffed register. My Gong cha members with a registered birth date can also use supported mobile ordering or scan their membership at self-checkout. Toppings are not included; published additions are charged separately. Prices include tax. Contents can change or end without notice; no fixed end date is published. Prices visually verified against the operator price graphics. The programme page publishes no named exclusion for these operating branches. Seasonal toppings can differ and are not assigned an invented price.",
+              "documentUrl": "https://www.gongcha.co.jp/wp-content/themes/gongcha/img/u22/img_drink04.png?260226"
+            }
+          ],
+          "specials": [
+            {
+              "title": "ENJOY U22 — discounted milk tea for ages 6–22",
+              "kind": "other",
+              "description": "Four eligible milk-tea varieties at the published youth prices, from ¥330; proof of age and personal attendance required.",
+              "sourceUrl": "https://www.gongcha.co.jp/enjoy-u22/",
+              "menuLabel": "ENJOY U22 — eligible drinks and additions",
+              "discounted": true,
+              "validFrom": "2026-10-01",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Ages 6–22 inclusive, until the day before the 23rd birthday; the eligible guest must visit personally.",
+                "One eligible drink per person; accompanying parents are not eligible unless independently within the age range.",
+                "Show age-confirming identification at a staffed register.",
+                "Nonmembers use a staffed register. My Gong cha members with a registered birth date can also use supported mobile ordering or scan their membership at self-checkout.",
+                "Toppings are not included; published additions are charged separately.",
+                "Prices include tax. Contents can change or end without notice; no fixed end date is published."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00",
+                    "end": "21:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "1F SUNAMO, 3-4-31 Shinsuna, Koto-ku, Tokyo",
+          "neighborhood": "Minamisunamachi",
+          "websiteUrl": "https://www.gongcha.co.jp/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/japan40-sunamo-shop-0-92086caef8358b81.webp",
+            "alt": "Gong cha — Minamisunamachi SUNAMO — Planned SUNAMO entrance, operator rendering reproduced in branch opening report.",
+            "credit": "Gong cha Japan, via Living Tokyo",
+            "sourceUrl": "https://mrs.living.jp/tokyo/newopen/article/6970556",
+            "originalUrl": "https://mrs.living.cdn.anymanager.io/wp-content/uploads/2026/09/1ef3ddeff6b0d1d2f8bdb1fb58087827.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Gong cha — Ekimarche Osaka Opens in Umeda",
+        "description": "A recently opened Gong cha branch with customizable milk teas and the published ENJOY U22 youth discount.",
+        "sourceUrl": "https://osaka.ekimaru.com/shopguide/detail/103",
+        "address": "F02, 1F Ekimarche Osaka, 3-1-1 Umeda, Kita-ku, Osaka",
+        "productName": "Gong cha — Ekimarche Osaka",
+        "utcStartDateTime": "2026-09-18T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Umeda",
+          "Tea café"
+        ],
+        "longFormSummary": "<p>A recently opened Gong cha branch with customizable milk teas and the published ENJOY U22 youth discount.<cite data-ref=\"https://osaka.ekimaru.com/shopguide/detail/103\"></cite></p><p>The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it.</p>",
+        "references": [
+          {
+            "url": "https://osaka.ekimaru.com/shopguide/detail/103",
+            "title": "Gong cha — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/",
+            "title": "Gong cha — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html",
+            "title": "Gong cha — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/menu/brownsugar/brownsugarblackmilktea/",
+            "title": "Gong cha — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/enjoy-u22/",
+            "title": "Gong cha — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "The operator lists this exact branch and opening date in its current new-store news; branch-specific landlord and opening reporting corroborate it."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/103",
+          "menu": {
+            "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/103",
+            "name": "Gong cha — Ekimarche Osaka",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Brown Sugar Black Milk Tea — regular prices",
+                "url": "https://www.gongcha.co.jp/menu/brownsugar/brownsugarblackmilktea/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Brown Sugar Black Milk Tea — small, iced or hot",
+                    "price": 540
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — medium, iced or hot",
+                    "price": 590
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — large, iced",
+                    "price": 680
+                  }
+                ],
+                "note": "Current operator product page publishes these tax-inclusive prices, identical for takeaway and eat-in. The Ekimarche branch opening release specifically recommends this drink at these prices. The operator warns individual shops can vary in assortment; confirm daily stock. This is a sample, not a claim that every chain product is sold at this branch. Checked current operator home opening news, landlord branch page, national menu categories and exact product prices, U22 conditions and price images, branch photo galleries and opening reporting. National seasonal hojicha has per-shop stock end dates and is not given an invented dated Special. Completed-venue photos were not located: representative images are accurately labelled planned-branch renderings. Full daily branch assortment and any unpublished closure dates remain gaps."
+              },
+              {
+                "label": "ENJOY U22 — eligible drinks and additions",
+                "url": "https://www.gongcha.co.jp/enjoy-u22/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Oolong Milk Tea — small, iced or hot",
+                    "price": 330,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Oolong Milk Tea — medium, iced or hot",
+                    "price": 380,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Oolong Milk Tea — large, iced",
+                    "price": 470,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Black Milk Tea — small, iced or hot",
+                    "price": 330,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Black Milk Tea — medium, iced or hot",
+                    "price": 380,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Black Milk Tea — large, iced",
+                    "price": 470,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Oolong Milk Tea — small, iced or hot",
+                    "price": 380,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Oolong Milk Tea — medium, iced or hot",
+                    "price": 430,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Oolong Milk Tea — large, iced",
+                    "price": 520,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — small, iced or hot",
+                    "price": 380,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — medium, iced or hot",
+                    "price": 430,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Brown Sugar Black Milk Tea — large, iced",
+                    "price": 520,
+                    "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                  },
+                  {
+                    "name": "Almond-milk substitution",
+                    "price": 50,
+                    "note": "Supplement for drinks carrying the almond mark"
+                  },
+                  {
+                    "name": "Pearls topping",
+                    "price": 90,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Nata de coco topping",
+                    "price": 90,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Milk foam topping",
+                    "price": 90,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Aloe topping",
+                    "price": 90,
+                    "note": "Supplement"
+                  }
+                ],
+                "note": "Ages 6–22 inclusive, until the day before the 23rd birthday; the eligible guest must visit personally. One eligible drink per person; accompanying parents are not eligible unless independently within the age range. Show age-confirming identification at a staffed register. Nonmembers use a staffed register. My Gong cha members with a registered birth date can also use supported mobile ordering or scan their membership at self-checkout. Toppings are not included; published additions are charged separately. Prices include tax. Contents can change or end without notice; no fixed end date is published. Prices visually verified against the operator price graphics. The programme page publishes no named exclusion for these operating branches. Seasonal toppings can differ and are not assigned an invented price.",
+                "documentUrl": "https://www.gongcha.co.jp/wp-content/themes/gongcha/img/u22/img_drink04.png?260226"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/103",
+            "name": "Gong cha — Ekimarche Osaka",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.gongcha.co.jp/",
+            "phone": "06-6655-8904",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–22:00; last order 21:45"
+              },
+              {
+                "days": "Seating",
+                "hours": "Takeaway only; no seats in the opening announcement"
+              }
+            ],
+            "detailsSourceUrl": "https://www.gongcha.co.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://osaka.ekimaru.com/shopguide/detail/103"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gongcha.co.jp/menu/brownsugar/brownsugarblackmilktea/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gongcha.co.jp/enjoy-u22/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan40-gongcha-eki-landlord",
+            "name": "Gong cha — Ekimarche Osaka",
+            "neighborhood": "Umeda",
+            "cuisine": "Tea café",
+            "description": "A recently opened Gong cha branch with customizable milk teas and the published ENJOY U22 youth discount.",
+            "address": "F02, 1F Ekimarche Osaka, 3-1-1 Umeda, Kita-ku, Osaka",
+            "websiteUrl": "https://www.gongcha.co.jp/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-gongcha-eki-landlord-0-ad915de8b863f3fd.webp",
+            "imageCredit": "JR West Daily Service Net / Gong cha Japan",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html",
+            "imageNote": "Planned Ekimarche Osaka Gong cha counter, operator rendering.",
+            "openingConfirmed": true,
+            "day": "2026-09-18"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-gongcha-eki-landlord-0-ad915de8b863f3fd.webp",
+          "sha256": "ad915de8b863f3fd448b37b2e7ffcf20ab00df274fca1569d9e46f8ec8d5b742",
+          "width": 429,
+          "height": 283,
+          "credit": "JR West Daily Service Net / Gong cha Japan",
+          "note": "Planned Ekimarche Osaka Gong cha counter, operator rendering.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/103",
+          "name": "Gong cha — Ekimarche Osaka",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Brown Sugar Black Milk Tea — regular prices",
+              "url": "https://www.gongcha.co.jp/menu/brownsugar/brownsugarblackmilktea/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Brown Sugar Black Milk Tea — small, iced or hot",
+                  "price": 540
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — medium, iced or hot",
+                  "price": 590
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — large, iced",
+                  "price": 680
+                }
+              ],
+              "note": "Current operator product page publishes these tax-inclusive prices, identical for takeaway and eat-in. The Ekimarche branch opening release specifically recommends this drink at these prices. The operator warns individual shops can vary in assortment; confirm daily stock. This is a sample, not a claim that every chain product is sold at this branch. Checked current operator home opening news, landlord branch page, national menu categories and exact product prices, U22 conditions and price images, branch photo galleries and opening reporting. National seasonal hojicha has per-shop stock end dates and is not given an invented dated Special. Completed-venue photos were not located: representative images are accurately labelled planned-branch renderings. Full daily branch assortment and any unpublished closure dates remain gaps."
+            },
+            {
+              "label": "ENJOY U22 — eligible drinks and additions",
+              "url": "https://www.gongcha.co.jp/enjoy-u22/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Oolong Milk Tea — small, iced or hot",
+                  "price": 330,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Oolong Milk Tea — medium, iced or hot",
+                  "price": 380,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Oolong Milk Tea — large, iced",
+                  "price": 470,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Black Milk Tea — small, iced or hot",
+                  "price": 330,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Black Milk Tea — medium, iced or hot",
+                  "price": 380,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Black Milk Tea — large, iced",
+                  "price": 470,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Oolong Milk Tea — small, iced or hot",
+                  "price": 380,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Oolong Milk Tea — medium, iced or hot",
+                  "price": 430,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Oolong Milk Tea — large, iced",
+                  "price": 520,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — small, iced or hot",
+                  "price": 380,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — medium, iced or hot",
+                  "price": 430,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Brown Sugar Black Milk Tea — large, iced",
+                  "price": 520,
+                  "note": "ENJOY U22 price only; ages 6–22 inclusive. Toppings are additional."
+                },
+                {
+                  "name": "Almond-milk substitution",
+                  "price": 50,
+                  "note": "Supplement for drinks carrying the almond mark"
+                },
+                {
+                  "name": "Pearls topping",
+                  "price": 90,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Nata de coco topping",
+                  "price": 90,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Milk foam topping",
+                  "price": 90,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Aloe topping",
+                  "price": 90,
+                  "note": "Supplement"
+                }
+              ],
+              "note": "Ages 6–22 inclusive, until the day before the 23rd birthday; the eligible guest must visit personally. One eligible drink per person; accompanying parents are not eligible unless independently within the age range. Show age-confirming identification at a staffed register. Nonmembers use a staffed register. My Gong cha members with a registered birth date can also use supported mobile ordering or scan their membership at self-checkout. Toppings are not included; published additions are charged separately. Prices include tax. Contents can change or end without notice; no fixed end date is published. Prices visually verified against the operator price graphics. The programme page publishes no named exclusion for these operating branches. Seasonal toppings can differ and are not assigned an invented price.",
+              "documentUrl": "https://www.gongcha.co.jp/wp-content/themes/gongcha/img/u22/img_drink04.png?260226"
+            }
+          ],
+          "specials": [
+            {
+              "title": "ENJOY U22 — discounted milk tea for ages 6–22",
+              "kind": "other",
+              "description": "Four eligible milk-tea varieties at the published youth prices, from ¥330; proof of age and personal attendance required.",
+              "sourceUrl": "https://www.gongcha.co.jp/enjoy-u22/",
+              "menuLabel": "ENJOY U22 — eligible drinks and additions",
+              "discounted": true,
+              "validFrom": "2026-09-18",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Ages 6–22 inclusive, until the day before the 23rd birthday; the eligible guest must visit personally.",
+                "One eligible drink per person; accompanying parents are not eligible unless independently within the age range.",
+                "Show age-confirming identification at a staffed register.",
+                "Nonmembers use a staffed register. My Gong cha members with a registered birth date can also use supported mobile ordering or scan their membership at self-checkout.",
+                "Toppings are not included; published additions are charged separately.",
+                "Prices include tax. Contents can change or end without notice; no fixed end date is published."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00",
+                    "end": "21:45"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "F02, 1F Ekimarche Osaka, 3-1-1 Umeda, Kita-ku, Osaka",
+          "neighborhood": "Umeda",
+          "websiteUrl": "https://www.gongcha.co.jp/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-gongcha-eki-landlord-0-ad915de8b863f3fd.webp",
+            "alt": "Gong cha — Ekimarche Osaka — Planned Ekimarche Osaka Gong cha counter, operator rendering.",
+            "credit": "JR West Daily Service Net / Gong cha Japan",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/95753/2197/95753-2197-a5897de65d4e7dc4ac5a836e08a9e580-429x283.png?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SUBWAY — Ekimarche Osaka Opens in Umeda",
+        "description": "A new Osaka Station sandwich shop with morning service from 08:00 and a branch-announced shrimp-avocado set.",
+        "sourceUrl": "https://osaka.ekimaru.com/shopguide/detail/102",
+        "address": "F01, 1F Ekimarche Osaka, 3-1-1 Umeda, Kita-ku, Osaka",
+        "productName": "SUBWAY — Ekimarche Osaka",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Umeda",
+          "Sandwiches"
+        ],
+        "longFormSummary": "<p>A new Osaka Station sandwich shop with morning service from 08:00 and a branch-announced shrimp-avocado set.<cite data-ref=\"https://osaka.ekimaru.com/shopguide/detail/102\"></cite></p><p>JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka.</p>",
+        "references": [
+          {
+            "url": "https://osaka.ekimaru.com/shopguide/detail/102",
+            "title": "SUBWAY — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html",
+            "title": "SUBWAY — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka."
+          },
+          {
+            "url": "https://www.subway.co.jp/menu/category/sandwich/",
+            "title": "SUBWAY — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka."
+          },
+          {
+            "url": "https://www.subway.co.jp/menu/category/sidemenu/",
+            "title": "SUBWAY — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka."
+          },
+          {
+            "url": "https://www.subway.co.jp/menu/category/drink/",
+            "title": "SUBWAY — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka."
+          },
+          {
+            "url": "https://www.subway.co.jp/campaign/hirutoku/",
+            "title": "SUBWAY — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka."
+          },
+          {
+            "url": "https://www.subway.co.jp/campaign/nightsub/",
+            "title": "SUBWAY — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka."
+          },
+          {
+            "url": "https://osaka.ekimaru.com/shopitem/detail/174",
+            "title": "SUBWAY — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "JR West Daily Service Net confirms September4,2026 opening of F01 SUBWAY at Ekimarche Osaka."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/102",
+          "menu": {
+            "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/102",
+            "name": "SUBWAY — Ekimarche Osaka",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Branch-announced shrimp-avocado sandwich",
+                "url": "https://osaka.ekimaru.com/shopitem/detail/174",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Shrimp and avocado sandwich — regular",
+                    "price": 630,
+                    "note": "Current national operator price for the exact sandwich named by this branch"
+                  },
+                  {
+                    "name": "Shrimp and avocado sandwich, potato and drink set",
+                    "price": 1150,
+                    "note": "From; tax-inclusive branch opening-release price. Drink choice and additions can change the total."
+                  }
+                ],
+                "note": "The branch landlord names this sandwich; the opening release publishes the set from ¥1,150. Current national regular sandwich price is ¥630. Checked branch page/gallery, operator sandwich/side/drink categories, morning, lunch and NIGHT offers. National lunch campaign explicitly allows excluded stores and different prices/periods; exact Ekimarche participation was not corroborated, so no national discount is indexed as a verified branch Special. Complete branch-specific priced ordering menu remains unavailable; no other branch menu is borrowed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/102",
+            "name": "SUBWAY — Ekimarche Osaka",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.subway.co.jp/",
+            "phone": "06-4300-5895",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "08:00–22:00"
+              },
+              {
+                "days": "Seating",
+                "hours": "Eat-in and takeaway listed by the landlord; exact seat count not published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.subway.co.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://osaka.ekimaru.com/shopguide/detail/102"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.subway.co.jp/menu/category/sandwich/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.subway.co.jp/menu/category/sidemenu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.subway.co.jp/menu/category/drink/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.subway.co.jp/campaign/hirutoku/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.subway.co.jp/campaign/nightsub/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan40-subway-landlord",
+            "name": "SUBWAY — Ekimarche Osaka",
+            "neighborhood": "Umeda",
+            "cuisine": "Sandwiches",
+            "description": "A new Osaka Station sandwich shop with morning service from 08:00 and a branch-announced shrimp-avocado set.",
+            "address": "F01, 1F Ekimarche Osaka, 3-1-1 Umeda, Kita-ku, Osaka",
+            "websiteUrl": "https://www.subway.co.jp/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-subway-landlord-0-b24c636d8e62fd6d.webp",
+            "imageCredit": "JR West Daily Service Net / SUBWAY",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html",
+            "imageNote": "Planned Ekimarche Osaka SUBWAY counter from two angles; operator rendering.",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-subway-landlord-0-b24c636d8e62fd6d.webp",
+          "sha256": "b24c636d8e62fd6d683824218f194f98cc247e54eb602e58763627aa1c152652",
+          "width": 453,
+          "height": 290,
+          "credit": "JR West Daily Service Net / SUBWAY",
+          "note": "Planned Ekimarche Osaka SUBWAY counter from two angles; operator rendering.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-subway-landlord-1-dd8c72d8b8582b9e.webp",
+          "sha256": "dd8c72d8b8582b9eb61632f298f967ca739ba8af0b19a7f6c6a76b5d9c77fd0a",
+          "width": 500,
+          "height": 707,
+          "credit": "SUBWAY, via Ekimarche Osaka",
+          "note": "Promotional shrimp-avocado sandwich with potato/drink set on this branch page; shown portions are illustrative.",
+          "sourcePage": "https://osaka.ekimaru.com/shopguide/detail/102"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "STANDARD DONUTS — Ekimarche Osaka Opens in Umeda",
+        "description": "A newly opened doughnut counter with branch-exclusive old-fashioned doughnuts and chocolate-bar sandwiches.",
+        "sourceUrl": "https://osaka.ekimaru.com/shopguide/detail/104",
+        "address": "F05, 1F Ekimarche Osaka, 3-1-1 Umeda, Kita-ku, Osaka",
+        "productName": "STANDARD DONUTS — Ekimarche Osaka",
+        "utcStartDateTime": "2026-09-18T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Umeda",
+          "Doughnuts / takeaway"
+        ],
+        "longFormSummary": "<p>A newly opened doughnut counter with branch-exclusive old-fashioned doughnuts and chocolate-bar sandwiches.<cite data-ref=\"https://osaka.ekimaru.com/shopguide/detail/104\"></cite></p><p>Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch.</p>",
+        "references": [
+          {
+            "url": "https://osaka.ekimaru.com/shopguide/detail/104",
+            "title": "STANDARD DONUTS — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html",
+            "title": "STANDARD DONUTS — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html",
+            "title": "STANDARD DONUTS — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch."
+          },
+          {
+            "url": "https://osaka.ekimaru.com/shopitem/detail/177",
+            "title": "STANDARD DONUTS — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch."
+          },
+          {
+            "url": "https://osaka.ekimaru.com/shopitem/detail/175",
+            "title": "STANDARD DONUTS — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch."
+          },
+          {
+            "url": "https://osaka.ekimaru.com/shopitem/detail/176",
+            "title": "STANDARD DONUTS — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch."
+          },
+          {
+            "url": "https://www.onddonuts.com/",
+            "title": "STANDARD DONUTS — Ekimarche Osaka source",
+            "confidence": 90,
+            "reasoning": "Both OND and JR West Daily Service Net confirm September18,2026 opening of the fourth STANDARD DONUTS branch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/104",
+          "menu": {
+            "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/104",
+            "name": "STANDARD DONUTS — Ekimarche Osaka",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Current operator menu — branch-confirmed classics",
+                "url": "https://www.onddonuts.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Standard Donut — wasanbon sugar",
+                    "price": 248,
+                    "note": "Current operator-listed amount. Earlier landlord launch release says ¥230 including tax; published amounts conflict, so confirm the payable branch price."
+                  },
+                  {
+                    "name": "Custard cream doughnut",
+                    "price": 388,
+                    "note": "Current operator-listed amount; landlord specifically confirms this branch sells it"
+                  },
+                  {
+                    "name": "Organic Earl Grey cream doughnut",
+                    "price": 410,
+                    "note": "Current operator-listed amount; landlord specifically confirms this branch sells it"
+                  }
+                ],
+                "note": "Prices are reproduced as currently listed by the operator; the page does not specify tax treatment. Do not silently convert them or claim a tax-inclusive amount. The signature amount conflicts with the earlier JR launch release. The two named cream products are directly identified on current Ekimarche product pages. Daily stocks vary. The operator site provides a wider brand range, but its branch-specific assortment is not guaranteed."
+              },
+              {
+                "label": "Ekimarche branch exclusives and first-release item",
+                "url": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Cultured-butter Old Fashioned",
+                    "price": 270,
+                    "note": "Tax included; branch exclusive"
+                  },
+                  {
+                    "name": "Chocolat Fashion",
+                    "price": 302,
+                    "note": "Tax included; branch exclusive"
+                  },
+                  {
+                    "name": "Chocolate-bar sandwich doughnut",
+                    "price": 410,
+                    "note": "Tax included; branch exclusive"
+                  },
+                  {
+                    "name": "Mont Blanc doughnut",
+                    "price": 518,
+                    "note": "Tax included; initially sold at Ekimarche, later roll-out date not published"
+                  }
+                ],
+                "note": "Exact branch menu from OND’s September16 operator announcement, including published tax-inclusive prices. All September18–23 opening giveaways, cream increases and discounted five-packs expired and are not indexed as active/upcoming Specials. Deep checked current owner/menu/store pages, landlord gallery and three named product pages, linked LINE ordering (app entry rather than a readable priced menu), operator release and local reporting. Complete current branch roster, exact signature price/tax treatment, and a completed Ekimarche venue photograph remain gaps; rendering is labelled."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://osaka.ekimaru.com/shopguide/detail/104",
+            "name": "STANDARD DONUTS — Ekimarche Osaka",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.onddonuts.com/",
+            "phone": "06-6616-8089",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–22:00; stock can sell out"
+              },
+              {
+                "days": "Ordering",
+                "hours": "Linked LINE mini-app; no purchase made"
+              }
+            ],
+            "detailsSourceUrl": "https://www.onddonuts.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://osaka.ekimaru.com/shopguide/detail/104"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000002197.000095753.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://osaka.ekimaru.com/shopitem/detail/177"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://osaka.ekimaru.com/shopitem/detail/175"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://osaka.ekimaru.com/shopitem/detail/176"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan40-standard-landlord",
+            "name": "STANDARD DONUTS — Ekimarche Osaka",
+            "neighborhood": "Umeda",
+            "cuisine": "Doughnuts / takeaway",
+            "description": "A newly opened doughnut counter with branch-exclusive old-fashioned doughnuts and chocolate-bar sandwiches.",
+            "address": "F05, 1F Ekimarche Osaka, 3-1-1 Umeda, Kita-ku, Osaka",
+            "websiteUrl": "https://www.onddonuts.com/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-landlord-0-5f893e7b8bc7c82f.webp",
+            "imageCredit": "STANDARD DONUTS / OND Inc.",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html",
+            "imageNote": "Planned Ekimarche Osaka counter, operator rendering.",
+            "openingConfirmed": true,
+            "day": "2026-09-18"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-landlord-0-5f893e7b8bc7c82f.webp",
+          "sha256": "5f893e7b8bc7c82f776f9b7a88e4866c5d7a7aaea56bd136554b45ee5c9462d6",
+          "width": 1200,
+          "height": 999,
+          "credit": "STANDARD DONUTS / OND Inc.",
+          "note": "Planned Ekimarche Osaka counter, operator rendering.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-landlord-1-53b6acc8adedaf90.webp",
+          "sha256": "53b6acc8adedaf900542deaa3019b2cbb6b0a701ac8a13b41ae8ccfb93f21067",
+          "width": 1200,
+          "height": 800,
+          "credit": "STANDARD DONUTS / OND Inc.",
+          "note": "Cultured-butter Old Fashioned, named branch-exclusive product.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-landlord-2-9108eb47b357286b.webp",
+          "sha256": "9108eb47b357286b9cfd8f428af7815dace8f5f277ab1e8ed15d6498673e6d53",
+          "width": 1200,
+          "height": 800,
+          "credit": "STANDARD DONUTS / OND Inc.",
+          "note": "Chocolat Fashion, named branch-exclusive product.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-landlord-3-2ebf5d3c391bee2f.webp",
+          "sha256": "2ebf5d3c391bee2f2b6eff3ac3f66d0ca2a11f20bf7acfcb14669ec91d43b50c",
+          "width": 1200,
+          "height": 800,
+          "credit": "STANDARD DONUTS / OND Inc.",
+          "note": "Chocolate-bar sandwich, named branch-exclusive product.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-landlord-4-5705e66d9d917d10.webp",
+          "sha256": "5705e66d9d917d10f287a5a3f21973d1cc3126869dc9f69a798dd72f5cc5f1bd",
+          "width": 1200,
+          "height": 824,
+          "credit": "STANDARD DONUTS / OND Inc.",
+          "note": "Mont Blanc, initially sold at the Ekimarche branch; the later national roll-out date is not published.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000014.000139303.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "STANDARD DONUTS — Sakaisujihonmachi Opens in Sakaisujihonmachi",
+        "description": "A recent Sakaisujihonmachi branch of the Osaka doughnut bakery, opened July31 with daily handmade doughnuts.",
+        "sourceUrl": "https://www.onddonuts.com/#sakaisujihonmachi",
+        "address": "1F Nodama Building, 1-4-1 Kawaramachi, Chuo-ku, Osaka",
+        "productName": "STANDARD DONUTS — Sakaisujihonmachi",
+        "utcStartDateTime": "2026-07-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The operator’s July1,2026 news explicitly announces July31,2026 opening at this address; current branch details corroborate the location.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Sakaisujihonmachi",
+          "Doughnuts / takeaway"
+        ],
+        "longFormSummary": "<p>A recent Sakaisujihonmachi branch of the Osaka doughnut bakery, opened July31 with daily handmade doughnuts.<cite data-ref=\"https://www.onddonuts.com/#sakaisujihonmachi\"></cite></p><p>The operator’s July1,2026 news explicitly announces July31,2026 opening at this address; current branch details corroborate the location.</p>",
+        "references": [
+          {
+            "url": "https://www.onddonuts.com/#sakaisujihonmachi",
+            "title": "STANDARD DONUTS — Sakaisujihonmachi source",
+            "confidence": 90,
+            "reasoning": "The operator’s July1,2026 news explicitly announces July31,2026 opening at this address; current branch details corroborate the location."
+          },
+          {
+            "url": "https://www.onddonuts.com/",
+            "title": "STANDARD DONUTS — Sakaisujihonmachi source",
+            "confidence": 90,
+            "reasoning": "The operator’s July1,2026 news explicitly announces July31,2026 opening at this address; current branch details corroborate the location."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.onddonuts.com/#sakaisujihonmachi",
+          "menu": {
+            "pinSourceUrl": "https://www.onddonuts.com/#sakaisujihonmachi",
+            "name": "STANDARD DONUTS — Sakaisujihonmachi",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published operator range — confirm daily branch stock",
+                "url": "https://www.onddonuts.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Standard Donut — wasanbon sugar",
+                    "price": 248,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Organic cinnamon sugar doughnut",
+                    "price": 259,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Roasted kinako doughnut",
+                    "price": 259,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Glazed doughnut",
+                    "price": 280,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Setouchi lemon glazed doughnut",
+                    "price": 302,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Organic Earl Grey glazed doughnut",
+                    "price": 302,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Fresh-cream doughnut",
+                    "price": 388,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Custard-cream doughnut",
+                    "price": 388,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Organic Earl Grey cream doughnut",
+                    "price": 410,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  },
+                  {
+                    "name": "Uji matcha cream doughnut",
+                    "price": 410,
+                    "note": "As listed on the operator site; tax treatment not stated"
+                  }
+                ],
+                "note": "Current operator brand menu on the same page as this branch’s address, hours and opening notice. This is the published range, subject to branch/day availability; exact stock is not guaranteed. Ekimarche-exclusive old-fashioneds, chocolate-bar sandwich and first-release Mont Blanc are deliberately not assigned here. Other branches’ historical popup prices are excluded. Checked operator current menu/news, labelled branch exterior gallery and shop details; no separate branch PDF or readable ordering roster found. Tax treatment, complete daily branch assortment and closed days remain gaps. July31 is within the local guide’s 90-day Just opened window as of October14; replenish this section as entries age out."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.onddonuts.com/#sakaisujihonmachi",
+            "name": "STANDARD DONUTS — Sakaisujihonmachi",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.onddonuts.com/",
+            "phone": "06-6786-8586",
+            "openingHours": [
+              {
+                "days": "Published hours",
+                "hours": "10:00–18:00; closed days not published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.onddonuts.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.onddonuts.com/#sakaisujihonmachi"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan40-standard-sakai",
+            "name": "STANDARD DONUTS — Sakaisujihonmachi",
+            "neighborhood": "Sakaisujihonmachi",
+            "cuisine": "Doughnuts / takeaway",
+            "description": "A recent Sakaisujihonmachi branch of the Osaka doughnut bakery, opened July31 with daily handmade doughnuts.",
+            "address": "1F Nodama Building, 1-4-1 Kawaramachi, Chuo-ku, Osaka",
+            "websiteUrl": "https://www.onddonuts.com/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-sakai-50-e256d855d7a5847f.webp",
+            "imageCredit": "STANDARD DONUTS / OND Inc.",
+            "imageSourceUrl": "https://www.onddonuts.com/",
+            "imageNote": "Actual Sakaisujihonmachi branch exterior from its operator-labelled gallery.",
+            "openingConfirmed": true,
+            "day": "2026-07-31"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-sakai-50-e256d855d7a5847f.webp",
+          "sha256": "e256d855d7a5847f7d69565046ea8684d55c5075c55773cd3d8c01f12b207fec",
+          "width": 1024,
+          "height": 682,
+          "credit": "STANDARD DONUTS / OND Inc.",
+          "note": "Actual Sakaisujihonmachi branch exterior from its operator-labelled gallery.",
+          "sourcePage": "https://www.onddonuts.com/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan40-standard-sakai-1-ac8019c34554f5df.webp",
+          "sha256": "ac8019c34554f5dfc21673ffcf3dfcc098b4aa9eb2407319d160126ddd659dc0",
+          "width": 1200,
+          "height": 800,
+          "credit": "STANDARD DONUTS / OND Inc.",
+          "note": "Standard Donut from the operator’s shared current menu; daily branch assortment can vary.",
+          "sourcePage": "https://www.onddonuts.com/"
+        }
+      ]
+    }
+  ]
+}

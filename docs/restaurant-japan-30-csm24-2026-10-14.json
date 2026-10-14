@@ -1,0 +1,1427 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "osaka",
+    "nagoya",
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "BOX cafe&space — KITTE OSAKA 2 — Osaka restaurant guide",
+        "description": "An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.",
+        "sourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+        "address": "6F KITTE Osaka, 3-2-2 Umeda, Kita-ku, Osaka",
+        "productName": "BOX cafe&space — KITTE OSAKA 2",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Umeda",
+          "Theme cafe"
+        ],
+        "longFormSummary": "<p>An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.<cite data-ref=\"https://csm-cafe.ltr-online.com/lp/csm-cafe-s022\"></cite></p><p>Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening.</p>",
+        "references": [
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+            "title": "BOX cafe&space — KITTE OSAKA 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000322.000086964.html/",
+            "title": "BOX cafe&space — KITTE OSAKA 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/guide",
+            "title": "BOX cafe&space — KITTE OSAKA 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://ltr-inc.co.jp/our-brand/shop-list/",
+            "title": "BOX cafe&space — KITTE OSAKA 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://osaka.jp-kitte.jp/shop/index.jsp?bf=1&fmt=6&shopid=160100",
+            "title": "BOX cafe&space — KITTE OSAKA 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "title": "BOX cafe&space — KITTE OSAKA 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "menu": {
+            "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+            "name": "BOX cafe&space — KITTE OSAKA 2",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Chainsaw Man Kissaten — limited collaboration menu",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "サンドイッチ～一輪の花～",
+                    "price": 1890
+                  },
+                  {
+                    "name": "喫茶二道のチャーハン",
+                    "price": 1190
+                  },
+                  {
+                    "name": "サルシッチャとチーズのパスタ～海岸の足跡～",
+                    "price": 1890
+                  },
+                  {
+                    "name": "ブルーパフェ〜夜のプール〜",
+                    "price": 1690
+                  },
+                  {
+                    "name": "花束ケーキ",
+                    "price": 1690
+                  },
+                  {
+                    "name": "レゼのチョーカープリン",
+                    "price": 1290
+                  },
+                  {
+                    "name": "夏祭りデザートプレート〜打ち上げ花火〜",
+                    "price": 1690
+                  },
+                  {
+                    "name": "ポチタパフェ",
+                    "price": 1290
+                  }
+                ],
+                "note": "All prices include tax. Exact event operator menu applies to the three named participating branches. Event ends November 8; Tokyo/Nagoya began October 1 and Osaka October 8. These are collaboration-menu dates at established BOX restaurants, not new permanent venue opening dates. No recognition/rating inferred from a sibling branch. Menu photographs are shared event illustrations. Full menu checked against operator announcement, current menu, branch information, visit guide, operator gallery and landlord branch page. Food maximum three and desserts maximum three per person. Bouquet-cake flower colours vary by season. Menu ingredients can change. Operator exact KITTE branch-2 room archive is captioned as an archive, not current theme installation. Landlord distinguishes branch-2 telephone from branch 1."
+              },
+              {
+                "label": "Qualifying themed drinks",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "喫茶二道のコーヒー",
+                    "price": 990
+                  },
+                  {
+                    "name": "フラワーアップルティー",
+                    "price": 1090
+                  },
+                  {
+                    "name": "魅惑のメロンソーダ",
+                    "price": 1090
+                  }
+                ],
+                "note": "One random paper coaster from six designs per qualifying drink. Main themed coffee is self hand-dripped. Drink limit five per person including side drinks."
+              },
+              {
+                "label": "Side drinks — excluded from required order and coaster benefit",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "コーヒー（アイス）",
+                    "price": 690
+                  },
+                  {
+                    "name": "紅茶（ホット・アイス）",
+                    "price": 690
+                  },
+                  {
+                    "name": "オレンジ",
+                    "price": 690
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 690
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 690
+                  }
+                ],
+                "note": "These five side drinks do not count toward the minimum one qualifying food/dessert/drink per person and do not receive the drink coaster. Hot/iced tea are one listed item with two options."
+              },
+              {
+                "label": "Seat reservation fee",
+                "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Advance reservation fee per person",
+                    "price": 660
+                  }
+                ],
+                "note": "Additional to food/drink spend. Includes two-postcard set only when reserved guest actually attends and orders a menu item. Credit-card online booking by prior-day 15:00; TableCheck account required. No refund or changes after confirmation. Cancel is possible but no refund. Reserve for everyone aged four and older, and younger children needing a seat; under-four lap children need no seat reservation. Stroller used as seat counts as one person. Four seats per transaction; larger groups book separately, adjacent seating not guaranteed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+            "name": "BOX cafe&space — KITTE OSAKA 2",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+            "phone": "06-6743-4002",
+            "openingHours": [
+              {
+                "days": "Daily during collaboration only",
+                "hours": "10:00–21:00; final session 19:45; 75-minute seating"
+              }
+            ],
+            "detailsSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000322.000086964.html/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://csm-cafe.ltr-online.com/lp/guide"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://ltr-inc.co.jp/our-brand/shop-list/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://osaka.jp-kitte.jp/shop/index.jsp?bf=1&fmt=6&shopid=160100"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/boxcafe-kitte-osaka2/reserve?menu_lists=6a856fc38e978b06dd73906b"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "csm24-osaka",
+            "name": "BOX cafe&space — KITTE OSAKA 2",
+            "neighborhood": "Umeda",
+            "cuisine": "Theme cafe",
+            "description": "An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.",
+            "address": "6F KITTE Osaka, 3-2-2 Umeda, Kita-ku, Osaka",
+            "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-1-a406e31054535852.webp",
+            "imageCredit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+            "imageSourceUrl": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "imageNote": "サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-1-a406e31054535852.webp",
+          "sha256": "a406e31054535852e64a08caa2e50257c44475c7829971a9180340753c2ab6bd",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-2-dcd9c24b6659f9f9.webp",
+          "sha256": "dcd9c24b6659f9f9bbed023d98ed6c3d640f8500c225e55eb4c799e9935c21ea",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "喫茶二道のチャーハン — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-3-31ebbae822b2ea59.webp",
+          "sha256": "31ebbae822b2ea5979bf8f09ad9850b6e2375e5eceadd969e1b04034db78c671",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "サルシッチャとチーズのパスタ～海岸の足跡～ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-4-6517062ce7e6fe01.webp",
+          "sha256": "6517062ce7e6fe01642baca313dd8d738f1f8aa1c1df76ea0726766961ff594d",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "ブルーパフェ〜夜のプール〜 — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-8-a3c248023b7a1bc0.webp",
+          "sha256": "a3c248023b7a1bc0ac6595dc89c870d9039de8a886781c6648adb30933a21d3d",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "ポチタパフェ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-9-7ba34983c8a54106.webp",
+          "sha256": "7ba34983c8a54106d82b0b935e814adf65db4491221a7abdf920f7cf93df91bb",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "喫茶二道のコーヒー — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-11-3f4204459756a08b.webp",
+          "sha256": "3f4204459756a08b3a34edbee677f8809c9941e8cc8e468e09b5ad4a2dbc3492",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "魅惑のメロンソーダ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-100-0a5bd95b2f24c1ea.webp",
+          "sha256": "0a5bd95b2f24c1eaf2b5fa65a428c0791f66c066a6490422001a42b6c8da3364",
+          "width": 320,
+          "height": 210,
+          "credit": "LTR / operator branch directory",
+          "note": "Operator-published KITTE OSAKA 2 dining room archive; furnishings or previous collaboration décor are not the current Chainsaw Man installation",
+          "sourcePage": "https://ltr-inc.co.jp/our-brand/shop-list/"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "name": "BOX cafe&space — KITTE OSAKA 2",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Chainsaw Man Kissaten — limited collaboration menu",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "サンドイッチ～一輪の花～",
+                  "price": 1890
+                },
+                {
+                  "name": "喫茶二道のチャーハン",
+                  "price": 1190
+                },
+                {
+                  "name": "サルシッチャとチーズのパスタ～海岸の足跡～",
+                  "price": 1890
+                },
+                {
+                  "name": "ブルーパフェ〜夜のプール〜",
+                  "price": 1690
+                },
+                {
+                  "name": "花束ケーキ",
+                  "price": 1690
+                },
+                {
+                  "name": "レゼのチョーカープリン",
+                  "price": 1290
+                },
+                {
+                  "name": "夏祭りデザートプレート〜打ち上げ花火〜",
+                  "price": 1690
+                },
+                {
+                  "name": "ポチタパフェ",
+                  "price": 1290
+                }
+              ],
+              "note": "All prices include tax. Exact event operator menu applies to the three named participating branches. Event ends November 8; Tokyo/Nagoya began October 1 and Osaka October 8. These are collaboration-menu dates at established BOX restaurants, not new permanent venue opening dates. No recognition/rating inferred from a sibling branch. Menu photographs are shared event illustrations. Full menu checked against operator announcement, current menu, branch information, visit guide, operator gallery and landlord branch page. Food maximum three and desserts maximum three per person. Bouquet-cake flower colours vary by season. Menu ingredients can change. Operator exact KITTE branch-2 room archive is captioned as an archive, not current theme installation. Landlord distinguishes branch-2 telephone from branch 1."
+            },
+            {
+              "label": "Qualifying themed drinks",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "喫茶二道のコーヒー",
+                  "price": 990
+                },
+                {
+                  "name": "フラワーアップルティー",
+                  "price": 1090
+                },
+                {
+                  "name": "魅惑のメロンソーダ",
+                  "price": 1090
+                }
+              ],
+              "note": "One random paper coaster from six designs per qualifying drink. Main themed coffee is self hand-dripped. Drink limit five per person including side drinks."
+            },
+            {
+              "label": "Side drinks — excluded from required order and coaster benefit",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "コーヒー（アイス）",
+                  "price": 690
+                },
+                {
+                  "name": "紅茶（ホット・アイス）",
+                  "price": 690
+                },
+                {
+                  "name": "オレンジ",
+                  "price": 690
+                },
+                {
+                  "name": "ジンジャーエール",
+                  "price": 690
+                },
+                {
+                  "name": "コーラ",
+                  "price": 690
+                }
+              ],
+              "note": "These five side drinks do not count toward the minimum one qualifying food/dessert/drink per person and do not receive the drink coaster. Hot/iced tea are one listed item with two options."
+            },
+            {
+              "label": "Seat reservation fee",
+              "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Advance reservation fee per person",
+                  "price": 660
+                }
+              ],
+              "note": "Additional to food/drink spend. Includes two-postcard set only when reserved guest actually attends and orders a menu item. Credit-card online booking by prior-day 15:00; TableCheck account required. No refund or changes after confirmation. Cancel is possible but no refund. Reserve for everyone aged four and older, and younger children needing a seat; under-four lap children need no seat reservation. Stroller used as seat counts as one person. Four seats per transaction; larger groups book separately, adjacent seating not guaranteed."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Chainsaw Man Kissaten — limited collaboration menu",
+              "kind": "other",
+              "description": "Dated themed food, dessert and drinks menu at this exact BOX branch, with a coaster for each qualifying themed drink. Food from ¥1,190, desserts from ¥1,290, themed drinks from ¥990, tax included; advance reservation costs ¥660 extra.",
+              "sourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+              "menuLabel": "Chainsaw Man Kissaten — limited collaboration menu",
+              "discounted": false,
+              "validFrom": "2026-10-08",
+              "validThrough": "2026-11-08",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Available only 2026-10-08 through 2026-11-08, Japan local dates.",
+                "75-minute seating sessions start every 45 minutes from 10:00 to 19:45; arrive ten minutes before the booked start. Twenty minutes late may cancel the reservation.",
+                "At least one qualifying food, dessert or themed drink per guest; ¥690 side drinks are excluded.",
+                "Advance booking recommended; ¥660 per person additional, no refund or changes; credit-card booking closes prior-day 15:00. Walk-in seating only if staff can accommodate; no telephone bookings.",
+                "Photo ID matching reservation required. Maximum four seats per transaction; reserve required child/stroller seats too.",
+                "One initial QR/mobile order only; no additional orders. Food maximum three, dessert maximum three, drinks including sides maximum five per person. Table-level payment; no separate bills.",
+                "Drink coaster applies only to three themed drinks, not side drinks. Reserved-guest postcard set requires actual attendance and menu order; merchandise purchase alone does not qualify.",
+                "Ingredients/presentation may change; no takeaway of served food."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00",
+                    "end": "21:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "6F KITTE Osaka, 3-2-2 Umeda, Kita-ku, Osaka",
+          "neighborhood": "Umeda",
+          "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/csm24-osaka-1-a406e31054535852.webp",
+            "alt": "BOX cafe&space — KITTE OSAKA 2 — サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph",
+            "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+            "sourceUrl": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "originalUrl": "https://csm-cafe.ltr-online.com/img/CSman-cafe_menu_2.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "BOX cafe&space — Global Gate Nagoya 2 — Nagoya restaurant guide",
+        "description": "An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.",
+        "sourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+        "address": "1F Global Gate, 4-60-12 Hiraikecho, Nakamura-ku, Nagoya",
+        "productName": "BOX cafe&space — Global Gate Nagoya 2",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Sasashima Live",
+          "Theme cafe"
+        ],
+        "longFormSummary": "<p>An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.<cite data-ref=\"https://csm-cafe.ltr-online.com/lp/csm-cafe-s017\"></cite></p><p>Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening.</p>",
+        "references": [
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+            "title": "BOX cafe&space — Global Gate Nagoya 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000322.000086964.html/",
+            "title": "BOX cafe&space — Global Gate Nagoya 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/guide",
+            "title": "BOX cafe&space — Global Gate Nagoya 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://ltr-inc.co.jp/our-brand/shop-list/",
+            "title": "BOX cafe&space — Global Gate Nagoya 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://shops.globalgate.nagoya/shop/detail.php?id=224",
+            "title": "BOX cafe&space — Global Gate Nagoya 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "title": "BOX cafe&space — Global Gate Nagoya 2 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "menu": {
+            "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+            "name": "BOX cafe&space — Global Gate Nagoya 2",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Chainsaw Man Kissaten — limited collaboration menu",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "サンドイッチ～一輪の花～",
+                    "price": 1890
+                  },
+                  {
+                    "name": "喫茶二道のチャーハン",
+                    "price": 1190
+                  },
+                  {
+                    "name": "サルシッチャとチーズのパスタ～海岸の足跡～",
+                    "price": 1890
+                  },
+                  {
+                    "name": "ブルーパフェ〜夜のプール〜",
+                    "price": 1690
+                  },
+                  {
+                    "name": "花束ケーキ",
+                    "price": 1690
+                  },
+                  {
+                    "name": "レゼのチョーカープリン",
+                    "price": 1290
+                  },
+                  {
+                    "name": "夏祭りデザートプレート〜打ち上げ花火〜",
+                    "price": 1690
+                  },
+                  {
+                    "name": "ポチタパフェ",
+                    "price": 1290
+                  }
+                ],
+                "note": "All prices include tax. Exact event operator menu applies to the three named participating branches. Event ends November 8; Tokyo/Nagoya began October 1 and Osaka October 8. These are collaboration-menu dates at established BOX restaurants, not new permanent venue opening dates. No recognition/rating inferred from a sibling branch. Menu photographs are shared event illustrations. Full menu checked against operator announcement, current menu, branch information, visit guide, operator gallery and landlord branch page. Food maximum three and desserts maximum three per person. Bouquet-cake flower colours vary by season. Menu ingredients can change. Operator exact branch-2 room archive shows previous collaboration décor; caption explicitly distinguishes it from current installation. Landlord groups branches 1/2, so generic 36 seats/takeaway claims are not applied to this specific event. Telephone remains unpublished on current event/landlord pages; older third-party number not copied. Event-specific 11:15–20:00 supersedes landlord generic 11:00–21:30."
+              },
+              {
+                "label": "Qualifying themed drinks",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "喫茶二道のコーヒー",
+                    "price": 990
+                  },
+                  {
+                    "name": "フラワーアップルティー",
+                    "price": 1090
+                  },
+                  {
+                    "name": "魅惑のメロンソーダ",
+                    "price": 1090
+                  }
+                ],
+                "note": "One random paper coaster from six designs per qualifying drink. Main themed coffee is self hand-dripped. Drink limit five per person including side drinks."
+              },
+              {
+                "label": "Side drinks — excluded from required order and coaster benefit",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "コーヒー（アイス）",
+                    "price": 690
+                  },
+                  {
+                    "name": "紅茶（ホット・アイス）",
+                    "price": 690
+                  },
+                  {
+                    "name": "オレンジ",
+                    "price": 690
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 690
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 690
+                  }
+                ],
+                "note": "These five side drinks do not count toward the minimum one qualifying food/dessert/drink per person and do not receive the drink coaster. Hot/iced tea are one listed item with two options."
+              },
+              {
+                "label": "Seat reservation fee",
+                "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Advance reservation fee per person",
+                    "price": 660
+                  }
+                ],
+                "note": "Additional to food/drink spend. Includes two-postcard set only when reserved guest actually attends and orders a menu item. Credit-card online booking by prior-day 15:00; TableCheck account required. No refund or changes after confirmation. Cancel is possible but no refund. Reserve for everyone aged four and older, and younger children needing a seat; under-four lap children need no seat reservation. Stroller used as seat counts as one person. Four seats per transaction; larger groups book separately, adjacent seating not guaranteed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+            "name": "BOX cafe&space — Global Gate Nagoya 2",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily during collaboration only",
+                "hours": "11:15–20:00; final session 18:45; 75-minute seating"
+              }
+            ],
+            "detailsSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000322.000086964.html/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://csm-cafe.ltr-online.com/lp/guide"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://ltr-inc.co.jp/our-brand/shop-list/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://shops.globalgate.nagoya/shop/detail.php?id=224"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/boxcafe-globalgate-nagoya2nd/reserve?menu_lists=6a858a31f6d170609e66c122"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "csm24-nagoya",
+            "name": "BOX cafe&space — Global Gate Nagoya 2",
+            "neighborhood": "Sasashima Live",
+            "cuisine": "Theme cafe",
+            "description": "An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.",
+            "address": "1F Global Gate, 4-60-12 Hiraikecho, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-1-a406e31054535852.webp",
+            "imageCredit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+            "imageSourceUrl": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "imageNote": "サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-1-a406e31054535852.webp",
+          "sha256": "a406e31054535852e64a08caa2e50257c44475c7829971a9180340753c2ab6bd",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-2-dcd9c24b6659f9f9.webp",
+          "sha256": "dcd9c24b6659f9f9bbed023d98ed6c3d640f8500c225e55eb4c799e9935c21ea",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "喫茶二道のチャーハン — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-3-31ebbae822b2ea59.webp",
+          "sha256": "31ebbae822b2ea5979bf8f09ad9850b6e2375e5eceadd969e1b04034db78c671",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "サルシッチャとチーズのパスタ～海岸の足跡～ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-4-6517062ce7e6fe01.webp",
+          "sha256": "6517062ce7e6fe01642baca313dd8d738f1f8aa1c1df76ea0726766961ff594d",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "ブルーパフェ〜夜のプール〜 — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-8-a3c248023b7a1bc0.webp",
+          "sha256": "a3c248023b7a1bc0ac6595dc89c870d9039de8a886781c6648adb30933a21d3d",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "ポチタパフェ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-9-7ba34983c8a54106.webp",
+          "sha256": "7ba34983c8a54106d82b0b935e814adf65db4491221a7abdf920f7cf93df91bb",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "喫茶二道のコーヒー — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-11-3f4204459756a08b.webp",
+          "sha256": "3f4204459756a08b3a34edbee677f8809c9941e8cc8e468e09b5ad4a2dbc3492",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "魅惑のメロンソーダ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-100-49b3c95e87e5917e.webp",
+          "sha256": "49b3c95e87e5917ef95820745be2c95d6ab0fb0d3e7a2112e3d0de0051f60486",
+          "width": 320,
+          "height": 210,
+          "credit": "LTR / operator branch directory",
+          "note": "Operator-published Global Gate Nagoya 2 dining room archive; furnishings or previous collaboration décor are not the current Chainsaw Man installation",
+          "sourcePage": "https://ltr-inc.co.jp/our-brand/shop-list/"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "name": "BOX cafe&space — Global Gate Nagoya 2",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Chainsaw Man Kissaten — limited collaboration menu",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "サンドイッチ～一輪の花～",
+                  "price": 1890
+                },
+                {
+                  "name": "喫茶二道のチャーハン",
+                  "price": 1190
+                },
+                {
+                  "name": "サルシッチャとチーズのパスタ～海岸の足跡～",
+                  "price": 1890
+                },
+                {
+                  "name": "ブルーパフェ〜夜のプール〜",
+                  "price": 1690
+                },
+                {
+                  "name": "花束ケーキ",
+                  "price": 1690
+                },
+                {
+                  "name": "レゼのチョーカープリン",
+                  "price": 1290
+                },
+                {
+                  "name": "夏祭りデザートプレート〜打ち上げ花火〜",
+                  "price": 1690
+                },
+                {
+                  "name": "ポチタパフェ",
+                  "price": 1290
+                }
+              ],
+              "note": "All prices include tax. Exact event operator menu applies to the three named participating branches. Event ends November 8; Tokyo/Nagoya began October 1 and Osaka October 8. These are collaboration-menu dates at established BOX restaurants, not new permanent venue opening dates. No recognition/rating inferred from a sibling branch. Menu photographs are shared event illustrations. Full menu checked against operator announcement, current menu, branch information, visit guide, operator gallery and landlord branch page. Food maximum three and desserts maximum three per person. Bouquet-cake flower colours vary by season. Menu ingredients can change. Operator exact branch-2 room archive shows previous collaboration décor; caption explicitly distinguishes it from current installation. Landlord groups branches 1/2, so generic 36 seats/takeaway claims are not applied to this specific event. Telephone remains unpublished on current event/landlord pages; older third-party number not copied. Event-specific 11:15–20:00 supersedes landlord generic 11:00–21:30."
+            },
+            {
+              "label": "Qualifying themed drinks",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "喫茶二道のコーヒー",
+                  "price": 990
+                },
+                {
+                  "name": "フラワーアップルティー",
+                  "price": 1090
+                },
+                {
+                  "name": "魅惑のメロンソーダ",
+                  "price": 1090
+                }
+              ],
+              "note": "One random paper coaster from six designs per qualifying drink. Main themed coffee is self hand-dripped. Drink limit five per person including side drinks."
+            },
+            {
+              "label": "Side drinks — excluded from required order and coaster benefit",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "コーヒー（アイス）",
+                  "price": 690
+                },
+                {
+                  "name": "紅茶（ホット・アイス）",
+                  "price": 690
+                },
+                {
+                  "name": "オレンジ",
+                  "price": 690
+                },
+                {
+                  "name": "ジンジャーエール",
+                  "price": 690
+                },
+                {
+                  "name": "コーラ",
+                  "price": 690
+                }
+              ],
+              "note": "These five side drinks do not count toward the minimum one qualifying food/dessert/drink per person and do not receive the drink coaster. Hot/iced tea are one listed item with two options."
+            },
+            {
+              "label": "Seat reservation fee",
+              "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Advance reservation fee per person",
+                  "price": 660
+                }
+              ],
+              "note": "Additional to food/drink spend. Includes two-postcard set only when reserved guest actually attends and orders a menu item. Credit-card online booking by prior-day 15:00; TableCheck account required. No refund or changes after confirmation. Cancel is possible but no refund. Reserve for everyone aged four and older, and younger children needing a seat; under-four lap children need no seat reservation. Stroller used as seat counts as one person. Four seats per transaction; larger groups book separately, adjacent seating not guaranteed."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Chainsaw Man Kissaten — limited collaboration menu",
+              "kind": "other",
+              "description": "Dated themed food, dessert and drinks menu at this exact BOX branch, with a coaster for each qualifying themed drink. Food from ¥1,190, desserts from ¥1,290, themed drinks from ¥990, tax included; advance reservation costs ¥660 extra.",
+              "sourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+              "menuLabel": "Chainsaw Man Kissaten — limited collaboration menu",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-08",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Available only 2026-10-01 through 2026-11-08, Japan local dates.",
+                "75-minute seating sessions start every 45 minutes from 11:15 to 18:45; arrive ten minutes before the booked start. Twenty minutes late may cancel the reservation.",
+                "At least one qualifying food, dessert or themed drink per guest; ¥690 side drinks are excluded.",
+                "Advance booking recommended; ¥660 per person additional, no refund or changes; credit-card booking closes prior-day 15:00. Walk-in seating only if staff can accommodate; no telephone bookings.",
+                "Photo ID matching reservation required. Maximum four seats per transaction; reserve required child/stroller seats too.",
+                "One initial QR/mobile order only; no additional orders. Food maximum three, dessert maximum three, drinks including sides maximum five per person. Table-level payment; no separate bills.",
+                "Drink coaster applies only to three themed drinks, not side drinks. Reserved-guest postcard set requires actual attendance and menu order; merchandise purchase alone does not qualify.",
+                "Ingredients/presentation may change; no takeaway of served food."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:15",
+                    "end": "20:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F Global Gate, 4-60-12 Hiraikecho, Nakamura-ku, Nagoya",
+          "neighborhood": "Sasashima Live",
+          "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/csm24-nagoya-1-a406e31054535852.webp",
+            "alt": "BOX cafe&space — Global Gate Nagoya 2 — サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph",
+            "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+            "sourceUrl": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "originalUrl": "https://csm-cafe.ltr-online.com/img/CSman-cafe_menu_2.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "BOX cafe&space — Lumine Est Shinjuku 1 — Tokyo restaurant guide",
+        "description": "An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.",
+        "sourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+        "address": "8F Lumine Est Shinjuku, 3-38-1 Shinjuku, Shinjuku-ku, Tokyo",
+        "productName": "BOX cafe&space — Lumine Est Shinjuku 1",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Shinjuku",
+          "Theme cafe"
+        ],
+        "longFormSummary": "<p>An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.<cite data-ref=\"https://csm-cafe.ltr-online.com/lp/csm-cafe-s012\"></cite></p><p>Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening.</p>",
+        "references": [
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+            "title": "BOX cafe&space — Lumine Est Shinjuku 1 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000322.000086964.html/",
+            "title": "BOX cafe&space — Lumine Est Shinjuku 1 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/guide",
+            "title": "BOX cafe&space — Lumine Est Shinjuku 1 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://ltr-inc.co.jp/our-brand/shop-list/",
+            "title": "BOX cafe&space — Lumine Est Shinjuku 1 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://www.lumine.ne.jp/est/floorguide/detail/?scd=003222",
+            "title": "BOX cafe&space — Lumine Est Shinjuku 1 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          },
+          {
+            "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "title": "BOX cafe&space — Lumine Est Shinjuku 1 source",
+            "confidence": 90,
+            "reasoning": "Established physical BOX venue, confirmed in operator and landlord directories. October 14 is the content verification date. October 1/8 starts a temporary collaboration menu and is not represented as the permanent restaurant opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "menu": {
+            "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+            "name": "BOX cafe&space — Lumine Est Shinjuku 1",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Chainsaw Man Kissaten — limited collaboration menu",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "サンドイッチ～一輪の花～",
+                    "price": 1890
+                  },
+                  {
+                    "name": "喫茶二道のチャーハン",
+                    "price": 1190
+                  },
+                  {
+                    "name": "サルシッチャとチーズのパスタ～海岸の足跡～",
+                    "price": 1890
+                  },
+                  {
+                    "name": "ブルーパフェ〜夜のプール〜",
+                    "price": 1690
+                  },
+                  {
+                    "name": "花束ケーキ",
+                    "price": 1690
+                  },
+                  {
+                    "name": "レゼのチョーカープリン",
+                    "price": 1290
+                  },
+                  {
+                    "name": "夏祭りデザートプレート〜打ち上げ花火〜",
+                    "price": 1690
+                  },
+                  {
+                    "name": "ポチタパフェ",
+                    "price": 1290
+                  }
+                ],
+                "note": "All prices include tax. Exact event operator menu applies to the three named participating branches. Event ends November 8; Tokyo/Nagoya began October 1 and Osaka October 8. These are collaboration-menu dates at established BOX restaurants, not new permanent venue opening dates. No recognition/rating inferred from a sibling branch. Menu photographs are shared event illustrations. Full menu checked against operator announcement, current menu, branch information, visit guide, operator gallery and landlord branch page. Food maximum three and desserts maximum three per person. Bouquet-cake flower colours vary by season. Menu ingredients can change. Operator directory shows a blurred Lumine Est image without a branch-1/2 distinction; excluded as exact-room evidence. Landlord groups both branches too. Exact current theme-installation photographs remain unpublished; shared food illustrations used."
+              },
+              {
+                "label": "Qualifying themed drinks",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "喫茶二道のコーヒー",
+                    "price": 990
+                  },
+                  {
+                    "name": "フラワーアップルティー",
+                    "price": 1090
+                  },
+                  {
+                    "name": "魅惑のメロンソーダ",
+                    "price": 1090
+                  }
+                ],
+                "note": "One random paper coaster from six designs per qualifying drink. Main themed coffee is self hand-dripped. Drink limit five per person including side drinks."
+              },
+              {
+                "label": "Side drinks — excluded from required order and coaster benefit",
+                "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "コーヒー（アイス）",
+                    "price": 690
+                  },
+                  {
+                    "name": "紅茶（ホット・アイス）",
+                    "price": 690
+                  },
+                  {
+                    "name": "オレンジ",
+                    "price": 690
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 690
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 690
+                  }
+                ],
+                "note": "These five side drinks do not count toward the minimum one qualifying food/dessert/drink per person and do not receive the drink coaster. Hot/iced tea are one listed item with two options."
+              },
+              {
+                "label": "Seat reservation fee",
+                "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Advance reservation fee per person",
+                    "price": 660
+                  }
+                ],
+                "note": "Additional to food/drink spend. Includes two-postcard set only when reserved guest actually attends and orders a menu item. Credit-card online booking by prior-day 15:00; TableCheck account required. No refund or changes after confirmation. Cancel is possible but no refund. Reserve for everyone aged four and older, and younger children needing a seat; under-four lap children need no seat reservation. Stroller used as seat counts as one person. Four seats per transaction; larger groups book separately, adjacent seating not guaranteed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+            "name": "BOX cafe&space — Lumine Est Shinjuku 1",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+            "phone": "03-6380-1066",
+            "openingHours": [
+              {
+                "days": "Daily during collaboration only",
+                "hours": "11:15–21:30; final session 20:15; 75-minute seating"
+              }
+            ],
+            "detailsSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000322.000086964.html/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://csm-cafe.ltr-online.com/lp/guide"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://ltr-inc.co.jp/our-brand/shop-list/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.lumine.ne.jp/est/floorguide/detail/?scd=003222"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/boxcafe-lumine-est-shinjuku/reserve?menu_lists=6a852eae8d113cb2b631b456"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "csm24-tokyo",
+            "name": "BOX cafe&space — Lumine Est Shinjuku 1",
+            "neighborhood": "Shinjuku",
+            "cuisine": "Theme cafe",
+            "description": "An established theme cafe serving the dated Chainsaw Man Kissaten menu, with 75-minute seating and an advance-reservation fee.",
+            "address": "8F Lumine Est Shinjuku, 3-38-1 Shinjuku, Shinjuku-ku, Tokyo",
+            "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-1-a406e31054535852.webp",
+            "imageCredit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+            "imageSourceUrl": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "imageNote": "サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-1-a406e31054535852.webp",
+          "sha256": "a406e31054535852e64a08caa2e50257c44475c7829971a9180340753c2ab6bd",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-2-dcd9c24b6659f9f9.webp",
+          "sha256": "dcd9c24b6659f9f9bbed023d98ed6c3d640f8500c225e55eb4c799e9935c21ea",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "喫茶二道のチャーハン — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-3-31ebbae822b2ea59.webp",
+          "sha256": "31ebbae822b2ea5979bf8f09ad9850b6e2375e5eceadd969e1b04034db78c671",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "サルシッチャとチーズのパスタ～海岸の足跡～ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-4-6517062ce7e6fe01.webp",
+          "sha256": "6517062ce7e6fe01642baca313dd8d738f1f8aa1c1df76ea0726766961ff594d",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "ブルーパフェ〜夜のプール〜 — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-8-a3c248023b7a1bc0.webp",
+          "sha256": "a3c248023b7a1bc0ac6595dc89c870d9039de8a886781c6648adb30933a21d3d",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "ポチタパフェ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-9-7ba34983c8a54106.webp",
+          "sha256": "7ba34983c8a54106d82b0b935e814adf65db4491221a7abdf920f7cf93df91bb",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "喫茶二道のコーヒー — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-11-3f4204459756a08b.webp",
+          "sha256": "3f4204459756a08b3a34edbee677f8809c9941e8cc8e468e09b5ad4a2dbc3492",
+          "width": 800,
+          "height": 600,
+          "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+          "note": "魅惑のメロンソーダ — shared event menu illustration, not a branch-room photograph",
+          "sourcePage": "https://csm-cafe.ltr-online.com/lp/cafe-menu"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "name": "BOX cafe&space — Lumine Est Shinjuku 1",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Chainsaw Man Kissaten — limited collaboration menu",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "サンドイッチ～一輪の花～",
+                  "price": 1890
+                },
+                {
+                  "name": "喫茶二道のチャーハン",
+                  "price": 1190
+                },
+                {
+                  "name": "サルシッチャとチーズのパスタ～海岸の足跡～",
+                  "price": 1890
+                },
+                {
+                  "name": "ブルーパフェ〜夜のプール〜",
+                  "price": 1690
+                },
+                {
+                  "name": "花束ケーキ",
+                  "price": 1690
+                },
+                {
+                  "name": "レゼのチョーカープリン",
+                  "price": 1290
+                },
+                {
+                  "name": "夏祭りデザートプレート〜打ち上げ花火〜",
+                  "price": 1690
+                },
+                {
+                  "name": "ポチタパフェ",
+                  "price": 1290
+                }
+              ],
+              "note": "All prices include tax. Exact event operator menu applies to the three named participating branches. Event ends November 8; Tokyo/Nagoya began October 1 and Osaka October 8. These are collaboration-menu dates at established BOX restaurants, not new permanent venue opening dates. No recognition/rating inferred from a sibling branch. Menu photographs are shared event illustrations. Full menu checked against operator announcement, current menu, branch information, visit guide, operator gallery and landlord branch page. Food maximum three and desserts maximum three per person. Bouquet-cake flower colours vary by season. Menu ingredients can change. Operator directory shows a blurred Lumine Est image without a branch-1/2 distinction; excluded as exact-room evidence. Landlord groups both branches too. Exact current theme-installation photographs remain unpublished; shared food illustrations used."
+            },
+            {
+              "label": "Qualifying themed drinks",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "喫茶二道のコーヒー",
+                  "price": 990
+                },
+                {
+                  "name": "フラワーアップルティー",
+                  "price": 1090
+                },
+                {
+                  "name": "魅惑のメロンソーダ",
+                  "price": 1090
+                }
+              ],
+              "note": "One random paper coaster from six designs per qualifying drink. Main themed coffee is self hand-dripped. Drink limit five per person including side drinks."
+            },
+            {
+              "label": "Side drinks — excluded from required order and coaster benefit",
+              "url": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "コーヒー（アイス）",
+                  "price": 690
+                },
+                {
+                  "name": "紅茶（ホット・アイス）",
+                  "price": 690
+                },
+                {
+                  "name": "オレンジ",
+                  "price": 690
+                },
+                {
+                  "name": "ジンジャーエール",
+                  "price": 690
+                },
+                {
+                  "name": "コーラ",
+                  "price": 690
+                }
+              ],
+              "note": "These five side drinks do not count toward the minimum one qualifying food/dessert/drink per person and do not receive the drink coaster. Hot/iced tea are one listed item with two options."
+            },
+            {
+              "label": "Seat reservation fee",
+              "url": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Advance reservation fee per person",
+                  "price": 660
+                }
+              ],
+              "note": "Additional to food/drink spend. Includes two-postcard set only when reserved guest actually attends and orders a menu item. Credit-card online booking by prior-day 15:00; TableCheck account required. No refund or changes after confirmation. Cancel is possible but no refund. Reserve for everyone aged four and older, and younger children needing a seat; under-four lap children need no seat reservation. Stroller used as seat counts as one person. Four seats per transaction; larger groups book separately, adjacent seating not guaranteed."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Chainsaw Man Kissaten — limited collaboration menu",
+              "kind": "other",
+              "description": "Dated themed food, dessert and drinks menu at this exact BOX branch, with a coaster for each qualifying themed drink. Food from ¥1,190, desserts from ¥1,290, themed drinks from ¥990, tax included; advance reservation costs ¥660 extra.",
+              "sourceUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+              "menuLabel": "Chainsaw Man Kissaten — limited collaboration menu",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-08",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Available only 2026-10-01 through 2026-11-08, Japan local dates.",
+                "75-minute seating sessions start every 45 minutes from 11:15 to 20:15; arrive ten minutes before the booked start. Twenty minutes late may cancel the reservation.",
+                "At least one qualifying food, dessert or themed drink per guest; ¥690 side drinks are excluded.",
+                "Advance booking recommended; ¥660 per person additional, no refund or changes; credit-card booking closes prior-day 15:00. Walk-in seating only if staff can accommodate; no telephone bookings.",
+                "Photo ID matching reservation required. Maximum four seats per transaction; reserve required child/stroller seats too.",
+                "One initial QR/mobile order only; no additional orders. Food maximum three, dessert maximum three, drinks including sides maximum five per person. Table-level payment; no separate bills.",
+                "Drink coaster applies only to three themed drinks, not side drinks. Reserved-guest postcard set requires actual attendance and menu order; merchandise purchase alone does not qualify.",
+                "Ingredients/presentation may change; no takeaway of served food."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:15",
+                    "end": "21:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "8F Lumine Est Shinjuku, 3-38-1 Shinjuku, Shinjuku-ku, Tokyo",
+          "neighborhood": "Shinjuku",
+          "websiteUrl": "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/csm24-tokyo-1-a406e31054535852.webp",
+            "alt": "BOX cafe&space — Lumine Est Shinjuku 1 — サンドイッチ～一輪の花～ — shared event menu illustration, not a branch-room photograph",
+            "credit": "LTR; © 2025 MAPPA / Chainsaw Man Project; © Tatsuki Fujimoto / Shueisha",
+            "sourceUrl": "https://csm-cafe.ltr-online.com/lp/cafe-menu",
+            "originalUrl": "https://csm-cafe.ltr-online.com/img/CSman-cafe_menu_2.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

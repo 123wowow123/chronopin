@@ -1,0 +1,886 @@
+{
+  "checkedAt": "2026-10-14",
+  "scope": "local database only; source-specific API content/photo/public-pin verification after missing prior records were detected",
+  "reviewedPriorEntriesRestoredAndVerified": 127,
+  "originalPinsRestoredAndVerified": 10,
+  "newMiaCucinaVenuesVerified": 8,
+  "currentVerifiedMemberships": 216,
+  "targetMemberships": 720,
+  "shortfall": 504,
+  "completedTabs": [
+    "kyoto/Just opened"
+  ],
+  "remainingIncompleteTabs": 23,
+  "sourceToCurrentPin": [
+    {
+      "name": "Heart Bread ANTIQUE / GUILTY’S — Tenjin Underground Mall",
+      "pinId": 15314,
+      "sourceUrl": "https://www.tenchika.com/shop/h_b_antique/",
+      "verified": true
+    },
+    {
+      "name": "Shokudo Hitonitachi",
+      "pinId": 15315,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000009.000166300.html",
+      "verified": true
+    },
+    {
+      "name": "Robata Izakaya Egoya — Akasaka",
+      "pinId": 15316,
+      "sourceUrl": "https://www.hotpepper.jp/strJ004698501/",
+      "verified": true
+    },
+    {
+      "name": "Comenocoto — Tenjin Building",
+      "pinId": 15317,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+      "verified": true
+    },
+    {
+      "name": "Icho — Hotel Nikko Fukuoka",
+      "pinId": 15318,
+      "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+      "verified": true
+    },
+    {
+      "name": "Benkei — Hotel Nikko Fukuoka",
+      "pinId": 15319,
+      "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+      "verified": true
+    },
+    {
+      "name": "Les Célébrités",
+      "pinId": 15320,
+      "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+      "verified": true
+    },
+    {
+      "name": "CLOUDS — Hilton Fukuoka Sea Hawk",
+      "pinId": 15321,
+      "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+      "verified": true
+    },
+    {
+      "name": "SEALA — Hilton Fukuoka Sea Hawk",
+      "pinId": 15322,
+      "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+      "verified": true
+    },
+    {
+      "name": "BAR Castillian Room",
+      "pinId": 15323,
+      "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+      "verified": true
+    },
+    {
+      "name": "Olive no Oka — Sapporo Shinkotoni",
+      "pinId": 15324,
+      "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+      "verified": true
+    },
+    {
+      "name": "Yogurt World — COCONO SUSUKINO",
+      "pinId": 15325,
+      "sourceUrl": "https://www.instagram.com/yogurtworld_coconosusukino/",
+      "verified": true
+    },
+    {
+      "name": "Frenchman — COCONO SUSUKINO",
+      "pinId": 15326,
+      "sourceUrl": "https://sapporo-list.info/shop/frenchman-coconosusukino/",
+      "verified": true
+    },
+    {
+      "name": "Hama Sushi — Sapporo Hiraoka",
+      "pinId": 15327,
+      "sourceUrl": "https://sapporo-list.info/shop/hama-sushi-hiraoka/",
+      "verified": true
+    },
+    {
+      "name": "SERENA — Hotel Nikko Fukuoka",
+      "pinId": 15328,
+      "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+      "verified": true
+    },
+    {
+      "name": "Atmos Italian Dining",
+      "pinId": 15329,
+      "sourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+      "verified": true
+    },
+    {
+      "name": "40 Sky Bar & Lounge",
+      "pinId": 15330,
+      "sourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+      "verified": true
+    },
+    {
+      "name": "In Place 3-3",
+      "pinId": 15331,
+      "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+      "verified": true
+    },
+    {
+      "name": "Dynasty — Hilton Nagoya",
+      "pinId": 15332,
+      "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+      "verified": true
+    },
+    {
+      "name": "Glass Seasons",
+      "pinId": 15333,
+      "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+      "verified": true
+    },
+    {
+      "name": "Akizu",
+      "pinId": 15334,
+      "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+      "verified": true
+    },
+    {
+      "name": "TwentyEight",
+      "pinId": 15335,
+      "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+      "verified": true
+    },
+    {
+      "name": "China Blue",
+      "pinId": 15336,
+      "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+      "verified": true
+    },
+    {
+      "name": "Cerise",
+      "pinId": 15337,
+      "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+      "verified": true
+    },
+    {
+      "name": "Garden Lounge — Hotel New Otani Tokyo",
+      "pinId": 15338,
+      "sourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+      "verified": true
+    },
+    {
+      "name": "St. George’s Bar",
+      "pinId": 15339,
+      "sourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+      "verified": true
+    },
+    {
+      "name": "Hideaway 3-3",
+      "pinId": 15340,
+      "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+      "verified": true
+    },
+    {
+      "name": "Itadaki Kokko-chan — Kita 1-jo",
+      "pinId": 15341,
+      "sourceUrl": "https://cocco.eastone.co.jp/shop/kitaichijo",
+      "verified": true
+    },
+    {
+      "name": "Itadaki Kokko-chan — Kita 8-jo",
+      "pinId": 15342,
+      "sourceUrl": "https://cocco.eastone.co.jp/shop/kitahachijo",
+      "verified": true
+    },
+    {
+      "name": "Itadaki Kokko-chan — Soen",
+      "pinId": 15343,
+      "sourceUrl": "https://cocco.eastone.co.jp/shop/souen",
+      "verified": true
+    },
+    {
+      "name": "Itadaki Kokko-chan — JR Kotoni Station",
+      "pinId": 15344,
+      "sourceUrl": "https://cocco.eastone.co.jp/shop/kotoniekimae",
+      "verified": true
+    },
+    {
+      "name": "Itadaki Kokko-chan — Miyanosawa",
+      "pinId": 15345,
+      "sourceUrl": "https://cocco.eastone.co.jp/shop/miyanosawa",
+      "verified": true
+    },
+    {
+      "name": "Itadaki Kokko-chan — Shindo-higashi",
+      "pinId": 15346,
+      "sourceUrl": "https://cocco.eastone.co.jp/shop/shindohigashi",
+      "verified": true
+    },
+    {
+      "name": "Itadaki Kokko-chan — Gotanda",
+      "pinId": 15347,
+      "sourceUrl": "https://cocco.eastone.co.jp/shop/gotanda",
+      "verified": true
+    },
+    {
+      "name": "Itadaki Kokko-chan — Kameido",
+      "pinId": 15348,
+      "sourceUrl": "https://cocco.eastone.co.jp/shop/kameido",
+      "verified": true
+    },
+    {
+      "name": "Yamasan Curry",
+      "pinId": 15349,
+      "sourceUrl": "https://www.instagram.com/yamasan_curry/",
+      "verified": true
+    },
+    {
+      "name": "Bettei Takei — Kyoto Yodobashi",
+      "pinId": 15350,
+      "sourceUrl": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+      "verified": true
+    },
+    {
+      "name": "coffee & bake mukorita",
+      "pinId": 15351,
+      "sourceUrl": "https://www.instagram.com/coffeebakemukorita/",
+      "verified": true
+    },
+    {
+      "name": "asobiba",
+      "pinId": 15352,
+      "sourceUrl": "https://www.instagram.com/asobiba.kyoto/",
+      "verified": true
+    },
+    {
+      "name": "Ramen Ignoranc",
+      "pinId": 15353,
+      "sourceUrl": "https://www.instagram.com/ramen_ignorance/",
+      "verified": true
+    },
+    {
+      "name": "Karugamo Coffee — Kisui",
+      "pinId": 15354,
+      "sourceUrl": "https://www.instagram.com/karugamo_coffee/",
+      "verified": true
+    },
+    {
+      "name": "WEEKENDERS COFFEE SHINMACHI",
+      "pinId": 15355,
+      "sourceUrl": "https://www.instagram.com/weekenders_coffee/",
+      "verified": true
+    },
+    {
+      "name": "Toriya Kacchan — No. 5",
+      "pinId": 15356,
+      "sourceUrl": "https://www.instagram.com/menya_kacchyan3/",
+      "verified": true
+    },
+    {
+      "name": "NICHI DO",
+      "pinId": 15357,
+      "sourceUrl": "https://www.instagram.com/nichi_do_kyoto/",
+      "verified": true
+    },
+    {
+      "name": "Niku Soba × NIXOBA",
+      "pinId": 15358,
+      "sourceUrl": "https://www.instagram.com/nixoba.88/",
+      "verified": true
+    },
+    {
+      "name": "HOLLAND VILLAGE KYOTO",
+      "pinId": 15359,
+      "sourceUrl": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+      "verified": true
+    },
+    {
+      "name": "Suito — Kyoto Hachijoguchi",
+      "pinId": 15360,
+      "sourceUrl": "https://www.instagram.com/suito_kyoto/",
+      "verified": true
+    },
+    {
+      "name": "Tonkatsu & Soba An Kyoto",
+      "pinId": 15361,
+      "sourceUrl": "https://www.hotpepper.jp/strJ004678595/",
+      "verified": true
+    },
+    {
+      "name": "MERCY Vegan Ramen — Shijo Kawaramachi",
+      "pinId": 15362,
+      "sourceUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+      "verified": true
+    },
+    {
+      "name": "Sukesan Udon — Kyoto Katsura",
+      "pinId": 15363,
+      "sourceUrl": "https://www.sukesanudon.com/map/branch/map-7981/",
+      "verified": true
+    },
+    {
+      "name": "Yayoiken — Kyoto Kisshoin",
+      "pinId": 15364,
+      "sourceUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+      "verified": true
+    },
+    {
+      "name": "Samjo Kyoto",
+      "pinId": 15365,
+      "sourceUrl": "https://www.instagram.com/samjo._kyoto/",
+      "verified": true
+    },
+    {
+      "name": "Menya RAY — Silky Chicken Tsukemen",
+      "pinId": 15366,
+      "sourceUrl": "https://www.instagram.com/menya_ray/",
+      "verified": true
+    },
+    {
+      "name": "Nigushi & Wine Roji Iru",
+      "pinId": 15367,
+      "sourceUrl": "https://www.instagram.com/rojiiru/",
+      "verified": true
+    },
+    {
+      "name": "Ramen Fukui Kyoto",
+      "pinId": 15368,
+      "sourceUrl": "https://www.instagram.com/ramen.fukui.kyoto/",
+      "verified": true
+    },
+    {
+      "name": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan",
+      "pinId": 15369,
+      "sourceUrl": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+      "verified": true
+    },
+    {
+      "name": "AMBER Kohaku — Kodaiji",
+      "pinId": 15370,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+      "verified": true
+    },
+    {
+      "name": "Garden Court — Grand Court Nagoya",
+      "pinId": 15371,
+      "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+      "verified": true
+    },
+    {
+      "name": "Wing Lounge — Grand Court Nagoya",
+      "pinId": 15372,
+      "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+      "verified": true
+    },
+    {
+      "name": "Stargate Sky Restaurant — Grand Court Nagoya",
+      "pinId": 15373,
+      "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+      "verified": true
+    },
+    {
+      "name": "Karin — Grand Court Nagoya",
+      "pinId": 15374,
+      "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+      "verified": true
+    },
+    {
+      "name": "Yaba Misen — Matsuzakaya Nagoya",
+      "pinId": 15375,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000003954.000025003.html",
+      "verified": true
+    },
+    {
+      "name": "Sagano — Hotel Nikko Princess Kyoto",
+      "pinId": 15376,
+      "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+      "verified": true
+    },
+    {
+      "name": "Hisuien — Hotel Nikko Princess Kyoto",
+      "pinId": 15377,
+      "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+      "verified": true
+    },
+    {
+      "name": "Hoen — Hotel Nikko Princess Kyoto",
+      "pinId": 15378,
+      "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+      "verified": true
+    },
+    {
+      "name": "Darley — Hotel Nikko Princess Kyoto",
+      "pinId": 15379,
+      "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/darley/",
+      "verified": true
+    },
+    {
+      "name": "Amber Court — Hotel Nikko Princess Kyoto",
+      "pinId": 15380,
+      "sourceUrl": "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+      "verified": true
+    },
+    {
+      "name": "Xiyangyang — Ropponmatsu",
+      "pinId": 15381,
+      "sourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+      "verified": true
+    },
+    {
+      "name": "Sushi & Yakitori Sushitori Shoten — Sugamo",
+      "pinId": 15382,
+      "sourceUrl": "https://www.hotpepper.jp/strJ004698990/",
+      "verified": true
+    },
+    {
+      "name": "Shabu-Yo — Aeon Mall Fukuoka Ito",
+      "pinId": 15383,
+      "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+      "verified": true
+    },
+    {
+      "name": "Shabu-Yo — Sapporo Soen",
+      "pinId": 15384,
+      "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+      "verified": true
+    },
+    {
+      "name": "Shabu-Yo — Shinjuku West Exit",
+      "pinId": 15385,
+      "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+      "verified": true
+    },
+    {
+      "name": "REC COFFEE — Island City Teriha",
+      "pinId": 15386,
+      "sourceUrl": "https://rec-coffee.com/blogs/news/20260904",
+      "verified": true
+    },
+    {
+      "name": "AOI NAPOLI OMBRA",
+      "pinId": 15387,
+      "sourceUrl": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra",
+      "verified": true
+    },
+    {
+      "name": "JACK IN THE DONUTS — Tenjin Underground Mall",
+      "pinId": 15388,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+      "verified": true
+    },
+    {
+      "name": "JBOWL — Ritsumeikan-mae",
+      "pinId": 15389,
+      "sourceUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+      "verified": true
+    },
+    {
+      "name": "3_rd Coffee",
+      "pinId": 15390,
+      "sourceUrl": "https://www.instagram.com/3_rdcoffee/",
+      "verified": true
+    },
+    {
+      "name": "Stelo Café by loste",
+      "pinId": 15391,
+      "sourceUrl": "https://www.instagram.com/stelocafekyoto/",
+      "verified": true
+    },
+    {
+      "name": "Sumiro-man — Kyoto Yodobashi",
+      "pinId": 15392,
+      "sourceUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+      "verified": true
+    },
+    {
+      "name": "Wagyu Restaurant SHIKI",
+      "pinId": 15393,
+      "sourceUrl": "https://www.shikitable.com/",
+      "verified": true
+    },
+    {
+      "name": "(BISTRO) MAMA",
+      "pinId": 15394,
+      "sourceUrl": "https://www.instagram.com/mama_kyoto_b/",
+      "verified": true
+    },
+    {
+      "name": "DANNY CHURROS with ∞鯛 — Kyoto",
+      "pinId": 15395,
+      "sourceUrl": "https://www.instagram.com/danny_churros_kyoto/",
+      "verified": true
+    },
+    {
+      "name": "BRISK STAND — Daimaru Shinsaibashi",
+      "pinId": 15396,
+      "sourceUrl": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+      "verified": true
+    },
+    {
+      "name": "Gyukatsu Kyoto Katsugyu — Namba Ekimae",
+      "pinId": 15397,
+      "sourceUrl": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+      "verified": true
+    },
+    {
+      "name": "Taco Bell — Dotonbori",
+      "pinId": 15398,
+      "sourceUrl": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+      "verified": true
+    },
+    {
+      "name": "Sushi & Yakitori Sushitori Shoten — Dotonbori",
+      "pinId": 15399,
+      "sourceUrl": "https://www.hotpepper.jp/strJ004660840/",
+      "verified": true
+    },
+    {
+      "name": "Cucina Bella — Daimaru Shinsaibashi",
+      "pinId": 15400,
+      "sourceUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+      "verified": true
+    },
+    {
+      "name": "Sushi Koki",
+      "pinId": 15401,
+      "sourceUrl": "https://sushi881.com/koki/",
+      "verified": true
+    },
+    {
+      "name": "Sanrio House Cafe — Nagoya PARCO",
+      "pinId": 15402,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+      "verified": true
+    },
+    {
+      "name": "Yamanami — Keio Plaza Hotel Sapporo",
+      "pinId": 15403,
+      "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+      "verified": true
+    },
+    {
+      "name": "Miyama — Keio Plaza Hotel Sapporo",
+      "pinId": 15404,
+      "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+      "verified": true
+    },
+    {
+      "name": "Cross Vault",
+      "pinId": 15405,
+      "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+      "verified": true
+    },
+    {
+      "name": "Garden Dining Waraku",
+      "pinId": 15406,
+      "sourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+      "verified": true
+    },
+    {
+      "name": "Old Saloon 1934",
+      "pinId": 15407,
+      "sourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+      "verified": true
+    },
+    {
+      "name": "Share CAFE — Nagoya Central Park",
+      "pinId": 15408,
+      "sourceUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+      "verified": true
+    },
+    {
+      "name": "Share CAFE — Shinsaibashi BIGSTEP",
+      "pinId": 15409,
+      "sourceUrl": "https://big-step.co.jp/shop/detail/63",
+      "verified": true
+    },
+    {
+      "name": "Share CAFE FLEUR — Shinjuku Marui",
+      "pinId": 15410,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+      "verified": true
+    },
+    {
+      "name": "Share CAFE théâtre — Yurakucho Marui",
+      "pinId": 15411,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+      "verified": true
+    },
+    {
+      "name": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park",
+      "pinId": 15412,
+      "sourceUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+      "verified": true
+    },
+    {
+      "name": "Chocotto Sushi Kiwami",
+      "pinId": 15413,
+      "sourceUrl": "https://chocottosushi-kiwami.owst.jp/",
+      "verified": true
+    },
+    {
+      "name": "Curry Udon Oni wa Soto",
+      "pinId": 15414,
+      "sourceUrl": "https://tofu-corporation.co.jp/shoplist/oniwasoto_curry",
+      "verified": true
+    },
+    {
+      "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+      "pinId": 15415,
+      "sourceUrl": "https://miyanomoricoffee.com/linktower/",
+      "verified": true
+    },
+    {
+      "name": "Q — Ramen / Ryoriya",
+      "pinId": 15416,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000128.000053383.html",
+      "verified": true
+    },
+    {
+      "name": "NorthContinent — Akaren ga",
+      "pinId": 15417,
+      "sourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/",
+      "verified": true
+    },
+    {
+      "name": "Mr. Fish by Hyatt Centric Sapporo",
+      "pinId": 15418,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html",
+      "verified": true
+    },
+    {
+      "name": "Izakaya Furusato — Akaren ga Minami",
+      "pinId": 15419,
+      "sourceUrl": "https://izakaya-furusato.com/shop/#akarengaminami",
+      "verified": true
+    },
+    {
+      "name": "Chef’s Theatre",
+      "pinId": 15420,
+      "sourceUrl": "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+      "verified": true
+    },
+    {
+      "name": "Grand Kitchen",
+      "pinId": 15421,
+      "sourceUrl": "https://en.palacehoteltokyo.com/restaurant/grand-kitchen/",
+      "verified": true
+    },
+    {
+      "name": "YEBISU BEER HALL TOKYO",
+      "pinId": 15422,
+      "sourceUrl": "https://www.ginzalion.jp/yebisu-beerhall-tokyo/",
+      "verified": true
+    },
+    {
+      "name": "Hyotei — Kyoto main store",
+      "pinId": 15423,
+      "sourceUrl": "https://hyotei.co.jp/en/",
+      "verified": true
+    },
+    {
+      "name": "Kikunoi Honten",
+      "pinId": 15424,
+      "sourceUrl": "https://kikunoi.jp/restaurant/",
+      "verified": true
+    },
+    {
+      "name": "Maeda Coffee — Heisei Chishinkan pop-up",
+      "pinId": 15425,
+      "sourceUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+      "verified": true
+    },
+    {
+      "name": "P72",
+      "pinId": 15426,
+      "sourceUrl": "https://patinahotels.com/osaka/drink-and-dine/p72",
+      "verified": true
+    },
+    {
+      "name": "Pierre",
+      "pinId": 15427,
+      "sourceUrl": "https://icosaka.com/offer/pierre_autumnmenu/",
+      "verified": true
+    },
+    {
+      "name": "FUJIYAMA TOKYO — Osaka Umeda",
+      "pinId": 15428,
+      "sourceUrl": "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+      "verified": true
+    },
+    {
+      "name": "Restaurant Hiramatsu Hakata",
+      "pinId": 15429,
+      "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+      "verified": true
+    },
+    {
+      "name": "Eggs ’n Things — Canal City Hakata",
+      "pinId": 15430,
+      "sourceUrl": "https://www.eggsnthingsjapan.com/hakata/",
+      "verified": true
+    },
+    {
+      "name": "SMAAK Hakata",
+      "pinId": 15431,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+      "verified": true
+    },
+    {
+      "name": "PERGOLA",
+      "pinId": 15432,
+      "sourceUrl": "https://www.associa.com/nma/restaurant/pergola/",
+      "verified": true
+    },
+    {
+      "name": "MIKUNI NAGOYA",
+      "pinId": 15433,
+      "sourceUrl": "https://www.associa.com/nma/restaurant/mikuni/",
+      "verified": true
+    },
+    {
+      "name": "Chanko Kokonoe",
+      "pinId": 15434,
+      "sourceUrl": "https://www.tkp-food.net/restaurant/chanko-kokonoe/",
+      "verified": true
+    },
+    {
+      "name": "Totomaru — Tenpaku",
+      "pinId": 15435,
+      "sourceUrl": "https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e",
+      "verified": true
+    },
+    {
+      "name": "SKY J",
+      "pinId": 15436,
+      "sourceUrl": "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+      "verified": true
+    },
+    {
+      "name": "BAR & GRILL Splish",
+      "pinId": 15437,
+      "sourceUrl": "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html",
+      "verified": true
+    },
+    {
+      "name": "Matsu Grill & Bar",
+      "pinId": 15438,
+      "sourceUrl": "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+      "verified": true
+    },
+    {
+      "name": "PAIRINGx HOKKAIDO",
+      "pinId": 15439,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+      "verified": true
+    },
+    {
+      "name": "Hakodate Shunka — Sapporo",
+      "pinId": 15440,
+      "sourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+      "verified": true
+    },
+    {
+      "name": "Ginza Ukai-tei",
+      "pinId": 15441,
+      "sourceUrl": "https://www.ukai.co.jp/english/ginza/",
+      "verified": true
+    },
+    {
+      "name": "Roan Kikunoi",
+      "pinId": 15442,
+      "sourceUrl": "https://kikunoi.jp/restaurant/roan.html",
+      "verified": true
+    },
+    {
+      "name": "Harijyu Dotonbori — Japanese Cuisine",
+      "pinId": 15443,
+      "sourceUrl": "https://www.harijyu.co.jp/shop-info/category/doutonbori/",
+      "verified": true
+    },
+    {
+      "name": "Jardin des Sens Tokyo",
+      "pinId": 15444,
+      "sourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+      "verified": true
+    },
+    {
+      "name": "BBQPIT@Tokyo Prince Hotel",
+      "pinId": 15445,
+      "sourceUrl": "https://www.herofield.com/bbq/tokyoprince/",
+      "verified": true
+    },
+    {
+      "name": "Kanijenne Gion",
+      "pinId": 15446,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000010.000035415.html",
+      "verified": true
+    },
+    {
+      "name": "Neo Nice Burger Kyoto Teramachi",
+      "pinId": 15447,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000043.000129324.html",
+      "verified": true
+    },
+    {
+      "name": "Oreno Kappo Umeda Kitashinchi",
+      "pinId": 15448,
+      "sourceUrl": "https://www.oreno.co.jp/restaurant/kappou_umeda_kitashinchi",
+      "verified": true
+    },
+    {
+      "name": "Essex — Kyoto Century Hotel",
+      "pinId": 15449,
+      "sourceUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+      "verified": true
+    },
+    {
+      "name": "MYPLACE café & bar — Hilton Osaka",
+      "pinId": 15450,
+      "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+      "verified": true
+    },
+    {
+      "name": "Mia Bocca — Sapporo Station North Exit",
+      "pinId": 15306,
+      "sourceUrl": "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+      "verified": true
+    },
+    {
+      "name": "Mia Bocca — Kita 2-jo",
+      "pinId": 15307,
+      "sourceUrl": "https://miabocca.eastone.co.jp/shop/Kita2jo",
+      "verified": true
+    },
+    {
+      "name": "Mia Bocca — JR Kotoni Station",
+      "pinId": 15308,
+      "sourceUrl": "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+      "verified": true
+    },
+    {
+      "name": "Cucina — Shin-Sapporo duo",
+      "pinId": 15309,
+      "sourceUrl": "https://miabocca.eastone.co.jp/shop/sapporoduo",
+      "verified": true
+    },
+    {
+      "name": "Cucina — Atsubetsu Minami",
+      "pinId": 15310,
+      "sourceUrl": "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+      "verified": true
+    },
+    {
+      "name": "Mia Bocca — Shinjuku Takashimaya",
+      "pinId": 15311,
+      "sourceUrl": "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+      "verified": true
+    },
+    {
+      "name": "Mia Bocca — Ikebukuro Tobu",
+      "pinId": 15312,
+      "sourceUrl": "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+      "verified": true
+    },
+    {
+      "name": "Mia Bocca — Emio Shakujii Park",
+      "pinId": 15313,
+      "sourceUrl": "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+      "verified": true
+    }
+  ]
+}

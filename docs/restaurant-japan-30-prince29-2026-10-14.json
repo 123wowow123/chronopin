@@ -1,0 +1,4257 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "sapporo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "All Day Dining Grandeur — Sapporo restaurant guide",
+        "description": "A bright established all-day restaurant with current autumn lunch and dinner buffets, child/member rates and a priced drinks menu.",
+        "sourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+        "address": "1F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+        "productName": "All Day Dining Grandeur",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Nishi 11-chome",
+          "Buffet / European"
+        ],
+        "longFormSummary": "<p>A bright established all-day restaurant with current autumn lunch and dinner buffets, child/member rates and a priced drinks menu.<cite data-ref=\"https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur\"></cite></p><p>Established restaurant. 2026-10-14 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+            "title": "All Day Dining Grandeur source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/facility/autumn2026/",
+            "title": "All Day Dining Grandeur source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurlunch_autumn2026/",
+            "title": "All Day Dining Grandeur source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurdinner_autumndinner2026/",
+            "title": "All Day Dining Grandeur source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/GDhappyhour2026/",
+            "title": "All Day Dining Grandeur source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/drink_menu/",
+            "title": "All Day Dining Grandeur source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/cafe-menu/",
+            "title": "All Day Dining Grandeur source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "menu": {
+            "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+            "name": "All Day Dining Grandeur",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Autumn harvest lunch buffet",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurlunch_autumn2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Adult — weekday",
+                    "price": 4000
+                  },
+                  {
+                    "name": "Adult — weekend/public holiday",
+                    "price": 4500
+                  },
+                  {
+                    "name": "SPGR member adult — weekday",
+                    "price": 3600
+                  },
+                  {
+                    "name": "SPGR member adult — weekend/public holiday",
+                    "price": 4050
+                  },
+                  {
+                    "name": "Age 65+ — weekday",
+                    "price": 3700
+                  },
+                  {
+                    "name": "Age 65+ — weekend/public holiday",
+                    "price": 4200
+                  },
+                  {
+                    "name": "Elementary-school child — weekday",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Elementary-school child — weekend/public holiday",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Age 4 to preschool — weekday",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Age 4 to preschool — weekend/public holiday",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Prince Kids Club elementary child — weekday",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Prince Kids Club elementary child — weekend/public holiday",
+                    "price": 1900
+                  },
+                  {
+                    "name": "Prince Kids Club age 4 to preschool — weekday",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Prince Kids Club age 4 to preschool — weekend/public holiday",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Age three and younger",
+                    "price": 0
+                  }
+                ],
+                "note": "October 1–November 30. Prices include tax, service and soft-drink bar. Age65+ needs age proof; member rates require appropriate membership. Actual buffet samples, subject to supply; no unlabelled photograph species inferred. Checked exact operator venue/gallery, seasonal plan, linked menus and reservation links. No hotel-wide opening date, sister restaurant rating or external award claimed. Photos are venue-specific operator rooms or menu illustrations; unlabelled food identities not inferred. Restaurant reservations phone 011-241-1251 (10:00–18:00), not hotel lodging switchboard."
+              },
+              {
+                "label": "Autumn harvest lunch buffet — named dishes",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurlunch_autumn2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hokkaido bone-in pork braise with Hokkaido apple purée and mushroom sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Truffle-scented maze-soba with soft-cooked egg",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "White Kimimaroko sweet-potato roll cake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Saury and maitake rice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Bread",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Gelato",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Fruit",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                  }
+                ],
+                "note": "These are named operator examples, not a guaranteed entire daily buffet."
+              },
+              {
+                "label": "October–November dinner buffet",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurdinner_autumndinner2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Adult",
+                    "price": 6500
+                  },
+                  {
+                    "name": "SPGR member adult",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Age65+",
+                    "price": 6200
+                  },
+                  {
+                    "name": "Elementary child",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Age4 to preschool",
+                    "price": 1900
+                  },
+                  {
+                    "name": "Prince Kids Club elementary child",
+                    "price": 2900
+                  },
+                  {
+                    "name": "Prince Kids Club age4 to preschool",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Hotel guest adult",
+                    "price": 6100
+                  },
+                  {
+                    "name": "Age three and younger",
+                    "price": 0
+                  }
+                ],
+                "note": "Tax, service and soft-drink bar included. October1–November30, daily17:30–21:00, last order20:30; October17 seating ends19:30. Age/member/guest proof as applicable."
+              },
+              {
+                "label": "October–November dinner buffet — named dishes",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurdinner_autumndinner2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Japanese beef roast with choice of three sauces",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Traditional beef stew baked in pastry",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "White Kimimaroko sweet-potato Mont Blanc with choice of gelato",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Hand-formed nigiri sushi",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Hokkaido scallop in shell with butter and scallop soy sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Hanasaki crab miso soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Bread",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Dessert",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Gelato",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October–November dinner buffet; no separate item price published"
+                  }
+                ],
+                "note": "Actual named examples; no sushi fish species or sauce names inferred."
+              },
+              {
+                "label": "Happy hour — half-price selected alcohol",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/GDhappyhour2026/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Sapporo Classic draft — M",
+                    "price": 575
+                  },
+                  {
+                    "name": "Hokkaido white lemon sour",
+                    "price": 425
+                  },
+                  {
+                    "name": "Glass wine — red or white",
+                    "price": 400
+                  },
+                  {
+                    "name": "Dewar’s — soda, water or rocks",
+                    "price": 425
+                  },
+                  {
+                    "name": "Plum wine",
+                    "price": 425
+                  }
+                ],
+                "note": "Daily15:00–18:00, last order17:30. Tax/service included. Only these selected drinks are half price; no stacking. Christmas/year-end special dates excluded, exact dates not published. Prices and conditions retained here; no invented exclusion calendar or expiry attached to a separate indexed happy-hour offer."
+              },
+              {
+                "label": "Normal drinks and free-flow add-ons",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/drink_menu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Two-hour soft-drink bar",
+                    "price": 800
+                  },
+                  {
+                    "name": "Sapporo Classic draft M380ml",
+                    "price": 1150
+                  },
+                  {
+                    "name": "Sapporo Classic draft S240ml",
+                    "price": 850
+                  },
+                  {
+                    "name": "Sapporo SORACHI1984 draft M",
+                    "price": 1380
+                  },
+                  {
+                    "name": "Sapporo SORACHI1984 draft S",
+                    "price": 900
+                  },
+                  {
+                    "name": "Black Label bottle334ml",
+                    "price": 980
+                  },
+                  {
+                    "name": "Hokkaido white lemon sour",
+                    "price": 850
+                  },
+                  {
+                    "name": "Dewar’s — soda, water or rocks",
+                    "price": 850
+                  },
+                  {
+                    "name": "Glass red/white wine",
+                    "price": 800
+                  },
+                  {
+                    "name": "Glass sparkling wine",
+                    "price": 900
+                  },
+                  {
+                    "name": "Plum wine",
+                    "price": 850
+                  },
+                  {
+                    "name": "Lunch buffet ninety-minute wine free-flow",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Dinner buffet ninety-minute regular free-flow",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Dinner buffet ninety-minute upgraded free-flow",
+                    "price": 3500
+                  }
+                ],
+                "note": "Tax/service included. Wine add-on includes glass sparkling/red/white wine. Dinner regular includes recommended red/white wine, Dewar’s, Kitari barley/sweet-potato shochu, plum wine and listed sour/cocktail categories; upgrade adds Sapporo Classic draft and sparkling wine. Do not assume entire normal drinks catalog belongs to regular add-on. Soft-drink bar includes named hot coffee drinks, juice/soda, vinegar/flavour drinks, green/roasted/black/iced tea and iced coffee."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+            "name": "All Day Dining Grandeur",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+            "phone": "011-241-1251",
+            "openingHours": [
+              {
+                "days": "Breakfast",
+                "hours": "06:00–10:00"
+              },
+              {
+                "days": "Lunch",
+                "hours": "11:30–14:30; food last order14:00; drinks/desserts14:15"
+              },
+              {
+                "days": "Cafe",
+                "hours": "10:00–22:00; last order21:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–21:00; last order20:30; October17 closes19:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/facility/autumn2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurlunch_autumn2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurdinner_autumndinner2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/GDhappyhour2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/drink_menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/cafe-menu/"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/princehotels-sapporo-grandeur/reserve/message"
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "prince29-grandeur",
+            "name": "All Day Dining Grandeur",
+            "neighborhood": "Nishi 11-chome",
+            "cuisine": "Buffet / European",
+            "description": "A bright established all-day restaurant with current autumn lunch and dinner buffets, child/member rates and a priced drinks menu.",
+            "address": "1F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-grandeur-0-5bf6c5f0b7c7c3f8.webp",
+            "imageCredit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+            "imageSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+            "imageNote": "Operator exact-venue dining room / buffet-area photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-grandeur-0-5bf6c5f0b7c7c3f8.webp",
+          "sha256": "5bf6c5f0b7c7c3f892003ef8e36c11e9ec0a983d47f7ce62dbcedb67c3561ae2",
+          "width": 890,
+          "height": 501,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator exact-venue dining room / buffet-area photograph",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-grandeur-1-11e0648fea4203d1.webp",
+          "sha256": "11e0648fea4203d1f333e595d340ba59894a98e1b67d1ba3c47f9159cdb85865",
+          "width": 890,
+          "height": 501,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator exact-venue dining room / buffet-area photograph",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-grandeur-2-ed25ba7c3a3fdf26.webp",
+          "sha256": "ed25ba7c3a3fdf26445fc267e552091e81a672d0565e98d8fe7153cd7ac1beae",
+          "width": 890,
+          "height": 501,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator seasonal menu illustration; displayed portions and food identities are governed by the labelled menu, not inferred from the picture",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurlunch_autumn2026/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "name": "All Day Dining Grandeur",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Autumn harvest lunch buffet",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurlunch_autumn2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Adult — weekday",
+                  "price": 4000
+                },
+                {
+                  "name": "Adult — weekend/public holiday",
+                  "price": 4500
+                },
+                {
+                  "name": "SPGR member adult — weekday",
+                  "price": 3600
+                },
+                {
+                  "name": "SPGR member adult — weekend/public holiday",
+                  "price": 4050
+                },
+                {
+                  "name": "Age 65+ — weekday",
+                  "price": 3700
+                },
+                {
+                  "name": "Age 65+ — weekend/public holiday",
+                  "price": 4200
+                },
+                {
+                  "name": "Elementary-school child — weekday",
+                  "price": 1800
+                },
+                {
+                  "name": "Elementary-school child — weekend/public holiday",
+                  "price": 2000
+                },
+                {
+                  "name": "Age 4 to preschool — weekday",
+                  "price": 1200
+                },
+                {
+                  "name": "Age 4 to preschool — weekend/public holiday",
+                  "price": 1300
+                },
+                {
+                  "name": "Prince Kids Club elementary child — weekday",
+                  "price": 1700
+                },
+                {
+                  "name": "Prince Kids Club elementary child — weekend/public holiday",
+                  "price": 1900
+                },
+                {
+                  "name": "Prince Kids Club age 4 to preschool — weekday",
+                  "price": 1100
+                },
+                {
+                  "name": "Prince Kids Club age 4 to preschool — weekend/public holiday",
+                  "price": 1200
+                },
+                {
+                  "name": "Age three and younger",
+                  "price": 0
+                }
+              ],
+              "note": "October 1–November 30. Prices include tax, service and soft-drink bar. Age65+ needs age proof; member rates require appropriate membership. Actual buffet samples, subject to supply; no unlabelled photograph species inferred. Checked exact operator venue/gallery, seasonal plan, linked menus and reservation links. No hotel-wide opening date, sister restaurant rating or external award claimed. Photos are venue-specific operator rooms or menu illustrations; unlabelled food identities not inferred. Restaurant reservations phone 011-241-1251 (10:00–18:00), not hotel lodging switchboard."
+            },
+            {
+              "label": "Autumn harvest lunch buffet — named dishes",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurlunch_autumn2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hokkaido bone-in pork braise with Hokkaido apple purée and mushroom sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Truffle-scented maze-soba with soft-cooked egg",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "White Kimimaroko sweet-potato roll cake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Saury and maitake rice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Bread",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Salad",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Gelato",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "Fruit",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn harvest lunch buffet; no separate item price published"
+                }
+              ],
+              "note": "These are named operator examples, not a guaranteed entire daily buffet."
+            },
+            {
+              "label": "October–November dinner buffet",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurdinner_autumndinner2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Adult",
+                  "price": 6500
+                },
+                {
+                  "name": "SPGR member adult",
+                  "price": 6000
+                },
+                {
+                  "name": "Age65+",
+                  "price": 6200
+                },
+                {
+                  "name": "Elementary child",
+                  "price": 3000
+                },
+                {
+                  "name": "Age4 to preschool",
+                  "price": 1900
+                },
+                {
+                  "name": "Prince Kids Club elementary child",
+                  "price": 2900
+                },
+                {
+                  "name": "Prince Kids Club age4 to preschool",
+                  "price": 1800
+                },
+                {
+                  "name": "Hotel guest adult",
+                  "price": 6100
+                },
+                {
+                  "name": "Age three and younger",
+                  "price": 0
+                }
+              ],
+              "note": "Tax, service and soft-drink bar included. October1–November30, daily17:30–21:00, last order20:30; October17 seating ends19:30. Age/member/guest proof as applicable."
+            },
+            {
+              "label": "October–November dinner buffet — named dishes",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurdinner_autumndinner2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Japanese beef roast with choice of three sauces",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "Traditional beef stew baked in pastry",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "White Kimimaroko sweet-potato Mont Blanc with choice of gelato",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "Hand-formed nigiri sushi",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "Hokkaido scallop in shell with butter and scallop soy sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "Hanasaki crab miso soup",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "Bread",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "Salad",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "Dessert",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                },
+                {
+                  "name": "Gelato",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October–November dinner buffet; no separate item price published"
+                }
+              ],
+              "note": "Actual named examples; no sushi fish species or sauce names inferred."
+            },
+            {
+              "label": "Happy hour — half-price selected alcohol",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/GDhappyhour2026/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Sapporo Classic draft — M",
+                  "price": 575
+                },
+                {
+                  "name": "Hokkaido white lemon sour",
+                  "price": 425
+                },
+                {
+                  "name": "Glass wine — red or white",
+                  "price": 400
+                },
+                {
+                  "name": "Dewar’s — soda, water or rocks",
+                  "price": 425
+                },
+                {
+                  "name": "Plum wine",
+                  "price": 425
+                }
+              ],
+              "note": "Daily15:00–18:00, last order17:30. Tax/service included. Only these selected drinks are half price; no stacking. Christmas/year-end special dates excluded, exact dates not published. Prices and conditions retained here; no invented exclusion calendar or expiry attached to a separate indexed happy-hour offer."
+            },
+            {
+              "label": "Normal drinks and free-flow add-ons",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/drink_menu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Two-hour soft-drink bar",
+                  "price": 800
+                },
+                {
+                  "name": "Sapporo Classic draft M380ml",
+                  "price": 1150
+                },
+                {
+                  "name": "Sapporo Classic draft S240ml",
+                  "price": 850
+                },
+                {
+                  "name": "Sapporo SORACHI1984 draft M",
+                  "price": 1380
+                },
+                {
+                  "name": "Sapporo SORACHI1984 draft S",
+                  "price": 900
+                },
+                {
+                  "name": "Black Label bottle334ml",
+                  "price": 980
+                },
+                {
+                  "name": "Hokkaido white lemon sour",
+                  "price": 850
+                },
+                {
+                  "name": "Dewar’s — soda, water or rocks",
+                  "price": 850
+                },
+                {
+                  "name": "Glass red/white wine",
+                  "price": 800
+                },
+                {
+                  "name": "Glass sparkling wine",
+                  "price": 900
+                },
+                {
+                  "name": "Plum wine",
+                  "price": 850
+                },
+                {
+                  "name": "Lunch buffet ninety-minute wine free-flow",
+                  "price": 1500
+                },
+                {
+                  "name": "Dinner buffet ninety-minute regular free-flow",
+                  "price": 3000
+                },
+                {
+                  "name": "Dinner buffet ninety-minute upgraded free-flow",
+                  "price": 3500
+                }
+              ],
+              "note": "Tax/service included. Wine add-on includes glass sparkling/red/white wine. Dinner regular includes recommended red/white wine, Dewar’s, Kitari barley/sweet-potato shochu, plum wine and listed sour/cocktail categories; upgrade adds Sapporo Classic draft and sparkling wine. Do not assume entire normal drinks catalog belongs to regular add-on. Soft-drink bar includes named hot coffee drinks, juice/soda, vinegar/flavour drinks, green/roasted/black/iced tea and iced coffee."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn harvest lunch buffet",
+              "kind": "lunch",
+              "description": "Dated autumn buffet, adult ¥4,000 weekdays/¥4,500 weekends and holidays, tax/service and soft-drink bar included.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurlunch_autumn2026/",
+              "menuLabel": "Autumn harvest lunch buffet",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Food last order14:00; drinks/desserts14:15.",
+                "Age/member rates separately published; age65+ proof required.",
+                "Actual menu examples can change with supply."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "October–November dinner buffet",
+              "kind": "other",
+              "description": "Dated hotel dinner buffet, adult ¥6,500 including tax, service and soft-drink bar.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurdinner_autumndinner2026/",
+              "menuLabel": "October–November dinner buffet",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Last order20:30.",
+                "October17 seating is17:30–19:30; separate one-day offer uses the shorter window.",
+                "Guest/member/age rates require eligibility."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "21:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-17"
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "October17 dinner buffet — shortened service",
+              "kind": "other",
+              "description": "Same dated dinner buffet; October17 seating ends19:30.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/alldaydininggrandeur/grandeurdinner_autumndinner2026/",
+              "menuLabel": "October–November dinner buffet",
+              "discounted": false,
+              "validFrom": "2026-10-17",
+              "validThrough": "2026-10-17",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Regular21:00 closing does not apply on October17."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "19:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Nishi 11-chome",
+          "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-grandeur-0-5bf6c5f0b7c7c3f8.webp",
+            "alt": "All Day Dining Grandeur — Operator exact-venue dining room / buffet-area photograph",
+            "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+            "sourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+            "originalUrl": "https://www.princehotels.co.jp/sapporo/images/grandeur_main_20251228_16_9.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Chinese Restaurant Fuyojo — Sapporo restaurant guide",
+        "description": "An established Chinese dining room with autumn set/course menus, published à la carte prices and private rooms.",
+        "sourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+        "address": "2F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+        "productName": "Chinese Restaurant Fuyojo",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Nishi 11-chome",
+          "Chinese"
+        ],
+        "longFormSummary": "<p>An established Chinese dining room with autumn set/course menus, published à la carte prices and private rooms.<cite data-ref=\"https://www.princehotels.co.jp/sapporo/restaurant/fuyojo\"></cite></p><p>Established restaurant. 2026-10-14 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+            "title": "Chinese Restaurant Fuyojo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/facility/autumn2026/",
+            "title": "Chinese Restaurant Fuyojo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+            "title": "Chinese Restaurant Fuyojo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/alacarte/",
+            "title": "Chinese Restaurant Fuyojo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/private_room/",
+            "title": "Chinese Restaurant Fuyojo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "menu": {
+            "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+            "name": "Chinese Restaurant Fuyojo",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Autumn Kofuku Saifu dinner",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kofuku Saifu course",
+                    "price": 10000
+                  },
+                  {
+                    "name": "Kofuku Saifu — SPGR member",
+                    "price": 9000
+                  },
+                  {
+                    "name": "Fuyo Saifu course",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Fuyo Saifu — SPGR member",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Shifuku Saifu course",
+                    "price": 13000
+                  },
+                  {
+                    "name": "Shifuku Saifu — SPGR member",
+                    "price": 12000
+                  },
+                  {
+                    "name": "Chinese gozen set",
+                    "price": 4500
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. October–November menus. Each course minimum two diners; member rates require SPGR. Sets/courses last order20:00; normal dinner last order20:30. No cross-course dishes inferred. Checked exact operator venue/gallery, seasonal plan, linked menus and reservation links. No hotel-wide opening date, sister restaurant rating or external award claimed. Photos are venue-specific operator rooms or menu illustrations; unlabelled food identities not inferred. Restaurant reservations phone 011-241-1251 (10:00–18:00), not hotel lodging switchboard."
+              },
+              {
+                "label": "Chinese gozen set — named dishes",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "前菜盛り合わせ　サラダ仕立て",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  },
+                  {
+                    "name": "点心盛り合わせ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  },
+                  {
+                    "name": "海老と野菜の塩味炒め",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  },
+                  {
+                    "name": "ホイコーロー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  },
+                  {
+                    "name": "鶏のから揚げ　玉子チリソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  },
+                  {
+                    "name": "フカヒレ入り蒸し鶏のスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  },
+                  {
+                    "name": "白飯",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  },
+                  {
+                    "name": "漬物",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  },
+                  {
+                    "name": "本日のデザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chinese gozen set; no separate item price published"
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Actual October/November named contents; supply changes possible."
+              },
+              {
+                "label": "Fuyo Saifu course — named dishes",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "前菜四種盛り合わせ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Fuyo Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "ジャガイモとフカヒレのスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Fuyo Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産帆立貝の南瓜マヨネーズソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Fuyo Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "国産牛肉とレンコンのオイスターソース炒め",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Fuyo Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "大海老のチリソース煮",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Fuyo Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産豚肉　栗　きのこの醤油煮込み",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Fuyo Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "鮭と大葉のチャーハン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Fuyo Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "本日のデザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Fuyo Saifu course; no separate item price published"
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Actual October/November named contents; supply changes possible."
+              },
+              {
+                "label": "Kofuku Saifu course — named dishes",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "一口前菜五種盛り合わせ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Kofuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "松茸とフカヒレのスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Kofuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産帆立貝の南瓜マヨネーズソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Kofuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "国産牛肉とレンコンのオイスターソース炒め",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Kofuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "大海老のチリソース煮　スパイシーポテト添え",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Kofuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産豚角煮と蝦夷鮑と栗の醤油煮込み",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Kofuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "鮭と大葉のチャーハン　イクラ添え",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Kofuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "本日のデザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Kofuku Saifu course; no separate item price published"
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Actual October/November named contents; supply changes possible."
+              },
+              {
+                "label": "Shifuku Saifu course — named dishes",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "チャイニーズ　アミューズ　ブッシュ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "一口前菜五種盛り合わせ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "フカヒレの姿煮　松茸のアクセント",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産帆立貝の南瓜マヨネーズソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "オマールエビのチリソース煮　スパイシーポテト添え",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産十勝ハーブ牛フィレ肉の黒胡椒炒め",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産豚角煮と蝦夷鮑と栗の醤油煮込み",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "鮭と大葉のチャーハン　イクラ添え",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  },
+                  {
+                    "name": "本日のデザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shifuku Saifu course; no separate item price published"
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Actual October/November named contents; supply changes possible."
+              },
+              {
+                "label": "Lunch à la carte",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/alacarte/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "海老のチリソース煮＜2名さま盛り＞",
+                    "price": 1700
+                  },
+                  {
+                    "name": "大海老のチリソース煮＜2名さま盛り＞",
+                    "price": 2250
+                  },
+                  {
+                    "name": "帆立貝のXO醤炒め＜2名さま盛り＞",
+                    "price": 2650
+                  },
+                  {
+                    "name": "蟹玉＜2名さま盛り＞",
+                    "price": 1550
+                  },
+                  {
+                    "name": "牛肉とピーマンの細切り炒め＜2名さま盛り＞",
+                    "price": 2100
+                  },
+                  {
+                    "name": "豚肉とピーマンの細切り炒め＜2名さま盛り＞",
+                    "price": 1700
+                  },
+                  {
+                    "name": "酢豚または黒酢の酢豚＜2名さま盛り＞",
+                    "price": 1980
+                  },
+                  {
+                    "name": "鶏の唐辛子炒め＜2名さま盛り＞",
+                    "price": 1400
+                  },
+                  {
+                    "name": "鶏の唐揚げ＜2名さま盛り＞",
+                    "price": 1400
+                  },
+                  {
+                    "name": "麻婆豆腐または四川麻婆豆腐＜2名さま盛り＞",
+                    "price": 1200
+                  },
+                  {
+                    "name": "焼きぎょうざ（6個）",
+                    "price": 900
+                  },
+                  {
+                    "name": "しゅうまい（6個）",
+                    "price": 900
+                  },
+                  {
+                    "name": "はるまき（1本）",
+                    "price": 200
+                  },
+                  {
+                    "name": "ショウロンポウ（1個）",
+                    "price": 200
+                  },
+                  {
+                    "name": "五目チャーハン",
+                    "price": 1500
+                  },
+                  {
+                    "name": "蟹とレタスのチャーハン",
+                    "price": 1600
+                  },
+                  {
+                    "name": "海老のチャーハン",
+                    "price": 1500
+                  },
+                  {
+                    "name": "五目あんかけご飯",
+                    "price": 1500
+                  },
+                  {
+                    "name": "フカヒレと蟹のあんかけご飯",
+                    "price": 2700
+                  },
+                  {
+                    "name": "五目湯麵",
+                    "price": 1550
+                  },
+                  {
+                    "name": "酸辣湯麺（サンラータンメン）",
+                    "price": 1600
+                  },
+                  {
+                    "name": "白胡麻担々麺",
+                    "price": 1500
+                  },
+                  {
+                    "name": "搾菜肉絲湯麺（ザーサイルースータンメン）",
+                    "price": 1500
+                  },
+                  {
+                    "name": "海老の塩味湯麵",
+                    "price": 1550
+                  },
+                  {
+                    "name": "フカヒレと蟹の湯麵",
+                    "price": 2750
+                  },
+                  {
+                    "name": "五目あんかけ焼きそば",
+                    "price": 1550
+                  },
+                  {
+                    "name": "酸辣焼きそば",
+                    "price": 1550
+                  },
+                  {
+                    "name": "海老の塩味あんかけ焼きそば",
+                    "price": 1550
+                  },
+                  {
+                    "name": "白飯",
+                    "price": 320
+                  },
+                  {
+                    "name": "ランチ杏仁豆腐",
+                    "price": 450
+                  },
+                  {
+                    "name": "バニラアイス",
+                    "price": 400
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Exact published portion labels retained; normal two-person servings are distinct from larger platter prices. Normal menu items are not assumed part of a course."
+              },
+              {
+                "label": "Dinner à la carte",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/alacarte/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "くらげの冷菜＜2名さま盛り＞",
+                    "price": 2250
+                  },
+                  {
+                    "name": "バンバンジー＜2名さま盛り＞",
+                    "price": 1600
+                  },
+                  {
+                    "name": "白菜のピリ辛甘酢漬け＜2名さま盛り＞",
+                    "price": 1350
+                  },
+                  {
+                    "name": "前菜三種盛り合わせ＜2名さま盛り＞",
+                    "price": 2700
+                  },
+                  {
+                    "name": "チャーシューサラダ＜2名さま盛り＞",
+                    "price": 940
+                  },
+                  {
+                    "name": "ピータン＜2名さま盛り＞",
+                    "price": 1200
+                  },
+                  {
+                    "name": "海老のチリソース煮＜2名さま盛り＞",
+                    "price": 1700
+                  },
+                  {
+                    "name": "海老のマヨネーズ和え＜2名さま盛り＞",
+                    "price": 1700
+                  },
+                  {
+                    "name": "大海老のチリソース煮＜2名さま盛り＞",
+                    "price": 2250
+                  },
+                  {
+                    "name": "大海老と野菜の塩味炒め＜2名さま盛り＞",
+                    "price": 2250
+                  },
+                  {
+                    "name": "帆立貝のXO醤炒め＜2名さま盛り＞",
+                    "price": 2650
+                  },
+                  {
+                    "name": "鮑のクリーム煮＜2名さま盛り＞",
+                    "price": 5500
+                  },
+                  {
+                    "name": "蟹玉＜2名さま盛り＞",
+                    "price": 1550
+                  },
+                  {
+                    "name": "野菜炒め＜2名さま盛り＞",
+                    "price": 1450
+                  },
+                  {
+                    "name": "牛肉と彩りピーマンの細切り炒め＜2名さま盛り＞",
+                    "price": 2100
+                  },
+                  {
+                    "name": "牛肉と野菜の黒胡椒炒め＜2名さま盛り＞",
+                    "price": 2100
+                  },
+                  {
+                    "name": "牛肉の細切り甘辛味噌炒め　蒸しパン添え＜2名さま盛り＞",
+                    "price": 2100
+                  },
+                  {
+                    "name": "豚肉と彩りピーマンの細切り炒め＜2名さま盛り＞",
+                    "price": 1700
+                  },
+                  {
+                    "name": "豚肉と野菜の四川辛味炒め＜2名さま盛り＞",
+                    "price": 1700
+                  },
+                  {
+                    "name": "酢豚または黒酢の酢豚＜2名さま盛り＞　通常",
+                    "price": 1980
+                  },
+                  {
+                    "name": "牛タンのやわらか煮込み",
+                    "price": 2310
+                  },
+                  {
+                    "name": "鶏のカシューナッツ炒め＜2名さま盛り＞",
+                    "price": 1400
+                  },
+                  {
+                    "name": "鶏の唐辛子炒め＜2名さま盛り＞",
+                    "price": 1400
+                  },
+                  {
+                    "name": "鶏の唐揚げ＜2名さま盛り＞",
+                    "price": 1400
+                  },
+                  {
+                    "name": "五目肉野菜炒め＜2名さま盛り＞",
+                    "price": 1850
+                  },
+                  {
+                    "name": "麻婆豆腐または四川麻婆豆腐＜2名さま盛り＞",
+                    "price": 1200
+                  },
+                  {
+                    "name": "北京ダック（4枚）",
+                    "price": 4400
+                  },
+                  {
+                    "name": "フカヒレの姿煮（1枚）",
+                    "price": 12000
+                  },
+                  {
+                    "name": "五目チャーハン",
+                    "price": 1500
+                  },
+                  {
+                    "name": "とびっこのチャーハン",
+                    "price": 1400
+                  },
+                  {
+                    "name": "蟹とレタスのチャーハン",
+                    "price": 1600
+                  },
+                  {
+                    "name": "海老のチャーハン",
+                    "price": 1500
+                  },
+                  {
+                    "name": "五目あんかけご飯",
+                    "price": 1500
+                  },
+                  {
+                    "name": "フカヒレと蟹のあんかけご飯",
+                    "price": 2700
+                  },
+                  {
+                    "name": "五目あんかけ焼きそば",
+                    "price": 1550
+                  },
+                  {
+                    "name": "魚介の塩味あんかけ焼きそば",
+                    "price": 1700
+                  },
+                  {
+                    "name": "海老の塩味あんけけ焼きそば",
+                    "price": 1550
+                  },
+                  {
+                    "name": "酸辣焼きそば",
+                    "price": 1550
+                  },
+                  {
+                    "name": "五目湯麵",
+                    "price": 1550
+                  },
+                  {
+                    "name": "白胡麻担々麺",
+                    "price": 1500
+                  },
+                  {
+                    "name": "搾菜肉絲湯麺（ザーサイルースータンメン）",
+                    "price": 1500
+                  },
+                  {
+                    "name": "酸辣湯麺（サンラータンメン）",
+                    "price": 1600
+                  },
+                  {
+                    "name": "魚介の塩味湯麵",
+                    "price": 1700
+                  },
+                  {
+                    "name": "フカヒレと蟹の湯麵",
+                    "price": 2750
+                  },
+                  {
+                    "name": "海老の塩味湯麵",
+                    "price": 1550
+                  },
+                  {
+                    "name": "玉子スープ",
+                    "price": 600
+                  },
+                  {
+                    "name": "とうもろこしスープ",
+                    "price": 600
+                  },
+                  {
+                    "name": "フカヒレスープ",
+                    "price": 1650
+                  },
+                  {
+                    "name": "焼きぎょうざ（6個）",
+                    "price": 900
+                  },
+                  {
+                    "name": "しゅうまい（6個）",
+                    "price": 900
+                  },
+                  {
+                    "name": "はるまき（1本）",
+                    "price": 200
+                  },
+                  {
+                    "name": "ショウロンポウ（1個）",
+                    "price": 200
+                  },
+                  {
+                    "name": "あん入り胡麻団子（1個）",
+                    "price": 200
+                  },
+                  {
+                    "name": "杏仁豆腐",
+                    "price": 800
+                  },
+                  {
+                    "name": "バニラアイスクリーム",
+                    "price": 650
+                  },
+                  {
+                    "name": "Sweet-and-sour pork or black-vinegar pork — small platter",
+                    "price": 3180
+                  },
+                  {
+                    "name": "Sweet-and-sour pork or black-vinegar pork — medium platter",
+                    "price": 4380
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Exact published portion labels retained; normal two-person servings are distinct from larger platter prices. Normal menu items are not assumed part of a course."
+              },
+              {
+                "label": "Lunch meal coffee benefit and drinks add-ons",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/alacarte/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Coffee with lunch meal — normally500",
+                    "price": 250
+                  },
+                  {
+                    "name": "Draft-beer free-flow add-on",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Bottled-beer free-flow add-on",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Child elementary free-flow",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Age4 to preschool free-flow",
+                    "price": 500
+                  },
+                  {
+                    "name": "Age3 and younger free-flow",
+                    "price": 0
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Lunch coffee requires a meal. Actual add-on list includes jar-aged Shaoxing, whisky/highball styles, red/white/sparkling wine, shochu, sake, apricot wine, jasmine shochu, lemon/grapefruit sour, cola/ginger ale/orange/oolong and nonalcoholic beer; draft versus bottled beer depends on plan. Do not infer unspecified brand labels or standalone drink prices."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+            "name": "Chinese Restaurant Fuyojo",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+            "phone": "011-241-1251",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–14:30; last order14:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–21:00; normal last order20:30, sets/courses20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/facility/autumn2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/alacarte/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/private_room/"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/princehotels-sapporo-fuyojo/reserve"
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "prince29-fuyojo",
+            "name": "Chinese Restaurant Fuyojo",
+            "neighborhood": "Nishi 11-chome",
+            "cuisine": "Chinese",
+            "description": "An established Chinese dining room with autumn set/course menus, published à la carte prices and private rooms.",
+            "address": "2F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-fuyojo-0-7b89584d76bf097f.webp",
+            "imageCredit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+            "imageSourceUrl": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/private_room/",
+            "imageNote": "Operator private dining-room photograph; separate reservation/room conditions apply"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-fuyojo-0-7b89584d76bf097f.webp",
+          "sha256": "7b89584d76bf097f173fa0b9c7fbc4673dce043c1ad27fc59329cc6607948306",
+          "width": 890,
+          "height": 501,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator private dining-room photograph; separate reservation/room conditions apply",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/private_room/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-fuyojo-1-cdd74e48b125e082.webp",
+          "sha256": "cdd74e48b125e082c1edba434f0ffabea73c4ef6d75f9b5b332adcaeb7e8cf78",
+          "width": 890,
+          "height": 501,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator private dining-room photograph; separate reservation/room conditions apply",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/private_room/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-fuyojo-2-a9a5f1ade26750ad.webp",
+          "sha256": "a9a5f1ade26750ad68649b27b376e5d910bfdb965743c2b855f46643742233ef",
+          "width": 890,
+          "height": 501,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator branch dinner illustration; not a guaranteed list of included seasonal dishes",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "name": "Chinese Restaurant Fuyojo",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Autumn Kofuku Saifu dinner",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Kofuku Saifu course",
+                  "price": 10000
+                },
+                {
+                  "name": "Kofuku Saifu — SPGR member",
+                  "price": 9000
+                },
+                {
+                  "name": "Fuyo Saifu course",
+                  "price": 7000
+                },
+                {
+                  "name": "Fuyo Saifu — SPGR member",
+                  "price": 6000
+                },
+                {
+                  "name": "Shifuku Saifu course",
+                  "price": 13000
+                },
+                {
+                  "name": "Shifuku Saifu — SPGR member",
+                  "price": 12000
+                },
+                {
+                  "name": "Chinese gozen set",
+                  "price": 4500
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. October–November menus. Each course minimum two diners; member rates require SPGR. Sets/courses last order20:00; normal dinner last order20:30. No cross-course dishes inferred. Checked exact operator venue/gallery, seasonal plan, linked menus and reservation links. No hotel-wide opening date, sister restaurant rating or external award claimed. Photos are venue-specific operator rooms or menu illustrations; unlabelled food identities not inferred. Restaurant reservations phone 011-241-1251 (10:00–18:00), not hotel lodging switchboard."
+            },
+            {
+              "label": "Chinese gozen set — named dishes",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "前菜盛り合わせ　サラダ仕立て",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                },
+                {
+                  "name": "点心盛り合わせ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                },
+                {
+                  "name": "海老と野菜の塩味炒め",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                },
+                {
+                  "name": "ホイコーロー",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                },
+                {
+                  "name": "鶏のから揚げ　玉子チリソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                },
+                {
+                  "name": "フカヒレ入り蒸し鶏のスープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                },
+                {
+                  "name": "白飯",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                },
+                {
+                  "name": "漬物",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                },
+                {
+                  "name": "本日のデザート",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chinese gozen set; no separate item price published"
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Actual October/November named contents; supply changes possible."
+            },
+            {
+              "label": "Fuyo Saifu course — named dishes",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "前菜四種盛り合わせ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Fuyo Saifu course; no separate item price published"
+                },
+                {
+                  "name": "ジャガイモとフカヒレのスープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Fuyo Saifu course; no separate item price published"
+                },
+                {
+                  "name": "北海道産帆立貝の南瓜マヨネーズソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Fuyo Saifu course; no separate item price published"
+                },
+                {
+                  "name": "国産牛肉とレンコンのオイスターソース炒め",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Fuyo Saifu course; no separate item price published"
+                },
+                {
+                  "name": "大海老のチリソース煮",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Fuyo Saifu course; no separate item price published"
+                },
+                {
+                  "name": "北海道産豚肉　栗　きのこの醤油煮込み",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Fuyo Saifu course; no separate item price published"
+                },
+                {
+                  "name": "鮭と大葉のチャーハン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Fuyo Saifu course; no separate item price published"
+                },
+                {
+                  "name": "本日のデザート",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Fuyo Saifu course; no separate item price published"
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Actual October/November named contents; supply changes possible."
+            },
+            {
+              "label": "Kofuku Saifu course — named dishes",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "一口前菜五種盛り合わせ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Kofuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "松茸とフカヒレのスープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Kofuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "北海道産帆立貝の南瓜マヨネーズソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Kofuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "国産牛肉とレンコンのオイスターソース炒め",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Kofuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "大海老のチリソース煮　スパイシーポテト添え",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Kofuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "北海道産豚角煮と蝦夷鮑と栗の醤油煮込み",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Kofuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "鮭と大葉のチャーハン　イクラ添え",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Kofuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "本日のデザート",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Kofuku Saifu course; no separate item price published"
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Actual October/November named contents; supply changes possible."
+            },
+            {
+              "label": "Shifuku Saifu course — named dishes",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "チャイニーズ　アミューズ　ブッシュ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "一口前菜五種盛り合わせ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "フカヒレの姿煮　松茸のアクセント",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "北海道産帆立貝の南瓜マヨネーズソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "オマールエビのチリソース煮　スパイシーポテト添え",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "北海道産十勝ハーブ牛フィレ肉の黒胡椒炒め",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "北海道産豚角煮と蝦夷鮑と栗の醤油煮込み",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "鮭と大葉のチャーハン　イクラ添え",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                },
+                {
+                  "name": "本日のデザート",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shifuku Saifu course; no separate item price published"
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Actual October/November named contents; supply changes possible."
+            },
+            {
+              "label": "Lunch à la carte",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/alacarte/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "海老のチリソース煮＜2名さま盛り＞",
+                  "price": 1700
+                },
+                {
+                  "name": "大海老のチリソース煮＜2名さま盛り＞",
+                  "price": 2250
+                },
+                {
+                  "name": "帆立貝のXO醤炒め＜2名さま盛り＞",
+                  "price": 2650
+                },
+                {
+                  "name": "蟹玉＜2名さま盛り＞",
+                  "price": 1550
+                },
+                {
+                  "name": "牛肉とピーマンの細切り炒め＜2名さま盛り＞",
+                  "price": 2100
+                },
+                {
+                  "name": "豚肉とピーマンの細切り炒め＜2名さま盛り＞",
+                  "price": 1700
+                },
+                {
+                  "name": "酢豚または黒酢の酢豚＜2名さま盛り＞",
+                  "price": 1980
+                },
+                {
+                  "name": "鶏の唐辛子炒め＜2名さま盛り＞",
+                  "price": 1400
+                },
+                {
+                  "name": "鶏の唐揚げ＜2名さま盛り＞",
+                  "price": 1400
+                },
+                {
+                  "name": "麻婆豆腐または四川麻婆豆腐＜2名さま盛り＞",
+                  "price": 1200
+                },
+                {
+                  "name": "焼きぎょうざ（6個）",
+                  "price": 900
+                },
+                {
+                  "name": "しゅうまい（6個）",
+                  "price": 900
+                },
+                {
+                  "name": "はるまき（1本）",
+                  "price": 200
+                },
+                {
+                  "name": "ショウロンポウ（1個）",
+                  "price": 200
+                },
+                {
+                  "name": "五目チャーハン",
+                  "price": 1500
+                },
+                {
+                  "name": "蟹とレタスのチャーハン",
+                  "price": 1600
+                },
+                {
+                  "name": "海老のチャーハン",
+                  "price": 1500
+                },
+                {
+                  "name": "五目あんかけご飯",
+                  "price": 1500
+                },
+                {
+                  "name": "フカヒレと蟹のあんかけご飯",
+                  "price": 2700
+                },
+                {
+                  "name": "五目湯麵",
+                  "price": 1550
+                },
+                {
+                  "name": "酸辣湯麺（サンラータンメン）",
+                  "price": 1600
+                },
+                {
+                  "name": "白胡麻担々麺",
+                  "price": 1500
+                },
+                {
+                  "name": "搾菜肉絲湯麺（ザーサイルースータンメン）",
+                  "price": 1500
+                },
+                {
+                  "name": "海老の塩味湯麵",
+                  "price": 1550
+                },
+                {
+                  "name": "フカヒレと蟹の湯麵",
+                  "price": 2750
+                },
+                {
+                  "name": "五目あんかけ焼きそば",
+                  "price": 1550
+                },
+                {
+                  "name": "酸辣焼きそば",
+                  "price": 1550
+                },
+                {
+                  "name": "海老の塩味あんかけ焼きそば",
+                  "price": 1550
+                },
+                {
+                  "name": "白飯",
+                  "price": 320
+                },
+                {
+                  "name": "ランチ杏仁豆腐",
+                  "price": 450
+                },
+                {
+                  "name": "バニラアイス",
+                  "price": 400
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Exact published portion labels retained; normal two-person servings are distinct from larger platter prices. Normal menu items are not assumed part of a course."
+            },
+            {
+              "label": "Dinner à la carte",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/alacarte/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "くらげの冷菜＜2名さま盛り＞",
+                  "price": 2250
+                },
+                {
+                  "name": "バンバンジー＜2名さま盛り＞",
+                  "price": 1600
+                },
+                {
+                  "name": "白菜のピリ辛甘酢漬け＜2名さま盛り＞",
+                  "price": 1350
+                },
+                {
+                  "name": "前菜三種盛り合わせ＜2名さま盛り＞",
+                  "price": 2700
+                },
+                {
+                  "name": "チャーシューサラダ＜2名さま盛り＞",
+                  "price": 940
+                },
+                {
+                  "name": "ピータン＜2名さま盛り＞",
+                  "price": 1200
+                },
+                {
+                  "name": "海老のチリソース煮＜2名さま盛り＞",
+                  "price": 1700
+                },
+                {
+                  "name": "海老のマヨネーズ和え＜2名さま盛り＞",
+                  "price": 1700
+                },
+                {
+                  "name": "大海老のチリソース煮＜2名さま盛り＞",
+                  "price": 2250
+                },
+                {
+                  "name": "大海老と野菜の塩味炒め＜2名さま盛り＞",
+                  "price": 2250
+                },
+                {
+                  "name": "帆立貝のXO醤炒め＜2名さま盛り＞",
+                  "price": 2650
+                },
+                {
+                  "name": "鮑のクリーム煮＜2名さま盛り＞",
+                  "price": 5500
+                },
+                {
+                  "name": "蟹玉＜2名さま盛り＞",
+                  "price": 1550
+                },
+                {
+                  "name": "野菜炒め＜2名さま盛り＞",
+                  "price": 1450
+                },
+                {
+                  "name": "牛肉と彩りピーマンの細切り炒め＜2名さま盛り＞",
+                  "price": 2100
+                },
+                {
+                  "name": "牛肉と野菜の黒胡椒炒め＜2名さま盛り＞",
+                  "price": 2100
+                },
+                {
+                  "name": "牛肉の細切り甘辛味噌炒め　蒸しパン添え＜2名さま盛り＞",
+                  "price": 2100
+                },
+                {
+                  "name": "豚肉と彩りピーマンの細切り炒め＜2名さま盛り＞",
+                  "price": 1700
+                },
+                {
+                  "name": "豚肉と野菜の四川辛味炒め＜2名さま盛り＞",
+                  "price": 1700
+                },
+                {
+                  "name": "酢豚または黒酢の酢豚＜2名さま盛り＞　通常",
+                  "price": 1980
+                },
+                {
+                  "name": "牛タンのやわらか煮込み",
+                  "price": 2310
+                },
+                {
+                  "name": "鶏のカシューナッツ炒め＜2名さま盛り＞",
+                  "price": 1400
+                },
+                {
+                  "name": "鶏の唐辛子炒め＜2名さま盛り＞",
+                  "price": 1400
+                },
+                {
+                  "name": "鶏の唐揚げ＜2名さま盛り＞",
+                  "price": 1400
+                },
+                {
+                  "name": "五目肉野菜炒め＜2名さま盛り＞",
+                  "price": 1850
+                },
+                {
+                  "name": "麻婆豆腐または四川麻婆豆腐＜2名さま盛り＞",
+                  "price": 1200
+                },
+                {
+                  "name": "北京ダック（4枚）",
+                  "price": 4400
+                },
+                {
+                  "name": "フカヒレの姿煮（1枚）",
+                  "price": 12000
+                },
+                {
+                  "name": "五目チャーハン",
+                  "price": 1500
+                },
+                {
+                  "name": "とびっこのチャーハン",
+                  "price": 1400
+                },
+                {
+                  "name": "蟹とレタスのチャーハン",
+                  "price": 1600
+                },
+                {
+                  "name": "海老のチャーハン",
+                  "price": 1500
+                },
+                {
+                  "name": "五目あんかけご飯",
+                  "price": 1500
+                },
+                {
+                  "name": "フカヒレと蟹のあんかけご飯",
+                  "price": 2700
+                },
+                {
+                  "name": "五目あんかけ焼きそば",
+                  "price": 1550
+                },
+                {
+                  "name": "魚介の塩味あんかけ焼きそば",
+                  "price": 1700
+                },
+                {
+                  "name": "海老の塩味あんけけ焼きそば",
+                  "price": 1550
+                },
+                {
+                  "name": "酸辣焼きそば",
+                  "price": 1550
+                },
+                {
+                  "name": "五目湯麵",
+                  "price": 1550
+                },
+                {
+                  "name": "白胡麻担々麺",
+                  "price": 1500
+                },
+                {
+                  "name": "搾菜肉絲湯麺（ザーサイルースータンメン）",
+                  "price": 1500
+                },
+                {
+                  "name": "酸辣湯麺（サンラータンメン）",
+                  "price": 1600
+                },
+                {
+                  "name": "魚介の塩味湯麵",
+                  "price": 1700
+                },
+                {
+                  "name": "フカヒレと蟹の湯麵",
+                  "price": 2750
+                },
+                {
+                  "name": "海老の塩味湯麵",
+                  "price": 1550
+                },
+                {
+                  "name": "玉子スープ",
+                  "price": 600
+                },
+                {
+                  "name": "とうもろこしスープ",
+                  "price": 600
+                },
+                {
+                  "name": "フカヒレスープ",
+                  "price": 1650
+                },
+                {
+                  "name": "焼きぎょうざ（6個）",
+                  "price": 900
+                },
+                {
+                  "name": "しゅうまい（6個）",
+                  "price": 900
+                },
+                {
+                  "name": "はるまき（1本）",
+                  "price": 200
+                },
+                {
+                  "name": "ショウロンポウ（1個）",
+                  "price": 200
+                },
+                {
+                  "name": "あん入り胡麻団子（1個）",
+                  "price": 200
+                },
+                {
+                  "name": "杏仁豆腐",
+                  "price": 800
+                },
+                {
+                  "name": "バニラアイスクリーム",
+                  "price": 650
+                },
+                {
+                  "name": "Sweet-and-sour pork or black-vinegar pork — small platter",
+                  "price": 3180
+                },
+                {
+                  "name": "Sweet-and-sour pork or black-vinegar pork — medium platter",
+                  "price": 4380
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Exact published portion labels retained; normal two-person servings are distinct from larger platter prices. Normal menu items are not assumed part of a course."
+            },
+            {
+              "label": "Lunch meal coffee benefit and drinks add-ons",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/alacarte/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Coffee with lunch meal — normally500",
+                  "price": 250
+                },
+                {
+                  "name": "Draft-beer free-flow add-on",
+                  "price": 3000
+                },
+                {
+                  "name": "Bottled-beer free-flow add-on",
+                  "price": 2500
+                },
+                {
+                  "name": "Child elementary free-flow",
+                  "price": 1000
+                },
+                {
+                  "name": "Age4 to preschool free-flow",
+                  "price": 500
+                },
+                {
+                  "name": "Age3 and younger free-flow",
+                  "price": 0
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Lunch coffee requires a meal. Actual add-on list includes jar-aged Shaoxing, whisky/highball styles, red/white/sparkling wine, shochu, sake, apricot wine, jasmine shochu, lemon/grapefruit sour, cola/ginger ale/orange/oolong and nonalcoholic beer; draft versus bottled beer depends on plan. Do not infer unspecified brand labels or standalone drink prices."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn Kofuku Saifu dinner",
+              "kind": "other",
+              "description": "Dated autumn Chinese course with eight named dishes, ¥10,000 including tax plus13% service; SPGR member ¥9,000 plus service.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/dinnermenu/",
+              "menuLabel": "Autumn Kofuku Saifu dinner",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Minimum two diners.",
+                "Course/set last order20:00; service ends21:00.",
+                "Actual published course contents can vary with supply."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "2F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Nishi 11-chome",
+          "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-fuyojo-0-7b89584d76bf097f.webp",
+            "alt": "Chinese Restaurant Fuyojo — Operator private dining-room photograph; separate reservation/room conditions apply",
+            "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+            "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/fuyojo/private_room/",
+            "originalUrl": "https://www.princehotels.co.jp/sapporo/images/image_5.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Steakhouse Katsura — Sapporo Prince Hotel — Sapporo restaurant guide",
+        "description": "A thirty-seat teppanyaki restaurant above Sapporo, with a fully named autumn course and exact steak weights/prices.",
+        "sourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+        "address": "28F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+        "productName": "Steakhouse Katsura — Sapporo Prince Hotel",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Nishi 11-chome",
+          "Teppanyaki / steak"
+        ],
+        "longFormSummary": "<p>A thirty-seat teppanyaki restaurant above Sapporo, with a fully named autumn course and exact steak weights/prices.<cite data-ref=\"https://www.princehotels.co.jp/sapporo/restaurant/katsura\"></cite></p><p>Established restaurant. 2026-10-14 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+            "title": "Steakhouse Katsura — Sapporo Prince Hotel source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/facility/autumn2026/",
+            "title": "Steakhouse Katsura — Sapporo Prince Hotel source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/katsura/autumndinner_2026/",
+            "title": "Steakhouse Katsura — Sapporo Prince Hotel source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/katsura/alacarte/",
+            "title": "Steakhouse Katsura — Sapporo Prince Hotel source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "menu": {
+            "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+            "name": "Steakhouse Katsura — Sapporo Prince Hotel",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Autumn flavours teppanyaki dinner",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/katsura/autumndinner_2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Autumn dinner course",
+                    "price": 20000
+                  },
+                  {
+                    "name": "Assorted appetizers",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Hokkaido scallop and mushroom teppanyaki with garlic butter sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Kinki teppanyaki with Japanese-style butter sauce and sudachi",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Hokkaido Shiraoi black Wagyu fillet100g",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Grilled vegetables",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Saury and mushroom rice with pickles and red miso soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Persimmon and milk ice cream",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. October1–November30. Reserve by previous-day18:00. October24–31 dessert has Halloween decoration; no unlabelled ingredients inferred. Service17:30–22:00, last order21:00. Checked exact operator venue/gallery, seasonal plan, linked menus and reservation links. No hotel-wide opening date, sister restaurant rating or external award claimed. Photos are venue-specific operator rooms or menu illustrations; unlabelled food identities not inferred. Restaurant reservations phone 011-241-1251 (10:00–18:00), not hotel lodging switchboard."
+              },
+              {
+                "label": "Actual à la carte and children’s menu",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/katsura/alacarte/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kobe special loin100g",
+                    "price": 15800
+                  },
+                  {
+                    "name": "Kobe special loin150g",
+                    "price": 25800
+                  },
+                  {
+                    "name": "Kobe special loin200g",
+                    "price": 35800
+                  },
+                  {
+                    "name": "Kobe additional10g",
+                    "price": 2000
+                  },
+                  {
+                    "name": "A5 Yonezawa loin150g",
+                    "price": 14300
+                  },
+                  {
+                    "name": "A5 Yonezawa loin200g",
+                    "price": 20300
+                  },
+                  {
+                    "name": "A5 Yonezawa loin250g",
+                    "price": 26300
+                  },
+                  {
+                    "name": "A5 Yonezawa fillet100g",
+                    "price": 13400
+                  },
+                  {
+                    "name": "A5 Yonezawa fillet150g",
+                    "price": 20900
+                  },
+                  {
+                    "name": "A5 Yonezawa fillet180g",
+                    "price": 25400
+                  },
+                  {
+                    "name": "A4 Shiraoi loin150g",
+                    "price": 12600
+                  },
+                  {
+                    "name": "A4 Shiraoi loin200g",
+                    "price": 17100
+                  },
+                  {
+                    "name": "A4 Shiraoi loin250g",
+                    "price": 21600
+                  },
+                  {
+                    "name": "A4 Shiraoi fillet100g",
+                    "price": 11200
+                  },
+                  {
+                    "name": "A4 Shiraoi fillet150g",
+                    "price": 17200
+                  },
+                  {
+                    "name": "A4 Shiraoi fillet180g",
+                    "price": 20800
+                  },
+                  {
+                    "name": "Today’s appetizer with sashimi",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Sliced garlic",
+                    "price": 800
+                  },
+                  {
+                    "name": "Vegetable salad",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Four grilled vegetables",
+                    "price": 1600
+                  },
+                  {
+                    "name": "Toit Vert Hokkaido camembert teppanyaki",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Japanese spiny lobster",
+                    "price": 12000
+                  },
+                  {
+                    "name": "King crab",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Live abalone",
+                    "price": 4500
+                  },
+                  {
+                    "name": "Today’s fish dish",
+                    "price": 3500
+                  },
+                  {
+                    "name": "Hokkaido scallop teppanyaki — two",
+                    "price": 2500
+                  },
+                  {
+                    "name": "White rice/red miso/pickles",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Garlic rice/red miso/pickles",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Seared-beef sushi — two, red miso/pickles",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Today’s dessert",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Milk ice cream",
+                    "price": 800
+                  },
+                  {
+                    "name": "Children’s plate",
+                    "price": 5000
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Excludes special event periods. Steak additional10g: Yonezawa loin1200/fillet1500; Shiraoi loin900/fillet1200. Children’s plate includes prosciutto salad, corn soup, shrimp fry/sausage/diced steak, grilled vegetables, rice/red miso/pickles, milk ice cream/fruit and orange juice; no adult course dishes substituted."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+            "name": "Steakhouse Katsura — Sapporo Prince Hotel",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+            "phone": "011-241-1251",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "12:00–15:00; last order14:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–22:00; last order21:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/facility/autumn2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/katsura/autumndinner_2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/katsura/alacarte/"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/princehotels-sapporo-katsura/reserve"
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "prince29-katsura",
+            "name": "Steakhouse Katsura — Sapporo Prince Hotel",
+            "neighborhood": "Nishi 11-chome",
+            "cuisine": "Teppanyaki / steak",
+            "description": "A thirty-seat teppanyaki restaurant above Sapporo, with a fully named autumn course and exact steak weights/prices.",
+            "address": "28F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-katsura-0-edc758691dfeb923.webp",
+            "imageCredit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+            "imageSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+            "imageNote": "Operator exact-venue dining room / buffet-area photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-katsura-0-edc758691dfeb923.webp",
+          "sha256": "edc758691dfeb923fd74e95e22470b146ca22139b230b87b29ee5daceb40d287",
+          "width": 1200,
+          "height": 383,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator exact-venue dining room / buffet-area photograph",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/restaurant/katsura"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-katsura-1-b5d507d0639882bb.webp",
+          "sha256": "b5d507d0639882bbb7c87162a99256e24c7318e978911bf94deca9d120e34970",
+          "width": 1024,
+          "height": 576,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator steak preparation photograph; cut and portion not inferred from the picture",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/restaurant/katsura"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-katsura-2-69e4d21470a73426.webp",
+          "sha256": "69e4d21470a734263070311f20246c6271ae0dd68a7215dce7954a1c8fafde33",
+          "width": 890,
+          "height": 501,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator seasonal menu illustration; displayed portions and food identities are governed by the labelled menu, not inferred from the picture",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/plan/katsura/autumndinner_2026/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "name": "Steakhouse Katsura — Sapporo Prince Hotel",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Autumn flavours teppanyaki dinner",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/katsura/autumndinner_2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Autumn dinner course",
+                  "price": 20000
+                },
+                {
+                  "name": "Assorted appetizers",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                },
+                {
+                  "name": "Hokkaido scallop and mushroom teppanyaki with garlic butter sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                },
+                {
+                  "name": "Kinki teppanyaki with Japanese-style butter sauce and sudachi",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                },
+                {
+                  "name": "Hokkaido Shiraoi black Wagyu fillet100g",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                },
+                {
+                  "name": "Grilled vegetables",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                },
+                {
+                  "name": "Saury and mushroom rice with pickles and red miso soup",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                },
+                {
+                  "name": "Persimmon and milk ice cream",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn flavours teppanyaki dinner; no separate item price published"
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. October1–November30. Reserve by previous-day18:00. October24–31 dessert has Halloween decoration; no unlabelled ingredients inferred. Service17:30–22:00, last order21:00. Checked exact operator venue/gallery, seasonal plan, linked menus and reservation links. No hotel-wide opening date, sister restaurant rating or external award claimed. Photos are venue-specific operator rooms or menu illustrations; unlabelled food identities not inferred. Restaurant reservations phone 011-241-1251 (10:00–18:00), not hotel lodging switchboard."
+            },
+            {
+              "label": "Actual à la carte and children’s menu",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/katsura/alacarte/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Kobe special loin100g",
+                  "price": 15800
+                },
+                {
+                  "name": "Kobe special loin150g",
+                  "price": 25800
+                },
+                {
+                  "name": "Kobe special loin200g",
+                  "price": 35800
+                },
+                {
+                  "name": "Kobe additional10g",
+                  "price": 2000
+                },
+                {
+                  "name": "A5 Yonezawa loin150g",
+                  "price": 14300
+                },
+                {
+                  "name": "A5 Yonezawa loin200g",
+                  "price": 20300
+                },
+                {
+                  "name": "A5 Yonezawa loin250g",
+                  "price": 26300
+                },
+                {
+                  "name": "A5 Yonezawa fillet100g",
+                  "price": 13400
+                },
+                {
+                  "name": "A5 Yonezawa fillet150g",
+                  "price": 20900
+                },
+                {
+                  "name": "A5 Yonezawa fillet180g",
+                  "price": 25400
+                },
+                {
+                  "name": "A4 Shiraoi loin150g",
+                  "price": 12600
+                },
+                {
+                  "name": "A4 Shiraoi loin200g",
+                  "price": 17100
+                },
+                {
+                  "name": "A4 Shiraoi loin250g",
+                  "price": 21600
+                },
+                {
+                  "name": "A4 Shiraoi fillet100g",
+                  "price": 11200
+                },
+                {
+                  "name": "A4 Shiraoi fillet150g",
+                  "price": 17200
+                },
+                {
+                  "name": "A4 Shiraoi fillet180g",
+                  "price": 20800
+                },
+                {
+                  "name": "Today’s appetizer with sashimi",
+                  "price": 2800
+                },
+                {
+                  "name": "Sliced garlic",
+                  "price": 800
+                },
+                {
+                  "name": "Vegetable salad",
+                  "price": 1200
+                },
+                {
+                  "name": "Four grilled vegetables",
+                  "price": 1600
+                },
+                {
+                  "name": "Toit Vert Hokkaido camembert teppanyaki",
+                  "price": 2200
+                },
+                {
+                  "name": "Japanese spiny lobster",
+                  "price": 12000
+                },
+                {
+                  "name": "King crab",
+                  "price": 6000
+                },
+                {
+                  "name": "Live abalone",
+                  "price": 4500
+                },
+                {
+                  "name": "Today’s fish dish",
+                  "price": 3500
+                },
+                {
+                  "name": "Hokkaido scallop teppanyaki — two",
+                  "price": 2500
+                },
+                {
+                  "name": "White rice/red miso/pickles",
+                  "price": 1000
+                },
+                {
+                  "name": "Garlic rice/red miso/pickles",
+                  "price": 2000
+                },
+                {
+                  "name": "Seared-beef sushi — two, red miso/pickles",
+                  "price": 3000
+                },
+                {
+                  "name": "Today’s dessert",
+                  "price": 1200
+                },
+                {
+                  "name": "Milk ice cream",
+                  "price": 800
+                },
+                {
+                  "name": "Children’s plate",
+                  "price": 5000
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Excludes special event periods. Steak additional10g: Yonezawa loin1200/fillet1500; Shiraoi loin900/fillet1200. Children’s plate includes prosciutto salad, corn soup, shrimp fry/sausage/diced steak, grilled vegetables, rice/red miso/pickles, milk ice cream/fruit and orange juice; no adult course dishes substituted."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn flavours teppanyaki dinner",
+              "kind": "other",
+              "description": "Dated autumn teppanyaki course with Shiraoi Wagyu fillet100g, scallop, kinki and seasonal rice, ¥20,000 including tax plus13% service.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/katsura/autumndinner_2026/",
+              "menuLabel": "Autumn flavours teppanyaki dinner",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve by previous-day18:00.",
+                "Last order21:00.",
+                "October24–31 dessert decoration changes for Halloween; ingredients subject to supply."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "28F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Nishi 11-chome",
+          "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-katsura-0-edc758691dfeb923.webp",
+            "alt": "Steakhouse Katsura — Sapporo Prince Hotel — Operator exact-venue dining room / buffet-area photograph",
+            "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+            "sourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+            "originalUrl": "https://www.princehotels.co.jp/sapporo/images/katsura_image_20260617_1260_402.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sky Lounge Top of Prince — Sapporo restaurant guide",
+        "description": "An established skyline lounge with a fully named autumn tea, actual included drinks and priced normal food/HH menus.",
+        "sourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+        "address": "28F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+        "productName": "Sky Lounge Top of Prince",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Nishi 11-chome",
+          "Lounge / afternoon tea"
+        ],
+        "longFormSummary": "<p>An established skyline lounge with a fully named autumn tea, actual included drinks and priced normal food/HH menus.<cite data-ref=\"https://www.princehotels.co.jp/sapporo/restaurant/top_prince\"></cite></p><p>Established restaurant. 2026-10-14 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+            "title": "Sky Lounge Top of Prince source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/facility/autumn2026/",
+            "title": "Sky Lounge Top of Prince source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+            "title": "Sky Lounge Top of Prince source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/happyhour2026/",
+            "title": "Sky Lounge Top of Prince source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/foodmenu2025/",
+            "title": "Sky Lounge Top of Prince source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/file.jsp?id=514455",
+            "title": "Sky Lounge Top of Prince source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.princehotels.co.jp/file.jsp?id=514922",
+            "title": "Sky Lounge Top of Prince source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "menu": {
+            "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+            "name": "Sky Lounge Top of Prince",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Shusai autumn afternoon tea",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Full three-tier tea with mini parfait and mini burger",
+                    "price": 5500
+                  },
+                  {
+                    "name": "Full tea — SPGR member",
+                    "price": 5000
+                  },
+                  {
+                    "name": "Casual three-tier tea without mini parfait/burger",
+                    "price": 4500
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Current October–November festival coverage within operator September1–November30 season. Two-hour seating; free drinks last order30 minutes before end. Reserve by previous-day18:00. Fixed starts12:00,12:30,13:00,13:30; additional14:30 on weekends/public holidays. Groups of three or more including children use box seating. No other discounts; explicit member price is a separately published operator rate. Checked exact operator venue/gallery, seasonal plan, linked menus and reservation links. No hotel-wide opening date, sister restaurant rating or external award claimed. Photos are venue-specific operator rooms or menu illustrations; unlabelled food identities not inferred. Restaurant reservations phone 011-241-1251 (10:00–18:00), not hotel lodging switchboard."
+              },
+              {
+                "label": "Three-tier dishes and aperitif",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Pumpkin cream pie tart",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Sweet-potato brûlée",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Grape and black-tea jelly",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Purple sweet-potato and chocolate tart",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Japanese-chestnut Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Chocolate chestnut",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Japanese-chestnut mousse and raspberry jelly",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Cream puff resembling chestnut shell",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Mori-town Akai pumpkin soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Eggplant and tomato lasagne",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Mushroom peperoncino on baguette",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Cajun-style fried nagaimo",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Green-apple nonalcoholic aperitif",
+                    "priceLabel": "Price not published",
+                    "note": "Included in both full and casual plans"
+                  }
+                ],
+                "note": "Named current autumn items, not inferred from photographs. Full tea additionally includes Kasama-chestnut cream/Hidaka fromage-blanc mousse with Hokkaido cream-cheese gelato mini parfait and Tsukimi Japanese-style mini burger. Casual plan excludes those two extras. October24–31 Halloween decoration; September19–23 special replacement is outside current indexed October–November window."
+              },
+              {
+                "label": "Afternoon tea included drinks",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Darjeeling Summer Gold",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Earl Grey",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Morgentau",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Rooibos Cream Orange",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Sweet Berries",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Fruity Camomile",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Refreshing Mint",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Hot coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Iced coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Iced tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Orange juice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Apple juice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Cold green tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Kombu tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                  }
+                ],
+                "note": "Actual Ronnefeldt hot tea/herbal-tea and soft-drink list, free-flow with last order30 minutes before end. No alcoholic drinks inferred from “aperitif.”"
+              },
+              {
+                "label": "Normal daytime food — linked current PDF",
+                "url": "https://www.princehotels.co.jp/file.jsp?id=514922",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Vegetable salad with lemon dressing",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Truffle fries",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Hokkaido cod-roe soup pasta",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Margherita pizza",
+                    "price": 2000
+                  },
+                  {
+                    "name": "White seafood curry",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Shima-zoi with olives/tomatoes — Provençal, bread",
+                    "price": 2700
+                  },
+                  {
+                    "name": "Hokkaido scallop sauté with tomato risoni salad, bread",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Hakodate Onuma black-beef/bacon burger",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Hakodate Onuma black-beef hamburg stew, baguette",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Tokachi herb-beef sirloin100g, bread",
+                    "price": 3500
+                  },
+                  {
+                    "name": "Mini parfait",
+                    "price": 700
+                  },
+                  {
+                    "name": "Petite gâteau plate",
+                    "price": 1200
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Downloaded linked actual PDF, extracted and visually checked. This normal food menu is separate from included tea/HH food; cod-roe pasta is marked a limited Hokkaido fair without a published date and is not turned into a separate timed offer.",
+                "documentUrl": "https://www.princehotels.co.jp/file.jsp?id=514922"
+              },
+              {
+                "label": "Happy hour with actual included-drink PDF",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/happyhour2026/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Up-to-two-hour happy hour plus hors-d’œuvre plate",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Sapporo Classic draft",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Sapporo Black Label bottled beer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Red wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "White wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Sparkling wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Kir",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Kir Royale",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Mimosa",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Gin and tonic",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Moscow mule",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Screwdriver",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Tequila sunrise",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Cassis soda",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Cassis orange",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Whisky with soda/water",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Barley or sweet-potato shochu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Lemon sour",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Lime sour",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Plum wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Cola",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Ginger ale",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Orange juice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Grapefruit juice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Oolong tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Green tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Saratoga cooler",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Shirley Temple",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  },
+                  {
+                    "name": "Virgin Breeze",
+                    "priceLabel": "Price not published",
+                    "note": "Included in happy-hour package; no separate item price published"
+                  }
+                ],
+                "note": "Actual linked free-flow PDF downloaded/rendered/checked. ¥2500 includes tax, service and table charge; whole group must order. Published August17–December31, daily17:30–19:30, last order19:15, maximum two hours. Christmas/special periods excluded but exact exclusion dates not published. Record actual dishes/drinks/terms without guessing a future exception calendar; dated autumn tea already keeps this venue visible in Specials. Hors-d’œuvre contents not named; do not infer them from picture. Documented PDF contains more cocktails; full original linked.",
+                "documentUrl": "https://www.princehotels.co.jp/file.jsp?id=466010"
+              },
+              {
+                "label": "Normal dinner sample and charge clarification",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/foodmenu2025/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Mixed nuts",
+                    "price": 800
+                  },
+                  {
+                    "name": "Olives/pickles",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Assorted cheese",
+                    "price": 2400
+                  },
+                  {
+                    "name": "Vegetable salad with lemon dressing",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Truffle fries",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Hakodate Onuma black-beef/bacon burger",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Black-beef hamburg stew with baguette",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Tokachi herb-beef sirloin200g with truffle potatoes",
+                    "price": 7000
+                  },
+                  {
+                    "name": "T-bone steak with salad",
+                    "price": 8800
+                  }
+                ],
+                "note": "Tax included; 13% service charge additional. Dinner-only table charge¥800; current operator page/Japanese PDF agree, while old English PDF footer says¥600. ¥800 used and conflict recorded; ambiguous extra printed dessert price omitted. Happy-hour package already includes cover/service/tax and must not be charged these additions again. Full priced normal drinks PDF also downloaded and linked; none are assumed free in tea/HH unless on the actual included list.",
+                "documentUrl": "https://www.princehotels.co.jp/file.jsp?id=514921"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+            "name": "Sky Lounge Top of Prince",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+            "phone": "011-241-1251",
+            "openingHours": [
+              {
+                "days": "Tea weekdays",
+                "hours": "12:00–15:30; drinks last order15:00"
+              },
+              {
+                "days": "Tea weekends/public holidays",
+                "hours": "12:00–17:00; drinks last order16:30; food last order14:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–23:00; food last order22:00/drinks22:30; guests must be13+ after17:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/facility/autumn2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/happyhour2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/foodmenu2025/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.princehotels.co.jp/file.jsp?id=514455"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/princehotels-sapporo-top-prince/reserve"
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "prince29-top",
+            "name": "Sky Lounge Top of Prince",
+            "neighborhood": "Nishi 11-chome",
+            "cuisine": "Lounge / afternoon tea",
+            "description": "An established skyline lounge with a fully named autumn tea, actual included drinks and priced normal food/HH menus.",
+            "address": "28F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-top-0-27a5d17b71419c6f.webp",
+            "imageCredit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+            "imageSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+            "imageNote": "Operator exact-venue dining room / buffet-area photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-top-0-27a5d17b71419c6f.webp",
+          "sha256": "27a5d17b71419c6f105f5782a9ff3192b89432adb3df978f653d4f992ff09c1e",
+          "width": 1200,
+          "height": 675,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator exact-venue dining room / buffet-area photograph",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-top-1-2965242eb5003658.webp",
+          "sha256": "2965242eb5003658e4650677d715b4ba126303a5a667aa6f3fb459424d2b62f3",
+          "width": 1200,
+          "height": 675,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator exact-venue dining room / buffet-area photograph",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-top-2-78700b90c28831f0.webp",
+          "sha256": "78700b90c28831f079e37a91c114f3bf4ea188405ba41e46d5a5ec5773ecbb75",
+          "width": 1200,
+          "height": 675,
+          "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+          "note": "Operator seasonal menu illustration; displayed portions and food identities are governed by the labelled menu, not inferred from the picture",
+          "sourcePage": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "name": "Sky Lounge Top of Prince",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Shusai autumn afternoon tea",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Full three-tier tea with mini parfait and mini burger",
+                  "price": 5500
+                },
+                {
+                  "name": "Full tea — SPGR member",
+                  "price": 5000
+                },
+                {
+                  "name": "Casual three-tier tea without mini parfait/burger",
+                  "price": 4500
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Current October–November festival coverage within operator September1–November30 season. Two-hour seating; free drinks last order30 minutes before end. Reserve by previous-day18:00. Fixed starts12:00,12:30,13:00,13:30; additional14:30 on weekends/public holidays. Groups of three or more including children use box seating. No other discounts; explicit member price is a separately published operator rate. Checked exact operator venue/gallery, seasonal plan, linked menus and reservation links. No hotel-wide opening date, sister restaurant rating or external award claimed. Photos are venue-specific operator rooms or menu illustrations; unlabelled food identities not inferred. Restaurant reservations phone 011-241-1251 (10:00–18:00), not hotel lodging switchboard."
+            },
+            {
+              "label": "Three-tier dishes and aperitif",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Pumpkin cream pie tart",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Sweet-potato brûlée",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Grape and black-tea jelly",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Purple sweet-potato and chocolate tart",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Japanese-chestnut Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Chocolate chestnut",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Japanese-chestnut mousse and raspberry jelly",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Cream puff resembling chestnut shell",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Mori-town Akai pumpkin soup",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Eggplant and tomato lasagne",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Mushroom peperoncino on baguette",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Cajun-style fried nagaimo",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Green-apple nonalcoholic aperitif",
+                  "priceLabel": "Price not published",
+                  "note": "Included in both full and casual plans"
+                }
+              ],
+              "note": "Named current autumn items, not inferred from photographs. Full tea additionally includes Kasama-chestnut cream/Hidaka fromage-blanc mousse with Hokkaido cream-cheese gelato mini parfait and Tsukimi Japanese-style mini burger. Casual plan excludes those two extras. October24–31 Halloween decoration; September19–23 special replacement is outside current indexed October–November window."
+            },
+            {
+              "label": "Afternoon tea included drinks",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Darjeeling Summer Gold",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Earl Grey",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Morgentau",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Rooibos Cream Orange",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Sweet Berries",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Fruity Camomile",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Refreshing Mint",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Hot coffee",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Iced coffee",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Iced tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Orange juice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Apple juice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Cold green tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Kombu tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shusai autumn afternoon tea; no separate item price published"
+                }
+              ],
+              "note": "Actual Ronnefeldt hot tea/herbal-tea and soft-drink list, free-flow with last order30 minutes before end. No alcoholic drinks inferred from “aperitif.”"
+            },
+            {
+              "label": "Normal daytime food — linked current PDF",
+              "url": "https://www.princehotels.co.jp/file.jsp?id=514922",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Vegetable salad with lemon dressing",
+                  "price": 1200
+                },
+                {
+                  "name": "Truffle fries",
+                  "price": 1700
+                },
+                {
+                  "name": "Hokkaido cod-roe soup pasta",
+                  "price": 2200
+                },
+                {
+                  "name": "Margherita pizza",
+                  "price": 2000
+                },
+                {
+                  "name": "White seafood curry",
+                  "price": 1800
+                },
+                {
+                  "name": "Shima-zoi with olives/tomatoes — Provençal, bread",
+                  "price": 2700
+                },
+                {
+                  "name": "Hokkaido scallop sauté with tomato risoni salad, bread",
+                  "price": 2800
+                },
+                {
+                  "name": "Hakodate Onuma black-beef/bacon burger",
+                  "price": 2800
+                },
+                {
+                  "name": "Hakodate Onuma black-beef hamburg stew, baguette",
+                  "price": 2500
+                },
+                {
+                  "name": "Tokachi herb-beef sirloin100g, bread",
+                  "price": 3500
+                },
+                {
+                  "name": "Mini parfait",
+                  "price": 700
+                },
+                {
+                  "name": "Petite gâteau plate",
+                  "price": 1200
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Downloaded linked actual PDF, extracted and visually checked. This normal food menu is separate from included tea/HH food; cod-roe pasta is marked a limited Hokkaido fair without a published date and is not turned into a separate timed offer.",
+              "documentUrl": "https://www.princehotels.co.jp/file.jsp?id=514922"
+            },
+            {
+              "label": "Happy hour with actual included-drink PDF",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/happyhour2026/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Up-to-two-hour happy hour plus hors-d’œuvre plate",
+                  "price": 2500
+                },
+                {
+                  "name": "Sapporo Classic draft",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Sapporo Black Label bottled beer",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Red wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "White wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Sparkling wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Kir",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Kir Royale",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Mimosa",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Gin and tonic",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Moscow mule",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Screwdriver",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Tequila sunrise",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Cassis soda",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Cassis orange",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Whisky with soda/water",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Barley or sweet-potato shochu",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Lemon sour",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Lime sour",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Plum wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Cola",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Ginger ale",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Orange juice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Grapefruit juice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Oolong tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Green tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Saratoga cooler",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Shirley Temple",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                },
+                {
+                  "name": "Virgin Breeze",
+                  "priceLabel": "Price not published",
+                  "note": "Included in happy-hour package; no separate item price published"
+                }
+              ],
+              "note": "Actual linked free-flow PDF downloaded/rendered/checked. ¥2500 includes tax, service and table charge; whole group must order. Published August17–December31, daily17:30–19:30, last order19:15, maximum two hours. Christmas/special periods excluded but exact exclusion dates not published. Record actual dishes/drinks/terms without guessing a future exception calendar; dated autumn tea already keeps this venue visible in Specials. Hors-d’œuvre contents not named; do not infer them from picture. Documented PDF contains more cocktails; full original linked.",
+              "documentUrl": "https://www.princehotels.co.jp/file.jsp?id=466010"
+            },
+            {
+              "label": "Normal dinner sample and charge clarification",
+              "url": "https://www.princehotels.co.jp/sapporo/plan/top_prince/foodmenu2025/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Mixed nuts",
+                  "price": 800
+                },
+                {
+                  "name": "Olives/pickles",
+                  "price": 1200
+                },
+                {
+                  "name": "Assorted cheese",
+                  "price": 2400
+                },
+                {
+                  "name": "Vegetable salad with lemon dressing",
+                  "price": 1200
+                },
+                {
+                  "name": "Truffle fries",
+                  "price": 1700
+                },
+                {
+                  "name": "Hakodate Onuma black-beef/bacon burger",
+                  "price": 2800
+                },
+                {
+                  "name": "Black-beef hamburg stew with baguette",
+                  "price": 2500
+                },
+                {
+                  "name": "Tokachi herb-beef sirloin200g with truffle potatoes",
+                  "price": 7000
+                },
+                {
+                  "name": "T-bone steak with salad",
+                  "price": 8800
+                }
+              ],
+              "note": "Tax included; 13% service charge additional. Dinner-only table charge¥800; current operator page/Japanese PDF agree, while old English PDF footer says¥600. ¥800 used and conflict recorded; ambiguous extra printed dessert price omitted. Happy-hour package already includes cover/service/tax and must not be charged these additions again. Full priced normal drinks PDF also downloaded and linked; none are assumed free in tea/HH unless on the actual included list.",
+              "documentUrl": "https://www.princehotels.co.jp/file.jsp?id=514921"
+            }
+          ],
+          "specials": [
+            {
+              "title": "Shusai autumn afternoon tea",
+              "kind": "other",
+              "description": "Dated autumn afternoon tea, full¥5,500/casual¥4,500, tax included plus13% service; full SPGR member¥5,000 plus service.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+              "menuLabel": "Shusai autumn afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve by previous-day18:00; fixed starts12:00/12:30/13:00/13:30; weekend/holiday extra14:30.",
+                "Two-hour sitting, included drinks last order30 minutes before end.",
+                "Casual tea excludes mini parfait and mini burger.",
+                "October24–31 Halloween decoration; no other discounts."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "12:00",
+                    "end": "15:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "16:30"
+                  }
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-11-30",
+                "excludedDates": [
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23"
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Shusai autumn afternoon tea — public-holiday sittings",
+              "kind": "other",
+              "description": "Same autumn tea with public-holiday extra14:30 sitting and two-hour seating.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+              "menuLabel": "Shusai autumn afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-10-12",
+              "validThrough": "2026-10-12",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve by previous-day18:00; fixed starts12:00/12:30/13:00/13:30/14:30.",
+                "Same published full/casual/member prices and service charge; drinks last order30 minutes before end."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "16:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Shusai autumn afternoon tea — public-holiday sittings",
+              "kind": "other",
+              "description": "Same autumn tea with public-holiday extra14:30 sitting and two-hour seating.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+              "menuLabel": "Shusai autumn afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-11-03",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve by previous-day18:00; fixed starts12:00/12:30/13:00/13:30/14:30.",
+                "Same published full/casual/member prices and service charge; drinks last order30 minutes before end."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "16:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Shusai autumn afternoon tea — public-holiday sittings",
+              "kind": "other",
+              "description": "Same autumn tea with public-holiday extra14:30 sitting and two-hour seating.",
+              "sourceUrl": "https://www.princehotels.co.jp/sapporo/plan/top_prince/afternoon_autumn2026/",
+              "menuLabel": "Shusai autumn afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve by previous-day18:00; fixed starts12:00/12:30/13:00/13:30/14:30.",
+                "Same published full/casual/member prices and service charge; drinks last order30 minutes before end."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "16:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "28F, Sapporo Prince Hotel, Minami 2-jo Nishi 11-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Nishi 11-chome",
+          "websiteUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/prince29-top-0-27a5d17b71419c6f.webp",
+            "alt": "Sky Lounge Top of Prince — Operator exact-venue dining room / buffet-area photograph",
+            "credit": "Sapporo Prince Hotel / Seibu Prince Hotels & Resorts",
+            "sourceUrl": "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+            "originalUrl": "https://www.princehotels.co.jp/sapporo/images/top01_20251002_16_9.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

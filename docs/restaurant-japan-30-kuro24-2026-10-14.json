@@ -1,0 +1,723 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "KuroNagi — Global Gate Opens in Sasashima Live",
+        "description": "A planned Okinawan and chicken restaurant with published launch lunches, shabu-shabu, claypot rice and drinks.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html",
+        "address": "Unit 303, 3F Global Gate, 4-60-12 Hiraikecho, Nakamura-ku, Nagoya",
+        "productName": "KuroNagi — Global Gate",
+        "utcStartDateTime": "2026-10-26T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Sasashima Live",
+          "Okinawan / shabu-shabu"
+        ],
+        "longFormSummary": "<p>A planned Okinawan and chicken restaurant with published launch lunches, shabu-shabu, claypot rice and drinks.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000002.000190931.html\"></cite></p><p>DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/fefdv5h60000/menu1/",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/fefdv5h60000/coupon/",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/fefdv5h60000/photo/",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230101/23097895/",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          },
+          {
+            "url": "https://job.tabelog.com/restaurants?id=23097895",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          },
+          {
+            "url": "https://shops.globalgate.nagoya/shop/index3.php",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/fefdv5h60000/menu5/",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/fefdv5h60000/menu6/",
+            "title": "KuroNagi — Global Gate source",
+            "confidence": 90,
+            "reasoning": "DOUBLE October 4 operator announcement explicitly confirms October 26, 2026 opening at Global Gate unit 303; linked exact branch Tabelog confirms the date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html",
+            "name": "KuroNagi — Global Gate",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published branch food menu",
+                "url": "https://r.gnavi.co.jp/fefdv5h60000/menu5/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "枝豆",
+                    "price": 429
+                  },
+                  {
+                    "name": "塩キャベツ",
+                    "price": 528
+                  },
+                  {
+                    "name": "うずらどんぐり",
+                    "price": 429
+                  },
+                  {
+                    "name": "きゅうりの漬物",
+                    "price": 462
+                  },
+                  {
+                    "name": "キムチ",
+                    "price": 528
+                  },
+                  {
+                    "name": "茹でブロッコリー",
+                    "price": 506
+                  },
+                  {
+                    "name": "島豆腐の冷や奴",
+                    "price": 495
+                  },
+                  {
+                    "name": "海ぶどう",
+                    "price": 693
+                  },
+                  {
+                    "name": "島らっきょ",
+                    "price": 748
+                  },
+                  {
+                    "name": "もずく酢",
+                    "price": 638
+                  },
+                  {
+                    "name": "ジーマーミ豆腐",
+                    "price": 638
+                  },
+                  {
+                    "name": "チョレギサラダ",
+                    "price": 968
+                  },
+                  {
+                    "name": "島豆腐サラダ",
+                    "price": 1188
+                  },
+                  {
+                    "name": "海ぶどうサラダ",
+                    "price": 1188
+                  },
+                  {
+                    "name": "ポテトサラダ",
+                    "price": 693
+                  },
+                  {
+                    "name": "地鶏の鉄板焼き～柚子胡椒～",
+                    "price": 968
+                  },
+                  {
+                    "name": "とり天～おろしポン酢添え～",
+                    "price": 1078
+                  },
+                  {
+                    "name": "鶏刺し二種盛り合わせ",
+                    "price": 1386
+                  },
+                  {
+                    "name": "鶏むねタタキ",
+                    "price": 836
+                  },
+                  {
+                    "name": "鶏つくね焼き（タレ・塩）１本",
+                    "price": 319
+                  },
+                  {
+                    "name": "月見鶏つくね　１本",
+                    "price": 374
+                  },
+                  {
+                    "name": "四川風ピリ辛よだれ鶏",
+                    "price": 759
+                  },
+                  {
+                    "name": "鶏の土鍋ご飯（１～２人前）",
+                    "price": 1914
+                  },
+                  {
+                    "name": "鶏の土鍋ご飯（２～３人前）",
+                    "price": 2464
+                  },
+                  {
+                    "name": "じゅーしーの土鍋ご飯（１～２人前）",
+                    "price": 1848
+                  },
+                  {
+                    "name": "じゅーしーの土鍋ご飯（２～３人前）",
+                    "price": 2398
+                  },
+                  {
+                    "name": "サーモンといくらの土鍋ご飯（１～２人前）",
+                    "price": 2398
+                  },
+                  {
+                    "name": "サーモンといくらの土鍋ご飯（２～３人前）",
+                    "price": 2948
+                  },
+                  {
+                    "name": "ひらやーちー（ピリ辛チヂミ）",
+                    "price": 968
+                  },
+                  {
+                    "name": "出汁巻き玉子",
+                    "price": 748
+                  },
+                  {
+                    "name": "えいひれ",
+                    "price": 638
+                  },
+                  {
+                    "name": "もやしのガーリック炒め",
+                    "price": 539
+                  },
+                  {
+                    "name": "豚キムチ",
+                    "price": 836
+                  },
+                  {
+                    "name": "ゴーヤーちゃんぷるー",
+                    "price": 858
+                  },
+                  {
+                    "name": "ソーメンちゃんぷるー",
+                    "price": 825
+                  },
+                  {
+                    "name": "豆腐ちゃんぷるー",
+                    "price": 858
+                  },
+                  {
+                    "name": "イカ墨ちゃんぷるー",
+                    "price": 968
+                  },
+                  {
+                    "name": "ポテトフライ（ソルト）（ブラックペッパー）",
+                    "price": 649
+                  },
+                  {
+                    "name": "鶏の唐揚げ",
+                    "price": 759
+                  },
+                  {
+                    "name": "鶏皮の唐揚げ",
+                    "price": 649
+                  },
+                  {
+                    "name": "自家製タルタルチキン南蛮",
+                    "price": 858
+                  },
+                  {
+                    "name": "沖縄とうもろこし唐揚げ",
+                    "price": 638
+                  },
+                  {
+                    "name": "もずくの天ぷら",
+                    "price": 539
+                  },
+                  {
+                    "name": "グルクンの唐揚げ",
+                    "price": 979
+                  },
+                  {
+                    "name": "沖縄そば",
+                    "price": 968
+                  },
+                  {
+                    "name": "沖縄やさいタンメン",
+                    "price": 1078
+                  },
+                  {
+                    "name": "焼き沖縄そば",
+                    "price": 1023
+                  },
+                  {
+                    "name": "イカ墨焼きそば",
+                    "price": 1078
+                  },
+                  {
+                    "name": "じゅーしー",
+                    "price": 946
+                  },
+                  {
+                    "name": "じゅーしーおにぎり",
+                    "price": 748
+                  },
+                  {
+                    "name": "沖縄黒豚しゃぶしゃぶ",
+                    "price": 2068
+                  },
+                  {
+                    "name": "もつ鍋",
+                    "price": 1848
+                  },
+                  {
+                    "name": "鶏ねぎ白湯鍋",
+                    "price": 1738
+                  },
+                  {
+                    "name": "鉄なべ鶏すき焼き",
+                    "price": 2068
+                  },
+                  {
+                    "name": "焼きおにぎり",
+                    "price": 352
+                  },
+                  {
+                    "name": "焼きそば（ソース・塩）",
+                    "price": 946
+                  },
+                  {
+                    "name": "鶏だしＴＫＧ",
+                    "price": 429
+                  },
+                  {
+                    "name": "鶏だし茶漬け",
+                    "price": 638
+                  },
+                  {
+                    "name": "ひと口鶏おにぎり",
+                    "price": 418
+                  },
+                  {
+                    "name": "鶏そば",
+                    "price": 506
+                  },
+                  {
+                    "name": "日替わりアイス",
+                    "price": 429
+                  },
+                  {
+                    "name": "ゴマ団子",
+                    "price": 429
+                  },
+                  {
+                    "name": "わらび餅",
+                    "price": 649
+                  },
+                  {
+                    "name": "ブルーシールアイス",
+                    "price": 638
+                  }
+                ],
+                "note": "Prices transcribed from exact Global Gate branch listing. Tax treatment is not stated on this page; no additional tax assumed. Planned October 26 opening menus may change. Checked owner October 4 release, branch food/drink/course/coupon/gallery pages, linked Tabelog and landlord directory. Full named dishes preserved rather than inferred from photos. Opening confirmed October 26 by operator and exact linked Tabelog. Operator hours: weekdays 11:30–23:00, weekends 13:00–23:00, weekday lunch only 11:30–14:00. Branch Gurunavi instead lists weekdays 16:30–24:00 and weekends/holidays 13:00–24:00; October 8 owner recruiting page lists daily 11:30–23:00, food last order 22:00/drinks 22:30. Planned owner announcement hours shown; these conflicts remain unresolved, so no promotion availability schedule is invented. Capacity also conflicts: owner 100-plus versus Gurunavi 80. Main-course detail prices ¥5,300/6,300/7,300 conflict with lower ¥4,800/5,800/6,800 overview on other exact branch pages; course duration, last admission and discount terms conflict too. Advertised up-to-10% coupon has no actual terms or coupon visible on linked coupon page. Specials withheld pending branch-specific reconciliation; verified ordinary and planned lunch menus remain available. Owner corporate page returned no readable menu; linked Tabelog pages blocked plain curl. Landlord floor directory checked; no branch gallery found. General Global Gate site is a historic property brochure, not restaurant menu evidence. Operator PR main image is a labelled brand collage, not a verified new-branch room photograph; excluded from gallery. Branch gallery contains food/drink illustrations, without verified property photographs; preserve that gap."
+              },
+              {
+                "label": "Published branch drink menu",
+                "url": "https://r.gnavi.co.jp/fefdv5h60000/menu6/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アサヒスーパードライ",
+                    "price": 649
+                  },
+                  {
+                    "name": "グラスビール",
+                    "price": 429
+                  },
+                  {
+                    "name": "ドライゼロ",
+                    "price": 495
+                  },
+                  {
+                    "name": "キリン一番搾り（中瓶）",
+                    "price": 693
+                  },
+                  {
+                    "name": "黒ラベル（中瓶）",
+                    "price": 693
+                  },
+                  {
+                    "name": "スーパードライ（中瓶）",
+                    "price": 693
+                  },
+                  {
+                    "name": "オリオンビール（中瓶）",
+                    "price": 693
+                  },
+                  {
+                    "name": "酎ハイ",
+                    "price": 528
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 528
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 528
+                  },
+                  {
+                    "name": "ジャスミンハイ",
+                    "price": 528
+                  },
+                  {
+                    "name": "こだわり酒場のレモンサワー",
+                    "price": 528
+                  },
+                  {
+                    "name": "氷結レモンサワー",
+                    "price": 528
+                  },
+                  {
+                    "name": "グレープフルーツサワー",
+                    "price": 528
+                  },
+                  {
+                    "name": "クエン酸サワー",
+                    "price": 528
+                  },
+                  {
+                    "name": "梅干しサワー",
+                    "price": 528
+                  },
+                  {
+                    "name": "男梅サワー",
+                    "price": 528
+                  },
+                  {
+                    "name": "シークワーサーサワー",
+                    "price": 528
+                  },
+                  {
+                    "name": "カシスソーダ",
+                    "price": 638
+                  },
+                  {
+                    "name": "カシスウーロン",
+                    "price": 638
+                  },
+                  {
+                    "name": "カシスオレンジ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ピーチソーダ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ピーチウーロン",
+                    "price": 638
+                  },
+                  {
+                    "name": "ファジーネーブル",
+                    "price": 638
+                  },
+                  {
+                    "name": "フリージングハイボール",
+                    "price": 583
+                  },
+                  {
+                    "name": "コークハイボール",
+                    "price": 583
+                  },
+                  {
+                    "name": "男梅ハイボール",
+                    "price": 583
+                  },
+                  {
+                    "name": "ジンジャーハイボール",
+                    "price": 583
+                  },
+                  {
+                    "name": "シークワーサーハイボール",
+                    "price": 583
+                  },
+                  {
+                    "name": "ブラックニッカ",
+                    "price": 528
+                  },
+                  {
+                    "name": "角瓶",
+                    "price": 583
+                  },
+                  {
+                    "name": "ホッピーセット",
+                    "price": 638
+                  },
+                  {
+                    "name": "ホッピー中",
+                    "price": 319
+                  },
+                  {
+                    "name": "一粒の麦",
+                    "price": 638
+                  },
+                  {
+                    "name": "中々",
+                    "price": 759
+                  },
+                  {
+                    "name": "黒霧島",
+                    "price": 638
+                  },
+                  {
+                    "name": "富乃宝山",
+                    "price": 759
+                  },
+                  {
+                    "name": "梅酒",
+                    "price": 528
+                  },
+                  {
+                    "name": "白桃酒",
+                    "price": 528
+                  },
+                  {
+                    "name": "巨峰酒",
+                    "price": 528
+                  },
+                  {
+                    "name": "赤ワイン",
+                    "price": 605
+                  },
+                  {
+                    "name": "白ワイン",
+                    "price": 605
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 429
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 429
+                  },
+                  {
+                    "name": "ジャスミン茶",
+                    "price": 429
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 429
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 429
+                  },
+                  {
+                    "name": "ジンジャエール",
+                    "price": 429
+                  }
+                ],
+                "note": "Prices transcribed from exact Global Gate branch listing. Tax treatment is not stated on this page; no additional tax assumed. Planned October 26 opening menus may change. Checked owner October 4 release, branch food/drink/course/coupon/gallery pages, linked Tabelog and landlord directory. Full named dishes preserved rather than inferred from photos."
+              },
+              {
+                "label": "Planned weekday lunch",
+                "url": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Okinawa soba — small (100 g noodles)",
+                    "price": 880
+                  },
+                  {
+                    "name": "Okinawa soba — medium (200 g noodles)",
+                    "price": 1030
+                  },
+                  {
+                    "name": "Okinawa soba — large (300 g noodles)",
+                    "price": 1180
+                  },
+                  {
+                    "name": "Okinawa soba small with jushi rice set",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Okinawa soba medium with jushi rice set",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Okinawa soba large with jushi rice set",
+                    "price": 1400
+                  },
+                  {
+                    "name": "Okinawa vegetable tanmen — small",
+                    "price": 980
+                  },
+                  {
+                    "name": "Okinawa vegetable tanmen — medium",
+                    "price": 1080
+                  },
+                  {
+                    "name": "Okinawa vegetable tanmen — large",
+                    "price": 1280
+                  },
+                  {
+                    "name": "Okinawa salt yakisoba",
+                    "price": 980
+                  },
+                  {
+                    "name": "Okinawa squid-ink yakisoba",
+                    "price": 1180
+                  },
+                  {
+                    "name": "Jushi seasoned rice",
+                    "price": 350
+                  },
+                  {
+                    "name": "Blue Seal ice cream — daily selection",
+                    "price": 380
+                  }
+                ],
+                "note": "Actual operator launch-menu image transcribed. Weekdays 11:30–14:00 in October 4 operator release; subject to change. Tax treatment not stated. Jushi rice pictured alongside vegetable tanmen costs extra. Exact branch booking site omits weekday lunch and gives later evening hours; confirm before visiting.",
+                "documentUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/nagoya22-kuronagi-3-c4e32548ab4fdbd4.webp"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html",
+            "name": "KuroNagi — Global Gate",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://r.gnavi.co.jp/fefdv5h60000/",
+            "phone": "080-4717-7896",
+            "openingHours": [
+              {
+                "days": "Planned weekdays — confirm conflicting branch listings",
+                "hours": "11:30–23:00; lunch menu 11:30–14:00"
+              },
+              {
+                "days": "Planned weekends — confirm conflicting branch listings",
+                "hours": "13:00–23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://r.gnavi.co.jp/fefdv5h60000/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://r.gnavi.co.jp/fefdv5h60000/menu1/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://r.gnavi.co.jp/fefdv5h60000/coupon/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://r.gnavi.co.jp/fefdv5h60000/photo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230101/23097895/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://job.tabelog.com/restaurants?id=23097895"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://shops.globalgate.nagoya/shop/index3.php"
+              }
+            ],
+            "reservationUrl": "https://r.gnavi.co.jp/fefdv5h60000/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "nagoya22-kuronagi",
+            "name": "KuroNagi — Global Gate",
+            "neighborhood": "Sasashima Live",
+            "cuisine": "Okinawan / shabu-shabu",
+            "description": "A planned Okinawan and chicken restaurant with published launch lunches, shabu-shabu, claypot rice and drinks.",
+            "address": "Unit 303, 3F Global Gate, 4-60-12 Hiraikecho, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://r.gnavi.co.jp/fefdv5h60000/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/nagoya22-kuronagi-1-990a1e6e30cbc25b.webp",
+            "imageCredit": "KuroNagi / branch-published Gurunavi menu",
+            "imageSourceUrl": "https://r.gnavi.co.jp/fefdv5h60000/menu5/",
+            "imageNote": "Sea grapes, labelled on the exact branch food menu; operator illustration, not a photograph of the future dining room",
+            "openingConfirmed": true,
+            "day": "2026-10-26"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/nagoya22-kuronagi-1-990a1e6e30cbc25b.webp",
+          "sha256": "990a1e6e30cbc25b53d05560e773ac6d63eb0b2155964f8f20ba359644b6664e",
+          "width": 1000,
+          "height": 1000,
+          "credit": "KuroNagi / branch-published Gurunavi menu",
+          "note": "Sea grapes, labelled on the exact branch food menu; operator illustration, not a photograph of the future dining room",
+          "sourcePage": "https://r.gnavi.co.jp/fefdv5h60000/menu5/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/nagoya22-kuronagi-3-c4e32548ab4fdbd4.webp",
+          "sha256": "c4e32548ab4fdbd4531b61c0a487f6cc2af072db81a6876458d7b5eb754ff7ad",
+          "width": 842,
+          "height": 1191,
+          "credit": "DOUBLE / KuroNagi",
+          "note": "Planned branch lunch menu, subject to change before October 26 opening; tax treatment is not stated",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2912 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Robata Naru — Hirai Opens in Hirai",
+        "description": "A newly opened robata serving daily Toyosu fish and five Fukui-rice claypot preparations, with a counter around the charcoal hearth.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html",
+        "address": "1F Nagashima Building, 6-37-1 Hirai, Edogawa-ku, Tokyo",
+        "productName": "Robata Naru — Hirai",
+        "utcStartDateTime": "2026-10-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Pay it Forward operator release confirms October 8,2026 Hirai opening; this is separate from the award-winning Kinshicho branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Hirai",
+          "Robata / seafood"
+        ],
+        "longFormSummary": "<p>A newly opened robata serving daily Toyosu fish and five Fukui-rice claypot preparations, with a counter around the charcoal hearth.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000005.000178596.html\"></cite></p><p>Pay it Forward operator release confirms October8,2026 Hirai opening; this is separate from the award-winning Kinshicho branch.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html",
+            "title": "Robata Naru — Hirai source",
+            "confidence": 90,
+            "reasoning": "Pay it Forward operator release confirms October 8,2026 Hirai opening; this is separate from the award-winning Kinshicho branch."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678646/food/",
+            "title": "Robata Naru — Hirai source",
+            "confidence": 90,
+            "reasoning": "Pay it Forward operator release confirms October 8,2026 Hirai opening; this is separate from the award-winning Kinshicho branch."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678646/drink/",
+            "title": "Robata Naru — Hirai source",
+            "confidence": 90,
+            "reasoning": "Pay it Forward operator release confirms October 8,2026 Hirai opening; this is separate from the award-winning Kinshicho branch."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678646/course/",
+            "title": "Robata Naru — Hirai source",
+            "confidence": 90,
+            "reasoning": "Pay it Forward operator release confirms October 8,2026 Hirai opening; this is separate from the award-winning Kinshicho branch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html",
+            "name": "Robata Naru — Hirai",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Hirai food menu",
+                "url": "https://www.hotpepper.jp/strJ004678646/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "刺身3種盛合せ",
+                    "price": 550
+                  },
+                  {
+                    "name": "福井名物　浜焼きサバ",
+                    "price": 2178
+                  },
+                  {
+                    "name": "極厚鮭焼き",
+                    "price": 1188
+                  },
+                  {
+                    "name": "極厚鮭西京焼き",
+                    "price": 1188
+                  },
+                  {
+                    "name": "豊洲魚河岸山治直送！名物鮮魚の1本焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Market price; confirm with shop. Zero in booking-site field is a placeholder, not free food."
+                  },
+                  {
+                    "name": "伴助ホッケ干物",
+                    "price": 1188
+                  },
+                  {
+                    "name": "ホタテバター焼き",
+                    "price": 1078
+                  },
+                  {
+                    "name": "大海老焼き",
+                    "price": 968
+                  },
+                  {
+                    "name": "炙り明太子",
+                    "price": 748
+                  },
+                  {
+                    "name": "信玄どりもも塩焼き",
+                    "price": 968
+                  },
+                  {
+                    "name": "白レバー炙り",
+                    "price": 968
+                  },
+                  {
+                    "name": "豚肩ロース味噌漬け",
+                    "price": 1078
+                  },
+                  {
+                    "name": "牛ハラミ焼き",
+                    "price": 1408
+                  },
+                  {
+                    "name": "厚切りベーコン",
+                    "price": 858
+                  },
+                  {
+                    "name": "どんこ椎茸",
+                    "price": 473
+                  },
+                  {
+                    "name": "長芋焼き",
+                    "price": 638
+                  },
+                  {
+                    "name": "大長茄子",
+                    "price": 990
+                  },
+                  {
+                    "name": "れんこん　トリュフ塩",
+                    "price": 693
+                  },
+                  {
+                    "name": "エリンギ",
+                    "price": 748
+                  },
+                  {
+                    "name": "かぼちゃバター",
+                    "price": 693
+                  },
+                  {
+                    "name": "玉ねぎホイル焼き",
+                    "price": 638
+                  },
+                  {
+                    "name": "ジャガイモ塩辛バター",
+                    "price": 748
+                  },
+                  {
+                    "name": "マグロぶつてんこ盛り",
+                    "price": 2068
+                  },
+                  {
+                    "name": "葱塩マグロ",
+                    "price": 1408
+                  },
+                  {
+                    "name": "鮮魚と唐辛子のピリ辛なめろう",
+                    "price": 748
+                  },
+                  {
+                    "name": "博多風鮮魚の胡麻和え",
+                    "price": 748
+                  },
+                  {
+                    "name": "とろたくつまみ",
+                    "price": 693
+                  },
+                  {
+                    "name": "鯖らっきょう",
+                    "price": 605
+                  },
+                  {
+                    "name": "旬の果物の白和え",
+                    "price": 858
+                  },
+                  {
+                    "name": "たぬきやっこ",
+                    "price": 715
+                  },
+                  {
+                    "name": "いちじくバターサンド",
+                    "price": 638
+                  },
+                  {
+                    "name": "へしこ炙り",
+                    "price": 638
+                  },
+                  {
+                    "name": "大人のチータラ",
+                    "price": 858
+                  },
+                  {
+                    "name": "黒糖そら豆",
+                    "price": 440
+                  },
+                  {
+                    "name": "生姜の佃煮",
+                    "price": 528
+                  },
+                  {
+                    "name": "名物　海鮮ばくだんポテトサラダ",
+                    "price": 858
+                  },
+                  {
+                    "name": "炭焼きロメインレタスのシーザーサラダ",
+                    "price": 968
+                  },
+                  {
+                    "name": "ウニといくらの贅沢グラタン",
+                    "price": 1628
+                  },
+                  {
+                    "name": "クリームチーズの王様",
+                    "price": 660
+                  },
+                  {
+                    "name": "桜エビとたこ山芋とろろ鉄板焼き",
+                    "price": 803
+                  },
+                  {
+                    "name": "蟹肉どっさり　カニクリームコロッケ",
+                    "price": 748
+                  },
+                  {
+                    "name": "境港直送アジフライ自家製タルタル",
+                    "price": 638
+                  },
+                  {
+                    "name": "鳥のあごだし唐揚げ",
+                    "price": 748
+                  },
+                  {
+                    "name": "雲仙ハムかつ",
+                    "price": 825
+                  },
+                  {
+                    "name": "魚シャカポテト",
+                    "price": 550
+                  },
+                  {
+                    "name": "マグロのレアカツ",
+                    "price": 1738
+                  },
+                  {
+                    "name": "焼き鯖土鍋ご飯",
+                    "price": 1848
+                  },
+                  {
+                    "name": "鮭といくらのハラコ飯",
+                    "price": 2728
+                  },
+                  {
+                    "name": "タコと岩海苔バターの土鍋ご飯",
+                    "price": 1958
+                  },
+                  {
+                    "name": "穴子の土鍋ご飯",
+                    "price": 1958
+                  },
+                  {
+                    "name": "ニンニク炊き込み土鍋ご飯",
+                    "price": 1738
+                  },
+                  {
+                    "name": "焼きおにぎり",
+                    "price": 330
+                  },
+                  {
+                    "name": "はまぐり汁",
+                    "price": 473
+                  },
+                  {
+                    "name": "あら汁",
+                    "price": 385
+                  },
+                  {
+                    "name": "パンアイス",
+                    "price": 605
+                  },
+                  {
+                    "name": "自家製プリン",
+                    "price": 495
+                  }
+                ],
+                "note": "October 8,2026 branch menu, tax included. Otoshi sashimi 3-species ¥550. Daily whole fish is market price per operator; booking-site¥0 placeholder is not a free item. Five claypot-rice preparations confirmed by operator, prices from this exact branch; Kinshicho menu and its Hot Restaurant award are not assigned to Hirai."
+              },
+              {
+                "label": "Hirai drinks",
+                "url": "https://www.hotpepper.jp/strJ004678646/drink/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "キリン一番搾り",
+                    "price": 660
+                  },
+                  {
+                    "name": "静岡抹茶ビール",
+                    "price": 715
+                  },
+                  {
+                    "name": "キリン晴れ風",
+                    "price": 869
+                  },
+                  {
+                    "name": "キリングリーンズフリー",
+                    "price": 660
+                  },
+                  {
+                    "name": "陸ハイボール",
+                    "price": 605
+                  },
+                  {
+                    "name": "痺れハイボール",
+                    "price": 605
+                  },
+                  {
+                    "name": "ビターハイボール",
+                    "price": 605
+                  },
+                  {
+                    "name": "生絞りレモンサワー",
+                    "price": 539
+                  },
+                  {
+                    "name": "アールグレイレモンサワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "ガリレモンサワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "白ガリサワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "黒ガリサワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "アールグレイ酎ハイ",
+                    "price": 605
+                  },
+                  {
+                    "name": "ぶどうビネガーサワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "豆乳酎ハイ",
+                    "price": 605
+                  },
+                  {
+                    "name": "大人の抹茶オレ",
+                    "price": 715
+                  },
+                  {
+                    "name": "大人の苺ミルク",
+                    "price": 715
+                  },
+                  {
+                    "name": "静岡県産抹茶割り",
+                    "price": 605
+                  },
+                  {
+                    "name": "静岡県産玄米緑茶割り",
+                    "price": 539
+                  },
+                  {
+                    "name": "静岡県産烏龍茶割り",
+                    "price": 539
+                  },
+                  {
+                    "name": "一粒の麦サワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "中々サワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "山猿銅釜蒸留サワー",
+                    "price": 660
+                  },
+                  {
+                    "name": "シュワっちんぐサワー",
+                    "price": 660
+                  },
+                  {
+                    "name": "富乃宝山サワー",
+                    "price": 660
+                  },
+                  {
+                    "name": "なかむらサワー",
+                    "price": 660
+                  },
+                  {
+                    "name": "だいやめサワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "山ねこ銅釜蒸留サワー",
+                    "price": 660
+                  },
+                  {
+                    "name": "バイスサワー　紫蘇だるま",
+                    "price": 605
+                  },
+                  {
+                    "name": "日本刀サワー",
+                    "price": 605
+                  },
+                  {
+                    "name": "まっこい梅酒",
+                    "price": 550
+                  },
+                  {
+                    "name": "しあわせ果実濃いとろみかん",
+                    "price": 660
+                  },
+                  {
+                    "name": "しあわせ果実濃いとろもも",
+                    "price": 660
+                  },
+                  {
+                    "name": "しあわせ果実濃いとろいちご",
+                    "price": 715
+                  },
+                  {
+                    "name": "花の舞　日本刀　純米吟醸　静岡",
+                    "price": 990
+                  },
+                  {
+                    "name": "八海山　魚沼で候　純米　新潟",
+                    "price": 1100
+                  },
+                  {
+                    "name": "三井の寿＋14 大辛口純米吟醸　福岡",
+                    "price": 1210
+                  },
+                  {
+                    "name": "考の司　心カラセヨ　純米吟醸　愛知",
+                    "price": 1320
+                  },
+                  {
+                    "name": "梅一輪　踊　蔵出し大吟醸　千葉",
+                    "price": 1430
+                  },
+                  {
+                    "name": "千代の光　特別純米五百万石火入れ　新潟",
+                    "price": 1320
+                  },
+                  {
+                    "name": "廣戸川　特別純米　福島",
+                    "price": 1320
+                  },
+                  {
+                    "name": "ぶどう酢（ス）カッシュ",
+                    "price": 550
+                  },
+                  {
+                    "name": "静岡県産抹茶",
+                    "price": 495
+                  },
+                  {
+                    "name": "静岡県産玄米緑茶",
+                    "price": 440
+                  },
+                  {
+                    "name": "コカコーラ",
+                    "price": 440
+                  },
+                  {
+                    "name": "辛口ジンジャエール",
+                    "price": 440
+                  },
+                  {
+                    "name": "静岡県産烏龍茶",
+                    "price": 440
+                  },
+                  {
+                    "name": "アールグレイティー",
+                    "price": 550
+                  },
+                  {
+                    "name": "豆乳",
+                    "price": 550
+                  }
+                ],
+                "note": "Tax-inclusive regular prices. No drink promotion or free-flow inclusion claimed. Checked operator release, linked Instagram (unreadable), exact Tabelog menu (403), branch Hot Pepper food/drink/course/gallery. Only seat reservations currently listed; no verified eligible dated discount found."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html",
+            "name": "Robata Naru — Hirai",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.instagram.com/robata.naru_hirai/",
+            "phone": "03-6657-0793",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "16:00–23:00"
+              },
+              {
+                "days": "Seats",
+                "hours": "38 total:counter 8/table 22/terrace 8"
+              },
+              {
+                "days": "Otoshi",
+                "hours": "Sashimi 3-species ¥550, tax included"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/robata.naru_hirai/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004678646/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004678646/drink/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004678646/course/"
+              }
+            ],
+            "reservationUrl": "https://www.hotpepper.jp/strJ004678646/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "tokyo38-naru-pr",
+            "name": "Robata Naru — Hirai",
+            "neighborhood": "Hirai",
+            "cuisine": "Robata / seafood",
+            "description": "A newly opened robata serving daily Toyosu fish and five Fukui-rice claypot preparations, with a counter around the charcoal hearth.",
+            "address": "1F Nagashima Building, 6-37-1 Hirai, Edogawa-ku, Tokyo",
+            "websiteUrl": "https://www.instagram.com/robata.naru_hirai/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-naru-pr-0-d1557d60acda145d.webp",
+            "imageCredit": "Pay it Forward",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html",
+            "imageNote": "Exterior of the Hirai branch supplied by its operator.",
+            "openingConfirmed": true,
+            "day": "2026-10-08"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-naru-pr-0-d1557d60acda145d.webp",
+          "sha256": "d1557d60acda145d7253ea121b6c60427243e6f9152a8c94bcbef397bedcf95d",
+          "width": 1200,
+          "height": 896,
+          "credit": "Pay it Forward",
+          "note": "Exterior of the Hirai branch supplied by its operator.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-naru-pr-1-6d5fafe66547f235.webp",
+          "sha256": "6d5fafe66547f23594b2eea96585dccd867178b71f037df11f6c4ec31795244c",
+          "width": 1200,
+          "height": 675,
+          "credit": "Pay it Forward",
+          "note": "Daily Toyosu seafood selection; species and availability vary.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-naru-pr-2-284dce496d387ca8.webp",
+          "sha256": "284dce496d387ca8b10f03a87b849cedc8a85ff081078efcc6c64bb5ff497c88",
+          "width": 1200,
+          "height": 675,
+          "credit": "Pay it Forward",
+          "note": "The five announced claypot-rice preparations; operator promotional photograph.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000178596.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "pourjours — Kodenmacho Opens in Kodenmacho",
+        "description": "A waffle and deli café relocated from Ningyocho to Kodenmacho, with lunch plates, afternoon sweets and takeaway lunch boxes.",
+        "sourceUrl": "https://pourjours.jp/",
+        "address": "5-12 Nihonbashi-Kodenmacho, Chuo-ku, Tokyo",
+        "productName": "pourjours — Kodenmacho",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator announcement and current website confirm October 13,2026 relocation reopening; brand founded 2012,not a new brand.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Kodenmacho",
+          "Waffle café"
+        ],
+        "longFormSummary": "<p>A waffle and deli café relocated from Ningyocho to Kodenmacho, with lunch plates, afternoon sweets and takeaway lunch boxes.<cite data-ref=\"https://pourjours.jp/\"></cite></p><p>Operator announcement and current website confirm October13,2026 relocation reopening; brand founded2012,not a new brand.</p>",
+        "references": [
+          {
+            "url": "https://pourjours.jp/",
+            "title": "pourjours — Kodenmacho source",
+            "confidence": 90,
+            "reasoning": "Operator announcement and current website confirm October 13,2026 relocation reopening; brand founded 2012,not a new brand."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000016.000036474.html",
+            "title": "pourjours — Kodenmacho source",
+            "confidence": 90,
+            "reasoning": "Operator announcement and current website confirm October 13,2026 relocation reopening; brand founded 2012,not a new brand."
+          },
+          {
+            "url": "https://pourjours.jp/eat_in",
+            "title": "pourjours — Kodenmacho source",
+            "confidence": 90,
+            "reasoning": "Operator announcement and current website confirm October 13,2026 relocation reopening; brand founded 2012,not a new brand."
+          },
+          {
+            "url": "https://pourjours.jp/take_out",
+            "title": "pourjours — Kodenmacho source",
+            "confidence": 90,
+            "reasoning": "Operator announcement and current website confirm October 13,2026 relocation reopening; brand founded 2012,not a new brand."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://pourjours.jp/",
+          "menu": {
+            "pinSourceUrl": "https://pourjours.jp/",
+            "name": "pourjours — Kodenmacho",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Lunch — eat in",
+                "url": "https://pourjours.jp/eat_in",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Cheese waffle and salad lunch",
+                    "price": 1078,
+                    "note": "Tax included in operator opening release"
+                  },
+                  {
+                    "name": "Doria and salad lunch",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Onigiri rice balls",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "11:00–14:00. Other item prices not published on current menu page. Deli/salad contents change; no regular-menu item inferred as a discount."
+              },
+              {
+                "label": "Tea time — eat in",
+                "url": "https://pourjours.jp/eat_in",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Matcha cream and azuki waffle",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chocolate and banana waffle",
+                    "priceLabel": "Price not published",
+                    "note": "Release prints¥1,000 and¥1,100 with a contradictory tax label; exact payable price needs shop confirmation"
+                  },
+                  {
+                    "name": "Coffee jelly with soft serve",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Black tea",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Organic herb tea",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "14:00–17:00,last order 16:30. Official Eat in page names items but publishes no prices. Conflicting chocolate-waffle tax wording is not silently corrected."
+              },
+              {
+                "label": "Takeaway lunch and sweets",
+                "url": "https://pourjours.jp/take_out",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Today’s vegetable rice-ball and deli box",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Soup and waffle lunch box",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Cheese waffle and salad lunch box",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Milk-cheesecake three-piece box",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Single milk cheesecake",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Lunch boxes 11:00–14:00;sweets 11:00–17:00. Exact takeaway prices not published; eat-in price is not reused as takeaway. Checked official home/About/Eat in/Take out, linked shop content and operator launch release/gallery. No linked priced caféPDF/order menu found; online gift-shop assortment not assumed served in café. New branch exterior/interior photos not found; current namedfood photos are verified official gallery images."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://pourjours.jp/",
+            "name": "pourjours — Kodenmacho",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://pourjours.jp/",
+            "phone": "0120-956-461",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "11:00–17:00; tea last order 16:30"
+              },
+              {
+                "days": "Lunch",
+                "hours": "11:00–14:00"
+              },
+              {
+                "days": "Tea time",
+                "hours": "14:00–17:00"
+              },
+              {
+                "days": "Closed",
+                "hours": "Saturday,Sunday,public holidays"
+              },
+              {
+                "days": "Seating",
+                "hours": "16 seats:12 table/4 counter"
+              }
+            ],
+            "detailsSourceUrl": "https://pourjours.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000016.000036474.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pourjours.jp/eat_in"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pourjours.jp/take_out"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "tokyo38-pourjours-site",
+            "name": "pourjours — Kodenmacho",
+            "neighborhood": "Kodenmacho",
+            "cuisine": "Waffle café",
+            "description": "A waffle and deli café relocated from Ningyocho to Kodenmacho, with lunch plates, afternoon sweets and takeaway lunch boxes.",
+            "address": "5-12 Nihonbashi-Kodenmacho, Chuo-ku, Tokyo",
+            "websiteUrl": "https://pourjours.jp/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-pourjours-site-0-ce97a3497878089d.webp",
+            "imageCredit": "pourjours / Fordays",
+            "imageSourceUrl": "https://pourjours.jp/eat_in",
+            "imageNote": "Cheese waffle and salad lunch.",
+            "openingConfirmed": true,
+            "day": "2026-10-13"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-pourjours-site-0-ce97a3497878089d.webp",
+          "sha256": "ce97a3497878089d893881c0537e38cdba05378567274580890127890d4c35f4",
+          "width": 720,
+          "height": 540,
+          "credit": "pourjours / Fordays",
+          "note": "Cheese waffle and salad lunch.",
+          "sourcePage": "https://pourjours.jp/eat_in"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-pourjours-site-1-83c5d66cf43b63ab.webp",
+          "sha256": "83c5d66cf43b63ab713a4a020423bcc942a33bbe467cea8b01a700d95cd908e6",
+          "width": 720,
+          "height": 540,
+          "credit": "pourjours / Fordays",
+          "note": "Doria and salad lunch.",
+          "sourcePage": "https://pourjours.jp/eat_in"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-pourjours-site-2-6384d00c442c1288.webp",
+          "sha256": "6384d00c442c12889f4b119114837028e2c4df31d7d3ebabbf9b619899ca7f69",
+          "width": 720,
+          "height": 540,
+          "credit": "pourjours / Fordays",
+          "note": "Matcha cream and azuki waffle.",
+          "sourcePage": "https://pourjours.jp/eat_in"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-pourjours-site-3-4000553449bfdb2b.webp",
+          "sha256": "4000553449bfdb2bb50a0ce1335f9ec315b65918081e8f09f61a536521ef19a1",
+          "width": 720,
+          "height": 540,
+          "credit": "pourjours / Fordays",
+          "note": "Chocolate and banana waffle.",
+          "sourcePage": "https://pourjours.jp/eat_in"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-pourjours-site-4-befe0e8946c31713.webp",
+          "sha256": "befe0e8946c31713ef6a2076a25c493ec15e0fc953dde3979c4a8be123758f5d",
+          "width": 720,
+          "height": 540,
+          "credit": "pourjours / Fordays",
+          "note": "Coffee jelly with soft serve.",
+          "sourcePage": "https://pourjours.jp/eat_in"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-pourjours-site-5-9827e70ce9245957.webp",
+          "sha256": "9827e70ce92459578a24c18d1154e6be0c66bbe37e6c47ea85f23aea4c5527f0",
+          "width": 720,
+          "height": 540,
+          "credit": "pourjours / Fordays",
+          "note": "Vegetable rice-ball and deli takeaway box; daily contents vary.",
+          "sourcePage": "https://pourjours.jp/take_out"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-pourjours-site-6-be48d7ba98ddb9e0.webp",
+          "sha256": "be48d7ba98ddb9e0565dd5e178dc27ef7b0cfb175faf53b97ddf8952b8f511f0",
+          "width": 720,
+          "height": 540,
+          "credit": "pourjours / Fordays",
+          "note": "Milk-cheesecake three-piece takeaway box.",
+          "sourcePage": "https://pourjours.jp/take_out"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Nankurunaisa — Hachimanyama Opens in Hachimanyama",
+        "description": "An Okinawan izakaya renewed on October 1, with sea grapes, champuru and rafute, and an opening drinks promotion through October 17.",
+        "sourceUrl": "https://shop.gyro.holdings/detail/131809/",
+        "address": "2F Retonade Hachimanyama, 1-1-11 Kamitakaido, Suginami-ku, Tokyo",
+        "productName": "Nankurunaisa — Hachimanyama",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Current operator branch page explicitly confirms October 1,2026 renewal reopening; not a claim that the address or brand is entirely new.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Hachimanyama",
+          "Okinawan izakaya"
+        ],
+        "longFormSummary": "<p>An Okinawan izakaya renewed on October1, with sea grapes, champuru and rafute, and an opening drinks promotion through October17.<cite data-ref=\"https://shop.gyro.holdings/detail/131809/\"></cite></p><p>Current operator branch page explicitly confirms October1,2026 renewal reopening; not a claim that the address or brand is entirely new.</p>",
+        "references": [
+          {
+            "url": "https://shop.gyro.holdings/detail/131809/",
+            "title": "Nankurunaisa — Hachimanyama source",
+            "confidence": 90,
+            "reasoning": "Current operator branch page explicitly confirms October 1,2026 renewal reopening; not a claim that the address or brand is entirely new."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html",
+            "title": "Nankurunaisa — Hachimanyama source",
+            "confidence": 90,
+            "reasoning": "Current operator branch page explicitly confirms October 1,2026 renewal reopening; not a claim that the address or brand is entirely new."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ000686514/food/",
+            "title": "Nankurunaisa — Hachimanyama source",
+            "confidence": 90,
+            "reasoning": "Current operator branch page explicitly confirms October 1,2026 renewal reopening; not a claim that the address or brand is entirely new."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ000686514/drink/",
+            "title": "Nankurunaisa — Hachimanyama source",
+            "confidence": 90,
+            "reasoning": "Current operator branch page explicitly confirms October 1,2026 renewal reopening; not a claim that the address or brand is entirely new."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://shop.gyro.holdings/detail/131809/",
+          "menu": {
+            "pinSourceUrl": "https://shop.gyro.holdings/detail/131809/",
+            "name": "Nankurunaisa — Hachimanyama",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Hachimanyama food menu",
+                "url": "https://www.hotpepper.jp/strJ000686514/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "プチプチ海ぶどう",
+                    "price": 858
+                  },
+                  {
+                    "name": "沖縄前菜5種盛プレート",
+                    "price": 1298
+                  },
+                  {
+                    "name": "海ぶどうとサーモンの南国カーペット",
+                    "price": 918
+                  },
+                  {
+                    "name": "島豆腐冷奴沖縄スタイル",
+                    "price": 638
+                  },
+                  {
+                    "name": "ミミガーポン酢",
+                    "price": 528
+                  },
+                  {
+                    "name": "タレまで飲めるもずく酢",
+                    "price": 528
+                  },
+                  {
+                    "name": "ジーマーミー豆腐",
+                    "price": 638
+                  },
+                  {
+                    "name": "珍味好きにはたまらない！とうふよう",
+                    "price": 638
+                  },
+                  {
+                    "name": "沖縄アンダス味噌のきゅうり",
+                    "price": 528
+                  },
+                  {
+                    "name": "海人サラダ (M)",
+                    "price": 935
+                  },
+                  {
+                    "name": "海人サラダ (L)",
+                    "price": 1265
+                  },
+                  {
+                    "name": "サーモンとアボカドのコブサラダ",
+                    "price": 858
+                  },
+                  {
+                    "name": "タコロー！沖縄タコスサラダ",
+                    "price": 858
+                  },
+                  {
+                    "name": "崩し麻婆島豆腐",
+                    "price": 748
+                  },
+                  {
+                    "name": "人参しりしり",
+                    "price": 748
+                  },
+                  {
+                    "name": "ポーク玉子焼き",
+                    "price": 715
+                  },
+                  {
+                    "name": "コンビーフハッシュの玉子焼き",
+                    "price": 715
+                  },
+                  {
+                    "name": "アーサー玉子焼き",
+                    "price": 715
+                  },
+                  {
+                    "name": "ゴーヤチャンプルー",
+                    "price": 825
+                  },
+                  {
+                    "name": "辛味噌中身チャンプルー シングル (100 g)",
+                    "price": 748
+                  },
+                  {
+                    "name": "辛味噌中身チャンプルー ダブル (200 g)",
+                    "price": 858
+                  },
+                  {
+                    "name": "辛味噌中身チャンプルー トリプル (300 g)",
+                    "price": 968
+                  },
+                  {
+                    "name": "ソーミンちゃんぷるー",
+                    "price": 748
+                  },
+                  {
+                    "name": "ふーちゃんぷるー",
+                    "price": 748
+                  },
+                  {
+                    "name": "5時間煮込み！沖縄角煮ラフテー",
+                    "price": 968
+                  },
+                  {
+                    "name": "ソーキ肉チーズ焼き",
+                    "price": 858
+                  },
+                  {
+                    "name": "ソーキそば フルサイズ",
+                    "price": 990
+                  },
+                  {
+                    "name": "ソーキそば ジャストサイズ",
+                    "price": 605
+                  },
+                  {
+                    "name": "沖縄そば フルサイズ",
+                    "price": 990
+                  },
+                  {
+                    "name": "沖縄そば ジャストサイズ",
+                    "price": 605
+                  },
+                  {
+                    "name": "アーサーそば フルサイズ",
+                    "price": 990
+                  },
+                  {
+                    "name": "アーサーそば ジャストサイズ",
+                    "price": 605
+                  },
+                  {
+                    "name": "ラフテー炒飯",
+                    "price": 858
+                  },
+                  {
+                    "name": "うちなーソース焼きそば",
+                    "price": 858
+                  },
+                  {
+                    "name": "タコライス",
+                    "price": 858
+                  },
+                  {
+                    "name": "沖縄味噌ポークおにぎり",
+                    "price": 418
+                  },
+                  {
+                    "name": "玉子たっぷり！タルタルチキン南蛮",
+                    "price": 858
+                  },
+                  {
+                    "name": "カリカリッ！もずくの天ぷら",
+                    "price": 748
+                  },
+                  {
+                    "name": "カーリーポテトフライ",
+                    "price": 748
+                  },
+                  {
+                    "name": "そのままキビナゴ唐揚げ",
+                    "price": 638
+                  },
+                  {
+                    "name": "アーサー鶏天",
+                    "price": 638
+                  },
+                  {
+                    "name": "バッファローチキン 5本",
+                    "price": 528
+                  },
+                  {
+                    "name": "バッファローチキン 10本",
+                    "price": 968
+                  },
+                  {
+                    "name": "バッファローチキン 20本",
+                    "price": 1848
+                  },
+                  {
+                    "name": "バッファローチキン 50本",
+                    "price": 4620
+                  },
+                  {
+                    "name": "バッファローチキン 100本（要予約）",
+                    "price": 8800
+                  },
+                  {
+                    "name": "タコさんウィンナー 5匹",
+                    "price": 418
+                  },
+                  {
+                    "name": "タコさんウィンナー 10匹",
+                    "price": 825
+                  },
+                  {
+                    "name": "タコさんウィンナー 20匹",
+                    "price": 1540
+                  },
+                  {
+                    "name": "タコさんウィンナー 50匹",
+                    "price": 3300
+                  },
+                  {
+                    "name": "タコさんウィンナー 100匹（要予約）",
+                    "price": 5500
+                  },
+                  {
+                    "name": "アジフライ",
+                    "price": 418
+                  },
+                  {
+                    "name": "タコの唐揚げ",
+                    "price": 748
+                  },
+                  {
+                    "name": "塩昆布きゅうり",
+                    "price": 418
+                  },
+                  {
+                    "name": "枝豆",
+                    "price": 418
+                  },
+                  {
+                    "name": "チャーシューエッグす",
+                    "price": 880
+                  },
+                  {
+                    "name": "もちもち焼き餃子",
+                    "price": 418
+                  },
+                  {
+                    "name": "揚げたて！サーターアンダギー ノーマル (1個)",
+                    "price": 308
+                  },
+                  {
+                    "name": "揚げたて！サーターアンダギー チョコ掛け (1個)",
+                    "price": 363
+                  },
+                  {
+                    "name": "ブルーシールアイス",
+                    "price": 330
+                  }
+                ],
+                "note": "CurrentSeptember 30 branch menu, cross-checked visually against branch-specific operator food-menu images. Prices include tax. Table/otoshi charge¥495 per person additional per operator menu. Hundred-piece orders require advance reservation. Full food menu retained; earlier brand/other-branch menus excluded."
+              },
+              {
+                "label": "Hachimanyama regular drinks — operator flyer",
+                "url": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Orion draft beer",
+                    "price": 429
+                  },
+                  {
+                    "name": "Sapporo Black Label draft beer",
+                    "price": 429
+                  },
+                  {
+                    "name": "Orion medium bottle",
+                    "price": 858
+                  },
+                  {
+                    "name": "Sapporo Akaboshi medium bottle",
+                    "price": 858
+                  },
+                  {
+                    "name": "Non-alcoholic beer",
+                    "price": 638
+                  },
+                  {
+                    "name": "OKINAWA shandygaff",
+                    "price": 660
+                  },
+                  {
+                    "name": "OKINAWA black beer",
+                    "price": 660
+                  },
+                  {
+                    "name": "OKINAWA green beer",
+                    "price": 660
+                  },
+                  {
+                    "name": "OKINAWA mango beer",
+                    "price": 660
+                  },
+                  {
+                    "name": "OKINAWA guava beer",
+                    "price": 660
+                  },
+                  {
+                    "name": "Okinawa highball",
+                    "price": 539
+                  },
+                  {
+                    "name": "Whisky highball",
+                    "price": 429
+                  },
+                  {
+                    "name": "Mango highball",
+                    "price": 539
+                  },
+                  {
+                    "name": "Guava highball",
+                    "price": 539
+                  },
+                  {
+                    "name": "Ginger highball",
+                    "price": 539
+                  },
+                  {
+                    "name": "Cola highball",
+                    "price": 539
+                  },
+                  {
+                    "name": "Shinzato whisky highball",
+                    "price": 660
+                  },
+                  {
+                    "name": "Okinawa root-beer highball",
+                    "price": 660
+                  },
+                  {
+                    "name": "Okinawa pineapple liqueur",
+                    "price": 550
+                  },
+                  {
+                    "name": "Mango liqueur",
+                    "price": 550
+                  },
+                  {
+                    "name": "Plum wine",
+                    "price": 550
+                  },
+                  {
+                    "name": "Shikuwasa sour",
+                    "price": 429
+                  },
+                  {
+                    "name": "Fresh-lemon sour",
+                    "price": 539
+                  },
+                  {
+                    "name": "Okinawa sour",
+                    "price": 539
+                  },
+                  {
+                    "name": "Black-pineapple sour",
+                    "price": 605
+                  },
+                  {
+                    "name": "Green-banana sour",
+                    "price": 605
+                  },
+                  {
+                    "name": "Mango-juice sour",
+                    "price": 539
+                  },
+                  {
+                    "name": "Guava-juice sour",
+                    "price": 539
+                  },
+                  {
+                    "name": "Okinawa root-beer sour",
+                    "price": 770
+                  },
+                  {
+                    "name": "Green-tea shochu highball",
+                    "price": 605
+                  },
+                  {
+                    "name": "Turmeric-tea shochu highball",
+                    "price": 605
+                  },
+                  {
+                    "name": "Sanpin-tea shochu highball",
+                    "price": 605
+                  },
+                  {
+                    "name": "Organic adzuki-tea shochu highball",
+                    "price": 605
+                  },
+                  {
+                    "name": "Ramudatcha tea highball",
+                    "price": 605
+                  },
+                  {
+                    "name": "Ryukyu Punch cocktail",
+                    "price": 605
+                  },
+                  {
+                    "name": "Churaumi Beach cocktail",
+                    "price": 605
+                  },
+                  {
+                    "name": "Ryukyu Junkie cocktail",
+                    "price": 605
+                  },
+                  {
+                    "name": "Karari Imo shochu — glass",
+                    "price": 550
+                  },
+                  {
+                    "name": "Dorohachi barley shochu — glass",
+                    "price": 550
+                  },
+                  {
+                    "name": "Mango juice",
+                    "price": 385
+                  },
+                  {
+                    "name": "Guava juice",
+                    "price": 385
+                  },
+                  {
+                    "name": "Ginger ale",
+                    "price": 308
+                  },
+                  {
+                    "name": "Shikuwasa squash",
+                    "price": 308
+                  },
+                  {
+                    "name": "Organic adzuki tea",
+                    "price": 308
+                  },
+                  {
+                    "name": "Green tea",
+                    "price": 308
+                  },
+                  {
+                    "name": "Sanpin tea",
+                    "price": 308
+                  },
+                  {
+                    "name": "Turmeric tea",
+                    "price": 308
+                  },
+                  {
+                    "name": "Orange juice",
+                    "price": 385
+                  },
+                  {
+                    "name": "Cola",
+                    "price": 308
+                  },
+                  {
+                    "name": "Okinawa root beer — can",
+                    "price": 528
+                  }
+                ],
+                "note": "Tax-inclusive regular prices, visually transcribed from operator release drink-menu images. Tea-shochu drinks are¥605 in operator flyer, despite booking-site¥429; use primary flyer. Japanese-sake numeric conflict 847/848 omitted. Awamori and bottle details are available in linked full menu images; this is a sample. Booking-site¥980 early-entryfree-flow appears alongside old programme details and is not corroborated by new operator menu: not indexed. No rounding rule for half-priced odd-yen drinks published; payable discounted price not fabricated.",
+                "documentUrl": "https://prcdn.freetls.fastly.net/release_image/5340/1066/5340-1066-a2368ec42ce97cfd54129687597d8a0e-1191x842.jpg?width=1950&height=1350&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://shop.gyro.holdings/detail/131809/",
+            "name": "Nankurunaisa — Hachimanyama",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://shop.gyro.holdings/detail/131809/",
+            "phone": "03-5316-3167",
+            "openingHours": [
+              {
+                "days": "Monday–Thursday",
+                "hours": "17:00–23:00"
+              },
+              {
+                "days": "Friday",
+                "hours": "17:00–24:00"
+              },
+              {
+                "days": "Saturday",
+                "hours": "15:00–24:00"
+              },
+              {
+                "days": "Sunday",
+                "hours": "15:00–23:00"
+              },
+              {
+                "days": "Table charge",
+                "hours": "¥495 per person; electronic-cigarette smoking area/permission listed by operator"
+              },
+              {
+                "days": "Opening type",
+                "hours": "October 1 renewal reopening"
+              }
+            ],
+            "detailsSourceUrl": "https://shop.gyro.holdings/detail/131809/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ000686514/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ000686514/drink/"
+              }
+            ],
+            "reservationUrl": "https://www.hotpepper.jp/strJ000686514/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "tokyo38-nankuru-owner",
+            "name": "Nankurunaisa — Hachimanyama",
+            "neighborhood": "Hachimanyama",
+            "cuisine": "Okinawan izakaya",
+            "description": "An Okinawan izakaya renewed on October 1, with sea grapes, champuru and rafute, and an opening drinks promotion through October 17.",
+            "address": "2F Retonade Hachimanyama, 1-1-11 Kamitakaido, Suginami-ku, Tokyo",
+            "websiteUrl": "https://shop.gyro.holdings/detail/131809/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-0-73d4803a8bc8caf8.webp",
+            "imageCredit": "GYRO HOLDINGS / Brand Bank Company",
+            "imageSourceUrl": "https://shop.gyro.holdings/detail/131809/",
+            "imageNote": "Operator food photograph on the Hachimanyama branch page; meal and beer sold separately.",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-0-73d4803a8bc8caf8.webp",
+          "sha256": "73d4803a8bc8caf8dd5a736c3f73e71b09eca084176f087e1e91ea3fb309fd6e",
+          "width": 1200,
+          "height": 800,
+          "credit": "GYRO HOLDINGS / Brand Bank Company",
+          "note": "Operator food photograph on the Hachimanyama branch page; meal and beer sold separately.",
+          "sourcePage": "https://shop.gyro.holdings/detail/131809/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-1-c084ab6d2eaf6b37.webp",
+          "sha256": "c084ab6d2eaf6b375f33a1545ebee9ab2834f2afb844379ff07d8836c8ec1ebe",
+          "width": 1200,
+          "height": 900,
+          "credit": "GYRO HOLDINGS / Brand Bank Company",
+          "note": "Sea grapes, as pictured in the Hachimanyama operator gallery.",
+          "sourcePage": "https://shop.gyro.holdings/detail/131809/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-2-4019246cf1403532.webp",
+          "sha256": "4019246cf14035327216be329a3366b3b8c0e8d1ee7fde0b810e3af6057c62ae",
+          "width": 1200,
+          "height": 800,
+          "credit": "GYRO HOLDINGS / Brand Bank Company",
+          "note": "Opening promotion poster; earlier phases expired; only October 11–17 drinks-half-price phase remains eligible.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-3-a9175a8450a732c8.webp",
+          "sha256": "a9175a8450a732c8fa8b6aaf97fee64111d47681f6d1564ffa599871b0316e90",
+          "width": 1191,
+          "height": 842,
+          "credit": "GYRO HOLDINGS / Brand Bank Company",
+          "note": "Branch food menu page 1, tax-inclusive amounts in parentheses.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-4-b39c2999a6ea9322.webp",
+          "sha256": "b39c2999a6ea93227ef58762fd1feb8f6134faa8bb8fbd6f560b26a3a29b0860",
+          "width": 1191,
+          "height": 842,
+          "credit": "GYRO HOLDINGS / Brand Bank Company",
+          "note": "Branch food menu page 2.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-5-0181aa5cf4f0289b.webp",
+          "sha256": "0181aa5cf4f0289b8170abc23528fb19b168aa1cbfcb6faefb409ac7ab067b3b",
+          "width": 1191,
+          "height": 842,
+          "credit": "GYRO HOLDINGS / Brand Bank Company",
+          "note": "Branch drinks menu page 1 with regular prices.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-6-ed25629787ceaf81.webp",
+          "sha256": "ed25629787ceaf81a7dcee8078e99bf9d5539d2e7a516268d29a759c6bf70463",
+          "width": 1191,
+          "height": 842,
+          "credit": "GYRO HOLDINGS / Brand Bank Company",
+          "note": "Branch drinks menu page 2, regular prices and table-charge condition.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://shop.gyro.holdings/detail/131809/",
+          "name": "Nankurunaisa — Hachimanyama",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Hachimanyama food menu",
+              "url": "https://www.hotpepper.jp/strJ000686514/food/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "プチプチ海ぶどう",
+                  "price": 858
+                },
+                {
+                  "name": "沖縄前菜5種盛プレート",
+                  "price": 1298
+                },
+                {
+                  "name": "海ぶどうとサーモンの南国カーペット",
+                  "price": 918
+                },
+                {
+                  "name": "島豆腐冷奴沖縄スタイル",
+                  "price": 638
+                },
+                {
+                  "name": "ミミガーポン酢",
+                  "price": 528
+                },
+                {
+                  "name": "タレまで飲めるもずく酢",
+                  "price": 528
+                },
+                {
+                  "name": "ジーマーミー豆腐",
+                  "price": 638
+                },
+                {
+                  "name": "珍味好きにはたまらない！とうふよう",
+                  "price": 638
+                },
+                {
+                  "name": "沖縄アンダス味噌のきゅうり",
+                  "price": 528
+                },
+                {
+                  "name": "海人サラダ (M)",
+                  "price": 935
+                },
+                {
+                  "name": "海人サラダ (L)",
+                  "price": 1265
+                },
+                {
+                  "name": "サーモンとアボカドのコブサラダ",
+                  "price": 858
+                },
+                {
+                  "name": "タコロー！沖縄タコスサラダ",
+                  "price": 858
+                },
+                {
+                  "name": "崩し麻婆島豆腐",
+                  "price": 748
+                },
+                {
+                  "name": "人参しりしり",
+                  "price": 748
+                },
+                {
+                  "name": "ポーク玉子焼き",
+                  "price": 715
+                },
+                {
+                  "name": "コンビーフハッシュの玉子焼き",
+                  "price": 715
+                },
+                {
+                  "name": "アーサー玉子焼き",
+                  "price": 715
+                },
+                {
+                  "name": "ゴーヤチャンプルー",
+                  "price": 825
+                },
+                {
+                  "name": "辛味噌中身チャンプルー シングル (100 g)",
+                  "price": 748
+                },
+                {
+                  "name": "辛味噌中身チャンプルー ダブル (200 g)",
+                  "price": 858
+                },
+                {
+                  "name": "辛味噌中身チャンプルー トリプル (300 g)",
+                  "price": 968
+                },
+                {
+                  "name": "ソーミンちゃんぷるー",
+                  "price": 748
+                },
+                {
+                  "name": "ふーちゃんぷるー",
+                  "price": 748
+                },
+                {
+                  "name": "5時間煮込み！沖縄角煮ラフテー",
+                  "price": 968
+                },
+                {
+                  "name": "ソーキ肉チーズ焼き",
+                  "price": 858
+                },
+                {
+                  "name": "ソーキそば フルサイズ",
+                  "price": 990
+                },
+                {
+                  "name": "ソーキそば ジャストサイズ",
+                  "price": 605
+                },
+                {
+                  "name": "沖縄そば フルサイズ",
+                  "price": 990
+                },
+                {
+                  "name": "沖縄そば ジャストサイズ",
+                  "price": 605
+                },
+                {
+                  "name": "アーサーそば フルサイズ",
+                  "price": 990
+                },
+                {
+                  "name": "アーサーそば ジャストサイズ",
+                  "price": 605
+                },
+                {
+                  "name": "ラフテー炒飯",
+                  "price": 858
+                },
+                {
+                  "name": "うちなーソース焼きそば",
+                  "price": 858
+                },
+                {
+                  "name": "タコライス",
+                  "price": 858
+                },
+                {
+                  "name": "沖縄味噌ポークおにぎり",
+                  "price": 418
+                },
+                {
+                  "name": "玉子たっぷり！タルタルチキン南蛮",
+                  "price": 858
+                },
+                {
+                  "name": "カリカリッ！もずくの天ぷら",
+                  "price": 748
+                },
+                {
+                  "name": "カーリーポテトフライ",
+                  "price": 748
+                },
+                {
+                  "name": "そのままキビナゴ唐揚げ",
+                  "price": 638
+                },
+                {
+                  "name": "アーサー鶏天",
+                  "price": 638
+                },
+                {
+                  "name": "バッファローチキン 5本",
+                  "price": 528
+                },
+                {
+                  "name": "バッファローチキン 10本",
+                  "price": 968
+                },
+                {
+                  "name": "バッファローチキン 20本",
+                  "price": 1848
+                },
+                {
+                  "name": "バッファローチキン 50本",
+                  "price": 4620
+                },
+                {
+                  "name": "バッファローチキン 100本（要予約）",
+                  "price": 8800
+                },
+                {
+                  "name": "タコさんウィンナー 5匹",
+                  "price": 418
+                },
+                {
+                  "name": "タコさんウィンナー 10匹",
+                  "price": 825
+                },
+                {
+                  "name": "タコさんウィンナー 20匹",
+                  "price": 1540
+                },
+                {
+                  "name": "タコさんウィンナー 50匹",
+                  "price": 3300
+                },
+                {
+                  "name": "タコさんウィンナー 100匹（要予約）",
+                  "price": 5500
+                },
+                {
+                  "name": "アジフライ",
+                  "price": 418
+                },
+                {
+                  "name": "タコの唐揚げ",
+                  "price": 748
+                },
+                {
+                  "name": "塩昆布きゅうり",
+                  "price": 418
+                },
+                {
+                  "name": "枝豆",
+                  "price": 418
+                },
+                {
+                  "name": "チャーシューエッグす",
+                  "price": 880
+                },
+                {
+                  "name": "もちもち焼き餃子",
+                  "price": 418
+                },
+                {
+                  "name": "揚げたて！サーターアンダギー ノーマル (1個)",
+                  "price": 308
+                },
+                {
+                  "name": "揚げたて！サーターアンダギー チョコ掛け (1個)",
+                  "price": 363
+                },
+                {
+                  "name": "ブルーシールアイス",
+                  "price": 330
+                }
+              ],
+              "note": "CurrentSeptember 30 branch menu, cross-checked visually against branch-specific operator food-menu images. Prices include tax. Table/otoshi charge¥495 per person additional per operator menu. Hundred-piece orders require advance reservation. Full food menu retained; earlier brand/other-branch menus excluded."
+            },
+            {
+              "label": "Hachimanyama regular drinks — operator flyer",
+              "url": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Orion draft beer",
+                  "price": 429
+                },
+                {
+                  "name": "Sapporo Black Label draft beer",
+                  "price": 429
+                },
+                {
+                  "name": "Orion medium bottle",
+                  "price": 858
+                },
+                {
+                  "name": "Sapporo Akaboshi medium bottle",
+                  "price": 858
+                },
+                {
+                  "name": "Non-alcoholic beer",
+                  "price": 638
+                },
+                {
+                  "name": "OKINAWA shandygaff",
+                  "price": 660
+                },
+                {
+                  "name": "OKINAWA black beer",
+                  "price": 660
+                },
+                {
+                  "name": "OKINAWA green beer",
+                  "price": 660
+                },
+                {
+                  "name": "OKINAWA mango beer",
+                  "price": 660
+                },
+                {
+                  "name": "OKINAWA guava beer",
+                  "price": 660
+                },
+                {
+                  "name": "Okinawa highball",
+                  "price": 539
+                },
+                {
+                  "name": "Whisky highball",
+                  "price": 429
+                },
+                {
+                  "name": "Mango highball",
+                  "price": 539
+                },
+                {
+                  "name": "Guava highball",
+                  "price": 539
+                },
+                {
+                  "name": "Ginger highball",
+                  "price": 539
+                },
+                {
+                  "name": "Cola highball",
+                  "price": 539
+                },
+                {
+                  "name": "Shinzato whisky highball",
+                  "price": 660
+                },
+                {
+                  "name": "Okinawa root-beer highball",
+                  "price": 660
+                },
+                {
+                  "name": "Okinawa pineapple liqueur",
+                  "price": 550
+                },
+                {
+                  "name": "Mango liqueur",
+                  "price": 550
+                },
+                {
+                  "name": "Plum wine",
+                  "price": 550
+                },
+                {
+                  "name": "Shikuwasa sour",
+                  "price": 429
+                },
+                {
+                  "name": "Fresh-lemon sour",
+                  "price": 539
+                },
+                {
+                  "name": "Okinawa sour",
+                  "price": 539
+                },
+                {
+                  "name": "Black-pineapple sour",
+                  "price": 605
+                },
+                {
+                  "name": "Green-banana sour",
+                  "price": 605
+                },
+                {
+                  "name": "Mango-juice sour",
+                  "price": 539
+                },
+                {
+                  "name": "Guava-juice sour",
+                  "price": 539
+                },
+                {
+                  "name": "Okinawa root-beer sour",
+                  "price": 770
+                },
+                {
+                  "name": "Green-tea shochu highball",
+                  "price": 605
+                },
+                {
+                  "name": "Turmeric-tea shochu highball",
+                  "price": 605
+                },
+                {
+                  "name": "Sanpin-tea shochu highball",
+                  "price": 605
+                },
+                {
+                  "name": "Organic adzuki-tea shochu highball",
+                  "price": 605
+                },
+                {
+                  "name": "Ramudatcha tea highball",
+                  "price": 605
+                },
+                {
+                  "name": "Ryukyu Punch cocktail",
+                  "price": 605
+                },
+                {
+                  "name": "Churaumi Beach cocktail",
+                  "price": 605
+                },
+                {
+                  "name": "Ryukyu Junkie cocktail",
+                  "price": 605
+                },
+                {
+                  "name": "Karari Imo shochu — glass",
+                  "price": 550
+                },
+                {
+                  "name": "Dorohachi barley shochu — glass",
+                  "price": 550
+                },
+                {
+                  "name": "Mango juice",
+                  "price": 385
+                },
+                {
+                  "name": "Guava juice",
+                  "price": 385
+                },
+                {
+                  "name": "Ginger ale",
+                  "price": 308
+                },
+                {
+                  "name": "Shikuwasa squash",
+                  "price": 308
+                },
+                {
+                  "name": "Organic adzuki tea",
+                  "price": 308
+                },
+                {
+                  "name": "Green tea",
+                  "price": 308
+                },
+                {
+                  "name": "Sanpin tea",
+                  "price": 308
+                },
+                {
+                  "name": "Turmeric tea",
+                  "price": 308
+                },
+                {
+                  "name": "Orange juice",
+                  "price": 385
+                },
+                {
+                  "name": "Cola",
+                  "price": 308
+                },
+                {
+                  "name": "Okinawa root beer — can",
+                  "price": 528
+                }
+              ],
+              "note": "Tax-inclusive regular prices, visually transcribed from operator release drink-menu images. Tea-shochu drinks are¥605 in operator flyer, despite booking-site¥429; use primary flyer. Japanese-sake numeric conflict 847/848 omitted. Awamori and bottle details are available in linked full menu images; this is a sample. Booking-site¥980 early-entryfree-flow appears alongside old programme details and is not corroborated by new operator menu: not indexed. No rounding rule for half-priced odd-yen drinks published; payable discounted price not fabricated.",
+              "documentUrl": "https://prcdn.freetls.fastly.net/release_image/5340/1066/5340-1066-a2368ec42ce97cfd54129687597d8a0e-1191x842.jpg?width=1950&height=1350&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+            }
+          ],
+          "specials": [
+            {
+              "title": "Opening phase 3 — all drinks half price",
+              "kind": "other",
+              "description": "All drink-menu orders are half price during opening phase 3, with at least one food order per guest and a separate table charge.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001066.000005340.html",
+              "menuLabel": "Hachimanyama regular drinks — operator flyer",
+              "discounted": true,
+              "validFrom": "2026-10-11",
+              "validThrough": "2026-10-17",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "October 11–17,2026 only; all drink-menu orders half price.",
+                "Each guest must order at least one food item.",
+                "Separate table/otoshi charge¥495 per person per operator menu; two-hour seating.",
+                "Cannot combine with other services.",
+                "Regular prices displayed in linked menu; discounted odd-yen rounding not published.",
+                "Earlier October 1–3 ¥10 beer and October 4–10 food-half-price phases have expired."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ],
+                    "start": "17:00",
+                    "end": "23:00"
+                  },
+                  {
+                    "days": [
+                      5
+                    ],
+                    "start": "17:00",
+                    "end": "24:00"
+                  },
+                  {
+                    "days": [
+                      6
+                    ],
+                    "start": "15:00",
+                    "end": "24:00"
+                  },
+                  {
+                    "days": [
+                      0
+                    ],
+                    "start": "15:00",
+                    "end": "23:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "2F Retonade Hachimanyama, 1-1-11 Kamitakaido, Suginami-ku, Tokyo",
+          "neighborhood": "Hachimanyama",
+          "websiteUrl": "https://shop.gyro.holdings/detail/131809/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-nankuru-owner-0-73d4803a8bc8caf8.webp",
+            "alt": "Nankurunaisa — Hachimanyama — Operator food photograph on the Hachimanyama branch page; meal and beer sold separately.",
+            "credit": "GYRO HOLDINGS / Brand Bank Company",
+            "sourceUrl": "https://shop.gyro.holdings/detail/131809/",
+            "originalUrl": "https://site-images.hp.admin.can-ly.com/images/cms/edited/directories/65/stores/240309/1505b0f9-c22f-11f1-b2b7-0a58a9feac02_Webz0187.webp",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sabo Marusankakushikaku — Gotanda Opens in Gotanda",
+        "description": "A new garden-facing natural-food restaurant and café centred on brown rice, with weekday lunch and afternoon café service.",
+        "sourceUrl": "https://sabo-marusankakushikaku.com/",
+        "address": "2-1-9 Higashi-Gotanda, Shinagawa-ku, Tokyo",
+        "productName": "Sabo Marusankakushikaku — Gotanda",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "WIVI operator release confirms October 1,2026 grand opening at this exactGotanda address.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Gotanda",
+          "Brown-rice / natural-food café"
+        ],
+        "longFormSummary": "<p>A new garden-facing natural-food restaurant and café centred on brown rice, with weekday lunch and afternoon café service.<cite data-ref=\"https://sabo-marusankakushikaku.com/\"></cite></p><p>WIVI operator release confirms October1,2026 grand opening at this exactGotanda address.</p>",
+        "references": [
+          {
+            "url": "https://sabo-marusankakushikaku.com/",
+            "title": "Sabo Marusankakushikaku — Gotanda source",
+            "confidence": 90,
+            "reasoning": "WIVI operator release confirms October 1,2026 grand opening at this exactGotanda address."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000004.000189353.html",
+            "title": "Sabo Marusankakushikaku — Gotanda source",
+            "confidence": 90,
+            "reasoning": "WIVI operator release confirms October 1,2026 grand opening at this exactGotanda address."
+          },
+          {
+            "url": "https://hitosara.com/0034002627/",
+            "title": "Sabo Marusankakushikaku — Gotanda source",
+            "confidence": 90,
+            "reasoning": "WIVI operator release confirms October 1,2026 grand opening at this exactGotanda address."
+          },
+          {
+            "url": "https://genmai.cafe/",
+            "title": "Sabo Marusankakushikaku — Gotanda source",
+            "confidence": 90,
+            "reasoning": "WIVI operator release confirms October 1,2026 grand opening at this exactGotanda address."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sabo-marusankakushikaku.com/",
+          "menu": {
+            "pinSourceUrl": "https://sabo-marusankakushikaku.com/",
+            "name": "Sabo Marusankakushikaku — Gotanda",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Announced lunch dishes",
+                "url": "https://prtimes.jp/main/html/rd/p/000000004.000189353.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Greek-style herb salad",
+                    "priceLabel": "Price not published",
+                    "note": "Spearmint-centred herbs, sour-cream-based sauce and Sichuan cucumber"
+                  },
+                  {
+                    "name": "Saikyo-grilled sablefish set",
+                    "priceLabel": "Price not published",
+                    "note": "Pesticide-free domestic brown rice and organic vegetables; fish marinated with Saikyo miso,sake lees and cane sugar"
+                  },
+                  {
+                    "name": "Green vegetables and mountain-vegetable bibimbap",
+                    "priceLabel": "Price not published",
+                    "note": "Brown rice, ginger/condiments and homemade gochujang"
+                  }
+                ],
+                "note": "Named dishes from operator release, prices not published. Approximate¥3,000 launch budget and Hitosara¥4,000 average are not item/course prices. Deep search checked official Menu section, seven galleryfood photos (unlabelled rather than priced menus), linkedTableCheck resume shell, exactTabelog 403, Hitosara/food and its alternate genmai.cafe domain (redirects to sameoperator site), operatorannouncement. No verifiable namedcafédrink/dessertmenu or pricePDF found; retain actual lunch dishes rather than invent items. Site“Special” describes architecture, not a promotion. Dinner launch not announced; noSpecialindex."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sabo-marusankakushikaku.com/",
+            "name": "Sabo Marusankakushikaku — Gotanda",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://sabo-marusankakushikaku.com/",
+            "phone": "03-5860-2357",
+            "openingHours": [
+              {
+                "days": "Weekday lunch",
+                "hours": "11:00–15:00;last order 14:00"
+              },
+              {
+                "days": "Weekday café",
+                "hours": "14:00–17:00"
+              },
+              {
+                "days": "Closed",
+                "hours": "Saturday,Sunday,public holidays"
+              },
+              {
+                "days": "Visit conditions",
+                "hours": "No guests below junior-high-school age; avoid strong perfume/fabric-softener fragrances"
+              }
+            ],
+            "detailsSourceUrl": "https://sabo-marusankakushikaku.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000004.000189353.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://hitosara.com/0034002627/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://genmai.cafe/"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/sabo-marusankakushikaku/reserve/message"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "tokyo38-sabo-site",
+            "name": "Sabo Marusankakushikaku — Gotanda",
+            "neighborhood": "Gotanda",
+            "cuisine": "Brown-rice / natural-food café",
+            "description": "A new garden-facing natural-food restaurant and café centred on brown rice, with weekday lunch and afternoon café service.",
+            "address": "2-1-9 Higashi-Gotanda, Shinagawa-ku, Tokyo",
+            "websiteUrl": "https://sabo-marusankakushikaku.com/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-sabo-site-0-3407d4674b7a6352.webp",
+            "imageCredit": "WIVI / Sabo Marusankakushikaku",
+            "imageSourceUrl": "https://sabo-marusankakushikaku.com/",
+            "imageNote": "Garden-facing dining room from the official venue gallery.",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-sabo-site-0-3407d4674b7a6352.webp",
+          "sha256": "3407d4674b7a6352ca6adca13b961a8a9a17fd8b500f0e5ae928fa4a8ae32d8d",
+          "width": 1200,
+          "height": 675,
+          "credit": "WIVI / Sabo Marusankakushikaku",
+          "note": "Garden-facing dining room from the official venue gallery.",
+          "sourcePage": "https://sabo-marusankakushikaku.com/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-sabo-site-1-747dd6b2e513f790.webp",
+          "sha256": "747dd6b2e513f79009dc4cc6d9934889ef0e37bb33af9535cc32d8eb75aac5e4",
+          "width": 1200,
+          "height": 1200,
+          "credit": "WIVI / Sabo Marusankakushikaku",
+          "note": "Unlabelled dish from official menu gallery; ingredients and current menu availability not inferred.",
+          "sourcePage": "https://sabo-marusankakushikaku.com/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-sabo-site-2-b3198268284ab640.webp",
+          "sha256": "b3198268284ab64085b4f1b8416aa5ebc178403672adbfaa3aecbe97e1061c34",
+          "width": 1200,
+          "height": 800,
+          "credit": "WIVI / Sabo Marusankakushikaku",
+          "note": "Venue garden and surrounding urban setting.",
+          "sourcePage": "https://sabo-marusankakushikaku.com/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Jardin des Sens Tokyo Opens in Marunouchi",
+        "description": "Sens & Saveurs reopens under the Jardin des Sens Tokyo name onOctober 30,with French tasting courses and announced Christmas plans.",
+        "sourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+        "address": "35F Marunouchi Building,2-4-1 Marunouchi,Chiyoda-ku,Tokyo",
+        "productName": "Jardin des Sens Tokyo",
+        "utcStartDateTime": "2026-10-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Hiramatsu confirms October 30,2026 renamed renovation reopening; predecessor closedJuly 1–October 29,not an entirely new restaurant brand.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Marunouchi",
+          "French"
+        ],
+        "longFormSummary": "<p>Sens &amp; Saveurs reopens under the Jardin des Sens Tokyo name onOctober30,with French tasting courses and announced Christmas plans.<cite data-ref=\"https://www.hiramatsurestaurant.jp/jardindessens-tokyo/\"></cite></p><p>Hiramatsu confirms October30,2026 renamed renovation reopening; predecessorclosedJuly1–October29,notanentirelynewrestaurantbrand.</p>",
+        "references": [
+          {
+            "url": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+            "title": "Jardin des Sens Tokyo source",
+            "confidence": 90,
+            "reasoning": "Hiramatsu confirms October 30,2026 renamed renovation reopening; predecessor closedJuly 1–October 29,not an entirely new restaurant brand."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html",
+            "title": "Jardin des Sens Tokyo source",
+            "confidence": 90,
+            "reasoning": "Hiramatsu confirms October 30,2026 renamed renovation reopening; predecessor closedJuly 1–October 29,not an entirely new restaurant brand."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+            "title": "Jardin des Sens Tokyo source",
+            "confidence": 90,
+            "reasoning": "Hiramatsu confirms October 30,2026 renamed renovation reopening; predecessor closedJuly 1–October 29,not an entirely new restaurant brand."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Jardin des Sens Tokyo",
+            "menus": [
+              {
+                "label": "Launch lunch courses",
+                "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Menu d’Affaire",
+                    "price": 8855,
+                    "note": "Weekdays only;3 petits-salés,amuse,starter,main,dessert,coffee/petits fours"
+                  },
+                  {
+                    "name": "Menu Éclosion",
+                    "price": 12650,
+                    "note": "3 petits-salés,amuse,starter,fish, meat,dessert,coffee/petits fours"
+                  },
+                  {
+                    "name": "Menu Escapade",
+                    "price": 17710,
+                    "note": "Adds warm starter and beef main"
+                  },
+                  {
+                    "name": "Vegan lunch course",
+                    "price": 20240,
+                    "note": "Reserve 3 daysahead;starter,warm starter,whole-wheat pasta,main,dessert"
+                  }
+                ],
+                "note": "Totals include 10%tax/15%service. Actual course compositions from current Japanese booking page; detailed named seasonal ingredients not published. Do not copy Montpellier or predecessor restaurant dishes."
+              },
+              {
+                "label": "Launch dinner courses",
+                "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Menu Découverte",
+                    "price": 18975,
+                    "note": "3 petits-salés,amuse,starter,fish, meat,two desserts,coffee/petits fours"
+                  },
+                  {
+                    "name": "Menu Sens & Saveurs",
+                    "price": 25300,
+                    "note": "3 petits-salés,amuse,two starters,fish,domestic beef,two desserts,coffee/petits fours"
+                  },
+                  {
+                    "name": "Menu Signature — opening special course",
+                    "price": 35420,
+                    "note": "October 30–November 30;detailed dishes not published"
+                  }
+                ],
+                "note": "Totals include tax/15%service. Group selects same course; online 1–6 guests,larger groups by phone. No invented ingredient names."
+              },
+              {
+                "label": "Christmas 2026 lunch and dinner",
+                "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Menu Signature Noel",
+                    "price": 35420
+                  },
+                  {
+                    "name": "Christmas window-seat plan",
+                    "price": 45000,
+                    "note": "Includes oneglassChampagne"
+                  },
+                  {
+                    "name": "Christmas private-room plan",
+                    "price": 77000,
+                    "note": "Includes room,oneglassChampagne and 5 pairings;non-alcoholic pairings possible"
+                  },
+                  {
+                    "name": "Petits-salés",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas course; no separate item price published"
+                  },
+                  {
+                    "name": "Amuse-bouche",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas course; no separate item price published"
+                  },
+                  {
+                    "name": "Starter",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas course; no separate item price published"
+                  },
+                  {
+                    "name": "Fish course",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas course; no separate item price published"
+                  },
+                  {
+                    "name": "Meat course",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas course; no separate item price published"
+                  },
+                  {
+                    "name": "Dessert",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas course; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee and petits fours",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas course; no separate item price published"
+                  }
+                ],
+                "note": "December 1–25,2026. Totals include tax/15%service. SignatureNoel lunch 1+guests;dinner 1–6,December 1–22 dining/private andDecember 23–25 dining only;December 23–25 two-hour limit. Windowplan exact seat cannot be selected;current Japanese page applies 2 hourlimitDecember 23–25. Privateplan 2–6 online,roomincluded. Generic course components published; actual ingredient dishes pending."
+              },
+              {
+                "label": "Celebration food options",
+                "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Message plate",
+                    "price": 0,
+                    "note": "Order bypreviousday;1–6 online,7+phone"
+                  },
+                  {
+                    "name": "Pâtissier’s whole cake —12 cm",
+                    "price": 6325,
+                    "note": "Reserve 2 daysahead;largersizesphone"
+                  },
+                  {
+                    "name": "Replace normaldessert withwhole cake",
+                    "price": 2530,
+                    "note": "Perperson,allguests;reserve 2 daysahead"
+                  }
+                ],
+                "note": "Tax/service included. Normal private-room fee¥11,000/room additional exceptexplicitincludedpackage;2–6 perroom,roomscombinedupto 14,7+phone. Corkage¥6,600/750 mlbottle. Cancellation 48–24 h 50%,within 24 h 100%course fee. Preschoolchildrenprivateonly;schoolagecanusedining. Smartcasual;no beachsandals/shorts/tanktops. Phonewhileclosedweekdays 10–18. Allcheckedofficialsite/news,linkedcurrentJapaneseTableCheck,release/renderinggallery; namedingredientlaunchmenusnotyetpublished, historicalMontpellierfood/chefsphotosnotused."
+              }
+            ],
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-jardin-site-0-3e1b17ee7801bd90.webp",
+              "alt": "Tokyo main dining room: operator planned-interior rendering, not a completed photograph.",
+              "credit": "Hiramatsu",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html",
+              "originalUrl": "https://prcdn.freetls.fastly.net/release_image/97330/263/97330-263-a4c3a397606820233f5b33d779023289-1500x1000.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+              "checkedAt": "2026-10-14"
+            },
+            "specials": [],
+            "checkedAt": "2026-10-14",
+            "pinSourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/"
+          },
+          "tile": {
+            "kind": "opening",
+            "name": "Jardin des Sens Tokyo",
+            "slug": "jardin-des-sens-tokyo",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-jardin-site-0-3e1b17ee7801bd90.webp",
+            "address": "35F Marunouchi Building,2-4-1 Marunouchi,Chiyoda-ku,Tokyo",
+            "cuisine": "French",
+            "checkedAt": "2026-10-14",
+            "imageNote": "Tokyo main dining room: operator planned-interior rendering, not a completed photograph.",
+            "priceRange": "",
+            "regionSlug": "tokyo",
+            "websiteUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+            "description": "Sens & Saveurs reopens under the Jardin des Sens Tokyo name onOctober 30,with French tasting courses and announced Christmas plans.",
+            "imageCredit": "Hiramatsu",
+            "recognition": "",
+            "neighborhood": "Marunouchi",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html",
+            "openingConfirmed": true,
+            "day": "2026-10-30"
+          },
+          "details": {
+            "name": "Jardin des Sens Tokyo",
+            "phone": "03-5220-2701",
+            "checkedAt": "2026-10-14",
+            "hoursNote": "Restaurant service from October 30. Last orders: lunch 13:30; dinner 20:00. Lounge hours differ.",
+            "websiteUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–15:30;last order 13:30"
+              },
+              {
+                "days": "Dinner Monday–Saturday",
+                "hours": "18:00–23:00;last order 20:00"
+              },
+              {
+                "days": "Dinner Sunday/publicholiday",
+                "hours": "18:00–22:00;last order 20:00"
+              },
+              {
+                "days": "November 7/22 lunch exception",
+                "hours": "11:00–13:30;last order 11:30"
+              },
+              {
+                "days": "Private room",
+                "hours": "¥11,000/room exceptincludedpackages;preschool children use private rooms only"
+              }
+            ],
+            "pinSourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+            "detailsSourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/sspourcel/reserve"
+          },
+          "pinSourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-jardin-site-0-3e1b17ee7801bd90.webp",
+          "sha256": "3e1b17ee7801bd904e8d6e397c61615966e8b7b9f40f3e9b38a42a404c2cc8b3",
+          "width": 1200,
+          "height": 800,
+          "credit": "Hiramatsu",
+          "note": "Tokyo main dining room: operator planned-interior rendering, not a completed photograph.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-jardin-site-1-f9b1cca2af383484.webp",
+          "sha256": "f9b1cca2af383484fd5e57943475f8c7d4183752d4907dfa866f8d0affcf9822",
+          "width": 1200,
+          "height": 750,
+          "credit": "Hiramatsu",
+          "note": "Tokyo entrance: operator planned-interior rendering.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-jardin-site-2-e4526c6acccbc40a.webp",
+          "sha256": "e4526c6acccbc40a9d747fdc0dbec250d8405a8cda979659e1c3b5e094a1fb88",
+          "width": 1200,
+          "height": 750,
+          "credit": "Hiramatsu",
+          "note": "Tokyo bar lounge: operator planned-interior rendering.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-jardin-site-3-50220f37ceb4c48a.webp",
+          "sha256": "50220f37ceb4c48a83ead8e11e50d9b3ce7bdd039a58bf656721713bda16d13e",
+          "width": 1200,
+          "height": 750,
+          "credit": "Hiramatsu",
+          "note": "Tokyo bar: operator planned-interior rendering.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "name": "Jardin des Sens Tokyo",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Launch lunch courses",
+              "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Menu d’Affaire",
+                  "price": 8855,
+                  "note": "Weekdays only;3 petits-salés,amuse,starter,main,dessert,coffee/petits fours"
+                },
+                {
+                  "name": "Menu Éclosion",
+                  "price": 12650,
+                  "note": "3 petits-salés,amuse,starter,fish, meat,dessert,coffee/petits fours"
+                },
+                {
+                  "name": "Menu Escapade",
+                  "price": 17710,
+                  "note": "Adds warm starter and beef main"
+                },
+                {
+                  "name": "Vegan lunch course",
+                  "price": 20240,
+                  "note": "Reserve 3 daysahead;starter,warm starter,whole-wheat pasta,main,dessert"
+                }
+              ],
+              "note": "Totals include 10%tax/15%service. Actual course compositions from current Japanese booking page; detailed named seasonal ingredients not published. Do not copy Montpellier or predecessor restaurant dishes."
+            },
+            {
+              "label": "Launch dinner courses",
+              "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Menu Découverte",
+                  "price": 18975,
+                  "note": "3 petits-salés,amuse,starter,fish, meat,two desserts,coffee/petits fours"
+                },
+                {
+                  "name": "Menu Sens & Saveurs",
+                  "price": 25300,
+                  "note": "3 petits-salés,amuse,two starters,fish,domestic beef,two desserts,coffee/petits fours"
+                },
+                {
+                  "name": "Menu Signature — opening special course",
+                  "price": 35420,
+                  "note": "October 30–November 30;detailed dishes not published"
+                }
+              ],
+              "note": "Totals include tax/15%service. Group selects same course; online 1–6 guests,larger groups by phone. No invented ingredient names."
+            },
+            {
+              "label": "Christmas 2026 lunch and dinner",
+              "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Menu Signature Noel",
+                  "price": 35420
+                },
+                {
+                  "name": "Christmas window-seat plan",
+                  "price": 45000,
+                  "note": "Includes oneglassChampagne"
+                },
+                {
+                  "name": "Christmas private-room plan",
+                  "price": 77000,
+                  "note": "Includes room,oneglassChampagne and 5 pairings;non-alcoholic pairings possible"
+                },
+                {
+                  "name": "Petits-salés",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas course; no separate item price published"
+                },
+                {
+                  "name": "Amuse-bouche",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas course; no separate item price published"
+                },
+                {
+                  "name": "Starter",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas course; no separate item price published"
+                },
+                {
+                  "name": "Fish course",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas course; no separate item price published"
+                },
+                {
+                  "name": "Meat course",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas course; no separate item price published"
+                },
+                {
+                  "name": "Dessert",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas course; no separate item price published"
+                },
+                {
+                  "name": "Coffee and petits fours",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas course; no separate item price published"
+                }
+              ],
+              "note": "December 1–25,2026. Totals include tax/15%service. SignatureNoel lunch 1+guests;dinner 1–6,December 1–22 dining/private andDecember 23–25 dining only;December 23–25 two-hour limit. Windowplan exact seat cannot be selected;current Japanese page applies 2 hourlimitDecember 23–25. Privateplan 2–6 online,roomincluded. Generic course components published; actual ingredient dishes pending."
+            },
+            {
+              "label": "Celebration food options",
+              "url": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Message plate",
+                  "price": 0,
+                  "note": "Order bypreviousday;1–6 online,7+phone"
+                },
+                {
+                  "name": "Pâtissier’s whole cake —12 cm",
+                  "price": 6325,
+                  "note": "Reserve 2 daysahead;largersizesphone"
+                },
+                {
+                  "name": "Replace normaldessert withwhole cake",
+                  "price": 2530,
+                  "note": "Perperson,allguests;reserve 2 daysahead"
+                }
+              ],
+              "note": "Tax/service included. Normal private-room fee¥11,000/room additional exceptexplicitincludedpackage;2–6 perroom,roomscombinedupto 14,7+phone. Corkage¥6,600/750 mlbottle. Cancellation 48–24 h 50%,within 24 h 100%course fee. Preschoolchildrenprivateonly;schoolagecanusedining. Smartcasual;no beachsandals/shorts/tanktops. Phonewhileclosedweekdays 10–18. Allcheckedofficialsite/news,linkedcurrentJapaneseTableCheck,release/renderinggallery; namedingredientlaunchmenusnotyetpublished, historicalMontpellierfood/chefsphotosnotused."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Menu Signature — grand reopening special",
+              "kind": "other",
+              "description": "The grand reopening tasting course,¥35,420 includingtax/15%service; detailed seasonal dishes vary and are not yet named.",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "menuLabel": "Launch dinner courses",
+              "discounted": false,
+              "validFrom": "2026-10-30",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Online 1–6 guests;same course for everyone;normal private-room fee additional.",
+                "Dinnerlast order 20:00;Sunday/publicholiday closing 22:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "23:00"
+                  },
+                  {
+                    "days": [
+                      0
+                    ],
+                    "start": "18:00",
+                    "end": "22:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-11-03",
+                  "2026-11-23"
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Christmas 2026 lunch",
+              "kind": "lunch",
+              "description": "Seasonal Christmas courses from¥35,420,or¥45,000 withwindowseat/Champagne,or¥77,000 withprivate-roomandpairings.",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "menuLabel": "Christmas 2026 lunch and dinner",
+              "discounted": false,
+              "validFrom": "2026-12-01",
+              "validThrough": "2026-12-25",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax/15%service included.",
+                "December 23–25 two-hour limit; exactwindowtablecannotbeselected.",
+                "Private-roomplan 2–6 online,includesroom;SignatureNoeldinnerDec 23–25 dining only.",
+                "Cancellation 48–24 hours 50%,within 24 hours 100%course price."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Christmas 2026 dinner",
+              "kind": "other",
+              "description": "Seasonal Christmas courses from¥35,420,or¥45,000 withwindowseat/Champagne,or¥77,000 withprivate-roomandpairings.",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "menuLabel": "Christmas 2026 lunch and dinner",
+              "discounted": false,
+              "validFrom": "2026-12-01",
+              "validThrough": "2026-12-25",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax/15%service included.",
+                "December 23–25 two-hour limit; exactwindowtablecannotbeselected.",
+                "Private-roomplan 2–6 online,includesroom;SignatureNoeldinnerDec 23–25 dining only.",
+                "Cancellation 48–24 hours 50%,within 24 hours 100%course price."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "23:00"
+                  },
+                  {
+                    "days": [
+                      0
+                    ],
+                    "start": "18:00",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Menu Signature — grand reopening special — public holiday 2026-11-03",
+              "kind": "other",
+              "description": "The grand reopening tasting course,¥35,420 includingtax/15%service; detailed seasonal dishes vary and are not yet named.",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "menuLabel": "Launch dinner courses",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-11-03",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Online 1–6 guests;same course for everyone;normal private-room fee additional.",
+                "Dinnerlast order 20:00;Sunday/publicholiday closing 22:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Menu Signature — grand reopening special — public holiday 2026-11-23",
+              "kind": "other",
+              "description": "The grand reopening tasting course,¥35,420 includingtax/15%service; detailed seasonal dishes vary and are not yet named.",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/sspourcel/reserve",
+              "menuLabel": "Launch dinner courses",
+              "discounted": false,
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Online 1–6 guests;same course for everyone;normal private-room fee additional.",
+                "Dinnerlast order 20:00;Sunday/publicholiday closing 22:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "35F Marunouchi Building,2-4-1 Marunouchi,Chiyoda-ku,Tokyo",
+          "neighborhood": "Marunouchi",
+          "websiteUrl": "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo38-jardin-site-0-3e1b17ee7801bd90.webp",
+            "alt": "Jardin des Sens Tokyo — Tokyo main dining room: operator planned-interior rendering, not a completed photograph.",
+            "credit": "Hiramatsu",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000263.000097330.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/97330/263/97330-263-a4c3a397606820233f5b33d779023289-1500x1000.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}
