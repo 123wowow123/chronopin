@@ -96,6 +96,12 @@ export function exampleTracking(impressionsBought: number) {
     // Across the fortnight the same people come back, so it is fewer than the days summed.
     uniques: Math.round(byDay.reduce((n, d) => n + d.uniques, 0) * 0.8),
     clicks: byDay.reduce((n, d) => n + d.clicks, 0),
+    cities: [
+      { city: 'Los Angeles', region: 'California', country: 'US', clicks: 0.34 },
+      { city: 'New York', region: 'New York', country: 'US', clicks: 0.27 },
+      { city: 'Chicago', region: 'Illinois', country: 'US', clicks: 0.2 },
+      { city: 'London', region: 'England', country: 'GB', clicks: 0.19 },
+    ].map((c) => ({ ...c, clicks: Math.max(1, Math.round(byDay.reduce((n, d) => n + d.clicks, 0) * c.clicks)) })),
     byDay,
   };
 }

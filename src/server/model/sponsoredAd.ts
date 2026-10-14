@@ -27,7 +27,7 @@ export type SponsoredRow = {
 const COLUMNS = `"id", "userId", "title", "body", "url", "imageName", "impressionsBought", "priceCents", "impressionsServed", "dailyLimit", "plan", "currentPeriodEnd", "cancelAtPeriodEnd", "status",
   "rejectionReason", "needsRefund", "paidDateTime", "approvedDateTime", "utcCreatedDateTime"`;
 
-export type SponsoredStats = { impressions: number; uniques: number; clicks: number; byDay: { day: string; impressions: number; uniques: number; clicks: number }[] };
+export type SponsoredStats = { impressions: number; uniques: number; clicks: number; cities: { city: string | null; region: string | null; country: string | null; clicks: number }[]; byDay: { day: string; impressions: number; uniques: number; clicks: number }[] };
 
 export default class SponsoredAd {
   static async get(id: number): Promise<SponsoredRow | null> {
@@ -300,10 +300,10 @@ export default class SponsoredAd {
   // Impressions and clicks for the owner's ads, from the same tables the admin
   // Ads page reads, per UTC day for the last 30 days.
   static async stats(ids: number[]): Promise<Map<number, SponsoredStats>> {
-    const out = new Map<number, SponsoredStats>(ids.map((id) => [id, { impressions: 0, uniques: 0, clicks: 0, byDay: [] }]));
+    const out = new Map<number, SponsoredStats>(ids.map((id) => [id, { impressions: 0, uniques: 0, clicks: 0, cities: [], byDay: [] }]));
     if (!ids.length) return out;
     const keys = ids.map((id) => `u:${id}`);
-    const [impressions, clicks, perDay, distinct] = await Promise.all([
+    const [impressions, clicks, perDay, distinct, places] = await Promise.all([
       db.query<{ adKey: string; day: string; count: number }>(
         `SELECT "adKey", to_char("day", 'YYYY-MM-DD') AS "day", sum("count")::int AS "count" FROM "AdImpression"
          WHERE "adKey" = ANY($1::varchar[]) AND "day" > (now() AT TIME ZONE 'UTC')::date - 30 GROUP BY 1, 2`,
@@ -326,7 +326,15 @@ export default class SponsoredAd {
          WHERE "adKey" = ANY($1::varchar[]) AND "day" > (now() AT TIME ZONE 'UTC')::date - 30 GROUP BY 1`,
         [keys],
       ),
+      // Where the clicks came from (placed by IP when the click was recorded).
+      db.query<{ adKey: string; city: string | null; region: string | null; country: string | null; count: number }>(
+        `SELECT "adKey", "city", "region", "country", count(*)::int AS "count" FROM "AdClick"
+         WHERE "adKey" = ANY($1::varchar[]) AND "utcCreatedDateTime" > now() - interval '30 days'
+         GROUP BY 1, 2, 3, 4 ORDER BY 5 DESC`,
+        [keys],
+      ),
     ]);
+    for (const r of places) out.get(Number(r.adKey.slice(2)))?.cities.push({ city: r.city, region: r.region, country: r.country, clicks: r.count });
     const days = new Map<string, { day: string; impressions: number; uniques: number; clicks: number }>();
     const entry = (key: string, day: string) => {
       const id = Number(key.slice(2));
@@ -351,5 +359,19 @@ export default class SponsoredAd {
     }
     for (const s of out.values()) s.byDay.sort((a, b) => a.day.localeCompare(b.day));
     return out;
+  }
+
+  // Latest clicks on sponsored ads with the clicker's IP and place, for /admin/sponsored.
+  static recentClicks(limit = 100) {
+    return db.query<{ id: number; at: string; adKey: string; title: string | null; ip: string | null; userName: string | null; country: string | null; region: string | null; city: string | null; page: string | null }>(
+      `SELECT "c"."id", to_char("c"."utcCreatedDateTime" AT TIME ZONE 'UTC', 'YYYY-MM-DD HH24:MI') AS "at", "c"."adKey", "s"."title",
+         host("c"."ip") AS "ip", "u"."userName", "c"."country", "c"."region", "c"."city", "c"."page"
+       FROM "AdClick" AS "c"
+         LEFT JOIN "SponsoredAd" AS "s" ON 'u:' || "s"."id" = "c"."adKey"
+         LEFT JOIN "User" AS "u" ON "u"."id" = "c"."userId"
+       WHERE "c"."adKey" LIKE 'u:%' AND "u"."role" IS DISTINCT FROM 'admin'
+       ORDER BY "c"."utcCreatedDateTime" DESC, "c"."id" DESC LIMIT $1`,
+      [limit],
+    );
   }
 }

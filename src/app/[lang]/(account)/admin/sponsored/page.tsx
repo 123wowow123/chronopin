@@ -18,6 +18,7 @@ export const metadata: Metadata = { title: 'Admin sponsored ads' };
 export default async function AdminSponsoredPage() {
   await requireAdminViewer('/admin/sponsored');
   const queue = await SponsoredAd.reviewQueue();
+  const clicks = await SponsoredAd.recentClicks();
   return (
     <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/sponsored" />
@@ -49,6 +50,28 @@ export default async function AdminSponsoredPage() {
           );
         })}
       </div>
+      <h2 className="mb-2 mt-10 text-lg font-semibold">Latest clicks</h2>
+      {clicks.length === 0 ? <p className="text-sm text-subtle">No clicks yet.</p> : (
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm">
+            <thead className="text-xs text-subtle">
+              <tr><th className="pr-4">When (UTC)</th><th className="pr-4">Ad</th><th className="pr-4">IP</th><th className="pr-4">Location</th><th className="pr-4">User</th><th>Page</th></tr>
+            </thead>
+            <tbody>
+              {clicks.map((c) => (
+                <tr key={c.id} className="border-t border-line">
+                  <td className="py-1 pr-4 whitespace-nowrap">{c.at}</td>
+                  <td className="py-1 pr-4">{c.title ?? c.adKey}</td>
+                  <td className="py-1 pr-4 font-mono">{c.ip ?? '-'}</td>
+                  <td className="py-1 pr-4">{[c.city, c.region, c.country].filter(Boolean).join(', ') || 'locating…'}</td>
+                  <td className="py-1 pr-4">{c.userName ?? 'guest'}</td>
+                  <td className="py-1">{c.page ?? '-'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }

@@ -116,6 +116,17 @@ export default function AdvertiseLanding() {
               ))}
             </dl>
             <AdChart days={sample.byDay} />
+            <div>
+              <h3 className="mb-1 text-sm font-medium">Clicks by city</h3>
+              <ul className="space-y-1 text-sm">
+                {sample.cities.map((c) => (
+                  <li key={c.city} className="flex justify-between gap-3">
+                    <span>{[c.city, c.region, c.country].join(', ')}</span>
+                    <span className="tabular-nums">{c.clicks.toLocaleString('en-US')}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <p className="text-xs text-subtle">Example only, not real results.</p>
           </div>
         </div>

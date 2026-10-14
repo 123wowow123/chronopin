@@ -214,6 +214,8 @@ export default class Ad {
        RETURNING "id"`,
       [ad.key, ad.kind, ad.program, ad.pinId, click.slot, click.pinId, click.store ?? ad.store, taggedAdUrl(ad.url, ad.store, tags), click.userId, click.ip, REPEAT_SECONDS, click.page, adTag(ad, tags)],
     );
+    // Place the click's IP now, so the location is there without /admin/ads open.
+    if (rows.length > 0 && click.ip) void locateUnlocated('AdClick').catch(() => {});
     return rows.length > 0;
   }
 

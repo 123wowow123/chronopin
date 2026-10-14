@@ -75,6 +75,18 @@ export function SampleReport({ impressions, className = '' }: { impressions: num
 
           <AdChart days={sample.byDay} />
 
+          <div>
+            <h3 className="mb-1 text-sm font-medium">Clicks by city</h3>
+            <ul className="space-y-1 text-sm">
+              {sample.cities.map((c) => (
+                <li key={c.city} className="flex justify-between gap-3">
+                  <span>{[c.city, c.region, c.country].join(', ')}</span>
+                  <span className="tabular-nums">{c.clicks.toLocaleString('en-US')}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <ul className="list-disc space-y-1 ps-5 text-sm text-subtle">
             <li>Impressions count every time your ad is shown; unique people count each person once, however often they saw it.</li>
             <li>On average each person saw the ad {perPerson} times. Ads are shown first to people who have not seen yours yet.</li>

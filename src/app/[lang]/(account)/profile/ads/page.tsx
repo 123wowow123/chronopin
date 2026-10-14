@@ -150,6 +150,19 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                     <div className="h-full bg-accent" style={{ width: `${progress}%` }} />
                   </div>
                   {s.byDay.length ? <AdChart days={s.byDay} /> : null}
+                  {s.cities.length ? (
+                    <div>
+                      <h3 className="mb-1 text-sm font-medium">Clicks by city</h3>
+                      <ul className="space-y-1 text-sm">
+                        {s.cities.slice(0, 10).map((c, i) => (
+                          <li key={i} className="flex justify-between gap-3">
+                            <span className="truncate">{c.city ? [c.city, c.region, c.country].filter(Boolean).join(', ') : c.country ?? 'Unknown location'}</span>
+                            <span className="tabular-nums">{c.clicks.toLocaleString('en-US')}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
                 </div>
                 <AdActions id={ad.id} status={ad.status} dailyLimit={ad.dailyLimit ?? null} monthly={ad.plan === 'monthly'} />
               </article>
