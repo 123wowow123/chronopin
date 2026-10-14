@@ -28,7 +28,7 @@ export function formEncode(value: Record<string, unknown>, prefix = '', out: URL
   return out;
 }
 
-export async function stripeRequest<T = Record<string, any>>(method: 'GET' | 'POST', path: string, body?: Record<string, unknown>): Promise<T> {
+export async function stripeRequest<T = Record<string, any>>(method: 'GET' | 'POST' | 'DELETE', path: string, body?: Record<string, unknown>): Promise<T> {
   const { secretKey } = config.stripe;
   if (!secretKey) throw new Error('STRIPE_SECRET_KEY is not set');
   const res = await fetch(`${API}${path}`, {

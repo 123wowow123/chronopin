@@ -440,10 +440,3 @@ are there any other pin categories that can display a rubric for the pins
 
 
 open the browser and walk me through signing up aliyun.com
-
-
-ThePinGang has admin privilage and have special ad plan of unlimited credit
-Create one ad for:
-
-Place your ad here and link to
-/profile/adspus

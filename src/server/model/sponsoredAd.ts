@@ -1,5 +1,5 @@
 import * as db from '../db';
-import type { SponsoredStatus } from '@/lib/sponsoredAds';
+import type { SponsoredPlan, SponsoredStatus } from '@/lib/sponsoredAds';
 
 // Self-serve ads (0178). Static queries, as Favorite's are.
 export type SponsoredRow = {
@@ -13,6 +13,9 @@ export type SponsoredRow = {
   priceCents: number;
   impressionsServed: number;
   dailyLimit: number | null;
+  plan: SponsoredPlan;
+  currentPeriodEnd: string | null;
+  cancelAtPeriodEnd: boolean;
   status: SponsoredStatus;
   rejectionReason: string | null;
   needsRefund: boolean;
@@ -21,7 +24,7 @@ export type SponsoredRow = {
   utcCreatedDateTime: string;
 };
 
-const COLUMNS = `"id", "userId", "title", "body", "url", "imageName", "impressionsBought", "priceCents", "impressionsServed", "dailyLimit", "status",
+const COLUMNS = `"id", "userId", "title", "body", "url", "imageName", "impressionsBought", "priceCents", "impressionsServed", "dailyLimit", "plan", "currentPeriodEnd", "cancelAtPeriodEnd", "status",
   "rejectionReason", "needsRefund", "paidDateTime", "approvedDateTime", "utcCreatedDateTime"`;
 
 export type SponsoredStats = { impressions: number; uniques: number; clicks: number; byDay: { day: string; impressions: number; uniques: number; clicks: number }[] };
@@ -41,22 +44,22 @@ export default class SponsoredAd {
     return db.query<SponsoredRow>(`SELECT ${COLUMNS} FROM "SponsoredAd" WHERE "userId" = $1 ORDER BY "id" DESC`, [userId]);
   }
 
-  static async create(userId: number, f: { title: string; body: string; url: string; impressionsBought: number; priceCents: number }): Promise<SponsoredRow> {
+  static async create(userId: number, f: { title: string; body: string; url: string; impressionsBought: number; priceCents: number; plan: SponsoredPlan }): Promise<SponsoredRow> {
     const [row] = await db.query<SponsoredRow>(
-      `INSERT INTO "SponsoredAd" ("userId", "title", "body", "url", "impressionsBought", "priceCents")
-       VALUES ($1, $2, $3, $4, $5, $6) RETURNING ${COLUMNS}`,
-      [userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents],
+      `INSERT INTO "SponsoredAd" ("userId", "title", "body", "url", "impressionsBought", "priceCents", "plan")
+       VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING ${COLUMNS}`,
+      [userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.plan],
     );
     return row;
   }
 
   // An ad that is not paid for yet can be changed freely; one that is paid for
   // keeps its headline, text and link as reviewed.
-  static async update(id: number, userId: number, f: { title: string; body: string; url: string; impressionsBought: number; priceCents: number }) {
+  static async update(id: number, userId: number, f: { title: string; body: string; url: string; impressionsBought: number; priceCents: number; plan: SponsoredPlan }) {
     const rows = await db.query<SponsoredRow>(
-      `UPDATE "SponsoredAd" SET "title" = $3, "body" = $4, "url" = $5, "impressionsBought" = $6, "priceCents" = $7, "rejectionReason" = NULL, "utcUpdatedDateTime" = now()
+      `UPDATE "SponsoredAd" SET "title" = $3, "body" = $4, "url" = $5, "impressionsBought" = $6, "priceCents" = $7, "plan" = $8, "rejectionReason" = NULL, "utcUpdatedDateTime" = now()
        WHERE "id" = $1 AND "userId" = $2 AND "status" = 'draft' RETURNING ${COLUMNS}`,
-      [id, userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents],
+      [id, userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.plan],
     );
     return rows[0] ?? null;
   }
@@ -96,12 +99,16 @@ export default class SponsoredAd {
 
   // The payment arrived: into review (or straight to live for an admin's own
   // ad). Paying twice for one ad is ignored.
-  static async markPaid(id: number, f: { paymentIntent: string | null; sessionId: string; live: boolean }): Promise<boolean> {
+  static async markPaid(
+    id: number,
+    f: { paymentIntent: string | null; sessionId: string; live: boolean; subscriptionId?: string | null; customerId?: string | null },
+  ): Promise<boolean> {
     const rows = await db.query(
       `UPDATE "SponsoredAd" SET "status" = $2::varchar, "paidDateTime" = now(), "stripePaymentIntent" = $3::varchar, "stripeSessionId" = $4::varchar,
+         "stripeSubscriptionId" = $5::varchar, "stripeCustomerId" = $6::varchar,
          "approvedDateTime" = CASE WHEN $2::varchar = 'active' THEN now() ELSE "approvedDateTime" END, "utcUpdatedDateTime" = now()
        WHERE "id" = $1 AND "status" = 'draft' RETURNING "id"`,
-      [id, f.live ? 'active' : 'in_review', f.paymentIntent, f.sessionId],
+      [id, f.live ? 'active' : 'in_review', f.paymentIntent, f.sessionId, f.subscriptionId ?? null, f.customerId ?? null],
     );
     return rows.length > 0;
   }
@@ -126,14 +133,52 @@ export default class SponsoredAd {
 
   // Sent back to its owner: unpaid again, with the reason, and the payment to
   // be refunded (needsRefund until Stripe confirms it).
-  static async reject(id: number, reason: string): Promise<{ paymentIntent: string | null } | null> {
-    const rows = await db.query<{ paymentIntent: string | null }>(
-      `UPDATE "SponsoredAd" AS "a" SET "status" = 'draft', "rejectionReason" = $2, "needsRefund" = ("a"."stripePaymentIntent" IS NOT NULL),
+  // A monthly ad's subscription is cancelled by the caller; its row forgets it
+  // here, and its refund is by hand when the payment is not known.
+  static async reject(id: number, reason: string): Promise<{ paymentIntent: string | null; subscriptionId: string | null } | null> {
+    const rows = await db.query<{ paymentIntent: string | null; subscriptionId: string | null }>(
+      `UPDATE "SponsoredAd" AS "a" SET "status" = 'draft', "rejectionReason" = $2,
+         "needsRefund" = ("a"."stripePaymentIntent" IS NOT NULL OR "a"."stripeSubscriptionId" IS NOT NULL),
+         "stripeSubscriptionId" = NULL, "currentPeriodEnd" = NULL, "cancelAtPeriodEnd" = false,
          "paidDateTime" = NULL, "utcUpdatedDateTime" = now()
-       WHERE "a"."id" = $1 AND "a"."status" = 'in_review' RETURNING "a"."stripePaymentIntent" AS "paymentIntent"`,
+       FROM (SELECT "id", "stripeSubscriptionId" AS "oldSubscription" FROM "SponsoredAd" WHERE "id" = $1) AS "old"
+       WHERE "a"."id" = "old"."id" AND "a"."status" = 'in_review'
+       RETURNING "a"."stripePaymentIntent" AS "paymentIntent", "old"."oldSubscription" AS "subscriptionId"`,
       [id, reason],
     );
     return rows[0] ?? null;
+  }
+
+  static async customerIdOf(id: number, userId: number): Promise<string | null> {
+    const [row] = await db.query<{ customer: string | null }>(
+      `SELECT "stripeCustomerId" AS "customer" FROM "SponsoredAd" WHERE "id" = $1 AND "userId" = $2`,
+      [id, userId],
+    );
+    return row?.customer ?? null;
+  }
+
+  // A paid renewal: the monthly ad has its impressions again (and is live
+  // again if it ran out). A paused ad stays paused.
+  static async renewed(subscriptionId: string, periodEnd: Date | null): Promise<boolean> {
+    const rows = await db.query(
+      `UPDATE "SponsoredAd" SET "impressionsServed" = 0, "currentPeriodEnd" = coalesce($2::timestamptz, "currentPeriodEnd"),
+         "status" = CASE WHEN "status" = 'completed' THEN 'active' ELSE "status" END, "utcUpdatedDateTime" = now()
+       WHERE "stripeSubscriptionId" = $1 AND "plan" = 'monthly' AND "status" IN ('active', 'paused', 'completed') RETURNING "id"`,
+      [subscriptionId, periodEnd],
+    );
+    return rows.length > 0;
+  }
+
+  // The subscription changed at Stripe: cancelling is shown, and a subscription
+  // that has ended finishes the ad.
+  static async subscriptionChanged(subscriptionId: string, f: { cancelAtPeriodEnd: boolean; periodEnd: Date | null; ended: boolean }): Promise<boolean> {
+    const rows = await db.query(
+      `UPDATE "SponsoredAd" SET "cancelAtPeriodEnd" = ($2::boolean OR $4::boolean), "currentPeriodEnd" = coalesce($3::timestamptz, "currentPeriodEnd"),
+         "status" = CASE WHEN $4::boolean AND "status" IN ('active', 'paused') THEN 'completed' ELSE "status" END, "utcUpdatedDateTime" = now()
+       WHERE "stripeSubscriptionId" = $1 RETURNING "id"`,
+      [subscriptionId, f.cancelAtPeriodEnd, f.periodEnd, f.ended],
+    );
+    return rows.length > 0;
   }
 
   static async refunded(id: number) {
@@ -151,7 +196,16 @@ export default class SponsoredAd {
 
   // The live ads that still have impressions left, and have not reached their
   // daily limit today (UTC), for the ad inventory.
-  static live() {
+  static async live() {
+    // A monthly ad with no Stripe subscription (one an admin made) renews
+    // itself: when its period is over it has its impressions again.
+    await db.query(
+      `UPDATE "SponsoredAd" SET "impressionsServed" = 0,
+         "currentPeriodEnd" = "currentPeriodEnd" + interval '1 month' * greatest(1, ceil(extract(epoch FROM now() - "currentPeriodEnd") / 2629800)::int),
+         "status" = CASE WHEN "status" = 'completed' THEN 'active' ELSE "status" END, "utcUpdatedDateTime" = now()
+       WHERE "plan" = 'monthly' AND "stripeSubscriptionId" IS NULL AND "cancelAtPeriodEnd" = false
+         AND "currentPeriodEnd" IS NOT NULL AND "currentPeriodEnd" <= now() AND "status" IN ('active', 'paused', 'completed')`,
+    );
     return db.query<{ id: number; title: string; body: string; url: string; imageName: string | null; remaining: number }>(
       `SELECT "a"."id", "a"."title", "a"."body", "a"."url", "a"."imageName", "a"."impressionsBought" - "a"."impressionsServed" AS "remaining"
        FROM "SponsoredAd" AS "a"
@@ -192,9 +246,9 @@ export default class SponsoredAd {
   // from the request.
   static async adminUpdate(id: number, patch: Partial<{
     title: string; body: string; url: string; impressionsBought: number; priceCents: number;
-    status: SponsoredStatus; dailyLimit: number | null; rejectionReason: string | null;
+    status: SponsoredStatus; dailyLimit: number | null; rejectionReason: string | null; plan: SponsoredPlan; currentPeriodEnd: string | null;
   }>): Promise<SponsoredRow | null> {
-    const columns = ['title', 'body', 'url', 'impressionsBought', 'priceCents', 'status', 'dailyLimit', 'rejectionReason'] as const;
+    const columns = ['title', 'body', 'url', 'impressionsBought', 'priceCents', 'status', 'dailyLimit', 'rejectionReason', 'plan', 'currentPeriodEnd'] as const;
     const sets: string[] = [];
     const values: unknown[] = [id];
     for (const column of columns) {

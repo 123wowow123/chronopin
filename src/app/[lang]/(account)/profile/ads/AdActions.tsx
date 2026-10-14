@@ -7,7 +7,7 @@ import type { SponsoredStatus } from '@/lib/sponsoredAds';
 
 // What can be done with one ad: pay for or change one that is not paid yet,
 // pause and resume a live one.
-export function AdActions({ id, status, dailyLimit }: { id: number; status: SponsoredStatus; dailyLimit: number | null }) {
+export function AdActions({ id, status, dailyLimit, monthly = false }: { id: number; status: SponsoredStatus; dailyLimit: number | null; monthly?: boolean }) {
   const router = useRouter();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
@@ -24,7 +24,16 @@ export function AdActions({ id, status, dailyLimit }: { id: number; status: Spon
     }
   }
 
-  if (status === 'in_review' || status === 'completed') return null;
+  const manage = monthly && status !== 'draft' && status !== 'in_review' ? (
+    <button type="button" disabled={busy} className="btn btn-secondary" onClick={() => run(async () => {
+      const { url } = await api.post<{ url: string }>(`/api/advertise/ads/${id}/portal`, {});
+      window.location.assign(url);
+    })}>
+      Manage subscription
+    </button>
+  ) : null;
+  if (status === 'in_review') return null;
+  if (status === 'completed') return manage ? <div className="flex flex-wrap items-center gap-2">{manage}</div> : null;
   return (
     <div className="flex flex-wrap items-center gap-2">
       {status === 'draft' ? (
@@ -33,7 +42,7 @@ export function AdActions({ id, status, dailyLimit }: { id: number; status: Spon
             const { url } = await api.post<{ url: string }>(`/api/advertise/ads/${id}/checkout`, {});
             window.location.assign(url);
           })}>
-            Pay and submit
+            {monthly ? 'Subscribe and submit' : 'Pay and submit'}
           </button>
           <button type="button" disabled={busy} className="btn btn-secondary" onClick={() => router.push(`/profile/ads?edit=${id}`)}>
             Edit
@@ -55,6 +64,7 @@ export function AdActions({ id, status, dailyLimit }: { id: number; status: Spon
           {status === 'active' ? 'Pause' : 'Resume'}
         </button>
       )}
+      {manage}
       <div className="flex flex-1 items-center gap-2">
         <label className="text-sm text-subtle" htmlFor={`daily-${id}`}>Max impressions per day</label>
         <input

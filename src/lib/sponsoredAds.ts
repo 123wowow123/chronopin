@@ -6,6 +6,10 @@ export const SPONSORED_PACKAGES = [
   { impressions: 5000, priceCents: 1000 },
 ] as const;
 
+// $20 a month for 15,000 impressions, renewed by a Stripe subscription.
+export const MONTHLY_PLAN = { impressions: 15000, priceCents: 2000 } as const;
+export type SponsoredPlan = 'one_time' | 'monthly';
+
 export type SponsoredStatus = 'draft' | 'in_review' | 'active' | 'paused' | 'completed';
 
 export const TITLE_MAX = 60;

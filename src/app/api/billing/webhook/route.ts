@@ -1,13 +1,13 @@
 import config from '@/server/config';
 import { HttpError, json, route } from '@/server/http';
 import { fetchSubscription, recordSubscription } from '@/server/services/billing';
-import { confirmAdPayment } from '@/server/services/sponsoredAds';
+import { adSubscriptionChanged, confirmAdPayment, confirmAdSubscription, renewAdSubscription } from '@/server/services/sponsoredAds';
 import { verifyStripeSignature } from '@/server/stripe';
 import log from '@/server/util/log';
 
-// Stripe's events for the ad-free plan. Point a webhook endpoint at
-// /api/billing/webhook for checkout.session.completed and
-// customer.subscription.created / updated / deleted, and put its signing
+// Stripe's events for the ad-free plan and for ads. Point a webhook endpoint at
+// /api/billing/webhook for checkout.session.completed, invoice.paid (monthly
+// ads renewing) and customer.subscription.created / updated / deleted, and put its signing
 // secret in STRIPE_WEBHOOK_SECRET. The signature covers the raw body, so it is
 // read as text before anything parses it. Whatever an event carries, the
 // subscription is read again from Stripe, so a late or repeated event can only
@@ -22,7 +22,15 @@ export const POST = route(async (request: Request) => {
   const event = JSON.parse(raw) as StripeEvent;
   const object = event.data.object;
 
-  if (event.type === 'checkout.session.completed' && object.mode === 'subscription' && object.subscription) {
+  const adMetadata = (object.metadata as Record<string, string> | null | undefined)?.sponsoredAdId;
+  if (event.type === 'checkout.session.completed' && object.mode === 'subscription' && adMetadata) {
+    // A monthly ad's subscription (src/server/services/sponsoredAds.ts).
+    await confirmAdSubscription(object);
+  } else if (event.type === 'invoice.paid') {
+    await renewAdSubscription(object);
+  } else if (event.type.startsWith('customer.subscription.') && adMetadata) {
+    if (event.type !== 'customer.subscription.created') await adSubscriptionChanged(object);
+  } else if (event.type === 'checkout.session.completed' && object.mode === 'subscription' && object.subscription) {
     const userId = Number(object.client_reference_id);
     const subscription = await fetchSubscription(String(object.subscription));
     const known = await recordSubscription(subscription, Number.isInteger(userId) && userId > 0 ? userId : null);

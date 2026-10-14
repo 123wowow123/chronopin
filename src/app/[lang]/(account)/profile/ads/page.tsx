@@ -28,9 +28,11 @@ const STATUS_TONE: Record<string, string> = {
 // The advertiser's portal: buy impressions, write the ad, watch how it does.
 // Everything is shown as one page: the packages, the form, then the user's ads
 // with their numbers (src/server/model/sponsoredAd.ts stats).
-export default async function AdvertisePage({ searchParams }: { searchParams: Promise<{ paid?: string; edit?: string }> }) {
-  const user = await requireViewer('/profile/ads');
-  const [ads, query] = await Promise.all([SponsoredAd.listForUser(user.id), searchParams]);
+export default async function AdvertisePage({ searchParams }: { searchParams: Promise<{ paid?: string; edit?: string; plan?: string }> }) {
+  const query = await searchParams;
+  // A pricing card on /advertise links here with ?plan=, kept through sign-in.
+  const user = await requireViewer(query.plan ? `/profile/ads?plan=${encodeURIComponent(query.plan)}` : '/profile/ads');
+  const ads = await SponsoredAd.listForUser(user.id);
   const stats = await SponsoredAd.stats(ads.map((ad) => ad.id));
   const editing = ads.find((ad) => String(ad.id) === query.edit && ad.status === 'draft') ?? null;
   const justPaid = ads.find((ad) => String(ad.id) === query.paid) ?? null;
@@ -43,10 +45,9 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
           <h1 className="sr-only">Ads</h1>
           <h2 className="font-display text-2xl font-semibold tracking-tight">Advertise on Chronopin</h2>
           <p className="mt-2 text-subtle">
-            Put your ad next to the pins people follow, on the timeline and on pin pages. You pay once for a fixed number of views; no subscription.
+            Put your ad next to the pins people follow, on the timeline and on pin pages. Pay once for a fixed number of views, or subscribe for 15,000 views a month.
           </p>
         </header>
-
 
         {justPaid ? (
           <p className="surface p-4 text-sm text-success lg:mr-[21.5rem]" role="status">
@@ -57,7 +58,8 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
 
         {stripeConfigured() ? (
           <AdForm
-            key={editing?.id ?? 'new'}
+            key={editing?.id ?? `new-${query.plan ?? ''}`}
+            preselect={query.plan}
             initial={
               editing
                 ? {
@@ -66,6 +68,7 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                     body: editing.body,
                     url: editing.url,
                     impressions: editing.impressionsBought,
+                    plan: editing.plan,
                     imageUrl: blobUrl(editing.imageName) ?? null,
                   }
                 : null
@@ -93,6 +96,13 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                   <span className={`shrink-0 text-sm font-medium ${STATUS_TONE[ad.status]}`}>{STATUS_LABEL[ad.status]}</span>
                 </div>
                 <AdPreview title={ad.title} body={ad.body} url={ad.url} imageUrl={blobUrl(ad.imageName) ?? null} />
+                {ad.plan === 'monthly' && ad.currentPeriodEnd && (ad.status === 'active' || ad.status === 'paused' || ad.status === 'completed') ? (
+                  <p className="text-sm text-subtle">
+                    {ad.cancelAtPeriodEnd
+                      ? `Subscription ${ad.status === 'completed' ? 'ended' : 'ends'} on ${new Date(ad.currentPeriodEnd).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' })}.`
+                      : `Impressions reset on ${new Date(ad.currentPeriodEnd).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' })}.`}
+                  </p>
+                ) : null}
 
                 {ad.rejectionReason ? (
                   <p className="text-sm text-danger" role="alert">
@@ -102,7 +112,8 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
 
                 {example ? (
                   <p className="text-sm text-subtle">
-                    {ad.impressionsBought.toLocaleString('en-US')} impressions for {dollars(ad.priceCents)}, not paid yet. Once it is live you will see its tracking, like this example:
+                    {ad.impressionsBought.toLocaleString('en-US')} impressions for {dollars(ad.priceCents)}
+                    {ad.plan === 'monthly' ? ' a month' : ''}, not paid yet. Once it is live you will see its tracking, like this example:
                   </p>
                 ) : null}
                 <div className={example ? 'space-y-3 rounded-lg border border-dashed border-line p-3' : 'space-y-3'}>
@@ -140,7 +151,7 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                   </div>
                   {s.byDay.length ? <AdChart days={s.byDay} /> : null}
                 </div>
-                <AdActions id={ad.id} status={ad.status} dailyLimit={ad.dailyLimit ?? null} />
+                <AdActions id={ad.id} status={ad.status} dailyLimit={ad.dailyLimit ?? null} monthly={ad.plan === 'monthly'} />
               </article>
             );
           })}

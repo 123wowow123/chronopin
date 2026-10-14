@@ -13,32 +13,38 @@ import {
   CUSTOM_RATE_CENTS,
   CUSTOM_STEP,
   dollars,
+  MONTHLY_PLAN,
   packageFor,
   perThousand,
   SPONSORED_PACKAGES,
   TITLE_MAX,
 } from '@/lib/sponsoredAds';
 
-type Initial = { id: number; title: string; body: string; url: string; impressions: number; imageUrl: string | null };
+type Initial = { id: number; title: string; body: string; url: string; impressions: number; imageUrl: string | null; plan?: 'one_time' | 'monthly' };
 
 // Write the ad, pick a package and pay. The ad is saved as a draft first
 // (so a closed tab loses nothing), then the picture is sent, then Stripe's
 // page opens; it goes to review once the payment arrives.
-export function AdForm({ initial }: { initial: Initial | null }) {
+export function AdForm({ initial, preselect }: { initial: Initial | null; preselect?: string }) {
+  // ?plan= from a pricing card: 'monthly', 'custom' or a package's impressions.
+  const chosen = initial ? null : preselect;
   const router = useRouter();
   const fileRef = useRef<HTMLInputElement>(null);
   const [title, setTitle] = useState(initial?.title ?? '');
   const [body, setBody] = useState(initial?.body ?? '');
   const [url, setUrl] = useState(initial?.url ?? 'https://');
+  const [monthly, setMonthly] = useState(initial?.plan === 'monthly' || chosen === 'monthly');
   const isFixed = (n: number) => SPONSORED_PACKAGES.some((p) => p.impressions === n);
-  const [custom, setCustom] = useState(initial ? !isFixed(initial.impressions) : false);
-  const [fixed, setFixed] = useState<number>(initial && isFixed(initial.impressions) ? initial.impressions : SPONSORED_PACKAGES[0].impressions);
+  const [custom, setCustom] = useState(initial && initial.plan !== 'monthly' ? !isFixed(initial.impressions) : chosen === 'custom');
+  const [fixed, setFixed] = useState<number>(
+    initial && isFixed(initial.impressions) ? initial.impressions : isFixed(Number(chosen)) ? Number(chosen) : SPONSORED_PACKAGES[0].impressions,
+  );
   const [customImpressions, setCustomImpressions] = useState<number>(initial && !isFixed(initial.impressions) ? initial.impressions : CUSTOM_MIN);
-  const impressions = custom ? customImpressions : fixed;
+  const impressions = monthly ? MONTHLY_PLAN.impressions : custom ? customImpressions : fixed;
   const [picture, setPicture] = useState<File | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
-  const priced = packageFor(impressions);
+  const priced = monthly ? MONTHLY_PLAN : packageFor(impressions);
   const price = priced?.priceCents ?? 0;
   // A chosen file is shown from the browser's own copy until it is uploaded.
   const chosenUrl = useMemo(() => (picture ? URL.createObjectURL(picture) : null), [picture]);
@@ -61,7 +67,7 @@ export function AdForm({ initial }: { initial: Initial | null }) {
     setBusy(true);
     setError('');
     try {
-      const fields = { title, body, url, impressions };
+      const fields = { title, body, url, impressions, ...(monthly ? { plan: 'monthly' } : {}) };
       const saved = initial ? await api.patch<{ id: number }>(`/api/advertise/ads/${initial.id}`, fields) : await api.post<{ id: number }>('/api/advertise/ads', fields);
       if (picture) {
         const form = new FormData();
@@ -165,13 +171,14 @@ export function AdForm({ initial }: { initial: Initial | null }) {
           <legend className="field-label">Package</legend>
           <div className="grid gap-3 sm:grid-cols-2">
             {SPONSORED_PACKAGES.map((pkg) => (
-              <label key={pkg.impressions} className={`surface flex cursor-pointer items-center gap-3 p-4 ${!custom && fixed === pkg.impressions ? 'ring-2 ring-accent' : ''}`}>
+              <label key={pkg.impressions} className={`surface flex cursor-pointer items-center gap-3 p-4 ${!monthly && !custom && fixed === pkg.impressions ? 'ring-2 ring-accent' : ''}`}>
                 <input
                   type="radio"
                   name="package"
                   className="accent-accent"
-                  checked={!custom && fixed === pkg.impressions}
+                  checked={!monthly && !custom && fixed === pkg.impressions}
                   onChange={() => {
+                    setMonthly(false);
                     setCustom(false);
                     setFixed(pkg.impressions);
                   }}
@@ -184,14 +191,23 @@ export function AdForm({ initial }: { initial: Initial | null }) {
                 </span>
               </label>
             ))}
-            <label className={`surface flex cursor-pointer items-start gap-3 p-4 sm:col-span-2 ${custom ? 'ring-2 ring-accent' : ''}`}>
-              <input type="radio" name="package" className="mt-1 accent-accent" checked={custom} onChange={() => setCustom(true)} />
+            <label className={`surface flex cursor-pointer items-start gap-3 p-4 sm:col-span-2 ${!monthly && custom ? 'ring-2 ring-accent' : ''}`}>
+              <input
+                type="radio"
+                name="package"
+                className="mt-1 accent-accent"
+                checked={!monthly && custom}
+                onChange={() => {
+                  setMonthly(false);
+                  setCustom(true);
+                }}
+              />
               <span className="flex-1">
                 <span className="block font-semibold">Custom: {CUSTOM_MIN.toLocaleString('en-US')} impressions or more</span>
                 <span className="block text-sm text-subtle">
                   {dollars(CUSTOM_RATE_CENTS)} per 1,000{custom && priced ? ` · ${dollars(price)} total` : ''}
                 </span>
-                {custom ? (
+                {!monthly && custom ? (
                   <input
                     type="number"
                     inputMode="numeric"
@@ -204,6 +220,16 @@ export function AdForm({ initial }: { initial: Initial | null }) {
                     onChange={(e) => setCustomImpressions(Number(e.target.value))}
                   />
                 ) : null}
+              </span>
+            </label>
+            <label className={`surface flex cursor-pointer items-center gap-3 bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-transparent p-4 sm:col-span-2 ${monthly ? 'ring-2 ring-amber-500/60' : 'border-amber-500/40'}`}>
+              <input type="radio" name="package" className="accent-amber-500" checked={monthly} onChange={() => setMonthly(true)} />
+              <span>
+                <span className="block text-xs font-semibold tracking-wider text-warning uppercase">Best value</span>
+                <span className="block font-semibold">Monthly: {MONTHLY_PLAN.impressions.toLocaleString('en-US')} impressions every month</span>
+                <span className="block text-sm text-subtle">
+                  {dollars(MONTHLY_PLAN.priceCents)} a month &middot; {perThousand(MONTHLY_PLAN)} per 1,000 &middot; renews until you cancel, which you can do at any time
+                </span>
               </span>
             </label>
           </div>
@@ -221,7 +247,7 @@ export function AdForm({ initial }: { initial: Initial | null }) {
         ) : null}
         <div className="flex flex-wrap gap-2">
           <button type="submit" disabled={busy} className="btn btn-primary">
-            {busy ? 'Working…' : priced ? `Pay ${dollars(price)} and submit` : 'Choose a size'}
+            {busy ? 'Working…' : priced ? (monthly ? `Subscribe for ${dollars(price)} a month and submit` : `Pay ${dollars(price)} and submit`) : 'Choose a size'}
           </button>
           <button type="button" disabled={busy} className="btn btn-secondary" onClick={() => void save(false)}>
             Save for later
