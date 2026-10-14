@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { AdPreview } from '@/components/ads/AdBlock';
 import Link from '@/components/ui/Link';
-import { redirect } from '@/lib/i18n/server';
 import { CUSTOM_MAX, CUSTOM_MIN, CUSTOM_RATE_CENTS, dollars, exampleTracking, MONTHLY_PLAN, perThousand, SPONSORED_PACKAGES } from '@/lib/sponsoredAds';
 import { AdChart } from '../(account)/profile/ads/AdChart';
 
@@ -44,17 +43,10 @@ const STEPS = [
   },
 ];
 
-// The public page for advertisers. The portal itself (buying, editing and
-// tracking ads) is the Ads tab of the profile, which asks signed-out visitors
-// to sign in first. Old links with ?paid= or ?edit= still land there.
-export default async function AdvertiseLanding({ searchParams }: { searchParams: Promise<{ paid?: string; edit?: string }> }) {
-  const { paid, edit } = await searchParams;
-  if (paid || edit) {
-    const query = new URLSearchParams();
-    if (paid) query.set('paid', paid);
-    if (edit) query.set('edit', edit);
-    return redirect(`/profile/ads?${query}`);
-  }
+// The public page for advertisers: static, so it takes no query. The portal
+// (buying, editing and tracking ads) is the Ads tab of the profile, which asks
+// signed-out visitors to sign in first; pricing cards link there with ?plan=.
+export default function AdvertiseLanding() {
   const bought = 5000;
   const sample = exampleTracking(bought);
   const ctr = ((sample.clicks / sample.impressions) * 100).toFixed(2);
