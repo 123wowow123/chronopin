@@ -3,6 +3,7 @@ import { AdPreview } from '@/components/ads/AdBlock';
 import Link from '@/components/ui/Link';
 import { CUSTOM_MAX, CUSTOM_MIN, CUSTOM_RATE_CENTS, dollars, exampleTracking, MONTHLY_PLAN, perThousand, SPONSORED_PACKAGES } from '@/lib/sponsoredAds';
 import { AdChart } from '../(account)/profile/ads/AdChart';
+import { PortalLink } from './PortalLink';
 
 export const metadata: Metadata = {
   title: 'Advertise on Chronopin',
@@ -63,9 +64,9 @@ export default function AdvertiseLanding() {
           Your ad sits beside the pins people already care about. Buy a fixed number of views or subscribe monthly, and see exactly how it does.
         </p>
         <p className="relative mt-8 flex flex-wrap justify-center gap-3">
-          <Link href="/profile/ads" className="btn btn-primary">
+          <PortalLink href="/profile/ads" className="btn btn-primary">
             Create an ad
-          </Link>
+          </PortalLink>
           <a href="#pricing" className="btn btn-secondary">
             See pricing
           </a>
@@ -130,18 +131,18 @@ export default function AdvertiseLanding() {
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {SPONSORED_PACKAGES.map((pkg) => (
             <li key={pkg.impressions}>
-              <Link
+              <PortalLink
                 href={`/profile/ads?plan=${pkg.impressions}`}
                 className="surface block h-full p-6 transition-shadow hover:shadow-md focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <p className="font-display text-3xl font-semibold">{dollars(pkg.priceCents)}</p>
                 <p className="mt-1 font-medium">{pkg.impressions.toLocaleString('en-US')} views</p>
                 <p className="text-sm text-subtle">{perThousand(pkg)} per 1,000</p>
-              </Link>
+              </PortalLink>
             </li>
           ))}
           <li>
-            <Link
+            <PortalLink
               href="/profile/ads?plan=monthly"
               className="surface block h-full bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-transparent p-6 ring-2 ring-amber-500/60 transition-shadow hover:shadow-md"
             >
@@ -153,17 +154,17 @@ export default function AdvertiseLanding() {
               <p className="mt-1 font-medium">{MONTHLY_PLAN.impressions.toLocaleString('en-US')} views a month</p>
               <p className="text-sm text-subtle">{perThousand(MONTHLY_PLAN)} per 1,000</p>
               <p className="text-sm text-subtle">Renews monthly. Cancel any time.</p>
-            </Link>
+            </PortalLink>
           </li>
           <li>
-            <Link href="/profile/ads?plan=custom" className="surface block h-full p-6 transition-shadow hover:shadow-md">
+            <PortalLink href="/profile/ads?plan=custom" className="surface block h-full p-6 transition-shadow hover:shadow-md">
               <p className="mb-2 text-xs font-semibold tracking-wider text-subtle uppercase">Custom</p>
               <p className="font-display text-3xl font-semibold">{dollars(CUSTOM_RATE_CENTS)}</p>
               <p className="mt-1 font-medium">per 1,000 views</p>
               <p className="text-sm text-subtle">
                 {CUSTOM_MIN.toLocaleString('en-US')} to {CUSTOM_MAX.toLocaleString('en-US')} views
               </p>
-            </Link>
+            </PortalLink>
           </li>
         </ul>
       </section>
@@ -191,9 +192,9 @@ export default function AdvertiseLanding() {
           Write your ad in a couple of minutes. Nothing goes live until it is paid for and reviewed, and a review takes 24 hours at most.
         </p>
         <p className="mt-6 flex flex-wrap justify-center gap-3">
-          <Link href="/profile/ads" className="btn btn-primary">
+          <PortalLink href="/profile/ads" className="btn btn-primary">
             Create an ad
-          </Link>
+          </PortalLink>
           <Link href="/contact" className="btn btn-secondary">
             Ask us a question
           </Link>
