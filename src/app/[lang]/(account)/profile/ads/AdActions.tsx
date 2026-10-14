@@ -7,10 +7,11 @@ import type { SponsoredStatus } from '@/lib/sponsoredAds';
 
 // What can be done with one ad: pay for or change one that is not paid yet,
 // pause and resume a live one.
-export function AdActions({ id, status }: { id: number; status: SponsoredStatus }) {
+export function AdActions({ id, status, dailyLimit }: { id: number; status: SponsoredStatus; dailyLimit: number | null }) {
   const router = useRouter();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
+  const [limit, setLimit] = useState(dailyLimit == null ? '' : String(dailyLimit));
 
   async function run(work: () => Promise<void>) {
     setBusy(true);
@@ -54,6 +55,26 @@ export function AdActions({ id, status }: { id: number; status: SponsoredStatus 
           {status === 'active' ? 'Pause' : 'Resume'}
         </button>
       )}
+      <div className="flex flex-1 items-center gap-2">
+        <label className="text-sm text-subtle" htmlFor={`daily-${id}`}>Max impressions per day</label>
+        <input
+          id={`daily-${id}`}
+          type="number"
+          min={1}
+          inputMode="numeric"
+          placeholder="No limit"
+          value={limit}
+          onChange={(e) => setLimit(e.target.value)}
+          className="input w-28"
+        />
+        <button type="button" disabled={busy || limit === (dailyLimit == null ? '' : String(dailyLimit))} className="btn btn-secondary ml-auto" onClick={() => run(async () => {
+          await api.patch(`/api/advertise/ads/${id}`, { dailyLimit: limit.trim() === '' ? null : Number(limit) });
+          router.refresh();
+          setBusy(false);
+        })}>
+          Save
+        </button>
+      </div>
       {error ? <p className="text-sm text-danger" role="alert">{error}</p> : null}
     </div>
   );

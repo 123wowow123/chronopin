@@ -12,6 +12,7 @@ export type SponsoredRow = {
   impressionsBought: number;
   priceCents: number;
   impressionsServed: number;
+  dailyLimit: number | null;
   status: SponsoredStatus;
   rejectionReason: string | null;
   needsRefund: boolean;
@@ -20,7 +21,7 @@ export type SponsoredRow = {
   utcCreatedDateTime: string;
 };
 
-const COLUMNS = `"id", "userId", "title", "body", "url", "imageName", "impressionsBought", "priceCents", "impressionsServed", "status",
+const COLUMNS = `"id", "userId", "title", "body", "url", "imageName", "impressionsBought", "priceCents", "impressionsServed", "dailyLimit", "status",
   "rejectionReason", "needsRefund", "paidDateTime", "approvedDateTime", "utcCreatedDateTime"`;
 
 export type SponsoredStats = { impressions: number; uniques: number; clicks: number; byDay: { day: string; impressions: number; uniques: number; clicks: number }[] };
@@ -66,6 +67,17 @@ export default class SponsoredAd {
        FROM (SELECT "id", "imageName" AS "previous" FROM "SponsoredAd" WHERE "id" = $1 AND "userId" = $2 AND "status" = 'draft') AS "old"
        WHERE "a"."id" = "old"."id" RETURNING "old"."previous"`,
       [id, userId, imageName],
+    );
+    return rows.length ? { previous: rows[0].previous } : null;
+  }
+
+  // Admin: the picture of an ad in any state. Returns the previous blob name.
+  static async adminSetImage(id: number, imageName: string | null) {
+    const rows = await db.query<{ previous: string | null }>(
+      `UPDATE "SponsoredAd" AS "a" SET "imageName" = $2, "utcUpdatedDateTime" = now()
+       FROM (SELECT "id", "imageName" AS "previous" FROM "SponsoredAd" WHERE "id" = $1) AS "old"
+       WHERE "a"."id" = "old"."id" RETURNING "old"."previous"`,
+      [id, imageName],
     );
     return rows.length ? { previous: rows[0].previous } : null;
   }
@@ -137,25 +149,98 @@ export default class SponsoredAd {
     return rows.length > 0;
   }
 
-  // The live ads that still have impressions left, for the ad inventory.
+  // The live ads that still have impressions left, and have not reached their
+  // daily limit today (UTC), for the ad inventory.
   static live() {
     return db.query<{ id: number; title: string; body: string; url: string; imageName: string | null; remaining: number }>(
-      `SELECT "id", "title", "body", "url", "imageName", "impressionsBought" - "impressionsServed" AS "remaining"
-       FROM "SponsoredAd" WHERE "status" = 'active' AND "impressionsServed" < "impressionsBought"`,
+      `SELECT "a"."id", "a"."title", "a"."body", "a"."url", "a"."imageName", "a"."impressionsBought" - "a"."impressionsServed" AS "remaining"
+       FROM "SponsoredAd" AS "a"
+       WHERE "a"."status" = 'active' AND "a"."impressionsServed" < "a"."impressionsBought"
+         AND ("a"."dailyLimit" IS NULL OR "a"."dailyLimit" > coalesce((
+           SELECT sum("i"."count") FROM "AdImpression" AS "i"
+           WHERE "i"."adKey" = 'u:' || "a"."id" AND "i"."day" = (now() AT TIME ZONE 'UTC')::date), 0))`,
     );
   }
 
-  // One more impression for each ad served; an ad that reaches what was bought
-  // is finished. Returns true when one finished (the inventory is then reread).
+  // Admin API: any ad, whoever owns it.
+  static adminList(f: { status?: string; userId?: number }): Promise<(SponsoredRow & { ownerName: string | null })[]> {
+    return db.query(
+      `SELECT ${COLUMNS.replace(/"(\w+)"/g, '"a"."$1"')}, "u"."userName" AS "ownerName"
+       FROM "SponsoredAd" AS "a" JOIN "User" AS "u" ON "u"."id" = "a"."userId"
+       WHERE ($1::varchar IS NULL OR "a"."status" = $1) AND ($2::int IS NULL OR "a"."userId" = $2)
+       ORDER BY "a"."id" DESC`,
+      [f.status ?? null, f.userId ?? null],
+    );
+  }
+
+  static async adminCreate(f: {
+    userId: number; title: string; body: string; url: string; impressionsBought: number; priceCents: number;
+    status: SponsoredStatus; dailyLimit: number | null;
+  }): Promise<SponsoredRow> {
+    const [row] = await db.query<SponsoredRow>(
+      `INSERT INTO "SponsoredAd" ("userId", "title", "body", "url", "impressionsBought", "priceCents", "status", "dailyLimit", "paidDateTime", "approvedDateTime")
+       VALUES ($1, $2, $3, $4, $5, $6, $7::varchar, $8,
+         CASE WHEN $7::varchar = 'draft' THEN NULL ELSE now() END,
+         CASE WHEN $7::varchar IN ('active', 'paused', 'completed') THEN now() ELSE NULL END)
+       RETURNING ${COLUMNS}`,
+      [f.userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.status, f.dailyLimit],
+    );
+    return row;
+  }
+
+  // Only the named fields change. Column names come from this list, never
+  // from the request.
+  static async adminUpdate(id: number, patch: Partial<{
+    title: string; body: string; url: string; impressionsBought: number; priceCents: number;
+    status: SponsoredStatus; dailyLimit: number | null; rejectionReason: string | null;
+  }>): Promise<SponsoredRow | null> {
+    const columns = ['title', 'body', 'url', 'impressionsBought', 'priceCents', 'status', 'dailyLimit', 'rejectionReason'] as const;
+    const sets: string[] = [];
+    const values: unknown[] = [id];
+    for (const column of columns) {
+      if (!(column in patch)) continue;
+      values.push(patch[column]);
+      sets.push(`"${column}" = $${values.length}`);
+    }
+    if (!sets.length) return this.get(id);
+    const rows = await db.query<SponsoredRow>(
+      `UPDATE "SponsoredAd" SET ${sets.join(', ')}, "utcUpdatedDateTime" = now() WHERE "id" = $1 RETURNING ${COLUMNS}`,
+      values,
+    );
+    return rows[0] ?? null;
+  }
+
+  static async adminDelete(id: number): Promise<{ imageName: string | null } | null> {
+    const rows = await db.query<{ imageName: string | null }>(`DELETE FROM "SponsoredAd" WHERE "id" = $1 RETURNING "imageName"`, [id]);
+    return rows[0] ?? null;
+  }
+
+  // Sets or clears (null) the daily cap; allowed in any state but completed.
+  static async setDailyLimit(id: number, userId: number, dailyLimit: number | null): Promise<boolean> {
+    const rows = await db.query(
+      `UPDATE "SponsoredAd" SET "dailyLimit" = $3::int, "utcUpdatedDateTime" = now()
+       WHERE "id" = $1 AND "userId" = $2 AND "status" <> 'completed' RETURNING "id"`,
+      [id, userId, dailyLimit],
+    );
+    return rows.length > 0;
+  }
+
+  // One more impression for each ad served; an ad that reaches what was bought,
+  // or today's daily limit, is out of the inventory. Returns true when one did
+  // (the inventory is then reread).
   static async served(ids: number[]): Promise<boolean> {
     if (!ids.length) return false;
-    const rows = await db.query<{ status: string }>(
-      `UPDATE "SponsoredAd" SET "impressionsServed" = "impressionsServed" + 1,
-         "status" = CASE WHEN "impressionsServed" + 1 >= "impressionsBought" THEN 'completed' ELSE "status" END
-       WHERE "id" = ANY($1::int[]) AND "status" = 'active' RETURNING "status"`,
+    const rows = await db.query<{ id: number; status: string; dailyLimit: number | null; today: number }>(
+      `UPDATE "SponsoredAd" AS "a" SET "impressionsServed" = "a"."impressionsServed" + 1,
+         "status" = CASE WHEN "a"."impressionsServed" + 1 >= "a"."impressionsBought" THEN 'completed' ELSE "a"."status" END
+       WHERE "a"."id" = ANY($1::int[]) AND "a"."status" = 'active'
+       RETURNING "a"."id", "a"."status", "a"."dailyLimit",
+         -- today's views so far, plus this one (its AdImpression row is written next)
+         coalesce((SELECT sum("i"."count") FROM "AdImpression" AS "i"
+           WHERE "i"."adKey" = 'u:' || "a"."id" AND "i"."day" = (now() AT TIME ZONE 'UTC')::date), 0)::int + 1 AS "today"`,
       [ids],
     );
-    return rows.some((row) => row.status === 'completed');
+    return rows.some((row) => row.status === 'completed' || (row.dailyLimit != null && row.today >= row.dailyLimit));
   }
 
   // Impressions and clicks for the owner's ads, from the same tables the admin

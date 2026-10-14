@@ -1,0 +1,690 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "kyoto"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sumiro-man — Kyoto Yodobashi Opens in Kyoto Station",
+        "description": "Charcoal-grilled dishes and lunch sets at the Kyoto Station Yodobashi branch.",
+        "sourceUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+        "address": "6F Kyoto Yodobashi, 590-2 Higashi Shiokojicho, Shimogyo-ku, Kyoto",
+        "productName": "Sumiro-man — Kyoto Yodobashi",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement confirms September 4, 2026, with address and separate lunch/dinner hours.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kyoto Station",
+          "Robatayaki"
+        ],
+        "longFormSummary": "<p>Charcoal-grilled dishes and lunch sets at the Kyoto Station Yodobashi branch.<cite data-ref=\"https://kansai-kaiten.com/sumiroman-yodobashikyoto2609/\"></cite></p><p>Branch-specific operator announcement confirms September 4, 2026, with address and separate lunch/dinner hours.</p>",
+        "references": [
+          {
+            "url": "https://sumiromankyotoyodobashi.owst.jp/",
+            "title": "Sumiro-man — Kyoto Yodobashi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement confirms September 4, 2026, with address and separate lunch/dinner hours."
+          },
+          {
+            "url": "https://kansai-kaiten.com/sumiroman-yodobashikyoto2609/",
+            "title": "Sumiro-man — Kyoto Yodobashi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement confirms September 4, 2026, with address and separate lunch/dinner hours."
+          },
+          {
+            "url": "https://www.instagram.com/reel/DcvGQK1z4Hd/",
+            "title": "Sumiro-man — Kyoto Yodobashi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement confirms September 4, 2026, with address and separate lunch/dinner hours."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+          "menu": {
+            "pinSourceUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+            "name": "Sumiro-man — Kyoto Yodobashi",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Branch lunch sets",
+                "url": "https://sumiromankyotoyodobashi.owst.jp/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "牛ハラミにぎやか定食",
+                    "price": 1680
+                  },
+                  {
+                    "name": "牛カルビにぎやか定食",
+                    "price": 1680
+                  },
+                  {
+                    "name": "牛ハラミ＆カルビにぎやか定食",
+                    "price": 2080
+                  },
+                  {
+                    "name": "牛ハラミ重にぎやか定食",
+                    "price": 1780
+                  },
+                  {
+                    "name": "九条葱すき焼きにぎやか定食",
+                    "price": 1880
+                  },
+                  {
+                    "name": "サイコロステーキにぎやか定食",
+                    "price": 2980
+                  },
+                  {
+                    "name": "本日のお魚フライにぎやか定食",
+                    "price": 1180
+                  }
+                ],
+                "note": "Tax-inclusive lunch prices from the separate lunch section. Dinner set prices differ; do not use dinner prices for lunch. Confirm seasonal availability."
+              },
+              {
+                "label": "Branch dinner sample",
+                "url": "https://sumiromankyotoyodobashi.owst.jp/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "牛ハラミ焼き",
+                    "price": 1089
+                  },
+                  {
+                    "name": "牛タン塩だれレモン",
+                    "price": 1199
+                  },
+                  {
+                    "name": "屋台のイカ醤油焼き",
+                    "price": 759
+                  },
+                  {
+                    "name": "帆立とポテトのバター醤油焼き",
+                    "price": 649
+                  },
+                  {
+                    "name": "鶏つくね串 — two skewers",
+                    "price": 528
+                  }
+                ],
+                "note": "Tax included."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+            "name": "Sumiro-man — Kyoto Yodobashi",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:00–16:00; last order 15:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "16:00–23:00; last order 22:00; operator notes dinner menu from 15:30"
+              }
+            ],
+            "detailsSourceUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/sumiroman-yodobashikyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/DcvGQK1z4Hd/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "sumiro",
+            "name": "Sumiro-man — Kyoto Yodobashi",
+            "neighborhood": "Kyoto Station",
+            "cuisine": "Robatayaki",
+            "description": "Charcoal-grilled dishes and lunch sets at the Kyoto Station Yodobashi branch.",
+            "address": "6F Kyoto Yodobashi, 590-2 Higashi Shiokojicho, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/sumiro-0-1c5f0c7fb08cf488.webp",
+            "imageCredit": "Sumiro-man Kyoto Yodobashi",
+            "imageSourceUrl": "https://sumiromankyotoyodobashi.owst.jp/",
+            "imageNote": "Kyoto Yodobashi restaurant entrance",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/sumiro-0-1c5f0c7fb08cf488.webp",
+          "sha256": "1c5f0c7fb08cf488e4e5d059f25a8b55c98757b2760737e038f3e4ad305c1bce",
+          "width": 601,
+          "height": 600,
+          "credit": "Sumiro-man Kyoto Yodobashi",
+          "note": "Kyoto Yodobashi restaurant entrance",
+          "sourcePage": "https://sumiromankyotoyodobashi.owst.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/sumiro-1-07e11f4976c04680.webp",
+          "sha256": "07e11f4976c046809a2a305015f1293be01eacb5216d1efb23a934fb2b3bea09",
+          "width": 601,
+          "height": 600,
+          "credit": "Sumiro-man Kyoto Yodobashi",
+          "note": "Kyoto Yodobashi open kitchen",
+          "sourcePage": "https://sumiromankyotoyodobashi.owst.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/sumiro-2-484b8fe4204ff310.webp",
+          "sha256": "484b8fe4204ff310157d3560a043d388c885d18aa4298c750526492567a474c2",
+          "width": 601,
+          "height": 600,
+          "credit": "Sumiro-man Kyoto Yodobashi",
+          "note": "Kyoto Yodobashi dining room",
+          "sourcePage": "https://sumiromankyotoyodobashi.owst.jp/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Wagyu Restaurant SHIKI Opens in Gosho Higashi",
+        "description": "An eight-seat, three-day-a-week restaurant offering seasonal Wagyu omakase and wines.",
+        "sourceUrl": "https://www.shikitable.com/",
+        "address": "1F Whatever GOSHOHIGASHI, 290 Komeyacho, Kamigyo-ku, Kyoto",
+        "productName": "Wagyu Restaurant SHIKI",
+        "utcStartDateTime": "2026-09-20T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Chef operator post announces September 20 opening at this address, corroborated by the local report. The current official site confirms the branch and operating schedule.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Gosho Higashi",
+          "Wagyu tasting menu"
+        ],
+        "longFormSummary": "<p>An eight-seat, three-day-a-week restaurant offering seasonal Wagyu omakase and wines.<cite data-ref=\"https://kansai-kaiten.com/wagyurestaurantshiki-kyotodemachiyanagi2609/\"></cite></p><p>Chef operator post announces September 20 opening at this address, corroborated by the local report. The current official site confirms the branch and operating schedule.</p>",
+        "references": [
+          {
+            "url": "https://www.shikitable.com/",
+            "title": "Wagyu Restaurant SHIKI source",
+            "confidence": 90,
+            "reasoning": "Chef operator post announces September 20 opening at this address, corroborated by the local report. The current official site confirms the branch and operating schedule."
+          },
+          {
+            "url": "https://kansai-kaiten.com/wagyurestaurantshiki-kyotodemachiyanagi2609/",
+            "title": "Wagyu Restaurant SHIKI source",
+            "confidence": 90,
+            "reasoning": "Chef operator post announces September 20 opening at this address, corroborated by the local report. The current official site confirms the branch and operating schedule."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdXuEAQzDOK/",
+            "title": "Wagyu Restaurant SHIKI source",
+            "confidence": 90,
+            "reasoning": "Chef operator post announces September 20 opening at this address, corroborated by the local report. The current official site confirms the branch and operating schedule."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.shikitable.com/",
+          "menu": {
+            "pinSourceUrl": "https://www.shikitable.com/",
+            "name": "Wagyu Restaurant SHIKI",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "SHIKI omakase",
+                "url": "https://www.shikitable.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "SHIKI omakase — 8–10 courses",
+                    "price": 18000
+                  },
+                  {
+                    "name": "Wine pairing — six 80 ml pours",
+                    "price": 9000,
+                    "note": "Optional supplement"
+                  },
+                  {
+                    "name": "Glass wine — 40, 80 or 120 ml",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Prices exclude tax; 10% service additional. Courses require advance reservations. Individual seasonal dishes are not named; the restaurant says its menu changes with sourcing."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.shikitable.com/",
+            "name": "Wagyu Restaurant SHIKI",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.shikitable.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Sunday, Monday, Tuesday",
+                "hours": "17:00–23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.shikitable.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/wagyurestaurantshiki-kyotodemachiyanagi2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdXuEAQzDOK/"
+              }
+            ],
+            "reservationUrl": "https://www.shikitable.com/"
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "shiki",
+            "name": "Wagyu Restaurant SHIKI",
+            "neighborhood": "Gosho Higashi",
+            "cuisine": "Wagyu tasting menu",
+            "description": "An eight-seat, three-day-a-week restaurant offering seasonal Wagyu omakase and wines.",
+            "address": "1F Whatever GOSHOHIGASHI, 290 Komeyacho, Kamigyo-ku, Kyoto",
+            "websiteUrl": "https://www.shikitable.com/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/shiki-0-f6785b1fa28b97c4.webp",
+            "imageCredit": "SHIKI / Chef Natsuki Ota",
+            "imageSourceUrl": "https://www.instagram.com/p/DdXuEAQzDOK/",
+            "imageNote": "Kyoto dining counter from operator announcement",
+            "openingConfirmed": true,
+            "day": "2026-09-20"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/shiki-0-f6785b1fa28b97c4.webp",
+          "sha256": "f6785b1fa28b97c41dbe4a0521c5665e94bcb1e9b7eef2dfaaee4fcc7666b72d",
+          "width": 640,
+          "height": 640,
+          "credit": "SHIKI / Chef Natsuki Ota",
+          "note": "Kyoto dining counter from operator announcement",
+          "sourcePage": "https://www.instagram.com/p/DdXuEAQzDOK/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "(BISTRO) MAMA Opens in Gokomachi",
+        "description": "Italian-inspired seasonal plates and natural wines in the second-floor Gokomachi bistro.",
+        "sourceUrl": "https://www.instagram.com/mama_kyoto_b/",
+        "address": "2F Gokomachi Building, 346 Iseyacho, Nakagyo-ku, Kyoto",
+        "productName": "(BISTRO) MAMA",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch operator announcement confirms September 4, 2026; Kyoto-specific opening reports corroborate the date and address.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Gokomachi",
+          "Italian bistro"
+        ],
+        "longFormSummary": "<p>Italian-inspired seasonal plates and natural wines in the second-floor Gokomachi bistro.<cite data-ref=\"https://kansai-kaiten.com/bistromama-kyoto2609/\"></cite></p><p>Branch operator announcement confirms September 4, 2026; Kyoto-specific opening reports corroborate the date and address.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/mama_kyoto_b/",
+            "title": "(BISTRO) MAMA source",
+            "confidence": 90,
+            "reasoning": "Branch operator announcement confirms September 4, 2026; Kyoto-specific opening reports corroborate the date and address."
+          },
+          {
+            "url": "https://kansai-kaiten.com/bistromama-kyoto2609/",
+            "title": "(BISTRO) MAMA source",
+            "confidence": 90,
+            "reasoning": "Branch operator announcement confirms September 4, 2026; Kyoto-specific opening reports corroborate the date and address."
+          },
+          {
+            "url": "https://www.instagram.com/reel/Dcs0qD_RnOJ/",
+            "title": "(BISTRO) MAMA source",
+            "confidence": 90,
+            "reasoning": "Branch operator announcement confirms September 4, 2026; Kyoto-specific opening reports corroborate the date and address."
+          },
+          {
+            "url": "https://kyotopi.jp/articles/bistro-mama.amp",
+            "title": "(BISTRO) MAMA source",
+            "confidence": 90,
+            "reasoning": "Branch operator announcement confirms September 4, 2026; Kyoto-specific opening reports corroborate the date and address."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/mama_kyoto_b/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/mama_kyoto_b/",
+            "name": "(BISTRO) MAMA",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Kyoto opening-report menu sample",
+                "url": "https://kyotopi.jp/articles/bistro-mama.amp",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "鰹のカルパッチョ 発酵白菜ソース",
+                    "price": 1300
+                  },
+                  {
+                    "name": "パテドカンパーニュ",
+                    "price": 1100
+                  },
+                  {
+                    "name": "真鯛と蓮根のフリット パクチーハラペーニョソース",
+                    "price": 1500
+                  },
+                  {
+                    "name": "九条ネギとしらす 山ワサビ pasta",
+                    "price": 1400
+                  },
+                  {
+                    "name": "紅ズワイガニのクリームソース カラマラータ",
+                    "price": 1900
+                  },
+                  {
+                    "name": "Bread",
+                    "price": 300
+                  }
+                ],
+                "note": "September branch-specific firsthand report; prices exclude tax. Seasonal availability changes. Linked TableCheck page contains legacy dooop plans and past dates, so those course dishes and offers are excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/mama_kyoto_b/",
+            "name": "(BISTRO) MAMA",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/mama_kyoto_b/",
+            "phone": "075-744-6205",
+            "openingHours": [
+              {
+                "days": "Published service hours",
+                "hours": "17:00–23:00; food last order 22:00, drinks 22:30; irregular closing days"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/mama_kyoto_b/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/bistromama-kyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/Dcs0qD_RnOJ/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kyotopi.jp/articles/bistro-mama.amp"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/mama-bistro/reserve"
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "bistromama",
+            "name": "(BISTRO) MAMA",
+            "neighborhood": "Gokomachi",
+            "cuisine": "Italian bistro",
+            "description": "Italian-inspired seasonal plates and natural wines in the second-floor Gokomachi bistro.",
+            "address": "2F Gokomachi Building, 346 Iseyacho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/mama_kyoto_b/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/bistromama-0-57b5dc1434875b55.webp",
+            "imageCredit": "BISTRO MAMA",
+            "imageSourceUrl": "https://www.instagram.com/reel/Dcs0qD_RnOJ/",
+            "imageNote": "Still from the branch opening video; the pictured dish is not identified",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/bistromama-0-57b5dc1434875b55.webp",
+          "sha256": "57b5dc1434875b55e09bf70c1bfa71db894ec297c1c83daa7daf3a8f365b2c71",
+          "width": 361,
+          "height": 640,
+          "credit": "BISTRO MAMA",
+          "note": "Still from the branch opening video; the pictured dish is not identified",
+          "sourcePage": "https://www.instagram.com/reel/Dcs0qD_RnOJ/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "DANNY CHURROS with ∞鯛 — Kyoto Opens in Shijo Karasuma",
+        "description": "The renewed Kyoto rice-flour taiyaki shop now also serves rice-flour churros and light snacks.",
+        "sourceUrl": "https://www.instagram.com/danny_churros_kyoto/",
+        "address": "242 Kugikakushicho, Shimogyo-ku, Kyoto",
+        "productName": "DANNY CHURROS with ∞鯛 — Kyoto",
+        "utcStartDateTime": "2026-09-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator Kyoto announcement and company shop directory confirm September 1, 2026 rebranding/reopening; this is a renewed existing venue, not a first-ever opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Shijo Karasuma",
+          "Churros and taiyaki"
+        ],
+        "longFormSummary": "<p>The renewed Kyoto rice-flour taiyaki shop now also serves rice-flour churros and light snacks.<cite data-ref=\"https://kansai-kaiten.com/dannychurros-kyoto2609/\"></cite></p><p>Operator Kyoto announcement and company shop directory confirm September 1, 2026 rebranding/reopening; this is a renewed existing venue, not a first-ever opening.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/danny_churros_kyoto/",
+            "title": "DANNY CHURROS with ∞鯛 — Kyoto source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto announcement and company shop directory confirm September 1, 2026 rebranding/reopening; this is a renewed existing venue, not a first-ever opening."
+          },
+          {
+            "url": "https://kansai-kaiten.com/dannychurros-kyoto2609/",
+            "title": "DANNY CHURROS with ∞鯛 — Kyoto source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto announcement and company shop directory confirm September 1, 2026 rebranding/reopening; this is a renewed existing venue, not a first-ever opening."
+          },
+          {
+            "url": "https://www.instagram.com/p/Dcs0tQFk3dj/",
+            "title": "DANNY CHURROS with ∞鯛 — Kyoto source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto announcement and company shop directory confirm September 1, 2026 rebranding/reopening; this is a renewed existing venue, not a first-ever opening."
+          },
+          {
+            "url": "https://komeko.club/archives/shoplists/1069",
+            "title": "DANNY CHURROS with ∞鯛 — Kyoto source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto announcement and company shop directory confirm September 1, 2026 rebranding/reopening; this is a renewed existing venue, not a first-ever opening."
+          },
+          {
+            "url": "https://dannychurros.com/shop",
+            "title": "DANNY CHURROS with ∞鯛 — Kyoto source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto announcement and company shop directory confirm September 1, 2026 rebranding/reopening; this is a renewed existing venue, not a first-ever opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/danny_churros_kyoto/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/danny_churros_kyoto/",
+            "name": "DANNY CHURROS with ∞鯛 — Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Kyoto branch taiyaki",
+                "url": "https://komeko.club/archives/shoplists/1069",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tokachi red-bean taiyaki",
+                    "price": 220
+                  },
+                  {
+                    "name": "Custard cream taiyaki",
+                    "price": 240
+                  }
+                ],
+                "note": "Branch-specific operator page publishes prices without stating tax treatment. Phone numbers conflict between operator directories; no phone is displayed pending resolution."
+              },
+              {
+                "label": "Published Kyoto launch items",
+                "url": "https://kansai-kaiten.com/dannychurros-kyoto2609/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Rice-flour churros — sugar, cinnamon or chocolate",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Letter-shaped churros",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tortilla",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Churro dog",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator launch post and branch report name these items without prices. Other-branch churro menus are excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/danny_churros_kyoto/",
+            "name": "DANNY CHURROS with ∞鯛 — Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/danny_churros_kyoto/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published service hours",
+                "hours": "11:00–19:00; confirm irregular closures"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/danny_churros_kyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/dannychurros-kyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/Dcs0tQFk3dj/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://komeko.club/archives/shoplists/1069"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://dannychurros.com/shop"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "danny",
+            "name": "DANNY CHURROS with ∞鯛 — Kyoto",
+            "neighborhood": "Shijo Karasuma",
+            "cuisine": "Churros and taiyaki",
+            "description": "The renewed Kyoto rice-flour taiyaki shop now also serves rice-flour churros and light snacks.",
+            "address": "242 Kugikakushicho, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/danny_churros_kyoto/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/danny-0-215f15928e644d3e.webp",
+            "imageCredit": "DANNY CHURROS",
+            "imageSourceUrl": "https://dannychurros.com/shop",
+            "imageNote": "Kyoto branch image from the operator shop directory",
+            "openingConfirmed": true,
+            "day": "2026-09-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/danny-0-215f15928e644d3e.webp",
+          "sha256": "215f15928e644d3e56c840131c8f0a6f5c782c37ca029cb237d267ee3d674668",
+          "width": 1000,
+          "height": 412,
+          "credit": "DANNY CHURROS",
+          "note": "Kyoto branch image from the operator shop directory",
+          "sourcePage": "https://dannychurros.com/shop"
+        }
+      ]
+    }
+  ]
+}

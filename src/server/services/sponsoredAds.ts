@@ -33,7 +33,11 @@ export function parseFields(body: Record<string, unknown>) {
   return { ...fields, impressionsBought: pkg.impressions, priceCents: pkg.priceCents };
 }
 
-export async function storeImage(adId: number, userId: number, file: File): Promise<string> {
+export function storeImageAsAdmin(adId: number, userId: number, file: File): Promise<string> {
+  return storeImage(adId, userId, file, true);
+}
+
+export async function storeImage(adId: number, userId: number, file: File, asAdmin = false): Promise<string> {
   if (file.size > MAX_IMAGE_BYTES) throw new HttpError(413, 'Pictures can be up to 5 MB.', { message: 'Pictures can be up to 5 MB.' });
   if (!/^image\//.test(file.type)) throw new HttpError(400, 'Choose an image to upload.', { message: 'Choose an image to upload.' });
   let squared: { buffer: Buffer; type: string };
@@ -44,7 +48,7 @@ export async function storeImage(adId: number, userId: number, file: File): Prom
   }
   const name = `${IMAGE_PREFIX}${userId}-${randomUUID()}.${squared.type === 'image/png' ? 'png' : 'jpg'}`;
   await azureBlob.uploadThumb(name, squared.buffer, squared.type);
-  const replaced = await SponsoredAd.setImage(adId, userId, name);
+  const replaced = asAdmin ? await SponsoredAd.adminSetImage(adId, name) : await SponsoredAd.setImage(adId, userId, name);
   if (!replaced) {
     await azureBlob.deleteThumb(name).catch(() => {});
     throw new HttpError(409, 'This ad can no longer be changed.', { message: 'This ad can no longer be changed.' });
@@ -120,6 +124,51 @@ export async function rejectAd(adId: number, reason: string): Promise<{ refunded
     log.warn(`[ads] refund for ad ${adId} failed:`, (err as Error).message);
     return { refunded: false };
   }
+}
+
+const STATUSES = ['draft', 'in_review', 'active', 'paused', 'completed'] as const;
+
+function dailyLimitOf(raw: unknown): number | null {
+  if (raw === null || raw === '') return null;
+  const n = Number(raw);
+  if (!Number.isInteger(n) || n < 1 || n > 1000000) throw new HttpError(422, 'dailyLimit must be a whole number from 1 to 1,000,000, or null.');
+  return n;
+}
+
+// The admin API's fields, each checked only when present. Unlike the
+// advertiser's form, impressions may be any whole number from 1,000 to
+// 1,000,000 in thousands, and the price may be set (a complimentary ad is 1).
+export function parseAdminFields(body: Record<string, unknown>, partial: boolean) {
+  const out: Partial<{
+    title: string; body: string; url: string; impressionsBought: number; priceCents: number;
+    status: (typeof STATUSES)[number]; dailyLimit: number | null; rejectionReason: string | null;
+  }> = {};
+  if (!partial || 'title' in body) out.title = String(body.title ?? '').trim();
+  if (!partial || 'body' in body) out.body = String(body.body ?? '').trim();
+  if (!partial || 'url' in body) out.url = String(body.url ?? '').trim();
+  if (out.title !== undefined || out.body !== undefined || out.url !== undefined) {
+    const problem = creativeProblem({ title: out.title ?? 'x', body: out.body ?? '', url: out.url ?? 'https://x.invalid' });
+    if (problem) throw new HttpError(422, problem, { message: problem });
+  }
+  if (!partial || 'impressions' in body) {
+    const n = Number(body.impressions ?? 1000);
+    if (!Number.isInteger(n) || n < 1000 || n > 1000000 || n % 1000 !== 0) {
+      throw new HttpError(422, 'impressions must be a multiple of 1,000 from 1,000 to 1,000,000.');
+    }
+    out.impressionsBought = n;
+  }
+  if ('priceCents' in body) {
+    const n = Number(body.priceCents);
+    if (!Number.isInteger(n) || n < 1) throw new HttpError(422, 'priceCents must be a whole number of at least 1.');
+    out.priceCents = n;
+  }
+  if ('status' in body) {
+    if (!STATUSES.includes(body.status as never)) throw new HttpError(422, `status must be one of ${STATUSES.join(', ')}.`);
+    out.status = body.status as (typeof STATUSES)[number];
+  }
+  if ('dailyLimit' in body) out.dailyLimit = dailyLimitOf(body.dailyLimit);
+  if ('rejectionReason' in body) out.rejectionReason = body.rejectionReason == null ? null : String(body.rejectionReason).slice(0, 300);
+  return out;
 }
 
 export { dollars };

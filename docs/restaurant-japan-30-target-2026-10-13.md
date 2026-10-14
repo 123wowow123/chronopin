@@ -8,28 +8,28 @@ These are current local public guide API counts. All 24 tabs are below target; n
 | --- | --- | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 1 | 30 | 29 |
 | Fukuoka | Just opened | 1 | 30 | 29 |
-| Fukuoka | Top restaurants | 1 | 30 | 29 |
-| Fukuoka | Specials | 2 | 30 | 28 |
+| Fukuoka | Top restaurants | 2 | 30 | 28 |
+| Fukuoka | Specials | 3 | 30 | 27 |
 | Osaka | Coming soon | 1 | 30 | 29 |
 | Osaka | Just opened | 1 | 30 | 29 |
-| Osaka | Top restaurants | 3 | 30 | 27 |
-| Osaka | Specials | 4 | 30 | 26 |
+| Osaka | Top restaurants | 5 | 30 | 25 |
+| Osaka | Specials | 6 | 30 | 24 |
 | Kyoto | Coming soon | 1 | 30 | 29 |
-| Kyoto | Just opened | 2 | 30 | 28 |
+| Kyoto | Just opened | 9 | 30 | 21 |
 | Kyoto | Top restaurants | 8 | 30 | 22 |
-| Kyoto | Specials | 6 | 30 | 24 |
+| Kyoto | Specials | 7 | 30 | 23 |
 | Nagoya | Coming soon | 1 | 30 | 29 |
 | Nagoya | Just opened | 1 | 30 | 29 |
-| Nagoya | Top restaurants | 2 | 30 | 28 |
-| Nagoya | Specials | 1 | 30 | 29 |
+| Nagoya | Top restaurants | 4 | 30 | 26 |
+| Nagoya | Specials | 3 | 30 | 27 |
 | Tokyo | Coming soon | 2 | 30 | 28 |
 | Tokyo | Just opened | 1 | 30 | 29 |
-| Tokyo | Top restaurants | 3 | 30 | 27 |
-| Tokyo | Specials | 2 | 30 | 28 |
+| Tokyo | Top restaurants | 4 | 30 | 26 |
+| Tokyo | Specials | 3 | 30 | 27 |
 | Sapporo | Coming soon | 1 | 30 | 29 |
 | Sapporo | Just opened | 2 | 30 | 28 |
-| Sapporo | Top restaurants | 2 | 30 | 28 |
-| Sapporo | Specials | 3 | 30 | 27 |
+| Sapporo | Top restaurants | 4 | 30 | 26 |
+| Sapporo | Specials | 5 | 30 | 25 |
 
 ## Research and replenishment
 

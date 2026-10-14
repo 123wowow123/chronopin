@@ -8,14 +8,25 @@ import { parseFields } from '@/server/services/sponsoredAds';
 
 type Ctx = { params: Promise<{ id: string }> };
 
-// Change an ad that is not paid for yet; or pause / resume a live one with
-// { paused: true | false }.
+// Change an ad that is not paid for yet; pause / resume a live one with
+// { paused: true | false }; or set its per-day impression cap with
+// { dailyLimit: number | null }.
 export const PATCH = route(async (request: NextRequest, { params }: Ctx) => {
   const user = await requireUser(request);
   const id = intParam((await params).id);
   const body = await readJson(request);
   if (typeof body.paused === 'boolean') {
     if (!(await SponsoredAd.setPaused(id, user.id, body.paused))) throw new HttpError(409, 'That ad cannot be paused or resumed now.');
+    Ad.expireInventory();
+    return json({ ok: true });
+  }
+  if ('dailyLimit' in body) {
+    const raw = body.dailyLimit;
+    const limit = raw === null || raw === '' ? null : Number(raw);
+    if (limit !== null && (!Number.isInteger(limit) || limit < 1 || limit > 1000000)) {
+      throw new HttpError(422, 'The daily limit must be a whole number of at least 1, or empty for no limit.');
+    }
+    if (!(await SponsoredAd.setDailyLimit(id, user.id, limit))) throw new HttpError(409, 'The daily limit cannot be changed on this ad.');
     Ad.expireInventory();
     return json({ ok: true });
   }

@@ -140,7 +140,7 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                   </div>
                   {s.byDay.length ? <AdChart days={s.byDay} /> : null}
                 </div>
-                <AdActions id={ad.id} status={ad.status} />
+                <AdActions id={ad.id} status={ad.status} dailyLimit={ad.dailyLimit ?? null} />
               </article>
             );
           })}
