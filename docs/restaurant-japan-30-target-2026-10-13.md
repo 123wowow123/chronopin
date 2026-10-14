@@ -2,34 +2,34 @@
 
 Owner target: **30 distinct restaurants in each of the four tabs of every Japan city guide**. Count restaurants, not repeated offers. Thirty is a research/replenishment target, not a display cap. Eligibility and evidence requirements remain unchanged.
 
-These are current local public guide API counts. All 24 tabs are below target; none is complete merely because it is populated. Offers are counted once per restaurant across active and upcoming sections. The six-city target is 720 restaurant/tab memberships, not necessarily 720 different restaurants: a verified restaurant can legitimately appear in more than one tab.
+These are current local public guide API counts. Each tab is assessed against the target below; a populated tab is not automatically complete. Offers are counted once per restaurant across active and upcoming sections. The six-city target is 720 restaurant/tab memberships, not necessarily 720 different restaurants: a verified restaurant can legitimately appear in more than one tab.
 
 | City | Tab | Verified | Target | Shortfall |
 | --- | --- | ---: | ---: | ---: |
-| Fukuoka | Coming soon | 1 | 30 | 29 |
-| Fukuoka | Just opened | 1 | 30 | 29 |
+| Fukuoka | Coming soon | 2 | 30 | 28 |
+| Fukuoka | Just opened | 2 | 30 | 28 |
 | Fukuoka | Top restaurants | 8 | 30 | 22 |
-| Fukuoka | Specials | 8 | 30 | 22 |
+| Fukuoka | Specials | 9 | 30 | 21 |
 | Osaka | Coming soon | 1 | 30 | 29 |
-| Osaka | Just opened | 1 | 30 | 29 |
-| Osaka | Top restaurants | 5 | 30 | 25 |
-| Osaka | Specials | 6 | 30 | 24 |
-| Kyoto | Coming soon | 1 | 30 | 29 |
-| Kyoto | Just opened | 21 | 30 | 9 |
+| Osaka | Just opened | 6 | 30 | 24 |
+| Osaka | Top restaurants | 6 | 30 | 24 |
+| Osaka | Specials | 7 | 30 | 23 |
+| Kyoto | Coming soon | 2 | 30 | 28 |
+| Kyoto | Just opened | 30 | 30 | 0 |
 | Kyoto | Top restaurants | 8 | 30 | 22 |
 | Kyoto | Specials | 7 | 30 | 23 |
 | Nagoya | Coming soon | 1 | 30 | 29 |
 | Nagoya | Just opened | 1 | 30 | 29 |
-| Nagoya | Top restaurants | 5 | 30 | 25 |
-| Nagoya | Specials | 4 | 30 | 26 |
-| Tokyo | Coming soon | 2 | 30 | 28 |
-| Tokyo | Just opened | 1 | 30 | 29 |
+| Nagoya | Top restaurants | 9 | 30 | 21 |
+| Nagoya | Specials | 8 | 30 | 22 |
+| Tokyo | Coming soon | 3 | 30 | 27 |
+| Tokyo | Just opened | 2 | 30 | 28 |
 | Tokyo | Top restaurants | 8 | 30 | 22 |
-| Tokyo | Specials | 7 | 30 | 23 |
+| Tokyo | Specials | 8 | 30 | 22 |
 | Sapporo | Coming soon | 5 | 30 | 25 |
-| Sapporo | Just opened | 2 | 30 | 28 |
+| Sapporo | Just opened | 3 | 30 | 27 |
 | Sapporo | Top restaurants | 9 | 30 | 21 |
-| Sapporo | Specials | 10 | 30 | 20 |
+| Sapporo | Specials | 11 | 30 | 19 |
 
 ## Research and replenishment
 

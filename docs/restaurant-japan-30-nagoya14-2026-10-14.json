@@ -1,0 +1,233 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yaba Misen — Matsuzakaya Nagoya Opens in Sakae / Yabacho",
+        "description": "A new department-store branch of Yaba Misen, with Taiwan ramen and branch-specific curry, tantan noodles and offal chawanmushi.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000003954.000025003.html",
+        "address": "B1F North Building, Matsuzakaya Nagoya, 3-16-1 Sakae, Naka-ku, Nagoya",
+        "productName": "Yaba Misen — Matsuzakaya Nagoya",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Landlord September 17 operator release confirms October 1, 2026 at 11:00. October 1 TV Aichi opening-day reporting confirms actual opening. This is the Matsuzakaya branch, not the Osu main store.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Sakae / Yabacho",
+          "Taiwanese"
+        ],
+        "longFormSummary": "<p>A new department-store branch of Yaba Misen, with Taiwan ramen and branch-specific curry, tantan noodles and offal chawanmushi.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000003954.000025003.html\"></cite></p><p>Landlord September 17 operator release confirms October 1, 2026 at 11:00. October 1 TV Aichi opening-day reporting confirms actual opening. This is the Matsuzakaya branch, not the Osu main store.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000003954.000025003.html",
+            "title": "Yaba Misen — Matsuzakaya Nagoya source",
+            "confidence": 90,
+            "reasoning": "Landlord September 17 operator release confirms October 1, 2026 at 11:00. October 1 TV Aichi opening-day reporting confirms actual opening. This is the Matsuzakaya branch, not the Osu main store."
+          },
+          {
+            "url": "https://jouhou.nagoya/yabamisen-matsuzakaya-repo/",
+            "title": "Yaba Misen — Matsuzakaya Nagoya source",
+            "confidence": 90,
+            "reasoning": "Landlord September 17 operator release confirms October 1, 2026 at 11:00. October 1 TV Aichi opening-day reporting confirms actual opening. This is the Matsuzakaya branch, not the Osu main store."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698396/food/",
+            "title": "Yaba Misen — Matsuzakaya Nagoya source",
+            "confidence": 90,
+            "reasoning": "Landlord September 17 operator release confirms October 1, 2026 at 11:00. October 1 TV Aichi opening-day reporting confirms actual opening. This is the Matsuzakaya branch, not the Osu main store."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698396/map/",
+            "title": "Yaba Misen — Matsuzakaya Nagoya source",
+            "confidence": 90,
+            "reasoning": "Landlord September 17 operator release confirms October 1, 2026 at 11:00. October 1 TV Aichi opening-day reporting confirms actual opening. This is the Matsuzakaya branch, not the Osu main store."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698396/photo/",
+            "title": "Yaba Misen — Matsuzakaya Nagoya source",
+            "confidence": 90,
+            "reasoning": "Landlord September 17 operator release confirms October 1, 2026 at 11:00. October 1 TV Aichi opening-day reporting confirms actual opening. This is the Matsuzakaya branch, not the Osu main store."
+          },
+          {
+            "url": "https://news.tv-aichi.co.jp/single.php?id=10303",
+            "title": "Yaba Misen — Matsuzakaya Nagoya source",
+            "confidence": 90,
+            "reasoning": "Landlord September 17 operator release confirms October 1, 2026 at 11:00. October 1 TV Aichi opening-day reporting confirms actual opening. This is the Matsuzakaya branch, not the Osu main store."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000003954.000025003.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000003954.000025003.html",
+            "name": "Yaba Misen — Matsuzakaya Nagoya",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Matsuzakaya branch menu",
+                "url": "https://jouhou.nagoya/yabamisen-matsuzakaya-repo/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Taiwan ramen",
+                    "price": 950
+                  },
+                  {
+                    "name": "Taiwan minced-meat curry",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Tantan noodles",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Offal chawanmushi",
+                    "price": 700
+                  },
+                  {
+                    "name": "Peach-shaped sweet buns — two pieces",
+                    "price": 850
+                  },
+                  {
+                    "name": "Stir-fried greens",
+                    "price": 950
+                  },
+                  {
+                    "name": "Herb noodles",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Almond soft serve",
+                    "price": 550
+                  },
+                  {
+                    "name": "Gluten-free noodle substitution",
+                    "price": 200,
+                    "note": "Addition to a noodle dish"
+                  },
+                  {
+                    "name": "Taiwan minced-meat steamed bun",
+                    "priceLabel": "Price not published",
+                    "note": "Named by landlord/operator opening announcement; current price not published"
+                  }
+                ],
+                "note": "Actual branch press-preview printed menus and labelled tasting report, September 2026; published October 10 update. Tax included. HotPepper September 15 pre-opening menu lists conflicting Taiwan ramen ¥850 and greens ¥830 (recommendation ¥790), while the photographed branch menu/report shows ¥950 each. Use the actual branch menu with a price-confirmation note. The HotPepper recommendation and main listing also disagree on offal ramen ¥970/¥1,200; neither is imported as a resolved price. September release prices were undecided. October 1–3 mini-soft-serve giveaway is expired. Complete printed menu photographs are attached with accurate source attribution.",
+                "documentUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/misen-release-9-7cac26544478fe7b.webp"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000003954.000025003.html",
+            "name": "Yaba Misen — Matsuzakaya Nagoya",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.matsuzakaya.co.jp/nagoya/topics/5_trendy_main_newandrenewal_2024.html#yabamisen",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "11:00–15:00, last order 14:30; 17:00–22:00, last order 21:30"
+              },
+              {
+                "days": "Saturday, Sunday and public holidays",
+                "hours": "11:00–22:00; last order 21:30; closures follow department store"
+              }
+            ],
+            "detailsSourceUrl": "https://www.matsuzakaya.co.jp/nagoya/topics/5_trendy_main_newandrenewal_2024.html#yabamisen",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000003954.000025003.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://jouhou.nagoya/yabamisen-matsuzakaya-repo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698396/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698396/map/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698396/photo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://news.tv-aichi.co.jp/single.php?id=10303"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "misen-release",
+            "name": "Yaba Misen — Matsuzakaya Nagoya",
+            "neighborhood": "Sakae / Yabacho",
+            "cuisine": "Taiwanese",
+            "description": "A new department-store branch of Yaba Misen, with Taiwan ramen and branch-specific curry, tantan noodles and offal chawanmushi.",
+            "address": "B1F North Building, Matsuzakaya Nagoya, 3-16-1 Sakae, Naka-ku, Nagoya",
+            "websiteUrl": "https://www.matsuzakaya.co.jp/nagoya/topics/5_trendy_main_newandrenewal_2024.html#yabamisen",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/misen-release-8-ea8c6178809dbe3e.webp",
+            "imageCredit": "Nagoya Jouhoutsu editorial team / branch press-preview photographs",
+            "imageSourceUrl": "https://jouhou.nagoya/yabamisen-matsuzakaya-repo/",
+            "imageNote": "Actual Matsuzakaya Nagoya branch dining room photographed at the pre-opening press preview",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/misen-release-8-ea8c6178809dbe3e.webp",
+          "sha256": "ea8c6178809dbe3ece774b87a4b2b3f710198bce7a8815ef8e651a27fc166419",
+          "width": 750,
+          "height": 499,
+          "credit": "Nagoya Jouhoutsu editorial team / branch press-preview photographs",
+          "note": "Actual Matsuzakaya Nagoya branch dining room photographed at the pre-opening press preview",
+          "sourcePage": "https://jouhou.nagoya/yabamisen-matsuzakaya-repo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/misen-release-9-7cac26544478fe7b.webp",
+          "sha256": "7cac26544478fe7bfffe38197f2ec5482518f5408fdf8bc71b4030a5895a08e2",
+          "width": 480,
+          "height": 600,
+          "credit": "Nagoya Jouhoutsu editorial team / branch press-preview photographs",
+          "note": "Actual Matsuzakaya Nagoya branch printed noodles/rice menu; September 2026 preview prices, tax included",
+          "sourcePage": "https://jouhou.nagoya/yabamisen-matsuzakaya-repo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/misen-release-10-1cc0a02a5247dd3f.webp",
+          "sha256": "1cc0a02a5247dd3fc48dfc27a7b7f28b0bf8f2ae3275746d4682bc295fb77553",
+          "width": 480,
+          "height": 600,
+          "credit": "Nagoya Jouhoutsu editorial team / branch press-preview photographs",
+          "note": "Actual Matsuzakaya Nagoya branch printed sides/drinks/desserts menu; September 2026 preview prices, tax included",
+          "sourcePage": "https://jouhou.nagoya/yabamisen-matsuzakaya-repo/"
+        }
+      ]
+    }
+  ]
+}

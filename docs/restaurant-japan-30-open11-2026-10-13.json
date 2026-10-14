@@ -1,0 +1,2160 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "tokyo",
+    "sapporo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Xiyangyang — Ropponmatsu Opens in Ropponmatsu",
+        "description": "A newly opened Chinese noodle and dumpling restaurant with posted branch menu prices and a one-week opening offer.",
+        "sourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+        "address": "2-2-13 Ropponmatsu, Chuo-ku, Fukuoka",
+        "productName": "Xiyangyang — Ropponmatsu",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Actual storefront banner publishes October 13, 11:00 opening; October 13 local report confirms opening. The posted banner says one week, interpreted as October 13–19 inclusive, without extending the promotion.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Ropponmatsu",
+          "Chinese"
+        ],
+        "longFormSummary": "<p>A newly opened Chinese noodle and dumpling restaurant with posted branch menu prices and a one-week opening offer.<cite data-ref=\"https://pukutoco.com/shi-yanyan-ropponmatu/\"></cite></p><p>Actual storefront banner publishes October 13, 11:00 opening; October 13 local report confirms opening. The posted banner says one week, interpreted as October 13–19 inclusive, without extending the promotion.</p>",
+        "references": [
+          {
+            "url": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+            "title": "Xiyangyang — Ropponmatsu source",
+            "confidence": 90,
+            "reasoning": "Actual storefront banner publishes October 13, 11:00 opening; October 13 local report confirms opening. The posted banner says one week, interpreted as October 13–19 inclusive, without extending the promotion."
+          },
+          {
+            "url": "https://www.fukuoka-ropponmatsu.com/shiyangyang-ropponmatsu-2026/",
+            "title": "Xiyangyang — Ropponmatsu source",
+            "confidence": 90,
+            "reasoning": "Actual storefront banner publishes October 13, 11:00 opening; October 13 local report confirms opening. The posted banner says one week, interpreted as October 13–19 inclusive, without extending the promotion."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+          "menu": {
+            "pinSourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+            "name": "Xiyangyang — Ropponmatsu",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Opening-week 20–30% menu discount",
+                "url": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "スーラー湯麺",
+                    "price": 880,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "骨付き鶏モモ湯麺",
+                    "price": 980,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "とろとろチャーシュー湯麺",
+                    "price": 880,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "ワンタン麺",
+                    "price": 780,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "中華湯麺",
+                    "price": 680,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "担々麺",
+                    "price": 550,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "若鶏唐揚げ",
+                    "price": 580,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "すき焼き肉春巻",
+                    "price": 520,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "焼き餃子",
+                    "price": 980,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  },
+                  {
+                    "name": "四川風焼き餃子",
+                    "price": 980,
+                    "note": "Posted ordinary price before the item-dependent opening discount"
+                  }
+                ],
+                "note": "Transcribed from the actual Ropponmatsu storefront menu photo. Tax treatment is not stated. Posted banner promises all items 20–30% off for one week from October 13; exact tier by item and final bill amount are not published. Do not calculate a guessed discounted price. Service 11:00–15:00 and 17:00–22:00, year-round."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+            "name": "Xiyangyang — Ropponmatsu",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:00–15:00"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:00–22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.fukuoka-ropponmatsu.com/shiyangyang-ropponmatsu-2026/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "xiyang-pukutoco",
+            "name": "Xiyangyang — Ropponmatsu",
+            "neighborhood": "Ropponmatsu",
+            "cuisine": "Chinese",
+            "description": "A newly opened Chinese noodle and dumpling restaurant with posted branch menu prices and a one-week opening offer.",
+            "address": "2-2-13 Ropponmatsu, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/xiyang-0-91d29fe46d32cac6.webp",
+            "imageCredit": "Pukutoco",
+            "imageSourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+            "imageNote": "Ropponmatsu storefront",
+            "openingConfirmed": true,
+            "day": "2026-10-13"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/xiyang-0-91d29fe46d32cac6.webp",
+          "sha256": "91d29fe46d32cac66f1c3ddf52e5c7aab69e6e86b398849909c317f070e683e8",
+          "width": 1200,
+          "height": 672,
+          "credit": "Pukutoco",
+          "note": "Ropponmatsu storefront",
+          "sourcePage": "https://pukutoco.com/shi-yanyan-ropponmatu/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/xiyang-1-8a1f7c99be7c2ef9.webp",
+          "sha256": "8a1f7c99be7c2ef9edae6f9e019bb6d32fa5169535e15a99aa11953500527a83",
+          "width": 1200,
+          "height": 673,
+          "credit": "Pukutoco",
+          "note": "Posted branch menu, opening date/discount banner and service hours",
+          "sourcePage": "https://pukutoco.com/shi-yanyan-ropponmatu/"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+          "name": "Xiyangyang — Ropponmatsu",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Opening-week 20–30% menu discount",
+              "url": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "スーラー湯麺",
+                  "price": 880,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "骨付き鶏モモ湯麺",
+                  "price": 980,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "とろとろチャーシュー湯麺",
+                  "price": 880,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "ワンタン麺",
+                  "price": 780,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "中華湯麺",
+                  "price": 680,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "担々麺",
+                  "price": 550,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "若鶏唐揚げ",
+                  "price": 580,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "すき焼き肉春巻",
+                  "price": 520,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "焼き餃子",
+                  "price": 980,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                },
+                {
+                  "name": "四川風焼き餃子",
+                  "price": 980,
+                  "note": "Posted ordinary price before the item-dependent opening discount"
+                }
+              ],
+              "note": "Transcribed from the actual Ropponmatsu storefront menu photo. Tax treatment is not stated. Posted banner promises all items 20–30% off for one week from October 13; exact tier by item and final bill amount are not published. Do not calculate a guessed discounted price. Service 11:00–15:00 and 17:00–22:00, year-round."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Opening-week 20–30% menu discount",
+              "kind": "other",
+              "description": "All menu items advertised at 20–30% off during opening week; exact rate by item requires staff confirmation.",
+              "sourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+              "menuLabel": "Opening-week 20–30% menu discount",
+              "discounted": true,
+              "validFrom": "2026-10-13",
+              "validThrough": "2026-10-19",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Ordinary prices are displayed; discounted final amounts are not invented.",
+                "One week from October 13, ending October 19 inclusive.",
+                "Posted lunch and dinner service windows apply."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "15:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "22:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "2-2-13 Ropponmatsu, Chuo-ku, Fukuoka",
+          "neighborhood": "Ropponmatsu",
+          "websiteUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/xiyang-0-91d29fe46d32cac6.webp",
+            "alt": "Xiyangyang — Ropponmatsu — Ropponmatsu storefront",
+            "credit": "Pukutoco",
+            "sourceUrl": "https://pukutoco.com/shi-yanyan-ropponmatu/",
+            "originalUrl": "https://pukutoco.com/wp-content/uploads/2026/10/IMG_4177_edited.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sushi & Yakitori Sushitori Shoten — Sugamo Opens in Sugamo",
+        "description": "An announced Sugamo sushi and yakitori branch, now planned for mid-November, with its own published food menu.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ004698990/",
+        "address": "2F B Building, Sugamo Plaza, 1-13-5 Sugamo, Toshima-ku, Tokyo",
+        "productName": "Sushi & Yakitori Sushitori Shoten — Sugamo",
+        "utcStartDateTime": "2026-11-20T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Live operator-managed branch page says mid-November. November 20 is an end-of-mid-month sorting placeholder, not a confirmed opening day. This supersedes the September release’s October plan; the booking calendar is still closed, so actual service is not assumed.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Sugamo",
+          "Sushi and yakitori"
+        ],
+        "longFormSummary": "<p>An announced Sugamo sushi and yakitori branch, now planned for mid-November, with its own published food menu.<cite data-ref=\"https://www.hotpepper.jp/strJ004698990/\"></cite></p><p>Live operator-managed branch page says mid-November. November 20 is an end-of-mid-month sorting placeholder, not a confirmed opening day. This supersedes the September release’s October plan; the booking calendar is still closed, so actual service is not assumed.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ004698990/",
+            "title": "Sushi & Yakitori Sushitori Shoten — Sugamo source",
+            "confidence": 90,
+            "reasoning": "Live operator-managed branch page says mid-November. November 20 is an end-of-mid-month sorting placeholder, not a confirmed opening day. This supersedes the September release’s October plan; the booking calendar is still closed, so actual service is not assumed."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698990/food/",
+            "title": "Sushi & Yakitori Sushitori Shoten — Sugamo source",
+            "confidence": 90,
+            "reasoning": "Live operator-managed branch page says mid-November. November 20 is an end-of-mid-month sorting placeholder, not a confirmed opening day. This supersedes the September release’s October plan; the booking calendar is still closed, so actual service is not assumed."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698990/course/",
+            "title": "Sushi & Yakitori Sushitori Shoten — Sugamo source",
+            "confidence": 90,
+            "reasoning": "Live operator-managed branch page says mid-November. November 20 is an end-of-mid-month sorting placeholder, not a confirmed opening day. This supersedes the September release’s October plan; the booking calendar is still closed, so actual service is not assumed."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000032.000131309.html",
+            "title": "Sushi & Yakitori Sushitori Shoten — Sugamo source",
+            "confidence": 90,
+            "reasoning": "Live operator-managed branch page says mid-November. November 20 is an end-of-mid-month sorting placeholder, not a confirmed opening day. This supersedes the September release’s October plan; the booking calendar is still closed, so actual service is not assumed."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ004698990/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698990/",
+            "name": "Sushi & Yakitori Sushitori Shoten — Sugamo",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published Sugamo planned food menu",
+                "url": "https://www.hotpepper.jp/strJ004698990/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "本鮪盛り",
+                    "price": 1738
+                  },
+                  {
+                    "name": "〆鯖",
+                    "price": 968
+                  },
+                  {
+                    "name": "オススメ旬魚",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "おすすめ旬魚　3種盛り",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "おすすめ旬魚　5種盛り",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "もつ煮込み",
+                    "price": 638
+                  },
+                  {
+                    "name": "ねぎま",
+                    "price": 99
+                  },
+                  {
+                    "name": "ささみ/ハツ/ボンジリ/豚バラ　各",
+                    "price": 218
+                  },
+                  {
+                    "name": "とり皮",
+                    "price": 242
+                  },
+                  {
+                    "name": "はつもと※希少部位",
+                    "price": 218
+                  },
+                  {
+                    "name": "砂肝/せせり/レバー　各",
+                    "price": 253
+                  },
+                  {
+                    "name": "手羽中",
+                    "price": 328
+                  },
+                  {
+                    "name": "盛り合わせ5本",
+                    "price": 988
+                  },
+                  {
+                    "name": "盛り合わせ10本",
+                    "price": 1738
+                  },
+                  {
+                    "name": "本まぐろ赤身",
+                    "price": 220
+                  },
+                  {
+                    "name": "本まぐろ中とろ",
+                    "price": 440
+                  },
+                  {
+                    "name": "本まぐろ大とろ",
+                    "price": 660
+                  },
+                  {
+                    "name": "寿司盛り５貫",
+                    "price": 1428
+                  },
+                  {
+                    "name": "玉子",
+                    "price": 132
+                  },
+                  {
+                    "name": "サーモン/いか/つぶ貝　各",
+                    "price": 220
+                  },
+                  {
+                    "name": "蒸しエビ/真鯛/カンパチ　各",
+                    "price": 275
+                  },
+                  {
+                    "name": "たこ/アジ/甘えび/えんがわ　各",
+                    "price": 275
+                  },
+                  {
+                    "name": "蟹身みそ",
+                    "price": 385
+                  },
+                  {
+                    "name": "煮穴子/ほたて/いくら　各",
+                    "price": 440
+                  },
+                  {
+                    "name": "うに",
+                    "price": 880
+                  },
+                  {
+                    "name": "寿司盛り７貫",
+                    "price": 1648
+                  },
+                  {
+                    "name": "寿司特上５貫",
+                    "price": 2088
+                  },
+                  {
+                    "name": "ガリ〆鯖",
+                    "price": 638
+                  },
+                  {
+                    "name": "ネギトロ/とろたく/なみだ巻き　各",
+                    "price": 438
+                  },
+                  {
+                    "name": "かっぱ巻き/なっとう巻き　各",
+                    "price": 328
+                  },
+                  {
+                    "name": "たこポン酢/たこぶつ　各",
+                    "price": 638
+                  },
+                  {
+                    "name": "トロたくあて",
+                    "price": 638
+                  },
+                  {
+                    "name": "海鮮ユッケ",
+                    "price": 638
+                  },
+                  {
+                    "name": "特製タルタルの鯵フライ（1尾）",
+                    "price": 328
+                  },
+                  {
+                    "name": "カキフライ（５個）",
+                    "price": 748
+                  },
+                  {
+                    "name": "チキン南蛮",
+                    "price": 748
+                  },
+                  {
+                    "name": "タルタル追加",
+                    "price": 110
+                  },
+                  {
+                    "name": "軟骨から揚げ",
+                    "price": 528
+                  },
+                  {
+                    "name": "ジューシー唐揚げ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ポテト",
+                    "price": 462
+                  },
+                  {
+                    "name": "揚げなす",
+                    "price": 438
+                  },
+                  {
+                    "name": "白菜漬け/梅キュウ　各",
+                    "price": 308
+                  },
+                  {
+                    "name": "冷やしトマト/炙り明太子/うずらの醤油漬け/枝豆/冷奴　各",
+                    "price": 418
+                  },
+                  {
+                    "name": "角切りベーコンのポテトサラダ",
+                    "price": 528
+                  },
+                  {
+                    "name": "きゅうりの一本漬け",
+                    "price": 352
+                  },
+                  {
+                    "name": "柴漬け/らっきょ　各",
+                    "price": 218
+                  },
+                  {
+                    "name": "ホタルイカ沖漬け",
+                    "price": 528
+                  },
+                  {
+                    "name": "手羽餃子（1本）",
+                    "price": 328
+                  },
+                  {
+                    "name": "海老餃子",
+                    "price": 528
+                  },
+                  {
+                    "name": "山芋のふわとろ焼き",
+                    "price": 572
+                  },
+                  {
+                    "name": "山芋のふわとろ焼きチーズ",
+                    "price": 638
+                  },
+                  {
+                    "name": "いくらだし巻き",
+                    "price": 438
+                  },
+                  {
+                    "name": "だし巻き",
+                    "price": 528
+                  },
+                  {
+                    "name": "明太だし巻き",
+                    "price": 462
+                  },
+                  {
+                    "name": "ごま豆腐サラダ",
+                    "price": 638
+                  },
+                  {
+                    "name": "シーザーサラダ",
+                    "price": 748
+                  },
+                  {
+                    "name": "海鮮サラダ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ほっけ焼き",
+                    "price": 968
+                  },
+                  {
+                    "name": "その日の焼き魚",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "その日の焼き貝",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "5本盛り合わせ",
+                    "price": 1098
+                  },
+                  {
+                    "name": "レンコン串",
+                    "price": 253
+                  },
+                  {
+                    "name": "豚ロース玉ねぎ",
+                    "price": 253
+                  },
+                  {
+                    "name": "とりささみ大葉",
+                    "price": 253
+                  },
+                  {
+                    "name": "うずら",
+                    "price": 253
+                  },
+                  {
+                    "name": "ホタテ",
+                    "price": 253
+                  },
+                  {
+                    "name": "チーズ",
+                    "price": 253
+                  },
+                  {
+                    "name": "牛串",
+                    "price": 253
+                  },
+                  {
+                    "name": "海老",
+                    "price": 253
+                  },
+                  {
+                    "name": "紅ショウガ",
+                    "price": 253
+                  },
+                  {
+                    "name": "焼きおにぎり",
+                    "price": 363
+                  },
+                  {
+                    "name": "海鮮漬け丼",
+                    "price": 748
+                  },
+                  {
+                    "name": "焼き鳥丼",
+                    "price": 748
+                  },
+                  {
+                    "name": "あら出汁茶づけ",
+                    "price": 418
+                  },
+                  {
+                    "name": "しじみの味噌汁",
+                    "price": 308
+                  },
+                  {
+                    "name": "シンプルTKG",
+                    "price": 308
+                  },
+                  {
+                    "name": "ガツンとTKG",
+                    "price": 418
+                  },
+                  {
+                    "name": "ネギトロ丼",
+                    "price": 748
+                  },
+                  {
+                    "name": "バニラアイス",
+                    "price": 308
+                  },
+                  {
+                    "name": "抹茶アイス",
+                    "price": 308
+                  },
+                  {
+                    "name": "バニラアイススイートポテト",
+                    "price": 528
+                  },
+                  {
+                    "name": "バニラアイスたい焼き",
+                    "price": 528
+                  },
+                  {
+                    "name": "抹茶アイスわらび餅",
+                    "price": 528
+                  }
+                ],
+                "note": "September 17 branch-managed menu; tax included where priced. Sugamo prices are preserved separately from Dotonbori: for example red tuna ¥220 and medium-fatty tuna ¥440. Seasonal fish and grill selections require staff price confirmation. The live branch page now announces mid-November, superseding the older October plan. Opening day, actual service, reservation activation and age-admission rules remain unconfirmed; future hours are published, not proof of current service. After-22:00 bills have a posted 10% surcharge. Shared brand menu photograph is illustrative, not a Sugamo room photograph."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698990/",
+            "name": "Sushi & Yakitori Sushitori Shoten — Sugamo",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004698990/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Planned Monday–Friday",
+                "hours": "17:00–01:00 next day; food last order 00:00, drinks 00:30"
+              },
+              {
+                "days": "Planned weekend/holiday",
+                "hours": "13:00–01:00 next day; food last order 00:00, drinks 00:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hotpepper.jp/strJ004698990/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698990/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698990/course/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000032.000131309.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "sugamo-branch",
+            "name": "Sushi & Yakitori Sushitori Shoten — Sugamo",
+            "neighborhood": "Sugamo",
+            "cuisine": "Sushi and yakitori",
+            "description": "An announced Sugamo sushi and yakitori branch, now planned for mid-November, with its own published food menu.",
+            "address": "2F B Building, Sugamo Plaza, 1-13-5 Sugamo, Toshima-ku, Tokyo",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004698990/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/sugamo-0-d0d1af2eba4202c0.webp",
+            "imageCredit": "Restaurant operator / Hot Pepper Gourmet",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004698990/photo/",
+            "imageNote": "Shared brand honmaguro menu illustration used by the Sugamo branch; not a property photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/sugamo-0-d0d1af2eba4202c0.webp",
+          "sha256": "d0d1af2eba4202c0662c6947d917b4c3f85af0eeb8cb9b7917714c40236f2f28",
+          "width": 480,
+          "height": 480,
+          "credit": "Restaurant operator / Hot Pepper Gourmet",
+          "note": "Shared brand honmaguro menu illustration used by the Sugamo branch; not a property photograph",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698990/photo/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shabu-Yo — Aeon Mall Fukuoka Ito Opens in Kitabaru",
+        "description": "A planned branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.",
+        "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+        "address": "1F Annex, Aeon Mall Fukuoka Ito, 1-3-1 Kitabaru, Nishi-ku, Fukuoka",
+        "productName": "Shabu-Yo — Aeon Mall Fukuoka Ito",
+        "utcStartDateTime": "2026-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator branch page confirms October 31 planned opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Kitabaru",
+          "Shabu-shabu"
+        ],
+        "longFormSummary": "<p>A planned branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.<cite data-ref=\"https://store-info.skylark.co.jp/syabuyo/map/198491/\"></cite></p><p>Exact operator branch page confirms October 31 planned opening.</p>",
+        "references": [
+          {
+            "url": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+            "title": "Shabu-Yo — Aeon Mall Fukuoka Ito source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page confirms October 31 planned opening."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/index.html",
+            "title": "Shabu-Yo — Aeon Mall Fukuoka Ito source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page confirms October 31 planned opening."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "Shabu-Yo — Aeon Mall Fukuoka Ito source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page confirms October 31 planned opening."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/pdf/city.pdf",
+            "title": "Shabu-Yo — Aeon Mall Fukuoka Ito source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page confirms October 31 planned opening."
+          },
+          {
+            "url": "https://pukutoco.com/syabuyou-aeonito1031open/",
+            "title": "Shabu-Yo — Aeon Mall Fukuoka Ito source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page confirms October 31 planned opening."
+          },
+          {
+            "url": "https://store-info.skylark.co.jp/syabuyo/list/",
+            "title": "Shabu-Yo — Aeon Mall Fukuoka Ito source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page confirms October 31 planned opening."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+            "title": "Shabu-Yo — Aeon Mall Fukuoka Ito source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page confirms October 31 planned opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+          "menu": {
+            "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+            "name": "Shabu-Yo — Aeon Mall Fukuoka Ito",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Branch-linked shared food menu",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Duck and Japanese black beef buffet — weekday lunch",
+                    "price": 3959
+                  },
+                  {
+                    "name": "Duck and Japanese black beef buffet — weekday dinner",
+                    "price": 4619
+                  },
+                  {
+                    "name": "Japanese black beef buffet — weekday lunch",
+                    "price": 3739
+                  },
+                  {
+                    "name": "Japanese black beef buffet — weekday dinner",
+                    "price": 4399
+                  },
+                  {
+                    "name": "Duck shabu buffet — weekday lunch",
+                    "price": 2969
+                  },
+                  {
+                    "name": "Duck shabu buffet — weekday dinner",
+                    "price": 3629
+                  },
+                  {
+                    "name": "Kyushu black pork and beef misuji buffet — weekday lunch",
+                    "price": 2639
+                  },
+                  {
+                    "name": "Kyushu black pork and beef misuji buffet — weekday dinner",
+                    "price": 3299
+                  },
+                  {
+                    "name": "Beef and pork buffet — weekday lunch",
+                    "price": 2199
+                  },
+                  {
+                    "name": "Beef and pork buffet — weekday dinner",
+                    "price": 2859
+                  },
+                  {
+                    "name": "Two pork cuts buffet — weekday lunch",
+                    "price": 1869
+                  },
+                  {
+                    "name": "Two pork cuts buffet — weekday dinner",
+                    "price": 2419
+                  },
+                  {
+                    "name": "Pork loin buffet — weekday lunch",
+                    "price": 1649
+                  },
+                  {
+                    "name": "Pork loin buffet — weekday dinner",
+                    "price": 2089
+                  },
+                  {
+                    "name": "Porcini-scented mushroom broth supplement",
+                    "price": 110,
+                    "note": "Free on duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Duck slices",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Six mushroom varieties",
+                    "priceLabel": "Price not published",
+                    "note": "Course selection controls availability"
+                  },
+                  {
+                    "name": "Soba noodles",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Mozzarella cheese",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  }
+                ],
+                "note": "Tax-inclusive shared operator menu directly linked by this branch. All diners in a group order the same food course. Lunch until 16:00; orders after 14:40 have 80 minutes. Weekday earlier lunches normally unlimited, weekends/holidays 80 minutes; dinner 100 minutes. Weekend/holiday addition ¥220 in the standard menu; branch variations must be confirmed. Orders after 22:00 add 10% late surcharge. No branch property photo was verified in checked operator galleries/local sources; map/icon/stock and other-branch images are excluded. These are current operator sample menu prices, not a guarantee of launch menu or pricing; recheck before October 31."
+              },
+              {
+                "label": "Before-16:00 happy-hour drinks",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Self-service alcohol free-flow with drink bar — before 16:00, 80 minutes",
+                    "price": 1319
+                  },
+                  {
+                    "name": "Self-service alcohol free-flow with drink bar — after 16:00, 100 minutes",
+                    "price": 1539
+                  },
+                  {
+                    "name": "Beer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Whisky",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Shochu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Sake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Fruit liqueurs",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  }
+                ],
+                "note": "Food course required. Group may include just one alcohol-plan customer. With an all-day 60-minute food course, drinks are also 60 minutes. These distinct durations are preserved; ¥1,319 is not described as 100 minutes. Soft-drink time extension has store/date exceptions."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+            "name": "Shabu-Yo — Aeon Mall Fukuoka Ito",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Weekdays",
+                "hours": "11:00–22:00"
+              },
+              {
+                "days": "Weekends and public holidays",
+                "hours": "10:30–22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/index.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/pdf/city.pdf"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pukutoco.com/syabuyou-aeonito1031open/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://store-info.skylark.co.jp/syabuyo/list/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "shabuyo-ito-candidate",
+            "name": "Shabu-Yo — Aeon Mall Fukuoka Ito",
+            "neighborhood": "Kitabaru",
+            "cuisine": "Shabu-shabu",
+            "description": "A planned branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.",
+            "address": "1F Annex, Aeon Mall Fukuoka Ito, 1-3-1 Kitabaru, Nishi-ku, Fukuoka",
+            "websiteUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": true,
+            "day": "2026-10-31"
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shabu-Yo — Sapporo Soen Opens in Soen",
+        "description": "A recently opened branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.",
+        "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+        "address": "1F Aeon Sapporo Soen, 28 Kita 8-jo Nishi 14-chome, Chuo-ku, Sapporo",
+        "productName": "Shabu-Yo — Sapporo Soen",
+        "utcStartDateTime": "2026-09-24T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Soen",
+          "Shabu-shabu"
+        ],
+        "longFormSummary": "<p>A recently opened branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.<cite data-ref=\"https://store-info.skylark.co.jp/syabuyo/map/198489/\"></cite></p><p>September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation.</p>",
+        "references": [
+          {
+            "url": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+            "title": "Shabu-Yo — Sapporo Soen source",
+            "confidence": 90,
+            "reasoning": "September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/index.html",
+            "title": "Shabu-Yo — Sapporo Soen source",
+            "confidence": 90,
+            "reasoning": "September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "Shabu-Yo — Sapporo Soen source",
+            "confidence": 90,
+            "reasoning": "September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/pdf/city.pdf",
+            "title": "Shabu-Yo — Sapporo Soen source",
+            "confidence": 90,
+            "reasoning": "September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation."
+          },
+          {
+            "url": "https://sapporochuo.goguynet.jp/2026/09/26/aeon-jp-sc-sapporosoen-3/",
+            "title": "Shabu-Yo — Sapporo Soen source",
+            "confidence": 90,
+            "reasoning": "September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation."
+          },
+          {
+            "url": "https://store-info.skylark.co.jp/syabuyo/list/",
+            "title": "Shabu-Yo — Sapporo Soen source",
+            "confidence": 90,
+            "reasoning": "September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+            "title": "Shabu-Yo — Sapporo Soen source",
+            "confidence": 90,
+            "reasoning": "September 26 on-site local report documents September 24–25 soft opening before September 26 grand opening; current operator branch page verifies operation."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "menu": {
+            "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+            "name": "Shabu-Yo — Sapporo Soen",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Branch-linked shared food menu",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Duck and Japanese black beef buffet — weekday lunch",
+                    "price": 3959
+                  },
+                  {
+                    "name": "Duck and Japanese black beef buffet — weekday dinner",
+                    "price": 4619
+                  },
+                  {
+                    "name": "Japanese black beef buffet — weekday lunch",
+                    "price": 3739
+                  },
+                  {
+                    "name": "Japanese black beef buffet — weekday dinner",
+                    "price": 4399
+                  },
+                  {
+                    "name": "Duck shabu buffet — weekday lunch",
+                    "price": 2969
+                  },
+                  {
+                    "name": "Duck shabu buffet — weekday dinner",
+                    "price": 3629
+                  },
+                  {
+                    "name": "Kyushu black pork and beef misuji buffet — weekday lunch",
+                    "price": 2639
+                  },
+                  {
+                    "name": "Kyushu black pork and beef misuji buffet — weekday dinner",
+                    "price": 3299
+                  },
+                  {
+                    "name": "Beef and pork buffet — weekday lunch",
+                    "price": 2199
+                  },
+                  {
+                    "name": "Beef and pork buffet — weekday dinner",
+                    "price": 2859
+                  },
+                  {
+                    "name": "Two pork cuts buffet — weekday lunch",
+                    "price": 1869
+                  },
+                  {
+                    "name": "Two pork cuts buffet — weekday dinner",
+                    "price": 2419
+                  },
+                  {
+                    "name": "Pork loin buffet — weekday lunch",
+                    "price": 1649
+                  },
+                  {
+                    "name": "Pork loin buffet — weekday dinner",
+                    "price": 2089
+                  },
+                  {
+                    "name": "Porcini-scented mushroom broth supplement",
+                    "price": 110,
+                    "note": "Free on duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Duck slices",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Six mushroom varieties",
+                    "priceLabel": "Price not published",
+                    "note": "Course selection controls availability"
+                  },
+                  {
+                    "name": "Soba noodles",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Mozzarella cheese",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  }
+                ],
+                "note": "Tax-inclusive shared operator menu directly linked by this branch. All diners in a group order the same food course. Lunch until 16:00; orders after 14:40 have 80 minutes. Weekday earlier lunches normally unlimited, weekends/holidays 80 minutes; dinner 100 minutes. Weekend/holiday addition ¥220 in the standard menu; branch variations must be confirmed. Orders after 22:00 add 10% late surcharge. No branch property photo was verified in checked operator galleries/local sources; map/icon/stock and other-branch images are excluded."
+              },
+              {
+                "label": "Before-16:00 happy-hour drinks",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Self-service alcohol free-flow with drink bar — before 16:00, 80 minutes",
+                    "price": 1319
+                  },
+                  {
+                    "name": "Self-service alcohol free-flow with drink bar — after 16:00, 100 minutes",
+                    "price": 1539
+                  },
+                  {
+                    "name": "Beer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Whisky",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Shochu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Sake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Fruit liqueurs",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  }
+                ],
+                "note": "Food course required. Group may include just one alcohol-plan customer. With an all-day 60-minute food course, drinks are also 60 minutes. These distinct durations are preserved; ¥1,319 is not described as 100 minutes. Soft-drink time extension has store/date exceptions. Public-holiday service starts at 10:30; dated holiday instances use the Cabinet Office 2026 calendar, rather than a promotion expiry."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+            "name": "Shabu-Yo — Sapporo Soen",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Weekdays",
+                "hours": "11:00–23:00"
+              },
+              {
+                "days": "Weekends and public holidays",
+                "hours": "10:30–23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/index.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/pdf/city.pdf"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://sapporochuo.goguynet.jp/2026/09/26/aeon-jp-sc-sapporosoen-3/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://store-info.skylark.co.jp/syabuyo/list/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "shabuyo-soen",
+            "name": "Shabu-Yo — Sapporo Soen",
+            "neighborhood": "Soen",
+            "cuisine": "Shabu-shabu",
+            "description": "A recently opened branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.",
+            "address": "1F Aeon Sapporo Soen, 28 Kita 8-jo Nishi 14-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": true,
+            "day": "2026-09-24"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "name": "Shabu-Yo — Sapporo Soen",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Branch-linked shared food menu",
+              "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Duck and Japanese black beef buffet — weekday lunch",
+                  "price": 3959
+                },
+                {
+                  "name": "Duck and Japanese black beef buffet — weekday dinner",
+                  "price": 4619
+                },
+                {
+                  "name": "Japanese black beef buffet — weekday lunch",
+                  "price": 3739
+                },
+                {
+                  "name": "Japanese black beef buffet — weekday dinner",
+                  "price": 4399
+                },
+                {
+                  "name": "Duck shabu buffet — weekday lunch",
+                  "price": 2969
+                },
+                {
+                  "name": "Duck shabu buffet — weekday dinner",
+                  "price": 3629
+                },
+                {
+                  "name": "Kyushu black pork and beef misuji buffet — weekday lunch",
+                  "price": 2639
+                },
+                {
+                  "name": "Kyushu black pork and beef misuji buffet — weekday dinner",
+                  "price": 3299
+                },
+                {
+                  "name": "Beef and pork buffet — weekday lunch",
+                  "price": 2199
+                },
+                {
+                  "name": "Beef and pork buffet — weekday dinner",
+                  "price": 2859
+                },
+                {
+                  "name": "Two pork cuts buffet — weekday lunch",
+                  "price": 1869
+                },
+                {
+                  "name": "Two pork cuts buffet — weekday dinner",
+                  "price": 2419
+                },
+                {
+                  "name": "Pork loin buffet — weekday lunch",
+                  "price": 1649
+                },
+                {
+                  "name": "Pork loin buffet — weekday dinner",
+                  "price": 2089
+                },
+                {
+                  "name": "Porcini-scented mushroom broth supplement",
+                  "price": 110,
+                  "note": "Free on duck-shabu course or higher"
+                },
+                {
+                  "name": "Duck slices",
+                  "priceLabel": "Price not published",
+                  "note": "Included in duck-shabu course or higher"
+                },
+                {
+                  "name": "Six mushroom varieties",
+                  "priceLabel": "Price not published",
+                  "note": "Course selection controls availability"
+                },
+                {
+                  "name": "Soba noodles",
+                  "priceLabel": "Price not published",
+                  "note": "Included in duck-shabu course or higher"
+                },
+                {
+                  "name": "Mozzarella cheese",
+                  "priceLabel": "Price not published",
+                  "note": "Included in duck-shabu course or higher"
+                }
+              ],
+              "note": "Tax-inclusive shared operator menu directly linked by this branch. All diners in a group order the same food course. Lunch until 16:00; orders after 14:40 have 80 minutes. Weekday earlier lunches normally unlimited, weekends/holidays 80 minutes; dinner 100 minutes. Weekend/holiday addition ¥220 in the standard menu; branch variations must be confirmed. Orders after 22:00 add 10% late surcharge. No branch property photo was verified in checked operator galleries/local sources; map/icon/stock and other-branch images are excluded."
+            },
+            {
+              "label": "Before-16:00 happy-hour drinks",
+              "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Self-service alcohol free-flow with drink bar — before 16:00, 80 minutes",
+                  "price": 1319
+                },
+                {
+                  "name": "Self-service alcohol free-flow with drink bar — after 16:00, 100 minutes",
+                  "price": 1539
+                },
+                {
+                  "name": "Beer",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Whisky",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Shochu",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Sake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Fruit liqueurs",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                }
+              ],
+              "note": "Food course required. Group may include just one alcohol-plan customer. With an all-day 60-minute food course, drinks are also 60 minutes. These distinct durations are preserved; ¥1,319 is not described as 100 minutes. Soft-drink time extension has store/date exceptions. Public-holiday service starts at 10:30; dated holiday instances use the Cabinet Office 2026 calendar, rather than a promotion expiry."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Before-16:00 happy-hour alcohol plan",
+              "kind": "other",
+              "description": "Operator-labelled happy-hour alcohol free-flow plus drink bar, ¥1,319 for 80 minutes before 16:00.",
+              "sourceUrl": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "menuLabel": "Before-16:00 happy-hour drinks",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Food course required.",
+                "All-day 60-minute food course reduces drinks to 60 minutes.",
+                "Age twenty or older; no alcohol for drivers.",
+                "The evening plan has a different 100-minute duration and costs ¥1,539."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:00",
+                    "end": "16:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "10:30",
+                    "end": "16:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-11-03",
+                  "2026-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-12-31"
+              }
+            },
+            {
+              "title": "Before-16:00 happy-hour alcohol plan — 2026-11-03 holiday service",
+              "kind": "other",
+              "description": "Operator-labelled happy-hour alcohol free-flow plus drink bar, ¥1,319 for 80 minutes before 16:00.",
+              "sourceUrl": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "menuLabel": "Before-16:00 happy-hour drinks",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Food course required.",
+                "All-day 60-minute food course reduces drinks to 60 minutes.",
+                "Age twenty or older; no alcohol for drivers.",
+                "The evening plan has a different 100-minute duration and costs ¥1,539."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:30",
+                    "end": "16:00"
+                  }
+                ]
+              },
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-11-03"
+            },
+            {
+              "title": "Before-16:00 happy-hour alcohol plan — 2026-11-23 holiday service",
+              "kind": "other",
+              "description": "Operator-labelled happy-hour alcohol free-flow plus drink bar, ¥1,319 for 80 minutes before 16:00.",
+              "sourceUrl": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "menuLabel": "Before-16:00 happy-hour drinks",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Food course required.",
+                "All-day 60-minute food course reduces drinks to 60 minutes.",
+                "Age twenty or older; no alcohol for drivers.",
+                "The evening plan has a different 100-minute duration and costs ¥1,539."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:30",
+                    "end": "16:00"
+                  }
+                ]
+              },
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23"
+            }
+          ],
+          "address": "1F Aeon Sapporo Soen, 28 Kita 8-jo Nishi 14-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Soen",
+          "websiteUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/"
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shabu-Yo — Shinjuku West Exit Opens in Shinjuku",
+        "description": "A recently opened branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.",
+        "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+        "address": "B3F Shinjuku Palette Building, 1-1-1 Nishi Shinjuku, Shinjuku-ku, Tokyo",
+        "productName": "Shabu-Yo — Shinjuku West Exit",
+        "utcStartDateTime": "2026-09-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Shinjuku",
+          "Shabu-shabu"
+        ],
+        "longFormSummary": "<p>A recently opened branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.<cite data-ref=\"https://store-info.skylark.co.jp/syabuyo/map/198490/\"></cite></p><p>Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation.</p>",
+        "references": [
+          {
+            "url": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+            "title": "Shabu-Yo — Shinjuku West Exit source",
+            "confidence": 90,
+            "reasoning": "Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/index.html",
+            "title": "Shabu-Yo — Shinjuku West Exit source",
+            "confidence": 90,
+            "reasoning": "Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "Shabu-Yo — Shinjuku West Exit source",
+            "confidence": 90,
+            "reasoning": "Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/pdf/city.pdf",
+            "title": "Shabu-Yo — Shinjuku West Exit source",
+            "confidence": 90,
+            "reasoning": "Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation."
+          },
+          {
+            "url": "https://tabelog.com/tokyo/A1304/A130401/13325945/",
+            "title": "Shabu-Yo — Shinjuku West Exit source",
+            "confidence": 90,
+            "reasoning": "Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation."
+          },
+          {
+            "url": "https://store-info.skylark.co.jp/syabuyo/list/",
+            "title": "Shabu-Yo — Shinjuku West Exit source",
+            "confidence": 90,
+            "reasoning": "Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation."
+          },
+          {
+            "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+            "title": "Shabu-Yo — Shinjuku West Exit source",
+            "confidence": 90,
+            "reasoning": "Operator new-store index and current branch listing publish September 19 opening; post-opening branch review/listing corroborates operation."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "menu": {
+            "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+            "name": "Shabu-Yo — Shinjuku West Exit",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Branch-linked shared food menu",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Duck and Japanese black beef buffet — weekday lunch",
+                    "price": 3959
+                  },
+                  {
+                    "name": "Duck and Japanese black beef buffet — weekday dinner",
+                    "price": 4619
+                  },
+                  {
+                    "name": "Japanese black beef buffet — weekday lunch",
+                    "price": 3739
+                  },
+                  {
+                    "name": "Japanese black beef buffet — weekday dinner",
+                    "price": 4399
+                  },
+                  {
+                    "name": "Duck shabu buffet — weekday lunch",
+                    "price": 2969
+                  },
+                  {
+                    "name": "Duck shabu buffet — weekday dinner",
+                    "price": 3629
+                  },
+                  {
+                    "name": "Kyushu black pork and beef misuji buffet — weekday lunch",
+                    "price": 2639
+                  },
+                  {
+                    "name": "Kyushu black pork and beef misuji buffet — weekday dinner",
+                    "price": 3299
+                  },
+                  {
+                    "name": "Beef and pork buffet — weekday lunch",
+                    "price": 2199
+                  },
+                  {
+                    "name": "Beef and pork buffet — weekday dinner",
+                    "price": 2859
+                  },
+                  {
+                    "name": "Two pork cuts buffet — weekday lunch",
+                    "price": 1869
+                  },
+                  {
+                    "name": "Two pork cuts buffet — weekday dinner",
+                    "price": 2419
+                  },
+                  {
+                    "name": "Pork loin buffet — weekday lunch",
+                    "price": 1649
+                  },
+                  {
+                    "name": "Pork loin buffet — weekday dinner",
+                    "price": 2089
+                  },
+                  {
+                    "name": "Porcini-scented mushroom broth supplement",
+                    "price": 110,
+                    "note": "Free on duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Duck slices",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Six mushroom varieties",
+                    "priceLabel": "Price not published",
+                    "note": "Course selection controls availability"
+                  },
+                  {
+                    "name": "Soba noodles",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  },
+                  {
+                    "name": "Mozzarella cheese",
+                    "priceLabel": "Price not published",
+                    "note": "Included in duck-shabu course or higher"
+                  }
+                ],
+                "note": "Tax-inclusive shared operator menu directly linked by this branch. All diners in a group order the same food course. Lunch until 16:00; orders after 14:40 have 80 minutes. Weekday earlier lunches normally unlimited, weekends/holidays 80 minutes; dinner 100 minutes. Weekend/holiday addition ¥330 at this explicitly listed urban-price branch. Orders after 22:00 add 10% late surcharge. No branch property photo was verified in checked operator galleries/local sources; map/icon/stock and other-branch images are excluded."
+              },
+              {
+                "label": "Before-16:00 happy-hour drinks",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Self-service alcohol free-flow with drink bar — before 16:00, 80 minutes",
+                    "price": 1319
+                  },
+                  {
+                    "name": "Self-service alcohol free-flow with drink bar — after 16:00, 100 minutes",
+                    "price": 1539
+                  },
+                  {
+                    "name": "Beer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Whisky",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Shochu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Sake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  },
+                  {
+                    "name": "Fruit liqueurs",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Alcohol free-flow; no separate item price published"
+                  }
+                ],
+                "note": "Food course required. Group may include just one alcohol-plan customer. With an all-day 60-minute food course, drinks are also 60 minutes. These distinct durations are preserved; ¥1,319 is not described as 100 minutes. Soft-drink time extension has store/date exceptions. Public-holiday service starts at 10:30; dated holiday instances use the Cabinet Office 2026 calendar, rather than a promotion expiry."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+            "name": "Shabu-Yo — Shinjuku West Exit",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Weekdays",
+                "hours": "11:00–23:00"
+              },
+              {
+                "days": "Weekends and public holidays",
+                "hours": "10:30–23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/index.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.skylark.co.jp/syabuyo/menu/pdf/city.pdf"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/tokyo/A1304/A130401/13325945/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://store-info.skylark.co.jp/syabuyo/list/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "shabuyo-shinjuku",
+            "name": "Shabu-Yo — Shinjuku West Exit",
+            "neighborhood": "Shinjuku",
+            "cuisine": "Shabu-shabu",
+            "description": "A recently opened branch of the shabu-shabu buffet operator, with a branch-linked menu and local pricing conditions.",
+            "address": "B3F Shinjuku Palette Building, 1-1-1 Nishi Shinjuku, Shinjuku-ku, Tokyo",
+            "websiteUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": true,
+            "day": "2026-09-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "name": "Shabu-Yo — Shinjuku West Exit",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Branch-linked shared food menu",
+              "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Duck and Japanese black beef buffet — weekday lunch",
+                  "price": 3959
+                },
+                {
+                  "name": "Duck and Japanese black beef buffet — weekday dinner",
+                  "price": 4619
+                },
+                {
+                  "name": "Japanese black beef buffet — weekday lunch",
+                  "price": 3739
+                },
+                {
+                  "name": "Japanese black beef buffet — weekday dinner",
+                  "price": 4399
+                },
+                {
+                  "name": "Duck shabu buffet — weekday lunch",
+                  "price": 2969
+                },
+                {
+                  "name": "Duck shabu buffet — weekday dinner",
+                  "price": 3629
+                },
+                {
+                  "name": "Kyushu black pork and beef misuji buffet — weekday lunch",
+                  "price": 2639
+                },
+                {
+                  "name": "Kyushu black pork and beef misuji buffet — weekday dinner",
+                  "price": 3299
+                },
+                {
+                  "name": "Beef and pork buffet — weekday lunch",
+                  "price": 2199
+                },
+                {
+                  "name": "Beef and pork buffet — weekday dinner",
+                  "price": 2859
+                },
+                {
+                  "name": "Two pork cuts buffet — weekday lunch",
+                  "price": 1869
+                },
+                {
+                  "name": "Two pork cuts buffet — weekday dinner",
+                  "price": 2419
+                },
+                {
+                  "name": "Pork loin buffet — weekday lunch",
+                  "price": 1649
+                },
+                {
+                  "name": "Pork loin buffet — weekday dinner",
+                  "price": 2089
+                },
+                {
+                  "name": "Porcini-scented mushroom broth supplement",
+                  "price": 110,
+                  "note": "Free on duck-shabu course or higher"
+                },
+                {
+                  "name": "Duck slices",
+                  "priceLabel": "Price not published",
+                  "note": "Included in duck-shabu course or higher"
+                },
+                {
+                  "name": "Six mushroom varieties",
+                  "priceLabel": "Price not published",
+                  "note": "Course selection controls availability"
+                },
+                {
+                  "name": "Soba noodles",
+                  "priceLabel": "Price not published",
+                  "note": "Included in duck-shabu course or higher"
+                },
+                {
+                  "name": "Mozzarella cheese",
+                  "priceLabel": "Price not published",
+                  "note": "Included in duck-shabu course or higher"
+                }
+              ],
+              "note": "Tax-inclusive shared operator menu directly linked by this branch. All diners in a group order the same food course. Lunch until 16:00; orders after 14:40 have 80 minutes. Weekday earlier lunches normally unlimited, weekends/holidays 80 minutes; dinner 100 minutes. Weekend/holiday addition ¥330 at this explicitly listed urban-price branch. Orders after 22:00 add 10% late surcharge. No branch property photo was verified in checked operator galleries/local sources; map/icon/stock and other-branch images are excluded."
+            },
+            {
+              "label": "Before-16:00 happy-hour drinks",
+              "url": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Self-service alcohol free-flow with drink bar — before 16:00, 80 minutes",
+                  "price": 1319
+                },
+                {
+                  "name": "Self-service alcohol free-flow with drink bar — after 16:00, 100 minutes",
+                  "price": 1539
+                },
+                {
+                  "name": "Beer",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Whisky",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Shochu",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Sake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                },
+                {
+                  "name": "Fruit liqueurs",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Alcohol free-flow; no separate item price published"
+                }
+              ],
+              "note": "Food course required. Group may include just one alcohol-plan customer. With an all-day 60-minute food course, drinks are also 60 minutes. These distinct durations are preserved; ¥1,319 is not described as 100 minutes. Soft-drink time extension has store/date exceptions. Public-holiday service starts at 10:30; dated holiday instances use the Cabinet Office 2026 calendar, rather than a promotion expiry."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Before-16:00 happy-hour alcohol plan",
+              "kind": "other",
+              "description": "Operator-labelled happy-hour alcohol free-flow plus drink bar, ¥1,319 for 80 minutes before 16:00.",
+              "sourceUrl": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "menuLabel": "Before-16:00 happy-hour drinks",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Food course required.",
+                "All-day 60-minute food course reduces drinks to 60 minutes.",
+                "Age twenty or older; no alcohol for drivers.",
+                "The evening plan has a different 100-minute duration and costs ¥1,539."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:00",
+                    "end": "16:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "10:30",
+                    "end": "16:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-11-03",
+                  "2026-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-12-31"
+              }
+            },
+            {
+              "title": "Before-16:00 happy-hour alcohol plan — 2026-11-03 holiday service",
+              "kind": "other",
+              "description": "Operator-labelled happy-hour alcohol free-flow plus drink bar, ¥1,319 for 80 minutes before 16:00.",
+              "sourceUrl": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "menuLabel": "Before-16:00 happy-hour drinks",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Food course required.",
+                "All-day 60-minute food course reduces drinks to 60 minutes.",
+                "Age twenty or older; no alcohol for drivers.",
+                "The evening plan has a different 100-minute duration and costs ¥1,539."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:30",
+                    "end": "16:00"
+                  }
+                ]
+              },
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-11-03"
+            },
+            {
+              "title": "Before-16:00 happy-hour alcohol plan — 2026-11-23 holiday service",
+              "kind": "other",
+              "description": "Operator-labelled happy-hour alcohol free-flow plus drink bar, ¥1,319 for 80 minutes before 16:00.",
+              "sourceUrl": "https://www.skylark.co.jp/syabuyo/menu/fair_sep/index.html",
+              "menuLabel": "Before-16:00 happy-hour drinks",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Food course required.",
+                "All-day 60-minute food course reduces drinks to 60 minutes.",
+                "Age twenty or older; no alcohol for drivers.",
+                "The evening plan has a different 100-minute duration and costs ¥1,539."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:30",
+                    "end": "16:00"
+                  }
+                ]
+              },
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23"
+            }
+          ],
+          "address": "B3F Shinjuku Palette Building, 1-1-1 Nishi Shinjuku, Shinjuku-ku, Tokyo",
+          "neighborhood": "Shinjuku",
+          "websiteUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/"
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,1669 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "kyoto"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Tonkatsu & Soba An Kyoto Opens in Kyoto Station",
+        "description": "A newly opened tonkatsu and soba restaurant in Kyoto Station, with a branch-specific published menu.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ004678595/",
+        "address": "EAT PARADISE, JR Kyoto Isetan annex, 901 Higashi Shiokojicho, Shimogyo-ku, Kyoto",
+        "productName": "Tonkatsu & Soba An Kyoto",
+        "utcStartDateTime": "2026-09-18T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-18. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kyoto Station",
+          "Tonkatsu and soba"
+        ],
+        "longFormSummary": "<p>A newly opened tonkatsu and soba restaurant in Kyoto Station, with a branch-specific published menu.<cite data-ref=\"https://www.hotpepper.jp/strJ004678595/\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-18. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ004678595/",
+            "title": "Tonkatsu & Soba An Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-18. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678595/food/",
+            "title": "Tonkatsu & Soba An Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-18. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678595/appearance/",
+            "title": "Tonkatsu & Soba An Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-18. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://kansai-kaiten.com/tonkatsusobaan-kyoto2609/",
+            "title": "Tonkatsu & Soba An Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-18. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://restaurant.ikyu.com/156059/menus",
+            "title": "Tonkatsu & Soba An Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-18. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ004678595/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004678595/",
+            "name": "Tonkatsu & Soba An Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Morning menu — 08:00–11:00, last order 10:00",
+                "url": "https://www.hotpepper.jp/strJ004678595/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "An morning katsu sandwich and Paul Bassett coffee",
+                    "price": 1800
+                  },
+                  {
+                    "name": "京の都もち豚 特上ロースかつ",
+                    "price": 3100
+                  },
+                  {
+                    "name": "厳選熟成三元豚 上ロースかつ",
+                    "price": 2200
+                  },
+                  {
+                    "name": "厳選熟成三元豚 上ヒレかつ",
+                    "price": 2500
+                  },
+                  {
+                    "name": "蕎麦御膳",
+                    "price": 2500
+                  },
+                  {
+                    "name": "とろろ御飯と二八更科蕎麦",
+                    "price": 1800
+                  },
+                  {
+                    "name": "旬野菜天ぷら蕎麦",
+                    "price": 1800
+                  },
+                  {
+                    "name": "海老と旬野菜の天ぷら蕎麦",
+                    "price": 2300
+                  }
+                ],
+                "note": "Tax included; additional ¥330 table charge per person, children through age six exempt. Prices from September 17 branch menu."
+              },
+              {
+                "label": "Dinner menu — 16:00–22:00, last order 21:00",
+                "url": "https://www.hotpepper.jp/strJ004678595/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "串かつ五種盛合せ",
+                    "price": 2800
+                  },
+                  {
+                    "name": "串かつ ささみ梅しそ巻き",
+                    "price": 680
+                  },
+                  {
+                    "name": "串かつ 豚ヒレ",
+                    "price": 680
+                  },
+                  {
+                    "name": "串かつ アスパラ",
+                    "price": 600
+                  },
+                  {
+                    "name": "串かつ 椎茸肉詰め",
+                    "price": 600
+                  },
+                  {
+                    "name": "串かつ 蓮根",
+                    "price": 500
+                  },
+                  {
+                    "name": "串GIRO ボッコンチーニ生ハム巻き",
+                    "price": 700
+                  },
+                  {
+                    "name": "串かつ 京茄子",
+                    "price": 500
+                  },
+                  {
+                    "name": "串かつ 天使の海老",
+                    "price": 800
+                  },
+                  {
+                    "name": "串かつ プチトマト",
+                    "price": 500
+                  },
+                  {
+                    "name": "串かつ 近江牛",
+                    "price": 880
+                  },
+                  {
+                    "name": "京の都もち豚 特上ロースかつ御膳",
+                    "price": 3100
+                  },
+                  {
+                    "name": "熟成三元豚 上ロースかつ御膳",
+                    "price": 2200
+                  },
+                  {
+                    "name": "熟成三元豚 上ヒレかつ御膳",
+                    "price": 2500
+                  },
+                  {
+                    "name": "近江牛イチボ 陶板焼き",
+                    "price": 6600
+                  },
+                  {
+                    "name": "京鴨と九条ねぎ 陶板焼き",
+                    "price": 4500
+                  },
+                  {
+                    "name": "京の都もち豚 陶板焼き",
+                    "price": 3300
+                  },
+                  {
+                    "name": "更科蕎麦",
+                    "price": 1500
+                  },
+                  {
+                    "name": "旬野菜天ぷら蕎麦",
+                    "price": 1800
+                  },
+                  {
+                    "name": "海老と旬野菜天ぷら蕎麦",
+                    "price": 2300
+                  }
+                ],
+                "note": "Tax included; additional ¥330 table charge per person, children through age six exempt. Prices from September 17 branch menu."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004678595/",
+            "name": "Tonkatsu & Soba An Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004678595/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published opening hours",
+                "hours": "08:00–22:00; menu service periods and last orders differ"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hotpepper.jp/strJ004678595/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004678595/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004678595/appearance/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/tonkatsusobaan-kyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://restaurant.ikyu.com/156059/menus"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "an-opening",
+            "name": "Tonkatsu & Soba An Kyoto",
+            "neighborhood": "Kyoto Station",
+            "cuisine": "Tonkatsu and soba",
+            "description": "A newly opened tonkatsu and soba restaurant in Kyoto Station, with a branch-specific published menu.",
+            "address": "EAT PARADISE, JR Kyoto Isetan annex, 901 Higashi Shiokojicho, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004678595/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/an-gallery-13-e40df66b7c269083.webp",
+            "imageCredit": "Restaurant operator via Hot Pepper Gourmet",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004678595/appearance/",
+            "imageNote": "とんかつ & 蕎麦 An 京都の雰囲気1",
+            "openingConfirmed": true,
+            "day": "2026-09-18"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/an-gallery-13-e40df66b7c269083.webp",
+          "sha256": "e40df66b7c269083c321a3e4a306fd431e701b1be0f0f4acc89eb39c48486a9b",
+          "width": 238,
+          "height": 238,
+          "credit": "Restaurant operator via Hot Pepper Gourmet",
+          "note": "とんかつ & 蕎麦 An 京都の雰囲気1",
+          "sourcePage": "https://www.hotpepper.jp/strJ004678595/appearance/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "MERCY Vegan Ramen — Shijo Kawaramachi Opens in Shijo Kawaramachi",
+        "description": "A newly opened vegan ramen restaurant in Shijo Kawaramachi, with a branch-specific published menu.",
+        "sourceUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+        "address": "345-15 Shimo Osakacho, Nakagyo-ku, Kyoto",
+        "productName": "MERCY Vegan Ramen — Shijo Kawaramachi",
+        "utcStartDateTime": "2026-09-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-29. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Shijo Kawaramachi",
+          "Vegan ramen"
+        ],
+        "longFormSummary": "<p>A newly opened vegan ramen restaurant in Shijo Kawaramachi, with a branch-specific published menu.<cite data-ref=\"https://mercyveganramen-shijokawaramachi.owst.jp/\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-29. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+            "title": "MERCY Vegan Ramen — Shijo Kawaramachi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-29. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://www.mercy-vegan.jp/news/2026/94878/",
+            "title": "MERCY Vegan Ramen — Shijo Kawaramachi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-29. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000038.000174572.html",
+            "title": "MERCY Vegan Ramen — Shijo Kawaramachi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-29. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+          "menu": {
+            "pinSourceUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+            "name": "MERCY Vegan Ramen — Shijo Kawaramachi",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Branch ramen menu",
+                "url": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "薬膳豆乳担々麺",
+                    "price": 2420
+                  },
+                  {
+                    "name": "トマトラーメン",
+                    "price": 1980
+                  },
+                  {
+                    "name": "塩ラーメン",
+                    "price": 1870
+                  }
+                ],
+                "note": "Tax included. Operator describes the ramen as plant-based and made without wheat or five pungent alliums; this is not a claim of allergy safety. Prices are Kyoto Shijo Kawaramachi-specific."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+            "name": "MERCY Vegan Ramen — Shijo Kawaramachi",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Monday, Tuesday, Thursday–Sunday and holidays",
+                "hours": "11:00–16:00 (last order 15:30), 17:00–23:00 (last order 22:30)"
+              },
+              {
+                "days": "Wednesday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.mercy-vegan.jp/news/2026/94878/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000038.000174572.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "mercy-opening",
+            "name": "MERCY Vegan Ramen — Shijo Kawaramachi",
+            "neighborhood": "Shijo Kawaramachi",
+            "cuisine": "Vegan ramen",
+            "description": "A newly opened vegan ramen restaurant in Shijo Kawaramachi, with a branch-specific published menu.",
+            "address": "345-15 Shimo Osakacho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/mercy-kyoto-6-434ea4505e53fc03.webp",
+            "imageCredit": "Restaurant operator via official branch website",
+            "imageSourceUrl": "https://mercyveganramen-shijokawaramachi.owst.jp/",
+            "imageNote": "木目を基調とした温かみのある店内。自然素材を感じられるインテリアを取り入れ、居心地の良さを追求しました。食事だけでなく過ごす時間そのものを楽しんでいただけます。",
+            "openingConfirmed": true,
+            "day": "2026-09-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/mercy-kyoto-6-434ea4505e53fc03.webp",
+          "sha256": "434ea4505e53fc03b635c1aabce7dcd5fb5b219fcc8a9f8caabc7883f9abefe7",
+          "width": 600,
+          "height": 600,
+          "credit": "Restaurant operator via official branch website",
+          "note": "木目を基調とした温かみのある店内。自然素材を感じられるインテリアを取り入れ、居心地の良さを追求しました。食事だけでなく過ごす時間そのものを楽しんでいただけます。",
+          "sourcePage": "https://mercyveganramen-shijokawaramachi.owst.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/mercy-kyoto-8-95d198e551fc4015.webp",
+          "sha256": "95d198e551fc401506075e8cce136c2f54fc2597162a4ec9ef581aebfd1c183b",
+          "width": 600,
+          "height": 600,
+          "credit": "Restaurant operator via official branch website",
+          "note": "京都らしい街並みに調和する落ち着いた外観デザイン。店舗前からビーガン専門店ならではのこだわりを感じていただけます。皆様のご来店をお待ちしております。",
+          "sourcePage": "https://mercyveganramen-shijokawaramachi.owst.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/mercy-kyoto-0-ff157371db47b424.webp",
+          "sha256": "ff157371db47b424218669841917666180f7497722c10b82d687be1541c0e6cc",
+          "width": 598,
+          "height": 600,
+          "credit": "Restaurant operator via official branch website",
+          "note": "■薬膳豆乳担々麺",
+          "sourcePage": "https://mercyveganramen-shijokawaramachi.owst.jp/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sukesan Udon — Kyoto Katsura Opens in Katsura",
+        "description": "A newly opened udon restaurant in Katsura, with a branch-specific published menu.",
+        "sourceUrl": "https://www.sukesanudon.com/map/branch/map-7981/",
+        "address": "137 Katsura Ikejirimachi, Nishikyo-ku, Kyoto",
+        "productName": "Sukesan Udon — Kyoto Katsura",
+        "utcStartDateTime": "2026-09-24T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-24. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Katsura",
+          "Udon"
+        ],
+        "longFormSummary": "<p>A newly opened udon restaurant in Katsura, with a branch-specific published menu.<cite data-ref=\"https://www.sukesanudon.com/map/branch/map-7981/\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-24. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://www.sukesanudon.com/map/branch/map-7981/",
+            "title": "Sukesan Udon — Kyoto Katsura source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-24. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000400.000037031.html",
+            "title": "Sukesan Udon — Kyoto Katsura source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-24. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://store-info.skylark.co.jp/map/480340/",
+            "title": "Sukesan Udon — Kyoto Katsura source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-24. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://www.kyoto-1banchi.com/sukesan-udon-kyoto-katsura-report/",
+            "title": "Sukesan Udon — Kyoto Katsura source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-24. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://meocloud-image.can-ly.com/images/cms/managed/companies/569/26_autumn_grandmenu_B.pdf",
+            "title": "Sukesan Udon — Kyoto Katsura source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-24. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.sukesanudon.com/map/branch/map-7981/",
+          "menu": {
+            "pinSourceUrl": "https://www.sukesanudon.com/map/branch/map-7981/",
+            "name": "Sukesan Udon — Kyoto Katsura",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Kyoto Katsura branch-linked autumn menu",
+                "url": "https://www.sukesanudon.com/map/branch/map-7981/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "定番しあわせセット — without dessert, from",
+                    "price": 1098
+                  },
+                  {
+                    "name": "定番しあわせセット — mini meat-gobo udon, mini katsutoji rice bowl, mini botamochi",
+                    "price": 1148
+                  },
+                  {
+                    "name": "ミニしあわせセット — from",
+                    "price": 837
+                  },
+                  {
+                    "name": "おでん5本セット",
+                    "price": 680
+                  },
+                  {
+                    "name": "おでん3本セット",
+                    "price": 390
+                  },
+                  {
+                    "name": "おでん だいこん",
+                    "price": 130
+                  },
+                  {
+                    "name": "おでん たまご",
+                    "price": 130
+                  },
+                  {
+                    "name": "おでん 牛すじ",
+                    "price": 207
+                  },
+                  {
+                    "name": "おでん 粗挽きウインナー",
+                    "price": 152
+                  },
+                  {
+                    "name": "野菜天ぷら盛り",
+                    "price": 329
+                  },
+                  {
+                    "name": "海老天ぷら盛り",
+                    "price": 559
+                  },
+                  {
+                    "name": "ポテトフライ",
+                    "price": 149
+                  },
+                  {
+                    "name": "倍盛りポテトフライ",
+                    "price": 249
+                  },
+                  {
+                    "name": "豚カツ",
+                    "price": 383
+                  },
+                  {
+                    "name": "ミニ豚カツ",
+                    "price": 251
+                  },
+                  {
+                    "name": "チキンカツ",
+                    "price": 265
+                  },
+                  {
+                    "name": "コロッケ",
+                    "price": 259
+                  },
+                  {
+                    "name": "ミニぼた餅",
+                    "price": 130
+                  },
+                  {
+                    "name": "瓶ビール 中瓶",
+                    "price": 625
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 438
+                  },
+                  {
+                    "name": "レモンサワー",
+                    "price": 438
+                  }
+                ],
+                "note": "Tax-inclusive dine-in prices from the autumn B menu linked by this exact branch. Set choices, dessert and curry supplements vary. Set menus cannot be taken away; no ongoing promotion is inferred from ordinary set pricing.",
+                "documentUrl": "https://meocloud-image.can-ly.com/images/cms/managed/companies/569/26_autumn_grandmenu_B.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.sukesanudon.com/map/branch/map-7981/",
+            "name": "Sukesan Udon — Kyoto Katsura",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.sukesanudon.com/map/branch/map-7981/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "24 hours; year-round"
+              }
+            ],
+            "detailsSourceUrl": "https://www.sukesanudon.com/map/branch/map-7981/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000400.000037031.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://store-info.skylark.co.jp/map/480340/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.kyoto-1banchi.com/sukesan-udon-kyoto-katsura-report/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://meocloud-image.can-ly.com/images/cms/managed/companies/569/26_autumn_grandmenu_B.pdf"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "sukesan-opening",
+            "name": "Sukesan Udon — Kyoto Katsura",
+            "neighborhood": "Katsura",
+            "cuisine": "Udon",
+            "description": "A newly opened udon restaurant in Katsura, with a branch-specific published menu.",
+            "address": "137 Katsura Ikejirimachi, Nishikyo-ku, Kyoto",
+            "websiteUrl": "https://www.sukesanudon.com/map/branch/map-7981/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/sukesan-report-0-1b168494fbfc3a43.webp",
+            "imageCredit": "Kyoto 1banchi",
+            "imageSourceUrl": "https://www.kyoto-1banchi.com/sukesan-udon-kyoto-katsura-report/",
+            "imageNote": "資さんうどん 京都桂店の外観",
+            "openingConfirmed": true,
+            "day": "2026-09-24"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/sukesan-report-0-1b168494fbfc3a43.webp",
+          "sha256": "1b168494fbfc3a432e414fe2806c7fa58a027de806b605ad71c24fc5cf77d9e6",
+          "width": 1200,
+          "height": 800,
+          "credit": "Kyoto 1banchi",
+          "note": "資さんうどん 京都桂店の外観",
+          "sourcePage": "https://www.kyoto-1banchi.com/sukesan-udon-kyoto-katsura-report/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/sukesan-report-2-d812784924ae985a.webp",
+          "sha256": "d812784924ae985a7d79ef5fe0bb0a9dc35d7d1cc6d90f4f6587a56478937add",
+          "width": 1024,
+          "height": 683,
+          "credit": "Kyoto 1banchi",
+          "note": "資さんうどん京都桂店の定番しあわせセット 肉ごぼ天うどん・ミニカツとじ丼・ミニぼた餅",
+          "sourcePage": "https://www.kyoto-1banchi.com/sukesan-udon-kyoto-katsura-report/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yayoiken — Kyoto Kisshoin Opens in Kisshoin",
+        "description": "A newly opened japanese set meals restaurant in Kisshoin, with a branch-specific published menu.",
+        "sourceUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+        "address": "15 Kisshoin Nakagawara Satonishicho, Minami-ku, Kyoto",
+        "productName": "Yayoiken — Kyoto Kisshoin",
+        "utcStartDateTime": "2026-09-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kisshoin",
+          "Japanese set meals"
+        ],
+        "longFormSummary": "<p>A newly opened japanese set meals restaurant in Kisshoin, with a branch-specific published menu.<cite data-ref=\"https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+            "title": "Yayoiken — Kyoto Kisshoin source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://kansai-kaiten.com/yayoiken-kyotokisshoin2609/",
+            "title": "Yayoiken — Kyoto Kisshoin source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+          "menu": {
+            "pinSourceUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+            "name": "Yayoiken — Kyoto Kisshoin",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Kyoto Kisshoin published dessert menu",
+                "url": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "あんバター揚げパン＆バニラアイス",
+                    "price": 460
+                  },
+                  {
+                    "name": "焼き生麩パフェ〜抹茶アフォガード〜",
+                    "price": 680
+                  },
+                  {
+                    "name": "チョコ＆バニラアイスサンデー",
+                    "price": 390
+                  },
+                  {
+                    "name": "米糀ミルクのいちごフロート",
+                    "price": 420
+                  }
+                ],
+                "note": "Tax included. This branch announcement explicitly publishes these desserts. The linked app and national menu images do not establish all current branch set-meal prices; those remain a research gap. No other-branch launch campaign is used."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+            "name": "Yayoiken — Kyoto Kisshoin",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/yayoiken-kyotokisshoin2609/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "yayoi-opening",
+            "name": "Yayoiken — Kyoto Kisshoin",
+            "neighborhood": "Kisshoin",
+            "cuisine": "Japanese set meals",
+            "description": "A newly opened japanese set meals restaurant in Kisshoin, with a branch-specific published menu.",
+            "address": "15 Kisshoin Nakagawara Satonishicho, Minami-ku, Kyoto",
+            "websiteUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/yayoi-date-0-104998aa167aca8c.webp",
+            "imageCredit": "Restaurant operator via official branch website",
+            "imageSourceUrl": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html",
+            "imageNote": "Kyoto Kisshoin storefront — operator photograph",
+            "openingConfirmed": true,
+            "day": "2026-09-02"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/yayoi-date-0-104998aa167aca8c.webp",
+          "sha256": "104998aa167aca8ce38bcdfe487a2b41bea2f74fbab4447c6e7e861ad06a062f",
+          "width": 1200,
+          "height": 900,
+          "credit": "Restaurant operator via official branch website",
+          "note": "Kyoto Kisshoin storefront — operator photograph",
+          "sourcePage": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/yayoi-date-1-301b791bfef3f105.webp",
+          "sha256": "301b791bfef3f1052f7340b0afff9ea4122f11d892e9cfde0e0d20cb34850d0e",
+          "width": 1200,
+          "height": 900,
+          "credit": "Restaurant operator via official branch website",
+          "note": "Kyoto Kisshoin table seating — operator photograph",
+          "sourcePage": "https://www.yayoiken.com/contents/news/260901_kyoutokisshouin.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Samjo Kyoto Opens in Shichijo Omiya",
+        "description": "A newly opened korean brunch restaurant in Shichijo Omiya, with a branch-specific published menu.",
+        "sourceUrl": "https://www.instagram.com/samjo._kyoto/",
+        "address": "1F Oak House, 3-24 Omiya, Shimogyo-ku, Kyoto",
+        "productName": "Samjo Kyoto",
+        "utcStartDateTime": "2026-09-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-14. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Shichijo Omiya",
+          "Korean brunch"
+        ],
+        "longFormSummary": "<p>A newly opened korean brunch restaurant in Shichijo Omiya, with a branch-specific published menu.<cite data-ref=\"https://www.instagram.com/samjo._kyoto/\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-14. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/samjo._kyoto/",
+            "title": "Samjo Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-14. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000046.000122221.html",
+            "title": "Samjo Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-14. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://www.leafkyoto.net/store/260908-kyoto-samjo/",
+            "title": "Samjo Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-14. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/samjo._kyoto/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/samjo._kyoto/",
+            "name": "Samjo Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Kyoto brunch sets",
+                "url": "https://www.leafkyoto.net/store/260908-kyoto-samjo/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "和牛骨湯セット",
+                    "price": 1300
+                  },
+                  {
+                    "name": "浅利白湯カルグクスセット",
+                    "price": 1680
+                  },
+                  {
+                    "name": "目覚めの赤辛ユッケジャン",
+                    "price": 1680
+                  }
+                ],
+                "note": "Tax included according to the Kyoto branch report. Brunch at the existing Kyoto Wagyu Ichiseki Sancho property; counted as one venue. September 14–30 student campaign and coupon distribution have expired and are not Specials."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/samjo._kyoto/",
+            "name": "Samjo Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/samjo._kyoto/",
+            "phone": "075-585-2422",
+            "openingHours": [
+              {
+                "days": "Tuesday–Sunday",
+                "hours": "10:00–13:00"
+              },
+              {
+                "days": "Monday",
+                "hours": "Closed; September 14 opening-day exception is past"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/samjo._kyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000046.000122221.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.leafkyoto.net/store/260908-kyoto-samjo/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "samjo-opening",
+            "name": "Samjo Kyoto",
+            "neighborhood": "Shichijo Omiya",
+            "cuisine": "Korean brunch",
+            "description": "A newly opened korean brunch restaurant in Shichijo Omiya, with a branch-specific published menu.",
+            "address": "1F Oak House, 3-24 Omiya, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/samjo._kyoto/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/samjo-leaf-5-d9dbc0d1932ee5c9.webp",
+            "imageCredit": "PHOTO: Mayumi Kobayashi / Leaf KYOTO",
+            "imageSourceUrl": "https://www.leafkyoto.net/store/260908-kyoto-samjo/",
+            "imageNote": "サムジョ 店内",
+            "openingConfirmed": true,
+            "day": "2026-09-14"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/samjo-leaf-5-d9dbc0d1932ee5c9.webp",
+          "sha256": "d9dbc0d1932ee5c9fdd02d57a9f52927e2b12334e2925a2a879e314a9dff56ec",
+          "width": 1024,
+          "height": 682,
+          "credit": "PHOTO: Mayumi Kobayashi / Leaf KYOTO",
+          "note": "サムジョ 店内",
+          "sourcePage": "https://www.leafkyoto.net/store/260908-kyoto-samjo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/samjo-leaf-3-6ea65350a90de2b0.webp",
+          "sha256": "6ea65350a90de2b0bce8f4e030814541b0e985743186be84c6025676d95b3427",
+          "width": 1024,
+          "height": 682,
+          "credit": "PHOTO: Mayumi Kobayashi / Leaf KYOTO",
+          "note": "サムジョ 料理",
+          "sourcePage": "https://www.leafkyoto.net/store/260908-kyoto-samjo/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Menya RAY — Silky Chicken Tsukemen Opens in Pontocho",
+        "description": "A newly opened tsukemen restaurant in Pontocho, with a branch-specific published menu.",
+        "sourceUrl": "https://www.instagram.com/menya_ray/",
+        "address": "199-1 Shimokorikicho, Nakagyo-ku, Kyoto",
+        "productName": "Menya RAY — Silky Chicken Tsukemen",
+        "utcStartDateTime": "2026-09-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-10. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Pontocho",
+          "Tsukemen"
+        ],
+        "longFormSummary": "<p>A newly opened tsukemen restaurant in Pontocho, with a branch-specific published menu.<cite data-ref=\"https://www.instagram.com/menya_ray/\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-10. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/menya_ray/",
+            "title": "Menya RAY — Silky Chicken Tsukemen source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-10. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdEMB9Wz71Z/",
+            "title": "Menya RAY — Silky Chicken Tsukemen source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-10. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://osumituki.com/kyoto-ramen/226409.html",
+            "title": "Menya RAY — Silky Chicken Tsukemen source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-10. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://kansai-kaiten.com/menyaray-pontocho2609/",
+            "title": "Menya RAY — Silky Chicken Tsukemen source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-10. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/menya_ray/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/menya_ray/",
+            "name": "Menya RAY — Silky Chicken Tsukemen",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Photographed branch menu",
+                "url": "https://osumituki.com/kyoto-ramen/226409.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "濃醇泡系鶏白湯つけ麺 — Silky Chicken Tsukemen",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Extra noodles",
+                    "price": 300
+                  },
+                  {
+                    "name": "Chashu rice bowl",
+                    "price": 500
+                  },
+                  {
+                    "name": "Steamed rice",
+                    "price": 300
+                  }
+                ],
+                "note": "Tax included, transcribed from the September 10 actual menu photograph. Forty tsukemen portions per day, cash only in the visit report. Morning/daytime time-share at Nikudokoro Danro Kyoto; its evening yakiniku menu is not borrowed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/menya_ray/",
+            "name": "Menya RAY — Silky Chicken Tsukemen",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/menya_ray/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "08:00–14:00; last order 13:30, may sell out early"
+              },
+              {
+                "days": "Saturday and Sunday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/menya_ray/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdEMB9Wz71Z/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://osumituki.com/kyoto-ramen/226409.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/menyaray-pontocho2609/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "ray-opening",
+            "name": "Menya RAY — Silky Chicken Tsukemen",
+            "neighborhood": "Pontocho",
+            "cuisine": "Tsukemen",
+            "description": "A newly opened tsukemen restaurant in Pontocho, with a branch-specific published menu.",
+            "address": "199-1 Shimokorikicho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/menya_ray/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/ray-report-2-bf0ee1aa6c737c9f.webp",
+            "imageCredit": "Kyoto no Osumitsuki! / No Delay",
+            "imageSourceUrl": "https://osumituki.com/kyoto-ramen/226409.html",
+            "imageNote": "新店オープン時の「麺屋 黎 -RAY- Silky Chicken Tsukemen」",
+            "openingConfirmed": true,
+            "day": "2026-09-10"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/ray-report-2-bf0ee1aa6c737c9f.webp",
+          "sha256": "bf0ee1aa6c737c9fb9c6045c260550ee2d667c7e2c1e2edb9e235701fb17b3f7",
+          "width": 1200,
+          "height": 675,
+          "credit": "Kyoto no Osumitsuki! / No Delay",
+          "note": "新店オープン時の「麺屋 黎 -RAY- Silky Chicken Tsukemen」",
+          "sourcePage": "https://osumituki.com/kyoto-ramen/226409.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/ray-report-10-f9a2d066c71b4fde.webp",
+          "sha256": "f9a2d066c71b4fdefece1d7f2985a49e2ac92fef5bffd601764143c70288c2c3",
+          "width": 1200,
+          "height": 675,
+          "credit": "Kyoto no Osumitsuki! / No Delay",
+          "note": "店内メニュー",
+          "sourcePage": "https://osumituki.com/kyoto-ramen/226409.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Nigushi & Wine Roji Iru Opens in Teramachi / Gokomachi",
+        "description": "A newly opened wine-braised skewers restaurant in Teramachi / Gokomachi, with a branch-specific published menu.",
+        "sourceUrl": "https://www.instagram.com/rojiiru/",
+        "address": "1F, 274-7 Enpukuji Maecho, Nakagyo-ku, Kyoto",
+        "productName": "Nigushi & Wine Roji Iru",
+        "utcStartDateTime": "2026-09-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Teramachi / Gokomachi",
+          "Wine-braised skewers"
+        ],
+        "longFormSummary": "<p>A newly opened wine-braised skewers restaurant in Teramachi / Gokomachi, with a branch-specific published menu.<cite data-ref=\"https://www.instagram.com/rojiiru/\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/rojiiru/",
+            "title": "Nigushi & Wine Roji Iru source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://www.tablecheck.com/en/gokomachi-km0",
+            "title": "Nigushi & Wine Roji Iru source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://hitosara.com/0034002490/",
+            "title": "Nigushi & Wine Roji Iru source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://tabelog.com/kyoto/A2601/A260201/26045686/dtlrvwlst/B534832799/",
+            "title": "Nigushi & Wine Roji Iru source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://kansai-kaiten.com/rojiiru-kyoto2609/",
+            "title": "Nigushi & Wine Roji Iru source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-09-02. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/rojiiru/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/rojiiru/",
+            "name": "Nigushi & Wine Roji Iru",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "September branch visit menu",
+                "url": "https://tabelog.com/kyoto/A2601/A260201/26045686/dtlrvwlst/B534832799/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "白ワイン煮串 海老",
+                    "price": 440
+                  },
+                  {
+                    "name": "白ワイン煮串 せせり",
+                    "price": 440
+                  },
+                  {
+                    "name": "赤ワイン煮串 国産牛ハバキ",
+                    "price": 440
+                  },
+                  {
+                    "name": "赤ワイン煮串 煮卵",
+                    "price": 220
+                  },
+                  {
+                    "name": "赤ワイン煮串 大根",
+                    "price": 220
+                  },
+                  {
+                    "name": "赤ワイン煮串 こんにゃく",
+                    "price": 220
+                  }
+                ],
+                "note": "Prices reported in a September branch visit; tax treatment not specified. Salad served as an appetizer; its charge is not published. Current menu confirmation remains pending. Checked operator post, TableCheck/Hitosara and branch review. Booking gallery still shows former Gokomachi KM0 branding and dishes; those legacy photos and menus are excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/rojiiru/",
+            "name": "Nigushi & Wine Roji Iru",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/rojiiru/",
+            "phone": "075-746-5358",
+            "openingHours": [
+              {
+                "days": "Published hours",
+                "hours": "10:00–22:00; confirm irregular closures"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/rojiiru/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/en/gokomachi-km0"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://hitosara.com/0034002490/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/kyoto/A2601/A260201/26045686/dtlrvwlst/B534832799/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/rojiiru-kyoto2609/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "roji-opening",
+            "name": "Nigushi & Wine Roji Iru",
+            "neighborhood": "Teramachi / Gokomachi",
+            "cuisine": "Wine-braised skewers",
+            "description": "A newly opened wine-braised skewers restaurant in Teramachi / Gokomachi, with a branch-specific published menu.",
+            "address": "1F, 274-7 Enpukuji Maecho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/rojiiru/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": true,
+            "day": "2026-09-02"
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ramen Fukui Kyoto Opens in Shijo Kawaramachi",
+        "description": "A newly opened ramen restaurant in Shijo Kawaramachi, with a branch-specific published menu.",
+        "sourceUrl": "https://www.instagram.com/ramen.fukui.kyoto/",
+        "address": "90-4 Shincho, Shimogyo-ku, Kyoto",
+        "productName": "Ramen Fukui Kyoto",
+        "utcStartDateTime": "2026-10-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-09. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Shijo Kawaramachi",
+          "Ramen"
+        ],
+        "longFormSummary": "<p>A newly opened ramen restaurant in Shijo Kawaramachi, with a branch-specific published menu.<cite data-ref=\"https://www.instagram.com/ramen.fukui.kyoto/\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-09. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/ramen.fukui.kyoto/",
+            "title": "Ramen Fukui Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-09. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://www.instagram.com/p/DeO-XRUE443/",
+            "title": "Ramen Fukui Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-09. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://osumituki.com/kyoto-ramen/226690.html",
+            "title": "Ramen Fukui Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-09. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://kansai-kaiten.com/ramenfukui-kyoto2610/",
+            "title": "Ramen Fukui Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-09. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://tabelog.com/kyoto/A2601/A260201/26045777/dtlrvwlst/B537041302/",
+            "title": "Ramen Fukui Kyoto source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-09. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/ramen.fukui.kyoto/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/ramen.fukui.kyoto/",
+            "name": "Ramen Fukui Kyoto",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "October opening menu",
+                "url": "https://tabelog.com/kyoto/A2601/A260201/26045777/dtlrvwlst/B537041302/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "京都ぽーくの濃口醤油らーめん",
+                    "price": 950
+                  },
+                  {
+                    "name": "京都ぽーくのたまり醤油らーめん",
+                    "price": 1000
+                  },
+                  {
+                    "name": "京都ぽーくの濃口醤油まぜそば",
+                    "price": 950
+                  },
+                  {
+                    "name": "味玉入り京都ぽーくの濃口醤油らーめん",
+                    "price": 1100
+                  },
+                  {
+                    "name": "唐揚げ",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "First branch visit publishes these prices without explicit tax treatment. Operator opening post identifies tamari soy sauce ramen; regular-menu items are not assumed to be promotional specials. Side-bowl names and prices remain unpublished in the checked sources."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/ramen.fukui.kyoto/",
+            "name": "Ramen Fukui Kyoto",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/ramen.fukui.kyoto/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published hours",
+                "hours": "11:00–23:30; closures and last order not published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/ramen.fukui.kyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DeO-XRUE443/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://osumituki.com/kyoto-ramen/226690.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/ramenfukui-kyoto2610/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/kyoto/A2601/A260201/26045777/dtlrvwlst/B537041302/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "fukui-opening",
+            "name": "Ramen Fukui Kyoto",
+            "neighborhood": "Shijo Kawaramachi",
+            "cuisine": "Ramen",
+            "description": "A newly opened ramen restaurant in Shijo Kawaramachi, with a branch-specific published menu.",
+            "address": "90-4 Shincho, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/ramen.fukui.kyoto/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/fukui-report-2-44a13c29277e824a.webp",
+            "imageCredit": "Kyoto no Osumitsuki! / No Delay",
+            "imageSourceUrl": "https://osumituki.com/kyoto-ramen/226690.html",
+            "imageNote": "Kyoto storefront before opening, photographed September 25, 2026",
+            "openingConfirmed": true,
+            "day": "2026-10-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/fukui-report-2-44a13c29277e824a.webp",
+          "sha256": "44a13c29277e824a13bd7ad5eeeb5457328a322e73d43e78fbd7f84cc6678758",
+          "width": 1200,
+          "height": 675,
+          "credit": "Kyoto no Osumitsuki! / No Delay",
+          "note": "Kyoto storefront before opening, photographed September 25, 2026",
+          "sourcePage": "https://osumituki.com/kyoto-ramen/226690.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/fukui-primary-0-6dfdb82f3fa8b2f2.webp",
+          "sha256": "6dfdb82f3fa8b2f2a4d406c1d32dbfd9c04e894bc37b890c980471ab162fe8c5",
+          "width": 640,
+          "height": 639,
+          "credit": "Restaurant operator / Instagram",
+          "note": "Operator-published tamari soy sauce ramen",
+          "sourcePage": "https://www.instagram.com/p/DeO-XRUE443/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan Opens in Kisshoin",
+        "description": "A newly opened yakiniku set meals restaurant in Kisshoin, with a branch-specific published menu.",
+        "sourceUrl": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+        "address": "2F Aeon Kyoto Rakunan Shopping Center, 31 Kisshoin Oikecho, Minami-ku, Kyoto",
+        "productName": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan",
+        "utcStartDateTime": "2026-10-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-08. Exact date, branch identity and sources were verified separately from other venues.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kisshoin",
+          "Yakiniku set meals"
+        ],
+        "longFormSummary": "<p>A newly opened yakiniku set meals restaurant in Kisshoin, with a branch-specific published menu.<cite data-ref=\"https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan\"></cite></p><p>Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-08. Exact date, branch identity and sources were verified separately from other venues.</p>",
+        "references": [
+          {
+            "url": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+            "title": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-08. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000694.000018604.html",
+            "title": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-08. Exact date, branch identity and sources were verified separately from other venues."
+          },
+          {
+            "url": "https://kansai-kaiten.com/gyushokudo-aeonrakunan2610/",
+            "title": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan source",
+            "confidence": 90,
+            "reasoning": "Branch-specific operator announcement or dated first-visit reporting confirms opening on 2026-10-08. Exact date, branch identity and sources were verified separately from other venues."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+          "menu": {
+            "pinSourceUrl": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+            "name": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Current branch-linked dine-in menu",
+                "url": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "牛カルビ焼肉定食",
+                    "price": 968
+                  },
+                  {
+                    "name": "牛カルビ・タン焼肉定食",
+                    "price": 1078
+                  },
+                  {
+                    "name": "ホルモン・ハラミ焼肉定食",
+                    "price": 1188
+                  },
+                  {
+                    "name": "全部盛り焼肉定食",
+                    "price": 1298
+                  },
+                  {
+                    "name": "牛カルビ丼",
+                    "price": 748
+                  },
+                  {
+                    "name": "キムチ牛カルビ丼",
+                    "price": 858
+                  },
+                  {
+                    "name": "ねぎたま牛カルビ丼",
+                    "price": 968
+                  },
+                  {
+                    "name": "焼肉ビビンバ丼",
+                    "price": 968
+                  },
+                  {
+                    "name": "ねぎ塩豚タン丼",
+                    "price": 935
+                  },
+                  {
+                    "name": "旨辛ホルモン・ハラミ丼",
+                    "price": 1078
+                  },
+                  {
+                    "name": "豚焼肉丼",
+                    "price": 638
+                  },
+                  {
+                    "name": "キムチ豚焼肉丼",
+                    "price": 748
+                  },
+                  {
+                    "name": "ねぎたま豚焼肉丼",
+                    "price": 858
+                  },
+                  {
+                    "name": "野菜ビビンバ丼",
+                    "price": 748
+                  },
+                  {
+                    "name": "冷麺 — with three namul",
+                    "price": 858
+                  },
+                  {
+                    "name": "梅しそ冷麺 — with three namul",
+                    "price": 858
+                  },
+                  {
+                    "name": "石鍋豆富チゲ定食",
+                    "price": 1078
+                  },
+                  {
+                    "name": "石鍋豆富チゲ — standalone",
+                    "price": 968
+                  },
+                  {
+                    "name": "お子様カレー — with jelly and juice",
+                    "price": 308
+                  }
+                ],
+                "note": "Tax-inclusive dine-in prices from the PDF linked on the exact Rakunan branch page. Current ¥968 beef-kalbi set supersedes the ¥1,045 recommendation in the October 2 release. Small rice subtracts ¥22, large adds ¥110; removing rice and soup from a set subtracts ¥165. These portion options are ordinary menu pricing, not a promotional discount.",
+                "documentUrl": "https://gyukakuyakinikushokudou.ne.jp/store/pdfmenu/affordable.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+            "name": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+            "phone": "075-634-4629",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–21:30; last order 21:00"
+              }
+            ],
+            "detailsSourceUrl": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000694.000018604.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/gyushokudo-aeonrakunan2610/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "gyukaku-opening",
+            "name": "Gyukaku Yakiniku Shokudo — Aeon Kyoto Rakunan",
+            "neighborhood": "Kisshoin",
+            "cuisine": "Yakiniku set meals",
+            "description": "A newly opened yakiniku set meals restaurant in Kisshoin, with a branch-specific published menu.",
+            "address": "2F Aeon Kyoto Rakunan Shopping Center, 31 Kisshoin Oikecho, Minami-ku, Kyoto",
+            "websiteUrl": "https://gyukakuyakinikushokudou.ne.jp/store/detail/?id=aeonrakunan",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/gyukaku-date-0-a9cd19d2f670ee7d.webp",
+            "imageCredit": "Restaurant operator via PR TIMES",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000694.000018604.html",
+            "imageNote": "Rakunan opening announcement with storefront image",
+            "openingConfirmed": true,
+            "day": "2026-10-08"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/gyukaku-date-0-a9cd19d2f670ee7d.webp",
+          "sha256": "a9cd19d2f670ee7dff0d8727e27119718528128059a9e3f4a5047eed6dd7de5c",
+          "width": 1200,
+          "height": 800,
+          "credit": "Restaurant operator via PR TIMES",
+          "note": "Rakunan opening announcement with storefront image",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000694.000018604.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/gyukaku-date-1-22dc7c39782a1408.webp",
+          "sha256": "22dc7c39782a140834b0c118c131f10c1a76d7578b9956095eafb8b074199c3a",
+          "width": 1200,
+          "height": 800,
+          "credit": "Restaurant operator via PR TIMES",
+          "note": "Operator illustrative grilled-meat photograph from Rakunan announcement; dish not identified",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000694.000018604.html"
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,8 @@ import { verifyStripeSignature } from '@/server/stripe';
 import log from '@/server/util/log';
 
 // Stripe's events for the ad-free plan and for ads. Point a webhook endpoint at
-// /api/billing/webhook for checkout.session.completed, invoice.paid (monthly
+// /api/billing/webhook for checkout.session.completed, checkout.session.async_payment_succeeded
+// (OXXO and other delayed methods), invoice.paid (monthly
 // ads renewing) and customer.subscription.created / updated / deleted, and put its signing
 // secret in STRIPE_WEBHOOK_SECRET. The signature covers the raw body, so it is
 // read as text before anything parses it. Whatever an event carries, the
@@ -35,7 +36,13 @@ export const POST = route(async (request: Request) => {
     const subscription = await fetchSubscription(String(object.subscription));
     const known = await recordSubscription(subscription, Number.isInteger(userId) && userId > 0 ? userId : null);
     if (!known) log.warn(`[billing] checkout ${object.id} had no user`);
-  } else if (event.type === 'checkout.session.completed' && object.mode === 'payment' && object.payment_status === 'paid') {
+  } else if (
+    (event.type === 'checkout.session.completed' || event.type === 'checkout.session.async_payment_succeeded') &&
+    object.mode === 'payment' &&
+    object.payment_status === 'paid'
+  ) {
+    // Cards are paid at completion; OXXO vouchers and delayed wallets complete
+    // unpaid and settle later, with async_payment_succeeded. Safe to see twice.
     await confirmAdPayment(object);
   } else if (event.type.startsWith('customer.subscription.') && object.id) {
     const subscription = await fetchSubscription(String(object.id));

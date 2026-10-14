@@ -1,0 +1,2583 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "osaka",
+    "nagoya",
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Share CAFE — Nagoya Central Park Opens in Sakae / Hisaya-odori",
+        "description": "A new pop-culture cafe with open sandwiches, matcha drinks and branch-dated collaboration menus.",
+        "sourceUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+        "address": "Unit 58, Central Park underground mall, 3-15-13 saki Nishiki, Naka-ku, Nagoya",
+        "productName": "Share CAFE — Nagoya Central Park",
+        "utcStartDateTime": "2026-09-25T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 11 operator/landlord announcements confirm September 25 opening; live landlord branch listing and current collaboration announcements corroborate operation.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Sakae / Hisaya-odori",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A new pop-culture cafe with open sandwiches, matcha drinks and branch-dated collaboration menus.<cite data-ref=\"https://www.centralpark.co.jp/shop/sharecafe/\"></cite></p><p>September 11 operator/landlord announcements confirm September 25 opening; live landlord branch listing and current collaboration announcements corroborate operation.</p>",
+        "references": [
+          {
+            "url": "https://www.centralpark.co.jp/shop/sharecafe/",
+            "title": "Share CAFE — Nagoya Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 operator/landlord announcements confirm September 25 opening; live landlord branch listing and current collaboration announcements corroborate operation."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html",
+            "title": "Share CAFE — Nagoya Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 operator/landlord announcements confirm September 25 opening; live landlord branch listing and current collaboration announcements corroborate operation."
+          },
+          {
+            "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+            "title": "Share CAFE — Nagoya Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 operator/landlord announcements confirm September 25 opening; live landlord branch listing and current collaboration announcements corroborate operation."
+          },
+          {
+            "url": "https://shop.anique.jp/blogs/news/mao",
+            "title": "Share CAFE — Nagoya Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 operator/landlord announcements confirm September 25 opening; live landlord branch listing and current collaboration announcements corroborate operation."
+          },
+          {
+            "url": "https://livepocket.jp/t/nagoya_cp_mao",
+            "title": "Share CAFE — Nagoya Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 operator/landlord announcements confirm September 25 opening; live landlord branch listing and current collaboration announcements corroborate operation."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+          "menu": {
+            "pinSourceUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+            "name": "Share CAFE — Nagoya Central Park",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published grand menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Ceremonial matcha latte",
+                    "price": 770
+                  },
+                  {
+                    "name": "Koji milk matcha latte",
+                    "price": 990
+                  },
+                  {
+                    "name": "Oat milk matcha latte",
+                    "price": 880
+                  },
+                  {
+                    "name": "Matcha mango latte",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha strawberry latte",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha blueberry latte",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha coconut cloud",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha craft cola",
+                    "price": 880
+                  },
+                  {
+                    "name": "Matcha lemonade",
+                    "price": 770
+                  },
+                  {
+                    "name": "Craft beer",
+                    "price": 1320,
+                    "note": "From"
+                  },
+                  {
+                    "name": "Matcha whiskey highball",
+                    "price": 880
+                  },
+                  {
+                    "name": "Matcha whiskey and Coke",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha umeshu soda",
+                    "price": 770
+                  },
+                  {
+                    "name": "Charcoal latte",
+                    "price": 660
+                  },
+                  {
+                    "name": "Fermented rice milk latte",
+                    "price": 770
+                  },
+                  {
+                    "name": "Oat milk café latte",
+                    "price": 660
+                  },
+                  {
+                    "name": "Café latte",
+                    "price": 550
+                  },
+                  {
+                    "name": "Coffee",
+                    "price": 440
+                  },
+                  {
+                    "name": "Rooibos tea",
+                    "price": 440
+                  },
+                  {
+                    "name": "Earl Grey tea",
+                    "price": 440
+                  },
+                  {
+                    "name": "Beef and honey-mustard cheese sandwich",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Braised pork and soft-egg sandwich",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Roast chicken and ajillo sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Caprese and mango sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Eggs Benedict Bismarck sandwich",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Smoked salmon and cream-cheese sandwich",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Matcha soft-serve sandwich",
+                    "price": 825
+                  },
+                  {
+                    "name": "Milk soft-serve sandwich",
+                    "price": 825
+                  },
+                  {
+                    "name": "Matcha and milk soft-serve sandwich",
+                    "price": 825
+                  },
+                  {
+                    "name": "Matcha crème brûlée sandwich",
+                    "price": 715
+                  },
+                  {
+                    "name": "Mango and sweet-bean cream sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Strawberry and sweet-bean cream sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Candied sweet-potato and sweet-bean cream sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Cookies and cream parfait",
+                    "price": 880
+                  },
+                  {
+                    "name": "Matcha and warabimochi parfait",
+                    "price": 880
+                  },
+                  {
+                    "name": "Kuromitsu and kinako warabimochi parfait",
+                    "price": 880
+                  },
+                  {
+                    "name": "Matcha affogato with sake ice cream",
+                    "price": 1320,
+                    "note": "Contains 4% alcohol"
+                  },
+                  {
+                    "name": "Matcha affogato — matcha, sesame or vanilla",
+                    "price": 1100
+                  }
+                ],
+                "note": "Tax included. Published branch announcement explicitly links these operator menu images. Food-and-drink set is ¥100 off; collaboration-menu applicability is not stated, so no discount is applied to collaboration items. Milk soft-serve Japanese label supersedes its duplicated English matcha label. Scheduled collaboration may replace regular selection."
+              },
+              {
+                "label": "You and I Are Polar Opposites — Retro Pop cafe",
+                "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Suzuki and Tani pudding à la mode sandwich",
+                    "price": 1300,
+                    "note": "Pudding, strawberry, banana, whipped cream, blueberry and strawberry sauces"
+                  },
+                  {
+                    "name": "Yamada, Watanabe and Sato Neapolitan sandwich",
+                    "price": 1300,
+                    "note": "Neapolitan pasta, Italian mix, cheddar sauce"
+                  },
+                  {
+                    "name": "Taira and Azuma berry matcha soft-serve sandwich",
+                    "price": 1300,
+                    "note": "Matcha soft serve, blueberry, feuillantine, silver dragées"
+                  },
+                  {
+                    "name": "Nishi and Honda fruit sandwich",
+                    "price": 1300,
+                    "note": "Strawberry whipped cream, mixed fruit, mango sauce"
+                  },
+                  {
+                    "name": "Suzuki and Tani retro float",
+                    "price": 1300,
+                    "note": "Blue-Hawaii syrup, soda, jelly cubes, strawberry ice cream, cherry"
+                  },
+                  {
+                    "name": "Yamada, Watanabe and Sato orange hot milkshake",
+                    "price": 1300,
+                    "note": "Milkshake, whipped cream, dried orange, mandarin orange sauce, coloured sugar"
+                  },
+                  {
+                    "name": "Taira and Azuma cream soda",
+                    "price": 1300,
+                    "note": "Kyoho grape syrup, melon soda, vanilla soft serve"
+                  },
+                  {
+                    "name": "Nishi and Honda peach-grapefruit squash",
+                    "price": 1300,
+                    "note": "Peach syrup, pink-grapefruit ade, soda, white-peach pieces"
+                  }
+                ],
+                "note": "Tax included. Actual operator menu image visually transcribed. Bread is baked at this branch; other branch methods are not substituted. Food includes character pick; drinks include acrylic charm. One random coaster per item while stocks last. Maximum four food and four drinks per person. Advance first-come reservation; same-day cutoff 10:00, walk-in only if space remains.",
+                "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/menu_1005.png?v=1791170530"
+              },
+              {
+                "label": "MAO — Retro MIX cafe",
+                "url": "https://shop.anique.jp/blogs/news/mao",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Mao purple-sweet-potato open éclair",
+                    "price": 1430,
+                    "note": "Purple sweet-potato ice cream, bean paste, shiratama, whipped cream, purple sweet-potato syrup"
+                  },
+                  {
+                    "name": "Nanoka pudding à la mode",
+                    "price": 1430,
+                    "note": "Custard pudding, mandarin orange, corn flakes, whipped cream, cherry, caramel sauce"
+                  },
+                  {
+                    "name": "Otoya fish sandwich",
+                    "price": 1430,
+                    "note": "Tuna mayonnaise, cucumber, lemon syrup, black pepper"
+                  },
+                  {
+                    "name": "Hyakka spicy sandwich",
+                    "price": 1430,
+                    "note": "Mozzarella, paprika, pizza sauce, chili sauce, paprika powder"
+                  },
+                  {
+                    "name": "Kamon thorn sandwich",
+                    "price": 1430,
+                    "note": "Okara, roasted-sesame spinach, charcoal sauce, ginger"
+                  },
+                  {
+                    "name": "Mao poison soda",
+                    "price": 1320,
+                    "note": "Grape syrup, carbonated water, strawberry jelly, grapes"
+                  },
+                  {
+                    "name": "Nanoka smoothie",
+                    "price": 1430,
+                    "note": "Honey, milk, yogurt, banana"
+                  },
+                  {
+                    "name": "Otoya shikigami latte",
+                    "price": 1320,
+                    "note": "Black sesame latte, vanilla ice cream, raw sugar"
+                  },
+                  {
+                    "name": "Hyakka hot chocolate",
+                    "price": 1320,
+                    "note": "Hot chocolate, whipped cream, raspberry sauce, cinnamon/chili powder, white chocolate"
+                  },
+                  {
+                    "name": "Kamon Japanese matcha latte",
+                    "price": 1320,
+                    "note": "Matcha latte, hojicha ice cream, rosemary"
+                  }
+                ],
+                "note": "Tax included. Drink includes fixed-character acrylic charm; one random coaster per item while stocks last. Maximum five food and five drinks per person. Second-round first-come reservation opened October 9 at 18:00, cutoff one hour before opening; walk-in only if space remains. Merchandise sale dates are not cafe service dates.",
+                "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/mao_cafemenu_924.png?v=1790215434"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+            "name": "Share CAFE — Nagoya Central Park",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+            "phone": "052-212-8622",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday",
+                "hours": "11:00–21:30; regular last order 21:00"
+              },
+              {
+                "days": "Sunday and holidays",
+                "hours": "11:00–20:30; regular last order 20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://shop.anique.jp/blogs/news/seihantai-cafe"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://shop.anique.jp/blogs/news/mao"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://livepocket.jp/t/nagoya_cp_mao"
+              }
+            ],
+            "reservationUrl": "https://livepocket.jp/t/nagoya_cp_seihantai"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "share-locator",
+            "name": "Share CAFE — Nagoya Central Park",
+            "neighborhood": "Sakae / Hisaya-odori",
+            "cuisine": "Cafe",
+            "description": "A new pop-culture cafe with open sandwiches, matcha drinks and branch-dated collaboration menus.",
+            "address": "Unit 58, Central Park underground mall, 3-15-13 saki Nishiki, Naka-ku, Nagoya",
+            "websiteUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/share-locator-3-c4df67782e7fed8a.webp",
+            "imageCredit": "Anique operator Nagoya menu release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html",
+            "imageNote": "Nagoya-published printed menu illustration; named items/prices transcribed, not a room photograph",
+            "openingConfirmed": true,
+            "day": "2026-09-25"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/share-locator-3-c4df67782e7fed8a.webp",
+          "sha256": "c4df67782e7fed8a8b78e48b618a62fef49edd904c12d3cc891fb8838c5f9c02",
+          "width": 955,
+          "height": 1350,
+          "credit": "Anique operator Nagoya menu release",
+          "note": "Nagoya-published printed menu illustration; named items/prices transcribed, not a room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/share-locator-4-3d73de17adc207b0.webp",
+          "sha256": "3d73de17adc207b0fcff73064b3d835196a22151276db7297cdd254373f91d98",
+          "width": 955,
+          "height": 1350,
+          "credit": "Anique operator Nagoya menu release",
+          "note": "Nagoya-published printed menu illustration; named items/prices transcribed, not a room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/share-locator-5-4780e063e01c3678.webp",
+          "sha256": "4780e063e01c3678454e518d73b62bf7ffca3979b8f3368221f309a184f9533a",
+          "width": 955,
+          "height": 1350,
+          "credit": "Anique operator Nagoya menu release",
+          "note": "Nagoya-published printed menu illustration; named items/prices transcribed, not a room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+          "name": "Share CAFE — Nagoya Central Park",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Published grand menu",
+              "url": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Ceremonial matcha latte",
+                  "price": 770
+                },
+                {
+                  "name": "Koji milk matcha latte",
+                  "price": 990
+                },
+                {
+                  "name": "Oat milk matcha latte",
+                  "price": 880
+                },
+                {
+                  "name": "Matcha mango latte",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha strawberry latte",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha blueberry latte",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha coconut cloud",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha craft cola",
+                  "price": 880
+                },
+                {
+                  "name": "Matcha lemonade",
+                  "price": 770
+                },
+                {
+                  "name": "Craft beer",
+                  "price": 1320,
+                  "note": "From"
+                },
+                {
+                  "name": "Matcha whiskey highball",
+                  "price": 880
+                },
+                {
+                  "name": "Matcha whiskey and Coke",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha umeshu soda",
+                  "price": 770
+                },
+                {
+                  "name": "Charcoal latte",
+                  "price": 660
+                },
+                {
+                  "name": "Fermented rice milk latte",
+                  "price": 770
+                },
+                {
+                  "name": "Oat milk café latte",
+                  "price": 660
+                },
+                {
+                  "name": "Café latte",
+                  "price": 550
+                },
+                {
+                  "name": "Coffee",
+                  "price": 440
+                },
+                {
+                  "name": "Rooibos tea",
+                  "price": 440
+                },
+                {
+                  "name": "Earl Grey tea",
+                  "price": 440
+                },
+                {
+                  "name": "Beef and honey-mustard cheese sandwich",
+                  "price": 1100
+                },
+                {
+                  "name": "Braised pork and soft-egg sandwich",
+                  "price": 1210
+                },
+                {
+                  "name": "Roast chicken and ajillo sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Caprese and mango sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Eggs Benedict Bismarck sandwich",
+                  "price": 1210
+                },
+                {
+                  "name": "Smoked salmon and cream-cheese sandwich",
+                  "price": 1100
+                },
+                {
+                  "name": "Matcha soft-serve sandwich",
+                  "price": 825
+                },
+                {
+                  "name": "Milk soft-serve sandwich",
+                  "price": 825
+                },
+                {
+                  "name": "Matcha and milk soft-serve sandwich",
+                  "price": 825
+                },
+                {
+                  "name": "Matcha crème brûlée sandwich",
+                  "price": 715
+                },
+                {
+                  "name": "Mango and sweet-bean cream sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Strawberry and sweet-bean cream sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Candied sweet-potato and sweet-bean cream sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Cookies and cream parfait",
+                  "price": 880
+                },
+                {
+                  "name": "Matcha and warabimochi parfait",
+                  "price": 880
+                },
+                {
+                  "name": "Kuromitsu and kinako warabimochi parfait",
+                  "price": 880
+                },
+                {
+                  "name": "Matcha affogato with sake ice cream",
+                  "price": 1320,
+                  "note": "Contains 4% alcohol"
+                },
+                {
+                  "name": "Matcha affogato — matcha, sesame or vanilla",
+                  "price": 1100
+                }
+              ],
+              "note": "Tax included. Published branch announcement explicitly links these operator menu images. Food-and-drink set is ¥100 off; collaboration-menu applicability is not stated, so no discount is applied to collaboration items. Milk soft-serve Japanese label supersedes its duplicated English matcha label. Scheduled collaboration may replace regular selection."
+            },
+            {
+              "label": "You and I Are Polar Opposites — Retro Pop cafe",
+              "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Suzuki and Tani pudding à la mode sandwich",
+                  "price": 1300,
+                  "note": "Pudding, strawberry, banana, whipped cream, blueberry and strawberry sauces"
+                },
+                {
+                  "name": "Yamada, Watanabe and Sato Neapolitan sandwich",
+                  "price": 1300,
+                  "note": "Neapolitan pasta, Italian mix, cheddar sauce"
+                },
+                {
+                  "name": "Taira and Azuma berry matcha soft-serve sandwich",
+                  "price": 1300,
+                  "note": "Matcha soft serve, blueberry, feuillantine, silver dragées"
+                },
+                {
+                  "name": "Nishi and Honda fruit sandwich",
+                  "price": 1300,
+                  "note": "Strawberry whipped cream, mixed fruit, mango sauce"
+                },
+                {
+                  "name": "Suzuki and Tani retro float",
+                  "price": 1300,
+                  "note": "Blue-Hawaii syrup, soda, jelly cubes, strawberry ice cream, cherry"
+                },
+                {
+                  "name": "Yamada, Watanabe and Sato orange hot milkshake",
+                  "price": 1300,
+                  "note": "Milkshake, whipped cream, dried orange, mandarin orange sauce, coloured sugar"
+                },
+                {
+                  "name": "Taira and Azuma cream soda",
+                  "price": 1300,
+                  "note": "Kyoho grape syrup, melon soda, vanilla soft serve"
+                },
+                {
+                  "name": "Nishi and Honda peach-grapefruit squash",
+                  "price": 1300,
+                  "note": "Peach syrup, pink-grapefruit ade, soda, white-peach pieces"
+                }
+              ],
+              "note": "Tax included. Actual operator menu image visually transcribed. Bread is baked at this branch; other branch methods are not substituted. Food includes character pick; drinks include acrylic charm. One random coaster per item while stocks last. Maximum four food and four drinks per person. Advance first-come reservation; same-day cutoff 10:00, walk-in only if space remains.",
+              "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/menu_1005.png?v=1791170530"
+            },
+            {
+              "label": "MAO — Retro MIX cafe",
+              "url": "https://shop.anique.jp/blogs/news/mao",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Mao purple-sweet-potato open éclair",
+                  "price": 1430,
+                  "note": "Purple sweet-potato ice cream, bean paste, shiratama, whipped cream, purple sweet-potato syrup"
+                },
+                {
+                  "name": "Nanoka pudding à la mode",
+                  "price": 1430,
+                  "note": "Custard pudding, mandarin orange, corn flakes, whipped cream, cherry, caramel sauce"
+                },
+                {
+                  "name": "Otoya fish sandwich",
+                  "price": 1430,
+                  "note": "Tuna mayonnaise, cucumber, lemon syrup, black pepper"
+                },
+                {
+                  "name": "Hyakka spicy sandwich",
+                  "price": 1430,
+                  "note": "Mozzarella, paprika, pizza sauce, chili sauce, paprika powder"
+                },
+                {
+                  "name": "Kamon thorn sandwich",
+                  "price": 1430,
+                  "note": "Okara, roasted-sesame spinach, charcoal sauce, ginger"
+                },
+                {
+                  "name": "Mao poison soda",
+                  "price": 1320,
+                  "note": "Grape syrup, carbonated water, strawberry jelly, grapes"
+                },
+                {
+                  "name": "Nanoka smoothie",
+                  "price": 1430,
+                  "note": "Honey, milk, yogurt, banana"
+                },
+                {
+                  "name": "Otoya shikigami latte",
+                  "price": 1320,
+                  "note": "Black sesame latte, vanilla ice cream, raw sugar"
+                },
+                {
+                  "name": "Hyakka hot chocolate",
+                  "price": 1320,
+                  "note": "Hot chocolate, whipped cream, raspberry sauce, cinnamon/chili powder, white chocolate"
+                },
+                {
+                  "name": "Kamon Japanese matcha latte",
+                  "price": 1320,
+                  "note": "Matcha latte, hojicha ice cream, rosemary"
+                }
+              ],
+              "note": "Tax included. Drink includes fixed-character acrylic charm; one random coaster per item while stocks last. Maximum five food and five drinks per person. Second-round first-come reservation opened October 9 at 18:00, cutoff one hour before opening; walk-in only if space remains. Merchandise sale dates are not cafe service dates.",
+              "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/mao_cafemenu_924.png?v=1790215434"
+            }
+          ],
+          "specials": [
+            {
+              "title": "You and I Are Polar Opposites — Retro Pop cafe",
+              "kind": "other",
+              "description": "Dated character-themed food and drinks, each ¥1,300 including tax.",
+              "sourceUrl": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+              "menuLabel": "You and I Are Polar Opposites — Retro Pop cafe",
+              "discounted": false,
+              "validFrom": "2026-10-16",
+              "validThrough": "2026-10-21",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve via this branch’s LivePocket link; walk-in only if space remains.",
+                "Order cutoff shown in schedule; seating ends at branch closing.",
+                "Maximum four food and four drinks per person.",
+                "Menu items and gifts may sell out.",
+                "Closes 21:30 Monday–Saturday; Sunday/public holiday closes 20:30. Both dated events contain no public holiday."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "20:30"
+                  },
+                  {
+                    "days": [
+                      0
+                    ],
+                    "start": "11:00",
+                    "end": "19:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "MAO — Retro MIX cafe",
+              "kind": "other",
+              "description": "Dated MAO food and drinks, food ¥1,430 and drinks ¥1,320–¥1,430 including tax.",
+              "sourceUrl": "https://shop.anique.jp/blogs/news/mao",
+              "menuLabel": "MAO — Retro MIX cafe",
+              "discounted": false,
+              "validFrom": "2026-11-07",
+              "validThrough": "2026-11-15",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Advance branch-specific booking; walk-in only if space remains.",
+                "Maximum five food and five drinks per person.",
+                "Items/gifts while supplies last; order cutoff is shown separately from closing.",
+                "Closes 21:30 Monday–Saturday; Sunday/public holiday closes 20:30. Both dated events contain no public holiday."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "20:30"
+                  },
+                  {
+                    "days": [
+                      0
+                    ],
+                    "start": "11:00",
+                    "end": "19:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Grand-menu food and drink set — ¥100 off",
+              "kind": "other",
+              "description": "Operator printed grand menu explicitly offers ¥100 off a food-and-drink set.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html",
+              "menuLabel": "Published grand menu",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Grand menu only; collaboration-menu eligibility unconfirmed.",
+                "Confirm applicable food/drink combination at order."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "21:00"
+                  },
+                  {
+                    "days": [
+                      0
+                    ],
+                    "start": "11:00",
+                    "end": "20:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-11-03",
+                  "2026-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-12-31"
+              }
+            },
+            {
+              "title": "Grand-menu food and drink set — ¥100 off",
+              "kind": "other",
+              "description": "Operator printed grand menu explicitly offers ¥100 off a food-and-drink set.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html",
+              "menuLabel": "Published grand menu",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Grand menu only; collaboration-menu eligibility unconfirmed.",
+                "Confirm applicable food/drink combination at order.",
+                "Public-holiday schedule; dated calendar instance, not a promotion expiry."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "20:00"
+                  }
+                ]
+              },
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-11-03"
+            },
+            {
+              "title": "Grand-menu food and drink set — ¥100 off",
+              "kind": "other",
+              "description": "Operator printed grand menu explicitly offers ¥100 off a food-and-drink set.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html",
+              "menuLabel": "Published grand menu",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Grand menu only; collaboration-menu eligibility unconfirmed.",
+                "Confirm applicable food/drink combination at order.",
+                "Public-holiday schedule; dated calendar instance, not a promotion expiry."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "20:00"
+                  }
+                ]
+              },
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23"
+            }
+          ],
+          "address": "Unit 58, Central Park underground mall, 3-15-13 saki Nishiki, Naka-ku, Nagoya",
+          "neighborhood": "Sakae / Hisaya-odori",
+          "websiteUrl": "https://www.centralpark.co.jp/shop/sharecafe/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/share-locator-3-c4df67782e7fed8a.webp",
+            "alt": "Share CAFE — Nagoya Central Park — Nagoya-published printed menu illustration; named items/prices transcribed, not a room photograph",
+            "credit": "Anique operator Nagoya menu release",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000308.000048489.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/48489/308/48489-308-efb6e4f40a6d79efc4390622810037bb-1241x1754.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Share CAFE — Shinsaibashi BIGSTEP — Osaka restaurant guide",
+        "description": "A pop-culture collaboration cafe serving fried-bread dishes and matcha drinks.",
+        "sourceUrl": "https://big-step.co.jp/shop/detail/63",
+        "address": "3F Shinsaibashi BIGSTEP, 1-6-14 Nishi-Shinsaibashi, Chuo-ku, Osaka",
+        "productName": "Share CAFE — Shinsaibashi BIGSTEP",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Shinsaibashi / Amerikamura",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A pop-culture collaboration cafe serving fried-bread dishes and matcha drinks.<cite data-ref=\"https://big-step.co.jp/shop/detail/63\"></cite></p><p>Established restaurant. 2026-10-14 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://big-step.co.jp/shop/detail/63",
+            "title": "Share CAFE — Shinsaibashi BIGSTEP source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+            "title": "Share CAFE — Shinsaibashi BIGSTEP source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.instagram.com/sharecafe_shinsaibashi/",
+            "title": "Share CAFE — Shinsaibashi BIGSTEP source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-14 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Share CAFE — Shinsaibashi BIGSTEP",
+            "menus": [
+              {
+                "label": "Egg-salad fried bread",
+                "url": "https://big-step.co.jp/shop-news/detail/4143",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Egg-salad fried bread",
+                    "price": 715
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Savory fried bread and alcohol set",
+                "url": "https://big-step.co.jp/shop-news/detail/4144",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Savory fried bread and alcohol set",
+                    "price": 1495
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Matcha latte",
+                "url": "https://big-step.co.jp/shop-news/detail/4145",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Matcha latte",
+                    "price": 770
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Strawberry-purée fried bread",
+                "url": "https://big-step.co.jp/shop-news/detail/4146",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Strawberry-purée fried bread",
+                    "price": 770
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Oreo parfait",
+                "url": "https://big-step.co.jp/shop-news/detail/4147",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Oreo parfait",
+                    "price": 880
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Matcha soft-serve fried bread",
+                "url": "https://big-step.co.jp/shop-news/detail/4148",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Matcha soft-serve fried bread",
+                    "price": 825
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Tuna-mayonnaise fried bread",
+                "url": "https://big-step.co.jp/shop-news/detail/4469",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tuna-mayonnaise fried bread",
+                    "price": 715
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Takoyaki fried bread",
+                "url": "https://big-step.co.jp/shop-news/detail/4470",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Takoyaki fried bread",
+                    "price": 770
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Matcha crème brûlée fried bread",
+                "url": "https://big-step.co.jp/shop-news/detail/4471",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Matcha crème brûlée fried bread",
+                    "price": 715
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Matcha warabimochi parfait",
+                "url": "https://big-step.co.jp/shop-news/detail/4472",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Matcha warabimochi parfait",
+                    "price": 880
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "label": "Matcha mango latte",
+                "url": "https://big-step.co.jp/shop-news/detail/4473",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Matcha mango latte",
+                    "price": 990
+                  }
+                ],
+                "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+              },
+              {
+                "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+                "note": "Tax included. Actual operator menu image visually transcribed. Bread is fried at this branch; other branch methods are not substituted. Food includes character pick; drinks include acrylic charm. One random coaster per item while stocks last. Maximum four food and four drinks per person. Advance first-come reservation; same-day cutoff 10:00, walk-in only if space remains.",
+                "items": [
+                  {
+                    "name": "Suzuki and Tani pudding à la mode sandwich",
+                    "note": "Pudding, strawberry, banana, whipped cream, blueberry and strawberry sauces",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Yamada, Watanabe and Sato Neapolitan sandwich",
+                    "note": "Neapolitan pasta, Italian mix, cheddar sauce",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Taira and Azuma berry matcha soft-serve sandwich",
+                    "note": "Matcha soft serve, blueberry, feuillantine, silver dragées",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Nishi and Honda fruit sandwich",
+                    "note": "Strawberry whipped cream, mixed fruit, mango sauce",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Suzuki and Tani retro float",
+                    "note": "Blue-Hawaii syrup, soda, jelly cubes, strawberry ice cream, cherry",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Yamada, Watanabe and Sato orange hot milkshake",
+                    "note": "Milkshake, whipped cream, dried orange, mandarin orange sauce, coloured sugar",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Taira and Azuma cream soda",
+                    "note": "Kyoho grape syrup, melon soda, vanilla soft serve",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Nishi and Honda peach-grapefruit squash",
+                    "note": "Peach syrup, pink-grapefruit ade, soda, white-peach pieces",
+                    "price": 1300
+                  }
+                ],
+                "label": "You and I Are Polar Opposites — Retro Pop cafe",
+                "coverage": "sample",
+                "currency": "JPY",
+                "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/menu_1005.png?v=1791170530"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-14",
+            "pinSourceUrl": "https://big-step.co.jp/shop/detail/63"
+          },
+          "tile": {
+            "kind": "top",
+            "name": "Share CAFE — Shinsaibashi BIGSTEP",
+            "slug": "share-osaka",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/share-osaka-2-7c655b1ae56132b0.webp",
+            "address": "3F Shinsaibashi BIGSTEP, 1-6-14 Nishi-Shinsaibashi, Chuo-ku, Osaka",
+            "cuisine": "Cafe",
+            "checkedAt": "2026-10-14",
+            "imageNote": "Illustrative matcha soft-serve fried bread published in Osaka branch gallery; not a dining-room photograph",
+            "priceRange": "",
+            "regionSlug": "osaka",
+            "websiteUrl": "https://big-step.co.jp/shop/detail/63",
+            "description": "A pop-culture collaboration cafe serving fried-bread dishes and matcha drinks.",
+            "imageCredit": "BIGSTEP / Anique operator branch gallery",
+            "recognition": "",
+            "neighborhood": "Shinsaibashi / Amerikamura",
+            "imageSourceUrl": "https://big-step.co.jp/shop/detail/63"
+          },
+          "details": {
+            "name": "Share CAFE — Shinsaibashi BIGSTEP",
+            "phone": "06-6755-8050",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://big-step.co.jp/shop/detail/63",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–22:00; ordinary food last order 21:00, drinks 21:30; Retro Pop order cutoff 21:00"
+              }
+            ],
+            "pinSourceUrl": "https://big-step.co.jp/shop/detail/63",
+            "reservationUrl": "https://livepocket.jp/t/big-step_seihantai",
+            "detailsSourceUrl": "https://big-step.co.jp/shop/detail/63",
+            "additionalSources": [
+              {
+                "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/sharecafe_shinsaibashi/",
+                "label": "Research evidence"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4143"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4144"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4145"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4146"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4147"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4148"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4469"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4470"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4471"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4472"
+              },
+              {
+                "label": "Branch ordinary-menu evidence",
+                "url": "https://big-step.co.jp/shop-news/detail/4473"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://big-step.co.jp/shop/detail/63"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/share-osaka-2-7c655b1ae56132b0.webp",
+          "sha256": "7c655b1ae56132b09a8413c11a739deb4028690e581b479ebc21cb115eba82a0",
+          "width": 750,
+          "height": 500,
+          "credit": "BIGSTEP / Anique operator branch gallery",
+          "note": "Illustrative matcha soft-serve fried bread published in Osaka branch gallery; not a dining-room photograph",
+          "sourcePage": "https://big-step.co.jp/shop/detail/63"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "name": "Share CAFE — Shinsaibashi BIGSTEP",
+          "menus": [
+            {
+              "label": "Egg-salad fried bread",
+              "url": "https://big-step.co.jp/shop-news/detail/4143",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Egg-salad fried bread",
+                  "price": 715
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Savory fried bread and alcohol set",
+              "url": "https://big-step.co.jp/shop-news/detail/4144",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Savory fried bread and alcohol set",
+                  "price": 1495
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Matcha latte",
+              "url": "https://big-step.co.jp/shop-news/detail/4145",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Matcha latte",
+                  "price": 770
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Strawberry-purée fried bread",
+              "url": "https://big-step.co.jp/shop-news/detail/4146",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Strawberry-purée fried bread",
+                  "price": 770
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Oreo parfait",
+              "url": "https://big-step.co.jp/shop-news/detail/4147",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Oreo parfait",
+                  "price": 880
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Matcha soft-serve fried bread",
+              "url": "https://big-step.co.jp/shop-news/detail/4148",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Matcha soft-serve fried bread",
+                  "price": 825
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Tuna-mayonnaise fried bread",
+              "url": "https://big-step.co.jp/shop-news/detail/4469",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Tuna-mayonnaise fried bread",
+                  "price": 715
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Takoyaki fried bread",
+              "url": "https://big-step.co.jp/shop-news/detail/4470",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Takoyaki fried bread",
+                  "price": 770
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Matcha crème brûlée fried bread",
+              "url": "https://big-step.co.jp/shop-news/detail/4471",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Matcha crème brûlée fried bread",
+                  "price": 715
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Matcha warabimochi parfait",
+              "url": "https://big-step.co.jp/shop-news/detail/4472",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Matcha warabimochi parfait",
+                  "price": 880
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "label": "Matcha mango latte",
+              "url": "https://big-step.co.jp/shop-news/detail/4473",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Matcha mango latte",
+                  "price": 990
+                }
+              ],
+              "note": "Current branch-linked landlord/operator menu article, checked October 14, 2026. Tax treatment is not stated in this individual article; confirm at order. Ordinary menu, not a dated collaboration or inferred discount."
+            },
+            {
+              "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+              "note": "Tax included. Actual operator menu image visually transcribed. Bread is fried at this branch; other branch methods are not substituted. Food includes character pick; drinks include acrylic charm. One random coaster per item while stocks last. Maximum four food and four drinks per person. Advance first-come reservation; same-day cutoff 10:00, walk-in only if space remains.",
+              "items": [
+                {
+                  "name": "Suzuki and Tani pudding à la mode sandwich",
+                  "note": "Pudding, strawberry, banana, whipped cream, blueberry and strawberry sauces",
+                  "price": 1300
+                },
+                {
+                  "name": "Yamada, Watanabe and Sato Neapolitan sandwich",
+                  "note": "Neapolitan pasta, Italian mix, cheddar sauce",
+                  "price": 1300
+                },
+                {
+                  "name": "Taira and Azuma berry matcha soft-serve sandwich",
+                  "note": "Matcha soft serve, blueberry, feuillantine, silver dragées",
+                  "price": 1300
+                },
+                {
+                  "name": "Nishi and Honda fruit sandwich",
+                  "note": "Strawberry whipped cream, mixed fruit, mango sauce",
+                  "price": 1300
+                },
+                {
+                  "name": "Suzuki and Tani retro float",
+                  "note": "Blue-Hawaii syrup, soda, jelly cubes, strawberry ice cream, cherry",
+                  "price": 1300
+                },
+                {
+                  "name": "Yamada, Watanabe and Sato orange hot milkshake",
+                  "note": "Milkshake, whipped cream, dried orange, mandarin orange sauce, coloured sugar",
+                  "price": 1300
+                },
+                {
+                  "name": "Taira and Azuma cream soda",
+                  "note": "Kyoho grape syrup, melon soda, vanilla soft serve",
+                  "price": 1300
+                },
+                {
+                  "name": "Nishi and Honda peach-grapefruit squash",
+                  "note": "Peach syrup, pink-grapefruit ade, soda, white-peach pieces",
+                  "price": 1300
+                }
+              ],
+              "label": "You and I Are Polar Opposites — Retro Pop cafe",
+              "coverage": "sample",
+              "currency": "JPY",
+              "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/menu_1005.png?v=1791170530"
+            }
+          ],
+          "photo": {
+            "alt": "Share CAFE — Shinsaibashi BIGSTEP — Illustrative matcha soft-serve fried bread published in Osaka branch gallery; not a dining-room photograph",
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/share-osaka-2-7c655b1ae56132b0.webp",
+            "credit": "BIGSTEP / Anique operator branch gallery",
+            "checkedAt": "2026-10-14",
+            "sourceUrl": "https://big-step.co.jp/shop/detail/63",
+            "originalUrl": "https://big-step.co.jp/storage/2026/04/d52a4b3524eed2fe6588010500816148d074c0f7.jpg"
+          },
+          "address": "3F Shinsaibashi BIGSTEP, 1-6-14 Nishi-Shinsaibashi, Chuo-ku, Osaka",
+          "specials": [
+            {
+              "kind": "other",
+              "title": "You and I Are Polar Opposites — Retro Pop cafe",
+              "schedule": "Japan local time; see conditions",
+              "menuLabel": "You and I Are Polar Opposites — Retro Pop cafe",
+              "sourceUrl": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+              "validFrom": "2026-10-16",
+              "conditions": [
+                "Reserve via this branch’s LivePocket link; walk-in only if space remains.",
+                "Order cutoff shown in schedule; seating ends at branch closing.",
+                "Maximum four food and four drinks per person.",
+                "Menu items and gifts may sell out."
+              ],
+              "discounted": false,
+              "description": "Dated character-themed food and drinks, each ¥1,300 including tax.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "21:00",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00"
+                  }
+                ]
+              },
+              "validThrough": "2026-10-21"
+            }
+          ],
+          "checkedAt": "2026-10-14",
+          "websiteUrl": "https://big-step.co.jp/shop/detail/63",
+          "neighborhood": "Shinsaibashi / Amerikamura",
+          "pinSourceUrl": "https://big-step.co.jp/shop/detail/63"
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Share CAFE FLEUR — Shinjuku Marui Opens in Shinjuku",
+        "description": "A flower-decorated collaboration cafe with open sandwiches and an upcoming Retro Pop menu.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+        "address": "8F Shinjuku Marui Main Building, 3-30-13 Shinjuku, Shinjuku-ku, Tokyo",
+        "productName": "Share CAFE FLEUR — Shinjuku Marui",
+        "utcStartDateTime": "2026-07-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Marui landlord August 18 release explicitly confirms actual July 31, 2026 opening. This is within the guide’s existing ninety-day Just opened eligibility on October 14.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Shinjuku",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A flower-decorated collaboration cafe with open sandwiches and an upcoming Retro Pop menu.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000004178.000003860.html\"></cite></p><p>Marui landlord August 18 release explicitly confirms actual July 31, 2026 opening. This is within the guide’s existing ninety-day Just opened eligibility on October 14.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+            "title": "Share CAFE FLEUR — Shinjuku Marui source",
+            "confidence": 90,
+            "reasoning": "Marui landlord August 18 release explicitly confirms actual July 31, 2026 opening. This is within the guide’s existing ninety-day Just opened eligibility on October 14."
+          },
+          {
+            "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+            "title": "Share CAFE FLEUR — Shinjuku Marui source",
+            "confidence": 90,
+            "reasoning": "Marui landlord August 18 release explicitly confirms actual July 31, 2026 opening. This is within the guide’s existing ninety-day Just opened eligibility on October 14."
+          },
+          {
+            "url": "https://www.instagram.com/sharecafe_shinjuku/",
+            "title": "Share CAFE FLEUR — Shinjuku Marui source",
+            "confidence": 90,
+            "reasoning": "Marui landlord August 18 release explicitly confirms actual July 31, 2026 opening. This is within the guide’s existing ninety-day Just opened eligibility on October 14."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+            "name": "Share CAFE FLEUR — Shinjuku Marui",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published open SANDO range",
+                "url": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Meat open sandwich",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Salmon/vegetable open sandwich",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Soft-serve sweet open sandwich",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator says thirteen varieties; exact full current names/prices remain unpublished in checked branch release. Nagoya pricing is not borrowed."
+              },
+              {
+                "label": "You and I Are Polar Opposites — Retro Pop cafe",
+                "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Suzuki and Tani pudding à la mode sandwich",
+                    "price": 1300,
+                    "note": "Pudding, strawberry, banana, whipped cream, blueberry and strawberry sauces"
+                  },
+                  {
+                    "name": "Yamada, Watanabe and Sato Neapolitan sandwich",
+                    "price": 1300,
+                    "note": "Neapolitan pasta, Italian mix, cheddar sauce"
+                  },
+                  {
+                    "name": "Taira and Azuma berry matcha soft-serve sandwich",
+                    "price": 1300,
+                    "note": "Matcha soft serve, blueberry, feuillantine, silver dragées"
+                  },
+                  {
+                    "name": "Nishi and Honda fruit sandwich",
+                    "price": 1300,
+                    "note": "Strawberry whipped cream, mixed fruit, mango sauce"
+                  },
+                  {
+                    "name": "Suzuki and Tani retro float",
+                    "price": 1300,
+                    "note": "Blue-Hawaii syrup, soda, jelly cubes, strawberry ice cream, cherry"
+                  },
+                  {
+                    "name": "Yamada, Watanabe and Sato orange hot milkshake",
+                    "price": 1300,
+                    "note": "Milkshake, whipped cream, dried orange, mandarin orange sauce, coloured sugar"
+                  },
+                  {
+                    "name": "Taira and Azuma cream soda",
+                    "price": 1300,
+                    "note": "Kyoho grape syrup, melon soda, vanilla soft serve"
+                  },
+                  {
+                    "name": "Nishi and Honda peach-grapefruit squash",
+                    "price": 1300,
+                    "note": "Peach syrup, pink-grapefruit ade, soda, white-peach pieces"
+                  }
+                ],
+                "note": "Tax included. Actual operator menu image visually transcribed. Bread is baked at this branch; other branch methods are not substituted. Food includes character pick; drinks include acrylic charm. One random coaster per item while stocks last. Maximum four food and four drinks per person. Advance first-come reservation; same-day cutoff 10:00, walk-in only if space remains.",
+                "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/menu_1005.png?v=1791170530"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+            "name": "Share CAFE FLEUR — Shinjuku Marui",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–21:00; Retro Pop last order 20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://shop.anique.jp/blogs/news/seihantai-cafe"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/sharecafe_shinjuku/"
+              }
+            ],
+            "reservationUrl": "https://livepocket.jp/t/shinjuku_seihantai"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "share-fleur-release",
+            "name": "Share CAFE FLEUR — Shinjuku Marui",
+            "neighborhood": "Shinjuku",
+            "cuisine": "Cafe",
+            "description": "A flower-decorated collaboration cafe with open sandwiches and an upcoming Retro Pop menu.",
+            "address": "8F Shinjuku Marui Main Building, 3-30-13 Shinjuku, Shinjuku-ku, Tokyo",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/share-fleur-release-2-e8a1300cc61919d0.webp",
+            "imageCredit": "Marui Group / Anique operator gallery",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+            "imageNote": "Actual Shinjuku FLEUR dining room",
+            "openingConfirmed": true,
+            "day": "2026-07-31"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/share-fleur-release-2-e8a1300cc61919d0.webp",
+          "sha256": "e8a1300cc61919d0a815bd12ed86033af21b50a0e1a6584a28a46a99b20b8a7a",
+          "width": 1200,
+          "height": 801,
+          "credit": "Marui Group / Anique operator gallery",
+          "note": "Actual Shinjuku FLEUR dining room",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/share-fleur-release-3-dd3bb67cfc32b17f.webp",
+          "sha256": "dd3bb67cfc32b17fa25fcfe071a1048cde8020e5a6f0577277e3309dc62fff4a",
+          "width": 1200,
+          "height": 801,
+          "credit": "Marui Group / Anique operator gallery",
+          "note": "Operator-labelled matcha drink at Shinjuku FLEUR",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "name": "Share CAFE FLEUR — Shinjuku Marui",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Published open SANDO range",
+              "url": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Meat open sandwich",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Salmon/vegetable open sandwich",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Soft-serve sweet open sandwich",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "note": "Operator says thirteen varieties; exact full current names/prices remain unpublished in checked branch release. Nagoya pricing is not borrowed."
+            },
+            {
+              "label": "You and I Are Polar Opposites — Retro Pop cafe",
+              "url": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Suzuki and Tani pudding à la mode sandwich",
+                  "price": 1300,
+                  "note": "Pudding, strawberry, banana, whipped cream, blueberry and strawberry sauces"
+                },
+                {
+                  "name": "Yamada, Watanabe and Sato Neapolitan sandwich",
+                  "price": 1300,
+                  "note": "Neapolitan pasta, Italian mix, cheddar sauce"
+                },
+                {
+                  "name": "Taira and Azuma berry matcha soft-serve sandwich",
+                  "price": 1300,
+                  "note": "Matcha soft serve, blueberry, feuillantine, silver dragées"
+                },
+                {
+                  "name": "Nishi and Honda fruit sandwich",
+                  "price": 1300,
+                  "note": "Strawberry whipped cream, mixed fruit, mango sauce"
+                },
+                {
+                  "name": "Suzuki and Tani retro float",
+                  "price": 1300,
+                  "note": "Blue-Hawaii syrup, soda, jelly cubes, strawberry ice cream, cherry"
+                },
+                {
+                  "name": "Yamada, Watanabe and Sato orange hot milkshake",
+                  "price": 1300,
+                  "note": "Milkshake, whipped cream, dried orange, mandarin orange sauce, coloured sugar"
+                },
+                {
+                  "name": "Taira and Azuma cream soda",
+                  "price": 1300,
+                  "note": "Kyoho grape syrup, melon soda, vanilla soft serve"
+                },
+                {
+                  "name": "Nishi and Honda peach-grapefruit squash",
+                  "price": 1300,
+                  "note": "Peach syrup, pink-grapefruit ade, soda, white-peach pieces"
+                }
+              ],
+              "note": "Tax included. Actual operator menu image visually transcribed. Bread is baked at this branch; other branch methods are not substituted. Food includes character pick; drinks include acrylic charm. One random coaster per item while stocks last. Maximum four food and four drinks per person. Advance first-come reservation; same-day cutoff 10:00, walk-in only if space remains.",
+              "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/menu_1005.png?v=1791170530"
+            }
+          ],
+          "specials": [
+            {
+              "title": "You and I Are Polar Opposites — Retro Pop cafe",
+              "kind": "other",
+              "description": "Dated character-themed food and drinks, each ¥1,300 including tax.",
+              "sourceUrl": "https://shop.anique.jp/blogs/news/seihantai-cafe",
+              "menuLabel": "You and I Are Polar Opposites — Retro Pop cafe",
+              "discounted": false,
+              "validFrom": "2026-10-16",
+              "validThrough": "2026-11-03",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve via this branch’s LivePocket link; walk-in only if space remains.",
+                "Order cutoff shown in schedule; seating ends at branch closing.",
+                "Maximum four food and four drinks per person.",
+                "Menu items and gifts may sell out."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "20:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "8F Shinjuku Marui Main Building, 3-30-13 Shinjuku, Shinjuku-ku, Tokyo",
+          "neighborhood": "Shinjuku",
+          "websiteUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/share-fleur-release-2-e8a1300cc61919d0.webp",
+            "alt": "Share CAFE FLEUR — Shinjuku Marui — Actual Shinjuku FLEUR dining room",
+            "credit": "Marui Group / Anique operator gallery",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/3860/4178/3860-4178-0d8213772032f4fe1ebc1c2fbe74dc96-3900x2601.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Share CAFE théâtre — Yurakucho Marui Opens in Yurakucho",
+        "description": "A planned theater-themed cafe with open sandwiches and a November MAO collaboration menu.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+        "address": "8F Yurakucho Marui, 2-7-1 Yurakucho, Chiyoda-ku, Tokyo",
+        "productName": "Share CAFE théâtre — Yurakucho Marui",
+        "utcStartDateTime": "2026-10-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 25 Anique operator release confirms October 30, 2026 opening at Yurakucho Marui 8F. Room illustrations are renderings, not proof of operation.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Yurakucho",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A planned theater-themed cafe with open sandwiches and a November MAO collaboration menu.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000356.000048489.html\"></cite></p><p>September 25 Anique operator release confirms October 30, 2026 opening at Yurakucho Marui 8F. Room illustrations are renderings, not proof of operation.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+            "title": "Share CAFE théâtre — Yurakucho Marui source",
+            "confidence": 90,
+            "reasoning": "September 25 Anique operator release confirms October 30, 2026 opening at Yurakucho Marui 8F. Room illustrations are renderings, not proof of operation."
+          },
+          {
+            "url": "https://shop.anique.jp/blogs/news/mao",
+            "title": "Share CAFE théâtre — Yurakucho Marui source",
+            "confidence": 90,
+            "reasoning": "September 25 Anique operator release confirms October 30, 2026 opening at Yurakucho Marui 8F. Room illustrations are renderings, not proof of operation."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+            "name": "Share CAFE théâtre — Yurakucho Marui",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published grand menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Ceremonial matcha latte",
+                    "price": 770
+                  },
+                  {
+                    "name": "Koji milk matcha latte",
+                    "price": 990
+                  },
+                  {
+                    "name": "Oat milk matcha latte",
+                    "price": 880
+                  },
+                  {
+                    "name": "Matcha mango latte",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha strawberry latte",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha blueberry latte",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha coconut cloud",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha craft cola",
+                    "price": 880
+                  },
+                  {
+                    "name": "Matcha lemonade",
+                    "price": 770
+                  },
+                  {
+                    "name": "Craft beer",
+                    "price": 1320,
+                    "note": "From"
+                  },
+                  {
+                    "name": "Matcha whiskey highball",
+                    "price": 880
+                  },
+                  {
+                    "name": "Matcha whiskey and Coke",
+                    "price": 990
+                  },
+                  {
+                    "name": "Matcha umeshu soda",
+                    "price": 770
+                  },
+                  {
+                    "name": "Charcoal latte",
+                    "price": 660
+                  },
+                  {
+                    "name": "Fermented rice milk latte",
+                    "price": 770
+                  },
+                  {
+                    "name": "Oat milk café latte",
+                    "price": 660
+                  },
+                  {
+                    "name": "Café latte",
+                    "price": 550
+                  },
+                  {
+                    "name": "Coffee",
+                    "price": 440
+                  },
+                  {
+                    "name": "Rooibos tea",
+                    "price": 440
+                  },
+                  {
+                    "name": "Earl Grey tea",
+                    "price": 440
+                  },
+                  {
+                    "name": "Beef and honey-mustard cheese sandwich",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Braised pork and soft-egg sandwich",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Roast chicken and ajillo sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Caprese and mango sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Eggs Benedict Bismarck sandwich",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Smoked salmon and cream-cheese sandwich",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Matcha soft-serve sandwich",
+                    "price": 825
+                  },
+                  {
+                    "name": "Milk soft-serve sandwich",
+                    "price": 825
+                  },
+                  {
+                    "name": "Matcha and milk soft-serve sandwich",
+                    "price": 825
+                  },
+                  {
+                    "name": "Matcha crème brûlée sandwich",
+                    "price": 715
+                  },
+                  {
+                    "name": "Mango and sweet-bean cream sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Strawberry and sweet-bean cream sandwich",
+                    "price": 990
+                  },
+                  {
+                    "name": "Candied sweet-potato and sweet-bean cream sandwich",
+                    "price": 990
+                  }
+                ],
+                "note": "Tax included. Published branch announcement explicitly links these operator menu images. Food-and-drink set is ¥100 off; collaboration-menu applicability is not stated, so no discount is applied to collaboration items. Milk soft-serve Japanese label supersedes its duplicated English matcha label. Scheduled collaboration may replace regular selection."
+              },
+              {
+                "label": "MAO — Retro MIX cafe",
+                "url": "https://shop.anique.jp/blogs/news/mao",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Mao purple-sweet-potato open éclair",
+                    "price": 1430,
+                    "note": "Purple sweet-potato ice cream, bean paste, shiratama, whipped cream, purple sweet-potato syrup"
+                  },
+                  {
+                    "name": "Nanoka pudding à la mode",
+                    "price": 1430,
+                    "note": "Custard pudding, mandarin orange, corn flakes, whipped cream, cherry, caramel sauce"
+                  },
+                  {
+                    "name": "Otoya fish sandwich",
+                    "price": 1430,
+                    "note": "Tuna mayonnaise, cucumber, lemon syrup, black pepper"
+                  },
+                  {
+                    "name": "Hyakka spicy sandwich",
+                    "price": 1430,
+                    "note": "Mozzarella, paprika, pizza sauce, chili sauce, paprika powder"
+                  },
+                  {
+                    "name": "Kamon thorn sandwich",
+                    "price": 1430,
+                    "note": "Okara, roasted-sesame spinach, charcoal sauce, ginger"
+                  },
+                  {
+                    "name": "Mao poison soda",
+                    "price": 1320,
+                    "note": "Grape syrup, carbonated water, strawberry jelly, grapes"
+                  },
+                  {
+                    "name": "Nanoka smoothie",
+                    "price": 1430,
+                    "note": "Honey, milk, yogurt, banana"
+                  },
+                  {
+                    "name": "Otoya shikigami latte",
+                    "price": 1320,
+                    "note": "Black sesame latte, vanilla ice cream, raw sugar"
+                  },
+                  {
+                    "name": "Hyakka hot chocolate",
+                    "price": 1320,
+                    "note": "Hot chocolate, whipped cream, raspberry sauce, cinnamon/chili powder, white chocolate"
+                  },
+                  {
+                    "name": "Kamon Japanese matcha latte",
+                    "price": 1320,
+                    "note": "Matcha latte, hojicha ice cream, rosemary"
+                  }
+                ],
+                "note": "Tax included. Drink includes fixed-character acrylic charm; one random coaster per item while stocks last. Maximum five food and five drinks per person. Second-round first-come reservation opened October 9 at 18:00, cutoff one hour before opening; walk-in only if space remains. Merchandise sale dates are not cafe service dates.",
+                "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/mao_cafemenu_924.png?v=1790215434"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+            "name": "Share CAFE théâtre — Yurakucho Marui",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Planned daily",
+                "hours": "11:00–20:00; MAO menu last order 19:00"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://shop.anique.jp/blogs/news/mao"
+              }
+            ],
+            "reservationUrl": "https://livepocket.jp/t/yurakucho_mao"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "share-theatre",
+            "name": "Share CAFE théâtre — Yurakucho Marui",
+            "neighborhood": "Yurakucho",
+            "cuisine": "Cafe",
+            "description": "A planned theater-themed cafe with open sandwiches and a November MAO collaboration menu.",
+            "address": "8F Yurakucho Marui, 2-7-1 Yurakucho, Chiyoda-ku, Tokyo",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/share-theatre-1-2ec076f1cb2f09e7.webp",
+            "imageCredit": "Marui Group / Anique operator gallery",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+            "imageNote": "Planned Yurakucho theatre interior rendering; illustrative, not an opened-property photograph",
+            "openingConfirmed": true,
+            "day": "2026-10-30"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/share-theatre-1-2ec076f1cb2f09e7.webp",
+          "sha256": "2ec076f1cb2f09e766a41f73e40548da0edb3fb4b6d0fc5f5d66b4e410892344",
+          "width": 1200,
+          "height": 675,
+          "credit": "Marui Group / Anique operator gallery",
+          "note": "Planned Yurakucho theatre interior rendering; illustrative, not an opened-property photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/share-theatre-2-737fc3b6b25b9113.webp",
+          "sha256": "737fc3b6b25b91132e71c2e16a43ec126393306a5a6caf91fa1c3b413f80093a",
+          "width": 1200,
+          "height": 675,
+          "credit": "Marui Group / Anique operator gallery",
+          "note": "Planned Yurakucho theatre interior rendering; illustrative, not an opened-property photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "name": "Share CAFE théâtre — Yurakucho Marui",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Published grand menu",
+              "url": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Ceremonial matcha latte",
+                  "price": 770
+                },
+                {
+                  "name": "Koji milk matcha latte",
+                  "price": 990
+                },
+                {
+                  "name": "Oat milk matcha latte",
+                  "price": 880
+                },
+                {
+                  "name": "Matcha mango latte",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha strawberry latte",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha blueberry latte",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha coconut cloud",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha craft cola",
+                  "price": 880
+                },
+                {
+                  "name": "Matcha lemonade",
+                  "price": 770
+                },
+                {
+                  "name": "Craft beer",
+                  "price": 1320,
+                  "note": "From"
+                },
+                {
+                  "name": "Matcha whiskey highball",
+                  "price": 880
+                },
+                {
+                  "name": "Matcha whiskey and Coke",
+                  "price": 990
+                },
+                {
+                  "name": "Matcha umeshu soda",
+                  "price": 770
+                },
+                {
+                  "name": "Charcoal latte",
+                  "price": 660
+                },
+                {
+                  "name": "Fermented rice milk latte",
+                  "price": 770
+                },
+                {
+                  "name": "Oat milk café latte",
+                  "price": 660
+                },
+                {
+                  "name": "Café latte",
+                  "price": 550
+                },
+                {
+                  "name": "Coffee",
+                  "price": 440
+                },
+                {
+                  "name": "Rooibos tea",
+                  "price": 440
+                },
+                {
+                  "name": "Earl Grey tea",
+                  "price": 440
+                },
+                {
+                  "name": "Beef and honey-mustard cheese sandwich",
+                  "price": 1100
+                },
+                {
+                  "name": "Braised pork and soft-egg sandwich",
+                  "price": 1210
+                },
+                {
+                  "name": "Roast chicken and ajillo sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Caprese and mango sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Eggs Benedict Bismarck sandwich",
+                  "price": 1210
+                },
+                {
+                  "name": "Smoked salmon and cream-cheese sandwich",
+                  "price": 1100
+                },
+                {
+                  "name": "Matcha soft-serve sandwich",
+                  "price": 825
+                },
+                {
+                  "name": "Milk soft-serve sandwich",
+                  "price": 825
+                },
+                {
+                  "name": "Matcha and milk soft-serve sandwich",
+                  "price": 825
+                },
+                {
+                  "name": "Matcha crème brûlée sandwich",
+                  "price": 715
+                },
+                {
+                  "name": "Mango and sweet-bean cream sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Strawberry and sweet-bean cream sandwich",
+                  "price": 990
+                },
+                {
+                  "name": "Candied sweet-potato and sweet-bean cream sandwich",
+                  "price": 990
+                }
+              ],
+              "note": "Tax included. Published branch announcement explicitly links these operator menu images. Food-and-drink set is ¥100 off; collaboration-menu applicability is not stated, so no discount is applied to collaboration items. Milk soft-serve Japanese label supersedes its duplicated English matcha label. Scheduled collaboration may replace regular selection."
+            },
+            {
+              "label": "MAO — Retro MIX cafe",
+              "url": "https://shop.anique.jp/blogs/news/mao",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Mao purple-sweet-potato open éclair",
+                  "price": 1430,
+                  "note": "Purple sweet-potato ice cream, bean paste, shiratama, whipped cream, purple sweet-potato syrup"
+                },
+                {
+                  "name": "Nanoka pudding à la mode",
+                  "price": 1430,
+                  "note": "Custard pudding, mandarin orange, corn flakes, whipped cream, cherry, caramel sauce"
+                },
+                {
+                  "name": "Otoya fish sandwich",
+                  "price": 1430,
+                  "note": "Tuna mayonnaise, cucumber, lemon syrup, black pepper"
+                },
+                {
+                  "name": "Hyakka spicy sandwich",
+                  "price": 1430,
+                  "note": "Mozzarella, paprika, pizza sauce, chili sauce, paprika powder"
+                },
+                {
+                  "name": "Kamon thorn sandwich",
+                  "price": 1430,
+                  "note": "Okara, roasted-sesame spinach, charcoal sauce, ginger"
+                },
+                {
+                  "name": "Mao poison soda",
+                  "price": 1320,
+                  "note": "Grape syrup, carbonated water, strawberry jelly, grapes"
+                },
+                {
+                  "name": "Nanoka smoothie",
+                  "price": 1430,
+                  "note": "Honey, milk, yogurt, banana"
+                },
+                {
+                  "name": "Otoya shikigami latte",
+                  "price": 1320,
+                  "note": "Black sesame latte, vanilla ice cream, raw sugar"
+                },
+                {
+                  "name": "Hyakka hot chocolate",
+                  "price": 1320,
+                  "note": "Hot chocolate, whipped cream, raspberry sauce, cinnamon/chili powder, white chocolate"
+                },
+                {
+                  "name": "Kamon Japanese matcha latte",
+                  "price": 1320,
+                  "note": "Matcha latte, hojicha ice cream, rosemary"
+                }
+              ],
+              "note": "Tax included. Drink includes fixed-character acrylic charm; one random coaster per item while stocks last. Maximum five food and five drinks per person. Second-round first-come reservation opened October 9 at 18:00, cutoff one hour before opening; walk-in only if space remains. Merchandise sale dates are not cafe service dates.",
+              "documentUrl": "https://cdn.shopify.com/s/files/1/0233/6705/7488/files/mao_cafemenu_924.png?v=1790215434"
+            }
+          ],
+          "specials": [
+            {
+              "title": "MAO — Retro MIX cafe",
+              "kind": "other",
+              "description": "Dated MAO food and drinks, food ¥1,430 and drinks ¥1,320–¥1,430 including tax.",
+              "sourceUrl": "https://shop.anique.jp/blogs/news/mao",
+              "menuLabel": "MAO — Retro MIX cafe",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-11-15",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Advance branch-specific booking; walk-in only if space remains.",
+                "Maximum five food and five drinks per person.",
+                "Items/gifts while supplies last; order cutoff is shown separately from closing."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "19:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "8F Yurakucho Marui, 2-7-1 Yurakucho, Chiyoda-ku, Tokyo",
+          "neighborhood": "Yurakucho",
+          "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/share-theatre-1-2ec076f1cb2f09e7.webp",
+            "alt": "Share CAFE théâtre — Yurakucho Marui — Planned Yurakucho theatre interior rendering; illustrative, not an opened-property photograph",
+            "credit": "Marui Group / Anique operator gallery",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/48489/356/48489-356-9f600f49a780849153d70684c5a17be3-1920x1080.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park Opens in Sakae / Hisaya-odori",
+        "description": "A planned pork-cutlet restaurant pairing tonkatsu with clay-pot rice and small side dishes.",
+        "sourceUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+        "address": "Unit 26, Central Park underground mall, 3-15-13 saki Nishiki, Naka-ku, Nagoya",
+        "productName": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park",
+        "utcStartDateTime": "2026-10-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 11 landlord announcement explicitly confirms October 29, 2026 opening and unit 26; named employer October recruitment corroborates planned opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Sakae / Hisaya-odori",
+          "Tonkatsu"
+        ],
+        "longFormSummary": "<p>A planned pork-cutlet restaurant pairing tonkatsu with clay-pot rice and small side dishes.<cite data-ref=\"https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/\"></cite></p><p>September 11 landlord announcement explicitly confirms October 29, 2026 opening and unit 26; named employer October recruitment corroborates planned opening.</p>",
+        "references": [
+          {
+            "url": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+            "title": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 landlord announcement explicitly confirms October 29, 2026 opening and unit 26; named employer October recruitment corroborates planned opening."
+          },
+          {
+            "url": "https://www.chitaka.co.jp/tonkatsu/",
+            "title": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 landlord announcement explicitly confirms October 29, 2026 opening and unit 26; named employer October recruitment corroborates planned opening."
+          },
+          {
+            "url": "https://www.chitaka.co.jp/tonkatsu/tenpo/",
+            "title": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 landlord announcement explicitly confirms October 29, 2026 opening and unit 26; named employer October recruitment corroborates planned opening."
+          },
+          {
+            "url": "https://www.chitaka.co.jp/tonkatsu/menu/",
+            "title": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park source",
+            "confidence": 90,
+            "reasoning": "September 11 landlord announcement explicitly confirms October 29, 2026 opening and unit 26; named employer October recruitment corroborates planned opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+          "menu": {
+            "pinSourceUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+            "name": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published planned branch menu",
+                "url": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tonkatsu with clay-pot rice and small side dishes",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Landlord confirms this actual menu concept but exact set names, side dishes and prices remain unpublished. Operator locator/menu currently describes Kinjo branch; its prices, dishes, old PDFs and promotions are not borrowed. Future branch page returns a failed download. Branch room photo remains unpublished; landlord meal illustration is accurately labelled."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+            "name": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Planned Monday–Saturday",
+                "hours": "11:00–21:30; last order 21:00"
+              },
+              {
+                "days": "Planned Sunday/public holiday",
+                "hours": "11:00–20:30; last order 20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.chitaka.co.jp/tonkatsu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.chitaka.co.jp/tonkatsu/tenpo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.chitaka.co.jp/tonkatsu/menu/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "central-chitaka",
+            "name": "Clay-pot Rice & Tonkatsu CHITAKA — Central Park",
+            "neighborhood": "Sakae / Hisaya-odori",
+            "cuisine": "Tonkatsu",
+            "description": "A planned pork-cutlet restaurant pairing tonkatsu with clay-pot rice and small side dishes.",
+            "address": "Unit 26, Central Park underground mall, 3-15-13 saki Nishiki, Naka-ku, Nagoya",
+            "websiteUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/central-chitaka-0-c34de51cf077c137.webp",
+            "imageCredit": "Central Park / CHITAKA landlord announcement",
+            "imageSourceUrl": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/",
+            "imageNote": "Illustrative pork-cutlet/clay-pot-rice meal from planned branch announcement; exact set name, sides and price unpublished",
+            "openingConfirmed": true,
+            "day": "2026-10-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/central-chitaka-0-c34de51cf077c137.webp",
+          "sha256": "c34de51cf077c1373daa1ea9b89d4d0b008e7ce1c012235aa0beb0b2a2ce64f2",
+          "width": 300,
+          "height": 300,
+          "credit": "Central Park / CHITAKA landlord announcement",
+          "note": "Illustrative pork-cutlet/clay-pot-rice meal from planned branch announcement; exact set name, sides and price unpublished",
+          "sourcePage": "https://www.centralpark.co.jp/event/%e5%9c%9f%e9%8d%8b%e3%81%94%e3%81%af%e3%82%93x%e3%81%a8%e3%82%93%e3%81%8b%e3%81%a4%e3%80%80chitaka%e3%80%8010%e6%9c%88%e4%b8%8b%e6%97%acopen%ef%bc%81/"
+        }
+      ]
+    }
+  ]
+}

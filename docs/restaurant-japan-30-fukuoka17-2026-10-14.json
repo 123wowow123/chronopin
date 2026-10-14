@@ -1,0 +1,1220 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "fukuoka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shokudo Hitonitachi Opens in Watanabe-dori / Ura-Tenjin",
+        "description": "A new reservation-only breakfast restaurant serving four simmered-fish sets in a renovated old house.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000009.000166300.html",
+        "address": "5-5-5 Watanabe-dori, Chuo-ku, Fukuoka",
+        "productName": "Shokudo Hitonitachi",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 17 operator release explicitly confirms October 1, 2026; October 5/7 UMAGA branch visit reports actual opening and prices. Booking page corroborates current reservation-only operation and restrictions.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Watanabe-dori / Ura-Tenjin",
+          "Japanese breakfast"
+        ],
+        "longFormSummary": "<p>A new reservation-only breakfast restaurant serving four simmered-fish sets in a renovated old house.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000009.000166300.html\"></cite></p><p>September 17 operator release explicitly confirms October 1, 2026; October 5/7 UMAGA branch visit reports actual opening and prices. Booking page corroborates current reservation-only operation and restrictions.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000009.000166300.html",
+            "title": "Shokudo Hitonitachi source",
+            "confidence": 90,
+            "reasoning": "September 17 operator release explicitly confirms October 1, 2026; October 5/7 UMAGA branch visit reports actual opening and prices. Booking page corroborates current reservation-only operation and restrictions."
+          },
+          {
+            "url": "https://umaga.net/shop/94977/",
+            "title": "Shokudo Hitonitachi source",
+            "confidence": 90,
+            "reasoning": "September 17 operator release explicitly confirms October 1, 2026; October 5/7 UMAGA branch visit reports actual opening and prices. Booking page corroborates current reservation-only operation and restrictions."
+          },
+          {
+            "url": "https://devi-log.net/post-44420/",
+            "title": "Shokudo Hitonitachi source",
+            "confidence": 90,
+            "reasoning": "September 17 operator release explicitly confirms October 1, 2026; October 5/7 UMAGA branch visit reports actual opening and prices. Booking page corroborates current reservation-only operation and restrictions."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/hitonitachi/reserve/landing",
+            "title": "Shokudo Hitonitachi source",
+            "confidence": 90,
+            "reasoning": "September 17 operator release explicitly confirms October 1, 2026; October 5/7 UMAGA branch visit reports actual opening and prices. Booking page corroborates current reservation-only operation and restrictions."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/hitonitachi",
+            "title": "Shokudo Hitonitachi source",
+            "confidence": 90,
+            "reasoning": "September 17 operator release explicitly confirms October 1, 2026; October 5/7 UMAGA branch visit reports actual opening and prices. Booking page corroborates current reservation-only operation and restrictions."
+          },
+          {
+            "url": "https://www.instagram.com/shokudo.hitonitachi.1001/",
+            "title": "Shokudo Hitonitachi source",
+            "confidence": 90,
+            "reasoning": "September 17 operator release explicitly confirms October 1, 2026; October 5/7 UMAGA branch visit reports actual opening and prices. Booking page corroborates current reservation-only operation and restrictions."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000009.000166300.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000009.000166300.html",
+            "name": "Shokudo Hitonitachi",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Verified branch breakfast menu",
+                "url": "https://umaga.net/shop/94977/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Miso-simmered mackerel breakfast set",
+                    "price": 1600
+                  },
+                  {
+                    "name": "Thick-cut yellowtail and daikon breakfast set",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Silver flounder simmered breakfast set",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Rosy seabass simmered breakfast set",
+                    "price": 3800
+                  },
+                  {
+                    "name": "Silver salmon with mentaiko",
+                    "price": 480
+                  },
+                  {
+                    "name": "Squid with mentaiko",
+                    "price": 480
+                  },
+                  {
+                    "name": "Grilled mackerel with mentaiko",
+                    "price": 480
+                  },
+                  {
+                    "name": "Extra egg",
+                    "price": 200
+                  },
+                  {
+                    "name": "Itookashi breakfast craft beer",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Craft chuhai",
+                    "price": 780
+                  },
+                  {
+                    "name": "Nonalcoholic drink",
+                    "price": 450,
+                    "note": "From; exact selection not named"
+                  }
+                ],
+                "note": "Tax included under UMAGA’s explicit tax policy; operator opening release corroborates the four fish sets. Set includes side dishes, soup, pickles and clay-pot white rice; rice refills are free. Fifty-minute seating, entry exactly at booked time. Cash and credit cards only. Children must be able to eat the same meal as adults. Contact the restaurant about arrangements for seven or more; booking page says “2席” and the exact booking-unit meaning needs confirmation. More than fifteen minutes late without contact may be cancelled. Extra-egg ¥200 is explicit; other supplements are not inferred from photographs."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000009.000166300.html",
+            "name": "Shokudo Hitonitachi",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.instagram.com/shokudo.hitonitachi.1001/",
+            "phone": "092-401-9001",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday",
+                "hours": "08:00–14:00; last order 13:00; reservation required, fifty-minute seating"
+              },
+              {
+                "days": "Sunday",
+                "hours": "Closed; check irregular holiday closures"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/shokudo.hitonitachi.1001/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000009.000166300.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://umaga.net/shop/94977/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://devi-log.net/post-44420/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/hitonitachi/reserve/landing"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/hitonitachi"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/hitonitachi/reserve/landing"
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "fukuoka17-hitoni-release",
+            "name": "Shokudo Hitonitachi",
+            "neighborhood": "Watanabe-dori / Ura-Tenjin",
+            "cuisine": "Japanese breakfast",
+            "description": "A new reservation-only breakfast restaurant serving four simmered-fish sets in a renovated old house.",
+            "address": "5-5-5 Watanabe-dori, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.instagram.com/shokudo.hitonitachi.1001/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-hitoni-release-4-334f85599bc8736e.webp",
+            "imageCredit": "Devi Takahashi / UMAGA, October 2026 branch visit",
+            "imageSourceUrl": "https://umaga.net/shop/94977/",
+            "imageNote": "Actual Hitonitachi exterior",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-hitoni-release-4-334f85599bc8736e.webp",
+          "sha256": "334f85599bc8736ebf85c4ff7413600745e46d78262dbc3d72aed72f3937390f",
+          "width": 800,
+          "height": 533,
+          "credit": "Devi Takahashi / UMAGA, October 2026 branch visit",
+          "note": "Actual Hitonitachi exterior",
+          "sourcePage": "https://umaga.net/shop/94977/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-hitoni-release-5-b4b70f112b916d28.webp",
+          "sha256": "b4b70f112b916d2821353e1d6242664336416776be610a5c8a179d2a2758df10",
+          "width": 800,
+          "height": 533,
+          "credit": "Devi Takahashi / UMAGA, October 2026 branch visit",
+          "note": "Actual Hitonitachi counter dining room",
+          "sourcePage": "https://umaga.net/shop/94977/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-hitoni-release-8-79641e93f12a40e2.webp",
+          "sha256": "79641e93f12a40e28ec9e1cfcc107a0fc1361a9072208d670e3144c414f917b9",
+          "width": 800,
+          "height": 533,
+          "credit": "Devi Takahashi / UMAGA, October 2026 branch visit",
+          "note": "Actual Hitonitachi printed four-fish menu",
+          "sourcePage": "https://umaga.net/shop/94977/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Robata Izakaya Egoya — Akasaka Opens in Akasaka",
+        "description": "A new robata restaurant with charcoal-grilled fish, chicken-broth oden and clay-pot rice.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ004698501/",
+        "address": "2F, 1-5-21 Akasaka, Chuo-ku, Fukuoka",
+        "productName": "Robata Izakaya Egoya — Akasaka",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Akasaka",
+          "Robata / Izakaya"
+        ],
+        "longFormSummary": "<p>A new robata restaurant with charcoal-grilled fish, chicken-broth oden and clay-pot rice.<cite data-ref=\"https://www.hotpepper.jp/strJ004698501/\"></cite></p><p>Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ004698501/",
+            "title": "Robata Izakaya Egoya — Akasaka source",
+            "confidence": 90,
+            "reasoning": "Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698501/food/",
+            "title": "Robata Izakaya Egoya — Akasaka source",
+            "confidence": 90,
+            "reasoning": "Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698501/drink/",
+            "title": "Robata Izakaya Egoya — Akasaka source",
+            "confidence": 90,
+            "reasoning": "Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698501/course_cnod01/",
+            "title": "Robata Izakaya Egoya — Akasaka source",
+            "confidence": 90,
+            "reasoning": "Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698501/map/",
+            "title": "Robata Izakaya Egoya — Akasaka source",
+            "confidence": 90,
+            "reasoning": "Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698501/photo/",
+            "title": "Robata Izakaya Egoya — Akasaka source",
+            "confidence": 90,
+            "reasoning": "Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima."
+          },
+          {
+            "url": "https://tabelog.com/fukuoka/A4001/A400104/40075062/",
+            "title": "Robata Izakaya Egoya — Akasaka source",
+            "confidence": 90,
+            "reasoning": "Branch-managed October 7 food menu explicitly states October 1, 2026 opening, with October 2/8 customer visits and the live booking calendar corroborating actual service. This is the new Fukuoka branch, separate from Kagoshima."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ004698501/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698501/",
+            "name": "Robata Izakaya Egoya — Akasaka",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Akasaka branch food menu",
+                "url": "https://www.hotpepper.jp/strJ004698501/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "長浜鮮魚市場直送刺身5種盛　1人前",
+                    "price": 1098,
+                    "note": "2人前2,088円(税込)"
+                  },
+                  {
+                    "name": "ごまカンパチ",
+                    "price": 1098
+                  },
+                  {
+                    "name": "手作り炙り〆鯖",
+                    "price": 1208
+                  },
+                  {
+                    "name": "栄養満点アボカドのお刺身",
+                    "price": 548
+                  },
+                  {
+                    "name": "手作り肉味噌とパリパリ生野菜",
+                    "price": 548
+                  },
+                  {
+                    "name": "鯛出汁枝豆",
+                    "price": 548
+                  },
+                  {
+                    "name": "マスタードとチーズのポテトサラダ",
+                    "price": 713
+                  },
+                  {
+                    "name": "焼酎と 貝の旨煮",
+                    "price": 1098
+                  },
+                  {
+                    "name": "箸休めに 一夜漬けちくわきゅうり",
+                    "price": 548
+                  },
+                  {
+                    "name": "シャキシャキわさびの板わさ",
+                    "price": 548
+                  },
+                  {
+                    "name": "日本酒と ホタルイカ塩麹漬け",
+                    "price": 658
+                  },
+                  {
+                    "name": "ワインと チーズ豆腐",
+                    "price": 878
+                  },
+                  {
+                    "name": "名物大トロ鰯",
+                    "price": 1098,
+                    "note": "絶対に食べて欲しい一品！原始焼きで三十分程かけてじっくり焼き上げます！当店自慢の一品はお一人様一尾おすすめです。"
+                  },
+                  {
+                    "name": "江口漁港直送 月日貝のバター醤油焼き",
+                    "price": 548
+                  },
+                  {
+                    "name": "名物トロ鯖の開き",
+                    "price": 1648,
+                    "note": "ハーフ878円(税込)"
+                  },
+                  {
+                    "name": "銀ダラ味噌漬け",
+                    "price": 1648
+                  },
+                  {
+                    "name": "明太ししゃも2尾",
+                    "price": 548
+                  },
+                  {
+                    "name": "鹿児島枕崎産鰹のはらがわ",
+                    "price": 658
+                  },
+                  {
+                    "name": "天使の海老",
+                    "price": 548
+                  },
+                  {
+                    "name": "天使の海老黒豚巻き",
+                    "price": 768
+                  },
+                  {
+                    "name": "知覧鶏骨付き炭火焼",
+                    "price": 1098
+                  },
+                  {
+                    "name": "ゆうたの塩つくね",
+                    "price": 383
+                  },
+                  {
+                    "name": "黒豚西京焼き串",
+                    "price": 438
+                  },
+                  {
+                    "name": "黒毛和牛もも炭火焼",
+                    "price": 2088
+                  },
+                  {
+                    "name": "牛タン炭火焼",
+                    "price": 2088
+                  },
+                  {
+                    "name": "長芋牡蠣醤油焼き",
+                    "price": 658
+                  },
+                  {
+                    "name": "九重産肉厚しいたけチーズがけ",
+                    "price": 548
+                  },
+                  {
+                    "name": "焼き長茄子",
+                    "price": 658
+                  },
+                  {
+                    "name": "宇田商店のさつま揚げ （豆腐＆いわし）",
+                    "price": 548
+                  },
+                  {
+                    "name": "きびなご一夜干し",
+                    "price": 658
+                  },
+                  {
+                    "name": "黄金えいひれ",
+                    "price": 658
+                  },
+                  {
+                    "name": "ちょっとリッチなチータラ 3枚",
+                    "price": 658
+                  },
+                  {
+                    "name": "大根",
+                    "price": 218
+                  },
+                  {
+                    "name": "おでん5種盛り",
+                    "price": 988
+                  },
+                  {
+                    "name": "大根からすみ",
+                    "price": 438
+                  },
+                  {
+                    "name": "卵",
+                    "price": 218
+                  },
+                  {
+                    "name": "三原豆腐店の焼き厚揚げ",
+                    "price": 218
+                  },
+                  {
+                    "name": "志岐蒲鉾本店のちくわ",
+                    "price": 218
+                  },
+                  {
+                    "name": "玉こんにゃく",
+                    "price": 218
+                  },
+                  {
+                    "name": "宇田商店のさつま揚げ",
+                    "price": 273
+                  },
+                  {
+                    "name": "黒豚なんこつ",
+                    "price": 438
+                  },
+                  {
+                    "name": "黒豚しゃぶ",
+                    "price": 878
+                  },
+                  {
+                    "name": "えご家のチキン南蛮",
+                    "price": 878,
+                    "note": "ハーフ548円(税込)"
+                  },
+                  {
+                    "name": "天然の釜だき海塩で食べる鶏たたき",
+                    "price": 988,
+                    "note": "ハーフ548円(税込)"
+                  },
+                  {
+                    "name": "手羽先一夜干し唐揚げ 2本",
+                    "price": 548
+                  },
+                  {
+                    "name": "蒸籠で黒豚キムチ",
+                    "price": 988
+                  },
+                  {
+                    "name": "名物大根のから揚げ",
+                    "price": 658,
+                    "note": "ハーフ438円(税込)"
+                  },
+                  {
+                    "name": "きびなごの天ぷら",
+                    "price": 658
+                  },
+                  {
+                    "name": "有機ジャガイモの生ポテトフライ 塩",
+                    "price": 658,
+                    "note": "からすみ878円(税込)"
+                  },
+                  {
+                    "name": "さきいかの天ぷら",
+                    "price": 658
+                  },
+                  {
+                    "name": "するめいか肝味噌陶板焼き",
+                    "price": 1318
+                  },
+                  {
+                    "name": "海老と山芋の出汁醤油焼き",
+                    "price": 1098
+                  },
+                  {
+                    "name": "じゅんの海鮮グラタン",
+                    "price": 1208
+                  },
+                  {
+                    "name": "かしわ土鍋ご飯　1合",
+                    "price": 1758,
+                    "note": "1合半2,308円(税込)"
+                  },
+                  {
+                    "name": "サーモンといくらの土鍋ごはん　1合",
+                    "price": 2638,
+                    "note": "1合半3,848円(税込)"
+                  },
+                  {
+                    "name": "焼きトロ鯖と明太子の土鍋ご飯　1合",
+                    "price": 2198,
+                    "note": "1合半2,858円(税込)"
+                  },
+                  {
+                    "name": "炊きたてにぎりたて塩むすび",
+                    "price": 328
+                  },
+                  {
+                    "name": "しじみのお味噌汁",
+                    "price": 218
+                  },
+                  {
+                    "name": "黒糖プリン",
+                    "price": 328
+                  },
+                  {
+                    "name": "ともちんの抹茶バスクチーズ",
+                    "price": 548
+                  },
+                  {
+                    "name": "ほうじ茶アイス",
+                    "price": 548
+                  }
+                ],
+                "note": "Sixty-one distinct priced food entries, tax included, exact Japanese names preserved. Half portions, larger rice portions and other published variants remain in each item note. Sardine and clay-pot rice take about thirty minutes. National/sister-branch dishes and ratings are not substituted."
+              },
+              {
+                "label": "Akasaka branch drink menu",
+                "url": "https://www.hotpepper.jp/strJ004698501/drink/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "ハイボール（ブラックニッカ）",
+                    "price": 548
+                  },
+                  {
+                    "name": "黒川農園デコポンハイボール",
+                    "price": 713
+                  },
+                  {
+                    "name": "黒川農園日向夏ハイボール",
+                    "price": 713
+                  },
+                  {
+                    "name": "博多クラフトコーラハイボール",
+                    "price": 878
+                  },
+                  {
+                    "name": "ジンジャーハイボール",
+                    "price": 658
+                  },
+                  {
+                    "name": "岩井（本坊酒造）",
+                    "price": 768
+                  },
+                  {
+                    "name": "日置（西酒造）",
+                    "price": 768
+                  },
+                  {
+                    "name": "菱田（天星酒造）",
+                    "price": 1098
+                  },
+                  {
+                    "name": "竹鶴（ピュアモルト）",
+                    "price": 1208
+                  },
+                  {
+                    "name": "嘉之介（小正醸造）",
+                    "price": 1648
+                  },
+                  {
+                    "name": "御岳（西酒造）",
+                    "price": 2088
+                  },
+                  {
+                    "name": "前割り焼酎",
+                    "price": 658
+                  },
+                  {
+                    "name": "黒伊佐錦（大口酒造）",
+                    "price": 548
+                  },
+                  {
+                    "name": "島美人（長島研醸）",
+                    "price": 548
+                  },
+                  {
+                    "name": "小鹿（小鹿酒造）",
+                    "price": 548
+                  },
+                  {
+                    "name": "赤猿（小正醸造）",
+                    "price": 548
+                  },
+                  {
+                    "name": "三岳（三岳酒造）",
+                    "price": 658
+                  },
+                  {
+                    "name": "だいやめ（濱田酒造）",
+                    "price": 658
+                  },
+                  {
+                    "name": "まんこい（弥生焼酎醸造所）（黒糖）",
+                    "price": 658
+                  },
+                  {
+                    "name": "神の河（薩摩酒造）（麦）",
+                    "price": 548
+                  },
+                  {
+                    "name": "鳥飼（鳥飼酒造）（米）",
+                    "price": 878
+                  },
+                  {
+                    "name": "glow ep5（若潮酒造）",
+                    "price": 768,
+                    "note": "◇イチオシ：ソーダ割り"
+                  },
+                  {
+                    "name": "アップルランス（大海酒造）",
+                    "price": 878,
+                    "note": "◇イチオシ：ソーダ割り・ロック"
+                  },
+                  {
+                    "name": "ベニハルカ（丸西酒造）",
+                    "price": 768,
+                    "note": "◇イチオシ：ロック・お湯割り"
+                  },
+                  {
+                    "name": "がらるっど（国分酒造）",
+                    "price": 768,
+                    "note": "◇イチオシ：ロック・ソーダ割り"
+                  },
+                  {
+                    "name": "農家の嫁（霧島町蒸留所）",
+                    "price": 878,
+                    "note": "◇イチオシ：お湯割り・ロック"
+                  },
+                  {
+                    "name": "鶴見（大石酒造）",
+                    "price": 878,
+                    "note": "◇イチオシ：お湯割り"
+                  },
+                  {
+                    "name": "黒胡麻ミルク",
+                    "price": 658
+                  },
+                  {
+                    "name": "黒胡麻コーヒー",
+                    "price": 658
+                  },
+                  {
+                    "name": "澤屋まつもと（松本酒造/京都）純米酒　グラス",
+                    "price": 768,
+                    "note": "一合1,428円(税込)　イチオシ・・・常温"
+                  },
+                  {
+                    "name": "孝の司（柴田酒造場/愛知）純米吟醸酒　グラス",
+                    "price": 878,
+                    "note": "一合1,648円(税込)"
+                  },
+                  {
+                    "name": "紀土-KID-（平和酒造/和歌山）純米大吟醸　グラス",
+                    "price": 878,
+                    "note": "一合1,648円(税込)"
+                  },
+                  {
+                    "name": "鍋島（富久千代酒造/佐賀）特別純米酒　グラス",
+                    "price": 1098,
+                    "note": "一合2,088円(税込)"
+                  },
+                  {
+                    "name": "田中六五（白糸酒造/福岡）糸島産山田錦純米酒　グラス",
+                    "price": 988,
+                    "note": "一合1,978円(税込)"
+                  },
+                  {
+                    "name": "天賦（西酒造/鹿児島）純米吟醸　グラス",
+                    "price": 988,
+                    "note": "一合1,978円(税込)"
+                  },
+                  {
+                    "name": "霧島水出し煎茶割り",
+                    "price": 658
+                  },
+                  {
+                    "name": "霧島抹茶割り",
+                    "price": 658
+                  },
+                  {
+                    "name": "有機ほうじ茶割り",
+                    "price": 658
+                  },
+                  {
+                    "name": "黒烏龍茶割り",
+                    "price": 658
+                  },
+                  {
+                    "name": "カシスキャロット",
+                    "price": 768,
+                    "note": "園山農園の有機人参ジュースを使用！"
+                  },
+                  {
+                    "name": "ぺシェキャロット",
+                    "price": 768,
+                    "note": "園山農園の有機人参ジュースを使用！"
+                  },
+                  {
+                    "name": "自家製レモンサワー",
+                    "price": 658
+                  },
+                  {
+                    "name": "生しぼり無糖レモンサワー",
+                    "price": 658
+                  },
+                  {
+                    "name": "まんこい黒糖レモンサワー",
+                    "price": 658
+                  },
+                  {
+                    "name": "糸島だいだいサワー",
+                    "price": 658
+                  },
+                  {
+                    "name": "博多いちじくサワー",
+                    "price": 768
+                  },
+                  {
+                    "name": "幻の柑橘 木酢シトラスサワー",
+                    "price": 658
+                  },
+                  {
+                    "name": "熊本産トマト使用 トマトサワー",
+                    "price": 658
+                  },
+                  {
+                    "name": "どぶろくサワー",
+                    "price": 878
+                  },
+                  {
+                    "name": "博多クラフトコーラサワー",
+                    "price": 878
+                  },
+                  {
+                    "name": "ベアーズブック  ソーダ",
+                    "price": 768,
+                    "note": "トニック933円(税込)"
+                  },
+                  {
+                    "name": "akayane 山椒   ソーダ",
+                    "price": 878,
+                    "note": "トニック1,043円(税込)"
+                  },
+                  {
+                    "name": "濃厚梅酒",
+                    "price": 548
+                  },
+                  {
+                    "name": "鳳凰美田　もも",
+                    "price": 768
+                  },
+                  {
+                    "name": "菱田の梅酒",
+                    "price": 1098
+                  },
+                  {
+                    "name": "繁桝の純米梅酒",
+                    "price": 658
+                  },
+                  {
+                    "name": "ワイン(赤・白)　各",
+                    "price": 988
+                  },
+                  {
+                    "name": "デキャンタ",
+                    "price": 2748
+                  },
+                  {
+                    "name": "お祝いスパークリングワイン",
+                    "price": 10998
+                  },
+                  {
+                    "name": "アサヒスーパードライ生ビール",
+                    "price": 658
+                  },
+                  {
+                    "name": "アサヒスーパードライ小生ビール",
+                    "price": 438
+                  },
+                  {
+                    "name": "アサヒ瓶ビール",
+                    "price": 878
+                  },
+                  {
+                    "name": "赤星瓶ビール",
+                    "price": 878
+                  },
+                  {
+                    "name": "霧島抹茶ビール",
+                    "price": 768
+                  },
+                  {
+                    "name": "日向夏ビール",
+                    "price": 768
+                  },
+                  {
+                    "name": "アサヒノンアル瓶ビール",
+                    "price": 548
+                  },
+                  {
+                    "name": "黒川農園デコポンスカッシュ",
+                    "price": 658
+                  },
+                  {
+                    "name": "黒川農園日向夏スカッシュ",
+                    "price": 658
+                  },
+                  {
+                    "name": "博多クラフトコーラ",
+                    "price": 768
+                  },
+                  {
+                    "name": "園山農園の有機にんじんジュース",
+                    "price": 658
+                  },
+                  {
+                    "name": "霧島水出し煎茶",
+                    "price": 548
+                  },
+                  {
+                    "name": "ほうじ茶",
+                    "price": 548
+                  },
+                  {
+                    "name": "黒烏龍茶",
+                    "price": 548
+                  },
+                  {
+                    "name": "グレープフルーツジュース",
+                    "price": 438
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 438
+                  },
+                  {
+                    "name": "炭酸水",
+                    "price": 328
+                  }
+                ],
+                "note": "Seventy-six distinct priced drinks, tax included, exact operator names retained. Ordinary prices; no happy-hour or discount is inferred."
+              },
+              {
+                "label": "Seven-part course with 150-minute drink plan",
+                "url": "https://www.hotpepper.jp/strJ004698501/course_cnod01/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Seven-part course with 150-minute drink plan",
+                    "price": 5500
+                  },
+                  {
+                    "name": "Three starters: organic carrot juice, homemade tofu and simmered shellfish",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Seven-part course with 150-minute drink plan; no separate item price published"
+                  },
+                  {
+                    "name": "Five-kind fresh sashimi assortment",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Seven-part course with 150-minute drink plan; no separate item price published"
+                  },
+                  {
+                    "name": "Tsukihigai scallop with butter and soy sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Seven-part course with 150-minute drink plan; no separate item price published"
+                  },
+                  {
+                    "name": "Chicken-broth oden: egg, konjac balls and black-pork shabu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Seven-part course with 150-minute drink plan; no separate item price published"
+                  },
+                  {
+                    "name": "Charcoal-grilled otoro iwashi sardine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Seven-part course with 150-minute drink plan; no separate item price published"
+                  },
+                  {
+                    "name": "Deep-fried daikon",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Seven-part course with 150-minute drink plan; no separate item price published"
+                  },
+                  {
+                    "name": "Chicken clay-pot rice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Seven-part course with 150-minute drink plan; no separate item price published"
+                  }
+                ],
+                "note": "Tax included. Two–nineteen diners, booking by 22:00 the preceding day; selectable starts 17:00–22:00 remain subject to actual branch closures. Drinks last order thirty minutes before the 150-minute end. Asahi Super Dry beer is one per person, not unlimited; other named drink categories follow the published plan and empty-glass exchange rule. Ordinary ongoing course, not a dated or discounted Special. Current October 14 course page supersedes the old overview’s “no free-flow” field. Seat-only pages conflict between two hours and two-and-a-half hours; use your selected reservation plan."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698501/",
+            "name": "Robata Izakaya Egoya — Akasaka",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004698501/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Monday, Tuesday, Thursday–Saturday",
+                "hours": "17:00–24:00; food last order 23:00, drinks 23:30"
+              },
+              {
+                "days": "Wednesday, Sunday",
+                "hours": "Closed; current October calendar also closes October 19"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hotpepper.jp/strJ004698501/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698501/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698501/drink/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698501/course_cnod01/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698501/map/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698501/photo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/fukuoka/A4001/A400104/40075062/"
+              }
+            ],
+            "reservationUrl": "https://www.hotpepper.jp/strJ004698501/yoyaku/",
+            "hoursNote": "Wednesday/Sunday normally closed; current calendar also marks October 19 closed. Confirm exceptional closures and your reservation plan. Gallery room views are placeholder cartoons; current property-photo gap remains. One exact image is shared with Kagoshima and excluded; menu illustrations retain accurate captions."
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "fukuoka17-egoya",
+            "name": "Robata Izakaya Egoya — Akasaka",
+            "neighborhood": "Akasaka",
+            "cuisine": "Robata / Izakaya",
+            "description": "A new robata restaurant with charcoal-grilled fish, chicken-broth oden and clay-pot rice.",
+            "address": "2F, 1-5-21 Akasaka, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004698501/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-egoya-6-5e6d237f9aafc82b.webp",
+            "imageCredit": "Robata Izakaya Egoya / owner-managed HotPepper branch gallery",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004698501/photo/",
+            "imageNote": "Operator-labelled otoro iwashi grilled sardine menu photograph; illustrative, not a branch-room photograph",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-egoya-6-5e6d237f9aafc82b.webp",
+          "sha256": "5e6d237f9aafc82be997886c6469c9910f5db05b5c824d45fdc14d2c25240eff",
+          "width": 480,
+          "height": 479,
+          "credit": "Robata Izakaya Egoya / owner-managed HotPepper branch gallery",
+          "note": "Operator-labelled otoro iwashi grilled sardine menu photograph; illustrative, not a branch-room photograph",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698501/photo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-egoya-17-fce76b2e70dd5178.webp",
+          "sha256": "fce76b2e70dd5178c16fec0cf2009f89e166df50fdc50ae037ca9cc824738cd5",
+          "width": 480,
+          "height": 480,
+          "credit": "Robata Izakaya Egoya / owner-managed HotPepper branch gallery",
+          "note": "Operator-labelled brown-sugar pudding menu photograph; illustrative, not a branch-room photograph",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698501/photo/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Comenocoto — Tenjin Building Opens in Tenjin",
+        "description": "A new takeaway rice-ball counter using Hagama-cooked Saga Koshihikari and Ariake nori.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+        "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+        "productName": "Comenocoto — Tenjin Building",
+        "utcStartDateTime": "2026-10-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 15 Sawarise operator branch release explicitly confirms October 2, 2026 opening and branch address/hours. Branch-specific local coverage corroborates; older future-tense reposts are not used to invent another opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Tenjin",
+          "Rice balls / Takeaway"
+        ],
+        "longFormSummary": "<p>A new takeaway rice-ball counter using Hagama-cooked Saga Koshihikari and Ariake nori.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000170.000101757.html\"></cite></p><p>September 15 Sawarise operator branch release explicitly confirms October 2, 2026 opening and branch address/hours. Branch-specific local coverage corroborates; older future-tense reposts are not used to invent another opening date.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "title": "Comenocoto — Tenjin Building source",
+            "confidence": 90,
+            "reasoning": "September 15 Sawarise operator branch release explicitly confirms October 2, 2026 opening and branch address/hours. Branch-specific local coverage corroborates; older future-tense reposts are not used to invent another opening date."
+          },
+          {
+            "url": "https://fanfun.jp/331094/",
+            "title": "Comenocoto — Tenjin Building source",
+            "confidence": 90,
+            "reasoning": "September 15 Sawarise operator branch release explicitly confirms October 2, 2026 opening and branch address/hours. Branch-specific local coverage corroborates; older future-tense reposts are not used to invent another opening date."
+          },
+          {
+            "url": "https://www.instagram.com/comenocoto/",
+            "title": "Comenocoto — Tenjin Building source",
+            "confidence": 90,
+            "reasoning": "September 15 Sawarise operator branch release explicitly confirms October 2, 2026 opening and branch address/hours. Branch-specific local coverage corroborates; older future-tense reposts are not used to invent another opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "name": "Comenocoto — Tenjin Building",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published branch rice-ball menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kishu Nanko plum rice ball",
+                    "price": 340
+                  },
+                  {
+                    "name": "Garlic meat-miso and egg-yolk rice ball",
+                    "price": 390
+                  },
+                  {
+                    "name": "Chicken rice ball",
+                    "price": 290,
+                    "note": "Supervised by same-group ITARU; this is the Comenocoto published item, not an imported ITARU menu"
+                  },
+                  {
+                    "name": "Spicy cod-roe rice ball",
+                    "price": 340
+                  },
+                  {
+                    "name": "Shrimp-tempura rice ball",
+                    "price": 390,
+                    "note": "Two shrimp"
+                  },
+                  {
+                    "name": "Dashi broth",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fried chicken",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Five rice-ball prices are explicitly tax included in the operator branch release. Broth and fried chicken are also explicitly announced without prices, so missing prices remain visible. Takeaway only, Monday–Saturday lunch hours; Sunday/public holiday closed. Operator Instagram fetch is an empty shell; no invented current offer, extra filling or new price. Accessible official release gallery supplies illustrative food photographs and an opening graphic, but no current storefront photograph."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "name": "Comenocoto — Tenjin Building",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.instagram.com/comenocoto/",
+            "phone": "070-8819-1059",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday",
+                "hours": "11:00–15:00; takeaway only"
+              },
+              {
+                "days": "Sunday and public holidays",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/comenocoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://fanfun.jp/331094/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "fukuoka17-kome-release",
+            "name": "Comenocoto — Tenjin Building",
+            "neighborhood": "Tenjin",
+            "cuisine": "Rice balls / Takeaway",
+            "description": "A new takeaway rice-ball counter using Hagama-cooked Saga Koshihikari and Ariake nori.",
+            "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.instagram.com/comenocoto/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+            "imageCredit": "Sawarise / Comenocoto operator release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "imageNote": "Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+            "openingConfirmed": true,
+            "day": "2026-10-02"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+          "sha256": "6341f872659bee5ea2670137ffa46df48e3f400892544552b5d730b11f46ca9f",
+          "width": 1200,
+          "height": 900,
+          "credit": "Sawarise / Comenocoto operator release",
+          "note": "Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-6-8c054e028545d718.webp",
+          "sha256": "8c054e028545d718c98264638fb44c0afc8333330e180ecf54e16420519200a1",
+          "width": 1200,
+          "height": 900,
+          "credit": "Sawarise / Comenocoto operator release",
+          "note": "Operator-labelled spicy-cod-roe rice ball",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-7-66a3352299081fd7.webp",
+          "sha256": "66a3352299081fd7330e47a004d41d39f2b8cf08b643bd892384c0217eb96300",
+          "width": 1200,
+          "height": 900,
+          "credit": "Sawarise / Comenocoto operator release",
+          "note": "Operator-labelled shrimp-tempura rice ball",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+        }
+      ]
+    }
+  ]
+}
