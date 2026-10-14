@@ -1,0 +1,1392 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "tokyo",
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "China Blue — Tokyo restaurant guide",
+        "description": "A dated Shanghai-crab tasting course, ¥28,000 including tax and service.",
+        "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+        "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+        "productName": "China Blue",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Shiodome",
+          "Chinese"
+        ],
+        "longFormSummary": "<p>A dated Shanghai-crab tasting course, ¥28,000 including tax and service.<cite data-ref=\"https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+            "title": "China Blue source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunch-dinner/chinablue-winter",
+            "title": "China Blue source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "menu": {
+            "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+            "name": "China Blue",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Shanghai crab course",
+                "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunch-dinner/chinablue-winter",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Shanghai crab course",
+                    "price": 28000
+                  },
+                  {
+                    "name": "上海蟹の甲羅蒸し",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shanghai crab course; no separate item price published"
+                  },
+                  {
+                    "name": "松茸と鮑のすましスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shanghai crab course; no separate item price published"
+                  },
+                  {
+                    "name": "金目鯛の上湯煮込み",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shanghai crab course; no separate item price published"
+                  },
+                  {
+                    "name": "海老のXO醤炒め",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shanghai crab course; no separate item price published"
+                  },
+                  {
+                    "name": "上海蟹のリゾット仕立て",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shanghai crab course; no separate item price published"
+                  }
+                ],
+                "note": "Tax and service included; lunch last order 14:00, dinner 21:00. Ingredients and dishes may change with supply."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+            "name": "China Blue",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+            "phone": "03-6388-8745",
+            "openingHours": [],
+            "detailsSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunch-dinner/chinablue-winter"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "chinablue",
+            "name": "China Blue",
+            "neighborhood": "Shiodome",
+            "cuisine": "Chinese",
+            "description": "A dated Shanghai-crab tasting course, ¥28,000 including tax and service.",
+            "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+            "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/chinablue-0-6aaace5e66dc6c71.webp",
+            "imageCredit": "Conrad Tokyo",
+            "imageSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+            "imageNote": "Operator photograph of this restaurant interior"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/chinablue-0-6aaace5e66dc6c71.webp",
+          "sha256": "6aaace5e66dc6c715c16aa753178803467ec53373bd44596e0dd04e69f088bdb",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Tokyo",
+          "note": "Operator photograph of this restaurant interior",
+          "sourcePage": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/chinablue-1-94a1337c22c59ad1.webp",
+          "sha256": "94a1337c22c59ad1bd5c331d677e062bea89c37d111bc0f3bb02dabf2462e5c2",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Tokyo",
+          "note": "Operator photograph of this restaurant interior",
+          "sourcePage": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "name": "China Blue",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Shanghai crab course",
+              "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunch-dinner/chinablue-winter",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Shanghai crab course",
+                  "price": 28000
+                },
+                {
+                  "name": "上海蟹の甲羅蒸し",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shanghai crab course; no separate item price published"
+                },
+                {
+                  "name": "松茸と鮑のすましスープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shanghai crab course; no separate item price published"
+                },
+                {
+                  "name": "金目鯛の上湯煮込み",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shanghai crab course; no separate item price published"
+                },
+                {
+                  "name": "海老のXO醤炒め",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shanghai crab course; no separate item price published"
+                },
+                {
+                  "name": "上海蟹のリゾット仕立て",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shanghai crab course; no separate item price published"
+                }
+              ],
+              "note": "Tax and service included; lunch last order 14:00, dinner 21:00. Ingredients and dishes may change with supply."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Shanghai crab course",
+              "kind": "other",
+              "description": "A dated Shanghai-crab tasting course, ¥28,000 including tax and service.",
+              "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunch-dinner/chinablue-winter",
+              "menuLabel": "Shanghai crab course",
+              "discounted": false,
+              "validFrom": "2026-11-01",
+              "validThrough": "2026-12-10",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included; lunch last order 14:00, dinner 21:00. Ingredients and dishes may change with supply."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "14:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+          "neighborhood": "Shiodome",
+          "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/chinablue-0-6aaace5e66dc6c71.webp",
+            "alt": "China Blue — Operator photograph of this restaurant interior",
+            "credit": "Conrad Tokyo",
+            "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+            "originalUrl": "https://conrad-tokyo.hiltonjapan.co.jp/img/restaurants/up_img/20160801133535_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Cerise — Tokyo restaurant guide",
+        "description": "A festive lunch buffet with named mains and dishes, ¥8,500; a November 23 late sitting has a verified lower adult price.",
+        "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+        "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+        "productName": "Cerise",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Shiodome",
+          "Buffet"
+        ],
+        "longFormSummary": "<p>A festive lunch buffet with named mains and dishes, ¥8,500; a November 23 late sitting has a verified lower adult price.<cite data-ref=\"https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+            "title": "Cerise source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunchbuffet/cerise-winter",
+            "title": "Cerise source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "menu": {
+            "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+            "name": "Cerise",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Festive chef’s lunch buffet",
+                "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunchbuffet/cerise-winter",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Adult standard plan",
+                    "price": 8500
+                  },
+                  {
+                    "name": "Christmas bear plan",
+                    "price": 9500
+                  },
+                  {
+                    "name": "Child ages 3–5",
+                    "price": 4000
+                  },
+                  {
+                    "name": "Child ages 6–12",
+                    "price": 5000
+                  },
+                  {
+                    "name": "November 23 14:30 adult sitting",
+                    "price": 7500
+                  },
+                  {
+                    "name": "T-bone main supplement",
+                    "price": 5500
+                  },
+                  {
+                    "name": "ブイヤベース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "フォアグラのポワレと鴨のコンフィ トリュフリゾット",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "オマール海老と帆立のヴォロヴァン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "チキンドゥミ・ドゥイユ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "ローストチキンのチーズフォンデュ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "ズワイガニ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "シュトーレン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                  }
+                ],
+                "note": "Weekdays and November 23 holiday. Normal entry 12:00–13:30; two hours, last order 30 minutes before sitting ends. Tax and service included. Children get buffet without the selected main. T-bone supplement requires two diners. November 23 14:30 sitting is 90 minutes at ¥7,500, with normal child prices."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+            "name": "Cerise",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+            "phone": "03-6388-8745",
+            "openingHours": [],
+            "detailsSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunchbuffet/cerise-winter"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "cerise",
+            "name": "Cerise",
+            "neighborhood": "Shiodome",
+            "cuisine": "Buffet",
+            "description": "A festive lunch buffet with named mains and dishes, ¥8,500; a November 23 late sitting has a verified lower adult price.",
+            "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+            "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/cerise-0-71450335816d4418.webp",
+            "imageCredit": "Conrad Tokyo",
+            "imageSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+            "imageNote": "Operator photograph of this restaurant interior"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/cerise-0-71450335816d4418.webp",
+          "sha256": "71450335816d4418959f82f33c2afa49ff4f5cb3805c6b1699227b230c53ff5d",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Tokyo",
+          "note": "Operator photograph of this restaurant interior",
+          "sourcePage": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/cerise-1-9d7e9914a997ef58.webp",
+          "sha256": "9d7e9914a997ef58e0a7efb4f2e4a7d63ba7a61e8071e98b49a5dbda8d2c0057",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Tokyo",
+          "note": "Operator food or drink presentation; current offer applicability and dish identity are not inferred",
+          "sourcePage": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "name": "Cerise",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Festive chef’s lunch buffet",
+              "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunchbuffet/cerise-winter",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Adult standard plan",
+                  "price": 8500
+                },
+                {
+                  "name": "Christmas bear plan",
+                  "price": 9500
+                },
+                {
+                  "name": "Child ages 3–5",
+                  "price": 4000
+                },
+                {
+                  "name": "Child ages 6–12",
+                  "price": 5000
+                },
+                {
+                  "name": "November 23 14:30 adult sitting",
+                  "price": 7500
+                },
+                {
+                  "name": "T-bone main supplement",
+                  "price": 5500
+                },
+                {
+                  "name": "ブイヤベース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "フォアグラのポワレと鴨のコンフィ トリュフリゾット",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "オマール海老と帆立のヴォロヴァン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "チキンドゥミ・ドゥイユ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "ローストチキンのチーズフォンデュ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "ズワイガニ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "シュトーレン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Festive chef’s lunch buffet; no separate item price published"
+                }
+              ],
+              "note": "Weekdays and November 23 holiday. Normal entry 12:00–13:30; two hours, last order 30 minutes before sitting ends. Tax and service included. Children get buffet without the selected main. T-bone supplement requires two diners. November 23 14:30 sitting is 90 minutes at ¥7,500, with normal child prices."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Festive chef’s lunch buffet",
+              "kind": "other",
+              "description": "A festive lunch buffet with named mains and dishes, ¥8,500; a November 23 late sitting has a verified lower adult price.",
+              "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunchbuffet/cerise-winter",
+              "menuLabel": "Festive chef’s lunch buffet",
+              "discounted": false,
+              "validFrom": "2026-11-16",
+              "validThrough": "2026-12-25",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Weekdays and November 23 holiday. Normal entry 12:00–13:30; two hours, last order 30 minutes before sitting ends. Tax and service included. Children get buffet without the selected main. T-bone supplement requires two diners. November 23 14:30 sitting is 90 minutes at ¥7,500, with normal child prices."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "12:00",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "November 23 late-sitting adult price",
+              "kind": "lunch",
+              "description": "The 14:30 adult sitting is ¥7,500 instead of ¥8,500, with a shorter 90-minute duration.",
+              "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/lunchbuffet/cerise-winter",
+              "menuLabel": "Festive chef’s lunch buffet",
+              "discounted": true,
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "November 23 only, 14:30 entry.",
+                "90 minutes; last order 15:30.",
+                "Normal child prices apply.",
+                "Tax and service included."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:30",
+                    "end": "16:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+          "neighborhood": "Shiodome",
+          "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/cerise-0-71450335816d4418.webp",
+            "alt": "Cerise — Operator photograph of this restaurant interior",
+            "credit": "Conrad Tokyo",
+            "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+            "originalUrl": "https://conrad-tokyo.hiltonjapan.co.jp/img/restaurants/up_img/20260811115324_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Garden Lounge — Hotel New Otani Tokyo — Tokyo restaurant guide",
+        "description": "A dated chestnut-and-grape buffet with published standard and member prices, plus actual desserts and sandwiches.",
+        "sourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+        "address": "Garden Tower lobby, Hotel New Otani Tokyo, 4-1 Kioicho, Chiyoda-ku, Tokyo",
+        "productName": "Garden Lounge — Hotel New Otani Tokyo",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Kioicho",
+          "Sweets buffet"
+        ],
+        "longFormSummary": "<p>A dated chestnut-and-grape buffet with published standard and member prices, plus actual desserts and sandwiches.<cite data-ref=\"https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+            "title": "Garden Lounge — Hotel New Otani Tokyo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/chestnut-grape/",
+            "title": "Garden Lounge — Hotel New Otani Tokyo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "menu": {
+            "pinSourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+            "name": "Garden Lounge — Hotel New Otani Tokyo",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Chestnut and grape sweets buffet",
+                "url": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/chestnut-grape/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday adult standard",
+                    "price": 7500
+                  },
+                  {
+                    "name": "Weekend/holiday adult standard",
+                    "price": 9000
+                  },
+                  {
+                    "name": "Weekday club-member standard",
+                    "price": 6400
+                  },
+                  {
+                    "name": "Weekend/holiday club-member standard",
+                    "price": 7700
+                  },
+                  {
+                    "name": "Child ages 4–12",
+                    "price": 4200
+                  },
+                  {
+                    "name": "マロンショートケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "スーパーメロンショートケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "モンブラン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "グレープロール",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "岩泉ヨーグルトゼリー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "ポークカツサンド",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "だし巻きたまごサンド",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                  }
+                ],
+                "note": "90-minute reserved sessions at 11:30, 12:00, 13:30 and 14:00; advance website booking required. Service additional. Member prices require eligible New Otani club/lady membership. Window-seat plans cost more and are not represented by standard-seat prices. Weekend steak sandwich is not promised on weekdays."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+            "name": "Garden Lounge — Hotel New Otani Tokyo",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+            "phone": null,
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/chestnut-grape/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "garden-tokyo",
+            "name": "Garden Lounge — Hotel New Otani Tokyo",
+            "neighborhood": "Kioicho",
+            "cuisine": "Sweets buffet",
+            "description": "A dated chestnut-and-grape buffet with published standard and member prices, plus actual desserts and sandwiches.",
+            "address": "Garden Tower lobby, Hotel New Otani Tokyo, 4-1 Kioicho, Chiyoda-ku, Tokyo",
+            "websiteUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/garden-tokyo-0-5738ee4a1c4ca6f0.webp",
+            "imageCredit": "Hotel New Otani Tokyo",
+            "imageSourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+            "imageNote": "Operator food or drink presentation; current offer applicability and dish identity are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/garden-tokyo-0-5738ee4a1c4ca6f0.webp",
+          "sha256": "5738ee4a1c4ca6f05d3345325527d95e8a2a6238ceab0a494203f752d9d966d3",
+          "width": 960,
+          "height": 640,
+          "credit": "Hotel New Otani Tokyo",
+          "note": "Operator food or drink presentation; current offer applicability and dish identity are not inferred",
+          "sourcePage": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/garden-tokyo-1-5d56e8c5136316cc.webp",
+          "sha256": "5d56e8c5136316cc53a0f882620b8f33c335080f000967e514a84dbc01844d92",
+          "width": 960,
+          "height": 640,
+          "credit": "Hotel New Otani Tokyo",
+          "note": "Operator food or drink presentation; current offer applicability and dish identity are not inferred",
+          "sourcePage": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "name": "Garden Lounge — Hotel New Otani Tokyo",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Chestnut and grape sweets buffet",
+              "url": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/chestnut-grape/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday adult standard",
+                  "price": 7500
+                },
+                {
+                  "name": "Weekend/holiday adult standard",
+                  "price": 9000
+                },
+                {
+                  "name": "Weekday club-member standard",
+                  "price": 6400
+                },
+                {
+                  "name": "Weekend/holiday club-member standard",
+                  "price": 7700
+                },
+                {
+                  "name": "Child ages 4–12",
+                  "price": 4200
+                },
+                {
+                  "name": "マロンショートケーキ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "スーパーメロンショートケーキ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "モンブラン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "グレープロール",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "岩泉ヨーグルトゼリー",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "ポークカツサンド",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "だし巻きたまごサンド",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Chestnut and grape sweets buffet; no separate item price published"
+                }
+              ],
+              "note": "90-minute reserved sessions at 11:30, 12:00, 13:30 and 14:00; advance website booking required. Service additional. Member prices require eligible New Otani club/lady membership. Window-seat plans cost more and are not represented by standard-seat prices. Weekend steak sandwich is not promised on weekdays."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Chestnut and grape sweets buffet",
+              "kind": "other",
+              "description": "A dated chestnut-and-grape buffet with published standard and member prices, plus actual desserts and sandwiches.",
+              "sourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/chestnut-grape/",
+              "menuLabel": "Chestnut and grape sweets buffet",
+              "discounted": true,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "90-minute reserved sessions at 11:30, 12:00, 13:30 and 14:00; advance website booking required. Service additional. Member prices require eligible New Otani club/lady membership. Window-seat plans cost more and are not represented by standard-seat prices. Weekend steak sandwich is not promised on weekdays."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "13:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "13:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "13:30",
+                    "end": "15:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "15:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "Garden Tower lobby, Hotel New Otani Tokyo, 4-1 Kioicho, Chiyoda-ku, Tokyo",
+          "neighborhood": "Kioicho",
+          "websiteUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/garden-tokyo-0-5738ee4a1c4ca6f0.webp",
+            "alt": "Garden Lounge — Hotel New Otani Tokyo — Operator food or drink presentation; current offer applicability and dish identity are not inferred",
+            "credit": "Hotel New Otani Tokyo",
+            "sourceUrl": "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+            "originalUrl": "https://www.newotani.co.jp/fileadmin/res/tokyo/restaurant/gardenlounge/img/2026/20260501-03.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "St. George’s Bar — Tokyo restaurant guide",
+        "description": "Three published October persimmon cocktails, from ¥2,600 including tax and service.",
+        "sourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+        "address": "1F Hilton Tokyo, 6-6-2 Nishi-Shinjuku, Shinjuku-ku, Tokyo",
+        "productName": "St. George’s Bar",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Nishi-Shinjuku",
+          "Cocktail bar"
+        ],
+        "longFormSummary": "<p>Three published October persimmon cocktails, from ¥2,600 including tax and service.<cite data-ref=\"https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+            "title": "St. George’s Bar source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://tokyo.hiltonjapan.co.jp/plans/restaurants/other/st-georges-bar-2205",
+            "title": "St. George’s Bar source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "menu": {
+            "pinSourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+            "name": "St. George’s Bar",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "October persimmon cocktails",
+                "url": "https://tokyo.hiltonjapan.co.jp/plans/restaurants/other/st-georges-bar-2205",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Autumn Royale",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Amber Harvest",
+                    "price": 2600
+                  },
+                  {
+                    "name": "Kaki no Sasayaki",
+                    "price": 2700
+                  }
+                ],
+                "note": "Tax and service included. Live-music days add ¥1,500 after 19:30. Regular opening 18:00; Friday/Saturday/holiday-eve service extends to 01:00, with drinks last order 00:30. Holiday eves also extend service to 01:00; confirm special-date hours."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+            "name": "St. George’s Bar",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+            "phone": "03-3344-5111",
+            "openingHours": [],
+            "detailsSourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://tokyo.hiltonjapan.co.jp/plans/restaurants/other/st-georges-bar-2205"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "stgeorge",
+            "name": "St. George’s Bar",
+            "neighborhood": "Nishi-Shinjuku",
+            "cuisine": "Cocktail bar",
+            "description": "Three published October persimmon cocktails, from ¥2,600 including tax and service.",
+            "address": "1F Hilton Tokyo, 6-6-2 Nishi-Shinjuku, Shinjuku-ku, Tokyo",
+            "websiteUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/stgeorge-0-085a6c14788577bb.webp",
+            "imageCredit": "Hilton Tokyo",
+            "imageSourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+            "imageNote": "Operator photograph of St. George’s Bar interior"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/stgeorge-0-085a6c14788577bb.webp",
+          "sha256": "085a6c14788577bbd9199bab0b3d0b27d32ec9f3f350ca4261847548dfd0c112",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Tokyo",
+          "note": "Operator photograph of St. George’s Bar interior",
+          "sourcePage": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/stgeorge-1-6f284fca2f521032.webp",
+          "sha256": "6f284fca2f521032ba9719799144ebdc066546fb87397a2a67ca21a25c923c5d",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Tokyo",
+          "note": "Operator photograph of St. George’s Bar interior",
+          "sourcePage": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "name": "St. George’s Bar",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "October persimmon cocktails",
+              "url": "https://tokyo.hiltonjapan.co.jp/plans/restaurants/other/st-georges-bar-2205",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Autumn Royale",
+                  "price": 2800
+                },
+                {
+                  "name": "Amber Harvest",
+                  "price": 2600
+                },
+                {
+                  "name": "Kaki no Sasayaki",
+                  "price": 2700
+                }
+              ],
+              "note": "Tax and service included. Live-music days add ¥1,500 after 19:30. Regular opening 18:00; Friday/Saturday/holiday-eve service extends to 01:00, with drinks last order 00:30. Holiday eves also extend service to 01:00; confirm special-date hours."
+            }
+          ],
+          "specials": [
+            {
+              "title": "October persimmon cocktails",
+              "kind": "other",
+              "description": "Three published October persimmon cocktails, from ¥2,600 including tax and service.",
+              "sourceUrl": "https://tokyo.hiltonjapan.co.jp/plans/restaurants/other/st-georges-bar-2205",
+              "menuLabel": "October persimmon cocktails",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included. Live-music days add ¥1,500 after 19:30. Regular opening 18:00; Friday/Saturday/holiday-eve service extends to 01:00, with drinks last order 00:30. Holiday eves also extend service to 01:00; confirm special-date hours."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4
+                    ],
+                    "start": "18:00",
+                    "end": "24:00"
+                  },
+                  {
+                    "days": [
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "01:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F Hilton Tokyo, 6-6-2 Nishi-Shinjuku, Shinjuku-ku, Tokyo",
+          "neighborhood": "Nishi-Shinjuku",
+          "websiteUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/stgeorge-0-085a6c14788577bb.webp",
+            "alt": "St. George’s Bar — Operator photograph of St. George’s Bar interior",
+            "credit": "Hilton Tokyo",
+            "sourceUrl": "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+            "originalUrl": "https://tokyo.hiltonjapan.co.jp/img/restaurants/up_img/20190805130509_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hideaway 3-3 — Nagoya restaurant guide",
+        "description": "Dated autumn parfait pairings with published 11–15% reductions and a Thursday–Saturday jazz plan.",
+        "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+        "address": "1F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+        "productName": "Hideaway 3-3",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Fushimi",
+          "Cocktail bar"
+        ],
+        "longFormSummary": "<p>Dated autumn parfait pairings with published 11–15% reductions and a Thursday–Saturday jazz plan.<cite data-ref=\"https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+            "title": "Hideaway 3-3 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://nagoya.hiltonjapan.co.jp/plans/restaurants/sweets/hideaway3-3-night-parfait",
+            "title": "Hideaway 3-3 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "menu": {
+            "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+            "name": "Hideaway 3-3",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn Mont Blanc parfait and drink plans",
+                "url": "https://nagoya.hiltonjapan.co.jp/plans/restaurants/sweets/hideaway3-3-night-parfait",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Luce Mont Blanc parfait",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Sweet Olive cocktail",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Violet Sapphire cocktail",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Parfait with coffee or tea — Sunday–Wednesday",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Parfait with seasonal cocktail — Sunday–Wednesday",
+                    "price": 3800
+                  },
+                  {
+                    "name": "Parfait with jazz cover — Thursday–Saturday",
+                    "price": 3100
+                  }
+                ],
+                "note": "Tax and service included. Published reductions: coffee/tea pairing 15%; seasonal cocktail pairing 11%; jazz-cover pairing 13%. Pairings run Sunday–Wednesday; jazz plan Thursday–Saturday. No combination of discounts; minors are not admitted."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+            "name": "Hideaway 3-3",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+            "phone": "052-212-1151",
+            "openingHours": [],
+            "detailsSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://nagoya.hiltonjapan.co.jp/plans/restaurants/sweets/hideaway3-3-night-parfait"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "hideaway",
+            "name": "Hideaway 3-3",
+            "neighborhood": "Fushimi",
+            "cuisine": "Cocktail bar",
+            "description": "Dated autumn parfait pairings with published 11–15% reductions and a Thursday–Saturday jazz plan.",
+            "address": "1F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+            "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/hideaway-0-7bae9fb579b55835.webp",
+            "imageCredit": "Hilton Nagoya",
+            "imageSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+            "imageNote": "Operator photograph of this restaurant interior"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/hideaway-0-7bae9fb579b55835.webp",
+          "sha256": "7bae9fb579b55835f743a4c1119075ca981a057ae6d38a5fcadeb753341a169d",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Nagoya",
+          "note": "Operator photograph of this restaurant interior",
+          "sourcePage": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/hideaway-1-62116d03f2c872c3.webp",
+          "sha256": "62116d03f2c872c376e8bbdcadb835bb74bf4db971149963e3381c3a3fc73038",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Nagoya",
+          "note": "Operator food or drink presentation; current offer applicability and dish identity are not inferred",
+          "sourcePage": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "name": "Hideaway 3-3",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Autumn Mont Blanc parfait and drink plans",
+              "url": "https://nagoya.hiltonjapan.co.jp/plans/restaurants/sweets/hideaway3-3-night-parfait",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Luce Mont Blanc parfait",
+                  "price": 1800
+                },
+                {
+                  "name": "Sweet Olive cocktail",
+                  "price": 2500
+                },
+                {
+                  "name": "Violet Sapphire cocktail",
+                  "price": 2500
+                },
+                {
+                  "name": "Parfait with coffee or tea — Sunday–Wednesday",
+                  "price": 2800
+                },
+                {
+                  "name": "Parfait with seasonal cocktail — Sunday–Wednesday",
+                  "price": 3800
+                },
+                {
+                  "name": "Parfait with jazz cover — Thursday–Saturday",
+                  "price": 3100
+                }
+              ],
+              "note": "Tax and service included. Published reductions: coffee/tea pairing 15%; seasonal cocktail pairing 11%; jazz-cover pairing 13%. Pairings run Sunday–Wednesday; jazz plan Thursday–Saturday. No combination of discounts; minors are not admitted."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn Mont Blanc parfait and drink plans",
+              "kind": "other",
+              "description": "Dated autumn parfait pairings with published 11–15% reductions and a Thursday–Saturday jazz plan.",
+              "sourceUrl": "https://nagoya.hiltonjapan.co.jp/plans/restaurants/sweets/hideaway3-3-night-parfait",
+              "menuLabel": "Autumn Mont Blanc parfait and drink plans",
+              "discounted": true,
+              "validFrom": "2026-10-06",
+              "validThrough": "2026-11-04",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included. Published reductions: coffee/tea pairing 15%; seasonal cocktail pairing 11%; jazz-cover pairing 13%. Pairings run Sunday–Wednesday; jazz plan Thursday–Saturday. No combination of discounts; minors are not admitted."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3
+                    ],
+                    "start": "17:00",
+                    "end": "22:30"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Autumn parfait with jazz cover",
+              "kind": "other",
+              "description": "Luce parfait plus jazz music cover, ¥3,100; operator states 13% reduction.",
+              "sourceUrl": "https://nagoya.hiltonjapan.co.jp/plans/restaurants/sweets/hideaway3-3-night-parfait",
+              "menuLabel": "Autumn Mont Blanc parfait and drink plans",
+              "discounted": true,
+              "validFrom": "2026-10-06",
+              "validThrough": "2026-11-04",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Thursday–Saturday only.",
+                "Tax and service included; minors are not admitted.",
+                "No combination of discounts."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "22:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "1F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+          "neighborhood": "Fushimi",
+          "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/hideaway-0-7bae9fb579b55835.webp",
+            "alt": "Hideaway 3-3 — Operator photograph of this restaurant interior",
+            "credit": "Hilton Nagoya",
+            "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+            "originalUrl": "https://nagoya.hiltonjapan.co.jp/img/restaurants/up_img/20190311153623_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

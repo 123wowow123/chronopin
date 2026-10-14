@@ -1,0 +1,2026 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "kyoto"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yamasan Curry Opens in Kisshoin",
+        "description": "A newly opened curry venue in Kisshoin, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/yamasan_curry/",
+        "address": "1F Elitz 9, 39 Kisshoin Higashi Sunancho, Minami-ku, Kyoto",
+        "productName": "Yamasan Curry",
+        "utcStartDateTime": "2026-09-21T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-21. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kisshoin",
+          "Curry"
+        ],
+        "longFormSummary": "<p>A newly opened curry venue in Kisshoin, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/yamasancurry-kyotokisshoin2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-21. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/yamasan_curry/",
+            "title": "Yamasan Curry source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-21. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/yamasancurry-kyotokisshoin2609/",
+            "title": "Yamasan Curry source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-21. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/reel/DdIgOkOjyMO/",
+            "title": "Yamasan Curry source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-21. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/yamasan_curry/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/yamasan_curry/",
+            "name": "Yamasan Curry",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://kansai-kaiten.com/yamasancurry-kyotokisshoin2609/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Scotch-bonnet curry",
+                    "price": 1800
+                  }
+                ],
+                "note": "Branch report publishes ¥1,800 tax included, ten portions per day, cashless payment only. Strong chilli heat. Parking-proof discount is reported but remains excluded from Specials until fuller operator conditions are verified."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/yamasan_curry/",
+            "name": "Yamasan Curry",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/yamasan_curry/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published lunch hours",
+                "hours": "11:30–14:00; irregular service days, check operator calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/yamasan_curry/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/yamasancurry-kyotokisshoin2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/DdIgOkOjyMO/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "yamasan",
+            "name": "Yamasan Curry",
+            "neighborhood": "Kisshoin",
+            "cuisine": "Curry",
+            "description": "A newly opened curry venue in Kisshoin, with branch-specific opening and menu evidence.",
+            "address": "1F Elitz 9, 39 Kisshoin Higashi Sunancho, Minami-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/yamasan_curry/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/yamasan-0-731b44bb9287113b.webp",
+            "imageCredit": "Yamasan Curry",
+            "imageSourceUrl": "https://www.instagram.com/reel/DdIgOkOjyMO/",
+            "imageNote": "Still from the branch operator video",
+            "openingConfirmed": true,
+            "day": "2026-09-21"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/yamasan-0-731b44bb9287113b.webp",
+          "sha256": "731b44bb9287113b4beb2fd26a61e7db8d6b13d2c8ef36a0586098633bd773b0",
+          "width": 360,
+          "height": 640,
+          "credit": "Yamasan Curry",
+          "note": "Still from the branch operator video",
+          "sourcePage": "https://www.instagram.com/reel/DdIgOkOjyMO/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Bettei Takei — Kyoto Yodobashi Opens in Kyoto Station",
+        "description": "A newly opened tsukemen venue in Kyoto Station, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+        "address": "6F Kyoto Yodobashi, 590-2 Higashi Shiokojicho, Shimogyo-ku, Kyoto",
+        "productName": "Bettei Takei — Kyoto Yodobashi",
+        "utcStartDateTime": "2026-09-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-19. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kyoto Station",
+          "Tsukemen"
+        ],
+        "longFormSummary": "<p>A newly opened tsukemen venue in Kyoto Station, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/betteitakei-yodobashikyoto2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://kansai-kaiten.com/betteitakei-yodobashikyoto2609/",
+            "title": "Bettei Takei — Kyoto Yodobashi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/reel/Dc2V3zdBi7H/",
+            "title": "Bettei Takei — Kyoto Yodobashi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+            "title": "Bettei Takei — Kyoto Yodobashi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kyotopi.jp/articles/bettei-takei",
+            "title": "Bettei Takei — Kyoto Yodobashi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+          "menu": {
+            "pinSourceUrl": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+            "name": "Bettei Takei — Kyoto Yodobashi",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Kyoto Yodobashi branch menu",
+                "url": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "特製濃厚鶏豚骨つけ麺 — regular",
+                    "price": 1870
+                  },
+                  {
+                    "name": "味玉あっさり鶏豚骨つけ麺 — regular",
+                    "price": 1440
+                  },
+                  {
+                    "name": "濃厚中華そば — regular",
+                    "price": 1150
+                  },
+                  {
+                    "name": "鶏豚飯",
+                    "price": 450
+                  },
+                  {
+                    "name": "塩卵かけご飯",
+                    "price": 380
+                  },
+                  {
+                    "name": "Draft beer",
+                    "price": 550
+                  },
+                  {
+                    "name": "Highball",
+                    "price": 500
+                  },
+                  {
+                    "name": "Snack set",
+                    "price": 1000
+                  }
+                ],
+                "note": "Published by the branch landlord; tax treatment is not explicitly stated. Portions and prices are not taken from Osaka or the Kyoto Station concourse branch."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+            "name": "Bettei Takei — Kyoto Yodobashi",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+            "phone": "075-746-7533",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–23:00; last order 22:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/betteitakei-yodobashikyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/Dc2V3zdBi7H/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kyotopi.jp/articles/bettei-takei"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "takei",
+            "name": "Bettei Takei — Kyoto Yodobashi",
+            "neighborhood": "Kyoto Station",
+            "cuisine": "Tsukemen",
+            "description": "A newly opened tsukemen venue in Kyoto Station, with branch-specific opening and menu evidence.",
+            "address": "6F Kyoto Yodobashi, 590-2 Higashi Shiokojicho, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/takei-1-e7a34df448379bb1.webp",
+            "imageCredit": "Kyotopi ramen editorial team",
+            "imageSourceUrl": "https://kyotopi.jp/articles/bettei-takei",
+            "imageNote": "Branch-specific source gallery photograph",
+            "openingConfirmed": true,
+            "day": "2026-09-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/takei-1-e7a34df448379bb1.webp",
+          "sha256": "e7a34df448379bb1b4dc8290b79c0a4502664001503a611dda127b9cc512a793",
+          "width": 640,
+          "height": 480,
+          "credit": "Kyotopi ramen editorial team",
+          "note": "Branch-specific source gallery photograph",
+          "sourcePage": "https://kyotopi.jp/articles/bettei-takei"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/takei-0-85c922e8a5729866.webp",
+          "sha256": "85c922e8a57298662fb75ed655cae54d8e9ef12c1c82bebc73413fa2ff9458b8",
+          "width": 360,
+          "height": 640,
+          "credit": "Bettei Takei / Menya Takei",
+          "note": "Still from the branch operator video",
+          "sourcePage": "https://www.instagram.com/reel/Dc2V3zdBi7H/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/takei-2-53775d91ed24d2d7.webp",
+          "sha256": "53775d91ed24d2d72568218b1b8d95dd89a1b4e555bd005da00ffedf82a6eb77",
+          "width": 640,
+          "height": 480,
+          "credit": "Kyotopi ramen editorial team",
+          "note": "Branch-specific source gallery photograph",
+          "sourcePage": "https://kyotopi.jp/articles/bettei-takei"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/takei-10-88b103e9343d9646.webp",
+          "sha256": "88b103e9343d9646e3032b19873a90481270808f087e2423c6b24defca378434",
+          "width": 508,
+          "height": 380,
+          "credit": "Kyoto Yodobashi / Bettei Takei",
+          "note": "Landlord branch interior image; may be illustrative",
+          "sourcePage": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/takei-11-a7d097572d1b44f7.webp",
+          "sha256": "a7d097572d1b44f780d264145ee450247ff57edfd3050be444a15c5af3adac42",
+          "width": 664,
+          "height": 544,
+          "credit": "Kyoto Yodobashi / Bettei Takei",
+          "note": "Branch-specific operator or landlord gallery photograph",
+          "sourcePage": "https://www.yodobashi-kyoto.com/restaurant2/restaurant_takei.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "coffee & bake mukorita Opens in Toji",
+        "description": "A newly opened cafe venue in Toji, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/coffeebakemukorita/",
+        "address": "CLIMBING PARK LUCLU KYOTO, 47 Toji Higashimonzencho, Minami-ku, Kyoto",
+        "productName": "coffee & bake mukorita",
+        "utcStartDateTime": "2026-09-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-19. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Toji",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A newly opened cafe venue in Toji, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/coffeebakemukorita-kyototoji2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/coffeebakemukorita/",
+            "title": "coffee & bake mukorita source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/coffeebakemukorita-kyototoji2609/",
+            "title": "coffee & bake mukorita source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/reel/DdcnowBxRVP/",
+            "title": "coffee & bake mukorita source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/coffeebakemukorita/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/coffeebakemukorita/",
+            "name": "coffee & bake mukorita",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://www.instagram.com/reel/DdcnowBxRVP/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chocolate-chip cookie",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Spice cookie",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fruit tart",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Muffin",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch opening report names these baked items without prices. Operator video shows the new café and its September 19 opening. Items change with baking; September’s irregular calendar is not imposed on October."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/coffeebakemukorita/",
+            "name": "coffee & bake mukorita",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/coffeebakemukorita/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Wednesday–Sunday, published hours",
+                "hours": "09:00–17:00; last order 16:30"
+              },
+              {
+                "days": "Monday and Tuesday",
+                "hours": "Closed; confirm exceptional service days"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/coffeebakemukorita/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/coffeebakemukorita-kyototoji2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/DdcnowBxRVP/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "mukorita",
+            "name": "coffee & bake mukorita",
+            "neighborhood": "Toji",
+            "cuisine": "Cafe",
+            "description": "A newly opened cafe venue in Toji, with branch-specific opening and menu evidence.",
+            "address": "CLIMBING PARK LUCLU KYOTO, 47 Toji Higashimonzencho, Minami-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/coffeebakemukorita/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/mukorita-0-8d1345cba453984b.webp",
+            "imageCredit": "coffee & bake mukorita",
+            "imageSourceUrl": "https://www.instagram.com/reel/DdcnowBxRVP/",
+            "imageNote": "Still from the branch operator video",
+            "openingConfirmed": true,
+            "day": "2026-09-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/mukorita-0-8d1345cba453984b.webp",
+          "sha256": "8d1345cba453984b47998cd33012567bac1c082c169fbaed0bd7c755428507e3",
+          "width": 360,
+          "height": 640,
+          "credit": "coffee & bake mukorita",
+          "note": "Still from the branch operator video",
+          "sourcePage": "https://www.instagram.com/reel/DdcnowBxRVP/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "asobiba Opens in Shichiku",
+        "description": "A newly opened dining bar venue in Shichiku, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/asobiba.kyoto/",
+        "address": "5 Shichiku Nishi Momonomotocho, Kita-ku, Kyoto",
+        "productName": "asobiba",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-04. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Shichiku",
+          "Dining bar"
+        ],
+        "longFormSummary": "<p>A newly opened dining bar venue in Shichiku, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/asobiba-kyoto2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-04. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/asobiba.kyoto/",
+            "title": "asobiba source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-04. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/asobiba-kyoto2609/",
+            "title": "asobiba source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-04. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/p/Dc24yE_SU-q/",
+            "title": "asobiba source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-04. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/asobiba.kyoto/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/asobiba.kyoto/",
+            "name": "asobiba",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://www.instagram.com/p/Dc24yE_SU-q/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Japanese sake",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shochu",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Local branch report confirms sake and shochu service without naming brands or prices. Checked operator opening post/profile, branch article and branch Tabelog listings: detailed food items remain unpublished; no brands are inferred from the photograph."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/asobiba.kyoto/",
+            "name": "asobiba",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/asobiba.kyoto/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published hours",
+                "hours": "18:00–24:00 last order; irregular closures"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/asobiba.kyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/asobiba-kyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/Dc24yE_SU-q/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "asobiba",
+            "name": "asobiba",
+            "neighborhood": "Shichiku",
+            "cuisine": "Dining bar",
+            "description": "A newly opened dining bar venue in Shichiku, with branch-specific opening and menu evidence.",
+            "address": "5 Shichiku Nishi Momonomotocho, Kita-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/asobiba.kyoto/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/asobiba-0-d6d668e6ee738ee2.webp",
+            "imageCredit": "asobiba",
+            "imageSourceUrl": "https://www.instagram.com/p/Dc24yE_SU-q/",
+            "imageNote": "Branch operator photograph or announcement image; pictured items are not identified",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/asobiba-0-d6d668e6ee738ee2.webp",
+          "sha256": "d6d668e6ee738ee206bea6a75abc2559a6d2a8aca37a88e575962d7cb318e058",
+          "width": 640,
+          "height": 640,
+          "credit": "asobiba",
+          "note": "Branch operator photograph or announcement image; pictured items are not identified",
+          "sourcePage": "https://www.instagram.com/p/Dc24yE_SU-q/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ramen Ignoranc Opens in Enmachi",
+        "description": "A newly opened ramen venue in Enmachi, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/ramen_ignorance/",
+        "address": "68 Nishinokyo Kita Tsuboicho, Nakagyo-ku, Kyoto",
+        "productName": "Ramen Ignoranc",
+        "utcStartDateTime": "2026-09-17T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-17. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Enmachi",
+          "Ramen"
+        ],
+        "longFormSummary": "<p>A newly opened ramen venue in Enmachi, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/ramenignorance-kyotoemmachi2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-17. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/ramen_ignorance/",
+            "title": "Ramen Ignoranc source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-17. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/ramenignorance-kyotoemmachi2609/",
+            "title": "Ramen Ignoranc source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-17. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdWTK3ISerI/",
+            "title": "Ramen Ignoranc source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-17. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://tabelog.com/kyoto/A2601/A260203/26045810/",
+            "title": "Ramen Ignoranc source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-17. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/ramen_ignorance/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/ramen_ignorance/",
+            "name": "Ramen Ignoranc",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://www.instagram.com/p/DdWTK3ISerI/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "醤油ラーメン",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "地鶏醤油ラーメン",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "焼き豚ご飯",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Rice",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator September 16 post specifies these September 17 opening items, without prices. Special topping adds three chashu slices and an egg; price not published. Later branch report names further items, but their current availability is unconfirmed. Representative venue photo remains a research gap: the operator thumbnail is only a cooking pot and other search results show unrelated ramen restaurants."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/ramen_ignorance/",
+            "name": "Ramen Ignoranc",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/ramen_ignorance/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Wednesday–Sunday",
+                "hours": "11:00–14:30; may finish early when ingredients sell out"
+              },
+              {
+                "days": "Monday and Tuesday",
+                "hours": "Closed; additional irregular closures possible"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/ramen_ignorance/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/ramenignorance-kyotoemmachi2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdWTK3ISerI/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/kyoto/A2601/A260203/26045810/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "ignorance",
+            "name": "Ramen Ignoranc",
+            "neighborhood": "Enmachi",
+            "cuisine": "Ramen",
+            "description": "A newly opened ramen venue in Enmachi, with branch-specific opening and menu evidence.",
+            "address": "68 Nishinokyo Kita Tsuboicho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/ramen_ignorance/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": true,
+            "day": "2026-09-17"
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Karugamo Coffee — Kisui Opens in Teranouchi",
+        "description": "A newly opened cafe venue in Teranouchi, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/karugamo_coffee/",
+        "address": "Kisui, 579 Hokyoin Higashicho, Kamigyo-ku, Kyoto",
+        "productName": "Karugamo Coffee — Kisui",
+        "utcStartDateTime": "2026-09-11T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-11. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Teranouchi",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A newly opened cafe venue in Teranouchi, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/karugamocoffee-kyoto2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-11. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/karugamo_coffee/",
+            "title": "Karugamo Coffee — Kisui source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-11. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/karugamocoffee-kyoto2609/",
+            "title": "Karugamo Coffee — Kisui source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-11. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdIR0FhknCu/",
+            "title": "Karugamo Coffee — Kisui source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-11. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.hachise.jp/owner/case_tenant/case/2026/09/37c3bcadc407d6292c663c468f360981d7a6f388.html",
+            "title": "Karugamo Coffee — Kisui source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-11. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/karugamo_coffee/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/karugamo_coffee/",
+            "name": "Karugamo Coffee — Kisui",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://www.instagram.com/p/DdIR0FhknCu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "House-roasted coffee",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Beta baked sweets — selection varies",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator post confirms coffee and Beta baked sweets, without prices or a complete pastry list. Landlord corroborates September 11, address and coffee tenant. Coffee beans sold for home use are not represented as drink prices."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/karugamo_coffee/",
+            "name": "Karugamo Coffee — Kisui",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/karugamo_coffee/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published regular hours",
+                "hours": "08:00–17:00; may vary"
+              },
+              {
+                "days": "Tuesday",
+                "hours": "Closed with Kisui; confirm additional changes"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/karugamo_coffee/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/karugamocoffee-kyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdIR0FhknCu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hachise.jp/owner/case_tenant/case/2026/09/37c3bcadc407d6292c663c468f360981d7a6f388.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "karugamo",
+            "name": "Karugamo Coffee — Kisui",
+            "neighborhood": "Teranouchi",
+            "cuisine": "Cafe",
+            "description": "A newly opened cafe venue in Teranouchi, with branch-specific opening and menu evidence.",
+            "address": "Kisui, 579 Hokyoin Higashicho, Kamigyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/karugamo_coffee/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/karugamo-5-8fd826e08e298021.webp",
+            "imageCredit": "Hachise",
+            "imageSourceUrl": "https://www.hachise.jp/owner/case_tenant/case/2026/09/37c3bcadc407d6292c663c468f360981d7a6f388.html",
+            "imageNote": "Karugamo coffee counter or seating within the shared Kisui premises",
+            "openingConfirmed": true,
+            "day": "2026-09-11"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/karugamo-5-8fd826e08e298021.webp",
+          "sha256": "8fd826e08e298021af2f615703bca5a7f0f8d49e7cb3359b2ff0859cf4238d6a",
+          "width": 960,
+          "height": 640,
+          "credit": "Hachise",
+          "note": "Karugamo coffee counter or seating within the shared Kisui premises",
+          "sourcePage": "https://www.hachise.jp/owner/case_tenant/case/2026/09/37c3bcadc407d6292c663c468f360981d7a6f388.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/karugamo-0-ab2c0129dde1ebba.webp",
+          "sha256": "ab2c0129dde1ebbac1893cfd8553429a6e5fc1393b2dad7952b9b94ed547bd43",
+          "width": 640,
+          "height": 640,
+          "credit": "Karugamo Coffee",
+          "note": "Branch operator photograph or announcement image; pictured items are not identified",
+          "sourcePage": "https://www.instagram.com/p/DdIR0FhknCu/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/karugamo-1-26517e8f1289dd7c.webp",
+          "sha256": "26517e8f1289dd7c5f7f663d790318849e949d8039550aa4bb82f43f1b12b712",
+          "width": 700,
+          "height": 550,
+          "credit": "Hachise",
+          "note": "Shared Kisui building exterior",
+          "sourcePage": "https://www.hachise.jp/owner/case_tenant/case/2026/09/37c3bcadc407d6292c663c468f360981d7a6f388.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/karugamo-6-29a1aad3f252b0c1.webp",
+          "sha256": "29a1aad3f252b0c1f5dad74408a357cda5bc2abaabad12a132dd75899182cde6",
+          "width": 960,
+          "height": 640,
+          "credit": "Hachise",
+          "note": "Karugamo coffee counter or seating within the shared Kisui premises",
+          "sourcePage": "https://www.hachise.jp/owner/case_tenant/case/2026/09/37c3bcadc407d6292c663c468f360981d7a6f388.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "WEEKENDERS COFFEE SHINMACHI Opens in Shinmachi",
+        "description": "A newly opened cafe venue in Shinmachi, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/weekenders_coffee/",
+        "address": "189 Ubayanagicho, Nakagyo-ku, Kyoto",
+        "productName": "WEEKENDERS COFFEE SHINMACHI",
+        "utcStartDateTime": "2026-09-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-30. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Shinmachi",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A newly opened cafe venue in Shinmachi, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/weekenderscoffee-shinmachi2610/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-30. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/weekenders_coffee/",
+            "title": "WEEKENDERS COFFEE SHINMACHI source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-30. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/weekenderscoffee-shinmachi2610/",
+            "title": "WEEKENDERS COFFEE SHINMACHI source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-30. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdN6xUPBPpE/",
+            "title": "WEEKENDERS COFFEE SHINMACHI source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-30. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.weekenderscoffee.com/",
+            "title": "WEEKENDERS COFFEE SHINMACHI source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-30. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/weekenders_coffee/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/weekenders_coffee/",
+            "name": "WEEKENDERS COFFEE SHINMACHI",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://www.instagram.com/p/DdN6xUPBPpE/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator opening post and official website corroborate this relocation. No Shinmachi drink sizes or prices are published in the reviewed pages; retail bean prices and former Tominokoji menus are excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/weekenders_coffee/",
+            "name": "WEEKENDERS COFFEE SHINMACHI",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.weekenderscoffee.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Thursday–Tuesday",
+                "hours": "07:30–17:00"
+              },
+              {
+                "days": "Wednesday",
+                "hours": "Closed from October"
+              }
+            ],
+            "detailsSourceUrl": "https://www.weekenderscoffee.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/weekenderscoffee-shinmachi2610/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdN6xUPBPpE/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "weekenders",
+            "name": "WEEKENDERS COFFEE SHINMACHI",
+            "neighborhood": "Shinmachi",
+            "cuisine": "Cafe",
+            "description": "A newly opened cafe venue in Shinmachi, with branch-specific opening and menu evidence.",
+            "address": "189 Ubayanagicho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.weekenderscoffee.com/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/weekenders-0-9ecb61a9734918dd.webp",
+            "imageCredit": "WEEKENDERS COFFEE",
+            "imageSourceUrl": "https://www.instagram.com/p/DdN6xUPBPpE/",
+            "imageNote": "Branch operator photograph or announcement image; pictured items are not identified",
+            "openingConfirmed": true,
+            "day": "2026-09-30"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/weekenders-0-9ecb61a9734918dd.webp",
+          "sha256": "9ecb61a9734918ddabbd5bbffcbe5d65dcee764655eb8658372b2ce258cc8310",
+          "width": 640,
+          "height": 640,
+          "credit": "WEEKENDERS COFFEE",
+          "note": "Branch operator photograph or announcement image; pictured items are not identified",
+          "sourcePage": "https://www.instagram.com/p/DdN6xUPBPpE/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Toriya Kacchan — No. 5 Opens in Kisshoin",
+        "description": "A newly opened yakitori venue in Kisshoin, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/menya_kacchyan3/",
+        "address": "W8 Building, 10-2 Kisshoin Nishinosho Nishiuracho, Minami-ku, Kyoto",
+        "productName": "Toriya Kacchan — No. 5",
+        "utcStartDateTime": "2026-09-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-01. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kisshoin",
+          "Yakitori"
+        ],
+        "longFormSummary": "<p>A newly opened yakitori venue in Kisshoin, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/toriyakacchyan5-nishioji2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/menya_kacchyan3/",
+            "title": "Toriya Kacchan — No. 5 source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/toriyakacchyan5-nishioji2609/",
+            "title": "Toriya Kacchan — No. 5 source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/p/DcvQFTvEkqh/",
+            "title": "Toriya Kacchan — No. 5 source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/menya_kacchyan3/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/menya_kacchyan3/",
+            "name": "Toriya Kacchan — No. 5",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://www.instagram.com/p/DcvQFTvEkqh/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Yakitori",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Seared chashu",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken sashimi",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken nyumen",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Cheese risotto",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "New evening concept at the existing daytime ramen venue; counted as one restaurant. Branch report names these night dishes without prices. The operator menu-image thumbnail is cropped; full-resolution download returns 403, so unreadable prices are not guessed. Daytime ramen is not treated as an evening-menu item."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/menya_kacchyan3/",
+            "name": "Toriya Kacchan — No. 5",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/menya_kacchyan3/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Monday–Saturday evenings",
+                "hours": "18:00–23:00"
+              },
+              {
+                "days": "Sunday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/menya_kacchyan3/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/toriyakacchyan5-nishioji2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DcvQFTvEkqh/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "kacchan",
+            "name": "Toriya Kacchan — No. 5",
+            "neighborhood": "Kisshoin",
+            "cuisine": "Yakitori",
+            "description": "A newly opened yakitori venue in Kisshoin, with branch-specific opening and menu evidence.",
+            "address": "W8 Building, 10-2 Kisshoin Nishinosho Nishiuracho, Minami-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/menya_kacchyan3/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/kacchan-0-63a377e6a3ee77cd.webp",
+            "imageCredit": "Toriya Kacchan",
+            "imageSourceUrl": "https://www.instagram.com/p/DcvQFTvEkqh/",
+            "imageNote": "Branch operator photograph or announcement image; pictured items are not identified",
+            "openingConfirmed": true,
+            "day": "2026-09-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/kacchan-0-63a377e6a3ee77cd.webp",
+          "sha256": "63a377e6a3ee77cdc3058cde904047ee85c9273f848dee09d7446bac112f7729",
+          "width": 640,
+          "height": 640,
+          "credit": "Toriya Kacchan",
+          "note": "Branch operator photograph or announcement image; pictured items are not identified",
+          "sourcePage": "https://www.instagram.com/p/DcvQFTvEkqh/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "NICHI DO Opens in Kamigatsura",
+        "description": "A newly opened cafe venue in Kamigatsura, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/nichi_do_kyoto/",
+        "address": "1F, 21-4 Kamigatsura Maedacho, Nishikyo-ku, Kyoto",
+        "productName": "NICHI DO",
+        "utcStartDateTime": "2026-09-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-19. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kamigatsura",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A newly opened cafe venue in Kamigatsura, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/nichido-kyotokatsura2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/nichi_do_kyoto/",
+            "title": "NICHI DO source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/nichido-kyotokatsura2609/",
+            "title": "NICHI DO source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdRKelqE2DG/",
+            "title": "NICHI DO source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-19. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/nichi_do_kyoto/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/nichi_do_kyoto/",
+            "name": "NICHI DO",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://www.instagram.com/p/DdRKelqE2DG/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Donuts",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Bagels",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator relocation/rebranding announcement publishes these items without prices. Opening September calendar is expired; current regular hours and launch flavour prices are not confirmed. Adjacent nichi cafe dishes and prices and the former nichi donuts menu are not borrowed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/nichi_do_kyoto/",
+            "name": "NICHI DO",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/nichi_do_kyoto/",
+            "phone": null,
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.instagram.com/nichi_do_kyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/nichido-kyotokatsura2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdRKelqE2DG/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "nichido",
+            "name": "NICHI DO",
+            "neighborhood": "Kamigatsura",
+            "cuisine": "Cafe",
+            "description": "A newly opened cafe venue in Kamigatsura, with branch-specific opening and menu evidence.",
+            "address": "1F, 21-4 Kamigatsura Maedacho, Nishikyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/nichi_do_kyoto/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nichido-0-2c6f6736455f9649.webp",
+            "imageCredit": "NICHI DO",
+            "imageSourceUrl": "https://www.instagram.com/p/DdRKelqE2DG/",
+            "imageNote": "Branch operator photograph or announcement image; pictured items are not identified",
+            "openingConfirmed": true,
+            "day": "2026-09-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nichido-0-2c6f6736455f9649.webp",
+          "sha256": "2c6f6736455f9649bf93a432f20ee5366f24abdb4eae230d295291388532051a",
+          "width": 640,
+          "height": 639,
+          "credit": "NICHI DO",
+          "note": "Branch operator photograph or announcement image; pictured items are not identified",
+          "sourcePage": "https://www.instagram.com/p/DdRKelqE2DG/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Niku Soba × NIXOBA Opens in Kiyamachi",
+        "description": "A newly opened soba venue in Kiyamachi, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/nixoba.88/",
+        "address": "1F KORIKI Building, 192 Shimokorikicho, Nakagyo-ku, Kyoto",
+        "productName": "Niku Soba × NIXOBA",
+        "utcStartDateTime": "2026-09-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Local branch opening report explicitly gives September 1, 2026; operator September 30 menu-repricing post corroborates that this branch is operating.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kiyamachi",
+          "Soba"
+        ],
+        "longFormSummary": "<p>A newly opened soba venue in Kiyamachi, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/nikusobanixoba-ktotokiyacho2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/nixoba.88/",
+            "title": "Niku Soba × NIXOBA source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/nikusobanixoba-ktotokiyacho2609/",
+            "title": "Niku Soba × NIXOBA source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/p/Dd76TgPONuP/",
+            "title": "Niku Soba × NIXOBA source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/nixoba.88/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/nixoba.88/",
+            "name": "Niku Soba × NIXOBA",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch menu",
+                "url": "https://www.instagram.com/p/Dd76TgPONuP/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Meat soba with raw egg",
+                    "price": 980
+                  },
+                  {
+                    "name": "Large-size supplement",
+                    "price": 200
+                  },
+                  {
+                    "name": "Extra meat supplement",
+                    "price": 250
+                  },
+                  {
+                    "name": "Tororo topping",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Onsen-egg topping",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Extra scallions",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Kimchi topping",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Grated daikon topping",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator September 30 repricing post gives ¥980, +¥200 large and +¥250 extra meat; tax treatment not stated. Other topping prices are not published. Permanent repricing is ordinary menu content, not a dated promotional special."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/nixoba.88/",
+            "name": "Niku Soba × NIXOBA",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/nixoba.88/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Tuesday–Sunday lunch",
+                "hours": "12:00–15:30; last order 15:00"
+              },
+              {
+                "days": "Tuesday–Sunday dinner",
+                "hours": "17:00–22:00; last order 21:30"
+              },
+              {
+                "days": "Monday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/nixoba.88/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/nikusobanixoba-ktotokiyacho2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/Dd76TgPONuP/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "nixoba",
+            "name": "Niku Soba × NIXOBA",
+            "neighborhood": "Kiyamachi",
+            "cuisine": "Soba",
+            "description": "A newly opened soba venue in Kiyamachi, with branch-specific opening and menu evidence.",
+            "address": "1F KORIKI Building, 192 Shimokorikicho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/nixoba.88/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nixoba-0-0586fefb31b6f257.webp",
+            "imageCredit": "NIXOBA",
+            "imageSourceUrl": "https://www.instagram.com/p/Dd76TgPONuP/",
+            "imageNote": "Branch operator photograph or announcement image; pictured items are not identified",
+            "openingConfirmed": true,
+            "day": "2026-09-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/nixoba-0-0586fefb31b6f257.webp",
+          "sha256": "0586fefb31b6f25796460439627b3abeb4e4a6b61e9eabcbc49bee44483c974b",
+          "width": 640,
+          "height": 640,
+          "credit": "NIXOBA",
+          "note": "Branch operator photograph or announcement image; pictured items are not identified",
+          "sourcePage": "https://www.instagram.com/p/Dd76TgPONuP/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "HOLLAND VILLAGE KYOTO Opens in Marutamachi",
+        "description": "A newly opened bistro venue in Marutamachi, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+        "address": "283-3 Aioicho, Nakagyo-ku, Kyoto",
+        "productName": "HOLLAND VILLAGE KYOTO",
+        "utcStartDateTime": "2026-09-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-01. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Marutamachi",
+          "Bistro"
+        ],
+        "longFormSummary": "<p>A newly opened bistro venue in Marutamachi, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/hollandvillage-kyoto2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+            "title": "HOLLAND VILLAGE KYOTO source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/hollandvillage-kyoto2609/",
+            "title": "HOLLAND VILLAGE KYOTO source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/p/Dcr5uxizBTg/",
+            "title": "HOLLAND VILLAGE KYOTO source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://article.yahoo.co.jp/detail/67679d083dc445af8fa0c16e1b79fb9119a962b0",
+            "title": "HOLLAND VILLAGE KYOTO source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-01. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+            "name": "HOLLAND VILLAGE KYOTO",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Kyoto October report menu",
+                "url": "https://article.yahoo.co.jp/detail/67679d083dc445af8fa0c16e1b79fb9119a962b0",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "鶏白レバームース",
+                    "price": 700
+                  },
+                  {
+                    "name": "長崎県産真鯛のカルパッチョ",
+                    "price": 2480
+                  },
+                  {
+                    "name": "龍神しいたけの丸ごと炭火焼き からすみバター",
+                    "price": 1480
+                  },
+                  {
+                    "name": "三陸フレッシュムール貝 デストロイヤーの白ワイン蒸し",
+                    "price": 2280
+                  },
+                  {
+                    "name": "滋賀県産くらおポーク ロースの炭火焼き",
+                    "price": 3880
+                  },
+                  {
+                    "name": "京鴨のパンチェッタのカルボナーラ",
+                    "price": 2700
+                  },
+                  {
+                    "name": "その場で作るやくそうペストジェノベーゼ",
+                    "price": 2500
+                  },
+                  {
+                    "name": "パテ・ド・カンパーニュ 赤玉葱コンフィチュール",
+                    "price": 1800
+                  },
+                  {
+                    "name": "赤鶏とレンコン、長芋のクリームグラタン",
+                    "price": 1500
+                  }
+                ],
+                "note": "Current Kyoto-specific October 6 report supplies prices; tax treatment is not specified. ¥800 hospitality charge per person includes house bread. Pasta orders from around 20:00. Operator lists dinner/bar 17:00–23:00, main-food last order 20:00 and other food last order 22:00; newer report lists Tuesday and first/third Wednesday closure, with changes possible."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+            "name": "HOLLAND VILLAGE KYOTO",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+            "phone": "090-1364-3489",
+            "openingHours": [
+              {
+                "days": "Published dinner and bar",
+                "hours": "17:00–23:00; main food last order 20:00, other food 22:00"
+              },
+              {
+                "days": "Reported closures",
+                "hours": "Tuesday and first/third Wednesday; confirm current operator calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/hollandvillage-kyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/Dcr5uxizBTg/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://article.yahoo.co.jp/detail/67679d083dc445af8fa0c16e1b79fb9119a962b0"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "holland",
+            "name": "HOLLAND VILLAGE KYOTO",
+            "neighborhood": "Marutamachi",
+            "cuisine": "Bistro",
+            "description": "A newly opened bistro venue in Marutamachi, with branch-specific opening and menu evidence.",
+            "address": "283-3 Aioicho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/hollandvillagecafe_kyoto/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/holland-4-8fb539e58a40d7d3.webp",
+            "imageCredit": "Kyoto Sokuho via Yahoo Japan",
+            "imageSourceUrl": "https://article.yahoo.co.jp/detail/67679d083dc445af8fa0c16e1b79fb9119a962b0",
+            "imageNote": "Branch-specific source gallery photograph",
+            "openingConfirmed": true,
+            "day": "2026-09-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/holland-4-8fb539e58a40d7d3.webp",
+          "sha256": "8fb539e58a40d7d3a2af2dc3dd01f8a2571b84f9a6a772e371982369b7bea066",
+          "width": 1024,
+          "height": 683,
+          "credit": "Kyoto Sokuho via Yahoo Japan",
+          "note": "Branch-specific source gallery photograph",
+          "sourcePage": "https://article.yahoo.co.jp/detail/67679d083dc445af8fa0c16e1b79fb9119a962b0"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/holland-0-f99b238f081dd0e1.webp",
+          "sha256": "f99b238f081dd0e11243b9d0aa4acbddf4137bfecd9b770c83db102980a60aa1",
+          "width": 640,
+          "height": 640,
+          "credit": "HOLLAND VILLAGE KYOTO",
+          "note": "Branch operator photograph or announcement image; pictured items are not identified",
+          "sourcePage": "https://www.instagram.com/p/Dcr5uxizBTg/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/holland-1-dfb093394c7a267e.webp",
+          "sha256": "dfb093394c7a267e679ec4006b6ec42f55ebd36137dd4b09ecbcd735a0fa5569",
+          "width": 700,
+          "height": 467,
+          "credit": "Kyoto Sokuho via Yahoo Japan",
+          "note": "Branch-specific source gallery photograph",
+          "sourcePage": "https://article.yahoo.co.jp/detail/67679d083dc445af8fa0c16e1b79fb9119a962b0"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/holland-2-a5e0e49fa631b0e5.webp",
+          "sha256": "a5e0e49fa631b0e5db1cb95743008b4c236f564acb15a1ba72ed77cab76536b8",
+          "width": 1024,
+          "height": 683,
+          "credit": "Kyoto Sokuho via Yahoo Japan",
+          "note": "Branch-specific source gallery photograph",
+          "sourcePage": "https://article.yahoo.co.jp/detail/67679d083dc445af8fa0c16e1b79fb9119a962b0"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/holland-5-e77239e705a110ca.webp",
+          "sha256": "e77239e705a110ca2f36513fbf44d40e2e3a81290156923a7e3477a6a3576361",
+          "width": 1024,
+          "height": 683,
+          "credit": "Kyoto Sokuho via Yahoo Japan",
+          "note": "Branch-specific source gallery photograph",
+          "sourcePage": "https://article.yahoo.co.jp/detail/67679d083dc445af8fa0c16e1b79fb9119a962b0"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Suito — Kyoto Hachijoguchi Opens in Kyoto Station south",
+        "description": "A newly opened izakaya venue in Kyoto Station south, with branch-specific opening and menu evidence.",
+        "sourceUrl": "https://www.instagram.com/suito_kyoto/",
+        "address": "2F NODE Kyoto, 3-1 Higashikujo Kita Karasumacho, Minami-ku, Kyoto",
+        "productName": "Suito — Kyoto Hachijoguchi",
+        "utcStartDateTime": "2026-09-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific report publishes 2026-09-09. Operator content corroborates this branch, its opening announcement or its operation; exact evidence is preserved in the references.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kyoto Station south",
+          "Izakaya"
+        ],
+        "longFormSummary": "<p>A newly opened izakaya venue in Kyoto Station south, with branch-specific opening and menu evidence.<cite data-ref=\"https://kansai-kaiten.com/suito-kyoto2609/\"></cite></p><p>Branch-specific opening report and linked operator post corroborate 2026-09-09. This is an actual opening or stated relocation/rebranding; no other branch is counted.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/suito_kyoto/",
+            "title": "Suito — Kyoto Hachijoguchi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-09. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://kansai-kaiten.com/suito-kyoto2609/",
+            "title": "Suito — Kyoto Hachijoguchi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-09. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.instagram.com/reel/Dc_Sgn9utkM/",
+            "title": "Suito — Kyoto Hachijoguchi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-09. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678443/food/",
+            "title": "Suito — Kyoto Hachijoguchi source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report and linked operator post corroborate 2026-09-09. This is an actual opening or stated relocation/rebranding; no other branch is counted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/suito_kyoto/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/suito_kyoto/",
+            "name": "Suito — Kyoto Hachijoguchi",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Current branch food menu",
+                "url": "https://www.hotpepper.jp/strJ004678443/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "贅沢いくらと鮭",
+                    "price": 2728
+                  },
+                  {
+                    "name": "牛しぐれと九条ネギ",
+                    "price": 2948
+                  },
+                  {
+                    "name": "贅沢卵黄のトロタク寿司",
+                    "price": 539,
+                    "note": "Detailed listing ¥539; overview ¥550. Confirm current price."
+                  },
+                  {
+                    "name": "おでんじゃがポテサラ｜柴漬け",
+                    "price": 649
+                  },
+                  {
+                    "name": "おでんじゃがポテサラ｜ちりめん山椒",
+                    "price": 649
+                  },
+                  {
+                    "name": "八ツ橋とクリームチーズ",
+                    "price": 539
+                  },
+                  {
+                    "name": "パリピと肉味噌",
+                    "price": 649
+                  },
+                  {
+                    "name": "黒豆マスカルポーネ",
+                    "price": 682
+                  },
+                  {
+                    "name": "季節フルーツのキャラメリゼブラータ",
+                    "price": 1298
+                  },
+                  {
+                    "name": "なんじゃもんじゃサラダ",
+                    "price": 869
+                  },
+                  {
+                    "name": "ごまカンパチ",
+                    "price": 869
+                  },
+                  {
+                    "name": "おさつチップとレモンクリーム",
+                    "price": 715
+                  },
+                  {
+                    "name": "温玉シーザーサラダ",
+                    "price": 968
+                  },
+                  {
+                    "name": "生ハムサーモンチーズ春巻き",
+                    "price": 990
+                  },
+                  {
+                    "name": "サーモンレアカツ｜特性ソース",
+                    "price": 1100
+                  },
+                  {
+                    "name": "鶏つくねと濃厚玉子｜パルミジャーノチーズ",
+                    "price": 539
+                  },
+                  {
+                    "name": "あちあち小籠包",
+                    "price": 660
+                  },
+                  {
+                    "name": "タコ麻婆豆腐",
+                    "price": 759
+                  },
+                  {
+                    "name": "おでん大根の唐揚げ",
+                    "price": 715
+                  },
+                  {
+                    "name": "ブラウンマッシュと生ハムクリームチーズ",
+                    "price": 836
+                  },
+                  {
+                    "name": "アサリと九条ネギのワイン蒸し",
+                    "price": 979
+                  },
+                  {
+                    "name": "白い出汁巻き",
+                    "price": 715
+                  },
+                  {
+                    "name": "フライドポテト",
+                    "price": 539
+                  },
+                  {
+                    "name": "おでん盛り合わせ",
+                    "price": 968
+                  },
+                  {
+                    "name": "枝豆",
+                    "price": 429
+                  },
+                  {
+                    "name": "塩だれキャベツ",
+                    "price": 429
+                  },
+                  {
+                    "name": "アボカドのお刺身",
+                    "price": 539
+                  },
+                  {
+                    "name": "合鴨のグリル｜山椒ソース",
+                    "price": 1188
+                  },
+                  {
+                    "name": "牛ハラミのステーキ",
+                    "price": 1298
+                  },
+                  {
+                    "name": "手羽元の唐揚げ",
+                    "price": 792
+                  },
+                  {
+                    "name": "アールグレイプリン",
+                    "price": 649
+                  },
+                  {
+                    "name": "ベイクドチーズケーキ",
+                    "price": 539
+                  },
+                  {
+                    "name": "2色のアイス",
+                    "price": 429
+                  }
+                ],
+                "note": "Branch-managed September 17 menu has tax-inclusive prices. Detailed toro-taku line says ¥539 while its overview says ¥550; confirm that item price. The opening ¥777 drinks campaign has no verified current expiry/conditions and is excluded from Specials pending a fresh coupon reading."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/suito_kyoto/",
+            "name": "Suito — Kyoto Hachijoguchi",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/suito_kyoto/",
+            "phone": "075-606-8033",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "17:00–23:00; food last order 22:00, drinks 22:30"
+              },
+              {
+                "days": "Saturday, Sunday, holidays",
+                "hours": "16:00–23:00; food last order 22:00, drinks 22:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/suito_kyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/suito-kyoto2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/Dc_Sgn9utkM/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004678443/food/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "suito",
+            "name": "Suito — Kyoto Hachijoguchi",
+            "neighborhood": "Kyoto Station south",
+            "cuisine": "Izakaya",
+            "description": "A newly opened izakaya venue in Kyoto Station south, with branch-specific opening and menu evidence.",
+            "address": "2F NODE Kyoto, 3-1 Higashikujo Kita Karasumacho, Minami-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/suito_kyoto/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/suito-10-d65396356b892669.webp",
+            "imageCredit": "SUITO via Hot Pepper Gourmet",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004678443/appearance/",
+            "imageNote": "Branch-specific operator or landlord gallery photograph",
+            "openingConfirmed": true,
+            "day": "2026-09-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/suito-10-d65396356b892669.webp",
+          "sha256": "d65396356b892669025544af30dd816d024f96f4183068d3168e9813be9a16ba",
+          "width": 238,
+          "height": 237,
+          "credit": "SUITO via Hot Pepper Gourmet",
+          "note": "Branch-specific operator or landlord gallery photograph",
+          "sourcePage": "https://www.hotpepper.jp/strJ004678443/appearance/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/suito-0-286a6fdc635235f0.webp",
+          "sha256": "286a6fdc635235f0785f73480cc7d51dd2f298b314e6bcbaf363f42fb086940e",
+          "width": 360,
+          "height": 640,
+          "credit": "SUITO",
+          "note": "Still from the branch operator video",
+          "sourcePage": "https://www.instagram.com/reel/Dc_Sgn9utkM/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/suito-11-c4b0102173a9ead5.webp",
+          "sha256": "c4b0102173a9ead5cd965e6956e2e06e17d41eb5f815f28cbab1e5d4039204b8",
+          "width": 238,
+          "height": 238,
+          "credit": "SUITO via Hot Pepper Gourmet",
+          "note": "Branch-specific operator or landlord gallery photograph",
+          "sourcePage": "https://www.hotpepper.jp/strJ004678443/appearance/"
+        }
+      ]
+    }
+  ]
+}
