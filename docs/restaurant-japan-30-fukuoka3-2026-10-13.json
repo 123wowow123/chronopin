@@ -1,0 +1,1946 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "fukuoka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Icho — Hotel Nikko Fukuoka — Fukuoka restaurant guide",
+        "description": "Teppanyaki counter dining with published Japanese beef lunch choices and a monthly seasonal course.",
+        "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+        "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+        "productName": "Icho — Hotel Nikko Fukuoka",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Hakata Station",
+          "Teppanyaki"
+        ],
+        "longFormSummary": "<p>Teppanyaki counter dining with published Japanese beef lunch choices and a monthly seasonal course.<cite data-ref=\"https://www.hotelnikko-fukuoka.com/restaurant/icho/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+            "title": "Icho — Hotel Nikko Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/icho/plan/1962d755a021a4f.html",
+            "title": "Icho — Hotel Nikko Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+            "name": "Icho — Hotel Nikko Fukuoka",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Japanese beef steak lunch",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/icho/plan/1962d755a021a4f.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "120 g beef fillet or sirloin lunch",
+                    "price": 7000
+                  },
+                  {
+                    "name": "150 g beef lunch",
+                    "price": 8000
+                  },
+                  {
+                    "name": "180 g beef lunch",
+                    "price": 9000
+                  },
+                  {
+                    "name": "200 g beef lunch",
+                    "price": 9800
+                  }
+                ],
+                "note": "Tax and 10% service included. Choose fillet or sirloin; vegetables, salad, garlic rice or plain rice, soup, dessert and coffee included."
+              },
+              {
+                "label": "October Kirameki lunch",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/icho/plan/1962d755a021a4f.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "October Kirameki lunch",
+                    "price": 9900
+                  },
+                  {
+                    "name": "根セロリのスープ 鉄鍋仕立て",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Kirameki lunch; no separate item price published"
+                  },
+                  {
+                    "name": "秋鮭のソテー レモンバターソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Kirameki lunch; no separate item price published"
+                  },
+                  {
+                    "name": "国産牛サーロイン または フィレ 80g",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Kirameki lunch; no separate item price published"
+                  },
+                  {
+                    "name": "さつまいも入り特製ガーリックライス",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Kirameki lunch; no separate item price published"
+                  }
+                ],
+                "note": "Current operator page specifies October without printing a year. Saved as ordinary monthly menu; no invented fixed promotional validity period. Tax and 10% service included."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+            "name": "Icho — Hotel Nikko Fukuoka",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+            "phone": "092-482-1166",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–15:00; last order 14:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–21:30; last order 20:30, last entry 20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/icho/plan/1962d755a021a4f.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "icho",
+            "name": "Icho — Hotel Nikko Fukuoka",
+            "neighborhood": "Hakata Station",
+            "cuisine": "Teppanyaki",
+            "description": "Teppanyaki counter dining with published Japanese beef lunch choices and a monthly seasonal course.",
+            "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/icho-0-0a2a6c17dd8e4a19.webp",
+            "imageCredit": "Hotel Nikko Fukuoka",
+            "imageSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/icho/",
+            "imageNote": "Operator photograph of this restaurant dining room"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/icho-0-0a2a6c17dd8e4a19.webp",
+          "sha256": "0a2a6c17dd8e4a19a5d1ee2c5d054f70f3f595a4c497ee5dcbc378a7a0015cf9",
+          "width": 1200,
+          "height": 549,
+          "credit": "Hotel Nikko Fukuoka",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://www.hotelnikko-fukuoka.com/restaurant/icho/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/icho-1-4711ea9c1d395048.webp",
+          "sha256": "4711ea9c1d395048fb19b45aabdf823813663391f08608c3a59d7949099ee1f1",
+          "width": 1200,
+          "height": 549,
+          "credit": "Hotel Nikko Fukuoka",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://www.hotelnikko-fukuoka.com/restaurant/icho/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Benkei — Hotel Nikko Fukuoka — Fukuoka restaurant guide",
+        "description": "Japanese dining and kaiseki near Hakata Station, with a verified reservation-only autumn soup upgrade.",
+        "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+        "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+        "productName": "Benkei — Hotel Nikko Fukuoka",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Hakata Station",
+          "Japanese"
+        ],
+        "longFormSummary": "<p>Japanese dining and kaiseki near Hakata Station, with a verified reservation-only autumn soup upgrade.<cite data-ref=\"https://www.hotelnikko-fukuoka.com/restaurant/benkei/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+            "title": "Benkei — Hotel Nikko Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/plan/626a829c44c1c0f.html",
+            "title": "Benkei — Hotel Nikko Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+            "name": "Benkei — Hotel Nikko Fukuoka",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn reservation upgrade",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/plan/626a829c44c1c0f.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hana lunch kaiseki",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Gion lunch kaiseki",
+                    "price": 8800
+                  },
+                  {
+                    "name": "Yumi dinner kaiseki",
+                    "price": 10000
+                  },
+                  {
+                    "name": "松茸土瓶蒸し",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana lunch; no separate item price published"
+                  },
+                  {
+                    "name": "胡麻豆腐 大和芋",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana lunch; no separate item price published"
+                  },
+                  {
+                    "name": "真鯛 間八 本鮪",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana lunch; no separate item price published"
+                  },
+                  {
+                    "name": "鮭柚庵ソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana lunch; no separate item price published"
+                  },
+                  {
+                    "name": "十六穀入り占地と南関揚御飯",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana lunch; no separate item price published"
+                  }
+                ],
+                "note": "September 14–October 18. Reserve by phone or operator website and request the autumn plan for a matsutake dobin-mushi upgrade (normally +¥1,800). Tax and 10% service included; no other discounts or point accrual. Hana/Gion lunch and Yumi dinner have different dishes; sample components here are Hana only."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+            "name": "Benkei — Hotel Nikko Fukuoka",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+            "phone": "092-482-1165",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/plan/626a829c44c1c0f.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "benkei",
+            "name": "Benkei — Hotel Nikko Fukuoka",
+            "neighborhood": "Hakata Station",
+            "cuisine": "Japanese",
+            "description": "Japanese dining and kaiseki near Hakata Station, with a verified reservation-only autumn soup upgrade.",
+            "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/benkei-0-92df84bb4d9d59e1.webp",
+            "imageCredit": "Hotel Nikko Fukuoka",
+            "imageSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+            "imageNote": "Operator Japanese-meal presentation; pictured dishes may differ from the current autumn menu"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/benkei-0-92df84bb4d9d59e1.webp",
+          "sha256": "92df84bb4d9d59e143325438836e693825097e490f1e115b3c2c79217074eff8",
+          "width": 1200,
+          "height": 549,
+          "credit": "Hotel Nikko Fukuoka",
+          "note": "Operator Japanese-meal presentation; pictured dishes may differ from the current autumn menu",
+          "sourcePage": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/benkei-1-60689fbaf3a91ba9.webp",
+          "sha256": "60689fbaf3a91ba9b96a551d77e9fd7a52170f3512c0ad3143b6f3c3f36c7171",
+          "width": 1200,
+          "height": 549,
+          "credit": "Hotel Nikko Fukuoka",
+          "note": "Operator Japanese-meal presentation; pictured dishes may differ from the current autumn menu",
+          "sourcePage": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+          "name": "Benkei — Hotel Nikko Fukuoka",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Autumn reservation upgrade",
+              "url": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/plan/626a829c44c1c0f.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hana lunch kaiseki",
+                  "price": 6000
+                },
+                {
+                  "name": "Gion lunch kaiseki",
+                  "price": 8800
+                },
+                {
+                  "name": "Yumi dinner kaiseki",
+                  "price": 10000
+                },
+                {
+                  "name": "松茸土瓶蒸し",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana lunch; no separate item price published"
+                },
+                {
+                  "name": "胡麻豆腐 大和芋",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana lunch; no separate item price published"
+                },
+                {
+                  "name": "真鯛 間八 本鮪",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana lunch; no separate item price published"
+                },
+                {
+                  "name": "鮭柚庵ソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana lunch; no separate item price published"
+                },
+                {
+                  "name": "十六穀入り占地と南関揚御飯",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana lunch; no separate item price published"
+                }
+              ],
+              "note": "September 14–October 18. Reserve by phone or operator website and request the autumn plan for a matsutake dobin-mushi upgrade (normally +¥1,800). Tax and 10% service included; no other discounts or point accrual. Hana/Gion lunch and Yumi dinner have different dishes; sample components here are Hana only."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn lunch soup upgrade",
+              "kind": "lunch",
+              "description": "Reserved Hana ¥6,000 or Gion ¥8,800 lunch includes a matsutake soup upgrade normally costing ¥1,800.",
+              "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/plan/626a829c44c1c0f.html",
+              "menuLabel": "Autumn reservation upgrade",
+              "discounted": true,
+              "validFrom": "2026-09-14",
+              "validThrough": "2026-10-18",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve by phone or the official website and explicitly request the autumn plan.",
+                "Hana/Gion apply at lunch; Yumi applies at dinner.",
+                "No other discounts or point accrual.",
+                "Last order 14:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:00"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Autumn dinner soup upgrade",
+              "kind": "other",
+              "description": "Reserved Yumi ¥10,000 dinner includes a matsutake soup upgrade normally costing ¥1,800.",
+              "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/plan/626a829c44c1c0f.html",
+              "menuLabel": "Autumn reservation upgrade",
+              "discounted": true,
+              "validFrom": "2026-09-14",
+              "validThrough": "2026-10-18",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve by phone or the official website and explicitly request the autumn plan.",
+                "Hana/Gion apply at lunch; Yumi applies at dinner.",
+                "No other discounts or point accrual.",
+                "Last entry 20:00; last order 20:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+          "neighborhood": "Hakata Station",
+          "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/benkei-0-92df84bb4d9d59e1.webp",
+            "alt": "Benkei — Hotel Nikko Fukuoka — Operator Japanese-meal presentation; pictured dishes may differ from the current autumn menu",
+            "credit": "Hotel Nikko Fukuoka",
+            "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+            "originalUrl": "https://www.hotelnikko-fukuoka.com/img/restaurant/img_rest_benkei1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Les Célébrités — Fukuoka restaurant guide",
+        "description": "French dining with a dated autumn dinner featuring lobster, tilefish and Saga beef.",
+        "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+        "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+        "productName": "Les Célébrités",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Hakata Station",
+          "French"
+        ],
+        "longFormSummary": "<p>French dining with a dated autumn dinner featuring lobster, tilefish and Saga beef.<cite data-ref=\"https://www.hotelnikko-fukuoka.com/restaurant/celebrites/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+            "title": "Les Célébrités source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/plan/956a90fa173e1f9.html",
+            "title": "Les Célébrités source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/plan/21594cd2e59ef7f.html",
+            "title": "Les Célébrités source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+            "name": "Les Célébrités",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Savours d’automne 2026",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/plan/956a90fa173e1f9.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Autumn dinner course",
+                    "price": 15000
+                  },
+                  {
+                    "name": "オマール海老と秋の味覚のアンサンブル 柿のヴィネグレット キャビア添え",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Savours d’automne 2026; no separate item price published"
+                  },
+                  {
+                    "name": "甘鯛の鱗焼き 秋の茸香るコンソメ仕立て",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Savours d’automne 2026; no separate item price published"
+                  },
+                  {
+                    "name": "佐賀産牛フィレ肉のローストと安納芋のピューレ 香り高いトリュフのソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Savours d’automne 2026; no separate item price published"
+                  }
+                ],
+                "note": "October 16–31. Tax and 10% service included. Reserve by 15:00 two days before; last order 19:00. Generally junior-high-school ages and older except private-room use; dress requirements apply."
+              },
+              {
+                "label": "Marché lunch",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/plan/21594cd2e59ef7f.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch with choice of fish or meat main",
+                    "price": 6000
+                  }
+                ],
+                "note": "Year-round regular menu, not a dated special. Tax and 10% service included; dessert trolley and coffee or tea included."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+            "name": "Les Célébrités",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+            "phone": "092-482-1163",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/plan/956a90fa173e1f9.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "celebrites",
+            "name": "Les Célébrités",
+            "neighborhood": "Hakata Station",
+            "cuisine": "French",
+            "description": "French dining with a dated autumn dinner featuring lobster, tilefish and Saga beef.",
+            "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/celebrites-0-2ac0329d8f4edd6e.webp",
+            "imageCredit": "Hotel Nikko Fukuoka",
+            "imageSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+            "imageNote": "Operator photograph of this restaurant dining room"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/celebrites-0-2ac0329d8f4edd6e.webp",
+          "sha256": "2ac0329d8f4edd6e477a53acaa2b32a4a1249a47e262357ae900a55f507518bb",
+          "width": 1200,
+          "height": 549,
+          "credit": "Hotel Nikko Fukuoka",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/celebrites-1-fabf87c135cd6a64.webp",
+          "sha256": "fabf87c135cd6a64214dd2561a535cfc91378a48242e0340f3fa7dacfe47c214",
+          "width": 1200,
+          "height": 549,
+          "credit": "Hotel Nikko Fukuoka",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "name": "Les Célébrités",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Savours d’automne 2026",
+              "url": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/plan/956a90fa173e1f9.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Autumn dinner course",
+                  "price": 15000
+                },
+                {
+                  "name": "オマール海老と秋の味覚のアンサンブル 柿のヴィネグレット キャビア添え",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Savours d’automne 2026; no separate item price published"
+                },
+                {
+                  "name": "甘鯛の鱗焼き 秋の茸香るコンソメ仕立て",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Savours d’automne 2026; no separate item price published"
+                },
+                {
+                  "name": "佐賀産牛フィレ肉のローストと安納芋のピューレ 香り高いトリュフのソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Savours d’automne 2026; no separate item price published"
+                }
+              ],
+              "note": "October 16–31. Tax and 10% service included. Reserve by 15:00 two days before; last order 19:00. Generally junior-high-school ages and older except private-room use; dress requirements apply."
+            },
+            {
+              "label": "Marché lunch",
+              "url": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/plan/21594cd2e59ef7f.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Lunch with choice of fish or meat main",
+                  "price": 6000
+                }
+              ],
+              "note": "Year-round regular menu, not a dated special. Tax and 10% service included; dessert trolley and coffee or tea included."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Savours d’automne 2026",
+              "kind": "other",
+              "description": "Seasonal French dinner course, ¥15,000 including tax and service.",
+              "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/plan/956a90fa173e1f9.html",
+              "menuLabel": "Savours d’automne 2026",
+              "discounted": false,
+              "validFrom": "2026-10-16",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve by 15:00 two days before.",
+                "Last order 19:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+          "neighborhood": "Hakata Station",
+          "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/celebrites-0-2ac0329d8f4edd6e.webp",
+            "alt": "Les Célébrités — Operator photograph of this restaurant dining room",
+            "credit": "Hotel Nikko Fukuoka",
+            "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+            "originalUrl": "https://www.hotelnikko-fukuoka.com/img/restaurant/img_rest_celebrites1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "CLOUDS — Hilton Fukuoka Sea Hawk — Fukuoka restaurant guide",
+        "description": "Panoramic bar dining above Hakata Bay, with dated autumn tea and a three-day Christmas pair plan.",
+        "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+        "address": "35F Hilton Fukuoka Sea Hawk, 2-2-3 Jigyohama, Chuo-ku, Fukuoka",
+        "productName": "CLOUDS — Hilton Fukuoka Sea Hawk",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Jigyohama",
+          "Bar and dining"
+        ],
+        "longFormSummary": "<p>Panoramic bar dining above Hakata Bay, with dated autumn tea and a three-day Christmas pair plan.<cite data-ref=\"https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+            "title": "CLOUDS — Hilton Fukuoka Sea Hawk source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-after8",
+            "title": "CLOUDS — Hilton Fukuoka Sea Hawk source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-afternoontea",
+            "title": "CLOUDS — Hilton Fukuoka Sea Hawk source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "menu": {
+            "pinSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+            "name": "CLOUDS — Hilton Fukuoka Sea Hawk",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Christmas After 8 pair plan",
+                "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-after8",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "After 8 with half bottle of Moët & Chandon — two people",
+                    "price": 10000
+                  },
+                  {
+                    "name": "ブッシュドノエル",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                  },
+                  {
+                    "name": "クロカンブッシュ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                  },
+                  {
+                    "name": "バスクチーズケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                  },
+                  {
+                    "name": "マカロン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                  },
+                  {
+                    "name": "クッキー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                  },
+                  {
+                    "name": "カヌレ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                  }
+                ],
+                "note": "December 23–25 only, bookings for two people. One sweets-trolley selection, three snacks and a Champagne half bottle. Tax and service included; last order 22:30."
+              },
+              {
+                "label": "Royal Chocolat afternoon tea",
+                "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-afternoontea",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tea with choice of main dish",
+                    "price": 5000
+                  },
+                  {
+                    "name": "Tea with sweets trolley",
+                    "price": 5500
+                  },
+                  {
+                    "name": "ロータスビスコフ・チーズケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Royal Chocolat tea; no separate item price published"
+                  },
+                  {
+                    "name": "ベルギーチョコのナメラカ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Royal Chocolat tea; no separate item price published"
+                  },
+                  {
+                    "name": "抹茶とアーモンドのフロランタン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Royal Chocolat tea; no separate item price published"
+                  },
+                  {
+                    "name": "モンブランタルトレット",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Royal Chocolat tea; no separate item price published"
+                  },
+                  {
+                    "name": "ラズベリームース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Royal Chocolat tea; no separate item price published"
+                  }
+                ],
+                "note": "September 1–October 31. Main-dish sessions start 11:30 and 13:30; sweets-trolley session starts 15:30. Tax and service included. Session duration is not published; no duration is inferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+            "name": "CLOUDS — Hilton Fukuoka Sea Hawk",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+            "phone": "092-844-8000",
+            "openingHours": [],
+            "detailsSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-after8"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-afternoontea"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "clouds",
+            "name": "CLOUDS — Hilton Fukuoka Sea Hawk",
+            "neighborhood": "Jigyohama",
+            "cuisine": "Bar and dining",
+            "description": "Panoramic bar dining above Hakata Bay, with dated autumn tea and a three-day Christmas pair plan.",
+            "address": "35F Hilton Fukuoka Sea Hawk, 2-2-3 Jigyohama, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/clouds-0-509d61b525ba970b.webp",
+            "imageCredit": "Hilton Fukuoka Sea Hawk",
+            "imageSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+            "imageNote": "Operator photograph of this restaurant dining room"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/clouds-0-509d61b525ba970b.webp",
+          "sha256": "509d61b525ba970b89614057469bf9533661e98654ecaeb136f7a1f7286e078a",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Fukuoka Sea Hawk",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/clouds-1-6f50ef7e6e9edf7c.webp",
+          "sha256": "6f50ef7e6e9edf7c385652627fc04e293827eb135a3517dfc72650cbfa66f5ca",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Fukuoka Sea Hawk",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "name": "CLOUDS — Hilton Fukuoka Sea Hawk",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Christmas After 8 pair plan",
+              "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-after8",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "After 8 with half bottle of Moët & Chandon — two people",
+                  "price": 10000
+                },
+                {
+                  "name": "ブッシュドノエル",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                },
+                {
+                  "name": "クロカンブッシュ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                },
+                {
+                  "name": "バスクチーズケーキ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                },
+                {
+                  "name": "マカロン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                },
+                {
+                  "name": "クッキー",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                },
+                {
+                  "name": "カヌレ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas After 8 pair plan; no separate item price published"
+                }
+              ],
+              "note": "December 23–25 only, bookings for two people. One sweets-trolley selection, three snacks and a Champagne half bottle. Tax and service included; last order 22:30."
+            },
+            {
+              "label": "Royal Chocolat afternoon tea",
+              "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-afternoontea",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Tea with choice of main dish",
+                  "price": 5000
+                },
+                {
+                  "name": "Tea with sweets trolley",
+                  "price": 5500
+                },
+                {
+                  "name": "ロータスビスコフ・チーズケーキ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Royal Chocolat tea; no separate item price published"
+                },
+                {
+                  "name": "ベルギーチョコのナメラカ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Royal Chocolat tea; no separate item price published"
+                },
+                {
+                  "name": "抹茶とアーモンドのフロランタン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Royal Chocolat tea; no separate item price published"
+                },
+                {
+                  "name": "モンブランタルトレット",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Royal Chocolat tea; no separate item price published"
+                },
+                {
+                  "name": "ラズベリームース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Royal Chocolat tea; no separate item price published"
+                }
+              ],
+              "note": "September 1–October 31. Main-dish sessions start 11:30 and 13:30; sweets-trolley session starts 15:30. Tax and service included. Session duration is not published; no duration is inferred."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Christmas After 8 pair plan",
+              "kind": "other",
+              "description": "Three-day Christmas sweets-and-snacks pair plan with a Champagne half bottle; ¥10,000 for two.",
+              "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/clouds-after8",
+              "menuLabel": "Christmas After 8 pair plan",
+              "discounted": false,
+              "validFrom": "2026-12-23",
+              "validThrough": "2026-12-25",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Exactly two diners per booking.",
+                "Last order 22:30.",
+                "One sweets-trolley selection per guest."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "20:00",
+                    "end": "24:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "35F Hilton Fukuoka Sea Hawk, 2-2-3 Jigyohama, Chuo-ku, Fukuoka",
+          "neighborhood": "Jigyohama",
+          "websiteUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/clouds-0-509d61b525ba970b.webp",
+            "alt": "CLOUDS — Hilton Fukuoka Sea Hawk — Operator photograph of this restaurant dining room",
+            "credit": "Hilton Fukuoka Sea Hawk",
+            "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+            "originalUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/img/restaurants/up_img/20160608143703_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SEALA — Hilton Fukuoka Sea Hawk — Fukuoka restaurant guide",
+        "description": "Atrium buffet dining with a verified Christmas sweets menu and a conditional student price.",
+        "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+        "address": "4F Hilton Fukuoka Sea Hawk, 2-2-3 Jigyohama, Chuo-ku, Fukuoka",
+        "productName": "SEALA — Hilton Fukuoka Sea Hawk",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Jigyohama",
+          "Buffet"
+        ],
+        "longFormSummary": "<p>Atrium buffet dining with a verified Christmas sweets menu and a conditional student price.<cite data-ref=\"https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+            "title": "SEALA — Hilton Fukuoka Sea Hawk source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/seala-sweetsbuffet-christmas",
+            "title": "SEALA — Hilton Fukuoka Sea Hawk source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "SEALA — Hilton Fukuoka Sea Hawk source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "menu": {
+            "pinSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+            "name": "SEALA — Hilton Fukuoka Sea Hawk",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Christmas Palace sweets buffet",
+                "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/seala-sweetsbuffet-christmas",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Adult buffet",
+                    "price": 5000
+                  },
+                  {
+                    "name": "Child ages 6–12",
+                    "price": 3250
+                  },
+                  {
+                    "name": "Student ages 13 and older",
+                    "price": 4300,
+                    "note": "Official website booking and student ID required"
+                  },
+                  {
+                    "name": "ラベンダーのドレープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "クリスマスツリーを飾って",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "王宮のラベンダー・ノエル",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "クリスマスギフト",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "イングランド クラムチャウダー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "ミートボール ホワイトソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                  },
+                  {
+                    "name": "パスタ 茄子入り アラビアータ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                  }
+                ],
+                "note": "November 7–December 27, Fridays/Saturdays/Sundays and public holidays; December 24 special service. 15:30–17:00, last entry 16:30. Tax and service included."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+            "name": "SEALA — Hilton Fukuoka Sea Hawk",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+            "phone": "092-844-8000",
+            "openingHours": [],
+            "detailsSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/seala-sweetsbuffet-christmas"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "seala",
+            "name": "SEALA — Hilton Fukuoka Sea Hawk",
+            "neighborhood": "Jigyohama",
+            "cuisine": "Buffet",
+            "description": "Atrium buffet dining with a verified Christmas sweets menu and a conditional student price.",
+            "address": "4F Hilton Fukuoka Sea Hawk, 2-2-3 Jigyohama, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/seala-0-aae0ac6ba6ea3ee2.webp",
+            "imageCredit": "Hilton Fukuoka Sea Hawk",
+            "imageSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+            "imageNote": "Operator photograph of this restaurant dining room"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/seala-0-aae0ac6ba6ea3ee2.webp",
+          "sha256": "aae0ac6ba6ea3ee21b0dee8b5b636338bd18db223ad4aeac2dc4f389ad133677",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Fukuoka Sea Hawk",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/seala-1-546a3bb07f1b4ac9.webp",
+          "sha256": "546a3bb07f1b4ac928a28d25568dda07568fdce39631fb5611503c2542d29ef8",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Fukuoka Sea Hawk",
+          "note": "Operator buffet presentation; not the Christmas Palace menu",
+          "sourcePage": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "name": "SEALA — Hilton Fukuoka Sea Hawk",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Christmas Palace sweets buffet",
+              "url": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/seala-sweetsbuffet-christmas",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Adult buffet",
+                  "price": 5000
+                },
+                {
+                  "name": "Child ages 6–12",
+                  "price": 3250
+                },
+                {
+                  "name": "Student ages 13 and older",
+                  "price": 4300,
+                  "note": "Official website booking and student ID required"
+                },
+                {
+                  "name": "ラベンダーのドレープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "クリスマスツリーを飾って",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "王宮のラベンダー・ノエル",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "クリスマスギフト",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "イングランド クラムチャウダー",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "ミートボール ホワイトソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                },
+                {
+                  "name": "パスタ 茄子入り アラビアータ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Christmas Palace sweets buffet; no separate item price published"
+                }
+              ],
+              "note": "November 7–December 27, Fridays/Saturdays/Sundays and public holidays; December 24 special service. 15:30–17:00, last entry 16:30. Tax and service included."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Christmas Palace sweets buffet",
+              "kind": "other",
+              "description": "Seasonal sweets buffet, adults ¥5,000; eligible students ¥4,300 with official-site booking and ID.",
+              "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/seala-sweetsbuffet-christmas",
+              "menuLabel": "Christmas Palace sweets buffet",
+              "discounted": true,
+              "validFrom": "2026-11-07",
+              "validThrough": "2026-12-27",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Student ages 13 and older must book on the official website and show ID.",
+                "Last entry 16:30.",
+                "Tax and service included."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      5,
+                      6,
+                      0
+                    ],
+                    "start": "15:30",
+                    "end": "17:00"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Christmas Palace sweets buffet — additional date",
+              "kind": "other",
+              "description": "Seasonal sweets buffet, adults ¥5,000; eligible students ¥4,300 with official-site booking and ID.",
+              "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/seala-sweetsbuffet-christmas",
+              "menuLabel": "Christmas Palace sweets buffet",
+              "discounted": true,
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Student ages 13 and older must book on the official website and show ID.",
+                "Last entry 16:30.",
+                "Tax and service included."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "15:30",
+                    "end": "17:00"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Christmas Palace sweets buffet — additional date",
+              "kind": "other",
+              "description": "Seasonal sweets buffet, adults ¥5,000; eligible students ¥4,300 with official-site booking and ID.",
+              "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/lp/seala-sweetsbuffet-christmas",
+              "menuLabel": "Christmas Palace sweets buffet",
+              "discounted": true,
+              "validFrom": "2026-12-24",
+              "validThrough": "2026-12-24",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Student ages 13 and older must book on the official website and show ID.",
+                "Last entry 16:30.",
+                "Tax and service included."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "15:30",
+                    "end": "17:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "4F Hilton Fukuoka Sea Hawk, 2-2-3 Jigyohama, Chuo-ku, Fukuoka",
+          "neighborhood": "Jigyohama",
+          "websiteUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/seala-0-aae0ac6ba6ea3ee2.webp",
+            "alt": "SEALA — Hilton Fukuoka Sea Hawk — Operator photograph of this restaurant dining room",
+            "credit": "Hilton Fukuoka Sea Hawk",
+            "sourceUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+            "originalUrl": "https://fukuokaseahawk.hiltonjapan.co.jp/img/restaurants/up_img/20240213123128_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "BAR Castillian Room — Fukuoka restaurant guide",
+        "description": "A hotel cocktail bar with a sourced happy-hour set and a branch-linked food menu.",
+        "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+        "address": "B1 Hotel New Otani Hakata, 1-1-2 Watanabe-dori, Chuo-ku, Fukuoka",
+        "productName": "BAR Castillian Room",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Watanabe-dori",
+          "Cocktail bar"
+        ],
+        "longFormSummary": "<p>A hotel cocktail bar with a sourced happy-hour set and a branch-linked food menu.<cite data-ref=\"https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+            "title": "BAR Castillian Room source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+            "title": "BAR Castillian Room source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.kys-newotani.co.jp/fileadmin/res/hakata/restaurant/castillian-bar/menu/food-menu.pdf",
+            "title": "BAR Castillian Room source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "BAR Castillian Room source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "menu": {
+            "pinSourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+            "name": "BAR Castillian Room",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Happy-hour drink and snacks",
+                "url": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "One selected drink with nuts and chocolate",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Draft beer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Drink choice; no separate item price published"
+                  },
+                  {
+                    "name": "Highball",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Drink choice; no separate item price published"
+                  },
+                  {
+                    "name": "Sparkling wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Drink choice; no separate item price published"
+                  },
+                  {
+                    "name": "Cocktail",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Drink choice; no separate item price published"
+                  },
+                  {
+                    "name": "Mocktail",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Drink choice; no separate item price published"
+                  }
+                ],
+                "note": "September 19–November 23. Weekdays 17:00–19:00, weekends/holidays 14:00–19:00. Mondays closed except holidays. Second and later orders contain the drink only; service included."
+              },
+              {
+                "label": "Regular bar food",
+                "url": "https://www.kys-newotani.co.jp/fileadmin/res/hakata/restaurant/castillian-bar/menu/food-menu.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Fresh fish carpaccio",
+                    "price": 2420
+                  },
+                  {
+                    "name": "Ham with melon",
+                    "price": 2530
+                  },
+                  {
+                    "name": "Caesar salad",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Mentaiko spaghetti",
+                    "price": 1980
+                  },
+                  {
+                    "name": "Penne Gorgonzola",
+                    "price": 2530
+                  },
+                  {
+                    "name": "Clubhouse sandwich",
+                    "price": 2420
+                  },
+                  {
+                    "name": "Margherita pizza",
+                    "price": 2090
+                  },
+                  {
+                    "name": "Itoshima sausages",
+                    "price": 1980
+                  },
+                  {
+                    "name": "Fried chicken",
+                    "price": 1870
+                  },
+                  {
+                    "name": "Mixed nuts",
+                    "price": 990
+                  },
+                  {
+                    "name": "Hotel chocolate",
+                    "price": 1650
+                  }
+                ],
+                "note": "Food dishes available until 21:00. PDF prices add 15% service per the branch page. These regular dishes are not part of the happy-hour offer.",
+                "documentUrl": "https://www.kys-newotani.co.jp/fileadmin/res/hakata/restaurant/castillian-bar/menu/food-menu.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+            "name": "BAR Castillian Room",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+            "phone": "092-714-1111",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.kys-newotani.co.jp/fileadmin/res/hakata/restaurant/castillian-bar/menu/food-menu.pdf"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "castillian-bar",
+            "name": "BAR Castillian Room",
+            "neighborhood": "Watanabe-dori",
+            "cuisine": "Cocktail bar",
+            "description": "A hotel cocktail bar with a sourced happy-hour set and a branch-linked food menu.",
+            "address": "B1 Hotel New Otani Hakata, 1-1-2 Watanabe-dori, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/castillian-bar-0-457cced2d066ac0c.webp",
+            "imageCredit": "Hotel New Otani Hakata",
+            "imageSourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+            "imageNote": "Operator photograph of this restaurant dining room"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/castillian-bar-0-457cced2d066ac0c.webp",
+          "sha256": "457cced2d066ac0cd26f8517257314c95e1d3b58566b0c3dac2f3016fb238138",
+          "width": 1200,
+          "height": 675,
+          "credit": "Hotel New Otani Hakata",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/castillian-bar-1-8426433323a8db47.webp",
+          "sha256": "8426433323a8db4711d18978a02b77792acc75e503164466ccff2c2639ea96e0",
+          "width": 863,
+          "height": 1081,
+          "credit": "Hotel New Otani Hakata",
+          "note": "Operator photograph of this restaurant dining room",
+          "sourcePage": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "name": "BAR Castillian Room",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Happy-hour drink and snacks",
+              "url": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "One selected drink with nuts and chocolate",
+                  "price": 1000
+                },
+                {
+                  "name": "Draft beer",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Drink choice; no separate item price published"
+                },
+                {
+                  "name": "Highball",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Drink choice; no separate item price published"
+                },
+                {
+                  "name": "Sparkling wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Drink choice; no separate item price published"
+                },
+                {
+                  "name": "Cocktail",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Drink choice; no separate item price published"
+                },
+                {
+                  "name": "Mocktail",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Drink choice; no separate item price published"
+                }
+              ],
+              "note": "September 19–November 23. Weekdays 17:00–19:00, weekends/holidays 14:00–19:00. Mondays closed except holidays. Second and later orders contain the drink only; service included."
+            },
+            {
+              "label": "Regular bar food",
+              "url": "https://www.kys-newotani.co.jp/fileadmin/res/hakata/restaurant/castillian-bar/menu/food-menu.pdf",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Fresh fish carpaccio",
+                  "price": 2420
+                },
+                {
+                  "name": "Ham with melon",
+                  "price": 2530
+                },
+                {
+                  "name": "Caesar salad",
+                  "price": 1650
+                },
+                {
+                  "name": "Mentaiko spaghetti",
+                  "price": 1980
+                },
+                {
+                  "name": "Penne Gorgonzola",
+                  "price": 2530
+                },
+                {
+                  "name": "Clubhouse sandwich",
+                  "price": 2420
+                },
+                {
+                  "name": "Margherita pizza",
+                  "price": 2090
+                },
+                {
+                  "name": "Itoshima sausages",
+                  "price": 1980
+                },
+                {
+                  "name": "Fried chicken",
+                  "price": 1870
+                },
+                {
+                  "name": "Mixed nuts",
+                  "price": 990
+                },
+                {
+                  "name": "Hotel chocolate",
+                  "price": 1650
+                }
+              ],
+              "note": "Food dishes available until 21:00. PDF prices add 15% service per the branch page. These regular dishes are not part of the happy-hour offer.",
+              "documentUrl": "https://www.kys-newotani.co.jp/fileadmin/res/hakata/restaurant/castillian-bar/menu/food-menu.pdf"
+            }
+          ],
+          "specials": [
+            {
+              "title": "Weekday happy hour",
+              "kind": "other",
+              "description": "One selected drink with nuts and chocolate, ¥1,000 including service.",
+              "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+              "menuLabel": "Happy-hour drink and snacks",
+              "discounted": true,
+              "validFrom": "2026-09-19",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Second orders provide the drink only.",
+                "October 22 private event starts 18:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:00",
+                    "end": "19:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-22",
+                  "2026-11-03"
+                ]
+              }
+            },
+            {
+              "title": "Weekend happy hour",
+              "kind": "other",
+              "description": "One selected drink with nuts and chocolate, ¥1,000 including service.",
+              "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+              "menuLabel": "Happy-hour drink and snacks",
+              "discounted": true,
+              "validFrom": "2026-09-19",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Second orders provide the drink only."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "19:00"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Holiday happy hour",
+              "kind": "other",
+              "description": "One selected drink with nuts and chocolate, ¥1,000 including service.",
+              "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+              "menuLabel": "Happy-hour drink and snacks",
+              "discounted": true,
+              "validFrom": "2026-10-12",
+              "validThrough": "2026-10-12",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Second orders provide the drink only."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "19:00"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Holiday happy hour",
+              "kind": "other",
+              "description": "One selected drink with nuts and chocolate, ¥1,000 including service.",
+              "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+              "menuLabel": "Happy-hour drink and snacks",
+              "discounted": true,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-11-03",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Second orders provide the drink only."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "19:00"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Holiday happy hour",
+              "kind": "other",
+              "description": "One selected drink with nuts and chocolate, ¥1,000 including service.",
+              "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+              "menuLabel": "Happy-hour drink and snacks",
+              "discounted": true,
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Second orders provide the drink only."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "19:00"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "October 22 shortened happy hour",
+              "kind": "other",
+              "description": "One selected drink with nuts and chocolate, ¥1,000 including service.",
+              "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/happy-hour/",
+              "menuLabel": "Happy-hour drink and snacks",
+              "discounted": true,
+              "validFrom": "2026-10-22",
+              "validThrough": "2026-10-22",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Private event starts 18:30.",
+                "Second orders provide the drink only."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "18:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "B1 Hotel New Otani Hakata, 1-1-2 Watanabe-dori, Chuo-ku, Fukuoka",
+          "neighborhood": "Watanabe-dori",
+          "websiteUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/castillian-bar-0-457cced2d066ac0c.webp",
+            "alt": "BAR Castillian Room — Operator photograph of this restaurant dining room",
+            "credit": "Hotel New Otani Hakata",
+            "sourceUrl": "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+            "originalUrl": "https://www.kys-newotani.co.jp/fileadmin/_processed_/5/f/csm_03intro_5eb256f5e3.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

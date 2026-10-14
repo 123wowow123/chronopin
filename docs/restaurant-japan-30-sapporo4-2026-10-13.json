@@ -1,0 +1,1651 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "sapporo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yamanami — Keio Plaza Hotel Sapporo — Sapporo restaurant guide",
+        "description": "Teppanyaki with Hokkaido beef, seafood and a published October celebration lunch.",
+        "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+        "address": "22F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+        "productName": "Yamanami — Keio Plaza Hotel Sapporo",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Sapporo Station",
+          "Teppanyaki"
+        ],
+        "longFormSummary": "<p>Teppanyaki with Hokkaido beef, seafood and a published October celebration lunch.<cite data-ref=\"https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+            "title": "Yamanami — Keio Plaza Hotel Sapporo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1704.html",
+            "title": "Yamanami — Keio Plaza Hotel Sapporo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "menu": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+            "name": "Yamanami — Keio Plaza Hotel Sapporo",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "October celebration lunch",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1704.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lobster and Shiretoko beef lunch",
+                    "price": 16000
+                  },
+                  {
+                    "name": "蝦夷鮑と百合根のフラン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October celebration lunch; no separate item price published"
+                  },
+                  {
+                    "name": "日髙産銀聖のマリネ イクラ飾り",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October celebration lunch; no separate item price published"
+                  },
+                  {
+                    "name": "オマール海老 半身",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October celebration lunch; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産黒毛和牛 知床牛 フィレ80g または サーロイン100g",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October celebration lunch; no separate item price published"
+                  },
+                  {
+                    "name": "北海道産秋刀魚と栗の雑穀米焼御飯",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October celebration lunch; no separate item price published"
+                  },
+                  {
+                    "name": "葡萄と白ワインのガトー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October celebration lunch; no separate item price published"
+                  }
+                ],
+                "note": "October 1–31; tax and service included. One glass of Champagne and message plate included. Weekdays require booking by 18:00 the previous day; last order 14:30. Preschool children are not admitted. Kobe-beef substitutions and extra meat have supplements listed in the operator menu."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+            "name": "Yamanami — Keio Plaza Hotel Sapporo",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+            "phone": "050-3627-0654",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–15:00; last order 14:30; weekdays require prior reservation"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–22:30; last entry 21:00, last order 21:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1704.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "yamanami",
+            "name": "Yamanami — Keio Plaza Hotel Sapporo",
+            "neighborhood": "Sapporo Station",
+            "cuisine": "Teppanyaki",
+            "description": "Teppanyaki with Hokkaido beef, seafood and a published October celebration lunch.",
+            "address": "22F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/yamanami-0-ef34224e500444fe.webp",
+            "imageCredit": "Keio Plaza Hotel Sapporo",
+            "imageSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+            "imageNote": "Operator food or drink presentation; dish identity and current menu applicability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/yamanami-0-ef34224e500444fe.webp",
+          "sha256": "ef34224e500444fe535cc601ab86588dd6e06fcd83a03a3868f10cd22924e91b",
+          "width": 620,
+          "height": 310,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/yamanami-1-8c49245568274c40.webp",
+          "sha256": "8c49245568274c406891ac0a67c34e75642bb575f30c8c6c42aa8f9f43f4f60a",
+          "width": 620,
+          "height": 310,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "name": "Yamanami — Keio Plaza Hotel Sapporo",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "October celebration lunch",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1704.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Lobster and Shiretoko beef lunch",
+                  "price": 16000
+                },
+                {
+                  "name": "蝦夷鮑と百合根のフラン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October celebration lunch; no separate item price published"
+                },
+                {
+                  "name": "日髙産銀聖のマリネ イクラ飾り",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October celebration lunch; no separate item price published"
+                },
+                {
+                  "name": "オマール海老 半身",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October celebration lunch; no separate item price published"
+                },
+                {
+                  "name": "北海道産黒毛和牛 知床牛 フィレ80g または サーロイン100g",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October celebration lunch; no separate item price published"
+                },
+                {
+                  "name": "北海道産秋刀魚と栗の雑穀米焼御飯",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October celebration lunch; no separate item price published"
+                },
+                {
+                  "name": "葡萄と白ワインのガトー",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October celebration lunch; no separate item price published"
+                }
+              ],
+              "note": "October 1–31; tax and service included. One glass of Champagne and message plate included. Weekdays require booking by 18:00 the previous day; last order 14:30. Preschool children are not admitted. Kobe-beef substitutions and extra meat have supplements listed in the operator menu."
+            }
+          ],
+          "specials": [
+            {
+              "title": "October celebration lunch",
+              "kind": "other",
+              "description": "Lobster and Shiretoko beef celebration lunch with Champagne and message plate, ¥16,000 including tax and service.",
+              "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1704.html",
+              "menuLabel": "October celebration lunch",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Weekdays: reserve by 18:00 the day before.",
+                "Last order 14:30.",
+                "Preschool children are not admitted."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "22F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+          "neighborhood": "Sapporo Station",
+          "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/yamanami-0-ef34224e500444fe.webp",
+            "alt": "Yamanami — Keio Plaza Hotel Sapporo — Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+            "credit": "Keio Plaza Hotel Sapporo",
+            "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+            "originalUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/images/contents_bg01.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Miyama — Keio Plaza Hotel Sapporo — Sapporo restaurant guide",
+        "description": "Reservation-only private-room Japanese dining with a dated seasonal kaiseki menu.",
+        "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+        "address": "22F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+        "productName": "Miyama — Keio Plaza Hotel Sapporo",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Sapporo Station",
+          "Private-room Japanese"
+        ],
+        "longFormSummary": "<p>Reservation-only private-room Japanese dining with a dated seasonal kaiseki menu.<cite data-ref=\"https://www.keioplaza-sapporo.co.jp/restaurants/miyama/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+            "title": "Miyama — Keio Plaza Hotel Sapporo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1568.html",
+            "title": "Miyama — Keio Plaza Hotel Sapporo source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "menu": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+            "name": "Miyama — Keio Plaza Hotel Sapporo",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "September–October Kohaku kaiseki",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1568.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kohaku kaiseki",
+                    "price": 10000
+                  },
+                  {
+                    "name": "Two-hour alcoholic free-flow supplement",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Saroma black-beef loin 60g supplement",
+                    "price": 4500
+                  },
+                  {
+                    "name": "Half lobster with sea urchin supplement",
+                    "price": 7000
+                  },
+                  {
+                    "name": "南瓜の摺り流し ベーコン節",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "根室産鰊酢〆の棒寿司",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "秋刀魚と茄子の山椒焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "豚肉と蕪の柚子味噌焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "松茸の炊込御飯",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                  }
+                ],
+                "note": "September 1–October 31; price includes a private room for two hours, tax and service. Minimum two diners; reserve by noon the previous day. Mondays/Tuesdays closed, except holiday lunch. Allergy requests by phone three days ahead, by 17:00. The November 13 Dassai event is in a banquet room and is not this regular restaurant offer."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+            "name": "Miyama — Keio Plaza Hotel Sapporo",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+            "phone": "011-271-0111",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1568.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "miyama",
+            "name": "Miyama — Keio Plaza Hotel Sapporo",
+            "neighborhood": "Sapporo Station",
+            "cuisine": "Private-room Japanese",
+            "description": "Reservation-only private-room Japanese dining with a dated seasonal kaiseki menu.",
+            "address": "22F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/miyama-0-53031a8ca38b35b8.webp",
+            "imageCredit": "Keio Plaza Hotel Sapporo",
+            "imageSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+            "imageNote": "Operator food or drink presentation; dish identity and current menu applicability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/miyama-0-53031a8ca38b35b8.webp",
+          "sha256": "53031a8ca38b35b8d4466f7c788cdab2f6b3771bc715e00c934a6a88bf06520b",
+          "width": 620,
+          "height": 310,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/miyama-1-625baf33b37f5d07.webp",
+          "sha256": "625baf33b37f5d075e2447bdaf16de5c52453a99ba9e08648f5f4b76f6135a57",
+          "width": 620,
+          "height": 310,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "name": "Miyama — Keio Plaza Hotel Sapporo",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "September–October Kohaku kaiseki",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1568.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Kohaku kaiseki",
+                  "price": 10000
+                },
+                {
+                  "name": "Two-hour alcoholic free-flow supplement",
+                  "price": 3000
+                },
+                {
+                  "name": "Saroma black-beef loin 60g supplement",
+                  "price": 4500
+                },
+                {
+                  "name": "Half lobster with sea urchin supplement",
+                  "price": 7000
+                },
+                {
+                  "name": "南瓜の摺り流し ベーコン節",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                },
+                {
+                  "name": "根室産鰊酢〆の棒寿司",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                },
+                {
+                  "name": "秋刀魚と茄子の山椒焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                },
+                {
+                  "name": "豚肉と蕪の柚子味噌焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                },
+                {
+                  "name": "松茸の炊込御飯",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Kohaku kaiseki; no separate item price published"
+                }
+              ],
+              "note": "September 1–October 31; price includes a private room for two hours, tax and service. Minimum two diners; reserve by noon the previous day. Mondays/Tuesdays closed, except holiday lunch. Allergy requests by phone three days ahead, by 17:00. The November 13 Dassai event is in a banquet room and is not this regular restaurant offer."
+            }
+          ],
+          "specials": [
+            {
+              "title": "September–October Kohaku kaiseki",
+              "kind": "other",
+              "description": "Seasonal private-room kaiseki, ¥10,000 including two-hour room use, tax and service.",
+              "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1568.html",
+              "menuLabel": "September–October Kohaku kaiseki",
+              "discounted": false,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "At least two guests; reserve by noon the day before.",
+                "Lunch last order 14:30; dinner last order 21:00.",
+                "Mondays/Tuesdays closed, except holiday lunch."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "22F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+          "neighborhood": "Sapporo Station",
+          "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/miyama-0-53031a8ca38b35b8.webp",
+            "alt": "Miyama — Keio Plaza Hotel Sapporo — Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+            "credit": "Keio Plaza Hotel Sapporo",
+            "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+            "originalUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/images/contents_bg01.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Cross Vault — Sapporo restaurant guide",
+        "description": "A hotel cocktail bar with a priced branch food menu, seasonal Kyoho mocktail and limited-stock whisky fair.",
+        "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+        "address": "1F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+        "productName": "Cross Vault",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Sapporo Station",
+          "Cocktail bar"
+        ],
+        "longFormSummary": "<p>A hotel cocktail bar with a priced branch food menu, seasonal Kyoho mocktail and limited-stock whisky fair.<cite data-ref=\"https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+            "title": "Cross Vault source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_171.html",
+            "title": "Cross Vault source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1712.html",
+            "title": "Cross Vault source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/menu2.pdf",
+            "title": "Cross Vault source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "menu": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+            "name": "Cross Vault",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Branch bar food",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/menu2.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hokkaido cheese assortment",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Hokkaido prosciutto salad",
+                    "price": 2400
+                  },
+                  {
+                    "name": "Mixed sandwich",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Clubhouse sandwich",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Margherita pizza",
+                    "price": 2400
+                  },
+                  {
+                    "name": "Tokachi potato fries",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Veal sausage with Shiretoko pork bacon",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Amatriciana spaghetti",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Lamb jingisukan",
+                    "price": 2400
+                  },
+                  {
+                    "name": "Fish and chips",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Saroma black-beef grill",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Mixed nuts",
+                    "price": 1000
+                  }
+                ],
+                "note": "Food until 21:30, snacks until 22:30. PDF prices include 10% tax and 15% service; separate ¥900 table charge. These ordinary dishes are not included in the seasonal drinks.",
+                "documentUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/menu2.pdf"
+              },
+              {
+                "label": "October Kyoho mocktail",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_171.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kyoho rose squash — non-alcoholic",
+                    "price": 1800
+                  }
+                ],
+                "note": "October 1–31. Price page does not state tax/service treatment; confirm when ordering. Separate ¥900 table charge; guests must be at least 20."
+              },
+              {
+                "label": "October–November whisky bottle fair",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1712.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Ardbeg 10-year bottle",
+                    "price": 22000
+                  },
+                  {
+                    "name": "Old Parr 18-year bottle",
+                    "price": 30000
+                  }
+                ],
+                "note": "October 1–November 30, limited stock; no lower reference price is published, so no discount is claimed. Confirm tax/service treatment and table charge."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+            "name": "Cross Vault",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+            "phone": "050-3187-5082",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_171.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1712.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/menu2.pdf"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "crossvault",
+            "name": "Cross Vault",
+            "neighborhood": "Sapporo Station",
+            "cuisine": "Cocktail bar",
+            "description": "A hotel cocktail bar with a priced branch food menu, seasonal Kyoho mocktail and limited-stock whisky fair.",
+            "address": "1F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/crossvault-0-24e4e66f04296249.webp",
+            "imageCredit": "Keio Plaza Hotel Sapporo",
+            "imageSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+            "imageNote": "Operator photograph of the bar interior"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/crossvault-0-24e4e66f04296249.webp",
+          "sha256": "24e4e66f04296249d33974108766d163fbbb9b57b3db6588d7c7e522653a546f",
+          "width": 620,
+          "height": 310,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Operator photograph of the bar interior",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/crossvault-1-fe04f86fb0adfbb1.webp",
+          "sha256": "fe04f86fb0adfbb16baa587c653cbee72893b62f4e878b86f4903a81d6607f19",
+          "width": 620,
+          "height": 310,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "name": "Cross Vault",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Branch bar food",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/menu2.pdf",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hokkaido cheese assortment",
+                  "price": 2800
+                },
+                {
+                  "name": "Hokkaido prosciutto salad",
+                  "price": 2400
+                },
+                {
+                  "name": "Mixed sandwich",
+                  "price": 2000
+                },
+                {
+                  "name": "Clubhouse sandwich",
+                  "price": 2200
+                },
+                {
+                  "name": "Margherita pizza",
+                  "price": 2400
+                },
+                {
+                  "name": "Tokachi potato fries",
+                  "price": 1500
+                },
+                {
+                  "name": "Veal sausage with Shiretoko pork bacon",
+                  "price": 2500
+                },
+                {
+                  "name": "Amatriciana spaghetti",
+                  "price": 2000
+                },
+                {
+                  "name": "Lamb jingisukan",
+                  "price": 2400
+                },
+                {
+                  "name": "Fish and chips",
+                  "price": 2200
+                },
+                {
+                  "name": "Saroma black-beef grill",
+                  "price": 3000
+                },
+                {
+                  "name": "Mixed nuts",
+                  "price": 1000
+                }
+              ],
+              "note": "Food until 21:30, snacks until 22:30. PDF prices include 10% tax and 15% service; separate ¥900 table charge. These ordinary dishes are not included in the seasonal drinks.",
+              "documentUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/menu2.pdf"
+            },
+            {
+              "label": "October Kyoho mocktail",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_171.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Kyoho rose squash — non-alcoholic",
+                  "price": 1800
+                }
+              ],
+              "note": "October 1–31. Price page does not state tax/service treatment; confirm when ordering. Separate ¥900 table charge; guests must be at least 20."
+            },
+            {
+              "label": "October–November whisky bottle fair",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1712.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Ardbeg 10-year bottle",
+                  "price": 22000
+                },
+                {
+                  "name": "Old Parr 18-year bottle",
+                  "price": 30000
+                }
+              ],
+              "note": "October 1–November 30, limited stock; no lower reference price is published, so no discount is claimed. Confirm tax/service treatment and table charge."
+            }
+          ],
+          "specials": [
+            {
+              "title": "October Kyoho mocktail",
+              "kind": "other",
+              "description": "Seasonal Kyoho rose squash mocktail, ¥1,800; separate cover applies.",
+              "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_171.html",
+              "menuLabel": "October Kyoho mocktail",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Ages 20 and older.",
+                "Last drinks order 22:30.",
+                "¥900 table charge."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "23:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Autumn whisky bottle fair",
+              "kind": "other",
+              "description": "Limited-stock Ardbeg 10-year ¥22,000 and Old Parr 18-year ¥30,000 bottles.",
+              "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1712.html",
+              "menuLabel": "October–November whisky bottle fair",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Subject to stock.",
+                "Last drinks order 22:30.",
+                "Ages 20 and older; ¥900 table charge."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "23:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+          "neighborhood": "Sapporo Station",
+          "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/crossvault-0-24e4e66f04296249.webp",
+            "alt": "Cross Vault — Operator photograph of the bar interior",
+            "credit": "Keio Plaza Hotel Sapporo",
+            "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+            "originalUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/images/contents_bg01.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Garden Dining Waraku — Sapporo restaurant guide",
+        "description": "Japanese dining overlooking the hotel garden, with a published October lunch kaiseki.",
+        "sourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+        "address": "4F main building, Sapporo Grand Hotel, Kita 1-jo Nishi 4-chome, Chuo-ku, Sapporo",
+        "productName": "Garden Dining Waraku",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Odori",
+          "Japanese"
+        ],
+        "longFormSummary": "<p>Japanese dining overlooking the hotel garden, with a published October lunch kaiseki.<cite data-ref=\"https://grand1934.com/restaurant/garden-dining-waraku/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://grand1934.com/restaurant/garden-dining-waraku/",
+            "title": "Garden Dining Waraku source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://grand1934.com/restaurant/garden-dining-waraku/lunch_10/",
+            "title": "Garden Dining Waraku source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "menu": {
+            "pinSourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+            "name": "Garden Dining Waraku",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "October Hana lunch kaiseki",
+                "url": "https://grand1934.com/restaurant/garden-dining-waraku/lunch_10/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hana lunch kaiseki",
+                    "price": 8200
+                  },
+                  {
+                    "name": "季節の嶺岡豆富と旬菜盛り合わせ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "真鯛酒蒸し",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "秋鮭香味焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "茄子阿蘭陀煮 標津町波心会直送黒鰈かる揚げ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "海老東寺揚げ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                  },
+                  {
+                    "name": "舞茸の炊き込みご飯",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                  }
+                ],
+                "note": "October 1–31, 11:30–14:00 last order. Tax and service included; separate private-room charges apply when requested."
+              },
+              {
+                "label": "Published regular dishes",
+                "url": "https://grand1934.com/restaurant/garden-dining-waraku/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Anmitsu",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Zenzai",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Salmon roe bowl",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Seafood bowl",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Grilled king crab",
+                    "price": 10000
+                  }
+                ],
+                "note": "Tax and service included; seasonal availability varies."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+            "name": "Garden Dining Waraku",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+            "phone": "011-261-3376",
+            "openingHours": [],
+            "detailsSourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://grand1934.com/restaurant/garden-dining-waraku/lunch_10/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "waraku",
+            "name": "Garden Dining Waraku",
+            "neighborhood": "Odori",
+            "cuisine": "Japanese",
+            "description": "Japanese dining overlooking the hotel garden, with a published October lunch kaiseki.",
+            "address": "4F main building, Sapporo Grand Hotel, Kita 1-jo Nishi 4-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/waraku-0-484900963ba050dd.webp",
+            "imageCredit": "Sapporo Grand Hotel",
+            "imageSourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+            "imageNote": "Operator food or drink presentation; dish identity and current menu applicability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/waraku-0-484900963ba050dd.webp",
+          "sha256": "484900963ba050dd806688dc8ff17be7ed84171e270a8b01573cef3781671b21",
+          "width": 1200,
+          "height": 799,
+          "credit": "Sapporo Grand Hotel",
+          "note": "Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+          "sourcePage": "https://grand1934.com/restaurant/garden-dining-waraku/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/waraku-1-437fb6ef3f82c6b2.webp",
+          "sha256": "437fb6ef3f82c6b221e4874fef24c53225f7d31db5cdbbac460ae74f37a08c14",
+          "width": 1200,
+          "height": 800,
+          "credit": "Sapporo Grand Hotel",
+          "note": "Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+          "sourcePage": "https://grand1934.com/restaurant/garden-dining-waraku/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "name": "Garden Dining Waraku",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "October Hana lunch kaiseki",
+              "url": "https://grand1934.com/restaurant/garden-dining-waraku/lunch_10/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hana lunch kaiseki",
+                  "price": 8200
+                },
+                {
+                  "name": "季節の嶺岡豆富と旬菜盛り合わせ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                },
+                {
+                  "name": "真鯛酒蒸し",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                },
+                {
+                  "name": "秋鮭香味焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                },
+                {
+                  "name": "茄子阿蘭陀煮 標津町波心会直送黒鰈かる揚げ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                },
+                {
+                  "name": "海老東寺揚げ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                },
+                {
+                  "name": "舞茸の炊き込みご飯",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Hana lunch kaiseki; no separate item price published"
+                }
+              ],
+              "note": "October 1–31, 11:30–14:00 last order. Tax and service included; separate private-room charges apply when requested."
+            },
+            {
+              "label": "Published regular dishes",
+              "url": "https://grand1934.com/restaurant/garden-dining-waraku/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Anmitsu",
+                  "price": 1500
+                },
+                {
+                  "name": "Zenzai",
+                  "price": 1500
+                },
+                {
+                  "name": "Salmon roe bowl",
+                  "price": 7000
+                },
+                {
+                  "name": "Seafood bowl",
+                  "price": 6000
+                },
+                {
+                  "name": "Grilled king crab",
+                  "price": 10000
+                }
+              ],
+              "note": "Tax and service included; seasonal availability varies."
+            }
+          ],
+          "specials": [
+            {
+              "title": "October Hana lunch kaiseki",
+              "kind": "lunch",
+              "description": "Dated seasonal Hana lunch kaiseki, ¥8,200 including tax and service.",
+              "sourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/lunch_10/",
+              "menuLabel": "October Hana lunch kaiseki",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Last order 14:00.",
+                "Private room, when requested, costs ¥600 per person."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "4F main building, Sapporo Grand Hotel, Kita 1-jo Nishi 4-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Odori",
+          "websiteUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/waraku-0-484900963ba050dd.webp",
+            "alt": "Garden Dining Waraku — Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+            "credit": "Sapporo Grand Hotel",
+            "sourceUrl": "https://grand1934.com/restaurant/garden-dining-waraku/",
+            "originalUrl": "https://grand1934.com/uploads/2023/05/8ec94d14333c1eae4c3ae44c4889abe1-e1685495797488.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Old Saloon 1934 — Sapporo restaurant guide",
+        "description": "A jazz lounge with monthly small plates, cocktail free-flow and a verified Friday/Saturday advance-booking reduction.",
+        "sourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+        "address": "1F annex, Sapporo Grand Hotel, Kita 1-jo Nishi 4-chome, Chuo-ku, Sapporo",
+        "productName": "Old Saloon 1934",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Odori",
+          "Lounge and cocktail bar"
+        ],
+        "longFormSummary": "<p>A jazz lounge with monthly small plates, cocktail free-flow and a verified Friday/Saturday advance-booking reduction.<cite data-ref=\"https://grand1934.com/restaurant/old-saloon1934/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://grand1934.com/restaurant/old-saloon1934/",
+            "title": "Old Saloon 1934 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://grand1934.com/restaurant/old-saloon1934/food-02/",
+            "title": "Old Saloon 1934 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://grand1934.com/uploads/2026/05/CA_OS_food.pdf",
+            "title": "Old Saloon 1934 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+          "menu": {
+            "pinSourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+            "name": "Old Saloon 1934",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Freivre October and November menus",
+                "url": "https://grand1934.com/restaurant/old-saloon1934/food-02/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Monday–Thursday Freivre",
+                    "price": 5800
+                  },
+                  {
+                    "name": "Friday/Saturday Premium Freivre",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Friday/Saturday advance-booking price",
+                    "price": 6200,
+                    "note": "Book at least five days ahead"
+                  },
+                  {
+                    "name": "Champagne free-flow supplement",
+                    "price": 2500
+                  },
+                  {
+                    "name": "かぼちゃと黒豆のムース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "オイルサーディンとブロッコリー バゲット添え",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "合鴨肉のロースト オレンジコンフィ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "さつま芋と香味野菜のポタージュ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "鱈とじゃが芋のコロッケ トリュフ塩とタルタル",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "クリームチーズの燻製",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "鰹のたたき 燻製醤油ジュレ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "ブラック焼きカレー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "真鱈の燻製バター焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                  },
+                  {
+                    "name": "海老クリームコロッケ トマトソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                  }
+                ],
+                "note": "Regular plan October 1–November 30; discounted Premium plan October 2–November 28, Fridays/Saturdays. Two hours, entry 17:00–19:30. Regular prices include tax/service; early-price statement says tax included, while separate service/cover inclusion is not explicitly clarified. Confirm before booking. Bar lists a ¥1,000 cover for ordinary orders."
+              },
+              {
+                "label": "Regular bar food",
+                "url": "https://grand1934.com/uploads/2026/05/CA_OS_food.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Appetizer trio",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Crab-miso dip vegetable sticks",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Margherita pizza",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Fish and chips",
+                    "price": 2300
+                  },
+                  {
+                    "name": "Clubhouse sandwich",
+                    "price": 2300
+                  },
+                  {
+                    "name": "Beef steak pilaf",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Omurice",
+                    "price": 2300,
+                    "note": "After 21:00 only"
+                  }
+                ],
+                "note": "Tax and service included; ¥1,000 cover. These à la carte items are separate from the Freivre menus.",
+                "documentUrl": "https://grand1934.com/uploads/2026/05/CA_OS_food.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+            "name": "Old Saloon 1934",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+            "phone": "011-261-3376",
+            "openingHours": [],
+            "detailsSourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://grand1934.com/restaurant/old-saloon1934/food-02/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://grand1934.com/uploads/2026/05/CA_OS_food.pdf"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "oldsaloon",
+            "name": "Old Saloon 1934",
+            "neighborhood": "Odori",
+            "cuisine": "Lounge and cocktail bar",
+            "description": "A jazz lounge with monthly small plates, cocktail free-flow and a verified Friday/Saturday advance-booking reduction.",
+            "address": "1F annex, Sapporo Grand Hotel, Kita 1-jo Nishi 4-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/oldsaloon-0-f9f140b450c0dce9.webp",
+            "imageCredit": "Sapporo Grand Hotel",
+            "imageSourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+            "imageNote": "Operator photograph of the bar interior"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/oldsaloon-0-f9f140b450c0dce9.webp",
+          "sha256": "f9f140b450c0dce91172e69d08c92b165b3ea4884f260f9f3cba0829c7e6fb80",
+          "width": 1200,
+          "height": 455,
+          "credit": "Sapporo Grand Hotel",
+          "note": "Operator photograph of the bar interior",
+          "sourcePage": "https://grand1934.com/restaurant/old-saloon1934/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/oldsaloon-1-af0d027802f0ed39.webp",
+          "sha256": "af0d027802f0ed39d5836a03993caac48b9a860565e101115e638ab8b2414e00",
+          "width": 719,
+          "height": 480,
+          "credit": "Sapporo Grand Hotel",
+          "note": "Operator food or drink presentation; dish identity and current menu applicability are not inferred",
+          "sourcePage": "https://grand1934.com/restaurant/old-saloon1934/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+          "name": "Old Saloon 1934",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Freivre October and November menus",
+              "url": "https://grand1934.com/restaurant/old-saloon1934/food-02/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Monday–Thursday Freivre",
+                  "price": 5800
+                },
+                {
+                  "name": "Friday/Saturday Premium Freivre",
+                  "price": 7000
+                },
+                {
+                  "name": "Friday/Saturday advance-booking price",
+                  "price": 6200,
+                  "note": "Book at least five days ahead"
+                },
+                {
+                  "name": "Champagne free-flow supplement",
+                  "price": 2500
+                },
+                {
+                  "name": "かぼちゃと黒豆のムース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "オイルサーディンとブロッコリー バゲット添え",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "合鴨肉のロースト オレンジコンフィ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "さつま芋と香味野菜のポタージュ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "鱈とじゃが芋のコロッケ トリュフ塩とタルタル",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "クリームチーズの燻製",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "鰹のたたき 燻製醤油ジュレ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "ブラック焼きカレー",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "真鱈の燻製バター焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                },
+                {
+                  "name": "海老クリームコロッケ トマトソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November menu; last item Friday/Saturday only; no separate item price published"
+                }
+              ],
+              "note": "Regular plan October 1–November 30; discounted Premium plan October 2–November 28, Fridays/Saturdays. Two hours, entry 17:00–19:30. Regular prices include tax/service; early-price statement says tax included, while separate service/cover inclusion is not explicitly clarified. Confirm before booking. Bar lists a ¥1,000 cover for ordinary orders."
+            },
+            {
+              "label": "Regular bar food",
+              "url": "https://grand1934.com/uploads/2026/05/CA_OS_food.pdf",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Appetizer trio",
+                  "price": 1700
+                },
+                {
+                  "name": "Crab-miso dip vegetable sticks",
+                  "price": 2200
+                },
+                {
+                  "name": "Margherita pizza",
+                  "price": 2500
+                },
+                {
+                  "name": "Fish and chips",
+                  "price": 2300
+                },
+                {
+                  "name": "Clubhouse sandwich",
+                  "price": 2300
+                },
+                {
+                  "name": "Beef steak pilaf",
+                  "price": 3000
+                },
+                {
+                  "name": "Omurice",
+                  "price": 2300,
+                  "note": "After 21:00 only"
+                }
+              ],
+              "note": "Tax and service included; ¥1,000 cover. These à la carte items are separate from the Freivre menus.",
+              "documentUrl": "https://grand1934.com/uploads/2026/05/CA_OS_food.pdf"
+            }
+          ],
+          "specials": [
+            {
+              "title": "Premium Freivre advance-booking offer",
+              "kind": "other",
+              "description": "Book five days ahead for Premium Freivre at ¥6,200 instead of ¥7,000; two-hour food and drink plan.",
+              "sourceUrl": "https://grand1934.com/restaurant/old-saloon1934/food-02/",
+              "menuLabel": "Freivre October and November menus",
+              "discounted": true,
+              "validFrom": "2026-10-02",
+              "validThrough": "2026-11-28",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Booking at least five days ahead required.",
+                "Enter by 19:30; two-hour sitting.",
+                "Menu changes in November.",
+                "Confirm cover/service treatment of the early-booking price."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "1F annex, Sapporo Grand Hotel, Kita 1-jo Nishi 4-chome, Chuo-ku, Sapporo",
+          "neighborhood": "Odori",
+          "websiteUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/oldsaloon-0-f9f140b450c0dce9.webp",
+            "alt": "Old Saloon 1934 — Operator photograph of the bar interior",
+            "credit": "Sapporo Grand Hotel",
+            "sourceUrl": "https://grand1934.com/restaurant/old-saloon1934/",
+            "originalUrl": "https://grand1934.com/img/restaurant/rst-ft-los.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

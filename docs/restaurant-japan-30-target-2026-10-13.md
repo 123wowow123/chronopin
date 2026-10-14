@@ -8,8 +8,8 @@ These are current local public guide API counts. All 24 tabs are below target; n
 | --- | --- | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 1 | 30 | 29 |
 | Fukuoka | Just opened | 1 | 30 | 29 |
-| Fukuoka | Top restaurants | 2 | 30 | 28 |
-| Fukuoka | Specials | 3 | 30 | 27 |
+| Fukuoka | Top restaurants | 8 | 30 | 22 |
+| Fukuoka | Specials | 8 | 30 | 22 |
 | Osaka | Coming soon | 1 | 30 | 29 |
 | Osaka | Just opened | 1 | 30 | 29 |
 | Osaka | Top restaurants | 5 | 30 | 25 |
@@ -28,8 +28,8 @@ These are current local public guide API counts. All 24 tabs are below target; n
 | Tokyo | Specials | 3 | 30 | 27 |
 | Sapporo | Coming soon | 1 | 30 | 29 |
 | Sapporo | Just opened | 2 | 30 | 28 |
-| Sapporo | Top restaurants | 4 | 30 | 26 |
-| Sapporo | Specials | 5 | 30 | 25 |
+| Sapporo | Top restaurants | 9 | 30 | 21 |
+| Sapporo | Specials | 10 | 30 | 20 |
 
 ## Research and replenishment
 
