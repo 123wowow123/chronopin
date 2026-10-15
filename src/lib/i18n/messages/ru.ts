@@ -652,7 +652,7 @@ const ru: Messages = {
       expand: 'Развернуть график',
       collapse: 'Закрыть развёрнутый график',
       alt: 'Модели ИИ, выпущенные в {year} году: {count}, цена за миллион токенов и Elo арены. Этот пин: {model}.',
-      notPriced: 'У этой модели пока нет публичной цены для графика.',
+      notPriced: 'Текущая публичная цена недоступна.',
       awaiting: '{model} · {price}/М токенов · арена ещё не оценила',
       price: '$ за миллион токенов (вход:выход 5:1, лог. шкала)',
       elo: 'Elo арены (текст)',
@@ -732,6 +732,9 @@ const ru: Messages = {
     views: { one: '{count} просмотр', few: '{count} просмотра', many: '{count} просмотров', other: '{count} просмотра' },
     translated: 'Автоматический перевод оригинала',
     originalTitle: 'Оригинальное название',
+    alternateNames: 'Другие названия',
+    showMoreNames: 'Показать еще {count}',
+    showFewerNames: 'Свернуть',
   },
   share: {
     pin: 'Поделиться',
@@ -1223,6 +1226,7 @@ const ru: Messages = {
     liveOdds: 'Рыночные шансы в реальном времени',
   },
   controls: {
+    predicted: 'Прогноз',
     tags: 'Теги',
     timeSpan: 'Период',
     today: 'Сегодня',

@@ -24,6 +24,8 @@ import type { PinHotelJson } from '@/lib/pinHotel';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
+import type { AlternateNameJson } from '@/lib/alternateNames';
+import { alternateNamesForPin } from './alternateNames';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
 import PinUpdate from '../model/pinUpdate';
@@ -278,6 +280,14 @@ export async function pinHotel(id: number): Promise<PinHotelJson | null> {
   return hotelForPin(id);
 }
 
+// All alternate titles, native names, translations and aliases for a pin.
+export async function pinAlternateNames(id: number): Promise<AlternateNameJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return alternateNamesForPin(id);
+}
+
 // Tagged with every pin in the thread, so a change to any of them - a
 // response posted or moved (its parent's tag is invalidated too) - redraws it.
 export async function threadPins(id: number, locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
@@ -332,7 +342,7 @@ export async function relatedPins(id: number, locale: Locale = DEFAULT_LOCALE): 
 // The sort and filters a search page's URL names: spans as the sliders set them.
 // timeZone: the viewer's, for a query whose days depend on it (date:,
 // posted:), else UTC so every zone shares the cached results.
-export type SearchView = { sort: SearchSort; posted: string | null; past: string | null; future: string | null; timeZone: string };
+export type SearchView = { sort: SearchSort; posted: string | null; past: string | null; future: string | null; predicted?: boolean; timeZone: string };
 
 // The first page of a search, and the links on to later ones.
 export async function searchPage(
@@ -368,6 +378,7 @@ async function cachedSearch(query: string, view: SearchView, locale: Locale) {
 async function runSearch(query: string, userId: number | null, onlyWatched: boolean, view: SearchView): Promise<SearchPage & { error?: string }> {
   const params = new URLSearchParams({ q: query, sort: view.sort });
   if (onlyWatched) params.set('f', 'watch');
+  if (onlyWatched && view.predicted === false) params.set('predicted', '0');
   params.set('tz', view.timeZone);
   if (view.posted) params.set('created_within', view.posted);
   if (view.past) params.set('start_past', view.past);

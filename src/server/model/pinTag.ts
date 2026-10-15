@@ -78,8 +78,8 @@ export default class PinTag {
 
   // The fields autoTags reads, or null for a deleted pin.
   static async autoSource(pinId: number) {
-    const [pin] = await db.query<{ description: string | null; longFormSummary: string | null; sourceUrl: string | null; references: { url: string }[] }>(
-      `SELECT "p"."description", "p"."longFormSummary", "p"."sourceUrl",
+    const [pin] = await db.query<{ description: string | null; longFormSummary: string | null; sourceUrl: string | null; references: { url: string }[]; dateConfidence: string | null }>(
+      `SELECT "p"."description", "p"."longFormSummary", "p"."sourceUrl", "p"."dateConfidence",
          COALESCE((SELECT json_agg(json_build_object('url', "r"."url")) FROM "PinReference" AS "r" WHERE "r"."pinId" = "p"."id"), '[]') AS "references"
        FROM "Pin" AS "p" WHERE "p"."id" = $1 AND "p"."utcDeletedDateTime" IS NULL`,
       [pinId],

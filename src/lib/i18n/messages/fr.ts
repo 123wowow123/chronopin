@@ -643,7 +643,7 @@ const fr: Messages = {
       expand: 'Agrandir le graphique',
       collapse: 'Fermer le graphique agrandi',
       alt: 'Modèles d’IA sortis en {year} : {count} modèles, prix d’un million de jetons face au Elo de l’arène. Cette épingle : {model}.',
-      notPriced: 'Ce modèle n’a pas encore de prix public à représenter.',
+      notPriced: 'Aucun prix public actuel n’est disponible.',
       awaiting: '{model} · {price}/M tokens · pas encore noté par l’arène',
       price: '$ par million de jetons (5:1 entrée:sortie, échelle log.)',
       elo: 'Elo de l’arène (texte)',
@@ -723,6 +723,9 @@ const fr: Messages = {
     views: { one: '{count} vue', other: '{count} vues' },
     translated: 'Traduit automatiquement de l’original',
     originalTitle: 'Titre original',
+    alternateNames: 'Noms alternatifs',
+    showMoreNames: 'Afficher {count} de plus',
+    showFewerNames: 'Afficher moins',
   },
   share: {
     pin: 'Partager',
@@ -1166,6 +1169,7 @@ const fr: Messages = {
     liveOdds: 'Cotes du marché en direct',
   },
   controls: {
+    predicted: 'Prévu',
     tags: 'Tags',
     timeSpan: 'Période',
     today: 'Aujourd’hui',

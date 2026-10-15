@@ -643,7 +643,7 @@ const ko: Messages = {
       expand: '차트 확대',
       collapse: '확대한 차트 닫기',
       alt: '{year}년에 출시된 AI 모델 {count}개: 100만 토큰당 가격과 아레나 Elo. 이 핀: {model}.',
-      notPriced: '이 모델은 아직 표시할 공개 가격이 없습니다.',
+      notPriced: '현재 공개 가격이 없습니다.',
       awaiting: '{model} · {price}/M 토큰 · 아레나 점수 아직 없음',
       price: '100만 토큰당 $ (입력:출력 5:1, 로그 척도)',
       elo: '아레나 Elo (텍스트)',
@@ -723,6 +723,9 @@ const ko: Messages = {
     views: '조회수 {count}회',
     translated: '원문에서 자동 번역됨',
     originalTitle: '원본 제목',
+    alternateNames: '다른 이름 / 원제',
+    showMoreNames: '{count}개 더 보기',
+    showFewerNames: '접기',
   },
   share: {
     pin: '공유',
@@ -1160,6 +1163,7 @@ const ko: Messages = {
     liveOdds: '실시간 시장 예측',
   },
   controls: {
+    predicted: '예측됨',
     tags: '태그',
     timeSpan: '기간',
     today: '오늘',

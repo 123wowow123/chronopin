@@ -23,10 +23,10 @@ import { timeZoneOrUtc } from '../viewer';
 import { withCompanyNames } from '../companyNames';
 import { commentMood } from '@/lib/commentMood';
 import { isSpan, offsetDate } from '@/lib/postedSpan';
-import type { TagCount } from '@/lib/tags';
+import { PREDICTED_TAG, uniqueTags, type TagCount } from '@/lib/tags';
 
 // timeZone: the zone date: and posted: days are the viewer's in (UTC when absent).
-type SearchOptions = { userId?: number | null; onlyWatched?: boolean; timeZone?: string };
+type SearchOptions = { userId?: number | null; onlyWatched?: boolean; excludePredicted?: boolean; timeZone?: string };
 
 export type SearchSort = 'date' | 'relevance';
 
@@ -35,6 +35,7 @@ export type SearchRequest = {
   q: string;
   userId: number | null;
   onlyWatched: boolean;
+  excludePredicted?: boolean;
   sort: SearchSort;
   // The zone date: and posted: days are read in (the tz parameter).
   timeZone: string;
@@ -106,10 +107,14 @@ export function readSearchRequest(params: URLSearchParams, userId: number | null
     return offsetDate(now, within, signum);
   };
 
+  const onlyWatched = params.get('f')?.toLowerCase() === 'watch' && !!userId;
+  const excludePredicted = onlyWatched && (params.get('predicted') === '0' || params.get('predicted') === 'false');
+
   return {
     q: params.get('q') || '',
     userId,
-    onlyWatched: params.get('f')?.toLowerCase() === 'watch' && !!userId,
+    onlyWatched,
+    excludePredicted,
     sort,
     timeZone: timeZoneOrUtc(params.get('tz') ?? undefined),
     createdSince,
@@ -175,6 +180,7 @@ export async function searchPinsPage(request: SearchRequest): Promise<{ pins: Pi
 function searchLink(request: SearchRequest, direction: 'previous' | 'next', last: SearchRank): string {
   const params = new URLSearchParams({ q: request.q, sort: request.sort });
   if (request.onlyWatched) params.set('f', 'watch');
+  if (request.excludePredicted) params.set('predicted', '0');
   if (request.timeZone !== 'UTC') params.set('tz', request.timeZone);
   if (request.createdSince) params.set('created_since', request.createdSince.toISOString());
   if (request.startFrom) params.set('start_from', request.startFrom.toISOString());
@@ -212,8 +218,10 @@ function asksForNothing(query: SearchQuery, options: SearchOptions) {
 // the database widens the service's hits with the pins whose address or
 // translated title names it (searchClauses).
 async function searchFilter(query: SearchQuery, options: SearchOptions): Promise<SearchFilter> {
+  const excludeTags = options.excludePredicted ? uniqueTags([...query.excludeTags, PREDICTED_TAG]) : query.excludeTags;
   return {
     ...query,
+    excludeTags,
     hits: query.text ? await SearchPins.hits(withCompanyNames(query.text, await Company.nameIndex())) : null,
     favoriteUserId: options.onlyWatched ? options.userId || 0 : null,
     timeZone: timeZoneOrUtc(options.timeZone),

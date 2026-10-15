@@ -717,7 +717,7 @@ const ar: Messages = {
       expand: 'توسيع الرسم البياني',
       collapse: 'إغلاق الرسم الموسّع',
       alt: 'نماذج الذكاء الاصطناعي الصادرة في {year}: {count} نموذجًا، سعر مليون رمز مقابل تقييم Elo في الساحة. هذا الدبوس: {model}.',
-      notPriced: 'لا يوجد لهذا النموذج سعر علني للرسم بعد.',
+      notPriced: 'لا يتوفر سعر علني حالي.',
       awaiting: '{model} · {price}/مليون رمز · لم تقيّمه الساحة بعد',
       price: 'دولار لكل مليون رمز (إدخال:إخراج 5:1، مقياس لوغاريتمي)',
       elo: 'تقييم Elo في الساحة (نص)',
@@ -804,6 +804,9 @@ const ar: Messages = {
     },
     translated: 'تُرجم تلقائيًا من الأصل',
     originalTitle: 'العنوان الأصلي',
+    alternateNames: 'أسماء بديلة',
+    showMoreNames: 'عرض {count} أخرى',
+    showFewerNames: 'عرض أقل',
   },
   share: {
     // A pin's menu: its link by text, email or a social site; the address
@@ -1442,6 +1445,7 @@ const ar: Messages = {
     liveOdds: 'احتمالات السوق المباشرة',
   },
   controls: {
+    predicted: 'المتوقعة',
     tags: 'الوسوم',
     timeSpan: 'النطاق الزمني',
     today: 'اليوم',

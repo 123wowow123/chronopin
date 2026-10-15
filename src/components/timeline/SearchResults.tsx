@@ -28,6 +28,8 @@ import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, SearchedCompany, SearchedPerson, SearchPage } from '@/lib/types';
+import { PredictedToggle } from './PredictedToggle';
+import { isPredictedPin } from '@/lib/tags';
 import { CompanyExecutivesPanel } from './CompanyExecutives';
 import { CompanyParentsPanel } from './CompanyParents';
 import { CompanyProductsPanel } from './CompanyProducts';
@@ -157,7 +159,7 @@ export function SearchResults({
   query?: string;
   onlyWatched?: boolean;
   // The sort and filters as the URL had them.
-  initialView?: { sort?: SortBy; postedWithin?: string | null; past?: string | null; future?: string | null };
+  initialView?: { sort?: SortBy; postedWithin?: string | null; past?: string | null; future?: string | null; predicted?: boolean };
   // The sort this search opens in without being asked: relevance for a search
   // with text in it, date for one that only filters. Only the other one is
   // written to the URL.
@@ -173,6 +175,7 @@ export function SearchResults({
   const leftOut = useLeftOut();
   const { user } = useSession();
   const [postedWithin, setPostedWithin] = useState<string | null>(initialView.postedWithin ?? DEFAULT_POSTED_WITHIN);
+  const [showPredicted, setShowPredicted] = useState<boolean>(initialView.predicted ?? true);
   // Any search can sort: a filter-only one (tag:, user:) has no scores, so
   // by relevance it keeps date order but still gets the grid and start filter.
   const canSort = !!query.trim();
@@ -187,6 +190,7 @@ export function SearchResults({
     posted: spanToParam(postedWithin, DEFAULT_POSTED_WITHIN),
     past: spanToParam(startSpan.past, null),
     future: spanToParam(startSpan.future, null),
+    predicted: onlyWatched ? (showPredicted ? null : '0') : null,
   });
 
   const [lists, setLists] = useState<Partial<Record<SortBy, ResultList>>>({
@@ -206,13 +210,14 @@ export function SearchResults({
 
   // The filters are the server's to apply now, so a change starts the results
   // over: the sort on screen reloads, the other when it next shows.
-  function reload(sort: SortBy, posted: string | null, span: typeof startSpan) {
+  function reload(sort: SortBy, posted: string | null, span: typeof startSpan, predicted = showPredicted) {
     const token = ++loadToken.current[sort];
     ahead.clear();
     if (sort === 'date') scrolled.current = false;
     setLists((current) => ({ ...current, [sort]: { pins: [], links: {}, status: 'loading' } }));
     const params = new URLSearchParams({ q: query, sort });
     if (onlyWatched) params.set('f', 'watch');
+    if (onlyWatched && !predicted) params.set('predicted', '0');
     if (posted) params.set('created_within', posted);
     if (sort === 'relevance' && span.past) params.set('start_past', span.past);
     if (sort === 'relevance' && span.future) params.set('start_future', span.future);
@@ -232,6 +237,15 @@ export function SearchResults({
     loadToken.current[other]++;
     setLists((current) => ({ ...current, [other]: undefined }));
     reload(sortBy, within, startSpan);
+  };
+
+  const changePredicted = (enabled: boolean) => {
+    if (enabled === showPredicted) return;
+    setShowPredicted(enabled);
+    const other = sortBy === 'date' ? 'relevance' : 'date';
+    loadToken.current[other]++;
+    setLists((current) => ({ ...current, [other]: undefined }));
+    reload(sortBy, postedWithin, startSpan, enabled);
   };
 
   const changeStartSpan = (span: typeof startSpan) => {
@@ -308,7 +322,15 @@ export function SearchResults({
   }, [datePins, specialtyDays, timeZone]);
 
   const todayKey = dayKeyIn(serverNow, timeZone);
-  const bags = useMemo(() => buildBags(datePins ?? [], [], timeZone), [datePins, timeZone]);
+  const visibleDatePins = useMemo(
+    () => (onlyWatched && !showPredicted && datePins ? datePins.filter((pin) => !isPredictedPin(pin)) : datePins),
+    [onlyWatched, showPredicted, datePins],
+  );
+  const visibleRankedPins = useMemo(
+    () => (onlyWatched && !showPredicted && rankedPins ? rankedPins.filter((pin) => !isPredictedPin(pin)) : rankedPins),
+    [onlyWatched, showPredicted, rankedPins],
+  );
+  const bags = useMemo(() => buildBags(visibleDatePins ?? [], [], timeZone), [visibleDatePins, timeZone]);
   const culturalDays = useCulturalDays(
     initialCulturalDays,
     useMemo(() => [...bags.map((bag) => bag.day), todayKey], [bags, todayKey]),
@@ -543,6 +565,7 @@ export function SearchResults({
           summaryIsPostedWithin={!searchedUser && !searchedCompany && !searchedPerson}
           onToday={sortBy === 'date' && bags.length ? holdNow : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
+          predicted={onlyWatched ? <PredictedToggle enabled={showPredicted} onChange={changePredicted} /> : undefined}
           // The sort to hand below xl; from xl it is in the panel.
           bottom={canSort ? <SortToggle compact value={sortBy} onChange={changeSort} className="floating xl:hidden" /> : undefined}
           tags={{
@@ -621,7 +644,7 @@ export function SearchResults({
           </p>
         ) : null}
         {shown?.status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">{t('search.unavailable')}</p> : null}
-        {shown?.status === 'ready' && !shown.pins.length ? (
+        {shown?.status === 'ready' && !(sortBy === 'date' ? visibleDatePins?.length : visibleRankedPins?.length) ? (
           <p className="mt-16 text-center text-lg text-subtle">
             {sortBy === 'relevance' && (startSpan.past || startSpan.future)
               ? t('search.noneInRange')
@@ -640,7 +663,7 @@ export function SearchResults({
           <div hidden={sortBy !== 'relevance'} className={restoring ? 'invisible' : undefined}>
             <CardGrid className="mt-6">
               {/* Pins by anyone the reader blocked, or that they are not interested in, are left out. */}
-              {(rankedPins ?? []).filter((pin) => !leftOut(pin)).map((pin, i) => (
+              {(visibleRankedPins ?? []).filter((pin) => !leftOut(pin)).map((pin, i) => (
                 <li key={pin.id} id={`rank-${pin.id}`}>
                   <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} todayKey={todayKey} />
                 </li>

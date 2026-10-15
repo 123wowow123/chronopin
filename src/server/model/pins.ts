@@ -660,6 +660,7 @@ const PAGE_COLUMNS = `
   ${leanReferences('Pin')} AS "references",
   "Pin"."ratings",
   "Pin"."stocks",
+  "Pin"."tags",
   "Pin"."viewCount",
   (SELECT COUNT(*)::integer FROM "PinImpression" AS "i" WHERE "i"."pinId" = "Pin"."id") AS "impressionCount",
   -- Its company's market value: the bag weight leans on it too.

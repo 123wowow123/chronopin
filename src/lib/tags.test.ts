@@ -22,6 +22,8 @@ import {
   groupSelection,
   tagGroupPatterns,
   tagMembers,
+  PREDICTED_TAG,
+  isPredictedPin,
 } from './tags';
 
 describe('cleanTag', () => {
@@ -228,6 +230,28 @@ describe('marketTags', () => {
 
   it('joins the award tags in autoTags', () => {
     expect(autoTags({ description: 'It won the 2024 Crunchyroll Anime Awards.', sourceUrl: 'https://kalshi.com/markets/kxoscar' })).toEqual(['Crunchyroll Anime Awards 2024', 'Prediction Market', 'Kalshi']);
+  });
+
+  it('adds Predicted tag when dateConfidence is estimated and market refs exist', () => {
+    expect(
+      autoTags({
+        sourceUrl: 'https://polymarket.com/event/next-gemini-flash-model-3pt9-released-byptptpt',
+        dateConfidence: 'estimated',
+      }),
+    ).toEqual(['Prediction Market', 'Polymarket', PREDICTED_TAG]);
+
+    expect(
+      autoTags({
+        sourceUrl: 'https://polymarket.com/event/next-gemini-flash-model-3pt9-released-byptptpt',
+        dateConfidence: 'exact',
+      }),
+    ).toEqual(['Prediction Market', 'Polymarket']);
+  });
+
+  it('detects predicted pins via isPredictedPin', () => {
+    expect(isPredictedPin({ tags: [{ name: 'Topic' }, { name: PREDICTED_TAG }] })).toBe(true);
+    expect(isPredictedPin({ tags: [{ name: 'Topic' }] })).toBe(false);
+    expect(isPredictedPin({ tags: null })).toBe(false);
   });
 });
 

@@ -643,7 +643,7 @@ const ja: Messages = {
       expand: 'グラフを拡大',
       collapse: '拡大表示を閉じる',
       alt: '{year}年に公開されたAIモデル：{count}件。100万トークンあたりの価格とアリーナEloの関係。このピン：{model}。',
-      notPriced: 'このモデルにはまだ表示できる公開価格がありません。',
+      notPriced: '現在の公開価格はありません。',
       awaiting: '{model} · {price}/Mトークン · アリーナの評価はまだありません',
       price: '100万トークンあたり$（入力:出力＝5:1、対数目盛）',
       elo: 'アリーナElo（テキスト）',
@@ -723,6 +723,9 @@ const ja: Messages = {
     views: '{count} 回表示',
     translated: '原文から自動翻訳されています',
     originalTitle: '元のタイトル',
+    alternateNames: '別名・原題',
+    showMoreNames: '他 {count} 件を表示',
+    showFewerNames: '折りたたむ',
   },
   share: {
     pin: '共有',
@@ -1160,6 +1163,7 @@ const ja: Messages = {
     liveOdds: 'ライブの市場予想',
   },
   controls: {
+    predicted: '予測',
     tags: 'タグ',
     timeSpan: '期間',
     today: '今日',

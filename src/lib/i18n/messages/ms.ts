@@ -648,7 +648,7 @@ const ms: Messages = {
       expand: 'Besarkan carta',
       collapse: 'Tutup carta yang dibesarkan',
       alt: 'Model AI yang dikeluarkan pada {year}: {count} model, harga sejuta token berbanding Elo arena. Pin ini: {model}.',
-      notPriced: 'Model ini belum mempunyai harga awam untuk diplotkan.',
+      notPriced: 'Tiada harga awam semasa tersedia.',
       awaiting: '{model} · {price}/juta token · belum dinilai oleh arena',
       price: '$ sejuta token (5:1 input:output, skala log)',
       elo: 'Elo arena (teks)',
@@ -728,6 +728,9 @@ const ms: Messages = {
     views: '{count} tontonan',
     translated: 'Diterjemah secara automatik daripada asal',
     originalTitle: 'Tajuk asal',
+    alternateNames: 'Nama alternatif',
+    showMoreNames: 'Tunjukkan {count} lagi',
+    showFewerNames: 'Tunjukkan kurang',
   },
   share: {
     // A pin's menu: its link by text, email or a social site; the address
@@ -1167,6 +1170,7 @@ const ms: Messages = {
     liveOdds: 'Kebarangkalian pasaran langsung',
   },
   controls: {
+    predicted: 'Diramalkan',
     tags: 'Teg',
     timeSpan: 'Tempoh masa',
     today: 'Hari ini',

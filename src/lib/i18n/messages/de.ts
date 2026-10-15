@@ -643,7 +643,7 @@ const de: Messages = {
       expand: 'Diagramm vergrößern',
       collapse: 'Vergrößerte Ansicht schließen',
       alt: 'KI-Modelle, erschienen {year}: {count} Modelle, Preis für eine Million Token gegen Arena-Elo. Dieser Pin: {model}.',
-      notPriced: 'Für dieses Modell gibt es noch keinen öffentlichen Preis.',
+      notPriced: 'Es ist kein aktueller öffentlicher Preis verfügbar.',
       awaiting: '{model} · {price}/M Token · von der Arena noch nicht bewertet',
       price: '$ pro Million Token (5:1 Eingabe:Ausgabe, log. Skala)',
       elo: 'Arena-Elo (Text)',
@@ -723,6 +723,9 @@ const de: Messages = {
     views: { one: '{count} Aufruf', other: '{count} Aufrufe' },
     translated: 'Automatisch aus dem Original übersetzt',
     originalTitle: 'Originaltitel',
+    alternateNames: 'Alternative Namen',
+    showMoreNames: '{count} weitere anzeigen',
+    showFewerNames: 'Weniger anzeigen',
   },
   share: {
     pin: 'Teilen',
@@ -1166,6 +1169,7 @@ const de: Messages = {
     liveOdds: 'Live-Marktquoten',
   },
   controls: {
+    predicted: 'Prognostiziert',
     tags: 'Tags',
     timeSpan: 'Zeitraum',
     today: 'Heute',

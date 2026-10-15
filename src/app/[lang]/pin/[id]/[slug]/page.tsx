@@ -38,6 +38,8 @@ import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
 import { PinCandidates } from '@/components/pin/PinCandidates';
 import { PinTags } from '@/components/pin/PinTags';
+import { PinAlternateNames } from '@/components/pin/PinAlternateNames';
+import { isPredictedPin } from '@/lib/tags';
 import { branchesUnder, threadNumbers } from '@/lib/thread';
 import { PinUpdates } from '@/components/pin/PinUpdates';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
@@ -86,9 +88,8 @@ import { thinReasons, translationReady } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinCandidateJson } from '@/lib/candidates';
-import type { PinGameInfoJson } from '@/lib/gameInfo';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -146,7 +147,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, taste, carPerf, gasCarPerf, dining, hotel, candidates, ads, adsense, viewer] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, gameInfo, taste, carPerf, gasCarPerf, dining, hotel, candidates, ads, adsense, viewer, alternateNames] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -163,6 +164,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
     adPlacements(),
     adsenseSlots(),
     viewerUser(),
+    pinAlternateNames(pin.id),
   ]);
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
@@ -170,6 +172,11 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   // An AI model pin gets the cost/quality chart; the chart asks for its own data.
   const modelChart = !!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models');
   const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || carPerf || gasCarPerf || dining || hotel || modelChart ? 'mt-4' : '';
+
+  const altSet = new Set(alternateNames.map((a) => a.name.toLowerCase()));
+  const displayPin = altSet.size > 0 && pin.tags?.length
+    ? { ...pin, tags: pin.tags.filter((t) => !altSet.has(t.name.trim().toLowerCase())) }
+    : pin;
 
   return (
     <>
@@ -231,9 +238,11 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
 
           {/* Beside the pin on wide screens, under its map, game facts, taste
               profile and car performance rubric; after them on phones. */}
-          <Suspense fallback={<PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={tagsClass} />}>
-            <ThreadAwareTags pin={pin} className={tagsClass} />
+          <Suspense fallback={<PinTags tags={displayPin.tags} categories={pin.categories?.slice(1)} className={tagsClass} />}>
+            <ThreadAwareTags pin={displayPin} className={tagsClass} />
           </Suspense>
+
+          <PinAlternateNames names={alternateNames} className="mt-4" />
 
           {/* Related ads, one row under what the pin is about. */}
           {ads['pin-strip'] ? <AdRow slot="pin-strip" pinId={pin.id} className="mt-6" /> : null}
@@ -601,7 +610,7 @@ async function Thread({ pin }: { pin: PinJson }) {
               <Link
                 href={pinPath(p)}
                 aria-current={p.id === pin.id ? 'page' : undefined}
-                className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
+                className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'} ${isPredictedPin(p) ? 'opacity-65 hover:opacity-100 transition-opacity duration-200' : ''}`}
               >
                 <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{numbers.get(p.id)}</span>
                 <span className="min-w-0">

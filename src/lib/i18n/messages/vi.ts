@@ -647,7 +647,7 @@ const vi: Messages = {
       expand: 'Phóng to biểu đồ',
       collapse: 'Đóng biểu đồ phóng to',
       alt: 'Các mô hình AI phát hành năm {year}: {count} mô hình, giá một triệu token so với Elo đấu trường. Ghim này: {model}.',
-      notPriced: 'Mô hình này chưa có giá công khai để vẽ.',
+      notPriced: 'Hiện không có giá công khai.',
       awaiting: '{model} · {price}/triệu token · đấu trường chưa chấm điểm',
       price: '$ mỗi triệu token (đầu vào:đầu ra 5:1, thang log)',
       elo: 'Elo đấu trường (văn bản)',
@@ -727,6 +727,9 @@ const vi: Messages = {
     views: '{count} lượt xem',
     translated: 'Được dịch tự động từ bản gốc',
     originalTitle: 'Tiêu đề gốc',
+    alternateNames: 'Tên gọi khác',
+    showMoreNames: 'Xem thêm {count}',
+    showFewerNames: 'Thu gọn',
   },
   share: {
     // A pin's menu: its link by text, email or a social site; the address
@@ -1166,6 +1169,7 @@ const vi: Messages = {
     liveOdds: 'Tỷ lệ thị trường trực tiếp',
   },
   controls: {
+    predicted: 'Dự đoán',
     tags: 'Thẻ',
     timeSpan: 'Khoảng thời gian',
     today: 'Hôm nay',

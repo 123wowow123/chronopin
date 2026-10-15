@@ -80,6 +80,7 @@ function useDrawerWidth() {
 export function FloatingControls({
   children,
   sort,
+  predicted,
   tags,
   span,
   summary,
@@ -97,6 +98,8 @@ export function FloatingControls({
   children: React.ReactNode;
   // Sits above the folds, at the top of the column: sorting leads the rest.
   sort?: React.ReactNode;
+  // Sits at the top of the filters panel (e.g. Predicted toggle on watched page).
+  predicted?: React.ReactNode;
   tags?: { summary: string; control: React.ReactNode };
   span?: { summary: string; control: React.ReactNode };
   // What the folded button says ("1 day"), under an optional caption ("Posted within").
@@ -205,6 +208,7 @@ export function FloatingControls({
                           }`}
                         >
                           <MergedPanelContext value={mergedOpen}>
+                            {predicted}
                             {tags?.control}
                             {children}
                             {span?.control}
@@ -213,6 +217,7 @@ export function FloatingControls({
                       </div>
                     ) : (
                       <>
+                        {predicted}
                         {children}
                         {span?.control}
                       </>
@@ -276,6 +281,7 @@ export function FloatingControls({
               }
             >
               <MergedPanelContext value={merge ? mergedOpen : null}>
+                {predicted ? <div className="flex min-h-0 flex-col max-xl:hidden">{predicted}</div> : null}
                 {/* Between lg and xl the tags pill stands for its row. */}
                 {tags ? <div className="flex min-h-0 flex-col max-xl:hidden">{tags.control}</div> : null}
                 {/* Scrolls when taller than the room under the navbar (a searched user's card too). */}
@@ -285,6 +291,7 @@ export function FloatingControls({
                     open === 'controls' ? '' : 'max-xl:hidden'
                   }`}
                 >
+                  {predicted ? <div className="xl:hidden">{predicted}</div> : null}
                   <ControlsFoldContext value={summaryIsPostedWithin}>{children}</ControlsFoldContext>
                 </div>
                 {span ? (

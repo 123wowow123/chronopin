@@ -640,7 +640,7 @@ const th: Messages = {
       expand: 'ขยายแผนภูมิ',
       collapse: 'ปิดแผนภูมิที่ขยาย',
       alt: 'โมเดล AI ที่เปิดตัวในปี {year}: {count} โมเดล ราคาต่อหนึ่งล้านโทเค็นเทียบกับ Elo ของอารีนา พินนี้: {model}',
-      notPriced: 'โมเดลนี้ยังไม่มีราคาสาธารณะให้แสดง',
+      notPriced: 'ไม่มีราคาสาธารณะในปัจจุบัน',
       awaiting: '{model} · {price}/ล้านโทเคน · อารีนายังไม่ให้คะแนน',
       price: '$ ต่อหนึ่งล้านโทเค็น (อินพุต:เอาต์พุต 5:1, สเกลลอการิทึม)',
       elo: 'Elo ของอารีนา (ข้อความ)',
@@ -720,6 +720,9 @@ const th: Messages = {
     views: 'ดู {count} ครั้ง',
     translated: 'แปลอัตโนมัติจากต้นฉบับ',
     originalTitle: 'ชื่อต้นฉบับ',
+    alternateNames: 'ชื่ออื่นๆ',
+    showMoreNames: 'แสดงเพิ่มอีก {count} รายการ',
+    showFewerNames: 'แสดงน้อยลง',
   },
   share: {
     pin: 'แชร์',
@@ -1156,6 +1159,7 @@ const th: Messages = {
     liveOdds: 'อัตราต่อรองตลาดแบบสด',
   },
   controls: {
+    predicted: 'การคาดการณ์',
     tags: 'แท็ก',
     timeSpan: 'ช่วงเวลา',
     today: 'วันนี้',

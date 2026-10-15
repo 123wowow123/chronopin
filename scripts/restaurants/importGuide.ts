@@ -3,8 +3,7 @@
 import '../env';
 import { parseArgs } from 'node:util';
 import { readFile } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
-import sharp from 'sharp';
+import { resolveImportPhotos, verifyImportPhoto, type ImportPhoto } from './importPhotos';
 import { parseRestaurantContent } from '@/server/restaurantContentValidation';
 import { parseSpecialVenue } from '@/server/restaurantSpecialValidation';
 import { productionWrite } from '@/server/jobs/productionWrites';
@@ -27,7 +26,7 @@ const api = async (path: string, method = 'GET', body?: unknown): Promise<any> =
   };
   return method === 'GET' || local ? run() : productionWrite(run);
 };
-type Photo = { url: string; sha256: string; width: number; height: number; credit: string; note: string; sourcePage: string };
+type Photo = ImportPhoto;
 type Entry = { pin: Record<string, any>; content: unknown; special?: unknown; photos: Photo[] };
 const data = JSON.parse(await readFile(values.file!, 'utf8')) as { entries: Entry[] };
 if (!Array.isArray(data.entries) || !data.entries.length) throw new Error('Expected reviewed entries');
@@ -36,28 +35,26 @@ for (const region of new Set(data.entries.map((entry) => parseRestaurantContent(
   await api(`/api/restaurants/guide?region=${encodeURIComponent(region!)}&view=top`);
 }
 const plans = [];
+const savedSpecials = (await api('/api/admin/restaurant-specials')).venues;
 for (const entry of data.entries) {
   const content = parseRestaurantContent(entry.content);
-  if (entry.special) parseSpecialVenue(entry.special);
+  const incomingSpecial = entry.special ? parseSpecialVenue(entry.special) : undefined;
+  if (incomingSpecial && incomingSpecial.profile.pinSourceUrl !== entry.pin.sourceUrl) throw new Error('Pin/special branch mismatch');
   if (content.profile.pinSourceUrl !== entry.pin.sourceUrl) throw new Error('Pin/content branch mismatch');
   const pin = (await api(`/api/admin/db/Pin?sourceUrl=${encodeURIComponent(entry.pin.sourceUrl)}&limit=2`)).rows[0];
   if (pin?.utcDeletedDateTime) throw new Error('An archived pin already uses this source; review it manually');
   const previous = (await api(`/api/admin/restaurant-content?sourceUrl=${encodeURIComponent(entry.pin.sourceUrl)}`)).content[0];
-  const specials = entry.special ? (await api(`/api/admin/restaurant-specials?sourceUrl=${encodeURIComponent(entry.pin.sourceUrl)}`)).venues : [];
-  plans.push({ entry, pin, previous, specialExists: specials.some((venue: any) => venue.profile.pinSourceUrl === entry.pin.sourceUrl) });
-  console.log(`${entry.pin.title}: ${pin ? `keep pin ${pin.id}` : 'create pin'}, ${previous ? 'preserve content' : 'create content'}`);
+  const special = savedSpecials.find((venue: any) => venue.profile.pinSourceUrl === entry.pin.sourceUrl);
+  const photos = resolveImportPhotos(entry.pin.sourceUrl, entry.photos ?? [], previous ?? content, special ?? incomingSpecial);
+  plans.push({ entry, pin, previous, photos, specialExists: !!special });
+  console.log(`${entry.pin.title}: ${pin ? `keep pin ${pin.id}` : 'create pin'}, ${previous ? 'preserve content' : 'create content'}, ${photos.length} reviewed photos`);
 }
 if (values.apply) {
   // Verify every public photo before any pin or live reference is written.
-  for (const photo of data.entries.flatMap((entry) => entry.photos)) {
-    if (new URL(photo.url).hostname !== 'chronopin.blob.core.windows.net') throw new Error('Photos must be in Chronopin Azure Blob Storage');
-    const response = await fetch(photo.url, { signal: AbortSignal.timeout(30_000) });
-    if (!response.ok) throw new Error('Public photo unavailable');
-    const bytes = Buffer.from(await response.arrayBuffer());
-    if (createHash('sha256').update(bytes).digest('hex') !== photo.sha256) throw new Error('Public photo hash mismatch');
-    const metadata = await sharp(bytes).metadata();
-    if (metadata.width !== photo.width || metadata.height !== photo.height) throw new Error('Public photo dimensions mismatch');
-    await sharp(bytes).raw().toBuffer();
+  const verified = new Map<string, Required<Photo>>();
+  for (const photo of plans.flatMap((plan) => plan.photos)) {
+    const result = await verifyImportPhoto(photo);
+    verified.set(photo.url, result);
   }
   for (const plan of plans) {
     const { entry } = plan;
@@ -70,7 +67,8 @@ if (values.apply) {
     if (!plan.previous) await api('/api/admin/restaurant-content', 'POST', entry.content);
     if (entry.special && !plan.specialExists) await api('/api/admin/restaurant-specials', 'POST', entry.special);
     const links = (await api(`/api/admin/db/PinMedium?pinId=${pin.id}&utcDeletedDateTime.null=true&limit=1000`)).rows;
-    for (const photo of entry.photos) {
+    for (const candidate of plan.photos) {
+      const photo = { ...verified.get(candidate.url)!, credit: candidate.credit, note: candidate.note, sourcePage: candidate.sourcePage };
       let medium = (await api(`/api/admin/db/Medium?thumbName=${encodeURIComponent(photo.url)}`)).rows[0];
       if (!medium) medium = (await api('/api/admin/db/Medium', 'POST', { type: '1', thumbName: photo.url, originalUrl: photo.url, thumbWidth: photo.width, thumbHeight: photo.height, originalWidth: photo.width, originalHeight: photo.height, authorName: `${photo.credit} · ${photo.note}`, authorUrl: photo.sourcePage })).rows[0];
       if (!links.some((link: any) => link.mediumId === medium.id)) await api('/api/admin/db/PinMedium', 'POST', { pinId: pin.id, mediumId: medium.id });

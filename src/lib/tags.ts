@@ -284,6 +284,22 @@ export function reservedSuggestions(text: string): ReservedTag[] {
 /* Prediction markets */
 
 export const PREDICTION_MARKET_TAG = 'Prediction Market';
+export const PREDICTED_TAG = 'Predicted';
+
+export function isPredictedPin(pin: {
+  tags?: { name: string }[] | null;
+  dateConfidence?: string | null;
+  sourceUrl?: string | null;
+  references?: { url?: string | null }[] | null;
+}): boolean {
+  if (pin.tags?.some((t) => t.name.toLowerCase() === PREDICTED_TAG.toLowerCase())) {
+    return true;
+  }
+  if (pin.dateConfidence === 'estimated' && pinMarketRefs(pin).length > 0) {
+    return true;
+  }
+  return false;
+}
 
 // The exchanges a pin's source or references link a market on ("Kalshi",
 // "Polymarket", "Polymarket US"), and "Prediction Market" for any of them.
@@ -299,8 +315,15 @@ export function autoTags(pin: {
   longFormSummary?: string | null;
   sourceUrl?: string | null;
   references?: { url?: string | null }[] | null;
+  dateConfidence?: string | null;
 }): string[] {
-  return uniqueTags([...awardTagsInText(pin.description), ...awardTagsInText(pin.longFormSummary), ...marketTags(pin)]);
+  const isEstimatedMarket = pin.dateConfidence === 'estimated' && pinMarketRefs(pin).length > 0;
+  return uniqueTags([
+    ...awardTagsInText(pin.description),
+    ...awardTagsInText(pin.longFormSummary),
+    ...marketTags(pin),
+    ...(isEstimatedMarket ? [PREDICTED_TAG] : []),
+  ]);
 }
 
 /* The cloud */

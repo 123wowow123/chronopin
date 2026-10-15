@@ -14,10 +14,11 @@
 //
 // The two name a model differently ("claude-opus-4-6-high" against
 // "anthropic/claude-opus-4.6"), so they are joined on modelKey(). A model the
-// router does not list has a score but no price and is left out, not guessed.
+// router does not list keeps its score as a horizontal line on its own pin;
+// its missing price is never guessed.
 
 import { modelRelease } from '@/lib/modelSeries';
-import { blendedPrice, markFrontier, modelKey, type ModelChartData, type ModelPoint, type UnscoredModel } from '@/lib/modelChart';
+import { blendedPrice, markFrontier, modelKey, type ModelChartData, type ModelPoint, type UnscoredModel, type UnpricedModel } from '@/lib/modelChart';
 import { pinPath } from '@/lib/seo';
 import * as db from './db';
 import log from './util/log';
@@ -35,7 +36,7 @@ const UA = 'ChronoPin/1.0 (https://chronopin.com) model chart fetch';
 type Arena = { name: string; organization: string | null; elo: number; publishedOn: string | null };
 type Router = { name: string; price: number; year: number };
 // `unscored`: priced on the router, absent from the arena's leaderboard.
-export type ModelUniverse = { points: ModelPoint[]; publishedOn: string | null; unscored: UnscoredModel[] };
+export type ModelUniverse = { points: ModelPoint[]; publishedOn: string | null; unscored: UnscoredModel[]; unpriced: UnpricedModel[] };
 
 async function getJson<T>(url: string): Promise<T> {
   const response = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(TIMEOUT_MS) });
@@ -94,12 +95,16 @@ async function readRouter(): Promise<Map<string, Router>> {
 export async function readModelUniverse(): Promise<ModelUniverse> {
   const [arena, router] = await Promise.all([readArena(), readRouter()]);
   const raw: ModelPoint[] = [];
+  const unpriced: UnpricedModel[] = [];
   let publishedOn: string | null = null;
   for (const [key, a] of arena) {
     const r = router.get(key);
-    if (!r) continue;
-    raw.push({ key, name: a.name, organization: a.organization, elo: Math.round(a.elo), price: r.price, year: r.year });
     if (a.publishedOn && (!publishedOn || a.publishedOn > publishedOn)) publishedOn = a.publishedOn;
+    if (!r) {
+      unpriced.push({ key, name: a.name, organization: a.organization, elo: Math.round(a.elo) });
+      continue;
+    }
+    raw.push({ key, name: a.name, organization: a.organization, elo: Math.round(a.elo), price: r.price, year: r.year });
   }
   // The frontier is read within a year, which is how the chart is segmented.
   const byYear = new Map<number, ModelPoint[]>();
@@ -109,7 +114,7 @@ export async function readModelUniverse(): Promise<ModelUniverse> {
   for (const [key, r] of router) {
     if (!arena.has(key)) unscored.push({ key, name: r.name, organization: null, price: r.price, year: r.year });
   }
-  return { points, publishedOn, unscored };
+  return { points, publishedOn, unscored, unpriced };
 }
 
 type Entry = { expires: number; promise: Promise<ModelUniverse | null> };
@@ -305,6 +310,22 @@ export function buildUnscoredChart(universe: ModelUniverse, unscored: UnscoredMo
   const chart = buildModelChart(universe, null, pins, pinId, title);
   const years = chart.years.includes(unscored.year) ? chart.years : [unscored.year, ...chart.years].sort((a, b) => b - a);
   return { ...chart, years, pinnedYear: unscored.year, unscored };
+}
+
+// Retired models still have Arena scores even after the router drops their
+// price. Match whole title words so Gemini 3 Pro cannot borrow the price or
+// score of Gemini 3 Pro Image. The pin supplies the release year.
+export function buildUnpricedChart(universe: ModelUniverse, pins: ModelPinIndex, pin: { id: number; title: string; utcStartDateTime: string | Date }): ModelChartData | null {
+  const words = wordsOf(pin.title);
+  const own = universe.unpriced
+    .filter((p) => hasRun(words, wordsOf(p.key)))
+    .sort((a, b) => b.key.length - a.key.length)[0];
+  if (!own) return null;
+  const year = new Date(pin.utcStartDateTime).getUTCFullYear();
+  if (!Number.isFinite(year)) return null;
+  const chart = buildModelChart(universe, null, pins, pin.id, pin.title);
+  const years = [...new Set([...chart.years, year])].sort((a, b) => b - a);
+  return { ...chart, years, pinnedYear: year, unpriced: { ...own, year } };
 }
 
 // The frontier models a single pin is the pin of, judged against the arena and

@@ -49,6 +49,8 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
   const params = await searchParams;
   const q = first(params.q);
   const onlyWatched = first(params.f).toLowerCase() === 'watch';
+  const predictedParam = first(params.predicted);
+  const showPredicted = predictedParam !== '0' && predictedParam !== 'false';
   const [user, timeZone, t] = await Promise.all([viewerUser(), viewerTimeZone(), getT()]);
   // Only text typed into the search has an order of relevance, and when it is
   // there that order leads: the best matches first, the timeline a click away.
@@ -60,6 +62,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
     posted: spanFromParam(first(params.posted), DEFAULT_POSTED_WITHIN),
     past: spanFromParam(first(params.past), null),
     future: spanFromParam(first(params.future), null),
+    predicted: onlyWatched ? showPredicted : undefined,
     timeZone,
   };
   const [page, video, typing] = await Promise.all([
@@ -83,7 +86,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
     <>
       <h1 className="sr-only">{q ? t('search.pinsMatching', { query: q }) : t('search.searchPins')}</h1>
       <SearchResults
-        key={`${q}|${onlyWatched}|${page.watchVersion ?? ''}`}
+        key={`${q}|${onlyWatched}|${showPredicted}|${page.watchVersion ?? ''}`}
         initialPage={{ sort: view.sort, pins: toCardPins(page.pins), links: page.links ?? {} }}
         serverTimeZone={timeZone}
         serverNow={now.toISOString()}
@@ -96,7 +99,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         error={page.error}
         query={q}
         onlyWatched={onlyWatched && !!user}
-        initialView={{ sort: view.sort, postedWithin: view.posted, past: view.past, future: view.future }}
+        initialView={{ sort: view.sort, postedWithin: view.posted, past: view.past, future: view.future, predicted: showPredicted }}
         defaultSort={defaultSort}
         video={video}
         sliderTyping={typing.enabled}

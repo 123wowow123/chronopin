@@ -23,10 +23,13 @@ export const GET = route(async (request: NextRequest) => {
   const user = await getUser(request);
   const locale = requestLocale(request);
   if (!params.has('sort')) {
+    const onlyWatched = params.get('f')?.toLowerCase() === 'watch';
+    const excludePredicted = onlyWatched && (params.get('predicted') === '0' || params.get('predicted') === 'false');
     const all = toJson<{ pins: PinJson[] }>(
       await searchPins(params.get('q') || '', {
         userId: user?.id,
-        onlyWatched: params.get('f')?.toLowerCase() === 'watch',
+        onlyWatched,
+        excludePredicted,
         timeZone: params.get('tz')!,
       }),
     );

@@ -45,6 +45,10 @@ export type UnscoredModel = {
   year: number;
 };
 
+// A scored model absent from the current price list (often retired). Its
+// score can be shown as a horizontal line without inventing a token price.
+export type UnpricedModel = { key: string; name: string; elo: number; organization: string | null };
+
 export type ModelChartData = {
   // Every model with both a score and a price, newest year first in `years`.
   points: ModelPoint[];
@@ -58,6 +62,7 @@ export type ModelChartData = {
   // The pin's own model when the router prices it but the arena has not scored
   // it: drawn as a price line with no dot, and `pinned` is then null.
   unscored?: UnscoredModel | null;
+  unpriced?: (UnpricedModel & { year: number }) | null;
 };
 
 // The response may be cached for an hour (the route's Cache-Control), so a
@@ -65,7 +70,7 @@ export type ModelChartData = {
 // expired: a new data field (the same-thread flag) showed nothing for an hour
 // after the deploy. Bump this with any change to what the route sends, and the
 // URL - and so the cache entry - is new.
-export const CHART_VERSION = 6;
+export const CHART_VERSION = 7;
 
 export async function loadModelChart(pinId: number): Promise<ModelChartData | null> {
   try {

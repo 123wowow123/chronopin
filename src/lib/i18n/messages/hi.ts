@@ -646,7 +646,7 @@ const hi: Messages = {
       expand: 'चार्ट बड़ा करें',
       collapse: 'बड़ा चार्ट बंद करें',
       alt: '{year} में जारी AI मॉडल: {count} मॉडल, प्रति दस लाख टोकन कीमत बनाम एरीना Elo। यह पिन: {model}।',
-      notPriced: 'इस मॉडल की अभी कोई सार्वजनिक कीमत नहीं है।',
+      notPriced: 'वर्तमान सार्वजनिक कीमत उपलब्ध नहीं है।',
       awaiting: '{model} · {price}/M टोकन · अरेना ने अभी स्कोर नहीं किया',
       price: '$ प्रति दस लाख टोकन (5:1 इनपुट:आउटपुट, लॉग स्केल)',
       elo: 'एरीना Elo (टेक्स्ट)',
@@ -726,6 +726,9 @@ const hi: Messages = {
     views: { one: '{count} व्यू', other: '{count} व्यू' },
     translated: 'मूल भाषा से अपने आप अनुवादित',
     originalTitle: 'मूल शीर्षक',
+    alternateNames: 'वैकल्पिक नाम',
+    showMoreNames: '{count} और दिखाएं',
+    showFewerNames: 'कम दिखाएं',
   },
   share: {
     // A pin's menu: its link by text, email or a social site; the address
@@ -1173,6 +1176,7 @@ const hi: Messages = {
     liveOdds: 'लाइव मार्केट ऑड्स',
   },
   controls: {
+    predicted: 'अनुमानित',
     tags: 'टैग',
     timeSpan: 'समय सीमा',
     today: 'आज',

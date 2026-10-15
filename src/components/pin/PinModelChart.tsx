@@ -102,6 +102,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
   const field = useMemo(() => data.points.filter((p) => p.year === year && p.key !== data.pinned), [data, year]);
   const shown = useMemo(() => (pinned ? [...field, pinned] : field), [field, pinned]);
   const unscored = data.unscored ?? null;
+  const unpriced = data.unpriced ?? null;
   const awaiting = unscored ? t('pin.modelChart.awaiting', { model: unscored.name, price: showPrice(unscored.price) }) : null;
 
   const awaitingParts = useMemo(() => {
@@ -111,7 +112,10 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
 
   const frame = useMemo(() => {
     const prices = [...shown.map((p) => p.price), ...(unscored ? [unscored.price] : [])];
-    const elos = shown.map((p) => p.elo);
+    // A retired model may be the only member of its release-year tab.
+    // Keep a finite price axis using the comparison field in that case.
+    if (!prices.length) prices.push(...data.points.map((p) => p.price));
+    const elos = [...shown.map((p) => p.elo), ...(unpriced ? [unpriced.elo] : [])];
     // Pad the log axis by a sixth of a decade each side, the Elo axis by a twentieth.
     const lo = 10 ** (Math.log10(Math.min(...prices)) - 0.15);
     const hi = 10 ** (Math.log10(Math.max(...prices)) + 0.15);
@@ -122,7 +126,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
     const span = eloHigh - eloLow + 2 * pad;
     const step = span > 240 ? 50 : 20;
     return { lo, hi, eMin: Math.floor((eloLow - pad) / step) * step, eMax: Math.ceil((eloHigh + pad) / step) * step, step };
-  }, [shown, unscored]);
+  }, [shown, unscored, unpriced, data.points]);
 
   const x = (price: number) => PAD.left + ((Math.log10(price) - Math.log10(frame.lo)) / (Math.log10(frame.hi) - Math.log10(frame.lo) || 1)) * PLOT.w;
   const y = (elo: number) => PAD.top + PLOT.h - ((elo - frame.eMin) / (frame.eMax - frame.eMin || 1)) * PLOT.h;
@@ -196,7 +200,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
               }`}
             >
               {y}
-              {(pinned ?? unscored)?.year === y ? <span aria-hidden className="inline-block size-1.5 shrink-0 rounded-full bg-accent" /> : null}
+              {(pinned ?? unscored ?? unpriced)?.year === y ? <span aria-hidden className="inline-block size-1.5 shrink-0 rounded-full bg-accent" /> : null}
             </button>
           ))}
         </div>
@@ -236,7 +240,7 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
           aria-label={t('pin.modelChart.alt', {
             year,
             count: shown.length,
-            model: pinned ? `${pinned.name}: ${pinned.elo}, ${showPrice(pinned.price)}` : (awaiting ?? t('pin.modelChart.notPriced')),
+            model: pinned ? `${pinned.name}: ${pinned.elo}, ${showPrice(pinned.price)}` : (unpriced ? `${unpriced.name}: ${unpriced.elo} Elo. ${t('pin.modelChart.notPriced')}` : awaiting ?? t('pin.modelChart.notPriced')),
           })}
           onPointerMove={nearest}
           onPointerDown={nearest}
@@ -316,6 +320,15 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
             </g>
           ) : null}
 
+          {unpriced ? (
+            <g>
+              <line x1={PAD.left} x2={PAD.left + PLOT.w} y1={y(unpriced.elo)} y2={y(unpriced.elo)} className="stroke-accent" strokeWidth="2" strokeDasharray="6 4" />
+              <text x={PAD.left + 6} y={y(unpriced.elo) - 8} className="fill-current text-[12px] font-bold text-ink">
+                {unpriced.name} · {unpriced.elo} Elo
+              </text>
+            </g>
+          ) : null}
+
           {/* The pinned model: a ring, a large dot and its name, so it is the
               first thing read, in every year's tab. */}
           {pinned ? (
@@ -365,6 +378,10 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
                 label.name
               )}{' '}
               <span className="text-muted">{label.elo} Elo · {showPrice(label.price)}/M · {label.year}</span>
+            </span>
+          ) : unpriced ? (
+            <span className="text-ink tabular-nums">
+              {unpriced.name} · {unpriced.elo} Elo · {unpriced.year} · <span className="text-muted">{t('pin.modelChart.notPriced')}</span>
             </span>
           ) : awaiting ? (
             <span className="text-ink tabular-nums">

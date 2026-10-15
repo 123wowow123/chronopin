@@ -643,7 +643,7 @@ const es: Messages = {
       expand: 'Ampliar gráfico',
       collapse: 'Cerrar gráfico ampliado',
       alt: 'Modelos de IA lanzados en {year}: {count} modelos, precio de un millón de tokens frente al Elo de la arena. Este pin: {model}.',
-      notPriced: 'Este modelo aún no tiene un precio público que representar.',
+      notPriced: 'No hay un precio público actual disponible.',
       awaiting: '{model} · {price}/M tokens · aún sin puntuación en la arena',
       price: '$ por millón de tokens (5:1 entrada:salida, escala log.)',
       elo: 'Elo de la arena (texto)',
@@ -723,6 +723,9 @@ const es: Messages = {
     views: { one: '{count} visita', other: '{count} visitas' },
     translated: 'Traducido automáticamente del original',
     originalTitle: 'Título original',
+    alternateNames: 'Nombres alternativos',
+    showMoreNames: 'Mostrar {count} más',
+    showFewerNames: 'Mostrar menos',
   },
   share: {
     pin: 'Compartir',
@@ -1166,6 +1169,7 @@ const es: Messages = {
     liveOdds: 'Probabilidades del mercado en directo',
   },
   controls: {
+    predicted: 'Predicho',
     tags: 'Etiquetas',
     timeSpan: 'Intervalo',
     today: 'Hoy',

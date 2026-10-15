@@ -644,7 +644,7 @@ const zh: Messages = {
       expand: '放大图表',
       collapse: '关闭放大的图表',
       alt: '{year} 年发布的 AI 模型：共 {count} 个，每百万 token 价格与竞技场 Elo 对比。此图钉：{model}。',
-      notPriced: '该模型暂无可绘制的公开价格。',
+      notPriced: '暂无当前公开价格。',
       awaiting: '{model} · {price}/百万 token · 竞技场尚未评分',
       price: '每百万 token 美元（输入:输出 5:1，对数刻度）',
       elo: '竞技场 Elo（文本）',
@@ -724,6 +724,9 @@ const zh: Messages = {
     views: '{count} 次浏览',
     translated: '由原文自动翻译',
     originalTitle: '原标题',
+    alternateNames: '别名与译名',
+    showMoreNames: '展开更多 ({count})',
+    showFewerNames: '收起',
   },
   share: {
     pin: '分享',
@@ -1160,6 +1163,7 @@ const zh: Messages = {
     liveOdds: '实时市场赔率',
   },
   controls: {
+    predicted: '预测',
     tags: '标签',
     timeSpan: '时间范围',
     today: '今天',

@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { intParam, json, noContent, route } from '@/server/http';
 import Pin from '@/server/model/pin';
-import { buildModelChart, buildUnscoredChart, modelPinIndex, cachedModelUniverse, unscoredFor } from '@/server/modelChart';
+import { buildModelChart, buildUnscoredChart, buildUnpricedChart, modelPinIndex, cachedModelUniverse, unscoredFor } from '@/server/modelChart';
 import { modelKey } from '@/lib/modelChart';
 import { modelRelease } from '@/lib/modelSeries';
 
@@ -36,6 +36,9 @@ export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/p
   // Priced but not scored by the arena yet: the price line, until it is. A
   // shorter cache, so the dot arrives soon after the arena publishes.
   const unscored = unscoredFor(universe, pin.title);
-  if (!unscored) return noContent();
+  if (!unscored) {
+    const unpriced = buildUnpricedChart(universe, pins, { id, title: pin.title, utcStartDateTime: pin.utcStartDateTime });
+    return unpriced ? json(unpriced, 200, { 'Cache-Control': 'public, max-age=600' }) : noContent();
+  }
   return json(buildUnscoredChart(universe, unscored, pins, id, pin.title), 200, { 'Cache-Control': 'public, max-age=600' });
 });

@@ -35,6 +35,7 @@ import { WeatherIcon } from './WeatherIcon';
 import { useT } from '@/lib/client/i18n';
 import { pinTextDir } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
+import { isPredictedPin } from '@/lib/tags';
 
 const CARD_SIZES = '(max-width: 640px) 100vw, 448px';
 
@@ -143,10 +144,13 @@ export function PinCard({
     );
   }
 
+  const isPredicted = isPredictedPin(pin);
+
   return (
     <article
       data-tense={tense}
-      className={`surface relative overflow-hidden bg-[var(--card-bg,var(--color-panel))] pb-1.5 transition-[border-color,filter] hover:brightness-110 ${TENSE_CLASS[tense ?? 'ongoing']}`}
+      data-predicted={isPredicted ? '' : undefined}
+      className={`surface relative overflow-hidden bg-[var(--card-bg,var(--color-panel))] pb-1.5 transition-[border-color,filter,opacity] duration-200 hover:brightness-110 ${TENSE_CLASS[tense ?? 'ongoing']} ${isPredicted ? 'opacity-65 hover:opacity-100 focus-within:opacity-100' : ''}`}
     >
       {/* pt-2.5 belongs inside the clip: the meta row's links hang their tap
           area 8px above themselves, which overflow-hidden would cut off. */}
