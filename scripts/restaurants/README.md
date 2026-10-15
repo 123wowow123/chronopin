@@ -125,3 +125,7 @@ npm run restaurants:seed -- --regions=guadalajara,monterrey,mexico-city,christch
 There is no image-rights rule: when a venue's own site has no photo, take one from press or
 a tourism board, credit it (`imageSourceUrl`, `imageCredit`) and store it in Azure. Never
 leave a pin without a picture over unclear licensing.
+
+### Imported guide photos and empty galleries
+
+`importGuide.ts` also recovers credited Azure images from the preserved ordinary content tile and saved specials profile, even when an entry has no explicit gallery. Saved API records take precedence over incoming profiles; disabled records are not revived. All explicit and recovered images are downloaded, decoded and checked before writing any live references. Explicit gallery hashes/dimensions remain mandatory checks when supplied; recovered images have their hashes and dimensions measured from the public blob. Branch identity and credits are required. This prevents supplemental pins like MYPLACE and Essex from showing a guide photo but no pin media. See `importPhotos.test.ts` and [October 14 repair notes](../../docs/restaurant-image-repair-2026-10-14.md).

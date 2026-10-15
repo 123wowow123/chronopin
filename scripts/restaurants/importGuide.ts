@@ -27,7 +27,7 @@ const api = async (path: string, method = 'GET', body?: unknown): Promise<any> =
   return method === 'GET' || local ? run() : productionWrite(run);
 };
 type Photo = ImportPhoto;
-type Entry = { pin: Record<string, any>; content: unknown; special?: unknown; photos: Photo[] };
+type Entry = { pin: Record<string, any>; content: unknown; special?: unknown; photos?: Photo[] };
 const data = JSON.parse(await readFile(values.file!, 'utf8')) as { entries: Entry[] };
 if (!Array.isArray(data.entries) || !data.entries.length) throw new Error('Expected reviewed entries');
 // Reject unsupported cities before creating any pin on an older deployment.
