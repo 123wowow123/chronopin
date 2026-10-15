@@ -27,6 +27,7 @@ import { PinCarPerf } from '@/components/pin/PinCarPerf';
 import { PinGasCarPerf } from '@/components/pin/PinGasCarPerf';
 import { PinDining } from '@/components/pin/PinDining';
 import { PinHotel } from '@/components/pin/PinHotel';
+import { getResortPricePerNight } from '@/lib/travel';
 import { PinModelChart } from '@/components/pin/PinModelChart';
 import { PinTaste } from '@/components/pin/PinTaste';
 import { PinOdds } from '@/components/pin/PinOdds';
@@ -188,7 +189,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} venue={venue} candidates={candidates} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} venue={venue} candidates={candidates} isHotel={!!hotel} />
         </article>
 
         <aside className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -232,7 +233,16 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {gasCarPerf ? <PinGasCarPerf perf={gasCarPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {dining ? <PinDining dining={dining} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
-          {hotel ? <PinHotel hotel={hotel} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+          {hotel ? (
+            <PinHotel
+              hotel={hotel}
+              t={t}
+              locale={t.locale}
+              evidence={pinEvidence(pin)}
+              pricePerNight={getResortPricePerNight(pin.id, pin.priceLowerBound ?? pin.price, pin.priceCurrency, pin.priceUpperBound)}
+              className="mt-4"
+            />
+          ) : null}
           <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
 
           {/* Beside the pin on wide screens, under its map, game facts, taste
@@ -293,6 +303,7 @@ async function PinBody({
   eventInfo,
   venue,
   candidates,
+  isHotel,
 }: {
   pin: PinJson;
   timeZone: string;
@@ -300,6 +311,7 @@ async function PinBody({
   eventInfo?: PinEventInfoJson | null;
   venue?: boolean;
   candidates?: PinCandidateJson[];
+  isHotel?: boolean;
 }) {
   const media = pin.media ?? [];
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
@@ -491,7 +503,10 @@ async function PinBody({
         <div className={pin.price != null && pin.price < 0 ? 'text-danger' : ''}>
           {pin.price ? (
             <>
-              <span className="text-subtle">{pin.productName ? t('pin.msrp') : t('pin.cost')}</span> <span className="font-semibold text-success tabular-nums">{money(pin.price, pin.priceCurrency)}</span>
+              <span className="text-subtle">
+                {pin.productName ? t('pin.msrp') : (isHotel && pin.price > 10000 ? 'Project cost' : t('pin.cost'))}
+              </span>{' '}
+              <span className="font-semibold text-success tabular-nums">{money(pin.price, pin.priceCurrency)}</span>
             </>
           ) : null}
         </div>

@@ -222,6 +222,7 @@ async function searchFilter(query: SearchQuery, options: SearchOptions): Promise
   return {
     ...query,
     excludeTags,
+    excludePredicted: options.excludePredicted,
     hits: query.text ? await SearchPins.hits(withCompanyNames(query.text, await Company.nameIndex())) : null,
     favoriteUserId: options.onlyWatched ? options.userId || 0 : null,
     timeZone: timeZoneOrUtc(options.timeZone),

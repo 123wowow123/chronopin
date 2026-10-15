@@ -45,13 +45,18 @@ export default class Favorite extends PinUserLink {
     return { favorite: rows.length ? new Favorite(rows[0]) : undefined };
   }
 
-  // Changes whenever this user watches or unwatches anything: how many pins
-  // they watch, and when the latest watch or unwatch happened.
+  // Changes whenever this user watches or unwatches anything (or follows or
+  // unfollows a company, whose predicted pins join the watch view): how many
+  // rows are active, and when the latest change happened.
   static async listVersion(userId: number): Promise<string> {
     const rows = await db.query<{ count: number; changed: Date | null }>(
-      `SELECT count(*) FILTER (WHERE "utcDeletedDateTime" IS NULL)::integer AS "count",
-              max(GREATEST("utcCreatedDateTime", "utcUpdatedDateTime", "utcDeletedDateTime")) AS "changed"
-       FROM "Favorite" WHERE "userId" = $1`,
+      `SELECT
+         (SELECT count(*) FILTER (WHERE "utcDeletedDateTime" IS NULL)::integer FROM "Favorite" WHERE "userId" = $1)
+           + (SELECT count(*) FILTER (WHERE "utcDeletedDateTime" IS NULL)::integer FROM "CompanyFollow" WHERE "userId" = $1) AS "count",
+         GREATEST(
+           (SELECT max(GREATEST("utcCreatedDateTime", "utcUpdatedDateTime", "utcDeletedDateTime")) FROM "Favorite" WHERE "userId" = $1),
+           (SELECT max(GREATEST("utcCreatedDateTime", "utcUpdatedDateTime", "utcDeletedDateTime")) FROM "CompanyFollow" WHERE "userId" = $1)
+         ) AS "changed"`,
       [userId],
     );
     return `${rows[0].count}:${rows[0].changed ? new Date(rows[0].changed).getTime() : 0}`;

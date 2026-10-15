@@ -70,6 +70,7 @@ export type SearchFilter = PinSearchFilters & {
   // (searchClauses).
   text?: string;
   favoriteUserId?: number | null;
+  excludePredicted?: boolean;
   createdSince?: Date | null;
   startFrom?: Date | null;
   startTo?: Date | null;

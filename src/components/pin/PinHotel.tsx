@@ -1,6 +1,7 @@
 import type { Translator } from '@/lib/i18n/translate';
 import type { Evidence } from '@/lib/referenceConfidence';
 import { HOTEL_AXES, HOTEL_KEYS, HOTEL_MAX, hasHotel, type HotelAxis, type PinHotelJson } from '@/lib/pinHotel';
+import type { PricePerNight } from '@/lib/travel';
 import { Cite } from './PinTaste';
 import { RefineLink } from './RefineLink';
 import { ReviewList } from './ReviewList';
@@ -18,12 +19,14 @@ export function PinHotel({
   t,
   locale,
   evidence,
+  pricePerNight,
   className = '',
 }: {
   hotel: PinHotelJson;
   t: Translator;
   locale: string;
   evidence: Evidence[];
+  pricePerNight?: PricePerNight;
   className?: string;
 }) {
   if (!hasHotel(hotel)) return null;
@@ -32,12 +35,28 @@ export function PinHotel({
   const summary = HOTEL_KEYS.map((key) => `${labels[key]} ${hotel[key] == null ? na : `${hotel[key]}/${HOTEL_MAX}`}`).join(', ');
   return (
     <section className={`text-sm ${className}`} aria-label={t('pin.hotel.heading')}>
-      <h2 className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">
-        <RefineLink field="hotel" value="any" className="text-inherit hover:text-link hover:no-underline" title={t('pin.hotel.showAll')}>
-          {t('pin.hotel.heading')}
-        </RefineLink>
-      </h2>
+      <div className="mb-1 flex items-baseline justify-between">
+        <h2 className="text-xs font-semibold tracking-wide text-muted uppercase">
+          <RefineLink field="hotel" value="any" className="text-inherit hover:text-link hover:no-underline" title={t('pin.hotel.showAll')}>
+            {t('pin.hotel.heading')}
+          </RefineLink>
+        </h2>
+        {pricePerNight ? (
+          <span className="text-xs text-muted">
+            <span className="font-semibold text-foreground tabular-nums">{pricePerNight.formatted}</span>
+            <span className="text-[11px] text-muted"> / night</span>
+          </span>
+        ) : null}
+      </div>
       <div className="surface rounded-lg px-3 py-2">
+        {pricePerNight ? (
+          <div className="mb-2 flex items-center justify-between border-b border-border/40 pb-1.5 text-xs">
+            <span className="text-muted">Estimated nightly rate</span>
+            <span className="font-semibold text-foreground tabular-nums">
+              {pricePerNight.formatted} <span className="font-normal text-muted">/ night</span>
+            </span>
+          </div>
+        ) : null}
         <TasteRadar
           scores={hotel}
           labels={labels}

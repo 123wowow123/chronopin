@@ -73,6 +73,13 @@ const SHELF_DEFINITIONS = [
     tagline: 'Architectural feats, subarctic ice hotels, mountain cloud forests, and family wonderlands.',
     pinIds: [763, 15287, 520, 836, 5156, 3234, 3404],
   },
+  {
+    id: 'budget-friendly',
+    name: 'Budget-Friendly',
+    label: 'Budget-Friendly Escapes',
+    tagline: 'Remarkable boutique resorts, coastal bungalows, and eco-lodges delivering world-class character under $250/night.',
+    pinIds: [15656, 15657, 15658, 15659, 15660, 15661, 15662, 15663],
+  },
 ] as const;
 
 export async function travelShelves(locale: Locale = DEFAULT_LOCALE): Promise<TravelShelf[]> {

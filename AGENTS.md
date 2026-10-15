@@ -46,3 +46,7 @@ Always make a thorough effort to find and display actual menu items, including h
 
 For every consumable food, snack, or beverage product pin (including regional snack awards, ciders, beers, confectionery, and new food launches), always generate both its full 7-axis taste rubric (Aroma 香り, Bitterness 苦味, Sweetness 甘味, Astringency 渋味, Umami うま味, Pungent 辛味, Coolness 清涼感; each 0-5 in half steps) and at least one verified firsthand tasting review (`PinTaste.reviews` array with `url`, `title`, `publishedDate`, `quote`). Save them through `PUT /api/pins/:id/taste` across both local and production environments, and keep `scripts/products/taste.json` synchronized. Never leave food or beverage pins without a native taste radar and review citations.
 
+## Vehicle and car performance rubrics and reviews
+
+For vehicle performance rubric pins (both electric and gasoline car performance radars: `PinCarPerf` and `PinGasCarPerf`), always aim to have at least **3 verified independent reviews** (up to 6, from credible road testers such as Car and Driver, MotorTrend, Top Gear, Evo, Autocar, etc.). Each review must have an opened HTTPS URL, exact article title, ISO publishedDate (`YYYY-MM-DD`), and a verbatim quote (up to 300 characters) describing the vehicle's driving dynamics, steering, acceleration, or handling. Save updates across both local and production environments via their respective API endpoints (`/api/pins/:id/car-performance` and `/api/pins/:id/gas-car-performance`), and keep scripts and JSON catalogs synchronized.
+

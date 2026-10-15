@@ -18,7 +18,17 @@ type Status = { companyId: number; followerCount: number; following: boolean };
 // Follow a company: its new pins then land in the follower's bell, the way a
 // followed person's do. The status is asked for per viewer, because the
 // search results the company comes with are cached for everyone.
-export function CompanyFollowButton({ company, showCount, info }: { company: Company; showCount?: boolean; info?: ReactNode }) {
+export function CompanyFollowButton({
+  company,
+  showCount,
+  info,
+  onFollowChange,
+}: {
+  company: Company;
+  showCount?: boolean;
+  info?: ReactNode;
+  onFollowChange?: (following: boolean) => void;
+}) {
   const router = useRouter();
   const { isLoggedIn, status: sessionStatus, user } = useSession();
   const [status, setStatus] = useState<Status | null>(null);
@@ -47,8 +57,11 @@ export function CompanyFollowButton({ company, showCount, info }: { company: Com
     isLoggedIn,
     useCallback(() => {
       acted.current = true;
-      return api.post<Status>(`/api/companies/${company.id}/follow`).then(setStatus);
-    }, [company.id]),
+      return api.post<Status>(`/api/companies/${company.id}/follow`).then((next) => {
+        setStatus(next);
+        onFollowChange?.(next.following);
+      });
+    }, [company.id, onFollowChange]),
   );
 
   async function toggle() {
@@ -65,11 +78,11 @@ export function CompanyFollowButton({ company, showCount, info }: { company: Com
     acted.current = true;
     setBusy(true);
     try {
-      setStatus(
-        status.following
-          ? await api.delete<Status>(`/api/companies/${company.id}/follow`)
-          : await api.post<Status>(`/api/companies/${company.id}/follow`),
-      );
+      const next = status.following
+        ? await api.delete<Status>(`/api/companies/${company.id}/follow`)
+        : await api.post<Status>(`/api/companies/${company.id}/follow`);
+      setStatus(next);
+      onFollowChange?.(next.following);
     } finally {
       setBusy(false);
     }
@@ -142,7 +155,13 @@ function CompanyMood({ mood, commentCount }: { mood: CommentMood; commentCount: 
 // The panel a search for one company opens with: what the company is in a
 // line, how its pins are being taken lately, and a Follow button that turns
 // its new pins into notifications.
-export function SearchedCompanyPanel({ company }: { company: Company }) {
+export function SearchedCompanyPanel({
+  company,
+  onFollowChange,
+}: {
+  company: Company;
+  onFollowChange?: (following: boolean) => void;
+}) {
   const t = useT();
   const [explaining, setExplaining] = useState(false);
   const explainId = useId();
@@ -187,6 +206,7 @@ export function SearchedCompanyPanel({ company }: { company: Company }) {
         <CompanyFollowButton
           company={company}
           showCount
+          onFollowChange={onFollowChange}
           info={
             <button
               type="button"

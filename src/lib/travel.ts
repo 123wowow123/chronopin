@@ -1063,6 +1063,246 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
       }),
     },
   },
+
+  // Our Jungle House
+  15656: {
+    destination: 'Khao Sok National Park, Surat Thani, Thailand',
+    timing: {
+      recommendedMonths: [12, 1, 2, 3, 4],
+      bestSeason: 'Dry Season & Clear River Flow',
+      peakSeason: 'December to March',
+      shoulderSeason: 'April, November',
+      lowSeason: 'June to October (monsoon rain & high river levels)',
+      tempRange: '23°C – 32°C (73°F – 90°F)',
+      weatherSummary: 'Sunny tropical days with cool jungle breezes and optimal conditions for river swimming and cave safaris.',
+      whyGo: 'Khao Sok is one of Earth’s oldest primary rainforests. During the winter dry season, the Sok River runs crystal clear beneath soaring limestone karsts, making treehouse living, dawn gibbon spotting, and Cheow Lan lake expeditions ideal.',
+      climateZone: 'Tropical Monsoon Rainforest',
+      months: buildMonths({
+        1: { status: 'prime', tempC: 27, rainfall: 'Low', highlight: 'Clear river swimming' },
+        2: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Optimal jungle trekking' },
+        3: { status: 'prime', tempC: 30, rainfall: 'Low', highlight: 'Warm sunny weather' },
+        4: { status: 'prime', tempC: 31, rainfall: 'Moderate', highlight: 'Songkran celebrations' },
+        5: { status: 'good', tempC: 30, rainfall: 'Moderate' },
+        6: { status: 'fair', tempC: 29, rainfall: 'High' },
+        7: { status: 'fair', tempC: 28, rainfall: 'High' },
+        8: { status: 'avoid', tempC: 28, rainfall: 'High', highlight: 'Heavy monsoon rains' },
+        9: { status: 'avoid', tempC: 27, rainfall: 'High', highlight: 'Peak monsoon' },
+        10: { status: 'fair', tempC: 27, rainfall: 'High' },
+        11: { status: 'good', tempC: 27, rainfall: 'Moderate', highlight: 'Post-rain green canopy' },
+        12: { status: 'prime', tempC: 26, rainfall: 'Low', highlight: 'Cool dry breezes' },
+      }),
+    },
+  },
+
+  // The Birdhouse El Nido
+  15657: {
+    destination: 'El Nido, Bacuit Bay, Palawan, Philippines',
+    timing: {
+      recommendedMonths: [12, 1, 2, 3, 4, 5],
+      bestSeason: 'Dry Sunny Season & Turquoise Waters',
+      peakSeason: 'January to April',
+      shoulderSeason: 'May, November to December',
+      lowSeason: 'July to September (southwest monsoon rains & typhoons)',
+      tempRange: '25°C – 32°C (77°F – 90°F)',
+      weatherSummary: 'Mirror-calm turquoise waters, sunny skies, and vivid coral visibility across Bacuit Bay.',
+      whyGo: 'Palawan’s karst archipelagos are world-renowned. The dry season ensures flat seas for private banca boat island hopping to Secret Lagoon, Big Lagoon, and Nacpan Beach, with magnificent golden sunsets viewed directly from canopy tents.',
+      climateZone: 'Tropical Marine Archipelago',
+      months: buildMonths({
+        1: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Calm turquoise seas' },
+        2: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Peak visibility for coral' },
+        3: { status: 'prime', tempC: 29, rainfall: 'Low', highlight: 'Ideal sailing weather' },
+        4: { status: 'prime', tempC: 31, rainfall: 'Low', highlight: 'Warm tropical sunshine' },
+        5: { status: 'prime', tempC: 31, rainfall: 'Moderate', highlight: 'Vibrant sunset yoga' },
+        6: { status: 'good', tempC: 30, rainfall: 'Moderate' },
+        7: { status: 'fair', tempC: 29, rainfall: 'High' },
+        8: { status: 'avoid', tempC: 28, rainfall: 'High', highlight: 'Tropical storms' },
+        9: { status: 'avoid', tempC: 28, rainfall: 'High', highlight: 'Rough ocean swells' },
+        10: { status: 'fair', tempC: 29, rainfall: 'High' },
+        11: { status: 'good', tempC: 29, rainfall: 'Moderate', highlight: 'Opening of dive season' },
+        12: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Balmy holiday breezes' },
+      }),
+    },
+  },
+
+  // Riad Yasmine
+  15658: {
+    destination: 'Medina, Marrakech, Morocco',
+    timing: {
+      recommendedMonths: [3, 4, 5, 9, 10, 11],
+      bestSeason: 'Spring Blossom & Mild Autumn Gold',
+      peakSeason: 'April to May, October',
+      shoulderSeason: 'March, November',
+      lowSeason: 'July to August (extreme 42°C/108°F desert heat), January (cold nights)',
+      tempRange: '18°C – 28°C (64°F – 82°F)',
+      weatherSummary: 'Warm sunny days, crisp clear evening desert air, and comfortable temperatures for souk exploration.',
+      whyGo: 'Spring fills the Medina with fragrant orange blossoms and rose blooms, while autumn brings gentle sunshine and golden light across the terracotta ramparts. The emerald courtyard plunge pool provides serene respite from vibrant bazaar walks.',
+      climateZone: 'Semi-Arid Subtropical Mediterranean',
+      months: buildMonths({
+        1: { status: 'fair', tempC: 13, rainfall: 'Moderate' },
+        2: { status: 'fair', tempC: 15, rainfall: 'Moderate' },
+        3: { status: 'prime', tempC: 19, rainfall: 'Moderate', highlight: 'Orange blossoms in bloom' },
+        4: { status: 'prime', tempC: 22, rainfall: 'Low', highlight: 'Warm sunny exploration' },
+        5: { status: 'prime', tempC: 26, rainfall: 'Low', highlight: 'Balmy rooftop evenings' },
+        6: { status: 'good', tempC: 31, rainfall: 'Low' },
+        7: { status: 'avoid', tempC: 38, rainfall: 'Low', highlight: 'Intense Sahara heat' },
+        8: { status: 'avoid', tempC: 39, rainfall: 'Low', highlight: 'Scorching midday sun' },
+        9: { status: 'prime', tempC: 32, rainfall: 'Low', highlight: 'Comfortable late summer' },
+        10: { status: 'prime', tempC: 26, rainfall: 'Moderate', highlight: 'Optimal sightseeing weather' },
+        11: { status: 'prime', tempC: 19, rainfall: 'Moderate', highlight: 'Crisp mountain views' },
+        12: { status: 'fair', tempC: 14, rainfall: 'Moderate' },
+      }),
+    },
+  },
+
+  // Hoshino Resorts BEB5 Karuizawa
+  15659: {
+    destination: 'Karuizawa, Nagano, Japan',
+    timing: {
+      recommendedMonths: [5, 6, 7, 8, 9, 10],
+      bestSeason: 'Highland Forest Summer & Autumn Foliage',
+      peakSeason: 'July to August (cool mountain summer), October (vibrant momiji)',
+      shoulderSeason: 'May to June, September',
+      lowSeason: 'January to February (snow conditions, though ideal for ski & onsen)',
+      tempRange: '14°C – 25°C (57°F – 77°F)',
+      weatherSummary: 'Cool mountain air, forested pine breezes, and refreshing escapes from Tokyo’s humid summer.',
+      whyGo: 'Karuizawa has been Japan’s premier highland retreat since the 1880s. Surrounded by bird sanctuaries, waterfalls, and pine groves, BEB5 combines casual design with outdoor fire pits and free access to Tonbo-no-yu geothermal hot springs.',
+      climateZone: 'Humid Continental Highland',
+      months: buildMonths({
+        1: { status: 'fair', tempC: -2, rainfall: 'Low', highlight: 'Winter snow & hot onsen' },
+        2: { status: 'fair', tempC: -1, rainfall: 'Low', highlight: 'Crisp ski days' },
+        3: { status: 'fair', tempC: 4, rainfall: 'Moderate' },
+        4: { status: 'good', tempC: 10, rainfall: 'Moderate', highlight: 'Spring alpine blooms' },
+        5: { status: 'prime', tempC: 16, rainfall: 'Moderate', highlight: 'Lush fresh green leaves' },
+        6: { status: 'prime', tempC: 19, rainfall: 'High', highlight: 'Pleasant mountain cool' },
+        7: { status: 'prime', tempC: 23, rainfall: 'High', highlight: 'Cool summer sanctuary' },
+        8: { status: 'prime', tempC: 24, rainfall: 'Moderate', highlight: 'Peak forest retreat' },
+        9: { status: 'prime', tempC: 19, rainfall: 'High', highlight: 'Early autumn color' },
+        10: { status: 'prime', tempC: 13, rainfall: 'Moderate', highlight: 'Spectacular red maples' },
+        11: { status: 'good', tempC: 8, rainfall: 'Low', highlight: 'Crisp firepit evenings' },
+        12: { status: 'fair', tempC: 1, rainfall: 'Low' },
+      }),
+    },
+  },
+
+  // Bambu Indah
+  15660: {
+    destination: 'Ubud, Bali, Indonesia',
+    timing: {
+      recommendedMonths: [4, 5, 6, 7, 8, 9, 10],
+      bestSeason: 'Dry Southeast Monsoon & Low Humidity',
+      peakSeason: 'July to August',
+      shoulderSeason: 'April to June, September to October',
+      lowSeason: 'December to February (heavy tropical monsoon showers)',
+      tempRange: '23°C – 30°C (73°F – 86°F)',
+      weatherSummary: 'Consistent pleasant sunshine, clear mountain skies, and refreshing evening canyon breezes.',
+      whyGo: 'Ubud is at its peak during Bali’s dry season when river currents settle into crystal cascades, rice terraces turn brilliant green, and open-air bamboo suites catch cool evening trade winds.',
+      climateZone: 'Tropical Highland & River Canyon',
+      months: buildMonths({
+        1: { status: 'avoid', tempC: 27, rainfall: 'High', highlight: 'Heavy afternoon rain' },
+        2: { status: 'avoid', tempC: 27, rainfall: 'High', highlight: 'Monsoon showers' },
+        3: { status: 'good', tempC: 28, rainfall: 'Moderate', highlight: 'Nyepi silent day' },
+        4: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Beginning of dry season' },
+        5: { status: 'prime', tempC: 27, rainfall: 'Low', highlight: 'Crisp morning yoga' },
+        6: { status: 'prime', tempC: 26, rainfall: 'Low', highlight: 'Cool river breezes' },
+        7: { status: 'prime', tempC: 26, rainfall: 'Low', highlight: 'Peak dry perfection' },
+        8: { status: 'prime', tempC: 26, rainfall: 'Low', highlight: 'Sunny canyon swimming' },
+        9: { status: 'prime', tempC: 27, rainfall: 'Low', highlight: 'Mild golden weather' },
+        10: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Warm tranquil days' },
+        11: { status: 'good', tempC: 28, rainfall: 'Moderate' },
+        12: { status: 'fair', tempC: 27, rainfall: 'High' },
+      }),
+    },
+  },
+
+  // 98 Acres Resort & Spa
+  15661: {
+    destination: 'Ella, Badulla District, Sri Lanka',
+    timing: {
+      recommendedMonths: [12, 1, 2, 3, 4, 5],
+      bestSeason: 'Dry Hill Country Sunshine & Tea Harvest',
+      peakSeason: 'January to March',
+      shoulderSeason: 'April to May, December',
+      lowSeason: 'October to November (northeast monsoon rain and mountain fog)',
+      tempRange: '16°C – 26°C (61°F – 79°F)',
+      weatherSummary: 'Clear panoramic mountain horizons, warm temperate afternoons, and cool highland nights.',
+      whyGo: 'Ella Gap offers some of South Asia’s most dramatic topography. The early months bring crisp morning sunshine, mist rolling off Ella Rock, and clear hiking trails to Little Adam’s Peak and the Demodara Nine Arch Bridge.',
+      climateZone: 'Subtropical Highland Tea Country',
+      months: buildMonths({
+        1: { status: 'prime', tempC: 21, rainfall: 'Low', highlight: 'Crystal clear Ella Gap views' },
+        2: { status: 'prime', tempC: 22, rainfall: 'Low', highlight: 'Optimal hiking weather' },
+        3: { status: 'prime', tempC: 24, rainfall: 'Low', highlight: 'Warm sunny tea estate days' },
+        4: { status: 'prime', tempC: 25, rainfall: 'Moderate', highlight: 'Sinhala New Year celebrations' },
+        5: { status: 'prime', tempC: 25, rainfall: 'Moderate', highlight: 'Lush green tea hills' },
+        6: { status: 'good', tempC: 24, rainfall: 'Moderate' },
+        7: { status: 'good', tempC: 23, rainfall: 'Moderate' },
+        8: { status: 'good', tempC: 23, rainfall: 'Moderate' },
+        9: { status: 'good', tempC: 23, rainfall: 'Moderate' },
+        10: { status: 'fair', tempC: 22, rainfall: 'High' },
+        11: { status: 'fair', tempC: 21, rainfall: 'High', highlight: 'Heavy afternoon rain' },
+        12: { status: 'prime', tempC: 20, rainfall: 'Low', highlight: 'Crisp cool holiday air' },
+      }),
+    },
+  },
+
+  // Cabañas CuatroCuatros
+  15662: {
+    destination: 'Valle de Guadalupe / Ensenada, Baja California, Mexico',
+    timing: {
+      recommendedMonths: [4, 5, 6, 7, 8, 9, 10, 11],
+      bestSeason: 'Warm Pacific Sun & Grape Harvest (Vendimia)',
+      peakSeason: 'August to October',
+      shoulderSeason: 'April to June, November',
+      lowSeason: 'January to February (cool Pacific fog & winter rains)',
+      tempRange: '17°C – 28°C (63°F – 82°F)',
+      weatherSummary: 'Mediterranean coastal sunshine tempered by refreshing afternoon Pacific ocean breezes.',
+      whyGo: 'Baja’s northern coast offers an intoxicating blend of vineyard glamping, artisan olive oil, and dramatic ocean cliffs. August brings the world-renowned Fiestas de la Vendimia grape harvest celebrations.',
+      climateZone: 'Mediterranean Coastal Desert',
+      months: buildMonths({
+        1: { status: 'fair', tempC: 16, rainfall: 'Moderate' },
+        2: { status: 'fair', tempC: 16, rainfall: 'Moderate' },
+        3: { status: 'good', tempC: 18, rainfall: 'Low', highlight: 'Spring vineyard budbreak' },
+        4: { status: 'prime', tempC: 20, rainfall: 'Low', highlight: 'Sunny comfortable days' },
+        5: { status: 'prime', tempC: 22, rainfall: 'Low', highlight: 'Crisp cliffside breezes' },
+        6: { status: 'prime', tempC: 24, rainfall: 'Low', highlight: 'Long warm evenings' },
+        7: { status: 'prime', tempC: 27, rainfall: 'Low', highlight: 'Golden beach days' },
+        8: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Vendimia wine harvest' },
+        9: { status: 'prime', tempC: 27, rainfall: 'Low', highlight: 'Peak harvest tastings' },
+        10: { status: 'prime', tempC: 24, rainfall: 'Low', highlight: 'Warm autumn sunsets' },
+        11: { status: 'prime', tempC: 20, rainfall: 'Low', highlight: 'Cool tranquil harvest close' },
+        12: { status: 'good', tempC: 17, rainfall: 'Moderate' },
+      }),
+    },
+  },
+
+  // Playa Viva
+  15663: {
+    destination: 'Juluchuca, Zihuatanejo Coast, Mexico',
+    timing: {
+      recommendedMonths: [11, 12, 1, 2, 3, 4, 5],
+      bestSeason: 'Dry Pacific Winter & Sea Turtle Nesting',
+      peakSeason: 'December to April',
+      shoulderSeason: 'November, May',
+      lowSeason: 'July to September (tropical rainy season & high ocean humidity)',
+      tempRange: '24°C – 31°C (75°F – 88°F)',
+      weatherSummary: 'Guaranteed sunshine, warm ocean water, and cool night breezes off the Sierra Madre mountains.',
+      whyGo: 'Playa Viva is pure regenerative magic. During the dry winter, calm seas lap against private white sands, thousands of olive ridley and leatherback baby turtles hatch daily at dawn, and bamboo treehouses stay completely open to starry skies.',
+      climateZone: 'Tropical Coastal Pacific',
+      months: buildMonths({
+        1: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Peak baby sea turtle releases' },
+        2: { status: 'prime', tempC: 28, rainfall: 'Low', highlight: 'Calm ocean waters' },
+        3: { status: 'prime', tempC: 29, rainfall: 'Low', highlight: 'Dry sunny beach days' },
+        4: { status: 'prime', tempC: 30, rainfall: 'Low', highlight: 'Warm tropical surf' },
+        5: { status: 'prime', tempC: 31, rainfall: 'Low', highlight: 'Serene coastal yoga' },
+        6: { status: 'good', tempC: 32, rainfall: 'Moderate' },
+        7: { status: 'fair', tempC: 32, rainfall: 'High' },
+        8: { status: 'avoid', tempC: 31, rainfall: 'High', highlight: 'Tropical storms' },
+        9: { status: 'avoid', tempC: 31, rainfall: 'High', highlight: 'Heavy rain' },
+        10: { status: 'fair', tempC: 31, rainfall: 'Moderate' },
+        11: { status: 'prime', tempC: 30, rainfall: 'Low', highlight: 'Dry season begins' },
+        12: { status: 'prime', tempC: 29, rainfall: 'Low', highlight: 'Holiday ocean paradise' },
+      }),
+    },
+  },
 };
 
 // Fallback timing for any resort without custom overrides.
@@ -1124,38 +1364,79 @@ export function formatMonthRange(months: number[]): string {
 }
 
 export const RESORT_PRICE_RANGES: Record<number, { min: number; max: number; currency: string }> = {
+  // Capella Kyoto: ¥185,000 to ¥360,000 ($1,250 - $2,400)
   15302: { min: 1250, max: 2400, currency: 'USD' },
+  // Four Seasons Hotel and Residences Cartagena: $750 - $1,400
   15274: { min: 750, max: 1400, currency: 'USD' },
+  // Waldorf Astoria Rabat-Salé: 5,500 MAD to 11,000 MAD ($550 - $1,100)
   15290: { min: 550, max: 1100, currency: 'USD' },
+  // Corinthia Rome: €1,100 to €2,000 ($1,200 - $2,200)
   15292: { min: 1200, max: 2200, currency: 'USD' },
+  // Six Senses London: £850 to £1,650 ($1,100 - $2,100)
   15303: { min: 1100, max: 2100, currency: 'USD' },
+  // Aman New York: $2,200 - $3,800
   4058: { min: 2200, max: 3800, currency: 'USD' },
+  // 1 Hotel Tokyo: ¥110,000 to ¥200,000 ($750 - $1,350)
   15283: { min: 750, max: 1350, currency: 'USD' },
+  // Four Seasons Hotel Tokyo at Marunouchi: ¥165,000 to ¥290,000 ($1,100 - $1,950)
   15284: { min: 1100, max: 1950, currency: 'USD' },
+  // The St. Regis Budapest: €650 to €1,200 ($700 - $1,300)
   15288: { min: 700, max: 1300, currency: 'USD' },
+  // Amoh, a Luxury Collection Resort, Rhodes: €550 to €1,100 ($600 - $1,200)
   15289: { min: 600, max: 1200, currency: 'USD' },
+  // Cheval Blanc Seychelles: €2,400 to €4,800 ($2,600 - $5,200)
   4129: { min: 2600, max: 5200, currency: 'USD' },
+  // Amanvari, Baja California Sur: $1,950 - $3,500
   15278: { min: 1950, max: 3500, currency: 'USD' },
+  // Four Seasons Hotel Mykonos: €1,200 to €2,400 ($1,300 - $2,600)
   15295: { min: 1300, max: 2600, currency: 'USD' },
-  15275: { min: 1450, max: 2800, currency: 'USD' },
+  // The St. Regis Costa Mujeres Resort, Cancún: $650 - $1,350
+  15275: { min: 650, max: 1350, currency: 'USD' },
+  // COMO Le Beauvallon, Bay of Saint-Tropez: €1,150 to €2,300 ($1,250 - $2,500)
   15293: { min: 1250, max: 2500, currency: 'USD' },
-  15279: { min: 1100, max: 2200, currency: 'USD' },
-  15280: { min: 2800, max: 4600, currency: 'USD' },
+  // The Westerly at Hilton Aruba: $420 - $850
+  15279: { min: 420, max: 850, currency: 'USD' },
+  // Delano Miami Beach: $550 - $1,250
+  15280: { min: 550, max: 1250, currency: 'USD' },
+  // Danieli, Venezia, a Four Seasons Hotel: €1,350 to €2,700 ($1,450 - $2,900)
   15294: { min: 1450, max: 2900, currency: 'USD' },
-  15282: { min: 950, max: 1750, currency: 'USD' },
-  15285: { min: 1750, max: 3400, currency: 'USD' },
-  15276: { min: 1400, max: 2600, currency: 'USD' },
-  15286: { min: 870, max: 1950, currency: 'USD' },
+  // Imperial Hotel, Kyoto: ¥110,000 to ¥220,000 ($750 - $1,500)
+  15282: { min: 750, max: 1500, currency: 'USD' },
+  // HOSHINOYA Nara Prison: ¥80,000 to ¥160,000 ($540 - $1,080)
+  15285: { min: 540, max: 1080, currency: 'USD' },
+  // The Cooper, Charleston: $450 - $850
+  15276: { min: 450, max: 850, currency: 'USD' },
+  // Conrad Nagoya: ¥42,000 to ¥85,000 ($280 - $570)
+  15286: { min: 280, max: 570, currency: 'USD' },
+  // Raffles Jeddah: SAR 3,000 to SAR 6,000 ($800 - $1,600)
   15291: { min: 800, max: 1600, currency: 'USD' },
-  15281: { min: 1950, max: 3600, currency: 'USD' },
-  15277: { min: 1050, max: 2100, currency: 'USD' },
-  763: { min: 820, max: 1500, currency: 'USD' },
-  15287: { min: 2100, max: 3200, currency: 'USD' },
-  520: { min: 1350, max: 2100, currency: 'USD' },
-  836: { min: 1350, max: 2600, currency: 'USD' },
-  5156: { min: 2450, max: 3950, currency: 'USD' },
-  3234: { min: 1650, max: 2600, currency: 'USD' },
-  3404: { min: 890, max: 1550, currency: 'USD' },
+  // 1 Hotel Austin: $350 - $750
+  15281: { min: 350, max: 750, currency: 'USD' },
+  // The Vanderpump Hotel, Las Vegas Strip: $180 - $420
+  15277: { min: 180, max: 420, currency: 'USD' },
+  // ICEHOTEL 365, Sweden: SEK 3,600 to SEK 11,800 ($350 - $1,150)
+  763: { min: 350, max: 1150, currency: 'USD' },
+  // Banyan Tree Mount Emei: RMB 2,000 to RMB 4,400 ($280 - $620)
+  15287: { min: 280, max: 620, currency: 'USD' },
+  // Ciel Dubai Marina: AED 700 to AED 1,800 ($190 - $490)
+  520: { min: 190, max: 490, currency: 'USD' },
+  // Tropical Islands Resort, Germany: €120 to €350 ($130 - $380)
+  836: { min: 130, max: 380, currency: 'USD' },
+  // Universal Kids Resort Hotel, Frisco: $220 - $480
+  5156: { min: 220, max: 480, currency: 'USD' },
+  // Gaylord Pacific Resort, Chula Vista: $280 - $550 (nightly rate; $1.3B is project construction cost)
+  3234: { min: 280, max: 550, currency: 'USD' },
+  // Durango Casino & Resort, Las Vegas: $150 - $380 (nightly rate; $385M is expansion construction cost)
+  3404: { min: 150, max: 380, currency: 'USD' },
+  // Budget-friendly resorts ($75 – $260/night)
+  15656: { min: 75, max: 145, currency: 'USD' },
+  15657: { min: 115, max: 190, currency: 'USD' },
+  15658: { min: 120, max: 185, currency: 'USD' },
+  15659: { min: 130, max: 210, currency: 'USD' },
+  15660: { min: 145, max: 260, currency: 'USD' },
+  15661: { min: 155, max: 245, currency: 'USD' },
+  15662: { min: 175, max: 260, currency: 'USD' },
+  15663: { min: 215, max: 320, currency: 'USD' },
 };
 
 // Signature top activities repository for all 32 curated resorts and luxury retreats.
@@ -1182,179 +1463,179 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
     },
   ],
 
-  // The Tokyo EDITION, Ginza
+  // Four Seasons Hotel and Residences Cartagena
   15274: [
     {
-      title: 'Punch Room Japanese Tea & Spirit Mixology',
+      title: 'Historic Walled City & Getsemaní Street Art Walking Tour',
+      category: 'Culture',
+      season: 'Dec – Apr',
+      description: 'Privately guided exploration of 16th-century colonial fortifications, vibrant street murals, and colonial courtyards in Getsemaní.',
+    },
+    {
+      title: 'Rosario Islands Private Catamaran Coral Snorkel',
+      category: 'Water',
+      season: 'Dec – Apr',
+      description: 'Privately chartered sailing catamaran to the archipelago’s crystal-clear turquoise waters and protected coral reefs.',
+    },
+    {
+      title: 'Rooftop Caribbean Sunset & Colombian Rum Degustation',
       category: 'Dining',
       season: 'Year-round',
-      description: 'Bespoke cocktail degustation blending ceremonial grade matcha, sencha, and small-batch craft shochu.',
-    },
-    {
-      title: 'Kabuki-za Theatre Private Backstage & Gallery Walk',
-      category: 'Culture',
-      season: 'Spring & Autumn',
-      description: 'Curated architectural and cultural immersion into the historic theater heart of Ginza.',
-    },
-    {
-      title: 'Rooftop Oasis Sunset Vinyasa Yoga',
-      category: 'Wellness',
-      season: 'Spring to Autumn',
-      description: 'Twilight wellness sessions overlooking Tokyo Tower and the glittering Ginza skyline.',
+      description: 'Sip aged single-origin Colombian rums paired with Caribbean-inspired ceviches overlooking the historic fortress ramparts.',
     },
   ],
 
-  // Janu Tokyo
+  // Waldorf Astoria Rabat-Salé
   15290: [
     {
-      title: 'Janu Wellness 4,000 m² Banya & Hammam Immersion',
+      title: 'Kasbah of the Udayas & Andalusian Gardens Private Walk',
+      category: 'Culture',
+      season: 'Mar – May & Sep – Nov',
+      description: 'Stroll ancient 12th-century blue-and-white clifftop alleyways and blooming jasmine gardens overlooking the Atlantic Ocean and Bouregreg River.',
+    },
+    {
+      title: 'Bouregreg Marina Royal Yacht Cruise',
+      category: 'Water',
+      season: 'Apr – Oct',
+      description: 'Private sunset sailing along the Bouregreg estuary with panoramic views of the Mohammed VI Tower and Hassan Tower minaret.',
+    },
+    {
+      title: 'Traditional Moroccan Argan & Orange Blossom Hammam',
       category: 'Wellness',
       season: 'Year-round',
-      description: 'Tokyo’s most expansive urban hydrotherapy spa with private Russian banya and marble Turkish hammam suites.',
-    },
-    {
-      title: 'teamLab Borderless VIP Priority Access',
-      category: 'Culture',
-      season: 'Year-round',
-      description: 'Seamless VIP entry to the digital art museum integrated within the Azabudai Hills complex.',
-    },
-    {
-      title: 'Janu Grill Edomae Sumibi Theatrical Dining',
-      category: 'Dining',
-      season: 'Autumn & Winter',
-      description: 'Prime Japanese Wagyu and line-caught seafood grilled over Kishu binchotan charcoal in an open culinary theater.',
+      description: 'Luxurious authentic marble bath ritual featuring black eucalyptus soap, rhassoul clay wraps, and pure organic argan oil.',
     },
   ],
 
-  // Bulgari Hotel Tokyo
+  // Corinthia Rome
   15292: [
     {
-      title: 'Il Ristorante - Niko Romito 3-Star Tasting Menu',
-      category: 'Dining',
-      season: 'Year-round',
-      description: 'High-altitude contemporary Italian gastronomy paired with sweeping Tokyo and Mount Fuji panoramas on the 40th floor.',
-    },
-    {
-      title: '25-Metre Gold-Mosaic Skyline Pool Sanctuary',
-      category: 'Wellness',
-      season: 'Winter & Spring',
-      description: 'Swim beneath soaring glass skylights with heated vitality pools overlooking the Imperial Palace gardens.',
-    },
-    {
-      title: 'Nihombashi Historic Artisan Workshop Tour',
+      title: 'Private After-Hours Pantheon & Piazza Navona Walk',
       category: 'Culture',
+      season: 'Apr – Jun & Sep – Oct',
+      description: 'Exclusive twilight tour through historic cobblestone lanes and ancient Roman monuments without daytime tourist crowds.',
+    },
+    {
+      title: 'Subterranean Terme Roman Thermal Bath Sanctuary',
+      category: 'Wellness',
+      season: 'Year-round',
+      description: 'Multi-sensory hydrotherapy circuit inspired by ancient Roman caldarium, tepidarium, and frigidarium ritual baths.',
+    },
+    {
+      title: 'Chef-Led Campo de\' Fiori Market & Rooftop Masterclass',
+      category: 'Dining',
       season: 'Spring & Autumn',
-      description: 'Private visits to Edo-period lacquer masters, washi papermakers, and traditional kimono weavers.',
+      description: 'Select fresh heirloom Roman produce with the executive chef followed by an intimate pasta and wine pairing class.',
     },
   ],
 
-  // Banyan Tree Higashiyama Kyoto
+  // Six Senses London
   15303: [
     {
-      title: 'Sacred Spring Onsen & Bamboo Grove Meditation',
+      title: 'Six Senses Integrated Biohacking & Hydrotherapy Spa',
       category: 'Wellness',
-      season: 'Autumn & Winter',
-      description: 'Restorative geothermal mineral baths fed by the property’s natural mountain spring amid towering bamboo.',
+      season: 'Year-round',
+      description: 'Subterranean longevity haven featuring cryotherapy, ozone sauna, infrared pods, and 20-metre indoor mineral lap pool.',
     },
     {
-      title: 'On-Site Noh Stage Traditional Theater Performance',
-      category: 'Culture',
-      season: 'Spring & Autumn',
-      description: 'Exclusive ceremonial Noh masked drama performed on the resort’s dedicated wooden stage over the spring.',
-    },
-    {
-      title: 'Kiyomizu-dera Dawn Pilgrimage Walk',
+      title: 'Hyde Park Sunrise Jogging & Serpentine Boating',
       category: 'Nature',
-      season: 'Spring & Autumn',
-      description: 'Sunrise walking trail through ancient cedar forests reaching the historic temple before visitor gates open.',
+      season: 'Apr – Sep',
+      description: 'Guided morning trail runs beneath London planes and private rowboat charters on the Serpentine Lake just blocks away.',
+    },
+    {
+      title: 'Bespoke Bayswater Antique & Portobello Road Discovery',
+      category: 'Culture',
+      season: 'Year-round',
+      description: 'VIP curator-guided treasure hunt through Notting Hill’s legendary vintage boutiques, silver arcades, and galleries.',
     },
   ],
 
-  // Bellagio Shanghai
+  // Aman New York
   4058: [
     {
-      title: 'LAGO by Julian Serrano Terraced Italian Dining',
-      category: 'Dining',
-      season: 'Spring & Autumn',
-      description: 'Avant-garde Italian plates on an expansive glass outdoor terrace overlooking Suzhou Creek and the Pudong skyline.',
+      title: 'Three-Story Flagship Aman Spa & Private Banya Suites',
+      category: 'Wellness',
+      season: 'Year-round',
+      description: '25,000-square-foot holistic sanctuary featuring a 65-foot indoor pool, cryotherapy, and private outdoor banya garden terraces.',
     },
     {
-      title: 'North Bund Art & Architectural Heritage Walk',
+      title: 'Central Park South Private Sunrise Architectural Tour',
       category: 'Culture',
       season: 'Spring & Autumn',
-      description: 'Curatorial tour through 1930s Shikumen brick alleyways, colonial river wharves, and cutting-edge art galleries.',
+      description: 'Curated architectural immersion into Manhattan’s historic gilded-age mansions and Central Park just two blocks north.',
     },
     {
-      title: 'Bellagio Spa Crushed Gemstone Hydrotherapy',
-      category: 'Wellness',
+      title: 'Nama Japanese Washoku & Terrace Teppanyaki Experience',
+      category: 'Dining',
       season: 'Year-round',
-      description: 'Rejuvenating skin therapy utilizing diamond dust, thermal steam suites, and Vitality hydro-massage pools.',
+      description: 'Masterful Edomae sushi and binchotan-grilled delights savored beside tranquil outdoor reflecting pools on Fifth Avenue.',
     },
   ],
 
-  // The St. Regis Al Mouj Muscat Resort
+  // 1 Hotel Tokyo
   15283: [
     {
-      title: 'Daymaniyat Islands Coral Snorkeling & Turtle Safari',
-      category: 'Water',
-      season: 'Oct – Apr',
-      description: 'Private yacht charter to protected nature reserves with crystal turquoise waters, reef sharks, and sea turtles.',
-    },
-    {
-      title: 'Guerlain Spa Royal Frankincense Hammam',
+      title: 'Biophilic Urban Nature Meditation & Plant Styling Workshop',
       category: 'Wellness',
-      season: 'Nov – Mar',
-      description: 'Arabian wellness ritual featuring pure Omani green Hojari frankincense, eucalyptus steam, and rosewater.',
+      season: 'Year-round',
+      description: 'Mindfulness sessions amidst living greenery walls and moss gardens designed to ground travelers in Tokyo’s pulsing core.',
     },
     {
-      title: 'Wahiba Sands Golden Dune Bashing & Stargazing',
-      category: 'Adventure',
-      season: 'Oct – Apr',
-      description: '4x4 desert adventure across undulating red dunes followed by private Bedouin campfire dinner under clear constellations.',
+      title: 'Hie Shrine Ceremonial Torii Walk & Akasaka Heritage Tour',
+      category: 'Culture',
+      season: 'Spring & Autumn',
+      description: 'Explore the iconic red torii gates and ancient Shinto traditions tucked within Tokyo’s modern diplomatic district.',
+    },
+    {
+      title: 'Farm-to-Table Sustainable Japanese Degustation',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Seasonal zero-waste culinary tasting highlighting organic produce from small-scale regenerative farms across Kanto.',
     },
   ],
 
-  // The Lana, Dorchester Collection
+  // Four Seasons Hotel Tokyo at Marunouchi
   15284: [
     {
-      title: 'Jara by Martín Berasategui Basque Masterclass',
-      category: 'Dining',
-      season: 'Nov – Apr',
-      description: 'Celebrated 12-Michelin-star Basque grill artistry featuring Cantabrian seafood and vintage Rioja pairings.',
+      title: 'Imperial Palace Outer Garden Jogging & Biking',
+      category: 'Nature',
+      season: 'Spring & Autumn',
+      description: 'Scenic 5km loop around the historic Edo Castle stone walls and tranquil moats with loaner Tokyo bikes.',
     },
     {
-      title: 'Dior Spa High-Altitude Skyline Sanctuary',
+      title: 'Maison Marunouchi French Bistro Masterclass',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Refined Parisian bistro classics and afternoon tea served with panoramic views of bullet trains gliding into Tokyo Station.',
+    },
+    {
+      title: 'Traditional Japanese Onsen-Style Hot Spring Bathing',
       category: 'Wellness',
       season: 'Year-round',
-      description: 'Bespoke French couture therapies and anti-gravity cocoon treatments on the 29th floor overlooking Burj Khalifa.',
-    },
-    {
-      title: 'Marasi Bay Marina Private Riva Boat Cruise',
-      category: 'Water',
-      season: 'Oct – Apr',
-      description: 'Glide down Dubai Canal into the open Arabian Gulf aboard a handcrafted mahogany Italian Riva launch.',
+      description: 'Serene spa sanctuary with mineral-rich hot springs, steam saunas, and jet beds to relieve international travel fatigue.',
     },
   ],
 
-  // The Emory
+  // The St. Regis Budapest
   15288: [
     {
-      title: 'Surrenne 4-Floor Longevity & Health Sanctuary',
+      title: 'Danube River Private Vintage Wooden Speedboat Cruise',
+      category: 'Water',
+      season: 'May – Sep',
+      description: 'Glide past the illuminated Hungarian Parliament and Buda Castle aboard a classic mahogany motor launch.',
+    },
+    {
+      title: 'Historic Thermal Bath & Mineral Hydrotherapy Circuit',
       category: 'Wellness',
       season: 'Year-round',
-      description: 'Subterranean retreat featuring hyperbaric oxygen chambers, 22-metre pool, and custom cellular health diagnostics.',
+      description: 'Indulge in Budapest’s legendary geothermal waters paired with custom Hungarian Moor mud detoxifying wraps.',
     },
     {
-      title: 'abc viñetas by Jean-Georges Farm-to-Table',
+      title: 'Tokaj Aszú Masterclass & Hungarian Caviar Tasting',
       category: 'Dining',
       season: 'Year-round',
-      description: 'Vibrant Latin-inspired dishes celebrating seasonal organic British produce and sustainably sourced seafood.',
-    },
-    {
-      title: 'Hyde Park Private Equestrian & Serpentine Walk',
-      category: 'Nature',
-      season: 'Spring & Summer',
-      description: 'Morning horseback hack down Rotten Row and private viewing access at the Serpentine contemporary galleries.',
+      description: 'Sommelier-curated degustation of rare vintage volcanic Tokaj dessert wines and artisanal sturgeon caviar.',
     },
   ],
 
@@ -1380,333 +1661,333 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
     },
   ],
 
-  // Constance Moofushi
+  // Cheval Blanc Seychelles
   4129: [
     {
-      title: 'South Ari Whale Shark & Manta Ray Snorkeling',
+      title: 'Anse Intendance Whale Shark & Coral Reef Snorkeling',
       category: 'Water',
-      season: 'Dec – Apr',
-      description: 'World-renowned open-water encounters with resident whale sharks and oceanic manta cleaning stations.',
+      season: 'Oct – Jan',
+      description: 'Guided open-ocean marine expeditions along southern Mahé waters to snorkel alongside migrating whale sharks and sea turtles.',
     },
     {
-      title: 'Overwater Glass-Floor Pavilion Spa Ritual',
+      title: 'Cheval Blanc Spa Guerlain Island Wellness Pavilions',
       category: 'Wellness',
       season: 'Year-round',
-      description: 'Rejuvenating sea salt massages while watching coral reef sharks and blue tangs glide beneath the treatment table.',
+      description: 'Tailored sensory therapies and tropical botanical baths surrounded by lush rainforest granite boulders.',
     },
     {
-      title: 'Sunset Dolphin Catamaran Champagne Cruise',
-      category: 'Adventure',
-      season: 'Dec – Apr',
-      description: 'Toast golden hour with vintage Champagne as pods of spinner dolphins leap alongside the twin hulls.',
+      title: 'Morne Seychellois National Park Forest Canopy Trek',
+      category: 'Nature',
+      season: 'May – Oct',
+      description: 'Hike through misty endemic palm forests and granite peaks with resident naturalists discovering rare Seychelles wildlife.',
     },
   ],
 
-  // Regent Bali Canggu
+  // Amanvari, Baja California Sur
   15278: [
     {
-      title: 'Regent Spa Balinese Herbal Boreh & Sound Healing',
-      category: 'Wellness',
-      season: 'Apr – Oct',
-      description: 'Traditional clove and ginger warming wraps accompanied by Tibetan singing bowls in oceanfront pavilions.',
-    },
-    {
-      title: 'Echo Beach Sunset Private Surf Coaching',
+      title: 'Sea of Cortez Private Catamaran & Jacques Cousteau Snorkel',
       category: 'Water',
-      season: 'May – Sep',
-      description: 'Tailored instruction on Bali’s premier reef breaks with dedicated surf photography and video analysis.',
+      season: 'Nov – May',
+      description: 'Private boat excursion to Cabo Pulmo National Marine Park, the world-famous living coral reef teeming with marine life.',
     },
     {
-      title: 'Tanah Lot Sea Temple Twilight Blessing',
-      category: 'Culture',
-      season: 'May – Sep',
-      description: 'Private spiritual floral blessing and canang sari offering away from crowds as the sun sets over the ocean shrine.',
+      title: 'Aman Spa Temazcal Sweat Lodge & Baja Herb Healing',
+      category: 'Wellness',
+      season: 'Nov – Apr',
+      description: 'Ancient Mesoamerican steam purification ceremony led by a native shaman utilizing wild desert sage and copal.',
+    },
+    {
+      title: 'East Cape Desert Dune Sunset UTV Expedition',
+      category: 'Adventure',
+      season: 'Nov – May',
+      description: 'Navigate golden desert arroyos and untouched beachfront dunes with dramatic views of the Sea of Cortez at golden hour.',
     },
   ],
 
-  // One&Only Kéa Island
+  // Four Seasons Hotel Mykonos
   15295: [
     {
-      title: 'HMHS Britannic Deep-Wreck Dive Expeditions',
-      category: 'Water',
-      season: 'May – Oct',
-      description: 'Specialized deep-sea diving expeditions exploring the Aegean’s most legendary historic maritime shipwreck.',
-    },
-    {
-      title: 'Watsu Aquatic Floating Therapy in Natural Sea Caves',
-      category: 'Wellness',
-      season: 'Jun – Sep',
-      description: 'Weightless acoustic water bodywork held in warm saltwater tidal caverns along the Cycladic coast.',
-    },
-    {
-      title: 'Ancient Karthea Marble Ruins Trek & Secluded Picnic',
+      title: 'Delos Island Sacred UNESCO Sanctuary Private Charter',
       category: 'Culture',
-      season: 'May – Jun & Sep – Oct',
-      description: 'Guided mule path descent to 6th-century BC Doric temples standing right at the edge of the blue sea.',
+      season: 'May – Oct',
+      description: 'Private yacht excursion to the mythological birthplace of Apollo to explore magnificent marble ruins with an archaeologist.',
+    },
+    {
+      title: 'Aegean Cliffside Sunset Yoga & Mediterranean Spa',
+      category: 'Wellness',
+      season: 'May – Oct',
+      description: 'Vinyasa flow perched above Kalo Livadi bay followed by cold-pressed olive oil and Greek herb massage therapies.',
+    },
+    {
+      title: 'Cycladic Catch-of-the-Day Alfresco Seafood Feast',
+      category: 'Dining',
+      season: 'Jun – Sep',
+      description: 'Fresh Aegean octopus and sea bass grilled over olive wood embers right at the water’s edge with crisp Assyrtiko wine.',
     },
   ],
 
-  // Rosewood Amsterdam
+  // The St. Regis Costa Mujeres Resort, Cancún
   15275: [
     {
-      title: 'Private Electric Salon Boat Historic Canal Cruise',
+      title: 'Isla Mujeres Private Catamaran Snorkel & Sandbar Sail',
       category: 'Water',
-      season: 'Apr – Oct',
-      description: 'Quiet cruise through the 17th-century UNESCO canal ring aboard an antique wooden craft with Dutch artisanal treats.',
+      season: 'Dec – Apr',
+      description: 'Sail across iridescent turquoise shallows to secluded coral reefs and the El Garrafón underwater marine reserve.',
     },
     {
-      title: 'Rijksmuseum & Van Gogh After-Hours Curated Access',
+      title: 'Chichén Itzá & Cenote Private Helicopter Expedition',
       category: 'Culture',
-      season: 'Year-round',
-      description: 'Exclusive private guided viewing of The Night Watch and Sunflowers after general gallery closing.',
+      season: 'Dec – Apr',
+      description: 'Direct aerial charter to the ancient Mayan wonder followed by a private swim in an exclusive, sacred limestone cenote.',
     },
     {
-      title: 'Asaya Spa Hydrotherapy Inside the Former Palace of Justice',
+      title: 'Iridium Spa Mayan Honey & Sacred Melipona Ritual',
       category: 'Wellness',
       season: 'Year-round',
-      description: 'Restorative contrast thermal wellness suites situated within landmark historical architecture.',
+      description: 'Restorative body therapies utilizing indigenous stingless bee honey, healing copal incense, and sea salt hydrotherapy.',
     },
   ],
 
-  // Soneva Secret
+  // COMO Le Beauvallon, Bay of Saint-Tropez
   15293: [
     {
-      title: 'Private Robinson Crusoe Deserted Sandbank Dining',
-      category: 'Dining',
-      season: 'Nov – Apr',
-      description: 'Barefoot castaway feast prepared over open coals by your personal chef on an isolated ocean sand spit.',
-    },
-    {
-      title: 'Nocturnal Astronomer Lagoon Reef Snorkeling',
-      category: 'Adventure',
-      season: 'Dec – Apr',
-      description: 'Guided night safari with UV lights observing bioluminescent coral, accompanied by deep-sky telescope viewing.',
-    },
-    {
-      title: 'Castaway Lagoon Aerial Yoga & Sound Therapy',
-      category: 'Wellness',
-      season: 'Nov – Apr',
-      description: 'Silken hammock aerial yoga floating above the shallow turquoise waters of Haa Dhaalu Atoll.',
-    },
-  ],
-
-  // Nujuma, a Ritz-Carlton Reserve
-  15279: [
-    {
-      title: 'Pristine Red Sea Coral Barrier Reef Diving',
-      category: 'Water',
-      season: 'Oct – May',
-      description: 'Discover virgin coral formations, hawksbill turtles, and rare pelagic species in protected marine waters.',
-    },
-    {
-      title: 'Dark Sky Reserve Deep-Space Astronomy Safari',
-      category: 'Adventure',
-      season: 'Nov – Mar',
-      description: 'Telescopic observation of distant galaxies under zero-light-pollution desert skies with resident astrophysicists.',
-    },
-    {
-      title: 'Neyrah Spa Arabian Oud & Frankincense Therapy',
-      category: 'Wellness',
-      season: 'Oct – Apr',
-      description: 'Holistic restorative therapies incorporating ancient Hijazi sea salts and fragrant wild frankincense resins.',
-    },
-  ],
-
-  // Six Senses La Sagesse
-  15280: [
-    {
-      title: 'Spice Island Single-Origin Cocoa Making',
-      category: 'Nature',
-      season: 'Dec – May',
-      description: 'Organic bean-to-bar dark chocolate workshop with heritage Caribbean estate growers and herbalists.',
-    },
-    {
-      title: 'Molinière Underwater Sculpture Park Snorkeling',
-      category: 'Water',
-      season: 'Dec – May',
-      description: 'Snorkel above submerged life-sized human sculptures transformed into thriving artificial coral reefs.',
-    },
-    {
-      title: 'Alchemy Bar Biohacking & Custom Scrub Crafting',
-      category: 'Wellness',
-      season: 'Year-round',
-      description: 'Blend indigenous Grenadian nutmeg, sea salt, and cocoa butter into personalized wellness therapies.',
-    },
-  ],
-
-  // Mandarin Oriental Qianmen
-  15294: [
-    {
-      title: 'Forbidden City Private Courtyard Historical Access',
-      category: 'Culture',
-      season: 'Sep – Nov & Apr – May',
-      description: 'Exclusive historian-guided walk through restricted imperial chambers and quiet palace courtyards.',
-    },
-    {
-      title: 'Courtyard Siheyuan Imperial Tea & Roast Duck Degustation',
-      category: 'Dining',
-      season: 'Year-round',
-      description: 'Aged vintage Pu’erh teas served alongside crisp fruitwood-roasted Peking duck in a restored heritage residence.',
-    },
-    {
-      title: 'Traditional Chinese Medicine Meridian Qi Balancing',
-      category: 'Wellness',
-      season: 'Year-round',
-      description: 'Acupressure, botanical foot soaks, and heated bamboo therapies inside tranquil brick hutong pavilions.',
-    },
-  ],
-
-  // Raffles London at The OWO
-  15282: [
-    {
-      title: 'Winston Churchill Old War Office Secret Chambers Tour',
-      category: 'Culture',
-      season: 'Year-round',
-      description: 'Private tour through the historic intelligence rooms and cabinet suites where Allied strategy was forged.',
-    },
-    {
-      title: 'Mauro Colagreco 3-Star Terroir Gastronomy',
-      category: 'Dining',
-      season: 'Year-round',
-      description: 'Innovative seasonal dining highlighting rare British heirloom vegetables, wild herbs, and British farmsteads.',
-    },
-    {
-      title: 'Guerlain Spa Whitehall Subterranean Pool Sanctuary',
-      category: 'Wellness',
-      season: 'Year-round',
-      description: 'Luxury subterranean treatments and 20-metre marble swimming pool nestled beneath the historic building.',
-    },
-  ],
-
-  // Siro One Za'abeel
-  15285: [
-    {
-      title: 'Advanced Recovery Lab Whole-Body Cryotherapy',
-      category: 'Wellness',
-      season: 'Year-round',
-      description: 'State-of-the-art sports science recovery including sub-zero cryo chambers, infrared saunas, and lymphatic boots.',
-    },
-    {
-      title: 'The Link Cantilever Sky Bridge Walk & Dining',
-      category: 'Adventure',
-      season: 'Nov – Apr',
-      description: 'Walk across the world’s longest occupied cantilever structure suspended 100 metres in the Dubai sky.',
-    },
-    {
-      title: 'AC Milan High-Performance Athletic Coaching',
-      category: 'Wellness',
-      season: 'Oct – Apr',
-      description: 'Personalized functional biomechanics and conditioning sessions guided by international fitness trainers.',
-    },
-  ],
-
-  // Faustina Palace
-  15276: [
-    {
-      title: 'Hagia Sophia & Basilica Cistern Dawn Walk',
-      category: 'Culture',
-      season: 'Apr – May & Sep – Oct',
-      description: 'Early morning private tour through Byzantine domes, golden mosaics, and silent subterranean columns.',
-    },
-    {
-      title: 'Historic 16th-Century Ottoman Hammam Bathing',
-      category: 'Wellness',
-      season: 'Year-round',
-      description: 'Authentic warm marble kese exfoliation and fragrant castile olive soap cloud foam therapy.',
-    },
-    {
-      title: 'Bosphorus Strait Private Sunset Yacht Navigation',
+      title: 'Bay of Saint-Tropez Private Riva Yacht Navigation',
       category: 'Water',
       season: 'May – Oct',
-      description: 'Private cruise separating Europe and Asia past Ottoman waterfront yalı mansions and medieval fortress walls.',
+      description: 'Glide across the sparkling Gulf of Saint-Tropez aboard an iconic classic mahogany Riva to Pampelonne Beach club coves.',
+    },
+    {
+      title: 'COMO Shambhala Urban Escape Holistic Wellness',
+      category: 'Wellness',
+      season: 'Year-round',
+      description: 'Signature Asian-inspired holistic treatments, restorative sound baths, and cliff-view pilates overlooking the Mediterranean.',
+    },
+    {
+      title: 'Côtes de Provence Vineyard Tour & Private Cellar Tasting',
+      category: 'Dining',
+      season: 'May – Oct',
+      description: 'Explore historic family-owned estates among pine-clad hills sampling premier cru classé Provence rosés and olive oils.',
     },
   ],
 
-  // The Dunlin, Auberge Resorts Collection
-  15286: [
+  // The Westerly at Hilton Aruba
+  15279: [
     {
-      title: 'Kiawah River Bottlenose Dolphin Strand-Feeding Safari',
-      category: 'Nature',
-      season: 'Apr – Oct',
-      description: 'Observe the rare, wild behavior of local dolphins herding fish onto salt marsh mudflats from a flatboat skiff.',
+      title: 'Antilla Shipwreck & Boca Catalina Coral Snorkel',
+      category: 'Water',
+      season: 'Year-round',
+      description: 'Explore the Caribbean’s largest intact WWII shipwreck and vibrant shallow reefs teeming with sea turtles and parrotfish.',
     },
     {
-      title: 'Lowcountry Salt Marsh Kayaking & Blue Crabbing',
+      title: 'Arikok National Park Rugged 4x4 Desert Safari',
       category: 'Adventure',
-      season: 'Mar – Nov',
-      description: 'Paddle winding cordgrass creeks and harvest fresh blue crabs under the guidance of resident naturalists.',
+      season: 'Year-round',
+      description: 'Journey across volcanic limestone terrain, secluded natural ocean pools, and ancient Arawak Indian petroglyph caves.',
     },
     {
-      title: 'Live Oak Oyster Roast & Bourbon Tasting Under Spanish Moss',
+      title: 'Aloe Vera & Caribbean Sea Salt Oceanfront Spa',
+      category: 'Wellness',
+      season: 'Year-round',
+      description: 'Rejuvenating body polish and soothing sunburn relief therapies utilizing organic Aruban aloe harvested on-island.',
+    },
+  ],
+
+  // Delano Miami Beach
+  15280: [
+    {
+      title: 'South Beach Art Deco Historic Architectural Walking Tour',
+      category: 'Culture',
+      season: 'Nov – Apr',
+      description: 'Privately guided exploration of iconic pastel streamline modern architecture, neon landmarks, and Ocean Drive history.',
+    },
+    {
+      title: 'Biscayne Bay Private Sunset Catamaran Charter',
+      category: 'Water',
+      season: 'Nov – May',
+      description: 'Sip vintage champagne while cruising past Star Island celebrity villas and the glittering downtown Miami skyline.',
+    },
+    {
+      title: 'Subterranean Club & Iconic Oceanfront Pool Cabana Service',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Signature poolside luxury with chilled eucalyptus towels, fresh crudo, and craft tropical mixology under swaying palms.',
+    },
+  ],
+
+  // Danieli, Venezia, a Four Seasons Hotel
+  15294: [
+    {
+      title: 'Private Twilight Venetian Gondola Serenade & Canal Tour',
+      category: 'Culture',
+      season: 'Apr – Jun & Sep – Oct',
+      description: 'Glide along hidden canal waterways and under the Bridge of Sighs on a handcrafted private gondola at golden hour.',
+    },
+    {
+      title: 'Murano Private Glassblowing Foundry & Master Artisan Tour',
+      category: 'Culture',
+      season: 'Year-round',
+      description: 'Private water taxi to historic island furnaces to watch master glass sculptors craft incandescent Venetian crystal.',
+    },
+    {
+      title: 'Terrazza Danieli Lagoon-View Gastronomic Degustation',
+      category: 'Dining',
+      season: 'Apr – Oct',
+      description: 'Iconic rooftop dining overlooking the Grand Canal and San Giorgio Maggiore featuring fresh Adriatic seafood and prosecco.',
+    },
+  ],
+
+  // Imperial Hotel, Kyoto
+  15282: [
+    {
+      title: 'Gion Geiko & Maiko Private Ochaya Tea Ceremony',
+      category: 'Culture',
+      season: 'Spring & Autumn',
+      description: 'Exclusive after-hours invitation into a historic Gion teahouse for classical koto music, seasonal dance, and matcha.',
+    },
+    {
+      title: 'Higashiyama Heritage Zen Temple & Dry Garden Stroll',
+      category: 'Nature',
+      season: 'Spring & Autumn',
+      description: 'Mindful dawn walk through ancient moss gardens, weeping cherry blossoms, and raked gravel courtyards.',
+    },
+    {
+      title: 'Kyo-Kaiseki Seasonal Culinary Masterclass',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Exquisite multi-course banquet showcasing centuries-old Kyoto culinary arts, delicate dashi, and lacquerware presentation.',
+    },
+  ],
+
+  // HOSHINOYA Nara Prison
+  15285: [
+    {
+      title: 'Meiji-Era Red Brick Architectural Heritage Walk',
+      category: 'Culture',
+      season: 'Spring & Autumn',
+      description: 'Curated architectural tour exploring the meticulously restored 1908 Meiji modern prison complex and five-winged radial design.',
+    },
+    {
+      title: 'Nara Park Sacred Sika Deer & Kasuga Taisha Shrine Dawn Walk',
+      category: 'Nature',
+      season: 'Spring & Autumn',
+      description: 'Morning walk among hundreds of free-roaming sacred deer and moss-covered stone lanterns in ancient primeval forest.',
+    },
+    {
+      title: 'Nara Fermented Herbal Bath & Healing Japanese Spa',
+      category: 'Wellness',
+      season: 'Year-round',
+      description: 'Restorative body therapies utilizing indigenous Yamato medicinal herbs, Hinoki cypress oils, and hot mineral baths.',
+    },
+  ],
+
+  // The Cooper, Charleston
+  15276: [
+    {
+      title: 'Charleston Harbor Historic Schooner Sunset Sail',
+      category: 'Water',
+      season: 'Mar – May & Sep – Nov',
+      description: 'Sail past Fort Sumter and the Battery aboard a classic tall-ship schooner with Lowcountry cocktails in hand.',
+    },
+    {
+      title: 'Historic French Quarter Wrought Iron & Garden Walk',
+      category: 'Culture',
+      season: 'Spring & Autumn',
+      description: 'Historian-guided tour through cobblestone alleyways, blooming confederate jasmine, and historic antebellum courtyards.',
+    },
+    {
+      title: 'Lowcountry She-Crab Soup & Fresh Carolina Oyster Roast',
       category: 'Dining',
       season: 'Oct – Apr',
-      description: 'Traditional wood-fired coastal oyster steam bake with local small-batch bourbon beside the riverbank.',
+      description: 'Waterfront wood-fired oyster roast featuring local Single Lady oysters, house-cured ham, and small-batch bourbon.',
     },
   ],
 
-  // Surrenne at The Emory
+  // Conrad Nagoya
+  15286: [
+    {
+      title: 'Nagoya Castle Golden Shachihoko & Honmaru Palace Tour',
+      category: 'Culture',
+      season: 'Spring & Autumn',
+      description: 'Private tour of the reconstructed samurai palace marveling at gold-leaf painted screens and towering castle keeps.',
+    },
+    {
+      title: 'Atsuta Jingu Sacred Cedar Forest Shinto Shrine Walk',
+      category: 'Nature',
+      season: 'Year-round',
+      description: 'Tranquil walk through 1,900-year-old sacred forest grounds housing one of Japan’s most revered imperial regalia shrines.',
+    },
+    {
+      title: 'Hitsumabushi Charred Eel & Local Sake Tasting Masterclass',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Savor Nagoya’s iconic multi-step grilled unagi eel delicacy paired with award-winning Aichi prefecture junmai sakes.',
+    },
+  ],
+
+  // Raffles Jeddah
   15291: [
     {
-      title: 'Epigenetic Biomarker & Cellular Health Consultation',
-      category: 'Wellness',
-      season: 'Year-round',
-      description: 'In-depth physiological assessments and bespoke longevity planning with premier functional medical clinicians.',
+      title: 'Al-Balad UNESCO Historic District Coral Architecture Walk',
+      category: 'Culture',
+      season: 'Nov – Mar',
+      description: 'Explore ancient Hijazi merchant towers with intricately carved wooden roshan balconies and fragrant frankincense souks.',
     },
     {
-      title: 'Tracy Anderson Method Private Conditioning Studio',
-      category: 'Wellness',
-      season: 'Year-round',
-      description: 'Targeted micro-muscle conditioning and dance cardio in London’s exclusive bespoke TA studio.',
+      title: 'Red Sea Coastline Private Yacht & Coral Reef Diving',
+      category: 'Water',
+      season: 'Oct – Apr',
+      description: 'Chartered yacht exploration along pristine coastal barrier reefs teeming with vibrant marine life and turquoise waters.',
     },
     {
-      title: 'Magnesium Sound Floatation & Hydrotherapy',
+      title: 'Raffles Spa Traditional Arabian Oud Hammam Ritual',
       category: 'Wellness',
       season: 'Year-round',
-      description: 'Acoustic sensory-deprivation floatation therapy in mineral-dense pools calibrated for deep nervous system rest.',
+      description: 'Signature body cleansing ritual with natural eucalyptus black soap, crushed sea salts, and fragrant pure Arabian oud.',
     },
   ],
 
-  // Domes Tierra Glamping
+  // 1 Hotel Austin
   15281: [
     {
-      title: 'Maras Salt Pans & Moray Incan Amphitheater Quad Safari',
-      category: 'Adventure',
-      season: 'May – Sep',
-      description: 'Ride quad bikes across Andean highlands visiting millennia-old pink salt evaporation pools and agricultural terracing.',
+      title: 'Lady Bird Lake Sunrise Paddleboarding & Kayak Tour',
+      category: 'Water',
+      season: 'Mar – May & Sep – Nov',
+      description: 'Paddle past cypress trees and natural spring inlets with sweeping views of the downtown Austin skyline.',
     },
     {
-      title: 'Pachamama Sacred Earth Ceremony & Shaman Blessing',
-      category: 'Culture',
-      season: 'May – Sep',
-      description: 'Authentic Quechua spiritual ceremony offering flowers and coca leaves to honor Mother Earth with an Andean paqo.',
+      title: 'Ann and Roy Butler Hike-and-Bike Trail Guided Run',
+      category: 'Nature',
+      season: 'Mar – May & Oct – Nov',
+      description: 'Scenic 10-mile lakeside loop exploring Barton Springs, wildflower meadows, and historic city park bridges.',
     },
     {
-      title: 'Ancestral Huatia Underground Earth Oven Feast',
+      title: 'Hill Country Heritage Smokehouse & Craft Cider Tasting',
       category: 'Dining',
-      season: 'Apr – Oct',
-      description: 'Traditional highland cooking method baking native Andean potatoes and herbs beneath heated earth and clay clods.',
+      season: 'Year-round',
+      description: 'Authentic post-oak smoked barbecue paired with local Texas Hill Country ciders and biodynamic wines.',
     },
   ],
 
-  // Habitas Santa Teresa
+  // The Vanderpump Hotel
   15277: [
     {
-      title: 'Playa Hermosa Point-Break Surf Coaching',
-      category: 'Water',
-      season: 'Dec – Apr',
-      description: 'Personalized surf instruction along Costa Rica’s world-renowned breaks paired with beach video review.',
+      title: 'Vanderpump Garden Cocktail Masterclass & Tea Degustation',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Signature mixology immersion with floral-infused spirits, rose petals, and decadent French-inspired sweet confections.',
     },
     {
-      title: 'Jungle Canopy Shamanic Breathwork & Gong Sound Bath',
+      title: 'Opulent French-Gothic Spa & Hydrotherapy Plunge Pools',
       category: 'Wellness',
-      season: 'Dec – Apr',
-      description: 'Restorative acoustic sound frequencies and guided breathwork surrounded by tropical palms and sea breezes.',
+      season: 'Year-round',
+      description: 'Sensory relaxation haven with crystal steam chambers, lavender mist vitality pools, and rejuvenating glow facials.',
     },
     {
-      title: 'Cabo Blanco Nature Reserve Bio-Diverse Trek',
-      category: 'Nature',
-      season: 'Dec – Apr',
-      description: 'Guided natural history hike through Costa Rica’s oldest protected wildlife reserve spotting howler monkeys and toucans.',
+      title: 'Private Bellagio Fountains & Strip Helicopter Twilight Flight',
+      category: 'Adventure',
+      season: 'Year-round',
+      description: 'Nighttime aerial helicopter tour above the neon brilliance of the Las Vegas Strip and illuminated dancing fountains.',
     },
   ],
 
@@ -1732,47 +2013,47 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
     },
   ],
 
-  // Six Senses Crans-Montana
+  // Banyan Tree Mount Emei
   15287: [
     {
-      title: 'Direct Ski-In / Ski-Out Valais Glacier Access',
-      category: 'Snow',
-      season: 'Dec – Apr',
-      description: 'Immediate slope access to 140 kilometres of groomed alpine pistes and the 3,000-metre Plaine Morte glacier.',
-    },
-    {
-      title: 'Alpine Biohacking, Snow Plunge & Finnish Sauna',
-      category: 'Wellness',
+      title: 'Golden Summit Sunrise & Sea of Clouds Pilgrimage',
+      category: 'Culture',
       season: 'Year-round',
-      description: 'Contrast thermal therapy matching hot timber saunas with natural snow immersion and red-light restoration.',
+      description: 'Ascend Mount Emei’s sacred Buddhist peak to watch the dawn sun illuminate the multi-faced golden Samantabhadra statue above rolling clouds.',
     },
     {
-      title: 'High-Alpine Meadow Cheese & Glacier Trekking',
-      category: 'Adventure',
-      season: 'Jul – Sep',
-      description: 'Summer alpine flower hike to historic mountain chalets for traditional wood-melted Valais raclette.',
+      title: 'Natural Geothermal Hot Spring & Sichuan Tea Bathing',
+      category: 'Wellness',
+      season: 'Autumn & Winter',
+      description: 'Soak in private mineral hot springs infused with organic Mount Emei green tea and indigenous Tibetan herbs.',
+    },
+    {
+      title: 'Mount Emei Wild Bamboo & Sichuan Gourmet Degustation',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Authentic Sichuan fine dining featuring freshly harvested mountain bamboo shoots, wild river carp, and numbing peppercorn broths.',
     },
   ],
 
-  // Wilderness Hotel Muotka
+  // Ciel Dubai Marina
   520: [
     {
-      title: 'Urho Kekkonen National Park Aurora Snowmobile Safari',
-      category: 'Snow',
-      season: 'Dec – Mar',
-      description: 'Ride modern snowmobiles across frozen fell ridges and silent pine forests searching for the Northern Lights.',
+      title: 'World\'s Highest Infinity Pool Skyline Swim',
+      category: 'Water',
+      season: 'Oct – Apr',
+      description: 'Swim in the record-breaking rooftop infinity pool over 360 metres above the Arabian Gulf with vistas of Palm Jumeirah.',
     },
     {
-      title: 'Riverside Smoke Sauna & Arctic Ice Dip',
-      category: 'Wellness',
-      season: 'Nov – Apr',
-      description: 'Classic Finnish savusauna heated with birch logs followed by a thrilling cold-water plunge in the Muotka stream.',
+      title: 'Dubai Marina Private Luxury Sunset Yacht Charter',
+      category: 'Water',
+      season: 'Oct – May',
+      description: 'Private motor yacht cruise along the illuminated Marina promenade, Ain Dubai, and Bluewaters Island.',
     },
     {
-      title: 'Wild Taiga Snowshoe Trek & Campfire Berry Tea',
-      category: 'Snow',
-      season: 'Dec – Apr',
-      description: 'Snowshoe through deep powder beneath snow-laden pine boughs and brew warm lingonberry juice over open embers.',
+      title: 'Sky-High 82nd-Floor Observation Lounge & Mixology',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Sip bespoke craft cocktails while gazing down on the glittering Dubai Marina towers and Arabian coastline.',
     },
   ],
 
@@ -1798,69 +2079,245 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
     },
   ],
 
-  // Arctic TreeHouse Hotel
+  // Universal Kids Resort Hotel, Frisco
   5156: [
     {
-      title: 'Floor-to-Ceiling Glass Northern Lights Observation',
-      category: 'Snow',
-      season: 'Sep – Apr',
-      description: 'Watch green auroral ribbons illuminate the Arctic night from your plush bed through heated panoramic glass suites.',
+      title: 'Universal Kids Theme Park VIP Early Park Access',
+      category: 'Adventure',
+      season: 'Year-round',
+      description: 'Enjoy exclusive one-hour early entry to Universal’s lands, interactive character meets, and whimsical family attractions.',
     },
     {
-      title: 'Santa Claus Secret Forest Private Fairytale Experience',
-      category: 'Culture',
-      season: 'Nov – Jan',
-      description: 'Private woodland lantern journey to meet Santa, bake gingerbread with forest elves, and craft wooden toys.',
+      title: 'Zero-Entry Family Lagoon Pool & Splash Water Playground',
+      category: 'Water',
+      season: 'Apr – Oct',
+      description: 'Resort pool retreat featuring interactive water jets, waterslides, and dedicated poolside cabanas for young families.',
     },
     {
-      title: 'Raksa Arctic Wild Game & Cloudberry Degustation',
+      title: 'Themed Character Dining & Interactive Storybook Breakfast',
       category: 'Dining',
       season: 'Year-round',
-      description: 'Gastronomic menu spotlighting King crab, smoked venison, spruce shoots, and rare golden Arctic berries.',
+      description: 'Whimsical culinary mornings with beloved animated characters and kid-crafted artisanal pancake stations.',
     },
   ],
 
-  // Explora Valle Sagrado
+  // Gaylord Pacific Resort, Chula Vista
   3234: [
     {
-      title: 'Machu Picchu & Incan Citadel Small-Group Expedition',
-      category: 'Adventure',
-      season: 'May – Sep',
-      description: 'Privately guided expedition across ancient Incan trails to the iconic lost citadel with expert field guides.',
+      title: 'Expansive Bayside Waterpark & FlowRider Surfing',
+      category: 'Water',
+      season: 'May – Oct',
+      description: 'Experience 4.25 acres of outdoor water attractions including lazy rivers, waterslides, and coastal wave simulators.',
     },
     {
-      title: 'Ollantaytambo Fortress & Living Incan Canal Walk',
-      category: 'Culture',
-      season: 'May – Sep',
-      description: 'Explore megalithic sun temples and walk cobblestone streets that have housed Quechua families continuously since 1440.',
+      title: 'San Diego Bayfront Promenade Sunset Biking & Sailing',
+      category: 'Nature',
+      season: 'Year-round',
+      description: 'Cruise along the newly expanded Chula Vista Marina boardwalk and charter private catamarans across San Diego Bay.',
     },
     {
-      title: 'Pumacahua 17th-Century Colonial Spa & Thermal Pools',
+      title: 'Relâche Spa Coastal Botanical Treatments & Vitality Pools',
       category: 'Wellness',
       season: 'Year-round',
-      description: 'Unwind in heated outdoor pools within a preserved Spanish colonial hacienda overlooking terraced cornfields.',
+      description: 'Full-service wellness haven offering Pacific sea salt scrubs, eucalyptus steam rooms, and outdoor heated vitality pools.',
     },
   ],
 
-  // Tierra Patagonia
+  // Durango Casino & Resort, Las Vegas
   3404: [
     {
-      title: 'Torres del Paine Baqueano Gaucho Horseback Ride',
-      category: 'Adventure',
-      season: 'Nov – Mar',
-      description: 'Canter across windswept Patagonian steppes alongside authentic local horsemen with views of the granite towers.',
-    },
-    {
-      title: 'Lake Sarmiento Wild Puma Tracking & Guanaco Safari',
-      category: 'Nature',
-      season: 'Nov – Mar',
-      description: 'Specialized dawn wildlife excursion tracking apex predators and guanaco herds with telephoto binoculars.',
-    },
-    {
-      title: 'Uma Spa Hydro-Jet Infinity Pool Overlooking Paine Massif',
+      title: 'Bel-Aire Backyard Pool Club Cabana Relaxation',
       category: 'Wellness',
-      season: 'Oct – Apr',
-      description: 'Warm hydrotherapy soak encased in floor-to-ceiling glass gazing across Lake Sarmiento to the dramatic mountains.',
+      season: 'Apr – Oct',
+      description: 'Lounge in private cabanas surrounded by lush palm greenery with daybed service, cooling misters, and craft frozen cocktails.',
+    },
+    {
+      title: 'Red Rock Canyon Scenic Loop & Sunrise Hiking',
+      category: 'Adventure',
+      season: 'Oct – May',
+      description: 'Guided morning trek through spectacular red sandstone canyon peaks located just 15 minutes west of the resort.',
+    },
+    {
+      title: 'Nicco\'s Prime Cuts & Craft Culinary Degustation',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Prime dry-aged steaks, fresh market seafood, and curated California cabernets in Durango’s acclaimed signature steakhouse.',
+    },
+  ],
+
+  // Our Jungle House
+  15656: [
+    {
+      title: 'Khao Sok Cheow Lan Lake & Emerald Cave Longtail Boat Safari',
+      category: 'Water',
+      season: 'Dec – Apr',
+      description: 'Glide past towering limestone karsts across emerald Cheow Lan lake, exploring hidden caves and floating raft houses.',
+    },
+    {
+      title: 'Dawn Gibbon Trek & Canopy Bamboo Birdwatching Walk',
+      category: 'Nature',
+      season: 'Year-round',
+      description: 'Follow experienced indigenous jungle trackers into the 160-million-year-old canopy as wild white-handed gibbons call at dawn.',
+    },
+    {
+      title: 'Midnight Rainforest Flashlight Safari & Night River Tubing',
+      category: 'Adventure',
+      season: 'Nov – May',
+      description: 'Equipped with headlamps, drift quietly down the Sok River under starlight spotting sleeping hornbills and nocturnal civets.',
+    },
+  ],
+
+  // The Birdhouse El Nido
+  15657: [
+    {
+      title: 'Bacuit Archipelago Secret Lagoon & Big Lagoon Private Outrigger Safari',
+      category: 'Water',
+      season: 'Dec – May',
+      description: 'Privately chartered motorized outrigger cruising through dramatic karst arches into pristine turquoise lagoons and coral gardens.',
+    },
+    {
+      title: 'Sunset Yoga on the Open-Air Marimegmeg Cliff Pavilion',
+      category: 'Wellness',
+      season: 'Nov – May',
+      description: 'Unwind with daily sunset vinyasa flow overlooking coconut canopies and the vivid pastel skies of Bacuit Bay.',
+    },
+    {
+      title: 'Guided Jungle Ridge Hike to Nacpan Twin Beach',
+      category: 'Adventure',
+      season: 'Dec – Apr',
+      description: 'Scenic ridge expedition through coastal forests leading to the legendary 4-kilometer stretch of golden Nacpan surf.',
+    },
+  ],
+
+  // Riad Yasmine
+  15658: [
+    {
+      title: 'Private Medina Spice Market & Artisanal Leather Souk Discovery',
+      category: 'Culture',
+      season: 'Year-round',
+      description: 'Privately guided walk through winding alleys to ancient dye vats, saffron spice apothecaries, and hidden brass artisan workshops.',
+    },
+    {
+      title: 'Rooftop Sunset Moroccan Mint Tea & Traditional Pastilla Tasting',
+      category: 'Dining',
+      season: 'Mar – Nov',
+      description: 'Sip fresh spearmint tea on Berber daybeds as the evening call to prayer echoes across the Medina rooftops.',
+    },
+    {
+      title: 'Atlas Mountain Ourika Valley Berber Village Day Trek',
+      category: 'Adventure',
+      season: 'Mar – May & Sep – Nov',
+      description: 'Escorted journey into the High Atlas foothills, hiking alongside rushing mountain streams to traditional adobe Berber hamlets.',
+    },
+  ],
+
+  // Hoshino Resorts BEB5 Karuizawa
+  15659: [
+    {
+      title: 'Tonbo-no-yu Natural Geothermal Spring Bathing Under Forest Pines',
+      category: 'Wellness',
+      season: 'Year-round',
+      description: 'Soak in spacious open-air granite rock baths fed by pure volcanic hot spring waters surrounded by whispering pine needles.',
+    },
+    {
+      title: 'Karuizawa Wild Bird Sanctuary Dawn Guided Forest Walk',
+      category: 'Nature',
+      season: 'May – Oct',
+      description: 'Early morning naturalist tour through protected alpine wetlands spotting rare Asian songbirds, giant flying squirrels, and serows.',
+    },
+    {
+      title: 'Tamariba 24-Hour Courtyard Firepit Stargazing & Nagano Craft Cider',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Roast marshmallows and sample local Shinshu apple cider around outdoor wood-deck bonfires under unpolluted mountain skies.',
+    },
+  ],
+
+  // Bambu Indah
+  15660: [
+    {
+      title: 'Natural River Canyon Swimming & Rope Swing Plunge',
+      category: 'Water',
+      season: 'Apr – Oct',
+      description: 'Plunge from Tarzan rope swings into crystal spring-fed rock pools along the cascading rapids of the sacred Ayung River.',
+    },
+    {
+      title: 'Regenerative Permaculture Farm Tour & Balinese Herbal Medicine Workshop',
+      category: 'Wellness',
+      season: 'Year-round',
+      description: 'Hands-on journey through organic food forests crafting traditional Jamu healing tonics and sacred temple offerings.',
+    },
+    {
+      title: 'Minang House Bamboo Dining Overlooking the Ayung River Rapids',
+      category: 'Dining',
+      season: 'Year-round',
+      description: 'Savor organic farm-to-table Balinese feasts inside an open-air hyperbolic bamboo pavilion perched right above the rapids.',
+    },
+  ],
+
+  // 98 Acres Resort & Spa
+  15661: [
+    {
+      title: 'Sunrise Hike to Little Adam’s Peak & Nine Arch Railway Bridge',
+      category: 'Adventure',
+      season: 'Dec – May',
+      description: 'Gentle sunrise trail across emerald tea hills to the iconic colonial stone viaduct as vintage highland trains cross the chasm.',
+    },
+    {
+      title: 'Ceylon Tea Plucking & Historic Factory Cupping Masterclass',
+      category: 'Culture',
+      season: 'Year-round',
+      description: 'Don traditional wicker baskets with local tea pluckers and learn the orthodox rolling and drying secrets of world-renowned Ceylon tea.',
+    },
+    {
+      title: 'Balcony Infinity Pool Soak Facing the 1,000-Meter Ella Gap',
+      category: 'Wellness',
+      season: 'Year-round',
+      description: 'Immerse in heated waters on the timber deck gazing into the colossal southern mountain gap rolling all the way to the coast.',
+    },
+  ],
+
+  // Cabañas CuatroCuatros
+  15662: [
+    {
+      title: 'Bar Bura Clifftop Sunset Wine Tasting Overlooking the Pacific Ocean',
+      category: 'Dining',
+      season: 'Apr – Nov',
+      description: 'Sit on rustic wooden perches 200 meters above crashing Pacific waves sampling estate Nebbiolo and Baja artisanal cheeses.',
+    },
+    {
+      title: 'Valle de Guadalupe Boutique Organic Vineyard & Olive Oil Tour',
+      category: 'Culture',
+      season: 'Apr – Nov',
+      description: 'Private 4x4 excursion through 800 hectares of coastal vines, maritime chaparral, and 100-year-old olive groves.',
+    },
+    {
+      title: 'Desert Coastal Ridge Horseback Ride to Salsipuedes Bay',
+      category: 'Adventure',
+      season: 'Year-round',
+      description: 'Canter along scenic desert ridges between coastal sage and rugged sea cliffs with views stretching towards Ensenada bay.',
+    },
+  ],
+
+  // Playa Viva
+  15663: [
+    {
+      title: 'Dawn Leatherback & Olive Ridley Baby Sea Turtle Beach Release',
+      category: 'Nature',
+      season: 'Nov – May',
+      description: 'Accompany La Tortuga Viva sanctuary volunteers at sunrise to gently release newly hatched baby sea turtles into the Pacific surf.',
+    },
+    {
+      title: 'Oceanfront Open-Air Pavilion Daily Vinyasa Yoga & Sound Meditation',
+      category: 'Wellness',
+      season: 'Nov – May',
+      description: 'Start every morning with mindful breath and oceanfront movement accompanied by the rhythmic sound of breaking Pacific waves.',
+    },
+    {
+      title: 'Estuary Kayak Safari Through Coastal Mangrove Lagoons',
+      category: 'Water',
+      season: 'Nov – Apr',
+      description: 'Paddle through serene saltwater mangrove forests observing roseate spoonbills, white ibises, and coastal biodiversity.',
     },
   ],
 };
@@ -1901,11 +2358,19 @@ export function getResortPricePerNight(
   pinCurrency?: string | null,
   pinMaxPrice?: number | null,
 ): PricePerNight | undefined {
-  const fallback = RESORT_PRICE_RANGES[pinId];
-  const min = typeof pinPrice === 'number' && pinPrice > 0 ? pinPrice : fallback?.min;
-  const max = typeof pinMaxPrice === 'number' && pinMaxPrice > 0 ? pinMaxPrice : fallback?.max;
-  const currency = pinCurrency ?? fallback?.currency ?? 'USD';
-  return formatPricePerNight(min, max, currency);
+  const curated = RESORT_PRICE_RANGES[pinId];
+  if (curated) {
+    return formatPricePerNight(curated.min, curated.max, curated.currency);
+  }
+  // Only accept pinPrice if it represents a plausible nightly hotel rate (<= $10,000), never a construction/project cost
+  const isNightlyPrice = typeof pinPrice === 'number' && pinPrice > 0 && pinPrice <= 10000;
+  const min = isNightlyPrice ? pinPrice : undefined;
+  const max = typeof pinMaxPrice === 'number' && pinMaxPrice > 0 && pinMaxPrice <= 25000 ? pinMaxPrice : undefined;
+  const currency = pinCurrency ?? 'USD';
+  if (min !== undefined) {
+    return formatPricePerNight(min, max, currency);
+  }
+  return undefined;
 }
 
 export type TravelSort =
