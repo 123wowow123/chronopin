@@ -1,0 +1,985 @@
+{
+  "researchedDate": "2026-10-15",
+  "scope": "Continuation across manufacturers: memory chips, foundries, medicines, electrical equipment, appliances, batteries and vehicles.",
+  "threads": [
+    {
+      "company": "Micron",
+      "rootId": 15648,
+      "pinIds": [
+        15648,
+        15649,
+        15651
+      ]
+    },
+    {
+      "company": "TSMC",
+      "rootId": 15652,
+      "pinIds": [
+        15652,
+        15653
+      ]
+    },
+    {
+      "company": "Roche",
+      "rootId": 15654,
+      "pinIds": [
+        15654,
+        15656
+      ]
+    },
+    {
+      "company": "LG Electronics",
+      "rootId": 15657,
+      "pinIds": [
+        15657,
+        15659
+      ]
+    },
+    {
+      "company": "ABB",
+      "rootId": 15661,
+      "pinIds": [
+        15661,
+        15662
+      ]
+    },
+    {
+      "company": "Schneider Electric",
+      "rootId": 15663,
+      "pinIds": [
+        15663,
+        15664
+      ]
+    },
+    {
+      "company": "Johnson & Johnson",
+      "rootId": 15665,
+      "pinIds": [
+        15665,
+        15666
+      ]
+    },
+    {
+      "company": "Novartis",
+      "rootId": 15667,
+      "pinIds": [
+        15667,
+        15668
+      ]
+    },
+    {
+      "company": "CATL",
+      "rootId": 15672,
+      "pinIds": [
+        15672,
+        15673,
+        15674
+      ]
+    },
+    {
+      "company": "Hyundai Motor Group",
+      "rootId": 15633,
+      "pinIds": [
+        15676,
+        15677
+      ]
+    },
+    {
+      "company": "BYD Company",
+      "rootId": 14012,
+      "pinIds": [
+        15678
+      ]
+    }
+  ],
+  "notes": [
+    "23 additional investment and manufacturing milestone pins posted across 11 company threads. Overlapping programs, project allocations, joint-venture totals and cumulative historical investments are explicitly distinguished.",
+    "Micron’s historical June 2025 US$200B announcement is retained alongside its July 2026 increase to more than US$250B through 2035.",
+    "Roche/Genentech Holly Springs investment increased from more than US$700M to approximately US$2B in January 2026.",
+    "Hyundai domestic plan and Saemangeum project inserted between the August 2025 U.S. plan and October 2026 India announcement; pin 15634 rethreaded without changing its author.",
+    "BYD’s July 2025 investment/production milestone added to its existing factory thread; existing pins retained.",
+    "Micron asset host returned Request Rejected HTML despite HTTP 200; tested original renditions too. Used the operator’s GlobeNewswire photo and credited Electropages event photo.",
+    "TSMC’s operator photo gallery was checked but direct image downloads returned 403; used the City of Phoenix project photo and Arizona Commerce Authority announcement graphic.",
+    "CATL images returned errors from both /en/uploads and /uploads paths. Used an operator-supplied PR Newswire signing photo and CATL Debrecen’s public announcement photo. Hungary 2022 announcement remains without its inaccessible original image.",
+    "Roche and J&J official announcements supplied no accessible project-specific photo or linked gallery. Schneider supplied generic branding or uncaptioned unrelated imagery, which was excluded.",
+    "All 23 saved pins, 11 company threads, public pin pages and attached Azure thumbnails verified. No deployment performed."
+  ],
+  "pins": [
+    {
+      "key": "micron-plan",
+      "company": "Micron",
+      "wiki": "Micron_Technology",
+      "desk": "@TechDesk",
+      "date": "2025-06-12",
+      "amount": 200000000000,
+      "currency": "USD",
+      "period": "Long-term program announced June 2025; subsequently increased in July 2026",
+      "title": "Micron Announces Approximately US$200 Billion in U.S. Manufacturing and R&D",
+      "description": "Micron’s June 2025 plan combined approximately US$150 billion for memory manufacturing with US$50 billion for R&D. The historical commitment covered Idaho, New York and Virginia; a later July 2026 announcement increased planned U.S. investment above US$250 billion.",
+      "points": [
+        "The approximately US$200 billion total combines manufacturing and research, rather than factory construction alone.",
+        "The announcement included an additional US$30 billion beyond prior manufacturing plans, a second Idaho fab and advanced packaging ambitions.",
+        "This is the June 2025 announcement; the later US$250 billion-plus total in this thread supersedes it."
+      ],
+      "categories": [
+        "Semiconductors",
+        "Business",
+        "Computing"
+      ],
+      "sourceUrl": "https://micron.gcs-web.com/news-releases/news-release-details/micron-and-trump-administration-announce-expanded-us-investments",
+      "pinId": 15648,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15648",
+      "references": [
+        {
+          "id": 36984,
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Accelerates-U-S--Investments-Pours-First-Concrete-at-New-York-Fab/default.aspx",
+          "title": "Micron Raises Planned U.S. Investment to More Than US$250 Billion Through 2035",
+          "confidence": 100,
+          "publishedDate": "2026-07-09",
+          "reasoning": "Official announcement corroborates the investment total and its relationship to the project or prior commitment.",
+          "utcCreatedDateTime": "2026-10-15T15:16:28.637595+00:00",
+          "pinId": 15648
+        }
+      ],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "micron-virginia",
+      "company": "Micron",
+      "wiki": "Micron_Technology",
+      "desk": "@TechDesk",
+      "date": "2026-05-22",
+      "amount": 2000000000,
+      "currency": "USD",
+      "period": "Expansion milestone May 2026",
+      "title": "Micron Marks More Than US$2 Billion Virginia Fab Modernization",
+      "description": "Micron marked the start of 1-alpha DRAM manufacturing at Manassas, Virginia, following a modernization and expansion investment exceeding US$2 billion. The project is part of its broader U.S. manufacturing program.",
+      "points": [
+        "The operator reports more than US$2 billion for expansion and modernization of the Manassas fab.",
+        "Production supports long-lifecycle memory used in automotive, industrial, defense and aerospace applications.",
+        "Federal, state and local incentives support the project; the site allocation is not an additional nationwide investment total."
+      ],
+      "categories": [
+        "Semiconductors",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Made-in-America-Memory-With-Manufacturing-Expansion-in-Virginia/default.aspx",
+      "pinId": 15649,
+      "parentId": 15648,
+      "pinUrl": "https://www.chronopin.com/pin/15649",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://www.electropages.com/storage/temp/public/522/bb7/8e9/event-manassas-virginia-102142-8500__1200.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/f86da850-0d9b-46cf-a198-68a758d28b43.jpeg",
+          "credit": "Micron, via Electropages",
+          "sourceUrl": "https://www.electropages.com/blog/2026/05/micron-advances-made-america-memory-manufacturing-expansion-virginia",
+          "caption": "Manassas manufacturing expansion event, May 2026"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "micron-250",
+      "company": "Micron",
+      "wiki": "Micron_Technology",
+      "desk": "@TechDesk",
+      "date": "2026-07-09",
+      "amount": 250000000000,
+      "currency": "USD",
+      "period": "Through 2035",
+      "title": "Micron Raises Planned U.S. Investment to More Than US$250 Billion Through 2035",
+      "description": "Micron raised expected U.S. fab and technology investment above US$250 billion through 2035, updating its earlier US$200 billion plan. The announcement coincided with the first concrete pour at its Clay, New York fab site.",
+      "points": [
+        "The July 2026 figure is an updated total, not an additional US$250 billion on top of the June 2025 plan.",
+        "The Clay milestone marked the move from site preparation to vertical construction.",
+        "Micron linked its accelerated investment to demand for memory used in AI and its goal of producing 40% of its DRAM in the United States."
+      ],
+      "categories": [
+        "Semiconductors",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://investors.micron.com/news/press-release/2026/Micron-Accelerates-U-S--Investments-Pours-First-Concrete-at-New-York-Fab/default.aspx",
+      "pinId": 15651,
+      "parentId": 15649,
+      "pinUrl": "https://www.chronopin.com/pin/15651",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://ml.globenewswire.com/Resource/Download/34c70303-9423-41b1-9bbc-6fced6c229e1/image-18-.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/f54a5330-5cad-470c-aebe-31c7b3496a2b.jpeg",
+          "credit": "Micron / GlobeNewswire",
+          "sourceUrl": "https://investors.micron.com/news/press-release/2026/Micron-Accelerates-U-S--Investments-Pours-First-Concrete-at-New-York-Fab/default.aspx",
+          "caption": "First concrete pour milestone at Clay, New York, July 2026"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "tsmc-165",
+      "company": "TSMC",
+      "wiki": "TSMC",
+      "desk": "@TechDesk",
+      "date": "2025-03-04",
+      "amount": 165000000000,
+      "currency": "USD",
+      "period": "Multi-year program; historical March 2025 commitment",
+      "title": "TSMC Raises Planned U.S. Investment to US$165 Billion",
+      "description": "TSMC’s March 2025 announcement added US$100 billion to its existing US$65 billion Arizona program, bringing the planned total to US$165 billion. It proposed three additional fabs, two advanced packaging facilities and an R&D center.",
+      "points": [
+        "US$100 billion is the increment; US$165 billion is the resulting planned total.",
+        "The expansion adds fabrication, packaging and research capabilities to the Arizona manufacturing footprint.",
+        "This historical commitment was subsequently increased to US$265 billion in July 2026."
+      ],
+      "categories": [
+        "Semiconductors",
+        "Business",
+        "Computing"
+      ],
+      "sourceUrl": "https://pr.tsmc.com/english/news/3210",
+      "pinId": 15652,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15652",
+      "references": [
+        {
+          "id": 36985,
+          "url": "https://azcommerce-prod.azurewebsites.net/news-events/news/2026/7/tsmc-announcement/",
+          "title": "TSMC Adds US$100 Billion in Arizona, Raising Planned Investment to US$265 Billion",
+          "confidence": 100,
+          "publishedDate": "2026-07-16",
+          "reasoning": "Official announcement corroborates the investment total and its relationship to the project or prior commitment.",
+          "utcCreatedDateTime": "2026-10-15T15:16:38.438879+00:00",
+          "pinId": 15652
+        }
+      ],
+      "media": [
+        {
+          "originalUrl": "https://www.phoenix.gov/adobe/dynamicmedia/deliver/dm-aid--079f943c-ff96-4eb0-afd3-bf0b8e20d31c/tsmc-exteriors.png?preferwebp=true&quality=85",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/078fda28-7978-40f7-adef-62a79c1b09be.png",
+          "credit": "City of Phoenix / TSMC",
+          "sourceUrl": "https://www.phoenix.gov/newsroom/ced-news/tsmc-announces-additional--100-billion-investment-in-arizona.html",
+          "caption": "TSMC Arizona exterior; site photo published by the City of Phoenix"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "tsmc-265",
+      "company": "TSMC",
+      "wiki": "TSMC",
+      "desk": "@TechDesk",
+      "date": "2026-07-16",
+      "amount": 265000000000,
+      "currency": "USD",
+      "period": "Multi-year Arizona expansion; no final completion date announced",
+      "title": "TSMC Adds US$100 Billion in Arizona, Raising Planned Investment to US$265 Billion",
+      "description": "TSMC announced a further US$100 billion Arizona expansion in July 2026. The Arizona Commerce Authority reported a resulting US$265 billion total encompassing 10 fabs, two advanced packaging facilities and an R&D center.",
+      "points": [
+        "The US$100 billion July increment updates the earlier US$165 billion planned total.",
+        "The announcement calls for four more fabs using 2-nanometer or more advanced processes.",
+        "These are planned investment and facility commitments, not completed expenditure or operating capacity."
+      ],
+      "categories": [
+        "Semiconductors",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://azcommerce-prod.azurewebsites.net/news-events/news/2026/7/tsmc-announcement/",
+      "pinId": 15653,
+      "parentId": 15652,
+      "pinUrl": "https://www.chronopin.com/pin/15653",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://azcommerce-prod.azurewebsites.net/media/k54d0jc3/aca0726_breaking-tsmc-fbx-li.png",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/744e4125-af06-44cf-b486-16f7efd5fbfd.png",
+          "credit": "Arizona Commerce Authority",
+          "sourceUrl": "https://azcommerce-prod.azurewebsites.net/news-events/news/2026/7/tsmc-announcement/",
+          "caption": "Arizona Commerce Authority investment announcement graphic"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "roche-plan",
+      "company": "Roche",
+      "wiki": "Hoffmann-La_Roche",
+      "desk": "@HealthDesk",
+      "date": "2025-04-22",
+      "amount": 50000000000,
+      "currency": "USD",
+      "period": "Five years from April 2025",
+      "title": "Roche Commits US$50 Billion to U.S. Manufacturing and R&D Over Five Years",
+      "description": "Roche announced US$50 billion over five years for pharmaceutical and diagnostics manufacturing and R&D in the United States. The program includes new research sites and new or expanded manufacturing facilities.",
+      "points": [
+        "The commitment spans both pharmaceuticals and diagnostics, including research infrastructure and manufacturing.",
+        "Planned facilities include operations in Indiana, Pennsylvania, Massachusetts and California, alongside an additional manufacturing location.",
+        "Individual projects in this thread sit within the broader program and should not be added to its US$50 billion headline."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Science"
+      ],
+      "sourceUrl": "https://www.roche.com/media/releases/med-cor-2025-04-22",
+      "pinId": 15654,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15654",
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "roche-expand",
+      "company": "Roche",
+      "wiki": "Hoffmann-La_Roche",
+      "desk": "@HealthDesk",
+      "date": "2026-01-20",
+      "amount": 2000000000,
+      "currency": "USD",
+      "period": "Expanded commitment January 2026; construction underway",
+      "title": "Roche and Genentech Raise North Carolina Manufacturing Investment to About US$2 Billion",
+      "description": "Genentech, part of Roche, more than doubled its Holly Springs manufacturing commitment to approximately US$2 billion. The January 2026 expansion increased capacity within the facility already under construction and forms part of Roche’s US$50 billion U.S. program.",
+      "points": [
+        "The updated project total replaces the initial commitment of more than US$700 million announced in May 2025.",
+        "The facility is expected to support more than 500 manufacturing roles and more than 1,500 construction jobs.",
+        "This is a project allocation within the US$50 billion Roche and Genentech program, not an extra nationwide US$2 billion commitment."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+      "pinId": 15656,
+      "parentId": 15654,
+      "pinUrl": "https://www.chronopin.com/pin/15656",
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "lg-brazil",
+      "company": "LG Electronics",
+      "wiki": "LG_Electronics",
+      "desk": "@BuildDesk",
+      "date": "2026-02-24",
+      "amount": 200000000,
+      "currency": "USD",
+      "period": "Operations targeted for 2026 in the announcement",
+      "title": "LG Electronics Reports More Than US$200 Million Investment in Brazil Appliance Factory",
+      "description": "LG reported an investment exceeding US$200 million in a new Paraná manufacturing facility as part of its regional growth strategy. The February 2026 announcement targeted production during 2026 and described a focus on premium and locally tailored appliances.",
+      "points": [
+        "The published investment is more than US$200 million for the new Brazilian manufacturing facility.",
+        "LG described a 70,000-square-meter floor area on a 767,000-square-meter site.",
+        "The 2026 production timing was an operator target; this pin does not assert that operations have since begun."
+      ],
+      "categories": [
+        "Electronics",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.lg.com/global/newsroom/news/corporate/lg-electronics-accelerates-growth-in-key-strategic-markets/",
+      "pinId": 15657,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15657",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://www.lg.com/content/dam/channel/wcms/global/newsroom/news/corporate/lg-electronics-accelerates-growth-in-key-strategic-markets/lg-global-south-1440.png",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/d7b2390f-fd12-41ad-8537-1454fc794045.jpeg",
+          "credit": "LG Electronics",
+          "sourceUrl": "https://www.lg.com/global/newsroom/news/corporate/lg-electronics-accelerates-growth-in-key-strategic-markets/",
+          "caption": "LG strategic-market announcement graphic highlighting India, Saudi Arabia and Brazil"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "lg-chillers",
+      "company": "LG Electronics",
+      "wiki": "LG_Electronics",
+      "desk": "@BuildDesk",
+      "date": "2026-10-01",
+      "amount": 150000000000,
+      "currency": "KRW",
+      "period": "New U.S. facility and Korean expansions announced October 2026",
+      "title": "LG Electronics Plans KRW150 Billion Chiller Manufacturing Expansion in U.S. and Korea",
+      "description": "LG plans a combined KRW150 billion investment in a new Virginia facility and factories in Pyeongtaek and Changwon, South Korea. The program expands chiller production to meet demand for AI data-center cooling.",
+      "points": [
+        "KRW150 billion is the combined investment across the U.S. and Korean facilities, rather than the Virginia site budget alone.",
+        "The announcement identifies Virginia as LG’s first U.S. factory for chillers.",
+        "The expanded production network supports growing demand for air-cooled chillers and data-center cooling solutions."
+      ],
+      "categories": [
+        "Electronics",
+        "Business",
+        "Infrastructure",
+        "Energy"
+      ],
+      "sourceUrl": "https://www.lg.com/us/newsroom/corporate/lg-electronics-establishes-first-u-s-factory-to-produce-chillers-for-ai-data-center-cooling",
+      "pinId": 15659,
+      "parentId": 15657,
+      "pinUrl": "https://www.chronopin.com/pin/15659",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://media.us.lg.com/transform/ea4f3691-db06-499a-b98c-75c385584e45/NEWSROOM_THUMBNAIL_Chiller-1",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/9b7f0ede-efc7-4bb9-951e-9aa03e88fb24.jpeg",
+          "credit": "LG Electronics",
+          "sourceUrl": "https://www.lg.com/us/newsroom/corporate/lg-electronics-establishes-first-u-s-factory-to-produce-chillers-for-ai-data-center-cooling",
+          "caption": "LG chiller equipment shown with the factory investment announcement"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "abb-us",
+      "company": "ABB",
+      "wiki": "ABB",
+      "desk": "@BuildDesk",
+      "date": "2025-03-03",
+      "amount": 120000000,
+      "currency": "USD",
+      "period": "Projects announced March 2025; Selmer targeted for Q4 2026",
+      "title": "ABB Allocates US$120 Million to Tennessee and Mississippi Manufacturing",
+      "description": "ABB announced US$80 million for a new Selmer, Tennessee facility and US$40 million to expand Senatobia, Mississippi. The combined US$120 million allocation increases low-voltage electrical-equipment capacity for infrastructure and data-center demand.",
+      "points": [
+        "Selmer’s US$80 million project was expected to add 50 jobs and open in the fourth quarter of 2026.",
+        "Senatobia’s US$40 million expansion was expected to add 200 jobs and double its manufacturing footprint.",
+        "The two allocations sum to the US$120 million headline; previously announced U.S. spending is a separate historical comparison."
+      ],
+      "categories": [
+        "Business",
+        "Energy",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://new.abb.com/news/detail/123896/abb-to-invest-120-million-to-expand-us-manufacturing",
+      "pinId": 15661,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15661",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://resources.news.e.abb.com/images/2025/3/3/0/ABB-Selmer_TN_Rendering.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/6996efd8-bbbf-423e-9ed2-ec76754dc5fa.jpeg",
+          "credit": "ABB",
+          "sourceUrl": "https://new.abb.com/news/detail/123896/abb-to-invest-120-million-to-expand-us-manufacturing",
+          "caption": "Rendering of the planned Selmer, Tennessee facility"
+        },
+        {
+          "originalUrl": "https://resources.news.e.abb.com/images/2025/3/3/0/Senatobia.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/c4341604-dc35-4bc6-83bb-ad69316adde0.jpeg",
+          "credit": "ABB",
+          "sourceUrl": "https://new.abb.com/news/detail/123896/abb-to-invest-120-million-to-expand-us-manufacturing",
+          "caption": "Senatobia, Mississippi facility in ABB’s investment release"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "abb-india",
+      "company": "ABB",
+      "wiki": "ABB",
+      "desk": "@BuildDesk",
+      "date": "2026-03-09",
+      "amount": 75000000,
+      "currency": "USD",
+      "period": "During 2026",
+      "title": "ABB Announces Approximately US$75 Million India Manufacturing and R&D Investment",
+      "description": "ABB plans a further approximately US$75 million investment in India during 2026, expanding electrification, motion and automation manufacturing and R&D across five locations. The company expects roughly 300 additional skilled jobs.",
+      "points": [
+        "Published allocations include US$14 million for Nelamangala, US$21 million for Peenya, US$12 million for Hyderabad, US$22 million for Nashik and US$6 million for Vadodara.",
+        "The program supports electrical protection, drives, motors, rail equipment, laboratory capabilities and other locally manufactured technologies.",
+        "The 2026 plan is separate from ABB’s reported India spend exceeding US$35 million in 2025."
+      ],
+      "categories": [
+        "Business",
+        "Energy",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://new.abb.com/news/detail/133972/abb-invests-75-million-in-india-to-expand-manufacturing-and-rd-for-critical-segments",
+      "pinId": 15662,
+      "parentId": 15661,
+      "pinUrl": "https://www.chronopin.com/pin/15662",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://resources.news.e.abb.com/images/2026/3/5/0/Nashik_Plant-Expand.png",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/865a41a4-947f-4cf1-92b1-35447c94f3db.png",
+          "credit": "ABB",
+          "sourceUrl": "https://new.abb.com/news/detail/133972/abb-invests-75-million-in-india-to-expand-manufacturing-and-rd-for-critical-segments",
+          "caption": "Nashik plant image from the India expansion announcement"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "schneider-us",
+      "company": "Schneider Electric",
+      "wiki": "Schneider_Electric",
+      "desk": "@BuildDesk",
+      "date": "2025-03-25",
+      "amount": 700000000,
+      "currency": "USD",
+      "period": "Through 2027",
+      "title": "Schneider Electric Plans More Than US$700 Million U.S. Investment Through 2027",
+      "description": "Schneider Electric announced plans to invest more than US$700 million in U.S. operations through 2027, including manufacturing expansion for energy infrastructure, automation and AI-related demand. It expects more than 1,000 additional jobs.",
+      "points": [
+        "The headline is a forward investment program through 2027, rather than a measure of completed spending.",
+        "The new plan follows US$440 million previously announced between 2020 and 2024.",
+        "Manufacturing expansion and the broader operating investments are intended to strengthen energy infrastructure and supply chains."
+      ],
+      "categories": [
+        "Business",
+        "Energy",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.se.com/us/en/about-us/newsroom/news/press-releases/schneider-electric-plans-to-invest-over-700-million-in-the-u-s-supporting-energy-ai-sectors-and-job-growth-67bdeb3ee4475a5955011b6a/",
+      "pinId": 15663,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15663",
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "schneider-egypt",
+      "company": "Schneider Electric",
+      "wiki": "Schneider_Electric",
+      "desk": "@BuildDesk",
+      "date": "2026-03-30",
+      "amount": 320000000,
+      "currency": "EUR",
+      "period": "Cumulative industrial investment over 37 years in Egypt",
+      "title": "Schneider Electric Opens Badr City Expansion, Citing About €320 Million Invested in Egypt",
+      "description": "Schneider Electric inaugurated an expansion of its Badr City plant, increasing production capacity by 30%. The company reported approximately €320 million of cumulative industrial investment in Egypt over its 37-year presence.",
+      "points": [
+        "The approximately €320 million figure covers cumulative investment in Egypt, not the cost of this plant expansion alone.",
+        "The new expansion adds production lines and raises Badr City plant capacity by 30%.",
+        "The release does not disclose a standalone capital cost for the newly inaugurated expansion."
+      ],
+      "categories": [
+        "Business",
+        "Energy",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.se.com/eg/en/about-us/newsroom/news/press-releases/prime-minister-inaugurates-schneider-electric%E2%80%99s-new-expansions-in-badr-city-69ca652f9f25d4601903ae8c/",
+      "pinId": 15664,
+      "parentId": 15663,
+      "pinUrl": "https://www.chronopin.com/pin/15664",
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "jnj-plan",
+      "company": "Johnson & Johnson",
+      "wiki": "Johnson_%26_Johnson",
+      "desk": "@HealthDesk",
+      "date": "2025-03-21",
+      "amount": 55000000000,
+      "currency": "USD",
+      "period": "Four years from March 2025",
+      "title": "Johnson & Johnson Plans More Than US$55 Billion U.S. Manufacturing, R&D and Technology Investment",
+      "description": "Johnson & Johnson announced more than US$55 billion of U.S. manufacturing, R&D and technology investment over four years, a 25% increase over the preceding four-year period. The program includes new advanced manufacturing facilities.",
+      "points": [
+        "The program spans research and technology as well as manufacturing; the full headline is not factory construction spending.",
+        "The announcement accompanied groundbreaking on a Wilson, North Carolina facility costing more than US$2 billion.",
+        "Later site-level commitments in this thread belong to the broader investment strategy."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Science"
+      ],
+      "sourceUrl": "https://www.jnj.com/media-center/press-releases/johnson-johnson-increases-u-s-investment-to-more-than-55-billion-over-the-next-four-years",
+      "pinId": 15665,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15665",
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "jnj-nc",
+      "company": "Johnson & Johnson",
+      "wiki": "Johnson_%26_Johnson",
+      "desk": "@HealthDesk",
+      "date": "2025-08-21",
+      "amount": 2000000000,
+      "currency": "USD",
+      "period": "Ten-year manufacturing commitment announced August 2025",
+      "title": "Johnson & Johnson Commits US$2 Billion Over Ten Years to FUJIFILM Manufacturing in North Carolina",
+      "description": "Johnson & Johnson committed US$2 billion to FUJIFILM over ten years for dedicated manufacturing capacity at Holly Springs, North Carolina. The arrangement expands U.S. medicine production and was expected to create about 120 jobs.",
+      "points": [
+        "This is a ten-year commitment to FUJIFILM for manufacturing capacity, rather than a US$2 billion J&J-owned factory construction budget.",
+        "The dedicated manufacturing footprint is more than 160,000 square feet.",
+        "The commitment follows J&J’s broader US$55 billion four-year U.S. manufacturing, research and technology plan."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.jnj.com/media-center/press-releases/johnson-johnson-continues-u-s-investment-with-2-billion-commitment-to-enable-manufacturing-at-state-of-the-art-north-carolina-facility",
+      "pinId": 15666,
+      "parentId": 15665,
+      "pinUrl": "https://www.chronopin.com/pin/15666",
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "novartis-plan",
+      "company": "Novartis",
+      "wiki": "Novartis",
+      "desk": "@HealthDesk",
+      "date": "2025-04-10",
+      "amount": 23000000000,
+      "currency": "USD",
+      "period": "Five years from April 2025",
+      "title": "Novartis Plans US$23 Billion U.S. Manufacturing and R&D Expansion Over Five Years",
+      "description": "Novartis announced US$23 billion for U.S. infrastructure over five years, covering 10 facilities including seven new sites. The program includes manufacturing expansion and a US$1.1 billion San Diego research hub.",
+      "points": [
+        "The plan aims to enable end-to-end U.S. production of all key Novartis medicines used by U.S. patients.",
+        "The US$1.1 billion San Diego research hub is included within the US$23 billion program.",
+        "The separate reference to nearly US$50 billion in total U.S. operations spending uses a broader scope and is not an additional construction commitment."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Science"
+      ],
+      "sourceUrl": "https://www.novartis.com/us-en/news/media-releases/novartis-plans-expand-its-us-based-manufacturing-and-rd-footprint-total-investment-23b-over-next-5-years",
+      "pinId": 15667,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15667",
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "novartis-sd",
+      "company": "Novartis",
+      "wiki": "Novartis",
+      "desk": "@HealthDesk",
+      "date": "2026-02-06",
+      "amount": 1100000000,
+      "currency": "USD",
+      "period": "Groundbreaking February 2026; operation expected in 2029 by the reporting source",
+      "title": "Novartis Breaks Ground on US$1.1 Billion San Diego Biomedical Research Hub",
+      "description": "Novartis broke ground on its San Diego Biomedical Research hub, a US$1.1 billion project within the company’s US$23 billion U.S. infrastructure program. The Swiss representation reported a 466,000-square-foot facility expected to operate in 2029.",
+      "points": [
+        "The February 6 groundbreaking was reported by Swiss Impact USA, with participation by the Swiss consul general.",
+        "The source describes a US$1.1 billion lease signed in 2025 and a location at 10210 Campus Point Drive.",
+        "The project is a research hub rather than a medicine manufacturing plant, and its amount is included in the company-wide program."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Science"
+      ],
+      "sourceUrl": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+      "pinId": 15668,
+      "parentId": 15667,
+      "pinUrl": "https://www.chronopin.com/pin/15668",
+      "references": [
+        {
+          "id": 36962,
+          "url": "https://www.novartis.com/us-en/news/media-releases/novartis-plans-expand-its-us-based-manufacturing-and-rd-footprint-total-investment-23b-over-next-5-years",
+          "title": "Novartis Plans US$23 Billion U.S. Manufacturing and R&D Expansion Over Five Years",
+          "confidence": 100,
+          "publishedDate": "2025-04-10",
+          "reasoning": "Official announcement corroborates the investment total and its relationship to the project or prior commitment.",
+          "utcCreatedDateTime": "2026-10-15T15:17:59.516809+00:00",
+          "pinId": 15668
+        }
+      ],
+      "media": [
+        {
+          "originalUrl": "https://swissimpactusa.com/wp-content/uploads/2026/02/0.NovartisSanDiegoResearchHub-Large.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/02852e9f-54da-4971-a9d8-f6aa765991da.jpeg",
+          "credit": "Swiss Impact USA",
+          "sourceUrl": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+          "caption": "San Diego research hub groundbreaking photo published by Swiss Impact USA"
+        },
+        {
+          "originalUrl": "https://swissimpactusa.com/wp-content/uploads/2026/02/1.NovartisSanDiegoResearchHub-Large.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/7b674e5e-57cb-4c2b-af9d-26efdc5fc0b5.jpeg",
+          "credit": "Swiss Impact USA",
+          "sourceUrl": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+          "caption": "San Diego research hub groundbreaking photo published by Swiss Impact USA"
+        },
+        {
+          "originalUrl": "https://swissimpactusa.com/wp-content/uploads/2026/02/2.NovartisSanDiegoResearchHub-Large.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/bd84c784-3938-4b1c-8be4-b8957adde064.jpeg",
+          "credit": "Swiss Impact USA",
+          "sourceUrl": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+          "caption": "San Diego research hub groundbreaking photo published by Swiss Impact USA"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "catl-hungary",
+      "company": "CATL",
+      "wiki": "CATL",
+      "desk": "@TechDesk",
+      "date": "2022-08-12",
+      "amount": 7340000000,
+      "currency": "EUR",
+      "period": "Multi-phase project announced August 2022; trial operations started September 2026",
+      "title": "CATL Announces €7.34 Billion Debrecen Battery Manufacturing Project",
+      "description": "CATL announced €7.34 billion for a planned 100 GWh battery plant in Debrecen, Hungary, its second European battery plant. This pin records the 2022 investment announcement; trial cell operations began in September 2026.",
+      "points": [
+        "The €7.34 billion commitment covers a multi-phase battery plant, rather than expenditure completed at announcement.",
+        "CATL planned 100 GWh of annual capacity to serve European vehicle manufacturers.",
+        "The later September 2026 milestone in this thread concerns trial production, not full-capacity commercial operation."
+      ],
+      "categories": [
+        "Energy",
+        "Automotive",
+        "Business"
+      ],
+      "refKeys": [
+        "catl-trial"
+      ],
+      "sourceUrl": "https://www.catl.com/en/news/983.html",
+      "pinId": 15672,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15672",
+      "references": [
+        {
+          "id": 36986,
+          "url": "https://www.catl.com/en/news/7000.html",
+          "title": "CATL Starts Trial Cell Production at Its €7.34 Billion Hungary Battery Project",
+          "confidence": 100,
+          "publishedDate": "2026-09-22",
+          "reasoning": "Official announcement corroborates the investment total and its relationship to the project or prior commitment.",
+          "utcCreatedDateTime": "2026-10-15T15:20:04.58735+00:00",
+          "pinId": 15672
+        }
+      ],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "catl-spain",
+      "company": "CATL",
+      "wiki": "CATL",
+      "desk": "@TechDesk",
+      "date": "2024-12-10",
+      "amount": 4100000000,
+      "currency": "EUR",
+      "period": "Phased investment; production targeted for end-2026 in announcement",
+      "title": "CATL and Stellantis Plan Up to €4.1 Billion Zaragoza Battery Joint Venture",
+      "description": "CATL and Stellantis agreed to invest up to €4.1 billion in a 50–50 joint venture for an LFP battery plant in Zaragoza, Spain. The phased project targets up to 50 GWh of capacity, subject to market demand and government support.",
+      "points": [
+        "Up to €4.1 billion is the joint project total, not CATL’s individual contribution.",
+        "The announcement targeted production by the end of 2026; this pin records that target without asserting production has begun.",
+        "Capacity and investment deployment depend on European EV demand and continuing public support."
+      ],
+      "categories": [
+        "Energy",
+        "Automotive",
+        "Business"
+      ],
+      "sourceUrl": "https://www.catl.com/en/news/6328.html",
+      "pinId": 15673,
+      "parentId": 15672,
+      "pinUrl": "https://www.chronopin.com/pin/15673",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://mma.prnewswire.com/media/2577641/JV_02.jpg?p=facebook",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/c17c026b-2288-435b-9581-064ecbb97861.jpeg",
+          "credit": "CATL / Stellantis, via PR Newswire",
+          "sourceUrl": "https://www.prnewswire.com/news-releases/stellantis-and-catl-to-invest-up-to-4-1-billion-in-joint-venture-for-large-scale-lfp-battery-plant-in-spain-302327608.html",
+          "caption": "CATL and Stellantis joint-venture signing, Zaragoza, December 10, 2024"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "catl-trial",
+      "company": "CATL",
+      "wiki": "CATL",
+      "desk": "@TechDesk",
+      "date": "2026-09-22",
+      "amount": 7340000000,
+      "currency": "EUR",
+      "period": "Trial production milestone September 2026 within the original Hungary project",
+      "title": "CATL Starts Trial Cell Production at Its €7.34 Billion Hungary Battery Project",
+      "description": "CATL began trial production on the first two cell-production lines at Debrecen, Hungary, on September 22, 2026. The milestone advances the plant originally announced as a €7.34 billion, 100 GWh project; it is not a new investment commitment.",
+      "points": [
+        "Trial production tests and validates equipment and manufacturing processes ahead of series production.",
+        "The €7.34 billion figure comes from CATL’s August 2022 project announcement, rather than a fresh September 2026 capital commitment.",
+        "The operator reported that it had obtained the relevant permits and met the preconditions for trial operations."
+      ],
+      "categories": [
+        "Energy",
+        "Automotive",
+        "Business"
+      ],
+      "refKeys": [
+        "catl-hungary"
+      ],
+      "sourceUrl": "https://www.catl.com/en/news/7000.html",
+      "pinId": 15674,
+      "parentId": 15673,
+      "pinUrl": "https://www.chronopin.com/pin/15674",
+      "references": [
+        {
+          "id": 36987,
+          "url": "https://www.catl.com/en/news/983.html",
+          "title": "CATL Announces €7.34 Billion Debrecen Battery Manufacturing Project",
+          "confidence": 100,
+          "publishedDate": "2022-08-12",
+          "reasoning": "Official announcement corroborates the investment total and its relationship to the project or prior commitment.",
+          "utcCreatedDateTime": "2026-10-15T15:20:06.99701+00:00",
+          "pinId": 15674
+        }
+      ],
+      "media": [
+        {
+          "originalUrl": "https://media.licdn.com/dms/image/v2/D4D22AQGgP1z4nkhoig/feedshare-shrink_800/B4DaDILzebHsAc-/0/1790064933281?e=2147483647&t=tdJTKSoHWZGj1gtVNIN_tUe53S6Pq_Cpq8o96njMf6g&v=beta",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/4dd361cd-0a98-4f25-a5a2-f70f8d60d9c3.jpeg",
+          "credit": "CATL Debrecen",
+          "sourceUrl": "https://www.linkedin.com/posts/catldebrecen_catl-debrecen-kicks-off-trial-operations-activity-7508076513209057282-PZaJ",
+          "caption": "Debrecen cell factory aerial view supplied with the September 2026 trial-production announcement"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    },
+    {
+      "key": "hyundai-korea",
+      "company": "Hyundai Motor Group",
+      "wiki": "Hyundai_Motor_Group",
+      "desk": "@MotorDesk",
+      "date": "2025-11-16",
+      "amount": 125200000000000,
+      "currency": "KRW",
+      "period": "2026–2030",
+      "parentId": 15633,
+      "title": "Hyundai Motor Group Commits KRW125.2 Trillion to Korea for 2026–2030",
+      "description": "Hyundai Motor Group announced KRW125.2 trillion of domestic investment for 2026–2030: KRW50.5 trillion for future businesses, KRW38.5 trillion for R&D and KRW36.2 trillion for capital investment.",
+      "points": [
+        "The new five-year plan is KRW36.1 trillion above the KRW89.1 trillion invested in Korea during 2021–2025.",
+        "The commitment covers AI, robotics, software-defined vehicles, electrification, hydrogen, research and production infrastructure.",
+        "The KRW9 trillion Saemangeum project later announced in February 2026 is included within this domestic program."
+      ],
+      "categories": [
+        "Automotive",
+        "Business",
+        "Robotics",
+        "Energy"
+      ],
+      "refKeys": [
+        "hyundai-hub"
+      ],
+      "sourceUrl": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000001062",
+      "pinId": 15676,
+      "pinUrl": "https://www.chronopin.com/pin/15676",
+      "references": [
+        {
+          "id": 36988,
+          "url": "https://www.hyundaimotorgroup.com/en/news/hyundai-motor-group-to-establish-innovation-hub-to-lead-robotics-ai-and-hydrogen-energy-in-korea",
+          "title": "Hyundai Motor Group Signs MoU for Approximately KRW9 Trillion Saemangeum Innovation Hub",
+          "confidence": 100,
+          "publishedDate": "2026-02-27",
+          "reasoning": "Official announcement corroborates the investment total and its relationship to the project or prior commitment.",
+          "utcCreatedDateTime": "2026-10-15T15:20:07.666311+00:00",
+          "pinId": 15676
+        }
+      ],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "hyundai-hub",
+      "company": "Hyundai Motor Group",
+      "wiki": "Hyundai_Motor_Group",
+      "desk": "@MotorDesk",
+      "date": "2026-02-27",
+      "amount": 9000000000000,
+      "currency": "KRW",
+      "period": "Investment begins in 2026; staged construction targets extend to 2029",
+      "title": "Hyundai Motor Group Signs MoU for Approximately KRW9 Trillion Saemangeum Innovation Hub",
+      "description": "Hyundai Motor Group signed an MoU for an approximately KRW9 trillion industrial complex in Gunsan, Korea, covering AI data centers, robotics, hydrogen, solar power and smart-city development. It sits within the KRW125.2 trillion domestic investment plan.",
+      "points": [
+        "The MoU describes a proposed industrial investment program, rather than completed construction or fully deployed capital.",
+        "Project areas include a robotics manufacturing cluster, a hydrogen electrolyzer plant and AI infrastructure.",
+        "Construction targets are phased, with major facilities expected to begin construction during 2027–2028 and reach completion during 2029."
+      ],
+      "categories": [
+        "Automotive",
+        "Business",
+        "Robotics",
+        "Energy"
+      ],
+      "refKeys": [
+        "hyundai-korea"
+      ],
+      "sourceUrl": "https://www.hyundaimotorgroup.com/en/news/hyundai-motor-group-to-establish-innovation-hub-to-lead-robotics-ai-and-hydrogen-energy-in-korea",
+      "pinId": 15677,
+      "parentId": 15676,
+      "pinUrl": "https://www.chronopin.com/pin/15677",
+      "references": [
+        {
+          "id": 36970,
+          "url": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000001062",
+          "title": "Hyundai Motor Group Commits KRW125.2 Trillion to Korea for 2026–2030",
+          "confidence": 100,
+          "publishedDate": "2025-11-16",
+          "reasoning": "Official announcement corroborates the investment total and its relationship to the project or prior commitment.",
+          "utcCreatedDateTime": "2026-10-15T15:20:11.443974+00:00",
+          "pinId": 15677
+        }
+      ],
+      "media": [],
+      "photoResearch": "Official release and linked galleries checked. No suitable accessible project-specific image saved; generic branding and unrelated images excluded."
+    },
+    {
+      "key": "byd-brazil",
+      "company": "BYD Company",
+      "wiki": "BYD_Company",
+      "desk": "@MotorDesk",
+      "date": "2025-07-01",
+      "amount": 5500000000,
+      "currency": "BRL",
+      "period": "Phased Camaçari complex development; initial vehicle milestone July 2025",
+      "parentId": 14013,
+      "title": "BYD Starts Brazil Vehicle Production Under R$5.5 Billion Camaçari Investment Program",
+      "description": "BYD rolled out its first locally assembled Dolphin Mini in Brazil while outlining R$5.5 billion of investment in the Camaçari complex. The operator described initial annual capacity of 150,000 vehicles, with 300,000 planned in a second phase.",
+      "points": [
+        "R$5.5 billion is the planned investment in the full industrial complex, not spending newly committed on July 1 alone.",
+        "Initial operations use semi-knocked-down assembly; the roadmap calls for progressively localized stamping, welding, painting and components.",
+        "The published capacity figures are phase targets and should not be treated as current output."
+      ],
+      "categories": [
+        "Automotive",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.byd.com/us/news-list/First-BYD-Electric-Vehicle-Rolls-off-the-Line-in-Brazil",
+      "pinId": 15678,
+      "pinUrl": "https://www.chronopin.com/pin/15678",
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://www.byd.com/material/byd-site/us/newlist/first-byd-100--electric-vehicle-rolls-off-the-line-in-brazil/ef647525-07f1-43e3-8efe-616c7ec38744.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/76d2e984-9aad-46cc-8fc1-b349976f6d37.jpeg",
+          "credit": "BYD",
+          "sourceUrl": "https://www.byd.com/us/news-list/First-BYD-Electric-Vehicle-Rolls-off-the-Line-in-Brazil",
+          "caption": "BYD production-line image supplied with the Brazil investment announcement"
+        }
+      ],
+      "photoResearch": "Official release/gallery or credited source photo downloaded with curl; saved thumbnail verified public in Azure."
+    }
+  ]
+}

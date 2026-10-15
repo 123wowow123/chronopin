@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -690,8 +690,14 @@ the group ("Volkswagen" vs "Volkswagen Group"). An empty `companies` in
 
 ### layoffs
 
+**When.** Midnight and the 06:00/18:00 America/Los_Angeles news job
+(owner, 2026-10-15). Every run searches for new layoffs and checks existing
+layoff pins for developments; this is both discovery and maintenance.
+
 **Reads** `tagged_pins` for `Layoffs` (what is already pinned, newest
-first), then what was announced since the last run: the companies' own memos
+first), then `find_pins` for each company and source URL to catch existing
+coverage even when the tag is missing. Search for announcements and updates
+since this job's last run (the last 24 hours on its first run): the companies' own memos
 and posts, SEC 8-K Item 2.05 filings (EDGAR full-text search), and state WARN
 notices - California, New York, Texas, Washington, New Jersey, Tennessee and
 the other states that publish them - for closures with a separation date
@@ -704,14 +710,115 @@ and the employer's sector (`AI` too when the company blames AI); the tag
 (`confirmed`), or a WARN closure to its separation date (`scheduled`, a
 first-to-last window as a period). Place it at the site that closes, else
 the HQ. The price is the company's own restructuring charge for that round
-from its filing (a range's midpoint), never the savings. A further round at
-the same company answers its previous layoff pin.
+from its filing (a range's midpoint), never the savings. Before creating,
+compare the company, affected site, announcement and separation dates with
+existing pins. Update the existing pin for the same round: verified counts,
+locations, dates, restructuring charges, corrections, cancellations and newer
+sources or relevant media. Preserve its original author and existing verified
+details; a second article or a revised count is not a new event. Read back
+each saved change before resolving any review mark. Create a new pin only
+for an unpinned event; a distinct further round at the same company answers
+its previous layoff pin. Queue conflicting evidence or genuine research gaps
+with the specific unresolved question. Apply the [employment graph guidance](#employment-graphs)
+to new and existing layoff pins whenever suitable verified graphs are available.
 **Traps.** Trackers and round-ups only shortlist: on the first batch they
 were wrong on twelve of eighteen (the date, the count, the site, what the
 cut even was). The memo or the filing is the fact. Cuts a board has only
 approved as a plan are not a layoff yet; a share "of the US workforce" is
 not of the whole company. News video on a layoff is scarce - three pictures
 are fine.
+
+
+### hiringJobCreation
+
+**When.** The 06:00/18:00 America/Los_Angeles news job (owner, 2026-10-15).
+Search for new hiring, emerging types of work and job-creating investment,
+and update existing pins every run. Cover all sectors and regions, including
+specialized AI engineers, forward-deployed engineers, manufacturing,
+construction, energy, batteries and data centers. Major training or reskilling
+programs qualify as dated workforce events, but are not evidence of new hires.
+
+**Reads** `tagged_pins` for `Hiring` and `Job creation`, then `find_pins` by employer, project, role and source URL;
+use `get_pin` before editing. Search announcements and developments since
+this job's last completed run (24 hours on its first run). Check company
+newsrooms, careers pages and dated recruitment announcements, investor
+releases and SEC filings, public economic-development agreements, county
+minutes, permits, interconnection filings and developer project pages.
+News reporting shortlists leads and supplies attributed context; verify
+headcounts and spending against primary documents wherever available.
+The owner's [AWS/Anthropic specialized-engineer example](https://www.cnbc.com/2026/10/15/aws-anthropic-racing-to-deploy-army-of-specialized-ai-engineers.html)
+is a research lead, not verified evidence of a particular count or budget.
+
+**Does** create a missing pin for each significant dated hiring drive,
+new-role program or job-creating project milestone. Use the relevant desk
+and categories (`Labour`, `Business` and the employer's sector as applicable),
+the employer's shared tag, and `Hiring` and/or `Job creation` when supported.
+Explain the new role's actual responsibilities, employer, location and timing.
+Include published job counts, spending amount, currency, period, source date
+and conditions in the cited summary. Distinguish openings, planned hires,
+filled positions, trainees, retained jobs, temporary construction jobs and
+permanent operating jobs. Label direct versus indirect/induced estimates and
+full-time roles versus job-years; never add overlapping totals. A training
+cohort or existing employees redeployed to clients is not net new hiring.
+
+Separate workforce/training spending, total project capital investment,
+public incentives and projected economic impact. Do not present a broader
+corporate budget as the cost of one hiring program or project. Populate the
+pin's price only with a published amount attributable to that pinned event,
+using the existing price/currency/range conventions; explain its basis in
+the summary. Missing counts or spending stay explicitly unpublished, never
+estimated from salaries, capacity, incentives or industry benchmarks.
+Date an announcement to its actual announcement date; keep future hiring,
+construction and opening targets distinct and label their confidence.
+Place a site-specific project at its verified site, not the corporate HQ.
+
+Update the matching pin for the same initiative with newly verified counts,
+budgets, timelines, construction status, pauses, cancellations and outcomes;
+preserve its author, sourced details and media. A new article, changed target
+or revised budget does not create another pin. A distinct phase or milestone
+may receive a linked follow-up when it is a separate dated event. Read back
+saved changes before resolving review marks. Follow the standing admin-API
+procedure above when curator ownership prevents a routine authorized update.
+
+Apply the [employment graph guidance](#employment-graphs) to new and existing
+hiring and job-creation pins wherever the evidence supports a useful graph.
+
+### Employment graphs
+
+For both `layoffs` and `hiringJobCreation` in the 06:00/18:00 news job, search
+primary reports, filings, investor presentations and project documents for
+relevant published graphs of jobs, hiring, layoffs, workforce/training spending
+or project investment. Inspect the actual graph and its underlying definitions
+before adding it. Useful graphs show comparable counts or spending over time,
+role/site breakdowns, or a clearly labelled project budget breakdown. A single
+announced number does not justify inventing a trend or extra comparison points.
+
+Add a verified publisher chart image through the existing pin-media pipeline
+(`scrape_url` for discovery, `create_pin` or `update_pin` with `addMedia` to save),
+with its source page as a reference. Store images in Azure Blob Storage under
+the standing media rules; verify the public blob and saved pin. Keep the
+publisher/author credit and a caption naming the metric, units, currency,
+observation period, geography and whether figures are actuals, plans or
+estimates. Do not crop away axes, legends, caveats or attribution. Preserve
+other relevant pin media and deduplicate against existing chart images.
+
+On existing pins, refresh a superseded graph when a newer comparable edition
+is verified; retain historically relevant announcement-era charts with their
+as-of dates explicit. Keep revised observations distinct from originally
+reported figures. Never combine trainees with hires, construction job-years
+with permanent jobs, or program spending with an entire corporate budget.
+Do not imply that sector-wide employment movement measures one company's
+announced hiring or layoffs.
+
+The existing native `PinSeries` renderer supports publisher EIA/FRED time
+series. Retain a relevant working native chart when a pin already has one;
+its observations refresh from the publisher. The daily-job write tools do
+not currently attach new native series or accept arbitrary chart datasets,
+so use verified chart-image media for new graphs. If only a data table is
+available, preserve the cited figures and record a specific graph-generation
+gap rather than claiming a graph was added. Do not hold an otherwise verified
+pin solely for a missing graph. Report graphs added/refreshed by pin ID and
+any unavailable graphs, inaccessible source assets or incompatible data.
 
 ## Scores
 

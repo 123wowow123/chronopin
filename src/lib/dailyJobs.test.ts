@@ -143,10 +143,10 @@ describe('task groups', () => {
     expect(TASK_IDS.every((id) => TASK_GROUPS.some((g) => g.id === TASKS[id].group))).toBe(true);
   });
 
-  it('runs the two beats at midnight', () => {
+  it('runs both beats at midnight and layoffs in the twice-daily news job', () => {
     expect(midnight.tasks).toEqual(expect.arrayContaining(['fortune100', 'layoffs']));
     expect(groupTasks('beats', midnight.tasks)).toEqual(['fortune100', 'layoffs']);
-    expect(groupTasks('beats', news.tasks)).toEqual([]);
+    expect(groupTasks('beats', news.tasks)).toEqual(['layoffs', 'hiringJobCreation']);
   });
 
   it('scores new company pins last in the news job, and not at midnight', () => {
@@ -180,5 +180,37 @@ describe('ad translation task', () => {
     expect(setting.jobs[0].enabled).toBe(true);
     expect(setting.jobs[1].times).toEqual(oldNews.times);
     expect(withDefaultJobs(setting)).toBe(setting);
+  });
+});
+
+
+describe('twice-daily layoff research', () => {
+  it('adds layoffs to saved news jobs without changing their other settings', () => {
+    const savedNews = { ...news, enabled: true, driver: 'session' as const, maxNewPins: 23, maxUpdates: 47, tasks: news.tasks.filter((task) => task !== 'layoffs') };
+    const saved = { jobs: [midnight, savedNews, monthly, weekly] };
+    const upgraded = withDefaultJobs(saved);
+    expect(upgraded.jobs[1]).toEqual({ ...savedNews, tasks: news.tasks });
+    expect(upgraded.jobs[1].times).toEqual(['06:00', '18:00']);
+    expect(upgraded.jobs[0]).toBe(midnight);
+    expect(savedNews.tasks).not.toContain('layoffs');
+    expect(withDefaultJobs(upgraded)).toBe(upgraded);
+  });
+});
+
+
+describe('twice-daily hiring and job creation research', () => {
+  it('upgrades a saved news job predating both employment beats and preserves its configuration', () => {
+    const oldNews = { ...news, enabled: true, driver: 'session' as const, maxNewPins: 17, maxUpdates: 63, tasks: news.tasks.filter((task) => task !== 'layoffs' && task !== 'hiringJobCreation') };
+    const custom = { ...midnight, id: 'custom', tasks: ['breakingNews'] as typeof midnight.tasks };
+    const saved = { jobs: [midnight, oldNews, monthly, weekly, custom] };
+    const upgraded = withDefaultJobs(saved);
+    expect(upgraded.jobs[1]).toEqual({ ...oldNews, tasks: news.tasks });
+    expect(upgraded.jobs[0]).toBe(midnight);
+    expect(upgraded.jobs[4]).toBe(custom);
+    expect(oldNews.tasks).not.toContain('hiringJobCreation');
+    expect(withDefaultJobs(upgraded)).toBe(upgraded);
+    expect(news.times).toEqual(['06:00', '18:00']);
+    expect(groupTasks('beats', news.tasks)).toEqual(['layoffs', 'hiringJobCreation']);
+    expect(news.tasks.at(-1)).toBe('sentiment');
   });
 });

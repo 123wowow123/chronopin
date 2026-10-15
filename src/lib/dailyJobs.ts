@@ -136,7 +136,12 @@ export const TASKS = {
   layoffs: {
     group: 'beats',
     label: 'Layoffs',
-    summary: "Pin newly announced layoffs and closures, each checked against the company's memo, SEC filing or state WARN notice.",
+    summary: "Search for newly announced layoffs and closures, create missing pins and update existing pins with verified developments from company memos, SEC filings or state WARN notices; add or refresh sourced graphs where available.",
+  },
+  hiringJobCreation: {
+    group: 'beats',
+    label: 'Hiring, new roles and job creation',
+    summary: 'Research hiring, emerging job types and job-creating projects; create missing pins and update existing pins with verified job counts, spending, dates and locations; add or refresh sourced graphs of jobs and spending where available.',
   },
   modelScores: {
     group: 'scores',
@@ -225,7 +230,10 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // 2026-10-01). modelScores checks twice a day for the arena scores that
       // models lack at launch (owner, 2026-10-12). threadPredicted checks
       // predicted pins for an available thread to join (owner, 2026-10-14).
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'modelScores', 'sentiment'],
+      // layoffs searches for new rounds and updates existing pins twice a day
+      // (owner, 2026-10-15). Hiring, new roles and job-creating investment
+      // follow the same twice-daily discovery and maintenance cadence.
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'layoffs', 'hiringJobCreation', 'modelScores', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -268,12 +276,14 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
 export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   // Fold the short-lived separate translation job into the existing daily
   // runs, including saved settings from before this task was introduced.
+  // Add the owner-requested twice-daily layoff and hiring beats to saved news jobs too.
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    if ((job.id === 'midnight' || job.id === 'news') && !job.tasks.includes('adTranslations')) {
+    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation'] : job.id === 'midnight' ? ['adTranslations'] : [];
+    if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
-      return [{ ...job, tasks: TASK_IDS.filter((task) => task === 'adTranslations' || job.tasks.includes(task)) }];
+      return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];
     }
     return [job];
   });

@@ -1,0 +1,397 @@
+{
+  "researchedDate": "2026-10-15",
+  "scope": "Strategic manufacturing investments across automotive, semiconductors, industrial equipment and pharmaceuticals. Company-specific investment threads; monetary amounts are commitments, allocations or cumulative milestones as explicitly described, not additive totals.",
+  "requestedExample": "https://www.cnbc.com/2026/10/14/korea-india-hyundai-cars-investment.html",
+  "notes": [
+    "CNBC example was inaccessible; Hyundai operator release and Reuters/CNA confirm the amount and period.",
+    "Toyota operator galleries checked; S3 image downloads returned 403 at original and alternative resolutions and mirrored path. Credited WUNC and WUKY announcement photos were saved instead.",
+    "Existing Lilly Houston groundbreaking pin 2903 was found and preserved in its existing product thread; no duplicate was posted.",
+    "Original company authorship and unrelated existing threads were preserved.",
+    "No application deployment was performed.",
+    "Continuation research inserted the Korea domestic program and Saemangeum hub into Hyundai’s chronological company thread; India pin 15634 now responds to 15677. See manufacturer-investments-2026-10-15-more.json."
+  ],
+  "pins": [
+    {
+      "key": "hyundai-us",
+      "company": "Hyundai Motor Group",
+      "wiki": "Hyundai_Motor_Group",
+      "desk": "@MotorDesk",
+      "date": "2025-08-26",
+      "amount": 26000000000,
+      "period": "2025–2028",
+      "title": "Hyundai Motor Group Raises U.S. Strategic Investment to US$26 Billion for 2025–2028",
+      "description": "The group increased its U.S. investment commitment by US$5 billion to US$26 billion for 2025–2028, covering automotive capacity, a Louisiana steel mill and robotics. This replaces the earlier US$21 billion plan.",
+      "points": [
+        "US$26 billion is the updated total commitment; the incremental increase is US$5 billion over the March 2025 plan.",
+        "Investment covers steel production, expanded Hyundai and Kia vehicle capacity, and a robotics facility designed for 30,000 units annually.",
+        "The group expects around 25,000 direct jobs by 2028. These are announced targets, rather than completed expenditure."
+      ],
+      "categories": [
+        "Automotive",
+        "Business",
+        "Robotics"
+      ],
+      "images": [],
+      "gap": "Official release and linked media-kit section checked; release supplies a generic newsroom image rather than a project photograph.",
+      "sourceUrl": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000001003.html",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15633,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15633",
+      "media": []
+    },
+    {
+      "key": "hyundai-india",
+      "company": "Hyundai Motor Group",
+      "wiki": "Hyundai_Motor_Group",
+      "desk": "@MotorDesk",
+      "date": "2026-10-13",
+      "amount": 15500000000,
+      "period": "2026–2032",
+      "title": "Hyundai Motor Group Commits US$15.5 Billion to India for 2026–2032",
+      "description": "The seven-year strategic commitment covers Hyundai and Kia manufacturing expansion, R&D, local suppliers and future mobility. About US$700 million within the US$15.5 billion plan is allocated to the Indian R&D center and testing track.",
+      "points": [
+        "Announced on October 13, 2026, the US$15.5 billion investment runs from 2026 through 2032.",
+        "Approximately US$700 million is planned for the Indian R&D center, including a vehicle testing track; this is part of the overall commitment.",
+        "A dedicated Indian investment entity will coordinate capital deployment and partnerships. Manufacturing, supplier localization, charging and recycling are among the investment areas."
+      ],
+      "categories": [
+        "Automotive",
+        "Business",
+        "Infrastructure"
+      ],
+      "images": [
+        [
+          "https://www.hyundai.com/content/dam/hyundai/in/en/images/hyundai-story/news/2026/automotive-ecosystem-investment-banner.jpg",
+          "Official India automotive ecosystem investment announcement image",
+          "Hyundai Motor Group"
+        ]
+      ],
+      "refs": [
+        {
+          "url": "https://www.channelnewsasia.com/business/hyundai-motor-group-bets-155-billion-india-global-auto-hub-6456341",
+          "title": "Hyundai Motor Group bets $15.5 billion on India as global auto hub",
+          "publishedDate": "2026-10-13",
+          "confidence": 100,
+          "startDate": null,
+          "endDate": null,
+          "reasoning": "Reuters report independently confirms the investment amount, 2026–2032 period and approximately US$700 million R&D allocation."
+        }
+      ],
+      "gap": "Requested CNBC URL was blocked; verified the event using the operator announcement and Reuters/CNA instead.",
+      "sourceUrl": "https://www.hyundai.com/in/en/hyundai-story/media-center/press-release/hmil-to-accelerate-india-growth-with-automotive-ecosystem-investment",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15634,
+      "parentId": 15677,
+      "pinUrl": "https://www.chronopin.com/pin/15634",
+      "media": [
+        {
+          "originalUrl": "https://www.hyundai.com/content/dam/hyundai/in/en/images/hyundai-story/news/2026/automotive-ecosystem-investment-banner.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/78929c8c-d859-4205-8736-320416b9b493.jpeg"
+        }
+      ]
+    },
+    {
+      "key": "toyota-plan",
+      "company": "Toyota",
+      "wiki": "Toyota",
+      "desk": "@MotorDesk",
+      "date": "2025-11-13",
+      "amount": 10000000000,
+      "period": "Five years from November 2025",
+      "title": "Toyota Announces Up to US$10 Billion in Additional U.S. Investment Over Five Years",
+      "description": "Toyota announced up to US$10 billion of additional U.S. investment over five years. The commitment was presented alongside the opening of its nearly US$14 billion North Carolina battery plant; the two figures describe different investment scopes.",
+      "points": [
+        "The November 13 global announcement states an additional U.S. investment ceiling of US$10 billion over the next five years.",
+        "Toyota separately described the North Carolina battery plant as a nearly US$14 billion investment, with up to 5,100 jobs.",
+        "Later Kentucky and Indiana allocations belong within this five-year program; they should not be added to its headline ceiling."
+      ],
+      "categories": [
+        "Automotive",
+        "Business",
+        "Energy"
+      ],
+      "images": [
+        [
+          "https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2025/11/Toyota_North_Carolina_SOP_HERO-IMAGE-1000x600.jpg",
+          "North Carolina battery-plant opening accompanying the U.S. investment announcement",
+          "Toyota"
+        ]
+      ],
+      "gap": "Official global release and linked U.S. press gallery checked. Global release date is November 13; U.S. opening release is dated November 12.",
+      "sourceUrl": "https://global.toyota/en/newsroom/corporate/43553969.html",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15635,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15635",
+      "media": [
+        {
+          "originalUrl": "https://npr.brightspotcdn.com/dims4/default/9f83cdb/2147483647/strip/true/crop/3717x2478%2B0%2B0/resize/1760x1174%21/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F61%2F75%2F67747eb04a4fbfacb9c66f2a2b57%2Fted-ogawa.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/95bf5fed-281b-4961-b50c-69cd364e6669.jpeg"
+        }
+      ]
+    },
+    {
+      "key": "toyota-plants",
+      "company": "Toyota",
+      "wiki": "Toyota",
+      "desk": "@MotorDesk",
+      "date": "2026-03-23",
+      "amount": 1000000000,
+      "period": "Allocation announced March 2026 within the five-year U.S. program",
+      "title": "Toyota Allocates US$1 Billion to Kentucky and Indiana Manufacturing",
+      "description": "Toyota allocated US$800 million to Kentucky and US$200 million to Indiana. The US$1 billion total is part of the previously announced U.S. program of up to US$10 billion, supporting electric-vehicle preparation and vehicle assembly capacity.",
+      "points": [
+        "Kentucky receives US$800 million to prepare for a second battery electric vehicle and increase Camry and RAV4 assembly capacity.",
+        "Indiana receives US$200 million to expand Grand Highlander capacity.",
+        "The combined US$1 billion allocation sits within Toyota’s November 2025 five-year commitment of up to US$10 billion."
+      ],
+      "categories": [
+        "Automotive",
+        "Business"
+      ],
+      "images": [
+        [
+          "https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2026/03/Hero-Image_TMMK_Investment-Release-3.23.26_REDUCED-1000x600.jpg",
+          "Official Kentucky investment announcement photo",
+          "Toyota"
+        ],
+        [
+          "https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2026/03/Addl-Image_TMMK_Investment-Release-3.23.26_RESIZED-1000x600.jpg",
+          "Additional official photo from the Kentucky investment announcement",
+          "Toyota"
+        ],
+        [
+          "https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2026/03/Addl-Image-2_TMMK_Investment-Release-3.23.26_RESIZED-1000x600.jpg",
+          "Additional official photo from the Kentucky investment announcement",
+          "Toyota"
+        ]
+      ],
+      "sourceUrl": "https://pressroom.toyota.com/driven-by-people-powering-the-future/",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15636,
+      "parentId": 15635,
+      "pinUrl": "https://www.chronopin.com/pin/15636",
+      "media": [
+        {
+          "originalUrl": "https://npr.brightspotcdn.com/dims4/default/60955d1/2147483647/strip/true/crop/988x468%2B0%2B0/resize/880x417%21/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F39%2F08%2F8f1404924a8ba9e9806b791a8d4d%2Ftoyota-investment.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/06a30e84-2b17-4da5-93b3-97907650ae71.jpeg"
+        }
+      ]
+    },
+    {
+      "key": "gf-plan",
+      "company": "GLOBALFOUNDRIES",
+      "wiki": "GlobalFoundries",
+      "desk": "@TechDesk",
+      "date": "2025-06-04",
+      "amount": 16000000000,
+      "period": "Multi-year expansion; no single completion date stated",
+      "title": "GlobalFoundries Announces US$16 Billion U.S. Manufacturing and R&D Plan",
+      "description": "GlobalFoundries outlined US$16 billion for manufacturing, advanced packaging and R&D in New York and Vermont. The plan combines existing expansion commitments exceeding US$13 billion with an additional US$3 billion for technology development.",
+      "points": [
+        "The US$16 billion aggregate includes previously announced U.S. expansion plans rather than representing US$16 billion entirely in new spending.",
+        "An additional US$3 billion supports advanced R&D, packaging, silicon photonics and gallium nitride technologies.",
+        "The program spans New York and Vermont manufacturing and advanced packaging capabilities; the release gives no single completion deadline."
+      ],
+      "categories": [
+        "Semiconductors",
+        "Business",
+        "Computing"
+      ],
+      "images": [],
+      "gap": "Official release and site image metadata checked; generic branding and unrelated related-story images were excluded.",
+      "sourceUrl": "https://gf.com/news-and-events/news/globalfoundries-announces-16b-u-s-investment-to-reshore-essential-chip-manufacturing-and-accelerate-ai-growth/",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15637,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15637",
+      "media": []
+    },
+    {
+      "key": "gf-japan",
+      "company": "GLOBALFOUNDRIES",
+      "wiki": "GlobalFoundries",
+      "desk": "@TechDesk",
+      "date": "2026-10-14",
+      "amount": 21000000000,
+      "period": "First fab targeted for 2029; second fab timing unspecified",
+      "title": "Japan Initiative Provides Up to US$21 Billion for Two GlobalFoundries-Operated New York Fabs",
+      "description": "GlobalFoundries was selected to operate two new Malta, New York fabs under a U.S.–Japan initiative providing up to US$21 billion. Japan supplies the investment; GlobalFoundries supplies technology and operations. The first fab is expected online in 2029.",
+      "points": [
+        "Up to US$21 billion is initiative funding from Japan, rather than an equivalent GlobalFoundries corporate cash commitment.",
+        "Approximately US$10 billion would accelerate the first 300mm fab, targeted for 2029; another approximately US$10 billion would finance a second fab.",
+        "The funding ceiling and approximate fab allocations are distinct figures. The release does not establish that the full ceiling is additional to every earlier expansion commitment."
+      ],
+      "categories": [
+        "Semiconductors",
+        "Business",
+        "Infrastructure"
+      ],
+      "images": [],
+      "gap": "Official announcement and press photo metadata checked; no clearly captioned project photograph in article body.",
+      "sourceUrl": "https://gf.com/news-and-events/news/globalfoundries-selected-to-operate-two-new-semiconductor-fabs-in-new-york-under-landmark-us-japan-initiative/",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15638,
+      "parentId": 15637,
+      "pinUrl": "https://www.chronopin.com/pin/15638",
+      "media": []
+    },
+    {
+      "key": "siemens-plants",
+      "company": "Siemens",
+      "wiki": "Siemens",
+      "desk": "@BuildDesk",
+      "date": "2025-03-06",
+      "amount": 285000000,
+      "period": "Manufacturing facilities announced March 2025",
+      "title": "Siemens Invests US$285 Million in Texas and California Electrical Manufacturing",
+      "description": "Siemens announced US$285 million for electrical-equipment manufacturing facilities in Fort Worth, Texas and Pomona, California, with more than 900 expected jobs. The separate headline of more than US$10 billion also includes software and acquisition activity.",
+      "points": [
+        "US$285 million covers two electrical-products manufacturing facilities serving infrastructure and data-center demand.",
+        "Siemens expected more than 900 skilled manufacturing jobs from the facilities.",
+        "The release’s broader investment headline exceeds US$10 billion and includes the planned Altair acquisition; it is not a factory-only capital expenditure figure."
+      ],
+      "categories": [
+        "Business",
+        "Infrastructure",
+        "Energy"
+      ],
+      "images": [
+        [
+          "https://assets.new.siemens.com/siemens/assets/api/uuid:bfc51235-9f6b-4d38-a0b7-1df0ad95c156/width:1024/Moonshot-entry.jpg",
+          "Fort Worth manufacturing facility",
+          "Siemens"
+        ],
+        [
+          "https://assets.new.siemens.com/siemens/assets/api/uuid:eb13d4eb-4cf5-4e2a-98fb-8f8e9cc67c74/width:1024/Wellwater.JPG",
+          "Pomona manufacturing facility",
+          "Siemens"
+        ]
+      ],
+      "sourceUrl": "https://press.siemens.com/global/en/pressrelease/siemens-boosting-us-investments-more-10-billion-american-manufacturing-jobs-software",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15639,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15639",
+      "media": [
+        {
+          "originalUrl": "https://assets.new.siemens.com/siemens/assets/api/uuid:bfc51235-9f6b-4d38-a0b7-1df0ad95c156/width:1024/Moonshot-entry.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/b019cffd-0a84-41a6-930f-f2ea0fdcd48b.jpeg"
+        },
+        {
+          "originalUrl": "https://assets.new.siemens.com/siemens/assets/api/uuid:eb13d4eb-4cf5-4e2a-98fb-8f8e9cc67c74/width:1024/Wellwater.JPG",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/b454f939-984c-4794-a8eb-f29c79f7c398.jpeg"
+        }
+      ]
+    },
+    {
+      "key": "siemens-milestone",
+      "company": "Siemens",
+      "wiki": "Siemens",
+      "desk": "@BuildDesk",
+      "date": "2026-05-04",
+      "amount": 1000000000,
+      "period": "Cumulative over the preceding five years; projects coming online in 2026",
+      "title": "Siemens Reports US$1 Billion U.S. Manufacturing Investment Milestone",
+      "description": "Siemens reported US$1 billion of domestic manufacturing investments over five years, supporting more than 2,200 jobs. The cumulative milestone spans electrical infrastructure and passenger rail projects, with facilities coming online during 2026.",
+      "points": [
+        "The US$1 billion figure is a cumulative five-year manufacturing milestone, rather than a new one-day US$1 billion commitment.",
+        "Projects support power equipment, industrial infrastructure and passenger rail, with investments adding more than 2,200 jobs.",
+        "This cumulative milestone should not be mechanically added to earlier individual Siemens factory announcements."
+      ],
+      "categories": [
+        "Business",
+        "Infrastructure",
+        "Energy",
+        "Transport"
+      ],
+      "images": [],
+      "gap": "Official article image and linked project imagery checked. Hero is general industrial imagery; excluded to avoid presenting it as a specific new factory.",
+      "sourceUrl": "https://news.siemens.com/en-us/siemens-achieves-1-billion-us-manufacturing-investments/",
+      "currency": "USD",
+      "status": "Reported cumulative investment milestone",
+      "pinId": 15640,
+      "parentId": 15639,
+      "pinUrl": "https://www.chronopin.com/pin/15640",
+      "media": []
+    },
+    {
+      "key": "lilly-foundry",
+      "company": "Eli Lilly",
+      "wiki": "Eli_Lilly_and_Company",
+      "desk": "@HealthDesk",
+      "date": "2024-10-02",
+      "amount": 4500000000,
+      "period": "Opening targeted for late 2027 in the announcement",
+      "title": "Eli Lilly Commits US$4.5 Billion to the Indiana Medicine Foundry",
+      "description": "Lilly announced US$4.5 billion for a Lebanon, Indiana center combining manufacturing-process research with production of clinical-trial medicines. The announcement targeted a late-2027 opening and around 400 full-time jobs.",
+      "points": [
+        "The US$4.5 billion Medicine Foundry commitment was announced on October 2, 2024.",
+        "The site is designed to develop manufacturing methods and supply clinical trials, with technologies later transferred to commercial sites.",
+        "Late 2027 was the announced opening target. This historical commitment is distinct from Lilly’s additional US$4.5 billion allocation across two other Lebanon sites in May 2026."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Science"
+      ],
+      "images": [
+        [
+          "https://mma.prnewswire.com/media/2521285/Aerial_View__ID_ddd37fd446ae__copy.jpg",
+          "Artist rendering of the planned Lilly Medicine Foundry",
+          "Eli Lilly and Company / PR Newswire"
+        ]
+      ],
+      "sourceUrl": "https://investor.lilly.com/news-releases/news-release-details/lilly-announces-new-45-billion-site-lilly-medicine-foundry-drive",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15641,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15641",
+      "media": [
+        {
+          "originalUrl": "https://mma.prnewswire.com/media/2521285/Aerial_View__ID_ddd37fd446ae__copy.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/49334933-ae49-4c2a-bfe2-f03262259d82.jpeg"
+        }
+      ]
+    },
+    {
+      "key": "lilly-indiana",
+      "company": "Eli Lilly",
+      "wiki": "Eli_Lilly_and_Company",
+      "desk": "@HealthDesk",
+      "date": "2026-05-06",
+      "amount": 4500000000,
+      "period": "Additional commitment announced May 2026; Lebanon API opening targeted for 2027",
+      "title": "Eli Lilly Adds US$4.5 Billion Across Two Indiana Manufacturing Sites",
+      "description": "Lilly committed an additional US$4.5 billion to Lebanon API and Lebanon Advanced Therapies, taking Indiana capital expansion commitments since 2020 above US$21 billion. It also opened its dedicated genetic-medicine manufacturing facility.",
+      "points": [
+        "The additional US$4.5 billion supports Lebanon API and Lebanon Advanced Therapies, two of the campus’s three planned sites.",
+        "The company reported total Indiana expansion commitments of more than US$21 billion since 2020; this cumulative figure includes earlier commitments.",
+        "Lebanon Advanced Therapies opened on May 6, 2026. Lilly stated a 2027 opening target for Lebanon API; the Medicine Foundry remains a separate campus project."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Science"
+      ],
+      "images": [],
+      "gap": "Official investor announcement and media links checked; only a generic laboratory hero and corporate logo were available, so no site-specific photograph added.",
+      "sourceUrl": "https://investor.lilly.com/node/54216",
+      "currency": "USD",
+      "status": "Announced investment commitment / allocation",
+      "pinId": 15642,
+      "parentId": 15641,
+      "pinUrl": "https://www.chronopin.com/pin/15642",
+      "media": []
+    }
+  ]
+}

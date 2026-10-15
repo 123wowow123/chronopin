@@ -67,7 +67,11 @@ export async function rethreadDuplicateGroup(
 
   // 1. Load all pins in the duplicate group
   const rows = await db.query<GroupPinRow>(
-    `SELECT p."id", p."parentId", p."title", p."favoriteCount", p."viewCount", p."likeCount", p."utcCreatedDateTime", u."userName" AS "author"
+    `SELECT p."id", p."parentId", p."title",
+       (SELECT count(*)::int FROM "Favorite" f WHERE f."pinId" = p.id) AS "favoriteCount",
+       (SELECT count(*)::int FROM "PinView" v WHERE v."pinId" = p.id) AS "viewCount",
+       (SELECT count(*)::int FROM "Like" l WHERE l."pinId" = p.id) AS "likeCount",
+       p."utcCreatedDateTime", u."userName" AS "author"
      FROM "Pin" p
      LEFT JOIN "User" u ON u.id = p."userId"
      WHERE p."id" = ANY($1::int[]) AND p."utcDeletedDateTime" IS NULL`,

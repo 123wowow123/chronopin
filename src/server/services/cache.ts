@@ -55,14 +55,20 @@ export function setOfferedLocales(locales: OtherLocale[]) {
   revalidateTag(TAGS.sitemap, { expire: 0 });
 }
 
+const safeRevalidateTag = (tag: string, options?: any) => {
+  try {
+    revalidateTag(tag, options);
+  } catch {}
+};
+
 // The pin's own page expires at once, so its author sees the edit they just
 // made (and the new slug agrees with the proxy's). Lists of pins can be a
 // moment stale.
 export function invalidatePin(id: number | string) {
   pinPathCache().delete(Number(id));
-  revalidateTag(TAGS.pin(id), { expire: 0 });
-  revalidateTag(TAGS.timeline, 'max');
-  revalidateTag(TAGS.sitemap, 'max');
+  safeRevalidateTag(TAGS.pin(id), { expire: 0 });
+  safeRevalidateTag(TAGS.timeline, 'max');
+  safeRevalidateTag(TAGS.sitemap, 'max');
 }
 
 // Only the pin's own page changed (a comment's score, say): the timeline and

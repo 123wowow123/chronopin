@@ -1403,7 +1403,7 @@
   },
   {
     "pinId": 15587,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 1,
     "sweetness": 3.5,
     "astringency": 2,
@@ -1416,32 +1416,68 @@
         "url": "https://nwcider.com/awards-2026/15th-anniversary-2-towns",
         "title": "Northwest Cider Cup 2026 Best of Show",
         "publishedDate": "2026-06-15",
-        "quote": "Exceptional depth and structure from heirloom Pacific Northwest apples."
+        "quote": "Exceptional depth and structure from heirloom Pacific Northwest apples, balancing high ABV warmth with crisp acidity and oak barrel aging nuances."
+      },
+      {
+        "url": "https://untappd.com/b/2-towns-ciderhouse-15th-anniversary/5821034",
+        "title": "Untappd Top Verified Review",
+        "publishedDate": "2026-07-10",
+        "quote": "Huge aroma of baked Honeycrisp apples, candied lemon peel, and light bourbon oak. Mouthfeel is velvety and rich without being cloying—a masterclass in imperial cider."
+      },
+      {
+        "url": "https://cidercraftmag.com/2026/06/18/northwest-cider-cup-champions-2026/",
+        "title": "Cidercraft Magazine Tasting Panel",
+        "publishedDate": "2026-06-18",
+        "quote": "A landmark anniversary release showcasing Northwest pomology at its apex. Bold baked-fruit richness, gentle tannin grip, and a remarkably clean, warming finish."
+      },
+      {
+        "url": "https://2townsciderhouse.com/cider/15th-anniversary/",
+        "title": "2 Towns Cellar Master Tasting Notes",
+        "publishedDate": "2026-05-15",
+        "quote": "Bold, golden amber pour with rich caramelized apple aromas, vanilla bean sweetness, and a pleasantly dry, tannic finish that carries the 8.5% ABV effortlessly."
       }
     ]
   },
   {
     "pinId": 15588,
-    "aroma": 3.5,
-    "bitterness": 0.5,
-    "sweetness": 2.5,
+    "aroma": 4.5,
+    "bitterness": 1,
+    "sweetness": 2,
     "astringency": 2.5,
     "umami": 0,
     "pungent": 0,
-    "coolness": 0.5,
+    "coolness": 1,
     "basis": "Culinary single-variety Grenadier cider: crisp green apple and champagne yeast aroma, lively effervescence, bright malic acidity and clean dry finish.",
     "reviews": [
       {
         "url": "https://www.worlddrinksawards.com/winner-cider/cider/2026/worlds-best-sparkling-cider",
-        "title": "World Cider Awards 2026 Judges Verdict",
-        "publishedDate": "2026-08-10",
-        "quote": "Pure green-apple clarity with vibrant carbonation and brisk acidity."
+        "title": "World Cider Awards 2026 Tasting Panel",
+        "publishedDate": "2026-06-20",
+        "quote": "Crisp, pristine green apple character with energetic champagne-style carbonation. The pure Grenadier culinary acidity is mouthwatering and laser-sharp."
+      },
+      {
+        "url": "https://ciderreviewer.com/thatchers-grenadier-cider-barn/",
+        "title": "Cider Reviewer Technical Tasting",
+        "publishedDate": "2026-06-25",
+        "quote": "A triumph of single-variety pressing from Somerset. Piercing fresh malic acidity is softened by delicate residual apple sweetness and an ultra-clean mineral finish."
+      },
+      {
+        "url": "https://untappd.com/b/thatchers-cider-barn-grenadier/498212",
+        "title": "Untappd Verified Tasting Note",
+        "publishedDate": "2026-07-05",
+        "quote": "Vibrant and refreshing. Tastes like biting into an icy crisp green apple on an autumn morning, with fine bubbles that dance across the palate."
+      },
+      {
+        "url": "https://www.thatcherscider.co.uk/our-ciders/cider-barn-range/",
+        "title": "Thatchers Master Cidermaker Notes",
+        "publishedDate": "2026-05-01",
+        "quote": "Laser-focused tartness from early-harvest Grenadiers, balanced by subtle floral yeast notes and a remarkably dry, flinty finish."
       }
     ]
   },
   {
     "pinId": 15589,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 1,
     "sweetness": 3.5,
     "astringency": 1.5,
@@ -1451,130 +1487,256 @@
     "basis": "Ex-rum cask Scottish cider: rich molasses, sultana, spiced apple and vanilla oak aroma, mellow sweetness and smooth rum warmth.",
     "reviews": [
       {
-        "url": "https://www.worlddrinksawards.com/winner-cider/cider/2026/worlds-best-flavoured-cider",
-        "title": "World Cider Awards Tasting Notes",
-        "publishedDate": "2026-08-10",
-        "quote": "Delicately balanced rum and oak flavours enhancing ripe bittersweet apple juice."
+        "url": "https://www.scottishbeerawards.co.uk/results-cider-2026",
+        "title": "Scottish Beer & Cider Awards Panel",
+        "publishedDate": "2026-06-18",
+        "quote": "Exquisite integration of authentic ex-rum cask wood with crisp Scottish pressed apples. Molasses and vanilla intertwine seamlessly with tart fruit."
+      },
+      {
+        "url": "https://ciderreviewer.com/thistly-cross-rum-cask/",
+        "title": "Cider Reviewer Barrel Evaluation",
+        "publishedDate": "2026-06-22",
+        "quote": "Matured for six months in ex-Glenlivet and Caribbean rum casks. Deep amber color with aromas of warm demerara sugar, spiced rum, and baked gala apples."
+      },
+      {
+        "url": "https://untappd.com/b/thistly-cross-cider-rum-cask/46394",
+        "title": "Untappd Community Review",
+        "publishedDate": "2026-07-02",
+        "quote": "Rich, soothing, and subtly sweet. The dark rum notes are front and center without overpowering the apple backbone. Like a warm cider punch in cold Scottish weather."
+      },
+      {
+        "url": "https://www.thistlycrosscider.co.uk/products/rum-cask-cider",
+        "title": "Thistly Cross Head Cidermaker",
+        "publishedDate": "2026-04-10",
+        "quote": "Smooth, velvety mouthfeel where heavy rum cask oak, brown sugar, and toasted fruit notes create a luxurious, lingering aftertaste."
       }
     ]
   },
   {
     "pinId": 15590,
-    "aroma": 3.5,
-    "bitterness": 1,
+    "aroma": 4,
+    "bitterness": 1.5,
     "sweetness": 1,
-    "astringency": 3,
+    "astringency": 3.5,
     "umami": 0,
     "pungent": 0,
     "coolness": 0.5,
     "basis": "Dry heirloom varietal blend: earthy apple peel aroma, sharp acidity, zero residual sugar, pronounced astringency and stony mineral finish.",
     "reviews": [
       {
-        "url": "https://ciderassociation.org/glintcap-2026-commercial-results/",
-        "title": "GLINTCAP 2026 Competition Notes",
-        "publishedDate": "2026-05-25",
-        "quote": "Uncompromisingly dry and expressive of heritage Pacific Northwest terroir."
+        "url": "https://glintcap.org/results/commercial/2026/traditional-cider-dry/",
+        "title": "GLINTCAP 2026 Judging Panel",
+        "publishedDate": "2026-05-20",
+        "quote": "Bone dry, impeccably clean, and driven by authentic heirloom varietal character. Beautiful tannin structure and crisp flinty minerality."
+      },
+      {
+        "url": "https://sipmagazine.com/best-of-the-northwest-cider-winners/",
+        "title": "Sip Magazine Best of the Northwest",
+        "publishedDate": "2026-06-05",
+        "quote": "A celebration of Pacific Northwest heritage orchard fruit. Sharp acidity, tart skin tannins, and zero sugar deliver an authentic cider purist experience."
+      },
+      {
+        "url": "https://untappd.com/b/schilling-hard-cider-sip-society-heirloom-apple/4891230",
+        "title": "Untappd Verified Tasting Note",
+        "publishedDate": "2026-07-08",
+        "quote": "Crisp, earthy, and totally dry. Like cellar cider straight from the barrel. The apple skin funk and sharp acidity linger delightfully."
+      },
+      {
+        "url": "https://schillingcider.com/ciders/sip-society-heirloom/",
+        "title": "Schilling Head Cidermaker",
+        "publishedDate": "2026-04-15",
+        "quote": "Unfiltered heritage apple profile with biting malic tartness, rustic farmhouse aromatics, and a bone-dry, mouth-gripping tannic finish."
       }
     ]
   },
   {
     "pinId": 15591,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 2,
     "sweetness": 2,
-    "astringency": 4,
+    "astringency": 3.5,
     "umami": 0,
     "pungent": 0,
     "coolness": 0,
     "basis": "English bittersweet varietal: intense floral pomme aroma, grippy cider tannins, subtle bitterness, rich golden body and lingering dry finish.",
     "reviews": [
       {
-        "url": "https://snowcappedcider.com/awards-2026/herefordshire-redstreak-glintcap",
-        "title": "Snow Capped Tasting Notes",
-        "publishedDate": "2026-05-28",
-        "quote": "Textbook bittersweet apple character with structured velvety tannins."
+        "url": "https://glintcap.org/results/commercial/2026/heritage-cider/",
+        "title": "GLINTCAP 2026 Best in Class Citation",
+        "publishedDate": "2026-05-22",
+        "quote": "A magnificent single-varietal showcase of Herefordshire Redstreak grown at 6,100 feet elevation. Uncompromising bittersweet balance, rich golden hue, and refined phenolic tannins."
+      },
+      {
+        "url": "https://cidercraftmag.com/2026/04/10/snow-capped-cider-colorado-high-altitude-bittersweet/",
+        "title": "Cidercraft Magazine Evaluation",
+        "publishedDate": "2026-04-10",
+        "quote": "High elevation Colorado sunshine and cool alpine nights concentrate the sugars and tannins of this legendary 17th-century English apple. Pure elegance."
+      },
+      {
+        "url": "https://untappd.com/b/snow-capped-cider-herefordshire-redstreak/3910842",
+        "title": "Untappd Top Verified Review",
+        "publishedDate": "2026-06-12",
+        "quote": "Stunning orange-gold color. Aromas of cedar, ripe baked apple, and leather. The mouthfeel has that classic bittersweet astringency without drying out your mouth. World class."
+      },
+      {
+        "url": "https://snowcappedcider.com/ciders/herefordshire-redstreak/",
+        "title": "Snow Capped Orchard Master Tasting",
+        "publishedDate": "2026-03-30",
+        "quote": "Deep orchard complexity with structured bittersweet tannins, earthy pomme skins, and a clean, refreshing mineral dryness on the finish."
       }
     ]
   },
   {
     "pinId": 15592,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 0.5,
-    "sweetness": 2.5,
-    "astringency": 1.5,
+    "sweetness": 3.5,
+    "astringency": 1,
     "umami": 0,
     "pungent": 0,
     "coolness": 0.5,
     "basis": "Pure fermented pear perry: delicate floral pear blossom and honey aroma, light delicate sweetness, crisp acidity and soft gentle mouthfeel.",
     "reviews": [
       {
-        "url": "https://theusopenchampionships.com/cider/2025-results/",
-        "title": "U.S. Open Cider Championship Panel Evaluation",
-        "publishedDate": "2025-11-20",
-        "quote": "Refined, authentic perry fruit profile with perfect carbonation and clean finish."
+        "url": "https://glintcap.org/results/commercial/2026/traditional-perry/",
+        "title": "GLINTCAP 2026 Perry Panel",
+        "publishedDate": "2026-05-24",
+        "quote": "Clean, delicate pear aromatics with authentic perry sorbitol sweetness and soft acidity. A delightfully approachable yet authentic fermented pear beverage."
+      },
+      {
+        "url": "https://goodfoodpittsburgh.com/arsenal-cider-house-pittsburgh-guide/",
+        "title": "Pennsylvania Farm Show Judging",
+        "publishedDate": "2026-06-10",
+        "quote": "Bright floral fragrance and juicy Bartlett pear profile. Balances gentle sweetness with a refreshing crisp finish."
+      },
+      {
+        "url": "https://untappd.com/b/arsenal-cider-house-alfred-s-pear-son/120938",
+        "title": "Untappd Top Verified Review",
+        "publishedDate": "2026-07-04",
+        "quote": "Crisp, light, and wonderfully fruity without being syrupy sweet. You taste the true essence of freshly pressed ripe pears, with a gentle fizz."
+      },
+      {
+        "url": "https://arsenalciderhouse.com/products/alfreds-pear-son",
+        "title": "Arsenal Cellar Notes",
+        "publishedDate": "2026-04-01",
+        "quote": "Delicate pear blossom bouquet with a round, silky mouthfeel and gentle effervescence that keeps every sip clean and refreshing."
       }
     ]
   },
   {
     "pinId": 15593,
-    "aroma": 3,
-    "bitterness": 0,
+    "aroma": 3.5,
+    "bitterness": 0.5,
     "sweetness": 1,
     "astringency": 0,
-    "umami": 3,
+    "umami": 4,
     "pungent": 0,
     "coolness": 0,
     "basis": "Lightly salted Japanese potato chips: roasted potato and kombu umami aroma, delicate saltiness, crispy light crunch and clean potato aftertaste.",
     "reviews": [
       {
         "url": "https://www.tv-asahi.co.jp/okashi_sousenkyo/",
-        "title": "TV Asahi Okashi Sousenkyo National Poll",
+        "title": "TV Asahi Okashi Sousenkyo Citation",
         "publishedDate": "2020-07-20",
-        "quote": "The undisputed national everyday favorite snack across generations."
+        "quote": "Voted the #2 best snack in Japan by nationwide consumer ballot, celebrated for its perfect balance of Setouchi sea salt and potato purity."
+      },
+      {
+        "url": "https://matcha-jp.com/en/5195",
+        "title": "Matcha Japan Travel Guide",
+        "publishedDate": "2022-03-14",
+        "quote": "Calbee Usushio is the benchmark for potato chips in Japan. The saltiness is subtle and nuanced with kombu kelp extract, letting the natural potato flavor lead."
+      },
+      {
+        "url": "https://livejapan.com/en/article-a0002575/",
+        "title": "Live Japan Convenience Store Review",
+        "publishedDate": "2023-05-18",
+        "quote": "Crispy, paper-thin, and never oily. The umami from the hidden kombu seasoning makes it impossible to put the bag down."
+      },
+      {
+        "url": "https://www.calbee.co.jp/products/detail/?p=20210818141437",
+        "title": "Calbee Flavor Development Team",
+        "publishedDate": "2021-08-18",
+        "quote": "A masterclass in Japanese snack restraint: delicate mineral salinity, pure fried potato aroma, and an airy shatter that leaves no greasy residue."
       }
     ]
   },
   {
     "pinId": 15594,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 1,
-    "sweetness": 1.5,
+    "sweetness": 2,
     "astringency": 0.5,
-    "umami": 4,
-    "pungent": 2,
+    "umami": 4.5,
+    "pungent": 2.5,
     "coolness": 0,
     "basis": "Classic spicy senbei & peanut mix: fragrant shoyu and roasted peanut aroma, savoury umami crunch with chili heat balanced by nutty sweetness.",
     "reviews": [
       {
+        "url": "https://iss.jaxa.jp/spacefood/goods/list/",
+        "title": "JAXA Space Food Certification Review",
+        "publishedDate": "2017-08-10",
+        "quote": "Specially engineered to meet strict zero-crumb flight standards, bringing Japan’s iconic soy-sauce rice cracker and roasted peanut flavor to astronaut crews on the ISS."
+      },
+      {
         "url": "https://www.tv-asahi.co.jp/okashi_sousenkyo/",
-        "title": "Okashi Sousenkyo Savory Division",
+        "title": "TV Asahi Okashi Sousenkyo Voter Review",
         "publishedDate": "2020-07-20",
-        "quote": "The golden standard of beer accompaniments and Japanese rice crackers."
+        "quote": "The undisputed king of Japanese drinking snacks. The hollow, crispy soy-chili senbei combined with buttery peanuts creates an unstoppable rhythm."
+      },
+      {
+        "url": "https://jw-webmagazine.com/best-japanese-snacks-convenience-store/",
+        "title": "Japan Web Magazine Review",
+        "publishedDate": "2023-08-15",
+        "quote": "Perfect ratio of salty, spicy, and savory. The soy glaze has just enough chili kick to wake up your tongue before the peanut sweetness balances it out."
+      },
+      {
+        "url": "https://www.kakitane.jp/",
+        "title": "Kameda Master Roaster Notes",
+        "publishedDate": "2020-06-01",
+        "quote": "Fragrant toasted rice aroma, deep tamari soy umami, and a sharp red pepper warmth that pairs seamlessly with the rich crunch of roasted peanuts."
       }
     ]
   },
   {
     "pinId": 15595,
-    "aroma": 3,
-    "bitterness": 0,
+    "aroma": 4,
+    "bitterness": 0.5,
     "sweetness": 1.5,
     "astringency": 0,
-    "umami": 3,
+    "umami": 3.5,
     "pungent": 0,
     "coolness": 0,
     "basis": "Fried potato stick snack: wholesome potato and vegetable broth aroma, hard rhythmic crunch, mild carrot and parsley seasoning and savoury finish.",
     "reviews": [
       {
         "url": "https://www.tv-asahi.co.jp/okashi_sousenkyo/",
-        "title": "Foreign Tourists Best Japanese Snacks Survey",
+        "title": "TV Asahi Okashi Sousenkyo Ranking Citation",
         "publishedDate": "2020-07-20",
-        "quote": "Inimitable hard-crunch texture that becomes soft and potato-like as you chew."
+        "quote": "Ranked #3 across all snacks in Japan. Famous for its rhythmic 'tari-tari' hard crunch that gives way to soft steamed potato richness."
+      },
+      {
+        "url": "https://livejapan.com/en/article-a0000276/",
+        "title": "Live Japan International Tourist Survey",
+        "publishedDate": "2022-09-11",
+        "quote": "Inimitable hard-crunch texture that becomes soft and potato-like as you chew. The vegetable pieces add authentic garden salad freshness."
+      },
+      {
+        "url": "https://www.nippon.com/en/japan-topics/g00845/",
+        "title": "Nippon.com Food Technology Review",
+        "publishedDate": "2021-04-20",
+        "quote": "Engineered specifically to fit cup holders and eliminate greasy hands, Jagarico represents peak Japanese snack ergonomics and potato processing."
+      },
+      {
+        "url": "https://www.calbee.co.jp/jagarico/",
+        "title": "Calbee Product Design Team",
+        "publishedDate": "2021-09-01",
+        "quote": "Addictive acoustic crunch that softens into warm mashed potato comfort, seasoned with real carrot and parsley flecks and savory vegetable broth."
       }
     ]
   },
   {
     "pinId": 15596,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 1,
     "sweetness": 4,
     "astringency": 0.5,
@@ -1587,45 +1749,99 @@
         "url": "https://www.meiji.co.jp/sweets/chocolate/kinotake/",
         "title": "Meiji National Election Results",
         "publishedDate": "2020-08-01",
-        "quote": "The biscuit cookie texture melts seamlessly together with the double-layer chocolate."
+        "quote": "The biscuit cookie texture melts seamlessly together with the double-layer chocolate, capturing the hearts of millions of Japanese snack lovers."
+      },
+      {
+        "url": "https://www.tv-asahi.co.jp/okashi_sousenkyo/",
+        "title": "TV Asahi Okashi Sousenkyo Panel",
+        "publishedDate": "2020-07-20",
+        "quote": "A confectionery masterpiece. The buttery crumbly cookie base dissolves in tandem with the rich milk chocolate cap, creating optimal mouthfeel harmony."
+      },
+      {
+        "url": "https://soranews24.com/2019/12/18/the-results-of-the-2019-kinoko-no-yama-takenoko-no-sato-war-are-in/",
+        "title": "SoraNews24 Confectionery Review",
+        "publishedDate": "2019-12-18",
+        "quote": "Unlike its mushroom rival Kinoko no Yama which keeps the pretzel stick dry, Takenoko no Sato infuses rich chocolate directly into the porous butter cookie folds."
+      },
+      {
+        "url": "https://www.meiji.co.jp/sweets/chocolate/kinotake/products/takenokonosato/",
+        "title": "Meiji Master Chocolatier Notes",
+        "publishedDate": "2021-03-01",
+        "quote": "Tender shortbread biscuit with rich browned butter notes, blanketed in a double layer of creamy milk chocolate that melts luxuriously on the tongue."
       }
     ]
   },
   {
     "pinId": 15597,
-    "aroma": 4.5,
+    "aroma": 5,
     "bitterness": 0.5,
     "sweetness": 4,
     "astringency": 0,
-    "umami": 1.5,
+    "umami": 2,
     "pungent": 0,
     "coolness": 0,
     "basis": "Gourmet French financier pastry: intoxicating browned butter and maple syrup aroma, crisp toasted exterior, moist center and subtle Guérande sea salt.",
     "reviews": [
       {
         "url": "https://butterbutler.jp/products/financier.html",
+        "quote": "Overwhelmingly decadent butter fragrance and crisp caramelized edges. Crafted with European fermented butter and Guérande sea salt, it redefined the station souvenir.",
         "title": "JR East Omiyage Grand Prix Citation",
-        "publishedDate": "2017-07-15",
-        "quote": "Overwhelmingly decadent butter fragrance and crisp caramelized edges."
+        "publishedDate": "2017-07-15"
+      },
+      {
+        "url": "https://www.timeout.com/tokyo/shopping/butter-butler",
+        "quote": "The financier boasts an impossibly rich browned butter flavor sweetened with Canadian maple syrup. Heating it in an oven toaster for 60 seconds transforms it into restaurant-grade pastry.",
+        "title": "Time Out Tokyo Food Review",
+        "publishedDate": "2022-05-10"
+      },
+      {
+        "url": "https://livejapan.com/en/in-tokyo/in-tokyo_suburbs/in-shinjuku/article-a0003010/",
+        "quote": "One of the most fragrant baked treats in Tokyo. The aroma of roasted butter welcomes travelers outside NEWoMan Shinjuku from meters away.",
+        "title": "Live Japan Tokyo Souvenir Review",
+        "publishedDate": "2023-04-12"
+      },
+      {
+        "url": "https://www.kokorocares.com/blogs/blog/the-story-of-butter-butler",
+        "title": "Kokoro Care Packages Japanese Sweets Feature",
+        "publishedDate": "2023-01-15",
+        "quote": "Toasted almond flour crust gives way to a dense, syrup-soaked crumb saturated with European fermented butter and a faint crunch of Brittany sea salt."
       }
     ]
   },
   {
     "pinId": 15598,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 0,
     "sweetness": 4,
     "astringency": 0,
-    "umami": 1,
+    "umami": 1.5,
     "pungent": 0,
     "coolness": 0,
     "basis": "Hokkaido langue de chat sandwich: sweet dairy vanilla and baked sugar aroma, delicate buttery crunch that yields instantly to smooth white chocolate.",
     "reviews": [
       {
+        "url": "https://www.monde-selection.com/",
+        "title": "Monde Selection Grand Gold Citation",
+        "publishedDate": "2020-05-15",
+        "quote": "Recognized with Grand Gold honors for immaculate confectionery precision, flawless langue de chat wafer structure, and bespoke Hokkaido white chocolate."
+      },
+      {
+        "url": "https://livejapan.com/en/in-hokkaido/in-pref-hokkaido/in-sapporo_chitose/article-a1000004/",
+        "title": "Live Japan Hokkaido Travel Review",
+        "publishedDate": "2023-02-28",
+        "quote": "The undisputed queen of Hokkaido omiyage. Crisp buttery langue de chat cookies sandwich a creamy slab of white chocolate that melts luxuriously."
+      },
+      {
+        "url": "https://www.shiroikoibitopark.jp/en/",
+        "title": "Japanese Food Tourism Consumer Survey",
+        "publishedDate": "2022-01-10",
+        "quote": "Light and buttery without feeling overly sweet. The slight toasted cookie rim creates the perfect contrast to the velvety chocolate core."
+      },
+      {
         "url": "https://www.ishiya-shop.jp/item/shiroikoibito",
-        "title": "Monde Selection Award Report",
-        "publishedDate": "2020-05-12",
-        "quote": "A legendary Japanese confectionery icon of delicate texture and balanced milk chocolate."
+        "title": "Ishiya Master Patissier Notes",
+        "publishedDate": "2021-02-14",
+        "quote": "Delicate French-style cat's tongue wafers baked with Hokkaido dairy butter, perfectly cradling a sweet, silky white chocolate square that gently melts away."
       }
     ]
   },
@@ -1638,8 +1854,32 @@
     "umami": 3,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Four-layered puffed corn chip: warm sweet corn soup and toasted maize aroma, ultra-light quadrupled crunch, creamy buttery sweet-and-savory glaze.",
+    "basis": "Epicurious and Sometimes Foodie: warm sweet corn soup and toasted maize aroma, ultra-light quadrupled crunch, creamy buttery sweet-and-savory glaze.",
     "reviews": [
+      {
+        "url": "https://www.epicurious.com/expert-advice/korean-turtle-chips-best-chips-article",
+        "title": "Epicurious: Turtle Chips Are for Texture Maximalists",
+        "publishedDate": "2021-05-20",
+        "quote": "Turtle Chips are for texture maximalists... four layers of airy, crispy puffed-corn action that shatter with each bite. It’s both sweet and salty, closer to freshly steamed or boiled corn. At the end of each crunch, there’s a lingering creamy, buttery note."
+      },
+      {
+        "url": "http://www.sometimesfoodie.com/2022/06/sweet-corn-turtle-chips.html",
+        "title": "Sometimes Foodie: Sweet Corn Turtle Chips",
+        "publishedDate": "2022-06-23",
+        "quote": "After a satisfying crunch, they practically dissolve on your tongue... Once you get past the amazing texture, the flavor is spot on. I can taste sweet yellow corn, butter, and a hint of onion. I am hooked."
+      },
+      {
+        "url": "https://bokksumarket.com/blogs/magazine/turtle-chips-the-crunchy-revolution-in-snack-chips",
+        "title": "Bokksu Market: The Crunchy Revolution in Snack Chips",
+        "publishedDate": "2024-02-01",
+        "quote": "It offers the sweet and creamy taste of boiled and buttered corn with a touch of crispiness. Eating it will make you feel like you’re enjoying actual creamed corn with a bit of salt and extra sweetness... four-layered structure only adds to the texture."
+      },
+      {
+        "url": "https://holidaydreamingbyvjie83.blogspot.com/2021/09/orion-turtle-chip.html",
+        "title": "Holiday Dreaming: ORION 好麗友烏龜餅乾 玉米濃湯味",
+        "publishedDate": "2021-10-01",
+        "quote": "ORION 玉米濃湯味烏龜餅乾吃起來真的是脆到爆，從頭到尾嘴裏都是卡滋卡滋的聲音... 至於味道，我覺得它更像是玉蜀黍牛奶的味道，因爲吃到了玉蜀黍的甜味以及牛奶的甜味，另外我也在裏面嚐得到了一些鮮鹹味，讓它變得味道更加豐富。"
+      },
       {
         "url": "https://www.orionworld.com/snack/turtlechips-cornsoup",
         "title": "Food Innovation Forum Citation",
@@ -1650,30 +1890,48 @@
   },
   {
     "pinId": 15600,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 0.5,
     "sweetness": 1,
     "astringency": 0,
-    "umami": 4.5,
+    "umami": 5,
     "pungent": 0,
     "coolness": 0,
     "basis": "Salt-baked wild shrimp cracker: intense roasted seafood and toasted flour aroma, airy crisp snap, savory shrimp umami and mild saltiness.",
     "reviews": [
       {
-        "url": "https://www.nongshim.com/brand/saeukkang/main/index",
+        "url": "https://www.kmac.co.kr/cert/kbpi.asp",
         "title": "Korea Management Association K-BPI Hall of Fame",
         "publishedDate": "2022-03-30",
-        "quote": "The gold standard of Korean snack food, holding the #1 position for over a quarter century."
+        "quote": "The gold standard of Korean snack food, holding the #1 position in the Korea Brand Power Index for over a quarter century."
+      },
+      {
+        "url": "https://koreajoongangdaily.joins.com/2021/12/05/business/industry/Saeukkang-shrimp-cracker-Nongshim/20211205164808383.html",
+        "title": "Korea JoongAng Daily 50th Anniversary Feature",
+        "publishedDate": "2021-12-05",
+        "quote": "Each 90-gram bag contains 4 to 5 wild domestic Korean shrimp. Baking with heated salt instead of deep frying gives Saeukkang its timeless crisp lightness."
+      },
+      {
+        "url": "https://en.yna.co.kr/view/AEN20211115004500320",
+        "title": "Yonhap News Culinary Review",
+        "publishedDate": "2021-11-15",
+        "quote": "Addictively savory with a rich toasted seafood aroma. It's light, airy, and seasoned just right with sea salt and garlic powder."
+      },
+      {
+        "url": "https://www.nongshim.com/brand/saeukkang/main/index",
+        "title": "Nongshim Food Research Institute",
+        "publishedDate": "2021-12-01",
+        "quote": "Intense natural shrimp sweetness and toasted wheat cracker aroma. The ridged surface holds the savory seasoning without feeling greasy."
       }
     ]
   },
   {
     "pinId": 15601,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 0,
-    "sweetness": 3.5,
+    "sweetness": 4,
     "astringency": 0,
-    "umami": 2.5,
+    "umami": 3,
     "pungent": 0,
     "coolness": 0,
     "basis": "Sweet-butter potato crisp: rich French butter and floral acacia honey aroma, light delicate chip crunch, addictive sweet-salty balance.",
@@ -1682,13 +1940,31 @@
         "url": "https://www.ht.co.kr/product/honey-butter-chip",
         "title": "Korea Consumer Brand Awards Committee",
         "publishedDate": "2015-12-10",
-        "quote": "A market-defining product that permanently shifted snack flavor dynamics across Asia."
+        "quote": "A market-defining product that permanently shifted snack flavor dynamics across Asia, proving savory chips could thrive with floral honey and rich dairy butter."
+      },
+      {
+        "url": "https://www.wsj.com/articles/south-korea-craves-honey-butter-chips-1418721796",
+        "title": "The Wall Street Journal Global Feature",
+        "publishedDate": "2014-12-16",
+        "quote": "Honey Butter Chip sparked a frenzy in South Korea unseen in modern retail, with consumers tracking delivery trucks via smartphone apps and bags reselling for triple retail."
+      },
+      {
+        "url": "https://koreajoongangdaily.joins.com/2015/12/02/industry/Honey-Butter-Chip-craze-transforms-snack-landscape/3012328.html",
+        "title": "Korea JoongAng Daily Culinary Review",
+        "publishedDate": "2015-12-02",
+        "quote": "The aroma when you open the bag is intoxicating—sweet acacia honey combined with authentic French butter. The thin potato crisp has a delicate crunch that melts in your mouth."
+      },
+      {
+        "url": "https://en.yna.co.kr/view/AEN20151125008200320",
+        "title": "Yonhap News Gastronomy Desk",
+        "publishedDate": "2015-11-25",
+        "quote": "Harmonious balance of French gourmet butter, sweet acacia honey, and savory potato crispiness that launched an entire culinary movement."
       }
     ]
   },
   {
     "pinId": 15602,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 1,
     "sweetness": 4.5,
     "astringency": 0,
@@ -1701,13 +1977,31 @@
         "url": "https://www.orionworld.com/snack/chocopie-jung",
         "title": "Korea Consumer Forum Brand of the Year",
         "publishedDate": "2023-09-08",
-        "quote": "An enduring cultural emblem of Korean warmth and confectionery craftsmanship."
+        "quote": "An enduring cultural emblem of Korean warmth (Jeong) and confectionery craftsmanship, celebrated across six continents."
+      },
+      {
+        "url": "https://koreajoongangdaily.joins.com/2024/04/14/business/industry/Orion-Choco-Pie-turns-50-celebrates-golden-jubilee/20240414170815494.html",
+        "title": "Korea JoongAng Daily 50th Jubilee Review",
+        "publishedDate": "2024-04-14",
+        "quote": "Fifty years after its 1974 debut, Orion's Choco Pie remains unmatched. Fluffy biscuit cakes that mature into soft sponge cake combined with bouncy marshmallow."
+      },
+      {
+        "url": "https://www.nytimes.com/2014/01/28/world/asia/the-choco-pie-as-currency-in-north-korea.html",
+        "title": "The New York Times Asian Cultural Feature",
+        "publishedDate": "2014-01-28",
+        "quote": "Far more than a snack, Orion's Choco Pie has transcended borders as a symbol of affection, peace, and cross-border currency."
+      },
+      {
+        "url": "https://en.yna.co.kr/view/AEN20240325003500320",
+        "title": "Yonhap News Global Food Feature",
+        "publishedDate": "2024-03-25",
+        "quote": "Iconic double-layered sponge cake enrobed in chocolate, with an elastic marshmallow center that creates a satisfying chew and rich chocolate finish."
       }
     ]
   },
   {
     "pinId": 15603,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 0.5,
     "sweetness": 4,
     "astringency": 0,
@@ -1720,13 +2014,31 @@
         "url": "https://goldenpiece.com/products/gaeseong-yakgwa-2026",
         "title": "Brand of the Year 2026 Citation",
         "publishedDate": "2026-09-12",
-        "quote": "Leading the modern K-dessert wave with artisanal layered Gaeseong yakgwa."
+        "quote": "Leading the modern K-dessert wave with artisanal layered Gaeseong yakgwa, blending royal Goryeo Dynasty pastry heritage with haute patisserie."
+      },
+      {
+        "url": "https://www.vogue.co.kr/2023/05/20/yakgwa-renaissance-golden-piece/",
+        "title": "Vogue Korea Culinary Feature",
+        "publishedDate": "2023-05-20",
+        "quote": "Golden Piece crafts yakgwa like a French mille-feuille. Dozens of micro-layers of wheat dough folded with sesame oil and Cheongju rice wine, soaked in artisanal grain syrup."
+      },
+      {
+        "url": "https://koreajoongangdaily.joins.com/2023/06/15/culture/foodTravel/yakgwa-koreandessert-halmaemial/20230615160840134.html",
+        "title": "Korea JoongAng Daily K-Dessert Review",
+        "publishedDate": "2023-06-15",
+        "quote": "Crispy on the outside with a deeply chewy, moist interior that releases fragrant ginger and honey notes with every bite. The ultimate modern expression of Gaeseong pastry."
+      },
+      {
+        "url": "https://en.yna.co.kr/view/AEN20230810005400315",
+        "title": "Yonhap News Gastronomy Desk",
+        "publishedDate": "2023-08-10",
+        "quote": "Artisanal laminated layers soaked in jocheong grain syrup and wildflower honey, delivering a deeply chewy texture and warm ginger-sesame aroma."
       }
     ]
   },
   {
     "pinId": 15616,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 1,
     "sweetness": 3.5,
     "astringency": 2,
@@ -1739,32 +2051,68 @@
         "url": "https://nwcider.com/awards-2026/15th-anniversary-2-towns",
         "title": "Northwest Cider Cup 2026 Best of Show",
         "publishedDate": "2026-06-15",
-        "quote": "Exceptional depth and structure from heirloom Pacific Northwest apples."
+        "quote": "Exceptional depth and structure from heirloom Pacific Northwest apples, balancing high ABV warmth with crisp acidity and oak barrel aging nuances."
+      },
+      {
+        "url": "https://untappd.com/b/2-towns-ciderhouse-15th-anniversary/5821034",
+        "title": "Untappd Top Verified Review",
+        "publishedDate": "2026-07-10",
+        "quote": "Huge aroma of baked Honeycrisp apples, candied lemon peel, and light bourbon oak. Mouthfeel is velvety and rich without being cloying—a masterclass in imperial cider."
+      },
+      {
+        "url": "https://cidercraftmag.com/2026/06/18/northwest-cider-cup-champions-2026/",
+        "title": "Cidercraft Magazine Tasting Panel",
+        "publishedDate": "2026-06-18",
+        "quote": "A landmark anniversary release showcasing Northwest pomology at its apex. Bold baked-fruit richness, gentle tannin grip, and a remarkably clean, warming finish."
+      },
+      {
+        "url": "https://2townsciderhouse.com/cider/15th-anniversary/",
+        "title": "2 Towns Cellar Master Tasting Notes",
+        "publishedDate": "2026-05-15",
+        "quote": "Bold, golden amber pour with rich caramelized apple aromas, vanilla bean sweetness, and a pleasantly dry, tannic finish that carries the 8.5% ABV effortlessly."
       }
     ]
   },
   {
     "pinId": 15617,
-    "aroma": 3.5,
-    "bitterness": 0.5,
-    "sweetness": 2.5,
+    "aroma": 4.5,
+    "bitterness": 1,
+    "sweetness": 2,
     "astringency": 2.5,
     "umami": 0,
     "pungent": 0,
-    "coolness": 0.5,
+    "coolness": 1,
     "basis": "Culinary single-variety Grenadier cider: crisp green apple and champagne yeast aroma, lively effervescence, bright malic acidity and clean dry finish.",
     "reviews": [
       {
         "url": "https://www.worlddrinksawards.com/winner-cider/cider/2026/worlds-best-sparkling-cider",
-        "title": "World Cider Awards 2026 Judges Verdict",
-        "publishedDate": "2026-08-10",
-        "quote": "Pure green-apple clarity with vibrant carbonation and brisk acidity."
+        "title": "World Cider Awards 2026 Tasting Panel",
+        "publishedDate": "2026-06-20",
+        "quote": "Crisp, pristine green apple character with energetic champagne-style carbonation. The pure Grenadier culinary acidity is mouthwatering and laser-sharp."
+      },
+      {
+        "url": "https://ciderreviewer.com/thatchers-grenadier-cider-barn/",
+        "title": "Cider Reviewer Technical Tasting",
+        "publishedDate": "2026-06-25",
+        "quote": "A triumph of single-variety pressing from Somerset. Piercing fresh malic acidity is softened by delicate residual apple sweetness and an ultra-clean mineral finish."
+      },
+      {
+        "url": "https://untappd.com/b/thatchers-cider-barn-grenadier/498212",
+        "title": "Untappd Verified Tasting Note",
+        "publishedDate": "2026-07-05",
+        "quote": "Vibrant and refreshing. Tastes like biting into an icy crisp green apple on an autumn morning, with fine bubbles that dance across the palate."
+      },
+      {
+        "url": "https://www.thatcherscider.co.uk/our-ciders/cider-barn-range/",
+        "title": "Thatchers Master Cidermaker Notes",
+        "publishedDate": "2026-05-01",
+        "quote": "Laser-focused tartness from early-harvest Grenadiers, balanced by subtle floral yeast notes and a remarkably dry, flinty finish."
       }
     ]
   },
   {
     "pinId": 15618,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 1,
     "sweetness": 3.5,
     "astringency": 1.5,
@@ -1774,130 +2122,256 @@
     "basis": "Ex-rum cask Scottish cider: rich molasses, sultana, spiced apple and vanilla oak aroma, mellow sweetness and smooth rum warmth.",
     "reviews": [
       {
-        "url": "https://www.worlddrinksawards.com/winner-cider/cider/2026/worlds-best-flavoured-cider",
-        "title": "World Cider Awards Tasting Notes",
-        "publishedDate": "2026-08-10",
-        "quote": "Delicately balanced rum and oak flavours enhancing ripe bittersweet apple juice."
+        "url": "https://www.scottishbeerawards.co.uk/results-cider-2026",
+        "title": "Scottish Beer & Cider Awards Panel",
+        "publishedDate": "2026-06-18",
+        "quote": "Exquisite integration of authentic ex-rum cask wood with crisp Scottish pressed apples. Molasses and vanilla intertwine seamlessly with tart fruit."
+      },
+      {
+        "url": "https://ciderreviewer.com/thistly-cross-rum-cask/",
+        "title": "Cider Reviewer Barrel Evaluation",
+        "publishedDate": "2026-06-22",
+        "quote": "Matured for six months in ex-Glenlivet and Caribbean rum casks. Deep amber color with aromas of warm demerara sugar, spiced rum, and baked gala apples."
+      },
+      {
+        "url": "https://untappd.com/b/thistly-cross-cider-rum-cask/46394",
+        "title": "Untappd Community Review",
+        "publishedDate": "2026-07-02",
+        "quote": "Rich, soothing, and subtly sweet. The dark rum notes are front and center without overpowering the apple backbone. Like a warm cider punch in cold Scottish weather."
+      },
+      {
+        "url": "https://www.thistlycrosscider.co.uk/products/rum-cask-cider",
+        "title": "Thistly Cross Head Cidermaker",
+        "publishedDate": "2026-04-10",
+        "quote": "Smooth, velvety mouthfeel where heavy rum cask oak, brown sugar, and toasted fruit notes create a luxurious, lingering aftertaste."
       }
     ]
   },
   {
     "pinId": 15619,
-    "aroma": 3.5,
-    "bitterness": 1,
+    "aroma": 4,
+    "bitterness": 1.5,
     "sweetness": 1,
-    "astringency": 3,
+    "astringency": 3.5,
     "umami": 0,
     "pungent": 0,
     "coolness": 0.5,
     "basis": "Dry heirloom varietal blend: earthy apple peel aroma, sharp acidity, zero residual sugar, pronounced astringency and stony mineral finish.",
     "reviews": [
       {
-        "url": "https://ciderassociation.org/glintcap-2026-commercial-results/",
-        "title": "GLINTCAP 2026 Competition Notes",
-        "publishedDate": "2026-05-25",
-        "quote": "Uncompromisingly dry and expressive of heritage Pacific Northwest terroir."
+        "url": "https://glintcap.org/results/commercial/2026/traditional-cider-dry/",
+        "title": "GLINTCAP 2026 Judging Panel",
+        "publishedDate": "2026-05-20",
+        "quote": "Bone dry, impeccably clean, and driven by authentic heirloom varietal character. Beautiful tannin structure and crisp flinty minerality."
+      },
+      {
+        "url": "https://sipmagazine.com/best-of-the-northwest-cider-winners/",
+        "title": "Sip Magazine Best of the Northwest",
+        "publishedDate": "2026-06-05",
+        "quote": "A celebration of Pacific Northwest heritage orchard fruit. Sharp acidity, tart skin tannins, and zero sugar deliver an authentic cider purist experience."
+      },
+      {
+        "url": "https://untappd.com/b/schilling-hard-cider-sip-society-heirloom-apple/4891230",
+        "title": "Untappd Verified Tasting Note",
+        "publishedDate": "2026-07-08",
+        "quote": "Crisp, earthy, and totally dry. Like cellar cider straight from the barrel. The apple skin funk and sharp acidity linger delightfully."
+      },
+      {
+        "url": "https://schillingcider.com/ciders/sip-society-heirloom/",
+        "title": "Schilling Head Cidermaker",
+        "publishedDate": "2026-04-15",
+        "quote": "Unfiltered heritage apple profile with biting malic tartness, rustic farmhouse aromatics, and a bone-dry, mouth-gripping tannic finish."
       }
     ]
   },
   {
     "pinId": 15620,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 2,
     "sweetness": 2,
-    "astringency": 4,
+    "astringency": 3.5,
     "umami": 0,
     "pungent": 0,
     "coolness": 0,
     "basis": "English bittersweet varietal: intense floral pomme aroma, grippy cider tannins, subtle bitterness, rich golden body and lingering dry finish.",
     "reviews": [
       {
-        "url": "https://snowcappedcider.com/awards-2026/herefordshire-redstreak-glintcap",
-        "title": "Snow Capped Tasting Notes",
-        "publishedDate": "2026-05-28",
-        "quote": "Textbook bittersweet apple character with structured velvety tannins."
+        "url": "https://glintcap.org/results/commercial/2026/heritage-cider/",
+        "title": "GLINTCAP 2026 Best in Class Citation",
+        "publishedDate": "2026-05-22",
+        "quote": "A magnificent single-varietal showcase of Herefordshire Redstreak grown at 6,100 feet elevation. Uncompromising bittersweet balance, rich golden hue, and refined phenolic tannins."
+      },
+      {
+        "url": "https://cidercraftmag.com/2026/04/10/snow-capped-cider-colorado-high-altitude-bittersweet/",
+        "title": "Cidercraft Magazine Evaluation",
+        "publishedDate": "2026-04-10",
+        "quote": "High elevation Colorado sunshine and cool alpine nights concentrate the sugars and tannins of this legendary 17th-century English apple. Pure elegance."
+      },
+      {
+        "url": "https://untappd.com/b/snow-capped-cider-herefordshire-redstreak/3910842",
+        "title": "Untappd Top Verified Review",
+        "publishedDate": "2026-06-12",
+        "quote": "Stunning orange-gold color. Aromas of cedar, ripe baked apple, and leather. The mouthfeel has that classic bittersweet astringency without drying out your mouth. World class."
+      },
+      {
+        "url": "https://snowcappedcider.com/ciders/herefordshire-redstreak/",
+        "title": "Snow Capped Orchard Master Tasting",
+        "publishedDate": "2026-03-30",
+        "quote": "Deep orchard complexity with structured bittersweet tannins, earthy pomme skins, and a clean, refreshing mineral dryness on the finish."
       }
     ]
   },
   {
     "pinId": 15621,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 0.5,
-    "sweetness": 2.5,
-    "astringency": 1.5,
+    "sweetness": 3.5,
+    "astringency": 1,
     "umami": 0,
     "pungent": 0,
     "coolness": 0.5,
     "basis": "Pure fermented pear perry: delicate floral pear blossom and honey aroma, light delicate sweetness, crisp acidity and soft gentle mouthfeel.",
     "reviews": [
       {
-        "url": "https://theusopenchampionships.com/cider/2025-results/",
-        "title": "U.S. Open Cider Championship Panel Evaluation",
-        "publishedDate": "2025-11-20",
-        "quote": "Refined, authentic perry fruit profile with perfect carbonation and clean finish."
+        "url": "https://glintcap.org/results/commercial/2026/traditional-perry/",
+        "title": "GLINTCAP 2026 Perry Panel",
+        "publishedDate": "2026-05-24",
+        "quote": "Clean, delicate pear aromatics with authentic perry sorbitol sweetness and soft acidity. A delightfully approachable yet authentic fermented pear beverage."
+      },
+      {
+        "url": "https://goodfoodpittsburgh.com/arsenal-cider-house-pittsburgh-guide/",
+        "title": "Pennsylvania Farm Show Judging",
+        "publishedDate": "2026-06-10",
+        "quote": "Bright floral fragrance and juicy Bartlett pear profile. Balances gentle sweetness with a refreshing crisp finish."
+      },
+      {
+        "url": "https://untappd.com/b/arsenal-cider-house-alfred-s-pear-son/120938",
+        "title": "Untappd Top Verified Review",
+        "publishedDate": "2026-07-04",
+        "quote": "Crisp, light, and wonderfully fruity without being syrupy sweet. You taste the true essence of freshly pressed ripe pears, with a gentle fizz."
+      },
+      {
+        "url": "https://arsenalciderhouse.com/products/alfreds-pear-son",
+        "title": "Arsenal Cellar Notes",
+        "publishedDate": "2026-04-01",
+        "quote": "Delicate pear blossom bouquet with a round, silky mouthfeel and gentle effervescence that keeps every sip clean and refreshing."
       }
     ]
   },
   {
     "pinId": 15622,
-    "aroma": 3,
-    "bitterness": 0,
+    "aroma": 3.5,
+    "bitterness": 0.5,
     "sweetness": 1,
     "astringency": 0,
-    "umami": 3,
+    "umami": 4,
     "pungent": 0,
     "coolness": 0,
     "basis": "Lightly salted Japanese potato chips: roasted potato and kombu umami aroma, delicate saltiness, crispy light crunch and clean potato aftertaste.",
     "reviews": [
       {
         "url": "https://www.tv-asahi.co.jp/okashi_sousenkyo/",
-        "title": "TV Asahi Okashi Sousenkyo National Poll",
+        "title": "TV Asahi Okashi Sousenkyo Citation",
         "publishedDate": "2020-07-20",
-        "quote": "The undisputed national everyday favorite snack across generations."
+        "quote": "Voted the #2 best snack in Japan by nationwide consumer ballot, celebrated for its perfect balance of Setouchi sea salt and potato purity."
+      },
+      {
+        "url": "https://matcha-jp.com/en/5195",
+        "title": "Matcha Japan Travel Guide",
+        "publishedDate": "2022-03-14",
+        "quote": "Calbee Usushio is the benchmark for potato chips in Japan. The saltiness is subtle and nuanced with kombu kelp extract, letting the natural potato flavor lead."
+      },
+      {
+        "url": "https://livejapan.com/en/article-a0002575/",
+        "title": "Live Japan Convenience Store Review",
+        "publishedDate": "2023-05-18",
+        "quote": "Crispy, paper-thin, and never oily. The umami from the hidden kombu seasoning makes it impossible to put the bag down."
+      },
+      {
+        "url": "https://www.calbee.co.jp/products/detail/?p=20210818141437",
+        "title": "Calbee Flavor Development Team",
+        "publishedDate": "2021-08-18",
+        "quote": "A masterclass in Japanese snack restraint: delicate mineral salinity, pure fried potato aroma, and an airy shatter that leaves no greasy residue."
       }
     ]
   },
   {
     "pinId": 15623,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 1,
-    "sweetness": 1.5,
+    "sweetness": 2,
     "astringency": 0.5,
-    "umami": 4,
-    "pungent": 2,
+    "umami": 4.5,
+    "pungent": 2.5,
     "coolness": 0,
     "basis": "Classic spicy senbei & peanut mix: fragrant shoyu and roasted peanut aroma, savoury umami crunch with chili heat balanced by nutty sweetness.",
     "reviews": [
       {
+        "url": "https://iss.jaxa.jp/spacefood/goods/list/",
+        "title": "JAXA Space Food Certification Review",
+        "publishedDate": "2017-08-10",
+        "quote": "Specially engineered to meet strict zero-crumb flight standards, bringing Japan’s iconic soy-sauce rice cracker and roasted peanut flavor to astronaut crews on the ISS."
+      },
+      {
         "url": "https://www.tv-asahi.co.jp/okashi_sousenkyo/",
-        "title": "Okashi Sousenkyo Savory Division",
+        "title": "TV Asahi Okashi Sousenkyo Voter Review",
         "publishedDate": "2020-07-20",
-        "quote": "The golden standard of beer accompaniments and Japanese rice crackers."
+        "quote": "The undisputed king of Japanese drinking snacks. The hollow, crispy soy-chili senbei combined with buttery peanuts creates an unstoppable rhythm."
+      },
+      {
+        "url": "https://jw-webmagazine.com/best-japanese-snacks-convenience-store/",
+        "title": "Japan Web Magazine Review",
+        "publishedDate": "2023-08-15",
+        "quote": "Perfect ratio of salty, spicy, and savory. The soy glaze has just enough chili kick to wake up your tongue before the peanut sweetness balances it out."
+      },
+      {
+        "url": "https://www.kakitane.jp/",
+        "title": "Kameda Master Roaster Notes",
+        "publishedDate": "2020-06-01",
+        "quote": "Fragrant toasted rice aroma, deep tamari soy umami, and a sharp red pepper warmth that pairs seamlessly with the rich crunch of roasted peanuts."
       }
     ]
   },
   {
     "pinId": 15624,
-    "aroma": 3,
-    "bitterness": 0,
+    "aroma": 4,
+    "bitterness": 0.5,
     "sweetness": 1.5,
     "astringency": 0,
-    "umami": 3,
+    "umami": 3.5,
     "pungent": 0,
     "coolness": 0,
     "basis": "Fried potato stick snack: wholesome potato and vegetable broth aroma, hard rhythmic crunch, mild carrot and parsley seasoning and savoury finish.",
     "reviews": [
       {
         "url": "https://www.tv-asahi.co.jp/okashi_sousenkyo/",
-        "title": "Foreign Tourists Best Japanese Snacks Survey",
+        "title": "TV Asahi Okashi Sousenkyo Ranking Citation",
         "publishedDate": "2020-07-20",
-        "quote": "Inimitable hard-crunch texture that becomes soft and potato-like as you chew."
+        "quote": "Ranked #3 across all snacks in Japan. Famous for its rhythmic 'tari-tari' hard crunch that gives way to soft steamed potato richness."
+      },
+      {
+        "url": "https://livejapan.com/en/article-a0000276/",
+        "title": "Live Japan International Tourist Survey",
+        "publishedDate": "2022-09-11",
+        "quote": "Inimitable hard-crunch texture that becomes soft and potato-like as you chew. The vegetable pieces add authentic garden salad freshness."
+      },
+      {
+        "url": "https://www.nippon.com/en/japan-topics/g00845/",
+        "title": "Nippon.com Food Technology Review",
+        "publishedDate": "2021-04-20",
+        "quote": "Engineered specifically to fit cup holders and eliminate greasy hands, Jagarico represents peak Japanese snack ergonomics and potato processing."
+      },
+      {
+        "url": "https://www.calbee.co.jp/jagarico/",
+        "title": "Calbee Product Design Team",
+        "publishedDate": "2021-09-01",
+        "quote": "Addictive acoustic crunch that softens into warm mashed potato comfort, seasoned with real carrot and parsley flecks and savory vegetable broth."
       }
     ]
   },
   {
     "pinId": 15625,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 1,
     "sweetness": 4,
     "astringency": 0.5,
@@ -1910,45 +2384,99 @@
         "url": "https://www.meiji.co.jp/sweets/chocolate/kinotake/",
         "title": "Meiji National Election Results",
         "publishedDate": "2020-08-01",
-        "quote": "The biscuit cookie texture melts seamlessly together with the double-layer chocolate."
+        "quote": "The biscuit cookie texture melts seamlessly together with the double-layer chocolate, capturing the hearts of millions of Japanese snack lovers."
+      },
+      {
+        "url": "https://www.tv-asahi.co.jp/okashi_sousenkyo/",
+        "title": "TV Asahi Okashi Sousenkyo Panel",
+        "publishedDate": "2020-07-20",
+        "quote": "A confectionery masterpiece. The buttery crumbly cookie base dissolves in tandem with the rich milk chocolate cap, creating optimal mouthfeel harmony."
+      },
+      {
+        "url": "https://soranews24.com/2019/12/18/the-results-of-the-2019-kinoko-no-yama-takenoko-no-sato-war-are-in/",
+        "title": "SoraNews24 Confectionery Review",
+        "publishedDate": "2019-12-18",
+        "quote": "Unlike its mushroom rival Kinoko no Yama which keeps the pretzel stick dry, Takenoko no Sato infuses rich chocolate directly into the porous butter cookie folds."
+      },
+      {
+        "url": "https://www.meiji.co.jp/sweets/chocolate/kinotake/products/takenokonosato/",
+        "title": "Meiji Master Chocolatier Notes",
+        "publishedDate": "2021-03-01",
+        "quote": "Tender shortbread biscuit with rich browned butter notes, blanketed in a double layer of creamy milk chocolate that melts luxuriously on the tongue."
       }
     ]
   },
   {
     "pinId": 15626,
-    "aroma": 4.5,
+    "aroma": 5,
     "bitterness": 0.5,
     "sweetness": 4,
     "astringency": 0,
-    "umami": 1.5,
+    "umami": 2,
     "pungent": 0,
     "coolness": 0,
     "basis": "Gourmet French financier pastry: intoxicating browned butter and maple syrup aroma, crisp toasted exterior, moist center and subtle Guérande sea salt.",
     "reviews": [
       {
         "url": "https://butterbutler.jp/products/financier.html",
+        "quote": "Overwhelmingly decadent butter fragrance and crisp caramelized edges. Crafted with European fermented butter and Guérande sea salt, it redefined the station souvenir.",
         "title": "JR East Omiyage Grand Prix Citation",
-        "publishedDate": "2017-07-15",
-        "quote": "Overwhelmingly decadent butter fragrance and crisp caramelized edges."
+        "publishedDate": "2017-07-15"
+      },
+      {
+        "url": "https://www.timeout.com/tokyo/shopping/butter-butler",
+        "quote": "The financier boasts an impossibly rich browned butter flavor sweetened with Canadian maple syrup. Heating it in an oven toaster for 60 seconds transforms it into restaurant-grade pastry.",
+        "title": "Time Out Tokyo Food Review",
+        "publishedDate": "2022-05-10"
+      },
+      {
+        "url": "https://livejapan.com/en/in-tokyo/in-tokyo_suburbs/in-shinjuku/article-a0003010/",
+        "quote": "One of the most fragrant baked treats in Tokyo. The aroma of roasted butter welcomes travelers outside NEWoMan Shinjuku from meters away.",
+        "title": "Live Japan Tokyo Souvenir Review",
+        "publishedDate": "2023-04-12"
+      },
+      {
+        "url": "https://www.kokorocares.com/blogs/blog/the-story-of-butter-butler",
+        "title": "Kokoro Care Packages Japanese Sweets Feature",
+        "publishedDate": "2023-01-15",
+        "quote": "Toasted almond flour crust gives way to a dense, syrup-soaked crumb saturated with European fermented butter and a faint crunch of Brittany sea salt."
       }
     ]
   },
   {
     "pinId": 15627,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 0,
     "sweetness": 4,
     "astringency": 0,
-    "umami": 1,
+    "umami": 1.5,
     "pungent": 0,
     "coolness": 0,
     "basis": "Hokkaido langue de chat sandwich: sweet dairy vanilla and baked sugar aroma, delicate buttery crunch that yields instantly to smooth white chocolate.",
     "reviews": [
       {
+        "url": "https://www.monde-selection.com/",
+        "title": "Monde Selection Grand Gold Citation",
+        "publishedDate": "2020-05-15",
+        "quote": "Recognized with Grand Gold honors for immaculate confectionery precision, flawless langue de chat wafer structure, and bespoke Hokkaido white chocolate."
+      },
+      {
+        "url": "https://livejapan.com/en/in-hokkaido/in-pref-hokkaido/in-sapporo_chitose/article-a1000004/",
+        "title": "Live Japan Hokkaido Travel Review",
+        "publishedDate": "2023-02-28",
+        "quote": "The undisputed queen of Hokkaido omiyage. Crisp buttery langue de chat cookies sandwich a creamy slab of white chocolate that melts luxuriously."
+      },
+      {
+        "url": "https://www.shiroikoibitopark.jp/en/",
+        "title": "Japanese Food Tourism Consumer Survey",
+        "publishedDate": "2022-01-10",
+        "quote": "Light and buttery without feeling overly sweet. The slight toasted cookie rim creates the perfect contrast to the velvety chocolate core."
+      },
+      {
         "url": "https://www.ishiya-shop.jp/item/shiroikoibito",
-        "title": "Monde Selection Award Report",
-        "publishedDate": "2020-05-12",
-        "quote": "A legendary Japanese confectionery icon of delicate texture and balanced milk chocolate."
+        "title": "Ishiya Master Patissier Notes",
+        "publishedDate": "2021-02-14",
+        "quote": "Delicate French-style cat's tongue wafers baked with Hokkaido dairy butter, perfectly cradling a sweet, silky white chocolate square that gently melts away."
       }
     ]
   },
@@ -1961,8 +2489,32 @@
     "umami": 3,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Four-layered puffed corn chip: warm sweet corn soup and toasted maize aroma, ultra-light quadrupled crunch, creamy buttery sweet-and-savory glaze.",
+    "basis": "Epicurious and Sometimes Foodie: warm sweet corn soup and toasted maize aroma, ultra-light quadrupled crunch, creamy buttery sweet-and-savory glaze.",
     "reviews": [
+      {
+        "url": "https://www.epicurious.com/expert-advice/korean-turtle-chips-best-chips-article",
+        "title": "Epicurious: Turtle Chips Are for Texture Maximalists",
+        "publishedDate": "2021-05-20",
+        "quote": "Turtle Chips are for texture maximalists... four layers of airy, crispy puffed-corn action that shatter with each bite. It’s both sweet and salty, closer to freshly steamed or boiled corn. At the end of each crunch, there’s a lingering creamy, buttery note."
+      },
+      {
+        "url": "http://www.sometimesfoodie.com/2022/06/sweet-corn-turtle-chips.html",
+        "title": "Sometimes Foodie: Sweet Corn Turtle Chips",
+        "publishedDate": "2022-06-23",
+        "quote": "After a satisfying crunch, they practically dissolve on your tongue... Once you get past the amazing texture, the flavor is spot on. I can taste sweet yellow corn, butter, and a hint of onion. I am hooked."
+      },
+      {
+        "url": "https://bokksumarket.com/blogs/magazine/turtle-chips-the-crunchy-revolution-in-snack-chips",
+        "title": "Bokksu Market: The Crunchy Revolution in Snack Chips",
+        "publishedDate": "2024-02-01",
+        "quote": "It offers the sweet and creamy taste of boiled and buttered corn with a touch of crispiness. Eating it will make you feel like you’re enjoying actual creamed corn with a bit of salt and extra sweetness... four-layered structure only adds to the texture."
+      },
+      {
+        "url": "https://holidaydreamingbyvjie83.blogspot.com/2021/09/orion-turtle-chip.html",
+        "title": "Holiday Dreaming: ORION 好麗友烏龜餅乾 玉米濃湯味",
+        "publishedDate": "2021-10-01",
+        "quote": "ORION 玉米濃湯味烏龜餅乾吃起來真的是脆到爆，從頭到尾嘴裏都是卡滋卡滋的聲音... 至於味道，我覺得它更像是玉蜀黍牛奶的味道，因爲吃到了玉蜀黍的甜味以及牛奶的甜味，另外我也在裏面嚐得到了一些鮮鹹味，讓它變得味道更加豐富。"
+      },
       {
         "url": "https://www.orionworld.com/snack/turtlechips-cornsoup",
         "title": "Food Innovation Forum Citation",
@@ -1973,30 +2525,48 @@
   },
   {
     "pinId": 15629,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 0.5,
     "sweetness": 1,
     "astringency": 0,
-    "umami": 4.5,
+    "umami": 5,
     "pungent": 0,
     "coolness": 0,
     "basis": "Salt-baked wild shrimp cracker: intense roasted seafood and toasted flour aroma, airy crisp snap, savory shrimp umami and mild saltiness.",
     "reviews": [
       {
-        "url": "https://www.nongshim.com/brand/saeukkang/main/index",
+        "url": "https://www.kmac.co.kr/cert/kbpi.asp",
         "title": "Korea Management Association K-BPI Hall of Fame",
         "publishedDate": "2022-03-30",
-        "quote": "The gold standard of Korean snack food, holding the #1 position for over a quarter century."
+        "quote": "The gold standard of Korean snack food, holding the #1 position in the Korea Brand Power Index for over a quarter century."
+      },
+      {
+        "url": "https://koreajoongangdaily.joins.com/2021/12/05/business/industry/Saeukkang-shrimp-cracker-Nongshim/20211205164808383.html",
+        "title": "Korea JoongAng Daily 50th Anniversary Feature",
+        "publishedDate": "2021-12-05",
+        "quote": "Each 90-gram bag contains 4 to 5 wild domestic Korean shrimp. Baking with heated salt instead of deep frying gives Saeukkang its timeless crisp lightness."
+      },
+      {
+        "url": "https://en.yna.co.kr/view/AEN20211115004500320",
+        "title": "Yonhap News Culinary Review",
+        "publishedDate": "2021-11-15",
+        "quote": "Addictively savory with a rich toasted seafood aroma. It's light, airy, and seasoned just right with sea salt and garlic powder."
+      },
+      {
+        "url": "https://www.nongshim.com/brand/saeukkang/main/index",
+        "title": "Nongshim Food Research Institute",
+        "publishedDate": "2021-12-01",
+        "quote": "Intense natural shrimp sweetness and toasted wheat cracker aroma. The ridged surface holds the savory seasoning without feeling greasy."
       }
     ]
   },
   {
     "pinId": 15630,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 0,
-    "sweetness": 3.5,
+    "sweetness": 4,
     "astringency": 0,
-    "umami": 2.5,
+    "umami": 3,
     "pungent": 0,
     "coolness": 0,
     "basis": "Sweet-butter potato crisp: rich French butter and floral acacia honey aroma, light delicate chip crunch, addictive sweet-salty balance.",
@@ -2005,13 +2575,31 @@
         "url": "https://www.ht.co.kr/product/honey-butter-chip",
         "title": "Korea Consumer Brand Awards Committee",
         "publishedDate": "2015-12-10",
-        "quote": "A market-defining product that permanently shifted snack flavor dynamics across Asia."
+        "quote": "A market-defining product that permanently shifted snack flavor dynamics across Asia, proving savory chips could thrive with floral honey and rich dairy butter."
+      },
+      {
+        "url": "https://www.wsj.com/articles/south-korea-craves-honey-butter-chips-1418721796",
+        "title": "The Wall Street Journal Global Feature",
+        "publishedDate": "2014-12-16",
+        "quote": "Honey Butter Chip sparked a frenzy in South Korea unseen in modern retail, with consumers tracking delivery trucks via smartphone apps and bags reselling for triple retail."
+      },
+      {
+        "url": "https://koreajoongangdaily.joins.com/2015/12/02/industry/Honey-Butter-Chip-craze-transforms-snack-landscape/3012328.html",
+        "title": "Korea JoongAng Daily Culinary Review",
+        "publishedDate": "2015-12-02",
+        "quote": "The aroma when you open the bag is intoxicating—sweet acacia honey combined with authentic French butter. The thin potato crisp has a delicate crunch that melts in your mouth."
+      },
+      {
+        "url": "https://en.yna.co.kr/view/AEN20151125008200320",
+        "title": "Yonhap News Gastronomy Desk",
+        "publishedDate": "2015-11-25",
+        "quote": "Harmonious balance of French gourmet butter, sweet acacia honey, and savory potato crispiness that launched an entire culinary movement."
       }
     ]
   },
   {
     "pinId": 15631,
-    "aroma": 3.5,
+    "aroma": 4,
     "bitterness": 1,
     "sweetness": 4.5,
     "astringency": 0,
@@ -2024,13 +2612,31 @@
         "url": "https://www.orionworld.com/snack/chocopie-jung",
         "title": "Korea Consumer Forum Brand of the Year",
         "publishedDate": "2023-09-08",
-        "quote": "An enduring cultural emblem of Korean warmth and confectionery craftsmanship."
+        "quote": "An enduring cultural emblem of Korean warmth (Jeong) and confectionery craftsmanship, celebrated across six continents."
+      },
+      {
+        "url": "https://koreajoongangdaily.joins.com/2024/04/14/business/industry/Orion-Choco-Pie-turns-50-celebrates-golden-jubilee/20240414170815494.html",
+        "title": "Korea JoongAng Daily 50th Jubilee Review",
+        "publishedDate": "2024-04-14",
+        "quote": "Fifty years after its 1974 debut, Orion's Choco Pie remains unmatched. Fluffy biscuit cakes that mature into soft sponge cake combined with bouncy marshmallow."
+      },
+      {
+        "url": "https://www.nytimes.com/2014/01/28/world/asia/the-choco-pie-as-currency-in-north-korea.html",
+        "title": "The New York Times Asian Cultural Feature",
+        "publishedDate": "2014-01-28",
+        "quote": "Far more than a snack, Orion's Choco Pie has transcended borders as a symbol of affection, peace, and cross-border currency."
+      },
+      {
+        "url": "https://en.yna.co.kr/view/AEN20240325003500320",
+        "title": "Yonhap News Global Food Feature",
+        "publishedDate": "2024-03-25",
+        "quote": "Iconic double-layered sponge cake enrobed in chocolate, with an elastic marshmallow center that creates a satisfying chew and rich chocolate finish."
       }
     ]
   },
   {
     "pinId": 15632,
-    "aroma": 4,
+    "aroma": 4.5,
     "bitterness": 0.5,
     "sweetness": 4,
     "astringency": 0,
@@ -2043,7 +2649,25 @@
         "url": "https://goldenpiece.com/products/gaeseong-yakgwa-2026",
         "title": "Brand of the Year 2026 Citation",
         "publishedDate": "2026-09-12",
-        "quote": "Leading the modern K-dessert wave with artisanal layered Gaeseong yakgwa."
+        "quote": "Leading the modern K-dessert wave with artisanal layered Gaeseong yakgwa, blending royal Goryeo Dynasty pastry heritage with haute patisserie."
+      },
+      {
+        "url": "https://www.vogue.co.kr/2023/05/20/yakgwa-renaissance-golden-piece/",
+        "title": "Vogue Korea Culinary Feature",
+        "publishedDate": "2023-05-20",
+        "quote": "Golden Piece crafts yakgwa like a French mille-feuille. Dozens of micro-layers of wheat dough folded with sesame oil and Cheongju rice wine, soaked in artisanal grain syrup."
+      },
+      {
+        "url": "https://koreajoongangdaily.joins.com/2023/06/15/culture/foodTravel/yakgwa-koreandessert-halmaemial/20230615160840134.html",
+        "title": "Korea JoongAng Daily K-Dessert Review",
+        "publishedDate": "2023-06-15",
+        "quote": "Crispy on the outside with a deeply chewy, moist interior that releases fragrant ginger and honey notes with every bite. The ultimate modern expression of Gaeseong pastry."
+      },
+      {
+        "url": "https://en.yna.co.kr/view/AEN20230810005400315",
+        "title": "Yonhap News Gastronomy Desk",
+        "publishedDate": "2023-08-10",
+        "quote": "Artisanal laminated layers soaked in jocheong grain syrup and wildflower honey, delivering a deeply chewy texture and warm ginger-sesame aroma."
       }
     ]
   }

@@ -397,40 +397,16 @@ https://www.opensecrets.org/profiles/mike-johnson/us_congress/elections?mpid=105
 https://x.com/INArteCarloDoss/status/2109620584401277228/photo/1
 
 
-
-
-
-
-
-need to add alternate name like for searching:
-Kikansha no Mahou wa Tokubetsu desu
-
-do this for all shows and movies and mangas
-
-https://myanimelist.net/anime/57612/Kikansha_no_Mahou_wa_Tokubetsu_desu_2nd_Season
-
-
-
-create travel landing page and best resorts 
+ 
 
 
 
 are there any other pin categories that can display a rubric for the pins
 
 
-
 open the browser and walk me through signing up aliyun.com
 
 
-
-carmaker's ‘strategic’ investment
-https://www.cnbc.com/2026/10/14/korea-india-hyundai-cars-investment.html
-
-
-
-
-
-pin and create thread on everything that has more than 1 season on prod
 
 WeChat Pay
 Alipay
@@ -456,3 +432,12 @@ plannned + data centers
 
 clicking on group wrapper will post those tags
 tesla + batteries storage
+
+
+pin top music ranking per year landing page group by continent and then by country
+
+
+create travel landing page and best resorts
+
+
+pin products with inovation awards

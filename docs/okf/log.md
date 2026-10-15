@@ -1,5 +1,9 @@
 # Update Log
 
+## 2026-10-14
+
+* **Update:** Completed 5,085 production pin translations across 339 pins and all 15 non-English locales, including three pins edited during the run. Filled 4,935 missing translations and refreshed 150 outdated ones; saved through the admin API with source hashes. [Learnings](scraping/learnings.md#2026-10-14---production-pin-translations-all-languages) records validation, brand corrections and the final coverage check.
+
 ## 2026-10-13
 
 * **Update:** Backfilled 480 missing production pin translations and refreshed 105 outdated translations across 39 pins and all 15 target languages. Verified zero remaining missing/outdated/incomplete rows and public API responses in every locale; [learnings](scraping/learnings.md#2026-10-13---production-pin-translation-backfill) records the fallback and validation checks.
