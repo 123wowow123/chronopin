@@ -9,3 +9,7 @@ The broader audit checked 2,593 enabled restaurant profiles with credited guide 
 For future publication, an empty imported/local gallery is not sufficient proof that a pin needs no image: compare the restaurant-specials profile photo and ordinary guide tile image against the destination pin's media. Attach verified photos independently of whether the local pin already has a gallery. Record genuine photo research gaps separately.
 
 See [repair evidence](restaurant-image-repair-2026-10-14.json) for audited counts, source credits, saved records and unresolved Japan photo gaps. Temporary downloads and the repair script are kept under the ignored `.scrape/restaurant-missing-images-2026-10-14/` directory.
+
+## Follow-up publication
+
+[The subsequent photo research and production publication](restaurant-photo-fill-2026-10-14.md) added 22 verified images to 10 of the 21 Japan pins and their landing cards. Eleven specific publication gaps remain documented with sources and exclusions. The importer now recovers saved guide/specials images even when explicit galleries are empty.
