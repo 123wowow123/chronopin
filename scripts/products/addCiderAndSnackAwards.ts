@@ -814,6 +814,39 @@ async function main() {
         } else {
           console.warn(`Failed to save ProductBlurb on prod: ${blurbRes.status}`);
         }
+
+        // Save PinTaste on prod
+        await new Promise((r) => setTimeout(r, 1000));
+        const tasteRes = await fetch(`${prod}/api/pins/${prodPinId}/taste`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${prodAdminToken}`,
+          },
+          body: JSON.stringify({
+            ...item.taste,
+            source: 'hand',
+            sourceUrl: item.sourceUrl,
+          }),
+        });
+
+        if (tasteRes.ok) {
+          console.log(`Saved PinTaste on prod for pin ${prodPinId}`);
+        } else {
+          console.warn(`Failed to save PinTaste on prod: ${tasteRes.status}`);
+        }
+
+        // Update taste.json for prod pin
+        const existingProdTasteIndex = tasteData.findIndex((t) => t.pinId === prodPinId);
+        const prodTasteEntry = {
+          pinId: prodPinId,
+          ...item.taste,
+        };
+        if (existingProdTasteIndex >= 0) {
+          tasteData[existingProdTasteIndex] = prodTasteEntry;
+        } else {
+          tasteData.push(prodTasteEntry);
+        }
       }
     }
 
@@ -843,6 +876,7 @@ async function main() {
       tasteData.push(tasteEntry);
     }
   }
+
 
   // Write updated JSON files
   writeFileSync(blurbsFilePath, JSON.stringify(blurbsData, null, 1) + '\n');
