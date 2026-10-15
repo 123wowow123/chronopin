@@ -481,6 +481,7 @@ function useDropdown() {
 // The curated pages, as the account menu and the phone drawer list them.
 const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
   { href: '/restaurants', label: 'Restaurants', icon: 'map' },
+  { href: '/travel', label: 'Travel', icon: 'globe' },
   { href: '/products', label: 'Products', icon: 'cart' },
   { href: '/cars', label: 'Cars', icon: 'car' },
 ];

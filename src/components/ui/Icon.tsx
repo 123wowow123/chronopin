@@ -33,6 +33,12 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
     </>
   ),
+  compass: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+    </>
+  ),
   expand: <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />,
   hash: <path d="M5 9h15M4 15h15M10 3 8 21M16 3l-2 18" />,
   back: <path d="M19 12H5M11 6l-6 6 6 6" />,

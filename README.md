@@ -313,13 +313,10 @@ https://www.eventbrite.com/e/sneaker-con-los-angeles-october-17-18-2026-tickets-
 
 
 
-
-
 organize admin pages to more intuitive layout and groupings
 
 
 Is there any improvement we can do to make search better? Should we check the search model and strategy?
-
 
 
 
@@ -360,9 +357,7 @@ https://www.telefericbarcelona.com/the-social-hour
 
 
 
-
 add button on landing page to suggest a product or restaurant to add to list. should have community voted section. create admin section to manage suggestons and to approave them
-
 
 
 
@@ -377,13 +372,10 @@ tenmu ads
 
 
 
-
 sync watch list to calendar
 add a pin to calendar and keep in sync
 
 get live politicians stock trading alerts
-
-
 
 
 
@@ -396,8 +388,6 @@ https://www.opensecrets.org/profiles/mike-johnson/us_congress/elections?mpid=105
 
 https://x.com/INArteCarloDoss/status/2109620584401277228/photo/1
 
-
- 
 
 
 
@@ -418,7 +408,6 @@ stripe payment reocurring payment disable monthly ads
 
 
 
-
 add AI buildout on map
 https://cleanview.co/
 signed tenent
@@ -436,8 +425,3 @@ tesla + batteries storage
 
 pin top music ranking per year landing page group by continent and then by country
 
-
-create travel landing page and best resorts
-
-
-pin products with inovation awards

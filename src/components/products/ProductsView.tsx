@@ -36,6 +36,13 @@ function blurb(pin: ProductPin): string {
   return end > 80 ? cut.slice(0, end + 1) : `${cut.replace(/\s+\S*$/, '')}…`;
 }
 
+function isExceptionalProduct(pin: ProductPin): boolean {
+  if (pin.tags?.some((t) => t.name.toLowerCase() === 'exceptional')) return true;
+  const r = pin.rating;
+  if (r && r.max > 0 && r.score / r.max >= 0.95) return true;
+  return false;
+}
+
 // The curated products page: the products pins are about, by shelf, each with
 // a short line on why it is good. Every product links to its pin for the dates, the
 // sources and the rest.
@@ -121,6 +128,7 @@ export async function ProductsView({ shelves, title, description, path = '/produ
                 shelf.pins.map((pin) => {
                   const image = imageOf(pin);
                   const name = pin.productName ?? pin.title;
+                  const exceptional = isExceptionalProduct(pin);
                   return (
                     <article key={pin.id} className={styles.card}>
                       <Link href={pinPath(pin)} className={styles.photoLink} aria-label={`See ${name}`}>
@@ -168,10 +176,16 @@ function Score({ pin }: { pin: ProductPin }) {
   if (pin.ratings?.length) return <RatingSummary ratings={pin.ratings} />;
   const r = pin.rating;
   if (!r) return null;
+  const exceptional = isExceptionalProduct(pin);
   const chip = (
     <>
-      <Icon name="star" className="size-3 text-amber-500" />
-      {r.score}/{r.max} · {r.source}
+      <Icon name="star" className="size-3 text-amber-500 fill-amber-500" />
+      <span>{r.score}/{r.max} · {r.source}</span>
+      {exceptional && (
+        <span className="ms-1 rounded-full bg-[#edf0cf] px-1.5 py-0.5 text-[9px] font-bold tracking-wider text-[#244d39] ring-1 ring-[#c8cfb4]">
+          Exceptional
+        </span>
+      )}
     </>
   );
   const cls = 'inline-flex w-fit shrink-0 items-center gap-1 rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-semibold text-ink ring-1 ring-amber-500/30 ring-inset tabular-nums hover:no-underline';
