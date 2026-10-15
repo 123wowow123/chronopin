@@ -153,4 +153,32 @@ describe('task groups', () => {
     expect(news.tasks.at(-1)).toBe('sentiment');
     expect(midnight.tasks).not.toContain('sentiment');
   });
+
+  it('runs threadPredicted in the news job upkeep', () => {
+    expect(TASKS.threadPredicted.group).toBe('upkeep');
+    expect(news.tasks).toContain('threadPredicted');
+    expect(groupTasks('upkeep', news.tasks)).toContain('threadPredicted');
+  });
+});
+
+
+describe('ad translation task', () => {
+  it('runs inside midnight and the 6am/6pm news job without a separate job', () => {
+    expect(midnight.tasks).toContain('adTranslations');
+    expect(news.tasks).toContain('adTranslations');
+    expect(midnight.times).toEqual(['00:00']);
+    expect(news.times).toEqual(['06:00', '18:00']);
+    expect(DEFAULT_DAILY_JOBS.jobs.some((j) => j.id === 'ad-translations')).toBe(false);
+    expect(TASKS.adTranslations.group).toBe('upkeep');
+  });
+  it('upgrades saved settings, removes the standalone job and preserves schedules', () => {
+    const oldMidnight = { ...midnight, enabled: true, tasks: midnight.tasks.filter((task) => task !== 'adTranslations') };
+    const oldNews = { ...news, tasks: news.tasks.filter((task) => task !== 'adTranslations') };
+    const setting = withDefaultJobs({ jobs: [oldMidnight, oldNews, monthly, weekly, { ...news, id: 'ad-translations', tasks: ['adTranslations'] }] });
+    expect(setting.jobs.map((j) => j.id)).toEqual(['midnight', 'news', 'monthly', 'weekly']);
+    for (const id of ['midnight', 'news']) expect(setting.jobs.find((j) => j.id === id)!.tasks.filter((task) => task === 'adTranslations')).toHaveLength(1);
+    expect(setting.jobs[0].enabled).toBe(true);
+    expect(setting.jobs[1].times).toEqual(oldNews.times);
+    expect(withDefaultJobs(setting)).toBe(setting);
+  });
 });

@@ -39,7 +39,6 @@ import { PinAwards } from '@/components/pin/PinAwards';
 import { PinCandidates } from '@/components/pin/PinCandidates';
 import { PinTags } from '@/components/pin/PinTags';
 import { PinAlternateNames } from '@/components/pin/PinAlternateNames';
-import { isPredictedPin } from '@/lib/tags';
 import { branchesUnder, threadNumbers } from '@/lib/thread';
 import { PinUpdates } from '@/components/pin/PinUpdates';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
@@ -610,7 +609,7 @@ async function Thread({ pin }: { pin: PinJson }) {
               <Link
                 href={pinPath(p)}
                 aria-current={p.id === pin.id ? 'page' : undefined}
-                className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'} ${isPredictedPin(p) ? 'opacity-65 hover:opacity-100 transition-opacity duration-200' : ''}`}
+                className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
               >
                 <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{numbers.get(p.id)}</span>
                 <span className="min-w-0">

@@ -1,3 +1,4 @@
+import * as db from '../db';
 import { SignJWT } from 'jose';
 import { signToken } from '../auth';
 import { sentimentHash, type SentimentText } from '../model/pinSentiment';
@@ -165,4 +166,17 @@ export async function pushSentiment(pinId: number, sentiment: number, product: s
     body: [{ id: pinId, sentiment, textHash: sentimentHash(scored), ...(product !== undefined ? { product } : {}) }],
   });
   return result.saved === 1;
+}
+
+
+// Only the sponsored translation endpoints: these are admin operations,
+// signed as the existing admin on the job database (same IDs as production).
+export async function sponsoredTranslationRequest(method: 'GET' | 'POST', path: string, body?: unknown) {
+  if (!/^\/api\/admin\/sponsored-ads\/(?:translations(?:\?[^#]*)?|[1-9]\d*\/translations)$/.test(path)) throw new Error('Not a sponsored translation endpoint');
+  const [admin] = await db.query<{ id: number }>(`SELECT "id" FROM "User" WHERE "role" = 'admin' ORDER BY "id" LIMIT 1`);
+  if (!admin) throw new Error('No admin account available for ad translations');
+  const token = prodBase()
+    ? await new SignJWT({ id: admin.id }).setProtectedHeader({ alg: 'HS256', typ: 'JWT' }).setIssuedAt().setExpirationTime('5h').sign(new TextEncoder().encode(process.env.JOBS_PROD_SESSION_SECRET))
+    : await signToken(admin.id);
+  return call<Record<string, any>>(method, path, { token, body });
 }

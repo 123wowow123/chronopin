@@ -10,6 +10,7 @@ import { useT } from '@/lib/client/i18n';
 import { withPageLang } from '@/lib/client/navigation';
 import { isAwinUrl, isEbayUrl } from '@/lib/affiliate';
 import { money } from '@/lib/format';
+import { creativeProblem } from '@/lib/sponsoredAds';
 import { MAP_STRIP_PINS, MAP_STRIP_REFRESH_MS, parseUrgency, SLOT_COUNT, type AdJson, type AdSlot } from '@/lib/ads';
 
 // The ad slots marked on the timeline and the pin page, filled with Amazon
@@ -274,6 +275,13 @@ export function AdLink({ ad, slot, pinId, className, children }: { ad: AdJson; s
 
 type TileText = { title: string; body: string; urgency: string; cta: string };
 
+// Preview destinations open directly, without recording an ad click. A form
+// with an unfinished or invalid URL keeps its preview non-interactive.
+export function AdPreviewLink({ ad, className, children }: { ad: AdJson; className: string; children: React.ReactNode }) {
+  if (creativeProblem({ title: 'Preview', url: ad.url })) return <div className={className}>{children}</div>;
+  return <a href={ad.url.trim()} target="_blank" rel="noopener noreferrer" className={className}>{children}</a>;
+}
+
 // What one ad shows inside a row of the timeline (and beside a pin's tags):
 // the picture, the title, the line under it and the link's words.
 function RowTileContent({ ad, wide, title, body, urgency, cta }: { ad: AdJson; wide: boolean } & TileText) {
@@ -316,7 +324,7 @@ function ColumnRowContent({ ad, title, body, urgency, cta }: { ad: AdJson } & Ti
 // How a self-serve ad (SponsoredAd) looks on the site, drawn by the very
 // markup the live rows use: on a pin's page (the column under its comments)
 // and on the timeline. `layout` picks one, or both stacked. Nothing in it is
-// a link; it is for the advertiser's portal and the admin's review.
+// tracked; links open the destination for the advertiser and admin to review.
 export function AdPreview({
   title,
   body,
@@ -358,9 +366,9 @@ export function AdPreview({
       {layout === 'pin' ? (
         <div>
           <div className="surface p-4 sm:p-5">
-            <div className="-mx-2 flex items-center gap-3.5 rounded-lg p-2">
+            <AdPreviewLink ad={ad} className="-mx-2 flex items-center gap-3.5 rounded-lg p-2 hover:no-underline">
               <ColumnRowContent ad={ad} {...shown} />
-            </div>
+            </AdPreviewLink>
           </div>
         </div>
       ) : null}
@@ -368,9 +376,9 @@ export function AdPreview({
         <div>
           {layout === 'both' ? <p className="mb-1 text-xs text-subtle">In lists: the timeline, pin pages, the side panel, the menu and the map</p> : null}
           <div className="mx-auto max-w-[448px]">
-            <div className="surface flex items-center gap-3 p-2.5">
+            <AdPreviewLink ad={ad} className="surface flex items-center gap-3 p-2.5 hover:no-underline">
               <RowTileContent ad={ad} wide {...shown} />
-            </div>
+            </AdPreviewLink>
           </div>
         </div>
       ) : null}

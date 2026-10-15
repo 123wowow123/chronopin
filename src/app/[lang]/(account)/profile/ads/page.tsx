@@ -6,6 +6,7 @@ import { requireViewer } from '@/server/guard';
 import SponsoredAd from '@/server/model/sponsoredAd';
 import { stripeConfigured } from '@/server/stripe';
 import { ProfileTabs } from '../ProfileTabs';
+import { AdTranslationToggle } from './AdTranslationToggle';
 import { AdActions } from './AdActions';
 import { AdChart } from './AdChart';
 import { AdForm } from './AdForm';
@@ -69,6 +70,7 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                     url: editing.url,
                     impressions: editing.impressionsBought,
                     plan: editing.plan,
+                    autoTranslate: editing.autoTranslate,
                     imageUrl: blobUrl(editing.imageName) ?? null,
                   }
                 : null
@@ -164,6 +166,7 @@ export default async function AdvertisePage({ searchParams }: { searchParams: Pr
                     </div>
                   ) : null}
                 </div>
+                <AdTranslationToggle id={ad.id} enabled={ad.autoTranslate} />
                 <AdActions id={ad.id} status={ad.status} dailyLimit={ad.dailyLimit ?? null} monthly={ad.plan === 'monthly'} />
               </article>
             );

@@ -45,6 +45,7 @@ import PinAdTranslation from './pinAdTranslation';
 import ProductAd from './productAd';
 import PinView from './pinView';
 import SponsoredAd from './sponsoredAd';
+import { localizeSponsoredAds } from '../services/sponsoredAdTranslations';
 import { blobUrl } from '@/lib/appConfig';
 import { featuredWatch, type FeaturedWatch } from '../ebayWatches';
 import { featuredSneaker } from '../ebaySneakers';
@@ -168,7 +169,7 @@ export default class Ad {
     const featured = new Map<string, FeaturedWatch | null>(
       await Promise.all(picked.filter((ad) => ad.kind === 'watch' || ad.kind === 'sneaker').map(async (ad) => [ad.key, await Promise.race([ad.kind === 'sneaker' ? featuredSneaker(ad.title ?? '') : featuredWatch(ad.title ?? ''), new Promise<null>((resolve) => setTimeout(resolve, FEATURE_WAIT_MS, null))])] as const)),
     );
-    return {
+    const served: { store: string; ads: AdJson[] } = {
       store,
       ads: picked.map((ad) => ({
         key: ad.key,
@@ -192,6 +193,8 @@ export default class Ad {
         store,
       })),
     };
+    await localizeSponsoredAds(served.ads, locale);
+    return served;
   }
 
   // One click, unless it repeats the same person's click on the same ad

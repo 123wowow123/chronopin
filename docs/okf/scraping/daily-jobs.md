@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -103,6 +103,7 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 | `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `traffic_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `thin_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `google_trends` | Trending searches in ten markets, scored for dated events, with `coveredByPin` ([trends.ts](../../../src/server/jobs/trends.ts)) | Same reader as `trends:discover` |
 | `prediction_markets` | Kalshi and Polymarket events resolving in the next week and those newly listed since the last run, biggest book first, with odds, dollars traded and `coveredByPin` ([markets.ts](../../../src/server/jobs/markets.ts)) | About 45 pages of exchange listings filtered down to a page: per-game and recurring markets out, an election's props folded together |
+| `predicted_pins` | Predicted pins (market-predicted events, `Predicted` tag) with candidate parent threads to join ([threadPredicted.ts](../../../src/server/jobs/threadPredicted.ts)) | The app's own data and thread matching |
 | `model_scores` | AI model pins whose model OpenRouter prices but LMArena has not scored (`awaiting`), and scored frontier pins missing the Frontier Model tag (`needsFrontierTag`) ([modelScores.ts](../../../src/server/jobs/modelScores.ts)) | The arena's overall leaderboard, a few pages, plus one pin query |
 | `company_coverage`, `tagged_pins` | Where a beat left off: each company's pins and when one was last posted, stalest first; what a tag (`Layoffs`) already holds ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `find_pins`, `get_pin` | The already-pinned test; a pin's full JSON | The app's own data |
@@ -528,6 +529,13 @@ try the other searches. A robot check on a listing is "unreadable", not
 [--curl] | add | check | list | remove` (`--curl` runs the searches through curl,
 which Amazon refuses less than Node's fetch).
 
+### threadPredicted
+
+**Reads** `predicted_pins`: predicted pins (market-predicted events and pins tagged `Predicted`), unthreaded pins first, curators' pins first, each with its author and candidate parent threads to join.
+**Does** for each pin: check whether it belongs to an ongoing series, flight test program, tournament, election cycle, or franchise (e.g. earlier model release, earlier flight in a test campaign, previous election). If an earlier pin in the story is available, attach the pin to that parent pin (`parentId`) with `update_pin`. If the pin was created by someone other than a curator, mark it with `mark_revisit`. If no thread is appropriate, leave it unthreaded.
+**When.** In the news job, morning and evening (owner, 2026-10-14: "6am and 6pm job should add job to pin predicted pins to thread if available"). `npm run threads:predicted` does the same from a terminal (`--apply` to change).
+**Traps.** A thread connects events in the same recurring story, series, or franchise; do not thread loosely related events just because they share a category or topic. A parent pin must have happened before or on the predicted start date (`utcStartDateTime`), and must not be a descendant of the pin.
+
 ## Find new events
 
 Look for what the timeline is missing, from what people search, read and say.
@@ -582,7 +590,9 @@ right: something just became likely enough to bet on, so look for the
 announcement behind it. Where `coveredByPin` or `find_pins` finds the event
 already pinned, add the market as a reference if the pin is a curator's
 (mark it for revisiting otherwise), and check the pin's date against when the
-market resolves.
+market resolves. When pinning a predicted event or market question, check whether an
+earlier pin or thread exists for the subject or series (`find_pins`, `parentId`)
+and thread the predicted pin to it if available.
 **Traps.** Quote the odds with the dollars traded and the day they were read
 ([learnings](learnings.md)); a thin book (under about $10k) is not evidence of
 anything. A market's close time is when it settles, not when the event
@@ -778,3 +788,30 @@ by hand.
 is neither awaiting nor tagged; the tool does not guess. When the arena
 returns nothing the tool errors rather than reporting every pin as awaiting.
 
+
+## adTranslations
+
+Ad translation is an upkeep task in the existing **midnight** job (00:00)
+and **news** job (06:00 and 18:00 Los Angeles). It is not a separate job.
+Run-all flows include it through those jobs. Saved settings are upgraded to
+include the task in both jobs while preserving their schedules, enabled flags,
+drivers and limits; the earlier standalone `ad-translations` entry is removed.
+
+1. Call `pending_ad_translations`, starting at `after: 0`. Follow `nextAfter`
+   until null, even when a scanned page contains no missing translations.
+   Only ads with auto-translation enabled are returned, including admin ads.
+2. Translate each exported headline/body into every `missingLocales` language
+   yourself in this job session. Do not call the server's model translator.
+   Preserve brand names, numbers, prices, currencies, and conditions. Empty
+   source body stays empty. Do not translate image text or change the link.
+3. Call `save_ad_translations` for that ad with its exact `sourceHash` and
+   locale-keyed `{ title, body }` objects. Saves use the admin translation API;
+   when `JOBS_PROD_BASE` is set both reads and writes target production, not
+   local ad IDs. Production writes use the shared serial queue.
+4. Read the ad back through the admin translation GET endpoint (or rescan the
+   pending queue) to verify coverage. On 409 fetch fresh text and retranslate;
+   on failure report the ad ID, missing locales and specific reason. Do not
+   turn on opted-out ads or mark a failed save complete.
+
+No pin creation or pin edit is needed. Each successful save is recorded in the
+job's action log. Completed languages are skipped, so rerunning only fills gaps.

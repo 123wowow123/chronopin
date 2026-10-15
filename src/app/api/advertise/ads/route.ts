@@ -1,3 +1,4 @@
+import { scheduleAdTranslation } from '@/server/services/sponsoredAdTranslations';
 import type { NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
 import { emailConfirmationPending } from '@/lib/emailConfirmation';
@@ -20,5 +21,6 @@ export const POST = route(async (request: NextRequest) => {
   if (emailConfirmationPending(user)) throw new HttpError(403, 'Confirm your email address before buying an ad.', { code: 'emailUnverified', message: 'Confirm your email address before buying an ad.' });
   const fields = parseFields(await readJson(request));
   const ad = await SponsoredAd.create(user.id, fields);
+  scheduleAdTranslation(ad);
   return json(ad, 201);
 });

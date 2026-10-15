@@ -165,6 +165,7 @@ export function TimeBlock({
   dayTotal,
   boost,
   adRow,
+  dimPredicted = false,
 }: {
   // Defaults to the day's id, which is only unique in date order.
   id?: string;
@@ -192,6 +193,7 @@ export function TimeBlock({
   // the next day's takes over instead of letting go early and leaving a gap
   // over the ad's own margin.
   adRow?: React.ReactNode;
+  dimPredicted?: boolean;
 }) {
   const t = useT();
   const { locale } = t;
@@ -245,6 +247,7 @@ export function TimeBlock({
       className={rank >= BAG_LIMIT_PHONE ? 'max-sm:hidden' : ''}
       serverTimeZone={serverTimeZone}
       priority={firstPinPriority && i === firstShown}
+      dimPredicted={dimPredicted}
     />
   ));
 
@@ -403,6 +406,7 @@ function DayCard({
   className = '',
   serverTimeZone,
   priority,
+  dimPredicted = false,
 }: {
   stack: PinStack<PinJson>;
   order: number;
@@ -411,13 +415,14 @@ function DayCard({
   className?: string;
   serverTimeZone: string;
   priority?: boolean;
+  dimPredicted?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   useImpression(ref, pin.id, counted);
   // By someone the reader blocked, or a pin they are not interested in.
   const leftOut = useLeftOut()(pin);
   if (leftOut) return null;
-  const card = <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={priority} />;
+  const card = <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={priority} dimPredicted={dimPredicted} />;
   return (
     <div ref={ref} id={anchor ? `pin-${pin.id}` : undefined} data-start={pin.utcStartDateTime} role="listitem" className={`mb-2.5 ${className}`} style={{ order }}>
       {hidden.length ? (

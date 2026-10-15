@@ -1,8 +1,10 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { apiBase, prodBase, pushEventInfo, pushSentiment, scrapeUrl } from './pinApi';
+import * as db from '../db';
+import { sponsoredTranslationRequest, apiBase, prodBase, pushEventInfo, pushSentiment, scrapeUrl } from './pinApi';
 import { sentimentHash } from '../model/pinSentiment';
 import { productionWrite } from './productionWrites';
 
+vi.mock('../db', () => ({ query: vi.fn() }));
 vi.mock('./curators', () => ({ curatorId: async () => 7, isCurator: (h: string | null | undefined) => h === '@TechDesk' }));
 vi.mock('../auth', () => ({ signToken: async () => 'local-token' }));
 vi.mock('./productionWrites', () => ({ productionWrite: vi.fn(async (write: () => Promise<unknown>) => write()) }));
@@ -82,5 +84,26 @@ describe('writing to production', () => {
     await scrapeUrl('https://source.example', '@TechDesk');
     expect(fetch).toHaveBeenCalledWith(`${apiBase()}/api/scrape`, expect.objectContaining({ method: 'POST' }));
     expect(productionWrite).not.toHaveBeenCalled();
+  });
+});
+
+
+describe('sponsored translation job API', () => {
+  it('reads and writes the production ad API as admin, serializing writes', async () => {
+    process.env.JOBS_PROD_BASE = 'https://prod.example';
+    process.env.JOBS_PROD_SESSION_SECRET = 'prod-secret';
+    vi.mocked(db.query).mockResolvedValue([{ id: 1 }]);
+    const fetcher = vi.fn(async (_url: string, _init: any) => new Response(JSON.stringify({ saved: 1 }), { status: 200 }));
+    vi.stubGlobal('fetch', fetcher);
+    await sponsoredTranslationRequest('GET', '/api/admin/sponsored-ads/translations?after=0&limit=25');
+    await sponsoredTranslationRequest('POST', '/api/admin/sponsored-ads/2/translations', { sourceHash: 'h', translations: {} });
+    expect(fetcher.mock.calls[0][0]).toBe('https://prod.example/api/admin/sponsored-ads/translations?after=0&limit=25');
+    expect(fetcher.mock.calls[1][1].headers.Authorization).toMatch(/^Bearer ey/);
+    expect(productionWrite).toHaveBeenCalledOnce();
+  });
+  it('rejects unrelated admin endpoints and a missing admin account', async () => {
+    await expect(sponsoredTranslationRequest('POST', '/api/admin/db/User', {})).rejects.toThrow(/Not a sponsored/);
+    vi.mocked(db.query).mockResolvedValue([]);
+    await expect(sponsoredTranslationRequest('GET', '/api/admin/sponsored-ads/translations')).rejects.toThrow(/No admin/);
   });
 });

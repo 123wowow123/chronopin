@@ -1,3 +1,4 @@
+import { AdTranslationToggle } from '../../profile/ads/AdTranslationToggle';
 import type { Metadata } from 'next';
 import { AdPreview } from '@/components/ads/AdBlock';
 import { blobUrl } from '@/lib/appConfig';
@@ -45,6 +46,7 @@ export default async function AdminSponsoredPage() {
                   Rejected, but Stripe could not refund it automatically. Refund payment {ad.stripePaymentIntent} in the Stripe dashboard, then mark it refunded.
                 </p>
               ) : null}
+              <AdTranslationToggle id={ad.id} enabled={ad.autoTranslate} admin />
               <ReviewActions id={ad.id} needsRefund={ad.needsRefund} />
             </article>
           );

@@ -78,10 +78,20 @@ export const TASKS = {
     label: 'Holiday ads',
     summary: "Stock the traditional goods of the cultural holidays coming up, and of any holiday a pin falls on (mooncakes and lanterns for the Mid-Autumn Festival) as inexpensive, middle and expensive Amazon ads, keep them working, and drop any that are not truly traditional.",
   },
+  adTranslations: {
+    group: 'upkeep',
+    label: 'Ad translations',
+    summary: 'Translate opted-in sponsored ads, including admin ads, into every missing site language and save session-written translations with current source hashes.',
+  },
   restaurantRegions: {
     group: 'upkeep',
     label: 'Restaurant region pages',
     summary: "Refresh the restaurant landing page of every region where a restaurant pin was created since the last run: re-check its openings and top restaurants, and fill in what the new pin implies.",
+  },
+  threadPredicted: {
+    group: 'upkeep',
+    label: 'Thread predicted pins',
+    summary: 'Check predicted pins for an earlier pin or thread in their story, series or franchise, and attach them with parentId if available.',
   },
   trends: {
     group: 'discover',
@@ -197,7 +207,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       dayOfWeek: null,
       // No sentiment: the news job scores new pins twice a day (owner, 2026-09-23).
       // thinPins fills out a batch of the pins hidden from search as thin (owner, 2026-10-04).
-      tasks: ['revisits', 'pinHealth', 'thinPins', 'restaurantRegions', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
+      tasks: ['revisits', 'pinHealth', 'thinPins', 'adTranslations', 'restaurantRegions', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -213,8 +223,9 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // eventInfo twice a day, so a sell-out shows by the next run; the
       // prediction markets too, for the week's events the money is on (owner,
       // 2026-10-01). modelScores checks twice a day for the arena scores that
-      // models lack at launch (owner, 2026-10-12).
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'breakingNews', 'predictionMarkets', 'modelScores', 'sentiment'],
+      // models lack at launch (owner, 2026-10-12). threadPredicted checks
+      // predicted pins for an available thread to join (owner, 2026-10-14).
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'modelScores', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -248,14 +259,26 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       maxNewPins: 0,
       maxUpdates: 100,
     },
+
   ],
 };
 
 // A saved setting with any default job it lacks added (off, as it ships), so
 // a job introduced after an admin first saved still shows on /admin/jobs.
 export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
-  const missing = DEFAULT_DAILY_JOBS.jobs.filter((d) => !setting.jobs.some((j) => j.id === d.id));
-  return missing.length ? { jobs: [...setting.jobs, ...missing] } : setting;
+  // Fold the short-lived separate translation job into the existing daily
+  // runs, including saved settings from before this task was introduced.
+  let changed = false;
+  const jobs = setting.jobs.flatMap((job): JobSetting[] => {
+    if (job.id === 'ad-translations') { changed = true; return []; }
+    if ((job.id === 'midnight' || job.id === 'news') && !job.tasks.includes('adTranslations')) {
+      changed = true;
+      return [{ ...job, tasks: TASK_IDS.filter((task) => task === 'adTranslations' || job.tasks.includes(task)) }];
+    }
+    return [job];
+  });
+  const missing = DEFAULT_DAILY_JOBS.jobs.filter((d) => !jobs.some((j) => j.id === d.id));
+  return changed || missing.length ? { jobs: [...jobs, ...missing] } : setting;
 }
 
 const TIME = /^([01]\d|2[0-3]):([0-5]\d)$/;

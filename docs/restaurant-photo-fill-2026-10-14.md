@@ -42,3 +42,7 @@ The remaining 11 pins are forthcoming venues. Further branch-specific research d
 The [companion evidence file](restaurant-photo-fill-2026-10-14.json) retains public blob URLs, source image/page URLs, credits, captions, hashes, dimensions, public API verification and checked-source HTTP statuses. Raw pages, contact sheets, original downloads and write journals remain in ignored `.scrape/restaurant-photo-fill-2026-10-14/`.
 
 Browser access was not retried during this API publication: prior browser checks were denied despite the displayed allow setting. Verification here is public API and image-file verification, not a claim of a new browser screenshot.
+
+## Food and alternative-image follow-up
+
+The owner subsequently authorized official food imagery and other best replacements. [The follow-up](restaurant-food-replacements-2026-10-14.md) filled all 11 remaining empty-image pins and replaced two construction lead images with food previews. Six pins use illustrative employer imagery or official branding/opening artwork; their actual venue/food-photo gaps remain documented.

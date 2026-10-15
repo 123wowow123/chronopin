@@ -5,6 +5,7 @@ import type { SponsoredPlan, SponsoredStatus } from '@/lib/sponsoredAds';
 export type SponsoredRow = {
   id: number;
   userId: number;
+  autoTranslate: boolean;
   title: string;
   body: string;
   url: string;
@@ -24,7 +25,7 @@ export type SponsoredRow = {
   utcCreatedDateTime: string;
 };
 
-const COLUMNS = `"id", "userId", "title", "body", "url", "imageName", "impressionsBought", "priceCents", "impressionsServed", "dailyLimit", "plan", "currentPeriodEnd", "cancelAtPeriodEnd", "status",
+const COLUMNS = `"autoTranslate", "id", "userId", "title", "body", "url", "imageName", "impressionsBought", "priceCents", "impressionsServed", "dailyLimit", "plan", "currentPeriodEnd", "cancelAtPeriodEnd", "status",
   "rejectionReason", "needsRefund", "paidDateTime", "approvedDateTime", "utcCreatedDateTime"`;
 
 export type SponsoredStats = { impressions: number; uniques: number; clicks: number; cities: { city: string | null; region: string | null; country: string | null; clicks: number }[]; byDay: { day: string; impressions: number; uniques: number; clicks: number }[] };
@@ -44,22 +45,23 @@ export default class SponsoredAd {
     return db.query<SponsoredRow>(`SELECT ${COLUMNS} FROM "SponsoredAd" WHERE "userId" = $1 ORDER BY "id" DESC`, [userId]);
   }
 
-  static async create(userId: number, f: { title: string; body: string; url: string; impressionsBought: number; priceCents: number; plan: SponsoredPlan }): Promise<SponsoredRow> {
+  static async create(userId: number, f: { title: string; body: string; url: string; impressionsBought: number; priceCents: number; plan: SponsoredPlan; autoTranslate?: boolean }): Promise<SponsoredRow> {
     const [row] = await db.query<SponsoredRow>(
-      `INSERT INTO "SponsoredAd" ("userId", "title", "body", "url", "impressionsBought", "priceCents", "plan")
-       VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING ${COLUMNS}`,
-      [userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.plan],
+      `INSERT INTO "SponsoredAd" ("userId", "title", "body", "url", "impressionsBought", "priceCents", "plan", "autoTranslate")
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING ${COLUMNS}`,
+      [userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.plan, f.autoTranslate ?? true],
     );
     return row;
   }
 
   // An ad that is not paid for yet can be changed freely; one that is paid for
   // keeps its headline, text and link as reviewed.
-  static async update(id: number, userId: number, f: { title: string; body: string; url: string; impressionsBought: number; priceCents: number; plan: SponsoredPlan }) {
+  static async update(id: number, userId: number, f: { title: string; body: string; url: string; impressionsBought: number; priceCents: number; plan: SponsoredPlan; autoTranslate?: boolean }) {
     const rows = await db.query<SponsoredRow>(
-      `UPDATE "SponsoredAd" SET "title" = $3, "body" = $4, "url" = $5, "impressionsBought" = $6, "priceCents" = $7, "plan" = $8, "rejectionReason" = NULL, "utcUpdatedDateTime" = now()
+      `UPDATE "SponsoredAd" SET "title" = $3::varchar, "body" = $4::varchar, "url" = $5, "impressionsBought" = $6, "priceCents" = $7, "plan" = $8, "autoTranslate" = coalesce($9::boolean, "autoTranslate"),
+         "translations" = CASE WHEN "title" = $3::varchar AND "body" = $4::varchar THEN "translations" ELSE '{}'::jsonb END, "rejectionReason" = NULL, "utcUpdatedDateTime" = now()
        WHERE "id" = $1 AND "userId" = $2 AND "status" = 'draft' RETURNING ${COLUMNS}`,
-      [id, userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.plan],
+      [id, userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.plan, f.autoTranslate ?? null],
     );
     return rows[0] ?? null;
   }
@@ -229,15 +231,15 @@ export default class SponsoredAd {
 
   static async adminCreate(f: {
     userId: number; title: string; body: string; url: string; impressionsBought: number; priceCents: number;
-    status: SponsoredStatus; dailyLimit: number | null;
+    status: SponsoredStatus; dailyLimit: number | null; autoTranslate?: boolean;
   }): Promise<SponsoredRow> {
     const [row] = await db.query<SponsoredRow>(
-      `INSERT INTO "SponsoredAd" ("userId", "title", "body", "url", "impressionsBought", "priceCents", "status", "dailyLimit", "paidDateTime", "approvedDateTime")
-       VALUES ($1, $2, $3, $4, $5, $6, $7::varchar, $8,
+      `INSERT INTO "SponsoredAd" ("userId", "title", "body", "url", "impressionsBought", "priceCents", "status", "dailyLimit", "autoTranslate", "paidDateTime", "approvedDateTime")
+       VALUES ($1, $2, $3, $4, $5, $6, $7::varchar, $8, $9,
          CASE WHEN $7::varchar = 'draft' THEN NULL ELSE now() END,
          CASE WHEN $7::varchar IN ('active', 'paused', 'completed') THEN now() ELSE NULL END)
        RETURNING ${COLUMNS}`,
-      [f.userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.status, f.dailyLimit],
+      [f.userId, f.title, f.body, f.url, f.impressionsBought, f.priceCents, f.status, f.dailyLimit, f.autoTranslate ?? true],
     );
     return row;
   }
@@ -245,10 +247,10 @@ export default class SponsoredAd {
   // Only the named fields change. Column names come from this list, never
   // from the request.
   static async adminUpdate(id: number, patch: Partial<{
-    title: string; body: string; url: string; impressionsBought: number; priceCents: number;
+    title: string; body: string; url: string; impressionsBought: number; priceCents: number; autoTranslate: boolean;
     status: SponsoredStatus; dailyLimit: number | null; rejectionReason: string | null; plan: SponsoredPlan; currentPeriodEnd: string | null;
   }>): Promise<SponsoredRow | null> {
-    const columns = ['title', 'body', 'url', 'impressionsBought', 'priceCents', 'status', 'dailyLimit', 'rejectionReason', 'plan', 'currentPeriodEnd'] as const;
+    const columns = ['autoTranslate', 'title', 'body', 'url', 'impressionsBought', 'priceCents', 'status', 'dailyLimit', 'rejectionReason', 'plan', 'currentPeriodEnd'] as const;
     const sets: string[] = [];
     const values: unknown[] = [id];
     for (const column of columns) {
@@ -257,6 +259,7 @@ export default class SponsoredAd {
       sets.push(`"${column}" = $${values.length}`);
     }
     if (!sets.length) return this.get(id);
+    if ('title' in patch || 'body' in patch) sets.push(`"translations" = '{}'::jsonb`);
     const rows = await db.query<SponsoredRow>(
       `UPDATE "SponsoredAd" SET ${sets.join(', ')}, "utcUpdatedDateTime" = now() WHERE "id" = $1 RETURNING ${COLUMNS}`,
       values,

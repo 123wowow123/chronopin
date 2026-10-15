@@ -665,7 +665,7 @@ export function SearchResults({
               {/* Pins by anyone the reader blocked, or that they are not interested in, are left out. */}
               {(visibleRankedPins ?? []).filter((pin) => !leftOut(pin)).map((pin, i) => (
                 <li key={pin.id} id={`rank-${pin.id}`}>
-                  <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} todayKey={todayKey} />
+                  <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} todayKey={todayKey} dimPredicted={onlyWatched} />
                 </li>
               ))}
             </CardGrid>
@@ -677,7 +677,7 @@ export function SearchResults({
           {bags.map((bag, index) => (
             <div key={bag.day}>
               {marker.index === index ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} culturalDays={culturalDays[todayKey]} /> : null}
-              <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[monthDayOf(bag.day)] || []} culturalDays={culturalDays[bag.day]} serverTimeZone={serverTimeZone} />
+              <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[monthDayOf(bag.day)] || []} culturalDays={culturalDays[bag.day]} serverTimeZone={serverTimeZone} dimPredicted={onlyWatched} />
             </div>
           ))}
           {marker.atEnd ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} culturalDays={culturalDays[todayKey]} /> : null}

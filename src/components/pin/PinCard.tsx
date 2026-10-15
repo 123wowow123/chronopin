@@ -62,12 +62,14 @@ export function PinCard({
   priority,
   tense,
   todayKey,
+  dimPredicted = false,
 }: {
   pin: CardPin;
   serverTimeZone: string;
   priority?: boolean;
   tense?: PinTense;
   todayKey?: string;
+  dimPredicted?: boolean;
 }) {
   // On a phone a card shows a video's still instead of its player, unless an
   // admin has turned the players back on.
@@ -150,7 +152,7 @@ export function PinCard({
     <article
       data-tense={tense}
       data-predicted={isPredicted ? '' : undefined}
-      className={`surface relative overflow-hidden bg-[var(--card-bg,var(--color-panel))] pb-1.5 transition-[border-color,filter,opacity] duration-200 hover:brightness-110 ${TENSE_CLASS[tense ?? 'ongoing']} ${isPredicted ? 'opacity-65 hover:opacity-100 focus-within:opacity-100' : ''}`}
+      className={`surface relative overflow-hidden bg-[var(--card-bg,var(--color-panel))] pb-1.5 transition-[border-color,filter,opacity] duration-200 hover:brightness-110 ${TENSE_CLASS[tense ?? 'ongoing']} ${isPredicted && dimPredicted ? 'opacity-65 hover:opacity-100 focus-within:opacity-100' : ''}`}
     >
       {/* pt-2.5 belongs inside the clip: the meta row's links hang their tap
           area 8px above themselves, which overflow-hidden would cut off. */}

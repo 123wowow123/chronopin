@@ -42,10 +42,11 @@ import { hasEventInfo } from '@/lib/eventInfo';
 import { CURATORS } from './curators';
 import { checkPinHealth, pinsToCheck } from './health';
 import log from '../util/log';
-import { createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
+import { sponsoredTranslationRequest, createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
+import { predictedPins } from './threadPredicted';
 import { trendCandidates } from './trends';
 
 export type JobContext = {
@@ -151,6 +152,28 @@ export const TOOLS: JobTool[] = [
     input_schema: obj({ days: num('Window in days, 1-14'), limit: num('At most this many per list, default 30'), minVolume: num('Dollars traded, default 10000') }),
     run: (input, ctx) =>
       marketCandidates({ days: int(input.days, 7, 1, 14), limit: int(input.limit, 30, 1, 60), minVolume: int(input.minVolume, 10_000, 0, 10_000_000), since: ctx.since }),
+  },
+  {
+    name: 'predicted_pins',
+    description:
+      "Predicted pins (market-predicted events and pins tagged 'Predicted'): unthreaded pins first, curators' pins (editable) first, each with its current parentId, company, author, and candidate earlier pins/threads to join if available. For each pin, check candidate pins (or run find_pins) for an earlier event in its story, series or franchise (the previous flight, the previous election, the earlier model release, the earlier tournament). If an earlier pin is available, attach the pin to the parent pin with update_pin ({ parentId }), or mark it for revisiting with mark_revisit if by a non-curator.",
+    input_schema: obj({
+      limit: num('At most this many pins, default 20, at most 50'),
+      unthreadedOnly: { type: 'boolean', description: 'Only pins without a parent (default true)' },
+      exclude: { type: 'array', items: { type: 'integer' }, description: 'Pin ids already checked' },
+    }),
+    run: async (input, ctx) => {
+      const result = await predictedPins({
+        limit: int(input.limit, 20, 1, 50),
+        unthreadedOnly: input.unthreadedOnly !== false,
+        exclude: Array.isArray(input.exclude) ? input.exclude.map(Number).filter(Number.isInteger) : [],
+      });
+      await act(ctx, {
+        tool: 'predicted_pins',
+        detail: `${result.pins.length} predicted pin(s) returned (${result.unthreaded} unthreaded of ${result.total} total)`,
+      });
+      return result;
+    },
   },
   {
     name: 'revisit_queue',
@@ -518,6 +541,24 @@ export const TOOLS: JobTool[] = [
     },
   },
   {
+    name: 'pending_ad_translations',
+    description: 'Enabled sponsored ads (including admin-owned ads) missing translations. Returns exact title/body, sourceHash and missingLocales. Translate these yourself; no extra model call. Follow nextAfter until null, even when a page has no pending ads. Reads production when JOBS_PROD_BASE is set, otherwise local.',
+    input_schema: obj({ after: num('Last scanned ad ID; start at 0'), limit: num('Ads to scan per page, 1–25') }),
+    run: (input) => sponsoredTranslationRequest('GET', `/api/admin/sponsored-ads/translations?after=${int(input.after, 0, 0, Number.MAX_SAFE_INTEGER)}&limit=${int(input.limit, 25, 1, 25)}`),
+  },
+  {
+    name: 'save_ad_translations',
+    description: 'Save session-written translations for one ad using its exported sourceHash. Translate every missing locale, preserving prices, currency, names and conditions. Does not enable opted-out ads or change copy, links, pictures, budget or frequency. A stale hash is refused: fetch again and translate current copy.',
+    input_schema: obj({ adId: num('Ad ID'), sourceHash: str('Hash from pending_ad_translations'), translations: { type: 'object', description: 'Locale-keyed objects with title and body. Empty source body stays empty.', additionalProperties: { type: 'object', properties: { title: { type: 'string' }, body: { type: 'string' } }, required: ['title', 'body'], additionalProperties: false } } }, ['adId', 'sourceHash', 'translations']),
+    run: async (input, ctx) => {
+      const id = int(input.adId, 0, 1, Number.MAX_SAFE_INTEGER);
+      if (!id) throw new Error('adId must be a positive integer');
+      const result = await sponsoredTranslationRequest('POST', `/api/admin/sponsored-ads/${id}/translations`, { sourceHash: input.sourceHash, translations: input.translations });
+      await act(ctx, { tool: 'save_ad_translations', detail: `Ad ${id}: saved ${result.saved} translations (${result.locales?.join(', ')})` });
+      return result;
+    },
+  },
+  {
     name: 'holiday_ads',
     description: "A holiday's ads (an id from the catalog: mid-autumn, diwali, hanukkah, halloween...), working and broken, with tier, brand, price, stars and review count.",
     input_schema: obj({ holiday: str('Holiday id, e.g. mid-autumn') }, ['holiday']),
@@ -670,7 +711,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'update_pin',
     description:
-      "Edits a pin a curator posted, through the real API as that curator. `patch` holds only the fields that change, plus the helpers addReferences [{url, title, confidence, publishedDate, reasoning}], addMedia [{type, originalUrl}] and removeMediumIds [ids]; everything else is kept. A pin by anyone who is not a curator cannot be edited here - mark it for revisiting with what should change.",
+      "Edits a pin a curator posted, through the real API as that curator. `patch` holds only the fields that change (e.g. parentId to thread the pin, title, description, longFormSummary, dateConfidence, utcStartDateTime), plus the helpers addReferences [{url, title, confidence, publishedDate, reasoning}], addMedia [{type, originalUrl}] and removeMediumIds [ids]; everything else is kept. A pin by anyone who is not a curator cannot be edited here - mark it for revisiting with what should change.",
     input_schema: obj({ pinId: num('Pin id'), patch: { type: 'object', description: 'Changed fields and helpers' }, reason: str('What changed and on what evidence') }, ['pinId', 'patch', 'reason']),
     run: async (input, ctx) => {
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);

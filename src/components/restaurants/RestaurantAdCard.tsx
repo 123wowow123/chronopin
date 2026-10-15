@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext } from 'react';
-import { AdLink, AdPicture, Disclosure, useAdText } from '@/components/ads/AdBlock';
+import { AdLink, AdPicture, AdPreviewLink, Disclosure, useAdText } from '@/components/ads/AdBlock';
 import { useT } from '@/lib/client/i18n';
 import type { AdJson } from '@/lib/ads';
 import styles from './RestaurantGuide.module.css';
@@ -15,10 +15,10 @@ export const useRestaurantCardAds = () => useContext(CardAdsContext);
 // The guide's colours, which a card outside the guide does not inherit.
 const PREVIEW_VARS = { '--paper-raised': '#fffdf7', '--text': '#263c32', '--soft': '#627069', '--rule': '#d8dcd0', '--green': '#244d39', color: '#263c32' } as React.CSSProperties;
 
-// The card's link; in a preview nothing is a link and nothing is counted.
+// Preview links open the destination without counting a click.
 function Wrap({ ad, preview, children }: { ad: AdJson; preview: boolean; children: React.ReactNode }) {
   const className = 'flex h-full flex-col text-inherit hover:no-underline';
-  if (preview) return <div className={className}>{children}</div>;
+  if (preview) return <AdPreviewLink ad={ad} className={className}>{children}</AdPreviewLink>;
   return <AdLink ad={ad} slot="card-grid" className={className}>{children}</AdLink>;
 }
 

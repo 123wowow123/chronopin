@@ -1,3 +1,4 @@
+import { scheduleAdTranslation } from '@/server/services/sponsoredAdTranslations';
 import type { NextRequest } from 'next/server';
 import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
@@ -36,7 +37,9 @@ export const POST = route(async (request: NextRequest) => {
     priceCents: fields.priceCents ?? 1,
     status: fields.status ?? 'active',
     dailyLimit: fields.dailyLimit ?? null,
+    autoTranslate: fields.autoTranslate ?? true,
   });
   Ad.expireInventory();
+  scheduleAdTranslation(ad);
   return json(ad, 201);
 });

@@ -18,6 +18,12 @@ const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
 const IMAGE_SIZE = 480;
 const IMAGE_PREFIX = 'adimg/';
 
+export function parseAutoTranslate(value: unknown): boolean | undefined {
+  if (value === undefined) return undefined;
+  if (typeof value !== 'boolean') throw new HttpError(422, 'autoTranslate must be a boolean.');
+  return value;
+}
+
 // Fields as the form sends them, checked and priced from the package, never
 // from a price the browser sent.
 export function parseFields(body: Record<string, unknown>) {
@@ -25,6 +31,7 @@ export function parseFields(body: Record<string, unknown>) {
     title: String(body.title ?? '').trim(),
     body: String(body.body ?? '').trim(),
     url: String(body.url ?? '').trim(),
+    autoTranslate: parseAutoTranslate(body.autoTranslate),
   };
   const problem = creativeProblem(fields);
   if (problem) throw new HttpError(422, problem, { message: problem });
@@ -219,7 +226,7 @@ function dailyLimitOf(raw: unknown): number | null {
 // 1,000,000 in thousands, and the price may be set (a complimentary ad is 1).
 export function parseAdminFields(body: Record<string, unknown>, partial: boolean) {
   const out: Partial<{
-    title: string; body: string; url: string; impressionsBought: number; priceCents: number;
+    title: string; body: string; url: string; impressionsBought: number; priceCents: number; autoTranslate: boolean;
     status: (typeof STATUSES)[number]; dailyLimit: number | null; rejectionReason: string | null; plan: 'one_time' | 'monthly'; currentPeriodEnd: string | null;
   }> = {};
   if (!partial || 'title' in body) out.title = String(body.title ?? '').trim();
@@ -245,6 +252,7 @@ export function parseAdminFields(body: Record<string, unknown>, partial: boolean
     if (!STATUSES.includes(body.status as never)) throw new HttpError(422, `status must be one of ${STATUSES.join(', ')}.`);
     out.status = body.status as (typeof STATUSES)[number];
   }
+  if ('autoTranslate' in body) out.autoTranslate = parseAutoTranslate(body.autoTranslate);
   if ('dailyLimit' in body) out.dailyLimit = dailyLimitOf(body.dailyLimit);
   if ('plan' in body) {
     if (body.plan !== 'one_time' && body.plan !== 'monthly') throw new HttpError(422, "plan must be 'one_time' or 'monthly'.");

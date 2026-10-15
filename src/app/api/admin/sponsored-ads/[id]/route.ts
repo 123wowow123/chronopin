@@ -1,3 +1,4 @@
+import { scheduleAdTranslation } from '@/server/services/sponsoredAdTranslations';
 import type { NextRequest } from 'next/server';
 import { requireRole } from '@/server/auth';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
@@ -24,6 +25,7 @@ export const PATCH = route(async (request: NextRequest, { params }: Ctx) => {
   const ad = await SponsoredAd.adminUpdate(id, patch);
   if (!ad) throw new HttpError(404, 'No such ad.');
   Ad.expireInventory();
+  scheduleAdTranslation(ad);
   return json(ad);
 });
 

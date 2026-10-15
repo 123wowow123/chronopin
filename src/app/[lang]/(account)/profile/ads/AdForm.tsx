@@ -20,7 +20,7 @@ import {
   TITLE_MAX,
 } from '@/lib/sponsoredAds';
 
-type Initial = { id: number; title: string; body: string; url: string; impressions: number; imageUrl: string | null; plan?: 'one_time' | 'monthly' };
+type Initial = { id: number; title: string; body: string; url: string; impressions: number; imageUrl: string | null; plan?: 'one_time' | 'monthly'; autoTranslate?: boolean };
 
 // Write the ad, pick a package and pay. The ad is saved as a draft first
 // (so a closed tab loses nothing), then the picture is sent, then Stripe's
@@ -32,6 +32,7 @@ export function AdForm({ initial, preselect }: { initial: Initial | null; presel
   const fileRef = useRef<HTMLInputElement>(null);
   const [title, setTitle] = useState(initial?.title ?? '');
   const [body, setBody] = useState(initial?.body ?? '');
+  const [autoTranslate, setAutoTranslate] = useState(initial?.autoTranslate ?? true);
   const [url, setUrl] = useState(initial?.url ?? 'https://');
   const [monthly, setMonthly] = useState(initial?.plan === 'monthly' || chosen === 'monthly');
   const isFixed = (n: number) => SPONSORED_PACKAGES.some((p) => p.impressions === n);
@@ -67,7 +68,7 @@ export function AdForm({ initial, preselect }: { initial: Initial | null; presel
     setBusy(true);
     setError('');
     try {
-      const fields = { title, body, url, impressions, ...(monthly ? { plan: 'monthly' } : {}) };
+      const fields = { title, body, url, autoTranslate, impressions, ...(monthly ? { plan: 'monthly' } : {}) };
       const saved = initial ? await api.patch<{ id: number }>(`/api/advertise/ads/${initial.id}`, fields) : await api.post<{ id: number }>('/api/advertise/ads', fields);
       if (picture) {
         const form = new FormData();
@@ -146,6 +147,13 @@ export function AdForm({ initial, preselect }: { initial: Initial | null; presel
             {body.length}/{BODY_MAX}
           </p>
         </div>
+        <label className="flex items-start gap-3">
+          <input type="checkbox" role="switch" className="mt-1 accent-accent" checked={autoTranslate} onChange={(event) => setAutoTranslate(event.target.checked)} />
+          <span>
+            <span className="block text-sm font-medium">Auto-translate into all site languages</span>
+            <span className="block text-xs text-subtle">Translate the headline and text after saving. Readers see their selected language when ready; otherwise they see your original text. Text in pictures is unchanged.</span>
+          </span>
+        </label>
         <div>
           <label htmlFor="ad-url" className="field-label">
             Link
