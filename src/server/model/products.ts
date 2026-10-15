@@ -31,9 +31,9 @@ export default class Products {
           AND EXISTS (SELECT 1 FROM "PinTagView" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" <> 'reserved' AND "c"."name" = $1::citext)
           AND NOT EXISTS (SELECT 1 FROM "PinTagView" AS "x" WHERE "x"."pinId" = "p"."id" AND "x"."name" = ANY($4::citext[]))
           AND "p"."id" <> ALL($5::integer[])
-        ORDER BY lower("p"."productName"), "listed" DESC, "blurbed" DESC, "p"."utcStartDateTime" DESC, "p"."id" DESC
+        ORDER BY lower("p"."productName"), "blurbed" DESC, "listed" DESC, "p"."utcStartDateTime" DESC, "p"."id" DESC
       ) AS "one"
-      ORDER BY "listed" DESC, "blurbed" DESC, "utcStartDateTime" DESC, "id" DESC
+      ORDER BY "blurbed" DESC, "listed" DESC, "utcStartDateTime" DESC, "id" DESC
       LIMIT $3::integer`,
       [category, minConfidence, limit, NOT_GOODS, exclude],
     );
