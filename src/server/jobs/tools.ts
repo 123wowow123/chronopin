@@ -156,7 +156,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'predicted_pins',
     description:
-      "Predicted pins (market-predicted events and pins tagged 'Predicted'): unthreaded pins first, curators' pins (editable) first, each with its current parentId, company, author, and candidate earlier pins/threads to join if available. For each pin, check candidate pins (or run find_pins) for an earlier event in its story, series or franchise (the previous flight, the previous election, the earlier model release, the earlier tournament). If an earlier pin is available, attach the pin to the parent pin with update_pin ({ parentId }), or mark it for revisiting with mark_revisit if by a non-curator.",
+      "Predicted pins (market-predicted events and pins tagged 'Predicted'): unthreaded pins first, curators' pins (editable) first, each with its current parentId, company, author, and candidate earlier pins/threads to join if available. Also rethreads duplicate pins marked as same event so that duplicate pins do not appear on threads (detaches duplicate pins with parentId: null, and re-parents child pins to the canonical pin). For each pin, check candidate pins (or run find_pins) for an earlier event in its story, series or franchise (the previous flight, the previous election, the earlier model release, the earlier tournament). If an earlier pin is available, attach the pin to the parent pin with update_pin ({ parentId }), or mark it for revisiting with mark_revisit if by a non-curator.",
     input_schema: obj({
       limit: num('At most this many pins, default 20, at most 50'),
       unthreadedOnly: { type: 'boolean', description: 'Only pins without a parent (default true)' },
@@ -170,7 +170,7 @@ export const TOOLS: JobTool[] = [
       });
       await act(ctx, {
         tool: 'predicted_pins',
-        detail: `${result.pins.length} predicted pin(s) returned (${result.unthreaded} unthreaded of ${result.total} total)`,
+        detail: `${result.pins.length} predicted pin(s) returned (${result.unthreaded} unthreaded of ${result.total} total)${result.duplicateRethreads?.length ? `, ${result.duplicateRethreads.length} duplicate group(s) rethreaded` : ''}`,
       });
       return result;
     },

@@ -61,4 +61,33 @@ describe('findThreadCandidates', () => {
 
     vi.restoreAllMocks();
   });
+
+  it('excludes confirmed duplicate pins from candidates', async () => {
+    vi.spyOn(db, 'query').mockImplementation(async (sql: string, params?: unknown[]) => {
+      if (typeof sql === 'string' && sql.includes('pinDuplicateGroup')) {
+        return [{ group: [5023, 4810] }] as any;
+      }
+      if (typeof sql === 'string' && sql.includes('ILIKE')) {
+        return [
+          {
+            id: 4810,
+            title: 'Google Announces Gemini 4 Argon',
+            utcStartDateTime: new Date('2026-09-30T00:00:00Z'),
+          },
+        ] as any;
+      }
+      return [] as any;
+    });
+
+    const candidates = await findThreadCandidates({
+      id: 5023, // duplicate of 4810
+      title: 'Gemini 4 Argon Announced',
+      utcStartDateTime: '2026-09-30T00:00:00Z',
+    });
+
+    // 4810 is in the same duplicate group as 5023, so must be excluded
+    expect(candidates.some((c) => c.id === 4810)).toBe(false);
+
+    vi.restoreAllMocks();
+  });
 });

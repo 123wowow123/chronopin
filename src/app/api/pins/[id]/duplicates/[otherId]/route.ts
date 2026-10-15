@@ -6,6 +6,7 @@ import PinDuplicate from '@/server/model/pinDuplicate';
 import { invalidatePin } from '@/server/services/cache';
 import { canDecideDuplicate } from '@/server/services/duplicatePin';
 import { feedNewerDuplicate } from '@/server/services/duplicateFeed';
+import { rethreadDuplicateGroup } from '@/server/services/duplicateThread';
 
 type Ctx = RouteContext<'/api/pins/[id]/duplicates/[otherId]'>;
 
@@ -41,7 +42,10 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   await PinDuplicate.decide(pinId, otherPinId, status, user.id);
   // The newer of the two, when it came later, brings its news to the older
   // one (confirming again feeds a pair confirmed before this existed).
-  if (status === 'confirmed') await feedNewerDuplicate(pinId, otherPinId, user.id);
+  if (status === 'confirmed') {
+    await feedNewerDuplicate(pinId, otherPinId, user.id);
+    await rethreadDuplicateGroup(pinId, otherPinId);
+  }
   const after = [...(await PinDuplicate.group(pinId)), ...(await PinDuplicate.group(otherPinId))];
   for (const id of new Set([...before, ...after])) {
     invalidatePin(id);

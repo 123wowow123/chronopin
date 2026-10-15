@@ -3,6 +3,7 @@ import { SignJWT } from 'jose';
 import { signToken } from '../auth';
 import { sentimentHash, type SentimentText } from '../model/pinSentiment';
 import { curatorId, isCurator } from './curators';
+export { isCurator };
 import { productionWrite } from './productionWrites';
 
 // The daily jobs save through the app's own HTTP API, as a curator, because a

@@ -11,9 +11,15 @@
 
 import { CURATORS } from './curators';
 import * as db from '../db';
+import PinDuplicate from '../model/pinDuplicate';
 import { findSeriesPin } from '../scrape/modelSeries';
 import { descendantIds, prequelPinFor, setParent } from '../scrape/prequel';
 import { invalidatePin } from '../services/cache';
+import { rethreadAllDuplicateGroups, rethreadDuplicateGroup, type DuplicateRethreadSummary } from '../services/duplicateThread';
+import log from '../util/log';
+
+export { rethreadAllDuplicateGroups, rethreadDuplicateGroup };
+export type { DuplicateRethreadSummary };
 
 export type ThreadCandidate = {
   id: number;
@@ -58,20 +64,47 @@ export async function findThreadCandidates(pin: {
   ratings?: { source?: string | null; url?: string | null }[];
 }): Promise<ThreadCandidate[]> {
   const exclude = await descendantIds(pin.id).catch(() => [] as number[]);
-  const skip = new Set([pin.id, ...exclude]);
+  const duplicates = await PinDuplicate.group(pin.id).catch(() => [] as number[]);
+  const skip = new Set([pin.id, ...exclude, ...duplicates]);
   const candidates: ThreadCandidate[] = [];
   const seenIds = new Set<number>();
 
+  const addCandidate = async (cand: { id: number; title: string; utcStartDateTime: string; reason: string }) => {
+    // If the candidate belongs to a duplicate group, resolve it to the canonical pin
+    const group = await PinDuplicate.group(cand.id).catch(() => [cand.id]);
+    const canonicalId = group[0];
+    if (skip.has(canonicalId) || seenIds.has(canonicalId)) return;
+
+    if (canonicalId !== cand.id) {
+      const [cRow] = await db.query<{ id: number; title: string; utcStartDateTime: Date }>(
+        `SELECT id, title, "utcStartDateTime" FROM "Pin" WHERE id = $1 AND "utcDeletedDateTime" IS NULL`,
+        [canonicalId],
+      );
+      if (cRow) {
+        candidates.push({
+          id: cRow.id,
+          title: cRow.title,
+          utcStartDateTime: new Date(cRow.utcStartDateTime).toISOString(),
+          reason: cand.reason,
+        });
+        seenIds.add(cRow.id);
+        return;
+      }
+    }
+
+    candidates.push(cand);
+    seenIds.add(cand.id);
+  };
+
   // 1. Model series check (e.g. Claude Opus, Gemini Flash, Grok)
-  const series = await findSeriesPin(pin, exclude).catch(() => undefined);
+  const series = await findSeriesPin(pin, [...exclude, ...duplicates]).catch(() => undefined);
   if (series && !skip.has(series.id)) {
-    candidates.push({
+    await addCandidate({
       id: series.id,
       title: series.title,
       utcStartDateTime: new Date(series.utcStartDateTime).toISOString(),
       reason: 'AI model series',
     });
-    seenIds.add(series.id);
   }
 
   // 2. Anime prequel check (via MAL / AniList)
@@ -81,13 +114,12 @@ export async function findThreadCandidates(pin: {
       `SELECT "utcStartDateTime" FROM "Pin" WHERE id = $1`,
       [prequel.id],
     );
-    candidates.push({
+    await addCandidate({
       id: prequel.id,
       title: prequel.title,
       utcStartDateTime: pRow?.utcStartDateTime ? new Date(pRow.utcStartDateTime).toISOString() : new Date().toISOString(),
       reason: 'anime prequel',
     });
-    seenIds.add(prequel.id);
   }
 
   // 3. Known subject patterns
@@ -111,13 +143,12 @@ export async function findThreadCandidates(pin: {
       );
       for (const r of rows) {
         if (!skip.has(r.id) && !seenIds.has(r.id)) {
-          candidates.push({
+          await addCandidate({
             id: r.id,
             title: r.title,
             utcStartDateTime: new Date(r.utcStartDateTime).toISOString(),
             reason: `${sp.name} match`,
           });
-          seenIds.add(r.id);
         }
       }
     }
@@ -150,13 +181,12 @@ export async function findThreadCandidates(pin: {
     );
     for (const r of rows) {
       if (!skip.has(r.id) && !seenIds.has(r.id)) {
-        candidates.push({
+        await addCandidate({
           id: r.id,
           title: r.title,
           utcStartDateTime: new Date(r.utcStartDateTime).toISOString(),
           reason: `title match (${terms[0]}, ${terms[1]})`,
         });
-        seenIds.add(r.id);
       }
     }
   }
@@ -178,7 +208,14 @@ export async function predictedPins({
   total: number;
   unthreaded: number;
   pins: PredictedPinForThreading[];
+  duplicateRethreads: DuplicateRethreadSummary[];
 }> {
+  // Rethread any duplicate pins marked as same event so they do not show up on threads
+  const duplicateRethreads = await rethreadAllDuplicateGroups({ apply: true }).catch((err) => {
+    log.warn('Rethreading duplicate groups in predictedPins failed:', (err as Error).message);
+    return [] as DuplicateRethreadSummary[];
+  });
+
   const curators = Object.keys(CURATORS).map((h) => h.replace(/^@/, '').toLowerCase());
   const rows = await db.query<{
     id: number;
@@ -246,6 +283,7 @@ export async function predictedPins({
     total: countRow?.total ?? 0,
     unthreaded: countRow?.unthreaded ?? 0,
     pins,
+    duplicateRethreads,
   };
 }
 

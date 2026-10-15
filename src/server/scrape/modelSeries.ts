@@ -9,6 +9,7 @@
 
 import { compareVersions, modelRelease, modelReleases, type ModelRelease } from '@/lib/modelSeries';
 import * as db from '../db';
+import PinDuplicate from '../model/pinDuplicate';
 import { descendantIds, setParent } from './prequel';
 
 export type SeriesPin = { id: number; title: string; parentId: number | null; utcStartDateTime: Date; company: string | null };
@@ -46,7 +47,8 @@ export async function findSeriesPin(
   const release = modelRelease(pin.title);
   if (!release || !pin.company) return undefined;
   const start = time(pin.utcStartDateTime || new Date());
-  const skip = new Set([...exclude, ...(pin.id ? [pin.id] : [])]);
+  const duplicates = pin.id ? await PinDuplicate.group(pin.id).catch(() => [] as number[]) : [];
+  const skip = new Set([...exclude, ...(pin.id ? [pin.id] : []), ...duplicates]);
   const earlier = (await linePins(pin.company, release.line)).filter(
     (p) =>
       !skip.has(p.id) &&

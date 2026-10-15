@@ -10,7 +10,7 @@
 import '../env';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
-import { applyThreadParent, findThreadCandidates } from '@/server/jobs/threadPredicted';
+import { applyThreadParent, findThreadCandidates, rethreadAllDuplicateGroups } from '@/server/jobs/threadPredicted';
 
 const { values: flags } = parseArgs({
   options: {
@@ -45,6 +45,19 @@ async function run() {
        )
      ORDER BY p."utcStartDateTime", p."id"`,
   );
+
+  console.log('Checking confirmed duplicate groups for thread conflicts...');
+  const duplicateFixes = await rethreadAllDuplicateGroups({ apply: flags.apply });
+  if (duplicateFixes.length) {
+    console.log(`${flags.apply ? 'Rethreaded' : 'Would rethread'} ${duplicateFixes.length} duplicate group(s):`);
+    for (const fix of duplicateFixes) {
+      console.log(
+        `  Canonical ${fix.canonicalId}: detached [${fix.detached.join(', ')}], reparented children [${fix.reparented.map((r) => `${r.childId}->${r.to}`).join(', ')}]`,
+      );
+    }
+  } else {
+    console.log('No duplicate group thread conflicts.');
+  }
 
   const pins = rows.filter((p) => (!only.size || only.has(p.id)) && (flags.all || p.parentId == null));
   console.log(`${flags.apply ? 'Threading' : 'Dry run over'} ${pins.length} predicted pin(s)...`);

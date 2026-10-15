@@ -52,7 +52,7 @@ describe('regional restaurant data', () => {
       { city: 'Vienna', day: '2026-01-01', dateConfidence: 'estimated', sourceUrl: null },
     ]);
     const supported = new Set([
-      ...RESTAURANT_REGIONS.filter((region) => ['United States', 'Mexico', 'Japan', 'New Zealand'].includes(region.country)).map((region) => region.slug),
+      ...RESTAURANT_REGIONS.filter((region) => ['United States', 'Mexico', 'New Zealand'].includes(region.country) || ['osaka', 'kyoto', 'tokyo'].includes(region.slug)).map((region) => region.slug),
       'madrid', 'paris', 'berlin',
       'kaohsiung', 'taichung', 'taipei',
     ]);

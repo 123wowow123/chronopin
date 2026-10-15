@@ -1,3 +1,12 @@
+---
+type: API Endpoint
+title: Sponsored ads API
+description: Self-serve sponsored ads and admin moderation API.
+resource: "../../../src/server/services/sponsoredAds.ts"
+tags: [api, advertising, sponsored]
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T21:00:00Z }
+---
+
 # Sponsored ads API
 
 Self-serve ads (`SponsoredAd`, 0178+). Money and review rules live in
