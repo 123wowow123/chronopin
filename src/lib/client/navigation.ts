@@ -12,6 +12,8 @@ import { useMemo } from 'react';
 import { DEFAULT_LOCALE, localizePath, splitLocale } from '@/lib/i18n/config';
 import { useLocale } from './i18n';
 
+import { startNavigationProgress } from './navigationProgress';
+
 export { notFound, redirect, useParams, useSearchParams, useSelectedLayoutSegment } from 'next/navigation';
 
 export function usePathname(): string {
@@ -24,8 +26,14 @@ export function useRouter() {
   return useMemo(
     () => ({
       ...router,
-      push: (href: string, options?: Parameters<typeof router.push>[1]) => router.push(localizePath(href, locale), options),
-      replace: (href: string, options?: Parameters<typeof router.replace>[1]) => router.replace(localizePath(href, locale), options),
+      push: (href: string, options?: Parameters<typeof router.push>[1]) => {
+        startNavigationProgress();
+        return router.push(localizePath(href, locale), options);
+      },
+      replace: (href: string, options?: Parameters<typeof router.replace>[1]) => {
+        startNavigationProgress();
+        return router.replace(localizePath(href, locale), options);
+      },
       prefetch: (href: string, options?: Parameters<typeof router.prefetch>[1]) => router.prefetch(localizePath(href, locale), options),
     }),
     [router, locale],
