@@ -7,7 +7,7 @@ export const RESTAURANT_TIMELINE_TAGS = ['Restaurant', 'Restaurants', 'Restauran
 const names = new Set(RESTAURANT_TIMELINE_TAGS.map((name) => name.toLowerCase()));
 
 export function isRestaurantPin(pin: Pick<PinJson, 'tags'>): boolean {
-  return !!pin.tags?.some((tag) => names.has(tag.name.trim().toLowerCase()));
+  return !!pin.tags?.some((tag) => typeof tag?.name === 'string' && names.has(tag.name.trim().toLowerCase()));
 }
 
 // Called on one viewer-local day. A restaurant is a fallback for an empty
