@@ -118,6 +118,17 @@ export function setDailyJobs(setting: DailyJobsSetting, userId: number | null) {
   return write(DAILY_JOBS, setting, userId);
 }
 
+// The FEC quarterly deadline the personCampaigns task last refreshed for
+// ("2026-10-15"), so it runs once after each.
+export async function getCampaignRefreshDeadline(): Promise<string | null> {
+  const v = await read('personCampaignsRun');
+  return typeof v === 'string' ? v : null;
+}
+
+export function setCampaignRefreshDeadline(deadline: string) {
+  return write('personCampaignsRun', deadline, null);
+}
+
 // Whether the filter sliders offer a typed box and preset chips under the track.
 export async function getSliderTyping(): Promise<SliderTypingSetting> {
   const parsed = parseSliderTyping(await read(SLIDER_TYPING));

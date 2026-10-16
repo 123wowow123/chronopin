@@ -43,7 +43,11 @@ import { CURATORS } from './curators';
 import { checkPinHealth, pinsToCheck } from './health';
 import log from '../util/log';
 import { importTrades, recentFilings } from '../services/personTradesImport';
-import { personTradesRequest, sponsoredTranslationRequest, createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
+import { importCampaigns } from '../services/personCampaignsImport';
+import PersonCampaign from '../model/personCampaign';
+import { getCampaignRefreshDeadline, setCampaignRefreshDeadline } from '../model/appSetting';
+import { campaignRefreshDue, cycleOf } from '@/lib/campaigns';
+import { personCampaignsRequest, personTradesRequest, sponsoredTranslationRequest, createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
@@ -575,6 +579,36 @@ export const TOOLS: JobTool[] = [
       }
       await act(ctx, { tool: 'person_trades_update', detail: `${result.trades} trades in ${result.filings} new filings${prod ? `; prod added ${prod.added}` : ''}` });
       return { ...result, unmatched: result.unmatched.slice(0, 40), failed: result.failed.slice(0, 20), production: prod };
+    },
+  },
+  {
+    name: 'person_campaigns_update',
+    description:
+      "The personCampaigns task's only call. Campaign finance changes with the FEC's quarterly reports (due April 15, July 15, October 15 and January 31), so this does nothing (returns due: false) until a deadline has passed by three days and has not been refreshed for yet. When due it reads the FEC bulk files for the current two-year cycle and the one before (weball, pas2, cm), replaces each matched member's campaign finance on their page - totals, money sources, top PACs and the other candidates in the race - sends the same to production when the run writes there, and records the deadline so it runs once. Returns due, deadline, people saved, people with no FEC match, cycles the FEC has no files for yet, and what production saved. The match is mechanical (state, office, district, name); nothing to review beyond a surprising drop in people saved.",
+    input_schema: obj({}),
+    run: async (_input, ctx) => {
+      const now = new Date();
+      const { due, deadline } = campaignRefreshDue(now, await getCampaignRefreshDeadline());
+      if (!due) return { due: false, deadline };
+      const cycle = cycleOf(now);
+      const { byPerson, unmatched, skippedCycles } = await importCampaigns({ cycles: [cycle, cycle - 2] });
+      if (!byPerson.size) throw new Error(`No campaign finance read for ${cycle}; not marking ${deadline} done`);
+      for (const [id, cycles] of byPerson) await PersonCampaign.replace(id, cycles);
+      let production: { saved: number; missing: string[] } | null = null;
+      if (process.env.JOBS_PROD_BASE?.trim()) {
+        production = { saved: 0, missing: [] };
+        const bioguides = new Map((await db.query<{ id: number; bioguideId: string }>(`SELECT "id", "bioguideId" FROM "Person" WHERE "bioguideId" IS NOT NULL`)).map((r) => [r.id, r.bioguideId]));
+        const entries = [...byPerson].filter(([id]) => bioguides.has(id)).map(([id, cycles]) => ({ bioguideId: bioguides.get(id), cycles }));
+        for (let i = 0; i < entries.length; i += 20) {
+          const r = await personCampaignsRequest(entries.slice(i, i + 20));
+          production.saved += r.saved;
+          production.missing.push(...r.missing);
+        }
+      }
+      // Only after every write above succeeded, so a failure is retried next run.
+      await setCampaignRefreshDeadline(deadline);
+      await act(ctx, { tool: 'person_campaigns_update', detail: `${deadline} filings: ${byPerson.size} people${production ? `; prod saved ${production.saved}` : ''}` });
+      return { due: true, deadline, saved: byPerson.size, unmatched: unmatched.length, skippedCycles, production };
     },
   },
   {

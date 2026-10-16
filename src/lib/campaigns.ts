@@ -106,3 +106,24 @@ export function displayName(fec: string): string {
 
 export const PARTY_NAMES: Record<string, string> = { DEM: 'Democratic', REP: 'Republican', IND: 'Independent', LIB: 'Libertarian', GRE: 'Green', NPA: 'No party', DFL: 'Democratic-Farmer-Labor' };
 export const STATUS_NAMES: Record<string, string> = { I: 'Incumbent', C: 'Challenger', O: 'Open seat' };
+
+// The FEC's quarterly filing deadlines: April 15, July 15, October 15 and the
+// year-end report on January 31. Answers with the latest one on or before
+// `now` (a day, YYYY-MM-DD, UTC). The personCampaigns task runs once after each.
+export function latestQuarterlyDeadline(now: Date): string {
+  const y = now.getUTCFullYear();
+  const days = [`${y - 1}-10-15`, `${y}-01-31`, `${y}-04-15`, `${y}-07-15`, `${y}-10-15`];
+  const today = now.toISOString().slice(0, 10);
+  return days.filter((d) => d <= today).pop()!;
+}
+
+// The two-year cycle a date falls in: 2026 for any day of 2025-2026.
+export const cycleOf = (now: Date) => Math.ceil(now.getUTCFullYear() / 2) * 2;
+
+// Due once the latest deadline is `graceDays` old (the FEC's bulk files trail
+// the filings by a day or two) and has not been run for yet.
+export function campaignRefreshDue(now: Date, lastDeadlineRun: string | null, graceDays = 3): { due: boolean; deadline: string } {
+  const deadline = latestQuarterlyDeadline(now);
+  const ready = new Date(`${deadline}T00:00:00Z`).getTime() + graceDays * 864e5 <= now.getTime();
+  return { due: ready && (lastDeadlineRun ?? '') < deadline, deadline };
+}

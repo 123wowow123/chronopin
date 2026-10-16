@@ -88,6 +88,11 @@ export const TASKS = {
     label: 'Restaurant region pages',
     summary: "Refresh the restaurant landing page of every region where a restaurant pin was created since the last run: re-check its openings and top restaurants, and fill in what the new pin implies.",
   },
+  personCampaigns: {
+    group: 'upkeep',
+    label: 'Campaign finance of people',
+    summary: "Once after each quarterly FEC filing deadline (Apr 15, Jul 15, Oct 15, Jan 31), refresh members of Congress's campaign finance: totals, money sources, top PACs and the other candidates in each race.",
+  },
   personTrades: {
     group: 'upkeep',
     label: 'Stock trades of people',
@@ -217,7 +222,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       dayOfWeek: null,
       // No sentiment: the news job scores new pins twice a day (owner, 2026-09-23).
       // thinPins fills out a batch of the pins hidden from search as thin (owner, 2026-10-04).
-      tasks: ['revisits', 'pinHealth', 'thinPins', 'adTranslations', 'restaurantRegions', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
+      tasks: ['revisits', 'pinHealth', 'thinPins', 'adTranslations', 'restaurantRegions', 'personCampaigns', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -288,7 +293,7 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades'] : job.id === 'midnight' ? ['adTranslations'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

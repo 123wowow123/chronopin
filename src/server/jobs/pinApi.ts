@@ -183,6 +183,20 @@ export async function sponsoredTranslationRequest(method: 'GET' | 'POST', path: 
 }
 
 
+async function adminToken(why: string): Promise<string> {
+  const [admin] = await db.query<{ id: number }>(`SELECT "id" FROM "User" WHERE "role" = 'admin' ORDER BY "id" LIMIT 1`);
+  if (!admin) throw new Error(`No admin account available for ${why}`);
+  return prodBase()
+    ? await new SignJWT({ id: admin.id }).setProtectedHeader({ alg: 'HS256', typ: 'JWT' }).setIssuedAt().setExpirationTime('5h').sign(new TextEncoder().encode(process.env.JOBS_PROD_SESSION_SECRET))
+    : await signToken(admin.id);
+}
+
+// Sends campaign finance (a batch of people with their cycles, named by
+// bioguide id) to production's admin endpoint (the personCampaigns task).
+export async function personCampaignsRequest(people: unknown[]) {
+  return call<{ saved: number; missing: string[] }>('POST', '/api/admin/person-campaigns', { token: await adminToken('person campaigns'), body: { people } });
+}
+
 // Sends disclosed stock trades to production's admin endpoint, signed as the
 // existing admin (the personTrades task). Only that one endpoint.
 export async function personTradesRequest(filings: unknown[]) {

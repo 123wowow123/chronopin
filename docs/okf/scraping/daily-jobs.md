@@ -19,7 +19,7 @@ into its instructions, so changing this page changes the next run.
 
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
-| `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
+| `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
 | `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
@@ -529,6 +529,25 @@ try the other searches. A robot check on a listing is "unreadable", not
 [--curl] | add | check | list | remove` (`--curl` runs the searches through curl,
 which Amazon refuses less than Node's fetch).
 
+### personCampaigns
+
+**Reads** nothing first; its one call, `person_campaigns_update`, answers `due: false`
+on every midnight run except the first one at least three days after an FEC quarterly
+filing deadline (April 15, July 15, October 15, January 31) that it has not refreshed for
+yet (owner, 2026-10-16: "run once after quarterly is reached"). The last deadline
+refreshed is the `personCampaignsRun` AppSetting.
+**Does** when due: reads the FEC bulk files (`weball`, `pas2`, `cm`) for the current
+two-year cycle and the one before, replaces each matched member's campaign finance
+(`PersonCampaign*`, the page's Campaign finance section), sends it to production when the
+run writes there (`POST /api/admin/person-campaigns`), then records the deadline. A failed
+write leaves the deadline unrecorded, so the next midnight run retries. The same code is
+`npm run people:campaigns`.
+**Traps.** The FEC's files trail the filings by a day or two, hence the three-day wait. A
+cycle with no files yet (the next one, in January) is skipped, not an error. `unmatched` is
+members with no FEC record in those cycles (retired, or never ran), not a failure. Pre-primary
+and pre-general reports change the numbers between quarters; they are picked up at the next
+quarterly refresh, or by hand with `npm run people:campaigns`.
+
 ### personTrades
 
 **Reads** nothing first; its one call, `person_trades_update`, reads this year's
@@ -544,9 +563,8 @@ and the 21-day resend never double up.
 not read - open it; `parsePtrText` in `src/lib/trades.ts` may need a new layout case).
 Nothing else needs review: trades are the filing's own figures, never estimated.
 **Traps.** Members have up to 45 days to file, so a trade date months back is normal.
-Filings made on paper are scanned images and are skipped. Campaign finance
-(`npm run people:campaigns`, FEC bulk files) is refreshed by hand after each FEC
-filing deadline, not by this task.
+Filings made on paper are scanned images and are skipped. Campaign finance is
+the midnight job's [personCampaigns](#personcampaigns), not this task.
 
 ### threadPredicted
 

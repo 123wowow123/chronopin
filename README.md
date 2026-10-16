@@ -368,10 +368,8 @@ tenmu ads
 sync watch list to calendar
 add a pin to calendar and keep in sync
 
+
 get live politicians stock trading alerts
-
-
-
 For people pages, add trading data and etc like these pages. use browser to view if needed. Should be able to subscribe to stock trades via notification on the profile page
 
 https://www.quiverquant.com/congresstrading/politician/Nancy%20Pelosi-P000197/opponents
