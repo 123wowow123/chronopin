@@ -86,6 +86,7 @@
     "restaurants:seed": "tsx scripts/restaurants/seed.ts",
     "restaurants:specials:seed": "tsx scripts/restaurants/seedSpecials.ts",
     "restaurants:specials": "tsx scripts/restaurants/specials.ts",
+    "restaurants:special-pins": "tsx scripts/restaurants/seedSpecialPins.ts",
     "events:refresh": "tsx scripts/events/refresh.ts",
     "ai:retirements": "tsx scripts/ai/retirements.ts",
     "sports:tournaments": "tsx scripts/sports/tournaments.ts",

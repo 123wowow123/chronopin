@@ -106,7 +106,7 @@ export const TASKS = {
   predictionMarkets: {
     group: 'discover',
     label: 'Prediction markets',
-    summary: "Read what Kalshi and Polymarket are betting on for the week ahead, and the markets newly listed, and pin the major events behind them that have no pin yet.",
+    summary: 'Scrape for interesting events that prediction markets have and create predicted pins out of them, with odds, volume and thread connections.',
   },
   thinCategories: {
     group: 'discover',
@@ -225,14 +225,15 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       timeZone: 'America/Los_Angeles',
       dayOfMonth: null,
       dayOfWeek: null,
-      // eventInfo twice a day, so a sell-out shows by the next run; the
-      // prediction markets too, for the week's events the money is on (owner,
-      // 2026-10-01). modelScores checks twice a day for the arena scores that
-      // models lack at launch (owner, 2026-10-12). threadPredicted checks
-      // predicted pins for an available thread to join (owner, 2026-10-14).
-      // layoffs searches for new rounds and updates existing pins twice a day
-      // (owner, 2026-10-15). Hiring, new roles and job-creating investment
-      // follow the same twice-daily discovery and maintenance cadence.
+      // eventInfo twice a day, so a sell-out shows by the next run; prediction
+      // markets scrapes for interesting events that prediction markets have
+      // and creates predicted pins out of them (owner, 2026-10-01, 2026-10-15).
+      // modelScores checks twice a day for the arena scores that models lack at
+      // launch (owner, 2026-10-12). threadPredicted checks predicted pins for
+      // an available thread to join (owner, 2026-10-14). layoffs searches for
+      // new rounds and updates existing pins twice a day (owner, 2026-10-15).
+      // Hiring, new roles and job-creating investment follow the same twice-daily
+      // discovery and maintenance cadence.
       tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'layoffs', 'hiringJobCreation', 'modelScores', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,

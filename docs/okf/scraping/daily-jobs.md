@@ -572,28 +572,48 @@ hearing, a deadline) is usually the better pin.
 
 Added 2026-10-01 (owner: "6am job and 6pm job should include scrape with
 prediction betting sites to get new major events being predicted for, for
-the week").
+the week"). Updated 2026-10-15 (owner: "in 6am and 6pm job scrape for
+interesting events that prediction market has and create predicted pins
+out of them").
 
-**Reads** `prediction_markets` once: `thisWeek` (markets resolving in the
-next seven days) and `newlyListed` (listed since the last run, resolving
-later). Then `find_pins` and `get_pin` for each one worth a look.
-**Does** treat the money as a pointer to an event. Where a market with real
-volume points at a dated event in the week ahead that has no pin - an
-election, a jobs report, a fight, a ruling, a premiere's opening weekend, a
-summit - pin **the event** under the desk that owns its vertical
-(@PoliticsDesk for the election, @EconDesk for the release, @SportDesk for
-the fight), with the market as a reference. A market question that is itself
-the subject (a "by when" ladder, "who will be the next ...") is an
-@OddsDesk pin with the market as `sourceUrl`, dated per the
-[prediction-market recipe](verticals.md) (a ladder's likeliest rung,
-`estimated`). A newly listed market with a big book is news in its own
-right: something just became likely enough to bet on, so look for the
-announcement behind it. Where `coveredByPin` or `find_pins` finds the event
-already pinned, add the market as a reference if the pin is a curator's
-(mark it for revisiting otherwise), and check the pin's date against when the
-market resolves. When pinning a predicted event or market question, check whether an
-earlier pin or thread exists for the subject or series (`find_pins`, `parentId`)
-and thread the predicted pin to it if available.
+**Reads** `prediction_markets` once: `interesting` (top interesting and
+high-volume events being predicted across politics, technology, space,
+economics, championships, entertainment and culture), `thisWeek` (markets
+resolving in the next seven days) and `newlyListed` (listed since the last
+run, resolving later). Then `find_pins` and `get_pin` for each one worth a look.
+
+**Does** scrape prediction betting sites (Polymarket, Kalshi) for interesting
+events and create **predicted pins** out of them:
+- **Create predicted pins:** Every pin created from a prediction market forecast
+  or predicted event is a predicted pin. It carries the tag `Predicted` (which
+  renders the sparkle badge, joins `tag:Predicted` filters, and appears in the
+  followed-company watch view), with `dateConfidence: 'estimated'` (or `predicted`).
+- **Which date:** Date the pin to when the predicted event itself is most likely
+  to occur or start (`utcStartDateTime`), following the [predictions rule](strategy.md#which-date)
+  and [vertical recipe](verticals.md). Never date to the market's settlement
+  buffer or closing time (`closes`). For a cumulative ladder, date to the likeliest
+  rung or where probability crosses a significant majority threshold. In
+  `dateConfidenceReasoning`, start with `Estimated:` and explain the basis, quoting
+  the market's odds and dollar volume as read on that day (past tense: "On 15 October 2026
+  Polymarket traders priced...").
+- **Curator desk and sources:**
+  - Where the market points to an underlying dated event in the world (an election,
+    a central-bank rate decision, an AI model release, an orbital flight test, a
+    championship, an award ceremony), pin **the event** under the vertical's desk
+    (@PoliticsDesk for elections, @TechDesk for tech/AI, @EconDesk for macro releases,
+    @BuildDesk for space/infrastructure, @SportDesk for championships), citing
+    the prediction market URL in `references` or as `sourceUrl`.
+  - For speculative model releases (Gemini, Claude Opus, Grok, DeepSeek) or market questions
+    where the market is the primary reference, author under `@TechDesk` or `@OddsDesk` with
+    the market URL as `sourceUrl` so live odds render.
+- **Thread predicted pins:** When creating a predicted pin, always check whether
+  an earlier pin or thread exists for the subject, model series, spaceflight campaign,
+  election cycle or franchise (`find_pins`, `parentId`) and thread the predicted
+  pin to it (`parentId`).
+- **Deduplication and existing pins:** Check `coveredByPin` and `find_pins` first.
+  Where an existing pin already covers the event, do not create a duplicate; add or
+  update the market reference and latest odds on the existing pin if editable, or mark
+  it for revisiting.
 **Traps.** Quote the odds with the dollars traded and the day they were read
 ([learnings](learnings.md)); a thin book (under about $10k) is not evidence of
 anything. A market's close time is when it settles, not when the event

@@ -2,26 +2,28 @@
 
 ## Japan restaurant guides — continue replenishment (updated October 15, 2026)
 
-Target remains **30 distinct eligible restaurants in each tab of each city**. Batches **43–45** added and verified **15 restaurant/menu records, 6 Specials profiles, 211 menu entries and 62 gallery links** in local and production through content APIs. Release `157e1750` remains the deployed baseline; no application deployment this session. Current audit: **339 memberships, 386 missing**; surplus in one tab cannot offset another. Count each venue once per tab, even with multiple offers.
+Target remains **30 distinct eligible restaurants in each tab of each city**. Batches **43–50** added and verified **31 restaurant/menu records, 10 Specials profiles, 538 menu entries and 97 current gallery links** in local and production through content APIs. Release `157e1750` remains the deployed baseline; no application deployment this session. Current audit: **357 memberships, 368 missing**; surplus in one tab cannot offset another. Count each venue once per tab, even with multiple offers.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 8/30 | 10/30 | 14/30 | 20/30 |
-| Osaka | 6/30 | 14/30 | 9/30 | 14/30 |
-| Kyoto | 7/30 | 31/30 | 9/30 | 8/30 |
-| Nagoya | 9/30 | 8/30 | 11/30 | 13/30 |
-| Tokyo | 8/30 | 8/30 | 23/30 | 32/30 |
-| Sapporo | 5/30 | 10/30 | 30/30 | 32/30 |
+| Fukuoka | 10/30 | 10/30 | 14/30 | 20/30 |
+| Osaka | 8/30 | 14/30 | 9/30 | 15/30 |
+| Kyoto | 8/30 | 31/30 | 9/30 | 9/30 |
+| Nagoya | 9/30 | 15/30 | 11/30 | 15/30 |
+| Tokyo | 9/30 | 8/30 | 23/30 | 32/30 |
+| Sapporo | 6/30 | 10/30 | 30/30 | 32/30 |
 
-Continue **every under-target section**, especially Coming soon in all cities and Nagoya Just opened (22 short). Refresh counts first: recent openings age out after 90 days and dated offers expire. Audit uses current Japan-local eligibility; Los Angeles October 15 was already October 16 in Japan. Replenish October 17–22 expiries using verified successors/additional venues; never extend an offer without evidence.
+Continue **every under-target section**, especially Coming soon in all cities and Nagoya Just opened (15 short). Refresh counts first: recent openings age out after 90 days and dated offers expire. Audit uses current Japan-local eligibility; Los Angeles October 15 was already October 16 in Japan. Replenish October 17–22 expiries using verified successors/additional venues; never extend an offer without evidence.
 
-Use the [current 24-tab audit](docs/restaurant-japan-30-target-2026-10-15.md), [count CSV](docs/restaurant-japan-30-counts-2026-10-15.csv), [new batch research notes](docs/restaurant-japan-30-progress-2026-10-15.md) and [verified production additions/corrections delta](docs/restaurant-japan-production-2026-10-15.json). The [October 14 full snapshot](docs/restaurant-japan-production-2026-10-14.json) remains the older-branch baseline through batch 42; the new snapshot covers batches 43–45 and later source QA only. Older batch JSON/scratch builders must not overwrite newer menu/API corrections. Production IDs differ from local IDs: match exact branch source URLs.
+Use the [current 24-tab audit](docs/restaurant-japan-30-target-2026-10-15.md), [count CSV](docs/restaurant-japan-30-counts-2026-10-15.csv), [new batch research notes](docs/restaurant-japan-30-progress-2026-10-15.md) and [verified production additions/corrections delta](docs/restaurant-japan-production-2026-10-15.json). The [October 14 full snapshot](docs/restaurant-japan-production-2026-10-14.json) remains the older-branch baseline through batch 42; the new snapshot covers batches 43–50 and later source QA only. Older batch JSON/scratch builders must not overwrite newer menu/API corrections. Production IDs differ from local IDs: match exact branch source URLs.
 
 Specific held leads: Uwajima Basho Soen's operator now gives Kita 10-jo Nishi 14-chome 2-1 / Soen BRIDGE, but job says late November and booking says late October with Hiroshima copy; Hokuto jobs conflict October/November; PADDLERS lacks an exact address; provisional Gorilla contradicts November versus December–January. Sapporo November list includes **Hama Sushi Shinkotoni's stale 2024 opening**: exclude it. Verify each remaining roundup lead individually. Full sources/reasons are in the new notes.
 
 Revisited gaps persist: MAMA Kyoto contradictory November/December floors; Solamachi hosting outage/future Gong cha/Whity launch menus and own galleries; SMAAK Hakata named courses; STANDARD DONUTS tax/payable price; Yamaya Shinsaibashisuji dessert/drink duration; Taco Bell Dotonbori branch prices. Kyoto BOOKHOME tenants need final branch menus/prices and completed galleries. and GALLERY collaboration Nov 3–Dec 6 has six 70-minute seatings and last-order breaks; **Namba No. 1 closes Nov 18**. Andaz recurring happy hour is separate from October-only cocktails; seasonal expiry must not remove the recurring offer.
 
 Save ordinary content via `/api/admin/restaurant-content`, offers via `/api/admin/restaurant-specials`, use fresh revisions/full merged profiles, preserve original authors/unrelated sections and verify public pins/guide counts. Pin images remain in Azure with credits. Production application deployment still requires a fresh explicit owner request.
+
+Batch 50 imported SHINOYA Susukino (November month only; exact day/cover still unresolved), GAPAO MONSTER Osaka (October 27 with first-100 tea benefit), Collabo_Index Nagoya SAKAMOTO DAYS (November 5–23) and Teori Kyoto autumn buffet. Collabo_Index and Teori are Specials-only, without invented Top recognition/opening dates. Next: current WIND BREAKER Nagoya menu (October 9–November 1, different 70-minute seats), Teori Halloween/chocolate plan, and MYPLACE Osaka new November high tea as an update to its existing profile. Tokyo/Osaka SAKAMOTO DAYS runs expired October 5. Exclude stale Sapporo Taiga (2024), Yakisoba no Susume (2025) and Karayama Higashikariki (already visited in June 2026) from Coming soon. NUMBER SHOT Hakata Ming is now imported for November 25; its menu/photos remain unpublished. See batch 47–50 notes.
 
 # Left over: link wikis for prod
 

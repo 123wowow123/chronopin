@@ -13,6 +13,18 @@ After **every** scraping job (a scrape, a backfill, a batch of pins, a reference
 
 Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (owner corrections and confirmed approaches) and `* **Changed**` (which page was updated).
 
+## 2026-10-15 - Landing page cards require pin detail pages
+
+* **Feedback:** Owner: "all landing page pins need a pin detail page pin. clicking on the title and image should take you to pin detail" and "add that to scraping strategy".
+* **Learned:** Supplemental venues and special offers in `RestaurantSpecialVenue` lacked rows in `Pin`, causing landing page cards in the Specials tab (e.g. Coral Del Mar in San Diego) to fall back to linking external website URLs for their title and photos. Landing page items must all resolve to native Chronopin pin detail pages.
+* **Changed:** Backfilled 1,141 missing special venue pins (`scripts/restaurants/seedSpecialPins.ts`), updated `regionalRestaurantOffers` and special mapping to resolve `pinPath(pin)` as `restaurantHref`, and updated `RestaurantOfferCard` so clicking titles and images navigates directly to `/pin/[id]/[slug]`. Added explicit requirements to `strategy.md`, `restaurant-scraping.md`, and `AGENTS.md`.
+
+## 2026-10-15 - 6am and 6pm news job: prediction market interesting events and predicted pins
+
+* **Feedback:** Owner: "in 6am and 6pm job scrape for interesting events that prediction market has and create predicted pins out of them".
+* **Learned:** The earlier `predictionMarkets` task only read markets resolving in seven days (`thisWeek`) and newly listed markets (`newlyListed`), missing the major, high-volume events being actively predicted further out (e.g. 2028 presidential nominees/election, French presidential election, Ballon d'Or, Super Bowl, F1 championship, Fed rate cut path, next AI model milestones). Surfacing top interesting events by total volume and 24-hour volume while filtering out regular-season single games (`vs.`) and recurring noise provides direct leads for predicted pins.
+* **Changed:** Updated `src/server/jobs/markets.ts` and `src/server/jobs/tools.ts` (`prediction_markets` returns `interesting` candidates alongside `thisWeek` and `newlyListed`). Added explicit guidance to `docs/okf/scraping/daily-jobs.md`, `src/lib/dailyJobs.ts`, and `AGENTS.md`: create predicted pins tagged `Predicted` with `dateConfidence: 'estimated'` dated to the predicted onset, quote odds and volume with observation date, and thread to candidate parent threads via `parentId`.
+
 ## 2026-10-14 - Production pin translations, all languages
 
 * **Done:** Filled 4,935 missing translations and refreshed 150 outdated translations across 339 production pins in all 15 non-English locales (5,085 distinct pin/language rows). The initial export had 336 pins; a final re-export caught three more pins edited during the run. Saved through `/api/admin/translations` with current exported source hashes, preserving original content and authors. Final coverage and public API verification are recorded in the ignored `.scrape/prod-batches/translations-2026-10-14/` folder; no deployment was needed.

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { foldStories, kalshiShortlist } from './markets';
+import { foldStories, kalshiShortlist, polymarketNoise } from './markets';
 
 const kalshi = (ticker: string, volume = 1000) => ({ ticker, series: ticker.split('-')[0], markets: 1, volume, volume24h: 0, closes: '2026-10-05T00:00:00Z', listed: '2026-09-01T00:00:00Z' });
 
@@ -19,6 +19,18 @@ describe('kalshiShortlist', () => {
       kalshi('KXPAYROLLS-26SEP'),
     ];
     expect(kalshiShortlist(events).map((e) => e.ticker)).toEqual(['KXNFLDRAFT-27', 'KXBOXING-26OCT03MAYPAC', 'KXPAYROLLS-26SEP']);
+  });
+});
+
+describe('polymarketNoise', () => {
+  it('drops single regular-season games and noise tags, but keeps major events and championships', () => {
+    expect(polymarketNoise({ title: 'Seahawks vs. Broncos', tags: [] })).toBe(true);
+    expect(polymarketNoise({ title: 'Brewers v Dodgers', tags: [] })).toBe(true);
+    expect(polymarketNoise({ title: 'Daily Weather in NYC', tags: [{ slug: 'daily-temperature' }] })).toBe(true);
+    expect(polymarketNoise({ title: 'Brazil Presidential Election', tags: [{ slug: 'politics' }] })).toBe(false);
+    expect(polymarketNoise({ title: 'Next French Presidential Election', tags: [{ slug: 'elections' }] })).toBe(false);
+    expect(polymarketNoise({ title: 'MLB World Series Championship', tags: [{ slug: 'sports' }] })).toBe(false);
+    expect(polymarketNoise({ title: 'Super Bowl Champion 2027', tags: [{ slug: 'sports' }] })).toBe(false);
   });
 });
 

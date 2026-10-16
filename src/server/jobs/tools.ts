@@ -148,7 +148,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'prediction_markets',
     description:
-      "What Kalshi and Polymarket are betting on: thisWeek is the events resolving in the next `days` (default 7), newlyListed the events listed since the last run that resolve later, each biggest book first with its odds, dollars traded, close time and coveredByPin when a pin already cites the market. Per-game sport markets and props, price ladders, weather, tweet counts and other recurring markets are left out; an election's races and props fold into its biggest market as `related`. Reads about 50 pages, so call it once a run.",
+      "What Kalshi and Polymarket are betting on: interesting is top high-volume and noteworthy events being predicted across politics, technology, space, economics, championships and culture; thisWeek is events resolving in the next `days` (default 7); newlyListed is events listed since the last run resolving later. Each candidate has its odds, dollars traded, close time, and coveredByPin when an existing pin cites the market. Per-game sport markets, price ladders, weather and tweet counts are excluded. Use these to create predicted pins (tagged 'Predicted', dateConfidence 'estimated' at predicted event start, odds and volume quoted, and threaded to parent pins via parentId where available). Reads about 50 pages, so call it once a run.",
     input_schema: obj({ days: num('Window in days, 1-14'), limit: num('At most this many per list, default 30'), minVolume: num('Dollars traded, default 10000') }),
     run: (input, ctx) =>
       marketCandidates({ days: int(input.days, 7, 1, 14), limit: int(input.limit, 30, 1, 60), minVolume: int(input.minVolume, 10_000, 0, 10_000_000), since: ctx.since }),

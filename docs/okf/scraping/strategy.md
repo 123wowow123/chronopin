@@ -66,6 +66,8 @@ Stages 2 to 5 run in parallel where they do not depend on each other: the extrac
 
 # Decision rules
 
+**Landing page pins require a pin detail page (owner, 2026-10-15).** Every entity, venue, product, vehicle, or special displayed on any landing page (including restaurant guides across Coming soon, Just opened, Top restaurants, and Specials tabs, as well as cars, products, travel, etc.) must be backed by a full database `Pin` row and have its own pin detail page (`/pin/[id]/[slug]`). Clicking on the title or image of any landing page card must navigate directly to its native pin detail page, never an external third-party website or a dead link. External operator links, reservation URLs, and menu links belong in the pin's metadata, action buttons, or visit details. When scraping or curating new landing page items (e.g. restaurant special venues, supplemental restaurants, featured products), ensure a corresponding `Pin` record is created, seeded, or linked, with title, description, location/metadata, source attribution, and blob-stored media.
+
 **Pin image storage.** All pin images and generated thumbnails belong in Azure Blob Storage, never Git (owner, 2026-10-08). Keep only blob URLs and provenance metadata in the repository. Use ignored temporary caches for downloads and uploads. Verify the public blob and update catalog and live pin references before removing an existing image file. Application icons and other UI assets remain repository assets.
 
 **Restaurant food galleries.** When the restaurant publishes an official gallery of its food, take up to **six media total** for its pin, counting useful existing media toward the cap (owner, 2026-10-08, AnnaLena). Inspect and choose distinct food photos, preserve gallery attribution, store the photos in Azure Blob Storage, and attach them to the production pin. Record Azure blob URLs rather than checked-in image files. Avoid repeated views, logos and staff portraits when food photos are available. Seasonal gallery dishes need not match the current menu; say so. This extends the usual three-media target for restaurant pins. Follow [restaurant scraping](../../restaurant-scraping.md) for sourcing, provenance and live-image verification.
@@ -179,6 +181,7 @@ A draft is ready to save when:
 - A model or product pin carries the maker's main results table (`<h3>Benchmarks</h3>` + `<table>`) when one is published.
 - A consumable food, snack or beverage product pin carries its native 7-axis taste rubric (`PinTaste` via `PUT /api/pins/:id/taste`) with editorial estimate scores, basis, and at least one verified firsthand tasting review (`PinTaste.reviews`), kept synchronized in `scripts/products/taste.json`.
 - An attendable event pin (concert, festival, sports fixture, conference) carries a `PinEventInfo` ticket reading when the organiser's or ticketer's own page is readable - a `ticketUrl` to that show's purchase page once it is on sale, never guessed.
+- Every entity or venue appearing on a landing page or guide tab (including restaurant specials and supplemental venues) is backed by an active database `Pin` whose `/pin/[id]/[slug]` detail page opens when clicking its title or photo card.
 
 
 # When the API is out of credit

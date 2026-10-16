@@ -1,0 +1,307 @@
+{
+  "checkedAt": "2026-10-15",
+  "country": "Japan",
+  "regions": [
+    "kyoto",
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Graniph Cafe Kyoto Opens in Shijo Kawaramachi",
+        "description": "Graniph’s announced third-floor Kyoto cafe will serve local matcha collaborations, MAMIDORI sweets and REC COFFEE.",
+        "sourceUrl": "https://www.graniph.com/other/graniphkyoto",
+        "address": "3F FUJII DAIMARU NORTH 3, 373 Naramono-cho, Shijo-dori Teramachi Nishiiru, Shimogyo-ku, Kyoto",
+        "productName": "Graniph Cafe Kyoto",
+        "utcStartDateTime": "2026-11-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Official Kyoto campaign and operator release confirm public grand opening November 19, 2026. November 18 is an invitation-only member preview and is excluded as the public opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Shijo Kawaramachi",
+          "Cafe / matcha sweets"
+        ],
+        "longFormSummary": "<p>Graniph’s announced third-floor Kyoto cafe will serve local matcha collaborations, MAMIDORI sweets and REC COFFEE.<cite data-ref=\"https://www.graniph.com/other/graniphkyoto\"></cite></p><p>Official Kyoto campaign and operator release confirm public grand opening November 19, 2026. November 18 is an invitation-only member preview and is excluded as the public opening.</p>",
+        "references": [
+          {
+            "url": "https://www.graniph.com/other/graniphkyoto",
+            "title": "Graniph Cafe Kyoto source",
+            "confidence": 90,
+            "reasoning": "Official Kyoto campaign and operator release confirm public grand opening November 19, 2026. November 18 is an invitation-only member preview and is excluded as the public opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000226.000067867.html",
+            "title": "Graniph Cafe Kyoto source",
+            "confidence": 90,
+            "reasoning": "Official Kyoto campaign and operator release confirm public grand opening November 19, 2026. November 18 is an invitation-only member preview and is excluded as the public opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.graniph.com/other/graniphkyoto",
+          "menu": {
+            "pinSourceUrl": "https://www.graniph.com/other/graniphkyoto",
+            "name": "Graniph Cafe Kyoto",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Announced Kyoto cafe menu",
+                "url": "https://www.graniph.com/other/graniphkyoto",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "MAMIDORI matcha daifuku",
+                    "priceLabel": "Price not published",
+                    "note": "Supervised by Dorayaki Inome"
+                  },
+                  {
+                    "name": "MAMIDORI matcha madeleines",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "SHUHARI KYOTO matcha drinks",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "SAISON DES RÉCOLTES × SHUHARI KYOTO matcha sweets",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "REC COFFEE coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Launch categories and named sweets announced by the operator; prices and detailed drink/sweet lineup are not yet published. Checked official Kyoto campaign page, linked announcement, operator cafe pages and release gallery. Full Kyoto lineup is due in late October. No Tokyo/Fukuoka menu prices or other-branch interiors transferred. Gyoza no Ohsho collaboration is apparel/goods, not a served gyoza menu. Current artwork is a proposed cafe rendering, not a completed interior; actual Kyoto gallery remains a gap."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.graniph.com/other/graniphkyoto",
+            "name": "Graniph Cafe Kyoto",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.graniph.com/other/graniphkyoto",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Regular daily hours",
+                "hours": "11:00–20:00; cafe last order 19:30"
+              },
+              {
+                "days": "November 19 opening day",
+                "hours": "10:00–20:00; cafe last order 19:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.graniph.com/other/graniphkyoto",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000226.000067867.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "granif-site",
+            "name": "Graniph Cafe Kyoto",
+            "neighborhood": "Shijo Kawaramachi",
+            "cuisine": "Cafe / matcha sweets",
+            "description": "Graniph’s announced third-floor Kyoto cafe will serve local matcha collaborations, MAMIDORI sweets and REC COFFEE.",
+            "address": "3F FUJII DAIMARU NORTH 3, 373 Naramono-cho, Shijo-dori Teramachi Nishiiru, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://www.graniph.com/other/graniphkyoto",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/granif-site-0-44feffd0adc5cbe0.webp",
+            "imageCredit": "株式会社グラニフ",
+            "imageSourceUrl": "https://www.graniph.com/other/graniphkyoto",
+            "imageNote": "Official Graniph Cafe Kyoto announcement artwork with proposed cafe rendering; not a photograph of the completed Kyoto interior.",
+            "openingConfirmed": true,
+            "day": "2026-11-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/granif-site-0-44feffd0adc5cbe0.webp",
+          "sha256": "44feffd0adc5cbe03f78f44c338e72626a4b1effab56bef05343c47f1c1a4ffa",
+          "width": 1600,
+          "height": 594,
+          "credit": "株式会社グラニフ",
+          "note": "Official Graniph Cafe Kyoto announcement artwork with proposed cafe rendering; not a photograph of the completed Kyoto interior.",
+          "sourcePage": "https://www.graniph.com/other/graniphkyoto"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hakata Udon West — Jimbocho Opens in Jimbocho",
+        "description": "An announced Jimbocho branch serving Hakata-style udon by day and Kyushu-style izakaya dishes in the evening.",
+        "sourceUrl": "https://www.shop-west.jp/store/183.html",
+        "address": "1F Yamakawa Building, 1-32-1 Kanda Jimbocho, Chiyoda-ku, Tokyo",
+        "productName": "Hakata Udon West — Jimbocho",
+        "utcStartDateTime": "2026-11-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact official operator branch page explicitly announces November 2, 2026 opening and supplies exact address/phone; independently corroborated by branch-specific reporting.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Jimbocho",
+          "Udon / izakaya"
+        ],
+        "longFormSummary": "<p>An announced Jimbocho branch serving Hakata-style udon by day and Kyushu-style izakaya dishes in the evening.<cite data-ref=\"https://www.shop-west.jp/store/183.html\"></cite></p><p>Exact official operator branch page explicitly announces November 2, 2026 opening and supplies exact address/phone; independently corroborated by branch-specific reporting.</p>",
+        "references": [
+          {
+            "url": "https://www.shop-west.jp/store/183.html",
+            "title": "Hakata Udon West — Jimbocho source",
+            "confidence": 90,
+            "reasoning": "Exact official operator branch page explicitly announces November 2, 2026 opening and supplies exact address/phone; independently corroborated by branch-specific reporting."
+          },
+          {
+            "url": "https://www.shop-west.jp/menu/",
+            "title": "Hakata Udon West — Jimbocho source",
+            "confidence": 90,
+            "reasoning": "Exact official operator branch page explicitly announces November 2, 2026 opening and supplies exact address/phone; independently corroborated by branch-specific reporting."
+          },
+          {
+            "url": "https://www.timeout.jp/tokyo/ja/news/udon-west-to-open-in-jimbocho-in-november-091826",
+            "title": "Hakata Udon West — Jimbocho source",
+            "confidence": 90,
+            "reasoning": "Exact official operator branch page explicitly announces November 2, 2026 opening and supplies exact address/phone; independently corroborated by branch-specific reporting."
+          },
+          {
+            "url": "https://west-saiyou.net/jobfind-pc/job/All/18258",
+            "title": "Hakata Udon West — Jimbocho source",
+            "confidence": 90,
+            "reasoning": "Exact official operator branch page explicitly announces November 2, 2026 opening and supplies exact address/phone; independently corroborated by branch-specific reporting."
+          },
+          {
+            "url": "https://tabelog.com/tokyo/A1310/A131003/13327164/",
+            "title": "Hakata Udon West — Jimbocho source",
+            "confidence": 90,
+            "reasoning": "Exact official operator branch page explicitly announces November 2, 2026 opening and supplies exact address/phone; independently corroborated by branch-specific reporting."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.shop-west.jp/store/183.html",
+          "menu": {
+            "pinSourceUrl": "https://www.shop-west.jp/store/183.html",
+            "name": "Hakata Udon West — Jimbocho",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Announced Jimbocho menu",
+                "url": "https://www.timeout.jp/tokyo/ja/news/udon-west-to-open-in-jimbocho-in-november-091826",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hakata-style udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Motsunabe hotpot",
+                    "priceLabel": "Price not published",
+                    "note": "Planned evening menu; exact price not published for this branch"
+                  },
+                  {
+                    "name": "Mentaiko dishes",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Kyushu shochu",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator-supplied branch announcement published by Time Out identifies these launch offerings without branch prices. Deep checked exact operator branch page, branch menu heading, official menu locator, linked operator recruitment, exact-branch Tabelog and local reporting. Official branch menu currently has no linked PDF or dish prices. Local blog ¥390 motsunabe reference is not verified as Jimbocho price and is excluded. No other-branch menu or operating hours transferred. The official branch record spells building Yamakawa (やまかわ), superseding local blog やまと. Operator-supplied facade/interior illustrations checked, no actual completed-store gallery available yet."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.shop-west.jp/store/183.html",
+            "name": "Hakata Udon West — Jimbocho",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.shop-west.jp/store/183.html",
+            "phone": "03-6285-0345",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.shop-west.jp/store/183.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.shop-west.jp/menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.timeout.jp/tokyo/ja/news/udon-west-to-open-in-jimbocho-in-november-091826"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://west-saiyou.net/jobfind-pc/job/All/18258"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/tokyo/A1310/A131003/13327164/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "west-site",
+            "name": "Hakata Udon West — Jimbocho",
+            "neighborhood": "Jimbocho",
+            "cuisine": "Udon / izakaya",
+            "description": "An announced Jimbocho branch serving Hakata-style udon by day and Kyushu-style izakaya dishes in the evening.",
+            "address": "1F Yamakawa Building, 1-32-1 Kanda Jimbocho, Chiyoda-ku, Tokyo",
+            "websiteUrl": "https://www.shop-west.jp/store/183.html",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/west-site-0-8bc9ac0bafc0ffe9.webp",
+            "imageCredit": "株式会社ウエスト / Time Out Tokyo",
+            "imageSourceUrl": "https://www.timeout.jp/tokyo/ja/news/udon-west-to-open-in-jimbocho-in-november-091826",
+            "imageNote": "Operator-supplied Jimbocho facade rendering published with the branch announcement; not a completed-store photograph.",
+            "openingConfirmed": true,
+            "day": "2026-11-02"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/west-site-0-8bc9ac0bafc0ffe9.webp",
+          "sha256": "8bc9ac0bafc0ffe9f419f9e5bee4e16217e21ef9655eff80d6b8164abca7ae46",
+          "width": 750,
+          "height": 422,
+          "credit": "株式会社ウエスト / Time Out Tokyo",
+          "note": "Operator-supplied Jimbocho facade rendering published with the branch announcement; not a completed-store photograph.",
+          "sourcePage": "https://www.timeout.jp/tokyo/ja/news/udon-west-to-open-in-jimbocho-in-november-091826"
+        }
+      ]
+    }
+  ]
+}

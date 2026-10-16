@@ -522,3 +522,9 @@ Research stopped after batch42 at the owner's wrap-up request. Unapplied next-se
 ## Continuation — October 15, batches 43–45
 
 See [new research and verification notes](restaurant-japan-30-progress-2026-10-15.md) and [refreshed 24-tab audit](restaurant-japan-30-target-2026-10-15.md). Fifteen additions, six Specials profiles, 211 menu entries and 62 gallery links saved and verified in both environments; current counts 339 memberships / 386 missing. Source QA corrections are in the current batch-43 JSON and API records; do not reapply superseded scratch builders. October 14 full snapshot remains the baseline for older branches; October 15 snapshot is the verified additions/corrections delta. No deployment performed.
+
+Batch 46 continuation: two more verified Coming soon branches, Fukuoka Gensuke (November month only) and Osaka RABBIT BAGELS Daimaru (October 29). Cumulative 17 records, six Specials profiles, 215 menu entries, 64 gallery links; 341 memberships / 384 missing. See October 15 notes and audit.
+
+Batches 47–49 continuation verified ten additional records, one Specials profile, 164 menu entries and 19 Azure gallery links. All 24 local/production counts match: 352 memberships / 373 missing. Nagoya Just opened now 15 and Specials 14; Coming soon Fukuoka 10, Kyoto 8, Tokyo 9. Current snapshot and detailed source/gap notes are dated October 15. Target remains incomplete.
+
+Batch 50: four new exact branches, 159 menu entries, three Specials profiles/five offers and 14 Azure gallery links verified locally and on production. Osaka Coming soon 8 / Specials 15; Kyoto Specials 9; Nagoya Specials 15; Sapporo Coming soon 6. All 24 counts match: 357 memberships / 368 missing. Production pin 15928 committed despite a response timeout; reconciled by exact source before resuming missing content, so no duplicate was created. No deploy. Full source/gap notes and session delta updated October 15.

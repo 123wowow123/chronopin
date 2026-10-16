@@ -32,10 +32,16 @@ export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: Sc
   };
 
   return <article className={styles.card}>
-    {card.photo && <Link href={card.restaurantHref} className={styles.photoLink} aria-label={`See ${card.name}'s restaurant details`}>
-      <Image src={card.photo.src} alt={card.photo.alt} fill unoptimized className={styles.cardImage} />
-      <span className={styles.imageNote}>{card.photo.credit}</span>
-    </Link>}
+    <Link href={card.restaurantHref} className={styles.photoLink} aria-label={`See ${card.name}'s restaurant details`}>
+      {card.photo ? (
+        <>
+          <Image src={card.photo.src} alt={card.photo.alt} fill unoptimized className={styles.cardImage} />
+          <span className={styles.imageNote}>{card.photo.credit}</span>
+        </>
+      ) : (
+        <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>
+      )}
+    </Link>
     <div className={styles.cardBody}>
       <p className={styles.cardMeta}>{card.neighborhood}{card.kidsFriendly && <><span aria-hidden="true">·</span><span className={styles.kidsBadge}>Kids friendly</span></>}</p>
       {origin && distance != null ? <p className={styles.offerDistance} title="Approximate straight-line distance">{formatDistance(distance, usesImperial())} {origin.source !== 'device' && origin.name ? `from ${origin.name}` : 'away'}</p> : sort === 'distance' ? <p className={styles.offerDistance}>Distance unavailable</p> : null}

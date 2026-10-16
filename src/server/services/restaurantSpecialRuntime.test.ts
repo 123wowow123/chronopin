@@ -4,8 +4,10 @@ import { listSpecialVenues, type RestaurantSpecialVenue } from '@/server/model/r
 import { regionalRestaurantOffers } from './restaurantOffers';
 import { restaurantSpecialMap } from './restaurantSpecialMap';
 import { parseSpecialVenue } from '@/server/restaurantSpecialValidation';
+import Pin from '@/server/model/pin';
 
 vi.mock('@/server/model/restaurantSpecialVenue', () => ({ listSpecialVenues: vi.fn() }));
+vi.mock('@/server/model/pin', () => ({ default: { findBySourceUrls: vi.fn().mockResolvedValue(new Map()) } }));
 afterEach(() => vi.resetAllMocks());
 function record(): RestaurantSpecialVenue {
   const { regionSlug, ...profile } = structuredClone(venues[0]);
@@ -28,4 +30,13 @@ it('uses the same stored profile and original special indices for guide cards an
   expect((await restaurantSpecialMap([offer.id]))[0]).toMatchObject({ title: 'Updated restaurant', latitude: saved.profile.location!.latitude });
   vi.mocked(listSpecialVenues).mockResolvedValue([]);
   expect(await restaurantSpecialMap([offer.id])).toEqual([]);
+});
+it('resolves supplemental special venues to pin detail pages when pins exist', async () => {
+  const saved = record();
+  vi.mocked(listSpecialVenues).mockResolvedValue([saved]);
+  vi.mocked(Pin.findBySourceUrls).mockResolvedValue(new Map([[saved.profile.pinSourceUrl, { id: 12345, title: 'Database pin title' }]]));
+  const [offer] = await regionalRestaurantOffers([], [], '2026-10-08', 'san-diego');
+  expect(offer.restaurantHref).toBe('/pin/12345/database-pin-title');
+  const [mapPin] = await restaurantSpecialMap([offer.id]);
+  expect(mapPin.restaurantHref).toBe('/pin/12345/database-pin-title');
 });

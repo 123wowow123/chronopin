@@ -1,6 +1,7 @@
 import Anchor from '@/components/ui/Anchor';
-import { restaurantPhoneHref } from '@/lib/restaurantDetails';
+import { restaurantPhoneHref, type RestaurantDetails } from '@/lib/restaurantDetails';
 import { contentForSource } from '@/server/model/restaurantContent';
+import { specialVenueForSource } from '@/server/model/restaurantSpecialVenue';
 import styles from './RestaurantDetails.module.css';
 import { RestaurantPriceRange } from './RestaurantPriceRange';
 
@@ -11,7 +12,15 @@ export async function PinRestaurantDetails({ sourceUrl, name, isRestaurant, pric
   priceRange?: string;
 }) {
   const content = await contentForSource(sourceUrl);
-  const details = content?.profile.details;
+  const specialVenue = !content?.profile.details ? await specialVenueForSource(sourceUrl) : null;
+  const details: RestaurantDetails | undefined = content?.profile.details ?? (specialVenue ? {
+    pinSourceUrl: specialVenue.profile.pinSourceUrl,
+    name: specialVenue.profile.name,
+    websiteUrl: specialVenue.profile.websiteUrl ?? null,
+    phone: null,
+    checkedAt: specialVenue.profile.checkedAt,
+    openingHours: [],
+  } : undefined);
   priceRange = content?.profile.tile?.priceRange ?? priceRange;
   if (!isRestaurant && !details) return null;
   return (

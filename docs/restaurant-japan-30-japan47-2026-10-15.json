@@ -1,0 +1,2015 @@
+{
+  "checkedAt": "2026-10-15",
+  "country": "Japan",
+  "regions": [
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Komeda Coffee — Delisquare Imaike Opens in Imaike",
+        "description": "A newly opened Komeda upstairs at Delisquare Imaike, with branch-priced coffee, sandwiches and Shiro-Noir.",
+        "sourceUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+        "address": "2F Delisquare, 1-30-6 Imaike, Chikusa-ku, Nagoya",
+        "productName": "Komeda Coffee — Delisquare Imaike",
+        "utcStartDateTime": "2026-09-24T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 24 opening signage photographed locally, corroborated by operator September recruitment and current exact-branch operator record; October 1 full service is not first service.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Imaike",
+          "Coffee / sandwiches"
+        ],
+        "longFormSummary": "<p>A newly opened Komeda upstairs at Delisquare Imaike, with branch-priced coffee, sandwiches and Shiro-Noir.<cite data-ref=\"https://www.komeda.co.jp/shop/detail.html?id=1215\"></cite></p><p>September 24 opening signage photographed locally, corroborated by operator September recruitment and current exact-branch operator record; October 1 full service is not first service.</p>",
+        "references": [
+          {
+            "url": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+            "title": "Komeda Coffee — Delisquare Imaike source",
+            "confidence": 90,
+            "reasoning": "September 24 opening signage photographed locally, corroborated by operator September recruitment and current exact-branch operator record; October 1 full service is not first service."
+          },
+          {
+            "url": "https://jouhou.nagoya/komeda-imaike/",
+            "title": "Komeda Coffee — Delisquare Imaike source",
+            "confidence": 90,
+            "reasoning": "September 24 opening signage photographed locally, corroborated by operator September recruitment and current exact-branch operator record; October 1 full service is not first service."
+          },
+          {
+            "url": "https://komeda-recruit.net/jobfind-pc/job/All/14211",
+            "title": "Komeda Coffee — Delisquare Imaike source",
+            "confidence": 90,
+            "reasoning": "September 24 opening signage photographed locally, corroborated by operator September recruitment and current exact-branch operator record; October 1 full service is not first service."
+          },
+          {
+            "url": "https://eu.komeda.co.jp/v1/hp/shop/1215",
+            "title": "Komeda Coffee — Delisquare Imaike source",
+            "confidence": 90,
+            "reasoning": "September 24 opening signage photographed locally, corroborated by operator September recruitment and current exact-branch operator record; October 1 full service is not first service."
+          },
+          {
+            "url": "https://eu.komeda.co.jp/v1/hp/shop/1215/menu",
+            "title": "Komeda Coffee — Delisquare Imaike source",
+            "confidence": 90,
+            "reasoning": "September 24 opening signage photographed locally, corroborated by operator September recruitment and current exact-branch operator record; October 1 full service is not first service."
+          },
+          {
+            "url": "https://www.komeda.co.jp/menu/?brand=1&s=1215",
+            "title": "Komeda Coffee — Delisquare Imaike source",
+            "confidence": 90,
+            "reasoning": "September 24 opening signage photographed locally, corroborated by operator September recruitment and current exact-branch operator record; October 1 full service is not first service."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "menu": {
+            "pinSourceUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+            "name": "Komeda Coffee — Delisquare Imaike",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Delisquare Imaike dine-in menu",
+                "url": "https://www.komeda.co.jp/menu/?brand=1&s=1215",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "コメダブレンド",
+                    "price": 540,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "カフェオーレ",
+                    "price": 580,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "アイスコーヒー",
+                    "price": 540,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "アイスオーレ",
+                    "price": 580,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "コメダブレンド たっぷりサイズ",
+                    "price": 640,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ホットティー ストレート",
+                    "price": 540,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ホットティー レモン",
+                    "price": 540,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ミルクコーヒー",
+                    "price": 580,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "メロンソーダ",
+                    "price": 560,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "クリームコーヒー",
+                    "price": 640,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ジェリコ 元祖",
+                    "price": 670,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "珈琲ジェリー",
+                    "price": 670,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "カツパン",
+                    "price": 1020,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "みそカツパン",
+                    "price": 1020,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "エビカツパン",
+                    "price": 1000,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ミックスサンド",
+                    "price": 780,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ハムサンド",
+                    "price": 710,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ミニサンド",
+                    "price": 520,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ミニサンド（トースト）",
+                    "price": 520,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ホットドッグ",
+                    "price": 540,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "手作りたまごドッグ",
+                    "price": 540,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "小倉トースト",
+                    "price": 550,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "トースト",
+                    "price": 490,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "たっぷりたまごのピザトースト",
+                    "price": 860,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "コメダグラタン",
+                    "price": 1020,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ビーフシチュー",
+                    "price": 1280,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ミニサラダ",
+                    "price": 290,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "シロノワール（単品）",
+                    "price": 780,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ミニシロノワール（単品）",
+                    "price": 580,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "クロネージュ（単品）",
+                    "price": 630,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  },
+                  {
+                    "name": "ソフトクリーム",
+                    "price": 530,
+                    "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                  }
+                ],
+                "note": "Exact branch shop 1215 / internal shop 5249 menu read from https://eu.komeda.co.jp/v1/hp/shop/1215/menu. National price ranges, delivery prices, hidden/sold-out items and zero-price modifiers excluded. API shop photo and branch opening-signage photographs checked. Native branch page currently leaves blank content in browser, so backing public operator data used. Recruitment shift range is not public hours. September 24 first service precedes October full service; current regular hours from shop API supersede the September shortened schedule."
+              },
+              {
+                "label": "Parenting-passport mini soft-serve benefit",
+                "url": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Mini soft-serve ice cream for eligible child",
+                    "price": 0,
+                    "note": "Present parenting-support passport; guardian buys one drink; child must be elementary-school age or younger; one benefit per purchased drink"
+                  }
+                ],
+                "note": "Exact branch operator shop record child_care_support plus public page heading requires passport presentation. Regular standalone soft-serve price is a different item; no general free ice cream or employee discount inferred. No expiry published. Service follows branch opening hours; special separate last order is unpublished."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+            "name": "Komeda Coffee — Delisquare Imaike",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+            "phone": "052-784-9234",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "07:30–22:00; no regular closing day"
+              }
+            ],
+            "detailsSourceUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://jouhou.nagoya/komeda-imaike/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://komeda-recruit.net/jobfind-pc/job/All/14211"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://eu.komeda.co.jp/v1/hp/shop/1215"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://eu.komeda.co.jp/v1/hp/shop/1215/menu"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "komeda",
+            "name": "Komeda Coffee — Delisquare Imaike",
+            "neighborhood": "Imaike",
+            "cuisine": "Coffee / sandwiches",
+            "description": "A newly opened Komeda upstairs at Delisquare Imaike, with branch-priced coffee, sandwiches and Shiro-Noir.",
+            "address": "2F Delisquare, 1-30-6 Imaike, Chikusa-ku, Nagoya",
+            "websiteUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/komeda-0-e25654f5088a79fc.webp",
+            "imageCredit": "名古屋情報通編集部",
+            "imageSourceUrl": "https://jouhou.nagoya/komeda-imaike/",
+            "imageNote": "Delisquare Imaike host building and exact branch opening signage before opening.",
+            "openingConfirmed": true,
+            "day": "2026-09-24"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/komeda-0-e25654f5088a79fc.webp",
+          "sha256": "e25654f5088a79fc1ae676adeb14410af6bf1645c29183fdc3a632b142e0e8a6",
+          "width": 750,
+          "height": 499,
+          "credit": "名古屋情報通編集部",
+          "note": "Delisquare Imaike host building and exact branch opening signage before opening.",
+          "sourcePage": "https://jouhou.nagoya/komeda-imaike/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/komeda-1-10b9d8cff722b858.webp",
+          "sha256": "10b9d8cff722b858d396ae2d36c028664668201da4879f0b0a6cb30aeae66c3f",
+          "width": 800,
+          "height": 600,
+          "credit": "株式会社コメダ",
+          "note": "Branch photograph returned by Komeda’s exact Delisquare Imaike shop record.",
+          "sourcePage": "https://www.komeda.co.jp/shop/detail.html?id=1215"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "name": "Komeda Coffee — Delisquare Imaike",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "Delisquare Imaike dine-in menu",
+              "url": "https://www.komeda.co.jp/menu/?brand=1&s=1215",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "コメダブレンド",
+                  "price": 540,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "カフェオーレ",
+                  "price": 580,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "アイスコーヒー",
+                  "price": 540,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "アイスオーレ",
+                  "price": 580,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "コメダブレンド たっぷりサイズ",
+                  "price": 640,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ホットティー ストレート",
+                  "price": 540,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ホットティー レモン",
+                  "price": 540,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ミルクコーヒー",
+                  "price": 580,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "メロンソーダ",
+                  "price": 560,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "クリームコーヒー",
+                  "price": 640,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ジェリコ 元祖",
+                  "price": 670,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "珈琲ジェリー",
+                  "price": 670,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "カツパン",
+                  "price": 1020,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "みそカツパン",
+                  "price": 1020,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "エビカツパン",
+                  "price": 1000,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ミックスサンド",
+                  "price": 780,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ハムサンド",
+                  "price": 710,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ミニサンド",
+                  "price": 520,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ミニサンド（トースト）",
+                  "price": 520,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ホットドッグ",
+                  "price": 540,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "手作りたまごドッグ",
+                  "price": 540,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "小倉トースト",
+                  "price": 550,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "トースト",
+                  "price": 490,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "たっぷりたまごのピザトースト",
+                  "price": 860,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "コメダグラタン",
+                  "price": 1020,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ビーフシチュー",
+                  "price": 1280,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ミニサラダ",
+                  "price": 290,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "シロノワール（単品）",
+                  "price": 780,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ミニシロノワール（単品）",
+                  "price": 580,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "クロネージュ（単品）",
+                  "price": 630,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                },
+                {
+                  "name": "ソフトクリーム",
+                  "price": 530,
+                  "note": "Exact Delisquare Imaike dine-in price; takeaway/delivery prices may differ"
+                }
+              ],
+              "note": "Exact branch shop 1215 / internal shop 5249 menu read from https://eu.komeda.co.jp/v1/hp/shop/1215/menu. National price ranges, delivery prices, hidden/sold-out items and zero-price modifiers excluded. API shop photo and branch opening-signage photographs checked. Native branch page currently leaves blank content in browser, so backing public operator data used. Recruitment shift range is not public hours. September 24 first service precedes October full service; current regular hours from shop API supersede the September shortened schedule."
+            },
+            {
+              "label": "Parenting-passport mini soft-serve benefit",
+              "url": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Mini soft-serve ice cream for eligible child",
+                  "price": 0,
+                  "note": "Present parenting-support passport; guardian buys one drink; child must be elementary-school age or younger; one benefit per purchased drink"
+                }
+              ],
+              "note": "Exact branch operator shop record child_care_support plus public page heading requires passport presentation. Regular standalone soft-serve price is a different item; no general free ice cream or employee discount inferred. No expiry published. Service follows branch opening hours; special separate last order is unpublished."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Parenting-passport mini soft-serve benefit",
+              "kind": "other",
+              "description": "A mini soft-serve for an elementary-school-age or younger child when a guardian buys one drink and presents the parenting-support passport.",
+              "sourceUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+              "menuLabel": "Parenting-passport mini soft-serve benefit",
+              "discounted": true,
+              "schedule": "Daily during branch service, Asia/Tokyo",
+              "conditions": [
+                "Parenting-support passport presentation required.",
+                "Guardian must purchase a drink; one mini soft-serve per purchased drink.",
+                "Child must be elementary-school age or younger.",
+                "No published expiry; service may change. Separate benefit last order not published."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "07:30",
+                    "end": "22:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "2F Delisquare, 1-30-6 Imaike, Chikusa-ku, Nagoya",
+          "neighborhood": "Imaike",
+          "websiteUrl": "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/komeda-0-e25654f5088a79fc.webp",
+            "alt": "Komeda Coffee — Delisquare Imaike — Delisquare Imaike host building and exact branch opening signage before opening.",
+            "credit": "名古屋情報通編集部",
+            "sourceUrl": "https://jouhou.nagoya/komeda-imaike/",
+            "originalUrl": "https://i0.wp.com/jouhou.nagoya/wp-content/uploads/2026/09/komeda-imaike002.jpg",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Maruya Honten — Nagoya Station Meichika Opens in Meieki",
+        "description": "Maruya’s newly opened Meichika restaurant serves eel rice bowls and hitsumabushi with separate dine-in and takeaway menus.",
+        "sourceUrl": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+        "address": "MEICHIKA, 3-14-15 Meieki, Nakamura-ku, Nagoya",
+        "productName": "Maruya Honten — Nagoya Station Meichika",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator exact branch site and opening announcement confirm September 4, 2026. Separate from JR Nagoya Station and Meieki 3-chome branches.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Meieki",
+          "Hitsumabushi / eel"
+        ],
+        "longFormSummary": "<p>Maruya’s newly opened Meichika restaurant serves eel rice bowls and hitsumabushi with separate dine-in and takeaway menus.<cite data-ref=\"https://www.maruya-honten.com/shop/nagoya_meichika/\"></cite></p><p>Operator exact branch site and opening announcement confirm September 4, 2026. Separate from JR Nagoya Station and Meieki 3-chome branches.</p>",
+        "references": [
+          {
+            "url": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+            "title": "Maruya Honten — Nagoya Station Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch site and opening announcement confirm September 4, 2026. Separate from JR Nagoya Station and Meieki 3-chome branches."
+          },
+          {
+            "url": "https://www.atpress.ne.jp/news/611434",
+            "title": "Maruya Honten — Nagoya Station Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch site and opening announcement confirm September 4, 2026. Separate from JR Nagoya Station and Meieki 3-chome branches."
+          },
+          {
+            "url": "https://www.maruya-honten.com/news/2026/10/post-2394.html",
+            "title": "Maruya Honten — Nagoya Station Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch site and opening announcement confirm September 4, 2026. Separate from JR Nagoya Station and Meieki 3-chome branches."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+          "menu": {
+            "pinSourceUrl": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+            "name": "Maruya Honten — Nagoya Station Meichika",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Meichika dine-in eel and sides",
+                "url": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "上ひつまぶし（吸物付）",
+                    "price": 5250
+                  },
+                  {
+                    "name": "まるひつまぶし（吸物付）",
+                    "price": 4550
+                  },
+                  {
+                    "name": "特上ひつまぶし（吸物付）",
+                    "price": 7650
+                  },
+                  {
+                    "name": "ミニひつまぶし（吸物付）",
+                    "price": 3350
+                  },
+                  {
+                    "name": "ミニうな丼",
+                    "price": 3450
+                  },
+                  {
+                    "name": "うな丼",
+                    "price": 4650
+                  },
+                  {
+                    "name": "上うな丼",
+                    "price": 5800
+                  },
+                  {
+                    "name": "名物！巻きたてうまき",
+                    "price": 1580
+                  },
+                  {
+                    "name": "長焼き",
+                    "price": 4950
+                  },
+                  {
+                    "name": "白焼き",
+                    "price": 4950
+                  },
+                  {
+                    "name": "長焼き（ハーフ）",
+                    "price": 2700
+                  },
+                  {
+                    "name": "白焼き（ハーフ）",
+                    "price": 2700
+                  },
+                  {
+                    "name": "うざく",
+                    "price": 1950
+                  },
+                  {
+                    "name": "きも焼き",
+                    "price": 1150
+                  },
+                  {
+                    "name": "きも塩焼き",
+                    "price": 1150
+                  },
+                  {
+                    "name": "きもポン",
+                    "price": 1150
+                  },
+                  {
+                    "name": "手羽先ピリ辛煮",
+                    "price": 650
+                  },
+                  {
+                    "name": "ごはん",
+                    "price": 300
+                  },
+                  {
+                    "name": "きも吸",
+                    "price": 250
+                  }
+                ],
+                "note": "Tax-inclusive operator Meichika prices. Dine-in and takeaway differ; use the named menu section. Rice enlargement costs ¥200. Takeaway condiments differ from dine-in. October 16 phone-completion notice supersedes stale temporary/052-756-4508 numbers still displayed on branch page. No course, discount or old Meitetsu branch price borrowed."
+              },
+              {
+                "label": "Meichika drinks",
+                "url": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生ビール（キリン一番搾り）",
+                    "price": 750
+                  },
+                  {
+                    "name": "生ビール小（キリン一番搾り）",
+                    "price": 400
+                  },
+                  {
+                    "name": "瓶ビール（キリン一番搾り）",
+                    "price": 750
+                  },
+                  {
+                    "name": "名古屋赤味噌ラガー",
+                    "price": 980
+                  },
+                  {
+                    "name": "ノンアルビール（キリン）",
+                    "price": 500
+                  },
+                  {
+                    "name": "麦焼酎　佐藤　麦（水割り・湯割り）",
+                    "price": 800
+                  },
+                  {
+                    "name": "麦焼酎　佐藤　麦（ロック・ソーダ割り）",
+                    "price": 950
+                  },
+                  {
+                    "name": "芋焼酎　一刻者　赤（水割り・湯割り）",
+                    "price": 800
+                  },
+                  {
+                    "name": "芋焼酎　一刻者　赤（ロック・ソーダ割り）",
+                    "price": 950
+                  },
+                  {
+                    "name": "超辛口純米酒　白老でらから（かん・常温）",
+                    "price": 750,
+                    "note": "一合"
+                  },
+                  {
+                    "name": "超辛口純米酒　白老でらから（かん・常温）",
+                    "price": 1400,
+                    "note": "二合"
+                  },
+                  {
+                    "name": "うなぎにあう純米酒　うな純（冷酒）",
+                    "price": 1280,
+                    "note": "（300ml）"
+                  },
+                  {
+                    "name": "純米吟醸　白老（冷酒）",
+                    "price": 1500,
+                    "note": "（300ml）"
+                  },
+                  {
+                    "name": "蓬莱泉特別純米酒",
+                    "price": 1750,
+                    "note": "（300ml）"
+                  },
+                  {
+                    "name": "角ハイボール",
+                    "price": 650
+                  },
+                  {
+                    "name": "山椒ハイボールAKAYANE",
+                    "price": 800
+                  },
+                  {
+                    "name": "純米吟醸仕込みの白老梅（ロック・ソーダ割り）",
+                    "price": 800
+                  },
+                  {
+                    "name": "レモンサワー",
+                    "price": 650
+                  },
+                  {
+                    "name": "ピンクグレープフルーツサワー",
+                    "price": 650
+                  },
+                  {
+                    "name": "ウーロン茶、コーラ、オレンジジュース",
+                    "price": 400,
+                    "note": "（各種）"
+                  },
+                  {
+                    "name": "岡崎八丁味噌コーラ",
+                    "price": 700
+                  },
+                  {
+                    "name": "プレミアムジンジャービア",
+                    "price": 680
+                  },
+                  {
+                    "name": "上友プレミアムみかんジュース",
+                    "price": 950
+                  },
+                  {
+                    "name": "上友プレミアム八朔ジュース",
+                    "price": 950
+                  }
+                ],
+                "note": "Tax-inclusive operator Meichika prices. Dine-in and takeaway differ; use the named menu section. Rice enlargement costs ¥200. Takeaway condiments differ from dine-in. October 16 phone-completion notice supersedes stale temporary/052-756-4508 numbers still displayed on branch page. No course, discount or old Meitetsu branch price borrowed."
+              },
+              {
+                "label": "Meichika takeaway menu",
+                "url": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "上ひつまぶし弁当（薬味付）",
+                    "price": 4550
+                  },
+                  {
+                    "name": "まるひつまぶし弁当（薬味付）",
+                    "price": 4050
+                  },
+                  {
+                    "name": "ミニひつまぶし弁当（薬味付）",
+                    "price": 2950
+                  },
+                  {
+                    "name": "特上ひつまぶし弁当（薬味付）",
+                    "price": 6550
+                  },
+                  {
+                    "name": "上うな丼弁当",
+                    "price": 5350
+                  },
+                  {
+                    "name": "うな丼弁当",
+                    "price": 4150
+                  },
+                  {
+                    "name": "ミニうな丼弁当",
+                    "price": 3050
+                  },
+                  {
+                    "name": "長焼き",
+                    "price": 4650
+                  },
+                  {
+                    "name": "きも焼き、きも塩焼き",
+                    "price": 1150,
+                    "note": "（各種）"
+                  },
+                  {
+                    "name": "お茶漬け用　お出汁",
+                    "price": 200
+                  }
+                ],
+                "note": "Tax-inclusive operator Meichika prices. Dine-in and takeaway differ; use the named menu section. Rice enlargement costs ¥200. Takeaway condiments differ from dine-in. October 16 phone-completion notice supersedes stale temporary/052-756-4508 numbers still displayed on branch page. No course, discount or old Meitetsu branch price borrowed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+            "name": "Maruya Honten — Nagoya Station Meichika",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+            "phone": "052-589-9608",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–22:00; last order 21:30; no regular closing day"
+              }
+            ],
+            "detailsSourceUrl": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.atpress.ne.jp/news/611434"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.maruya-honten.com/news/2026/10/post-2394.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "maruya-shop",
+            "name": "Maruya Honten — Nagoya Station Meichika",
+            "neighborhood": "Meieki",
+            "cuisine": "Hitsumabushi / eel",
+            "description": "Maruya’s newly opened Meichika restaurant serves eel rice bowls and hitsumabushi with separate dine-in and takeaway menus.",
+            "address": "MEICHIKA, 3-14-15 Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/maruya-shop-0-329944b316f895ef.webp",
+            "imageCredit": "まるや本店",
+            "imageSourceUrl": "https://www.maruya-honten.com/shop/nagoya_meichika/",
+            "imageNote": "Exact Meichika branch entrance from operator’s branch gallery.",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/maruya-shop-0-329944b316f895ef.webp",
+          "sha256": "329944b316f895ef964c3aae8e0620d2527cec4ba48583651b8a43954b79b443",
+          "width": 1600,
+          "height": 1200,
+          "credit": "まるや本店",
+          "note": "Exact Meichika branch entrance from operator’s branch gallery.",
+          "sourcePage": "https://www.maruya-honten.com/shop/nagoya_meichika/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/maruya-shop-1-d45136e276b830c4.webp",
+          "sha256": "d45136e276b830c4cbc9d144adaeae94cbd5010ddc4869d8e355a6b35acafbb8",
+          "width": 1600,
+          "height": 1200,
+          "credit": "まるや本店",
+          "note": "Exact Meichika branch interior from operator’s branch gallery.",
+          "sourcePage": "https://www.maruya-honten.com/shop/nagoya_meichika/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/maruya-shop-2-17963ed92a540014.webp",
+          "sha256": "17963ed92a540014648a8997a8c4747a6041ecdc1a22a000ce426cb3d8dd463e",
+          "width": 1600,
+          "height": 1200,
+          "credit": "まるや本店",
+          "note": "Exact Meichika branch interior from operator’s branch gallery.",
+          "sourcePage": "https://www.maruya-honten.com/shop/nagoya_meichika/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/maruya-shop-3-7bb8d2247f4b957f.webp",
+          "sha256": "7bb8d2247f4b957fa65a2e4558e529daeca78ae854dec8051d23ef941e489582",
+          "width": 1600,
+          "height": 1200,
+          "credit": "まるや本店",
+          "note": "Exact Meichika branch interior from operator’s branch gallery.",
+          "sourcePage": "https://www.maruya-honten.com/shop/nagoya_meichika/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sharin — Meichika Opens in Meieki",
+        "description": "A September opening in Meichika serving tsukemen and ramen, including the named Nagoya Taiwan dipping noodles.",
+        "sourceUrl": "https://shop.mtfj.co.jp/stores/131",
+        "address": "MEICHIKA shop 15, 3-14-15-saki Meieki, Nakamura-ku, Nagoya",
+        "productName": "Sharin — Meichika",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator August 27 branch opening announcement confirms September 4, 2026; landlord and local opening photos corroborate.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Meieki",
+          "Tsukemen / ramen"
+        ],
+        "longFormSummary": "<p>A September opening in Meichika serving tsukemen and ramen, including the named Nagoya Taiwan dipping noodles.<cite data-ref=\"https://shop.mtfj.co.jp/stores/131\"></cite></p><p>Operator August 27 branch opening announcement confirms September 4, 2026; landlord and local opening photos corroborate.</p>",
+        "references": [
+          {
+            "url": "https://shop.mtfj.co.jp/stores/131",
+            "title": "Sharin — Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator August 27 branch opening announcement confirms September 4, 2026; landlord and local opening photos corroborate."
+          },
+          {
+            "url": "https://mtfj.co.jp/shop/news-16120/",
+            "title": "Sharin — Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator August 27 branch opening announcement confirms September 4, 2026; landlord and local opening photos corroborate."
+          },
+          {
+            "url": "https://www.meichika.jp/shopguide/sharin.html",
+            "title": "Sharin — Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator August 27 branch opening announcement confirms September 4, 2026; landlord and local opening photos corroborate."
+          },
+          {
+            "url": "https://mtfj.co.jp/product/news-16141/",
+            "title": "Sharin — Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator August 27 branch opening announcement confirms September 4, 2026; landlord and local opening photos corroborate."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230101/23097062/dtlmenu/",
+            "title": "Sharin — Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator August 27 branch opening announcement confirms September 4, 2026; landlord and local opening photos corroborate."
+          },
+          {
+            "url": "https://jouhou.nagoya/sharin-tsukemen/",
+            "title": "Sharin — Meichika source",
+            "confidence": 90,
+            "reasoning": "Operator August 27 branch opening announcement confirms September 4, 2026; landlord and local opening photos corroborate."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://shop.mtfj.co.jp/stores/131",
+          "menu": {
+            "pinSourceUrl": "https://shop.mtfj.co.jp/stores/131",
+            "name": "Sharin — Meichika",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Photographed Meichika menu",
+                "url": "https://jouhou.nagoya/sharin-tsukemen/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tsukemen — small",
+                    "price": 790,
+                    "note": "200g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Tsukemen — regular",
+                    "price": 890,
+                    "note": "300g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Tsukemen — large",
+                    "price": 990,
+                    "note": "400g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Tsukemen — extra large",
+                    "price": 1090,
+                    "note": "500g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Seasoned-egg tsukemen — small",
+                    "price": 940,
+                    "note": "200g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Seasoned-egg tsukemen — regular",
+                    "price": 1040,
+                    "note": "300g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Seasoned-egg tsukemen — large",
+                    "price": 1140,
+                    "note": "400g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Seasoned-egg tsukemen — extra large",
+                    "price": 1240,
+                    "note": "500g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Roast-pork tsukemen — small",
+                    "price": 990,
+                    "note": "200g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Roast-pork tsukemen — regular",
+                    "price": 1090,
+                    "note": "300g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Roast-pork tsukemen — large",
+                    "price": 1190,
+                    "note": "400g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Roast-pork tsukemen — extra large",
+                    "price": 1290,
+                    "note": "500g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Deluxe tsukemen — small",
+                    "price": 1090,
+                    "note": "200g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Deluxe tsukemen — regular",
+                    "price": 1190,
+                    "note": "300g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Deluxe tsukemen — large",
+                    "price": 1290,
+                    "note": "400g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Deluxe tsukemen — extra large",
+                    "price": 1390,
+                    "note": "500g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Nagoya Taiwan tsukemen — small",
+                    "price": 940,
+                    "note": "200g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Nagoya Taiwan tsukemen — regular",
+                    "price": 1040,
+                    "note": "300g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Nagoya Taiwan tsukemen — large",
+                    "price": 1140,
+                    "note": "400g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Nagoya Taiwan tsukemen — extra large",
+                    "price": 1240,
+                    "note": "500g before boiling; branch photographed menu"
+                  },
+                  {
+                    "name": "Ramen — regular",
+                    "price": 790
+                  },
+                  {
+                    "name": "Ramen — large",
+                    "price": 890
+                  },
+                  {
+                    "name": "Seasoned-egg ramen — regular",
+                    "price": 940
+                  },
+                  {
+                    "name": "Seasoned-egg ramen — large",
+                    "price": 1040
+                  },
+                  {
+                    "name": "Deluxe ramen — regular",
+                    "price": 1090
+                  },
+                  {
+                    "name": "Deluxe ramen — large",
+                    "price": 1190
+                  },
+                  {
+                    "name": "Roast-pork rice bowl",
+                    "price": 340
+                  }
+                ],
+                "note": "Tax-inclusive branch menu photographs checked; noodle weights are before boiling. Current operator branch page gives 09:00 opening on regular weekdays/weekends and 10:00 holidays, superseding 10:00 daily launch copy. Nagoya Taiwan noodles are also sold in Kansai from September 30; do not describe them as still exclusive. Reviewed operator opening/current store pages, branch local menu photos, operator September Taiwan release and exact-branch Tabelog menu. No invented end date or guaranteed stock."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://shop.mtfj.co.jp/stores/131",
+            "name": "Sharin — Meichika",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://shop.mtfj.co.jp/stores/131",
+            "phone": "052-462-1846",
+            "openingHours": [
+              {
+                "days": "Regular days",
+                "hours": "09:00–23:00; last order 22:30 per current operator branch page"
+              },
+              {
+                "days": "Public holidays",
+                "hours": "10:00–23:00; last order 22:30"
+              }
+            ],
+            "detailsSourceUrl": "https://shop.mtfj.co.jp/stores/131",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://mtfj.co.jp/shop/news-16120/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.meichika.jp/shopguide/sharin.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://mtfj.co.jp/product/news-16141/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230101/23097062/dtlmenu/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "sharin",
+            "name": "Sharin — Meichika",
+            "neighborhood": "Meieki",
+            "cuisine": "Tsukemen / ramen",
+            "description": "A September opening in Meichika serving tsukemen and ramen, including the named Nagoya Taiwan dipping noodles.",
+            "address": "MEICHIKA shop 15, 3-14-15-saki Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://shop.mtfj.co.jp/stores/131",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/sharin-0-a0f1413e8b5367c1.webp",
+            "imageCredit": "名古屋情報通編集部",
+            "imageSourceUrl": "https://jouhou.nagoya/sharin-tsukemen/",
+            "imageNote": "Sharin Meichika storefront photographed at the branch preview.",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/sharin-0-a0f1413e8b5367c1.webp",
+          "sha256": "a0f1413e8b5367c1564a0a0dcbcc6c5ff7b6759da5e7ad7a9af65aea61e3e484",
+          "width": 750,
+          "height": 500,
+          "credit": "名古屋情報通編集部",
+          "note": "Sharin Meichika storefront photographed at the branch preview.",
+          "sourcePage": "https://jouhou.nagoya/sharin-tsukemen/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/sharin-1-930c80efdc1b316d.webp",
+          "sha256": "930c80efdc1b316d8069510d4847acebe9354a04a1203abec88183201d04089a",
+          "width": 750,
+          "height": 500,
+          "credit": "名古屋情報通編集部",
+          "note": "Sharin Meichika dining room photographed at the branch preview.",
+          "sourcePage": "https://jouhou.nagoya/sharin-tsukemen/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/sharin-3-c5a0c93429bf9931.webp",
+          "sha256": "c5a0c93429bf99312f6c56b46bea7efac9eed679d6e554edc9a73cf833f32ecc",
+          "width": 479,
+          "height": 600,
+          "credit": "名古屋情報通編集部",
+          "note": "Photographed Sharin Meichika branch menu board.",
+          "sourcePage": "https://jouhou.nagoya/sharin-tsukemen/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Rokurinsha — JR Nagoya Station Platform 1 Opens in Nagoya Station",
+        "description": "A temporary Rokurinsha restaurant inside JR Nagoya Station, serving tsukemen on the repurposed platform through November 29, 2026.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+        "address": "JR Nagoya Station platform 1, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "productName": "Rokurinsha — JR Nagoya Station Platform 1",
+        "utcStartDateTime": "2026-09-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Station developer announcement and exact-branch local report confirm September 1–November 29, 2026 temporary restaurant run.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Nagoya Station",
+          "Tsukemen"
+        ],
+        "longFormSummary": "<p>A temporary Rokurinsha restaurant inside JR Nagoya Station, serving tsukemen on the repurposed platform through November 29, 2026.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000041.000108483.html\"></cite></p><p>Station developer announcement and exact-branch local report confirm September 1–November 29, 2026 temporary restaurant run.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+            "title": "Rokurinsha — JR Nagoya Station Platform 1 source",
+            "confidence": 90,
+            "reasoning": "Station developer announcement and exact-branch local report confirm September 1–November 29, 2026 temporary restaurant run."
+          },
+          {
+            "url": "https://jouhou.nagoya/rokurinsha-tsukemen-2026/",
+            "title": "Rokurinsha — JR Nagoya Station Platform 1 source",
+            "confidence": 90,
+            "reasoning": "Station developer announcement and exact-branch local report confirm September 1–November 29, 2026 temporary restaurant run."
+          },
+          {
+            "url": "https://www.tokai-tv.com/tokainews/feature/article_20260831_48035",
+            "title": "Rokurinsha — JR Nagoya Station Platform 1 source",
+            "confidence": 90,
+            "reasoning": "Station developer announcement and exact-branch local report confirm September 1–November 29, 2026 temporary restaurant run."
+          }
+        ],
+        "utcEndDateTime": "2026-11-29T00:00:00Z"
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+            "name": "Rokurinsha — JR Nagoya Station Platform 1",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Nagoya platform 1 dine-in menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tsukemen — regular",
+                    "price": 1080
+                  },
+                  {
+                    "name": "Seasoned-egg tsukemen — regular",
+                    "price": 1230
+                  },
+                  {
+                    "name": "Deluxe tsukemen — regular",
+                    "price": 1380
+                  },
+                  {
+                    "name": "Shrimp tsukemen — regular",
+                    "price": 1230
+                  },
+                  {
+                    "name": "Deluxe shrimp tsukemen — regular",
+                    "price": 1530
+                  },
+                  {
+                    "name": "Large noodle upgrade",
+                    "price": 150,
+                    "note": "Supplement, not a full bowl"
+                  },
+                  {
+                    "name": "Seasoned egg",
+                    "price": 150
+                  },
+                  {
+                    "name": "Shredded pork",
+                    "price": 200
+                  },
+                  {
+                    "name": "Menma",
+                    "price": 150
+                  },
+                  {
+                    "name": "Chopped green onion",
+                    "price": 150
+                  },
+                  {
+                    "name": "Nori",
+                    "price": 100
+                  },
+                  {
+                    "name": "Extra dipping broth",
+                    "price": 100
+                  },
+                  {
+                    "name": "Bottled beer",
+                    "price": 350
+                  }
+                ],
+                "note": "Tax-inclusive prices checked against exact-branch photographed ticket machine and operator release. Runs September 1–November 29. Entry requires a JR platform/admission ticket or valid rail ticket; transport IC alone cannot serve as platform admission. Platform ticket admits two hours; extra admission payable after that. Payment is cash or transport IC. Previous project’s dining photos, Tokyo prices and retail frozen products not used."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+            "name": "Rokurinsha — JR Nagoya Station Platform 1",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily during temporary run",
+                "hours": "10:00–22:00; last order 21:30; closes after November 29"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://jouhou.nagoya/rokurinsha-tsukemen-2026/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tokai-tv.com/tokainews/feature/article_20260831_48035"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "rokurinsha",
+            "name": "Rokurinsha — JR Nagoya Station Platform 1",
+            "neighborhood": "Nagoya Station",
+            "cuisine": "Tsukemen",
+            "description": "A temporary Rokurinsha restaurant inside JR Nagoya Station, serving tsukemen on the repurposed platform through November 29, 2026.",
+            "address": "JR Nagoya Station platform 1, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000041.000108483.html",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/rokurinsha-0-e2b39a0d627e4284.webp",
+            "imageCredit": "名古屋情報通編集部",
+            "imageSourceUrl": "https://jouhou.nagoya/rokurinsha-tsukemen-2026/",
+            "imageNote": "Rokurinsha Nagoya Station platform 1 entrance at the September opening preview.",
+            "openingConfirmed": true,
+            "day": "2026-09-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/rokurinsha-0-e2b39a0d627e4284.webp",
+          "sha256": "e2b39a0d627e42849ec315c705b0ebfeddb8314966c7b96d24ae7a9d0677da8f",
+          "width": 750,
+          "height": 500,
+          "credit": "名古屋情報通編集部",
+          "note": "Rokurinsha Nagoya Station platform 1 entrance at the September opening preview.",
+          "sourcePage": "https://jouhou.nagoya/rokurinsha-tsukemen-2026/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/rokurinsha-1-2d2c61cbaa5adfc9.webp",
+          "sha256": "2d2c61cbaa5adfc904145fcb4059d1793b288037d01cac487b55a9ba155abc6a",
+          "width": 750,
+          "height": 499,
+          "credit": "名古屋情報通編集部",
+          "note": "Rokurinsha Nagoya platform 1 photographed ticket machine/menu in the 2026 run.",
+          "sourcePage": "https://jouhou.nagoya/rokurinsha-tsukemen-2026/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "BEUTEA — Meichika Opens in Meieki",
+        "description": "The new Meichika tea cafe pairs Chinese teas with fruit, milk and cheese foam, with Nagoya-specific drinks from its current operator announcement.",
+        "sourceUrl": "https://www.meichika.jp/shopguide/beutea.html",
+        "address": "MEICHIKA shop 16, 3-14-15-saki Meieki, Nakamura-ku, Nagoya",
+        "productName": "BEUTEA — Meichika",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Landlord re-opening tenant roster, September 4 broadcast and exact-branch opening report confirm September 4, 2026.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Meieki",
+          "Chinese tea cafe"
+        ],
+        "longFormSummary": "<p>The new Meichika tea cafe pairs Chinese teas with fruit, milk and cheese foam, with Nagoya-specific drinks from its current operator announcement.<cite data-ref=\"https://www.meichika.jp/shopguide/beutea.html\"></cite></p><p>Landlord re-opening tenant roster, September 4 broadcast and exact-branch opening report confirm September 4, 2026.</p>",
+        "references": [
+          {
+            "url": "https://www.meichika.jp/shopguide/beutea.html",
+            "title": "BEUTEA — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord re-opening tenant roster, September 4 broadcast and exact-branch opening report confirm September 4, 2026."
+          },
+          {
+            "url": "https://beutea.jp/",
+            "title": "BEUTEA — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord re-opening tenant roster, September 4 broadcast and exact-branch opening report confirm September 4, 2026."
+          },
+          {
+            "url": "https://beutea.jp/all-menu/",
+            "title": "BEUTEA — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord re-opening tenant roster, September 4 broadcast and exact-branch opening report confirm September 4, 2026."
+          },
+          {
+            "url": "https://www.ctv.co.jp/catch/article/8y4f2wotaoyarfs2.html",
+            "title": "BEUTEA — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord re-opening tenant roster, September 4 broadcast and exact-branch opening report confirm September 4, 2026."
+          },
+          {
+            "url": "https://beutea.jp/news_02",
+            "title": "BEUTEA — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord re-opening tenant roster, September 4 broadcast and exact-branch opening report confirm September 4, 2026."
+          },
+          {
+            "url": "https://www.tabemaro.jp/column/beutea_meichika/",
+            "title": "BEUTEA — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord re-opening tenant roster, September 4 broadcast and exact-branch opening report confirm September 4, 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.meichika.jp/shopguide/beutea.html",
+          "menu": {
+            "pinSourceUrl": "https://www.meichika.jp/shopguide/beutea.html",
+            "name": "BEUTEA — Meichika",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Meichika revived signature drinks",
+                "url": "https://beutea.jp/news_02",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Nagoya tea macchiato Premium",
+                    "price": 1180
+                  },
+                  {
+                    "name": "Nagoya tea macchiato",
+                    "price": 780
+                  }
+                ],
+                "note": "Official September 11 notice: available September 12 onward; standard tax-inclusive prices, members have separate unpublished prices. Earlier launch Premium ¥980 has been superseded. No end date is announced and this is not represented as an ongoing discount."
+              },
+              {
+                "label": "Branch tea-menu selection",
+                "url": "https://www.tabemaro.jp/column/beutea_meichika/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Jasmine milk tea — iced S",
+                    "price": 528
+                  },
+                  {
+                    "name": "Jasmine milk tea — iced M",
+                    "price": 628
+                  },
+                  {
+                    "name": "Jasmine milk tea — iced L",
+                    "price": 728
+                  },
+                  {
+                    "name": "Jasmine milk tea — iced LL",
+                    "price": 828
+                  },
+                  {
+                    "name": "Roasted oolong milk tea — iced S",
+                    "price": 578
+                  },
+                  {
+                    "name": "Osmanthus milk tea — iced S",
+                    "price": 578
+                  },
+                  {
+                    "name": "White-peach oolong milk tea — iced S",
+                    "price": 528
+                  },
+                  {
+                    "name": "Wuyi Da Hong Pao milk tea — iced S",
+                    "price": 578
+                  },
+                  {
+                    "name": "Jasmine grape tea — iced M",
+                    "price": 913
+                  },
+                  {
+                    "name": "Jasmine grape tea — iced L",
+                    "price": 1013
+                  },
+                  {
+                    "name": "Jasmine grape tea — iced LL",
+                    "price": 1113
+                  },
+                  {
+                    "name": "Jasmine brewed tea — iced S",
+                    "price": 448
+                  },
+                  {
+                    "name": "Highland oolong brewed tea — iced S",
+                    "price": 521
+                  },
+                  {
+                    "name": "Jasmine tea macchiato — iced L",
+                    "price": 710
+                  }
+                ],
+                "note": "Tax-inclusive September branch menu reported at the opening preview, after September 4 price revision. Sizes, hot/cold prices and member prices differ; only stated iced standard prices shown. Official all-menu and exact landlord branch page checked; no other-shop food menu is transferred. Completely cashless per branch report. Own branch exterior and landlord-labelled drink photo verified."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.meichika.jp/shopguide/beutea.html",
+            "name": "BEUTEA — Meichika",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.meichika.jp/shopguide/beutea.html",
+            "phone": "052-485-9818",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "07:00–22:00 per current landlord branch page; opening-week shorter hours have ended"
+              }
+            ],
+            "detailsSourceUrl": "https://www.meichika.jp/shopguide/beutea.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://beutea.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://beutea.jp/all-menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.ctv.co.jp/catch/article/8y4f2wotaoyarfs2.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "meichika-beutea",
+            "name": "BEUTEA — Meichika",
+            "neighborhood": "Meieki",
+            "cuisine": "Chinese tea cafe",
+            "description": "The new Meichika tea cafe pairs Chinese teas with fruit, milk and cheese foam, with Nagoya-specific drinks from its current operator announcement.",
+            "address": "MEICHIKA shop 16, 3-14-15-saki Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://www.meichika.jp/shopguide/beutea.html",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/beutea-meichika-0-eb18169d9f4a1b91.webp",
+            "imageCredit": "tabemaro / なるしー",
+            "imageSourceUrl": "https://www.tabemaro.jp/column/beutea_meichika/",
+            "imageNote": "BEUTEA Meichika branch photographed during the opening preview; exact branch reporting.",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/beutea-meichika-0-eb18169d9f4a1b91.webp",
+          "sha256": "eb18169d9f4a1b911ad35ebb214087fc9793ea89251e978e9d5c03e43a9f8d81",
+          "width": 1600,
+          "height": 1067,
+          "credit": "tabemaro / なるしー",
+          "note": "BEUTEA Meichika branch photographed during the opening preview; exact branch reporting.",
+          "sourcePage": "https://www.tabemaro.jp/column/beutea_meichika/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/beutea-meichika-1-e0772fd0ee96742b.webp",
+          "sha256": "e0772fd0ee96742b0a974b46098a660639809cdc1fa155723bc83264b5fdfc43",
+          "width": 1024,
+          "height": 1280,
+          "credit": "BEUTEA / MEICHIKA",
+          "note": "Jasmine milk tea, explicitly pictured on the Meichika tenant page; no other-branch dish inferred.",
+          "sourcePage": "https://www.meichika.jp/shopguide/beutea.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ebi Tonkotsu Ramen Ichibanken — Meichika Opens in Meieki",
+        "description": "Ichibanken’s new shrimp-focused branch serves salt and miso shrimp-tonkotsu ramen in Meichika.",
+        "sourceUrl": "https://www.meichika.jp/shopguide/ichibanken.html",
+        "address": "MEICHIKA shop 17, 3-14-15-saki Meieki, Nakamura-ku, Nagoya",
+        "productName": "Ebi Tonkotsu Ramen Ichibanken — Meichika",
+        "utcStartDateTime": "2026-09-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Landlord September 4 MEICHIKA opening tenant roster and current exact tenant page, corroborated by September 6 opening-preview report.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Meieki",
+          "Shrimp tonkotsu ramen"
+        ],
+        "longFormSummary": "<p>Ichibanken’s new shrimp-focused branch serves salt and miso shrimp-tonkotsu ramen in Meichika.<cite data-ref=\"https://www.meichika.jp/shopguide/ichibanken.html\"></cite></p><p>Landlord September 4 MEICHIKA opening tenant roster and current exact tenant page, corroborated by September 6 opening-preview report.</p>",
+        "references": [
+          {
+            "url": "https://www.meichika.jp/shopguide/ichibanken.html",
+            "title": "Ebi Tonkotsu Ramen Ichibanken — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord September 4 MEICHIKA opening tenant roster and current exact tenant page, corroborated by September 6 opening-preview report."
+          },
+          {
+            "url": "https://ichibanken.jp/",
+            "title": "Ebi Tonkotsu Ramen Ichibanken — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord September 4 MEICHIKA opening tenant roster and current exact tenant page, corroborated by September 6 opening-preview report."
+          },
+          {
+            "url": "https://www.ctv.co.jp/catch/article/8y4f2wotaoyarfs2.html",
+            "title": "Ebi Tonkotsu Ramen Ichibanken — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord September 4 MEICHIKA opening tenant roster and current exact tenant page, corroborated by September 6 opening-preview report."
+          },
+          {
+            "url": "https://jouhou.nagoya/ichibanken-ebi/",
+            "title": "Ebi Tonkotsu Ramen Ichibanken — Meichika source",
+            "confidence": 90,
+            "reasoning": "Landlord September 4 MEICHIKA opening tenant roster and current exact tenant page, corroborated by September 6 opening-preview report."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.meichika.jp/shopguide/ichibanken.html",
+          "menu": {
+            "pinSourceUrl": "https://www.meichika.jp/shopguide/ichibanken.html",
+            "name": "Ebi Tonkotsu Ramen Ichibanken — Meichika",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Photographed Meichika ramen menu",
+                "url": "https://jouhou.nagoya/ichibanken-ebi/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Salt-shrimp tonkotsu — basic",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Salt-shrimp tonkotsu — pork wontons",
+                    "price": 1250
+                  },
+                  {
+                    "name": "Salt-shrimp tonkotsu — extra roast pork",
+                    "price": 1490
+                  },
+                  {
+                    "name": "Salt-shrimp tonkotsu — special",
+                    "price": 1690
+                  },
+                  {
+                    "name": "Miso-shrimp tonkotsu — basic",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Miso-shrimp tonkotsu — pork wontons",
+                    "price": 1350
+                  },
+                  {
+                    "name": "Miso-shrimp tonkotsu — extra roast pork",
+                    "price": 1590
+                  },
+                  {
+                    "name": "Miso-shrimp tonkotsu — special",
+                    "price": 1790
+                  },
+                  {
+                    "name": "Raw shrimp rice bowl",
+                    "price": 780
+                  },
+                  {
+                    "name": "Shrimp rice ball",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Tax-inclusive exact branch photographed menus: salt basic ¥1,100, wonton ¥1,250, roast pork ¥1,490, special ¥1,690; miso adds ¥100. Raw shrimp bowl price from exact-branch reporting; rice-ball price not transcribed where unreadable. Actual named toppings not assumed to be discounts. Checked landlord branch page, operator site and linked Instagram, detailed branch menu photographs; generic Ichibanken tonkotsu menus not borrowed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.meichika.jp/shopguide/ichibanken.html",
+            "name": "Ebi Tonkotsu Ramen Ichibanken — Meichika",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.meichika.jp/shopguide/ichibanken.html",
+            "phone": "052-526-5170",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–23:00; last order 22:30"
+              }
+            ],
+            "detailsSourceUrl": "https://www.meichika.jp/shopguide/ichibanken.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://ichibanken.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.ctv.co.jp/catch/article/8y4f2wotaoyarfs2.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "meichika-ichibanken",
+            "name": "Ebi Tonkotsu Ramen Ichibanken — Meichika",
+            "neighborhood": "Meieki",
+            "cuisine": "Shrimp tonkotsu ramen",
+            "description": "Ichibanken’s new shrimp-focused branch serves salt and miso shrimp-tonkotsu ramen in Meichika.",
+            "address": "MEICHIKA shop 17, 3-14-15-saki Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://www.meichika.jp/shopguide/ichibanken.html",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/ichibanken-0-efee515919fe20d0.webp",
+            "imageCredit": "名古屋情報通編集部",
+            "imageSourceUrl": "https://jouhou.nagoya/ichibanken-ebi/",
+            "imageNote": "Ebi Tonkotsu Ramen Ichibanken Meichika storefront, exact opening preview.",
+            "openingConfirmed": true,
+            "day": "2026-09-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/ichibanken-0-efee515919fe20d0.webp",
+          "sha256": "efee515919fe20d05e7c806ce811ffdcc668e37b81c9b79ccfa40dd98ea91f65",
+          "width": 750,
+          "height": 499,
+          "credit": "名古屋情報通編集部",
+          "note": "Ebi Tonkotsu Ramen Ichibanken Meichika storefront, exact opening preview.",
+          "sourcePage": "https://jouhou.nagoya/ichibanken-ebi/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/ichibanken-1-0302a8b658861aa5.webp",
+          "sha256": "0302a8b658861aa57a53e161277df4579591458fe694d7b72ccfda0ffa2d64ff",
+          "width": 750,
+          "height": 500,
+          "credit": "名古屋情報通編集部",
+          "note": "Photographed Meichika branch salt-shrimp tonkotsu ramen menu.",
+          "sourcePage": "https://jouhou.nagoya/ichibanken-ebi/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/ichibanken-2-3821f552b4c11120.webp",
+          "sha256": "3821f552b4c11120db181849b3d39be064f022e0ea8e48c36d10f3b5bf5f13ea",
+          "width": 750,
+          "height": 500,
+          "credit": "名古屋情報通編集部",
+          "note": "Photographed Meichika branch miso-shrimp tonkotsu ramen menu.",
+          "sourcePage": "https://jouhou.nagoya/ichibanken-ebi/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "IPPUDO — Meieki 3-chome Opens in Meieki",
+        "description": "A new Meieki branch of Ippudo, with published branch-only Taiwan mazesoba and named tonkotsu ramen selections.",
+        "sourceUrl": "https://stores.ippudo.com/1832",
+        "address": "1F Meieki Morishita Building, 3-13-31 Meieki, Nakamura-ku, Nagoya",
+        "productName": "IPPUDO — Meieki 3-chome",
+        "utcStartDateTime": "2026-08-17T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact official branch page explicitly confirms August 17, 2026 opening, corroborated by branch first-day review.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Meieki",
+          "Hakata ramen"
+        ],
+        "longFormSummary": "<p>A new Meieki branch of Ippudo, with published branch-only Taiwan mazesoba and named tonkotsu ramen selections.<cite data-ref=\"https://stores.ippudo.com/1832\"></cite></p><p>Exact official branch page explicitly confirms August 17, 2026 opening, corroborated by branch first-day review.</p>",
+        "references": [
+          {
+            "url": "https://stores.ippudo.com/1832",
+            "title": "IPPUDO — Meieki 3-chome source",
+            "confidence": 90,
+            "reasoning": "Exact official branch page explicitly confirms August 17, 2026 opening, corroborated by branch first-day review."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230101/23097299/dtlrvwlst/B533880886/",
+            "title": "IPPUDO — Meieki 3-chome source",
+            "confidence": 90,
+            "reasoning": "Exact official branch page explicitly confirms August 17, 2026 opening, corroborated by branch first-day review."
+          },
+          {
+            "url": "https://www.ippudo.com/news/260907_meieki3chome",
+            "title": "IPPUDO — Meieki 3-chome source",
+            "confidence": 90,
+            "reasoning": "Exact official branch page explicitly confirms August 17, 2026 opening, corroborated by branch first-day review."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://stores.ippudo.com/1832",
+          "menu": {
+            "pinSourceUrl": "https://stores.ippudo.com/1832",
+            "name": "IPPUDO — Meieki 3-chome",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Meieki branch Taiwan mazesoba",
+                "url": "https://www.ippudo.com/news/260907_meieki3chome",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Taiwan mazesoba",
+                    "price": 1100,
+                    "note": "Large noodles free; limited quantities until sold out; weekdays served from 14:00, weekends during service"
+                  }
+                ],
+                "note": "Operator September 4 notice names this exact branch. No fixed last date or guaranteed stock published; this is kept in ordinary menu coverage rather than inventing an offer expiry."
+              },
+              {
+                "label": "Ramen named on the exact branch page",
+                "url": "https://stores.ippudo.com/1832",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kiwami Shiromaru Motoaji",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Kiwami Akamaru Shinaji",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Kiwami Karaka-men",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch page explicitly links these named ramen; exact dine-in prices not published there. Checked operator news rendered data, store page and branch-linked Uber Eats option; delivery prices are not dine-in prices. Local report exterior looks illustrative/unverified and is excluded; verified branch-specific product poster used, with artwork caption. Additional authentic exterior/interior gallery remains a gap."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://stores.ippudo.com/1832",
+            "name": "IPPUDO — Meieki 3-chome",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://stores.ippudo.com/1832",
+            "phone": "052-446-5889",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–23:00 per official branch timetable; other listing variations not substituted"
+              }
+            ],
+            "detailsSourceUrl": "https://stores.ippudo.com/1832",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230101/23097299/dtlrvwlst/B533880886/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "ippudo",
+            "name": "IPPUDO — Meieki 3-chome",
+            "neighborhood": "Meieki",
+            "cuisine": "Hakata ramen",
+            "description": "A new Meieki branch of Ippudo, with published branch-only Taiwan mazesoba and named tonkotsu ramen selections.",
+            "address": "1F Meieki Morishita Building, 3-13-31 Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://stores.ippudo.com/1832",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/ippudo-1-ef57b9d65a5e7528.webp",
+            "imageCredit": "一風堂 / 株式会社力の源カンパニー",
+            "imageSourceUrl": "https://www.ippudo.com/news/260907_meieki3chome",
+            "imageNote": "Official Meieki 3-chome-only Taiwan mazesoba poster, with published price and conditions.",
+            "openingConfirmed": true,
+            "day": "2026-08-17"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/ippudo-1-ef57b9d65a5e7528.webp",
+          "sha256": "ef57b9d65a5e7528f686cc6106dd6c28b258735dd83bbadc8efd36df0b9f3ce8",
+          "width": 1600,
+          "height": 2265,
+          "credit": "一風堂 / 株式会社力の源カンパニー",
+          "note": "Official Meieki 3-chome-only Taiwan mazesoba poster, with published price and conditions.",
+          "sourcePage": "https://www.ippudo.com/news/260907_meieki3chome"
+        }
+      ]
+    }
+  ]
+}

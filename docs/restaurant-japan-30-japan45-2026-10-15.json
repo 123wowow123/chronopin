@@ -65,45 +65,63 @@
       },
       "content": {
         "profile": {
-          "pinSourceUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
           "menu": {
-            "pinSourceUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
             "name": "OrySNACK Kyoto — BOOKHOME",
-            "checkedAt": "2026-10-15",
             "menus": [
               {
-                "label": "Announced Kyoto sake and preview experiences",
                 "url": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
-                "currency": "JPY",
-                "coverage": "sample",
+                "note": "Landlord September 9 release and October 8 official BOOKHOME note confirm December 4, 2026; current main site says early December without retracting that day. Host facility’s proposed 08:00–23:00 hours and pass prices are not the tenant’s service hours or a food discount. Shared common-area rendering accurately labelled; completed tenant gallery and exact branch dish/price roster remain unpublished. No other-branch menu, food photo or promotion borrowed. Operator’s own September 9 Kyoto release gives 17:00–23:00 and nine seats plus standing. Current crowdfunding details checked: supporter preview November 19 (planned)–December 3, separate from December 4 public opening; special birthday event November 18 is not normal service. Paper ticket and later assigned reservation required, no direct booking submitted. Alcohol-focused venue; crowdfunding excludes under-20 guests. Nonalcoholic alternatives are offered. Reward bundles include other benefits and platform fees; contribution amounts must not be presented as ordinary per-person menu prices. Individual sake labels, named snacks, live booking inventory and exact holiday closures remain gaps. Tokyo Nihonbashi photographs explicitly excluded.",
                 "items": [
                   {
                     "name": "Kyoto sake tasting — reservation required",
-                    "priceLabel": "Price not published",
-                    "note": "Exact sake labels, normal serving sizes and regular price not published"
+                    "note": "Exact sake labels, normal serving sizes and regular price not published",
+                    "priceLabel": "Price not published"
                   },
                   {
                     "name": "Premium advance experience — four sake tastes and snacks",
-                    "priceLabel": "Price not published",
-                    "note": "Crowdfunding preview benefit, 75 minutes with OriHime-D; not the regular menu price"
+                    "note": "Crowdfunding preview benefit, 75 minutes with OriHime-D; not the regular menu price",
+                    "priceLabel": "Price not published"
                   },
                   {
                     "name": "General advance experience — two drinks and snacks",
-                    "priceLabel": "Price not published",
-                    "note": "Crowdfunding preview benefit, 60 minutes with desktop OriHime; extra drinks charged separately"
+                    "note": "Crowdfunding preview benefit, 60 minutes with desktop OriHime; extra drinks charged separately",
+                    "priceLabel": "Price not published"
                   }
                 ],
-                "note": "Landlord September 9 release and October 8 official BOOKHOME note confirm December 4, 2026; current main site says early December without retracting that day. Host facility’s proposed 08:00–23:00 hours and pass prices are not the tenant’s service hours or a food discount. Shared common-area rendering accurately labelled; completed tenant gallery and exact branch dish/price roster remain unpublished. No other-branch menu, food photo or promotion borrowed. Operator’s own September 9 Kyoto release gives 17:00–23:00 and nine seats plus standing. Current crowdfunding details checked: supporter preview November 19 (planned)–December 3, separate from December 4 public opening; special birthday event November 18 is not normal service. Paper ticket and later assigned reservation required, no direct booking submitted. Alcohol-focused venue; crowdfunding excludes under-20 guests. Nonalcoholic alternatives are offered. Reward bundles include other benefits and platform fees; contribution amounts must not be presented as ordinary per-person menu prices. Individual sake labels, named snacks, live booking inventory and exact holiday closures remain gaps. Tokyo Nihonbashi photographs explicitly excluded."
+                "label": "Announced Kyoto sake and preview experiences",
+                "coverage": "sample",
+                "currency": "JPY"
               }
             ],
-            "specials": []
+            "specials": [],
+            "checkedAt": "2026-10-15",
+            "pinSourceUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/"
+          },
+          "tile": {
+            "day": "2026-12-04",
+            "kind": "opening",
+            "name": "OrySNACK Kyoto — BOOKHOME",
+            "slug": "ory-release",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/orysnack-kyoto-campaign-0-8366104f765dbf5e.webp",
+            "address": "1F Wings Kyoto / BOOKHOME, 262 Misayama-cho, Higashinotoin-dori Rokkaku-sagaru, Nakagyo-ku, Kyoto",
+            "cuisine": "Sake / robot-hosted bar",
+            "checkedAt": "2026-10-15",
+            "imageNote": "Official Kyoto permanent-store project campaign artwork showing OriHime. Promotional poster, not a photograph of the completed Kyoto interior.",
+            "priceRange": "",
+            "regionSlug": "kyoto",
+            "websiteUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
+            "description": "A forthcoming Kyoto sake bar hosted by remotely operated OriHime robots, with reserved sake tastings and a walk-in snack area.",
+            "imageCredit": "株式会社オリィ研究所 / OrySNACK Kyoto",
+            "recognition": "",
+            "neighborhood": "Karasuma Oike",
+            "imageSourceUrl": "https://camp-fire.jp/projects/975305/view",
+            "openingConfirmed": true
           },
           "details": {
-            "pinSourceUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
             "name": "OrySNACK Kyoto — BOOKHOME",
+            "phone": null,
             "checkedAt": "2026-10-15",
             "websiteUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
-            "phone": null,
             "openingHours": [
               {
                 "days": "Planned service",
@@ -118,58 +136,40 @@
                 "hours": "Reservation required; normal reservation method not yet announced"
               }
             ],
+            "pinSourceUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
             "detailsSourceUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
             "additionalSources": [
               {
-                "label": "Research evidence",
-                "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html"
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://book-home.jp/"
+                "url": "https://book-home.jp/",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://note.com/infobh/n/nb2eead21471c"
+                "url": "https://note.com/infobh/n/nb2eead21471c",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://camp-fire.jp/projects/975305/view"
+                "url": "https://camp-fire.jp/projects/975305/view",
+                "label": "Research evidence"
               }
             ]
           },
-          "tile": {
-            "regionSlug": "kyoto",
-            "kind": "opening",
-            "slug": "ory-release",
-            "name": "OrySNACK Kyoto — BOOKHOME",
-            "neighborhood": "Karasuma Oike",
-            "cuisine": "Sake / robot-hosted bar",
-            "description": "A forthcoming Kyoto sake bar hosted by remotely operated OriHime robots, with reserved sake tastings and a walk-in snack area.",
-            "address": "1F Wings Kyoto / BOOKHOME, 262 Misayama-cho, Higashinotoin-dori Rokkaku-sagaru, Nakagyo-ku, Kyoto",
-            "websiteUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
-            "checkedAt": "2026-10-15",
-            "recognition": "",
-            "priceRange": "",
-            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/bookhome-planned-0-1fce53c58fc85036.webp",
-            "imageCredit": "大垣書店 / BOOKHOME",
-            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
-            "imageNote": "Planned BOOKHOME common-area rendering supplied by the landlord. This shows the shared host facility, not a completed restaurant or the individual tenant counter.",
-            "openingConfirmed": true,
-            "day": "2026-12-04"
-          }
+          "pinSourceUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/"
         },
         "enabled": true
       },
       "photos": [
         {
-          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/bookhome-planned-0-1fce53c58fc85036.webp",
-          "sha256": "1fce53c58fc850367a4db06f4d94ffde3df698311f912d09909987a9dd5aefb7",
-          "width": 1600,
-          "height": 967,
-          "credit": "大垣書店 / BOOKHOME",
-          "note": "Planned BOOKHOME common-area rendering supplied by the landlord. This shows the shared host facility, not a completed restaurant or the individual tenant counter.",
-          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html"
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/orysnack-kyoto-campaign-0-8366104f765dbf5e.webp",
+          "sha256": "8366104f765dbf5e82272859a21f91511f3057acdef08e20bf166ed72a89c800",
+          "width": 1500,
+          "height": 1000,
+          "credit": "株式会社オリィ研究所 / OrySNACK Kyoto",
+          "note": "Official Kyoto permanent-store project campaign artwork showing OriHime. Promotional poster, not a photograph of the completed Kyoto interior.",
+          "sourcePage": "https://camp-fire.jp/projects/975305/view"
         }
       ]
     },
@@ -251,100 +251,100 @@
       },
       "content": {
         "profile": {
-          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#teppan-spaghetti",
           "menu": {
-            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#teppan-spaghetti",
             "name": "Teppan no Spaghetti — BOOKHOME",
-            "checkedAt": "2026-10-15",
             "menus": [
               {
-                "label": "Announced BOOKHOME launch offering",
                 "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
-                "currency": "JPY",
-                "coverage": "sample",
+                "note": "Landlord September 9 release and October 8 official BOOKHOME note confirm December 4, 2026; current main site says early December without retracting that day. Host facility’s proposed 08:00–23:00 hours and pass prices are not the tenant’s service hours or a food discount. Shared common-area rendering accurately labelled; completed tenant gallery and exact branch dish/price roster remain unpublished. No other-branch menu, food photo or promotion borrowed. Deep checked landlord tenant announcement, current BOOKHOME site/news, branch-specific employer recruitment, operator landing page and linked chain menu. Brand describes a one-piece bacon spaghetti and 20-plus variants, with store exceptions; no evidence establishes the full future Kyoto assortment, so these flavours, sizes, prices and photographs are not transferred. Employer shift range and recruitment phone are not public dining hours or restaurant phone. Exact branch menu and own gallery await publication.",
                 "items": [
                   {
                     "name": "Ironplate spaghetti",
-                    "priceLabel": "Price not published",
-                    "note": "Branch-announced concept; exact launch variants not yet published"
+                    "note": "Branch-announced concept; exact launch variants not yet published",
+                    "priceLabel": "Price not published"
                   }
                 ],
-                "note": "Landlord September 9 release and October 8 official BOOKHOME note confirm December 4, 2026; current main site says early December without retracting that day. Host facility’s proposed 08:00–23:00 hours and pass prices are not the tenant’s service hours or a food discount. Shared common-area rendering accurately labelled; completed tenant gallery and exact branch dish/price roster remain unpublished. No other-branch menu, food photo or promotion borrowed. Deep checked landlord tenant announcement, current BOOKHOME site/news, branch-specific employer recruitment, operator landing page and linked chain menu. Brand describes a one-piece bacon spaghetti and 20-plus variants, with store exceptions; no evidence establishes the full future Kyoto assortment, so these flavours, sizes, prices and photographs are not transferred. Employer shift range and recruitment phone are not public dining hours or restaurant phone. Exact branch menu and own gallery await publication."
+                "label": "Announced BOOKHOME launch offering",
+                "coverage": "sample",
+                "currency": "JPY"
               }
             ],
-            "specials": []
+            "specials": [],
+            "checkedAt": "2026-10-15",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#teppan-spaghetti"
+          },
+          "tile": {
+            "day": "2026-12-04",
+            "kind": "opening",
+            "name": "Teppan no Spaghetti — BOOKHOME",
+            "slug": "teppan-spaghetti-bookhome",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/teppan-spaghetti-bookhome-0-7da072321f0c76ce.webp",
+            "address": "1F Wings Kyoto / BOOKHOME, 262 Misayama-cho, Higashinotoin-dori Rokkaku-sagaru, Nakagyo-ku, Kyoto",
+            "cuisine": "Ironplate spaghetti",
+            "checkedAt": "2026-10-15",
+            "imageNote": "Official Teppan no Spaghetti logo supplied with the BOOKHOME tenant announcement; brand artwork, not a completed venue or menu photograph.",
+            "priceRange": "",
+            "regionSlug": "kyoto",
+            "websiteUrl": "https://book-home.jp/",
+            "description": "A separately operated ironplate spaghetti venue announced for BOOKHOME’s December 4 public opening.",
+            "imageCredit": "株式会社鎌倉パスタ / BOOKHOME",
+            "recognition": "",
+            "neighborhood": "Karasuma Oike",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
+            "openingConfirmed": true
           },
           "details": {
-            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#teppan-spaghetti",
             "name": "Teppan no Spaghetti — BOOKHOME",
+            "phone": null,
             "checkedAt": "2026-10-15",
             "websiteUrl": "https://book-home.jp/",
-            "phone": null,
             "openingHours": [
               {
                 "days": "Tenant service hours",
                 "hours": "Not yet published; facility hours do not establish restaurant hours"
               }
             ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#teppan-spaghetti",
             "detailsSourceUrl": "https://book-home.jp/",
             "additionalSources": [
               {
-                "label": "Research evidence",
-                "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html"
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://note.com/infobh/n/nb2eead21471c"
+                "url": "https://note.com/infobh/n/nb2eead21471c",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://www.saint-marc-hd.com/kamakura/contents/teppannLP/"
+                "url": "https://www.saint-marc-hd.com/kamakura/contents/teppannLP/",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://www.saint-marc-hd.com/kamakura/menu/teppan/"
+                "url": "https://www.saint-marc-hd.com/kamakura/menu/teppan/",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://townwork.net/viewjob/jobid_1d2caabad224f6e3/"
+                "url": "https://townwork.net/viewjob/jobid_1d2caabad224f6e3/",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://baito.mynavi.jp/cl-002917900781/job-136868964/"
+                "url": "https://baito.mynavi.jp/cl-002917900781/job-136868964/",
+                "label": "Research evidence"
               }
             ]
           },
-          "tile": {
-            "regionSlug": "kyoto",
-            "kind": "opening",
-            "slug": "teppan-spaghetti-bookhome",
-            "name": "Teppan no Spaghetti — BOOKHOME",
-            "neighborhood": "Karasuma Oike",
-            "cuisine": "Ironplate spaghetti",
-            "description": "A separately operated ironplate spaghetti venue announced for BOOKHOME’s December 4 public opening.",
-            "address": "1F Wings Kyoto / BOOKHOME, 262 Misayama-cho, Higashinotoin-dori Rokkaku-sagaru, Nakagyo-ku, Kyoto",
-            "websiteUrl": "https://book-home.jp/",
-            "checkedAt": "2026-10-15",
-            "recognition": "",
-            "priceRange": "",
-            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/bookhome-planned-0-1fce53c58fc85036.webp",
-            "imageCredit": "大垣書店 / BOOKHOME",
-            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
-            "imageNote": "Planned BOOKHOME common-area rendering supplied by the landlord. This shows the shared host facility, not a completed restaurant or the individual tenant counter.",
-            "openingConfirmed": true,
-            "day": "2026-12-04"
-          }
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#teppan-spaghetti"
         },
         "enabled": true
       },
       "photos": [
         {
-          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/bookhome-planned-0-1fce53c58fc85036.webp",
-          "sha256": "1fce53c58fc850367a4db06f4d94ffde3df698311f912d09909987a9dd5aefb7",
-          "width": 1600,
-          "height": 967,
-          "credit": "大垣書店 / BOOKHOME",
-          "note": "Planned BOOKHOME common-area rendering supplied by the landlord. This shows the shared host facility, not a completed restaurant or the individual tenant counter.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/teppan-spaghetti-bookhome-0-7da072321f0c76ce.webp",
+          "sha256": "7da072321f0c76ce85f03a461d22583c9db7b830d1b2579270942b03f9d8d14e",
+          "width": 1500,
+          "height": 1000,
+          "credit": "株式会社鎌倉パスタ / BOOKHOME",
+          "note": "Official Teppan no Spaghetti logo supplied with the BOOKHOME tenant announcement; brand artwork, not a completed venue or menu photograph.",
           "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html"
         }
       ]
@@ -409,88 +409,88 @@
       },
       "content": {
         "profile": {
-          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#curry-family",
           "menu": {
-            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#curry-family",
             "name": "Curry Shop Family — BOOKHOME",
-            "checkedAt": "2026-10-15",
             "menus": [
               {
-                "label": "Announced BOOKHOME launch offering",
                 "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
-                "currency": "JPY",
-                "coverage": "sample",
+                "note": "Landlord September 9 release and October 8 official BOOKHOME note confirm December 4, 2026; current main site says early December without retracting that day. Host facility’s proposed 08:00–23:00 hours and pass prices are not the tenant’s service hours or a food discount. Shared common-area rendering accurately labelled; completed tenant gallery and exact branch dish/price roster remain unpublished. No other-branch menu, food photo or promotion borrowed. Deep checked landlord and current BOOKHOME news/site; exact brand/operator search finds the separate Shichijo main store but no published BOOKHOME roster. Shichijo menu/prices and photos not borrowed. No exact branch-linked PDF, ordering menu or current launch promotion located; toppings, payable prices, hours and completed counter gallery remain unpublished.",
                 "items": [
                   {
                     "name": "Dashi curry",
-                    "priceLabel": "Price not published",
-                    "note": "Landlord announces original spices with bonito, beef-bone and chicken-paitan dashi; no toppings or portion prices inferred"
+                    "note": "Landlord announces original spices with bonito, beef-bone and chicken-paitan dashi; no toppings or portion prices inferred",
+                    "priceLabel": "Price not published"
                   }
                 ],
-                "note": "Landlord September 9 release and October 8 official BOOKHOME note confirm December 4, 2026; current main site says early December without retracting that day. Host facility’s proposed 08:00–23:00 hours and pass prices are not the tenant’s service hours or a food discount. Shared common-area rendering accurately labelled; completed tenant gallery and exact branch dish/price roster remain unpublished. No other-branch menu, food photo or promotion borrowed. Deep checked landlord and current BOOKHOME news/site; exact brand/operator search finds the separate Shichijo main store but no published BOOKHOME roster. Shichijo menu/prices and photos not borrowed. No exact branch-linked PDF, ordering menu or current launch promotion located; toppings, payable prices, hours and completed counter gallery remain unpublished."
+                "label": "Announced BOOKHOME launch offering",
+                "coverage": "sample",
+                "currency": "JPY"
               }
             ],
-            "specials": []
+            "specials": [],
+            "checkedAt": "2026-10-15",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#curry-family"
+          },
+          "tile": {
+            "day": "2026-12-04",
+            "kind": "opening",
+            "name": "Curry Shop Family — BOOKHOME",
+            "slug": "curry-family-bookhome",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/curry-family-bookhome-0-3ca4a5e4262902a2.webp",
+            "address": "1F Wings Kyoto / BOOKHOME, 262 Misayama-cho, Higashinotoin-dori Rokkaku-sagaru, Nakagyo-ku, Kyoto",
+            "cuisine": "Japanese curry",
+            "checkedAt": "2026-10-15",
+            "imageNote": "Official Curry Shop Family logo supplied with the BOOKHOME tenant announcement; brand artwork, not a completed venue or menu photograph.",
+            "priceRange": "",
+            "regionSlug": "kyoto",
+            "websiteUrl": "https://book-home.jp/",
+            "description": "A separately operated japanese curry venue announced for BOOKHOME’s December 4 public opening.",
+            "imageCredit": "合同会社R meet / BOOKHOME",
+            "recognition": "",
+            "neighborhood": "Karasuma Oike",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
+            "openingConfirmed": true
           },
           "details": {
-            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#curry-family",
             "name": "Curry Shop Family — BOOKHOME",
+            "phone": null,
             "checkedAt": "2026-10-15",
             "websiteUrl": "https://book-home.jp/",
-            "phone": null,
             "openingHours": [
               {
                 "days": "Tenant service hours",
                 "hours": "Not yet published; facility hours do not establish restaurant hours"
               }
             ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#curry-family",
             "detailsSourceUrl": "https://book-home.jp/",
             "additionalSources": [
               {
-                "label": "Research evidence",
-                "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html"
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://note.com/infobh/n/nb2eead21471c"
+                "url": "https://note.com/infobh/n/nb2eead21471c",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://www.projectdesign.jp/articles/news/8f52a990-35f5-4409-8f8e-e63c7b4e76c6"
+                "url": "https://www.projectdesign.jp/articles/news/8f52a990-35f5-4409-8f8e-e63c7b4e76c6",
+                "label": "Research evidence"
               }
             ]
           },
-          "tile": {
-            "regionSlug": "kyoto",
-            "kind": "opening",
-            "slug": "curry-family-bookhome",
-            "name": "Curry Shop Family — BOOKHOME",
-            "neighborhood": "Karasuma Oike",
-            "cuisine": "Japanese curry",
-            "description": "A separately operated japanese curry venue announced for BOOKHOME’s December 4 public opening.",
-            "address": "1F Wings Kyoto / BOOKHOME, 262 Misayama-cho, Higashinotoin-dori Rokkaku-sagaru, Nakagyo-ku, Kyoto",
-            "websiteUrl": "https://book-home.jp/",
-            "checkedAt": "2026-10-15",
-            "recognition": "",
-            "priceRange": "",
-            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/bookhome-planned-0-1fce53c58fc85036.webp",
-            "imageCredit": "大垣書店 / BOOKHOME",
-            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
-            "imageNote": "Planned BOOKHOME common-area rendering supplied by the landlord. This shows the shared host facility, not a completed restaurant or the individual tenant counter.",
-            "openingConfirmed": true,
-            "day": "2026-12-04"
-          }
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#curry-family"
         },
         "enabled": true
       },
       "photos": [
         {
-          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/bookhome-planned-0-1fce53c58fc85036.webp",
-          "sha256": "1fce53c58fc850367a4db06f4d94ffde3df698311f912d09909987a9dd5aefb7",
-          "width": 1600,
-          "height": 967,
-          "credit": "大垣書店 / BOOKHOME",
-          "note": "Planned BOOKHOME common-area rendering supplied by the landlord. This shows the shared host facility, not a completed restaurant or the individual tenant counter.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/curry-family-bookhome-0-3ca4a5e4262902a2.webp",
+          "sha256": "3ca4a5e4262902a2314855929d4e20200cf669daf75f01f2bf72947a428b391b",
+          "width": 1500,
+          "height": 1000,
+          "credit": "合同会社R meet / BOOKHOME",
+          "note": "Official Curry Shop Family logo supplied with the BOOKHOME tenant announcement; brand artwork, not a completed venue or menu photograph.",
           "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html"
         }
       ]
@@ -555,96 +555,97 @@
       },
       "content": {
         "profile": {
-          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#okazu-kirin",
           "menu": {
-            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#okazu-kirin",
             "name": "Okazuya Kirin — BOOKHOME",
-            "checkedAt": "2026-10-15",
             "menus": [
               {
-                "label": "Announced BOOKHOME launch offering",
                 "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
-                "currency": "JPY",
-                "coverage": "sample",
+                "note": "Landlord September 9 release and October 8 official BOOKHOME note confirm December 4, 2026; current main site says early December without retracting that day. Host facility’s proposed 08:00–23:00 hours and pass prices are not the tenant’s service hours or a food discount. Shared common-area rendering accurately labelled; completed tenant gallery and exact branch dish/price roster remain unpublished. No other-branch menu, food photo or promotion borrowed. Deep checked landlord, current BOOKHOME site and official note/news, plus exact tenant/operator searches. No December monthly menu, exact branch-linked PDF, ordering page or verified tenant gallery found. Kamigamo Kirin and similarly named restaurants are not established as this operator and are excluded. Landlord says evening drinks with obanzai, but beverage names, prices and branch service hours are unpublished.",
                 "items": [
                   {
                     "name": "Daily bento",
-                    "priceLabel": "Price not published",
-                    "note": "Monthly changing menu announced, actual December dishes not yet published"
+                    "note": "Monthly changing menu announced, actual December dishes not yet published",
+                    "priceLabel": "Price not published"
                   },
                   {
                     "name": "Obanzai",
-                    "priceLabel": "Price not published",
-                    "note": "Specific side dishes and prices not yet published"
+                    "note": "Specific side dishes and prices not yet published",
+                    "priceLabel": "Price not published"
                   }
                 ],
-                "note": "Landlord September 9 release and October 8 official BOOKHOME note confirm December 4, 2026; current main site says early December without retracting that day. Host facility’s proposed 08:00–23:00 hours and pass prices are not the tenant’s service hours or a food discount. Shared common-area rendering accurately labelled; completed tenant gallery and exact branch dish/price roster remain unpublished. No other-branch menu, food photo or promotion borrowed. Deep checked landlord, current BOOKHOME site and official note/news, plus exact tenant/operator searches. No December monthly menu, exact branch-linked PDF, ordering page or verified tenant gallery found. Kamigamo Kirin and similarly named restaurants are not established as this operator and are excluded. Landlord says evening drinks with obanzai, but beverage names, prices and branch service hours are unpublished."
+                "label": "Announced BOOKHOME launch offering",
+                "coverage": "sample",
+                "currency": "JPY"
               }
             ],
-            "specials": []
+            "specials": [],
+            "checkedAt": "2026-10-15",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#okazu-kirin"
+          },
+          "tile": {
+            "day": "2026-12-04",
+            "kind": "opening",
+            "name": "Okazuya Kirin — BOOKHOME",
+            "slug": "okazu-kirin-bookhome",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/okazu-kirin-bookhome-0-2b497935173fd244.webp",
+            "address": "1F Wings Kyoto / BOOKHOME, 262 Misayama-cho, Higashinotoin-dori Rokkaku-sagaru, Nakagyo-ku, Kyoto",
+            "cuisine": "Bento / obanzai",
+            "checkedAt": "2026-10-15",
+            "imageNote": "Official Okazuya Kirin logo supplied with the BOOKHOME tenant announcement; brand artwork, not a completed venue or menu photograph.",
+            "priceRange": "",
+            "regionSlug": "kyoto",
+            "websiteUrl": "https://book-home.jp/",
+            "description": "A separately operated bento / obanzai venue announced for BOOKHOME’s December 4 public opening.",
+            "imageCredit": "株式会社コメミノル / BOOKHOME",
+            "recognition": "",
+            "neighborhood": "Karasuma Oike",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
+            "openingConfirmed": true
           },
           "details": {
-            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#okazu-kirin",
             "name": "Okazuya Kirin — BOOKHOME",
+            "phone": null,
             "checkedAt": "2026-10-15",
             "websiteUrl": "https://book-home.jp/",
-            "phone": null,
             "openingHours": [
               {
                 "days": "Tenant service hours",
                 "hours": "Not yet published; facility hours do not establish restaurant hours"
               }
             ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#okazu-kirin",
             "detailsSourceUrl": "https://book-home.jp/",
             "additionalSources": [
               {
-                "label": "Research evidence",
-                "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html"
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://note.com/infobh/n/nb2eead21471c"
+                "url": "https://note.com/infobh/n/nb2eead21471c",
+                "label": "Research evidence"
               },
               {
-                "label": "Research evidence",
-                "url": "https://www.projectdesign.jp/articles/news/8f52a990-35f5-4409-8f8e-e63c7b4e76c6"
+                "url": "https://www.projectdesign.jp/articles/news/8f52a990-35f5-4409-8f8e-e63c7b4e76c6",
+                "label": "Research evidence"
               }
             ]
           },
-          "tile": {
-            "regionSlug": "kyoto",
-            "kind": "opening",
-            "slug": "okazu-kirin-bookhome",
-            "name": "Okazuya Kirin — BOOKHOME",
-            "neighborhood": "Karasuma Oike",
-            "cuisine": "Bento / obanzai",
-            "description": "A separately operated bento / obanzai venue announced for BOOKHOME’s December 4 public opening.",
-            "address": "1F Wings Kyoto / BOOKHOME, 262 Misayama-cho, Higashinotoin-dori Rokkaku-sagaru, Nakagyo-ku, Kyoto",
-            "websiteUrl": "https://book-home.jp/",
-            "checkedAt": "2026-10-15",
-            "recognition": "",
-            "priceRange": "",
-            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/bookhome-planned-0-1fce53c58fc85036.webp",
-            "imageCredit": "大垣書店 / BOOKHOME",
-            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html",
-            "imageNote": "Planned BOOKHOME common-area rendering supplied by the landlord. This shows the shared host facility, not a completed restaurant or the individual tenant counter.",
-            "openingConfirmed": true,
-            "day": "2026-12-04"
-          }
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#okazu-kirin"
         },
         "enabled": true
       },
       "photos": [
         {
-          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/bookhome-planned-0-1fce53c58fc85036.webp",
-          "sha256": "1fce53c58fc850367a4db06f4d94ffde3df698311f912d09909987a9dd5aefb7",
-          "width": 1600,
-          "height": 967,
-          "credit": "大垣書店 / BOOKHOME",
-          "note": "Planned BOOKHOME common-area rendering supplied by the landlord. This shows the shared host facility, not a completed restaurant or the individual tenant counter.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/okazu-kirin-bookhome-0-2b497935173fd244.webp",
+          "sha256": "2b497935173fd24450f4225f917f33fecea97221c14b778ffd91c33c662303e4",
+          "width": 1500,
+          "height": 1000,
+          "credit": "株式会社コメミノル / BOOKHOME",
+          "note": "Official Okazuya Kirin logo supplied with the BOOKHOME tenant announcement; brand artwork, not a completed venue or menu photograph.",
           "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html"
         }
       ]
     }
-  ]
+  ],
+  "thumbnailCorrection": "Shared BOOKHOME rendering replaced with four distinct official artwork assets: three tenant brand logos supplied in landlord announcement and Kyoto-specific OrySNACK campaign poster. Images labelled as artwork, not completed venue photos; source credits retained. 64 current gallery links /32 unique Azure images."
 }

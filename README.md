@@ -346,9 +346,6 @@ Should show top competition and and benchmarks
 https://www.chronopin.com/pin/4802/gpt-6-astra-released
 
 
-create this Trade deficit pin series if not already created
-https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html
-
 
 
 https://www.maranellosd.com/menu
@@ -364,7 +361,7 @@ add button on landing page to suggest a product or restaurant to add to list. sh
 add restaurant landing page for all major cities around the world
 
 
-https://www.chronopin.com/pin/6939/africola-adelaide-restaurant-guide
+
 
 
 
@@ -401,8 +398,6 @@ open the browser and walk me through signing up aliyun.com
 WeChat Pay
 Alipay
 
-add ad for turning off ad
-
 
 stripe payment reocurring payment disable monthly ads
 
@@ -425,3 +420,4 @@ tesla + batteries storage
 
 pin top music ranking per year landing page group by continent and then by country
 
+comodity prices every month pin and thread using prediction and realization and reasoning

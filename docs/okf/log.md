@@ -1,5 +1,10 @@
 # Update Log
 
+## 2026-10-15
+
+* **Update:** Landing page cards must link to native pin detail pages (owner instruction). Every entity, venue, and special offer featured on landing pages (across Coming soon, Just opened, Top restaurants, and Specials tabs) must be backed by a database `Pin` row whose `/pin/[id]/[slug]` detail page opens when clicking its title or photo card. Backfilled 1,141 missing special venue pins (`scripts/restaurants/seedSpecialPins.ts`), updated `regionalRestaurantOffers` and special mapping to resolve `pinPath(pin)` as `restaurantHref`, updated `RestaurantOfferCard` to link titles and images directly to `/pin/[id]/[slug]`, and recorded requirements in `AGENTS.md`, [strategy](scraping/strategy.md), [restaurant scraping](../restaurant-scraping.md), and [learnings](scraping/learnings.md).
+* **Update:** 6am and 6pm news job updated to scrape prediction markets for interesting events and create predicted pins out of them (owner instruction). `prediction_markets` surfaces `interesting` candidates (high-volume and trending books across politics, tech/AI, space, macroeconomics, sports championships and culture) alongside `thisWeek` and `newlyListed`, with single-game noise filtered out. Pins created from prediction forecasts carry the `Predicted` tag, `dateConfidence: 'estimated'` dated to event onset, quoted volume/odds with observation date, and join parent threads via `parentId`. Updated in `src/server/jobs/markets.ts`, `src/server/jobs/tools.ts`, `src/lib/dailyJobs.ts`, `AGENTS.md`, and [daily jobs](scraping/daily-jobs.md).
+
 ## 2026-10-14
 
 * **Update:** Completed 5,085 production pin translations across 339 pins and all 15 non-English locales, including three pins edited during the run. Filled 4,935 missing translations and refreshed 150 outdated ones; saved through the admin API with source hashes. [Learnings](scraping/learnings.md#2026-10-14---production-pin-translations-all-languages) records validation, brand corrections and the final coverage check.

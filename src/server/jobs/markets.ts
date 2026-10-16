@@ -232,7 +232,16 @@ export function foldStories(events: Json[]): { event: Json; related: string[] }[
   return kept.map(({ event, related }) => ({ event, related }));
 }
 
-const polymarketNoise = (event: Json) => ((event.tags ?? []) as Json[]).some((t) => POLYMARKET_NOISE_TAGS.has(String(t.slug)));
+const SINGLE_GAME_PATTERN = /\b(vs\.?| v | -vs- )\b/i;
+const CHAMPIONSHIP_PATTERN = /championship|super bowl|finals?|world series|cup final|grand slam/i;
+
+const isSingleRegularGame = (event: Json) => {
+  const title = String(event.title ?? '');
+  return SINGLE_GAME_PATTERN.test(title) && !CHAMPIONSHIP_PATTERN.test(title);
+};
+
+export const polymarketNoise = (event: Json) =>
+  ((event.tags ?? []) as Json[]).some((t) => POLYMARKET_NOISE_TAGS.has(String(t.slug))) || isSingleRegularGame(event);
 
 async function polymarketEvents(query: string): Promise<Json[]> {
   const events: Json[] = [];
@@ -249,6 +258,8 @@ async function polymarketEvents(query: string): Promise<Json[]> {
 export type MarketScan = {
   window: { from: string; to: string; newSince: string };
   read: { kalshiEvents: number; polymarketEvents: number };
+  // Top interesting/high-volume events being predicted across prediction markets, biggest book first.
+  interesting: MarketCandidate[];
   // Resolving in the window, biggest book first.
   thisWeek: MarketCandidate[];
   // Listed since newSince and resolving later, biggest book first.
@@ -279,7 +290,7 @@ export async function marketCandidates({ days = 7, since = null as Date | null, 
       },
     ),
   ]);
-  const [polyWeek, polyNew] = await Promise.all([
+  const [polyWeek, polyNew, polyTopVol, polyTop24h] = await Promise.all([
     polymarketEvents(`end_date_min=${now.toISOString()}&end_date_max=${to.toISOString()}`).catch((err) => {
       problems.push(`Polymarket week: ${(err as Error).message}`);
       return [] as Json[];
@@ -288,7 +299,21 @@ export async function marketCandidates({ days = 7, since = null as Date | null, 
       problems.push(`Polymarket new: ${(err as Error).message}`);
       return [] as Json[];
     }),
+    polymarketEvents('order=volume&ascending=false&limit=60').catch((err) => {
+      problems.push(`Polymarket top volume: ${(err as Error).message}`);
+      return [] as Json[];
+    }),
+    polymarketEvents('order=volume24hr&ascending=false&limit=60').catch((err) => {
+      problems.push(`Polymarket top 24h: ${(err as Error).message}`);
+      return [] as Json[];
+    }),
   ]);
+
+  const polyInterestingMap = new Map<string, Json>();
+  for (const e of [...polyTopVol, ...polyTop24h]) {
+    if (!polyInterestingMap.has(e.slug)) polyInterestingMap.set(e.slug, e);
+  }
+  const polyInteresting = [...polyInterestingMap.values()];
 
   // Kalshi's titles and odds cost a read each, so only the biggest few are read.
   const kalshiTop = async (events: KalshiEvent[]) => {
@@ -309,10 +334,19 @@ export async function marketCandidates({ days = 7, since = null as Date | null, 
   const thisWeek = rank([...(await kalshiTop(kalshiWeek)), ...polyTop(polyWeek)]);
   const seen = new Set(thisWeek.map((c) => c.url));
   const newlyListed = rank([...(await kalshiTop(kalshiNew)), ...polyTop(polyNew)].filter((c) => !seen.has(c.url)));
+  for (const c of newlyListed) seen.add(c.url);
+
+  // Top interesting events across prediction markets: major books and trending predictions
+  const interesting = rank([
+    ...(await kalshiTop([...kalshiWeek, ...kalshiNew])),
+    ...polyTop(polyInteresting),
+  ]);
+
   if (problems.length) log.warn(`prediction markets scan: ${problems.join('; ')}`);
   return {
     window: { from: now.toISOString(), to: to.toISOString(), newSince: newSince.toISOString() },
-    read: { kalshiEvents: kalshiWeek.length + kalshiNew.length, polymarketEvents: polyWeek.length + polyNew.length },
+    read: { kalshiEvents: kalshiWeek.length + kalshiNew.length, polymarketEvents: polyWeek.length + polyNew.length + polyInteresting.length },
+    interesting,
     thisWeek,
     newlyListed,
     problems,

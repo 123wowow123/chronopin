@@ -36,6 +36,8 @@ For every China city guide, aim for at least **35 distinct restaurants in each t
 
 For every Japan city guide, aim for at least **30 distinct restaurants in each tab**: Coming soon, Just opened, Top restaurants, and Specials. This is a research/replenishment target, not a display cap or a reason to relax eligibility. Count each restaurant once per tab, including restaurants with multiple specials. Continue researching and replenishing sections below 30; record each shortage, sources checked and specific unresolved research gaps in the guide notes.
 
+All landing page cards across every tab (Coming soon, Just opened, Top restaurants, Specials) must have a backing pin detail page pin. Clicking on the title and image must always take the user to the native pin detail page (`/pin/[id]/[slug]`), never directly to an external website. Always seed or link corresponding database `Pin` records for all venues and specials.
+
 ## Restaurant menu research
 
 Save ongoing menu, visit-detail and landing-page tile edits through the database management APIs: `/api/admin/restaurant-content` for ordinary content and `/api/admin/restaurant-specials` for offers and their menus. Bundled JSON catalogs are import/research snapshots; do not require a deployment for content updates once the runtime content API is installed. Preserve source evidence and photo credits, and verify the affected pin and landing page after saving. See docs/okf/api/restaurant-content.md.
@@ -49,4 +51,13 @@ For every consumable food, snack, or beverage product pin (including regional sn
 ## Vehicle and car performance rubrics and reviews
 
 For vehicle performance rubric pins (both electric and gasoline car performance radars: `PinCarPerf` and `PinGasCarPerf`), always aim to have at least **3 verified independent reviews** (up to 6, from credible road testers such as Car and Driver, MotorTrend, Top Gear, Evo, Autocar, etc.). Each review must have an opened HTTPS URL, exact article title, ISO publishedDate (`YYYY-MM-DD`), and a verbatim quote (up to 300 characters) describing the vehicle's driving dynamics, steering, acceleration, or handling. Save updates across both local and production environments via their respective API endpoints (`/api/pins/:id/car-performance` and `/api/pins/:id/gas-car-performance`), and keep scripts and JSON catalogs synchronized.
+
+## Restaurant dining rubrics and reviews
+
+For every restaurant dining rubric pin (`PinDining`), always generate its full 5-axis dining rubric (Food, Service, Ambience, Value, Critic acclaim; each 0-5 in half steps or null when unpublished) and at least **3 verified independent reviews** (up to 6, from credible dining critics, guides, or local publications such as Gourmet Traveller, Broadsheet, Time Out, The Infatuation, MICHELIN Guide, The New York Times, Eater, etc.). Each review must have an opened HTTPS URL, exact article title, ISO publishedDate (`YYYY-MM-DD` or null), and a verbatim quote (up to 300 characters) describing the cooking, service, or dining room atmosphere. Save updates across both local and production environments via `PUT /api/pins/:id/dining`, back each cited scoring source with references and source wikis, and keep `scripts/restaurants/diningRubric.json` synchronized.
+
+## Prediction market predicted pins
+
+For the 6am and 6pm job (06:00 and 18:00 America/Los_Angeles news job), scrape for interesting events that prediction markets (Polymarket, Kalshi) have and create predicted pins out of them (owner instruction, 2026-10-15). Cover top interesting and high-volume prediction market events across politics, technology/AI, space, macroeconomics, sports championships and culture, in addition to immediate weekly resolutions. Tag every created pin with `Predicted`, set `dateConfidence: 'estimated'` dated to the predicted event onset (never the market closing/settlement buffer), quote the dollar volume and odds with the observation date, and thread to candidate parent pins (`parentId`) whenever an earlier event in the series, flight test program, election cycle or franchise exists.
+
 

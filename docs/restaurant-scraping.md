@@ -22,6 +22,12 @@ behavior.
    fragments. Different restaurants in one roundup need distinct anchors.
 4. Check redirects. A former restaurant domain that now leads to unrelated
    content must not become its website link.
+5. Every restaurant or venue presented on a guide or landing page—including
+   Coming soon, Just opened, Top restaurants, and Specials (both catalog restaurants
+   and supplemental special venues)—must be backed by a native database `Pin`
+   record. Clicking the card's title or photo must always navigate to its
+   pin detail page (`/pin/[id]/[slug]`), never directly to an external website
+   or an unlinked card.
 
 ## Follow links before marking information missing
 
@@ -217,12 +223,25 @@ check dates in any reused seed summaries with the new batch's verification date.
   pane, empty-menu behavior, booking button destination, menu tabs, filters,
   images, and map results. Verify the same dollar tier on guide cards,
   landing-page pin cards, and pin detail pages; unverified tiers stay hidden.
+  Verify that clicking the title and image of every landing-page card navigates
+  to its `/pin/[id]/[slug]` detail page rather than an external link.
 - Use `npm run restaurants:seed` for **new regional pins** in the intended
   database. It inserts missing source URLs and skips existing or deleted pins;
   it does not refresh existing pins' descriptions, photos, dates, or references.
-  Review updates to existing pins separately. JSON contact/menu updates require
-  deploying the matching application changes; asset updates require the files
-  too. Local seeding does not update production.
+  For supplemental special venues not in the regional catalog, use
+  `npm run restaurants:special-pins` (`scripts/restaurants/seedSpecialPins.ts`)
+  to ensure all special cards have backing database pins. Review updates to
+  existing pins separately. JSON contact/menu updates require deploying the
+  matching application changes; asset updates require the files too. Local
+  seeding does not update production.
+
+## Landing page cards must link to pin detail pages
+
+Every restaurant and venue shown on a landing page—including Coming soon, Just opened, Top restaurants, and Specials (both catalog restaurants and supplemental special venues)—must have an underlying `Pin` record in the database.
+
+Clicking the card's title and photo must always navigate to the native `/pin/[id]/[slug]` detail page, not to an external operator site. External operator links, reservation services, and menu URLs belong on the pin detail page ("Plan your visit" panel and action buttons), not as the primary destination of the landing-page card.
+
+When adding or scraping restaurant specials, ensure that all venues in `RestaurantSpecialVenue` have corresponding database pins created or seeded (using `npm run restaurants:special-pins` or through `restaurantSeed.ts`). Seeding matches venues by `sourceUrl` and ensures that `regionalRestaurantOffers` and special map queries resolve `pinPath(pin)` as `restaurantHref`, so the offer card renders both photo and title links directly to `/pin/[id]/[slug]`.
 
 ## Backfill images on existing restaurant pins
 

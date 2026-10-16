@@ -3,22 +3,33 @@ import { restaurantSourceKey, type RestaurantMenuProfile } from '@/lib/restauran
 import { isRestaurantPromotion, type RestaurantOffer } from '@/lib/restaurantOffers';
 import type { Restaurant, TopRestaurant } from '@/lib/restaurants';
 import { pinPath } from '@/lib/seo';
+import Pin from '@/server/model/pin';
 import { listSpecialVenues, type RestaurantSpecialVenue } from '@/server/model/restaurantSpecialVenue';
 import { hasKidsMenu } from './restaurantGuideDetails';
 
 type SpecialVenue = RestaurantMenuProfile & { regionSlug: string; neighborhood: string; address: string; websiteUrl: string };
 
 export async function regionalRestaurantOffers(restaurants: Restaurant[], topRestaurants: TopRestaurant[], today: string, regionSlug?: string): Promise<RestaurantOffer[]> {
-  return buildRestaurantOffers(restaurants, topRestaurants, today, regionSlug, await listSpecialVenues());
+  const records = await listSpecialVenues();
+  const supplementalSources = records.filter((record) => record.enabled && (!regionSlug || record.regionSlug === regionSlug)).map((record) => record.profile.pinSourceUrl).filter(Boolean);
+  const pinsBySource = await Pin.findBySourceUrls(supplementalSources);
+  return buildRestaurantOffers(restaurants, topRestaurants, today, regionSlug, records, pinsBySource);
 }
 
-export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants: TopRestaurant[], today: string, regionSlug: string | undefined, records: RestaurantSpecialVenue[]): RestaurantOffer[] {
+export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants: TopRestaurant[], today: string, regionSlug: string | undefined, records: RestaurantSpecialVenue[], pinsBySource?: Map<string, { id: number; title: string }>): RestaurantOffer[] {
   const profiles = records.filter((record) => record.enabled);
   const supplemental = profiles.filter((record) => record.regionSlug === regionSlug).map((record) => ({ ...record.profile, regionSlug: record.regionSlug })) as SpecialVenue[];
   const venues = [
     ...restaurants.filter((restaurant) => restaurant.confirmed && restaurant.day <= today).map((restaurant) => ({ ...restaurant, href: pinPath(restaurant) })),
     ...topRestaurants.map((restaurant) => ({ ...restaurant, href: pinPath({ id: restaurant.pinId, title: restaurant.pinTitle }) })),
-    ...supplemental.map((venue) => ({ ...venue, sourceUrl: venue.pinSourceUrl, href: venue.websiteUrl })),
+    ...supplemental.map((venue) => {
+      const pin = pinsBySource?.get(venue.pinSourceUrl) ?? (pinsBySource ? [...pinsBySource.entries()].find(([k]) => restaurantSourceKey(k) === restaurantSourceKey(venue.pinSourceUrl))?.[1] : undefined);
+      return {
+        ...venue,
+        sourceUrl: venue.pinSourceUrl,
+        href: pin ? pinPath(pin) : venue.websiteUrl,
+      };
+    }),
   ];
   const seen = new Set<string>();
   return venues.flatMap((venue) => {

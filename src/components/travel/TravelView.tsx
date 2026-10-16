@@ -71,6 +71,41 @@ export function TravelView({
   const [locating, setLocating] = useState(false);
   const [locationError, setLocationError] = useState('');
   const locationRequestId = useRef(0);
+  const shelfNavRef = useRef<HTMLElement>(null);
+
+  // Allow horizontal scrolling via mouse wheel when shelf tabs overflow
+  useEffect(() => {
+    const nav = shelfNavRef.current;
+    if (!nav) return;
+    const onWheel = (event: WheelEvent) => {
+      if (nav.scrollWidth <= nav.clientWidth || Math.abs(event.deltaX) >= Math.abs(event.deltaY)) return;
+      event.preventDefault();
+      nav.scrollLeft += event.deltaY;
+    };
+    nav.addEventListener('wheel', onWheel, { passive: false });
+    return () => nav.removeEventListener('wheel', onWheel);
+  }, []);
+
+  // Reveal selected shelf tab if it's partially or fully outside the visible area
+  useEffect(() => {
+    const revealSelected = () => {
+      const nav = shelfNavRef.current;
+      const selected = nav?.querySelector<HTMLElement>('[aria-current="location"]');
+      if (nav && selected) {
+        const left = selected.offsetLeft;
+        const right = left + selected.offsetWidth;
+        if (left < nav.scrollLeft || right > nav.scrollLeft + nav.clientWidth) {
+          nav.scrollTo({
+            left: Math.max(0, left - (nav.clientWidth - selected.offsetWidth) / 2),
+            behavior: 'smooth',
+          });
+        }
+      }
+    };
+    revealSelected();
+    window.addEventListener('resize', revealSelected);
+    return () => window.removeEventListener('resize', revealSelected);
+  }, [activeShelfId]);
 
   useEffect(() => {
     const pending = locationRequestId;
@@ -411,13 +446,17 @@ export function TravelView({
               </div>
             </div>
 
-            <div className={styles.filters}>
-              <nav className={styles.statusFilters} aria-label="Resort collections">
+            <div className={`${styles.filters} min-w-0 max-w-full overflow-hidden`}>
+              <nav
+                ref={shelfNavRef}
+                className={`${styles.statusFilters} flex min-w-0 max-w-full flex-nowrap items-center gap-1.5 overflow-x-auto py-1 border-b-0 [overscroll-behavior-x:contain] [scrollbar-width:thin]`}
+                aria-label="Resort collections"
+              >
                 <button
                   type="button"
                   onClick={() => setActiveShelfId('all')}
                   aria-current={activeShelfId === 'all' ? 'location' : undefined}
-                  className={`rounded px-3 py-2 text-xs font-semibold ${
+                  className={`shrink-0 rounded px-3 py-2 text-xs font-semibold whitespace-nowrap transition-colors ${
                     activeShelfId === 'all'
                       ? 'bg-[var(--text,#263c32)] text-[var(--paper,#f6f3eb)]'
                       : 'text-[var(--soft,#627069)] hover:bg-[var(--rule,#d8dcd0)]'
@@ -431,7 +470,7 @@ export function TravelView({
                     type="button"
                     onClick={() => setActiveShelfId(shelf.id)}
                     aria-current={activeShelfId === shelf.id ? 'location' : undefined}
-                    className={`rounded px-3 py-2 text-xs font-semibold ${
+                    className={`shrink-0 rounded px-3 py-2 text-xs font-semibold whitespace-nowrap transition-colors ${
                       activeShelfId === shelf.id
                         ? 'bg-[var(--text,#263c32)] text-[var(--paper,#f6f3eb)]'
                         : 'text-[var(--soft,#627069)] hover:bg-[var(--rule,#d8dcd0)]'

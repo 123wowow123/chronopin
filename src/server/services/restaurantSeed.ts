@@ -125,6 +125,68 @@ export async function seedRestaurants(options: { regions?: string[]; userId?: nu
       const rows = await query(`INSERT INTO "RestaurantSpecialVenue" ("sourceKey", "regionSlug", "profile", "enabled", "userId")
         VALUES ($1, $2, $3::jsonb, $4, $5) ON CONFLICT ("sourceKey") DO NOTHING RETURNING "id"`, [specialVenueSourceKey(input), input.regionSlug, JSON.stringify(input.profile), input.enabled, user.id]);
       venuesAdded += rows.length;
+      const p = input.profile;
+      const [existingPin] = await query<{ id: number }>(
+        `SELECT "id" FROM "Pin" WHERE regexp_replace(btrim("sourceUrl"), '^https?://', '', 'i') = regexp_replace(btrim($1), '^https?://', '', 'i') AND "utcDeletedDateTime" IS NULL LIMIT 1`,
+        [p.pinSourceUrl]
+      );
+      if (!existingPin) {
+        const region = RESTAURANT_REGIONS.find((r) => r.slug === input.regionSlug);
+        const regionName = region?.name ?? input.regionSlug ?? '';
+        const [company] = await query<{ id: number }>(
+          `INSERT INTO "Company" ("name") VALUES ($1) ON CONFLICT ("name") DO UPDATE SET "name" = "Company"."name" RETURNING "id"`,
+          [p.name]
+        );
+        const title = `${p.name} — ${regionName} restaurant guide`;
+        const specialsDesc = p.specials?.map((s) => [s.title, s.description].filter(Boolean).join(': ')).filter(Boolean).join(' · ') ?? '';
+        const description = specialsDesc || `${p.name} in ${p.neighborhood ?? ''}, ${regionName}.`;
+        const summary = `<p>${escapeHtml(p.name)} in ${escapeHtml(p.neighborhood ?? '')}.<cite data-ref="${escapeHtml(p.websiteUrl || p.pinSourceUrl)}"></cite></p>`
+          + (p.photo?.credit ? `<p>${escapeHtml(p.photo.credit)}.</p>` : '');
+
+        const [pin] = await query<{ id: number }>(
+          `INSERT INTO "Pin" ("title", "description", "sourceUrl", "longFormSummary", "address", "location", "companyId", "productName", "dateConfidence", "dateConfidenceReasoning", "utcStartDateTime", "allDay", "userId")
+           VALUES ($1, $2, $3, $4, $5, CASE WHEN $6::float8 IS NULL OR $7::float8 IS NULL THEN NULL ELSE ST_SetSRID(ST_MakePoint($7, $6), 4326)::geography END, $8, $9, $10, $11, $12, true, $13) RETURNING "id"`,
+          [
+            title,
+            description,
+            p.pinSourceUrl,
+            summary,
+            p.address ?? '',
+            p.location?.latitude ?? null,
+            p.location?.longitude ?? null,
+            company.id,
+            p.name,
+            'confirmed',
+            'Verified restaurant guide profile.',
+            `${p.checkedAt || '2026-10-07'}T00:00:00Z`,
+            user.id,
+          ]
+        );
+        const tags = [p.neighborhood, regionName, 'Restaurant', 'Food'].filter(Boolean);
+        await query(
+          `INSERT INTO "PinTag" ("pinId", "name", "kind", "source") SELECT $1, name, CASE WHEN name = 'Food' THEN 'category' ELSE 'topic' END, 'user' FROM unnest($2::citext[]) AS name`,
+          [pin.id, [...new Set(tags)]]
+        );
+        await query(
+          `INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "reasoning") VALUES ($1, $2, $3, 90, $4)`,
+          [pin.id, p.websiteUrl || p.pinSourceUrl, `${p.name} official website`, 'Verified restaurant guide profile.']
+        );
+        if (p.review?.score && p.review?.provider) {
+          await query(
+            `INSERT INTO "PinRating" ("pinId", "score", "scoreMax", "source", "url") VALUES ($1, $2, 5, $3, $4)`,
+            [pin.id, p.review.score, p.review.provider, p.review.sourceUrl]
+          );
+        }
+        if (p.photo?.src) {
+          const [medium] = await query<{ id: number }>(
+            `INSERT INTO "Medium" ("type", "thumbName", "thumbWidth", "thumbHeight", "originalUrl", "originalWidth", "originalHeight", "authorName", "authorUrl")
+             VALUES ('1', $1, 1200, 800, $1, 1200, 800, $2, $3) RETURNING "id"`,
+            [p.photo.src, p.photo.credit, p.photo.sourceUrl || p.websiteUrl]
+          );
+          await query(`INSERT INTO "PinMedium" ("pinId", "mediumId") VALUES ($1, $2)`, [pin.id, medium.id]);
+        }
+        pinsAdded.push({ id: pin.id, title });
+      }
     }
     return { dryRun, pinsAdded, pinsWouldAdd: [], mediaAttached, venuesAdded, venuesValidated: specialInputs.length };
   });

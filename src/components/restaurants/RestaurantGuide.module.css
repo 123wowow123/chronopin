@@ -110,8 +110,12 @@
 .browseHeading .eyebrow { margin:0 0 11px; }
 .browseHeading h2 { font-family:Georgia,serif; font-size:32px; font-weight:400; line-height:1.2; letter-spacing:-.8px; }
 .browseHeading>span { color:var(--soft); font-size:11px; padding-bottom:3px; }
-.filters { display:flex; justify-content:space-between; align-items:center; gap:16px; padding-block:18px; border-block:1px solid var(--rule); }
-.statusFilters { display:flex; flex-wrap:wrap; gap:5px; flex-shrink:0; }
+.filters { display:flex; justify-content:space-between; align-items:center; gap:16px; padding-block:18px; border-block:1px solid var(--rule); min-width:0; max-width:100%; }
+.statusFilters { display:flex; flex-wrap:nowrap; gap:5px; min-width:0; max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch; scrollbar-width:thin; scrollbar-color:var(--rule) transparent; }
+.statusFilters::-webkit-scrollbar { height:4px; }
+.statusFilters::-webkit-scrollbar-track { background:transparent; }
+.statusFilters::-webkit-scrollbar-thumb { background:var(--rule); border-radius:4px; }
+.statusFilters a, .statusFilters button { flex-shrink:0; white-space:nowrap; }
 .mobileViewLabel { display:none; }
 .viewCount { margin-left:6px; }
 .viewCount>span { margin-right:6px; }
@@ -119,7 +123,7 @@
 .statusFilters a[aria-current='location'] { background:var(--text); color:var(--paper); }
 .statusFilters a:hover { background:var(--rule); color:var(--text); }
 .statusFilters a[aria-current='location']:hover { background:var(--green); color:var(--paper); }
-.filterFields { display:flex; gap:12px; align-items:center; }
+.filterFields { display:flex; gap:12px; align-items:center; flex-shrink:0; }
 .neighborhoodField { position:relative; }
 .selectChevron { position:absolute; inset-inline-end:12px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--soft); pointer-events:none; }
 .filterFields select { appearance:none; max-width:185px; font-size:11px; padding-block:10px; padding-inline:12px 36px; color:var(--text); background:var(--paper-raised); border:1px solid var(--rule); border-radius:4px; cursor:pointer; }
