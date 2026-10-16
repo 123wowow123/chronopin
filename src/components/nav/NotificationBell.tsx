@@ -487,14 +487,26 @@ function LocalWeatherRow({ className = '' }: { className?: string }) {
 // The weather beside the bell rather than over it: the conditions with the
 // degrees right under them, flush on one left edge. It stands next to the
 // bell, not on it, so the bell itself stays plain to read.
+function WeatherIcon({ name, loading, className }: { name: IconName; loading: boolean; className: string }) {
+  return (
+    <span aria-hidden className="relative inline-flex shrink-0">
+      <Icon name={name} className={className} />
+      {loading ? (
+        <span className="absolute -end-1 -bottom-1 size-2.5 animate-spin rounded-full border-2 border-current border-t-transparent bg-header motion-reduce:animate-none" />
+      ) : null}
+    </span>
+  );
+}
+
 function WeatherPeek({ className = '' }: { className?: string }) {
   const { weather } = useFormattedLocalWeather();
-  return weather ? (
-    <span aria-hidden className={`flex shrink-0 flex-col items-start gap-0.5 leading-none ${className}`} title={weather.summary}>
-      <Icon name={weather.icon} className="size-3.5 text-warning" />
-      {weather.now ? <span className="text-[10px] font-bold tabular-nums">{weather.now}</span> : null}
+  const t = useT();
+  return (
+    <span aria-hidden className={`flex shrink-0 flex-col items-start gap-0.5 leading-none ${className}`} title={weather?.summary ?? `${t('weather.local')} · ${t('common.loading')}`}>
+      <WeatherIcon name={weather?.icon ?? 'sun'} loading={!weather} className="size-3.5 text-warning" />
+      {weather?.now ? <span className="text-[10px] font-bold tabular-nums">{weather.now}</span> : null}
     </span>
-  ) : null;
+  );
 }
 
 function UnreadBadge({ count, className }: { count: number; className: string }) {
@@ -549,11 +561,11 @@ export function WeatherButton({ className = '' }: { className?: string }) {
         type="button"
         onClick={toggle}
         aria-expanded={open}
-        aria-label={weather ? weather.summary : t('weather.local')}
-        title={weather ? weather.summary : t('weather.local')}
+        aria-label={weather?.summary ?? `${t('weather.local')} · ${t('common.loading')}`}
+        title={weather?.summary ?? `${t('weather.local')} · ${t('common.loading')}`}
         className="flex flex-col items-center gap-0.5 rounded-lg px-1.5 py-1 text-muted hover:bg-raised hover:text-ink"
       >
-        <Icon name={weather ? weather.icon : 'sun'} className={`size-5 ${weather ? 'text-warning' : ''}`} />
+        <WeatherIcon name={weather?.icon ?? 'sun'} loading={!weather} className="size-5 text-warning" />
         {weather?.now ? <span className="text-[10px] leading-none font-medium">{weather.now}</span> : null}
       </button>
       {open ? (
