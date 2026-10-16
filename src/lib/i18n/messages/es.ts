@@ -1047,6 +1047,8 @@ const es: Messages = {
     updatedTitle: 'Actualizado en las últimas 24 horas: ver todos los pines actualizados desde ayer',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'Predicho',
+    predictedTitle: 'Predicho - tag:Predicted',
     partOfThread: 'Parte de un hilo',
     firstInThread: 'Primer pin de un hilo',
     showMore: 'ver más',
@@ -1182,6 +1184,7 @@ const es: Messages = {
   },
   reserved: {
     thread: 'Hilo',
+    predicted: 'Predicho',
     confirmed: 'Confirmado',
     scheduled: 'Programado',
     estimated: 'Estimado',

@@ -1,0 +1,2561 @@
+{
+  "checkedAt": "2026-10-15",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "osaka",
+    "nagoya",
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "and GALLERY — Fukuoka — Fukuoka restaurant guide",
+        "description": "An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.",
+        "sourceUrl": "https://and-gallery.com/#hukuoka",
+        "address": "1F LOVELESS COFFEE, 1-3-22 Omiya, Chuo-ku, Fukuoka",
+        "productName": "and GALLERY — Fukuoka",
+        "utcStartDateTime": "2026-10-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Yakuin",
+          "Collaboration café"
+        ],
+        "longFormSummary": "<p>An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000057.000117213.html\"></cite></p><p>Established restaurant. 2026-10-15 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://and-gallery.com/#hukuoka",
+            "title": "and GALLERY — Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html",
+            "title": "and GALLERY — Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://collabocafe.and-gallery.com/haikyu",
+            "title": "and GALLERY — Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://and-gallery.com/",
+            "title": "and GALLERY — Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://haikyu.jp/news/5931/",
+            "title": "and GALLERY — Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#hukuoka",
+          "menu": {
+            "pinSourceUrl": "https://and-gallery.com/#hukuoka",
+            "name": "and GALLERY — Fukuoka",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Haikyu!! collaboration food and drinks",
+                "url": "https://collabocafe.and-gallery.com/haikyu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Hinata’s egg-on-rice-style parfait",
+                    "price": 1200,
+                    "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                  },
+                  {
+                    "name": "Kageyama’s black pork curry with soft egg",
+                    "price": 1600,
+                    "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                  },
+                  {
+                    "name": "Tsukishima’s shortcake-style omelette",
+                    "price": 1200,
+                    "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                  },
+                  {
+                    "name": "Sawamura’s soy-sauce ramen",
+                    "price": 1500,
+                    "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                  },
+                  {
+                    "name": "Sugawara’s very spicy mapo tofu",
+                    "price": 1500,
+                    "note": "Mapo tofu, long onion, chili threads and chili oil"
+                  },
+                  {
+                    "name": "Azumane’s tonkotsu ramen",
+                    "price": 1500,
+                    "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Azumane’s acai float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Azumane’s acai float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  }
+                ],
+                "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://and-gallery.com/#hukuoka",
+            "name": "and GALLERY — Fukuoka",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://and-gallery.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Regular posted hours",
+                "hours": "11:00–20:10; actual collaboration seating and last-order windows apply"
+              },
+              {
+                "days": "Haikyu!! seatings",
+                "hours": "11:00–12:10 / 12:30–13:40 / 14:00–15:10 / 16:00–17:10 / 17:30–18:40 / 19:00–20:10"
+              },
+              {
+                "days": "Haikyu!! closure",
+                "hours": "No branch-specific closure published; check booking calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://and-gallery.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://collabocafe.and-gallery.com/haikyu"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://haikyu.jp/news/5931/"
+              }
+            ],
+            "reservationUrl": "https://collabocafe.and-gallery.com/haikyu"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+          "sha256": "07a6f5fcb4c09716b83b56f373ba22b0516cef26ba978e3e2333c8d79bcbd222",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-2-4388400054062404.webp",
+          "sha256": "438840005406240402ba8edaf14c64a825ffac854bfa6cbe7545f53c9fe8a3b7",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s black pork curry with soft egg. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-3-675a37528e3c88e3.webp",
+          "sha256": "675a37528e3c88e33daa4b243405eecf1e2b963d0ac5fd9b365cc14f6a1556cf",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Tsukishima’s shortcake-style omelette. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-4-4080e7623521586f.webp",
+          "sha256": "4080e7623521586f556cf42cbde27587fbb557bb047a3bbd6d2ba157cf17148b",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sawamura’s soy-sauce ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-5-fe79cb7513ac025a.webp",
+          "sha256": "fe79cb7513ac025a93132da043404c6919f8ef9b7b7cf247ac6c84289acbc2da",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sugawara’s spicy mapo tofu. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-6-f0fea2eefad64437.webp",
+          "sha256": "f0fea2eefad64437d9f89db256f1b5e09c330e065c16f4acd41d39e399517a41",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Azumane’s tonkotsu ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-7-9daf34a13cb7e791.webp",
+          "sha256": "9daf34a13cb7e79158051c9d04d5105637d6a67ca58bf3a1b99760b90a8d39dc",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s orange mixed juice. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-8-d491e0ba0a0de5a0.webp",
+          "sha256": "d491e0ba0a0de5a02dbba4f843b25401cc02c80af4b1c718f101c91ebbd2030a",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s yogurt float. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#hukuoka",
+          "name": "and GALLERY — Fukuoka",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "Haikyu!! collaboration food and drinks",
+              "url": "https://collabocafe.and-gallery.com/haikyu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Hinata’s egg-on-rice-style parfait",
+                  "price": 1200,
+                  "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                },
+                {
+                  "name": "Kageyama’s black pork curry with soft egg",
+                  "price": 1600,
+                  "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                },
+                {
+                  "name": "Tsukishima’s shortcake-style omelette",
+                  "price": 1200,
+                  "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                },
+                {
+                  "name": "Sawamura’s soy-sauce ramen",
+                  "price": 1500,
+                  "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                },
+                {
+                  "name": "Sugawara’s very spicy mapo tofu",
+                  "price": 1500,
+                  "note": "Mapo tofu, long onion, chili threads and chili oil"
+                },
+                {
+                  "name": "Azumane’s tonkotsu ramen",
+                  "price": 1500,
+                  "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Kageyama’s yogurt float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Azumane’s acai float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Kageyama’s yogurt float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Azumane’s acai float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                }
+              ],
+              "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Haikyu!! collaboration café menu",
+              "kind": "other",
+              "description": "A dated themed menu with six foods and six drinks; individual prices and paid reservation conditions published.",
+              "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+              "menuLabel": "Haikyu!! collaboration food and drinks",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-12-06",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "November 3–December 6; six 70-minute seatings, availability shown through each published last-order time.",
+                "Advance reservation ¥330 per person; available until 10:00 the preceding day. Walk-ins subject to capacity.",
+                "No entry after the seating’s last order; late arrival does not extend seating; 15 minutes unannounced lateness may lose the reservation.",
+                "One random coaster with each collaboration menu/drink; stock limited. Advance-reservation postcard is tied to the paid booking.",
+                "Elementary-school-age and younger require a guardian; age four and above, or any younger child needing a seat, count in the booking.",
+                "Bring identification matching the reservation; pets and cosplay not permitted.",
+                "No ordinary menu, percentage discount or food-free claim inferred."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "11:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:30",
+                    "end": "13:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "14:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "16:00",
+                    "end": "16:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "18:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "19:40"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F LOVELESS COFFEE, 1-3-22 Omiya, Chuo-ku, Fukuoka",
+          "neighborhood": "Yakuin",
+          "websiteUrl": "https://and-gallery.com/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+            "alt": "and GALLERY — Fukuoka — Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+            "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+            "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/117213/57/117213-57-aa1284de460efdf74208a94e1b6135f6-3900x2600.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "and GALLERY — Namba No. 1 — Osaka restaurant guide",
+        "description": "An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.",
+        "sourceUrl": "https://and-gallery.com/#nanba",
+        "address": "5F OCAT, 1-4-1 Minatomachi, Naniwa-ku, Osaka",
+        "productName": "and GALLERY — Namba No. 1",
+        "utcStartDateTime": "2026-10-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Namba",
+          "Collaboration café"
+        ],
+        "longFormSummary": "<p>An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000057.000117213.html\"></cite></p><p>Established restaurant. 2026-10-15 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://and-gallery.com/#nanba",
+            "title": "and GALLERY — Namba No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html",
+            "title": "and GALLERY — Namba No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://collabocafe.and-gallery.com/haikyu",
+            "title": "and GALLERY — Namba No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://and-gallery.com/",
+            "title": "and GALLERY — Namba No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://haikyu.jp/news/5931/",
+            "title": "and GALLERY — Namba No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#nanba",
+          "menu": {
+            "pinSourceUrl": "https://and-gallery.com/#nanba",
+            "name": "and GALLERY — Namba No. 1",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Haikyu!! collaboration food and drinks",
+                "url": "https://collabocafe.and-gallery.com/haikyu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Hinata’s egg-on-rice-style parfait",
+                    "price": 1200,
+                    "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                  },
+                  {
+                    "name": "Kageyama’s black pork curry with soft egg",
+                    "price": 1600,
+                    "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                  },
+                  {
+                    "name": "Tsukishima’s shortcake-style omelette",
+                    "price": 1200,
+                    "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                  },
+                  {
+                    "name": "Sawamura’s soy-sauce ramen",
+                    "price": 1500,
+                    "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                  },
+                  {
+                    "name": "Sugawara’s very spicy mapo tofu",
+                    "price": 1500,
+                    "note": "Mapo tofu, long onion, chili threads and chili oil"
+                  },
+                  {
+                    "name": "Azumane’s tonkotsu ramen",
+                    "price": 1500,
+                    "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Azumane’s acai float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Azumane’s acai float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  }
+                ],
+                "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://and-gallery.com/#nanba",
+            "name": "and GALLERY — Namba No. 1",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://and-gallery.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Regular posted hours",
+                "hours": "11:00–20:10; actual collaboration seating and last-order windows apply"
+              },
+              {
+                "days": "Haikyu!! seatings",
+                "hours": "11:00–12:10 / 12:30–13:40 / 14:00–15:10 / 16:00–17:10 / 17:30–18:40 / 19:00–20:10"
+              },
+              {
+                "days": "Haikyu!! closure",
+                "hours": "November 18 at Namba No. 1"
+              }
+            ],
+            "detailsSourceUrl": "https://and-gallery.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://collabocafe.and-gallery.com/haikyu"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://haikyu.jp/news/5931/"
+              }
+            ],
+            "reservationUrl": "https://collabocafe.and-gallery.com/haikyu"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+          "sha256": "07a6f5fcb4c09716b83b56f373ba22b0516cef26ba978e3e2333c8d79bcbd222",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-2-4388400054062404.webp",
+          "sha256": "438840005406240402ba8edaf14c64a825ffac854bfa6cbe7545f53c9fe8a3b7",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s black pork curry with soft egg. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-3-675a37528e3c88e3.webp",
+          "sha256": "675a37528e3c88e33daa4b243405eecf1e2b963d0ac5fd9b365cc14f6a1556cf",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Tsukishima’s shortcake-style omelette. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-4-4080e7623521586f.webp",
+          "sha256": "4080e7623521586f556cf42cbde27587fbb557bb047a3bbd6d2ba157cf17148b",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sawamura’s soy-sauce ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-5-fe79cb7513ac025a.webp",
+          "sha256": "fe79cb7513ac025a93132da043404c6919f8ef9b7b7cf247ac6c84289acbc2da",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sugawara’s spicy mapo tofu. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-6-f0fea2eefad64437.webp",
+          "sha256": "f0fea2eefad64437d9f89db256f1b5e09c330e065c16f4acd41d39e399517a41",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Azumane’s tonkotsu ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-7-9daf34a13cb7e791.webp",
+          "sha256": "9daf34a13cb7e79158051c9d04d5105637d6a67ca58bf3a1b99760b90a8d39dc",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s orange mixed juice. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-8-d491e0ba0a0de5a0.webp",
+          "sha256": "d491e0ba0a0de5a02dbba4f843b25401cc02c80af4b1c718f101c91ebbd2030a",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s yogurt float. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#nanba",
+          "name": "and GALLERY — Namba No. 1",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "Haikyu!! collaboration food and drinks",
+              "url": "https://collabocafe.and-gallery.com/haikyu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Hinata’s egg-on-rice-style parfait",
+                  "price": 1200,
+                  "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                },
+                {
+                  "name": "Kageyama’s black pork curry with soft egg",
+                  "price": 1600,
+                  "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                },
+                {
+                  "name": "Tsukishima’s shortcake-style omelette",
+                  "price": 1200,
+                  "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                },
+                {
+                  "name": "Sawamura’s soy-sauce ramen",
+                  "price": 1500,
+                  "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                },
+                {
+                  "name": "Sugawara’s very spicy mapo tofu",
+                  "price": 1500,
+                  "note": "Mapo tofu, long onion, chili threads and chili oil"
+                },
+                {
+                  "name": "Azumane’s tonkotsu ramen",
+                  "price": 1500,
+                  "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Kageyama’s yogurt float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Azumane’s acai float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Kageyama’s yogurt float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Azumane’s acai float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                }
+              ],
+              "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Haikyu!! collaboration café menu",
+              "kind": "other",
+              "description": "A dated themed menu with six foods and six drinks; individual prices and paid reservation conditions published.",
+              "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+              "menuLabel": "Haikyu!! collaboration food and drinks",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-12-06",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "November 3–December 6; six 70-minute seatings, availability shown through each published last-order time.",
+                "Advance reservation ¥330 per person; available until 10:00 the preceding day. Walk-ins subject to capacity.",
+                "No entry after the seating’s last order; late arrival does not extend seating; 15 minutes unannounced lateness may lose the reservation.",
+                "One random coaster with each collaboration menu/drink; stock limited. Advance-reservation postcard is tied to the paid booking.",
+                "Elementary-school-age and younger require a guardian; age four and above, or any younger child needing a seat, count in the booking.",
+                "Bring identification matching the reservation; pets and cosplay not permitted.",
+                "No ordinary menu, percentage discount or food-free claim inferred.",
+                "Namba No. 1 is closed November 18, per current official special-site notice."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "11:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:30",
+                    "end": "13:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "14:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "16:00",
+                    "end": "16:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "18:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "19:40"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-11-18"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "5F OCAT, 1-4-1 Minatomachi, Naniwa-ku, Osaka",
+          "neighborhood": "Namba",
+          "websiteUrl": "https://and-gallery.com/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+            "alt": "and GALLERY — Namba No. 1 — Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+            "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+            "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/117213/57/117213-57-aa1284de460efdf74208a94e1b6135f6-3900x2600.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "and GALLERY — Nagoya No. 1 — Nagoya restaurant guide",
+        "description": "An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.",
+        "sourceUrl": "https://and-gallery.com/#nagoya",
+        "address": "1F Banshoji Building, 3-30-40 Osu, Naka-ku, Nagoya",
+        "productName": "and GALLERY — Nagoya No. 1",
+        "utcStartDateTime": "2026-10-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Osu",
+          "Collaboration café"
+        ],
+        "longFormSummary": "<p>An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000057.000117213.html\"></cite></p><p>Established restaurant. 2026-10-15 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://and-gallery.com/#nagoya",
+            "title": "and GALLERY — Nagoya No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html",
+            "title": "and GALLERY — Nagoya No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://collabocafe.and-gallery.com/haikyu",
+            "title": "and GALLERY — Nagoya No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://and-gallery.com/",
+            "title": "and GALLERY — Nagoya No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://haikyu.jp/news/5931/",
+            "title": "and GALLERY — Nagoya No. 1 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#nagoya",
+          "menu": {
+            "pinSourceUrl": "https://and-gallery.com/#nagoya",
+            "name": "and GALLERY — Nagoya No. 1",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Haikyu!! collaboration food and drinks",
+                "url": "https://collabocafe.and-gallery.com/haikyu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Hinata’s egg-on-rice-style parfait",
+                    "price": 1200,
+                    "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                  },
+                  {
+                    "name": "Kageyama’s black pork curry with soft egg",
+                    "price": 1600,
+                    "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                  },
+                  {
+                    "name": "Tsukishima’s shortcake-style omelette",
+                    "price": 1200,
+                    "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                  },
+                  {
+                    "name": "Sawamura’s soy-sauce ramen",
+                    "price": 1500,
+                    "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                  },
+                  {
+                    "name": "Sugawara’s very spicy mapo tofu",
+                    "price": 1500,
+                    "note": "Mapo tofu, long onion, chili threads and chili oil"
+                  },
+                  {
+                    "name": "Azumane’s tonkotsu ramen",
+                    "price": 1500,
+                    "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Azumane’s acai float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Azumane’s acai float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  }
+                ],
+                "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://and-gallery.com/#nagoya",
+            "name": "and GALLERY — Nagoya No. 1",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://and-gallery.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Regular posted hours",
+                "hours": "11:00–20:10; actual collaboration seating and last-order windows apply"
+              },
+              {
+                "days": "Haikyu!! seatings",
+                "hours": "11:00–12:10 / 12:30–13:40 / 14:00–15:10 / 16:00–17:10 / 17:30–18:40 / 19:00–20:10"
+              },
+              {
+                "days": "Haikyu!! closure",
+                "hours": "No branch-specific closure published; check booking calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://and-gallery.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://collabocafe.and-gallery.com/haikyu"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://haikyu.jp/news/5931/"
+              }
+            ],
+            "reservationUrl": "https://collabocafe.and-gallery.com/haikyu"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+          "sha256": "07a6f5fcb4c09716b83b56f373ba22b0516cef26ba978e3e2333c8d79bcbd222",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-2-4388400054062404.webp",
+          "sha256": "438840005406240402ba8edaf14c64a825ffac854bfa6cbe7545f53c9fe8a3b7",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s black pork curry with soft egg. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-3-675a37528e3c88e3.webp",
+          "sha256": "675a37528e3c88e33daa4b243405eecf1e2b963d0ac5fd9b365cc14f6a1556cf",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Tsukishima’s shortcake-style omelette. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-4-4080e7623521586f.webp",
+          "sha256": "4080e7623521586f556cf42cbde27587fbb557bb047a3bbd6d2ba157cf17148b",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sawamura’s soy-sauce ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-5-fe79cb7513ac025a.webp",
+          "sha256": "fe79cb7513ac025a93132da043404c6919f8ef9b7b7cf247ac6c84289acbc2da",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sugawara’s spicy mapo tofu. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-6-f0fea2eefad64437.webp",
+          "sha256": "f0fea2eefad64437d9f89db256f1b5e09c330e065c16f4acd41d39e399517a41",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Azumane’s tonkotsu ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-7-9daf34a13cb7e791.webp",
+          "sha256": "9daf34a13cb7e79158051c9d04d5105637d6a67ca58bf3a1b99760b90a8d39dc",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s orange mixed juice. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-8-d491e0ba0a0de5a0.webp",
+          "sha256": "d491e0ba0a0de5a02dbba4f843b25401cc02c80af4b1c718f101c91ebbd2030a",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s yogurt float. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#nagoya",
+          "name": "and GALLERY — Nagoya No. 1",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "Haikyu!! collaboration food and drinks",
+              "url": "https://collabocafe.and-gallery.com/haikyu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Hinata’s egg-on-rice-style parfait",
+                  "price": 1200,
+                  "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                },
+                {
+                  "name": "Kageyama’s black pork curry with soft egg",
+                  "price": 1600,
+                  "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                },
+                {
+                  "name": "Tsukishima’s shortcake-style omelette",
+                  "price": 1200,
+                  "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                },
+                {
+                  "name": "Sawamura’s soy-sauce ramen",
+                  "price": 1500,
+                  "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                },
+                {
+                  "name": "Sugawara’s very spicy mapo tofu",
+                  "price": 1500,
+                  "note": "Mapo tofu, long onion, chili threads and chili oil"
+                },
+                {
+                  "name": "Azumane’s tonkotsu ramen",
+                  "price": 1500,
+                  "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Kageyama’s yogurt float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Azumane’s acai float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Kageyama’s yogurt float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Azumane’s acai float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                }
+              ],
+              "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Haikyu!! collaboration café menu",
+              "kind": "other",
+              "description": "A dated themed menu with six foods and six drinks; individual prices and paid reservation conditions published.",
+              "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+              "menuLabel": "Haikyu!! collaboration food and drinks",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-12-06",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "November 3–December 6; six 70-minute seatings, availability shown through each published last-order time.",
+                "Advance reservation ¥330 per person; available until 10:00 the preceding day. Walk-ins subject to capacity.",
+                "No entry after the seating’s last order; late arrival does not extend seating; 15 minutes unannounced lateness may lose the reservation.",
+                "One random coaster with each collaboration menu/drink; stock limited. Advance-reservation postcard is tied to the paid booking.",
+                "Elementary-school-age and younger require a guardian; age four and above, or any younger child needing a seat, count in the booking.",
+                "Bring identification matching the reservation; pets and cosplay not permitted.",
+                "No ordinary menu, percentage discount or food-free claim inferred."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "11:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:30",
+                    "end": "13:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "14:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "16:00",
+                    "end": "16:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "18:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "19:40"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F Banshoji Building, 3-30-40 Osu, Naka-ku, Nagoya",
+          "neighborhood": "Osu",
+          "websiteUrl": "https://and-gallery.com/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+            "alt": "and GALLERY — Nagoya No. 1 — Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+            "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+            "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/117213/57/117213-57-aa1284de460efdf74208a94e1b6135f6-3900x2600.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "and GALLERY — Ikebukuro — Tokyo restaurant guide",
+        "description": "An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.",
+        "sourceUrl": "https://and-gallery.com/#ikebukuro",
+        "address": "7F LABI1 LIFE SELECT Ikebukuro, 1-5-7 Higashi-Ikebukuro, Toshima-ku, Tokyo",
+        "productName": "and GALLERY — Ikebukuro",
+        "utcStartDateTime": "2026-10-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Ikebukuro",
+          "Collaboration café"
+        ],
+        "longFormSummary": "<p>An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000057.000117213.html\"></cite></p><p>Established restaurant. 2026-10-15 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://and-gallery.com/#ikebukuro",
+            "title": "and GALLERY — Ikebukuro source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html",
+            "title": "and GALLERY — Ikebukuro source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://collabocafe.and-gallery.com/haikyu",
+            "title": "and GALLERY — Ikebukuro source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://and-gallery.com/",
+            "title": "and GALLERY — Ikebukuro source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://haikyu.jp/news/5931/",
+            "title": "and GALLERY — Ikebukuro source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#ikebukuro",
+          "menu": {
+            "pinSourceUrl": "https://and-gallery.com/#ikebukuro",
+            "name": "and GALLERY — Ikebukuro",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Haikyu!! collaboration food and drinks",
+                "url": "https://collabocafe.and-gallery.com/haikyu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Hinata’s egg-on-rice-style parfait",
+                    "price": 1200,
+                    "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                  },
+                  {
+                    "name": "Kageyama’s black pork curry with soft egg",
+                    "price": 1600,
+                    "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                  },
+                  {
+                    "name": "Tsukishima’s shortcake-style omelette",
+                    "price": 1200,
+                    "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                  },
+                  {
+                    "name": "Sawamura’s soy-sauce ramen",
+                    "price": 1500,
+                    "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                  },
+                  {
+                    "name": "Sugawara’s very spicy mapo tofu",
+                    "price": 1500,
+                    "note": "Mapo tofu, long onion, chili threads and chili oil"
+                  },
+                  {
+                    "name": "Azumane’s tonkotsu ramen",
+                    "price": 1500,
+                    "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Azumane’s acai float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Azumane’s acai float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  }
+                ],
+                "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://and-gallery.com/#ikebukuro",
+            "name": "and GALLERY — Ikebukuro",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://and-gallery.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Regular posted hours",
+                "hours": "11:00–20:10; actual collaboration seating and last-order windows apply"
+              },
+              {
+                "days": "Haikyu!! seatings",
+                "hours": "11:00–12:10 / 12:30–13:40 / 14:00–15:10 / 16:00–17:10 / 17:30–18:40 / 19:00–20:10"
+              },
+              {
+                "days": "Haikyu!! closure",
+                "hours": "No branch-specific closure published; check booking calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://and-gallery.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://collabocafe.and-gallery.com/haikyu"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://haikyu.jp/news/5931/"
+              }
+            ],
+            "reservationUrl": "https://collabocafe.and-gallery.com/haikyu"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+          "sha256": "07a6f5fcb4c09716b83b56f373ba22b0516cef26ba978e3e2333c8d79bcbd222",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-2-4388400054062404.webp",
+          "sha256": "438840005406240402ba8edaf14c64a825ffac854bfa6cbe7545f53c9fe8a3b7",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s black pork curry with soft egg. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-3-675a37528e3c88e3.webp",
+          "sha256": "675a37528e3c88e33daa4b243405eecf1e2b963d0ac5fd9b365cc14f6a1556cf",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Tsukishima’s shortcake-style omelette. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-4-4080e7623521586f.webp",
+          "sha256": "4080e7623521586f556cf42cbde27587fbb557bb047a3bbd6d2ba157cf17148b",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sawamura’s soy-sauce ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-5-fe79cb7513ac025a.webp",
+          "sha256": "fe79cb7513ac025a93132da043404c6919f8ef9b7b7cf247ac6c84289acbc2da",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sugawara’s spicy mapo tofu. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-6-f0fea2eefad64437.webp",
+          "sha256": "f0fea2eefad64437d9f89db256f1b5e09c330e065c16f4acd41d39e399517a41",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Azumane’s tonkotsu ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-7-9daf34a13cb7e791.webp",
+          "sha256": "9daf34a13cb7e79158051c9d04d5105637d6a67ca58bf3a1b99760b90a8d39dc",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s orange mixed juice. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-8-d491e0ba0a0de5a0.webp",
+          "sha256": "d491e0ba0a0de5a02dbba4f843b25401cc02c80af4b1c718f101c91ebbd2030a",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s yogurt float. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#ikebukuro",
+          "name": "and GALLERY — Ikebukuro",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "Haikyu!! collaboration food and drinks",
+              "url": "https://collabocafe.and-gallery.com/haikyu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Hinata’s egg-on-rice-style parfait",
+                  "price": 1200,
+                  "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                },
+                {
+                  "name": "Kageyama’s black pork curry with soft egg",
+                  "price": 1600,
+                  "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                },
+                {
+                  "name": "Tsukishima’s shortcake-style omelette",
+                  "price": 1200,
+                  "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                },
+                {
+                  "name": "Sawamura’s soy-sauce ramen",
+                  "price": 1500,
+                  "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                },
+                {
+                  "name": "Sugawara’s very spicy mapo tofu",
+                  "price": 1500,
+                  "note": "Mapo tofu, long onion, chili threads and chili oil"
+                },
+                {
+                  "name": "Azumane’s tonkotsu ramen",
+                  "price": 1500,
+                  "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Kageyama’s yogurt float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Azumane’s acai float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Kageyama’s yogurt float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Azumane’s acai float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                }
+              ],
+              "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Haikyu!! collaboration café menu",
+              "kind": "other",
+              "description": "A dated themed menu with six foods and six drinks; individual prices and paid reservation conditions published.",
+              "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+              "menuLabel": "Haikyu!! collaboration food and drinks",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-12-06",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "November 3–December 6; six 70-minute seatings, availability shown through each published last-order time.",
+                "Advance reservation ¥330 per person; available until 10:00 the preceding day. Walk-ins subject to capacity.",
+                "No entry after the seating’s last order; late arrival does not extend seating; 15 minutes unannounced lateness may lose the reservation.",
+                "One random coaster with each collaboration menu/drink; stock limited. Advance-reservation postcard is tied to the paid booking.",
+                "Elementary-school-age and younger require a guardian; age four and above, or any younger child needing a seat, count in the booking.",
+                "Bring identification matching the reservation; pets and cosplay not permitted.",
+                "No ordinary menu, percentage discount or food-free claim inferred."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "11:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:30",
+                    "end": "13:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "14:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "16:00",
+                    "end": "16:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "18:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "19:40"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "7F LABI1 LIFE SELECT Ikebukuro, 1-5-7 Higashi-Ikebukuro, Toshima-ku, Tokyo",
+          "neighborhood": "Ikebukuro",
+          "websiteUrl": "https://and-gallery.com/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+            "alt": "and GALLERY — Ikebukuro — Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+            "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+            "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/117213/57/117213-57-aa1284de460efdf74208a94e1b6135f6-3900x2600.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "and GALLERY — Bic Camera Yurakucho — Tokyo restaurant guide",
+        "description": "An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.",
+        "sourceUrl": "https://and-gallery.com/#yurakucho",
+        "address": "7F Bic Camera Yurakucho, 1-11-1 Yurakucho, Chiyoda-ku, Tokyo",
+        "productName": "and GALLERY — Bic Camera Yurakucho",
+        "utcStartDateTime": "2026-10-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Yurakucho",
+          "Collaboration café"
+        ],
+        "longFormSummary": "<p>An established collaboration café hosting the Haikyu!! menu from November 3 to December 6, with named food, drink and seating conditions.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000057.000117213.html\"></cite></p><p>Established restaurant. 2026-10-15 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://and-gallery.com/#yurakucho",
+            "title": "and GALLERY — Bic Camera Yurakucho source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html",
+            "title": "and GALLERY — Bic Camera Yurakucho source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://collabocafe.and-gallery.com/haikyu",
+            "title": "and GALLERY — Bic Camera Yurakucho source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://and-gallery.com/",
+            "title": "and GALLERY — Bic Camera Yurakucho source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://haikyu.jp/news/5931/",
+            "title": "and GALLERY — Bic Camera Yurakucho source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#yurakucho",
+          "menu": {
+            "pinSourceUrl": "https://and-gallery.com/#yurakucho",
+            "name": "and GALLERY — Bic Camera Yurakucho",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Haikyu!! collaboration food and drinks",
+                "url": "https://collabocafe.and-gallery.com/haikyu",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Hinata’s egg-on-rice-style parfait",
+                    "price": 1200,
+                    "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                  },
+                  {
+                    "name": "Kageyama’s black pork curry with soft egg",
+                    "price": 1600,
+                    "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                  },
+                  {
+                    "name": "Tsukishima’s shortcake-style omelette",
+                    "price": 1200,
+                    "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                  },
+                  {
+                    "name": "Sawamura’s soy-sauce ramen",
+                    "price": 1500,
+                    "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                  },
+                  {
+                    "name": "Sugawara’s very spicy mapo tofu",
+                    "price": 1500,
+                    "note": "Mapo tofu, long onion, chili threads and chili oil"
+                  },
+                  {
+                    "name": "Azumane’s tonkotsu ramen",
+                    "price": 1500,
+                    "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Azumane’s acai float",
+                    "price": 850,
+                    "note": "Tax included; drink alone"
+                  },
+                  {
+                    "name": "Hinata’s orange mixed juice with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Kageyama’s yogurt float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sawamura’s kiwi drink with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  },
+                  {
+                    "name": "Azumane’s acai float with random drink charm",
+                    "price": 1500,
+                    "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                  }
+                ],
+                "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://and-gallery.com/#yurakucho",
+            "name": "and GALLERY — Bic Camera Yurakucho",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://and-gallery.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Regular posted hours",
+                "hours": "11:00–20:10; actual collaboration seating and last-order windows apply"
+              },
+              {
+                "days": "Haikyu!! seatings",
+                "hours": "11:00–12:10 / 12:30–13:40 / 14:00–15:10 / 16:00–17:10 / 17:30–18:40 / 19:00–20:10"
+              },
+              {
+                "days": "Haikyu!! closure",
+                "hours": "No branch-specific closure published; check booking calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://and-gallery.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000057.000117213.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://collabocafe.and-gallery.com/haikyu"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://haikyu.jp/news/5931/"
+              }
+            ],
+            "reservationUrl": "https://collabocafe.and-gallery.com/haikyu"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+          "sha256": "07a6f5fcb4c09716b83b56f373ba22b0516cef26ba978e3e2333c8d79bcbd222",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-2-4388400054062404.webp",
+          "sha256": "438840005406240402ba8edaf14c64a825ffac854bfa6cbe7545f53c9fe8a3b7",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s black pork curry with soft egg. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-3-675a37528e3c88e3.webp",
+          "sha256": "675a37528e3c88e33daa4b243405eecf1e2b963d0ac5fd9b365cc14f6a1556cf",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Tsukishima’s shortcake-style omelette. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-4-4080e7623521586f.webp",
+          "sha256": "4080e7623521586f556cf42cbde27587fbb557bb047a3bbd6d2ba157cf17148b",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sawamura’s soy-sauce ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-5-fe79cb7513ac025a.webp",
+          "sha256": "fe79cb7513ac025a93132da043404c6919f8ef9b7b7cf247ac6c84289acbc2da",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Sugawara’s spicy mapo tofu. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-6-f0fea2eefad64437.webp",
+          "sha256": "f0fea2eefad64437d9f89db256f1b5e09c330e065c16f4acd41d39e399517a41",
+          "width": 1600,
+          "height": 1067,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Azumane’s tonkotsu ramen. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-7-9daf34a13cb7e791.webp",
+          "sha256": "9daf34a13cb7e79158051c9d04d5105637d6a67ca58bf3a1b99760b90a8d39dc",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Hinata’s orange mixed juice. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-8-d491e0ba0a0de5a0.webp",
+          "sha256": "d491e0ba0a0de5a02dbba4f843b25401cc02c80af4b1c718f101c91ebbd2030a",
+          "width": 1350,
+          "height": 1350,
+          "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+          "note": "Operator promotional photograph: Kageyama’s yogurt float. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+          "sourcePage": "https://collabocafe.and-gallery.com/haikyu"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://and-gallery.com/#yurakucho",
+          "name": "and GALLERY — Bic Camera Yurakucho",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "Haikyu!! collaboration food and drinks",
+              "url": "https://collabocafe.and-gallery.com/haikyu",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Hinata’s egg-on-rice-style parfait",
+                  "price": 1200,
+                  "note": "Orange jelly, whipped cream, sponge cake, mandarin, mango ice cream and puffed rice; this is a dessert"
+                },
+                {
+                  "name": "Kageyama’s black pork curry with soft egg",
+                  "price": 1600,
+                  "note": "Fifteen-grain rice, black pork curry, soft egg, green-leaf lettuce and lemon dressing"
+                },
+                {
+                  "name": "Tsukishima’s shortcake-style omelette",
+                  "price": 1200,
+                  "note": "Mashed potato, ketchup, thin egg sheet, cheese sauce, cherry tomato, mint and soybean sheet; savoury, not cake"
+                },
+                {
+                  "name": "Sawamura’s soy-sauce ramen",
+                  "price": 1500,
+                  "note": "Soy-sauce ramen, roast pork, menma, long onion and monaka"
+                },
+                {
+                  "name": "Sugawara’s very spicy mapo tofu",
+                  "price": 1500,
+                  "note": "Mapo tofu, long onion, chili threads and chili oil"
+                },
+                {
+                  "name": "Azumane’s tonkotsu ramen",
+                  "price": 1500,
+                  "note": "Pork-bone ramen, ground sesame, wood-ear mushroom, spring onion, nori and monaka"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Kageyama’s yogurt float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Azumane’s acai float",
+                  "price": 850,
+                  "note": "Tax included; drink alone"
+                },
+                {
+                  "name": "Hinata’s orange mixed juice with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Kageyama’s yogurt float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Tsukishima’s lemon jelly drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sawamura’s kiwi drink with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Sugawara’s turquoise-blue milkshake with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                },
+                {
+                  "name": "Azumane’s acai float with random drink charm",
+                  "price": 1500,
+                  "note": "Tax included; one random charm per souvenir drink, character cannot be selected"
+                }
+              ],
+              "note": "November 3–December 6, 2026. All prices include tax. The current official interactive site explicitly lists this exact branch; Yurakucho is included by the current full site even though the release introduction lists five locations. Six 70-minute seatings: 11:00, 12:30, 14:00, 16:00, 17:30 and 19:00, with last orders 40 minutes after each start. Advance reservation ¥330/person, cutoff previous day 10:00; walk-ins only if seats available. One random coaster per collaboration food/drink; postcard for paid advance reservation. Menu/novelty stock limited. Exact allergen lists are published on the source; guests should consult current lists for dietary requirements. Official main site, linked special site, release and franchise-owner announcement checked. Branch interiors/finished collaboration installation gallery not published there; named current promotion food photos used instead. Other collaborations/branches’ menu and photos excluded."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Haikyu!! collaboration café menu",
+              "kind": "other",
+              "description": "A dated themed menu with six foods and six drinks; individual prices and paid reservation conditions published.",
+              "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+              "menuLabel": "Haikyu!! collaboration food and drinks",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-12-06",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "November 3–December 6; six 70-minute seatings, availability shown through each published last-order time.",
+                "Advance reservation ¥330 per person; available until 10:00 the preceding day. Walk-ins subject to capacity.",
+                "No entry after the seating’s last order; late arrival does not extend seating; 15 minutes unannounced lateness may lose the reservation.",
+                "One random coaster with each collaboration menu/drink; stock limited. Advance-reservation postcard is tied to the paid booking.",
+                "Elementary-school-age and younger require a guardian; age four and above, or any younger child needing a seat, count in the booking.",
+                "Bring identification matching the reservation; pets and cosplay not permitted.",
+                "No ordinary menu, percentage discount or food-free claim inferred."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "11:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:30",
+                    "end": "13:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "14:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "16:00",
+                    "end": "16:40"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "18:10"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "19:40"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "7F Bic Camera Yurakucho, 1-11-1 Yurakucho, Chiyoda-ku, Tokyo",
+          "neighborhood": "Yurakucho",
+          "websiteUrl": "https://and-gallery.com/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/andgallery-menu-1-07a6f5fcb4c09716.webp",
+            "alt": "and GALLERY — Bic Camera Yurakucho — Operator promotional photograph: Hinata’s egg-on-rice-style parfait. This collaboration menu is explicitly confirmed at this branch; not an interior or another branch’s photograph.",
+            "credit": "IT Entertainment / and GALLERY; ©古舘春一／集英社・「ハイキュー!!」製作委員会",
+            "sourceUrl": "https://collabocafe.and-gallery.com/haikyu",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/117213/57/117213-57-aa1284de460efdf74208a94e1b6135f6-3900x2600.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

@@ -11,7 +11,7 @@ import { TASTE_KEYS, TASTE_STRONG, type TasteAxis } from '@/lib/pinTaste';
 import { CAR_PERF_KEYS, CAR_PERF_STRONG, type CarPerfAxis } from '@/lib/pinCarPerf';
 import { DINING_KEYS, DINING_STRONG, type DiningAxis } from '@/lib/pinDining';
 import { HOTEL_KEYS, HOTEL_STRONG, type HotelAxis } from '@/lib/pinHotel';
-import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
+import { PREDICTED_TAG, reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
@@ -503,7 +503,7 @@ async function countTags(from: string, where: string[], params: unknown[], limit
 }
 
 // How many of these pins each reserved filter holds: the derived reserved
-// tags ("Thread"), each date confidence level, and each band of the pin's
+// tags ("Thread" and "Predicted"), each date confidence level, and each band of the pin's
 // own score - the same width_bucket the confidence: term filters by, so a
 // count and the search it starts agree. A pin with no score is in no band.
 async function countReserved(from: string, where: string[], params: unknown[], ctes: string[]): Promise<TagCount[]> {
@@ -522,8 +522,16 @@ async function countReserved(from: string, where: string[], params: unknown[], c
       )}
       SELECT 'tag' AS "field", "tg"."name"::text AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
       FROM "hits"
-        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND "tg"."kind" = 'reserved'
+        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND "tg"."kind" = 'reserved' AND "tg"."name" <> '${PREDICTED_TAG}'::citext
       GROUP BY "tg"."name"
+      UNION ALL
+      SELECT 'tag' AS "field", '${PREDICTED_TAG}' AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
+      FROM "hits"
+      WHERE EXISTS (
+        SELECT 1 FROM "PinTagView" AS "pt"
+        WHERE "pt"."pinId" = "hits"."id"
+          AND ("pt"."name" = '${PREDICTED_TAG}'::citext OR ("hits"."level" = 'estimated' AND "pt"."name" = 'Prediction Market'::citext))
+      )
       UNION ALL
       SELECT 'confidence', "level", COUNT(*)::integer FROM "hits" WHERE "level" IS NOT NULL GROUP BY "level"
       UNION ALL
@@ -1128,12 +1136,17 @@ export function searchClauses(filter: SearchFilter) {
   // and the awards').
   if (filter.tags.length) {
     const curated = filter.tags.some((tag) => tag.toLowerCase() === 'curated');
-    where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))${curated ? ` OR ${CURATED}` : ''})`);
+    const predicted = filter.tags.some((tag) => tag.toLowerCase() === 'predicted');
+    where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))${curated ? ` OR ${CURATED}` : ''}${predicted ? ` OR ${predictedPinOf('Pin')}` : ''})`);
   }
   // None of these (-tag:), each read as a tag: term is, so leaving out an
   // award body leaves out every year of it.
   if (filter.excludeTags.length) {
+    const excludePredicted = filter.excludeTags.some((tag) => tag.toLowerCase() === 'predicted');
     where.push(`NOT EXISTS (SELECT 1 FROM "PinTagView" AS "untagged" WHERE "untagged"."pinId" = "Pin"."id" AND ("untagged"."name" = ANY(${add(filter.excludeTags)}::citext[]) OR "untagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.excludeTags))}::text[])))`);
+    if (excludePredicted) {
+      where.push(`NOT ${predictedPinOf('Pin')}`);
+    }
   }
   // Days as instant ranges, so the start and created indexes serve them (and
   // BC days need no date arithmetic in SQL). A date: day is the timeline's:

@@ -93,4 +93,18 @@ describe('searchClauses watch view', () => {
     expect(where.some((w) => w.startsWith('NOT EXISTS (SELECT 1 FROM "PinTagView"'))).toBe(true);
     expect(params).toEqual([['Anthropic'], 42]);
   });
+
+  it('matches predicted pins when searching tag:Predicted', () => {
+    const { where } = clauses('tag:Predicted');
+    const tagClause = where.find((w) => w.includes('"PinTagView"') && w.includes('Predicted'))!;
+    expect(tagClause).toContain(`"tagged"."name" = ANY($1::citext[])`);
+    expect(tagClause).toContain(`OR EXISTS (SELECT 1 FROM "PinTagView" AS "pt" WHERE "pt"."pinId" = "Pin"."id"`);
+    expect(tagClause).toContain(`"Pin"."dateConfidence" = 'estimated' AND "pt"."name" = 'Prediction Market'::citext`);
+  });
+
+  it('excludes predicted pins when searching -tag:Predicted', () => {
+    const { where } = clauses('-tag:Predicted');
+    expect(where.some((w) => w.includes('NOT EXISTS (SELECT 1 FROM "PinTagView" AS "untagged"'))).toBe(true);
+    expect(where.some((w) => w.startsWith('NOT EXISTS (SELECT 1 FROM "PinTagView" AS "pt" WHERE "pt"."pinId" = "Pin"."id"'))).toBe(true);
+  });
 });

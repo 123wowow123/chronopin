@@ -1259,6 +1259,8 @@ const ar: Messages = {
     updatedTitle: 'حُدِّث خلال آخر 24 ساعة - عرض كل الدبابيس المحدَّثة منذ الأمس',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'المتوقعة',
+    predictedTitle: 'المتوقعة - tag:Predicted',
     partOfThread: 'جزء من سلسلة',
     firstInThread: 'أول دبوس في سلسلة',
     showMore: 'عرض المزيد',
@@ -1461,6 +1463,7 @@ const ar: Messages = {
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
     thread: 'سلسلة',
+    predicted: 'المتوقعة',
     confirmed: 'مؤكد',
     scheduled: 'مجدول',
     estimated: 'تقديري',

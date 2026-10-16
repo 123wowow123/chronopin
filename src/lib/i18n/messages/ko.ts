@@ -1041,6 +1041,8 @@ const ko: Messages = {
     updatedTitle: '최근 24시간 내 업데이트됨 - 어제 이후 업데이트된 핀 모두 보기',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: '예측됨',
+    predictedTitle: '예측됨 - tag:Predicted',
     partOfThread: '스레드의 일부',
     firstInThread: '스레드의 첫 핀',
     showMore: '더 보기',
@@ -1176,6 +1178,7 @@ const ko: Messages = {
   },
   reserved: {
     thread: '스레드',
+    predicted: '예측됨',
     confirmed: '확정',
     scheduled: '예정',
     estimated: '추정',

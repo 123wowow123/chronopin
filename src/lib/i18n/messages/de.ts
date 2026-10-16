@@ -1047,6 +1047,8 @@ const de: Messages = {
     updatedTitle: 'In den letzten 24 Stunden aktualisiert – alle seit gestern aktualisierten Pins anzeigen',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'Prognostiziert',
+    predictedTitle: 'Prognostiziert - tag:Predicted',
     partOfThread: 'Teil eines Threads',
     firstInThread: 'Erster Pin eines Threads',
     showMore: 'mehr anzeigen',
@@ -1182,6 +1184,7 @@ const de: Messages = {
   },
   reserved: {
     thread: 'Thread',
+    predicted: 'Prognostiziert',
     confirmed: 'Bestätigt',
     scheduled: 'Geplant',
     estimated: 'Geschätzt',

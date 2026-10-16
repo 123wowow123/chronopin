@@ -80,6 +80,7 @@ describe('tagKind', () => {
   // one this file would give the same name.
   it('agrees with the kind the thread tag is derived with', () => {
     expect(tagKind(THREAD_TAG)).toBe('reserved');
+    expect(tagKind(PREDICTED_TAG)).toBe('reserved');
   });
 
   it('knows the site keeps the confidence filters to itself', () => {
@@ -92,6 +93,7 @@ describe('tagKind', () => {
 describe('reserved filters', () => {
   it('writes the term a pick stands for', () => {
     expect(reservedTag('Thread')).toMatchObject({ field: 'tag', value: 'Thread' });
+    expect(reservedTag('Predicted')).toMatchObject({ field: 'tag', value: 'Predicted', icon: 'sparkle' });
     expect(reservedTag('estimated')).toMatchObject({ field: 'confidence', value: 'estimated' });
     expect(reservedTag('High confidence')).toMatchObject({ field: 'confidence', value: 'high' });
     expect(reservedTag('Studio Ghibli')).toBeUndefined();
@@ -109,15 +111,17 @@ describe('reserved filters', () => {
   it('takes a level back out in either spelling', () => {
     expect(reservedValues(reservedTag('Unverified')!)).toEqual(['unverified', 'unknown']);
     expect(reservedValues(reservedTag('Delayed')!)).toEqual(['delayed']);
+    expect(reservedValues(reservedTag('Predicted')!)).toEqual(['Predicted']);
   });
 
   it('reads what a query already picked, in the order they are shown', () => {
-    expect(reservedPicked({ tags: ['Thread', 'Artemis'], confidences: ['unknown'], confidenceBands: ['low'] })).toEqual(['Thread', 'Unverified', 'Low confidence']);
+    expect(reservedPicked({ tags: ['Thread', 'Predicted', 'Artemis'], confidences: ['unknown'], confidenceBands: ['low'] })).toEqual(['Thread', 'Predicted', 'Unverified', 'Low confidence']);
     expect(reservedPicked({ tags: ['Artemis'], confidences: [], confidenceBands: [] })).toEqual([]);
   });
 
   it('suggests the filters a typed word starts', () => {
     expect(reservedSuggestions('thr').map((r) => r.name)).toEqual(['Thread']);
+    expect(reservedSuggestions('pred').map((r) => r.name)).toEqual(['Predicted']);
     expect(reservedSuggestions('conf').map((r) => r.name)).toEqual(['Confirmed', 'High confidence', 'Medium confidence', 'Low confidence']);
     expect(reservedSuggestions('low conf').map((r) => r.name)).toEqual(['Low confidence']);
     expect(reservedSuggestions('ghibli')).toEqual([]);
@@ -252,6 +256,9 @@ describe('marketTags', () => {
     expect(isPredictedPin({ tags: [{ name: 'Topic' }, { name: PREDICTED_TAG }] })).toBe(true);
     expect(isPredictedPin({ tags: [{ name: 'Topic' }] })).toBe(false);
     expect(isPredictedPin({ tags: null })).toBe(false);
+    expect(isPredictedPin({ dateConfidence: 'estimated', sourceUrl: 'https://polymarket.com/event/xyz' })).toBe(true);
+    expect(isPredictedPin({ dateConfidence: 'exact', sourceUrl: 'https://polymarket.com/event/xyz' })).toBe(false);
+    expect(isPredictedPin({ dateConfidence: 'estimated', sourceUrl: 'https://example.com/news' })).toBe(false);
   });
 });
 

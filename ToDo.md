@@ -1,30 +1,27 @@
 # To Do
 
-## Japan restaurant guides — next session (research wrapped October 14, 2026)
+## Japan restaurant guides — continue replenishment (updated October 15, 2026)
 
-Target remains **30 distinct eligible restaurants in each tab of each city**. Release `157e1750` is deployed. All213 restaurant/menu records,114Specials profiles and479 gallery links were verified on production. Batch42 closes this research session; the target is not complete. Count each venue once per tab, even with multiple offers. Verified local/production audit:324 memberships,398 missing; Sapporo's two extra Specials do not offset other shortages.
+Target remains **30 distinct eligible restaurants in each tab of each city**. Batches **43–45** added and verified **15 restaurant/menu records, 6 Specials profiles, 211 menu entries and 62 gallery links** in local and production through content APIs. Release `157e1750` remains the deployed baseline; no application deployment this session. Current audit: **339 memberships, 386 missing**; surplus in one tab cannot offset another. Count each venue once per tab, even with multiple offers.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 8/30 | 10/30 | 14/30 | 20/30 |
-| Osaka | 6/30 | 14/30 | 9/30 | 13/30 |
-| Kyoto | 4/30 | 30/30 | 9/30 | 8/30 |
-| Nagoya | 7/30 | 5/30 | 11/30 | 12/30 |
-| Tokyo | 8/30 | 8/30 | 22/30 | 29/30 |
+| Osaka | 6/30 | 14/30 | 9/30 | 14/30 |
+| Kyoto | 7/30 | 31/30 | 9/30 | 8/30 |
+| Nagoya | 9/30 | 8/30 | 11/30 | 13/30 |
+| Tokyo | 8/30 | 8/30 | 23/30 | 32/30 |
 | Sapporo | 5/30 | 10/30 | 30/30 | 32/30 |
 
-Continue researching every under-target section, especially Coming soon across all cities and Nagoya Just opened. Refresh counts first: recent openings age out after90days and dated offers expire. Tokyo needs one more Specials venue; preserve the evidence rules rather than filling with unsupported dates, ratings or discounts.
+Continue **every under-target section**, especially Coming soon in all cities and Nagoya Just opened (22 short). Refresh counts first: recent openings age out after 90 days and dated offers expire. Audit uses current Japan-local eligibility; Los Angeles October 15 was already October 16 in Japan. Replenish October 17–22 expiries using verified successors/additional venues; never extend an offer without evidence.
 
-Use the [24-tab audit](docs/restaurant-japan-30-target-2026-10-14.md), [count CSV](docs/restaurant-japan-30-counts-2026-10-14.csv), [batch research notes](docs/restaurant-japan-30-progress-2026-10-13.md) and [latest production rollout snapshot](docs/restaurant-japan-production-2026-10-14.json). The snapshot contains latest saved profiles through batch42; older batch JSON files are research history and should not overwrite later menu/API corrections. Production pin IDs differ from local IDs: match exact branch source URLs.
+Use the [current 24-tab audit](docs/restaurant-japan-30-target-2026-10-15.md), [count CSV](docs/restaurant-japan-30-counts-2026-10-15.csv), [new batch research notes](docs/restaurant-japan-30-progress-2026-10-15.md) and [verified production additions/corrections delta](docs/restaurant-japan-production-2026-10-15.json). The [October 14 full snapshot](docs/restaurant-japan-production-2026-10-14.json) remains the older-branch baseline through batch 42; the new snapshot covers batches 43–45 and later source QA only. Older batch JSON/scratch builders must not overwrite newer menu/API corrections. Production IDs differ from local IDs: match exact branch source URLs.
 
-Next leads, not yet imported or counted: [Sapporo November openings](https://sapporo-list.info/open/november-open/), [Uwajima Basho Sapporo Soen employer listing](https://bistroplus-saiyo.jp/job/-/info/detail/M0000631), [Shokudo Hokuto Sapporo Station November recruitment](https://townwork.net/viewjob/jobid_341b77381f38889a/), [PADDLERS COFFEE Fukuoka/Ropponmatsu November report](https://konohen.media/articles/paddlers-coffee-fukuoka-ropponmatsu-open-202611/), [provisional4F Gorilla Fukuoka employer listing](https://job.inshokuten.com/kyushu/work/detail/94165/fulltime?searchJobCharacteristicId=58). Confirm dates, exact addresses and current operator evidence; do not borrow other branches' menus or photos.
+Specific held leads: Uwajima Basho Soen's operator now gives Kita 10-jo Nishi 14-chome 2-1 / Soen BRIDGE, but job says late November and booking says late October with Hiroshima copy; Hokuto jobs conflict October/November; PADDLERS lacks an exact address; provisional Gorilla contradicts November versus December–January. Sapporo November list includes **Hama Sushi Shinkotoni's stale 2024 opening**: exclude it. Verify each remaining roundup lead individually. Full sources/reasons are in the new notes.
 
-Revisit specific gaps in the batch notes: MAMA Kyoto contradictory November/December floors; future Solamachi/Gong cha/Whity launch menus and actual galleries; SMAAK Hakata courses; STANDARD DONUTS tax/signature price conflict; Yamaya Shinsaibashisuji dessert/free-drink duration and stale booking copy; Taco Bell Dotonbori exact branch prices; expired/expiring offers. Save ordinary content via `/api/admin/restaurant-content`, offers via `/api/admin/restaurant-specials`, use fresh revisions/full merged profiles, preserve original authors and unrelated sections, verify public pins/guide counts after saving. Pin images remain in Azure with source credits. Production application deploys still require a fresh explicit owner request; this session's rollout request is not standing deploy authorization.
+Revisited gaps persist: MAMA Kyoto contradictory November/December floors; Solamachi hosting outage/future Gong cha/Whity launch menus and own galleries; SMAAK Hakata named courses; STANDARD DONUTS tax/payable price; Yamaya Shinsaibashisuji dessert/drink duration; Taco Bell Dotonbori branch prices. Kyoto BOOKHOME tenants need final branch menus/prices and completed galleries. and GALLERY collaboration Nov 3–Dec 6 has six 70-minute seatings and last-order breaks; **Namba No. 1 closes Nov 18**. Andaz recurring happy hour is separate from October-only cocktails; seasonal expiry must not remove the recurring offer.
 
-
-
-
-
+Save ordinary content via `/api/admin/restaurant-content`, offers via `/api/admin/restaurant-specials`, use fresh revisions/full merged profiles, preserve original authors/unrelated sections and verify public pins/guide counts. Pin images remain in Azure with credits. Production application deployment still requires a fresh explicit owner request.
 
 # Left over: link wikis for prod
 
@@ -36,3 +33,19 @@ As of 2026-10-04 (sizing refreshed 2026-10-11). Prod's Anthropic key has no cred
 - **New pins:** `wiki:prod export --drafts DRAFTS/`, answer the jobs, `wiki:prod attach --dir DIR --drafts DRAFTS/`, then post as usual, so the pin carries its wikis (`sourceWikis`) and prod runs no wiki work.
 - **Only the wiki step is skipped on prod.** Podcast cross-checks, sentiment, stocks, awards and the other save listeners still run on prod for every post; the rest of "process locally, post the final pin" is still open.
 - Wikis pushed with `--rewrite` bump the version and put every citing pin's summary behind its links; leave it off for a backfill.
+
+
+# Cleanview energy and data-center pins — remainder (updated 2026-10-15)
+
+Batch folder (gitignored): `.scrape/prod-batches/cleanview-2026-10-14/`. Source: cleanview.co's public tables (100 rows per tab, A-Z) plus its public state pages (largest planned data centers, solar farms and batteries per state, and solar/battery "coming online soon"), scraped to `state-leads-all.json` (1,424 leads). Pins are @EnergyDesk, tags `Cleanview` + `Data Centers` / `Solar` / `Storage` (+ `Battery`, status, developer, state, grid, `Signed Tenant` only for a named or signed data-center tenant).
+
+**Done:** 188 pins on prod (ids 15643-15881; `posted-prod.json` maps draft key to prod id) and on local (ids 15519-15758; `posted-local.json`), all with ja/zh/ko translations. Read back against the drafts: 0 mismatches. `post_local.py <keys>`, `run_prod.py`, `validate.py`, `adm.py` and the translation scripts (`build.py`, `post.py`, in the session scratchpad) are the working tools; `BRIEF.md` has the drafting rules for rounds 1-6.
+
+**Still to do**
+- **Other 12 languages** (es fr de hi ar th it ru pt ms vi id) for all 188 pins: not translated. Use the same pipeline as ja/zh/ko (`GET /api/admin/translations?locale=...&after=15642`, units dictionary, one agent per chunk, check numbers/citations, post 90 rows per request, re-pull for 0 missing).
+- **Weak drafts held in `held/` (29 files, `held/dups/` has 7 superseded duplicates):** Tract Virginia Highlands (NV; acquisition only), Hop Hill (WA; no cost or date), Bouse (AZ; no cost, guessed coordinates), Silver Star (NV; two references), Adelite (TX; only a one-sentence developer mention), Avant Prairie (16-202 MW range unresolved), Aurelius 3 (link to Google Project Roman inferred), Arthur Kill (NY; Cleanview names Greenbacker, draft follows a different 15 MW project), Asheville BESS, Atticus, Ayass, 5C Phoenix PHX01, Aligned PHX-08, and the small ones (Arlington 1/2 IL, Rt 5 Le Roy NY, Van Nuys microgrid, Althea Ave, Amil IA). Promote only with a primary source plus a cost or status event.
+- **Updates, not new pins:** Aramis (pin 15558 local / prod copy): add Ava Community Energy's second amendment (RA delivery slipped April 2024 to April 2027). Alcazar (15539): add Alcazar 3 (250 MW) withdrawn 2026-09-30 per the NYISO queue file, Alcazar 4 (79 MW, 2029) still active, and Ulster County Legislature Resolution 569 (16 Dec 2025) opposing the 250 MW project. Medway Grid may be the old Cleanview "Hecate 300 MW" row (queue 1238): no source ties them.
+- **Cleanview rows still unresearched or held (~110):** queue-tracker-only, no developer, filing or cost found. Per-entry queries and next sources are in `notes/r3-*.md`, `r4-*.md`, `r5-*.md`, `r6-*.md`. Retry sources: county commissioner agendas and minutes (Texas: Freestone, Borden, Wilson, Duval, Jones, Chambers, Brazoria via newtools.cira.state.tx.us), Texas PUC and ERCOT interconnection-agreement filings, FERC eLibrary, Louisiana PSC and Washington Parish Council minutes, Maine PUC and Auburn planning, Clark County (NV) agendas, CEQAnet and county records for the California CAISO cluster (Boson, Muon, Quark, Pion, Plum, Ripple, Wingtip, Angeleno, Umbriel, Hillside), BLM ePlanning, the Zeus BESS family (TX, 1,043 MW each, sponsor unknown), Kickstart/Prairie Point/Nabla storage (TX), Key City/Permian I/Gravitas I/Shadow Ranch/Spectra Solar (TX), Cielo Hudson (CO), Gibson County (IN), St. Lawrence/Arsenal (NY), Pepper Hammock (GA), Project Roman (Google/Intersect, Deaf Smith County TX: pull TCEQ permits 184403, PSDTX1712, GHGPSDTX276 through Chrome for the engine MW).
+- **Unused state-page leads:** about 1,330 of the 1,424 leads in `state-leads-all.json` were not researched (rounds 5-6 took the 186 biggest with a named developer). Next best: the remaining data centers of 300 MW or more, then planned solar and battery "coming online soon" with a known developer.
+- **Pins to improve:** 106 of 188 have photos, only 6 reach the target of three. Missing or weak: the Fort Bliss pin uses a stock Wikimedia photo of the base, Sailfish a hearing photo, several use meeting-room or site-plan images; a Chrome or image-search pass for project renderings and photos is outstanding. Many coordinates are town or county points, labelled approximate in the address.
+- **Notes for the next session:** local `/api/pins/search` was often down while agents ran, so duplicates were checked by key against `drafts/`, `held/` and posted lists; recheck against live pins before posting. Prod image downloads sometimes 403 where local worked (iren.com), which fails the whole post: drop the image and repost. Two prod posts were once overwritten by another session's inserts (ids reused), so always read every pin back after a run. Agent search budget (about 200 per turn, shared) and the session usage limit are the main throttles; run lanes of about 12 leads each, eight at a time.

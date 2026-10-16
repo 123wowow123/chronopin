@@ -410,6 +410,7 @@ export const TAG_CLOUD_MAX = 200;
 // after an idle hour, which a quiet site mostly is, so most clouds waited.
 export async function timelineTagCounts(created: CreatedQuery, limit = TAG_CLOUD_SIZE): Promise<TagCount[]> {
   'use cache';
+  // Include reserved predicted filter
   cacheLife('hours');
   cacheTag(TAGS.timeline);
   return Pins.countTimelineTags(resolveCreatedSince(created), await timelineMinConfidence(), limit);

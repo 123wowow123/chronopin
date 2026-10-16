@@ -1048,6 +1048,8 @@ const en = {
     updatedTitle: 'Updated in the last 24 hours - show every pin updated since yesterday',
     curated: 'Curated',
     curatedTitle: 'On the curated pages - show every curated pin',
+    predicted: 'Predicted',
+    predictedTitle: 'Predicted event - show every predicted pin',
     partOfThread: 'Part of thread',
     firstInThread: 'First pin in a thread',
     showMore: 'show more',
@@ -1186,6 +1188,7 @@ const en = {
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
     thread: 'Thread',
+    predicted: 'Predicted',
     confirmed: 'Confirmed',
     scheduled: 'Scheduled',
     estimated: 'Estimated',

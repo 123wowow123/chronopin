@@ -81,6 +81,7 @@ import { pinDateRanges } from '@/lib/dateClaims';
 import { dayKeyIn, money } from '@/lib/format';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
+import { isPredictedPin, PREDICTED_TAG } from '@/lib/tags';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml } from '@/lib/sanitize';
 import { isAttendableEvent, isTicketedVenue, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
@@ -173,10 +174,15 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   const modelChart = !!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models');
   const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || carPerf || gasCarPerf || dining || hotel || modelChart ? 'mt-4' : '';
 
+  const isPredicted = isPredictedPin(pin);
   const altSet = new Set(alternateNames.map((a) => a.name.toLowerCase()));
-  const displayPin = altSet.size > 0 && pin.tags?.length
-    ? { ...pin, tags: pin.tags.filter((t) => !altSet.has(t.name.trim().toLowerCase())) }
-    : pin;
+  const filteredTags = altSet.size > 0 && pin.tags?.length
+    ? pin.tags.filter((t) => !altSet.has(t.name.trim().toLowerCase()))
+    : (pin.tags ?? []);
+  const displayTags = isPredicted && !filteredTags.some((t) => t.name.toLowerCase() === PREDICTED_TAG.toLowerCase())
+    ? [...filteredTags, { name: PREDICTED_TAG, kind: 'topic' as const, source: 'auto' as const }]
+    : filteredTags;
+  const displayPin = { ...pin, tags: displayTags };
 
   return (
     <>
@@ -584,7 +590,15 @@ async function PinBody({
 async function ThreadAwareTags({ pin, className }: { pin: PinJson; className?: string }) {
   const inThread = !!pin.parentId || !!pin.rootThread;
   const branching = inThread ? branchesUnder(await threadPins(pin.id, (await getT()).locale), pin.id) : false;
-  return <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} branching={branching} className={className} />;
+  const isPredicted = isPredictedPin(pin);
+  const baseTags = (pin.tags ?? []).map((t) =>
+    t.name.toLowerCase() === PREDICTED_TAG.toLowerCase() ? { ...t, kind: 'reserved' as const } : t,
+  );
+  const tags =
+    isPredicted && !baseTags.some((t) => t.name.toLowerCase() === PREDICTED_TAG.toLowerCase())
+      ? [{ name: PREDICTED_TAG, kind: 'reserved' as const, source: 'auto' as const }, ...baseTags]
+      : baseTags;
+  return <PinTags tags={tags} categories={pin.categories?.slice(1)} branching={branching} className={className} />;
 }
 
 // The thread pane's nesting: pixels a branch steps in, and how many steps show.

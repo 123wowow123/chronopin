@@ -1048,6 +1048,8 @@ const ms: Messages = {
     updatedTitle: 'Dikemas kini dalam 24 jam lalu - tunjukkan semua pin yang dikemas kini sejak semalam',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'Diramalkan',
+    predictedTitle: 'Diramalkan - tag:Predicted',
     partOfThread: 'Sebahagian daripada utas',
     firstInThread: 'Pin pertama dalam utas',
     showMore: 'tunjuk lagi',
@@ -1186,6 +1188,7 @@ const ms: Messages = {
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
     thread: 'Utas',
+    predicted: 'Diramalkan',
     confirmed: 'Disahkan',
     scheduled: 'Dijadualkan',
     estimated: 'Dianggarkan',

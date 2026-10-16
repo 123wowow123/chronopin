@@ -1041,6 +1041,8 @@ const ja: Messages = {
     updatedTitle: '24時間以内に更新 - 昨日以降に更新されたピンをすべて表示',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: '予測',
+    predictedTitle: '予測 - tag:Predicted',
     partOfThread: 'スレッドの一部',
     firstInThread: 'スレッドの最初のピン',
     showMore: 'もっと見る',
@@ -1176,6 +1178,7 @@ const ja: Messages = {
   },
   reserved: {
     thread: 'スレッド',
+    predicted: '予測',
     confirmed: '確定',
     scheduled: '予定',
     estimated: '推定',

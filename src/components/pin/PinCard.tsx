@@ -35,7 +35,7 @@ import { WeatherIcon } from './WeatherIcon';
 import { useT } from '@/lib/client/i18n';
 import { pinTextDir } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
-import { isPredictedPin } from '@/lib/tags';
+import { isPredictedPin, PREDICTED_TAG } from '@/lib/tags';
 
 const CARD_SIZES = '(max-width: 640px) 100vw, 448px';
 
@@ -193,6 +193,16 @@ export function PinCard({
           {pin.curated ? (
             <RefineLink field="tag" value="Curated" className={`${STATUS_PILL} bg-curated/15 font-luxe italic text-curated hover:bg-curated/25`} title={t('card.curatedTitle')}>
               {t('card.curated')}
+            </RefineLink>
+          ) : null}
+          {isPredicted ? (
+            <RefineLink
+              field="tag"
+              value={PREDICTED_TAG}
+              className={`${STATUS_PILL} bg-tags/15 text-tags hover:bg-tags/25`}
+              title={t('card.predictedTitle')}
+            >
+              {t('card.predicted')}
             </RefineLink>
           ) : null}
           {postedToday ? (

@@ -1047,6 +1047,8 @@ const vi: Messages = {
     updatedTitle: 'Cập nhật trong 24 giờ qua - xem mọi ghim được cập nhật từ hôm qua',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'Dự đoán',
+    predictedTitle: 'Dự đoán - tag:Predicted',
     partOfThread: 'Thuộc một chuỗi',
     firstInThread: 'Ghim đầu tiên trong một chuỗi',
     showMore: 'xem thêm',
@@ -1185,6 +1187,7 @@ const vi: Messages = {
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
     thread: 'Chuỗi',
+    predicted: 'Dự đoán',
     confirmed: 'Đã xác nhận',
     scheduled: 'Đã lên lịch',
     estimated: 'Ước tính',

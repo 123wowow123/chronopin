@@ -1054,6 +1054,8 @@ const hi: Messages = {
     updatedTitle: 'पिछले 24 घंटों में अपडेट किया गया - कल से अपडेट हुए सभी पिन देखें',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'अनुमानित',
+    predictedTitle: 'अनुमानित - tag:Predicted',
     partOfThread: 'थ्रेड का हिस्सा',
     firstInThread: 'थ्रेड का पहला पिन',
     showMore: 'और दिखाएं',
@@ -1192,6 +1194,7 @@ const hi: Messages = {
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
     thread: 'थ्रेड',
+    predicted: 'अनुमानित',
     confirmed: 'पुष्ट',
     scheduled: 'निर्धारित',
     estimated: 'अनुमानित',

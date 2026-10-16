@@ -1037,6 +1037,8 @@ const th: Messages = {
     updatedTitle: 'อัปเดตใน 24 ชั่วโมงที่ผ่านมา - แสดงหมุดทั้งหมดที่อัปเดตตั้งแต่เมื่อวาน',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'การคาดการณ์',
+    predictedTitle: 'การคาดการณ์ - tag:Predicted',
     partOfThread: 'ส่วนหนึ่งของเธรด',
     firstInThread: 'หมุดแรกในเธรด',
     showMore: 'แสดงเพิ่มเติม',
@@ -1172,6 +1174,7 @@ const th: Messages = {
   },
   reserved: {
     thread: 'เธรด',
+    predicted: 'การคาดการณ์',
     confirmed: 'ยืนยันแล้ว',
     scheduled: 'กำหนดการ',
     estimated: 'ประมาณการ',

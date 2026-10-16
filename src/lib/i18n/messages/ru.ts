@@ -1084,6 +1084,8 @@ const ru: Messages = {
     updatedTitle: 'Обновлено за последние 24 часа — показать все пины, обновлённые со вчерашнего дня',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'Прогноз',
+    predictedTitle: 'Прогноз - tag:Predicted',
     partOfThread: 'Часть цепочки',
     firstInThread: 'Первый пин цепочки',
     showMore: 'показать больше',
@@ -1239,6 +1241,7 @@ const ru: Messages = {
   },
   reserved: {
     thread: 'Цепочка',
+    predicted: 'Прогноз',
     confirmed: 'Подтверждено',
     scheduled: 'Запланировано',
     estimated: 'Примерно',

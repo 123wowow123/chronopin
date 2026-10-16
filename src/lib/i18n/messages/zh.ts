@@ -1041,6 +1041,8 @@ const zh: Messages = {
     updatedTitle: '过去 24 小时内更新 - 查看昨天以来更新的所有图钉',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: '预测',
+    predictedTitle: '预测 - tag:Predicted',
     partOfThread: '属于某个串',
     firstInThread: '串中的第一个图钉',
     showMore: '显示更多',
@@ -1176,6 +1178,7 @@ const zh: Messages = {
   },
   reserved: {
     thread: '串',
+    predicted: '预测',
     confirmed: '已确认',
     scheduled: '已排期',
     estimated: '预估',

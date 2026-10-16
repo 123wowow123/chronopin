@@ -180,21 +180,23 @@ export function awardTagsInText(text: string | null | undefined): string[] {
   return uniqueTags(found);
 }
 
-/* Threads */
+/* Threads and Predictions */
 
 // What a pin in a thread is tagged: it answers another pin, or one answers it.
 // PinTagView derives the tag (0056); nothing writes it, and its kind there is
 // what tagKind says here - 'reserved' (0063), since the site alone writes it.
 export const THREAD_TAG = 'Thread';
+export const PREDICTION_MARKET_TAG = 'Prediction Market';
+export const PREDICTED_TAG = 'Predicted';
 
 /* Reserved */
 
 // The site's own filters, which read as tags without being anyone's: the
-// thread tag, and how well a pin's date and evidence are backed (the
-// confidence: terms a date badge and a score badge write). They stand in the
-// tag cloud and in the search box's suggestions beside real tags, marked as
-// the site's, and picking one writes the term the search already understands
-// (src/lib/searchTerms.ts) rather than a tag: term.
+// thread tag, how firmly a pin's date and evidence are backed (the
+// confidence: terms a date badge and a score badge write), and predicted pins.
+// They stand in the tag cloud and in the search box's suggestions beside real
+// tags, marked as the site's, and picking one writes the term the search
+// already understands (src/lib/searchTerms.ts) rather than an ordinary tag: term.
 //
 // Nobody can tag a pin one of these names: PinTag drops them on the way in
 // (src/server/model/pinTag.ts), so what a reserved name filters by is always
@@ -208,7 +210,7 @@ export type ReservedTag = {
   // The term a pick writes.
   field: 'tag' | 'confidence';
   value: string;
-  icon: 'thread' | 'shield';
+  icon: 'thread' | 'shield' | 'sparkle';
 };
 
 // The date confidence levels, firmest first, as their badge writes them
@@ -218,11 +220,12 @@ const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'un
 // The level the term's value stands for in the database, where they differ.
 const STORED_LEVEL: Record<string, string> = { unverified: 'unknown' };
 
-// Thread first, then how firmly the date is given, then how well the pin is
-// evidenced overall (high to low): the order they are shown in, which is
-// their own and not their counts'.
+// Thread and Predicted first, then how firmly the date is given, then how
+// well the pin is evidenced overall (high to low): the order they are shown
+// in, which is their own and not their counts'.
 export const RESERVED_TAGS: ReservedTag[] = [
   { key: 'thread', name: THREAD_TAG, field: 'tag', value: THREAD_TAG, icon: 'thread' },
+  { key: 'predicted', name: PREDICTED_TAG, field: 'tag', value: PREDICTED_TAG, icon: 'sparkle' },
   ...CONFIDENCE_LEVELS.map((level): ReservedTag => ({ key: level, name: capitalize(level), field: 'confidence', value: level, icon: 'shield' })),
   ...[...CONFIDENCE_BANDS].reverse().map(({ band }): ReservedTag => ({ key: band, name: `${capitalize(band)} confidence`, field: 'confidence', value: band, icon: 'shield' })),
 ];
@@ -282,9 +285,6 @@ export function reservedSuggestions(text: string): ReservedTag[] {
 }
 
 /* Prediction markets */
-
-export const PREDICTION_MARKET_TAG = 'Prediction Market';
-export const PREDICTED_TAG = 'Predicted';
 
 export function isPredictedPin(pin: {
   tags?: { name: string }[] | null;

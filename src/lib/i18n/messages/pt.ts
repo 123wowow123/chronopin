@@ -1038,6 +1038,8 @@ const pt: Messages = {
     updatedTitle: 'Atualizado nas últimas 24 horas - mostrar todos os pins atualizados desde ontem',
     curated: 'Curated',
     curatedTitle: 'Curated - tag:Curated',
+    predicted: 'Previsto',
+    predictedTitle: 'Previsto - tag:Predicted',
     partOfThread: 'Parte de uma thread',
     firstInThread: 'Primeiro pin de uma thread',
     showMore: 'mostrar mais',
@@ -1173,6 +1175,7 @@ const pt: Messages = {
   },
   reserved: {
     thread: 'Thread',
+    predicted: 'Previsto',
     confirmed: 'Confirmado',
     scheduled: 'Agendado',
     estimated: 'Estimado',
