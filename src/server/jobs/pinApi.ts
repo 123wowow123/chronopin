@@ -181,3 +181,15 @@ export async function sponsoredTranslationRequest(method: 'GET' | 'POST', path: 
     : await signToken(admin.id);
   return call<Record<string, any>>(method, path, { token, body });
 }
+
+
+// Sends disclosed stock trades to production's admin endpoint, signed as the
+// existing admin (the personTrades task). Only that one endpoint.
+export async function personTradesRequest(filings: unknown[]) {
+  const [admin] = await db.query<{ id: number }>(`SELECT "id" FROM "User" WHERE "role" = 'admin' ORDER BY "id" LIMIT 1`);
+  if (!admin) throw new Error('No admin account available for person trades');
+  const token = prodBase()
+    ? await new SignJWT({ id: admin.id }).setProtectedHeader({ alg: 'HS256', typ: 'JWT' }).setIssuedAt().setExpirationTime('5h').sign(new TextEncoder().encode(process.env.JOBS_PROD_SESSION_SECRET))
+    : await signToken(admin.id);
+  return call<{ added: number; missing: string[] }>('POST', '/api/admin/person-trades', { token, body: { filings } });
+}

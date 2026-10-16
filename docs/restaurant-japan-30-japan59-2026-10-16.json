@@ -1,0 +1,783 @@
+{
+  "checkedAt": "2026-10-16",
+  "country": "Japan",
+  "regions": [
+    "fukuoka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Waratako — Konoha Mall Hashimoto Opens in Hashimoto",
+        "description": "A recently opened takoyaki counter in Hashimoto, serving soft-centred Kansai-style takoyaki with several toppings.",
+        "sourceUrl": "https://konohamall.com/shop/detail/256",
+        "address": "1F Hashimoto Marche, Konoha Mall Hashimoto, 2-27-2 Hashimoto, Nishi-ku, Fukuoka",
+        "productName": "Waratako — Konoha Mall Hashimoto",
+        "utcStartDateTime": "2026-10-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator announcement dated October 8, 2026 and exact landlord branch news confirm October 8 opening of this Hashimoto 1F counter. The October 8–12 launch discount is separate and has expired.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Hashimoto",
+          "Takoyaki"
+        ],
+        "longFormSummary": "<p>A recently opened takoyaki counter in Hashimoto, serving soft-centred Kansai-style takoyaki with several toppings.<cite data-ref=\"https://konohamall.com/shop/detail/256\"></cite></p><p>Operator announcement dated October 8, 2026 and exact landlord branch news confirm October 8 opening of this Hashimoto 1F counter. The October 8–12 launch discount is separate and has expired.</p>",
+        "references": [
+          {
+            "url": "https://konohamall.com/shop/detail/256",
+            "title": "Waratako — Konoha Mall Hashimoto source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 8, 2026 and exact landlord branch news confirm October 8 opening of this Hashimoto 1F counter. The October 8–12 launch discount is separate and has expired."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000132.000078364.html",
+            "title": "Waratako — Konoha Mall Hashimoto source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 8, 2026 and exact landlord branch news confirm October 8 opening of this Hashimoto 1F counter. The October 8–12 launch discount is separate and has expired."
+          },
+          {
+            "url": "https://konohamall.com/news/infomation/1523",
+            "title": "Waratako — Konoha Mall Hashimoto source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 8, 2026 and exact landlord branch news confirm October 8 opening of this Hashimoto 1F counter. The October 8–12 launch discount is separate and has expired."
+          },
+          {
+            "url": "https://waratako.com/shop/",
+            "title": "Waratako — Konoha Mall Hashimoto source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 8, 2026 and exact landlord branch news confirm October 8 opening of this Hashimoto 1F counter. The October 8–12 launch discount is separate and has expired."
+          },
+          {
+            "url": "https://waratako.com/menu/",
+            "title": "Waratako — Konoha Mall Hashimoto source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 8, 2026 and exact landlord branch news confirm October 8 opening of this Hashimoto 1F counter. The October 8–12 launch discount is separate and has expired."
+          },
+          {
+            "url": "https://yurunago.or.jp/spot/waratako-konohamall-hashimoto-open-2026/",
+            "title": "Waratako — Konoha Mall Hashimoto source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 8, 2026 and exact landlord branch news confirm October 8 opening of this Hashimoto 1F counter. The October 8–12 launch discount is separate and has expired."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://konohamall.com/shop/detail/256",
+          "menu": {
+            "pinSourceUrl": "https://konohamall.com/shop/detail/256",
+            "name": "Waratako — Konoha Mall Hashimoto",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Hashimoto launch selection",
+                "url": "https://konohamall.com/shop/detail/256",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Salt, green-onion and mayonnaise takoyaki",
+                    "price": 700,
+                    "note": "Published regular price, tax included"
+                  },
+                  {
+                    "name": "Classic sauce takoyaki",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Mentaiko mayonnaise takoyaki",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Exact landlord and operator launch pages checked with branch gallery, operator menu/store lists and local branch reporting. Only the salt-green-onion-mayonnaise price is verified for this branch; other named branch dishes have no verified branch prices. The ¥500 opening price ended October 12, 2026 and is not an active Special. Operator national gallery includes other-branch menus/prices (e.g. ¥650), which are not assigned here. Generic seasonal national menu is not automatically this branch’s current menu."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://konohamall.com/shop/detail/256",
+            "name": "Waratako — Konoha Mall Hashimoto",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://waratako.com/",
+            "phone": "092-400-3560",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–21:00; mall exceptions apply"
+              }
+            ],
+            "detailsSourceUrl": "https://waratako.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://konohamall.com/shop/detail/256"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000132.000078364.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://konohamall.com/news/infomation/1523"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://waratako.com/shop/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://waratako.com/menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://yurunago.or.jp/spot/waratako-konohamall-hashimoto-open-2026/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "waratako",
+            "name": "Waratako — Konoha Mall Hashimoto",
+            "neighborhood": "Hashimoto",
+            "cuisine": "Takoyaki",
+            "description": "A recently opened takoyaki counter in Hashimoto, serving soft-centred Kansai-style takoyaki with several toppings.",
+            "address": "1F Hashimoto Marche, Konoha Mall Hashimoto, 2-27-2 Hashimoto, Nishi-ku, Fukuoka",
+            "websiteUrl": "https://waratako.com/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-waratako-1-45f304bfee497337.webp",
+            "imageCredit": "Waratako / Konoha Mall Hashimoto",
+            "imageSourceUrl": "https://konohamall.com/shop/detail/256",
+            "imageNote": "Exact branch photograph published in landlord gallery.",
+            "openingConfirmed": true,
+            "day": "2026-10-08"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-waratako-1-45f304bfee497337.webp",
+          "sha256": "45f304bfee49733704678e57c3b30a7c44ce6d379e4de07d22904408e2134598",
+          "width": 320,
+          "height": 240,
+          "credit": "Waratako / Konoha Mall Hashimoto",
+          "note": "Exact branch photograph published in landlord gallery.",
+          "sourcePage": "https://konohamall.com/shop/detail/256"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-waratako-4-4018ccaffec075ea.webp",
+          "sha256": "4018ccaffec075eacbf688ae67ec993c6a1bd7607cf3d02efa7eb42adfb7c6b2",
+          "width": 1600,
+          "height": 1067,
+          "credit": "SMILE WHO’S / Hospitality Operations",
+          "note": "Salt, green-onion and mayonnaise takoyaki in the operator’s opening announcement; promotional food image.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000132.000078364.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-waratako-6-0f7901adab16373b.webp",
+          "sha256": "0f7901adab16373b4cfb180eb82b8fb8a0fe5cf953f2e93d8b567ae88bc08aa6",
+          "width": 1600,
+          "height": 1067,
+          "credit": "SMILE WHO’S / Hospitality Operations",
+          "note": "Operator brand preparation photograph, not a photograph of this branch’s kitchen.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000132.000078364.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi Opens in Jigyohama / Momochi",
+        "description": "A new takeaway counter opposite HalloDay selling Oita-style fried chicken and toriten.",
+        "sourceUrl": "https://www.mec-markis.jp/fukuoka-momochi/search/detail.php?shop_id=11305",
+        "address": "1F MARK IS Fukuoka Momochi, 2-2-1 Jigyohama, Chuo-ku, Fukuoka",
+        "productName": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi",
+        "utcStartDateTime": "2026-10-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator announcement dated October 9, 2026 confirms this branch opens October 9; president’s October 10 firsthand opening-day account and landlord news corroborate it. Older September recruitment estimates are superseded.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Jigyohama / Momochi",
+          "Karaage / takeaway"
+        ],
+        "longFormSummary": "<p>A new takeaway counter opposite HalloDay selling Oita-style fried chicken and toriten.<cite data-ref=\"https://www.mec-markis.jp/fukuoka-momochi/search/detail.php?shop_id=11305\"></cite></p><p>Operator announcement dated October 9, 2026 confirms this branch opens October 9; president’s October 10 firsthand opening-day account and landlord news corroborate it. Older September recruitment estimates are superseded.</p>",
+        "references": [
+          {
+            "url": "https://www.mec-markis.jp/fukuoka-momochi/search/detail.php?shop_id=11305",
+            "title": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 9, 2026 confirms this branch opens October 9; president’s October 10 firsthand opening-day account and landlord news corroborate it. Older September recruitment estimates are superseded."
+          },
+          {
+            "url": "https://oita-karaage.com/news/10-9%e3%83%bb%e3%83%9e%e3%83%bc%e3%82%af%e3%82%a4%e3%82%ba%e7%a6%8f%e5%b2%a1%e3%82%82%e3%82%82%e3%81%a1%e5%ba%97%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%ef%bc%81/",
+            "title": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 9, 2026 confirms this branch opens October 9; president’s October 10 firsthand opening-day account and landlord news corroborate it. Older September recruitment estimates are superseded."
+          },
+          {
+            "url": "https://ameblo.jp/poppo-k/entry-12981191374.html",
+            "title": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 9, 2026 confirms this branch opens October 9; president’s October 10 firsthand opening-day account and landlord news corroborate it. Older September recruitment estimates are superseded."
+          },
+          {
+            "url": "https://www.mec-markis.jp/fukuoka-momochi/news/detail.php?id=546750",
+            "title": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 9, 2026 confirms this branch opens October 9; president’s October 10 firsthand opening-day account and landlord news corroborate it. Older September recruitment estimates are superseded."
+          },
+          {
+            "url": "https://oita-karaage.com/menu/",
+            "title": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 9, 2026 confirms this branch opens October 9; president’s October 10 firsthand opening-day account and landlord news corroborate it. Older September recruitment estimates are superseded."
+          },
+          {
+            "url": "https://oita-karaage.com/reserve_form/shop.php?campaign_id=4",
+            "title": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi source",
+            "confidence": 90,
+            "reasoning": "Operator announcement dated October 9, 2026 confirms this branch opens October 9; president’s October 10 firsthand opening-day account and landlord news corroborate it. Older September recruitment estimates are superseded."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.mec-markis.jp/fukuoka-momochi/search/detail.php?shop_id=11305",
+          "menu": {
+            "pinSourceUrl": "https://www.mec-markis.jp/fukuoka-momochi/search/detail.php?shop_id=11305",
+            "name": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Momochi landlord-confirmed dishes",
+                "url": "https://www.mec-markis.jp/fukuoka-momochi/search/detail.php?shop_id=11305",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Original salt karaage",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Oita toriten",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Exact landlord shop data names these two dishes. Checked operator opening announcement, president’s opening-day gallery, ordinary operator shop/menu lists, exact landlord news/shop data and online branch selector. Branch prices are not published in these sources and its online selector does not accept future reservations; no other branch order form opened or substituted. National menu lists salt karaage ¥130 each / ¥120 with ten or more and toriten ¥380 per five, but a Momochi-specific price could not be verified, so those prices are not assigned here. The branch is a takeaway deli counter; no private dining room or table service claimed. No unverified phone copied from mall switchboard."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.mec-markis.jp/fukuoka-momochi/search/detail.php?shop_id=11305",
+            "name": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://oita-karaage.com/news/10-9%e3%83%bb%e3%83%9e%e3%83%bc%e3%82%af%e3%82%a4%e3%82%ba%e7%a6%8f%e5%b2%a1%e3%82%82%e3%82%82%e3%81%a1%e5%ba%97%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%ef%bc%81/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–21:00 according to exact landlord branch data; confirm made-to-order cutoff"
+              }
+            ],
+            "detailsSourceUrl": "https://oita-karaage.com/news/10-9%e3%83%bb%e3%83%9e%e3%83%bc%e3%82%af%e3%82%a4%e3%82%ba%e7%a6%8f%e5%b2%a1%e3%82%82%e3%82%82%e3%81%a1%e5%ba%97%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%ef%bc%81/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.mec-markis.jp/fukuoka-momochi/search/detail.php?shop_id=11305"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://ameblo.jp/poppo-k/entry-12981191374.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.mec-markis.jp/fukuoka-momochi/news/detail.php?id=546750"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://oita-karaage.com/menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://oita-karaage.com/reserve_form/shop.php?campaign_id=4"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "poppo",
+            "name": "Poppo Ojisan no Oita Karaage — MARK IS Fukuoka Momochi",
+            "neighborhood": "Jigyohama / Momochi",
+            "cuisine": "Karaage / takeaway",
+            "description": "A new takeaway counter opposite HalloDay selling Oita-style fried chicken and toriten.",
+            "address": "1F MARK IS Fukuoka Momochi, 2-2-1 Jigyohama, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://oita-karaage.com/news/10-9%e3%83%bb%e3%83%9e%e3%83%bc%e3%82%af%e3%82%a4%e3%82%ba%e7%a6%8f%e5%b2%a1%e3%82%82%e3%82%82%e3%81%a1%e5%ba%97%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%ef%bc%81/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-poppo-6-d6ca28c498927a48.webp",
+            "imageCredit": "Tetsuya Kawabe / Oita Karaage",
+            "imageSourceUrl": "https://ameblo.jp/poppo-k/entry-12981191374.html",
+            "imageNote": "Opening-day Momochi branch counter.",
+            "openingConfirmed": true,
+            "day": "2026-10-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-poppo-6-d6ca28c498927a48.webp",
+          "sha256": "d6ca28c498927a48235ca4964728e738581f51edb19a7117b6f598ced408bb4d",
+          "width": 1477,
+          "height": 1108,
+          "credit": "Tetsuya Kawabe / Oita Karaage",
+          "note": "Opening-day Momochi branch counter.",
+          "sourcePage": "https://ameblo.jp/poppo-k/entry-12981191374.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-poppo-5-62efe3384c985c0c.webp",
+          "sha256": "62efe3384c985c0c7492c9716f933623afc5f7d862d98b4ce5a4208368b1331b",
+          "width": 1477,
+          "height": 1108,
+          "credit": "Tetsuya Kawabe / Oita Karaage",
+          "note": "Momochi branch location opposite HalloDay, marked by the operator’s arrow.",
+          "sourcePage": "https://ameblo.jp/poppo-k/entry-12981191374.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-poppo-7-ff5f7b1149ebbb78.webp",
+          "sha256": "ff5f7b1149ebbb7845897bb8dbde1fe7eaa4a8faf6855e52f1cc78358f1bfe0e",
+          "width": 1477,
+          "height": 1108,
+          "credit": "Tetsuya Kawabe / Oita Karaage",
+          "note": "Opening-day Momochi branch counter.",
+          "sourcePage": "https://ameblo.jp/poppo-k/entry-12981191374.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "OREC green lab Fukuoka — Akasaka cafe",
+        "description": "A cafe and library near Akasaka Station, with rice lattes, rice-flour food and a five-day seventh-anniversary guest menu.",
+        "sourceUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+        "address": "1-13-1 Akasaka, Chuo-ku, Fukuoka",
+        "productName": "OREC green lab Fukuoka",
+        "utcStartDateTime": "2019-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Special",
+          "Fukuoka",
+          "Japan",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A cafe and library near Akasaka Station, with rice lattes, rice-flour food and a five-day seventh-anniversary guest menu.<cite data-ref=\"https://www.orec.co.jp/greenlab-fukuoka/\"></cite></p><p>Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening.</p>",
+        "references": [
+          {
+            "url": "https://www.orec.co.jp/greenlab-fukuoka/",
+            "title": "OREC green lab Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening."
+          },
+          {
+            "url": "https://www.value-press.com/pressrelease/230518",
+            "title": "OREC green lab Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening."
+          },
+          {
+            "url": "https://note.com/orec/n/n36328588ca97",
+            "title": "OREC green lab Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening."
+          },
+          {
+            "url": "https://www.orec.co.jp/greenlab-fukuoka/news/2055/",
+            "title": "OREC green lab Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening."
+          },
+          {
+            "url": "https://www.orec.co.jp/greenlab-fukuoka/news/2041/",
+            "title": "OREC green lab Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening."
+          },
+          {
+            "url": "https://www.orec.co.jp/greenlab-fukuoka/news/2053/",
+            "title": "OREC green lab Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening."
+          },
+          {
+            "url": "https://www.orec.co.jp/greenlab-fukuoka/pdf/orec_menu.pdf",
+            "title": "OREC green lab Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000075.000080393.html",
+            "title": "OREC green lab Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Contemporaneous OREC launch release and the operator’s own June 22, 2022 history explicitly confirm October 31, 2019 opening at this Akasaka address. October 27–31, 2026 is the anniversary offer, not the branch opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+          "menu": {
+            "pinSourceUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+            "name": "OREC green lab Fukuoka",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Current cafe menu — dine-in and takeaway",
+                "url": "https://www.orec.co.jp/greenlab-fukuoka/pdf/orec_menu.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Plain rice latte",
+                    "price": 660,
+                    "note": "Dine-in; takeaway ¥648. Hot or iced."
+                  },
+                  {
+                    "name": "Sweet-potato rice latte",
+                    "price": 660,
+                    "note": "Dine-in; takeaway ¥648. Hot or iced."
+                  },
+                  {
+                    "name": "Black-sesame rice latte",
+                    "price": 682,
+                    "note": "Dine-in; takeaway ¥669. Hot or iced."
+                  },
+                  {
+                    "name": "Hojicha rice latte",
+                    "price": 682,
+                    "note": "Dine-in; takeaway ¥669. Hot or iced."
+                  },
+                  {
+                    "name": "Kinako rice latte",
+                    "price": 682,
+                    "note": "Dine-in; takeaway ¥669. Hot or iced."
+                  },
+                  {
+                    "name": "Cassis rice latte",
+                    "price": 682,
+                    "note": "Dine-in; takeaway ¥669. Iced only."
+                  },
+                  {
+                    "name": "Coffee",
+                    "price": 495,
+                    "note": "Dine-in; takeaway ¥486. Hot or iced."
+                  },
+                  {
+                    "name": "Cafe latte",
+                    "price": 550,
+                    "note": "Dine-in; takeaway ¥540. Hot or iced."
+                  },
+                  {
+                    "name": "Soy latte",
+                    "price": 550,
+                    "note": "Dine-in; takeaway ¥540. Hot or iced."
+                  },
+                  {
+                    "name": "Sencha",
+                    "price": 462,
+                    "note": "Dine-in; takeaway ¥453. Hot or iced."
+                  },
+                  {
+                    "name": "Hojicha",
+                    "price": 462,
+                    "note": "Dine-in; takeaway ¥453. Hot or iced."
+                  },
+                  {
+                    "name": "Yomogi tea",
+                    "price": 462,
+                    "note": "Dine-in; takeaway ¥453. Hot only."
+                  },
+                  {
+                    "name": "Lemonade",
+                    "price": 605,
+                    "note": "Dine-in; takeaway ¥594. Hot or iced."
+                  },
+                  {
+                    "name": "Ginger ale",
+                    "price": 605,
+                    "note": "Dine-in; takeaway ¥594. Iced only."
+                  },
+                  {
+                    "name": "Ginger soy latte",
+                    "price": 605,
+                    "note": "Dine-in; takeaway ¥594. Hot or iced."
+                  },
+                  {
+                    "name": "Matcha latte",
+                    "price": 660,
+                    "note": "Dine-in; takeaway ¥648. Hot or iced."
+                  },
+                  {
+                    "name": "Sprouted-brown-rice onigiri set",
+                    "price": 990,
+                    "note": "Dine-in; three rice balls, three small dishes and miso soup. Takeaway ¥1,031 includes ¥60 container and omits soup."
+                  },
+                  {
+                    "name": "Three sprouted-brown-rice onigiri — standalone",
+                    "price": 660
+                  },
+                  {
+                    "name": "Rice accompaniments set meal",
+                    "price": 880,
+                    "note": "Sprouted brown rice, three selectable sides and miso soup; extra rice ¥110"
+                  },
+                  {
+                    "name": "Tomato and cheese hot sandwich",
+                    "price": 660,
+                    "note": "Dine-in; takeaway ¥648"
+                  },
+                  {
+                    "name": "Tuna and corn hot sandwich",
+                    "price": 715,
+                    "note": "Dine-in; takeaway ¥702"
+                  },
+                  {
+                    "name": "Kinpira burdock hot sandwich",
+                    "price": 715,
+                    "note": "Dine-in; takeaway ¥702"
+                  },
+                  {
+                    "name": "Toast with jam or soy butter",
+                    "price": 550
+                  },
+                  {
+                    "name": "Sweet-potato toast",
+                    "price": 715
+                  },
+                  {
+                    "name": "Rice-flour mushroom and pumpkin pizza",
+                    "price": 770,
+                    "note": "About 14 cm; wakame soup included"
+                  },
+                  {
+                    "name": "Rice-flour baked-curry pizza",
+                    "price": 770,
+                    "note": "About 14 cm; wakame soup included"
+                  }
+                ],
+                "note": "Published price columns transcribed after visual PDF review; dine-in prices are primary and separately printed takeaway totals are in item notes. Sweet-potato rice latte is ¥660/¥648, not the neighboring ¥682/¥669 variants. Rice meals start at 10:00 and may sell out; food last order 17:30, one order per person. Regular food-plus-drink ¥50 benefit is printed; no stacking with anniversary benefit inferred. Decaf coffee is available at the same price but is not the original blend. Sweets cabinet rotates and has no named fixed roster/prices in this PDF. Current dated October/November notices supersede homepage image’s old 10:00–19:00 hours.",
+                "documentUrl": "https://www.orec.co.jp/greenlab-fukuoka/pdf/orec_menu.pdf"
+              },
+              {
+                "label": "7th ANNIVERSARY FESTA — rice-flour menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000000075.000080393.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "R. BAKERY rice-flour bread",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Colombe Blanche rice-flour choux cream",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Koide Farm rice-flour pudding",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "October 27–31, 2026, 09:00–18:00. Event products sold at the exact cafe; individual prices not published. Operator event page confirms ¥50 off a drink when bought together with a seventh-anniversary item. No additional stacking discount promised. Baking workshop is separate, not a dining menu. Operator pages conflict on reusable-tumbler drink benefit (¥20 vs ¥100); that benefit is excluded pending clarification."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+            "name": "OREC green lab Fukuoka",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Tuesday–Saturday",
+                "hours": "09:00–18:00; food last order 17:30; rice meals from 10:00"
+              },
+              {
+                "days": "Closures",
+                "hours": "Sunday, Monday, public holidays; November 21, 2026 additionally closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.value-press.com/pressrelease/230518"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://note.com/orec/n/n36328588ca97"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.orec.co.jp/greenlab-fukuoka/news/2055/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.orec.co.jp/greenlab-fukuoka/news/2041/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.orec.co.jp/greenlab-fukuoka/news/2053/"
+              }
+            ]
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-orec-1-3d58bea60eb5c68b.webp",
+          "sha256": "3d58bea60eb5c68b99bb8ca34a59c869fbeeb3b563c4910aee80c52a03cc4141",
+          "width": 1600,
+          "height": 533,
+          "credit": "OREC green lab Fukuoka",
+          "note": "Official cafe interior visual.",
+          "sourcePage": "https://www.orec.co.jp/greenlab-fukuoka/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-orec-2-70ba87a11a9b98ae.webp",
+          "sha256": "70ba87a11a9b98aea136cdf4d7b0ac82cc4a1777dcc717facbf1d000a70c627d",
+          "width": 1200,
+          "height": 428,
+          "credit": "OREC green lab Fukuoka",
+          "note": "Official cafe food/drink photograph; actual menu is separately transcribed from current PDF.",
+          "sourcePage": "https://www.orec.co.jp/greenlab-fukuoka/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-orec-3-c06ba0ec58f90281.webp",
+          "sha256": "c06ba0ec58f90281505856c53517fc91e0c491af20eb719f4aa0a9e15c6c4edd",
+          "width": 1600,
+          "height": 1600,
+          "credit": "OREC green lab Fukuoka",
+          "note": "Anniversary guest-product photograph; not an ordinary permanent-menu item.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000075.000080393.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-orec-4-82e8ed9f699307b9.webp",
+          "sha256": "82e8ed9f699307b9207a5599059c853a9d5c8506bbca4ae351eaab2c1bb61140",
+          "width": 600,
+          "height": 600,
+          "credit": "OREC green lab Fukuoka",
+          "note": "Anniversary guest-product photograph; not an ordinary permanent-menu item.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000075.000080393.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+          "name": "OREC green lab Fukuoka",
+          "checkedAt": "2026-10-16",
+          "menus": [
+            {
+              "label": "7th ANNIVERSARY FESTA — rice-flour menu",
+              "url": "https://prtimes.jp/main/html/rd/p/000000075.000080393.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "R. BAKERY rice-flour bread",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Colombe Blanche rice-flour choux cream",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Koide Farm rice-flour pudding",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "note": "October 27–31, 2026, 09:00–18:00. Event products sold at the exact cafe; individual prices not published. Operator event page confirms ¥50 off a drink when bought together with a seventh-anniversary item. No additional stacking discount promised. Baking workshop is separate, not a dining menu. Operator pages conflict on reusable-tumbler drink benefit (¥20 vs ¥100); that benefit is excluded pending clarification."
+            }
+          ],
+          "specials": [
+            {
+              "title": "7th ANNIVERSARY FESTA — rice-flour menu",
+              "kind": "other",
+              "description": "Five-day rice-flour guest menu; buy an anniversary item and a drink together for ¥50 off the drink.",
+              "sourceUrl": "https://www.orec.co.jp/greenlab-fukuoka/news/2055/",
+              "menuLabel": "7th ANNIVERSARY FESTA — rice-flour menu",
+              "discounted": true,
+              "validFrom": "2026-10-27",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Anniversary menu item and drink must be purchased together.",
+                "Individual bakery/sweet prices are not published.",
+                "No stacking with the regular food-and-drink discount is promised.",
+                "Tumbler benefits and workshop admission are separate."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "09:00",
+                    "end": "18:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "1-13-1 Akasaka, Chuo-ku, Fukuoka",
+          "neighborhood": "Akasaka",
+          "websiteUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch59-orec-1-3d58bea60eb5c68b.webp",
+            "alt": "OREC green lab Fukuoka — Official cafe interior visual.",
+            "credit": "OREC green lab Fukuoka",
+            "sourceUrl": "https://www.orec.co.jp/greenlab-fukuoka/",
+            "originalUrl": "https://www.orec.co.jp/greenlab-fukuoka/images/img_concept_pc.jpg",
+            "checkedAt": "2026-10-16"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

@@ -42,7 +42,8 @@ import { hasEventInfo } from '@/lib/eventInfo';
 import { CURATORS } from './curators';
 import { checkPinHealth, pinsToCheck } from './health';
 import log from '../util/log';
-import { sponsoredTranslationRequest, createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
+import { importTrades, recentFilings } from '../services/personTradesImport';
+import { personTradesRequest, sponsoredTranslationRequest, createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
@@ -553,6 +554,27 @@ export const TOOLS: JobTool[] = [
       const stocked = await HolidayAd.fill();
       for (const a of stocked.added) await act(ctx, { tool: 'holiday_ads_check', detail: `${a.holiday} ${a.tier}: ${a.title.slice(0, 90)} ($${a.price}, ${a.rating} stars / ${a.reviews} reviews)` });
       return { ...checked, ...stocked, coverage: await HolidayAd.coverage() };
+    },
+  },
+  {
+    name: 'person_trades_update',
+    description:
+      "The personTrades task's only call. Reads the House Clerk's periodic transaction reports for this year and the Senate's eFD reports from the last 30 days, saves every filing not stored yet to the people's pages (telling the people watching each person), and - when the run writes to production - sends the filings filed in the last 21 days to production, whose watchers are told of the new ones. Returns filings and trades newly stored here, what production added (and any bioguide ids it has no page for), members with no person page (unmatched) and filings that failed to read. Mechanical: nothing to review except unmatched and failed.",
+    input_schema: obj({ days: num('Days of Senate reports to read, default 30, at most 120') }),
+    run: async (input, ctx) => {
+      const result = await importTrades({ house: true, senate: true, days: int(input.days, 30, 1, 120) });
+      let prod: { added: number; missing: string[] } | null = null;
+      if (process.env.JOBS_PROD_BASE?.trim()) {
+        prod = { added: 0, missing: [] };
+        const filings = await recentFilings(21);
+        for (let i = 0; i < filings.length; i += 20) {
+          const r = await personTradesRequest(filings.slice(i, i + 20));
+          prod.added += r.added;
+          prod.missing.push(...r.missing);
+        }
+      }
+      await act(ctx, { tool: 'person_trades_update', detail: `${result.trades} trades in ${result.filings} new filings${prod ? `; prod added ${prod.added}` : ''}` });
+      return { ...result, unmatched: result.unmatched.slice(0, 40), failed: result.failed.slice(0, 20), production: prod };
     },
   },
   {

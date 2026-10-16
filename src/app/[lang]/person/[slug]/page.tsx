@@ -57,5 +57,5 @@ async function PersonContent({ params }: Pick<Props, 'params'>) {
   // One URL per person: /person/Susan-Collins goes to /person/susan-collins.
   if (raw !== slug) permanentRedirect(localizePath(personPath(page.profile.name), t.locale));
   const [timeZone, video] = await Promise.all([viewerTimeZone(), timelineVideo()]);
-  return <PersonView profile={page.profile} pins={page.pins} timeZone={timeZone} video={video} t={t} />;
+  return <PersonView profile={page.profile} pins={page.pins} trades={page.trades} campaigns={page.campaigns} timeZone={timeZone} video={video} t={t} />;
 }

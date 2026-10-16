@@ -585,3 +585,58 @@ spellings). Pushed to prod the same day: PersonMatter 618 -> 969.
   Formaldehyde Standards Act, Ocean Shipping Reform Act, CALM Act (no
   independent ex-post study of the law). The assessed total is 8 people with an
   assessed contribution from the congress.gov pass.
+
+## Stock trades and trade alerts (0188)
+
+Members of Congress disclose securities trades under the STOCK Act. A person's
+page shows them in a **Stock trades** section under the earnings tiles: purchase
+and sale counts, the reported value (the sum of every range's low and high end -
+a disclosure gives ranges, never an exact amount, so no midpoint is shown), the
+most-traded tickers, and a table of every trade linking to the filing it was read
+from. Filings can arrive up to 45 days after a trade; the section says it is not live.
+
+- **Tables:** `PersonTrade` (one row per transaction line, unique per filing line,
+  `chamber` + `filingId` identify the House Clerk DocID or the Senate report uuid) and
+  `PersonTradeWatch` (who is told, soft delete + revive like `CompanyFollow`).
+  `Notification` gets `personId` + `tradeFiling` and a `trade` type (unique per
+  watcher and filing).
+- **Import:** `npm run people:trades -- --house [--year 2026]` reads the House Clerk's
+  index (`disclosures-clerk.house.gov/public_disc/financial-pdfs/<year>FD.zip`), then each
+  periodic transaction report PDF with `pdftotext -layout` (`parsePtrText` in
+  `src/lib/trades.ts`). `--senate [--days 730]` drives the Senate eFD site
+  (`scripts/people/senateTrades.ts`: the agreement form post, then the report search and each
+  report's HTML table). Paper filings (scanned images) have nothing to read and are skipped.
+  A filing already stored is not fetched again, so the job can run daily. Members are matched on
+  name + state; anyone matching nobody (or two people) is listed, never guessed.
+  `--prod --token-file <admin token>` posts the filings to `POST /api/admin/person-trades`
+  instead, so prod's watchers are told.
+- **Subscribe:** the section's "Notify me of trades" button (`TradeWatchButton`) calls
+  `GET/POST/DELETE /api/people/:id/trade-watch`. A new filing (`storeFiling` in
+  `src/server/services/personTrades.ts`) writes one `trade` bell row per watcher - "X
+  disclosed N new stock trades: AAPL, NVDA" linking to `#trades` - and a Web Push
+  notification where the watcher allowed them. A filing read twice tells nobody twice.
+- **Read:** `GET /api/people/:id/trades`.
+- **Not covered:** trades by people with no House/Senate filing (governors, cabinet) and
+  anything filed on paper. Campaign finance (the OpenSecrets/Quiver election pages) is a
+  separate, not yet built, section.
+
+## Campaign finance and opponents (0189)
+
+The **Campaign finance** section (the OpenSecrets / Quiver election pages) shows, per
+election cycle (2022, 2024, 2026), what the campaign raised and spent, cash on hand and
+debts, where the money came from (individuals, PACs, party committees, the candidate's own
+money), the PACs that gave most, and the other candidates in the same race ("opponents",
+primary and general) with their totals and, once the FEC has it, the general-election vote
+share.
+
+- **Data:** the FEC's bulk files, no key and no rate limit (the API key allows only 60
+  requests an hour): `weball` (every candidate's totals per cycle), `pas2` (committee ->
+  candidate contributions; direct contributions only, type 24K) and `cm` (committee names).
+  Tables `PersonCampaign`, `PersonCampaignRival`, `PersonCampaignPac`.
+- **Load:** `npm run people:campaigns [-- --cycles 2022,2024,2026] [--dry-run]`; `--prod
+  --token-file <admin token>` posts to `POST /api/admin/person-campaigns`. Re-run after each FEC
+  filing deadline. Read: `GET /api/people/:id/campaigns`.
+- **Matching:** state + office (+ district) + name inside the cycle's candidates; a member who
+  matches nobody is skipped, never guessed.
+- **Not covered:** individual donors by employer or name (FEC itemised receipts are multi-gigabyte
+  files), outside spending / independent expenditures, and results for races not yet held.

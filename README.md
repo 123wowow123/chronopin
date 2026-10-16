@@ -298,11 +298,7 @@ run 6am job here in this session
 - update all ticket master button link to use referal link
 
 
-best of 2027 desert per brand per category
 
-- pin Academy awards news and events
-
-- pin biotech news and evetns
 
 
 programatic seo
@@ -416,3 +412,14 @@ plannned + data centers
 
 clicking on group wrapper will post those tags
 tesla + batteries storage
+
+
+add more music by year
+
+
+
+best of 2027 desert per brand per category
+
+- pin Academy awards news and events
+
+- pin biotech news and events

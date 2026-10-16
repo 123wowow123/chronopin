@@ -39,6 +39,9 @@ const types = {
   // A new response joined a thread you watch (ThreadWatch). The actor is the
   // response's author.
   thread: 'thread',
+  // A person you watch filed new stock trades (PersonTradeWatch). The actor is
+  // the watcher: there is no author, and nobody can be blocked from a filing.
+  trade: 'trade',
 } as const;
 
 // How late an alert may still go out, for a server that was down or busy
@@ -88,9 +91,11 @@ const VISIBLE_FROM = `
       LEFT JOIN "Pin" p ON p."id" = n."pinId"
       LEFT JOIN "Comment" c ON c."id" = n."commentId"
       LEFT JOIN "Company" co ON co."id" = n."companyId"
+      LEFT JOIN "Person" pe ON pe."id" = n."personId"
       WHERE (n."pinId" IS NULL OR (p."id" IS NOT NULL AND p."utcDeletedDateTime" IS NULL))
         AND (n."commentId" IS NULL OR (c."id" IS NOT NULL AND c."utcDeletedDateTime" IS NULL))
         AND (n."companyId" IS NULL OR co."id" IS NOT NULL)
+        AND (n."personId" IS NULL OR pe."id" IS NOT NULL)
         AND NOT ${blockedBetween('n."userId"', 'n."actorId"')}
         AND NOT EXISTS (SELECT 1 FROM "CompanyBlock" cb WHERE cb."userId" = n."userId" AND cb."companyId" = COALESCE(n."companyId", p."companyId"))`;
 
@@ -104,6 +109,12 @@ export type NotificationItem = {
   companyId: number | null;
   companyName: string | null;
   companyLogoUrl: string | null;
+  // 'trade' rows: the person who filed, their photo, and what the filing holds.
+  personName: string | null;
+  personPhotoUrl: string | null;
+  tradeFiling: string | null;
+  tradeCount: number | null;
+  tradeTickers: string[] | null;
   utcCreatedDateTime: Date;
   read: boolean;
   // How many notifications this entry stands for (1 unless it is a batch),
@@ -344,6 +355,23 @@ export default class Notification {
     ).then((rows) => announce(query, rows));
   }
 
+  // One 'trade' per watcher of the person, about a filing. The watcher is the
+  // actor (see types.trade); a filing read again is told about once.
+  static createForTradeWatchers({ personId, filingId }: { personId: number; filingId: string }, query: QueryFn = db.query) {
+    return query(
+      `
+      INSERT INTO "Notification" ("userId", "actorId", "type", "personId", "tradeFiling")
+      SELECT w."userId", w."userId", 'trade', $1, $2
+      FROM "PersonTradeWatch" w
+      JOIN "User" u ON u."id" = w."userId" AND u."utcDeletedDateTime" IS NULL
+      WHERE w."personId" = $1 AND w."utcDeletedDateTime" IS NULL
+      ON CONFLICT ("userId", "personId", "tradeFiling") WHERE "type" = 'trade'
+      DO NOTHING
+      RETURNING "userId"`,
+      [personId, filingId],
+    ).then((rows) => announce(query, rows));
+  }
+
   // Soft-deletes what an undone action had sent, read or not.
   static retract(
     { userId, actorId, type }: { userId: number; actorId: number; type: string },
@@ -376,6 +404,10 @@ export default class Notification {
                p."utcStartDateTime" AS "pinStart",
                n."commentId", c."text" AS "commentText",
                n."companyId", co."name"::text AS "companyName", co."logoUrl" AS "companyLogoUrl",
+               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling",
+               (SELECT COUNT(*)::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeCount",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeTickers",
                n."utcCreatedDateTime", n."utcReadDateTime",
                to_char((n."utcCreatedDateTime" AT TIME ZONE $2)::date, 'YYYY-MM-DD') AS "groupDay",
                ${groupKey('$2')} AS "groupKey",
@@ -409,7 +441,8 @@ export default class Notification {
         ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
       )
       SELECT "id", "type", "pinId", "pinTitle", "commentId", "commentText", "companyId",
-             "companyName", "companyLogoUrl", "utcCreatedDateTime", "read", "actor",
+             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeCount", "tradeTickers",
+             "utcCreatedDateTime", "read", "actor",
              "followingBack", "groupCount", "groupDay",
              COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",
              COALESCE("pinStarts"[1:${MAX_BATCH_PINS}], '{}') AS "pinStarts"

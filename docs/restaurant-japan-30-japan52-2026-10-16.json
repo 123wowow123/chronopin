@@ -681,11 +681,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
         "address": "11F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Ishingo Tenshin Chashitsu — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "1997-09-11T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The exact Kyoto Isetan 11F branch’s operator-managed Gurunavi listing explicitly gives September 11, 1997 as its opening date; the operator corporate history independently confirms the Kyoto opening in 1997. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -696,31 +696,43 @@
           "Japan",
           "Chinese"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s chinese venue offers a verified, dated autumn menu: Shanghai crab-miso and mushroom braised noodles.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s chinese venue offers a verified, dated autumn menu: Shanghai crab-miso and mushroom braised noodles.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: The exact Kyoto Isetan 11F branch’s operator-managed Gurunavi listing explicitly gives September 11, 1997 as its opening date; the operator corporate history independently confirms the Kyoto opening in 1997. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://r.gnavi.co.jp/k147601/\"></cite><cite data-ref=\"https://www.weishin.co.jp/company.html\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#ishin-go-kyoto-isetan",
             "title": "Ishingo Tenshin Chashitsu — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Ishingo Tenshin Chashitsu — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/floor11.html",
             "title": "Ishingo Tenshin Chashitsu — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
             "title": "Ishingo Tenshin Chashitsu — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/k147601/",
+            "title": "維新號 點心茶室 京都店 — 店舗情報",
+            "confidence": 100,
+            "reasoning": "The exact Kyoto Isetan 11F branch’s operator-managed Gurunavi listing explicitly gives September 11, 1997 as its opening date; the operator corporate history independently confirms the Kyoto opening in 1997. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.weishin.co.jp/company.html",
+            "title": "ウェイシングループ — 会社概要",
+            "confidence": 100,
+            "reasoning": "The exact Kyoto Isetan 11F branch’s operator-managed Gurunavi listing explicitly gives September 11, 1997 as its opening date; the operator corporate history independently confirms the Kyoto opening in 1997. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -852,6 +864,43 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+        "day": "1997-09-11",
+        "confidence": "confirmed",
+        "precision": "day",
+        "reason": "The exact Kyoto Isetan 11F branch’s operator-managed Gurunavi listing explicitly gives September 11, 1997 as its opening date; the operator corporate history independently confirms the Kyoto opening in 1997. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://r.gnavi.co.jp/k147601/",
+            "維新號 點心茶室 京都店 — 店舗情報"
+          ],
+          [
+            "https://www.weishin.co.jp/company.html",
+            "ウェイシングループ — 会社概要"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15949,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+            "date": "1997-09-11",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15949,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+            "date": "1997-09-11",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
       }
     },
     {
@@ -1043,11 +1092,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
         "address": "11F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Seio-tei — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "1997-09-11T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidenceReasoning": "A firsthand customer history explicitly recalls dining at Seio-tei from the Kyoto store’s September 1997 opening. The branch opening month is supported by that retrospective account; September 11 is an estimated day anchored to the documented department-store opening, not an independently verified restaurant day. Operator confirmation remains a research gap. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -1058,31 +1107,43 @@
           "Japan",
           "Yoshoku"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s yoshoku venue offers a verified, dated autumn menu: Japanese Black sirloin steak and choice of yoshoku with autumn vegetables.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s yoshoku venue offers a verified, dated autumn menu: Japanese Black sirloin steak and choice of yoshoku with autumn vegetables.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: A firsthand customer history explicitly recalls dining at Seio-tei from the Kyoto store’s September 1997 opening. The branch opening month is supported by that retrospective account; September 11 is an estimated day anchored to the documented department-store opening, not an independently verified restaurant day. Operator confirmation remains a research gap. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://ameblo.jp/osakaisetan/entry-10756848217.html\"></cite><cite data-ref=\"https://www.westjr.co.jp/press/article/2018/02/page_11849.html\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#seio-tei-kyoto-isetan",
             "title": "Seio-tei — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Seio-tei — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/floor11.html",
             "title": "Seio-tei — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
             "title": "Seio-tei — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://ameblo.jp/osakaisetan/entry-10756848217.html",
+            "title": "≪月はじめ≫京都店初売りレポ",
+            "confidence": 85,
+            "reasoning": "A firsthand customer history explicitly recalls dining at Seio-tei from the Kyoto store’s September 1997 opening. The branch opening month is supported by that retrospective account; September 11 is an estimated day anchored to the documented department-store opening, not an independently verified restaurant day. Operator confirmation remains a research gap. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "title": "JR West — Kyoto Isetan opening history",
+            "confidence": 85,
+            "reasoning": "A firsthand customer history explicitly recalls dining at Seio-tei from the Kyoto store’s September 1997 opening. The branch opening month is supported by that retrospective account; September 11 is an estimated day anchored to the documented department-store opening, not an independently verified restaurant day. Operator confirmation remains a research gap. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -1249,6 +1310,43 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+        "day": "1997-09-11",
+        "confidence": "estimated",
+        "precision": "month",
+        "reason": "A firsthand customer history explicitly recalls dining at Seio-tei from the Kyoto store’s September 1997 opening. The branch opening month is supported by that retrospective account; September 11 is an estimated day anchored to the documented department-store opening, not an independently verified restaurant day. Operator confirmation remains a research gap. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://ameblo.jp/osakaisetan/entry-10756848217.html",
+            "≪月はじめ≫京都店初売りレポ"
+          ],
+          [
+            "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "JR West — Kyoto Isetan opening history"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15951,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+            "date": "1997-09-11",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15951,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+            "date": "1997-09-11",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
       }
     },
     {
@@ -1259,11 +1357,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
         "address": "10F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "The Kitchen Salvatore Cuomo — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "2005-01-01T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidenceReasoning": "The restaurant-managed Tabelog listing gives 2005 as the opening year of The Kitchen Salvatore Cuomo Kyoto at Kyoto Isetan 10F. January 1 is a year-only timeline anchor; the month and day remain unverified. This is distinct from the later Sanjo-Kiyamachi branch. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -1274,31 +1372,37 @@
           "Japan",
           "Italian"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s italian venue offers a verified, dated autumn menu: Smoked-salmon and four-mushroom pizza.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s italian venue offers a verified, dated autumn menu: Smoked-salmon and four-mushroom pizza.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: The restaurant-managed Tabelog listing gives 2005 as the opening year of The Kitchen Salvatore Cuomo Kyoto at Kyoto Isetan 10F. January 1 is a year-only timeline anchor; the month and day remain unverified. This is distinct from the later Sanjo-Kiyamachi branch. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://tabelog.com/kyoto/A2601/A260101/26001972/\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#cuomo-kyoto-isetan",
             "title": "The Kitchen Salvatore Cuomo — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "The Kitchen Salvatore Cuomo — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/floor10.html",
             "title": "The Kitchen Salvatore Cuomo — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
             "title": "The Kitchen Salvatore Cuomo — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://tabelog.com/kyoto/A2601/A260101/26001972/",
+            "title": "ザ キッチン サルヴァトーレ クオモ 京都 — 店舗情報",
+            "confidence": 85,
+            "reasoning": "The restaurant-managed Tabelog listing gives 2005 as the opening year of The Kitchen Salvatore Cuomo Kyoto at Kyoto Isetan 10F. January 1 is a year-only timeline anchor; the month and day remain unverified. This is distinct from the later Sanjo-Kiyamachi branch. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -1430,6 +1534,39 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+        "day": "2005-01-01",
+        "confidence": "estimated",
+        "precision": "year",
+        "reason": "The restaurant-managed Tabelog listing gives 2005 as the opening year of The Kitchen Salvatore Cuomo Kyoto at Kyoto Isetan 10F. January 1 is a year-only timeline anchor; the month and day remain unverified. This is distinct from the later Sanjo-Kiyamachi branch. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://tabelog.com/kyoto/A2601/A260101/26001972/",
+            "ザ キッチン サルヴァトーレ クオモ 京都 — 店舗情報"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15952,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+            "date": "2005-01-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15952,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+            "date": "2005-01-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
       }
     },
     {
@@ -2164,11 +2301,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
         "address": "JR west gate restaurant zone JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Hashitate — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "2008-02-13T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Hashitate among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -2179,31 +2316,43 @@
           "Japan",
           "Japanese"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s japanese venue offers a verified, dated autumn menu: Mackerel sushi and yuba-mushroom nyumen set.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s japanese venue offers a verified, dated autumn menu: Mackerel sushi and yuba-mushroom nyumen set.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Hashitate among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://trainnews.seesaa.net/article/83735438.html\"></cite><cite data-ref=\"https://job.wakuden.kyoto/about\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#hashitate-kyoto-isetan",
             "title": "Hashitate — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Hashitate — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant_jr.html",
             "title": "Hashitate — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
             "title": "Hashitate — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://trainnews.seesaa.net/article/83735438.html",
+            "title": "【JR西日本】京都駅にエキナカ「スバコ」オープン！",
+            "confidence": 100,
+            "reasoning": "Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Hashitate among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://job.wakuden.kyoto/about",
+            "title": "和久傳を知る — 2008 Kyoto Station Hashitate opening",
+            "confidence": 100,
+            "reasoning": "Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Hashitate among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -2335,6 +2484,43 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+        "day": "2008-02-13",
+        "confidence": "confirmed",
+        "precision": "day",
+        "reason": "Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Hashitate among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://trainnews.seesaa.net/article/83735438.html",
+            "【JR西日本】京都駅にエキナカ「スバコ」オープン！"
+          ],
+          [
+            "https://job.wakuden.kyoto/about",
+            "和久傳を知る — 2008 Kyoto Station Hashitate opening"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15957,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+            "date": "2008-02-13",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15957,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+            "date": "2008-02-13",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
       }
     },
     {
@@ -2345,11 +2531,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
         "address": "JR west gate restaurant zone JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Osteria Sakura — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "2008-02-13T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Osteria Sakura among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -2360,31 +2546,43 @@
           "Japan",
           "Italian"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s italian venue offers a verified, dated autumn menu: Kyoto rice and Tamba shimeji mixed-mushroom tomato-cream risotto.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s italian venue offers a verified, dated autumn menu: Kyoto rice and Tamba shimeji mixed-mushroom tomato-cream risotto.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Osteria Sakura among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://trainnews.seesaa.net/article/83735438.html\"></cite><cite data-ref=\"https://tabelog.com/kyoto/A2601/A260101/26006005/\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#sakura-kyoto-isetan",
             "title": "Osteria Sakura — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Osteria Sakura — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant_jr.html",
             "title": "Osteria Sakura — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
             "title": "Osteria Sakura — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://trainnews.seesaa.net/article/83735438.html",
+            "title": "【JR西日本】京都駅にエキナカ「スバコ」オープン！",
+            "confidence": 100,
+            "reasoning": "Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Osteria Sakura among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://tabelog.com/kyoto/A2601/A260101/26006005/",
+            "title": "オステリア サクラ — 2008 opening year",
+            "confidence": 100,
+            "reasoning": "Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Osteria Sakura among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -2529,6 +2727,43 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+        "day": "2008-02-13",
+        "confidence": "confirmed",
+        "precision": "day",
+        "reason": "Contemporaneous February 12, 2008 reporting, preserved with attribution to Nikkei Restaurant Online, names Osteria Sakura among the four restaurants launching in SUVACO’s 3F south restaurant zone on February 13, 2008. This is branch-specific launch reporting rather than an assumption from the host building’s opening. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://trainnews.seesaa.net/article/83735438.html",
+            "【JR西日本】京都駅にエキナカ「スバコ」オープン！"
+          ],
+          [
+            "https://tabelog.com/kyoto/A2601/A260101/26006005/",
+            "オステリア サクラ — 2008 opening year"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15958,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+            "date": "2008-02-13",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15958,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+            "date": "2008-02-13",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
       }
     },
     {
@@ -2720,11 +2955,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
         "address": "11F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Moritaya — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "1997-09-11T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidenceReasoning": "Moritaya’s corporate history explicitly dates its Kyoto Isetan sukiyaki restaurant opening to September 1997. September 11 is an estimated day anchored to the department-store opening within that verified branch opening month; the exact restaurant day is unverified. The separate B2 meat counter opened in June 2016. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -2735,31 +2970,43 @@
           "Japan",
           "Sukiyaki"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s sukiyaki venue offers a verified, dated autumn menu: Kiwami sukiyaki.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s sukiyaki venue offers a verified, dated autumn menu: Kiwami sukiyaki.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: Moritaya’s corporate history explicitly dates its Kyoto Isetan sukiyaki restaurant opening to September 1997. September 11 is an estimated day anchored to the department-store opening within that verified branch opening month; the exact restaurant day is unverified. The separate B2 meat counter opened in June 2016. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://moritaya-kyoto.co.jp/company/outline/\"></cite><cite data-ref=\"https://www.westjr.co.jp/press/article/2018/02/page_11849.html\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#moritaya-kyoto-isetan",
             "title": "Moritaya — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Moritaya — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/floor11.html",
             "title": "Moritaya — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
             "title": "Moritaya — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://moritaya-kyoto.co.jp/company/outline/",
+            "title": "モリタ屋 — 会社概要／沿革",
+            "confidence": 85,
+            "reasoning": "Moritaya’s corporate history explicitly dates its Kyoto Isetan sukiyaki restaurant opening to September 1997. September 11 is an estimated day anchored to the department-store opening within that verified branch opening month; the exact restaurant day is unverified. The separate B2 meat counter opened in June 2016. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "title": "JR West — Kyoto Isetan opening history",
+            "confidence": 85,
+            "reasoning": "Moritaya’s corporate history explicitly dates its Kyoto Isetan sukiyaki restaurant opening to September 1997. September 11 is an estimated day anchored to the department-store opening within that verified branch opening month; the exact restaurant day is unverified. The separate B2 meat counter opened in June 2016. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -2891,6 +3138,43 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+        "day": "1997-09-11",
+        "confidence": "estimated",
+        "precision": "month",
+        "reason": "Moritaya’s corporate history explicitly dates its Kyoto Isetan sukiyaki restaurant opening to September 1997. September 11 is an estimated day anchored to the department-store opening within that verified branch opening month; the exact restaurant day is unverified. The separate B2 meat counter opened in June 2016. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://moritaya-kyoto.co.jp/company/outline/",
+            "モリタ屋 — 会社概要／沿革"
+          ],
+          [
+            "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "JR West — Kyoto Isetan opening history"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15960,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+            "date": "1997-09-11",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15960,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+            "date": "1997-09-11",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
       }
     },
     {
@@ -2901,11 +3185,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
         "address": "11F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Wako — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "1997-09-11T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidenceReasoning": "A firsthand August 2012 review of this exact 11F Wako branch says the customer had repeatedly visited since Kyoto Isetan opened in Heisei 9 (1997). This supports opening-era operation in 1997; September 11 is an estimated timeline anchor to the documented department-store opening, not an independently verified restaurant month/day. Original operator opening-day confirmation remains a research gap. The B2 takeaway counter is a separate unit. October 16, 2026 was the research date, not this restaurant opening.",
         "categories": [
           "Food"
         ],
@@ -2916,31 +3200,43 @@
           "Japan",
           "Tonkatsu"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s tonkatsu venue offers a verified, dated autumn menu: Momiji seasonal set.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s tonkatsu venue offers a verified, dated autumn menu: Momiji seasonal set.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: A firsthand August 2012 review of this exact 11F Wako branch says the customer had repeatedly visited since Kyoto Isetan opened in Heisei 9 (1997). This supports opening-era operation in 1997; September 11 is an estimated timeline anchor to the documented department-store opening, not an independently verified restaurant month/day. Original operator opening-day confirmation remains a research gap. The B2 takeaway counter is a separate unit. October 16, 2026 was the research date, not this restaurant opening.<cite data-ref=\"https://tabelog.com/kyoto/A2601/A260101/26002133/dtlrvwlst/B117303103/\"></cite><cite data-ref=\"https://www.westjr.co.jp/press/article/2018/02/page_11849.html\"></cite><cite data-ref=\"https://www.kyoto-station-building.co.jp/restaurant_cafe/016/\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#wako-kyoto-isetan",
             "title": "Wako — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Wako — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/floor11.html",
             "title": "Wako — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
             "title": "Wako — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://tabelog.com/kyoto/A2601/A260101/26002133/dtlrvwlst/B117303103/",
+            "title": "衣がサクサク～ — kobari, August 2012 visit to Wako Kyoto Isetan 11F",
+            "confidence": 85,
+            "reasoning": "A firsthand August 2012 review of this exact 11F Wako branch says the customer had repeatedly visited since Kyoto Isetan opened in Heisei 9 (1997). This supports opening-era operation in 1997; September 11 is an estimated timeline anchor to the documented department-store opening, not an independently verified restaurant month/day. Original operator opening-day confirmation remains a research gap. The B2 takeaway counter is a separate unit. October 16, 2026 was the research date, not this restaurant opening."
+          },
+          {
+            "url": "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "title": "JR West — Kyoto Isetan September 11, 1997 opening history",
+            "confidence": 85,
+            "reasoning": "A firsthand August 2012 review of this exact 11F Wako branch says the customer had repeatedly visited since Kyoto Isetan opened in Heisei 9 (1997). This supports opening-era operation in 1997; September 11 is an estimated timeline anchor to the documented department-store opening, not an independently verified restaurant month/day. Original operator opening-day confirmation remains a research gap. The B2 takeaway counter is a separate unit. October 16, 2026 was the research date, not this restaurant opening."
           }
         ]
       },
@@ -3072,6 +3368,51 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+        "day": "1997-09-11",
+        "confidence": "estimated",
+        "precision": "year",
+        "reason": "A firsthand August 2012 review of this exact 11F Wako branch says the customer had repeatedly visited since Kyoto Isetan opened in Heisei 9 (1997). This supports opening-era operation in 1997; September 11 is an estimated timeline anchor to the documented department-store opening, not an independently verified restaurant month/day. Original operator opening-day confirmation remains a research gap. The B2 takeaway counter is a separate unit. October 16, 2026 was the research date, not this restaurant opening.",
+        "sources": [
+          [
+            "https://tabelog.com/kyoto/A2601/A260101/26002133/dtlrvwlst/B117303103/",
+            "衣がサクサク～ — kobari, August 2012 visit to Wako Kyoto Isetan 11F"
+          ],
+          [
+            "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "JR West — Kyoto Isetan September 11, 1997 opening history"
+          ],
+          [
+            "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+            "Kyoto Station — Wako restaurant on 11F"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15961,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+            "date": "1997-09-11",
+            "dateConfidence": "estimated",
+            "precision": "year",
+            "authorPreserved": true,
+            "contentPreserved": true,
+            "offersPreserved": true,
+            "galleryPreserved": true
+          },
+          "production": {
+            "pinId": 15961,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+            "date": "1997-09-11",
+            "dateConfidence": "estimated",
+            "precision": "year",
+            "authorPreserved": true,
+            "contentPreserved": true,
+            "offersPreserved": true,
+            "galleryPreserved": true
+          }
+        }
       }
     },
     {
@@ -3082,11 +3423,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
         "address": "11F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Caffera — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "2021-09-01T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "UCC Foodservice Systems’ branch-specific launch release explicitly gives September 1, 2021 for Caffera Kyoto Isetan 11F. The brand’s 1997 Kobe founding and predecessor cafe operation in Kyoto are separate histories. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -3097,31 +3438,37 @@
           "Japan",
           "Italian cafe"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s italian cafe venue offers a verified, dated autumn menu: Tiramisu Monte Bianco.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s italian cafe venue offers a verified, dated autumn menu: Tiramisu Monte Bianco.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: UCC Foodservice Systems’ branch-specific launch release explicitly gives September 1, 2021 for Caffera Kyoto Isetan 11F. The brand’s 1997 Kobe founding and predecessor cafe operation in Kyoto are separate histories. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://content.ueshima-coffee-ten.jp/pdf/20210831_ufs_kyotocfr.pdf\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#caffera-kyoto-isetan",
             "title": "Caffera — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Caffera — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/floor11.html",
             "title": "Caffera — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
             "title": "Caffera — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://content.ueshima-coffee-ten.jp/pdf/20210831_ufs_kyotocfr.pdf",
+            "title": "カフェラ ジェイアール京都伊勢丹店 — September 1, 2021 opening release",
+            "confidence": 100,
+            "reasoning": "UCC Foodservice Systems’ branch-specific launch release explicitly gives September 1, 2021 for Caffera Kyoto Isetan 11F. The brand’s 1997 Kobe founding and predecessor cafe operation in Kyoto are separate histories. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -3253,6 +3600,39 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+        "day": "2021-09-01",
+        "confidence": "confirmed",
+        "precision": "day",
+        "reason": "UCC Foodservice Systems’ branch-specific launch release explicitly gives September 1, 2021 for Caffera Kyoto Isetan 11F. The brand’s 1997 Kobe founding and predecessor cafe operation in Kyoto are separate histories. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://content.ueshima-coffee-ten.jp/pdf/20210831_ufs_kyotocfr.pdf",
+            "カフェラ ジェイアール京都伊勢丹店 — September 1, 2021 opening release"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15962,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+            "date": "2021-09-01",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15962,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+            "date": "2021-09-01",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
       }
     },
     {
@@ -3263,11 +3643,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
         "address": "6F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Saryo Tsujiri — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "1997-09-11T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidenceReasoning": "Gion Tsujiri’s operator history explicitly dates Saryo Tsujiri Kyoto Isetan to 1997. September 11 is an estimated timeline anchor based on the host department store’s documented opening in that year; neither the restaurant opening month nor its exact day is independently verified. The brand’s 1860 founding and 1978 Gion tea-room opening are not this branch’s opening. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -3278,31 +3658,43 @@
           "Japan",
           "Tea / parfaits"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s tea / parfaits venue offers a verified, dated autumn menu: Shuka autumn parfait.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s tea / parfaits venue offers a verified, dated autumn menu: Shuka autumn parfait.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: Gion Tsujiri’s operator history explicitly dates Saryo Tsujiri Kyoto Isetan to 1997. September 11 is an estimated timeline anchor based on the host department store’s documented opening in that year; neither the restaurant opening month nor its exact day is independently verified. The brand’s 1860 founding and 1978 Gion tea-room opening are not this branch’s opening. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://giontsujiri.co.jp/tw/aboutus/\"></cite><cite data-ref=\"https://www.westjr.co.jp/press/article/2018/02/page_11849.html\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#tsujiri-kyoto-isetan",
             "title": "Saryo Tsujiri — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Saryo Tsujiri — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/floor6.html",
             "title": "Saryo Tsujiri — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
             "title": "Saryo Tsujiri — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://giontsujiri.co.jp/tw/aboutus/",
+            "title": "祇園辻利・茶寮都路里 — operator history",
+            "confidence": 85,
+            "reasoning": "Gion Tsujiri’s operator history explicitly dates Saryo Tsujiri Kyoto Isetan to 1997. September 11 is an estimated timeline anchor based on the host department store’s documented opening in that year; neither the restaurant opening month nor its exact day is independently verified. The brand’s 1860 founding and 1978 Gion tea-room opening are not this branch’s opening. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "title": "JR West — Kyoto Isetan opening history",
+            "confidence": 85,
+            "reasoning": "Gion Tsujiri’s operator history explicitly dates Saryo Tsujiri Kyoto Isetan to 1997. September 11 is an estimated timeline anchor based on the host department store’s documented opening in that year; neither the restaurant opening month nor its exact day is independently verified. The brand’s 1860 founding and 1978 Gion tea-room opening are not this branch’s opening. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -3434,6 +3826,43 @@
           }
         },
         "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+        "day": "1997-09-11",
+        "confidence": "estimated",
+        "precision": "year",
+        "reason": "Gion Tsujiri’s operator history explicitly dates Saryo Tsujiri Kyoto Isetan to 1997. September 11 is an estimated timeline anchor based on the host department store’s documented opening in that year; neither the restaurant opening month nor its exact day is independently verified. The brand’s 1860 founding and 1978 Gion tea-room opening are not this branch’s opening. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://giontsujiri.co.jp/tw/aboutus/",
+            "祇園辻利・茶寮都路里 — operator history"
+          ],
+          [
+            "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "JR West — Kyoto Isetan opening history"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15963,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+            "date": "1997-09-11",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15963,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+            "date": "1997-09-11",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
       }
     }
   ]

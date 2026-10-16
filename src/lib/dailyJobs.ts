@@ -88,6 +88,11 @@ export const TASKS = {
     label: 'Restaurant region pages',
     summary: "Refresh the restaurant landing page of every region where a restaurant pin was created since the last run: re-check its openings and top restaurants, and fill in what the new pin implies.",
   },
+  personTrades: {
+    group: 'upkeep',
+    label: 'Stock trades of people',
+    summary: "Read the House and Senate periodic transaction reports for new stock trades by members of Congress, save them to the people's pages and tell the people watching each person.",
+  },
   threadPredicted: {
     group: 'upkeep',
     label: 'Thread predicted pins',
@@ -235,7 +240,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'layoffs', 'hiringJobCreation', 'modelScores', 'sentiment'],
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'layoffs', 'hiringJobCreation', 'modelScores', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -278,11 +283,12 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
 export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   // Fold the short-lived separate translation job into the existing daily
   // runs, including saved settings from before this task was introduced.
-  // Add the owner-requested twice-daily layoff and hiring beats to saved news jobs too.
+  // Add the owner-requested twice-daily layoff and hiring beats, and the
+  // person stock-trades update (2026-10-16), to saved news jobs too.
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation'] : job.id === 'midnight' ? ['adTranslations'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades'] : job.id === 'midnight' ? ['adTranslations'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

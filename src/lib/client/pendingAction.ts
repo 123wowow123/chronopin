@@ -19,7 +19,7 @@ const MAX_AGE_MS = 15 * 60_000;
 // The clicks worth finishing: watching a pin, following a person or a
 // company, starting a comment or a suggestion, and adding a photo. Each is one thing, named
 // by its id.
-export type PendingAction = { kind: 'watch' | 'followUser' | 'followCompany' | 'comment' | 'suggest' | 'photo'; id: number };
+export type PendingAction = { kind: 'watch' | 'followUser' | 'followCompany' | 'watchTrades' | 'comment' | 'suggest' | 'photo'; id: number };
 type Saved = PendingAction & { savedAt: number };
 
 export function savePendingAction(action: PendingAction) {

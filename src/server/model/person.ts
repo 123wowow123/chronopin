@@ -83,6 +83,11 @@ export default class Person {
     return rows[0]?.id ?? null;
   }
 
+  static async idByBioguide(bioguideId: string): Promise<number | null> {
+    const rows = await db.query<{ id: number }>(`SELECT "id" FROM "Person" WHERE "bioguideId" = $1`, [bioguideId]);
+    return rows[0]?.id ?? null;
+  }
+
   static async exists(id: number): Promise<boolean> {
     return (await db.query(`SELECT 1 FROM "Person" WHERE "id" = $1`, [id])).length > 0;
   }

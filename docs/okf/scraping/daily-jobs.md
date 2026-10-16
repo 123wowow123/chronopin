@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -528,6 +528,25 @@ try the other searches. A robot check on a listing is "unreadable", not
 "broken": nothing changes. By hand: `npm run ads:holiday -- coverage | fill
 [--curl] | add | check | list | remove` (`--curl` runs the searches through curl,
 which Amazon refuses less than Node's fetch).
+
+### personTrades
+
+**Reads** nothing first; its one call, `person_trades_update`, reads this year's
+House Clerk periodic transaction reports and the Senate eFD reports of the last 30
+days (`src/server/services/personTradesImport.ts`, the same code as `npm run
+people:trades`), stores every filing not stored yet on the people's pages, and,
+when the run writes to production (`JOBS_PROD_BASE`), sends the filings filed in the
+last 21 days to `POST /api/admin/person-trades` as the admin. A filing is stored once
+(a unique line per trade) and a watcher is told once per filing, so the twice-daily run
+and the 21-day resend never double up.
+**Does** check `unmatched` (members with no person page: add the page with
+`people:import`, then the next run picks their filings up) and `failed` (a PDF that did
+not read - open it; `parsePtrText` in `src/lib/trades.ts` may need a new layout case).
+Nothing else needs review: trades are the filing's own figures, never estimated.
+**Traps.** Members have up to 45 days to file, so a trade date months back is normal.
+Filings made on paper are scanned images and are skipped. Campaign finance
+(`npm run people:campaigns`, FEC bulk files) is refreshed by hand after each FEC
+filing deadline, not by this task.
 
 ### threadPredicted
 

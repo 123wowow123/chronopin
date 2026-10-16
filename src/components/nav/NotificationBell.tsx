@@ -1,5 +1,6 @@
 'use client';
 
+import { personPath } from '@/lib/people';
 import Link from '@/components/ui/Link';
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
@@ -27,6 +28,10 @@ type Notification = {
   companyId: number | null;
   companyName: string | null;
   companyLogoUrl: string | null;
+  personName: string | null;
+  personPhotoUrl: string | null;
+  tradeCount: number | null;
+  tradeTickers: string[] | null;
   utcCreatedDateTime: string;
   read: boolean;
   groupCount: number;
@@ -120,6 +125,8 @@ function reasonOf(n: Notification, t: Translator): { icon: IconName; label: stri
       return { icon: 'eye', label: t('notifications.whyWatch') };
     case 'thread':
       return { icon: 'eye', label: t('notifications.whyThread') };
+    case 'trade':
+      return n.personName ? { icon: 'eye', label: t('notifications.whyTrade', { name: n.personName }), href: `${personPath(n.personName)}#trades` } : null;
     case 'company':
       return n.companyName
         ? { icon: 'users', label: t('notifications.whyCompany', { company: n.companyName }), href: companyHref(n.companyName) }
@@ -208,6 +215,17 @@ function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () 
       <span aria-hidden className="flex size-8 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
         <Icon name="target" className="size-4" />
       </span>
+    ) : n.type === 'trade' && n.personName ? (
+      <Link href={`${personPath(n.personName)}#trades`} onClick={onNavigate}>
+        {n.personPhotoUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element -- portraits from arbitrary hosts
+          <img src={n.personPhotoUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-8 rounded-full bg-raised object-cover" />
+        ) : (
+          <span aria-hidden className="flex size-8 items-center justify-center rounded-full bg-raised text-muted">
+            <Icon name="users" className="size-4" />
+          </span>
+        )}
+      </Link>
     ) : n.type === 'company' && n.companyName ? (
       <Link href={companyHref(n.companyName)} onClick={onNavigate}>
         {n.companyLogoUrl ? (
@@ -253,6 +271,7 @@ function sectionOf(type: string): Section {
     case 'soon':
     case 'update':
     case 'thread':
+    case 'trade':
       return 'watching';
     case 'comment':
     case 'reply':
@@ -355,6 +374,14 @@ function NotificationItems({
                     ) : n.type === 'update' && n.pinId ? (
                       <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#updates`} className="block text-ink" onClick={onNavigate}>
                         {t.rich('notifications.update', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                      </Link>
+                    ) : n.type === 'trade' && n.personName ? (
+                      <Link href={`${personPath(n.personName)}#trades`} className="block text-ink" onClick={onNavigate}>
+                        {t.rich('notifications.trade', {
+                          count: n.tradeCount ?? 0,
+                          tickers: n.tradeTickers?.length ? `: ${n.tradeTickers.slice(0, 4).join(', ')}` : '',
+                          person: () => <span className="font-semibold">{n.personName}</span>,
+                        })}
                       </Link>
                     ) : n.type === 'thread' && n.pinId ? (
                       <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>

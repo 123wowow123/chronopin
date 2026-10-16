@@ -1,0 +1,989 @@
+{
+  "checkedAt": "2026-10-16",
+  "country": "Japan",
+  "regions": [
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yakitori Kinzan — Higashisakura Opens in Higashisakura / Takaoka",
+        "description": "A newly opened charcoal-yakitori restaurant with a curved counter, private table rooms and chicken hotpot.",
+        "sourceUrl": "https://kinzan.nagoya/archives/news/2853/",
+        "address": "1F M’s Garden B building, 2-12-34 Higashisakura, Higashi-ku, Nagoya",
+        "productName": "Yakitori Kinzan — Higashisakura",
+        "utcStartDateTime": "2026-10-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator announcement dated October 8, 2026 says this Higashisakura branch opens that day; branch booking page corroborates October 8. Address is first floor, not basement.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Higashisakura / Takaoka",
+          "Yakitori"
+        ],
+        "longFormSummary": "<p>A newly opened charcoal-yakitori restaurant with a curved counter, private table rooms and chicken hotpot.<cite data-ref=\"https://kinzan.nagoya/archives/news/2853/\"></cite></p><p>Exact operator announcement dated October 8, 2026 says this Higashisakura branch opens that day; branch booking page corroborates October 8. Address is first floor, not basement.</p>",
+        "references": [
+          {
+            "url": "https://kinzan.nagoya/archives/news/2853/",
+            "title": "Yakitori Kinzan — Higashisakura source",
+            "confidence": 90,
+            "reasoning": "Exact operator announcement dated October 8, 2026 says this Higashisakura branch opens that day; branch booking page corroborates October 8. Address is first floor, not basement."
+          },
+          {
+            "url": "https://kinzan.nagoya/store/",
+            "title": "Yakitori Kinzan — Higashisakura source",
+            "confidence": 90,
+            "reasoning": "Exact operator announcement dated October 8, 2026 says this Higashisakura branch opens that day; branch booking page corroborates October 8. Address is first floor, not basement."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/p56euhwm0000/menu2/",
+            "title": "Yakitori Kinzan — Higashisakura source",
+            "confidence": 90,
+            "reasoning": "Exact operator announcement dated October 8, 2026 says this Higashisakura branch opens that day; branch booking page corroborates October 8. Address is first floor, not basement."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230104/23097521/",
+            "title": "Yakitori Kinzan — Higashisakura source",
+            "confidence": 90,
+            "reasoning": "Exact operator announcement dated October 8, 2026 says this Higashisakura branch opens that day; branch booking page corroborates October 8. Address is first floor, not basement."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004660332/food/",
+            "title": "Yakitori Kinzan — Higashisakura source",
+            "confidence": 90,
+            "reasoning": "Exact operator announcement dated October 8, 2026 says this Higashisakura branch opens that day; branch booking page corroborates October 8. Address is first floor, not basement."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004660332/course_cnod07/",
+            "title": "Yakitori Kinzan — Higashisakura source",
+            "confidence": 90,
+            "reasoning": "Exact operator announcement dated October 8, 2026 says this Higashisakura branch opens that day; branch booking page corroborates October 8. Address is first floor, not basement."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://kinzan.nagoya/archives/news/2853/",
+          "menu": {
+            "pinSourceUrl": "https://kinzan.nagoya/archives/news/2853/",
+            "name": "Yakitori Kinzan — Higashisakura",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Higashisakura food menu",
+                "url": "https://www.hotpepper.jp/strJ004660332/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Nagoya Cochin thigh skewer",
+                    "price": 462
+                  },
+                  {
+                    "name": "Nagoya Cochin wings — four",
+                    "price": 1628
+                  },
+                  {
+                    "name": "Nagoya Cochin skin skewer",
+                    "price": 319
+                  },
+                  {
+                    "name": "Kinzan miso chicken skewer",
+                    "price": 308
+                  },
+                  {
+                    "name": "Chicken heart skewer",
+                    "price": 220
+                  },
+                  {
+                    "name": "Chicken thigh skewer",
+                    "price": 264
+                  },
+                  {
+                    "name": "Chicken skin skewer",
+                    "price": 209
+                  },
+                  {
+                    "name": "Chicken gizzard skewer",
+                    "price": 209
+                  },
+                  {
+                    "name": "Chicken liver skewer",
+                    "price": 275
+                  },
+                  {
+                    "name": "Chicken breast with wasabi skewer",
+                    "price": 253
+                  },
+                  {
+                    "name": "Tsukune skewer",
+                    "price": 264
+                  },
+                  {
+                    "name": "Chicken and leek skewer",
+                    "price": 275
+                  },
+                  {
+                    "name": "Anchovy shiitake skewer",
+                    "price": 308
+                  },
+                  {
+                    "name": "Asparagus roll skewer",
+                    "price": 319
+                  },
+                  {
+                    "name": "Wagyu sukiyaki skewer",
+                    "price": 539
+                  },
+                  {
+                    "name": "Soy-marinated mozzarella skewer",
+                    "price": 495
+                  },
+                  {
+                    "name": "Dakhanmari — whole chicken",
+                    "price": 4180
+                  },
+                  {
+                    "name": "Oyakodon — regular",
+                    "price": 1485
+                  },
+                  {
+                    "name": "Oyakodon — mini",
+                    "price": 770
+                  },
+                  {
+                    "name": "Catalana",
+                    "price": 528
+                  }
+                ],
+                "note": "Tax included. Skewer prices are per skewer unless stated; order at least two of each variety, cheese may be ordered singly. Exact branch Hot Pepper menu updated October 6 takes precedence over lower Gurunavi prices (e.g. thigh ¥253 and dakhanmari ¥4,070). Not all current prices agree across booking platforms: confirm when ordering. Operator listing says M’s Garden B building 1F; not basement. Cover ¥330 and one drink per diner are listed in the branch Tabelog conditions. Operator opening photo gallery and both booking menus checked; regular dishes are not asserted to be included in Hana."
+              },
+              {
+                "label": "Hana course — booking discount through November 30",
+                "url": "https://www.hotpepper.jp/strJ004660332/course_cnod07/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hana course — per diner",
+                    "price": 5500,
+                    "note": "Published regular ¥6,000; 14 food components and two-hour drinks"
+                  },
+                  {
+                    "name": "Four small dishes",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                  },
+                  {
+                    "name": "Salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                  },
+                  {
+                    "name": "Four yakitori varieties",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                  },
+                  {
+                    "name": "Three other skewers",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                  },
+                  {
+                    "name": "Fried dish",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                  },
+                  {
+                    "name": "Rice finale",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                  },
+                  {
+                    "name": "Kirin Ichiban Shibori draft beer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                  },
+                  {
+                    "name": "Kirin Riku highball",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                  }
+                ],
+                "note": "Tax included. Minimum two diners; book by 23:00 the previous day. Two-hour seat and drinks, last drink order 30 minutes before end; exchange empty glasses. Course lists categories, not exact yakitori varieties. Current branch listing explicitly ends November 30. Its template start May 1 predates October 8 opening and is not treated as service history. The separate before-18:00 Yu coupon is not conflated with Hana."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://kinzan.nagoya/archives/news/2853/",
+            "name": "Yakitori Kinzan — Higashisakura",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://kinzan.nagoya/store/",
+            "phone": "052-908-3324",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "17:00–24:00; branch booking lists last order 23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://kinzan.nagoya/store/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kinzan.nagoya/archives/news/2853/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://r.gnavi.co.jp/p56euhwm0000/menu2/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230104/23097521/"
+              }
+            ],
+            "reservationUrl": "https://www.hotpepper.jp/strJ004660332/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "kinzan",
+            "name": "Yakitori Kinzan — Higashisakura",
+            "neighborhood": "Higashisakura / Takaoka",
+            "cuisine": "Yakitori",
+            "description": "A newly opened charcoal-yakitori restaurant with a curved counter, private table rooms and chicken hotpot.",
+            "address": "1F M’s Garden B building, 2-12-34 Higashisakura, Higashi-ku, Nagoya",
+            "websiteUrl": "https://kinzan.nagoya/store/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-kinzan-1-21102d4f041fa185.webp",
+            "imageCredit": "Kinzan Co., Ltd.",
+            "imageSourceUrl": "https://kinzan.nagoya/archives/news/2853/",
+            "imageNote": "Higashisakura branch exterior at night.",
+            "openingConfirmed": true,
+            "day": "2026-10-08"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-kinzan-1-21102d4f041fa185.webp",
+          "sha256": "21102d4f041fa18507dc052880eae763e6938268b44d85d4f258b058442f0a24",
+          "width": 1477,
+          "height": 1108,
+          "credit": "Kinzan Co., Ltd.",
+          "note": "Higashisakura branch exterior at night.",
+          "sourcePage": "https://kinzan.nagoya/archives/news/2853/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-kinzan-2-24fa35a9557f6e7e.webp",
+          "sha256": "24fa35a9557f6e7e033dd980fc71de44d932bedadc18a5af5bf98ce30789b2fb",
+          "width": 1566,
+          "height": 1044,
+          "credit": "Kinzan Co., Ltd.",
+          "note": "Entrance and curved counter at the Higashisakura branch.",
+          "sourcePage": "https://kinzan.nagoya/archives/news/2853/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-kinzan-3-626ed9ff4ba65cd8.webp",
+          "sha256": "626ed9ff4ba65cd898478fb17137aa1e644313d4a91b2c7bccd29f4a1e44a48c",
+          "width": 1566,
+          "height": 1044,
+          "credit": "Kinzan Co., Ltd.",
+          "note": "Counter and open kitchen at the Higashisakura branch.",
+          "sourcePage": "https://kinzan.nagoya/archives/news/2853/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-kinzan-4-a6d0717cc4cde46d.webp",
+          "sha256": "a6d0717cc4cde46d6a94bb6d8177e26c0b4ad15023915844db7121ca74134071",
+          "width": 1144,
+          "height": 1430,
+          "credit": "Kinzan Co., Ltd.",
+          "note": "Table seating at the Higashisakura branch.",
+          "sourcePage": "https://kinzan.nagoya/archives/news/2853/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-kinzan-5-1a6d800ddc0de0e5.webp",
+          "sha256": "1a6d800ddc0de0e5ae5744faea7b28ce8655f3d72454f9bda64658a363c25fe4",
+          "width": 1144,
+          "height": 1430,
+          "credit": "Kinzan Co., Ltd.",
+          "note": "Lighting and wooden partitions at the Higashisakura branch.",
+          "sourcePage": "https://kinzan.nagoya/archives/news/2853/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-kinzan-6-ee13679d6cfc6d2c.webp",
+          "sha256": "ee13679d6cfc6d2c39211da9395277a3a9cfc61b042bbc0ea3a8e0c96e0d34f1",
+          "width": 1566,
+          "height": 1044,
+          "credit": "Kinzan Co., Ltd.",
+          "note": "Private table room at the Higashisakura branch.",
+          "sourcePage": "https://kinzan.nagoya/archives/news/2853/"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://kinzan.nagoya/archives/news/2853/",
+          "name": "Yakitori Kinzan — Higashisakura",
+          "checkedAt": "2026-10-16",
+          "menus": [
+            {
+              "label": "Higashisakura food menu",
+              "url": "https://www.hotpepper.jp/strJ004660332/food/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Nagoya Cochin thigh skewer",
+                  "price": 462
+                },
+                {
+                  "name": "Nagoya Cochin wings — four",
+                  "price": 1628
+                },
+                {
+                  "name": "Nagoya Cochin skin skewer",
+                  "price": 319
+                },
+                {
+                  "name": "Kinzan miso chicken skewer",
+                  "price": 308
+                },
+                {
+                  "name": "Chicken heart skewer",
+                  "price": 220
+                },
+                {
+                  "name": "Chicken thigh skewer",
+                  "price": 264
+                },
+                {
+                  "name": "Chicken skin skewer",
+                  "price": 209
+                },
+                {
+                  "name": "Chicken gizzard skewer",
+                  "price": 209
+                },
+                {
+                  "name": "Chicken liver skewer",
+                  "price": 275
+                },
+                {
+                  "name": "Chicken breast with wasabi skewer",
+                  "price": 253
+                },
+                {
+                  "name": "Tsukune skewer",
+                  "price": 264
+                },
+                {
+                  "name": "Chicken and leek skewer",
+                  "price": 275
+                },
+                {
+                  "name": "Anchovy shiitake skewer",
+                  "price": 308
+                },
+                {
+                  "name": "Asparagus roll skewer",
+                  "price": 319
+                },
+                {
+                  "name": "Wagyu sukiyaki skewer",
+                  "price": 539
+                },
+                {
+                  "name": "Soy-marinated mozzarella skewer",
+                  "price": 495
+                },
+                {
+                  "name": "Dakhanmari — whole chicken",
+                  "price": 4180
+                },
+                {
+                  "name": "Oyakodon — regular",
+                  "price": 1485
+                },
+                {
+                  "name": "Oyakodon — mini",
+                  "price": 770
+                },
+                {
+                  "name": "Catalana",
+                  "price": 528
+                }
+              ],
+              "note": "Tax included. Skewer prices are per skewer unless stated; order at least two of each variety, cheese may be ordered singly. Exact branch Hot Pepper menu updated October 6 takes precedence over lower Gurunavi prices (e.g. thigh ¥253 and dakhanmari ¥4,070). Not all current prices agree across booking platforms: confirm when ordering. Operator listing says M’s Garden B building 1F; not basement. Cover ¥330 and one drink per diner are listed in the branch Tabelog conditions. Operator opening photo gallery and both booking menus checked; regular dishes are not asserted to be included in Hana."
+            },
+            {
+              "label": "Hana course — booking discount through November 30",
+              "url": "https://www.hotpepper.jp/strJ004660332/course_cnod07/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hana course — per diner",
+                  "price": 5500,
+                  "note": "Published regular ¥6,000; 14 food components and two-hour drinks"
+                },
+                {
+                  "name": "Four small dishes",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                },
+                {
+                  "name": "Salad",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                },
+                {
+                  "name": "Four yakitori varieties",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                },
+                {
+                  "name": "Three other skewers",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                },
+                {
+                  "name": "Fried dish",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                },
+                {
+                  "name": "Rice finale",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                },
+                {
+                  "name": "Kirin Ichiban Shibori draft beer",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                },
+                {
+                  "name": "Kirin Riku highball",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Hana course — booking discount through November 30; no separate item price published"
+                }
+              ],
+              "note": "Tax included. Minimum two diners; book by 23:00 the previous day. Two-hour seat and drinks, last drink order 30 minutes before end; exchange empty glasses. Course lists categories, not exact yakitori varieties. Current branch listing explicitly ends November 30. Its template start May 1 predates October 8 opening and is not treated as service history. The separate before-18:00 Yu coupon is not conflated with Hana."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Hana course — booking discount through November 30",
+              "kind": "other",
+              "description": "Hana 14-component course with two-hour drinks: ¥5,500 instead of ¥6,000, tax included.",
+              "sourceUrl": "https://www.hotpepper.jp/strJ004660332/course_cnod07/",
+              "menuLabel": "Hana course — booking discount through November 30",
+              "discounted": true,
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Minimum two diners; reserve by 23:00 the previous day.",
+                "Two-hour seating; drink last order 30 minutes before end.",
+                "Restaurant service is 17:00–24:00; offer requires a reserved two-hour slot. Latest course admission is not published; confirm when booking.",
+                "Current offer checked October 16; no start date claimed because booking template begins before branch opening."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "24:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "1F M’s Garden B building, 2-12-34 Higashisakura, Higashi-ku, Nagoya",
+          "neighborhood": "Higashisakura / Takaoka",
+          "websiteUrl": "https://kinzan.nagoya/store/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-kinzan-1-21102d4f041fa185.webp",
+            "alt": "Yakitori Kinzan — Higashisakura — Higashisakura branch exterior at night.",
+            "credit": "Kinzan Co., Ltd.",
+            "sourceUrl": "https://kinzan.nagoya/archives/news/2853/",
+            "originalUrl": "https://kinzan.nagoya/wp-content/uploads/2026/10/S__50921475-3.jpg",
+            "checkedAt": "2026-10-16"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ookute Yamamotoya — Ozone Opens in Ozone",
+        "description": "A new Ozone branch serving handmade miso nikomi udon alongside curry and clear-broth variations.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ004698526/",
+        "address": "3-13-25 Ozone, Kita-ku, Nagoya",
+        "productName": "Ookute Yamamotoya — Ozone",
+        "utcStartDateTime": "2026-10-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant-managed Ozone branch banner announces October 14 opening; exact Tabelog branch lists October 14, 2026. Operator branch directory corroborates this address and phone. Planned wording remains in booking header; first-service visit not independently verified.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Ozone",
+          "Miso nikomi udon"
+        ],
+        "longFormSummary": "<p>A new Ozone branch serving handmade miso nikomi udon alongside curry and clear-broth variations.<cite data-ref=\"https://www.hotpepper.jp/strJ004698526/\"></cite></p><p>Restaurant-managed Ozone branch banner announces October 14 opening; exact Tabelog branch lists October 14, 2026. Operator branch directory corroborates this address and phone. Planned wording remains in booking header; first-service visit not independently verified.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ004698526/",
+            "title": "Ookute Yamamotoya — Ozone source",
+            "confidence": 90,
+            "reasoning": "Restaurant-managed Ozone branch banner announces October 14 opening; exact Tabelog branch lists October 14, 2026. Operator branch directory corroborates this address and phone. Planned wording remains in booking header; first-service visit not independently verified."
+          },
+          {
+            "url": "https://a-yamamotoya.co.jp/store/",
+            "title": "Ookute Yamamotoya — Ozone source",
+            "confidence": 90,
+            "reasoning": "Restaurant-managed Ozone branch banner announces October 14 opening; exact Tabelog branch lists October 14, 2026. Operator branch directory corroborates this address and phone. Planned wording remains in booking header; first-service visit not independently verified."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698526/food/",
+            "title": "Ookute Yamamotoya — Ozone source",
+            "confidence": 90,
+            "reasoning": "Restaurant-managed Ozone branch banner announces October 14 opening; exact Tabelog branch lists October 14, 2026. Operator branch directory corroborates this address and phone. Planned wording remains in booking header; first-service visit not independently verified."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230110/23098017/",
+            "title": "Ookute Yamamotoya — Ozone source",
+            "confidence": 90,
+            "reasoning": "Restaurant-managed Ozone branch banner announces October 14 opening; exact Tabelog branch lists October 14, 2026. Operator branch directory corroborates this address and phone. Planned wording remains in booking header; first-service visit not independently verified."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ004698526/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698526/",
+            "name": "Ookute Yamamotoya — Ozone",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Ozone published dishes",
+                "url": "https://www.hotpepper.jp/strJ004698526/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Miso nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Egg miso nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken miso nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken and egg miso nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Mochi miso nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tempura miso nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Nagoya Cochin miso nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Curry nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Cheese curry nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tempura curry nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Clear-broth nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Egg clear-broth nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken clear-broth nikomi udon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken wings — three",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Miso oden — three",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Miso kushikatsu — three",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Nagoya Cochin chicken tenmusu",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Zenzai",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Exact branch menu updated September 23 names these dishes but prints no prices. Operator shop directory and main site, branch food/gallery pages and Tabelog checked; no other branch prices borrowed. Operator lists the Ozone branch and phone. Branch booking header retains planned-opening wording; both opening banner and Tabelog specify October 14, 2026. Seat count conflicts (45 vs 64), so no count asserted. Branch booking says 11:00–22:00; operator main-page 11:00–21:00 footer is for the original Ookute branch, not applied here."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698526/",
+            "name": "Ookute Yamamotoya — Ozone",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://a-yamamotoya.co.jp/store/",
+            "phone": "052-211-9288",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–22:00; last food/drink order 21:30"
+              }
+            ],
+            "detailsSourceUrl": "https://a-yamamotoya.co.jp/store/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698526/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698526/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230110/23098017/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "yamamoto",
+            "name": "Ookute Yamamotoya — Ozone",
+            "neighborhood": "Ozone",
+            "cuisine": "Miso nikomi udon",
+            "description": "A new Ozone branch serving handmade miso nikomi udon alongside curry and clear-broth variations.",
+            "address": "3-13-25 Ozone, Kita-ku, Nagoya",
+            "websiteUrl": "https://a-yamamotoya.co.jp/store/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-yamamoto-1-84178fa7fc5ad3eb.webp",
+            "imageCredit": "Ookute Yamamotoya Ozone / Hot Pepper Gourmet",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004698526/appearance/",
+            "imageNote": "Dining room published in the Ozone branch gallery.",
+            "openingConfirmed": true,
+            "day": "2026-10-14"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-yamamoto-1-84178fa7fc5ad3eb.webp",
+          "sha256": "84178fa7fc5ad3ebab63fa78f1f508da2ad2985e1c431b23f122d1f2ce3f3be3",
+          "width": 235,
+          "height": 238,
+          "credit": "Ookute Yamamotoya Ozone / Hot Pepper Gourmet",
+          "note": "Dining room published in the Ozone branch gallery.",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698526/appearance/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-yamamoto-2-9f6914c63da2b850.webp",
+          "sha256": "9f6914c63da2b8504e99c3a11cc390e54d7e620d5065e1cff9ffbf824cd1a120",
+          "width": 238,
+          "height": 238,
+          "credit": "Ookute Yamamotoya Ozone / Hot Pepper Gourmet",
+          "note": "Table seating published in the Ozone branch gallery.",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698526/appearance/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-yamamoto-3-e7bb0c4cb6445e2c.webp",
+          "sha256": "e7bb0c4cb6445e2c14b6ec57bf82808ea3acac791b975f264ad78439ab90b8ae",
+          "width": 238,
+          "height": 238,
+          "credit": "Ookute Yamamotoya Ozone / Hot Pepper Gourmet",
+          "note": "Window-side tables published in the Ozone branch gallery.",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698526/appearance/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Katsuo — Yanagibashi Oendan Opens in Meieki / Yanagibashi",
+        "description": "An October opening near Yanagibashi market serving Nakatsu-style fried chicken and iron-plate dishes into the early morning.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000040.000108003.html",
+        "address": "5-30-1 Meieki, Nakamura-ku, Nagoya",
+        "productName": "Katsuo — Yanagibashi Oendan",
+        "utcStartDateTime": "2026-10-07T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "GALA operator release dated October 7, 2026 explicitly confirms this Yanagibashi branch opens October 7, with exact address, phone and hours.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Meieki / Yanagibashi",
+          "Karaage / izakaya"
+        ],
+        "longFormSummary": "<p>An October opening near Yanagibashi market serving Nakatsu-style fried chicken and iron-plate dishes into the early morning.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000040.000108003.html\"></cite></p><p>GALA operator release dated October 7, 2026 explicitly confirms this Yanagibashi branch opens October 7, with exact address, phone and hours.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000040.000108003.html",
+            "title": "Katsuo — Yanagibashi Oendan source",
+            "confidence": 90,
+            "reasoning": "GALA operator release dated October 7, 2026 explicitly confirms this Yanagibashi branch opens October 7, with exact address, phone and hours."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698299/food/",
+            "title": "Katsuo — Yanagibashi Oendan source",
+            "confidence": 90,
+            "reasoning": "GALA operator release dated October 7, 2026 explicitly confirms this Yanagibashi branch opens October 7, with exact address, phone and hours."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698299/appearance/",
+            "title": "Katsuo — Yanagibashi Oendan source",
+            "confidence": 90,
+            "reasoning": "GALA operator release dated October 7, 2026 explicitly confirms this Yanagibashi branch opens October 7, with exact address, phone and hours."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000040.000108003.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000040.000108003.html",
+            "name": "Katsuo — Yanagibashi Oendan",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Yanagibashi food menu",
+                "url": "https://www.hotpepper.jp/strJ004698299/food/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Thigh karaage — five pieces",
+                    "price": 748
+                  },
+                  {
+                    "name": "Thigh karaage — eight pieces",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Chicken nanban",
+                    "price": 858
+                  },
+                  {
+                    "name": "Tulip chicken — four",
+                    "price": 659
+                  },
+                  {
+                    "name": "Gizzard karaage",
+                    "price": 605
+                  },
+                  {
+                    "name": "Chicken neck karaage",
+                    "price": 715
+                  },
+                  {
+                    "name": "Yangnyeom chicken — five",
+                    "price": 825
+                  },
+                  {
+                    "name": "Mentaiko mayonnaise chicken — five",
+                    "price": 825
+                  },
+                  {
+                    "name": "Dashimaki tamago",
+                    "price": 659
+                  },
+                  {
+                    "name": "Mentaiko dashimaki",
+                    "price": 748
+                  },
+                  {
+                    "name": "French fries",
+                    "price": 528
+                  },
+                  {
+                    "name": "Edamame",
+                    "price": 385
+                  },
+                  {
+                    "name": "Yam iron-plate dish",
+                    "price": 638
+                  },
+                  {
+                    "name": "Liver and garlic chives",
+                    "price": 748
+                  },
+                  {
+                    "name": "Grilled offal",
+                    "price": 748
+                  },
+                  {
+                    "name": "Tuna pieces",
+                    "price": 858
+                  },
+                  {
+                    "name": "Horse sashimi",
+                    "price": 858
+                  },
+                  {
+                    "name": "Yaki ramen",
+                    "price": 748
+                  },
+                  {
+                    "name": "Taiwan mazesoba",
+                    "price": 748
+                  },
+                  {
+                    "name": "Vanilla ice cream",
+                    "price": 385
+                  }
+                ],
+                "note": "Tax included. Branch page lists ¥396 cover per person. Operator launch release says Premium Malt’s beer ¥180 and highball ¥150 before tax (¥198/¥165 including 10% tax); never displayed as tax-inclusive ¥180/¥150. Exact branch regular menu/gallery and operator release checked. Two-/three-hour karaage buffet courses ¥3,000/¥3,500 are listed but their full course conditions require further checking before a Specials profile is created. Ordinary everyday prices alone are not a verified dated offer."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000040.000108003.html",
+            "name": "Katsuo — Yanagibashi Oendan",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://katsuo-web.com/",
+            "phone": "052-433-3789",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "15:00–03:00 next day"
+              }
+            ],
+            "detailsSourceUrl": "https://katsuo-web.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000040.000108003.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698299/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698299/appearance/"
+              }
+            ],
+            "reservationUrl": "https://www.hotpepper.jp/strJ004698299/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "katsuo",
+            "name": "Katsuo — Yanagibashi Oendan",
+            "neighborhood": "Meieki / Yanagibashi",
+            "cuisine": "Karaage / izakaya",
+            "description": "An October opening near Yanagibashi market serving Nakatsu-style fried chicken and iron-plate dishes into the early morning.",
+            "address": "5-30-1 Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://katsuo-web.com/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-katsuo-1-227c61de684ab01e.webp",
+            "imageCredit": "Katsuo Yanagibashi Oendan / Hot Pepper Gourmet",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004698299/appearance/",
+            "imageNote": "Yanagibashi branch dining room, as published in its branch gallery.",
+            "openingConfirmed": true,
+            "day": "2026-10-07"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-katsuo-1-227c61de684ab01e.webp",
+          "sha256": "227c61de684ab01e29deddf79c7a02cef386d1bac3b26b1fed9679ff4e624120",
+          "width": 238,
+          "height": 238,
+          "credit": "Katsuo Yanagibashi Oendan / Hot Pepper Gourmet",
+          "note": "Yanagibashi branch dining room, as published in its branch gallery.",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698299/appearance/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-katsuo-2-ff4cf53d625fcac3.webp",
+          "sha256": "ff4cf53d625fcac3fb4257a481ad3b6a0951113b488b8874522ef7ae4625a3f2",
+          "width": 238,
+          "height": 238,
+          "credit": "Katsuo Yanagibashi Oendan / Hot Pepper Gourmet",
+          "note": "Yanagibashi branch table seating, as published in its branch gallery.",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698299/appearance/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch57-katsuo-3-9c3d8dfea2e3cc8d.webp",
+          "sha256": "9c3d8dfea2e3cc8ddeca6d2bfe917e6e0d9afaaa96c23bbb2525f64851149259",
+          "width": 238,
+          "height": 238,
+          "credit": "Katsuo Yanagibashi Oendan / Hot Pepper Gourmet",
+          "note": "Yanagibashi branch exterior with branch name visible.",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698299/appearance/"
+        }
+      ]
+    }
+  ]
+}

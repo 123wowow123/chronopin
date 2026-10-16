@@ -16,11 +16,11 @@
         "sourceUrl": "https://www.la-cime.com/",
         "address": "1F Kawaramachi Usami Building, 3-2-15 Kawaramachi, Chuo-ku, Osaka",
         "productName": "La Cime",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "2010-03-01T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date.",
+        "dateConfidenceReasoning": "Cuisine Kingdom’s interview with chef Yusuke Takada explicitly dates La Cime’s opening at the current Osaka Honmachi location to March 2010. March 1 is a month-only timeline anchor, not a verified opening day. The operator’s February 2016 refurbishment is separate. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -32,19 +32,25 @@
           "Hommachi",
           "Contemporary French"
         ],
-        "longFormSummary": "<p>Yusuke Takada’s contemporary French restaurant balances guest, cuisine and space in a compact dining room.<cite data-ref=\"https://www.la-cime.com/\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Yusuke Takada’s contemporary French restaurant balances guest, cuisine and space in a compact dining room.<cite data-ref=\"https://www.la-cime.com/\"></cite></p><p>Opening history: Cuisine Kingdom’s interview with chef Yusuke Takada explicitly dates La Cime’s opening at the current Osaka Honmachi location to March 2010. March 1 is a month-only timeline anchor, not a verified opening day. The operator’s February 2016 refurbishment is separate. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://cuisine-kingdom.com/yusuke-takada\"></cite><cite data-ref=\"https://www.la-cime.com/\"></cite></p>",
         "references": [
           {
             "url": "https://www.la-cime.com/",
             "title": "La Cime source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://guide.michelin.com/en/osaka-region/osaka/restaurant/la-cime",
             "title": "La Cime source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://cuisine-kingdom.com/yusuke-takada",
+            "title": "見慣れた食材の形を変え、驚きを与えたい「ラ シーム」高田裕介さん",
+            "confidence": 85,
+            "reasoning": "Cuisine Kingdom’s interview with chef Yusuke Takada explicitly dates La Cime’s opening at the current Osaka Honmachi location to March 2010. March 1 is a month-only timeline anchor, not a verified opening day. The operator’s February 2016 refurbishment is separate. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -135,7 +141,44 @@
           "note": "Exact restaurant interior labelled by MICHELIN Guide; no other venue recommendations used.",
           "sourcePage": "https://guide.michelin.com/en/osaka-region/osaka/restaurant/la-cime"
         }
-      ]
+      ],
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.la-cime.com/",
+        "day": "2010-03-01",
+        "confidence": "estimated",
+        "precision": "month",
+        "reason": "Cuisine Kingdom’s interview with chef Yusuke Takada explicitly dates La Cime’s opening at the current Osaka Honmachi location to March 2010. March 1 is a month-only timeline anchor, not a verified opening day. The operator’s February 2016 refurbishment is separate. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://cuisine-kingdom.com/yusuke-takada",
+            "見慣れた食材の形を変え、驚きを与えたい「ラ シーム」高田裕介さん"
+          ],
+          [
+            "https://www.la-cime.com/",
+            "La Cime — current location and refurbishment history"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15971,
+            "sourceUrl": "https://www.la-cime.com/",
+            "date": "2010-03-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15971,
+            "sourceUrl": "https://www.la-cime.com/",
+            "date": "2010-03-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
+      }
     },
     {
       "pin": {
@@ -145,11 +188,11 @@
         "sourceUrl": "https://reminiscence0723.com/",
         "address": "South entrance, 3-18-3 Tsutsui, Higashi-ku, Nagoya",
         "productName": "Reminiscence",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "2023-07-23T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -161,31 +204,43 @@
           "Kurumamichi",
           "Contemporary French"
         ],
-        "longFormSummary": "<p>Masaki Kuzuhara’s French tasting-menu restaurant develops its experience around lingering impressions and memories.<cite data-ref=\"https://reminiscence0723.com/\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Masaki Kuzuhara’s French tasting-menu restaurant develops its experience around lingering impressions and memories.<cite data-ref=\"https://reminiscence0723.com/\"></cite></p><p>Opening history: Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://lade.jp/diary/tabelog/french/89404/\"></cite><cite data-ref=\"https://lade.jp/diary/tabelog/french/89990/\"></cite></p>",
         "references": [
           {
             "url": "https://reminiscence0723.com/",
             "title": "Reminiscence source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.nagoya-info.jp/feature/detail/148/",
             "title": "Reminiscence source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://guide.michelin.com/tw/en/article/news-and-views/michelin-guide-aichi-gifu-mie-2019-selection",
             "title": "Reminiscence source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://tabelog.com/aichi/A2301/A230106/23085308/party/276904982/",
             "title": "Reminiscence source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://lade.jp/diary/tabelog/french/89404/",
+            "title": "名古屋フレンチ「レミニセンス・葛原将季が挑む次なるステージへ」新店舗進捗状況見学",
+            "confidence": 100,
+            "reasoning": "Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://lade.jp/diary/tabelog/french/89990/",
+            "title": "名古屋・フレンチ「レミニセンス」グランメゾンを目指し移転リニューアル〜新店舗編〜",
+            "confidence": 100,
+            "reasoning": "Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -302,7 +357,44 @@
           "note": "Official current Nagoya restaurant gallery; dish identity and current availability not inferred.",
           "sourcePage": "https://reminiscence0723.com/"
         }
-      ]
+      ],
+      "openingDateCorrection": {
+        "sourceUrl": "https://reminiscence0723.com/",
+        "day": "2023-07-23",
+        "confidence": "confirmed",
+        "precision": "day",
+        "reason": "Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://lade.jp/diary/tabelog/french/89404/",
+            "名古屋フレンチ「レミニセンス・葛原将季が挑む次なるステージへ」新店舗進捗状況見学"
+          ],
+          [
+            "https://lade.jp/diary/tabelog/french/89990/",
+            "名古屋・フレンチ「レミニセンス」グランメゾンを目指し移転リニューアル〜新店舗編〜"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15972,
+            "sourceUrl": "https://reminiscence0723.com/",
+            "date": "2023-07-23",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15972,
+            "sourceUrl": "https://reminiscence0723.com/",
+            "date": "2023-07-23",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
+      }
     },
     {
       "pin": {
@@ -312,11 +404,11 @@
         "sourceUrl": "https://gionsasaki.com/",
         "address": "566-27 Komatsu-cho, Yasaka-dori, Higashiyama-ku, Kyoto",
         "productName": "Gion Sasaki",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "2006-01-01T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date.",
+        "dateConfidenceReasoning": "The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -328,19 +420,31 @@
           "Gion / Yasaka",
           "Japanese kaiseki"
         ],
-        "longFormSummary": "<p>Gion Sasaki’s counter-centred Kyoto restaurant combines Japanese seasonal cooking with an open-kitchen dining experience.<cite data-ref=\"https://gionsasaki.com/\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Gion Sasaki’s counter-centred Kyoto restaurant combines Japanese seasonal cooking with an open-kitchen dining experience.<cite data-ref=\"https://gionsasaki.com/\"></cite></p><p>Opening history: The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://gionsasaki.com/old/about.html\"></cite><cite data-ref=\"https://www.sunnyfoods.co.jp/business/brand/sasaki.html\"></cite></p>",
         "references": [
           {
             "url": "https://gionsasaki.com/",
             "title": "Gion Sasaki source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://guide.michelin.com/en/kyoto-region/kyoto/restaurant/gion-sasaki",
             "title": "Gion Sasaki source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://gionsasaki.com/old/about.html",
+            "title": "ABOUT of 祇園 さゝ木 / GION SASAKI",
+            "confidence": 85,
+            "reasoning": "The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.sunnyfoods.co.jp/business/brand/sasaki.html",
+            "title": "株式会社サニーフーズ — 祇園さゝ木 biography and 2023 renovation",
+            "confidence": 85,
+            "reasoning": "The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -429,7 +533,44 @@
           "note": "Exact restaurant interior labelled by MICHELIN Guide; no other venue recommendations used.",
           "sourcePage": "https://guide.michelin.com/en/kyoto-region/kyoto/restaurant/gion-sasaki"
         }
-      ]
+      ],
+      "openingDateCorrection": {
+        "sourceUrl": "https://gionsasaki.com/",
+        "day": "2006-01-01",
+        "confidence": "estimated",
+        "precision": "year",
+        "reason": "The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://gionsasaki.com/old/about.html",
+            "ABOUT of 祇園 さゝ木 / GION SASAKI"
+          ],
+          [
+            "https://www.sunnyfoods.co.jp/business/brand/sasaki.html",
+            "株式会社サニーフーズ — 祇園さゝ木 biography and 2023 renovation"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15973,
+            "sourceUrl": "https://gionsasaki.com/",
+            "date": "2006-01-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15973,
+            "sourceUrl": "https://gionsasaki.com/",
+            "date": "2006-01-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
+      }
     },
     {
       "pin": {
@@ -439,11 +580,11 @@
         "sourceUrl": "https://www.aoyama-florilege.jp/",
         "address": "2F Garden Plaza D, Azabudai Hills, 5-10-7 Toranomon, Minato-ku, Tokyo",
         "productName": "Florilège — Azabudai Hills",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "2023-11-24T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
-        "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date.",
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening.",
         "categories": [
           "Food"
         ],
@@ -455,25 +596,43 @@
           "Azabudai Hills",
           "Plant-forward French"
         ],
-        "longFormSummary": "<p>Hiroyasu Kawate’s French restaurant serves a plant-forward tasting menu around a shared thirteen-metre table.<cite data-ref=\"https://www.aoyama-florilege.jp/\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Hiroyasu Kawate’s French restaurant serves a plant-forward tasting menu around a shared thirteen-metre table.<cite data-ref=\"https://www.aoyama-florilege.jp/\"></cite></p><p>Opening history: Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://hillslife.jp/food/2023/10/30/a-masters-hand-has-a-new-home/\"></cite><cite data-ref=\"https://www.aoyama-florilege.jp/?site=%5C%22\"></cite><cite data-ref=\"https://www.timeout.jp/tokyo/ja/news/florilege-renewal-122823\"></cite></p>",
         "references": [
           {
             "url": "https://www.aoyama-florilege.jp/",
             "title": "Florilège — Azabudai Hills source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://guide.michelin.com/gb/en/tokyo-region/tokyo/restaurant/florilege",
             "title": "Florilège — Azabudai Hills source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.aoyama-florilege.jp/reservations.html",
             "title": "Florilège — Azabudai Hills source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://hillslife.jp/food/2023/10/30/a-masters-hand-has-a-new-home/",
+            "title": "常に進化を続ける〈フロリレージュ〉川手シェフの次なる挑戦とは？",
+            "confidence": 100,
+            "reasoning": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.aoyama-florilege.jp/?site=%5C%22",
+            "title": "Restaurant Florilège — operator biography",
+            "confidence": 100,
+            "reasoning": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.timeout.jp/tokyo/ja/news/florilege-renewal-122823",
+            "title": "日本の野菜こそ世界で価値がある、麻布台ヒルズに移転したフロリレージュの進化とは",
+            "confidence": 100,
+            "reasoning": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening."
           }
         ]
       },
@@ -623,7 +782,48 @@
           "note": "Official Azabudai Hills restaurant gallery; no menu availability inferred.",
           "sourcePage": "https://www.aoyama-florilege.jp/"
         }
-      ]
+      ],
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.aoyama-florilege.jp/",
+        "day": "2023-11-24",
+        "confidence": "confirmed",
+        "precision": "day",
+        "reason": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://hillslife.jp/food/2023/10/30/a-masters-hand-has-a-new-home/",
+            "常に進化を続ける〈フロリレージュ〉川手シェフの次なる挑戦とは？"
+          ],
+          [
+            "https://www.aoyama-florilege.jp/?site=%5C%22",
+            "Restaurant Florilège — operator biography"
+          ],
+          [
+            "https://www.timeout.jp/tokyo/ja/news/florilege-renewal-122823",
+            "日本の野菜こそ世界で価値がある、麻布台ヒルズに移転したフロリレージュの進化とは"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15974,
+            "sourceUrl": "https://www.aoyama-florilege.jp/",
+            "date": "2023-11-24",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15974,
+            "sourceUrl": "https://www.aoyama-florilege.jp/",
+            "date": "2023-11-24",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
+      }
     },
     {
       "pin": {

@@ -28,7 +28,7 @@ export function EarningsRow({ children, count, heading }: { children: ReactNode;
         id={id}
         className={
           open
-            ? 'grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4'
+            ? 'flex flex-wrap items-start gap-4 pb-2 [&>li]:w-64'
             : 'flex snap-x snap-mandatory items-start gap-4 overflow-x-auto pb-2 [&>li]:w-64 [&>li]:shrink-0 [&>li]:snap-start'
         }
       >

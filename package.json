@@ -49,6 +49,8 @@
     "people:apply": "tsx scripts/people/apply.ts",
     "people:link-pins": "tsx scripts/people/linkPins.ts",
     "people:assess": "tsx scripts/people/assess.ts",
+    "people:trades": "tsx scripts/people/trades.ts",
+    "people:campaigns": "tsx scripts/people/campaigns.ts",
     "people:wiki": "tsx scripts/people/wiki.ts",
     "people:radar": "tsx scripts/people/radarMerge.ts",
     "people:add-assessed": "tsx scripts/people/addAssessed.ts",

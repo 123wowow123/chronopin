@@ -38,6 +38,10 @@ import { personJsonLd } from '@/lib/seo';
 import { term } from '@/lib/searchTerms';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { PinJson } from '@/lib/types';
+import { TradesSection } from '@/components/person/TradesSection';
+import type { TradeRow } from '@/lib/trades';
+import { CampaignSection } from '@/components/person/CampaignSection';
+import type { CampaignCycle } from '@/lib/campaigns';
 
 const PILL = 'inline-flex items-center rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-ink ring-1 ring-inset ring-line';
 const TAG = 'inline-flex items-center rounded-md bg-raised px-1.5 py-0.5 text-[11px] font-medium text-muted';
@@ -49,12 +53,16 @@ const TAG = 'inline-flex items-center rounded-md bg-raised px-1.5 py-0.5 text-[1
 export function PersonView({
   profile,
   pins,
+  trades,
+  campaigns,
   timeZone,
   video,
   t,
 }: {
   profile: CompiledPerson;
   pins: PinJson[];
+  trades: TradeRow[];
+  campaigns: CampaignCycle[];
   timeZone: string;
   video: TimelineVideoSetting;
   t: Translator;
@@ -111,6 +119,8 @@ export function PersonView({
   // Where the page jumps to, in the order it runs.
   const nav = [
     years.length ? { id: 'earnings', label: t('person.earnings') } : null,
+    trades.length ? { id: 'trades', label: t('person.trades.title') } : null,
+    campaigns.length ? { id: 'campaign', label: t('person.campaign.title') } : null,
     { id: 'phases', label: t('person.octagon.title') },
     contributions.length ? { id: 'laws', label: lawsHeading } : null,
     meter ? { id: 'record', label: t('person.matters') } : null,
@@ -285,6 +295,10 @@ export function PersonView({
             </EarningsRow>
           </section>
         ) : null}
+
+        {trades.length ? <TradesSection personId={profile.id} name={profile.name} trades={trades} t={t} /> : null}
+
+        {campaigns.length ? <CampaignSection campaigns={campaigns} name={profile.name} t={t} /> : null}
 
         <Section id="phases" title={t('person.octagon.title')} count={phases.length} about={t('person.octagon.about', { name: profile.name })}>
           <OctagonChart phases={phases} refs={profile.refs} />
