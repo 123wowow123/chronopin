@@ -210,7 +210,7 @@ describe('travel best time to go', () => {
     expect(maldivesActivities.some((a) => a.title.includes('Whale Shark'))).toBe(true);
 
     // Our Jungle House (budget-friendly resort)
-    const jungleActivities = getResortTopActivities(15656);
+    const jungleActivities = getResortTopActivities(15801);
     expect(jungleActivities.length).toBeGreaterThanOrEqual(3);
     expect(jungleActivities.some((a) => a.category === 'Nature')).toBe(true);
     expect(jungleActivities.some((a) => a.title.includes('Cheow Lan Lake'))).toBe(true);

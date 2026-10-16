@@ -1,4 +1,6 @@
 import '../env';
+import { writeFileSync } from 'node:fs';
+import path from 'node:path';
 import * as db from '@/server/db';
 import { saveHotel } from '@/server/model/pinHotel';
 
@@ -37,7 +39,7 @@ interface BudgetResortSeed {
 
 const BUDGET_RESORTS: BudgetResortSeed[] = [
   {
-    id: 15656,
+    id: 15801,
     productName: 'Our Jungle House',
     title: 'Our Jungle House Eco-Resort & Treehouses in Khao Sok Rainforest',
     description: 'Pioneering rainforest retreat nestled on the Sok River in Khao Sok National Park, featuring handcrafted bamboo and teak treehouses immersed in ancient evergreen canopy.',
@@ -83,7 +85,7 @@ const BUDGET_RESORTS: BudgetResortSeed[] = [
     },
   },
   {
-    id: 15657,
+    id: 15802,
     productName: 'The Birdhouse El Nido',
     title: 'The Birdhouse El Nido Glamping & Canopy Retreat in Bacuit Bay',
     description: 'Boutique eco-glamping sanctuary perched high in the jungle canopy overlooking Marimegmeg Beach and the dramatic karst limestone islands of Bacuit Bay.',
@@ -129,7 +131,7 @@ const BUDGET_RESORTS: BudgetResortSeed[] = [
     },
   },
   {
-    id: 15658,
+    id: 15803,
     productName: 'Riad Yasmine',
     title: 'Riad Yasmine Historic Boutique Oasis in the Marrakech Medina',
     description: 'Iconic boutique riad hidden behind cedar doors in Marrakech’s historic Medina, famed for its emerald zellij tiled courtyard pool and panoramic rooftop terrace.',
@@ -175,7 +177,7 @@ const BUDGET_RESORTS: BudgetResortSeed[] = [
     },
   },
   {
-    id: 15659,
+    id: 15804,
     productName: 'Hoshino Resorts BEB5 Karuizawa',
     title: 'Hoshino Resorts BEB5 Karuizawa Forest Retreat in Nagano',
     description: 'Design-forward mountain forest resort in Nagano offering relaxed wood-deck lounge spaces, 24-hour courtyard fire pits, and access to Tonbo-no-yu hot springs.',
@@ -221,7 +223,7 @@ const BUDGET_RESORTS: BudgetResortSeed[] = [
     },
   },
   {
-    id: 15660,
+    id: 15805,
     productName: 'Bambu Indah',
     title: 'Bambu Indah Pioneering Bamboo Eco-Resort Along the Ayung River',
     description: 'Acclaimed eco-lifestyle bamboo sanctuary in Ubud created by John Hardy, featuring natural spring pools, bamboo treehouses, and permaculture dining over river rapids.',
@@ -267,7 +269,7 @@ const BUDGET_RESORTS: BudgetResortSeed[] = [
     },
   },
   {
-    id: 15661,
+    id: 15806,
     productName: '98 Acres Resort & Spa',
     title: '98 Acres Resort & Spa Mountain Eco-Chalet Retreat in Ella',
     description: 'Spectacular eco-chalet mountain retreat on a 98-acre scenic tea estate facing the iconic Ella Rock and Little Adam’s Peak in central Sri Lanka.',
@@ -313,7 +315,7 @@ const BUDGET_RESORTS: BudgetResortSeed[] = [
     },
   },
   {
-    id: 15662,
+    id: 15807,
     productName: 'Cabañas CuatroCuatros',
     title: 'Cabañas CuatroCuatros Ocean-View Vineyard & Desert Glamping Retreat',
     description: 'Secluded coastal glamping and vineyard retreat nestled between the Pacific Ocean and Baja mountains, featuring canvas cabañas and clifftop sunset bar.',
@@ -359,7 +361,7 @@ const BUDGET_RESORTS: BudgetResortSeed[] = [
     },
   },
   {
-    id: 15663,
+    id: 15808,
     productName: 'Playa Viva',
     title: 'Playa Viva Regenerative Bamboo Treehouse Sanctuary on the Pacific Coast',
     description: 'Regenerative eco-luxury sanctuary on a private mile of Pacific beach in Juluchuca, with open-air bamboo treehouses, baby turtle releases, and farm meals.',
@@ -408,6 +410,14 @@ const BUDGET_RESORTS: BudgetResortSeed[] = [
 
 async function seed() {
   console.log('Seeding 8 Budget-Friendly Resorts...');
+
+  // Clean up any old budget entries under 15656..15663 on local
+  await db.query(`
+    DELETE FROM "PinHotel" WHERE "pinId" BETWEEN 15656 AND 15663 AND "pinId" IN (SELECT id FROM "Pin" WHERE "productName" IN ('Our Jungle House', 'The Birdhouse El Nido', 'Riad Yasmine', 'Hoshino Resorts BEB5 Karuizawa', 'Bambu Indah', '98 Acres Resort & Spa', 'Cabañas CuatroCuatros', 'Playa Viva'));
+    DELETE FROM "PinMedium" WHERE "pinId" IN (SELECT id FROM "Pin" WHERE id BETWEEN 15656 AND 15663 AND "productName" IN ('Our Jungle House', 'The Birdhouse El Nido', 'Riad Yasmine', 'Hoshino Resorts BEB5 Karuizawa', 'Bambu Indah', '98 Acres Resort & Spa', 'Cabañas CuatroCuatros', 'Playa Viva'));
+    DELETE FROM "PinTag" WHERE "pinId" IN (SELECT id FROM "Pin" WHERE id BETWEEN 15656 AND 15663 AND "productName" IN ('Our Jungle House', 'The Birdhouse El Nido', 'Riad Yasmine', 'Hoshino Resorts BEB5 Karuizawa', 'Bambu Indah', '98 Acres Resort & Spa', 'Cabañas CuatroCuatros', 'Playa Viva'));
+    DELETE FROM "Pin" WHERE id BETWEEN 15656 AND 15663 AND "productName" IN ('Our Jungle House', 'The Birdhouse El Nido', 'Riad Yasmine', 'Hoshino Resorts BEB5 Karuizawa', 'Bambu Indah', '98 Acres Resort & Spa', 'Cabañas CuatroCuatros', 'Playa Viva');
+  `);
 
   for (const item of BUDGET_RESORTS) {
     console.log(`Processing Pin ${item.id}: ${item.productName}`);
@@ -508,6 +518,99 @@ async function seed() {
 
     console.log(`  ✓ Successfully seeded ${item.productName} with rubric and 3 verified reviews`);
   }
+
+  // Sequence advance
+  await db.query(`
+    SELECT setval('"Pin_id_seq"', GREATEST((SELECT COALESCE(max(id), 1) FROM "Pin"), 15808));
+    SELECT setval('"Medium_id_seq"', (SELECT COALESCE(max(id), 1) FROM "Medium"));
+  `);
+
+  // Generate self-contained SQL file for production execution
+  const escapeSql = (s: string) => s.replace(/'/g, "''");
+  const sqlLines: string[] = [
+    `-- Budget-Friendly Resorts Seed Script`,
+    `-- Pins: 15801 to 15808`,
+    `DELETE FROM "PinHotel" WHERE "pinId" BETWEEN 15656 AND 15663 AND "pinId" IN (SELECT id FROM "Pin" WHERE "productName" IN ('Our Jungle House', 'The Birdhouse El Nido', 'Riad Yasmine', 'Hoshino Resorts BEB5 Karuizawa', 'Bambu Indah', '98 Acres Resort & Spa', 'Cabañas CuatroCuatros', 'Playa Viva'));`,
+    `DELETE FROM "PinMedium" WHERE "pinId" IN (SELECT id FROM "Pin" WHERE id BETWEEN 15656 AND 15663 AND "productName" IN ('Our Jungle House', 'The Birdhouse El Nido', 'Riad Yasmine', 'Hoshino Resorts BEB5 Karuizawa', 'Bambu Indah', '98 Acres Resort & Spa', 'Cabañas CuatroCuatros', 'Playa Viva'));`,
+    `DELETE FROM "PinTag" WHERE "pinId" IN (SELECT id FROM "Pin" WHERE id BETWEEN 15656 AND 15663 AND "productName" IN ('Our Jungle House', 'The Birdhouse El Nido', 'Riad Yasmine', 'Hoshino Resorts BEB5 Karuizawa', 'Bambu Indah', '98 Acres Resort & Spa', 'Cabañas CuatroCuatros', 'Playa Viva'));`,
+    `DELETE FROM "Pin" WHERE id BETWEEN 15656 AND 15663 AND "productName" IN ('Our Jungle House', 'The Birdhouse El Nido', 'Riad Yasmine', 'Hoshino Resorts BEB5 Karuizawa', 'Bambu Indah', '98 Acres Resort & Spa', 'Cabañas CuatroCuatros', 'Playa Viva');`,
+    ``,
+  ];
+
+  for (const item of BUDGET_RESORTS) {
+    sqlLines.push(`-- Resort ${item.id}: ${escapeSql(item.productName)}`);
+    sqlLines.push(`INSERT INTO "Pin" (
+  "id", "title", "productName", "description", "longFormSummary", "address",
+  "location", "price", "priceLowerBound", "priceUpperBound", "priceCurrency",
+  "sourceUrl", "dateConfidence", "utcStartDateTime", "utcEndDateTime", "allDay",
+  "userId", "utcCreatedDateTime"
+) VALUES (
+  ${item.id}, '${escapeSql(item.title)}', '${escapeSql(item.productName)}', '${escapeSql(item.description)}', '${escapeSql(item.longFormSummary)}', '${escapeSql(item.address)}',
+  ST_SetSRID(ST_MakePoint(${item.longitude}, ${item.latitude}), 4326), ${item.price}, ${item.priceLowerBound}, ${item.priceUpperBound}, '${escapeSql(item.priceCurrency)}',
+  '${escapeSql(item.sourceUrl)}', 'confirmed', '2026-01-01T00:00:00.000Z', '2026-01-02T00:00:00.000Z', true,
+  416, NOW()
+) ON CONFLICT ("id") DO UPDATE SET
+  "title" = EXCLUDED."title",
+  "productName" = EXCLUDED."productName",
+  "description" = EXCLUDED."description",
+  "longFormSummary" = EXCLUDED."longFormSummary",
+  "address" = EXCLUDED."address",
+  "location" = EXCLUDED."location",
+  "price" = EXCLUDED."price",
+  "priceLowerBound" = EXCLUDED."priceLowerBound",
+  "priceUpperBound" = EXCLUDED."priceUpperBound",
+  "priceCurrency" = EXCLUDED."priceCurrency",
+  "sourceUrl" = EXCLUDED."sourceUrl";`);
+
+    for (const tag of item.tags) {
+      sqlLines.push(`INSERT INTO "PinTag" ("pinId", "name", "kind", "source") VALUES (${item.id}, '${escapeSql(tag)}', '${tag === 'Travel' ? 'category' : 'topic'}', 'user') ON CONFLICT DO NOTHING;`);
+    }
+
+    sqlLines.push(`DO $$
+DECLARE
+  m_id integer;
+BEGIN
+  SELECT m.id INTO m_id FROM "Medium" m JOIN "PinMedium" pm ON pm."mediumId" = m.id WHERE pm."pinId" = ${item.id} LIMIT 1;
+  IF m_id IS NULL THEN
+    INSERT INTO "Medium" ("originalUrl", "type", "thumbWidth", "thumbHeight", "originalWidth", "originalHeight")
+    VALUES ('${escapeSql(item.imageUrl)}', '1', 1200, 800, 1600, 1067)
+    RETURNING id INTO m_id;
+
+    INSERT INTO "PinMedium" ("pinId", "mediumId", "weight")
+    VALUES (${item.id}, m_id, 1)
+    ON CONFLICT DO NOTHING;
+  END IF;
+END $$;`);
+
+    const reviewsJson = escapeSql(JSON.stringify(item.hotel.reviews));
+    sqlLines.push(`INSERT INTO "PinHotel" (
+  "pinId", "rooms", "service", "location", "cleanliness", "value", "acclaim",
+  "source", "basis", "sourceUrl", "reviews", "checkedAt"
+) VALUES (
+  ${item.id}, ${item.hotel.rooms}, ${item.hotel.service}, ${item.hotel.location}, ${item.hotel.cleanliness}, ${item.hotel.value}, ${item.hotel.acclaim},
+  'hand', '${escapeSql(item.hotel.basis)}', '${escapeSql(item.sourceUrl)}', '${reviewsJson}'::jsonb, NOW()
+) ON CONFLICT ("pinId") DO UPDATE SET
+  "rooms" = EXCLUDED."rooms",
+  "service" = EXCLUDED."service",
+  "location" = EXCLUDED."location",
+  "cleanliness" = EXCLUDED."cleanliness",
+  "value" = EXCLUDED."value",
+  "acclaim" = EXCLUDED."acclaim",
+  "source" = 'hand',
+  "basis" = EXCLUDED."basis",
+  "sourceUrl" = EXCLUDED."sourceUrl",
+  "reviews" = EXCLUDED."reviews",
+  "checkedAt" = NOW();`);
+
+    sqlLines.push('');
+  }
+
+  sqlLines.push(`SELECT setval('"Pin_id_seq"', GREATEST((SELECT COALESCE(max(id), 1) FROM "Pin"), 15808));`);
+  sqlLines.push(`SELECT setval('"Medium_id_seq"', (SELECT COALESCE(max(id), 1) FROM "Medium"));`);
+
+  const sqlPath = path.join(process.cwd(), 'scripts/hotels/seedBudgetFriendlyResorts.sql');
+  writeFileSync(sqlPath, sqlLines.join('\n'), 'utf8');
+  console.log(`Generated SQL written to ${sqlPath}`);
 
   console.log('Done seeding budget friendly resorts!');
 }

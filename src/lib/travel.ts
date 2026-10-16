@@ -1067,7 +1067,7 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
   },
 
   // Our Jungle House
-  15656: {
+  15801: {
     destination: 'Khao Sok National Park, Surat Thani, Thailand',
     timing: {
       recommendedMonths: [12, 1, 2, 3, 4],
@@ -1097,7 +1097,7 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
   },
 
   // The Birdhouse El Nido
-  15657: {
+  15802: {
     destination: 'El Nido, Bacuit Bay, Palawan, Philippines',
     timing: {
       recommendedMonths: [12, 1, 2, 3, 4, 5],
@@ -1127,7 +1127,7 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
   },
 
   // Riad Yasmine
-  15658: {
+  15803: {
     destination: 'Medina, Marrakech, Morocco',
     timing: {
       recommendedMonths: [3, 4, 5, 9, 10, 11],
@@ -1157,7 +1157,7 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
   },
 
   // Hoshino Resorts BEB5 Karuizawa
-  15659: {
+  15804: {
     destination: 'Karuizawa, Nagano, Japan',
     timing: {
       recommendedMonths: [5, 6, 7, 8, 9, 10],
@@ -1187,7 +1187,7 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
   },
 
   // Bambu Indah
-  15660: {
+  15805: {
     destination: 'Ubud, Bali, Indonesia',
     timing: {
       recommendedMonths: [4, 5, 6, 7, 8, 9, 10],
@@ -1217,7 +1217,7 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
   },
 
   // 98 Acres Resort & Spa
-  15661: {
+  15806: {
     destination: 'Ella, Badulla District, Sri Lanka',
     timing: {
       recommendedMonths: [12, 1, 2, 3, 4, 5],
@@ -1247,7 +1247,7 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
   },
 
   // Cabañas CuatroCuatros
-  15662: {
+  15807: {
     destination: 'Valle de Guadalupe / Ensenada, Baja California, Mexico',
     timing: {
       recommendedMonths: [4, 5, 6, 7, 8, 9, 10, 11],
@@ -1277,7 +1277,7 @@ const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeT
   },
 
   // Playa Viva
-  15663: {
+  15808: {
     destination: 'Juluchuca, Zihuatanejo Coast, Mexico',
     timing: {
       recommendedMonths: [11, 12, 1, 2, 3, 4, 5],
@@ -1431,14 +1431,14 @@ export const RESORT_PRICE_RANGES: Record<number, { min: number; max: number; cur
   // Durango Casino & Resort, Las Vegas: $150 - $380 (nightly rate; $385M is expansion construction cost)
   3404: { min: 150, max: 380, currency: 'USD' },
   // Budget-friendly resorts ($75 – $260/night)
-  15656: { min: 75, max: 145, currency: 'USD' },
-  15657: { min: 115, max: 190, currency: 'USD' },
-  15658: { min: 120, max: 185, currency: 'USD' },
-  15659: { min: 130, max: 210, currency: 'USD' },
-  15660: { min: 145, max: 260, currency: 'USD' },
-  15661: { min: 155, max: 245, currency: 'USD' },
-  15662: { min: 175, max: 260, currency: 'USD' },
-  15663: { min: 215, max: 320, currency: 'USD' },
+  15801: { min: 75, max: 145, currency: 'USD' },
+  15802: { min: 115, max: 190, currency: 'USD' },
+  15803: { min: 120, max: 185, currency: 'USD' },
+  15804: { min: 130, max: 210, currency: 'USD' },
+  15805: { min: 145, max: 260, currency: 'USD' },
+  15806: { min: 155, max: 245, currency: 'USD' },
+  15807: { min: 175, max: 260, currency: 'USD' },
+  15808: { min: 215, max: 320, currency: 'USD' },
 };
 
 // Signature top activities repository for all 32 curated resorts and luxury retreats.
@@ -2372,7 +2372,7 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
   ],
 
   // Our Jungle House
-  15656: [
+  15801: [
     {
       title: 'Khao Sok Cheow Lan Lake & Emerald Cave Longtail Boat Safari',
       category: 'Water',
@@ -2401,7 +2401,7 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
   ],
 
   // The Birdhouse El Nido
-  15657: [
+  15802: [
     {
       title: 'Bacuit Archipelago Secret Lagoon & Big Lagoon Private Outrigger Safari',
       category: 'Water',
@@ -2430,7 +2430,7 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
   ],
 
   // Riad Yasmine
-  15658: [
+  15803: [
     {
       title: 'Private Medina Spice Market & Artisanal Leather Souk Discovery',
       category: 'Culture',
@@ -2459,7 +2459,7 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
   ],
 
   // Hoshino Resorts BEB5 Karuizawa
-  15659: [
+  15804: [
     {
       title: 'Tonbo-no-yu Natural Geothermal Spring Bathing Under Forest Pines',
       category: 'Wellness',
@@ -2488,7 +2488,7 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
   ],
 
   // Bambu Indah
-  15660: [
+  15805: [
     {
       title: 'Natural River Canyon Swimming & Rope Swing Plunge',
       category: 'Water',
@@ -2517,7 +2517,7 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
   ],
 
   // 98 Acres Resort & Spa
-  15661: [
+  15806: [
     {
       title: 'Sunrise Hike to Little Adam’s Peak & Nine Arch Railway Bridge',
       category: 'Adventure',
@@ -2546,7 +2546,7 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
   ],
 
   // Cabañas CuatroCuatros
-  15662: [
+  15807: [
     {
       title: 'Bar Bura Clifftop Sunset Wine Tasting Overlooking the Pacific Ocean',
       category: 'Dining',
@@ -2575,7 +2575,7 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
   ],
 
   // Playa Viva
-  15663: [
+  15808: [
     {
       title: 'Dawn Leatherback & Olive Ridley Baby Sea Turtle Beach Release',
       category: 'Nature',

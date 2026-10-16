@@ -78,14 +78,14 @@ const SHELF_DEFINITIONS = [
     name: 'Kids & Family',
     label: 'Kids & Family Escapes',
     tagline: 'Waterpark havens, theme park kingdoms, reindeer safaris, and nature retreats designed for family wonder.',
-    pinIds: [5156, 3234, 836, 763, 15656, 15663, 15659, 15279, 15275, 4129, 3404],
+    pinIds: [5156, 3234, 836, 763, 15801, 15808, 15804, 15279, 15275, 4129, 3404],
   },
   {
     id: 'budget-friendly',
     name: 'Budget-Friendly',
     label: 'Budget-Friendly Escapes',
     tagline: 'Remarkable boutique resorts, coastal bungalows, and eco-lodges delivering world-class character under $250/night.',
-    pinIds: [15656, 15657, 15658, 15659, 15660, 15661, 15662, 15663],
+    pinIds: [15801, 15802, 15803, 15804, 15805, 15806, 15807, 15808],
   },
 ] as const;
 
