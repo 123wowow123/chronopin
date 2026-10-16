@@ -73,4 +73,35 @@ export default class PersonTrade {
     );
     return rows[0];
   }
+
+  // Watching every person's trades (0190).
+  static async watchAll(userId: number) {
+    const rows = await db.query(
+      `INSERT INTO "PersonTradeWatchAll" ("userId") VALUES ($1)
+       ON CONFLICT ("userId") DO UPDATE SET "utcDeletedDateTime" = NULL
+       WHERE "PersonTradeWatchAll"."utcDeletedDateTime" IS NOT NULL
+       RETURNING "userId"`,
+      [userId],
+    );
+    return { changed: !!rows.length };
+  }
+
+  static async unwatchAll(userId: number) {
+    const rows = await db.query(
+      `UPDATE "PersonTradeWatchAll" SET "utcDeletedDateTime" = now() WHERE "userId" = $1 AND "utcDeletedDateTime" IS NULL RETURNING "userId"`,
+      [userId],
+    );
+    return { changed: !!rows.length };
+  }
+
+  static async statusAll(viewerId: number | null | undefined) {
+    const rows = await db.query<{ watcherCount: number; watching: boolean }>(
+      `SELECT
+         (SELECT COUNT(*)::int FROM "PersonTradeWatchAll" w JOIN "User" u ON u."id" = w."userId"
+           WHERE w."utcDeletedDateTime" IS NULL AND u."utcDeletedDateTime" IS NULL) AS "watcherCount",
+         EXISTS (SELECT 1 FROM "PersonTradeWatchAll" WHERE "userId" = $1 AND "utcDeletedDateTime" IS NULL) AS "watching"`,
+      [viewerId ?? null],
+    );
+    return rows[0];
+  }
 }

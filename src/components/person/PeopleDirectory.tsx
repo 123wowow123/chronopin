@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { WatchAllTradesButton } from '@/components/person/WatchAllTradesButton';
 import Link from '@/components/ui/Link';
 import { useT } from '@/lib/client/i18n';
 import { CHART_COLORS, OCTAGON_AXES, octagonPoints, octagonRing, personPath, type OctagonAxis } from '@/lib/people';
@@ -197,7 +198,10 @@ export function PeopleDirectory({
       {/* The page's header: its title and description, and the name filter at the top right. */}
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0">
-          <h1 className="mb-3 text-3xl font-semibold tracking-tight">{title}</h1>
+          <div className="mb-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+            <h1 className="text-3xl font-semibold tracking-tight">{title}</h1>
+            <WatchAllTradesButton />
+          </div>
           <p className="max-w-3xl text-base text-muted">{description}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:pt-1">

@@ -115,6 +115,11 @@ export type NotificationItem = {
   tradeFiling: string | null;
   tradeCount: number | null;
   tradeTickers: string[] | null;
+  // The same filing split into its buy (purchase) and sell (sale, partial sale) groups.
+  tradeBuys: number | null;
+  tradeSells: number | null;
+  tradeBuyTickers: string[] | null;
+  tradeSellTickers: string[] | null;
   utcCreatedDateTime: Date;
   read: boolean;
   // How many notifications this entry stands for (1 unless it is a batch),
@@ -362,9 +367,12 @@ export default class Notification {
       `
       INSERT INTO "Notification" ("userId", "actorId", "type", "personId", "tradeFiling")
       SELECT w."userId", w."userId", 'trade', $1, $2
-      FROM "PersonTradeWatch" w
+      FROM (
+        SELECT "userId" FROM "PersonTradeWatch" WHERE "personId" = $1 AND "utcDeletedDateTime" IS NULL
+        UNION
+        SELECT "userId" FROM "PersonTradeWatchAll" WHERE "utcDeletedDateTime" IS NULL
+      ) w
       JOIN "User" u ON u."id" = w."userId" AND u."utcDeletedDateTime" IS NULL
-      WHERE w."personId" = $1 AND w."utcDeletedDateTime" IS NULL
       ON CONFLICT ("userId", "personId", "tradeFiling") WHERE "type" = 'trade'
       DO NOTHING
       RETURNING "userId"`,
@@ -408,6 +416,12 @@ export default class Notification {
                (SELECT COUNT(*)::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeCount",
                (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
                   FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeTickers",
+               (SELECT COUNT(*)::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuys",
+               (SELECT COUNT(*)::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSells",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuyTickers",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSellTickers",
                n."utcCreatedDateTime", n."utcReadDateTime",
                to_char((n."utcCreatedDateTime" AT TIME ZONE $2)::date, 'YYYY-MM-DD') AS "groupDay",
                ${groupKey('$2')} AS "groupKey",
@@ -441,7 +455,7 @@ export default class Notification {
         ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
       )
       SELECT "id", "type", "pinId", "pinTitle", "commentId", "commentText", "companyId",
-             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeCount", "tradeTickers",
+             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeCount", "tradeTickers", "tradeBuys", "tradeSells", "tradeBuyTickers", "tradeSellTickers",
              "utcCreatedDateTime", "read", "actor",
              "followingBack", "groupCount", "groupDay",
              COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",

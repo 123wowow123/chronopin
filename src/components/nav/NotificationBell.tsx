@@ -32,6 +32,10 @@ type Notification = {
   personPhotoUrl: string | null;
   tradeCount: number | null;
   tradeTickers: string[] | null;
+  tradeBuys: number | null;
+  tradeSells: number | null;
+  tradeBuyTickers: string[] | null;
+  tradeSellTickers: string[] | null;
   utcCreatedDateTime: string;
   read: boolean;
   groupCount: number;
@@ -382,6 +386,24 @@ function NotificationItems({
                           tickers: n.tradeTickers?.length ? `: ${n.tradeTickers.slice(0, 4).join(', ')}` : '',
                           person: () => <span className="font-semibold">{n.personName}</span>,
                         })}
+                        {n.tradeBuys || n.tradeSells ? (
+                          <span className="mt-1.5 grid grid-cols-2 gap-2">
+                            {(
+                              [
+                                ['tradeBuys', n.tradeBuys, n.tradeBuyTickers, 'text-success-soft ring-success/40'],
+                                ['tradeSells', n.tradeSells, n.tradeSellTickers, 'text-danger-soft ring-danger/40'],
+                              ] as const
+                            ).map(([key, count, tickers, tone]) => (
+                              <span key={key} className={`flex min-w-0 flex-col rounded-lg bg-field px-2.5 py-1.5 ring-1 ring-inset ${count ? tone : 'text-subtle ring-line'}`}>
+                                <span className="flex items-baseline justify-between gap-2 text-xs font-medium">
+                                  {t(`notifications.${key}`)}
+                                  <span className="text-base font-semibold tabular-nums">{count ?? 0}</span>
+                                </span>
+                                {tickers?.length ? <span className="truncate text-[11px] text-muted">{tickers.slice(0, 4).join(', ')}</span> : null}
+                              </span>
+                            ))}
+                          </span>
+                        ) : null}
                       </Link>
                     ) : n.type === 'thread' && n.pinId ? (
                       <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>

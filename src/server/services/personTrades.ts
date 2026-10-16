@@ -23,10 +23,16 @@ export async function storeFiling(personId: number, filing: TradeFiling): Promis
     if (!userIds.length) return added;
     const profile = await Person.profile(personId);
     if (!profile) return added;
-    const tickers = [...new Set(filing.trades.map((t) => t.ticker).filter(Boolean))].slice(0, 4).join(', ');
+    // Buys and sells are told as two groups, each with its tickers.
+    const group = (types: string[]) => {
+      const rows = filing.trades.filter((t) => types.includes(t.txType));
+      const tickers = [...new Set(rows.map((t) => t.ticker).filter(Boolean))].slice(0, 4).join(', ');
+      return rows.length ? `${rows.length} ${types[0] === 'purchase' ? 'buy' : 'sell'}${rows.length === 1 ? '' : 's'}${tickers ? ` (${tickers})` : ''}` : '';
+    };
+    const groups = [group(['purchase']), group(['sale', 'partial'])].filter(Boolean).join(' · ');
     const biggest = filing.trades.reduce((a, b) => ((b.amountHigh ?? b.amountLow ?? 0) > (a.amountHigh ?? a.amountLow ?? 0) ? b : a));
     const body =
-      `${added} new stock trade${added === 1 ? '' : 's'} disclosed${tickers ? `: ${tickers}` : ''}` +
+      `${added} new stock trade${added === 1 ? '' : 's'} disclosed${groups ? `: ${groups}` : ''}` +
       (biggest.amountLow ? ` (up to ${formatAmountRange(biggest.amountLow, biggest.amountHigh)})` : '');
     await Promise.all(
       userIds.map((userId) =>

@@ -17843,6 +17843,22 @@
         "November 1 expired"
       ],
       "deployPerformed": false
+    },
+    "readyBatchReconciliation": {
+      "verifiedAtUtc": "2026-10-16T22:16:36.860866+00:00",
+      "restaurantPins": 46,
+      "exactContentProfiles": 46,
+      "existingVenueUpdates": 4,
+      "mappedPinSourceUrlsAndDeletionStateVerified": true,
+      "allSpecialProfilesMatch": true,
+      "issues": [],
+      "productionGuideMemberships": 405,
+      "productionGuideShortfall": 320,
+      "productionGuideCountsMatchLastLocalAudit": true,
+      "latestBatchPublicPinMenusAndGalleryCreditsVerified": true,
+      "latestBatchNativeGuideTitleAndImageLinksVerified": true,
+      "newPublicationsRequired": 0,
+      "applicationDeployed": false
     }
   },
   "openingDateAudit": {
