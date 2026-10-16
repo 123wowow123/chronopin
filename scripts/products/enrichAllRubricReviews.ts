@@ -519,10 +519,16 @@ async function updateDbLocal() {
     await db.query(`UPDATE "PinDining" SET "reviews" = $1::jsonb, "checkedAt" = now() WHERE "pinId" = $2`, [JSON.stringify(reviews), pinId]);
     console.log(`Updated local PinDining for pin ${pinId}`);
   }
-  for (const [pinIdStr, reviews] of Object.entries(CAR_PERF_REVIEWS)) {
-    const pinId = Number(pinIdStr);
-    await db.query(`UPDATE "PinCarPerf" SET "reviews" = $1::jsonb, "checkedAt" = now() WHERE "pinId" = $2`, [JSON.stringify(reviews), pinId]);
-    console.log(`Updated local PinCarPerf for pin ${pinId}`);
+  const carPerfPath = path.resolve('scripts/products/carPerf.json');
+  const carPerfData: any[] = JSON.parse(readFileSync(carPerfPath, 'utf8'));
+  for (const entry of carPerfData) {
+    const reviews = CAR_PERF_REVIEWS[entry.pinId] ?? entry.reviews ?? [];
+    const kids = entry.scores?.kidsFriendly ?? null;
+    await db.query(
+      `UPDATE "PinCarPerf" SET "kidsFriendly" = $1, "reviews" = $2::jsonb, "checkedAt" = now() WHERE "pinId" = $3`,
+      [kids, JSON.stringify(reviews), entry.pinId],
+    );
+    console.log(`Updated local PinCarPerf for pin ${entry.pinId}`);
   }
   for (const [pinIdStr, reviews] of Object.entries(GAS_CAR_PERF_REVIEWS)) {
     const pinId = Number(pinIdStr);
@@ -531,7 +537,7 @@ async function updateDbLocal() {
   }
 }
 
-function updateDbProd() {
+async function updateDbProd() {
   console.log('\n--- Updating Production Database via scripts/prod-sql.sh ---');
   const sqlLines: string[] = ['BEGIN;'];
 
@@ -543,13 +549,22 @@ function updateDbProd() {
     const escaped = JSON.stringify(reviews).replace(/'/g, "''");
     sqlLines.push(`UPDATE "PinDining" SET "reviews" = '${escaped}'::jsonb, "checkedAt" = now() WHERE "pinId" = ${pinIdStr};`);
   }
-  for (const [pinIdStr, reviews] of Object.entries(CAR_PERF_REVIEWS)) {
+  const carPerfPath = path.resolve('scripts/products/carPerf.json');
+  const carPerfData: any[] = JSON.parse(readFileSync(carPerfPath, 'utf8'));
+  for (const entry of carPerfData) {
+    const reviews = CAR_PERF_REVIEWS[entry.pinId] ?? entry.reviews ?? [];
     const escaped = JSON.stringify(reviews).replace(/'/g, "''");
-    sqlLines.push(`UPDATE "PinCarPerf" SET "reviews" = '${escaped}'::jsonb, "checkedAt" = now() WHERE "pinId" = ${pinIdStr};`);
+    const kids = entry.scores?.kidsFriendly == null ? 'NULL' : entry.scores.kidsFriendly;
+    sqlLines.push(`UPDATE "PinCarPerf" SET "kidsFriendly" = ${kids}, "reviews" = '${escaped}'::jsonb, "checkedAt" = now() WHERE "pinId" = ${entry.pinId};`);
   }
-  for (const [pinIdStr, reviews] of Object.entries(GAS_CAR_PERF_REVIEWS)) {
+  const gasRows = await db.query<{ pinId: number; kidsFriendly: number | null; reviews: any }>(
+    `SELECT "pinId", "kidsFriendly", "reviews" FROM "PinGasCarPerf" ORDER BY "pinId"`,
+  );
+  for (const row of gasRows) {
+    const reviews = GAS_CAR_PERF_REVIEWS[row.pinId] ?? row.reviews ?? [];
     const escaped = JSON.stringify(reviews).replace(/'/g, "''");
-    sqlLines.push(`UPDATE "PinGasCarPerf" SET "reviews" = '${escaped}'::jsonb, "checkedAt" = now() WHERE "pinId" = ${pinIdStr};`);
+    const kids = row.kidsFriendly == null ? 'NULL' : row.kidsFriendly;
+    sqlLines.push(`UPDATE "PinGasCarPerf" SET "kidsFriendly" = ${kids}, "reviews" = '${escaped}'::jsonb, "checkedAt" = now() WHERE "pinId" = ${row.pinId};`);
   }
 
   sqlLines.push('COMMIT;');
@@ -599,7 +614,7 @@ async function main() {
   validateAll();
   await updateDbLocal();
   if (process.env.UPDATE_PROD === '1') {
-    updateDbProd();
+    await updateDbProd();
   } else {
     console.log('Skipping production update (set UPDATE_PROD=1 to update production)');
   }
