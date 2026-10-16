@@ -40,6 +40,8 @@ All landing page cards across every tab (Coming soon, Just opened, Top restauran
 
 ## Restaurant menu research
 
+Restaurant pins must use the exact branch's opening date as `utcStartDateTime`, including established restaurants added for Top restaurants or Specials. Never use a research/check date, menu publication date, or promotion start as the restaurant's opening date. Keep research dates in content `checkedAt` and offer dates in Specials. Research the opening before creating a pin; if only a year/month is supported, mark the date estimated and explain its precision and any timeline anchor. Do not infer a branch date from the parent brand's founding or the host building's opening without branch-specific evidence. Queue missing opening-date evidence for research.
+
 Save ongoing menu, visit-detail and landing-page tile edits through the database management APIs: `/api/admin/restaurant-content` for ordinary content and `/api/admin/restaurant-specials` for offers and their menus. Bundled JSON catalogs are import/research snapshots; do not require a deployment for content updates once the runtime content API is installed. Preserve source evidence and photo credits, and verify the affected pin and landing page after saving. See docs/okf/api/restaurant-content.md.
 
 Always make a thorough effort to find and display actual menu items, including happy-hour and other specials, on restaurant cards and pin details. Search beyond the first link: check branch-specific operator pages, linked PDFs, menu images, ordering menus and credible branch-specific sources. Transcribe verified dishes and drinks with published prices, currency and conditions. If items are published without prices, include the items with “Price not published”; missing prices are not a reason to leave the menu empty. Never borrow another branch's menu or infer that regular-menu items participate in a special. Use link-only coverage only after a deep search fails to find verifiable items, and document the sources checked and the remaining gap.
@@ -59,5 +61,10 @@ For every restaurant dining rubric pin (`PinDining`), always generate its full 5
 ## Prediction market predicted pins
 
 For the 6am and 6pm job (06:00 and 18:00 America/Los_Angeles news job), scrape for interesting events that prediction markets (Polymarket, Kalshi) have and create predicted pins out of them (owner instruction, 2026-10-15). Cover top interesting and high-volume prediction market events across politics, technology/AI, space, macroeconomics, sports championships and culture, in addition to immediate weekly resolutions. Tag every created pin with `Predicted`, set `dateConfidence: 'estimated'` dated to the predicted event onset (never the market closing/settlement buffer), quote the dollar volume and odds with the observation date, and thread to candidate parent pins (`parentId`) whenever an earlier event in the series, flight test program, election cycle or franchise exists.
+
+## Monthly Brent and WTI commodity prediction market pins
+
+For the 6am and 6pm job (06:00 and 18:00 America/Los_Angeles news job), scrape prediction markets (Kalshi, Polymarket) to add Brent and WTI crude oil commodity prices every month, create pins and make them into threads (owner instruction, 2026-10-15). Mark each pin as predicted (tag `Predicted`, `dateConfidence: 'estimated'` dated to the month's settlement date, quoting modal strike distribution and dollar volume under `@EnergyDesk` or `@EconDesk`), and thread to the prior month's pin in that commodity's thread (`parentId`). After price realization, update the pin with the final realized settlement value, set `dateConfidence: 'confirmed'`, and add reasoning explaining why the prediction was missed or on point against actual market drivers (OPEC+ quota compliance, geopolitical risk premia around Hormuz, commercial/SPR inventory changes, and global refinery demand).
+
 
 

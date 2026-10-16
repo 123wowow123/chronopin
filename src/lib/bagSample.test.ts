@@ -178,3 +178,35 @@ describe('sampleBag leads with large caps', () => {
     }
   });
 });
+
+describe('restaurant timeline fallback', () => {
+  const restaurant = { id: 1, tags: [{ name: 'Restaurant', kind: 'topic' as const, source: 'user' as const }] };
+
+  it('gives a restaurant one tenth of an otherwise identical pin’s weight', () => {
+    expect(bagWeight(restaurant)).toBeCloseTo(bagWeight({ id: 2 }) * 0.1);
+  });
+
+  it('hides restaurants even when a mixed day has spare card slots', () => {
+    expect(sampleBag([restaurant, { id: 2 }], 12, 'quiet-day')).toEqual([2]);
+  });
+
+  it('does not let popularity or viewer preference override the fallback', () => {
+    expect(sampleBag([{ ...restaurant, viewCount: 1_000_000 }, { id: 2 }], 2, 'busy', undefined, () => 1_000_000)).toEqual([2]);
+  });
+
+  it('keeps restaurants on a date with no other pins', () => {
+    expect(sampleBag([restaurant, { ...restaurant, id: 3 }], 4, 'empty-day').sort()).toEqual([1, 3]);
+  });
+
+  it('can reveal a restaurant explicitly opened in the timeline', () => {
+    expect(sampleBag([restaurant, { id: 2 }], 2, 'focused', 1)).toEqual([1, 2]);
+  });
+
+  it('recognizes venue tags without treating every food pin as a restaurant', () => {
+    const tagged = (name: string) => ({ id: 1, tags: [{ name, kind: 'topic' as const, source: 'user' as const }] });
+    for (const tag of ['Restaurants', 'Restaurant Opening', 'Restaurant Special', 'Top Restaurants', 'restaurant']) {
+      expect(sampleBag([tagged(tag), { id: 2 }], 4, tag)).toEqual([2]);
+    }
+    expect(sampleBag([tagged('Food'), { id: 2 }], 4, 'food').sort()).toEqual([1, 2]);
+  });
+});

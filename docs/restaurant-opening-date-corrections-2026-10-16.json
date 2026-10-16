@@ -1,0 +1,288 @@
+{
+  "checkedAt": "2026-10-16",
+  "corrections": [
+    {
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+      "day": "1997-09-11",
+      "confidence": "estimated",
+      "reason": "The founder’s first-person account in Japan Beans Association’s Mame magazine dates this exact Kyoto Isetan 11F restaurant’s opening to September 1997. September 11 is an estimated day inferred from JR West’s documented September 11 opening of the host department store, within the founder’s verified opening month; the restaurant’s exact day is not independently confirmed. October 16, 2026 was a research date, not the restaurant opening.",
+      "sources": [
+        [
+          "https://www.mame.or.jp/Portals/0/resources/pdf_z/011/MJ011-05-GD-0142.pdf",
+          "Japan Beans Association — Fujino founder account, printed page 26"
+        ],
+        [
+          "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+          "JR West — Kyoto Isetan opening September 11, 1997"
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+      "day": "2008-02-13",
+      "confidence": "confirmed",
+      "reason": "Operator corporate history explicitly dates the Kyoto Station restaurant on Subaco JR Kyoto Isetan 3F to February 13, 2008. This is the restaurant, not the distinct 2018 B1 retail counter or a later refurbishment.",
+      "sources": [
+        [
+          "https://tokichi.jp/pages/history",
+          "Nakamura Tokichi corporate history"
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+      "day": "2022-08-31",
+      "confidence": "confirmed",
+      "reason": "The operator’s August 23, 2022 announcement explicitly dates Kyoto Obuya Kyoto Station’s opening to August 31, 2022 after relocation from Nishiki. The former Nishiki venue opened in 2020; this pin represents the Kyoto Station branch.",
+      "sources": [
+        [
+          "https://www.kyoto-obuya.jp/posts/36907385?categoryIds=4078140",
+          "8月31日、京都おぶや 京都駅店 OPEN!"
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+      "day": "1997-09-11",
+      "confidence": "confirmed",
+      "reason": "Star Shokudo’s operator history explicitly lists Ichiba Koji JR Kyoto Isetan’s opening on September 11, 1997, in the ninth-floor open-view restaurant space.",
+      "sources": [
+        [
+          "https://www.star-kyoto.co.jp/about/history/",
+          "スター食堂の歴史"
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+      "day": "2021-03-16",
+      "confidence": "confirmed",
+      "reason": "The operator’s March 16, 2021 grand-opening release describes the hotel’s newly opened second-floor Salon de Thé Fauchon, including its room, hours and afternoon tea. October and November 2026 are offer dates, not this restaurant’s opening date.",
+      "sources": [
+        [
+          "https://prtimes.jp/main/html/rd/p/000000004.000069488.html",
+          "フォションホテル京都 — March 16, 2021 grand opening"
+        ]
+      ]
+    }
+  ],
+  "verifiedAtUtc": "2026-10-16T14:48:21.896203+00:00",
+  "verification": {
+    "local": [
+      {
+        "pinId": 17053,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+        "date": "1997-09-11",
+        "dateConfidence": "estimated",
+        "authorPreserved": true
+      },
+      {
+        "pinId": 17051,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+        "date": "2008-02-13",
+        "dateConfidence": "confirmed",
+        "authorPreserved": true
+      },
+      {
+        "pinId": 17081,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+        "date": "2022-08-31",
+        "dateConfidence": "confirmed",
+        "authorPreserved": true
+      },
+      {
+        "pinId": 17082,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+        "date": "1997-09-11",
+        "dateConfidence": "confirmed",
+        "authorPreserved": true
+      },
+      {
+        "pinId": 17083,
+        "sourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+        "date": "2021-03-16",
+        "dateConfidence": "confirmed",
+        "authorPreserved": true
+      }
+    ],
+    "production": [
+      {
+        "pinId": 15948,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+        "date": "1997-09-11",
+        "dateConfidence": "estimated",
+        "authorPreserved": true
+      },
+      {
+        "pinId": 15946,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+        "date": "2008-02-13",
+        "dateConfidence": "confirmed",
+        "authorPreserved": true
+      },
+      {
+        "pinId": 15976,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+        "date": "2022-08-31",
+        "dateConfidence": "confirmed",
+        "authorPreserved": true
+      },
+      {
+        "pinId": 15977,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+        "date": "1997-09-11",
+        "dateConfidence": "confirmed",
+        "authorPreserved": true
+      },
+      {
+        "pinId": 15978,
+        "sourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+        "date": "2021-03-16",
+        "dateConfidence": "confirmed",
+        "authorPreserved": true
+      }
+    ]
+  },
+  "remainingAudit": [
+    {
+      "name": "Tsukiji Sushisei — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Ishingo Tenshin Chashitsu — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Tenichi — Kyoto Isetan 11F",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Seio-tei — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "The Kitchen Salvatore Cuomo — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Flags Cafe — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Aoi Chaya — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Grill Capital Toyotei — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Mollette — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Hashitate — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Osteria Sakura — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Shozankaku — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Moritaya — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Wako — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Caffera — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Saryo Tsujiri — Kyoto Isetan",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+      "batch": 52,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "La Cime",
+      "sourceUrl": "https://www.la-cime.com/",
+      "batch": 54,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Reminiscence",
+      "sourceUrl": "https://reminiscence0723.com/",
+      "batch": 54,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Gion Sasaki",
+      "sourceUrl": "https://gionsasaki.com/",
+      "batch": 54,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    },
+    {
+      "name": "Florilège — Azabudai Hills",
+      "sourceUrl": "https://www.aoyama-florilege.jp/",
+      "batch": 54,
+      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
+      "status": "needs-opening-date-evidence"
+    }
+  ]
+}

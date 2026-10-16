@@ -18,7 +18,7 @@ function decodeEntities(text: string): string {
   });
 }
 
-function escapeHtml(text: string): string {
+export function escapeHtml(text: string): string {
   return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
@@ -36,7 +36,7 @@ function attribute(html: string, name: string): string | undefined {
 // The player's address: the stored iframe's own, when it is a YouTube embed
 // (keeping its start time and other parameters), else one built from the
 // medium's URL. enablejsapi=1 lets the page pause it (see YouTubeEmbed).
-function playerSrc(html: string | null | undefined, originalUrl: string | null | undefined): string | undefined {
+function playerSrc(html: string | null | undefined, originalUrl: string | null | undefined, autoplay?: boolean): string | undefined {
   const stored = html ? attribute(html, 'src') : undefined;
   if (stored) {
     try {
@@ -44,6 +44,9 @@ function playerSrc(html: string | null | undefined, originalUrl: string | null |
       if (/^(www\.)?youtube(-nocookie)?\.com$/.test(url.hostname) && /^\/embed\/[\w-]+$/.test(url.pathname)) {
         url.protocol = 'https:';
         url.searchParams.set('enablejsapi', '1');
+        if (autoplay) {
+          url.searchParams.set('autoplay', '1');
+        }
         return url.toString();
       }
     } catch {
@@ -51,7 +54,7 @@ function playerSrc(html: string | null | undefined, originalUrl: string | null |
     }
   }
   const id = youtubeVideoId(originalUrl);
-  return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}?enablejsapi=1` : undefined;
+  return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}?enablejsapi=1${autoplay ? '&autoplay=1' : ''}` : undefined;
 }
 
 // A YouTube medium's player, or undefined when it names no YouTube video. An
@@ -60,8 +63,9 @@ function playerSrc(html: string | null | undefined, originalUrl: string | null |
 export function youtubePlayerHtml(
   medium: { html?: string | null; originalUrl?: string | null },
   frameTitle?: string,
+  autoplay?: boolean,
 ): string | undefined {
-  const src = playerSrc(medium.html, medium.originalUrl);
+  const src = playerSrc(medium.html, medium.originalUrl, autoplay);
   if (!src) return undefined;
   const html = medium.html ?? '';
   const size = (name: string, fallback: number) => (/^\d{1,4}$/.test(attribute(html, name) ?? '') ? attribute(html, name)! : String(fallback));
@@ -87,14 +91,17 @@ function twitchParents(): string {
 export function videoPlayerHtml(
   medium: { html?: string | null; originalUrl?: string | null },
   frameTitle?: string,
+  autoplay?: boolean,
 ): string | undefined {
   const source = videoSource(medium.originalUrl) ?? videoSource(medium.html ? attribute(medium.html, 'src') : undefined);
-  if (!source || source.provider === 'youtube') return youtubePlayerHtml(medium, frameTitle);
+  if (!source || source.provider === 'youtube') return youtubePlayerHtml(medium, frameTitle, autoplay);
   const html = medium.html ?? '';
   const size = (name: string, fallback: number) => (/^\d{1,4}$/.test(attribute(html, name) ?? '') ? attribute(html, name)! : String(fallback));
   const title = attribute(html, 'title')?.trim() || frameTitle;
+  const baseEmbed = embedUrl(source.provider, source.id);
+  const extra = source.provider === 'twitch' ? `&autoplay=false${twitchParents()}` : (autoplay ? '&autoplay=1' : '');
   return (
-    `<iframe width="${size('width', 480)}" height="${size('height', 270)}" src="${escapeHtml(embedUrl(source.provider, source.id) + (source.provider === 'twitch' ? `&autoplay=false${twitchParents()}` : ''))}"` +
+    `<iframe width="${size('width', 480)}" height="${size('height', 270)}" src="${escapeHtml(baseEmbed + extra)}"` +
     (title ? ` title="${escapeHtml(title)}"` : '') +
     ' frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"' +
     ' referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'

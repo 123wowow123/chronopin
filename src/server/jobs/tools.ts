@@ -44,6 +44,7 @@ import { checkPinHealth, pinsToCheck } from './health';
 import log from '../util/log';
 import { sponsoredTranslationRequest, createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
+import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
 import { predictedPins } from './threadPredicted';
@@ -148,10 +149,24 @@ export const TOOLS: JobTool[] = [
   {
     name: 'prediction_markets',
     description:
-      "What Kalshi and Polymarket are betting on: interesting is top high-volume and noteworthy events being predicted across politics, technology, space, economics, championships and culture; thisWeek is events resolving in the next `days` (default 7); newlyListed is events listed since the last run resolving later. Each candidate has its odds, dollars traded, close time, and coveredByPin when an existing pin cites the market. Per-game sport markets, price ladders, weather and tweet counts are excluded. Use these to create predicted pins (tagged 'Predicted', dateConfidence 'estimated' at predicted event start, odds and volume quoted, and threaded to parent pins via parentId where available). Reads about 50 pages, so call it once a run.",
+      "What Kalshi and Polymarket are betting on: interesting is top high-volume and noteworthy events being predicted across politics, technology, space, economics, championships and culture; thisWeek is events resolving in the next `days` (default 7); newlyListed is events listed since the last run resolving later. Each candidate has its odds, dollars traded, close time, and coveredByPin when an existing pin cites the market. Includes monthly Brent and WTI commodity contracts. Use these to create predicted pins (tagged 'Predicted', dateConfidence 'estimated' at predicted event start, odds and volume quoted, and threaded to parent pins via parentId where available). Reads about 50 pages, so call it once a run.",
     input_schema: obj({ days: num('Window in days, 1-14'), limit: num('At most this many per list, default 30'), minVolume: num('Dollars traded, default 10000') }),
     run: (input, ctx) =>
       marketCandidates({ days: int(input.days, 7, 1, 14), limit: int(input.limit, 30, 1, 60), minVolume: int(input.minVolume, 10_000, 0, 10_000_000), since: ctx.since }),
+  },
+  {
+    name: 'oil_commodity_markets',
+    description:
+      "Scrapes prediction markets (Kalshi, Polymarket) for Brent and WTI crude oil commodity prices every month. Returns monthly forecasts and settlements: creates predicted pins (tagged 'Predicted', dateConfidence 'estimated' at month-end settlement), threads each month to the preceding month's pin (parentId), and after price realization updates with the realized final value and reasoning explaining why the prediction was missed or on point. Set apply: true to save pins and thread connections.",
+    input_schema: obj({ apply: { type: 'boolean', description: 'When true, applies pin creations, threading and realization updates' } }),
+    run: async (input, ctx) => {
+      const result = await syncMonthlyOilCommodities({ apply: !!input.apply });
+      await act(ctx, {
+        tool: 'oil_commodity_markets',
+        detail: `scanned ${result.scanned} monthly contracts, created ${result.created}, updated ${result.updated}, threaded ${result.threaded}`,
+      });
+      return result;
+    },
   },
   {
     name: 'predicted_pins',

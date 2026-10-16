@@ -13,6 +13,26 @@ After **every** scraping job (a scrape, a backfill, a batch of pins, a reference
 
 Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (owner corrections and confirmed approaches) and `* **Changed**` (which page was updated).
 
+
+
+## 2026-10-16 - Full production translation backlog
+
+* **Done:** Saved 1,350 production translations for 90 pins (1,290 missing, 60 outdated), using current source hashes through the admin API. Re-export verified zero missing, outdated or incomplete pins; 30 localized public checks covered every locale, and all 90 original English pins and authors were unchanged. Artifacts and verification: ignored `.scrape/prod-batches/translations-2026-10-16-all/`.
+* **Learned:** Check both endpoints of localized financial ranges: machine outputs can scale only the upper bound when converting billions to Chinese units. Review actual omissions and duplicated address numbers separately from equivalent spelled quantities and localized magnitudes. Keep “tabled” as postponed in US municipal reporting, and distinguish a motion’s second from elapsed seconds. Individual fallback requests can still drop trailing capacity clauses; validate complete source quantities before saving.
+
+## 2026-10-16 - Production translation backlog cleared after request for 30
+
+* **Done:** The requested next batch of 30 had only 21 production pins due (15908–15928). Completed all 315 missing translations across the 15 non-English locales. Final global export returned zero pins needing translation. Public checks covered all 21 pins and all 15 locales; English fields and author IDs were preserved. Artifacts: ignored `.scrape/prod-batches/translations-2026-10-16-30/`.
+* **Learned:** Refreshed the expired admin session using the existing local credentials. Kept writes serial and saved one pin per request; every save returned 15 rows without skips. Reviewed opening subjects and month-only dates; kept explicit uncertainty where operator and listing dates conflict. Japanese/Chinese written numerals in branch names require semantic checking. Restrict reusable translation corrections to the exact source node: similar collaboration-café descriptions can refer to different franchises and dates. The node validator caught such a mismatch before saving.
+* **Changed:** Recorded exact-source matching guidance in [Enrichment](enrichment.md#pin-translations) and the completed backlog in the update log.
+
+## 2026-10-16 - Ten-pin production translation batch
+
+* **Done:** Filled all 150 missing translations for production pins 15898–15907 in all 15 non-English locales. Verified no selected pin remained in the translation backlog, checked public localized responses across every locale, and confirmed English source fields and author IDs were unchanged. Batch artifacts and verification are in ignored `.scrape/prod-batches/translations-2026-10-15-10/`.
+* **Learned:** Opening titles containing a branch or station name can make the station or department store sound like the opening business. Rewrote 75 titles with explicit restaurant subjects and branch context. A timed-out POST had saved its rows: requery coverage before retrying. Production returned a 502 while app containers were being recreated; serial API retries completed after service recovery, without deploying or restarting anything in this job. Numeric validators must account for German month compounds and Indonesian time separators.
+* **Feedback:** Owner narrowed the batch from 20 pins to “do 10 first.” Stopped at 10 completed pins.
+* **Changed:** Added explicit opening-subject and timeout-recovery guidance to [Enrichment](enrichment.md#pin-translations).
+
 ## 2026-10-15 - Landing page cards require pin detail pages
 
 * **Feedback:** Owner: "all landing page pins need a pin detail page pin. clicking on the title and image should take you to pin detail" and "add that to scraping strategy".

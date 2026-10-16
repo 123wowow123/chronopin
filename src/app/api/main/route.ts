@@ -1,3 +1,4 @@
+import { requestTimeZone } from '@/server/viewer';
 import type { NextRequest } from 'next/server';
 import { getUser } from '@/server/auth';
 import { json, paginationHeaders, paginationLink, route } from '@/server/http';
@@ -33,6 +34,7 @@ export const GET = route(async (request: NextRequest) => {
     lastPinId: Number(query.get('last_pin_id')) || 0,
     onlyFavorites: !!query.get('hasFavorite'),
     createdSince,
+    timeZone: requestTimeZone(request),
     near,
   });
 

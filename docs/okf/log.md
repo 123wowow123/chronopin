@@ -1,5 +1,13 @@
 # Update Log
 
+## 2026-10-16
+
+* **Update:** Cleared the production translation backlog across 90 pins: 1,290 missing and 60 outdated translations saved in all 15 non-English locales (1,350 rows). Final global export returned zero due pins; 30 public localized checks covered every locale, and English text and authors were verified unchanged for all 90 pins. Artifacts: ignored `.scrape/prod-batches/translations-2026-10-16-all/`.
+
+* **Update:** Cleared the remaining production pin translation backlog: 21 pins (15908–15928), 315 translations across all 15 non-English locales. The requested batch of 30 had only 21 pins due. Final global export showed zero remaining; public checks covered every pin and locale.
+
+* **Update:** Completed 150 production translations across 10 pins (15898–15907) in all 15 target languages. Verified current coverage and public localized responses, preserving English text and authors. [Learnings](scraping/learnings.md#2026-10-16---ten-pin-production-translation-batch) records title corrections and recovery from API timeouts.
+
 ## 2026-10-15
 
 * **Update:** Landing page cards must link to native pin detail pages (owner instruction). Every entity, venue, and special offer featured on landing pages (across Coming soon, Just opened, Top restaurants, and Specials tabs) must be backed by a database `Pin` row whose `/pin/[id]/[slug]` detail page opens when clicking its title or photo card. Backfilled 1,141 missing special venue pins (`scripts/restaurants/seedSpecialPins.ts`), updated `regionalRestaurantOffers` and special mapping to resolve `pinPath(pin)` as `restaurantHref`, updated `RestaurantOfferCard` to link titles and images directly to `/pin/[id]/[slug]`, and recorded requirements in `AGENTS.md`, [strategy](scraping/strategy.md), [restaurant scraping](../restaurant-scraping.md), and [learnings](scraping/learnings.md).

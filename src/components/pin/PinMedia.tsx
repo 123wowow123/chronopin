@@ -3,7 +3,7 @@
 import Anchor from '@/components/ui/Anchor';
 import Image from 'next/image';
 import Link from '@/components/ui/Link';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import type { MediumJson } from '@/lib/types';
@@ -39,6 +39,7 @@ export function PinMedia({
   priority,
   sizes,
   poster,
+  autoplay,
   onMissing,
 }: {
   medium: MediumJson;
@@ -48,6 +49,7 @@ export function PinMedia({
   priority?: boolean;
   sizes: string;
   poster?: boolean;
+  autoplay?: boolean;
   onMissing?: () => void;
 }) {
   const type = String(medium.type);
@@ -64,7 +66,7 @@ export function PinMedia({
     if (poster) {
       return <VideoPoster medium={medium} title={title} href={href} external={external} priority={priority} sizes={sizes} onMissing={onMissing} />;
     }
-    return <YouTubeEmbed medium={medium} title={title} />;
+    return <YouTubeEmbed medium={medium} title={title} autoplay={autoplay} />;
   }
   if (unrenderable) {
     return null;
@@ -117,6 +119,14 @@ function ImageMedium({
     return null;
   }
 
+  const thumb = blobUrl(medium.thumbName);
+  const isExternalThumb = Boolean(
+    thumb &&
+    /^https?:\/\//i.test(thumb) &&
+    !thumb.includes('chronopin.blob.core.windows.net') &&
+    !thumb.includes('127.0.0.1:10000'),
+  );
+
   const image = useOriginal ? (
     // eslint-disable-next-line @next/next/no-img-element -- an original on an arbitrary host
     <img
@@ -133,11 +143,12 @@ function ImageMedium({
   ) : (
     <Image
       ref={imgRef}
-      src={blobUrl(medium.thumbName)!}
+      src={thumb!}
       alt={title}
       width={width}
       height={height}
       sizes={sizes}
+      unoptimized={isExternalThumb}
       // priority is deprecated in Next 16; eager + high fetch priority is its replacement.
       loading={priority ? 'eager' : undefined}
       fetchPriority={priority ? 'high' : undefined}
@@ -460,6 +471,7 @@ function MediaSlide({
 }
 
 // YouTube iframe API player states.
+const YT_ENDED = 0;
 const YT_PLAYING = 1;
 const YT_BUFFERING = 3;
 
@@ -475,29 +487,79 @@ const YT_BUFFERING = 3;
 // "Watch on YouTube" control, which opens the video in a new tab (and steals
 // focus) without navigating this page away, so it would otherwise keep
 // playing here too. Resumes if the tab comes back foregrounded.
-function YouTubeEmbed({ medium, title }: { medium: MediumJson; title: string }) {
+function YouTubeEmbed({ medium, title, autoplay: autoplayProp }: { medium: MediumJson; title: string; autoplay?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const t = useT();
   const provider = videoSource(medium.originalUrl)?.provider ?? 'youtube';
-  const html = videoPlayerHtml(medium, provider === 'youtube' ? t('media.youtubeTitle', { title }) : `${t('media.video')}: ${title}`) ?? '';
+
+  const autoPlayRequested = Boolean(
+    autoplayProp ||
+      (typeof window !== 'undefined' &&
+        (new URLSearchParams(window.location.search).get('autoplay') === '1' ||
+          new URLSearchParams(window.location.search).get('play') === '1')),
+  );
+
+  const html = useMemo(() => {
+    return (
+      videoPlayerHtml(
+        medium,
+        provider === 'youtube' ? t('media.youtubeTitle', { title }) : `${t('media.video')}: ${title}`,
+        autoPlayRequested,
+      ) ?? ''
+    );
+  }, [medium, provider, t, title, autoPlayRequested]);
+
   useEffect(() => {
     const container = ref.current;
     const iframe = container?.querySelector('iframe');
     // Only YouTube's player speaks the iframe API this drives; another
     // source's plays on, and its own controls pause it.
     if (!container || !iframe?.src || !/(^|\.)youtube(-nocookie)?\.com$/.test(new URL(iframe.src).hostname)) return;
-    const origin = new URL(iframe.src).origin;
-    const send = (message: object) => iframe.contentWindow?.postMessage(JSON.stringify(message), origin);
+    const send = (message: object) => {
+      try {
+        iframe.contentWindow?.postMessage(JSON.stringify(message), '*');
+      } catch {
+        // ignore
+      }
+    };
     let state: number | undefined;
     let pausedHidden = false;
     const playing = () => state === YT_PLAYING || state === YT_BUFFERING;
 
+    const playIfRequested = () => {
+      if (autoPlayRequested) {
+        send({ event: 'command', func: 'playVideo', args: '' });
+        send({ event: 'command', func: 'playVideo', args: [] });
+      }
+    };
+
     const onMessage = (e: MessageEvent) => {
-      if (e.source !== iframe.contentWindow || typeof e.data !== 'string') return;
+      if (e.source !== iframe.contentWindow && (!e.origin || !e.origin.includes('youtube.com'))) return;
       try {
-        const data = JSON.parse(e.data);
-        const next = data.event === 'onStateChange' ? data.info : data.info?.playerState;
-        if (typeof next === 'number') state = next;
+        const data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
+        if (!data || typeof data !== 'object') return;
+        const next = data.event === 'onStateChange' ? data.info : (data.info?.playerState ?? data.info?.state);
+        if (typeof next === 'number') {
+          state = next;
+          const isPlayingNow = next === YT_PLAYING || next === YT_BUFFERING;
+          window.dispatchEvent(
+            new CustomEvent('chronopin:video-state-change', {
+              detail: { state: next, isPlaying: isPlayingNow, originalUrl: medium.originalUrl },
+            }),
+          );
+          if (next === YT_ENDED) {
+            window.dispatchEvent(
+              new CustomEvent('chronopin:media-ended', {
+                detail: { originalUrl: medium.originalUrl },
+              }),
+            );
+          }
+        }
+        if (autoPlayRequested && (data.event === 'initialDelivery' || data.event === 'onReady' || data.event === 'onStateChange')) {
+          if (state !== YT_PLAYING) {
+            playIfRequested();
+          }
+        }
       } catch {
         // Not a player message.
       }
@@ -505,19 +567,40 @@ function YouTubeEmbed({ medium, title }: { medium: MediumJson; title: string }) 
     window.addEventListener('message', onMessage);
 
     // The player ignores the handshake until it is ready, so repeat it until
-    // it first reports a state (for ~10s after the effect or the frame's load).
+    // it first reports a state. Trigger play immediately if requested.
     let handshake: number | undefined;
     const startHandshake = () => {
       window.clearInterval(handshake);
       state = undefined;
       let tries = 0;
+      if (autoPlayRequested) {
+        playIfRequested();
+      }
       handshake = window.setInterval(() => {
-        if (state !== undefined || ++tries > 40) window.clearInterval(handshake);
-        else send({ event: 'listening' });
+        if (state !== undefined || ++tries > 40) {
+          window.clearInterval(handshake);
+          if (autoPlayRequested && state !== YT_PLAYING) {
+            playIfRequested();
+          }
+        } else {
+          send({ event: 'listening' });
+          send({ event: 'command', func: 'addEventListener', args: 'onStateChange' });
+          send({ event: 'command', func: 'addEventListener', args: ['onStateChange'] });
+          if (autoPlayRequested) {
+            playIfRequested();
+          }
+        }
       }, 250);
     };
     startHandshake();
-    iframe.addEventListener('load', startHandshake);
+
+    const handleLoad = () => {
+      startHandshake();
+      if (autoPlayRequested) {
+        playIfRequested();
+      }
+    };
+    iframe.addEventListener('load', handleLoad);
 
     const onVisibilityChange = () => {
       if (document.hidden && playing()) {
@@ -530,14 +613,52 @@ function YouTubeEmbed({ medium, title }: { medium: MediumJson; title: string }) 
     };
     document.addEventListener('visibilitychange', onVisibilityChange);
 
+    const onStopAll = () => {
+      send({ event: 'command', func: 'pauseVideo', args: [] });
+      send({ event: 'command', func: 'stopVideo', args: [] });
+      try {
+        if (iframe && iframe.src && /youtube(-nocookie)?\.com/.test(iframe.src)) {
+          iframe.src = 'about:blank';
+        }
+      } catch {
+        // ignore
+      }
+    };
+    window.addEventListener('chronopin:stop-all-playback', onStopAll);
+
+    const onPlayVideo = () => {
+      send({ event: 'command', func: 'playVideo', args: '' });
+      send({ event: 'command', func: 'playVideo', args: [] });
+    };
+    const onPauseVideo = () => {
+      send({ event: 'command', func: 'pauseVideo', args: '' });
+      send({ event: 'command', func: 'pauseVideo', args: [] });
+    };
+    const onToggleVideo = () => {
+      if (playing()) {
+        send({ event: 'command', func: 'pauseVideo', args: '' });
+        send({ event: 'command', func: 'pauseVideo', args: [] });
+      } else {
+        send({ event: 'command', func: 'playVideo', args: '' });
+        send({ event: 'command', func: 'playVideo', args: [] });
+      }
+    };
+    window.addEventListener('chronopin:play-video', onPlayVideo);
+    window.addEventListener('chronopin:pause-video', onPauseVideo);
+    window.addEventListener('chronopin:toggle-video', onToggleVideo);
+
     return () => {
-      if (playing()) send({ event: 'command', func: 'pauseVideo', args: [] });
+      onStopAll();
       window.clearInterval(handshake);
-      iframe.removeEventListener('load', startHandshake);
+      iframe.removeEventListener('load', handleLoad);
       window.removeEventListener('message', onMessage);
+      window.removeEventListener('chronopin:stop-all-playback', onStopAll);
+      window.removeEventListener('chronopin:play-video', onPlayVideo);
+      window.removeEventListener('chronopin:pause-video', onPauseVideo);
+      window.removeEventListener('chronopin:toggle-video', onToggleVideo);
       document.removeEventListener('visibilitychange', onVisibilityChange);
     };
-  }, [html]);
+  }, [html, autoPlayRequested, medium.originalUrl]);
   return <div ref={ref} className="embed-container" dangerouslySetInnerHTML={{ __html: html }} />;
 }
 

@@ -26,6 +26,8 @@ import { PinGameInfo } from '@/components/pin/PinGameInfo';
 import { PinCarPerf } from '@/components/pin/PinCarPerf';
 import { PinGasCarPerf } from '@/components/pin/PinGasCarPerf';
 import { PinDining } from '@/components/pin/PinDining';
+import { getAdjacentMusicRankings, getMusicRankingByTitleOrPin } from '@/lib/music';
+import { MusicPinNav } from '@/components/music/MusicPinNav';
 import { PinHotel } from '@/components/pin/PinHotel';
 import { getResortPricePerNight } from '@/lib/travel';
 import { PinModelChart } from '@/components/pin/PinModelChart';
@@ -126,22 +128,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pinMetadata(pin, t.locale, offered);
 }
 
-export default function PinPage({ params }: Props) {
+export default function PinPage({ params, searchParams }: Props) {
   return (
     <main className="mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6">
       <Suspense fallback={<div className="h-[70vh] animate-pulse rounded-xl bg-panel" aria-busy="true" />}>
-        <PinContent params={params} />
+        <PinContent params={params} searchParams={searchParams} />
       </Suspense>
     </main>
   );
 }
 
-async function PinContent({ params }: Pick<Props, 'params'>) {
+async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'searchParams'>) {
   // The slug was already checked (and redirected) by src/proxy.ts.
-  const [pin, t] = await Promise.all([loadPin(params), getT()]);
+  const [pin, t, query] = await Promise.all([
+    loadPin(params),
+    getT(),
+    searchParams,
+  ]);
   if (!pin) {
     notFound();
   }
+  const autoplay = query?.autoplay === '1' || query?.play === '1';
   // What changed since it was posted: the pin shows the newest, and these say
   // how it got there. An event people can attend also carries its host's
   // website, performers and tickets, for the page and its Event markup.
@@ -195,7 +202,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} venue={venue} candidates={candidates} isHotel={!!hotel} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} venue={venue} candidates={candidates} isHotel={!!hotel} autoplay={autoplay} />
         </article>
 
         <aside className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -310,6 +317,7 @@ async function PinBody({
   venue,
   candidates,
   isHotel,
+  autoplay,
 }: {
   pin: PinJson;
   timeZone: string;
@@ -318,8 +326,8 @@ async function PinBody({
   venue?: boolean;
   candidates?: PinCandidateJson[];
   isHotel?: boolean;
+  autoplay?: boolean;
 }) {
-  const media = pin.media ?? [];
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
   const isRestaurant = pin.categories?.includes('Food') && pin.tags?.some((tag) => /^(Restaurant Opening|Restaurants?)$/i.test(tag.name));
   const restaurantRegion = isRestaurant
@@ -344,6 +352,21 @@ async function PinBody({
   const listingKind = isRestaurant ? null : listingKindOf(pin);
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;
+  const musicEntry = getMusicRankingByTitleOrPin(pin.id, pin.title, pin.productName);
+  const musicAdjacent = musicEntry ? getAdjacentMusicRankings(musicEntry.id) : undefined;
+  let media = pin.media ?? [];
+  if (musicEntry?.youtubeId && !media.some((m) => String(m.type) === '3')) {
+    const videoUrl = musicEntry.youtubeUrl || `https://www.youtube.com/watch?v=${musicEntry.youtubeId}`;
+    const videoMedium = {
+      type: '3' as const,
+      originalUrl: videoUrl,
+      thumbName: musicEntry.artworkUrl,
+      authorName: musicEntry.artist,
+      authorUrl: musicEntry.sourceUrl,
+      html: `<iframe width="480" height="270" src="https://www.youtube.com/embed/${musicEntry.youtubeId}?feature=oembed&enablejsapi=1${autoplay ? '&autoplay=1' : ''}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="${musicEntry.title} by ${musicEntry.artist}"></iframe>`,
+    };
+    media = [videoMedium, ...media];
+  }
 
   // Company and place for a pin without a medium to label, the place as its
   // parts, each a search for the pins standing there. Over a picture it stays
@@ -387,6 +410,12 @@ async function PinBody({
             <Icon name="pin" className="size-3.5 text-curated" />
             {t.dynamic('pin.curatedRestaurants', 'Curated restaurants')}
           </Link> : null}
+          {musicEntry ? (
+            <Link href="/music" className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
+              <Icon name="music" className="size-3.5 text-link" />
+              {t.dynamic('pin.musicRankings', 'Music Rankings')}
+            </Link>
+          ) : null}
           {/* Opens the timeline on this pin, centred, rather than on today. */}
           {/* The same pill as the aside's "To map". */}
           <Link href={`/?pin=${pin.id}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
@@ -398,6 +427,7 @@ async function PinBody({
 
       {media.length ? (
         <PinMediaFrame
+          key={pin.id}
           className="relative mb-4 overflow-hidden rounded-xl border border-line bg-black"
           overlay={
             <>
@@ -412,6 +442,7 @@ async function PinBody({
           external
           selectable
           priority
+          autoplay={autoplay}
           sizes="(max-width: 1024px) 100vw, 50vw"
         />
       ) : (
@@ -483,6 +514,27 @@ async function PinBody({
           0062). The pin's JSON says whether it has one, so a pin without a
           series never makes the request. */}
       <PinSeriesChart pinId={pin.id} has={!!pin.series?.length} />
+
+      {musicEntry ? (
+        <div className="surface mb-4 rounded-xl border border-line bg-raised/40 p-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl" role="img" aria-label={musicEntry.country}>
+                {musicEntry.countryFlag}
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-ink">
+                  #{musicEntry.rank} on {musicEntry.chartName} ({musicEntry.year})
+                </p>
+                <p className="text-xs text-muted">
+                  {musicEntry.chartAuthority} · {musicEntry.streamsOrUnits ?? musicEntry.genres.join(', ')}
+                </p>
+              </div>
+            </div>
+            <MusicPinNav entry={musicEntry} adjacent={musicAdjacent} variant="card" autoplay={autoplay} />
+          </div>
+        </div>
+      ) : null}
 
       {pin.description ? <div dir={pinTextDir(pin)} className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div dir={pinTextDir(pin)} className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}

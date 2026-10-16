@@ -90,4 +90,31 @@ describe('findThreadCandidates', () => {
 
     vi.restoreAllMocks();
   });
+
+  it('matches brent and wti crude oil monthly pins into recurring threads', async () => {
+    vi.spyOn(db, 'query').mockImplementation(async (sql: string, params?: unknown[]) => {
+      if (typeof sql === 'string' && sql.includes('ILIKE') && params?.includes('%brent%')) {
+        return [
+          {
+            id: 17029,
+            title: 'Brent Crude Oil Settlement — September 2026: $97.92/bbl',
+            utcStartDateTime: new Date('2026-09-30T21:00:00Z'),
+          },
+        ] as any;
+      }
+      return [] as any;
+    });
+
+    const candidates = await findThreadCandidates({
+      id: 17030,
+      title: 'Brent Crude Oil Price — October 2026',
+      utcStartDateTime: '2026-10-30T21:00:00Z',
+    });
+
+    expect(candidates).toHaveLength(1);
+    expect(candidates[0].id).toBe(17029);
+    expect(candidates[0].reason).toContain('brent');
+
+    vi.restoreAllMocks();
+  });
 });

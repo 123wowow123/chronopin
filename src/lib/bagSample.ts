@@ -1,5 +1,6 @@
 import { pinConfidence, pinEvidence, TIMELINE_MIN_CONFIDENCE } from './referenceConfidence';
 import type { PinJson } from './types';
+import { isRestaurantPin, timelineDayCandidates } from './restaurantTimeline';
 
 // Which of a busy day's cards the timeline shows before "View all": a
 // weighted random pick, so a crowded day stays two rows tall and every pin
@@ -25,7 +26,7 @@ export const BAG_LIMIT_PHONE = 2;
 // here rather than sent: the server and the hydrating client compute the same
 // number from the same row. threadConfidence cannot be - the rest of a thread
 // is rarely on the page - so the timeline query sends it (model/pins.ts).
-type Sampled = Partial<Pick<PinJson, 'sourceUrl' | 'dateConfidence' | 'utcCreatedDateTime' | 'references'>> & {
+type Sampled = Partial<Pick<PinJson, 'tags' | 'sourceUrl' | 'dateConfidence' | 'utcCreatedDateTime' | 'references'>> & {
   id: number;
   viewCount?: number;
   favoriteCount?: number;
@@ -42,6 +43,9 @@ const WATCH_WEIGHT = 3;
 // way cannot swing it far.
 const PRIOR_OPENS = 1;
 const PRIOR_IMPRESSIONS = 10;
+// Venue cards fill otherwise empty dates; give them little ranking weight
+// too, even when their links, views or company would normally boost them.
+const RESTAURANT_WEIGHT = 0.1;
 
 // Money on the question is a second vote, from people who are not here: a pin
 // citing prediction markets (Pin.marketVolume, schema 0053) weighs more for
@@ -132,7 +136,7 @@ export function threadWeight(threadConfidence: number | null | undefined): numbe
 export function bagWeight(pin: Sampled): number {
   const earned = Math.max(0, pin.viewCount ?? 0) + WATCH_WEIGHT * Math.max(0, pin.favoriteCount ?? 0);
   const seen = (earned + PRIOR_OPENS) / (Math.max(0, pin.impressionCount ?? 0) + PRIOR_IMPRESSIONS);
-  return seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * officialWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
+  return (isRestaurantPin(pin) ? RESTAURANT_WEIGHT : 1) * seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * officialWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
 }
 
 // FNV-1a, folded into (0, 1).
@@ -155,7 +159,7 @@ function unitHash(text: string): number {
 // company's pins lead the pick (after the kept one), biggest first, so the
 // timeline deals them into the top-left columns; the picked set is unchanged.
 export function sampleBag<T extends Sampled>(pins: T[], limit: number, seed: string, keepId?: number | null, boost?: (pin: T) => number): number[] {
-  const keyed = pins.map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / (bagWeight(p) * (boost?.(p) ?? 1)) }));
+  const keyed = timelineDayCandidates(pins, keepId).map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / (bagWeight(p) * (boost?.(p) ?? 1)) }));
   keyed.sort((a, b) => (a.id === keepId ? -1 : b.id === keepId ? 1 : b.key - a.key || a.id - b.id));
   const caps = new Map(pins.map((p) => [p.id, marketCapWeight(p.companyMarketCap)]));
   const picked = keyed.slice(0, limit).map((k) => k.id);

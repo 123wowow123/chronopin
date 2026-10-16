@@ -106,7 +106,7 @@ export const TASKS = {
   predictionMarkets: {
     group: 'discover',
     label: 'Prediction markets',
-    summary: 'Scrape for interesting events that prediction markets have and create predicted pins out of them, with odds, volume and thread connections.',
+    summary: 'Scrape prediction markets for interesting events and monthly Brent & WTI commodity prices; create predicted pins, make them into threads, and after price realization add reasoning of final value and why prediction was missed or on point.',
   },
   thinCategories: {
     group: 'discover',
@@ -226,8 +226,9 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       dayOfMonth: null,
       dayOfWeek: null,
       // eventInfo twice a day, so a sell-out shows by the next run; prediction
-      // markets scrapes for interesting events that prediction markets have
-      // and creates predicted pins out of them (owner, 2026-10-01, 2026-10-15).
+      // markets scrapes for interesting events that prediction markets have,
+      // adds monthly Brent and WTI commodity prices, creates predicted pins,
+      // threads them, and updates realized pins with reasoning (owner, 2026-10-01, 2026-10-15).
       // modelScores checks twice a day for the arena scores that models lack at
       // launch (owner, 2026-10-12). threadPredicted checks predicted pins for
       // an available thread to join (owner, 2026-10-14). layoffs searches for

@@ -1,3 +1,4 @@
+import { requestTimeZone } from '@/server/viewer';
 import type { NextRequest } from 'next/server';
 import { getUser, requireUser } from '@/server/auth';
 import { requireVerifiedEmail } from '@/server/emailVerification';
@@ -22,6 +23,7 @@ export const GET = route(async (request: NextRequest) => {
     lastPinId: Number(query.get('last_pin_id')) || 0,
     onlyFavorites: !!query.get('hasFavorite'),
     createdSince,
+    timeZone: requestTimeZone(request),
   });
 
   const link = paginationLink(request, pins, linkParams(createdSince));

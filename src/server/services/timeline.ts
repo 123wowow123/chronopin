@@ -30,6 +30,7 @@ export type TimelineQuery = {
   // arrives per request rather than being read off the server's own clock the
   // way createdSince is.
   near?: NearFilter | null;
+  timeZone?: string;
 };
 
 // The score a pin needs to reach the timeline right now, or null when the
@@ -38,24 +39,24 @@ export async function timelineMinConfidence(): Promise<number | null> {
   return settingMinConfidence(await getTimelineConfidence());
 }
 
-export async function getPins({ userId, fromDateTime, around, lastPinId, onlyFavorites, createdSince, near }: TimelineQuery): Promise<Pins> {
+export async function getPins({ userId, fromDateTime, around, lastPinId, onlyFavorites, createdSince, near, timeZone = 'UTC' }: TimelineQuery): Promise<Pins> {
   // A watched list keeps every pin, so it never needs the setting.
   const min = onlyFavorites ? null : await timelineMinConfidence();
   if (!fromDateTime) {
     if (around && !onlyFavorites) {
-      return Pins.queryInitialByDate(new Date(around.dateTime), userId, pageSize, pageSize, createdSince, min, around.pinId, near);
+      return Pins.queryInitialByDate(new Date(around.dateTime), userId, pageSize, pageSize, createdSince, min, around.pinId, near, timeZone);
     }
     const now = new Date();
     return onlyFavorites
       ? Pins.queryInitialByDateFilterByHasFavorite(now, userId, pageSize, pageSize, createdSince, near)
-      : Pins.queryInitialByDate(now, userId, pageSize, pageSize, createdSince, min, 0, near);
+      : Pins.queryInitialByDate(now, userId, pageSize, pageSize, createdSince, min, 0, near, timeZone);
   }
 
   if (fromDateTime[0] !== '-') {
     const last = lastPinId || 0;
     return onlyFavorites
       ? Pins.queryForwardByDateFilterByHasFavorite(fromDateTime, userId, last, pageSize, createdSince, near)
-      : Pins.queryForwardByDate(fromDateTime, userId, last, pageSize, createdSince, min, near);
+      : Pins.queryForwardByDate(fromDateTime, userId, last, pageSize, createdSince, min, near, timeZone);
   }
 
   // Backward from the cursor pin itself. This used to start a day before it,
@@ -69,7 +70,7 @@ export async function getPins({ userId, fromDateTime, around, lastPinId, onlyFav
   const from = new Date(fromDateTime.slice(1));
   return onlyFavorites
     ? Pins.queryBackwardByDateFilterByHasFavorite(from, userId, last, pageSize, createdSince, near)
-    : Pins.queryBackwardByDate(from, userId, last, pageSize, createdSince, min, near);
+    : Pins.queryBackwardByDate(from, userId, last, pageSize, createdSince, min, near, timeZone);
 }
 
 // A page of pins plus the date markers between its first and last pin
@@ -114,6 +115,6 @@ function dayReach(day: string): [Date, Date] {
 // "View all" can count every pin they have.
 export async function countDayPins({ day, timeZone, createdSince, near }: { day: string; timeZone: string; createdSince?: Date | null; near?: NearFilter | null }): Promise<number> {
   const [start, end] = dayReach(day);
-  const starts = await Pins.listStartsBetween(start, end, createdSince, await timelineMinConfidence(), near);
+  const starts = await Pins.listStartsBetween(start, end, createdSince, await timelineMinConfidence(), near, timeZone);
   return Math.min(DAY_LIMIT, starts.filter((pin) => pinDayKey({ utcStartDateTime: pin.utcStartDateTime.toISOString(), allDay: pin.allDay }, timeZone) === day).length);
 }

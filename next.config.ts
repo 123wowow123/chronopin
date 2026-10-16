@@ -46,6 +46,8 @@ const nextConfig: NextConfig = {
       // The same emulator reached by LAN address when testing on a phone
       // (NEXT_PUBLIC_THUMB_URL_PREFIX=http://<mac-ip>:10000/devstoreaccount1/thumb/).
       { protocol: 'http', hostname: '192.168.*.*', port: '10000' },
+      // Unsplash photography used for curated music rankings and articles.
+      { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
 

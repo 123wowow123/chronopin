@@ -11,6 +11,7 @@ import { stackDuplicates, type PinStack } from '@/lib/duplicates';
 import { formatDayKey, lunarDate, moonPhase, timespan, weekdayPlanet } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { Bag } from '@/lib/timeline';
+import { timelineDayCandidates } from '@/lib/restaurantTimeline';
 import type { PinJson } from '@/lib/types';
 import type { personalWeigher } from '@/lib/userWiki';
 import { RailMarker } from '@/components/timeline/RailMarker';
@@ -197,13 +198,16 @@ export function TimeBlock({
 }) {
   const t = useT();
   const { locale } = t;
-  const stacks = stackDuplicates(bag.pins);
+  // Decide venue fallback before choosing a duplicate representative: a
+  // popular restaurant must not conceal the event behind its stack.
+  const candidates = sample ? timelineDayCandidates(bag.pins, focusId) : bag.pins;
+  const stacks = stackDuplicates(candidates);
   // Seeded by today and the day: the pick holds through hydration and the
   // day's reloads, and turns over each day.
   const keep = focusId == null ? null : (stacks.find((s) => s.pin.id === focusId || s.hidden.some((h) => h.id === focusId))?.pin.id ?? null);
   // A card stands for its whole stack: opening any duplicate counts for it.
   const weigh = boost && ((pin: PinJson) => boost(pin, stackIds(stacks, pin.id)));
-  const picked = sample && stacks.length > BAG_LIMIT_PHONE ? sampleBag(stacks.map((s) => s.pin), BAG_LIMIT_WIDE, `${todayKey}:${bag.day}`, keep, weigh) : null;
+  const picked = sample ? sampleBag(stacks.map((s) => s.pin), BAG_LIMIT_WIDE, `${todayKey}:${bag.day}`, keep, weigh) : null;
   // The picked cards in date order, each with where it fell in the pick: two
   // of them fill each column the window has room for, in that order. What is
   // left over is not drawn on the timeline at all, only on the day's search.

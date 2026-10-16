@@ -33,6 +33,7 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     ".tmp/**",
     "uploads/**",
+    ".scrape/**",
   ]),
 ]);
 

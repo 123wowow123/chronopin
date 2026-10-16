@@ -9,7 +9,8 @@ import {
   subscribeNavigationProgress,
 } from '@/lib/client/navigationProgress';
 
-const getServerSnapshot = () => ({ progress: 0, visible: false });
+const SERVER_SNAPSHOT = { progress: 0, visible: false };
+const getServerSnapshot = () => SERVER_SNAPSHOT;
 
 function RouteWatcher() {
   const pathname = usePathname();

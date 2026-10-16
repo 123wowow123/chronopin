@@ -416,8 +416,3 @@ plannned + data centers
 
 clicking on group wrapper will post those tags
 tesla + batteries storage
-
-
-pin top music ranking per year landing page group by continent and then by country
-
-comodity prices every month pin and thread using prediction and realization and reasoning

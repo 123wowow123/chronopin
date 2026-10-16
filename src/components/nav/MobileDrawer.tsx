@@ -349,6 +349,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
             {link('/travel', 'globe', 'Travel')}
             {link('/products', 'cart', 'Products')}
             {link('/cars', 'car', 'Cars')}
+            {link('/music', 'music', 'Music')}
           </DrawerSection>
           {user && isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
         </nav>

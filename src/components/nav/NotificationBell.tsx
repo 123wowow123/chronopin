@@ -484,6 +484,7 @@ const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
   { href: '/travel', label: 'Travel', icon: 'globe' },
   { href: '/products', label: 'Products', icon: 'cart' },
   { href: '/cars', label: 'Cars', icon: 'car' },
+  { href: '/music', label: 'Music', icon: 'music' },
 ];
 
 // In the bell's place for visitors who are not signed in (lg and up): the

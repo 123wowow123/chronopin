@@ -30,6 +30,11 @@ type Photo = ImportPhoto;
 type Entry = { pin: Record<string, any>; content: unknown; special?: unknown; photos?: Photo[] };
 const data = JSON.parse(await readFile(values.file!, 'utf8')) as { entries: Entry[] };
 if (!Array.isArray(data.entries) || !data.entries.length) throw new Error('Expected reviewed entries');
+for (const { pin } of data.entries) {
+  if (/pin date is (?:research|guide)|is the guide verification date, not (?:its|an) opening date/i.test(String(pin.dateConfidenceReasoning ?? ''))) {
+    throw new Error(`Restaurant pin needs its branch opening date, not a research date: ${pin.title}`);
+  }
+}
 // Reject unsupported cities before creating any pin on an older deployment.
 for (const region of new Set(data.entries.map((entry) => parseRestaurantContent(entry.content).profile.tile?.regionSlug).filter(Boolean))) {
   await api(`/api/restaurants/guide?region=${encodeURIComponent(region!)}&view=top`);

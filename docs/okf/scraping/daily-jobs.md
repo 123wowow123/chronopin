@@ -596,6 +596,11 @@ events and create **predicted pins** out of them:
   `dateConfidenceReasoning`, start with `Estimated:` and explain the basis, quoting
   the market's odds and dollar volume as read on that day (past tense: "On 15 October 2026
   Polymarket traders priced...").
+- **Monthly Brent and WTI commodity prices (owner instruction, 2026-10-15):**
+  Scrape prediction markets (Kalshi, Polymarket) for Brent and WTI crude oil commodity prices every month.
+  - **Create predicted pins:** Every month, create pins for upcoming Brent and WTI price forecasts, tagged `Predicted` (plus `Energy`, `Economy`, `Commodities`, `Oil Price`, `Brent` or `WTI`), set `dateConfidence: 'estimated'` dated to the month's settlement date (e.g. 5:00 PM EDT / 21:00 UTC on the final trading day of the month), authored under `@EnergyDesk` (or `@EconDesk`), quoting the contract strike distribution and traded volume.
+  - **Make into a thread:** Each monthly Brent pin must be attached via `parentId` to the previous month's Brent pin; each monthly WTI pin must be attached to the previous month's WTI pin, forming continuous monthly commodity forecast series.
+  - **After price realization:** Once the month concludes and the contract settles (`status: finalized` on Kalshi or official exchange index / EIA spot release), update the pin to `dateConfidence: 'confirmed'`, update the title with the final realized value (e.g. `Brent Crude Oil Settlement — September 2026: $97.92/bbl`), and add reasoning explaining the final realized value and why the prediction market forecast was missed or on point against actual market drivers (OPEC+ quota compliance, geopolitical risk premia around Hormuz, commercial/SPR inventory changes, and global refinery demand).
 - **Curator desk and sources:**
   - Where the market points to an underlying dated event in the world (an election,
     a central-bank rate decision, an AI model release, an orbital flight test, a

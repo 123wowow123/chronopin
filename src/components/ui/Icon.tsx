@@ -93,6 +93,13 @@ const PATHS: Record<string, React.ReactNode> = {
       <circle cx="17" cy="17" r="2" />
     </>
   ),
+  music: (
+    <>
+      <path d="M9 18V5l12-2v13" />
+      <circle cx="6" cy="18" r="3" />
+      <circle cx="18" cy="16" r="3" />
+    </>
+  ),
   home: <path d="M3 11 12 4l9 7M5 10v10h5v-6h4v6h5V10" />,
   briefcase: (
     <>

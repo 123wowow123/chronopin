@@ -34,7 +34,7 @@ const RECURRING_EVENTS = 3;
 // …SHARE, …CC), and a game's props (…TOTAL, …SPREAD), whose game is listed
 // on its own.
 const KALSHI_NOISE =
-  /^KX(BTC|ETH|DOGE|SOL|XRP|SHIBA|INX|NASDAQ|USDJPY|EURUSD|WTI|BRENT|GOLD|SILVER|HIGH|LOW|RAIN|SNOW|TEMP|AAAGAS|TRUTHSOCIAL|TWEETS|MENTION|TRUMPSAY|TRUMPACT|LLM\d|YTVIEWS|ALBUMEQUIV|ALBUMSTREAMS|SPOTIFY|TOPSONG|TOPALBUM|NETFLIXRANK|APPRANK)|(APP|(?<!DRA)FT|POS|SHARE|CC|WEEKLY|TOTAL|SPREAD|BTTS|1H|TD)$/;
+  /^KX(BTC|ETH|DOGE|SOL|XRP|SHIBA|INX|NASDAQ|USDJPY|EURUSD|WTI(?!MONTHLY|MAXM|MINM)|BRENT(?!MON)|GOLD|SILVER|HIGH|LOW|RAIN|SNOW|TEMP|AAAGAS|TRUTHSOCIAL|TWEETS|MENTION|TRUMPSAY|TRUMPACT|LLM\d|YTVIEWS|ALBUMEQUIV|ALBUMSTREAMS|SPOTIFY|TOPSONG|TOPALBUM|NETFLIXRANK|APPRANK)|(APP|(?<!DRA)FT|POS|SHARE|CC|WEEKLY|TOTAL|SPREAD|BTTS|1H|TD)$/;
 
 // Polymarket tags its own recurring and per-game events.
 const POLYMARKET_NOISE_TAGS = new Set([
@@ -145,11 +145,14 @@ async function kalshiEvents(query: string): Promise<KalshiEvent[]> {
   return [...events.values()];
 }
 
-// The events worth a look: not a recurring series, not on the noise list.
+// The events worth a look: not a recurring series, not on the noise list (monthly commodities preserved).
 export function kalshiShortlist(events: KalshiEvent[]): KalshiEvent[] {
   const perSeries = new Map<string, number>();
   for (const e of events) perSeries.set(e.series, (perSeries.get(e.series) ?? 0) + 1);
-  return events.filter((e) => (perSeries.get(e.series) ?? 0) < RECURRING_EVENTS && !KALSHI_NOISE.test(e.series));
+  return events.filter((e) => {
+    if (e.series === 'KXBRENTMON' || e.series === 'KXWTIMONTHLY') return true;
+    return (perSeries.get(e.series) ?? 0) < RECURRING_EVENTS && !KALSHI_NOISE.test(e.series);
+  });
 }
 
 async function kalshiCandidate(e: KalshiEvent, since: Date, pinned: Map<string, number>): Promise<MarketCandidate | null> {

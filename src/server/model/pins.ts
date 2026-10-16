@@ -17,6 +17,7 @@ import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, lo
 import type { NearFilter } from '../util/nearFilter';
 import { isRubricYear } from '@/lib/rubricYear';
 import { rubricYearClause } from '../util/rubricSearch';
+import { restaurantTimelineClause } from '../util/restaurantTimeline';
 import type { CarPerfTerm, DayBound, DiningTerm, DelayBound, HotelTerm, PersonAxisBound, RatingBound, TasteTerm } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
@@ -127,18 +128,18 @@ export default class Pins extends BasePins<Pin> {
   }
 
   // minConfidence: the score a pin needs to show, or null to show every pin.
-  static queryForwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
-    return queryPage(true, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near).then((res) => withThreadConfidence(new Pins(res)));
+  static queryForwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null, timeZone = 'UTC') {
+    return queryPage(true, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near, timeZone).then((res) => withThreadConfidence(new Pins(res)));
   }
 
-  static queryBackwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
-    return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near).then((res) => withThreadConfidence(new Pins(res)));
+  static queryBackwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null, timeZone = 'UTC') {
+    return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near, timeZone).then((res) => withThreadConfidence(new Pins(res)));
   }
 
   // aroundPinId splits the page at that pin (starting at fromDateTime) rather
   // than at the instant, so it is on the page however many pins share its start.
-  static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null, aroundPinId = 0, near?: NearFilter | null) {
-    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence, aroundPinId, near).then((res) => withThreadConfidence(new Pins(res)));
+  static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null, aroundPinId = 0, near?: NearFilter | null, timeZone = 'UTC') {
+    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence, aroundPinId, near, timeZone).then((res) => withThreadConfidence(new Pins(res)));
   }
 
   // Every pin starting in [start, end), oldest first, at most limit of them:
@@ -149,7 +150,7 @@ export default class Pins extends BasePins<Pin> {
 
   // Just the start of every pin in [start, end), filtered as the timeline
   // is: enough to tell which day each falls on, to count a day's pins.
-  static listStartsBetween(start: Date, end: Date, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
+  static listStartsBetween(start: Date, end: Date, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null, timeZone = 'UTC') {
     return db.query<{ utcStartDateTime: Date; allDay: boolean }>(
       `
       SELECT "p"."utcStartDateTime", "p"."allDay"
@@ -158,8 +159,9 @@ export default class Pins extends BasePins<Pin> {
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
         AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)
-        AND ${withinRing('p', 5, 6)}`,
-      [start, end, createdSince || null, minConfidence, near?.point ?? null, near?.meters ?? null],
+        AND ${withinRing('p', 5, 6)}
+        AND ${restaurantTimelineClause('p', '$7', `($3::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $3) AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('timelineOther')}, $4) >= $4) AND ${withinRing('timelineOther', 5, 6)}`)}`,
+      [start, end, createdSince || null, minConfidence, near?.point ?? null, near?.meters ?? null, timeZone],
     );
   }
 
@@ -749,6 +751,8 @@ function queryPage(
   createdSince?: Date | null,
   minConfidence: number | null = null,
   near?: NearFilter | null,
+  timeZone = 'UTC',
+  focusId = 0,
 ): Promise<PageResult> {
   const after = queryForward ? '>' : '<';
   const direction = queryForward ? 'ASC' : 'DESC';
@@ -766,11 +770,12 @@ function queryPage(
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
         AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $6) >= $6)
         AND ${withinRing('p', 7, 8)}
+        ${onlyFavorites ? '' : `AND ("p"."id" = $10 OR ${restaurantTimelineClause('p', '$9', `($4::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $4) AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('timelineOther')}, $6) >= $6) AND ${withinRing('timelineOther', 7, 8)}`)})`}
       ORDER BY "p"."utcStartDateTime" ${direction}, "p"."id" ${direction}
       LIMIT $5))
     ORDER BY "Pin"."utcStartDateTime" ${direction}, "Pin"."id" ${direction},
       "Pin"."Media.id" ${direction}, "Pin"."Merchant.id" ${direction}`,
-      [userId, fromDateTime, lastPinId, createdSince || null, pageSize, onlyFavorites ? null : minConfidence, near?.point ?? null, near?.meters ?? null],
+      [userId, fromDateTime, lastPinId, createdSince || null, pageSize, onlyFavorites ? null : minConfidence, near?.point ?? null, near?.meters ?? null, ...(onlyFavorites ? [] : [timeZone, focusId])],
     )
     .then(result);
 }
@@ -811,10 +816,11 @@ async function queryInitialPage(
   minConfidence: number | null = null,
   aroundPinId = 0,
   near?: NearFilter | null,
+  timeZone = 'UTC',
 ): Promise<PageResult> {
   const [prev, next] = await Promise.all([
-    queryPage(false, onlyFavorites, fromDateTime, userId, aroundPinId, pageSizePrev, createdSince, minConfidence, near),
-    queryPage(true, onlyFavorites, fromDateTime, userId, aroundPinId ? aroundPinId - 1 : 0, pageSizeNext, createdSince, minConfidence, near),
+    queryPage(false, onlyFavorites, fromDateTime, userId, aroundPinId, pageSizePrev, createdSince, minConfidence, near, timeZone, aroundPinId),
+    queryPage(true, onlyFavorites, fromDateTime, userId, aroundPinId ? aroundPinId - 1 : 0, pageSizeNext, createdSince, minConfidence, near, timeZone, aroundPinId),
   ]);
   return {
     pins: prev.pins.reverse().concat(next.pins),

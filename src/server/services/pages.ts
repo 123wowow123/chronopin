@@ -162,6 +162,7 @@ export async function timelinePage(
   cursor: TimelineCursor,
   createdWithin: string | null,
   locale: Locale = DEFAULT_LOCALE,
+  timeZone = 'UTC',
 ): Promise<TimelinePage & { links: { previous?: string; next?: string }; minConfidence: number | null }> {
   'use cache';
   cacheLife('minutes');
@@ -175,6 +176,7 @@ export async function timelinePage(
       around: cursor.around,
       lastPinId: cursor.lastPinId,
       createdSince,
+      timeZone,
     }),
     timelineMinConfidence(),
   ]);

@@ -22,10 +22,11 @@ import { radiusFromParam, radiusLabel, radiusSteps, radiusToParam } from '@/lib/
 import { usesImperial } from '@/lib/weather';
 import { browserTimeZone, useTimeZone } from '@/lib/client/timeZone';
 import { compareDayKeys, daysBetween, dayKeyIn, dayStartIn, monthDayOf } from '@/lib/format';
-import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, offsetDate, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
+import { canJoinTimelineDay, isRestaurantPin } from '@/lib/restaurantTimeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, DateTimeJson, NewPin, TimelinePage, TrendingPin } from '@/lib/types';
 import { personalWeigher, type UserPreference } from '@/lib/userWiki';
@@ -538,6 +539,15 @@ export function Timeline({
       } else {
         setPins((list) => {
           const index = list.findIndex((p) => p.id === changed.id);
+          // A broadcast cannot establish that the whole date is empty (an
+          // edge day may be only partly loaded). New/moved venue cards wait
+          // for server selection; existing fallback cards can update in place.
+          if (isRestaurantPin(changed) && changed.id !== focus?.id) {
+            if (index === -1) return list;
+            if (!isRestaurantPin(list[index]) || pinDayKey(list[index], timeZone) !== pinDayKey(changed, timeZone)) {
+              return list.filter((pin) => pin.id !== changed.id);
+            }
+          }
           if (index !== -1) {
             // Broadcasts carry no viewer, so keep this viewer's own watch state.
             // Watches, opens and impressions stay the counts the day's pick was
@@ -556,10 +566,8 @@ export function Timeline({
             };
             return next;
           }
-          if (type !== 'pin:save' || !list.length) return list;
-          const times = list.map((p) => new Date(p.utcStartDateTime).getTime());
-          const at = new Date(changed.utcStartDateTime).getTime();
-          return at >= Math.min(...times) && at <= Math.max(...times) ? [...list, withHtml] : list;
+          const createdSince = postedWithin ? offsetDate(new Date(), postedWithin, -1) : null;
+          return canJoinTimelineDay(list, changed, type, timeZone, createdSince) ? [...list, withHtml] : list;
         });
       }
     };
@@ -585,7 +593,7 @@ export function Timeline({
       stops.forEach((stop) => stop());
       stopReconnect();
     };
-  }, [minConfidence, ring]);
+  }, [minConfidence, ring, focus?.id, timeZone, postedWithin]);
 
   // The page past each end of what is loaded, fetched as soon as its link is
   // known, so reaching an end shows it at once rather than waiting on it.

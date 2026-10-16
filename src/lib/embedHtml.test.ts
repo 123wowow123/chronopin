@@ -25,6 +25,12 @@ describe('youtubePlayerHtml', () => {
     );
     expect(youtubePlayerHtml({ html: '<iframe width="1&quot; onload=&quot;x" src="https://www.youtube.com/embed/abc"></iframe>' })).toContain('width="480"');
   });
+
+  it('appends autoplay parameter when autoplay is requested', () => {
+    expect(
+      youtubePlayerHtml({ html: null, originalUrl: 'https://www.youtube.com/watch?v=rzi-S1aQ7ds' }, 'Title', true),
+    ).toContain('autoplay=1');
+  });
 });
 
 describe('tweetHtml', () => {

@@ -52,6 +52,8 @@ const SUBJECT_PATTERNS = [
   { pattern: /james\s+bond/i, name: 'james bond', words: ['james', 'bond'] },
   { pattern: /bundestag/i, name: 'bundestag', words: ['bundestag'] },
   { pattern: /india.*general\s+election/i, name: 'india election', words: ['india', 'election'] },
+  { pattern: /brent\s*(crude)?\s*(oil)?/i, name: 'brent crude oil', words: ['brent'] },
+  { pattern: /wti\s*(crude)?\s*(oil)?/i, name: 'wti crude oil', words: ['wti'] },
 ];
 
 export async function findThreadCandidates(pin: {

@@ -96,6 +96,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
       },
       postedWithin,
       t.locale,
+      timeZone,
     ),
     timelineVideo(),
     trendingPins(t.locale),
@@ -127,8 +128,8 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   return (
     <>
       <Timeline
-        // A new focus is a new timeline: its state starts from this page.
-        key={focusPin ? `pin-${focusPin.id}` : 'today'}
+        // Focus and calendar zone change which pins the server selected.
+        key={`${focusPin ? `pin-${focusPin.id}` : 'today'}:${timeZone}`}
         focus={focusPin ? { id: focusPin.id, utcStartDateTime: focusPin.utcStartDateTime, allDay: focusPin.allDay } : null}
         initialPins={toCardPins(page.pins)}
         initialDateTimes={page.dateTimes}
