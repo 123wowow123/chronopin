@@ -621,7 +621,21 @@ export function SearchResults({
                 ) : null}
                 {searchedPerson ? <SearchedPersonPanel person={searchedPerson} /> : null}
                 {searchedCompany?.parents?.length ? <CompanyParentsPanel parents={searchedCompany.parents} /> : null}
-                {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
+                {searchedCompany ? (
+                  <SearchedCompanyPanel
+                    company={searchedCompany}
+                    onFollowChange={
+                      onlyWatched
+                        ? () => {
+                            const other = sortBy === 'date' ? 'relevance' : 'date';
+                            loadToken.current[other]++;
+                            setLists((current) => ({ ...current, [other]: undefined }));
+                            reload(sortBy, postedWithin, startSpan, showPredicted);
+                          }
+                        : undefined
+                    }
+                  />
+                ) : null}
                 {searchedCompany?.sentiment ? <CompanyProductsPanel name={searchedCompany.name} sentiment={searchedCompany.sentiment} /> : null}
                 {searchedCompany?.executives?.length ? <CompanyExecutivesPanel name={searchedCompany.name} executives={searchedCompany.executives} /> : null}
               </>

@@ -37,7 +37,7 @@ export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: Sc
       <span className={styles.imageNote}>{card.photo.credit}</span>
     </Link>}
     <div className={styles.cardBody}>
-      <p className={styles.cardMeta}>{card.neighborhood}</p>
+      <p className={styles.cardMeta}>{card.neighborhood}{card.kidsFriendly && <><span aria-hidden="true">·</span><span className={styles.kidsBadge}>Kids friendly</span></>}</p>
       {origin && distance != null ? <p className={styles.offerDistance} title="Approximate straight-line distance">{formatDistance(distance, usesImperial())} {origin.source !== 'device' && origin.name ? `from ${origin.name}` : 'away'}</p> : sort === 'distance' ? <p className={styles.offerDistance}>Distance unavailable</p> : null}
       <h3><Link href={card.restaurantHref}>{card.name}</Link></h3>
       {card.review && <p className={styles.offerReview}><Anchor href={card.review.sourceUrl} target="_blank" rel="noopener noreferrer">★ {card.review.score.toFixed(1)}/5 · {card.review.count.toLocaleString('en-US')} {card.review.provider} reviews ↗</Anchor><small>Rating checked {card.review.checkedAt}</small></p>}

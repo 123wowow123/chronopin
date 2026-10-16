@@ -66,7 +66,7 @@
 // taste:any is every product that has a taste profile. The taste profile's
 // heading and axis labels write them.
 // carperf: is the same for a car's performance rubric (PinCarPerf): carperf:range,
-// charging, acceleration, assistance, space or value finds the cars scoring that
+// charging, acceleration, assistance, space, value or kidsFriendly finds the cars scoring that
 // axis CAR_PERF_STRONG or more (an axis with no published spec never matches),
 // every axis given; carperf:any is every car that has a rubric. The rubric's
 // heading and axis labels write them.
@@ -402,7 +402,10 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       if (axis) addUnique(query.tastes, axis);
     } else if (part.field === 'carperf') {
       const value = part.value.trim().toLowerCase();
-      const axis: CarPerfTerm | undefined = value === 'any' ? 'any' : CAR_PERF_KEYS.find((key) => key === value);
+      const axis: CarPerfTerm | undefined =
+        value === 'any'
+          ? 'any'
+          : CAR_PERF_KEYS.find((key) => key.toLowerCase() === value || (key === 'kidsFriendly' && (value === 'kidsfriendly' || value === 'kids-friendly' || value === 'kids')));
       if (axis) addUnique(query.carPerfs, axis);
     } else if (part.field === 'dining') {
       const value = part.value.trim().toLowerCase();

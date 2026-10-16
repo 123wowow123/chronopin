@@ -1,4 +1,4 @@
-// A vehicle pin's car performance rubric (PinCarPerf, 0167): six 0-5 scores
+// A vehicle pin's car performance rubric (PinCarPerf, 0167): seven 0-5 scores
 // (null where the spec is not published), an editorial estimate with the
 // sentence it rests on. One row per pin; a row set by hand is never
 // overwritten by an estimate. The sibling of ./pinTaste.
@@ -36,7 +36,7 @@ export function carPerfProblem(body: Record<string, unknown>): {
 } | string {
   const scores = {} as CarPerfScores;
   for (const key of CAR_PERF_KEYS) {
-    const value = body[key];
+    const value = body[key] === undefined && key === 'kidsFriendly' && !('kidsFriendly' in body) ? null : body[key];
     if (value !== null && !isCarPerfScore(value)) return `${key} must be a number from 0 to ${CAR_PERF_MAX} in half steps, or null when the spec is not published.`;
     scores[key] = value;
   }

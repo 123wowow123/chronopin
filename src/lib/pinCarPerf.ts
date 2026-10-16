@@ -1,4 +1,4 @@
-// A vehicle pin's car performance rubric (PinCarPerf, 0167): six axes scored
+// A vehicle pin's car performance rubric (PinCarPerf, 0167): seven axes scored
 // 0-5 in half steps from the model's published specs and drawn as a radar, the
 // sibling of the taste radar (src/lib/pinTaste.ts). The anchors for each score
 // are the rubric in docs/okf/scraping/strategy.md ("Car performance rubric").
@@ -25,6 +25,7 @@ export const CAR_PERF_AXES = [
   { key: 'assistance' },
   { key: 'space' },
   { key: 'value' },
+  { key: 'kidsFriendly' },
 ] as const;
 
 export type CarPerfAxis = (typeof CAR_PERF_AXES)[number]['key'];

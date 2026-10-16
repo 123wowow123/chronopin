@@ -46,7 +46,7 @@ export function TopActivitiesPane({
                       : 'bg-[var(--paper-raised)] text-[var(--text)] border border-[var(--rule)] hover:bg-[var(--rule)]'
                   }`}
                 >
-                  {act.category}
+                  {act.category === 'Kids' ? '🧒 Kids' : act.category}
                 </button>
               );
             })}
@@ -64,11 +64,19 @@ export function TopActivitiesPane({
                   <span className="text-[10px] font-bold text-[var(--soft)]">{idx + 1}.</span>
                   <strong className="text-[11px] font-semibold text-[var(--text)]">{act.title}</strong>
                 </span>
-                {act.season && (
-                  <span className="rounded bg-[#edf0cf] px-1.5 py-0.5 text-[9px] font-semibold text-[#244d39]">
-                    {act.season}
-                  </span>
-                )}
+                <div className="flex items-center gap-1.5">
+                  {(act.kidsFriendly || act.category === 'Kids') && (
+                    <span className="inline-flex items-center gap-1 rounded bg-[#e8f5e9] px-1.5 py-0.5 text-[9px] font-semibold text-[#1b5e20] ring-1 ring-[#c8e6c9]">
+                      <Icon name="smile" className="size-2.5 text-[#2e7d32]" />
+                      <span>Kids friendly</span>
+                    </span>
+                  )}
+                  {act.season && (
+                    <span className="rounded bg-[#edf0cf] px-1.5 py-0.5 text-[9px] font-semibold text-[#244d39]">
+                      {act.season}
+                    </span>
+                  )}
+                </div>
               </div>
               <p className="mt-1 text-[11px] leading-relaxed text-[var(--soft)]">
                 {act.description}
@@ -82,11 +90,19 @@ export function TopActivitiesPane({
             <h4 className="text-[11px] font-bold text-[var(--text)]">
               {current.title}
             </h4>
-            {current.season && (
-              <span className="rounded bg-[#edf0cf] px-1.5 py-0.5 text-[9px] font-semibold text-[#244d39]">
-                {current.season}
-              </span>
-            )}
+            <div className="flex items-center gap-1.5">
+              {(current.kidsFriendly || current.category === 'Kids') && (
+                <span className="inline-flex items-center gap-1 rounded bg-[#e8f5e9] px-1.5 py-0.5 text-[9px] font-semibold text-[#1b5e20] ring-1 ring-[#c8e6c9]">
+                  <Icon name="smile" className="size-2.5 text-[#2e7d32]" />
+                  <span>Kids friendly</span>
+                </span>
+              )}
+              {current.season && (
+                <span className="rounded bg-[#edf0cf] px-1.5 py-0.5 text-[9px] font-semibold text-[#244d39]">
+                  {current.season}
+                </span>
+              )}
+            </div>
           </div>
           <p className="mt-1 text-[11px] leading-relaxed text-[var(--soft)]">
             {current.description}

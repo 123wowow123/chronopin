@@ -63,6 +63,7 @@ describe('parseSearchQuery', () => {
 
   it('reads carperf: axes, leaving out names the rubric does not have', () => {
     expect(parseSearchQuery('carperf:Range carperf:charging carperf:range carperf:speed').carPerfs).toEqual(['range', 'charging']);
+    expect(parseSearchQuery('carperf:kidsfriendly carperf:kids-friendly carperf:kidsFriendly').carPerfs).toEqual(['kidsFriendly']);
     expect(parseSearchQuery('carperf:any').carPerfs).toEqual(['any']);
     expect(parseSearchQuery('carperf:value').tastes).toEqual([]);
   });

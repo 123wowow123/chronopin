@@ -48,13 +48,15 @@ export type ActivityCategory =
   | 'Water'
   | 'Nature'
   | 'Dining'
-  | 'Snow';
+  | 'Snow'
+  | 'Kids';
 
 export type ResortActivity = {
   title: string;
   category: ActivityCategory;
   season?: string;
   description: string;
+  kidsFriendly?: boolean;
 };
 
 export type TravelResortPin = PinJson & {
@@ -1461,6 +1463,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Spring & Autumn',
       description: 'Multi-course seasonal dining with master chefs celebrating Kansai heirloom vegetables and Kyoto brewery vintages.',
     },
+    {
+      title: 'Traditional Wagashi Sweet-Making & Origami Family Workshop',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Hands-on confectionery craft and Japanese paper-folding class tailored for young artists and parents.',
+    },
   ],
 
   // Four Seasons Hotel and Residences Cartagena
@@ -1482,6 +1491,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Year-round',
       description: 'Sip aged single-origin Colombian rums paired with Caribbean-inspired ceviches overlooking the historic fortress ramparts.',
+    },
+    {
+      title: 'Castillo San Felipe Secret Tunnels & Pirate Lore Family Walk',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Explore subterranean fortress passages, lookout ramparts, and colonial Caribbean legends with a dedicated family guide.',
     },
   ],
 
@@ -1505,6 +1521,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Luxurious authentic marble bath ritual featuring black eucalyptus soap, rhassoul clay wraps, and pure organic argan oil.',
     },
+    {
+      title: 'Rabat National Zoological Garden Atlas Lion Safari',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Open-air wildlife expedition observing majestic Atlas lions, Sahara antelopes, and desert fennec foxes in open biotopes.',
+    },
   ],
 
   // Corinthia Rome
@@ -1526,6 +1549,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Spring & Autumn',
       description: 'Select fresh heirloom Roman produce with the executive chef followed by an intimate pasta and wine pairing class.',
+    },
+    {
+      title: 'Junior Gladiator School & Ancient Roman Mosaic Workshop',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Don historical tunics to learn wooden-sword gladiator defense games followed by crafting authentic marble mosaic souvenirs.',
     },
   ],
 
@@ -1549,6 +1579,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'VIP curator-guided treasure hunt through Notting Hill’s legendary vintage boutiques, silver arcades, and galleries.',
     },
+    {
+      title: 'Diana Memorial Pirate Ship Playground & Serpentine Boating',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Apr – Oct',
+      description: 'Climb aboard the full-scale wooden pirate galleon in Kensington Gardens and feed royal mute swans along the Serpentine.',
+    },
   ],
 
   // Aman New York
@@ -1570,6 +1607,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Year-round',
       description: 'Masterful Edomae sushi and binchotan-grilled delights savored beside tranquil outdoor reflecting pools on Fifth Avenue.',
+    },
+    {
+      title: 'Central Park Zoo & Belvedere Castle Discovery Safari',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Guided family treasure hunt visiting sea lion feedings, snow leopards, the puppet theater, and Gothic stone castle turrets.',
     },
   ],
 
@@ -1593,6 +1637,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Seasonal zero-waste culinary tasting highlighting organic produce from small-scale regenerative farms across Kanto.',
     },
+    {
+      title: 'teamLab Planets Interactive Water & Sensory Digital Art',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Wade barefoot through knee-deep water projected with swimming digital koi carp and traverse infinity crystal rooms.',
+    },
   ],
 
   // Four Seasons Hotel Tokyo at Marunouchi
@@ -1614,6 +1665,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Wellness',
       season: 'Year-round',
       description: 'Serene spa sanctuary with mineral-rich hot springs, steam saunas, and jet beds to relieve international travel fatigue.',
+    },
+    {
+      title: 'Tokyo Station Bullet Train Conductor & Shinkansen Experience',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'VIP platform tour greeting high-speed Shinkansen trains, wearing miniature conductor caps, and visiting the train museum.',
     },
   ],
 
@@ -1637,6 +1695,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Sommelier-curated degustation of rare vintage volcanic Tokaj dessert wines and artisanal sturgeon caviar.',
     },
+    {
+      title: 'Budapest Children’s Railway & Forest Hills Cogwheel Tram',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'May – Oct',
+      description: 'Ride vintage narrow-gauge heritage trains operated entirely by Hungarian school children through scenic Buda mountain forests.',
+    },
   ],
 
   // Amoh, a Luxury Collection Resort, Rhodes
@@ -1658,6 +1723,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'May – Oct',
       description: 'Sip native Athiri and Mandilaria varietals at historic mountain estates accompanied by local goat cheeses.',
+    },
+    {
+      title: 'Valley of the Butterflies Nature Safari & Medieval Castle Hunt',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Jun – Sep',
+      description: 'Family walking trail amid thousands of Panaxia quadripunctaria butterflies, wooden bridges, and knight castle ruins.',
     },
   ],
 
@@ -1681,6 +1753,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'May – Oct',
       description: 'Hike through misty endemic palm forests and granite peaks with resident naturalists discovering rare Seychelles wildlife.',
     },
+    {
+      title: 'Le Carrousel Kids Club Giant Aldabra Tortoise Feeding',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Meet and feed resident giant Aldabra tortoises, embark on tropical treasure hunts, and craft coconut-leaf souvenirs.',
+    },
   ],
 
   // Amanvari, Baja California Sur
@@ -1702,6 +1781,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Adventure',
       season: 'Nov – May',
       description: 'Navigate golden desert arroyos and untouched beachfront dunes with dramatic views of the Sea of Cortez at golden hour.',
+    },
+    {
+      title: 'Cabo Pulmo Marine Reserve Junior Coral Reef Explorer',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Nov – May',
+      description: 'Guided shallow tidepool exploration and sea turtle encounters designed specifically for junior marine biologists.',
     },
   ],
 
@@ -1725,6 +1811,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Jun – Sep',
       description: 'Fresh Aegean octopus and sea bass grilled over olive wood embers right at the water’s edge with crisp Assyrtiko wine.',
     },
+    {
+      title: 'Little Explorers Aegean Tidepool Safari & Sandcastle Camp',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Jun – Sep',
+      description: 'Beachside marine discoveries, colorful Aegean seashell hunting, and guided Greek pastry baking for children.',
+    },
   ],
 
   // The St. Regis Costa Mujeres Resort, Cancún
@@ -1746,6 +1839,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Wellness',
       season: 'Year-round',
       description: 'Restorative body therapies utilizing indigenous stingless bee honey, healing copal incense, and sea salt hydrotherapy.',
+    },
+    {
+      title: 'Little Treasures Mayan Chocolate & Sacred Melipona Bee Farm',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Hands-on organic cacao grinding workshop crafting ancient Mayan drinking chocolates and visiting stingless bee sanctuaries.',
     },
   ],
 
@@ -1769,6 +1869,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'May – Oct',
       description: 'Explore historic family-owned estates among pine-clad hills sampling premier cru classé Provence rosés and olive oils.',
     },
+    {
+      title: 'Little Sailors Wooden Model Boat Regatta & Gelato Tasting',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'May – Sep',
+      description: 'Sail handcrafted wooden toy boats in historical harbor fountains followed by an artisanal French Riviera gelato tour.',
+    },
   ],
 
   // The Westerly at Hilton Aruba
@@ -1790,6 +1897,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Wellness',
       season: 'Year-round',
       description: 'Rejuvenating body polish and soothing sunburn relief therapies utilizing organic Aruban aloe harvested on-island.',
+    },
+    {
+      title: 'Aruba Butterfly Farm & Baby Sea Turtle Coastal Watch',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Walk through tropical mesh gardens of hundreds of rare butterfly species and observe protected sea turtle hatchlings on Palm Beach.',
     },
   ],
 
@@ -1813,6 +1927,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Signature poolside luxury with chilled eucalyptus towels, fresh crudo, and craft tropical mixology under swaying palms.',
     },
+    {
+      title: 'Miami Children’s Museum & Biscayne Bay Manatee Boat Tour',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Nov – May',
+      description: 'Interactive cultural exhibits on Watson Island followed by a slow-cruising boat spotting wild manatees in shallow mangrove channels.',
+    },
   ],
 
   // Danieli, Venezia, a Four Seasons Hotel
@@ -1834,6 +1955,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Apr – Oct',
       description: 'Iconic rooftop dining overlooking the Grand Canal and San Giorgio Maggiore featuring fresh Adriatic seafood and prosecco.',
+    },
+    {
+      title: 'Carnival Masquerade Mask Painting & Murano Glass Junior Camp',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Design and paint personal papier-mâché Venetian carnival masks using gold leaf and plumage with historic artisans.',
     },
   ],
 
@@ -1857,6 +1985,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Exquisite multi-course banquet showcasing centuries-old Kyoto culinary arts, delicate dashi, and lacquerware presentation.',
     },
+    {
+      title: 'Kyoto Railway Museum & Traditional Hand-Dyeing Family Craft',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Explore Japan’s largest collection of steam locomotives with interactive driving simulators and Shibori fabric dyeing.',
+    },
   ],
 
   // HOSHINOYA Nara Prison
@@ -1878,6 +2013,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Wellness',
       season: 'Year-round',
       description: 'Restorative body therapies utilizing indigenous Yamato medicinal herbs, Hinoki cypress oils, and hot mineral baths.',
+    },
+    {
+      title: 'Nara Park Sacred Sika Deer Feeding & Family Biscuit Trail',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Spring & Autumn',
+      description: 'Purchase shika-senbei rice crackers to bow to and feed hundreds of tame sacred sika deer roaming beneath ancient cedars.',
     },
   ],
 
@@ -1901,6 +2043,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Oct – Apr',
       description: 'Waterfront wood-fired oyster roast featuring local Single Lady oysters, house-cured ham, and small-batch bourbon.',
     },
+    {
+      title: 'South Carolina Aquarium Sea Turtle Hospital & Harbor Dolphin Tour',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Mar – Nov',
+      description: 'Go behind the scenes at the sea turtle recovery ward and cruise Charleston Harbor spotting playful bottlenose pods.',
+    },
   ],
 
   // Conrad Nagoya
@@ -1922,6 +2071,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Year-round',
       description: 'Savor Nagoya’s iconic multi-step grilled unagi eel delicacy paired with award-winning Aichi prefecture junmai sakes.',
+    },
+    {
+      title: 'SCMAGLEV Railway Park & High-Speed Bullet Train Simulator',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Experience cutting-edge magnetic levitation transit technology and drive life-sized Shinkansen simulators.',
     },
   ],
 
@@ -1945,6 +2101,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Signature body cleansing ritual with natural eucalyptus black soap, crushed sea salts, and fragrant pure Arabian oud.',
     },
+    {
+      title: 'Red Sea Floating Mosque Walk & Fakieh Aquarium Dolphin Show',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Nov – Apr',
+      description: 'Stroll along the Corniche sea boardwalk to the floating Al-Rahma mosque followed by interactive coral and dolphin presentations.',
+    },
   ],
 
   // 1 Hotel Austin
@@ -1966,6 +2129,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Year-round',
       description: 'Authentic post-oak smoked barbecue paired with local Texas Hill Country ciders and biodynamic wines.',
+    },
+    {
+      title: 'Barton Springs Splash & Thinkery Children’s Museum Day',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Mar – Oct',
+      description: 'Swim in the legendary natural spring-fed pool and explore steam-powered laboratory exhibits at Austin’s premier science lab.',
     },
   ],
 
@@ -1989,6 +2159,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Nighttime aerial helicopter tour above the neon brilliance of the Las Vegas Strip and illuminated dancing fountains.',
     },
+    {
+      title: 'Shark Reef Aquarium Mandalay Bay & Bellagio Floral Garden Walk',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Walk through underwater glass predator tunnels with giant sawfish followed by seasonal conservatory fairytale flower displays.',
+    },
   ],
 
   // ICEHOTEL 365
@@ -2010,6 +2187,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Culture',
       season: 'Nov – Apr',
       description: 'Meet Sámi reindeer herders, feed the herd, and savor slow-cooked Arctic dishes around an open hearth.',
+    },
+    {
+      title: 'Indigenous Sámi Reindeer Sledding & Family Hearth Storytelling',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Nov – Apr',
+      description: 'Feed gentle Arctic reindeer, ride family sleds across snowy pastures, and listen to Sámi folktales in a cozy fireside lavvu.',
     },
   ],
 
@@ -2033,6 +2217,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Authentic Sichuan fine dining featuring freshly harvested mountain bamboo shoots, wild river carp, and numbing peppercorn broths.',
     },
+    {
+      title: 'Mount Emei Wild Forest Monkey Watching & Tea Bush Planting',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Spring & Autumn',
+      description: 'Guided family nature walk observing playful Tibetan macaques from safe platforms and planting heirloom organic tea saplings.',
+    },
   ],
 
   // Ciel Dubai Marina
@@ -2054,6 +2245,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Year-round',
       description: 'Sip bespoke craft cocktails while gazing down on the glittering Dubai Marina towers and Arabian coastline.',
+    },
+    {
+      title: 'Aquaventure Waterpark VIP Family Day & Lost Chambers Aquarium',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Oct – May',
+      description: 'Full-day family thrills on record-breaking waterslides and exploring mysterious sunken city tunnels with 65,000 marine animals.',
     },
   ],
 
@@ -2077,6 +2275,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Ascend quietly in a tethered balloon high into the monumental former zeppelin hangar for aerial views.',
     },
+    {
+      title: 'Tropino Kids Club Giant Climbing Jungle, Bumper Boats & Kart Track',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Expansive 4,000 m² indoor play paradise with soft-play obstacle courses, mini bumper boats on water basins, and electric go-karts.',
+    },
   ],
 
   // Universal Kids Resort Hotel, Frisco
@@ -2098,6 +2303,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Year-round',
       description: 'Whimsical culinary mornings with beloved animated characters and kid-crafted artisanal pancake stations.',
+    },
+    {
+      title: 'Camp Universal Interactive Animated Character Quest',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Special storybook breakfast with beloved animated characters followed by an interactive scavenger hunt through the themed hotel corridors.',
     },
   ],
 
@@ -2121,6 +2333,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Full-service wellness haven offering Pacific sea salt scrubs, eucalyptus steam rooms, and outdoor heated vitality pools.',
     },
+    {
+      title: 'Camp Gaylord Junior Marine Explorer & Scavenger Quest',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Interactive family quest discovering San Diego bay ecology, outdoor garden animal tracking, and evening bayside s’mores bonfires.',
+    },
   ],
 
   // Durango Casino & Resort, Las Vegas
@@ -2142,6 +2361,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Year-round',
       description: 'Prime dry-aged steaks, fresh market seafood, and curated California cabernets in Durango’s acclaimed signature steakhouse.',
+    },
+    {
+      title: 'Red Rock Canyon Junior Ranger Dinosaur Track & Fossil Trail',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Oct – May',
+      description: 'Guided family hike discovering ancient Jurassic sandstone dunes, fossilized dinosaur footprints, and desert bighorn sheep.',
     },
   ],
 
@@ -2165,6 +2391,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Nov – May',
       description: 'Equipped with headlamps, drift quietly down the Sok River under starlight spotting sleeping hornbills and nocturnal civets.',
     },
+    {
+      title: 'Sok River Gentle Bamboo Rafting & Cliffside Monkey Spotting',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Nov – May',
+      description: 'Drift along calm crystal river waters on handcrafted bamboo rafts while local guides point out macaque families and kingfishers.',
+    },
   ],
 
   // The Birdhouse El Nido
@@ -2186,6 +2419,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Adventure',
       season: 'Dec – Apr',
       description: 'Scenic ridge expedition through coastal forests leading to the legendary 4-kilometer stretch of golden Nacpan surf.',
+    },
+    {
+      title: 'Bacuit Bay Coral Reef Snorkel & Baby Sea Turtle Safari',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Dec – May',
+      description: 'Gentle family boat tour to shallow sheltered lagoons teeming with friendly clownfish, blue sea stars, and baby green sea turtles.',
     },
   ],
 
@@ -2209,6 +2449,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Mar – May & Sep – Nov',
       description: 'Escorted journey into the High Atlas foothills, hiking alongside rushing mountain streams to traditional adobe Berber hamlets.',
     },
+    {
+      title: 'Palmerai Camel Caravan Ride & Berber Family Pottery Workshop',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Oct – May',
+      description: 'Ride gentle saddled dromedary camels through ancient palm groves and learn traditional terracotta clay pottery molding.',
+    },
   ],
 
   // Hoshino Resorts BEB5 Karuizawa
@@ -2230,6 +2477,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Dining',
       season: 'Year-round',
       description: 'Roast marshmallows and sample local Shinshu apple cider around outdoor wood-deck bonfires under unpolluted mountain skies.',
+    },
+    {
+      title: 'Giant Flying Squirrel Night Safari & Bonfire S’mores Roasting',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'May – Oct',
+      description: 'Guided twilight forest expedition with night-vision scopes watching giant musasabi flying squirrels glide through treetops.',
     },
   ],
 
@@ -2253,6 +2507,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Savor organic farm-to-table Balinese feasts inside an open-air hyperbolic bamboo pavilion perched right above the rapids.',
     },
+    {
+      title: 'Ayung River Natural Rock Slide & Balinese Kite Flying Workshop',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Apr – Oct',
+      description: 'Craft and fly colorful giant Balinese kites over open rice paddies and splash in natural spring-fed canyon swimming holes.',
+    },
   ],
 
   // 98 Acres Resort & Spa
@@ -2274,6 +2535,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Wellness',
       season: 'Year-round',
       description: 'Immerse in heated waters on the timber deck gazing into the colossal southern mountain gap rolling all the way to the coast.',
+    },
+    {
+      title: 'Demodara Nine Arch Bridge Steam Train Spotting & Tea Picking',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Wave to conductors as historic red steam trains chug across the viaduct, followed by gentle tea picking on the lower slopes.',
     },
   ],
 
@@ -2297,6 +2565,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       season: 'Year-round',
       description: 'Canter along scenic desert ridges between coastal sage and rugged sea cliffs with views stretching towards Ensenada bay.',
     },
+    {
+      title: 'Pacific Clifftop Coastal Zip-Line & Farm Animal Petting Tour',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Year-round',
+      description: 'Soar on secure dual-cable family zip-lines over coastal chaparral and meet heritage farm animals in the estate valley.',
+    },
   ],
 
   // Playa Viva
@@ -2318,6 +2593,13 @@ export const RESORT_ACTIVITIES_MAP: Record<number, ResortActivity[]> = {
       category: 'Water',
       season: 'Nov – Apr',
       description: 'Paddle through serene saltwater mangrove forests observing roseate spoonbills, white ibises, and coastal biodiversity.',
+    },
+    {
+      title: 'La Tortuga Viva Baby Turtle Hatchling Dawn Release & Farm Walk',
+      category: 'Kids',
+      kidsFriendly: true,
+      season: 'Nov – May',
+      description: 'Children gently guide newborn olive ridley and leatherback hatchlings as they take their first tiny flipper steps into the ocean.',
     },
   ],
 };

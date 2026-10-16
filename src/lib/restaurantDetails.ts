@@ -12,6 +12,7 @@ export type RestaurantDetails = {
   additionalSources?: { label: string; url: string }[];
   reservationUrl?: string;
   checkedAt: string;
+  kidsFriendly?: boolean;
 };
 
 // Retain anchors and paths so a brand's other locations never share details.

@@ -14,6 +14,7 @@ import { blobUrl } from '@/lib/appConfig';
 import { pinTextDir } from '@/lib/i18n/config';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import { LandingMark } from '@/components/ui/LandingMark';
+import { isKidsFriendlyProduct } from '@/lib/products';
 import type { PinJson } from '@/lib/types';
 import type { ProductPin, ProductShelf } from '@/server/services/products';
 
@@ -102,7 +103,10 @@ export async function ProductsView({ shelves, title, description, path = '/produ
               <div className={styles.featuredShade} />
               <span className={styles.featuredBadge}>CHRONOPIN SELECTION</span>
               <div className={styles.featuredCopy}>
-                <p>{featured.company ?? featured.categories?.[0]}</p>
+                <p>
+                  {featured.company ?? featured.categories?.[0]}
+                  {isKidsFriendlyProduct(featured) ? ' · Kids friendly' : ''}
+                </p>
                 <h2>{featured.productName ?? featured.title}</h2>
                 <span>See the product <span aria-hidden="true">↗</span></span>
               </div>
@@ -128,7 +132,7 @@ export async function ProductsView({ shelves, title, description, path = '/produ
                 shelf.pins.map((pin) => {
                   const image = imageOf(pin);
                   const name = pin.productName ?? pin.title;
-                  const exceptional = isExceptionalProduct(pin);
+                  const isKidsFriendly = isKidsFriendlyProduct(pin, shelf.name);
                   return (
                     <article key={pin.id} className={styles.card}>
                       <Link href={pinPath(pin)} className={styles.photoLink} aria-label={`See ${name}`}>
@@ -141,7 +145,15 @@ export async function ProductsView({ shelves, title, description, path = '/produ
                       </Link>
                       <div className={styles.cardBody}>
                         <div className="mb-2 flex items-center justify-between gap-3">
-                          <p className={styles.cardMeta} style={{ margin: 0 }}>{pin.company ?? ''}</p>
+                          <p className={styles.cardMeta} style={{ margin: 0 }}>
+                            {pin.company ? <span>{pin.company}</span> : null}
+                            {isKidsFriendly && (
+                              <>
+                                {pin.company ? <span aria-hidden="true">·</span> : null}
+                                <span className={styles.kidsBadge}>Kids friendly</span>
+                              </>
+                            )}
+                          </p>
                           <Score pin={pin} />
                         </div>
                         <h3><Link href={pinPath(pin)} dir={pinTextDir(pin)}>{name}</Link></h3>

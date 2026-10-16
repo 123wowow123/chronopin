@@ -435,9 +435,7 @@ export default class Pins extends BasePins<Pin> {
         AND ($2::timestamptz IS NULL OR "p"."utcStartDateTime" <= $2)
         AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
         AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)
-        AND ($5::integer IS NULL OR EXISTS (
-          SELECT 1 FROM "Favorite" AS "f"
-          WHERE "f"."pinId" = "p"."id" AND "f"."userId" = $5 AND "f"."utcDeletedDateTime" IS NULL))
+        AND ($5::integer IS NULL OR "p"."id" IN (${watchedPinIdsOf('$5')}))
         AND (NOT $6::boolean OR (
           EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')
           AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" IN ('Restaurant Opening', 'Restaurant', 'Restaurants'))))
@@ -608,6 +606,26 @@ export const pinConfidenceOf = (as: string) =>
 const withinRing = (as: string, point: number, meters: number) =>
   `($${point}::text IS NULL OR ST_DWithin("${as}"."location", $${point}::geography, $${meters}::double precision))`;
 
+// Whether pin "as" is a predicted pin: tagged 'Predicted', or an estimated-date
+// pin citing a prediction market ('Prediction Market' in PinTagView).
+const predictedPinOf = (as: string) =>
+  `EXISTS (SELECT 1 FROM "PinTagView" AS "pt" WHERE "pt"."pinId" = "${as}"."id" AND ("pt"."name" = 'Predicted'::citext OR ("${as}"."dateConfidence" = 'estimated' AND "pt"."name" = 'Prediction Market'::citext)))`;
+
+// Every pin id a user's Watch view shows: the pins they watch directly, plus
+// (unless excludePredicted is true) predicted pins of companies they follow.
+const watchedPinIdsOf = (userParam: string, excludePredicted = false) =>
+  excludePredicted
+    ? `SELECT "Favorites"."pinId" FROM "Favorite" AS "Favorites"
+       WHERE "Favorites"."utcDeletedDateTime" IS NULL AND "Favorites"."userId" = ${userParam}`
+    : `SELECT "Favorites"."pinId" FROM "Favorite" AS "Favorites"
+       WHERE "Favorites"."utcDeletedDateTime" IS NULL AND "Favorites"."userId" = ${userParam}
+       UNION
+       SELECT "p"."id" FROM "CompanyFollow" AS "cf"
+         INNER JOIN "Pin" AS "p" ON "p"."companyId" = "cf"."companyId" AND "p"."utcDeletedDateTime" IS NULL
+         INNER JOIN "PinTagView" AS "pt" ON "pt"."pinId" = "p"."id"
+           AND ("pt"."name" = 'Predicted'::citext OR ("p"."dateConfidence" = 'estimated' AND "pt"."name" = 'Prediction Market'::citext))
+       WHERE "cf"."utcDeletedDateTime" IS NULL AND "cf"."userId" = ${userParam}`;
+
 // The columns a timeline page returns. Deliberately narrower than "Pin".*:
 // no longFormSummary (detail page only) and no utcDeletedDateTime (always
 // null here), and references only as far as a card reads them. "Media.type"
@@ -734,15 +752,9 @@ function queryPage(
     WHERE "Pin"."id" = ANY(ARRAY(
       SELECT "p"."id"
       FROM "Pin" AS "p"
-      ${
-        onlyFavorites
-          ? `
-        INNER JOIN "Favorite" AS "Favorites"
-          ON "p"."id" = "Favorites"."pinId" AND "Favorites"."utcDeletedDateTime" IS NULL AND "Favorites"."userId" = $1`
-          : ''
-      }
       WHERE ("p"."utcStartDateTime", "p"."id") ${after} ($2::timestamptz, $3::integer)
         AND "p"."utcDeletedDateTime" IS NULL
+        ${onlyFavorites ? `AND "p"."id" IN (${watchedPinIdsOf('$1')})` : ''}
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
         AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $6) >= $6)
         AND ${withinRing('p', 7, 8)}
@@ -1172,13 +1184,14 @@ export function searchClauses(filter: SearchFilter) {
     ];
     where.push(`EXISTS (SELECT 1 FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "Pin"."id" AND ${on.join(' AND ')})`);
   }
-  // The Watch search choice: only pins this user watches.
+  // The Watch search choice: pins this user watches, and (unless predicted
+  // pins are turned off) predicted pins of any company this user follows.
   if (filter.favoriteUserId != null) {
-    where.push(`EXISTS (
-          SELECT 1 FROM "Favorite" AS "Favorites"
-          WHERE "Favorites"."pinId" = "Pin"."id"
-            AND "Favorites"."utcDeletedDateTime" IS NULL
-            AND "Favorites"."userId" = ${add(filter.favoriteUserId)})`);
+    const user = add(filter.favoriteUserId);
+    where.push(`"Pin"."id" IN (${watchedPinIdsOf(user, filter.excludePredicted)})`);
+    if (filter.excludePredicted) {
+      where.push(`NOT ${predictedPinOf('Pin')}`);
+    }
   }
   if (filter.createdSince) {
     where.push(`"Pin"."utcCreatedDateTime" >= ${add(filter.createdSince)}`);

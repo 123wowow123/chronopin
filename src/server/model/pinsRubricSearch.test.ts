@@ -67,3 +67,30 @@ describe('searchClauses rubric:', () => {
     expect(params).toContainEqual([2026]);
   });
 });
+
+describe('searchClauses watch view', () => {
+  it('includes watched pins and predicted pins of followed companies in the watch view', () => {
+    const filter = { ...parseSearchQuery('company:Anthropic'), hits: null, favoriteUserId: 42 } as unknown as SearchFilter;
+    const { where, params } = searchClauses(filter);
+    const watchClause = where.find((w) => w.includes('"Favorite"'))!;
+    expect(watchClause).toContain('FROM "Favorite" AS "Favorites"');
+    expect(watchClause).toContain('FROM "CompanyFollow" AS "cf"');
+    expect(watchClause).toContain(`"pt"."name" = 'Predicted'::citext`);
+    expect(params).toEqual([['Anthropic'], 42]);
+  });
+
+  it('omits followed-company predicted pins and excludes predicted pins when excludePredicted is true', () => {
+    const filter = {
+      ...parseSearchQuery('company:Anthropic'),
+      hits: null,
+      favoriteUserId: 42,
+      excludePredicted: true,
+    } as unknown as SearchFilter;
+    const { where, params } = searchClauses(filter);
+    const watchClause = where.find((w) => w.includes('"Favorite"'))!;
+    expect(watchClause).toContain('FROM "Favorite" AS "Favorites"');
+    expect(watchClause).not.toContain('"CompanyFollow"');
+    expect(where.some((w) => w.startsWith('NOT EXISTS (SELECT 1 FROM "PinTagView"'))).toBe(true);
+    expect(params).toEqual([['Anthropic'], 42]);
+  });
+});

@@ -69,7 +69,6 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const viewNav = useRef<HTMLElement>(null);
   const cities = availableRegions.filter((city) => city.country === selectedCountry);
   const { counts } = summary;
-  const specialCount = counts.discounts;
   const views = VIEWS.filter((view) => counts[view.key] > 0);
   // Empty tabs stay hidden; old links fall back to a populated view.
   const status: GuideView = views.find((view) => view.key === queryView)?.key ?? views.find((view) => view.hash === hash || (view.key === 'discounts' && hash === '#next-specials'))?.key ?? views.find((view) => view.key === initialView)?.key ?? views[0]?.key ?? 'upcoming';
@@ -151,7 +150,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
               <Image src={featured.image!} alt={`${featured.name} · ${featured.imageNote ?? 'restaurant photo'}`} fill sizes="(max-width: 760px) 100vw, 50vw" priority className={styles.featuredImage} />
               <div className={styles.featuredShade} />
               <span className={styles.featuredBadge}>{openingGroup(featured, today) === 'new' ? 'RECENTLY OPENED' : 'ON THE HORIZON'}</span>
-              <div className={styles.featuredCopy}><p>{featured.neighborhood} · {featured.cuisine}</p><h2>{featured.name}</h2><span>Discover the opening <span aria-hidden="true">↗</span></span></div>
+              <div className={styles.featuredCopy}><p>{featured.neighborhood} · {featured.cuisine}{featured.kidsFriendly ? ' · Kids friendly' : ''}</p><h2>{featured.name}</h2><span>Discover the opening <span aria-hidden="true">↗</span></span></div>
               {featured.imageNote && <span className={styles.featuredNote}>{featured.imageNote}</span>}
             </Link>
           ) : featuredTop ? (
@@ -159,7 +158,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
               <Image src={featuredTop.image!} alt={`${featuredTop.name} · restaurant photo`} fill sizes="(max-width: 760px) 100vw, 50vw" priority className={styles.featuredImage} />
               <div className={styles.featuredShade} />
               <span className={styles.featuredBadge}>CHRONOPIN SELECTION</span>
-              <div className={styles.featuredCopy}><p>{featuredTop.neighborhood} · {featuredTop.cuisine}</p><h2>{featuredTop.name}</h2><span>Explore the restaurant <span aria-hidden="true">↗</span></span></div>
+              <div className={styles.featuredCopy}><p>{featuredTop.neighborhood} · {featuredTop.cuisine}{featuredTop.kidsFriendly ? ' · Kids friendly' : ''}</p><h2>{featuredTop.name}</h2><span>Explore the restaurant <span aria-hidden="true">↗</span></span></div>
               <span className={styles.featuredNote}>{featuredTop.imageCredit}</span>
             </Link>
           ) : <div className={styles.noFeature}><span aria-hidden="true">✳</span><p>A new chapter<br />for local dining.</p></div>}
@@ -212,7 +211,9 @@ function TopRestaurantSection({ pages, pageHref, sortState, mapHref }: { pages: 
     <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id="top-restaurants-title">Top restaurants <span>{pages.total.toString().padStart(2, '0')}</span></h2><p>Established favorites for your next meal.</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label="top restaurants" mapHref={mapHref} /> : <span className={styles.sectionSymbol} aria-hidden="true">✳</span>}</div>
     {sortState && <RestaurantSortFeedback state={sortState} />}
     {restaurants.length > 0 && <p className={styles.topNote}>{restaurants.every((restaurant) => restaurant.recognition.startsWith('MICHELIN')) ? 'A curated selection from the MICHELIN Guide, covering starred dining, Bib Gourmand value picks, and selected restaurants. Each card links to its recognition. Dollar signs are the guide’s price ranges.' : 'A Chronopin editorial selection of established restaurants. Each card links to the restaurant’s information; this selection is not an external award.'} Checked {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${restaurants[0].checkedAt}T00:00:00Z`))}.</p>}
-    <PagedCardGrid pages={pages} pageHref={pageHref}>{(restaurant) => (
+    <PagedCardGrid pages={pages} pageHref={pageHref}>{(restaurant) => {
+      const isKidsFriendly = Boolean(restaurant.kidsFriendly || details[restaurant.pinId]?.kidsFriendly);
+      return (
       <article key={restaurant.slug} className={styles.card}>
         <Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })} className={styles.photoLink} aria-label={`See ${restaurant.name}'s restaurant details`}>
           {restaurant.image ? <Image src={restaurant.image} alt={restaurant.name} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>}
@@ -220,7 +221,7 @@ function TopRestaurantSection({ pages, pageHref, sortState, mapHref }: { pages: 
           <span className={styles.imageNote}>{restaurant.imageCredit}</span>
         </Link>
         <div className={styles.cardBody}>
-          <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Guide price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}</p>
+          <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Guide price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}{isKidsFriendly && <><span aria-hidden="true">·</span><span className={styles.kidsBadge}>Kids friendly</span></>}</p>
           <h3><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>{restaurant.name}</Link></h3>
           <RestaurantFacts details={details[restaurant.pinId]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
@@ -230,7 +231,7 @@ function TopRestaurantSection({ pages, pageHref, sortState, mapHref }: { pages: 
           <div className={styles.topLinks}><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>View restaurant ↗</Link><Anchor href={restaurant.websiteUrl} target="_blank" rel="noopener noreferrer">Visit website ↗</Anchor></div>
         </div>
       </article>
-    )}</PagedCardGrid>
+    );}}</PagedCardGrid>
   </section>;
 }
 
@@ -239,7 +240,9 @@ function OpeningSection({ pageHref, id, title, subtitle, pages, group, today, hr
   return <section id={id} className={styles.section} aria-labelledby={`${id}-title`}>
     <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id={`${id}-title`}>{title} <span>{pages.total.toString().padStart(2, '0')}</span></h2><p>{subtitle}</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label={group === 'upcoming' ? 'coming soon restaurants' : 'just opened restaurants'} mapHref={mapHref} openingDate={group === 'upcoming'} /> : <span className={styles.sectionSymbol} aria-hidden="true">{group === 'new' ? '↗' : '✳'}</span>}</div>
     {sortState && <RestaurantSortFeedback state={sortState} />}
-    <PagedCardGrid pages={pages} pageHref={pageHref}>{(restaurant) => (
+    <PagedCardGrid pages={pages} pageHref={pageHref}>{(restaurant) => {
+      const isKidsFriendly = Boolean(restaurant.kidsFriendly || details[restaurant.id]?.kidsFriendly);
+      return (
       <article key={restaurant.id} className={styles.card}>
         <Link href={href(restaurant)} className={styles.photoLink} aria-label={`See ${restaurant.name}'s opening details`}>
           {restaurant.image ? <Image src={restaurant.image} alt={`${restaurant.name} · ${restaurant.imageNote ?? 'restaurant photo'}`} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <div className={styles.photoPlaceholder}><span aria-hidden="true">✳</span></div>}
@@ -247,7 +250,7 @@ function OpeningSection({ pageHref, id, title, subtitle, pages, group, today, hr
           {restaurant.imageNote && <span className={styles.imageNote}>{restaurant.imageNote}</span>}
         </Link>
         <div className={styles.cardBody}>
-          <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Restaurant price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}</p>
+          <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Restaurant price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}{isKidsFriendly && <><span aria-hidden="true">·</span><span className={styles.kidsBadge}>Kids friendly</span></>}</p>
           <h3><Link href={href(restaurant)}>{restaurant.name}</Link></h3>
           <RestaurantFacts details={details[restaurant.id]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
@@ -256,6 +259,6 @@ function OpeningSection({ pageHref, id, title, subtitle, pages, group, today, hr
           <div className={styles.cardFoot}><div><span>{group === 'new' ? 'OPENED' : restaurant.day <= today ? 'LAST ANNOUNCED TARGET' : 'EXPECTED OPENING'}</span><strong><time dateTime={restaurant.day}>{restaurant.dateLabel}</time>{restaurant.estimated && <small>Estimated</small>}</strong></div><Link href={href(restaurant)} aria-label={`Read about ${restaurant.name}`} className={styles.cardArrow}>↗</Link></div>
         </div>
       </article>
-    )}</PagedCardGrid>
+    );}}</PagedCardGrid>
   </section>;
 }

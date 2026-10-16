@@ -146,6 +146,8 @@
 .photoPlaceholder { display:grid; place-content:center; height:100%; background:var(--rule); color:var(--green); font-size:50px; }
 .cardBody { padding:18px 20px; display:flex; flex-direction:column; flex:1; }
 .cardMeta { display:flex; flex-wrap:wrap; gap:6px; color:var(--soft); font-size:9px; margin:0 0 8px; }
+.kidsBadge { display:inline-flex; align-items:center; background:#edf0cf; color:#244d39; padding:1px 5px; border-radius:3px; font-size:9px; font-weight:600; line-height:1.4; }
+:global([data-theme='dark']) .kidsBadge { background:#263c2e; color:#c6daa4; }
 .card h3 { font-family:Georgia,serif; font-size:25px; font-weight:400; letter-spacing:-.5px; line-height:1.2; }
 .card h3 a:hover { text-decoration:underline; text-underline-offset:4px; }
 .cardDescription { font-size:11px; line-height:1.8; color:var(--soft); margin:10px 0 20px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }

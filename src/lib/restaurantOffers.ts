@@ -20,6 +20,7 @@ export type RestaurantOffer = {
   review?: RestaurantReview;
   photo?: RestaurantPhoto;
   location?: Place;
+  kidsFriendly?: boolean;
 };
 
 const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

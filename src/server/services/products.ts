@@ -5,13 +5,13 @@ import { cacheLife, cacheTag } from 'next/cache';
 import Pins from '../model/pins';
 import Products, { type ProductBlurb } from '../model/products';
 import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
-import { PRODUCT_SHELVES, SHELF_SIZE } from '@/lib/products';
+import { PRODUCT_SHELVES, SHELF_SIZE, isKidsFriendlyProduct } from '@/lib/products';
 import { toJson, type PinJson } from '@/lib/types';
 import { TAGS } from './cache';
 import { timelineMinConfidence } from './timeline';
 import { localizePins } from './translations';
 
-export type ProductPin = PinJson & { blurb?: string; rating?: ProductBlurb['rating'] };
+export type ProductPin = PinJson & { blurb?: string; rating?: ProductBlurb['rating']; kidsFriendly?: boolean };
 export type ProductShelf = { name: string; label: string; pins: ProductPin[] };
 
 // Each shelf with this year's pins, the shelves with none left out.
@@ -41,7 +41,7 @@ export async function productShelves(locale: Locale = DEFAULT_LOCALE): Promise<P
       const pin = byId.get(id);
       if (shelved.has(id)) return [];
       shelved.add(id);
-      return pin ? [{ ...pin, blurb: blurbs.get(id)?.blurb, rating: blurbs.get(id)?.rating }] : [];
+      return pin ? [{ ...pin, blurb: blurbs.get(id)?.blurb, rating: blurbs.get(id)?.rating, kidsFriendly: isKidsFriendlyProduct(pin, shelf.name) }] : [];
     }),
   })).filter((shelf) => shelf.pins.length);
 }

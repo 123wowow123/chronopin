@@ -1,4 +1,4 @@
-// A gasoline car pin's performance rubric (PinGasCarPerf, 0173): six 0-5
+// A gasoline car pin's performance rubric (PinGasCarPerf, 0173): seven
 // scores (null where the spec is not published) with the sentence they rest
 // on. One row per pin; a row set by hand is never overwritten by an estimate.
 // The sibling of ./pinCarPerf.
@@ -31,7 +31,7 @@ export function gasCarPerfProblem(body: Record<string, unknown>): {
 } | string {
   const scores = {} as GasCarPerfScores;
   for (const key of GAS_CAR_PERF_KEYS) {
-    const value = body[key];
+    const value = body[key] === undefined && key === 'kidsFriendly' && !('kidsFriendly' in body) ? null : body[key];
     if (value !== null && !isGasCarPerfScore(value)) return `${key} must be a number from 0 to ${GAS_CAR_PERF_MAX} in half steps, or null when the spec is not published.`;
     scores[key] = value;
   }

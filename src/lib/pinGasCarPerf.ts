@@ -1,4 +1,4 @@
-// A gasoline car pin's performance rubric (PinGasCarPerf, 0173): six axes
+// A gasoline car pin's performance rubric (PinGasCarPerf, 0173): seven axes
 // scored 0-5 in half steps from the model's published specs, the sibling of
 // the electric rubric (src/lib/pinCarPerf.ts) with the axes that matter for a
 // combustion car. Anchors: docs/okf/scraping/strategy.md ("Gasoline car
@@ -15,6 +15,7 @@ export const GAS_CAR_PERF_AXES = [
   { key: 'handling', label: 'Handling' },
   { key: 'space', label: 'Space & comfort' },
   { key: 'value', label: 'Value' },
+  { key: 'kidsFriendly', label: 'Kids friendly' },
 ] as const;
 
 export type GasCarPerfAxis = (typeof GAS_CAR_PERF_AXES)[number]['key'];

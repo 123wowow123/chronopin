@@ -4,6 +4,7 @@ import { isRestaurantPromotion, type RestaurantOffer } from '@/lib/restaurantOff
 import type { Restaurant, TopRestaurant } from '@/lib/restaurants';
 import { pinPath } from '@/lib/seo';
 import { listSpecialVenues, type RestaurantSpecialVenue } from '@/server/model/restaurantSpecialVenue';
+import { hasKidsMenu } from './restaurantGuideDetails';
 
 type SpecialVenue = RestaurantMenuProfile & { regionSlug: string; neighborhood: string; address: string; websiteUrl: string };
 
@@ -61,6 +62,8 @@ export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants:
         }
       }
       const menu = profile.menus.find((menu) => menu.label === special.menuLabel);
+      const kidsMenuPresent = profile.menus.some(hasKidsMenu);
+      const kidsFriendly = (venue as any).kidsFriendly ?? (kidsMenuPresent ? true : undefined);
       return {
         id: `${profile.pinSourceUrl}#${index}`, name: venue.name, neighborhood: venue.neighborhood, address: venue.address,
         restaurantHref: venue.href, checkedAt: profile.checkedAt, special: { ...special, availability },
@@ -69,6 +72,7 @@ export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants:
         photo: profile.photo,
         location: profile.location,
         menu: menu ? { ...menu, items: menu.items.filter((item) => !special.excludedMenuItems?.includes(item.name)) } : undefined,
+        ...(kidsFriendly ? { kidsFriendly } : {}),
       };
     });
   });

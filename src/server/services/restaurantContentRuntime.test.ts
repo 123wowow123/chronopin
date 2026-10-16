@@ -7,7 +7,7 @@ vi.mock('../model/pins', () => ({ default: {} }));
 vi.mock('../db', () => ({ query }));
 vi.mock('next/cache', () => ({ cacheLife: vi.fn(), cacheTag: vi.fn() }));
 import { regionalTopRestaurants } from './restaurants';
-import { restaurantGuideDetails } from './restaurantGuideDetails';
+import { hasKidsMenu, restaurantGuideDetails } from './restaurantGuideDetails';
 import { legacyRestaurantContent } from '../../../scripts/restaurants/seedContent';
 const profile = legacyRestaurantContent().find((p) => p.tile?.name === 'MUME')!;
 afterEach(() => vi.resetAllMocks());
@@ -26,3 +26,29 @@ it('uses current database menu prices on cards and removes deleted menus', async
   expect((await restaurantGuideDetails([], tops))[12].menu?.items[0].price).toBe(3990);
   expect((await restaurantGuideDetails([], tops))[12]?.menu).toBeUndefined();
 });
+it('identifies kids menus accurately without false positives', () => {
+  expect(hasKidsMenu({ label: "Kids' Menu", items: [] })).toBe(true);
+  expect(hasKidsMenu({ note: 'Special options for children under 10', items: [] })).toBe(true);
+  expect(hasKidsMenu({ items: [{ name: 'Kids Cheese Pizza' }] })).toBe(true);
+  expect(hasKidsMenu({ items: [{ name: 'Cheeseburger', category: "Children's Menu" }] })).toBe(true);
+  expect(hasKidsMenu({ items: [{ name: 'Kidney Bean Salad', category: 'Sides' }] })).toBe(false);
+  expect(hasKidsMenu({ items: [{ name: 'Orchid Cocktail', category: 'Drinks' }] })).toBe(false);
+  expect(hasKidsMenu(undefined)).toBe(false);
+});
+it('resolves kidsFriendly from tags, menus, and content profiles in restaurantGuideDetails', async () => {
+  query.mockResolvedValueOnce([{ id: 101, latitude: 32.7, longitude: -117.1, ratings: null, tags: ['Family', 'Outdoor'] }]);
+  listRestaurantContent.mockResolvedValueOnce([]);
+  const guide1 = await restaurantGuideDetails([{ id: 101, sourceUrl: 'https://example.com/family-spot' } as any], []);
+  expect(guide1[101]?.kidsFriendly).toBe(true);
+
+  query.mockResolvedValueOnce([{ id: 102, latitude: null, longitude: null, ratings: null, tags: [] }]);
+  listRestaurantContent.mockResolvedValueOnce([{
+    profile: {
+      pinSourceUrl: 'https://example.com/menu-spot',
+      menu: { menus: [{ label: 'Main', items: [{ name: "Kid's Mac & Cheese" }] }] },
+    },
+  }]);
+  const guide2 = await restaurantGuideDetails([{ id: 102, sourceUrl: 'https://example.com/menu-spot' } as any], []);
+  expect(guide2[102]?.kidsFriendly).toBe(true);
+});
+

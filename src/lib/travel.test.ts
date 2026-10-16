@@ -224,11 +224,24 @@ describe('travel best time to go', () => {
       for (const act of activities) {
         expect(act.title.length).toBeGreaterThan(5);
         expect(act.description.length).toBeGreaterThan(15);
-        expect(['Culture', 'Wellness', 'Adventure', 'Water', 'Nature', 'Dining', 'Snow']).toContain(
+        expect(['Culture', 'Wellness', 'Adventure', 'Water', 'Nature', 'Dining', 'Snow', 'Kids']).toContain(
           act.category,
         );
       }
     }
+
+    // Verify kids-friendly activities are present across resorts
+    const universalKids = getResortTopActivities(5156);
+    expect(universalKids.some((a) => a.category === 'Kids' && a.kidsFriendly)).toBe(true);
+
+    const gaylord = getResortTopActivities(3234);
+    expect(gaylord.some((a) => a.category === 'Kids' && a.kidsFriendly)).toBe(true);
+
+    const tropicalIslands = getResortTopActivities(836);
+    expect(tropicalIslands.some((a) => a.category === 'Kids' && a.kidsFriendly)).toBe(true);
+
+    const durango = getResortTopActivities(3404);
+    expect(durango.some((a) => a.category === 'Kids' && a.kidsFriendly)).toBe(true);
   });
 });
 

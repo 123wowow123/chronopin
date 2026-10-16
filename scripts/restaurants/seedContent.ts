@@ -30,6 +30,7 @@ export function legacyRestaurantContent(): RestaurantContentProfile[] {
       imageSourceUrl: 'imageSourceUrl' in entry && entry.imageSourceUrl ? entry.imageSourceUrl : entry.sourceUrl,
       ...('imageNote' in entry ? { imageNote: entry.imageNote } : {}),
       ...('openingConfirmed' in entry && entry.openingConfirmed ? { openingConfirmed: true, day: entry.day } : {}),
+      ...('kidsFriendly' in entry && typeof (entry as any).kidsFriendly === 'boolean' ? { kidsFriendly: (entry as any).kidsFriendly } : {}),
     } as RestaurantTile;
   }
   return [...profiles.values()];

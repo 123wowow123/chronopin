@@ -3,7 +3,7 @@ import { CAR_PERF_RUBRIC_YEAR, hasCarPerf, isCarPerfScore } from '@/lib/pinCarPe
 import { isRubricYear, rubricYearProblem } from '@/lib/rubricYear';
 import { carPerfProblem } from './pinCarPerf';
 
-const scores = { range: 4, charging: 4.5, acceleration: 3, assistance: 4, space: 3.5, value: 5 };
+const scores = { range: 4, charging: 4.5, acceleration: 3, assistance: 4, space: 3.5, value: 5, kidsFriendly: 4 };
 
 describe('isCarPerfScore', () => {
   it('takes 0 to 5 in half steps and nothing else', () => {
@@ -34,13 +34,13 @@ describe('hasCarPerf', () => {
     expect(hasCarPerf({ ...scores, charging: null })).toBe(true);
     expect(hasCarPerf({ ...scores, charging: undefined })).toBe(false);
     expect(hasCarPerf({ ...scores, value: 7 })).toBe(false);
-    expect(hasCarPerf({ range: null, charging: null, acceleration: null, assistance: null, space: null, value: null })).toBe(false);
+    expect(hasCarPerf({ range: null, charging: null, acceleration: null, assistance: null, space: null, value: null, kidsFriendly: null })).toBe(false);
     expect(hasCarPerf(null)).toBe(false);
   });
 });
 
 describe('carPerfProblem', () => {
-  it('reads the six scores, the source and the basis', () => {
+  it('reads the seven scores, the source and the basis', () => {
     expect(carPerfProblem({ ...scores, source: 'session', basis: ' CLTC 800 km, 0-100 in 3.9 s. ', sourceUrl: 'https://example.com/specs' })).toEqual({
       scores,
       source: 'session',
@@ -60,7 +60,7 @@ describe('carPerfProblem', () => {
   });
 
   it('refuses a rubric with nothing scored', () => {
-    expect(carPerfProblem({ range: null, charging: null, acceleration: null, assistance: null, space: null, value: null })).toMatch(/At least one axis/);
+    expect(carPerfProblem({ range: null, charging: null, acceleration: null, assistance: null, space: null, value: null, kidsFriendly: null })).toMatch(/At least one axis/);
   });
 
   it('keeps road-test reviews, once each, and refuses a bad one', () => {

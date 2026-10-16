@@ -24,8 +24,9 @@ export type RestaurantTile = {
   imageNote?: string | null;
   openingConfirmed?: boolean;
   day?: string;
+  kidsFriendly?: boolean;
 };
-export type RestaurantContentProfile = { pinSourceUrl: string; menu?: RestaurantMenuProfile; details?: RestaurantDetails; tile?: RestaurantTile };
+export type RestaurantContentProfile = { pinSourceUrl: string; menu?: RestaurantMenuProfile; details?: RestaurantDetails; tile?: RestaurantTile; kidsFriendly?: boolean };
 export type RestaurantContentInput = { profile: RestaurantContentProfile; enabled: boolean };
 function check(ok: unknown, message: string): asserts ok { if (!ok) throw new HttpError(400, message); }
 function object(v: unknown): asserts v is Record<string, any> { check(v && typeof v === 'object' && !Array.isArray(v), 'Expected an object'); }
@@ -59,6 +60,7 @@ export function parseRestaurantContent(value: unknown): RestaurantContentInput {
       check(Array.isArray(d.additionalSources) && d.additionalSources.length <= 100, 'Invalid additionalSources');
       for (const s of d.additionalSources) { object(s); check(text(s.label) && url(s.url), 'Invalid detail source'); }
     }
+    check(d.kidsFriendly === undefined || typeof d.kidsFriendly === 'boolean', 'Invalid kidsFriendly');
   }
   if (p.tile !== undefined) {
     const t = p.tile; object(t);
@@ -74,6 +76,7 @@ export function parseRestaurantContent(value: unknown): RestaurantContentInput {
     check(t.day === undefined || date(t.day), 'Invalid opening evidence day');
     check(t.openingConfirmed === undefined || typeof t.openingConfirmed === 'boolean', 'Invalid openingConfirmed');
     if (t.openingConfirmed) check(date(t.day), 'Confirmed opening evidence requires its original day');
+    check(t.kidsFriendly === undefined || typeof t.kidsFriendly === 'boolean', 'Invalid tile kidsFriendly');
   }
   return { profile: p as RestaurantContentProfile, enabled };
 }

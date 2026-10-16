@@ -38,6 +38,7 @@ function picture(media: PinJson['media']) {
 
 export const ACTIVITY_FILTERS: { id: string; label: string; icon: IconName }[] = [
   { id: 'all', label: 'All activities', icon: 'compass' },
+  { id: 'Kids', label: 'Kids & Family', icon: 'smile' },
   { id: 'Culture', label: 'Culture & Heritage', icon: 'building' },
   { id: 'Wellness', label: 'Thermal & Wellness', icon: 'sparkle' },
   { id: 'Water', label: 'Coral & Ocean', icon: 'globe' },
@@ -186,7 +187,11 @@ export function TravelView({
 
     if (selectedActivity !== 'all') {
       list = list.filter((r) =>
-        r.topActivities?.some((act) => act.category.toLowerCase() === selectedActivity.toLowerCase()),
+        r.topActivities?.some(
+          (act) =>
+            act.category.toLowerCase() === selectedActivity.toLowerCase() ||
+            (selectedActivity.toLowerCase() === 'kids' && (act.kidsFriendly || act.category === 'Kids')),
+        ),
       );
     }
 

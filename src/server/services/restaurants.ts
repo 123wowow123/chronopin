@@ -74,7 +74,8 @@ export async function regionalTopRestaurants(regionSlug: string): Promise<TopRes
     const restaurant = record.profile.tile!;
     const pin = pins.get(record.profile.pinSourceUrl);
     if (!pin) return [];
-    return [{ ...restaurant, sourceUrl: record.profile.pinSourceUrl, pinId: pin.id, pinTitle: pin.title }];
+    const kidsFriendly = restaurant.kidsFriendly ?? record.profile.details?.kidsFriendly;
+    return [{ ...restaurant, sourceUrl: record.profile.pinSourceUrl, pinId: pin.id, pinTitle: pin.title, ...(kidsFriendly ? { kidsFriendly } : {}) }];
   });
 }
 
@@ -91,6 +92,8 @@ export function restaurantOf(pin: PinJson, city: string, tile?: RestaurantTile):
   const imageNote = /architectural renderings|project renderings/.test(summary) ? 'Architectural rendering'
     : /founding team/.test(summary) && pin.id === 6429 ? 'Founding team'
     : /previous tenant|existing Fish Guts building/.test(summary) ? 'Existing building · before opening' : null;
+  const tagKids = tags.some((tag) => /^(?:kids?|family|children)(?: friendly)?$/i.test(tag));
+  const kidsFriendly = tile?.kidsFriendly ?? (tagKids ? true : undefined);
   return {
     id: pin.id, title: pin.title, name: tile?.name ?? pin.company ?? pin.title, description: tile?.description ?? pin.description ?? '', day,
     // An opening can be verified even when reporting supplies only its month.
@@ -101,6 +104,7 @@ export function restaurantOf(pin: PinJson, city: string, tile?: RestaurantTile):
     imageNote: catalog?.imageNote ?? imageNote, address: tile?.address ?? pin.address ?? '',
     priceRange: tile?.priceRange || undefined,
     sourceUrl: pin.sourceUrl,
+    ...(kidsFriendly ? { kidsFriendly } : {}),
   };
 }
 

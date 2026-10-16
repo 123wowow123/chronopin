@@ -74,6 +74,13 @@ const SHELF_DEFINITIONS = [
     pinIds: [763, 15287, 520, 836, 5156, 3234, 3404],
   },
   {
+    id: 'kids-family',
+    name: 'Kids & Family',
+    label: 'Kids & Family Escapes',
+    tagline: 'Waterpark havens, theme park kingdoms, reindeer safaris, and nature retreats designed for family wonder.',
+    pinIds: [5156, 3234, 836, 763, 15656, 15663, 15659, 15279, 15275, 4129, 3404],
+  },
+  {
     id: 'budget-friendly',
     name: 'Budget-Friendly',
     label: 'Budget-Friendly Escapes',

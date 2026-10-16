@@ -24,6 +24,10 @@ export async function PinRestaurantDetails({ sourceUrl, name, isRestaurant, pric
           <dt>Price range</dt>
           <dd><RestaurantPriceRange range={priceRange} /></dd>
         </div> : null}
+        {details?.kidsFriendly ? <div className={styles.row}>
+          <dt>Atmosphere</dt>
+          <dd>Kids friendly</dd>
+        </div> : null}
         <div className={styles.row}>
           <dt>Website</dt>
           <dd>{details?.websiteUrl ? <Anchor href={details.websiteUrl} target="_blank" rel="noopener noreferrer">{new URL(details.websiteUrl).hostname.replace(/^www\./, '')} <span aria-hidden="true">↗</span></Anchor> : <span className={styles.missing}>Not verified yet</span>}</dd>

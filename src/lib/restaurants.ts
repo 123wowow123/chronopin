@@ -132,6 +132,7 @@ export type Restaurant = {
   address: string;
   priceRange?: string;
   sourceUrl?: string | null;
+  kidsFriendly?: boolean;
 };
 
 export type OpeningGroup = 'upcoming' | 'new' | null;
@@ -153,6 +154,7 @@ export type TopRestaurant = {
   checkedAt: string;
   image: string | null;
   imageCredit: string;
+  kidsFriendly?: boolean;
 };
 
 // Passing an estimated opening date never establishes that a restaurant opened.
