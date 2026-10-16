@@ -5,7 +5,8 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
-import { clearUnreadCount, useUnreadCount } from '@/lib/client/notifications';
+import { clearUnreadCount, updateUnreadCount, useUnreadCount } from '@/lib/client/notifications';
+import { onLive } from '@/lib/client/liveFeed';
 import { aimAtCard, dateAtTop } from '@/lib/client/returnSpot';
 import { refreshLocalWeather, requestLocalWeather, useLocalWeather } from '@/lib/client/localWeather';
 import { formatLocalWeather, usesImperial } from '@/lib/weather';
@@ -141,20 +142,46 @@ function reasonOf(n: Notification, t: Translator): { icon: IconName; label: stri
 
 // Opening the list loads it and marks everything read; a follow notification
 // can follow the actor back from the list.
-function useNotificationList() {
+function useNotificationList(active: boolean) {
   const [items, setItems] = useState<Notification[] | null>(null);
+  const [failed, setFailed] = useState(false);
   const [pending, setPending] = useState<Record<number, boolean>>({});
+  const loading = useRef(false);
 
   const load = useCallback(async () => {
+    if (loading.current) return;
+    loading.current = true;
     try {
-      const res = await api.get<{ notifications: Notification[] }>('/api/notifications');
+      const res = await api.get<{ notifications: Notification[]; unreadCount: number }>('/api/notifications');
+      setFailed(false);
       setItems(res.notifications);
+      updateUnreadCount(res.unreadCount);
+    } catch {
+      setFailed(true);
+      loading.current = false;
+      return;
+    }
+    try {
       await api.post('/api/notifications/read');
       clearUnreadCount();
     } catch {
-      setItems((current) => current ?? []);
+      // Keep the loaded list and unread badge when marking read fails.
+    } finally {
+      loading.current = false;
     }
   }, []);
+
+  useEffect(() => {
+    if (!active) return;
+    const initialLoad = window.setTimeout(() => void load(), 0);
+    const stop = onLive<{ unreadCount: number }>('notifications', ({ unreadCount }) => {
+      if (unreadCount > 0) void load();
+    });
+    return () => {
+      window.clearTimeout(initialLoad);
+      stop();
+    };
+  }, [active, load]);
 
   async function followBack(n: Notification) {
     setPending((p) => ({ ...p, [n.actor.id]: true }));
@@ -166,7 +193,7 @@ function useNotificationList() {
     }
   }
 
-  return { items, pending, load, followBack };
+  return { items, failed, pending, load, followBack };
 }
 
 // The face at the left of a row: a mark of its own for a watched pin landing
@@ -249,6 +276,8 @@ function sectionsOf(items: Notification[]): { section: Section; items: Notificat
 
 function NotificationItems({
   items,
+  failed,
+  load,
   pending,
   followBack,
   onNavigate,
@@ -256,6 +285,12 @@ function NotificationItems({
 }: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string }) {
   const t = useT();
   const headingId = useId();
+  if (failed) return (
+    <div role="alert" className="px-4 py-6 text-center text-sm text-subtle">
+      {t('common.somethingWrong')}{' '}
+      <button type="button" className="text-link" onClick={() => void load()}>{t('common.retry')}</button>
+    </div>
+  );
   if (items === null) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
   if (items.length === 0) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('notifications.empty')}</div>;
   const labels: Record<Section, string> = {
@@ -404,7 +439,7 @@ function useFormattedLocalWeather() {
 
 // The top row of the bell's menu: the weather where the viewer is, which
 // loads on its own. The button is only for a viewer whose time zone named no
-// city; nothing at all once they have said no.
+// city. A failed lookup offers a retry without requesting location access.
 function LocalWeatherRow({ className = '' }: { className?: string }) {
   const { local, weather } = useFormattedLocalWeather();
   const t = useT();
@@ -420,6 +455,14 @@ function LocalWeatherRow({ className = '' }: { className?: string }) {
   }
   if (local.status === 'loading') {
     return <div className={`px-4 py-2.5 text-sm text-subtle ${className}`}>{t('common.loading')}</div>;
+  }
+  if (local.status === 'off') {
+    return (
+      <div role="status" className={`px-4 py-2.5 text-sm text-subtle ${className}`}>
+        {t('weather.local')}: {t('common.somethingWrong')}{' '}
+        <button type="button" className="text-link" onClick={refreshLocalWeather}>{t('common.retry')}</button>
+      </div>
+    );
   }
   if (!weather) return null;
   return (
@@ -488,13 +531,12 @@ const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
 ];
 
 // In the bell's place for visitors who are not signed in (lg and up): the
-// weather icon, with the weather row in a panel under it. Nothing once they
-// have refused their location.
+// weather icon, with the weather row in a panel under it. Keep the menu
+// accessible even when weather or location is unavailable.
 export function WeatherButton({ className = '' }: { className?: string }) {
   const { open, setOpen, rootRef } = useDropdown();
-  const { local, weather } = useFormattedLocalWeather();
+  const { weather } = useFormattedLocalWeather();
   const t = useT();
-  if (local.status === 'off') return null;
 
   function toggle() {
     setOpen(!open);
@@ -538,14 +580,13 @@ export function WeatherButton({ className = '' }: { className?: string }) {
 export function NotificationBell({ className = '' }: { className?: string }) {
   const { open, setOpen, rootRef } = useDropdown();
   const count = useUnreadCount(true);
-  const list = useNotificationList();
+  const list = useNotificationList(open);
   const t = useT();
   const { weather } = useFormattedLocalWeather();
 
   function toggle() {
     setOpen(!open);
     if (!open) {
-      void list.load();
       refreshLocalWeather();
     }
   }
@@ -589,11 +630,7 @@ export function DrawerNotifications({ className, current, onClick }: { className
 
 // The /notifications page: the whole list, loaded (and marked read) on arrival.
 export function NotificationsFeed() {
-  const list = useNotificationList();
-  const { load } = list;
-  useEffect(() => {
-    void load();
-  }, [load]);
+  const list = useNotificationList(true);
   return (
     <div className="surface overflow-hidden">
       <LocalWeatherRow className="border-b border-line" />

@@ -12,7 +12,7 @@ let unread = 0;
 let stopFeed: (() => void) | null = null;
 const listeners = new Set<() => void>();
 
-function set(next: number) {
+export function updateUnreadCount(next: number) {
   if (next === unread) return;
   unread = next;
   listeners.forEach((l) => l());
@@ -21,12 +21,12 @@ function set(next: number) {
 // After the list has been opened and marked read, ahead of the push that
 // confirms it.
 export function clearUnreadCount() {
-  set(0);
+  updateUnreadCount(0);
 }
 
 function subscribe(listener: () => void) {
   listeners.add(listener);
-  stopFeed ??= onLive<{ unreadCount: number }>('notifications', ({ unreadCount }) => set(unreadCount));
+  stopFeed ??= onLive<{ unreadCount: number }>('notifications', ({ unreadCount }) => updateUnreadCount(unreadCount));
   return () => {
     listeners.delete(listener);
     if (!listeners.size && stopFeed) {

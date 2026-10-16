@@ -18,7 +18,7 @@ export type LocalWeatherState =
   | { status: 'idle' } // not checked yet
   | { status: 'ask' } // nothing automatic worked; offer the button
   | { status: 'loading' }
-  | { status: 'off' } // denied, unsupported or failed: show nothing
+  | { status: 'off' } // no weather available; allow retrying without a location prompt
   | { status: 'ready'; weather: LocalWeatherJson };
 
 // Refetched when the menu opens after this long.
@@ -112,7 +112,8 @@ export function reloadLocalWeather() {
 
 // Brings the weather up to date when the menu opens.
 export function refreshLocalWeather() {
-  if (state.status === 'ready' && Date.now() - fetchedAt > STALE_MS) void load(fromBrowser);
+  if (state.status === 'off') void load(false);
+  else if (state.status === 'ready' && Date.now() - fetchedAt > STALE_MS) void load(fromBrowser);
 }
 
 function subscribe(listener: () => void) {
