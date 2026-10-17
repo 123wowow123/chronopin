@@ -71,7 +71,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop",
       "Alt-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/31/d3/3431d34e-847f-5d66-df83-0bce688d997e/mzaf_18106743962423782018.plus.aac.p.m4a",
     "youtubeId": "V9PVRfjEBTI",
     "youtubeUrl": "https://www.youtube.com/watch?v=V9PVRfjEBTI",
@@ -280,7 +280,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Bossa Nova Pop",
       "Latin Trap"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/63/8a/2b638a99-3054-95f0-b923-078ec8a8ff7a/artwork.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/21/90/bb21900b-0ec6-0eea-d3e4-710d8394b63d/mzaf_1199984115559932397.plus.aac.p.m4a",
     "youtubeId": "uMAqDoI761w",
     "youtubeUrl": "https://www.youtube.com/watch?v=uMAqDoI761w",
@@ -358,7 +358,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop-Punk",
       "Pop Rock"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/15/38/7a1538f3-f41a-a2eb-0f24-8eb6712ee043/mzaf_7740628412097685267.plus.aac.p.m4a",
     "youtubeId": "ekr2nIex040",
     "youtubeUrl": "https://www.youtube.com/watch?v=ekr2nIex040",
@@ -488,7 +488,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "J-Rock",
       "J-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a0/cc/26/a0cc2636-c5ce-3058-fe52-7b65b90e8ec1/25UMGIM77456.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/a0/a9/71a0a91a-f778-13b3-0c17-0faf0c3f9409/mzaf_13145882720743927078.plus.aac.p.m4a",
     "youtubeId": "QjrkrVmC-8M",
     "youtubeUrl": "https://www.youtube.com/watch?v=QjrkrVmC-8M",
@@ -541,7 +541,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop-Punk",
       "K-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/15/38/7a1538f3-f41a-a2eb-0f24-8eb6712ee043/mzaf_7740628412097685267.plus.aac.p.m4a",
     "youtubeId": "ekr2nIex040",
     "youtubeUrl": "https://www.youtube.com/watch?v=ekr2nIex040",
@@ -581,7 +581,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "id": "tw-2026-1",
     "year": 2026,
     "rank": 1,
-    "title": "Somewhere in time (又到天黑)",
+    "title": "We Will Be Fine (又到天黑)",
     "artist": "Accusefive (告五人)",
     "chartName": "KKBOX Annual Top 100 Singles",
     "chartAuthority": "KKBOX",
@@ -595,7 +595,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Mandopop",
       "Indie Pop"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d5/46/2f/d5462ff1-7635-ebcf-bd8e-3388fa2e94ae/00076731116426.rgb.jpg/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/10/61/15/106115c8-4c09-e429-3235-48999eae4fee/4710616566789.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/56/cc/d756cc0c-e432-1ec0-77d1-65e167414a2d/mzaf_18298802701771687762.plus.aac.p.m4a",
     "youtubeId": "6D79CYTxvOM",
     "youtubeUrl": "https://www.youtube.com/watch?v=6D79CYTxvOM",
@@ -621,7 +621,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop-Punk",
       "Pop Rock"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/15/38/7a1538f3-f41a-a2eb-0f24-8eb6712ee043/mzaf_7740628412097685267.plus.aac.p.m4a",
     "youtubeId": "ekr2nIex040",
     "youtubeUrl": "https://www.youtube.com/watch?v=ekr2nIex040",
@@ -674,7 +674,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Synth-Pop",
       "R&B"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/22/b2/82/22b282b6-4121-3a1c-b080-0a3a9df8acd2/24UM1IM00939.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dc/9c/c9/dc9cc992-a72d-37aa-3b26-81735048837f/mzaf_7502433658121927367.plus.aac.p.m4a",
     "youtubeId": "MLlSSJ0z7xM",
     "youtubeUrl": "https://www.youtube.com/watch?v=MLlSSJ0z7xM",
@@ -727,7 +727,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Corridos Tumbados",
       "Regional Mexican"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ee/de/7c/eede7ccb-c3a0-9c65-a187-66cb70bf8036/199066679951.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/73/3f/b0/733fb0dd-1e88-cc50-d7e5-f3eb7d1c7a52/mzaf_10725724156639437184.plus.aac.p.m4a",
     "youtubeId": "Fr9rMmMp3mY",
     "youtubeUrl": "https://www.youtube.com/watch?v=Fr9rMmMp3mY",
@@ -754,7 +754,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Country",
       "Hip-Hop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/be/db/81/bedb81c3-ca23-a1b9-f275-59e46ae4fdb1/197342625517_cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/6f/7f/466f7f67-0365-ddf8-16c2-e033371d2f7e/mzaf_3764341442720608698.plus.aac.p.m4a",
     "youtubeId": "t7bQwwqW-Hc",
     "youtubeUrl": "https://www.youtube.com/watch?v=t7bQwwqW-Hc",
@@ -807,7 +807,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop",
       "Nu-Disco"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a1/1c/ca/a11ccab6-7d4c-e041-d028-998bcebeb709/24UMGIM61704.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/da/ff/99daffce-cdde-59c6-5ae0-7f922ce411a8/mzaf_5621292401829922816.plus.aac.p.m4a",
     "youtubeId": "eVli-tstM5E",
     "youtubeUrl": "https://www.youtube.com/watch?v=eVli-tstM5E",
@@ -833,7 +833,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Cuarteto",
       "Cumbia"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/86/9b/cd/869bcda4-b00b-d03d-cfd5-3da458924acc/196871259309.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/10/3e/da/103edafe-eb6c-4f49-5efa-6392ae3de751/mzaf_13787569669586366589.plus.aac.p.m4a",
     "youtubeId": "aCvjQj1DPrA",
     "youtubeUrl": "https://www.youtube.com/watch?v=aCvjQj1DPrA",
@@ -860,7 +860,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Sertanejo",
       "MPB"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/72/56/c7725635-ae57-25af-504a-d1a43bb6203f/0.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c5/22/eb/c522eb09-1c32-2708-dc29-7babf693d7e7/mzaf_11140556367727992588.plus.aac.p.m4a",
     "youtubeId": "1lVrYNhUkJg",
     "youtubeUrl": "https://www.youtube.com/watch?v=1lVrYNhUkJg",
@@ -887,7 +887,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Reggaeton",
       "Urbano Latino"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/7c/54/aa/7c54aa94-9ae3-4b80-7b23-8b23955dc3a2/23UM1IM60703.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/cd/72/15cd7293-b305-36de-0a92-aa1f1d6f01a7/mzaf_17344613567981298000.plus.aac.p.m4a",
     "youtubeId": "x2oUajHp8pg",
     "youtubeUrl": "https://www.youtube.com/watch?v=x2oUajHp8pg",
@@ -914,7 +914,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Chanson Française",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/31/51/12/315112a2-fb44-bfd2-960a-3201d09c273b/196871815581.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dc/00/6a/dc006ac0-1882-034a-e2e9-4e8d7e1362e2/mzaf_4717427117376077465.plus.aac.p.m4a",
     "youtubeId": "xhG45EjK14I",
     "youtubeUrl": "https://www.youtube.com/watch?v=xhG45EjK14I",
@@ -941,7 +941,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Darkwave",
       "Synth-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b6/1e/ac/b61eaceb-b493-0909-abfe-0930b7e53d9f/810129998306.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cc/49/c1/cc49c165-07b1-fd9e-1092-07fb1d3bd484/mzaf_11754248539941798058.plus.aac.p.m4a",
     "youtubeId": "evJ6gX1lp2o",
     "youtubeUrl": "https://www.youtube.com/watch?v=evJ6gX1lp2o",
@@ -968,7 +968,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Neapolitan Rap",
       "Trap"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9d/7a/59/9d7a59d1-bc66-3e7f-9e83-ff7c744bfa7f/5021732285935.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/00/a0/c7/00a0c775-01ff-eeba-79ab-f8367e73f839/mzaf_5418567130586700476.plus.aac.p.m4a",
     "youtubeId": "qon1NJ6D3co",
     "youtubeUrl": "https://www.youtube.com/watch?v=qon1NJ6D3co",
@@ -995,7 +995,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Hyperpop Urbano",
       "Reggaeton"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6e/8c/f9/6e8cf9d2-63a3-26bf-d1fd-b099723cc377/8429006913947.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3d/2c/c8/3d2cc82e-44d9-03ba-b68e-5353f63a671c/mzaf_1428317870428627540.plus.aac.p.m4a",
     "youtubeId": "_WHBVsQnrFc",
     "youtubeUrl": "https://www.youtube.com/watch?v=_WHBVsQnrFc",
@@ -1022,7 +1022,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "EPA-Dunk",
       "Swedish Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fb/60/7c/fb607c30-cbe3-6fee-5ca3-0c9b41134804/5054197805783.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/0a/6f/650a6fd9-15cc-230c-9f7f-e14342d60e82/mzaf_13208896415465055544.plus.aac.p.m4a",
     "youtubeId": "Re4KS8K1UlU",
     "youtubeUrl": "https://www.youtube.com/watch?v=Re4KS8K1UlU",
@@ -1049,7 +1049,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Nu-Disco",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a1/1c/ca/a11ccab6-7d4c-e041-d028-998bcebeb709/24UMGIM61704.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/da/ff/99daffce-cdde-59c6-5ae0-7f922ce411a8/mzaf_5621292401829922816.plus.aac.p.m4a",
     "youtubeId": "eVli-tstM5E",
     "youtubeUrl": "https://www.youtube.com/watch?v=eVli-tstM5E",
@@ -1102,7 +1102,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Afrobeats",
       "Amapiano"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/38/34/59/383459da-ba6a-4bee-67df-7de269764383/197342707992_cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/74/27/70/74277067-0b8e-8754-3e1d-896e0409b1a1/mzaf_3401626578708743518.plus.aac.p.m4a",
     "youtubeId": "iiOHqmmjdGk",
     "youtubeUrl": "https://www.youtube.com/watch?v=iiOHqmmjdGk",
@@ -1129,7 +1129,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Amapiano",
       "Kwaito"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/35/62/81/35628193-b908-8b03-fe73-a60983dbd9af/766214662044.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/b0/90/4eb0908d-30b8-970e-b798-c1c653805b7d/mzaf_3835466240602528598.plus.aac.p.m4a",
     "youtubeId": "KK4dC7rASYs",
     "youtubeUrl": "https://www.youtube.com/watch?v=KK4dC7rASYs",
@@ -1156,7 +1156,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Mandopop",
       "Symphonic Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b4/5c/ce/b45cce0c-eb5b-2d6a-bc7c-2650ef1b522e/bigup13591980.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/36/e8/61/36e86129-e1b0-66a6-add0-d55d9a01a0e1/mzaf_15946939765575667680.plus.aac.p.m4a",
     "youtubeId": "7iAyn-xizLw",
     "youtubeUrl": "https://www.youtube.com/watch?v=7iAyn-xizLw",
@@ -1183,7 +1183,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Jersey Club",
       "J-Hip Hop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/12/81/dc/1281dc28-48e6-5ff7-642d-6cf4d487d9e0/4547366660890.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/db/16/f0db16be-457e-f10f-98b6-f30b11de34e4/mzaf_5189430943078523093.plus.aac.p.m4a",
     "youtubeId": "5NzfqW_Yt6Y",
     "youtubeUrl": "https://www.youtube.com/watch?v=5NzfqW_Yt6Y",
@@ -1210,7 +1210,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "J-Pop",
       "J-Rock"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a0/cc/26/a0cc2636-c5ce-3058-fe52-7b65b90e8ec1/25UMGIM77456.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/a0/a9/71a0a91a-f778-13b3-0c17-0faf0c3f9409/mzaf_13145882720743927078.plus.aac.p.m4a",
     "youtubeId": "QjrkrVmC-8M",
     "youtubeUrl": "https://www.youtube.com/watch?v=QjrkrVmC-8M",
@@ -1236,7 +1236,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Hyperpop",
       "Dance-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/50/7e/e0/507ee09f-ccfd-1e3c-af90-ca5e92b1221b/00888735949869_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/cc/58/f6cc5863-c60a-caac-e7f8-bd66b414a917/mzaf_8631809138360097160.plus.aac.p.m4a",
     "youtubeId": "phuiiNCxRMg",
     "youtubeUrl": "https://www.youtube.com/watch?v=phuiiNCxRMg",
@@ -1275,7 +1275,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "id": "tw-2025-1",
     "year": 2025,
     "rank": 1,
-    "title": "Finally (又到天黑)",
+    "title": "We Will Be Fine (又到天黑)",
     "artist": "Accusefive (告五人)",
     "chartName": "KKBOX Annual Top 100 Singles",
     "chartAuthority": "KKBOX",
@@ -1289,7 +1289,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Indie Rock",
       "Mandopop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e7/fa/9b/e7fa9b9a-8e48-ca3c-d975-2ce91e25c43d/4710616566147.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/48/6a/2f486aea-49ce-4bd8-0392-1b46b5b99c40/mzaf_9473331430726024879.plus.aac.p.m4a",
     "youtubeId": "caxiOmSWWEM",
     "youtubeUrl": "https://www.youtube.com/watch?v=caxiOmSWWEM",
@@ -1316,7 +1316,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Deep House",
       "Dance-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d2/f7/7a/d2f77a84-6a4b-81fc-f678-c482ec64fffa/5054197910432.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c9/97/5e/c9975ef9-ced5-f725-81e7-522a8b3ae9f2/mzaf_10103871341352316648.plus.aac.p.m4a",
     "youtubeId": "57VMB1IzLKY",
     "youtubeUrl": "https://www.youtube.com/watch?v=57VMB1IzLKY",
@@ -1343,7 +1343,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Reggae",
       "Funk Rock"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/75/c7/ab/75c7ab97-7f4f-865d-b736-0d53eb14945b/mzi.jcpaarbh.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2d/64/a7/2d64a708-6b6c-9f38-0cff-3bb0871ae1af/mzaf_8640791630339519352.plus.aac.p.m4a",
     "youtubeId": "_u7d1wNDOyc",
     "youtubeUrl": "https://www.youtube.com/watch?v=_u7d1wNDOyc",
@@ -1370,7 +1370,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Country",
       "Hip-Hop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/be/db/81/bedb81c3-ca23-a1b9-f275-59e46ae4fdb1/197342625517_cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/6f/7f/466f7f67-0365-ddf8-16c2-e033371d2f7e/mzaf_3764341442720608698.plus.aac.p.m4a",
     "youtubeId": "t7bQwwqW-Hc",
     "youtubeUrl": "https://www.youtube.com/watch?v=t7bQwwqW-Hc",
@@ -1397,7 +1397,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Corridos Tumbados",
       "Sierreño"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4e/ea/1a/4eea1a32-181f-eb3f-5253-ea405b1cf030/196922729812_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3f/48/19/3f4819e9-a158-a0ab-a281-2758fedbf1a5/mzaf_9713360141782464156.plus.aac.p.m4a",
     "youtubeId": "HfzbN5ky5Co",
     "youtubeUrl": "https://www.youtube.com/watch?v=HfzbN5ky5Co",
@@ -1424,7 +1424,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Country",
       "Country-Rap"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/be/db/81/bedb81c3-ca23-a1b9-f275-59e46ae4fdb1/197342625517_cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/6f/7f/466f7f67-0365-ddf8-16c2-e033371d2f7e/mzaf_3764341442720608698.plus.aac.p.m4a",
     "youtubeId": "t7bQwwqW-Hc",
     "youtubeUrl": "https://www.youtube.com/watch?v=t7bQwwqW-Hc",
@@ -1503,7 +1503,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Electropop",
       "Latin Trap"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/55/0e/5e/550e5ecc-3fe4-50df-c5a3-a019b67008c3/196871854894.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/e1/0e/0ae10eda-19d6-9acb-2dd4-3a8f87c076c9/mzaf_11017736900654766444.plus.aac.p.m4a",
     "youtubeId": "CocEMWdc7Ck",
     "youtubeUrl": "https://www.youtube.com/watch?v=CocEMWdc7Ck",
@@ -1530,7 +1530,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Agroplay",
       "Sertanejo Universitário"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/13/cc/61/13cc61a4-0c61-49be-fab8-1eba849ed05a/8720923452343.png/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/34/2b/97342bfe-053c-3af7-0bde-4f946740e110/mzaf_16655926684579155951.plus.aac.p.m4a",
     "youtubeId": "vzEIwc0rG8Y",
     "youtubeUrl": "https://www.youtube.com/watch?v=vzEIwc0rG8Y",
@@ -1557,7 +1557,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Reggaeton",
       "Latin Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/75/a2/e6/75a2e657-0373-2667-cfbb-ee2247f4dff8/194491110918.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/d7/15/ffd715fe-b020-ef74-5e8b-bacd72a8ac94/mzaf_7109007155344682925.plus.aac.p.m4a",
     "youtubeId": "jZGpkLElSu8",
     "youtubeUrl": "https://www.youtube.com/watch?v=jZGpkLElSu8",
@@ -1584,7 +1584,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Afropop",
       "French Rap"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/67/82/df/6782df30-18ea-9803-e2d3-a1d66a040f08/cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b0/9c/cb/b09ccb01-b016-9928-94b8-1ece0b275d02/mzaf_17520789315862495338.plus.aac.p.m4a",
     "youtubeId": "NLXiGXbxl6Q",
     "youtubeUrl": "https://www.youtube.com/watch?v=NLXiGXbxl6Q",
@@ -1611,7 +1611,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "German Pop",
       "R&B"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e7/23/48/e72348ba-3008-7486-21ce-ae50034b30a0/196872804973.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/bd/95/cbbd95e6-8487-a046-dd2b-8601b618106f/mzaf_14569377787414638763.plus.aac.p.m4a",
     "youtubeId": "Sf6DIUk5fhc",
     "youtubeUrl": "https://www.youtube.com/watch?v=Sf6DIUk5fhc",
@@ -1664,7 +1664,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Reggaeton",
       "Pop Urbano"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8a/d9/3e/8ad93ec4-5d61-9759-c92d-d9571b86224c/197338610251.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/9b/c2/0a9bc24e-9231-26d0-e492-cc4a098607d6/mzaf_18022283109657019339.plus.aac.p.m4a",
     "youtubeId": "QlZNGcVfeF0",
     "youtubeUrl": "https://www.youtube.com/watch?v=QlZNGcVfeF0",
@@ -1717,7 +1717,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Folk-Pop",
       "Indie Folk"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e4/75/f3/e475f31a-ade1-50bf-e983-1467aaf62c46/23UMGIM59938.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/ed/8d/a0ed8d32-ed28-75b7-8de7-6555e84f5617/mzaf_8530395673130453138.plus.aac.p.m4a",
     "youtubeId": "JKrDdsgXuso",
     "youtubeUrl": "https://www.youtube.com/watch?v=JKrDdsgXuso",
@@ -1744,7 +1744,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop",
       "Nu-Disco"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a1/1c/ca/a11ccab6-7d4c-e041-d028-998bcebeb709/24UMGIM61704.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/da/ff/99daffce-cdde-59c6-5ae0-7f922ce411a8/mzaf_5621292401829922816.plus.aac.p.m4a",
     "youtubeId": "eVli-tstM5E",
     "youtubeUrl": "https://www.youtube.com/watch?v=eVli-tstM5E",
@@ -1770,7 +1770,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Afrobeats",
       "Fuji"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/cc/23/83/cc2383d9-eecc-f974-5f5b-d445c583acdb/197342233958_cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/79/fd/af79fdf3-e757-5acd-c0de-b5c6edfaa77a/mzaf_15402833629808241649.plus.aac.p.m4a",
     "youtubeId": "bbVZo4Yw7pI",
     "youtubeUrl": "https://www.youtube.com/watch?v=bbVZo4Yw7pI",
@@ -1798,7 +1798,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Afrobeats",
       "R&B"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1e/c9/5b/1ec95bbc-a56f-cbef-070c-ddec9f4fdd3c/196871296205.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9a/62/e6/9a62e688-9080-feed-2411-cc793c4545cf/mzaf_4449175929344535361.plus.aac.p.m4a",
     "youtubeId": "XoiOOiuH8iI",
     "youtubeUrl": "https://www.youtube.com/watch?v=XoiOOiuH8iI",
@@ -1825,7 +1825,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Mandopop",
       "R&B"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d3/16/74/d316744b-ea3d-51e3-c887-971fe9a511a8/J_XMas_Cover_4000x4000_T_231213.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/35/55/9c/35559c35-1d9a-293a-1865-624d9889bffd/mzaf_11402035867852200545.plus.aac.p.m4a",
     "youtubeId": "IXuhdnB2dAY",
     "youtubeUrl": "https://www.youtube.com/watch?v=IXuhdnB2dAY",
@@ -1852,7 +1852,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "J-Pop",
       "Future Bass"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/dc/2d/40/dc2d407b-2ca0-d41e-6ccb-0fd625abf8f0/197188911638.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/54/5e/5c545e9a-c8ca-c673-f85d-a74b14c2c882/mzaf_2313943576213161760.plus.aac.p.m4a",
     "youtubeId": "ZRtdQ81jPUQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ",
@@ -1905,7 +1905,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Baltimore Club",
       "Y2K Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f6/29/42/f629426e-92fe-535c-cbe4-76e70850819b/196922287107_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/72/66/8572665a-d35f-ce5d-43c5-9ae4b69b4b46/mzaf_2317272666428796662.plus.aac.p.m4a",
     "youtubeId": "pSUydWEqKwE",
     "youtubeUrl": "https://www.youtube.com/watch?v=pSUydWEqKwE",
@@ -1959,7 +1959,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Dance-Pop",
       "Hip-Hop"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ec/bf/bc/ecbfbc69-f2c7-a4e2-9c3d-24008a8a7912/8809704425971_Cover.jpg/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fe/23/fd/fe23fdee-13dc-64b3-300c-928eeb460980/3000.png/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/aa/48/d4/aa48d498-ec89-869b-6de5-8c71a7e927c2/mzaf_3812428093489388514.plus.aac.p.m4a",
     "youtubeId": "btPv0-d3NbE",
     "youtubeUrl": "https://www.youtube.com/watch?v=btPv0-d3NbE",
@@ -1985,7 +1985,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop Rock",
       "Soul"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/54/f4/92/54f49210-e260-b519-ebbd-f4f40ee710cd/054391342751.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4d/d5/00/4dd5006f-ee02-c3f1-94db-0ed4b8dd68f1/mzaf_14250561294796027079.plus.aac.p.m4a",
     "youtubeId": "Oa_RSwwpPaA",
     "youtubeUrl": "https://www.youtube.com/watch?v=Oa_RSwwpPaA",
@@ -2039,7 +2039,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Disco-Pop",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8c/67/ff/8c67ff91-31c3-3fef-1884-ce3ec89f3af4/196589946874.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/9e/f7/689ef7fe-14fe-a846-c87f-7d3b2d6344b1/mzaf_4167137058064023087.plus.aac.p.m4a",
     "youtubeId": "G7KNmW9a75Y",
     "youtubeUrl": "https://www.youtube.com/watch?v=G7KNmW9a75Y",
@@ -2091,7 +2091,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Country",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/db/9f/8e/db9f8e0c-d947-b7fd-cc93-a832c81ce4ee/00602455241252_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/80/50/5e80506c-cee2-618a-a481-63ca5c74c5ab/mzaf_1765193813138928866.plus.aac.p.m4a",
     "youtubeId": "bUjPPBxbQrQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=bUjPPBxbQrQ",
@@ -2170,7 +2170,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Electropop",
       "Latin Urban"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/55/0e/5e/550e5ecc-3fe4-50df-c5a3-a019b67008c3/196871854894.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/e1/0e/0ae10eda-19d6-9acb-2dd4-3a8f87c076c9/mzaf_11017736900654766444.plus.aac.p.m4a",
     "youtubeId": "CocEMWdc7Ck",
     "youtubeUrl": "https://www.youtube.com/watch?v=CocEMWdc7Ck",
@@ -2196,7 +2196,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Agroplay",
       "Sertanejo"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/13/cc/61/13cc61a4-0c61-49be-fab8-1eba849ed05a/8720923452343.png/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/34/2b/97342bfe-053c-3af7-0bde-4f946740e110/mzaf_16655926684579155951.plus.aac.p.m4a",
     "youtubeId": "vzEIwc0rG8Y",
     "youtubeUrl": "https://www.youtube.com/watch?v=vzEIwc0rG8Y",
@@ -2222,7 +2222,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Reggaeton",
       "Latin Urban"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/75/a2/e6/75a2e657-0373-2667-cfbb-ee2247f4dff8/194491110918.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/d7/15/ffd715fe-b020-ef74-5e8b-bacd72a8ac94/mzaf_7109007155344682925.plus.aac.p.m4a",
     "youtubeId": "jZGpkLElSu8",
     "youtubeUrl": "https://www.youtube.com/watch?v=jZGpkLElSu8",
@@ -2378,7 +2378,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Disco-Funk",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8c/67/ff/8c67ff91-31c3-3fef-1884-ce3ec89f3af4/196589946874.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/9e/f7/689ef7fe-14fe-a846-c87f-7d3b2d6344b1/mzaf_4167137058064023087.plus.aac.p.m4a",
     "youtubeId": "G7KNmW9a75Y",
     "youtubeUrl": "https://www.youtube.com/watch?v=G7KNmW9a75Y",
@@ -2431,7 +2431,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Fuji",
       "Afrobeats"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/cc/23/83/cc2383d9-eecc-f974-5f5b-d445c583acdb/197342233958_cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/79/fd/af79fdf3-e757-5acd-c0de-b5c6edfaa77a/mzaf_15402833629808241649.plus.aac.p.m4a",
     "youtubeId": "bbVZo4Yw7pI",
     "youtubeUrl": "https://www.youtube.com/watch?v=bbVZo4Yw7pI",
@@ -2482,7 +2482,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Folk Rock",
       "Satire"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b7/10/34/b71034f0-2417-64f8-2665-835e4d530cd4/4894944183273.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/19/47/74/19477442-65e1-7480-9b12-106f822b4a55/mzaf_43515306582297961.plus.aac.p.m4a",
     "youtubeId": "Ch6Ae9DT6Ko",
     "youtubeUrl": "https://www.youtube.com/watch?v=Ch6Ae9DT6Ko",
@@ -2508,7 +2508,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "J-Pop",
       "Anisong"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/dc/2d/40/dc2d407b-2ca0-d41e-6ccb-0fd625abf8f0/197188911638.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/54/5e/5c545e9a-c8ca-c673-f85d-a74b14c2c882/mzaf_2313943576213161760.plus.aac.p.m4a",
     "youtubeId": "ZRtdQ81jPUQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ",
@@ -2560,7 +2560,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Baltimore Club",
       "K-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f6/29/42/f629426e-92fe-535c-cbe4-76e70850819b/196922287107_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/72/66/8572665a-d35f-ce5d-43c5-9ae4b69b4b46/mzaf_2317272666428796662.plus.aac.p.m4a",
     "youtubeId": "pSUydWEqKwE",
     "youtubeUrl": "https://www.youtube.com/watch?v=pSUydWEqKwE",
@@ -2586,7 +2586,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "UK Garage",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/86/78/b4/8678b4b3-2341-7239-b6cb-bcfdaef0e4e0/196922656545_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/fc/7c/87fc7ced-ace9-2ec4-2e8a-c9a64c841a15/mzaf_3965990725450677139.plus.aac.p.m4a",
     "youtubeId": "QU9c0053UAU",
     "youtubeUrl": "https://www.youtube.com/watch?v=QU9c0053UAU",
@@ -2598,7 +2598,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "id": "tw-2023-1",
     "year": 2023,
     "rank": 1,
-    "title": "Finally (我想要佔據你)",
+    "title": "I Want to Occupy You (我想要佔據你)",
     "artist": "Accusefive (告五人)",
     "chartName": "KKBOX Annual Top 100 Singles",
     "chartAuthority": "KKBOX",
@@ -2638,7 +2638,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Country",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/db/9f/8e/db9f8e0c-d947-b7fd-cc93-a832c81ce4ee/00602455241252_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/80/50/5e80506c-cee2-618a-a481-63ca5c74c5ab/mzaf_1765193813138928866.plus.aac.p.m4a",
     "youtubeId": "bUjPPBxbQrQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=bUjPPBxbQrQ",
@@ -2690,7 +2690,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Synth-Pop",
       "Indie Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2a/19/fb/2a19fb85-2f70-9e44-f2a9-82abe679b88e/886449990061.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/10/16/67101606-3869-ca44-6c03-e13d6322cb51/mzaf_1135399237022217274.plus.aac.p.m4a",
     "youtubeId": "H5v3kku4y6Q",
     "youtubeUrl": "https://www.youtube.com/watch?v=H5v3kku4y6Q",
@@ -2742,7 +2742,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Indie Pop",
       "Psychedelic Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/da/8b/77/da8b7731-6f4f-eacf-5e74-8b23389eefa1/20UMGIM03371.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/4c/b9/a34cb911-40fc-5f0c-e862-14bd171a77aa/mzaf_384792072030970151.plus.aac.p.m4a",
     "youtubeId": "mRD0-GxqHVo",
     "youtubeUrl": "https://www.youtube.com/watch?v=mRD0-GxqHVo",
@@ -3081,7 +3081,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Skhanda",
       "Amapiano Rap"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ff/47/7a/ff477a42-2258-1a78-17d6-58238eb114e0/795397203225.png/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8e/6f/c1/8e6fc1cf-0d06-cdb0-5cb6-0d1ee6583a24/mzaf_724665914157646233.plus.aac.p.m4a",
     "youtubeId": "ErB9HJU2vOk",
     "youtubeUrl": "https://www.youtube.com/watch?v=ErB9HJU2vOk",
@@ -3237,7 +3237,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Mandopop",
       "Classical Crossover"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f7/ab/a8/f7aba8c4-73db-f75c-0d2c-afbe6c00d4f1/199999059011.png/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1a/07/93/1a079307-f4a0-9998-f5a3-bcd6aadc6dd8/dj.ihfqdaey.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/55/64/e4/5564e42e-8464-3921-127b-2d1dc1e40329/mzaf_1844250275219576232.plus.aac.p.m4a",
     "youtubeId": "1emA1EFsPMM",
     "youtubeUrl": "https://www.youtube.com/watch?v=1emA1EFsPMM",
@@ -3263,7 +3263,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Synth-Pop",
       "Indie Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2a/19/fb/2a19fb85-2f70-9e44-f2a9-82abe679b88e/886449990061.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/10/16/67101606-3869-ca44-6c03-e13d6322cb51/mzaf_1135399237022217274.plus.aac.p.m4a",
     "youtubeId": "H5v3kku4y6Q",
     "youtubeUrl": "https://www.youtube.com/watch?v=H5v3kku4y6Q",
@@ -3315,7 +3315,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Disco-Pop",
       "Nu-Disco"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6c/11/d6/6c11d681-aa3a-d59e-4c2e-f77e181026ab/190295092665.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/dc/4d/59dc4dda-93ff-8f1c-c536-f005f6ea6af5/mzaf_3066686759813252385.plus.aac.p.m4a",
     "youtubeId": "TUVcZfQe-Kw",
     "youtubeUrl": "https://www.youtube.com/watch?v=TUVcZfQe-Kw",
@@ -3367,7 +3367,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Disco-Pop",
       "Nu-Disco"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6c/11/d6/6c11d681-aa3a-d59e-4c2e-f77e181026ab/190295092665.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/dc/4d/59dc4dda-93ff-8f1c-c536-f005f6ea6af5/mzaf_3066686759813252385.plus.aac.p.m4a",
     "youtubeId": "TUVcZfQe-Kw",
     "youtubeUrl": "https://www.youtube.com/watch?v=TUVcZfQe-Kw",
@@ -3446,7 +3446,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Cumbia 420",
       "RKT"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/f9/69/d1f96944-7177-481f-8da9-12283cee8db1/196006235529.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/2c/86/442c8692-a1b7-a3a8-4223-be1ce399672d/mzaf_12411985390740924716.plus.aac.p.m4a",
     "youtubeId": "qptB8swg_e8",
     "youtubeUrl": "https://www.youtube.com/watch?v=qptB8swg_e8",
@@ -3498,7 +3498,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Cumbia",
       "Latin Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9f/68/69/9f6869a7-080a-a48d-2a9d-e2aef80cb5ac/886449097258.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/31/59/89/31598971-1250-9883-9b43-982eb4b74681/mzaf_10022217637845341257.plus.aac.p.m4a",
     "youtubeId": "CY8HSIT8C4M",
     "youtubeUrl": "https://www.youtube.com/watch?v=CY8HSIT8C4M",
@@ -3550,7 +3550,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Sea Shanty",
       "Dance-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8b/86/6e/8b866e27-3367-567e-7566-7b9b57ee145c/21UMGIM04866.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0c/3d/8c/0c3d8cf6-c3ea-c439-d890-484931a7b458/mzaf_9042978002967169493.plus.aac.p.m4a",
     "youtubeId": "UgsS3nhRRzQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=UgsS3nhRRzQ",
@@ -3576,7 +3576,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Italo-Pop",
       "Teen Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ab/21/db/ab21db98-6ba0-b286-4f3f-03adb7239be7/8052282775833.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/eb/c3/ffebc308-54b9-3b6b-4e0c-99d8213dd484/mzaf_4102914041793675037.plus.aac.p.m4a",
     "youtubeId": "R8YfKzM8K48",
     "youtubeUrl": "https://www.youtube.com/watch?v=R8YfKzM8K48",
@@ -3602,7 +3602,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Flamenco Pop",
       "Rumba"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/63/8c/02/638c027b-3487-1cc6-8028-2be8546ae151/886448978985.jpg/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/4a/39/1c/4a391ca4-1cef-1f88-8287-aae2bcb8b85e/886448830405.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/c0/d9/a4c0d90a-666d-6e06-c6e3-dc589f0c1afc/mzaf_16687581266652500887.plus.aac.p.m4a",
     "youtubeId": "ltmO9XQVdSg",
     "youtubeUrl": "https://www.youtube.com/watch?v=ltmO9XQVdSg",
@@ -3628,7 +3628,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Swedish Pop",
       "Ballad"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/15/2c/5d/152c5d40-c0fd-b188-03f2-a088ea635063/190295016647.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0f/2f/10/0f2f1062-2494-a902-9790-da404d88c283/mzaf_11041884604375376216.plus.aac.p.m4a",
     "youtubeId": "t5lidvQsAd0",
     "youtubeUrl": "https://www.youtube.com/watch?v=t5lidvQsAd0",
@@ -3680,7 +3680,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop-Punk",
       "Alt-Rock"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/76/46/48/76464884-0e9c-1951-a3f6-ce02f74c2b19/21UMGIM26093.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/0f/6c/c30f6c2e-4b68-e565-5da3-9b0985c5dfc1/mzaf_7824898165036774941.plus.aac.p.m4a",
     "youtubeId": "gNi_6U5Pm_o",
     "youtubeUrl": "https://www.youtube.com/watch?v=gNi_6U5Pm_o",
@@ -3732,7 +3732,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Amapiano",
       "Kwaito"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fd/5d/73/fd5d739a-69ad-7686-f613-df8c90ebca99/6009710467749.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/44/2c/86/442c8692-a1b7-a3a8-4223-be1ce399672d/mzaf_12411985390740924716.plus.aac.p.m4a",
     "youtubeId": "Kz1f_tO4Z88",
     "youtubeUrl": "https://www.youtube.com/watch?v=Kz1f_tO4Z88",
@@ -3810,7 +3810,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Anisong",
       "J-Rock"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/88/ce/67/88ce6774-3358-e238-5244-1b0788adea50/4547366475562.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4b/5f/c7/4b5fc755-f716-410a-d830-ec387bf4ca7d/mzaf_7865242588496464299.plus.aac.p.m4a",
     "youtubeId": "4DxL6IKmNx4",
     "youtubeUrl": "https://www.youtube.com/watch?v=4DxL6IKmNx4",
@@ -3862,7 +3862,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Dance-Pop",
       "K-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/9e/9f/73/9e9f7345-9c18-0983-4a94-bf75f2639cdd/196292339000_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/6a/00/f46a00bc-65a8-493e-2f84-5fca8777e481/mzaf_6135061413813876798.plus.aac.p.m4a",
     "youtubeId": "WMweEpGlu_U",
     "youtubeUrl": "https://www.youtube.com/watch?v=WMweEpGlu_U",
@@ -3914,7 +3914,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Indie Pop",
       "Alternative"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/da/8b/77/da8b7731-6f4f-eacf-5e74-8b23389eefa1/20UMGIM03371.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/4c/b9/a34cb911-40fc-5f0c-e862-14bd171a77aa/mzaf_384792072030970151.plus.aac.p.m4a",
     "youtubeId": "mRD0-GxqHVo",
     "youtubeUrl": "https://www.youtube.com/watch?v=mRD0-GxqHVo",
@@ -3967,7 +3967,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Synthwave",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c7/fe/ec/c7feec6a-36df-9c30-f5f5-200e1015e0ad/20UMGIM28108.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/04/de/6f04def7-3116-e461-da6e-43171db830cb/mzaf_12524670770227883365.plus.aac.p.m4a",
     "youtubeId": "4NRXx6U8ABQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
@@ -4019,7 +4019,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Synthwave",
       "Synth-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c7/fe/ec/c7feec6a-36df-9c30-f5f5-200e1015e0ad/20UMGIM28108.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/04/de/6f04def7-3116-e461-da6e-43171db830cb/mzaf_12524670770227883365.plus.aac.p.m4a",
     "youtubeId": "4NRXx6U8ABQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
@@ -4202,7 +4202,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Synth-Pop",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c7/fe/ec/c7feec6a-36df-9c30-f5f5-200e1015e0ad/20UMGIM28108.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/04/de/6f04def7-3116-e461-da6e-43171db830cb/mzaf_12524670770227883365.plus.aac.p.m4a",
     "youtubeId": "4NRXx6U8ABQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
@@ -4255,7 +4255,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Trap",
       "Flamenco"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/63/8c/02/638c027b-3487-1cc6-8028-2be8546ae151/886448978985.jpg/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8d/18/02/8d180261-e809-4ea1-6385-f457371d5ec1/886448774136.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/48/07/b1/4807b1cf-b666-af4f-cde2-d14ceac58c44/mzaf_5263350513850309867.plus.aac.p.m4a",
     "youtubeId": "ZlFri4ez_lE",
     "youtubeUrl": "https://www.youtube.com/watch?v=ZlFri4ez_lE",
@@ -4307,7 +4307,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Synth-Pop",
       "New Wave"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c7/fe/ec/c7feec6a-36df-9c30-f5f5-200e1015e0ad/20UMGIM28108.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/04/de/6f04def7-3116-e461-da6e-43171db830cb/mzaf_12524670770227883365.plus.aac.p.m4a",
     "youtubeId": "4NRXx6U8ABQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
@@ -4333,7 +4333,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Slap House",
       "Dance"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/70/2b/f6/702bf67f-eccd-f69b-0d5b-6b54245f2294/ROSES_Imanbek_Remix_Originally_Performed_by_SAINt_JHN_Karaoke_No_Guide_Melody_Version.png/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3c/3a/f8/3c3af84d-da1e-c574-79b2-abf3df527673/22CRGIM34076.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/31/9f/e7/319fe704-e6f5-624c-cb9a-b4b447da0138/mzaf_10243153747083524860.plus.aac.p.m4a",
     "youtubeId": "2zToEPpFEN8",
     "youtubeUrl": "https://www.youtube.com/watch?v=2zToEPpFEN8",
@@ -4567,7 +4567,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Synth-Pop",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c7/fe/ec/c7feec6a-36df-9c30-f5f5-200e1015e0ad/20UMGIM28108.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/04/de/6f04def7-3116-e461-da6e-43171db830cb/mzaf_12524670770227883365.plus.aac.p.m4a",
     "youtubeId": "4NRXx6U8ABQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
@@ -4619,7 +4619,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Latin Pop",
       "Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ef/06/de/ef06deeb-3890-e06f-905c-5686e23c2b88/15UMGIM06404.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4d/9b/87/4d9b87b7-5dbd-7201-9dc5-d143da3eef8a/mzaf_10332859063737965934.plus.aac.p.m4a",
     "youtubeId": "Pkh8UtuejGw",
     "youtubeUrl": "https://www.youtube.com/watch?v=Pkh8UtuejGw",
@@ -4645,7 +4645,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Reggaeton",
       "Dancehall"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/89/4e/ad/894eade7-f1d8-37bf-72f9-88c496eedfdd/19UMGIM00637.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/71/e6/53/71e65306-bf25-5606-f617-64dfdc5b5089/mzaf_10207851608688463942.plus.aac.p.m4a",
     "youtubeId": "DiItGE3eAyQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=DiItGE3eAyQ",
@@ -4775,7 +4775,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Sertanejo",
       "Sofrência"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/02/50/58/025058b0-d15e-041e-7b27-f88705e44c14/7891430385873.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bf/25/82/bf258276-be45-7798-15cf-61882bc2be41/mzaf_10034606277688001601.plus.aac.p.m4a",
     "youtubeId": "qKkguRmgvhU",
     "youtubeUrl": "https://www.youtube.com/watch?v=qKkguRmgvhU",
@@ -4801,7 +4801,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Reggaeton",
       "Flamenco Urbano"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/82/72/d5/8272d5ad-49b7-f80a-59ec-0160215d2b86/886447616925.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/b5/02/b8b5025f-2248-b4b6-a05e-f0b9f9392e27/mzaf_8405021237375252873.plus.aac.p.m4a",
     "youtubeId": "p7bfOZek9t4",
     "youtubeUrl": "https://www.youtube.com/watch?v=p7bfOZek9t4",
@@ -5061,7 +5061,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "J-Pop",
       "Pop Rock"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1f/b6/36/1fb6364f-77fc-7653-3750-811631832ee9/PCCA_04785.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bf/25/82/bf258276-be45-7798-15cf-61882bc2be41/mzaf_10034606277688001601.plus.aac.p.m4a",
     "youtubeId": "TQ8WlA2GXbk",
     "youtubeUrl": "https://www.youtube.com/watch?v=TQ8WlA2GXbk",
@@ -5191,7 +5191,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Hip-Hop",
       "Trap"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/4f/61/ef/4f61efab-6b4b-2472-73b9-5e9149ce30e9/00602567926917.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/30/80/e7/3080e7ce-3f74-3ee2-50b6-17b20464b52b/mzaf_10793132711100344078.plus.aac.p.m4a",
     "youtubeId": "xpVfcZ0ZcFM",
     "youtubeUrl": "https://www.youtube.com/watch?v=xpVfcZ0ZcFM",
@@ -5243,7 +5243,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Hip-Hop",
       "Trap"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/6d/8f/bb6d8f67-6d04-10b5-dd62-eb5809ac54fc/00602567879152.rgb.jpg/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/4f/61/ef/4f61efab-6b4b-2472-73b9-5e9149ce30e9/00602567926917.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/4a/be/c64abe74-adb4-cff5-005d-0fab3d72a806/mzaf_10276154697254415719.plus.aac.p.m4a",
     "youtubeId": "xpVfcZ0ZcFM",
     "youtubeUrl": "https://www.youtube.com/watch?v=xpVfcZ0ZcFM",
@@ -5269,7 +5269,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop Ballad",
       "Acoustic"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/e6/e8/15e6e8a4-4190-6a8b-86c3-ab4a51b88288/190295851286.jpg/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/69/60/7e/69607eb7-78c8-0258-654d-64d64ab20ca9/190295710132.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c7/ba/bc/c7babc66-f598-aaa6-bcf6-307281795817/mzaf_16337361235117168274.plus.aac.p.m4a",
     "youtubeId": "2Vv-BfVoq4g",
     "youtubeUrl": "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
@@ -5295,7 +5295,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Bounce",
       "Hip-Hop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/6d/8f/bb6d8f67-6d04-10b5-dd62-eb5809ac54fc/00602567879152.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/3c/65/913c65df-6566-a36c-2f3b-6f81e6b528b7/mzaf_7853683833777555310.plus.aac.p.m4a",
     "youtubeId": "DRS_PpOrUZ4",
     "youtubeUrl": "https://www.youtube.com/watch?v=DRS_PpOrUZ4",
@@ -5372,7 +5372,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Dancehall",
       "Reggaeton"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/89/6b/0c/896b0c76-77d6-00e7-116f-8fcf8df3b6ab/886448082705.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/82/df/c382dfa5-f823-ce40-aa2c-be9582103f69/mzaf_7493608244983944686.plus.aac.p.m4a",
     "youtubeId": "_I_D_8Z4sJE",
     "youtubeUrl": "https://www.youtube.com/watch?v=_I_D_8Z4sJE",
@@ -5684,7 +5684,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Mandopop",
       "Acoustic Ballad"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1c/c1/72/1cc17226-8c2d-b549-cfdf-fd096f6017be/artwork.jpg/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/85/a5/52/85a55237-6d96-a656-21cf-715b72be15a9/cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/e3/c5/78e3c5e3-a1f8-405a-9ff8-ade728f6c46c/mzaf_12167005995228028085.plus.aac.p.m4a",
     "youtubeId": "QQucPUfXUQQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=QQucPUfXUQQ",
@@ -5710,7 +5710,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop Rock",
       "New Wave"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/80/8f/68/808f6830-67fd-6f0f-b143-201c28714c89/18UMGIM09114.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/e8/e5/9ce8e50b-c8ff-c9a9-3070-dfd58b29c1d0/mzaf_10795556276180376882.plus.aac.p.m4a",
     "youtubeId": "-RJSbO8UZVY",
     "youtubeUrl": "https://www.youtube.com/watch?v=-RJSbO8UZVY",
@@ -5762,7 +5762,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop",
       "Dancehall-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/e6/e8/15e6e8a4-4190-6a8b-86c3-ab4a51b88288/190295851286.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/09/b6/a409b6ca-fe96-c1df-2eec-e71761c5658e/mzaf_11306788544456578021.plus.aac.p.m4a",
     "youtubeId": "JGwWNGJdvx8",
     "youtubeUrl": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
@@ -5866,7 +5866,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "R&B",
       "Funk Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e3/47/a0/e347a0cc-87ce-5d05-d560-176c7d48f66e/075679904119.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/19/9f/f4199fc6-c4ca-c6b0-3bb5-e01867cb1551/mzaf_6135893444004732688.plus.aac.p.m4a",
     "youtubeId": "PMivT7MJ41M",
     "youtubeUrl": "https://www.youtube.com/watch?v=PMivT7MJ41M",
@@ -5944,7 +5944,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Moombahton",
       "Reggaeton"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/43/23/44/43234493-859a-53f6-e31c-805370dc33d7/18UMGIM19841.rgb.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/76/f5/df76f53a-c5ee-23c2-d3f3-087ce126ec86/mzaf_10526084661858547463.plus.aac.p.m4a",
     "youtubeId": "wnJ6LuUFpMo",
     "youtubeUrl": "https://www.youtube.com/watch?v=wnJ6LuUFpMo",
@@ -6022,7 +6022,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Indie Pop",
       "Italian Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/64/d4/14/64d414fc-cf55-4b61-bef7-ce1108fea8ed/5021732608406.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/19/7a/c8/197ac8e5-10b5-8814-3abd-f65f178a9b2c/mzaf_16601788615600329935.plus.aac.p.m4a",
     "youtubeId": "I5cL3rpp4SU",
     "youtubeUrl": "https://www.youtube.com/watch?v=I5cL3rpp4SU",
@@ -6178,7 +6178,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Mandopop",
       "Ballad"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/9e/63/2e/9e632ec7-2a63-5ea2-ab24-f02eb11f5d30/00602537844234.rgb.jpg/600x600bb.jpg",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/23/65/4a/23654a78-6769-a2ec-bfd7-e032ea71c65a/191018640989.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/82/fd/0d/82fd0dc1-9a1a-529c-7b9a-4b979915417e/mzaf_9723060598938677239.plus.aac.p.m4a",
     "youtubeId": "T4SimnaiktU",
     "youtubeUrl": "https://www.youtube.com/watch?v=T4SimnaiktU",
@@ -6231,7 +6231,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "K-Pop",
       "OST"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3f/3d/d0/3f3dd00d-4bd1-8e71-1300-9387c7a319d3/8809534461859_Cover.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b4/2c/3e/b42c3ec7-07ea-fc9e-5e0f-90e1fc801a6b/mzaf_17730999015949187383.plus.aac.p.m4a",
     "youtubeId": "69pZXvmW47c",
     "youtubeUrl": "https://www.youtube.com/watch?v=69pZXvmW47c",
@@ -6257,7 +6257,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Mandopop",
       "Pop Rock"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/64/a0/f1/64a0f1b8-a36b-ff10-509a-9a8f5fef53ff/dj.zfoqlnar.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/c3/8f/34c38f00-ce4d-2c53-9b33-37805a623faf/mzaf_16070079516222580775.plus.aac.p.m4a",
     "youtubeId": "Fn7NLWHJw4s",
     "youtubeUrl": "https://www.youtube.com/watch?v=Fn7NLWHJw4s",
@@ -6283,7 +6283,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Pop",
       "Dancehall-Pop"
     ],
-    "artworkUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/e6/e8/15e6e8a4-4190-6a8b-86c3-ab4a51b88288/190295851286.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/09/b6/a409b6ca-fe96-c1df-2eec-e71761c5658e/mzaf_11306788544456578021.plus.aac.p.m4a",
     "youtubeId": "JGwWNGJdvx8",
     "youtubeUrl": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
