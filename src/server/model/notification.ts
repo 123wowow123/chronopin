@@ -413,11 +413,11 @@ export default class Notification {
                n."commentId", c."text" AS "commentText",
                n."companyId", co."name"::text AS "companyName", co."logoUrl" AS "companyLogoUrl",
                pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling",
-               (SELECT COUNT(*)::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeCount",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeCount",
                (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
                   FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeTickers",
-               (SELECT COUNT(*)::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuys",
-               (SELECT COUNT(*)::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSells",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuys",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSells",
                (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
                   FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuyTickers",
                (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)

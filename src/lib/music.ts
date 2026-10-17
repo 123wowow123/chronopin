@@ -253,6 +253,32 @@ export interface MusicRankingEntry {
   originArea?: string;
   /** The album (or single/EP) this recording is released on. */
   album?: MusicAlbum;
+  /** Published weekly-chart run of the song (peak, weeks charted, weeks at #1). */
+  songStats?: MusicSongStats;
+}
+
+export interface MusicSongStats {
+  peak?: number | null;
+  weeksOnChart?: number | null;
+  weeksAtNumberOne?: number | null;
+  chart?: string;
+  sourceUrl?: string;
+  asOf?: string;
+}
+
+export interface MusicAlbumCertification {
+  body: string;
+  level: string;
+  region?: string;
+  date?: string | null;
+}
+
+export interface MusicAlbumStats {
+  certifications: MusicAlbumCertification[];
+  /** Sourced sales figure with its unit type and market. */
+  units?: string | null;
+  peak?: { chart: string; position: number } | null;
+  sourceUrl?: string;
 }
 
 export interface MusicAlbumTrack {
@@ -270,6 +296,7 @@ export interface MusicAlbum {
   artworkUrl?: string;
   releaseDate?: string;
   trackCount?: number;
+  stats?: MusicAlbumStats;
   tracks: MusicAlbumTrack[];
 }
 

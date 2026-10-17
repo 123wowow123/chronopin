@@ -851,6 +851,26 @@
         }
       ],
       "nextStep": "Find exact-branch operator opening histories, contemporary launch notices or original1997tenant documents; do not convert the2006list date into a branch opening."
+    },
+    {
+      "checkedAt": "2026-10-17T16:40:52.475082+00:00",
+      "batch": 67,
+      "outcome": "No opening-date correction: all six missing branch openings and nine finer-precision gaps remain unresolved.",
+      "sources": [
+        {
+          "url": "https://mollettet.wixsite.com/goldwave",
+          "evidence": "Gold Wave operator directory identifies exact Kyoto Isetan 11F Mollette and phone 075-352-6255; no branch opening date."
+        },
+        {
+          "url": "https://mollettet.wixsite.com/goldwave/kaishagaiyou",
+          "evidence": "Company identity and contact details, no branch-opening chronology. Footer year is not launch evidence."
+        },
+        {
+          "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/molet.html",
+          "evidence": "Landlord confirms exact branch, no opening history. Mid-December temporary closure mentioned; linked notice and precise schedule require further checking before any content schedule edit."
+        }
+      ],
+      "nextStep": "Seek original Kyoto branch opening announcement or contemporary launch tenant documents; operator contact is identified but no contact message was sent. Keep six placeholders and nine precision gaps explicit."
     }
   ]
 }

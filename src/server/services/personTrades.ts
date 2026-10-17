@@ -26,8 +26,10 @@ export async function storeFiling(personId: number, filing: TradeFiling): Promis
     // Buys and sells are told as two groups, each with its tickers.
     const group = (types: string[]) => {
       const rows = filing.trades.filter((t) => types.includes(t.txType));
-      const tickers = [...new Set(rows.map((t) => t.ticker).filter(Boolean))].slice(0, 4).join(', ');
-      return rows.length ? `${rows.length} ${types[0] === 'purchase' ? 'buy' : 'sell'}${rows.length === 1 ? '' : 's'}${tickers ? ` (${tickers})` : ''}` : '';
+      const all = [...new Set(rows.map((t) => t.ticker).filter(Boolean))];
+      const n = new Set(rows.map((t, i) => t.ticker ?? `#${i}`)).size;
+      const tickers = all.slice(0, 4).join(', ');
+      return rows.length ? `${n} ${types[0] === 'purchase' ? 'buy' : 'sell'}${n === 1 ? '' : 's'}${tickers ? ` (${tickers})` : ''}` : '';
     };
     const groups = [group(['purchase']), group(['sale', 'partial'])].filter(Boolean).join(' · ');
     const biggest = filing.trades.reduce((a, b) => ((b.amountHigh ?? b.amountLow ?? 0) > (a.amountHigh ?? a.amountLow ?? 0) ? b : a));

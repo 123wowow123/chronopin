@@ -29,6 +29,7 @@ import { PinDining } from '@/components/pin/PinDining';
 import { getAdjacentMusicRankings, getMusicRankingByTitleOrPin } from '@/lib/music';
 import { MusicPinNav } from '@/components/music/MusicPinNav';
 import { AlbumTracklist } from '@/components/music/AlbumTracklist';
+import { MusicStats } from '@/components/music/MusicStats';
 import { PinHotel } from '@/components/pin/PinHotel';
 import { getResortPricePerNight } from '@/lib/travel';
 import { PinModelChart } from '@/components/pin/PinModelChart';
@@ -560,6 +561,7 @@ async function PinBody({
             </div>
             <MusicPinNav entry={musicEntry} adjacent={musicAdjacent} variant="card" autoplay={autoplay} />
           </div>
+          <MusicStats entry={musicEntry} />
           {musicEntry.album ? (
             <div className="mt-3">
               <AlbumTracklist song={musicEntry} open scroll={false} />

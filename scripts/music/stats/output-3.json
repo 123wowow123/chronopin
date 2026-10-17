@@ -1,0 +1,758 @@
+{
+ "br-2026-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Pro-Música Brasil/BMAT most-played songs in Brazil, H1 2026",
+   "sourceUrl": "https://billboard.com.br/ranking-musicas-mais-tocadas-2026-panda/",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Confirmed #1 of Pro-Música/BMAT H1 2026 top 50 (billboard.com.br). Spotify >230 million streams (press, not a chart). Weeks at #1, album certification and units: not found. Checked: billboard.com.br ranking page, band.com.br (403), vagalume (given), Pro-Música search, pt.wikipedia (404). peak here means rank on the half-year list, not a weekly peak."
+ },
+ "sg-2026-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 15,
+   "chart": "Official Singapore Chart (RIAS)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2026_(Singapore)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": "295,000 album-equivalent units first week (US, Billboard 200 debut)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Petal_(album)"
+  },
+  "notes": "Weeks at #1 15 per Wikipedia list (as of 2026-10-01 list, run from 4 June to early Sept). Total Singapore weeks not published in page. Song on Hot 100 debuted at #1. Only certification listed for album is BPI Gold; no US certification found."
+ },
+ "us-2025-3": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 19,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/A_Bar_Song_(Tipsy)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": "2025-07-03"
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 5
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Where_I%27ve_Been,_Isn%27t_Where_I%27m_Going"
+  },
+  "notes": "Song also RIAA 12x Platinum (date not stated). Total Hot 100 weeks not found. Album peak 5 with 50,000 units debut; BPI Silver, RMNZ 2x Platinum. Year-end rank 3 chart itself not opened."
+ },
+ "se-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 13,
+   "chart": "Sverigetopplistan (weekly singles)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bara_bada_bastu",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [],
+   "units": null,
+   "peak": {
+    "chart": "Sverigetopplistan Albums",
+    "position": 9
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sauna_Collection"
+  },
+  "notes": "13 weeks at #1 consistent with input. Weeks on chart and Swedish certifications not found. Sauna Collection is a compilation; certifications not seen in the first 100k characters of page."
+ },
+ "jp-2025-2": {
+  "song": {
+   "peak": 2,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 0,
+   "chart": "Billboard Japan Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/10_(Mrs._Green_Apple_album)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAJ",
+     "level": "Million (physical)",
+     "region": "Japan",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Oricon Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/10_(Mrs._Green_Apple_album)"
+  },
+  "notes": "Darling peaked #2 on Billboard Japan Hot 100 (Wikipedia); Billboard Japan year-end 2025 page confirms rank 2 (billboard-japan.com). weeksAtNumberOne set 0 since it never reached #1 on the weekly chart; weeks on chart not published (a Billboard Japan streaming article suggested 11, not verified as Hot 100). RIAJ for song: Gold digital, 3x Platinum streaming; Oricon combined singles #1. Billboard Global 200 peak 79. Checked: billboard-japan.com year-end, Wikipedia album 10 and discography, Billboard search. Oricon/RIAJ sites not opened."
+ },
+ "us-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": 112,
+   "weeksAtNumberOne": 1,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lose_Control_(Teddy_Swims_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "3× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "SNEP",
+     "level": "Platinum",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "BVMI",
+     "level": "Gold",
+     "region": "Germany",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "Gold",
+     "region": "Italy",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "Platinum",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 17
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/I%27ve_Tried_Everything_but_Therapy_(Part_1)"
+  },
+  "notes": "112 weeks on Hot 100 (record); peaked #1 March 2024. Weeks at #1 = 1 confirmed (issue 30 Mar 2024, Wikipedia Hot 100 2024 list). Part 1 page not found; only Complete Edition data (Billboard 200 peak 18; Canada 4x Platinum, Austria Gold, NZ Platinum, UK Gold) seen, so album left null. Song certifications: RIAA Diamond, Music Canada Diamond, ARIA 7x Platinum, BPI 5x Platinum. Album Part 1 data from its Wikipedia page (no dates; a discography snippet gave a conflicting US peak of 25 or 4, unresolved)."
+ },
+ "it-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 3,
+   "chart": "FIMI singles chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tuta_gold",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "FIMI",
+     "level": "2× Platinum",
+     "region": "Italy",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "FIMI Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Nei_letti_degli_altri"
+  },
+  "notes": "Peak 1, FIMI 5x Platinum. Weeks at #1: Wikipedia Italy 2024 list shows 15 Feb 2024 explicit, with blank continuation rows 22 and 29 Feb, so 3 weeks inferred (matches input); ended 7 March. Album data is for Nei letti degli altri (the song's parent), not the input compilation Sanremo 2024; album year-end 2024 rank 12. Weeks on chart not found."
+ },
+ "cn-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": 126,
+   "weeksAtNumberOne": 29,
+   "chart": "Tencent Music 由你榜 (Uni Chart)",
+   "sourceUrl": "https://zh.wikipedia.org/wiki/小美滿",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "zh.wikipedia: 29 weeks at #1 on 由你榜 (input says 27: disagreement flagged; Wikipedia count may include later weeks); double-platinum single certification and 10m+ collections. Sina search result: 126 weeks on chart by 2026 week 26 issue (search snippet, sina.cn article not opened; weeksOnChart is from that snippet). Also #1 on several other charts. Single/soundtrack, no album sales info. yobang.tencentmusic.com page returned no content."
+ },
+ "ca-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 15,
+   "chart": "Billboard Canadian Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Flowers_(Miley_Cyrus_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "Music Canada",
+     "level": "2× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "SNEP",
+     "level": "Platinum",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": "2024-03-29"
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Endless_Summer_Vacation"
+  },
+  "notes": "Song: Music Canada Diamond 2024-04-23. Weeks on Canadian Hot 100 not listed. Album debut 119,000 units (55,000 pure sales)."
+ },
+ "fr-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 8,
+   "chart": "SNEP Top Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Flowers_(Miley_Cyrus_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "SNEP",
+     "level": "Platinum",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Endless_Summer_Vacation"
+  },
+  "notes": "Peak 1; SNEP Diamond. Weeks at #1: Wikipedia France 2023 list shows explicit weeks 4, 11, 13 plus blank continuation rows giving 8 by inference, matching input. Weeks on chart not found."
+ },
+ "za-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Official South African Charts (RiSA) / Billboard South Africa Songs",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Mnike",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia: #1 on RiSA and Billboard South Africa Songs in 2023; no weeks, certifications or album 'Lucent' info found. Spotify Wrapped list not itself used for numbers."
+ },
+ "br-2022-1": {
+  "song": {
+   "peak": 2,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Spotify Brazil (daily/weekly top songs)",
+   "sourceUrl": "https://kworb.net/spotify/track/6Zw25LRLP0j0MsezDFIUM4.html",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "kworb: Spotify Brazil peak #2 (2022-01-27), global peak #72; ~111 dated Brazil chart entries to 2025-01-15; ~284 million Brazil streams in kworb totals. ABC do ABC (2022-12-02, updated 2023-08-22) says Triple Diamond certification but names no body or date; not verified with Pro-Música database. The input chart is Spotify year-end #1. Billboard Brasil Hot 100 peak not found. pt/en Wikipedia pages 404."
+ },
+ "ng-2022-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 6,
+   "chart": "TurnTable Top 50 (Nigeria)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Buga_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "At least 6 weeks at #1 as of 20 June 2022 (input 7 not confirmed). Certs: TCSN 4x Platinum, RIAA Gold, BPI Silver. Album Maverick (2023) certs/peak not found. Input chart says Top 100; figures are for the Top 50. Weeks at #1: only 6 weeks verified (to 20 June 2022); 7 unconfirmed; Wikipedia Nigeria 2022 list 404. Maverick Wikipedia page lists no chart peaks or certifications."
+ },
+ "tw-2022-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "KKBOX Mandarin yearly singles chart",
+   "sourceUrl": "https://www.kkbox.com/hk/tc/column/features-0-2186-1.html",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "KKBOX year-end 2022 Mandarin singles: ranked 7th per search snippet (page text itself did not render). taiwannews.com.tw 2022-01-07: stayed #1 on KKBOX new-song chart (no week count). No weekly peak/weeks, no certification found. Peak left null because the 7th is year-end rank not weekly peak."
+ },
+ "ar-2021-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 8,
+   "chart": "Billboard Argentina Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Billboard_Argentina_Hot_100_number-one_singles_of_2021",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "8 weeks at #1 (26 Sep-14 Nov 2021) matches input. Single; no album sales info found. Total weeks not found."
+ },
+ "gb-2021-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 11,
+   "chart": "UK Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bad_Habits_(Ed_Sheeran_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "BPI",
+     "level": "4× Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": "1,270,695 (UK, BPI certification units, sales+streams equivalent)",
+   "peak": {
+    "chart": "UK Albums Chart / Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Equals_(Ed_Sheeran_album)"
+  },
+  "notes": "Song BPI 7x Platinum (4.2m units). Weeks on chart not read. Album peak 1 on both UK and Billboard 200; dates not given."
+ },
+ "kr-2021-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 6,
+   "chart": "Gaon Digital Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Celebrity_(IU_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "KMCA",
+     "level": "Platinum",
+     "region": "South Korea",
+     "date": "2021-05"
+    }
+   ],
+   "units": "402,864 (Gaon 2021 yearly); 267,754 first week",
+   "peak": {
+    "chart": "Gaon Album Chart",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lilac_(IU_album)"
+  },
+  "notes": "6 consecutive weeks at #1. KMCA 2x Platinum (streaming), RIAJ Gold streaming. Lilac album certs/peak not researched."
+ },
+ "us-2020-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": 61,
+   "weeksAtNumberOne": 3,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Circles_(Post_Malone_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "4× Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "8× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "2× Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "ARIA",
+     "level": "2× Platinum",
+     "region": "Australia",
+     "date": null
+    },
+    {
+     "body": "SNEP",
+     "level": "Platinum",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "BVMI",
+     "level": "Gold",
+     "region": "Germany",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "2× Platinum",
+     "region": "Italy",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "5× Platinum",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": "1.895 million album-equivalent units (US, 2020); 3.001 million combined by end of 2019 per Wikipedia",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Hollywood%27s_Bleeding"
+  },
+  "notes": "Song RIAA Diamond (date not stated). Cert dates not in table."
+ },
+ "es-2020-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "PROMUSICAE singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tusa_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "11× Platinum (Latin)",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "PROMUSICAE",
+     "level": "Platinum",
+     "region": "Spain",
+     "date": null
+    }
+   ],
+   "units": "660,000 units (RIAA Latin, sales+streaming)",
+   "peak": {
+    "chart": "Billboard Top Latin Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/KG0516"
+  },
+  "notes": "Spain peak 1, 9x Platinum (360,000 units); weeks not stated. Input album 'Superventas 2020' is a compilation; Tusa is from KG0516, not researched. Album data is for KG0516 (Tusa's parent album), PROMUSICAE albums peak 3."
+ },
+ "jp-2020-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 6,
+   "chart": "Billboard Japan Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Yoru_ni_Kakeru",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAJ",
+     "level": "Gold (physical)",
+     "region": "Japan",
+     "date": null
+    },
+    {
+     "body": "RIAJ",
+     "level": "Gold (digital)",
+     "region": "Japan",
+     "date": null
+    }
+   ],
+   "units": "146,745 copies (Oricon, as of 2021)",
+   "peak": {
+    "chart": "Oricon Albums",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/The_Book_(Yoasobi_EP)"
+  },
+  "notes": "6 weeks at #1 matches input. RIAJ streaming 2x Diamond (1bn streams, Apr 2025), digital 3x Platinum. THE BOOK EP certs not found. Total weeks not stated."
+ },
+ "mx-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 2,
+   "chart": "Monitor Latino Mexico General airplay",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2019_(Mexico)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia list: #1 on Monitor Latino Mexico General chart for 2 weeks (14 and 28 July 2019). Note: the charts.monitorlatino.com annual 2019 page as fetched showed Julion Alvarez as top entry, which conflicts with the input rank; not resolved. Billboard: Regional Mexican Airplay #4 (Aug 2019), Hot Latin Songs #16 (Remezcla). No AMPROFON certification found. Album 'Ay, Jalisco No Te Rajes' not researched. Weeks on chart not found."
+ },
+ "de-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 4,
+   "chart": "GfK Entertainment Top 100 Singles (Germany)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_hits_of_2019_(Germany)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "4 weeks at #1 in Germany; BVMI Diamond (1,000,000 units) per Old Town Road article. EP '7' certs not researched. Hot 100: 19 weeks at #1 (record, not this chart)."
+ },
+ "jp-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Billboard Japan Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lemon_(Kenshi_Yonezu_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAJ",
+     "level": "Million",
+     "region": "Japan",
+     "date": null
+    },
+    {
+     "body": "RIAJ",
+     "level": "Gold (digital album)",
+     "region": "Japan",
+     "date": null
+    }
+   ],
+   "units": "879,000+ first week (Oricon); 1,970,930 Japan copies incl. streaming equivalents in 2020 (Oricon)",
+   "peak": {
+    "chart": "Oricon Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Stray_Sheep"
+  },
+  "notes": "Peak 1; Oricon singles 2, combined 1. RIAJ: physical 2x Platinum, digital 3x Million, streaming 3x Platinum. Weeks on chart/at #1 not stated. Stray Sheep certifications not found. Album: Billboard Japan Hot Albums #1 too; IFPI 2.54m global 2020 sales."
+ },
+ "us-2018-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 6,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Perfect_(Ed_Sheeran_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "5× Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "15× Platinum",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Divide_(Ed_Sheeran_album)"
+  },
+  "notes": "Song RIAA 13x Platinum. Weeks on Hot 100 not stated. Album RIAA Gold 2017-03-22 (from text). Six weeks at #1: five by duet version plus one for original."
+ },
+ "es-2018-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "PROMUSICAE singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lo_malo",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Peak 1, Promusicae 5x Platinum (200,000 units). Weeks not stated; Wikipedia lists no album for the song."
+ },
+ "au-2018-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 8,
+   "chart": "ARIA Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Youngblood_(5_Seconds_of_Summer_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "ARIA",
+     "level": "Gold",
+     "region": "Australia",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "2× Platinum",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "Gold",
+     "region": "Italy",
+     "date": null
+    },
+    {
+     "body": "AMPROFON",
+     "level": "Gold",
+     "region": "Mexico",
+     "date": null
+    },
+    {
+     "body": "ZPAV",
+     "level": "Platinum",
+     "region": "Poland",
+     "date": null
+    }
+   ],
+   "units": "142,000 units US debut (117,000 pure sales)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Youngblood_(5_Seconds_of_Summer_album)"
+  },
+  "notes": "8 consecutive weeks at #1; ARIA 18x Platinum (1,260,000 units). Album Youngblood certs not found. Album ARIA albums peak 1; cert dates not given."
+ },
+ "au-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 12,
+   "chart": "ARIA Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Flowers_(Miley_Cyrus_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Endless_Summer_Vacation"
+  },
+  "notes": "Song ARIA 10x Platinum (700,000 units, 2024). Album ARIA cert not listed on Wikipedia; ARIA album peak not read."
+ },
+ "co-2017-1": {
+  "song": null,
+  "album": null,
+  "notes": "No Colombia Monitor Latino weekly/annual figures obtainable: charts.monitorlatino.com page showed no numbers and a different top song. Related published figures (not Colombia chart): Mexico Monitor Latino Streaming chart cited 14 weeks at #1 for Despacito; Hot 100 16 weeks #1; Hot Latin Songs 35+ consecutive weeks; Spotify Colombia 2017 year-end rank 3 (xataka.com.co). Album Vida certs not found."
+ },
+ "kr-2017-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 3,
+   "chart": "Gaon Digital Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Gaon_Digital_Chart_number_ones_of_2017",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "3 weeks at #1 (weeks ending 14, 21, 28 Jan 2017); best-performing Gaon single of 2017. Wikipedia song page: 5,000,000 sales per Gaon, 2.5m downloads and 200m streams by Sept 2018; no certification section. Song is a Goblin OST; input album 'NEW FESTA EPISODE 4' EP not on the song page, album data not found. Circle Chart weeks not found."
+ }
+}

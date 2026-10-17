@@ -603,6 +603,15 @@ export function MusicRankingView({
                                 </p>
                               ) : null}
 
+                              {song.songStats?.peak != null || song.songStats?.weeksOnChart != null ? (
+                                <p className="mt-1 text-[11px] text-[var(--soft)]">
+                                  {song.songStats?.peak != null ? <>Peak <strong className="text-[var(--text)]">{song.songStats.peak}</strong></> : null}
+                                  {song.songStats?.peak != null && song.songStats?.weeksOnChart != null ? ' · ' : null}
+                                  {song.songStats?.weeksOnChart != null ? <><strong className="text-[var(--text)]">{song.songStats.weeksOnChart}</strong> wks on chart</> : null}
+                                  {song.album?.stats?.certifications?.[0] ? <> · Album {song.album.stats.certifications[0].level}</> : null}
+                                </p>
+                              ) : null}
+
                               {/* Interactive Audio Preview & Full Song Trigger Strip */}
                               <div className="mt-3 mb-2 flex items-center justify-between gap-2 rounded-lg border border-[var(--rule)]/60 bg-[var(--paper)]/80 px-2.5 py-1.5 text-xs">
                                 <div className="flex items-center gap-2">

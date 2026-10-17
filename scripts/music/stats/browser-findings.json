@@ -1,0 +1,53 @@
+{
+ "jp-2021-1": {
+  "song": {
+   "peak": 2,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 0,
+   "chart": "Billboard Japan Hot 100 (weekly)",
+   "sourceUrl": "https://ja.wikipedia.org/wiki/2021%E5%B9%B4Billboard_Japan_Hot_100%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB1%E4%BD%8D%E3%81%AE%E4%B8%80%E8%A6%A7",
+   "asOf": "2026-10-17"
+  },
+  "notes": "Opened in Chrome 2026-10-17: ja.wikipedia states the weekly Hot 100 peak was #2 (year-end #1); billboard-japan.com artist page opened but lists only artist-level counts."
+ },
+ "kr-2022-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Gaon/Circle Digital Chart (weekly)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tomboy_((G)I-dle_song)",
+   "asOf": "2026-10-17"
+  },
+  "notes": "Opened in Chrome: weekly Gaon peak 1, K-pop Hot 100 peak 1, Circle 2022 year-end 2; KMCA Platinum and RIAJ Gold are streaming certifications for the song."
+ },
+ "kr-2020-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Gaon Digital Chart (weekly)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Changmo",
+   "asOf": "2026-10-17"
+  },
+  "notes": "Opened in Chrome: Changmo discography table lists Meteor (2019) at #1 on Gaon with KMCA 2x Platinum; album Boyhood."
+ },
+ "cn-2024-1": {
+  "song": {
+   "peak": 1,
+   "chart": "Tencent Music Uni Chart (由你榜)",
+   "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%BE%8E%E6%BB%A1",
+   "asOf": "2026-10-17"
+  },
+  "notes": "Opened in Chrome: zh.wikipedia says 29 cumulative weeks at #1 on the Tencent Uni Chart; the catalog splits it 27 (2024) + 2 (2025) = 29, consistent."
+ },
+ "cn-2025-1": {
+  "song": {
+   "peak": 1,
+   "chart": "Tencent Music Uni Chart (由你榜)",
+   "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%BE%8E%E6%BB%A1",
+   "asOf": "2026-10-17"
+  },
+  "notes": "Same page: 29 cumulative weeks; catalog 2 = the 2025 weeks of that run."
+ }
+}

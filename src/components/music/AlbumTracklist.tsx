@@ -42,7 +42,7 @@ export function AlbumTracklist({
   const kind = album.kind === 'album' ? 'Album' : album.kind === 'ep' ? 'EP' : 'Single';
 
   return (
-    <div className={`${scroll ? 'mb-2 ' : ''}rounded-lg border border-[var(--rule)]/60 bg-[var(--paper)]/80 text-xs`}>
+    <div className={`${scroll ? 'mb-2 border-[var(--rule)]/60 bg-[var(--paper)]/80' : 'border-line bg-raised/40'} rounded-lg border text-xs`}>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -58,7 +58,7 @@ export function AlbumTracklist({
         </span>
       </button>
       {open ? (
-        <ol className={`divide-y divide-[var(--rule)]/50 border-t border-[var(--rule)]/60 ${scroll ? 'max-h-64 overflow-y-auto overscroll-contain pb-1' : ''}`}>
+        <ol className={`divide-y border-t ${scroll ? 'divide-[var(--rule)]/50 border-[var(--rule)]/60 max-h-64 overflow-y-auto overscroll-contain pb-1' : 'divide-line border-line'}`}>
           {queue.map((entry, i) => {
             const t = album.tracks[i];
             const playing = currentTrack?.id === entry.id && isPlaying;
