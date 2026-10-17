@@ -1758,11 +1758,11 @@
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
         "address": "11F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
         "productName": "Aoi Chaya — Kyoto Isetan",
-        "utcStartDateTime": "2026-10-16T00:00:00Z",
+        "utcStartDateTime": "1997-09-11T00:00:00.000Z",
         "allDay": true,
         "allDayStated": true,
         "dateConfidence": "estimated",
-        "dateConfidenceReasoning": "Established tenant; pin date is research verification date, not an opening date. Offer dates are published separately.",
+        "dateConfidenceReasoning": "An October 2014 interview by dining writer Kazuhiro Soga, published by Yuasa Soy Sauce, explicitly says this exact Kyoto Isetan 11F Aoi Chaya opened when Kyoto Station was renewed in Heisei 9 (1997). This supports the branch opening year. September 11 is an estimated timeline anchor to the documented Kyoto Isetan opening, not an independently verified restaurant month/day; exact-day operator confirmation remains a precision gap. October 16, 2026 was the research date, not this restaurant opening.",
         "categories": [
           "Food"
         ],
@@ -1773,31 +1773,43 @@
           "Japan",
           "Japanese"
         ],
-        "longFormSummary": "<p>Kyoto Isetan’s japanese venue offers a verified, dated autumn menu: Shugyo autumn set.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Established restaurant. 2026-10-16 is the guide verification date, not its opening date.</p>",
+        "longFormSummary": "<p>Kyoto Isetan’s japanese venue offers a verified, dated autumn menu: Shugyo autumn set.<cite data-ref=\"https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html\"></cite></p><p>Opening history: An October 2014 interview by dining writer Kazuhiro Soga, published by Yuasa Soy Sauce, explicitly says this exact Kyoto Isetan 11F Aoi Chaya opened when Kyoto Station was renewed in Heisei 9 (1997). This supports the branch opening year. September 11 is an estimated timeline anchor to the documented Kyoto Isetan opening, not an independently verified restaurant month/day; exact-day operator confirmation remains a precision gap. October 16, 2026 was the research date, not this restaurant opening.<cite data-ref=\"https://www.yuasasyouyu.co.jp/名料理かく語りき/葵茶屋（京都市下京区）/\"></cite><cite data-ref=\"https://www.westjr.co.jp/press/article/2018/02/page_11849.html\"></cite><cite data-ref=\"https://www.kyoto-station-building.co.jp/restaurant_cafe/012/\"></cite></p>",
         "references": [
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html#aoi-kyoto-isetan",
             "title": "Aoi Chaya — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
             "title": "Aoi Chaya — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.mistore.jp/store/kyoto/shops/floor11.html",
             "title": "Aoi Chaya — Kyoto Isetan source",
             "confidence": 90,
-            "reasoning": "Established restaurant. 2026-10-16 is the guide verification date, not its opening date."
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
           },
           {
             "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
             "title": "Aoi Chaya — Kyoto Isetan exact branch directory",
             "confidence": 95,
             "reasoning": "Kyoto Station Building operator directory confirms branch, phone, hours and own image."
+          },
+          {
+            "url": "https://www.yuasasyouyu.co.jp/名料理かく語りき/葵茶屋（京都市下京区）/",
+            "title": "葵茶屋（京都市下京区） — 曽我和弘, October 2014 chef interview",
+            "confidence": 85,
+            "reasoning": "An October 2014 interview by dining writer Kazuhiro Soga, published by Yuasa Soy Sauce, explicitly says this exact Kyoto Isetan 11F Aoi Chaya opened when Kyoto Station was renewed in Heisei 9 (1997). This supports the branch opening year. September 11 is an estimated timeline anchor to the documented Kyoto Isetan opening, not an independently verified restaurant month/day; exact-day operator confirmation remains a precision gap. October 16, 2026 was the research date, not this restaurant opening."
+          },
+          {
+            "url": "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+            "title": "JR West — Kyoto Isetan September 11, 1997 opening history",
+            "confidence": 85,
+            "reasoning": "An October 2014 interview by dining writer Kazuhiro Soga, published by Yuasa Soy Sauce, explicitly says this exact Kyoto Isetan 11F Aoi Chaya opened when Kyoto Station was renewed in Heisei 9 (1997). This supports the branch opening year. September 11 is an estimated timeline anchor to the documented Kyoto Isetan opening, not an independently verified restaurant month/day; exact-day operator confirmation remains a precision gap. October 16, 2026 was the research date, not this restaurant opening."
           }
         ]
       },

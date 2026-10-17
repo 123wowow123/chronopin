@@ -659,3 +659,11 @@ html .leaflet-container.pins-map .leaflet-bottom.leaflet-right {
 body:has(main[data-fullscreen]) [data-site-footer] {
   display: none;
 }
+
+/* A horizontally scrolling row with no visible scrollbar (the people tabs). */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

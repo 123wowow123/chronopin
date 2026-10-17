@@ -285,9 +285,30 @@
           "Kyoto Station — Wako restaurant on 11F"
         ]
       ]
+    },
+    {
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+      "day": "1997-09-11",
+      "confidence": "estimated",
+      "precision": "year",
+      "reason": "An October 2014 interview by dining writer Kazuhiro Soga, published by Yuasa Soy Sauce, explicitly says this exact Kyoto Isetan 11F Aoi Chaya opened when Kyoto Station was renewed in Heisei 9 (1997). This supports the branch opening year. September 11 is an estimated timeline anchor to the documented Kyoto Isetan opening, not an independently verified restaurant month/day; exact-day operator confirmation remains a precision gap. October 16, 2026 was the research date, not this restaurant opening.",
+      "sources": [
+        [
+          "https://www.yuasasyouyu.co.jp/名料理かく語りき/葵茶屋（京都市下京区）/",
+          "葵茶屋（京都市下京区） — 曽我和弘, October 2014 chef interview"
+        ],
+        [
+          "https://www.westjr.co.jp/press/article/2018/02/page_11849.html",
+          "JR West — Kyoto Isetan September 11, 1997 opening history"
+        ],
+        [
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "Kyoto Station — Aoi Chaya branch identity and telephone"
+        ]
+      ]
     }
   ],
-  "verifiedAtUtc": "2026-10-16T21:58:45.531390+00:00",
+  "verifiedAtUtc": "2026-10-17T01:25:49.240488+00:00",
   "verification": {
     "local": [
       {
@@ -446,6 +467,19 @@
       {
         "pinId": 15961,
         "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+        "date": "1997-09-11",
+        "dateConfidence": "estimated",
+        "precision": "year",
+        "authorPreserved": true,
+        "contentPreserved": true,
+        "offersPreserved": true,
+        "galleryPreserved": true,
+        "publicPinStatus": 200,
+        "publicOpeningReasonVerified": true
+      },
+      {
+        "pinId": 15954,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
         "date": "1997-09-11",
         "dateConfidence": "estimated",
         "precision": "year",
@@ -623,6 +657,19 @@
         "galleryPreserved": true,
         "publicPinStatus": 200,
         "publicOpeningReasonVerified": true
+      },
+      {
+        "pinId": 15954,
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+        "date": "1997-09-11",
+        "dateConfidence": "estimated",
+        "precision": "year",
+        "authorPreserved": true,
+        "contentPreserved": true,
+        "offersPreserved": true,
+        "galleryPreserved": true,
+        "publicPinStatus": 200,
+        "publicOpeningReasonVerified": true
       }
     ]
   },
@@ -669,21 +716,6 @@
       "researchGap": "Exact landlord branch page confirms the cafe but not its opening date; historical directory lists 4F Flags Cafe without a launch date. Brand dates and other department-store branches do not resolve this branch. Need a branch-specific operator/landlord launch archive.",
       "sourcesChecked": [
         "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
-        "https://www.imhds.co.jp/content/dam/imhds/assets/pdf/ja/ir/stockholder/report/isetan/2005_121_report_i.pdf"
-      ],
-      "historicalAnchor": "FY2005 Isetan report (year ended March 2006) lists established tenants; this is not an opening date."
-    },
-    {
-      "name": "Aoi Chaya — Kyoto Isetan",
-      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
-      "batch": 52,
-      "problem": "Research verification date used as restaurant start; branch opening date must be researched before correction.",
-      "status": "needs-opening-date-evidence",
-      "checkedAt": "2026-10-16",
-      "researchGap": "Exact landlord page and historical restaurant directory confirm Aoi Chaya 11F but give no launch date. Current operator recruitment identifies JR West Foodservice Net without dating this branch. Need the original exact-tenant launch record.",
-      "sourcesChecked": [
-        "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
-        "https://townwork.net/viewjob/jobid_48024e99dd5f91b5/",
         "https://www.imhds.co.jp/content/dam/imhds/assets/pdf/ja/ir/stockholder/report/isetan/2005_121_report_i.pdf"
       ],
       "historicalAnchor": "FY2005 Isetan report (year ended March 2006) lists established tenants; this is not an opening date."
@@ -776,6 +808,11 @@
       "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
       "precision": "year",
       "reason": "Firsthand review supports operation from 1997 department-store opening era; September 11 remains an estimated timeline anchor. Exact restaurant month/day needs operator confirmation."
+    },
+    {
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+      "precision": "year",
+      "reason": "October 2014 chef interview explicitly dates this exact branch opening to 1997. September 11 is an estimated department-store timeline anchor; exact restaurant month/day remains unverified."
     }
   ]
 }

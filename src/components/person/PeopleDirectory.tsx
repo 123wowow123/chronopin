@@ -41,11 +41,11 @@ function MiniRadar({ phases }: { phases: (number | null)[][] }) {
   return (
     <svg
       viewBox={`0 0 ${SIZE} ${SIZE}`}
-      width={48}
-      height={48}
+      width={40}
+      height={40}
       role="img"
       aria-label={t('person.octagon.title')}
-      className="shrink-0 rounded-lg bg-field ring-1 ring-line"
+      className="rounded-lg bg-field/90 shadow-sm ring-1 ring-line backdrop-blur-sm"
     >
       {/* The theme's own colours, so it sits on a light, dark or cream card. */}
       <polygon points={octagonRing(5, SIZE, RADIUS)} fill="none" className="stroke-ink/40" strokeWidth={0.8} />
@@ -77,13 +77,14 @@ function initials(name: string): string {
   return ((parts[0]?.[0] ?? '') + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase();
 }
 
-// A portrait, or the person's initials when there is none or it will not load.
+// A portrait filling the top of the card, or the person's initials when
+// there is none or it will not load. 250 is one of Wikimedia's ready-made widths.
 function Avatar({ person }: { person: DirectoryPerson }) {
   const [failed, setFailed] = useState(false);
-  const src = failed ? null : thumb(person.photoUrl);
+  const src = failed ? null : thumb(person.photoUrl, 250);
   if (!src) {
     return (
-      <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-raised text-sm font-semibold text-muted" aria-hidden>
+      <span className="flex size-full items-center justify-center bg-linear-to-br from-raised to-field text-3xl font-semibold tracking-wide text-subtle" aria-hidden>
         {initials(person.name)}
       </span>
     );
@@ -93,13 +94,13 @@ function Avatar({ person }: { person: DirectoryPerson }) {
     <img
       src={src}
       alt=""
-      width={48}
-      height={48}
+      width={250}
+      height={312}
       loading="lazy"
       decoding="async"
       referrerPolicy="no-referrer"
       onError={() => setFailed(true)}
-      className="size-12 min-w-0 shrink-0 rounded-lg bg-raised object-cover"
+      className="size-full min-w-0 bg-raised object-cover object-top transition-transform duration-300 group-hover:scale-105"
     />
   );
 }
@@ -199,7 +200,7 @@ export function PeopleDirectory({
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0">
           <div className="mb-3 flex flex-wrap items-center gap-x-5 gap-y-2">
-            <h1 className="text-3xl font-semibold tracking-tight">{title}</h1>
+            <h1 className="text-4xl font-semibold tracking-tight">{title}</h1>
             <WatchAllTradesButton />
           </div>
           <p className="max-w-3xl text-base text-muted">{description}</p>
@@ -260,7 +261,7 @@ export function PeopleDirectory({
       </div>
 
       {searching ? null : (
-      <div role="tablist" aria-label={title} className="-mx-1 flex flex-wrap gap-2 px-1">
+      <div role="tablist" aria-label={title} className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6">
         {groups.map((g) => {
           const selected = g.key === group.key;
           return (
@@ -272,7 +273,7 @@ export function PeopleDirectory({
               aria-selected={selected}
               aria-controls="people-panel"
               onClick={() => pick(g.key)}
-              className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-medium ring-1 ring-inset transition-colors ${
+              className={`inline-flex shrink-0 items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-medium ring-1 ring-inset transition-colors ${
                 selected ? 'bg-accent text-white ring-accent' : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
               }`}
             >
@@ -292,16 +293,25 @@ export function PeopleDirectory({
         {searching ? <p className="mb-4 text-sm text-muted">{t('person.results', { count: list.length })}</p> : null}
         {list.length ? (
           <>
-            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {list.slice(0, shown).map((p) => (
                 <li key={p.id}>
-                  <Link href={personPath(p.name)} className="floating flex items-center gap-3 px-3 py-2.5 hover:no-underline">
-                    <Avatar person={p} />
-                    <span className="flex min-w-0 flex-1 flex-col">
-                      <span className="truncate text-sm font-medium text-ink">{p.name}</span>
-                      {p.line ? <span className="truncate text-xs text-muted">{p.line}</span> : null}
+                  <Link
+                    href={personPath(p.name)}
+                    className="group floating flex h-full flex-col overflow-hidden transition-shadow hover:no-underline hover:shadow-lg focus-visible:ring-2 focus-visible:ring-accent"
+                  >
+                    <span className="relative block aspect-4/5 w-full overflow-hidden bg-raised">
+                      <Avatar person={p} />
+                      {p.radar?.length ? (
+                        <span className="absolute right-2 bottom-2">
+                          <MiniRadar phases={p.radar} />
+                        </span>
+                      ) : null}
                     </span>
-                    <MiniRadar phases={p.radar ?? []} />
+                    <span className="flex min-w-0 flex-1 flex-col gap-0.5 px-3 py-2.5">
+                      <span className="line-clamp-2 text-sm leading-snug font-semibold text-ink">{p.name}</span>
+                      {p.line ? <span className="line-clamp-2 text-xs leading-snug text-muted">{p.line}</span> : null}
+                    </span>
                   </Link>
                 </li>
               ))}
