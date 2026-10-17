@@ -1,7 +1,9 @@
 'use client';
 
 import { useMemo, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from '@/components/ui/Link';
+import { Icon } from '@/components/ui/Icon';
 import { useMusicPlayer } from './MusicPlayerContext';
 import { pinPath } from '@/lib/seo';
 
@@ -34,6 +36,14 @@ export function GlobalMusicPlayerBar() {
   } = useMusicPlayer();
 
   const progressRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const onLanding = /\/music\/?$/.test(pathname || '');
+  const locateHash = currentTrack
+    ? `#year=${currentTrack.year}&continent=${encodeURIComponent(currentTrack.continent)}&track=${encodeURIComponent(currentTrack.id)}`
+    : '';
+  const locateClass =
+    'inline-flex size-7 items-center justify-center rounded-full border border-line bg-raised text-link shadow-xs transition-colors hover:bg-raised-2 hover:no-underline cursor-pointer';
+  const locateInner = <Icon name="target" className="size-4" />;
 
   const handleProgressBarClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!progressRef.current) return;
@@ -210,6 +220,26 @@ export function GlobalMusicPlayerBar() {
 
             {/* Right desktop actions: Pin link, volume, close */}
             <div className="hidden sm:flex items-center gap-3 shrink-0">
+              {/* Locate in rankings: scroll on the landing page, else go there */}
+              {currentTrack && onLanding ? (
+                <button
+                  type="button"
+                  className={locateClass}
+                  title="Scroll to this song in the rankings"
+                  aria-label="Show in rankings"
+                  onClick={() => {
+                    window.history.replaceState(null, '', window.location.pathname + window.location.search + locateHash);
+                    window.dispatchEvent(new HashChangeEvent('hashchange'));
+                  }}
+                >
+                  {locateInner}
+                </button>
+              ) : currentTrack ? (
+                <Link href={`/music${locateHash}`} className={locateClass} title="Open this song on the music landing page" aria-label="Show in rankings">
+                  {locateInner}
+                </Link>
+              ) : null}
+
               {/* Full Song on Pin Link */}
               {pinHref ? (
                 <Link
@@ -361,18 +391,22 @@ export function GlobalMusicPlayerBar() {
 
             <span className="inline-flex items-center gap-2 text-xs font-mono font-medium tabular-nums text-muted shrink-0 whitespace-nowrap">
               {formatTime(duration)}
-              {currentTrack?.audioUrl?.includes('itunes.apple.com') ? (
+              {(currentTrack?.audioUrl?.includes('itunes.apple.com') || currentTrack?.audioUrl?.startsWith('/api/music/preview/')) ? (
                 <a
-                  href={`https://music.apple.com/search?term=${encodeURIComponent(`${currentTrack.title} ${currentTrack.artist}`)}`}
+                  href={
+                    currentTrack.audioUrl?.startsWith('/api/music/preview/')
+                      ? `https://www.deezer.com/track/${currentTrack.audioUrl.split('/').pop()}`
+                      : `https://music.apple.com/search?term=${encodeURIComponent(`${currentTrack.title} ${currentTrack.artist}`)}`
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 leading-none rounded-full border border-line bg-raised px-2 py-1 font-sans text-[11px] font-semibold text-ink transition-colors hover:bg-raised-2 hover:no-underline"
-                  title="30-second preview from Apple Music — open source"
+                  title="Open the source of this 30-second clip"
                 >
                   <svg className="size-3 text-[#fa243c]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M9 18V5l12-2v13a3 3 0 1 1-2-2.82V7.3L11 8.6V18a3 3 0 1 1-2-2.82z" />
                   </svg>
-                  Apple Music ↗
+                  {currentTrack.audioUrl?.startsWith('/api/music/preview/') ? 'Deezer' : 'Apple Music'} ↗
                 </a>
               ) : null}
             </span>

@@ -1,17 +1,17 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **420 verified memberships; 306 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **423 verified memberships; 303 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 64 at **420 memberships / 306 missing**, refreshed 2026-10-17T13:54:16.707503+00:00 (October 17, 22:54 JST / October 17, 06:54 PDT). Fukuoka Just opened now17 and Sapporo Just opened11. Existing Sanrio and Miyanomori enrichments add no distinct memberships. Specials count each venue once across available/upcoming offers. Earlier batch checkpoints below are historical.
+All 24 local and production public guide counts agree after batch 65 at **423 memberships / 303 missing**, refreshed 2026-10-17T14:01:17.159218+00:00 (October 17, 23:01 JST / October 17, 07:01 PDT). Nagoya Just opened now24 (six short), Sapporo Just opened12 and Fukuoka Just opened17. Existing menu enrichments add no distinct memberships. Specials count each venue once across available/upcoming offers. Earlier batch checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 10/30 | 17/30 | 14/30 | 23/30 |
 | Osaka | 11/30 | 14/30 | 10/30 | 19/30 |
 | Kyoto | 9/30 | 31/30 | 10/30 | 30/30 |
-| Nagoya | 11/30 | 22/30 | 12/30 | 17/30 |
+| Nagoya | 11/30 | 24/30 | 12/30 | 17/30 |
 | Tokyo | 11/30 | 12/30 | 24/30 | 33/30 |
-| Sapporo | 7/30 | 11/30 | 30/30 | 32/30 |
+| Sapporo | 7/30 | 12/30 | 30/30 | 32/30 |
 
 ## Each remaining shortage
 
@@ -30,7 +30,7 @@ All 24 local and production public guide counts agree after batch 64 at **420 me
 | Kyoto | Top restaurants | 10 | 10 | 30 | 20 |
 | Kyoto | Specials | 30 | 30 | 30 | 0 |
 | Nagoya | Coming soon | 11 | 11 | 30 | 19 |
-| Nagoya | Just opened | 22 | 22 | 30 | 8 |
+| Nagoya | Just opened | 24 | 24 | 30 | 6 |
 | Nagoya | Top restaurants | 12 | 12 | 30 | 18 |
 | Nagoya | Specials | 17 | 17 | 30 | 13 |
 | Tokyo | Coming soon | 11 | 11 | 30 | 19 |
@@ -38,7 +38,7 @@ All 24 local and production public guide counts agree after batch 64 at **420 me
 | Tokyo | Top restaurants | 24 | 24 | 30 | 6 |
 | Tokyo | Specials | 33 | 33 | 30 | 0 |
 | Sapporo | Coming soon | 7 | 7 | 30 | 23 |
-| Sapporo | Just opened | 11 | 11 | 30 | 19 |
+| Sapporo | Just opened | 12 | 12 | 30 | 18 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
 | Sapporo | Specials | 32 | 32 | 30 | 0 |
 
@@ -52,7 +52,7 @@ Nineteen cumulative branch opening-date repairs were read back in both environme
 
 Checked exact complete saved profiles, original author presence, native public pin pages and all ordinary menu items, Azure image decode/hash/credit metadata, all 37 new venue cards across paginated guide APIs, native pin identifiers/links and upcoming offer start times. All six production guide HTML pages also returned HTTP 200 with native pin title/image links. The existing Eggs ’n Things pin exposes all 11 new menu entries; the successor starts October 21 at 09:00 JST and retains the prior October 20 expiry.
 
-Continue every under-target cell. Highest Coming soon deficits: Sapporo 23, Kyoto 21, Fukuoka 20, Osaka/Nagoya/Tokyo 19. Nagoya Just opened remains eight short. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
+Continue every under-target cell. Highest Coming soon deficits: Sapporo 23, Kyoto 21, Fukuoka 20, Osaka/Nagoya/Tokyo 19. Nagoya Just opened remains six short. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
 
 No application code changes, build, restart or deployment. Release `157e1750` remains the previously documented deployed baseline; this content-maintenance session did not change it.
 
@@ -71,3 +71,8 @@ All four branches are now published and publicly verified in both environments. 
 ## Batch 64 completed
 
 Four new branches and two existing-profile enrichments published through APIs. Full profiles, all 169 menu entries, 25 gallery credits and native guide cards verified. Both environments agree at **420 / 306**. [Batch evidence](restaurant-japan-30-japan64-2026-10-17.json). No new offer, opening-date repair or deployment.
+
+
+## Batch 65 completed
+
+Three new branches and an existing upcoming branch menu refresh published through APIs. Full profiles, all 309 menu entries, 18 gallery credits and native guide cards verified. Both environments agree at **423 / 303**. [Batch evidence](restaurant-japan-30-japan65-2026-10-17.json). No new offer, opening-date repair or deployment.

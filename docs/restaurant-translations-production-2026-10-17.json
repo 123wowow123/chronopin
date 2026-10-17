@@ -1,0 +1,93 @@
+{
+  "completedAt": "2026-10-17T14:10:35.035Z",
+  "environment": "production",
+  "operation": "translations only",
+  "pins": [
+    {
+      "id": 16290,
+      "title": "Cafe & Dining Reen — YADO/Re Yakuin Opens in Yakuin",
+      "sourceHash": "ab1104ad2a80980d8baa569ba4fc56f009b44d6a"
+    },
+    {
+      "id": 16291,
+      "title": "APOC COFFEE — Hakata Chikushiguchi Opens in Hakata Station",
+      "sourceHash": "061b5197b091c765a48926217ba6e5dcb8610faf"
+    },
+    {
+      "id": 16292,
+      "title": "Hatena Coffee — Fukuoka Tenjin Opens in Tenjin",
+      "sourceHash": "d99fee6c0b0145923d0190f72fcbbf2e7e1c0539"
+    },
+    {
+      "id": 16293,
+      "title": "Night Parfait Nanakamado 64 Opens in Susukino",
+      "sourceHash": "5eb073de2d89104255b7dec50545e9ead4ea6baa"
+    },
+    {
+      "id": 16294,
+      "title": "Sakutako — Kurokawa Opens in Kurokawa",
+      "sourceHash": "729e546620530e64d974ac4d8b63d48c5c79b17f"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 75,
+  "skipped": [],
+  "verification": {
+    "liveLocalizedApiFieldsMatched": 75,
+    "unchangedEnglishOriginals": 5,
+    "publicPages": [
+      {
+        "pinId": 16290,
+        "locale": "ja",
+        "url": "https://www.chronopin.com/ja/pin/16290/cafe-dining-reen-yado-re-yakuin-opens-in-yakuin",
+        "status": 200,
+        "translatedTitleRendered": true
+      },
+      {
+        "pinId": 16291,
+        "locale": "zh",
+        "url": "https://www.chronopin.com/zh/pin/16291/apoc-coffee-hakata-chikushiguchi-opens-in-hakata-station",
+        "status": 200,
+        "translatedTitleRendered": true
+      },
+      {
+        "pinId": 16292,
+        "locale": "fr",
+        "url": "https://www.chronopin.com/fr/pin/16292/hatena-coffee-fukuoka-tenjin-opens-in-tenjin",
+        "status": 200,
+        "translatedTitleRendered": true
+      },
+      {
+        "pinId": 16293,
+        "locale": "ar",
+        "url": "https://www.chronopin.com/ar/pin/16293/night-parfait-nanakamado-64-opens-in-susukino",
+        "status": 200,
+        "translatedTitleRendered": true
+      },
+      {
+        "pinId": 16294,
+        "locale": "th",
+        "url": "https://www.chronopin.com/th/pin/16294/sakutako-kurokawa-opens-in-kurokawa",
+        "status": 200,
+        "translatedTitleRendered": true
+      }
+    ]
+  },
+  "deployment": false
+}

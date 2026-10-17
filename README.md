@@ -425,3 +425,11 @@ best of 2027 desert per brand per category
 
 
 have better model check music source link and playback and cover on landing page
+
+landing page by region mean the origin of the music needs to be produced there
+
+music pins should have 
+genres
+origin
+included in what album
+album should all have 30 playback

@@ -526,8 +526,11 @@ function YouTubeEmbed({ medium, title, autoplay: autoplayProp }: { medium: Mediu
     let pausedHidden = false;
     const playing = () => state === YT_PLAYING || state === YT_BUFFERING;
 
+    // Autoplay only gets the video started: once it has played, a later pause
+    // (the viewer's own) must stick instead of being answered with playVideo.
+    let autoStarted = false;
     const playIfRequested = () => {
-      if (autoPlayRequested) {
+      if (autoPlayRequested && !autoStarted) {
         send({ event: 'command', func: 'playVideo', args: '' });
         send({ event: 'command', func: 'playVideo', args: [] });
       }
@@ -541,6 +544,7 @@ function YouTubeEmbed({ medium, title, autoplay: autoplayProp }: { medium: Mediu
         const next = data.event === 'onStateChange' ? data.info : (data.info?.playerState ?? data.info?.state);
         if (typeof next === 'number') {
           state = next;
+          if (next === YT_PLAYING) autoStarted = true;
           const isPlayingNow = next === YT_PLAYING || next === YT_BUFFERING;
           window.dispatchEvent(
             new CustomEvent('chronopin:video-state-change', {

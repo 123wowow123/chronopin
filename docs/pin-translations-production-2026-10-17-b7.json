@@ -1,0 +1,218 @@
+{
+  "completedAt": "2026-10-17T15:01:51.523Z",
+  "environment": "production",
+  "operation": "translations only",
+  "scope": {
+    "restaurantPins": 0,
+    "musicPins": 15
+  },
+  "pins": [
+    {
+      "id": 16129,
+      "title": "Tyler ICU & Tumelo.za ft. DJ Maphorisa, Nandipha808, Ceeka RSA & Tyron Dee — \"Mnike\" (Spotify South Africa Wrapped 2023 - most streamed songs #1 2023)",
+      "sourceHash": "9a8ed917224205458546bfb2af45626498a07b84"
+    },
+    {
+      "id": 16130,
+      "title": "Charlie Zhou Shen (周深) — \"Hua Kai Wang You (花开忘忧)\" (TME Tencent Music Uni Chart (由你榜) annual song 2023 #1 2023)",
+      "sourceHash": "f99365a1b1fa074ffbb1cc4a90dee7bb835b149a"
+    },
+    {
+      "id": 16131,
+      "title": "YOASOBI — \"Idol (アイドル)\" (Billboard Japan Hot 100 Year-End #1 2023)",
+      "sourceHash": "bb8a3b0411b16076ae5ad9826772a3d84c43e683"
+    },
+    {
+      "id": 16132,
+      "title": "Official HIGE DANDism — \"Subtitle\" (Billboard Japan Hot 100 Year-End #2 2023)",
+      "sourceHash": "febd316bfb691ec3ca23771756f4611c8ebf6731"
+    },
+    {
+      "id": 16133,
+      "title": "NewJeans — \"Ditto\" (Circle Digital Chart (year-end) #1 2023)",
+      "sourceHash": "440587788b9f2227c718486780b67642d4132063"
+    },
+    {
+      "id": 16134,
+      "title": "NewJeans — \"Hype Boy\" (Circle Digital Chart (year-end) #2 2023)",
+      "sourceHash": "6f482dee04da4160168065490deffbbf449ce3af"
+    },
+    {
+      "id": 16135,
+      "title": "承桓 — \"我會等\" (KKBOX Mandarin Yearly Cumulative Singles Chart #1 2023)",
+      "sourceHash": "46911c1a0d4ef8262e23a5e4848108ead3894d74"
+    },
+    {
+      "id": 16137,
+      "title": "Miley Cyrus — \"Flowers\" (ARIA Top 100 Singles (year-end 2023) #1 2023)",
+      "sourceHash": "c9223cc9f17b9dfc4704dd6964481340703a4955"
+    },
+    {
+      "id": 16138,
+      "title": "Miley Cyrus — \"Flowers\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #1 2023)",
+      "sourceHash": "42ae09c7f9f76d959b3f207c33419fc2d907a318"
+    },
+    {
+      "id": 16139,
+      "title": "Elton John & Dua Lipa — \"Cold Heart (PNAU Remix)\" (Billboard Canadian Hot 100 #1 2022)",
+      "sourceHash": "f5cbe95f402a6152bec4389fc6880219af214b00"
+    },
+    {
+      "id": 16140,
+      "title": "Harry Styles — \"As It Was\" (Monitor Latino Mexico Top 100 (annual General) #1 2022)",
+      "sourceHash": "6570d371e9c22d4cc0a24e4e5aee057e9d05e490"
+    },
+    {
+      "id": 16141,
+      "title": "Harry Styles — \"As It Was\" (Billboard Hot 100 #2 2022)",
+      "sourceHash": "0fc241af4c2e29b305a2d4cce5dbc1769ba3f472"
+    },
+    {
+      "id": 16142,
+      "title": "The Kid LAROI & Justin Bieber — \"Stay\" (Billboard Hot 100 #3 2022)",
+      "sourceHash": "e8360e2fa42ff6728f936228f2e72e3b07f037da"
+    },
+    {
+      "id": 16143,
+      "title": "Manuel Turizo — \"La Bachata\" (Billboard Argentina Hot 100 #1 2022)",
+      "sourceHash": "f81efbb8bb5c9ce93ef22c676359125587bdf1d0"
+    },
+    {
+      "id": 16144,
+      "title": "Hugo & Guilherme, Marília Mendonça — \"Mal Feito (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #1 2022)",
+      "sourceHash": "36f80a915620d9ad7eb4fe124bc260669e83be73"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 225,
+  "skipped": [],
+  "verification": {
+    "liveLocalizedApiFieldsMatched": 225,
+    "unchangedEnglishOriginals": 15,
+    "publicPages": [
+      {
+        "pinId": 16129,
+        "locale": "ja",
+        "url": "https://www.chronopin.com/ja/pin/16129/tyler-icu-tumelo-za-ft-dj-maphorisa-nandipha808-ceeka-rsa-tyron-dee-mnike-spotif",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16130,
+        "locale": "zh",
+        "url": "https://www.chronopin.com/zh/pin/16130/charlie-zhou-shen-hua-kai-wang-you-tme-tencent-music-uni-chart-annual-song-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16131,
+        "locale": "fr",
+        "url": "https://www.chronopin.com/fr/pin/16131/yoasobi-idol-billboard-japan-hot-100-year-end-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16132,
+        "locale": "de",
+        "url": "https://www.chronopin.com/de/pin/16132/official-hige-dandism-subtitle-billboard-japan-hot-100-year-end-2-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16133,
+        "locale": "es",
+        "url": "https://www.chronopin.com/es/pin/16133/newjeans-ditto-circle-digital-chart-year-end-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16134,
+        "locale": "ar",
+        "url": "https://www.chronopin.com/ar/pin/16134/newjeans-hype-boy-circle-digital-chart-year-end-2-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16135,
+        "locale": "ko",
+        "url": "https://www.chronopin.com/ko/pin/16135/kkbox-mandarin-yearly-cumulative-singles-chart-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16137,
+        "locale": "hi",
+        "url": "https://www.chronopin.com/hi/pin/16137/miley-cyrus-flowers-aria-top-100-singles-year-end-2023-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16138,
+        "locale": "th",
+        "url": "https://www.chronopin.com/th/pin/16138/miley-cyrus-flowers-recorded-music-nz-official-top-40-year-end-top-50-singles-1",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16139,
+        "locale": "vi",
+        "url": "https://www.chronopin.com/vi/pin/16139/elton-john-dua-lipa-cold-heart-pnau-remix-billboard-canadian-hot-100-1-2022",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16140,
+        "locale": "it",
+        "url": "https://www.chronopin.com/it/pin/16140/harry-styles-as-it-was-monitor-latino-mexico-top-100-annual-general-1-2022",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16141,
+        "locale": "ru",
+        "url": "https://www.chronopin.com/ru/pin/16141/harry-styles-as-it-was-billboard-hot-100-2-2022",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16142,
+        "locale": "pt",
+        "url": "https://www.chronopin.com/pt/pin/16142/the-kid-laroi-justin-bieber-stay-billboard-hot-100-3-2022",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16143,
+        "locale": "ms",
+        "url": "https://www.chronopin.com/ms/pin/16143/manuel-turizo-la-bachata-billboard-argentina-hot-100-1-2022",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16144,
+        "locale": "id",
+        "url": "https://www.chronopin.com/id/pin/16144/hugo-guilherme-marilia-mendonca-mal-feito-ao-vivo-spotify-brasil-year-end-most-s",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      }
+    ]
+  },
+  "sourceUpdates": "Fresh source hashes matched before writing. Annual rankings, first-listed annual-song distinctions, weekly peaks, Circle point totals and radio-audience measures are preserved.",
+  "deployment": false
+}

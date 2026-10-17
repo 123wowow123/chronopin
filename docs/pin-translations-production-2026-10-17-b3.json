@@ -1,0 +1,158 @@
+{
+  "completedAt": "2026-10-17T14:32:13.652Z",
+  "environment": "production",
+  "operation": "translations only",
+  "scope": {
+    "restaurantPins": 1,
+    "musicPins": 9
+  },
+  "pins": [
+    {
+      "id": 16136,
+      "title": "PEAKS — THE GATE HOTEL Osaka — branch opening and menus",
+      "sourceHash": "46f98922a2fb40ac1a1424b1c0cb909f6a652209"
+    },
+    {
+      "id": 16065,
+      "title": "LBI利比 — \"Jumping Machine (跳樓機)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #1 2025)",
+      "sourceHash": "7c72972ff7c11a9013785d368dcb5145ec53c379"
+    },
+    {
+      "id": 16081,
+      "title": "Fuerza Regida — \"Tu Name\" (Monitor Latino Mexico Top 100 2026, unverified)",
+      "sourceHash": "b40311de1dbfa6e65769659a948dc1ebbadd1fb0"
+    },
+    {
+      "id": 16082,
+      "title": "Lady Gaga & Bruno Mars — \"Die With a Smile\" (Billboard Hot 100 #2 2026)",
+      "sourceHash": "84887b8b61609ac19a0702b4f6b2607e5d421281"
+    },
+    {
+      "id": 16083,
+      "title": "Sabrina Carpenter — \"Taste\" (Billboard Hot 100 #3 2026)",
+      "sourceHash": "1a7e91b83d03d303082fd9b5322aab61b998ad76"
+    },
+    {
+      "id": 16084,
+      "title": "Lauta & Amigo de Artistas — \"Punaladas\" (Billboard Argentina Hot 100 #1 2026)",
+      "sourceHash": "613ce40f9a2d1652725586437e2d0a74b5380068"
+    },
+    {
+      "id": 16085,
+      "title": "Panda & MJ Records — \"Eu Te Seguro (Ao Vivo)\" (Pro-Música most-played songs in Brazil, first half of 2026 (to date) #1 2026)",
+      "sourceHash": "b067f9a671a444fd6450ccd30056daca46bff61c"
+    },
+    {
+      "id": 16086,
+      "title": "Karol G — \"Si Antes Te Hubiera Conocido\" (Monitor Latino Colombia 2026, unverified)",
+      "sourceHash": "1997881245fad601ec62b868865c02e2874eb00a"
+    },
+    {
+      "id": 16087,
+      "title": "Disiz & Theodora — \"Melodrama\" (SNEP Top Singles (weekly #1s, year to date) #1 2026)",
+      "sourceHash": "60ceb5753fa4dddc9263bff8ffee788155b112f8"
+    },
+    {
+      "id": 16088,
+      "title": "Shakira and Burna Boy — \"Dai Dai\" (GfK Top 100 Singles #1 2026)",
+      "sourceHash": "9d488c931a5ca89475b80b3da4b004f3c8b846d5"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 150,
+  "skipped": [],
+  "verification": {
+    "liveLocalizedApiFieldsMatched": 150,
+    "unchangedEnglishOriginals": 10,
+    "publicPages": [
+      {
+        "pinId": 16136,
+        "locale": "ja",
+        "url": "https://www.chronopin.com/ja/pin/16136/peaks-the-gate-hotel-osaka-branch-opening-and-menus",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16065,
+        "locale": "zh",
+        "url": "https://www.chronopin.com/zh/pin/16065/lbi-jumping-machine-kkbox-mandarin-yearly-cumulative-singles-chart-1-2025",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16081,
+        "locale": "fr",
+        "url": "https://www.chronopin.com/fr/pin/16081/fuerza-regida-tu-name-monitor-latino-mexico-top-100-2026-unverified",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16082,
+        "locale": "de",
+        "url": "https://www.chronopin.com/de/pin/16082/lady-gaga-bruno-mars-die-with-a-smile-billboard-hot-100-2-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16083,
+        "locale": "es",
+        "url": "https://www.chronopin.com/es/pin/16083/sabrina-carpenter-taste-billboard-hot-100-3-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16084,
+        "locale": "ar",
+        "url": "https://www.chronopin.com/ar/pin/16084/lauta-amigo-de-artistas-punaladas-billboard-argentina-hot-100-1-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16085,
+        "locale": "ko",
+        "url": "https://www.chronopin.com/ko/pin/16085/panda-mj-records-eu-te-seguro-ao-vivo-pro-musica-most-played-songs-in-brazil-fir",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16086,
+        "locale": "hi",
+        "url": "https://www.chronopin.com/hi/pin/16086/karol-g-si-antes-te-hubiera-conocido-monitor-latino-colombia-2026-unverified",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16087,
+        "locale": "th",
+        "url": "https://www.chronopin.com/th/pin/16087/disiz-theodora-melodrama-snep-top-singles-weekly-1s-year-to-date-1-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16088,
+        "locale": "vi",
+        "url": "https://www.chronopin.com/vi/pin/16088/shakira-and-burna-boy-dai-dai-gfk-top-100-singles-1-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      }
+    ]
+  },
+  "sourceUpdates": "Seven music sources changed during preparation. Translations were refreshed from the corrected source text before writing; unverified chart claims remain explicitly unverified.",
+  "deployment": false
+}

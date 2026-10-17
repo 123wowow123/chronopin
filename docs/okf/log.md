@@ -1,5 +1,9 @@
 # Update Log
 
+## 2026-10-17
+
+* **Update:** Audited the music-ranking catalog (251 entries, 21 country lanes) against chart sources and strict iTunes matches. 71 confirmed, 159 corrected (wrong song, wrong rank or wrong media), 21 unverifiable; invented stream/week figures were removed, and 200 source wikis were written to `scripts/music/musicWikis.json`. All 251 production pins were re-pointed (scripts/music/repointProdPins.ts: title, text, source, date, tags, artwork; shared chart pages get a `#<id>` anchor on the source URL because prod rejects duplicate source URLs), 2 missing pins created (ca-2018-1 -> 16297, mx-2017-1 -> 16298), and 197 source wikis attached without server-side fetching (scripts/music/attachWikisProd.ts). Unverifiable entries are titled `(unverified)`. Translations of the changed pins are outdated; local pins were not touched. Entries with no strict iTunes match have no artwork or preview.
+
 ## 2026-10-16
 
 * **Update:** Completed 105 production translations across seven pins in all 15 non-English locales (90 missing, 15 outdated). Verified zero remaining due pins, localized responses in every language, and unchanged English text and authors. Recovered from temporary production 502s without deployment. Artifacts: ignored `.scrape/prod-batches/translations-2026-10-16-evening/`.

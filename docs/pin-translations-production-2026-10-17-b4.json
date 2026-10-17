@@ -1,0 +1,158 @@
+{
+  "completedAt": "2026-10-17T14:37:24.346Z",
+  "environment": "production",
+  "operation": "translations only",
+  "scope": {
+    "restaurantPins": 0,
+    "musicPins": 10
+  },
+  "pins": [
+    {
+      "id": 16089,
+      "title": "Samurai Jay & Vito Salamanca — \"Ossessione\" (FIMI Top of the Music #1 2026)",
+      "sourceHash": "50ed12fd19286d27e2d49d60ee506a9463775e25"
+    },
+    {
+      "id": 16090,
+      "title": "Quevedo — \"DURO\" (PROMUSICAE Top 100 Canciones 2026, unverified)",
+      "sourceHash": "59bd5c6d018b2da6598877579d20081d2877f36d"
+    },
+    {
+      "id": 16091,
+      "title": "Fröken Snusk — \"Unga & fria\" (Sverigetopplistan Årslistor 2026, unverified)",
+      "sourceHash": "94a610f6fae801593da0abd8d08c7e2de3e4f54a"
+    },
+    {
+      "id": 16092,
+      "title": "Gracie Abrams — \"That's So True\" (Official Charts UK Singles #2 2026)",
+      "sourceHash": "1aa8a700ae25fb1d7c7862a21369ad2162db2cf7"
+    },
+    {
+      "id": 16093,
+      "title": "Wizkid & Asake — \"Jogodo\" (TurnTable Official Nigeria Top 100 #1 2026)",
+      "sourceHash": "6a038f7174c7f837da80c9908a422a9b1efe7d34"
+    },
+    {
+      "id": 16094,
+      "title": "Tman Xpress & Mellow & Sleazy — \"Remember\" (The Official South African Charts (TOSAC) - Local Streaming Chart (year to date) #1 2026)",
+      "sourceHash": "a82b9ad2decd16b5bd0b56d5a7a5c5f9d6a5a9d4"
+    },
+    {
+      "id": 16095,
+      "title": "Joker Xue & Shan Yichun (薛之谦 / 单依纯) — \"Chen Mo De Tie Gui (沉没的铁轨)\" (TME Tencent Music Uni Chart 2026, unverified)",
+      "sourceHash": "0b28a574b9d7fdf00e6680188e9374c899603cf9"
+    },
+    {
+      "id": 16096,
+      "title": "Kenshi Yonezu (米津玄師) — \"Garakuta (がらくた)\" (Billboard Japan Hot 100 (Oricon Annual) #2 2026)",
+      "sourceHash": "411ea4c0cf2d5550846abbca4ab55dba1a06ab5c"
+    },
+    {
+      "id": 16097,
+      "title": "aespa — \"Whiplash\" (Circle Digital Chart (Melon Year-End) #2 2026)",
+      "sourceHash": "06d95a350164d07891a8dd26dc3c6fe841a9ce69"
+    },
+    {
+      "id": 16098,
+      "title": "A-Lin — \"幸福在歌唱 (Happiness Is Singing)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #1 2026)",
+      "sourceHash": "64d3fbd4224095559fed5a6a39304d53b35312ef"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 150,
+  "skipped": [],
+  "verification": {
+    "liveLocalizedApiFieldsMatched": 150,
+    "unchangedEnglishOriginals": 10,
+    "publicPages": [
+      {
+        "pinId": 16089,
+        "locale": "ja",
+        "url": "https://www.chronopin.com/ja/pin/16089/samurai-jay-vito-salamanca-ossessione-fimi-top-of-the-music-1-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16090,
+        "locale": "zh",
+        "url": "https://www.chronopin.com/zh/pin/16090/quevedo-duro-promusicae-top-100-canciones-2026-unverified",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16091,
+        "locale": "fr",
+        "url": "https://www.chronopin.com/fr/pin/16091/froken-snusk-unga-fria-sverigetopplistan-arslistor-2026-unverified",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16092,
+        "locale": "de",
+        "url": "https://www.chronopin.com/de/pin/16092/gracie-abrams-that-s-so-true-official-charts-uk-singles-2-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16093,
+        "locale": "es",
+        "url": "https://www.chronopin.com/es/pin/16093/wizkid-asake-jogodo-turntable-official-nigeria-top-100-1-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16094,
+        "locale": "ar",
+        "url": "https://www.chronopin.com/ar/pin/16094/tman-xpress-mellow-sleazy-remember-the-official-south-african-charts-tosac-local",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16095,
+        "locale": "ko",
+        "url": "https://www.chronopin.com/ko/pin/16095/joker-xue-shan-yichun-chen-mo-de-tie-gui-tme-tencent-music-uni-chart-2026-unveri",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16096,
+        "locale": "hi",
+        "url": "https://www.chronopin.com/hi/pin/16096/kenshi-yonezu-garakuta-billboard-japan-hot-100-oricon-annual-2-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16097,
+        "locale": "th",
+        "url": "https://www.chronopin.com/th/pin/16097/aespa-whiplash-circle-digital-chart-melon-year-end-2-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16098,
+        "locale": "vi",
+        "url": "https://www.chronopin.com/vi/pin/16098/a-lin-happiness-is-singing-kkbox-mandarin-yearly-cumulative-singles-chart-1-2026",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      }
+    ]
+  },
+  "sourceUpdates": "Fresh source hashes matched before writing. Three unverified chart claims and all year-to-date qualifications remain explicitly identified.",
+  "deployment": false
+}

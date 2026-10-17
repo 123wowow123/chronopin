@@ -1,0 +1,93 @@
+{
+  "completedAt": "2026-10-17T14:21:40.587Z",
+  "environment": "production",
+  "operation": "translations only",
+  "pins": [
+    {
+      "id": 16287,
+      "title": "Anchor Osaka — branch opening and menus",
+      "sourceHash": "9fd4f3af2e97f9b01d9715aefaa3e6142002c21e"
+    },
+    {
+      "id": 16288,
+      "title": "Brasserie RÉGINE — The St. Regis Osaka — branch opening and menus",
+      "sourceHash": "2440bc0b37c09b3363918368170cbb756a27905e"
+    },
+    {
+      "id": 16289,
+      "title": "Cafe & Dining LUANA — Times Spa Resta — branch opening and menus",
+      "sourceHash": "58fd78d14df970f1b8d019f6bb8decea53d30ab8"
+    },
+    {
+      "id": 16295,
+      "title": "Chihiro Kashiten — Shinsakae Aoi Opens in Shinsakae",
+      "sourceHash": "0f9965025c503bb7e91ff85ccb2a6cabf92098b1"
+    },
+    {
+      "id": 16296,
+      "title": "Olive no Oka — Sapporo Nishimachi Opens in Nishimachi",
+      "sourceHash": "d1b701783b8c06ccfbccb43f940f4d11176b9882"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 75,
+  "skipped": [],
+  "verification": {
+    "liveLocalizedApiFieldsMatched": 75,
+    "unchangedEnglishOriginals": 5,
+    "publicPages": [
+      {
+        "pinId": 16287,
+        "locale": "ja",
+        "url": "https://www.chronopin.com/ja/pin/16287/anchor-osaka-branch-opening-and-menus",
+        "status": 200,
+        "translatedTitleRendered": true
+      },
+      {
+        "pinId": 16288,
+        "locale": "zh",
+        "url": "https://www.chronopin.com/zh/pin/16288/brasserie-regine-the-st-regis-osaka-branch-opening-and-menus",
+        "status": 200,
+        "translatedTitleRendered": true
+      },
+      {
+        "pinId": 16289,
+        "locale": "fr",
+        "url": "https://www.chronopin.com/fr/pin/16289/cafe-dining-luana-times-spa-resta-branch-opening-and-menus",
+        "status": 200,
+        "translatedTitleRendered": true
+      },
+      {
+        "pinId": 16295,
+        "locale": "ar",
+        "url": "https://www.chronopin.com/ar/pin/16295/chihiro-kashiten-shinsakae-aoi-opens-in-shinsakae",
+        "status": 200,
+        "translatedTitleRendered": true
+      },
+      {
+        "pinId": 16296,
+        "locale": "th",
+        "url": "https://www.chronopin.com/th/pin/16296/olive-no-oka-sapporo-nishimachi-opens-in-nishimachi",
+        "status": 200,
+        "translatedTitleRendered": true
+      }
+    ]
+  },
+  "deployment": false
+}

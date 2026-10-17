@@ -40,6 +40,7 @@ export function MusicRankingView({
   // Persist the year / continent tabs in the URL hash (#year=2024&continent=Asia)
   const hashReady = useRef(false);
   const [focusId, setFocusId] = useState<string | null>(null);
+  const [focusNonce, setFocusNonce] = useState(0);
   useEffect(() => {
     const readHash = () => {
       const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
@@ -47,11 +48,13 @@ export function MusicRankingView({
       const parsed = yr && yr !== 'all' ? Number(yr) : NaN;
       setSelectedYear(Number.isFinite(parsed) ? parsed : 'all');
       setSelectedContinent(params.get('continent') || 'all');
+      const track = params.get('track');
+      if (track) {
+        setFocusId(track);
+        setFocusNonce((n) => n + 1);
+      }
     };
     readHash();
-    // #track=<id> (from a pin's Music Rankings button): scroll to and highlight that card
-    const track = new URLSearchParams(window.location.hash.replace(/^#/, '')).get('track');
-    if (track) setFocusId(track);
     hashReady.current = true;
     window.addEventListener('hashchange', readHash);
     return () => window.removeEventListener('hashchange', readHash);
@@ -84,7 +87,7 @@ export function MusicRankingView({
     const el = document.getElementById(`track-${focusId}`);
     if (!el) return;
     el.scrollIntoView({ block: 'center' });
-  }, [focusId, continentGroups]);
+  }, [focusId, focusNonce, continentGroups]);
 
   // Flattened ordered list of tracks currently displayed on the landing page
   const landingPageQueue = useMemo(() => {

@@ -3377,6 +3377,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "RKT"
     ],
     "artworkUrl": "",
+    "audioUrl": "/api/music/preview/1478561102",
     "youtubeId": "Jt1gcpPfINA",
     "youtubeUrl": "https://www.youtube.com/watch?v=Jt1gcpPfINA",
     "weeksAtNumberOne": 8,
@@ -4018,6 +4019,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Hip-Hop"
     ],
     "artworkUrl": "",
+    "audioUrl": "/api/music/preview/796342592",
     "youtubeId": "tbneQDc2H3I",
     "youtubeUrl": "https://www.youtube.com/watch?v=tbneQDc2H3I",
     "weeksAtNumberOne": 25,
@@ -4662,6 +4664,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Urban"
     ],
     "artworkUrl": "",
+    "audioUrl": "/api/music/preview/664101732",
     "youtubeId": "t_qn-f7XfJo",
     "youtubeUrl": "https://www.youtube.com/watch?v=t_qn-f7XfJo",
     "weeksAtNumberOne": 13,
@@ -5223,6 +5226,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Urban"
     ],
     "artworkUrl": "",
+    "audioUrl": "/api/music/preview/716383912",
     "youtubeId": "ixkoVwKQaJg",
     "youtubeUrl": "https://www.youtube.com/watch?v=ixkoVwKQaJg",
     "weeksAtNumberOne": 5,
@@ -5447,6 +5451,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "Afrobeats"
     ],
     "artworkUrl": "",
+    "audioUrl": "/api/music/preview/464037062",
     "youtubeId": "1VrWaED18_g",
     "youtubeUrl": "https://www.youtube.com/watch?v=1VrWaED18_g",
     "summary": "No TurnTable Nigeria chart existed in 2018; TurnTable launched its first chart in July 2020."

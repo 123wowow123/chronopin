@@ -1,0 +1,218 @@
+{
+  "completedAt": "2026-10-17T14:42:20.298Z",
+  "environment": "production",
+  "operation": "translations only",
+  "scope": {
+    "restaurantPins": 0,
+    "musicPins": 15
+  },
+  "pins": [
+    {
+      "id": 16099,
+      "title": "L.A.B. — \"Ocean Demon\" (Recorded Music NZ Official Top 40 2026, unverified)",
+      "sourceHash": "77a3e1077c8365779b384b1faff5265e01ce3374"
+    },
+    {
+      "id": 16100,
+      "title": "Billie Eilish — \"Birds of a Feather\" (Billboard Canadian Hot 100 #2 2025)",
+      "sourceHash": "3302832626c37ffdd33db55f9f0f5736f346b1dc"
+    },
+    {
+      "id": 16101,
+      "title": "Kendrick Lamar — \"Not Like Us\" (Billboard Hot 100 #2 2025)",
+      "sourceHash": "4b016402bf3a294d6ddf13ddb96c73818350034e"
+    },
+    {
+      "id": 16102,
+      "title": "Sabrina Carpenter — \"Espresso\" (Billboard Hot 100 #3 2025)",
+      "sourceHash": "1f4c7a6d51b2d4f9596fbbaf12e1bc3582080e41"
+    },
+    {
+      "id": 16103,
+      "title": "Chappell Roan — \"Good Luck, Babe!\" (Official Charts UK Singles #2 2025)",
+      "sourceHash": "c017b1c8d54c7258d591b8638417023789c4e185"
+    },
+    {
+      "id": 16104,
+      "title": "Mrs. GREEN APPLE — \"Darling (ダーリン)\" (Billboard Japan Hot 100 Year-End #2 2025)",
+      "sourceHash": "4d88d4eb44abf99bb28f632ce4446e5570fa5bf6"
+    },
+    {
+      "id": 16105,
+      "title": "ILLIT — \"Magnetic\" (Circle Digital Chart (Melon Year-End) #2 2025)",
+      "sourceHash": "39bec3e59c3cbecd34ab21f3b1eb54c6137b58a7"
+    },
+    {
+      "id": 16106,
+      "title": "Post Malone ft. Morgan Wallen — \"I Had Some Help\" (Billboard Hot 100 #2 2024)",
+      "sourceHash": "ace6308274b463d899706a212fdc2ca8523ac5b9"
+    },
+    {
+      "id": 16107,
+      "title": "Kendrick Lamar — \"Not Like Us\" (Billboard Hot 100 #3 2024)",
+      "sourceHash": "a3d96b4930c8da6a4cf3851411dd89f83c5cbc09"
+    },
+    {
+      "id": 16108,
+      "title": "Mahmood — \"Tuta Gold\" (FIMI Top of the Music #1 2024)",
+      "sourceHash": "8a0f977284f60316d91084be526767d5862a2cf2"
+    },
+    {
+      "id": 16109,
+      "title": "Shaboozey — \"A Bar Song (Tipsy)\" (Sverigetopplistan Årslista Singlar #1 2024)",
+      "sourceHash": "e17c31965492a07bc2e3af79c0d4f010465a9d74"
+    },
+    {
+      "id": 16110,
+      "title": "Sabrina Carpenter — \"Espresso\" (Official Charts UK Singles #2 2024)",
+      "sourceHash": "a42ebbc0bfc8a15cad0649b7529345e5f69e6f89"
+    },
+    {
+      "id": 16111,
+      "title": "tuki. — \"Bansanka (晩餐歌)\" (Billboard Japan Hot 100 Year-End #2 2024)",
+      "sourceHash": "12108a848527a40ea9ced81dac6fd87f4a321515"
+    },
+    {
+      "id": 16112,
+      "title": "aespa — \"Supernova\" (Circle Digital Chart (Melon Year-End) #2 2024)",
+      "sourceHash": "a2f99e7f153eaa3608e9ea1f01a8d09bab76b1f9"
+    },
+    {
+      "id": 16113,
+      "title": "邱軍 (Kui) — \"運轉人生 (Life Goes On)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #1 2024)",
+      "sourceHash": "3ec798bf5b9bab3d3e4b98aba8523aeb6bf83fb3"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 225,
+  "skipped": [],
+  "verification": {
+    "liveLocalizedApiFieldsMatched": 225,
+    "unchangedEnglishOriginals": 15,
+    "publicPages": [
+      {
+        "pinId": 16099,
+        "locale": "ja",
+        "url": "https://www.chronopin.com/ja/pin/16099/l-a-b-ocean-demon-recorded-music-nz-official-top-40-2026-unverified",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16100,
+        "locale": "zh",
+        "url": "https://www.chronopin.com/zh/pin/16100/billie-eilish-birds-of-a-feather-billboard-canadian-hot-100-2-2025",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16101,
+        "locale": "fr",
+        "url": "https://www.chronopin.com/fr/pin/16101/kendrick-lamar-not-like-us-billboard-hot-100-2-2025",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16102,
+        "locale": "de",
+        "url": "https://www.chronopin.com/de/pin/16102/sabrina-carpenter-espresso-billboard-hot-100-3-2025",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16103,
+        "locale": "es",
+        "url": "https://www.chronopin.com/es/pin/16103/chappell-roan-good-luck-babe-official-charts-uk-singles-2-2025",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16104,
+        "locale": "ar",
+        "url": "https://www.chronopin.com/ar/pin/16104/mrs-green-apple-darling-billboard-japan-hot-100-year-end-2-2025",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16105,
+        "locale": "ko",
+        "url": "https://www.chronopin.com/ko/pin/16105/illit-magnetic-circle-digital-chart-melon-year-end-2-2025",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16106,
+        "locale": "hi",
+        "url": "https://www.chronopin.com/hi/pin/16106/post-malone-ft-morgan-wallen-i-had-some-help-billboard-hot-100-2-2024",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16107,
+        "locale": "th",
+        "url": "https://www.chronopin.com/th/pin/16107/kendrick-lamar-not-like-us-billboard-hot-100-3-2024",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16108,
+        "locale": "vi",
+        "url": "https://www.chronopin.com/vi/pin/16108/mahmood-tuta-gold-fimi-top-of-the-music-1-2024",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16109,
+        "locale": "it",
+        "url": "https://www.chronopin.com/it/pin/16109/shaboozey-a-bar-song-tipsy-sverigetopplistan-arslista-singlar-1-2024",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16110,
+        "locale": "ru",
+        "url": "https://www.chronopin.com/ru/pin/16110/sabrina-carpenter-espresso-official-charts-uk-singles-2-2024",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16111,
+        "locale": "pt",
+        "url": "https://www.chronopin.com/pt/pin/16111/tuki-bansanka-billboard-japan-hot-100-year-end-2-2024",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16112,
+        "locale": "ms",
+        "url": "https://www.chronopin.com/ms/pin/16112/aespa-supernova-circle-digital-chart-melon-year-end-2-2024",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16113,
+        "locale": "id",
+        "url": "https://www.chronopin.com/id/pin/16113/kui-life-goes-on-kkbox-mandarin-yearly-cumulative-singles-chart-1-2024",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      }
+    ]
+  },
+  "sourceUpdates": "Fresh source hashes matched before writing. The unverified chart claim and distinctions between annual rankings, weekly peaks and non-consecutive weeks remain explicitly identified.",
+  "deployment": false
+}
