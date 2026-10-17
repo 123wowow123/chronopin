@@ -344,6 +344,9 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
               <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
             </DrawerSection>
           ) : null}
+          <DrawerSection title="People" hideTitle>
+            {link('/people', 'users', 'People')}
+          </DrawerSection>
           <DrawerSection title="Curated" className="pb-1!">
             {link('/restaurants', 'map', 'Restaurants')}
             {link('/travel', 'globe', 'Travel')}

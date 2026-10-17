@@ -18,7 +18,7 @@ import type { MessageKey } from '@/lib/i18n/translate';
 const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline active:bg-raised-2';
 const itemIconClass = 'size-4 text-subtle';
 
-type MenuItem = { href: string; label: MessageKey | 'Restaurants' | 'Products' | 'Cars' | 'Travel' | 'Music'; icon: IconName };
+type MenuItem = { href: string; label: MessageKey | 'Restaurants' | 'Products' | 'Cars' | 'Travel' | 'Music' | 'People'; icon: IconName };
 type MenuGroup = { title?: string; items: MenuItem[] };
 
 // The account menu, in groups separated by a rule. Admin tools only for admins.
@@ -26,7 +26,7 @@ type MenuGroup = { title?: string; items: MenuItem[] };
 // (SignedInAs) is that link, since it already names the account they belong to.
 function accountGroups(isAdmin: boolean): MenuGroup[] {
   const groups: MenuGroup[] = [
-    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }] },
+    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }, { href: '/people', label: 'People', icon: 'users' }] },
     { title: 'Curated', items: [{ href: '/restaurants', label: 'Restaurants', icon: 'map' }, { href: '/travel', label: 'Travel', icon: 'globe' }, { href: '/products', label: 'Products', icon: 'cart' }, { href: '/cars', label: 'Cars', icon: 'car' }, { href: '/music', label: 'Music', icon: 'music' }] },
   ];
   if (isAdmin) groups.push({ items: [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }] });

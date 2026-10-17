@@ -214,3 +214,5 @@ When using a fallback machine translator, translate HTML text nodes and rebuild 
 For opening titles, make the restaurant the explicit subject and retain branch/location context; a station or department-store branch label must not become the business being opened. After a POST timeout or 502, check saved coverage before retrying: the rows may already have committed. Keep writes serial during service instability and retry remaining work after recovery.
 
 Reuse reviewed translations only for exact source-text matches. Similar collaboration-café sentences may name different franchises or date ranges; never apply a correction solely by a shared sentence prefix.
+
+For prediction-market text, keep “strike” as an exercise-price threshold, never a labor strike, and distinguish traded dollar volume from sales revenue. Preserve artist and song names in music-chart pins. Validate stream-count abbreviations (`M`/`B`) against localized magnitudes, and review truncated sentences even when their remaining text looks grammatical.

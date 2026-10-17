@@ -15,6 +15,12 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 
 
 
+## 2026-10-16 - Production translation refresh and concurrent additions
+
+* **Done:** Saved 1,140 production translations across 76 pins in all 15 non-English locales: 900 missing and 240 outdated. Included 12 new pins found during the run. Final global export showed zero due pins; public localized checks covered every pin and locale, and all English fields and authors were preserved. Exports, reviewed corrections, saves and verification are in ignored `.scrape/prod-batches/translations-2026-10-16-refresh/` and `translations-2026-10-16-refresh-wave2/`.
+* **Learned:** Financial “strike” can become a labor strike; preserve exercise-price terminology and complete chart names such as Billboard Global Excl. US. Music translations can truncate after an artist name, turn concert tours into sightseeing, or mistake Bruno Mars's surname for a French month in numeric validation. Review stream-count scales, opening-title subjects and source text nodes; keep equivalence approvals tied to exact source/result pairs. Requery after saving to catch pins added concurrently.
+* **Changed:** Added financial-term and music-name guidance to [Enrichment](enrichment.md#pin-translations); recorded the completed refresh in the update log. No application deployment.
+
 ## 2026-10-16 - Full production translation backlog
 
 * **Done:** Saved 1,350 production translations for 90 pins (1,290 missing, 60 outdated), using current source hashes through the admin API. Re-export verified zero missing, outdated or incomplete pins; 30 localized public checks covered every locale, and all 90 original English pins and authors were unchanged. Artifacts and verification: ignored `.scrape/prod-batches/translations-2026-10-16-all/`.

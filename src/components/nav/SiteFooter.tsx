@@ -17,9 +17,6 @@ async function currentYear() {
 export async function SiteFooter() {
   const [t, year] = await Promise.all([getT(), currentYear()]);
   const links = [
-    { href: '/restaurants', label: 'Restaurants' },
-    { href: '/travel', label: 'Travel' },
-    { href: '/music', label: 'Music' },
     { href: LEGAL_PATHS.about, label: t('about.title') },
     { href: LEGAL_PATHS.privacy, label: t('legal.privacyTitle') },
     { href: LEGAL_PATHS.terms, label: t('legal.termsTitle') },

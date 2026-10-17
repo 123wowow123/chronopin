@@ -609,6 +609,14 @@ export function WeatherButton({ className = '' }: { className?: string }) {
       {open ? (
         <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
           <LocalWeatherRow className={weather ? 'border-b border-line' : ''} />
+          <ul className="pt-1.5">
+            <li className="px-1.5">
+              <Link href="/people" onClick={() => setOpen(false)} className="flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm font-medium text-ink hover:bg-raised hover:no-underline">
+                <Icon name="users" className="size-4 text-muted" />
+                People
+              </Link>
+            </li>
+          </ul>
           <div className="px-4 pt-2.5 pb-1 text-[11px] font-semibold tracking-wider text-subtle uppercase">Curated</div>
           <ul className="pb-1.5">
             {CURATED_LINKS.map((item) => (
