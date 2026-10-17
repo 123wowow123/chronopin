@@ -39,6 +39,7 @@ export function MusicRankingView({
 
   // Persist the year / continent tabs in the URL hash (#year=2024&continent=Asia)
   const hashReady = useRef(false);
+  const [focusId, setFocusId] = useState<string | null>(null);
   useEffect(() => {
     const readHash = () => {
       const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
@@ -48,6 +49,9 @@ export function MusicRankingView({
       setSelectedContinent(params.get('continent') || 'all');
     };
     readHash();
+    // #track=<id> (from a pin's Music Rankings button): scroll to and highlight that card
+    const track = new URLSearchParams(window.location.hash.replace(/^#/, '')).get('track');
+    if (track) setFocusId(track);
     hashReady.current = true;
     window.addEventListener('hashchange', readHash);
     return () => window.removeEventListener('hashchange', readHash);
@@ -74,6 +78,13 @@ export function MusicRankingView({
       query: searchQuery,
     });
   }, [initialRankings, selectedYear, selectedContinent, searchQuery]);
+
+  useEffect(() => {
+    if (!focusId) return;
+    const el = document.getElementById(`track-${focusId}`);
+    if (!el) return;
+    el.scrollIntoView({ block: 'center' });
+  }, [focusId, continentGroups]);
 
   // Flattened ordered list of tracks currently displayed on the landing page
   const landingPageQueue = useMemo(() => {
@@ -175,7 +186,7 @@ export function MusicRankingView({
               >
                 {/* eslint-disable-next-line @next/next/no-img-element -- external music artwork images */}
                 <img
-                  src={featured.artworkUrl}
+                  src={featured.artworkUrl || undefined}
                   alt={`${featured.title} artwork`}
                   className={styles.featuredImage}
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
@@ -478,8 +489,9 @@ export function MusicRankingView({
                         return (
                           <article
                             key={song.id}
-                            className={`${styles.card} transition-shadow ${
-                              isThisPlaying ? 'ring-2 ring-[var(--green)] shadow-md' : ''
+                            id={`track-${song.id}`}
+                            className={`${styles.card} scroll-mt-24 transition-shadow ${
+                              isThisPlaying || focusId === song.id ? 'ring-2 ring-[var(--green)] shadow-md' : ''
                             }`}
                           >
                             {/* Photo / Artwork with Play Button Overlay */}
@@ -491,7 +503,7 @@ export function MusicRankingView({
                               >
                                 {/* eslint-disable-next-line @next/next/no-img-element -- external music artwork images */}
                                 <img
-                                  src={song.artworkUrl}
+                                  src={song.artworkUrl || undefined}
                                   alt={`${song.title} by ${song.artist}`}
                                   className={`${styles.cardImage} transition-transform duration-300 group-hover/art:scale-105`}
                                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}

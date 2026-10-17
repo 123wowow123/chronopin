@@ -72,7 +72,7 @@ export function GlobalMusicPlayerBar() {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element -- external audio artwork */}
                   <img
-                    src={currentTrack.artworkUrl}
+                    src={currentTrack.artworkUrl || undefined}
                     alt={`${currentTrack.title} artwork`}
                     className="size-full object-cover transition-transform duration-200 group-hover:scale-105"
                   />
@@ -90,7 +90,7 @@ export function GlobalMusicPlayerBar() {
                 <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-line bg-raised shadow-xs">
                   {/* eslint-disable-next-line @next/next/no-img-element -- external audio artwork */}
                   <img
-                    src={currentTrack.artworkUrl}
+                    src={currentTrack.artworkUrl || undefined}
                     alt={`${currentTrack.title} artwork`}
                     className="size-full object-cover"
                   />
@@ -359,8 +359,22 @@ export function GlobalMusicPlayerBar() {
               />
             </div>
 
-            <span className="text-xs font-mono font-medium tabular-nums text-muted shrink-0 whitespace-nowrap">
-              {formatTime(duration)} preview
+            <span className="inline-flex items-center gap-2 text-xs font-mono font-medium tabular-nums text-muted shrink-0 whitespace-nowrap">
+              {formatTime(duration)}
+              {currentTrack?.audioUrl?.includes('itunes.apple.com') ? (
+                <a
+                  href={`https://music.apple.com/search?term=${encodeURIComponent(`${currentTrack.title} ${currentTrack.artist}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 leading-none rounded-full border border-line bg-raised px-2 py-1 font-sans text-[11px] font-semibold text-ink transition-colors hover:bg-raised-2 hover:no-underline"
+                  title="30-second preview from Apple Music — open source"
+                >
+                  <svg className="size-3 text-[#fa243c]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M9 18V5l12-2v13a3 3 0 1 1-2-2.82V7.3L11 8.6V18a3 3 0 1 1-2-2.82z" />
+                  </svg>
+                  Apple Music ↗
+                </a>
+              ) : null}
             </span>
           </div>
         </div>
