@@ -432,4 +432,4 @@ music pins should have
 genres
 origin
 included in what album
-album should all have 30 playback
+album songs should all have 30 playback

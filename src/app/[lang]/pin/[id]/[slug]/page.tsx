@@ -28,6 +28,7 @@ import { PinGasCarPerf } from '@/components/pin/PinGasCarPerf';
 import { PinDining } from '@/components/pin/PinDining';
 import { getAdjacentMusicRankings, getMusicRankingByTitleOrPin } from '@/lib/music';
 import { MusicPinNav } from '@/components/music/MusicPinNav';
+import { AlbumTracklist } from '@/components/music/AlbumTracklist';
 import { PinHotel } from '@/components/pin/PinHotel';
 import { getResortPricePerNight } from '@/lib/travel';
 import { PinModelChart } from '@/components/pin/PinModelChart';
@@ -411,7 +412,7 @@ async function PinBody({
             {t.dynamic('pin.curatedRestaurants', 'Curated restaurants')}
           </Link> : null}
           {musicEntry ? (
-            <Link href={`/music#year=${musicEntry.year}&continent=${encodeURIComponent(musicEntry.continent)}&track=${encodeURIComponent(musicEntry.id)}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
+            <Link href={`/music#year=${musicEntry.year}&continent=${encodeURIComponent(musicEntry.originContinent ?? musicEntry.continent)}&track=${encodeURIComponent(musicEntry.id)}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
               <Icon name="music" className="size-3.5 text-link" />
               {t.dynamic('pin.musicRankings', 'Music Rankings')}
             </Link>
@@ -516,23 +517,54 @@ async function PinBody({
       <PinSeriesChart pinId={pin.id} has={!!pin.series?.length} />
 
       {musicEntry ? (
-        <div className="surface mb-4 rounded-xl border border-line bg-raised/40 p-4">
+        <div data-music-panel className="surface mb-4 rounded-xl border border-line bg-raised/40 p-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <span className="text-2xl" role="img" aria-label={musicEntry.country}>
-                {musicEntry.countryFlag}
+              <span className="text-2xl" role="img" aria-label={musicEntry.originCountry ?? musicEntry.country}>
+                {musicEntry.originFlag ?? musicEntry.countryFlag}
               </span>
               <div>
                 <p className="text-sm font-semibold text-ink">
                   #{musicEntry.rank} on {musicEntry.chartName} ({musicEntry.year})
                 </p>
                 <p className="text-xs text-muted">
-                  {musicEntry.chartAuthority} · {musicEntry.streamsOrUnits ?? musicEntry.genres.join(', ')}
+                  {musicEntry.chartAuthority}{musicEntry.streamsOrUnits ? ` · ${musicEntry.streamsOrUnits}` : ''}
                 </p>
+                <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
+                  {(() => {
+                    const pill = 'inline-flex items-center rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-ink ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:no-underline';
+                    const q = (v: string) => `/search?q=${encodeURIComponent(v)}`;
+                    const originName = musicEntry.originCountry ?? musicEntry.country;
+                    return (
+                      <>
+                        <strong className="font-semibold text-ink">Origin</strong>
+                        <Link href={q(originName)} className={pill} title={`Search ${originName}`}>{originName}</Link>
+                        {musicEntry.originArea && musicEntry.originArea !== originName ? (
+                          <Link href={q(musicEntry.originArea)} className={pill}>{musicEntry.originArea}</Link>
+                        ) : null}
+                        <strong className="ml-1 font-semibold text-ink">Genres</strong>
+                        {musicEntry.genres.map((g) => (
+                          <Link key={g} href={q(g)} className={pill} title={`Search ${g}`}>{g}</Link>
+                        ))}
+                        {musicEntry.album ? (
+                          <>
+                            <strong className="ml-1 font-semibold text-ink">{musicEntry.album.kind === 'single' ? 'Single' : musicEntry.album.kind === 'ep' ? 'EP' : 'Album'}</strong>
+                            <Link href={q(musicEntry.album.title)} className={pill} title={`Search ${musicEntry.album.title}`}>{musicEntry.album.title}</Link>
+                          </>
+                        ) : null}
+                      </>
+                    );
+                  })()}
+                </div>
               </div>
             </div>
             <MusicPinNav entry={musicEntry} adjacent={musicAdjacent} variant="card" autoplay={autoplay} />
           </div>
+          {musicEntry.album ? (
+            <div className="mt-3">
+              <AlbumTracklist song={musicEntry} open />
+            </div>
+          ) : null}
         </div>
       ) : null}
 

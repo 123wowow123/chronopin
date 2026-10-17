@@ -10,9 +10,11 @@ import {
   CONTINENTS,
   filterAndGroupMusicRankings,
   getAvailableYears,
+  originOf,
   type MusicRankingEntry,
 } from '@/lib/music';
 import { useMusicPlayer } from './MusicPlayerContext';
+import { AlbumTracklist } from './AlbumTracklist';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
 
@@ -115,7 +117,7 @@ export function MusicRankingView({
 
   const totalCountries = useMemo(() => {
     const set = new Set<string>();
-    for (const r of initialRankings) set.add(r.country);
+    for (const r of initialRankings) set.add(originOf(r).name);
     return set.size;
   }, [initialRankings]);
 
@@ -473,11 +475,11 @@ export function MusicRankingView({
                         </h3>
                         <span className="text-[var(--soft)]">·</span>
                         <span className="text-sm font-semibold text-[var(--green)]">
-                          {countryGroup.chartName}
+                          Music produced here
                         </span>
                       </div>
                       <span className="rounded-md border border-[var(--rule)] bg-[var(--paper-raised)] px-2.5 py-1 text-xs text-[var(--soft)]">
-                        Authority: <strong className="font-semibold text-[var(--text)]">{countryGroup.chartAuthority}</strong>
+                        Charted on: <strong className="font-semibold text-[var(--text)]">{countryGroup.chartName}</strong>
                       </span>
                     </div>
 
@@ -488,6 +490,7 @@ export function MusicRankingView({
                           ? pinPath({ id: song.pinId, title: song.title })
                           : song.sourceUrl;
                         const isThisPlaying = currentTrack?.id === song.id && isPlaying;
+                        const origin = originOf(song);
 
                         return (
                           <article
@@ -569,8 +572,19 @@ export function MusicRankingView({
                                   {song.artist}
                                 </Link>
                                 <span aria-hidden="true">·</span>
-                                <span>{song.countryFlag} {song.country}</span>
+                                <Link
+                                  href={`/search?q=${encodeURIComponent(origin.name)}`}
+                                  className="hover:underline hover:text-[var(--text)] transition-colors"
+                                  title={`Music produced in ${origin.name}`}
+                                >
+                                  {origin.flag} {origin.name}
+                                </Link>
                               </p>
+                              {origin.name !== song.country ? (
+                                <p className="mt-0.5 text-[11px] text-[var(--soft)]">
+                                  Charted in {song.countryFlag} {song.country}
+                                </p>
+                              ) : null}
 
                               {/* Title */}
                               <h3>
@@ -639,6 +653,14 @@ export function MusicRankingView({
                                 </span>
                               </div>
 
+                              {song.album ? (
+                                <AlbumTracklist
+                                  song={song}
+                                  pinHref={pinHref}
+                                  queue={landingPageQueue}
+                                />
+                              ) : null}
+
                               {/* Description / Summary */}
                               <p className={styles.cardDescription}>
                                 {song.summary}
@@ -648,9 +670,17 @@ export function MusicRankingView({
                               <div className={styles.cardFoot}>
                                 <div>
                                   <span>GENRES</span>
-                                  <strong className="text-[var(--text)]">
-                                    {song.genres.slice(0, 2).join(' · ')}
-                                  </strong>
+                                  <span className="flex flex-wrap gap-1">
+                                    {song.genres.slice(0, 3).map((g) => (
+                                      <Link
+                                        key={g}
+                                        href={`/search?q=${encodeURIComponent(g)}`}
+                                        className="rounded-full border border-[var(--rule)] px-2 py-0.5 text-[11px] font-semibold text-[var(--text)] hover:border-[var(--green)]"
+                                      >
+                                        {g}
+                                      </Link>
+                                    ))}
+                                  </span>
                                 </div>
 
                                 <Anchor

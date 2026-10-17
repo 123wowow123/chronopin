@@ -19,13 +19,8 @@ interface Props {
 
 export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: Props) {
   const router = useRouter();
-  const { pause, togglePlay, currentTrack, isPlaying: isAudioPlaying, continuePlaying, setContinuePlaying } = useMusicPlayer();
-  const continuePlayingRef = useRef(continuePlaying);
+  const { pause, togglePlay, currentTrack, isPlaying: isAudioPlaying } = useMusicPlayer();
   const [isVideoPlaying, setIsVideoPlaying] = useState(Boolean(autoplay));
-
-  useEffect(() => {
-    continuePlayingRef.current = continuePlaying;
-  }, [continuePlaying]);
 
   // Silence any background preview audio when autoplaying a full song pin
   useEffect(() => {
@@ -77,6 +72,15 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
       pause();
     }
   }, [isVideoPlaying, pause]);
+
+  // Rainbow border on the surrounding panel while full-song auto play is engaged
+  const rootRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const panel = rootRef.current?.closest('[data-music-panel]');
+    if (!panel) return;
+    panel.setAttribute('data-autoplay-mode', isVideoPlaying ? 'on' : 'off');
+    return () => panel.removeAttribute('data-autoplay-mode');
+  }, [isVideoPlaying]);
 
   const isPlaying = Boolean(entry && currentTrack?.id === entry.id && isAudioPlaying);
 
@@ -131,13 +135,13 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
     }
   }, [pause]);
 
-  // When full song media (e.g. YouTube video) ends, auto-advance if continuePlaying is active
+  // When full song media (e.g. YouTube video) ends, always auto-advance to the next pin
   useEffect(() => {
     if (variant !== 'card') return;
 
     let navigating = false;
     const handleMediaEnded = () => {
-      if (continuePlayingRef.current && nextUrl && !navigating) {
+      if (nextUrl && !navigating) {
         navigating = true;
         stopAllCurrentPlayback();
         router.push(nextUrl);
@@ -190,7 +194,7 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <div ref={rootRef} className="flex w-full flex-wrap items-center gap-2">
       <button
         type="button"
         onClick={handlePlayToggle}
@@ -232,28 +236,35 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
           <span aria-hidden="true">⏭</span>
         </Link>
       ) : null}
-      <button
-        type="button"
-        role="switch"
-        aria-checked={continuePlaying}
-        onClick={() => setContinuePlaying((prev) => !prev)}
-        className="inline-flex items-center gap-2 rounded-full bg-raised px-3 py-1 text-xs font-semibold text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink cursor-pointer select-none"
-        title="Automatically play the next song when this song finishes"
-      >
-        <span
-          aria-hidden="true"
-          className={`relative inline-flex h-4 w-7 shrink-0 items-center rounded-full p-0.5 transition-colors duration-200 ease-in-out ${
-            continuePlaying ? 'bg-accent' : 'bg-line dark:bg-raised-2'
+      {next?.pinId ? (
+        <button
+          type="button"
+          aria-pressed={isVideoPlaying}
+          onClick={() => {
+            if (isVideoPlaying) {
+              setIsVideoPlaying(false);
+              window.dispatchEvent(new CustomEvent('chronopin:pause-video'));
+            } else {
+              pause();
+              setIsVideoPlaying(true);
+              window.dispatchEvent(new CustomEvent('chronopin:play-video'));
+            }
+          }}
+          className={`ms-auto inline-flex items-center gap-2 rounded-full border border-transparent px-3 py-1 text-xs font-semibold ring-1 ring-inset transition-colors cursor-pointer select-none ${
+            isVideoPlaying
+              ? 'bg-accent/15 text-ink ring-accent'
+              : 'bg-raised text-muted ring-line hover:bg-raised-2 hover:text-ink'
           }`}
+          title="Play the full song; when it ends, move to the next pin and play its full song automatically"
         >
-          <span
-            className={`inline-block size-3 rounded-full bg-white shadow-xs transition-transform duration-200 ease-in-out ${
-              continuePlaying ? 'translate-x-3 rtl:-translate-x-3' : 'translate-x-0'
-            }`}
-          />
-        </span>
-        <span className={continuePlaying ? 'text-ink' : 'text-muted'}>Continue to play when ended</span>
-      </button>
+          <span aria-hidden="true" className={`eq-bars ${isVideoPlaying ? 'eq-bars-on' : ''}`}>
+            <i />
+            <i />
+            <i />
+          </span>
+          <span>Play full song on auto play</span>
+        </button>
+      ) : null}
     </div>
   );
 }

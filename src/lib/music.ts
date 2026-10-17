@@ -244,6 +244,33 @@ export interface MusicRankingEntry {
   weeksAtNumberOne?: number;
   summary: string;
   pinId?: number;
+  /** Where the music was produced (primary artist's origin); the chart fields above are where it charted. */
+  originCountry?: string;
+  originCountryCode?: string;
+  originFlag?: string;
+  originContinent?: Continent;
+  /** City / region of origin when known. */
+  originArea?: string;
+  /** The album (or single/EP) this recording is released on. */
+  album?: MusicAlbum;
+}
+
+export interface MusicAlbumTrack {
+  n: number;
+  title: string;
+  /** 30-second preview clip. */
+  previewUrl: string;
+  durationMs?: number;
+}
+
+export interface MusicAlbum {
+  title: string;
+  kind: 'album' | 'single' | 'ep';
+  url?: string;
+  artworkUrl?: string;
+  releaseDate?: string;
+  trackCount?: number;
+  tracks: MusicAlbumTrack[];
 }
 
 export interface CountryGroup {
@@ -252,6 +279,7 @@ export interface CountryGroup {
   countryFlag: string;
   chartName: string;
   chartAuthority: string;
+  longitude: number;
   rankings: MusicRankingEntry[];
 }
 
@@ -264,6 +292,7 @@ export interface ContinentGroup {
 export const YEARS_AVAILABLE = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017] as const;
 
 import { RAW_SEED_MUSIC_RANKINGS } from './musicCatalog';
+import { ORIGIN_BY_CODE } from './musicOrigins';
 
 // Prod pin ids from the 2026-10-16 music batch (.scrape/prod-batches/music-2026-10-16/posted-prod.json)
 // and verified local database seeding records.
@@ -507,7 +536,18 @@ export const SEED_MUSIC_RANKINGS: MusicRankingEntry[] = RAW_SEED_MUSIC_RANKINGS.
   }),
 );
 
-// Helper to filter and group music rankings hierarchically by continent and country
+// Where the music was produced. Falls back to the chart's country until an origin is known.
+export function originOf(item: MusicRankingEntry): { continent: Continent; name: string; code: string; flag: string } {
+  return {
+    continent: item.originContinent ?? item.continent,
+    name: item.originCountry ?? item.country,
+    code: item.originCountryCode ?? item.countryCode,
+    flag: item.originFlag ?? item.countryFlag,
+  };
+}
+
+// Helper to filter and group music rankings hierarchically by the continent and country the
+// music was produced in (west to east), not by the chart it appeared on.
 export function filterAndGroupMusicRankings(
   rankings: MusicRankingEntry[],
   options: {
@@ -521,71 +561,63 @@ export function filterAndGroupMusicRankings(
   const q = query.trim().toLowerCase();
 
   const filtered = rankings.filter((item) => {
+    const origin = originOf(item);
     if (year !== 'all' && item.year !== Number(year)) return false;
-    if (continent !== 'all' && item.continent !== continent) return false;
-    if (country !== 'all' && item.country !== country) return false;
+    if (continent !== 'all' && origin.continent !== continent) return false;
+    if (country !== 'all' && origin.name !== country) return false;
     if (q) {
-      const matchTitle = item.title.toLowerCase().includes(q);
-      const matchArtist = item.artist.toLowerCase().includes(q);
-      const matchCountry = item.country.toLowerCase().includes(q);
-      const matchChart = item.chartName.toLowerCase().includes(q);
-      const matchGenre = item.genres.some((g) => g.toLowerCase().includes(q));
-      if (!matchTitle && !matchArtist && !matchCountry && !matchChart && !matchGenre) {
-        return false;
-      }
+      const hay = [
+        item.title,
+        item.artist,
+        origin.name,
+        item.originArea ?? '',
+        item.country,
+        item.chartName,
+        item.album?.title ?? '',
+        ...item.genres,
+      ];
+      if (!hay.some((h) => h.toLowerCase().includes(q))) return false;
     }
     return true;
   });
 
   const continentMap = new Map<Continent, Map<string, MusicRankingEntry[]>>();
-  for (const c of CONTINENTS) {
-    continentMap.set(c, new Map());
-  }
-
+  for (const c of CONTINENTS) continentMap.set(c, new Map());
   for (const item of filtered) {
-    let countryMap = continentMap.get(item.continent);
-    if (!countryMap) {
-      countryMap = new Map();
-      continentMap.set(item.continent, countryMap);
-    }
-    const countryList = countryMap.get(item.country) || [];
-    countryList.push(item);
-    countryMap.set(item.country, countryList);
+    const { continent: c, name } = originOf(item);
+    const countryMap = continentMap.get(c) ?? new Map<string, MusicRankingEntry[]>();
+    continentMap.set(c, countryMap);
+    countryMap.set(name, [...(countryMap.get(name) ?? []), item]);
   }
 
   const groups: ContinentGroup[] = [];
-
   for (const c of CONTINENTS) {
     const countryMap = continentMap.get(c);
     if (!countryMap || countryMap.size === 0) continue;
 
-    // Sort countries west to east within this continent
-    const countriesMeta = COUNTRIES_BY_CONTINENT[c] || [];
     const countryGroups: CountryGroup[] = [];
-
-    for (const meta of countriesMeta) {
-      const countryRankings = countryMap.get(meta.name);
-      if (countryRankings && countryRankings.length > 0) {
-        // Sort by year descending, then rank ascending
-        countryRankings.sort((a, b) => b.year - a.year || a.rank - b.rank);
-        countryGroups.push({
-          country: meta.name,
-          countryCode: meta.code,
-          countryFlag: meta.flag,
-          chartName: meta.chartName,
-          chartAuthority: meta.chartAuthority,
-          rankings: countryRankings,
-        });
-      }
-    }
-
-    if (countryGroups.length > 0) {
-      groups.push({
-        name: c,
-        slug: CONTINENT_SLUGS[c],
-        countries: countryGroups,
+    for (const [name, list] of countryMap) {
+      list.sort((a, b) => b.year - a.year || a.rank - b.rank);
+      const o = originOf(list[0]);
+      const longitude =
+        ORIGIN_BY_CODE[o.code]?.longitude ??
+        COUNTRIES_BY_CONTINENT[c].find((m) => m.code === o.code)?.longitude ??
+        0;
+      const charts = [...new Set(list.map((r) => r.chartName))];
+      const authorities = [...new Set(list.map((r) => r.chartAuthority))];
+      countryGroups.push({
+        country: name,
+        countryCode: o.code,
+        countryFlag: o.flag,
+        chartName: charts.join(' · '),
+        chartAuthority: authorities.join(' · '),
+        longitude,
+        rankings: list,
       });
     }
+    countryGroups.sort((a, b) => a.longitude - b.longitude);
+
+    groups.push({ name: c, slug: CONTINENT_SLUGS[c], countries: countryGroups });
   }
 
   return groups;

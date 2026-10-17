@@ -36,7 +36,7 @@ export function GlobalMusicPlayerBar() {
 
   const progressRef = useRef<HTMLDivElement>(null);
   const locateHash = currentTrack
-    ? `#year=${currentTrack.year}&continent=${encodeURIComponent(currentTrack.continent)}&track=${encodeURIComponent(currentTrack.id)}`
+    ? `#year=${currentTrack.year}&continent=${encodeURIComponent(currentTrack.originContinent ?? currentTrack.continent)}&track=${encodeURIComponent(currentTrack.id.replace(/~t\d+$/, ''))}`
     : '';
   const locateClass =
     'inline-flex size-7 items-center justify-center rounded-full border border-line bg-raised text-link shadow-xs transition-colors hover:bg-raised-2 hover:no-underline cursor-pointer';

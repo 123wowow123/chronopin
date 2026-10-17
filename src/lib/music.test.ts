@@ -98,8 +98,11 @@ describe('music', () => {
     expect(asiaGroups[0].name).toBe('Asia');
     expect(asiaGroups[0].countries.some((c) => c.country === 'Japan')).toBe(true);
     expect(asiaGroups[0].countries.some((c) => c.country === 'South Korea')).toBe(true);
-    expect(asiaGroups[0].countries.some((c) => c.country === 'Singapore')).toBe(true);
-    expect(asiaGroups[0].countries[0].country).toBe('Singapore');
+    // Grouped by where the music was produced, west to east (India before Japan)
+    const lons = asiaGroups[0].countries.map((c) => c.longitude);
+    expect(lons).toEqual([...lons].sort((a, b) => a - b));
+    // Singapore's chart is topped by foreign artists, so it is not an origin group
+    expect(asiaGroups[0].countries.some((c) => c.country === 'Singapore')).toBe(false);
   });
 
   it('includes Singapore with 9-year coverage (2018-2026) in Asia ordered first', () => {
@@ -201,12 +204,12 @@ describe('music', () => {
     expect(adjacentFirst?.next.pinId).toBeDefined();
     expect(adjacentFirst?.previous.pinId).toBeDefined();
 
-    // Verify exact landing page order for Taiwan 2025 (tw-2025-1):
-    // Next track MUST be Taiwan 2024 (tw-2024-1)
+    // Adjacent tracks follow the origin-grouped landing page order
+    const order = getLandingPageOrderedRankings(SEED_MUSIC_RANKINGS);
+    const i = order.findIndex((r) => r.id === 'tw-2025-1');
     const tw2025Adj = getAdjacentMusicRankings('tw-2025-1');
-    expect(tw2025Adj).toBeDefined();
-    expect(tw2025Adj?.next.id).toBe('tw-2024-1');
-    expect(tw2025Adj?.previous.id).toBe('tw-2026-1');
+    expect(tw2025Adj?.next.id).toBe(order[i + 1].id);
+    expect(tw2025Adj?.previous.id).toBe(order[i - 1].id);
   });
 });
 
