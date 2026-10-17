@@ -9,7 +9,7 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { type MusicRankingEntry, SEED_MUSIC_RANKINGS } from '@/lib/music';
+import { type MusicRankingEntry, SEED_MUSIC_RANKINGS, getLandingPageOrderedRankings } from '@/lib/music';
 
 export type PlaybackMode = 'preview' | 'full';
 
@@ -24,6 +24,7 @@ export interface MusicPlayerState {
   playbackMode: PlaybackMode;
   showFullPlayer: boolean;
   playlist: MusicRankingEntry[];
+  setPlaylist: (tracks: MusicRankingEntry[]) => void;
   continuePlaying: boolean;
   setContinuePlaying: (value: boolean | ((prev: boolean) => boolean)) => void;
   setShowFullPlayer: (show: boolean) => void;
@@ -32,7 +33,7 @@ export interface MusicPlayerState {
   nextTrack: () => void;
   prevTrack: () => void;
   playFullTrack: (track?: MusicRankingEntry) => void;
-  togglePlay: (track?: MusicRankingEntry) => void;
+  togglePlay: (track?: MusicRankingEntry, queue?: MusicRankingEntry[]) => void;
   pause: () => void;
   resume: () => void;
   seek: (ratio: number) => void;
@@ -109,7 +110,9 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
   const [isMuted, setIsMuted] = useState(false);
   const [playbackMode, setPlaybackMode] = useState<PlaybackMode>('preview');
   const [showFullPlayer, setShowFullPlayer] = useState(false);
-  const [playlist, setPlaylist] = useState<MusicRankingEntry[]>(SEED_MUSIC_RANKINGS);
+  const [playlist, setPlaylist] = useState<MusicRankingEntry[]>(() =>
+    getLandingPageOrderedRankings(SEED_MUSIC_RANKINGS),
+  );
   const [continuePlaying, setContinuePlayingState] = useState<boolean>(() => {
     if (typeof window !== 'undefined') {
       try {
@@ -348,35 +351,42 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
     setIsPlaying(true);
   }, [currentTrack]);
 
-  const togglePlay = useCallback((track?: MusicRankingEntry) => {
-    if (playbackMode === 'full') {
+  const togglePlay = useCallback(
+    (track?: MusicRankingEntry, queue?: MusicRankingEntry[]) => {
+      if (queue && queue.length > 0) {
+        setPlaylist(queue);
+      }
+
+      if (playbackMode === 'full') {
+        if (track && track.id !== currentTrack?.id) {
+          playFullTrack(track);
+        } else {
+          setShowFullPlayer((prev) => !prev);
+        }
+        return;
+      }
+
       if (track && track.id !== currentTrack?.id) {
-        playFullTrack(track);
+        playTrack(track, queue);
+        return;
+      }
+
+      if (!audioRef.current) return;
+
+      if (isPlaying) {
+        audioRef.current.pause();
+        stopFallback();
+        setIsPlaying(false);
       } else {
-        setShowFullPlayer((prev) => !prev);
+        if (currentTrack) {
+          audioRef.current.play().catch(() => {});
+        } else if (track) {
+          playTrack(track, queue);
+        }
       }
-      return;
-    }
-
-    if (track && track.id !== currentTrack?.id) {
-      playTrack(track);
-      return;
-    }
-
-    if (!audioRef.current) return;
-
-    if (isPlaying) {
-      audioRef.current.pause();
-      stopFallback();
-      setIsPlaying(false);
-    } else {
-      if (currentTrack) {
-        audioRef.current.play().catch(() => {});
-      } else if (track) {
-        playTrack(track);
-      }
-    }
-  }, [currentTrack, isPlaying, playbackMode, playFullTrack, playTrack]);
+    },
+    [currentTrack, isPlaying, playbackMode, playFullTrack, playTrack],
+  );
 
   const pause = useCallback(() => {
     audioRef.current?.pause();
@@ -437,6 +447,7 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
         playbackMode,
         showFullPlayer,
         playlist,
+        setPlaylist,
         continuePlaying,
         setContinuePlaying,
         setShowFullPlayer,

@@ -34,7 +34,7 @@ export function MusicRankingView({
   const [searchQuery, setSearchQuery] = useState('');
   const continentNavRef = useRef<HTMLDivElement>(null);
 
-  const { currentTrack, isPlaying, togglePlay, playbackMode, currentTime, pause } =
+  const { currentTrack, isPlaying, togglePlay, playbackMode, currentTime, pause, setPlaylist } =
     useMusicPlayer();
 
   const availableYears = useMemo(() => getAvailableYears(initialRankings), [initialRankings]);
@@ -46,6 +46,18 @@ export function MusicRankingView({
       query: searchQuery,
     });
   }, [initialRankings, selectedYear, selectedContinent, searchQuery]);
+
+  // Flattened ordered list of tracks currently displayed on the landing page
+  const landingPageQueue = useMemo(() => {
+    return continentGroups.flatMap((g) => g.countries.flatMap((c) => c.rankings));
+  }, [continentGroups]);
+
+  // Synchronize playback queue so clicking Next / Auto-play follows the visual landing page order
+  useEffect(() => {
+    if (landingPageQueue.length > 0) {
+      setPlaylist(landingPageQueue);
+    }
+  }, [landingPageQueue, setPlaylist]);
 
   const totalResults = useMemo(() => {
     return continentGroups.reduce(
@@ -161,7 +173,7 @@ export function MusicRankingView({
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    togglePlay(featured);
+                    togglePlay(featured, landingPageQueue);
                   }}
                   className="flex items-center gap-1.5 rounded-full bg-[var(--green)]/90 hover:bg-[var(--green)] text-[#fffef0] px-3.5 py-1.5 text-xs font-semibold shadow-lg backdrop-blur-xs transition-transform active:scale-95 cursor-pointer"
                   aria-label={
@@ -476,7 +488,7 @@ export function MusicRankingView({
                                 onClick={(e) => {
                                   e.preventDefault();
                                   e.stopPropagation();
-                                  togglePlay(song);
+                                  togglePlay(song, landingPageQueue);
                                 }}
                                 className={`absolute bottom-3 right-3 z-10 flex size-11 items-center justify-center rounded-full bg-[var(--green)] text-[#fffef0] shadow-md transition-all duration-200 cursor-pointer ${
                                   isThisPlaying
@@ -539,7 +551,7 @@ export function MusicRankingView({
                                 <div className="flex items-center gap-2">
                                   <button
                                     type="button"
-                                    onClick={() => togglePlay(song)}
+                                    onClick={() => togglePlay(song, landingPageQueue)}
                                     className="flex items-center gap-1.5 text-xs font-semibold text-[var(--green)] hover:underline cursor-pointer"
                                   >
                                     {isThisPlaying && playbackMode === 'preview' ? (

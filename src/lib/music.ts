@@ -648,17 +648,41 @@ export function getMusicRankingByTitleOrPin(id: number, title?: string, productN
   return undefined;
 }
 
-export function getAdjacentMusicRankings(idOrPinId: number | string): {
+// Flattens music rankings into the exact sequential order rendered on the landing page:
+// West-to-East continents, West-to-East countries, and descending years.
+export function getLandingPageOrderedRankings(
+  rankings: MusicRankingEntry[] = SEED_MUSIC_RANKINGS,
+  options?: {
+    year?: number | 'all';
+    continent?: string;
+    country?: string;
+    query?: string;
+  },
+): MusicRankingEntry[] {
+  const groups = filterAndGroupMusicRankings(rankings, options);
+  return groups.flatMap((cg) => cg.countries.flatMap((c) => c.rankings));
+}
+
+export function getAdjacentMusicRankings(
+  idOrPinId: number | string,
+  customRankings?: MusicRankingEntry[],
+): {
   previous: MusicRankingEntry;
   next: MusicRankingEntry;
 } | undefined {
+  const list =
+    customRankings && customRankings.length > 0
+      ? customRankings
+      : getLandingPageOrderedRankings(SEED_MUSIC_RANKINGS);
+
   const numId = typeof idOrPinId === 'number' ? idOrPinId : Number(idOrPinId);
-  const idx = SEED_MUSIC_RANKINGS.findIndex(
+  const idx = list.findIndex(
     (r) => r.pinId === numId || r.id === String(idOrPinId),
   );
   if (idx === -1) return undefined;
-  const previous = SEED_MUSIC_RANKINGS[(idx - 1 + SEED_MUSIC_RANKINGS.length) % SEED_MUSIC_RANKINGS.length];
-  const next = SEED_MUSIC_RANKINGS[(idx + 1) % SEED_MUSIC_RANKINGS.length];
+  const previous = list[(idx - 1 + list.length) % list.length];
+  const next = list[(idx + 1) % list.length];
   return { previous, next };
 }
+
 

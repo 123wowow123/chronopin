@@ -170,13 +170,16 @@ describe('music', () => {
     }
   });
 
-  it('retrieves adjacent music rankings cyclically', async () => {
-    const { getAdjacentMusicRankings } = await import('./music');
+  it('retrieves adjacent music rankings cyclically following landing page order', async () => {
+    const { getAdjacentMusicRankings, getLandingPageOrderedRankings } = await import('./music');
+
+    const ordered = getLandingPageOrderedRankings();
+    expect(ordered.length).toBe(SEED_MUSIC_RANKINGS.length);
 
     // First track: previous should wrap to last track, next should be second track
-    const firstTrack = SEED_MUSIC_RANKINGS[0];
-    const secondTrack = SEED_MUSIC_RANKINGS[1];
-    const lastTrack = SEED_MUSIC_RANKINGS[SEED_MUSIC_RANKINGS.length - 1];
+    const firstTrack = ordered[0];
+    const secondTrack = ordered[1];
+    const lastTrack = ordered[ordered.length - 1];
 
     const adjacentFirst = getAdjacentMusicRankings(firstTrack.id);
     expect(adjacentFirst).toBeDefined();
@@ -196,6 +199,15 @@ describe('music', () => {
     // Adjacent tracks all have valid backing pins for continuous play
     expect(adjacentFirst?.next.pinId).toBeDefined();
     expect(adjacentFirst?.previous.pinId).toBeDefined();
+
+    // Verify exact landing page order for Taiwan 2025 (tw-2025-1):
+    // Next track MUST be Taiwan 2024 (tw-2024-1, ENERGY - Friday Night)
+    const tw2025Adj = getAdjacentMusicRankings('tw-2025-1');
+    expect(tw2025Adj).toBeDefined();
+    expect(tw2025Adj?.next.id).toBe('tw-2024-1');
+    expect(tw2025Adj?.next.title).toContain('Friday Night');
+    expect(tw2025Adj?.next.artist).toBe('ENERGY');
+    expect(tw2025Adj?.previous.id).toBe('tw-2026-1');
   });
 });
 
