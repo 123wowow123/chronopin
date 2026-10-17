@@ -55,3 +55,5 @@ Checked exact complete saved profiles, original author presence, native public p
 Continue every under-target cell. Highest Coming soon deficits: Sapporo 23, Osaka/Kyoto 21, Nagoya 21, Fukuoka 20, Tokyo 19. Nagoya Just opened remains 12 short after three additions. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
 
 No application code changes, build, restart or deployment. Release `157e1750` remains the previously documented deployed baseline; this content-maintenance session did not change it.
+
+Batch60 enriched the existing Sushisei Kyoto Isetan ordinary menu with43 priced entries and four credited Azure gallery links. Its autumn offer and opening-history gap remain separate. Post-save all24 local/production counts still agree at405 memberships /320 missing; no new venue membership claimed.
