@@ -37,6 +37,34 @@ export function MusicRankingView({
   const { currentTrack, isPlaying, togglePlay, playbackMode, currentTime, pause, setPlaylist } =
     useMusicPlayer();
 
+  // Persist the year / continent tabs in the URL hash (#year=2024&continent=Asia)
+  const hashReady = useRef(false);
+  useEffect(() => {
+    const readHash = () => {
+      const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      const yr = params.get('year');
+      const parsed = yr && yr !== 'all' ? Number(yr) : NaN;
+      setSelectedYear(Number.isFinite(parsed) ? parsed : 'all');
+      setSelectedContinent(params.get('continent') || 'all');
+    };
+    readHash();
+    hashReady.current = true;
+    window.addEventListener('hashchange', readHash);
+    return () => window.removeEventListener('hashchange', readHash);
+  }, []);
+
+  useEffect(() => {
+    if (!hashReady.current) return;
+    const params = new URLSearchParams();
+    if (selectedYear !== 'all') params.set('year', String(selectedYear));
+    if (selectedContinent !== 'all') params.set('continent', selectedContinent);
+    const hash = params.toString();
+    const url = window.location.pathname + window.location.search + (hash ? `#${hash}` : '');
+    if (url !== window.location.pathname + window.location.search + window.location.hash) {
+      window.history.replaceState(null, '', url);
+    }
+  }, [selectedYear, selectedContinent]);
+
   const availableYears = useMemo(() => getAvailableYears(initialRankings), [initialRankings]);
 
   const continentGroups = useMemo(() => {
