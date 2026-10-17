@@ -161,6 +161,14 @@ export const COUNTRIES_BY_CONTINENT: Record<Continent, readonly CountryMeta[]> =
   ],
   Asia: [
     {
+      name: 'Singapore',
+      code: 'SG',
+      flag: '🇸🇬',
+      chartName: 'The Official Singapore Chart (RIAS Top Streaming)',
+      chartAuthority: 'Recording Industry Association Singapore (RIAS)',
+      longitude: 103.82,
+    },
+    {
       name: 'China',
       code: 'CN',
       flag: '🇨🇳',
@@ -500,7 +508,17 @@ const MUSIC_PIN_IDS: Record<string, number> = {
   "fr-2018-1": 16273,
   "de-2018-1": 16274,
   "es-2018-1": 16275,
-  "se-2018-1": 16276
+  "se-2018-1": 16276,
+  "sg-2026-1": 16277,
+  "sg-2025-1": 16278,
+  "sg-2024-1": 16279,
+  "sg-2023-1": 16280,
+  "sg-2022-1": 16281,
+  "sg-2021-1": 16282,
+  "sg-2020-1": 16283,
+  "sg-2019-1": 16284,
+  "sg-2018-1": 16285,
+  "sg-2017-1": 16286
 };
 
 export const SEED_MUSIC_RANKINGS: MusicRankingEntry[] = RAW_SEED_MUSIC_RANKINGS.map(

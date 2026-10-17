@@ -98,6 +98,26 @@ describe('music', () => {
     expect(asiaGroups[0].name).toBe('Asia');
     expect(asiaGroups[0].countries.some((c) => c.country === 'Japan')).toBe(true);
     expect(asiaGroups[0].countries.some((c) => c.country === 'South Korea')).toBe(true);
+    expect(asiaGroups[0].countries.some((c) => c.country === 'Singapore')).toBe(true);
+    expect(asiaGroups[0].countries[0].country).toBe('Singapore');
+  });
+
+  it('includes Singapore with full 10-year coverage in Asia ordered first', () => {
+    const asiaCountries = COUNTRIES_BY_CONTINENT['Asia'];
+    expect(asiaCountries[0].name).toBe('Singapore');
+    expect(asiaCountries[0].code).toBe('SG');
+    expect(asiaCountries[0].longitude).toBe(103.82);
+
+    const sgRankings = SEED_MUSIC_RANKINGS.filter((r) => r.countryCode === 'SG');
+    expect(sgRankings.length).toBe(10);
+    for (const yr of YEARS_AVAILABLE) {
+      const match = sgRankings.find((r) => r.year === yr);
+      expect(match).toBeDefined();
+      expect(match?.pinId).toBeGreaterThan(0);
+      expect(match?.audioUrl).toMatch(/^https?:\/\//);
+      expect(match?.youtubeId).toMatch(/^[a-zA-Z0-9_-]{11}$/);
+      expect(match?.artworkUrl).toMatch(/^https?:\/\//);
+    }
   });
 
   it('filters by search query matching title or artist', () => {
