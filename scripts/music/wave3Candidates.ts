@@ -1426,3 +1426,4 @@ export const WAVE_3_CANDIDATES: Candidate[] = [
     youtubeQuery: 'LAB Ocean Demon official music video',
   },
 ];
+

@@ -312,7 +312,28 @@
           "note": "Operator-labelled Tenjin-only mentaiko and chicken-ham croissant sandwich.",
           "sourcePage": "https://rokumei.coffee/f/shop-tenjinchikagai"
         }
-      ]
+      ],
+      "batch": 62,
+      "verification": {
+        "local": {
+          "pinId": 16173,
+          "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+          "name": "Rokumei Coffee — Tenjin Underground Mall",
+          "contentId": 1658,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16078,
+          "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+          "name": "Rokumei Coffee — Tenjin Underground Mall",
+          "contentId": 1658,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200
+        }
+      }
     },
     {
       "pin": {
@@ -489,7 +510,28 @@
           "note": "Operator launch photograph of sushi preparation; individual fish cut and course sequence not inferred.",
           "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html"
         }
-      ]
+      ],
+      "batch": 62,
+      "verification": {
+        "local": {
+          "pinId": 16174,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+          "name": "Sushi Toka — Kitashinchi",
+          "contentId": 1659,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16079,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+          "name": "Sushi Toka — Kitashinchi",
+          "contentId": 1659,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        }
+      }
     },
     {
       "pin": {
@@ -647,7 +689,148 @@
           "note": "Operator Marunouchi launch artwork; background interior is promotional imagery, not independently verified as the completed branch room. Latest branch text postpones opening to October24,2026.",
           "sourcePage": "https://selfcafe.jp/shop/aichi/marunouchi/"
         }
-      ]
+      ],
+      "batch": 62,
+      "verification": {
+        "local": {
+          "pinId": 16175,
+          "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+          "name": "Self Cafe — Marunouchi",
+          "contentId": 1660,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 1,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16080,
+          "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+          "name": "Self Cafe — Marunouchi",
+          "contentId": 1660,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 1,
+          "publicPinStatus": 200
+        }
+      }
     }
-  ]
+  ],
+  "verifiedAtUtc": "2026-10-17T04:05:22.209714+00:00",
+  "verification": {
+    "local": [
+      {
+        "pinId": 16173,
+        "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+        "name": "Rokumei Coffee — Tenjin Underground Mall",
+        "contentId": 1658,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16174,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+        "name": "Sushi Toka — Kitashinchi",
+        "contentId": 1659,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16175,
+        "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+        "name": "Self Cafe — Marunouchi",
+        "contentId": 1660,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 1,
+        "publicPinStatus": 200
+      }
+    ],
+    "production": [
+      {
+        "pinId": 16078,
+        "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+        "name": "Rokumei Coffee — Tenjin Underground Mall",
+        "contentId": 1658,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16079,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+        "name": "Sushi Toka — Kitashinchi",
+        "contentId": 1659,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16080,
+        "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+        "name": "Self Cafe — Marunouchi",
+        "contentId": 1660,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 1,
+        "publicPinStatus": 200
+      }
+    ],
+    "guideCards": {
+      "local": [
+        {
+          "pinId": 16173,
+          "region": "fukuoka",
+          "view": "new",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16174,
+          "region": "osaka",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16175,
+          "region": "nagoya",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        }
+      ],
+      "production": [
+        {
+          "pinId": 16078,
+          "region": "fukuoka",
+          "view": "new",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16079,
+          "region": "osaka",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16080,
+          "region": "nagoya",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "all24CountsAgree": true,
+    "memberships": 411,
+    "shortfall": 314,
+    "newOffers": 0,
+    "applicationDeployed": false
+  }
 }

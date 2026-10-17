@@ -93,13 +93,19 @@ async function main() {
     }
 
     if (!youtubeId) {
-      youtubeId = await searchYoutube(song.youtubeQuery);
+      const foundYt = await searchYoutube(song.youtubeQuery);
+      if (foundYt) {
+        youtubeId = foundYt;
+      }
       await sleep(600);
 
       if (!youtubeId) {
         const cleanTitle = song.title.replace(/\(.*\)/g, '').trim();
         const cleanArtist = song.artist.replace(/ft\..*$/i, '').trim();
-        youtubeId = await searchYoutube(`${cleanArtist} ${cleanTitle} official audio`);
+        const fallbackYt = await searchYoutube(`${cleanArtist} ${cleanTitle} official audio`);
+        if (fallbackYt) {
+          youtubeId = fallbackYt;
+        }
         await sleep(600);
       }
 

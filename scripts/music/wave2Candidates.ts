@@ -794,3 +794,4 @@ export const WAVE_2_CANDIDATES: Candidate[] = [
     youtubeQuery: '星野源 恋 Official Video',
   },
 ];
+
