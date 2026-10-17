@@ -1,0 +1,1299 @@
+{
+  "checkedAt": "2026-10-17",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Self Cafe — Honjin Opens in Honjin",
+        "description": "An upcoming unmanned cafe near Honjin Station, with self-service drinks, Wi-Fi and power outlets.",
+        "sourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+        "address": "2-10 Torii-dori, Nakamura-ku, Nagoya",
+        "productName": "Self Cafe — Honjin",
+        "utcStartDateTime": "2026-10-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator branch page explicitly postpones Honjin from October 17 to October 30, 2026. The latest operator homepage notice repeats October 30. Branch launch artwork says late October and does not override the exact page date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Honjin",
+          "Cafe / self-service drinks"
+        ],
+        "longFormSummary": "<p>An upcoming unmanned cafe near Honjin Station, with self-service drinks, Wi-Fi and power outlets.<cite data-ref=\"https://selfcafe.jp/shop/aichi/honjin/\"></cite></p><p>Exact operator branch page explicitly postpones Honjin from October 17 to October 30, 2026. The latest operator homepage notice repeats October 30. Branch launch artwork says late October and does not override the exact page date.</p>",
+        "references": [
+          {
+            "url": "https://selfcafe.jp/shop/aichi/honjin/",
+            "title": "Self Cafe — Honjin source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page explicitly postpones Honjin from October 17 to October 30, 2026. The latest operator homepage notice repeats October 30. Branch launch artwork says late October and does not override the exact page date."
+          },
+          {
+            "url": "https://selfcafe.jp/",
+            "title": "Self Cafe — Honjin source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page explicitly postpones Honjin from October 17 to October 30, 2026. The latest operator homepage notice repeats October 30. Branch launch artwork says late October and does not override the exact page date."
+          },
+          {
+            "url": "https://selfcafe.jp/usage/",
+            "title": "Self Cafe — Honjin source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page explicitly postpones Honjin from October 17 to October 30, 2026. The latest operator homepage notice repeats October 30. Branch launch artwork says late October and does not override the exact page date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+          "menu": {
+            "pinSourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+            "name": "Self Cafe — Honjin",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Honjin branch drinks",
+                "url": "https://selfcafe.jp/shop/aichi/honjin/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Original blend coffee",
+                    "price": 440,
+                    "note": "Hot or iced unless stated; tax included under operator usage guide."
+                  },
+                  {
+                    "name": "Cafe latte",
+                    "price": 460,
+                    "note": "Hot or iced unless stated; tax included under operator usage guide."
+                  },
+                  {
+                    "name": "Cafe au lait",
+                    "price": 460,
+                    "note": "Hot or iced unless stated; tax included under operator usage guide."
+                  },
+                  {
+                    "name": "Black tea",
+                    "price": 440,
+                    "note": "Hot or iced unless stated; tax included under operator usage guide."
+                  },
+                  {
+                    "name": "Green tea",
+                    "price": 390,
+                    "note": "Hot or iced unless stated; tax included under operator usage guide."
+                  },
+                  {
+                    "name": "Matcha latte",
+                    "price": 460,
+                    "note": "Hot or iced unless stated; tax included under operator usage guide."
+                  },
+                  {
+                    "name": "Cocoa",
+                    "price": 440,
+                    "note": "Hot or iced unless stated; tax included under operator usage guide."
+                  },
+                  {
+                    "name": "Natchan orange — iced only",
+                    "price": 420,
+                    "note": "Hot or iced unless stated; tax included under operator usage guide."
+                  }
+                ],
+                "note": "Exact branch page prices used, not the national example price range. Large-size upgrade +¥100. Operator usage guide states prices include tax; national menu is not uniform by branch. One drink per person, cashless payment only, clean your seat after use. Outside food/drinks cannot be consumed. This is an unmanned beverage cafe, not a table-service restaurant."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+            "name": "Self Cafe — Honjin",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "06:00–24:00; planned branch hours"
+              }
+            ],
+            "detailsSourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://selfcafe.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://selfcafe.jp/usage/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "honjin",
+            "name": "Self Cafe — Honjin",
+            "neighborhood": "Honjin",
+            "cuisine": "Cafe / self-service drinks",
+            "description": "An upcoming unmanned cafe near Honjin Station, with self-service drinks, Wi-Fi and power outlets.",
+            "address": "2-10 Torii-dori, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-honjin-1-e9752ca344914cd8.webp",
+            "imageCredit": "Self Cafe / Wincle — Honjin branch announcement",
+            "imageSourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+            "imageNote": "Operator Honjin launch artwork; text says late October, superseded by the branch page’s October 30 date. Background interior is promotional imagery, not independently verified as the completed Honjin interior.",
+            "openingConfirmed": true,
+            "day": "2026-10-30"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-honjin-1-e9752ca344914cd8.webp",
+          "sha256": "e9752ca344914cd8be6a4a3eee7e8b17be97080581937a200fb510312a38661a",
+          "width": 1280,
+          "height": 853,
+          "credit": "Self Cafe / Wincle — Honjin branch announcement",
+          "note": "Operator Honjin launch artwork; text says late October, superseded by the branch page’s October 30 date. Background interior is promotional imagery, not independently verified as the completed Honjin interior.",
+          "sourcePage": "https://selfcafe.jp/shop/aichi/honjin/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Tou — Sakae tsukemen Opens in Sakae",
+        "description": "A new Sakae noodle shop serving pork-and-seafood tsukemen with cold or warm noodles, garlic, chilli and shrimp variations.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+        "address": "1F Princess Court Building, 3-12-12 Sakae, Naka-ku, Nagoya",
+        "productName": "Tou — Sakae tsukemen",
+        "utcStartDateTime": "2026-10-06T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "F-LEAD exact-branch announcement explicitly confirms October 6, 2026 grand opening. Exact Tabelog branch opening field and October firsthand visits corroborate service. Its one-day launch discount is separate and expired.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Sakae",
+          "Tsukemen / ramen"
+        ],
+        "longFormSummary": "<p>A new Sakae noodle shop serving pork-and-seafood tsukemen with cold or warm noodles, garlic, chilli and shrimp variations.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000066.000100887.html\"></cite></p><p>F-LEAD exact-branch announcement explicitly confirms October 6, 2026 grand opening. Exact Tabelog branch opening field and October firsthand visits corroborate service. Its one-day launch discount is separate and expired.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+            "title": "Tou — Sakae tsukemen source",
+            "confidence": 90,
+            "reasoning": "F-LEAD exact-branch announcement explicitly confirms October 6, 2026 grand opening. Exact Tabelog branch opening field and October firsthand visits corroborate service. Its one-day launch discount is separate and expired."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230103/23097973/",
+            "title": "Tou — Sakae tsukemen source",
+            "confidence": 90,
+            "reasoning": "F-LEAD exact-branch announcement explicitly confirms October 6, 2026 grand opening. Exact Tabelog branch opening field and October firsthand visits corroborate service. Its one-day launch discount is separate and expired."
+          },
+          {
+            "url": "https://www.instagram.com/tsukemen.tou/",
+            "title": "Tou — Sakae tsukemen source",
+            "confidence": 90,
+            "reasoning": "F-LEAD exact-branch announcement explicitly confirms October 6, 2026 grand opening. Exact Tabelog branch opening field and October firsthand visits corroborate service. Its one-day launch discount is separate and expired."
+          },
+          {
+            "url": "https://f-lead.jp/",
+            "title": "Tou — Sakae tsukemen source",
+            "confidence": 90,
+            "reasoning": "F-LEAD exact-branch announcement explicitly confirms October 6, 2026 grand opening. Exact Tabelog branch opening field and October firsthand visits corroborate service. Its one-day launch discount is separate and expired."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+            "name": "Tou — Sakae tsukemen",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Sakae operator launch menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Cold rich tsukemen",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Cold scorched-black tsukemen",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Cold spicy-red tsukemen",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Cold rich-shrimp tsukemen",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Warm kama-age dashi tsukemen",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Warm scorched-black kama-age tsukemen",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Warm spicy-red kama-age tsukemen",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Warm rich-shrimp kama-age tsukemen",
+                    "price": 1300
+                  },
+                  {
+                    "name": "A5 Japanese black wagyu tsukemen",
+                    "price": 1800,
+                    "note": "Cold or warm noodles; quantity limited."
+                  },
+                  {
+                    "name": "A5 Japanese black wagyu tsukemen — double meat",
+                    "price": 2600,
+                    "note": "Six wagyu slices; operator description permits cold or warm noodles despite warm-style heading. Quantity limited."
+                  },
+                  {
+                    "name": "A5 Japanese black wagyu mazesoba",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Mazesoba",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Juicy chicken karaage — two pieces",
+                    "price": 320
+                  },
+                  {
+                    "name": "Sweet-sauce and bonito karaage — two pieces",
+                    "price": 350
+                  },
+                  {
+                    "name": "Mini seared chashu rice bowl",
+                    "price": 380
+                  },
+                  {
+                    "name": "Finishing cheese risotto",
+                    "price": 300
+                  },
+                  {
+                    "name": "Mini white rice",
+                    "price": 200
+                  },
+                  {
+                    "name": "Extra chilli — spicy-red noodles supplement",
+                    "price": 100
+                  }
+                ],
+                "note": "All prices include tax. Exact Sakae operator release provides menu and photos; Tabelog exact branch confirms first-service date/hours. Egg and special-topping variants are mentioned but separate prices are not published. A ¥500 launch offer ended October 6 and is excluded from Specials. Instagram follow/like lottery through October 20 is a prize draw, not a guaranteed dining discount. Checked operator homepage/shop list and linked Instagram; Instagram was throttled. No different Tou restaurant’s menu copied."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+            "name": "Tou — Sakae tsukemen",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+            "phone": "052-265-8283",
+            "openingHours": [
+              {
+                "days": "Sunday–Thursday",
+                "hours": "11:00–01:30 next day; last order 01:00"
+              },
+              {
+                "days": "Friday, Saturday and holiday eves",
+                "hours": "11:00–02:30 next day; last order 02:00"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230103/23097973/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/tsukemen.tou/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://f-lead.jp/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "tou",
+            "name": "Tou — Sakae tsukemen",
+            "neighborhood": "Sakae",
+            "cuisine": "Tsukemen / ramen",
+            "description": "A new Sakae noodle shop serving pork-and-seafood tsukemen with cold or warm noodles, garlic, chilli and shrimp variations.",
+            "address": "1F Princess Court Building, 3-12-12 Sakae, Naka-ku, Nagoya",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-tou-1-b9bca98023ebaad3.webp",
+            "imageCredit": "F-LEAD / 燈 tou — operator launch release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+            "imageNote": "Operator-labelled special rich tsukemen launch photograph for the Sakae branch.",
+            "openingConfirmed": true,
+            "day": "2026-10-06"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-tou-1-b9bca98023ebaad3.webp",
+          "sha256": "b9bca98023ebaad3578f58eec0535779edb4e8121266471ee4843dd870c8fce7",
+          "width": 1600,
+          "height": 976,
+          "credit": "F-LEAD / 燈 tou — operator launch release",
+          "note": "Operator-labelled special rich tsukemen launch photograph for the Sakae branch.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-tou-4-190575185f949c02.webp",
+          "sha256": "190575185f949c027c692a2ae100aa1bb06efd845d33888212e9990359b874dd",
+          "width": 1600,
+          "height": 1067,
+          "credit": "F-LEAD / 燈 tou — operator launch release",
+          "note": "Operator-labelled cold rich tsukemen, published at ¥1,100 including tax.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-tou-5-cb7097c1b4f00c61.webp",
+          "sha256": "cb7097c1b4f00c6198c1b80b0c1ac7bba757b234404043900370d4621debeebd",
+          "width": 1600,
+          "height": 1067,
+          "credit": "F-LEAD / 燈 tou — operator launch release",
+          "note": "Operator-labelled scorched black tsukemen, published at ¥1,100 including tax.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-tou-12-90015110bdc2cec4.webp",
+          "sha256": "90015110bdc2cec404855d2ec9d5ea5159c05f99ab1e42e034ab1f4a18478cea",
+          "width": 1600,
+          "height": 1067,
+          "credit": "F-LEAD / 燈 tou — operator launch release",
+          "note": "Operator-labelled A5 Japanese black wagyu tsukemen; no opening-day discount inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Anchor Grill Fukuoka — Tenjin autumn dining",
+        "description": "A nineteenth-floor Tenjin grill with Kyushu ingredients and dated autumn lunch, dinner and wine menus.",
+        "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+        "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+        "productName": "Anchor Grill Fukuoka",
+        "utcStartDateTime": "2025-04-24T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Special",
+          "Fukuoka",
+          "Japan",
+          "Western grill"
+        ],
+        "longFormSummary": "<p>A nineteenth-floor Tenjin grill with Kyushu ingredients and dated autumn lunch, dinner and wine menus.<cite data-ref=\"https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html\"></cite></p><p>Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate.</p>",
+        "references": [
+          {
+            "url": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+            "title": "Anchor Grill Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000017.000046726.html",
+            "title": "Anchor Grill Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate."
+          },
+          {
+            "url": "https://tabelog.com/fukuoka/A4001/A400103/40070287/",
+            "title": "Anchor Grill Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate."
+          },
+          {
+            "url": "https://www.gate-hotel.jp/fukuoka/topics/all/2055",
+            "title": "Anchor Grill Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate."
+          },
+          {
+            "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+            "title": "Anchor Grill Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate."
+          },
+          {
+            "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054",
+            "title": "Anchor Grill Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/ghf-afukuoka/reserve",
+            "title": "Anchor Grill Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate."
+          },
+          {
+            "url": "https://www.gate-hotel.jp/fukuoka/files/GFF_GrandMenu_20260916.pdf",
+            "title": "Anchor Grill Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Hulic’s March24,2025 exact restaurant announcement explicitly says Anchor Grill Fukuoka opens April24,2025, the same day as the hotel. Branch Tabelog opening field corroborates the date. Autumn2026 menu dates are separate."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "menu": {
+            "pinSourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+            "name": "Anchor Grill Fukuoka",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Grand Menu — September 16 PDF",
+                "url": "https://www.gate-hotel.jp/fukuoka/files/GFF_GrandMenu_20260916.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Caesar salad",
+                    "price": 970,
+                    "category": "Signature"
+                  },
+                  {
+                    "name": "Norwegian smoked salmon",
+                    "price": 1650,
+                    "category": "Signature"
+                  },
+                  {
+                    "name": "Onion gratin soup",
+                    "price": 950,
+                    "category": "Signature"
+                  },
+                  {
+                    "name": "GATE HOTEL curry",
+                    "price": 1760,
+                    "category": "Signature"
+                  },
+                  {
+                    "name": "Eggs Benedict — a la carte",
+                    "price": 2100,
+                    "category": "Signature"
+                  },
+                  {
+                    "name": "Fukuoka Mirai salmon marinade",
+                    "price": 1980,
+                    "category": "Cold appetizers"
+                  },
+                  {
+                    "name": "Puglia burrata, seasonal fruit and tomato",
+                    "price": 1980,
+                    "category": "Cold appetizers"
+                  },
+                  {
+                    "name": "Kyushu amberjack tartare",
+                    "price": 1650,
+                    "category": "Cold appetizers"
+                  },
+                  {
+                    "name": "Grilled tuna Nicoise salad",
+                    "price": 2530,
+                    "category": "Cold appetizers"
+                  },
+                  {
+                    "name": "Homemade Itoshima pork pate with pickles",
+                    "price": 1540,
+                    "category": "Cold appetizers"
+                  },
+                  {
+                    "name": "Grilled Caesar salad with bacon and soft egg",
+                    "price": 1200,
+                    "category": "Hot appetizers",
+                    "note": "Japanese PDF title used; English line incorrectly says Today’s Potage. Not imported as a separate soup."
+                  },
+                  {
+                    "name": "Grilled seasonal local vegetables",
+                    "price": 1200,
+                    "category": "Hot appetizers"
+                  },
+                  {
+                    "name": "Fried Inca-no-mezame potatoes with raclette",
+                    "price": 1200,
+                    "category": "Hot appetizers"
+                  },
+                  {
+                    "name": "Genkai squid and white maitake ajillo with green chilli",
+                    "price": 1650,
+                    "category": "Hot appetizers"
+                  },
+                  {
+                    "name": "Fukuoka soupe de poisson",
+                    "price": 1100,
+                    "category": "Hot appetizers"
+                  },
+                  {
+                    "name": "Itoshima vegetable cream soup",
+                    "price": 1100,
+                    "category": "Hot appetizers"
+                  },
+                  {
+                    "name": "Today’s grilled fish from Nagahama Market",
+                    "price": 2860,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Grilled red shrimp and pen shell",
+                    "price": 2860,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Grilled Fukuoka Mirai salmon",
+                    "price": 3300,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Miyako Ham sausage, mashed potato and red cabbage",
+                    "price": 2200,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Bone-in Hakata jidori chicken grill",
+                    "price": 2860,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Itoshima pork chop with Kubota Farm herbs",
+                    "price": 2860,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Hakata Kiwami duck grill",
+                    "price": 4070,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Australian lamb chops",
+                    "price": 4070,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Wagyu beef cheek in red wine",
+                    "price": 4070,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Kyushu wagyu fillet grill",
+                    "price": 5500,
+                    "category": "Grill",
+                    "note": "Choose two published sauces: Trapanese, fresh tomato, salted lemon, BBQ, remoulade or tapenade."
+                  },
+                  {
+                    "name": "Raclette cheeseburger",
+                    "price": 2200,
+                    "category": "Pasta and bread"
+                  },
+                  {
+                    "name": "Assorted charcuterie",
+                    "price": 2860,
+                    "category": "Pasta and bread"
+                  },
+                  {
+                    "name": "Today’s pasta",
+                    "price": 1980,
+                    "category": "Pasta and bread"
+                  },
+                  {
+                    "name": "Prime beef bolognese tagliatelle",
+                    "price": 2200,
+                    "category": "Pasta and bread"
+                  },
+                  {
+                    "name": "Bread",
+                    "price": 550,
+                    "category": "Pasta and bread"
+                  },
+                  {
+                    "name": "Homemade ice cream",
+                    "price": 880,
+                    "category": "Dessert"
+                  },
+                  {
+                    "name": "Yame matcha Basque cheesecake",
+                    "price": 1200,
+                    "category": "Dessert"
+                  },
+                  {
+                    "name": "Hojicha creme brulee",
+                    "price": 1200,
+                    "category": "Dessert"
+                  },
+                  {
+                    "name": "Tiramisu",
+                    "price": 1200,
+                    "category": "Dessert"
+                  },
+                  {
+                    "name": "Fromage blanc mousse and Shine Muscat jelly",
+                    "price": 1500,
+                    "category": "Dessert"
+                  }
+                ],
+                "note": "Exact branch-linked PDF rendered and checked visually across all three columns. Tax included, no service charge according to Japanese footer and branch website. Japanese dish wording controls where English translations differ. Current PDF’s Kyushu amberjack naming supersedes older webpage’s Nagasaki/day-citrus caption. Food availability may change; ingredients are not automatically part of the seasonal courses. Grand menu from 11:30, last order 22:00; lunch-period Grand Menu last order 15:30.",
+                "documentUrl": "https://www.gate-hotel.jp/fukuoka/files/GFF_GrandMenu_20260916.pdf"
+              },
+              {
+                "label": "Breakfast and regular lunch plans",
+                "url": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Breakfast with Eggs Benedict",
+                    "price": 3800,
+                    "note": "Hotel guests ¥3,300; salad station included"
+                  },
+                  {
+                    "name": "Breakfast with French toast",
+                    "price": 3800,
+                    "note": "Hotel guests ¥3,300; salad station included"
+                  },
+                  {
+                    "name": "Breakfast with Kokonoka nine-square selection",
+                    "price": 3800,
+                    "note": "Hotel guests ¥3,300; limited to 30 daily; salad station included"
+                  },
+                  {
+                    "name": "One-plate lunch",
+                    "price": 2530,
+                    "note": "Deli, fish or meat main, soup, dessert, bread and coffee"
+                  },
+                  {
+                    "name": "Chef’s lunch — one main",
+                    "price": 3850,
+                    "note": "Choose fish or meat; seasonal details published separately"
+                  },
+                  {
+                    "name": "Chef’s lunch — double main",
+                    "price": 4950,
+                    "note": "Fish and meat both included"
+                  }
+                ],
+                "note": "Tax included, no service charge. Breakfast07:00–10:00; lunch11:30–16:00 with lunch last order14:30. Current branch page prices; guest breakfast condition retained."
+              },
+              {
+                "label": "Current booking plans",
+                "url": "https://www.tablecheck.com/ja/shops/ghf-afukuoka/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Grill burger lunch",
+                    "price": 2860,
+                    "note": "Avocado and mozzarella burger, salad, soup, fries, ice cream and coffee"
+                  },
+                  {
+                    "name": "Dinner prix fixe A",
+                    "price": 5800,
+                    "note": "Two appetizers and one grill choice, bread, dessert and coffee/tea"
+                  },
+                  {
+                    "name": "Dinner prix fixe B",
+                    "price": 7200,
+                    "note": "One appetizer and two grill choices, bread, dessert and coffee/tea"
+                  }
+                ],
+                "note": "Exact branch booking menu, tax included. Published examples may change; do not infer a fixed future validity period from open booking dates."
+              },
+              {
+                "label": "Taste of Autumn — dinner course",
+                "url": "https://www.gate-hotel.jp/fukuoka/topics/all/2055",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Autumn dinner course",
+                    "price": 7700
+                  },
+                  {
+                    "name": "Today’s amuse-bouche",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                  },
+                  {
+                    "name": "Hakata Kiwami duck confit with fig and roasted eggplant puree",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                  },
+                  {
+                    "name": "Today’s soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                  },
+                  {
+                    "name": "Genkai Spanish mackerel with yuzu beurre blanc, porcini and chestnut risotto",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                  },
+                  {
+                    "name": "Kyushu wagyu with Pione grapes, pumpkin puree and Hakata sugitake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                  },
+                  {
+                    "name": "Shine Muscat and fromage blanc mousse with Furmint jelly",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                  },
+                  {
+                    "name": "Grandir batard bread",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                  }
+                ],
+                "note": "September16–November16,2026. Tax included, no service charge. Dinner17:00–22:30,last order22:00. Seasonal ingredients may change."
+              },
+              {
+                "label": "Taste of Autumn — chef’s lunch",
+                "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Autumn chef’s lunch",
+                    "price": 3850
+                  },
+                  {
+                    "name": "Hakata jidori confit, autumn vegetables, roasted eggplant and honey mustard",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Today’s soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Tasmanian salmon with celeriac remoulade and yuzu fromage blanc sauce — fish choice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Itoshima pork shoulder with sweet-potato puree and fried maitake — meat choice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Hojicha brulee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Grandir batard bread",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                  }
+                ],
+                "note": "September16–November16,2026. Choose one fish or meat main, not both at ¥3,850. Tax included, no service charge. Lunch11:30–16:00,last order14:30; double-main ¥4,950 plan is published separately in ordinary menu."
+              },
+              {
+                "label": "Taste of Autumn — Tenjin wine dinner",
+                "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Autumn wine dinner",
+                    "price": 7300
+                  },
+                  {
+                    "name": "Autumn wine dinner with draft beer",
+                    "price": 7800
+                  },
+                  {
+                    "name": "Charcuterie and cheese assortment",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Wagyu bolognese tagliatelle",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Kyushu wagyu round, Hakata jidori and Itoshima pork mixed grill",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Homemade ice cream",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Bread and olive oil",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Rose sparkling wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  },
+                  {
+                    "name": "White wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Red wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Soft drinks",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                  }
+                ],
+                "note": "September16–November16,2026; 120-minute drinks, last order90minutes after start. ¥7,800 variant adds draft beer; not included in ¥7,300 package. Minimum two diners per exact booking conditions. Dated operator menu used; booking page also displays older generic food examples. Confirm latest admission for full120minutes within17:00–22:30 service."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+            "name": "Anchor Grill Fukuoka",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+            "phone": "092-406-2615",
+            "openingHours": [
+              {
+                "days": "Breakfast",
+                "hours": "07:00–10:00"
+              },
+              {
+                "days": "Lunch",
+                "hours": "11:30–16:00; lunch LO14:30, Grand Menu LO15:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–22:30; LO22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000017.000046726.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/fukuoka/A4001/A400103/40070287/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gate-hotel.jp/fukuoka/topics/all/2055"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/shops/ghf-afukuoka/reserve"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/ghf-afukuoka/reserve",
+            "hoursNote": "Operator branch page gives092-406-2615; booking contact is092-406-2605. These are distinct published restaurant contact numbers, not silently merged."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+          "sha256": "0d9f4331ea6b760cd595b8643d52b548d622dd844e45d85e260e7c34fc7f4ef4",
+          "width": 1200,
+          "height": 630,
+          "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+          "note": "Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+          "sourcePage": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-2-670031b80ad9de6e.webp",
+          "sha256": "670031b80ad9de6e645339fcb80781ee46cd7cc8f2d6ca738c32fe5c1b8597dc",
+          "width": 1500,
+          "height": 1000,
+          "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+          "note": "Operator Taste of Autumn dinner-course photograph; seasonal September 16–November 16, 2026. Dish identity follows operator page captions, not inferred from photograph.",
+          "sourcePage": "https://www.gate-hotel.jp/fukuoka/topics/all/2055"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-3-bd490fc9817ab188.webp",
+          "sha256": "bd490fc9817ab188ae762fe9a7cc60d1a960b390cdd7952396e3ea0f03edc112",
+          "width": 1500,
+          "height": 1000,
+          "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+          "note": "Operator Taste of Autumn dinner-course photograph; seasonal September 16–November 16, 2026. Dish identity follows operator page captions, not inferred from photograph.",
+          "sourcePage": "https://www.gate-hotel.jp/fukuoka/topics/all/2055"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "name": "Anchor Grill Fukuoka",
+          "checkedAt": "2026-10-17",
+          "menus": [
+            {
+              "label": "Taste of Autumn — dinner course",
+              "url": "https://www.gate-hotel.jp/fukuoka/topics/all/2055",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Autumn dinner course",
+                  "price": 7700
+                },
+                {
+                  "name": "Today’s amuse-bouche",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                },
+                {
+                  "name": "Hakata Kiwami duck confit with fig and roasted eggplant puree",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                },
+                {
+                  "name": "Today’s soup",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                },
+                {
+                  "name": "Genkai Spanish mackerel with yuzu beurre blanc, porcini and chestnut risotto",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                },
+                {
+                  "name": "Kyushu wagyu with Pione grapes, pumpkin puree and Hakata sugitake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                },
+                {
+                  "name": "Shine Muscat and fromage blanc mousse with Furmint jelly",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                },
+                {
+                  "name": "Grandir batard bread",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — dinner course; no separate item price published"
+                }
+              ],
+              "note": "September16–November16,2026. Tax included, no service charge. Dinner17:00–22:30,last order22:00. Seasonal ingredients may change."
+            },
+            {
+              "label": "Taste of Autumn — chef’s lunch",
+              "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Autumn chef’s lunch",
+                  "price": 3850
+                },
+                {
+                  "name": "Hakata jidori confit, autumn vegetables, roasted eggplant and honey mustard",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                },
+                {
+                  "name": "Today’s soup",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                },
+                {
+                  "name": "Tasmanian salmon with celeriac remoulade and yuzu fromage blanc sauce — fish choice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                },
+                {
+                  "name": "Itoshima pork shoulder with sweet-potato puree and fried maitake — meat choice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                },
+                {
+                  "name": "Hojicha brulee",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                },
+                {
+                  "name": "Grandir batard bread",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published"
+                }
+              ],
+              "note": "September16–November16,2026. Choose one fish or meat main, not both at ¥3,850. Tax included, no service charge. Lunch11:30–16:00,last order14:30; double-main ¥4,950 plan is published separately in ordinary menu."
+            },
+            {
+              "label": "Taste of Autumn — Tenjin wine dinner",
+              "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Autumn wine dinner",
+                  "price": 7300
+                },
+                {
+                  "name": "Autumn wine dinner with draft beer",
+                  "price": 7800
+                },
+                {
+                  "name": "Charcuterie and cheese assortment",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                },
+                {
+                  "name": "Wagyu bolognese tagliatelle",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                },
+                {
+                  "name": "Kyushu wagyu round, Hakata jidori and Itoshima pork mixed grill",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                },
+                {
+                  "name": "Homemade ice cream",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                },
+                {
+                  "name": "Bread and olive oil",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                },
+                {
+                  "name": "Rose sparkling wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                },
+                {
+                  "name": "White wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                },
+                {
+                  "name": "Red wine",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                },
+                {
+                  "name": "Soft drinks",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published"
+                }
+              ],
+              "note": "September16–November16,2026; 120-minute drinks, last order90minutes after start. ¥7,800 variant adds draft beer; not included in ¥7,300 package. Minimum two diners per exact booking conditions. Dated operator menu used; booking page also displays older generic food examples. Confirm latest admission for full120minutes within17:00–22:30 service."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Taste of Autumn — dinner course",
+              "kind": "other",
+              "description": "Seasonal six-dish autumn dinner plus bread and coffee/tea, ¥7,700 tax included.",
+              "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/all/2055",
+              "menuLabel": "Taste of Autumn — dinner course",
+              "discounted": false,
+              "validFrom": "2026-09-16",
+              "validThrough": "2026-11-16",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Food last order22:00; room closes22:30.",
+                "No service charge. Ingredients may change."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Taste of Autumn — chef’s lunch",
+              "kind": "lunch",
+              "description": "Seasonal chef’s lunch with one fish or meat main, ¥3,850 tax included.",
+              "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+              "menuLabel": "Taste of Autumn — chef’s lunch",
+              "discounted": false,
+              "validFrom": "2026-09-16",
+              "validThrough": "2026-11-16",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Lunch last order14:30; dining room until16:00.",
+                "One main at this price; double-main plan is separate."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Taste of Autumn — Tenjin wine dinner",
+              "kind": "other",
+              "description": "Autumn food and wine dinner ¥7,300, or ¥7,800 including draft beer; tax included.",
+              "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054",
+              "menuLabel": "Taste of Autumn — Tenjin wine dinner",
+              "discounted": false,
+              "validFrom": "2026-09-16",
+              "validThrough": "2026-11-16",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Minimum two diners.",
+                "Drinks120minutes, last order30minutes before end.",
+                "Confirm latest admission; published service ends22:30.",
+                "Draft beer only in ¥7,800 package."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "22:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+          "neighborhood": "Tenjin",
+          "websiteUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+            "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+            "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+            "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+            "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg",
+            "checkedAt": "2026-10-17"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

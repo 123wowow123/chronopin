@@ -78,62 +78,27 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
     }
   }, [isVideoPlaying, pause]);
 
-  const isThisSongAudioPlaying = Boolean(entry && currentTrack?.id === entry.id && isAudioPlaying);
-  const isPlaying = isVideoPlaying || isThisSongAudioPlaying;
+  const isPlaying = Boolean(entry && currentTrack?.id === entry.id && isAudioPlaying);
 
   const nextUrl = adjacent?.next?.pinId
     ? `${pinPath({ id: adjacent.next.pinId, title: adjacent.next.title })}?autoplay=1`
     : null;
 
+  // The Play button always drives the 30s preview in the player dock; the full-song video has its own controls.
   const handlePlayToggle = () => {
-    // If the audio preview in the bottom player dock is actively playing this track, toggle it
-    if (isThisSongAudioPlaying) {
-      togglePlay(entry);
-      return;
-    }
-
-    const iframes = typeof document !== 'undefined' ? document.querySelectorAll('iframe') : [];
-    let hasYouTube = false;
-    iframes.forEach((iframe) => {
-      if (iframe.src) {
+    if (!entry) return;
+    if (isVideoPlaying) {
+      setIsVideoPlaying(false);
+      window.dispatchEvent(new CustomEvent('chronopin:pause-video'));
+      document.querySelectorAll('iframe').forEach((iframe) => {
         try {
-          if (/(^|\.)youtube(-nocookie)?\.com$/.test(new URL(iframe.src, window.location.href).hostname)) {
-            hasYouTube = true;
-          }
+          iframe.contentWindow?.postMessage(JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }), '*');
         } catch {
           // ignore
         }
-      }
-    });
-
-    if (hasYouTube) {
-      if (isVideoPlaying) {
-        setIsVideoPlaying(false);
-        window.dispatchEvent(new CustomEvent('chronopin:pause-video'));
-        iframes.forEach((iframe) => {
-          try {
-            iframe.contentWindow?.postMessage(JSON.stringify({ event: 'command', func: 'pauseVideo', args: '' }), '*');
-            iframe.contentWindow?.postMessage(JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }), '*');
-          } catch {
-            // ignore
-          }
-        });
-      } else {
-        pause();
-        setIsVideoPlaying(true);
-        window.dispatchEvent(new CustomEvent('chronopin:play-video'));
-        iframes.forEach((iframe) => {
-          try {
-            iframe.contentWindow?.postMessage(JSON.stringify({ event: 'command', func: 'playVideo', args: '' }), '*');
-            iframe.contentWindow?.postMessage(JSON.stringify({ event: 'command', func: 'playVideo', args: [] }), '*');
-          } catch {
-            // ignore
-          }
-        });
-      }
-    } else if (entry) {
-      togglePlay(entry);
+      });
     }
+    togglePlay(entry);
   };
 
   const stopAllCurrentPlayback = useCallback(() => {
