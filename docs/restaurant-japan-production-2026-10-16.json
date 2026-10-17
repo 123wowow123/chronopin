@@ -22098,6 +22098,17 @@
       "shortfall": 314,
       "newOffers": 0,
       "applicationDeployed": false
+    },
+    "readyBatchReconciliationLatest": {
+      "verifiedAtUtc": "2026-10-17T04:17:00.599047+00:00",
+      "restaurantPins": 52,
+      "exactContentProfiles": 52,
+      "existingVenueUpdates": 5,
+      "allMappedPinSourcesPresentAndNotDeleted": true,
+      "allSpecialProfilesMatch": true,
+      "latestBatchPublicPinMenusAndCreditsVerified": true,
+      "newRestaurantPublicationsRequired": 0,
+      "applicationDeployed": false
     }
   },
   "openingDateAudit": {
