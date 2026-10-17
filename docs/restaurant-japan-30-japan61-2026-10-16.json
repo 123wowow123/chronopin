@@ -150,7 +150,7 @@
             "recognition": "",
             "priceRange": "",
             "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-honjin-1-e9752ca344914cd8.webp",
-            "imageCredit": "Self Cafe / Wincle — Honjin branch announcement",
+            "imageCredit": "Self Cafe — Honjin branch announcement",
             "imageSourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
             "imageNote": "Operator Honjin launch artwork; text says late October, superseded by the branch page’s October 30 date. Background interior is promotional imagery, not independently verified as the completed Honjin interior.",
             "openingConfirmed": true,
@@ -165,11 +165,32 @@
           "sha256": "e9752ca344914cd8be6a4a3eee7e8b17be97080581937a200fb510312a38661a",
           "width": 1280,
           "height": 853,
-          "credit": "Self Cafe / Wincle — Honjin branch announcement",
+          "credit": "Self Cafe — Honjin branch announcement",
           "note": "Operator Honjin launch artwork; text says late October, superseded by the branch page’s October 30 date. Background interior is promotional imagery, not independently verified as the completed Honjin interior.",
           "sourcePage": "https://selfcafe.jp/shop/aichi/honjin/"
         }
-      ]
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16070,
+          "sourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+          "name": "Self Cafe — Honjin",
+          "contentId": 1655,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 1,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16075,
+          "sourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+          "name": "Self Cafe — Honjin",
+          "contentId": 1655,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 1,
+          "publicPinStatus": 200
+        }
+      },
+      "batch": 61
     },
     {
       "pin": {
@@ -409,7 +430,28 @@
           "note": "Operator-labelled A5 Japanese black wagyu tsukemen; no opening-day discount inferred.",
           "sourcePage": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html"
         }
-      ]
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16071,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+          "name": "Tou — Sakae tsukemen",
+          "contentId": 1656,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16076,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+          "name": "Tou — Sakae tsukemen",
+          "contentId": 1656,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        }
+      },
+      "batch": 61
     },
     {
       "pin": {
@@ -1293,7 +1335,1012 @@
           }
         },
         "enabled": true
+      },
+      "verification": {
+        "local": {
+          "pinId": 16072,
+          "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "name": "Anchor Grill Fukuoka",
+          "contentId": 1657,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16077,
+          "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "name": "Anchor Grill Fukuoka",
+          "contentId": 1657,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200
+        }
+      },
+      "batch": 61
+    }
+  ],
+  "verifiedAtUtc": "2026-10-17T02:14:34.714753+00:00",
+  "verification": {
+    "local": [
+      {
+        "pinId": 16070,
+        "sourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+        "name": "Self Cafe — Honjin",
+        "contentId": 1655,
+        "contentRevision": 2,
+        "verifiedGalleryLinks": 1,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16071,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+        "name": "Tou — Sakae tsukemen",
+        "contentId": 1656,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16072,
+        "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+        "name": "Anchor Grill Fukuoka",
+        "contentId": 1657,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200
+      }
+    ],
+    "production": [
+      {
+        "pinId": 16075,
+        "sourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+        "name": "Self Cafe — Honjin",
+        "contentId": 1655,
+        "contentRevision": 2,
+        "verifiedGalleryLinks": 1,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16076,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000066.000100887.html",
+        "name": "Tou — Sakae tsukemen",
+        "contentId": 1656,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16077,
+        "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+        "name": "Anchor Grill Fukuoka",
+        "contentId": 1657,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200
+      }
+    ],
+    "guideCards": {
+      "local": [
+        {
+          "pinId": 16070,
+          "region": "nagoya",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16071,
+          "region": "nagoya",
+          "view": "new",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16072,
+          "region": "fukuoka",
+          "view": "discounts",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html#1",
+              "name": "Anchor Grill Fukuoka",
+              "neighborhood": "Tenjin",
+              "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+              "restaurantHref": "/pin/16072/anchor-grill-fukuoka-tenjin-autumn-dining",
+              "checkedAt": "2026-10-17",
+              "special": {
+                "kind": "lunch",
+                "title": "Taste of Autumn — chef’s lunch",
+                "schedule": "Japan local time; see conditions",
+                "menuLabel": "Taste of Autumn — chef’s lunch",
+                "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                "validFrom": "2026-09-16",
+                "conditions": [
+                  "Lunch last order14:30; dining room until16:00.",
+                  "One main at this price; double-main plan is separate."
+                ],
+                "discounted": false,
+                "description": "Seasonal chef’s lunch with one fish or meat main, ¥3,850 tax included.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "14:30",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-16"
+              },
+              "venueKey": "gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+              "photo": {
+                "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+                "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+                "checkedAt": "2026-10-17",
+                "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg"
+              },
+              "menu": {
+                "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                "note": "September16–November16,2026. Choose one fish or meat main, not both at ¥3,850. Tax included, no service charge. Lunch11:30–16:00,last order14:30; double-main ¥4,950 plan is published separately in ordinary menu.",
+                "items": [
+                  {
+                    "name": "Autumn chef’s lunch",
+                    "price": 3850
+                  },
+                  {
+                    "name": "Hakata jidori confit, autumn vegetables, roasted eggplant and honey mustard",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Today’s soup",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tasmanian salmon with celeriac remoulade and yuzu fromage blanc sauce — fish choice",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Itoshima pork shoulder with sweet-potato puree and fried maitake — meat choice",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hojicha brulee",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Grandir batard bread",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Taste of Autumn — chef’s lunch",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-10-17T02:30:00.000Z",
+              "end": "14:30",
+              "offers": [
+                {
+                  "id": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html#1",
+                  "name": "Anchor Grill Fukuoka",
+                  "neighborhood": "Tenjin",
+                  "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+                  "restaurantHref": "/pin/16072/anchor-grill-fukuoka-tenjin-autumn-dining",
+                  "checkedAt": "2026-10-17",
+                  "special": {
+                    "kind": "lunch",
+                    "title": "Taste of Autumn — chef’s lunch",
+                    "schedule": "Japan local time; see conditions",
+                    "menuLabel": "Taste of Autumn — chef’s lunch",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                    "validFrom": "2026-09-16",
+                    "conditions": [
+                      "Lunch last order14:30; dining room until16:00.",
+                      "One main at this price; double-main plan is separate."
+                    ],
+                    "discounted": false,
+                    "description": "Seasonal chef’s lunch with one fish or meat main, ¥3,850 tax included.",
+                    "limitedTime": true,
+                    "availability": {
+                      "windows": [
+                        {
+                          "end": "14:30",
+                          "days": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                          ],
+                          "start": "11:30"
+                        }
+                      ]
+                    },
+                    "validThrough": "2026-11-16"
+                  },
+                  "venueKey": "gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                  "photo": {
+                    "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+                    "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+                    "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+                    "checkedAt": "2026-10-17",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                    "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg"
+                  },
+                  "menu": {
+                    "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                    "note": "September16–November16,2026. Choose one fish or meat main, not both at ¥3,850. Tax included, no service charge. Lunch11:30–16:00,last order14:30; double-main ¥4,950 plan is published separately in ordinary menu.",
+                    "items": [
+                      {
+                        "name": "Autumn chef’s lunch",
+                        "price": 3850
+                      },
+                      {
+                        "name": "Hakata jidori confit, autumn vegetables, roasted eggplant and honey mustard",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Today’s soup",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Tasmanian salmon with celeriac remoulade and yuzu fromage blanc sauce — fish choice",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Itoshima pork shoulder with sweet-potato puree and fried maitake — meat choice",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Hojicha brulee",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Grandir batard bread",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Coffee or tea",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      }
+                    ],
+                    "label": "Taste of Autumn — chef’s lunch",
+                    "coverage": "sample",
+                    "currency": "JPY"
+                  },
+                  "startsAt": "2026-10-17T02:30:00.000Z",
+                  "end": "14:30"
+                },
+                {
+                  "id": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html#0",
+                  "name": "Anchor Grill Fukuoka",
+                  "neighborhood": "Tenjin",
+                  "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+                  "restaurantHref": "/pin/16072/anchor-grill-fukuoka-tenjin-autumn-dining",
+                  "checkedAt": "2026-10-17",
+                  "special": {
+                    "kind": "other",
+                    "title": "Taste of Autumn — dinner course",
+                    "schedule": "Japan local time; see conditions",
+                    "menuLabel": "Taste of Autumn — dinner course",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/all/2055",
+                    "validFrom": "2026-09-16",
+                    "conditions": [
+                      "Food last order22:00; room closes22:30.",
+                      "No service charge. Ingredients may change."
+                    ],
+                    "discounted": false,
+                    "description": "Seasonal six-dish autumn dinner plus bread and coffee/tea, ¥7,700 tax included.",
+                    "limitedTime": true,
+                    "availability": {
+                      "windows": [
+                        {
+                          "end": "22:00",
+                          "days": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                          ],
+                          "start": "17:00"
+                        }
+                      ]
+                    },
+                    "validThrough": "2026-11-16"
+                  },
+                  "venueKey": "gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                  "photo": {
+                    "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+                    "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+                    "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+                    "checkedAt": "2026-10-17",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                    "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg"
+                  },
+                  "menu": {
+                    "url": "https://www.gate-hotel.jp/fukuoka/topics/all/2055",
+                    "note": "September16–November16,2026. Tax included, no service charge. Dinner17:00–22:30,last order22:00. Seasonal ingredients may change.",
+                    "items": [
+                      {
+                        "name": "Autumn dinner course",
+                        "price": 7700
+                      },
+                      {
+                        "name": "Today’s amuse-bouche",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Hakata Kiwami duck confit with fig and roasted eggplant puree",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Today’s soup",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Genkai Spanish mackerel with yuzu beurre blanc, porcini and chestnut risotto",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Kyushu wagyu with Pione grapes, pumpkin puree and Hakata sugitake",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Shine Muscat and fromage blanc mousse with Furmint jelly",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Grandir batard bread",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Coffee or tea",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      }
+                    ],
+                    "label": "Taste of Autumn — dinner course",
+                    "coverage": "sample",
+                    "currency": "JPY"
+                  },
+                  "startsAt": "2026-10-17T08:00:00.000Z",
+                  "end": "22:00"
+                },
+                {
+                  "id": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html#2",
+                  "name": "Anchor Grill Fukuoka",
+                  "neighborhood": "Tenjin",
+                  "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+                  "restaurantHref": "/pin/16072/anchor-grill-fukuoka-tenjin-autumn-dining",
+                  "checkedAt": "2026-10-17",
+                  "special": {
+                    "kind": "other",
+                    "title": "Taste of Autumn — Tenjin wine dinner",
+                    "schedule": "Japan local time; see conditions",
+                    "menuLabel": "Taste of Autumn — Tenjin wine dinner",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054",
+                    "validFrom": "2026-09-16",
+                    "conditions": [
+                      "Minimum two diners.",
+                      "Drinks120minutes, last order30minutes before end.",
+                      "Confirm latest admission; published service ends22:30.",
+                      "Draft beer only in ¥7,800 package."
+                    ],
+                    "discounted": false,
+                    "description": "Autumn food and wine dinner ¥7,300, or ¥7,800 including draft beer; tax included.",
+                    "limitedTime": true,
+                    "availability": {
+                      "windows": [
+                        {
+                          "end": "22:30",
+                          "days": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                          ],
+                          "start": "17:00"
+                        }
+                      ]
+                    },
+                    "validThrough": "2026-11-16"
+                  },
+                  "venueKey": "gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                  "photo": {
+                    "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+                    "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+                    "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+                    "checkedAt": "2026-10-17",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                    "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg"
+                  },
+                  "menu": {
+                    "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054",
+                    "note": "September16–November16,2026; 120-minute drinks, last order90minutes after start. ¥7,800 variant adds draft beer; not included in ¥7,300 package. Minimum two diners per exact booking conditions. Dated operator menu used; booking page also displays older generic food examples. Confirm latest admission for full120minutes within17:00–22:30 service.",
+                    "items": [
+                      {
+                        "name": "Autumn wine dinner",
+                        "price": 7300
+                      },
+                      {
+                        "name": "Autumn wine dinner with draft beer",
+                        "price": 7800
+                      },
+                      {
+                        "name": "Charcuterie and cheese assortment",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Wagyu bolognese tagliatelle",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Kyushu wagyu round, Hakata jidori and Itoshima pork mixed grill",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Homemade ice cream",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Bread and olive oil",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Rose sparkling wine",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "White wine",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Red wine",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Soft drinks",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      }
+                    ],
+                    "label": "Taste of Autumn — Tenjin wine dinner",
+                    "coverage": "sample",
+                    "currency": "JPY"
+                  },
+                  "startsAt": "2026-10-17T08:00:00.000Z",
+                  "end": "22:30"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "production": [
+        {
+          "pinId": 16075,
+          "region": "nagoya",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16076,
+          "region": "nagoya",
+          "view": "new",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16077,
+          "region": "fukuoka",
+          "view": "discounts",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html#1",
+              "name": "Anchor Grill Fukuoka",
+              "neighborhood": "Tenjin",
+              "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+              "restaurantHref": "/pin/16077/anchor-grill-fukuoka-tenjin-autumn-dining",
+              "checkedAt": "2026-10-17",
+              "special": {
+                "kind": "lunch",
+                "title": "Taste of Autumn — chef’s lunch",
+                "schedule": "Japan local time; see conditions",
+                "menuLabel": "Taste of Autumn — chef’s lunch",
+                "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                "validFrom": "2026-09-16",
+                "conditions": [
+                  "Lunch last order14:30; dining room until16:00.",
+                  "One main at this price; double-main plan is separate."
+                ],
+                "discounted": false,
+                "description": "Seasonal chef’s lunch with one fish or meat main, ¥3,850 tax included.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "14:30",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-16"
+              },
+              "venueKey": "gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+              "photo": {
+                "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+                "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+                "checkedAt": "2026-10-17",
+                "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg"
+              },
+              "menu": {
+                "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                "note": "September16–November16,2026. Choose one fish or meat main, not both at ¥3,850. Tax included, no service charge. Lunch11:30–16:00,last order14:30; double-main ¥4,950 plan is published separately in ordinary menu.",
+                "items": [
+                  {
+                    "name": "Autumn chef’s lunch",
+                    "price": 3850
+                  },
+                  {
+                    "name": "Hakata jidori confit, autumn vegetables, roasted eggplant and honey mustard",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Today’s soup",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tasmanian salmon with celeriac remoulade and yuzu fromage blanc sauce — fish choice",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Itoshima pork shoulder with sweet-potato puree and fried maitake — meat choice",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hojicha brulee",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Grandir batard bread",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Taste of Autumn — chef’s lunch",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-10-17T02:30:00.000Z",
+              "end": "14:30",
+              "offers": [
+                {
+                  "id": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html#1",
+                  "name": "Anchor Grill Fukuoka",
+                  "neighborhood": "Tenjin",
+                  "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+                  "restaurantHref": "/pin/16077/anchor-grill-fukuoka-tenjin-autumn-dining",
+                  "checkedAt": "2026-10-17",
+                  "special": {
+                    "kind": "lunch",
+                    "title": "Taste of Autumn — chef’s lunch",
+                    "schedule": "Japan local time; see conditions",
+                    "menuLabel": "Taste of Autumn — chef’s lunch",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                    "validFrom": "2026-09-16",
+                    "conditions": [
+                      "Lunch last order14:30; dining room until16:00.",
+                      "One main at this price; double-main plan is separate."
+                    ],
+                    "discounted": false,
+                    "description": "Seasonal chef’s lunch with one fish or meat main, ¥3,850 tax included.",
+                    "limitedTime": true,
+                    "availability": {
+                      "windows": [
+                        {
+                          "end": "14:30",
+                          "days": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                          ],
+                          "start": "11:30"
+                        }
+                      ]
+                    },
+                    "validThrough": "2026-11-16"
+                  },
+                  "venueKey": "gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                  "photo": {
+                    "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+                    "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+                    "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+                    "checkedAt": "2026-10-17",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                    "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg"
+                  },
+                  "menu": {
+                    "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2053",
+                    "note": "September16–November16,2026. Choose one fish or meat main, not both at ¥3,850. Tax included, no service charge. Lunch11:30–16:00,last order14:30; double-main ¥4,950 plan is published separately in ordinary menu.",
+                    "items": [
+                      {
+                        "name": "Autumn chef’s lunch",
+                        "price": 3850
+                      },
+                      {
+                        "name": "Hakata jidori confit, autumn vegetables, roasted eggplant and honey mustard",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Today’s soup",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Tasmanian salmon with celeriac remoulade and yuzu fromage blanc sauce — fish choice",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Itoshima pork shoulder with sweet-potato puree and fried maitake — meat choice",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Hojicha brulee",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Grandir batard bread",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Coffee or tea",
+                        "note": "Included in Taste of Autumn — chef’s lunch; no separate item price published",
+                        "priceLabel": "Price not published"
+                      }
+                    ],
+                    "label": "Taste of Autumn — chef’s lunch",
+                    "coverage": "sample",
+                    "currency": "JPY"
+                  },
+                  "startsAt": "2026-10-17T02:30:00.000Z",
+                  "end": "14:30"
+                },
+                {
+                  "id": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html#0",
+                  "name": "Anchor Grill Fukuoka",
+                  "neighborhood": "Tenjin",
+                  "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+                  "restaurantHref": "/pin/16077/anchor-grill-fukuoka-tenjin-autumn-dining",
+                  "checkedAt": "2026-10-17",
+                  "special": {
+                    "kind": "other",
+                    "title": "Taste of Autumn — dinner course",
+                    "schedule": "Japan local time; see conditions",
+                    "menuLabel": "Taste of Autumn — dinner course",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/all/2055",
+                    "validFrom": "2026-09-16",
+                    "conditions": [
+                      "Food last order22:00; room closes22:30.",
+                      "No service charge. Ingredients may change."
+                    ],
+                    "discounted": false,
+                    "description": "Seasonal six-dish autumn dinner plus bread and coffee/tea, ¥7,700 tax included.",
+                    "limitedTime": true,
+                    "availability": {
+                      "windows": [
+                        {
+                          "end": "22:00",
+                          "days": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                          ],
+                          "start": "17:00"
+                        }
+                      ]
+                    },
+                    "validThrough": "2026-11-16"
+                  },
+                  "venueKey": "gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                  "photo": {
+                    "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+                    "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+                    "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+                    "checkedAt": "2026-10-17",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                    "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg"
+                  },
+                  "menu": {
+                    "url": "https://www.gate-hotel.jp/fukuoka/topics/all/2055",
+                    "note": "September16–November16,2026. Tax included, no service charge. Dinner17:00–22:30,last order22:00. Seasonal ingredients may change.",
+                    "items": [
+                      {
+                        "name": "Autumn dinner course",
+                        "price": 7700
+                      },
+                      {
+                        "name": "Today’s amuse-bouche",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Hakata Kiwami duck confit with fig and roasted eggplant puree",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Today’s soup",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Genkai Spanish mackerel with yuzu beurre blanc, porcini and chestnut risotto",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Kyushu wagyu with Pione grapes, pumpkin puree and Hakata sugitake",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Shine Muscat and fromage blanc mousse with Furmint jelly",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Grandir batard bread",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Coffee or tea",
+                        "note": "Included in Taste of Autumn — dinner course; no separate item price published",
+                        "priceLabel": "Price not published"
+                      }
+                    ],
+                    "label": "Taste of Autumn — dinner course",
+                    "coverage": "sample",
+                    "currency": "JPY"
+                  },
+                  "startsAt": "2026-10-17T08:00:00.000Z",
+                  "end": "22:00"
+                },
+                {
+                  "id": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html#2",
+                  "name": "Anchor Grill Fukuoka",
+                  "neighborhood": "Tenjin",
+                  "address": "19F THE GATE HOTEL Fukuoka by HULIC, 2-8-49 Tenjin, Chuo-ku, Fukuoka",
+                  "restaurantHref": "/pin/16077/anchor-grill-fukuoka-tenjin-autumn-dining",
+                  "checkedAt": "2026-10-17",
+                  "special": {
+                    "kind": "other",
+                    "title": "Taste of Autumn — Tenjin wine dinner",
+                    "schedule": "Japan local time; see conditions",
+                    "menuLabel": "Taste of Autumn — Tenjin wine dinner",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054",
+                    "validFrom": "2026-09-16",
+                    "conditions": [
+                      "Minimum two diners.",
+                      "Drinks120minutes, last order30minutes before end.",
+                      "Confirm latest admission; published service ends22:30.",
+                      "Draft beer only in ¥7,800 package."
+                    ],
+                    "discounted": false,
+                    "description": "Autumn food and wine dinner ¥7,300, or ¥7,800 including draft beer; tax included.",
+                    "limitedTime": true,
+                    "availability": {
+                      "windows": [
+                        {
+                          "end": "22:30",
+                          "days": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                          ],
+                          "start": "17:00"
+                        }
+                      ]
+                    },
+                    "validThrough": "2026-11-16"
+                  },
+                  "venueKey": "gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                  "photo": {
+                    "alt": "Anchor Grill Fukuoka — Exact Anchor Grill Fukuoka operator branch image; dining room and city view.",
+                    "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch61-anchor-1-0d9f4331ea6b760c.webp",
+                    "credit": "THE GATE HOTEL Fukuoka by HULIC / Anchor Grill Fukuoka",
+                    "checkedAt": "2026-10-17",
+                    "sourceUrl": "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+                    "originalUrl": "https://www.gate-hotel.jp/fukuoka/og-image/og-agfukuoka.jpg"
+                  },
+                  "menu": {
+                    "url": "https://www.gate-hotel.jp/fukuoka/topics/RestaurantAndBar/2054",
+                    "note": "September16–November16,2026; 120-minute drinks, last order90minutes after start. ¥7,800 variant adds draft beer; not included in ¥7,300 package. Minimum two diners per exact booking conditions. Dated operator menu used; booking page also displays older generic food examples. Confirm latest admission for full120minutes within17:00–22:30 service.",
+                    "items": [
+                      {
+                        "name": "Autumn wine dinner",
+                        "price": 7300
+                      },
+                      {
+                        "name": "Autumn wine dinner with draft beer",
+                        "price": 7800
+                      },
+                      {
+                        "name": "Charcuterie and cheese assortment",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Wagyu bolognese tagliatelle",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Kyushu wagyu round, Hakata jidori and Itoshima pork mixed grill",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Homemade ice cream",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Bread and olive oil",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Rose sparkling wine",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "White wine",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Red wine",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      },
+                      {
+                        "name": "Soft drinks",
+                        "note": "Included in Taste of Autumn — Tenjin wine dinner; no separate item price published",
+                        "priceLabel": "Price not published"
+                      }
+                    ],
+                    "label": "Taste of Autumn — Tenjin wine dinner",
+                    "coverage": "sample",
+                    "currency": "JPY"
+                  },
+                  "startsAt": "2026-10-17T08:00:00.000Z",
+                  "end": "22:30"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "all24CountsAgree": true,
+    "memberships": 408,
+    "shortfall": 317,
+    "schedulerChecks": "Anchor lunch last-order cutoff and next local start, dinner cutoff, all three November 16 expiries; npx tsx check-schedule.ts passed",
+    "applicationDeployed": false,
+    "honjinCreditCorrection": {
+      "local": {
+        "contentId": 1655,
+        "revision": 2,
+        "mediumId": 23092,
+        "credit": "Self Cafe — Honjin branch announcement",
+        "verifiedAtUtc": "2026-10-17T02:10:52.594Z"
+      },
+      "production": {
+        "contentId": 1655,
+        "revision": 2,
+        "mediumId": 23103,
+        "credit": "Self Cafe — Honjin branch announcement",
+        "verifiedAtUtc": "2026-10-17T02:11:45.859Z"
       }
     }
-  ]
+  }
 }

@@ -5,6 +5,7 @@ import {
   filterAndGroupMusicRankings,
   getAvailableYears,
   SEED_MUSIC_RANKINGS,
+  YEARS_AVAILABLE,
 } from './music';
 
 describe('music', () => {
@@ -76,6 +77,18 @@ describe('music', () => {
           expect(ranking.year).toBe(2024);
         }
       }
+    }
+  });
+
+  it('covers multiple top songs across continents for every available year', () => {
+    for (const yr of YEARS_AVAILABLE) {
+      const yearGroups = filterAndGroupMusicRankings(SEED_MUSIC_RANKINGS, { year: yr });
+      expect(yearGroups.length).toBeGreaterThanOrEqual(4);
+      const totalSongsInYear = yearGroups.reduce(
+        (sum, g) => sum + g.countries.reduce((cSum, c) => cSum + c.rankings.length, 0),
+        0,
+      );
+      expect(totalSongsInYear).toBeGreaterThanOrEqual(10);
     }
   });
 
